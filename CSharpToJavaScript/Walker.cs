@@ -42,6 +42,7 @@ namespace CSharpToJavaScript
 
 			switch (syntaxKind)
 			{
+				case SyntaxKind.MultiLineCommentTrivia:
 				case SyntaxKind.WhitespaceTrivia:
 				case SyntaxKind.SingleLineCommentTrivia:
 				case SyntaxKind.EndOfLineTrivia:
@@ -287,6 +288,11 @@ namespace CSharpToJavaScript
 
 					switch (kind)
 					{
+						case SyntaxKind.EqualsValueClause:
+							{
+								Visit(asNode);
+								break;
+							}
 						case SyntaxKind.IdentifierName:
 						case SyntaxKind.PredefinedType:
 							break;
@@ -331,24 +337,12 @@ namespace CSharpToJavaScript
 					{
 						case SyntaxKind.LocalDeclarationStatement: 
 							{
-								if (_BaseConstructorInitializerNode != null) 
-								{
-									SyntaxTriviaList _syntaxTrivias = asNode.GetLeadingTrivia();
-									for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
-									{
-										VisitTrivia(_syntaxTrivias[_i]);
-									}
-									JSSB.Append("super");
-									Visit((_BaseConstructorInitializerNode as ConstructorInitializerSyntax).ArgumentList);
-								}
 								Visit(asNode);
 								break;
 							}
 						case SyntaxKind.ExpressionStatement: 
 							{
-								_UsedThis = false;
-								Visit(asNode);
-								_UsedThis = false;
+								VisitExpressionStatement(asNode as ExpressionStatementSyntax);
 								break;
 							}
 						case SyntaxKind.ReturnStatement:
@@ -371,14 +365,129 @@ namespace CSharpToJavaScript
 
 					switch (kind)
 					{
-						case SyntaxKind.CloseBraceToken:
+						case SyntaxKind.CloseBraceToken: 
+							{
+								VisitToken(asToken);
+								break;
+							}
 						case SyntaxKind.OpenBraceToken: 
+							{
+								VisitToken(asToken);
+								if (_BaseConstructorInitializerNode != null)
+								{
+									SyntaxTriviaList _syntaxTrivias = asToken.LeadingTrivia;
+									for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
+									{
+										VisitTrivia(_syntaxTrivias[_i]);
+									}
+									JSSB.Append("\tsuper");
+									Visit((_BaseConstructorInitializerNode as ConstructorInitializerSyntax).ArgumentList);
+								}
+								break;
+							}
+						default:
+							SM.Log($"asToken : {kind}");
+							break;
+					}
+				}
+			}
+		}
+
+		public override void VisitExpressionStatement(ExpressionStatementSyntax node)
+		{
+			ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
+
+			for (int i = 0; i < nodesAndTokens.Count; i++)
+			{
+				SyntaxNode? asNode = nodesAndTokens[i].AsNode();
+
+				if (asNode != null)
+				{
+					SyntaxKind kind = asNode.Kind();
+
+					switch (kind)
+					{
+						case SyntaxKind.InvocationExpression:
+						case SyntaxKind.SimpleAssignmentExpression: 
+							{
+								_UsedThis = false;
+								Visit(asNode);
+								_UsedThis = false;
+								break;
+							}
+						default:
+							SM.Log($"asNode : {kind}");
+							break;
+					}
+				}
+				else
+				{
+					SyntaxToken asToken = nodesAndTokens[i].AsToken();
+					SyntaxKind kind = asToken.Kind();
+
+					switch (kind)
+					{
+						case SyntaxKind.SemicolonToken:
 							{
 								VisitToken(asToken);
 								break;
 							}
 						default:
 							SM.Log($"asToken : {kind}");
+							break;
+					}
+				}
+			}
+		}
+
+		public override void VisitArgument(ArgumentSyntax node)
+		{
+			ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
+
+			for (int i = 0; i < nodesAndTokens.Count; i++)
+			{
+				SyntaxNode? asNode = nodesAndTokens[i].AsNode();
+
+				if (asNode != null)
+				{
+					SyntaxKind kind = asNode.Kind();
+
+					switch (kind)
+					{
+						case SyntaxKind.ParenthesizedExpression:
+						case SyntaxKind.ThisExpression:
+						case SyntaxKind.ParenthesizedLambdaExpression:
+						case SyntaxKind.NumericLiteralExpression:
+						case SyntaxKind.ElementAccessExpression:
+						case SyntaxKind.TrueLiteralExpression:
+						case SyntaxKind.StringLiteralExpression:
+							{
+								Visit(asNode);
+								break;
+							}
+						case SyntaxKind.IdentifierName:
+						case SyntaxKind.SimpleMemberAccessExpression:
+							{
+								_UsedThis = false;
+								Visit(asNode);
+								_UsedThis = false;
+								break;
+							}
+						default:
+							SM.Log($"asNode : {kind}");
+							break;
+					}
+				}
+				else
+				{
+					SyntaxToken asToken = nodesAndTokens[i].AsToken();
+					SyntaxKind kind = asToken.Kind();
+
+					switch (kind)
+					{
+						default:
+							SM.Log($"asToken : {kind}");
+
 							break;
 					}
 				}
@@ -560,6 +669,9 @@ namespace CSharpToJavaScript
 
 					switch (kind)
 					{
+						//TODO "EqualsValueClause" default value
+						case SyntaxKind.EqualsValueClause:
+						case SyntaxKind.PredefinedType:
 						case SyntaxKind.IdentifierName:
 							break;
 						case SyntaxKind.AccessorList:
@@ -647,7 +759,7 @@ namespace CSharpToJavaScript
 										VisitTrivia(_syntaxTrivias[_i]);
 									}
 
-									Visit((asNode as AccessorDeclarationSyntax).Body);
+									VisitBlock((asNode as AccessorDeclarationSyntax).Body);
 								}
 								else 
 								{
@@ -992,110 +1104,6 @@ namespace CSharpToJavaScript
 			}
 		}
 
-		public override void VisitEqualsValueClause(EqualsValueClauseSyntax node)
-		{
-			ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
-
-			for (int i = 0; i < nodesAndTokens.Count; i++)
-			{
-				SyntaxNode? asNode = nodesAndTokens[i].AsNode();
-
-				if (asNode != null)
-				{
-					SyntaxKind kind = asNode.Kind();
-
-					switch (kind)
-					{
-						case SyntaxKind.ImplicitObjectCreationExpression: 
-							{
-								var c = asNode.Ancestors();
-
-								var a = from b in c
-										where b.Kind() == SyntaxKind.VariableDeclaration
-										select b;
-								var d = from e in a.First().DescendantNodes() 
-										where e.Kind() == SyntaxKind.IdentifierName
-										select e;
-
-								if (d.Any())
-								{
-									var d2 = from e in d.First().DescendantNodesAndTokens()
-											 where e.Kind() == SyntaxKind.IdentifierToken
-											 select e;
-
-									var d3 = d2.First().AsToken();
-									JSSB.Append($"new {d3.Text}()");
-								}
-								else 
-								{
-									//TODO! MAP CS BUILD IN TYPES TO JS, BETTER WAY!!!
-									//How? I dont know, currently...
-									
-									d = from e in a.First().DescendantNodes()
-										where e.Kind() == SyntaxKind.GenericName
-										select e;
-
-									var d2 = from e in d.First().DescendantNodesAndTokens()
-											 where e.Kind() == SyntaxKind.IdentifierToken
-											 select e;
-
-									var d3 = d2.First().AsToken();
-
-									JSSB.Append($"new ");
-									if (CustomCSNamesToJS(d.First()) == false)
-									{
-										JSSB.Append($"Object");
-										SM.Log($"asNode : {kind} |||| TODO : {d3.Text} ||| USE 'CustomCSNamesToJS' TO CONVERT.");
-									}
-									JSSB.Append($"(1)");
-								}
-								break;
-
-								//VisitImplicitObjectCreationExpression(asNode as ImplicitObjectCreationExpressionSyntax);
-								//break;
-							}
-						//case SyntaxKind.InvocationExpression: 
-						//	{
-						//
-						//		break;
-						//	}
-						case SyntaxKind.SimpleMemberAccessExpression: 
-						case SyntaxKind.NumericLiteralExpression:
-						case SyntaxKind.FalseLiteralExpression:
-						case SyntaxKind.InvocationExpression:
-						case SyntaxKind.StringLiteralExpression:
-						case SyntaxKind.SubtractExpression:
-						case SyntaxKind.ElementAccessExpression:
-						case SyntaxKind.ThisExpression:
-						case SyntaxKind.AwaitExpression:
-						case SyntaxKind.ParenthesizedLambdaExpression:
-						case SyntaxKind.AddExpression:
-						case SyntaxKind.ObjectCreationExpression:
-							Visit(asNode);
-							break;
-						default:
-							SM.Log($"asNode : {kind}");
-							break;
-					}
-				}
-				else
-				{
-					SyntaxToken asToken = nodesAndTokens[i].AsToken();
-					SyntaxKind kind = asToken.Kind();
-
-					switch (kind)
-					{
-						case SyntaxKind.EqualsToken:
-							VisitToken(asToken);
-							break;
-						default:
-							SM.Log($"asToken : {kind}");
-							break;
-					}
-				}
-			}
-		}
-
 		public override void VisitLiteralExpression(LiteralExpressionSyntax node)
 		{
 			ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
@@ -1204,6 +1212,8 @@ namespace CSharpToJavaScript
 
 					switch (kind)
 					{
+						case SyntaxKind.PredefinedType:
+							break;
 						case SyntaxKind.SimpleMemberAccessExpression:
 							Visit(asNode);
 							break;
@@ -1219,7 +1229,9 @@ namespace CSharpToJavaScript
 
 					switch (kind)
 					{
-						
+						case SyntaxKind.OpenParenToken:
+						case SyntaxKind.CloseParenToken:
+							break;
 						default:
 							SM.Log($"asToken : {kind}");
 							break;
@@ -1230,59 +1242,163 @@ namespace CSharpToJavaScript
 
 		public override void VisitImplicitObjectCreationExpression(ImplicitObjectCreationExpressionSyntax node)
 		{
-			string name = node.Parent.ChildNodes().First((e)=> e.Kind() == SyntaxKind.IdentifierName).ToString();
+			ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
 
-			ClassDeclarationSyntax classD = (ClassDeclarationSyntax)node.Ancestors().First(n => n.Kind() == SyntaxKind.ClassDeclaration);
-			SyntaxList<MemberDeclarationSyntax> mem = classD.Members;
-
-			foreach (MemberDeclarationSyntax item in mem)
+			for (int i = 0; i < nodesAndTokens.Count; i++)
 			{
-				SyntaxToken _sT = default;
-				if (item is MethodDeclarationSyntax m)
+				SyntaxNode? asNode = nodesAndTokens[i].AsNode();
+
+				if (asNode != null)
 				{
-					var d3 = from e in m.ChildTokens()
-							 where e.Kind() == SyntaxKind.IdentifierToken
-							 select e;
-					_sT = d3.First();
-				}
+					SyntaxKind kind = asNode.Kind();
 
-				if (item is PropertyDeclarationSyntax p)
-				{
-					var d3 = from e in p.DescendantTokens()
-							 where e.Kind() == SyntaxKind.IdentifierToken
-							 select e;
-					_sT = d3.Last();
-				}
-
-				if (item is FieldDeclarationSyntax f)
-				{
-					var d3 = from e in f.DescendantTokens()
-							 where e.Kind() == SyntaxKind.IdentifierToken
-							 select e;
-					_sT = d3.Last();
-				}
-
-				if (_sT.ToString() == name)
-				{
-					var d4 = _sT.Parent.Parent.ChildNodes().First((e) => e.Kind() == SyntaxKind.GenericName);
-
-					//var d5 = from e in d4.DescendantNodesAndTokens()
-					//		 where e.Kind() == SyntaxKind.IdentifierToken
-					//		 select e;
-
-					//var d6 = d5.First().AsToken();
-
-					JSSB.Append($"new ");
-					if (CustomCSNamesToJS(d4) == false)
+					switch (kind)
 					{
-						JSSB.Append($"Object");
-						SM.Log($"TODO : {d4} ||| USE 'CustomCSNamesToJS' TO CONVERT.");
+						case SyntaxKind.ArgumentList:
+							Visit(asNode); 
+							break;
+						default:
+							SM.Log($"asNode : {kind}");
+							break;
 					}
-					JSSB.Append($"(1)");
-					break;
+				}
+				else
+				{
+					SyntaxToken asToken = nodesAndTokens[i].AsToken();
+					SyntaxKind kind = asToken.Kind();
+
+					switch (kind)
+					{
+						case SyntaxKind.NewKeyword:
+							{
+								VisitToken(asToken);
+
+
+								VariableDeclarationSyntax _vds = node.Ancestors().FirstOrDefault(e => e.Kind() == SyntaxKind.VariableDeclaration) as VariableDeclarationSyntax;
+
+								SymbolInfo? symbolInfo = null;
+								ISymbol? iSymbol = null;
+								SyntaxNode? syntaxNode = null;
+
+								if (_vds == null)
+								{
+									AssignmentExpressionSyntax _aes = node.Ancestors().FirstOrDefault(e => e.Kind() == SyntaxKind.SimpleAssignmentExpression) as AssignmentExpressionSyntax;
+									symbolInfo = CSTOJS.Model.GetSymbolInfo(_aes.Left);
+
+									ClassDeclarationSyntax classD = (ClassDeclarationSyntax)node.Ancestors().First(n => n.Kind() == SyntaxKind.ClassDeclaration);
+									SyntaxList<MemberDeclarationSyntax> mem = classD.Members;
+
+									foreach (MemberDeclarationSyntax item in mem)
+									{
+										SyntaxToken _sT = default;
+										if (item is MethodDeclarationSyntax m)
+										{
+											var d3 = from e in m.ChildTokens()
+													 where e.Kind() == SyntaxKind.IdentifierToken
+													 select e;
+											_sT = d3.First();
+										}
+
+										if (item is PropertyDeclarationSyntax p)
+										{
+											var d3 = from e in p.DescendantTokens()
+													 where e.Kind() == SyntaxKind.IdentifierToken
+													 select e;
+											_sT = d3.Last();
+										}
+
+										if (item is FieldDeclarationSyntax f)
+										{
+											var d3 = from e in f.DescendantTokens()
+													 where e.Kind() == SyntaxKind.IdentifierToken
+													 select e;
+											_sT = d3.Last();
+										}
+
+										if (_sT.ToString() == _aes.Left.ToString())
+										{
+											var s = item.DescendantNodes().First(e => e.Kind() == SyntaxKind.VariableDeclaration) as VariableDeclarationSyntax;
+											syntaxNode = s.Type;
+										}
+									}
+								}
+								else
+								{
+									symbolInfo = CSTOJS.Model.GetSymbolInfo(_vds.Type);
+									syntaxNode = _vds.Type;
+								}
+
+
+								if (symbolInfo?.CandidateSymbols.Length >= 1)
+									iSymbol = symbolInfo?.CandidateSymbols[0];
+								else
+									iSymbol = symbolInfo?.Symbol;
+
+								if (iSymbol != null && iSymbol.Kind != SymbolKind.ErrorType)
+								{
+									if (iSymbol.ContainingNamespace.ToString().Contains(nameof(APIs.JS)))
+									{
+										if (CustomCSNamesToJS(syntaxNode) == false)
+										{
+											JSSB.Append($" Object");
+											SM.Log($"TODO : {syntaxNode} ||| USE 'CustomCSNamesToJS' TO CONVERT.");
+										}
+										JSSB.Append($"(1)");
+										return;
+									}
+
+									if (iSymbol.ContainingNamespace.ToString().Contains(_NameSpaceStr))
+									{
+										JSSB.Append($" {syntaxNode.ToString()}");
+									}
+								}
+								break;
+							}
+						default:
+							SM.Log($"asToken : {kind}");
+							break;
+					}
 				}
 			}
+		}
 
+		public override void VisitBaseExpression(BaseExpressionSyntax node)
+		{
+			ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
+
+			for (int i = 0; i < nodesAndTokens.Count; i++)
+			{
+				SyntaxNode? asNode = nodesAndTokens[i].AsNode();
+
+				if (asNode != null)
+				{
+					SyntaxKind kind = asNode.Kind();
+
+					switch (kind)
+					{
+
+						default:
+							SM.Log($"asNode : {kind}");
+							break;
+					}
+				}
+				else
+				{
+					SyntaxToken asToken = nodesAndTokens[i].AsToken();
+					SyntaxKind kind = asToken.Kind();
+
+					switch (kind)
+					{
+						case SyntaxKind.BaseKeyword:
+							VisitLeadingTrivia(asToken);
+							JSSB.Append($"super");
+							break;
+						default:
+							SM.Log($"asToken : {kind}");
+							break;
+					}
+				}
+			}
 		}
 
 
@@ -1438,8 +1554,9 @@ namespace CSharpToJavaScript
 								VisitToken(node.Identifier.WithoutTrivia());
 								VisitTrailingTrivia(node.Identifier);
 
-								if (item is MemberDeclarationSyntax)
-									_UsedThis = false;
+								//if (node.Parent.Parent is InvocationExpressionSyntax ||
+									//node.Parent.Parent is ArgumentSyntax)
+									//_UsedThis = false;
 
 								return;
 							}

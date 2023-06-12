@@ -15,7 +15,6 @@ namespace CSharpToJavaScript
 		public string OutPutFileName { get; set; } = "main.js";
 
 		public bool UseVarOverLet { get; set; } = false;
-		public bool IgnoreWindow { get; set; } = true;
 
 		public List<Tuple<string, string>> CustomCSNamesToJS { get; set; } = new();
 		public List<Type> CustomCSTypesToJS { get; set; } = new();

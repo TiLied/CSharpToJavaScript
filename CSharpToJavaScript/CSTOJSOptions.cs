@@ -10,7 +10,10 @@ namespace CSharpToJavaScript
 		public bool Debug { get; set; } = false;
 
 
-
+		/// <summary>
+		/// Output path for javascript file.
+		/// Default: Directory.GetCurrentDirectory()
+		/// </summary>
 		public string OutPutPath { get; set; } = Directory.GetCurrentDirectory();
 		public string OutPutFileName { get; set; } = "main.js";
 

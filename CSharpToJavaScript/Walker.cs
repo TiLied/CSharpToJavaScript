@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Reflection;
 using System.Text;
 
@@ -293,6 +294,7 @@ namespace CSharpToJavaScript
 								Visit(asNode);
 								break;
 							}
+						case SyntaxKind.GenericName:
 						case SyntaxKind.IdentifierName:
 						case SyntaxKind.PredefinedType:
 							break;
@@ -407,6 +409,7 @@ namespace CSharpToJavaScript
 
 					switch (kind)
 					{
+						case SyntaxKind.PostDecrementExpression:
 						case SyntaxKind.InvocationExpression:
 						case SyntaxKind.SimpleAssignmentExpression: 
 							{
@@ -454,6 +457,10 @@ namespace CSharpToJavaScript
 
 					switch (kind)
 					{
+						case SyntaxKind.AsExpression:
+						case SyntaxKind.MultiplyExpression:
+						case SyntaxKind.InvocationExpression:
+						case SyntaxKind.AddExpression:
 						case SyntaxKind.ParenthesizedExpression:
 						case SyntaxKind.ThisExpression:
 						case SyntaxKind.ParenthesizedLambdaExpression:
@@ -1162,6 +1169,9 @@ namespace CSharpToJavaScript
 
 					switch (kind)
 					{
+						case SyntaxKind.AddExpression:
+							Visit(asNode);
+							break;
 						case SyntaxKind.AsExpression:
 							_SNOriginal = (asNode as BinaryExpressionSyntax).Left;
 							
@@ -1351,6 +1361,12 @@ namespace CSharpToJavaScript
 									{
 										JSSB.Append($" {syntaxNode.ToString()}");
 									}
+
+									if (CustomCSNamesToJS(syntaxNode) == false)
+									{
+										SM.Log($"TODO : {syntaxNode} ||| USE 'CustomCSNamesToJS' TO CONVERT.");
+									}
+
 								}
 								break;
 							}
@@ -1538,10 +1554,15 @@ namespace CSharpToJavaScript
 
 						if (item is FieldDeclarationSyntax f)
 						{
-							var d3 = from e in f.DescendantTokens()
+							IEnumerable<SyntaxNode> vds = (from el in f.DescendantNodes()
+														   where el.Kind() == SyntaxKind.VariableDeclarator
+														   select el);
+
+							var d3 = from e in vds.First().DescendantNodesAndTokens()
 										where e.Kind() == SyntaxKind.IdentifierToken
 										select e;
-							_sT = d3.Last();
+							
+							_sT = (SyntaxToken)d3.First();
 						}
 
 						if (_sT.ToString() == node.ToString())
@@ -1667,7 +1688,7 @@ namespace CSharpToJavaScript
 					SM.Log(item.ToString());
 				}
 
-				SM.Log("ERROR! By reaching this means, a name did not convert to JS. CHECK FOR UPPERCASE CHARACTERS IN NAMES IN THE JS FILE!");
+				SM.Log($"ERROR! !-{node}-! By reaching this means, a name did not convert to JS. CHECK FOR UPPERCASE CHARACTERS IN NAMES IN THE JS FILE!");
 
 				base.VisitIdentifierName(node);
 			}

@@ -52,14 +52,14 @@ namespace CSharpToJavaScript
 		public List<Type> CustomCSTypesToJS { get; set; } = new();
 
 		/// <summary>
-		/// Add a <c>StringBulder</c> to the front of a javascript file.
+		/// Add a <c>StringBuilder</c> to the front of a javascript file.
 		/// </summary>
 		/// <value>
 		/// Default: <c>new()</c>
 		/// </value>
 		public StringBuilder AddSBInFront { get; set; } = new();
 		/// <summary>
-		/// Add a <c>StringBulder</c> to the end of a javascript file.
+		/// Add a <c>StringBuilder</c> to the end of a javascript file.
 		/// </summary>
 		/// <value>
 		/// Default: <c>new()</c>

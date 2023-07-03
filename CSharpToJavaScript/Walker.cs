@@ -6,7 +6,6 @@ using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
-using System.Linq.Expressions;
 using System.Reflection;
 using System.Text;
 
@@ -457,6 +456,7 @@ namespace CSharpToJavaScript
 
 					switch (kind)
 					{
+						case SyntaxKind.EqualsExpression:
 						case SyntaxKind.AsExpression:
 						case SyntaxKind.MultiplyExpression:
 						case SyntaxKind.InvocationExpression:
@@ -466,6 +466,7 @@ namespace CSharpToJavaScript
 						case SyntaxKind.ParenthesizedLambdaExpression:
 						case SyntaxKind.NumericLiteralExpression:
 						case SyntaxKind.ElementAccessExpression:
+						case SyntaxKind.FalseLiteralExpression:
 						case SyntaxKind.TrueLiteralExpression:
 						case SyntaxKind.StringLiteralExpression:
 							{

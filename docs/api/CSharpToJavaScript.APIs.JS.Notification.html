@@ -1,0 +1,1082 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class Notification
+ </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class Notification
+ ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+  </head>
+
+  <script type="module">
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="CSharpToJavaScript.APIs.JS.Notification">
+
+
+
+  <h1 id="CSharpToJavaScript_APIs_JS_Notification" data-uid="CSharpToJavaScript.APIs.JS.Notification" class="text-break">
+    Class Notification
+  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="CSharpToJavaScript.html">CSharpToJavaScript</a>.<a class="xref" href="CSharpToJavaScript.APIs.html">APIs</a>.<a class="xref" href="CSharpToJavaScript.APIs.JS.html">JS</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>CSharpToJavaScript.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public class Notification : EventTarget</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="CSharpToJavaScript.APIs.JS.EventTarget.html">EventTarget</a></div>
+      <div><span class="xref">Notification</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.EventTarget.html#CSharpToJavaScript_APIs_JS_EventTarget_AddEventListener_System_String_System_Action_CSharpToJavaScript_APIs_JS_Union1_">EventTarget.AddEventListener(string, Action, Union1)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.EventTarget.html#CSharpToJavaScript_APIs_JS_EventTarget_AddEventListener_System_String_System_Action_CSharpToJavaScript_APIs_JS_MouseEvent__CSharpToJavaScript_APIs_JS_Union1_">EventTarget.AddEventListener(string, Action&lt;MouseEvent&gt;, Union1)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.EventTarget.html#CSharpToJavaScript_APIs_JS_EventTarget_AddEventListener_System_String_System_Action_CSharpToJavaScript_APIs_JS_Event__CSharpToJavaScript_APIs_JS_Union1_">EventTarget.AddEventListener(string, Action&lt;Event&gt;, Union1)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.EventTarget.html#CSharpToJavaScript_APIs_JS_EventTarget_RemoveEventListener_System_String_System_Action_CSharpToJavaScript_APIs_JS_Union2_">EventTarget.RemoveEventListener(string, Action, Union2)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.EventTarget.html#CSharpToJavaScript_APIs_JS_EventTarget_AddEventListener_System_String_CSharpToJavaScript_APIs_JS_EventListener_CSharpToJavaScript_APIs_JS_Union1_">EventTarget.AddEventListener(string, EventListener, Union1)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.EventTarget.html#CSharpToJavaScript_APIs_JS_EventTarget_RemoveEventListener_System_String_CSharpToJavaScript_APIs_JS_EventListener_CSharpToJavaScript_APIs_JS_Union2_">EventTarget.RemoveEventListener(string, EventListener, Union2)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.EventTarget.html#CSharpToJavaScript_APIs_JS_EventTarget_DispatchEvent_CSharpToJavaScript_APIs_JS_Event_">EventTarget.DispatchEvent(Event)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Notification__ctor_" data-uid="CSharpToJavaScript.APIs.JS.Notification.#ctor*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Notification__ctor_System_String_CSharpToJavaScript_APIs_JS_NotificationOptions_" data-uid="CSharpToJavaScript.APIs.JS.Notification.#ctor(System.String,CSharpToJavaScript.APIs.JS.NotificationOptions)">
+  Notification(string, NotificationOptions)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>Notification</code> interface of the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API">Notifications API</a> is used to configure and display desktop notifications to the user.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Notification(string title, NotificationOptions options)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>title</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>options</code> <a class="xref" href="CSharpToJavaScript.APIs.JS.NotificationOptions.html">NotificationOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Notification__ctor_System_String_CSharpToJavaScript_APIs_JS_NotificationOptions__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>These notifications&amp;apos; appearance and specific functionality vary across platforms but generally they provide a way to asynchronously provide information to the user.</p><p>{{InheritanceDiagram}}</p>
+<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</a><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Notification</a></p>
+</div>
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Notification_Actions_" data-uid="CSharpToJavaScript.APIs.JS.Notification.Actions*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Notification_Actions" data-uid="CSharpToJavaScript.APIs.JS.Notification.Actions">
+  Actions
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>actions</code></strong> read-only property of the <see cref="!:&amp;quot;Notification&amp;quot;"></see> interface provides the actions available for users to choose from for interacting with the notification.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NotificationAction[] Actions { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.NotificationAction.html">NotificationAction</a>[]</dt>
+    <dd><p>A read-only array of actions. Each element in the array is an object with the following members:</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Notification_Actions_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The actions are set using the <code>actions</code> option of the second argument for the <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/showNotification"><code>showNotification()</code>https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/showNotification</a> method and <a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/Notification"><code>Notification()</code>https://developer.mozilla.org/en-US/docs/Web/API/Notification/Notification</a> constructor.</p><blockquote><p><strong>Note:</strong> Browsers typically limit the maximum number of actions they will display for a particular notification. Check the static <see cref="!:&amp;quot;NotificationMaxActions&amp;quot;"></see> property to determine the limit.</p></blockquote>
+<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</a><br>-<see cref="!:&amp;quot;NotificationMaxActions&amp;quot;"></see><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/actions"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Notification/actions</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Notification_Badge_" data-uid="CSharpToJavaScript.APIs.JS.Notification.Badge*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Notification_Badge" data-uid="CSharpToJavaScript.APIs.JS.Notification.Badge">
+  Badge
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>badge</code></strong> property of the <see cref="!:&amp;quot;Notification&amp;quot;"></see><br>interface returns the URL of the image used to represent the notification when there is<br>not enough space to display the notification itself.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Badge { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A string containing a URL.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Notification_Badge_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/badge"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Notification/badge</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Notification_Body_" data-uid="CSharpToJavaScript.APIs.JS.Notification.Body*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Notification_Body" data-uid="CSharpToJavaScript.APIs.JS.Notification.Body">
+  Body
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>body</code></strong> read-only property of the<br><see cref="!:&amp;quot;Notification&amp;quot;"></see> interface indicates the body string of the notification, as<br>specified in the <code>body</code> option of the<br><see cref="!:&amp;quot;NotificationNotification&amp;quot;"></see> constructor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Body { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A string.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Notification_Body_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</a><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/body"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Notification/body</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Notification_Data_" data-uid="CSharpToJavaScript.APIs.JS.Notification.Data*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Notification_Data" data-uid="CSharpToJavaScript.APIs.JS.Notification.Data">
+  Data
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>data</code></strong> read-only property of the<br><see cref="!:&amp;quot;Notification&amp;quot;"></see> interface returns a structured clone of the notification&amp;apos;s<br>data, as specified in the <code>data</code> option of the<br><see cref="!:&amp;quot;NotificationNotification&amp;quot;"></see> constructor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public dynamic Data { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">dynamic</span></dt>
+    <dd><p>A structured clone.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Notification_Data_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The notification&amp;apos;s data can be any arbitrary data that you want associated with the<br>notification.</p>
+<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</a><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/data"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Notification/data</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Notification_Dir_" data-uid="CSharpToJavaScript.APIs.JS.Notification.Dir*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Notification_Dir" data-uid="CSharpToJavaScript.APIs.JS.Notification.Dir">
+  Dir
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>dir</code> read-only property of the <see cref="!:&amp;quot;Notification&amp;quot;"></see> interface indicates the text direction of the notification, as specified in the <code>dir</code> option of the <see cref="!:&amp;quot;NotificationNotification&amp;quot;"></see> constructor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NotificationDirection Dir { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.NotificationDirection.html">NotificationDirection</a></dt>
+    <dd><p>A string specifying the text direction. Possible values are:<blockquote><strong>Note:</strong> Most browsers seem to ignore explicit ltr and rtl settings, and just go with the browser-wide setting.</blockquote>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Notification_Dir_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</a><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/dir"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Notification/dir</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Notification_Icon_" data-uid="CSharpToJavaScript.APIs.JS.Notification.Icon*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Notification_Icon" data-uid="CSharpToJavaScript.APIs.JS.Notification.Icon">
+  Icon
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>icon</code></strong> read-only property of the<br><see cref="!:&amp;quot;Notification&amp;quot;"></see> interface contains the URL of an icon to be displayed as<br>part of the notification, as specified in the <code>icon</code> option of the<br><see cref="!:&amp;quot;NotificationNotification&amp;quot;"></see> constructor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Icon { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A string.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Notification_Icon_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</a><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/icon"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Notification/icon</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Notification_Image_" data-uid="CSharpToJavaScript.APIs.JS.Notification.Image*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Notification_Image" data-uid="CSharpToJavaScript.APIs.JS.Notification.Image">
+  Image
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>image</code> read-only property of the<br><see cref="!:&amp;quot;Notification&amp;quot;"></see> interface contains the URL of an image to be displayed as<br>part of the notification, as specified in the <code>image</code> option of the<br><see cref="!:&amp;quot;NotificationNotification&amp;quot;"></see> constructor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Image { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A string.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Notification_Image_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</a><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/image"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Notification/image</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Notification_Lang_" data-uid="CSharpToJavaScript.APIs.JS.Notification.Lang*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Notification_Lang" data-uid="CSharpToJavaScript.APIs.JS.Notification.Lang">
+  Lang
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>lang</code></strong> read-only property of the<br><see cref="!:&amp;quot;Notification&amp;quot;"></see> interface indicates the language used in the notification,<br>as specified in the <code>lang</code> option of the<br><see cref="!:&amp;quot;NotificationNotification&amp;quot;"></see> constructor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Lang { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A string specifying the language tag.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Notification_Lang_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The language itself is specified using a string representing a language tag according to {{RFC(5646, &amp;quot;Tags for Identifying Languages (also known as BCP 47)&amp;quot;)}}.<br>See the Sitepoint <a href="https://www.sitepoint.com/iso-2-letter-language-codes/">ISO 2 letter language codes</a> page for a simple reference.</p>
+<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</a><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/lang"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Notification/lang</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Notification_MaxActions_" data-uid="CSharpToJavaScript.APIs.JS.Notification.MaxActions*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Notification_MaxActions" data-uid="CSharpToJavaScript.APIs.JS.Notification.MaxActions">
+  MaxActions
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>maxActions</code></strong> attribute of the<br><see cref="!:&amp;quot;Notification&amp;quot;"></see> interface returns the maximum number of actions supported by<br>the device and the User Agent. Effectively, this is the maximum number of elements in<br><see cref="!:&amp;quot;NotificationActions&amp;quot;"></see> array which will be respected by the User Agent.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ulong MaxActions { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd><p>An integer number which indicates the largest number of notification<br>actions that can be presented to the user by the User Agent and the device.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Notification_MaxActions_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</a><br>-<see cref="!:&amp;quot;NotificationActions&amp;quot;"></see><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/maxActions"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Notification/maxActions</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Notification_Onclick_" data-uid="CSharpToJavaScript.APIs.JS.Notification.Onclick*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Notification_Onclick" data-uid="CSharpToJavaScript.APIs.JS.Notification.Onclick">
+  Onclick
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EventHandlerNonNull Onclick { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.EventHandlerNonNull.html">EventHandlerNonNull</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Notification_Onclose_" data-uid="CSharpToJavaScript.APIs.JS.Notification.Onclose*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Notification_Onclose" data-uid="CSharpToJavaScript.APIs.JS.Notification.Onclose">
+  Onclose
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EventHandlerNonNull Onclose { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.EventHandlerNonNull.html">EventHandlerNonNull</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Notification_Onerror_" data-uid="CSharpToJavaScript.APIs.JS.Notification.Onerror*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Notification_Onerror" data-uid="CSharpToJavaScript.APIs.JS.Notification.Onerror">
+  Onerror
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EventHandlerNonNull Onerror { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.EventHandlerNonNull.html">EventHandlerNonNull</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Notification_Onshow_" data-uid="CSharpToJavaScript.APIs.JS.Notification.Onshow*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Notification_Onshow" data-uid="CSharpToJavaScript.APIs.JS.Notification.Onshow">
+  Onshow
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EventHandlerNonNull Onshow { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.EventHandlerNonNull.html">EventHandlerNonNull</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Notification_Permission_" data-uid="CSharpToJavaScript.APIs.JS.Notification.Permission*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Notification_Permission" data-uid="CSharpToJavaScript.APIs.JS.Notification.Permission">
+  Permission
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>permission</code> read-only property of the <see cref="!:&amp;quot;Notification&amp;quot;"></see><br>interface indicates the current permission granted by the user for the current origin to<br>display web notifications.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static NotificationPermission Permission { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.NotificationPermission.html">NotificationPermission</a></dt>
+    <dd><p>A string representing the current permission. The value can be:</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Notification_Permission_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API">Notifications API</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Permissions_API">Permissions API</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Permissions_API/Using_the_Permissions_API">Using the Permissions API</a><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/permission"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Notification/permission</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Notification_Renotify_" data-uid="CSharpToJavaScript.APIs.JS.Notification.Renotify*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Notification_Renotify" data-uid="CSharpToJavaScript.APIs.JS.Notification.Renotify">
+  Renotify
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>renotify</code></strong> read-only property of the<br><see cref="!:&amp;quot;Notification&amp;quot;"></see> interface specifies whether the user should be notified<br>after a new notification replaces an old one, as specified in the <code>renotify</code><br>option of the <see cref="!:&amp;quot;NotificationNotification&amp;quot;"></see> constructor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Renotify { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>A boolean value. <code>false</code> is the default; <code>true</code> makes<br>the notification renotify the user.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Notification_Renotify_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</a><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/renotify"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Notification/renotify</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Notification_RequireInteraction_" data-uid="CSharpToJavaScript.APIs.JS.Notification.RequireInteraction*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Notification_RequireInteraction" data-uid="CSharpToJavaScript.APIs.JS.Notification.RequireInteraction">
+  RequireInteraction
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>requireInteraction</code></strong> read-only property of the <see cref="!:&amp;quot;Notification&amp;quot;"></see> interface returns a boolean value indicating that a notification should remain active until the user clicks or dismisses it, rather than closing automatically.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RequireInteraction { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>A boolean value.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Notification_RequireInteraction_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><blockquote><p><strong>Note:</strong> This can be set when the notification is first created by setting the <code>requireInteraction</code> option to <code>true</code> in the options object of the <see cref="!:&amp;quot;NotificationNotification&amp;quot;"></see> constructor.</p></blockquote>
+<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</a><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/requireInteraction"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Notification/requireInteraction</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Notification_Silent_" data-uid="CSharpToJavaScript.APIs.JS.Notification.Silent*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Notification_Silent" data-uid="CSharpToJavaScript.APIs.JS.Notification.Silent">
+  Silent
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>silent</code></strong> read-only property of the<br><see cref="!:&amp;quot;Notification&amp;quot;"></see> interface specifies whether the notification should be<br>silent, i.e., no sounds or vibrations should be issued, regardless of the device<br>settings. This is specified in the <code>silent</code> option of the<br><see cref="!:&amp;quot;NotificationNotification&amp;quot;"></see> constructor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Silent { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>A boolean value. <code>false</code> is the default; <code>true</code> makes<br>the notification silent.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Notification_Silent_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</a><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/silent"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Notification/silent</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Notification_Tag_" data-uid="CSharpToJavaScript.APIs.JS.Notification.Tag*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Notification_Tag" data-uid="CSharpToJavaScript.APIs.JS.Notification.Tag">
+  Tag
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>tag</code></strong> read-only property of the<br><see cref="!:&amp;quot;Notification&amp;quot;"></see> interface signifies an identifying tag for the notification,<br>as specified in the <code>tag</code> option of the<br><see cref="!:&amp;quot;NotificationNotification&amp;quot;"></see> constructor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Tag { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A string.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Notification_Tag_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The idea of notification tags is that more than one notification can share the same<br>tag, linking them together. One notification can then be programmatically replaced with<br>another to avoid the users&amp;apos; screen being filled up with a huge number of similar<br>notifications.</p>
+<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</a><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/tag"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Notification/tag</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Notification_Timestamp_" data-uid="CSharpToJavaScript.APIs.JS.Notification.Timestamp*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Notification_Timestamp" data-uid="CSharpToJavaScript.APIs.JS.Notification.Timestamp">
+  Timestamp
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>timestamp</code></strong> read-only property of the<br><see cref="!:&amp;quot;Notification&amp;quot;"></see> interface returns a number, as<br>specified in the <code>timestamp</code> option of the<br><see cref="!:&amp;quot;NotificationNotification&amp;quot;"></see> constructor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Unsupported Timestamp { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
+    <dd><p>A number representing a timestamp, given as <a href="https://developer.mozilla.org/en-US/docs/Glossary/Unix_time">Unix time</a> in milliseconds.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Notification_Timestamp_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The notification&amp;apos;s timestamp can represent the time, in milliseconds since 00:00:00 UTC<br>on 1 January 1970, of the event for which the notification was created, or it can be an<br>arbitrary timestamp that you want associated with the notification. For example, a<br>timestamp for an upcoming meeting could be set in the future, whereas a timestamp for a<br>missed message could be set in the past.</p>
+<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</a><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/timestamp"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Notification/timestamp</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Notification_Title_" data-uid="CSharpToJavaScript.APIs.JS.Notification.Title*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Notification_Title" data-uid="CSharpToJavaScript.APIs.JS.Notification.Title">
+  Title
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>title</code></strong> read-only property of the<br><see cref="!:&amp;quot;Notification&amp;quot;"></see> interface indicates the title of the notification, as<br>specified in the <code>title</code> parameter of the<br><see cref="!:&amp;quot;NotificationNotification&amp;quot;"></see> constructor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Title { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A string.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Notification_Title_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</a><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/title"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Notification/title</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Notification_Vibrate_" data-uid="CSharpToJavaScript.APIs.JS.Notification.Vibrate*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Notification_Vibrate" data-uid="CSharpToJavaScript.APIs.JS.Notification.Vibrate">
+  Vibrate
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>vibrate</code> read-only property of the <see cref="!:&amp;quot;Notification&amp;quot;"></see><br>interface specifies a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Vibration_API#vibration_patterns">vibration pattern</a><br>for the device&amp;apos;s vibration hardware to emit when the notification fires. This is<br>specified in the <code>vibrate</code> option of the<br><see cref="!:&amp;quot;NotificationNotification&amp;quot;"></see> constructor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong[] Vibrate { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>[]</dt>
+    <dd><p>A <a href="https://developer.mozilla.org/en-US/docs/Web/API/Vibration_API#vibration_patterns">vibration pattern</a>, as specified in the <a href="https://w3c.github.io/vibration/">Vibration API spec</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Notification_Vibrate_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</a><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/vibrate"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Notification/vibrate</a></p>
+</div>
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Notification_Close_" data-uid="CSharpToJavaScript.APIs.JS.Notification.Close*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Notification_Close" data-uid="CSharpToJavaScript.APIs.JS.Notification.Close">
+  Close()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>close()</code> method of the <see cref="!:&amp;quot;Notification&amp;quot;"></see> interface is used to<br>close/remove a previously displayed notification.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Unsupported Close()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
+    <dd><p>None ({{jsxref(&amp;quot;undefined&amp;quot;)}}).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Notification_Close_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><blockquote><p><strong>Note:</strong> This API shouldn&amp;apos;t be used just to have the notification<br>removed from the screen after a fixed delay since this method will also remove the<br>notification from any notification tray, preventing users from interacting with it<br>after it was initially shown. A valid use for this API would be to remove a<br>notification that is no longer relevant (e.g. the user already read the notification<br>on the webpage in the case of a messaging app or the following song is already playing<br>in a music app).</p></blockquote>
+<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</a><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/close"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Notification/close</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Notification_RequestPermission_" data-uid="CSharpToJavaScript.APIs.JS.Notification.RequestPermission*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Notification_RequestPermission_CSharpToJavaScript_APIs_JS_NotificationPermissionCallback_" data-uid="CSharpToJavaScript.APIs.JS.Notification.RequestPermission(CSharpToJavaScript.APIs.JS.NotificationPermissionCallback)">
+  RequestPermission(NotificationPermissionCallback)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><blockquote><strong>Note:</strong> Safari still uses the callback syntax to get the permission. Read <a href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</a> for a good example of how to feature detect this and run code as appropriate.</blockquote>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;NotificationPermission&gt; RequestPermission(NotificationPermissionCallback deprecatedCallback)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>deprecatedCallback</code> <a class="xref" href="CSharpToJavaScript.APIs.JS.NotificationPermissionCallback.html">NotificationPermissionCallback</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="CSharpToJavaScript.APIs.JS.NotificationPermission.html">NotificationPermission</a>&gt;</dt>
+    <dd><p>A {{jsxref(&amp;quot;Promise&amp;quot;)}} that resolves to a string with the permission picked by the user. Possible values for this string are:</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Notification_RequestPermission_CSharpToJavaScript_APIs_JS_NotificationPermissionCallback__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The <strong><code>requestPermission()</code></strong> method of the <see cref="!:&amp;quot;Notification&amp;quot;"></see> interface requests permission from the user for the current origin to display notifications.</p>
+<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</a><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/requestPermission"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Notification/requestPermission</a></p>
+</div>
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

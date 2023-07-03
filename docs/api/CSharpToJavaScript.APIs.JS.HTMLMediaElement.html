@@ -1,0 +1,1980 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class HTMLMediaElement
+ </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class HTMLMediaElement
+ ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+  </head>
+
+  <script type="module">
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement">
+
+
+
+  <h1 id="CSharpToJavaScript_APIs_JS_HTMLMediaElement" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement" class="text-break">
+    Class HTMLMediaElement
+  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="CSharpToJavaScript.html">CSharpToJavaScript</a>.<a class="xref" href="CSharpToJavaScript.APIs.html">APIs</a>.<a class="xref" href="CSharpToJavaScript.APIs.JS.html">JS</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>CSharpToJavaScript.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[To(&quot;Default&quot;)]
+public class HTMLMediaElement : HTMLElement, ParentNode, NonDocumentTypeChildNode, ChildNode, Slottable, GlobalEventHandlers, DocumentAndElementEventHandlers, ElementContentEditable, HTMLOrSVGElement</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="CSharpToJavaScript.APIs.JS.EventTarget.html">EventTarget</a></div>
+      <div><a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a></div>
+      <div><a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html">Element</a></div>
+      <div><a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLElement.html">HTMLElement</a></div>
+      <div><span class="xref">HTMLMediaElement</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="CSharpToJavaScript.APIs.JS.ParentNode.html">ParentNode</a></div>
+      <div><a class="xref" href="CSharpToJavaScript.APIs.JS.NonDocumentTypeChildNode.html">NonDocumentTypeChildNode</a></div>
+      <div><a class="xref" href="CSharpToJavaScript.APIs.JS.ChildNode.html">ChildNode</a></div>
+      <div><a class="xref" href="CSharpToJavaScript.APIs.JS.Slottable.html">Slottable</a></div>
+      <div><a class="xref" href="CSharpToJavaScript.APIs.JS.GlobalEventHandlers.html">GlobalEventHandlers</a></div>
+      <div><a class="xref" href="CSharpToJavaScript.APIs.JS.DocumentAndElementEventHandlers.html">DocumentAndElementEventHandlers</a></div>
+      <div><a class="xref" href="CSharpToJavaScript.APIs.JS.ElementContentEditable.html">ElementContentEditable</a></div>
+      <div><a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLOrSVGElement.html">HTMLOrSVGElement</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLAudioElement.html">HTMLAudioElement</a></div>
+      <div><a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLVideoElement.html">HTMLVideoElement</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLElement.html#CSharpToJavaScript_APIs_JS_HTMLElement_Title">HTMLElement.Title</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLElement.html#CSharpToJavaScript_APIs_JS_HTMLElement_Lang">HTMLElement.Lang</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLElement.html#CSharpToJavaScript_APIs_JS_HTMLElement_Translate">HTMLElement.Translate</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLElement.html#CSharpToJavaScript_APIs_JS_HTMLElement_Dir">HTMLElement.Dir</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLElement.html#CSharpToJavaScript_APIs_JS_HTMLElement_Hidden">HTMLElement.Hidden</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLElement.html#CSharpToJavaScript_APIs_JS_HTMLElement_Inert">HTMLElement.Inert</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLElement.html#CSharpToJavaScript_APIs_JS_HTMLElement_Click">HTMLElement.Click()</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLElement.html#CSharpToJavaScript_APIs_JS_HTMLElement_AccessKey">HTMLElement.AccessKey</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLElement.html#CSharpToJavaScript_APIs_JS_HTMLElement_AccessKeyLabel">HTMLElement.AccessKeyLabel</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLElement.html#CSharpToJavaScript_APIs_JS_HTMLElement_Draggable">HTMLElement.Draggable</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLElement.html#CSharpToJavaScript_APIs_JS_HTMLElement_Spellcheck">HTMLElement.Spellcheck</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLElement.html#CSharpToJavaScript_APIs_JS_HTMLElement_Autocapitalize">HTMLElement.Autocapitalize</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLElement.html#CSharpToJavaScript_APIs_JS_HTMLElement_InnerText">HTMLElement.InnerText</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLElement.html#CSharpToJavaScript_APIs_JS_HTMLElement_OuterText">HTMLElement.OuterText</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLElement.html#CSharpToJavaScript_APIs_JS_HTMLElement_AttachInternals">HTMLElement.AttachInternals()</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLElement.html#CSharpToJavaScript_APIs_JS_HTMLElement_Style">HTMLElement.Style</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html#CSharpToJavaScript_APIs_JS_Element_NamespaceURI">Element.NamespaceURI</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html#CSharpToJavaScript_APIs_JS_Element_Prefix">Element.Prefix</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html#CSharpToJavaScript_APIs_JS_Element_LocalName">Element.LocalName</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html#CSharpToJavaScript_APIs_JS_Element_TagName">Element.TagName</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html#CSharpToJavaScript_APIs_JS_Element_Id">Element.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html#CSharpToJavaScript_APIs_JS_Element_ClassName">Element.ClassName</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html#CSharpToJavaScript_APIs_JS_Element_ClassList">Element.ClassList</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html#CSharpToJavaScript_APIs_JS_Element_Slot">Element.Slot</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html#CSharpToJavaScript_APIs_JS_Element_HasAttributes">Element.HasAttributes()</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html#CSharpToJavaScript_APIs_JS_Element_Attributes">Element.Attributes</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html#CSharpToJavaScript_APIs_JS_Element_GetAttributeNames">Element.GetAttributeNames()</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html#CSharpToJavaScript_APIs_JS_Element_GetAttribute_System_String_">Element.GetAttribute(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html#CSharpToJavaScript_APIs_JS_Element_GetAttributeNS_System_String_System_String_">Element.GetAttributeNS(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html#CSharpToJavaScript_APIs_JS_Element_SetAttribute_System_String_System_String_">Element.SetAttribute(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html#CSharpToJavaScript_APIs_JS_Element_SetAttributeNS_System_String_System_String_System_String_">Element.SetAttributeNS(string, string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html#CSharpToJavaScript_APIs_JS_Element_RemoveAttribute_System_String_">Element.RemoveAttribute(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html#CSharpToJavaScript_APIs_JS_Element_RemoveAttributeNS_System_String_System_String_">Element.RemoveAttributeNS(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html#CSharpToJavaScript_APIs_JS_Element_ToggleAttribute_System_String_System_Boolean_">Element.ToggleAttribute(string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html#CSharpToJavaScript_APIs_JS_Element_HasAttribute_System_String_">Element.HasAttribute(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html#CSharpToJavaScript_APIs_JS_Element_HasAttributeNS_System_String_System_String_">Element.HasAttributeNS(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html#CSharpToJavaScript_APIs_JS_Element_GetAttributeNode_System_String_">Element.GetAttributeNode(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html#CSharpToJavaScript_APIs_JS_Element_GetAttributeNodeNS_System_String_System_String_">Element.GetAttributeNodeNS(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html#CSharpToJavaScript_APIs_JS_Element_SetAttributeNode_CSharpToJavaScript_APIs_JS_Attr_">Element.SetAttributeNode(Attr)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html#CSharpToJavaScript_APIs_JS_Element_SetAttributeNodeNS_CSharpToJavaScript_APIs_JS_Attr_">Element.SetAttributeNodeNS(Attr)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html#CSharpToJavaScript_APIs_JS_Element_RemoveAttributeNode_CSharpToJavaScript_APIs_JS_Attr_">Element.RemoveAttributeNode(Attr)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html#CSharpToJavaScript_APIs_JS_Element_AttachShadow_CSharpToJavaScript_APIs_JS_ShadowRootInit_">Element.AttachShadow(ShadowRootInit)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html#CSharpToJavaScript_APIs_JS_Element_ShadowRoot">Element.ShadowRoot</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html#CSharpToJavaScript_APIs_JS_Element_Closest_System_String_">Element.Closest(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html#CSharpToJavaScript_APIs_JS_Element_Matches_System_String_">Element.Matches(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html#CSharpToJavaScript_APIs_JS_Element_WebkitMatchesSelector_System_String_">Element.WebkitMatchesSelector(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html#CSharpToJavaScript_APIs_JS_Element_GetElementsByTagName_System_String_">Element.GetElementsByTagName(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html#CSharpToJavaScript_APIs_JS_Element_GetElementsByTagNameNS_System_String_System_String_">Element.GetElementsByTagNameNS(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html#CSharpToJavaScript_APIs_JS_Element_GetElementsByClassName_System_String_">Element.GetElementsByClassName(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html#CSharpToJavaScript_APIs_JS_Element_InsertAdjacentElement_System_String_CSharpToJavaScript_APIs_JS_Element_">Element.InsertAdjacentElement(string, Element)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html#CSharpToJavaScript_APIs_JS_Element_InsertAdjacentText_System_String_System_String_">Element.InsertAdjacentText(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html#CSharpToJavaScript_APIs_JS_Element_RequestFullscreen_CSharpToJavaScript_APIs_JS_FullscreenOptions_">Element.RequestFullscreen(FullscreenOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html#CSharpToJavaScript_APIs_JS_Element_Onfullscreenchange">Element.Onfullscreenchange</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html#CSharpToJavaScript_APIs_JS_Element_Onfullscreenerror">Element.Onfullscreenerror</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_ELEMENT_NODE">Node.ELEMENT_NODE</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_ATTRIBUTE_NODE">Node.ATTRIBUTE_NODE</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_TEXT_NODE">Node.TEXT_NODE</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_CDATA_SECTION_NODE">Node.CDATA_SECTION_NODE</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_ENTITY_REFERENCE_NODE">Node.ENTITY_REFERENCE_NODE</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_ENTITY_NODE">Node.ENTITY_NODE</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_PROCESSING_INSTRUCTION_NODE">Node.PROCESSING_INSTRUCTION_NODE</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_COMMENT_NODE">Node.COMMENT_NODE</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_DOCUMENT_NODE">Node.DOCUMENT_NODE</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_DOCUMENT_TYPE_NODE">Node.DOCUMENT_TYPE_NODE</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_DOCUMENT_FRAGMENT_NODE">Node.DOCUMENT_FRAGMENT_NODE</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_NOTATION_NODE">Node.NOTATION_NODE</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_NodeType">Node.NodeType</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_NodeName">Node.NodeName</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_BaseURI">Node.BaseURI</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_IsConnected">Node.IsConnected</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_OwnerDocument">Node.OwnerDocument</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_GetRootNode_CSharpToJavaScript_APIs_JS_GetRootNodeOptions_">Node.GetRootNode(GetRootNodeOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_ParentNode">Node.ParentNode</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_ParentElement">Node.ParentElement</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_HasChildNodes">Node.HasChildNodes()</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_ChildNodes">Node.ChildNodes</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_FirstChild">Node.FirstChild</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_LastChild">Node.LastChild</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_PreviousSibling">Node.PreviousSibling</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_NextSibling">Node.NextSibling</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_NodeValue">Node.NodeValue</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_TextContent">Node.TextContent</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_Normalize">Node.Normalize()</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_CloneNode_System_Boolean_">Node.CloneNode(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_IsEqualNode_CSharpToJavaScript_APIs_JS_Node_">Node.IsEqualNode(Node)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_IsSameNode_CSharpToJavaScript_APIs_JS_Node_">Node.IsSameNode(Node)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_DOCUMENT_POSITION_DISCONNECTED">Node.DOCUMENT_POSITION_DISCONNECTED</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_DOCUMENT_POSITION_PRECEDING">Node.DOCUMENT_POSITION_PRECEDING</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_DOCUMENT_POSITION_FOLLOWING">Node.DOCUMENT_POSITION_FOLLOWING</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_DOCUMENT_POSITION_CONTAINS">Node.DOCUMENT_POSITION_CONTAINS</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_DOCUMENT_POSITION_CONTAINED_BY">Node.DOCUMENT_POSITION_CONTAINED_BY</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC">Node.DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_CompareDocumentPosition_CSharpToJavaScript_APIs_JS_Node_">Node.CompareDocumentPosition(Node)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_Contains_CSharpToJavaScript_APIs_JS_Node_">Node.Contains(Node)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_LookupPrefix_System_String_">Node.LookupPrefix(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_LookupNamespaceURI_System_String_">Node.LookupNamespaceURI(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_IsDefaultNamespace_System_String_">Node.IsDefaultNamespace(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_InsertBefore_CSharpToJavaScript_APIs_JS_Node_CSharpToJavaScript_APIs_JS_Node_">Node.InsertBefore(Node, Node)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_AppendChild_CSharpToJavaScript_APIs_JS_Node_">Node.AppendChild(Node)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_ReplaceChild_CSharpToJavaScript_APIs_JS_Node_CSharpToJavaScript_APIs_JS_Node_">Node.ReplaceChild(Node, Node)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_RemoveChild_CSharpToJavaScript_APIs_JS_Node_">Node.RemoveChild(Node)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.EventTarget.html#CSharpToJavaScript_APIs_JS_EventTarget_AddEventListener_System_String_System_Action_CSharpToJavaScript_APIs_JS_Union1_">EventTarget.AddEventListener(string, Action, Union1)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.EventTarget.html#CSharpToJavaScript_APIs_JS_EventTarget_AddEventListener_System_String_System_Action_CSharpToJavaScript_APIs_JS_MouseEvent__CSharpToJavaScript_APIs_JS_Union1_">EventTarget.AddEventListener(string, Action&lt;MouseEvent&gt;, Union1)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.EventTarget.html#CSharpToJavaScript_APIs_JS_EventTarget_AddEventListener_System_String_System_Action_CSharpToJavaScript_APIs_JS_Event__CSharpToJavaScript_APIs_JS_Union1_">EventTarget.AddEventListener(string, Action&lt;Event&gt;, Union1)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.EventTarget.html#CSharpToJavaScript_APIs_JS_EventTarget_RemoveEventListener_System_String_System_Action_CSharpToJavaScript_APIs_JS_Union2_">EventTarget.RemoveEventListener(string, Action, Union2)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.EventTarget.html#CSharpToJavaScript_APIs_JS_EventTarget_AddEventListener_System_String_CSharpToJavaScript_APIs_JS_EventListener_CSharpToJavaScript_APIs_JS_Union1_">EventTarget.AddEventListener(string, EventListener, Union1)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.EventTarget.html#CSharpToJavaScript_APIs_JS_EventTarget_RemoveEventListener_System_String_CSharpToJavaScript_APIs_JS_EventListener_CSharpToJavaScript_APIs_JS_Union2_">EventTarget.RemoveEventListener(string, EventListener, Union2)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.EventTarget.html#CSharpToJavaScript_APIs_JS_EventTarget_DispatchEvent_CSharpToJavaScript_APIs_JS_Event_">EventTarget.DispatchEvent(Event)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_HAVE_CURRENT_DATA" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.HAVE_CURRENT_DATA">
+  HAVE_CURRENT_DATA
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public const ushort HAVE_CURRENT_DATA = 2</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_HAVE_ENOUGH_DATA" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.HAVE_ENOUGH_DATA">
+  HAVE_ENOUGH_DATA
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public const ushort HAVE_ENOUGH_DATA = 4</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_HAVE_FUTURE_DATA" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.HAVE_FUTURE_DATA">
+  HAVE_FUTURE_DATA
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public const ushort HAVE_FUTURE_DATA = 3</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_HAVE_METADATA" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.HAVE_METADATA">
+  HAVE_METADATA
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public const ushort HAVE_METADATA = 1</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_HAVE_NOTHING" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.HAVE_NOTHING">
+  HAVE_NOTHING
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public const ushort HAVE_NOTHING = 0</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_NETWORK_EMPTY" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.NETWORK_EMPTY">
+  NETWORK_EMPTY
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public const ushort NETWORK_EMPTY = 0</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_NETWORK_IDLE" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.NETWORK_IDLE">
+  NETWORK_IDLE
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public const ushort NETWORK_IDLE = 1</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_NETWORK_LOADING" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.NETWORK_LOADING">
+  NETWORK_LOADING
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public const ushort NETWORK_LOADING = 2</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_NETWORK_NO_SOURCE" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.NETWORK_NO_SOURCE">
+  NETWORK_NO_SOURCE
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public const ushort NETWORK_NO_SOURCE = 3</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_AudioTracks_" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.AudioTracks*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_AudioTracks" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.AudioTracks">
+  AudioTracks
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public AudioTrackList AudioTracks { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.AudioTrackList.html">AudioTrackList</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_Autoplay_" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.Autoplay*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_Autoplay" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.Autoplay">
+  Autoplay
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public bool Autoplay { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_Buffered_" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.Buffered*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_Buffered" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.Buffered">
+  Buffered
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public TimeRanges Buffered { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.TimeRanges.html">TimeRanges</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_BufferingThrottled_" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.BufferingThrottled*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_BufferingThrottled" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.BufferingThrottled">
+  BufferingThrottled
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public bool BufferingThrottled { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_Controls_" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.Controls*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_Controls" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.Controls">
+  Controls
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public bool Controls { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_CrossOrigin_" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.CrossOrigin*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_CrossOrigin" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.CrossOrigin">
+  CrossOrigin
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public string? CrossOrigin { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_CurrentSrc_" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.CurrentSrc*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_CurrentSrc" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.CurrentSrc">
+  CurrentSrc
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public string CurrentSrc { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_CurrentTime_" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.CurrentTime*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_CurrentTime" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.CurrentTime">
+  CurrentTime
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public double CurrentTime { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_DefaultMuted_" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.DefaultMuted*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_DefaultMuted" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.DefaultMuted">
+  DefaultMuted
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public bool DefaultMuted { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_DefaultPlaybackRate_" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.DefaultPlaybackRate*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_DefaultPlaybackRate" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.DefaultPlaybackRate">
+  DefaultPlaybackRate
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public double DefaultPlaybackRate { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_Duration_" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.Duration*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_Duration" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.Duration">
+  Duration
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public double Duration { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_Ended_" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.Ended*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_Ended" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.Ended">
+  Ended
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public bool Ended { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_Error_" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.Error*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_Error" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.Error">
+  Error
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public MediaError? Error { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.MediaError.html">MediaError</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_Loop_" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.Loop*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_Loop" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.Loop">
+  Loop
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public bool Loop { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_Muted_" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.Muted*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_Muted" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.Muted">
+  Muted
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public bool Muted { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_NetworkState_" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.NetworkState*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_NetworkState" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.NetworkState">
+  NetworkState
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public ushort NetworkState { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_Paused_" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.Paused*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_Paused" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.Paused">
+  Paused
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public bool Paused { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_PlaybackRate_" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.PlaybackRate*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_PlaybackRate" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.PlaybackRate">
+  PlaybackRate
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public double PlaybackRate { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_Played_" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.Played*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_Played" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.Played">
+  Played
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public TimeRanges Played { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.TimeRanges.html">TimeRanges</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_Preload_" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.Preload*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_Preload" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.Preload">
+  Preload
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public string Preload { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_PreservesPitch_" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.PreservesPitch*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_PreservesPitch" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.PreservesPitch">
+  PreservesPitch
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public bool PreservesPitch { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_ReadyState_" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.ReadyState*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_ReadyState" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.ReadyState">
+  ReadyState
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public ushort ReadyState { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_Seekable_" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.Seekable*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_Seekable" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.Seekable">
+  Seekable
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public TimeRanges Seekable { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.TimeRanges.html">TimeRanges</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_Seeking_" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.Seeking*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_Seeking" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.Seeking">
+  Seeking
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public bool Seeking { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_Src_" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.Src*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_Src" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.Src">
+  Src
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public string Src { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_SrcObject_" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.SrcObject*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_SrcObject" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.SrcObject">
+  SrcObject
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public Union20? SrcObject { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Union20.html">Union20</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_TextTracks_" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.TextTracks*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_TextTracks" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.TextTracks">
+  TextTracks
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public TextTrackList TextTracks { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.TextTrackList.html">TextTrackList</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_VideoTracks_" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.VideoTracks*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_VideoTracks" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.VideoTracks">
+  VideoTracks
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public VideoTrackList VideoTracks { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.VideoTrackList.html">VideoTrackList</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_Volume_" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.Volume*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_Volume" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.Volume">
+  Volume
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public double Volume { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_AddTextTrack_" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.AddTextTrack*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_AddTextTrack_CSharpToJavaScript_APIs_JS_TextTrackKind_System_String_System_String_" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.AddTextTrack(CSharpToJavaScript.APIs.JS.TextTrackKind,System.String,System.String)">
+  AddTextTrack(TextTrackKind, string, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public TextTrack AddTextTrack(TextTrackKind kind, string label, string language)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>kind</code> <a class="xref" href="CSharpToJavaScript.APIs.JS.TextTrackKind.html">TextTrackKind</a></dt>
+    <dd></dd>
+    <dt><code>label</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>language</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.TextTrack.html">TextTrack</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_CanPlayType_" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.CanPlayType*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_CanPlayType_System_String_" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.CanPlayType(System.String)">
+  CanPlayType(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public CanPlayTypeResult CanPlayType(string type)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>type</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.CanPlayTypeResult.html">CanPlayTypeResult</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_FastSeek_" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.FastSeek*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_FastSeek_System_Double_" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.FastSeek(System.Double)">
+  FastSeek(double)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public Unsupported FastSeek(double time)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>time</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_GetStartDate_" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.GetStartDate*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_GetStartDate" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.GetStartDate">
+  GetStartDate()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public object GetStartDate()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_Load_" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.Load*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_Load" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.Load">
+  Load()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public Unsupported Load()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_Pause_" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.Pause*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_Pause" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.Pause">
+  Pause()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public Unsupported Pause()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_Play_" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.Play*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_Play" data-uid="CSharpToJavaScript.APIs.JS.HTMLMediaElement.Play">
+  Play()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public Task&lt;Unsupported&gt; Play()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,1810 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class Window
+ </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class Window
+ ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+  </head>
+
+  <script type="module">
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="CSharpToJavaScript.APIs.JS.Window">
+
+
+
+  <h1 id="CSharpToJavaScript_APIs_JS_Window" data-uid="CSharpToJavaScript.APIs.JS.Window" class="text-break">
+    Class Window
+  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="CSharpToJavaScript.html">CSharpToJavaScript</a>.<a class="xref" href="CSharpToJavaScript.APIs.html">APIs</a>.<a class="xref" href="CSharpToJavaScript.APIs.JS.html">JS</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>CSharpToJavaScript.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>The <strong><code>Window</code></strong> interface represents a window containing a {{glossary(&amp;quot;DOM&amp;quot;)}} document; the <code>document</code> property points to the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document">DOM document</a> loaded in that window.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public class Window : EventTarget</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="CSharpToJavaScript.APIs.JS.EventTarget.html">EventTarget</a></div>
+      <div><span class="xref">Window</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.EventTarget.html#CSharpToJavaScript_APIs_JS_EventTarget_AddEventListener_System_String_System_Action_CSharpToJavaScript_APIs_JS_Union1_">EventTarget.AddEventListener(string, Action, Union1)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.EventTarget.html#CSharpToJavaScript_APIs_JS_EventTarget_AddEventListener_System_String_System_Action_CSharpToJavaScript_APIs_JS_MouseEvent__CSharpToJavaScript_APIs_JS_Union1_">EventTarget.AddEventListener(string, Action&lt;MouseEvent&gt;, Union1)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.EventTarget.html#CSharpToJavaScript_APIs_JS_EventTarget_AddEventListener_System_String_System_Action_CSharpToJavaScript_APIs_JS_Event__CSharpToJavaScript_APIs_JS_Union1_">EventTarget.AddEventListener(string, Action&lt;Event&gt;, Union1)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.EventTarget.html#CSharpToJavaScript_APIs_JS_EventTarget_RemoveEventListener_System_String_System_Action_CSharpToJavaScript_APIs_JS_Union2_">EventTarget.RemoveEventListener(string, Action, Union2)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.EventTarget.html#CSharpToJavaScript_APIs_JS_EventTarget_AddEventListener_System_String_CSharpToJavaScript_APIs_JS_EventListener_CSharpToJavaScript_APIs_JS_Union1_">EventTarget.AddEventListener(string, EventListener, Union1)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.EventTarget.html#CSharpToJavaScript_APIs_JS_EventTarget_RemoveEventListener_System_String_CSharpToJavaScript_APIs_JS_EventListener_CSharpToJavaScript_APIs_JS_Union2_">EventTarget.RemoveEventListener(string, EventListener, Union2)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.EventTarget.html#CSharpToJavaScript_APIs_JS_EventTarget_DispatchEvent_CSharpToJavaScript_APIs_JS_Event_">EventTarget.DispatchEvent(Event)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="CSharpToJavaScript_APIs_JS_Window_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>A window for a given document can be obtained using the <see cref="!:&amp;quot;documentDefaultView&amp;quot;"></see> property.</p><p>A global variable, <code>window</code>, representing the window in which the script is running, is exposed to JavaScript code.</p><p>The <code>Window</code> interface is home to a variety of functions, namespaces, objects, and constructors which are not necessarily directly associated with the concept of a user interface window. However, the <code>Window</code> interface is a suitable place to include these items that need to be globally available. Many of these are documented in the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference">JavaScript Reference</a> and the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">DOM Reference</a>.</p><p>In a tabbed browser, each tab is represented by its own <code>Window</code> object; the global <code>window</code> seen by JavaScript code running within a given tab always represents the tab in which the code is running. That said, even in a tabbed browser, some properties and methods still apply to the overall window that contains the tab, such as <see cref="!:&amp;quot;WindowResizeTo&amp;quot;"></see> and <see cref="!:&amp;quot;WindowResizeTo&amp;quot;"></see>. Generally, anything that can&amp;apos;t reasonably pertain to a tab pertains to the window instead.</p><p>{{InheritanceDiagram}}</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Window</a></p>
+</div>
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Window_ClientInformation_" data-uid="CSharpToJavaScript.APIs.JS.Window.ClientInformation*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Window_ClientInformation" data-uid="CSharpToJavaScript.APIs.JS.Window.ClientInformation">
+  ClientInformation
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Navigator ClientInformation { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Navigator.html">Navigator</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Window_Closed_" data-uid="CSharpToJavaScript.APIs.JS.Window.Closed*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Window_Closed" data-uid="CSharpToJavaScript.APIs.JS.Window.Closed">
+  Closed
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>Window.closed</code></strong> read-only property indicates whether<br>the referenced window is closed or not.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Closed { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>A boolean value. Possible values:</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Window_Closed_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/closed"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Window/closed</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Window_CustomElements_" data-uid="CSharpToJavaScript.APIs.JS.Window.CustomElements*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Window_CustomElements" data-uid="CSharpToJavaScript.APIs.JS.Window.CustomElements">
+  CustomElements
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>customElements</code></strong> read-only property of the <see cref="!:&amp;quot;Window&amp;quot;"></see> interface returns a reference to the <see cref="!:&amp;quot;Window&amp;quot;"></see> object, which can be used to register new <a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements">custom elements</a> and get information about previously registered custom elements.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CustomElementRegistry CustomElements { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.CustomElementRegistry.html">CustomElementRegistry</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Window_CustomElements_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/customElements"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Window/customElements</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Window_Document_" data-uid="CSharpToJavaScript.APIs.JS.Window.Document*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Window_Document" data-uid="CSharpToJavaScript.APIs.JS.Window.Document">
+  Document
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p><strong><code>window.document</code></strong> returns a reference to the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document">document</a> contained in the window.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Document Document { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Document.html">Document</a></dt>
+    <dd><p>A <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document">document</a> object.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Window_Document_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/document"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Window/document</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Window_Event_" data-uid="CSharpToJavaScript.APIs.JS.Window.Event*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Window_Event" data-uid="CSharpToJavaScript.APIs.JS.Window.Event">
+  Event
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The read-only <see cref="!:&amp;quot;Window&amp;quot;"></see> property <strong><code>event</code></strong> returns the <see cref="!:&amp;quot;Event&amp;quot;"></see> which is currently being handled by the site&amp;apos;s code. Outside the context of an event handler, the value is always <code>undefined</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Union0 Event { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Union0.html">Union0</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Window_Event_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>You <strong>should</strong> avoid using this property in new code, and should instead use the <see cref="!:&amp;quot;Event&amp;quot;"></see> passed into the event handler function. This property is not universally supported and even when supported introduces potential fragility to your code.</p><blockquote><p><strong>Note:</strong> This property can be fragile, in that there may be situations in which the returned <code>Event</code> is not the expected value. In addition, <code>Window.event</code> is not accurate for events dispatched within {{Glossary(&amp;quot;shadow tree&amp;quot;, &amp;quot;shadow trees&amp;quot;)}}.</p></blockquote>
+<p>-<see cref="!:&amp;quot;EventSrcElement&amp;quot;"></see><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/event"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Window/event</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Window_External_" data-uid="CSharpToJavaScript.APIs.JS.Window.External*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Window_External" data-uid="CSharpToJavaScript.APIs.JS.Window.External">
+  External
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>external</code> property of the <see cref="!:&amp;quot;Window&amp;quot;"></see> API returns an instance of the <code>External</code> interface, which was intended to contain functions related to adding external search providers to the browser. However, this is now deprecated, and the contained methods are now dummy functions that do nothing as per spec.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public External External { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.External.html">External</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Window_External_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/external"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Window/external</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Window_FrameElement_" data-uid="CSharpToJavaScript.APIs.JS.Window.FrameElement*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Window_FrameElement" data-uid="CSharpToJavaScript.APIs.JS.Window.FrameElement">
+  FrameElement
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>Window.frameElement</code></strong> property<br>returns the element (such as {{HTMLElement(&amp;quot;iframe&amp;quot;)}} or {{HTMLElement(&amp;quot;object&amp;quot;)}})<br>in which the window is embedded.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Element? FrameElement { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html">Element</a></dt>
+    <dd><p>The element which the window is embedded into. If the window isn&amp;apos;t embedded into<br>another document, or if the document into which it&amp;apos;s embedded has a different<br>{{glossary(&amp;quot;origin&amp;quot;)}}, the value is <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><code>null</code>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null</a> instead.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Window_FrameElement_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><blockquote><p><strong>Note:</strong> Despite this property&amp;apos;s name, it works for documents embedded<br>within any embedding point, including {{HTMLElement(&amp;quot;object&amp;quot;)}},<br>{{HTMLElement(&amp;quot;iframe&amp;quot;)}}, or {{HTMLElement(&amp;quot;embed&amp;quot;)}}.</p></blockquote>
+<p>-<see cref="!:&amp;quot;windowFrames&amp;quot;"></see> returns an array-like object, listing the direct<br>sub-frames of the current window.<br>-<see cref="!:&amp;quot;windowParent&amp;quot;"></see> returns the parent window, which is the window<br>containing the <code>frameElement</code> of the child window.<br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/frameElement"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Window/frameElement</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Window_Frames_" data-uid="CSharpToJavaScript.APIs.JS.Window.Frames*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Window_Frames" data-uid="CSharpToJavaScript.APIs.JS.Window.Frames">
+  Frames
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the window itself, which is an array-like object, listing the direct sub-frames<br>of the current window.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Window Frames { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Window.html">Window</a></dt>
+    <dd><p>A list of frame objects. It is similar to an<br>array in that it has a <code>length</code> property and its items can be accessed<br>using the <code>[i]</code> notation.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Window_Frames_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/frames"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Window/frames</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Window_History_" data-uid="CSharpToJavaScript.APIs.JS.Window.History*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Window_History" data-uid="CSharpToJavaScript.APIs.JS.Window.History">
+  History
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>Window.history</code> read-only property returns a reference to the <see cref="!:&amp;quot;History&amp;quot;"></see> object, which provides an interface for manipulating the browser <strong>session history</strong> (pages visited in the tab or frame that the current page is loaded in).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public History History { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.History.html">History</a></dt>
+    <dd><p>A reference to the <see cref="!:&amp;quot;History&amp;quot;"></see> object.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Window_History_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>See <a href="https://developer.mozilla.org/en-US/docs/Web/API/History_API">Manipulating the browser history</a> for examples and details. In particular, that article explains security features of the <see cref="!:&amp;quot;HistoryPushState&amp;quot;"></see> and <see cref="!:&amp;quot;HistoryPushState&amp;quot;"></see> methods that you should be aware of before using them.</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/history"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Window/history</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Window_Length_" data-uid="CSharpToJavaScript.APIs.JS.Window.Length*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Window_Length" data-uid="CSharpToJavaScript.APIs.JS.Window.Length">
+  Length
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong Length { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd><p>A number.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Window_Length_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/length"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Window/length</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Window_Location_" data-uid="CSharpToJavaScript.APIs.JS.Window.Location*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Window_Location" data-uid="CSharpToJavaScript.APIs.JS.Window.Location">
+  Location
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>Window.location</code></strong> read-only property returns a<br><see cref="!:&amp;quot;Location&amp;quot;"></see> object with information about the current location of the<br>document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Location Location { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Location.html">Location</a></dt>
+    <dd><p>A <see cref="!:&amp;quot;Location&amp;quot;"></see> object.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Window_Location_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Though <code>Window.location</code> is a <strong>read-only</strong> <code>Location</code><br>object, you can also assign a string to it. This means that you can<br>work with <code>location</code> as if it were a string in most cases:<br><code>location = &amp;apos;http://www.example.com&amp;apos;</code> is a synonym of<br><code>location.href = &amp;apos;http://www.example.com&amp;apos;</code>.</p><p>See <see cref="!:&amp;quot;Location&amp;quot;"></see> for all available properties.</p>
+<p>-The interface of the returned value, <see cref="!:&amp;quot;Location&amp;quot;"></see><br>-A similar information, but attached to the document,<br><see cref="!:&amp;quot;DocumentLocation&amp;quot;"></see><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/History_API">Manipulating the browser history</a><br>-<see cref="!:&amp;quot;Window/hashchange_event&amp;quot;"></see><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/location"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Window/location</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Window_Locationbar_" data-uid="CSharpToJavaScript.APIs.JS.Window.Locationbar*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Window_Locationbar" data-uid="CSharpToJavaScript.APIs.JS.Window.Locationbar">
+  Locationbar
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the <code>locationbar</code> object, whose visibility can be checked.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BarProp Locationbar { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.BarProp.html">BarProp</a></dt>
+    <dd><p>A <code>locationbar</code> object.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Window_Locationbar_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>-<see cref="!:&amp;quot;windowLocationbar&amp;quot;"></see>, <see cref="!:&amp;quot;windowLocationbar&amp;quot;"></see>,<br><see cref="!:&amp;quot;windowPersonalbar&amp;quot;"></see>, <see cref="!:&amp;quot;windowPersonalbar&amp;quot;"></see>,<br><see cref="!:&amp;quot;windowStatusbar&amp;quot;"></see>, <see cref="!:&amp;quot;windowStatusbar&amp;quot;"></see><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/locationbar"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Window/locationbar</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Window_Menubar_" data-uid="CSharpToJavaScript.APIs.JS.Window.Menubar*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Window_Menubar" data-uid="CSharpToJavaScript.APIs.JS.Window.Menubar">
+  Menubar
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>Window.menubar</code></strong> property returns the<br><code>menubar</code> object, whose visibility can be checked.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BarProp Menubar { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.BarProp.html">BarProp</a></dt>
+    <dd><p>A <code>menubar</code> object.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Window_Menubar_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>-<see cref="!:&amp;quot;WindowLocationbar&amp;quot;"></see><br>-<see cref="!:&amp;quot;WindowPersonalbar&amp;quot;"></see><br>-<see cref="!:&amp;quot;WindowScrollbars&amp;quot;"></see><br>-<see cref="!:&amp;quot;WindowStatusbar&amp;quot;"></see><br>-<see cref="!:&amp;quot;WindowToolbar&amp;quot;"></see><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/menubar"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Window/menubar</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Window_Name_" data-uid="CSharpToJavaScript.APIs.JS.Window.Name*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Window_Name" data-uid="CSharpToJavaScript.APIs.JS.Window.Name">
+  Name
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>Window.name</code> property<br>gets/sets the name of the window&amp;apos;s browsing context.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Name { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A string.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Window_Name_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/name"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Window/name</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Window_Navigator_" data-uid="CSharpToJavaScript.APIs.JS.Window.Navigator*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Window_Navigator" data-uid="CSharpToJavaScript.APIs.JS.Window.Navigator">
+  Navigator
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>Window.navigator</code></strong> read-only property returns a<br>reference to the <see cref="!:&amp;quot;Navigator&amp;quot;"></see> object, which has methods and properties about<br>the application running the script.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Navigator Navigator { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Navigator.html">Navigator</a></dt>
+    <dd><p>The <see cref="!:&amp;quot;navigator&amp;quot;"></see> object.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Window_Navigator_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/navigator"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Window/navigator</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Window_Onorientationchange_" data-uid="CSharpToJavaScript.APIs.JS.Window.Onorientationchange*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Window_Onorientationchange" data-uid="CSharpToJavaScript.APIs.JS.Window.Onorientationchange">
+  Onorientationchange
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EventHandlerNonNull Onorientationchange { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.EventHandlerNonNull.html">EventHandlerNonNull</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Window_Opener_" data-uid="CSharpToJavaScript.APIs.JS.Window.Opener*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Window_Opener" data-uid="CSharpToJavaScript.APIs.JS.Window.Opener">
+  Opener
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <see cref="!:&amp;quot;Window&amp;quot;"></see> interface&amp;apos;s<br><strong><code>opener</code></strong> property returns a reference to the window that<br>opened the window, either with <see cref="!:&amp;quot;WindowOpen&amp;quot;"></see>, or by navigating<br>a link with a {{htmlattrxref(&amp;quot;target&amp;quot;, &amp;quot;a&amp;quot;)}} attribute.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public dynamic Opener { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">dynamic</span></dt>
+    <dd><p>A <see cref="!:&amp;quot;Window&amp;quot;"></see>-like object referring to the window that opened the current<br>window (using <see cref="!:&amp;quot;windowOpen&amp;quot;"></see>, or by a link with {{htmlattrxref(&amp;quot;target&amp;quot;,<br>&amp;quot;a&amp;quot;)}} attribute set). If this window was not opened by being linked to or created by<br>another, returns <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><code>null</code>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null</a>.If the opener is not on the same origin as the current page, functionality of the<br>opener object is limited. For example, variables and functions on the window object are<br>not accessible. However, navigation of the opener window is possible, which means that<br>the opened page can open a URL in the original tab or window. In some cases, this makes<br>phishing attacks possible, where a trusted page that is opened in the original window is<br>replaced by a phishing page by the newly opened page.In the following cases, the browser does not populate <code>window.opener</code>, but<br>leaves it <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><code>null</code>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null</a>:</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Window_Opener_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>In other words, if window <code>A</code> opens window <code>B</code>,<br><code>B.opener</code> returns <code>A</code>.</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/opener"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Window/opener</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Window_Orientation_" data-uid="CSharpToJavaScript.APIs.JS.Window.Orientation*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Window_Orientation" data-uid="CSharpToJavaScript.APIs.JS.Window.Orientation">
+  Orientation
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the orientation in degrees (in 90-degree increments) of the viewport relative to the device&amp;apos;s natural orientation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public short Orientation { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Window_Orientation_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Its only possible values are <code>-90</code>, <code>0</code>, <code>90</code>, and <code>180</code>. Positive values are counterclockwise; negative values are clockwise.</p><p>This property is deprecated. Use the <see cref="!:&amp;quot;ScreenOrientation&amp;quot;"></see> property instead, available on the <see cref="!:&amp;quot;ScreenOrientation&amp;quot;"></see> property.</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/orientation"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Window/orientation</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Window_OriginAgentCluster_" data-uid="CSharpToJavaScript.APIs.JS.Window.OriginAgentCluster*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Window_OriginAgentCluster" data-uid="CSharpToJavaScript.APIs.JS.Window.OriginAgentCluster">
+  OriginAgentCluster
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool OriginAgentCluster { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Window_Parent_" data-uid="CSharpToJavaScript.APIs.JS.Window.Parent*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Window_Parent" data-uid="CSharpToJavaScript.APIs.JS.Window.Parent">
+  Parent
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>Window.parent</code></strong> property is a reference to the parent<br>of the current window or subframe.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Window? Parent { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Window.html">Window</a></dt>
+    <dd><p>A <code>Window</code> or {{htmlelement(&amp;quot;iframe&amp;quot;)}} object.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Window_Parent_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>If a window does not have a parent, its <code>parent</code> property is a reference to<br>itself.</p><p>When a window is loaded in an {{htmlelement(&amp;quot;iframe&amp;quot;)}}, {{htmlelement(&amp;quot;object&amp;quot;)}}, or<br>{{htmlelement(&amp;quot;frame&amp;quot;)}}, its parent is the window with the element embedding the<br>window.</p>
+<p>-<see cref="!:&amp;quot;windowFrameElement&amp;quot;"></see> returns the specific element (such as<br><code>&amp;lt;iframe&amp;gt;</code>) the <code>window</code> is embedded into.<br>-<see cref="!:&amp;quot;windowTop&amp;quot;"></see> returns a reference to the top-level window.<br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/parent"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Window/parent</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Window_Personalbar_" data-uid="CSharpToJavaScript.APIs.JS.Window.Personalbar*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Window_Personalbar" data-uid="CSharpToJavaScript.APIs.JS.Window.Personalbar">
+  Personalbar
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the <code>personalbar</code> object, whose visibility can be toggled in the<br>window.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BarProp Personalbar { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.BarProp.html">BarProp</a></dt>
+    <dd><p>A <code>personalbar</code> object.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Window_Personalbar_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>-<see cref="!:&amp;quot;windowLocationbar&amp;quot;"></see>, <see cref="!:&amp;quot;windowLocationbar&amp;quot;"></see>,<br><see cref="!:&amp;quot;windowScrollbars&amp;quot;"></see>, <see cref="!:&amp;quot;windowScrollbars&amp;quot;"></see>,<br><see cref="!:&amp;quot;windowToolbar&amp;quot;"></see><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/personalbar"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Window/personalbar</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Window_Scrollbars_" data-uid="CSharpToJavaScript.APIs.JS.Window.Scrollbars*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Window_Scrollbars" data-uid="CSharpToJavaScript.APIs.JS.Window.Scrollbars">
+  Scrollbars
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>Window.scrollbars</code></strong> property returns the<br><code>scrollbars</code> object, whose visibility can be checked.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BarProp Scrollbars { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.BarProp.html">BarProp</a></dt>
+    <dd><p>A <code>scrollbars</code> object.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Window_Scrollbars_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>-<see cref="!:&amp;quot;windowLocationbar&amp;quot;"></see><br>-<see cref="!:&amp;quot;windowMenubar&amp;quot;"></see><br>-<see cref="!:&amp;quot;windowPersonalbar&amp;quot;"></see><br>-<see cref="!:&amp;quot;windowStatusbar&amp;quot;"></see><br>-<see cref="!:&amp;quot;windowToolbar&amp;quot;"></see><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollbars"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollbars</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Window_Self_" data-uid="CSharpToJavaScript.APIs.JS.Window.Self*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Window_Self" data-uid="CSharpToJavaScript.APIs.JS.Window.Self">
+  Self
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>Window.self</code></strong> read-only property returns the window itself, as a {{glossary(&amp;quot;WindowProxy&amp;quot;)}}. It can be used with dot notation on a <code>window</code> object (that is, <code>window.self</code>) or standalone (<code>self</code>). The advantage of the standalone notation is that a similar notation exists for non-window contexts, such as in {{domxref(&amp;quot;Worker&amp;quot;, &amp;quot;Web Workers&amp;quot;, &amp;quot;&amp;quot;, 1)}}. By using <code>self</code>, you can refer to the global scope in a way that will work not only in a window context (<code>self</code> will resolve to <code>window.self</code>) but also in a worker context (<code>self</code> will then resolve to <see cref="!:&amp;quot;WorkerGlobalScopeSelf&amp;quot;"></see>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Window Self { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Window.html">Window</a></dt>
+    <dd><p>A {{glossary(&amp;quot;WindowProxy&amp;quot;)}} object.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Window_Self_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>-Its <code>Worker</code> equivalent, <see cref="!:&amp;quot;WorkerGlobalScopeSelf&amp;quot;"></see>.<br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/self"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Window/self</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Window_Status_" data-uid="CSharpToJavaScript.APIs.JS.Window.Status*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Window_Status" data-uid="CSharpToJavaScript.APIs.JS.Window.Status">
+  Status
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>status</code></strong> property of the<br><see cref="!:&amp;quot;Window&amp;quot;"></see> interface was originally intended to set the text in the status<br>bar at the bottom of the browser window. However, the HTML standard now requires<br>setting <code>window.status</code> to have no effect on the text displayed in the<br>status bar.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Status { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A string.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Window_Status_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/status"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Window/status</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Window_Statusbar_" data-uid="CSharpToJavaScript.APIs.JS.Window.Statusbar*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Window_Statusbar" data-uid="CSharpToJavaScript.APIs.JS.Window.Statusbar">
+  Statusbar
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>Window.statusbar</code></strong> property returns the statusbar<br>object, whose visibility can be toggled in the window.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BarProp Statusbar { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.BarProp.html">BarProp</a></dt>
+    <dd><p>A <code>statusbar</code> object.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Window_Statusbar_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/locationbar">window.locationbar</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/menubar">window.menubar</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/personalbar">window.personalbar</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollbars">window.scrollbars</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/toolbar">window.toolbar</a><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/statusbar"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Window/statusbar</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Window_Toolbar_" data-uid="CSharpToJavaScript.APIs.JS.Window.Toolbar*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Window_Toolbar" data-uid="CSharpToJavaScript.APIs.JS.Window.Toolbar">
+  Toolbar
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>Window.toolbar</code></strong> property returns the toolbar object,<br>which can be used to check the browser toolbar visibility.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BarProp Toolbar { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.BarProp.html">BarProp</a></dt>
+    <dd><p>A <code>toolbar</code> object.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Window_Toolbar_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/toolbar"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Window/toolbar</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Window_Top_" data-uid="CSharpToJavaScript.APIs.JS.Window.Top*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Window_Top" data-uid="CSharpToJavaScript.APIs.JS.Window.Top">
+  Top
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a reference to the topmost window in the window hierarchy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Window? Top { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Window.html">Window</a></dt>
+    <dd><p>The reference to the topmost window.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Window_Top_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/top"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Window/top</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Window__window_" data-uid="CSharpToJavaScript.APIs.JS.Window._window*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Window__window" data-uid="CSharpToJavaScript.APIs.JS.Window._window">
+  _window
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>window</code></strong> property of a <see cref="!:&amp;quot;Window&amp;quot;"></see> object points to the window object itself.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Window _window { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Window.html">Window</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Window__window_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Thus, the following expressions all return the same window object:</p><p>In web pages, the window object is also a <strong>global object</strong>. This means:</p><p>The point of having the <code>window</code> property refer to the object itself, was likely to make it easy to refer to the global object. Otherwise, you&amp;apos;d have to do a manual <code>let window = this;</code> assignment at the top of your script.</p><p>Another reason, is that without this property you wouldn&amp;apos;t be able to write, for example, &amp;quot;<see cref="!:&amp;quot;windowOpen&amp;quot;"></see>&amp;quot;. You&amp;apos;d have to use &amp;quot;open(&amp;apos;http://google.com/&amp;apos;)&amp;quot; instead.</p><p>Yet another reason to use this property, is for libraries which wish to offer OOP-versions, and non-OOP versions (especially JavaScript modules). For example, if we refer to &amp;quot;this.window.location.href&amp;quot;, a <a href="https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules">JavaScript module</a> could define a property called &amp;quot;window&amp;quot; inside of a class it defined (since no global &amp;quot;window&amp;quot; variable exists for it by default) which could be created after passing in a window object to the module class&amp;apos; constructor. Thus, &amp;quot;this.window&amp;quot; inside of its functions would refer to that window object. In the non-namespaced version, &amp;quot;this.window&amp;quot; would refer back to &amp;quot;window&amp;quot;, and also be able to readily get the document location. Another advantage, is that the objects of such a class (even if the class were defined outside of a module) could change their reference to the window at will, they would not be able to do this if they had hard-coded a reference to &amp;quot;window&amp;quot;. The default in the class could still be set as the current window object.</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/window"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Window/window</a></p>
+</div>
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Window_Alert_" data-uid="CSharpToJavaScript.APIs.JS.Window.Alert*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Window_Alert" data-uid="CSharpToJavaScript.APIs.JS.Window.Alert">
+  Alert()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p><code>window.alert()</code> instructs the browser to display a dialog with an optional message, and to wait until the user dismisses the dialog.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Unsupported Alert()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
+    <dd><p>None ({{jsxref(&amp;quot;undefined&amp;quot;)}}).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Window_Alert_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Under some conditions — for example, when the user switches tabs — the browser may not actually display a dialog, or may not wait for the user to dismiss the dialog.</p>
+<p>-{{HTMLElement(&amp;quot;dialog&amp;quot;)}} element<br>-<see cref="!:&amp;quot;windowConfirm&amp;quot;"></see><br>-<see cref="!:&amp;quot;windowPrompt&amp;quot;"></see><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/alert"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Window/alert</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Window_Alert_" data-uid="CSharpToJavaScript.APIs.JS.Window.Alert*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Window_Alert_System_String_" data-uid="CSharpToJavaScript.APIs.JS.Window.Alert(System.String)">
+  Alert(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p><code>window.alert()</code> instructs the browser to display a dialog with an optional message, and to wait until the user dismisses the dialog.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Unsupported Alert(string message)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
+    <dd><p>None ({{jsxref(&amp;quot;undefined&amp;quot;)}}).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Window_Alert_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Under some conditions — for example, when the user switches tabs — the browser may not actually display a dialog, or may not wait for the user to dismiss the dialog.</p>
+<p>-{{HTMLElement(&amp;quot;dialog&amp;quot;)}} element<br>-<see cref="!:&amp;quot;windowConfirm&amp;quot;"></see><br>-<see cref="!:&amp;quot;windowPrompt&amp;quot;"></see><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/alert"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Window/alert</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Window_Blur_" data-uid="CSharpToJavaScript.APIs.JS.Window.Blur*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Window_Blur" data-uid="CSharpToJavaScript.APIs.JS.Window.Blur">
+  Blur()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Shifts focus away from the window.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Unsupported Blur()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
+    <dd><p>None ({{jsxref(&amp;quot;undefined&amp;quot;)}}).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Window_Blur_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/blur"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Window/blur</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Window_CaptureEvents_" data-uid="CSharpToJavaScript.APIs.JS.Window.CaptureEvents*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Window_CaptureEvents" data-uid="CSharpToJavaScript.APIs.JS.Window.CaptureEvents">
+  CaptureEvents()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>Window.captureEvents()</code></strong> method registers the window to<br>capture all events of the specified type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Unsupported CaptureEvents()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
+    <dd><p>None ({{jsxref(&amp;quot;undefined&amp;quot;)}}).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Window_CaptureEvents_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/captureEvents"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Window/captureEvents</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Window_Close_" data-uid="CSharpToJavaScript.APIs.JS.Window.Close*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Window_Close" data-uid="CSharpToJavaScript.APIs.JS.Window.Close">
+  Close()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>Window.close()</code></strong> method closes the current window, or<br>the window on which it was called.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Unsupported Close()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
+    <dd><p>None ({{jsxref(&amp;quot;undefined&amp;quot;)}}).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Window_Close_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method can only be called on windows that were opened by a script using the<br><see cref="!:&amp;quot;WindowOpen&amp;quot;"></see> method. If the window was not opened by a script, an error<br>similar to this one appears in the console:<br><code>Scripts may not close windows that were not opened by script.</code></p><p>Note also that <code>close()</code> has no effect when called on <see cref="!:&amp;quot;Window&amp;quot;"></see><br>objects returned by<br><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/contentWindow"><code>HTMLIFrameElement.contentWindow</code>https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/contentWindow</a>.</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/close"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Window/close</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Window_Confirm_" data-uid="CSharpToJavaScript.APIs.JS.Window.Confirm*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Window_Confirm_System_String_" data-uid="CSharpToJavaScript.APIs.JS.Window.Confirm(System.String)">
+  Confirm(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p><code>window.confirm()</code> instructs the browser to display a dialog with an optional message, and to wait until the user either confirms or cancels the dialog.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Confirm(string message)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>A boolean indicating whether OK (<code>true</code>) or Cancel (<code>false</code>) was<br>selected. If a browser is ignoring in-page dialogs, then the returned value is always<br><code>false</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Window_Confirm_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Under some conditions — for example, when the user switches tabs — the browser may not actually display a dialog, or may not wait for the user to confirm or cancel the dialog.</p>
+<p>-{{HTMLElement(&amp;quot;dialog&amp;quot;)}} element<br>-<see cref="!:&amp;quot;windowAlert&amp;quot;"></see><br>-<see cref="!:&amp;quot;windowPrompt&amp;quot;"></see><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Window_Eval_" data-uid="CSharpToJavaScript.APIs.JS.Window.Eval*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Window_Eval_System_String_" data-uid="CSharpToJavaScript.APIs.JS.Window.Eval(System.String)">
+  Eval(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public dynamic Eval(string jsStr)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>jsStr</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">dynamic</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Window_Focus_" data-uid="CSharpToJavaScript.APIs.JS.Window.Focus*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Window_Focus" data-uid="CSharpToJavaScript.APIs.JS.Window.Focus">
+  Focus()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Makes a request to bring the window to the front. It may fail due to user settings and the window isn&amp;apos;t guaranteed to be frontmost before this method returns.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Unsupported Focus()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
+    <dd><p>None ({{jsxref(&amp;quot;undefined&amp;quot;)}}).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Window_Focus_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/focus"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Window/focus</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Window_Open_" data-uid="CSharpToJavaScript.APIs.JS.Window.Open*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Window_Open_System_String_System_String_System_String_" data-uid="CSharpToJavaScript.APIs.JS.Window.Open(System.String,System.String,System.String)">
+  Open(string, string, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>open()</code></strong> method of the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window"><code>Window</code>https://developer.mozilla.org/en-US/docs/Web/API/Window</a> interface loads a specified resource into a new or existing browsing context (that is, a tab, a window, or an <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</a>) under a specified name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Window? Open(string url, string target, string features)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>url</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>target</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>features</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Window.html">Window</a></dt>
+    <dd><p>A <a href="https://developer.mozilla.org/en-US/docs/Glossary/WindowProxy"><code>WindowProxy</code>https://developer.mozilla.org/en-US/docs/Glossary/WindowProxy</a> object. The returned reference can be used to access properties and methods of the new window as long as it complies with <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy">the same-origin policy</a> security requirements.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Window_Open_System_String_System_String_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>-<code>target</code> attribute documentation:-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-target"><code>&amp;lt;a&amp;gt;</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-target</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form#attr-target"><code>&amp;lt;form&amp;gt;</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form#attr-target</a><br><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/close"><code>window.close()</code>https://developer.mozilla.org/en-US/docs/Web/API/Window/close</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/closed"><code>window.closed</code>https://developer.mozilla.org/en-US/docs/Web/API/Window/closed</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/focus"><code>window.focus()</code>https://developer.mozilla.org/en-US/docs/Web/API/Window/focus</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/opener"><code>window.opener</code>https://developer.mozilla.org/en-US/docs/Web/API/Window/opener</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel#opener"><code>rel=&amp;quot;opener&amp;quot;</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel#opener</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel#noopener"><code>rel=&amp;quot;noopener&amp;quot;</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel#noopener</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy">Same-origin policy</a><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/open"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Window/open</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Window_PostMessage_" data-uid="CSharpToJavaScript.APIs.JS.Window.PostMessage*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Window_PostMessage_System_Object_CSharpToJavaScript_APIs_JS_WindowPostMessageOptions_" data-uid="CSharpToJavaScript.APIs.JS.Window.PostMessage(System.Object,CSharpToJavaScript.APIs.JS.WindowPostMessageOptions)">
+  PostMessage(dynamic, WindowPostMessageOptions)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>window.postMessage()</code></strong> method safely enables<br>cross-origin communication between <see cref="!:&amp;quot;Window&amp;quot;"></see> objects; <strong>e.g.,</strong> between<br>a page and a pop-up that it spawned, or between a page and an iframe embedded within it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Unsupported PostMessage(dynamic message, WindowPostMessageOptions options)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>message</code> <span class="xref">dynamic</span></dt>
+    <dd></dd>
+    <dt><code>options</code> <a class="xref" href="CSharpToJavaScript.APIs.JS.WindowPostMessageOptions.html">WindowPostMessageOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
+    <dd><p>None ({{jsxref(&amp;quot;undefined&amp;quot;)}}).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Window_PostMessage_System_Object_CSharpToJavaScript_APIs_JS_WindowPostMessageOptions__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Normally, scripts on different pages are allowed to access each other if and only if<br>the pages they originate from share the same protocol, port number, and host (also known<br>as the &amp;quot;<a href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy">same-origin policy</a>&amp;quot;).<br><code>window.postMessage()</code> provides a controlled mechanism to securely circumvent this restriction (if used properly).</p><p>Broadly, one window may obtain a reference to another (<strong>e.g.,</strong> via<br><code>targetWindow = window.opener</code>), and then dispatch a<br><see cref="!:&amp;quot;MessageEvent&amp;quot;"></see> on it with <code>targetWindow.postMessage()</code>. The<br>receiving window is then free to <a href="https://developer.mozilla.org/en-US/docs/Web/Events/Event_handlers">handle this event</a> as needed. The arguments passed to <code>window.postMessage()</code><br>(<strong>i.e.,</strong> the &amp;quot;message&amp;quot;) are <a href="https://developer.mozilla.org#the_dispatched_event">exposed to the receiving window through the event object</a>.</p>
+<p>-<see cref="!:&amp;quot;DocumentDomain&amp;quot;"></see><br>-<see cref="!:&amp;quot;CustomEvent&amp;quot;"></see><br>-<see cref="!:&amp;quot;BroadcastChannel&amp;quot;"></see> - For same-origin communication.<br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Window_PostMessage_" data-uid="CSharpToJavaScript.APIs.JS.Window.PostMessage*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Window_PostMessage_System_Object_System_String_System_Collections_Generic_List_System_Object__" data-uid="CSharpToJavaScript.APIs.JS.Window.PostMessage(System.Object,System.String,System.Collections.Generic.List{System.Object})">
+  PostMessage(dynamic, string, List&lt;object&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>window.postMessage()</code></strong> method safely enables<br>cross-origin communication between <see cref="!:&amp;quot;Window&amp;quot;"></see> objects; <strong>e.g.,</strong> between<br>a page and a pop-up that it spawned, or between a page and an iframe embedded within it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Unsupported PostMessage(dynamic message, string targetOrigin, List&lt;object&gt; transfer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>message</code> <span class="xref">dynamic</span></dt>
+    <dd></dd>
+    <dt><code>targetOrigin</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>transfer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
+    <dd><p>None ({{jsxref(&amp;quot;undefined&amp;quot;)}}).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Window_PostMessage_System_Object_System_String_System_Collections_Generic_List_System_Object___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Normally, scripts on different pages are allowed to access each other if and only if<br>the pages they originate from share the same protocol, port number, and host (also known<br>as the &amp;quot;<a href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy">same-origin policy</a>&amp;quot;).<br><code>window.postMessage()</code> provides a controlled mechanism to securely circumvent this restriction (if used properly).</p><p>Broadly, one window may obtain a reference to another (<strong>e.g.,</strong> via<br><code>targetWindow = window.opener</code>), and then dispatch a<br><see cref="!:&amp;quot;MessageEvent&amp;quot;"></see> on it with <code>targetWindow.postMessage()</code>. The<br>receiving window is then free to <a href="https://developer.mozilla.org/en-US/docs/Web/Events/Event_handlers">handle this event</a> as needed. The arguments passed to <code>window.postMessage()</code><br>(<strong>i.e.,</strong> the &amp;quot;message&amp;quot;) are <a href="https://developer.mozilla.org#the_dispatched_event">exposed to the receiving window through the event object</a>.</p>
+<p>-<see cref="!:&amp;quot;DocumentDomain&amp;quot;"></see><br>-<see cref="!:&amp;quot;CustomEvent&amp;quot;"></see><br>-<see cref="!:&amp;quot;BroadcastChannel&amp;quot;"></see> - For same-origin communication.<br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Window_Print_" data-uid="CSharpToJavaScript.APIs.JS.Window.Print*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Window_Print" data-uid="CSharpToJavaScript.APIs.JS.Window.Print">
+  Print()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Opens the print dialog to print the current document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Unsupported Print()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
+    <dd><p>None ({{jsxref(&amp;quot;undefined&amp;quot;)}}).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Window_Print_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>If the document is still loading when this function is called, then the document will finish loading before opening the print dialog.</p><p>This method will block while the print dialog is open.</p>
+<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Printing">Printing</a><br>-{{ domxref(&amp;quot;window.beforeprint_event&amp;quot;, &amp;quot;beforeprint&amp;quot;) }} event<br>-{{ domxref(&amp;quot;window.afterprint_event&amp;quot;, &amp;quot;afterprint&amp;quot;) }} event<br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/print"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Window/print</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Window_Prompt_" data-uid="CSharpToJavaScript.APIs.JS.Window.Prompt*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Window_Prompt_System_String_System_String_" data-uid="CSharpToJavaScript.APIs.JS.Window.Prompt(System.String,System.String)">
+  Prompt(string, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p><code>window.prompt()</code> instructs the browser to display a dialog with an optional message prompting the user to input some text, and to wait until the user either submits the text or cancels the dialog.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? Prompt(string message, string default_)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>default_</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A string containing the text entered by the user, or <code>null</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Window_Prompt_System_String_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Under some conditions — for example, when the user switches tabs — the browser may not actually display a dialog, or may not wait for the user to submit text or to cancel the dialog.</p>
+<p>-{{HTMLElement(&amp;quot;dialog&amp;quot;)}} element<br>-<see cref="!:&amp;quot;windowAlert&amp;quot;"></see><br>-<see cref="!:&amp;quot;windowConfirm&amp;quot;"></see><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Window_ReleaseEvents_" data-uid="CSharpToJavaScript.APIs.JS.Window.ReleaseEvents*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Window_ReleaseEvents" data-uid="CSharpToJavaScript.APIs.JS.Window.ReleaseEvents">
+  ReleaseEvents()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Releases the window from trapping events of a specific type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Unsupported ReleaseEvents()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
+    <dd><p>None ({{jsxref(&amp;quot;undefined&amp;quot;)}}).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Window_ReleaseEvents_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/releaseEvents"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Window/releaseEvents</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Window_Stop_" data-uid="CSharpToJavaScript.APIs.JS.Window.Stop*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Window_Stop" data-uid="CSharpToJavaScript.APIs.JS.Window.Stop">
+  Stop()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>window.stop()</code></strong> stops further resource loading in the current<br>browsing context, equivalent to the stop button in the browser.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Unsupported Stop()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
+    <dd><p>None ({{jsxref(&amp;quot;undefined&amp;quot;)}}).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Window_Stop_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Because of how scripts are executed, this method cannot interrupt its parent<br>document&amp;apos;s loading, but it will stop its images, new windows, and other still-loading<br>objects.</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/stop"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Window/stop</a></p>
+</div>
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

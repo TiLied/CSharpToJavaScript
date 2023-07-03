@@ -1,0 +1,1904 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class Node
+ </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class Node
+ ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+  </head>
+
+  <script type="module">
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="CSharpToJavaScript.APIs.JS.Node">
+
+
+
+  <h1 id="CSharpToJavaScript_APIs_JS_Node" data-uid="CSharpToJavaScript.APIs.JS.Node" class="text-break">
+    Class Node
+  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="CSharpToJavaScript.html">CSharpToJavaScript</a>.<a class="xref" href="CSharpToJavaScript.APIs.html">APIs</a>.<a class="xref" href="CSharpToJavaScript.APIs.JS.html">JS</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>CSharpToJavaScript.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public class Node : EventTarget</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="CSharpToJavaScript.APIs.JS.EventTarget.html">EventTarget</a></div>
+      <div><span class="xref">Node</span></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="CSharpToJavaScript.APIs.JS.Attr.html">Attr</a></div>
+      <div><a class="xref" href="CSharpToJavaScript.APIs.JS.CharacterData.html">CharacterData</a></div>
+      <div><a class="xref" href="CSharpToJavaScript.APIs.JS.DocumentFragment.html">DocumentFragment</a></div>
+      <div><a class="xref" href="CSharpToJavaScript.APIs.JS.DocumentType.html">DocumentType</a></div>
+      <div><a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html">Element</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.EventTarget.html#CSharpToJavaScript_APIs_JS_EventTarget_AddEventListener_System_String_System_Action_CSharpToJavaScript_APIs_JS_Union1_">EventTarget.AddEventListener(string, Action, Union1)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.EventTarget.html#CSharpToJavaScript_APIs_JS_EventTarget_AddEventListener_System_String_System_Action_CSharpToJavaScript_APIs_JS_MouseEvent__CSharpToJavaScript_APIs_JS_Union1_">EventTarget.AddEventListener(string, Action&lt;MouseEvent&gt;, Union1)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.EventTarget.html#CSharpToJavaScript_APIs_JS_EventTarget_AddEventListener_System_String_System_Action_CSharpToJavaScript_APIs_JS_Event__CSharpToJavaScript_APIs_JS_Union1_">EventTarget.AddEventListener(string, Action&lt;Event&gt;, Union1)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.EventTarget.html#CSharpToJavaScript_APIs_JS_EventTarget_RemoveEventListener_System_String_System_Action_CSharpToJavaScript_APIs_JS_Union2_">EventTarget.RemoveEventListener(string, Action, Union2)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.EventTarget.html#CSharpToJavaScript_APIs_JS_EventTarget_AddEventListener_System_String_CSharpToJavaScript_APIs_JS_EventListener_CSharpToJavaScript_APIs_JS_Union1_">EventTarget.AddEventListener(string, EventListener, Union1)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.EventTarget.html#CSharpToJavaScript_APIs_JS_EventTarget_RemoveEventListener_System_String_CSharpToJavaScript_APIs_JS_EventListener_CSharpToJavaScript_APIs_JS_Union2_">EventTarget.RemoveEventListener(string, EventListener, Union2)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.EventTarget.html#CSharpToJavaScript_APIs_JS_EventTarget_DispatchEvent_CSharpToJavaScript_APIs_JS_Event_">EventTarget.DispatchEvent(Event)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Node_ATTRIBUTE_NODE" data-uid="CSharpToJavaScript.APIs.JS.Node.ATTRIBUTE_NODE">
+  ATTRIBUTE_NODE
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const ushort ATTRIBUTE_NODE = 2</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Node_CDATA_SECTION_NODE" data-uid="CSharpToJavaScript.APIs.JS.Node.CDATA_SECTION_NODE">
+  CDATA_SECTION_NODE
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const ushort CDATA_SECTION_NODE = 4</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Node_COMMENT_NODE" data-uid="CSharpToJavaScript.APIs.JS.Node.COMMENT_NODE">
+  COMMENT_NODE
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const ushort COMMENT_NODE = 8</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Node_DOCUMENT_FRAGMENT_NODE" data-uid="CSharpToJavaScript.APIs.JS.Node.DOCUMENT_FRAGMENT_NODE">
+  DOCUMENT_FRAGMENT_NODE
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const ushort DOCUMENT_FRAGMENT_NODE = 11</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Node_DOCUMENT_NODE" data-uid="CSharpToJavaScript.APIs.JS.Node.DOCUMENT_NODE">
+  DOCUMENT_NODE
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const ushort DOCUMENT_NODE = 9</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Node_DOCUMENT_POSITION_CONTAINED_BY" data-uid="CSharpToJavaScript.APIs.JS.Node.DOCUMENT_POSITION_CONTAINED_BY">
+  DOCUMENT_POSITION_CONTAINED_BY
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const ushort DOCUMENT_POSITION_CONTAINED_BY = 16</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Node_DOCUMENT_POSITION_CONTAINS" data-uid="CSharpToJavaScript.APIs.JS.Node.DOCUMENT_POSITION_CONTAINS">
+  DOCUMENT_POSITION_CONTAINS
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const ushort DOCUMENT_POSITION_CONTAINS = 8</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Node_DOCUMENT_POSITION_DISCONNECTED" data-uid="CSharpToJavaScript.APIs.JS.Node.DOCUMENT_POSITION_DISCONNECTED">
+  DOCUMENT_POSITION_DISCONNECTED
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const ushort DOCUMENT_POSITION_DISCONNECTED = 1</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Node_DOCUMENT_POSITION_FOLLOWING" data-uid="CSharpToJavaScript.APIs.JS.Node.DOCUMENT_POSITION_FOLLOWING">
+  DOCUMENT_POSITION_FOLLOWING
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const ushort DOCUMENT_POSITION_FOLLOWING = 4</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Node_DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC" data-uid="CSharpToJavaScript.APIs.JS.Node.DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC">
+  DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const ushort DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC = 32</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Node_DOCUMENT_POSITION_PRECEDING" data-uid="CSharpToJavaScript.APIs.JS.Node.DOCUMENT_POSITION_PRECEDING">
+  DOCUMENT_POSITION_PRECEDING
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const ushort DOCUMENT_POSITION_PRECEDING = 2</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Node_DOCUMENT_TYPE_NODE" data-uid="CSharpToJavaScript.APIs.JS.Node.DOCUMENT_TYPE_NODE">
+  DOCUMENT_TYPE_NODE
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const ushort DOCUMENT_TYPE_NODE = 10</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Node_ELEMENT_NODE" data-uid="CSharpToJavaScript.APIs.JS.Node.ELEMENT_NODE">
+  ELEMENT_NODE
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const ushort ELEMENT_NODE = 1</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Node_ENTITY_NODE" data-uid="CSharpToJavaScript.APIs.JS.Node.ENTITY_NODE">
+  ENTITY_NODE
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const ushort ENTITY_NODE = 6</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Node_ENTITY_REFERENCE_NODE" data-uid="CSharpToJavaScript.APIs.JS.Node.ENTITY_REFERENCE_NODE">
+  ENTITY_REFERENCE_NODE
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const ushort ENTITY_REFERENCE_NODE = 5</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Node_NOTATION_NODE" data-uid="CSharpToJavaScript.APIs.JS.Node.NOTATION_NODE">
+  NOTATION_NODE
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const ushort NOTATION_NODE = 12</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Node_PROCESSING_INSTRUCTION_NODE" data-uid="CSharpToJavaScript.APIs.JS.Node.PROCESSING_INSTRUCTION_NODE">
+  PROCESSING_INSTRUCTION_NODE
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const ushort PROCESSING_INSTRUCTION_NODE = 7</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Node_TEXT_NODE" data-uid="CSharpToJavaScript.APIs.JS.Node.TEXT_NODE">
+  TEXT_NODE
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const ushort TEXT_NODE = 3</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Node_BaseURI_" data-uid="CSharpToJavaScript.APIs.JS.Node.BaseURI*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Node_BaseURI" data-uid="CSharpToJavaScript.APIs.JS.Node.BaseURI">
+  BaseURI
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The read-only <strong><code>baseURI</code></strong> property of the <see cref="!:&amp;quot;Node&amp;quot;"></see> interface<br>returns the absolute base URL of the document containing the node.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string BaseURI { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A string representing the base URL of the <see cref="!:&amp;quot;Node&amp;quot;"></see>.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Node_BaseURI_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The base URL is used to resolve relative URLs when the browser needs to obtain an<br>absolute URL, for example when processing the HTML {{HTMLElement(&amp;quot;img&amp;quot;)}} element&amp;apos;s<br><code>src</code> attribute or the <code>xlink:href</code> or <code>href</code> attributes in SVG.</p><p>Although this property is read-only, its value is determined by an algorithm each time<br>the property is accessed, and may change if the conditions changed.</p><p>The base URL is determined as follows:</p>
+<p>-{{HTMLElement(&amp;quot;base&amp;quot;)}} element.<br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/baseURI"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Node/baseURI</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Node_ChildNodes_" data-uid="CSharpToJavaScript.APIs.JS.Node.ChildNodes*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Node_ChildNodes" data-uid="CSharpToJavaScript.APIs.JS.Node.ChildNodes">
+  ChildNodes
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The read-only <strong><code>childNodes</code></strong> property of the <see cref="!:&amp;quot;Node&amp;quot;"></see> interface returns a live<br><see cref="!:&amp;quot;NodeList&amp;quot;"></see> of child <see cref="!:&amp;quot;NodeList&amp;quot;"></see> of the given element where<br>the first child node is assigned index <code>0</code>. Child nodes include elements, text and<br>comments.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NodeList ChildNodes { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.NodeList.html">NodeList</a></dt>
+    <dd><p>A live <see cref="!:&amp;quot;NodeList&amp;quot;"></see> containing the children of the node.<blockquote><strong>Note:</strong> Several calls to <code>childNodes</code> return the <strong>same</strong> <see cref="!:&amp;quot;NodeList&amp;quot;"></see>.</blockquote>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Node_ChildNodes_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><blockquote><p><strong>Note:</strong> The <see cref="!:&amp;quot;NodeList&amp;quot;"></see> being live means that its content is changed each time<br>new children are added or removed.</p></blockquote><p>The items in the collection of nodes are objects, not strings. To get data from node<br>objects, use their properties. For example, to get the name of the first<br>childNode, you can use <code>elementNodeReference.childNodes[0].nodeName</code>.</p><p>The <see cref="!:&amp;quot;document&amp;quot;"></see> object itself has two children: the Doctype declaration and the<br>root element, typically referred to as <code>documentElement</code>. In HTML<br>documents the latter is the {{HTMLElement(&amp;quot;html&amp;quot;)}} element.</p><p>It is important to keep in mind that <code>childNodes</code> includes <strong>all</strong> child nodes,<br>including non-element nodes like text and comment.<br>To get a collection containing only elements, use <see cref="!:&amp;quot;ElementChildren&amp;quot;"></see> instead.</p>
+<p>-<see cref="!:&amp;quot;NodeFirstChild&amp;quot;"></see><br>-<see cref="!:&amp;quot;NodeLastChild&amp;quot;"></see><br>-<see cref="!:&amp;quot;NodeNextSibling&amp;quot;"></see><br>-<see cref="!:&amp;quot;NodePreviousSibling&amp;quot;"></see><br>-<see cref="!:&amp;quot;ElementChildren&amp;quot;"></see><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/childNodes"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Node/childNodes</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Node_FirstChild_" data-uid="CSharpToJavaScript.APIs.JS.Node.FirstChild*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Node_FirstChild" data-uid="CSharpToJavaScript.APIs.JS.Node.FirstChild">
+  FirstChild
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The read-only <strong><code>firstChild</code></strong> property of the <see cref="!:&amp;quot;Node&amp;quot;"></see> interface<br>returns the node&amp;apos;s first child in the tree,<br>or <code>null</code> if the node has no children.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Node? FirstChild { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a></dt>
+    <dd><p>A <see cref="!:&amp;quot;Node&amp;quot;"></see>, or <code>null</code> if there are none.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Node_FirstChild_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>If the node is a <see cref="!:&amp;quot;Document&amp;quot;"></see>,<br>this property returns the first node in the list of its direct children.</p><blockquote><p><strong>Note:</strong> This property returns any type of node that is the first child of this one.<br>It may be a <see cref="!:&amp;quot;Text&amp;quot;"></see> or a <see cref="!:&amp;quot;Text&amp;quot;"></see> node.<br>If you want to get the first <see cref="!:&amp;quot;Element&amp;quot;"></see> that is a child of another element,<br>consider using <see cref="!:&amp;quot;ElementFirstElementChild&amp;quot;"></see>.</p></blockquote>
+<p>-<see cref="!:&amp;quot;ElementFirstElementChild&amp;quot;"></see><br>-<see cref="!:&amp;quot;NodeLastChild&amp;quot;"></see><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/firstChild"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Node/firstChild</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Node_IsConnected_" data-uid="CSharpToJavaScript.APIs.JS.Node.IsConnected*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Node_IsConnected" data-uid="CSharpToJavaScript.APIs.JS.Node.IsConnected">
+  IsConnected
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The read-only <strong><code>isConnected</code></strong> property of the <see cref="!:&amp;quot;Node&amp;quot;"></see> interface<br>returns a boolean indicating whether the node is connected<br>(directly or indirectly) to a <see cref="!:&amp;quot;Document&amp;quot;"></see> object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsConnected { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>A boolean value that is <code>true</code> if the node is connected to its relevant context object,<br>and <code>false</code> if not.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Node_IsConnected_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>-<a href="https://gist.github.com/eligrey/f109a6d0bf4efe3461201c3d7b745e8f">Node.prototype.isConnected polyfill</a><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/isConnected"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Node/isConnected</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Node_LastChild_" data-uid="CSharpToJavaScript.APIs.JS.Node.LastChild*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Node_LastChild" data-uid="CSharpToJavaScript.APIs.JS.Node.LastChild">
+  LastChild
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The read-only <strong><code>lastChild</code></strong> property of the <see cref="!:&amp;quot;Node&amp;quot;"></see> interface<br>returns the last child of the node.<br>If its parent is an element, then the child is generally an element node, a text node, or a comment node.<br>It returns <code>null</code> if there are no child nodes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Node? LastChild { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a></dt>
+    <dd><p>A <see cref="!:&amp;quot;Node&amp;quot;"></see> that is the last child of the node, or <code>null</code> is there are no child nodes.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Node_LastChild_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>-<see cref="!:&amp;quot;NodeFirstChild&amp;quot;"></see><br>-<see cref="!:&amp;quot;ElementLastElementChild&amp;quot;"></see><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/lastChild"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Node/lastChild</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Node_NextSibling_" data-uid="CSharpToJavaScript.APIs.JS.Node.NextSibling*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Node_NextSibling" data-uid="CSharpToJavaScript.APIs.JS.Node.NextSibling">
+  NextSibling
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The read-only <strong><code>nextSibling</code></strong> property of the <see cref="!:&amp;quot;Node&amp;quot;"></see> interface<br>returns the node immediately following the specified one in their<br>parent&amp;apos;s <see cref="!:&amp;quot;NodeChildNodes&amp;quot;"></see>, or returns <code>null</code><br>if the specified node is the last child in the parent element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Node? NextSibling { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a></dt>
+    <dd><p>A <see cref="!:&amp;quot;Node&amp;quot;"></see> representing the next sibling of the current node,<br>or <code>null</code> if there are none.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Node_NextSibling_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><blockquote><p><strong>Note:</strong> Browsers insert <see cref="!:&amp;quot;Text&amp;quot;"></see> nodes into a document to represent whitespace in the source markup.<br>Therefore a node obtained, for example, using <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/firstChild"><code>Node.firstChild</code>https://developer.mozilla.org/en-US/docs/Web/API/Node/firstChild</a><br>or <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/previousSibling"><code>Node.previousSibling</code>https://developer.mozilla.org/en-US/docs/Web/API/Node/previousSibling</a><br>may refer to a whitespace text node rather than the actual element the author<br>intended to get.</p><p>The article <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Whitespace">Whitespace in the DOM</a><br>contains more information about this behavior.</p><p>You can use <see cref="!:&amp;quot;ElementNextElementSibling&amp;quot;"></see> to obtain the next element<br>skipping any whitespace nodes, other between-element text, or comments.</p><p>To navigate the opposite way through the child nodes list use <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/previousSibling">Node.previousSibling</a>.</p></blockquote>
+<p>-<see cref="!:&amp;quot;ElementNextElementSibling&amp;quot;"></see><br>-<see cref="!:&amp;quot;NodePreviousSibling&amp;quot;"></see><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/nextSibling"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Node/nextSibling</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Node_NodeName_" data-uid="CSharpToJavaScript.APIs.JS.Node.NodeName*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Node_NodeName" data-uid="CSharpToJavaScript.APIs.JS.Node.NodeName">
+  NodeName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The read-only <strong><code>nodeName</code></strong> property of <see cref="!:&amp;quot;Node&amp;quot;"></see> returns the name of the current node as a string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string NodeName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A string. Values for the different types of nodes are:</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Node_NodeName_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>-<see cref="!:&amp;quot;ElementTagName&amp;quot;"></see><br>-<see cref="!:&amp;quot;AttrName&amp;quot;"></see><br>-<see cref="!:&amp;quot;DocumentTypeName&amp;quot;"></see><br>-<see cref="!:&amp;quot;ProcessingInstructionTarget&amp;quot;"></see><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeName"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeName</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Node_NodeType_" data-uid="CSharpToJavaScript.APIs.JS.Node.NodeType*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Node_NodeType" data-uid="CSharpToJavaScript.APIs.JS.Node.NodeType">
+  NodeType
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The read-only <strong><code>nodeType</code></strong> property of a <see cref="!:&amp;quot;Node&amp;quot;"></see> interface is an integer<br>that identifies what the node is. It distinguishes different kind of nodes from each other,<br>such as <see cref="!:&amp;quot;Element&amp;quot;"></see>, <see cref="!:&amp;quot;Element&amp;quot;"></see> and <see cref="!:&amp;quot;Element&amp;quot;"></see>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ushort NodeType { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd><p>An integer which specifies the type of the node. Possible values are:The following constants have been deprecated and are not in use anymore: <code>Node.ENTITY_REFERENCE_NODE</code> (<code>5</code>),<br><code>Node.ENTITY_NODE</code> (<code>6</code>), and <code>Node.NOTATION_NODE</code> (<code>12</code>).</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Node_NodeType_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeType"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeType</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Node_NodeValue_" data-uid="CSharpToJavaScript.APIs.JS.Node.NodeValue*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Node_NodeValue" data-uid="CSharpToJavaScript.APIs.JS.Node.NodeValue">
+  NodeValue
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>nodeValue</code></strong> property of the <see cref="!:&amp;quot;Node&amp;quot;"></see> interface returns or sets the value of the current node.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? NodeValue { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A string containing the value of the current node, if any.<br>For the document itself, <code>nodeValue</code> returns <code>null</code>.<br>For text, comment, and CDATA nodes, <code>nodeValue</code> returns the content of the node.<br>For attribute nodes, the value of the attribute is returned.The following table shows the return values for different types of nodes.<table><tr><td>Node</td><td>Value of nodeValue</td></tr><tr><td><see cref="!:&amp;quot;CDATASection&amp;quot;"></see></td><td>Content of the CDATA section</td></tr><tr><td><see cref="!:&amp;quot;Comment&amp;quot;"></see></td><td>Content of the comment</td></tr><tr><td><see cref="!:&amp;quot;Document&amp;quot;"></see></td><td><code>null</code></td></tr><tr><td><see cref="!:&amp;quot;DocumentFragment&amp;quot;"></see></td><td><code>null</code></td></tr><tr><td><see cref="!:&amp;quot;DocumentType&amp;quot;"></see></td><td><code>null</code></td></tr><tr><td><see cref="!:&amp;quot;Element&amp;quot;"></see></td><td><code>null</code></td></tr><tr><td><see cref="!:&amp;quot;NamedNodeMap&amp;quot;"></see></td><td><code>null</code></td></tr><tr><td><see cref="!:&amp;quot;ProcessingInstruction&amp;quot;"></see></td><td>Entire content excluding the target</td></tr><tr><td><see cref="!:&amp;quot;Text&amp;quot;"></see></td><td>Content of the text node</td></tr></table><blockquote><strong>Note:</strong> When <code>nodeValue</code> is defined to be <code>null</code>, setting it has no effect.</blockquote>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Node_NodeValue_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeValue"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeValue</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Node_OwnerDocument_" data-uid="CSharpToJavaScript.APIs.JS.Node.OwnerDocument*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Node_OwnerDocument" data-uid="CSharpToJavaScript.APIs.JS.Node.OwnerDocument">
+  OwnerDocument
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The read-only <strong><code>ownerDocument</code></strong> property of the <see cref="!:&amp;quot;Node&amp;quot;"></see> interface<br>returns the top-level document object of the node.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Document? OwnerDocument { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Document.html">Document</a></dt>
+    <dd><p>A <see cref="!:&amp;quot;Document&amp;quot;"></see> that is the top-level object in which all the<br>child nodes are created.If this property is used on a node that is itself a document, the value is <code>null</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Node_OwnerDocument_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/ownerDocument"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Node/ownerDocument</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Node_ParentElement_" data-uid="CSharpToJavaScript.APIs.JS.Node.ParentElement*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Node_ParentElement" data-uid="CSharpToJavaScript.APIs.JS.Node.ParentElement">
+  ParentElement
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The read-only <strong><code>parentElement</code></strong> property of <see cref="!:&amp;quot;Node&amp;quot;"></see> interface<br>returns the DOM node&amp;apos;s parent <see cref="!:&amp;quot;Element&amp;quot;"></see>, or <code>null</code> if the node either has no<br>parent, or its parent isn&amp;apos;t a DOM <see cref="!:&amp;quot;Element&amp;quot;"></see>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Element? ParentElement { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html">Element</a></dt>
+    <dd><p>An <see cref="!:&amp;quot;Element&amp;quot;"></see> that is the parent element of the current node,<br>or <code>null</code> if there isn&amp;apos;t one.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Node_ParentElement_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>-<see cref="!:&amp;quot;NodeParentNode&amp;quot;"></see><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/parentElement"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Node/parentElement</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Node_ParentNode_" data-uid="CSharpToJavaScript.APIs.JS.Node.ParentNode*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Node_ParentNode" data-uid="CSharpToJavaScript.APIs.JS.Node.ParentNode">
+  ParentNode
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The read-only <strong><code>parentNode</code></strong> property of the <see cref="!:&amp;quot;Node&amp;quot;"></see> interface<br>returns the parent of the specified node in the DOM tree.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Node? ParentNode { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a></dt>
+    <dd><p>A <see cref="!:&amp;quot;Node&amp;quot;"></see> that is the parent of the current node. The parent of an element is<br>an <code>Element</code> node, a <code>Document</code> node, or a <code>DocumentFragment</code> node.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Node_ParentNode_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><code>Document</code> and <code>DocumentFragment</code> <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeType">nodes</a> can never have a parent, so<br><code>parentNode</code> will always return <code>null</code>.<br>It also returns <code>null</code> if the node has just been created<br>and is not yet attached to the tree.</p>
+<p>-<see cref="!:&amp;quot;NodeFirstChild&amp;quot;"></see><br>-<see cref="!:&amp;quot;NodeLastChild&amp;quot;"></see><br>-<see cref="!:&amp;quot;NodeChildNodes&amp;quot;"></see><br>-<see cref="!:&amp;quot;NodeNextSibling&amp;quot;"></see><br>-<see cref="!:&amp;quot;NodeParentElement&amp;quot;"></see><br>-<see cref="!:&amp;quot;NodePreviousSibling&amp;quot;"></see><br>-<see cref="!:&amp;quot;NodeRemoveChild&amp;quot;"></see><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/parentNode"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Node/parentNode</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Node_PreviousSibling_" data-uid="CSharpToJavaScript.APIs.JS.Node.PreviousSibling*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Node_PreviousSibling" data-uid="CSharpToJavaScript.APIs.JS.Node.PreviousSibling">
+  PreviousSibling
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The read-only <strong><code>previousSibling</code></strong> property of the <see cref="!:&amp;quot;Node&amp;quot;"></see> interface<br>returns the node immediately preceding the specified one in its parent&amp;apos;s<br><see cref="!:&amp;quot;NodeChildNodes&amp;quot;"></see> list,<br>or <code>null</code> if the specified node is the first in that list.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Node? PreviousSibling { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a></dt>
+    <dd><p>A <see cref="!:&amp;quot;Node&amp;quot;"></see> representing the previous sibling of the current node,<br>or <code>null</code> if there are none.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Node_PreviousSibling_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><blockquote><p><strong>Note:</strong> Browsers insert text nodes into a document to represent whitespace in the source markup.<br>Therefore a node obtained, for example, using <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/firstChild"><code>Node.firstChild</code>https://developer.mozilla.org/en-US/docs/Web/API/Node/firstChild</a><br>or <code>Node.previousSibling</code><br>may refer to a whitespace text node rather than the actual element the author intended to get.</p><p>See <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Whitespace">Whitespace in the DOM</a> for more information.</p><p>You can use <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/previousElementSibling"><code>previousElementSibling</code>https://developer.mozilla.org/en-US/docs/Web/API/Element/previousElementSibling</a><br>to get the previous element node (skipping text nodes and any other non-element nodes).</p><p>To navigate the opposite way through the child nodes list use <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/nextSibling">Node.nextSibling</a>.</p></blockquote>
+<p>-<see cref="!:&amp;quot;NodeNextSibling&amp;quot;"></see><br>-<see cref="!:&amp;quot;ElementPreviousElementSibling&amp;quot;"></see><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/previousSibling"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Node/previousSibling</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Node_TextContent_" data-uid="CSharpToJavaScript.APIs.JS.Node.TextContent*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Node_TextContent" data-uid="CSharpToJavaScript.APIs.JS.Node.TextContent">
+  TextContent
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>textContent</code></strong> property of the {{domxref (&amp;quot;Node&amp;quot;)}}<br>interface represents the text content of the node and its descendants.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? TextContent { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A string, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><code>null</code>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null</a>. Its value depends on the situation:<blockquote><strong>Warning:</strong> Setting <code>textContent</code> on a node removes <strong>all</strong> of the node&amp;apos;s children<br>and replaces them with a single text node with the given string value.</blockquote>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Node_TextContent_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><blockquote><p><strong>Note:</strong> <code>textContent</code> and <see cref="!:&amp;quot;HTMLElementInnerText&amp;quot;"></see> are easily confused,<br>but the two properties are <a href="https://developer.mozilla.org#differences_from_innertext">different in important ways</a>.</p></blockquote>
+<p>-<see cref="!:&amp;quot;HTMLElementInnerText&amp;quot;"></see><br>-<see cref="!:&amp;quot;ElementInnerHTML&amp;quot;"></see><br>-<a href="https://developer.mozilla.orghttp://perfectionkills.com/the-poor-misunderstood-innerText/">More on differences between <code>innerText</code> and <code>textContent</code></a><br>(blog post)<br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent</a></p>
+</div>
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Node_AppendChild_" data-uid="CSharpToJavaScript.APIs.JS.Node.AppendChild*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Node_AppendChild_CSharpToJavaScript_APIs_JS_Node_" data-uid="CSharpToJavaScript.APIs.JS.Node.AppendChild(CSharpToJavaScript.APIs.JS.Node)">
+  AppendChild(Node)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>appendChild()</code></strong> method of the <see cref="!:&amp;quot;Node&amp;quot;"></see> interface adds a node to the end of the list of children of a specified parent node. If the given child is a reference to an existing node in the document, <code>appendChild()</code> moves it from its current position to the new position.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Node AppendChild(Node node)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>node</code> <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a></dt>
+    <dd><p>A <see cref="!:&amp;quot;Node&amp;quot;"></see> that is the appended child (<code>aChild</code>), except when <code>aChild</code> is a <see cref="!:&amp;quot;DocumentFragment&amp;quot;"></see>, in which case the empty <see cref="!:&amp;quot;DocumentFragment&amp;quot;"></see> is returned.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Node_AppendChild_CSharpToJavaScript_APIs_JS_Node__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>If the given child is a <see cref="!:&amp;quot;DocumentFragment&amp;quot;"></see>, the entire contents of the <see cref="!:&amp;quot;DocumentFragment&amp;quot;"></see> are moved into the child list of the specified parent node.</p><p><code>appendChild()</code> returns the newly appended node, or if the child is a <see cref="!:&amp;quot;DocumentFragment&amp;quot;"></see>, the emptied fragment.</p><blockquote><p><strong>Note:</strong> Unlike this method, the <see cref="!:&amp;quot;ElementAppend&amp;quot;"></see> method supports multiple arguments and appending strings. You can prefer using it if your node is an element.</p></blockquote>
+<p>-<see cref="!:&amp;quot;NodeRemoveChild&amp;quot;"></see><br>-<see cref="!:&amp;quot;NodeReplaceChild&amp;quot;"></see><br>-<see cref="!:&amp;quot;NodeInsertBefore&amp;quot;"></see><br>-<see cref="!:&amp;quot;NodeHasChildNodes&amp;quot;"></see><br>-<see cref="!:&amp;quot;ElementInsertAdjacentElement&amp;quot;"></see><br>-<see cref="!:&amp;quot;ElementAppend&amp;quot;"></see><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Node_CloneNode_" data-uid="CSharpToJavaScript.APIs.JS.Node.CloneNode*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Node_CloneNode_System_Boolean_" data-uid="CSharpToJavaScript.APIs.JS.Node.CloneNode(System.Boolean)">
+  CloneNode(bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>cloneNode()</code></strong> method of the <see cref="!:&amp;quot;Node&amp;quot;"></see> interface<br>returns a duplicate of the node on which this method was called.<br>Its parameter controls if the subtree contained in a node is also cloned or not.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Node CloneNode(bool deep)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>deep</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a></dt>
+    <dd><p>The new <see cref="!:&amp;quot;Node&amp;quot;"></see> cloned.<br>The cloned node has no parent and is not part of the document,<br><strong>until</strong> it is added to another node that is part of the document,<br>using <see cref="!:&amp;quot;NodeAppendChild&amp;quot;"></see> or a similar method.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Node_CloneNode_System_Boolean__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Cloning a node copies all of its attributes and their values,<br>including intrinsic (inline) listeners. It does <strong>not</strong> copy event listeners added<br>using <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener"><code>addEventListener()</code>https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener</a> or<br>those assigned to element properties (e.g., <code>node.onclick = someFunction</code>).<br>Additionally, for a {{HTMLElement(&amp;quot;canvas&amp;quot;)}} element, the painted image is not copied.</p><blockquote><p><strong>Warning:</strong> <code>cloneNode()</code> may lead to duplicate element IDs in a document!</p><p>If the original node has an <code>id</code> attribute, and the clone<br>will be placed in the same document, then you should modify the clone&amp;apos;s ID to be<br>unique.</p><p>Also, <code>name</code> attributes may need to be modified,<br>depending on whether duplicate names are expected.</p></blockquote><p>To clone a node to insert into a <strong>different</strong> document, use<br><see cref="!:&amp;quot;DocumentImportNode&amp;quot;"></see> instead.</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/cloneNode"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Node/cloneNode</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Node_CompareDocumentPosition_" data-uid="CSharpToJavaScript.APIs.JS.Node.CompareDocumentPosition*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Node_CompareDocumentPosition_CSharpToJavaScript_APIs_JS_Node_" data-uid="CSharpToJavaScript.APIs.JS.Node.CompareDocumentPosition(CSharpToJavaScript.APIs.JS.Node)">
+  CompareDocumentPosition(Node)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>compareDocumentPosition()</code></strong> method of the <see cref="!:&amp;quot;Node&amp;quot;"></see> interface<br>reports the position of its argument node relative to the node on which it is called.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ushort CompareDocumentPosition(Node other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd><p>An integer value representing <code>otherNode</code>&amp;apos;s position relative to <code>node</code><br>as a <a href="https://en.wikipedia.org/wiki/Mask_(computing)">bitmask</a> combining the<br>following constant properties of <see cref="!:&amp;quot;Node&amp;quot;"></see>:More than one bit is set if multiple scenarios apply. For example, if<br><code>otherNode</code> is located earlier in the document <strong><strong>and</strong></strong><br>contains the node on which <code>compareDocumentPosition()</code> was<br>called, then both the <code>DOCUMENT_POSITION_CONTAINS</code> and<br><code>DOCUMENT_POSITION_PRECEDING</code> bits would be set, producing a value of <code>10</code> (<code>0x0A</code>).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Node_CompareDocumentPosition_CSharpToJavaScript_APIs_JS_Node__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>-<see cref="!:&amp;quot;NodeContains&amp;quot;"></see><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/compareDocumentPosition"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Node/compareDocumentPosition</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Node_Contains_" data-uid="CSharpToJavaScript.APIs.JS.Node.Contains*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Node_Contains_CSharpToJavaScript_APIs_JS_Node_" data-uid="CSharpToJavaScript.APIs.JS.Node.Contains(CSharpToJavaScript.APIs.JS.Node)">
+  Contains(Node?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>contains()</code></strong> method of the <see cref="!:&amp;quot;Node&amp;quot;"></see> interface<br>returns a boolean value indicating<br>whether a node is a descendant of a given node, that is the node itself,<br>one of its direct children (<see cref="!:&amp;quot;NodeChildNodes&amp;quot;"></see>),<br>one of the children&amp;apos;s direct children, and so on.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Contains(Node? other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>A boolean value that is <code>true</code> if <code>otherNode</code> is contained in the node,<br><code>false</code> if not.If the <code>otherNode</code> parameter is <code>null</code>,<br><code>contains()</code> always returns <code>false</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Node_Contains_CSharpToJavaScript_APIs_JS_Node__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><blockquote><p><strong>Note:</strong> A node is <strong>contained</strong> inside itself.</p></blockquote>
+<p>-<see cref="!:&amp;quot;NodeCompareDocumentPosition&amp;quot;"></see><br>-<see cref="!:&amp;quot;NodeHasChildNodes&amp;quot;"></see><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/contains"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Node/contains</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Node_GetRootNode_" data-uid="CSharpToJavaScript.APIs.JS.Node.GetRootNode*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Node_GetRootNode_CSharpToJavaScript_APIs_JS_GetRootNodeOptions_" data-uid="CSharpToJavaScript.APIs.JS.Node.GetRootNode(CSharpToJavaScript.APIs.JS.GetRootNodeOptions)">
+  GetRootNode(GetRootNodeOptions)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>getRootNode()</code></strong> method of the <see cref="!:&amp;quot;Node&amp;quot;"></see> interface<br>returns the context object&amp;apos;s root,<br>which optionally includes the shadow root if it is available.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Node GetRootNode(GetRootNodeOptions options)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>options</code> <a class="xref" href="CSharpToJavaScript.APIs.JS.GetRootNodeOptions.html">GetRootNodeOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a></dt>
+    <dd><p>An object inheriting from <see cref="!:&amp;apos;Node&amp;apos;"></see>. This will differ in exact form depending<br>on where you called <code>getRootNode()</code>; for example:</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Node_GetRootNode_CSharpToJavaScript_APIs_JS_GetRootNodeOptions__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/getRootNode"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Node/getRootNode</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Node_HasChildNodes_" data-uid="CSharpToJavaScript.APIs.JS.Node.HasChildNodes*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Node_HasChildNodes" data-uid="CSharpToJavaScript.APIs.JS.Node.HasChildNodes">
+  HasChildNodes()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>hasChildNodes()</code></strong> method of the <see cref="!:&amp;quot;Node&amp;quot;"></see> interface<br>returns a boolean value indicating<br>whether the given <see cref="!:&amp;quot;Node&amp;quot;"></see> has <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/childNodes">child nodes</a> or not.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasChildNodes()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>A boolean value that is <code>true</code> if the node has child nodes, and<br><code>false</code> otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Node_HasChildNodes_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>-<see cref="!:&amp;quot;NodeChildNodes&amp;quot;"></see><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/hasChildNodes"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Node/hasChildNodes</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Node_InsertBefore_" data-uid="CSharpToJavaScript.APIs.JS.Node.InsertBefore*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Node_InsertBefore_CSharpToJavaScript_APIs_JS_Node_CSharpToJavaScript_APIs_JS_Node_" data-uid="CSharpToJavaScript.APIs.JS.Node.InsertBefore(CSharpToJavaScript.APIs.JS.Node,CSharpToJavaScript.APIs.JS.Node)">
+  InsertBefore(Node, Node?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>insertBefore()</code></strong> method of the <see cref="!:&amp;quot;Node&amp;quot;"></see> interface<br>inserts a node before a <strong>reference node</strong> as a child of a specified <strong>parent node</strong>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Node InsertBefore(Node node, Node? child)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>node</code> <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a></dt>
+    <dd></dd>
+    <dt><code>child</code> <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a></dt>
+    <dd><p>Returns the added child (unless <code>newNode</code> is a <see cref="!:&amp;quot;DocumentFragment&amp;quot;"></see>,<br>in which case the empty <see cref="!:&amp;quot;DocumentFragment&amp;quot;"></see> is returned).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Node_InsertBefore_CSharpToJavaScript_APIs_JS_Node_CSharpToJavaScript_APIs_JS_Node__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>If the given node already exists in the document,<br><code>insertBefore()</code> moves it from its current position to the new position.<br>(That is, it will automatically be removed from its existing parent<br>before appending it to the specified new parent.)</p><p>This means that a node cannot be in two locations of the document simultaneously.</p><blockquote><p><strong>Note:</strong> The <see cref="!:&amp;quot;NodeCloneNode&amp;quot;"></see> can be used to make a copy<br>of the node before appending it under the new parent. Note that the copies made with<br><code>cloneNode()</code> will not be automatically kept in sync.</p></blockquote><p>If the given child is a <see cref="!:&amp;quot;DocumentFragment&amp;quot;"></see>, the entire contents of the<br><code>DocumentFragment</code> are moved into the child list of the specified parent<br>node.</p>
+<p>-<see cref="!:&amp;quot;NodeRemoveChild&amp;quot;"></see><br>-<see cref="!:&amp;quot;NodeReplaceChild&amp;quot;"></see><br>-<see cref="!:&amp;quot;NodeAppendChild&amp;quot;"></see><br>-<see cref="!:&amp;quot;NodeHasChildNodes&amp;quot;"></see><br>-<see cref="!:&amp;quot;ElementInsertAdjacentElement&amp;quot;"></see><br>-<see cref="!:&amp;quot;ElementPrepend&amp;quot;"></see><br>-<see cref="!:&amp;quot;ElementBefore&amp;quot;"></see><br>-<see cref="!:&amp;quot;ElementAfter&amp;quot;"></see><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/insertBefore"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Node/insertBefore</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Node_IsDefaultNamespace_" data-uid="CSharpToJavaScript.APIs.JS.Node.IsDefaultNamespace*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Node_IsDefaultNamespace_System_String_" data-uid="CSharpToJavaScript.APIs.JS.Node.IsDefaultNamespace(System.String)">
+  IsDefaultNamespace(string?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>isDefaultNamespace()</code></strong> method of the <see cref="!:&amp;quot;Node&amp;quot;"></see> interface<br>accepts a namespace URI as an argument.<br>It returns a boolean value that is <code>true</code><br>if the namespace is the default namespace on the given node<br>and <code>false</code> if not.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsDefaultNamespace(string? namespace_)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>namespace_</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>A boolean value that holds the return value <code>true</code> or <code>false</code>,<br>indicating if the parameter is the default namespace, or not.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Node_IsDefaultNamespace_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><blockquote><p><strong>Note:</strong> The default namespace of an HTML element is always <code>&amp;quot;&amp;quot;</code>. For a SVG element, it is set by the <code>xmlns</code> attribute.</p></blockquote>
+<p>-<see cref="!:&amp;quot;NodeLookupNamespaceURI&amp;quot;"></see><br>-<see cref="!:&amp;quot;NodeLookupPrefix&amp;quot;"></see><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/isDefaultNamespace"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Node/isDefaultNamespace</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Node_IsEqualNode_" data-uid="CSharpToJavaScript.APIs.JS.Node.IsEqualNode*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Node_IsEqualNode_CSharpToJavaScript_APIs_JS_Node_" data-uid="CSharpToJavaScript.APIs.JS.Node.IsEqualNode(CSharpToJavaScript.APIs.JS.Node)">
+  IsEqualNode(Node?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>isEqualNode()</code></strong> method of the <see cref="!:&amp;quot;Node&amp;quot;"></see> interface tests whether two nodes are equal.<br>Two nodes are equal when they have the same type, defining characteristics (for<br>elements, this would be their ID, number of children, and so forth), its attributes<br>match, and so on. The specific set of data points that must match varies depending on<br>the types of the nodes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsEqualNode(Node? otherNode)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>otherNode</code> <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>A boolean value that is <code>true</code> if the two nodes are equals, or <code>false</code> if not.<br>If <code>otherNode</code> is <code>null</code>, <code>isEqualNode()</code> always return false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Node_IsEqualNode_CSharpToJavaScript_APIs_JS_Node__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>-<see cref="!:&amp;quot;NodeIsSameNode&amp;quot;"></see><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/isEqualNode"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Node/isEqualNode</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Node_IsSameNode_" data-uid="CSharpToJavaScript.APIs.JS.Node.IsSameNode*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Node_IsSameNode_CSharpToJavaScript_APIs_JS_Node_" data-uid="CSharpToJavaScript.APIs.JS.Node.IsSameNode(CSharpToJavaScript.APIs.JS.Node)">
+  IsSameNode(Node?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>isSameNode()</code></strong> method of the <see cref="!:&amp;quot;Node&amp;quot;"></see> interface<br>is a legacy alias the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality">for the <code>===</code> strict equality operator</a>.<br>That is, it tests whether two nodes are the same<br>(in other words, whether they reference the same object).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsSameNode(Node? otherNode)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>otherNode</code> <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>A boolean value that is <code>true</code> if both nodes are strictly equal, <code>false</code> if not.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Node_IsSameNode_CSharpToJavaScript_APIs_JS_Node__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><blockquote><p><strong>Note:</strong> There is no need to use <code>isSameNode()</code>; instead use the <code>===</code> strict equality operator.</p></blockquote>
+<p>-<see cref="!:&amp;quot;NodeIsEqualNode&amp;quot;"></see><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/isSameNode"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Node/isSameNode</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Node_LookupNamespaceURI_" data-uid="CSharpToJavaScript.APIs.JS.Node.LookupNamespaceURI*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Node_LookupNamespaceURI_System_String_" data-uid="CSharpToJavaScript.APIs.JS.Node.LookupNamespaceURI(System.String)">
+  LookupNamespaceURI(string?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>lookupNamespaceURI()</code></strong> method of the <see cref="!:&amp;quot;Node&amp;quot;"></see> interface<br>takes a prefix as parameter and returns the namespace URI associated with it on the given node if found (and<br><code>null</code> if not).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? LookupNamespaceURI(string? prefix)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>prefix</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A string containing the namespace URI corresponding to the prefix.<br>If the prefix is not found, it returns <code>null</code>.<br>If the requested <code>prefix</code> is <code>null</code>, it returns the default namespace URI.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Node_LookupNamespaceURI_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>-<see cref="!:&amp;quot;NodeLookupPrefix&amp;quot;"></see><br>-<see cref="!:&amp;quot;NodeIsDefaultNameSpace&amp;quot;"></see><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/lookupNamespaceURI"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Node/lookupNamespaceURI</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Node_LookupPrefix_" data-uid="CSharpToJavaScript.APIs.JS.Node.LookupPrefix*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Node_LookupPrefix_System_String_" data-uid="CSharpToJavaScript.APIs.JS.Node.LookupPrefix(System.String)">
+  LookupPrefix(string?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>lookupPrefix()</code></strong> method of the <see cref="!:&amp;quot;Node&amp;quot;"></see> interface<br>returns a string containing the prefix for a given namespace URI, if present,<br>and <code>null</code> if not.<br>When multiple prefixes are possible, the first prefix is returned.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? LookupPrefix(string? namespace_)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>namespace_</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A string containing the corresponding prefix, or <code>null</code> if none has been found.<br>If <code>namespace</code> is null, or the empty string, <code>lookupPrefix()</code> returns <code>null</code>.If the node is a <see cref="!:&amp;quot;DocumentType&amp;quot;"></see> or a <see cref="!:&amp;quot;DocumentType&amp;quot;"></see>,<br><code>lookupPrefix()</code> always returns <code>null</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Node_LookupPrefix_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>-<a href="https://www.w3.org/TR/DOM-Level-3-Core/core.html#Node3-lookupNamespacePrefix">http://www.w3.org/TR/DOM-Level-3-Cor...amespacePrefix</a><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/lookupPrefix"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Node/lookupPrefix</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Node_Normalize_" data-uid="CSharpToJavaScript.APIs.JS.Node.Normalize*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Node_Normalize" data-uid="CSharpToJavaScript.APIs.JS.Node.Normalize">
+  Normalize()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>normalize()</code></strong> method of the <see cref="!:&amp;quot;Node&amp;quot;"></see> interface puts the specified node<br>and all of its sub-tree into a <strong>normalized</strong> form.<br>In a normalized sub-tree, no text nodes in the sub-tree are empty and there are no adjacent text nodes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Unsupported Normalize()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
+    <dd><p>None.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Node_Normalize_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>-<see cref="!:&amp;quot;TextSplitText&amp;quot;"></see>, its opposite.<br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/normalize"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Node/normalize</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Node_RemoveChild_" data-uid="CSharpToJavaScript.APIs.JS.Node.RemoveChild*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Node_RemoveChild_CSharpToJavaScript_APIs_JS_Node_" data-uid="CSharpToJavaScript.APIs.JS.Node.RemoveChild(CSharpToJavaScript.APIs.JS.Node)">
+  RemoveChild(Node)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>removeChild()</code></strong> method of the <see cref="!:&amp;quot;Node&amp;quot;"></see> interface<br>removes a child node from the DOM and returns the removed node.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Node RemoveChild(Node child)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>child</code> <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Node_RemoveChild_CSharpToJavaScript_APIs_JS_Node__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><blockquote><p><strong>Note:</strong> As long as a reference is kept on the removed child,<br>it still exists in memory, but is no longer part of the DOM.<br>It can still be reused later in the code.</p><p>If the return value of <code>removeChild()</code> is not stored, and no other reference is kept,<br>it will be <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_Management">automatically deleted</a> from memory after a short time.</p></blockquote><p>Unlike <see cref="!:&amp;quot;NodeCloneNode&amp;quot;"></see> the return value preserves the <see cref="!:&amp;quot;NodeCloneNode&amp;quot;"></see> objects associated with it.</p>
+<p>-<see cref="!:&amp;quot;NodeReplaceChild&amp;quot;"></see><br>-<see cref="!:&amp;quot;NodeParentNode&amp;quot;"></see><br>-<see cref="!:&amp;quot;ElementRemove&amp;quot;"></see><br>-<see cref="!:&amp;quot;NodeCloneNode&amp;quot;"></see><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Node_ReplaceChild_" data-uid="CSharpToJavaScript.APIs.JS.Node.ReplaceChild*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Node_ReplaceChild_CSharpToJavaScript_APIs_JS_Node_CSharpToJavaScript_APIs_JS_Node_" data-uid="CSharpToJavaScript.APIs.JS.Node.ReplaceChild(CSharpToJavaScript.APIs.JS.Node,CSharpToJavaScript.APIs.JS.Node)">
+  ReplaceChild(Node, Node)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>replaceChild()</code></strong> method of the <see cref="!:&amp;quot;Node&amp;quot;"></see> element<br>replaces a child node within the given (parent) node.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Node ReplaceChild(Node node, Node child)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>node</code> <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a></dt>
+    <dd></dd>
+    <dt><code>child</code> <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a></dt>
+    <dd><p>The replaced <see cref="!:&amp;quot;Node&amp;quot;"></see>. This is the same node as <code>oldChild</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Node_ReplaceChild_CSharpToJavaScript_APIs_JS_Node_CSharpToJavaScript_APIs_JS_Node__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>-<see cref="!:&amp;quot;NodeRemoveChild&amp;quot;"></see><br>-<see cref="!:&amp;quot;ElementReplaceWith&amp;quot;"></see><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/replaceChild"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Node/replaceChild</a></p>
+</div>
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

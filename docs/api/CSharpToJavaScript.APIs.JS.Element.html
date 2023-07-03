@@ -1,0 +1,1886 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class Element
+ </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class Element
+ ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+  </head>
+
+  <script type="module">
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="CSharpToJavaScript.APIs.JS.Element">
+
+
+
+  <h1 id="CSharpToJavaScript_APIs_JS_Element" data-uid="CSharpToJavaScript.APIs.JS.Element" class="text-break">
+    Class Element
+  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="CSharpToJavaScript.html">CSharpToJavaScript</a>.<a class="xref" href="CSharpToJavaScript.APIs.html">APIs</a>.<a class="xref" href="CSharpToJavaScript.APIs.JS.html">JS</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>CSharpToJavaScript.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p><strong><code>Element</code></strong> is the most general base class from which all element objects (i.e. objects that represent elements) in a <see cref="!:&amp;quot;Document&amp;quot;"></see> inherit. It only has methods and properties common to all kinds of elements. More specific classes inherit from <code>Element</code>.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Slottable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="CSharpToJavaScript.APIs.JS.EventTarget.html">EventTarget</a></div>
+      <div><a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a></div>
+      <div><span class="xref">Element</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="CSharpToJavaScript.APIs.JS.ParentNode.html">ParentNode</a></div>
+      <div><a class="xref" href="CSharpToJavaScript.APIs.JS.NonDocumentTypeChildNode.html">NonDocumentTypeChildNode</a></div>
+      <div><a class="xref" href="CSharpToJavaScript.APIs.JS.ChildNode.html">ChildNode</a></div>
+      <div><a class="xref" href="CSharpToJavaScript.APIs.JS.Slottable.html">Slottable</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLElement.html">HTMLElement</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_ELEMENT_NODE">Node.ELEMENT_NODE</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_ATTRIBUTE_NODE">Node.ATTRIBUTE_NODE</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_TEXT_NODE">Node.TEXT_NODE</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_CDATA_SECTION_NODE">Node.CDATA_SECTION_NODE</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_ENTITY_REFERENCE_NODE">Node.ENTITY_REFERENCE_NODE</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_ENTITY_NODE">Node.ENTITY_NODE</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_PROCESSING_INSTRUCTION_NODE">Node.PROCESSING_INSTRUCTION_NODE</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_COMMENT_NODE">Node.COMMENT_NODE</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_DOCUMENT_NODE">Node.DOCUMENT_NODE</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_DOCUMENT_TYPE_NODE">Node.DOCUMENT_TYPE_NODE</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_DOCUMENT_FRAGMENT_NODE">Node.DOCUMENT_FRAGMENT_NODE</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_NOTATION_NODE">Node.NOTATION_NODE</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_NodeType">Node.NodeType</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_NodeName">Node.NodeName</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_BaseURI">Node.BaseURI</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_IsConnected">Node.IsConnected</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_OwnerDocument">Node.OwnerDocument</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_GetRootNode_CSharpToJavaScript_APIs_JS_GetRootNodeOptions_">Node.GetRootNode(GetRootNodeOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_ParentNode">Node.ParentNode</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_ParentElement">Node.ParentElement</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_HasChildNodes">Node.HasChildNodes()</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_ChildNodes">Node.ChildNodes</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_FirstChild">Node.FirstChild</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_LastChild">Node.LastChild</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_PreviousSibling">Node.PreviousSibling</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_NextSibling">Node.NextSibling</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_NodeValue">Node.NodeValue</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_TextContent">Node.TextContent</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_Normalize">Node.Normalize()</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_CloneNode_System_Boolean_">Node.CloneNode(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_IsEqualNode_CSharpToJavaScript_APIs_JS_Node_">Node.IsEqualNode(Node)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_IsSameNode_CSharpToJavaScript_APIs_JS_Node_">Node.IsSameNode(Node)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_DOCUMENT_POSITION_DISCONNECTED">Node.DOCUMENT_POSITION_DISCONNECTED</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_DOCUMENT_POSITION_PRECEDING">Node.DOCUMENT_POSITION_PRECEDING</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_DOCUMENT_POSITION_FOLLOWING">Node.DOCUMENT_POSITION_FOLLOWING</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_DOCUMENT_POSITION_CONTAINS">Node.DOCUMENT_POSITION_CONTAINS</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_DOCUMENT_POSITION_CONTAINED_BY">Node.DOCUMENT_POSITION_CONTAINED_BY</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC">Node.DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_CompareDocumentPosition_CSharpToJavaScript_APIs_JS_Node_">Node.CompareDocumentPosition(Node)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_Contains_CSharpToJavaScript_APIs_JS_Node_">Node.Contains(Node)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_LookupPrefix_System_String_">Node.LookupPrefix(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_LookupNamespaceURI_System_String_">Node.LookupNamespaceURI(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_IsDefaultNamespace_System_String_">Node.IsDefaultNamespace(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_InsertBefore_CSharpToJavaScript_APIs_JS_Node_CSharpToJavaScript_APIs_JS_Node_">Node.InsertBefore(Node, Node)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_AppendChild_CSharpToJavaScript_APIs_JS_Node_">Node.AppendChild(Node)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_ReplaceChild_CSharpToJavaScript_APIs_JS_Node_CSharpToJavaScript_APIs_JS_Node_">Node.ReplaceChild(Node, Node)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_RemoveChild_CSharpToJavaScript_APIs_JS_Node_">Node.RemoveChild(Node)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.EventTarget.html#CSharpToJavaScript_APIs_JS_EventTarget_AddEventListener_System_String_System_Action_CSharpToJavaScript_APIs_JS_Union1_">EventTarget.AddEventListener(string, Action, Union1)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.EventTarget.html#CSharpToJavaScript_APIs_JS_EventTarget_AddEventListener_System_String_System_Action_CSharpToJavaScript_APIs_JS_MouseEvent__CSharpToJavaScript_APIs_JS_Union1_">EventTarget.AddEventListener(string, Action&lt;MouseEvent&gt;, Union1)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.EventTarget.html#CSharpToJavaScript_APIs_JS_EventTarget_AddEventListener_System_String_System_Action_CSharpToJavaScript_APIs_JS_Event__CSharpToJavaScript_APIs_JS_Union1_">EventTarget.AddEventListener(string, Action&lt;Event&gt;, Union1)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.EventTarget.html#CSharpToJavaScript_APIs_JS_EventTarget_RemoveEventListener_System_String_System_Action_CSharpToJavaScript_APIs_JS_Union2_">EventTarget.RemoveEventListener(string, Action, Union2)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.EventTarget.html#CSharpToJavaScript_APIs_JS_EventTarget_AddEventListener_System_String_CSharpToJavaScript_APIs_JS_EventListener_CSharpToJavaScript_APIs_JS_Union1_">EventTarget.AddEventListener(string, EventListener, Union1)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.EventTarget.html#CSharpToJavaScript_APIs_JS_EventTarget_RemoveEventListener_System_String_CSharpToJavaScript_APIs_JS_EventListener_CSharpToJavaScript_APIs_JS_Union2_">EventTarget.RemoveEventListener(string, EventListener, Union2)</a>
+    </div>
+    <div>
+      <a class="xref" href="CSharpToJavaScript.APIs.JS.EventTarget.html#CSharpToJavaScript_APIs_JS_EventTarget_DispatchEvent_CSharpToJavaScript_APIs_JS_Event_">EventTarget.DispatchEvent(Event)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="CSharpToJavaScript_APIs_JS_Element_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>For example, the <see cref="!:&amp;quot;HTMLElement&amp;quot;"></see> interface is the base interface for HTML elements, while the <see cref="!:&amp;quot;HTMLElement&amp;quot;"></see> interface is the basis for all SVG elements. Most functionality is specified further down the class hierarchy.</p><p>Languages outside the realm of the Web platform, like XUL through the <code>XULElement</code> interface, also implement <code>Element</code>.</p><p>{{InheritanceDiagram}}</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Element</a></p>
+</div>
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Element_Attributes_" data-uid="CSharpToJavaScript.APIs.JS.Element.Attributes*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Element_Attributes" data-uid="CSharpToJavaScript.APIs.JS.Element.Attributes">
+  Attributes
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>Element.attributes</code></strong> property returns a live collection<br>of all attribute nodes registered to the specified node. It is a<br><see cref="!:&amp;quot;NamedNodeMap&amp;quot;"></see>, not an <code>Array</code>, so it has no {{jsxref(&amp;quot;Array&amp;quot;)}}<br>methods and the <see cref="!:&amp;quot;Attr&amp;quot;"></see> nodes&amp;apos; indexes may differ among browsers. To be more<br>specific, <code>attributes</code> is a key/value pair of strings that represents any<br>information regarding that attribute.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NamedNodeMap Attributes { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.NamedNodeMap.html">NamedNodeMap</a></dt>
+    <dd><p>A <see cref="!:&amp;quot;NamedNodeMap&amp;quot;"></see> object.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Element_Attributes_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>-<see cref="!:&amp;quot;NamedNodeMap&amp;quot;"></see>, the interface of the returned object<br>-Cross-browser compatibility considerations: on <a href="https://quirksmode.org/dom/core/#attributes">quirksmode</a><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/attributes"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Element/attributes</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Element_ClassList_" data-uid="CSharpToJavaScript.APIs.JS.Element.ClassList*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Element_ClassList" data-uid="CSharpToJavaScript.APIs.JS.Element.ClassList">
+  ClassList
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>Element.classList</code></strong> is a read-only property that<br>returns a live <see cref="!:&amp;quot;DOMTokenList&amp;quot;"></see> collection of the <code>class</code><br>attributes of the element. This can then be used to manipulate the class list.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DOMTokenList ClassList { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.DOMTokenList.html">DOMTokenList</a></dt>
+    <dd><p>A <see cref="!:&amp;quot;DOMTokenList&amp;quot;"></see> representing the contents of the element&amp;apos;s<br><code>class</code> attribute. If the <code>class</code> attribute is not set or empty,<br>it returns an empty <code>DOMTokenList</code>, i.e. a <code>DOMTokenList</code> with<br>the <code>length</code> property equal to <code>0</code>.Although the <code>classList</code> property itself is read-only, you can modify its associated <code>DOMTokenList</code> using the <see cref="!:&amp;quot;DOMTokenList/add&amp;quot;"></see>, <see cref="!:&amp;quot;DOMTokenList/add&amp;quot;"></see>, <see cref="!:&amp;quot;DOMTokenList/add&amp;quot;"></see>, and <see cref="!:&amp;quot;DOMTokenList/add&amp;quot;"></see> methods.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Element_ClassList_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Using <code>classList</code> is a convenient alternative to accessing an element&amp;apos;s list<br>of classes as a space-delimited string via <see cref="!:&amp;quot;elementClassName&amp;quot;"></see>.</p>
+<p>-<see cref="!:&amp;quot;elementClassName&amp;quot;"></see><br>-<see cref="!:&amp;quot;DOMTokenList&amp;quot;"></see><br>-<a href="https://github.com/eligrey/classList.js"><code>classList.js</code>https://github.com/eligrey/classList.js</a> (a cross-browser JavaScript polyfill that fully implements <code>element.classList</code>)<br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/classList"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Element/classList</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Element_ClassName_" data-uid="CSharpToJavaScript.APIs.JS.Element.ClassName*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Element_ClassName" data-uid="CSharpToJavaScript.APIs.JS.Element.ClassName">
+  ClassName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>className</code></strong> property of the<br><see cref="!:&amp;quot;Element&amp;quot;"></see> interface gets and sets the value of the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/class"><code>class</code> attribute</a><br>of the specified element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ClassName { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A string variable representing the class or space-separated classes of the current element.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Element_ClassName_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>-<see cref="!:&amp;quot;elementClassList&amp;quot;"></see><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/className"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Element/className</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Element_Id_" data-uid="CSharpToJavaScript.APIs.JS.Element.Id*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Element_Id" data-uid="CSharpToJavaScript.APIs.JS.Element.Id">
+  Id
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>id</code></strong> property of the <see cref="!:&amp;quot;Element&amp;quot;"></see> interface<br>represents the element&amp;apos;s identifier, reflecting the<br><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id"><strong><code>id</code></strong>https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id</a><br>global attribute.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Id { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A string.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Element_Id_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>If the <code>id</code> value is not the empty string, it must be unique in a document.</p><p>The <code>id</code> is often used with {{domxref(&amp;quot;Document.getElementById()&amp;quot;,<br>&amp;quot;getElementById()&amp;quot;)}} to retrieve a particular element. Another common case is to use an<br>element&amp;apos;s <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/ID_selectors">ID as a selector</a> when styling<br>the document with <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a>.</p><blockquote><p><strong>Note:</strong> Identifiers are case-sensitive, but you should avoid creating<br>IDs that differ only in the capitalization.</p></blockquote>
+<p>-The DOM <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id"><strong>id</strong>https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id</a><br>global attribute.<br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/id"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Element/id</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Element_LocalName_" data-uid="CSharpToJavaScript.APIs.JS.Element.LocalName*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Element_LocalName" data-uid="CSharpToJavaScript.APIs.JS.Element.LocalName">
+  LocalName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>Element.localName</code></strong> read-only property returns the<br>local part of the qualified name of an element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string LocalName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A string representing the local part of the element&amp;apos;s qualified name.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Element_LocalName_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>-<see cref="!:&amp;quot;ElementNamespaceURI&amp;quot;"></see><br>-<see cref="!:&amp;quot;ElementPrefix&amp;quot;"></see><br>-<see cref="!:&amp;quot;AttrLocalName&amp;quot;"></see><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/localName"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Element/localName</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Element_NamespaceURI_" data-uid="CSharpToJavaScript.APIs.JS.Element.NamespaceURI*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Element_NamespaceURI" data-uid="CSharpToJavaScript.APIs.JS.Element.NamespaceURI">
+  NamespaceURI
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>Element.namespaceURI</code></strong> read-only property returns the namespace URI of the element, or <code>null</code> if the element is not in a namespace.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? NamespaceURI { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A string, or <code>null</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Element_NamespaceURI_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>-<see cref="!:&amp;quot;ElementLocalName&amp;quot;"></see><br>-<see cref="!:&amp;quot;ElementPrefix&amp;quot;"></see><br>-<see cref="!:&amp;quot;AttrNamespaceURI&amp;quot;"></see><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/namespaceURI"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Element/namespaceURI</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Element_Onfullscreenchange_" data-uid="CSharpToJavaScript.APIs.JS.Element.Onfullscreenchange*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Element_Onfullscreenchange" data-uid="CSharpToJavaScript.APIs.JS.Element.Onfullscreenchange">
+  Onfullscreenchange
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EventHandlerNonNull Onfullscreenchange { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.EventHandlerNonNull.html">EventHandlerNonNull</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Element_Onfullscreenerror_" data-uid="CSharpToJavaScript.APIs.JS.Element.Onfullscreenerror*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Element_Onfullscreenerror" data-uid="CSharpToJavaScript.APIs.JS.Element.Onfullscreenerror">
+  Onfullscreenerror
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EventHandlerNonNull Onfullscreenerror { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.EventHandlerNonNull.html">EventHandlerNonNull</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Element_Prefix_" data-uid="CSharpToJavaScript.APIs.JS.Element.Prefix*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Element_Prefix" data-uid="CSharpToJavaScript.APIs.JS.Element.Prefix">
+  Prefix
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>Element.prefix</code></strong> read-only property returns the<br>namespace prefix of the specified element, or <code>null</code> if no prefix is<br>specified.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? Prefix { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A string.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Element_Prefix_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>-<see cref="!:&amp;quot;ElementNamespaceURI&amp;quot;"></see><br>-<see cref="!:&amp;quot;ElementLocalName&amp;quot;"></see><br>-<see cref="!:&amp;quot;AttrPrefix&amp;quot;"></see><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/prefix"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Element/prefix</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Element_ShadowRoot_" data-uid="CSharpToJavaScript.APIs.JS.Element.ShadowRoot*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Element_ShadowRoot" data-uid="CSharpToJavaScript.APIs.JS.Element.ShadowRoot">
+  ShadowRoot
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <code>Element.shadowRoot</code> read-only property<br>represents the shadow root hosted by the element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ShadowRoot? ShadowRoot { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.ShadowRoot.html">ShadowRoot</a></dt>
+    <dd><p>A <see cref="!:&amp;quot;ShadowRoot&amp;quot;"></see> object instance, or <code>null</code> if the associated<br>shadow root was attached with its <see cref="!:&amp;quot;ShadowRootMode&amp;quot;"></see> set to<br><code>closed</code>. (See <see cref="!:&amp;quot;ElementAttachShadow&amp;quot;"></see> for further details).</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Element_ShadowRoot_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Use <see cref="!:&amp;quot;ElementAttachShadow&amp;quot;"></see> to add a shadow root to an existing element.</p>
+<p>-<see cref="!:&amp;quot;ElementOpenOrClosedShadowRoot&amp;quot;"></see> {{non-standard_inline}}<br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/shadowRoot"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Element/shadowRoot</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Element_Slot_" data-uid="CSharpToJavaScript.APIs.JS.Element.Slot*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Element_Slot" data-uid="CSharpToJavaScript.APIs.JS.Element.Slot">
+  Slot
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>slot</code></strong> property of the <see cref="!:&amp;quot;Element&amp;quot;"></see> interface<br>returns the name of the shadow DOM slot the element is inserted in.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Slot { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A string.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Element_Slot_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>A slot is a placeholder inside a <a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components">web component</a> that users can fill with their own markup (see <a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_templates_and_slots">Using templates and slots</a> for more information).</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/slot"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Element/slot</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Element_TagName_" data-uid="CSharpToJavaScript.APIs.JS.Element.TagName*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Element_TagName" data-uid="CSharpToJavaScript.APIs.JS.Element.TagName">
+  TagName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>tagName</code></strong> read-only property<br>of the <see cref="!:&amp;quot;Element&amp;quot;"></see> interface returns the tag name of the element on which<br>it&amp;apos;s called.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string TagName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A string indicating the element&amp;apos;s tag name. This string&amp;apos;s capitalization depends on the<br>document type:For <see cref="!:&amp;quot;Element&amp;quot;"></see> objects, the value of <code>tagName</code> is the same as<br>the value of the <see cref="!:&amp;quot;NodeNodeName&amp;quot;"></see> property the element object<br>inherits from <see cref="!:&amp;quot;Node&amp;quot;"></see>.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Element_TagName_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>For example, if the element is an {{HTMLElement(&amp;quot;img&amp;quot;)}}, its<br><code>tagName</code> property is <code>&amp;quot;IMG&amp;quot;</code> (for HTML documents; it may be cased<br>differently for XML/XHTML documents).</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/tagName"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Element/tagName</a></p>
+</div>
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Element_AttachShadow_" data-uid="CSharpToJavaScript.APIs.JS.Element.AttachShadow*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Element_AttachShadow_CSharpToJavaScript_APIs_JS_ShadowRootInit_" data-uid="CSharpToJavaScript.APIs.JS.Element.AttachShadow(CSharpToJavaScript.APIs.JS.ShadowRootInit)">
+  AttachShadow(ShadowRootInit)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>Element.attachShadow()</code></strong> method attaches a shadow DOM tree to the specified element and returns a reference to its <see cref="!:&amp;quot;ShadowRoot&amp;quot;"></see>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ShadowRoot AttachShadow(ShadowRootInit init)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>init</code> <a class="xref" href="CSharpToJavaScript.APIs.JS.ShadowRootInit.html">ShadowRootInit</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.ShadowRoot.html">ShadowRoot</a></dt>
+    <dd><p>Returns a <see cref="!:&amp;quot;ShadowRoot&amp;quot;"></see> object.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Element_AttachShadow_CSharpToJavaScript_APIs_JS_ShadowRootInit__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>-<see cref="!:&amp;quot;ShadowRootDelegatesFocus&amp;quot;"></see><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/attachShadow"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Element/attachShadow</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Element_Closest_" data-uid="CSharpToJavaScript.APIs.JS.Element.Closest*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Element_Closest_System_String_" data-uid="CSharpToJavaScript.APIs.JS.Element.Closest(System.String)">
+  Closest(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>closest()</code></strong> method of the <see cref="!:&amp;quot;Element&amp;quot;"></see> interface traverses the element and its parents (heading toward the document root) until it finds a node that matches the specified <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors">CSS selector</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Element? Closest(string selectors)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>selectors</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html">Element</a></dt>
+    <dd><p>The closest ancestor <see cref="!:&amp;quot;Element&amp;quot;"></see> or itself, which matches the <code>selectors</code>. If there are no such element, <code>null</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Element_Closest_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>-<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors">CSS selectors reference</a><br>-Other <see cref="!:&amp;quot;Element&amp;quot;"></see> methods that take selectors: <see cref="!:&amp;quot;Element&amp;quot;"></see>, <see cref="!:&amp;quot;Element&amp;quot;"></see>, and <see cref="!:&amp;quot;Element&amp;quot;"></see>.<br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/closest"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Element/closest</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Element_GetAttribute_" data-uid="CSharpToJavaScript.APIs.JS.Element.GetAttribute*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Element_GetAttribute_System_String_" data-uid="CSharpToJavaScript.APIs.JS.Element.GetAttribute(System.String)">
+  GetAttribute(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>getAttribute()</code></strong> method of the<br><see cref="!:&amp;quot;Element&amp;quot;"></see> interface returns the value of a specified attribute on the<br>element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? GetAttribute(string qualifiedName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>qualifiedName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A string containing the value of <code>attributeName</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Element_GetAttribute_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>If the given attribute does not exist, the value returned will<br>either be <code>null</code> or <code>&amp;quot;&amp;quot;</code> (the empty string); see <a href="https://developer.mozilla.org#non-existing_attributes">Non-existing attributes</a> for details.</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttribute"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttribute</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Element_GetAttributeNS_" data-uid="CSharpToJavaScript.APIs.JS.Element.GetAttributeNS*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Element_GetAttributeNS_System_String_System_String_" data-uid="CSharpToJavaScript.APIs.JS.Element.GetAttributeNS(System.String,System.String)">
+  GetAttributeNS(string?, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>getAttributeNS()</code></strong> method of the <see cref="!:&amp;quot;Element&amp;quot;"></see><br>interface returns the string value of the attribute with the specified namespace and<br>name. If the named attribute does not exist, the value returned will either be<br><code>null</code> or <code>&amp;quot;&amp;quot;</code> (the empty string); see <a href="https://developer.mozilla.org#notes">Notes</a> for<br>details.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? GetAttributeNS(string? namespace_, string localName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>namespace_</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>localName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The string value of the specified attribute. If the attribute doesn&amp;apos;t exist, the result<br>is <code>null</code>.<blockquote><strong>Note:</strong> Earlier versions of the DOM specification had<br>this method described as returning an empty string for non-existent attributes, but it<br>was not typically implemented this way since null makes more sense. The DOM4<br>specification now says this method should return null for non-existent attributes.</blockquote>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Element_GetAttributeNS_System_String_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>-<a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Code_snippets/getAttributeNS">Code snippets:getAttributeNS</a><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttributeNS"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttributeNS</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Element_GetAttributeNames_" data-uid="CSharpToJavaScript.APIs.JS.Element.GetAttributeNames*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Element_GetAttributeNames" data-uid="CSharpToJavaScript.APIs.JS.Element.GetAttributeNames">
+  GetAttributeNames()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>getAttributeNames()</code></strong> method of the<br><see cref="!:&amp;quot;Element&amp;quot;"></see> interface returns the attribute names of the element as an<br>{{jsxref(&amp;quot;Array&amp;quot;)}} of strings. If the element has no attributes it returns an empty<br>array.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;string&gt; GetAttributeNames()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>None ({{jsxref(&amp;quot;undefined&amp;quot;)}}).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Element_GetAttributeNames_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Using <code>getAttributeNames()</code> along with<br><see cref="!:&amp;quot;ElementGetAttribute&amp;quot;"></see>, is a memory-efficient and<br>performant alternative to accessing <see cref="!:&amp;quot;ElementAttributes&amp;quot;"></see>.</p><p>The names returned by <strong><code>getAttributeNames()</code></strong> are <strong>qualified</strong> attribute names, meaning that attributes with a namespace prefix have their names returned with that namespace prefix (<strong>not</strong> the actual namespace), followed by a colon, followed by the attribute name (for example, <strong><code>xlink:href</code></strong>), while any attributes which have no namespace prefix have their names returned as-is (for example, <strong><code>href</code></strong>).</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttributeNames"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttributeNames</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Element_GetAttributeNode_" data-uid="CSharpToJavaScript.APIs.JS.Element.GetAttributeNode*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Element_GetAttributeNode_System_String_" data-uid="CSharpToJavaScript.APIs.JS.Element.GetAttributeNode(System.String)">
+  GetAttributeNode(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the specified attribute of the specified element, as an <code>Attr</code> node.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Attr? GetAttributeNode(string qualifiedName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>qualifiedName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Attr.html">Attr</a></dt>
+    <dd><p>An <code>Attr</code> node for the attribute.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Element_GetAttributeNode_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttributeNode"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttributeNode</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Element_GetAttributeNodeNS_" data-uid="CSharpToJavaScript.APIs.JS.Element.GetAttributeNodeNS*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Element_GetAttributeNodeNS_System_String_System_String_" data-uid="CSharpToJavaScript.APIs.JS.Element.GetAttributeNodeNS(System.String,System.String)">
+  GetAttributeNodeNS(string?, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the <code>Attr</code> node for the attribute with the given namespace and name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Attr? GetAttributeNodeNS(string? namespace_, string localName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>namespace_</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>localName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Attr.html">Attr</a></dt>
+    <dd><p>The node for specified attribute.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Element_GetAttributeNodeNS_System_String_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttributeNodeNS"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttributeNodeNS</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Element_GetElementsByClassName_" data-uid="CSharpToJavaScript.APIs.JS.Element.GetElementsByClassName*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Element_GetElementsByClassName_System_String_" data-uid="CSharpToJavaScript.APIs.JS.Element.GetElementsByClassName(System.String)">
+  GetElementsByClassName(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <see cref="!:&amp;quot;Element&amp;quot;"></see> method<br><strong><code>getElementsByClassName()</code></strong> returns a live<br><see cref="!:&amp;quot;HTMLCollection&amp;quot;"></see> which contains every descendant element which has the<br>specified class name or names.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public HTMLCollection GetElementsByClassName(string classNames)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>classNames</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLCollection.html">HTMLCollection</a></dt>
+    <dd><p>An <see cref="!:&amp;quot;HTMLCollection&amp;quot;"></see> providing a live-updating list of every element which<br>is a member of every class in <code>names</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Element_GetElementsByClassName_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The method <see cref="!:&amp;quot;DocumentGetElementsByClassName&amp;quot;"></see><br>on the <see cref="!:&amp;quot;Document&amp;quot;"></see> interface works essentially the same way, except it acts<br>on the entire document, starting at the document root.</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getElementsByClassName"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Element/getElementsByClassName</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Element_GetElementsByTagName_" data-uid="CSharpToJavaScript.APIs.JS.Element.GetElementsByTagName*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Element_GetElementsByTagName_System_String_" data-uid="CSharpToJavaScript.APIs.JS.Element.GetElementsByTagName(System.String)">
+  GetElementsByTagName(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The<br><strong><code>Element.getElementsByTagName()</code></strong> method returns a live<br><see cref="!:&amp;quot;HTMLCollection&amp;quot;"></see> of elements with the given <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/tagName">tag name</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public HTMLCollection GetElementsByTagName(string qualifiedName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>qualifiedName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLCollection.html">HTMLCollection</a></dt>
+    <dd><p>A <strong>live</strong> <see cref="!:&amp;quot;HTMLCollection&amp;quot;"></see> of elements with a matching tag name, in the order they appear. If no elements are found, the <code>HTMLCollection</code> is empty.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Element_GetElementsByTagName_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>All descendants of the<br>specified element are searched, but not the element itself. The returned list is<br><strong>live</strong>, which means it updates itself with the DOM tree automatically.<br>Therefore, there is no need to call <code>Element.getElementsByTagName()</code> with<br>the same element and arguments repeatedly if the DOM changes in between calls.</p><p>When called on an HTML element in an HTML document, <code>getElementsByTagName</code><br>lower-cases the argument before searching for it. This is undesirable when trying to<br>match camel-cased SVG elements (such as<br><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/linearGradient"><code>&amp;lt;linearGradient&amp;gt;</code>https://developer.mozilla.org/en-US/docs/Web/SVG/Element/linearGradient</a>)<br>in an HTML document. Instead, use {{ domxref(&amp;quot;Element.getElementsByTagNameNS()&amp;quot;) }},<br>which preserves the capitalization of the tag name.</p><p><code>Element.getElementsByTagName</code> is similar to<br><see cref="!:&amp;quot;DocumentGetElementsByTagName&amp;quot;"></see>, except that it only searches for<br>elements that are descendants of the specified element.</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getElementsByTagName"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Element/getElementsByTagName</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Element_GetElementsByTagNameNS_" data-uid="CSharpToJavaScript.APIs.JS.Element.GetElementsByTagNameNS*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Element_GetElementsByTagNameNS_System_String_System_String_" data-uid="CSharpToJavaScript.APIs.JS.Element.GetElementsByTagNameNS(System.String,System.String)">
+  GetElementsByTagNameNS(string?, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>Element.getElementsByTagNameNS()</code></strong> method returns a<br>live <see cref="!:&amp;quot;HTMLCollection&amp;quot;"></see> of elements with the given tag name belonging to the<br>given namespace. It is similar to <see cref="!:&amp;quot;DocumentGetElementsByTagNameNS&amp;quot;"></see>, except<br>that its search is restricted to descendants of the specified element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public HTMLCollection GetElementsByTagNameNS(string? namespace_, string localName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>namespace_</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>localName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLCollection.html">HTMLCollection</a></dt>
+    <dd><p>A live <see cref="!:&amp;quot;HTMLCollection&amp;quot;"></see> of found elements in the order they appear in the tree.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Element_GetElementsByTagNameNS_System_String_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getElementsByTagNameNS"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Element/getElementsByTagNameNS</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Element_HasAttribute_" data-uid="CSharpToJavaScript.APIs.JS.Element.HasAttribute*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Element_HasAttribute_System_String_" data-uid="CSharpToJavaScript.APIs.JS.Element.HasAttribute(System.String)">
+  HasAttribute(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>Element.hasAttribute()</code></strong> method returns a<br><strong>Boolean</strong> value indicating whether the specified element has the<br>specified attribute or not.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasAttribute(string qualifiedName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>qualifiedName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>A boolean.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Element_HasAttribute_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/hasAttribute"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Element/hasAttribute</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Element_HasAttributeNS_" data-uid="CSharpToJavaScript.APIs.JS.Element.HasAttributeNS*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Element_HasAttributeNS_System_String_System_String_" data-uid="CSharpToJavaScript.APIs.JS.Element.HasAttributeNS(System.String,System.String)">
+  HasAttributeNS(string?, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p><code>hasAttributeNS</code> returns a boolean value indicating whether the current element has the specified attribute.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasAttributeNS(string? namespace_, string localName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>namespace_</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>localName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>A boolean.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Element_HasAttributeNS_System_String_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/hasAttributeNS"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Element/hasAttributeNS</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Element_HasAttributes_" data-uid="CSharpToJavaScript.APIs.JS.Element.HasAttributes*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Element_HasAttributes" data-uid="CSharpToJavaScript.APIs.JS.Element.HasAttributes">
+  HasAttributes()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>hasAttributes()</code></strong> method of the <see cref="!:&amp;quot;Element&amp;quot;"></see><br>interface returns a boolean value indicating whether the current element has any<br>attributes or not.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasAttributes()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>A boolean.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Element_HasAttributes_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>-<see cref="!:&amp;quot;ElementAttributes&amp;quot;"></see><br>-<see cref="!:&amp;quot;ElementHasAttribute&amp;quot;"></see><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/hasAttributes"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Element/hasAttributes</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Element_InsertAdjacentElement_" data-uid="CSharpToJavaScript.APIs.JS.Element.InsertAdjacentElement*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Element_InsertAdjacentElement_System_String_CSharpToJavaScript_APIs_JS_Element_" data-uid="CSharpToJavaScript.APIs.JS.Element.InsertAdjacentElement(System.String,CSharpToJavaScript.APIs.JS.Element)">
+  InsertAdjacentElement(string, Element)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>insertAdjacentElement()</code></strong> method of the<br><see cref="!:&amp;quot;Element&amp;quot;"></see> interface inserts a given element node at a given position<br>relative to the element it is invoked upon.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Element? InsertAdjacentElement(string where, Element element)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>where</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>element</code> <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html">Element</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html">Element</a></dt>
+    <dd><p>The element that was inserted, or <code>null</code>, if the insertion failed.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Element_InsertAdjacentElement_System_String_CSharpToJavaScript_APIs_JS_Element__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>-<see cref="!:&amp;quot;ElementInsertAdjacentHTML&amp;quot;"></see><br>-<see cref="!:&amp;quot;ElementInsertAdjacentText&amp;quot;"></see><br>-<see cref="!:&amp;quot;NodeInsertBefore&amp;quot;"></see> (similar to <code>beforebegin</code>, with<br>different arguments)<br>-<see cref="!:&amp;quot;NodeAppendChild&amp;quot;"></see> (same effect as <code>beforeend</code>)<br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentElement"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentElement</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Element_InsertAdjacentText_" data-uid="CSharpToJavaScript.APIs.JS.Element.InsertAdjacentText*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Element_InsertAdjacentText_System_String_System_String_" data-uid="CSharpToJavaScript.APIs.JS.Element.InsertAdjacentText(System.String,System.String)">
+  InsertAdjacentText(string, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>insertAdjacentText()</code></strong> method of the <see cref="!:&amp;quot;Element&amp;quot;"></see> interface, given a relative position and a string, inserts a new text node at the given position relative to the element it is called from.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Unsupported InsertAdjacentText(string where, string data)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>where</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>data</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
+    <dd><p>None ({{jsxref(&amp;quot;undefined&amp;quot;)}}).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Element_InsertAdjacentText_System_String_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>-<see cref="!:&amp;quot;ElementInsertAdjacentElement&amp;quot;"></see><br>-<see cref="!:&amp;quot;ElementInsertAdjacentHTML&amp;quot;"></see><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentText"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentText</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Element_Matches_" data-uid="CSharpToJavaScript.APIs.JS.Element.Matches*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Element_Matches_System_String_" data-uid="CSharpToJavaScript.APIs.JS.Element.Matches(System.String)">
+  Matches(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>matches()</code></strong> method of the <see cref="!:&amp;quot;Element&amp;quot;"></see> interface tests whether the element would be selected by the specified <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors">CSS selector</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Matches(string selectors)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>selectors</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if the <see cref="!:&amp;quot;Element&amp;quot;"></see> matches the <code>selectors</code>. Otherwise, <code>false</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Element_Matches_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>-<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors">CSS selectors reference</a><br>-Other <see cref="!:&amp;quot;Element&amp;quot;"></see> methods that take selectors: <see cref="!:&amp;quot;Element&amp;quot;"></see>, <see cref="!:&amp;quot;Element&amp;quot;"></see>, and <see cref="!:&amp;quot;Element&amp;quot;"></see>.<br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/matches"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Element/matches</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Element_RemoveAttribute_" data-uid="CSharpToJavaScript.APIs.JS.Element.RemoveAttribute*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Element_RemoveAttribute_System_String_" data-uid="CSharpToJavaScript.APIs.JS.Element.RemoveAttribute(System.String)">
+  RemoveAttribute(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <see cref="!:&amp;quot;Element&amp;quot;"></see> method<br><strong><code>removeAttribute()</code></strong> removes the attribute with the<br>specified name from the element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Unsupported RemoveAttribute(string qualifiedName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>qualifiedName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
+    <dd><p>None ({{jsxref(&amp;quot;undefined&amp;quot;)}}).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Element_RemoveAttribute_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/removeAttribute"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Element/removeAttribute</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Element_RemoveAttributeNS_" data-uid="CSharpToJavaScript.APIs.JS.Element.RemoveAttributeNS*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Element_RemoveAttributeNS_System_String_System_String_" data-uid="CSharpToJavaScript.APIs.JS.Element.RemoveAttributeNS(System.String,System.String)">
+  RemoveAttributeNS(string?, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>removeAttributeNS()</code></strong> method of the<br><see cref="!:&amp;quot;Element&amp;quot;"></see> interface removes the specified attribute from an element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Unsupported RemoveAttributeNS(string? namespace_, string localName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>namespace_</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>localName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
+    <dd><p>None ({{jsxref(&amp;quot;undefined&amp;quot;)}}).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Element_RemoveAttributeNS_System_String_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/removeAttributeNS"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Element/removeAttributeNS</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Element_RemoveAttributeNode_" data-uid="CSharpToJavaScript.APIs.JS.Element.RemoveAttributeNode*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Element_RemoveAttributeNode_CSharpToJavaScript_APIs_JS_Attr_" data-uid="CSharpToJavaScript.APIs.JS.Element.RemoveAttributeNode(CSharpToJavaScript.APIs.JS.Attr)">
+  RemoveAttributeNode(Attr)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>removeAttributeNode()</code></strong> method of the<br><see cref="!:&amp;quot;Element&amp;quot;"></see> interface removes the specified attribute from the element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Attr RemoveAttributeNode(Attr attr)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>attr</code> <a class="xref" href="CSharpToJavaScript.APIs.JS.Attr.html">Attr</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Attr.html">Attr</a></dt>
+    <dd><p>The attribute node that was removed.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Element_RemoveAttributeNode_CSharpToJavaScript_APIs_JS_Attr__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/removeAttributeNode"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Element/removeAttributeNode</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Element_RequestFullscreen_" data-uid="CSharpToJavaScript.APIs.JS.Element.RequestFullscreen*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Element_RequestFullscreen_CSharpToJavaScript_APIs_JS_FullscreenOptions_" data-uid="CSharpToJavaScript.APIs.JS.Element.RequestFullscreen(CSharpToJavaScript.APIs.JS.FullscreenOptions)">
+  RequestFullscreen(FullscreenOptions)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>Element.requestFullscreen()</code></strong><br>method issues an asynchronous request to make the element be displayed in fullscreen<br>mode.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;Unsupported&gt; RequestFullscreen(FullscreenOptions options)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>options</code> <a class="xref" href="CSharpToJavaScript.APIs.JS.FullscreenOptions.html">FullscreenOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a>&gt;</dt>
+    <dd><p>A {{JSxRef(&amp;quot;Promise&amp;quot;)}} which is resolved with a value of <code>undefined</code> when<br>the transition to full screen is complete.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Element_RequestFullscreen_CSharpToJavaScript_APIs_JS_FullscreenOptions__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>It&amp;apos;s not guaranteed that the element will be put into full screen mode. If permission<br>to enter full screen mode is granted, the returned {{JSxRef(&amp;quot;Promise&amp;quot;)}} will resolve<br>and the element will receive a <see cref="!:&amp;quot;Element/fullscreenchange_event&amp;quot;"></see> event to let it know that<br>it&amp;apos;s now in full screen mode. If permission is denied, the promise is rejected and the<br>element receives a <see cref="!:&amp;quot;Element/fullscreenerror_event&amp;quot;"></see> event instead. If the element has been<br>detached from the original document, then the document receives these events instead.</p>
+<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API">Fullscreen API</a><br>-<see cref="!:&amp;quot;DocumentExitFullscreen&amp;quot;"></see><br>-<see cref="!:&amp;quot;DocumentFullscreen&amp;quot;"></see><br>-<see cref="!:&amp;quot;DocumentFullscreenElement&amp;quot;"></see><br>-{{CSSxRef(&amp;quot;:fullscreen&amp;quot;)}}<br>-{{HTMLAttrxRef(&amp;quot;allowfullscreen&amp;quot;, &amp;quot;iframe&amp;quot;)}}<br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/requestFullscreen"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Element/requestFullscreen</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Element_SetAttribute_" data-uid="CSharpToJavaScript.APIs.JS.Element.SetAttribute*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Element_SetAttribute_System_String_System_String_" data-uid="CSharpToJavaScript.APIs.JS.Element.SetAttribute(System.String,System.String)">
+  SetAttribute(string, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the value of an attribute on the specified element. If<br>the attribute already exists, the value is updated; otherwise a new attribute is added<br>with the specified name and value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Unsupported SetAttribute(string qualifiedName, string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>qualifiedName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
+    <dd><p>None ({{jsxref(&amp;quot;undefined&amp;quot;)}}).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Element_SetAttribute_System_String_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>To get the current value of an attribute, use {{domxref(&amp;quot;Element.getAttribute&amp;quot;,<br>&amp;quot;getAttribute()&amp;quot;)}}; to remove an attribute, call {{domxref(&amp;quot;Element.removeAttribute&amp;quot;,<br>&amp;quot;removeAttribute()&amp;quot;)}}.</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Element_SetAttributeNS_" data-uid="CSharpToJavaScript.APIs.JS.Element.SetAttributeNS*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Element_SetAttributeNS_System_String_System_String_System_String_" data-uid="CSharpToJavaScript.APIs.JS.Element.SetAttributeNS(System.String,System.String,System.String)">
+  SetAttributeNS(string?, string, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p><code>setAttributeNS</code> adds a new attribute or changes the value of an attribute<br>with the given namespace and name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Unsupported SetAttributeNS(string? namespace_, string qualifiedName, string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>namespace_</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>qualifiedName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
+    <dd><p>None ({{jsxref(&amp;quot;undefined&amp;quot;)}}).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Element_SetAttributeNS_System_String_System_String_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttributeNS"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttributeNS</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Element_SetAttributeNode_" data-uid="CSharpToJavaScript.APIs.JS.Element.SetAttributeNode*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Element_SetAttributeNode_CSharpToJavaScript_APIs_JS_Attr_" data-uid="CSharpToJavaScript.APIs.JS.Element.SetAttributeNode(CSharpToJavaScript.APIs.JS.Attr)">
+  SetAttributeNode(Attr)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>setAttributeNode()</code></strong> method adds a new<br><code>Attr</code> node to the specified element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Attr? SetAttributeNode(Attr attr)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>attr</code> <a class="xref" href="CSharpToJavaScript.APIs.JS.Attr.html">Attr</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Attr.html">Attr</a></dt>
+    <dd><p>The replaced attribute node, if any, returned by this function.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Element_SetAttributeNode_CSharpToJavaScript_APIs_JS_Attr__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>-<see cref="!:&amp;quot;DocumentCreateAttribute&amp;quot;"></see><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttributeNode"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttributeNode</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Element_SetAttributeNodeNS_" data-uid="CSharpToJavaScript.APIs.JS.Element.SetAttributeNodeNS*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Element_SetAttributeNodeNS_CSharpToJavaScript_APIs_JS_Attr_" data-uid="CSharpToJavaScript.APIs.JS.Element.SetAttributeNodeNS(CSharpToJavaScript.APIs.JS.Attr)">
+  SetAttributeNodeNS(Attr)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p><code>setAttributeNodeNS</code> adds a new namespaced attribute node to an element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Attr? SetAttributeNodeNS(Attr attr)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>attr</code> <a class="xref" href="CSharpToJavaScript.APIs.JS.Attr.html">Attr</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Attr.html">Attr</a></dt>
+    <dd><p>The replaced attribute node, if any, returned by this function.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Element_SetAttributeNodeNS_CSharpToJavaScript_APIs_JS_Attr__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>-<see cref="!:&amp;quot;DocumentCreateAttribute&amp;quot;"></see><br>-<see cref="!:&amp;quot;DocumentCreateAttributeNS&amp;quot;"></see><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttributeNodeNS"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttributeNodeNS</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Element_ToggleAttribute_" data-uid="CSharpToJavaScript.APIs.JS.Element.ToggleAttribute*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Element_ToggleAttribute_System_String_System_Boolean_" data-uid="CSharpToJavaScript.APIs.JS.Element.ToggleAttribute(System.String,System.Boolean)">
+  ToggleAttribute(string, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>toggleAttribute()</code></strong> method of the<br><see cref="!:&amp;quot;Element&amp;quot;"></see> interface toggles a Boolean attribute (removing it if it is<br>present and adding it if it is not present) on the given element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ToggleAttribute(string qualifiedName, bool force)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>qualifiedName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>force</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if attribute <strong><code>name</code></strong> is eventually<br>present, and <code>false</code> otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Element_ToggleAttribute_System_String_System_Boolean__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/toggleAttribute"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Element/toggleAttribute</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_Element_WebkitMatchesSelector_" data-uid="CSharpToJavaScript.APIs.JS.Element.WebkitMatchesSelector*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_Element_WebkitMatchesSelector_System_String_" data-uid="CSharpToJavaScript.APIs.JS.Element.WebkitMatchesSelector(System.String)">
+  WebkitMatchesSelector(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool WebkitMatchesSelector(string selectors)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>selectors</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

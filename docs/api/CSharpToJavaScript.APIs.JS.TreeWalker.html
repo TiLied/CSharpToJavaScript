@@ -1,0 +1,586 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class TreeWalker
+ </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class TreeWalker
+ ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+  </head>
+
+  <script type="module">
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="CSharpToJavaScript.APIs.JS.TreeWalker">
+
+
+
+  <h1 id="CSharpToJavaScript_APIs_JS_TreeWalker" data-uid="CSharpToJavaScript.APIs.JS.TreeWalker" class="text-break">
+    Class TreeWalker
+  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="CSharpToJavaScript.html">CSharpToJavaScript</a>.<a class="xref" href="CSharpToJavaScript.APIs.html">APIs</a>.<a class="xref" href="CSharpToJavaScript.APIs.JS.html">JS</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>CSharpToJavaScript.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public class TreeWalker</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">TreeWalker</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="CSharpToJavaScript_APIs_JS_TreeWalker_CurrentNode_" data-uid="CSharpToJavaScript.APIs.JS.TreeWalker.CurrentNode*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_TreeWalker_CurrentNode" data-uid="CSharpToJavaScript.APIs.JS.TreeWalker.CurrentNode">
+  CurrentNode
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>TreeWalker.currentNode</code></strong> property represents the<br><see cref="!:&amp;quot;Node&amp;quot;"></see> on which the <see cref="!:&amp;quot;Node&amp;quot;"></see> is currently pointing at.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Node CurrentNode { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a></dt>
+    <dd><p>A <see cref="!:&amp;quot;Node&amp;quot;"></see>.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_TreeWalker_CurrentNode_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>-The <see cref="!:&amp;quot;TreeWalker&amp;quot;"></see> interface.<br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker/currentNode"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker/currentNode</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_TreeWalker_Filter_" data-uid="CSharpToJavaScript.APIs.JS.TreeWalker.Filter*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_TreeWalker_Filter" data-uid="CSharpToJavaScript.APIs.JS.TreeWalker.Filter">
+  Filter
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>TreeWalker.filter</code></strong> read-only property returns a<br><see cref="!:&amp;quot;NodeFilter&amp;quot;"></see> that is the filtering object associated with the<br><see cref="!:&amp;quot;TreeWalker&amp;quot;"></see>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NodeFilter? Filter { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.NodeFilter.html">NodeFilter</a></dt>
+    <dd><p>A <see cref="!:&amp;quot;NodeFilter&amp;quot;"></see> object.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_TreeWalker_Filter_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>When creating the <code>TreeWalker</code>, the filter object is passed in as the third<br>parameter, and its method <see cref="!:&amp;quot;NodeFilterAcceptNode&amp;quot;"></see> is called on every<br>single node to determine whether or not to accept it.</p>
+<p>-The <see cref="!:&amp;quot;TreeWalker&amp;quot;"></see> interface it belongs to.<br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker/filter"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker/filter</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_TreeWalker_Root_" data-uid="CSharpToJavaScript.APIs.JS.TreeWalker.Root*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_TreeWalker_Root" data-uid="CSharpToJavaScript.APIs.JS.TreeWalker.Root">
+  Root
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>TreeWalker.root</code></strong> read-only property returns the node<br>that is the root of what the TreeWalker traverses.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Node Root { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a></dt>
+    <dd><p>A <see cref="!:&amp;quot;Node&amp;quot;"></see> object.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_TreeWalker_Root_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>-The <see cref="!:&amp;quot;TreeWalker&amp;quot;"></see> interface.<br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker/root"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker/root</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_TreeWalker_WhatToShow_" data-uid="CSharpToJavaScript.APIs.JS.TreeWalker.WhatToShow*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_TreeWalker_WhatToShow" data-uid="CSharpToJavaScript.APIs.JS.TreeWalker.WhatToShow">
+  WhatToShow
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>TreeWalker.whatToShow</code></strong> read-only property returns a<br>bitmask that indicates the types of<br><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node">nodes</a> to show. Non-matching nodes are skipped, but their<br>children may be included, if relevant. The possible values are:</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong WhatToShow { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd><p>A bitmask.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_TreeWalker_WhatToShow_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>-The <see cref="!:&amp;quot;TreeWalker&amp;quot;"></see> interface.<br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker/whatToShow"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker/whatToShow</a></p>
+</div>
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="CSharpToJavaScript_APIs_JS_TreeWalker_FirstChild_" data-uid="CSharpToJavaScript.APIs.JS.TreeWalker.FirstChild*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_TreeWalker_FirstChild" data-uid="CSharpToJavaScript.APIs.JS.TreeWalker.FirstChild">
+  FirstChild()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>TreeWalker.firstChild()</code></strong> method moves the current<br><see cref="!:&amp;quot;Node&amp;quot;"></see> to the first <strong>visible</strong> child of the current node, and returns<br>the found child. It also moves the current node to this child. If no such child exists,<br>returns <code>null</code> and the current node is not changed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Node? FirstChild()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a></dt>
+    <dd><p>A <see cref="!:&amp;quot;Node&amp;quot;"></see> object or <code>null</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_TreeWalker_FirstChild_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>-The <see cref="!:&amp;quot;TreeWalker&amp;quot;"></see> interface it belongs to.<br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker/firstChild"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker/firstChild</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_TreeWalker_LastChild_" data-uid="CSharpToJavaScript.APIs.JS.TreeWalker.LastChild*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_TreeWalker_LastChild" data-uid="CSharpToJavaScript.APIs.JS.TreeWalker.LastChild">
+  LastChild()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>TreeWalker.lastChild()</code></strong> method moves the current<br><see cref="!:&amp;quot;Node&amp;quot;"></see> to the last <strong>visible</strong> child of the current node, and returns<br>the found child. It also moves the current node to this child. If no such child exists,<br>returns <code>null</code> and the current node is not changed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Node? LastChild()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a></dt>
+    <dd><p>A <see cref="!:&amp;quot;Node&amp;quot;"></see> object or <code>null</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_TreeWalker_LastChild_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>-The <see cref="!:&amp;quot;TreeWalker&amp;quot;"></see> interface it belongs to.<br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker/lastChild"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker/lastChild</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_TreeWalker_NextNode_" data-uid="CSharpToJavaScript.APIs.JS.TreeWalker.NextNode*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_TreeWalker_NextNode" data-uid="CSharpToJavaScript.APIs.JS.TreeWalker.NextNode">
+  NextNode()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>TreeWalker.nextNode()</code></strong> method moves the current<br><see cref="!:&amp;quot;Node&amp;quot;"></see> to the next <strong>visible</strong> node in the document order, and returns<br>the found node. It also moves the current node to this one. If no such node exists,<br>returns <code>null</code> and the current node is not changed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Node? NextNode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a></dt>
+    <dd><p>A <see cref="!:&amp;quot;Node&amp;quot;"></see> object or <code>null</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_TreeWalker_NextNode_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>-The <see cref="!:&amp;quot;TreeWalker&amp;quot;"></see> interface it belongs to.<br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker/nextNode"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker/nextNode</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_TreeWalker_NextSibling_" data-uid="CSharpToJavaScript.APIs.JS.TreeWalker.NextSibling*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_TreeWalker_NextSibling" data-uid="CSharpToJavaScript.APIs.JS.TreeWalker.NextSibling">
+  NextSibling()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>TreeWalker.nextSibling()</code></strong> method moves the current<br><see cref="!:&amp;quot;Node&amp;quot;"></see> to its next sibling, if any, and returns the found sibling. If there<br>is no such node, return <code>null</code> and the current node is not changed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Node? NextSibling()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a></dt>
+    <dd><p>A <see cref="!:&amp;quot;Node&amp;quot;"></see> object or <code>null</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_TreeWalker_NextSibling_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>-The <see cref="!:&amp;quot;TreeWalker&amp;quot;"></see> interface it belongs to.<br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker/nextSibling"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker/nextSibling</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_TreeWalker_ParentNode_" data-uid="CSharpToJavaScript.APIs.JS.TreeWalker.ParentNode*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_TreeWalker_ParentNode" data-uid="CSharpToJavaScript.APIs.JS.TreeWalker.ParentNode">
+  ParentNode()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>TreeWalker.parentNode()</code></strong> method moves the current<br><see cref="!:&amp;quot;Node&amp;quot;"></see> to the first <strong>visible</strong> ancestor node in the document order,<br>and returns the found node. If no such node exists, or if it is above the<br><code>TreeWalker</code>&amp;apos;s <strong>root node</strong>, returns <code>null</code> and the current<br>node is not changed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Node? ParentNode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a></dt>
+    <dd><p>A <see cref="!:&amp;quot;Node&amp;quot;"></see> object or <code>null</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_TreeWalker_ParentNode_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>-The <see cref="!:&amp;quot;TreeWalker&amp;quot;"></see> interface it belongs to.<br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker/parentNode"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker/parentNode</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_TreeWalker_PreviousNode_" data-uid="CSharpToJavaScript.APIs.JS.TreeWalker.PreviousNode*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_TreeWalker_PreviousNode" data-uid="CSharpToJavaScript.APIs.JS.TreeWalker.PreviousNode">
+  PreviousNode()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>TreeWalker.previousNode()</code></strong> method moves the current<br><see cref="!:&amp;quot;Node&amp;quot;"></see> to the previous <strong>visible</strong> node in the document order, and<br>returns the found node. It also moves the current node to this one. If no such node<br>exists,or if it is before that the <strong>root node</strong> defined at the object<br>construction, returns <code>null</code> and the current node is not changed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Node? PreviousNode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a></dt>
+    <dd><p>A <see cref="!:&amp;quot;Node&amp;quot;"></see> object or <code>null</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_TreeWalker_PreviousNode_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>-The <see cref="!:&amp;quot;TreeWalker&amp;quot;"></see> interface it belongs to.<br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker/previousNode"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker/previousNode</a></p>
+</div>
+
+
+
+
+  <a id="CSharpToJavaScript_APIs_JS_TreeWalker_PreviousSibling_" data-uid="CSharpToJavaScript.APIs.JS.TreeWalker.PreviousSibling*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_TreeWalker_PreviousSibling" data-uid="CSharpToJavaScript.APIs.JS.TreeWalker.PreviousSibling">
+  PreviousSibling()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <strong><code>TreeWalker.previousSibling()</code></strong> method moves the current<br><see cref="!:&amp;quot;Node&amp;quot;"></see> to its previous sibling, if any, and returns the found sibling. If<br>there is no such node, return <code>null</code> and the current node is not changed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Node? PreviousSibling()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a></dt>
+    <dd><p>A <see cref="!:&amp;quot;Node&amp;quot;"></see> object or <code>null</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_TreeWalker_PreviousSibling_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>-The <see cref="!:&amp;quot;TreeWalker&amp;quot;"></see> interface it belongs to.<br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker/previousSibling"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker/previousSibling</a></p>
+</div>
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

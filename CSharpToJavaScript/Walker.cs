@@ -1683,6 +1683,10 @@ namespace CSharpToJavaScript
 
 			if (CustomCSNamesToJS(node) == false)
 			{
+
+				//TODO! HERE BUILDIN C# TYPES/GENERICS
+
+
 				ImmutableArray<Diagnostic> diag = CSTOJS.Model.GetDiagnostics();
 				foreach (Diagnostic item in diag)
 				{

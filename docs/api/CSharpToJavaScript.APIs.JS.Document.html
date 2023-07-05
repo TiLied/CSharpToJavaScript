@@ -91,7 +91,7 @@
   <dl><dt>Assembly</dt><dd>CSharpToJavaScript.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>The <strong><code>Document</code></strong> interface represents any web page loaded in the browser and serves as an entry point into the web page&amp;apos;s content, which is the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core">DOM tree</a>.</p>
+  <div class="markdown summary"><p>The <strong><code>Document</code></strong> interface represents any web page loaded in the browser and serves as an entry point into the web page&amp;apos;s content, which is the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_object_model/Using_the_Document_Object_Model#what_is_a_dom_tree">DOM tree</a>.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -143,7 +143,7 @@ public class Document</code></pre>
 
 
   <h2 id="CSharpToJavaScript_APIs_JS_Document_remarks">Remarks</h2>
-  <div class="markdown level0 remarks"><p>The DOM tree includes elements such as {{HTMLElement(&amp;quot;body&amp;quot;)}} and {{HTMLElement(&amp;quot;table&amp;quot;)}}, among <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">many others</a>. It provides functionality globally to the document, like how to obtain the page&amp;apos;s URL and create new elements in the document.</p><p>{{InheritanceDiagram}}</p><p>The <code>Document</code> interface describes the common properties and methods for any kind of document. Depending on the document&amp;apos;s type (e.g. <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/XML">XML</a>, SVG, …), a larger API is available: HTML documents, served with the <code>&amp;quot;text/html&amp;quot;</code> content type, also implement the <see cref="!:&amp;quot;HTMLDocument&amp;quot;"></see> interface, whereas XML and SVG documents implement the <see cref="!:&amp;quot;HTMLDocument&amp;quot;"></see> interface.</p>
+  <div class="markdown level0 remarks"><p>The DOM tree includes elements such as {{HTMLElement(&amp;quot;body&amp;quot;)}} and {{HTMLElement(&amp;quot;table&amp;quot;)}}, among <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">many others</a>. It provides functionality globally to the document, like how to obtain the page&amp;apos;s URL and create new elements in the document.</p><p>{{InheritanceDiagram}}</p><p>The <code>Document</code> interface describes the common properties and methods for any kind of document. Depending on the document&amp;apos;s type (e.g. <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/XML">XML</a>, SVG, …), a larger API is available: HTML documents, served with the <code>&amp;quot;text/html&amp;quot;</code> content type, also implement the <see cref="!:HTMLDocument"></see> interface, whereas XML and SVG documents implement the <see cref="!:XMLDocument"></see> interface.</p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Document</a></p>
 </div>
 
@@ -195,7 +195,7 @@ public class Document</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <see cref="!:&amp;quot;Document&amp;quot;"></see> interface&amp;apos;s read-only <strong><code>all</code></strong><br>property returns an <see cref="!:&amp;quot;HTMLAllCollection&amp;quot;"></see> rooted at the document node. In<br>other words, it returns all of the document&amp;apos;s elements, accessible by order (like an<br>array) and by ID (like a regular object).</p>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="CSharpToJavaScript.APIs.JS.Document.html">Document</a> interface's read-only <strong><code>all</code></strong><br>property returns an <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLAllCollection.html">HTMLAllCollection</a> rooted at the document node. In<br>other words, it returns all of the document&amp;apos;s elements, accessible by order (like an<br>array) and by ID (like a regular object).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -210,7 +210,7 @@ public class Document</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLAllCollection.html">HTMLAllCollection</a></dt>
-    <dd><p>An <see cref="!:&amp;quot;HTMLAllCollection&amp;quot;"></see> which contains every element in the document.</p>
+    <dd><p>An <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLAllCollection.html">HTMLAllCollection</a> which contains every element in the document.</p>
 </dd>
   </dl>
 
@@ -231,7 +231,7 @@ public class Document</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>anchors</code></strong> read-only property of the<br><see cref="!:&amp;quot;Document&amp;quot;"></see> interface returns a list of all of the anchors in the document.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>anchors</code></strong> read-only property of the<br><a class="xref" href="CSharpToJavaScript.APIs.JS.Document.html">Document</a> interface returns a list of all of the anchors in the document.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -246,7 +246,7 @@ public class Document</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLCollection.html">HTMLCollection</a></dt>
-    <dd><p>An <see cref="!:&amp;quot;HTMLCollection&amp;quot;"></see>.</p>
+    <dd><p>An <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLCollection.html">HTMLCollection</a>.</p>
 </dd>
   </dl>
 
@@ -267,7 +267,7 @@ public class Document</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>applets</code></strong> property of the <see cref="!:&amp;quot;Document&amp;quot;"></see><br>interface returns a list of the applets within a document.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>applets</code></strong> property of the <a class="xref" href="CSharpToJavaScript.APIs.JS.Document.html">Document</a> returns an empty <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLCollection.html">HTMLCollection</a>. This property is kept only for compatibility reasons; in older versions of browsers, it returned a list of the applets within a document.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -282,7 +282,7 @@ public class Document</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLCollection.html">HTMLCollection</a></dt>
-    <dd><p>An <see cref="!:&amp;quot;HTMLCollection&amp;quot;"></see>.</p>
+    <dd><p>An empty <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLCollection.html">HTMLCollection</a>.</p>
 </dd>
   </dl>
 
@@ -290,7 +290,7 @@ public class Document</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Document_Applets_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><blockquote><p><strong>Note:</strong> The {{htmlelement(&amp;quot;applet&amp;quot;)}} element was removed in <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1279218">Gecko 56</a> and <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=470301">Chrome in late 2015</a>. Since then, calling <code>document.applets</code> in those browsers always<br>returns an empty <see cref="!:&amp;quot;HTMLCollection&amp;quot;"></see>. Removal is being considered in <a href="https://bugs.webkit.org/show_bug.cgi?id=157926">WebKit</a>.</p></blockquote>
+  <div class="markdown level1 remarks"><blockquote><p><strong>Note:</strong> Support for the {{htmlelement(&amp;quot;applet&amp;quot;)}} element has been removed by all browsers. Therefore, calling <code>document.applets</code> always<br>returns an empty collection.</p></blockquote>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/applets"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Document/applets</a></p>
 </div>
 
@@ -363,7 +363,7 @@ public class Document</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Document_Body_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>-<see cref="!:&amp;quot;documentHead&amp;quot;"></see><br></p>
+  <div class="markdown level1 remarks"><p>-<see cref="!:documentHead"></see><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/body"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Document/body</a></p>
 </div>
 
@@ -377,7 +377,7 @@ public class Document</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <see cref="!:&amp;quot;Document&amp;quot;"></see> property <code>cookie</code> lets<br>you read and write <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies">cookies</a> associated<br>with the document. It serves as a getter and setter for the actual values of the<br>cookies.</p>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="CSharpToJavaScript.APIs.JS.Document.html">Document</a> property <code>cookie</code> lets<br>you read and write <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies">cookies</a> associated<br>with the document. It serves as a getter and setter for the actual values of the<br>cookies.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -399,7 +399,7 @@ public class Document</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Document_Cookie_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies">HTTP cookies</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API">DOM Storage</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/URL/pathname"><code>URL.pathname</code>https://developer.mozilla.org/en-US/docs/Web/API/URL/pathname</a><br>-{{jsxref(&amp;quot;Date.toUTCString()&amp;quot;)}}<br>-<a href="https://datatracker.ietf.org/doc/html/rfc2965">RFC 2965</a><br></p>
+  <div class="markdown level1 remarks"><p>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies">HTTP cookies</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API">DOM Storage</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/URL/pathname"><code>URL.pathname</code>https://developer.mozilla.org/en-US/docs/Web/API/URL/pathname</a><br>-<see cref="!:DateToUTCString"></see><br>-<a href="https://datatracker.ietf.org/doc/html/rfc2965">RFC 2965</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie</a></p>
 </div>
 
@@ -428,7 +428,7 @@ public class Document</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Union18.html">Union18</a>?</dt>
-    <dd><p>A <see cref="!:&amp;quot;HTMLScriptElement&amp;quot;"></see> or null.</p>
+    <dd><p>A <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLScriptElement.html">HTMLScriptElement</a> or null.</p>
 </dd>
   </dl>
 
@@ -437,7 +437,7 @@ public class Document</code></pre>
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Document_CurrentScript_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>It&amp;apos;s important to note that this will not reference the {{HTMLElement(&amp;quot;script&amp;quot;)}}<br>element if the code in the script is being called as a callback or event handler; it<br>will only reference the element while it&amp;apos;s initially being processed.</p>
-<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/import.meta"><code>import.meta</code>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/import.meta</a><br>-{{HTMLElement(&amp;quot;script&amp;quot;)}}<br>-<see cref="!:&amp;quot;documentAfterscriptexecute_event&amp;quot;"></see><br>-<see cref="!:&amp;quot;documentBeforescriptexecute_event&amp;quot;"></see><br></p>
+<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/import.meta"><code>import.meta</code>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/import.meta</a><br>-{{HTMLElement(&amp;quot;script&amp;quot;)}}<br>-<see cref="!:documentAfterscriptexecute_event"></see><br>-<see cref="!:documentBeforescriptexecute_event"></see><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/currentScript"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Document/currentScript</a></p>
 </div>
 
@@ -451,7 +451,7 @@ public class Document</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>In browsers, <strong><code>document.defaultView</code></strong> returns the<br><see cref="!:&amp;quot;Window&amp;quot;"></see> object associated with {{Glossary(&amp;quot;Browsing_context&amp;quot;, &amp;quot;a<br>document&amp;quot;)}}, or <code>null</code> if none is available.</p>
+  <div class="markdown level1 summary"><p>In browsers, <strong><code>document.defaultView</code></strong> returns the<br><a class="xref" href="CSharpToJavaScript.APIs.JS.Window.html">Window</a> object associated with {{Glossary(&quot;Browsing_context&quot;, &quot;a<br>document&amp;quot;)}}, or <code>null</code> if none is available.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -466,7 +466,7 @@ public class Document</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Window.html">Window</a></dt>
-    <dd><p>The <see cref="!:&amp;quot;Window&amp;quot;"></see> object.</p>
+    <dd><p>The <a class="xref" href="CSharpToJavaScript.APIs.JS.Window.html">Window</a> object.</p>
 </dd>
   </dl>
 
@@ -511,7 +511,7 @@ public class Document</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Document_DesignMode_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>-<see cref="!:&amp;quot;HTMLElementContentEditable&amp;quot;"></see><br></p>
+  <div class="markdown level1 remarks"><p>-<see cref="!:HTMLElementContentEditable"></see><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/designMode"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Document/designMode</a></p>
 </div>
 
@@ -562,7 +562,7 @@ public class Document</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>domain</code></strong> property of the <see cref="!:&amp;quot;Document&amp;quot;"></see><br>interface gets/sets the domain portion of the {{glossary(&amp;quot;origin&amp;quot;)}} of the current<br>document, as used by the <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy">same-origin policy</a>.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>domain</code></strong> property of the <a class="xref" href="CSharpToJavaScript.APIs.JS.Document.html">Document</a><br>interface gets/sets the domain portion of the {{glossary(&amp;quot;origin&amp;quot;)}} of the current<br>document, as used by the <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy">same-origin policy</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -585,7 +585,7 @@ public class Document</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Document_Domain_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>-<a href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy">Same-origin policy</a><br>-<see cref="!:&amp;quot;LocationHostname&amp;quot;"></see><br>-<see cref="!:&amp;quot;LocationHost&amp;quot;"></see><br>-<see cref="!:&amp;quot;origin&amp;quot;"></see><br></p>
+  <div class="markdown level1 remarks"><p>-<a href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy">Same-origin policy</a><br>-<see cref="!:LocationHostname"></see><br>-<see cref="!:LocationHost"></see><br>-<see cref="!:origin"></see><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/domain"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Document/domain</a></p>
 </div>
 
@@ -599,7 +599,7 @@ public class Document</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>embeds</code></strong> read-only property of the<br><see cref="!:&amp;quot;Document&amp;quot;"></see> interface returns a list of the embedded<br>{{htmlelement(&amp;quot;embed&amp;quot;)}} elements within the current document.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>embeds</code></strong> read-only property of the<br><a class="xref" href="CSharpToJavaScript.APIs.JS.Document.html">Document</a> interface returns a list of the embedded<br>{{htmlelement(&amp;quot;embed&amp;quot;)}} elements within the current document.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -614,7 +614,7 @@ public class Document</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLCollection.html">HTMLCollection</a></dt>
-    <dd><p>An <see cref="!:&amp;quot;HTMLCollection&amp;quot;"></see>.</p>
+    <dd><p>An <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLCollection.html">HTMLCollection</a>.</p>
 </dd>
   </dl>
 
@@ -671,7 +671,7 @@ public class Document</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>forms</code></strong> read-only property of<br>the <see cref="!:&amp;quot;Document&amp;quot;"></see> interface returns an <see cref="!:&amp;quot;Document&amp;quot;"></see> listing<br>all the {{HTMLElement(&amp;quot;form&amp;quot;)}} elements contained in the document.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>forms</code></strong> read-only property of<br>the <a class="xref" href="CSharpToJavaScript.APIs.JS.Document.html">Document</a> interface returns an <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLCollection.html">HTMLCollection</a> listing<br>all the {{HTMLElement(&amp;quot;form&amp;quot;)}} elements contained in the document.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -686,7 +686,7 @@ public class Document</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLCollection.html">HTMLCollection</a></dt>
-    <dd><p>An <see cref="!:&amp;quot;HTMLCollection&amp;quot;"></see> object listing all of the document&amp;apos;s forms. Each item<br>in the collection is a <see cref="!:&amp;quot;HTMLFormElement&amp;quot;"></see> representing a single<br><code>&amp;lt;form&amp;gt;</code> element.If the document has no forms, the returned collection is empty, with a length of zero.</p>
+    <dd><p>An <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLCollection.html">HTMLCollection</a> object listing all of the document's forms. Each item<br>in the collection is a <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLFormElement.html">HTMLFormElement</a> representing a single<br><code>&amp;lt;form&amp;gt;</code> element.If the document has no forms, the returned collection is empty, with a length of zero.</p>
 </dd>
   </dl>
 
@@ -694,8 +694,8 @@ public class Document</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Document_Forms_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><blockquote><p><strong>Note:</strong> Similarly, you can access a list of a form&amp;apos;s component user<br>input elements using the <see cref="!:&amp;quot;HTMLFormElementElements&amp;quot;"></see> property.</p></blockquote>
-<p>-<a href="https://developer.mozilla.org/en-US/docs/Learn/Forms">HTML forms</a><br>-{{HTMLElement(&amp;quot;form&amp;quot;)}} and the <see cref="!:&amp;quot;HTMLFormElement&amp;quot;"></see> interface<br></p>
+  <div class="markdown level1 remarks"><blockquote><p><strong>Note:</strong> Similarly, you can access a list of a form&amp;apos;s component user<br>input elements using the <see cref="!:HTMLFormElementElements"></see> property.</p></blockquote>
+<p>-<a href="https://developer.mozilla.org/en-US/docs/Learn/Forms">HTML forms</a><br>-{{HTMLElement("form")}} and the <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLFormElement.html">HTMLFormElement</a> interface<br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/forms"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Document/forms</a></p>
 </div>
 
@@ -709,7 +709,7 @@ public class Document</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The obsolete <see cref="!:&amp;quot;Document&amp;quot;"></see> interface&amp;apos;s <strong><code>fullscreen</code></strong> read-only property reports whether or not the document is currently displaying content in fullscreen mode.</p>
+  <div class="markdown level1 summary"><p>The obsolete <a class="xref" href="CSharpToJavaScript.APIs.JS.Document.html">Document</a> interface's <strong><code>fullscreen</code></strong> read-only property reports whether or not the document is currently displaying content in fullscreen mode.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -732,8 +732,8 @@ public class Document</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Document_Fullscreen_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>Although this property is read-only, it will not throw if it is modified (even in strict mode); the setter is a no-operation and it will be ignored.</p><blockquote><p><strong>Note:</strong> Since this property is deprecated, you can determine if fullscreen mode is active on the document by checking to see if <see cref="!:&amp;quot;DocumentFullscreenElement&amp;quot;"></see> is not <code>null</code>.</p></blockquote>
-<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API">Fullscreen API</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API/Guide">Guide to the Fullscreen API</a><br>-<see cref="!:&amp;quot;DocumentFullscreenEnabled&amp;quot;"></see><br></p>
+  <div class="markdown level1 remarks"><p>Although this property is read-only, it will not throw if it is modified (even in strict mode); the setter is a no-operation and it will be ignored.</p><blockquote><p><strong>Note:</strong> Since this property is deprecated, you can determine if fullscreen mode is active on the document by checking to see if <see cref="!:DocumentFullscreenElement"></see> is not <code>null</code>.</p></blockquote>
+<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API">Fullscreen API</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API/Guide">Guide to the Fullscreen API</a><br>-<see cref="!:DocumentFullscreenEnabled"></see><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/fullscreen"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Document/fullscreen</a></p>
 </div>
 
@@ -747,7 +747,7 @@ public class Document</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The read-only <strong><code>fullscreenEnabled</code></strong><br>property on the <see cref="!:&amp;quot;Document&amp;quot;"></see> interface indicates whether or not fullscreen<br>mode is available.</p>
+  <div class="markdown level1 summary"><p>The read-only <strong><code>fullscreenEnabled</code></strong><br>property on the <a class="xref" href="CSharpToJavaScript.APIs.JS.Document.html">Document</a> interface indicates whether or not fullscreen<br>mode is available.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -762,7 +762,7 @@ public class Document</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>A boolean value which is <code>true</code> if the document and the<br>elements within can be placed into fullscreen mode by calling<br><see cref="!:&amp;quot;ElementRequestFullscreen&amp;quot;"></see>. If fullscreen mode isn&amp;apos;t available, this<br>value is <code>false</code>.</p>
+    <dd><p>A boolean value which is <code>true</code> if the document and the<br>elements within can be placed into fullscreen mode by calling<br><see cref="!:ElementRequestFullscreen"></see>. If fullscreen mode isn't available, this<br>value is <code>false</code>.</p>
 </dd>
   </dl>
 
@@ -770,8 +770,8 @@ public class Document</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Document_FullscreenEnabled_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>fullscreen mode is available only for a page that has no<br>windowed plug-ins in any of its documents, and if all {{HTMLElement(&amp;quot;iframe&amp;quot;)}} elements<br>which contain the document have their {{HTMLAttrXRef(&amp;quot;allowfullscreen&amp;quot;, &amp;quot;iframe&amp;quot;)}}<br>attribute set.</p><p>Although this property is read-only, it will not throw if it is modified (even in<br>strict mode); the setter is a no-operation and it will be ignored.</p>
-<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API">Fullscreen API</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API/Guide">Guide to the Fullscreen API</a><br>-<see cref="!:&amp;quot;ElementRequestFullscreen&amp;quot;"></see><br>-<see cref="!:&amp;quot;DocumentExitFullscreen&amp;quot;"></see><br>-<see cref="!:&amp;quot;DocumentFullscreenElement&amp;quot;"></see><br>-{{cssxref(&amp;quot;:fullscreen&amp;quot;) }} and {{cssxref(&amp;quot;::backdrop&amp;quot;)}}<br>-The {{HTMLElement(&amp;quot;iframe&amp;quot;)}} {{HTMLAttrXRef(&amp;quot;allowfullscreen&amp;quot;, &amp;quot;iframe&amp;quot;)}}<br>attribute<br></p>
+  <div class="markdown level1 remarks"><p>fullscreen mode is available only for a page that has no<br>windowed plug-ins in any of its documents, and if all {{HTMLElement(&amp;quot;iframe&amp;quot;)}} elements<br>which contain the document have their <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#allowfullscreen"><code>allowfullscreen</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#allowfullscreen</a><br>attribute set.</p><p>Although this property is read-only, it will not throw if it is modified (even in<br>strict mode); the setter is a no-operation and it will be ignored.</p>
+<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API">Fullscreen API</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API/Guide">Guide to the Fullscreen API</a><br>-<see cref="!:ElementRequestFullscreen"></see><br>-<see cref="!:DocumentExitFullscreen"></see><br>-<see cref="!:DocumentFullscreenElement"></see><br>-{{cssxref(&amp;quot;:fullscreen&amp;quot;) }} and {{cssxref(&amp;quot;::backdrop&amp;quot;)}}<br>-The {{HTMLElement(&amp;quot;iframe&amp;quot;)}} <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#allowfullscreen"><code>allowfullscreen</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#allowfullscreen</a><br>attribute<br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/fullscreenEnabled"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Document/fullscreenEnabled</a></p>
 </div>
 
@@ -785,7 +785,7 @@ public class Document</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>head</code></strong> read-only property of<br>the <see cref="!:&amp;quot;Document&amp;quot;"></see> interface returns the {{HTMLElement(&amp;quot;head&amp;quot;)}} element of<br>the current document.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>head</code></strong> read-only property of<br>the <a class="xref" href="CSharpToJavaScript.APIs.JS.Document.html">Document</a> interface returns the {{HTMLElement(&quot;head&quot;)}} element of<br>the current document.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -800,7 +800,7 @@ public class Document</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLHeadElement.html">HTMLHeadElement</a></dt>
-    <dd><p>An <see cref="!:&amp;quot;HTMLHeadElement&amp;quot;"></see>.</p>
+    <dd><p>An <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLHeadElement.html">HTMLHeadElement</a>.</p>
 </dd>
   </dl>
 
@@ -808,7 +808,7 @@ public class Document</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Document_Head_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>-<see cref="!:&amp;quot;documentBody&amp;quot;"></see><br></p>
+  <div class="markdown level1 remarks"><p>-<see cref="!:documentBody"></see><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/head"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Document/head</a></p>
 </div>
 
@@ -844,7 +844,7 @@ public class Document</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Document_Hidden_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><blockquote><p><strong>Note:</strong> This property is described as &amp;quot;historical&amp;quot; in the <a href="https://www.w3.org/TR/page-visibility-2/">Page Visibility Level 2 specification</a>. Consider using the <see cref="!:&amp;quot;DocumentVisibilityState&amp;quot;"></see><br>property instead.</p></blockquote>
+  <div class="markdown level1 remarks"><blockquote><p><strong>Note:</strong> This property is described as &amp;quot;historical&amp;quot; in the <a href="https://www.w3.org/TR/page-visibility-2/">Page Visibility Level 2 specification</a>. Consider using the <a class="xref" href="CSharpToJavaScript.APIs.JS.DocumentVisibilityState.html">DocumentVisibilityState</a><br>property instead.</p></blockquote>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/hidden"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Document/hidden</a></p>
 </div>
 
@@ -858,7 +858,7 @@ public class Document</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>images</code></strong> read-only property of<br>the <see cref="!:&amp;quot;Document&amp;quot;"></see> interface returns a <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCollection">collection</a> of the <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/Image">images</a> in the current HTML document.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>images</code></strong> read-only property of<br>the <a class="xref" href="CSharpToJavaScript.APIs.JS.Document.html">Document</a> interface returns a <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCollection">collection</a> of the <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/Image">images</a> in the current HTML document.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -873,7 +873,7 @@ public class Document</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLCollection.html">HTMLCollection</a></dt>
-    <dd><p>An <see cref="!:&amp;quot;HTMLCollection&amp;quot;"></see> providing a live list of all of the images contained<br>in the current document. Each entry in the collection is an<br><see cref="!:&amp;quot;HTMLImageElement&amp;quot;"></see> representing a single image element.</p>
+    <dd><p>An <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLCollection.html">HTMLCollection</a> providing a live list of all of the images contained<br>in the current document. Each entry in the collection is an<br><a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLImageElement.html">HTMLImageElement</a> representing a single image element.</p>
 </dd>
   </dl>
 
@@ -894,7 +894,7 @@ public class Document</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>lastModified</code></strong> property of the <see cref="!:&amp;quot;Document&amp;quot;"></see><br>interface returns a string containing the date and time on which the current document<br>was last modified.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>lastModified</code></strong> property of the <a class="xref" href="CSharpToJavaScript.APIs.JS.Document.html">Document</a><br>interface returns a string containing the date and time on which the current document<br>was last modified.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -954,7 +954,7 @@ public class Document</code></pre>
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Document_LinkColor_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>This property is deprecated. As an alternative, you can set the CSS<br>{{cssxref(&amp;quot;color&amp;quot;)}} property on either HTML anchor links ({{HtmlElement(&amp;quot;a&amp;quot;)}}) or on<br>{{cssxref(&amp;quot;:link&amp;quot;)}} pseudo-classes. Another alternative is<br><code>document.body.link</code>, although this is <a href="https://www.w3.org/TR/html401/struct/global.html#adef-link">deprecated in HTML 4.01</a>.</p>
-<p>-<see cref="!:&amp;quot;documentVlinkColor&amp;quot;"></see><br>-<see cref="!:&amp;quot;documentAlinkColor&amp;quot;"></see><br></p>
+<p>-<see cref="!:documentVlinkColor"></see><br>-<see cref="!:documentAlinkColor"></see><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/linkColor"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Document/linkColor</a></p>
 </div>
 
@@ -968,7 +968,7 @@ public class Document</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>links</code></strong> read-only property of the <see cref="!:&amp;quot;Document&amp;quot;"></see> interface returns a collection of all {{HTMLElement(&amp;quot;area&amp;quot;)}} elements and {{HTMLElement(&amp;quot;a&amp;quot;)}} elements in a document with a value for the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-href">href</a> attribute.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>links</code></strong> read-only property of the <a class="xref" href="CSharpToJavaScript.APIs.JS.Document.html">Document</a> interface returns a collection of all {{HTMLElement(&quot;area&quot;)}} elements and {{HTMLElement(&quot;a&quot;)}} elements in a document with a value for the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#href">href</a> attribute.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -983,7 +983,7 @@ public class Document</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLCollection.html">HTMLCollection</a></dt>
-    <dd><p>An <see cref="!:&amp;quot;HTMLCollection&amp;quot;"></see>.</p>
+    <dd><p>An <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLCollection.html">HTMLCollection</a>.</p>
 </dd>
   </dl>
 
@@ -1004,7 +1004,7 @@ public class Document</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>Document.location</code></strong> read-only property returns a<br><see cref="!:&amp;quot;Location&amp;quot;"></see> object, which contains information about the URL of the document<br>and provides methods for changing that URL and loading another URL.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>Document.location</code></strong> read-only property returns a<br><a class="xref" href="CSharpToJavaScript.APIs.JS.Document.html#CSharpToJavaScript_APIs_JS_Document_Location">Location</a> object, which contains information about the URL of the document<br>and provides methods for changing that URL and loading another URL.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1019,7 +1019,7 @@ public class Document</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Location.html">Location</a></dt>
-    <dd><p>A <see cref="!:&amp;quot;Location&amp;quot;"></see> object.</p>
+    <dd><p>A <a class="xref" href="CSharpToJavaScript.APIs.JS.Document.html#CSharpToJavaScript_APIs_JS_Document_Location">Location</a> object.</p>
 </dd>
   </dl>
 
@@ -1027,8 +1027,8 @@ public class Document</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Document_Location_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>Though <code>Document.location</code> is a <strong>read-only</strong> <code>Location</code><br>object, you can also assign a string to it. This means that you can<br>work with document.location as if it were a string in most cases:<br><code>document.location = &amp;apos;http://www.example.com&amp;apos;</code> is a synonym of<br><code>document.location.href = &amp;apos;http://www.example.com&amp;apos;</code>. If you assign another<br>string to it, browser will load the website you assigned.</p><p>To retrieve just the URL as a string, the read-only <see cref="!:&amp;quot;documentURL&amp;quot;"></see><br>property can also be used.</p><p>If the current document is not in a browsing context, the returned value is<br><code>null</code>.</p>
-<p>-The interface of the returned value, <see cref="!:&amp;quot;Location&amp;quot;"></see><br>-A similar information, but attached to the {{Glossary(&amp;quot;browsing context&amp;quot;)}},<br><see cref="!:&amp;quot;WindowLocation&amp;quot;"></see><br></p>
+  <div class="markdown level1 remarks"><p>Though <code>Document.location</code> is a <strong>read-only</strong> <code>Location</code><br>object, you can also assign a string to it. This means that you can<br>work with document.location as if it were a string in most cases:<br><code>document.location = &amp;apos;http://www.example.com&amp;apos;</code> is a synonym of<br><code>document.location.href = &amp;apos;http://www.example.com&amp;apos;</code>. If you assign another<br>string to it, browser will load the website you assigned.</p><p>To retrieve just the URL as a string, the read-only <see cref="!:documentURL"></see><br>property can also be used.</p><p>If the current document is not in a browsing context, the returned value is<br><code>null</code>.</p>
+<p>-The interface of the returned value, <a class="xref" href="CSharpToJavaScript.APIs.JS.Document.html#CSharpToJavaScript_APIs_JS_Document_Location">Location</a><br>-A similar information, but attached to the {{Glossary(&amp;quot;browsing context&amp;quot;)}},<br><see cref="!:WindowLocation"></see><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/location"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Document/location</a></p>
 </div>
 
@@ -1166,7 +1166,7 @@ public class Document</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>plugins</code></strong> read-only property of the<br><see cref="!:&amp;quot;Document&amp;quot;"></see> interface returns an <see cref="!:&amp;quot;Document&amp;quot;"></see> object<br>containing one or more <see cref="!:&amp;quot;HTMLEmbedElement&amp;quot;"></see>s representing the<br>{{HTMLElement(&amp;quot;embed&amp;quot;)}} elements in the current document.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>plugins</code></strong> read-only property of the<br><a class="xref" href="CSharpToJavaScript.APIs.JS.Document.html">Document</a> interface returns an <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLCollection.html">HTMLCollection</a> object<br>containing one or more <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLEmbedElement.html">HTMLEmbedElement</a>s representing the<br>{{HTMLElement(&amp;quot;embed&amp;quot;)}} elements in the current document.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1181,7 +1181,7 @@ public class Document</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLCollection.html">HTMLCollection</a></dt>
-    <dd><p>An <see cref="!:&amp;quot;HTMLCollection&amp;quot;"></see>.</p>
+    <dd><p>An <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLCollection.html">HTMLCollection</a>.</p>
 </dd>
   </dl>
 
@@ -1204,7 +1204,7 @@ public class Document</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>Document.readyState</code></strong> property describes the loading state of the <see cref="!:&amp;quot;document&amp;quot;"></see>.<br>When the value of this property changes, a <see cref="!:&amp;quot;Document/readystatechange_event&amp;quot;"></see> event fires on the <see cref="!:&amp;quot;Document/readystatechange_event&amp;quot;"></see> object.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>Document.readyState</code></strong> property describes the loading state of the <see cref="!:document"></see>.<br>When the value of this property changes, a <see cref="!:Document/readystatechange_event"></see> event fires on the <see cref="!:document"></see> object.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1227,7 +1227,7 @@ public class Document</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Document_ReadyState_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>-Related events:-<see cref="!:&amp;quot;Document/readystatechange_event&amp;quot;"></see><br>-<see cref="!:&amp;quot;Document/DOMContentLoaded_event&amp;quot;"></see><br>-<see cref="!:&amp;quot;Window/load_event&amp;quot;"></see><br><br></p>
+  <div class="markdown level1 remarks"><p>-Related events:-<see cref="!:Document/readystatechange_event"></see><br>-<see cref="!:Document/DOMContentLoaded_event"></see><br>-<see cref="!:Window/load_event"></see><br><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/readyState"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Document/readyState</a></p>
 </div>
 
@@ -1256,7 +1256,7 @@ public class Document</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The value is an empty string if the user navigated to the page directly (not through a<br>link, but, for example, by using a bookmark). Because this property returns only a<br>string, it doesn&amp;apos;t give you document object model (DOM) access to the referring page.Inside an {{HTMLElement(&amp;quot;iframe&amp;quot;)}}, the <code>Document.referrer</code> will initially<br>be set to the same value as the <see cref="!:&amp;quot;HTMLAnchorElement/href&amp;quot;"></see> of<br>the parent window&amp;apos;s <see cref="!:&amp;quot;Window/location&amp;quot;"></see>.</p>
+    <dd><p>The value is an empty string if the user navigated to the page directly (not through a<br>link, but, for example, by using a bookmark). Because this property returns only a<br>string, it doesn&amp;apos;t give you document object model (DOM) access to the referring page.Inside an {{HTMLElement(&amp;quot;iframe&amp;quot;)}}, the <code>Document.referrer</code> will initially<br>be set to the same value as the <see cref="!:HTMLAnchorElement/href"></see> of<br>the parent window's <see cref="!:Window/location"></see>.</p>
 </dd>
   </dl>
 
@@ -1277,7 +1277,7 @@ public class Document</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>scripts</code></strong> property of the <see cref="!:&amp;quot;Document&amp;quot;"></see><br>interface returns a list of the {{HTMLElement(&amp;quot;script&amp;quot;)}}<br>elements in the document. The returned object is an<br><see cref="!:&amp;quot;HTMLCollection&amp;quot;"></see>.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>scripts</code></strong> property of the <a class="xref" href="CSharpToJavaScript.APIs.JS.Document.html">Document</a><br>interface returns a list of the {{HTMLElement(&amp;quot;script&amp;quot;)}}<br>elements in the document. The returned object is an<br><a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLCollection.html">HTMLCollection</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1292,7 +1292,7 @@ public class Document</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLCollection.html">HTMLCollection</a></dt>
-    <dd><p>An <see cref="!:&amp;quot;HTMLCollection&amp;quot;"></see>. You can use this just like an array to get all the<br>elements in the list.</p>
+    <dd><p>An <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLCollection.html">HTMLCollection</a>. You can use this just like an array to get all the<br>elements in the list.</p>
 </dd>
   </dl>
 
@@ -1349,7 +1349,7 @@ public class Document</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>Document.visibilityState</code></strong><br>read-only property returns the visibility of the <see cref="!:&amp;apos;document&amp;apos;"></see>, that is in<br>which context this element is now visible. It is useful to know if the document is in<br>the background or an invisible tab, or only loaded for pre-rendering.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>Document.visibilityState</code></strong><br>read-only property returns the visibility of the <see cref="!:'document'"></see>, that is in<br>which context this element is now visible. It is useful to know if the document is in<br>the background or an invisible tab, or only loaded for pre-rendering.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1371,7 +1371,7 @@ public class Document</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Document_VisibilityState_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>Possible<br>values are:</p><p>When the value of this property changes, the<br><see cref="!:&amp;quot;Document/visibilitychange_event&amp;quot;"></see> event is sent to the<br><see cref="!:&amp;quot;Document&amp;quot;"></see>.</p><p>Typical use of this can be to prevent the download of some assets when the document is<br>solely prerendered, or stop some activities when the document is in the background or<br>minimized.</p>
+  <div class="markdown level1 remarks"><p>Possible<br>values are:</p><p>When the value of this property changes, the<br><see cref="!:Document/visibilitychange_event"></see> event is sent to the<br><a class="xref" href="CSharpToJavaScript.APIs.JS.Document.html">Document</a>.</p><p>Typical use of this can be to prevent the download of some assets when the document is<br>solely prerendered, or stop some activities when the document is in the background or<br>minimized.</p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/visibilityState"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Document/visibilityState</a></p>
 </div>
 
@@ -1468,7 +1468,7 @@ public class Document</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None ({{jsxref(&amp;quot;undefined&amp;quot;)}}).</p>
+    <dd><p>None (<see cref="!:undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -1492,7 +1492,7 @@ public class Document</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>Document.close()</code></strong> method finishes writing to a<br>document, opened with <see cref="!:&amp;quot;DocumentOpen&amp;quot;"></see>.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>Document.close()</code></strong> method finishes writing to a<br>document, opened with <see cref="!:DocumentOpen"></see>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1504,7 +1504,7 @@ public class Document</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None ({{jsxref(&amp;quot;undefined&amp;quot;)}}).</p>
+    <dd><p>None (<see cref="!:undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -1637,7 +1637,7 @@ public Text CreateTextNode(string data)</code></pre>
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Document_ExecCommand_System_String_System_Boolean_System_String__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>Most commands affect the document&amp;apos;s <a href="https://developer.mozilla.org/en-US/docs/Web/API/Selection">selection</a> (bold, italics, etc.), while others<br>insert new elements (adding a link), or affect an entire line (indenting). When using<br><code>contentEditable</code>, <code>execCommand()</code> affects the currently active<br>editable element.</p><p>The <a href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API">Clipboard API</a> can be used instead of <code>execCommand</code> in many cases, but <code>execCommand</code> is still sometimes useful. In particular, the Clipboard API doesn&amp;apos;t replace the <code>insertText</code> command, which you can use to programmatically replace text at the cursor while preserving the undo buffer (edit history) in plain <code>textarea</code> and <code>input</code> elements.</p>
-<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API">Clipboard API</a><br>-<see cref="!:&amp;quot;HTMLElementContentEditable&amp;quot;"></see><br>-<see cref="!:&amp;quot;documentDesignMode&amp;quot;"></see><br></p>
+<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API">Clipboard API</a><br>-<see cref="!:HTMLElementContentEditable"></see><br>-<see cref="!:documentDesignMode"></see><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand</a></p>
 </div>
 
@@ -1651,7 +1651,7 @@ public Text CreateTextNode(string data)</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <see cref="!:&amp;quot;Document&amp;quot;"></see> method<br><strong><code>exitFullscreen()</code></strong> requests that the element on this<br>document which is currently being presented in fullscreen mode be taken out of<br>fullscreen mode, restoring the previous state of the screen. This usually<br>reverses the effects of a previous call to <see cref="!:&amp;quot;ElementRequestFullscreen&amp;quot;"></see>.</p>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="CSharpToJavaScript.APIs.JS.Document.html">Document</a> method<br><strong><code>exitFullscreen()</code></strong> requests that the element on this<br>document which is currently being presented in fullscreen mode be taken out of<br>fullscreen mode, restoring the previous state of the screen. This usually<br>reverses the effects of a previous call to <see cref="!:ElementRequestFullscreen"></see>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1663,7 +1663,7 @@ public Text CreateTextNode(string data)</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a>&gt;</dt>
-    <dd><p>A {{jsxref(&amp;quot;Promise&amp;quot;)}} which is resolved once the {{Glossary(&amp;quot;user agent&amp;quot;)}} has<br>finished exiting fullscreen mode. If an error occurs while attempting to exit<br>fullscreen mode, the <code>catch()</code> handler for the promise is called.</p>
+    <dd><p>A <see cref="!:Promise"></see> which is resolved once the {{Glossary(&quot;user agent&quot;)}} has<br>finished exiting fullscreen mode. If an error occurs while attempting to exit<br>fullscreen mode, the <code>catch()</code> handler for the promise is called.</p>
 </dd>
   </dl>
 
@@ -1674,7 +1674,7 @@ public Text CreateTextNode(string data)</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Document_ExitFullscreen_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API">Fullscreen API</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API/Guide">Guide to the Fullscreen API</a><br>-{{ domxref(&amp;quot;Element.requestFullscreen()&amp;quot;) }}<br>-{{ domxref(&amp;quot;Document.fullscreenElement&amp;quot;) }}<br>-{{ cssxref(&amp;quot;:fullscreen&amp;quot;) }} and {{cssxref(&amp;quot;::backdrop&amp;quot;)}}<br>-The {{HTMLElement(&amp;quot;iframe&amp;quot;)}} {{ HTMLAttrXRef(&amp;quot;allowfullscreen&amp;quot;, &amp;quot;iframe&amp;quot;) }}<br>attribute<br></p>
+  <div class="markdown level1 remarks"><p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API">Fullscreen API</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API/Guide">Guide to the Fullscreen API</a><br>-{{ domxref(&amp;quot;Element.requestFullscreen()&amp;quot;) }}<br>-{{ domxref(&amp;quot;Document.fullscreenElement&amp;quot;) }}<br>-{{ cssxref(&amp;quot;:fullscreen&amp;quot;) }} and {{cssxref(&amp;quot;::backdrop&amp;quot;)}}<br>-The {{HTMLElement(&amp;quot;iframe&amp;quot;)}} <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#allowfullscreen"><code>allowfullscreen</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#allowfullscreen</a><br>attribute<br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/exitFullscreen"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Document/exitFullscreen</a></p>
 </div>
 
@@ -1688,7 +1688,7 @@ public Text CreateTextNode(string data)</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>getElementsByName()</code></strong> method<br>of the <see cref="!:&amp;quot;Document&amp;quot;"></see> object returns a <see cref="!:&amp;quot;Document&amp;quot;"></see> Collection of<br>elements with a given <code>name</code> attribute in the document.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>getElementsByName()</code></strong> method<br>of the <a class="xref" href="CSharpToJavaScript.APIs.JS.Document.html">Document</a> object returns a <a class="xref" href="CSharpToJavaScript.APIs.JS.NodeList.html">NodeList</a> Collection of<br>elements with a given <code>name</code> attribute in the document.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1705,7 +1705,7 @@ public Text CreateTextNode(string data)</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.NodeList.html">NodeList</a></dt>
-    <dd><p>A live <see cref="!:&amp;quot;NodeList&amp;quot;"></see> collection, meaning it automatically updates as new elements with the same <code>name</code> are added to, or removed from, the document.</p>
+    <dd><p>A live <a class="xref" href="CSharpToJavaScript.APIs.JS.NodeList.html">NodeList</a> collection, meaning it automatically updates as new elements with the same <code>name</code> are added to, or removed from, the document.</p>
 </dd>
   </dl>
 
@@ -1716,7 +1716,7 @@ public Text CreateTextNode(string data)</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Document_GetElementsByName_System_String__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>-<see cref="!:&amp;quot;documentGetElementById&amp;quot;"></see> to return a reference to an element by its<br>unique <code>id</code><br>-<see cref="!:&amp;quot;documentGetElementsByTagName&amp;quot;"></see> to return references to elements with<br>the same <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/tagName">tag name</a><br>-<see cref="!:&amp;quot;documentQuerySelector&amp;quot;"></see> to return references to elements via CSS<br>selectors like <code>&amp;apos;div.myclass&amp;apos;</code><br></p>
+  <div class="markdown level1 remarks"><p>-<see cref="!:documentGetElementById"></see> to return a reference to an element by its<br>unique <code>id</code><br>-<see cref="!:documentGetElementsByTagName"></see> to return references to elements with<br>the same <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/tagName">tag name</a><br>-<see cref="!:documentQuerySelector"></see> to return references to elements via CSS<br>selectors like <code>&amp;apos;div.myclass&amp;apos;</code><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByName"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByName</a></p>
 </div>
 
@@ -1730,7 +1730,7 @@ public Text CreateTextNode(string data)</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>hasFocus()</code></strong> method of the <see cref="!:&amp;quot;Document&amp;quot;"></see> interface returns a boolean value indicating whether the document or any element inside the document has focus.<br>This method can be used to determine whether the active element in a document has focus.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>hasFocus()</code></strong> method of the <a class="xref" href="CSharpToJavaScript.APIs.JS.Document.html">Document</a> interface returns a boolean value indicating whether the document or any element inside the document has focus.<br>This method can be used to determine whether the active element in a document has focus.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1754,7 +1754,7 @@ public Text CreateTextNode(string data)</code></pre>
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Document_HasFocus_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><blockquote><p><strong>Note:</strong> When viewing a document, an element with focus is always the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/activeElement">active element</a> in the document, but an active element does not necessarily have focus.<br>For example, an active element within a popup window that is not the foreground doesn&amp;apos;t have focus.</p></blockquote>
-<p>-<see cref="!:&amp;quot;DocumentActiveElement&amp;quot;"></see><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API">Using the Page Visibility API</a><br></p>
+<p>-<see cref="!:DocumentActiveElement"></see><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API">Using the Page Visibility API</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/hasFocus"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Document/hasFocus</a></p>
 </div>
 
@@ -1799,7 +1799,7 @@ public Text CreateTextNode(string data)</code></pre>
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Document_Open_System_String_System_String__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>This does come with some side effects. For example:</p>
-<p>-<see cref="!:&amp;quot;Document&amp;quot;"></see><br>-<see cref="!:&amp;quot;WindowOpen&amp;quot;"></see><br></p>
+<p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.Document.html">Document</a><br>-<see cref="!:WindowOpen"></see><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/open"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Document/open</a></p>
 </div>
 
@@ -1846,7 +1846,7 @@ public Text CreateTextNode(string data)</code></pre>
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Document_Open_System_String_System_String_System_String__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>This does come with some side effects. For example:</p>
-<p>-<see cref="!:&amp;quot;Document&amp;quot;"></see><br>-<see cref="!:&amp;quot;WindowOpen&amp;quot;"></see><br></p>
+<p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.Document.html">Document</a><br>-<see cref="!:WindowOpen"></see><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/open"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Document/open</a></p>
 </div>
 
@@ -1888,7 +1888,7 @@ public Text CreateTextNode(string data)</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Document_QueryCommandEnabled_System_String__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>-<see cref="!:&amp;quot;DocumentExecCommand&amp;quot;"></see><br>-<see cref="!:&amp;quot;DocumentQueryCommandSupported&amp;quot;"></see><br></p>
+  <div class="markdown level1 remarks"><p>-<see cref="!:DocumentExecCommand"></see><br>-<see cref="!:DocumentQueryCommandSupported"></see><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/queryCommandEnabled"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Document/queryCommandEnabled</a></p>
 </div>
 
@@ -1938,7 +1938,7 @@ public Text CreateTextNode(string data)</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>queryCommandState()</code></strong> method will tell you if the current selection has a certain <see cref="!:&amp;quot;DocumentExecCommand&amp;quot;"></see> command applied.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>queryCommandState()</code></strong> method will tell you if the current selection has a certain <see cref="!:DocumentExecCommand"></see> command applied.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1966,7 +1966,7 @@ public Text CreateTextNode(string data)</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Document_QueryCommandState_System_String__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>-<see cref="!:&amp;quot;HTMLElementContentEditable&amp;quot;"></see><br>-<see cref="!:&amp;quot;documentDesignMode&amp;quot;"></see><br>-Browser bugs related to <code>queryCommandState()</code>: <a href="https://github.com/guardian/scribe/blob/master/BROWSERINCONSISTENCIES.md#documentquerycommandstate">Scribe&amp;apos;s &amp;quot;Browser Inconsistencies&amp;quot; documentation</a><br></p>
+  <div class="markdown level1 remarks"><p>-<see cref="!:HTMLElementContentEditable"></see><br>-<see cref="!:documentDesignMode"></see><br>-Browser bugs related to <code>queryCommandState()</code>: <a href="https://github.com/guardian/scribe/blob/master/BROWSERINCONSISTENCIES.md#documentquerycommandstate">Scribe&amp;apos;s &amp;quot;Browser Inconsistencies&amp;quot; documentation</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/queryCommandState"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Document/queryCommandState</a></p>
 </div>
 
@@ -2008,7 +2008,7 @@ public Text CreateTextNode(string data)</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Document_QueryCommandSupported_System_String__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>-<see cref="!:&amp;quot;DocumentExecCommand&amp;quot;"></see><br>-<see cref="!:&amp;quot;DocumentQueryCommandEnabled&amp;quot;"></see><br></p>
+  <div class="markdown level1 remarks"><p>-<see cref="!:DocumentExecCommand"></see><br>-<see cref="!:DocumentQueryCommandEnabled"></see><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/queryCommandSupported"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Document/queryCommandSupported</a></p>
 </div>
 
@@ -2106,7 +2106,7 @@ public Text CreateTextNode(string data)</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None ({{jsxref(&amp;quot;undefined&amp;quot;)}}).</p>
+    <dd><p>None (<see cref="!:undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -2117,8 +2117,8 @@ public Text CreateTextNode(string data)</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Document_Write_System_String____remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>As <a href="https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#document.write()">the HTML spec itself warns</a>:</p><blockquote><p>This method has very idiosyncratic behavior. In some cases, this method can affect the state of the <a href="https://html.spec.whatwg.org/multipage/parsing.html#html-parser">HTML parser</a> while the parser is running, resulting in a DOM that does not correspond to the source of the document (e.g. if the string written is the string &amp;quot;<code>&amp;lt;plaintext&amp;gt;</code>&amp;quot; or &amp;quot;<code>&amp;lt;!--</code>&amp;quot;). In other cases, the call can clear the current page first, as if <a href="https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#dom-document-open"><code>document.open()</code>https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#dom-document-open</a> had been called. In yet more cases, the method is simply ignored, or throws an exception. Users agents are <a href="https://html.spec.whatwg.org/multipage/parsing.html#document-written-scripts-intervention">explicitly allowed to avoid executing <code>script</code> elements inserted via this method</a>. And to make matters even worse, the exact behavior of this method can in some cases be dependent on network latency, which can lead to failures that are very hard to debug. For all these reasons, use of this method is strongly discouraged.<br>Therefore, avoid using <code>document.write()</code> — and if possible, update any existing code that is still using it.</p></blockquote><p>The <strong><code>document.write()</code></strong> method writes a string of text to a document stream opened by <see cref="!:&amp;quot;documentOpen&amp;quot;"></see>.</p><blockquote><p><strong>Note:</strong> Because <code>document.write()</code> writes to the document <strong>stream</strong>, calling <code>document.write()</code> on a closed (loaded) document automatically calls <code>document.open()</code>, <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/open#notes">which will clear the document</a>.</p></blockquote>
-<p>-<see cref="!:&amp;quot;elementInnerHTML&amp;quot;"></see><br>-<see cref="!:&amp;quot;documentCreateElement&amp;quot;"></see><br></p>
+  <div class="markdown level1 remarks"><p>As <a href="https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#document.write()">the HTML spec itself warns</a>:</p><blockquote><p>This method has very idiosyncratic behavior. In some cases, this method can affect the state of the <a href="https://html.spec.whatwg.org/multipage/parsing.html#html-parser">HTML parser</a> while the parser is running, resulting in a DOM that does not correspond to the source of the document (e.g. if the string written is the string &amp;quot;<code>&amp;lt;plaintext&amp;gt;</code>&amp;quot; or &amp;quot;<code>&amp;lt;!--</code>&amp;quot;). In other cases, the call can clear the current page first, as if <a href="https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#dom-document-open"><code>document.open()</code>https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#dom-document-open</a> had been called. In yet more cases, the method is simply ignored, or throws an exception. Users agents are <a href="https://html.spec.whatwg.org/multipage/parsing.html#document-written-scripts-intervention">explicitly allowed to avoid executing <code>script</code> elements inserted via this method</a>. And to make matters even worse, the exact behavior of this method can in some cases be dependent on network latency, which can lead to failures that are very hard to debug. For all these reasons, use of this method is strongly discouraged.<br>Therefore, avoid using <code>document.write()</code> — and if possible, update any existing code that is still using it.</p></blockquote><p>The <strong><code>document.write()</code></strong> method writes a string of text to a document stream opened by <see cref="!:documentOpen"></see>.</p><blockquote><p><strong>Note:</strong> Because <code>document.write()</code> writes to the document <strong>stream</strong>, calling <code>document.write()</code> on a closed (loaded) document automatically calls <code>document.open()</code>, <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/open#notes">which will clear the document</a>.</p></blockquote>
+<p>-<see cref="!:elementInnerHTML"></see><br>-<see cref="!:documentCreateElement"></see><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/write"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Document/write</a></p>
 </div>
 
@@ -2149,7 +2149,7 @@ public Text CreateTextNode(string data)</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None ({{jsxref(&amp;quot;undefined&amp;quot;)}}).</p>
+    <dd><p>None (<see cref="!:undefined"></see>).</p>
 </dd>
   </dl>
 

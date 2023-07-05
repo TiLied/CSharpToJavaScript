@@ -154,7 +154,7 @@ public class StorageManager</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>estimate()</code></strong> method of the <see cref="!:&amp;quot;StorageManager&amp;quot;"></see> interface asks the Storage Manager for how much storage the current <a href="https://developer.mozilla.org/en-US/docs/Glossary/Same-origin_policy">origin</a> takes up (<code>usage</code>), and how much space is available (<code>quota</code>).</p>
+  <div class="markdown level1 summary"><p>The <strong><code>estimate()</code></strong> method of the <a class="xref" href="CSharpToJavaScript.APIs.JS.StorageManager.html">StorageManager</a> interface asks the Storage Manager for how much storage the current <a href="https://developer.mozilla.org/en-US/docs/Glossary/Same-origin_policy">origin</a> takes up (<code>usage</code>), and how much space is available (<code>quota</code>).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -166,7 +166,7 @@ public class StorageManager</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="CSharpToJavaScript.APIs.JS.StorageEstimate.html">StorageEstimate</a>&gt;</dt>
-    <dd><p>A {{jsxref(&amp;apos;Promise&amp;apos;)}} that resolves to an object with the following properties:<blockquote><strong>Note:</strong> The returned values are not exact: between compression, deduplication, and obfuscation for security reasons, they will be imprecise.</blockquote>You may find that the <code>quota</code> varies from origin to origin. This variance is based on factors such as:
+    <dd><p>A <see cref="!:'Promise'"></see> that resolves to an object with the following properties:<blockquote><strong>Note:</strong> The returned values are not exact: between compression, deduplication, and obfuscation for security reasons, they will be imprecise.</blockquote>You may find that the <code>quota</code> varies from origin to origin. This variance is based on factors such as:
 </dd>
   </dl>
 
@@ -177,8 +177,8 @@ public class StorageManager</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_StorageManager_Estimate_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This method operates asynchronously, so it returns a {{jsxref(&amp;quot;Promise&amp;quot;)}} which resolves once the information is available. The promise&amp;apos;s fulfillment handler is called with an object containing the usage and quota data.</p>
-<p>-Storage API<br>-<see cref="!:&amp;quot;Storage&amp;quot;"></see>, the object returned by <see cref="!:&amp;quot;Storage&amp;quot;"></see><br>-<see cref="!:&amp;quot;StorageManager&amp;quot;"></see><br>-<see cref="!:&amp;quot;navigatorStorage&amp;quot;"></see><br></p>
+  <div class="markdown level1 remarks"><p>This method operates asynchronously, so it returns a <see cref="!:Promise"></see> which resolves once the information is available. The promise's fulfillment handler is called with an object containing the usage and quota data.</p>
+<p>-Storage API<br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.Storage.html">Storage</a>, the object returned by <a class="xref" href="CSharpToJavaScript.APIs.JS.WindowLocalStorage.html">WindowLocalStorage</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.StorageManager.html">StorageManager</a><br>-<see cref="!:navigatorStorage"></see><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/StorageManager/estimate"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/StorageManager/estimate</a></p>
 </div>
 
@@ -192,7 +192,7 @@ public class StorageManager</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>persist()</code></strong> method of the <see cref="!:&amp;quot;StorageManager&amp;quot;"></see> interface requests permission to use persistent storage, and returns a {{jsxref(&amp;apos;Promise&amp;apos;)}} that resolves to <code>true</code> if permission is granted and box mode is persistent, and <code>false</code> otherwise.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>persist()</code></strong> method of the <a class="xref" href="CSharpToJavaScript.APIs.JS.StorageManager.html">StorageManager</a> interface requests permission to use persistent storage, and returns a {{jsxref('Promise')}} that resolves to <code>true</code> if permission is granted and bucket mode is persistent, and <code>false</code> otherwise.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -204,7 +204,7 @@ public class StorageManager</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
-    <dd><p>A {{jsxref(&amp;apos;Promise&amp;apos;)}} that resolves to a {{jsxref(&amp;apos;Boolean&amp;apos;)}}.</p>
+    <dd><p>A <see cref="!:'Promise'"></see> that resolves to a <see cref="!:'Boolean'"></see>.</p>
 </dd>
   </dl>
 
@@ -228,7 +228,7 @@ public class StorageManager</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>persisted()</code></strong> method of the <see cref="!:&amp;quot;StorageManager&amp;quot;"></see> interface returns a {{jsxref(&amp;apos;Promise&amp;apos;)}} that resolves to <code>true</code> if box mode is persistent for your site&amp;apos;s storage.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>persisted()</code></strong> method of the <a class="xref" href="CSharpToJavaScript.APIs.JS.StorageManager.html">StorageManager</a> interface returns a {{jsxref('Promise')}} that resolves to <code>true</code> if your site&amp;apos;s storage bucket is persistent.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -240,7 +240,7 @@ public class StorageManager</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
-    <dd><p>A {{jsxref(&amp;apos;Promise&amp;apos;)}} that resolves to a {{jsxref(&amp;apos;Boolean&amp;apos;)}}.</p>
+    <dd><p>A <see cref="!:'Promise'"></see> that resolves to a <see cref="!:'Boolean'"></see>.</p>
 </dd>
   </dl>
 

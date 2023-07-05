@@ -154,7 +154,7 @@ public class FormData</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>FormData</code></strong> interface provides a way to easily construct a set of key/value pairs representing form fields and their values, which can then be easily sent using the <see cref="!:&amp;quot;fetch&amp;quot;"></see> or <see cref="!:&amp;quot;fetch&amp;quot;"></see> method. It uses the same format a form would use if the encoding type were set to <code>&amp;quot;multipart/form-data&amp;quot;</code>.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>FormData</code></strong> interface provides a way to construct a set of key/value pairs representing form fields and their values, which can be sent using the <see cref="!:fetch"></see>, <see cref="!:XMLHttpRequestSend"></see> or <see cref="!:navigatorSendBeacon"></see> methods. It uses the same format a form would use if the encoding type were set to <code>&amp;quot;multipart/form-data&amp;quot;</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -176,10 +176,50 @@ public class FormData</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_FormData__ctor_CSharpToJavaScript_APIs_JS_HTMLFormElement__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>You can also pass it directly to the <see cref="!:&amp;quot;URLSearchParams&amp;quot;"></see> constructor if you want to generate query parameters in the way a {{HTMLElement(&amp;quot;form&amp;quot;)}} would do if it were using simple <code>GET</code> submission.</p><p>An object implementing <code>FormData</code> can directly be used in a {{jsxref(&amp;quot;Statements/for...of&amp;quot;, &amp;quot;for...of&amp;quot;)}} structure, instead of <see cref="!:&amp;apos;FormDataEntries&amp;apos;"></see>: <code>for (const p of myFormData)</code> is equivalent to <code>for (const p of myFormData.entries())</code>.</p><blockquote><p><strong>Note:</strong> This feature is available in <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p></blockquote>
+  <div class="markdown level1 remarks"><p>You can also pass it directly to the <a class="xref" href="CSharpToJavaScript.APIs.JS.URLSearchParams.html">URLSearchParams</a> constructor if you want to generate query parameters in the way a {{HTMLElement("form")}} would do if it were using simple <code>GET</code> submission.</p><p>An object implementing <code>FormData</code> can directly be used in a {{jsxref("Statements/for...of", "for...of")}} structure, instead of <see cref="!:'FormDataEntries'"></see>: <code>for (const p of myFormData)</code> is equivalent to <code>for (const p of myFormData.entries())</code>.</p><blockquote><p><strong>Note:</strong> This feature is available in <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p></blockquote>
 <p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/FormData/Using_FormData_Objects">Using FormData objects</a><br>-{{HTMLElement(&amp;quot;Form&amp;quot;)}}<br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/FormData"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/FormData</a></p>
 </div>
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="CSharpToJavaScript_APIs_JS_FormData_Item_" data-uid="CSharpToJavaScript.APIs.JS.FormData.Item*"></a>
+
+  <h3 id="CSharpToJavaScript_APIs_JS_FormData_Item_System_Int32_" data-uid="CSharpToJavaScript.APIs.JS.FormData.Item(System.Int32)">
+  this[int]
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string this[int i] { get; set; }</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>i</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
 
 
 
@@ -195,7 +235,7 @@ public class FormData</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>append()</code></strong> method of the <see cref="!:&amp;quot;FormData&amp;quot;"></see> interface appends a new value onto an existing key inside a <code>FormData</code> object, or adds the key if it does not already exist.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>append()</code></strong> method of the <a class="xref" href="CSharpToJavaScript.APIs.JS.FormData.html">FormData</a> interface appends a new value onto an existing key inside a <code>FormData</code> object, or adds the key if it does not already exist.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -216,7 +256,7 @@ public class FormData</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None ({{jsxref(&amp;quot;undefined&amp;quot;)}}).</p>
+    <dd><p>None (<see cref="!:undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -227,7 +267,7 @@ public class FormData</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_FormData_Append_System_String_CSharpToJavaScript_Utils_Unsupported_System_String__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>The difference between <see cref="!:&amp;quot;FormDataSet&amp;quot;"></see> and <code>append()</code> is that if the specified key already exists, <code>set()</code> will overwrite all existing values with the new one, whereas <code>append()</code> will append the new value onto the end of the existing set of values.</p><blockquote><p><strong>Note:</strong> This method is available in <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p></blockquote>
+  <div class="markdown level1 remarks"><p>The difference between <see cref="!:FormDataSet"></see> and <code>append()</code> is that if the specified key already exists, <code>set()</code> will overwrite all existing values with the new one, whereas <code>append()</code> will append the new value onto the end of the existing set of values.</p><blockquote><p><strong>Note:</strong> This method is available in <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p></blockquote>
 <p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/FormData/Using_FormData_Objects">Using FormData objects</a><br>-{{HTMLElement(&amp;quot;Form&amp;quot;)}}<br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/FormData/append"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/FormData/append</a></p>
 </div>
@@ -242,7 +282,7 @@ public class FormData</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>append()</code></strong> method of the <see cref="!:&amp;quot;FormData&amp;quot;"></see> interface appends a new value onto an existing key inside a <code>FormData</code> object, or adds the key if it does not already exist.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>append()</code></strong> method of the <a class="xref" href="CSharpToJavaScript.APIs.JS.FormData.html">FormData</a> interface appends a new value onto an existing key inside a <code>FormData</code> object, or adds the key if it does not already exist.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -261,7 +301,7 @@ public class FormData</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None ({{jsxref(&amp;quot;undefined&amp;quot;)}}).</p>
+    <dd><p>None (<see cref="!:undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -272,7 +312,7 @@ public class FormData</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_FormData_Append_System_String_System_String__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>The difference between <see cref="!:&amp;quot;FormDataSet&amp;quot;"></see> and <code>append()</code> is that if the specified key already exists, <code>set()</code> will overwrite all existing values with the new one, whereas <code>append()</code> will append the new value onto the end of the existing set of values.</p><blockquote><p><strong>Note:</strong> This method is available in <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p></blockquote>
+  <div class="markdown level1 remarks"><p>The difference between <see cref="!:FormDataSet"></see> and <code>append()</code> is that if the specified key already exists, <code>set()</code> will overwrite all existing values with the new one, whereas <code>append()</code> will append the new value onto the end of the existing set of values.</p><blockquote><p><strong>Note:</strong> This method is available in <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p></blockquote>
 <p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/FormData/Using_FormData_Objects">Using FormData objects</a><br>-{{HTMLElement(&amp;quot;Form&amp;quot;)}}<br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/FormData/append"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/FormData/append</a></p>
 </div>
@@ -287,7 +327,7 @@ public class FormData</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>delete()</code></strong> method of the <see cref="!:&amp;quot;FormData&amp;quot;"></see> interface deletes a key and its value(s) from a <code>FormData</code> object.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>delete()</code></strong> method of the <a class="xref" href="CSharpToJavaScript.APIs.JS.FormData.html">FormData</a> interface deletes a key and its value(s) from a <code>FormData</code> object.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -304,7 +344,7 @@ public class FormData</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None ({{jsxref(&amp;quot;undefined&amp;quot;)}}).</p>
+    <dd><p>None (<see cref="!:undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -330,7 +370,7 @@ public class FormData</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>get()</code></strong> method of the <see cref="!:&amp;quot;FormData&amp;quot;"></see> interface<br>returns the first value associated with a given key from within a <code>FormData</code><br>object. If you expect multiple values and want all of them, use the<br><see cref="!:&amp;quot;FormDataGetAll&amp;quot;"></see> method instead.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>get()</code></strong> method of the <a class="xref" href="CSharpToJavaScript.APIs.JS.FormData.html">FormData</a> interface<br>returns the first value associated with a given key from within a <code>FormData</code><br>object. If you expect multiple values and want all of them, use the<br><see cref="!:FormDataGetAll"></see> method instead.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -373,7 +413,7 @@ public class FormData</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>getAll()</code></strong> method of the <see cref="!:&amp;quot;FormData&amp;quot;"></see> interface returns all the values associated with a given key from within a <code>FormData</code> object.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>getAll()</code></strong> method of the <a class="xref" href="CSharpToJavaScript.APIs.JS.FormData.html">FormData</a> interface returns all the values associated with a given key from within a <code>FormData</code> object.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -416,7 +456,7 @@ public class FormData</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>has()</code></strong> method of the <see cref="!:&amp;quot;FormData&amp;quot;"></see> interface returns whether a <code>FormData</code> object contains a certain key.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>has()</code></strong> method of the <a class="xref" href="CSharpToJavaScript.APIs.JS.FormData.html">FormData</a> interface returns whether a <code>FormData</code> object contains a certain key.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -459,7 +499,7 @@ public class FormData</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>set()</code></strong> method of the <see cref="!:&amp;quot;FormData&amp;quot;"></see> interface sets a new value for an existing key inside a <code>FormData</code> object, or adds the key/value if it does not already exist.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>set()</code></strong> method of the <a class="xref" href="CSharpToJavaScript.APIs.JS.FormData.html">FormData</a> interface sets a new value for an existing key inside a <code>FormData</code> object, or adds the key/value if it does not already exist.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -480,7 +520,7 @@ public class FormData</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None ({{jsxref(&amp;quot;undefined&amp;quot;)}}).</p>
+    <dd><p>None (<see cref="!:undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -491,7 +531,7 @@ public class FormData</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_FormData_Set_System_String_CSharpToJavaScript_Utils_Unsupported_System_String__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>The difference between <code>set()</code> and <see cref="!:&amp;quot;FormDataAppend&amp;quot;"></see> is that if the specified key does already exist, <code>set()</code> will overwrite all existing values with the new one, whereas <code>append()</code> will append the new value onto the end of the existing set of values.</p><blockquote><p><strong>Note:</strong> This method is available in <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p></blockquote>
+  <div class="markdown level1 remarks"><p>The difference between <code>set()</code> and <see cref="!:FormDataAppend"></see> is that if the specified key does already exist, <code>set()</code> will overwrite all existing values with the new one, whereas <code>append()</code> will append the new value onto the end of the existing set of values.</p><blockquote><p><strong>Note:</strong> This method is available in <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p></blockquote>
 <p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/FormData/Using_FormData_Objects">Using FormData objects</a><br>-{{HTMLElement(&amp;quot;Form&amp;quot;)}}<br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/FormData/set"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/FormData/set</a></p>
 </div>
@@ -506,7 +546,7 @@ public class FormData</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>set()</code></strong> method of the <see cref="!:&amp;quot;FormData&amp;quot;"></see> interface sets a new value for an existing key inside a <code>FormData</code> object, or adds the key/value if it does not already exist.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>set()</code></strong> method of the <a class="xref" href="CSharpToJavaScript.APIs.JS.FormData.html">FormData</a> interface sets a new value for an existing key inside a <code>FormData</code> object, or adds the key/value if it does not already exist.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -525,7 +565,7 @@ public class FormData</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None ({{jsxref(&amp;quot;undefined&amp;quot;)}}).</p>
+    <dd><p>None (<see cref="!:undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -536,7 +576,7 @@ public class FormData</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_FormData_Set_System_String_System_String__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>The difference between <code>set()</code> and <see cref="!:&amp;quot;FormDataAppend&amp;quot;"></see> is that if the specified key does already exist, <code>set()</code> will overwrite all existing values with the new one, whereas <code>append()</code> will append the new value onto the end of the existing set of values.</p><blockquote><p><strong>Note:</strong> This method is available in <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p></blockquote>
+  <div class="markdown level1 remarks"><p>The difference between <code>set()</code> and <see cref="!:FormDataAppend"></see> is that if the specified key does already exist, <code>set()</code> will overwrite all existing values with the new one, whereas <code>append()</code> will append the new value onto the end of the existing set of values.</p><blockquote><p><strong>Note:</strong> This method is available in <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p></blockquote>
 <p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/FormData/Using_FormData_Objects">Using FormData objects</a><br>-{{HTMLElement(&amp;quot;Form&amp;quot;)}}<br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/FormData/set"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/FormData/set</a></p>
 </div>

@@ -154,7 +154,7 @@ public class DOMParser</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>DOMParser</code></strong> interface provides<br>the ability to parse {{Glossary(&amp;quot;XML&amp;quot;)}} or {{Glossary(&amp;quot;HTML&amp;quot;)}} source code from a<br>string into a DOM <see cref="!:&amp;quot;Document&amp;quot;"></see>.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>DOMParser</code></strong> interface provides<br>the ability to parse {{Glossary(&amp;quot;XML&amp;quot;)}} or {{Glossary(&amp;quot;HTML&amp;quot;)}} source code from a<br>string into a DOM <a class="xref" href="CSharpToJavaScript.APIs.JS.Document.html">Document</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -171,8 +171,8 @@ public class DOMParser</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_DOMParser__ctor_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>You can perform the opposite operation—converting a DOM tree into XML or HTML<br>source—using the <see cref="!:&amp;quot;XMLSerializer&amp;quot;"></see> interface.</p><p>In the case of an HTML document, you can also replace portions of the DOM with new DOM<br>trees built from HTML by setting the value of the <see cref="!:&amp;quot;ElementInnerHTML&amp;quot;"></see> and<br><see cref="!:&amp;quot;ElementOuterHTML&amp;quot;"></see> properties. These properties can also be<br>read to fetch HTML fragments corresponding to the corresponding DOM subtree.</p><p>Note that <see cref="!:&amp;quot;XMLHttpRequest&amp;quot;"></see> can parse XML and HTML directly<br>from a URL-addressable resource, returning a <code>Document</code> in its<br><see cref="!:&amp;quot;XMLHttpRequestResponse&amp;quot;"></see> property.</p><blockquote><p><strong>Note:</strong> Be aware that <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements">block-level elements</a><br>like <code>&amp;lt;p&amp;gt;</code> will be automatically closed if another<br>block-level element is nested inside and therefore parsed before the closing <code>&amp;lt;/p&amp;gt;</code> tag.</p></blockquote>
-<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Parsing_and_serializing_XML">Parsing and serializing XML</a><br>-<see cref="!:&amp;quot;XMLHttpRequest&amp;quot;"></see><br>-<see cref="!:&amp;quot;XMLSerializer&amp;quot;"></see><br>-{{jsxref(&amp;quot;JSON.parse()&amp;quot;)}} - counterpart for {{jsxref(&amp;quot;JSON&amp;quot;)}} documents.<br></p>
+  <div class="markdown level1 remarks"><p>You can perform the opposite operation—converting a DOM tree into XML or HTML<br>source—using the <see cref="!:XMLSerializer"></see> interface.</p><p>In the case of an HTML document, you can also replace portions of the DOM with new DOM<br>trees built from HTML by setting the value of the <see cref="!:ElementInnerHTML"></see> and<br><see cref="!:ElementOuterHTML"></see> properties. These properties can also be<br>read to fetch HTML fragments corresponding to the corresponding DOM subtree.</p><p>Note that <a class="xref" href="CSharpToJavaScript.APIs.JS.XMLHttpRequest.html">XMLHttpRequest</a> can parse XML and HTML directly<br>from a URL-addressable resource, returning a <code>Document</code> in its<br><see cref="!:XMLHttpRequestResponse"></see> property.</p><blockquote><p><strong>Note:</strong> Be aware that <a href="https://developer.mozilla.org/en-US/docs/Glossary/Block-level_content">block-level elements</a><br>like <code>&amp;lt;p&amp;gt;</code> will be automatically closed if another<br>block-level element is nested inside and therefore parsed before the closing <code>&amp;lt;/p&amp;gt;</code> tag.</p></blockquote>
+<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Parsing_and_serializing_XML">Parsing and serializing XML</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.XMLHttpRequest.html">XMLHttpRequest</a><br>-<see cref="!:XMLSerializer"></see><br>-<see cref="!:JSONParse"></see> - counterpart for <see cref="!:JSON"></see> documents.<br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMParser"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/DOMParser</a></p>
 </div>
 
@@ -190,7 +190,7 @@ public class DOMParser</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>parseFromString()</code></strong> method of the <see cref="!:&amp;quot;DOMParser&amp;quot;"></see> interface parses a string containing either HTML or XML, returning an <see cref="!:&amp;quot;DOMParser&amp;quot;"></see> or an <see cref="!:&amp;quot;DOMParser&amp;quot;"></see>.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>parseFromString()</code></strong> method of the <a class="xref" href="CSharpToJavaScript.APIs.JS.DOMParser.html">DOMParser</a> interface parses a string containing either HTML or XML, returning an <see cref="!:HTMLDocument"></see> or an <see cref="!:XMLDocument"></see>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -209,7 +209,7 @@ public class DOMParser</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Document.html">Document</a></dt>
-    <dd><p>An <see cref="!:&amp;quot;HTMLDocument&amp;quot;"></see> or an <see cref="!:&amp;quot;HTMLDocument&amp;quot;"></see>, depending on the<br><code>mimeType</code> argument.</p>
+    <dd><p>An <see cref="!:HTMLDocument"></see> or an <see cref="!:XMLDocument"></see>, depending on the<br><code>mimeType</code> argument.</p>
 </dd>
   </dl>
 
@@ -220,7 +220,7 @@ public class DOMParser</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_DOMParser_ParseFromString_System_String_CSharpToJavaScript_APIs_JS_DOMParserSupportedType__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>-<see cref="!:&amp;quot;XMLSerializer&amp;quot;"></see><br>-{{jsxref(&amp;quot;JSON.parse()&amp;quot;)}} - counterpart for {{jsxref(&amp;quot;JSON&amp;quot;)}} documents.<br></p>
+  <div class="markdown level1 remarks"><p>-<see cref="!:XMLSerializer"></see><br>-<see cref="!:JSONParse"></see> - counterpart for <see cref="!:JSON"></see> documents.<br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMParser/parseFromString"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/DOMParser/parseFromString</a></p>
 </div>
 

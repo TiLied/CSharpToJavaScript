@@ -176,7 +176,7 @@ public class BroadcastChannel : EventTarget</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>BroadcastChannel</code></strong> interface represents a named channel that any {{glossary(&amp;quot;browsing context&amp;quot;)}} of a given {{glossary(&amp;quot;origin&amp;quot;)}} can subscribe to. It allows communication between different documents (in different windows, tabs, frames or iframes) of the same origin. Messages are broadcasted via a <see cref="!:&amp;quot;BroadcastChannel/message_event&amp;quot;"></see> event fired at all <code>BroadcastChannel</code> objects listening to the channel, except the object that sent the message.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>BroadcastChannel</code></strong> interface represents a named channel that any {{glossary(&quot;browsing context&quot;)}} of a given {{glossary(&quot;origin&quot;)}} can subscribe to. It allows communication between different documents (in different windows, tabs, frames or iframes) of the same origin. Messages are broadcasted via a <see cref="!:BroadcastChannel/message_event"></see> event fired at all <code>BroadcastChannel</code> objects listening to the channel, except the object that sent the message.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -199,7 +199,7 @@ public class BroadcastChannel : EventTarget</code></pre>
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_BroadcastChannel__ctor_System_String__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>{{AvailableInWorkers}}</p><p>{{InheritanceDiagram}}</p>
-<p>-Another, more heavyweight, way of communicating between browser contexts: <see cref="!:&amp;quot;ServiceWorker&amp;quot;"></see>.<br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Broadcast_Channel_API">Broadcast Channel API overview</a><br></p>
+<p>-Another, more heavyweight, way of communicating between browser contexts: <see cref="!:ServiceWorker"></see>.<br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Broadcast_Channel_API">Broadcast Channel API overview</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/BroadcastChannel"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/BroadcastChannel</a></p>
 </div>
 
@@ -217,7 +217,7 @@ public class BroadcastChannel : EventTarget</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The read-only <strong><code>BroadcastChannel.name</code></strong> property returns a string, which uniquely identifies the given channel with its name. This name is passed to the <see cref="!:&amp;quot;BroadcastChannelBroadCastChannel&amp;quot;"></see> constructor at creation time and is therefore read-only.</p>
+  <div class="markdown level1 summary"><p>The read-only <strong><code>BroadcastChannel.name</code></strong> property returns a string, which uniquely identifies the given channel with its name. This name is passed to the <see cref="!:BroadcastChannelBroadCastChannel"></see> constructor at creation time and is therefore read-only.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -241,7 +241,7 @@ public class BroadcastChannel : EventTarget</code></pre>
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_BroadcastChannel_Name_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>{{AvailableInWorkers}}</p>
-<p>-<see cref="!:&amp;quot;BroadcastChannel&amp;quot;"></see>, the interface it belongs to.<br></p>
+<p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.BroadcastChannel.html">BroadcastChannel</a>, the interface it belongs to.<br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/BroadcastChannel/name"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/BroadcastChannel/name</a></p>
 </div>
 
@@ -344,7 +344,7 @@ public class BroadcastChannel : EventTarget</code></pre>
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_BroadcastChannel_Close_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>{{AvailableInWorkers}}</p>
-<p>-<see cref="!:&amp;quot;BroadcastChannel&amp;quot;"></see>, the interface it belongs to.<br></p>
+<p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.BroadcastChannel.html">BroadcastChannel</a>, the interface it belongs to.<br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/BroadcastChannel/close"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/BroadcastChannel/close</a></p>
 </div>
 
@@ -358,7 +358,7 @@ public class BroadcastChannel : EventTarget</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>BroadcastChannel.postMessage()</code></strong> sends a message,<br>which can be of any kind of {{jsxref(&amp;quot;Object&amp;quot;)}},<br>to each listener in any {{glossary(&amp;quot;browsing context&amp;quot;)}} with the same {{glossary(&amp;quot;origin&amp;quot;)}}.<br>The message is transmitted as a <a href="https://developer.mozilla.org/en-US/docs/Web/API/BroadcastChannel/message_event">&amp;apos;message&amp;apos;</a> event<br>targeted at each <see cref="!:&amp;quot;BroadcastChannel&amp;quot;"></see> bound to the channel.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>BroadcastChannel.postMessage()</code></strong> sends a message,<br>which can be of any kind of <a class="xref" href="CSharpToJavaScript.APIs.JS.Object.html">Object</a>,<br>to each listener in any {{glossary(&amp;quot;browsing context&amp;quot;)}} with the same {{glossary(&amp;quot;origin&amp;quot;)}}.<br>The message is transmitted as a <a href="https://developer.mozilla.org/en-US/docs/Web/API/BroadcastChannel/message_event">&amp;apos;message&amp;apos;</a> event<br>targeted at each <a class="xref" href="CSharpToJavaScript.APIs.JS.BroadcastChannel.html">BroadcastChannel</a> bound to the channel.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -387,7 +387,7 @@ public class BroadcastChannel : EventTarget</code></pre>
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_BroadcastChannel_PostMessage_System_Object__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>{{AvailableInWorkers}}</p>
-<p>-<see cref="!:&amp;quot;BroadcastChannel&amp;quot;"></see>, the interface it belongs to.<br></p>
+<p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.BroadcastChannel.html">BroadcastChannel</a>, the interface it belongs to.<br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/BroadcastChannel/postMessage"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/BroadcastChannel/postMessage</a></p>
 </div>
 

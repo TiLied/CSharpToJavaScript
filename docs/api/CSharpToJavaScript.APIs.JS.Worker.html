@@ -206,8 +206,8 @@ public class Worker : EventTarget, AbstractWorker</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Worker__ctor_System_String_CSharpToJavaScript_APIs_JS_WorkerOptions__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>Creating a worker is done by calling the <code>Worker(&amp;quot;path/to/worker/script&amp;quot;)</code> constructor.</p><p>Workers may themselves spawn new workers, as long as those workers are hosted at the same <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy">origin</a> as the parent page. (Note: <a href="https://bugs.webkit.org/show_bug.cgi?id=22723">nested workers are not yet implemented in WebKit</a>).</p><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers">Not all interfaces and functions are available</a> to scripts inside a <code>Worker</code>. Workers may use <see cref="!:&amp;quot;XMLHttpRequest&amp;quot;"></see> for network communication, but its <code>responseXML</code> and <code>channel</code> attributes are always <code>null</code>. (<a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API"><code>fetch</code>https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API</a> is also available, with no such restrictions.)</p><p>{{InheritanceDiagram}}</p>
-<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using Web Workers</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers">Functions and classes available to Web Workers</a><br>-Other kind of workers: <see cref="!:&amp;quot;SharedWorker&amp;quot;"></see> and <a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">Service Worker</a>.<br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas"><code>OffscreenCanvas</code>https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas</a> interface<br></p>
+  <div class="markdown level1 remarks"><p>Creating a worker is done by calling the <code>Worker(&amp;quot;path/to/worker/script&amp;quot;)</code> constructor.</p><p>Workers may themselves spawn new workers, as long as those workers are hosted at the same <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy">origin</a> as the parent page.</p><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers">Not all interfaces and functions are available</a> to scripts inside a <code>Worker</code>. Workers may use <a class="xref" href="CSharpToJavaScript.APIs.JS.XMLHttpRequest.html">XMLHttpRequest</a> for network communication, but its <code>responseXML</code> and <code>channel</code> attributes are always <code>null</code>. (<a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API"><code>fetch</code>https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API</a> is also available, with no such restrictions.)</p><p>{{InheritanceDiagram}}</p>
+<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using Web Workers</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers">Functions and classes available to Web Workers</a><br>-Other kind of workers: <a class="xref" href="CSharpToJavaScript.APIs.JS.SharedWorker.html">SharedWorker</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">Service Worker</a>.<br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas"><code>OffscreenCanvas</code>https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas</a> interface<br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Worker"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Worker</a></p>
 </div>
 
@@ -291,7 +291,7 @@ public class Worker : EventTarget, AbstractWorker</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>postMessage()</code></strong> method of the <see cref="!:&amp;quot;Worker&amp;quot;"></see> interface sends a message to the worker&amp;apos;s inner scope. This accepts a single parameter, which is the data to send to the worker. The data may be any value or JavaScript object handled by the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">structured clone</a> algorithm, which includes cyclical references.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>postMessage()</code></strong> method of the <a class="xref" href="CSharpToJavaScript.APIs.JS.Worker.html">Worker</a> interface sends a message to the worker. The first parameter is the data to send to the worker. The data may be any JavaScript object that can be handled by the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">structured clone algorithm</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -310,7 +310,7 @@ public class Worker : EventTarget, AbstractWorker</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None ({{jsxref(&amp;quot;undefined&amp;quot;)}}).</p>
+    <dd><p>None (<see cref="!:undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -321,8 +321,8 @@ public class Worker : EventTarget, AbstractWorker</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Worker_PostMessage_System_Object_CSharpToJavaScript_APIs_JS_StructuredSerializeOptions__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>The <see cref="!:&amp;quot;Worker&amp;quot;"></see> <code>postMessage()</code> method delegates to the <see cref="!:&amp;quot;MessagePort&amp;quot;"></see> <see cref="!:&amp;quot;MessagePort&amp;quot;"></see> method, which adds a task on the event loop corresponding to the receiving <see cref="!:&amp;quot;MessagePort&amp;quot;"></see>.</p><p>The <code>Worker</code> can send back information to the thread that spawned it using the <see cref="!:&amp;quot;DedicatedWorkerGlobalScopePostMessage&amp;quot;"></see> method.</p>
-<p>-The <see cref="!:&amp;quot;Worker&amp;quot;"></see> interface it belongs to.<br></p>
+  <div class="markdown level1 remarks"><p>The <a class="xref" href="CSharpToJavaScript.APIs.JS.Worker.html">Worker</a> <code>postMessage()</code> method delegates to the <a class="xref" href="CSharpToJavaScript.APIs.JS.MessagePort.html">MessagePort</a> <see cref="!:MessagePortPostMessage"></see> method, which adds a task on the event loop corresponding to the receiving <a class="xref" href="CSharpToJavaScript.APIs.JS.MessagePort.html">MessagePort</a>.</p><p>The <code>Worker</code> can send back information to the thread that spawned it using the <see cref="!:DedicatedWorkerGlobalScopePostMessage"></see> method.</p>
+<p>-The <a class="xref" href="CSharpToJavaScript.APIs.JS.Worker.html">Worker</a> interface it belongs to.<br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Worker/postMessage"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Worker/postMessage</a></p>
 </div>
 
@@ -336,7 +336,7 @@ public class Worker : EventTarget, AbstractWorker</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>postMessage()</code></strong> method of the <see cref="!:&amp;quot;Worker&amp;quot;"></see> interface sends a message to the worker&amp;apos;s inner scope. This accepts a single parameter, which is the data to send to the worker. The data may be any value or JavaScript object handled by the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">structured clone</a> algorithm, which includes cyclical references.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>postMessage()</code></strong> method of the <a class="xref" href="CSharpToJavaScript.APIs.JS.Worker.html">Worker</a> interface sends a message to the worker. The first parameter is the data to send to the worker. The data may be any JavaScript object that can be handled by the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">structured clone algorithm</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -355,7 +355,7 @@ public class Worker : EventTarget, AbstractWorker</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None ({{jsxref(&amp;quot;undefined&amp;quot;)}}).</p>
+    <dd><p>None (<see cref="!:undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -366,8 +366,8 @@ public class Worker : EventTarget, AbstractWorker</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Worker_PostMessage_System_Object_System_Collections_Generic_List_System_Object___remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>The <see cref="!:&amp;quot;Worker&amp;quot;"></see> <code>postMessage()</code> method delegates to the <see cref="!:&amp;quot;MessagePort&amp;quot;"></see> <see cref="!:&amp;quot;MessagePort&amp;quot;"></see> method, which adds a task on the event loop corresponding to the receiving <see cref="!:&amp;quot;MessagePort&amp;quot;"></see>.</p><p>The <code>Worker</code> can send back information to the thread that spawned it using the <see cref="!:&amp;quot;DedicatedWorkerGlobalScopePostMessage&amp;quot;"></see> method.</p>
-<p>-The <see cref="!:&amp;quot;Worker&amp;quot;"></see> interface it belongs to.<br></p>
+  <div class="markdown level1 remarks"><p>The <a class="xref" href="CSharpToJavaScript.APIs.JS.Worker.html">Worker</a> <code>postMessage()</code> method delegates to the <a class="xref" href="CSharpToJavaScript.APIs.JS.MessagePort.html">MessagePort</a> <see cref="!:MessagePortPostMessage"></see> method, which adds a task on the event loop corresponding to the receiving <a class="xref" href="CSharpToJavaScript.APIs.JS.MessagePort.html">MessagePort</a>.</p><p>The <code>Worker</code> can send back information to the thread that spawned it using the <see cref="!:DedicatedWorkerGlobalScopePostMessage"></see> method.</p>
+<p>-The <a class="xref" href="CSharpToJavaScript.APIs.JS.Worker.html">Worker</a> interface it belongs to.<br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Worker/postMessage"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Worker/postMessage</a></p>
 </div>
 
@@ -381,7 +381,7 @@ public class Worker : EventTarget, AbstractWorker</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>terminate()</code></strong> method of the <see cref="!:&amp;quot;Worker&amp;quot;"></see> interface immediately terminates the <see cref="!:&amp;quot;Worker&amp;quot;"></see>. This does not offer the worker an opportunity to finish its operations; it is stopped at once.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>terminate()</code></strong> method of the <a class="xref" href="CSharpToJavaScript.APIs.JS.Worker.html">Worker</a> interface immediately terminates the <a class="xref" href="CSharpToJavaScript.APIs.JS.Worker.html">Worker</a>. This does not offer the worker an opportunity to finish its operations; it is stopped at once.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -393,7 +393,7 @@ public class Worker : EventTarget, AbstractWorker</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None ({{jsxref(&amp;quot;undefined&amp;quot;)}}).</p>
+    <dd><p>None (<see cref="!:undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -404,7 +404,7 @@ public class Worker : EventTarget, AbstractWorker</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Worker_Terminate_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>The <see cref="!:&amp;quot;Worker&amp;quot;"></see> interface it belongs to.</p>
+  <div class="markdown level1 remarks"><p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.Worker.html">Worker</a> interface<br>-<see cref="!:DedicatedWorkerGlobalScopeClose"></see><br>-<see cref="!:SharedWorkerGlobalScopeClose"></see><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Worker/terminate"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Worker/terminate</a></p>
 </div>
 

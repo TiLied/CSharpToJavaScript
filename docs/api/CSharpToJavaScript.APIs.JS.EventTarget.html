@@ -176,7 +176,7 @@ public class EventTarget</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The read-only <strong><code>target</code></strong> property of the<br><see cref="!:&amp;quot;Event&amp;quot;"></see> interface is a reference to the object onto which the event was<br>dispatched. It is different from <see cref="!:&amp;quot;EventCurrentTarget&amp;quot;"></see> when the event<br>handler is called during the bubbling or capturing phase of the event.</p>
+  <div class="markdown level1 summary"><p>The read-only <strong><code>target</code></strong> property of the<br><a class="xref" href="CSharpToJavaScript.APIs.JS.Event.html">Event</a> interface is a reference to the object onto which the event was<br>dispatched. It is different from <see cref="!:EventCurrentTarget"></see> when the event<br>handler is called during the bubbling or capturing phase of the event.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -211,7 +211,7 @@ public class EventTarget</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>addEventListener()</code></strong> method of the <see cref="!:&amp;quot;EventTarget&amp;quot;"></see> interface<br>sets up a function that will be called whenever the specified event is delivered to the target.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>addEventListener()</code></strong> method of the <a class="xref" href="CSharpToJavaScript.APIs.JS.EventTarget.html">EventTarget</a> interface<br>sets up a function that will be called whenever the specified event is delivered to the target.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -232,7 +232,7 @@ public class EventTarget</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None ({{jsxref(&amp;quot;undefined&amp;quot;)}}).</p>
+    <dd><p>None (<see cref="!:undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -243,8 +243,8 @@ public class EventTarget</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_EventTarget_AddEventListener_System_String_CSharpToJavaScript_APIs_JS_EventListener_CSharpToJavaScript_APIs_JS_Union1__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>Common targets are <see cref="!:&amp;quot;Element&amp;quot;"></see>, or its children, <see cref="!:&amp;quot;Element&amp;quot;"></see>, and <see cref="!:&amp;quot;Element&amp;quot;"></see>,<br>but the target may be any object that supports events (such as <see cref="!:&amp;quot;XMLHttpRequest&amp;quot;"></see>).</p><blockquote><p><strong>Note:</strong> The <code>addEventListener()</code> method is the <strong>recommended</strong> way to register an event listener. The benefits are as follows:</p></blockquote><p>The method <code>addEventListener()</code> works by adding a function, or an object that implements<br><see cref="!:&amp;quot;EventListener&amp;quot;"></see>, to the list of event listeners for the specified event type<br>on the <see cref="!:&amp;quot;EventTarget&amp;quot;"></see> on which it&amp;apos;s called. If the function or object is already in the list of event listeners for this target, the function or object is not added a second time.</p><blockquote><p><strong>Note:</strong> If a particular anonymous function is in the list of event listeners registered for a certain target, and then later in the code, an identical anonymous function is given in an <code>addEventListener</code> call, the second function will <strong>also</strong> be added to the list of event listeners for that target.</p><p>Indeed, anonymous functions are not identical even if defined using<br>the <strong>same</strong> unchanging source-code called repeatedly, <strong>even if in a loop</strong>.</p><p>Repeatedly defining the same unnamed function in such cases can be<br>problematic. (See <a href="https://developer.mozilla.org#memory_issues">Memory issues</a>, below.)</p></blockquote><p>If an event listener is added to an <see cref="!:&amp;quot;EventTarget&amp;quot;"></see> from inside another listener —<br>that is, during the processing of the event —<br>that event will not trigger the new listener.<br>However, the new listener may be triggered during a later stage of event flow,<br>such as during the bubbling phase.</p>
-<p>-<see cref="!:&amp;quot;EventTargetRemoveEventListener&amp;quot;"></see><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/Events/Creating_and_triggering_events">Creating and triggering custom events</a><br>-<a href="https://www.quirksmode.org/js/this.html">More details on the use of <code>this</code> in event handlers</a><br></p>
+  <div class="markdown level1 remarks"><p>Common targets are <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html">Element</a>, or its children, <a class="xref" href="CSharpToJavaScript.APIs.JS.Document.html">Document</a>, and <a class="xref" href="CSharpToJavaScript.APIs.JS.Window.html">Window</a>,<br>but the target may be any object that supports events (such as <a class="xref" href="CSharpToJavaScript.APIs.JS.XMLHttpRequest.html">XMLHttpRequest</a>).</p><blockquote><p><strong>Note:</strong> The <code>addEventListener()</code> method is the <strong>recommended</strong> way to register an event listener. The benefits are as follows:</p></blockquote><p>The method <code>addEventListener()</code> works by adding a function, or an object that implements<br><see cref="!:EventTargetAddEventListener"></see>, to the list of event listeners for the specified event type<br>on the <a class="xref" href="CSharpToJavaScript.APIs.JS.EventTarget.html">EventTarget</a> on which it's called. If the function or object is already in the list of event listeners for this target, the function or object is not added a second time.</p><blockquote><p><strong>Note:</strong> If a particular anonymous function is in the list of event listeners registered for a certain target, and then later in the code, an identical anonymous function is given in an <code>addEventListener</code> call, the second function will <strong>also</strong> be added to the list of event listeners for that target.</p><p>Indeed, anonymous functions are not identical even if defined using<br>the <strong>same</strong> unchanging source-code called repeatedly, <strong>even if in a loop</strong>.</p><p>Repeatedly defining the same unnamed function in such cases can be<br>problematic. (See <a href="https://developer.mozilla.org#memory_issues">Memory issues</a>, below.)</p></blockquote><p>If an event listener is added to an <a class="xref" href="CSharpToJavaScript.APIs.JS.EventTarget.html">EventTarget</a> from inside another listener —<br>that is, during the processing of the event —<br>that event will not trigger the new listener.<br>However, the new listener may be triggered during a later stage of event flow,<br>such as during the bubbling phase.</p>
+<p>-<see cref="!:EventTargetRemoveEventListener"></see><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/Events/Creating_and_triggering_events">Creating and triggering custom events</a><br>-<a href="https://www.quirksmode.org/js/this.html">More details on the use of <code>this</code> in event handlers</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener</a></p>
 </div>
 
@@ -378,7 +378,7 @@ public class EventTarget</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>dispatchEvent()</code></strong> method of the <see cref="!:&amp;quot;EventTarget&amp;quot;"></see> sends an <see cref="!:&amp;quot;EventTarget&amp;quot;"></see> to the object, (synchronously) invoking the affected<br><see cref="!:&amp;quot;EventListener&amp;quot;"></see>s in the appropriate order. The normal event processing<br>rules (including the capturing and optional bubbling phase) also apply to events<br>dispatched manually with <code>dispatchEvent()</code>.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>dispatchEvent()</code></strong> method of the <a class="xref" href="CSharpToJavaScript.APIs.JS.EventTarget.html">EventTarget</a> sends an <a class="xref" href="CSharpToJavaScript.APIs.JS.Event.html">Event</a> to the object, (synchronously) invoking the affected<br><a class="xref" href="CSharpToJavaScript.APIs.JS.EventListener.html">EventListener</a>s in the appropriate order. The normal event processing<br>rules (including the capturing and optional bubbling phase) also apply to events<br>dispatched manually with <code>dispatchEvent()</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -395,7 +395,7 @@ public class EventTarget</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p><code>false</code> if <code>event</code> is cancelable, and at least one of the event handlers which received <code>event</code> called <see cref="!:&amp;quot;EventPreventDefault&amp;quot;"></see>. Otherwise <code>true</code>.</p>
+    <dd><p><code>false</code> if <code>event</code> is cancelable, and at least one of the event handlers which received <code>event</code> called <see cref="!:EventPreventDefault"></see>. Otherwise <code>true</code>.</p>
 </dd>
   </dl>
 
@@ -406,7 +406,7 @@ public class EventTarget</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_EventTarget_DispatchEvent_CSharpToJavaScript_APIs_JS_Event__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>Calling <code>dispatchEvent()</code> is the last step to <strong>firing an event</strong>. The event<br>should have already been created and initialized using an <see cref="!:&amp;quot;Event/Event&amp;quot;"></see> constructor.</p><blockquote><p><strong>Note:</strong> When calling this method, the <see cref="!:&amp;quot;EventTarget&amp;quot;"></see> property is initialized to the current <code>EventTarget</code>.</p></blockquote><p>Unlike &amp;quot;native&amp;quot; events, which are fired by the browser and invoke event handlers<br>asynchronously via the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop">event loop</a>,<br><code>dispatchEvent()</code> invokes event handlers <strong>synchronously</strong>. All applicable event<br>handlers are called and return before <code>dispatchEvent()</code> returns.</p>
+  <div class="markdown level1 remarks"><p>Calling <code>dispatchEvent()</code> is the last step to <strong>firing an event</strong>. The event<br>should have already been created and initialized using an <see cref="!:Event/Event"></see> constructor.</p><blockquote><p><strong>Note:</strong> When calling this method, the <a class="xref" href="CSharpToJavaScript.APIs.JS.EventTarget.html">EventTarget</a> property is initialized to the current <code>EventTarget</code>.</p></blockquote><p>Unlike &amp;quot;native&amp;quot; events, which are fired by the browser and invoke event handlers<br>asynchronously via the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Event_loop">event loop</a>,<br><code>dispatchEvent()</code> invokes event handlers <strong>synchronously</strong>. All applicable event<br>handlers are called and return before <code>dispatchEvent()</code> returns.</p>
 <p>-The <a href="https://developer.mozilla.org/en-US/docs/Web/API/Event">Event object reference</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/dispatchEvent"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/dispatchEvent</a></p>
 </div>
@@ -421,7 +421,7 @@ public class EventTarget</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>removeEventListener()</code></strong> method of the <see cref="!:&amp;quot;EventTarget&amp;quot;"></see> interface<br>removes an event listener previously registered with <see cref="!:&amp;quot;EventTargetAddEventListener&amp;quot;"></see> from the target.<br>The event listener to be removed is identified using a combination of the event type,<br>the event listener function itself, and various optional options that may affect the matching process;<br>see <a href="https://developer.mozilla.org#matching_event_listeners_for_removal">Matching event listeners for removal</a>.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>removeEventListener()</code></strong> method of the <a class="xref" href="CSharpToJavaScript.APIs.JS.EventTarget.html">EventTarget</a> interface<br>removes an event listener previously registered with <see cref="!:EventTargetAddEventListener"></see> from the target.<br>The event listener to be removed is identified using a combination of the event type,<br>the event listener function itself, and various optional options that may affect the matching process;<br>see <a href="https://developer.mozilla.org#matching_event_listeners_for_removal">Matching event listeners for removal</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -453,8 +453,8 @@ public class EventTarget</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_EventTarget_RemoveEventListener_System_String_CSharpToJavaScript_APIs_JS_EventListener_CSharpToJavaScript_APIs_JS_Union2__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>Calling <code>removeEventListener()</code> with arguments that do not identify any<br>currently registered <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#the_event_listener_callback">event listener</a> on the <code>EventTarget</code> has no<br>effect.</p><p>If an <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#the_event_listener_callback">event listener</a> is removed from an <see cref="!:&amp;quot;EventTarget&amp;quot;"></see> while another listener of the target is processing an event, it will not be triggered by the event. However, it can be reattached.</p><blockquote><p><strong>Warning:</strong> If a listener is registered twice, one with the <strong>capture</strong> flag set and one without, you must remove each one separately. Removal of a capturing listener does not affect a non-capturing version of the same listener, and vice versa.</p></blockquote><p>Event listeners can also be removed by passing an <see cref="!:&amp;quot;AbortSignal&amp;quot;"></see> to an <see cref="!:&amp;quot;AbortSignal&amp;quot;"></see> and then later calling <see cref="!:&amp;quot;AbortSignal&amp;quot;"></see> on the controller owning the signal.</p>
-<p>-<see cref="!:&amp;quot;EventTargetAddEventListener&amp;quot;"></see><br></p>
+  <div class="markdown level1 remarks"><p>Calling <code>removeEventListener()</code> with arguments that do not identify any<br>currently registered <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#the_event_listener_callback">event listener</a> on the <code>EventTarget</code> has no<br>effect.</p><p>If an <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#the_event_listener_callback">event listener</a> is removed from an <a class="xref" href="CSharpToJavaScript.APIs.JS.EventTarget.html">EventTarget</a> while another listener of the target is processing an event, it will not be triggered by the event. However, it can be reattached.</p><blockquote><p><strong>Warning:</strong> If a listener is registered twice, one with the <strong>capture</strong> flag set and one without, you must remove each one separately. Removal of a capturing listener does not affect a non-capturing version of the same listener, and vice versa.</p></blockquote><p>Event listeners can also be removed by passing an <a class="xref" href="CSharpToJavaScript.APIs.JS.AbortSignal.html">AbortSignal</a> to an <see cref="!:EventTarget/addEventListener"></see> and then later calling <see cref="!:AbortController/abort"></see> on the controller owning the signal.</p>
+<p>-<see cref="!:EventTargetAddEventListener"></see><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/removeEventListener"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/removeEventListener</a></p>
 </div>
 

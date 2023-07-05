@@ -267,7 +267,7 @@ public class AbortSignal : EventTarget</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_AbortSignal_Reason_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>The property is <code>undefined</code> when the signal has not been aborted.<br>It can be set to a specific value when the signal is aborted, using <see cref="!:&amp;quot;AbortControllerAbort&amp;quot;"></see> or <see cref="!:&amp;quot;AbortControllerAbort&amp;quot;"></see>.<br>If not explicitly set in those methods, it defaults to &amp;quot;AbortError&amp;quot; <see cref="!:&amp;quot;DOMException&amp;quot;"></see>.</p>
+  <div class="markdown level1 remarks"><p>The property is <code>undefined</code> when the signal has not been aborted.<br>It can be set to a specific value when the signal is aborted, using <see cref="!:AbortControllerAbort"></see> or <see cref="!:AbortSignalAbort"></see>.<br>If not explicitly set in those methods, it defaults to "AbortError" <a class="xref" href="CSharpToJavaScript.APIs.JS.DOMException.html">DOMException</a>.</p>
 <p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch API</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal/reason"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal/reason</a></p>
 </div>
@@ -286,8 +286,7 @@ public class AbortSignal : EventTarget</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The static <strong><code>AbortSignal.abort()</code></strong> method returns an <see cref="!:&amp;quot;AbortSignal&amp;quot;"></see> that is already set as aborted (and which does not trigger an <see cref="!:&amp;quot;AbortSignal&amp;quot;"></see> event).</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -303,8 +302,7 @@ public class AbortSignal : EventTarget</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.AbortSignal.html">AbortSignal</a></dt>
-    <dd><p>An <code>AbortSignal</code> instance with the <see cref="!:&amp;quot;AbortSignalAborted&amp;quot;"></see> property set to <code>true</code>, and <see cref="!:&amp;quot;AbortSignalReason&amp;quot;"></see> set to the specified or default reason value.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -313,10 +311,6 @@ public class AbortSignal : EventTarget</code></pre>
 
 
 
-  <h4 class="section" id="CSharpToJavaScript_APIs_JS_AbortSignal_Abort_System_Object__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This is shorthand for the following code:</p><p>This could, for example, be passed to a fetch method in order to run its abort logic (i.e. it may be that code is organized such that the abort logic should be run even if the intended fetch operation has not been started).</p><blockquote><p><strong>Note:</strong> The method is similar in purpose to {{JSxRef(&amp;quot;Promise.reject&amp;quot;)}}.</p></blockquote>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal/abort"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal/abort</a></p>
-</div>
 
 
 
@@ -328,7 +322,7 @@ public class AbortSignal : EventTarget</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>throwIfAborted()</code></strong> method throws the signal&amp;apos;s abort <see cref="!:&amp;quot;AbortSignalReason&amp;quot;"></see> if the signal has been aborted; otherwise it does nothing.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>throwIfAborted()</code></strong> method throws the signal's abort <see cref="!:AbortSignalReason"></see> if the signal has been aborted; otherwise it does nothing.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -340,7 +334,7 @@ public class AbortSignal : EventTarget</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None ({{jsxref(&amp;quot;undefined&amp;quot;)}}).</p>
+    <dd><p>None (<see cref="!:undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -351,7 +345,7 @@ public class AbortSignal : EventTarget</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_AbortSignal_ThrowIfAborted_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>An API that needs to support aborting can accept an <see cref="!:&amp;quot;AbortSignal&amp;quot;"></see> object and use <code>throwIfAborted()</code> to test and throw when the <a href="https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal/abort_event"><code>abort</code>https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal/abort_event</a> event is signalled.</p><p>This method can also be used to abort operations at particular points in code, rather than passing to functions that take a signal.</p>
+  <div class="markdown level1 remarks"><p>An API that needs to support aborting can accept an <a class="xref" href="CSharpToJavaScript.APIs.JS.AbortSignal.html">AbortSignal</a> object and use <code>throwIfAborted()</code> to test and throw when the <a href="https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal/abort_event"><code>abort</code>https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal/abort_event</a> event is signalled.</p><p>This method can also be used to abort operations at particular points in code, rather than passing to functions that take a signal.</p>
 <p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch API</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal/throwIfAborted"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal/throwIfAborted</a></p>
 </div>
@@ -366,8 +360,7 @@ public class AbortSignal : EventTarget</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The static <strong><code>AbortSignal.timeout()</code></strong> method returns an <see cref="!:&amp;quot;AbortSignal&amp;quot;"></see> that will automatically abort after a specified time.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -383,8 +376,7 @@ public class AbortSignal : EventTarget</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.AbortSignal.html">AbortSignal</a></dt>
-    <dd><p>An <see cref="!:&amp;quot;AbortSignal&amp;quot;"></see>.The signal will abort with its <see cref="!:&amp;quot;AbortSignalReason&amp;quot;"></see> property set to a <code>TimeoutError</code> <see cref="!:&amp;quot;DOMException&amp;quot;"></see> on timeout, or an <code>AbortError</code> <see cref="!:&amp;quot;DOMException&amp;quot;"></see> if the operation was user-triggered.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -393,10 +385,6 @@ public class AbortSignal : EventTarget</code></pre>
 
 
 
-  <h4 class="section" id="CSharpToJavaScript_APIs_JS_AbortSignal_Timeout_System_UInt64__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>The signal aborts with a <code>TimeoutError</code> <see cref="!:&amp;quot;DOMException&amp;quot;"></see> on timeout, or with <code>AbortError</code> <see cref="!:&amp;quot;DOMException&amp;quot;"></see> due to pressing a browser stop button (or some other inbuilt &amp;quot;stop&amp;quot; operation).<br>This allow UIs to differentiate timeout errors, which typically require user notification, from user-triggered aborts that do not.</p><p>The timeout is based on active rather than elapsed time, and will effectively be paused if the code is running in a suspended worker, or while the document is in a back-forward cache (&amp;quot;<a href="https://web.dev/bfcache/">bfcache</a>&amp;quot;).</p><blockquote><p><strong>Note:</strong> At time of writing there is no way to combine multiple signals.<br>This means that you can&amp;apos;t directly abort a download using either a timeout signal or by calling <see cref="!:&amp;quot;AbortControllerAbort&amp;quot;"></see>.</p></blockquote>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal/timeout"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal/timeout</a></p>
-</div>
 
 
 

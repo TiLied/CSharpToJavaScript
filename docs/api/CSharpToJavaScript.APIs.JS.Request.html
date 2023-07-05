@@ -178,7 +178,7 @@ public class Request</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Request__ctor_CSharpToJavaScript_APIs_JS_Union12_CSharpToJavaScript_APIs_JS_RequestInit__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>You can create a new <code>Request</code> object using the <see cref="!:&amp;quot;RequestRequest&amp;quot;"></see> constructor, but you are more likely to encounter a <code>Request</code> object being returned as the result of another API operation, such as a service worker <see cref="!:&amp;quot;FetchEventRequest&amp;quot;"></see>.</p>
+  <div class="markdown level1 remarks"><p>You can create a new <code>Request</code> object using the <see cref="!:RequestRequest"></see> constructor, but you are more likely to encounter a <code>Request</code> object being returned as the result of another API operation, such as a service worker <see cref="!:FetchEventRequest"></see>.</p>
 <p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Request"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Request</a></p>
 </div>
@@ -197,7 +197,7 @@ public class Request</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>cache</code></strong> read-only property of the <see cref="!:&amp;quot;Request&amp;quot;"></see> interface contains the cache mode of the request. It controls how the request will interact with the browser&amp;apos;s <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching">HTTP cache</a>.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>cache</code></strong> read-only property of the <a class="xref" href="CSharpToJavaScript.APIs.JS.Request.html">Request</a> interface contains the cache mode of the request. It controls how the request will interact with the browser's <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching">HTTP cache</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -234,7 +234,7 @@ public class Request</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>credentials</code></strong> read-only property of the <see cref="!:&amp;quot;Request&amp;quot;"></see> interface indicates whether the user agent should send or receive cookies from the other domain in the case of cross-origin requests.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>credentials</code></strong> read-only property of the <a class="xref" href="CSharpToJavaScript.APIs.JS.Request.html">Request</a> interface indicates whether the user agent should send or receive cookies from the other domain in the case of cross-origin requests.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -271,7 +271,7 @@ public class Request</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>destination</code></strong> read-only<br>property of the <strong><see cref="!:&amp;quot;Request&amp;quot;"></see></strong> interface returns a string<br>describing the type of content being requested.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>destination</code></strong> read-only<br>property of the <strong><a class="xref" href="CSharpToJavaScript.APIs.JS.Request.html">Request</a></strong> interface returns a string<br>describing the type of content being requested.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -294,7 +294,7 @@ public class Request</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Request_Destination_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>The string must be one of the <code>audio</code>, <code>audioworklet</code>,<br><code>document</code>, <code>embed</code>, <code>font</code>, <code>frame</code>,<br><code>iframe</code>, <code>image</code>, <code>manifest</code>, <code>object</code>,<br><code>paintworklet</code>, <code>report</code>, <code>script</code>, <code>sharedworker</code>,<br><code>style</code>, <code>track</code>, <code>video</code>, <code>worker</code><br>or <code>xslt</code> strings, or the empty string, which is the default value.</p><p>The <code>destination</code> is used by the {{Glossary(&amp;quot;user agent&amp;quot;)}} to, for example,<br>help determine which set of rules to follow for CORS purposes, or how to navigate any<br>complicated code paths that affect how specific types of request get handled.</p><p>These destinations vary substantially in how they operate. Some are data receptacles,<br>where the received data is stored for processing later. Others are script-based, in<br>which case the received data is delivered to a script by calling it and passing the data<br>along. Script-based destinations include {{HTMLElement(&amp;quot;script&amp;quot;)}} elements, as well as<br>any of the <see cref="!:&amp;quot;Worklet&amp;quot;"></see>-based destinations<br>(including <see cref="!:&amp;quot;AudioWorklet&amp;quot;"></see> and <see cref="!:&amp;quot;AudioWorklet&amp;quot;"></see>), and the<br><see cref="!:&amp;quot;Worker&amp;quot;"></see>-based destinations, including <see cref="!:&amp;quot;Worker&amp;quot;"></see><br>and <see cref="!:&amp;quot;SharedWorker&amp;quot;"></see>.</p>
+  <div class="markdown level1 remarks"><p>The string must be one of the <code>audio</code>, <code>audioworklet</code>,<br><code>document</code>, <code>embed</code>, <code>font</code>, <code>frame</code>,<br><code>iframe</code>, <code>image</code>, <code>manifest</code>, <code>object</code>,<br><code>paintworklet</code>, <code>report</code>, <code>script</code>, <code>sharedworker</code>,<br><code>style</code>, <code>track</code>, <code>video</code>, <code>worker</code><br>or <code>xslt</code> strings, or the empty string, which is the default value.</p><p>The <code>destination</code> is used by the {{Glossary(&amp;quot;user agent&amp;quot;)}} to, for example,<br>help determine which set of rules to follow for CORS purposes, or how to navigate any<br>complicated code paths that affect how specific types of request get handled.</p><p>These destinations vary substantially in how they operate. Some are data receptacles,<br>where the received data is stored for processing later. Others are script-based, in<br>which case the received data is delivered to a script by calling it and passing the data<br>along. Script-based destinations include {{HTMLElement(&amp;quot;script&amp;quot;)}} elements, as well as<br>any of the <a class="xref" href="CSharpToJavaScript.APIs.JS.Worklet.html">Worklet</a>-based destinations<br>(including subclasses like <see cref="!:AudioWorklet"></see>), and the<br><a class="xref" href="CSharpToJavaScript.APIs.JS.Worker.html">Worker</a>-based destinations, including <see cref="!:ServiceWorker"></see><br>and <a class="xref" href="CSharpToJavaScript.APIs.JS.SharedWorker.html">SharedWorker</a>.</p>
 <p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Request/destination"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Request/destination</a></p>
 </div>
@@ -309,7 +309,7 @@ public class Request</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>headers</code></strong> read-only property of the<br><see cref="!:&amp;quot;Request&amp;quot;"></see> interface contains the <see cref="!:&amp;quot;Request&amp;quot;"></see> object associated<br>with the request.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>headers</code></strong> read-only property of the<br><a class="xref" href="CSharpToJavaScript.APIs.JS.Request.html">Request</a> interface contains the <a class="xref" href="CSharpToJavaScript.APIs.JS.Request.html#CSharpToJavaScript_APIs_JS_Request_Headers">Headers</a> object associated<br>with the request.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -324,7 +324,7 @@ public class Request</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Headers.html">Headers</a></dt>
-    <dd><p>A <see cref="!:&amp;quot;Headers&amp;quot;"></see> object.</p>
+    <dd><p>A <a class="xref" href="CSharpToJavaScript.APIs.JS.Request.html#CSharpToJavaScript_APIs_JS_Request_Headers">Headers</a> object.</p>
 </dd>
   </dl>
 
@@ -346,7 +346,7 @@ public class Request</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>integrity</code></strong> read-only property of the <see cref="!:&amp;quot;Request&amp;quot;"></see> interface contains the <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity">subresource integrity</a> value of the request.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>integrity</code></strong> read-only property of the <a class="xref" href="CSharpToJavaScript.APIs.JS.Request.html">Request</a> interface contains the <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity">subresource integrity</a> value of the request.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -361,7 +361,7 @@ public class Request</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity">subresource integrity</a> value of the request (e.g., <code>sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=</code>).If an integrity has not been specified, the property returns <code>&amp;apos;&amp;apos;</code>.</p>
+    <dd><p>The value that was passed as the <code>options.integrity</code> argument when constructing the <code>Request</code>.If an integrity has not been specified, the property returns <code>&amp;apos;&amp;apos;</code>.</p>
 </dd>
   </dl>
 
@@ -476,7 +476,7 @@ public class Request</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>method</code></strong> read-only property of the<br><see cref="!:&amp;quot;Request&amp;quot;"></see> interface contains the request&amp;apos;s method (<code>GET</code>,<br><code>POST</code>, etc.)</p>
+  <div class="markdown level1 summary"><p>The <strong><code>method</code></strong> read-only property of the<br><a class="xref" href="CSharpToJavaScript.APIs.JS.Request.html">Request</a> interface contains the request's method (<code>GET</code>,<br><code>POST</code>, etc.)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -491,7 +491,7 @@ public class Request</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>A {{jsxref(&amp;quot;String&amp;quot;)}} indicating the method of the request.</p>
+    <dd><p>A <see cref="!:String"></see> indicating the method of the request.</p>
 </dd>
   </dl>
 
@@ -513,7 +513,7 @@ public class Request</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>mode</code></strong> read-only property of the <see cref="!:&amp;quot;Request&amp;quot;"></see><br>interface contains the mode of the request (e.g., <code>cors</code>,<br><code>no-cors</code>, <code>same-origin</code>, <code>navigate</code> or <code>websocket</code>.) This is used<br>to determine if cross-origin requests lead to valid responses, and which properties of the response are readable.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>mode</code></strong> read-only property of the <a class="xref" href="CSharpToJavaScript.APIs.JS.Request.html">Request</a><br>interface contains the mode of the request (e.g., <code>cors</code>,<br><code>no-cors</code>, <code>same-origin</code>, <code>navigate</code> or <code>websocket</code>.) This is used<br>to determine if cross-origin requests lead to valid responses, and which properties of the response are readable.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -549,7 +549,7 @@ public class Request</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>redirect</code></strong> read-only property of the <see cref="!:&amp;quot;Request&amp;quot;"></see> interface contains the mode for how redirects are handled.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>redirect</code></strong> read-only property of the <a class="xref" href="CSharpToJavaScript.APIs.JS.Request.html">Request</a> interface contains the mode for how redirects are handled.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -586,7 +586,7 @@ public class Request</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>referrer</code></strong> read-only property of the<br><see cref="!:&amp;quot;Request&amp;quot;"></see> interface is set by the user agent to be the referrer of the<br>Request. (e.g., <code>client</code>, <code>no-referrer</code>, or a URL.)</p>
+  <div class="markdown level1 summary"><p>The <strong><code>referrer</code></strong> read-only property of the<br><a class="xref" href="CSharpToJavaScript.APIs.JS.Request.html">Request</a> interface is set by the user agent to be the referrer of the<br>Request. (e.g., <code>client</code>, <code>no-referrer</code>, or a URL.)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -624,7 +624,7 @@ public class Request</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>referrerPolicy</code></strong> read-only property of the<br><see cref="!:&amp;quot;Request&amp;quot;"></see> interface returns the referrer policy, which governs what<br>referrer information, sent in the {{HTTPHeader(&amp;quot;Referer&amp;quot;)}} header, should be included<br>with the request.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>referrerPolicy</code></strong> read-only property of the<br><a class="xref" href="CSharpToJavaScript.APIs.JS.Request.html">Request</a> interface returns the referrer policy, which governs what<br>referrer information, sent in the {{HTTPHeader(&amp;quot;Referer&amp;quot;)}} header, should be included<br>with the request.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -661,7 +661,8 @@ public class Request</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The read-only <strong><code>signal</code></strong> property of the <a class="xref" href="CSharpToJavaScript.APIs.JS.Request.html">Request</a> interface returns the <a class="xref" href="CSharpToJavaScript.APIs.JS.AbortSignal.html">AbortSignal</a> associated with the request.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -675,12 +676,16 @@ public class Request</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.AbortSignal.html">AbortSignal</a></dt>
-    <dd></dd>
+    <dd><p>An <a class="xref" href="CSharpToJavaScript.APIs.JS.AbortSignal.html">AbortSignal</a> object.</p>
+</dd>
   </dl>
 
 
 
 
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Request_Signal_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Request/signal"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Request/signal</a></p>
+</div>
 
 
 
@@ -692,7 +697,7 @@ public class Request</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>url</code></strong> read-only property of the <see cref="!:&amp;quot;Request&amp;quot;"></see><br>interface contains the URL of the request.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>url</code></strong> read-only property of the <a class="xref" href="CSharpToJavaScript.APIs.JS.Request.html">Request</a><br>interface contains the URL of the request.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -733,7 +738,7 @@ public class Request</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>clone()</code></strong> method of the <see cref="!:&amp;quot;Request&amp;quot;"></see> interface creates a copy of the current <code>Request</code> object.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>clone()</code></strong> method of the <a class="xref" href="CSharpToJavaScript.APIs.JS.Request.html">Request</a> interface creates a copy of the current <code>Request</code> object.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -745,7 +750,7 @@ public class Request</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Request.html">Request</a></dt>
-    <dd><p>A <see cref="!:&amp;quot;Request&amp;quot;"></see> object, which is an exact copy of the <code>Request</code> that <code>clone()</code> was called on.</p>
+    <dd><p>A <a class="xref" href="CSharpToJavaScript.APIs.JS.Request.html">Request</a> object, which is an exact copy of the <code>Request</code> that <code>clone()</code> was called on.</p>
 </dd>
   </dl>
 
@@ -756,7 +761,7 @@ public class Request</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Request_Clone_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>Like the underlying <see cref="!:&amp;quot;ReadableStreamTee&amp;quot;"></see> api,<br>the <see cref="!:&amp;quot;RequestBody&amp;quot;"></see> of a cloned <code>Response</code><br>will signal backpressure at the rate of the <strong>faster</strong> consumer of the two bodies,<br>and unread data is enqueued internally on the slower consumed <code>body</code><br>without any limit or backpressure.<br>Beware when you construct a <code>Request</code> from a stream and then <code>clone</code> it.</p><p><code>clone()</code> throws a {{jsxref(&amp;quot;TypeError&amp;quot;)}} if the request body has already been used. In fact, the main reason <code>clone()</code> exists is to allow multiple uses of body objects (when they are one-use only.)</p><p>If you intend to modify the request, you may prefer the <see cref="!:&amp;quot;Request&amp;quot;"></see> constructor.</p>
+  <div class="markdown level1 remarks"><p>Like the underlying <see cref="!:ReadableStreamTee"></see> api,<br>the <see cref="!:RequestBody"></see> of a cloned <code>Response</code><br>will signal backpressure at the rate of the <strong>faster</strong> consumer of the two bodies,<br>and unread data is enqueued internally on the slower consumed <code>body</code><br>without any limit or backpressure.<br>Beware when you construct a <code>Request</code> from a stream and then <code>clone</code> it.</p><p><code>clone()</code> throws a <see cref="!:TypeError"></see> if the request body has already been used. In fact, the main reason <code>clone()</code> exists is to allow multiple uses of body objects (when they are one-use only.)</p><p>If you intend to modify the request, you may prefer the <a class="xref" href="CSharpToJavaScript.APIs.JS.Request.html">Request</a> constructor.</p>
 <p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Request/clone"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Request/clone</a></p>
 </div>

@@ -187,7 +187,7 @@ public class Range : AbstractRange</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Range__ctor_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>A range can be created by using the {{ domxref(&amp;quot;Document.createRange()&amp;quot;) }} method. Range objects can also be retrieved by using the {{ domxref(&amp;quot;Selection/getRangeAt&amp;quot;, &amp;quot;getRangeAt()&amp;quot;) }} method of the {{ domxref(&amp;quot;Selection&amp;quot;) }} object or the <see cref="!:&amp;quot;Document/caretRangeFromPoint&amp;quot;"></see> method of the <see cref="!:&amp;quot;Document/caretRangeFromPoint&amp;quot;"></see> object.</p><p>There also is the <see cref="!:&amp;quot;RangeRange&amp;quot;"></see> constructor available.</p><p>{{InheritanceDiagram}}</p>
+  <div class="markdown level1 remarks"><p>A range can be created by using the {{ domxref("Document.createRange()") }} method. Range objects can also be retrieved by using the {{ domxref("Selection/getRangeAt", "getRangeAt()") }} method of the {{ domxref("Selection") }} object or the <see cref="!:Document/caretRangeFromPoint"></see> method of the <a class="xref" href="CSharpToJavaScript.APIs.JS.Document.html">Document</a> object.</p><p>There also is the <see cref="!:RangeRange"></see> constructor available.</p><p>{{InheritanceDiagram}}</p>
 <p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Range"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Range</a></p>
 </div>
@@ -330,7 +330,7 @@ public class Range : AbstractRange</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>Range.commonAncestorContainer</code></strong> read-only property<br>returns the deepest — or furthest down the document tree — <see cref="!:&amp;quot;Node&amp;quot;"></see> that<br>contains both <a href="https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level-2-Range-Position-h3">boundary points</a> of the <see cref="!:&amp;quot;Range&amp;quot;"></see>. This means that if<br><see cref="!:&amp;quot;RangeStartContainer&amp;quot;"></see> and <see cref="!:&amp;quot;RangeStartContainer&amp;quot;"></see> both refer to<br>the same node, this node is the <strong>common ancestor container</strong>.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>Range.commonAncestorContainer</code></strong> read-only property<br>returns the deepest — or furthest down the document tree — <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a> that<br>contains both <a href="https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level-2-Range-Position-h3">boundary points</a> of the <a class="xref" href="CSharpToJavaScript.APIs.JS.Range.html">Range</a>. This means that if<br><see cref="!:RangeStartContainer"></see> and <see cref="!:RangeEndContainer"></see> both refer to<br>the same node, this node is the <strong>common ancestor container</strong>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -345,7 +345,7 @@ public class Range : AbstractRange</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a></dt>
-    <dd><p>A <see cref="!:&amp;quot;Node&amp;quot;"></see> object.</p>
+    <dd><p>A <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a> object.</p>
 </dd>
   </dl>
 
@@ -353,7 +353,7 @@ public class Range : AbstractRange</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Range_CommonAncestorContainer_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>Since a <code>Range</code> need not be continuous, and may also partially select nodes,<br>this is a convenient way to find a <code>Node</code> which encloses a<br><code>Range</code>.</p><p>This property is read-only. To change the ancestor container of a <code>Node</code>,<br>consider using the various methods available to set the start and end positions of the<br><code>Range</code>, such as <see cref="!:&amp;quot;RangeSetStart&amp;quot;"></see> and<br><see cref="!:&amp;quot;RangeSetEnd&amp;quot;"></see>.</p>
+  <div class="markdown level1 remarks"><p>Since a <code>Range</code> need not be continuous, and may also partially select nodes,<br>this is a convenient way to find a <code>Node</code> which encloses a<br><code>Range</code>.</p><p>This property is read-only. To change the ancestor container of a <code>Node</code>,<br>consider using the various methods available to set the start and end positions of the<br><code>Range</code>, such as <see cref="!:RangeSetStart"></see> and<br><see cref="!:RangeSetEnd"></see>.</p>
 <p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Range/commonAncestorContainer"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Range/commonAncestorContainer</a></p>
 </div>
@@ -384,7 +384,7 @@ public class Range : AbstractRange</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.DocumentFragment.html">DocumentFragment</a></dt>
-    <dd><p>A <see cref="!:&amp;quot;DocumentFragment&amp;quot;"></see> object.</p>
+    <dd><p>A <a class="xref" href="CSharpToJavaScript.APIs.JS.DocumentFragment.html">DocumentFragment</a> object.</p>
 </dd>
   </dl>
 
@@ -395,7 +395,7 @@ public class Range : AbstractRange</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Range_CloneContents_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>Event listeners added using <see cref="!:&amp;quot;EventTargetAddEventListener&amp;quot;"></see><br>are not copied during cloning. HTML attribute events are duplicated as they are<br>for the {{ domxref(&amp;quot;Node.cloneNode()&amp;quot;) }} method. HTML <code>id</code> attributes<br>are also cloned, which can lead to an invalid document through cloning.</p><p>Partially selected nodes include the parent tags necessary to make the document<br>fragment valid.</p>
+  <div class="markdown level1 remarks"><p>Event listeners added using <see cref="!:EventTargetAddEventListener"></see><br>are not copied during cloning. HTML attribute events are duplicated as they are<br>for the {{ domxref(&amp;quot;Node.cloneNode()&amp;quot;) }} method. HTML <code>id</code> attributes<br>are also cloned, which can lead to an invalid document through cloning.</p><p>Partially selected nodes include the parent tags necessary to make the document<br>fragment valid.</p>
 <p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Range/cloneContents"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Range/cloneContents</a></p>
 </div>
@@ -410,7 +410,7 @@ public class Range : AbstractRange</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>Range.cloneRange()</code></strong> method returns a<br><see cref="!:&amp;quot;Range&amp;quot;"></see> object with boundary points identical to the cloned<br><see cref="!:&amp;quot;Range&amp;quot;"></see>.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>Range.cloneRange()</code></strong> method returns a<br><a class="xref" href="CSharpToJavaScript.APIs.JS.Range.html">Range</a> object with boundary points identical to the cloned<br><a class="xref" href="CSharpToJavaScript.APIs.JS.Range.html">Range</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -422,7 +422,7 @@ public class Range : AbstractRange</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Range.html">Range</a></dt>
-    <dd><p>A <see cref="!:&amp;quot;Range&amp;quot;"></see> object.</p>
+    <dd><p>A <a class="xref" href="CSharpToJavaScript.APIs.JS.Range.html">Range</a> object.</p>
 </dd>
   </dl>
 
@@ -433,7 +433,7 @@ public class Range : AbstractRange</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Range_CloneRange_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>The returned clone is copied by value, not reference, so a change in either<br><see cref="!:&amp;quot;Range&amp;quot;"></see> does not affect the other.</p>
+  <div class="markdown level1 remarks"><p>The returned clone is copied by value, not reference, so a change in either<br><a class="xref" href="CSharpToJavaScript.APIs.JS.Range.html">Range</a> does not affect the other.</p>
 <p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Range/cloneRange"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Range/cloneRange</a></p>
 </div>
@@ -448,7 +448,7 @@ public class Range : AbstractRange</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>Range.collapse()</code></strong> method collapses the<br><see cref="!:&amp;quot;Range&amp;quot;"></see> to one of its boundary points.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>Range.collapse()</code></strong> method collapses the<br><a class="xref" href="CSharpToJavaScript.APIs.JS.Range.html">Range</a> to one of its boundary points.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -465,7 +465,7 @@ public class Range : AbstractRange</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None ({{jsxref(&amp;quot;undefined&amp;quot;)}}).</p>
+    <dd><p>None (<see cref="!:undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -476,7 +476,7 @@ public class Range : AbstractRange</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Range_Collapse_System_Boolean__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>A collapsed <see cref="!:&amp;quot;Range&amp;quot;"></see> is empty, containing no content, specifying a<br>single-point in a DOM tree. To determine if a <see cref="!:&amp;quot;Range&amp;quot;"></see> is already collapsed,<br>see the <see cref="!:&amp;quot;RangeCollapsed&amp;quot;"></see> property.</p>
+  <div class="markdown level1 remarks"><p>A collapsed <a class="xref" href="CSharpToJavaScript.APIs.JS.Range.html">Range</a> is empty, containing no content, specifying a<br>single-point in a DOM tree. To determine if a <a class="xref" href="CSharpToJavaScript.APIs.JS.Range.html">Range</a> is already collapsed,<br>see the <see cref="!:RangeCollapsed"></see> property.</p>
 <p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Range/collapse"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Range/collapse</a></p>
 </div>
@@ -491,7 +491,7 @@ public class Range : AbstractRange</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The<br><strong><code>Range.compareBoundaryPoints()</code></strong> method compares the<br>boundary points of the <see cref="!:&amp;quot;Range&amp;quot;"></see> with those of another range.</p>
+  <div class="markdown level1 summary"><p>The<br><strong><code>Range.compareBoundaryPoints()</code></strong> method compares the<br>boundary points of the <a class="xref" href="CSharpToJavaScript.APIs.JS.Range.html">Range</a> with those of another range.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -510,7 +510,7 @@ public class Range : AbstractRange</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a></dt>
-    <dd><p>A number, <code>-1</code>, <code>0</code>, or <code>1</code>, indicating whether the<br>corresponding boundary-point of the <see cref="!:&amp;quot;Range&amp;quot;"></see> is respectively before, equal<br>to, or after the corresponding boundary-point of <strong>sourceRange</strong>.</p>
+    <dd><p>A number, <code>-1</code>, <code>0</code>, or <code>1</code>, indicating whether the<br>corresponding boundary-point of the <a class="xref" href="CSharpToJavaScript.APIs.JS.Range.html">Range</a> is respectively before, equal<br>to, or after the corresponding boundary-point of <strong>sourceRange</strong>.</p>
 </dd>
   </dl>
 
@@ -535,7 +535,7 @@ public class Range : AbstractRange</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>Range.comparePoint()</code></strong> method returns <code>-1</code>,<br><code>0</code>, or <code>1</code> depending on whether the <code>referenceNode</code> is<br>before, the same as, or after the <see cref="!:&amp;quot;Range&amp;quot;"></see>.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>Range.comparePoint()</code></strong> method returns <code>-1</code>,<br><code>0</code>, or <code>1</code> depending on whether the <code>referenceNode</code> is<br>before, the same as, or after the <a class="xref" href="CSharpToJavaScript.APIs.JS.Range.html">Range</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -565,7 +565,7 @@ public class Range : AbstractRange</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Range_ComparePoint_CSharpToJavaScript_APIs_JS_Node_System_UInt64__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>If the <strong>reference node</strong> is a <see cref="!:&amp;quot;Node&amp;quot;"></see> of type <see cref="!:&amp;quot;Node&amp;quot;"></see>,<br><see cref="!:&amp;quot;Comment&amp;quot;"></see>, or <see cref="!:&amp;quot;Comment&amp;quot;"></see>, then offset is the number of<br>characters from the start of <strong>reference node</strong>. For other <see cref="!:&amp;quot;Node&amp;quot;"></see><br>types, offset is the number of child nodes between the start of the <strong>reference</strong><strong><br></strong><strong>node</strong>.</p>
+  <div class="markdown level1 remarks"><p>If the <strong>reference node</strong> is a <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a> of type <a class="xref" href="CSharpToJavaScript.APIs.JS.Text.html">Text</a>,<br><a class="xref" href="CSharpToJavaScript.APIs.JS.Comment.html">Comment</a>, or <a class="xref" href="CSharpToJavaScript.APIs.JS.CDATASection.html">CDATASection</a>, then offset is the number of<br>characters from the start of <strong>reference node</strong>. For other <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a><br>types, offset is the number of child nodes between the start of the <strong>reference</strong><strong><br></strong><strong>node</strong>.</p>
 <p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Range/comparePoint"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Range/comparePoint</a></p>
 </div>
@@ -592,7 +592,7 @@ public class Range : AbstractRange</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None ({{jsxref(&amp;quot;undefined&amp;quot;)}}).</p>
+    <dd><p>None (<see cref="!:undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -603,7 +603,7 @@ public class Range : AbstractRange</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Range_DeleteContents_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>Unlike {{ domxref(&amp;quot;Range.extractContents()&amp;quot;) }}, this method does not return a<br><see cref="!:&amp;quot;DocumentFragment&amp;quot;"></see> containing the deleted content.</p>
+  <div class="markdown level1 remarks"><p>Unlike {{ domxref(&amp;quot;Range.extractContents()&amp;quot;) }}, this method does not return a<br><a class="xref" href="CSharpToJavaScript.APIs.JS.DocumentFragment.html">DocumentFragment</a> containing the deleted content.</p>
 <p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Range/deleteContents"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Range/deleteContents</a></p>
 </div>
@@ -618,7 +618,7 @@ public class Range : AbstractRange</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>Range.detach()</code></strong> method does nothing. It used to<br>disable the <see cref="!:&amp;quot;Range&amp;quot;"></see> object and enable the browser to release associated<br>resources. The method has been kept for compatibility.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>Range.detach()</code></strong> method does nothing. It used to<br>disable the <a class="xref" href="CSharpToJavaScript.APIs.JS.Range.html">Range</a> object and enable the browser to release associated<br>resources. The method has been kept for compatibility.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -630,7 +630,7 @@ public class Range : AbstractRange</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None ({{jsxref(&amp;quot;undefined&amp;quot;)}}).</p>
+    <dd><p>None (<see cref="!:undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -678,7 +678,7 @@ public class Range : AbstractRange</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Range_ExtractContents_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>Event listeners added using DOM Events are not retained during extraction. HTML<br>attribute events are retained or duplicated as they are for the<br><see cref="!:&amp;quot;NodeCloneNode&amp;quot;"></see> method. HTML <code>id</code> attributes are also cloned,<br>which can lead to an invalid document if a partially-selected node is extracted and<br>appended to the document.</p><p>Partially selected nodes are cloned to include the parent tags necessary to make the<br>document fragment valid.</p>
+  <div class="markdown level1 remarks"><p>Event listeners added using DOM Events are not retained during extraction. HTML<br>attribute events are retained or duplicated as they are for the<br><see cref="!:NodeCloneNode"></see> method. HTML <code>id</code> attributes are also cloned,<br>which can lead to an invalid document if a partially-selected node is extracted and<br>appended to the document.</p><p>Partially selected nodes are cloned to include the parent tags necessary to make the<br>document fragment valid.</p>
 <p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Range/extractContents"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Range/extractContents</a></p>
 </div>
@@ -693,7 +693,7 @@ public class Range : AbstractRange</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>Range.insertNode()</code></strong> method inserts a node at the start<br>of the <see cref="!:&amp;quot;Range&amp;quot;"></see>.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>Range.insertNode()</code></strong> method inserts a node at the start<br>of the <a class="xref" href="CSharpToJavaScript.APIs.JS.Range.html">Range</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -710,7 +710,7 @@ public class Range : AbstractRange</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None ({{jsxref(&amp;quot;undefined&amp;quot;)}}).</p>
+    <dd><p>None (<see cref="!:undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -721,7 +721,7 @@ public class Range : AbstractRange</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Range_InsertNode_CSharpToJavaScript_APIs_JS_Node__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>The new node is inserted at the start boundary point of the <code>Range</code>. If the<br>new node is to be added to a text <see cref="!:&amp;quot;Node&amp;quot;"></see>, that <code>Node</code> is split<br>at the insertion point, and the insertion occurs between the two text nodes.</p><p>If the new node is a document fragment, the children of the document fragment are<br>inserted instead.</p>
+  <div class="markdown level1 remarks"><p>The new node is inserted at the start boundary point of the <code>Range</code>. If the<br>new node is to be added to a text <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a>, that <code>Node</code> is split<br>at the insertion point, and the insertion occurs between the two text nodes.</p><p>If the new node is a document fragment, the children of the document fragment are<br>inserted instead.</p>
 <p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Range/insertNode"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Range/insertNode</a></p>
 </div>
@@ -736,7 +736,7 @@ public class Range : AbstractRange</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>Range.intersectsNode()</code></strong> method returns a boolean<br>indicating whether the given <see cref="!:&amp;quot;Node&amp;quot;"></see> intersects the <see cref="!:&amp;quot;Node&amp;quot;"></see>.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>Range.intersectsNode()</code></strong> method returns a boolean<br>indicating whether the given <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a> intersects the <a class="xref" href="CSharpToJavaScript.APIs.JS.Range.html">Range</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -778,7 +778,7 @@ public class Range : AbstractRange</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>Range.isPointInRange()</code></strong> method returns a boolean<br>indicating whether the given point is in the <see cref="!:&amp;quot;Range&amp;quot;"></see>. It returns<br><code>true</code> if the point (cursor position) at <code>offset</code> within<br><code>ReferenceNode</code> is within this range.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>Range.isPointInRange()</code></strong> method returns a boolean<br>indicating whether the given point is in the <a class="xref" href="CSharpToJavaScript.APIs.JS.Range.html">Range</a>. It returns<br><code>true</code> if the point (cursor position) at <code>offset</code> within<br><code>ReferenceNode</code> is within this range.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -822,7 +822,7 @@ public class Range : AbstractRange</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>Range.selectNode()</code></strong> method sets the<br><see cref="!:&amp;quot;Range&amp;quot;"></see> to contain the <see cref="!:&amp;quot;Range&amp;quot;"></see> and its contents. The parent<br><see cref="!:&amp;quot;Node&amp;quot;"></see> of the start and end of the <see cref="!:&amp;quot;Node&amp;quot;"></see> will be the same as<br>the parent of the <strong>referenceNode</strong>.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>Range.selectNode()</code></strong> method sets the<br><a class="xref" href="CSharpToJavaScript.APIs.JS.Range.html">Range</a> to contain the <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a> and its contents. The parent<br><a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a> of the start and end of the <a class="xref" href="CSharpToJavaScript.APIs.JS.Range.html">Range</a> will be the same as<br>the parent of the <strong>referenceNode</strong>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -839,7 +839,7 @@ public class Range : AbstractRange</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None ({{jsxref(&amp;quot;undefined&amp;quot;)}}).</p>
+    <dd><p>None (<see cref="!:undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -864,7 +864,7 @@ public class Range : AbstractRange</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>Range.selectNodeContents()</code></strong> method sets the <see cref="!:&amp;quot;Range&amp;quot;"></see> to contain the contents of a <see cref="!:&amp;quot;Range&amp;quot;"></see>.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>Range.selectNodeContents()</code></strong> method sets the <a class="xref" href="CSharpToJavaScript.APIs.JS.Range.html">Range</a> to contain the contents of a <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -881,7 +881,7 @@ public class Range : AbstractRange</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None ({{jsxref(&amp;quot;undefined&amp;quot;)}}).</p>
+    <dd><p>None (<see cref="!:undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -926,7 +926,7 @@ public class Range : AbstractRange</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None ({{jsxref(&amp;quot;undefined&amp;quot;)}}).</p>
+    <dd><p>None (<see cref="!:undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -951,7 +951,7 @@ public class Range : AbstractRange</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>Range.setEndAfter()</code></strong> method sets the end position of a<br><see cref="!:&amp;quot;Range&amp;quot;"></see> relative to another <see cref="!:&amp;quot;Range&amp;quot;"></see>. The parent<br><code>Node</code> of end of the <code>Range</code> will be the same as that for the<br><code>referenceNode</code>.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>Range.setEndAfter()</code></strong> method sets the end position of a<br><a class="xref" href="CSharpToJavaScript.APIs.JS.Range.html">Range</a> relative to another <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a>. The parent<br><code>Node</code> of end of the <code>Range</code> will be the same as that for the<br><code>referenceNode</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -968,7 +968,7 @@ public class Range : AbstractRange</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None ({{jsxref(&amp;quot;undefined&amp;quot;)}}).</p>
+    <dd><p>None (<see cref="!:undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -993,7 +993,7 @@ public class Range : AbstractRange</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>Range.setEndBefore()</code></strong> method sets the end position of<br>a <code>Range</code> relative to another <see cref="!:&amp;quot;Node&amp;quot;"></see>. The parent<br><code>Node</code> of end of the <code>Range</code> will be the same as that for the<br><code>referenceNode</code>.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>Range.setEndBefore()</code></strong> method sets the end position of<br>a <code>Range</code> relative to another <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a>. The parent<br><code>Node</code> of end of the <code>Range</code> will be the same as that for the<br><code>referenceNode</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1010,7 +1010,7 @@ public class Range : AbstractRange</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None ({{jsxref(&amp;quot;undefined&amp;quot;)}}).</p>
+    <dd><p>None (<see cref="!:undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -1054,7 +1054,7 @@ public class Range : AbstractRange</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None ({{jsxref(&amp;quot;undefined&amp;quot;)}}).</p>
+    <dd><p>None (<see cref="!:undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -1065,7 +1065,7 @@ public class Range : AbstractRange</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Range_SetStart_CSharpToJavaScript_APIs_JS_Node_System_UInt64__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>If the <code>startNode</code> is a <see cref="!:&amp;quot;Node&amp;quot;"></see> of type <see cref="!:&amp;quot;Node&amp;quot;"></see>,<br><see cref="!:&amp;quot;Comment&amp;quot;"></see>, or <see cref="!:&amp;quot;Comment&amp;quot;"></see>, then <code>startOffset</code> is<br>the number of characters from the start of <code>startNode</code>. For other<br><code>Node</code> types, <code>startOffset</code> is the number of child nodes between<br>the start of the <code>startNode</code>.</p><p>Setting the start point below (lower in the document) the end point will result in a<br>collapsed range with the start and end points both set to the specified start position.</p>
+  <div class="markdown level1 remarks"><p>If the <code>startNode</code> is a <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a> of type <a class="xref" href="CSharpToJavaScript.APIs.JS.Text.html">Text</a>,<br><a class="xref" href="CSharpToJavaScript.APIs.JS.Comment.html">Comment</a>, or <see cref="!:CDataSection"></see>, then <code>startOffset</code> is<br>the number of characters from the start of <code>startNode</code>. For other<br><code>Node</code> types, <code>startOffset</code> is the number of child nodes between<br>the start of the <code>startNode</code>.</p><p>Setting the start point below (lower in the document) the end point will result in a<br>collapsed range with the start and end points both set to the specified start position.</p>
 <p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Range/setStart"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Range/setStart</a></p>
 </div>
@@ -1080,7 +1080,7 @@ public class Range : AbstractRange</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>Range.setStartAfter()</code></strong> method sets the start position<br>of a <see cref="!:&amp;quot;Range&amp;quot;"></see> relative to a <see cref="!:&amp;quot;Range&amp;quot;"></see>. The parent<br><see cref="!:&amp;quot;Node&amp;quot;"></see> of the start of the <see cref="!:&amp;quot;Node&amp;quot;"></see> will be the same as that<br>for the <code>referenceNode</code>.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>Range.setStartAfter()</code></strong> method sets the start position<br>of a <a class="xref" href="CSharpToJavaScript.APIs.JS.Range.html">Range</a> relative to a <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a>. The parent<br><a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a> of the start of the <a class="xref" href="CSharpToJavaScript.APIs.JS.Range.html">Range</a> will be the same as that<br>for the <code>referenceNode</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1097,7 +1097,7 @@ public class Range : AbstractRange</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None ({{jsxref(&amp;quot;undefined&amp;quot;)}}).</p>
+    <dd><p>None (<see cref="!:undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -1122,7 +1122,7 @@ public class Range : AbstractRange</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>Range.setStartBefore()</code></strong> method sets the start position<br>of a <see cref="!:&amp;quot;Range&amp;quot;"></see> relative to another <see cref="!:&amp;quot;Range&amp;quot;"></see>. The parent<br><see cref="!:&amp;quot;Node&amp;quot;"></see> of the start of the <see cref="!:&amp;quot;Node&amp;quot;"></see> will be the same as that<br>for the <code>referenceNode</code>.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>Range.setStartBefore()</code></strong> method sets the start position<br>of a <a class="xref" href="CSharpToJavaScript.APIs.JS.Range.html">Range</a> relative to another <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a>. The parent<br><a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a> of the start of the <a class="xref" href="CSharpToJavaScript.APIs.JS.Range.html">Range</a> will be the same as that<br>for the <code>referenceNode</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1139,7 +1139,7 @@ public class Range : AbstractRange</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None ({{jsxref(&amp;quot;undefined&amp;quot;)}}).</p>
+    <dd><p>None (<see cref="!:undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -1181,7 +1181,7 @@ public class Range : AbstractRange</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None ({{jsxref(&amp;quot;undefined&amp;quot;)}}).</p>
+    <dd><p>None (<see cref="!:undefined"></see>).</p>
 </dd>
   </dl>
 

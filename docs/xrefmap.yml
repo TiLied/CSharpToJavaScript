@@ -3462,6 +3462,24 @@ references:
   fullName.vb: CSharpToJavaScript.APIs.JS.Date.New()
   nameWithType: Date.Date()
   nameWithType.vb: Date.New()
+- uid: CSharpToJavaScript.APIs.JS.Date.#ctor(System.Single[])
+  name: Date(params float[])
+  href: api/CSharpToJavaScript.APIs.JS.Date.html#CSharpToJavaScript_APIs_JS_Date__ctor_System_Single___
+  commentId: M:CSharpToJavaScript.APIs.JS.Date.#ctor(System.Single[])
+  name.vb: New(ParamArray Single())
+  fullName: CSharpToJavaScript.APIs.JS.Date.Date(params float[])
+  fullName.vb: CSharpToJavaScript.APIs.JS.Date.New(ParamArray Single())
+  nameWithType: Date.Date(params float[])
+  nameWithType.vb: Date.New(ParamArray Single())
+- uid: CSharpToJavaScript.APIs.JS.Date.#ctor(System.String)
+  name: Date(string)
+  href: api/CSharpToJavaScript.APIs.JS.Date.html#CSharpToJavaScript_APIs_JS_Date__ctor_System_String_
+  commentId: M:CSharpToJavaScript.APIs.JS.Date.#ctor(System.String)
+  name.vb: New(String)
+  fullName: CSharpToJavaScript.APIs.JS.Date.Date(string)
+  fullName.vb: CSharpToJavaScript.APIs.JS.Date.New(String)
+  nameWithType: Date.Date(string)
+  nameWithType.vb: Date.New(String)
 - uid: CSharpToJavaScript.APIs.JS.Date.#ctor*
   name: Date
   href: api/CSharpToJavaScript.APIs.JS.Date.html#CSharpToJavaScript_APIs_JS_Date__ctor_
@@ -3485,19 +3503,673 @@ references:
   isSpec: "True"
   fullName: CSharpToJavaScript.APIs.JS.Date.Now
   nameWithType: Date.Now
-- uid: CSharpToJavaScript.APIs.JS.Date.ToISOString
-  name: ToISOString()
-  href: api/CSharpToJavaScript.APIs.JS.Date.html#CSharpToJavaScript_APIs_JS_Date_ToISOString
-  commentId: M:CSharpToJavaScript.APIs.JS.Date.ToISOString
-  fullName: CSharpToJavaScript.APIs.JS.Date.ToISOString()
-  nameWithType: Date.ToISOString()
-- uid: CSharpToJavaScript.APIs.JS.Date.ToISOString*
-  name: ToISOString
-  href: api/CSharpToJavaScript.APIs.JS.Date.html#CSharpToJavaScript_APIs_JS_Date_ToISOString_
-  commentId: Overload:CSharpToJavaScript.APIs.JS.Date.ToISOString
+- uid: CSharpToJavaScript.APIs.JS.Date.Parse(System.String)
+  name: Parse(string)
+  href: api/CSharpToJavaScript.APIs.JS.Date.html#CSharpToJavaScript_APIs_JS_Date_Parse_System_String_
+  commentId: M:CSharpToJavaScript.APIs.JS.Date.Parse(System.String)
+  name.vb: Parse(String)
+  fullName: CSharpToJavaScript.APIs.JS.Date.Parse(string)
+  fullName.vb: CSharpToJavaScript.APIs.JS.Date.Parse(String)
+  nameWithType: Date.Parse(string)
+  nameWithType.vb: Date.Parse(String)
+- uid: CSharpToJavaScript.APIs.JS.Date.Parse*
+  name: Parse
+  href: api/CSharpToJavaScript.APIs.JS.Date.html#CSharpToJavaScript_APIs_JS_Date_Parse_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Date.Parse
   isSpec: "True"
-  fullName: CSharpToJavaScript.APIs.JS.Date.ToISOString
-  nameWithType: Date.ToISOString
+  fullName: CSharpToJavaScript.APIs.JS.Date.Parse
+  nameWithType: Date.Parse
+- uid: CSharpToJavaScript.APIs.JS.Date.Prototype
+  name: Prototype
+  href: api/CSharpToJavaScript.APIs.JS.Date.html#CSharpToJavaScript_APIs_JS_Date_Prototype
+  commentId: P:CSharpToJavaScript.APIs.JS.Date.Prototype
+  fullName: CSharpToJavaScript.APIs.JS.Date.Prototype
+  nameWithType: Date.Prototype
+- uid: CSharpToJavaScript.APIs.JS.Date.Prototype*
+  name: Prototype
+  href: api/CSharpToJavaScript.APIs.JS.Date.html#CSharpToJavaScript_APIs_JS_Date_Prototype_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Date.Prototype
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Date.Prototype
+  nameWithType: Date.Prototype
+- uid: CSharpToJavaScript.APIs.JS.Date.UTC(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)
+  name: UTC(float, float, float, float, float, float, float)
+  href: api/CSharpToJavaScript.APIs.JS.Date.html#CSharpToJavaScript_APIs_JS_Date_UTC_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_
+  commentId: M:CSharpToJavaScript.APIs.JS.Date.UTC(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)
+  name.vb: UTC(Single, Single, Single, Single, Single, Single, Single)
+  fullName: CSharpToJavaScript.APIs.JS.Date.UTC(float, float, float, float, float, float, float)
+  fullName.vb: CSharpToJavaScript.APIs.JS.Date.UTC(Single, Single, Single, Single, Single, Single, Single)
+  nameWithType: Date.UTC(float, float, float, float, float, float, float)
+  nameWithType.vb: Date.UTC(Single, Single, Single, Single, Single, Single, Single)
+- uid: CSharpToJavaScript.APIs.JS.Date.UTC*
+  name: UTC
+  href: api/CSharpToJavaScript.APIs.JS.Date.html#CSharpToJavaScript_APIs_JS_Date_UTC_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Date.UTC
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Date.UTC
+  nameWithType: Date.UTC
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype
+  name: DatePrototype
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html
+  commentId: T:CSharpToJavaScript.APIs.JS.DatePrototype
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype
+  nameWithType: DatePrototype
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.GetDate
+  name: GetDate()
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_GetDate
+  commentId: M:CSharpToJavaScript.APIs.JS.DatePrototype.GetDate
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.GetDate()
+  nameWithType: DatePrototype.GetDate()
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.GetDate*
+  name: GetDate
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_GetDate_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.DatePrototype.GetDate
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.GetDate
+  nameWithType: DatePrototype.GetDate
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.GetDay
+  name: GetDay()
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_GetDay
+  commentId: M:CSharpToJavaScript.APIs.JS.DatePrototype.GetDay
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.GetDay()
+  nameWithType: DatePrototype.GetDay()
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.GetDay*
+  name: GetDay
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_GetDay_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.DatePrototype.GetDay
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.GetDay
+  nameWithType: DatePrototype.GetDay
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.GetFullYear
+  name: GetFullYear()
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_GetFullYear
+  commentId: M:CSharpToJavaScript.APIs.JS.DatePrototype.GetFullYear
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.GetFullYear()
+  nameWithType: DatePrototype.GetFullYear()
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.GetFullYear*
+  name: GetFullYear
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_GetFullYear_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.DatePrototype.GetFullYear
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.GetFullYear
+  nameWithType: DatePrototype.GetFullYear
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.GetHours
+  name: GetHours()
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_GetHours
+  commentId: M:CSharpToJavaScript.APIs.JS.DatePrototype.GetHours
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.GetHours()
+  nameWithType: DatePrototype.GetHours()
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.GetHours*
+  name: GetHours
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_GetHours_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.DatePrototype.GetHours
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.GetHours
+  nameWithType: DatePrototype.GetHours
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.GetMilliseconds
+  name: GetMilliseconds()
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_GetMilliseconds
+  commentId: M:CSharpToJavaScript.APIs.JS.DatePrototype.GetMilliseconds
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.GetMilliseconds()
+  nameWithType: DatePrototype.GetMilliseconds()
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.GetMilliseconds*
+  name: GetMilliseconds
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_GetMilliseconds_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.DatePrototype.GetMilliseconds
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.GetMilliseconds
+  nameWithType: DatePrototype.GetMilliseconds
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.GetMinutes
+  name: GetMinutes()
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_GetMinutes
+  commentId: M:CSharpToJavaScript.APIs.JS.DatePrototype.GetMinutes
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.GetMinutes()
+  nameWithType: DatePrototype.GetMinutes()
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.GetMinutes*
+  name: GetMinutes
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_GetMinutes_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.DatePrototype.GetMinutes
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.GetMinutes
+  nameWithType: DatePrototype.GetMinutes
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.GetMonth
+  name: GetMonth()
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_GetMonth
+  commentId: M:CSharpToJavaScript.APIs.JS.DatePrototype.GetMonth
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.GetMonth()
+  nameWithType: DatePrototype.GetMonth()
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.GetMonth*
+  name: GetMonth
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_GetMonth_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.DatePrototype.GetMonth
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.GetMonth
+  nameWithType: DatePrototype.GetMonth
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.GetSeconds
+  name: GetSeconds()
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_GetSeconds
+  commentId: M:CSharpToJavaScript.APIs.JS.DatePrototype.GetSeconds
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.GetSeconds()
+  nameWithType: DatePrototype.GetSeconds()
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.GetSeconds*
+  name: GetSeconds
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_GetSeconds_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.DatePrototype.GetSeconds
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.GetSeconds
+  nameWithType: DatePrototype.GetSeconds
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.GetTime
+  name: GetTime()
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_GetTime
+  commentId: M:CSharpToJavaScript.APIs.JS.DatePrototype.GetTime
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.GetTime()
+  nameWithType: DatePrototype.GetTime()
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.GetTime*
+  name: GetTime
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_GetTime_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.DatePrototype.GetTime
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.GetTime
+  nameWithType: DatePrototype.GetTime
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.GetTimezoneOffset
+  name: GetTimezoneOffset()
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_GetTimezoneOffset
+  commentId: M:CSharpToJavaScript.APIs.JS.DatePrototype.GetTimezoneOffset
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.GetTimezoneOffset()
+  nameWithType: DatePrototype.GetTimezoneOffset()
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.GetTimezoneOffset*
+  name: GetTimezoneOffset
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_GetTimezoneOffset_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.DatePrototype.GetTimezoneOffset
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.GetTimezoneOffset
+  nameWithType: DatePrototype.GetTimezoneOffset
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.GetUTCDate
+  name: GetUTCDate()
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_GetUTCDate
+  commentId: M:CSharpToJavaScript.APIs.JS.DatePrototype.GetUTCDate
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.GetUTCDate()
+  nameWithType: DatePrototype.GetUTCDate()
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.GetUTCDate*
+  name: GetUTCDate
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_GetUTCDate_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.DatePrototype.GetUTCDate
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.GetUTCDate
+  nameWithType: DatePrototype.GetUTCDate
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.GetUTCDay
+  name: GetUTCDay()
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_GetUTCDay
+  commentId: M:CSharpToJavaScript.APIs.JS.DatePrototype.GetUTCDay
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.GetUTCDay()
+  nameWithType: DatePrototype.GetUTCDay()
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.GetUTCDay*
+  name: GetUTCDay
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_GetUTCDay_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.DatePrototype.GetUTCDay
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.GetUTCDay
+  nameWithType: DatePrototype.GetUTCDay
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.GetUTCFullYear
+  name: GetUTCFullYear()
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_GetUTCFullYear
+  commentId: M:CSharpToJavaScript.APIs.JS.DatePrototype.GetUTCFullYear
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.GetUTCFullYear()
+  nameWithType: DatePrototype.GetUTCFullYear()
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.GetUTCFullYear*
+  name: GetUTCFullYear
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_GetUTCFullYear_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.DatePrototype.GetUTCFullYear
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.GetUTCFullYear
+  nameWithType: DatePrototype.GetUTCFullYear
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.GetUTCHours
+  name: GetUTCHours()
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_GetUTCHours
+  commentId: M:CSharpToJavaScript.APIs.JS.DatePrototype.GetUTCHours
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.GetUTCHours()
+  nameWithType: DatePrototype.GetUTCHours()
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.GetUTCHours*
+  name: GetUTCHours
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_GetUTCHours_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.DatePrototype.GetUTCHours
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.GetUTCHours
+  nameWithType: DatePrototype.GetUTCHours
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.GetUTCMilliseconds
+  name: GetUTCMilliseconds()
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_GetUTCMilliseconds
+  commentId: M:CSharpToJavaScript.APIs.JS.DatePrototype.GetUTCMilliseconds
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.GetUTCMilliseconds()
+  nameWithType: DatePrototype.GetUTCMilliseconds()
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.GetUTCMilliseconds*
+  name: GetUTCMilliseconds
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_GetUTCMilliseconds_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.DatePrototype.GetUTCMilliseconds
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.GetUTCMilliseconds
+  nameWithType: DatePrototype.GetUTCMilliseconds
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.GetUTCMinutes
+  name: GetUTCMinutes()
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_GetUTCMinutes
+  commentId: M:CSharpToJavaScript.APIs.JS.DatePrototype.GetUTCMinutes
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.GetUTCMinutes()
+  nameWithType: DatePrototype.GetUTCMinutes()
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.GetUTCMinutes*
+  name: GetUTCMinutes
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_GetUTCMinutes_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.DatePrototype.GetUTCMinutes
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.GetUTCMinutes
+  nameWithType: DatePrototype.GetUTCMinutes
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.GetUTCMonth
+  name: GetUTCMonth()
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_GetUTCMonth
+  commentId: M:CSharpToJavaScript.APIs.JS.DatePrototype.GetUTCMonth
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.GetUTCMonth()
+  nameWithType: DatePrototype.GetUTCMonth()
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.GetUTCMonth*
+  name: GetUTCMonth
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_GetUTCMonth_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.DatePrototype.GetUTCMonth
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.GetUTCMonth
+  nameWithType: DatePrototype.GetUTCMonth
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.GetUTCSeconds
+  name: GetUTCSeconds()
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_GetUTCSeconds
+  commentId: M:CSharpToJavaScript.APIs.JS.DatePrototype.GetUTCSeconds
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.GetUTCSeconds()
+  nameWithType: DatePrototype.GetUTCSeconds()
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.GetUTCSeconds*
+  name: GetUTCSeconds
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_GetUTCSeconds_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.DatePrototype.GetUTCSeconds
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.GetUTCSeconds
+  nameWithType: DatePrototype.GetUTCSeconds
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.SetDate(System.Single)
+  name: SetDate(float)
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_SetDate_System_Single_
+  commentId: M:CSharpToJavaScript.APIs.JS.DatePrototype.SetDate(System.Single)
+  name.vb: SetDate(Single)
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.SetDate(float)
+  fullName.vb: CSharpToJavaScript.APIs.JS.DatePrototype.SetDate(Single)
+  nameWithType: DatePrototype.SetDate(float)
+  nameWithType.vb: DatePrototype.SetDate(Single)
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.SetDate*
+  name: SetDate
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_SetDate_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.DatePrototype.SetDate
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.SetDate
+  nameWithType: DatePrototype.SetDate
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.SetFullYear(System.Single,System.Nullable{System.Single},System.Nullable{System.Single})
+  name: SetFullYear(float, float?, float?)
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_SetFullYear_System_Single_System_Nullable_System_Single__System_Nullable_System_Single__
+  commentId: M:CSharpToJavaScript.APIs.JS.DatePrototype.SetFullYear(System.Single,System.Nullable{System.Single},System.Nullable{System.Single})
+  name.vb: SetFullYear(Single, Single?, Single?)
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.SetFullYear(float, float?, float?)
+  fullName.vb: CSharpToJavaScript.APIs.JS.DatePrototype.SetFullYear(Single, Single?, Single?)
+  nameWithType: DatePrototype.SetFullYear(float, float?, float?)
+  nameWithType.vb: DatePrototype.SetFullYear(Single, Single?, Single?)
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.SetFullYear*
+  name: SetFullYear
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_SetFullYear_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.DatePrototype.SetFullYear
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.SetFullYear
+  nameWithType: DatePrototype.SetFullYear
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.SetHours(System.Single,System.Nullable{System.Single},System.Nullable{System.Single},System.Nullable{System.Single})
+  name: SetHours(float, float?, float?, float?)
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_SetHours_System_Single_System_Nullable_System_Single__System_Nullable_System_Single__System_Nullable_System_Single__
+  commentId: M:CSharpToJavaScript.APIs.JS.DatePrototype.SetHours(System.Single,System.Nullable{System.Single},System.Nullable{System.Single},System.Nullable{System.Single})
+  name.vb: SetHours(Single, Single?, Single?, Single?)
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.SetHours(float, float?, float?, float?)
+  fullName.vb: CSharpToJavaScript.APIs.JS.DatePrototype.SetHours(Single, Single?, Single?, Single?)
+  nameWithType: DatePrototype.SetHours(float, float?, float?, float?)
+  nameWithType.vb: DatePrototype.SetHours(Single, Single?, Single?, Single?)
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.SetHours*
+  name: SetHours
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_SetHours_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.DatePrototype.SetHours
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.SetHours
+  nameWithType: DatePrototype.SetHours
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.SetMilliseconds(System.Single)
+  name: SetMilliseconds(float)
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_SetMilliseconds_System_Single_
+  commentId: M:CSharpToJavaScript.APIs.JS.DatePrototype.SetMilliseconds(System.Single)
+  name.vb: SetMilliseconds(Single)
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.SetMilliseconds(float)
+  fullName.vb: CSharpToJavaScript.APIs.JS.DatePrototype.SetMilliseconds(Single)
+  nameWithType: DatePrototype.SetMilliseconds(float)
+  nameWithType.vb: DatePrototype.SetMilliseconds(Single)
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.SetMilliseconds*
+  name: SetMilliseconds
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_SetMilliseconds_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.DatePrototype.SetMilliseconds
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.SetMilliseconds
+  nameWithType: DatePrototype.SetMilliseconds
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.SetMinutes(System.Single,System.Nullable{System.Single},System.Nullable{System.Single})
+  name: SetMinutes(float, float?, float?)
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_SetMinutes_System_Single_System_Nullable_System_Single__System_Nullable_System_Single__
+  commentId: M:CSharpToJavaScript.APIs.JS.DatePrototype.SetMinutes(System.Single,System.Nullable{System.Single},System.Nullable{System.Single})
+  name.vb: SetMinutes(Single, Single?, Single?)
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.SetMinutes(float, float?, float?)
+  fullName.vb: CSharpToJavaScript.APIs.JS.DatePrototype.SetMinutes(Single, Single?, Single?)
+  nameWithType: DatePrototype.SetMinutes(float, float?, float?)
+  nameWithType.vb: DatePrototype.SetMinutes(Single, Single?, Single?)
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.SetMinutes*
+  name: SetMinutes
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_SetMinutes_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.DatePrototype.SetMinutes
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.SetMinutes
+  nameWithType: DatePrototype.SetMinutes
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.SetMonth(System.Single,System.Nullable{System.Single})
+  name: SetMonth(float, float?)
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_SetMonth_System_Single_System_Nullable_System_Single__
+  commentId: M:CSharpToJavaScript.APIs.JS.DatePrototype.SetMonth(System.Single,System.Nullable{System.Single})
+  name.vb: SetMonth(Single, Single?)
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.SetMonth(float, float?)
+  fullName.vb: CSharpToJavaScript.APIs.JS.DatePrototype.SetMonth(Single, Single?)
+  nameWithType: DatePrototype.SetMonth(float, float?)
+  nameWithType.vb: DatePrototype.SetMonth(Single, Single?)
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.SetMonth*
+  name: SetMonth
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_SetMonth_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.DatePrototype.SetMonth
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.SetMonth
+  nameWithType: DatePrototype.SetMonth
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.SetSeconds(System.Single,System.Nullable{System.Single})
+  name: SetSeconds(float, float?)
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_SetSeconds_System_Single_System_Nullable_System_Single__
+  commentId: M:CSharpToJavaScript.APIs.JS.DatePrototype.SetSeconds(System.Single,System.Nullable{System.Single})
+  name.vb: SetSeconds(Single, Single?)
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.SetSeconds(float, float?)
+  fullName.vb: CSharpToJavaScript.APIs.JS.DatePrototype.SetSeconds(Single, Single?)
+  nameWithType: DatePrototype.SetSeconds(float, float?)
+  nameWithType.vb: DatePrototype.SetSeconds(Single, Single?)
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.SetSeconds*
+  name: SetSeconds
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_SetSeconds_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.DatePrototype.SetSeconds
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.SetSeconds
+  nameWithType: DatePrototype.SetSeconds
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.SetTime(System.Single)
+  name: SetTime(float)
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_SetTime_System_Single_
+  commentId: M:CSharpToJavaScript.APIs.JS.DatePrototype.SetTime(System.Single)
+  name.vb: SetTime(Single)
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.SetTime(float)
+  fullName.vb: CSharpToJavaScript.APIs.JS.DatePrototype.SetTime(Single)
+  nameWithType: DatePrototype.SetTime(float)
+  nameWithType.vb: DatePrototype.SetTime(Single)
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.SetTime*
+  name: SetTime
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_SetTime_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.DatePrototype.SetTime
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.SetTime
+  nameWithType: DatePrototype.SetTime
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.SetUTCDate(System.Single)
+  name: SetUTCDate(float)
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_SetUTCDate_System_Single_
+  commentId: M:CSharpToJavaScript.APIs.JS.DatePrototype.SetUTCDate(System.Single)
+  name.vb: SetUTCDate(Single)
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.SetUTCDate(float)
+  fullName.vb: CSharpToJavaScript.APIs.JS.DatePrototype.SetUTCDate(Single)
+  nameWithType: DatePrototype.SetUTCDate(float)
+  nameWithType.vb: DatePrototype.SetUTCDate(Single)
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.SetUTCDate*
+  name: SetUTCDate
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_SetUTCDate_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.DatePrototype.SetUTCDate
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.SetUTCDate
+  nameWithType: DatePrototype.SetUTCDate
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.SetUTCFullYear(System.Single,System.Nullable{System.Single},System.Nullable{System.Single})
+  name: SetUTCFullYear(float, float?, float?)
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_SetUTCFullYear_System_Single_System_Nullable_System_Single__System_Nullable_System_Single__
+  commentId: M:CSharpToJavaScript.APIs.JS.DatePrototype.SetUTCFullYear(System.Single,System.Nullable{System.Single},System.Nullable{System.Single})
+  name.vb: SetUTCFullYear(Single, Single?, Single?)
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.SetUTCFullYear(float, float?, float?)
+  fullName.vb: CSharpToJavaScript.APIs.JS.DatePrototype.SetUTCFullYear(Single, Single?, Single?)
+  nameWithType: DatePrototype.SetUTCFullYear(float, float?, float?)
+  nameWithType.vb: DatePrototype.SetUTCFullYear(Single, Single?, Single?)
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.SetUTCFullYear*
+  name: SetUTCFullYear
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_SetUTCFullYear_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.DatePrototype.SetUTCFullYear
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.SetUTCFullYear
+  nameWithType: DatePrototype.SetUTCFullYear
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.SetUTCHours(System.Single,System.Nullable{System.Single},System.Nullable{System.Single},System.Nullable{System.Single})
+  name: SetUTCHours(float, float?, float?, float?)
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_SetUTCHours_System_Single_System_Nullable_System_Single__System_Nullable_System_Single__System_Nullable_System_Single__
+  commentId: M:CSharpToJavaScript.APIs.JS.DatePrototype.SetUTCHours(System.Single,System.Nullable{System.Single},System.Nullable{System.Single},System.Nullable{System.Single})
+  name.vb: SetUTCHours(Single, Single?, Single?, Single?)
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.SetUTCHours(float, float?, float?, float?)
+  fullName.vb: CSharpToJavaScript.APIs.JS.DatePrototype.SetUTCHours(Single, Single?, Single?, Single?)
+  nameWithType: DatePrototype.SetUTCHours(float, float?, float?, float?)
+  nameWithType.vb: DatePrototype.SetUTCHours(Single, Single?, Single?, Single?)
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.SetUTCHours*
+  name: SetUTCHours
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_SetUTCHours_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.DatePrototype.SetUTCHours
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.SetUTCHours
+  nameWithType: DatePrototype.SetUTCHours
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.SetUTCMilliseconds(System.Single)
+  name: SetUTCMilliseconds(float)
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_SetUTCMilliseconds_System_Single_
+  commentId: M:CSharpToJavaScript.APIs.JS.DatePrototype.SetUTCMilliseconds(System.Single)
+  name.vb: SetUTCMilliseconds(Single)
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.SetUTCMilliseconds(float)
+  fullName.vb: CSharpToJavaScript.APIs.JS.DatePrototype.SetUTCMilliseconds(Single)
+  nameWithType: DatePrototype.SetUTCMilliseconds(float)
+  nameWithType.vb: DatePrototype.SetUTCMilliseconds(Single)
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.SetUTCMilliseconds*
+  name: SetUTCMilliseconds
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_SetUTCMilliseconds_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.DatePrototype.SetUTCMilliseconds
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.SetUTCMilliseconds
+  nameWithType: DatePrototype.SetUTCMilliseconds
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.SetUTCMinutes(System.Single,System.Nullable{System.Single},System.Nullable{System.Single})
+  name: SetUTCMinutes(float, float?, float?)
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_SetUTCMinutes_System_Single_System_Nullable_System_Single__System_Nullable_System_Single__
+  commentId: M:CSharpToJavaScript.APIs.JS.DatePrototype.SetUTCMinutes(System.Single,System.Nullable{System.Single},System.Nullable{System.Single})
+  name.vb: SetUTCMinutes(Single, Single?, Single?)
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.SetUTCMinutes(float, float?, float?)
+  fullName.vb: CSharpToJavaScript.APIs.JS.DatePrototype.SetUTCMinutes(Single, Single?, Single?)
+  nameWithType: DatePrototype.SetUTCMinutes(float, float?, float?)
+  nameWithType.vb: DatePrototype.SetUTCMinutes(Single, Single?, Single?)
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.SetUTCMinutes*
+  name: SetUTCMinutes
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_SetUTCMinutes_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.DatePrototype.SetUTCMinutes
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.SetUTCMinutes
+  nameWithType: DatePrototype.SetUTCMinutes
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.SetUTCMonth(System.Single,System.Nullable{System.Single})
+  name: SetUTCMonth(float, float?)
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_SetUTCMonth_System_Single_System_Nullable_System_Single__
+  commentId: M:CSharpToJavaScript.APIs.JS.DatePrototype.SetUTCMonth(System.Single,System.Nullable{System.Single})
+  name.vb: SetUTCMonth(Single, Single?)
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.SetUTCMonth(float, float?)
+  fullName.vb: CSharpToJavaScript.APIs.JS.DatePrototype.SetUTCMonth(Single, Single?)
+  nameWithType: DatePrototype.SetUTCMonth(float, float?)
+  nameWithType.vb: DatePrototype.SetUTCMonth(Single, Single?)
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.SetUTCMonth*
+  name: SetUTCMonth
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_SetUTCMonth_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.DatePrototype.SetUTCMonth
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.SetUTCMonth
+  nameWithType: DatePrototype.SetUTCMonth
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.SetUTCSeconds(System.Single,System.Nullable{System.Single})
+  name: SetUTCSeconds(float, float?)
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_SetUTCSeconds_System_Single_System_Nullable_System_Single__
+  commentId: M:CSharpToJavaScript.APIs.JS.DatePrototype.SetUTCSeconds(System.Single,System.Nullable{System.Single})
+  name.vb: SetUTCSeconds(Single, Single?)
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.SetUTCSeconds(float, float?)
+  fullName.vb: CSharpToJavaScript.APIs.JS.DatePrototype.SetUTCSeconds(Single, Single?)
+  nameWithType: DatePrototype.SetUTCSeconds(float, float?)
+  nameWithType.vb: DatePrototype.SetUTCSeconds(Single, Single?)
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.SetUTCSeconds*
+  name: SetUTCSeconds
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_SetUTCSeconds_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.DatePrototype.SetUTCSeconds
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.SetUTCSeconds
+  nameWithType: DatePrototype.SetUTCSeconds
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.ToDateString
+  name: ToDateString()
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_ToDateString
+  commentId: M:CSharpToJavaScript.APIs.JS.DatePrototype.ToDateString
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.ToDateString()
+  nameWithType: DatePrototype.ToDateString()
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.ToDateString*
+  name: ToDateString
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_ToDateString_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.DatePrototype.ToDateString
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.ToDateString
+  nameWithType: DatePrototype.ToDateString
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.ToISOString
+  name: ToISOString()
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_ToISOString
+  commentId: M:CSharpToJavaScript.APIs.JS.DatePrototype.ToISOString
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.ToISOString()
+  nameWithType: DatePrototype.ToISOString()
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.ToISOString*
+  name: ToISOString
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_ToISOString_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.DatePrototype.ToISOString
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.ToISOString
+  nameWithType: DatePrototype.ToISOString
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.ToJSON(System.Object)
+  name: ToJSON(dynamic)
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_ToJSON_System_Object_
+  commentId: M:CSharpToJavaScript.APIs.JS.DatePrototype.ToJSON(System.Object)
+  name.vb: ToJSON(Object)
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.ToJSON(dynamic)
+  fullName.vb: CSharpToJavaScript.APIs.JS.DatePrototype.ToJSON(Object)
+  nameWithType: DatePrototype.ToJSON(dynamic)
+  nameWithType.vb: DatePrototype.ToJSON(Object)
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.ToJSON*
+  name: ToJSON
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_ToJSON_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.DatePrototype.ToJSON
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.ToJSON
+  nameWithType: DatePrototype.ToJSON
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.ToLocaleDateString(System.Object,System.Object)
+  name: ToLocaleDateString(dynamic?, dynamic?)
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_ToLocaleDateString_System_Object_System_Object_
+  commentId: M:CSharpToJavaScript.APIs.JS.DatePrototype.ToLocaleDateString(System.Object,System.Object)
+  name.vb: ToLocaleDateString(Object, Object)
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.ToLocaleDateString(dynamic?, dynamic?)
+  fullName.vb: CSharpToJavaScript.APIs.JS.DatePrototype.ToLocaleDateString(Object, Object)
+  nameWithType: DatePrototype.ToLocaleDateString(dynamic?, dynamic?)
+  nameWithType.vb: DatePrototype.ToLocaleDateString(Object, Object)
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.ToLocaleDateString*
+  name: ToLocaleDateString
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_ToLocaleDateString_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.DatePrototype.ToLocaleDateString
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.ToLocaleDateString
+  nameWithType: DatePrototype.ToLocaleDateString
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.ToLocaleString(System.Object,System.Object)
+  name: ToLocaleString(dynamic?, dynamic?)
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_ToLocaleString_System_Object_System_Object_
+  commentId: M:CSharpToJavaScript.APIs.JS.DatePrototype.ToLocaleString(System.Object,System.Object)
+  name.vb: ToLocaleString(Object, Object)
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.ToLocaleString(dynamic?, dynamic?)
+  fullName.vb: CSharpToJavaScript.APIs.JS.DatePrototype.ToLocaleString(Object, Object)
+  nameWithType: DatePrototype.ToLocaleString(dynamic?, dynamic?)
+  nameWithType.vb: DatePrototype.ToLocaleString(Object, Object)
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.ToLocaleString*
+  name: ToLocaleString
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_ToLocaleString_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.DatePrototype.ToLocaleString
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.ToLocaleString
+  nameWithType: DatePrototype.ToLocaleString
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.ToLocaleTimeString(System.Object,System.Object)
+  name: ToLocaleTimeString(dynamic?, dynamic?)
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_ToLocaleTimeString_System_Object_System_Object_
+  commentId: M:CSharpToJavaScript.APIs.JS.DatePrototype.ToLocaleTimeString(System.Object,System.Object)
+  name.vb: ToLocaleTimeString(Object, Object)
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.ToLocaleTimeString(dynamic?, dynamic?)
+  fullName.vb: CSharpToJavaScript.APIs.JS.DatePrototype.ToLocaleTimeString(Object, Object)
+  nameWithType: DatePrototype.ToLocaleTimeString(dynamic?, dynamic?)
+  nameWithType.vb: DatePrototype.ToLocaleTimeString(Object, Object)
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.ToLocaleTimeString*
+  name: ToLocaleTimeString
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_ToLocaleTimeString_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.DatePrototype.ToLocaleTimeString
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.ToLocaleTimeString
+  nameWithType: DatePrototype.ToLocaleTimeString
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.ToString
+  name: ToString()
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_ToString
+  commentId: M:CSharpToJavaScript.APIs.JS.DatePrototype.ToString
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.ToString()
+  nameWithType: DatePrototype.ToString()
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.ToString*
+  name: ToString
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_ToString_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.DatePrototype.ToString
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.ToString
+  nameWithType: DatePrototype.ToString
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.ToTimeString
+  name: ToTimeString()
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_ToTimeString
+  commentId: M:CSharpToJavaScript.APIs.JS.DatePrototype.ToTimeString
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.ToTimeString()
+  nameWithType: DatePrototype.ToTimeString()
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.ToTimeString*
+  name: ToTimeString
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_ToTimeString_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.DatePrototype.ToTimeString
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.ToTimeString
+  nameWithType: DatePrototype.ToTimeString
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.ToUTCString
+  name: ToUTCString()
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_ToUTCString
+  commentId: M:CSharpToJavaScript.APIs.JS.DatePrototype.ToUTCString
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.ToUTCString()
+  nameWithType: DatePrototype.ToUTCString()
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.ToUTCString*
+  name: ToUTCString
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_ToUTCString_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.DatePrototype.ToUTCString
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.ToUTCString
+  nameWithType: DatePrototype.ToUTCString
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.ValueOf
+  name: ValueOf()
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_ValueOf
+  commentId: M:CSharpToJavaScript.APIs.JS.DatePrototype.ValueOf
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.ValueOf()
+  nameWithType: DatePrototype.ValueOf()
+- uid: CSharpToJavaScript.APIs.JS.DatePrototype.ValueOf*
+  name: ValueOf
+  href: api/CSharpToJavaScript.APIs.JS.DatePrototype.html#CSharpToJavaScript_APIs_JS_DatePrototype_ValueOf_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.DatePrototype.ValueOf
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.DatePrototype.ValueOf
+  nameWithType: DatePrototype.ValueOf
 - uid: CSharpToJavaScript.APIs.JS.DedicatedWorkerGlobalScope
   name: DedicatedWorkerGlobalScope
   href: api/CSharpToJavaScript.APIs.JS.DedicatedWorkerGlobalScope.html
@@ -4947,6 +5619,25 @@ references:
   isSpec: "True"
   fullName: CSharpToJavaScript.APIs.JS.DOMTokenList.Contains
   nameWithType: DOMTokenList.Contains
+- uid: CSharpToJavaScript.APIs.JS.DOMTokenList.Item(System.Int32)
+  name: this[int]
+  href: api/CSharpToJavaScript.APIs.JS.DOMTokenList.html#CSharpToJavaScript_APIs_JS_DOMTokenList_Item_System_Int32_
+  commentId: P:CSharpToJavaScript.APIs.JS.DOMTokenList.Item(System.Int32)
+  name.vb: this[](Integer)
+  fullName: CSharpToJavaScript.APIs.JS.DOMTokenList.this[int]
+  fullName.vb: CSharpToJavaScript.APIs.JS.DOMTokenList.this[](Integer)
+  nameWithType: DOMTokenList.this[int]
+  nameWithType.vb: DOMTokenList.this[](Integer)
+- uid: CSharpToJavaScript.APIs.JS.DOMTokenList.Item*
+  name: this
+  href: api/CSharpToJavaScript.APIs.JS.DOMTokenList.html#CSharpToJavaScript_APIs_JS_DOMTokenList_Item_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.DOMTokenList.Item
+  isSpec: "True"
+  name.vb: this[]
+  fullName: CSharpToJavaScript.APIs.JS.DOMTokenList.this
+  fullName.vb: CSharpToJavaScript.APIs.JS.DOMTokenList.this[]
+  nameWithType: DOMTokenList.this
+  nameWithType.vb: DOMTokenList.this[]
 - uid: CSharpToJavaScript.APIs.JS.DOMTokenList.Length
   name: Length
   href: api/CSharpToJavaScript.APIs.JS.DOMTokenList.html#CSharpToJavaScript_APIs_JS_DOMTokenList_Length
@@ -6751,6 +7442,25 @@ references:
   isSpec: "True"
   fullName: CSharpToJavaScript.APIs.JS.FormData.Has
   nameWithType: FormData.Has
+- uid: CSharpToJavaScript.APIs.JS.FormData.Item(System.Int32)
+  name: this[int]
+  href: api/CSharpToJavaScript.APIs.JS.FormData.html#CSharpToJavaScript_APIs_JS_FormData_Item_System_Int32_
+  commentId: P:CSharpToJavaScript.APIs.JS.FormData.Item(System.Int32)
+  name.vb: this[](Integer)
+  fullName: CSharpToJavaScript.APIs.JS.FormData.this[int]
+  fullName.vb: CSharpToJavaScript.APIs.JS.FormData.this[](Integer)
+  nameWithType: FormData.this[int]
+  nameWithType.vb: FormData.this[](Integer)
+- uid: CSharpToJavaScript.APIs.JS.FormData.Item*
+  name: this
+  href: api/CSharpToJavaScript.APIs.JS.FormData.html#CSharpToJavaScript_APIs_JS_FormData_Item_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.FormData.Item
+  isSpec: "True"
+  name.vb: this[]
+  fullName: CSharpToJavaScript.APIs.JS.FormData.this
+  fullName.vb: CSharpToJavaScript.APIs.JS.FormData.this[]
+  nameWithType: FormData.this
+  nameWithType.vb: FormData.this[]
 - uid: CSharpToJavaScript.APIs.JS.FormData.Set(System.String,CSharpToJavaScript.Utils.Unsupported,System.String)
   name: Set(string, Unsupported, string)
   href: api/CSharpToJavaScript.APIs.JS.FormData.html#CSharpToJavaScript_APIs_JS_FormData_Set_System_String_CSharpToJavaScript_Utils_Unsupported_System_String_
@@ -8143,6 +8853,25 @@ references:
   isSpec: "True"
   fullName: CSharpToJavaScript.APIs.JS.Headers.Has
   nameWithType: Headers.Has
+- uid: CSharpToJavaScript.APIs.JS.Headers.Item(System.Int32)
+  name: this[int]
+  href: api/CSharpToJavaScript.APIs.JS.Headers.html#CSharpToJavaScript_APIs_JS_Headers_Item_System_Int32_
+  commentId: P:CSharpToJavaScript.APIs.JS.Headers.Item(System.Int32)
+  name.vb: this[](Integer)
+  fullName: CSharpToJavaScript.APIs.JS.Headers.this[int]
+  fullName.vb: CSharpToJavaScript.APIs.JS.Headers.this[](Integer)
+  nameWithType: Headers.this[int]
+  nameWithType.vb: Headers.this[](Integer)
+- uid: CSharpToJavaScript.APIs.JS.Headers.Item*
+  name: this
+  href: api/CSharpToJavaScript.APIs.JS.Headers.html#CSharpToJavaScript_APIs_JS_Headers_Item_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Headers.Item
+  isSpec: "True"
+  name.vb: this[]
+  fullName: CSharpToJavaScript.APIs.JS.Headers.this
+  fullName.vb: CSharpToJavaScript.APIs.JS.Headers.this[]
+  nameWithType: Headers.this
+  nameWithType.vb: Headers.this[]
 - uid: CSharpToJavaScript.APIs.JS.Headers.Set(System.String,System.String)
   name: Set(string, string)
   href: api/CSharpToJavaScript.APIs.JS.Headers.html#CSharpToJavaScript_APIs_JS_Headers_Set_System_String_System_String_
@@ -18271,15 +19000,268 @@ references:
   commentId: T:CSharpToJavaScript.APIs.JS.Math
   fullName: CSharpToJavaScript.APIs.JS.Math
   nameWithType: Math
-- uid: CSharpToJavaScript.APIs.JS.Math.Floor(System.Double)
-  name: Floor(double)
-  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Floor_System_Double_
-  commentId: M:CSharpToJavaScript.APIs.JS.Math.Floor(System.Double)
-  name.vb: Floor(Double)
-  fullName: CSharpToJavaScript.APIs.JS.Math.Floor(double)
-  fullName.vb: CSharpToJavaScript.APIs.JS.Math.Floor(Double)
-  nameWithType: Math.Floor(double)
-  nameWithType.vb: Math.Floor(Double)
+- uid: CSharpToJavaScript.APIs.JS.Math.Abs(System.Single)
+  name: Abs(float)
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Abs_System_Single_
+  commentId: M:CSharpToJavaScript.APIs.JS.Math.Abs(System.Single)
+  name.vb: Abs(Single)
+  fullName: CSharpToJavaScript.APIs.JS.Math.Abs(float)
+  fullName.vb: CSharpToJavaScript.APIs.JS.Math.Abs(Single)
+  nameWithType: Math.Abs(float)
+  nameWithType.vb: Math.Abs(Single)
+- uid: CSharpToJavaScript.APIs.JS.Math.Abs*
+  name: Abs
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Abs_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Math.Abs
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Math.Abs
+  nameWithType: Math.Abs
+- uid: CSharpToJavaScript.APIs.JS.Math.Acos(System.Single)
+  name: Acos(float)
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Acos_System_Single_
+  commentId: M:CSharpToJavaScript.APIs.JS.Math.Acos(System.Single)
+  name.vb: Acos(Single)
+  fullName: CSharpToJavaScript.APIs.JS.Math.Acos(float)
+  fullName.vb: CSharpToJavaScript.APIs.JS.Math.Acos(Single)
+  nameWithType: Math.Acos(float)
+  nameWithType.vb: Math.Acos(Single)
+- uid: CSharpToJavaScript.APIs.JS.Math.Acos*
+  name: Acos
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Acos_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Math.Acos
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Math.Acos
+  nameWithType: Math.Acos
+- uid: CSharpToJavaScript.APIs.JS.Math.Acosh(System.Single)
+  name: Acosh(float)
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Acosh_System_Single_
+  commentId: M:CSharpToJavaScript.APIs.JS.Math.Acosh(System.Single)
+  name.vb: Acosh(Single)
+  fullName: CSharpToJavaScript.APIs.JS.Math.Acosh(float)
+  fullName.vb: CSharpToJavaScript.APIs.JS.Math.Acosh(Single)
+  nameWithType: Math.Acosh(float)
+  nameWithType.vb: Math.Acosh(Single)
+- uid: CSharpToJavaScript.APIs.JS.Math.Acosh*
+  name: Acosh
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Acosh_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Math.Acosh
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Math.Acosh
+  nameWithType: Math.Acosh
+- uid: CSharpToJavaScript.APIs.JS.Math.Asin(System.Single)
+  name: Asin(float)
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Asin_System_Single_
+  commentId: M:CSharpToJavaScript.APIs.JS.Math.Asin(System.Single)
+  name.vb: Asin(Single)
+  fullName: CSharpToJavaScript.APIs.JS.Math.Asin(float)
+  fullName.vb: CSharpToJavaScript.APIs.JS.Math.Asin(Single)
+  nameWithType: Math.Asin(float)
+  nameWithType.vb: Math.Asin(Single)
+- uid: CSharpToJavaScript.APIs.JS.Math.Asin*
+  name: Asin
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Asin_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Math.Asin
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Math.Asin
+  nameWithType: Math.Asin
+- uid: CSharpToJavaScript.APIs.JS.Math.Asinh(System.Single)
+  name: Asinh(float)
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Asinh_System_Single_
+  commentId: M:CSharpToJavaScript.APIs.JS.Math.Asinh(System.Single)
+  name.vb: Asinh(Single)
+  fullName: CSharpToJavaScript.APIs.JS.Math.Asinh(float)
+  fullName.vb: CSharpToJavaScript.APIs.JS.Math.Asinh(Single)
+  nameWithType: Math.Asinh(float)
+  nameWithType.vb: Math.Asinh(Single)
+- uid: CSharpToJavaScript.APIs.JS.Math.Asinh*
+  name: Asinh
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Asinh_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Math.Asinh
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Math.Asinh
+  nameWithType: Math.Asinh
+- uid: CSharpToJavaScript.APIs.JS.Math.Atan(System.Single)
+  name: Atan(float)
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Atan_System_Single_
+  commentId: M:CSharpToJavaScript.APIs.JS.Math.Atan(System.Single)
+  name.vb: Atan(Single)
+  fullName: CSharpToJavaScript.APIs.JS.Math.Atan(float)
+  fullName.vb: CSharpToJavaScript.APIs.JS.Math.Atan(Single)
+  nameWithType: Math.Atan(float)
+  nameWithType.vb: Math.Atan(Single)
+- uid: CSharpToJavaScript.APIs.JS.Math.Atan*
+  name: Atan
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Atan_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Math.Atan
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Math.Atan
+  nameWithType: Math.Atan
+- uid: CSharpToJavaScript.APIs.JS.Math.Atan2(System.Single)
+  name: Atan2(float)
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Atan2_System_Single_
+  commentId: M:CSharpToJavaScript.APIs.JS.Math.Atan2(System.Single)
+  name.vb: Atan2(Single)
+  fullName: CSharpToJavaScript.APIs.JS.Math.Atan2(float)
+  fullName.vb: CSharpToJavaScript.APIs.JS.Math.Atan2(Single)
+  nameWithType: Math.Atan2(float)
+  nameWithType.vb: Math.Atan2(Single)
+- uid: CSharpToJavaScript.APIs.JS.Math.Atan2*
+  name: Atan2
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Atan2_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Math.Atan2
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Math.Atan2
+  nameWithType: Math.Atan2
+- uid: CSharpToJavaScript.APIs.JS.Math.Atanh(System.Single)
+  name: Atanh(float)
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Atanh_System_Single_
+  commentId: M:CSharpToJavaScript.APIs.JS.Math.Atanh(System.Single)
+  name.vb: Atanh(Single)
+  fullName: CSharpToJavaScript.APIs.JS.Math.Atanh(float)
+  fullName.vb: CSharpToJavaScript.APIs.JS.Math.Atanh(Single)
+  nameWithType: Math.Atanh(float)
+  nameWithType.vb: Math.Atanh(Single)
+- uid: CSharpToJavaScript.APIs.JS.Math.Atanh*
+  name: Atanh
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Atanh_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Math.Atanh
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Math.Atanh
+  nameWithType: Math.Atanh
+- uid: CSharpToJavaScript.APIs.JS.Math.Cbrt(System.Single)
+  name: Cbrt(float)
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Cbrt_System_Single_
+  commentId: M:CSharpToJavaScript.APIs.JS.Math.Cbrt(System.Single)
+  name.vb: Cbrt(Single)
+  fullName: CSharpToJavaScript.APIs.JS.Math.Cbrt(float)
+  fullName.vb: CSharpToJavaScript.APIs.JS.Math.Cbrt(Single)
+  nameWithType: Math.Cbrt(float)
+  nameWithType.vb: Math.Cbrt(Single)
+- uid: CSharpToJavaScript.APIs.JS.Math.Cbrt*
+  name: Cbrt
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Cbrt_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Math.Cbrt
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Math.Cbrt
+  nameWithType: Math.Cbrt
+- uid: CSharpToJavaScript.APIs.JS.Math.Ceil(System.Single)
+  name: Ceil(float)
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Ceil_System_Single_
+  commentId: M:CSharpToJavaScript.APIs.JS.Math.Ceil(System.Single)
+  name.vb: Ceil(Single)
+  fullName: CSharpToJavaScript.APIs.JS.Math.Ceil(float)
+  fullName.vb: CSharpToJavaScript.APIs.JS.Math.Ceil(Single)
+  nameWithType: Math.Ceil(float)
+  nameWithType.vb: Math.Ceil(Single)
+- uid: CSharpToJavaScript.APIs.JS.Math.Ceil*
+  name: Ceil
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Ceil_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Math.Ceil
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Math.Ceil
+  nameWithType: Math.Ceil
+- uid: CSharpToJavaScript.APIs.JS.Math.Clz32(System.Single)
+  name: Clz32(float)
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Clz32_System_Single_
+  commentId: M:CSharpToJavaScript.APIs.JS.Math.Clz32(System.Single)
+  name.vb: Clz32(Single)
+  fullName: CSharpToJavaScript.APIs.JS.Math.Clz32(float)
+  fullName.vb: CSharpToJavaScript.APIs.JS.Math.Clz32(Single)
+  nameWithType: Math.Clz32(float)
+  nameWithType.vb: Math.Clz32(Single)
+- uid: CSharpToJavaScript.APIs.JS.Math.Clz32*
+  name: Clz32
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Clz32_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Math.Clz32
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Math.Clz32
+  nameWithType: Math.Clz32
+- uid: CSharpToJavaScript.APIs.JS.Math.Cos(System.Single)
+  name: Cos(float)
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Cos_System_Single_
+  commentId: M:CSharpToJavaScript.APIs.JS.Math.Cos(System.Single)
+  name.vb: Cos(Single)
+  fullName: CSharpToJavaScript.APIs.JS.Math.Cos(float)
+  fullName.vb: CSharpToJavaScript.APIs.JS.Math.Cos(Single)
+  nameWithType: Math.Cos(float)
+  nameWithType.vb: Math.Cos(Single)
+- uid: CSharpToJavaScript.APIs.JS.Math.Cos*
+  name: Cos
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Cos_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Math.Cos
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Math.Cos
+  nameWithType: Math.Cos
+- uid: CSharpToJavaScript.APIs.JS.Math.Cosh(System.Single)
+  name: Cosh(float)
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Cosh_System_Single_
+  commentId: M:CSharpToJavaScript.APIs.JS.Math.Cosh(System.Single)
+  name.vb: Cosh(Single)
+  fullName: CSharpToJavaScript.APIs.JS.Math.Cosh(float)
+  fullName.vb: CSharpToJavaScript.APIs.JS.Math.Cosh(Single)
+  nameWithType: Math.Cosh(float)
+  nameWithType.vb: Math.Cosh(Single)
+- uid: CSharpToJavaScript.APIs.JS.Math.Cosh*
+  name: Cosh
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Cosh_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Math.Cosh
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Math.Cosh
+  nameWithType: Math.Cosh
+- uid: CSharpToJavaScript.APIs.JS.Math.E
+  name: E
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_E
+  commentId: P:CSharpToJavaScript.APIs.JS.Math.E
+  fullName: CSharpToJavaScript.APIs.JS.Math.E
+  nameWithType: Math.E
+- uid: CSharpToJavaScript.APIs.JS.Math.E*
+  name: E
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_E_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Math.E
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Math.E
+  nameWithType: Math.E
+- uid: CSharpToJavaScript.APIs.JS.Math.Exp(System.Single)
+  name: Exp(float)
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Exp_System_Single_
+  commentId: M:CSharpToJavaScript.APIs.JS.Math.Exp(System.Single)
+  name.vb: Exp(Single)
+  fullName: CSharpToJavaScript.APIs.JS.Math.Exp(float)
+  fullName.vb: CSharpToJavaScript.APIs.JS.Math.Exp(Single)
+  nameWithType: Math.Exp(float)
+  nameWithType.vb: Math.Exp(Single)
+- uid: CSharpToJavaScript.APIs.JS.Math.Exp*
+  name: Exp
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Exp_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Math.Exp
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Math.Exp
+  nameWithType: Math.Exp
+- uid: CSharpToJavaScript.APIs.JS.Math.Expm1(System.Single)
+  name: Expm1(float)
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Expm1_System_Single_
+  commentId: M:CSharpToJavaScript.APIs.JS.Math.Expm1(System.Single)
+  name.vb: Expm1(Single)
+  fullName: CSharpToJavaScript.APIs.JS.Math.Expm1(float)
+  fullName.vb: CSharpToJavaScript.APIs.JS.Math.Expm1(Single)
+  nameWithType: Math.Expm1(float)
+  nameWithType.vb: Math.Expm1(Single)
+- uid: CSharpToJavaScript.APIs.JS.Math.Expm1*
+  name: Expm1
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Expm1_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Math.Expm1
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Math.Expm1
+  nameWithType: Math.Expm1
+- uid: CSharpToJavaScript.APIs.JS.Math.Floor(System.Single)
+  name: Floor(float)
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Floor_System_Single_
+  commentId: M:CSharpToJavaScript.APIs.JS.Math.Floor(System.Single)
+  name.vb: Floor(Single)
+  fullName: CSharpToJavaScript.APIs.JS.Math.Floor(float)
+  fullName.vb: CSharpToJavaScript.APIs.JS.Math.Floor(Single)
+  nameWithType: Math.Floor(float)
+  nameWithType.vb: Math.Floor(Single)
 - uid: CSharpToJavaScript.APIs.JS.Math.Floor*
   name: Floor
   href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Floor_
@@ -18287,6 +19269,231 @@ references:
   isSpec: "True"
   fullName: CSharpToJavaScript.APIs.JS.Math.Floor
   nameWithType: Math.Floor
+- uid: CSharpToJavaScript.APIs.JS.Math.Fround(System.Single)
+  name: Fround(float)
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Fround_System_Single_
+  commentId: M:CSharpToJavaScript.APIs.JS.Math.Fround(System.Single)
+  name.vb: Fround(Single)
+  fullName: CSharpToJavaScript.APIs.JS.Math.Fround(float)
+  fullName.vb: CSharpToJavaScript.APIs.JS.Math.Fround(Single)
+  nameWithType: Math.Fround(float)
+  nameWithType.vb: Math.Fround(Single)
+- uid: CSharpToJavaScript.APIs.JS.Math.Fround*
+  name: Fround
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Fround_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Math.Fround
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Math.Fround
+  nameWithType: Math.Fround
+- uid: CSharpToJavaScript.APIs.JS.Math.Hypot(System.Single[])
+  name: Hypot(params float[])
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Hypot_System_Single___
+  commentId: M:CSharpToJavaScript.APIs.JS.Math.Hypot(System.Single[])
+  name.vb: Hypot(ParamArray Single())
+  fullName: CSharpToJavaScript.APIs.JS.Math.Hypot(params float[])
+  fullName.vb: CSharpToJavaScript.APIs.JS.Math.Hypot(ParamArray Single())
+  nameWithType: Math.Hypot(params float[])
+  nameWithType.vb: Math.Hypot(ParamArray Single())
+- uid: CSharpToJavaScript.APIs.JS.Math.Hypot*
+  name: Hypot
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Hypot_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Math.Hypot
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Math.Hypot
+  nameWithType: Math.Hypot
+- uid: CSharpToJavaScript.APIs.JS.Math.Imul(System.Single,System.Single)
+  name: Imul(float, float)
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Imul_System_Single_System_Single_
+  commentId: M:CSharpToJavaScript.APIs.JS.Math.Imul(System.Single,System.Single)
+  name.vb: Imul(Single, Single)
+  fullName: CSharpToJavaScript.APIs.JS.Math.Imul(float, float)
+  fullName.vb: CSharpToJavaScript.APIs.JS.Math.Imul(Single, Single)
+  nameWithType: Math.Imul(float, float)
+  nameWithType.vb: Math.Imul(Single, Single)
+- uid: CSharpToJavaScript.APIs.JS.Math.Imul*
+  name: Imul
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Imul_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Math.Imul
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Math.Imul
+  nameWithType: Math.Imul
+- uid: CSharpToJavaScript.APIs.JS.Math.LN10
+  name: LN10
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_LN10
+  commentId: P:CSharpToJavaScript.APIs.JS.Math.LN10
+  fullName: CSharpToJavaScript.APIs.JS.Math.LN10
+  nameWithType: Math.LN10
+- uid: CSharpToJavaScript.APIs.JS.Math.LN10*
+  name: LN10
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_LN10_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Math.LN10
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Math.LN10
+  nameWithType: Math.LN10
+- uid: CSharpToJavaScript.APIs.JS.Math.LN2
+  name: LN2
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_LN2
+  commentId: P:CSharpToJavaScript.APIs.JS.Math.LN2
+  fullName: CSharpToJavaScript.APIs.JS.Math.LN2
+  nameWithType: Math.LN2
+- uid: CSharpToJavaScript.APIs.JS.Math.LN2*
+  name: LN2
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_LN2_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Math.LN2
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Math.LN2
+  nameWithType: Math.LN2
+- uid: CSharpToJavaScript.APIs.JS.Math.Log(System.Single)
+  name: Log(float)
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Log_System_Single_
+  commentId: M:CSharpToJavaScript.APIs.JS.Math.Log(System.Single)
+  name.vb: Log(Single)
+  fullName: CSharpToJavaScript.APIs.JS.Math.Log(float)
+  fullName.vb: CSharpToJavaScript.APIs.JS.Math.Log(Single)
+  nameWithType: Math.Log(float)
+  nameWithType.vb: Math.Log(Single)
+- uid: CSharpToJavaScript.APIs.JS.Math.Log*
+  name: Log
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Log_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Math.Log
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Math.Log
+  nameWithType: Math.Log
+- uid: CSharpToJavaScript.APIs.JS.Math.Log10(System.Single)
+  name: Log10(float)
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Log10_System_Single_
+  commentId: M:CSharpToJavaScript.APIs.JS.Math.Log10(System.Single)
+  name.vb: Log10(Single)
+  fullName: CSharpToJavaScript.APIs.JS.Math.Log10(float)
+  fullName.vb: CSharpToJavaScript.APIs.JS.Math.Log10(Single)
+  nameWithType: Math.Log10(float)
+  nameWithType.vb: Math.Log10(Single)
+- uid: CSharpToJavaScript.APIs.JS.Math.Log10*
+  name: Log10
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Log10_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Math.Log10
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Math.Log10
+  nameWithType: Math.Log10
+- uid: CSharpToJavaScript.APIs.JS.Math.LOG10E
+  name: LOG10E
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_LOG10E
+  commentId: P:CSharpToJavaScript.APIs.JS.Math.LOG10E
+  fullName: CSharpToJavaScript.APIs.JS.Math.LOG10E
+  nameWithType: Math.LOG10E
+- uid: CSharpToJavaScript.APIs.JS.Math.LOG10E*
+  name: LOG10E
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_LOG10E_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Math.LOG10E
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Math.LOG10E
+  nameWithType: Math.LOG10E
+- uid: CSharpToJavaScript.APIs.JS.Math.Log1p(System.Single)
+  name: Log1p(float)
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Log1p_System_Single_
+  commentId: M:CSharpToJavaScript.APIs.JS.Math.Log1p(System.Single)
+  name.vb: Log1p(Single)
+  fullName: CSharpToJavaScript.APIs.JS.Math.Log1p(float)
+  fullName.vb: CSharpToJavaScript.APIs.JS.Math.Log1p(Single)
+  nameWithType: Math.Log1p(float)
+  nameWithType.vb: Math.Log1p(Single)
+- uid: CSharpToJavaScript.APIs.JS.Math.Log1p*
+  name: Log1p
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Log1p_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Math.Log1p
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Math.Log1p
+  nameWithType: Math.Log1p
+- uid: CSharpToJavaScript.APIs.JS.Math.Log2(System.Single)
+  name: Log2(float)
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Log2_System_Single_
+  commentId: M:CSharpToJavaScript.APIs.JS.Math.Log2(System.Single)
+  name.vb: Log2(Single)
+  fullName: CSharpToJavaScript.APIs.JS.Math.Log2(float)
+  fullName.vb: CSharpToJavaScript.APIs.JS.Math.Log2(Single)
+  nameWithType: Math.Log2(float)
+  nameWithType.vb: Math.Log2(Single)
+- uid: CSharpToJavaScript.APIs.JS.Math.Log2*
+  name: Log2
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Log2_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Math.Log2
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Math.Log2
+  nameWithType: Math.Log2
+- uid: CSharpToJavaScript.APIs.JS.Math.LOG2E
+  name: LOG2E
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_LOG2E
+  commentId: P:CSharpToJavaScript.APIs.JS.Math.LOG2E
+  fullName: CSharpToJavaScript.APIs.JS.Math.LOG2E
+  nameWithType: Math.LOG2E
+- uid: CSharpToJavaScript.APIs.JS.Math.LOG2E*
+  name: LOG2E
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_LOG2E_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Math.LOG2E
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Math.LOG2E
+  nameWithType: Math.LOG2E
+- uid: CSharpToJavaScript.APIs.JS.Math.Max(System.Single[])
+  name: Max(params float[])
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Max_System_Single___
+  commentId: M:CSharpToJavaScript.APIs.JS.Math.Max(System.Single[])
+  name.vb: Max(ParamArray Single())
+  fullName: CSharpToJavaScript.APIs.JS.Math.Max(params float[])
+  fullName.vb: CSharpToJavaScript.APIs.JS.Math.Max(ParamArray Single())
+  nameWithType: Math.Max(params float[])
+  nameWithType.vb: Math.Max(ParamArray Single())
+- uid: CSharpToJavaScript.APIs.JS.Math.Max*
+  name: Max
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Max_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Math.Max
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Math.Max
+  nameWithType: Math.Max
+- uid: CSharpToJavaScript.APIs.JS.Math.Min(System.Single[])
+  name: Min(params float[])
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Min_System_Single___
+  commentId: M:CSharpToJavaScript.APIs.JS.Math.Min(System.Single[])
+  name.vb: Min(ParamArray Single())
+  fullName: CSharpToJavaScript.APIs.JS.Math.Min(params float[])
+  fullName.vb: CSharpToJavaScript.APIs.JS.Math.Min(ParamArray Single())
+  nameWithType: Math.Min(params float[])
+  nameWithType.vb: Math.Min(ParamArray Single())
+- uid: CSharpToJavaScript.APIs.JS.Math.Min*
+  name: Min
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Min_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Math.Min
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Math.Min
+  nameWithType: Math.Min
+- uid: CSharpToJavaScript.APIs.JS.Math.PI
+  name: PI
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_PI
+  commentId: P:CSharpToJavaScript.APIs.JS.Math.PI
+  fullName: CSharpToJavaScript.APIs.JS.Math.PI
+  nameWithType: Math.PI
+- uid: CSharpToJavaScript.APIs.JS.Math.PI*
+  name: PI
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_PI_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Math.PI
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Math.PI
+  nameWithType: Math.PI
+- uid: CSharpToJavaScript.APIs.JS.Math.Pow(System.Single,System.Single)
+  name: Pow(float, float)
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Pow_System_Single_System_Single_
+  commentId: M:CSharpToJavaScript.APIs.JS.Math.Pow(System.Single,System.Single)
+  name.vb: Pow(Single, Single)
+  fullName: CSharpToJavaScript.APIs.JS.Math.Pow(float, float)
+  fullName.vb: CSharpToJavaScript.APIs.JS.Math.Pow(Single, Single)
+  nameWithType: Math.Pow(float, float)
+  nameWithType.vb: Math.Pow(Single, Single)
+- uid: CSharpToJavaScript.APIs.JS.Math.Pow*
+  name: Pow
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Pow_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Math.Pow
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Math.Pow
+  nameWithType: Math.Pow
 - uid: CSharpToJavaScript.APIs.JS.Math.Random
   name: Random()
   href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Random
@@ -18300,6 +19507,160 @@ references:
   isSpec: "True"
   fullName: CSharpToJavaScript.APIs.JS.Math.Random
   nameWithType: Math.Random
+- uid: CSharpToJavaScript.APIs.JS.Math.Round(System.Single)
+  name: Round(float)
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Round_System_Single_
+  commentId: M:CSharpToJavaScript.APIs.JS.Math.Round(System.Single)
+  name.vb: Round(Single)
+  fullName: CSharpToJavaScript.APIs.JS.Math.Round(float)
+  fullName.vb: CSharpToJavaScript.APIs.JS.Math.Round(Single)
+  nameWithType: Math.Round(float)
+  nameWithType.vb: Math.Round(Single)
+- uid: CSharpToJavaScript.APIs.JS.Math.Round*
+  name: Round
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Round_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Math.Round
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Math.Round
+  nameWithType: Math.Round
+- uid: CSharpToJavaScript.APIs.JS.Math.Sign(System.Single)
+  name: Sign(float)
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Sign_System_Single_
+  commentId: M:CSharpToJavaScript.APIs.JS.Math.Sign(System.Single)
+  name.vb: Sign(Single)
+  fullName: CSharpToJavaScript.APIs.JS.Math.Sign(float)
+  fullName.vb: CSharpToJavaScript.APIs.JS.Math.Sign(Single)
+  nameWithType: Math.Sign(float)
+  nameWithType.vb: Math.Sign(Single)
+- uid: CSharpToJavaScript.APIs.JS.Math.Sign*
+  name: Sign
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Sign_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Math.Sign
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Math.Sign
+  nameWithType: Math.Sign
+- uid: CSharpToJavaScript.APIs.JS.Math.Sin(System.Single)
+  name: Sin(float)
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Sin_System_Single_
+  commentId: M:CSharpToJavaScript.APIs.JS.Math.Sin(System.Single)
+  name.vb: Sin(Single)
+  fullName: CSharpToJavaScript.APIs.JS.Math.Sin(float)
+  fullName.vb: CSharpToJavaScript.APIs.JS.Math.Sin(Single)
+  nameWithType: Math.Sin(float)
+  nameWithType.vb: Math.Sin(Single)
+- uid: CSharpToJavaScript.APIs.JS.Math.Sin*
+  name: Sin
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Sin_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Math.Sin
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Math.Sin
+  nameWithType: Math.Sin
+- uid: CSharpToJavaScript.APIs.JS.Math.Sinh(System.Single)
+  name: Sinh(float)
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Sinh_System_Single_
+  commentId: M:CSharpToJavaScript.APIs.JS.Math.Sinh(System.Single)
+  name.vb: Sinh(Single)
+  fullName: CSharpToJavaScript.APIs.JS.Math.Sinh(float)
+  fullName.vb: CSharpToJavaScript.APIs.JS.Math.Sinh(Single)
+  nameWithType: Math.Sinh(float)
+  nameWithType.vb: Math.Sinh(Single)
+- uid: CSharpToJavaScript.APIs.JS.Math.Sinh*
+  name: Sinh
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Sinh_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Math.Sinh
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Math.Sinh
+  nameWithType: Math.Sinh
+- uid: CSharpToJavaScript.APIs.JS.Math.Sqrt(System.Single)
+  name: Sqrt(float)
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Sqrt_System_Single_
+  commentId: M:CSharpToJavaScript.APIs.JS.Math.Sqrt(System.Single)
+  name.vb: Sqrt(Single)
+  fullName: CSharpToJavaScript.APIs.JS.Math.Sqrt(float)
+  fullName.vb: CSharpToJavaScript.APIs.JS.Math.Sqrt(Single)
+  nameWithType: Math.Sqrt(float)
+  nameWithType.vb: Math.Sqrt(Single)
+- uid: CSharpToJavaScript.APIs.JS.Math.Sqrt*
+  name: Sqrt
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Sqrt_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Math.Sqrt
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Math.Sqrt
+  nameWithType: Math.Sqrt
+- uid: CSharpToJavaScript.APIs.JS.Math.SQRT1_2
+  name: SQRT1_2
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_SQRT1_2
+  commentId: P:CSharpToJavaScript.APIs.JS.Math.SQRT1_2
+  fullName: CSharpToJavaScript.APIs.JS.Math.SQRT1_2
+  nameWithType: Math.SQRT1_2
+- uid: CSharpToJavaScript.APIs.JS.Math.SQRT1_2*
+  name: SQRT1_2
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_SQRT1_2_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Math.SQRT1_2
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Math.SQRT1_2
+  nameWithType: Math.SQRT1_2
+- uid: CSharpToJavaScript.APIs.JS.Math.SQRT2
+  name: SQRT2
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_SQRT2
+  commentId: P:CSharpToJavaScript.APIs.JS.Math.SQRT2
+  fullName: CSharpToJavaScript.APIs.JS.Math.SQRT2
+  nameWithType: Math.SQRT2
+- uid: CSharpToJavaScript.APIs.JS.Math.SQRT2*
+  name: SQRT2
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_SQRT2_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Math.SQRT2
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Math.SQRT2
+  nameWithType: Math.SQRT2
+- uid: CSharpToJavaScript.APIs.JS.Math.Tan(System.Single)
+  name: Tan(float)
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Tan_System_Single_
+  commentId: M:CSharpToJavaScript.APIs.JS.Math.Tan(System.Single)
+  name.vb: Tan(Single)
+  fullName: CSharpToJavaScript.APIs.JS.Math.Tan(float)
+  fullName.vb: CSharpToJavaScript.APIs.JS.Math.Tan(Single)
+  nameWithType: Math.Tan(float)
+  nameWithType.vb: Math.Tan(Single)
+- uid: CSharpToJavaScript.APIs.JS.Math.Tan*
+  name: Tan
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Tan_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Math.Tan
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Math.Tan
+  nameWithType: Math.Tan
+- uid: CSharpToJavaScript.APIs.JS.Math.Tanh(System.Single)
+  name: Tanh(float)
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Tanh_System_Single_
+  commentId: M:CSharpToJavaScript.APIs.JS.Math.Tanh(System.Single)
+  name.vb: Tanh(Single)
+  fullName: CSharpToJavaScript.APIs.JS.Math.Tanh(float)
+  fullName.vb: CSharpToJavaScript.APIs.JS.Math.Tanh(Single)
+  nameWithType: Math.Tanh(float)
+  nameWithType.vb: Math.Tanh(Single)
+- uid: CSharpToJavaScript.APIs.JS.Math.Tanh*
+  name: Tanh
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Tanh_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Math.Tanh
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Math.Tanh
+  nameWithType: Math.Tanh
+- uid: CSharpToJavaScript.APIs.JS.Math.Trunc(System.Single)
+  name: Trunc(float)
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Trunc_System_Single_
+  commentId: M:CSharpToJavaScript.APIs.JS.Math.Trunc(System.Single)
+  name.vb: Trunc(Single)
+  fullName: CSharpToJavaScript.APIs.JS.Math.Trunc(float)
+  fullName.vb: CSharpToJavaScript.APIs.JS.Math.Trunc(Single)
+  nameWithType: Math.Trunc(float)
+  nameWithType.vb: Math.Trunc(Single)
+- uid: CSharpToJavaScript.APIs.JS.Math.Trunc*
+  name: Trunc
+  href: api/CSharpToJavaScript.APIs.JS.Math.html#CSharpToJavaScript_APIs_JS_Math_Trunc_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Math.Trunc
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Math.Trunc
+  nameWithType: Math.Trunc
 - uid: CSharpToJavaScript.APIs.JS.MediaError
   name: MediaError
   href: api/CSharpToJavaScript.APIs.JS.MediaError.html
@@ -20820,15 +22181,15 @@ references:
   commentId: T:CSharpToJavaScript.APIs.JS.Object
   fullName: CSharpToJavaScript.APIs.JS.Object
   nameWithType: Object
-- uid: CSharpToJavaScript.APIs.JS.Object.#ctor
-  name: Object()
-  href: api/CSharpToJavaScript.APIs.JS.Object.html#CSharpToJavaScript_APIs_JS_Object__ctor
-  commentId: M:CSharpToJavaScript.APIs.JS.Object.#ctor
-  name.vb: New()
-  fullName: CSharpToJavaScript.APIs.JS.Object.Object()
-  fullName.vb: CSharpToJavaScript.APIs.JS.Object.New()
-  nameWithType: Object.Object()
-  nameWithType.vb: Object.New()
+- uid: CSharpToJavaScript.APIs.JS.Object.#ctor(System.Object)
+  name: Object(dynamic?)
+  href: api/CSharpToJavaScript.APIs.JS.Object.html#CSharpToJavaScript_APIs_JS_Object__ctor_System_Object_
+  commentId: M:CSharpToJavaScript.APIs.JS.Object.#ctor(System.Object)
+  name.vb: New(Object)
+  fullName: CSharpToJavaScript.APIs.JS.Object.Object(dynamic?)
+  fullName.vb: CSharpToJavaScript.APIs.JS.Object.New(Object)
+  nameWithType: Object.Object(dynamic?)
+  nameWithType.vb: Object.New(Object)
 - uid: CSharpToJavaScript.APIs.JS.Object.#ctor*
   name: Object
   href: api/CSharpToJavaScript.APIs.JS.Object.html#CSharpToJavaScript_APIs_JS_Object__ctor_
@@ -20839,6 +22200,278 @@ references:
   fullName.vb: CSharpToJavaScript.APIs.JS.Object.New
   nameWithType: Object.Object
   nameWithType.vb: Object.New
+- uid: CSharpToJavaScript.APIs.JS.Object.Assign(System.Object,System.Object[])
+  name: Assign(dynamic, params dynamic[])
+  href: api/CSharpToJavaScript.APIs.JS.Object.html#CSharpToJavaScript_APIs_JS_Object_Assign_System_Object_System_Object___
+  commentId: M:CSharpToJavaScript.APIs.JS.Object.Assign(System.Object,System.Object[])
+  name.vb: Assign(Object, ParamArray Object())
+  fullName: CSharpToJavaScript.APIs.JS.Object.Assign(dynamic, params dynamic[])
+  fullName.vb: CSharpToJavaScript.APIs.JS.Object.Assign(Object, ParamArray Object())
+  nameWithType: Object.Assign(dynamic, params dynamic[])
+  nameWithType.vb: Object.Assign(Object, ParamArray Object())
+- uid: CSharpToJavaScript.APIs.JS.Object.Assign*
+  name: Assign
+  href: api/CSharpToJavaScript.APIs.JS.Object.html#CSharpToJavaScript_APIs_JS_Object_Assign_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Object.Assign
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Object.Assign
+  nameWithType: Object.Assign
+- uid: CSharpToJavaScript.APIs.JS.Object.Create(System.Object,System.Object)
+  name: Create(dynamic, dynamic)
+  href: api/CSharpToJavaScript.APIs.JS.Object.html#CSharpToJavaScript_APIs_JS_Object_Create_System_Object_System_Object_
+  commentId: M:CSharpToJavaScript.APIs.JS.Object.Create(System.Object,System.Object)
+  name.vb: Create(Object, Object)
+  fullName: CSharpToJavaScript.APIs.JS.Object.Create(dynamic, dynamic)
+  fullName.vb: CSharpToJavaScript.APIs.JS.Object.Create(Object, Object)
+  nameWithType: Object.Create(dynamic, dynamic)
+  nameWithType.vb: Object.Create(Object, Object)
+- uid: CSharpToJavaScript.APIs.JS.Object.Create*
+  name: Create
+  href: api/CSharpToJavaScript.APIs.JS.Object.html#CSharpToJavaScript_APIs_JS_Object_Create_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Object.Create
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Object.Create
+  nameWithType: Object.Create
+- uid: CSharpToJavaScript.APIs.JS.Object.DefineProperties(System.Object,System.Object)
+  name: DefineProperties(dynamic, dynamic)
+  href: api/CSharpToJavaScript.APIs.JS.Object.html#CSharpToJavaScript_APIs_JS_Object_DefineProperties_System_Object_System_Object_
+  commentId: M:CSharpToJavaScript.APIs.JS.Object.DefineProperties(System.Object,System.Object)
+  name.vb: DefineProperties(Object, Object)
+  fullName: CSharpToJavaScript.APIs.JS.Object.DefineProperties(dynamic, dynamic)
+  fullName.vb: CSharpToJavaScript.APIs.JS.Object.DefineProperties(Object, Object)
+  nameWithType: Object.DefineProperties(dynamic, dynamic)
+  nameWithType.vb: Object.DefineProperties(Object, Object)
+- uid: CSharpToJavaScript.APIs.JS.Object.DefineProperties*
+  name: DefineProperties
+  href: api/CSharpToJavaScript.APIs.JS.Object.html#CSharpToJavaScript_APIs_JS_Object_DefineProperties_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Object.DefineProperties
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Object.DefineProperties
+  nameWithType: Object.DefineProperties
+- uid: CSharpToJavaScript.APIs.JS.Object.DefineProperty(System.Object,System.Object,System.Object)
+  name: DefineProperty(dynamic, dynamic, dynamic)
+  href: api/CSharpToJavaScript.APIs.JS.Object.html#CSharpToJavaScript_APIs_JS_Object_DefineProperty_System_Object_System_Object_System_Object_
+  commentId: M:CSharpToJavaScript.APIs.JS.Object.DefineProperty(System.Object,System.Object,System.Object)
+  name.vb: DefineProperty(Object, Object, Object)
+  fullName: CSharpToJavaScript.APIs.JS.Object.DefineProperty(dynamic, dynamic, dynamic)
+  fullName.vb: CSharpToJavaScript.APIs.JS.Object.DefineProperty(Object, Object, Object)
+  nameWithType: Object.DefineProperty(dynamic, dynamic, dynamic)
+  nameWithType.vb: Object.DefineProperty(Object, Object, Object)
+- uid: CSharpToJavaScript.APIs.JS.Object.DefineProperty*
+  name: DefineProperty
+  href: api/CSharpToJavaScript.APIs.JS.Object.html#CSharpToJavaScript_APIs_JS_Object_DefineProperty_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Object.DefineProperty
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Object.DefineProperty
+  nameWithType: Object.DefineProperty
+- uid: CSharpToJavaScript.APIs.JS.Object.Entries(System.Object)
+  name: Entries(dynamic)
+  href: api/CSharpToJavaScript.APIs.JS.Object.html#CSharpToJavaScript_APIs_JS_Object_Entries_System_Object_
+  commentId: M:CSharpToJavaScript.APIs.JS.Object.Entries(System.Object)
+  name.vb: Entries(Object)
+  fullName: CSharpToJavaScript.APIs.JS.Object.Entries(dynamic)
+  fullName.vb: CSharpToJavaScript.APIs.JS.Object.Entries(Object)
+  nameWithType: Object.Entries(dynamic)
+  nameWithType.vb: Object.Entries(Object)
+- uid: CSharpToJavaScript.APIs.JS.Object.Entries*
+  name: Entries
+  href: api/CSharpToJavaScript.APIs.JS.Object.html#CSharpToJavaScript_APIs_JS_Object_Entries_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Object.Entries
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Object.Entries
+  nameWithType: Object.Entries
+- uid: CSharpToJavaScript.APIs.JS.Object.Freeze(System.Object)
+  name: Freeze(dynamic)
+  href: api/CSharpToJavaScript.APIs.JS.Object.html#CSharpToJavaScript_APIs_JS_Object_Freeze_System_Object_
+  commentId: M:CSharpToJavaScript.APIs.JS.Object.Freeze(System.Object)
+  name.vb: Freeze(Object)
+  fullName: CSharpToJavaScript.APIs.JS.Object.Freeze(dynamic)
+  fullName.vb: CSharpToJavaScript.APIs.JS.Object.Freeze(Object)
+  nameWithType: Object.Freeze(dynamic)
+  nameWithType.vb: Object.Freeze(Object)
+- uid: CSharpToJavaScript.APIs.JS.Object.Freeze*
+  name: Freeze
+  href: api/CSharpToJavaScript.APIs.JS.Object.html#CSharpToJavaScript_APIs_JS_Object_Freeze_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Object.Freeze
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Object.Freeze
+  nameWithType: Object.Freeze
+- uid: CSharpToJavaScript.APIs.JS.Object.FromEntries(System.Object)
+  name: FromEntries(dynamic)
+  href: api/CSharpToJavaScript.APIs.JS.Object.html#CSharpToJavaScript_APIs_JS_Object_FromEntries_System_Object_
+  commentId: M:CSharpToJavaScript.APIs.JS.Object.FromEntries(System.Object)
+  name.vb: FromEntries(Object)
+  fullName: CSharpToJavaScript.APIs.JS.Object.FromEntries(dynamic)
+  fullName.vb: CSharpToJavaScript.APIs.JS.Object.FromEntries(Object)
+  nameWithType: Object.FromEntries(dynamic)
+  nameWithType.vb: Object.FromEntries(Object)
+- uid: CSharpToJavaScript.APIs.JS.Object.FromEntries*
+  name: FromEntries
+  href: api/CSharpToJavaScript.APIs.JS.Object.html#CSharpToJavaScript_APIs_JS_Object_FromEntries_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Object.FromEntries
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Object.FromEntries
+  nameWithType: Object.FromEntries
+- uid: CSharpToJavaScript.APIs.JS.Object.GetOwnPropertyDescriptor(System.Object,System.Object)
+  name: GetOwnPropertyDescriptor(dynamic, dynamic)
+  href: api/CSharpToJavaScript.APIs.JS.Object.html#CSharpToJavaScript_APIs_JS_Object_GetOwnPropertyDescriptor_System_Object_System_Object_
+  commentId: M:CSharpToJavaScript.APIs.JS.Object.GetOwnPropertyDescriptor(System.Object,System.Object)
+  name.vb: GetOwnPropertyDescriptor(Object, Object)
+  fullName: CSharpToJavaScript.APIs.JS.Object.GetOwnPropertyDescriptor(dynamic, dynamic)
+  fullName.vb: CSharpToJavaScript.APIs.JS.Object.GetOwnPropertyDescriptor(Object, Object)
+  nameWithType: Object.GetOwnPropertyDescriptor(dynamic, dynamic)
+  nameWithType.vb: Object.GetOwnPropertyDescriptor(Object, Object)
+- uid: CSharpToJavaScript.APIs.JS.Object.GetOwnPropertyDescriptor*
+  name: GetOwnPropertyDescriptor
+  href: api/CSharpToJavaScript.APIs.JS.Object.html#CSharpToJavaScript_APIs_JS_Object_GetOwnPropertyDescriptor_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Object.GetOwnPropertyDescriptor
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Object.GetOwnPropertyDescriptor
+  nameWithType: Object.GetOwnPropertyDescriptor
+- uid: CSharpToJavaScript.APIs.JS.Object.GetOwnPropertyDescriptors(System.Object)
+  name: GetOwnPropertyDescriptors(dynamic)
+  href: api/CSharpToJavaScript.APIs.JS.Object.html#CSharpToJavaScript_APIs_JS_Object_GetOwnPropertyDescriptors_System_Object_
+  commentId: M:CSharpToJavaScript.APIs.JS.Object.GetOwnPropertyDescriptors(System.Object)
+  name.vb: GetOwnPropertyDescriptors(Object)
+  fullName: CSharpToJavaScript.APIs.JS.Object.GetOwnPropertyDescriptors(dynamic)
+  fullName.vb: CSharpToJavaScript.APIs.JS.Object.GetOwnPropertyDescriptors(Object)
+  nameWithType: Object.GetOwnPropertyDescriptors(dynamic)
+  nameWithType.vb: Object.GetOwnPropertyDescriptors(Object)
+- uid: CSharpToJavaScript.APIs.JS.Object.GetOwnPropertyDescriptors*
+  name: GetOwnPropertyDescriptors
+  href: api/CSharpToJavaScript.APIs.JS.Object.html#CSharpToJavaScript_APIs_JS_Object_GetOwnPropertyDescriptors_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Object.GetOwnPropertyDescriptors
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Object.GetOwnPropertyDescriptors
+  nameWithType: Object.GetOwnPropertyDescriptors
+- uid: CSharpToJavaScript.APIs.JS.Object.GetOwnPropertyNames(System.Object)
+  name: GetOwnPropertyNames(dynamic)
+  href: api/CSharpToJavaScript.APIs.JS.Object.html#CSharpToJavaScript_APIs_JS_Object_GetOwnPropertyNames_System_Object_
+  commentId: M:CSharpToJavaScript.APIs.JS.Object.GetOwnPropertyNames(System.Object)
+  name.vb: GetOwnPropertyNames(Object)
+  fullName: CSharpToJavaScript.APIs.JS.Object.GetOwnPropertyNames(dynamic)
+  fullName.vb: CSharpToJavaScript.APIs.JS.Object.GetOwnPropertyNames(Object)
+  nameWithType: Object.GetOwnPropertyNames(dynamic)
+  nameWithType.vb: Object.GetOwnPropertyNames(Object)
+- uid: CSharpToJavaScript.APIs.JS.Object.GetOwnPropertyNames*
+  name: GetOwnPropertyNames
+  href: api/CSharpToJavaScript.APIs.JS.Object.html#CSharpToJavaScript_APIs_JS_Object_GetOwnPropertyNames_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Object.GetOwnPropertyNames
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Object.GetOwnPropertyNames
+  nameWithType: Object.GetOwnPropertyNames
+- uid: CSharpToJavaScript.APIs.JS.Object.GetOwnPropertySymbols(System.Object)
+  name: GetOwnPropertySymbols(dynamic)
+  href: api/CSharpToJavaScript.APIs.JS.Object.html#CSharpToJavaScript_APIs_JS_Object_GetOwnPropertySymbols_System_Object_
+  commentId: M:CSharpToJavaScript.APIs.JS.Object.GetOwnPropertySymbols(System.Object)
+  name.vb: GetOwnPropertySymbols(Object)
+  fullName: CSharpToJavaScript.APIs.JS.Object.GetOwnPropertySymbols(dynamic)
+  fullName.vb: CSharpToJavaScript.APIs.JS.Object.GetOwnPropertySymbols(Object)
+  nameWithType: Object.GetOwnPropertySymbols(dynamic)
+  nameWithType.vb: Object.GetOwnPropertySymbols(Object)
+- uid: CSharpToJavaScript.APIs.JS.Object.GetOwnPropertySymbols*
+  name: GetOwnPropertySymbols
+  href: api/CSharpToJavaScript.APIs.JS.Object.html#CSharpToJavaScript_APIs_JS_Object_GetOwnPropertySymbols_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Object.GetOwnPropertySymbols
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Object.GetOwnPropertySymbols
+  nameWithType: Object.GetOwnPropertySymbols
+- uid: CSharpToJavaScript.APIs.JS.Object.GetPrototypeOf(System.Object)
+  name: GetPrototypeOf(dynamic)
+  href: api/CSharpToJavaScript.APIs.JS.Object.html#CSharpToJavaScript_APIs_JS_Object_GetPrototypeOf_System_Object_
+  commentId: M:CSharpToJavaScript.APIs.JS.Object.GetPrototypeOf(System.Object)
+  name.vb: GetPrototypeOf(Object)
+  fullName: CSharpToJavaScript.APIs.JS.Object.GetPrototypeOf(dynamic)
+  fullName.vb: CSharpToJavaScript.APIs.JS.Object.GetPrototypeOf(Object)
+  nameWithType: Object.GetPrototypeOf(dynamic)
+  nameWithType.vb: Object.GetPrototypeOf(Object)
+- uid: CSharpToJavaScript.APIs.JS.Object.GetPrototypeOf*
+  name: GetPrototypeOf
+  href: api/CSharpToJavaScript.APIs.JS.Object.html#CSharpToJavaScript_APIs_JS_Object_GetPrototypeOf_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Object.GetPrototypeOf
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Object.GetPrototypeOf
+  nameWithType: Object.GetPrototypeOf
+- uid: CSharpToJavaScript.APIs.JS.Object.HasOwn(System.Object,System.Object)
+  name: HasOwn(dynamic, dynamic)
+  href: api/CSharpToJavaScript.APIs.JS.Object.html#CSharpToJavaScript_APIs_JS_Object_HasOwn_System_Object_System_Object_
+  commentId: M:CSharpToJavaScript.APIs.JS.Object.HasOwn(System.Object,System.Object)
+  name.vb: HasOwn(Object, Object)
+  fullName: CSharpToJavaScript.APIs.JS.Object.HasOwn(dynamic, dynamic)
+  fullName.vb: CSharpToJavaScript.APIs.JS.Object.HasOwn(Object, Object)
+  nameWithType: Object.HasOwn(dynamic, dynamic)
+  nameWithType.vb: Object.HasOwn(Object, Object)
+- uid: CSharpToJavaScript.APIs.JS.Object.HasOwn*
+  name: HasOwn
+  href: api/CSharpToJavaScript.APIs.JS.Object.html#CSharpToJavaScript_APIs_JS_Object_HasOwn_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Object.HasOwn
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Object.HasOwn
+  nameWithType: Object.HasOwn
+- uid: CSharpToJavaScript.APIs.JS.Object.Is(System.Object,System.Object)
+  name: Is(dynamic, dynamic)
+  href: api/CSharpToJavaScript.APIs.JS.Object.html#CSharpToJavaScript_APIs_JS_Object_Is_System_Object_System_Object_
+  commentId: M:CSharpToJavaScript.APIs.JS.Object.Is(System.Object,System.Object)
+  name.vb: Is(Object, Object)
+  fullName: CSharpToJavaScript.APIs.JS.Object.Is(dynamic, dynamic)
+  fullName.vb: CSharpToJavaScript.APIs.JS.Object.Is(Object, Object)
+  nameWithType: Object.Is(dynamic, dynamic)
+  nameWithType.vb: Object.Is(Object, Object)
+- uid: CSharpToJavaScript.APIs.JS.Object.Is*
+  name: Is
+  href: api/CSharpToJavaScript.APIs.JS.Object.html#CSharpToJavaScript_APIs_JS_Object_Is_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Object.Is
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Object.Is
+  nameWithType: Object.Is
+- uid: CSharpToJavaScript.APIs.JS.Object.IsExtensible(System.Object)
+  name: IsExtensible(dynamic)
+  href: api/CSharpToJavaScript.APIs.JS.Object.html#CSharpToJavaScript_APIs_JS_Object_IsExtensible_System_Object_
+  commentId: M:CSharpToJavaScript.APIs.JS.Object.IsExtensible(System.Object)
+  name.vb: IsExtensible(Object)
+  fullName: CSharpToJavaScript.APIs.JS.Object.IsExtensible(dynamic)
+  fullName.vb: CSharpToJavaScript.APIs.JS.Object.IsExtensible(Object)
+  nameWithType: Object.IsExtensible(dynamic)
+  nameWithType.vb: Object.IsExtensible(Object)
+- uid: CSharpToJavaScript.APIs.JS.Object.IsExtensible*
+  name: IsExtensible
+  href: api/CSharpToJavaScript.APIs.JS.Object.html#CSharpToJavaScript_APIs_JS_Object_IsExtensible_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Object.IsExtensible
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Object.IsExtensible
+  nameWithType: Object.IsExtensible
+- uid: CSharpToJavaScript.APIs.JS.Object.IsFrozen(System.Object)
+  name: IsFrozen(dynamic)
+  href: api/CSharpToJavaScript.APIs.JS.Object.html#CSharpToJavaScript_APIs_JS_Object_IsFrozen_System_Object_
+  commentId: M:CSharpToJavaScript.APIs.JS.Object.IsFrozen(System.Object)
+  name.vb: IsFrozen(Object)
+  fullName: CSharpToJavaScript.APIs.JS.Object.IsFrozen(dynamic)
+  fullName.vb: CSharpToJavaScript.APIs.JS.Object.IsFrozen(Object)
+  nameWithType: Object.IsFrozen(dynamic)
+  nameWithType.vb: Object.IsFrozen(Object)
+- uid: CSharpToJavaScript.APIs.JS.Object.IsFrozen*
+  name: IsFrozen
+  href: api/CSharpToJavaScript.APIs.JS.Object.html#CSharpToJavaScript_APIs_JS_Object_IsFrozen_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Object.IsFrozen
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Object.IsFrozen
+  nameWithType: Object.IsFrozen
+- uid: CSharpToJavaScript.APIs.JS.Object.IsSealed(System.Object)
+  name: IsSealed(dynamic)
+  href: api/CSharpToJavaScript.APIs.JS.Object.html#CSharpToJavaScript_APIs_JS_Object_IsSealed_System_Object_
+  commentId: M:CSharpToJavaScript.APIs.JS.Object.IsSealed(System.Object)
+  name.vb: IsSealed(Object)
+  fullName: CSharpToJavaScript.APIs.JS.Object.IsSealed(dynamic)
+  fullName.vb: CSharpToJavaScript.APIs.JS.Object.IsSealed(Object)
+  nameWithType: Object.IsSealed(dynamic)
+  nameWithType.vb: Object.IsSealed(Object)
+- uid: CSharpToJavaScript.APIs.JS.Object.IsSealed*
+  name: IsSealed
+  href: api/CSharpToJavaScript.APIs.JS.Object.html#CSharpToJavaScript_APIs_JS_Object_IsSealed_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Object.IsSealed
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Object.IsSealed
+  nameWithType: Object.IsSealed
 - uid: CSharpToJavaScript.APIs.JS.Object.Keys(System.Object)
   name: Keys(dynamic)
   href: api/CSharpToJavaScript.APIs.JS.Object.html#CSharpToJavaScript_APIs_JS_Object_Keys_System_Object_
@@ -20855,6 +22488,67 @@ references:
   isSpec: "True"
   fullName: CSharpToJavaScript.APIs.JS.Object.Keys
   nameWithType: Object.Keys
+- uid: CSharpToJavaScript.APIs.JS.Object.PreventExtensions(System.Object)
+  name: PreventExtensions(dynamic)
+  href: api/CSharpToJavaScript.APIs.JS.Object.html#CSharpToJavaScript_APIs_JS_Object_PreventExtensions_System_Object_
+  commentId: M:CSharpToJavaScript.APIs.JS.Object.PreventExtensions(System.Object)
+  name.vb: PreventExtensions(Object)
+  fullName: CSharpToJavaScript.APIs.JS.Object.PreventExtensions(dynamic)
+  fullName.vb: CSharpToJavaScript.APIs.JS.Object.PreventExtensions(Object)
+  nameWithType: Object.PreventExtensions(dynamic)
+  nameWithType.vb: Object.PreventExtensions(Object)
+- uid: CSharpToJavaScript.APIs.JS.Object.PreventExtensions*
+  name: PreventExtensions
+  href: api/CSharpToJavaScript.APIs.JS.Object.html#CSharpToJavaScript_APIs_JS_Object_PreventExtensions_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Object.PreventExtensions
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Object.PreventExtensions
+  nameWithType: Object.PreventExtensions
+- uid: CSharpToJavaScript.APIs.JS.Object.Prototype
+  name: Prototype
+  href: api/CSharpToJavaScript.APIs.JS.Object.html#CSharpToJavaScript_APIs_JS_Object_Prototype
+  commentId: P:CSharpToJavaScript.APIs.JS.Object.Prototype
+  fullName: CSharpToJavaScript.APIs.JS.Object.Prototype
+  nameWithType: Object.Prototype
+- uid: CSharpToJavaScript.APIs.JS.Object.Prototype*
+  name: Prototype
+  href: api/CSharpToJavaScript.APIs.JS.Object.html#CSharpToJavaScript_APIs_JS_Object_Prototype_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Object.Prototype
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Object.Prototype
+  nameWithType: Object.Prototype
+- uid: CSharpToJavaScript.APIs.JS.Object.Seal(System.Object)
+  name: Seal(dynamic)
+  href: api/CSharpToJavaScript.APIs.JS.Object.html#CSharpToJavaScript_APIs_JS_Object_Seal_System_Object_
+  commentId: M:CSharpToJavaScript.APIs.JS.Object.Seal(System.Object)
+  name.vb: Seal(Object)
+  fullName: CSharpToJavaScript.APIs.JS.Object.Seal(dynamic)
+  fullName.vb: CSharpToJavaScript.APIs.JS.Object.Seal(Object)
+  nameWithType: Object.Seal(dynamic)
+  nameWithType.vb: Object.Seal(Object)
+- uid: CSharpToJavaScript.APIs.JS.Object.Seal*
+  name: Seal
+  href: api/CSharpToJavaScript.APIs.JS.Object.html#CSharpToJavaScript_APIs_JS_Object_Seal_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Object.Seal
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Object.Seal
+  nameWithType: Object.Seal
+- uid: CSharpToJavaScript.APIs.JS.Object.SetPrototypeOf(System.Object,System.Object)
+  name: SetPrototypeOf(dynamic, dynamic)
+  href: api/CSharpToJavaScript.APIs.JS.Object.html#CSharpToJavaScript_APIs_JS_Object_SetPrototypeOf_System_Object_System_Object_
+  commentId: M:CSharpToJavaScript.APIs.JS.Object.SetPrototypeOf(System.Object,System.Object)
+  name.vb: SetPrototypeOf(Object, Object)
+  fullName: CSharpToJavaScript.APIs.JS.Object.SetPrototypeOf(dynamic, dynamic)
+  fullName.vb: CSharpToJavaScript.APIs.JS.Object.SetPrototypeOf(Object, Object)
+  nameWithType: Object.SetPrototypeOf(dynamic, dynamic)
+  nameWithType.vb: Object.SetPrototypeOf(Object, Object)
+- uid: CSharpToJavaScript.APIs.JS.Object.SetPrototypeOf*
+  name: SetPrototypeOf
+  href: api/CSharpToJavaScript.APIs.JS.Object.html#CSharpToJavaScript_APIs_JS_Object_SetPrototypeOf_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.Object.SetPrototypeOf
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.Object.SetPrototypeOf
+  nameWithType: Object.SetPrototypeOf
 - uid: CSharpToJavaScript.APIs.JS.Object.Values(System.Object)
   name: Values(dynamic)
   href: api/CSharpToJavaScript.APIs.JS.Object.html#CSharpToJavaScript_APIs_JS_Object_Values_System_Object_
@@ -20871,6 +22565,121 @@ references:
   isSpec: "True"
   fullName: CSharpToJavaScript.APIs.JS.Object.Values
   nameWithType: Object.Values
+- uid: CSharpToJavaScript.APIs.JS.ObjectPrototype
+  name: ObjectPrototype
+  href: api/CSharpToJavaScript.APIs.JS.ObjectPrototype.html
+  commentId: T:CSharpToJavaScript.APIs.JS.ObjectPrototype
+  fullName: CSharpToJavaScript.APIs.JS.ObjectPrototype
+  nameWithType: ObjectPrototype
+- uid: CSharpToJavaScript.APIs.JS.ObjectPrototype.#ctor
+  name: ObjectPrototype()
+  href: api/CSharpToJavaScript.APIs.JS.ObjectPrototype.html#CSharpToJavaScript_APIs_JS_ObjectPrototype__ctor
+  commentId: M:CSharpToJavaScript.APIs.JS.ObjectPrototype.#ctor
+  name.vb: New()
+  fullName: CSharpToJavaScript.APIs.JS.ObjectPrototype.ObjectPrototype()
+  fullName.vb: CSharpToJavaScript.APIs.JS.ObjectPrototype.New()
+  nameWithType: ObjectPrototype.ObjectPrototype()
+  nameWithType.vb: ObjectPrototype.New()
+- uid: CSharpToJavaScript.APIs.JS.ObjectPrototype.#ctor*
+  name: ObjectPrototype
+  href: api/CSharpToJavaScript.APIs.JS.ObjectPrototype.html#CSharpToJavaScript_APIs_JS_ObjectPrototype__ctor_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.ObjectPrototype.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: CSharpToJavaScript.APIs.JS.ObjectPrototype.ObjectPrototype
+  fullName.vb: CSharpToJavaScript.APIs.JS.ObjectPrototype.New
+  nameWithType: ObjectPrototype.ObjectPrototype
+  nameWithType.vb: ObjectPrototype.New
+- uid: CSharpToJavaScript.APIs.JS.ObjectPrototype.HasOwnProperty(System.Object)
+  name: HasOwnProperty(dynamic)
+  href: api/CSharpToJavaScript.APIs.JS.ObjectPrototype.html#CSharpToJavaScript_APIs_JS_ObjectPrototype_HasOwnProperty_System_Object_
+  commentId: M:CSharpToJavaScript.APIs.JS.ObjectPrototype.HasOwnProperty(System.Object)
+  name.vb: HasOwnProperty(Object)
+  fullName: CSharpToJavaScript.APIs.JS.ObjectPrototype.HasOwnProperty(dynamic)
+  fullName.vb: CSharpToJavaScript.APIs.JS.ObjectPrototype.HasOwnProperty(Object)
+  nameWithType: ObjectPrototype.HasOwnProperty(dynamic)
+  nameWithType.vb: ObjectPrototype.HasOwnProperty(Object)
+- uid: CSharpToJavaScript.APIs.JS.ObjectPrototype.HasOwnProperty*
+  name: HasOwnProperty
+  href: api/CSharpToJavaScript.APIs.JS.ObjectPrototype.html#CSharpToJavaScript_APIs_JS_ObjectPrototype_HasOwnProperty_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.ObjectPrototype.HasOwnProperty
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.ObjectPrototype.HasOwnProperty
+  nameWithType: ObjectPrototype.HasOwnProperty
+- uid: CSharpToJavaScript.APIs.JS.ObjectPrototype.IsPrototypeOf(System.Object)
+  name: IsPrototypeOf(dynamic)
+  href: api/CSharpToJavaScript.APIs.JS.ObjectPrototype.html#CSharpToJavaScript_APIs_JS_ObjectPrototype_IsPrototypeOf_System_Object_
+  commentId: M:CSharpToJavaScript.APIs.JS.ObjectPrototype.IsPrototypeOf(System.Object)
+  name.vb: IsPrototypeOf(Object)
+  fullName: CSharpToJavaScript.APIs.JS.ObjectPrototype.IsPrototypeOf(dynamic)
+  fullName.vb: CSharpToJavaScript.APIs.JS.ObjectPrototype.IsPrototypeOf(Object)
+  nameWithType: ObjectPrototype.IsPrototypeOf(dynamic)
+  nameWithType.vb: ObjectPrototype.IsPrototypeOf(Object)
+- uid: CSharpToJavaScript.APIs.JS.ObjectPrototype.IsPrototypeOf*
+  name: IsPrototypeOf
+  href: api/CSharpToJavaScript.APIs.JS.ObjectPrototype.html#CSharpToJavaScript_APIs_JS_ObjectPrototype_IsPrototypeOf_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.ObjectPrototype.IsPrototypeOf
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.ObjectPrototype.IsPrototypeOf
+  nameWithType: ObjectPrototype.IsPrototypeOf
+- uid: CSharpToJavaScript.APIs.JS.ObjectPrototype.PropertyIsEnumerable(System.Object)
+  name: PropertyIsEnumerable(dynamic)
+  href: api/CSharpToJavaScript.APIs.JS.ObjectPrototype.html#CSharpToJavaScript_APIs_JS_ObjectPrototype_PropertyIsEnumerable_System_Object_
+  commentId: M:CSharpToJavaScript.APIs.JS.ObjectPrototype.PropertyIsEnumerable(System.Object)
+  name.vb: PropertyIsEnumerable(Object)
+  fullName: CSharpToJavaScript.APIs.JS.ObjectPrototype.PropertyIsEnumerable(dynamic)
+  fullName.vb: CSharpToJavaScript.APIs.JS.ObjectPrototype.PropertyIsEnumerable(Object)
+  nameWithType: ObjectPrototype.PropertyIsEnumerable(dynamic)
+  nameWithType.vb: ObjectPrototype.PropertyIsEnumerable(Object)
+- uid: CSharpToJavaScript.APIs.JS.ObjectPrototype.PropertyIsEnumerable*
+  name: PropertyIsEnumerable
+  href: api/CSharpToJavaScript.APIs.JS.ObjectPrototype.html#CSharpToJavaScript_APIs_JS_ObjectPrototype_PropertyIsEnumerable_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.ObjectPrototype.PropertyIsEnumerable
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.ObjectPrototype.PropertyIsEnumerable
+  nameWithType: ObjectPrototype.PropertyIsEnumerable
+- uid: CSharpToJavaScript.APIs.JS.ObjectPrototype.ToLocaleString(System.Object,System.Object)
+  name: ToLocaleString(dynamic?, dynamic?)
+  href: api/CSharpToJavaScript.APIs.JS.ObjectPrototype.html#CSharpToJavaScript_APIs_JS_ObjectPrototype_ToLocaleString_System_Object_System_Object_
+  commentId: M:CSharpToJavaScript.APIs.JS.ObjectPrototype.ToLocaleString(System.Object,System.Object)
+  name.vb: ToLocaleString(Object, Object)
+  fullName: CSharpToJavaScript.APIs.JS.ObjectPrototype.ToLocaleString(dynamic?, dynamic?)
+  fullName.vb: CSharpToJavaScript.APIs.JS.ObjectPrototype.ToLocaleString(Object, Object)
+  nameWithType: ObjectPrototype.ToLocaleString(dynamic?, dynamic?)
+  nameWithType.vb: ObjectPrototype.ToLocaleString(Object, Object)
+- uid: CSharpToJavaScript.APIs.JS.ObjectPrototype.ToLocaleString*
+  name: ToLocaleString
+  href: api/CSharpToJavaScript.APIs.JS.ObjectPrototype.html#CSharpToJavaScript_APIs_JS_ObjectPrototype_ToLocaleString_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.ObjectPrototype.ToLocaleString
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.ObjectPrototype.ToLocaleString
+  nameWithType: ObjectPrototype.ToLocaleString
+- uid: CSharpToJavaScript.APIs.JS.ObjectPrototype.ToString
+  name: ToString()
+  href: api/CSharpToJavaScript.APIs.JS.ObjectPrototype.html#CSharpToJavaScript_APIs_JS_ObjectPrototype_ToString
+  commentId: M:CSharpToJavaScript.APIs.JS.ObjectPrototype.ToString
+  fullName: CSharpToJavaScript.APIs.JS.ObjectPrototype.ToString()
+  nameWithType: ObjectPrototype.ToString()
+- uid: CSharpToJavaScript.APIs.JS.ObjectPrototype.ToString*
+  name: ToString
+  href: api/CSharpToJavaScript.APIs.JS.ObjectPrototype.html#CSharpToJavaScript_APIs_JS_ObjectPrototype_ToString_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.ObjectPrototype.ToString
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.ObjectPrototype.ToString
+  nameWithType: ObjectPrototype.ToString
+- uid: CSharpToJavaScript.APIs.JS.ObjectPrototype.ValueOf
+  name: ValueOf()
+  href: api/CSharpToJavaScript.APIs.JS.ObjectPrototype.html#CSharpToJavaScript_APIs_JS_ObjectPrototype_ValueOf
+  commentId: M:CSharpToJavaScript.APIs.JS.ObjectPrototype.ValueOf
+  fullName: CSharpToJavaScript.APIs.JS.ObjectPrototype.ValueOf()
+  nameWithType: ObjectPrototype.ValueOf()
+- uid: CSharpToJavaScript.APIs.JS.ObjectPrototype.ValueOf*
+  name: ValueOf
+  href: api/CSharpToJavaScript.APIs.JS.ObjectPrototype.html#CSharpToJavaScript_APIs_JS_ObjectPrototype_ValueOf_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.ObjectPrototype.ValueOf
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.ObjectPrototype.ValueOf
+  nameWithType: ObjectPrototype.ValueOf
 - uid: CSharpToJavaScript.APIs.JS.OffscreenCanvas
   name: OffscreenCanvas
   href: api/CSharpToJavaScript.APIs.JS.OffscreenCanvas.html
@@ -22019,6 +23828,15 @@ references:
   commentId: T:CSharpToJavaScript.APIs.JS.RegExp
   fullName: CSharpToJavaScript.APIs.JS.RegExp
   nameWithType: RegExp
+- uid: CSharpToJavaScript.APIs.JS.RegExp.#ctor(System.String,System.String)
+  name: RegExp(string, string)
+  href: api/CSharpToJavaScript.APIs.JS.RegExp.html#CSharpToJavaScript_APIs_JS_RegExp__ctor_System_String_System_String_
+  commentId: M:CSharpToJavaScript.APIs.JS.RegExp.#ctor(System.String,System.String)
+  name.vb: New(String, String)
+  fullName: CSharpToJavaScript.APIs.JS.RegExp.RegExp(string, string)
+  fullName.vb: CSharpToJavaScript.APIs.JS.RegExp.New(String, String)
+  nameWithType: RegExp.RegExp(string, string)
+  nameWithType.vb: RegExp.New(String, String)
 - uid: CSharpToJavaScript.APIs.JS.RegExp.#ctor(System.String)
   name: RegExp(string)
   href: api/CSharpToJavaScript.APIs.JS.RegExp.html#CSharpToJavaScript_APIs_JS_RegExp__ctor_System_String_
@@ -22038,22 +23856,206 @@ references:
   fullName.vb: CSharpToJavaScript.APIs.JS.RegExp.New
   nameWithType: RegExp.RegExp
   nameWithType.vb: RegExp.New
-- uid: CSharpToJavaScript.APIs.JS.RegExp.Exec(System.String)
-  name: Exec(string)
-  href: api/CSharpToJavaScript.APIs.JS.RegExp.html#CSharpToJavaScript_APIs_JS_RegExp_Exec_System_String_
-  commentId: M:CSharpToJavaScript.APIs.JS.RegExp.Exec(System.String)
-  name.vb: Exec(String)
-  fullName: CSharpToJavaScript.APIs.JS.RegExp.Exec(string)
-  fullName.vb: CSharpToJavaScript.APIs.JS.RegExp.Exec(String)
-  nameWithType: RegExp.Exec(string)
-  nameWithType.vb: RegExp.Exec(String)
-- uid: CSharpToJavaScript.APIs.JS.RegExp.Exec*
-  name: Exec
-  href: api/CSharpToJavaScript.APIs.JS.RegExp.html#CSharpToJavaScript_APIs_JS_RegExp_Exec_
-  commentId: Overload:CSharpToJavaScript.APIs.JS.RegExp.Exec
+- uid: CSharpToJavaScript.APIs.JS.RegExp.Prototype
+  name: Prototype
+  href: api/CSharpToJavaScript.APIs.JS.RegExp.html#CSharpToJavaScript_APIs_JS_RegExp_Prototype
+  commentId: P:CSharpToJavaScript.APIs.JS.RegExp.Prototype
+  fullName: CSharpToJavaScript.APIs.JS.RegExp.Prototype
+  nameWithType: RegExp.Prototype
+- uid: CSharpToJavaScript.APIs.JS.RegExp.Prototype*
+  name: Prototype
+  href: api/CSharpToJavaScript.APIs.JS.RegExp.html#CSharpToJavaScript_APIs_JS_RegExp_Prototype_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.RegExp.Prototype
   isSpec: "True"
-  fullName: CSharpToJavaScript.APIs.JS.RegExp.Exec
-  nameWithType: RegExp.Exec
+  fullName: CSharpToJavaScript.APIs.JS.RegExp.Prototype
+  nameWithType: RegExp.Prototype
+- uid: CSharpToJavaScript.APIs.JS.RegExpPrototype
+  name: RegExpPrototype
+  href: api/CSharpToJavaScript.APIs.JS.RegExpPrototype.html
+  commentId: T:CSharpToJavaScript.APIs.JS.RegExpPrototype
+  fullName: CSharpToJavaScript.APIs.JS.RegExpPrototype
+  nameWithType: RegExpPrototype
+- uid: CSharpToJavaScript.APIs.JS.RegExpPrototype.#ctor
+  name: RegExpPrototype()
+  href: api/CSharpToJavaScript.APIs.JS.RegExpPrototype.html#CSharpToJavaScript_APIs_JS_RegExpPrototype__ctor
+  commentId: M:CSharpToJavaScript.APIs.JS.RegExpPrototype.#ctor
+  name.vb: New()
+  fullName: CSharpToJavaScript.APIs.JS.RegExpPrototype.RegExpPrototype()
+  fullName.vb: CSharpToJavaScript.APIs.JS.RegExpPrototype.New()
+  nameWithType: RegExpPrototype.RegExpPrototype()
+  nameWithType.vb: RegExpPrototype.New()
+- uid: CSharpToJavaScript.APIs.JS.RegExpPrototype.#ctor*
+  name: RegExpPrototype
+  href: api/CSharpToJavaScript.APIs.JS.RegExpPrototype.html#CSharpToJavaScript_APIs_JS_RegExpPrototype__ctor_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.RegExpPrototype.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: CSharpToJavaScript.APIs.JS.RegExpPrototype.RegExpPrototype
+  fullName.vb: CSharpToJavaScript.APIs.JS.RegExpPrototype.New
+  nameWithType: RegExpPrototype.RegExpPrototype
+  nameWithType.vb: RegExpPrototype.New
+- uid: CSharpToJavaScript.APIs.JS.RegExpPrototype.DotAll
+  name: DotAll
+  href: api/CSharpToJavaScript.APIs.JS.RegExpPrototype.html#CSharpToJavaScript_APIs_JS_RegExpPrototype_DotAll
+  commentId: P:CSharpToJavaScript.APIs.JS.RegExpPrototype.DotAll
+  fullName: CSharpToJavaScript.APIs.JS.RegExpPrototype.DotAll
+  nameWithType: RegExpPrototype.DotAll
+- uid: CSharpToJavaScript.APIs.JS.RegExpPrototype.DotAll*
+  name: DotAll
+  href: api/CSharpToJavaScript.APIs.JS.RegExpPrototype.html#CSharpToJavaScript_APIs_JS_RegExpPrototype_DotAll_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.RegExpPrototype.DotAll
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.RegExpPrototype.DotAll
+  nameWithType: RegExpPrototype.DotAll
+- uid: CSharpToJavaScript.APIs.JS.RegExpPrototype.Exec(System.String)
+  name: Exec(string)
+  href: api/CSharpToJavaScript.APIs.JS.RegExpPrototype.html#CSharpToJavaScript_APIs_JS_RegExpPrototype_Exec_System_String_
+  commentId: M:CSharpToJavaScript.APIs.JS.RegExpPrototype.Exec(System.String)
+  name.vb: Exec(String)
+  fullName: CSharpToJavaScript.APIs.JS.RegExpPrototype.Exec(string)
+  fullName.vb: CSharpToJavaScript.APIs.JS.RegExpPrototype.Exec(String)
+  nameWithType: RegExpPrototype.Exec(string)
+  nameWithType.vb: RegExpPrototype.Exec(String)
+- uid: CSharpToJavaScript.APIs.JS.RegExpPrototype.Exec*
+  name: Exec
+  href: api/CSharpToJavaScript.APIs.JS.RegExpPrototype.html#CSharpToJavaScript_APIs_JS_RegExpPrototype_Exec_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.RegExpPrototype.Exec
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.RegExpPrototype.Exec
+  nameWithType: RegExpPrototype.Exec
+- uid: CSharpToJavaScript.APIs.JS.RegExpPrototype.Flags
+  name: Flags
+  href: api/CSharpToJavaScript.APIs.JS.RegExpPrototype.html#CSharpToJavaScript_APIs_JS_RegExpPrototype_Flags
+  commentId: P:CSharpToJavaScript.APIs.JS.RegExpPrototype.Flags
+  fullName: CSharpToJavaScript.APIs.JS.RegExpPrototype.Flags
+  nameWithType: RegExpPrototype.Flags
+- uid: CSharpToJavaScript.APIs.JS.RegExpPrototype.Flags*
+  name: Flags
+  href: api/CSharpToJavaScript.APIs.JS.RegExpPrototype.html#CSharpToJavaScript_APIs_JS_RegExpPrototype_Flags_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.RegExpPrototype.Flags
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.RegExpPrototype.Flags
+  nameWithType: RegExpPrototype.Flags
+- uid: CSharpToJavaScript.APIs.JS.RegExpPrototype.Global
+  name: Global
+  href: api/CSharpToJavaScript.APIs.JS.RegExpPrototype.html#CSharpToJavaScript_APIs_JS_RegExpPrototype_Global
+  commentId: P:CSharpToJavaScript.APIs.JS.RegExpPrototype.Global
+  fullName: CSharpToJavaScript.APIs.JS.RegExpPrototype.Global
+  nameWithType: RegExpPrototype.Global
+- uid: CSharpToJavaScript.APIs.JS.RegExpPrototype.Global*
+  name: Global
+  href: api/CSharpToJavaScript.APIs.JS.RegExpPrototype.html#CSharpToJavaScript_APIs_JS_RegExpPrototype_Global_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.RegExpPrototype.Global
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.RegExpPrototype.Global
+  nameWithType: RegExpPrototype.Global
+- uid: CSharpToJavaScript.APIs.JS.RegExpPrototype.HasIndices
+  name: HasIndices
+  href: api/CSharpToJavaScript.APIs.JS.RegExpPrototype.html#CSharpToJavaScript_APIs_JS_RegExpPrototype_HasIndices
+  commentId: P:CSharpToJavaScript.APIs.JS.RegExpPrototype.HasIndices
+  fullName: CSharpToJavaScript.APIs.JS.RegExpPrototype.HasIndices
+  nameWithType: RegExpPrototype.HasIndices
+- uid: CSharpToJavaScript.APIs.JS.RegExpPrototype.HasIndices*
+  name: HasIndices
+  href: api/CSharpToJavaScript.APIs.JS.RegExpPrototype.html#CSharpToJavaScript_APIs_JS_RegExpPrototype_HasIndices_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.RegExpPrototype.HasIndices
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.RegExpPrototype.HasIndices
+  nameWithType: RegExpPrototype.HasIndices
+- uid: CSharpToJavaScript.APIs.JS.RegExpPrototype.IgnoreCase
+  name: IgnoreCase
+  href: api/CSharpToJavaScript.APIs.JS.RegExpPrototype.html#CSharpToJavaScript_APIs_JS_RegExpPrototype_IgnoreCase
+  commentId: P:CSharpToJavaScript.APIs.JS.RegExpPrototype.IgnoreCase
+  fullName: CSharpToJavaScript.APIs.JS.RegExpPrototype.IgnoreCase
+  nameWithType: RegExpPrototype.IgnoreCase
+- uid: CSharpToJavaScript.APIs.JS.RegExpPrototype.IgnoreCase*
+  name: IgnoreCase
+  href: api/CSharpToJavaScript.APIs.JS.RegExpPrototype.html#CSharpToJavaScript_APIs_JS_RegExpPrototype_IgnoreCase_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.RegExpPrototype.IgnoreCase
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.RegExpPrototype.IgnoreCase
+  nameWithType: RegExpPrototype.IgnoreCase
+- uid: CSharpToJavaScript.APIs.JS.RegExpPrototype.Multiline
+  name: Multiline
+  href: api/CSharpToJavaScript.APIs.JS.RegExpPrototype.html#CSharpToJavaScript_APIs_JS_RegExpPrototype_Multiline
+  commentId: P:CSharpToJavaScript.APIs.JS.RegExpPrototype.Multiline
+  fullName: CSharpToJavaScript.APIs.JS.RegExpPrototype.Multiline
+  nameWithType: RegExpPrototype.Multiline
+- uid: CSharpToJavaScript.APIs.JS.RegExpPrototype.Multiline*
+  name: Multiline
+  href: api/CSharpToJavaScript.APIs.JS.RegExpPrototype.html#CSharpToJavaScript_APIs_JS_RegExpPrototype_Multiline_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.RegExpPrototype.Multiline
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.RegExpPrototype.Multiline
+  nameWithType: RegExpPrototype.Multiline
+- uid: CSharpToJavaScript.APIs.JS.RegExpPrototype.Source
+  name: Source
+  href: api/CSharpToJavaScript.APIs.JS.RegExpPrototype.html#CSharpToJavaScript_APIs_JS_RegExpPrototype_Source
+  commentId: P:CSharpToJavaScript.APIs.JS.RegExpPrototype.Source
+  fullName: CSharpToJavaScript.APIs.JS.RegExpPrototype.Source
+  nameWithType: RegExpPrototype.Source
+- uid: CSharpToJavaScript.APIs.JS.RegExpPrototype.Source*
+  name: Source
+  href: api/CSharpToJavaScript.APIs.JS.RegExpPrototype.html#CSharpToJavaScript_APIs_JS_RegExpPrototype_Source_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.RegExpPrototype.Source
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.RegExpPrototype.Source
+  nameWithType: RegExpPrototype.Source
+- uid: CSharpToJavaScript.APIs.JS.RegExpPrototype.Sticky
+  name: Sticky
+  href: api/CSharpToJavaScript.APIs.JS.RegExpPrototype.html#CSharpToJavaScript_APIs_JS_RegExpPrototype_Sticky
+  commentId: P:CSharpToJavaScript.APIs.JS.RegExpPrototype.Sticky
+  fullName: CSharpToJavaScript.APIs.JS.RegExpPrototype.Sticky
+  nameWithType: RegExpPrototype.Sticky
+- uid: CSharpToJavaScript.APIs.JS.RegExpPrototype.Sticky*
+  name: Sticky
+  href: api/CSharpToJavaScript.APIs.JS.RegExpPrototype.html#CSharpToJavaScript_APIs_JS_RegExpPrototype_Sticky_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.RegExpPrototype.Sticky
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.RegExpPrototype.Sticky
+  nameWithType: RegExpPrototype.Sticky
+- uid: CSharpToJavaScript.APIs.JS.RegExpPrototype.Test(System.String)
+  name: Test(string)
+  href: api/CSharpToJavaScript.APIs.JS.RegExpPrototype.html#CSharpToJavaScript_APIs_JS_RegExpPrototype_Test_System_String_
+  commentId: M:CSharpToJavaScript.APIs.JS.RegExpPrototype.Test(System.String)
+  name.vb: Test(String)
+  fullName: CSharpToJavaScript.APIs.JS.RegExpPrototype.Test(string)
+  fullName.vb: CSharpToJavaScript.APIs.JS.RegExpPrototype.Test(String)
+  nameWithType: RegExpPrototype.Test(string)
+  nameWithType.vb: RegExpPrototype.Test(String)
+- uid: CSharpToJavaScript.APIs.JS.RegExpPrototype.Test*
+  name: Test
+  href: api/CSharpToJavaScript.APIs.JS.RegExpPrototype.html#CSharpToJavaScript_APIs_JS_RegExpPrototype_Test_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.RegExpPrototype.Test
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.RegExpPrototype.Test
+  nameWithType: RegExpPrototype.Test
+- uid: CSharpToJavaScript.APIs.JS.RegExpPrototype.ToString
+  name: ToString()
+  href: api/CSharpToJavaScript.APIs.JS.RegExpPrototype.html#CSharpToJavaScript_APIs_JS_RegExpPrototype_ToString
+  commentId: M:CSharpToJavaScript.APIs.JS.RegExpPrototype.ToString
+  fullName: CSharpToJavaScript.APIs.JS.RegExpPrototype.ToString()
+  nameWithType: RegExpPrototype.ToString()
+- uid: CSharpToJavaScript.APIs.JS.RegExpPrototype.ToString*
+  name: ToString
+  href: api/CSharpToJavaScript.APIs.JS.RegExpPrototype.html#CSharpToJavaScript_APIs_JS_RegExpPrototype_ToString_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.RegExpPrototype.ToString
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.RegExpPrototype.ToString
+  nameWithType: RegExpPrototype.ToString
+- uid: CSharpToJavaScript.APIs.JS.RegExpPrototype.Unicode
+  name: Unicode
+  href: api/CSharpToJavaScript.APIs.JS.RegExpPrototype.html#CSharpToJavaScript_APIs_JS_RegExpPrototype_Unicode
+  commentId: P:CSharpToJavaScript.APIs.JS.RegExpPrototype.Unicode
+  fullName: CSharpToJavaScript.APIs.JS.RegExpPrototype.Unicode
+  nameWithType: RegExpPrototype.Unicode
+- uid: CSharpToJavaScript.APIs.JS.RegExpPrototype.Unicode*
+  name: Unicode
+  href: api/CSharpToJavaScript.APIs.JS.RegExpPrototype.html#CSharpToJavaScript_APIs_JS_RegExpPrototype_Unicode_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.RegExpPrototype.Unicode
+  isSpec: "True"
+  fullName: CSharpToJavaScript.APIs.JS.RegExpPrototype.Unicode
+  nameWithType: RegExpPrototype.Unicode
 - uid: CSharpToJavaScript.APIs.JS.Request
   name: Request
   href: api/CSharpToJavaScript.APIs.JS.Request.html
@@ -27747,6 +29749,25 @@ references:
   isSpec: "True"
   fullName: CSharpToJavaScript.APIs.JS.URLSearchParams.Has
   nameWithType: URLSearchParams.Has
+- uid: CSharpToJavaScript.APIs.JS.URLSearchParams.Item(System.Int32)
+  name: this[int]
+  href: api/CSharpToJavaScript.APIs.JS.URLSearchParams.html#CSharpToJavaScript_APIs_JS_URLSearchParams_Item_System_Int32_
+  commentId: P:CSharpToJavaScript.APIs.JS.URLSearchParams.Item(System.Int32)
+  name.vb: this[](Integer)
+  fullName: CSharpToJavaScript.APIs.JS.URLSearchParams.this[int]
+  fullName.vb: CSharpToJavaScript.APIs.JS.URLSearchParams.this[](Integer)
+  nameWithType: URLSearchParams.this[int]
+  nameWithType.vb: URLSearchParams.this[](Integer)
+- uid: CSharpToJavaScript.APIs.JS.URLSearchParams.Item*
+  name: this
+  href: api/CSharpToJavaScript.APIs.JS.URLSearchParams.html#CSharpToJavaScript_APIs_JS_URLSearchParams_Item_
+  commentId: Overload:CSharpToJavaScript.APIs.JS.URLSearchParams.Item
+  isSpec: "True"
+  name.vb: this[]
+  fullName: CSharpToJavaScript.APIs.JS.URLSearchParams.this
+  fullName.vb: CSharpToJavaScript.APIs.JS.URLSearchParams.this[]
+  nameWithType: URLSearchParams.this
+  nameWithType.vb: URLSearchParams.this[]
 - uid: CSharpToJavaScript.APIs.JS.URLSearchParams.Set(System.String,System.String)
   name: Set(string, string)
   href: api/CSharpToJavaScript.APIs.JS.URLSearchParams.html#CSharpToJavaScript_APIs_JS_URLSearchParams_Set_System_String_System_String_

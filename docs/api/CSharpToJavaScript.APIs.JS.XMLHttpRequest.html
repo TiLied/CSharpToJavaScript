@@ -215,8 +215,8 @@ public class XMLHttpRequest : XMLHttpRequestEventTarget</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_XMLHttpRequest__ctor_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p><code>XMLHttpRequest</code> is used heavily in <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX">AJAX</a> programming.</p><p>{{InheritanceDiagram}}</p><p>Despite its name, <code>XMLHttpRequest</code> can be used to retrieve any type of data, not just XML.</p><p>If your communication needs to involve receiving event data or message data from a server, consider using <a href="https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events">server-sent events</a> through the <see cref="!:&amp;quot;EventSource&amp;quot;"></see> interface. For full-duplex communication, <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API">WebSockets</a> may be a better choice.</p><p>{{AvailableInWorkers(&amp;quot;notservice&amp;quot;)}}</p>
-<p>-<see cref="!:&amp;quot;XMLSerializer&amp;quot;"></see>: Serializing a DOM tree into XML<br>-MDN tutorials covering <code>XMLHttpRequest</code>:-<a href="https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX/Getting_Started">Ajax — Getting Started</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest">HTML in XMLHttpRequest</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch API</a><br><br>-<a href="https://web.dev/xhr2/">New Tricks in XMLHttpRequest2 (2011)</a><br>-Feature-Policy directive {{httpheader(&amp;quot;Feature-Policy/sync-xhr&amp;quot;, &amp;quot;sync-xhr&amp;quot;)}}<br></p>
+  <div class="markdown level1 remarks"><p><code>XMLHttpRequest</code> is used heavily in <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX">AJAX</a> programming.</p><p>{{InheritanceDiagram}}</p><p>Despite its name, <code>XMLHttpRequest</code> can be used to retrieve any type of data, not just XML.</p><p>If your communication needs to involve receiving event data or message data from a server, consider using <a href="https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events">server-sent events</a> through the <a class="xref" href="CSharpToJavaScript.APIs.JS.EventSource.html">EventSource</a> interface. For full-duplex communication, <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API">WebSockets</a> may be a better choice.</p><p>{{AvailableInWorkers(&amp;quot;notservice&amp;quot;)}}</p>
+<p>-<see cref="!:XMLSerializer"></see>: Serializing a DOM tree into XML<br>-MDN tutorials covering <code>XMLHttpRequest</code>:-<a href="https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX">Ajax</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest">HTML in XMLHttpRequest</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch API</a><br><br>-<a href="https://web.dev/xhr2/">New Tricks in XMLHttpRequest2 (2011)</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest</a></p>
 </div>
 
@@ -441,7 +441,7 @@ public class XMLHttpRequest : XMLHttpRequestEventTarget</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_XMLHttpRequest_ReadyState_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><table><tr><td><p>Value</p></td><td><p>State</p></td><td><p>Description</p></td></tr><tr><td><p><code>0</code></p></td><td><p><code>UNSENT</code></p></td><td><p>Client has been created. <code>open()</code> not called yet.</p></td></tr><tr><td><p><code>1</code></p></td><td><p><code>OPENED</code></p></td><td><p><code>open()</code> has been called.</p></td></tr><tr><td><p><code>2</code></p></td><td><p><code>HEADERS_RECEIVED</code></p></td><td><p><code>send()</code> has been called, and headers and status are available.</p></td></tr><tr><td><p><code>3</code></p></td><td><p><code>LOADING</code></p></td><td><p>Downloading; <code>responseText</code> holds partial data.</p></td></tr><tr><td><p><code>4</code></p></td><td><p><code>DONE</code></p></td><td><p>The operation is complete.</p></td></tr></table><blockquote><p><strong>Note:</strong> The state names are different in versions of Internet Explorer earlier than 11. Instead of <code>UNSENT</code>, <code>OPENED</code>, <code>HEADERS_RECEIVED</code>, <code>LOADING</code> and <code>DONE</code>, the names <code>READYSTATE_UNINITIALIZED</code> (0), <code>READYSTATE_LOADING</code> (1), <code>READYSTATE_LOADED</code> (2), <code>READYSTATE_INTERACTIVE</code> (3) and <code>READYSTATE_COMPLETE</code> (4) are used.</p></blockquote>
+  <div class="markdown level1 remarks"><table><tr><td><p>Value</p></td><td><p>State</p></td><td><p>Description</p></td></tr><tr><td><p><code>0</code></p></td><td><p><code>UNSENT</code></p></td><td><p>Client has been created. <code>open()</code> not called yet.</p></td></tr><tr><td><p><code>1</code></p></td><td><p><code>OPENED</code></p></td><td><p><code>open()</code> has been called.</p></td></tr><tr><td><p><code>2</code></p></td><td><p><code>HEADERS_RECEIVED</code></p></td><td><p><code>send()</code> has been called, and headers and status are available.</p></td></tr><tr><td><p><code>3</code></p></td><td><p><code>LOADING</code></p></td><td><p>Downloading; <code>responseText</code> holds partial data.</p></td></tr><tr><td><p><code>4</code></p></td><td><p><code>DONE</code></p></td><td><p>The operation is complete.</p></td></tr></table>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/readyState"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/readyState</a></p>
 </div>
 
@@ -455,7 +455,7 @@ public class XMLHttpRequest : XMLHttpRequestEventTarget</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <see cref="!:&amp;quot;XMLHttpRequest&amp;quot;"></see><br><strong><code>response</code></strong> property returns the response&amp;apos;s body content as<br>an {{jsxref(&amp;quot;ArrayBuffer&amp;quot;)}}, a <see cref="!:&amp;quot;Blob&amp;quot;"></see>, a <see cref="!:&amp;quot;Blob&amp;quot;"></see>,<br>a JavaScript {{jsxref(&amp;quot;Object&amp;quot;)}}, or a string, depending on the value<br>of the request&amp;apos;s <see cref="!:&amp;quot;XMLHttpRequestResponseType&amp;quot;"></see><br>property.</p>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="CSharpToJavaScript.APIs.JS.XMLHttpRequest.html">XMLHttpRequest</a><br><strong><code>response</code></strong> property returns the response&amp;apos;s body content as<br>an {{jsxref(&quot;ArrayBuffer&quot;)}}, a <see cref="!:Blob"></see>, a <a class="xref" href="CSharpToJavaScript.APIs.JS.Document.html">Document</a>,<br>a JavaScript <a class="xref" href="CSharpToJavaScript.APIs.JS.Object.html">Object</a>, or a string, depending on the value<br>of the request's <a class="xref" href="CSharpToJavaScript.APIs.JS.XMLHttpRequestResponseType.html">XMLHttpRequestResponseType</a><br>property.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -470,7 +470,7 @@ public class XMLHttpRequest : XMLHttpRequestEventTarget</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><span class="xref">dynamic</span></dt>
-    <dd><p>An appropriate object based on the value of {{domxref(&amp;quot;XMLHttpRequest.responseType&amp;quot;,<br>&amp;quot;responseType&amp;quot;)}}. You may attempt to request the data be provided in a specific format<br>by setting the value of <code>responseType</code> after calling<br><see cref="!:&amp;quot;XMLHttpRequestOpen&amp;quot;"></see> to initialize the request but before<br>calling <see cref="!:&amp;quot;XMLHttpRequestSend&amp;quot;"></see> to send the request to the server.The value is <code>null</code> if the request is not yet complete or was unsuccessful,<br>with the exception that when reading text data using a <code>responseType</code> of<br><code>&amp;quot;text&amp;quot;</code> or the empty string (<code>&amp;quot;&amp;quot;</code>), the response can contain the<br>response so far while the request is still in the <code>LOADING</code><br><see cref="!:&amp;quot;XMLHttpRequestReadyState&amp;quot;"></see> (3).</p>
+    <dd><p>An appropriate object based on the value of {{domxref(&amp;quot;XMLHttpRequest.responseType&amp;quot;,<br>&amp;quot;responseType&amp;quot;)}}. You may attempt to request the data be provided in a specific format<br>by setting the value of <code>responseType</code> after calling<br><see cref="!:XMLHttpRequestOpen"></see> to initialize the request but before<br>calling <see cref="!:XMLHttpRequestSend"></see> to send the request to the server.The value is <code>null</code> if the request is not yet complete or was unsuccessful,<br>with the exception that when reading text data using a <code>responseType</code> of<br><code>&amp;quot;text&amp;quot;</code> or the empty string (<code>&amp;quot;&amp;quot;</code>), the response can contain the<br>response so far while the request is still in the <code>LOADING</code><br><see cref="!:XMLHttpRequestReadyState"></see> (3).</p>
 </dd>
   </dl>
 
@@ -478,7 +478,7 @@ public class XMLHttpRequest : XMLHttpRequestEventTarget</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_XMLHttpRequest_Response_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a><br>-Getting text and HTML/XML data: <see cref="!:&amp;quot;XMLHttpRequestResponseText&amp;quot;"></see> and<br><see cref="!:&amp;quot;XMLHttpRequestResponseXML&amp;quot;"></see><br></p>
+  <div class="markdown level1 remarks"><p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a><br>-Getting text and HTML/XML data: <see cref="!:XMLHttpRequestResponseText"></see> and<br><see cref="!:XMLHttpRequestResponseXML"></see><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/response"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/response</a></p>
 </div>
 
@@ -492,7 +492,7 @@ public class XMLHttpRequest : XMLHttpRequestEventTarget</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The read-only <see cref="!:&amp;quot;XMLHttpRequest&amp;quot;"></see> property<br><strong><code>responseText</code></strong> returns the text received from a server<br>following a request being sent.</p>
+  <div class="markdown level1 summary"><p>The read-only <a class="xref" href="CSharpToJavaScript.APIs.JS.XMLHttpRequest.html">XMLHttpRequest</a> property<br><strong><code>responseText</code></strong> returns the text received from a server<br>following a request being sent.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -507,7 +507,7 @@ public class XMLHttpRequest : XMLHttpRequestEventTarget</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>A string which contains either the textual data received using the<br><code>XMLHttpRequest</code> or <code>null</code> if the request failed or<br><code>&amp;quot;&amp;quot;</code> if the request has not yet been sent by calling<br><see cref="!:&amp;quot;XMLHttpRequestSend&amp;quot;"></see>.While handling an asynchronous request, the value of <code>responseText</code> always<br>has the current content received from the server, even if it&amp;apos;s incomplete because the<br>data has not been completely received yet.You know the entire content has been received when the value of<br><see cref="!:&amp;quot;XMLHttpRequestReadyState&amp;quot;"></see> becomes<br><see cref="!:&amp;quot;XMLHttpRequestDONE&amp;quot;"></see> (<code>4</code>), and<br><see cref="!:&amp;quot;XMLHttpRequestStatus&amp;quot;"></see> becomes 200 (<code>&amp;quot;OK&amp;quot;</code>).</p>
+    <dd><p>A string which contains either the textual data received using the<br><code>XMLHttpRequest</code> or <code>null</code> if the request failed or<br><code>&amp;quot;&amp;quot;</code> if the request has not yet been sent by calling<br><see cref="!:XMLHttpRequestSend"></see>.While handling an asynchronous request, the value of <code>responseText</code> always<br>has the current content received from the server, even if it&amp;apos;s incomplete because the<br>data has not been completely received yet.You know the entire content has been received when the value of<br><see cref="!:XMLHttpRequestReadyState"></see> becomes<br><code>XMLHttpRequest.DONE</code> (<code>4</code>), and<br><see cref="!:XMLHttpRequestStatus"></see> becomes 200 (<code>&amp;quot;OK&amp;quot;</code>).</p>
 </dd>
   </dl>
 
@@ -528,7 +528,7 @@ public class XMLHttpRequest : XMLHttpRequestEventTarget</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <see cref="!:&amp;quot;XMLHttpRequest&amp;quot;"></see> property<br><strong><code>responseType</code></strong> is an enumerated string value specifying<br>the type of data contained in the response.</p>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="CSharpToJavaScript.APIs.JS.XMLHttpRequest.html">XMLHttpRequest</a> property<br><strong><code>responseType</code></strong> is an enumerated string value specifying<br>the type of data contained in the response.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -543,7 +543,7 @@ public class XMLHttpRequest : XMLHttpRequestEventTarget</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.XMLHttpRequestResponseType.html">XMLHttpRequestResponseType</a></dt>
-    <dd><p>A string which specifies what type of data the response contains.<br>It can take the following values:<blockquote><strong>Note:</strong> When setting <code>responseType</code> to a particular value, the author should make<br>sure that the server is actually sending a response compatible with that format. If<br>the server returns data that is not compatible with the <code>responseType</code> that<br>was set, the value of <see cref="!:&amp;quot;XMLHttpRequestResponse&amp;quot;"></see> will be<br><code>null</code>.</blockquote>
+    <dd><p>A string which specifies what type of data the response contains.<br>It can take the following values:<blockquote><strong>Note:</strong> When setting <code>responseType</code> to a particular value, the author should make<br>sure that the server is actually sending a response compatible with that format. If<br>the server returns data that is not compatible with the <code>responseType</code> that<br>was set, the value of <see cref="!:XMLHttpRequestResponse"></see> will be<br><code>null</code>.</blockquote>
 </dd>
   </dl>
 
@@ -552,7 +552,7 @@ public class XMLHttpRequest : XMLHttpRequestEventTarget</code></pre>
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_XMLHttpRequest_ResponseType_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>It also lets the author change the<br>response type. If an empty string is set as the value of <code>responseType</code>, the<br>default value of <code>text</code> is used.</p>
-<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest">HTML in XMLHttpRequest</a><br>-The response data: <see cref="!:&amp;quot;XMLHttpRequestResponse&amp;quot;"></see>,<br><see cref="!:&amp;quot;XMLHttpRequestResponseText&amp;quot;"></see>, and<br><see cref="!:&amp;quot;XMLHttpRequestResponseXML&amp;quot;"></see><br></p>
+<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest">HTML in XMLHttpRequest</a><br>-The response data: <see cref="!:XMLHttpRequestResponse"></see>,<br><see cref="!:XMLHttpRequestResponseText"></see>, and<br><see cref="!:XMLHttpRequestResponseXML"></see><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/responseType"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/responseType</a></p>
 </div>
 
@@ -601,7 +601,7 @@ public class XMLHttpRequest : XMLHttpRequestEventTarget</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>XMLHttpRequest.responseXML</code></strong> read-only property returns<br>a <see cref="!:&amp;quot;Document&amp;quot;"></see> containing the HTML or XML retrieved by the request; or<br><code>null</code> if the request was unsuccessful, has not yet been sent, or if the data<br>can&amp;apos;t be parsed as XML or HTML.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>XMLHttpRequest.responseXML</code></strong> read-only property returns<br>a <a class="xref" href="CSharpToJavaScript.APIs.JS.Document.html">Document</a> containing the HTML or XML retrieved by the request; or<br><code>null</code> if the request was unsuccessful, has not yet been sent, or if the data<br>can&amp;apos;t be parsed as XML or HTML.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -616,7 +616,7 @@ public class XMLHttpRequest : XMLHttpRequestEventTarget</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Document.html">Document</a></dt>
-    <dd><p>A <see cref="!:&amp;quot;Document&amp;quot;"></see> from parsing the XML or HTML received using<br><see cref="!:&amp;quot;XMLHttpRequest&amp;quot;"></see>, or <code>null</code> if no data was received or if the<br>data is not XML/HTML.</p>
+    <dd><p>A <a class="xref" href="CSharpToJavaScript.APIs.JS.Document.html">Document</a> from parsing the XML or HTML received using<br><a class="xref" href="CSharpToJavaScript.APIs.JS.XMLHttpRequest.html">XMLHttpRequest</a>, or <code>null</code> if no data was received or if the<br>data is not XML/HTML.</p>
 </dd>
   </dl>
 
@@ -624,8 +624,8 @@ public class XMLHttpRequest : XMLHttpRequestEventTarget</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_XMLHttpRequest_ResponseXML_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><blockquote><p><strong>Note:</strong> The name <code>responseXML</code> is an artifact of this<br>property&amp;apos;s history; it works for both HTML and XML.</p></blockquote><p>Usually, the response is parsed as &amp;quot;<code>text/xml</code>&amp;quot;. If the<br><see cref="!:&amp;quot;XMLHttpRequestResponseType&amp;quot;"></see> is set to<br>&amp;quot;<code>document</code>&amp;quot; and the request was made asynchronously, instead the response is<br>parsed as &amp;quot;<code>text/html</code>&amp;quot;. <code>responseXML</code> is <code>null</code> for<br>any other types of data, as well as for <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs"><code>data:</code> URLs</a>.</p><p>If the server doesn&amp;apos;t specify the {{HTTPHeader(&amp;quot;Content-Type&amp;quot;)}} as<br>&amp;quot;<code>text/xml</code>&amp;quot; or &amp;quot;<code>application/xml</code>&amp;quot;, you can use<br><see cref="!:&amp;quot;XMLHttpRequestOverrideMimeType&amp;quot;"></see> to parse it as XML anyway.</p><p>This property isn&amp;apos;t available to workers.</p>
-<p>-<see cref="!:&amp;quot;XMLHttpRequest&amp;quot;"></see><br>-<see cref="!:&amp;quot;XMLHttpRequestResponse&amp;quot;"></see><br>-<see cref="!:&amp;quot;XMLHttpRequestResponseType&amp;quot;"></see><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Parsing_and_serializing_XML">Parsing and serializing XML</a><br>-Parsing XML into a DOM tree: <see cref="!:&amp;quot;DOMParser&amp;quot;"></see><br>-Serializing a DOM tree into XML: <see cref="!:&amp;quot;XMLSerializer&amp;quot;"></see> (specifically, the<br><see cref="!:&amp;quot;XMLSerializerSerializeToString&amp;quot;"></see> method)<br></p>
+  <div class="markdown level1 remarks"><blockquote><p><strong>Note:</strong> The name <code>responseXML</code> is an artifact of this<br>property&amp;apos;s history; it works for both HTML and XML.</p></blockquote><p>Usually, the response is parsed as &amp;quot;<code>text/xml</code>&amp;quot;. If the<br><a class="xref" href="CSharpToJavaScript.APIs.JS.XMLHttpRequestResponseType.html">XMLHttpRequestResponseType</a> is set to<br>&amp;quot;<code>document</code>&amp;quot; and the request was made asynchronously, instead the response is<br>parsed as &amp;quot;<code>text/html</code>&amp;quot;. <code>responseXML</code> is <code>null</code> for<br>any other types of data, as well as for <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs"><code>data:</code> URLs</a>.</p><p>If the server doesn&amp;apos;t specify the {{HTTPHeader(&amp;quot;Content-Type&amp;quot;)}} as<br>&amp;quot;<code>text/xml</code>&amp;quot; or &amp;quot;<code>application/xml</code>&amp;quot;, you can use<br><see cref="!:XMLHttpRequestOverrideMimeType"></see> to parse it as XML anyway.</p><p>This property isn&amp;apos;t available to workers.</p>
+<p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.XMLHttpRequest.html">XMLHttpRequest</a><br>-<see cref="!:XMLHttpRequestResponse"></see><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.XMLHttpRequestResponseType.html">XMLHttpRequestResponseType</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Parsing_and_serializing_XML">Parsing and serializing XML</a><br>-Parsing XML into a DOM tree: <a class="xref" href="CSharpToJavaScript.APIs.JS.DOMParser.html">DOMParser</a><br>-Serializing a DOM tree into XML: <see cref="!:XMLSerializer"></see> (specifically, the<br><see cref="!:XMLSerializerSerializeToString"></see> method)<br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/responseXML"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/responseXML</a></p>
 </div>
 
@@ -700,7 +700,7 @@ public class XMLHttpRequest : XMLHttpRequestEventTarget</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_XMLHttpRequest_StatusText_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>If the server response doesn&amp;apos;t explicitly specify a status text, <code>statusText</code> will assume the default value &amp;quot;OK&amp;quot;.</p><blockquote><p><strong>Note:</strong> Responses over an HTTP/2 connection will always have a empty string as status message as HTTP/2 does not support them.</p></blockquote>
+  <div class="markdown level1 remarks"><p>If the server response doesn&amp;apos;t explicitly specify a status text, <code>statusText</code> will assume the default value &amp;quot;OK&amp;quot;.</p><blockquote><p><strong>Note:</strong> Responses over an HTTP/2 connection will always have an empty string as status message as HTTP/2 does not support them.</p></blockquote>
 <p>-List of <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">HTTP status</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a><br>-<a href="https://fetch.spec.whatwg.org/#concept-response-status-message">WHATWG Fetch Living Standard</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/statusText"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/statusText</a></p>
 </div>
@@ -737,7 +737,7 @@ public class XMLHttpRequest : XMLHttpRequestEventTarget</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_XMLHttpRequest_Timeout_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><blockquote><p><strong>Note:</strong> You may not use a timeout for synchronous requests with an owning window.</p></blockquote><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests#example_using_a_timeout">Using a timeout with an asynchronous request</a></p><p>In Internet Explorer, the timeout property may be set only after calling the <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/open">open()</a> method and before calling the <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/send">send()</a> method.</p>
+  <div class="markdown level1 remarks"><blockquote><p><strong>Note:</strong> You may not use a timeout for synchronous requests with an owning window.</p></blockquote><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests#example_using_a_timeout">Using a timeout with an asynchronous request</a></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/timeout"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/timeout</a></p>
 </div>
 
@@ -751,7 +751,7 @@ public class XMLHttpRequest : XMLHttpRequestEventTarget</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <see cref="!:&amp;quot;XMLHttpRequest&amp;quot;"></see> <code>upload</code> property returns an <see cref="!:&amp;quot;XMLHttpRequestUpload&amp;quot;"></see> object that can be observed to monitor an upload&amp;apos;s progress.</p>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="CSharpToJavaScript.APIs.JS.XMLHttpRequest.html">XMLHttpRequest</a> <code>upload</code> property returns an <a class="xref" href="CSharpToJavaScript.APIs.JS.XMLHttpRequestUpload.html">XMLHttpRequestUpload</a> object that can be observed to monitor an upload's progress.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -773,8 +773,8 @@ public class XMLHttpRequest : XMLHttpRequestEventTarget</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_XMLHttpRequest_Upload_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>It is an opaque object, but because it&amp;apos;s also an <see cref="!:&amp;quot;XMLHttpRequestEventTarget&amp;quot;"></see>, event listeners can be attached to track its process.</p><blockquote><p><strong>Note:</strong> Attaching event listeners to this object prevents the request from being a &amp;quot;simple request&amp;quot; and will cause a preflight request to be issued if cross-origin; see <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">CORS</a>. Because of this, event listeners need to be registered before calling <see cref="!:&amp;quot;XMLHttpRequestSend&amp;quot;"></see> or upload events won&amp;apos;t be dispatched.</p></blockquote><blockquote><p><strong>Note:</strong> The spec also seems to indicate that event listeners should be attached after <see cref="!:&amp;quot;XMLHttpRequestOpen&amp;quot;"></see>. However, browsers are buggy on this matter, and often need the listeners to be registered <strong>before</strong> <see cref="!:&amp;quot;XMLHttpRequestOpen&amp;quot;"></see> to work.</p></blockquote><p>The following events can be triggered on an upload object and used to monitor the upload:</p>
-<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</a><br></p>
+  <div class="markdown level1 remarks"><p>It is an opaque object, but because it's also an <a class="xref" href="CSharpToJavaScript.APIs.JS.XMLHttpRequestEventTarget.html">XMLHttpRequestEventTarget</a>, event listeners can be attached to track its process.</p><blockquote><p><strong>Note:</strong> Attaching event listeners to this object prevents the request from being a &amp;quot;simple request&amp;quot; and will cause a preflight request to be issued if cross-origin; see <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">CORS</a>. Because of this, event listeners need to be registered before calling <see cref="!:XMLHttpRequestSend"></see> or upload events won't be dispatched.</p></blockquote><blockquote><p><strong>Note:</strong> The spec also seems to indicate that event listeners should be attached after <see cref="!:XMLHttpRequestOpen"></see>. However, browsers are buggy on this matter, and often need the listeners to be registered <strong>before</strong> <see cref="!:XMLHttpRequestOpen"></see> to work.</p></blockquote><p>The following events can be triggered on an upload object and used to monitor the upload:</p>
+<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.XMLHttpRequestUpload.html">XMLHttpRequestUpload</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/upload"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/upload</a></p>
 </div>
 
@@ -829,7 +829,7 @@ public class XMLHttpRequest : XMLHttpRequestEventTarget</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>XMLHttpRequest.abort()</code></strong> method aborts the request if<br>it has already been sent. When a request is aborted, its<br><see cref="!:&amp;quot;XMLHttpRequestReadyState&amp;quot;"></see> is changed to<br><see cref="!:&amp;quot;XMLHttpRequestUNSENT&amp;quot;"></see> (0) and the request&amp;apos;s<br><see cref="!:&amp;quot;XMLHttpRequestStatus&amp;quot;"></see> code is set to 0.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>XMLHttpRequest.abort()</code></strong> method aborts the request if<br>it has already been sent. When a request is aborted, its<br><see cref="!:XMLHttpRequestReadyState"></see> is changed to<br><code>XMLHttpRequest.UNSENT</code> (0) and the request&amp;apos;s<br><see cref="!:XMLHttpRequestStatus"></see> code is set to 0.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -841,7 +841,7 @@ public class XMLHttpRequest : XMLHttpRequestEventTarget</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None ({{jsxref(&amp;quot;undefined&amp;quot;)}}).</p>
+    <dd><p>None (<see cref="!:undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -866,7 +866,7 @@ public class XMLHttpRequest : XMLHttpRequestEventTarget</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <see cref="!:&amp;quot;XMLHttpRequest&amp;quot;"></see> method<br><strong><code>getAllResponseHeaders()</code></strong> returns all the response<br>headers, separated by {{Glossary(&amp;apos;CRLF&amp;apos;)}}, as a string, or returns <code>null</code><br>if no response has been received.</p>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="CSharpToJavaScript.APIs.JS.XMLHttpRequest.html">XMLHttpRequest</a> method<br><strong><code>getAllResponseHeaders()</code></strong> returns all the response<br>headers, separated by {{Glossary(&amp;apos;CRLF&amp;apos;)}}, as a string, or returns <code>null</code><br>if no response has been received.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -904,7 +904,7 @@ public class XMLHttpRequest : XMLHttpRequestEventTarget</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <see cref="!:&amp;quot;XMLHttpRequest&amp;quot;"></see> method<br><strong><code>getResponseHeader()</code></strong> returns the string containing the<br>text of a particular header&amp;apos;s value.</p>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="CSharpToJavaScript.APIs.JS.XMLHttpRequest.html">XMLHttpRequest</a> method<br><strong><code>getResponseHeader()</code></strong> returns the string containing the<br>text of a particular header&amp;apos;s value.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -932,8 +932,8 @@ public class XMLHttpRequest : XMLHttpRequestEventTarget</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_XMLHttpRequest_GetResponseHeader_System_String__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>If there are multiple response headers<br>with the same name, then their values are returned as a single concatenated string,<br>where each value is separated from the previous one by a pair of comma and space. The<br><code>getResponseHeader()</code> method returns the value as a UTF byte sequence.</p><blockquote><p><strong>Note:</strong> The search for the header name is case-insensitive.</p></blockquote><p>If you need to get the raw string of all of the headers, use the<br><see cref="!:&amp;quot;XMLHttpRequestGetAllResponseHeaders&amp;quot;"></see> method,<br>which returns the entire raw header string.</p>
-<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers">HTTP headers</a><br>-<see cref="!:&amp;quot;XMLHttpRequestGetAllResponseHeaders&amp;quot;"></see><br>-<see cref="!:&amp;quot;XMLHttpRequestResponse&amp;quot;"></see><br>-Setting request headers: {{DOMxRef(&amp;quot;XMLHttpRequest.setRequestHeader&amp;quot;,<br>&amp;quot;setRequestHeader()&amp;quot;)}}<br></p>
+  <div class="markdown level1 remarks"><p>If there are multiple response headers<br>with the same name, then their values are returned as a single concatenated string,<br>where each value is separated from the previous one by a pair of comma and space. The<br><code>getResponseHeader()</code> method returns the value as a UTF byte sequence.</p><blockquote><p><strong>Note:</strong> The search for the header name is case-insensitive.</p></blockquote><p>If you need to get the raw string of all of the headers, use the<br><see cref="!:XMLHttpRequestGetAllResponseHeaders"></see> method,<br>which returns the entire raw header string.</p>
+<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers">HTTP headers</a><br>-<see cref="!:XMLHttpRequestGetAllResponseHeaders"></see><br>-<see cref="!:XMLHttpRequestResponse"></see><br>-Setting request headers: {{DOMxRef(&amp;quot;XMLHttpRequest.setRequestHeader&amp;quot;,<br>&amp;quot;setRequestHeader()&amp;quot;)}}<br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/getResponseHeader"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/getResponseHeader</a></p>
 </div>
 
@@ -947,7 +947,7 @@ public class XMLHttpRequest : XMLHttpRequestEventTarget</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <see cref="!:&amp;quot;XMLHttpRequest&amp;quot;"></see> method <strong><code>open()</code></strong><br>initializes a newly-created request, or re-initializes an existing one.</p>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="CSharpToJavaScript.APIs.JS.XMLHttpRequest.html">XMLHttpRequest</a> method <strong><code>open()</code></strong><br>initializes a newly-created request, or re-initializes an existing one.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -966,7 +966,7 @@ public class XMLHttpRequest : XMLHttpRequestEventTarget</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None ({{jsxref(&amp;quot;undefined&amp;quot;)}}).</p>
+    <dd><p>None (<see cref="!:undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -977,8 +977,8 @@ public class XMLHttpRequest : XMLHttpRequestEventTarget</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_XMLHttpRequest_Open_System_String_System_String__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><blockquote><p><strong>Note:</strong> Calling this method for an already active request<br>(one for which <code>open()</code> has already been called) is the equivalent of calling<br><see cref="!:&amp;quot;XMLHttpRequestAbort&amp;quot;"></see>.</p></blockquote>
-<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a><br>-Related <see cref="!:&amp;quot;XMLHttpRequest&amp;quot;"></see> methods:<br>{{domxref(&amp;quot;XMLHttpRequest.setRequestHeader&amp;quot;,<br>&amp;quot;setRequestHeader()&amp;quot;)}}, <see cref="!:&amp;quot;XMLHttpRequestSend&amp;quot;"></see>, and<br><see cref="!:&amp;quot;XMLHttpRequestAbort&amp;quot;"></see><br></p>
+  <div class="markdown level1 remarks"><blockquote><p><strong>Note:</strong> Calling this method for an already active request<br>(one for which <code>open()</code> has already been called) is the equivalent of calling<br><see cref="!:XMLHttpRequestAbort"></see>.</p></blockquote>
+<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a><br>-Related <a class="xref" href="CSharpToJavaScript.APIs.JS.XMLHttpRequest.html">XMLHttpRequest</a> methods:<br>{{domxref(&amp;quot;XMLHttpRequest.setRequestHeader&amp;quot;,<br>"setRequestHeader()")}}, <see cref="!:XMLHttpRequestSend"></see>, and<br><see cref="!:XMLHttpRequestAbort"></see><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/open"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/open</a></p>
 </div>
 
@@ -992,7 +992,7 @@ public class XMLHttpRequest : XMLHttpRequestEventTarget</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <see cref="!:&amp;quot;XMLHttpRequest&amp;quot;"></see> method <strong><code>open()</code></strong><br>initializes a newly-created request, or re-initializes an existing one.</p>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="CSharpToJavaScript.APIs.JS.XMLHttpRequest.html">XMLHttpRequest</a> method <strong><code>open()</code></strong><br>initializes a newly-created request, or re-initializes an existing one.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1017,7 +1017,7 @@ public class XMLHttpRequest : XMLHttpRequestEventTarget</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None ({{jsxref(&amp;quot;undefined&amp;quot;)}}).</p>
+    <dd><p>None (<see cref="!:undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -1028,8 +1028,8 @@ public class XMLHttpRequest : XMLHttpRequestEventTarget</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_XMLHttpRequest_Open_System_String_System_String_System_Boolean_System_String_System_String__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><blockquote><p><strong>Note:</strong> Calling this method for an already active request<br>(one for which <code>open()</code> has already been called) is the equivalent of calling<br><see cref="!:&amp;quot;XMLHttpRequestAbort&amp;quot;"></see>.</p></blockquote>
-<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a><br>-Related <see cref="!:&amp;quot;XMLHttpRequest&amp;quot;"></see> methods:<br>{{domxref(&amp;quot;XMLHttpRequest.setRequestHeader&amp;quot;,<br>&amp;quot;setRequestHeader()&amp;quot;)}}, <see cref="!:&amp;quot;XMLHttpRequestSend&amp;quot;"></see>, and<br><see cref="!:&amp;quot;XMLHttpRequestAbort&amp;quot;"></see><br></p>
+  <div class="markdown level1 remarks"><blockquote><p><strong>Note:</strong> Calling this method for an already active request<br>(one for which <code>open()</code> has already been called) is the equivalent of calling<br><see cref="!:XMLHttpRequestAbort"></see>.</p></blockquote>
+<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a><br>-Related <a class="xref" href="CSharpToJavaScript.APIs.JS.XMLHttpRequest.html">XMLHttpRequest</a> methods:<br>{{domxref(&amp;quot;XMLHttpRequest.setRequestHeader&amp;quot;,<br>"setRequestHeader()")}}, <see cref="!:XMLHttpRequestSend"></see>, and<br><see cref="!:XMLHttpRequestAbort"></see><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/open"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/open</a></p>
 </div>
 
@@ -1043,7 +1043,7 @@ public class XMLHttpRequest : XMLHttpRequestEventTarget</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <see cref="!:&amp;quot;XMLHttpRequest&amp;quot;"></see> method<br><strong><code>overrideMimeType()</code></strong> specifies a MIME type other than the<br>one provided by the server to be used instead when interpreting the data being<br>transferred in a request.</p>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="CSharpToJavaScript.APIs.JS.XMLHttpRequest.html">XMLHttpRequest</a> method<br><strong><code>overrideMimeType()</code></strong> specifies a MIME type other than the<br>one provided by the server to be used instead when interpreting the data being<br>transferred in a request.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1060,7 +1060,7 @@ public class XMLHttpRequest : XMLHttpRequestEventTarget</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None ({{jsxref(&amp;quot;undefined&amp;quot;)}}).</p>
+    <dd><p>None (<see cref="!:undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -1072,7 +1072,7 @@ public class XMLHttpRequest : XMLHttpRequestEventTarget</code></pre>
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_XMLHttpRequest_OverrideMimeType_System_String__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>This may be used, for example, to force a stream to<br>be treated and parsed as <code>&amp;quot;text/xml&amp;quot;</code>, even if the server does not report it<br>as such. This method must be called before calling {{domxref(&amp;quot;XMLHttpRequest.send&amp;quot;,<br>&amp;quot;send()&amp;quot;)}}.</p>
-<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a><br>-<see cref="!:&amp;quot;XMLHttpRequestResponseType&amp;quot;"></see><br></p>
+<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.XMLHttpRequestResponseType.html">XMLHttpRequestResponseType</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/overrideMimeType"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/overrideMimeType</a></p>
 </div>
 
@@ -1086,7 +1086,7 @@ public class XMLHttpRequest : XMLHttpRequestEventTarget</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <see cref="!:&amp;quot;XMLHttpRequest&amp;quot;"></see> method<br><strong><code>send()</code></strong> sends the request to the server.</p>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="CSharpToJavaScript.APIs.JS.XMLHttpRequest.html">XMLHttpRequest</a> method<br><strong><code>send()</code></strong> sends the request to the server.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1103,7 +1103,7 @@ public class XMLHttpRequest : XMLHttpRequestEventTarget</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None ({{jsxref(&amp;quot;undefined&amp;quot;)}}).</p>
+    <dd><p>None (<see cref="!:undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -1114,7 +1114,7 @@ public class XMLHttpRequest : XMLHttpRequestEventTarget</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_XMLHttpRequest_Send_System_Nullable_CSharpToJavaScript_APIs_JS_Union50___remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>If the<br>request is asynchronous (which is the default), this method returns as soon as the<br>request is sent and the result is delivered using events. If the request is synchronous,<br>this method doesn&amp;apos;t return until the response has arrived.</p><p><code>send()</code> accepts an optional parameter which lets you specify the request&amp;apos;s<br>body; this is primarily used for requests such as {{HTTPMethod(&amp;quot;PUT&amp;quot;)}}. If the request<br>method is {{HTTPMethod(&amp;quot;GET&amp;quot;)}} or {{HTTPMethod(&amp;quot;HEAD&amp;quot;)}}, the <code>body</code><br>parameter is ignored and the request body is set to <code>null</code>.</p><p>If no {{HTTPHeader(&amp;quot;Accept&amp;quot;)}} header has been set using the<br><see cref="!:&amp;quot;XMLHttpRequestSetRequestHeader&amp;quot;"></see>, an<br><code>Accept</code> header with the type <code>&amp;quot;*/*&amp;quot;</code> (any type) is sent.</p>
+  <div class="markdown level1 remarks"><p>If the<br>request is asynchronous (which is the default), this method returns as soon as the<br>request is sent and the result is delivered using events. If the request is synchronous,<br>this method doesn&amp;apos;t return until the response has arrived.</p><p><code>send()</code> accepts an optional parameter which lets you specify the request&amp;apos;s<br>body; this is primarily used for requests such as {{HTTPMethod(&amp;quot;PUT&amp;quot;)}}. If the request<br>method is {{HTTPMethod(&amp;quot;GET&amp;quot;)}} or {{HTTPMethod(&amp;quot;HEAD&amp;quot;)}}, the <code>body</code><br>parameter is ignored and the request body is set to <code>null</code>.</p><p>If no {{HTTPHeader(&amp;quot;Accept&amp;quot;)}} header has been set using the<br><see cref="!:XMLHttpRequestSetRequestHeader"></see>, an<br><code>Accept</code> header with the type <code>&amp;quot;*/*&amp;quot;</code> (any type) is sent.</p>
 <p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest">HTML in XMLHttpRequest</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/send"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/send</a></p>
 </div>
@@ -1129,7 +1129,7 @@ public class XMLHttpRequest : XMLHttpRequestEventTarget</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <see cref="!:&amp;quot;XMLHttpRequest&amp;quot;"></see> method<br><strong><code>setRequestHeader()</code></strong> sets the value of an HTTP request<br>header. When using <code>setRequestHeader()</code>, you must call it after calling<br><see cref="!:&amp;quot;XMLHttpRequestOpen&amp;quot;"></see>, but before calling<br><see cref="!:&amp;quot;XMLHttpRequestSend&amp;quot;"></see>. If this method is called several times<br>with the same header, the values are merged into one single request header.</p>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="CSharpToJavaScript.APIs.JS.XMLHttpRequest.html">XMLHttpRequest</a> method <strong><code>setRequestHeader()</code></strong> sets the value of an HTTP request header.<br>When using <code>setRequestHeader()</code>, you must call it after calling <see cref="!:XMLHttpRequestOpen"></see>, but before calling <see cref="!:XMLHttpRequestSend"></see>.<br>If this method is called several times with the same header, the values are merged into one single request header.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1148,7 +1148,7 @@ public class XMLHttpRequest : XMLHttpRequestEventTarget</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None ({{jsxref(&amp;quot;undefined&amp;quot;)}}).</p>
+    <dd><p>None (<see cref="!:undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -1159,7 +1159,7 @@ public class XMLHttpRequest : XMLHttpRequestEventTarget</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_XMLHttpRequest_SetRequestHeader_System_String_System_String__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>Each time you call <code>setRequestHeader()</code> after the first time you call it,<br>the specified text is appended to the end of the existing header&amp;apos;s content.</p><p>If no {{HTTPHeader(&amp;quot;Accept&amp;quot;)}} header has been set using this, an <code>Accept</code><br>header with the type <code>&amp;quot;*/*&amp;quot;</code> is sent with the request when<br><see cref="!:&amp;quot;XMLHttpRequestSend&amp;quot;"></see> is called.</p><p>For security reasons, some headers can only be controlled by the user agent. These<br>headers include the {{Glossary(&amp;quot;Forbidden_header_name&amp;quot;, &amp;quot;forbidden header names&amp;quot;)}}<br>and {{Glossary(&amp;quot;Forbidden_response_header_name&amp;quot;, &amp;quot;forbidden response header names&amp;quot;)}}.</p><blockquote><p><strong>Note:</strong> For your custom fields, you may encounter a &amp;quot;<strong>not</strong><strong><br></strong><strong>allowed by Access-Control-Allow-Headers in preflight response</strong>&amp;quot; exception<br>when you send requests across domains. In this situation, you need to set up the<br>{{HTTPHeader(&amp;quot;Access-Control-Allow-Headers&amp;quot;)}} in your response header at server side.</p></blockquote>
+  <div class="markdown level1 remarks"><p>Each time you call <code>setRequestHeader()</code> after the first time you call it, the specified text is appended to the end of the existing header&amp;apos;s content.</p><p>If no {{HTTPHeader(&amp;quot;Accept&amp;quot;)}} header has been set using this, an <code>Accept</code> header with the type <code>&amp;quot;*/*&amp;quot;</code> is sent with the request when <see cref="!:XMLHttpRequestSend"></see> is called.</p><p>For security reasons, there are several {{Glossary(&amp;quot;Forbidden_header_name&amp;quot;, &amp;quot;forbidden header names&amp;quot;)}} whose values are controlled by the user agent. Any attempt to set a value for one of those headers from frontend JavaScript code will be ignored without warning or error.</p><p>In addition, the <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Authorization"><code>Authorization</code>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Authorization</a> HTTP header may be added to a request, but will be removed if the request is redirected cross-origin.</p><blockquote><p><strong>Note:</strong> For your custom fields, you may encounter a &amp;quot;<strong>not allowed by Access-Control-Allow-Headers in preflight response</strong>&amp;quot; exception when you send requests across domains.<br>In this situation, you need to set up the {{HTTPHeader(&amp;quot;Access-Control-Allow-Headers&amp;quot;)}} in your response header at server side.</p></blockquote>
 <p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest">HTML in XMLHttpRequest</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/setRequestHeader"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/setRequestHeader</a></p>
 </div>

@@ -318,7 +318,7 @@ public class Attr : Node</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The read-only <strong><code>localName</code></strong> property of the <see cref="!:&amp;quot;Attr&amp;quot;"></see> interface returns the <strong>local part</strong> of the <strong>qualified name</strong> of an attribute, that is the name of the attribute, stripped from any namespace in front of it. For example, if the qualified name is <code>xml:lang</code>, the returned local name is <code>lang</code>, if the element supports that namespace.</p>
+  <div class="markdown level1 summary"><p>The read-only <strong><code>localName</code></strong> property of the <a class="xref" href="CSharpToJavaScript.APIs.JS.Attr.html">Attr</a> interface returns the <strong>local part</strong> of the <strong>qualified name</strong> of an attribute, that is the name of the attribute, stripped from any namespace in front of it. For example, if the qualified name is <code>xml:lang</code>, the returned local name is <code>lang</code>, if the element supports that namespace.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -342,7 +342,7 @@ public class Attr : Node</code></pre>
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Attr_LocalName_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>The local name is always in lower case, whatever case at the attribute creation.</p><blockquote><p><strong>Note:</strong> HTML only supports a fixed set of namespaces on SVG and MathML elements. These are <code>xml</code> (for the <code>xml:lang</code> attribute), <code>xlink</code> (for the <code>xlink:href</code>, <code>xlink:show</code>, <code>xlink:target</code> and <code>xlink:title</code> attributes) and <code>xpath</code>.</p><p>That means that the local name of an attribute of an HTML element is always be equal to its qualified name: Colons are treated as regular characters. In XML, like in SVG or MathML, the colon denotes the end of the prefix and what is before is the namespace; the local name may be different from the qualified name.</p></blockquote>
-<p>-The properties <see cref="!:&amp;quot;AttrName&amp;quot;"></see>, returning the qualified name of the attribute, and <see cref="!:&amp;quot;AttrName&amp;quot;"></see>, the namespace prefix.<br>-The <see cref="!:&amp;quot;ElementLocalName&amp;quot;"></see> property, returning the local name of an <see cref="!:&amp;quot;ElementLocalName&amp;quot;"></see>.<br></p>
+<p>-The properties <see cref="!:AttrName"></see>, returning the qualified name of the attribute, and <see cref="!:AttrPrefix"></see>, the namespace prefix.<br>-The <see cref="!:ElementLocalName"></see> property, returning the local name of an <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html">Element</a>.<br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Attr/localName"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Attr/localName</a></p>
 </div>
 
@@ -356,7 +356,7 @@ public class Attr : Node</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The read-only <strong><code>name</code></strong> property of the <see cref="!:&amp;quot;Attr&amp;quot;"></see> interface returns the <strong>qualified name</strong> of an attribute, that is the name of the attribute, with the namespace prefix, if any, in front of it. For example, if the local name is <code>lang</code> and the namespace prefix is <code>xml</code>, the returned qualified name is <code>xml:lang</code>.</p>
+  <div class="markdown level1 summary"><p>The read-only <strong><code>name</code></strong> property of the <a class="xref" href="CSharpToJavaScript.APIs.JS.Attr.html">Attr</a> interface returns the <strong>qualified name</strong> of an attribute, that is the name of the attribute, with the namespace prefix, if any, in front of it. For example, if the local name is <code>lang</code> and the namespace prefix is <code>xml</code>, the returned qualified name is <code>xml:lang</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -380,7 +380,7 @@ public class Attr : Node</code></pre>
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Attr_Name_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>The qualified name is always in lower case, whatever case at the attribute creation.</p>
-<p>-The properties <see cref="!:&amp;quot;AttrLocalName&amp;quot;"></see>, returning the local part of the qualified name of the attribute, and <see cref="!:&amp;quot;AttrLocalName&amp;quot;"></see>, the namespace prefix.<br>-The <see cref="!:&amp;quot;ElementTagName&amp;quot;"></see> property, returning the qualified name of an <see cref="!:&amp;quot;ElementTagName&amp;quot;"></see>.<br></p>
+<p>-The properties <see cref="!:AttrLocalName"></see>, returning the local part of the qualified name of the attribute, and <see cref="!:AttrPrefix"></see>, the namespace prefix.<br>-The <see cref="!:ElementTagName"></see> property, returning the qualified name of an <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html">Element</a>.<br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Attr/name"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Attr/name</a></p>
 </div>
 
@@ -394,7 +394,7 @@ public class Attr : Node</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The read-only <strong><code>namespaceURI</code></strong> property of the <see cref="!:&amp;quot;Attr&amp;quot;"></see> interface returns the namespace URI of the attribute,<br>or <code>null</code> if the element is not in a namespace.</p>
+  <div class="markdown level1 summary"><p>The read-only <strong><code>namespaceURI</code></strong> property of the <a class="xref" href="CSharpToJavaScript.APIs.JS.Attr.html">Attr</a> interface returns the namespace URI of the attribute,<br>or <code>null</code> if the element is not in a namespace.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -417,8 +417,8 @@ public class Attr : Node</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Attr_NamespaceURI_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>The namespace URI is set at the <see cref="!:&amp;quot;Attr&amp;quot;"></see> creation and cannot be changed.<br>An attribute with a namespace can be created using <see cref="!:&amp;quot;ElementSetAttributeNS&amp;quot;"></see>.</p><blockquote><p><strong>Note:</strong> an attribute does not inherit its namespace from the element it is attached to.<br>If an attribute is not explicitly given a namespace, it has no namespace.</p></blockquote><p>The browser does not handle or enforce namespace validation per se. It is up to the JavaScript<br>application to do any necessary validation. Note, too, that the namespace prefix, once it<br>is associated with a particular attribute node, cannot be changed.</p>
-<p>-The properties <see cref="!:&amp;quot;AttrName&amp;quot;"></see>, returning the qualified name of the attribute, <see cref="!:&amp;quot;AttrName&amp;quot;"></see>, the local part of the name, and <see cref="!:&amp;quot;AttrName&amp;quot;"></see>, the namespace prefix.<br>-The <see cref="!:&amp;quot;ElementNamespaceURI&amp;quot;"></see> property, equivalent to this one but for an <see cref="!:&amp;quot;ElementNamespaceURI&amp;quot;"></see>.<br>-The <see cref="!:&amp;quot;ElementSetAttributeNS&amp;quot;"></see> method, creating an attribute with a given namespace.<br></p>
+  <div class="markdown level1 remarks"><p>The namespace URI is set at the <a class="xref" href="CSharpToJavaScript.APIs.JS.Attr.html">Attr</a> creation and cannot be changed.<br>An attribute with a namespace can be created using <see cref="!:ElementSetAttributeNS"></see>.</p><blockquote><p><strong>Note:</strong> an attribute does not inherit its namespace from the element it is attached to.<br>If an attribute is not explicitly given a namespace, it has no namespace.</p></blockquote><p>The browser does not handle or enforce namespace validation per se. It is up to the JavaScript<br>application to do any necessary validation. Note, too, that the namespace prefix, once it<br>is associated with a particular attribute node, cannot be changed.</p>
+<p>-The properties <see cref="!:AttrName"></see>, returning the qualified name of the attribute, <see cref="!:AttrLocalName"></see>, the local part of the name, and <see cref="!:AttrPrefix"></see>, the namespace prefix.<br>-The <see cref="!:ElementNamespaceURI"></see> property, equivalent to this one but for an <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html">Element</a>.<br>-The <see cref="!:ElementSetAttributeNS"></see> method, creating an attribute with a given namespace.<br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Attr/namespaceURI"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Attr/namespaceURI</a></p>
 </div>
 
@@ -432,7 +432,7 @@ public class Attr : Node</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The read-only <strong><code>ownerElement</code></strong> property of the <see cref="!:&amp;quot;Attr&amp;quot;"></see> interface returns the <see cref="!:&amp;quot;Attr&amp;quot;"></see> the attribute belongs to.</p>
+  <div class="markdown level1 summary"><p>The read-only <strong><code>ownerElement</code></strong> property of the <a class="xref" href="CSharpToJavaScript.APIs.JS.Attr.html">Attr</a> interface returns the <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html">Element</a> the attribute belongs to.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -447,7 +447,7 @@ public class Attr : Node</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html">Element</a></dt>
-    <dd><p>The <see cref="!:&amp;quot;Element&amp;quot;"></see> the attribute belongs to, or <code>null</code> if the attribute is not linked to an element.</p>
+    <dd><p>The <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html">Element</a> the attribute belongs to, or <code>null</code> if the attribute is not linked to an element.</p>
 </dd>
   </dl>
 
@@ -468,7 +468,7 @@ public class Attr : Node</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The read-only <strong><code>prefix</code></strong> property of the <see cref="!:&amp;quot;Attr&amp;quot;"></see> returns the namespace prefix of the attribute, or <code>null</code> if no prefix is specified.</p>
+  <div class="markdown level1 summary"><p>The read-only <strong><code>prefix</code></strong> property of the <a class="xref" href="CSharpToJavaScript.APIs.JS.Attr.html">Attr</a> returns the namespace prefix of the attribute, or <code>null</code> if no prefix is specified.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -492,7 +492,7 @@ public class Attr : Node</code></pre>
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Attr_Prefix_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>The prefix is always in lower case, whatever case is used at the attribute creation.</p><blockquote><p><strong>Note:</strong> Only XML supports namespaces. HTML does not. That means that the prefix of an attribute of an HTML element will always be <code>null</code>.</p></blockquote><p>Also, only the <code>xml</code> (for the <code>xml:lang</code> attribute), <code>xlink</code> (for the <code>xlink:href</code>, <code>xlink:show</code>, <code>xlink:target</code> and <code>xlink:title</code> attributes) and <code>xpath</code> namespaces are supported, and only on SVG and MathML elements.</p>
-<p>-The properties <see cref="!:&amp;quot;AttrName&amp;quot;"></see>, returning the qualified name of the attribute, and <see cref="!:&amp;quot;AttrName&amp;quot;"></see>, its local name.<br>-The <see cref="!:&amp;quot;ElementPrefix&amp;quot;"></see> property, returning the namespace prefix of an <see cref="!:&amp;quot;ElementPrefix&amp;quot;"></see>.<br></p>
+<p>-The properties <see cref="!:AttrName"></see>, returning the qualified name of the attribute, and <see cref="!:AttrLocalName"></see>, its local name.<br>-The <see cref="!:ElementPrefix"></see> property, returning the namespace prefix of an <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html">Element</a>.<br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Attr/prefix"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Attr/prefix</a></p>
 </div>
 
@@ -506,7 +506,7 @@ public class Attr : Node</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The read-only <strong><code>specified</code></strong> property of the <see cref="!:&amp;quot;Attr&amp;quot;"></see> interface always returns <code>true</code>.</p>
+  <div class="markdown level1 summary"><p>The read-only <strong><code>specified</code></strong> property of the <a class="xref" href="CSharpToJavaScript.APIs.JS.Attr.html">Attr</a> interface always returns <code>true</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -542,7 +542,7 @@ public class Attr : Node</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>value</code></strong> property of the <see cref="!:&amp;quot;Attr&amp;quot;"></see> interface contains the value of the attribute.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>value</code></strong> property of the <a class="xref" href="CSharpToJavaScript.APIs.JS.Attr.html">Attr</a> interface contains the value of the attribute.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 

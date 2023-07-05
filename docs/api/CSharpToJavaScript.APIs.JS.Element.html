@@ -91,7 +91,7 @@
   <dl><dt>Assembly</dt><dd>CSharpToJavaScript.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p><strong><code>Element</code></strong> is the most general base class from which all element objects (i.e. objects that represent elements) in a <see cref="!:&amp;quot;Document&amp;quot;"></see> inherit. It only has methods and properties common to all kinds of elements. More specific classes inherit from <code>Element</code>.</p>
+  <div class="markdown summary"><p><strong><code>Element</code></strong> is the most general base class from which all element objects (i.e. objects that represent elements) in a <a class="xref" href="CSharpToJavaScript.APIs.JS.Document.html">Document</a> inherit. It only has methods and properties common to all kinds of elements. More specific classes inherit from <code>Element</code>.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -322,7 +322,7 @@ public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Sl
 
 
   <h2 id="CSharpToJavaScript_APIs_JS_Element_remarks">Remarks</h2>
-  <div class="markdown level0 remarks"><p>For example, the <see cref="!:&amp;quot;HTMLElement&amp;quot;"></see> interface is the base interface for HTML elements, while the <see cref="!:&amp;quot;HTMLElement&amp;quot;"></see> interface is the basis for all SVG elements. Most functionality is specified further down the class hierarchy.</p><p>Languages outside the realm of the Web platform, like XUL through the <code>XULElement</code> interface, also implement <code>Element</code>.</p><p>{{InheritanceDiagram}}</p>
+  <div class="markdown level0 remarks"><p>For example, the <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLElement.html">HTMLElement</a> interface is the base interface for HTML elements, while the <see cref="!:SVGElement"></see> interface is the basis for all SVG elements. Most functionality is specified further down the class hierarchy.</p><p>Languages outside the realm of the Web platform, like XUL through the <code>XULElement</code> interface, also implement <code>Element</code>.</p><p>{{InheritanceDiagram}}</p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Element</a></p>
 </div>
 
@@ -338,7 +338,7 @@ public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Sl
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>Element.attributes</code></strong> property returns a live collection<br>of all attribute nodes registered to the specified node. It is a<br><see cref="!:&amp;quot;NamedNodeMap&amp;quot;"></see>, not an <code>Array</code>, so it has no {{jsxref(&amp;quot;Array&amp;quot;)}}<br>methods and the <see cref="!:&amp;quot;Attr&amp;quot;"></see> nodes&amp;apos; indexes may differ among browsers. To be more<br>specific, <code>attributes</code> is a key/value pair of strings that represents any<br>information regarding that attribute.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>Element.attributes</code></strong> property returns a live collection<br>of all attribute nodes registered to the specified node. It is a<br><a class="xref" href="CSharpToJavaScript.APIs.JS.NamedNodeMap.html">NamedNodeMap</a>, not an <code>Array</code>, so it has no <see cref="!:Array"></see><br>methods and the <a class="xref" href="CSharpToJavaScript.APIs.JS.Attr.html">Attr</a> nodes' indexes may differ among browsers. To be more<br>specific, <code>attributes</code> is a key/value pair of strings that represents any<br>information regarding that attribute.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -353,7 +353,7 @@ public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Sl
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.NamedNodeMap.html">NamedNodeMap</a></dt>
-    <dd><p>A <see cref="!:&amp;quot;NamedNodeMap&amp;quot;"></see> object.</p>
+    <dd><p>A <a class="xref" href="CSharpToJavaScript.APIs.JS.NamedNodeMap.html">NamedNodeMap</a> object.</p>
 </dd>
   </dl>
 
@@ -361,7 +361,7 @@ public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Sl
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Element_Attributes_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>-<see cref="!:&amp;quot;NamedNodeMap&amp;quot;"></see>, the interface of the returned object<br>-Cross-browser compatibility considerations: on <a href="https://quirksmode.org/dom/core/#attributes">quirksmode</a><br></p>
+  <div class="markdown level1 remarks"><p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.NamedNodeMap.html">NamedNodeMap</a>, the interface of the returned object<br>-Cross-browser compatibility considerations: on <a href="https://quirksmode.org/dom/core/#attributes">quirksmode</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/attributes"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Element/attributes</a></p>
 </div>
 
@@ -375,7 +375,7 @@ public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Sl
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>Element.classList</code></strong> is a read-only property that<br>returns a live <see cref="!:&amp;quot;DOMTokenList&amp;quot;"></see> collection of the <code>class</code><br>attributes of the element. This can then be used to manipulate the class list.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>Element.classList</code></strong> is a read-only property that<br>returns a live <a class="xref" href="CSharpToJavaScript.APIs.JS.DOMTokenList.html">DOMTokenList</a> collection of the <code>class</code><br>attributes of the element. This can then be used to manipulate the class list.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -390,7 +390,7 @@ public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Sl
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.DOMTokenList.html">DOMTokenList</a></dt>
-    <dd><p>A <see cref="!:&amp;quot;DOMTokenList&amp;quot;"></see> representing the contents of the element&amp;apos;s<br><code>class</code> attribute. If the <code>class</code> attribute is not set or empty,<br>it returns an empty <code>DOMTokenList</code>, i.e. a <code>DOMTokenList</code> with<br>the <code>length</code> property equal to <code>0</code>.Although the <code>classList</code> property itself is read-only, you can modify its associated <code>DOMTokenList</code> using the <see cref="!:&amp;quot;DOMTokenList/add&amp;quot;"></see>, <see cref="!:&amp;quot;DOMTokenList/add&amp;quot;"></see>, <see cref="!:&amp;quot;DOMTokenList/add&amp;quot;"></see>, and <see cref="!:&amp;quot;DOMTokenList/add&amp;quot;"></see> methods.</p>
+    <dd><p>A <a class="xref" href="CSharpToJavaScript.APIs.JS.DOMTokenList.html">DOMTokenList</a> representing the contents of the element's<br><code>class</code> attribute. If the <code>class</code> attribute is not set or empty,<br>it returns an empty <code>DOMTokenList</code>, i.e. a <code>DOMTokenList</code> with<br>the <code>length</code> property equal to <code>0</code>.Although the <code>classList</code> property itself is read-only, you can modify its associated <code>DOMTokenList</code> using the <see cref="!:DOMTokenList/add"></see>, <see cref="!:DOMTokenList/remove"></see>, <see cref="!:DOMTokenList/replace"></see>, and <see cref="!:DOMTokenList/toggle"></see> methods.You can test whether the element contains a given class using the <see cref="!:DOMTokenList/contains"></see> method.</p>
 </dd>
   </dl>
 
@@ -398,8 +398,8 @@ public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Sl
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Element_ClassList_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>Using <code>classList</code> is a convenient alternative to accessing an element&amp;apos;s list<br>of classes as a space-delimited string via <see cref="!:&amp;quot;elementClassName&amp;quot;"></see>.</p>
-<p>-<see cref="!:&amp;quot;elementClassName&amp;quot;"></see><br>-<see cref="!:&amp;quot;DOMTokenList&amp;quot;"></see><br>-<a href="https://github.com/eligrey/classList.js"><code>classList.js</code>https://github.com/eligrey/classList.js</a> (a cross-browser JavaScript polyfill that fully implements <code>element.classList</code>)<br></p>
+  <div class="markdown level1 remarks"><p>Using <code>classList</code> is a convenient alternative to accessing an element&amp;apos;s list<br>of classes as a space-delimited string via <see cref="!:elementClassName"></see>.</p>
+<p>-<see cref="!:elementClassName"></see><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.DOMTokenList.html">DOMTokenList</a><br>-<a href="https://github.com/eligrey/classList.js"><code>classList.js</code>https://github.com/eligrey/classList.js</a> (a cross-browser JavaScript polyfill that fully implements <code>element.classList</code>)<br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/classList"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Element/classList</a></p>
 </div>
 
@@ -413,7 +413,7 @@ public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Sl
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>className</code></strong> property of the<br><see cref="!:&amp;quot;Element&amp;quot;"></see> interface gets and sets the value of the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/class"><code>class</code> attribute</a><br>of the specified element.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>className</code></strong> property of the<br><a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html">Element</a> interface gets and sets the value of the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/class"><code>class</code> attribute</a><br>of the specified element.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -436,7 +436,7 @@ public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Sl
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Element_ClassName_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>-<see cref="!:&amp;quot;elementClassList&amp;quot;"></see><br></p>
+  <div class="markdown level1 remarks"><p>-<see cref="!:elementClassList"></see><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/className"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Element/className</a></p>
 </div>
 
@@ -450,7 +450,7 @@ public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Sl
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>id</code></strong> property of the <see cref="!:&amp;quot;Element&amp;quot;"></see> interface<br>represents the element&amp;apos;s identifier, reflecting the<br><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id"><strong><code>id</code></strong>https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id</a><br>global attribute.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>id</code></strong> property of the <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html">Element</a> interface<br>represents the element&amp;apos;s identifier, reflecting the<br><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id"><strong><code>id</code></strong>https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id</a><br>global attribute.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -511,7 +511,7 @@ public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Sl
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Element_LocalName_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>-<see cref="!:&amp;quot;ElementNamespaceURI&amp;quot;"></see><br>-<see cref="!:&amp;quot;ElementPrefix&amp;quot;"></see><br>-<see cref="!:&amp;quot;AttrLocalName&amp;quot;"></see><br></p>
+  <div class="markdown level1 remarks"><p>-<see cref="!:ElementNamespaceURI"></see><br>-<see cref="!:ElementPrefix"></see><br>-<see cref="!:AttrLocalName"></see><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/localName"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Element/localName</a></p>
 </div>
 
@@ -548,7 +548,7 @@ public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Sl
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Element_NamespaceURI_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>-<see cref="!:&amp;quot;ElementLocalName&amp;quot;"></see><br>-<see cref="!:&amp;quot;ElementPrefix&amp;quot;"></see><br>-<see cref="!:&amp;quot;AttrNamespaceURI&amp;quot;"></see><br></p>
+  <div class="markdown level1 remarks"><p>-<see cref="!:ElementLocalName"></see><br>-<see cref="!:ElementPrefix"></see><br>-<see cref="!:AttrNamespaceURI"></see><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/namespaceURI"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Element/namespaceURI</a></p>
 </div>
 
@@ -647,7 +647,7 @@ public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Sl
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Element_Prefix_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>-<see cref="!:&amp;quot;ElementNamespaceURI&amp;quot;"></see><br>-<see cref="!:&amp;quot;ElementLocalName&amp;quot;"></see><br>-<see cref="!:&amp;quot;AttrPrefix&amp;quot;"></see><br></p>
+  <div class="markdown level1 remarks"><p>-<see cref="!:ElementNamespaceURI"></see><br>-<see cref="!:ElementLocalName"></see><br>-<see cref="!:AttrPrefix"></see><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/prefix"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Element/prefix</a></p>
 </div>
 
@@ -676,7 +676,7 @@ public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Sl
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.ShadowRoot.html">ShadowRoot</a></dt>
-    <dd><p>A <see cref="!:&amp;quot;ShadowRoot&amp;quot;"></see> object instance, or <code>null</code> if the associated<br>shadow root was attached with its <see cref="!:&amp;quot;ShadowRootMode&amp;quot;"></see> set to<br><code>closed</code>. (See <see cref="!:&amp;quot;ElementAttachShadow&amp;quot;"></see> for further details).</p>
+    <dd><p>A <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html#CSharpToJavaScript_APIs_JS_Element_ShadowRoot">ShadowRoot</a> object instance, or <code>null</code> if the associated<br>shadow root was attached with its <a class="xref" href="CSharpToJavaScript.APIs.JS.ShadowRootMode.html">ShadowRootMode</a> set to<br><code>closed</code>. (See <see cref="!:ElementAttachShadow"></see> for further details).</p>
 </dd>
   </dl>
 
@@ -684,8 +684,7 @@ public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Sl
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Element_ShadowRoot_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>Use <see cref="!:&amp;quot;ElementAttachShadow&amp;quot;"></see> to add a shadow root to an existing element.</p>
-<p>-<see cref="!:&amp;quot;ElementOpenOrClosedShadowRoot&amp;quot;"></see> {{non-standard_inline}}<br></p>
+  <div class="markdown level1 remarks"><p>Use <see cref="!:ElementAttachShadow"></see> to add a shadow root to an existing element.</p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/shadowRoot"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Element/shadowRoot</a></p>
 </div>
 
@@ -699,7 +698,7 @@ public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Sl
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>slot</code></strong> property of the <see cref="!:&amp;quot;Element&amp;quot;"></see> interface<br>returns the name of the shadow DOM slot the element is inserted in.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>slot</code></strong> property of the <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html">Element</a> interface<br>returns the name of the shadow DOM slot the element is inserted in.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -722,7 +721,7 @@ public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Sl
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Element_Slot_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>A slot is a placeholder inside a <a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components">web component</a> that users can fill with their own markup (see <a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_templates_and_slots">Using templates and slots</a> for more information).</p>
+  <div class="markdown level1 remarks"><p>A slot is a placeholder inside a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components">web component</a> that users can fill with their own markup (see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_templates_and_slots">Using templates and slots</a> for more information).</p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/slot"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Element/slot</a></p>
 </div>
 
@@ -736,7 +735,7 @@ public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Sl
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>tagName</code></strong> read-only property<br>of the <see cref="!:&amp;quot;Element&amp;quot;"></see> interface returns the tag name of the element on which<br>it&amp;apos;s called.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>tagName</code></strong> read-only property<br>of the <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html">Element</a> interface returns the tag name of the element on which<br>it&amp;apos;s called.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -751,7 +750,7 @@ public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Sl
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>A string indicating the element&amp;apos;s tag name. This string&amp;apos;s capitalization depends on the<br>document type:For <see cref="!:&amp;quot;Element&amp;quot;"></see> objects, the value of <code>tagName</code> is the same as<br>the value of the <see cref="!:&amp;quot;NodeNodeName&amp;quot;"></see> property the element object<br>inherits from <see cref="!:&amp;quot;Node&amp;quot;"></see>.</p>
+    <dd><p>A string indicating the element&amp;apos;s tag name. This string&amp;apos;s capitalization depends on the<br>document type:For <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html">Element</a> objects, the value of <code>tagName</code> is the same as<br>the value of the <see cref="!:NodeNodeName"></see> property the element object<br>inherits from <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a>.</p>
 </dd>
   </dl>
 
@@ -777,7 +776,7 @@ public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Sl
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>Element.attachShadow()</code></strong> method attaches a shadow DOM tree to the specified element and returns a reference to its <see cref="!:&amp;quot;ShadowRoot&amp;quot;"></see>.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>Element.attachShadow()</code></strong> method attaches a shadow DOM tree to the specified element and returns a reference to its <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html#CSharpToJavaScript_APIs_JS_Element_ShadowRoot">ShadowRoot</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -794,7 +793,7 @@ public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Sl
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.ShadowRoot.html">ShadowRoot</a></dt>
-    <dd><p>Returns a <see cref="!:&amp;quot;ShadowRoot&amp;quot;"></see> object.</p>
+    <dd><p>Returns a <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html#CSharpToJavaScript_APIs_JS_Element_ShadowRoot">ShadowRoot</a> object.</p>
 </dd>
   </dl>
 
@@ -805,7 +804,7 @@ public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Sl
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Element_AttachShadow_CSharpToJavaScript_APIs_JS_ShadowRootInit__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>-<see cref="!:&amp;quot;ShadowRootDelegatesFocus&amp;quot;"></see><br></p>
+  <div class="markdown level1 remarks"><p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.ShadowRootMode.html">ShadowRootMode</a><br>-<see cref="!:ShadowRootDelegatesFocus"></see><br>-<see cref="!:ShadowRootSlotAssignment"></see><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/attachShadow"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Element/attachShadow</a></p>
 </div>
 
@@ -819,7 +818,7 @@ public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Sl
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>closest()</code></strong> method of the <see cref="!:&amp;quot;Element&amp;quot;"></see> interface traverses the element and its parents (heading toward the document root) until it finds a node that matches the specified <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors">CSS selector</a>.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>closest()</code></strong> method of the <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html">Element</a> interface traverses the element and its parents (heading toward the document root) until it finds a node that matches the specified <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors">CSS selector</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -836,7 +835,7 @@ public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Sl
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html">Element</a></dt>
-    <dd><p>The closest ancestor <see cref="!:&amp;quot;Element&amp;quot;"></see> or itself, which matches the <code>selectors</code>. If there are no such element, <code>null</code>.</p>
+    <dd><p>The closest ancestor <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html">Element</a> or itself, which matches the <code>selectors</code>. If there are no such element, <code>null</code>.</p>
 </dd>
   </dl>
 
@@ -847,7 +846,7 @@ public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Sl
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Element_Closest_System_String__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>-<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors">CSS selectors reference</a><br>-Other <see cref="!:&amp;quot;Element&amp;quot;"></see> methods that take selectors: <see cref="!:&amp;quot;Element&amp;quot;"></see>, <see cref="!:&amp;quot;Element&amp;quot;"></see>, and <see cref="!:&amp;quot;Element&amp;quot;"></see>.<br></p>
+  <div class="markdown level1 remarks"><p>-<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors">CSS selectors reference</a><br>-Other <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html">Element</a> methods that take selectors: <see cref="!:ElementQuerySelector"></see>, <see cref="!:ElementQuerySelectorAll"></see>, and <see cref="!:ElementMatches"></see>.<br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/closest"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Element/closest</a></p>
 </div>
 
@@ -861,7 +860,7 @@ public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Sl
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>getAttribute()</code></strong> method of the<br><see cref="!:&amp;quot;Element&amp;quot;"></see> interface returns the value of a specified attribute on the<br>element.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>getAttribute()</code></strong> method of the<br><a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html">Element</a> interface returns the value of a specified attribute on the<br>element.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -903,7 +902,7 @@ public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Sl
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>getAttributeNS()</code></strong> method of the <see cref="!:&amp;quot;Element&amp;quot;"></see><br>interface returns the string value of the attribute with the specified namespace and<br>name. If the named attribute does not exist, the value returned will either be<br><code>null</code> or <code>&amp;quot;&amp;quot;</code> (the empty string); see <a href="https://developer.mozilla.org#notes">Notes</a> for<br>details.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>getAttributeNS()</code></strong> method of the <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html">Element</a><br>interface returns the string value of the attribute with the specified namespace and<br>name. If the named attribute does not exist, the value returned will either be<br><code>null</code> or <code>&amp;quot;&amp;quot;</code> (the empty string); see <a href="https://developer.mozilla.org#notes">Notes</a> for<br>details.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -947,7 +946,7 @@ public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Sl
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>getAttributeNames()</code></strong> method of the<br><see cref="!:&amp;quot;Element&amp;quot;"></see> interface returns the attribute names of the element as an<br>{{jsxref(&amp;quot;Array&amp;quot;)}} of strings. If the element has no attributes it returns an empty<br>array.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>getAttributeNames()</code></strong> method of the<br><a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html">Element</a> interface returns the attribute names of the element as an<br><see cref="!:Array"></see> of strings. If the element has no attributes it returns an empty<br>array.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -959,7 +958,7 @@ public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Sl
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
-    <dd><p>None ({{jsxref(&amp;quot;undefined&amp;quot;)}}).</p>
+    <dd><p>None (<see cref="!:undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -970,7 +969,7 @@ public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Sl
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Element_GetAttributeNames_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>Using <code>getAttributeNames()</code> along with<br><see cref="!:&amp;quot;ElementGetAttribute&amp;quot;"></see>, is a memory-efficient and<br>performant alternative to accessing <see cref="!:&amp;quot;ElementAttributes&amp;quot;"></see>.</p><p>The names returned by <strong><code>getAttributeNames()</code></strong> are <strong>qualified</strong> attribute names, meaning that attributes with a namespace prefix have their names returned with that namespace prefix (<strong>not</strong> the actual namespace), followed by a colon, followed by the attribute name (for example, <strong><code>xlink:href</code></strong>), while any attributes which have no namespace prefix have their names returned as-is (for example, <strong><code>href</code></strong>).</p>
+  <div class="markdown level1 remarks"><p>Using <code>getAttributeNames()</code> along with<br><see cref="!:ElementGetAttribute"></see>, is a memory-efficient and<br>performant alternative to accessing <see cref="!:ElementAttributes"></see>.</p><p>The names returned by <strong><code>getAttributeNames()</code></strong> are <strong>qualified</strong> attribute names, meaning that attributes with a namespace prefix have their names returned with that namespace prefix (<strong>not</strong> the actual namespace), followed by a colon, followed by the attribute name (for example, <strong><code>xlink:href</code></strong>), while any attributes which have no namespace prefix have their names returned as-is (for example, <strong><code>href</code></strong>).</p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttributeNames"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttributeNames</a></p>
 </div>
 
@@ -1068,7 +1067,7 @@ public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Sl
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <see cref="!:&amp;quot;Element&amp;quot;"></see> method<br><strong><code>getElementsByClassName()</code></strong> returns a live<br><see cref="!:&amp;quot;HTMLCollection&amp;quot;"></see> which contains every descendant element which has the<br>specified class name or names.</p>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html">Element</a> method<br><strong><code>getElementsByClassName()</code></strong> returns a live<br><a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLCollection.html">HTMLCollection</a> which contains every descendant element which has the<br>specified class name or names.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1085,7 +1084,7 @@ public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Sl
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLCollection.html">HTMLCollection</a></dt>
-    <dd><p>An <see cref="!:&amp;quot;HTMLCollection&amp;quot;"></see> providing a live-updating list of every element which<br>is a member of every class in <code>names</code>.</p>
+    <dd><p>An <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLCollection.html">HTMLCollection</a> providing a live-updating list of every element which<br>is a member of every class in <code>names</code>.</p>
 </dd>
   </dl>
 
@@ -1096,7 +1095,7 @@ public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Sl
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Element_GetElementsByClassName_System_String__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>The method <see cref="!:&amp;quot;DocumentGetElementsByClassName&amp;quot;"></see><br>on the <see cref="!:&amp;quot;Document&amp;quot;"></see> interface works essentially the same way, except it acts<br>on the entire document, starting at the document root.</p>
+  <div class="markdown level1 remarks"><p>The method <see cref="!:DocumentGetElementsByClassName"></see><br>on the <a class="xref" href="CSharpToJavaScript.APIs.JS.Document.html">Document</a> interface works essentially the same way, except it acts<br>on the entire document, starting at the document root.</p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getElementsByClassName"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Element/getElementsByClassName</a></p>
 </div>
 
@@ -1110,7 +1109,7 @@ public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Sl
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The<br><strong><code>Element.getElementsByTagName()</code></strong> method returns a live<br><see cref="!:&amp;quot;HTMLCollection&amp;quot;"></see> of elements with the given <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/tagName">tag name</a>.</p>
+  <div class="markdown level1 summary"><p>The<br><strong><code>Element.getElementsByTagName()</code></strong> method returns a live<br><a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLCollection.html">HTMLCollection</a> of elements with the given <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/tagName">tag name</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1127,7 +1126,7 @@ public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Sl
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLCollection.html">HTMLCollection</a></dt>
-    <dd><p>A <strong>live</strong> <see cref="!:&amp;quot;HTMLCollection&amp;quot;"></see> of elements with a matching tag name, in the order they appear. If no elements are found, the <code>HTMLCollection</code> is empty.</p>
+    <dd><p>A <strong>live</strong> <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLCollection.html">HTMLCollection</a> of elements with a matching tag name, in the order they appear. If no elements are found, the <code>HTMLCollection</code> is empty.</p>
 </dd>
   </dl>
 
@@ -1138,7 +1137,7 @@ public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Sl
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Element_GetElementsByTagName_System_String__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>All descendants of the<br>specified element are searched, but not the element itself. The returned list is<br><strong>live</strong>, which means it updates itself with the DOM tree automatically.<br>Therefore, there is no need to call <code>Element.getElementsByTagName()</code> with<br>the same element and arguments repeatedly if the DOM changes in between calls.</p><p>When called on an HTML element in an HTML document, <code>getElementsByTagName</code><br>lower-cases the argument before searching for it. This is undesirable when trying to<br>match camel-cased SVG elements (such as<br><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/linearGradient"><code>&amp;lt;linearGradient&amp;gt;</code>https://developer.mozilla.org/en-US/docs/Web/SVG/Element/linearGradient</a>)<br>in an HTML document. Instead, use {{ domxref(&amp;quot;Element.getElementsByTagNameNS()&amp;quot;) }},<br>which preserves the capitalization of the tag name.</p><p><code>Element.getElementsByTagName</code> is similar to<br><see cref="!:&amp;quot;DocumentGetElementsByTagName&amp;quot;"></see>, except that it only searches for<br>elements that are descendants of the specified element.</p>
+  <div class="markdown level1 remarks"><p>All descendants of the<br>specified element are searched, but not the element itself. The returned list is<br><strong>live</strong>, which means it updates itself with the DOM tree automatically.<br>Therefore, there is no need to call <code>Element.getElementsByTagName()</code> with<br>the same element and arguments repeatedly if the DOM changes in between calls.</p><p>When called on an HTML element in an HTML document, <code>getElementsByTagName</code><br>lower-cases the argument before searching for it. This is undesirable when trying to<br>match camel-cased SVG elements (such as<br><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/linearGradient"><code>&amp;lt;linearGradient&amp;gt;</code>https://developer.mozilla.org/en-US/docs/Web/SVG/Element/linearGradient</a>)<br>in an HTML document. Instead, use {{ domxref(&amp;quot;Element.getElementsByTagNameNS()&amp;quot;) }},<br>which preserves the capitalization of the tag name.</p><p><code>Element.getElementsByTagName</code> is similar to<br><see cref="!:DocumentGetElementsByTagName"></see>, except that it only searches for<br>elements that are descendants of the specified element.</p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getElementsByTagName"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Element/getElementsByTagName</a></p>
 </div>
 
@@ -1152,7 +1151,7 @@ public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Sl
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>Element.getElementsByTagNameNS()</code></strong> method returns a<br>live <see cref="!:&amp;quot;HTMLCollection&amp;quot;"></see> of elements with the given tag name belonging to the<br>given namespace. It is similar to <see cref="!:&amp;quot;DocumentGetElementsByTagNameNS&amp;quot;"></see>, except<br>that its search is restricted to descendants of the specified element.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>Element.getElementsByTagNameNS()</code></strong> method returns a<br>live <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLCollection.html">HTMLCollection</a> of elements with the given tag name belonging to the<br>given namespace. It is similar to <see cref="!:DocumentGetElementsByTagNameNS"></see>, except<br>that its search is restricted to descendants of the specified element.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1171,7 +1170,7 @@ public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Sl
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLCollection.html">HTMLCollection</a></dt>
-    <dd><p>A live <see cref="!:&amp;quot;HTMLCollection&amp;quot;"></see> of found elements in the order they appear in the tree.</p>
+    <dd><p>A live <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLCollection.html">HTMLCollection</a> of found elements in the order they appear in the tree.</p>
 </dd>
   </dl>
 
@@ -1279,7 +1278,7 @@ public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Sl
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>hasAttributes()</code></strong> method of the <see cref="!:&amp;quot;Element&amp;quot;"></see><br>interface returns a boolean value indicating whether the current element has any<br>attributes or not.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>hasAttributes()</code></strong> method of the <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html">Element</a><br>interface returns a boolean value indicating whether the current element has any<br>attributes or not.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1302,7 +1301,7 @@ public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Sl
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Element_HasAttributes_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>-<see cref="!:&amp;quot;ElementAttributes&amp;quot;"></see><br>-<see cref="!:&amp;quot;ElementHasAttribute&amp;quot;"></see><br></p>
+  <div class="markdown level1 remarks"><p>-<see cref="!:ElementAttributes"></see><br>-<see cref="!:ElementHasAttribute"></see><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/hasAttributes"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Element/hasAttributes</a></p>
 </div>
 
@@ -1316,7 +1315,7 @@ public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Sl
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>insertAdjacentElement()</code></strong> method of the<br><see cref="!:&amp;quot;Element&amp;quot;"></see> interface inserts a given element node at a given position<br>relative to the element it is invoked upon.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>insertAdjacentElement()</code></strong> method of the<br><a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html">Element</a> interface inserts a given element node at a given position<br>relative to the element it is invoked upon.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1346,7 +1345,7 @@ public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Sl
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Element_InsertAdjacentElement_System_String_CSharpToJavaScript_APIs_JS_Element__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>-<see cref="!:&amp;quot;ElementInsertAdjacentHTML&amp;quot;"></see><br>-<see cref="!:&amp;quot;ElementInsertAdjacentText&amp;quot;"></see><br>-<see cref="!:&amp;quot;NodeInsertBefore&amp;quot;"></see> (similar to <code>beforebegin</code>, with<br>different arguments)<br>-<see cref="!:&amp;quot;NodeAppendChild&amp;quot;"></see> (same effect as <code>beforeend</code>)<br></p>
+  <div class="markdown level1 remarks"><p>-<see cref="!:ElementInsertAdjacentHTML"></see><br>-<see cref="!:ElementInsertAdjacentText"></see><br>-<see cref="!:NodeInsertBefore"></see> (similar to <code>beforebegin</code>, with<br>different arguments)<br>-<see cref="!:NodeAppendChild"></see> (same effect as <code>beforeend</code>)<br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentElement"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentElement</a></p>
 </div>
 
@@ -1360,7 +1359,7 @@ public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Sl
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>insertAdjacentText()</code></strong> method of the <see cref="!:&amp;quot;Element&amp;quot;"></see> interface, given a relative position and a string, inserts a new text node at the given position relative to the element it is called from.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>insertAdjacentText()</code></strong> method of the <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html">Element</a> interface, given a relative position and a string, inserts a new text node at the given position relative to the element it is called from.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1379,7 +1378,7 @@ public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Sl
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None ({{jsxref(&amp;quot;undefined&amp;quot;)}}).</p>
+    <dd><p>None (<see cref="!:undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -1390,7 +1389,7 @@ public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Sl
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Element_InsertAdjacentText_System_String_System_String__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>-<see cref="!:&amp;quot;ElementInsertAdjacentElement&amp;quot;"></see><br>-<see cref="!:&amp;quot;ElementInsertAdjacentHTML&amp;quot;"></see><br></p>
+  <div class="markdown level1 remarks"><p>-<see cref="!:ElementInsertAdjacentElement"></see><br>-<see cref="!:ElementInsertAdjacentHTML"></see><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentText"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentText</a></p>
 </div>
 
@@ -1404,7 +1403,7 @@ public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Sl
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>matches()</code></strong> method of the <see cref="!:&amp;quot;Element&amp;quot;"></see> interface tests whether the element would be selected by the specified <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors">CSS selector</a>.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>matches()</code></strong> method of the <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html">Element</a> interface tests whether the element would be selected by the specified <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors">CSS selector</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1421,7 +1420,7 @@ public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Sl
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p><code>true</code> if the <see cref="!:&amp;quot;Element&amp;quot;"></see> matches the <code>selectors</code>. Otherwise, <code>false</code>.</p>
+    <dd><p><code>true</code> if the <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html">Element</a> matches the <code>selectors</code>. Otherwise, <code>false</code>.</p>
 </dd>
   </dl>
 
@@ -1432,7 +1431,7 @@ public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Sl
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Element_Matches_System_String__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>-<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors">CSS selectors reference</a><br>-Other <see cref="!:&amp;quot;Element&amp;quot;"></see> methods that take selectors: <see cref="!:&amp;quot;Element&amp;quot;"></see>, <see cref="!:&amp;quot;Element&amp;quot;"></see>, and <see cref="!:&amp;quot;Element&amp;quot;"></see>.<br></p>
+  <div class="markdown level1 remarks"><p>-<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors">CSS selectors reference</a><br>-Other <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html">Element</a> methods that take selectors: <see cref="!:ElementQuerySelector"></see>, <see cref="!:ElementQuerySelectorAll"></see>, and <see cref="!:elementClosest"></see>.<br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/matches"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Element/matches</a></p>
 </div>
 
@@ -1446,7 +1445,7 @@ public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Sl
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <see cref="!:&amp;quot;Element&amp;quot;"></see> method<br><strong><code>removeAttribute()</code></strong> removes the attribute with the<br>specified name from the element.</p>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html">Element</a> method<br><strong><code>removeAttribute()</code></strong> removes the attribute with the<br>specified name from the element.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1463,7 +1462,7 @@ public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Sl
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None ({{jsxref(&amp;quot;undefined&amp;quot;)}}).</p>
+    <dd><p>None (<see cref="!:undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -1487,7 +1486,7 @@ public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Sl
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>removeAttributeNS()</code></strong> method of the<br><see cref="!:&amp;quot;Element&amp;quot;"></see> interface removes the specified attribute from an element.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>removeAttributeNS()</code></strong> method of the<br><a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html">Element</a> interface removes the specified attribute from an element.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1506,7 +1505,7 @@ public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Sl
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None ({{jsxref(&amp;quot;undefined&amp;quot;)}}).</p>
+    <dd><p>None (<see cref="!:undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -1530,7 +1529,7 @@ public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Sl
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>removeAttributeNode()</code></strong> method of the<br><see cref="!:&amp;quot;Element&amp;quot;"></see> interface removes the specified attribute from the element.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>removeAttributeNode()</code></strong> method of the<br><a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html">Element</a> interface removes the specified attribute from the element.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1588,7 +1587,7 @@ public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Sl
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a>&gt;</dt>
-    <dd><p>A {{JSxRef(&amp;quot;Promise&amp;quot;)}} which is resolved with a value of <code>undefined</code> when<br>the transition to full screen is complete.</p>
+    <dd><p>A <see cref="!:Promise"></see> which is resolved with a value of <code>undefined</code> when<br>the transition to full screen is complete.</p>
 </dd>
   </dl>
 
@@ -1599,8 +1598,8 @@ public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Sl
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Element_RequestFullscreen_CSharpToJavaScript_APIs_JS_FullscreenOptions__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>It&amp;apos;s not guaranteed that the element will be put into full screen mode. If permission<br>to enter full screen mode is granted, the returned {{JSxRef(&amp;quot;Promise&amp;quot;)}} will resolve<br>and the element will receive a <see cref="!:&amp;quot;Element/fullscreenchange_event&amp;quot;"></see> event to let it know that<br>it&amp;apos;s now in full screen mode. If permission is denied, the promise is rejected and the<br>element receives a <see cref="!:&amp;quot;Element/fullscreenerror_event&amp;quot;"></see> event instead. If the element has been<br>detached from the original document, then the document receives these events instead.</p>
-<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API">Fullscreen API</a><br>-<see cref="!:&amp;quot;DocumentExitFullscreen&amp;quot;"></see><br>-<see cref="!:&amp;quot;DocumentFullscreen&amp;quot;"></see><br>-<see cref="!:&amp;quot;DocumentFullscreenElement&amp;quot;"></see><br>-{{CSSxRef(&amp;quot;:fullscreen&amp;quot;)}}<br>-{{HTMLAttrxRef(&amp;quot;allowfullscreen&amp;quot;, &amp;quot;iframe&amp;quot;)}}<br></p>
+  <div class="markdown level1 remarks"><p>It&amp;apos;s not guaranteed that the element will be put into full screen mode. If permission<br>to enter full screen mode is granted, the returned <see cref="!:Promise"></see> will resolve<br>and the element will receive a <see cref="!:Element/fullscreenchange_event"></see> event to let it know that<br>it&amp;apos;s now in full screen mode. If permission is denied, the promise is rejected and the<br>element receives a <see cref="!:Element/fullscreenerror_event"></see> event instead. If the element has been<br>detached from the original document, then the document receives these events instead.</p>
+<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API">Fullscreen API</a><br>-<see cref="!:DocumentExitFullscreen"></see><br>-<see cref="!:DocumentFullscreen"></see><br>-<see cref="!:DocumentFullscreenElement"></see><br>-{{CSSxRef(&amp;quot;:fullscreen&amp;quot;)}}<br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#allowfullscreen"><code>allowfullscreen</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#allowfullscreen</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/requestFullscreen"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Element/requestFullscreen</a></p>
 </div>
 
@@ -1633,7 +1632,7 @@ public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Sl
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None ({{jsxref(&amp;quot;undefined&amp;quot;)}}).</p>
+    <dd><p>None (<see cref="!:undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -1679,7 +1678,7 @@ public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Sl
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None ({{jsxref(&amp;quot;undefined&amp;quot;)}}).</p>
+    <dd><p>None (<see cref="!:undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -1731,7 +1730,7 @@ public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Sl
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Element_SetAttributeNode_CSharpToJavaScript_APIs_JS_Attr__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>-<see cref="!:&amp;quot;DocumentCreateAttribute&amp;quot;"></see><br></p>
+  <div class="markdown level1 remarks"><p>-<see cref="!:DocumentCreateAttribute"></see><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttributeNode"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttributeNode</a></p>
 </div>
 
@@ -1773,7 +1772,7 @@ public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Sl
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Element_SetAttributeNodeNS_CSharpToJavaScript_APIs_JS_Attr__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>-<see cref="!:&amp;quot;DocumentCreateAttribute&amp;quot;"></see><br>-<see cref="!:&amp;quot;DocumentCreateAttributeNS&amp;quot;"></see><br></p>
+  <div class="markdown level1 remarks"><p>-<see cref="!:DocumentCreateAttribute"></see><br>-<see cref="!:DocumentCreateAttributeNS"></see><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttributeNodeNS"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttributeNodeNS</a></p>
 </div>
 
@@ -1787,7 +1786,7 @@ public class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Sl
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>toggleAttribute()</code></strong> method of the<br><see cref="!:&amp;quot;Element&amp;quot;"></see> interface toggles a Boolean attribute (removing it if it is<br>present and adding it if it is not present) on the given element.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>toggleAttribute()</code></strong> method of the<br><a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html">Element</a> interface toggles a Boolean attribute (removing it if it is<br>present and adding it if it is not present) on the given element.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 

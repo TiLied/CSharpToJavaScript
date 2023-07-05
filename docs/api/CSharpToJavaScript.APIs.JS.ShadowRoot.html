@@ -327,7 +327,7 @@ public class ShadowRoot : DocumentFragment, NonElementParentNode, ParentNode, Do
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>delegatesFocus</code></strong> read-only property of the <see cref="!:&amp;quot;ShadowRoot&amp;quot;"></see> interface returns <code>true</code> if the shadow root delegates focus, and <code>false</code> otherwise.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>delegatesFocus</code></strong> read-only property of the <a class="xref" href="CSharpToJavaScript.APIs.JS.ShadowRoot.html">ShadowRoot</a> interface returns <code>true</code> if the shadow root delegates focus, and <code>false</code> otherwise.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -349,7 +349,7 @@ public class ShadowRoot : DocumentFragment, NonElementParentNode, ParentNode, Do
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_ShadowRoot_DelegatesFocus_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>If <code>true</code>, when a non-focusable part of the shadow DOM is clicked, the first focusable part is given focus, and the shadow host is given any available <code>:focus</code> styling.</p><p>The property value is set using the <code>delegatesFocus</code> property of the object passed to <see cref="!:&amp;quot;ElementAttachShadow&amp;quot;"></see>).</p>
+  <div class="markdown level1 remarks"><p>If <code>true</code>, when a non-focusable part of the shadow DOM is clicked, or <code>.focus()</code> is called on the host element, the first focusable part is given focus, and the shadow host is given any available <code>:focus</code> styling.</p><p>Focus is of particular importance for keyboard users (including those using screen readers). <code>delegatesFocus</code> default behavior is to focus the first focusable element — which may be undesirable if that element is not meant to be part of the tabbing order (for example, an element with <code>tabindex=&amp;quot;-1&amp;quot;</code>), or if a more &amp;apos;important&amp;apos; focusable element should receive initial focus (for instance, the first text field rather than the &amp;apos;close&amp;apos; button which precedes it). In such cases, the <code>autofocus</code> attribute can be specified on the element which should receive initial focus. Use the <code>autofocus</code> attribute with caution as it can introduce accessibility issues, such as bypassing important content which may go unnoticed due to focus being set to an element later in the DOM order.</p><p>The property value is set using the <code>delegatesFocus</code> property of the object passed to <see cref="!:ElementAttachShadow"></see>).</p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/delegatesFocus"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/delegatesFocus</a></p>
 </div>
 
@@ -363,7 +363,7 @@ public class ShadowRoot : DocumentFragment, NonElementParentNode, ParentNode, Do
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>host</code></strong> read-only property of<br>the <see cref="!:&amp;quot;ShadowRoot&amp;quot;"></see> returns a reference to the DOM element the<br><code>ShadowRoot</code> is attached to.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>host</code></strong> read-only property of<br>the <a class="xref" href="CSharpToJavaScript.APIs.JS.ShadowRoot.html">ShadowRoot</a> returns a reference to the DOM element the<br><code>ShadowRoot</code> is attached to.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -378,7 +378,7 @@ public class ShadowRoot : DocumentFragment, NonElementParentNode, ParentNode, Do
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html">Element</a></dt>
-    <dd><p>A DOM <see cref="!:&amp;apos;Element&amp;apos;"></see>.</p>
+    <dd><p>A DOM <see cref="!:'Element'"></see>.</p>
 </dd>
   </dl>
 
@@ -399,7 +399,7 @@ public class ShadowRoot : DocumentFragment, NonElementParentNode, ParentNode, Do
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>mode</code></strong> read-only property of the <see cref="!:&amp;quot;ShadowRoot&amp;quot;"></see><br>specifies its mode — either <code>open</code> or <code>closed</code>. This defines<br>whether or not the shadow root&amp;apos;s internal features are accessible from JavaScript.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>mode</code></strong> read-only property of the <a class="xref" href="CSharpToJavaScript.APIs.JS.ShadowRoot.html">ShadowRoot</a><br>specifies its mode — either <code>open</code> or <code>closed</code>. This defines<br>whether or not the shadow root&amp;apos;s internal features are accessible from JavaScript.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -467,7 +467,8 @@ public class ShadowRoot : DocumentFragment, NonElementParentNode, ParentNode, Do
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The read-only <strong><code>slotAssignment</code></strong> property of the <a class="xref" href="CSharpToJavaScript.APIs.JS.ShadowRoot.html">ShadowRoot</a> interface returns the <strong>slot assignment mode</strong> for the shadow DOM tree. Nodes are either automatically assigned (<code>named</code>) or manually assigned (<code>manual</code>). The value of this property defined using the <code>slotAssignment</code> option when calling <see cref="!:ElementAttachShadow"></see>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -481,12 +482,17 @@ public class ShadowRoot : DocumentFragment, NonElementParentNode, ParentNode, Do
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.SlotAssignmentMode.html">SlotAssignmentMode</a></dt>
-    <dd></dd>
+    <dd><p>A string that can be one of:</p>
+</dd>
   </dl>
 
 
 
 
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_ShadowRoot_SlotAssignment_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>-<see cref="!:ElementAttachShadow"></see><br>-<see cref="!:HTMLSlotElementAssign"></see><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/slotAssignment"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/slotAssignment</a></p>
+</div>
 
 
 

@@ -3,6 +3,8 @@ Brute forcing conversion(translation) from C# to Javascript.
 
 This is a personal project with purpose to learn and understand better c# and js at the same time. Many stuff is not supported and some won't. Updates will be happening when I'm using this library.(irregular)
 
+[Nuget package](https://www.nuget.org/packages/CSharpToJavaScript/)
+
 ### C#
 ```csharp      
 using static CSharpToJavaScript.APIs.JS.GlobalThis;
@@ -28,19 +30,17 @@ class Test
 ```
 
 ## How to use
-*Nuget package will be available once I figure out ~how to do docs for api(should be easy) and what to do with esmascript and how to convert to c#.~ NUGET PACKAGE SOON!*
-
-- Download a library(Code-Local-Download ZIP)
-- Create c# project or use existed one
-- Follow [this](https://learn.microsoft.com/en-us/dotnet/core/tutorials/library-with-visual-studio?pivots=dotnet-7-0#add-a-project-reference) to add reference to project
-- In the Main method add:
+- 1 Create c# project or use existed one
+- 2 Install [nuget](https://www.nuget.org/packages/CSharpToJavaScript/) or Download a specific version, visit [releases](https://github.com/TiLied/CSharpToJavaScript/releases) or Download a master(Code-Local-Download ZIP)
+- 3 Skip this if using Nuget package. Follow [this](https://learn.microsoft.com/en-us/dotnet/core/tutorials/library-with-visual-studio?pivots=dotnet-7-0#add-a-project-reference) to add reference to project.
+- 4 In the Main method add:
 ```csharp
 Assembly assembly = Assembly.GetExecutingAssembly();
 CSTOJS cstojs = new(assembly);
 cstojs.Generate2Async("FULL PATH TO CSHARP FILE YOU WHAT TO CONVERT");
 ```
-- Run program and file will be generated in output path(default is "Directory.GetCurrentDirectory()") with name "main.js"(default)
-- See below for simple example "HelloWorld"
+- 5 Run program and file will be generated in output path(default is "Directory.GetCurrentDirectory()") with name "main.js"(default)
+- 6 See below for simple example "HelloWorld"
 
 ## Example "HelloWorld"
 Program.cs

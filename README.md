@@ -6,7 +6,7 @@ This is a personal project with purpose to learn and understand better c# and js
 [Nuget package](https://www.nuget.org/packages/CSharpToJavaScript/)
 
 ### C#
-```csharp      
+```csharp
 using static CSharpToJavaScript.APIs.JS.GlobalThis;
 namespace ConsoleAppTest.CSharp;
 
@@ -51,7 +51,7 @@ namespace ConsoleAppTest;
 
 public class Program
 {
-	public static void Main()
+	public static async Task Main()
 	{
 		Assembly executingAssembly = Assembly.GetExecutingAssembly();
 		
@@ -66,7 +66,8 @@ public class Program
 		};
 
 		CSTOJS cstojs = new(executingAssembly, opt);
-		cstojs.Generate2Async("C:\\GitReps\\ConsoleAppTest\\CSharp\\test.cs");
+		await cstojs.Generate2Async("C:\\GitReps\\ConsoleAppTest\\CSharp\\test.cs");
+
 		Console.ReadKey();
 	}
 }

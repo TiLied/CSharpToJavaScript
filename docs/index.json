@@ -2059,6 +2059,16 @@
     "title": "PLACEHOLDER",
     "keywords": "PLACEHOLDER TODO: Add .NET projects to the src folder and run docfx to generate REAL API Documentation!"
   },
+  "articles/exampleHelloWorld.html": {
+    "href": "articles/exampleHelloWorld.html",
+    "title": "Example \"Hello World!\"",
+    "keywords": "Example \"Hello World!\" Create new c# project. Note Make sure to use full path in \"Generate2Async\" method! Program.cs using System.Reflection; using CSharpToJavaScript; namespace TestNuget; public class Program { public static async Task Main() { Assembly executingAssembly = Assembly.GetExecutingAssembly(); CSTOJS cstojs = new(executingAssembly); await cstojs.Generate2Async(\"C:\\\\GitReps\\\\TestNuget\\\\TestNuget\\\\CSharp\\\\Test.cs\"); Console.ReadKey(); } } Add new folder \"CSharp\" and new file name \"Test\". CSharp/Test.cs using static CSharpToJavaScript.APIs.JS.GlobalThis; namespace TestNuget.CSharp; public class Test { public Test() { Console.Log(\"Hello World!\"); } } Run. Above code will generate main.js file that contains: class Test { constructor() { console.log(\"Hello World!\"); } }"
+  },
+  "articles/exampleOptCustomCSNamesToJS.html": {
+    "href": "articles/exampleOptCustomCSNamesToJS.html",
+    "title": "Example \"Hello World!\"",
+    "keywords": "Example \"Hello World!\" Create new c# project. Note Make sure to use full path in \"Generate2Async\" method! Program.cs using System.Reflection; using CSharpToJavaScript; namespace TestNuget; public class Program { public static async Task Main() { Assembly executingAssembly = Assembly.GetExecutingAssembly(); CSTOJSOptions opt = new() { CustomCSNamesToJS = new List<Tuple<string, string>>() { new Tuple<string, string>(\"Console\",\"console\"), new Tuple<string, string>(\"WriteLine\", \"log\") } }; CSTOJS cstojs = new(executingAssembly, opt); await cstojs.Generate2Async(\"C:\\\\GitReps\\\\TestNuget\\\\TestNuget\\\\CSharp\\\\Test.cs\"); Console.ReadKey(); } } Add new folder \"CSharp\" and new file name \"Test\". CSharp/Test.cs namespace TestNuget.CSharp; public class Test { public Test() { Console.WriteLine(\"Hello World!\"); } } Run. Above code will generate main.js file that contains: class Test { constructor() { console.log(\"Hello World!\"); } }"
+  },
   "articles/intro.html": {
     "href": "articles/intro.html",
     "title": "Add your introductions here!",

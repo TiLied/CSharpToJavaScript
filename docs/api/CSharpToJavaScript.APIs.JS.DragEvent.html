@@ -91,7 +91,8 @@
   <dl><dt>Assembly</dt><dd>CSharpToJavaScript.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>The <strong><code>DragEvent</code></strong> interface is a <a class="xref" href="CSharpToJavaScript.APIs.JS.Event.html">Event</a> that represents a drag and drop interaction. The user initiates a drag by placing a pointer device (such as a mouse) on the touch surface and then dragging the pointer to a new location (such as another DOM element). Applications are free to interpret a drag and drop interaction in an application-specific way.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -141,6 +142,11 @@ public class DragEvent</code></pre>
 
 
 
+  <h2 id="CSharpToJavaScript_APIs_JS_DragEvent_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>This interface inherits properties from <a class="xref" href="CSharpToJavaScript.APIs.JS.MouseEvent.html">MouseEvent</a> and <a class="xref" href="CSharpToJavaScript.APIs.JS.Event.html">Event</a>.</p><p></p>
+<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API">Drag and drop</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations">Drag Operations</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types">Recommended Drag Types</a><br>-<a href="https://codepen.io/tech_query/pen/MqGgap">DataTransfer test - Paste or Drag</a><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/DragEvent"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/DragEvent</a></p>
+</div>
 
 
   <h2 class="section" id="constructors">Constructors
@@ -154,7 +160,7 @@ public class DragEvent</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>DragEvent</code></strong> interface is a <a class="xref" href="CSharpToJavaScript.APIs.JS.Event.html">Event</a> that represents a drag and drop interaction. The user initiates a drag by placing a pointer device (such as a mouse) on the touch surface and then dragging the pointer to a new location (such as another DOM element). Applications are free to interpret a drag and drop interaction in an application-specific way.</p>
+  <div class="markdown level1 summary"><p>This constructor is used to create a synthetic <a class="xref" href="CSharpToJavaScript.APIs.JS.DragEvent.html">DragEvent</a> object.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -178,9 +184,8 @@ public class DragEvent</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_DragEvent__ctor_System_String_CSharpToJavaScript_APIs_JS_DragEventInit__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This interface inherits properties from <a class="xref" href="CSharpToJavaScript.APIs.JS.MouseEvent.html">MouseEvent</a> and <a class="xref" href="CSharpToJavaScript.APIs.JS.Event.html">Event</a>.</p><p>{{InheritanceDiagram}}</p>
-<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API">Drag and drop</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations">Drag Operations</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types">Recommended Drag Types</a><br>-<a href="https://codepen.io/tech_query/pen/MqGgap">DataTransfer test - Paste or Drag</a><br></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/DragEvent"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/DragEvent</a></p>
+  <div class="markdown level1 remarks"><p>Although this interface has a constructor, it is not possible to create a<br>useful <a class="xref" href="CSharpToJavaScript.APIs.JS.DragEvent.html#CSharpToJavaScript_APIs_JS_DragEvent_DataTransfer">DataTransfer</a> object from script, since <a class="xref" href="CSharpToJavaScript.APIs.JS.DragEvent.html#CSharpToJavaScript_APIs_JS_DragEvent_DataTransfer">DataTransfer</a><br>objects have a processing and security model that is coordinated by the browser during<br>drag-and-drops.</p><p>This interface inherits properties from <a class="xref" href="CSharpToJavaScript.APIs.JS.MouseEvent.html">MouseEvent</a> and<br><a class="xref" href="CSharpToJavaScript.APIs.JS.Event.html">Event</a>.</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/DragEvent/DragEvent"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/DragEvent/DragEvent</a></p>
 </div>
 
 

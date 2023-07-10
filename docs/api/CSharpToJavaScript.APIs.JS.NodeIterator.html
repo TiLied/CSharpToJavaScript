@@ -91,7 +91,8 @@
   <dl><dt>Assembly</dt><dd>CSharpToJavaScript.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>The <strong><code>NodeIterator</code></strong> interface<br>represents an iterator over the members of a list of the nodes in a subtree of the<br>DOM. The nodes will be returned in document order.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -141,6 +142,10 @@ public class NodeIterator</code></pre>
 
 
 
+  <h2 id="CSharpToJavaScript_APIs_JS_NodeIterator_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>-The creator method: <see cref="!:Document.CreateNodeIterator"></see>.<br>-Related interfaces:-<a class="xref" href="CSharpToJavaScript.APIs.JS.NodeFilter.html">NodeFilter</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.TreeWalker.html">TreeWalker</a><br><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/NodeIterator"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/NodeIterator</a></p>
+</div>
 
 
   <h2 class="section" id="properties">Properties
@@ -192,7 +197,7 @@ public class NodeIterator</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>NodeIterator.pointerBeforeReferenceNode</code></strong> read-only<br>property returns a boolean flag that indicates whether the<br><a class="xref" href="CSharpToJavaScript.APIs.JS.NodeFilter.html">NodeFilter</a> is anchored before (if this value is <code>true</code>) or<br>after (if this value is <code>false</code>) the anchor node indicated by the<br><see cref="!:NodeIteratorReferenceNode"></see> property.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>NodeIterator.pointerBeforeReferenceNode</code></strong> read-only<br>property returns a boolean flag that indicates whether the<br><a class="xref" href="CSharpToJavaScript.APIs.JS.NodeFilter.html">NodeFilter</a> is anchored before (if this value is <code>true</code>) or<br>after (if this value is <code>false</code>) the anchor node indicated by the<br><a class="xref" href="CSharpToJavaScript.APIs.JS.NodeIterator.html#CSharpToJavaScript_APIs_JS_NodeIterator_ReferenceNode">ReferenceNode</a> property.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -344,7 +349,7 @@ public class NodeIterator</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>NodeIterator.detach()</code></strong> method is a no-op, kept for<br>backward compatibility only.</p>
+  <div class="markdown level1 summary"><div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><code>NodeIterator.detach()</code></strong> method is a no-op, kept for<br>backward compatibility only.
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -356,7 +361,7 @@ public class NodeIterator</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None (<see cref="!:undefined"></see>).</p>
+    <dd><p>None (<see cref="!:Undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -405,7 +410,7 @@ public class NodeIterator</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_NodeIterator_NextNode_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This method returns <code>null</code> when there are no nodes left in the set.</p><p>In old browsers, as specified in old versions of the specifications, the method may<br>throws the <code>INVALID_STATE_ERR</code> <a class="xref" href="CSharpToJavaScript.APIs.JS.DOMException.html">DOMException</a> if this method<br>is called after the <see cref="!:NodeIteratorDetach"></see>method. Recent browsers never<br>throw.</p>
+  <div class="markdown level1 remarks"><p>This method returns <code>null</code> when there are no nodes left in the set.</p><p>In old browsers, as specified in old versions of the specifications, the method may<br>throws the <code>INVALID_STATE_ERR</code> <a class="xref" href="CSharpToJavaScript.APIs.JS.DOMException.html">DOMException</a> if this method<br>is called after the <a class="xref" href="CSharpToJavaScript.APIs.JS.NodeIterator.html#CSharpToJavaScript_APIs_JS_NodeIterator_Detach">Detach()</a>method. Recent browsers never<br>throw.</p>
 <p>-The interface it belongs to: <a class="xref" href="CSharpToJavaScript.APIs.JS.NodeIterator.html">NodeIterator</a>.<br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/NodeIterator/nextNode"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/NodeIterator/nextNode</a></p>
 </div>
@@ -443,7 +448,7 @@ public class NodeIterator</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_NodeIterator_PreviousNode_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This method returns <code>null</code> when the current node is the first node in the<br>set.</p><p>In old browsers, as specified in old versions of the specifications, the method may<br>throws the <code>INVALID_STATE_ERR</code> <a class="xref" href="CSharpToJavaScript.APIs.JS.DOMException.html">DOMException</a> if this method<br>is called after the <see cref="!:NodeIteratorDetach"></see>method. Recent browsers never<br>throw.</p>
+  <div class="markdown level1 remarks"><p>This method returns <code>null</code> when the current node is the first node in the<br>set.</p><p>In old browsers, as specified in old versions of the specifications, the method may<br>throws the <code>INVALID_STATE_ERR</code> <a class="xref" href="CSharpToJavaScript.APIs.JS.DOMException.html">DOMException</a> if this method<br>is called after the <a class="xref" href="CSharpToJavaScript.APIs.JS.NodeIterator.html#CSharpToJavaScript_APIs_JS_NodeIterator_Detach">Detach()</a>method. Recent browsers never<br>throw.</p>
 <p>-The interface it belongs to: <a class="xref" href="CSharpToJavaScript.APIs.JS.NodeIterator.html">NodeIterator</a>.<br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/NodeIterator/previousNode"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/NodeIterator/previousNode</a></p>
 </div>

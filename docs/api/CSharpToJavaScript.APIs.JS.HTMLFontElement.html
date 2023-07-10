@@ -91,7 +91,8 @@
   <dl><dt>Assembly</dt><dd>CSharpToJavaScript.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> Implements the document object model (DOM) representation of the font element. The HTML Font Element <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/font">font</a> defines the font size, font face and color of text.
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -482,6 +483,11 @@ public class HTMLFontElement : HTMLElement, ParentNode, NonDocumentTypeChildNode
 
 
 
+  <h2 id="CSharpToJavaScript_APIs_JS_HTMLFontElement_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p></p>
+<p>-The HTML element implementing this interface: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/font">font</a>.<br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFontElement"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/HTMLFontElement</a></p>
+</div>
 
 
   <h2 class="section" id="constructors">Constructors
@@ -510,10 +516,6 @@ public class HTMLFontElement : HTMLElement, ParentNode, NonDocumentTypeChildNode
 
 
 
-  <h4 class="section" id="CSharpToJavaScript_APIs_JS_HTMLFontElement__ctor_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>-The HTML element implementing this interface: {{HTMLElement(&amp;quot;font&amp;quot;)}}.<br></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFontElement"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/HTMLFontElement</a></p>
-</div>
 
 
 
@@ -529,7 +531,8 @@ public class HTMLFontElement : HTMLElement, ParentNode, NonDocumentTypeChildNode
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The obsolete<br><strong><code>HTMLFontElement.color</code></strong><br>property is a string that reflects the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/font#color"><code>color</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Element/font#color</a> HTML attribute, containing either a named color or a color specified in the<br>hexadecimal #RRGGBB format.
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -544,12 +547,18 @@ public string Color { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>A string.</p>
+</dd>
   </dl>
 
 
 
 
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_HTMLFontElement_Color_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The format of the string must follow one of the following HTML microsyntaxes:</p><table><tr><td><p>Microsyntax</p></td><td><p>Description</p></td><td><p>Examples</p></td></tr><tr><td><p>Valid name color string</p></td><td><p><strong>nameOfColor (case insensitive)</strong></p></td><td><p><code>Green</code>, <code>green</code>, <code>GREEN</code></p></td></tr><tr><td><p>Valid hex color string</p></td><td><p><strong>in</strong> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value">color_value</a><strong>: #RRGGBB</strong></p></td><td><p><code>#008000</code></p></td></tr><tr><td><p>RGB using decimal values</p></td><td><p><strong>rgb(x,x,x) (x in 0-255 range)</strong></p></td><td><p><code>rgb(0,128,0)</code></p></td></tr></table>
+<p>-The <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLFontElement.html">HTMLFontElement</a> interface it belongs to.<br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFontElement/color"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/HTMLFontElement/color</a></p>
+</div>
 
 
 
@@ -561,7 +570,8 @@ public string Color { get; set; }</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The obsolete<br><strong><code>HTMLFontElement.face</code></strong><br>property is a string that reflects the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/font#face"><code>face</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Element/font#face</a> HTML attribute, containing a comma-separated list of one or more font<br>names.
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -576,12 +586,18 @@ public string Face { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>A string.</p>
+</dd>
   </dl>
 
 
 
 
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_HTMLFontElement_Face_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The document text, in the default style, is rendered as the first font face that the<br>client&amp;apos;s browser supports. If no font listed is installed on the local system, the<br>browser typically defaults to the proportional or fixed-width font for that system.</p><p>The format of the string must follow one of the following HTML microsyntax:</p><table><tr><td><p>Microsyntax</p></td><td><p>Description</p></td><td><p>Examples</p></td></tr><tr><td><p>List of one or more valid font family names</p></td><td><p><strong>A list of font names, that have to be present on the local system</strong></p></td><td><p><code>courier,verdana</code></p></td></tr></table>
+<p>-The <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLFontElement.html">HTMLFontElement</a> interface it belongs to.<br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFontElement/face"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/HTMLFontElement/face</a></p>
+</div>
 
 
 
@@ -593,7 +609,8 @@ public string Face { get; set; }</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The obsolete<br><strong><code>HTMLFontElement.size</code></strong> property is a<br>string that reflects the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/font#size"><code>size</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Element/font#size</a> HTML<br>attribute. It contains either a font size ranging from 1 to 7 or a<br>number relative to the default value 3, for example -2 or +1.
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -608,12 +625,18 @@ public string Size { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>A string.</p>
+</dd>
   </dl>
 
 
 
 
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_HTMLFontElement_Size_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The format of the string must follow one of the following HTML microsyntaxes:</p>
+<p>-The <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLFontElement.html">HTMLFontElement</a> interface it belongs to.<br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFontElement/size"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/HTMLFontElement/size</a></p>
+</div>
 
 
 

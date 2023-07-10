@@ -1,4 +1,4 @@
-# Example "Hello World!"
+# Example of option "CustomCSNamesToJS"
 
 Create new c# project.
 > [!NOTE]

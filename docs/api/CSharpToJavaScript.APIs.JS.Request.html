@@ -91,7 +91,8 @@
   <dl><dt>Assembly</dt><dd>CSharpToJavaScript.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>The <strong><code>Request</code></strong> interface of the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch API</a> represents a resource request.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -141,6 +142,11 @@ public class Request</code></pre>
 
 
 
+  <h2 id="CSharpToJavaScript_APIs_JS_Request_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>You can create a new <code>Request</code> object using the <a class="xref" href="CSharpToJavaScript.APIs.JS.Request.html#CSharpToJavaScript_APIs_JS_Request__ctor_CSharpToJavaScript_APIs_JS_Union12_CSharpToJavaScript_APIs_JS_RequestInit_">Request(Union12, RequestInit)</a> constructor, but you are more likely to encounter a <code>Request</code> object being returned as the result of another API operation, such as a service worker <see cref="!:FetchEvent.Request"></see>.</p>
+<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Request"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Request</a></p>
+</div>
 
 
   <h2 class="section" id="constructors">Constructors
@@ -154,7 +160,7 @@ public class Request</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>Request</code></strong> interface of the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch API</a> represents a resource request.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>Request()</code></strong> constructor creates a new<br><a class="xref" href="CSharpToJavaScript.APIs.JS.Request.html">Request</a> object.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -178,9 +184,8 @@ public class Request</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Request__ctor_CSharpToJavaScript_APIs_JS_Union12_CSharpToJavaScript_APIs_JS_RequestInit__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>You can create a new <code>Request</code> object using the <see cref="!:RequestRequest"></see> constructor, but you are more likely to encounter a <code>Request</code> object being returned as the result of another API operation, such as a service worker <see cref="!:FetchEventRequest"></see>.</p>
-<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a><br></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Request"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Request</a></p>
+  <div class="markdown level1 remarks"><p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Request/Request"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Request/Request</a></p>
 </div>
 
 
@@ -294,7 +299,7 @@ public class Request</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Request_Destination_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>The string must be one of the <code>audio</code>, <code>audioworklet</code>,<br><code>document</code>, <code>embed</code>, <code>font</code>, <code>frame</code>,<br><code>iframe</code>, <code>image</code>, <code>manifest</code>, <code>object</code>,<br><code>paintworklet</code>, <code>report</code>, <code>script</code>, <code>sharedworker</code>,<br><code>style</code>, <code>track</code>, <code>video</code>, <code>worker</code><br>or <code>xslt</code> strings, or the empty string, which is the default value.</p><p>The <code>destination</code> is used by the {{Glossary(&amp;quot;user agent&amp;quot;)}} to, for example,<br>help determine which set of rules to follow for CORS purposes, or how to navigate any<br>complicated code paths that affect how specific types of request get handled.</p><p>These destinations vary substantially in how they operate. Some are data receptacles,<br>where the received data is stored for processing later. Others are script-based, in<br>which case the received data is delivered to a script by calling it and passing the data<br>along. Script-based destinations include {{HTMLElement(&amp;quot;script&amp;quot;)}} elements, as well as<br>any of the <a class="xref" href="CSharpToJavaScript.APIs.JS.Worklet.html">Worklet</a>-based destinations<br>(including subclasses like <see cref="!:AudioWorklet"></see>), and the<br><a class="xref" href="CSharpToJavaScript.APIs.JS.Worker.html">Worker</a>-based destinations, including <see cref="!:ServiceWorker"></see><br>and <a class="xref" href="CSharpToJavaScript.APIs.JS.SharedWorker.html">SharedWorker</a>.</p>
+  <div class="markdown level1 remarks"><p>The string must be one of the <code>audio</code>, <code>audioworklet</code>,<br><code>document</code>, <code>embed</code>, <code>font</code>, <code>frame</code>,<br><code>iframe</code>, <code>image</code>, <code>manifest</code>, <code>object</code>,<br><code>paintworklet</code>, <code>report</code>, <code>script</code>, <code>sharedworker</code>,<br><code>style</code>, <code>track</code>, <code>video</code>, <code>worker</code><br>or <code>xslt</code> strings, or the empty string, which is the default value.</p><p>The <code>destination</code> is used by the <a href="https://developer.mozilla.org/en-US/docs/Glossary/user agent">user agent</a> to, for example,<br>help determine which set of rules to follow for CORS purposes, or how to navigate any<br>complicated code paths that affect how specific types of request get handled.</p><p>These destinations vary substantially in how they operate. Some are data receptacles,<br>where the received data is stored for processing later. Others are script-based, in<br>which case the received data is delivered to a script by calling it and passing the data<br>along. Script-based destinations include <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">script</a> elements, as well as<br>any of the <a class="xref" href="CSharpToJavaScript.APIs.JS.Worklet.html">Worklet</a>-based destinations<br>(including subclasses like <see cref="!:AudioWorklet"></see>), and the<br><a class="xref" href="CSharpToJavaScript.APIs.JS.Worker.html">Worker</a>-based destinations, including <see cref="!:ServiceWorker"></see><br>and <a class="xref" href="CSharpToJavaScript.APIs.JS.SharedWorker.html">SharedWorker</a>.</p>
 <p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Request/destination"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Request/destination</a></p>
 </div>
@@ -609,7 +614,7 @@ public class Request</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Request_Referrer_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><blockquote><p><strong>Note:</strong> If <code>referrer</code>&amp;apos;s value is <code>no-referrer</code>,<br>it returns an empty string.</p></blockquote>
+  <div class="markdown level1 remarks"><blockquote class="NOTE"><h5>NOTE</h5><p><strong>Note:</strong> If <code>referrer</code>&amp;apos;s value is <code>no-referrer</code>,<br>it returns an empty string.</p></blockquote>
 <p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Request/referrer"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Request/referrer</a></p>
 </div>
@@ -624,7 +629,7 @@ public class Request</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>referrerPolicy</code></strong> read-only property of the<br><a class="xref" href="CSharpToJavaScript.APIs.JS.Request.html">Request</a> interface returns the referrer policy, which governs what<br>referrer information, sent in the {{HTTPHeader(&amp;quot;Referer&amp;quot;)}} header, should be included<br>with the request.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>referrerPolicy</code></strong> read-only property of the<br><a class="xref" href="CSharpToJavaScript.APIs.JS.Request.html">Request</a> interface returns the referrer policy, which governs what<br>referrer information, sent in the <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referer">Referer</a> header, should be included<br>with the request.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -639,7 +644,7 @@ public class Request</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>A string representing the request&amp;apos;s <code>referrerPolicy</code>. For<br>more information and possible values, see the {{HTTPHeader(&amp;quot;Referrer-Policy&amp;quot;)}} HTTP<br>header page.</p>
+    <dd><p>A string representing the request&amp;apos;s <code>referrerPolicy</code>. For<br>more information and possible values, see the <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy">Referrer-Policy</a> HTTP<br>header page.</p>
 </dd>
   </dl>
 
@@ -761,7 +766,7 @@ public class Request</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Request_Clone_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>Like the underlying <see cref="!:ReadableStreamTee"></see> api,<br>the <see cref="!:RequestBody"></see> of a cloned <code>Response</code><br>will signal backpressure at the rate of the <strong>faster</strong> consumer of the two bodies,<br>and unread data is enqueued internally on the slower consumed <code>body</code><br>without any limit or backpressure.<br>Beware when you construct a <code>Request</code> from a stream and then <code>clone</code> it.</p><p><code>clone()</code> throws a <see cref="!:TypeError"></see> if the request body has already been used. In fact, the main reason <code>clone()</code> exists is to allow multiple uses of body objects (when they are one-use only.)</p><p>If you intend to modify the request, you may prefer the <a class="xref" href="CSharpToJavaScript.APIs.JS.Request.html">Request</a> constructor.</p>
+  <div class="markdown level1 remarks"><p>Like the underlying <see cref="!:ReadableStream.Tee"></see> api,<br>the <see cref="!:Request.Body"></see> of a cloned <code>Response</code><br>will signal backpressure at the rate of the <strong>faster</strong> consumer of the two bodies,<br>and unread data is enqueued internally on the slower consumed <code>body</code><br>without any limit or backpressure.<br>Beware when you construct a <code>Request</code> from a stream and then <code>clone</code> it.</p><p><code>clone()</code> throws a <see cref="!:TypeError"></see> if the request body has already been used. In fact, the main reason <code>clone()</code> exists is to allow multiple uses of body objects (when they are one-use only.)</p><p>If you intend to modify the request, you may prefer the <a class="xref" href="CSharpToJavaScript.APIs.JS.Request.html">Request</a> constructor.</p>
 <p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Request/clone"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Request/clone</a></p>
 </div>

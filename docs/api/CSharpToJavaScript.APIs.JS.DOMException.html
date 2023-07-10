@@ -91,7 +91,8 @@
   <dl><dt>Assembly</dt><dd>CSharpToJavaScript.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>The <strong><code>DOMException</code></strong> interface represents an abnormal event (called an <strong>exception</strong>) that occurs as a result of calling a method or accessing a property of a web API. This is how error conditions are described in web APIs.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -141,6 +142,11 @@ public class DOMException</code></pre>
 
 
 
+  <h2 id="CSharpToJavaScript_APIs_JS_DOMException_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Each exception has a <strong>name</strong>, which is a short &amp;quot;PascalCase&amp;quot;-style string identifying the error or abnormal condition.</p><p><code>DOMException</code> is a {{Glossary("Serializable object")}}, so it can be cloned with <see cref="!:StructuredClone"></see> or copied between <a href="https://developer.mozilla.org/en-US/docs/Web/API/Worker">Workers</a> using <a class="xref" href="CSharpToJavaScript.APIs.JS.Worker.html#CSharpToJavaScript_APIs_JS_Worker_PostMessage_System_Object_System_Collections_Generic_List_System_Object__">PostMessage(dynamic, List&lt;object&gt;)</a>.</p>
+<p>-<a href="https://github.com/zloirock/core-js#domexception">A polyfill of <code>DOMException</code></a> is available in <a href="https://github.com/zloirock/core-js"><code>core-js</code>https://github.com/zloirock/core-js</a><br>-<see cref="!:DOMError"></see><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMException"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/DOMException</a></p>
+</div>
 
 
   <h2 class="section" id="constructors">Constructors
@@ -154,7 +160,7 @@ public class DOMException</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>DOMException</code></strong> interface represents an abnormal event (called an <strong>exception</strong>) that occurs as a result of calling a method or accessing a property of a web API. This is how error conditions are described in web APIs.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>DOMException()</code></strong> constructor returns a<br><a class="xref" href="CSharpToJavaScript.APIs.JS.DOMException.html">DOMException</a> object with a specified message and name.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -178,9 +184,8 @@ public class DOMException</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_DOMException__ctor_System_String_System_String__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>Each exception has a <strong>name</strong>, which is a short &amp;quot;PascalCase&amp;quot;-style string identifying the error or abnormal condition.</p><p><code>DOMException</code> is a {{Glossary("Serializable object")}}, so it can be cloned with <see cref="!:structuredClone"></see> or copied between <a href="https://developer.mozilla.org/en-US/docs/Web/API/Worker">Workers</a> using <see cref="!:WorkerPostMessage"></see>.</p>
-<p>-<a href="https://github.com/zloirock/core-js#domexception">A polyfill of <code>DOMException</code></a> is available in <a href="https://github.com/zloirock/core-js"><code>core-js</code>https://github.com/zloirock/core-js</a><br>-{{ domxref(&amp;quot;DOMError&amp;quot;) }}<br></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMException"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/DOMException</a></p>
+  <div class="markdown level1 remarks"><p>-<a href="https://github.com/zloirock/core-js#domexception">A polyfill of <code>DOMException</code> constructor</a> is available in <a href="https://github.com/zloirock/core-js"><code>core-js</code>https://github.com/zloirock/core-js</a><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMException/DOMException"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/DOMException/DOMException</a></p>
 </div>
 
 
@@ -951,7 +956,7 @@ public class DOMException</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>code</code></strong> read-only property of the <a class="xref" href="CSharpToJavaScript.APIs.JS.DOMException.html">DOMException</a> interface returns one of the legacy <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMException#error_names">error code constants</a>, or <code>0</code> if none match.</p>
+  <div class="markdown level1 summary"><div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><code>code</code></strong> read-only property of the <a class="xref" href="CSharpToJavaScript.APIs.JS.DOMException.html">DOMException</a> interface returns one of the legacy <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMException#error_names">error code constants</a>, or <code>0</code> if none match.
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -974,7 +979,7 @@ public class DOMException</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_DOMException_Code_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This field is used for historical reasons. New DOM exceptions don't use this anymore: they put this info in the <see cref="!:DOMExceptionName"></see> attribute.</p>
+  <div class="markdown level1 remarks"><p>This field is used for historical reasons. New DOM exceptions don't use this anymore: they put this info in the <a class="xref" href="CSharpToJavaScript.APIs.JS.DOMException.html#CSharpToJavaScript_APIs_JS_DOMException_Name">Name</a> attribute.</p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMException/code"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/DOMException/code</a></p>
 </div>
 

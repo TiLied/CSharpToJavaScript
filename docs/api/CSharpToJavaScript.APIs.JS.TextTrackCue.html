@@ -91,7 +91,8 @@
   <dl><dt>Assembly</dt><dd>CSharpToJavaScript.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p><strong><code>TextTrackCue</code></strong> is an abstract class which is used as the basis for the various derived cue types, such as <see cref="!:VTTCue"></see>; you will instead work with those derived types. These cues represent strings of text presented for some duration of time during the performance of a <a class="xref" href="CSharpToJavaScript.APIs.JS.TextTrack.html">TextTrack</a>. The cue includes the start time (the time at which the text will be displayed) and the end time (the time at which it will be removed from the display), as well as other information.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -163,6 +164,10 @@ public class TextTrackCue : EventTarget</code></pre>
 
 
 
+  <h2 id="CSharpToJavaScript_APIs_JS_TextTrackCue_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/TextTrackCue"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/TextTrackCue</a></p>
+</div>
 
 
   <h2 class="section" id="properties">Properties
@@ -176,7 +181,8 @@ public class TextTrackCue : EventTarget</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The <strong><code>endTime</code></strong> property of the <a class="xref" href="CSharpToJavaScript.APIs.JS.TextTrackCue.html">TextTrackCue</a> interface returns and sets the end time of the cue.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -191,12 +197,16 @@ public double EndTime { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd></dd>
+    <dd><p>A number representing the end time, in seconds.</p>
+</dd>
   </dl>
 
 
 
 
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_TextTrackCue_EndTime_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/TextTrackCue/endTime"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/TextTrackCue/endTime</a></p>
+</div>
 
 
 
@@ -208,7 +218,8 @@ public double EndTime { get; set; }</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The <strong><code>id</code></strong> property of the <a class="xref" href="CSharpToJavaScript.APIs.JS.TextTrackCue.html">TextTrackCue</a> interface returns and sets the identifier for this cue.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -223,12 +234,16 @@ public string Id { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>A string containing the ID of this cue.</p>
+</dd>
   </dl>
 
 
 
 
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_TextTrackCue_Id_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/TextTrackCue/id"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/TextTrackCue/id</a></p>
+</div>
 
 
 
@@ -304,7 +319,8 @@ public EventHandlerNonNull Onexit { get; set; }</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The <strong><code>pauseOnExit</code></strong> property of the <a class="xref" href="CSharpToJavaScript.APIs.JS.TextTrackCue.html">TextTrackCue</a> interface returns or sets the flag indicating whether playback of the media should pause when the end of the range to which this cue applies is reached.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -319,12 +335,16 @@ public bool PauseOnExit { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dd><p>A <see cref="!:Boolean"></see>, true if the media will pause.</p>
+</dd>
   </dl>
 
 
 
 
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_TextTrackCue_PauseOnExit_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/TextTrackCue/pauseOnExit"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/TextTrackCue/pauseOnExit</a></p>
+</div>
 
 
 
@@ -336,7 +356,8 @@ public bool PauseOnExit { get; set; }</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The <strong><code>startTime</code></strong> property of the <a class="xref" href="CSharpToJavaScript.APIs.JS.TextTrackCue.html">TextTrackCue</a> interface returns and sets the start time of the cue.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -351,12 +372,16 @@ public double StartTime { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd></dd>
+    <dd><p>A number representing the start time, in seconds.</p>
+</dd>
   </dl>
 
 
 
 
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_TextTrackCue_StartTime_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/TextTrackCue/startTime"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/TextTrackCue/startTime</a></p>
+</div>
 
 
 
@@ -368,7 +393,8 @@ public double StartTime { get; set; }</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The <strong><code>track</code></strong> read-only property of the <a class="xref" href="CSharpToJavaScript.APIs.JS.TextTrackCue.html">TextTrackCue</a> interface returns the <a class="xref" href="CSharpToJavaScript.APIs.JS.TextTrack.html">TextTrack</a> object that this cue belongs to.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -383,12 +409,16 @@ public TextTrack? Track { get; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.TextTrack.html">TextTrack</a></dt>
-    <dd></dd>
+    <dd><p>A <a class="xref" href="CSharpToJavaScript.APIs.JS.TextTrack.html">TextTrack</a> object.</p>
+</dd>
   </dl>
 
 
 
 
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_TextTrackCue_Track_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/TextTrackCue/track"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/TextTrackCue/track</a></p>
+</div>
 
 
 

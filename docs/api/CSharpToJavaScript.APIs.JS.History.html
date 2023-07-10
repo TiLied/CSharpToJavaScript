@@ -91,7 +91,8 @@
   <dl><dt>Assembly</dt><dd>CSharpToJavaScript.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>The <strong><code>History</code></strong> interface allows manipulation of the browser <strong>session history</strong>, that is the pages visited in the tab or frame that the current page is loaded in.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -141,6 +142,11 @@ public class History</code></pre>
 
 
 
+  <h2 id="CSharpToJavaScript_APIs_JS_History_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>There is only one instance of <code>history</code> (It is a <strong>singleton</strong>.) accessible via the global object <a class="xref" href="CSharpToJavaScript.APIs.JS.Window.html#CSharpToJavaScript_APIs_JS_Window_History">History</a>.</p><blockquote class="NOTE"><h5>NOTE</h5><p><strong>Note:</strong> This interface is only available on the main thread (<a class="xref" href="CSharpToJavaScript.APIs.JS.Window.html">Window</a>). It cannot be accessed in <a class="xref" href="CSharpToJavaScript.APIs.JS.Worker.html">Worker</a> or <a class="xref" href="CSharpToJavaScript.APIs.JS.Worklet.html">Worklet</a> contexts.</p></blockquote>
+<p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.Window.html#CSharpToJavaScript_APIs_JS_Window_History">History</a> global object<br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/History"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/History</a></p>
+</div>
 
 
   <h2 class="section" id="properties">Properties
@@ -243,7 +249,7 @@ public class History</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><span class="xref">dynamic</span></dt>
-    <dd><p>The state at the top of the history stack. The value is <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><code>null</code>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null</a> until the<br><see cref="!:HistoryPushState"></see> or<br><see cref="!:HistoryReplaceState"></see> method is used.</p>
+    <dd><p>The state at the top of the history stack. The value is <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><code>null</code>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null</a> until the<br><a class="xref" href="CSharpToJavaScript.APIs.JS.History.html#CSharpToJavaScript_APIs_JS_History_PushState_System_Object_System_String_System_String_">PushState(dynamic, string, string?)</a> or<br><a class="xref" href="CSharpToJavaScript.APIs.JS.History.html#CSharpToJavaScript_APIs_JS_History_ReplaceState_System_Object_System_String_System_String_">ReplaceState(dynamic, string, string?)</a> method is used.</p>
 </dd>
   </dl>
 
@@ -281,7 +287,7 @@ public class History</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None (<see cref="!:undefined"></see>).</p>
+    <dd><p>None (<see cref="!:Undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -292,7 +298,7 @@ public class History</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_History_Back_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>It has the same<br>effect as calling <see cref="!:HistoryGo"></see>. If there is no previous<br>page, this method call does nothing.</p><p>This method is {{glossary(&amp;quot;asynchronous&amp;quot;)}}. Add a listener for the<br><see cref="!:Window/popstate_event"></see> event in order to determine when the navigation has completed.</p>
+  <div class="markdown level1 remarks"><p>It has the same<br>effect as calling <a class="xref" href="CSharpToJavaScript.APIs.JS.History.html#CSharpToJavaScript_APIs_JS_History_Go_System_Int64_">Go(long)</a>. If there is no previous<br>page, this method call does nothing.</p><p>This method is <a href="https://developer.mozilla.org/en-US/docs/Glossary/asynchronous">asynchronous</a>. Add a listener for the<br><see cref="!:Window/popstate_event"></see> event in order to determine when the navigation has completed.</p>
 <p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.History.html">History</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/History_API/Working_with_the_History_API">Working with the History API</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/History/back"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/History/back</a></p>
 </div>
@@ -307,7 +313,7 @@ public class History</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>History.forward()</code></strong> method causes the browser to move<br>forward one page in the session history. It has the same effect as calling<br><see cref="!:HistoryGo"></see>.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>History.forward()</code></strong> method causes the browser to move<br>forward one page in the session history. It has the same effect as calling<br><a class="xref" href="CSharpToJavaScript.APIs.JS.History.html#CSharpToJavaScript_APIs_JS_History_Go_System_Int64_">Go(long)</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -319,7 +325,7 @@ public class History</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None (<see cref="!:undefined"></see>).</p>
+    <dd><p>None (<see cref="!:Undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -362,7 +368,7 @@ public class History</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None (<see cref="!:undefined"></see>).</p>
+    <dd><p>None (<see cref="!:Undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -373,8 +379,8 @@ public class History</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_History_Go_System_Int64__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This method is {{glossary(&amp;quot;asynchronous&amp;quot;)}}. Add a listener for the<br><see cref="!:Window/popstate_event"></see> event in order to determine when the navigation has completed.</p>
-<p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.History.html">History</a><br>-<see cref="!:HistoryBack"></see><br>-<see cref="!:HistoryForward"></see><br>-<see cref="!:Window/popstate_event"></see> event<br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/History_API/Working_with_the_History_API">Working with the History API</a><br></p>
+  <div class="markdown level1 remarks"><p>This method is <a href="https://developer.mozilla.org/en-US/docs/Glossary/asynchronous">asynchronous</a>. Add a listener for the<br><see cref="!:Window/popstate_event"></see> event in order to determine when the navigation has completed.</p>
+<p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.History.html">History</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.History.html#CSharpToJavaScript_APIs_JS_History_Back">Back()</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.History.html#CSharpToJavaScript_APIs_JS_History_Forward">Forward()</a><br>-<see cref="!:Window/popstate_event"></see> event<br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/History_API/Working_with_the_History_API">Working with the History API</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/History/go"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/History/go</a></p>
 </div>
 
@@ -409,7 +415,7 @@ public class History</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None (<see cref="!:undefined"></see>).</p>
+    <dd><p>None (<see cref="!:Undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -456,7 +462,7 @@ public class History</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None (<see cref="!:undefined"></see>).</p>
+    <dd><p>None (<see cref="!:Undefined"></see>).</p>
 </dd>
   </dl>
 

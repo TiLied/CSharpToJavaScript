@@ -91,7 +91,8 @@
   <dl><dt>Assembly</dt><dd>CSharpToJavaScript.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>The <strong><code>ProcessingInstruction</code></strong> interface represents a <a href="https://www.w3.org/TR/xml/#sec-pi">processing instruction</a>; that is, a <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a> which embeds an instruction targeting a specific application but that can be ignored by any other applications which don't recognize the instruction.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -334,6 +335,11 @@ public class ProcessingInstruction : CharacterData, NonDocumentTypeChildNode, Ch
 
 
 
+  <h2 id="CSharpToJavaScript_APIs_JS_ProcessingInstruction_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><blockquote class="WARNING"><h5>WARNING</h5><p><strong>Warning:</strong> <code>ProcessingInstruction</code> nodes are only supported in XML documents, not in HTML documents. In these, a process instruction will be considered as a comment and be represented as a <a class="xref" href="CSharpToJavaScript.APIs.JS.Comment.html">Comment</a> object in the tree.</p></blockquote><p>A processing instruction may be different than the <a href="https://developer.mozilla.org/en-US/docs/Web/XML/XML_introduction#xml_declaration">XML declaration</a>.</p><blockquote class="NOTE"><h5>NOTE</h5><p><strong>Note:</strong> User-defined processing instructions cannot begin with &amp;quot;<code>xml</code>&amp;quot;, as <code>xml</code>-prefixed processing-instruction target names are reserved by the XML specification for particular, standard uses (see, for example, <code>&amp;lt;?xml-stylesheet ?&amp;gt;</code>.</p></blockquote><p>For example:</p><p>is a processing instruction whose <code>target</code> is <code>xml</code>.</p><p></p>
+<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createProcessingInstruction">document.createProcessingInstruction()</a><br>-The <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">DOM API</a><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/ProcessingInstruction"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/ProcessingInstruction</a></p>
+</div>
 
 
   <h2 class="section" id="properties">Properties

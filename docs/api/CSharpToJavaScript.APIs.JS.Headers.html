@@ -91,7 +91,8 @@
   <dl><dt>Assembly</dt><dd>CSharpToJavaScript.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>The <strong><code>Headers</code></strong> interface of the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch API</a> allows you to perform various actions on <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers">HTTP request and response headers</a>. These actions include retrieving, setting, adding to, and removing headers from the list of the request&amp;apos;s headers.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -141,6 +142,11 @@ public class Headers</code></pre>
 
 
 
+  <h2 id="CSharpToJavaScript_APIs_JS_Headers_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>A <code>Headers</code> object has an associated header list, which is initially empty and consists of zero or more name and value pairs. You can add to this using methods like <a class="xref" href="CSharpToJavaScript.APIs.JS.Headers.html#CSharpToJavaScript_APIs_JS_Headers_Append_System_String_System_String_">Append(string, string)</a> (see <a href="https://developer.mozilla.org#examples">Examples</a>.) In all methods of this interface, header names are matched by case-insensitive byte sequence.</p><p>For security reasons, some headers can only be controlled by the user agent. These headers include the <a href="https://developer.mozilla.org/en-US/docs/Glossary/Forbidden_header_name">Forbidden_header_name</a> and <a href="https://developer.mozilla.org/en-US/docs/Glossary/Forbidden_response_header_name">Forbidden_response_header_name</a>.</p><p>A Headers object also has an associated guard, which takes a value of <code>immutable</code>, <code>request</code>, <code>request-no-cors</code>, <code>response</code>, or <code>none</code>. This affects whether the <a class="xref" href="CSharpToJavaScript.APIs.JS.Headers.html#CSharpToJavaScript_APIs_JS_Headers_Set_System_String_System_String_">Set(string, string)</a>, <a class="xref" href="CSharpToJavaScript.APIs.JS.Headers.html#CSharpToJavaScript_APIs_JS_Headers_Delete_System_String_">Delete(string)</a>, and <a class="xref" href="CSharpToJavaScript.APIs.JS.Headers.html#CSharpToJavaScript_APIs_JS_Headers_Append_System_String_System_String_">Append(string, string)</a> methods will mutate the header. For more information see {{Glossary("Guard")}}.</p><p>You can retrieve a <code>Headers</code> object via the <a class="xref" href="CSharpToJavaScript.APIs.JS.Request.html#CSharpToJavaScript_APIs_JS_Request_Headers">Headers</a> and <a class="xref" href="CSharpToJavaScript.APIs.JS.Response.html#CSharpToJavaScript_APIs_JS_Response_Headers">Headers</a> properties, and create a new <code>Headers</code> object using the <a class="xref" href="CSharpToJavaScript.APIs.JS.Headers.html#CSharpToJavaScript_APIs_JS_Headers__ctor_CSharpToJavaScript_APIs_JS_Union9_">Headers(Union9)</a> constructor.</p><p>An object implementing <code>Headers</code> can directly be used in a {{jsxref("Statements/for...of", "for...of")}} structure, instead of <see cref="!:'Headers.Entries'"></see>: <code>for (const p of myHeaders)</code> is equivalent to <code>for (const p of myHeaders.entries())</code>.</p><blockquote class="NOTE"><h5>NOTE</h5><p><strong>Note:</strong> you can find out more about the available headers by reading our <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers">HTTP headers</a> reference.</p></blockquote>
+<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Headers"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Headers</a></p>
+</div>
 
 
   <h2 class="section" id="constructors">Constructors
@@ -154,7 +160,7 @@ public class Headers</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>Headers</code></strong> interface of the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch API</a> allows you to perform various actions on <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers">HTTP request and response headers</a>. These actions include retrieving, setting, adding to, and removing headers from the list of the request&amp;apos;s headers.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>Headers()</code></strong> constructor creates a new<br><a class="xref" href="CSharpToJavaScript.APIs.JS.Headers.html">Headers</a> object.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -176,9 +182,8 @@ public class Headers</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Headers__ctor_CSharpToJavaScript_APIs_JS_Union9__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>A <code>Headers</code> object has an associated header list, which is initially empty and consists of zero or more name and value pairs. You can add to this using methods like <see cref="!:HeadersAppend"></see> (see <a href="https://developer.mozilla.org#examples">Examples</a>.) In all methods of this interface, header names are matched by case-insensitive byte sequence.</p><p>For security reasons, some headers can only be controlled by the user agent. These headers include the {{Glossary(&amp;quot;Forbidden_header_name&amp;quot;, &amp;quot;forbidden header names&amp;quot;)}} and {{Glossary(&amp;quot;Forbidden_response_header_name&amp;quot;, &amp;quot;forbidden response header names&amp;quot;)}}.</p><p>A Headers object also has an associated guard, which takes a value of <code>immutable</code>, <code>request</code>, <code>request-no-cors</code>, <code>response</code>, or <code>none</code>. This affects whether the <see cref="!:HeadersSet"></see>, <see cref="!:HeadersDelete"></see>, and <see cref="!:HeadersAppend"></see> methods will mutate the header. For more information see {{Glossary("Guard")}}.</p><p>You can retrieve a <code>Headers</code> object via the <see cref="!:RequestHeaders"></see> and <see cref="!:ResponseHeaders"></see> properties, and create a new <code>Headers</code> object using the <see cref="!:HeadersHeaders"></see> constructor.</p><p>An object implementing <code>Headers</code> can directly be used in a {{jsxref("Statements/for...of", "for...of")}} structure, instead of <see cref="!:'HeadersEntries'"></see>: <code>for (const p of myHeaders)</code> is equivalent to <code>for (const p of myHeaders.entries())</code>.</p><blockquote><p><strong>Note:</strong> you can find out more about the available headers by reading our <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers">HTTP headers</a> reference.</p></blockquote>
-<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a><br></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Headers"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Headers</a></p>
+  <div class="markdown level1 remarks"><p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Headers/Headers"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Headers/Headers</a></p>
 </div>
 
 
@@ -254,7 +259,7 @@ public class Headers</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None (<see cref="!:undefined"></see>).</p>
+    <dd><p>None (<see cref="!:Undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -265,7 +270,7 @@ public class Headers</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Headers_Append_System_String_System_String__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>The difference between <see cref="!:HeadersSet"></see> and <code>append()</code> is<br>that if the specified header already exists and accepts multiple values,<br><code>set()</code> will overwrite the existing value with the new one, whereas<br><code>append()</code> will append the new value onto the end of the set of values.</p><p>For security reasons, some headers can only be controlled by the user agent. These<br>headers include the {{Glossary(&amp;quot;Forbidden_header_name&amp;quot;, &amp;quot;forbidden header names&amp;quot;)}}<br>and {{Glossary(&amp;quot;Forbidden_response_header_name&amp;quot;, &amp;quot;forbidden response header names&amp;quot;)}}.</p>
+  <div class="markdown level1 remarks"><p>The difference between <a class="xref" href="CSharpToJavaScript.APIs.JS.Headers.html#CSharpToJavaScript_APIs_JS_Headers_Set_System_String_System_String_">Set(string, string)</a> and <code>append()</code> is<br>that if the specified header already exists and accepts multiple values,<br><code>set()</code> will overwrite the existing value with the new one, whereas<br><code>append()</code> will append the new value onto the end of the set of values.</p><p>For security reasons, some headers can only be controlled by the user agent. These<br>headers include the <a href="https://developer.mozilla.org/en-US/docs/Glossary/Forbidden_header_name">Forbidden_header_name</a><br>and <a href="https://developer.mozilla.org/en-US/docs/Glossary/Forbidden_response_header_name">Forbidden_response_header_name</a>.</p>
 <p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Headers/append"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Headers/append</a></p>
 </div>
@@ -297,7 +302,7 @@ public class Headers</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None (<see cref="!:undefined"></see>).</p>
+    <dd><p>None (<see cref="!:Undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -308,7 +313,7 @@ public class Headers</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Headers_Delete_System_String__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This method throws a <see cref="!:TypeError"></see> for the following reasons:</p><p>For security reasons, some headers can only be controlled by the user agent. These<br>headers include the {{Glossary(&amp;quot;Forbidden_header_name&amp;quot;, &amp;quot;forbidden header names&amp;quot;)}}<br>and {{Glossary(&amp;quot;Forbidden_response_header_name&amp;quot;, &amp;quot;forbidden response header names&amp;quot;)}}.</p>
+  <div class="markdown level1 remarks"><p>This method throws a <see cref="!:TypeError"></see> for the following reasons:</p><p>For security reasons, some headers can only be controlled by the user agent. These<br>headers include the <a href="https://developer.mozilla.org/en-US/docs/Glossary/Forbidden_header_name">Forbidden_header_name</a><br>and <a href="https://developer.mozilla.org/en-US/docs/Glossary/Forbidden_response_header_name">Forbidden_response_header_name</a>.</p>
 <p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Headers/delete"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Headers/delete</a></p>
 </div>
@@ -351,7 +356,7 @@ public class Headers</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Headers_Get_System_String__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>For security reasons, some headers can only be controlled by the user agent. These<br>headers include the {{Glossary(&amp;quot;Forbidden_header_name&amp;quot;, &amp;quot;forbidden header names&amp;quot;)}}<br>and {{Glossary(&amp;quot;Forbidden_response_header_name&amp;quot;, &amp;quot;forbidden response header names&amp;quot;)}}.</p>
+  <div class="markdown level1 remarks"><p>For security reasons, some headers can only be controlled by the user agent. These<br>headers include the <a href="https://developer.mozilla.org/en-US/docs/Glossary/Forbidden_header_name">Forbidden_header_name</a><br>and <a href="https://developer.mozilla.org/en-US/docs/Glossary/Forbidden_response_header_name">Forbidden_response_header_name</a>.</p>
 <p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Headers/get"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Headers/get</a></p>
 </div>
@@ -394,7 +399,7 @@ public class Headers</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Headers_Has_System_String__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>For security reasons, some headers can only be controlled by the user agent. These<br>headers include the {{Glossary(&amp;quot;Forbidden_header_name&amp;quot;, &amp;quot;forbidden header names&amp;quot;)}}<br>and {{Glossary(&amp;quot;Forbidden_response_header_name&amp;quot;, &amp;quot;forbidden response header names&amp;quot;)}}.</p>
+  <div class="markdown level1 remarks"><p>For security reasons, some headers can only be controlled by the user agent. These<br>headers include the <a href="https://developer.mozilla.org/en-US/docs/Glossary/Forbidden_header_name">Forbidden_header_name</a><br>and <a href="https://developer.mozilla.org/en-US/docs/Glossary/Forbidden_response_header_name">Forbidden_response_header_name</a>.</p>
 <p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Headers/has"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Headers/has</a></p>
 </div>
@@ -428,7 +433,7 @@ public class Headers</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None (<see cref="!:undefined"></see>).</p>
+    <dd><p>None (<see cref="!:Undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -439,7 +444,7 @@ public class Headers</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Headers_Set_System_String_System_String__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>The difference between <code>set()</code> and <see cref="!:HeadersAppend"></see> is that if<br>the specified header already exists and accepts multiple values, <code>set()</code><br>overwrites the existing value with the new one, whereas <see cref="!:HeadersAppend"></see><br>appends the new value to the end of the set of values.</p><p>For security reasons, some headers can only be controller by the user agent. These<br>headers include the {{Glossary(&amp;quot;Forbidden_header_name&amp;quot;, &amp;quot;forbidden header names&amp;quot;)}}<br>and {{Glossary(&amp;quot;Forbidden_response_header_name&amp;quot;, &amp;quot;forbidden response header names&amp;quot;)}}.</p>
+  <div class="markdown level1 remarks"><p>The difference between <code>set()</code> and <a class="xref" href="CSharpToJavaScript.APIs.JS.Headers.html#CSharpToJavaScript_APIs_JS_Headers_Append_System_String_System_String_">Append(string, string)</a> is that if<br>the specified header already exists and accepts multiple values, <code>set()</code><br>overwrites the existing value with the new one, whereas <a class="xref" href="CSharpToJavaScript.APIs.JS.Headers.html#CSharpToJavaScript_APIs_JS_Headers_Append_System_String_System_String_">Append(string, string)</a><br>appends the new value to the end of the set of values.</p><p>For security reasons, some headers can only be controller by the user agent. These<br>headers include the <a href="https://developer.mozilla.org/en-US/docs/Glossary/Forbidden_header_name">Forbidden_header_name</a><br>and <a href="https://developer.mozilla.org/en-US/docs/Glossary/Forbidden_response_header_name">Forbidden_response_header_name</a>.</p>
 <p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Headers/set"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Headers/set</a></p>
 </div>

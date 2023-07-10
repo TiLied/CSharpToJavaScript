@@ -91,7 +91,8 @@
   <dl><dt>Assembly</dt><dd>CSharpToJavaScript.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>The <strong><code>MessagePort</code></strong> interface of the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Channel_Messaging_API">Channel Messaging API</a> represents one of the two ports of a <a class="xref" href="CSharpToJavaScript.APIs.JS.MessageChannel.html">MessageChannel</a>, allowing messages to be sent from one port and listening out for them arriving at the other.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -163,6 +164,11 @@ public class MessagePort : EventTarget</code></pre>
 
 
 
+  <h2 id="CSharpToJavaScript_APIs_JS_MessagePort_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p><code>MessagePort</code> is a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Transferable_objects">transferable object</a>.</p><p>AvailableInWorkers</p><p></p>
+<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging">Using channel messaging</a><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/MessagePort"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/MessagePort</a></p>
+</div>
 
 
   <h2 class="section" id="properties">Properties
@@ -254,7 +260,7 @@ public class MessagePort : EventTarget</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None (<see cref="!:undefined"></see>).</p>
+    <dd><p>None (<see cref="!:Undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -265,7 +271,7 @@ public class MessagePort : EventTarget</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_MessagePort_Close_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>{{AvailableInWorkers}}</p>
+  <div class="markdown level1 remarks"><p>AvailableInWorkers</p>
 <p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging">Using channel messaging</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/close"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/close</a></p>
 </div>
@@ -299,7 +305,7 @@ public class MessagePort : EventTarget</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None (<see cref="!:undefined"></see>).</p>
+    <dd><p>None (<see cref="!:Undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -310,7 +316,7 @@ public class MessagePort : EventTarget</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_MessagePort_PostMessage_System_Object_CSharpToJavaScript_APIs_JS_StructuredSerializeOptions__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>{{AvailableInWorkers}}</p>
+  <div class="markdown level1 remarks"><p>AvailableInWorkers</p>
 <p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging">Using channel messaging</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/postMessage"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/postMessage</a></p>
 </div>
@@ -344,7 +350,7 @@ public class MessagePort : EventTarget</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None (<see cref="!:undefined"></see>).</p>
+    <dd><p>None (<see cref="!:Undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -355,7 +361,7 @@ public class MessagePort : EventTarget</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_MessagePort_PostMessage_System_Object_System_Collections_Generic_List_System_Object___remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>{{AvailableInWorkers}}</p>
+  <div class="markdown level1 remarks"><p>AvailableInWorkers</p>
 <p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging">Using channel messaging</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/postMessage"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/postMessage</a></p>
 </div>
@@ -370,7 +376,7 @@ public class MessagePort : EventTarget</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>start()</code></strong> method of the <a class="xref" href="CSharpToJavaScript.APIs.JS.MessagePort.html">MessagePort</a><br>interface starts the sending of messages queued on the port. This method is only needed<br>when using <see cref="!:EventTargetAddEventListener"></see>; it is implied when using<br><see cref="!:MessagePortMessage_event"></see>.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>start()</code></strong> method of the <a class="xref" href="CSharpToJavaScript.APIs.JS.MessagePort.html">MessagePort</a><br>interface starts the sending of messages queued on the port. This method is only needed<br>when using <a class="xref" href="CSharpToJavaScript.APIs.JS.EventTarget.html#CSharpToJavaScript_APIs_JS_EventTarget_AddEventListener_System_String_System_Action_CSharpToJavaScript_APIs_JS_Union1_">AddEventListener(string, Action?, Union1)</a>; it is implied when using<br><see cref="!:MessagePort.Message_event"></see>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -382,7 +388,7 @@ public class MessagePort : EventTarget</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None (<see cref="!:undefined"></see>).</p>
+    <dd><p>None (<see cref="!:Undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -393,7 +399,7 @@ public class MessagePort : EventTarget</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_MessagePort_Start_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>{{AvailableInWorkers}}</p>
+  <div class="markdown level1 remarks"><p>AvailableInWorkers</p>
 <p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging">Using channel messaging</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/start"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/start</a></p>
 </div>

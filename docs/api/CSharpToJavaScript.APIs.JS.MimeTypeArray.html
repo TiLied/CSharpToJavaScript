@@ -91,7 +91,8 @@
   <dl><dt>Assembly</dt><dd>CSharpToJavaScript.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><code>MimeTypeArray</code></strong> interface returns an array of <see cref="!:'MimeType'"></see> instances, each of which contains information about a supported browser plugins. This object is returned by <see cref="!:Navigator.MimeTypes"></see>.
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -141,6 +142,10 @@ public class MimeTypeArray</code></pre>
 
 
 
+  <h2 id="CSharpToJavaScript_APIs_JS_MimeTypeArray_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><blockquote class="NOTE"><h5>NOTE</h5><p><strong>Note:</strong> This interface was an <a href="https://stackoverflow.com/questions/74630989/why-use-domstringlist-rather-than-an-array/74641156#74641156">attempt to create an unmodifiable list</a> and only continues to be supported to not break code that&amp;apos;s already using it. Modern APIs use types that wrap around ECMAScript array types instead, so you can treat them like ECMAScript arrays, and at the same time impose additional semantics on their usage (such as making their items read-only).</p></blockquote>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/MimeTypeArray"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/MimeTypeArray</a></p>
+</div>
 
 
   <h2 class="section" id="properties">Properties

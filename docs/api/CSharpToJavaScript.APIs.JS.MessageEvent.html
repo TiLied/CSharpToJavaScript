@@ -91,7 +91,8 @@
   <dl><dt>Assembly</dt><dd>CSharpToJavaScript.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>The <strong><code>MessageEvent</code></strong> interface represents a message received by a target object.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -208,6 +209,11 @@ public class MessageEvent : Event</code></pre>
 
 
 
+  <h2 id="CSharpToJavaScript_APIs_JS_MessageEvent_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>This is used to represent messages in:</p><p>The action triggered by this event is defined in a function set as the event handler for the relevant <code>message</code> event (e.g. using an <code>onmessage</code> handler as listed above).</p><p>AvailableInWorkers<br></p>
+<p>-<see cref="!:ExtendableMessageEvent"></see> — similar to this interface but used in interfaces that needs to give more flexibility to authors.<br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent</a></p>
+</div>
 
 
   <h2 class="section" id="constructors">Constructors
@@ -221,7 +227,7 @@ public class MessageEvent : Event</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>MessageEvent</code></strong> interface represents a message received by a target object.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>MessageEvent()</code></strong> constructor creates a new <a class="xref" href="CSharpToJavaScript.APIs.JS.MessageEvent.html">MessageEvent</a> object.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -245,9 +251,8 @@ public class MessageEvent : Event</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_MessageEvent__ctor_System_String_CSharpToJavaScript_APIs_JS_MessageEventInit__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This is used to represent messages in:</p><p>The action triggered by this event is defined in a function set as the event handler for the relevant <code>message</code> event (e.g. using an <code>onmessage</code> handler as listed above).</p><p>{{AvailableInWorkers}}<br>{{InheritanceDiagram}}</p>
-<p>-<see cref="!:ExtendableMessageEvent"></see> — similar to this interface but used in interfaces that needs to give more flexibility to authors.<br></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent</a></p>
+  <div class="markdown level1 remarks"><p>-<see cref="!:ExtendableMessageEvent"></see> — similar to this interface but used in interfaces that needs to give more flexibility to authors.<br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent/MessageEvent"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent/MessageEvent</a></p>
 </div>
 
 
@@ -279,7 +284,7 @@ public class MessageEvent : Event</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><span class="xref">dynamic</span></dt>
-    <dd><p>The data sent by the message emitter; this can be any data type.If the data is sent by a <see cref="!:WebSocket"></see> connector, the type of this property depends on the type of the WebSocket message and the value of <see cref="!:WebSocketBinaryType"></see>.</p>
+    <dd><p>The data sent by the message emitter; this can be any data type.If the data is sent by a <see cref="!:WebSocket"></see> connector, the type of this property depends on the type of the WebSocket message and the value of <see cref="!:WebSocket.BinaryType"></see>.</p>
 </dd>
   </dl>
 
@@ -427,7 +432,7 @@ public class MessageEvent : Event</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Union45.html">Union45</a>?</dt>
-    <dd><p>a <code>MessageEventSource</code> (which can be a {{glossary(&amp;quot;WindowProxy&amp;quot;)}},<br><a class="xref" href="CSharpToJavaScript.APIs.JS.MessagePort.html">MessagePort</a>, or <see cref="!:ServiceWorker"></see> object) representing the<br>message emitter.</p>
+    <dd><p>a <code>MessageEventSource</code> (which can be a <a href="https://developer.mozilla.org/en-US/docs/Glossary/WindowProxy">WindowProxy</a>,<br><a class="xref" href="CSharpToJavaScript.APIs.JS.MessagePort.html">MessagePort</a>, or <see cref="!:ServiceWorker"></see> object) representing the<br>message emitter.</p>
 </dd>
   </dl>
 

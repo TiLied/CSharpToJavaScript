@@ -91,7 +91,8 @@
   <dl><dt>Assembly</dt><dd>CSharpToJavaScript.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>The <strong><code>HTMLLabelElement</code></strong> interface gives access to properties specific to {{HTMLElement(&quot;label&quot;)}} elements. It inherits methods and properties from the base <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLElement.html">HTMLElement</a> interface.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -482,6 +483,11 @@ public class HTMLLabelElement : HTMLElement, ParentNode, NonDocumentTypeChildNod
 
 
 
+  <h2 id="CSharpToJavaScript_APIs_JS_HTMLLabelElement_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p></p>
+<p>-The HTML element implementing this interface: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label">label</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLFormElement.html">HTMLFormElement</a><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLLabelElement"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/HTMLLabelElement</a></p>
+</div>
 
 
   <h2 class="section" id="constructors">Constructors
@@ -495,8 +501,7 @@ public class HTMLLabelElement : HTMLElement, ParentNode, NonDocumentTypeChildNod
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>HTMLLabelElement</code></strong> interface gives access to properties specific to {{HTMLElement(&quot;label&quot;)}} elements. It inherits methods and properties from the base <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLElement.html">HTMLElement</a> interface.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -511,11 +516,6 @@ public class HTMLLabelElement : HTMLElement, ParentNode, NonDocumentTypeChildNod
 
 
 
-  <h4 class="section" id="CSharpToJavaScript_APIs_JS_HTMLLabelElement__ctor_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>{{InheritanceDiagram}}</p>
-<p>-The HTML element implementing this interface: {{HTMLElement(&amp;quot;label&amp;quot;)}}<br>-{{HTMLElement(&amp;quot;form&amp;quot;)}}<br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLFormElement.html">HTMLFormElement</a><br></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLLabelElement"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/HTMLLabelElement</a></p>
-</div>
 
 
 
@@ -531,7 +531,8 @@ public class HTMLLabelElement : HTMLElement, ParentNode, NonDocumentTypeChildNod
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The read-only <strong><code>HTMLLabelElement.control</code></strong> property returns a<br>reference to the control (in the form of an object of type <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLElement.html">HTMLElement</a> or<br>one of its derivatives) with which the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label">label</a> element is associated,<br>or <code>null</code> if the label isn&amp;apos;t associated with a control.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -546,12 +547,17 @@ public HTMLElement? Control { get; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLElement.html">HTMLElement</a></dt>
-    <dd></dd>
+    <dd><p>An <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLElement.html">HTMLElement</a> derived object representing the control with which the<br><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label">label</a> is associated, or <code>null</code> if the label stands alone.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> If this property has a value and <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLLabelElement.html#CSharpToJavaScript_APIs_JS_HTMLLabelElement_HtmlFor">HtmlFor</a> has a value,<br>the <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLLabelElement.html#CSharpToJavaScript_APIs_JS_HTMLLabelElement_HtmlFor">HtmlFor</a> property must refer to the same control.</blockquote>
+</dd>
   </dl>
 
 
 
 
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_HTMLLabelElement_Control_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLLabelElement.html">HTMLLabelElement</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLElement.html">HTMLElement</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label">label</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Learn/Forms">HTML forms guide</a><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLLabelElement/control"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/HTMLLabelElement/control</a></p>
+</div>
 
 
 
@@ -563,7 +569,8 @@ public HTMLElement? Control { get; }</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The read-only <strong><code>HTMLLabelElement.form</code></strong> property returns an<br><a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLFormElement.html">HTMLFormElement</a> object which represents the form of which the label's<br>associated control is a part, or null if there is either no associated control, or if<br>that control isn&amp;apos;t in a form.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -578,12 +585,18 @@ public HTMLFormElement? Form { get; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLFormElement.html">HTMLFormElement</a></dt>
-    <dd></dd>
+    <dd><p>An <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLFormElement.html">HTMLFormElement</a> which represents the form with which the label's<br><a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLLabelElement.html#CSharpToJavaScript_APIs_JS_HTMLLabelElement_Control">Control</a> is associated. If<br><a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLLabelElement.html#CSharpToJavaScript_APIs_JS_HTMLLabelElement_Control">Control</a> is <code>null</code> (meaning the<br>label isn&amp;apos;t associated with a control), or if the control isn&amp;apos;t part of a form, this<br>property returns <code>null</code>.</p>
+</dd>
   </dl>
 
 
 
 
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_HTMLLabelElement_Form_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This property is just a shortcut for <code>HTMLLabelElement.control.form</code>.</p>
+<p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLLabelElement.html">HTMLLabelElement</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLElement.html">HTMLElement</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label">label</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Learn/Forms">HTML forms guide</a><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLLabelElement/form"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/HTMLLabelElement/form</a></p>
+</div>
 
 
 
@@ -595,7 +608,8 @@ public HTMLFormElement? Form { get; }</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The <strong><code>HTMLLabelElement.htmlFor</code></strong> property reflects the value<br>of the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label#for"><code>for</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label#for</a> content property. That means that this<br>script-accessible property is used to set and read the value of the content property<br><code>for</code>, which is the ID of the label&amp;apos;s associated control element.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -610,12 +624,17 @@ public string HtmlFor { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>A string which contains the ID string of the element which is<br>associated with the control.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> If this property has a value, the <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLLabelElement.html#CSharpToJavaScript_APIs_JS_HTMLLabelElement_Control">Control</a> property<br>must refer to the same control.</blockquote>
+</dd>
   </dl>
 
 
 
 
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_HTMLLabelElement_HtmlFor_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLLabelElement.html">HTMLLabelElement</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLLabelElement.html#CSharpToJavaScript_APIs_JS_HTMLLabelElement_Control">Control</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLElement.html">HTMLElement</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label">label</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Learn/Forms">HTML forms guide</a><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLLabelElement/htmlFor"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/HTMLLabelElement/htmlFor</a></p>
+</div>
 
 
 

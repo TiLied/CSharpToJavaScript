@@ -91,7 +91,8 @@
   <dl><dt>Assembly</dt><dd>CSharpToJavaScript.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>The <strong><code>Comment</code></strong> interface represents textual notations within markup; although it is generally not visually shown, such comments are available to be read in the source view.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -334,6 +335,11 @@ public class Comment : CharacterData, NonDocumentTypeChildNode, ChildNode</code>
 
 
 
+  <h2 id="CSharpToJavaScript_APIs_JS_Comment_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Comments are represented in HTML and XML as content between &amp;apos;<code>&amp;lt;!--</code>&amp;apos; and &amp;apos;<code>--&amp;gt;</code>&amp;apos;. In XML, like inside SVG or MathML markup, the character sequence &amp;apos;<code>--</code>&amp;apos; cannot be used within a comment.</p><p></p>
+<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM API</a><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Comment"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Comment</a></p>
+</div>
 
 
   <h2 class="section" id="constructors">Constructors
@@ -347,7 +353,7 @@ public class Comment : CharacterData, NonDocumentTypeChildNode, ChildNode</code>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>Comment</code></strong> interface represents textual notations within markup; although it is generally not visually shown, such comments are available to be read in the source view.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>Comment()</code></strong> constructor returns a newly created<br><a class="xref" href="CSharpToJavaScript.APIs.JS.Comment.html">Comment</a> object with the optional string given in<br>parameter as its textual content.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -369,9 +375,8 @@ public class Comment : CharacterData, NonDocumentTypeChildNode, ChildNode</code>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Comment__ctor_System_String__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>Comments are represented in HTML and XML as content between &amp;apos;<code>&amp;lt;!--</code>&amp;apos; and &amp;apos;<code>--&amp;gt;</code>&amp;apos;. In XML, like inside SVG or MathML markup, the character sequence &amp;apos;<code>--</code>&amp;apos; cannot be used within a comment.</p><p>{{InheritanceDiagram}}</p>
-<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM API</a><br></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Comment"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Comment</a></p>
+  <div class="markdown level1 remarks"><p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</a><br>-<see cref="!:Document.CreateComment"></see> is an outdated alternative to this constructor.<br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Comment/Comment"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Comment/Comment</a></p>
 </div>
 
 

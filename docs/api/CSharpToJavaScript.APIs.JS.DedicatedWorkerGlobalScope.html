@@ -91,7 +91,8 @@
   <dl><dt>Assembly</dt><dd>CSharpToJavaScript.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>The <strong><code>DedicatedWorkerGlobalScope</code></strong> object (the <a class="xref" href="CSharpToJavaScript.APIs.JS.Worker.html">Worker</a> global scope) is accessible through the <a class="xref" href="CSharpToJavaScript.APIs.JS.Window.html#CSharpToJavaScript_APIs_JS_Window_Self">Self</a> keyword. Some additional global functions, namespaces objects, and constructors, not typically associated with the worker global scope, but available on it, are listed in the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference">JavaScript Reference</a>. See also: <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers">Functions available to workers</a>.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -201,6 +202,11 @@ public class DedicatedWorkerGlobalScope : WorkerGlobalScope, WindowOrWorkerGloba
 
 
 
+  <h2 id="CSharpToJavaScript_APIs_JS_DedicatedWorkerGlobalScope_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p></p>
+<p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.Worker.html">Worker</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.WorkerGlobalScope.html">WorkerGlobalScope</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web workers</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers">Functions available to workers</a><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/DedicatedWorkerGlobalScope"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/DedicatedWorkerGlobalScope</a></p>
+</div>
 
 
   <h2 class="section" id="properties">Properties
@@ -214,7 +220,7 @@ public class DedicatedWorkerGlobalScope : WorkerGlobalScope, WindowOrWorkerGloba
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>name</code></strong> read-only property of the<br><a class="xref" href="CSharpToJavaScript.APIs.JS.DedicatedWorkerGlobalScope.html">DedicatedWorkerGlobalScope</a> interface returns the name that the<br><a class="xref" href="CSharpToJavaScript.APIs.JS.Worker.html">Worker</a> was (optionally) given when it was created. This is the name that<br>the <see cref="!:WorkerWorker"></see> constructor can pass to get a reference to<br>the <a class="xref" href="CSharpToJavaScript.APIs.JS.DedicatedWorkerGlobalScope.html">DedicatedWorkerGlobalScope</a>.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>name</code></strong> read-only property of the<br><a class="xref" href="CSharpToJavaScript.APIs.JS.DedicatedWorkerGlobalScope.html">DedicatedWorkerGlobalScope</a> interface returns the name that the<br><a class="xref" href="CSharpToJavaScript.APIs.JS.Worker.html">Worker</a> was (optionally) given when it was created. This is the name that<br>the <a class="xref" href="CSharpToJavaScript.APIs.JS.Worker.html#CSharpToJavaScript_APIs_JS_Worker__ctor_System_String_CSharpToJavaScript_APIs_JS_WorkerOptions_">Worker(string, WorkerOptions)</a> constructor can pass to get a reference to<br>the <a class="xref" href="CSharpToJavaScript.APIs.JS.DedicatedWorkerGlobalScope.html">DedicatedWorkerGlobalScope</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -329,7 +335,7 @@ public class DedicatedWorkerGlobalScope : WorkerGlobalScope, WindowOrWorkerGloba
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None (<see cref="!:undefined"></see>).</p>
+    <dd><p>None (<see cref="!:Undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -373,7 +379,7 @@ public class DedicatedWorkerGlobalScope : WorkerGlobalScope, WindowOrWorkerGloba
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None (<see cref="!:undefined"></see>).</p>
+    <dd><p>None (<see cref="!:Undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -384,7 +390,7 @@ public class DedicatedWorkerGlobalScope : WorkerGlobalScope, WindowOrWorkerGloba
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_DedicatedWorkerGlobalScope_PostMessage_System_Object_CSharpToJavaScript_APIs_JS_StructuredSerializeOptions__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This accepts a data parameter, which contains data to copy from the worker to the main thread.<br>The data may be any value or JavaScript object handled by the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">structured clone</a> algorithm, which includes cyclical references.</p><p>The method also accepts an optional array of <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Transferable_objects">transferable objects</a> to <strong>transfer</strong> to the main thread;<br>Unlike the data parameter transferred objects are no longer usable in the worker thread.<br>(Where possible, objects are transferred using a high performance zero-copy operation).</p><p>The main scope that spawned the worker can send back information to the thread that spawned it using the <see cref="!:WorkerPostMessage"></see> method.</p>
+  <div class="markdown level1 remarks"><p>This accepts a data parameter, which contains data to copy from the worker to the main thread.<br>The data may be any value or JavaScript object handled by the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">structured clone</a> algorithm, which includes cyclical references.</p><p>The method also accepts an optional array of <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Transferable_objects">transferable objects</a> to <strong>transfer</strong> to the main thread;<br>Unlike the data parameter transferred objects are no longer usable in the worker thread.<br>(Where possible, objects are transferred using a high performance zero-copy operation).</p><p>The main scope that spawned the worker can send back information to the thread that spawned it using the <a class="xref" href="CSharpToJavaScript.APIs.JS.Worker.html#CSharpToJavaScript_APIs_JS_Worker_PostMessage_System_Object_System_Collections_Generic_List_System_Object__">PostMessage(dynamic, List&lt;object&gt;)</a> method.</p>
 <p>The <a class="xref" href="CSharpToJavaScript.APIs.JS.DedicatedWorkerGlobalScope.html">DedicatedWorkerGlobalScope</a> interface it belongs to.</p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/DedicatedWorkerGlobalScope/postMessage"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/DedicatedWorkerGlobalScope/postMessage</a></p>
 </div>
@@ -418,7 +424,7 @@ public class DedicatedWorkerGlobalScope : WorkerGlobalScope, WindowOrWorkerGloba
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None (<see cref="!:undefined"></see>).</p>
+    <dd><p>None (<see cref="!:Undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -429,7 +435,7 @@ public class DedicatedWorkerGlobalScope : WorkerGlobalScope, WindowOrWorkerGloba
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_DedicatedWorkerGlobalScope_PostMessage_System_Object_System_Collections_Generic_List_System_Object___remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This accepts a data parameter, which contains data to copy from the worker to the main thread.<br>The data may be any value or JavaScript object handled by the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">structured clone</a> algorithm, which includes cyclical references.</p><p>The method also accepts an optional array of <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Transferable_objects">transferable objects</a> to <strong>transfer</strong> to the main thread;<br>Unlike the data parameter transferred objects are no longer usable in the worker thread.<br>(Where possible, objects are transferred using a high performance zero-copy operation).</p><p>The main scope that spawned the worker can send back information to the thread that spawned it using the <see cref="!:WorkerPostMessage"></see> method.</p>
+  <div class="markdown level1 remarks"><p>This accepts a data parameter, which contains data to copy from the worker to the main thread.<br>The data may be any value or JavaScript object handled by the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">structured clone</a> algorithm, which includes cyclical references.</p><p>The method also accepts an optional array of <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Transferable_objects">transferable objects</a> to <strong>transfer</strong> to the main thread;<br>Unlike the data parameter transferred objects are no longer usable in the worker thread.<br>(Where possible, objects are transferred using a high performance zero-copy operation).</p><p>The main scope that spawned the worker can send back information to the thread that spawned it using the <a class="xref" href="CSharpToJavaScript.APIs.JS.Worker.html#CSharpToJavaScript_APIs_JS_Worker_PostMessage_System_Object_System_Collections_Generic_List_System_Object__">PostMessage(dynamic, List&lt;object&gt;)</a> method.</p>
 <p>The <a class="xref" href="CSharpToJavaScript.APIs.JS.DedicatedWorkerGlobalScope.html">DedicatedWorkerGlobalScope</a> interface it belongs to.</p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/DedicatedWorkerGlobalScope/postMessage"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/DedicatedWorkerGlobalScope/postMessage</a></p>
 </div>

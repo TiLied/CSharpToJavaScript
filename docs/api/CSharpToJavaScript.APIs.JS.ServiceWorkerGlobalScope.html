@@ -91,7 +91,8 @@
   <dl><dt>Assembly</dt><dd>CSharpToJavaScript.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>The <strong><code>ServiceWorkerGlobalScope</code></strong> interface of the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">Service Worker API</a> represents the global execution context of a service worker.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -141,6 +142,11 @@ public class ServiceWorkerGlobalScope</code></pre>
 
 
 
+  <h2 id="CSharpToJavaScript_APIs_JS_ServiceWorkerGlobalScope_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Developers should keep in mind that the ServiceWorker state is not persisted across the termination/restart cycle, so each event handler should assume it&amp;apos;s being invoked with a bare, default global state.</p><p>Once successfully registered, a service worker can and will be terminated when idle to conserve memory and processor power. An active service worker is automatically restarted to respond to events, such as <see cref="!:ServiceWorkerGlobalScope.Fetch_event"></see> or <see cref="!:ServiceWorkerGlobalScope.Message_event"></see>.</p><p>Additionally, synchronous requests are not allowed from within a service worker — only asynchronous requests, like those initiated via the <see cref="!:Fetch"></see> method, can be used.</p><p>This interface inherits from the <a class="xref" href="CSharpToJavaScript.APIs.JS.WorkerGlobalScope.html">WorkerGlobalScope</a> interface, and its parent <a class="xref" href="CSharpToJavaScript.APIs.JS.EventTarget.html">EventTarget</a>.</p><p></p>
+<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</a><br>-<a href="https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker">Service workers basic code example</a><br>-<a href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</a><br>-<see cref="!:Promise"></see><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerGlobalScope"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerGlobalScope</a></p>
+</div>
 
 
   <h2 class="section" id="properties">Properties

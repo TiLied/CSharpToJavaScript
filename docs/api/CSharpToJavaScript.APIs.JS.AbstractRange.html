@@ -91,7 +91,8 @@
   <dl><dt>Assembly</dt><dd>CSharpToJavaScript.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>The <strong><code>AbstractRange</code></strong> abstract interface is the base class upon which all <a href="https://developer.mozilla.org/en-US/docs/Glossary/DOM">DOM</a> range types are defined. A <strong>range</strong> is an object that indicates the start and end points of a section of content within the document.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -148,6 +149,10 @@ public class AbstractRange</code></pre>
 
 
 
+  <h2 id="CSharpToJavaScript_APIs_JS_AbstractRange_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><blockquote class="NOTE"><h5>NOTE</h5><p><strong>Note:</strong> As an abstract interface, you will not directly instantiate an object of type <code>AbstractRange</code>. Instead, you will use the <a class="xref" href="CSharpToJavaScript.APIs.JS.Range.html">Range</a> or <a class="xref" href="CSharpToJavaScript.APIs.JS.StaticRange.html">StaticRange</a> interfaces. To understand the difference between those two interfaces, and how to choose which is appropriate for your needs, consult each interface's documentation.</p></blockquote><p></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/AbstractRange"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/AbstractRange</a></p>
+</div>
 
 
   <h2 class="section" id="properties">Properties
@@ -248,7 +253,7 @@ public class AbstractRange</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
-    <dd><p>An integer value indicating the number of characters into the <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a> indicated by <see cref="!:AbstractRangeEndContainer"></see> at which the final character of the range is located.</p>
+    <dd><p>An integer value indicating the number of characters into the <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a> indicated by <a class="xref" href="CSharpToJavaScript.APIs.JS.AbstractRange.html#CSharpToJavaScript_APIs_JS_AbstractRange_EndContainer">EndContainer</a> at which the final character of the range is located.</p>
 </dd>
   </dl>
 
@@ -320,7 +325,7 @@ public class AbstractRange</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
-    <dd><p>An integer value indicating the number of characters into the <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a> indicated by <see cref="!:AbstractRangeStartContainer"></see> at which the first character of the range is located.</p>
+    <dd><p>An integer value indicating the number of characters into the <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a> indicated by <a class="xref" href="CSharpToJavaScript.APIs.JS.AbstractRange.html#CSharpToJavaScript_APIs_JS_AbstractRange_StartContainer">StartContainer</a> at which the first character of the range is located.</p>
 </dd>
   </dl>
 

@@ -91,7 +91,8 @@
   <dl><dt>Assembly</dt><dd>CSharpToJavaScript.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>The <strong><code>WorkerLocation</code></strong> interface defines the absolute location of the script executed by the <a class="xref" href="CSharpToJavaScript.APIs.JS.Worker.html">Worker</a>. Such an object is initialized for each worker and is available via the <a class="xref" href="CSharpToJavaScript.APIs.JS.WorkerGlobalScope.html#CSharpToJavaScript_APIs_JS_WorkerGlobalScope_Location">Location</a> property obtained by calling <code>self.location</code>.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -141,6 +142,11 @@ public class WorkerLocation</code></pre>
 
 
 
+  <h2 id="CSharpToJavaScript_APIs_JS_WorkerLocation_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>This interface is only visible from inside a JavaScript script executed in the context of a Web worker.</p>
+<p>-Other Worker-related interfaces: <a class="xref" href="CSharpToJavaScript.APIs.JS.Worker.html">Worker</a>, <a class="xref" href="CSharpToJavaScript.APIs.JS.WorkerNavigator.html">WorkerNavigator</a>, and <a class="xref" href="CSharpToJavaScript.APIs.JS.WorkerGlobalScope.html">WorkerGlobalScope</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web workers</a><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerLocation"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/WorkerLocation</a></p>
+</div>
 
 
   <h2 class="section" id="properties">Properties
@@ -154,7 +160,7 @@ public class WorkerLocation</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>hash</code></strong> property of a <a class="xref" href="CSharpToJavaScript.APIs.JS.WorkerLocation.html">WorkerLocation</a> object returns the <see cref="!:URLHash"></see> part of the worker's location.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>hash</code></strong> property of a <a class="xref" href="CSharpToJavaScript.APIs.JS.WorkerLocation.html">WorkerLocation</a> object returns the <a class="xref" href="CSharpToJavaScript.APIs.JS.URL.html#CSharpToJavaScript_APIs_JS_URL_Hash">Hash</a> part of the worker's location.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -191,7 +197,7 @@ public class WorkerLocation</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>host</code></strong> property of a <a class="xref" href="CSharpToJavaScript.APIs.JS.WorkerLocation.html">WorkerLocation</a> object returns the <see cref="!:URLHost"></see> part of the worker's location.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>host</code></strong> property of a <a class="xref" href="CSharpToJavaScript.APIs.JS.WorkerLocation.html">WorkerLocation</a> object returns the <a class="xref" href="CSharpToJavaScript.APIs.JS.URL.html#CSharpToJavaScript_APIs_JS_URL_Host">Host</a> part of the worker's location.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -228,7 +234,7 @@ public class WorkerLocation</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>hostname</code></strong> property of a <a class="xref" href="CSharpToJavaScript.APIs.JS.WorkerLocation.html">WorkerLocation</a> object returns the <see cref="!:URLHostname"></see> part of the worker's location.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>hostname</code></strong> property of a <a class="xref" href="CSharpToJavaScript.APIs.JS.WorkerLocation.html">WorkerLocation</a> object returns the <a class="xref" href="CSharpToJavaScript.APIs.JS.URL.html#CSharpToJavaScript_APIs_JS_URL_Hostname">Hostname</a> part of the worker's location.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -302,7 +308,7 @@ public class WorkerLocation</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>origin</code></strong> property of a <a class="xref" href="CSharpToJavaScript.APIs.JS.WorkerLocation.html">WorkerLocation</a> object returns the worker's <see cref="!:URLOrigin"></see>.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>origin</code></strong> property of a <a class="xref" href="CSharpToJavaScript.APIs.JS.WorkerLocation.html">WorkerLocation</a> object returns the worker's <a class="xref" href="CSharpToJavaScript.APIs.JS.URL.html#CSharpToJavaScript_APIs_JS_URL_Origin">Origin</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -339,7 +345,7 @@ public class WorkerLocation</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>pathname</code></strong> property of a <a class="xref" href="CSharpToJavaScript.APIs.JS.WorkerLocation.html">WorkerLocation</a> object returns the <see cref="!:URLPathname"></see> part of the worker's location.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>pathname</code></strong> property of a <a class="xref" href="CSharpToJavaScript.APIs.JS.WorkerLocation.html">WorkerLocation</a> object returns the <a class="xref" href="CSharpToJavaScript.APIs.JS.URL.html#CSharpToJavaScript_APIs_JS_URL_Pathname">Pathname</a> part of the worker's location.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -376,7 +382,7 @@ public class WorkerLocation</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>port</code></strong> property of a <a class="xref" href="CSharpToJavaScript.APIs.JS.WorkerLocation.html">WorkerLocation</a> object returns the <see cref="!:URLPort"></see> part of the worker's location.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>port</code></strong> property of a <a class="xref" href="CSharpToJavaScript.APIs.JS.WorkerLocation.html">WorkerLocation</a> object returns the <a class="xref" href="CSharpToJavaScript.APIs.JS.URL.html#CSharpToJavaScript_APIs_JS_URL_Port">Port</a> part of the worker's location.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -413,7 +419,7 @@ public class WorkerLocation</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>protocol</code></strong> property of a <a class="xref" href="CSharpToJavaScript.APIs.JS.WorkerLocation.html">WorkerLocation</a> object returns the <see cref="!:URLProtocol"></see> part of the worker's location.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>protocol</code></strong> property of a <a class="xref" href="CSharpToJavaScript.APIs.JS.WorkerLocation.html">WorkerLocation</a> object returns the <a class="xref" href="CSharpToJavaScript.APIs.JS.URL.html#CSharpToJavaScript_APIs_JS_URL_Protocol">Protocol</a> part of the worker's location.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -450,7 +456,7 @@ public class WorkerLocation</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>search</code></strong> property of a <a class="xref" href="CSharpToJavaScript.APIs.JS.WorkerLocation.html">WorkerLocation</a> object returns the <see cref="!:URLSearch"></see> part of the worker's location.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>search</code></strong> property of a <a class="xref" href="CSharpToJavaScript.APIs.JS.WorkerLocation.html">WorkerLocation</a> object returns the <a class="xref" href="CSharpToJavaScript.APIs.JS.URL.html#CSharpToJavaScript_APIs_JS_URL_Search">Search</a> part of the worker's location.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 

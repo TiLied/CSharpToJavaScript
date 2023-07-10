@@ -91,7 +91,8 @@
   <dl><dt>Assembly</dt><dd>CSharpToJavaScript.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>The <strong><code>ElementInternals</code></strong> interface of the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">Document Object Model</a> gives web developers a way to allow custom elements to fully participate in HTML forms. It provides utilities for working with these elements in the same way you would work with any standard HTML form element, and also exposes the <a href="https://wicg.github.io/aom/explainer.html">Accessibility Object Model</a> to the element.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -141,6 +142,10 @@ public class ElementInternals</code></pre>
 
 
 
+  <h2 id="CSharpToJavaScript_APIs_JS_ElementInternals_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>-<a href="https://web.dev/more-capable-form-controls/">More capable form controls</a><br>-<a href="https://css-tricks.com/creating-custom-form-controls-with-elementinternals/">Creating custom form controls with ElementInternals</a><br>-<a href="https://www.npmjs.com/package/element-internals-polyfill">ElementInternals polyfill</a><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals</a></p>
+</div>
 
 
   <h2 class="section" id="properties">Properties
@@ -357,7 +362,7 @@ public class ElementInternals</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_ElementInternals_WillValidate_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>Elements that are barred from being candidates for constraint validation include those that have the attributes: <code>disabled</code>, <code>hidden</code> or <code>readonly</code>, input elements of <code>type=button</code> or <code>type=reset</code>, or any element that is a {{htmlelement(&amp;quot;datalist&amp;quot;)}} element or has a <code>&amp;lt;datalist&amp;gt;</code> element ancestor.</p>
+  <div class="markdown level1 remarks"><p>Elements that are barred from being candidates for constraint validation include those that have the attributes: <code>disabled</code>, <code>hidden</code> or <code>readonly</code>, input elements of <code>type=button</code> or <code>type=reset</code>, or any element that is a <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist">datalist</a> element or has a <code>&amp;lt;datalist&amp;gt;</code> element ancestor.</p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/willValidate"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/willValidate</a></p>
 </div>
 
@@ -435,7 +440,7 @@ public class ElementInternals</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_ElementInternals_ReportValidity_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>If <code>reportValidity</code> returns <code>false</code> then a cancelable <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/invalid_event">invalid event</a> is fired on the element.</p><p>This method behaves in a similar way to <see cref="!:ElementInternalsCheckValidity"></see>, however it additionally sends the value of <see cref="!:ElementInternalsValidationMessage"></see> to the user agent for display.</p>
+  <div class="markdown level1 remarks"><p>If <code>reportValidity</code> returns <code>false</code> then a cancelable <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/invalid_event">invalid event</a> is fired on the element.</p><p>This method behaves in a similar way to <a class="xref" href="CSharpToJavaScript.APIs.JS.ElementInternals.html#CSharpToJavaScript_APIs_JS_ElementInternals_CheckValidity">CheckValidity()</a>, however it additionally sends the value of <a class="xref" href="CSharpToJavaScript.APIs.JS.ElementInternals.html#CSharpToJavaScript_APIs_JS_ElementInternals_ValidationMessage">ValidationMessage</a> to the user agent for display.</p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/reportValidity"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/reportValidity</a></p>
 </div>
 
@@ -513,7 +518,7 @@ public class ElementInternals</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None (<see cref="!:undefined"></see>).</p>
+    <dd><p>None (<see cref="!:Undefined"></see>).</p>
 </dd>
   </dl>
 

@@ -91,7 +91,8 @@
   <dl><dt>Assembly</dt><dd>CSharpToJavaScript.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>The <strong><code>CharacterData</code></strong> abstract interface represents a <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a> object that contains characters. This is an abstract interface, meaning there aren't any objects of type <code>CharacterData</code>: it is implemented by other interfaces like <a class="xref" href="CSharpToJavaScript.APIs.JS.Text.html">Text</a>, <a class="xref" href="CSharpToJavaScript.APIs.JS.Comment.html">Comment</a>, <a class="xref" href="CSharpToJavaScript.APIs.JS.CDATASection.html">CDATASection</a>, or <a class="xref" href="CSharpToJavaScript.APIs.JS.ProcessingInstruction.html">ProcessingInstruction</a>, which aren't abstract.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -320,6 +321,11 @@ public class CharacterData : Node, NonDocumentTypeChildNode, ChildNode</code></p
 
 
 
+  <h2 id="CSharpToJavaScript_APIs_JS_CharacterData_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p></p>
+<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM overview page</a>.<br>-The concrete interfaces implemented it: <a class="xref" href="CSharpToJavaScript.APIs.JS.Text.html">Text</a>, <a class="xref" href="CSharpToJavaScript.APIs.JS.CDATASection.html">CDATASection</a>, <a class="xref" href="CSharpToJavaScript.APIs.JS.ProcessingInstruction.html">ProcessingInstruction</a>, and <a class="xref" href="CSharpToJavaScript.APIs.JS.Comment.html">Comment</a>.<br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/CharacterData"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/CharacterData</a></p>
+</div>
 
 
   <h2 class="section" id="properties">Properties
@@ -356,7 +362,7 @@ public class CharacterData : Node, NonDocumentTypeChildNode, ChildNode</code></p
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_CharacterData_Data_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>-<see cref="!:CharacterDataLength"></see> returning the length of the data contained in the <a class="xref" href="CSharpToJavaScript.APIs.JS.CharacterData.html">CharacterData</a> node.<br></p>
+  <div class="markdown level1 remarks"><p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.CharacterData.html#CSharpToJavaScript_APIs_JS_CharacterData_Length">Length</a> returning the length of the data contained in the <a class="xref" href="CSharpToJavaScript.APIs.JS.CharacterData.html">CharacterData</a> node.<br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/CharacterData/data"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/CharacterData/data</a></p>
 </div>
 
@@ -385,7 +391,7 @@ public class CharacterData : Node, NonDocumentTypeChildNode, ChildNode</code></p
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
-    <dd><p>A positive integer with the length of the <see cref="!:CharacterDataData"></see> string.</p>
+    <dd><p>A positive integer with the length of the <a class="xref" href="CSharpToJavaScript.APIs.JS.CharacterData.html#CSharpToJavaScript_APIs_JS_CharacterData_Data">Data</a> string.</p>
 </dd>
   </dl>
 
@@ -438,7 +444,7 @@ public class CharacterData : Node, NonDocumentTypeChildNode, ChildNode</code></p
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_CharacterData_AppendData_System_String__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>-<see cref="!:CharacterDataDeleteData"></see>, <see cref="!:CharacterDataInsertData"></see>, <see cref="!:CharacterDataReplaceData"></see><br>-<see cref="!:CharacterDataData"></see><br></p>
+  <div class="markdown level1 remarks"><p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.CharacterData.html#CSharpToJavaScript_APIs_JS_CharacterData_DeleteData_System_UInt64_System_UInt64_">DeleteData(ulong, ulong)</a>, <a class="xref" href="CSharpToJavaScript.APIs.JS.CharacterData.html#CSharpToJavaScript_APIs_JS_CharacterData_InsertData_System_UInt64_System_String_">InsertData(ulong, string)</a>, <a class="xref" href="CSharpToJavaScript.APIs.JS.CharacterData.html#CSharpToJavaScript_APIs_JS_CharacterData_ReplaceData_System_UInt64_System_UInt64_System_String_">ReplaceData(ulong, ulong, string)</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.CharacterData.html#CSharpToJavaScript_APIs_JS_CharacterData_Data">Data</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/CharacterData/appendData"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/CharacterData/appendData</a></p>
 </div>
 
@@ -482,7 +488,7 @@ public class CharacterData : Node, NonDocumentTypeChildNode, ChildNode</code></p
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_CharacterData_DeleteData_System_UInt64_System_UInt64__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>-<see cref="!:CharacterDataAppendData"></see>, <see cref="!:CharacterDataInsertData"></see>, <see cref="!:CharacterDataReplaceData"></see><br>-<see cref="!:CharacterDataData"></see><br></p>
+  <div class="markdown level1 remarks"><p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.CharacterData.html#CSharpToJavaScript_APIs_JS_CharacterData_AppendData_System_String_">AppendData(string)</a>, <a class="xref" href="CSharpToJavaScript.APIs.JS.CharacterData.html#CSharpToJavaScript_APIs_JS_CharacterData_InsertData_System_UInt64_System_String_">InsertData(ulong, string)</a>, <a class="xref" href="CSharpToJavaScript.APIs.JS.CharacterData.html#CSharpToJavaScript_APIs_JS_CharacterData_ReplaceData_System_UInt64_System_UInt64_System_String_">ReplaceData(ulong, ulong, string)</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.CharacterData.html#CSharpToJavaScript_APIs_JS_CharacterData_Data">Data</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/CharacterData/deleteData"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/CharacterData/deleteData</a></p>
 </div>
 
@@ -526,7 +532,7 @@ public class CharacterData : Node, NonDocumentTypeChildNode, ChildNode</code></p
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_CharacterData_InsertData_System_UInt64_System_String__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>-<see cref="!:CharacterDataAppendData"></see>, <see cref="!:CharacterDataDeleteData"></see>, <see cref="!:CharacterDataReplaceData"></see><br>-<see cref="!:CharacterDataData"></see><br></p>
+  <div class="markdown level1 remarks"><p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.CharacterData.html#CSharpToJavaScript_APIs_JS_CharacterData_AppendData_System_String_">AppendData(string)</a>, <a class="xref" href="CSharpToJavaScript.APIs.JS.CharacterData.html#CSharpToJavaScript_APIs_JS_CharacterData_DeleteData_System_UInt64_System_UInt64_">DeleteData(ulong, ulong)</a>, <a class="xref" href="CSharpToJavaScript.APIs.JS.CharacterData.html#CSharpToJavaScript_APIs_JS_CharacterData_ReplaceData_System_UInt64_System_UInt64_System_String_">ReplaceData(ulong, ulong, string)</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.CharacterData.html#CSharpToJavaScript_APIs_JS_CharacterData_Data">Data</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/CharacterData/insertData"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/CharacterData/insertData</a></p>
 </div>
 
@@ -572,7 +578,7 @@ public class CharacterData : Node, NonDocumentTypeChildNode, ChildNode</code></p
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_CharacterData_ReplaceData_System_UInt64_System_UInt64_System_String__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>-<see cref="!:CharacterDataAppendData"></see><br>-<see cref="!:CharacterDataDeleteData"></see><br>-<see cref="!:CharacterDataInsertData"></see><br>-<see cref="!:CharacterDataData"></see><br></p>
+  <div class="markdown level1 remarks"><p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.CharacterData.html#CSharpToJavaScript_APIs_JS_CharacterData_AppendData_System_String_">AppendData(string)</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.CharacterData.html#CSharpToJavaScript_APIs_JS_CharacterData_DeleteData_System_UInt64_System_UInt64_">DeleteData(ulong, ulong)</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.CharacterData.html#CSharpToJavaScript_APIs_JS_CharacterData_InsertData_System_UInt64_System_String_">InsertData(ulong, string)</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.CharacterData.html#CSharpToJavaScript_APIs_JS_CharacterData_Data">Data</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/CharacterData/replaceData"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/CharacterData/replaceData</a></p>
 </div>
 

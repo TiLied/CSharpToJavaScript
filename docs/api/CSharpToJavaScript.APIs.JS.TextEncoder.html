@@ -91,7 +91,8 @@
   <dl><dt>Assembly</dt><dd>CSharpToJavaScript.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>The <strong><code>TextEncoder</code></strong> interface takes a stream of code points as input and emits a stream of UTF-8 bytes.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -141,6 +142,11 @@ public class TextEncoder</code></pre>
 
 
 
+  <h2 id="CSharpToJavaScript_APIs_JS_TextEncoder_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>AvailableInWorkers</p>
+<p>-The <a class="xref" href="CSharpToJavaScript.APIs.JS.TextDecoder.html">TextDecoder</a> interface describing the inverse operation.<br>-<a href="https://nodejs.org/api/util.html#util_class_util_textencoder">Node.js supports global export from v11.0.0</a><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/TextEncoder"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/TextEncoder</a></p>
+</div>
 
 
   <h2 class="section" id="constructors">Constructors
@@ -154,7 +160,7 @@ public class TextEncoder</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>TextEncoder</code></strong> interface takes a stream of code points as input and emits a stream of UTF-8 bytes.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>TextEncoder()</code></strong> constructor returns a newly created <a class="xref" href="CSharpToJavaScript.APIs.JS.TextEncoder.html">TextEncoder</a> object that will generate a byte stream with UTF-8 encoding.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -171,9 +177,8 @@ public class TextEncoder</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_TextEncoder__ctor_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>{{AvailableInWorkers}}</p>
-<p>-The <a class="xref" href="CSharpToJavaScript.APIs.JS.TextDecoder.html">TextDecoder</a> interface describing the inverse operation.<br>-<a href="https://nodejs.org/api/util.html#util_class_util_textencoder">Node.js supports global export from v11.0.0</a><br></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/TextEncoder"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/TextEncoder</a></p>
+  <div class="markdown level1 remarks"><p>-The <a class="xref" href="CSharpToJavaScript.APIs.JS.TextEncoder.html">TextEncoder</a> interface it belongs to.<br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/TextEncoder/TextEncoder"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/TextEncoder/TextEncoder</a></p>
 </div>
 
 
@@ -190,7 +195,8 @@ public class TextEncoder</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The <strong><code>TextEncoder.encode()</code></strong> method takes a string as input, and returns a {{jsxref(&quot;Global_Objects/Uint8Array&quot;, &quot;Uint8Array&quot;)}} containing the text given in parameters encoded with the specific method for that <a class="xref" href="CSharpToJavaScript.APIs.JS.TextEncoder.html">TextEncoder</a> object.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -207,7 +213,8 @@ public byte Encode(string input)</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
-    <dd></dd>
+    <dd><p>A <see cref="!:Uint8Array"></see> object.</p>
+</dd>
   </dl>
 
 
@@ -216,6 +223,10 @@ public byte Encode(string input)</code></pre>
 
 
 
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_TextEncoder_Encode_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>-The <a class="xref" href="CSharpToJavaScript.APIs.JS.TextEncoder.html">TextEncoder</a> interface it belongs to.<br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/TextEncoder/encode"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/TextEncoder/encode</a></p>
+</div>
 
 
 
@@ -227,7 +238,8 @@ public byte Encode(string input)</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The <strong><code>TextEncoder.encodeInto()</code></strong> method takes a<br>string to encode and a destination <see cref="!:Uint8Array"></see> to put resulting UTF-8 encoded text into, and returns a dictionary object indicating the<br>progress of the encoding.<br>This is potentially more performant than the older <code>encode()</code> method — especially when the target buffer is a view into a Wasm heap.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -246,7 +258,8 @@ public TextEncoderEncodeIntoResult EncodeInto(string source, byte destination)</
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.TextEncoderEncodeIntoResult.html">TextEncoderEncodeIntoResult</a></dt>
-    <dd></dd>
+    <dd><p>An object, which contains two members:</p>
+</dd>
   </dl>
 
 
@@ -255,6 +268,10 @@ public TextEncoderEncodeIntoResult EncodeInto(string source, byte destination)</
 
 
 
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_TextEncoder_EncodeInto_System_String_System_Byte__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>-The <a class="xref" href="CSharpToJavaScript.APIs.JS.TextEncoder.html">TextEncoder</a> interface it belongs to.<br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.TextEncoder.html#CSharpToJavaScript_APIs_JS_TextEncoder_Encode_System_String_">Encode(string)</a><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/TextEncoder/encodeInto"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/TextEncoder/encodeInto</a></p>
+</div>
 
 
 

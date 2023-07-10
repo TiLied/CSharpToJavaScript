@@ -484,8 +484,8 @@ public class HTMLLinkElement : HTMLElement, ParentNode, NonDocumentTypeChildNode
 
 
   <h2 id="CSharpToJavaScript_APIs_JS_HTMLLinkElement_remarks">Remarks</h2>
-  <div class="markdown level0 remarks"><p>{{InheritanceDiagram}}</p>
-<p>-The HTML element implementing this interface: {{HTMLElement(&amp;quot;link&amp;quot;)}}.<br></p>
+  <div class="markdown level0 remarks"><p></p>
+<p>-The HTML element implementing this interface: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link">link</a>.<br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLLinkElement"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/HTMLLinkElement</a></p>
 </div>
 
@@ -501,8 +501,7 @@ public class HTMLLinkElement : HTMLElement, ParentNode, NonDocumentTypeChildNode
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>HTMLLinkElement</code></strong> interface represents reference information for external resources and the relationship of those resources to a document and vice versa (corresponds to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link"><code>&amp;lt;link&amp;gt;</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link</a> element; not to be confused with <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a"><code>&amp;lt;a&amp;gt;</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a</a>, which is represented by <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAnchorElement"><code>HTMLAnchorElement</code>https://developer.mozilla.org/en-US/docs/Web/API/HTMLAnchorElement</a>). This object inherits all of the properties and methods of the <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLElement.html">HTMLElement</a> interface.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -517,11 +516,6 @@ public class HTMLLinkElement : HTMLElement, ParentNode, NonDocumentTypeChildNode
 
 
 
-  <h4 class="section" id="CSharpToJavaScript_APIs_JS_HTMLLinkElement__ctor_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>{{InheritanceDiagram}}</p>
-<p>-The HTML element implementing this interface: {{HTMLElement(&amp;quot;link&amp;quot;)}}.<br></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLLinkElement"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/HTMLLinkElement</a></p>
-</div>
 
 
 
@@ -537,7 +531,8 @@ public class HTMLLinkElement : HTMLElement, ParentNode, NonDocumentTypeChildNode
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The <strong><code>as</code></strong> property of the <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLLinkElement.html">HTMLLinkElement</a> interface returns a string representing the type of content to be preloaded by a link element.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -552,12 +547,17 @@ public string As { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>A string with the following allowed values: <code>&amp;quot;audio&amp;quot;</code>, <code>&amp;quot;document&amp;quot;</code>, <code>&amp;quot;embed&amp;quot;</code>, <code>&amp;quot;fetch&amp;quot;</code>, <code>&amp;quot;font&amp;quot;</code>, <code>&amp;quot;image&amp;quot;</code>, <code>&amp;quot;object&amp;quot;</code>, <code>&amp;quot;script&amp;quot;</code>, <code>&amp;quot;style&amp;quot;</code>, <code>&amp;quot;track&amp;quot;</code>, <code>&amp;quot;video&amp;quot;</code>, <code>&amp;quot;worker&amp;quot;</code>.</p>
+</dd>
   </dl>
 
 
 
 
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_HTMLLinkElement_As_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The <code>as</code> property must have a value for link elements when <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel/preload"><code>rel=&amp;quot;preload&amp;quot;</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel/preload</a>, or the resource will not be fetched.<br>It may also be applied to link elements where <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel/preload"><code>rel=&amp;quot;modulepreload&amp;quot;</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel/preload</a>, but if omitted, will default to <code>script</code>.<br>The property should not be set for other types of link elements, such as <code>rel=&amp;quot;prefetch&amp;quot;</code>.</p><p>This property reflects the value of the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link#as"><code>as</code> attribute</a> of the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link"><code>&amp;lt;link&amp;gt;</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link</a> HTML element.</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLLinkElement/as"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/HTMLLinkElement/as</a></p>
+</div>
 
 
 
@@ -888,7 +888,8 @@ public string Media { get; set; }</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The<br><strong><code>HTMLLinkElement.referrerPolicy</code></strong><br>property reflects the HTML <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link#referrerpolicy"><code>referrerpolicy</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link#referrerpolicy</a> attribute of the<br><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link">link</a> element defining which referrer is sent when fetching the<br>resource.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -903,12 +904,18 @@ public string ReferrerPolicy { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>A string; one of the following:</p>
+</dd>
   </dl>
 
 
 
 
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_HTMLLinkElement_ReferrerPolicy_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>See the HTTP <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy">Referrer-Policy</a> header for details.</p>
+<p>-HTTP header <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy">Referrer-Policy</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLAnchorElement.html#CSharpToJavaScript_APIs_JS_HTMLAnchorElement_ReferrerPolicy">ReferrerPolicy</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLAreaElement.html#CSharpToJavaScript_APIs_JS_HTMLAreaElement_ReferrerPolicy">ReferrerPolicy</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLIFrameElement.html#CSharpToJavaScript_APIs_JS_HTMLIFrameElement_ReferrerPolicy">ReferrerPolicy</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLImageElement.html#CSharpToJavaScript_APIs_JS_HTMLImageElement_ReferrerPolicy">ReferrerPolicy</a><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLLinkElement/referrerPolicy"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/HTMLLinkElement/referrerPolicy</a></p>
+</div>
 
 
 
@@ -920,7 +927,8 @@ public string ReferrerPolicy { get; set; }</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The <strong><code>HTMLLinkElement.rel</code></strong> property reflects the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel"><code>rel</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel</a> attribute. It is a string containing a space-separated list of link types indicating the relationship between the resource represented by the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link">link</a> element and the current document.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -935,12 +943,18 @@ public string Rel { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>A string.</p>
+</dd>
   </dl>
 
 
 
 
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_HTMLLinkElement_Rel_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The most common use of this attribute is to specify a link to an external style sheet:<br>the property is set to <code>stylesheet</code>, and the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link#href"><code>href</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link#href</a><br>attribute is set to the URL of an external style sheet to format the page.</p>
+<p>-The equivalent property on <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a">a</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area">area</a>,<br><a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLAnchorElement.html#CSharpToJavaScript_APIs_JS_HTMLAnchorElement_Rel">Rel</a> and <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLAreaElement.html#CSharpToJavaScript_APIs_JS_HTMLAreaElement_Rel">Rel</a>.<br>-The very same list but as tokens: <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLLinkElement.html#CSharpToJavaScript_APIs_JS_HTMLLinkElement_RelList">RelList</a><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLLinkElement/rel"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/HTMLLinkElement/rel</a></p>
+</div>
 
 
 
@@ -952,7 +966,8 @@ public string Rel { get; set; }</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The <strong><code>HTMLLinkElement.relList</code></strong> read-only property reflects the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel"><code>rel</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel</a> attribute. It is a live <a class="xref" href="CSharpToJavaScript.APIs.JS.DOMTokenList.html">DOMTokenList</a> containing the set of link types indicating the relationship between the resource represented by the {{HTMLElement(&quot;link&quot;)}} element and the current document.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -967,12 +982,18 @@ public DOMTokenList RelList { get; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.DOMTokenList.html">DOMTokenList</a></dt>
-    <dd></dd>
+    <dd><p>A live <a class="xref" href="CSharpToJavaScript.APIs.JS.DOMTokenList.html">DOMTokenList</a> of strings.</p>
+</dd>
   </dl>
 
 
 
 
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_HTMLLinkElement_RelList_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The property itself is read-only, meaning you can not substitute the<br><a class="xref" href="CSharpToJavaScript.APIs.JS.DOMTokenList.html">DOMTokenList</a> by another one, but the content of the returned list can be<br>changed.</p>
+<p>-The equivalent property on <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a">a</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area">area</a>,<br><a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLAnchorElement.html#CSharpToJavaScript_APIs_JS_HTMLAnchorElement_RelList">RelList</a> and <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLAreaElement.html#CSharpToJavaScript_APIs_JS_HTMLAreaElement_RelList">RelList</a>.<br>-The very same list but as a space-separated tokens in a string:<br><a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLLinkElement.html#CSharpToJavaScript_APIs_JS_HTMLLinkElement_Rel">Rel</a><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLLinkElement/relList"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/HTMLLinkElement/relList</a></p>
+</div>
 
 
 

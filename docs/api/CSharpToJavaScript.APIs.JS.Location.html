@@ -91,7 +91,8 @@
   <dl><dt>Assembly</dt><dd>CSharpToJavaScript.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>The <strong><code>Location</code></strong> interface represents the location (URL) of the object it is linked to. Changes done on it are reflected on the object it relates to. Both the <a class="xref" href="CSharpToJavaScript.APIs.JS.Document.html">Document</a> and <a class="xref" href="CSharpToJavaScript.APIs.JS.Window.html">Window</a> interface have such a linked <code>Location</code>, accessible via <a class="xref" href="CSharpToJavaScript.APIs.JS.Document.html#CSharpToJavaScript_APIs_JS_Document_Location">Location</a> and <a class="xref" href="CSharpToJavaScript.APIs.JS.Window.html#CSharpToJavaScript_APIs_JS_Window_Location">Location</a> respectively.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -141,6 +142,10 @@ public class Location</code></pre>
 
 
 
+  <h2 id="CSharpToJavaScript_APIs_JS_Location_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>-Two <code>Location</code> properties: <a class="xref" href="CSharpToJavaScript.APIs.JS.Window.html#CSharpToJavaScript_APIs_JS_Window_Location">Location</a> and <a class="xref" href="CSharpToJavaScript.APIs.JS.Document.html#CSharpToJavaScript_APIs_JS_Document_Location">Location</a>.<br>-URL manipulation interfaces: <a class="xref" href="CSharpToJavaScript.APIs.JS.URL.html">URL</a> and <a class="xref" href="CSharpToJavaScript.APIs.JS.URLSearchParams.html">URLSearchParams</a>.<br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Location"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Location</a></p>
+</div>
 
 
   <h2 class="section" id="properties">Properties
@@ -300,7 +305,7 @@ public class Location</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>href</code></strong> property of the <a class="xref" href="CSharpToJavaScript.APIs.JS.Location.html">Location</a><br>interface is a {{Glossary(&amp;quot;stringifier&amp;quot;)}} that returns a string containing the whole<br>URL, and allows the href to be updated.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>href</code></strong> property of the <a class="xref" href="CSharpToJavaScript.APIs.JS.Location.html">Location</a><br>interface is a <a href="https://developer.mozilla.org/en-US/docs/Glossary/stringifier">stringifier</a> that returns a string containing the whole<br>URL, and allows the href to be updated.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -360,7 +365,7 @@ public class Location</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Location_Origin_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>That is:</p><p>{{AvailableInWorkers}}</p>
+  <div class="markdown level1 remarks"><p>That is:</p><p>AvailableInWorkers</p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Location/origin"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Location/origin</a></p>
 </div>
 
@@ -540,7 +545,7 @@ public class Location</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None (<see cref="!:undefined"></see>).</p>
+    <dd><p>None (<see cref="!:Undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -552,7 +557,7 @@ public class Location</code></pre>
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Location_Assign_System_String__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>If the assignment can&amp;apos;t happen because of a security violation, a<br><a class="xref" href="CSharpToJavaScript.APIs.JS.DOMException.html">DOMException</a> of the <code>SECURITY_ERROR</code> type is thrown. This<br>happens if the origin of the script calling the method is different from the origin of<br>the page originally described by the <a class="xref" href="CSharpToJavaScript.APIs.JS.Location.html">Location</a> object, mostly when the<br>script is hosted on a different domain.</p><p>If the provided URL is not valid, a <a class="xref" href="CSharpToJavaScript.APIs.JS.DOMException.html">DOMException</a> of the<br><code>SYNTAX_ERROR</code> type is thrown.</p>
-<p>-The <a class="xref" href="CSharpToJavaScript.APIs.JS.Location.html">Location</a> interface it belongs to.<br>-Similar methods: <see cref="!:LocationReplace"></see> and<br><see cref="!:LocationReload"></see>.<br></p>
+<p>-The <a class="xref" href="CSharpToJavaScript.APIs.JS.Location.html">Location</a> interface it belongs to.<br>-Similar methods: <a class="xref" href="CSharpToJavaScript.APIs.JS.Location.html#CSharpToJavaScript_APIs_JS_Location_Replace_System_String_">Replace(string)</a> and<br><a class="xref" href="CSharpToJavaScript.APIs.JS.Location.html#CSharpToJavaScript_APIs_JS_Location_Reload">Reload()</a>.<br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Location/assign"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Location/assign</a></p>
 </div>
 
@@ -578,7 +583,7 @@ public class Location</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None (<see cref="!:undefined"></see>).</p>
+    <dd><p>None (<see cref="!:Undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -589,8 +594,8 @@ public class Location</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Location_Reload_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>The reload may be blocked and a <code>SECURITY_ERROR</code> <a class="xref" href="CSharpToJavaScript.APIs.JS.DOMException.html">DOMException</a><br>thrown. This happens if the {{Glossary(&amp;quot;origin&amp;quot;)}} of the script calling<br><code>location.reload()</code> differs from the origin of the page that owns the<br><a class="xref" href="CSharpToJavaScript.APIs.JS.Location.html">Location</a> object. See <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy">Same-origin policy</a> for more<br>information.</p>
-<p>-The <a class="xref" href="CSharpToJavaScript.APIs.JS.Location.html">Location</a> interface it belongs to.<br>-Similar methods: <see cref="!:LocationAssign"></see> and<br><see cref="!:LocationReplace"></see>.<br></p>
+  <div class="markdown level1 remarks"><p>The reload may be blocked and a <code>SECURITY_ERROR</code> <a class="xref" href="CSharpToJavaScript.APIs.JS.DOMException.html">DOMException</a><br>thrown. This happens if the <a href="https://developer.mozilla.org/en-US/docs/Glossary/origin">origin</a> of the script calling<br><code>location.reload()</code> differs from the origin of the page that owns the<br><a class="xref" href="CSharpToJavaScript.APIs.JS.Location.html">Location</a> object. See <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy">Same-origin policy</a> for more<br>information.</p>
+<p>-The <a class="xref" href="CSharpToJavaScript.APIs.JS.Location.html">Location</a> interface it belongs to.<br>-Similar methods: <a class="xref" href="CSharpToJavaScript.APIs.JS.Location.html#CSharpToJavaScript_APIs_JS_Location_Assign_System_String_">Assign(string)</a> and<br><a class="xref" href="CSharpToJavaScript.APIs.JS.Location.html#CSharpToJavaScript_APIs_JS_Location_Replace_System_String_">Replace(string)</a>.<br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Location/reload"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Location/reload</a></p>
 </div>
 
@@ -604,7 +609,7 @@ public class Location</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>replace()</code></strong> method of the <a class="xref" href="CSharpToJavaScript.APIs.JS.Location.html">Location</a><br>interface replaces the current resource with the one at the provided URL. The difference<br>from the <see cref="!:LocationAssign"></see> method is that after using<br><code>replace()</code> the current page will not be saved in session<br><a class="xref" href="CSharpToJavaScript.APIs.JS.History.html">History</a>, meaning the user won't be able to use the <strong>back</strong> button<br>to navigate to it.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>replace()</code></strong> method of the <a class="xref" href="CSharpToJavaScript.APIs.JS.Location.html">Location</a><br>interface replaces the current resource with the one at the provided URL. The difference<br>from the <a class="xref" href="CSharpToJavaScript.APIs.JS.Location.html#CSharpToJavaScript_APIs_JS_Location_Assign_System_String_">Assign(string)</a> method is that after using<br><code>replace()</code> the current page will not be saved in session<br><a class="xref" href="CSharpToJavaScript.APIs.JS.History.html">History</a>, meaning the user won't be able to use the <strong>back</strong> button<br>to navigate to it.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -621,7 +626,7 @@ public class Location</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None (<see cref="!:undefined"></see>).</p>
+    <dd><p>None (<see cref="!:Undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -633,7 +638,7 @@ public class Location</code></pre>
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Location_Replace_System_String__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>If the assignment can&amp;apos;t happen because of a security violation, a<br><a class="xref" href="CSharpToJavaScript.APIs.JS.DOMException.html">DOMException</a> of the <code>SECURITY_ERROR</code> type is thrown. This<br>happens if the origin of the script calling the method is different from the origin of<br>the page originally described by the <a class="xref" href="CSharpToJavaScript.APIs.JS.Location.html">Location</a> object, mostly when the<br>script is hosted on a different domain.</p><p>If the provided URL is not valid, a <a class="xref" href="CSharpToJavaScript.APIs.JS.DOMException.html">DOMException</a> of the<br><code>SYNTAX_ERROR</code> type is thrown.</p>
-<p>-The <a class="xref" href="CSharpToJavaScript.APIs.JS.Location.html">Location</a> interface it belongs to.<br>-Similar methods: <see cref="!:LocationAssign"></see> and<br><see cref="!:LocationReload"></see>.<br></p>
+<p>-The <a class="xref" href="CSharpToJavaScript.APIs.JS.Location.html">Location</a> interface it belongs to.<br>-Similar methods: <a class="xref" href="CSharpToJavaScript.APIs.JS.Location.html#CSharpToJavaScript_APIs_JS_Location_Assign_System_String_">Assign(string)</a> and<br><a class="xref" href="CSharpToJavaScript.APIs.JS.Location.html#CSharpToJavaScript_APIs_JS_Location_Reload">Reload()</a>.<br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Location/replace"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Location/replace</a></p>
 </div>
 

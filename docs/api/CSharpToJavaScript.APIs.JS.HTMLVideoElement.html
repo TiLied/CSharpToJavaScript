@@ -91,7 +91,8 @@
   <dl><dt>Assembly</dt><dd>CSharpToJavaScript.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>The list of <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats">supported media formats</a> varies from one browser to the other. You should either provide your video in a single format that all the relevant browsers supports, or provide multiple video sources in enough different formats that all the browsers you need to support are covered.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -618,6 +619,11 @@ public class HTMLVideoElement : HTMLMediaElement, ParentNode, NonDocumentTypeChi
 
 
 
+  <h2 id="CSharpToJavaScript_APIs_JS_HTMLVideoElement_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p></p>
+<p>-HTML element implementing this interface: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">video</a>.<br>-<a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats">Supported media formats</a><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement</a></p>
+</div>
 
 
   <h2 class="section" id="constructors">Constructors
@@ -631,8 +637,7 @@ public class HTMLVideoElement : HTMLMediaElement, ParentNode, NonDocumentTypeChi
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The list of <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats">supported media formats</a> varies from one browser to the other. You should either provide your video in a single format that all the relevant browsers supports, or provide multiple video sources in enough different formats that all the browsers you need to support are covered.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -647,11 +652,6 @@ public class HTMLVideoElement : HTMLMediaElement, ParentNode, NonDocumentTypeChi
 
 
 
-  <h4 class="section" id="CSharpToJavaScript_APIs_JS_HTMLVideoElement__ctor_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>{{InheritanceDiagram}}</p>
-<p>-HTML element implementing this interface: {{HTMLElement(&amp;quot;video&amp;quot;)}}.<br>-<a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats">Supported media formats</a><br></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement</a></p>
-</div>
 
 
 
@@ -763,7 +763,8 @@ public string Poster { get; set; }</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLVideoElement.html">HTMLVideoElement</a> interface's read-only <strong><code>videoHeight</code></strong> property indicates the <a href="https://developer.mozilla.org#about_intrinsic_width_and_height">intrinsic height</a> of the video, expressed in CSS pixels.<br>In simple terms, this is the height of the media in its natural size.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -778,12 +779,16 @@ public ulong VideoHeight { get; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
-    <dd></dd>
+    <dd><p>An integer value specifying the intrinsic height of the video in CSS pixels.<br>If the element's <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLMediaElement.html#CSharpToJavaScript_APIs_JS_HTMLMediaElement_ReadyState">ReadyState</a> is <code>HTMLMediaElement.HAVE_NOTHING</code>, then the value of this property is 0, because neither video nor poster frame size information is yet available.</p>
+</dd>
   </dl>
 
 
 
 
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_HTMLVideoElement_VideoHeight_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement/videoHeight"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement/videoHeight</a></p>
+</div>
 
 
 
@@ -795,7 +800,8 @@ public ulong VideoHeight { get; }</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLVideoElement.html">HTMLVideoElement</a> interface's read-only <strong><code>videoWidth</code></strong> property indicates the <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement/videoHeight#about_intrinsic_width_and_height">intrinsic width</a> of the video, expressed in CSS pixels.<br>In simple terms, this is the width of the media in its natural size.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -810,12 +816,17 @@ public ulong VideoWidth { get; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
-    <dd></dd>
+    <dd><p>An integer value specifying the intrinsic width of the video in CSS pixels.<br>If the element's <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLMediaElement.html#CSharpToJavaScript_APIs_JS_HTMLMediaElement_ReadyState">ReadyState</a> is <code>HTMLMediaElement.HAVE_NOTHING</code>, then the value of this property is 0, because neither video nor poster frame size information is yet available.</p>
+</dd>
   </dl>
 
 
 
 
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_HTMLVideoElement_VideoWidth_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>See <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement/videoHeight#about_intrinsic_width_and_height"><code>HTMLVideoElement.videoHeight</code> &amp;gt; About intrinsic width and height</a> for more details.</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement/videoWidth"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement/videoWidth</a></p>
+</div>
 
 
 

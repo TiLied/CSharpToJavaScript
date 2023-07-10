@@ -91,7 +91,8 @@
   <dl><dt>Assembly</dt><dd>CSharpToJavaScript.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>The <strong><code>TrackEvent</code></strong> interface, which is part of the HTML DOM specification, is used for events which represent changes to a set of available tracks on an HTML media element; these events are <code>addtrack</code> and <code>removetrack</code>.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -208,6 +209,10 @@ public class TrackEvent : Event</code></pre>
 
 
 
+  <h2 id="CSharpToJavaScript_APIs_JS_TrackEvent_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>It&amp;apos;s important not to confuse <code>TrackEvent</code> with the <see cref="!:RTCTrackEvent"></see> interface, which is used for tracks which are part of an <see cref="!:RTCPeerConnection"></see>.</p><p>Events based on <code>TrackEvent</code> are always sent to one of the media track list types:</p><p></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/TrackEvent"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/TrackEvent</a></p>
+</div>
 
 
   <h2 class="section" id="constructors">Constructors
@@ -221,7 +226,7 @@ public class TrackEvent : Event</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>TrackEvent</code></strong> interface, which is part of the HTML DOM specification, is used for events which represent changes to a set of available tracks on an HTML media element; these events are <code>addtrack</code> and <code>removetrack</code>.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>TrackEvent()</code></strong> constructor<br>creates and returns a new <a class="xref" href="CSharpToJavaScript.APIs.JS.TrackEvent.html">TrackEvent</a> object describing an event which<br>occurred on a list of tracks (<a class="xref" href="CSharpToJavaScript.APIs.JS.AudioTrackList.html">AudioTrackList</a>,<br><a class="xref" href="CSharpToJavaScript.APIs.JS.VideoTrackList.html">VideoTrackList</a>, or <a class="xref" href="CSharpToJavaScript.APIs.JS.TextTrackList.html">TextTrackList</a>).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -245,8 +250,7 @@ public class TrackEvent : Event</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_TrackEvent__ctor_System_String_CSharpToJavaScript_APIs_JS_TrackEventInit__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>It&amp;apos;s important not to confuse <code>TrackEvent</code> with the <see cref="!:RTCTrackEvent"></see> interface, which is used for tracks which are part of an <see cref="!:RTCPeerConnection"></see>.</p><p>Events based on <code>TrackEvent</code> are always sent to one of the media track list types:</p><p>{{InheritanceDiagram}}</p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/TrackEvent"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/TrackEvent</a></p>
+  <div class="markdown level1 remarks"><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/TrackEvent/TrackEvent"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/TrackEvent/TrackEvent</a></p>
 </div>
 
 

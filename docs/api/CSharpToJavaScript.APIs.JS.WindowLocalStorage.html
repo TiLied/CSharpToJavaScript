@@ -91,7 +91,8 @@
   <dl><dt>Assembly</dt><dd>CSharpToJavaScript.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>The <strong><code>localStorage</code></strong> read-only property of the <a class="xref" href="CSharpToJavaScript.APIs.JS.Window.html">Window</a> interface allows you to access a <a class="xref" href="CSharpToJavaScript.APIs.JS.Storage.html">Storage</a> object for the <a class="xref" href="CSharpToJavaScript.APIs.JS.Document.html">Document</a>'s {{glossary(&quot;origin&quot;)}}; the stored data is saved across browser sessions.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -109,6 +110,11 @@ public interface WindowLocalStorage</code></pre>
 
 
 
+  <h2 id="CSharpToJavaScript_APIs_JS_WindowLocalStorage_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p><code>localStorage</code> is similar to <see cref="!:Window.SessionStorage"></see>, except that while <code>localStorage</code> data has no expiration time, <code>sessionStorage</code> data gets cleared when the page session ends — that is, when the page is closed. (<code>localStorage</code> data for a document loaded in a &amp;quot;private browsing&amp;quot; or &amp;quot;incognito&amp;quot; session is cleared when the last &amp;quot;private&amp;quot; tab is closed.)</p>
+<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Using the Web Storage API</a><br>-<see cref="!:Window.SessionStorage"></see><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage</a></p>
+</div>
 
 
   <h2 class="section" id="properties">Properties

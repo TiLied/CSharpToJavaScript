@@ -91,7 +91,8 @@
   <dl><dt>Assembly</dt><dd>CSharpToJavaScript.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>The <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">DOM</a> <strong><code>StaticRange</code></strong> interface extends <a class="xref" href="CSharpToJavaScript.APIs.JS.AbstractRange.html">AbstractRange</a> to provide a method to specify a range of content in the DOM whose contents don't update to reflect changes which occur within the DOM tree.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -157,6 +158,11 @@ public class StaticRange : AbstractRange</code></pre>
 
 
 
+  <h2 id="CSharpToJavaScript_APIs_JS_StaticRange_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>This interface offers the same set of properties and methods as <code>AbstractRange</code>.</p><p><code>AbstractRange</code> and <code>StaticRange</code> are not available from <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">web workers</a>.</p><p></p>
+<p>-Live updating range of content within the DOM: <a class="xref" href="CSharpToJavaScript.APIs.JS.Range.html">Range</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.AbstractRange.html">AbstractRange</a>, the abstract interface from which all ranges are derived<br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/StaticRange"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/StaticRange</a></p>
+</div>
 
 
   <h2 class="section" id="constructors">Constructors
@@ -170,7 +176,7 @@ public class StaticRange : AbstractRange</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">DOM</a> <strong><code>StaticRange</code></strong> interface extends <a class="xref" href="CSharpToJavaScript.APIs.JS.AbstractRange.html">AbstractRange</a> to provide a method to specify a range of content in the DOM whose contents don't update to reflect changes which occur within the DOM tree.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>StaticRange()</code></strong> constructor<br>creates a new <a class="xref" href="CSharpToJavaScript.APIs.JS.StaticRange.html">StaticRange</a> object representing a span of content within<br>the DOM.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -192,9 +198,8 @@ public class StaticRange : AbstractRange</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_StaticRange__ctor_CSharpToJavaScript_APIs_JS_StaticRangeInit__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This interface offers the same set of properties and methods as <code>AbstractRange</code>.</p><p><code>AbstractRange</code> and <code>StaticRange</code> are not available from <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">web workers</a>.</p><p>{{InheritanceDiagram}}</p>
-<p>-Live updating range of content within the DOM: <a class="xref" href="CSharpToJavaScript.APIs.JS.Range.html">Range</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.AbstractRange.html">AbstractRange</a>, the abstract interface from which all ranges are derived<br></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/StaticRange"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/StaticRange</a></p>
+  <div class="markdown level1 remarks"><p>This constructor includes properties identifying the standard and end positions of<br>the range as well as a Boolean indicating whether or not the range is<br><strong>collapsed</strong> (that is, empty).</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/StaticRange/StaticRange"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/StaticRange/StaticRange</a></p>
 </div>
 
 

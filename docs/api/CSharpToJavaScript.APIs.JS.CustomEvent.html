@@ -91,7 +91,8 @@
   <dl><dt>Assembly</dt><dd>CSharpToJavaScript.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>The <strong><code>CustomEvent</code></strong> interface represents events initialized by an application for any purpose.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -208,6 +209,11 @@ public class CustomEvent : Event</code></pre>
 
 
 
+  <h2 id="CSharpToJavaScript_APIs_JS_CustomEvent_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>AvailableInWorkers</p><p></p>
+<p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.Window.html#CSharpToJavaScript_APIs_JS_Window_PostMessage_System_Object_System_String_System_Collections_Generic_List_System_Object__">PostMessage(dynamic, string, List&lt;object&gt;)</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/Events/Creating_and_triggering_events">Creating and triggering events</a><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent</a></p>
+</div>
 
 
   <h2 class="section" id="constructors">Constructors
@@ -221,7 +227,7 @@ public class CustomEvent : Event</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>CustomEvent</code></strong> interface represents events initialized by an application for any purpose.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>CustomEvent()</code></strong> constructor creates a new <a class="xref" href="CSharpToJavaScript.APIs.JS.CustomEvent.html">CustomEvent</a> object.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -245,9 +251,8 @@ public class CustomEvent : Event</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_CustomEvent__ctor_System_String_CSharpToJavaScript_APIs_JS_CustomEventInit__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>{{AvailableInWorkers}}</p><p>{{InheritanceDiagram}}</p>
-<p>-<see cref="!:WindowPostMessage"></see><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/Events/Creating_and_triggering_events">Creating and triggering events</a><br></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent</a></p>
+  <div class="markdown level1 remarks"><p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.CustomEvent.html">CustomEvent</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/Events/Creating_and_triggering_events">Creating and triggering events</a><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/CustomEvent"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/CustomEvent</a></p>
 </div>
 
 
@@ -305,7 +310,7 @@ public class CustomEvent : Event</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>CustomEvent.initCustomEvent()</code></strong> method initializes a <a class="xref" href="CSharpToJavaScript.APIs.JS.CustomEvent.html">CustomEvent</a> object.<br>If the event has already been dispatched, this method does nothing.</p>
+  <div class="markdown level1 summary"><div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><code>CustomEvent.initCustomEvent()</code></strong> method initializes a <a class="xref" href="CSharpToJavaScript.APIs.JS.CustomEvent.html">CustomEvent</a> object.<br>If the event has already been dispatched, this method does nothing.
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -338,8 +343,8 @@ public class CustomEvent : Event</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_CustomEvent_InitCustomEvent_System_String_System_Boolean_System_Boolean_System_Object__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>Events initialized in this way must have been created with the <see cref="!:DocumentCreateEvent"></see> method.<br>This method must be called to set the event before it is dispatched using {{ domxref(&amp;quot;EventTarget.dispatchEvent()&amp;quot;) }}.<br>Once dispatched, it doesn&amp;apos;t do anything anymore.</p><blockquote><p><strong>Note:</strong> <strong>Do not use this method anymore, as it is deprecated.</strong></p><p>Rather than using the feature, instead use specific event constructors, like <see cref="!:CustomEventCustomEvent"></see>.<br>The page on <a href="https://developer.mozilla.org/en-US/docs/Web/Events/Creating_and_triggering_events">Creating and triggering events</a> gives more information about the way to use those.</p></blockquote>
-<p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.CustomEvent.html">CustomEvent</a><br>-The constructor to use instead of this deprecated method: <see cref="!:CustomEventCustomEvent"></see>.<br></p>
+  <div class="markdown level1 remarks"><p>Events initialized in this way must have been created with the <see cref="!:Document.CreateEvent"></see> method.<br>This method must be called to set the event before it is dispatched using <a class="xref" href="CSharpToJavaScript.APIs.JS.EventTarget.html#CSharpToJavaScript_APIs_JS_EventTarget_DispatchEvent_CSharpToJavaScript_APIs_JS_Event_">DispatchEvent(Event)</a>.<br>Once dispatched, it doesn&amp;apos;t do anything anymore.</p><blockquote class="NOTE"><h5>NOTE</h5><p><strong>Note:</strong> <strong>Do not use this method anymore, as it is deprecated.</strong></p><p>Rather than using the feature, instead use specific event constructors, like <a class="xref" href="CSharpToJavaScript.APIs.JS.CustomEvent.html#CSharpToJavaScript_APIs_JS_CustomEvent__ctor_System_String_CSharpToJavaScript_APIs_JS_CustomEventInit_">CustomEvent(string, CustomEventInit)</a>.<br>The page on <a href="https://developer.mozilla.org/en-US/docs/Web/Events/Creating_and_triggering_events">Creating and triggering events</a> gives more information about the way to use those.</p></blockquote>
+<p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.CustomEvent.html">CustomEvent</a><br>-The constructor to use instead of this deprecated method: <a class="xref" href="CSharpToJavaScript.APIs.JS.CustomEvent.html#CSharpToJavaScript_APIs_JS_CustomEvent__ctor_System_String_CSharpToJavaScript_APIs_JS_CustomEventInit_">CustomEvent(string, CustomEventInit)</a>.<br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/initCustomEvent"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/initCustomEvent</a></p>
 </div>
 

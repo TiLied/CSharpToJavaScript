@@ -91,7 +91,8 @@
   <dl><dt>Assembly</dt><dd>CSharpToJavaScript.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p><strong><code>PopStateEvent</code></strong> is an interface for the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/popstate_event"><code>popstate</code>https://developer.mozilla.org/en-US/docs/Web/API/Window/popstate_event</a> event.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -208,6 +209,11 @@ public class PopStateEvent : Event</code></pre>
 
 
 
+  <h2 id="CSharpToJavaScript_APIs_JS_PopStateEvent_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>A <code>popstate</code> event is dispatched to the window every time the active history<br>entry changes between two history entries for the same document. If the history entry<br>being activated was created by a call to <code>history.pushState()</code> or was<br>affected by a call to <code>history.replaceState()</code>, the <code>popstate</code><br>event&amp;apos;s <code>state</code> property contains a copy of the history entry&amp;apos;s state object.</p><p></p>
+<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/popstate_event"><code>popstate</code>https://developer.mozilla.org/en-US/docs/Web/API/Window/popstate_event</a> event<br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/hashchange_event"><code>hashchange</code>https://developer.mozilla.org/en-US/docs/Web/API/Window/hashchange_event</a> event<br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/PopStateEvent"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/PopStateEvent</a></p>
+</div>
 
 
   <h2 class="section" id="constructors">Constructors
@@ -221,7 +227,7 @@ public class PopStateEvent : Event</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p><strong><code>PopStateEvent</code></strong> is an interface for the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/popstate_event"><code>popstate</code>https://developer.mozilla.org/en-US/docs/Web/API/Window/popstate_event</a> event.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>PopStateEvent()</code></strong> constructor creates a new <a class="xref" href="CSharpToJavaScript.APIs.JS.PopStateEvent.html">PopStateEvent</a> object.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -245,9 +251,9 @@ public class PopStateEvent : Event</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_PopStateEvent__ctor_System_String_CSharpToJavaScript_APIs_JS_PopStateEventInit__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>A <code>popstate</code> event is dispatched to the window every time the active history<br>entry changes between two history entries for the same document. If the history entry<br>being activated was created by a call to <code>history.pushState()</code> or was<br>affected by a call to <code>history.replaceState()</code>, the <code>popstate</code><br>event&amp;apos;s <code>state</code> property contains a copy of the history entry&amp;apos;s state object.</p><p>{{InheritanceDiagram}}</p>
-<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/popstate_event"><code>popstate</code>https://developer.mozilla.org/en-US/docs/Web/API/Window/popstate_event</a> event<br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/hashchange_event"><code>hashchange</code>https://developer.mozilla.org/en-US/docs/Web/API/Window/hashchange_event</a> event<br></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/PopStateEvent"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/PopStateEvent</a></p>
+  <div class="markdown level1 remarks"><blockquote class="NOTE"><h5>NOTE</h5><p><strong>Note:</strong> A web developer doesn't typically need to call this constructor, as the browser creates these objects itself when firing <see cref="!:Window/popstate_event"></see> events.</p></blockquote>
+<p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.History.html#CSharpToJavaScript_APIs_JS_History_PushState_System_Object_System_String_System_String_">PushState(dynamic, string, string?)</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.History.html#CSharpToJavaScript_APIs_JS_History_ReplaceState_System_Object_System_String_System_String_">ReplaceState(dynamic, string, string?)</a><br>-<see cref="!:Window/popstate_event"></see> event<br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/PopStateEvent/PopStateEvent"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/PopStateEvent/PopStateEvent</a></p>
 </div>
 
 
@@ -287,8 +293,8 @@ public class PopStateEvent : Event</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_PopStateEvent_State_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>Practically it is a value provided by the call to <see cref="!:historyPushState"></see> or <see cref="!:historyReplaceState"></see></p>
-<p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.PopStateEvent.html">PopStateEvent</a> constructor<br>-<see cref="!:HistoryState"></see><br></p>
+  <div class="markdown level1 remarks"><p>Practically it is a value provided by the call to <a class="xref" href="CSharpToJavaScript.APIs.JS.History.html#CSharpToJavaScript_APIs_JS_History_PushState_System_Object_System_String_System_String_">PushState(dynamic, string, string?)</a> or <a class="xref" href="CSharpToJavaScript.APIs.JS.History.html#CSharpToJavaScript_APIs_JS_History_ReplaceState_System_Object_System_String_System_String_">ReplaceState(dynamic, string, string?)</a></p>
+<p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.PopStateEvent.html">PopStateEvent</a> constructor<br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.History.html#CSharpToJavaScript_APIs_JS_History_State">State</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/PopStateEvent/state"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/PopStateEvent/state</a></p>
 </div>
 

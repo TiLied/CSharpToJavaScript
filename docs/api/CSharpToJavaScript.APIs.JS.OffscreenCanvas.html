@@ -91,7 +91,8 @@
   <dl><dt>Assembly</dt><dd>CSharpToJavaScript.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>The <strong><code>OffscreenCanvas</code></strong> interface provides a canvas that can be rendered off screen, decoupling the DOM and the Canvas API so that the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas">canvas</a> element is no longer entirely dependent on the DOM.<br>Rendering operations can also be run inside a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">worker</a> context, allowing you to run some tasks in a separate thread and avoid heavy work on the main thread.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -163,6 +164,11 @@ public class OffscreenCanvas : EventTarget</code></pre>
 
 
 
+  <h2 id="CSharpToJavaScript_APIs_JS_OffscreenCanvas_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p><code>OffscreenCanvas</code> is a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Transferable_objects">transferable object</a>.</p><p>AvailableInWorkers</p><p></p>
+<p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.CanvasRenderingContext2D.html">CanvasRenderingContext2D</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.OffscreenCanvasRenderingContext2D.html">OffscreenCanvasRenderingContext2D</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.ImageBitmap.html">ImageBitmap</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.ImageBitmapRenderingContext.html">ImageBitmapRenderingContext</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLCanvasElement.html#CSharpToJavaScript_APIs_JS_HTMLCanvasElement_TransferControlToOffscreen">TransferControlToOffscreen()</a><br>-<see cref="!:Window.RequestAnimationFrame"></see><br>-<a href="https://hacks.mozilla.org/2016/01/webgl-off-the-main-thread/">WebGL Off the Main Thread – Mozilla Hacks</a> (2016)<br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas</a></p>
+</div>
 
 
   <h2 class="section" id="constructors">Constructors
@@ -176,7 +182,7 @@ public class OffscreenCanvas : EventTarget</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>OffscreenCanvas</code></strong> interface provides a canvas that can be rendered off screen, decoupling the DOM and the Canvas API so that the {{HtmlElement(&amp;quot;canvas&amp;quot;)}} element is no longer entirely dependent on the DOM.<br>Rendering operations can also be run inside a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">worker</a> context, allowing you to run some tasks in a separate thread and avoid heavy work on the main thread.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>OffscreenCanvas()</code></strong> constructor returns a newly instantiated <a class="xref" href="CSharpToJavaScript.APIs.JS.OffscreenCanvas.html">OffscreenCanvas</a> object.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -200,9 +206,8 @@ public class OffscreenCanvas : EventTarget</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_OffscreenCanvas__ctor_System_UInt64_System_UInt64__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p><code>OffscreenCanvas</code> is a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Transferable_objects">transferable object</a>.</p><p>{{AvailableInWorkers}}</p><p>{{InheritanceDiagram}}</p>
-<p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.CanvasRenderingContext2D.html">CanvasRenderingContext2D</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.OffscreenCanvasRenderingContext2D.html">OffscreenCanvasRenderingContext2D</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.ImageBitmap.html">ImageBitmap</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.ImageBitmapRenderingContext.html">ImageBitmapRenderingContext</a><br>-<see cref="!:HTMLCanvasElementTransferControlToOffscreen"></see><br>-<see cref="!:WindowRequestAnimationFrame"></see><br>-<a href="https://hacks.mozilla.org/2016/01/webgl-off-the-main-thread/">WebGL Off the Main Thread – Mozilla Hacks</a> (2016)<br></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas</a></p>
+  <div class="markdown level1 remarks"><p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.OffscreenCanvas.html">OffscreenCanvas</a>, the interface this constructor belongs to<br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas/OffscreenCanvas"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas/OffscreenCanvas</a></p>
 </div>
 
 
@@ -430,7 +435,7 @@ public class OffscreenCanvas : EventTarget</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_OffscreenCanvas_GetContext_CSharpToJavaScript_APIs_JS_OffscreenRenderingContextId_System_Object__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>-The interface defining this method: <a class="xref" href="CSharpToJavaScript.APIs.JS.OffscreenCanvas.html">OffscreenCanvas</a><br>-<see cref="!:HTMLCanvasElementGetContext"></see><br>-Available rendering contexts: <a class="xref" href="CSharpToJavaScript.APIs.JS.CanvasRenderingContext2D.html">CanvasRenderingContext2D</a>, <see cref="!:WebGLRenderingContext"></see>, <see cref="!:WebGL2RenderingContext"></see>, <a class="xref" href="CSharpToJavaScript.APIs.JS.ImageBitmapRenderingContext.html">ImageBitmapRenderingContext</a>, and <a class="xref" href="CSharpToJavaScript.APIs.JS.OffscreenCanvasRenderingContext2D.html">OffscreenCanvasRenderingContext2D</a><br></p>
+  <div class="markdown level1 remarks"><p>-The interface defining this method: <a class="xref" href="CSharpToJavaScript.APIs.JS.OffscreenCanvas.html">OffscreenCanvas</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLCanvasElement.html#CSharpToJavaScript_APIs_JS_HTMLCanvasElement_GetContext_System_String_System_Object_">GetContext(string, dynamic)</a><br>-Available rendering contexts: <a class="xref" href="CSharpToJavaScript.APIs.JS.CanvasRenderingContext2D.html">CanvasRenderingContext2D</a>, <see cref="!:WebGLRenderingContext"></see>, <see cref="!:WebGL2RenderingContext"></see>, <a class="xref" href="CSharpToJavaScript.APIs.JS.ImageBitmapRenderingContext.html">ImageBitmapRenderingContext</a>, and <a class="xref" href="CSharpToJavaScript.APIs.JS.OffscreenCanvasRenderingContext2D.html">OffscreenCanvasRenderingContext2D</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas/getContext"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas/getContext</a></p>
 </div>
 
@@ -467,7 +472,7 @@ public class OffscreenCanvas : EventTarget</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_OffscreenCanvas_TransferToImageBitmap_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>-The interface defining this method, <a class="xref" href="CSharpToJavaScript.APIs.JS.OffscreenCanvas.html">OffscreenCanvas</a><br>-<see cref="!:ImageBitmapRenderingContextTransferFromImageBitmap"></see><br></p>
+  <div class="markdown level1 remarks"><p>-The interface defining this method, <a class="xref" href="CSharpToJavaScript.APIs.JS.OffscreenCanvas.html">OffscreenCanvas</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.ImageBitmapRenderingContext.html#CSharpToJavaScript_APIs_JS_ImageBitmapRenderingContext_TransferFromImageBitmap_CSharpToJavaScript_APIs_JS_ImageBitmap_">TransferFromImageBitmap(ImageBitmap?)</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas/transferToImageBitmap"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas/transferToImageBitmap</a></p>
 </div>
 

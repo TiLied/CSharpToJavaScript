@@ -91,7 +91,8 @@
   <dl><dt>Assembly</dt><dd>CSharpToJavaScript.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>An <strong><code>XSLTProcessor</code></strong> applies an <a href="https://developer.mozilla.org/en-US/docs/Web/XSLT">XSLT</a> stylesheet transformation to an XML document to<br>produce a new XML document as output. It has methods to load the XSLT stylesheet, to<br>manipulate <code>&amp;lt;xsl:param&amp;gt;</code> parameter values, and to apply the<br>transformation to documents.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -141,6 +142,10 @@ public class XSLTProcessor</code></pre>
 
 
 
+  <h2 id="CSharpToJavaScript_APIs_JS_XSLTProcessor_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>-<a href="https://developer.mozilla.org/en-US/docs/Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations">Using the Mozilla JavaScript interface to XSL Transformations</a><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/XSLTProcessor"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/XSLTProcessor</a></p>
+</div>
 
 
   <h2 class="section" id="constructors">Constructors
@@ -154,7 +159,7 @@ public class XSLTProcessor</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>An <strong><code>XSLTProcessor</code></strong> applies an <a href="https://developer.mozilla.org/en-US/docs/Web/XSLT">XSLT</a> stylesheet transformation to an XML document to<br>produce a new XML document as output. It has methods to load the XSLT stylesheet, to<br>manipulate <code>&amp;lt;xsl:param&amp;gt;</code> parameter values, and to apply the<br>transformation to documents.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>XSLTProcessor()</code></strong> constructor creates a new <a class="xref" href="CSharpToJavaScript.APIs.JS.XSLTProcessor.html">XSLTProcessor</a> object instance.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -171,8 +176,7 @@ public class XSLTProcessor</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_XSLTProcessor__ctor_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>-<a href="https://developer.mozilla.org/en-US/docs/Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations">Using the Mozilla JavaScript interface to XSL Transformations</a><br></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/XSLTProcessor"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/XSLTProcessor</a></p>
+  <div class="markdown level1 remarks"><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/XSLTProcessor/XSLTProcessor"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/XSLTProcessor/XSLTProcessor</a></p>
 </div>
 
 
@@ -201,7 +205,7 @@ public class XSLTProcessor</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None (<see cref="!:undefined"></see>).</p>
+    <dd><p>None (<see cref="!:Undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -212,7 +216,7 @@ public class XSLTProcessor</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_XSLTProcessor_ClearParameters_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>-<see cref="!:XSLTProcessorGetParameter"></see><br>-<see cref="!:XSLTProcessorSetParameter"></see><br>-<see cref="!:XSLTProcessorRemoveParameter"></see><br>-<see cref="!:XSLTProcessorReset"></see><br></p>
+  <div class="markdown level1 remarks"><p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.XSLTProcessor.html#CSharpToJavaScript_APIs_JS_XSLTProcessor_GetParameter_System_String_System_String_">GetParameter(string, string)</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.XSLTProcessor.html#CSharpToJavaScript_APIs_JS_XSLTProcessor_SetParameter_System_String_System_String_System_Object_">SetParameter(string, string, dynamic)</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.XSLTProcessor.html#CSharpToJavaScript_APIs_JS_XSLTProcessor_RemoveParameter_System_String_System_String_">RemoveParameter(string, string)</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.XSLTProcessor.html#CSharpToJavaScript_APIs_JS_XSLTProcessor_Reset">Reset()</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/XSLTProcessor/clearParameters"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/XSLTProcessor/clearParameters</a></p>
 </div>
 
@@ -245,7 +249,7 @@ public class XSLTProcessor</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">dynamic</span></dt>
-    <dd><p>An object that is the value associated with the parameter. It can be of any type.<blockquote><strong>Note:</strong> Firefox supports any kind of parameter. Chrome, Edge and Safari only support string parameters.</blockquote>
+    <dd><p>An object that is the value associated with the parameter. It can be of any type.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> Firefox supports any kind of parameter. Chrome, Edge and Safari only support string parameters.</blockquote>
 </dd>
   </dl>
 
@@ -256,7 +260,7 @@ public class XSLTProcessor</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_XSLTProcessor_GetParameter_System_String_System_String__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>-<see cref="!:XSLTProcessorSetParameter"></see><br>-<see cref="!:XSLTProcessorRemoveParameter"></see><br>-<see cref="!:XSLTProcessorClearParameters"></see><br>-<see cref="!:XSLTProcessorReset"></see><br></p>
+  <div class="markdown level1 remarks"><p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.XSLTProcessor.html#CSharpToJavaScript_APIs_JS_XSLTProcessor_SetParameter_System_String_System_String_System_Object_">SetParameter(string, string, dynamic)</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.XSLTProcessor.html#CSharpToJavaScript_APIs_JS_XSLTProcessor_RemoveParameter_System_String_System_String_">RemoveParameter(string, string)</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.XSLTProcessor.html#CSharpToJavaScript_APIs_JS_XSLTProcessor_ClearParameters">ClearParameters()</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.XSLTProcessor.html#CSharpToJavaScript_APIs_JS_XSLTProcessor_Reset">Reset()</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/XSLTProcessor/getParameter"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/XSLTProcessor/getParameter</a></p>
 </div>
 
@@ -287,7 +291,7 @@ public class XSLTProcessor</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None (<see cref="!:undefined"></see>).</p>
+    <dd><p>None (<see cref="!:Undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -330,7 +334,7 @@ public class XSLTProcessor</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None (<see cref="!:undefined"></see>).</p>
+    <dd><p>None (<see cref="!:Undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -341,7 +345,7 @@ public class XSLTProcessor</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_XSLTProcessor_RemoveParameter_System_String_System_String__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>-<see cref="!:XSLTProcessorGetParameter"></see><br>-<see cref="!:XSLTProcessorSetParameter"></see><br>-<see cref="!:XSLTProcessorClearParameters"></see><br>-<see cref="!:XSLTProcessorReset"></see><br></p>
+  <div class="markdown level1 remarks"><p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.XSLTProcessor.html#CSharpToJavaScript_APIs_JS_XSLTProcessor_GetParameter_System_String_System_String_">GetParameter(string, string)</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.XSLTProcessor.html#CSharpToJavaScript_APIs_JS_XSLTProcessor_SetParameter_System_String_System_String_System_Object_">SetParameter(string, string, dynamic)</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.XSLTProcessor.html#CSharpToJavaScript_APIs_JS_XSLTProcessor_ClearParameters">ClearParameters()</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.XSLTProcessor.html#CSharpToJavaScript_APIs_JS_XSLTProcessor_Reset">Reset()</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/XSLTProcessor/removeParameter"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/XSLTProcessor/removeParameter</a></p>
 </div>
 
@@ -367,7 +371,7 @@ public class XSLTProcessor</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None (<see cref="!:undefined"></see>).</p>
+    <dd><p>None (<see cref="!:Undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -378,7 +382,7 @@ public class XSLTProcessor</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_XSLTProcessor_Reset_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>-<see cref="!:XSLTProcessorGetParameter"></see><br>-<see cref="!:XSLTProcessorSetParameter"></see><br>-<see cref="!:XSLTProcessorRemoveParameter"></see><br>-<see cref="!:XSLTProcessorClearParameters"></see><br></p>
+  <div class="markdown level1 remarks"><p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.XSLTProcessor.html#CSharpToJavaScript_APIs_JS_XSLTProcessor_GetParameter_System_String_System_String_">GetParameter(string, string)</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.XSLTProcessor.html#CSharpToJavaScript_APIs_JS_XSLTProcessor_SetParameter_System_String_System_String_System_Object_">SetParameter(string, string, dynamic)</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.XSLTProcessor.html#CSharpToJavaScript_APIs_JS_XSLTProcessor_RemoveParameter_System_String_System_String_">RemoveParameter(string, string)</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.XSLTProcessor.html#CSharpToJavaScript_APIs_JS_XSLTProcessor_ClearParameters">ClearParameters()</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/XSLTProcessor/reset"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/XSLTProcessor/reset</a></p>
 </div>
 
@@ -413,7 +417,7 @@ public class XSLTProcessor</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None (<see cref="!:undefined"></see>).</p>
+    <dd><p>None (<see cref="!:Undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -424,7 +428,7 @@ public class XSLTProcessor</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_XSLTProcessor_SetParameter_System_String_System_String_System_Object__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>-<see cref="!:XSLTProcessorGetParameter"></see><br>-<see cref="!:XSLTProcessorRemoveParameter"></see><br>-<see cref="!:XSLTProcessorClearParameters"></see><br>-<see cref="!:XSLTProcessorReset"></see><br></p>
+  <div class="markdown level1 remarks"><p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.XSLTProcessor.html#CSharpToJavaScript_APIs_JS_XSLTProcessor_GetParameter_System_String_System_String_">GetParameter(string, string)</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.XSLTProcessor.html#CSharpToJavaScript_APIs_JS_XSLTProcessor_RemoveParameter_System_String_System_String_">RemoveParameter(string, string)</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.XSLTProcessor.html#CSharpToJavaScript_APIs_JS_XSLTProcessor_ClearParameters">ClearParameters()</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.XSLTProcessor.html#CSharpToJavaScript_APIs_JS_XSLTProcessor_Reset">Reset()</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/XSLTProcessor/setParameter"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/XSLTProcessor/setParameter</a></p>
 </div>
 
@@ -466,7 +470,7 @@ public class XSLTProcessor</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_XSLTProcessor_TransformToDocument_CSharpToJavaScript_APIs_JS_Node__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>-<see cref="!:XSLTProcessorTransformToDocument"></see><br></p>
+  <div class="markdown level1 remarks"><p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.XSLTProcessor.html#CSharpToJavaScript_APIs_JS_XSLTProcessor_TransformToDocument_CSharpToJavaScript_APIs_JS_Node_">TransformToDocument(Node)</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/XSLTProcessor/transformToDocument"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/XSLTProcessor/transformToDocument</a></p>
 </div>
 
@@ -510,7 +514,7 @@ public class XSLTProcessor</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_XSLTProcessor_TransformToFragment_CSharpToJavaScript_APIs_JS_Node_CSharpToJavaScript_APIs_JS_Document__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>-<see cref="!:XSLTProcessorTransformToDocument"></see><br></p>
+  <div class="markdown level1 remarks"><p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.XSLTProcessor.html#CSharpToJavaScript_APIs_JS_XSLTProcessor_TransformToDocument_CSharpToJavaScript_APIs_JS_Node_">TransformToDocument(Node)</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/XSLTProcessor/transformToFragment"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/XSLTProcessor/transformToFragment</a></p>
 </div>
 

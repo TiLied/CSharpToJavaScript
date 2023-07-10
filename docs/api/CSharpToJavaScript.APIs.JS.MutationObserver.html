@@ -91,7 +91,8 @@
   <dl><dt>Assembly</dt><dd>CSharpToJavaScript.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>The <a class="xref" href="CSharpToJavaScript.APIs.JS.MutationObserver.html">MutationObserver</a> interface provides the ability to watch for changes being made to the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">DOM</a> tree. It is designed as a replacement for the older <a href="https://developer.mozilla.org/en-US/docs/Web/API/MutationEvent">Mutation Events</a> feature, which was part of the DOM3 Events specification.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -141,6 +142,10 @@ public class MutationObserver</code></pre>
 
 
 
+  <h2 id="CSharpToJavaScript_APIs_JS_MutationObserver_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>-<see cref="!:'PerformanceObserver'"></see><br>-<see cref="!:'ResizeObserver'"></see><br>-<see cref="!:'IntersectionObserver'"></see><br>-<a href="https://developer.chrome.com/blog/detect-dom-changes-with-mutation-observers/">A brief overview</a><br>-<a href="https://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/">A more in-depth discussion</a><br>-<a href="https://www.youtube.com/watch?v=eRZ4pO0gVWw">A screencast by Chromium developer Rafael Weinstein</a><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver</a></p>
+</div>
 
 
   <h2 class="section" id="constructors">Constructors
@@ -154,7 +159,7 @@ public class MutationObserver</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <a class="xref" href="CSharpToJavaScript.APIs.JS.MutationObserver.html">MutationObserver</a> interface provides the ability to watch for changes being made to the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">DOM</a> tree. It is designed as a replacement for the older <a href="https://developer.mozilla.org/en-US/docs/Web/API/MutationEvent">Mutation Events</a> feature, which was part of the DOM3 Events specification.</p>
+  <div class="markdown level1 summary"><p>The DOM <strong><code>MutationObserver()</code></strong><br>constructor — part of the <a class="xref" href="CSharpToJavaScript.APIs.JS.MutationObserver.html">MutationObserver</a> interface — creates and<br>returns a new observer which invokes a specified callback when DOM events<br>occur.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -176,8 +181,8 @@ public class MutationObserver</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_MutationObserver__ctor_CSharpToJavaScript_APIs_JS_MutationCallback__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>-<see cref="!:'PerformanceObserver'"></see><br>-<see cref="!:'ResizeObserver'"></see><br>-<see cref="!:'IntersectionObserver'"></see><br>-<a href="https://developer.chrome.com/blog/detect-dom-changes-with-mutation-observers/">A brief overview</a><br>-<a href="https://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/">A more in-depth discussion</a><br>-<a href="https://www.youtube.com/watch?v=eRZ4pO0gVWw">A screencast by Chromium developer Rafael Weinstein</a><br></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver</a></p>
+  <div class="markdown level1 remarks"><p>DOM observation does not begin immediately; the<br><a class="xref" href="CSharpToJavaScript.APIs.JS.MutationObserver.html#CSharpToJavaScript_APIs_JS_MutationObserver_Observe_CSharpToJavaScript_APIs_JS_Node_CSharpToJavaScript_APIs_JS_MutationObserverInit_">Observe(Node, MutationObserverInit)</a> method must be called first to<br>establish which portion of the DOM to watch and what kinds of changes to watch for.</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver/MutationObserver"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver/MutationObserver</a></p>
 </div>
 
 
@@ -206,7 +211,7 @@ public class MutationObserver</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p><code>undefined</code>.<blockquote><strong>Note:</strong> All notifications of mutations that have already been<br><strong>detected</strong>, but <strong>not yet reported</strong> to the observer, are discarded.<br>To hold on to and handle the detected but unreported mutations, use<br>the <see cref="!:MutationObserverTakeRecords"></see> method.</blockquote>
+    <dd><p><code>undefined</code>.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> All notifications of mutations that have already been<br><strong>detected</strong>, but <strong>not yet reported</strong> to the observer, are discarded.<br>To hold on to and handle the detected but unreported mutations, use<br>the <a class="xref" href="CSharpToJavaScript.APIs.JS.MutationObserver.html#CSharpToJavaScript_APIs_JS_MutationObserver_TakeRecords">TakeRecords()</a> method.</blockquote>
 </dd>
   </dl>
 
@@ -217,7 +222,7 @@ public class MutationObserver</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_MutationObserver_Disconnect_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>The observer can be reused by calling its<br><see cref="!:MutationObserverObserve"></see> method again.</p>
+  <div class="markdown level1 remarks"><p>The observer can be reused by calling its<br><a class="xref" href="CSharpToJavaScript.APIs.JS.MutationObserver.html#CSharpToJavaScript_APIs_JS_MutationObserver_Observe_CSharpToJavaScript_APIs_JS_Node_CSharpToJavaScript_APIs_JS_MutationObserverInit_">Observe(Node, MutationObserverInit)</a> method again.</p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver/disconnect"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver/disconnect</a></p>
 </div>
 
@@ -250,7 +255,7 @@ public class MutationObserver</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None (<see cref="!:undefined"></see>).</p>
+    <dd><p>None (<see cref="!:Undefined"></see>).</p>
 </dd>
   </dl>
 
@@ -261,7 +266,7 @@ public class MutationObserver</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_MutationObserver_Observe_CSharpToJavaScript_APIs_JS_Node_CSharpToJavaScript_APIs_JS_MutationObserverInit__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>Depending on the configuration, the observer may watch a single <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a> in the DOM tree, or that node and some or all of its descendant nodes.</p><p>To stop the <code>MutationObserver</code> (so that none of its callbacks will be triggered any longer), call <see cref="!:MutationObserverDisconnect"></see>.</p>
+  <div class="markdown level1 remarks"><p>Depending on the configuration, the observer may watch a single <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a> in the DOM tree, or that node and some or all of its descendant nodes.</p><p>To stop the <code>MutationObserver</code> (so that none of its callbacks will be triggered any longer), call <a class="xref" href="CSharpToJavaScript.APIs.JS.MutationObserver.html#CSharpToJavaScript_APIs_JS_MutationObserver_Disconnect">Disconnect()</a>.</p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver/observe"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver/observe</a></p>
 </div>
 
@@ -287,7 +292,7 @@ public class MutationObserver</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="CSharpToJavaScript.APIs.JS.MutationRecord.html">MutationRecord</a>&gt;</dt>
-    <dd><p>An array of <a class="xref" href="CSharpToJavaScript.APIs.JS.MutationRecord.html">MutationRecord</a> objects, each describing one change applied to<br>the observed portion of the document&amp;apos;s DOM tree.<blockquote><strong>Note:</strong> The queue of mutations which have occurred, but not been<br>delivered to the observer&amp;apos;s callback is left empty after calling<br><code>takeRecords()</code>.</blockquote>
+    <dd><p>An array of <a class="xref" href="CSharpToJavaScript.APIs.JS.MutationRecord.html">MutationRecord</a> objects, each describing one change applied to<br>the observed portion of the document&amp;apos;s DOM tree.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> The queue of mutations which have occurred, but not been<br>delivered to the observer&amp;apos;s callback is left empty after calling<br><code>takeRecords()</code>.</blockquote>
 </dd>
   </dl>
 

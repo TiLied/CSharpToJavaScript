@@ -484,8 +484,8 @@ public class HTMLStyleElement : HTMLElement, ParentNode, NonDocumentTypeChildNod
 
 
   <h2 id="CSharpToJavaScript_APIs_JS_HTMLStyleElement_remarks">Remarks</h2>
-  <div class="markdown level0 remarks"><p>This interface doesn&amp;apos;t allow to manipulate the CSS it contains (in most case). To manipulate CSS, see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information">Using dynamic styling information</a> for an overview of the objects used to manipulate specified CSS properties using the DOM.</p><p>{{InheritanceDiagram}}</p>
-<p>-The HTML element implementing this interface: {{HTMLElement(&amp;quot;style&amp;quot;)}}.<br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information">Using dynamic styling information</a> to see how to manipulate CSS.<br></p>
+  <div class="markdown level0 remarks"><p>This interface doesn&amp;apos;t allow to manipulate the CSS it contains (in most case). To manipulate CSS, see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information">Using dynamic styling information</a> for an overview of the objects used to manipulate specified CSS properties using the DOM.</p><p></p>
+<p>-The HTML element implementing this interface: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style">style</a>.<br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information">Using dynamic styling information</a> to see how to manipulate CSS.<br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLStyleElement"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/HTMLStyleElement</a></p>
 </div>
 
@@ -501,8 +501,7 @@ public class HTMLStyleElement : HTMLElement, ParentNode, NonDocumentTypeChildNod
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>HTMLStyleElement</code></strong> interface represents a {{HTMLElement(&quot;style&quot;)}} element. It inherits properties and methods from its parent, <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLElement.html">HTMLElement</a>.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -517,11 +516,6 @@ public class HTMLStyleElement : HTMLElement, ParentNode, NonDocumentTypeChildNod
 
 
 
-  <h4 class="section" id="CSharpToJavaScript_APIs_JS_HTMLStyleElement__ctor_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This interface doesn&amp;apos;t allow to manipulate the CSS it contains (in most case). To manipulate CSS, see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information">Using dynamic styling information</a> for an overview of the objects used to manipulate specified CSS properties using the DOM.</p><p>{{InheritanceDiagram}}</p>
-<p>-The HTML element implementing this interface: {{HTMLElement(&amp;quot;style&amp;quot;)}}.<br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information">Using dynamic styling information</a> to see how to manipulate CSS.<br></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLStyleElement"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/HTMLStyleElement</a></p>
-</div>
 
 
 
@@ -569,7 +563,8 @@ public DOMTokenList Blocking { get; }</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The <strong><code>HTMLStyleElement.disabled</code></strong> property can be used to get and set whether the stylesheet is disabled (<code>true</code>) or not (<code>false</code>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -584,12 +579,18 @@ public bool Disabled { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dd><p>Returns <code>true</code> if the stylesheet is disabled, or there is no associated stylesheet; otherwise <code>false</code>.<br>The value is <code>false</code> by default (if there is an associated stylesheet).The property can be used to enable or disable an associated stylesheet.<br>Setting the property to <code>true</code> when there is no associated stylesheet has no effect.</p>
+</dd>
   </dl>
 
 
 
 
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_HTMLStyleElement_Disabled_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Note that there is no corresponding <code>disabled</code> attribute on the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style">HTML <code>&amp;lt;style&amp;gt;</code> element</a>.</p>
+<p>-<see cref="!:SVGStyleElement.Disabled"></see><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLStyleElement/disabled"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/HTMLStyleElement/disabled</a></p>
+</div>
 
 
 
@@ -601,7 +602,8 @@ public bool Disabled { get; set; }</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The <strong><code>HTMLStyleElement.media</code></strong> property specifies the<br>intended destination medium for style information.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -616,12 +618,16 @@ public string Media { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>A string describing a single medium or a comma-separated list.</p>
+</dd>
   </dl>
 
 
 
 
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_HTMLStyleElement_Media_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLStyleElement/media"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/HTMLStyleElement/media</a></p>
+</div>
 
 
 
@@ -633,7 +639,7 @@ public string Media { get; set; }</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>HTMLStyleElement.type</code></strong> property returns the type of the current style.<br>The value mirrors the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style#type">HTML <code>&amp;lt;style&amp;gt;</code> element&amp;apos;s <code>type</code> attribute</a>.</p>
+  <div class="markdown level1 summary"><div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><code>HTMLStyleElement.type</code></strong> property returns the type of the current style.<br>The value mirrors the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style#type">HTML <code>&amp;lt;style&amp;gt;</code> element&amp;apos;s <code>type</code> attribute</a>.
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -657,7 +663,7 @@ public string Media { get; set; }</code></pre>
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_HTMLStyleElement_Type_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>Authors should not use this property or rely on the value.</p>
-<p>-<see cref="!:SVGStyleElementType"></see><br></p>
+<p>-<see cref="!:SVGStyleElement.Type"></see><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLStyleElement/type"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/HTMLStyleElement/type</a></p>
 </div>
 

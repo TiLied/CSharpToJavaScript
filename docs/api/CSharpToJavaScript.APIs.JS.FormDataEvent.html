@@ -91,7 +91,8 @@
   <dl><dt>Assembly</dt><dd>CSharpToJavaScript.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>The <strong><code>FormDataEvent</code></strong> interface represents a <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/formdata_event"><code>formdata</code> event</a> — such an event is fired on an <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLFormElement.html">HTMLFormElement</a> object after the entry list representing the form's data is constructed. This happens when the form is submitted, but can also be triggered by the invocation of a <a class="xref" href="CSharpToJavaScript.APIs.JS.FormData.html#CSharpToJavaScript_APIs_JS_FormData__ctor_CSharpToJavaScript_APIs_JS_HTMLFormElement_">FormData(HTMLFormElement)</a> constructor.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -208,6 +209,11 @@ public class FormDataEvent : Event</code></pre>
 
 
 
+  <h2 id="CSharpToJavaScript_APIs_JS_FormDataEvent_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>This allows a <a class="xref" href="CSharpToJavaScript.APIs.JS.FormDataEvent.html#CSharpToJavaScript_APIs_JS_FormDataEvent_FormData">FormData</a> object to be quickly obtained in response to a <code>formdata</code> event firing, rather than needing to put it together yourself when you wish to submit form data via a method like <a class="xref" href="CSharpToJavaScript.APIs.JS.XMLHttpRequest.html">XMLHttpRequest</a> (see <a href="https://developer.mozilla.org/en-US/docs/Web/API/FormData/Using_FormData_Objects">Using FormData objects</a>).</p><p></p>
+<p>-<see cref="!:XMLHTTPRequest"></see><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.FormDataEvent.html#CSharpToJavaScript_APIs_JS_FormDataEvent_FormData">FormData</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/FormData/Using_FormData_Objects">Using FormData objects</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Form">Form</a><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/FormDataEvent"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/FormDataEvent</a></p>
+</div>
 
 
   <h2 class="section" id="constructors">Constructors
@@ -221,7 +227,7 @@ public class FormDataEvent : Event</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>FormDataEvent</code></strong> interface represents a <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/formdata_event"><code>formdata</code> event</a> — such an event is fired on an <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLFormElement.html">HTMLFormElement</a> object after the entry list representing the form's data is constructed. This happens when the form is submitted, but can also be triggered by the invocation of a <see cref="!:FormDataFormData"></see> constructor.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>FormDataEvent()</code></strong> constructor creates a new <a class="xref" href="CSharpToJavaScript.APIs.JS.FormDataEvent.html">FormDataEvent</a> object.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -245,9 +251,8 @@ public class FormDataEvent : Event</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_FormDataEvent__ctor_System_String_CSharpToJavaScript_APIs_JS_FormDataEventInit__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This allows a <a class="xref" href="CSharpToJavaScript.APIs.JS.FormDataEvent.html#CSharpToJavaScript_APIs_JS_FormDataEvent_FormData">FormData</a> object to be quickly obtained in response to a <code>formdata</code> event firing, rather than needing to put it together yourself when you wish to submit form data via a method like <a class="xref" href="CSharpToJavaScript.APIs.JS.XMLHttpRequest.html">XMLHttpRequest</a> (see <a href="https://developer.mozilla.org/en-US/docs/Web/API/FormData/Using_FormData_Objects">Using FormData objects</a>).</p><p>{{InheritanceDiagram}}</p>
-<p>-<see cref="!:XMLHTTPRequest"></see><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.FormDataEvent.html#CSharpToJavaScript_APIs_JS_FormDataEvent_FormData">FormData</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/FormData/Using_FormData_Objects">Using FormData objects</a><br>-{{HTMLElement(&amp;quot;Form&amp;quot;)}}<br></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/FormDataEvent"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/FormDataEvent</a></p>
+  <div class="markdown level1 remarks"><p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.FormDataEvent.html">FormDataEvent</a><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/FormDataEvent/FormDataEvent"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/FormDataEvent/FormDataEvent</a></p>
 </div>
 
 
@@ -287,7 +292,7 @@ public class FormDataEvent : Event</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_FormDataEvent_FormData_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>-<see cref="!:XMLHTTPRequest"></see><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/FormData/Using_FormData_Objects">Using FormData objects</a><br>-{{HTMLElement(&amp;quot;Form&amp;quot;)}}<br></p>
+  <div class="markdown level1 remarks"><p>-<see cref="!:XMLHTTPRequest"></see><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/FormData/Using_FormData_Objects">Using FormData objects</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Form">Form</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/FormDataEvent/formData"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/FormDataEvent/formData</a></p>
 </div>
 

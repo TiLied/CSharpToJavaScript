@@ -91,7 +91,8 @@
   <dl><dt>Assembly</dt><dd>CSharpToJavaScript.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>The <strong><code>WorkerGlobalScope</code></strong> interface of the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">Web Workers API</a> is an interface representing the scope of any worker. Workers have no browsing context; this scope contains the information usually conveyed by <a class="xref" href="CSharpToJavaScript.APIs.JS.Window.html">Window</a> objects — in this case event handlers, the console or the associated <a class="xref" href="CSharpToJavaScript.APIs.JS.WorkerNavigator.html">WorkerNavigator</a> object. Each <code>WorkerGlobalScope</code> has its own event loop.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -176,6 +177,11 @@ public class WorkerGlobalScope : EventTarget, WindowOrWorkerGlobalScope</code></
 
 
 
+  <h2 id="CSharpToJavaScript_APIs_JS_WorkerGlobalScope_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>This interface is usually specialized by each worker type: <a class="xref" href="CSharpToJavaScript.APIs.JS.DedicatedWorkerGlobalScope.html">DedicatedWorkerGlobalScope</a> for dedicated workers, <a class="xref" href="CSharpToJavaScript.APIs.JS.SharedWorkerGlobalScope.html">SharedWorkerGlobalScope</a> for shared workers, and <a class="xref" href="CSharpToJavaScript.APIs.JS.ServiceWorkerGlobalScope.html">ServiceWorkerGlobalScope</a> for <a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker</a>. The <code>self</code> property returns the specialized scope for each context.</p><p></p>
+<p>-Other global object interface: <a class="xref" href="CSharpToJavaScript.APIs.JS.Window.html">Window</a>, <a class="xref" href="CSharpToJavaScript.APIs.JS.DedicatedWorkerGlobalScope.html">DedicatedWorkerGlobalScope</a>, <a class="xref" href="CSharpToJavaScript.APIs.JS.SharedWorkerGlobalScope.html">SharedWorkerGlobalScope</a>, <a class="xref" href="CSharpToJavaScript.APIs.JS.ServiceWorkerGlobalScope.html">ServiceWorkerGlobalScope</a><br>-Other Worker-related interfaces: <a class="xref" href="CSharpToJavaScript.APIs.JS.Worker.html">Worker</a>, <a class="xref" href="CSharpToJavaScript.APIs.JS.WorkerLocation.html">WorkerLocation</a>, <a class="xref" href="CSharpToJavaScript.APIs.JS.WorkerGlobalScope.html">WorkerGlobalScope</a>, and <a class="xref" href="CSharpToJavaScript.APIs.JS.ServiceWorkerGlobalScope.html">ServiceWorkerGlobalScope</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web workers</a><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope</a></p>
+</div>
 
 
   <h2 class="section" id="properties">Properties
@@ -507,7 +513,7 @@ public class WorkerGlobalScope : EventTarget, WindowOrWorkerGlobalScope</code></
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None (<see cref="!:undefined"></see>).</p>
+    <dd><p>None (<see cref="!:Undefined"></see>).</p>
 </dd>
   </dl>
 

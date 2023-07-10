@@ -484,8 +484,8 @@ public class HTMLIFrameElement : HTMLElement, ParentNode, NonDocumentTypeChildNo
 
 
   <h2 id="CSharpToJavaScript_APIs_JS_HTMLIFrameElement_remarks">Remarks</h2>
-  <div class="markdown level0 remarks"><p>{{InheritanceDiagram}}</p>
-<p>-The HTML element implementing this interface: {{HTMLElement(&amp;quot;iframe&amp;quot;)}}<br></p>
+  <div class="markdown level0 remarks"><p></p>
+<p>-The HTML element implementing this interface: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement</a></p>
 </div>
 
@@ -501,8 +501,7 @@ public class HTMLIFrameElement : HTMLElement, ParentNode, NonDocumentTypeChildNo
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>HTMLIFrameElement</code></strong> interface provides special properties and methods (beyond those of the <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLElement.html">HTMLElement</a> interface it also has available to it by inheritance) for manipulating the layout and presentation of inline frame elements.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -517,11 +516,6 @@ public class HTMLIFrameElement : HTMLElement, ParentNode, NonDocumentTypeChildNo
 
 
 
-  <h4 class="section" id="CSharpToJavaScript_APIs_JS_HTMLIFrameElement__ctor_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>{{InheritanceDiagram}}</p>
-<p>-The HTML element implementing this interface: {{HTMLElement(&amp;quot;iframe&amp;quot;)}}<br></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement</a></p>
-</div>
 
 
 
@@ -632,7 +626,8 @@ public bool AllowFullscreen { get; set; }</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If the iframe and the iframe&amp;apos;s parent document are <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy">Same Origin</a>, returns a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document"><code>Document</code>https://developer.mozilla.org/en-US/docs/Web/API/Document</a> (that is, the active document in the inline frame&amp;apos;s nested browsing context), else returns <code>null</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -653,6 +648,9 @@ public Document? ContentDocument { get; }</code></pre>
 
 
 
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_HTMLIFrameElement_ContentDocument_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/contentDocument"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/contentDocument</a></p>
+</div>
 
 
 
@@ -664,7 +662,8 @@ public Document? ContentDocument { get; }</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The <strong><code>contentWindow</code></strong> property returns the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window">Window</a> object of an <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement">HTMLIFrameElement</a>. You can use this <code>Window</code> object to access the iframe&amp;apos;s document and its internal DOM. This attribute is read-only, but its properties can be manipulated like the global <code>Window</code> object.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -679,12 +678,16 @@ public Window? ContentWindow { get; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Window.html">Window</a></dt>
-    <dd></dd>
+    <dd><p>A <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window">Window</a> object.</p>
+</dd>
   </dl>
 
 
 
 
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_HTMLIFrameElement_ContentWindow_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/contentWindow"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/contentWindow</a></p>
+</div>
 
 
 
@@ -916,7 +919,8 @@ public string Name { get; set; }</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The<br><strong><code>HTMLIFrameElement.referrerPolicy</code></strong><br>property reflects the HTML <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#referrerpolicy"><code>referrerpolicy</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#referrerpolicy</a> attribute of the<br><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</a> element defining which referrer is sent when fetching the<br>resource.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -937,6 +941,10 @@ public string ReferrerPolicy { get; set; }</code></pre>
 
 
 
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_HTMLIFrameElement_ReferrerPolicy_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLAnchorElement.html#CSharpToJavaScript_APIs_JS_HTMLAnchorElement_ReferrerPolicy">ReferrerPolicy</a>,<br><a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLAreaElement.html#CSharpToJavaScript_APIs_JS_HTMLAreaElement_ReferrerPolicy">ReferrerPolicy</a>, and<br><a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLAreaElement.html#CSharpToJavaScript_APIs_JS_HTMLAreaElement_ReferrerPolicy">ReferrerPolicy</a>.<br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/referrerPolicy"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/referrerPolicy</a></p>
+</div>
 
 
 
@@ -1011,7 +1019,8 @@ public DOMTokenList Sandbox { get; }</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The <strong><code>HTMLIFrameElement.src</code></strong><br>property reflects the HTML <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/referrerPolicy"><code>referrerpolicy</code>https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/referrerPolicy</a> attribute of the<br><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</a> element defining which referrer is sent when fetching the<br>resource.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -1032,6 +1041,10 @@ public string Src { get; set; }</code></pre>
 
 
 
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_HTMLIFrameElement_Src_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>-<see cref="!:HTMLAnchorElement.Src"></see><br>-<see cref="!:HTMLAreaElement.Src"></see><br>-<see cref="!:HTMLAreaElement.Src"></see>.<br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/src"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/src</a></p>
+</div>
 
 
 
@@ -1043,7 +1056,8 @@ public string Src { get; set; }</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The <strong><code>srcdoc</code></strong> property of the <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLIFrameElement.html">HTMLIFrameElement</a> specifies the content of the page.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -1064,6 +1078,9 @@ public string Srcdoc { get; set; }</code></pre>
 
 
 
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_HTMLIFrameElement_Srcdoc_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/srcdoc"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/srcdoc</a></p>
+</div>
 
 
 

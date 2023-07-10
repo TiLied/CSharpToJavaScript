@@ -91,7 +91,8 @@
   <dl><dt>Assembly</dt><dd>CSharpToJavaScript.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>The <strong><code>SharedWorker</code></strong> interface represents a specific kind of worker that can be <strong>accessed</strong> from several browsing contexts, such as several windows, iframes or even workers. They implement an interface different than dedicated workers and have a different global scope, <a class="xref" href="CSharpToJavaScript.APIs.JS.SharedWorkerGlobalScope.html">SharedWorkerGlobalScope</a>.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -169,6 +170,11 @@ public class SharedWorker : EventTarget, AbstractWorker</code></pre>
 
 
 
+  <h2 id="CSharpToJavaScript_APIs_JS_SharedWorker_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><blockquote class="NOTE"><h5>NOTE</h5><p><strong>Note:</strong> If SharedWorker can be accessed from several browsing contexts, all those browsing contexts must share the exact same origin (same protocol, host and port).</p></blockquote><p></p>
+<p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.Worker.html">Worker</a><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/SharedWorker"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/SharedWorker</a></p>
+</div>
 
 
   <h2 class="section" id="constructors">Constructors
@@ -182,7 +188,7 @@ public class SharedWorker : EventTarget, AbstractWorker</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>SharedWorker</code></strong> interface represents a specific kind of worker that can be <strong>accessed</strong> from several browsing contexts, such as several windows, iframes or even workers. They implement an interface different than dedicated workers and have a different global scope, <a class="xref" href="CSharpToJavaScript.APIs.JS.SharedWorkerGlobalScope.html">SharedWorkerGlobalScope</a>.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>SharedWorker()</code></strong> constructor creates a<br><a class="xref" href="CSharpToJavaScript.APIs.JS.SharedWorker.html">SharedWorker</a> object that executes the script at the specified URL. This<br>script must obey the <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy">same-origin policy</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -206,9 +212,9 @@ public class SharedWorker : EventTarget, AbstractWorker</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_SharedWorker__ctor_System_String_CSharpToJavaScript_APIs_JS_Union46__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><blockquote><p><strong>Note:</strong> If SharedWorker can be accessed from several browsing contexts, all those browsing contexts must share the exact same origin (same protocol, host and port).</p></blockquote><p>{{InheritanceDiagram}}</p>
-<p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.Worker.html">Worker</a><br></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/SharedWorker"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/SharedWorker</a></p>
+  <div class="markdown level1 remarks"><blockquote class="NOTE"><h5>NOTE</h5><p><strong>Note:</strong> there is disagreement among browser manufacturers about<br>whether a data URL is of the same origin or not. Although Firefox 10.0<br>and later accept data URLs, that&amp;apos;s not the case in all other<br>browsers.</p></blockquote>
+<p>-The <a class="xref" href="CSharpToJavaScript.APIs.JS.SharedWorker.html">SharedWorker</a> interface it belongs to.<br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/SharedWorker/SharedWorker"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/SharedWorker/SharedWorker</a></p>
 </div>
 
 

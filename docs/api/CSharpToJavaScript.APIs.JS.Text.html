@@ -91,7 +91,8 @@
   <dl><dt>Assembly</dt><dd>CSharpToJavaScript.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>The <strong><code>Text</code></strong> interface represents a text <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a> in a DOM tree.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -341,6 +342,11 @@ public class Text : CharacterData, NonDocumentTypeChildNode, ChildNode, Slottabl
 
 
 
+  <h2 id="CSharpToJavaScript_APIs_JS_Text_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p></p><p>To understand what a text node is, consider the following document:</p><p>In that document, there are five text nodes, with the following contents:</p><p>Each of those text nodes is an object that has the properties and methods documented in this article.</p>
+<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM API</a><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Text"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Text</a></p>
+</div>
 
 
   <h2 class="section" id="constructors">Constructors
@@ -380,7 +386,7 @@ public class Text : CharacterData, NonDocumentTypeChildNode, ChildNode, Slottabl
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>Text</code></strong> interface represents a text <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a> in a DOM tree.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>Text()</code></strong> constructor returns a new <a class="xref" href="CSharpToJavaScript.APIs.JS.Text.html">Text</a> object<br>with the optional string given in parameter as its textual content.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -402,9 +408,8 @@ public class Text : CharacterData, NonDocumentTypeChildNode, ChildNode, Slottabl
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Text__ctor_System_String__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>{{InheritanceDiagram}}</p><p>To understand what a text node is, consider the following document:</p><p>In that document, there are five text nodes, with the following contents:</p><p>Each of those text nodes is an object that has the properties and methods documented in this article.</p>
-<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM API</a><br></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Text"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Text</a></p>
+  <div class="markdown level1 remarks"><p>-The <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">DOM API</a><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Text/Text"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Text/Text</a></p>
 </div>
 
 
@@ -421,7 +426,8 @@ public class Text : CharacterData, NonDocumentTypeChildNode, ChildNode, Slottabl
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The read-only <strong><code>wholeText</code></strong> property of the <a class="xref" href="CSharpToJavaScript.APIs.JS.Text.html">Text</a> interface<br>returns the full text of all <a class="xref" href="CSharpToJavaScript.APIs.JS.Text.html">Text</a> nodes logically adjacent to the node.<br>The text is concatenated in document order.<br>This allows specifying any text node and obtaining all adjacent text as a single string.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -436,12 +442,18 @@ public string WholeText { get; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>A string with the concatenated text.</p>
+</dd>
   </dl>
 
 
 
 
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Text_WholeText_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><blockquote class="NOTE"><h5>NOTE</h5><p><strong>Note:</strong> This is similar to call <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_Normalize">Normalize()</a> followed by reading the text value,<br>but without modifying the tree.</p></blockquote>
+<p>-The <a class="xref" href="CSharpToJavaScript.APIs.JS.Text.html">Text</a> interface it belongs to.<br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Text/wholeText"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Text/wholeText</a></p>
+</div>
 
 
 
@@ -457,7 +469,8 @@ public string WholeText { get; }</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The <strong><code>splitText()</code></strong> method of the <a class="xref" href="CSharpToJavaScript.APIs.JS.Text.html">Text</a> interface<br>breaks the <a class="xref" href="CSharpToJavaScript.APIs.JS.Text.html">Text</a> node into two nodes at the specified offset,<br>keeping both nodes in the tree as siblings.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -474,7 +487,8 @@ public Text SplitText(ulong offset)</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Text.html">Text</a></dt>
-    <dd></dd>
+    <dd><p>Returns the newly created <a class="xref" href="CSharpToJavaScript.APIs.JS.Text.html">Text</a> node that contains the text after the<br>specified offset point.</p>
+</dd>
   </dl>
 
 
@@ -483,6 +497,11 @@ public Text SplitText(ulong offset)</code></pre>
 
 
 
+  <h4 class="section" id="CSharpToJavaScript_APIs_JS_Text_SplitText_System_UInt64__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>After the split, the current node contains all the content<br>up to the specified offset point,<br>and a newly created node of the same type contains the remaining text.<br>The newly created node is returned to the caller.<br>If the original node had a parent, the new node is inserted as the next sibling of the original node.<br>If the offset is equal to the length of the original node,<br>the newly created node has no data.</p><p>Separated text nodes can be concatenated using the <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_Normalize">Normalize()</a><br>method.</p>
+<p>-The <a class="xref" href="CSharpToJavaScript.APIs.JS.Text.html">Text</a> interface it belongs to.<br>-The opposite method: <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_Normalize">Normalize()</a>.<br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Text/splitText"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Text/splitText</a></p>
+</div>
 
 
 

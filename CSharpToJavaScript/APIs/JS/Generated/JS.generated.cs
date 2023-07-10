@@ -1,4 +1,4 @@
-//05.07.2023 15:43:15
+//10.07.2023 12:48:53
 using CSharpToJavaScript.Utils;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -26,8 +26,8 @@ using ArrayBufferView = Union48;
 using BufferSource = Union49;
 using FormDataEntryValue = Union51;
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/Window/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class Window
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/WindowOrientation/*'/>
@@ -36,17 +36,17 @@ public partial class Window
 	public EventHandler Onorientationchange { get; set; }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLBodyElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLBodyElement
 {
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLBodyElementOnorientationchange/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLBodyElementOnorientationchange/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public EventHandler Onorientationchange { get; set; }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/console/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class console
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/consoleAssert/*'/>
@@ -89,11 +89,11 @@ public partial class console
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ TimeEnd(string label) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/Event/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class Event
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/Event/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/EventEvent/*'/>
 	public Event(string type, EventInit eventInitDict) { }
 	///<include file='Utils/Docs.generated.xml' path='docs/EventType/*'/>
 	public string Type { get; }
@@ -141,8 +141,8 @@ public partial class Event
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ InitEvent(string type, bool bubbles, bool cancelable) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/EventInit/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class EventInit
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/EventInitBubbles/*'/>
@@ -160,11 +160,11 @@ public partial class Window
 	public Union0 Event { get; }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/CustomEvent/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class CustomEvent : Event
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/CustomEvent/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/CustomEventCustomEvent/*'/>
 	public CustomEvent(string type, CustomEventInit eventInitDict) { }
 	///<include file='Utils/Docs.generated.xml' path='docs/CustomEventDetail/*'/>
 	public dynamic Detail { get; }
@@ -172,19 +172,19 @@ public partial class CustomEvent : Event
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ InitCustomEvent(string type, bool bubbles, bool cancelable, dynamic detail) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/CustomEventInit/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class CustomEventInit : EventInit
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/CustomEventInitDetail/*'/>
 	public dynamic Detail;
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/EventTarget/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class EventTarget
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/EventTarget/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/EventTargetEventTarget/*'/>
 	public EventTarget() { }
 	///<include file='Utils/Docs.generated.xml' path='docs/EventTargetAddEventListener/*'/>
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ AddEventListener(string type, EventListener? callback, Union1 options) { throw new System.NotImplementedException(); }
@@ -194,24 +194,24 @@ public partial class EventTarget
 	public bool DispatchEvent(Event event_) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/EventListener/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial interface EventListener
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/EventListenerHandleEvent/*'/>
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ HandleEvent(Event event_) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/EventListenerOptions/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class EventListenerOptions
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/EventListenerOptionsCapture/*'/>
 	public bool Capture;
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/AddEventListenerOptions/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class AddEventListenerOptions : EventListenerOptions
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/AddEventListenerOptionsPassive/*'/>
@@ -222,11 +222,11 @@ public partial class AddEventListenerOptions : EventListenerOptions
 	public AbortSignal Signal;
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/AbortController/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class AbortController
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/AbortController/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/AbortControllerAbortController/*'/>
 	public AbortController() { }
 	///<include file='Utils/Docs.generated.xml' path='docs/AbortControllerSignal/*'/>
 	public AbortSignal Signal { get; }
@@ -234,8 +234,8 @@ public partial class AbortController
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Abort(dynamic reason) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/AbortSignal/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class AbortSignal : EventTarget
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/AbortSignalAbort/*'/>
@@ -252,8 +252,8 @@ public partial class AbortSignal : EventTarget
 	public EventHandler Onabort { get; set; }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/NonElementParentNode/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial interface NonElementParentNode
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/NonElementParentNodeGetElementById/*'/>
@@ -262,16 +262,16 @@ public partial interface NonElementParentNode
 
 
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/DocumentOrShadowRoot/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial interface DocumentOrShadowRoot
 {
 }
 
 
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/ParentNode/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial interface ParentNode
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/ParentNodeChildren/*'/>
@@ -297,8 +297,8 @@ public partial interface ParentNode
 
 
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/NonDocumentTypeChildNode/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial interface NonDocumentTypeChildNode
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/NonDocumentTypeChildNodePreviousElementSibling/*'/>
@@ -309,8 +309,8 @@ public partial interface NonDocumentTypeChildNode
 
 
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/ChildNode/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial interface ChildNode
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/ChildNodeBefore/*'/>
@@ -326,8 +326,8 @@ public partial interface ChildNode
 
 
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/Slottable/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial interface Slottable
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/SlottableAssignedSlot/*'/>
@@ -336,37 +336,32 @@ public partial interface Slottable
 
 
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/NodeList/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class NodeList
 {
 	
 	///<include file='Utils/Docs.generated.xml' path='docs/NodeListLength/*'/>
 	public ulong Length { get; }
-	public Node this[int i]
-	{
-		get { throw new System.NotImplementedException(); }
-		set { throw new System.NotImplementedException(); }
-	}
-
+	public Node this[int i]  {  get { throw new System.NotImplementedException(); }  set { throw new System.NotImplementedException(); }  } 
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLCollection/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLCollection
 {
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLCollectionLength/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLCollectionLength/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Length { get; }
 	
 	
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/MutationObserver/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class MutationObserver
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/MutationObserver/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/MutationObserverMutationObserver/*'/>
 	public MutationObserver(MutationCallback callback) { }
 	///<include file='Utils/Docs.generated.xml' path='docs/MutationObserverObserve/*'/>
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Observe(Node target, MutationObserverInit options) { throw new System.NotImplementedException(); }
@@ -376,14 +371,14 @@ public partial class MutationObserver
 	public List<MutationRecord> TakeRecords() { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/MutationCallback/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public struct MutationCallback
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/MutationObserverInit/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class MutationObserverInit
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/MutationObserverInitChildList/*'/>
@@ -402,8 +397,8 @@ public partial class MutationObserverInit
 	public List<string> AttributeFilter;
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/MutationRecord/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class MutationRecord
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/MutationRecordType/*'/>
@@ -426,8 +421,8 @@ public partial class MutationRecord
 	public string? OldValue { get; }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/Node/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class Node : EventTarget
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/NodeELEMENT_NODE/*'/>
@@ -526,16 +521,16 @@ public partial class Node : EventTarget
 	public Node RemoveChild(Node child) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/GetRootNodeOptions/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class GetRootNodeOptions
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/GetRootNodeOptionsComposed/*'/>
 	public bool Composed;
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/DOMImplementation/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class DOMImplementation
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/DOMImplementationCreateDocumentType/*'/>
@@ -548,8 +543,8 @@ public partial class DOMImplementation
 	public bool HasFeature() { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/DocumentType/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class DocumentType : Node, ChildNode
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/DocumentTypeName/*'/>
@@ -560,16 +555,16 @@ public partial class DocumentType : Node, ChildNode
 	public string SystemId { get; }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/DocumentFragment/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class DocumentFragment : Node, NonElementParentNode, ParentNode
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/DocumentFragment/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/DocumentFragmentDocumentFragment/*'/>
 	public DocumentFragment() { }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/ShadowRoot/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class ShadowRoot : DocumentFragment, DocumentOrShadowRoot
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/ShadowRootMode/*'/>
@@ -598,8 +593,8 @@ public enum SlotAssignmentMode
 	Named,
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/Element/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class Element : Node, ParentNode, NonDocumentTypeChildNode, ChildNode, Slottable
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/ElementNamespaceURI/*'/>
@@ -674,8 +669,8 @@ public partial class Element : Node, ParentNode, NonDocumentTypeChildNode, Child
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ InsertAdjacentText(string where, string data) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/ShadowRootInit/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class ShadowRootInit
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/ShadowRootInitMode/*'/>
@@ -686,8 +681,8 @@ public partial class ShadowRootInit
 	public SlotAssignmentMode SlotAssignment;
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/NamedNodeMap/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class NamedNodeMap
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/NamedNodeMapLength/*'/>
@@ -706,8 +701,8 @@ public partial class NamedNodeMap
 	public Attr RemoveNamedItemNS(string? namespace_, string localName) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/Attr/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class Attr : Node
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/AttrNamespaceURI/*'/>
@@ -726,8 +721,8 @@ public partial class Attr : Node
 	public bool Specified { get; }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/CharacterData/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class CharacterData : Node, NonDocumentTypeChildNode, ChildNode
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/CharacterDataData/*'/>
@@ -746,44 +741,44 @@ public partial class CharacterData : Node, NonDocumentTypeChildNode, ChildNode
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ ReplaceData(ulong offset, ulong count, string data) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/Text/*'/>
+[To(ToAttribute.Default)]
 public partial class Text : CharacterData, Slottable
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/Text/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/TextText/*'/>
 	public Text(string data) { }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/TextSplitText/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/TextSplitText/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public Text SplitText(ulong offset) { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/TextWholeText/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/TextWholeText/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string WholeText { get; }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/CDATASection/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class CDATASection : Text
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/ProcessingInstruction/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class ProcessingInstruction : CharacterData
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/ProcessingInstructionTarget/*'/>
 	public string Target { get; }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/Comment/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class Comment : CharacterData
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/Comment/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/CommentComment/*'/>
 	public Comment(string data) { }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/AbstractRange/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class AbstractRange
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/AbstractRangeStartContainer/*'/>
@@ -798,8 +793,8 @@ public partial class AbstractRange
 	public bool Collapsed { get; }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/StaticRangeInit/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class StaticRangeInit
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/StaticRangeInitStartContainer/*'/>
@@ -812,19 +807,19 @@ public partial class StaticRangeInit
 	public required ulong EndOffset;
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/StaticRange/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class StaticRange : AbstractRange
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/StaticRange/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/StaticRangeStaticRange/*'/>
 	public StaticRange(StaticRangeInit init) { }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/Range/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class Range : AbstractRange
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/Range/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/RangeRange/*'/>
 	public Range() { }
 	///<include file='Utils/Docs.generated.xml' path='docs/RangeCommonAncestorContainer/*'/>
 	public Node CommonAncestorContainer { get; }
@@ -879,8 +874,8 @@ public partial class Range : AbstractRange
 	
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/NodeIterator/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class NodeIterator
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/NodeIteratorRoot/*'/>
@@ -901,8 +896,8 @@ public partial class NodeIterator
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Detach() { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/TreeWalker/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class TreeWalker
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/TreeWalkerRoot/*'/>
@@ -929,8 +924,8 @@ public partial class TreeWalker
 	public Node? NextNode() { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/NodeFilter/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial interface NodeFilter
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/NodeFilterFILTER_ACCEPT/*'/>
@@ -969,8 +964,8 @@ public partial interface NodeFilter
 	public ushort AcceptNode(Node node) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/DOMTokenList/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class DOMTokenList
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/DOMTokenListLength/*'/>
@@ -990,16 +985,11 @@ public partial class DOMTokenList
 	public bool Supports(string token) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/DOMTokenListValue/*'/>
 	public string Value { get; set; }
-	public string this[int i]
-	{
-		get { throw new System.NotImplementedException(); }
-		set { throw new System.NotImplementedException(); }
-	}
-
+	public string this[int i]  {  get { throw new System.NotImplementedException(); }  set { throw new System.NotImplementedException(); }  } 
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/XPathResult/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class XPathResult
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/XPathResultANY_TYPE/*'/>
@@ -1042,24 +1032,24 @@ public partial class XPathResult
 	public Node? SnapshotItem(ulong index) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/XPathExpression/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class XPathExpression
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/XPathExpressionEvaluate/*'/>
 	public XPathResult Evaluate(Node contextNode, ushort type, XPathResult? result) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/XPathNSResolver/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial interface XPathNSResolver
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/XPathNSResolverLookupNamespaceURI/*'/>
 	public string? LookupNamespaceURI(string? prefix) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/XPathEvaluatorBase/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial interface XPathEvaluatorBase
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/XPathEvaluatorBaseCreateExpression/*'/>
@@ -1071,20 +1061,20 @@ public partial interface XPathEvaluatorBase
 }
 
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/XPathEvaluator/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class XPathEvaluator
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/XPathEvaluator/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/XPathEvaluatorXPathEvaluator/*'/>
 	public XPathEvaluator() { }
 }
 
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/XSLTProcessor/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class XSLTProcessor
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/XSLTProcessor/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/XSLTProcessorXSLTProcessor/*'/>
 	public XSLTProcessor() { }
 	///<include file='Utils/Docs.generated.xml' path='docs/XSLTProcessorImportStylesheet/*'/>
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ ImportStylesheet(Node style) { throw new System.NotImplementedException(); }
@@ -1104,8 +1094,8 @@ public partial class XSLTProcessor
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Reset() { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/TextDecoderCommon/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial interface TextDecoderCommon
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/TextDecoderCommonEncoding/*'/>
@@ -1116,100 +1106,100 @@ public partial interface TextDecoderCommon
 	public bool IgnoreBOM { get { throw new System.NotImplementedException(); } }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/TextDecoderOptions/*'/>
+[To(ToAttribute.Default)]
 public partial class TextDecoderOptions
 {
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/TextDecoderOptionsFatal/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/TextDecoderOptionsFatal/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Fatal;
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/TextDecoderOptionsIgnoreBOM/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/TextDecoderOptionsIgnoreBOM/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool IgnoreBOM;
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/TextDecodeOptions/*'/>
+[To(ToAttribute.Default)]
 public partial class TextDecodeOptions
 {
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/TextDecodeOptionsStream/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/TextDecodeOptionsStream/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Stream;
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/TextDecoder/*'/>
+[To(ToAttribute.Default)]
 public partial class TextDecoder
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/TextDecoder/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/TextDecoderTextDecoder/*'/>
 	public TextDecoder(string label, TextDecoderOptions options) { }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/TextDecoderDecode/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/TextDecoderDecode/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Decode(BufferSource input, TextDecodeOptions options) { throw new System.NotImplementedException(); }
 }
 
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/TextEncoderCommon/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial interface TextEncoderCommon
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/TextEncoderCommonEncoding/*'/>
 	public string Encoding { get { throw new System.NotImplementedException(); } }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/TextEncoderEncodeIntoResult/*'/>
+[To(ToAttribute.Default)]
 public partial class TextEncoderEncodeIntoResult
 {
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/TextEncoderEncodeIntoResultRead/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/TextEncoderEncodeIntoResultRead/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Read;
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/TextEncoderEncodeIntoResultWritten/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/TextEncoderEncodeIntoResultWritten/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Written;
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/TextEncoder/*'/>
+[To(ToAttribute.Default)]
 public partial class TextEncoder
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/TextEncoder/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/TextEncoderTextEncoder/*'/>
 	public TextEncoder() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/TextEncoderEncode/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/TextEncoderEncode/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public System.Byte Encode(string input) { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/TextEncoderEncodeInto/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/TextEncoderEncodeInto/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public TextEncoderEncodeIntoResult EncodeInto(string source, System.Byte destination) { throw new System.NotImplementedException(); }
 }
 
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/TextDecoderStream/*'/>
+[To(ToAttribute.Default)]
 public partial class TextDecoderStream
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/TextDecoderStream/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/TextDecoderStreamTextDecoderStream/*'/>
 	public TextDecoderStream(string label, TextDecoderOptions options) { }
 }
 
 
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/TextEncoderStream/*'/>
+[To(ToAttribute.Default)]
 public partial class TextEncoderStream
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/TextEncoderStream/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/TextEncoderStreamTextEncoderStream/*'/>
 	public TextEncoderStream() { }
 }
 
 
 
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/Headers/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class Headers
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/Headers/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HeadersHeaders/*'/>
 	public Headers(HeadersInit init) { }
 	///<include file='Utils/Docs.generated.xml' path='docs/HeadersAppend/*'/>
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Append(string name, string value) { throw new System.NotImplementedException(); }
@@ -1221,18 +1211,13 @@ public partial class Headers
 	public bool Has(string name) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/HeadersSet/*'/>
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Set(string name, string value) { throw new System.NotImplementedException(); }
-	public string this[int i]
-	{
-		get { throw new System.NotImplementedException(); }
-		set { throw new System.NotImplementedException(); }
-	}
-
+	public string this[int i]  {  get { throw new System.NotImplementedException(); }  set { throw new System.NotImplementedException(); }  } 
 }
 
 
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/Body/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial interface Body
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/BodyBody/*'/>
@@ -1252,11 +1237,11 @@ public partial interface Body
 }
 
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/Request/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class Request
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/Request/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/RequestRequest/*'/>
 	public Request(RequestInfo input, RequestInit init) { }
 	///<include file='Utils/Docs.generated.xml' path='docs/RequestMethod/*'/>
 	public string Method { get; }
@@ -1293,8 +1278,8 @@ public partial class Request
 }
 
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/RequestInit/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class RequestInit
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/RequestInitMethod/*'/>
@@ -1386,11 +1371,11 @@ public enum RequestRedirect
 	Manual,
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/Response/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class Response
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/Response/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/ResponseResponse/*'/>
 	public Response(BodyInit? body, ResponseInit init) { }
 	///<include file='Utils/Docs.generated.xml' path='docs/ResponseError/*'/>
 	public static Response Error() { throw new System.NotImplementedException(); }
@@ -1417,8 +1402,8 @@ public partial class Response
 }
 
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/ResponseInit/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class ResponseInit
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/ResponseInitStatus/*'/>
@@ -1440,8 +1425,8 @@ public enum ResponseType
 	Opaqueredirect,
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/WindowOrWorkerGlobalScope/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial interface WindowOrWorkerGlobalScope
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/WindowOrWorkerGlobalScopeFetch/*'/>
@@ -1456,8 +1441,8 @@ public enum FullscreenNavigationUI
 	Hide,
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/FullscreenOptions/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class FullscreenOptions
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/FullscreenOptionsNavigationUI/*'/>
@@ -1475,8 +1460,8 @@ public partial class Element
 	public EventHandler Onfullscreenerror { get; set; }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/Document/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class Document
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/DocumentFullscreenEnabled/*'/>
@@ -1498,56 +1483,56 @@ public partial interface DocumentOrShadowRoot
 	public Element? FullscreenElement { get { throw new System.NotImplementedException(); } }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLAllCollection/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLAllCollection
 {
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLAllCollectionLength/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLAllCollectionLength/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Length { get; }
 	
 	
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLAllCollectionItem/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLAllCollectionItem/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public Union14? Item(string nameOrIndex) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLFormControlsCollection/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLFormControlsCollection : HTMLCollection
 {
 	
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/RadioNodeList/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class RadioNodeList : NodeList
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/RadioNodeListValue/*'/>
 	public string Value { get; set; }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLOptionsCollection/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLOptionsCollection : HTMLCollection
 {
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLOptionsCollectionLength/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLOptionsCollectionLength/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Length { get; set; }
 	
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLOptionsCollectionAdd/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLOptionsCollectionAdd/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Add(Union16 element, Union17? before) { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLOptionsCollectionRemove/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLOptionsCollectionRemove/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Remove(long index) { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLOptionsCollectionSelectedIndex/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLOptionsCollectionSelectedIndex/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public long SelectedIndex { get; set; }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/DOMStringList/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class DOMStringList
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/DOMStringListLength/*'/>
@@ -1660,56 +1645,56 @@ public partial interface DocumentOrShadowRoot
 	public Element? ActiveElement { get { throw new System.NotImplementedException(); } }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLElement : Element, GlobalEventHandlers, DocumentAndElementEventHandlers, ElementContentEditable, HTMLOrSVGElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLElementHTMLElement/*'/>
 	public HTMLElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLElementTitle/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLElementTitle/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Title { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLElementLang/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLElementLang/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Lang { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLElementTranslate/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLElementTranslate/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Translate { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLElementDir/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLElementDir/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Dir { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLElementHidden/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLElementHidden/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public Union19? Hidden { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLElementInert/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLElementInert/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Inert { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLElementClick/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLElementClick/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Click() { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLElementAccessKey/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLElementAccessKey/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string AccessKey { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLElementAccessKeyLabel/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLElementAccessKeyLabel/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string AccessKeyLabel { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLElementDraggable/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLElementDraggable/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Draggable { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLElementSpellcheck/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLElementSpellcheck/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Spellcheck { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLElementAutocapitalize/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLElementAutocapitalize/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Autocapitalize { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLElementInnerText/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLElementInnerText/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string InnerText { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLElementOuterText/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLElementOuterText/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string OuterText { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLElementAttachInternals/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLElementAttachInternals/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public ElementInternals AttachInternals() { throw new System.NotImplementedException(); }
 }
 
@@ -1717,14 +1702,14 @@ public partial class HTMLElement : Element, GlobalEventHandlers, DocumentAndElem
 
 
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLUnknownElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLUnknownElement : HTMLElement
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLOrSVGElement/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial interface HTMLOrSVGElement
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLOrSVGElementDataset/*'/>
@@ -1741,8 +1726,8 @@ public partial interface HTMLOrSVGElement
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Blur() { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/DOMStringMap/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class DOMStringMap
 {
 	
@@ -1750,135 +1735,135 @@ public partial class DOMStringMap
 	
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLHtmlElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLHtmlElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLHtmlElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLHtmlElementHTMLHtmlElement/*'/>
 	public HTMLHtmlElement() { }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLHeadElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLHeadElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLHeadElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLHeadElementHTMLHeadElement/*'/>
 	public HTMLHeadElement() { }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLTitleElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLTitleElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTitleElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTitleElementHTMLTitleElement/*'/>
 	public HTMLTitleElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTitleElementText/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTitleElementText/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Text { get; set; }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLBaseElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLBaseElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLBaseElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLBaseElementHTMLBaseElement/*'/>
 	public HTMLBaseElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLBaseElementHref/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLBaseElementHref/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Href { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLBaseElementTarget/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLBaseElementTarget/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Target { get; set; }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLLinkElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLLinkElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLLinkElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLLinkElementHTMLLinkElement/*'/>
 	public HTMLLinkElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLLinkElementHref/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLLinkElementHref/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Href { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLLinkElementCrossOrigin/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLLinkElementCrossOrigin/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string? CrossOrigin { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLLinkElementRel/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLLinkElementRel/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Rel { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLLinkElementAs/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLLinkElementAs/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string As { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLLinkElementRelList/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLLinkElementRelList/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMTokenList RelList { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLLinkElementMedia/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLLinkElementMedia/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Media { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLLinkElementIntegrity/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLLinkElementIntegrity/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Integrity { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLLinkElementHreflang/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLLinkElementHreflang/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Hreflang { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLLinkElementType/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLLinkElementType/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Type { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLLinkElementSizes/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLLinkElementSizes/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMTokenList Sizes { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLLinkElementImageSrcset/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLLinkElementImageSrcset/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string ImageSrcset { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLLinkElementImageSizes/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLLinkElementImageSizes/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string ImageSizes { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLLinkElementReferrerPolicy/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLLinkElementReferrerPolicy/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string ReferrerPolicy { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLLinkElementBlocking/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLLinkElementBlocking/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMTokenList Blocking { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLLinkElementDisabled/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLLinkElementDisabled/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Disabled { get; set; }
 }
 
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLMetaElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLMetaElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMetaElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMetaElementHTMLMetaElement/*'/>
 	public HTMLMetaElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMetaElementName/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMetaElementName/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Name { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMetaElementHttpEquiv/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMetaElementHttpEquiv/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string HttpEquiv { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMetaElementContent/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMetaElementContent/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Content { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMetaElementMedia/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMetaElementMedia/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Media { get; set; }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLStyleElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLStyleElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLStyleElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLStyleElementHTMLStyleElement/*'/>
 	public HTMLStyleElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLStyleElementDisabled/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLStyleElementDisabled/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Disabled { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLStyleElementMedia/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLStyleElementMedia/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Media { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLStyleElementBlocking/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLStyleElementBlocking/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMTokenList Blocking { get; }
 }
 
@@ -1886,190 +1871,190 @@ public partial class HTMLStyleElement : HTMLElement
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLBodyElement/*'/>
 public partial class HTMLBodyElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLBodyElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLBodyElementHTMLBodyElement/*'/>
 	public HTMLBodyElement() { }
 }
 
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLHeadingElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLHeadingElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLHeadingElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLHeadingElementHTMLHeadingElement/*'/>
 	public HTMLHeadingElement() { }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLParagraphElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLParagraphElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLParagraphElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLParagraphElementHTMLParagraphElement/*'/>
 	public HTMLParagraphElement() { }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLHRElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLHRElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLHRElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLHRElementHTMLHRElement/*'/>
 	public HTMLHRElement() { }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLPreElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLPreElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLPreElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLPreElementHTMLPreElement/*'/>
 	public HTMLPreElement() { }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLQuoteElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLQuoteElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLQuoteElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLQuoteElementHTMLQuoteElement/*'/>
 	public HTMLQuoteElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLQuoteElementCite/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLQuoteElementCite/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Cite { get; set; }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLOListElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLOListElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLOListElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLOListElementHTMLOListElement/*'/>
 	public HTMLOListElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLOListElementReversed/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLOListElementReversed/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Reversed { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLOListElementStart/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLOListElementStart/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public long Start { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLOListElementType/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLOListElementType/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Type { get; set; }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLUListElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLUListElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLUListElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLUListElementHTMLUListElement/*'/>
 	public HTMLUListElement() { }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLMenuElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLMenuElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMenuElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMenuElementHTMLMenuElement/*'/>
 	public HTMLMenuElement() { }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLLIElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLLIElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLLIElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLLIElementHTMLLIElement/*'/>
 	public HTMLLIElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLLIElementValue/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLLIElementValue/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public long Value { get; set; }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLDListElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLDListElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLDListElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLDListElementHTMLDListElement/*'/>
 	public HTMLDListElement() { }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLDivElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLDivElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLDivElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLDivElementHTMLDivElement/*'/>
 	public HTMLDivElement() { }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLAnchorElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLAnchorElement : HTMLElement, HTMLHyperlinkElementUtils
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLAnchorElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLAnchorElementHTMLAnchorElement/*'/>
 	public HTMLAnchorElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLAnchorElementTarget/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLAnchorElementTarget/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Target { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLAnchorElementDownload/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLAnchorElementDownload/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Download { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLAnchorElementPing/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLAnchorElementPing/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Ping { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLAnchorElementRel/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLAnchorElementRel/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Rel { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLAnchorElementRelList/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLAnchorElementRelList/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMTokenList RelList { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLAnchorElementHreflang/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLAnchorElementHreflang/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Hreflang { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLAnchorElementType/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLAnchorElementType/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Type { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLAnchorElementText/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLAnchorElementText/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Text { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLAnchorElementReferrerPolicy/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLAnchorElementReferrerPolicy/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string ReferrerPolicy { get; set; }
 }
 
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLDataElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLDataElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLDataElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLDataElementHTMLDataElement/*'/>
 	public HTMLDataElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLDataElementValue/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLDataElementValue/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Value { get; set; }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLTimeElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLTimeElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTimeElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTimeElementHTMLTimeElement/*'/>
 	public HTMLTimeElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTimeElementDateTime/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTimeElementDateTime/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string DateTime { get; set; }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLSpanElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLSpanElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLSpanElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLSpanElementHTMLSpanElement/*'/>
 	public HTMLSpanElement() { }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLBRElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLBRElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLBRElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLBRElementHTMLBRElement/*'/>
 	public HTMLBRElement() { }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLHyperlinkElementUtils/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial interface HTMLHyperlinkElementUtils
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLHyperlinkElementUtilsHref/*'/>
@@ -2096,311 +2081,311 @@ public partial interface HTMLHyperlinkElementUtils
 	public string Hash { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLModElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLModElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLModElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLModElementHTMLModElement/*'/>
 	public HTMLModElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLModElementCite/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLModElementCite/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Cite { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLModElementDateTime/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLModElementDateTime/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string DateTime { get; set; }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLPictureElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLPictureElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLPictureElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLPictureElementHTMLPictureElement/*'/>
 	public HTMLPictureElement() { }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLSourceElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLSourceElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLSourceElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLSourceElementHTMLSourceElement/*'/>
 	public HTMLSourceElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLSourceElementSrc/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLSourceElementSrc/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Src { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLSourceElementType/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLSourceElementType/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Type { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLSourceElementSrcset/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLSourceElementSrcset/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Srcset { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLSourceElementSizes/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLSourceElementSizes/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Sizes { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLSourceElementMedia/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLSourceElementMedia/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Media { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLSourceElementWidth/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLSourceElementWidth/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Width { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLSourceElementHeight/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLSourceElementHeight/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Height { get; set; }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLImageElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLImageElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLImageElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLImageElementHTMLImageElement/*'/>
 	public HTMLImageElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLImageElementAlt/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLImageElementAlt/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Alt { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLImageElementSrc/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLImageElementSrc/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Src { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLImageElementSrcset/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLImageElementSrcset/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Srcset { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLImageElementSizes/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLImageElementSizes/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Sizes { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLImageElementCrossOrigin/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLImageElementCrossOrigin/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string? CrossOrigin { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLImageElementUseMap/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLImageElementUseMap/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string UseMap { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLImageElementIsMap/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLImageElementIsMap/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool IsMap { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLImageElementWidth/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLImageElementWidth/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Width { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLImageElementHeight/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLImageElementHeight/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Height { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLImageElementNaturalWidth/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLImageElementNaturalWidth/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong NaturalWidth { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLImageElementNaturalHeight/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLImageElementNaturalHeight/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong NaturalHeight { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLImageElementComplete/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLImageElementComplete/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Complete { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLImageElementCurrentSrc/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLImageElementCurrentSrc/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string CurrentSrc { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLImageElementReferrerPolicy/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLImageElementReferrerPolicy/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string ReferrerPolicy { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLImageElementDecoding/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLImageElementDecoding/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Decoding { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLImageElementLoading/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLImageElementLoading/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Loading { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLImageElementDecode/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLImageElementDecode/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public Task<CSharpToJavaScript.Utils.Unsupported /*undefined*/> Decode() { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLIFrameElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLIFrameElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLIFrameElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLIFrameElementHTMLIFrameElement/*'/>
 	public HTMLIFrameElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLIFrameElementSrc/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLIFrameElementSrc/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Src { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLIFrameElementSrcdoc/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLIFrameElementSrcdoc/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Srcdoc { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLIFrameElementName/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLIFrameElementName/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Name { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLIFrameElementSandbox/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLIFrameElementSandbox/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMTokenList Sandbox { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLIFrameElementAllow/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLIFrameElementAllow/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Allow { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLIFrameElementAllowFullscreen/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLIFrameElementAllowFullscreen/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool AllowFullscreen { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLIFrameElementWidth/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLIFrameElementWidth/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Width { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLIFrameElementHeight/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLIFrameElementHeight/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Height { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLIFrameElementReferrerPolicy/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLIFrameElementReferrerPolicy/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string ReferrerPolicy { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLIFrameElementLoading/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLIFrameElementLoading/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Loading { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLIFrameElementContentDocument/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLIFrameElementContentDocument/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public Document? ContentDocument { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLIFrameElementContentWindow/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLIFrameElementContentWindow/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public Window? ContentWindow { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLIFrameElementGetSVGDocument/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLIFrameElementGetSVGDocument/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public Document? GetSVGDocument() { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLEmbedElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLEmbedElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLEmbedElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLEmbedElementHTMLEmbedElement/*'/>
 	public HTMLEmbedElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLEmbedElementSrc/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLEmbedElementSrc/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Src { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLEmbedElementType/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLEmbedElementType/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Type { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLEmbedElementWidth/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLEmbedElementWidth/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Width { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLEmbedElementHeight/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLEmbedElementHeight/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Height { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLEmbedElementGetSVGDocument/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLEmbedElementGetSVGDocument/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public Document? GetSVGDocument() { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLObjectElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLObjectElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLObjectElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLObjectElementHTMLObjectElement/*'/>
 	public HTMLObjectElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLObjectElementData/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLObjectElementData/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Data { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLObjectElementType/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLObjectElementType/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Type { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLObjectElementName/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLObjectElementName/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Name { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLObjectElementForm/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLObjectElementForm/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLFormElement? Form { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLObjectElementWidth/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLObjectElementWidth/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Width { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLObjectElementHeight/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLObjectElementHeight/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Height { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLObjectElementContentDocument/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLObjectElementContentDocument/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public Document? ContentDocument { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLObjectElementContentWindow/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLObjectElementContentWindow/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public Window? ContentWindow { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLObjectElementGetSVGDocument/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLObjectElementGetSVGDocument/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public Document? GetSVGDocument() { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLObjectElementWillValidate/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLObjectElementWillValidate/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool WillValidate { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLObjectElementValidity/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLObjectElementValidity/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public ValidityState Validity { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLObjectElementValidationMessage/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLObjectElementValidationMessage/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string ValidationMessage { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLObjectElementCheckValidity/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLObjectElementCheckValidity/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool CheckValidity() { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLObjectElementReportValidity/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLObjectElementReportValidity/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool ReportValidity() { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLObjectElementSetCustomValidity/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLObjectElementSetCustomValidity/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ SetCustomValidity(string error) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLVideoElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLVideoElement : HTMLMediaElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLVideoElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLVideoElementHTMLVideoElement/*'/>
 	public HTMLVideoElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLVideoElementWidth/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLVideoElementWidth/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Width { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLVideoElementHeight/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLVideoElementHeight/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Height { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLVideoElementVideoWidth/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLVideoElementVideoWidth/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong VideoWidth { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLVideoElementVideoHeight/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLVideoElementVideoHeight/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong VideoHeight { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLVideoElementPoster/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLVideoElementPoster/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Poster { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLVideoElementPlaysInline/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLVideoElementPlaysInline/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool PlaysInline { get; set; }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLAudioElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLAudioElement : HTMLMediaElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLAudioElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLAudioElementHTMLAudioElement/*'/>
 	public HTMLAudioElement() { }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLTrackElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLTrackElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTrackElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTrackElementHTMLTrackElement/*'/>
 	public HTMLTrackElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTrackElementKind/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTrackElementKind/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Kind { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTrackElementSrc/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTrackElementSrc/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Src { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTrackElementSrclang/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTrackElementSrclang/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Srclang { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTrackElementLabel/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTrackElementLabel/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Label { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTrackElementDefault/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTrackElementDefault/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Default { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTrackElementNONE/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTrackElementNONE/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public const ushort NONE = 0;
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTrackElementLOADING/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTrackElementLOADING/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public const ushort LOADING = 1;
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTrackElementLOADED/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTrackElementLOADED/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public const ushort LOADED = 2;
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTrackElementERROR/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTrackElementERROR/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public const ushort ERROR = 3;
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTrackElementReadyState/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTrackElementReadyState/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public ushort ReadyState { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTrackElementTrack/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTrackElementTrack/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public TextTrack Track { get; }
 }
 
@@ -2413,149 +2398,149 @@ public enum CanPlayTypeResult
 }
 
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLMediaElement : HTMLElement
 {
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementError/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementError/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public MediaError? Error { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementSrc/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementSrc/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Src { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementSrcObject/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementSrcObject/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public MediaProvider? SrcObject { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementCurrentSrc/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementCurrentSrc/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string CurrentSrc { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementCrossOrigin/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementCrossOrigin/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string? CrossOrigin { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementNETWORK_EMPTY/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementNETWORK_EMPTY/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public const ushort NETWORK_EMPTY = 0;
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementNETWORK_IDLE/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementNETWORK_IDLE/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public const ushort NETWORK_IDLE = 1;
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementNETWORK_LOADING/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementNETWORK_LOADING/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public const ushort NETWORK_LOADING = 2;
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementNETWORK_NO_SOURCE/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementNETWORK_NO_SOURCE/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public const ushort NETWORK_NO_SOURCE = 3;
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementNetworkState/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementNetworkState/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public ushort NetworkState { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementPreload/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementPreload/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Preload { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementBufferingThrottled/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementBufferingThrottled/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool BufferingThrottled { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementBuffered/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementBuffered/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public TimeRanges Buffered { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementLoad/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementLoad/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Load() { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementCanPlayType/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementCanPlayType/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public CanPlayTypeResult CanPlayType(string type) { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementHAVE_NOTHING/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementHAVE_NOTHING/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public const ushort HAVE_NOTHING = 0;
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementHAVE_METADATA/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementHAVE_METADATA/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public const ushort HAVE_METADATA = 1;
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementHAVE_CURRENT_DATA/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementHAVE_CURRENT_DATA/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public const ushort HAVE_CURRENT_DATA = 2;
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementHAVE_FUTURE_DATA/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementHAVE_FUTURE_DATA/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public const ushort HAVE_FUTURE_DATA = 3;
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementHAVE_ENOUGH_DATA/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementHAVE_ENOUGH_DATA/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public const ushort HAVE_ENOUGH_DATA = 4;
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementReadyState/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementReadyState/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public ushort ReadyState { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementSeeking/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementSeeking/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Seeking { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementCurrentTime/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementCurrentTime/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public double CurrentTime { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementFastSeek/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementFastSeek/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ FastSeek(double time) { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementDuration/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementDuration/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public double Duration { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementGetStartDate/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementGetStartDate/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public object GetStartDate() { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementPaused/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementPaused/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Paused { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementDefaultPlaybackRate/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementDefaultPlaybackRate/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public double DefaultPlaybackRate { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementPlaybackRate/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementPlaybackRate/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public double PlaybackRate { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementPreservesPitch/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementPreservesPitch/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool PreservesPitch { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementPlayed/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementPlayed/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public TimeRanges Played { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementSeekable/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementSeekable/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public TimeRanges Seekable { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementEnded/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementEnded/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Ended { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementAutoplay/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementAutoplay/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Autoplay { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementLoop/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementLoop/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Loop { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementPlay/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementPlay/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public Task<CSharpToJavaScript.Utils.Unsupported /*undefined*/> Play() { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementPause/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementPause/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Pause() { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementControls/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementControls/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Controls { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementVolume/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementVolume/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public double Volume { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementMuted/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementMuted/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Muted { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementDefaultMuted/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementDefaultMuted/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool DefaultMuted { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementAudioTracks/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementAudioTracks/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public AudioTrackList AudioTracks { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementVideoTracks/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementVideoTracks/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public VideoTrackList VideoTracks { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementTextTracks/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementTextTracks/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public TextTrackList TextTracks { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementAddTextTrack/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementAddTextTrack/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public TextTrack AddTextTrack(TextTrackKind kind, string label, string language) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/MediaError/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class MediaError
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/MediaErrorMEDIA_ERR_ABORTED/*'/>
@@ -2572,8 +2557,8 @@ public partial class MediaError
 	public string Message { get; }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/AudioTrackList/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class AudioTrackList : EventTarget
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/AudioTrackListLength/*'/>
@@ -2589,8 +2574,8 @@ public partial class AudioTrackList : EventTarget
 	public EventHandler Onremovetrack { get; set; }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/AudioTrack/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class AudioTrack
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/AudioTrackId/*'/>
@@ -2605,8 +2590,8 @@ public partial class AudioTrack
 	public bool Enabled { get; set; }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/VideoTrackList/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class VideoTrackList : EventTarget
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/VideoTrackListLength/*'/>
@@ -2624,8 +2609,8 @@ public partial class VideoTrackList : EventTarget
 	public EventHandler Onremovetrack { get; set; }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/VideoTrack/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class VideoTrack
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/VideoTrackId/*'/>
@@ -2640,25 +2625,25 @@ public partial class VideoTrack
 	public bool Selected { get; set; }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/TextTrackList/*'/>
+[To(ToAttribute.Default)]
 public partial class TextTrackList : EventTarget
 {
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/TextTrackListLength/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/TextTrackListLength/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Length { get; }
 	
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/TextTrackListGetTrackById/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/TextTrackListGetTrackById/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public TextTrack? GetTrackById(string id) { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/TextTrackListOnchange/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/TextTrackListOnchange/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public EventHandler Onchange { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/TextTrackListOnaddtrack/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/TextTrackListOnaddtrack/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public EventHandler Onaddtrack { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/TextTrackListOnremovetrack/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/TextTrackListOnremovetrack/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public EventHandler Onremovetrack { get; set; }
 }
 
@@ -2680,87 +2665,87 @@ public enum TextTrackKind
 	Metadata,
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/TextTrack/*'/>
+[To(ToAttribute.Default)]
 public partial class TextTrack : EventTarget
 {
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/TextTrackKind/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/TextTrackKind/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public TextTrackKind Kind { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/TextTrackLabel/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/TextTrackLabel/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Label { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/TextTrackLanguage/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/TextTrackLanguage/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Language { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/TextTrackId/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/TextTrackId/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Id { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/TextTrackInBandMetadataTrackDispatchType/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/TextTrackInBandMetadataTrackDispatchType/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string InBandMetadataTrackDispatchType { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/TextTrackMode/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/TextTrackMode/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public TextTrackMode Mode { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/TextTrackCues/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/TextTrackCues/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public TextTrackCueList? Cues { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/TextTrackActiveCues/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/TextTrackActiveCues/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public TextTrackCueList? ActiveCues { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/TextTrackAddCue/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/TextTrackAddCue/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ AddCue(TextTrackCue cue) { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/TextTrackRemoveCue/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/TextTrackRemoveCue/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ RemoveCue(TextTrackCue cue) { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/TextTrackOncuechange/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/TextTrackOncuechange/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public EventHandler Oncuechange { get; set; }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/TextTrackCueList/*'/>
+[To(ToAttribute.Default)]
 public partial class TextTrackCueList
 {
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/TextTrackCueListLength/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/TextTrackCueListLength/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Length { get; }
 	
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/TextTrackCueListGetCueById/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/TextTrackCueListGetCueById/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public TextTrackCue? GetCueById(string id) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/TextTrackCue/*'/>
+[To(ToAttribute.Default)]
 public partial class TextTrackCue : EventTarget
 {
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/TextTrackCueTrack/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/TextTrackCueTrack/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public TextTrack? Track { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/TextTrackCueId/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/TextTrackCueId/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Id { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/TextTrackCueStartTime/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/TextTrackCueStartTime/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public double StartTime { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/TextTrackCueEndTime/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/TextTrackCueEndTime/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public double EndTime { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/TextTrackCuePauseOnExit/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/TextTrackCuePauseOnExit/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool PauseOnExit { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/TextTrackCueOnenter/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/TextTrackCueOnenter/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public EventHandler Onenter { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/TextTrackCueOnexit/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/TextTrackCueOnexit/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public EventHandler Onexit { get; set; }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/TimeRanges/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class TimeRanges
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/TimeRangesLength/*'/>
@@ -2771,901 +2756,901 @@ public partial class TimeRanges
 	public double End(ulong index) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/TrackEvent/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class TrackEvent : Event
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/TrackEvent/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/TrackEventTrackEvent/*'/>
 	public TrackEvent(string type, TrackEventInit eventInitDict) { }
 	///<include file='Utils/Docs.generated.xml' path='docs/TrackEventTrack/*'/>
 	public Union21? Track { get; }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/TrackEventInit/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class TrackEventInit : EventInit
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/TrackEventInitTrack/*'/>
 	public Union22? Track;
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLMapElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLMapElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMapElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMapElementHTMLMapElement/*'/>
 	public HTMLMapElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMapElementName/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMapElementName/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Name { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMapElementAreas/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMapElementAreas/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLCollection Areas { get; }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLAreaElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLAreaElement : HTMLElement, HTMLHyperlinkElementUtils
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLAreaElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLAreaElementHTMLAreaElement/*'/>
 	public HTMLAreaElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLAreaElementAlt/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLAreaElementAlt/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Alt { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLAreaElementCoords/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLAreaElementCoords/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Coords { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLAreaElementShape/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLAreaElementShape/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Shape { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLAreaElementTarget/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLAreaElementTarget/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Target { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLAreaElementDownload/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLAreaElementDownload/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Download { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLAreaElementPing/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLAreaElementPing/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Ping { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLAreaElementRel/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLAreaElementRel/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Rel { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLAreaElementRelList/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLAreaElementRelList/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMTokenList RelList { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLAreaElementReferrerPolicy/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLAreaElementReferrerPolicy/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string ReferrerPolicy { get; set; }
 }
 
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLTableElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableElementHTMLTableElement/*'/>
 	public HTMLTableElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableElementCaption/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableElementCaption/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLTableCaptionElement? Caption { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableElementCreateCaption/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableElementCreateCaption/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLTableCaptionElement CreateCaption() { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableElementDeleteCaption/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableElementDeleteCaption/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ DeleteCaption() { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableElementTHead/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableElementTHead/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLTableSectionElement? THead { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableElementCreateTHead/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableElementCreateTHead/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLTableSectionElement CreateTHead() { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableElementDeleteTHead/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableElementDeleteTHead/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ DeleteTHead() { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableElementTFoot/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableElementTFoot/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLTableSectionElement? TFoot { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableElementCreateTFoot/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableElementCreateTFoot/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLTableSectionElement CreateTFoot() { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableElementDeleteTFoot/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableElementDeleteTFoot/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ DeleteTFoot() { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableElementTBodies/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableElementTBodies/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLCollection TBodies { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableElementCreateTBody/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableElementCreateTBody/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLTableSectionElement CreateTBody() { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableElementRows/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableElementRows/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLCollection Rows { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableElementInsertRow/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableElementInsertRow/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLTableRowElement InsertRow(long index) { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableElementDeleteRow/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableElementDeleteRow/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ DeleteRow(long index) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableCaptionElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLTableCaptionElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableCaptionElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableCaptionElementHTMLTableCaptionElement/*'/>
 	public HTMLTableCaptionElement() { }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableColElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLTableColElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableColElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableColElementHTMLTableColElement/*'/>
 	public HTMLTableColElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableColElementSpan/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableColElementSpan/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Span { get; set; }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableSectionElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLTableSectionElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableSectionElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableSectionElementHTMLTableSectionElement/*'/>
 	public HTMLTableSectionElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableSectionElementRows/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableSectionElementRows/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLCollection Rows { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableSectionElementInsertRow/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableSectionElementInsertRow/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLTableRowElement InsertRow(long index) { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableSectionElementDeleteRow/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableSectionElementDeleteRow/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ DeleteRow(long index) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableRowElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLTableRowElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableRowElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableRowElementHTMLTableRowElement/*'/>
 	public HTMLTableRowElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableRowElementRowIndex/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableRowElementRowIndex/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public long RowIndex { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableRowElementSectionRowIndex/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableRowElementSectionRowIndex/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public long SectionRowIndex { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableRowElementCells/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableRowElementCells/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLCollection Cells { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableRowElementInsertCell/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableRowElementInsertCell/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLTableCellElement InsertCell(long index) { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableRowElementDeleteCell/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableRowElementDeleteCell/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ DeleteCell(long index) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableCellElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLTableCellElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableCellElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableCellElementHTMLTableCellElement/*'/>
 	public HTMLTableCellElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableCellElementColSpan/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableCellElementColSpan/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong ColSpan { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableCellElementRowSpan/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableCellElementRowSpan/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong RowSpan { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableCellElementHeaders/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableCellElementHeaders/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Headers { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableCellElementCellIndex/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableCellElementCellIndex/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public long CellIndex { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableCellElementScope/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableCellElementScope/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Scope { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableCellElementAbbr/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableCellElementAbbr/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Abbr { get; set; }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLFormElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLFormElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLFormElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLFormElementHTMLFormElement/*'/>
 	public HTMLFormElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLFormElementAcceptCharset/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLFormElementAcceptCharset/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string AcceptCharset { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLFormElementAction/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLFormElementAction/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Action { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLFormElementAutocomplete/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLFormElementAutocomplete/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Autocomplete { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLFormElementEnctype/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLFormElementEnctype/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Enctype { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLFormElementEncoding/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLFormElementEncoding/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Encoding { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLFormElementMethod/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLFormElementMethod/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Method { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLFormElementName/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLFormElementName/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Name { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLFormElementNoValidate/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLFormElementNoValidate/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool NoValidate { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLFormElementTarget/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLFormElementTarget/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Target { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLFormElementRel/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLFormElementRel/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Rel { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLFormElementRelList/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLFormElementRelList/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMTokenList RelList { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLFormElementElements/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLFormElementElements/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLFormControlsCollection Elements { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLFormElementLength/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLFormElementLength/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Length { get; }
 	
 	
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLFormElementSubmit/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLFormElementSubmit/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Submit() { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLFormElementRequestSubmit/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLFormElementRequestSubmit/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ RequestSubmit(HTMLElement? submitter) { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLFormElementReset/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLFormElementReset/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Reset() { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLFormElementCheckValidity/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLFormElementCheckValidity/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool CheckValidity() { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLFormElementReportValidity/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLFormElementReportValidity/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool ReportValidity() { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLLabelElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLLabelElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLLabelElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLLabelElementHTMLLabelElement/*'/>
 	public HTMLLabelElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLLabelElementForm/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLLabelElementForm/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLFormElement? Form { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLLabelElementHtmlFor/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLLabelElementHtmlFor/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string HtmlFor { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLLabelElementControl/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLLabelElementControl/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLElement? Control { get; }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLInputElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementHTMLInputElement/*'/>
 	public HTMLInputElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementAccept/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementAccept/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Accept { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementAlt/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementAlt/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Alt { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementAutocomplete/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementAutocomplete/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Autocomplete { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementDefaultChecked/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementDefaultChecked/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool DefaultChecked { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementChecked/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementChecked/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Checked { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementDirName/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementDirName/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string DirName { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementDisabled/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementDisabled/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Disabled { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementForm/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementForm/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLFormElement? Form { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementFiles/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementFiles/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public CSharpToJavaScript.Utils.Unsupported /*FileList*/? Files { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementFormAction/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementFormAction/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string FormAction { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementFormEnctype/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementFormEnctype/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string FormEnctype { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementFormMethod/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementFormMethod/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string FormMethod { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementFormNoValidate/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementFormNoValidate/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool FormNoValidate { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementFormTarget/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementFormTarget/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string FormTarget { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementHeight/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementHeight/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Height { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementIndeterminate/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementIndeterminate/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Indeterminate { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementList/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementList/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLElement? List { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementMax/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementMax/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Max { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementMaxLength/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementMaxLength/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public long MaxLength { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementMin/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementMin/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Min { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementMinLength/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementMinLength/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public long MinLength { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementMultiple/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementMultiple/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Multiple { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementName/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementName/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Name { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementPattern/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementPattern/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Pattern { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementPlaceholder/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementPlaceholder/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Placeholder { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementReadOnly/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementReadOnly/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool ReadOnly { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementRequired/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementRequired/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Required { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementSize/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementSize/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Size { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementSrc/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementSrc/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Src { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementStep/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementStep/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Step { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementType/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementType/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Type { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementDefaultValue/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementDefaultValue/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string DefaultValue { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementValue/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementValue/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Value { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementValueAsDate/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementValueAsDate/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public object? ValueAsDate { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementValueAsNumber/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementValueAsNumber/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public double ValueAsNumber { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementWidth/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementWidth/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Width { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementStepUp/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementStepUp/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ StepUp(long n) { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementStepDown/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementStepDown/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ StepDown(long n) { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementWillValidate/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementWillValidate/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool WillValidate { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementValidity/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementValidity/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public ValidityState Validity { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementValidationMessage/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementValidationMessage/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string ValidationMessage { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementCheckValidity/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementCheckValidity/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool CheckValidity() { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementReportValidity/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementReportValidity/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool ReportValidity() { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementSetCustomValidity/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementSetCustomValidity/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ SetCustomValidity(string error) { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementLabels/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementLabels/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public NodeList? Labels { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementSelect/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementSelect/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Select() { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementSelectionStart/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementSelectionStart/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong? SelectionStart { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementSelectionEnd/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementSelectionEnd/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong? SelectionEnd { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementSelectionDirection/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementSelectionDirection/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string? SelectionDirection { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementSetRangeText/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementSetRangeText/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ SetRangeText(string replacement) { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementSetRangeText/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementSetRangeText/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ SetRangeText(string replacement, ulong start, ulong end, SelectionMode selectionMode) { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementSetSelectionRange/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementSetSelectionRange/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ SetSelectionRange(ulong start, ulong end, string direction) { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementShowPicker/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementShowPicker/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ ShowPicker() { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLButtonElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLButtonElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLButtonElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLButtonElementHTMLButtonElement/*'/>
 	public HTMLButtonElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLButtonElementDisabled/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLButtonElementDisabled/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Disabled { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLButtonElementForm/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLButtonElementForm/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLFormElement? Form { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLButtonElementFormAction/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLButtonElementFormAction/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string FormAction { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLButtonElementFormEnctype/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLButtonElementFormEnctype/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string FormEnctype { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLButtonElementFormMethod/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLButtonElementFormMethod/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string FormMethod { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLButtonElementFormNoValidate/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLButtonElementFormNoValidate/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool FormNoValidate { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLButtonElementFormTarget/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLButtonElementFormTarget/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string FormTarget { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLButtonElementName/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLButtonElementName/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Name { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLButtonElementType/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLButtonElementType/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Type { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLButtonElementValue/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLButtonElementValue/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Value { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLButtonElementWillValidate/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLButtonElementWillValidate/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool WillValidate { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLButtonElementValidity/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLButtonElementValidity/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public ValidityState Validity { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLButtonElementValidationMessage/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLButtonElementValidationMessage/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string ValidationMessage { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLButtonElementCheckValidity/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLButtonElementCheckValidity/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool CheckValidity() { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLButtonElementReportValidity/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLButtonElementReportValidity/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool ReportValidity() { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLButtonElementSetCustomValidity/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLButtonElementSetCustomValidity/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ SetCustomValidity(string error) { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLButtonElementLabels/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLButtonElementLabels/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public NodeList Labels { get; }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLSelectElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLSelectElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLSelectElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLSelectElementHTMLSelectElement/*'/>
 	public HTMLSelectElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLSelectElementAutocomplete/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLSelectElementAutocomplete/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Autocomplete { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLSelectElementDisabled/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLSelectElementDisabled/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Disabled { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLSelectElementForm/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLSelectElementForm/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLFormElement? Form { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLSelectElementMultiple/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLSelectElementMultiple/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Multiple { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLSelectElementName/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLSelectElementName/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Name { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLSelectElementRequired/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLSelectElementRequired/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Required { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLSelectElementSize/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLSelectElementSize/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Size { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLSelectElementType/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLSelectElementType/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Type { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLSelectElementOptions/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLSelectElementOptions/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLOptionsCollection Options { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLSelectElementLength/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLSelectElementLength/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Length { get; set; }
 	
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLSelectElementNamedItem/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLSelectElementNamedItem/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLOptionElement? NamedItem(string name) { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLSelectElementAdd/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLSelectElementAdd/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Add(Union24 element, Union25? before) { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLSelectElementRemove/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLSelectElementRemove/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Remove() { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLSelectElementRemove/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLSelectElementRemove/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Remove(long index) { throw new System.NotImplementedException(); }
 	
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLSelectElementSelectedOptions/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLSelectElementSelectedOptions/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLCollection SelectedOptions { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLSelectElementSelectedIndex/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLSelectElementSelectedIndex/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public long SelectedIndex { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLSelectElementValue/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLSelectElementValue/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Value { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLSelectElementWillValidate/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLSelectElementWillValidate/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool WillValidate { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLSelectElementValidity/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLSelectElementValidity/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public ValidityState Validity { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLSelectElementValidationMessage/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLSelectElementValidationMessage/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string ValidationMessage { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLSelectElementCheckValidity/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLSelectElementCheckValidity/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool CheckValidity() { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLSelectElementReportValidity/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLSelectElementReportValidity/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool ReportValidity() { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLSelectElementSetCustomValidity/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLSelectElementSetCustomValidity/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ SetCustomValidity(string error) { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLSelectElementLabels/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLSelectElementLabels/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public NodeList Labels { get; }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLDataListElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLDataListElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLDataListElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLDataListElementHTMLDataListElement/*'/>
 	public HTMLDataListElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLDataListElementOptions/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLDataListElementOptions/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLCollection Options { get; }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLOptGroupElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLOptGroupElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLOptGroupElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLOptGroupElementHTMLOptGroupElement/*'/>
 	public HTMLOptGroupElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLOptGroupElementDisabled/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLOptGroupElementDisabled/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Disabled { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLOptGroupElementLabel/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLOptGroupElementLabel/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Label { get; set; }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLOptionElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLOptionElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLOptionElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLOptionElementHTMLOptionElement/*'/>
 	public HTMLOptionElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLOptionElementDisabled/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLOptionElementDisabled/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Disabled { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLOptionElementForm/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLOptionElementForm/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLFormElement? Form { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLOptionElementLabel/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLOptionElementLabel/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Label { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLOptionElementDefaultSelected/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLOptionElementDefaultSelected/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool DefaultSelected { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLOptionElementSelected/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLOptionElementSelected/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Selected { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLOptionElementValue/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLOptionElementValue/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Value { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLOptionElementText/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLOptionElementText/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Text { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLOptionElementIndex/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLOptionElementIndex/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public long Index { get; }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLTextAreaElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementHTMLTextAreaElement/*'/>
 	public HTMLTextAreaElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementAutocomplete/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementAutocomplete/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Autocomplete { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementCols/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementCols/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Cols { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementDirName/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementDirName/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string DirName { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementDisabled/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementDisabled/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Disabled { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementForm/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementForm/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLFormElement? Form { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementMaxLength/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementMaxLength/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public long MaxLength { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementMinLength/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementMinLength/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public long MinLength { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementName/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementName/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Name { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementPlaceholder/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementPlaceholder/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Placeholder { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementReadOnly/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementReadOnly/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool ReadOnly { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementRequired/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementRequired/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Required { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementRows/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementRows/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Rows { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementWrap/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementWrap/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Wrap { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementType/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementType/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Type { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementDefaultValue/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementDefaultValue/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string DefaultValue { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementValue/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementValue/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Value { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementTextLength/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementTextLength/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong TextLength { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementWillValidate/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementWillValidate/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool WillValidate { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementValidity/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementValidity/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public ValidityState Validity { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementValidationMessage/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementValidationMessage/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string ValidationMessage { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementCheckValidity/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementCheckValidity/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool CheckValidity() { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementReportValidity/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementReportValidity/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool ReportValidity() { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementSetCustomValidity/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementSetCustomValidity/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ SetCustomValidity(string error) { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementLabels/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementLabels/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public NodeList Labels { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementSelect/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementSelect/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Select() { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementSelectionStart/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementSelectionStart/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong SelectionStart { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementSelectionEnd/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementSelectionEnd/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong SelectionEnd { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementSelectionDirection/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementSelectionDirection/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string SelectionDirection { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementSetRangeText/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementSetRangeText/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ SetRangeText(string replacement) { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementSetRangeText/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementSetRangeText/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ SetRangeText(string replacement, ulong start, ulong end, SelectionMode selectionMode) { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementSetSelectionRange/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementSetSelectionRange/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ SetSelectionRange(ulong start, ulong end, string direction) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLOutputElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLOutputElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLOutputElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLOutputElementHTMLOutputElement/*'/>
 	public HTMLOutputElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLOutputElementHtmlFor/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLOutputElementHtmlFor/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMTokenList HtmlFor { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLOutputElementForm/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLOutputElementForm/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLFormElement? Form { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLOutputElementName/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLOutputElementName/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Name { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLOutputElementType/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLOutputElementType/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Type { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLOutputElementDefaultValue/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLOutputElementDefaultValue/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string DefaultValue { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLOutputElementValue/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLOutputElementValue/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Value { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLOutputElementWillValidate/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLOutputElementWillValidate/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool WillValidate { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLOutputElementValidity/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLOutputElementValidity/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public ValidityState Validity { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLOutputElementValidationMessage/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLOutputElementValidationMessage/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string ValidationMessage { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLOutputElementCheckValidity/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLOutputElementCheckValidity/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool CheckValidity() { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLOutputElementReportValidity/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLOutputElementReportValidity/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool ReportValidity() { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLOutputElementSetCustomValidity/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLOutputElementSetCustomValidity/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ SetCustomValidity(string error) { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLOutputElementLabels/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLOutputElementLabels/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public NodeList Labels { get; }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLProgressElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLProgressElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLProgressElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLProgressElementHTMLProgressElement/*'/>
 	public HTMLProgressElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLProgressElementValue/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLProgressElementValue/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public double Value { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLProgressElementMax/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLProgressElementMax/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public double Max { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLProgressElementPosition/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLProgressElementPosition/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public double Position { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLProgressElementLabels/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLProgressElementLabels/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public NodeList Labels { get; }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLMeterElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLMeterElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMeterElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMeterElementHTMLMeterElement/*'/>
 	public HTMLMeterElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMeterElementValue/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMeterElementValue/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public double Value { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMeterElementMin/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMeterElementMin/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public double Min { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMeterElementMax/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMeterElementMax/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public double Max { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMeterElementLow/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMeterElementLow/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public double Low { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMeterElementHigh/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMeterElementHigh/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public double High { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMeterElementOptimum/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMeterElementOptimum/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public double Optimum { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMeterElementLabels/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMeterElementLabels/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public NodeList Labels { get; }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLFieldSetElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLFieldSetElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLFieldSetElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLFieldSetElementHTMLFieldSetElement/*'/>
 	public HTMLFieldSetElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLFieldSetElementDisabled/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLFieldSetElementDisabled/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Disabled { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLFieldSetElementForm/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLFieldSetElementForm/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLFormElement? Form { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLFieldSetElementName/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLFieldSetElementName/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Name { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLFieldSetElementType/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLFieldSetElementType/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Type { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLFieldSetElementElements/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLFieldSetElementElements/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLCollection Elements { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLFieldSetElementWillValidate/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLFieldSetElementWillValidate/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool WillValidate { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLFieldSetElementValidity/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLFieldSetElementValidity/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public ValidityState Validity { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLFieldSetElementValidationMessage/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLFieldSetElementValidationMessage/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string ValidationMessage { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLFieldSetElementCheckValidity/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLFieldSetElementCheckValidity/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool CheckValidity() { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLFieldSetElementReportValidity/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLFieldSetElementReportValidity/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool ReportValidity() { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLFieldSetElementSetCustomValidity/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLFieldSetElementSetCustomValidity/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ SetCustomValidity(string error) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLLegendElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLLegendElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLLegendElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLLegendElementHTMLLegendElement/*'/>
 	public HTMLLegendElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLLegendElementForm/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLLegendElementForm/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLFormElement? Form { get; }
 }
 
@@ -3678,8 +3663,8 @@ public enum SelectionMode
 	Preserve,
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/ValidityState/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class ValidityState
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/ValidityStateValueMissing/*'/>
@@ -3706,150 +3691,150 @@ public partial class ValidityState
 	public bool Valid { get; }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/SubmitEvent/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class SubmitEvent : Event
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/SubmitEvent/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/SubmitEventSubmitEvent/*'/>
 	public SubmitEvent(string type, SubmitEventInit eventInitDict) { }
 	///<include file='Utils/Docs.generated.xml' path='docs/SubmitEventSubmitter/*'/>
 	public HTMLElement? Submitter { get; }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/SubmitEventInit/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class SubmitEventInit : EventInit
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/SubmitEventInitSubmitter/*'/>
 	public HTMLElement? Submitter;
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/FormDataEvent/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class FormDataEvent : Event
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/FormDataEvent/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/FormDataEventFormDataEvent/*'/>
 	public FormDataEvent(string type, FormDataEventInit eventInitDict) { }
 	///<include file='Utils/Docs.generated.xml' path='docs/FormDataEventFormData/*'/>
 	public FormData FormData { get; }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/FormDataEventInit/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class FormDataEventInit : EventInit
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/FormDataEventInitFormData/*'/>
 	public required FormData FormData;
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLDetailsElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLDetailsElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLDetailsElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLDetailsElementHTMLDetailsElement/*'/>
 	public HTMLDetailsElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLDetailsElementOpen/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLDetailsElementOpen/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Open { get; set; }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLDialogElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLDialogElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLDialogElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLDialogElementHTMLDialogElement/*'/>
 	public HTMLDialogElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLDialogElementOpen/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLDialogElementOpen/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Open { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLDialogElementReturnValue/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLDialogElementReturnValue/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string ReturnValue { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLDialogElementShow/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLDialogElementShow/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Show() { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLDialogElementShowModal/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLDialogElementShowModal/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ ShowModal() { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLDialogElementClose/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLDialogElementClose/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Close(string returnValue) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLScriptElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLScriptElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLScriptElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLScriptElementHTMLScriptElement/*'/>
 	public HTMLScriptElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLScriptElementSrc/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLScriptElementSrc/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Src { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLScriptElementType/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLScriptElementType/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Type { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLScriptElementNoModule/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLScriptElementNoModule/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool NoModule { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLScriptElementAsync/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLScriptElementAsync/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Async { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLScriptElementDefer/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLScriptElementDefer/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Defer { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLScriptElementCrossOrigin/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLScriptElementCrossOrigin/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string? CrossOrigin { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLScriptElementText/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLScriptElementText/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Text { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLScriptElementIntegrity/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLScriptElementIntegrity/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Integrity { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLScriptElementReferrerPolicy/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLScriptElementReferrerPolicy/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string ReferrerPolicy { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLScriptElementBlocking/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLScriptElementBlocking/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMTokenList Blocking { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLScriptElementSupports/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLScriptElementSupports/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public static bool Supports(string type) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLTemplateElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLTemplateElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTemplateElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTemplateElementHTMLTemplateElement/*'/>
 	public HTMLTemplateElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLTemplateElementContent/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTemplateElementContent/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public DocumentFragment Content { get; }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLSlotElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLSlotElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLSlotElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLSlotElementHTMLSlotElement/*'/>
 	public HTMLSlotElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLSlotElementName/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLSlotElementName/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Name { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLSlotElementAssignedNodes/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLSlotElementAssignedNodes/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public List<Node> AssignedNodes(AssignedNodesOptions options) { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLSlotElementAssignedElements/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLSlotElementAssignedElements/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public List<Element> AssignedElements(AssignedNodesOptions options) { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLSlotElementAssign/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLSlotElementAssign/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Assign(params Union26[] nodes) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/AssignedNodesOptions/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class AssignedNodesOptions
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/AssignedNodesOptionsFlatten/*'/>
@@ -3857,34 +3842,34 @@ public partial class AssignedNodesOptions
 }
 
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLCanvasElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLCanvasElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLCanvasElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLCanvasElementHTMLCanvasElement/*'/>
 	public HTMLCanvasElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLCanvasElementWidth/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLCanvasElementWidth/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Width { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLCanvasElementHeight/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLCanvasElementHeight/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Height { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLCanvasElementGetContext/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLCanvasElementGetContext/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public RenderingContext? GetContext(string contextId, dynamic options) { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLCanvasElementToDataURL/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLCanvasElementToDataURL/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string ToDataURL(string type, dynamic quality) { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLCanvasElementToBlob/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLCanvasElementToBlob/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ ToBlob(BlobCallback callback, string type, dynamic quality) { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLCanvasElementTransferControlToOffscreen/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLCanvasElementTransferControlToOffscreen/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public OffscreenCanvas TransferControlToOffscreen() { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/BlobCallback/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public struct BlobCallback
 {
 }
@@ -3905,8 +3890,8 @@ public enum CanvasFillRule
 	Evenodd,
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/CanvasRenderingContext2DSettings/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class CanvasRenderingContext2DSettings
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasRenderingContext2DSettingsAlpha/*'/>
@@ -3927,8 +3912,8 @@ public enum ImageSmoothingQuality
 	High,
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/CanvasRenderingContext2D/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class CanvasRenderingContext2D
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasRenderingContext2DCanvas/*'/>
@@ -3953,8 +3938,8 @@ public partial class CanvasRenderingContext2D
 
 
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/CanvasState/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial interface CanvasState
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasStateSave/*'/>
@@ -3967,8 +3952,8 @@ public partial interface CanvasState
 	public bool IsContextLost() { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/CanvasTransform/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial interface CanvasTransform
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasTransformScale/*'/>
@@ -3989,8 +3974,8 @@ public partial interface CanvasTransform
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ ResetTransform() { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/CanvasCompositing/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial interface CanvasCompositing
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasCompositingGlobalAlpha/*'/>
@@ -3999,8 +3984,8 @@ public partial interface CanvasCompositing
 	public string GlobalCompositeOperation { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/CanvasImageSmoothing/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial interface CanvasImageSmoothing
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasImageSmoothingImageSmoothingEnabled/*'/>
@@ -4009,8 +3994,8 @@ public partial interface CanvasImageSmoothing
 	public ImageSmoothingQuality ImageSmoothingQuality { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/CanvasFillStrokeStyles/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial interface CanvasFillStrokeStyles
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasFillStrokeStylesStrokeStyle/*'/>
@@ -4027,8 +4012,8 @@ public partial interface CanvasFillStrokeStyles
 	public CanvasPattern? CreatePattern(CanvasImageSource image, string repetition) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/CanvasShadowStyles/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial interface CanvasShadowStyles
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasShadowStylesShadowOffsetX/*'/>
@@ -4041,8 +4026,8 @@ public partial interface CanvasShadowStyles
 	public string ShadowColor { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/CanvasFilters/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial interface CanvasFilters
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasFiltersFilter/*'/>
@@ -4050,16 +4035,16 @@ public partial interface CanvasFilters
 }
 
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/CanvasFilter/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class CanvasFilter
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/CanvasFilter/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/CanvasFilterCanvasFilter/*'/>
 	public CanvasFilter(Union33 filters) { }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/CanvasRect/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial interface CanvasRect
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasRectClearRect/*'/>
@@ -4070,8 +4055,8 @@ public partial interface CanvasRect
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ StrokeRect(double x, double y, double w, double h) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/CanvasDrawPath/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial interface CanvasDrawPath
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasDrawPathBeginPath/*'/>
@@ -4098,8 +4083,8 @@ public partial interface CanvasDrawPath
 	public bool IsPointInStroke(Path2D path, double x, double y) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/CanvasUserInterface/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial interface CanvasUserInterface
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasUserInterfaceDrawFocusIfNeeded/*'/>
@@ -4112,8 +4097,8 @@ public partial interface CanvasUserInterface
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ ScrollPathIntoView(Path2D path) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/CanvasText/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial interface CanvasText
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasTextFillText/*'/>
@@ -4124,8 +4109,8 @@ public partial interface CanvasText
 	public TextMetrics MeasureText(string text) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/CanvasDrawImage/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial interface CanvasDrawImage
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasDrawImageDrawImage/*'/>
@@ -4136,8 +4121,8 @@ public partial interface CanvasDrawImage
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ DrawImage(CanvasImageSource image, double sx, double sy, double sw, double sh, double dx, double dy, double dw, double dh) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/CanvasImageData/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial interface CanvasImageData
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasImageDataCreateImageData/*'/>
@@ -4240,8 +4225,8 @@ public enum CanvasTextRendering
 	GeometricPrecision,
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/CanvasPathDrawingStyles/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial interface CanvasPathDrawingStyles
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasPathDrawingStylesLineWidth/*'/>
@@ -4260,8 +4245,8 @@ public partial interface CanvasPathDrawingStyles
 	public double LineDashOffset { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/CanvasTextDrawingStyles/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial interface CanvasTextDrawingStyles
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasTextDrawingStylesFont/*'/>
@@ -4286,8 +4271,8 @@ public partial interface CanvasTextDrawingStyles
 	public string WordSpacing { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/CanvasPath/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial interface CanvasPath
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasPathClosePath/*'/>
@@ -4312,79 +4297,79 @@ public partial interface CanvasPath
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Ellipse(double x, double y, double radiusX, double radiusY, double rotation, double startAngle, double endAngle, bool counterclockwise) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/CanvasGradient/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class CanvasGradient
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasGradientAddColorStop/*'/>
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ AddColorStop(double offset, string color) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/CanvasPattern/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class CanvasPattern
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasPatternSetTransform/*'/>
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ SetTransform(CSharpToJavaScript.Utils.Unsupported /*DOMMatrix2DInit*/ transform) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/TextMetrics/*'/>
+[To(ToAttribute.Default)]
 public partial class TextMetrics
 {
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/TextMetricsWidth/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/TextMetricsWidth/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public double Width { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/TextMetricsActualBoundingBoxLeft/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/TextMetricsActualBoundingBoxLeft/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public double ActualBoundingBoxLeft { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/TextMetricsActualBoundingBoxRight/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/TextMetricsActualBoundingBoxRight/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public double ActualBoundingBoxRight { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/TextMetricsFontBoundingBoxAscent/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/TextMetricsFontBoundingBoxAscent/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public double FontBoundingBoxAscent { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/TextMetricsFontBoundingBoxDescent/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/TextMetricsFontBoundingBoxDescent/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public double FontBoundingBoxDescent { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/TextMetricsActualBoundingBoxAscent/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/TextMetricsActualBoundingBoxAscent/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public double ActualBoundingBoxAscent { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/TextMetricsActualBoundingBoxDescent/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/TextMetricsActualBoundingBoxDescent/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public double ActualBoundingBoxDescent { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/TextMetricsEmHeightAscent/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/TextMetricsEmHeightAscent/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public double EmHeightAscent { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/TextMetricsEmHeightDescent/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/TextMetricsEmHeightDescent/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public double EmHeightDescent { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/TextMetricsHangingBaseline/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/TextMetricsHangingBaseline/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public double HangingBaseline { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/TextMetricsAlphabeticBaseline/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/TextMetricsAlphabeticBaseline/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public double AlphabeticBaseline { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/TextMetricsIdeographicBaseline/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/TextMetricsIdeographicBaseline/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public double IdeographicBaseline { get; }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/ImageDataSettings/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class ImageDataSettings
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/ImageDataSettingsColorSpace/*'/>
 	public PredefinedColorSpace ColorSpace;
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/ImageData/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class ImageData
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/ImageData/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/ImageDataImageData/*'/>
 	public ImageData(ulong sw, ulong sh, ImageDataSettings settings) { }
-	///<include file='Utils/Docs.generated.xml' path='docs/ImageData/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/ImageDataImageData/*'/>
 	public ImageData(CSharpToJavaScript.Utils.Unsupported /*Uint8ClampedArray*/ data, ulong sw, ulong sh, ImageDataSettings settings) { }
 	///<include file='Utils/Docs.generated.xml' path='docs/ImageDataWidth/*'/>
 	public ulong Width { get; }
@@ -4396,19 +4381,19 @@ public partial class ImageData
 	public PredefinedColorSpace ColorSpace { get; }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/Path2D/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class Path2D
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/Path2D/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/Path2DPath2D/*'/>
 	public Path2D(Union36 path) { }
 	///<include file='Utils/Docs.generated.xml' path='docs/Path2DAddPath/*'/>
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ AddPath(Path2D path, CSharpToJavaScript.Utils.Unsupported /*DOMMatrix2DInit*/ transform) { throw new System.NotImplementedException(); }
 }
 
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/ImageBitmapRenderingContext/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class ImageBitmapRenderingContext
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/ImageBitmapRenderingContextCanvas/*'/>
@@ -4417,8 +4402,8 @@ public partial class ImageBitmapRenderingContext
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ TransferFromImageBitmap(ImageBitmap? bitmap) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/ImageBitmapRenderingContextSettings/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class ImageBitmapRenderingContextSettings
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/ImageBitmapRenderingContextSettingsAlpha/*'/>
@@ -4426,8 +4411,8 @@ public partial class ImageBitmapRenderingContextSettings
 }
 
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/ImageEncodeOptions/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class ImageEncodeOptions
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/ImageEncodeOptionsType/*'/>
@@ -4446,11 +4431,11 @@ public enum OffscreenRenderingContextId
 	Webgpu,
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/OffscreenCanvas/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class OffscreenCanvas : EventTarget
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/OffscreenCanvas/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/OffscreenCanvasOffscreenCanvas/*'/>
 	public OffscreenCanvas(ulong width, ulong height) { }
 	///<include file='Utils/Docs.generated.xml' path='docs/OffscreenCanvasWidth/*'/>
 	public ulong Width { get; set; }
@@ -4468,8 +4453,8 @@ public partial class OffscreenCanvas : EventTarget
 	public EventHandler Oncontextrestored { get; set; }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/OffscreenCanvasRenderingContext2D/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class OffscreenCanvasRenderingContext2D
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/OffscreenCanvasRenderingContext2DCommit/*'/>
@@ -4493,8 +4478,8 @@ public partial class OffscreenCanvasRenderingContext2D
 
 
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/CustomElementRegistry/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class CustomElementRegistry
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/CustomElementRegistryDefine/*'/>
@@ -4507,22 +4492,22 @@ public partial class CustomElementRegistry
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Upgrade(Node root) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/CustomElementConstructor/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public struct CustomElementConstructor
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/ElementDefinitionOptions/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class ElementDefinitionOptions
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/ElementDefinitionOptionsExtends/*'/>
 	public string Extends;
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/ElementInternals/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class ElementInternals
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/ElementInternalsShadowRoot/*'/>
@@ -4548,8 +4533,8 @@ public partial class ElementInternals
 }
 
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/ValidityStateFlags/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class ValidityStateFlags
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/ValidityStateFlagsValueMissing/*'/>
@@ -4574,8 +4559,8 @@ public partial class ValidityStateFlags
 	public bool CustomError;
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/FocusOptions/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class FocusOptions
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/FocusOptionsPreventScroll/*'/>
@@ -4584,8 +4569,8 @@ public partial class FocusOptions
 	public bool FocusVisible;
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/ElementContentEditable/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial interface ElementContentEditable
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/ElementContentEditableContentEditable/*'/>
@@ -4598,11 +4583,11 @@ public partial interface ElementContentEditable
 	public string InputMode { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/DataTransfer/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class DataTransfer
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/DataTransfer/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/DataTransferDataTransfer/*'/>
 	public DataTransfer() { }
 	///<include file='Utils/Docs.generated.xml' path='docs/DataTransferDropEffect/*'/>
 	public string DropEffect { get; set; }
@@ -4624,8 +4609,8 @@ public partial class DataTransfer
 	public CSharpToJavaScript.Utils.Unsupported /*FileList*/ Files { get; }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/DataTransferItemList/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class DataTransferItemList
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/DataTransferItemListLength/*'/>
@@ -4641,8 +4626,8 @@ public partial class DataTransferItemList
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Clear() { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/DataTransferItem/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class DataTransferItem
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/DataTransferItemKind/*'/>
@@ -4655,30 +4640,30 @@ public partial class DataTransferItem
 	public CSharpToJavaScript.Utils.Unsupported /*File*/? GetAsFile() { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/FunctionStringCallback/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public struct FunctionStringCallback
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/FunctionObjectCallback/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public struct FunctionObjectCallback
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/DragEvent/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class DragEvent
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/DragEvent/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/DragEventDragEvent/*'/>
 	public DragEvent(string type, DragEventInit eventInitDict) { }
 	///<include file='Utils/Docs.generated.xml' path='docs/DragEventDataTransfer/*'/>
 	public DataTransfer? DataTransfer { get; }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/DragEventInit/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class DragEventInit
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/DragEventInitDataTransfer/*'/>
@@ -4765,16 +4750,16 @@ public partial class Window : EventTarget
 
 
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/WindowPostMessageOptions/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class WindowPostMessageOptions : StructuredSerializeOptions
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/WindowPostMessageOptionsTargetOrigin/*'/>
 	public string TargetOrigin;
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/BarProp/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class BarProp
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/BarPropVisible/*'/>
@@ -4788,8 +4773,8 @@ public enum ScrollRestoration
 	Manual,
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/History/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class History
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/HistoryLength/*'/>
@@ -4810,8 +4795,8 @@ public partial class History
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ ReplaceState(dynamic data, string unused, string? url) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/Location/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class Location
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/LocationHref/*'/>
@@ -4842,29 +4827,29 @@ public partial class Location
 	public string AncestorOrigins { get; }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/PopStateEvent/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class PopStateEvent : Event
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/PopStateEvent/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/PopStateEventPopStateEvent/*'/>
 	public PopStateEvent(string type, PopStateEventInit eventInitDict) { }
 	///<include file='Utils/Docs.generated.xml' path='docs/PopStateEventState/*'/>
 	public dynamic State { get; }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/PopStateEventInit/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class PopStateEventInit : EventInit
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/PopStateEventInitState/*'/>
 	public dynamic State;
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HashChangeEvent/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class HashChangeEvent : Event
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HashChangeEvent/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HashChangeEventHashChangeEvent/*'/>
 	public HashChangeEvent(string type, HashChangeEventInit eventInitDict) { }
 	///<include file='Utils/Docs.generated.xml' path='docs/HashChangeEventOldURL/*'/>
 	public string OldURL { get; }
@@ -4872,8 +4857,8 @@ public partial class HashChangeEvent : Event
 	public string NewURL { get; }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HashChangeEventInit/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class HashChangeEventInit : EventInit
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/HashChangeEventInitOldURL/*'/>
@@ -4882,37 +4867,37 @@ public partial class HashChangeEventInit : EventInit
 	public string NewURL;
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/PageTransitionEvent/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class PageTransitionEvent : Event
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/PageTransitionEvent/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/PageTransitionEventPageTransitionEvent/*'/>
 	public PageTransitionEvent(string type, PageTransitionEventInit eventInitDict) { }
 	///<include file='Utils/Docs.generated.xml' path='docs/PageTransitionEventPersisted/*'/>
 	public bool Persisted { get; }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/PageTransitionEventInit/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class PageTransitionEventInit : EventInit
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/PageTransitionEventInitPersisted/*'/>
 	public bool Persisted;
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/BeforeUnloadEvent/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class BeforeUnloadEvent : Event
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/BeforeUnloadEventReturnValue/*'/>
 	public string ReturnValue { get; set; }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/ErrorEvent/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class ErrorEvent : Event
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/ErrorEvent/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/ErrorEventErrorEvent/*'/>
 	public ErrorEvent(string type, ErrorEventInit eventInitDict) { }
 	///<include file='Utils/Docs.generated.xml' path='docs/ErrorEventMessage/*'/>
 	public string Message { get; }
@@ -4926,8 +4911,8 @@ public partial class ErrorEvent : Event
 	public dynamic Error { get; }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/ErrorEventInit/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class ErrorEventInit : EventInit
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/ErrorEventInitMessage/*'/>
@@ -4942,11 +4927,11 @@ public partial class ErrorEventInit : EventInit
 	public dynamic Error;
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/PromiseRejectionEvent/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class PromiseRejectionEvent : Event
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/PromiseRejectionEvent/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/PromiseRejectionEventPromiseRejectionEvent/*'/>
 	public PromiseRejectionEvent(string type, PromiseRejectionEventInit eventInitDict) { }
 	///<include file='Utils/Docs.generated.xml' path='docs/PromiseRejectionEventPromise/*'/>
 	public Task<dynamic> Promise { get; }
@@ -4954,8 +4939,8 @@ public partial class PromiseRejectionEvent : Event
 	public dynamic Reason { get; }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/PromiseRejectionEventInit/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class PromiseRejectionEventInit : EventInit
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/PromiseRejectionEventInitPromise/*'/>
@@ -4964,29 +4949,29 @@ public partial class PromiseRejectionEventInit : EventInit
 	public dynamic Reason;
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/EventHandlerNonNull/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public struct EventHandlerNonNull
 {
 }
 
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/OnErrorEventHandlerNonNull/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public struct OnErrorEventHandlerNonNull
 {
 }
 
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/OnBeforeUnloadEventHandlerNonNull/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public struct OnBeforeUnloadEventHandlerNonNull
 {
 }
 
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/GlobalEventHandlers/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial interface GlobalEventHandlers
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/GlobalEventHandlersOnabort/*'/>
@@ -5131,8 +5116,8 @@ public partial interface GlobalEventHandlers
 	public EventHandler Onwheel { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/WindowEventHandlers/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial interface WindowEventHandlers
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/WindowEventHandlersOnafterprint/*'/>
@@ -5169,8 +5154,8 @@ public partial interface WindowEventHandlers
 	public EventHandler Onunload { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/DocumentAndElementEventHandlers/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial interface DocumentAndElementEventHandlers
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/DocumentAndElementEventHandlersOncopy/*'/>
@@ -5217,11 +5202,11 @@ public partial interface WindowOrWorkerGlobalScope
 
 
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/DOMParser/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class DOMParser
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/DOMParser/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/DOMParserDOMParser/*'/>
 	public DOMParser() { }
 	///<include file='Utils/Docs.generated.xml' path='docs/DOMParserParseFromString/*'/>
 	public Document ParseFromString(string string_, DOMParserSupportedType type) { throw new System.NotImplementedException(); }
@@ -5237,8 +5222,8 @@ public enum DOMParserSupportedType
 	ImageSvgXml,
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/Navigator/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class Navigator
 {
 }
@@ -5250,8 +5235,8 @@ public partial class Navigator
 
 
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/NavigatorID/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial interface NavigatorID
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/NavigatorIDAppCodeName/*'/>
@@ -5283,8 +5268,8 @@ public partial interface NavigatorID
 	public string Oscpu { get { throw new System.NotImplementedException(); } }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/NavigatorLanguage/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial interface NavigatorLanguage
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/NavigatorLanguageLanguage/*'/>
@@ -5293,16 +5278,16 @@ public partial interface NavigatorLanguage
 	public string[] Languages { get { throw new System.NotImplementedException(); } }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/NavigatorOnLine/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial interface NavigatorOnLine
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/NavigatorOnLineOnLine/*'/>
 	public bool OnLine { get { throw new System.NotImplementedException(); } }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/NavigatorContentUtils/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial interface NavigatorContentUtils
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/NavigatorContentUtilsRegisterProtocolHandler/*'/>
@@ -5311,16 +5296,16 @@ public partial interface NavigatorContentUtils
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ UnregisterProtocolHandler(string scheme, string url) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/NavigatorCookies/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial interface NavigatorCookies
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/NavigatorCookiesCookieEnabled/*'/>
 	public bool CookieEnabled { get { throw new System.NotImplementedException(); } }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/NavigatorPlugins/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial interface NavigatorPlugins
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/NavigatorPluginsPlugins/*'/>
@@ -5333,8 +5318,8 @@ public partial interface NavigatorPlugins
 	public bool PdfViewerEnabled { get { throw new System.NotImplementedException(); } }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/PluginArray/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class PluginArray
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/PluginArrayRefresh/*'/>
@@ -5345,8 +5330,8 @@ public partial class PluginArray
 	
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/MimeTypeArray/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class MimeTypeArray
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/MimeTypeArrayLength/*'/>
@@ -5355,8 +5340,8 @@ public partial class MimeTypeArray
 	
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/Plugin/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class Plugin
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/PluginName/*'/>
@@ -5371,8 +5356,8 @@ public partial class Plugin
 	
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/MimeType/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class MimeType
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/MimeTypeType/*'/>
@@ -5385,8 +5370,8 @@ public partial class MimeType
 	public Plugin EnabledPlugin { get; }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/ImageBitmap/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class ImageBitmap
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/ImageBitmapWidth/*'/>
@@ -5429,8 +5414,8 @@ public enum ResizeQuality
 	High,
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/ImageBitmapOptions/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class ImageBitmapOptions
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/ImageBitmapOptionsImageOrientation/*'/>
@@ -5447,14 +5432,14 @@ public partial class ImageBitmapOptions
 	public ResizeQuality ResizeQuality;
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/FrameRequestCallback/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public struct FrameRequestCallback
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/AnimationFrameProvider/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial interface AnimationFrameProvider
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/AnimationFrameProviderRequestAnimationFrame/*'/>
@@ -5465,11 +5450,11 @@ public partial interface AnimationFrameProvider
 
 
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/MessageEvent/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class MessageEvent : Event
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/MessageEvent/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/MessageEventMessageEvent/*'/>
 	public MessageEvent(string type, MessageEventInit eventInitDict) { }
 	///<include file='Utils/Docs.generated.xml' path='docs/MessageEventData/*'/>
 	public dynamic Data { get; }
@@ -5485,8 +5470,8 @@ public partial class MessageEvent : Event
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ InitMessageEvent(string type, bool bubbles, bool cancelable, dynamic data, string origin, string lastEventId, MessageEventSource? source, List<MessagePort> ports) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/MessageEventInit/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class MessageEventInit : EventInit
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/MessageEventInitData/*'/>
@@ -5502,11 +5487,11 @@ public partial class MessageEventInit : EventInit
 }
 
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/EventSource/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class EventSource : EventTarget
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/EventSource/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/EventSourceEventSource/*'/>
 	public EventSource(string url, EventSourceInit eventSourceInitDict) { }
 	///<include file='Utils/Docs.generated.xml' path='docs/EventSourceUrl/*'/>
 	public string Url { get; }
@@ -5530,19 +5515,19 @@ public partial class EventSource : EventTarget
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Close() { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/EventSourceInit/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class EventSourceInit
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/EventSourceInitWithCredentials/*'/>
 	public bool WithCredentials;
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/MessageChannel/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class MessageChannel
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/MessageChannel/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/MessageChannelMessageChannel/*'/>
 	public MessageChannel() { }
 	///<include file='Utils/Docs.generated.xml' path='docs/MessageChannelPort1/*'/>
 	public MessagePort Port1 { get; }
@@ -5550,8 +5535,8 @@ public partial class MessageChannel
 	public MessagePort Port2 { get; }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/MessagePort/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class MessagePort : EventTarget
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/MessagePortPostMessage/*'/>
@@ -5568,19 +5553,19 @@ public partial class MessagePort : EventTarget
 	public EventHandler Onmessageerror { get; set; }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/StructuredSerializeOptions/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class StructuredSerializeOptions
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/StructuredSerializeOptionsTransfer/*'/>
 	public List<object> Transfer;
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/BroadcastChannel/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class BroadcastChannel : EventTarget
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/BroadcastChannel/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/BroadcastChannelBroadcastChannel/*'/>
 	public BroadcastChannel(string name) { }
 	///<include file='Utils/Docs.generated.xml' path='docs/BroadcastChannelName/*'/>
 	public string Name { get; }
@@ -5594,8 +5579,8 @@ public partial class BroadcastChannel : EventTarget
 	public EventHandler Onmessageerror { get; set; }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/WorkerGlobalScope/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class WorkerGlobalScope : EventTarget, WindowOrWorkerGlobalScope
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/WorkerGlobalScopeSelf/*'/>
@@ -5620,8 +5605,8 @@ public partial class WorkerGlobalScope : EventTarget, WindowOrWorkerGlobalScope
 	public EventHandler Onunhandledrejection { get; set; }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/DedicatedWorkerGlobalScope/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class DedicatedWorkerGlobalScope : WorkerGlobalScope, AnimationFrameProvider
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/DedicatedWorkerGlobalScopeName/*'/>
@@ -5638,8 +5623,8 @@ public partial class DedicatedWorkerGlobalScope : WorkerGlobalScope, AnimationFr
 	public EventHandler Onmessageerror { get; set; }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/SharedWorkerGlobalScope/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class SharedWorkerGlobalScope : WorkerGlobalScope
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/SharedWorkerGlobalScopeName/*'/>
@@ -5650,19 +5635,19 @@ public partial class SharedWorkerGlobalScope : WorkerGlobalScope
 	public EventHandler Onconnect { get; set; }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/AbstractWorker/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial interface AbstractWorker
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/AbstractWorkerOnerror/*'/>
 	public EventHandler Onerror { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/Worker/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class Worker : EventTarget, AbstractWorker
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/Worker/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/WorkerWorker/*'/>
 	public Worker(string scriptURL, WorkerOptions options) { }
 	///<include file='Utils/Docs.generated.xml' path='docs/WorkerTerminate/*'/>
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Terminate() { throw new System.NotImplementedException(); }
@@ -5676,8 +5661,8 @@ public partial class Worker : EventTarget, AbstractWorker
 	public EventHandler Onmessageerror { get; set; }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/WorkerOptions/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class WorkerOptions
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/WorkerOptionsType/*'/>
@@ -5696,27 +5681,27 @@ public enum WorkerType
 }
 
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/SharedWorker/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class SharedWorker : EventTarget, AbstractWorker
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/SharedWorker/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/SharedWorkerSharedWorker/*'/>
 	public SharedWorker(string scriptURL, Union46 options) { }
 	///<include file='Utils/Docs.generated.xml' path='docs/SharedWorkerPort/*'/>
 	public MessagePort Port { get; }
 }
 
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/NavigatorConcurrentHardware/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial interface NavigatorConcurrentHardware
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/NavigatorConcurrentHardwareHardwareConcurrency/*'/>
 	public ulong HardwareConcurrency { get { throw new System.NotImplementedException(); } }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/WorkerNavigator/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class WorkerNavigator
 {
 }
@@ -5725,8 +5710,8 @@ public partial class WorkerNavigator
 
 
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/WorkerLocation/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class WorkerLocation
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/WorkerLocationHref/*'/>
@@ -5749,30 +5734,30 @@ public partial class WorkerLocation
 	public string Hash { get; }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/WorkletGlobalScope/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class WorkletGlobalScope
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/Worklet/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class Worklet
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/WorkletAddModule/*'/>
 	public Task<CSharpToJavaScript.Utils.Unsupported /*undefined*/> AddModule(string moduleURL, WorkletOptions options) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/WorkletOptions/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class WorkletOptions
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/WorkletOptionsCredentials/*'/>
 	public RequestCredentials Credentials;
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/Storage/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class Storage
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/StorageLength/*'/>
@@ -5786,8 +5771,8 @@ public partial class Storage
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Clear() { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/WindowSessionStorage/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial interface WindowSessionStorage
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/WindowSessionStorageSessionStorage/*'/>
@@ -5795,8 +5780,8 @@ public partial interface WindowSessionStorage
 }
 
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/WindowLocalStorage/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial interface WindowLocalStorage
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/WindowLocalStorageLocalStorage/*'/>
@@ -5804,11 +5789,11 @@ public partial interface WindowLocalStorage
 }
 
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/StorageEvent/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class StorageEvent : Event
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/StorageEvent/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/StorageEventStorageEvent/*'/>
 	public StorageEvent(string type, StorageEventInit eventInitDict) { }
 	///<include file='Utils/Docs.generated.xml' path='docs/StorageEventKey/*'/>
 	public string? Key { get; }
@@ -5824,8 +5809,8 @@ public partial class StorageEvent : Event
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ InitStorageEvent(string type, bool bubbles, bool cancelable, string? key, string? oldValue, string? newValue, string url, Storage? storageArea) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/StorageEventInit/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class StorageEventInit : EventInit
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/StorageEventInitKey/*'/>
@@ -5840,103 +5825,103 @@ public partial class StorageEventInit : EventInit
 	public Storage? StorageArea;
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLMarqueeElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLMarqueeElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMarqueeElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMarqueeElementHTMLMarqueeElement/*'/>
 	public HTMLMarqueeElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMarqueeElementBehavior/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMarqueeElementBehavior/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Behavior { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMarqueeElementBgColor/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMarqueeElementBgColor/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string BgColor { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMarqueeElementDirection/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMarqueeElementDirection/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Direction { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMarqueeElementHeight/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMarqueeElementHeight/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Height { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMarqueeElementHspace/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMarqueeElementHspace/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Hspace { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMarqueeElementLoop/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMarqueeElementLoop/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public long Loop { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMarqueeElementScrollAmount/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMarqueeElementScrollAmount/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong ScrollAmount { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMarqueeElementScrollDelay/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMarqueeElementScrollDelay/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong ScrollDelay { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMarqueeElementTrueSpeed/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMarqueeElementTrueSpeed/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool TrueSpeed { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMarqueeElementVspace/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMarqueeElementVspace/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Vspace { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMarqueeElementWidth/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMarqueeElementWidth/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Width { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMarqueeElementStart/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMarqueeElementStart/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Start() { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLMarqueeElementStop/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMarqueeElementStop/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Stop() { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLFrameSetElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLFrameSetElement : HTMLElement, WindowEventHandlers
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLFrameSetElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLFrameSetElementHTMLFrameSetElement/*'/>
 	public HTMLFrameSetElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLFrameSetElementCols/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLFrameSetElementCols/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Cols { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLFrameSetElementRows/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLFrameSetElementRows/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Rows { get; set; }
 }
 
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLFrameElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLFrameElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLFrameElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLFrameElementHTMLFrameElement/*'/>
 	public HTMLFrameElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLFrameElementName/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLFrameElementName/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Name { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLFrameElementScrolling/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLFrameElementScrolling/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Scrolling { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLFrameElementSrc/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLFrameElementSrc/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Src { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLFrameElementFrameBorder/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLFrameElementFrameBorder/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string FrameBorder { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLFrameElementLongDesc/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLFrameElementLongDesc/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string LongDesc { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLFrameElementNoResize/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLFrameElementNoResize/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool NoResize { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLFrameElementContentDocument/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLFrameElementContentDocument/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public Document? ContentDocument { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLFrameElementContentWindow/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLFrameElementContentWindow/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public Window? ContentWindow { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLFrameElementMarginHeight/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLFrameElementMarginHeight/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string MarginHeight { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLFrameElementMarginWidth/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLFrameElementMarginWidth/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string MarginWidth { get; set; }
 }
 
@@ -6008,14 +5993,14 @@ public partial class HTMLTableColElement
 	public string Width { get; set; }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLDirectoryElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLDirectoryElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLDirectoryElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLDirectoryElementHTMLDirectoryElement/*'/>
 	public HTMLDirectoryElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLDirectoryElementCompact/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLDirectoryElementCompact/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Compact { get; set; }
 }
 
@@ -6042,20 +6027,20 @@ public partial class HTMLEmbedElement
 	public string Name { get; set; }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLFontElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLFontElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLFontElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLFontElementHTMLFontElement/*'/>
 	public HTMLFontElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLFontElementColor/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLFontElementColor/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Color { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLFontElementFace/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLFontElementFace/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Face { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLFontElementSize/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLFontElementSize/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Size { get; set; }
 }
 
@@ -6213,23 +6198,23 @@ public partial class HTMLParagraphElement
 	public string Align { get; set; }
 }
 
-[To(ToAttribute.Default)]
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLParamElement/*'/>
+[To(ToAttribute.Default)]
 public partial class HTMLParamElement : HTMLElement
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/HTMLParamElement/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLParamElementHTMLParamElement/*'/>
 	public HTMLParamElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLParamElementName/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLParamElementName/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Name { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLParamElementValue/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLParamElementValue/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Value { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLParamElementType/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLParamElementType/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string Type { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
-///<include file='Utils/Docs.generated.xml' path='docs/HTMLParamElementValueType/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/HTMLParamElementValueType/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 	public string ValueType { get; set; }
 }
 
@@ -6379,8 +6364,8 @@ public partial class Window
 	public External External { get; }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/External/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class External
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/ExternalAddSearchProvider/*'/>
@@ -6389,11 +6374,11 @@ public partial class External
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ IsSearchProviderInstalled() { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/Notification/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class Notification : EventTarget
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/Notification/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/NotificationNotification/*'/>
 	public Notification(string title, NotificationOptions options) { }
 	///<include file='Utils/Docs.generated.xml' path='docs/NotificationPermission/*'/>
 	public static NotificationPermission Permission { get; }
@@ -6443,8 +6428,8 @@ public partial class Notification : EventTarget
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Close() { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/NotificationOptions/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class NotificationOptions
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/NotificationOptionsDir/*'/>
@@ -6493,8 +6478,8 @@ public enum NotificationDirection
 	Rtl,
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/NotificationAction/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class NotificationAction
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/NotificationActionAction/*'/>
@@ -6505,22 +6490,22 @@ public partial class NotificationAction
 	public string Icon;
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/NotificationPermissionCallback/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public struct NotificationPermissionCallback
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/GetNotificationOptions/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class GetNotificationOptions
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/GetNotificationOptionsTag/*'/>
 	public string Tag;
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/ServiceWorkerRegistration/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class ServiceWorkerRegistration
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/ServiceWorkerRegistrationShowNotification/*'/>
@@ -6529,11 +6514,11 @@ public partial class ServiceWorkerRegistration
 	public Task<List<Notification>> GetNotifications(GetNotificationOptions filter) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/NotificationEvent/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class NotificationEvent
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/NotificationEvent/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/NotificationEventNotificationEvent/*'/>
 	public NotificationEvent(string type, NotificationEventInit eventInitDict) { }
 	///<include file='Utils/Docs.generated.xml' path='docs/NotificationEventNotification/*'/>
 	public Notification Notification { get; }
@@ -6541,8 +6526,8 @@ public partial class NotificationEvent
 	public string Action { get; }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/NotificationEventInit/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class NotificationEventInit
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/NotificationEventInitNotification/*'/>
@@ -6551,8 +6536,8 @@ public partial class NotificationEventInit
 	public string Action;
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/ServiceWorkerGlobalScope/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class ServiceWorkerGlobalScope
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/ServiceWorkerGlobalScopeOnnotificationclick/*'/>
@@ -6561,8 +6546,8 @@ public partial class ServiceWorkerGlobalScope
 	public EventHandler Onnotificationclose { get; set; }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/NavigatorStorage/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial interface NavigatorStorage
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/NavigatorStorageStorage/*'/>
@@ -6571,8 +6556,8 @@ public partial interface NavigatorStorage
 
 
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/StorageManager/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class StorageManager
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/StorageManagerPersisted/*'/>
@@ -6583,8 +6568,8 @@ public partial class StorageManager
 	public Task<StorageEstimate> Estimate() { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/StorageEstimate/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class StorageEstimate
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/StorageEstimateUsage/*'/>
@@ -6593,11 +6578,11 @@ public partial class StorageEstimate
 	public ulong Quota;
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/URL/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class URL
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/URL/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/URLURL/*'/>
 	public URL(string url, string base_) { }
 	///<include file='Utils/Docs.generated.xml' path='docs/URLHref/*'/>
 	public string Href { get; set; }
@@ -6627,11 +6612,11 @@ public partial class URL
 	public string ToJSON() { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/URLSearchParams/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class URLSearchParams
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/URLSearchParams/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/URLSearchParamsURLSearchParams/*'/>
 	public URLSearchParams(Union47 init) { }
 	///<include file='Utils/Docs.generated.xml' path='docs/URLSearchParamsAppend/*'/>
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Append(string name, string value) { throw new System.NotImplementedException(); }
@@ -6647,22 +6632,17 @@ public partial class URLSearchParams
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Set(string name, string value) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/URLSearchParamsSort/*'/>
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Sort() { throw new System.NotImplementedException(); }
-	public string this[int i]
-	{
-		get { throw new System.NotImplementedException(); }
-		set { throw new System.NotImplementedException(); }
-	}
-
+	public string this[int i]  {  get { throw new System.NotImplementedException(); }  set { throw new System.NotImplementedException(); }  } 
 	
 }
 
 
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/DOMException/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class DOMException
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/DOMException/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/DOMExceptionDOMException/*'/>
 	public DOMException(string message, string name) { }
 	///<include file='Utils/Docs.generated.xml' path='docs/DOMExceptionName/*'/>
 	public string Name { get; }
@@ -6722,20 +6702,20 @@ public partial class DOMException
 	public const ushort DATA_CLONE_ERR = 25;
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/Function/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public struct Function
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/VoidFunction/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public struct VoidFunction
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/XMLHttpRequestEventTarget/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class XMLHttpRequestEventTarget : EventTarget
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/XMLHttpRequestEventTargetOnloadstart/*'/>
@@ -6754,8 +6734,8 @@ public partial class XMLHttpRequestEventTarget : EventTarget
 	public EventHandler Onloadend { get; set; }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/XMLHttpRequestUpload/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class XMLHttpRequestUpload : XMLHttpRequestEventTarget
 {
 }
@@ -6771,11 +6751,11 @@ public enum XMLHttpRequestResponseType
 	Text,
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/XMLHttpRequest/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class XMLHttpRequest : XMLHttpRequestEventTarget
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/XMLHttpRequest/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/XMLHttpRequestXMLHttpRequest/*'/>
 	public XMLHttpRequest() { }
 	///<include file='Utils/Docs.generated.xml' path='docs/XMLHttpRequestOnreadystatechange/*'/>
 	public EventHandler Onreadystatechange { get; set; }
@@ -6830,11 +6810,11 @@ public partial class XMLHttpRequest : XMLHttpRequestEventTarget
 }
 
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/FormData/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class FormData
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/FormData/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/FormDataFormData/*'/>
 	public FormData(HTMLFormElement form) { }
 	///<include file='Utils/Docs.generated.xml' path='docs/FormDataAppend/*'/>
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Append(string name, string value) { throw new System.NotImplementedException(); }
@@ -6852,19 +6832,14 @@ public partial class FormData
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Set(string name, string value) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/FormDataSet/*'/>
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Set(string name, CSharpToJavaScript.Utils.Unsupported /*Blob*/ blobValue, string filename) { throw new System.NotImplementedException(); }
-	public string this[int i]
-	{
-		get { throw new System.NotImplementedException(); }
-		set { throw new System.NotImplementedException(); }
-	}
-
+	public string this[int i]  {  get { throw new System.NotImplementedException(); }  set { throw new System.NotImplementedException(); }  } 
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/ProgressEvent/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class ProgressEvent : Event
 {
-	///<include file='Utils/Docs.generated.xml' path='docs/ProgressEvent/*'/>
+	///<include file='Utils/Docs.generated.xml' path='docs/ProgressEventProgressEvent/*'/>
 	public ProgressEvent(string type, ProgressEventInit eventInitDict) { }
 	///<include file='Utils/Docs.generated.xml' path='docs/ProgressEventLengthComputable/*'/>
 	public bool LengthComputable { get; }
@@ -6874,8 +6849,8 @@ public partial class ProgressEvent : Event
 	public ulong Total { get; }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
 ///<include file='Utils/Docs.generated.xml' path='docs/ProgressEventInit/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class ProgressEventInit : EventInit
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/ProgressEventInitLengthComputable/*'/>

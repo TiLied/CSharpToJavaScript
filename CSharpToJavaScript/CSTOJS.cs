@@ -7,7 +7,6 @@ using Microsoft.CodeAnalysis.CSharp;
 using System.Threading.Tasks;
 using Microsoft.CodeAnalysis;
 using CSharpToJavaScript.Utils;
-using System;
 
 namespace CSharpToJavaScript
 {
@@ -69,8 +68,8 @@ namespace CSharpToJavaScript
 
 			references.Add(MetadataReference.CreateFromFile(Path.Combine(rtPath, "System.Private.CoreLib.dll")));
 
-			var a = _Assembly.GetReferencedAssemblies();
-			foreach (var item in a)
+			AssemblyName[] a = _Assembly.GetReferencedAssemblies();
+			foreach (AssemblyName item in a)
 			{
 				if (File.Exists(Path.Combine(assemblyPath, item.Name + ".dll")))
 					references.Add(MetadataReference.CreateFromFile(Path.Combine(assemblyPath, item.Name + ".dll")));
@@ -100,7 +99,10 @@ namespace CSharpToJavaScript
 			}
 
 			await File.WriteAllTextAsync(Path.Combine(_Options.OutPutPath, _Options.OutPutFileName), _Walker.JSSB.ToString());
-			SM.Log($"path: {_Options.OutPutPath} file: {_Options.OutPutFileName}");
+			
+			SM.Log($"--- Done!");
+			SM.Log($"--- Path: {_Options.OutPutPath}");
+			SM.Log($"--- File: {_Options.OutPutFileName}");
 		}
 	}
 }

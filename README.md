@@ -7,7 +7,7 @@ This is a personal project with purpose to learn and understand better c# and js
 
 ### C#
 ```csharp
-using static CSharpToJavaScript.APIs.JS.GlobalThis;
+using static CSharpToJavaScript.APIs.JS.GlobalObject.GlobalThis;
 namespace ConsoleAppTest.CSharp;
 
 public class Test							
@@ -31,7 +31,7 @@ class Test
 
 ## How to use
 - 1 Create c# project or use existed one
-- 2 Install [nuget package](https://www.nuget.org/packages/CSharpToJavaScript/) or Download a specific version, visit [releases](https://github.com/TiLied/CSharpToJavaScript/releases) or Download a master(Code-Local-Download ZIP)
+- 2 Install [nuget package](https://www.nuget.org/packages/CSharpToJavaScript/) or Download a specific version(visit [releases](https://github.com/TiLied/CSharpToJavaScript/releases)) or Download a master(Code-Local-Download ZIP)
 - 3 Skip this if using Nuget package. Follow [this](https://learn.microsoft.com/en-us/dotnet/core/tutorials/library-with-visual-studio?pivots=dotnet-7-0#add-a-project-reference) to add reference to project.
 - 4 In the Main method add:
 ```csharp
@@ -54,19 +54,8 @@ public class Program
 	public static async Task Main()
 	{
 		Assembly executingAssembly = Assembly.GetExecutingAssembly();
-		
-		CSTOJSOptions opt = new()
-		{
-			CustomCSNamesToJS = new List<Tuple<string, string>>()
-			{
-				new Tuple<string, string>("Console","console"),
-				new Tuple<string, string>("WriteLine", "log")					
-			},
-			OutPutFileName = "test.js"
-		};
-
-		CSTOJS cstojs = new(executingAssembly, opt);
-		await cstojs.Generate2Async("C:\\GitReps\\ConsoleAppTest\\CSharp\\test.cs");
+		CSTOJS cstojs = new(executingAssembly);
+		await cstojs.Generate2Async("C:\\GitReps\\ConsoleAppTest\\CSharp\\Test.cs");
 
 		Console.ReadKey();
 	}
@@ -74,13 +63,14 @@ public class Program
 ```
 CSharp/test.cs
 ```csharp
+using static CSharpToJavaScript.APIs.JS.GlobalObject.GlobalThis;
 namespace ConsoleAppTest.CSharp;
 
 public class Test
 {
 	public Test()
 	{
-		Console.WriteLine("HelloWorld");
+		Console.Log("HelloWorld");
 	}
 }
 ```
@@ -94,6 +84,8 @@ class Test
  	}
 }
 ```
+More examples [here](https://tilied.github.io/CSharpToJavaScript/articles/intro.html). WIP!
+
 ## Some Todos
 - [ ] More comments in code, especially in [CSTOJSOptions](https://github.com/TiLied/CSharpToJavaScript/blob/master/CSharpToJavaScript/CSTOJSOptions.cs)
 - [ ] Wiki?

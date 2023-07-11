@@ -1,4 +1,9 @@
-﻿using System.Reflection;
+﻿global using global::System;
+
+
+
+
+using System.Reflection;
 using System.Diagnostics;
 using System.IO;
 using System.Collections.Generic;
@@ -7,6 +12,7 @@ using Microsoft.CodeAnalysis.CSharp;
 using System.Threading.Tasks;
 using Microsoft.CodeAnalysis;
 using CSharpToJavaScript.Utils;
+using System.Linq;
 
 namespace CSharpToJavaScript
 {
@@ -80,16 +86,177 @@ namespace CSharpToJavaScript
 				}
 			}
 
+			
+			UsingDirectiveSyntax[] oldUsing = root.Usings.ToArray();
+
+			//https://roslynquoter.azurewebsites.net/
+			//
+			//https://stackoverflow.com/a/72938702
+			CompilationUnitSyntax trueRoot = root.WithUsings
+(
+	SyntaxFactory.List<UsingDirectiveSyntax>
+	(
+		new UsingDirectiveSyntax[]
+		{
+			SyntaxFactory.UsingDirective
+			(
+				SyntaxFactory.AliasQualifiedName
+				(
+					SyntaxFactory.IdentifierName
+					(
+						SyntaxFactory.Token(SyntaxKind.GlobalKeyword)
+					),
+					SyntaxFactory.IdentifierName("System")
+				)
+			)
+			.WithGlobalKeyword
+			(
+				SyntaxFactory.Token(SyntaxKind.GlobalKeyword)
+			),
+			SyntaxFactory.UsingDirective
+			(
+				SyntaxFactory.QualifiedName
+				(
+					SyntaxFactory.QualifiedName
+					(
+						SyntaxFactory.AliasQualifiedName
+						(
+							SyntaxFactory.IdentifierName
+							(
+								SyntaxFactory.Token(SyntaxKind.GlobalKeyword)
+							),
+							SyntaxFactory.IdentifierName("System")
+						),
+						SyntaxFactory.IdentifierName("Collections")
+					),
+					SyntaxFactory.IdentifierName("Generic")
+				)
+			)
+			.WithGlobalKeyword
+			(
+				SyntaxFactory.Token(SyntaxKind.GlobalKeyword)
+			),
+			SyntaxFactory.UsingDirective
+			(
+				SyntaxFactory.QualifiedName
+				(
+					SyntaxFactory.AliasQualifiedName
+					(
+						SyntaxFactory.IdentifierName
+						(
+							SyntaxFactory.Token(SyntaxKind.GlobalKeyword)
+						),
+						SyntaxFactory.IdentifierName("System")
+					),
+					SyntaxFactory.IdentifierName("IO")
+				)
+			)
+			.WithGlobalKeyword
+			(
+				SyntaxFactory.Token(SyntaxKind.GlobalKeyword)
+			),
+			SyntaxFactory.UsingDirective
+			(
+				SyntaxFactory.QualifiedName
+				(
+					SyntaxFactory.AliasQualifiedName
+					(
+						SyntaxFactory.IdentifierName
+						(
+							SyntaxFactory.Token(SyntaxKind.GlobalKeyword)
+						),
+						SyntaxFactory.IdentifierName("System")
+					),
+					SyntaxFactory.IdentifierName("Linq")
+				)
+			)
+			.WithGlobalKeyword
+			(
+				SyntaxFactory.Token(SyntaxKind.GlobalKeyword)
+			),
+			SyntaxFactory.UsingDirective
+			(
+				SyntaxFactory.QualifiedName
+				(
+					SyntaxFactory.QualifiedName
+					(
+						SyntaxFactory.AliasQualifiedName
+						(
+							SyntaxFactory.IdentifierName
+							(
+								SyntaxFactory.Token(SyntaxKind.GlobalKeyword)
+							),
+							SyntaxFactory.IdentifierName("System")
+						),
+						SyntaxFactory.IdentifierName("Net")
+					),
+					SyntaxFactory.IdentifierName("Http")
+				)
+			)
+			.WithGlobalKeyword
+			(
+				SyntaxFactory.Token(SyntaxKind.GlobalKeyword)
+			),
+			SyntaxFactory.UsingDirective
+			(
+				SyntaxFactory.QualifiedName
+				(
+					SyntaxFactory.AliasQualifiedName
+					(
+						SyntaxFactory.IdentifierName
+						(
+							SyntaxFactory.Token(SyntaxKind.GlobalKeyword)
+						),
+						SyntaxFactory.IdentifierName("System")
+					),
+					SyntaxFactory.IdentifierName("Threading")
+				)
+			)
+			.WithGlobalKeyword
+			(
+				SyntaxFactory.Token(SyntaxKind.GlobalKeyword)
+			),
+			SyntaxFactory.UsingDirective
+			(
+				SyntaxFactory.QualifiedName
+				(
+					SyntaxFactory.QualifiedName
+					(
+						SyntaxFactory.AliasQualifiedName
+						(
+							SyntaxFactory.IdentifierName
+							(
+								SyntaxFactory.Token(SyntaxKind.GlobalKeyword)
+							),
+							SyntaxFactory.IdentifierName("System")
+						),
+						SyntaxFactory.IdentifierName("Threading")
+					),
+					SyntaxFactory.IdentifierName("Tasks")
+				)
+			)
+			.WithGlobalKeyword
+			(
+				SyntaxFactory.Token(SyntaxKind.GlobalKeyword)
+			)
+		}
+	)
+).AddUsings(oldUsing);
+
+			//Should I make "NormalizeWhitespace" optoion??? TODO!
+			//.NormalizeWhitespace().AddUsings(oldUsing);
+
+			SyntaxTree trueST = trueRoot.SyntaxTree;
 			CSharpCompilation compilation = CSharpCompilation
 				.Create("HelloWorld")
 				.AddReferences(references.ToArray())
-				.AddSyntaxTrees(root.SyntaxTree);
-
-			Model = compilation.GetSemanticModel(root.SyntaxTree);
+				.AddSyntaxTrees(trueST);
+			
+			Model = compilation.GetSemanticModel(trueST);
 
 			_Walker.JSSB.Append(_Options.AddSBInFront);
 
-			_Walker.Visit(root);
+			_Walker.Visit(trueRoot);
 
 			_Walker.JSSB.Append(_Options.AddSBInEnd);
 

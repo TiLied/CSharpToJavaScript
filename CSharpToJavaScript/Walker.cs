@@ -1330,8 +1330,10 @@ namespace CSharpToJavaScript
 										{
 											var s = item.DescendantNodes().First(e => e.Kind() == SyntaxKind.VariableDeclaration) as VariableDeclarationSyntax;
 											syntaxNode = s.Type;
+											symbolInfo = CSTOJS.Model.GetSymbolInfo(syntaxNode);
 										}
 									}
+
 								}
 								else
 								{
@@ -1351,21 +1353,28 @@ namespace CSharpToJavaScript
 									{
 										if (CustomCSNamesToJS(syntaxNode) == false)
 										{
-											JSSB.Append($" Object");
-											SM.Log($"TODO : {syntaxNode} ||| USE 'CustomCSNamesToJS' TO CONVERT.");
+											if (BuildInTypesGenerics(syntaxNode, iSymbol) == false)
+											{
+												JSSB.Append($" Object");
+												SM.Log($"TODO : {syntaxNode} ||| USE 'CustomCSNamesToJS' TO CONVERT.");
+											}
 										}
 										JSSB.Append($"(1)");
-										return;
+										break;
 									}
 
 									if (iSymbol.ContainingNamespace.ToString().Contains(_NameSpaceStr))
 									{
 										JSSB.Append($" {syntaxNode.ToString()}");
+										break;
 									}
 
 									if (CustomCSNamesToJS(syntaxNode) == false)
 									{
-										SM.Log($"TODO : {syntaxNode} ||| USE 'CustomCSNamesToJS' TO CONVERT.");
+										if (BuildInTypesGenerics(syntaxNode, iSymbol) == false)
+										{
+											SM.Log($"TODO : {syntaxNode} ||| USE 'CustomCSNamesToJS' TO CONVERT.");
+										}
 									}
 
 								}
@@ -1684,18 +1693,24 @@ namespace CSharpToJavaScript
 			if (CustomCSNamesToJS(node) == false)
 			{
 
-				//TODO! HERE BUILDIN C# TYPES/GENERICS
-
-
-				ImmutableArray<Diagnostic> diag = CSTOJS.Model.GetDiagnostics();
-				foreach (Diagnostic item in diag)
+				if (BuildInTypesGenerics(node, iSymbol) == false)
 				{
-					SM.Log(item.ToString());
+					if (_Options.Debug)
+					{
+						SM.Log("------");
+						SM.Log("--- Diagnostics starts ---");
+						ImmutableArray<Diagnostic> diag = CSTOJS.Model.GetDiagnostics();
+						foreach (Diagnostic item in diag)
+						{
+							SM.Log(item.ToString());
+						}
+						SM.Log("--- Diagnostics ends ---");
+						SM.Log("------");
+					}
+					SM.Log($"ERROR! !-{node}-! By reaching this means, a name did not convert to JS. CHECK FOR UPPERCASE CHARACTERS IN NAMES IN THE JS FILE!");
+
+					base.VisitIdentifierName(node);
 				}
-
-				SM.Log($"ERROR! !-{node}-! By reaching this means, a name did not convert to JS. CHECK FOR UPPERCASE CHARACTERS IN NAMES IN THE JS FILE!");
-
-				base.VisitIdentifierName(node);
 			}
 		}
 
@@ -1723,6 +1738,137 @@ namespace CSharpToJavaScript
 				}
 			}
 			return false;
+		}
+
+		private bool BuildInTypesGenerics(SyntaxNode nodeL, ISymbol symbol) 
+		{
+			IdentifierNameSyntax node = nodeL as IdentifierNameSyntax;
+
+			if (symbol == null) 
+			{
+				SM.Log($"node: \"{node}\", symbol is null. USE \"CustomCSNamesToJS\"!");
+				return false;
+			}
+
+			if (nodeL is IdentifierNameSyntax _identifierName)
+			{
+				VisitLeadingTrivia(_identifierName.Identifier);
+			}
+			else if (nodeL is GenericNameSyntax _genericName)
+			{
+				VisitLeadingTrivia(_genericName.Identifier);
+			}
+
+			SymbolKind symbolKind = symbol.Kind;
+			ToAttribute toAttribute = new(ToAttribute.Default);
+
+			switch (symbolKind) 
+			{
+				case SymbolKind.NamedType: 
+					{
+						string _name = symbol.Name;
+						switch (_name)
+						{
+							case string str when str.Contains(nameof(System.Text.Json.JsonSerializer)):
+								{
+									JSSB.Append($"JSON");
+									return true;
+								}
+							case string str when str.Contains("List"):
+								{
+									JSSB.Append($"Array");
+									return true;
+								}
+							case string str when str.Contains(nameof(Console)):
+								{
+									toAttribute.To = ToAttribute.FirstCharToLowerCase;
+									JSSB.Append($"{toAttribute.Convert(node.Identifier.Text)}");
+									return true;
+								}
+							default:
+								SM.Log($"node: \"{node}\", symbol: \"{symbol}\", as \"{symbolKind}\" Is not supported! USE \"CustomCSNamesToJS\"");
+								return false;
+						}
+					}
+				case SymbolKind.Method: 
+					{
+						string _name = symbol.Name;
+						switch (_name)
+						{
+							case string str when str.Contains(nameof(System.Threading.Tasks.Task.ContinueWith)):
+								{
+									JSSB.Append($"then");
+									return true;
+								}
+							case string str when str.Contains(nameof(System.Text.Json.JsonSerializer.Serialize)):
+								{
+									JSSB.Append($"stringify");
+									return true;
+								}
+							case string str when str.Contains(nameof(List<dynamic>.Add)): 
+								{
+									JSSB.Append($"push");
+									return true;
+								}
+							case string str when 
+							str.Contains(nameof(string.Substring)) || 
+							str.Contains(nameof(string.StartsWith)) ||
+							str.Contains(nameof(string.Replace)):
+								{
+									toAttribute.To = ToAttribute.FirstCharToLowerCase;
+									JSSB.Append($"{toAttribute.Convert(node.Identifier.Text)}");
+									return true;
+								}
+							case string str when str.Contains(nameof(string.Contains)):
+								{
+									JSSB.Append($"includes");
+									return true;
+								}
+							case string str when str.Contains(nameof(Console.WriteLine)):
+								{
+									JSSB.Append($"log");
+									return true;
+								}
+							default:
+								SM.Log($"node: \"{node}\", symbol: \"{symbol}\", as \"{symbolKind}\" Is not supported! USE \"CustomCSNamesToJS\"");
+								return false;
+						}
+					}
+				case SymbolKind.Property:
+					{
+						string _name = symbol.Name;
+						switch (_name)
+						{
+							case string str when str.Contains(nameof(List<string>.Count)):
+								{
+									JSSB.Append($"length");
+									return true;
+								}
+							case string str when str.Contains(nameof(Array.Length)):
+								{
+									toAttribute.To = ToAttribute.FirstCharToLowerCase;
+									JSSB.Append($"{toAttribute.Convert(node.Identifier.Text)}");
+									return true;
+								}
+							default:
+								SM.Log($"node: \"{node}\", symbol: \"{symbol}\", as \"{symbolKind}\" Is not supported! USE \"CustomCSNamesToJS\"");
+								return false;
+						}
+					}
+				case SymbolKind.Field:
+					{
+						string _name = symbol.Name;
+						switch (_name)
+						{
+							default:
+								SM.Log($"node: \"{node}\", symbol: \"{symbol}\", as \"{symbolKind}\" Is not supported! USE \"CustomCSNamesToJS\"");
+								return false;
+						}
+					}
+				default:
+					SM.Log($"symbol kind: \"{symbolKind}\" Is not supported! USE \"CustomCSNamesToJS\"");
+					return false;
+			}
 		}
 	}
 }

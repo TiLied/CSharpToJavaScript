@@ -615,9 +615,9 @@ namespace CSharpToJavaScript
 
 						if (asNode.ToString() == "{ get; set; }") 
 						{
-							var key = from n in nodesAndTokens
+							IEnumerable<SyntaxNodeOrToken> key = from n in nodesAndTokens
 									  where n.IsNode
-									  where n.AsNode().Kind() == SyntaxKind.PredefinedType
+									  where n.AsNode().IsKind(SyntaxKind.PredefinedType)
 									  select n;
 
 							FieldDeclarationSyntax field = null;
@@ -626,7 +626,7 @@ namespace CSharpToJavaScript
 							{
 								key = from n in nodesAndTokens
 									  where n.IsNode
-									  where n.AsNode().Kind() == SyntaxKind.IdentifierName
+									  where n.AsNode().IsKind(SyntaxKind.IdentifierName)
 									  select n;
 
 								field = SyntaxFactory.FieldDeclaration(
@@ -730,13 +730,13 @@ namespace CSharpToJavaScript
 					{
 						case SyntaxKind.GetAccessorDeclaration:
 							{
-								var c = asNode.Ancestors();
+								IEnumerable<SyntaxNode> c = asNode.Ancestors();
 
-								var a = from b in c
-										where b.Kind() == SyntaxKind.PropertyDeclaration
+								IEnumerable<SyntaxNode> a = from b in c
+										where b.IsKind(SyntaxKind.PropertyDeclaration)
 										select b;
-								var d2 = from e in a.First().ChildNodesAndTokens()
-										 where e.Kind() == SyntaxKind.IdentifierToken
+								IEnumerable<SyntaxNodeOrToken> d2 = from e in a.First().ChildNodesAndTokens()
+										 where e.IsKind(SyntaxKind.IdentifierToken)
 										 select e;
 								
 								dynamic d3 = null;
@@ -744,7 +744,7 @@ namespace CSharpToJavaScript
 								{
 									//Delete this? TODO
 									d2 = from e in a.First().DescendantNodesAndTokens()
-										 where e.Kind() == SyntaxKind.IdentifierName
+										 where e.IsKind(SyntaxKind.IdentifierName)
 										 select e;
 									d3 = d2.First().ChildNodesAndTokens().First().AsToken();
 								}else
@@ -794,16 +794,16 @@ namespace CSharpToJavaScript
 						case SyntaxKind.SetAccessorDeclaration:
 							{
 
-								var c = asNode.Ancestors();
+								IEnumerable<SyntaxNode> c = asNode.Ancestors();
 
-								var a = from b in c
-										where b.Kind() == SyntaxKind.PropertyDeclaration
+								IEnumerable<SyntaxNode> a = from b in c
+										where b.IsKind(SyntaxKind.PropertyDeclaration)
 										select b;
-								var d2 = from e in a.First().ChildNodesAndTokens()
-										 where e.Kind() == SyntaxKind.IdentifierToken
+								IEnumerable<SyntaxNodeOrToken> d2 = from e in a.First().ChildNodesAndTokens()
+										 where e.IsKind(SyntaxKind.IdentifierToken)
 										 select e;
 
-								var d3 = d2.First().AsToken();
+								SyntaxToken d3 = d2.First().AsToken();
 
 								if ((asNode as AccessorDeclarationSyntax).Body != null)
 								{
@@ -931,8 +931,8 @@ namespace CSharpToJavaScript
 						case SyntaxKind.NullableType:
 						case SyntaxKind.PredefinedType:
 							{
-								if (node.Parent.Kind() == SyntaxKind.LocalDeclarationStatement ||
-									node.Parent.Kind() == SyntaxKind.ForStatement)
+								if (node.Parent.IsKind(SyntaxKind.LocalDeclarationStatement) ||
+									node.Parent.IsKind(SyntaxKind.ForStatement))
 								{
 									SyntaxTriviaList _syntaxTrivias = asNode.GetLeadingTrivia();
 
@@ -956,8 +956,8 @@ namespace CSharpToJavaScript
 							}
 						case SyntaxKind.IdentifierName: 
 							{
-								if (node.Parent.Kind() == SyntaxKind.LocalDeclarationStatement ||
-									node.Parent.Kind() == SyntaxKind.ForStatement)
+								if (node.Parent.IsKind(SyntaxKind.LocalDeclarationStatement) ||
+									node.Parent.IsKind(SyntaxKind.ForStatement))
 								{
 									SyntaxTriviaList _syntaxTrivias = asNode.GetLeadingTrivia();
 
@@ -981,8 +981,8 @@ namespace CSharpToJavaScript
 							}
 						case SyntaxKind.GenericName: 
 							{
-								if (node.Parent.Kind() == SyntaxKind.LocalDeclarationStatement ||
-									node.Parent.Kind() == SyntaxKind.ForStatement)
+								if (node.Parent.IsKind(SyntaxKind.LocalDeclarationStatement) ||
+									node.Parent.IsKind(SyntaxKind.ForStatement))
 								{
 									SyntaxTriviaList _syntaxTrivias = asNode.GetLeadingTrivia();
 
@@ -1285,7 +1285,7 @@ namespace CSharpToJavaScript
 								VisitToken(asToken);
 
 
-								VariableDeclarationSyntax _vds = node.Ancestors().FirstOrDefault(e => e.Kind() == SyntaxKind.VariableDeclaration) as VariableDeclarationSyntax;
+								VariableDeclarationSyntax _vds = node.Ancestors().FirstOrDefault(e => e.IsKind(SyntaxKind.VariableDeclaration)) as VariableDeclarationSyntax;
 
 								SymbolInfo? symbolInfo = null;
 								ISymbol? iSymbol = null;
@@ -1293,10 +1293,10 @@ namespace CSharpToJavaScript
 
 								if (_vds == null)
 								{
-									AssignmentExpressionSyntax _aes = node.Ancestors().FirstOrDefault(e => e.Kind() == SyntaxKind.SimpleAssignmentExpression) as AssignmentExpressionSyntax;
+									AssignmentExpressionSyntax _aes = node.Ancestors().FirstOrDefault(e => e.IsKind(SyntaxKind.SimpleAssignmentExpression)) as AssignmentExpressionSyntax;
 									symbolInfo = CSTOJS.Model.GetSymbolInfo(_aes.Left);
 
-									ClassDeclarationSyntax classD = (ClassDeclarationSyntax)node.Ancestors().First(n => n.Kind() == SyntaxKind.ClassDeclaration);
+									ClassDeclarationSyntax classD = (ClassDeclarationSyntax)node.Ancestors().First(n => n.IsKind(SyntaxKind.ClassDeclaration));
 									SyntaxList<MemberDeclarationSyntax> mem = classD.Members;
 
 									foreach (MemberDeclarationSyntax item in mem)
@@ -1304,31 +1304,31 @@ namespace CSharpToJavaScript
 										SyntaxToken _sT = default;
 										if (item is MethodDeclarationSyntax m)
 										{
-											var d3 = from e in m.ChildTokens()
-													 where e.Kind() == SyntaxKind.IdentifierToken
+											IEnumerable<SyntaxToken> d3 = from e in m.ChildTokens()
+													 where e.IsKind(SyntaxKind.IdentifierToken)
 													 select e;
 											_sT = d3.First();
 										}
 
 										if (item is PropertyDeclarationSyntax p)
 										{
-											var d3 = from e in p.DescendantTokens()
-													 where e.Kind() == SyntaxKind.IdentifierToken
+											IEnumerable<SyntaxToken> d3 = from e in p.DescendantTokens()
+													 where e.IsKind(SyntaxKind.IdentifierToken)
 													 select e;
 											_sT = d3.Last();
 										}
 
 										if (item is FieldDeclarationSyntax f)
 										{
-											var d3 = from e in f.DescendantTokens()
-													 where e.Kind() == SyntaxKind.IdentifierToken
+											IEnumerable<SyntaxToken> d3 = from e in f.DescendantTokens()
+													 where e.IsKind(SyntaxKind.IdentifierToken)
 													 select e;
 											_sT = d3.Last();
 										}
 
 										if (_sT.ToString() == _aes.Left.ToString())
 										{
-											var s = item.DescendantNodes().First(e => e.Kind() == SyntaxKind.VariableDeclaration) as VariableDeclarationSyntax;
+											VariableDeclarationSyntax s = item.DescendantNodes().First(e => e.IsKind(SyntaxKind.VariableDeclaration)) as VariableDeclarationSyntax;
 											syntaxNode = s.Type;
 											symbolInfo = CSTOJS.Model.GetSymbolInfo(syntaxNode);
 										}
@@ -1438,7 +1438,7 @@ namespace CSharpToJavaScript
 				{
 					SyntaxToken _syntaxToken = _item.AsToken();
 
-					if (_syntaxToken.Kind() == SyntaxKind.IdentifierToken) 
+					if (_syntaxToken.IsKind(SyntaxKind.IdentifierToken)) 
 					{
 						if (_syntaxToken.Text == node.Identifier.Text) 
 						{
@@ -1453,10 +1453,6 @@ namespace CSharpToJavaScript
 				try
 				{
 					symbolInfo = CSTOJS.Model.GetSymbolInfo(node);
-					if(symbolInfo == null) 
-					{
-						//
-					}
 				}
 				catch (Exception e)
 				{
@@ -1524,7 +1520,7 @@ namespace CSharpToJavaScript
 					}
 
 					IEnumerable<SyntaxNode?> _all =from e in node.Parent.ChildNodes()
-												   where e.Kind() == SyntaxKind.IdentifierName
+												   where e.IsKind(SyntaxKind.IdentifierName)
 												   select e;
 
 					SymbolInfo _symbolInfo = CSTOJS.Model.GetSymbolInfo(_all.First());
@@ -1548,16 +1544,16 @@ namespace CSharpToJavaScript
 						SyntaxToken _sT = default;
 						if (item is MethodDeclarationSyntax m)
 						{
-							var d3 = from e in m.ChildTokens()
-										where e.Kind() == SyntaxKind.IdentifierToken
+							IEnumerable<SyntaxToken> d3 = from e in m.ChildTokens()
+										where e.IsKind(SyntaxKind.IdentifierToken)
 										select e;
 							_sT = d3.First();
 						}
 
 						if (item is PropertyDeclarationSyntax p)
 						{
-							var d3 = from e in p.DescendantTokens()
-										where e.Kind() == SyntaxKind.IdentifierToken
+							IEnumerable<SyntaxToken> d3 = from e in p.DescendantTokens()
+										where e.IsKind(SyntaxKind.IdentifierToken)
 										select e;
 							_sT = d3.Last();
 						}
@@ -1565,11 +1561,11 @@ namespace CSharpToJavaScript
 						if (item is FieldDeclarationSyntax f)
 						{
 							IEnumerable<SyntaxNode> vds = (from el in f.DescendantNodes()
-														   where el.Kind() == SyntaxKind.VariableDeclarator
+														   where el.IsKind(SyntaxKind.VariableDeclarator)
 														   select el);
 
-							var d3 = from e in vds.First().DescendantNodesAndTokens()
-										where e.Kind() == SyntaxKind.IdentifierToken
+							IEnumerable<SyntaxNodeOrToken> d3 = from e in vds.First().DescendantNodesAndTokens()
+										where e.IsKind(SyntaxKind.IdentifierToken)
 										select e;
 							
 							_sT = (SyntaxToken)d3.First();
@@ -1580,14 +1576,13 @@ namespace CSharpToJavaScript
 							if (_UsedThis == false)
 							{
 								_UsedThis = true;
+								
 								VisitLeadingTrivia(node.Identifier);
+								
 								JSSB.Append($"this.");
 								VisitToken(node.Identifier.WithoutTrivia());
+								
 								VisitTrailingTrivia(node.Identifier);
-
-								//if (node.Parent.Parent is InvocationExpressionSyntax ||
-									//node.Parent.Parent is ArgumentSyntax)
-									//_UsedThis = false;
 
 								return;
 							}
@@ -1692,7 +1687,6 @@ namespace CSharpToJavaScript
 
 			if (CustomCSNamesToJS(node) == false)
 			{
-
 				if (BuildInTypesGenerics(node, iSymbol) == false)
 				{
 					if (_Options.Debug)
@@ -1746,7 +1740,7 @@ namespace CSharpToJavaScript
 
 			if (symbol == null) 
 			{
-				SM.Log($"node: \"{node}\", symbol is null. USE \"CustomCSNamesToJS\"!");
+				SM.Log($"WARNING! node: \"{node}\", symbol is null. USE \"CustomCSNamesToJS\"!");
 				return false;
 			}
 
@@ -1786,7 +1780,7 @@ namespace CSharpToJavaScript
 									return true;
 								}
 							default:
-								SM.Log($"node: \"{node}\", symbol: \"{symbol}\", as \"{symbolKind}\" Is not supported! USE \"CustomCSNamesToJS\"");
+								SM.Log($"WARNING! node: \"{node}\", symbol: \"{symbol}\", as \"{symbolKind}\" Is not supported! USE \"CustomCSNamesToJS\"");
 								return false;
 						}
 					}
@@ -1830,7 +1824,7 @@ namespace CSharpToJavaScript
 									return true;
 								}
 							default:
-								SM.Log($"node: \"{node}\", symbol: \"{symbol}\", as \"{symbolKind}\" Is not supported! USE \"CustomCSNamesToJS\"");
+								SM.Log($"WARNING! node: \"{node}\", symbol: \"{symbol}\", as \"{symbolKind}\" Is not supported! USE \"CustomCSNamesToJS\"");
 								return false;
 						}
 					}
@@ -1851,22 +1845,23 @@ namespace CSharpToJavaScript
 									return true;
 								}
 							default:
-								SM.Log($"node: \"{node}\", symbol: \"{symbol}\", as \"{symbolKind}\" Is not supported! USE \"CustomCSNamesToJS\"");
+								SM.Log($"WARNING! node: \"{node}\", symbol: \"{symbol}\", as \"{symbolKind}\" Is not supported! USE \"CustomCSNamesToJS\"");
 								return false;
 						}
 					}
+					/*
 				case SymbolKind.Field:
 					{
 						string _name = symbol.Name;
 						switch (_name)
 						{
 							default:
-								SM.Log($"node: \"{node}\", symbol: \"{symbol}\", as \"{symbolKind}\" Is not supported! USE \"CustomCSNamesToJS\"");
+								SM.Log($"WARNING! node: \"{node}\", symbol: \"{symbol}\", as \"{symbolKind}\" Is not supported! USE \"CustomCSNamesToJS\"");
 								return false;
 						}
-					}
+					}*/
 				default:
-					SM.Log($"symbol kind: \"{symbolKind}\" Is not supported! USE \"CustomCSNamesToJS\"");
+					SM.Log($"WARNING! symbol kind: \"{symbolKind}\" Is not supported! USE \"CustomCSNamesToJS\"");
 					return false;
 			}
 		}

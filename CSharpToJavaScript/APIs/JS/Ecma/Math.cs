@@ -11,14 +11,14 @@ namespace CSharpToJavaScript.APIs.JS
 	[To(ToAttribute.Default)]
 	public partial class Math
 	{
-		public static float E { get; } = 2.7182818284590452354f;
-		public static float LN10 { get; } = 2.302585092994046f;
-		public static float LN2 { get; } = 0.6931471805599453f;
-		public static float LOG10E { get; } = 0.4342944819032518f;
-		public static float LOG2E { get; } = 1.4426950408889634f;
-		public static float PI { get; } = 3.1415926535897932f;
-		public static float SQRT1_2 { get; } = 0.7071067811865476f;
-		public static float SQRT2 { get; } = 1.4142135623730951f;
+		public const float E = 2.7182818284590452354f;
+		public const float LN10  = 2.302585092994046f;
+		public const float LN2 = 0.6931471805599453f;
+		public const float LOG10E = 0.4342944819032518f;
+		public const float LOG2E = 1.4426950408889634f;
+		public const float PI  = 3.1415926535897932f;
+		public const float SQRT1_2  = 0.7071067811865476f;
+		public const float SQRT2  = 1.4142135623730951f;
 
 		[To(ToAttribute.FirstCharToLowerCase)]
 		public static float Abs(float x) 

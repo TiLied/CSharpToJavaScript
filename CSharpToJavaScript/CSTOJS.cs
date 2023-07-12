@@ -1,9 +1,4 @@
-﻿global using global::System;
-
-
-
-
-using System.Reflection;
+﻿using System.Reflection;
 using System.Diagnostics;
 using System.IO;
 using System.Collections.Generic;
@@ -16,7 +11,10 @@ using System.Linq;
 
 namespace CSharpToJavaScript
 {
-    public class CSTOJS
+	/// <summary>
+	/// Main type for CSharpToJavaScript.
+	/// </summary>
+	public class CSTOJS
 	{
 		public static SemanticModel Model { get; set; }
 
@@ -26,6 +24,10 @@ namespace CSharpToJavaScript
 
 		private Walker _Walker = new();
 
+		/// <summary>
+		/// New instance of <see cref="CSTOJS"/> with default options, see <see cref="CSTOJSOptions"/>.
+		/// </summary>
+		/// <param name="assembly">Assembly of a project, get by <see cref="Assembly.GetExecutingAssembly" /></param>
 		public CSTOJS(Assembly assembly) 
 		{
 			_Assembly = assembly;
@@ -42,6 +44,11 @@ namespace CSharpToJavaScript
 			Trace.Listeners.Add(new ConsoleTraceListener());
 		}
 
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="assembly">Assembly of a project, get by <see cref="Assembly.GetExecutingAssembly" /></param>
+		/// <param name="options">Options of <see cref="CSTOJS"/>, see <see cref="CSTOJSOptions"/>.</param>
 		public CSTOJS(Assembly assembly, CSTOJSOptions options)
 		{
 			_Assembly = assembly;
@@ -60,6 +67,11 @@ namespace CSharpToJavaScript
 			Trace.Listeners.Add(new ConsoleTraceListener());
 		}
 
+		/// <summary>
+		/// Method for generating js file.
+		/// </summary>
+		/// <param name="path">Full path to cs file.</param>
+		/// <returns></returns>
 		public async Task Generate2Async(string path) 
 		{
 			string fileCS = await File.ReadAllTextAsync(path);

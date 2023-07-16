@@ -1550,7 +1550,7 @@ namespace CSharpToJavaScript
 									{
 										if (CustomCSNamesToJS(syntaxNode) == false)
 										{
-											if (BuildInTypesGenerics(syntaxNode, iSymbol) == false)
+											if (BuiltInTypesGenerics(syntaxNode, iSymbol) == false)
 											{
 												JSSB.Append($" Object");
 												SM.Log($"TODO : {syntaxNode} ||| USE 'CustomCSNamesToJS' TO CONVERT.");
@@ -1569,7 +1569,7 @@ namespace CSharpToJavaScript
 									if (CustomCSNamesToJS(syntaxNode) == false)
 									{
 										JSSB.Append($" ");
-										if (BuildInTypesGenerics(syntaxNode.WithoutLeadingTrivia(), iSymbol) == false)
+										if (BuiltInTypesGenerics(syntaxNode.WithoutLeadingTrivia(), iSymbol) == false)
 										{
 											SM.Log($"TODO : {syntaxNode} ||| USE 'CustomCSNamesToJS' TO CONVERT.");
 										}
@@ -1775,7 +1775,7 @@ namespace CSharpToJavaScript
 			else
 				iSymbol = symbolInfo?.Symbol;
 
-			if (iSymbol != null && iSymbol.Kind != SymbolKind.ErrorType)
+			if (iSymbol != null && iSymbol.Kind != SymbolKind.ErrorType && iSymbol.Kind != SymbolKind.DynamicType)
 			{
 				if (iSymbol.ContainingNamespace.ToString().Contains(nameof(APIs.JS)))
 				{
@@ -1986,7 +1986,7 @@ namespace CSharpToJavaScript
 
 			if (CustomCSNamesToJS(node) == false)
 			{
-				if (BuildInTypesGenerics(node, iSymbol) == false)
+				if (BuiltInTypesGenerics(node, iSymbol) == false)
 				{
 					if (_Options.Debug)
 					{
@@ -2036,7 +2036,7 @@ namespace CSharpToJavaScript
 			return false;
 		}
 
-		private bool BuildInTypesGenerics(SyntaxNode nodeL, ISymbol symbol) 
+		private bool BuiltInTypesGenerics(SyntaxNode nodeL, ISymbol symbol) 
 		{
 			IdentifierNameSyntax node = nodeL as IdentifierNameSyntax;
 
@@ -2055,115 +2055,163 @@ namespace CSharpToJavaScript
 				VisitLeadingTrivia(_genericName.Identifier);
 			}
 
-			SymbolKind symbolKind = symbol.Kind;
+			ISymbol typeSymbol = symbol;
+
+			if(typeSymbol.Kind != SymbolKind.NamedType)
+			{
+				typeSymbol = symbol.ContainingSymbol;
+
+				if(typeSymbol.Kind != SymbolKind.NamedType) 
+				{
+					SM.Log($"WARNING! node: \"{node}\", typeSymbol is \"{typeSymbol.Kind}\". USE \"CustomCSNamesToJS\"!");
+					return false;
+				}
+			}
+
+			string typeName = typeSymbol.Name;
 			ToAttribute toAttribute = new(ToAttribute.Default);
 
-			switch (symbolKind) 
+			switch (typeName)
 			{
-				case SymbolKind.NamedType: 
+				case string str when str.Contains(nameof(System.Text.Json.JsonSerializer)): 
 					{
 						string _name = symbol.Name;
 						switch (_name)
 						{
-							case string str when str.Contains(nameof(System.Text.Json.JsonSerializer)):
+							case string _str when _str == typeName:
 								{
 									JSSB.Append($"JSON");
 									return true;
 								}
-							case string str when str.Contains("List"):
+							case string _str when _str.Contains(nameof(System.Text.Json.JsonSerializer.Deserialize)):
 								{
-									JSSB.Append($"Array");
+									JSSB.Append($"parse");
 									return true;
 								}
-							case string str when str.Contains(nameof(Console)):
-								{
-									toAttribute.To = ToAttribute.FirstCharToLowerCase;
-									JSSB.Append($"{toAttribute.Convert(node.Identifier.Text)}");
-									return true;
-								}
-							default:
-								SM.Log($"WARNING! node: \"{node}\", symbol: \"{symbol}\", as \"{symbolKind}\" Is not supported! USE \"CustomCSNamesToJS\"");
-								return false;
-						}
-					}
-				case SymbolKind.Method: 
-					{
-						string _name = symbol.Name;
-						switch (_name)
-						{
-							case string str when str.Contains(nameof(System.Threading.Tasks.Task.ContinueWith)):
-								{
-									JSSB.Append($"then");
-									return true;
-								}
-							case string str when str.Contains(nameof(System.Text.Json.JsonSerializer.Serialize)):
+							case string _str when _str.Contains(nameof(System.Text.Json.JsonSerializer.Serialize)):
 								{
 									JSSB.Append($"stringify");
 									return true;
 								}
-							case string str when str.Contains(nameof(List<dynamic>.Add)): 
-								{
-									JSSB.Append($"push");
-									return true;
-								}
-							case string str when 
-							str.Contains(nameof(string.Substring)) || 
-							str.Contains(nameof(string.StartsWith)) ||
-							str.Contains(nameof(string.Replace)):
+							default:
+								SM.Log($"WARNING! node: \"{node}\", typeSymbol: \"{typeSymbol}\", symbol: \"{symbol}\", Is not supported! USE \"CustomCSNamesToJS\"");
+								return false;
+						}
+					}
+				case string str when str.Contains(nameof(Console)):
+					{
+						string _name = symbol.Name;
+						switch (_name)
+						{
+							case string _str when _str == typeName:
 								{
 									toAttribute.To = ToAttribute.FirstCharToLowerCase;
 									JSSB.Append($"{toAttribute.Convert(node.Identifier.Text)}");
 									return true;
 								}
-							case string str when str.Contains(nameof(string.Contains)):
-								{
-									JSSB.Append($"includes");
-									return true;
-								}
-							case string str when str.Contains(nameof(Console.WriteLine)):
+							case string _str when _str.Contains(nameof(Console.WriteLine)):
 								{
 									JSSB.Append($"log");
 									return true;
 								}
 							default:
-								SM.Log($"WARNING! node: \"{node}\", symbol: \"{symbol}\", as \"{symbolKind}\" Is not supported! USE \"CustomCSNamesToJS\"");
+								SM.Log($"WARNING! node: \"{node}\", typeSymbol: \"{typeSymbol}\", symbol: \"{symbol}\", Is not supported! USE \"CustomCSNamesToJS\"");
 								return false;
 						}
 					}
-				case SymbolKind.Property:
+				case string str when str.Contains(nameof(List<dynamic>)):
 					{
 						string _name = symbol.Name;
 						switch (_name)
 						{
-							case string str when str.Contains(nameof(List<string>.Count)):
+							case string _str when _str == typeName:
+								{
+									JSSB.Append($"Array");
+									return true;
+								}
+							case string _str when _str.Contains(nameof(List<dynamic>.Sort)):
+								{
+									toAttribute.To = ToAttribute.FirstCharToLowerCase;
+									JSSB.Append($"{toAttribute.Convert(node.Identifier.Text)}");
+									return true;
+								}
+							case string _str when _str.Contains(nameof(List<dynamic>.Count)):
 								{
 									JSSB.Append($"length");
 									return true;
 								}
-							case string str when str.Contains(nameof(Array.Length)):
+							case string _str when _str.Contains(nameof(List<dynamic>.Add)):
+								{
+									JSSB.Append($"push");
+									return true;
+								}
+							case string _str when _str.Contains(nameof(List<dynamic>.Contains)):
+								{
+									JSSB.Append($"includes");
+									return true;
+								}
+							default:
+								SM.Log($"WARNING! node: \"{node}\", typeSymbol: \"{typeSymbol}\", symbol: \"{symbol}\", Is not supported! USE \"CustomCSNamesToJS\"");
+								return false;
+						}
+					}
+				case string str when str.Contains(nameof(String)):
+					{
+						string _name = symbol.Name;
+						switch (_name)
+						{
+							case string _str when _str.Contains(nameof(string.Contains)):
+								{
+									JSSB.Append($"includes");
+									return true;
+								}
+							case string _str when
+							_str.Contains(nameof(string.Substring)) ||
+							_str.Contains(nameof(string.StartsWith)) ||
+							_str.Contains(nameof(string.Replace)):
 								{
 									toAttribute.To = ToAttribute.FirstCharToLowerCase;
 									JSSB.Append($"{toAttribute.Convert(node.Identifier.Text)}");
 									return true;
 								}
 							default:
-								SM.Log($"WARNING! node: \"{node}\", symbol: \"{symbol}\", as \"{symbolKind}\" Is not supported! USE \"CustomCSNamesToJS\"");
+								SM.Log($"WARNING! node: \"{node}\", typeSymbol: \"{typeSymbol}\", symbol: \"{symbol}\", Is not supported! USE \"CustomCSNamesToJS\"");
 								return false;
 						}
 					}
-					/*
-				case SymbolKind.Field:
+				case string str when str.Contains(nameof(System.Threading.Tasks.Task<dynamic>)):
 					{
 						string _name = symbol.Name;
 						switch (_name)
 						{
+							case string _str when _str.Contains(nameof(System.Threading.Tasks.Task.ContinueWith)):
+								{
+									JSSB.Append($"then");
+									return true;
+								}
 							default:
-								SM.Log($"WARNING! node: \"{node}\", symbol: \"{symbol}\", as \"{symbolKind}\" Is not supported! USE \"CustomCSNamesToJS\"");
+								SM.Log($"WARNING! node: \"{node}\", typeSymbol: \"{typeSymbol}\", symbol: \"{symbol}\", Is not supported! USE \"CustomCSNamesToJS\"");
 								return false;
 						}
-					}*/
+					}
+				case string str when str.Contains(nameof(Array)):
+					{
+						string _name = symbol.Name;
+						switch (_name)
+						{
+							case string _str when _str.Contains(nameof(Array.Length)):
+								{
+									toAttribute.To = ToAttribute.FirstCharToLowerCase;
+									JSSB.Append($"{toAttribute.Convert(node.Identifier.Text)}");
+									return true;
+								}
+							default:
+								SM.Log($"WARNING! node: \"{node}\", typeSymbol: \"{typeSymbol}\", symbol: \"{symbol}\", Is not supported! USE \"CustomCSNamesToJS\"");
+								return false;
+						}
+					}
 				default:
-					SM.Log($"WARNING! symbol kind: \"{symbolKind}\" Is not supported! USE \"CustomCSNamesToJS\"");
+					SM.Log($"WARNING! typeSymbol: \"{typeSymbol}\" Is not supported! USE \"CustomCSNamesToJS\"");
 					return false;
 			}
 		}

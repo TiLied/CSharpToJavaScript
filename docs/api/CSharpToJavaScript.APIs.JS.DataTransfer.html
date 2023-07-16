@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
       <title>Class DataTransfer
- </title>
+ | CSharpToJavaScript </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class DataTransfer
- ">
+ | CSharpToJavaScript ">
       
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
@@ -145,7 +145,7 @@ public class DataTransfer</code></pre>
   <h2 id="CSharpToJavaScript_APIs_JS_DataTransfer_remarks">Remarks</h2>
   <div class="markdown level0 remarks"><p>This object is available from the <a class="xref" href="CSharpToJavaScript.APIs.JS.DragEvent.html#CSharpToJavaScript_APIs_JS_DragEvent_DataTransfer">DataTransfer</a> property of all <a class="xref" href="CSharpToJavaScript.APIs.JS.DragEvent.html">DragEvent</a>.</p>
 <p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API">Drag and drop</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations">Drag Operations</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types">Recommended Drag Types</a><br>-<a href="https://codepen.io/tech_query/pen/MqGgap">DataTransfer test - Paste or Drag</a><br></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer"> <em>See also on MDN</em> </a></p>
 </div>
 
 
@@ -177,7 +177,7 @@ public class DataTransfer</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_DataTransfer__ctor_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/DataTransfer"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/DataTransfer</a></p>
+  <div class="markdown level1 remarks"><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/DataTransfer"> <em>See also on MDN</em> </a></p>
 </div>
 
 
@@ -219,7 +219,7 @@ public class DataTransfer</code></pre>
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_DataTransfer_DropEffect_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>When the <a class="xref" href="CSharpToJavaScript.APIs.JS.DataTransfer.html">DataTransfer</a> object is created, <code>dropEffect</code> is set<br>to a string value. On getting, it returns its current value. On setting, if the new<br>value is one of the values listed below, then the property&amp;apos;s current value will be set<br>to the new value and other values will be ignored.</p><p>For the <see cref="!:HTMLElement/dragenter_event"></see> and <see cref="!:HTMLElement/dragover_event"></see> events,<br><code>dropEffect</code> will be initialized based on what action the user is requesting.<br>How this is determined is platform specific, but typically the user can press modifier<br>keys such as the alt key to adjust the desired action. Within event handlers for<br><see cref="!:HTMLElement/dragenter_event"></see> and <see cref="!:HTMLElement/dragover_event"></see> events, <code>dropEffect</code> should<br>be modified if a different action is desired than the action that the user is<br>requesting.</p><p>For the <see cref="!:HTMLElement/drop_event"></see> and <see cref="!:HTMLElement/dragend_event"></see> events, <code>dropEffect</code> will<br>be set to the action that was desired, which will be the value <code>dropEffect</code><br>had after the last <see cref="!:HTMLElement/dragenter_event"></see> or <see cref="!:HTMLElement/dragover_event"></see> event. In a<br><see cref="!:HTMLElement/dragend_event"></see> event, for instance, if the desired dropEffect is "move", then the<br>data being dragged should be removed from the source.</p>
 <p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API">Drag and drop</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations">Drag Operations</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types">Recommended Drag Types</a><br>-<a href="https://codepen.io/tech_query/pen/MqGgap">DataTransfer test - Paste or Drag</a><br></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/dropEffect"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/dropEffect</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/dropEffect"> <em>See also on MDN</em> </a></p>
 </div>
 
 
@@ -257,7 +257,7 @@ public class DataTransfer</code></pre>
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_DataTransfer_EffectAllowed_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>This property should be set in the <see cref="!:HTMLElement/dragstart_event"></see> event to set the desired drag<br>effect for the drag source. Within the <see cref="!:HTMLElement/dragenter_event"></see> and <see cref="!:HTMLElement/dragover_event"></see><br>event handlers, this property will be set to whatever value was assigned during the<br><see cref="!:HTMLElement/dragstart_event"></see> event, thus <code>effectAllowed</code> may be used to determine<br>which effect is permitted.</p><p>Assigning a value to <code>effectAllowed</code> in events other than<br><see cref="!:HTMLElement/dragstart_event"></see> has no effect.</p>
 <p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API">Drag and drop</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations">Drag Operations</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types">Recommended Drag Types</a><br>-<a href="https://codepen.io/tech_query/pen/MqGgap">DataTransfer test - Paste or Drag</a><br></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/effectAllowed"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/effectAllowed</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/effectAllowed"> <em>See also on MDN</em> </a></p>
 </div>
 
 
@@ -294,7 +294,7 @@ public class DataTransfer</code></pre>
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_DataTransfer_Files_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>This feature can be used to drag files from a user&amp;apos;s desktop to the browser.</p><blockquote class="NOTE"><h5>NOTE</h5><p><strong>Note:</strong> The <code>files</code> property of <a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer"><code>DataTransfer</code>https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer</a> objects can only be accessed from within the <code>drop</code> event. For all other events, the <code>files</code> property will be empty — because its underlying data store will be in a <a href="https://html.spec.whatwg.org/multipage/dnd.html#the-drag-data-store">protected mode</a>.</p></blockquote>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/files"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/files</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/files"> <em>See also on MDN</em> </a></p>
 </div>
 
 
@@ -331,7 +331,7 @@ public class DataTransfer</code></pre>
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_DataTransfer_Items_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API">Drag and drop</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations">Drag Operations</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types">Recommended Drag Types</a><br>-<a href="https://codepen.io/tech_query/pen/MqGgap">DataTransfer test - Paste or Drag</a><br></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/items"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/items</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/items"> <em>See also on MDN</em> </a></p>
 </div>
 
 
@@ -368,7 +368,7 @@ public class DataTransfer</code></pre>
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_DataTransfer_Types_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API">Drag and drop</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations">Drag Operations</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types">Recommended Drag Types</a><br>-<a href="https://codepen.io/tech_query/pen/MqGgap">DataTransfer test - Paste or Drag</a><br></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/types"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/types</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/types"> <em>See also on MDN</em> </a></p>
 </div>
 
 
@@ -390,7 +390,7 @@ public class DataTransfer</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Unsupported ClearData(string format)</code></pre>
+    <pre><code class="lang-csharp hljs">public GlobalObject.Undefined ClearData(string format)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -401,8 +401,8 @@ public class DataTransfer</code></pre>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None (<see cref="!:Undefined"></see>).</p>
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.GlobalObject.html">GlobalObject</a>.<a class="xref" href="CSharpToJavaScript.APIs.JS.GlobalObject.Undefined.html">Undefined</a></dt>
+    <dd><p>None (<a class="xref" href="CSharpToJavaScript.APIs.JS.GlobalObject.Undefined.html">GlobalObject.Undefined</a>).</p>
 </dd>
   </dl>
 
@@ -415,7 +415,7 @@ public class DataTransfer</code></pre>
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_DataTransfer_ClearData_System_String__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>If this method is called with no arguments or the format is an empty<br>string, the data of all types will be removed.</p><p>This method does <strong>not</strong> remove files from the drag operation, so it&amp;apos;s possible<br>for there still to be an entry with the type <code>&amp;quot;Files&amp;quot;</code> left in the object&amp;apos;s<br><a class="xref" href="CSharpToJavaScript.APIs.JS.DataTransfer.html#CSharpToJavaScript_APIs_JS_DataTransfer_Types">Types</a> list if there are any files included in the drag.</p><blockquote class="NOTE"><h5>NOTE</h5><p><strong>Note:</strong> This method can only be used in the handler for the <see cref="!:HTMLElement/dragstart_event"></see> event,<br>because that&amp;apos;s the only time the drag operation&amp;apos;s data store is writable.</p></blockquote>
 <p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API">Drag and drop</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations">Drag Operations</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types">Recommended Drag Types</a><br>-<a href="https://codepen.io/tech_query/pen/MqGgap">DataTransfer test - Paste or Drag</a><br></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/clearData"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/clearData</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/clearData"> <em>See also on MDN</em> </a></p>
 </div>
 
 
@@ -458,7 +458,7 @@ public class DataTransfer</code></pre>
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_DataTransfer_GetData_System_String__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>Example data types are <code>text/plain</code> and <code>text/uri-list</code>.</p>
 <p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API">Drag and drop</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations">Drag Operations</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types">Recommended Drag Types</a><br>-<a href="https://codepen.io/tech_query/pen/MqGgap">DataTransfer test - Paste or Drag</a><br></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/getData"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/getData</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/getData"> <em>See also on MDN</em> </a></p>
 </div>
 
 
@@ -476,7 +476,7 @@ public class DataTransfer</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Unsupported SetData(string format, string data)</code></pre>
+    <pre><code class="lang-csharp hljs">public GlobalObject.Undefined SetData(string format, string data)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -489,8 +489,8 @@ public class DataTransfer</code></pre>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None (<see cref="!:Undefined"></see>).</p>
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.GlobalObject.html">GlobalObject</a>.<a class="xref" href="CSharpToJavaScript.APIs.JS.GlobalObject.Undefined.html">Undefined</a></dt>
+    <dd><p>None (<a class="xref" href="CSharpToJavaScript.APIs.JS.GlobalObject.Undefined.html">GlobalObject.Undefined</a>).</p>
 </dd>
   </dl>
 
@@ -503,7 +503,7 @@ public class DataTransfer</code></pre>
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_DataTransfer_SetData_System_String_System_String__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>Example data types are <code>text/plain</code> and <code>text/uri-list</code>.</p>
 <p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API">Drag and drop</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations">Drag Operations</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types">Recommended Drag Types</a><br>-<a href="https://codepen.io/tech_query/pen/MqGgap">DataTransfer test - Paste or Drag</a><br></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/setData"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/setData</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/setData"> <em>See also on MDN</em> </a></p>
 </div>
 
 
@@ -521,7 +521,7 @@ public class DataTransfer</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Unsupported SetDragImage(Element image, long x, long y)</code></pre>
+    <pre><code class="lang-csharp hljs">public GlobalObject.Undefined SetDragImage(Element image, long x, long y)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -536,8 +536,8 @@ public class DataTransfer</code></pre>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>None (<see cref="!:Undefined"></see>).</p>
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.GlobalObject.html">GlobalObject</a>.<a class="xref" href="CSharpToJavaScript.APIs.JS.GlobalObject.Undefined.html">Undefined</a></dt>
+    <dd><p>None (<a class="xref" href="CSharpToJavaScript.APIs.JS.GlobalObject.Undefined.html">GlobalObject.Undefined</a>).</p>
 </dd>
   </dl>
 
@@ -550,7 +550,7 @@ public class DataTransfer</code></pre>
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_DataTransfer_SetDragImage_CSharpToJavaScript_APIs_JS_Element_System_Int64_System_Int64__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>The method&amp;apos;s <code>x</code> and <code>y</code> coordinates define how the image should<br>appear relative to the mouse pointer. These coordinates define the offset into the image<br>where the mouse cursor should be. For instance, to display the image so that the pointer<br>is at its center, use values that are half the width and height of the image.</p><p>This method must be called in the <see cref="!:HTMLElement/dragstart_event"></see> event handler.</p>
 <p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API">Drag and drop</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations">Drag Operations</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types">Recommended Drag Types</a><br>-<a href="https://codepen.io/tech_query/pen/MqGgap">DataTransfer test - Paste or Drag</a><br></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/setDragImage"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/setDragImage</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/setDragImage"> <em>See also on MDN</em> </a></p>
 </div>
 
 

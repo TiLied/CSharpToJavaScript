@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Example &quot;Hello World!&quot; </title>
+      <title>Example &quot;Hello World!&quot; | CSharpToJavaScript </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Example &quot;Hello World!&quot; ">
+      <meta name="title" content="Example &quot;Hello World!&quot; | CSharpToJavaScript ">
       
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
@@ -95,7 +95,7 @@ public class Program
 		Assembly executingAssembly = Assembly.GetExecutingAssembly();
 		
 		CSTOJS cstojs = new(executingAssembly);
-		await cstojs.Generate2Async(&quot;C:\\GitReps\\TestNuget\\TestNuget\\CSharp\\Test.cs&quot;);
+		await cstojs.GenerateAsync(&quot;C:\\GitReps\\TestNuget\\TestNuget\\CSharp\\Test.cs&quot;);
 		
 		Console.ReadKey();
 	}
@@ -103,7 +103,7 @@ public class Program
 </code></pre>
 <p>Add new folder &quot;CSharp&quot; and new file name &quot;Test&quot;.</p>
 <p>CSharp/Test.cs</p>
-<pre><code class="lang-csharp">using static CSharpToJavaScript.APIs.JS.GlobalThis;
+<pre><code class="lang-csharp">using static CSharpToJavaScript.APIs.JS.GlobalObject.GlobalThis;
 namespace TestNuget.CSharp;
 
 public class Test

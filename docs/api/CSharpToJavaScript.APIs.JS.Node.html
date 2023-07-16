@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
       <title>Class Node
- </title>
+ | CSharpToJavaScript </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class Node
- ">
+ | CSharpToJavaScript ">
       
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
@@ -176,7 +176,7 @@ public class Node : EventTarget</code></pre>
 
   <h2 id="CSharpToJavaScript_APIs_JS_Node_remarks">Remarks</h2>
   <div class="markdown level0 remarks"><p>In some cases, a particular feature of the base <code>Node</code> interface may not<br>apply to one of its child interfaces; in that case, the inheriting node may<br>return <code>null</code> or throw an exception, depending on circumstances. For example,<br>attempting to add children to a node type that cannot have children will throw an<br>exception.</p><p></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Node</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node"> <em>See also on MDN</em> </a></p>
 </div>
 
 
@@ -760,7 +760,7 @@ public class Node : EventTarget</code></pre>
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Node_BaseURI_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>The base URL is used to resolve relative URLs when the browser needs to obtain an<br>absolute URL, for example when processing the HTML <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">img</a> element's<br><code>src</code> attribute or the <code>xlink:href</code> or <code>href</code> attributes in SVG.</p><p>Although this property is read-only, its value is determined by an algorithm each time<br>the property is accessed, and may change if the conditions changed.</p><p>The base URL is determined as follows:</p>
 <p>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base">base</a> element.<br></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/baseURI"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Node/baseURI</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/baseURI"> <em>See also on MDN</em> </a></p>
 </div>
 
 
@@ -798,7 +798,7 @@ public class Node : EventTarget</code></pre>
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Node_ChildNodes_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><blockquote class="NOTE"><h5>NOTE</h5><p><strong>Note:</strong> The <a class="xref" href="CSharpToJavaScript.APIs.JS.NodeList.html">NodeList</a> being live means that its content is changed each time<br>new children are added or removed.</p></blockquote><p>The items in the collection of nodes are objects, not strings. To get data from node<br>objects, use their properties. For example, to get the name of the first<br>childNode, you can use <code>elementNodeReference.childNodes[0].nodeName</code>.</p><p>The <a class="xref" href="CSharpToJavaScript.APIs.JS.Document.html">Document</a> object itself has two children: the Doctype declaration and the<br>root element, typically referred to as <code>documentElement</code>. In HTML<br>documents the latter is the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html">html</a> element.</p><p>It is important to keep in mind that <code>childNodes</code> includes <strong>all</strong> child nodes,<br>including non-element nodes like text and comment.<br>To get a collection containing only elements, use <see cref="!:Element.Children"></see> instead.</p>
 <p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_FirstChild">FirstChild</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_LastChild">LastChild</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_NextSibling">NextSibling</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_PreviousSibling">PreviousSibling</a><br>-<see cref="!:Element.Children"></see><br></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/childNodes"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Node/childNodes</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/childNodes"> <em>See also on MDN</em> </a></p>
 </div>
 
 
@@ -836,7 +836,7 @@ public class Node : EventTarget</code></pre>
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Node_FirstChild_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>If the node is a <a class="xref" href="CSharpToJavaScript.APIs.JS.Document.html">Document</a>,<br>this property returns the first node in the list of its direct children.</p><blockquote class="NOTE"><h5>NOTE</h5><p><strong>Note:</strong> This property returns any type of node that is the first child of this one.<br>It may be a <a class="xref" href="CSharpToJavaScript.APIs.JS.Text.html">Text</a> or a <a class="xref" href="CSharpToJavaScript.APIs.JS.Comment.html">Comment</a> node.<br>If you want to get the first <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html">Element</a> that is a child of another element,<br>consider using <see cref="!:Element.FirstElementChild"></see>.</p></blockquote>
 <p>-<see cref="!:Element.FirstElementChild"></see><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_LastChild">LastChild</a><br></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/firstChild"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Node/firstChild</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/firstChild"> <em>See also on MDN</em> </a></p>
 </div>
 
 
@@ -873,7 +873,7 @@ public class Node : EventTarget</code></pre>
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Node_IsConnected_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>-<a href="https://gist.github.com/eligrey/f109a6d0bf4efe3461201c3d7b745e8f">Node.prototype.isConnected polyfill</a><br></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/isConnected"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Node/isConnected</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/isConnected"> <em>See also on MDN</em> </a></p>
 </div>
 
 
@@ -911,7 +911,7 @@ public class Node : EventTarget</code></pre>
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Node_LastChild_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><blockquote class="NOTE"><h5>NOTE</h5><p><strong>Note:</strong> This property returns any type of node that is the last child of this one.<br>It may be a <a class="xref" href="CSharpToJavaScript.APIs.JS.Text.html">Text</a> or a <a class="xref" href="CSharpToJavaScript.APIs.JS.Comment.html">Comment</a> node.<br>If you want to get the last <a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html">Element</a> that is a child of another element,<br>consider using <see cref="!:Element.LastElementChild"></see>.</p></blockquote>
 <p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_FirstChild">FirstChild</a><br>-<see cref="!:Element.LastElementChild"></see><br></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/lastChild"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Node/lastChild</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/lastChild"> <em>See also on MDN</em> </a></p>
 </div>
 
 
@@ -949,7 +949,7 @@ public class Node : EventTarget</code></pre>
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Node_NextSibling_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><blockquote class="NOTE"><h5>NOTE</h5><p><strong>Note:</strong> Browsers insert <a class="xref" href="CSharpToJavaScript.APIs.JS.Text.html">Text</a> nodes into a document to represent whitespace in the source markup.<br>Therefore a node obtained, for example, using <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/firstChild"><code>Node.firstChild</code>https://developer.mozilla.org/en-US/docs/Web/API/Node/firstChild</a><br>or <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/previousSibling"><code>Node.previousSibling</code>https://developer.mozilla.org/en-US/docs/Web/API/Node/previousSibling</a><br>may refer to a whitespace text node rather than the actual element the author<br>intended to get.</p><p>The article <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Whitespace">Whitespace in the DOM</a><br>contains more information about this behavior.</p><p>You can use <see cref="!:Element.NextElementSibling"></see> to obtain the next element<br>skipping any whitespace nodes, other between-element text, or comments.</p><p>To navigate the opposite way through the child nodes list use <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/previousSibling">Node.previousSibling</a>.</p></blockquote>
 <p>-<see cref="!:Element.NextElementSibling"></see><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_PreviousSibling">PreviousSibling</a><br></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/nextSibling"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Node/nextSibling</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/nextSibling"> <em>See also on MDN</em> </a></p>
 </div>
 
 
@@ -986,7 +986,7 @@ public class Node : EventTarget</code></pre>
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Node_NodeName_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html#CSharpToJavaScript_APIs_JS_Element_TagName">TagName</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.Attr.html#CSharpToJavaScript_APIs_JS_Attr_Name">Name</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.DocumentType.html#CSharpToJavaScript_APIs_JS_DocumentType_Name">Name</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.ProcessingInstruction.html#CSharpToJavaScript_APIs_JS_ProcessingInstruction_Target">Target</a><br></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeName"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeName</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeName"> <em>See also on MDN</em> </a></p>
 </div>
 
 
@@ -1022,7 +1022,7 @@ public class Node : EventTarget</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Node_NodeType_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeType"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeType</a></p>
+  <div class="markdown level1 remarks"><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeType"> <em>See also on MDN</em> </a></p>
 </div>
 
 
@@ -1058,7 +1058,7 @@ public class Node : EventTarget</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Node_NodeValue_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeValue"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeValue</a></p>
+  <div class="markdown level1 remarks"><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeValue"> <em>See also on MDN</em> </a></p>
 </div>
 
 
@@ -1094,7 +1094,7 @@ public class Node : EventTarget</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Node_OwnerDocument_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/ownerDocument"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Node/ownerDocument</a></p>
+  <div class="markdown level1 remarks"><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/ownerDocument"> <em>See also on MDN</em> </a></p>
 </div>
 
 
@@ -1131,7 +1131,7 @@ public class Node : EventTarget</code></pre>
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Node_ParentElement_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_ParentNode">ParentNode</a><br></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/parentElement"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Node/parentElement</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/parentElement"> <em>See also on MDN</em> </a></p>
 </div>
 
 
@@ -1169,7 +1169,7 @@ public class Node : EventTarget</code></pre>
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Node_ParentNode_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p><code>Document</code> and <code>DocumentFragment</code> <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeType">nodes</a> can never have a parent, so<br><code>parentNode</code> will always return <code>null</code>.<br>It also returns <code>null</code> if the node has just been created<br>and is not yet attached to the tree.</p>
 <p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_FirstChild">FirstChild</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_LastChild">LastChild</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_ChildNodes">ChildNodes</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_NextSibling">NextSibling</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_ParentElement">ParentElement</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_PreviousSibling">PreviousSibling</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_RemoveChild_CSharpToJavaScript_APIs_JS_Node_">RemoveChild(Node)</a><br></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/parentNode"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Node/parentNode</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/parentNode"> <em>See also on MDN</em> </a></p>
 </div>
 
 
@@ -1207,7 +1207,7 @@ public class Node : EventTarget</code></pre>
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Node_PreviousSibling_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><blockquote class="NOTE"><h5>NOTE</h5><p><strong>Note:</strong> Browsers insert text nodes into a document to represent whitespace in the source markup.<br>Therefore a node obtained, for example, using <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/firstChild"><code>Node.firstChild</code>https://developer.mozilla.org/en-US/docs/Web/API/Node/firstChild</a><br>or <code>Node.previousSibling</code><br>may refer to a whitespace text node rather than the actual element the author intended to get.</p><p>See <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Whitespace">Whitespace in the DOM</a> for more information.</p><p>You can use <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/previousElementSibling"><code>previousElementSibling</code>https://developer.mozilla.org/en-US/docs/Web/API/Element/previousElementSibling</a><br>to get the previous element node (skipping text nodes and any other non-element nodes).</p><p>To navigate the opposite way through the child nodes list use <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/nextSibling">Node.nextSibling</a>.</p></blockquote>
 <p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_NextSibling">NextSibling</a><br>-<see cref="!:Element.PreviousElementSibling"></see><br></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/previousSibling"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Node/previousSibling</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/previousSibling"> <em>See also on MDN</em> </a></p>
 </div>
 
 
@@ -1245,7 +1245,7 @@ public class Node : EventTarget</code></pre>
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Node_TextContent_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><blockquote class="NOTE"><h5>NOTE</h5><p><strong>Note:</strong> <code>textContent</code> and <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLElement.html#CSharpToJavaScript_APIs_JS_HTMLElement_InnerText">InnerText</a> are easily confused,<br>but the two properties are <a href="https://developer.mozilla.org#differences_from_innertext">different in important ways</a>.</p></blockquote>
 <p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLElement.html#CSharpToJavaScript_APIs_JS_HTMLElement_InnerText">InnerText</a><br>-<see cref="!:Element.InnerHTML"></see><br>-<a href="https://developer.mozilla.orghttp://perfectionkills.com/the-poor-misunderstood-innerText/">More on differences between <code>innerText</code> and <code>textContent</code></a><br>(blog post)<br></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent"> <em>See also on MDN</em> </a></p>
 </div>
 
 
@@ -1292,7 +1292,7 @@ public class Node : EventTarget</code></pre>
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Node_AppendChild_CSharpToJavaScript_APIs_JS_Node__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><blockquote class="NOTE"><h5>NOTE</h5><p><strong>Note:</strong> If the given child is a reference to an existing node in the document, <code>appendChild()</code> moves it from its current position to the new position.</p></blockquote><p>If the given child is a <a class="xref" href="CSharpToJavaScript.APIs.JS.DocumentFragment.html">DocumentFragment</a>, the entire contents of the <a class="xref" href="CSharpToJavaScript.APIs.JS.DocumentFragment.html">DocumentFragment</a> are moved into the child list of the specified parent node.</p><p><code>appendChild()</code> returns the newly appended node, or if the child is a <a class="xref" href="CSharpToJavaScript.APIs.JS.DocumentFragment.html">DocumentFragment</a>, the emptied fragment.</p><blockquote class="NOTE"><h5>NOTE</h5><p><strong>Note:</strong> Unlike this method, the <see cref="!:Element.Append"></see> method supports multiple arguments and appending strings. You can prefer using it if your node is an element.</p></blockquote>
 <p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_RemoveChild_CSharpToJavaScript_APIs_JS_Node_">RemoveChild(Node)</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_ReplaceChild_CSharpToJavaScript_APIs_JS_Node_CSharpToJavaScript_APIs_JS_Node_">ReplaceChild(Node, Node)</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_InsertBefore_CSharpToJavaScript_APIs_JS_Node_CSharpToJavaScript_APIs_JS_Node_">InsertBefore(Node, Node?)</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_HasChildNodes">HasChildNodes()</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html#CSharpToJavaScript_APIs_JS_Element_InsertAdjacentElement_System_String_CSharpToJavaScript_APIs_JS_Element_">InsertAdjacentElement(string, Element)</a><br>-<see cref="!:Element.Append"></see><br></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild"> <em>See also on MDN</em> </a></p>
 </div>
 
 
@@ -1334,7 +1334,7 @@ public class Node : EventTarget</code></pre>
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Node_CloneNode_System_Boolean__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>Cloning a node copies all of its attributes and their values,<br>including intrinsic (inline) listeners. It does <strong>not</strong> copy event listeners added<br>using <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener"><code>addEventListener()</code>https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener</a> or<br>those assigned to element properties (e.g., <code>node.onclick = someFunction</code>).<br>Additionally, for a <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas">canvas</a> element, the painted image is not copied.</p><blockquote class="WARNING"><h5>WARNING</h5><p><strong>Warning:</strong> <code>cloneNode()</code> may lead to duplicate element IDs in a document!</p><p>If the original node has an <code>id</code> attribute, and the clone<br>will be placed in the same document, then you should modify the clone&amp;apos;s ID to be<br>unique.</p><p>Also, <code>name</code> attributes may need to be modified,<br>depending on whether duplicate names are expected.</p></blockquote><p>To clone a node to insert into a <strong>different</strong> document, use<br><see cref="!:Document.ImportNode"></see> instead.</p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/cloneNode"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Node/cloneNode</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/cloneNode"> <em>See also on MDN</em> </a></p>
 </div>
 
 
@@ -1376,7 +1376,7 @@ public class Node : EventTarget</code></pre>
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Node_CompareDocumentPosition_CSharpToJavaScript_APIs_JS_Node__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_Contains_CSharpToJavaScript_APIs_JS_Node_">Contains(Node?)</a><br></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/compareDocumentPosition"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Node/compareDocumentPosition</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/compareDocumentPosition"> <em>See also on MDN</em> </a></p>
 </div>
 
 
@@ -1419,7 +1419,7 @@ public class Node : EventTarget</code></pre>
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Node_Contains_CSharpToJavaScript_APIs_JS_Node__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><blockquote class="NOTE"><h5>NOTE</h5><p><strong>Note:</strong> A node is <strong>contained</strong> inside itself.</p></blockquote>
 <p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_CompareDocumentPosition_CSharpToJavaScript_APIs_JS_Node_">CompareDocumentPosition(Node)</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_HasChildNodes">HasChildNodes()</a><br></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/contains"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Node/contains</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/contains"> <em>See also on MDN</em> </a></p>
 </div>
 
 
@@ -1460,7 +1460,7 @@ public class Node : EventTarget</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Node_GetRootNode_CSharpToJavaScript_APIs_JS_GetRootNodeOptions__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/getRootNode"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Node/getRootNode</a></p>
+  <div class="markdown level1 remarks"><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/getRootNode"> <em>See also on MDN</em> </a></p>
 </div>
 
 
@@ -1497,7 +1497,7 @@ public class Node : EventTarget</code></pre>
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Node_HasChildNodes_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_ChildNodes">ChildNodes</a><br></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/hasChildNodes"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Node/hasChildNodes</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/hasChildNodes"> <em>See also on MDN</em> </a></p>
 </div>
 
 
@@ -1542,7 +1542,7 @@ public class Node : EventTarget</code></pre>
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Node_InsertBefore_CSharpToJavaScript_APIs_JS_Node_CSharpToJavaScript_APIs_JS_Node__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>If the given node already exists in the document,<br><code>insertBefore()</code> moves it from its current position to the new position.<br>(That is, it will automatically be removed from its existing parent<br>before appending it to the specified new parent.)</p><p>This means that a node cannot be in two locations of the document simultaneously.</p><blockquote class="NOTE"><h5>NOTE</h5><p><strong>Note:</strong> The <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_CloneNode_System_Boolean_">CloneNode(bool)</a> can be used to make a copy<br>of the node before appending it under the new parent. Note that the copies made with<br><code>cloneNode()</code> will not be automatically kept in sync.</p></blockquote><p>If the given child is a <a class="xref" href="CSharpToJavaScript.APIs.JS.DocumentFragment.html">DocumentFragment</a>, the entire contents of the<br><code>DocumentFragment</code> are moved into the child list of the specified parent<br>node.</p>
 <p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_RemoveChild_CSharpToJavaScript_APIs_JS_Node_">RemoveChild(Node)</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_ReplaceChild_CSharpToJavaScript_APIs_JS_Node_CSharpToJavaScript_APIs_JS_Node_">ReplaceChild(Node, Node)</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_AppendChild_CSharpToJavaScript_APIs_JS_Node_">AppendChild(Node)</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_HasChildNodes">HasChildNodes()</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html#CSharpToJavaScript_APIs_JS_Element_InsertAdjacentElement_System_String_CSharpToJavaScript_APIs_JS_Element_">InsertAdjacentElement(string, Element)</a><br>-<see cref="!:Element.Prepend"></see><br>-<see cref="!:Element.Before"></see><br>-<see cref="!:Element.After"></see><br></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/insertBefore"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Node/insertBefore</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/insertBefore"> <em>See also on MDN</em> </a></p>
 </div>
 
 
@@ -1585,7 +1585,7 @@ public class Node : EventTarget</code></pre>
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Node_IsDefaultNamespace_System_String__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><blockquote class="NOTE"><h5>NOTE</h5><p><strong>Note:</strong> The default namespace of an HTML element is always <code>&amp;quot;&amp;quot;</code>. For a SVG element, it is set by the <code>xmlns</code> attribute.</p></blockquote>
 <p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_LookupNamespaceURI_System_String_">LookupNamespaceURI(string?)</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_LookupPrefix_System_String_">LookupPrefix(string?)</a><br></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/isDefaultNamespace"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Node/isDefaultNamespace</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/isDefaultNamespace"> <em>See also on MDN</em> </a></p>
 </div>
 
 
@@ -1627,7 +1627,7 @@ public class Node : EventTarget</code></pre>
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Node_IsEqualNode_CSharpToJavaScript_APIs_JS_Node__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_IsSameNode_CSharpToJavaScript_APIs_JS_Node_">IsSameNode(Node?)</a><br></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/isEqualNode"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Node/isEqualNode</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/isEqualNode"> <em>See also on MDN</em> </a></p>
 </div>
 
 
@@ -1670,7 +1670,7 @@ public class Node : EventTarget</code></pre>
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Node_IsSameNode_CSharpToJavaScript_APIs_JS_Node__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><blockquote class="NOTE"><h5>NOTE</h5><p><strong>Note:</strong> There is no need to use <code>isSameNode()</code>; instead use the <code>===</code> strict equality operator.</p></blockquote>
 <p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_IsEqualNode_CSharpToJavaScript_APIs_JS_Node_">IsEqualNode(Node?)</a><br></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/isSameNode"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Node/isSameNode</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/isSameNode"> <em>See also on MDN</em> </a></p>
 </div>
 
 
@@ -1712,7 +1712,7 @@ public class Node : EventTarget</code></pre>
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Node_LookupNamespaceURI_System_String__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_LookupPrefix_System_String_">LookupPrefix(string?)</a><br>-<see cref="!:Node.IsDefaultNameSpace"></see><br></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/lookupNamespaceURI"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Node/lookupNamespaceURI</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/lookupNamespaceURI"> <em>See also on MDN</em> </a></p>
 </div>
 
 
@@ -1754,7 +1754,7 @@ public class Node : EventTarget</code></pre>
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Node_LookupPrefix_System_String__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>-<a href="https://www.w3.org/TR/DOM-Level-3-Core/core.html#Node3-lookupNamespacePrefix">http://www.w3.org/TR/DOM-Level-3-Cor...amespacePrefix</a><br></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/lookupPrefix"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Node/lookupPrefix</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/lookupPrefix"> <em>See also on MDN</em> </a></p>
 </div>
 
 
@@ -1772,13 +1772,13 @@ public class Node : EventTarget</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Unsupported Normalize()</code></pre>
+    <pre><code class="lang-csharp hljs">public GlobalObject.Undefined Normalize()</code></pre>
   </div>
 
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
+    <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.GlobalObject.html">GlobalObject</a>.<a class="xref" href="CSharpToJavaScript.APIs.JS.GlobalObject.Undefined.html">Undefined</a></dt>
     <dd><p>None.</p>
 </dd>
   </dl>
@@ -1791,7 +1791,7 @@ public class Node : EventTarget</code></pre>
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Node_Normalize_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.Text.html#CSharpToJavaScript_APIs_JS_Text_SplitText_System_UInt64_">SplitText(ulong)</a>, its opposite.<br></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/normalize"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Node/normalize</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/normalize"> <em>See also on MDN</em> </a></p>
 </div>
 
 
@@ -1833,7 +1833,7 @@ public class Node : EventTarget</code></pre>
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Node_RemoveChild_CSharpToJavaScript_APIs_JS_Node__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><blockquote class="NOTE"><h5>NOTE</h5><p><strong>Note:</strong> As long as a reference is kept on the removed child,<br>it still exists in memory, but is no longer part of the DOM.<br>It can still be reused later in the code.</p><p>If the return value of <code>removeChild()</code> is not stored, and no other reference is kept,<br>it will be <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_management">automatically deleted</a> from memory after a short time.</p></blockquote><p>Unlike <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_CloneNode_System_Boolean_">CloneNode(bool)</a> the return value preserves the <a class="xref" href="CSharpToJavaScript.APIs.JS.EventListener.html">EventListener</a> objects associated with it.</p>
 <p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_ReplaceChild_CSharpToJavaScript_APIs_JS_Node_CSharpToJavaScript_APIs_JS_Node_">ReplaceChild(Node, Node)</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_ParentNode">ParentNode</a><br>-<see cref="!:Element.Remove"></see><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_CloneNode_System_Boolean_">CloneNode(bool)</a><br></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild"> <em>See also on MDN</em> </a></p>
 </div>
 
 
@@ -1877,7 +1877,7 @@ public class Node : EventTarget</code></pre>
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Node_ReplaceChild_CSharpToJavaScript_APIs_JS_Node_CSharpToJavaScript_APIs_JS_Node__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_RemoveChild_CSharpToJavaScript_APIs_JS_Node_">RemoveChild(Node)</a><br>-<see cref="!:Element.ReplaceWith"></see><br></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/replaceChild"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/Node/replaceChild</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/replaceChild"> <em>See also on MDN</em> </a></p>
 </div>
 
 

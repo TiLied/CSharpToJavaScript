@@ -17,7 +17,7 @@ public class Program
 		Assembly executingAssembly = Assembly.GetExecutingAssembly();
 		
 		CSTOJS cstojs = new(executingAssembly);
-		await cstojs.Generate2Async("C:\\GitReps\\TestNuget\\TestNuget\\CSharp\\Test.cs");
+		await cstojs.GenerateAsync("C:\\GitReps\\TestNuget\\TestNuget\\CSharp\\Test.cs");
 		
 		Console.ReadKey();
 	}
@@ -28,7 +28,7 @@ Add new folder "CSharp" and new file name "Test".
 
 CSharp/Test.cs
 ```csharp
-using static CSharpToJavaScript.APIs.JS.GlobalThis;
+using static CSharpToJavaScript.APIs.JS.GlobalObject.GlobalThis;
 namespace TestNuget.CSharp;
 
 public class Test

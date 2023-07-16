@@ -4,6 +4,9 @@ Create new c# project.
 > [!NOTE]
 > Make sure to use full path in "Generate2Async" method! 
 
+> [!NOTE]
+> Note this is just example! The "Console.WriteLine" will be translated by default!
+
 Program.cs
 ```csharp
 using System.Reflection;
@@ -25,7 +28,7 @@ public class Program
 				}
 			};
 		CSTOJS cstojs = new(executingAssembly, opt);
-		await cstojs.Generate2Async("C:\\GitReps\\TestNuget\\TestNuget\\CSharp\\Test.cs");
+		await cstojs.GenerateAsync("C:\\GitReps\\TestNuget\\TestNuget\\CSharp\\Test.cs");
 		
 		Console.ReadKey();
 	}

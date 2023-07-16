@@ -46,7 +46,8 @@
     ],
     "output": "docs",
     "globalMetadata": {
-      "_enableSearch": true
+      "_enableSearch": true,
+      "_appTitle": "CSharpToJavaScript"
     },
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
@@ -58,6 +59,10 @@
     "postProcessors": [
       "ExtractSearchIndex"],
     "keepFileLink": false,
-    "disableGitFeatures": false
+    "disableGitFeatures": false,
+    "sitemap": {
+      "baseUrl": "https://tilied.github.io/CSharpToJavaScript",
+      "changefreq": "weekly"
+    }
   }
 }

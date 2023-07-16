@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Example of option &quot;CustomCSNamesToJS&quot; </title>
+      <title>Example of option &quot;CustomCSNamesToJS&quot; | CSharpToJavaScript </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Example of option &quot;CustomCSNamesToJS&quot; ">
+      <meta name="title" content="Example of option &quot;CustomCSNamesToJS&quot; | CSharpToJavaScript ">
       
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
@@ -83,6 +83,10 @@
 <h5>Note</h5>
 <p>Make sure to use full path in &quot;Generate2Async&quot; method!</p>
 </div>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Note this is just example! The &quot;Console.WriteLine&quot; will be translated by default!</p>
+</div>
 <p>Program.cs</p>
 <pre><code class="lang-csharp">using System.Reflection;
 using CSharpToJavaScript;
@@ -103,7 +107,7 @@ public class Program
 				}
 			};
 		CSTOJS cstojs = new(executingAssembly, opt);
-		await cstojs.Generate2Async(&quot;C:\\GitReps\\TestNuget\\TestNuget\\CSharp\\Test.cs&quot;);
+		await cstojs.GenerateAsync(&quot;C:\\GitReps\\TestNuget\\TestNuget\\CSharp\\Test.cs&quot;);
 		
 		Console.ReadKey();
 	}

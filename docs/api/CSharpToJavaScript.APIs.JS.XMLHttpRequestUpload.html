@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
       <title>Class XMLHttpRequestUpload
- </title>
+ | CSharpToJavaScript </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class XMLHttpRequestUpload
- ">
+ | CSharpToJavaScript ">
       
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
@@ -189,7 +189,7 @@ public class XMLHttpRequestUpload : XMLHttpRequestEventTarget</code></pre>
   <h2 id="CSharpToJavaScript_APIs_JS_XMLHttpRequestUpload_remarks">Remarks</h2>
   <div class="markdown level0 remarks"><p>It is an opaque object, but because it's also an <a class="xref" href="CSharpToJavaScript.APIs.JS.XMLHttpRequestEventTarget.html">XMLHttpRequestEventTarget</a>, event listeners can be attached to track its process.</p><blockquote class="NOTE"><h5>NOTE</h5><p><strong>Note:</strong> Attaching event listeners to this object prevents the request from being a &amp;quot;simple request&amp;quot; and will cause a preflight request to be issued if cross-origin; see <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">CORS</a>. Because of this, event listeners need to be registered before calling <a class="xref" href="CSharpToJavaScript.APIs.JS.XMLHttpRequest.html#CSharpToJavaScript_APIs_JS_XMLHttpRequest_Send_System_Nullable_CSharpToJavaScript_APIs_JS_Union50__">Send(Union50?)</a> or upload events won't be dispatched.</p></blockquote><blockquote class="NOTE"><h5>NOTE</h5><p><strong>Note:</strong> The spec also seems to indicate that event listeners should be attached after <a class="xref" href="CSharpToJavaScript.APIs.JS.XMLHttpRequest.html#CSharpToJavaScript_APIs_JS_XMLHttpRequest_Open_System_String_System_String_">Open(string, string)</a>. However, browsers are buggy on this matter, and often need the listeners to be registered <strong>before</strong> <a class="xref" href="CSharpToJavaScript.APIs.JS.XMLHttpRequest.html#CSharpToJavaScript_APIs_JS_XMLHttpRequest_Open_System_String_System_String_">Open(string, string)</a> to work.</p></blockquote><p>The following events can be triggered on an upload object and used to monitor the upload:</p>
 <p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.XMLHttpRequestUpload.html">XMLHttpRequestUpload</a><br></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/upload"><em>See also on MDN</em>https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/upload</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/upload"> <em>See also on MDN</em> </a></p>
 </div>
 
 

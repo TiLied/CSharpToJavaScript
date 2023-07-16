@@ -2,7 +2,7 @@
 
 Create new c# project.
 > [!NOTE]
-> Make sure to use full path in "Generate2Async" method! 
+> Make sure to use full path in "GenerateAsync" method! 
 
 For example you want use "insertAdjacentHTML" but there is no such method in [Element](xref:CSharpToJavaScript.APIs.JS.Element), you need to create an extension method with [ToAttribute](xref:CSharpToJavaScript.Utils.ToAttribute).
 

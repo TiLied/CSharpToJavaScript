@@ -2,7 +2,7 @@
 
 Create new c# project.
 > [!NOTE]
-> Make sure to use full path in "Generate2Async" method! 
+> Make sure to use full path in "GenerateAsync" method! 
 
 This options will add a string at the top/bottom of file. Useful when you want to initiate a class.
 

@@ -2,7 +2,7 @@
 
 Create new c# project.
 > [!NOTE]
-> Make sure to use full path in "Generate2Async" method! 
+> Make sure to use full path in "GenerateAsync" method! 
 
 Program.cs
 ```csharp

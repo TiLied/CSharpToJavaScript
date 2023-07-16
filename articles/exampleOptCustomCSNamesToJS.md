@@ -2,7 +2,7 @@
 
 Create new c# project.
 > [!NOTE]
-> Make sure to use full path in "Generate2Async" method! 
+> Make sure to use full path in "GenerateAsync" method! 
 
 > [!NOTE]
 > Note this is just example! The "Console.WriteLine" will be translated by default!

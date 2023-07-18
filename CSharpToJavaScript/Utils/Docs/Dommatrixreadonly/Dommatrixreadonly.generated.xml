@@ -1,0 +1,12 @@
+<docs>
+<DOMMatrixReadOnly>
+<summary>
+The <strong><c>DOMMatrixReadOnly</c></strong> interface represents a read-only 4×4 matrix, suitable for 2D and 3D operations. The <see cref="DOMMatrix"/> interface — which is based upon <c>DOMMatrixReadOnly</c>—adds <see href="https://en.wikipedia.org/wiki/Immutable_object">mutability</see>, allowing you to alter the matrix after creating it.
+</summary>
+<remarks>
+<para>This interface should be available inside <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">web workers</see>, though some implementations doesn&amp;apos;t allow it yet.</para>
+<para>-The mutable matrix type, <see cref="DOMMatrix"/>, which is based on this one.<br/>-The CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function">transform-function</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function">transform-function</see> functional notation that can be generated from this interface to be used in a CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform">transform</see>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</DOMMatrixReadOnly>
+</docs>

@@ -1,0 +1,12 @@
+<docs>
+<Range>
+<summary>
+The <strong><c>Range</c></strong> interface represents a fragment of a document that can contain nodes and parts of text nodes.
+</summary>
+<remarks>
+<para>A range can be created by using the <see cref="Document.CreateRange"/> method. Range objects can also be retrieved by using the <see cref="Selection/getRangeAt"/> method of the <see cref="Selection"/> object or the <see cref="Document/caretRangeFromPoint"/> method of the <see cref="Document"/> object.</para><para>There also is the <see cref="Range.Range"/> constructor available.</para><para></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Range"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Range>
+</docs>

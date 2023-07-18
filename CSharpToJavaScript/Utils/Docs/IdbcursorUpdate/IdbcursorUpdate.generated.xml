@@ -1,0 +1,13 @@
+<docs>
+<IDBCursorUpdate>
+<summary>
+The <strong><c>update()</c></strong> method of the <see cref="IDBCursor"/><br/>interface returns an <see cref="IDBRequest"/> object, and, in a separate thread,<br/>updates the value at the current position of the cursor in the object store. If the<br/>cursor points to a record that has just been deleted, a new record is created.
+</summary>
+<remarks>
+<para>Be aware that you can&amp;apos;t call <c>update()</c> (or<br/><see cref="IDBCursor.Delete"/>) on cursors obtained from<br/><see cref="IDBIndex.OpenKeyCursor"/>. For such needs, you have to use<br/><see cref="IDBIndex.OpenCursor"/> instead.</para><para>AvailableInWorkers</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase"/><br/>-Using transactions: <see cref="IDBTransaction"/><br/>-Setting a range of keys: <see cref="IDBKeyRange"/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore"/><br/>-Using cursors: <see cref="IDBCursor"/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBCursor/update"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="IDBRequest"/> object on which subsequent events related to this operation are fired.If the operation is successful, the value of the request's <see cref="IDBRequest.Result"/> property is the key for the updated record.</returns>
+</IDBCursorUpdate>
+</docs>

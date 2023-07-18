@@ -1,0 +1,12 @@
+<docs>
+<GPUCompilationMessageOffset>
+<summary>
+The <strong><c>offset</c></strong> read-only property of the<br/><see cref="GPUCompilationMessage"/> interface is a number representing the offset from the start of the shader code to the exact point, or the start of the relevant substring, that the message corresponds to.
+</summary>
+<remarks>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUCompilationMessage/offset"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.To be precise, <c>offset</c> is the number of UTF-16 code units from the beginning of the shader code to the exact point or start of the relevant substring that the message corresponds to.If the message does not correspond to a specific code position (perhaps it refers to the whole of the shader code), <c>offset</c> will be 0.</value>
+</GPUCompilationMessageOffset>
+</docs>

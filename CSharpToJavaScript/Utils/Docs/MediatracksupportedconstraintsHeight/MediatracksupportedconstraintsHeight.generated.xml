@@ -1,0 +1,13 @@
+<docs>
+<MediaTrackSupportedConstraintsHeight>
+<summary>
+The <see cref="MediaTrackSupportedConstraints"/> dictionary's<br/><strong><c>height</c></strong> property is a read-only Boolean value which is<br/>present (and set to <c>true</c>) in the object returned by<br/><see cref="MediaDevices.GetSupportedConstraints"/> if and only if the<br/><see href="https://developer.mozilla.org/en-US/docs/Glossary/user agent">user agent</see> supports the <c>height</c> constraint. If the<br/>constraint isn&amp;apos;t supported, it&amp;apos;s not included in the list, so this value will never be<br/><c>false</c>.
+</summary>
+<remarks>
+<para>You can access the supported constraints dictionary by calling<br/><c>navigator.mediaDevices.getSupportedConstraints()</c>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API">Media Capture and Streams API</see><br/>-<see cref="MediaDevices.GetSupportedConstraints"/><br/>-<see cref="MediaTrackSupportedConstraints"/><br/>-<see cref="MediaStreamTrack"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/height"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>This property is present in the dictionary (and its value is always <c>true</c>)<br/>if the user agent supports the <c>height</c> constraint. If the property isn&amp;apos;t<br/>present, this property is missing from the supported constraints dictionary, and you&amp;apos;ll<br/>get <see cref="Undefined"/> if you try to look at its value.</value>
+</MediaTrackSupportedConstraintsHeight>
+</docs>

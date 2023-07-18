@@ -1,0 +1,12 @@
+<docs>
+<ElementMouseleave_event>
+<summary>
+The <strong><c>mouseleave</c></strong> event is fired at an <see cref="Element"/> when the cursor of a pointing device (usually a mouse) is moved out of it.
+</summary>
+<remarks>
+<para><c>mouseleave</c> and <see cref="Element/mouseout_event"/> are similar but differ in that <c>mouseleave</c> does not bubble and <c>mouseout</c> does. This means that <c>mouseleave</c> is fired when the pointer has exited the element <strong>and</strong> all of its descendants, whereas <c>mouseout</c> is fired when the pointer leaves the element <strong>or</strong> leaves one of the element&amp;apos;s descendants (even if the pointer is still within the element).</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</see><br/>-<see cref="Element/mousedown_event"/><br/>-<see cref="Element/mouseup_event"/><br/>-<see cref="Element/mousemove_event"/><br/>-<see cref="Element/click_event"/><br/>-<see cref="Element/dblclick_event"/><br/>-<see cref="Element/mouseover_event"/><br/>-<see cref="Element/mouseout_event"/><br/>-<see cref="Element/mouseenter_event"/><br/>-<see cref="Element/mouseleave_event"/><br/>-<see cref="Element/contextmenu_event"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/mouseleave_event"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</ElementMouseleave_event>
+</docs>

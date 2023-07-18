@@ -1,0 +1,12 @@
+<docs>
+<XPathExpression>
+<summary>
+This is useful when an expression will be reused in an application, because it is just compiled once and all namespace prefixes which occur within the expression are preresolved.
+</summary>
+<remarks>
+<para>Objects of this type are created by calling <see cref="XPathEvaluator.CreateExpression"/>.</para>
+<para>-<see cref="Document.CreateExpression"/><br/>-<see cref="XPathResult"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XPathExpression"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</XPathExpression>
+</docs>

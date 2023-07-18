@@ -1,0 +1,11 @@
+<docs>
+<MediaStreamGetAudioTracks>
+<summary>
+The <strong><c>getAudioTracks()</c></strong> method of the<br/><see cref="MediaStream"/> interface returns a sequence that represents all the<br/><see cref="MediaStreamTrack"/> objects in this<br/>stream&amp;apos;s <see href="https://www.w3.org/TR/mediacapture-streams/#track-set"><c>track set</c></see> where <see cref="MediaStreamTrack.Kind"/><br/>is <c>audio</c>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/getAudioTracks"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An array of <see cref="MediaStreamTrack"/> objects, one for each audio track contained<br/>in the stream. Audio tracks are those tracks whose {{domxref(&amp;quot;MediaStreamTrack.kind&amp;quot;,<br/>&amp;quot;kind&amp;quot;)}} property is <c>audio</c>. The array is empty if the stream contains no<br/>audio tracks.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> The order of the returned tracks is not defined by the<br/>specification and may, in fact, change from one call to <c>getAudioTracks()</c><br/>to the next.</blockquote>Early versions of this API included a special <c>AudioStreamTrack</c> interface<br/>which was used as the type for each entry in the list of audio streams; however, this<br/>has since been merged into the main <see cref="MediaStreamTrack"/> interface.</returns>
+</MediaStreamGetAudioTracks>
+</docs>

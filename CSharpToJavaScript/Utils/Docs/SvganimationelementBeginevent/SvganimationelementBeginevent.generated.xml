@@ -1,0 +1,12 @@
+<docs>
+<SVGAnimationElementBeginEvent_event>
+<summary>
+The <strong><c>beginEvent</c></strong> event of the <see cref="SVGAnimationElement"/> interface is fired when the element local timeline begins to play. It will be raised each time the element begins the active duration (i.e., when it restarts, but not when it repeats).
+</summary>
+<remarks>
+<para>It may be raised both in the course of normal (i.e. scheduled or interactive) timeline play, as well as in the case that the element was begun with a DOM method.</para><para>This event is not cancelable and does not bubble.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/SVG/SVG_animation_with_SMIL">SVG animation with SMIL</see><br/>-<see cref="SVGAnimationElement.EndEvent_event"/> event<br/>-<see cref="SVGAnimationElement.RepeatEvent_event"/> event<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAnimationElement/beginEvent_event"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</SVGAnimationElementBeginEvent_event>
+</docs>

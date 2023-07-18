@@ -1,0 +1,13 @@
+<docs>
+<HTMLElementFocus>
+<summary>
+The <strong><c>HTMLElement.focus()</c></strong> method sets focus on the specified element, if it can be focused.<br/>The focused element is the element that will receive keyboard and similar events by default.
+</summary>
+<remarks>
+<para>By default the browser will scroll the element into view after focusing it, and it may also provide visible indication of the focused element (typically by displaying a &amp;quot;focus ring&amp;quot; around the element).<br/>Parameter options are provided to disable the default scrolling and force visible indication on elements.</para>
+<para>-<see cref="HTMLElement.Blur"/> to remove the focus from an element.<br/>-<see cref="Document.ActiveElement"/> to know which is the currently focused element.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/focus"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</HTMLElementFocus>
+</docs>

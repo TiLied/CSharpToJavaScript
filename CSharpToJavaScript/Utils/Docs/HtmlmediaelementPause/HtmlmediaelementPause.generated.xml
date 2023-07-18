@@ -1,0 +1,12 @@
+<docs>
+<HTMLMediaElementPause_event>
+<summary>
+The <c>pause</c> event is sent when a request to pause an activity is handled and the activity has entered its paused state, most commonly after the media has been paused through a call to the element's <see cref="HTMLMediaElement.Pause"/> method.
+</summary>
+<remarks>
+<para>The event is sent once the <c>pause()</c> method returns and after the media element's <see cref="HTMLMediaElement.Paused"/> property has been changed to <c>true</c>.</para><para>This event is not cancelable and does not bubble.</para>
+<para>-<see cref="HTMLAudioElement"/><br/>-<see cref="HTMLVideoElement"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio">audio</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">video</see><br/>-<see cref="SpeechSynthesisUtterance"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/pause_event"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLMediaElementPause_event>
+</docs>

@@ -1,0 +1,13 @@
+<docs>
+<NavigateEventCanIntercept>
+<summary>
+The <strong><c>canIntercept</c></strong> read-only property of the<br/><see cref="NavigateEvent"/> interface returns <c>true</c> if the navigation can be intercepted and have its URL rewritten, or <c>false</c> otherwise
+</summary>
+<remarks>
+<para>There are several rules around when a navigation can be intercepted. For example:</para><para>See the spec for more explanation on <see href="https://html.spec.whatwg.org/multipage/nav-history-apis.html#can-have-its-url-rewritten">when a Document can have its URL rewritten</see>, including a table of examples.</para>
+<para>-<see href="https://developer.chrome.com/docs/web-platform/navigation-api/">Modern client-side routing: the Navigation API</see><br/>-<see href="https://github.com/WICG/navigation-api/blob/main/README.md">Navigation API explainer</see><br/>-Domenic Denicola&amp;apos;s <see href="https://gigantic-honored-octagon.glitch.me/">Navigation API live demo</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NavigateEvent/canIntercept"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value—<c>true</c> if the navigation can be intercepted, <c>false</c> if not.</value>
+</NavigateEventCanIntercept>
+</docs>

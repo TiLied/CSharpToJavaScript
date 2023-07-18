@@ -1,0 +1,12 @@
+<docs>
+<ElementSecuritypolicyviolation_event>
+<summary>
+The <strong><c>securitypolicyviolation</c></strong> event is fired when a <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">Content Security Policy</see> is violated.
+</summary>
+<remarks>
+<para>The event is fired on the element that violates the policy and bubbles.<br/>It is normally handled by an event handler on the <see cref="Window"/> or <see cref="Document"/> object.</para><para>The handler can be assigned using the <c>onsecuritypolicyviolation</c> property or using <see cref="EventTarget.AddEventListener"/>.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> You must add the handler for this event to a top level object (i.e. <see cref="Window"/> or <see cref="Document"/>).<br/>While the property exists in HTML elements, you can&amp;apos;t assign a handler to the property until the elements have been loaded, by which time this event will already have fired.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">HTTP &amp;gt; Content Security Policy</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/securitypolicyviolation_event"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</ElementSecuritypolicyviolation_event>
+</docs>

@@ -1,0 +1,12 @@
+<docs>
+<HTMLSlotElementSlotchange_event>
+<summary>
+The <strong><c>slotchange</c></strong> event is fired on an <see cref="HTMLSlotElement"/> instance ({{HTMLElement("slot")}} element) when the node(s) contained in that slot change.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> the <c>slotchange</c> event doesn&amp;apos;t fire if the children of a slotted node change — only if you change (e.g. add or delete) the actual nodes themselves.</para></blockquote><para>In order to trigger a <strong>slotchange</strong> event, one has to set or remove the <c>slot</c> attribute.</para><para>This event is not cancelable.</para>
+<para><see cref="HTMLSlotElement"/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSlotElement/slotchange_event"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLSlotElementSlotchange_event>
+</docs>

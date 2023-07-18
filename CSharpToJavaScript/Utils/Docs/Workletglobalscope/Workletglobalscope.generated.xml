@@ -1,0 +1,12 @@
+<docs>
+<WorkletGlobalScope>
+<summary>
+The <strong><c>WorkletGlobalScope</c></strong> interface is an abstract class that specific worklet scope classes inherit from. Each <c>WorkletGlobalScope</c> defines a new global environment.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> You don't normally need to interact with this interface. It is a base interface intended to be subclassed. You will encounter the subclasses <see cref="AudioWorkletGlobalScope"/> inside <see cref="AudioWorklet"/> objects, or <see cref="PaintWorkletGlobalScope"/> inside <see cref="PaintWorklet"/> objects.</para></blockquote>
+<para>-<see cref="AudioWorkletGlobalScope"/><br/>-<see cref="PaintWorkletGlobalScope"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkletGlobalScope"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WorkletGlobalScope>
+</docs>

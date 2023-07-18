@@ -1,0 +1,11 @@
+<docs>
+<WakeLockSentinelRelease_event>
+<summary>
+The <strong><c>release</c></strong> event of the <see cref="WakeLockSentinel"/> interface is fired when the sentinel object's handle has been released.
+</summary>
+<remarks>
+<para>A <see cref="WakeLockSentinel"/> can be released manually via the <c>release()</c> method, or<br/>automatically via the platform wake lock. This can happen if the document becomes<br/>inactive or looses visibility, if the device is low on power or the user turns on a<br/>power save mode.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WakeLockSentinel/release_event"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WakeLockSentinelRelease_event>
+</docs>

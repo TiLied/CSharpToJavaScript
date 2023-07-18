@@ -1,0 +1,12 @@
+<docs>
+<LocationHref>
+<summary>
+The <strong><c>href</c></strong> property of the <see cref="Location"/><br/>interface is a <see href="https://developer.mozilla.org/en-US/docs/Glossary/stringifier">stringifier</see> that returns a string containing the whole<br/>URL, and allows the href to be updated.
+</summary>
+<remarks>
+<para>Setting the value of <c>href</c> <strong>navigates</strong> to the provided URL. If you<br/>want <strong>redirection</strong>, use <see cref="Location/replace"/>. The difference from setting the <c>href</c> property value is that when using the <c>location.replace()</c> method, after navigating to the given URL, the current page will not be saved in session <see href="https://developer.mozilla.org/en-US/docs/Web/API/History_API">history</see> — meaning the user won&amp;apos;t be able to use the back button to navigate to it.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Location/href"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</LocationHref>
+</docs>

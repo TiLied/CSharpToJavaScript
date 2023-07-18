@@ -1,0 +1,11 @@
+<docs>
+<RTCPeerConnectionStats>
+<summary>
+The <strong><c>RTCPeerConnectionStats</c></strong> dictionary of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see> provides information about the high level peer connection (<see cref="RTCPeerConnection"/>).
+</summary>
+<remarks>
+<para>In particular, it provides the number of unique data channels that have been opened, and the number of opened channels that have been closed.<br/>This allows the current number of open channels to be calculated.</para><para>These statistics can be obtained by iterating the <see cref="RTCStatsReport"/> returned by <see cref="RTCPeerConnection.GetStats"/> until you find a report with the <see href="https://developer.mozilla.org#type"><c>type</c></see> of <c>peer-connection</c>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnectionStats"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RTCPeerConnectionStats>
+</docs>

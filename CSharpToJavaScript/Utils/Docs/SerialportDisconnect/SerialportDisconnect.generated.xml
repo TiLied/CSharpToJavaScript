@@ -1,0 +1,12 @@
+<docs>
+<SerialPortDisconnect_event>
+<summary>
+The <strong><c>disconnect</c></strong> event of the <see cref="SerialPort"/> interface is fired when the port has disconnected from the device. This event is only fired for ports associated with removable devices such as those connected via USB.
+</summary>
+<remarks>
+<para>This event bubbles to the instance of <see cref="Serial"/> that returned this interface.</para>
+<para>-<see cref="SerialPort.Connect_event"/> event<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SerialPort/disconnect_event"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</SerialPortDisconnect_event>
+</docs>

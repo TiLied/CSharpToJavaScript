@@ -1,0 +1,11 @@
+<docs>
+<IntersectionObserverEntryIsIntersecting>
+<summary>
+The <see cref="IntersectionObserverEntry"/> interface's<br/>read-only <strong><c>isIntersecting</c></strong> property is a Boolean value<br/>which is <c>true</c> if the target element intersects with the intersection<br/>observer&amp;apos;s root. If this is <c>true</c>, then, the<br/><c>IntersectionObserverEntry</c> describes a transition into a state of<br/>intersection; if it&amp;apos;s <c>false</c>, then you know the transition is from<br/>intersecting to not-intersecting.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserverEntry/isIntersecting"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A Boolean value which indicates whether the<br/><see cref="IntersectionObserverEntry.Target"/> element has transitioned into<br/>a state of intersection (<c>true</c>) or out of a state of intersection<br/>(<c>false</c>).</value>
+</IntersectionObserverEntryIsIntersecting>
+</docs>

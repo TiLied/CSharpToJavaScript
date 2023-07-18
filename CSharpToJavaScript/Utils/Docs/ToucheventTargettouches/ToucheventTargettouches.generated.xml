@@ -1,0 +1,11 @@
+<docs>
+<TouchEventTargetTouches>
+<summary>
+The <strong><c>targetTouches</c></strong> read-only property is a <see cref="TouchList"/> listing all the <see cref="Touch"/> objects for touch points that are still in contact with the touch surface <strong>and</strong> whose <see cref="Element/touchstart_event"/> event occurred inside the same target <see cref="Element"/> as the current target element.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TouchEvent/targetTouches"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="TouchList"/> listing all the <see cref="Touch"/> objects for touch points that are still in contact with the touch surface <strong>and</strong> whose <c>touchstart</c> event occurred inside the same target <see cref="Element"/> as the current target element.</value>
+</TouchEventTargetTouches>
+</docs>

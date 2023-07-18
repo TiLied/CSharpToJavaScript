@@ -1,0 +1,13 @@
+<docs>
+<HeadersGetSetCookie>
+<summary>
+The <strong><c>getSetCookie()</c></strong> method of the <see cref="Headers"/> interface returns an array containing the values of all {{httpheader("Set-Cookie")}} headers associated with a response. This allows <see cref="Headers"/> objects to handle having multiple <c>Set-Cookie</c> headers, which wasn&amp;apos;t possible prior to its implementation.
+</summary>
+<remarks>
+<para>This method is intended for use on server environments (for example Node.js). Browsers block frontend JavaScript code from accessing the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie">Set-Cookie</see> header, as required by the Fetch spec, which defines <c>Set-Cookie</c> as a <see href="https://fetch.spec.whatwg.org/#forbidden-response-header-name">forbidden response-header name</see> that <see href="https://fetch.spec.whatwg.org/#ref-for-forbidden-response-header-name%E2%91%A0">must be filtered out</see> from any response exposed to frontend code.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie">Set-Cookie</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Headers/getSetCookie"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An array of strings representing the values of all the different <c>Set-Cookie</c> headers associated with a response.If no <c>Set-Cookie</c> headers are set, the method will return an empty array (<c>[ ]</c>).</returns>
+</HeadersGetSetCookie>
+</docs>

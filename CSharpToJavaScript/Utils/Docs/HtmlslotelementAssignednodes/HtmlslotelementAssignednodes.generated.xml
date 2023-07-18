@@ -1,0 +1,12 @@
+<docs>
+<HTMLSlotElementAssignedNodes>
+<summary>
+The <strong><c>assignedNodes()</c></strong> method of the <see cref="HTMLSlotElement"/> interface returns a sequence of the nodes assigned to this slot.
+</summary>
+<remarks>
+<para>If the <c>flatten</c> option is set to <c>true</c>, it returns a sequence of both the nodes assigned to this slot, as well as the nodes assigned to any other slots that are descendants of this slot. If no assigned nodes are found, it returns the slot&amp;apos;s fallback content.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSlotElement/assignedNodes"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An array of nodes.</returns>
+</HTMLSlotElementAssignedNodes>
+</docs>

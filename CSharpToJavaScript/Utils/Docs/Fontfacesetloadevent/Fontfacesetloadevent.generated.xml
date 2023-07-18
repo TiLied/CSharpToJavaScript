@@ -1,0 +1,12 @@
+<docs>
+<FontFaceSetLoadEvent>
+<summary>
+The <strong><c>FontFaceSetLoadEvent</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Font_Loading_API">CSS Font Loading API</see> represents events fired at a <see cref="FontFaceSet"/> after it starts loading font faces.
+</summary>
+<remarks>
+<para>Events are fired when font loading starts (<see href="https://developer.mozilla.org/en-US/docs/Web/API/FontFaceSet/loading_event"><c>loading</c></see>), loading completes (<see href="https://developer.mozilla.org/en-US/docs/Web/API/FontFaceSet/loadingdone_event"><c>loadingdone</c></see>) or there is an error loading one of the fonts (<see href="https://developer.mozilla.org/en-US/docs/Web/API/FontFaceSet/loadingerror_event"><c>loadingerror</c></see>).</para><para></para>
+<para>-<see cref="Document.Fonts"/><br/>-<see cref="WorkerGlobalScope.Fonts"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FontFaceSetLoadEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</FontFaceSetLoadEvent>
+</docs>

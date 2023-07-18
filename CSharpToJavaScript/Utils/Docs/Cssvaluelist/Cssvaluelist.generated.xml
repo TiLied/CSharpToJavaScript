@@ -1,0 +1,12 @@
+<docs>
+<CSSValueList>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>CSSValueList</c></strong> interface derives from the <see cref="CSSValue"/> interface and provides the abstraction of an ordered collection of CSS values.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This interface was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do<br/>not implement it.</para><para>To achieve your purpose, you can use:</para></blockquote><para>Some properties allow an empty list in their syntax. In that case, these properties take the <c>none</c> identifier. So, an empty list means that the property has the value <c>none</c>.</para><para>The items in the <c>CSSValueList</c> are accessible via an integral index, starting from 0.</para><para></para>
+<para>-<see cref="CSSPrimitiveValue"/><br/>-<see cref="CSSValue"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSValueList"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CSSValueList>
+</docs>

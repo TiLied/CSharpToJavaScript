@@ -1,0 +1,13 @@
+<docs>
+<CSSRegisterProperty_static>
+<summary>
+The <strong><c>CSS.registerProperty()</c></strong> static method registers<br/>{{cssxref(&amp;apos;--*&amp;apos;, &amp;apos;custom properties&amp;apos;)}}, allowing for property type checking, default<br/>values, and properties that do or do not inherit their value.
+</summary>
+<remarks>
+<para>Registering a custom property allows you to tell the browser how the custom property<br/>should behave; what are allowed types, whether the custom property inherits its value,<br/>and what the default value of the custom property is.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Properties_and_Values_API/guide">Using the CSS properties and values API</see><br/>-<see cref="CSS"/><br/>-<see cref="CSS.Supports"/><br/>-<see cref="CSS.Escape"/><br/>-<see cref="CSS.Factory_functions"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSS/registerProperty_static"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns><c>undefined</c>.</returns>
+</CSSRegisterProperty_static>
+</docs>

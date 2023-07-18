@@ -1,0 +1,13 @@
+<docs>
+<RTCPeerConnectionSignalingState>
+<summary>
+The read-only <strong><c>signalingState</c></strong> property on the<br/><see cref="RTCPeerConnection"/> interface returns a string value<br/>describing the state of the signaling process<br/>on the local end of the connection<br/>while connecting or reconnecting to another peer.<br/>See <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Session_lifetime#signaling">Signaling</see> in our WebRTC session lifetime page.
+</summary>
+<remarks>
+<para>Because the signaling process is a state machine, being able to verify that your code<br/>is in the expected state when messages arrive can help avoid unexpected and avoidable<br/>failures. For example, if you receive an answer while the <c>signalingState</c><br/>isn&amp;apos;t <c>&amp;quot;have-local-offer&amp;quot;</c>, you know that something is wrong, since you<br/>should only receive answers after creating an offer but before an answer has been<br/>received and passed into <see cref="RTCPeerConnection.SetLocalDescription"/>. Your<br/>code will be more reliable if you watch for mismatched states like this and handle them<br/>gracefully.</para><para>This value may also be useful during debugging, for example.</para><para>In addition, when the value of this property changes, a<br/><see cref="RTCPeerConnection/signalingstatechange_event"/> event is sent to the <see cref="RTCPeerConnection"/><br/>instance.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Session_lifetime">Lifetime of a WebRTC session</see><br/>-<see cref="RTCPeerConnection"/><br/>-<see cref="RTCPeerConnection/signalingstatechange_event"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/signalingState"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The allowed string values are:</value>
+</RTCPeerConnectionSignalingState>
+</docs>

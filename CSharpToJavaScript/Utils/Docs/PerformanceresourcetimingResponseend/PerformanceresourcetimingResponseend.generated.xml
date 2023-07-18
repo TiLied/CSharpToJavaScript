@@ -1,0 +1,12 @@
+<docs>
+<PerformanceResourceTimingResponseEnd>
+<summary>
+The <strong><c>responseEnd</c></strong> read-only property returns a <see cref="DOMHighResTimeStamp"/> immediately after the browser receives the last byte of the resource or immediately before the transport connection is closed, whichever comes first.
+</summary>
+<remarks>
+<para>Unlike many other <c>PerformanceResourceTiming</c> properties, the <c>responseEnd</c> property is available for cross-origin requests without the need of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Timing-Allow-Origin">Timing-Allow-Origin</see> HTTP response header.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming/responseEnd"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DOMHighResTimeStamp"/> immediately after the browser receives the last<br/>byte of the resource or immediately before the transport connection is closed, whichever<br/>comes first.</value>
+</PerformanceResourceTimingResponseEnd>
+</docs>

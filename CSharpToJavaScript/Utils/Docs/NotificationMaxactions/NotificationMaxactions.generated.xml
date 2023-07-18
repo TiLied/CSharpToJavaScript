@@ -1,0 +1,12 @@
+<docs>
+<NotificationMaxActions_static>
+<summary>
+The <strong><c>maxActions</c></strong> attribute of the<br/><see cref="Notification"/> interface returns the maximum number of actions supported by<br/>the device and the User Agent. Effectively, this is the maximum number of elements in<br/><see cref="Notification.Actions"/> array which will be respected by the User Agent.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</see><br/>-<see cref="Notification.Actions"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/maxActions_static"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer number which indicates the largest number of notification<br/>actions that can be presented to the user by the User Agent and the device.</value>
+</NotificationMaxActions_static>
+</docs>

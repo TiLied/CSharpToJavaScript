@@ -1,0 +1,12 @@
+<docs>
+<ElementDOMMouseScroll_event>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The DOM <c>DOMMouseScroll</c> event is fired asynchronously when mouse wheel or similar device is operated and the accumulated scroll amount is over 1 line or 1 page since last event. It's represented by the <see cref="MouseScrollEvent"/> interface. This event was only implemented by Firefox. You should instead use the standard <see cref="Element.Wheel_event"/> event.
+</summary>
+<remarks>
+<para>If you want to prevent the default action of mouse wheel events, it&amp;apos;s not enough to handle only this event on Gecko because If scroll amount by a native mouse wheel event is less than 1 line (or less than 1 page when the system setting is by page scroll), other mouse wheel events may be fired without this event.</para><para>On Gecko 17 (Firefox 17) or later, you need to call <c>preventDefault()</c> of <c>wheel</c> events which must be fired for every native event.</para><para>Use the standardized <see cref="Element/wheel_event"/> event if available.</para>
+<para>-<see cref="MouseScrollEvent"/><br/>-Gecko&amp;apos;s legacy pixel scroll event: <c>MozMousePixelScroll</c><br/>-Non-Gecko browsers&amp;apos; legacy mouse wheel event: <c>mousewheel</c><br/>-Standardized wheel event: <c>wheel</c><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/DOMMouseScroll_event"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</ElementDOMMouseScroll_event>
+</docs>

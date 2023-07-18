@@ -1,0 +1,11 @@
+<docs>
+<WindowGetDefaultComputedStyle>
+<summary>
+The <strong><c>getDefaultComputedStyle()</c></strong> method gives the default <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/computed_value">computed values</see> of all the CSS<br/>properties of an element, ignoring author styling. That is, only user-agent and user<br/>styles are taken into account.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/window/getDefaultComputedStyle"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>The returned <c>style</c> is a <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration"><c>CSSStyleDeclaration</c></see><br/>object. The object is of the same type as the object returned by<br/><see cref="Window.GetComputedStyle"/>, but only takes into account user-agent and<br/>user rules.</returns>
+</WindowGetDefaultComputedStyle>
+</docs>

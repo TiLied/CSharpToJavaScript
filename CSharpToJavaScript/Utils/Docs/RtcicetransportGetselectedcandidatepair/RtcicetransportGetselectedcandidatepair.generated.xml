@@ -1,0 +1,11 @@
+<docs>
+<RTCIceTransportGetSelectedCandidatePair>
+<summary>
+The <see cref="RTCIceTransport"/> method<br/><strong><c>getSelectedCandidatePair()</c></strong> returns an<br/><see cref="RTCIceCandidatePair"/> object containing the current best-choice pair<br/>of <see href="https://developer.mozilla.org/en-US/docs/Glossary/ICE">ICE</see> candidates describing the configuration of the endpoints of the transport.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/getSelectedCandidatePair"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="RTCIceCandidatePair"/> object describing the configurations of the<br/>currently-selected candidate pair&amp;apos;s two endpoints.<br/><see cref="RTCIceCandidatePair.Local"/> describes the configuration of the<br/>local end of the connection, while <see cref="RTCIceCandidatePair.Remote"/><br/>describes the remote peer&amp;apos;s configuration.The return value is <c>null</c> if no pair of candidates has been selected yet.</returns>
+</RTCIceTransportGetSelectedCandidatePair>
+</docs>

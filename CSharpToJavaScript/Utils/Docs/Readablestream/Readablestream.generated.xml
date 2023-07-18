@@ -1,0 +1,12 @@
+<docs>
+<ReadableStream>
+<summary>
+The <c>ReadableStream</c> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API">Streams API</see> represents a readable stream of byte data. The <see href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch API</see> offers a concrete instance of a <c>ReadableStream</c> through the <see cref="Response.Body"/> property of a <see cref="Response"/> object.
+</summary>
+<remarks>
+<para><c>ReadableStream</c> is a <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Transferable_objects">transferable object</see>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API">Streams API concepts</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_streams">Using readable streams</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams">Using readable byte stream</see><br/>-<see href="https://whatwg-stream-visualizer.glitch.me/">WHATWG Stream Visualizer</see>, for a basic visualization of readable, writable, and transform streams.<br/>-<see href="https://github.com/MattiasBuelens/web-streams-polyfill">Web-streams-polyfill</see> or <see href="https://github.com/stardazed/sd-streams">sd-streams</see> - polyfills<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</ReadableStream>
+</docs>

@@ -1,0 +1,12 @@
+<docs>
+<CSSStyleDeclarationGetPropertyCSSValue>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong>CSSStyleDeclaration.getPropertyCSSValue()</strong><br/>method interface returns a <see cref="'CSSValue'"/> containing the CSS value for a<br/>property. Note that it returns <c>null</c> if the property name is a<br/>shorthand property.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This interface was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do<br/>not implement it.</para><para>To achieve your purpose, you can use:</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/getPropertyCSSValue"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="'CSSValue'"/> containing the CSS value for a property. If none exists, returns <c>null</c>.</returns>
+</CSSStyleDeclarationGetPropertyCSSValue>
+</docs>

@@ -1,0 +1,11 @@
+<docs>
+<XSLTProcessorBasic_Example>
+<summary>
+This first example demonstrates the basics of setting up an XSLT transformation in a browser.<br/>The example takes an XML document that contains information about an article (title, list of authors and body text) and presents it in a human-readable form.
+</summary>
+<remarks>
+<para>The XML document (<strong>example.xml</strong>) is shown below.</para><para>The <c>?xml-stylesheet</c> processing instruction in the XML file specifies the XSLT stylesheet to apply in its <c>href</c> attribute.</para><para>This XSL stylesheet file (<strong>example.xsl</strong>) is shown below:</para><para>An XSLT stylesheet starts with the <c>xsl:stylesheet</c> element, which contains all the <strong>templates</strong> used to create the final output.<br/>The example above has two templates - one that matches the root node and one that matches <c>Author</c> nodes.<br/>The template that matches the root node outputs the article&amp;apos;s title and then says to process all templates (via <c>apply-templates</c>) that match <c>Author</c> nodes which are children of the <c>Authors</c> node.</para><para>To try out the example:</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XSLTProcessor/Basic_Example"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</XSLTProcessorBasic_Example>
+</docs>

@@ -1,0 +1,12 @@
+<docs>
+<MediaStreamAudioSourceNodeMediaStreamAudioSourceNode>
+<summary>
+The <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see>&amp;apos;s <strong><c>MediaStreamAudioSourceNode()</c></strong> constructor<br/>creates and returns a new <see cref="MediaStreamAudioSourceNode"/> object which uses<br/>the first audio track of a given <see cref="MediaStream"/> as its source.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Another way to create a<br/><c>MediaStreamAudioSourceNode</c> is to call<br/>the <see cref="AudioContext.CreateMediaStreamSource"/> method, specifying the stream<br/>from which you want to obtain audio.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamAudioSourceNode/MediaStreamAudioSourceNode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="MediaStreamAudioSourceNode"/> object representing the audio node<br/>whose media is obtained from the specified source stream.</returns>
+</MediaStreamAudioSourceNodeMediaStreamAudioSourceNode>
+</docs>

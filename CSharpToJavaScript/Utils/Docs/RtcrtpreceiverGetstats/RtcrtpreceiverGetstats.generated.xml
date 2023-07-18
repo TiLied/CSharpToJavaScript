@@ -1,0 +1,12 @@
+<docs>
+<RTCRtpReceiverGetStats>
+<summary>
+The <see cref="RTCRtpReceiver"/> method <strong><c>getStats()</c></strong> asynchronously requests an <see cref="RTCStatsReport"/> object which provides statistics about incoming traffic on the owning <see cref="RTCPeerConnection"/>, returning a {{jsxref("Promise")}} whose fulfillment handler will be called once the results are available.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see cref="RTCStatsReport"/><br/>-<see cref="RTCRtpSender.GetStats"/><br/>-<see cref="RTCPeerConnection.GetStats"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpReceiver/getStats"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A JavaScript <see cref="Promise"/> which is fulfilled once the statistics are available.<br/>The promise's fulfillment handler receives as a parameter a <see cref="RTCStatsReport"/> object containing the collected statistics.The returned statistics include those from all streams which are coming in through the <c>RTCRtpReceiver</c>, as well as any of their dependencies.These might include, for example, statistics with <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCStatsReport#the_statistic_types">types</see>: <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats"><c>inbound-rtp</c></see>, <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats"><c>candidate-pair</c></see>, <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats"><c>local-candidate</c></see>, <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats"><c>remote-candidate</c></see>.</returns>
+</RTCRtpReceiverGetStats>
+</docs>

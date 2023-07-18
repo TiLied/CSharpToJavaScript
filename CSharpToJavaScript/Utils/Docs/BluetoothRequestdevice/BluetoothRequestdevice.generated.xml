@@ -1,0 +1,11 @@
+<docs>
+<BluetoothRequestDevice>
+<summary>
+The <strong><c>Bluetooth.requestDevice()</c></strong> method of the<br/><see cref="Bluetooth"/> interface returns a {{jsxref("Promise")}} to a<br/><see cref="BluetoothDevice"/> object with the specified options. If there is no chooser<br/>UI, this method returns the first device matching the criteria.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth/requestDevice"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} to a <see cref="BluetoothDevice"/> object.</returns>
+</BluetoothRequestDevice>
+</docs>

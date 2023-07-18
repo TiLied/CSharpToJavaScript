@@ -1,0 +1,13 @@
+<docs>
+<FileSystemSyncAccessHandleFlush>
+<summary>
+The <strong><c>flush()</c></strong> method of the<br/><see cref="FileSystemSyncAccessHandle"/> interface persists any changes made to the file associated with the handle via the <see cref="'FileSystemSyncAccessHandle.Write'"/> method to disk.
+</summary>
+<remarks>
+<para>Bear in mind that you only need to call this method if you need the changes committed to disk at a specific time, otherwise you can leave the underlying operating system to handle this when it sees fit, which should be OK in most cases.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_System_Access_API">File System Access API</see><br/>-<see href="https://web.dev/file-system-access/">The File System Access API: simplifying access to local files</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemSyncAccessHandle/flush"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="'Promise'"/> which resolves to undefined.</returns>
+</FileSystemSyncAccessHandleFlush>
+</docs>

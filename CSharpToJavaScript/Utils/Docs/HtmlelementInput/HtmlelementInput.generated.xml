@@ -1,0 +1,12 @@
+<docs>
+<HTMLElementInput_event>
+<summary>
+The <strong><c>input</c></strong> event fires when the <c>value</c> of an <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">input</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">select</see>, or <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textarea</see> element has been changed.
+</summary>
+<remarks>
+<para>The event also applies to elements with <see cref="HTMLElement.ContentEditable"/> enabled, and to any element when <see cref="Document.DesignMode"/> is turned on. In the case of <c>contenteditable</c> and <c>designMode</c>, the event target is the <strong>editing host</strong>. If these properties apply to multiple elements, the editing host is the nearest ancestor element whose parent isn&amp;apos;t editable.</para><para>For <c>&amp;lt;input&amp;gt;</c> elements with <c>type=checkbox</c> or <c>type=radio</c>, the <c>input</c> event should fire whenever a user toggles the control, per the <see href="https://html.spec.whatwg.org/multipage/input.html#the-input-element:event-input-2">HTML Living Standard specification</see>. However, historically this has not always been the case. Check compatibility, or use the <see cref="HTMLElement/change_event"/> event instead for elements of these types.</para><para>For <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textarea</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">input</see> elements that accept text input (<c>type=text</c>, <c>type=tel</c>, etc.), the interface is <see cref="InputEvent"/>; for others, the interface is <see cref="Event"/>.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> The <c>input</c> event is fired every time the <c>value</c> of the element changes. This is unlike the <see cref="HTMLElement/change_event"/> event, which only fires when the value is committed, such as by pressing the enter key, selecting a value from a list of options, and the like.</para></blockquote>
+<para>-Related events-<see cref="HTMLElement/beforeinput_event"/><br/>-<see cref="HTMLElement/change_event"/><br/>-<see cref="HTMLInputElement/invalid_event"/><br/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/input_event"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLElementInput_event>
+</docs>

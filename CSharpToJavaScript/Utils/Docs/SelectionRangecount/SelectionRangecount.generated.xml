@@ -1,0 +1,13 @@
+<docs>
+<SelectionRangeCount>
+<summary>
+The <strong><c>Selection.rangeCount</c></strong> read-only property returns the<br/>number of ranges in the selection.
+</summary>
+<remarks>
+<para>Before the user has clicked a freshly loaded page, the <c>rangeCount</c> is<br/><c>0</c>. After the user clicks on the page, <c>rangeCount</c> is<br/><c>1</c>, even if no selection is visible.</para><para>A user can normally only select one range at a time, so the <c>rangeCount</c><br/>will usually be <c>1</c>. Scripting can be used to make the selection contain more<br/>than one range.</para><para>Gecko browsers allow multiple selections across table cells. Firefox allows to select<br/>multiple ranges in the document by using Ctrl+click (unless the click occurs within an<br/>element that has the <c>display: table-cell</c> CSS property assigned).</para>
+<para>-<see cref="Selection"/>, the interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Selection/rangeCount"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</SelectionRangeCount>
+</docs>

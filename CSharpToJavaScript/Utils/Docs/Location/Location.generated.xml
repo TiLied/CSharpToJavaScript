@@ -1,0 +1,11 @@
+<docs>
+<Location>
+<summary>
+The <strong><c>Location</c></strong> interface represents the location (URL) of the object it is linked to. Changes done on it are reflected on the object it relates to. Both the <see cref="Document"/> and <see cref="Window"/> interface have such a linked <c>Location</c>, accessible via <see cref="Document.Location"/> and <see cref="Window.Location"/> respectively.
+</summary>
+<remarks>
+<para>-Two <c>Location</c> properties: <see cref="Window.Location"/> and <see cref="Document.Location"/>.<br/>-URL manipulation interfaces: <see cref="URL"/> and <see cref="URLSearchParams"/>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Location"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Location>
+</docs>

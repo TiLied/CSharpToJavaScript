@@ -1,0 +1,11 @@
+<docs>
+<RTCAudioSourceStats>
+<summary>
+The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see>&amp;apos;s <strong><c>RTCAudioSourceStats</c></strong> dictionary provides information about an audio track that is attached to one or more senders.
+</summary>
+<remarks>
+<para>These statistics can be obtained by iterating the <see cref="RTCStatsReport"/> returned by <see cref="RTCRtpSender.GetStats"/> or <see cref="RTCPeerConnection.GetStats"/> until you find a report with the <see href="https://developer.mozilla.org#type"><c>type</c></see> of <c>media-source</c> and a <see href="https://developer.mozilla.org#kind"><c>kind</c></see> of <c>audio</c>.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> For audio information about remotely sourced tracks (that are being received), see <see cref="RTCInboundRtpStreamStats"/>.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCAudioSourceStats"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RTCAudioSourceStats>
+</docs>

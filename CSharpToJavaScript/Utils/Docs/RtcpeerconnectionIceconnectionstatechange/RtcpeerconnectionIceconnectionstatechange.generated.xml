@@ -1,0 +1,12 @@
+<docs>
+<RTCPeerConnectionIceconnectionstatechange_event>
+<summary>
+An <strong><c>iceconnectionstatechange</c></strong> event is sent to an <see cref="RTCPeerConnection"/> object each time the {{Glossary("ICE")}} connection state changes during the negotiation process.<br/>The new ICE connection state is available in the object's <see cref="RTCPeerConnection.IceConnectionState"/> property.
+</summary>
+<remarks>
+<para>One common task performed by the <c>iceconnectionstatechange</c> event listener is to trigger <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ice_restart">ICE restart</see> when the state changes to <c>failed</c>.</para><para>This event is not cancelable and does not bubble.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see cref="RTCPeerConnection"/><br/>-<see cref="RTCPeerConnection.IceConnectionState"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/iceconnectionstatechange_event"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RTCPeerConnectionIceconnectionstatechange_event>
+</docs>

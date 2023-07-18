@@ -1,0 +1,12 @@
+<docs>
+<ContentIndexEvent>
+<summary>
+The <strong><c>ContentIndexEvent</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Content_Index_API">content index</see> defines the object used to represent the <see cref="ServiceWorkerGlobalScope.Contentdelete_event"/> event.
+</summary>
+<remarks>
+<para>This event is sent to the <see href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerGlobalScope">global scope</see> of a <see cref="'ServiceWorker'"/>. It contains the id of the indexed content to be removed.</para><para>The <see cref="ServiceWorkerGlobalScope.Contentdelete_event"/> event is only fired when the deletion happens due to interaction with the browser's built-in user interface. It is not fired when the <see cref="'ContentIndex.Delete'"/> method is called.</para><para></para>
+<para>-<see href="https://web.dev/content-indexing-api/">An introductory article on the Content Index API</see><br/>-<see href="https://contentindex.dev/">An app which uses the Content Index API to list and remove &amp;apos;save for later&amp;apos; content</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">Service Worker API, along with information about Cache and CacheStorage</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ContentIndexEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</ContentIndexEvent>
+</docs>

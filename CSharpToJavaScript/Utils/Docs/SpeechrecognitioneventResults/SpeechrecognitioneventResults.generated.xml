@@ -1,0 +1,13 @@
+<docs>
+<SpeechRecognitionEventResults>
+<summary>
+The <strong><c>results</c></strong> read-only property of the<br/><see cref="SpeechRecognitionEvent"/> interface returns a<br/><see cref="SpeechRecognitionResultList"/> object representing all the speech<br/>recognition results for the current session.
+</summary>
+<remarks>
+<para>Specifically this object will contain all final results that have been returned,<br/>followed by the current best hypothesis for all interim results. When subsequent<br/><see cref="SpeechRecognition.Result_event"/> events are fired, interim results may be overwritten by a newer<br/>interim result or by a final result — they may even be removed, if they are at the end<br/>of the &amp;quot;results&amp;quot; array and the array length decreases. Final results on the other hand<br/>will not be overwritten or removed.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionEvent/results"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="SpeechRecognitionResultList"/> object.</value>
+</SpeechRecognitionEventResults>
+</docs>

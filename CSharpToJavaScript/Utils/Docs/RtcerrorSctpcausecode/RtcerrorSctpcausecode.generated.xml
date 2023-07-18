@@ -1,0 +1,11 @@
+<docs>
+<RTCErrorSctpCauseCode>
+<summary>
+The read-only <strong><c>sctpCauseCode</c></strong> property in an<br/><see cref="RTCError"/> object provides the {{Glossary("SCTP")}} cause code explaining<br/>why the SCTP negotiation failed, if the <c>RTCError</c> represents an SCTP error.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCError/sctpCauseCode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An unsigned long integer value specifying SCTP cause code explaining why the error<br/>occurred. This property is <c>null</c> if the error isn&amp;apos;t an SCTP error, with its<br/><see cref="RTCError.ErrorDetail"/> property set to<br/><c>sctp-failure</c>.The standard SCTP error cause codes, numbered 1-13, are defined in the SCTP<br/>specification: {{RFC(4960, &amp;quot;&amp;quot;, &amp;quot;3.3.10&amp;quot;)}}.</value>
+</RTCErrorSctpCauseCode>
+</docs>

@@ -1,0 +1,13 @@
+<docs>
+<ElementAnimate>
+<summary>
+The <see cref="Element"/> interface's <strong><c>animate()</c></strong> method<br/>is a shortcut method which creates a new <see cref="Animation"/>, applies it to the<br/>element, then plays the animation. It returns the created <see cref="Animation"/><br/>object instance.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Elements can have multiple animations applied to them. You can get a list of the<br/>animations that affect an element by calling <see cref="Element.GetAnimations"/>.</para></blockquote>
+<para>-<see cref="Animation"/><br/>-<see cref="Element.GetAnimations"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-range-end">animation-range-end</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-range-start">animation-range-start</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timeline">animation-timeline</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_scroll-driven_animations">CSS scroll-driven animations</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/animate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Returns an <see cref="Animation"/>.</returns>
+</ElementAnimate>
+</docs>

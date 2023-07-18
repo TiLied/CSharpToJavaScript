@@ -1,0 +1,12 @@
+<docs>
+<Highlight>
+<summary>
+The <strong><c>Highlight</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Custom_Highlight_API">CSS Custom Highlight API</see> is used to represent a collection of <see cref="Range"/> instances to be styled using the API.
+</summary>
+<remarks>
+<para>To style arbitrary ranges in a page, instantiate a new <c>Highlight</c> object, add one or more <c>Range</c> objects to it, and register it using the <see cref="HighlightRegistry"/>.</para><para>A <c>Highlight</c> instance is a <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_objects"><c>Set</c>-like object</see> that can hold one or more <c>Range</c> objects.</para><para></para>
+<para>-{{domxref(&amp;quot;css_custom_highlight_api&amp;quot;, &amp;quot;The CSS Custom Highlight API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://css-tricks.com/css-custom-highlight-api-early-look/">CSS Custom Highlight API: The Future of Highlighting Text Ranges on the Web</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Highlight"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Highlight>
+</docs>

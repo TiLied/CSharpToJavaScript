@@ -1,0 +1,12 @@
+<docs>
+<PointerEventHeight>
+<summary>
+The <strong><c>height</c></strong> read-only property of the<br/><see cref="PointerEvent"/> interface represents the height of the pointer's contact<br/>geometry, along the y-axis (in CSS pixels). Depending on the source of the pointer<br/>device (for example a finger), for a given pointer, each event may produce a different<br/>value.
+</summary>
+<remarks>
+<para>If the input hardware cannot report the contact geometry to the browser, the height<br/>defaults to <c>1</c>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/height"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The height of the event&amp;apos;s contact area (in CSS pixels).</value>
+</PointerEventHeight>
+</docs>

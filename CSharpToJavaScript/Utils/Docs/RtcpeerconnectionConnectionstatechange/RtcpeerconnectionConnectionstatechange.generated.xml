@@ -1,0 +1,12 @@
+<docs>
+<RTCPeerConnectionConnectionstatechange_event>
+<summary>
+The <strong><c>connectionstatechange</c></strong> event is sent to the <c>onconnectionstatechange</c> event handler on an <see cref="RTCPeerConnection"/> object after a new track has been added to an <see cref="RTCRtpReceiver"/> which is part of the connection.<br/>The new connection state can be found in <see cref="RTCPeerConnection.ConnectionState"/>, and is one of the string values: <c>new</c>, <c>connecting</c>, <c>connected</c>, <c>disconnected</c>, <c>failed</c>, or <c>closed</c>.
+</summary>
+<remarks>
+<para>This event is not cancelable and does not bubble.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Connectivity">WebRTC connectivity</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Session_lifetime">Lifetime of a WebRTC session</see><br/>-<see cref="RTCPeerConnection.ConnectionState"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/connectionstatechange_event"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RTCPeerConnectionConnectionstatechange_event>
+</docs>

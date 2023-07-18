@@ -1,0 +1,13 @@
+<docs>
+<AnimationPlaybackRate>
+<summary>
+The <strong><c>Animation.playbackRate</c></strong> property of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see> returns or sets the playback rate of the animation.
+</summary>
+<remarks>
+<para>Animations have a <strong>playback rate</strong> that provides a scaling factor from the rate of change of the animation's <see cref="DocumentTimeline"/> time values to the animation's current time. The playback rate is initially <c>1</c>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/>-<see cref="Animation"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Animation/playbackRate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>Takes a number that can be 0, negative, or positive. Negative values reverse the animation. The value is a scaling factor, so for example a value of 2 would double the playback rate.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> Setting an animation&amp;apos;s <c>playbackRate</c> to <c>0</c> effectively pauses the animation (however, its <see cref="Animation.Playstate"/> does not necessarily become <c>paused</c>).</blockquote></value>
+</AnimationPlaybackRate>
+</docs>

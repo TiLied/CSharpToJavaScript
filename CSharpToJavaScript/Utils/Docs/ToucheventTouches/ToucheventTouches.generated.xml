@@ -1,0 +1,12 @@
+<docs>
+<TouchEventTouches>
+<summary>
+<strong><c>touches</c></strong> is a read-only <see cref="TouchList"/> listing<br/>all the <see cref="Touch"/> objects for touch points that are currently in contact<br/>with the touch surface, regardless of whether or not they&amp;apos;ve changed or what their<br/>target element was at <see cref="Element/touchstart_event"/> time.
+</summary>
+<remarks>
+<para>You can think of it as how many separate fingers are able to be identified as touching<br/>the screen.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Touches inside the array are not necessarily ordered by order of occurrences (the<br/>i-th element in the array being the i-th touch that happened). You cannot assume a specific order. To determine the order of occurrences of the touches, use the <c>touch</c> object IDs.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TouchEvent/touches"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="TouchList"/> listing all the <see cref="Touch"/> objects for touch points that are still in contact with the touch surface, regardless of whether or not they've changed or what their target element was at <c>touchstart</c><br/>time.</value>
+</TouchEventTouches>
+</docs>

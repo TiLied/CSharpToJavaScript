@@ -1,0 +1,13 @@
+<docs>
+<WindowPageYOffset>
+<summary>
+The read-only <see cref="Window"/> property <strong><c>pageYOffset</c></strong><br/>is an alias for <see cref="Window.ScrollY"/>; as such, it returns the number<br/>of pixels the document is currently scrolled along the vertical axis (that is, up or<br/>down) with a value of 0.0, indicating that the top edge of the <see cref="Document"/><br/>is currently aligned with the top edge of the window&amp;apos;s content area.
+</summary>
+<remarks>
+<para>There is slightly better support for <c>pageYOffset</c> than for<br/><c>scrollY</c> in older browsers, but if you&amp;apos;re not concerned about browsers more<br/>than a handful of years old, you can use either one.</para><para>The corresponding <see cref="Window.PageXOffset"/> property, which<br/>returns the number of pixels scrolled along the horizontal axis (left and right), is an<br/>alias for <see cref="Window.ScrollX"/>.</para>
+<para>-<see cref="Window.PageXOffset"/><br/>-<see cref="Window.ScrollY"/> and {{domxref("Window.scrollX",<br/>&amp;quot;scrollX&amp;quot;)}}<br/>-<see cref="Window.Scroll"/>, {{domxref("Window.scrollBy",<br/>"scrollBy()")}}, and <see cref="Window.ScrollTo"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Window/pageYOffset"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A double-precision floating-point number specifying the number of pixels the <see cref="Document"/><br/>is scrolled vertically within its containing <see cref="Window"/>. This number is subpixel precise<br/>with a range of E(min)=-1022 to E(max)=1023, so it may not be an integer. A value of 0.0 indicates<br/>that the window is not scrolled vertically, and that the top of the document is located at the top<br/>edge of the window&amp;apos;s content area.Since this property is an alias for <see cref="Window.ScrollY"/>, see that article for<br/>additional details on this value and its use.</value>
+</WindowPageYOffset>
+</docs>

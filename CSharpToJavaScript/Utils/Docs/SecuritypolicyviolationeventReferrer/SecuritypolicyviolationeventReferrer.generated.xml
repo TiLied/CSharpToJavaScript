@@ -1,0 +1,12 @@
+<docs>
+<SecurityPolicyViolationEventReferrer>
+<summary>
+The <strong><c>referrer</c></strong> read-only property of the<br/><see cref="SecurityPolicyViolationEvent"/> interface is a string<br/>representing the referrer of the resources whose policy was violated. This will be a URL<br/>or <c>null</c>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">Content Security Policy (CSP)</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SecurityPolicyViolationEvent/referrer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing the URL of the referrer of the violating<br/>resources.</value>
+</SecurityPolicyViolationEventReferrer>
+</docs>

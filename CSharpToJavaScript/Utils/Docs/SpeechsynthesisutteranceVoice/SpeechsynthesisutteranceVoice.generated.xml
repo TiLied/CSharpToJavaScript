@@ -1,0 +1,13 @@
+<docs>
+<SpeechSynthesisUtteranceVoice>
+<summary>
+The <strong><c>voice</c></strong> property of the <see cref="SpeechSynthesisUtterance"/> interface gets and sets the voice that will be used to speak the utterance.
+</summary>
+<remarks>
+<para>This should be set to one of the <see cref="SpeechSynthesisVoice"/> objects returned by <see cref="SpeechSynthesis.GetVoices"/>.<br/>If not set by the time the utterance is spoken, the voice used will be the most suitable default voice available for the utterance's <see cref="SpeechSynthesisUtterance.Lang"/> setting.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/voice"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="SpeechSynthesisVoice"/> object.</value>
+</SpeechSynthesisUtteranceVoice>
+</docs>

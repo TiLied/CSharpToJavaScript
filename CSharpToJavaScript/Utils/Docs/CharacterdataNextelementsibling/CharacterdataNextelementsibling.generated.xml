@@ -1,0 +1,12 @@
+<docs>
+<CharacterDataNextElementSibling>
+<summary>
+The read-only <strong><c>nextElementSibling</c></strong> property of the <see cref="CharacterData"/> interface<br/>returns the first <see cref="Element"/> node following the specified one in its parent's<br/>children list, or <c>null</c> if the specified element is the last one in the list.
+</summary>
+<remarks>
+<para>-<see cref="CharacterData.PreviousElementSibling"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CharacterData/nextElementSibling"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Element"/> object, or <c>null</c> if no sibling has been found.</value>
+</CharacterDataNextElementSibling>
+</docs>

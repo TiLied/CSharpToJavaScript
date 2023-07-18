@@ -1,0 +1,12 @@
+<docs>
+<FileSystemDirectoryHandleEntries>
+<summary>
+The <strong><c>entries()</c></strong> method of the<br/><see cref="FileSystemDirectoryHandle"/> interface returns an array of a given object's<br/>own enumerable property <c>[key, value]</c> pairs, in the same order as that<br/>provided by a <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in"><c>for...in</c></see> loop (the difference being that a for-in loop<br/>enumerates properties in the prototype chain as well).
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_System_Access_API">File System Access API</see><br/>-<see href="https://web.dev/file-system-access/">The File System Access API: simplifying access to local files</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemDirectoryHandle/entries"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An array of the given <c>FileSystemDirectoryHandle</c> object&amp;apos;s own enumerable<br/>property <c>[key, value]</c> pairs.</returns>
+</FileSystemDirectoryHandleEntries>
+</docs>

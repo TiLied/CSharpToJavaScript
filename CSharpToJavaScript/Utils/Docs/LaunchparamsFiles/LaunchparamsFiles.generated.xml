@@ -1,0 +1,12 @@
+<docs>
+<LaunchParamsFiles>
+<summary>
+The <strong><c>files</c></strong> read-only property of the <see cref="LaunchParams"/> interface returns an array of <see cref="FileSystemHandle"/> objects representing any files passed along with the launch navigation via the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST"><c>POST</c></see> method.
+</summary>
+<remarks>
+<para>-<see href="https://developer.chrome.com/docs/web-platform/launch-handler/">Launch Handler API: Control how your app is launched</see><br/>-<see cref="Window.LaunchQueue"/><br/>-<see href="https://launch-handler.glitch.me/">Musicr 2.0</see> demo app<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/LaunchParams/files"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A read-only array of <see cref="FileSystemHandle"/> objects.</value>
+</LaunchParamsFiles>
+</docs>

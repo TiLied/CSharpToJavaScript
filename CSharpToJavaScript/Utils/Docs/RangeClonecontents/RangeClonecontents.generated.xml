@@ -1,0 +1,13 @@
+<docs>
+<RangeCloneContents>
+<summary>
+The <strong><c>Range.cloneContents()</c></strong> returns a {{<br/>domxref("DocumentFragment") }} copying the objects of type <see cref="Node"/><br/>included in the <see cref="Range"/>.
+</summary>
+<remarks>
+<para>Event listeners added using <see cref="EventTarget.AddEventListener"/><br/>are not copied during cloning. HTML attribute events are duplicated as they are<br/>for the <see cref="Node.CloneNode"/> method. HTML <c>id</c> attributes<br/>are also cloned, which can lead to an invalid document through cloning.</para><para>Partially selected nodes include the parent tags necessary to make the document<br/>fragment valid.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Range/cloneContents"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="DocumentFragment"/> object.</returns>
+</RangeCloneContents>
+</docs>

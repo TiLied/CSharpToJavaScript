@@ -1,0 +1,12 @@
+<docs>
+<StorageKey>
+<summary>
+The <strong><c>key()</c></strong> method of the <see cref="Storage"/> interface,<br/>when passed a number n, returns the name of the nth key in a given <c>Storage</c><br/>object. The order of keys is user-agent defined, so you should not rely on it.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Using the Web Storage API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Storage/key"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A string containing the name of the key. If the index does not exist,<br/><c>null</c> is returned.</returns>
+</StorageKey>
+</docs>

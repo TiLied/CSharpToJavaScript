@@ -1,0 +1,12 @@
+<docs>
+<AnimationFinish_event>
+<summary>
+The <strong><c>finish</c></strong> event of the <see cref="Animation"/> interface is fired when the animation finishes playing, either when the animation completes naturally, or<br/>when the <see cref="Animation.Finish"/> method is called to immediately cause the<br/>animation to finish up.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> The <c>&amp;quot;paused&amp;quot;</c> play state supersedes the <c>&amp;quot;finished&amp;quot;</c> play<br/>state; if the animation is both paused and finished, the <c>&amp;quot;paused&amp;quot;</c> state<br/>is the one that will be reported. You can force the animation into the<br/><c>&amp;quot;finished&amp;quot;</c> state by setting its <see cref="Animation.StartTime"/> to<br/><c>document.timeline.currentTime - (Animation.currentTime * Animation.playbackRate)</c>.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/>-<see cref="Animation"/><br/>-<see cref="Animation.Finish"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Animation/finish_event"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</AnimationFinish_event>
+</docs>

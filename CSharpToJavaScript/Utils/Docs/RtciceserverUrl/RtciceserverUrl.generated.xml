@@ -1,0 +1,12 @@
+<docs>
+<RTCIceServerUrl>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong>obsolete</strong> <see cref="RTCIceServer"/> dictionary's<br/><strong><c>url</c></strong> property specifies the URL of a single ICE server to<br/>be used while negotiating connections. It was removed from the specification in June<br/>2013 but is still broadly used in older examples and books, so we include documentation<br/>here to help adapt old code to new browsers.
+</summary>
+<remarks>
+<para>This property has been removed from the specification; while it&amp;apos;s still supported by<br/>many browsers, it should no longer be used. You should instead use the newer<br/><see cref="RTCIceServer.Urls"/> property, which allows you to optionally<br/>specify multiple URLs for the server. Try to update any existing code to use that<br/>property instead.</para>
+<para>-<see cref="RTCIceServer"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceServer/url"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RTCIceServerUrl>
+</docs>

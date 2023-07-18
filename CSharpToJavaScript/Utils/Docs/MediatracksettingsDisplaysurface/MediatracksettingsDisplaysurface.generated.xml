@@ -1,0 +1,12 @@
+<docs>
+<MediaTrackSettingsDisplaySurface>
+<summary>
+The <see cref="MediaTrackSettings"/> dictionary's<br/><strong><c>displaySurface</c></strong> property indicates the type of display<br/>surface being captured.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Screen_Capture_API">Screen Capture API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture">Using the screen capture API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints">Capabilities, constraints, and settings</see><br/>-<see cref="MediaDevices.GetDisplayMedia"/><br/>-<see cref="MediaStreamTrack.GetConstraints"/><br/>-<see cref="MediaStreamTrack.ApplyConstraints"/><br/>-<see cref="MediaStreamTrack.GetSettings"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/displaySurface"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The value of <c>displaySurface</c> is a string that comes from the <c>DisplayCaptureSurfaceType</c> enumerated type, and is one of the following:Not all user agents support all of these surface types.</value>
+</MediaTrackSettingsDisplaySurface>
+</docs>

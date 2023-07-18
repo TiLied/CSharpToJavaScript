@@ -1,0 +1,11 @@
+<docs>
+<XRInputSourceEventInputSource>
+<summary>
+The <see cref="XRInputSourceEvent"/> interface's read-only<br/><strong><c>inputSource</c></strong> property specifies the<br/><see cref="XRInputSource"/> which generated the input event. This information<br/>lets you handle the event appropriately given the particulars of the user input device<br/>being manipulated.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceEvent/inputSource"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="XRInputSource"/> object identifying the source of the user input event.<br/>This event indicates an action the user has taken using a WebXR input controller, such<br/>as a hand controller, motion sensing device, or other input apparatus.</value>
+</XRInputSourceEventInputSource>
+</docs>

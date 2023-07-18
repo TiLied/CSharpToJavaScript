@@ -1,0 +1,13 @@
+<docs>
+<WheelEventDeltaMode>
+<summary>
+The <strong><c>WheelEvent.deltaMode</c></strong> read-only property returns an<br/><c>unsigned long</c> representing the unit of the delta values scroll amount.<br/>Permitted values are:
+</summary>
+<remarks>
+<table><tr><td><para>Constant</para></td><td><para>Value</para></td><td><para>Description</para></td></tr><tr><td><para><c>DOM_DELTA_PIXEL</c></para></td><td><para><c>0x00</c></para></td><td><para>The delta values are specified in pixels.</para></td></tr><tr><td><para><c>DOM_DELTA_LINE</c></para></td><td><para><c>0x01</c></para></td><td><para>The delta values are specified in lines.</para></td></tr><tr><td><para><c>DOM_DELTA_PAGE</c></para></td><td><para><c>0x02</c></para></td><td><para>The delta values are specified in pages.</para></td></tr></table>
+<para>-<see cref="Element/wheel_event"/><br/>-<see cref="WheelEvent"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WheelEvent/deltaMode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <c>unsigned long</c>.</value>
+</WheelEventDeltaMode>
+</docs>

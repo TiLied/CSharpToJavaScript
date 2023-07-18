@@ -1,0 +1,11 @@
+<docs>
+<AudioTrackEnabled>
+<summary>
+The <strong><see cref="AudioTrack"/></strong> property<br/><strong><c>enabled</c></strong> specifies whether or not the described audio<br/>track is currently enabled for use. If the track is disabled by setting<br/><c>enabled</c> to <c>false</c>, the track is muted and does not produce<br/>audio.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioTrack/enabled"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <c>enabled</c> property is a Boolean whose value is <c>true</c> if the<br/>track is enabled; enabled tracks produce audio while the media is playing. Setting<br/><c>enabled</c> to <c>false</c> effectively mutes the audio track, preventing<br/>it from contributing to the media&amp;apos;s audio performance.</value>
+</AudioTrackEnabled>
+</docs>

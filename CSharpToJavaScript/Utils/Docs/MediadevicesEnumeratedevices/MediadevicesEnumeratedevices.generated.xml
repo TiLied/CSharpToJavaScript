@@ -1,0 +1,13 @@
+<docs>
+<MediaDevicesEnumerateDevices>
+<summary>
+The <see cref="MediaDevices"/> method <strong><c>enumerateDevices()</c></strong> requests a list of the available media input and output devices, such as microphones, cameras, headsets, and so forth.<br/>The returned {{jsxref("Promise")}} is resolved with a <see cref="MediaDeviceInfo"/> array describing the devices.
+</summary>
+<remarks>
+<para>Access to particular devices is gated by the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Permissions_API">Permissions API</see>.<br/>The list of returned devices will omit any devices for which the corresponding permission has not been granted, including: <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy/microphone"><c>microphone</c></see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy/camera"><c>camera</c></see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection"><c>speaker-selection</c></see> (for output devices), and so on.</para>
+<para>-<see cref="MediaDevices.GetUserMedia"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see> - the introductory page to the API<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API">Media Capture and Streams API</see> - the API for the media stream objects<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos">Taking webcam photos</see> - a<br/>tutorial on using <c>getUserMedia()</c> for taking photos rather than video.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/enumerateDevices"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{ jsxref("Promise") }} that receives an array of <see cref="MediaDeviceInfo"/> objects when the promise is fulfilled. Each object in the array describes one of the available media input and output devices.<br/>The order is significant — the default capture devices will be listed first.Only device types for which permission has been granted are &amp;quot;available&amp;quot;.<br/>Also note that if a <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection"><c>speaker-selection</c></see> <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Permissions_Policy">Permissions Policy</see> is used to block use of audio outputs, they won&amp;apos;t be available in the list.If enumeration fails, the promise is rejected.</returns>
+</MediaDevicesEnumerateDevices>
+</docs>

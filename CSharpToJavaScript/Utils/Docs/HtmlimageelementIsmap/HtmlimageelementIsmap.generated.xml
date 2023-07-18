@@ -1,0 +1,12 @@
+<docs>
+<HTMLImageElementIsMap>
+<summary>
+The <see cref="HTMLImageElement"/> property <strong><c>isMap</c></strong> is a<br/>Boolean value which indicates that the image is to be used by a server-side image map.<br/>This may only be used on images located within an <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a">a</see> element.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> For accessibility reasons, you should generally avoid using<br/>server-side image maps, as they require the use of a mouse. Use a <see href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image">client-side image map</see> instead.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/isMap"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A Boolean value which is <c>true</c> if the image is being used for a server-side<br/>image map; otherwise, the value is <c>false</c>.</value>
+</HTMLImageElementIsMap>
+</docs>

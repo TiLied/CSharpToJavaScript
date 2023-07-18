@@ -1,0 +1,12 @@
+<docs>
+<RTCAudioSourceStatsType>
+<summary>
+The <see cref="RTCAudioSourceStats"/> dictionary's property <strong><c>type</c></strong> is a string with value <c>media-source</c>.
+</summary>
+<remarks>
+<para>The type of <c>media-source</c> identifies the type of statistics as either <see cref="RTCAudioSourceStats"/> or <see cref="RTCVideoSourceStats"/> when iterating the <see cref="RTCStatsReport"/> returned by <see cref="RTCRtpSender.GetStats"/> or <see cref="RTCPeerConnection.GetStats"/>.<br/>The type of stats can further be differentiated using the <see cref="RTCAudioSourceStats.Kind"/>, which will be <c>audio</c> for <c>RTCAudioSourceStats</c>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCAudioSourceStats/type"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string with the value <c>media-source</c>.</value>
+</RTCAudioSourceStatsType>
+</docs>

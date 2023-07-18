@@ -1,0 +1,12 @@
+<docs>
+<ConsoleGroupCollapsed>
+<summary>
+The <strong><c>console.groupCollapsed()</c></strong> method creates a new inline group in the Web Console. Unlike <see cref="Console.Group"/>,<br/>however, the new group is created collapsed. The user will need to use the disclosure<br/>button next to it to expand it, revealing the entries created in the group.
+</summary>
+<remarks>
+<para>Call <see cref="Console.GroupEnd"/> to back out to the parent group.</para><para>See <see href="https://developer.mozilla.org/en-US/docs/Web/API/console#using_groups_in_the_console">Using groups in the console</see> in the <see cref="Console"/> documentation for details and<br/>examples.</para><para>AvailableInWorkers</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/console/groupCollapsed"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</ConsoleGroupCollapsed>
+</docs>

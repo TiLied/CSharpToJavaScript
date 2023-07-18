@@ -1,0 +1,12 @@
+<docs>
+<Web_Workers_APIUsing_web_workers>
+<summary>
+Web Workers are a simple means for web content to run scripts in background threads. The worker thread can perform tasks without interfering with the user interface. In addition, they can perform I/O using <see href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest"><c>XMLHttpRequest</c></see> (although the <c>responseXML</c> and <c>channel</c> attributes are always null) or <see href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API"><c>fetch</c></see> (with no such restrictions). Once created, a worker can send messages to the JavaScript code that created it by posting messages to an event handler specified by that code (and vice versa).
+</summary>
+<remarks>
+<para>This article provides a detailed introduction to using web workers.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Worker"><c>Worker</c></see> interface<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/SharedWorker"><c>SharedWorker</c></see> interface<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers">Functions available to workers</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas"><c>OffscreenCanvas</c></see> interface<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Web_Workers_APIUsing_web_workers>
+</docs>

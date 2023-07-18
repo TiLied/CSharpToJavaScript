@@ -1,0 +1,11 @@
+<docs>
+<ServiceWorkerContainerController>
+<summary>
+The <strong><c>controller</c></strong> read-only<br/>property of the <see cref="ServiceWorkerContainer"/> interface returns a<br/><see cref="ServiceWorker"/> object if its state is <c>activating</c> or<br/><c>activated</c> (the same object returned by<br/><see cref="ServiceWorkerRegistration.Active"/>). This property returns<br/><c>null</c> if the request is a force refresh (<strong>Shift</strong> + refresh) or if<br/>there is no active worker.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/controller"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="ServiceWorker"/> object.</value>
+</ServiceWorkerContainerController>
+</docs>

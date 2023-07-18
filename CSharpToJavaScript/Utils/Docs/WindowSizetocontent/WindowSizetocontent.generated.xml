@@ -1,0 +1,13 @@
+<docs>
+<WindowSizeToContent>
+<summary>
+The <strong><c>Window.sizeToContent()</c></strong> method sizes the window<br/>according to its content. In order for it to work, the DOM content should be loaded when<br/>this function is called—for example, once the <see cref="Document/DOMContentLoaded_event"/> event has<br/>been thrown.
+</summary>
+<remarks>
+<para>Since Firefox 20, the minimal size of the window is clamped to prevent the window from<br/>being too small for the user to interact with.</para>
+<para>-<see cref="Window"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Window/sizeToContent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WindowSizeToContent>
+</docs>

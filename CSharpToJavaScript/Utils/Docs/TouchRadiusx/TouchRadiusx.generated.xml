@@ -1,0 +1,12 @@
+<docs>
+<TouchRadiusX>
+<summary>
+The <strong><c>radiusX</c></strong> read-only property of the <see cref="Touch"/> interface returns the X radius of the ellipse that most closely circumscribes the area of contact with the touch surface. The value is in CSS pixels of the same scale as <see cref="Touch.ScreenX"/>.
+</summary>
+<remarks>
+<para>This value, in combination with <see cref="Touch.RadiusY"/> and <see cref="Touch.RotationAngle"/> constructs an ellipse that approximates the size and shape of the area of contact between the user and the screen. This may be a relatively large ellipse representing the contact between a fingertip and the screen or a small area representing the tip of a stylus, for example.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Touch/radiusX"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</TouchRadiusX>
+</docs>

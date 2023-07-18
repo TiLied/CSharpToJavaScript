@@ -1,0 +1,12 @@
+<docs>
+<HTMLMediaElementDuration>
+<summary>
+The <strong>read-only</strong> <see cref="HTMLMediaElement"/><br/>property <strong><c>duration</c></strong> indicates the length of the element&amp;apos;s<br/>media in seconds.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Media">Web media technologies</see><br/>-<see cref="HTMLMediaElement.CurrentTime"/>: The current playback position of the<br/>media<br/>-The <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio">audio</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">video</see> elements<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/duration"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A double-precision floating-point value indicating the duration of the media in<br/>seconds. If no media data is available, the value <c>NaN</c> is returned. If the<br/>element&amp;apos;s media doesn&amp;apos;t have a known duration—such as for live media streams—the value<br/>of <c>duration</c> is <c>+Infinity</c>.</value>
+</HTMLMediaElementDuration>
+</docs>

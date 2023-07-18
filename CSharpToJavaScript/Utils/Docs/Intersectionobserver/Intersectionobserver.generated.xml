@@ -1,0 +1,12 @@
+<docs>
+<IntersectionObserver>
+<summary>
+The <strong><c>IntersectionObserver</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API">Intersection Observer API</see> provides a way to asynchronously observe changes in the intersection of a target element with an ancestor element or with a top-level document's <see href="https://developer.mozilla.org/en-US/docs/Glossary/'viewport'">'viewport'</see>. The ancestor element or viewport is referred to as the root.
+</summary>
+<remarks>
+<para>When an <c>IntersectionObserver</c> is created, it&amp;apos;s configured to watch for given ratios of visibility within the root. The configuration cannot be changed once the <c>IntersectionObserver</c> is created, so a given observer object is only useful for watching for specific changes in degree of visibility; however, you can watch multiple target elements with the same observer.</para>
+<para>-<see cref="'MutationObserver'"/><br/>-<see cref="'PerformanceObserver'"/><br/>-<see cref="'ResizeObserver'"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</IntersectionObserver>
+</docs>

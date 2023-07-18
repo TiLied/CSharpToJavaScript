@@ -1,0 +1,12 @@
+<docs>
+<RTCRtpSenderGetCapabilities_static>
+<summary>
+The <strong>static method</strong> <strong><c>RTCRtpSender.getCapabilities()</c></strong> returns an object describing the codec and header extension capabilities supported by the <see cref="RTCRtpSender"/>.
+</summary>
+<remarks>
+<para>You can, similarly, obtain the capabilities of <see cref="RTCRtpReceiver"/> objects on the device by calling the static function <see cref="RTCRtpReceiver.GetCapabilities"/>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSender/getCapabilities_static"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new object that indicates what capabilities the browser has for sending the specified media kind over an <see cref="RTCPeerConnection"/>.<br/>If the browser doesn&amp;apos;t have any support for the given media <c>kind</c>, the returned value is <c>null</c>.The returned object has the following properties:</returns>
+</RTCRtpSenderGetCapabilities_static>
+</docs>

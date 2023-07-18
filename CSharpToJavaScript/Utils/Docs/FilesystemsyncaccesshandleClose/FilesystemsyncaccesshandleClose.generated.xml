@@ -1,0 +1,12 @@
+<docs>
+<FileSystemSyncAccessHandleClose>
+<summary>
+The <strong><c>close()</c></strong> method of the<br/><see cref="FileSystemSyncAccessHandle"/> interface closes an open synchronous file handle, disabling any further operations on it and releasing the exclusive lock previously put on the file associated with the file handle.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_System_Access_API">File System Access API</see><br/>-<see href="https://web.dev/file-system-access/">The File System Access API: simplifying access to local files</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemSyncAccessHandle/close"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="'Promise'"/> which resolves to undefined.</returns>
+</FileSystemSyncAccessHandleClose>
+</docs>

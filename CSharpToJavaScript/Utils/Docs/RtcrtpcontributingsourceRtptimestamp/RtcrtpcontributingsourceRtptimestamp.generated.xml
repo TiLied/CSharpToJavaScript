@@ -1,0 +1,11 @@
+<docs>
+<RTCRtpContributingSourceRtpTimestamp>
+<summary>
+The read-only <strong><c>rtpTimestamp</c></strong><br/>property of the <see cref="RTCRtpContributingSource"/> dictionary contains a<br/><see cref="DOMHighResTimeStamp"/> indicating the source-generated time at which the<br/>media contained int he packet was first sampled or obtained.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpContributingSource/rtpTimestamp"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer value specifying a source-generated timestamp indicating the time at which<br/>the media in this packet, scheduled for play out at the time indicated by<br/><see cref="RTCRtpContributingSource.Timestamp"/>, was initially sampled or<br/>generated. This value may be useful for sequencing and synchronization purposes.</value>
+</RTCRtpContributingSourceRtpTimestamp>
+</docs>

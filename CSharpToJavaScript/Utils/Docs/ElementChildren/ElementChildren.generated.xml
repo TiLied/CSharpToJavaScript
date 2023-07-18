@@ -1,0 +1,13 @@
+<docs>
+<ElementChildren>
+<summary>
+The read-only <strong><c>children</c></strong> property returns a live <see cref="HTMLCollection"/><br/>which contains all of the child <see cref="Element"/> of the element upon which it was called.
+</summary>
+<remarks>
+<para><c>Element.children</c> includes only element nodes. To get all child nodes, including non-element nodes like text and comment nodes, use <see cref="Node.ChildNodes"/>.</para>
+<para>-<see cref="Node.ChildNodes"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/children"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="HTMLCollection"/> which is a live, ordered collection of the DOM<br/>elements which are children of <c>node</c>. You can access the<br/>individual child nodes in the collection by using either the<br/><see cref="HTMLCollection.Item"/> method on the collection, or by using<br/>JavaScript array-style notation.If the element has no element children, then <c>children</c> is an empty list with a<br/><c>length</c> of <c>0</c>.</value>
+</ElementChildren>
+</docs>

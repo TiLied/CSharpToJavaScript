@@ -1,0 +1,12 @@
+<docs>
+<ElementInsertAdjacentHTML>
+<summary>
+The <strong><c>insertAdjacentHTML()</c></strong> method of the<br/><see cref="Element"/> interface parses the specified text as HTML or XML and inserts<br/>the resulting nodes into the DOM tree at a specified position.
+</summary>
+<remarks>
+<para>-<see cref="Element.InsertAdjacentElement"/><br/>-<see cref="Element.InsertAdjacentText"/><br/>-<see cref="XMLSerializer"/>: Serialize a DOM tree into an XML string<br/>-<see href="https://hacks.mozilla.org/2011/11/insertadjacenthtml-enables-faster-html-snippet-injection/">hacks.mozilla.org guest post</see> by Henri Sivonen including benchmark showing<br/>that insertAdjacentHTML can be way faster in some cases.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</ElementInsertAdjacentHTML>
+</docs>

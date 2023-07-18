@@ -1,0 +1,13 @@
+<docs>
+<RangeEndOffset>
+<summary>
+The <strong><c>Range.endOffset</c></strong> read-only property returns a number<br/>representing where in the <see cref="Range.EndContainer"/> the <see cref="Range"/><br/>ends.
+</summary>
+<remarks>
+<para>If the <c>endContainer</c> is a <see cref="Node"/> of type <see cref="Text"/>,<br/><see cref="Comment"/>, or <see cref="CDATASection"/>, then the offset is the number of<br/>characters from the start of the <c>endContainer</c> to the boundary point of the<br/><see cref="Range"/>. For other <see cref="Node"/> types, the <c>endOffset</c> is<br/>the number of child nodes between the start of the <c>endContainer</c> and the<br/>boundary point of the <see cref="Range"/>. This property is read-only. To change the<br/><c>endOffset</c> of a <see cref="Range"/>, use one of the<br/><see cref="Range.SetEnd"/> methods.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Range/endOffset"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</RangeEndOffset>
+</docs>

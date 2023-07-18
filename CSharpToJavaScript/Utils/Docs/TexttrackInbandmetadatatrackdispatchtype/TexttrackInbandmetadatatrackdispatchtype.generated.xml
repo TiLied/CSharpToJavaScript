@@ -1,0 +1,12 @@
+<docs>
+<TextTrackInBandMetadataTrackDispatchType>
+<summary>
+The <strong><c>inBandMetadataTrackDispatchType</c></strong> read-only property of the <see cref="TextTrack"/> interface returns the text track's in-band metadata dispatch type of the text track represented by the <see cref="TextTrack"/> object.
+</summary>
+<remarks>
+<para>An in-band metadata dispatch type is a string extracted from a media resource specifically for in-band metadata tracks. An example of a media resource that might have such tracks is a TV station streaming a broadcast on the web. Text Tracks may be used to include metadata for ad targeting, additional information such as recipe data during a cooking show, or trivia game data during a game show.</para><para>The value of this attribute could be used to attach these tracks to dedicated script modules as they are loaded.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextTrack/inBandMetadataTrackDispatchType"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing the <c>inBandMetadataTrackDispatchType</c>, or an empty string.</value>
+</TextTrackInBandMetadataTrackDispatchType>
+</docs>

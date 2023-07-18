@@ -1,0 +1,13 @@
+<docs>
+<PannerNodeSetOrientation>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> The suggested replacement for this deprecated method is to instead set the <see href="https://developer.mozilla.org/en-US/docs/Web/API/PannerNode/orientationX"><c>orientationX</c></see>, <see href="https://developer.mozilla.org/en-US/docs/Web/API/PannerNode/orientationY"><c>orientationY</c></see>, and <see href="https://developer.mozilla.org/en-US/docs/Web/API/PannerNode/orientationZ"><c>orientationZ</c></see> attributes directly.</blockquote>
+</summary>
+<remarks>
+<para>The <c>setOrientation()</c> method of the <see cref="PannerNode"/> Interface defines the direction the audio source is playing in.</para><para>This can have a big effect if the sound is very directional — controlled by the three cone-related attributes <see cref="PannerNode.ConeInnerAngle"/>, <see cref="PannerNode.ConeOuterAngle"/>, and <see cref="PannerNode.ConeOuterGain"/>. In such a case, a sound pointing away from the listener can be very quiet or even silent.</para><para>The three parameters <c>x</c>, <c>y</c> and <c>z</c> are unitless and describe a direction vector in 3D space using the right-hand Cartesian coordinate system. The default value of the direction vector is <c>(1, 0, 0)</c>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PannerNode/setOrientation"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</PannerNodeSetOrientation>
+</docs>

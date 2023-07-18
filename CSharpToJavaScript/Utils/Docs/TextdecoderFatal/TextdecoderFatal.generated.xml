@@ -1,0 +1,12 @@
+<docs>
+<TextDecoderFatal>
+<summary>
+The <strong><c>fatal</c></strong> read-only property of the <see cref="TextDecoder"/> interface is a {{jsxref('Boolean')}} indicating whether the error mode is fatal.
+</summary>
+<remarks>
+<para>If the property is <c>true</c>, then a decoder will throw a <see cref="TypeError"/> if it encounters malformed data while decoding.<br/>If <c>false</c>, the decoder will substitute the invalid data with the replacement character <c>U+FFFD</c> (�).<br/>The value of the property is set in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/TextDecoder"><c>TextDecoder()</c> constructor</see>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/fatal"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean which will be <c>true</c> if the error mode is set to <c>fatal</c>.<br/>Otherwise, it will be <c>false</c>, indicating that the error mode is <c>replacement</c>.</value>
+</TextDecoderFatal>
+</docs>

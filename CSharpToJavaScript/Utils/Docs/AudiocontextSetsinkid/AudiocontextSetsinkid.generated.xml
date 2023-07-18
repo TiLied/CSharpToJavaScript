@@ -1,0 +1,13 @@
+<docs>
+<AudioContextSetSinkId>
+<summary>
+The <strong><c>setSinkId()</c></strong> method of the <see cref="AudioContext"/> interface sets the output audio device for the <c>AudioContext</c>. If a sink ID is not explicitly set, the default system audio output device will be used.
+</summary>
+<remarks>
+<para>To set the audio device to a device different than the default one, the developer needs permission to access to audio devices. If required, the user can be prompted to grant the required permission via a <see cref="MediaDevices.GetUserMedia"/> call.</para><para>In addition, this feature may be blocked by a <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection"><c>speaker-selection</c></see> <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Permissions_Policy">Permissions Policy</see>.</para>
+<para>-<see href="https://set-sink-id.glitch.me/">SetSinkId test example</see><br/>-<see href="https://developer.chrome.com/blog/audiocontext-setsinkid/">Change the destination output device in Web Audio</see><br/>-<see cref="AudioContext.SinkId"/><br/>-<see cref="AudioContext/sinkchange_event"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/setSinkId"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that fulfills with a value of <c>undefined</c>.Attempting to set the sink ID to its existing value (i.e. returned by <see cref="AudioContext.SinkId"/>), throws no errors, but it aborts the process immediately.</returns>
+</AudioContextSetSinkId>
+</docs>

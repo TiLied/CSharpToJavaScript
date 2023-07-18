@@ -1,0 +1,13 @@
+<docs>
+<AudioBufferSourceNodeLoop>
+<summary>
+The <c>loop</c> property of the <see cref="AudioBufferSourceNode"/><br/>interface is a Boolean indicating if the audio asset must be replayed when the end of<br/>the <see cref="AudioBuffer"/> is reached.
+</summary>
+<remarks>
+<para>The <c>loop</c> property&amp;apos;s default value is <c>false</c>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/>-<see cref="AudioBufferSourceNode"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioBufferSourceNode/loop"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A Boolean which is <c>true</c> if looping is enabled; otherwise, the value is<br/><c>false</c>.When looping is enabled, the sound begins playing at the time specified as the start<br/>point when <see cref="AudioBufferSourceNode.Start"/> is called. When the<br/>time specified by the <see cref="AudioBufferSourceNode.LoopEnd"/> property<br/>is reached, playback continues at the time specified by<br/><see cref="AudioBufferSourceNode.LoopStart"/></value>
+</AudioBufferSourceNodeLoop>
+</docs>

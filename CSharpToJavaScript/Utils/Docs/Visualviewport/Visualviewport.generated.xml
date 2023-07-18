@@ -1,0 +1,12 @@
+<docs>
+<VisualViewport>
+<summary>
+The <strong><c>VisualViewport</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Visual_Viewport_API">Visual Viewport API</see> represents the visual viewport for a given window. For a page containing iframes, each iframe, as well as the containing page, will have a unique window object. Each window on a page will have a unique <c>VisualViewport</c> representing the properties associated with that window.
+</summary>
+<remarks>
+<para>You can get a window's visual viewport using <see cref="Window.VisualViewport"/>.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Only the top-level window has a visual viewport that&amp;apos;s distinct from the layout viewport. Therefore, it&amp;apos;s generally only the <c>VisualViewport</c> object of the top-level window that's useful. For an {{htmlelement("iframe")}}, visual viewport metrics like <see cref="VisualViewport.Width"/> always correspond to layout viewport metrics like <see cref="Element.ClientWidth"/>.</para></blockquote><para></para>
+<para>-<see href="https://github.com/bokand/bokand.github.io/blob/master/web_viewports_explainer.md">Web Viewports Explainer</see> — useful explanation of web viewports concepts, including the difference between visual viewport and layout viewport.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VisualViewport"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</VisualViewport>
+</docs>

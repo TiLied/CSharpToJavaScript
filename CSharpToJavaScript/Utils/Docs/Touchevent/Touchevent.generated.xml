@@ -1,0 +1,12 @@
+<docs>
+<TouchEvent>
+<summary>
+The <strong><c>TouchEvent</c></strong> interface represents an <see cref="UIEvent"/> which is sent when the state of contacts with a touch-sensitive surface changes. This surface can be a touch screen or trackpad, for example. The event can describe one or more points of contact with the screen and includes support for detecting movement, addition and removal of contact points, and so forth.
+</summary>
+<remarks>
+<para>Touches are represented by the <see cref="Touch"/> object; each touch is described by a position, size and shape, amount of pressure, and target element. Lists of touches are represented by <see cref="TouchList"/> objects.</para><para></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Touch_events">Touch events</see><br/>-<see cref="GestureEvent"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TouchEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</TouchEvent>
+</docs>

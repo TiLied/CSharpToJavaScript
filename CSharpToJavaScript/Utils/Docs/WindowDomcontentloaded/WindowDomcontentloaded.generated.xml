@@ -1,0 +1,12 @@
+<docs>
+<WindowDOMContentLoaded_event>
+<summary>
+The <strong><c>DOMContentLoaded</c></strong> event fires when the HTML document has been completely parsed, and all deferred scripts (<c>&amp;lt;script defer src=&amp;quot;…&amp;quot;&amp;gt;</c> and <c>&amp;lt;script type=&amp;quot;module&amp;quot;&amp;gt;</c>) have downloaded and executed. It doesn&amp;apos;t wait for other things like images, subframes, and async scripts to finish loading.
+</summary>
+<remarks>
+<para><c>DOMContentLoaded</c> does not wait for stylesheets to load, however deferred scripts <strong>do</strong> wait for stylesheets, and the <c>DOMContentLoaded</c> event is queued after deferred scripts. Also, scripts which aren&amp;apos;t deferred or async (e.g. <c>&amp;lt;script&amp;gt;</c>) will wait for already-parsed stylesheets to load.</para><para>The original target for this event is the <see cref="Document"/> that has loaded. You can listen for this event on the <c>Window</c> interface to handle it in the capture or bubbling phases. For full details on this event please see the page on the Document: <see cref="Document/DOMContentLoaded_event"/> event.</para><para>A different event, <see cref="Window/load_event"/>, should be used only to detect a fully-loaded page. It is a common mistake to use <c>load</c> where <c>DOMContentLoaded</c> would be more appropriate.</para><para>This event is not cancelable.</para>
+<para>-Related events: <see cref="Window/load_event"/>, <see cref="Document/readystatechange_event"/>, <see cref="Window/beforeunload_event"/>, <see cref="Window/unload_event"/><br/>-This event on <see cref="Document"/> targets: <see cref="Document/DOMContentLoaded_event"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Window/DOMContentLoaded_event"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WindowDOMContentLoaded_event>
+</docs>

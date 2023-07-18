@@ -1,0 +1,13 @@
+<docs>
+<XRProjectionLayerFixedFoveation>
+<summary>
+The <strong><c>fixedFoveation</c></strong> property of the <see cref="XRProjectionLayer"/> interface is a number indicating the amount of foveation used by the XR compositor for the layer. Fixed Foveated Rendering (FFR) renders the edges of the eye textures at a lower resolution than the center and reduces the GPU load.
+</summary>
+<remarks>
+<para>It is most useful for low-contrast textures such as background images, but less for high-contrast ones such as text or detailed images. Authors can adjust the level on a per-frame basis to achieve the best tradeoff between performance and visual quality.</para>
+<para>-<see href="https://en.wikipedia.org/wiki/Foveated_rendering">Foveated rendering</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRProjectionLayer/fixedFoveation"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number between 0 and 1.It's up to the user agent how to interpret the numbers in this range. When changing the foveation level, the effect will visible in the next <see cref="XRFrame"/>.Note that some user agents might implement certain levels of foveation, so you might need to adjust the foveation level in large increments to see an effect. Example levels:Some devices don&amp;apos;t support foveated rendering. In that case <c>fixedFoveation</c> is <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><c>null</c></see> and setting it will not do anything.</value>
+</XRProjectionLayerFixedFoveation>
+</docs>

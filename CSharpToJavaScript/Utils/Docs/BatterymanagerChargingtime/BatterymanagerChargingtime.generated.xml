@@ -1,0 +1,13 @@
+<docs>
+<BatteryManagerChargingTime>
+<summary>
+The <strong><c>BatteryManager.chargingTime</c></strong> property indicates the amount of time, in seconds, that remain until the battery is fully charged or <c>0</c> if the battery is already fully charged. If the battery is currently<br/>discharging, its value is<br/><see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity"><c>Infinity</c></see>. When its value changes, the <see href="https://developer.mozilla.org/en-US/docs/Web/API/BatteryManager/chargingtimechange_event"><c>chargingtimechange</c></see> event is fired.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Even if the time returned is precise to the second,<br/>browsers round them to a higher interval<br/>(typically to the closest 15 minutes) for privacy reasons.</para></blockquote>
+<para>-<see cref="BatteryManager"/><br/>-<see cref="Navigator.GetBattery"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BatteryManager/chargingTime"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</BatteryManagerChargingTime>
+</docs>

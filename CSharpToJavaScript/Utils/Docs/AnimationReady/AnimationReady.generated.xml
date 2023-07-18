@@ -1,0 +1,13 @@
+<docs>
+<AnimationReady>
+<summary>
+The read-only <strong><c>Animation.ready</c></strong> property of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see> returns a <see cref="Promise"/> which resolves when the animation is ready to play. A new promise is created every time the animation enters the <c>&amp;quot;pending&amp;quot;</c> <see href="https://developer.mozilla.org/en-US/docs/Web/API/Animation/playState">play state</see> as well as when the animation is canceled, since in both of those scenarios, the animation is ready to be started again.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Since the same <see cref="Promise"/> is used for both pending <c>play</c> and pending <c>pause</c> requests, authors are advised to check the state of the animation when the promise is resolved.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/>-<see cref="Animation"/><br/>-<see cref="Animation.PlayState"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Animation/ready"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Promise"/> which resolves when the animation is ready to be played. You'll typically use a construct similar to this when using the ready promise:</value>
+</AnimationReady>
+</docs>

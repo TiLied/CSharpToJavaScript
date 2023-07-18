@@ -1,0 +1,13 @@
+<docs>
+<RTCStatsReportGet>
+<summary>
+The <strong><c>get()</c></strong> method of the <see cref="RTCStatsReport"/> interface returns a specified element from an <c>RTCStatsReport</c>.
+</summary>
+<remarks>
+<para>Elements in the <c>RTCStatsReport</c> are identified by unique <c>id</c> values, which represent the monitored statistics objects from which the statistics are derived.<br/>The element returned will be an instance of one of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCStatsReport#the_statistic_types">statistics dictionary objects</see>, and it will contain statistics for the object with the given <c>id</c>.<br/>The fetched value is a reference to the statistics dictionary, and any change made to that object will effectively modify it inside the <c>RTCStatsReport</c> object.</para><para>The method is otherwise the same as <see cref="MapPrototypeGet"/>.</para>
+<para>-<see cref="MapPrototypeGet"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCStatsReport/get"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>The element associated with the specified <c>id</c> key, or <see cref="Undefined"/> if the key can't be found in the <c>Map</c> object.</returns>
+</RTCStatsReportGet>
+</docs>

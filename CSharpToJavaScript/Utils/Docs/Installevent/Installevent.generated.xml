@@ -1,0 +1,12 @@
+<docs>
+<InstallEvent>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The parameter passed into the <see cref="ServiceWorkerGlobalScope.Install_event"/> handler, the <c>InstallEvent</c> interface represents an install action that is dispatched on the <see cref="ServiceWorkerGlobalScope"/> of a <see cref="ServiceWorker"/>. As a child of <see cref="ExtendableEvent"/>, it ensures that functional events such as <see cref="FetchEvent"/> are not dispatched during installation.
+</summary>
+<remarks>
+<para>This interface inherits from the <see cref="ExtendableEvent"/> interface.</para><para></para>
+<para>-<see cref="NotificationEvent"/><br/>-<see cref="Promise"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/InstallEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</InstallEvent>
+</docs>

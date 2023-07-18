@@ -1,0 +1,13 @@
+<docs>
+<GPUDevicePushErrorScope>
+<summary>
+The <strong><c>pushErrorScope()</c></strong> method of the<br/><see cref="GPUDevice"/> interface pushes a new GPU error scope onto the device's error scope stack, allowing you to capture errors of a particular type.
+</summary>
+<remarks>
+<para>Once you are done capturing errors, you can end capture by invoking <see cref="GPUDevice.PopErrorScope"/>. This pops the scope from the stack and returns a {{jsxref("Promise")}} that resolves to an object describing the first error captured in the scope, or <c>null</c> if no errors were captured.</para>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUDevice/pushErrorScope"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</GPUDevicePushErrorScope>
+</docs>

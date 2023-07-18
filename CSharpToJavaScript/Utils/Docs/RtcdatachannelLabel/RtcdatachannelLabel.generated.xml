@@ -1,0 +1,13 @@
+<docs>
+<RTCDataChannelLabel>
+<summary>
+The read-only <c>RTCDataChannel</c> property <strong><c>label</c></strong><br/>returns a string containing a name describing the data channel. These<br/>labels are not required to be unique.
+</summary>
+<remarks>
+<para>You may use the label as you wish; you could use it to identify all the channels that<br/>are being used for the same purpose, by giving them all the same name. Or you could give<br/>each channel a unique label for tracking purposes. It&amp;apos;s entirely up to the design<br/>decisions made when building your site or app.</para><para>A unique ID can be found in the <see cref="RTCDataChannel.Id"/> property.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> A data channel&amp;apos;s label is set when the channel is created by calling<br/><see cref="RTCPeerConnection.CreateDataChannel"/>. It cannot be changed after that.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/>-<see cref="RTCDataChannel"/><br/>-<see cref="RTCDataChannel.Id"/><br/>-<see cref="RTCPeerConnection.CreateDataChannel"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/label"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string identifier assigned by the website or app when the data channel was created,<br/>as specified when <see cref="RTCPeerConnection.CreateDataChannel"/> was called to<br/>create the channel.</value>
+</RTCDataChannelLabel>
+</docs>

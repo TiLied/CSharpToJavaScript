@@ -1,0 +1,12 @@
+<docs>
+<DocumentDesignMode>
+<summary>
+<strong><c>document.designMode</c></strong> controls whether the entire document<br/>is editable. Valid values are <c>&amp;quot;on&amp;quot;</c> and <c>&amp;quot;off&amp;quot;</c>. According to the<br/>specification, this property is meant to default to <c>&amp;quot;off&amp;quot;</c>. Firefox follows<br/>this standard. The earlier versions of Chrome and IE default to <c>&amp;quot;inherit&amp;quot;</c>.<br/>Starting in Chrome 43, the default is <c>&amp;quot;off&amp;quot;</c> and <c>&amp;quot;inherit&amp;quot;</c> is<br/>no longer supported. In IE6-10, the value is capitalized.
+</summary>
+<remarks>
+<para>-<see cref="HTMLElement.ContentEditable"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/designMode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string indicating whether <c>designMode</c> is (or should be) set to on or off.<br/>Valid values are <c>on</c> and <c>off</c>.</value>
+</DocumentDesignMode>
+</docs>

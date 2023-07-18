@@ -1,0 +1,12 @@
+<docs>
+<ElementContextmenu_event>
+<summary>
+The <strong><c>contextmenu</c></strong> event fires when the user attempts to open a context menu. This event is typically triggered by clicking the right mouse button, or by pressing the context menu key.
+</summary>
+<remarks>
+<para>In the latter case, the context menu is displayed at the bottom left of the focused element, unless the element is a tree, in which case the context menu is displayed at the bottom left of the current row.</para><para>Any right-click event that is not disabled (by calling the click event's <see cref="Event.PreventDefault"/> method) will result in a <c>contextmenu</c> event being fired at the targeted element.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> An exception to this in Firefox: if the user holds down the &amp;lt;kbd&amp;gt;Shift&amp;lt;/kbd&amp;gt; key while right-clicking, then the context menu will be shown without a <c>contextmenu</c> event being fired.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</see><br/>-<see cref="Element/auxclick_event"/><br/>-<see cref="Element/click_event"/><br/>-<see cref="Element/dblclick_event"/><br/>-<see cref="Element/mousedown_event"/><br/>-<see cref="Element/mouseup_event"/><br/>-<see cref="Element/pointerdown_event"/><br/>-<see cref="Element/pointerup_event"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/contextmenu_event"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</ElementContextmenu_event>
+</docs>

@@ -1,0 +1,12 @@
+<docs>
+<DocumentSelectionchange_event>
+<summary>
+The <strong><c>selectionchange</c></strong> event of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Selection">Selection API</see> is fired when the current <see cref="Selection"/> of a <see cref="Document"/> is changed.
+</summary>
+<remarks>
+<para>This event is not cancelable and does not bubble.</para><para>The event can be handled by adding an event listener for <c>selectionchange</c> or using the <c>onselectionchange</c> event handler.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This event is not quite the same as the <c>selectionchange</c> events fired when the text selection in an {{HTMLElement("input")}} or {{HTMLElement("textarea")}} element is changed. See <see cref="HTMLInputElement.Selectionchange_event"/> for more details.</para></blockquote>
+<para>-<see cref="Node/selectstart_event"/><br/>-<see cref="Document.GetSelection"/><br/>-<see cref="Selection"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/selectionchange_event"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</DocumentSelectionchange_event>
+</docs>

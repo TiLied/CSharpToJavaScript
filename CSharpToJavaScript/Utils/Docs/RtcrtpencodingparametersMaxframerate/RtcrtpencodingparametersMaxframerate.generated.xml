@@ -1,0 +1,13 @@
+<docs>
+<RTCRtpEncodingParametersMaxFramerate>
+<summary>
+The <strong><c>maxFramerate</c></strong> property of the <see cref="RTCRtpEncodingParameters"/> dictionary specifies the maximum framerate that can be used to send the encoding, in frames per second.
+</summary>
+<remarks>
+<para>The user agent is free to allocate bandwidth between the encodings, as long as the <c>maxFramerate</c> value is not exceeded.</para><para>The frame rate is a positive real number (<see cref="RTCPeerConnection.AddTransceiver"/> and <see cref="RTCRtpSender.SetParameters"/> will throw a {{jsxref("RangeError")}} exception if the value is less than 0.0).<br/>Setting the maximum frame rate to zero using <see cref="RTCRtpSender.SetParameters"/> has the effect of freezing the video on the next frame.</para>
+<para>-<see cref="RTCRtpEncodingParameters.MaxBitrate"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpEncodingParameters/maxFramerate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A positive real number indicating the maximum frame rate for the specified encoding, in frames per second.</value>
+</RTCRtpEncodingParametersMaxFramerate>
+</docs>

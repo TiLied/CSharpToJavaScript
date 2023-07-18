@@ -1,0 +1,12 @@
+<docs>
+<WindowStorage_event>
+<summary>
+The <strong><c>storage</c></strong> event of the <see cref="Window"/> interface fires when a storage area (<c>localStorage</c>) has been modified in the context of another document.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This won&amp;apos;t work on the same page that is making the changes — it is really a way for other pages on the domain using the storage to sync any changes that are made. Pages on other domains can&amp;apos;t access the same storage objects.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API">Web Storage API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Using the Web Storage API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API#responding_to_storage_changes_with_the_storageevent">Responding to storage changes with the StorageEvent</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Window/storage_event"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WindowStorage_event>
+</docs>

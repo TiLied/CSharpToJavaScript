@@ -1,0 +1,13 @@
+<docs>
+<WindowQueryLocalFonts>
+<summary>
+The <strong><c>window.queryLocalFonts()</c></strong> method returns a {{jsxref("Promise")}} that fulfills with an array of <see cref="FontData"/> objects representing the font faces available locally.
+</summary>
+<remarks>
+<para>To use this method, the user must grant permission to access <c>&amp;apos;local-fonts&amp;apos;</c> (permission status can be queried via the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Permissions_API">Permissions API</see>). In addition, this feature may be blocked by a <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Permissions_Policy">Permissions Policy</see> set on your server.</para>
+<para>-{{domxref(&amp;quot;Local Font Access API&amp;quot;, &amp;quot;Local Font Access API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://developer.chrome.com/articles/local-fonts/">Use advanced typography with local fonts</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face">@font-face</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Window/queryLocalFonts"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that fulfills with an array of <see cref="FontData"/> objects representing the font faces available locally.</returns>
+</WindowQueryLocalFonts>
+</docs>

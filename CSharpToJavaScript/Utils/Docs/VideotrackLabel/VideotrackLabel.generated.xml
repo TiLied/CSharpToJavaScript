@@ -1,0 +1,11 @@
+<docs>
+<VideoTrackLabel>
+<summary>
+The read-only <strong><see cref="VideoTrack"/></strong><br/>property <strong><c>label</c></strong> returns a string specifying the video<br/>track&amp;apos;s human-readable label, if one is available; otherwise, it returns an empty<br/>string.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoTrack/label"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string specifying the track&amp;apos;s human-readable label, if one is<br/>available in the track metadata. Otherwise, an empty string (<c>&amp;quot;&amp;quot;</c>) is<br/>returned.For example, a track whose <see cref="VideoTrack.Kind"/> is<br/><c>&amp;quot;sign&amp;quot;</c> might have a <c>label</c> such as<br/><c>&amp;quot;A sign-language interpretation.&amp;quot;</c>.</value>
+</VideoTrackLabel>
+</docs>

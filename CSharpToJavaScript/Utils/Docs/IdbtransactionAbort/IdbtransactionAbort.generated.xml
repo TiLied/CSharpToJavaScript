@@ -1,0 +1,12 @@
+<docs>
+<IDBTransactionAbort_event>
+<summary>
+The <c>abort</c> event is fired when an <c>IndexedDB</c> transaction is aborted.
+</summary>
+<remarks>
+<para>This can happen for any of the following reasons:</para><para>This non-cancelable event <see href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#bubbling_and_capturing_explained">bubbles</see> to the associated <see cref="IDBDatabase"/> object.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction/abort_event"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</IDBTransactionAbort_event>
+</docs>

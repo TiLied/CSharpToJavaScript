@@ -1,0 +1,12 @@
+<docs>
+<StaticRange>
+<summary>
+The <see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">DOM</see> <strong><c>StaticRange</c></strong> interface extends <see cref="AbstractRange"/> to provide a method to specify a range of content in the DOM whose contents don't update to reflect changes which occur within the DOM tree.
+</summary>
+<remarks>
+<para>This interface offers the same set of properties and methods as <c>AbstractRange</c>.</para><para><c>AbstractRange</c> and <c>StaticRange</c> are not available from <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">web workers</see>.</para><para></para>
+<para>-Live updating range of content within the DOM: <see cref="Range"/><br/>-<see cref="AbstractRange"/>, the abstract interface from which all ranges are derived<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StaticRange"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</StaticRange>
+</docs>

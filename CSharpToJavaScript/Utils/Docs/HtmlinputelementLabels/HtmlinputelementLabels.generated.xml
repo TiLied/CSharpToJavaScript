@@ -1,0 +1,11 @@
+<docs>
+<HTMLInputElementLabels>
+<summary>
+The <strong><c>HTMLInputElement.labels</c></strong> read-only property returns a<br/><see cref="NodeList"/> of the {{HTMLElement("label")}} elements associated with the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">input</see> element, if the element is not hidden. If the element has the<br/>type <c>hidden</c>, the property returns <c>null</c>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/labels"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="NodeList"/> containing the <c>&amp;lt;label&amp;gt;</c> elements associated<br/>with the <c>&amp;lt;input&amp;gt;</c> element.</value>
+</HTMLInputElementLabels>
+</docs>

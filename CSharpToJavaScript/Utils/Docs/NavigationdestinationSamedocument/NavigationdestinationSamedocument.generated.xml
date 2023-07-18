@@ -1,0 +1,13 @@
+<docs>
+<NavigationDestinationSameDocument>
+<summary>
+The <strong><c>sameDocument</c></strong> read-only property of the<br/><see cref="NavigationDestination"/> interface returns <c>true</c> if the navigation is to the same <c>document</c> as the current <see cref="Document"/> value, or <c>false</c> otherwise.
+</summary>
+<remarks>
+<para>This is useful for checking whether the navigation will be same-document or cross-document.</para>
+<para>-<see href="https://developer.chrome.com/docs/web-platform/navigation-api/">Modern client-side routing: the Navigation API</see><br/>-<see href="https://github.com/WICG/navigation-api/blob/main/README.md">Navigation API explainer</see><br/>-Domenic Denicola&amp;apos;s <see href="https://gigantic-honored-octagon.glitch.me/">Navigation API live demo</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NavigationDestination/sameDocument"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean.</value>
+</NavigationDestinationSameDocument>
+</docs>

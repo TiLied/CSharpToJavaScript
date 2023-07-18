@@ -1,0 +1,13 @@
+<docs>
+<ByteLengthQueuingStrategyHighWaterMark>
+<summary>
+The read-only <strong><c>ByteLengthQueuingStrategy.highWaterMark</c></strong> property returns the total number of bytes that can be contained in the internal queue before <see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Concepts#backpressure">backpressure</see> is applied.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Unlike <see href="https://developer.mozilla.org/en-US/docs/Web/API/CountQueuingStrategy/CountQueuingStrategy"><c>CountQueuingStrategy()</c></see> where the <c>highWaterMark</c> property specifies a simple count of the number of chunks, with <c>ByteLengthQueuingStrategy()</c>, the <c>highWaterMark</c> parameter specifies a number of <strong>bytes</strong> — specifically, given a stream of chunks, how many bytes worth of those chunks (rather than a count of how many of those chunks) can be contained in the internal queue before backpressure is applied.</para></blockquote>
+<para>-<see cref="ByteLengthQueuingStrategy.ByteLengthQueuingStrategy"/> constructor<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ByteLengthQueuingStrategy/highWaterMark"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer.</value>
+</ByteLengthQueuingStrategyHighWaterMark>
+</docs>

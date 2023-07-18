@@ -1,0 +1,13 @@
+<docs>
+<FileSystemSyncAccessHandleWrite>
+<summary>
+The <strong><c>write()</c></strong> method of the<br/><see cref="FileSystemSyncAccessHandle"/> interface writes the content of a specified buffer to the file associated with the handle, optionally at a given offset. Note that you cannot directly manipulate the contents of an <c>ArrayBuffer</c>. Instead, you create one of the typed array objects like an <see cref="Int8Array"/> or a <see cref="DataView"/> object which represents the buffer in a specific format, and use that to read and write the contents of the buffer.
+</summary>
+<remarks>
+<para>Writes performed using <see cref="'FileSystemSyncAccessHandle.Write'"/> are in-place, meaning that changes are written to the actual underlying file at the same time as they are written to the writer. This is not the case with other writing mechanisms available in the {{domxref("File System Access API", "File System Access API", &amp;quot;&amp;quot;, "nocode")}} (e.g. <see cref="'FileSystemFileHandle.CreateWritable'"/>), where changes are not committed to disk until the writing stream is closed.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_System_Access_API">File System Access API</see><br/>-<see href="https://web.dev/file-system-access/">The File System Access API: simplifying access to local files</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemSyncAccessHandle/write"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="'Promise'"/> which resolves to a number representing the number of bytes written to the file.</returns>
+</FileSystemSyncAccessHandleWrite>
+</docs>

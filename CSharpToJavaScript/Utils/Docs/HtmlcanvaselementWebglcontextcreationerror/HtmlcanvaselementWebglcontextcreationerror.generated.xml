@@ -1,0 +1,12 @@
+<docs>
+<HTMLCanvasElementWebglcontextcreationerror_event>
+<summary>
+The <strong><c>webglcontextcreationerror</c></strong> event of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> is fired if the user agent is unable to create a <see cref="WebGLRenderingContext"/> context.
+</summary>
+<remarks>
+<para>This event has a <see cref="WebGLContextEvent.StatusMessage"/> property, which can contain a platform dependent string with more information about the failure.</para><para>This event does not bubble.</para>
+<para>-<see cref="WebGLContextEvent"/><br/>-<see cref="WebGLRenderingContext.IsContextLost"/><br/>-<see cref="WEBGL_lose_context"/>, <see cref="WEBGL_lose_context.LoseContext"/>, <see cref="WEBGL_lose_context.RestoreContext"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/webglcontextcreationerror_event"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLCanvasElementWebglcontextcreationerror_event>
+</docs>

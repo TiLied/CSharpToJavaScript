@@ -1,0 +1,12 @@
+<docs>
+<RTCPeerConnectionGetReceivers>
+<summary>
+The <strong><c>RTCPeerConnection.getReceivers()</c></strong> method returns an<br/>array of <see cref="RTCRtpReceiver"/> objects, each of which represents one RTP<br/>receiver. Each RTP receiver manages the reception and decoding of data for<br/>a <see cref="MediaStreamTrack"/> on an <see cref="RTCPeerConnection"/>
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/>-<see cref="RTCRtpSender"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/getReceivers"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An array of <see cref="RTCRtpReceiver"/> objects, one for each track on the<br/>connection. The array is empty if there are no RTP receivers on the connection.The order of the returned <c>RTCRtpReceiver</c> instances is not defined by the<br/>specification, and may change from one call to <c>getReceivers()</c> to the<br/>next.</returns>
+</RTCPeerConnectionGetReceivers>
+</docs>

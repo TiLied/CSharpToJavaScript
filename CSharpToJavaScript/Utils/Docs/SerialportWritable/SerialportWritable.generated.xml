@@ -1,0 +1,11 @@
+<docs>
+<SerialPortWritable>
+<summary>
+The <strong><c>writable</c></strong> read-only property of the <see cref="SerialPort"/> interface returns a <see cref="WritableStream"/> for sending data to the device connected to the port. Chunks written to this stream must be instances of {{jsxref("ArrayBuffer")}}, {{jsxref("TypedArray")}}, or {{jsxref("DataView")}}. This property is non-null as long as the port is open and has not encountered a fatal error.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SerialPort/writable"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="WritableStream"/></value>
+</SerialPortWritable>
+</docs>

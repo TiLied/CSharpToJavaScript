@@ -1,0 +1,12 @@
+<docs>
+<FormDataEvent>
+<summary>
+The <strong><c>FormDataEvent</c></strong> interface represents a <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/formdata_event"><c>formdata</c> event</see> — such an event is fired on an <see cref="HTMLFormElement"/> object after the entry list representing the form's data is constructed. This happens when the form is submitted, but can also be triggered by the invocation of a <see cref="FormData.FormData"/> constructor.
+</summary>
+<remarks>
+<para>This allows a <see cref="FormData"/> object to be quickly obtained in response to a <c>formdata</c> event firing, rather than needing to put it together yourself when you wish to submit form data via a method like <see cref="XMLHttpRequest"/> (see <see href="https://developer.mozilla.org/en-US/docs/Web/API/FormData/Using_FormData_Objects">Using FormData objects</see>).</para><para></para>
+<para>-<see cref="XMLHTTPRequest"/><br/>-<see cref="FormData"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/FormData/Using_FormData_Objects">Using FormData objects</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Form">Form</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FormDataEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</FormDataEvent>
+</docs>

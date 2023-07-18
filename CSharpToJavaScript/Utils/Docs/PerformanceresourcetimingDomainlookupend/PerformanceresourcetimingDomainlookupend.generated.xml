@@ -1,0 +1,13 @@
+<docs>
+<PerformanceResourceTimingDomainLookupEnd>
+<summary>
+The <strong><c>domainLookupEnd</c></strong> read-only property returns the <see cref="DOMHighResTimeStamp"/> immediately after the browser finishes the domain-name lookup for the resource.
+</summary>
+<remarks>
+<para>If the user agent has the domain information in cache, <see cref="PerformanceResourceTiming.DomainLookupStart"/> and <see cref="PerformanceResourceTiming.DomainLookupEnd"/> represent the times when the user agent starts and ends the domain data retrieval from the cache.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Timing-Allow-Origin">Timing-Allow-Origin</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming/domainLookupEnd"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <c>domainLookupEnd</c> property can have the following values:</value>
+</PerformanceResourceTimingDomainLookupEnd>
+</docs>

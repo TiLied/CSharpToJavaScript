@@ -1,0 +1,11 @@
+<docs>
+<FontFaceSet>
+<summary>
+The <strong><c>FontFaceSet</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Font_Loading_API">CSS Font Loading API</see> manages the loading of font-faces and querying of their download status.
+</summary>
+<remarks>
+<para>A <c>FontFaceSet</c> instance is a <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_objects"><c>Set</c>-like object</see> that can hold an ordered set of <see cref="FontFace"/> objects.</para><para>This property is available as <see cref="Document.Fonts"/>, or <c>self.fonts</c> in <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">web workers</see>.</para><para></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FontFaceSet"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</FontFaceSet>
+</docs>

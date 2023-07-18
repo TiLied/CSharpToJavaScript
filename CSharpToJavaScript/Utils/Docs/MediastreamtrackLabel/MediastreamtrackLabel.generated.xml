@@ -1,0 +1,12 @@
+<docs>
+<MediaStreamTrackLabel>
+<summary>
+The <strong><c>MediaStreamTrack.label</c></strong> read-only property returns a string containing a <see href="https://developer.mozilla.org/en-US/docs/Glossary/user agent">user agent</see>-assigned label that identifies the track source, as in <c>&amp;quot;internal microphone&amp;quot;</c>.
+</summary>
+<remarks>
+<para>The string may be left empty and is empty as long as no source has been connected.<br/>When the track is disassociated from its source, the label is not changed.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack/label"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</MediaStreamTrackLabel>
+</docs>

@@ -1,0 +1,13 @@
+<docs>
+<ResponseRedirect_static>
+<summary>
+The <strong><c>redirect()</c></strong> static method of the <see cref="Response"/> interface returns a <c>Response</c> resulting in a redirect to the specified URL.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This is mainly relevant to the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see>.<br/>A controlling service worker could intercept a page&amp;apos;s request and redirect it as desired.<br/>This will actually lead to a real redirect if a service worker sends it upstream.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Response/redirect_static"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Response"/> object.</returns>
+</ResponseRedirect_static>
+</docs>

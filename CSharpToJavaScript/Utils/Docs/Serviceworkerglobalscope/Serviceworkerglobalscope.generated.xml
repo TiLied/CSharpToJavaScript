@@ -1,0 +1,12 @@
+<docs>
+<ServiceWorkerGlobalScope>
+<summary>
+The <strong><c>ServiceWorkerGlobalScope</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">Service Worker API</see> represents the global execution context of a service worker.
+</summary>
+<remarks>
+<para>Developers should keep in mind that the ServiceWorker state is not persisted across the termination/restart cycle, so each event handler should assume it&amp;apos;s being invoked with a bare, default global state.</para><para>Once successfully registered, a service worker can and will be terminated when idle to conserve memory and processor power. An active service worker is automatically restarted to respond to events, such as <see cref="ServiceWorkerGlobalScope.Fetch_event"/> or <see cref="ServiceWorkerGlobalScope.Message_event"/>.</para><para>Additionally, synchronous requests are not allowed from within a service worker — only asynchronous requests, like those initiated via the <see cref="Fetch"/> method, can be used.</para><para>This interface inherits from the <see cref="WorkerGlobalScope"/> interface, and its parent <see cref="EventTarget"/>.</para><para></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</see><br/>-<see href="https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker">Service workers basic code example</see><br/>-<see href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</see><br/>-<see cref="Promise"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerGlobalScope"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</ServiceWorkerGlobalScope>
+</docs>

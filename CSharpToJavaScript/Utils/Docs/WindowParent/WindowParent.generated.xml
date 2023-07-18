@@ -1,0 +1,13 @@
+<docs>
+<WindowParent>
+<summary>
+The <strong><c>Window.parent</c></strong> property is a reference to the parent<br/>of the current window or subframe.
+</summary>
+<remarks>
+<para>If a window does not have a parent, its <c>parent</c> property is a reference to<br/>itself.</para><para>When a window is loaded in an <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object">object</see>, or<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/frame">frame</see>, its parent is the window with the element embedding the<br/>window.</para>
+<para>-<see cref="Window.FrameElement"/> returns the specific element (such as<br/><c>&amp;lt;iframe&amp;gt;</c>) the <c>window</c> is embedded into.<br/>-<see cref="Window.Top"/> returns a reference to the top-level window.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Window/parent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <c>Window</c> or <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</see> object.</value>
+</WindowParent>
+</docs>

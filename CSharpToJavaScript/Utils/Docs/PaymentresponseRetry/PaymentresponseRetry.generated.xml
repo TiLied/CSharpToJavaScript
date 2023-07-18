@@ -1,0 +1,13 @@
+<docs>
+<PaymentResponseRetry>
+<summary>
+The <see cref="PaymentResponse"/> interface's<br/><strong><c>retry()</c></strong> method makes it possible to ask the user to<br/>retry a payment after an error occurs during processing.
+</summary>
+<remarks>
+<para>This lets your app<br/>gracefully deal with situations such as invalid shipping addresses or declined credit<br/>cards.</para>
+<para>-<see cref="PaymentResponse"/> interface.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentResponse/retry"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> which is resolved when the payment is successfully completed.<br/>The promise is rejected with an appropriate exception value if the payment fails again.Typically you will use this by calling <see cref="PaymentRequest.Show"/>,<br/>then entering a loop or recursive function that checks the<br/><see cref="PaymentResponse"/> for errors or other reasons to retry the payment request.<br/>If a retry is needed, the loop calls <c>retry()</c>, then loops back to check the<br/>response when it comes in. The loop exits only when the user either cancels the payment<br/>request or the request is successful.See the <see href="https://developer.mozilla.org#examples">example</see> below for a thorough example, but the basic<br/>concept, in outline form, is:</returns>
+</PaymentResponseRetry>
+</docs>

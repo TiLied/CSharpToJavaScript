@@ -1,0 +1,13 @@
+<docs>
+<CSSStyleSheetReplace>
+<summary>
+The <strong><c>replace()</c></strong> method of the <see cref="CSSStyleSheet"/> interface asynchronously replaces the content of the stylesheet with the content passed into it. The method returns a promise that resolves with the <c>CSSStyleSheet</c> object.
+</summary>
+<remarks>
+<para>The <c>replace()</c> and <see cref="CSSStyleSheet.ReplaceSync"/> methods can only be used on a stylesheet created with the <see cref="CSSStyleSheet.CSSStyleSheet"/> constructor.</para>
+<para>-<see href="https://web.dev/constructable-stylesheets/">Constructable Stylesheets</see> (web.dev)<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM">Using the Shadow DOM</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleSheet/replace"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that resolves with the <see cref="CSSStyleSheet"/>.</returns>
+</CSSStyleSheetReplace>
+</docs>

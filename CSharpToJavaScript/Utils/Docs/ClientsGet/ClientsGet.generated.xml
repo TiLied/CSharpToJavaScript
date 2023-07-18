@@ -1,0 +1,11 @@
+<docs>
+<ClientsGet>
+<summary>
+The <strong><c>get()</c></strong> method of the<br/><see cref="Clients"/> interface gets a service worker client matching a given<br/><c>id</c> and returns it in a <see cref="Promise"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Clients/get"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that resolves to a <see cref="Client"/> object or<br/><c>undefined</c>.</returns>
+</ClientsGet>
+</docs>

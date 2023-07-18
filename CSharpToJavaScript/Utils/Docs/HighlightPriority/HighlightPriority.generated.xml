@@ -1,0 +1,13 @@
+<docs>
+<HighlightPriority>
+<summary>
+It is possible to create <see cref="Range"/> objects that overlap in a document.
+</summary>
+<remarks>
+<para>When overlapping ranges are used by multiple different <see cref="Highlight"/> objects, and when those highlights are styled using {{cssxref("::highlight&amp;quot;)}} pseudo-elements, this may lead to conflicting styles.</para><para>If two text ranges overlap and are both highlighted using the {{domxref(&amp;quot;css_custom_highlight_api&amp;quot;, &amp;quot;CSS Custom Highlight API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}, and if they&amp;apos;re both styled using the <c>color</c> CSS property, the browser needs to decide which color should be used for styling the text in the overlapping part.</para><para>By default, all highlights have the same priority and the browser chooses the most recently registered highlight to style the overlapping parts.</para><para>The <c>priority</c> property of the <see cref="Highlight"/> interface is a {{jsxref("Number")}} used to change this default behavior and determine which highlight's styles should be used to resolve style conflicts in overlapping parts.</para><para>Note that all the styles of a highlight are applied and the browser only needs to resolve conflicts when the same CSS properties are used by multiple overlapping highlights. The highlight style conflict resolution also does not depend on the order in which the {{cssxref(&amp;quot;::highlight&amp;quot;)}} pseudo-elements rules appear in the source, or whether or not CSS properties are marked as <c>!important</c>.</para>
+<para>-{{domxref(&amp;quot;css_custom_highlight_api&amp;quot;, &amp;quot;The CSS Custom Highlight API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://css-tricks.com/css-custom-highlight-api-early-look/">CSS Custom Highlight API: The Future of Highlighting Text Ranges on the Web</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Highlight/priority"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer.</value>
+</HighlightPriority>
+</docs>

@@ -1,0 +1,12 @@
+<docs>
+<RTCPeerConnectionNegotiationneeded_event>
+<summary>
+A <strong><c>negotiationneeded</c></strong> event is sent to the <see cref="RTCPeerConnection"/> when negotiation of the connection through the signaling channel is required.<br/>This occurs both during the initial setup of the connection as well as any time a change to the communication environment requires reconfiguring the connection.
+</summary>
+<remarks>
+<para>The <c>negotiationneeded</c> event is first dispatched to the <see cref="RTCPeerConnection"/> when media is first added to the connection. This starts the process of {{Glossary("ICE")}} negotiation by instructing your code to begin exchanging ICE candidates through the signaling server. See <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling#signaling_transaction_flow">Signaling transaction flow</see> for a description of the signaling process that begins with a <c>negotiationneeded</c> event.</para><para>This event is not cancelable and does not bubble.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling">Signaling and video calling</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Session_lifetime">Lifetime of a WebRTC session</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Connectivity">WebRTC connectivity</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Protocols">Introduction to WebRTC protocols</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/negotiationneeded_event"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RTCPeerConnectionNegotiationneeded_event>
+</docs>

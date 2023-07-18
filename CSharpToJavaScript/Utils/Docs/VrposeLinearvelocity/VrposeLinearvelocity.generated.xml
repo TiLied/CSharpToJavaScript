@@ -1,0 +1,13 @@
+<docs>
+<VRPoseLinearVelocity>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>linearVelocity</c></strong> read-only property of the <see cref="VRPose"/> interface returns an array representing the linear velocity vector of the <see cref="VRDisplay"/> at the current <see cref="VRPose.Timestamp"/>, in meters per second.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This property was part of the old <see href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</see>. It has been superseded by the <see href="https://immersive-web.github.io/webxr/">WebXR Device API</see>.</para></blockquote><para>In other words, the current velocity at which the sensor is moving along the <c>x</c>, <c>y</c>, and <c>z</c> axes.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API">WebVR API homepage</see><br/>-<see href="https://mixedreality.mozilla.org/"/> — demos, downloads, and other resources from the Mozilla VR team.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VRPose/linearVelocity"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Float32Array"/>, or <c>null</c> if the VR sensor is not able to provide linear velocity data.</value>
+</VRPoseLinearVelocity>
+</docs>

@@ -1,0 +1,13 @@
+<docs>
+<CanvasRenderingContext2DStrokeText>
+<summary>
+The <see cref="CanvasRenderingContext2D"/> method<br/><strong><c>strokeText()</c></strong>, part of the Canvas 2D API, strokes — that<br/>is, draws the outlines of — the characters of a text string at the specified<br/>coordinates. An optional parameter allows specifying a maximum width for the rendered<br/>text, which the <see href="https://developer.mozilla.org/en-US/docs/Glossary/user agent">user agent</see> will achieve by condensing the text or by<br/>using a lower font size.
+</summary>
+<remarks>
+<para>This method draws directly to the canvas without modifying the current path, so any<br/>subsequent <see cref="CanvasRenderingContext2D.Fill"/> or<br/><see cref="CanvasRenderingContext2D.Stroke"/> calls will have no effect<br/>on it.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Use the <see cref="'CanvasRenderingContext2D.FillText'"/> method to<br/>fill the text characters rather than having just their outlines drawn.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text">Drawing text</see><br/>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.FillText"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/strokeText"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</CanvasRenderingContext2DStrokeText>
+</docs>

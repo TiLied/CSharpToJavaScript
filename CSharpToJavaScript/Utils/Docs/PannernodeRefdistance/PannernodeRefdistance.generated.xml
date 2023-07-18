@@ -1,0 +1,13 @@
+<docs>
+<PannerNodeRefDistance>
+<summary>
+The <c>refDistance</c> property of the <see cref="PannerNode"/> interface is a double value representing the reference distance for reducing volume as the audio source moves further from the listener – i.e. the distance at which the volume reduction starts taking effect. This value is used by all distance models.
+</summary>
+<remarks>
+<para>The <c>refDistance</c> property&amp;apos;s default value is <c>1</c>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics">Web Audio spatialization basics</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PannerNode/refDistance"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A non-negative number. If the value is set to less than 0, a <see cref="RangeError"/> is thrown.</value>
+</PannerNodeRefDistance>
+</docs>

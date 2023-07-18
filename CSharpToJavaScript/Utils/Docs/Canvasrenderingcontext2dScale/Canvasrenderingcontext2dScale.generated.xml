@@ -1,0 +1,13 @@
+<docs>
+<CanvasRenderingContext2DScale>
+<summary>
+The<br/><strong><c>CanvasRenderingContext2D.scale()</c></strong><br/>method of the Canvas 2D API adds a scaling transformation to the canvas units<br/>horizontally and/or vertically.
+</summary>
+<remarks>
+<para>By default, one unit on the canvas is exactly one pixel. A scaling transformation<br/>modifies this behavior. For instance, a scaling factor of 0.5 results in a unit size of<br/>0.5 pixels; shapes are thus drawn at half the normal size. Similarly, a scaling factor<br/>of 2.0 increases the unit size so that one unit becomes two pixels; shapes are thus<br/>drawn at twice the normal size.</para>
+<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/scale"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</CanvasRenderingContext2DScale>
+</docs>

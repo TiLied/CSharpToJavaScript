@@ -1,0 +1,13 @@
+<docs>
+<HTMLMediaElementCanPlayType>
+<summary>
+The <see cref="HTMLMediaElement"/> method <strong><c>canPlayType()</c></strong> reports how likely it is that the current browser will be able to play media of a given MIME type.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This feature is not available in <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">Web Workers</see>.</para></blockquote>
+<para>-<see cref="HTMLMediaElement"/>: Interface used to define the <c>HTMLMediaElement.canPlayType()</c> method<br/>-<see cref="MediaCapabilities"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Support_issues">Handling media support issues in web content</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats">Media type and format guide</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/codecs_parameter">Codecs in common media types</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/canPlayType"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A string indicating how likely it is that the media can be played.<br/>The string will be one of the following values:</returns>
+</HTMLMediaElementCanPlayType>
+</docs>

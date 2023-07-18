@@ -1,0 +1,11 @@
+<docs>
+<PresentationConnectionClose>
+<summary>
+When the <c>close()</c> method is called on a <see cref="PresentationConnection"/>, the {{Glossary("user agent")}} begins the process of closing the connection by sending an empty <c>closeMessage</c> with the <c>closeReason</c> set to <c>closed</c>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PresentationConnection/close"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</PresentationConnectionClose>
+</docs>

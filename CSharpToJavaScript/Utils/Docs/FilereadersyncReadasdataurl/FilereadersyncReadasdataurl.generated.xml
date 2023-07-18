@@ -1,0 +1,12 @@
+<docs>
+<FileReaderSyncReadAsDataURL>
+<summary>
+The <c>readAsDataURL()</c> method of the <see cref="FileReaderSync"/> interface allows to read <see cref="File"/> or <see cref="Blob"/> objects in a synchronous way into a string representing a data URL. This interface is <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers">only available</see> in <see href="https://developer.mozilla.org/en-US/docs/Web/API/Worker">workers</see> as it enables synchronous I/O that could potentially block.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</see><br/>-<see cref="File"/><br/>-<see cref="FileReaderSync"/><br/>-<see cref="FileReader"/><br/>-<see cref="Blob"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileReaderSync/readAsDataURL"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A string representing the input data as a data URL.</returns>
+</FileReaderSyncReadAsDataURL>
+</docs>

@@ -1,0 +1,13 @@
+<docs>
+<IdleDeadlineDidTimeout>
+<summary>
+The read-only <strong><c>didTimeout</c></strong> property on the<br/><strong><see cref="IdleDeadline"/></strong> interface is a Boolean value which<br/>indicates whether or not the idle callback is being invoked because the timeout interval<br/>specified when <see cref="Window.RequestIdleCallback"/> was called has expired.
+</summary>
+<remarks>
+<para>If <c>didTimeout</c> is <c>true</c>, the <c>IdleDeadline</c> object&amp;apos;s<br/><see cref="IdleDeadline.TimeRemaining"/> method will return<br/>approximately 0.</para><para>Idle callbacks support the concept of a timeout in order to ensure that whatever task<br/>they&amp;apos;re meant to perform actually happens, even if the user agent never has enough idle<br/>time available. Your callback will typically check the value of <c>didTimeout</c><br/>if it needs to perform an action even if the browser is too busy to grant you the time;<br/>you should react by performing the needed task or, ideally, a minimal amount of work<br/>that can be done to keep things moving along, then schedule a new callback to try again<br/>to get the rest of the work done.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Background_Tasks_API">Collaborative Scheduling of Background Tasks</see><br/>-<see cref="IdleDeadline"/><br/>-<see cref="Window.RequestIdleCallback"/><br/>-<see cref="Window.CancelIdleCallback"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IdleDeadline/didTimeout"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A Boolean which is <c>true</c> if the callback is running due to the callback&amp;apos;s<br/>timeout period elapsing or <c>false</c> if the callback is running because the<br/>user agent is idle and is offering time to the callback.</value>
+</IdleDeadlineDidTimeout>
+</docs>

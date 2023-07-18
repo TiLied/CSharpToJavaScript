@@ -1,0 +1,12 @@
+<docs>
+<CSSValueListLength>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>length</c></strong> read-only property of the<br/><see cref="CSSValueList"/> interface represents the number of <see cref="CSSValue"/>s<br/>in the list. The range of valid values of the indices is <c>0</c> to<br/><c>length-1</c> inclusive.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This property was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do<br/>not implement it.</para><para>To achieve your purpose, you can use:</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSValueList/length"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <c>unsigned long</c> representing the number of <see cref="CSSValue"/>s.</value>
+</CSSValueListLength>
+</docs>

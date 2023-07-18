@@ -1,0 +1,11 @@
+<docs>
+<PaymentRequestShippingOption>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>shippingOption</c></strong> read-only attribute of<br/>the <see cref="'PaymentRequest'"/> interface returns either the id of a selected shipping<br/>option, null (if no shipping option was set to be selected) or a shipping option<br/>selected by the user. It is initially <c>null</c> by when no &amp;quot;selected&amp;quot; shipping<br/>options are provided.
+</summary>
+<remarks>
+<para>This attribute is only populated if the constructor is called with the<br/><c>requestShipping</c> flag set to <c>true</c>. If<br/><c>requestShipping</c> was <c>false</c> (or missing),<br/><c>shippingOption</c> returns <c>null</c>, even the developer provides<br/>a selected a shipping option.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentRequest/shippingOption"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</PaymentRequestShippingOption>
+</docs>

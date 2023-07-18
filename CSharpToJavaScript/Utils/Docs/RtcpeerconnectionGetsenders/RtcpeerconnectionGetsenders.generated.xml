@@ -1,0 +1,12 @@
+<docs>
+<RTCPeerConnectionGetSenders>
+<summary>
+The <see cref="RTCPeerConnection"/> method<br/><strong><c>getSenders()</c></strong> returns an array of<br/><see cref="RTCRtpSender"/> objects, each of which represents the RTP sender<br/>responsible for transmitting one track&amp;apos;s data. A sender object provides methods<br/>and properties for examining and controlling the encoding and transmission of the<br/>track&amp;apos;s data.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/>-<see cref="RTCRtpSender"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/getSenders"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An array of <see cref="RTCRtpSender"/> objects, one for each track on the connection.<br/>The array is empty if there are no RTP senders on the connection.The order of the returned <c>RTCRtpSender</c>s is not defined by the<br/>specification, and may change from one call to <c>getSenders()</c> to the next.</returns>
+</RTCPeerConnectionGetSenders>
+</docs>

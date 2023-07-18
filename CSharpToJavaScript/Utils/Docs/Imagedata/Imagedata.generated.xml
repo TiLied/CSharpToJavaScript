@@ -1,0 +1,12 @@
+<docs>
+<ImageData>
+<summary>
+The <strong><c>ImageData</c></strong> interface represents the underlying pixel data of an area of a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas">canvas</see> element.
+</summary>
+<remarks>
+<para>It is created using the <see cref="ImageData.ImageData"/> constructor or creator methods on the <see cref="CanvasRenderingContext2D"/> object associated with a canvas: <see cref="CanvasRenderingContext2D.CreateImageData"/> and <see cref="CanvasRenderingContext2D.GetImageData"/>. It can also be used to set a part of the canvas by using <see cref="CanvasRenderingContext2D.PutImageData"/>.</para><para>AvailableInWorkers</para>
+<para>-<see cref="CanvasRenderingContext2D"/><br/>-The {{HTMLElement("canvas")}} element and its associated interface, <see cref="HTMLCanvasElement"/>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ImageData"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</ImageData>
+</docs>

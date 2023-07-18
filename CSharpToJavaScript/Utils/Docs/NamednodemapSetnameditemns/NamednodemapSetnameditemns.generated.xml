@@ -1,0 +1,12 @@
+<docs>
+<NamedNodeMapSetNamedItemNS>
+<summary>
+The <strong><c>setNamedItemNS()</c></strong> method of the <see cref="NamedNodeMap"/> interface<br/>puts the <see cref="Attr"/> identified by its name in the map.<br/>If there was already an <see cref="Attr"/> with the same name in the map,<br/>it is <strong>replaced</strong>.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This method is an alias of <c>setNamedItem()</c> you can use them<br/>interchangeably.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NamedNodeMap/setNamedItemNS"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Returns the old attribute if replaced, or <c>null</c> if the attribute is new.</returns>
+</NamedNodeMapSetNamedItemNS>
+</docs>

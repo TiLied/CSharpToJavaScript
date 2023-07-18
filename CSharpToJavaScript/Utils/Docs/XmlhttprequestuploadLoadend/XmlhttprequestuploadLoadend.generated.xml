@@ -1,0 +1,12 @@
+<docs>
+<XMLHttpRequestUploadLoadend_event>
+<summary>
+The <strong><c>loadend</c></strong> event is fired when a request has completed, whether successfully (after <see cref="XMLHttpRequestUpload/load_event"/>) or unsuccessfully (after <see cref="XMLHttpRequestUpload/abort_event"/> or <see cref="XMLHttpRequestUpload/error_event"/>).
+</summary>
+<remarks>
+<para>The <c>loadend</c> event is also sent when the request has been interrupted (by a <see cref="XMLHttpRequestUpload/timeout_event"/>, an <see cref="XMLHttpRequestUpload/abort_event"/>, or an <see cref="XMLHttpRequestUpload/error_event"/>). In such cases, both the <c>loaded</c> and <c>total</c> value of the event will be 0.</para>
+<para>-Related events: <see cref="XMLHttpRequestUpload/loadstart_event"/>, <see cref="XMLHttpRequestUpload/progress_event"/>, <see cref="XMLHttpRequestUpload/error_event"/>, <see cref="XMLHttpRequestUpload/load_event"/>, <see cref="XMLHttpRequestUpload/abort_event"/>, <see cref="XMLHttpRequestUpload/timeout_event"/><br/>-<see cref="XMLHttpRequestUpload"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequestUpload/loadend_event"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</XMLHttpRequestUploadLoadend_event>
+</docs>

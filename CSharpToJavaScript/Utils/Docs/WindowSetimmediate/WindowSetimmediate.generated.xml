@@ -1,0 +1,13 @@
+<docs>
+<WindowSetImmediate>
+<summary>
+This method is used to break up long running operations and run a callback function<br/>immediately after the browser has completed other operations such as events and display<br/>updates.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This method is not expected to become standard, and is nowadays only implemented<br/>by Node.js 0.10+. It meets resistance both from <see href="https://bugzil.la/686201">Gecko</see> (Firefox) and <see href="https://crbug.com/146172">Chromium/WebKit</see> (Chrome/Safari).</para></blockquote>
+<para>-<see href="https://github.com/zloirock/core-js#setimmediate">Polyfill of <c>setImmediate</c> in <c>core-js</c></see><br/>-<see href="https://jphpsf.github.io/setImmediate-shim-demo/">Microsoft <c>setImmediate</c> API Demo</see><br/>-<see cref="Window.ClearImmediate"/><br/>-<see cref="Window.RequestIdleCallback"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Window/setImmediate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>The ID of the immediate which can be used later with <see cref="Window.ClearImmediate"/>.</returns>
+</WindowSetImmediate>
+</docs>

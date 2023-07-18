@@ -1,0 +1,12 @@
+<docs>
+<HTMLElementBeforeinput_event>
+<summary>
+The DOM <strong><c>beforeinput</c></strong> event fires when the value of an {{HTMLElement("input")}}, or {{HTMLElement("textarea")}} element is about to be modified. The event also applies to elements with <see cref="HTMLElement.ContentEditable"/> enabled, and to any element when <see cref="Document.DesignMode"/> is turned on.
+</summary>
+<remarks>
+<para>This allows web apps to override text edit behavior before the browser modifies the DOM tree, and provides more control over input events to improve performance.</para><para>In the case of <c>contenteditable</c> and <c>designMode</c>, the event target is the <strong>editing host</strong>. If these properties apply to multiple elements, the editing host is the nearest ancestor element whose parent isn&amp;apos;t editable.</para>
+<para>-Related event: <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/input_event"><c>input</c></see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/beforeinput_event"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLElementBeforeinput_event>
+</docs>

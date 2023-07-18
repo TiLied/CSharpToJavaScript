@@ -1,0 +1,11 @@
+<docs>
+<RsaHashedImportParams>
+<summary>
+The <strong><c>RsaHashedImportParams</c></strong> dictionary of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API">Web Crypto API</see> represents the object that should be passed as the <c>algorithm</c> parameter into <see cref="SubtleCrypto.ImportKey"/> or <see cref="SubtleCrypto.UnwrapKey"/>, when importing any RSA-based key pair: that is, when the algorithm is identified as any of <see href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/sign#rsassa-pkcs1-v1_5">RSASSA-PKCS1-v1_5</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/sign#rsa-pss">RSA-PSS</see>, or <see href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/encrypt#rsa-oaep">RSA-OAEP</see>.
+</summary>
+<remarks>
+<para>-<see cref="SubtleCrypto.ImportKey"/>.<br/>-<see cref="SubtleCrypto.UnwrapKey"/>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RsaHashedImportParams"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RsaHashedImportParams>
+</docs>

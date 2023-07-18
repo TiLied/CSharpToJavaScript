@@ -1,0 +1,12 @@
+<docs>
+<KHR_parallel_shader_compile>
+<summary>
+The <strong><c>KHR_parallel_shader_compile</c></strong> extension is part of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> and enables a non-blocking poll operation, so that compile/link status availability (<c>COMPLETION_STATUS_KHR</c>) can be queried without potentially incurring stalls. In other words you can check the status of your shaders compiling without blocking the runtime.
+</summary>
+<remarks>
+<para>WebGL extensions are available using the <see cref="WebGLRenderingContext.GetExtension"/> method. For more information, see also <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Using_Extensions">Using Extensions</see> in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</see>.</para>
+<para>-<see cref="WebGLRenderingContext.GetExtension"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/KHR_parallel_shader_compile"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</KHR_parallel_shader_compile>
+</docs>

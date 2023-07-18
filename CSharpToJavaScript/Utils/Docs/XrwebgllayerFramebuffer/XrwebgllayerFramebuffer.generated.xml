@@ -1,0 +1,12 @@
+<docs>
+<XRWebGLLayerFramebuffer>
+<summary>
+The read-only <see cref="XRWebGLLayer"/> property<br/><strong><c>framebuffer</c></strong> is an opaque <see cref="WebGLFramebuffer"/><br/>which is used to buffer the rendered image if the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Fundamentals#the_webxr_compositor">XR compositor</see> is being used. Otherwise, this property&amp;apos;s value is<br/><c>null</c>. The opaque framebuffer is functionally nearly the same as a<br/>standard WebGL framebuffer, except for the differences covered in the section<br/><see href="https://developer.mozilla.org#how_opaque_framebuffers_are_special">How opaque framebuffers are special</see> below.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/framebuffer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="WebGLFramebuffer"/> object representing the framebuffer into which the 3D<br/>scene is being rendered, or <c>null</c> if the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Fundamentals#the_webxr_compositor">XR compositor</see> is disabled for the session.</value>
+</XRWebGLLayerFramebuffer>
+</docs>

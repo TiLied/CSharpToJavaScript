@@ -1,0 +1,12 @@
+<docs>
+<WindowBeforeinstallprompt_event>
+<summary>
+The <strong><c>beforeinstallprompt</c></strong> event fires when the browser has detected that a website can be <see href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable">installed as a Progressive Web App</see>.
+</summary>
+<remarks>
+<para>There&amp;apos;s no guaranteed time this event is fired, but it usually happens on page load.</para><para>The typical use for this event is when a web app wants to provide its own in-app UI inviting the user to install the app, rather than the generic one provided by the browser. This enables the app to provide more context about the app, explaining to the user why they might want to install it.</para><para>In this scenario, the handler for this event will:</para><para>When the user uses the in-app installation UI to install the app, the in-app installation UI calls the <see cref="BeforeInstallPromptEvent.Prompt"/> method of the retained <c>BeforeInstallPromptEvent</c> object to show the installation prompt.</para>
+<para>-<see cref="BeforeInstallPromptEvent.Prompt"/><br/>-<see cref="BeforeInstallPromptEvent"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Window/beforeinstallprompt_event"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WindowBeforeinstallprompt_event>
+</docs>

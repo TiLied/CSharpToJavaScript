@@ -1,0 +1,11 @@
+<docs>
+<RTCIceParametersUsernameFragment>
+<summary>
+The <strong><see cref="RTCIceParameters"/></strong> dictionary&amp;apos;s<br/><strong><c>usernameFragment</c></strong> property specifies the username fragment<br/>(&amp;quot;ufrag&amp;quot;) that uniquely identifies the corresponding ICE session for the duration of the<br/>current ICE session.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceParameters/usernameFragment"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing the username fragment that, in tandem with the<br/><see cref="RTCIceParameters.Password"/>, uniquely identify the ICE session<br/>being used by the transport. The string may be up to 256 characters long.See <see cref="RTCIceCandidate.UsernameFragment"/> to learn more about username<br/>fragments and their role in a connection.</value>
+</RTCIceParametersUsernameFragment>
+</docs>

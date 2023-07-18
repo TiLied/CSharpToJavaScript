@@ -1,0 +1,13 @@
+<docs>
+<HTMLElementTabIndex>
+<summary>
+The <strong><c>tabIndex</c></strong> property of the<br/><see cref="HTMLElement"/> interface represents the tab order of the current element.
+</summary>
+<remarks>
+<para>Tab order is as follows:</para><para>Elements that are disabled do not participate in the tabbing order.</para><para>Values don&amp;apos;t need to be sequential, nor must they begin with any particular value. They<br/>may even be negative, though each browser trims very large values.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets">Accessibility of keyboard-navigable JavaScript widgets</see><br/>-The HTML<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex"><c>tabindex</c></see><br/>global attribute.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/tabIndex"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer.</value>
+</HTMLElementTabIndex>
+</docs>

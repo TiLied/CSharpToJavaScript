@@ -1,0 +1,12 @@
+<docs>
+<IDBTransactionError_event>
+<summary>
+The <c>error</c> event is fired on <c>IDBTransaction</c> when a request returns an error and the event bubbles up to the transaction object.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> To handle all the ways a transaction can fail, consider listening for the <see cref="IDBTransaction.Abort_event"/> event instead.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction/error_event"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</IDBTransactionError_event>
+</docs>

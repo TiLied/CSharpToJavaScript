@@ -1,0 +1,12 @@
+<docs>
+<DataTransferTypes>
+<summary>
+The <strong><c>DataTransfer.types</c></strong> read-only property returns the available types<br/>that exist in the <see cref="DataTransfer.Items"/>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API">Drag and drop</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations">Drag Operations</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types">Recommended Drag Types</see><br/>-<see href="https://codepen.io/tech_query/pen/MqGgap">DataTransfer test - Paste or Drag</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/types"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An array of the data formats used in the drag operation. Each format is a string<br/>which is generally a MIME type such as <c>text/plain</c> or <c>text/html</c>. If the drag<br/>operation included no data, this list will be empty. If any files are included in<br/>the drag operation, then one of the types will be the string <c>Files</c>.</value>
+</DataTransferTypes>
+</docs>

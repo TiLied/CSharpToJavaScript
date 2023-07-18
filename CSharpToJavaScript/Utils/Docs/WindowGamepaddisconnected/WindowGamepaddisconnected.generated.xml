@@ -1,0 +1,12 @@
+<docs>
+<WindowGamepaddisconnected_event>
+<summary>
+The <c>gamepaddisconnected</c> event is fired when the browser detects that a gamepad has been disconnected.
+</summary>
+<remarks>
+<para>The event will not fire if disallowed by the document's <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/'Permissions-Policy/gamepad'">'Permissions-Policy/gamepad'</see> <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Permissions_Policy">Permissions Policy</see>.</para><para>This event is not cancelable and does not bubble.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Window/gamepadconnected_event">gamepadconnected</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API">Using Gamepad API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Window/gamepaddisconnected_event"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WindowGamepaddisconnected_event>
+</docs>

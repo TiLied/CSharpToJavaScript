@@ -1,0 +1,13 @@
+<docs>
+<RTCDataChannelBufferedAmount>
+<summary>
+The read-only <c>RTCDataChannel</c> property<br/><strong><c>bufferedAmount</c></strong> returns the number of bytes of data<br/>currently queued to be sent over the data channel. The queue may build up as a<br/>result of calls to the <see cref="RTCDataChannel.Send"/> method. This only<br/>includes data buffered by the user agent itself; it doesn&amp;apos;t include any framing overhead<br/>or buffering done by the operating system or network hardware.
+</summary>
+<remarks>
+<para>The user agent may implement the process of actually sending data in any way it<br/>chooses; this may be done periodically during the event loop or truly asynchronously. As<br/>messages are actually sent, this value is reduced accordingly.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Closing the data channel doesn&amp;apos;t reset this count, even though the user agent purges<br/>the queued messages. However, even after closing the channel, attempts to send<br/>messages continue to add to the <c>bufferedAmount</c> value, even though the<br/>messages are neither sent nor buffered.</para></blockquote><para>Whenever this value decreases to fall to or below the value specified in the<br/><see cref="RTCDataChannel.BufferedAmountLowThreshold"/><br/>property, the user agent fires the <see cref="RTCDataChannel.Bufferedamountlow_event"/> event. This event may<br/>be used, for example, to implement code which queues more messages to be sent whenever<br/>there&amp;apos;s room to buffer them.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_data_channels">Using WebRTC data channels</see><br/>-<see cref="RTCDataChannel"/><br/>-<see cref="RTCDataChannel.BufferedAmountLowThreshold"/><br/>-<see cref="RTCDataChannel.Bufferedamountlow_event"/> event<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/bufferedAmount"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The number of bytes of data currently queued to be sent over the data channel but have<br/>not yet been sent.</value>
+</RTCDataChannelBufferedAmount>
+</docs>

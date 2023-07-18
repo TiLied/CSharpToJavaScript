@@ -1,0 +1,12 @@
+<docs>
+<TextDecoder>
+<summary>
+The <strong><c>TextDecoder</c></strong> interface represents a decoder for a specific text encoding, such as <c>UTF-8</c>, <c>ISO-8859-2</c>, <c>KOI8-R</c>, <c>GBK</c>, etc. A decoder takes a stream of bytes as input and emits a stream of code points.
+</summary>
+<remarks>
+<para>AvailableInWorkers</para>
+<para>-The <see cref="TextEncoder"/> interface describing the inverse operation.<br/>-A <see href="https://github.com/inexorabletash/text-encoding">shim</see> allowing to use this interface in browsers that do not support it.<br/>-<see href="https://nodejs.org/api/util.html#util_class_util_textdecoder">Node.js supports global export from v11.0.0</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</TextDecoder>
+</docs>

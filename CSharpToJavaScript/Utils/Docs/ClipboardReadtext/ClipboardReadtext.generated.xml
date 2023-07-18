@@ -1,0 +1,12 @@
+<docs>
+<ClipboardReadText>
+<summary>
+The <strong><see cref="Clipboard"/></strong> interface&amp;apos;s<br/><strong><c>readText()</c></strong> method returns a <see cref="Promise"/> which<br/>resolves with a copy of the textual contents of the system clipboard.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API">Clipboard API</see><br/>-<see href="https://async-clipboard-api.glitch.me/">Async Clipboard API demo on Glitch</see><br/>-<see href="https://web.dev/async-clipboard/">Image support for Async Clipboard article</see><br/>-<see cref="Clipboard.WriteText"/><br/>-<see cref="Clipboard.Write"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/readText"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves with a string containing the<br/>textual contents of the clipboard. Returns an empty string if the clipboard is empty,<br/>does not contain text, or does not include a textual representation among the<br/><see cref="DataTransfer"/> objects representing the clipboard's contents.To read non-text contents from the clipboard, use the {{domxref(&amp;quot;Clipboard.read&amp;quot;,<br/>&amp;quot;read()&amp;quot;)}} method instead. You can write text to the clipboard using<br/><see cref="Clipboard.WriteText"/>.</returns>
+</ClipboardReadText>
+</docs>

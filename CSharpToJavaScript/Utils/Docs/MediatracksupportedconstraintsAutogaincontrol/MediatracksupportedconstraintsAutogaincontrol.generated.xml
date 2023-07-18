@@ -1,0 +1,13 @@
+<docs>
+<MediaTrackSupportedConstraintsAutoGainControl>
+<summary>
+The <see cref="MediaTrackSupportedConstraints"/> dictionary's <strong><c>autoGainControl</c></strong> property is a read-only Boolean value which is present (and set to <c>true</c>) in the object returned by <see cref="MediaDevices.GetSupportedConstraints"/> if and only if the {{Glossary("user agent")}} supports the <strong><c>autoGainControl</c></strong> constraint.<br/>If the constraint isn&amp;apos;t supported, it&amp;apos;s not included in the list, so this value will never be <c>false</c>.
+</summary>
+<remarks>
+<para>You can access the supported constraints dictionary by calling <c>navigator.mediaDevices.getSupportedConstraints()</c>.</para><para>The <c>autoGainControl</c> constraint indicates whether or not the browser offers the ability to automatically control the gain (volume) on media tracks; this obviously is contingent on whether or not the individual device supports automatic gain control as well; it&amp;apos;s typically a feature provided by microphones.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API">Media Capture and Streams API</see><br/>-<see cref="MediaDevices.GetSupportedConstraints"/><br/>-<see cref="MediaTrackSupportedConstraints"/><br/>-<see cref="MediaStreamTrack"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/autoGainControl"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>This property is present in the dictionary (and its value is always <c>true</c>) if the user agent supports the <c>autoGainControl</c> constraint.<br/>If the property isn't present, this property is missing from the supported constraints dictionary, and you'll get <see cref="Undefined"/> if you try to look at its value.</value>
+</MediaTrackSupportedConstraintsAutoGainControl>
+</docs>

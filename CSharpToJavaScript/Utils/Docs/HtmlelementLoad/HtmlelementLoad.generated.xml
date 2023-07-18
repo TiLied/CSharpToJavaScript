@@ -1,0 +1,12 @@
+<docs>
+<HTMLElementLoad_event>
+<summary>
+The <strong><c>load</c></strong> event fires for elements containing a resource when the resource has successfully loaded. Currently, the list of supported HTML elements are: <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body">body</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/embed">embed</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">img</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link">link</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object">object</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">script</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style">style</see>, and<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track">track</see>.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> The <c>load</c> event on <see cref="HTMLBodyElement#event_handlers"/> is actually an alias for the <see cref="Window/load_event"/> event. Therefore, the <c>load</c> event will only fire on the <c>&amp;lt;body&amp;gt;</c> element once all of the document&amp;apos;s resources have loaded or errored. However, for the sake of clarity, it is recommended that the event handler is attached to the <c>window</c> object directly rather than on <c>HTMLBodyElement</c>.</para></blockquote><para>This event is not cancelable and does not bubble.</para>
+<para>-Related events-Window: <see cref="Window/load_event"/> event<br/>-Window: <see cref="Window/error_event"/> event<br/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/load_event"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLElementLoad_event>
+</docs>

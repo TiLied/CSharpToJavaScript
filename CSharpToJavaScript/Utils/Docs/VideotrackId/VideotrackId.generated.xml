@@ -1,0 +1,12 @@
+<docs>
+<VideoTrackId>
+<summary>
+The <strong><c>id</c></strong> property contains a<br/>string which uniquely identifies the track represented by the<br/><strong><see cref="VideoTrack"/></strong>.
+</summary>
+<remarks>
+<para>This ID can be used with the<br/><see cref="VideoTrackList.GetTrackById"/> method to locate a specific track within<br/>the media associated with a media element.</para><para>The track ID can also be used as the fragment of a URL that loads the specific track<br/>(if the media supports media fragments).</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoTrack/id"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string which identifies the track, suitable for use when calling<br/><see cref="VideoTrackList.GetTrackById"/> on an<br/><see cref="VideoTrackList"/> such as the one specified by a media element's<br/><see cref="HTMLMediaElement.VideoTracks"/> property.</value>
+</VideoTrackId>
+</docs>

@@ -1,0 +1,11 @@
+<docs>
+<WritableStreamAbort>
+<summary>
+The <strong><c>abort()</c></strong> method of the <see cref="WritableStream"/> interface aborts the stream, signaling that the producer can no longer successfully write to the stream and it is to be immediately moved to an error state, with any queued writes discarded.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WritableStream/abort"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/>, which fulfills with the value given in the <c>reason</c> parameter.</returns>
+</WritableStreamAbort>
+</docs>

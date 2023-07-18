@@ -1,0 +1,12 @@
+<docs>
+<ElementTransitionend_event>
+<summary>
+The <strong><c>transitionend</c></strong> event is fired when a <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">CSS transition</see> has completed. In the case where a transition is removed before completion, such as if the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-property">transition-property</see> is removed or <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/display">display</see> is set to <c>none</c>, then the event will not be generated.
+</summary>
+<remarks>
+<para>The <c>transitionend</c> event is fired in both directions - as it finishes transitioning to the transitioned state, and when it fully reverts to the default or non-transitioned state. If there is no transition delay or duration, if both are 0s or neither is declared, there is no transition, and none of the transition events are fired. If the <c>transitioncancel</c> event is fired, the <c>transitionend</c> event will not fire.</para><para>This event is not cancelable.</para>
+<para>-The <see cref="TransitionEvent"/> interface<br/>-CSS properties: <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition">transition</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-delay">transition-delay</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-duration">transition-duration</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-property">transition-property</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function">transition-timing-function</see><br/>-Related events: <see cref="Element/transitionrun_event"/>, <see cref="Element/transitionstart_event"/>, <see cref="Element/transitioncancel_event"/><br/>-This event on <see cref="Document"/> targets: <see cref="Document/transitionend_event"/><br/>-This event on <see cref="Window"/> targets: <see cref="Window/transitionend_event"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/transitionend_event"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</ElementTransitionend_event>
+</docs>

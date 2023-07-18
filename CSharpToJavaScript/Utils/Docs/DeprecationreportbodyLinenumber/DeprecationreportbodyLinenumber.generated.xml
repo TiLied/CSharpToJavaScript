@@ -1,0 +1,12 @@
+<docs>
+<DeprecationReportBodyLineNumber>
+<summary>
+The <strong><c>lineNumber</c></strong> read-only property of the <see cref="DeprecationReportBody"/> interface returns the line in the source file in which the deprecated feature was used.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This property is most useful alongside <see cref="DeprecationReportBody.SourceFile"/> as it enables the location of the line in that file where the error occurred.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DeprecationReportBody/lineNumber"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer, or <c>null</c> if the line is not known.</value>
+</DeprecationReportBodyLineNumber>
+</docs>

@@ -1,0 +1,13 @@
+<docs>
+<XRCompositionLayerLayout>
+<summary>
+The read-only <strong><c>layout</c></strong> property of the <see cref="XRCompositionLayer"/> interface is the layout type of the layer.
+</summary>
+<remarks>
+<para>To specify the layout type of a layer, use one of the layer creation methods and their <c>layout</c> option:</para>
+<para>-<see cref="XRSubImage"/><br/>-<see cref="XRWebGLBinding.CreateQuadLayer"/><br/>-<see cref="XRWebGLBinding.CreateCylinderLayer"/><br/>-<see cref="XRWebGLBinding.CreateEquirectLayer"/><br/>-<see cref="XRWebGLBinding.CreateCubeLayer"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRCompositionLayer/layout"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string. Possible values:</value>
+</XRCompositionLayerLayout>
+</docs>

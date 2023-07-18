@@ -1,0 +1,13 @@
+<docs>
+<GamepadPoseOrientation>
+<summary>
+The <strong><c>orientation</c></strong> read-only property of the <see cref="GamepadPose"/> interface returns the orientation of the <see cref="Gamepad"/>, as a quarternion value.
+</summary>
+<remarks>
+<para>The value is a <see cref="Float32Array"/>, made up of the following values:</para><para>The orientation yaw (rotation around the y axis) is relative to the initial yaw of the sensor when it was first read.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API">WebVR API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API">Gamepad API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GamepadPose/orientation"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Float32Array"/>, or <c>null</c> if the VR sensor is not able to provide orientation data.</value>
+</GamepadPoseOrientation>
+</docs>

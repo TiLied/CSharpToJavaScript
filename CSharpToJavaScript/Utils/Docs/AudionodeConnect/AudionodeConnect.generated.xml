@@ -1,0 +1,12 @@
+<docs>
+<AudioNodeConnect>
+<summary>
+The <c>connect()</c> method of the <see cref="AudioNode"/> interface lets<br/>you connect one of the node&amp;apos;s outputs to a target, which may be either another<br/><c>AudioNode</c> (thereby directing the sound data to the specified node) or an<br/><see cref="AudioParam"/>, so that the node's output data is automatically used to<br/>change the value of that parameter over time.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioNode/connect"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>If the destination is a node, <c>connect()</c> returns a reference to the<br/>destination <see cref="AudioNode"/> object, allowing you to chain multiple<br/><c>connect()</c> calls. In some browsers, older implementations of this interface<br/>return <see cref="Undefined"/>.If the destination is an <c>AudioParam</c>, <c>connect()</c> returns<br/><c>undefined</c>.</returns>
+</AudioNodeConnect>
+</docs>

@@ -1,0 +1,13 @@
+<docs>
+<HistoryForward>
+<summary>
+The <strong><c>History.forward()</c></strong> method causes the browser to move<br/>forward one page in the session history. It has the same effect as calling<br/><see cref="History.Go"/>.
+</summary>
+<remarks>
+<para>This method is {{glossary("asynchronous")}}. Add a listener for the <see cref="Window/popstate_event"/> event in order to determine when the navigation has completed.</para>
+<para>-<see cref="History"/><br/>-<see cref="Window/popstate_event"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/History_API/Working_with_the_History_API">Working with the History API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/History/forward"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</HistoryForward>
+</docs>

@@ -1,12 +1,12 @@
 <docs>
-<HTMLFormElementSubmit_event>
+<HTMLFormElementSubmit>
 <summary>
-The <strong><c>submit</c></strong> event fires when a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see> is submitted.
+The <strong><c>HTMLFormElement.submit()</c></strong> method submits a given<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see>.
 </summary>
 <remarks>
-<para>Note that the <c>submit</c> event fires on the <c>&amp;lt;form&amp;gt;</c> element itself, and not on any <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button">button</see> or {{HtmlElement('input/submit', '&amp;lt;input type=&amp;quot;submit&amp;quot;&amp;gt;')}} inside it. However, the <see cref="SubmitEvent"/> which is sent to indicate the form's submit action has been triggered includes a <see cref="SubmitEvent.Submitter"/> property, which is the button that was invoked to trigger the submit request.</para><para>The <c>submit</c> event fires when the user clicks a <see href="https://developer.mozilla.org/en-US/docs/Glossary/submit button">submit button</see> or presses &amp;lt;kbd&amp;gt;Enter&amp;lt;/kbd&amp;gt; while editing a field (e.g. {{HtmlElement(&amp;apos;input/text&amp;apos;, &amp;apos;&amp;lt;input type=&amp;quot;text&amp;quot;&amp;gt;')}}) in a form. The event is not sent to the form when calling the <see cref="HTMLFormElement.Submit"/> method directly.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Trying to submit a form that does not pass <see href="https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation">validation</see> triggers an <see cref="HTMLInputElement/invalid_event"/> event. In this case, the validation prevents form submission, and thus there is no <c>submit</c> event.</para></blockquote>
-<para>-HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see> element<br/>-Related event: <see cref="HTMLInputElement/invalid_event"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/submit_event"> <em>See also on MDN</em> </seealso></para>
+<para>This method is similar, but not identical to, activating a form&amp;apos;s submit<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button">button</see>. When invoking this method directly, however:</para><para>The <see cref="HTMLFormElement.RequestSubmit"/> method is identical to activating a<br/>form's submit <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button">button</see> and does not have these differences.</para><para>A form control (such as a submit button) with a <c>name</c> or <c>id</c> of <c>submit</c> will mask the form&amp;apos;s <c>submit</c> method. Trying to call <c>myForm.submit();</c> throws an error &amp;quot;submit is not a function&amp;quot; because in this case <c>submit</c> refers to the form control which has a <c>name</c> or <c>id</c> of <c>submit</c>.</para><para><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">input</see> with attribute type="submit" will not be submitted with the<br/>form when using <strong><c>HTMLFormElement.submit()</c></strong>, but it would be<br/>submitted when you do it with original HTML form submit.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/submit"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-</HTMLFormElementSubmit_event>
+<returns>None (<see cref="Undefined"/>).</returns>
+</HTMLFormElementSubmit>
 </docs>

@@ -1,12 +1,13 @@
 <docs>
-<RTCPeerConnectionAddstream_event>
+<RTCPeerConnectionAddStream>
 <summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The obsolete <strong><c>addstream</c></strong> event is sent to an <see cref="RTCPeerConnection"/> when new media, in the form of a <see cref="MediaStream"/> object, has been added to it.
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong>obsolete</strong> <see cref="RTCPeerConnection"/> method<br/><strong><c>addStream()</c></strong> adds a <see cref="MediaStream"/> as a local<br/>source of audio or video. Instead of using this obsolete method, you should instead use<br/><see cref="RTCPeerConnection.AddTrack"/> once for each track you wish to<br/>send to the remote peer.
 </summary>
 <remarks>
-<blockquote class="WARNING"><h5>WARNING</h5><para><strong>Warning:</strong> This event has been removed from the WebRTC specification. You should instead watch for the <see cref="RTCPeerConnection.Track_event"/> event, which is sent for each media track added to the <c>RTCPeerConnection</c>.</para></blockquote><para>You can, similarly, watch for streams to be removed from the connection by monitoring the <see cref="RTCPeerConnection.Removestream_event"/> event.</para><para>This event is not cancelable and does not bubble.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see cref="RTCPeerConnection.AddStream"/><br/>-<see cref="MediaStreamEvent"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/addstream_event"> <em>See also on MDN</em> </seealso></para>
+<para>If the <see cref="RTCPeerConnection.SignalingState"/> is set to<br/><c>closed</c>, an <c>InvalidStateError</c> is raised. If the<br/><see cref="RTCPeerConnection.SignalingState"/> is set to<br/><c>stable</c>, the event <see cref="RTCPeerConnection/negotiationneeded_event"/> is sent on the<br/><see cref="RTCPeerConnection"/> to indicate that {{Glossary("ICE")}} negotiation must<br/>be repeated to consider the new stream.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/addStream"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-</RTCPeerConnectionAddstream_event>
+<returns>None.</returns>
+</RTCPeerConnectionAddStream>
 </docs>

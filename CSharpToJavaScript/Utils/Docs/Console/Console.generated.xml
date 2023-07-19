@@ -1,12 +1,12 @@
 <docs>
-<Console_API>
+<Console>
 <summary>
-The Console API provides functionality to allow developers to perform debugging tasks, such as logging messages or the values of variables at set points in your code, or timing how long an operation takes to complete.
+The <strong><c>console</c></strong> object provides access to the browser&amp;apos;s<br/>debugging console (e.g. the <see href="https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html">Web console</see> in Firefox).<br/>The specifics of how it works varies from browser to browser, but there is a <strong>de facto</strong><br/>set of features that are typically provided.
 </summary>
 <remarks>
-<para>AvailableInWorkers</para>
-<para>-<see href="https://firefox-source-docs.mozilla.org/devtools-user/index.html">Tools</see><br/>-<see href="https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html">Web Console</see> — how the Web Console in Firefox handles console API calls<br/>-<see href="https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html">about:debugging</see> — how to see console output when the debugging target is a mobile device<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Console_API"> <em>See also on MDN</em> </seealso></para>
+<para>The <c>console</c> object can be accessed from any global object. <see cref="Window"/> on<br/>browsing scopes and <see cref="WorkerGlobalScope"/> as specific variants in workers via the<br/>property console. It's exposed as <see cref="Window.Console"/>, and can be referenced as<br/><c>console</c>. For example:</para><para>This page documents the <see href="https://developer.mozilla.org#methods">Methods</see> available on the <c>console</c> object and<br/>gives a few <see href="https://developer.mozilla.org#usage">Usage</see> examples.</para><para>AvailableInWorkers</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Certain online IDEs and editors may implement the console API differently than the browsers. As a result, certain functionality of the console API, such as the timer methods, may not be outputted in the console of online IDEs or editors. Always open your browser&amp;apos;s DevTools console to see the logs as shown in this documentation.</para></blockquote>
+<para>-<see href="https://firefox-source-docs.mozilla.org/devtools-user/index.html">Firefox Developer Tools</see><br/>-<see href="https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html">Web console</see> — how the Web console in Firefox handles console API calls<br/>-<see href="https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html">about:debugging</see> — how to see console output when the debugging target is a mobile device<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/console"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-</Console_API>
+</Console>
 </docs>

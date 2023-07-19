@@ -1,12 +1,12 @@
 <docs>
-<HTMLDialogElementClose_event>
+<HTMLDialogElementClose>
 <summary>
-The <c>close</c> event is fired on an <c>HTMLDialogElement</c> object when the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog">dialog</see> it represents has been closed.
+The <strong><c>close()</c></strong> method of the <see cref="HTMLDialogElement"/> interface closes the {{htmlelement("dialog")}}.<br/>An optional string may be passed as an argument, updating the <c>returnValue</c> of the dialog.
 </summary>
 <remarks>
-<para>This event is not cancelable and does not bubble.</para>
-<para>-HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog"><c>&amp;lt;dialog&amp;gt;</c></see> element<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement/close_event"> <em>See also on MDN</em> </seealso></para>
+<para>-The HTML element implementing this interface: <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog">dialog</see>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement/close"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-</HTMLDialogElementClose_event>
+<returns>None (<see cref="Undefined"/>).</returns>
+</HTMLDialogElementClose>
 </docs>

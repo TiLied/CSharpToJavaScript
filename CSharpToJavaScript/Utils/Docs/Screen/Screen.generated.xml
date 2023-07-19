@@ -1,11 +1,11 @@
 <docs>
-<Screen_Wake_Lock_API>
+<Screen>
 <summary>
-The Screen Wake Lock API provides a way to prevent devices from dimming or locking the screen when an application needs to keep running.
+The <c>Screen</c> interface represents a screen, usually the one on which the current window is being rendered, and is obtained using <see cref="Window.Screen"/>.
 </summary>
 <remarks>
-<para>-<see href="https://web.dev/wake-lock/">An introductory article on the Screen Wake Lock API</see><br/>-<see href="https://wake-lock-demo.glitch.me/">A Screen Wake Lock API demo on glitch</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Screen_Wake_Lock_API"> <em>See also on MDN</em> </seealso></para>
+<para>Note that browsers determine which screen to report as current by detecting which screen has the center of the browser window.</para><para></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Screen"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-</Screen_Wake_Lock_API>
+</Screen>
 </docs>

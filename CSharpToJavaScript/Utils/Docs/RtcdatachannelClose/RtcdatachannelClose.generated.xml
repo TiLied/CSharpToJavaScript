@@ -1,12 +1,13 @@
 <docs>
-<RTCDataChannelClose_event>
+<RTCDataChannelClose>
 <summary>
-The <strong><c>close</c></strong> event is sent to the <see cref="RTCDataChannel.Close_event"/> event handler on an <see cref="RTCDataChannel"/> instance when the data transport for the data channel has closed. Before any further data can be transferred using <c>RTCDataChannel</c>, a new &amp;apos;RTCDataChannel&amp;apos; instance must be created.
+The <strong><c>RTCDataChannel.close()</c></strong> method closes the<br/><see cref="RTCDataChannel"/>. Either peer is permitted to call this method to initiate<br/>closure of the channel.
 </summary>
 <remarks>
-<para>This event is not cancelable and does not bubble.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample">A simple RTCDataChannel example</see><br/>-Related events: <see cref="RTCDataChannel.Open_event"/>, <see cref="RTCDataChannel.Message_event"/>, and <see cref="RTCDataChannel.Error_event"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/close_event"> <em>See also on MDN</em> </seealso></para>
+<para>Closure of the data channel is not instantaneous. Most of the process of closing the<br/>connection is handled asynchronously; you can detect when the channel has finished<br/>closing by watching for a <see cref="RTCDataChannel.Close_event"/> event on the data channel.</para><para>The sequence of events which occurs in response to this method being called:</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/>-<see cref="RTCDataChannel"/><br/>-<see cref="RTCDataChannel.ReadyState"/><br/>-<see cref="RTCDataChannel.Close_event"/> event<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/close"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-</RTCDataChannelClose_event>
+<returns>None (<see cref="Undefined"/>).<c>undefined</c>.</returns>
+</RTCDataChannelClose>
 </docs>

@@ -1,11 +1,12 @@
 <docs>
-<Touch_eventsUsing_Touch_Events>
+<Touch>
 <summary>
-Today, most Web content is designed for keyboard and mouse input. However, devices with touch screens (especially portable devices) are mainstream and Web applications can either directly process touch-based input by using <see cref="Touch_events"/> or the application can use <strong>interpreted mouse events</strong> for the application input. A disadvantage to using mouse events is that they do not support concurrent user input, whereas touch events support multiple simultaneous inputs (possibly at different locations on the touch surface), thus enhancing user experiences.
+The <strong><c>Touch</c></strong> interface represents a single contact point on a touch-sensitive device. The contact point is commonly a finger or stylus and the device may be a touchscreen or trackpad.
 </summary>
 <remarks>
-<para>The touch events interfaces support application specific single and multi-touch interactions such as a two-finger gesture. A multi-touch interaction starts when a finger (or stylus) first touches the contact surface. Other fingers may subsequently touch the surface and optionally move across the touch surface. The interaction ends when the fingers are removed from the surface. During this interaction, an application receives touch events during the start, move, and end phases. The application may apply its own semantics to the touch inputs.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Touch_events/Using_Touch_Events"> <em>See also on MDN</em> </seealso></para>
+<para>The <see cref="Touch.RadiusX"/>, <see cref="Touch.RadiusY"/>, and <see cref="Touch.RotationAngle"/> describe the area of contact between the user and the screen, the <strong>touch area</strong>. This can be helpful when dealing with imprecise pointing devices such as fingers. These values are set to describe an ellipse that as closely as possible matches the entire area of contact (such as the user's fingertip). {{experimental_inline}}</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Many of the properties&amp;apos; values are hardware-dependent; for example, if the device doesn&amp;apos;t have a way to detect the amount of pressure placed on the surface, the <c>force</c> value will always be 0. This may also be the case for <c>radiusX</c> and <c>radiusY</c>; if the hardware reports only a single point, these values will be 1.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Touch_events">Touch events</see><br/>-<see cref="Document.CreateTouch"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Touch"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-</Touch_eventsUsing_Touch_Events>
+</Touch>
 </docs>

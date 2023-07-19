@@ -1,11 +1,12 @@
 <docs>
-<URL_Pattern_API>
+<URL>
 <summary>
-The URL Pattern API defines a syntax that is used to create URL pattern<br/>matchers. These patterns can be matched against URLs or individual URL<br/>components. The URL Pattern API is used by the <see cref="URLPattern"/><br/>interface.
+The <strong><c>URL</c></strong> interface is used to parse, construct, normalize, and encode <see href="https://developer.mozilla.org/en-US/docs/Glossary/URL">URL</see>. It works by providing properties which allow you to easily read and modify the components of a URL.
 </summary>
 <remarks>
-<para>-A polyfill of <c>URLPattern</c> is available<br/><see href="https://github.com/kenchris/urlpattern-polyfill">on GitHub</see><br/>-The pattern syntax used by URLPattern is similar to the syntax used by<br/><see href="https://github.com/pillarjs/path-to-regexp">path-to-regexp</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URL_Pattern_API"> <em>See also on MDN</em> </seealso></para>
+<para>You normally create a new <c>URL</c> object by specifying the URL as a string when calling its constructor, or by providing a relative URL and a base URL. You can then easily read the parsed components of the URL or make changes to the URL.</para><para>If a browser doesn't yet support the <see cref="URL.URL"/> constructor, you can access a URL object using the <see cref="Window"/> interface's <see cref="URL"/> property. Be sure to check to see if any of your target browsers require this to be prefixed.</para><para>AvailableInWorkers</para>
+<para>-<see href="https://github.com/zloirock/core-js#url-and-urlsearchparams">Polyfill of <c>URL</c> in <c>core-js</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/URL_API">URL API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL">What is a URL?</see><br/>-Property to obtain a <c>URL</c> object: <see cref="URL"/>.<br/>-<see cref="URLSearchParams"/>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URL"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-</URL_Pattern_API>
+</URL>
 </docs>

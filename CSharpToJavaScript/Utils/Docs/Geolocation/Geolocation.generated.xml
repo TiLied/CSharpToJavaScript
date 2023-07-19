@@ -1,10 +1,12 @@
 <docs>
-<Geolocation_APIUsing_the_Geolocation_API>
+<Geolocation>
 <summary>
-The Geolocation API is used to retrieve the user&amp;apos;s location, so that it can for example be used to display their position using a mapping API. This article explains the basics of how to use it.
+The <strong><c>Geolocation</c></strong> interface represents an object able to obtain the position of the device programmatically. It gives Web content access to the location of the device. This allows a website or app to offer customized results based on the user&amp;apos;s location.
 </summary>
 <remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API"> <em>See also on MDN</em> </seealso></para>
+<para>An object with this interface is obtained using the <see cref="Navigator.Geolocation"/> property implemented by the <see cref="Navigator"/> object.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> For security reasons, when a web page tries to access location information, the user is notified and asked to grant permission. Be aware that each browser has its own policies and methods for requesting this permission.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API">Using geolocation</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-</Geolocation_APIUsing_the_Geolocation_API>
+</Geolocation>
 </docs>

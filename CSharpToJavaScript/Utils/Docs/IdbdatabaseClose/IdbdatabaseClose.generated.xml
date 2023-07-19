@@ -1,12 +1,13 @@
 <docs>
-<IDBDatabaseClose_event>
+<IDBDatabaseClose>
 <summary>
-The <c>close</c> event is fired on <c>IDBDatabase</c> when the database connection is unexpectedly closed. This could happen, for example, if the underlying storage is removed or if the user clears the database in the browser&amp;apos;s history preferences.
+The <strong><c>close()</c></strong> method of the <see cref="IDBDatabase"/><br/>interface returns immediately and closes the connection in a separate thread.
 </summary>
 <remarks>
-<para>Note that it is not fired if the database connection is closed normally using <see href="https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/close"><c>IDBDatabase.close()</c></see>.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/close_event"> <em>See also on MDN</em> </seealso></para>
+<para>The connection is not actually closed until all transactions created using this<br/>connection are complete. No new transactions can be created for this connection once<br/>this method is called. Methods that create transactions throw an exception if a closing<br/>operation is pending.</para><para>AvailableInWorkers</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase"/><br/>-Using transactions: <see cref="IDBTransaction"/><br/>-Setting a range of keys: <see cref="IDBKeyRange"/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore"/><br/>-Using cursors: <see cref="IDBCursor"/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/close"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-</IDBDatabaseClose_event>
+<returns>None (<see cref="Undefined"/>).</returns>
+</IDBDatabaseClose>
 </docs>

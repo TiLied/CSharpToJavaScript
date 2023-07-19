@@ -1,12 +1,12 @@
 <docs>
-<Storage_APIStorage_quotas_and_eviction_criteria>
+<Storage>
 <summary>
-Web developers can use a number of technologies to store data in the user&amp;apos;s browser (i.e., on the local disk of the device the user is using to view the website).
+The <strong><c>Storage</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API">Web Storage API</see> provides access to a particular domain&amp;apos;s session or local storage. It allows, for example, the addition, modification, or deletion of stored data items.
 </summary>
 <remarks>
-<para>The amount of data browsers allow websites to store and the mechanisms they use to delete data when that limit is reached differs between browsers.</para><para>This article describes the web technologies that can be used to store data, the quotas that browsers have in place to limit websites from storing too much data, and the mechanisms they use to delete data when needed.</para>
-<para>-<see href="https://web.dev/storage-for-the-web/">Storage for the web on web.dev</see><br/>-<see href="https://web.dev/persistent-storage/">Persistent storage on web.dev</see><br/>-<see href="https://docs.google.com/document/d/19QemRTdIxYaJ4gkHYf2WWBNPbpuZQDNMpUVf8dQxj4U/edit">Chrome Web Storage and Quota Concepts</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria"> <em>See also on MDN</em> </seealso></para>
+<para>To manipulate, for instance, the session storage for a domain, a call to <see cref="Window.SessionStorage"/> is made; whereas for local storage the call is made to <see cref="Window.LocalStorage"/>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Using the Web Storage API</see><br/>-<see cref="Window.LocalStorage"/><br/>-<see cref="Window.SessionStorage"/><br/>-<see cref="CacheStorage"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Storage"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-</Storage_APIStorage_quotas_and_eviction_criteria>
+</Storage>
 </docs>

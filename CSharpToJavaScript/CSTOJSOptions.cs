@@ -26,13 +26,6 @@ namespace CSharpToJavaScript
 		/// Default: <c>Directory.GetCurrentDirectory()</c>
 		/// </value>
 		public string OutPutPath { get; set; } = Directory.GetCurrentDirectory();
-		/// <summary>
-		/// Output javascript file name.
-		/// </summary>
-		/// <value>
-		/// Default: <c>main.js</c>
-		/// </value>
-		public string OutPutFileName { get; set; } = "main.js";
 
 		/// <summary>
 		/// Self-explanatory, Use var over let.
@@ -63,6 +56,7 @@ namespace CSharpToJavaScript
 		/// <summary>
 		/// Add a <c>StringBuilder</c> to the front of a javascript file.
 		/// </summary>
+		/// <remarks>When using "GenerateManyAsync" applies to every file!</remarks>
 		/// <value>
 		/// Default: <c>new()</c>
 		/// </value>
@@ -70,6 +64,7 @@ namespace CSharpToJavaScript
 		/// <summary>
 		/// Add a <c>StringBuilder</c> to the end of a javascript file.
 		/// </summary>
+		/// <remarks>When using "GenerateManyAsync" applies to every file!</remarks>
 		/// <value>
 		/// Default: <c>new()</c>
 		/// </value>

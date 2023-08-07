@@ -1548,15 +1548,36 @@ namespace CSharpToJavaScript
 								{
 									if (iSymbol.ContainingNamespace.ToString().Contains(nameof(APIs.JS)))
 									{
-										if (CustomCSNamesToJS(syntaxNode) == false)
+										string _text = string.Empty;
+										SyntaxToken _identifier = new();
+										if (syntaxNode is IdentifierNameSyntax ins)
 										{
-											if (BuiltInTypesGenerics(syntaxNode, iSymbol) == false)
+											_text = ins.Identifier.Text;
+											_identifier = ins.Identifier;
+										}
+
+										if (syntaxNode is GenericNameSyntax gns)
+										{
+											_text = gns.Identifier.Text;
+											_identifier = gns.Identifier;
+										}
+
+										ImmutableArray<AttributeData> _attributeDatas = iSymbol.GetAttributes();
+										
+										//Check this! TODO!
+										if(iSymbol.ContainingType != null)
+											_attributeDatas.AddRange(iSymbol.ContainingType.GetAttributes());
+
+										foreach (AttributeData _attr in _attributeDatas)
+										{
+											if (_attr.AttributeClass.Name == nameof(ToAttribute))
 											{
-												JSSB.Append($" Object");
-												SM.Log($"TODO : {syntaxNode} ||| USE 'CustomCSNamesToJS' TO CONVERT.");
+												ToAttribute _attrLocal = new(_attr.ConstructorArguments[0].Value as string);
+
+												JSSB.Append($" {_attrLocal.Convert(_text)}");
+												break;
 											}
 										}
-										JSSB.Append($"(1)");
 										break;
 									}
 

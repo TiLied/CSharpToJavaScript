@@ -1,4 +1,4 @@
-//07.08.2023 14:37:48
+//11.08.2023 14:29:24
 using static CSharpToJavaScript.APIs.JS.GlobalObject;
 using CSharpToJavaScript.Utils;
 using System.Collections.Generic;
@@ -155,14 +155,16 @@ public partial class Window
 }
 
 ///<include file='Utils/Docs/CustomEvent/CustomEvent.generated.xml' path='docs/CustomEvent/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CustomEvent : Event
 {
 	///<include file='Utils/Docs/CustomEventCustomEvent/CustomEventCustomEvent.generated.xml' path='docs/CustomEventCustomEvent/*'/>
 	public CustomEvent(string type, CustomEventInit eventInitDict) { }
 	///<include file='Utils/Docs/CustomEventDetail/CustomEventDetail.generated.xml' path='docs/CustomEventDetail/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public dynamic Detail { get; }
 	///<include file='Utils/Docs/CustomEventInitCustomEvent/CustomEventInitCustomEvent.generated.xml' path='docs/CustomEventInitCustomEvent/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined InitCustomEvent(string type, bool bubbles, bool cancelable, dynamic detail) { throw new System.NotImplementedException(); }
 }
 

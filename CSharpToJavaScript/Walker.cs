@@ -27,6 +27,8 @@ namespace CSharpToJavaScript
 		private string _NameSpaceStr = string.Empty;
 		private bool _UsedThis = false;
 
+		private bool _PropertyStatic = false;
+
 		public Walker() : base(SyntaxWalkerDepth.Trivia)
 		{
 
@@ -304,6 +306,7 @@ namespace CSharpToJavaScript
 								Visit(asNode);
 								break;
 							}
+						case SyntaxKind.NullableType:
 						case SyntaxKind.GenericName:
 						case SyntaxKind.IdentifierName:
 						case SyntaxKind.PredefinedType:
@@ -657,6 +660,7 @@ namespace CSharpToJavaScript
 						case SyntaxKind.PublicKeyword:
 							VisitLeadingTrivia(asToken);
 							break;
+						case SyntaxKind.StaticKeyword:
 						case SyntaxKind.AsyncKeyword:
 						case SyntaxKind.IdentifierToken:
 							{
@@ -746,6 +750,14 @@ namespace CSharpToJavaScript
 									  where n.AsNode().IsKind(SyntaxKind.IdentifierName)
 									  select n;
 
+								if (key.Count() == 0)
+								{
+									key = from n in nodesAndTokens
+											   where n.IsNode
+											   where n.AsNode().IsKind(SyntaxKind.GenericName)
+											   select n;
+								}
+
 								field = SyntaxFactory.FieldDeclaration(
 							   SyntaxFactory.VariableDeclaration(SyntaxFactory.IdentifierName(key.First().ToString()))
 							.WithVariables(
@@ -757,7 +769,8 @@ namespace CSharpToJavaScript
 							   {
 									SyntaxFactory.Token(SyntaxKind.PrivateKeyword)
 							   }))
-						   .WithLeadingTrivia(SyntaxFactory.ParseLeadingTrivia("\t\t"));
+						   .WithLeadingTrivia(SyntaxFactory.ParseLeadingTrivia("\t\t"))
+							.WithTrailingTrivia(SyntaxFactory.ParseLeadingTrivia("\r\n"));
 							}
 							else 
 							{
@@ -774,7 +787,8 @@ namespace CSharpToJavaScript
 							   {
 									SyntaxFactory.Token(SyntaxKind.PrivateKeyword)
 							   }))
-						   .WithLeadingTrivia(SyntaxFactory.ParseLeadingTrivia("\t\t"));
+						   .WithLeadingTrivia(SyntaxFactory.ParseLeadingTrivia("\t\t"))
+							.WithTrailingTrivia(SyntaxFactory.ParseLeadingTrivia("\r\n"));
 							}
 
 							VisitFieldDeclaration(field);
@@ -798,9 +812,10 @@ namespace CSharpToJavaScript
 						case SyntaxKind.EqualsValueClause:
 						case SyntaxKind.PredefinedType:
 						case SyntaxKind.IdentifierName:
+						case SyntaxKind.GenericName:
 							break;
 						case SyntaxKind.AccessorList:
-							Visit(asNode);
+							VisitAccessorList(asNode as AccessorListSyntax);
 							break;
 						default:
 							SM.Log($"asNode : {kind}");
@@ -822,6 +837,10 @@ namespace CSharpToJavaScript
 						case SyntaxKind.PublicKeyword:
 						case SyntaxKind.PrivateKeyword:
 							VisitLeadingTrivia(asToken);
+							break;
+						case SyntaxKind.StaticKeyword:
+							_PropertyStatic = true;
+							VisitToken(asToken);
 							break;
 						default:
 							SM.Log($"asToken : {kind}");
@@ -890,14 +909,15 @@ namespace CSharpToJavaScript
 								}
 								else 
 								{
-									JSSB.Append($"\n");
+									//JSSB.Append($"\n");
 
 									SyntaxTriviaList _syntaxTrivias = asNode.Parent.Parent.GetLeadingTrivia();
-
+									
+									/* Todo! Why there is already "/t/t" in JSSB????
 									for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
 									{
 										VisitTrivia(_syntaxTrivias[_i]);
-									}
+									}*/
 
 									JSSB.Append($"get {d3.Text}() {{ return this._{d3.Text}_; }}");
 
@@ -933,6 +953,11 @@ namespace CSharpToJavaScript
 										VisitTrivia(_syntaxTrivias[_i]);
 									}
 
+									if (_PropertyStatic == true) 
+									{
+										JSSB.Append($"static ");
+										_PropertyStatic = false;
+									}
 									JSSB.Append($"set {d3.Text}(value)");
 
 									_syntaxTrivias = asNode.GetTrailingTrivia();
@@ -953,6 +978,11 @@ namespace CSharpToJavaScript
 										VisitTrivia(_syntaxTrivias[_i]);
 									}
 
+									if (_PropertyStatic == true)
+									{
+										JSSB.Append($"static ");
+										_PropertyStatic = false;
+									}
 									JSSB.Append($"set {d3.Text}(value) {{ this._{d3.Text}_ = value; }}");
 
 									_syntaxTrivias = asNode.Parent.GetTrailingTrivia();
@@ -1248,6 +1278,7 @@ namespace CSharpToJavaScript
 						case SyntaxKind.Block:
 							VisitBlock(asNode as BlockSyntax);
 							break;
+						case SyntaxKind.GenericName:
 						case SyntaxKind.PredefinedType: 
 							{
 								SyntaxTriviaList _syntaxTrivias = asNode.GetLeadingTrivia();
@@ -1590,25 +1621,29 @@ namespace CSharpToJavaScript
 									symbolInfo = CSTOJS.Model.GetSymbolInfo(_aes.Left);
 
 									ClassDeclarationSyntax classD = (ClassDeclarationSyntax)node.Ancestors().First(n => n.IsKind(SyntaxKind.ClassDeclaration));
-									SyntaxList<MemberDeclarationSyntax> mem = classD.Members;
+
+									IEnumerable<ClassDeclarationSyntax> classesD = from n in classD.Parent.DescendantNodes()
+																				   where n.IsKind(SyntaxKind.ClassDeclaration)
+																				   select n as ClassDeclarationSyntax;
+
+									List<MemberDeclarationSyntax> mem = new();
+									foreach (ClassDeclarationSyntax item in classesD)
+									{
+										mem.AddRange(item.Members.ToList());
+									}
 
 									foreach (MemberDeclarationSyntax item in mem)
 									{
 										SyntaxToken _sT = default;
 										if (item is MethodDeclarationSyntax m)
 										{
-											IEnumerable<SyntaxToken> d3 = from e in m.ChildTokens()
-													 where e.IsKind(SyntaxKind.IdentifierToken)
-													 select e;
-											_sT = d3.First();
+											_sT = m.Identifier;
 										}
 
 										if (item is PropertyDeclarationSyntax p)
 										{
-											IEnumerable<SyntaxToken> d3 = from e in p.DescendantTokens()
-													 where e.IsKind(SyntaxKind.IdentifierToken)
-													 select e;
-											_sT = d3.Last();
+											_sT = p.Identifier;
+											syntaxNode = p.Type;
 										}
 
 										if (item is FieldDeclarationSyntax f)
@@ -1619,14 +1654,15 @@ namespace CSharpToJavaScript
 											_sT = d3.Last();
 										}
 
-										if (_sT.ToString() == _aes.Left.ToString())
+										if (_aes.Left.ToString().Contains(_sT.Text))
 										{
-											VariableDeclarationSyntax s = item.DescendantNodes().First(e => e.IsKind(SyntaxKind.VariableDeclaration)) as VariableDeclarationSyntax;
-											syntaxNode = s.Type;
+											//Todo?
+											//VariableDeclarationSyntax s = item.DescendantNodes().First(e => e.IsKind(SyntaxKind.VariableDeclaration)) as VariableDeclarationSyntax;
+											//syntaxNode = s.Type;
 											symbolInfo = CSTOJS.Model.GetSymbolInfo(syntaxNode);
+											break;
 										}
 									}
-
 								}
 								else
 								{
@@ -1967,7 +2003,7 @@ namespace CSharpToJavaScript
 														  select e;
 							_sT = d3.First();*/
 
-							_sT = m.Identifier;
+									_sT = m.Identifier;
 						}
 
 						if (item is PropertyDeclarationSyntax p)
@@ -2119,15 +2155,13 @@ namespace CSharpToJavaScript
 				{
 					if (_Options.Debug)
 					{
-						SM.Log("------");
-						SM.Log("--- Diagnostics starts ---");
+						SM.Log("WARNING! Diagnostics starts ---");
 						ImmutableArray<Diagnostic> diag = CSTOJS.Model.GetDiagnostics();
 						foreach (Diagnostic item in diag)
 						{
 							SM.Log(item.ToString());
 						}
-						SM.Log("--- Diagnostics ends ---");
-						SM.Log("------");
+						SM.Log("WARNING! Diagnostics ends ---");
 					}
 					SM.Log($"ERROR! !-{node}-! By reaching this means, a name did not convert to JS. CHECK FOR UPPERCASE CHARACTERS IN NAMES IN THE JS FILE!");
 
@@ -2295,6 +2329,7 @@ namespace CSharpToJavaScript
 									return true;
 								}
 							case string _str when
+							_str.Contains(nameof(string.Trim)) ||
 							_str.Contains(nameof(string.Substring)) ||
 							_str.Contains(nameof(string.StartsWith)) ||
 							_str.Contains(nameof(string.Replace)):

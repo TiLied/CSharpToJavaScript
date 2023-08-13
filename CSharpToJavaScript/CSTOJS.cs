@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Microsoft.CodeAnalysis;
 using CSharpToJavaScript.Utils;
 using System.Linq;
+using System;
 
 namespace CSharpToJavaScript
 {
@@ -37,6 +38,10 @@ namespace CSharpToJavaScript
 			}
 
 			Trace.Listeners.Add(new ConsoleTraceListener());
+
+			Assembly assembly = Assembly.GetExecutingAssembly();
+			//https://stackoverflow.com/a/73474279
+			SM.Log($"{assembly.GetName().Name} {assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion}");
 		}
 
 		/// <summary>
@@ -57,6 +62,10 @@ namespace CSharpToJavaScript
 			}
 
 			Trace.Listeners.Add(new ConsoleTraceListener());
+
+			Assembly assembly = Assembly.GetExecutingAssembly();
+			//https://stackoverflow.com/a/73474279
+			SM.Log($"{assembly.GetName().Name} {assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion}");
 		}
 
 		/// <summary>
@@ -296,11 +305,12 @@ namespace CSharpToJavaScript
 				Directory.CreateDirectory(_Options.OutPutPath);
 			}
 
-			await File.WriteAllTextAsync(Path.Combine(_Options.OutPutPath, filename), _Walker.JSSB.ToString());
+			string pathCombined = Path.Combine(_Options.OutPutPath, filename);
+
+			await File.WriteAllTextAsync(pathCombined, _Walker.JSSB.ToString());
 
 			SM.Log($"--- Done!");
-			SM.Log($"--- Path: {_Options.OutPutPath}");
-			SM.Log($"--- File: {filename}");
+			SM.Log($"--- Path: {pathCombined}");
 			SM.Log($"--- --- ---");
 		}
 	}

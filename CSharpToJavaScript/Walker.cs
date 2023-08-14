@@ -194,6 +194,15 @@ namespace CSharpToJavaScript
 
 					switch (kind)
 					{
+						case SyntaxKind.TypeParameterList:
+							{
+								SyntaxTriviaList _syntaxTrivias = asNode.GetTrailingTrivia();
+								for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
+								{
+									VisitTrivia(_syntaxTrivias[_i]);
+								}
+								break;
+							}
 						case SyntaxKind.BaseList:
 						case SyntaxKind.FieldDeclaration:
 						case SyntaxKind.ConstructorDeclaration:
@@ -1715,7 +1724,11 @@ namespace CSharpToJavaScript
 
 									if (iSymbol.ContainingNamespace.ToString().Contains(_NameSpaceStr))
 									{
-										JSSB.Append($" {syntaxNode.ToString()}");
+										if (syntaxNode.IsKind(SyntaxKind.GenericName)) 
+										{
+											JSSB.Append($" {(syntaxNode as GenericNameSyntax).Identifier.ToString()}");
+										}else
+											JSSB.Append($" {syntaxNode.ToString()}");
 										break;
 									}
 
@@ -1778,6 +1791,46 @@ namespace CSharpToJavaScript
 			}
 		}
 
+		public override void VisitTypeArgumentList(TypeArgumentListSyntax node)
+		{
+			ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
+
+			for (int i = 0; i < nodesAndTokens.Count; i++)
+			{
+				SyntaxNode? asNode = nodesAndTokens[i].AsNode();
+
+				if (asNode != null)
+				{
+					SyntaxKind kind = asNode.Kind();
+
+					switch (kind)
+					{
+						case SyntaxKind.PredefinedType:
+						case SyntaxKind.IdentifierName:
+							break;
+						default:
+							SM.Log($"asNode : {kind}");
+							break;
+					}
+				}
+				else
+				{
+					SyntaxToken asToken = nodesAndTokens[i].AsToken();
+					SyntaxKind kind = asToken.Kind();
+
+					switch (kind)
+					{
+						case SyntaxKind.GreaterThanToken:
+						case SyntaxKind.LessThanToken:
+							break;
+						default:
+							SM.Log($"asToken : {kind}");
+							break;
+					}
+				}
+			}
+		}
+
 		public override void VisitGenericName(GenericNameSyntax node)
 		{
 			ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
@@ -1794,6 +1847,7 @@ namespace CSharpToJavaScript
 					{
 						case SyntaxKind.TypeArgumentList: 
 							{
+								VisitTypeArgumentList(asNode as TypeArgumentListSyntax);
 								break;
 							}
 						default:
@@ -1975,6 +2029,13 @@ namespace CSharpToJavaScript
 					IEnumerable<SyntaxNode?> _all = from e in node.Parent.ChildNodes()
 													where e.IsKind(SyntaxKind.IdentifierName)
 													select e;
+
+					if (!_all.Any()) 
+					{
+						_all = from e in node.Parent.ChildNodes()
+							   where e.IsKind(SyntaxKind.GenericName)
+							   select e;
+					}
 
 					SymbolInfo _symbolInfo = CSTOJS.Model.GetSymbolInfo(_all.First());
 					ISymbol? _iSymbol = null;
@@ -2163,7 +2224,7 @@ namespace CSharpToJavaScript
 						}
 						SM.Log("WARNING! Diagnostics ends ---");
 					}
-					SM.Log($"ERROR! !-{node}-! By reaching this means, a name did not convert to JS. CHECK FOR UPPERCASE CHARACTERS IN NAMES IN THE JS FILE!");
+					SM.Log($"WARNING! !-{node}-! By reaching this means, a name did not convert to JS. CHECK FOR UPPERCASE CHARACTERS IN NAMES IN THE JS FILE!");
 
 					//base.VisitIdentifierName(node);
 					return false;

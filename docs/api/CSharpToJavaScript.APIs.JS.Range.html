@@ -18,6 +18,17 @@
       
       
       
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
   </head>
 
   <script type="module">
@@ -159,7 +170,7 @@ public class Range : AbstractRange</code></pre>
 
 
   <h2 id="CSharpToJavaScript_APIs_JS_Range_remarks">Remarks</h2>
-  <div class="markdown level0 remarks"><p>A range can be created by using the <see cref="!:Document.CreateRange"></see> method. Range objects can also be retrieved by using the <see cref="!:Selection/getRangeAt"></see> method of the <see cref="!:Selection"></see> object or the <see cref="!:Document/caretRangeFromPoint"></see> method of the <a class="xref" href="CSharpToJavaScript.APIs.JS.Document.html">Document</a> object.</p><p>There also is the <a class="xref" href="CSharpToJavaScript.APIs.JS.Range.html#CSharpToJavaScript_APIs_JS_Range__ctor">Range()</a> constructor available.</p><p></p>
+  <div class="markdown level0 remarks"><p>A range can be created by using the Document.CreateRange method. Range objects can also be retrieved by using the Selection/getRangeAt method of the Selection object or the Document/caretRangeFromPoint method of the <a class="xref" href="CSharpToJavaScript.APIs.JS.Document.html">Document</a> object.</p><p>There also is the <a class="xref" href="CSharpToJavaScript.APIs.JS.Range.html#CSharpToJavaScript_APIs_JS_Range__ctor">Range()</a> constructor available.</p><p></p>
 <p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Range"> <em>See also on MDN</em> </a></p>
 </div>
@@ -193,7 +204,7 @@ public class Range : AbstractRange</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Range__ctor_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</a><br>-<see cref="!:Document.CreateRange"></see><br></p>
+  <div class="markdown level1 remarks"><p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</a><br>-Document.CreateRange<br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Range/Range"> <em>See also on MDN</em> </a></p>
 </div>
 
@@ -335,7 +346,7 @@ public class Range : AbstractRange</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>Range.commonAncestorContainer</code></strong> read-only property<br>returns the deepest — or furthest down the document tree — <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a> that<br>contains both <a href="https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level-2-Range-Position-h3">boundary points</a> of the <a class="xref" href="CSharpToJavaScript.APIs.JS.Range.html">Range</a>. This means that if<br><see cref="!:Range.StartContainer"></see> and <see cref="!:Range.EndContainer"></see> both refer to<br>the same node, this node is the <strong>common ancestor container</strong>.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>Range.commonAncestorContainer</code></strong> read-only property<br>returns the deepest — or furthest down the document tree — <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a> that<br>contains both <a href="https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level-2-Range-Position-h3">boundary points</a> of the <a class="xref" href="CSharpToJavaScript.APIs.JS.Range.html">Range</a>. This means that if<br>Range.StartContainer and Range.EndContainer both refer to<br>the same node, this node is the <strong>common ancestor container</strong>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -481,7 +492,7 @@ public class Range : AbstractRange</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Range_Collapse_System_Boolean__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>A collapsed <a class="xref" href="CSharpToJavaScript.APIs.JS.Range.html">Range</a> is empty, containing no content, specifying a<br>single-point in a DOM tree. To determine if a <a class="xref" href="CSharpToJavaScript.APIs.JS.Range.html">Range</a> is already collapsed,<br>see the <see cref="!:Range.Collapsed"></see> property.</p>
+  <div class="markdown level1 remarks"><p>A collapsed <a class="xref" href="CSharpToJavaScript.APIs.JS.Range.html">Range</a> is empty, containing no content, specifying a<br>single-point in a DOM tree. To determine if a <a class="xref" href="CSharpToJavaScript.APIs.JS.Range.html">Range</a> is already collapsed,<br>see the Range.Collapsed property.</p>
 <p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Range/collapse"> <em>See also on MDN</em> </a></p>
 </div>
@@ -1070,7 +1081,7 @@ public class Range : AbstractRange</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Range_SetStart_CSharpToJavaScript_APIs_JS_Node_System_UInt64__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>If the <code>startNode</code> is a <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a> of type <a class="xref" href="CSharpToJavaScript.APIs.JS.Text.html">Text</a>,<br><a class="xref" href="CSharpToJavaScript.APIs.JS.Comment.html">Comment</a>, or <see cref="!:CDataSection"></see>, then <code>startOffset</code> is<br>the number of characters from the start of <code>startNode</code>. For other<br><code>Node</code> types, <code>startOffset</code> is the number of child nodes between<br>the start of the <code>startNode</code>.</p><p>Setting the start point below (lower in the document) the end point will result in a<br>collapsed range with the start and end points both set to the specified start position.</p>
+  <div class="markdown level1 remarks"><p>If the <code>startNode</code> is a <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a> of type <a class="xref" href="CSharpToJavaScript.APIs.JS.Text.html">Text</a>,<br><a class="xref" href="CSharpToJavaScript.APIs.JS.Comment.html">Comment</a>, or CDataSection, then <code>startOffset</code> is<br>the number of characters from the start of <code>startNode</code>. For other<br><code>Node</code> types, <code>startOffset</code> is the number of child nodes between<br>the start of the <code>startNode</code>.</p><p>Setting the start point below (lower in the document) the end point will result in a<br>collapsed range with the start and end points both set to the specified start position.</p>
 <p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Range/setStart"> <em>See also on MDN</em> </a></p>
 </div>

@@ -18,6 +18,17 @@
       
       
       
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
   </head>
 
   <script type="module">
@@ -567,7 +578,8 @@ public string Accept { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Align { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public string Align { get; set; }</code></pre>
   </div>
 
 
@@ -786,7 +798,7 @@ public string DirName { get; set; }</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>HTMLInputElement.disabled</code></strong> property is a boolean value that reflects the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#disabled"><code>disabled</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#disabled</a> HTML attribute, which indicates whether the control is disabled. If it is disabled, it does not accept clicks. A disabled element is unusable and un-clickable.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>HTMLInputElement.disabled</code></strong> property is a boolean value that reflects the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#disabled"><code>disabled</code></a> HTML attribute, which indicates whether the control is disabled. If it is disabled, it does not accept clicks. A disabled element is unusable and un-clickable.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -823,7 +835,7 @@ public bool Disabled { get; set; }</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>HTMLInputElement.files</code></strong> property allows you to access the <see cref="!:FileList"></see> selected with the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file"><code>&amp;lt;input type=&amp;quot;file&amp;quot;&amp;gt;</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file</a> element.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>HTMLInputElement.files</code></strong> property allows you to access the FileList selected with the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file"><code>&amp;lt;input type=&amp;quot;file&amp;quot;&amp;gt;</code></a> element.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -839,7 +851,7 @@ public Unsupported? Files { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.Utils.Unsupported.html">Unsupported</a></dt>
-    <dd><p>A <see cref="!:FileList"></see> object listing the selected files, if any, or <code>null</code> if the <strong><code>HTMLInputElement</code></strong> is not of <code>type=&amp;quot;file&amp;quot;</code>.</p>
+    <dd><p>A FileList object listing the selected files, if any, or <code>null</code> if the <strong><code>HTMLInputElement</code></strong> is not of <code>type=&amp;quot;file&amp;quot;</code>.</p>
 </dd>
   </dl>
 
@@ -1740,7 +1752,8 @@ public string Type { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string UseMap { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public string UseMap { get; set; }</code></pre>
   </div>
 
 
@@ -1995,7 +2008,7 @@ public bool WillValidate { get; }</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>HTMLInputElement.checkValidity()</code></strong> method returns a boolean value which indicates validity of the value of the element. If the value is invalid, this method also fires the <see cref="!:HTMLInputElement/invalid_event"></see> event on the element.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>HTMLInputElement.checkValidity()</code></strong> method returns a boolean value which indicates validity of the value of the element. If the value is invalid, this method also fires the HTMLInputElement/invalid_event event on the element.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2033,7 +2046,7 @@ public bool CheckValidity()</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>reportValidity()</code></strong> method of the <see cref="!:'HTMLInputElement'"></see> interface performs the same validity checking steps as the <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLInputElement.html#CSharpToJavaScript_APIs_JS_HTMLInputElement_CheckValidity">CheckValidity()</a> method. If the value is invalid, this method also fires the <see cref="!:HTMLInputElement.Invalid_event"></see> event on the element, and (if the event isn't canceled) reports the problem to the user.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>reportValidity()</code></strong> method of the 'HTMLInputElement' interface performs the same validity checking steps as the <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLInputElement.html#CSharpToJavaScript_APIs_JS_HTMLInputElement_CheckValidity">CheckValidity()</a> method. If the value is invalid, this method also fires the HTMLInputElement.Invalid_event event on the element, and (if the event isn't canceled) reports the problem to the user.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2138,7 +2151,7 @@ public GlobalObject.Undefined SetCustomValidity(string error)</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_HTMLInputElement_SetCustomValidity_System_String__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>-<a href="https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation">Learn: Client-side form validation</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation">Guide: Constraint validation</a><br>-<see cref="!:'ValidityState'"></see><br></p>
+  <div class="markdown level1 remarks"><p>-<a href="https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation">Learn: Client-side form validation</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation">Guide: Constraint validation</a><br>-'ValidityState'<br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/setCustomValidity"> <em>See also on MDN</em> </a></p>
 </div>
 
@@ -2181,7 +2194,7 @@ public GlobalObject.Undefined SetRangeText(string replacement)</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_HTMLInputElement_SetRangeText_System_String__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">input</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textarea</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLInputElement.html">HTMLInputElement</a><br>-<see cref="!:Selection"></see><br></p>
+  <div class="markdown level1 remarks"><p>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">input</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textarea</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLInputElement.html">HTMLInputElement</a><br>-Selection<br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/setRangeText"> <em>See also on MDN</em> </a></p>
 </div>
 
@@ -2230,7 +2243,7 @@ public GlobalObject.Undefined SetRangeText(string replacement, ulong start, ulon
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_HTMLInputElement_SetRangeText_System_String_System_UInt64_System_UInt64_CSharpToJavaScript_APIs_JS_SelectionMode__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">input</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textarea</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLInputElement.html">HTMLInputElement</a><br>-<see cref="!:Selection"></see><br></p>
+  <div class="markdown level1 remarks"><p>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">input</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textarea</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLInputElement.html">HTMLInputElement</a><br>-Selection<br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/setRangeText"> <em>See also on MDN</em> </a></p>
 </div>
 
@@ -2278,7 +2291,7 @@ public GlobalObject.Undefined SetSelectionRange(ulong start, ulong end, string d
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_HTMLInputElement_SetSelectionRange_System_UInt64_System_UInt64_System_String__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>Optionally, in newer browser versions, you can specify the direction in which selection<br>should be considered to have occurred. This lets you indicate, for example, that the<br>selection was set by the user clicking and dragging from the end of the selected text<br>toward the beginning.</p><p>This method updates the <code>HTMLInputElement.selectionStart</code>,<br><code>selectionEnd</code>, and <code>selectionDirection</code> properties in one call.</p><p>Note that according to the <a href="https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply">WHATWG forms spec</a> <code>selectionStart</code>, <code>selectionEnd</code> properties and<br><code>setSelectionRange</code> method apply only to inputs of types text, search, URL,<br>tel and password. Chrome, starting from version 33, throws an exception while accessing<br>those properties and method on the rest of input types. For example, on input of type<br>number: &amp;quot;Failed to read the &amp;apos;selectionStart&amp;apos; property from &amp;apos;HTMLInputElement&amp;apos;: The input<br>element&amp;apos;s type (&amp;apos;number&amp;apos;) does not support selection&amp;quot;.</p><p>If you wish to select <strong>all</strong> text of an input element, you can use the <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/select">HTMLInputElement.select()</a><br>method instead.</p>
-<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">input</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textarea</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLInputElement.html">HTMLInputElement</a><br>-<see cref="!:Selection"></see><br></p>
+<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">input</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textarea</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLInputElement.html">HTMLInputElement</a><br>-Selection<br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/setSelectionRange"> <em>See also on MDN</em> </a></p>
 </div>
 
@@ -2316,8 +2329,8 @@ public GlobalObject.Undefined ShowPicker()</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_HTMLInputElement_ShowPicker_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This is the same picker that would normally be displayed when the element is selected, but can be triggered from a button press or other user interaction.</p><p>Commonly browsers implement it for inputs of these types: <code>&amp;quot;date&amp;quot;</code>, <code>&amp;quot;month&amp;quot;</code>, <code>&amp;quot;week&amp;quot;</code>, <code>&amp;quot;time&amp;quot;</code>, <code>&amp;quot;datetime-local&amp;quot;</code>, <code>&amp;quot;color&amp;quot;</code>, or <code>&amp;quot;file&amp;quot;</code>.<br>It can also be prepopulated with items from a <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist">datalist</a> element or <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete"><code>autocomplete</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete</a> attribute.</p><p>More generally, this method should ideally display the picker for any input element on the platform that has a picker.</p>
-<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">input</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLInputElement.html">HTMLInputElement</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist">datalist</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete"><code>autocomplete</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete</a><br></p>
+  <div class="markdown level1 remarks"><p>This is the same picker that would normally be displayed when the element is selected, but can be triggered from a button press or other user interaction.</p><p>Commonly browsers implement it for inputs of these types: <code>&amp;quot;date&amp;quot;</code>, <code>&amp;quot;month&amp;quot;</code>, <code>&amp;quot;week&amp;quot;</code>, <code>&amp;quot;time&amp;quot;</code>, <code>&amp;quot;datetime-local&amp;quot;</code>, <code>&amp;quot;color&amp;quot;</code>, or <code>&amp;quot;file&amp;quot;</code>.<br>It can also be prepopulated with items from a <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist">datalist</a> element or <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete"><code>autocomplete</code></a> attribute.</p><p>More generally, this method should ideally display the picker for any input element on the platform that has a picker.</p>
+<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">input</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLInputElement.html">HTMLInputElement</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist">datalist</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete"><code>autocomplete</code></a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/showPicker"> <em>See also on MDN</em> </a></p>
 </div>
 
@@ -2331,7 +2344,7 @@ public GlobalObject.Undefined ShowPicker()</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The<br><strong><code>HTMLInputElement.stepDown([n])</code></strong> method decrements the<br>value of a numeric type of <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">input</a> element by the value of the<br><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/step"><code>step</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/step</a> attribute or up<br>to <code>n</code> multiples of the step attribute if a number is passed as the<br>parameter.</p>
+  <div class="markdown level1 summary"><p>The<br><strong><code>HTMLInputElement.stepDown([n])</code></strong> method decrements the<br>value of a numeric type of <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">input</a> element by the value of the<br><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/step"><code>step</code></a> attribute or up<br>to <code>n</code> multiples of the step attribute if a number is passed as the<br>parameter.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2360,8 +2373,8 @@ public GlobalObject.Undefined StepDown(long n)</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_HTMLInputElement_StepDown_System_Int64__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>The method, when invoked, decrements the<br><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#value"><code>value</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#value</a> by (<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#step"><code>step</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#step</a> * n), where n<br>defaults to 1 if not specified, and<br><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/step"><code>step</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/step</a> defaults to the<br>default value for <code>step</code> if not specified.</p><p>Valid on all numeric, date, and time input types that support the step attribute,<br>including <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date">input/date</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/month">input/month</a>,<br><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/week">input/week</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/time">input/time</a>,<br><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/datetime-local">input/datetime-local</a>, {{HTMLElement("input/number",<br>"number")}}, and <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range">input/range</a>.</p><p>Given <code>&amp;lt;input id=&amp;quot;myTime&amp;quot; type=&amp;quot;time&amp;quot; max=&amp;quot;17:00&amp;quot; step=&amp;quot;900&amp;quot; value=&amp;quot;17:00&amp;quot;&amp;gt;</code>,<br>invoking <code>myTime.stepDown(3)</code> will change the value to 16:15, decrementing the<br>time by <code>3 * 900</code>, or 45 minutes. <code>myTime.stepDown()</code>, with no<br>parameter, would have resulted in <code>16:45</code>, as <code>n</code> defaults to<br><code>1</code>.</p><p>However, calling <code>stepDown</code> on <code>&amp;lt;input type=&amp;quot;time&amp;quot; max=&amp;quot;17:00&amp;quot; step=&amp;quot;900&amp;quot;&amp;gt;</code> would not set the value to <code>17:00</code>, as one would expect — and as it does for <code>stepUp</code> when the input is <code>&amp;lt;input type=&amp;quot;time&amp;quot; min=&amp;quot;17:00&amp;quot; step=&amp;quot;900&amp;quot;&amp;gt;</code>. Instead, the first call to <code>stepDown</code> will set the initial value to <code>23:45</code> even though the <code>max</code> attribute is set. The second call will set the value to <code>17:00</code>. And the third call to will set the value to <code>16:45</code>.</p><p>The method, when invoked, changes the form control&amp;apos;s value by the value given in the<br><code>step</code> attribute, multiplied by the parameter, within the constraints set<br>within the form control. The default value for the parameter, if not is passed, is 1.<br>The method will not cause the value to go below the<br><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/min"><code>min</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/min</a> value set or defy the<br>constraints set by the<br><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/step"><code>step</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/step</a> attribute. A<br>negative value for <code>n</code> will increment the value, but will not increment<br>beyond the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/max"><code>max</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/max</a> value.</p><p>If the value before invoking the <code>stepDown()</code> method is invalid, for<br>example, if it doesn&amp;apos;t match the constraints set by the <code>step</code> attribute,<br>invoking the <code>stepDown()</code> method will return a value that does match the form<br>controls constraints.</p><p>If the form control is non time, date, or numeric in nature, and therefore does not<br>support the <code>step</code> attribute (see the list of supported input types above), or if the <code>step</code> value is set to <code>any</code>, an<br><code>InvalidStateError</code> exception is thrown.</p>
-<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">input</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLInputElement.html">HTMLInputElement</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLInputElement.html#CSharpToJavaScript_APIs_JS_HTMLInputElement_StepUp_System_Int64_">StepUp(long)</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/step"><code>step</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/step</a>,<br><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/min"><code>min</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/min</a> and<br><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/max"><code>max</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/max</a> attributes<br></p>
+  <div class="markdown level1 remarks"><p>The method, when invoked, decrements the<br><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#value"><code>value</code></a> by (<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#step"><code>step</code></a> * n), where n<br>defaults to 1 if not specified, and<br><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/step"><code>step</code></a> defaults to the<br>default value for <code>step</code> if not specified.</p><p>Valid on all numeric, date, and time input types that support the step attribute,<br>including <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date">input/date</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/month">input/month</a>,<br><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/week">input/week</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/time">input/time</a>,<br><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/datetime-local">input/datetime-local</a>, {{HTMLElement("input/number",<br>"number")}}, and <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range">input/range</a>.</p><p>Given <code>&amp;lt;input id=&amp;quot;myTime&amp;quot; type=&amp;quot;time&amp;quot; max=&amp;quot;17:00&amp;quot; step=&amp;quot;900&amp;quot; value=&amp;quot;17:00&amp;quot;&amp;gt;</code>,<br>invoking <code>myTime.stepDown(3)</code> will change the value to 16:15, decrementing the<br>time by <code>3 * 900</code>, or 45 minutes. <code>myTime.stepDown()</code>, with no<br>parameter, would have resulted in <code>16:45</code>, as <code>n</code> defaults to<br><code>1</code>.</p><p>However, calling <code>stepDown</code> on <code>&amp;lt;input type=&amp;quot;time&amp;quot; max=&amp;quot;17:00&amp;quot; step=&amp;quot;900&amp;quot;&amp;gt;</code> would not set the value to <code>17:00</code>, as one would expect — and as it does for <code>stepUp</code> when the input is <code>&amp;lt;input type=&amp;quot;time&amp;quot; min=&amp;quot;17:00&amp;quot; step=&amp;quot;900&amp;quot;&amp;gt;</code>. Instead, the first call to <code>stepDown</code> will set the initial value to <code>23:45</code> even though the <code>max</code> attribute is set. The second call will set the value to <code>17:00</code>. And the third call to will set the value to <code>16:45</code>.</p><p>The method, when invoked, changes the form control&amp;apos;s value by the value given in the<br><code>step</code> attribute, multiplied by the parameter, within the constraints set<br>within the form control. The default value for the parameter, if not is passed, is 1.<br>The method will not cause the value to go below the<br><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/min"><code>min</code></a> value set or defy the<br>constraints set by the<br><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/step"><code>step</code></a> attribute. A<br>negative value for <code>n</code> will increment the value, but will not increment<br>beyond the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/max"><code>max</code></a> value.</p><p>If the value before invoking the <code>stepDown()</code> method is invalid, for<br>example, if it doesn&amp;apos;t match the constraints set by the <code>step</code> attribute,<br>invoking the <code>stepDown()</code> method will return a value that does match the form<br>controls constraints.</p><p>If the form control is non time, date, or numeric in nature, and therefore does not<br>support the <code>step</code> attribute (see the list of supported input types above), or if the <code>step</code> value is set to <code>any</code>, an<br><code>InvalidStateError</code> exception is thrown.</p>
+<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">input</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLInputElement.html">HTMLInputElement</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLInputElement.html#CSharpToJavaScript_APIs_JS_HTMLInputElement_StepUp_System_Int64_">StepUp(long)</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/step"><code>step</code></a>,<br><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/min"><code>min</code></a> and<br><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/max"><code>max</code></a> attributes<br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/stepDown"> <em>See also on MDN</em> </a></p>
 </div>
 
@@ -2375,7 +2388,7 @@ public GlobalObject.Undefined StepDown(long n)</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>HTMLInputElement.stepUp()</code></strong> method increments the value<br>of a numeric type of <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">input</a> element by the value of the<br><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/step"><code>step</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/step</a> attribute, or the<br>default <code>step</code> value if the step attribute is not explicitly set. The method,<br>when invoked, increments the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#value"><code>value</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#value</a> by<br>(<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#step"><code>step</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#step</a> * n), where <code>n</code> defaults to<br><code>1</code> if not specified, and<br><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/step"><code>step</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/step</a> defaults to the<br>default value for <code>step</code> if not specified.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>HTMLInputElement.stepUp()</code></strong> method increments the value<br>of a numeric type of <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">input</a> element by the value of the<br><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/step"><code>step</code></a> attribute, or the<br>default <code>step</code> value if the step attribute is not explicitly set. The method,<br>when invoked, increments the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#value"><code>value</code></a> by<br>(<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#step"><code>step</code></a> * n), where <code>n</code> defaults to<br><code>1</code> if not specified, and<br><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/step"><code>step</code></a> defaults to the<br>default value for <code>step</code> if not specified.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2404,8 +2417,8 @@ public GlobalObject.Undefined StepUp(long n)</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_HTMLInputElement_StepUp_System_Int64__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>The method, when invoked, changes the form control&amp;apos;s value by the value given in the<br><code>step</code> attribute, multiplied by the parameter, within the constraints set on<br>the form control. The default value for the parameter, if no value is passed, is<br><code>1</code>. The method will not cause the value to exceed the<br>set <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/max"><code>max</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/max</a> value, or defy<br>the constraints set by the<br><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/step"><code>step</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/step</a> attribute.</p><p>If the value before invoking the <code>stepUp()</code> method is invalid—for example,<br>if it doesn&amp;apos;t match the constraints set by the step attribute—invoking the<br><code>stepUp()</code> method will return a value that does match the form controls<br>constraints.</p><p>If the form control is non time, date, or numeric in nature, and therefore does not<br>support the <code>step</code> attribute (see the list of supported input types in the<br>table above), or if the step value is set to <code>any</code>, an<br><code>InvalidStateError</code> exception is thrown.</p>
-<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">input</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLInputElement.html">HTMLInputElement</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLInputElement.html#CSharpToJavaScript_APIs_JS_HTMLInputElement_StepDown_System_Int64_">StepDown(long)</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/step"><code>step</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/step</a>,<br><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/min"><code>min</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/min</a> and<br><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/max"><code>max</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/max</a> attributes<br></p>
+  <div class="markdown level1 remarks"><p>The method, when invoked, changes the form control&amp;apos;s value by the value given in the<br><code>step</code> attribute, multiplied by the parameter, within the constraints set on<br>the form control. The default value for the parameter, if no value is passed, is<br><code>1</code>. The method will not cause the value to exceed the<br>set <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/max"><code>max</code></a> value, or defy<br>the constraints set by the<br><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/step"><code>step</code></a> attribute.</p><p>If the value before invoking the <code>stepUp()</code> method is invalid—for example,<br>if it doesn&amp;apos;t match the constraints set by the step attribute—invoking the<br><code>stepUp()</code> method will return a value that does match the form controls<br>constraints.</p><p>If the form control is non time, date, or numeric in nature, and therefore does not<br>support the <code>step</code> attribute (see the list of supported input types in the<br>table above), or if the step value is set to <code>any</code>, an<br><code>InvalidStateError</code> exception is thrown.</p>
+<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">input</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLInputElement.html">HTMLInputElement</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLInputElement.html#CSharpToJavaScript_APIs_JS_HTMLInputElement_StepDown_System_Int64_">StepDown(long)</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/step"><code>step</code></a>,<br><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/min"><code>min</code></a> and<br><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/max"><code>max</code></a> attributes<br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/stepUp"> <em>See also on MDN</em> </a></p>
 </div>
 

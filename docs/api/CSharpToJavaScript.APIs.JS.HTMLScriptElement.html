@@ -18,6 +18,17 @@
       
       
       
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
   </head>
 
   <script type="module">
@@ -91,7 +102,7 @@
   <dl><dt>Assembly</dt><dd>CSharpToJavaScript.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>JavaScript files should be served with the <code>application/javascript</code> <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME type</a>, but browsers are lenient and block them only if the script is served with an image type (<code>image/<em></em></code>), video type (<code>video/</code>), audio type (<code>audio/*</code>), or <code>text/csv</code>. If the script is blocked, its element receives an <see cref="!:Element/error_event"></see> event; otherwise, it receives a <see cref="!:Window/load_event"></see> event.</p>
+  <div class="markdown summary"><p>JavaScript files should be served with the <code>application/javascript</code> <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME type</a>, but browsers are lenient and block them only if the script is served with an image type (<code>image/<em></em></code>), video type (<code>video/</code>), audio type (<code>audio/*</code>), or <code>text/csv</code>. If the script is blocked, its element receives an Element/error_event event; otherwise, it receives a Window/load_event event.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -599,7 +610,8 @@ public DOMTokenList Blocking { get; }</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Charset { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public string Charset { get; set; }</code></pre>
   </div>
 
 
@@ -694,7 +706,8 @@ public bool Defer { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Event { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public string Event { get; set; }</code></pre>
   </div>
 
 
@@ -725,7 +738,8 @@ public bool Defer { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string HtmlFor { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public string HtmlFor { get; set; }</code></pre>
   </div>
 
 
@@ -816,7 +830,7 @@ public bool NoModule { get; set; }</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>referrerPolicy</code></strong> property of the<br><a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLScriptElement.html">HTMLScriptElement</a> interface reflects the HTML<br><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#referrerpolicy"><code>referrerpolicy</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#referrerpolicy</a> of the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">script</a> element and<br>fetches made by that script, defining which referrer is sent when fetching the resource.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>referrerPolicy</code></strong> property of the<br><a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLScriptElement.html">HTMLScriptElement</a> interface reflects the HTML<br><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#referrerpolicy"><code>referrerpolicy</code></a> of the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">script</a> element and<br>fetches made by that script, defining which referrer is sent when fetching the resource.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 

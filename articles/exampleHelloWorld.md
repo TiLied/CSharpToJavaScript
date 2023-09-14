@@ -2,22 +2,20 @@
 
 Create new c# project.
 > [!NOTE]
-> Make sure to use full path in "GenerateAsync" method! 
+> Make sure to use full path in "GenerateOneAsync" method! 
 
 Program.cs
 ```csharp
-using System.Reflection;
 using CSharpToJavaScript;
+
 namespace TestNuget;
 
 public class Program
 {
 	public static async Task Main()
 	{
-		Assembly executingAssembly = Assembly.GetExecutingAssembly();
-		
-		CSTOJS cstojs = new(executingAssembly);
-		await cstojs.GenerateAsync("C:\\GitReps\\TestNuget\\TestNuget\\CSharp\\Test.cs");
+		CSTOJS cstojs = new();
+		await cstojs.GenerateOneAsync("C:\\GitReps\\TestNuget\\TestNuget\\CSharp\\Test.cs");
 		
 		Console.ReadKey();
 	}

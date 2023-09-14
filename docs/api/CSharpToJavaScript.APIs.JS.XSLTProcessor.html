@@ -18,6 +18,17 @@
       
       
       
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
   </head>
 
   <script type="module">
@@ -459,7 +470,7 @@ public class XSLTProcessor</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Document.html">Document</a></dt>
-    <dd><p>A <a class="xref" href="CSharpToJavaScript.APIs.JS.Document.html">Document</a>. The actual interface depends on the <a href="https://www.w3.org/TR/1999/REC-xslt-19991116#output">output method</a> of the stylesheet:<table><tr><td>Output method</td><td>Result interface</td></tr><tr><td><code>html</code></td><td><see cref="!:HTMLDocument"></see></td></tr><tr><td><code>xml</code></td><td><see cref="!:XMLDocument"></see></td></tr><tr><td><code>text</code></td><td><see cref="!:XMLDocument"></see> with a single root element <code>&amp;lt;transformiix:result&amp;gt;</code> with the text as a child</td></tr></table>
+    <dd><p>A <a class="xref" href="CSharpToJavaScript.APIs.JS.Document.html">Document</a>. The actual interface depends on the <a href="https://www.w3.org/TR/1999/REC-xslt-19991116#output">output method</a> of the stylesheet:<table><tr><td>Output method</td><td>Result interface</td></tr><tr><td><code>html</code></td><td>HTMLDocument</td></tr><tr><td><code>xml</code></td><td>XMLDocument</td></tr><tr><td><code>text</code></td><td>XMLDocument with a single root element <code>&amp;lt;transformiix:result&amp;gt;</code> with the text as a child</td></tr></table>
 </dd>
   </dl>
 

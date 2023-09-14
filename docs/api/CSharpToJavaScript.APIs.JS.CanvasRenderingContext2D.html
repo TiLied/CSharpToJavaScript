@@ -18,6 +18,17 @@
       
       
       
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
   </head>
 
   <script type="module">
@@ -143,7 +154,7 @@ public class CanvasRenderingContext2D</code></pre>
 
 
   <h2 id="CSharpToJavaScript_APIs_JS_CanvasRenderingContext2D_remarks">Remarks</h2>
-  <div class="markdown level0 remarks"><p>The interface&amp;apos;s properties and methods are described in the reference section of this page.<br>The <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas tutorial</a> has more explanation, examples, and resources, as well.</p><p>For <a href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas"><code>OffscreenCanvas</code>https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas</a>, there is an equivalent interface that provides the rendering context.<br>The offscreen rendering context inherits most of the same properties and methods as the <code>CanvasRenderingContext2D</code> and is described in more detail in the <a class="xref" href="CSharpToJavaScript.APIs.JS.OffscreenCanvasRenderingContext2D.html">OffscreenCanvasRenderingContext2D</a> reference page.</p>
+  <div class="markdown level0 remarks"><p>The interface&amp;apos;s properties and methods are described in the reference section of this page.<br>The <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas tutorial</a> has more explanation, examples, and resources, as well.</p><p>For <a href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas"><code>OffscreenCanvas</code></a>, there is an equivalent interface that provides the rendering context.<br>The offscreen rendering context inherits most of the same properties and methods as the <code>CanvasRenderingContext2D</code> and is described in more detail in the <a class="xref" href="CSharpToJavaScript.APIs.JS.OffscreenCanvasRenderingContext2D.html">OffscreenCanvasRenderingContext2D</a> reference page.</p>
 <p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLCanvasElement.html">HTMLCanvasElement</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas">canvas</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.OffscreenCanvas.html">OffscreenCanvas</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D"> <em>See also on MDN</em> </a></p>
 </div>
@@ -160,7 +171,7 @@ public class CanvasRenderingContext2D</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>CanvasRenderingContext2D.canvas</code></strong> property, part of the<br><a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas API</a>, is a read-only reference to the<br><a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLCanvasElement.html">HTMLCanvasElement</a> object that is associated with a given context. It<br>might be <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><code>null</code>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null</a> if there is no associated <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas">canvas</a> element.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>CanvasRenderingContext2D.canvas</code></strong> property, part of the<br><a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas API</a>, is a read-only reference to the<br><a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLCanvasElement.html">HTMLCanvasElement</a> object that is associated with a given context. It<br>might be <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><code>null</code></a> if there is no associated <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas">canvas</a> element.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -201,7 +212,7 @@ public class CanvasRenderingContext2D</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>CanvasRenderingContext2D.getContextAttributes()</code></strong><br>method<br>returns an object that contains the actual context parameters. Context attributes can be<br>requested with<br><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext"><code>HTMLCanvasElement.getContext()</code>https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext</a><br>on context creation.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>CanvasRenderingContext2D.getContextAttributes()</code></strong><br>method<br>returns an object that contains the actual context parameters. Context attributes can be<br>requested with<br><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext"><code>HTMLCanvasElement.getContext()</code></a><br>on context creation.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -224,7 +235,7 @@ public class CanvasRenderingContext2D</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_CanvasRenderingContext2D_GetContextAttributes_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext"><code>HTMLCanvasElement.getContext()</code>https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getContextAttributes"><code>WebGLRenderingContext.getContextAttributes()</code>https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getContextAttributes</a><br></p>
+  <div class="markdown level1 remarks"><p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext"><code>HTMLCanvasElement.getContext()</code></a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getContextAttributes"><code>WebGLRenderingContext.getContextAttributes()</code></a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/getContextAttributes"> <em>See also on MDN</em> </a></p>
 </div>
 

@@ -18,6 +18,17 @@
       
       
       
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
   </head>
 
   <script type="module">
@@ -91,7 +102,7 @@
   <dl><dt>Assembly</dt><dd>CSharpToJavaScript.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>The <strong><code>BroadcastChannel</code></strong> interface represents a named channel that any {{glossary(&quot;browsing context&quot;)}} of a given {{glossary(&quot;origin&quot;)}} can subscribe to. It allows communication between different documents (in different windows, tabs, frames or iframes) of the same origin. Messages are broadcasted via a <see cref="!:BroadcastChannel/message_event"></see> event fired at all <code>BroadcastChannel</code> objects listening to the channel, except the object that sent the message.</p>
+  <div class="markdown summary"><p>The <strong><code>BroadcastChannel</code></strong> interface represents a named channel that any {{glossary(&quot;browsing context&quot;)}} of a given {{glossary(&quot;origin&quot;)}} can subscribe to. It allows communication between different documents (in different windows, tabs, frames or iframes) of the same origin. Messages are broadcasted via a BroadcastChannel/message_event event fired at all <code>BroadcastChannel</code> objects listening to the channel, except the object that sent the message.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -166,7 +177,7 @@ public class BroadcastChannel : EventTarget</code></pre>
 
   <h2 id="CSharpToJavaScript_APIs_JS_BroadcastChannel_remarks">Remarks</h2>
   <div class="markdown level0 remarks"><p>AvailableInWorkers</p><p></p>
-<p>-Another, more heavyweight, way of communicating between browser contexts: <see cref="!:ServiceWorker"></see>.<br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Broadcast_Channel_API">Broadcast Channel API overview</a><br></p>
+<p>-Another, more heavyweight, way of communicating between browser contexts: ServiceWorker.<br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Broadcast_Channel_API">Broadcast Channel API overview</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/BroadcastChannel"> <em>See also on MDN</em> </a></p>
 </div>
 
@@ -223,7 +234,7 @@ public class BroadcastChannel : EventTarget</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The read-only <strong><code>BroadcastChannel.name</code></strong> property returns a string, which uniquely identifies the given channel with its name. This name is passed to the <see cref="!:BroadcastChannel.BroadCastChannel"></see> constructor at creation time and is therefore read-only.</p>
+  <div class="markdown level1 summary"><p>The read-only <strong><code>BroadcastChannel.name</code></strong> property returns a string, which uniquely identifies the given channel with its name. This name is passed to the BroadcastChannel.BroadCastChannel constructor at creation time and is therefore read-only.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 

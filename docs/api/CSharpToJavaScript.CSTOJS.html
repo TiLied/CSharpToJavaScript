@@ -18,6 +18,17 @@
       
       
       
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
   </head>
 
   <script type="module">
@@ -149,8 +160,8 @@
 
   <a id="CSharpToJavaScript_CSTOJS__ctor_" data-uid="CSharpToJavaScript.CSTOJS.#ctor*"></a>
 
-  <h3 id="CSharpToJavaScript_CSTOJS__ctor_System_Reflection_Assembly_" data-uid="CSharpToJavaScript.CSTOJS.#ctor(System.Reflection.Assembly)">
-  CSTOJS(Assembly)
+  <h3 id="CSharpToJavaScript_CSTOJS__ctor" data-uid="CSharpToJavaScript.CSTOJS.#ctor">
+  CSTOJS()
   
   </h3>
 
@@ -159,15 +170,9 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public CSTOJS(Assembly assembly)</code></pre>
+    <pre><code class="lang-csharp hljs">public CSTOJS()</code></pre>
   </div>
 
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>assembly</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.assembly">Assembly</a></dt>
-    <dd><p>Assembly of a project, get by <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.assembly.getexecutingassembly">GetExecutingAssembly()</a></p>
-</dd>
-  </dl>
 
 
 
@@ -182,23 +187,21 @@
 
   <a id="CSharpToJavaScript_CSTOJS__ctor_" data-uid="CSharpToJavaScript.CSTOJS.#ctor*"></a>
 
-  <h3 id="CSharpToJavaScript_CSTOJS__ctor_System_Reflection_Assembly_CSharpToJavaScript_CSTOJSOptions_" data-uid="CSharpToJavaScript.CSTOJS.#ctor(System.Reflection.Assembly,CSharpToJavaScript.CSTOJSOptions)">
-  CSTOJS(Assembly, CSTOJSOptions)
+  <h3 id="CSharpToJavaScript_CSTOJS__ctor_CSharpToJavaScript_CSTOJSOptions_" data-uid="CSharpToJavaScript.CSTOJS.#ctor(CSharpToJavaScript.CSTOJSOptions)">
+  CSTOJS(CSTOJSOptions)
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>New instance of <a class="xref" href="CSharpToJavaScript.CSTOJS.html">CSTOJS</a></p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public CSTOJS(Assembly assembly, CSTOJSOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public CSTOJS(CSTOJSOptions options)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>assembly</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.assembly">Assembly</a></dt>
-    <dd><p>Assembly of a project, get by <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.assembly.getexecutingassembly">GetExecutingAssembly()</a></p>
-</dd>
     <dt><code>options</code> <a class="xref" href="CSharpToJavaScript.CSTOJSOptions.html">CSTOJSOptions</a></dt>
     <dd><p>Options of <a class="xref" href="CSharpToJavaScript.CSTOJS.html">CSTOJS</a>, see <a class="xref" href="CSharpToJavaScript.CSTOJSOptions.html">CSTOJSOptions</a>.</p>
 </dd>
@@ -254,10 +257,48 @@
 </h2>
 
 
-  <a id="CSharpToJavaScript_CSTOJS_GenerateAsync_" data-uid="CSharpToJavaScript.CSTOJS.GenerateAsync*"></a>
+  <a id="CSharpToJavaScript_CSTOJS_GenerateManyAsync_" data-uid="CSharpToJavaScript.CSTOJS.GenerateManyAsync*"></a>
 
-  <h3 id="CSharpToJavaScript_CSTOJS_GenerateAsync_System_String_" data-uid="CSharpToJavaScript.CSTOJS.GenerateAsync(System.String)">
-  GenerateAsync(string)
+  <h3 id="CSharpToJavaScript_CSTOJS_GenerateManyAsync_System_String_" data-uid="CSharpToJavaScript.CSTOJS.GenerateManyAsync(System.String)">
+  GenerateManyAsync(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Method for generating multiply js files.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task GenerateManyAsync(string path)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Full path to the folder/directory.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="CSharpToJavaScript_CSTOJS_GenerateOneAsync_" data-uid="CSharpToJavaScript.CSTOJS.GenerateOneAsync*"></a>
+
+  <h3 id="CSharpToJavaScript_CSTOJS_GenerateOneAsync_System_String_System_String_" data-uid="CSharpToJavaScript.CSTOJS.GenerateOneAsync(System.String,System.String)">
+  GenerateOneAsync(string, string)
   
   </h3>
 
@@ -266,13 +307,16 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task GenerateAsync(string path)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task GenerateOneAsync(string path, string filename = &quot;main.js&quot;)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p>Full path to cs file.</p>
+</dd>
+    <dt><code>filename</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Filename of a js file. Default: <code>main.js</code></p>
 </dd>
   </dl>
 

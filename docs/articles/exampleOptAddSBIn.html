@@ -16,6 +16,17 @@
       
       
       
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
   </head>
 
   <script type="module">
@@ -81,28 +92,26 @@
 <p>Create new c# project.</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>Make sure to use full path in &quot;GenerateAsync&quot; method!</p>
+<p>Make sure to use full path in &quot;GenerateOneAsync&quot; method!</p>
 </div>
 <p>This options will add a string at the top/bottom of file. Useful when you want to initiate a class.</p>
 <p>Program.cs</p>
-<pre><code class="lang-csharp">using System.Reflection;
-using CSharpToJavaScript;
+<pre><code class="lang-csharp">using CSharpToJavaScript;
+
 namespace TestNuget;
 
 public class Program
 {
 	public static async Task Main()
 	{
-		Assembly executingAssembly = Assembly.GetExecutingAssembly();
-		
 		CSTOJSOptions opt = new()
 			{
 				AddSBInFront = new(&quot;//Comment at the top!&quot;),
 				AddSBInEnd = new(&quot;//Comment at the bottom!&quot;)
 			};
 		
-		CSTOJS cstojs = new(executingAssembly, opt);
-		await cstojs.GenerateAsync(&quot;C:\\GitReps\\TestNuget\\TestNuget\\CSharp\\Test.cs&quot;);
+		CSTOJS cstojs = new(opt);
+		await cstojs.GenerateOneAsync(&quot;C:\\GitReps\\TestNuget\\TestNuget\\CSharp\\Test.cs&quot;);
 		
 		Console.ReadKey();
 	}

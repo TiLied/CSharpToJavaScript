@@ -18,6 +18,17 @@
       
       
       
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
   </head>
 
   <script type="module">
@@ -96,7 +107,7 @@
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+    <pre><code class="lang-csharp hljs">[To(&quot;Default&quot;)]
 public class Window : EventTarget</code></pre>
   </div>
 
@@ -165,7 +176,7 @@ public class Window : EventTarget</code></pre>
 
 
   <h2 id="CSharpToJavaScript_APIs_JS_Window_remarks">Remarks</h2>
-  <div class="markdown level0 remarks"><p>A window for a given document can be obtained using the <a class="xref" href="CSharpToJavaScript.APIs.JS.Document.html#CSharpToJavaScript_APIs_JS_Document_DefaultView">DefaultView</a> property.</p><p>A global variable, <code>window</code>, representing the window in which the script is running, is exposed to JavaScript code.</p><p>The <code>Window</code> interface is home to a variety of functions, namespaces, objects, and constructors which are not necessarily directly associated with the concept of a user interface window. However, the <code>Window</code> interface is a suitable place to include these items that need to be globally available. Many of these are documented in the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference">JavaScript Reference</a> and the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">DOM Reference</a>.</p><p>In a tabbed browser, each tab is represented by its own <code>Window</code> object; the global <code>window</code> seen by JavaScript code running within a given tab always represents the tab in which the code is running. That said, even in a tabbed browser, some properties and methods still apply to the overall window that contains the tab, such as <see cref="!:Window.ResizeTo"></see> and <see cref="!:Window.InnerHeight"></see>. Generally, anything that can't reasonably pertain to a tab pertains to the window instead.</p><p></p>
+  <div class="markdown level0 remarks"><p>A window for a given document can be obtained using the <a class="xref" href="CSharpToJavaScript.APIs.JS.Document.html#CSharpToJavaScript_APIs_JS_Document_DefaultView">DefaultView</a> property.</p><p>A global variable, <code>window</code>, representing the window in which the script is running, is exposed to JavaScript code.</p><p>The <code>Window</code> interface is home to a variety of functions, namespaces, objects, and constructors which are not necessarily directly associated with the concept of a user interface window. However, the <code>Window</code> interface is a suitable place to include these items that need to be globally available. Many of these are documented in the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference">JavaScript Reference</a> and the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">DOM Reference</a>.</p><p>In a tabbed browser, each tab is represented by its own <code>Window</code> object; the global <code>window</code> seen by JavaScript code running within a given tab always represents the tab in which the code is running. That said, even in a tabbed browser, some properties and methods still apply to the overall window that contains the tab, such as Window.ResizeTo and Window.InnerHeight. Generally, anything that can't reasonably pertain to a tab pertains to the window instead.</p><p></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window"> <em>See also on MDN</em> </a></p>
 </div>
 
@@ -185,7 +196,8 @@ public class Window : EventTarget</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Navigator ClientInformation { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public Navigator ClientInformation { get; }</code></pre>
   </div>
 
 
@@ -217,7 +229,8 @@ public class Window : EventTarget</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Closed { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public bool Closed { get; }</code></pre>
   </div>
 
 
@@ -253,7 +266,8 @@ public class Window : EventTarget</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public CustomElementRegistry CustomElements { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public CustomElementRegistry CustomElements { get; }</code></pre>
   </div>
 
 
@@ -288,7 +302,8 @@ public class Window : EventTarget</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Document Document { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public Document Document { get; }</code></pre>
   </div>
 
 
@@ -324,7 +339,8 @@ public class Window : EventTarget</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Union0 Event { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public Union0 Event { get; }</code></pre>
   </div>
 
 
@@ -361,7 +377,8 @@ public class Window : EventTarget</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public External External { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public External External { get; }</code></pre>
   </div>
 
 
@@ -396,7 +413,8 @@ public class Window : EventTarget</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Element? FrameElement { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public Element? FrameElement { get; }</code></pre>
   </div>
 
 
@@ -406,7 +424,7 @@ public class Window : EventTarget</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html">Element</a></dt>
-    <dd><p>The element which the window is embedded into. If the window isn&amp;apos;t embedded into<br>another document, or if the document into which it&amp;apos;s embedded has a different<br><a href="https://developer.mozilla.org/en-US/docs/Glossary/origin">origin</a>, the value is <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><code>null</code>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null</a> instead.</p>
+    <dd><p>The element which the window is embedded into. If the window isn&amp;apos;t embedded into<br>another document, or if the document into which it&amp;apos;s embedded has a different<br><a href="https://developer.mozilla.org/en-US/docs/Glossary/origin">origin</a>, the value is <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><code>null</code></a> instead.</p>
 </dd>
   </dl>
 
@@ -434,7 +452,8 @@ public class Window : EventTarget</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Window Frames { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public Window Frames { get; }</code></pre>
   </div>
 
 
@@ -470,7 +489,8 @@ public class Window : EventTarget</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public History History { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public History History { get; }</code></pre>
   </div>
 
 
@@ -506,7 +526,8 @@ public class Window : EventTarget</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong Length { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public ulong Length { get; }</code></pre>
   </div>
 
 
@@ -542,7 +563,8 @@ public class Window : EventTarget</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Location Location { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public Location Location { get; }</code></pre>
   </div>
 
 
@@ -561,7 +583,7 @@ public class Window : EventTarget</code></pre>
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Window_Location_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>Though <code>Window.location</code> is a <strong>read-only</strong> <code>Location</code><br>object, you can also assign a string to it. This means that you can<br>work with <code>location</code> as if it were a string in most cases:<br><code>location = &amp;apos;http://www.example.com&amp;apos;</code> is a synonym of<br><code>location.href = &amp;apos;http://www.example.com&amp;apos;</code>.</p><p>See <a class="xref" href="CSharpToJavaScript.APIs.JS.Window.html#CSharpToJavaScript_APIs_JS_Window_Location">Location</a> for all available properties.</p>
-<p>-The interface of the returned value, <a class="xref" href="CSharpToJavaScript.APIs.JS.Window.html#CSharpToJavaScript_APIs_JS_Window_Location">Location</a><br>-A similar information, but attached to the document,<br><a class="xref" href="CSharpToJavaScript.APIs.JS.Document.html#CSharpToJavaScript_APIs_JS_Document_Location">Location</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/History_API">Manipulating the browser history</a><br>-<see cref="!:Window/hashchange_event"></see><br></p>
+<p>-The interface of the returned value, <a class="xref" href="CSharpToJavaScript.APIs.JS.Window.html#CSharpToJavaScript_APIs_JS_Window_Location">Location</a><br>-A similar information, but attached to the document,<br><a class="xref" href="CSharpToJavaScript.APIs.JS.Document.html#CSharpToJavaScript_APIs_JS_Document_Location">Location</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/History_API">Manipulating the browser history</a><br>-Window/hashchange_event<br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/location"> <em>See also on MDN</em> </a></p>
 </div>
 
@@ -580,7 +602,8 @@ public class Window : EventTarget</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BarProp Locationbar { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public BarProp Locationbar { get; }</code></pre>
   </div>
 
 
@@ -618,7 +641,8 @@ public class Window : EventTarget</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BarProp Menubar { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public BarProp Menubar { get; }</code></pre>
   </div>
 
 
@@ -656,7 +680,8 @@ public class Window : EventTarget</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public string Name { get; set; }</code></pre>
   </div>
 
 
@@ -692,7 +717,8 @@ public class Window : EventTarget</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Navigator Navigator { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public Navigator Navigator { get; }</code></pre>
   </div>
 
 
@@ -727,7 +753,8 @@ public class Window : EventTarget</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public EventHandlerNonNull Onorientationchange { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public EventHandlerNonNull Onorientationchange { get; set; }</code></pre>
   </div>
 
 
@@ -754,12 +781,13 @@ public class Window : EventTarget</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <a class="xref" href="CSharpToJavaScript.APIs.JS.Window.html">Window</a> interface's<br><strong><code>opener</code></strong> property returns a reference to the window that<br>opened the window, either with <a class="xref" href="CSharpToJavaScript.APIs.JS.Window.html#CSharpToJavaScript_APIs_JS_Window_Open_System_String_System_String_System_String_">Open(string, string, string)</a>, or by navigating<br>a link with a <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#target"><code>target</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#target</a> attribute.</p>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="CSharpToJavaScript.APIs.JS.Window.html">Window</a> interface's<br><strong><code>opener</code></strong> property returns a reference to the window that<br>opened the window, either with <a class="xref" href="CSharpToJavaScript.APIs.JS.Window.html#CSharpToJavaScript_APIs_JS_Window_Open_System_String_System_String_System_String_">Open(string, string, string)</a>, or by navigating<br>a link with a <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#target"><code>target</code></a> attribute.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public dynamic Opener { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public dynamic Opener { get; set; }</code></pre>
   </div>
 
 
@@ -769,7 +797,7 @@ public class Window : EventTarget</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><span class="xref">dynamic</span></dt>
-    <dd><p>A <a class="xref" href="CSharpToJavaScript.APIs.JS.Window.html">Window</a>-like object referring to the window that opened the current<br>window (using <a class="xref" href="CSharpToJavaScript.APIs.JS.Window.html#CSharpToJavaScript_APIs_JS_Window_Open_System_String_System_String_System_String_">Open(string, string, string)</a>, or by a link with <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#target"><code>target</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#target</a> attribute set). If this window was not opened by being linked to or created by<br>another, returns <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><code>null</code>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null</a>.If the opener is not on the same origin as the current page, functionality of the<br>opener object is limited. For example, variables and functions on the window object are<br>not accessible. However, navigation of the opener window is possible, which means that<br>the opened page can open a URL in the original tab or window. In some cases, this makes<br>phishing attacks possible, where a trusted page that is opened in the original window is<br>replaced by a phishing page by the newly opened page.In the following cases, the browser does not populate <code>window.opener</code>, but<br>leaves it <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><code>null</code>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null</a>:</p>
+    <dd><p>A <a class="xref" href="CSharpToJavaScript.APIs.JS.Window.html">Window</a>-like object referring to the window that opened the current<br>window (using <a class="xref" href="CSharpToJavaScript.APIs.JS.Window.html#CSharpToJavaScript_APIs_JS_Window_Open_System_String_System_String_System_String_">Open(string, string, string)</a>, or by a link with <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#target"><code>target</code></a> attribute set). If this window was not opened by being linked to or created by<br>another, returns <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><code>null</code></a>.If the opener is not on the same origin as the current page, functionality of the<br>opener object is limited. For example, variables and functions on the window object are<br>not accessible. However, navigation of the opener window is possible, which means that<br>the opened page can open a URL in the original tab or window. In some cases, this makes<br>phishing attacks possible, where a trusted page that is opened in the original window is<br>replaced by a phishing page by the newly opened page.In the following cases, the browser does not populate <code>window.opener</code>, but<br>leaves it <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><code>null</code></a>:</p>
 </dd>
   </dl>
 
@@ -796,7 +824,8 @@ public class Window : EventTarget</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public short Orientation { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public short Orientation { get; }</code></pre>
   </div>
 
 
@@ -813,7 +842,7 @@ public class Window : EventTarget</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Window_Orientation_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>Its only possible values are <code>-90</code>, <code>0</code>, <code>90</code>, and <code>180</code>. Positive values are counterclockwise; negative values are clockwise.</p><p>This property is deprecated. Use the <see cref="!:Screen.Orientation"></see> property instead, available on the <see cref="!:Window.Screen"></see> property.</p>
+  <div class="markdown level1 remarks"><p>Its only possible values are <code>-90</code>, <code>0</code>, <code>90</code>, and <code>180</code>. Positive values are counterclockwise; negative values are clockwise.</p><p>This property is deprecated. Use the Screen.Orientation property instead, available on the Window.Screen property.</p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/orientation"> <em>See also on MDN</em> </a></p>
 </div>
 
@@ -831,7 +860,8 @@ public class Window : EventTarget</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool OriginAgentCluster { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public bool OriginAgentCluster { get; }</code></pre>
   </div>
 
 
@@ -863,7 +893,8 @@ public class Window : EventTarget</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Window? Parent { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public Window? Parent { get; }</code></pre>
   </div>
 
 
@@ -901,7 +932,8 @@ public class Window : EventTarget</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BarProp Personalbar { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public BarProp Personalbar { get; }</code></pre>
   </div>
 
 
@@ -939,7 +971,8 @@ public class Window : EventTarget</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BarProp Scrollbars { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public BarProp Scrollbars { get; }</code></pre>
   </div>
 
 
@@ -977,7 +1010,8 @@ public class Window : EventTarget</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Window Self { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public Window Self { get; }</code></pre>
   </div>
 
 
@@ -1014,7 +1048,8 @@ public class Window : EventTarget</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Status { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public string Status { get; set; }</code></pre>
   </div>
 
 
@@ -1050,7 +1085,8 @@ public class Window : EventTarget</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BarProp Statusbar { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public BarProp Statusbar { get; }</code></pre>
   </div>
 
 
@@ -1088,7 +1124,8 @@ public class Window : EventTarget</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BarProp Toolbar { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public BarProp Toolbar { get; }</code></pre>
   </div>
 
 
@@ -1126,7 +1163,8 @@ public class Window : EventTarget</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Window? Top { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public Window? Top { get; }</code></pre>
   </div>
 
 
@@ -1162,7 +1200,8 @@ public class Window : EventTarget</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Window _window { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public Window _window { get; }</code></pre>
   </div>
 
 
@@ -1202,7 +1241,8 @@ public class Window : EventTarget</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GlobalObject.Undefined Alert()</code></pre>
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public GlobalObject.Undefined Alert()</code></pre>
   </div>
 
 
@@ -1240,7 +1280,8 @@ public class Window : EventTarget</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GlobalObject.Undefined Alert(string message)</code></pre>
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public GlobalObject.Undefined Alert(string message)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1283,7 +1324,8 @@ public class Window : EventTarget</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GlobalObject.Undefined Blur()</code></pre>
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public GlobalObject.Undefined Blur()</code></pre>
   </div>
 
 
@@ -1319,7 +1361,8 @@ public class Window : EventTarget</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GlobalObject.Undefined CaptureEvents()</code></pre>
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public GlobalObject.Undefined CaptureEvents()</code></pre>
   </div>
 
 
@@ -1356,7 +1399,8 @@ public class Window : EventTarget</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GlobalObject.Undefined Close()</code></pre>
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public GlobalObject.Undefined Close()</code></pre>
   </div>
 
 
@@ -1374,7 +1418,7 @@ public class Window : EventTarget</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Window_Close_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This method can only be called on windows that were opened by a script using the<br><a class="xref" href="CSharpToJavaScript.APIs.JS.Window.html#CSharpToJavaScript_APIs_JS_Window_Open_System_String_System_String_System_String_">Open(string, string, string)</a> method, or on top-level windows that have a single history entry. If the window doesn't match these requirements, an error<br>similar to this one appears in the console:<br><code>Scripts may not close windows that were not opened by script.</code></p><p>Note also that <code>close()</code> has no effect when called on <a class="xref" href="CSharpToJavaScript.APIs.JS.Window.html">Window</a><br>objects returned by<br><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/contentWindow"><code>HTMLIFrameElement.contentWindow</code>https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/contentWindow</a>.</p>
+  <div class="markdown level1 remarks"><p>This method can only be called on windows that were opened by a script using the<br><a class="xref" href="CSharpToJavaScript.APIs.JS.Window.html#CSharpToJavaScript_APIs_JS_Window_Open_System_String_System_String_System_String_">Open(string, string, string)</a> method, or on top-level windows that have a single history entry. If the window doesn't match these requirements, an error<br>similar to this one appears in the console:<br><code>Scripts may not close windows that were not opened by script.</code></p><p>Note also that <code>close()</code> has no effect when called on <a class="xref" href="CSharpToJavaScript.APIs.JS.Window.html">Window</a><br>objects returned by<br><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/contentWindow"><code>HTMLIFrameElement.contentWindow</code></a>.</p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/close"> <em>See also on MDN</em> </a></p>
 </div>
 
@@ -1393,7 +1437,8 @@ public class Window : EventTarget</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Confirm(string message)</code></pre>
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public bool Confirm(string message)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1436,7 +1481,8 @@ public class Window : EventTarget</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GlobalObject.Undefined Focus()</code></pre>
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public GlobalObject.Undefined Focus()</code></pre>
   </div>
 
 
@@ -1467,12 +1513,13 @@ public class Window : EventTarget</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>open()</code></strong> method of the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window"><code>Window</code>https://developer.mozilla.org/en-US/docs/Web/API/Window</a> interface loads a specified resource into a new or existing browsing context (that is, a tab, a window, or an <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</a>) under a specified name.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>open()</code></strong> method of the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window"><code>Window</code></a> interface loads a specified resource into a new or existing browsing context (that is, a tab, a window, or an <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</a>) under a specified name.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Window? Open(string url, string target, string features)</code></pre>
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public Window? Open(string url, string target, string features)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1488,7 +1535,7 @@ public class Window : EventTarget</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Window.html">Window</a></dt>
-    <dd><p>A <a href="https://developer.mozilla.org/en-US/docs/Glossary/WindowProxy"><code>WindowProxy</code>https://developer.mozilla.org/en-US/docs/Glossary/WindowProxy</a> object. The returned reference can be used to access properties and methods of the new window as long as it complies with <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy">the same-origin policy</a> security requirements.</p>
+    <dd><p>A <a href="https://developer.mozilla.org/en-US/docs/Glossary/WindowProxy"><code>WindowProxy</code></a> object. The returned reference can be used to access properties and methods of the new window as long as it complies with <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy">the same-origin policy</a> security requirements.</p>
 </dd>
   </dl>
 
@@ -1499,7 +1546,7 @@ public class Window : EventTarget</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Window_Open_System_String_System_String_System_String__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>-<code>target</code> attribute documentation:-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#target"><code>&amp;lt;a&amp;gt;</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#target</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form#target"><code>&amp;lt;form&amp;gt;</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form#target</a><br><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/close"><code>window.close()</code>https://developer.mozilla.org/en-US/docs/Web/API/Window/close</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/closed"><code>window.closed</code>https://developer.mozilla.org/en-US/docs/Web/API/Window/closed</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/focus"><code>window.focus()</code>https://developer.mozilla.org/en-US/docs/Web/API/Window/focus</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/opener"><code>window.opener</code>https://developer.mozilla.org/en-US/docs/Web/API/Window/opener</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel#opener"><code>rel=&amp;quot;opener&amp;quot;</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel#opener</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel#noopener"><code>rel=&amp;quot;noopener&amp;quot;</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel#noopener</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy">Same-origin policy</a><br></p>
+  <div class="markdown level1 remarks"><p>-<code>target</code> attribute documentation:-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#target"><code>&amp;lt;a&amp;gt;</code></a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form#target"><code>&amp;lt;form&amp;gt;</code></a><br><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/close"><code>window.close()</code></a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/closed"><code>window.closed</code></a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/focus"><code>window.focus()</code></a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/opener"><code>window.opener</code></a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel#opener"><code>rel=&amp;quot;opener&amp;quot;</code></a> and <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel#noopener"><code>rel=&amp;quot;noopener&amp;quot;</code></a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy">Same-origin policy</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/open"> <em>See also on MDN</em> </a></p>
 </div>
 
@@ -1518,7 +1565,8 @@ public class Window : EventTarget</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GlobalObject.Undefined PostMessage(dynamic message, WindowPostMessageOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public GlobalObject.Undefined PostMessage(dynamic message, WindowPostMessageOptions options)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1563,7 +1611,8 @@ public class Window : EventTarget</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GlobalObject.Undefined PostMessage(dynamic message, string targetOrigin, List&lt;object&gt; transfer)</code></pre>
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public GlobalObject.Undefined PostMessage(dynamic message, string targetOrigin, List&lt;object&gt; transfer)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1610,7 +1659,8 @@ public class Window : EventTarget</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GlobalObject.Undefined Print()</code></pre>
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public GlobalObject.Undefined Print()</code></pre>
   </div>
 
 
@@ -1629,7 +1679,7 @@ public class Window : EventTarget</code></pre>
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_Window_Print_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>If the document is still loading when this function is called, then the document will finish loading before opening the print dialog.</p><p>This method will block while the print dialog is open.</p>
-<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Printing">Printing</a><br>-<see cref="!:Window.Beforeprint_event"></see> event<br>-<see cref="!:Window.Afterprint_event"></see> event<br></p>
+<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Printing">Printing</a><br>-Window.Beforeprint_event event<br>-Window.Afterprint_event event<br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/print"> <em>See also on MDN</em> </a></p>
 </div>
 
@@ -1648,7 +1698,8 @@ public class Window : EventTarget</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string? Prompt(string message, string default_)</code></pre>
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public string? Prompt(string message, string default_)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1693,7 +1744,8 @@ public class Window : EventTarget</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GlobalObject.Undefined ReleaseEvents()</code></pre>
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public GlobalObject.Undefined ReleaseEvents()</code></pre>
   </div>
 
 
@@ -1729,7 +1781,8 @@ public class Window : EventTarget</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GlobalObject.Undefined Stop()</code></pre>
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public GlobalObject.Undefined Stop()</code></pre>
   </div>
 
 

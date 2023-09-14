@@ -18,6 +18,17 @@
       
       
       
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
   </head>
 
   <script type="module">
@@ -91,7 +102,7 @@
   <dl><dt>Assembly</dt><dd>CSharpToJavaScript.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>The <strong><code>HTMLCollection</code></strong> interface represents a generic collection (array-like object similar to <see cref="!:Functions/arguments"></see>) of elements (in document order) and offers methods and properties for selecting from the list.</p>
+  <div class="markdown summary"><p>The <strong><code>HTMLCollection</code></strong> interface represents a generic collection (array-like object similar to Functions/arguments) of elements (in document order) and offers methods and properties for selecting from the list.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -150,7 +161,7 @@ public class HTMLCollection</code></pre>
 
 
   <h2 id="CSharpToJavaScript_APIs_JS_HTMLCollection_remarks">Remarks</h2>
-  <div class="markdown level0 remarks"><blockquote class="NOTE"><h5>NOTE</h5><p><strong>Note:</strong> This interface is called <code>HTMLCollection</code> for historical reasons (before the modern DOM, collections implementing this interface could only have HTML elements as their items).</p></blockquote><p>An <code>HTMLCollection</code> in the HTML DOM is live; it is automatically updated when the underlying document is changed. For this reason it is a good idea to make a copy (e.g., using <see cref="!:Array/from"></see>) to iterate over if adding, moving, or removing nodes.</p><blockquote class="NOTE"><h5>NOTE</h5><p><strong>Note:</strong> This interface was an <a href="https://stackoverflow.com/questions/74630989/why-use-domstringlist-rather-than-an-array/74641156#74641156">attempt to create an unmodifiable list</a> and only continues to be supported to not break code that&amp;apos;s already using it. Modern APIs use types that wrap around ECMAScript array types instead, so you can treat them like ECMAScript arrays, and at the same time impose additional semantics on their usage (such as making their items read-only).</p></blockquote>
+  <div class="markdown level0 remarks"><blockquote class="NOTE"><h5>NOTE</h5><p><strong>Note:</strong> This interface is called <code>HTMLCollection</code> for historical reasons (before the modern DOM, collections implementing this interface could only have HTML elements as their items).</p></blockquote><p>An <code>HTMLCollection</code> in the HTML DOM is live; it is automatically updated when the underlying document is changed. For this reason it is a good idea to make a copy (e.g., using Array/from) to iterate over if adding, moving, or removing nodes.</p><blockquote class="NOTE"><h5>NOTE</h5><p><strong>Note:</strong> This interface was an <a href="https://stackoverflow.com/questions/74630989/why-use-domstringlist-rather-than-an-array/74641156#74641156">attempt to create an unmodifiable list</a> and only continues to be supported to not break code that&amp;apos;s already using it. Modern APIs use types that wrap around ECMAScript array types instead, so you can treat them like ECMAScript arrays, and at the same time impose additional semantics on their usage (such as making their items read-only).</p></blockquote>
 <p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.NodeList.html">NodeList</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLFormControlsCollection.html">HTMLFormControlsCollection</a>, <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLOptionsCollection.html">HTMLOptionsCollection</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCollection"> <em>See also on MDN</em> </a></p>
 </div>

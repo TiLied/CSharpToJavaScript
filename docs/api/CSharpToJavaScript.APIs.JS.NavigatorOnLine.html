@@ -18,6 +18,17 @@
       
       
       
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
   </head>
 
   <script type="module">
@@ -111,7 +122,7 @@ public interface NavigatorOnLine</code></pre>
 
 
   <h2 id="CSharpToJavaScript_APIs_JS_NavigatorOnLine_remarks">Remarks</h2>
-  <div class="markdown level0 remarks"><p>Browsers implement this property differently.</p><p>In Chrome and Safari, if the browser is not able to connect to a local area network<br>(LAN) or a router, it is offline; all other conditions return <code>true</code>. So<br>while you can assume that the browser is offline when it returns a <code>false</code><br>value, you cannot assume that a true value necessarily means that the browser can access<br>the internet. You could be getting false positives, such as in cases where the computer<br>is running a virtualization software that has virtual ethernet adapters that are always<br>&amp;quot;connected.&amp;quot; Therefore, if you really want to determine the online status of the<br>browser, you should develop additional means for checking.</p><p>In Firefox, switching the browser to offline mode sends a <code>false</code> value. Until Firefox<br>41, all other conditions returned a <code>true</code> value; testing actual behavior on Nightly 68 on<br>Windows shows that it only looks for LAN connection like Chrome and Safari giving false<br>positives.</p><p>You can see changes in the network state by listening to the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/online_event"><code>online</code>https://developer.mozilla.org/en-US/docs/Web/API/Window/online_event</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/offline_event"><code>offline</code>https://developer.mozilla.org/en-US/docs/Web/API/Window/offline_event</a> events.</p>
+  <div class="markdown level0 remarks"><p>Browsers implement this property differently.</p><p>In Chrome and Safari, if the browser is not able to connect to a local area network<br>(LAN) or a router, it is offline; all other conditions return <code>true</code>. So<br>while you can assume that the browser is offline when it returns a <code>false</code><br>value, you cannot assume that a true value necessarily means that the browser can access<br>the internet. You could be getting false positives, such as in cases where the computer<br>is running a virtualization software that has virtual ethernet adapters that are always<br>&amp;quot;connected.&amp;quot; Therefore, if you really want to determine the online status of the<br>browser, you should develop additional means for checking.</p><p>In Firefox, switching the browser to offline mode sends a <code>false</code> value. Until Firefox<br>41, all other conditions returned a <code>true</code> value; testing actual behavior on Nightly 68 on<br>Windows shows that it only looks for LAN connection like Chrome and Safari giving false<br>positives.</p><p>You can see changes in the network state by listening to the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/online_event"><code>online</code></a> and <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/offline_event"><code>offline</code></a> events.</p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/onLine"> <em>See also on MDN</em> </a></p>
 </div>
 

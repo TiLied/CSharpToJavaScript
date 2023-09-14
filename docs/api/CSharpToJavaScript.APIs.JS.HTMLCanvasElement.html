@@ -18,6 +18,17 @@
       
       
       
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
   </head>
 
   <script type="module">
@@ -531,7 +542,7 @@ public class HTMLCanvasElement : HTMLElement, ParentNode, NonDocumentTypeChildNo
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>HTMLCanvasElement.height</code></strong> property is a<br>positive <code>integer</code> reflecting the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas#height"><code>height</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas#height</a> HTML<br>attribute of the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas">canvas</a> element interpreted in CSS pixels. When the<br>attribute is not specified, or if it is set to an invalid value, like a negative, the<br>default value of <code>150</code> is used.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>HTMLCanvasElement.height</code></strong> property is a<br>positive <code>integer</code> reflecting the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas#height"><code>height</code></a> HTML<br>attribute of the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas">canvas</a> element interpreted in CSS pixels. When the<br>attribute is not specified, or if it is set to an invalid value, like a negative, the<br>default value of <code>150</code> is used.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -570,7 +581,7 @@ public ulong Height { get; set; }</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>HTMLCanvasElement.width</code></strong> property is a<br>positive <code>integer</code> reflecting the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas#width"><code>width</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas#width</a> HTML<br>attribute of the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas">canvas</a> element interpreted in CSS pixels. When the<br>attribute is not specified, or if it is set to an invalid value, like a negative, the<br>default value of <code>300</code> is used.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>HTMLCanvasElement.width</code></strong> property is a<br>positive <code>integer</code> reflecting the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas#width"><code>width</code></a> HTML<br>attribute of the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas">canvas</a> element interpreted in CSS pixels. When the<br>attribute is not specified, or if it is set to an invalid value, like a negative, the<br>default value of <code>300</code> is used.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -613,7 +624,7 @@ public ulong Width { get; set; }</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The<br><strong><code>HTMLCanvasElement.getContext()</code></strong> method returns a drawing<br>context on the canvas, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><code>null</code>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null</a> if the context identifier is not<br>supported, or the canvas has already been set to a different context mode.</p>
+  <div class="markdown level1 summary"><p>The<br><strong><code>HTMLCanvasElement.getContext()</code></strong> method returns a drawing<br>context on the canvas, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><code>null</code></a> if the context identifier is not<br>supported, or the canvas has already been set to a different context mode.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -645,7 +656,7 @@ public Union27? GetContext(string contextId, dynamic options)</code></pre>
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_HTMLCanvasElement_GetContext_System_String_System_Object__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>Later calls to this method on the same canvas element, with the same<br><code>contextType</code> argument, will always return the same drawing context instance<br>as was returned the first time the method was invoked. It is not possible to get a<br>different drawing context object on a given canvas element.</p>
-<p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLCanvasElement.html">HTMLCanvasElement</a>: Interface used to define the <code>HTMLCanvasElement.getContext()</code> method<br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.OffscreenCanvas.html#CSharpToJavaScript_APIs_JS_OffscreenCanvas_GetContext_CSharpToJavaScript_APIs_JS_OffscreenRenderingContextId_System_Object_">GetContext(OffscreenRenderingContextId, dynamic)</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.CanvasRenderingContext2D.html#CSharpToJavaScript_APIs_JS_CanvasRenderingContext2D_GetContextAttributes">GetContextAttributes()</a>, <see cref="!:WebGLRenderingContext.GetContextAttributes"></see><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.CanvasRenderingContext2D.html">CanvasRenderingContext2D</a>, <a class="xref" href="CSharpToJavaScript.APIs.JS.ImageBitmapRenderingContext.html">ImageBitmapRenderingContext</a>,<br><see cref="!:WebGLRenderingContext"></see>, <see cref="!:WebGL2RenderingContext"></see>, <see cref="!:GPUCanvasContext"></see>: Available rendering contexts<br>-<a href="https://en.wikipedia.org/wiki/DCI-P3">DCI-P3 color space</a> on Wikipedia<br>-<a href="https://en.wikipedia.org/wiki/SRGB">sRGB color space</a> on Wikipedia<br></p>
+<p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLCanvasElement.html">HTMLCanvasElement</a>: Interface used to define the <code>HTMLCanvasElement.getContext()</code> method<br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.OffscreenCanvas.html#CSharpToJavaScript_APIs_JS_OffscreenCanvas_GetContext_CSharpToJavaScript_APIs_JS_OffscreenRenderingContextId_System_Object_">GetContext(OffscreenRenderingContextId, dynamic)</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.CanvasRenderingContext2D.html#CSharpToJavaScript_APIs_JS_CanvasRenderingContext2D_GetContextAttributes">GetContextAttributes()</a>, WebGLRenderingContext.GetContextAttributes<br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.CanvasRenderingContext2D.html">CanvasRenderingContext2D</a>, <a class="xref" href="CSharpToJavaScript.APIs.JS.ImageBitmapRenderingContext.html">ImageBitmapRenderingContext</a>,<br>WebGLRenderingContext, WebGL2RenderingContext, GPUCanvasContext: Available rendering contexts<br>-<a href="https://en.wikipedia.org/wiki/DCI-P3">DCI-P3 color space</a> on Wikipedia<br>-<a href="https://en.wikipedia.org/wiki/SRGB">sRGB color space</a> on Wikipedia<br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext"> <em>See also on MDN</em> </a></p>
 </div>
 
@@ -659,7 +670,7 @@ public Union27? GetContext(string contextId, dynamic options)</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>HTMLCanvasElement.toBlob()</code></strong> method creates a <see cref="!:Blob"></see> object representing the image contained in the canvas.<br>This file may be cached on the disk or stored in memory at the discretion of the user agent.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>HTMLCanvasElement.toBlob()</code></strong> method creates a Blob object representing the image contained in the canvas.<br>This file may be cached on the disk or stored in memory at the discretion of the user agent.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -693,7 +704,7 @@ public GlobalObject.Undefined ToBlob(BlobCallback callback, string type, dynamic
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_HTMLCanvasElement_ToBlob_CSharpToJavaScript_APIs_JS_BlobCallback_System_String_System_Object__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>The desired file format and image quality may be specified.<br>If the file format is not specified, or if the given format is not supported, then the data will be exported as <code>image/png</code>.<br>Browsers are required to support <code>image/png</code>; many will support additional formats including <code>image/jpeg</code> and <code>image/webp</code>.</p><p>The created image will have a resolution of 96dpi for file formats that support encoding resolution metadata.</p>
-<p>-<see cref="!:Blob"></see><br></p>
+<p>-Blob<br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toBlob"> <em>See also on MDN</em> </a></p>
 </div>
 

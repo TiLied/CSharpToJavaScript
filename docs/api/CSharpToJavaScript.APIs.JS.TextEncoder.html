@@ -18,6 +18,17 @@
       
       
       
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
   </head>
 
   <script type="module">
@@ -213,7 +224,7 @@ public byte Encode(string input)</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
-    <dd><p>A <see cref="!:Uint8Array"></see> object.</p>
+    <dd><p>A Uint8Array object.</p>
 </dd>
   </dl>
 
@@ -238,7 +249,7 @@ public byte Encode(string input)</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>TextEncoder.encodeInto()</code></strong> method takes a<br>string to encode and a destination <see cref="!:Uint8Array"></see> to put resulting UTF-8 encoded text into, and returns a dictionary object indicating the<br>progress of the encoding.<br>This is potentially more performant than the older <code>encode()</code> method — especially when the target buffer is a view into a Wasm heap.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>TextEncoder.encodeInto()</code></strong> method takes a<br>string to encode and a destination Uint8Array to put resulting UTF-8 encoded text into, and returns a dictionary object indicating the<br>progress of the encoding.<br>This is potentially more performant than the older <code>encode()</code> method — especially when the target buffer is a view into a Wasm heap.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 

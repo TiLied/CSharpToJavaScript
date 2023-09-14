@@ -18,6 +18,17 @@
       
       
       
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
   </head>
 
   <script type="module">
@@ -91,7 +102,7 @@
   <dl><dt>Assembly</dt><dd>CSharpToJavaScript.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>The read-only <strong><code>target</code></strong> property of the<br><a class="xref" href="CSharpToJavaScript.APIs.JS.Event.html">Event</a> interface is a reference to the object onto which the event was<br>dispatched. It is different from <a class="xref" href="CSharpToJavaScript.APIs.JS.Event.html#CSharpToJavaScript_APIs_JS_Event_CurrentTarget">CurrentTarget</a> when the event<br>handler is called during the bubbling or capturing phase of the event.</p>
+  <div class="markdown summary"><p>The <strong><code>EventTarget</code></strong> interface is implemented by objects that can receive events and may have listeners for them.<br>In other words, any target of events implements the three methods associated with this interface.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -165,8 +176,9 @@ public class EventTarget</code></pre>
 
 
   <h2 id="CSharpToJavaScript_APIs_JS_EventTarget_remarks">Remarks</h2>
-  <div class="markdown level0 remarks"><p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Event/Comparison_of_Event_Targets">Comparison of Event Targets</a><br></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Event/target"> <em>See also on MDN</em> </a></p>
+  <div class="markdown level0 remarks"><p><a class="xref" href="CSharpToJavaScript.APIs.JS.Element.html">Element</a>, and its children, as well as <a class="xref" href="CSharpToJavaScript.APIs.JS.Document.html">Document</a> and <a class="xref" href="CSharpToJavaScript.APIs.JS.Window.html">Window</a>, are the most common event targets,<br>but other objects can be event targets, too.<br>For example <a class="xref" href="CSharpToJavaScript.APIs.JS.XMLHttpRequest.html">XMLHttpRequest</a>, AudioNode, and AudioContext are also event targets.</p><p>Many event targets (including elements, documents, and windows) also support setting <a href="https://developer.mozilla.org/en-US/docs/Web/Events/Event_handlers">event handlers</a> via <code>onevent</code> properties and attributes.</p><p></p>
+<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/Events">Event reference</a> – the events available in the platform.<br>-<a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.Event.html">Event</a> interface<br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget"> <em>See also on MDN</em> </a></p>
 </div>
 
 
@@ -198,7 +210,7 @@ public class EventTarget</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_EventTarget__ctor_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><blockquote class="NOTE"><h5>NOTE</h5><p><strong>Note:</strong> It is fairly rare to explicitly call this constructor. Most of the time, this constructor is used inside the constructor of an object extending the <a class="xref" href="CSharpToJavaScript.APIs.JS.EventTarget.html">EventTarget</a> interface, using the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/super"><code>super</code>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/super</a> keyword.</p></blockquote>
+  <div class="markdown level1 remarks"><blockquote class="NOTE"><h5>NOTE</h5><p><strong>Note:</strong> It is fairly rare to explicitly call this constructor. Most of the time, this constructor is used inside the constructor of an object extending the <a class="xref" href="CSharpToJavaScript.APIs.JS.EventTarget.html">EventTarget</a> interface, using the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/super"><code>super</code></a> keyword.</p></blockquote>
 <p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.EventTarget.html">EventTarget</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/EventTarget"> <em>See also on MDN</em> </a></p>
 </div>
@@ -412,7 +424,7 @@ public class EventTarget</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_EventTarget_DispatchEvent_CSharpToJavaScript_APIs_JS_Event__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>Calling <code>dispatchEvent()</code> is the last step to <strong>firing an event</strong>. The event<br>should have already been created and initialized using an <see cref="!:Event/Event"></see> constructor.</p><blockquote class="NOTE"><h5>NOTE</h5><p><strong>Note:</strong> When calling this method, the <a class="xref" href="CSharpToJavaScript.APIs.JS.Event.html#CSharpToJavaScript_APIs_JS_Event_Target">Target</a> property is initialized to the current <code>EventTarget</code>.</p></blockquote><p>Unlike &amp;quot;native&amp;quot; events, which are fired by the browser and invoke event handlers<br>asynchronously via the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Event_loop">event loop</a>,<br><code>dispatchEvent()</code> invokes event handlers <strong>synchronously</strong>. All applicable event<br>handlers are called and return before <code>dispatchEvent()</code> returns.</p>
+  <div class="markdown level1 remarks"><p>Calling <code>dispatchEvent()</code> is the last step to <strong>firing an event</strong>. The event<br>should have already been created and initialized using an Event/Event constructor.</p><blockquote class="NOTE"><h5>NOTE</h5><p><strong>Note:</strong> When calling this method, the <a class="xref" href="CSharpToJavaScript.APIs.JS.Event.html#CSharpToJavaScript_APIs_JS_Event_Target">Target</a> property is initialized to the current <code>EventTarget</code>.</p></blockquote><p>Unlike &amp;quot;native&amp;quot; events, which are fired by the browser and invoke event handlers<br>asynchronously via the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Event_loop">event loop</a>,<br><code>dispatchEvent()</code> invokes event handlers <strong>synchronously</strong>. All applicable event<br>handlers are called and return before <code>dispatchEvent()</code> returns.</p>
 <p>-The <a href="https://developer.mozilla.org/en-US/docs/Web/API/Event">Event object reference</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/dispatchEvent"> <em>See also on MDN</em> </a></p>
 </div>
@@ -459,7 +471,7 @@ public class EventTarget</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_EventTarget_RemoveEventListener_System_String_CSharpToJavaScript_APIs_JS_EventListener_CSharpToJavaScript_APIs_JS_Union2__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>Calling <code>removeEventListener()</code> with arguments that do not identify any<br>currently registered <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#the_event_listener_callback">event listener</a> on the <code>EventTarget</code> has no<br>effect.</p><p>If an <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#the_event_listener_callback">event listener</a> is removed from an <a class="xref" href="CSharpToJavaScript.APIs.JS.EventTarget.html">EventTarget</a> while another listener of the target is processing an event, it will not be triggered by the event. However, it can be reattached.</p><blockquote class="WARNING"><h5>WARNING</h5><p><strong>Warning:</strong> If a listener is registered twice, one with the <strong>capture</strong> flag set and one without, you must remove each one separately. Removal of a capturing listener does not affect a non-capturing version of the same listener, and vice versa.</p></blockquote><p>Event listeners can also be removed by passing an <a class="xref" href="CSharpToJavaScript.APIs.JS.AbortSignal.html">AbortSignal</a> to an <see cref="!:EventTarget/addEventListener"></see> and then later calling <see cref="!:AbortController/abort"></see> on the controller owning the signal.</p>
+  <div class="markdown level1 remarks"><p>Calling <code>removeEventListener()</code> with arguments that do not identify any<br>currently registered <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#the_event_listener_callback">event listener</a> on the <code>EventTarget</code> has no<br>effect.</p><p>If an <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#the_event_listener_callback">event listener</a> is removed from an <a class="xref" href="CSharpToJavaScript.APIs.JS.EventTarget.html">EventTarget</a> while another listener of the target is processing an event, it will not be triggered by the event. However, it can be reattached.</p><blockquote class="WARNING"><h5>WARNING</h5><p><strong>Warning:</strong> If a listener is registered twice, one with the <strong>capture</strong> flag set and one without, you must remove each one separately. Removal of a capturing listener does not affect a non-capturing version of the same listener, and vice versa.</p></blockquote><p>Event listeners can also be removed by passing an <a class="xref" href="CSharpToJavaScript.APIs.JS.AbortSignal.html">AbortSignal</a> to an EventTarget/addEventListener and then later calling AbortController/abort on the controller owning the signal.</p>
 <p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.EventTarget.html#CSharpToJavaScript_APIs_JS_EventTarget_AddEventListener_System_String_System_Action_CSharpToJavaScript_APIs_JS_Union1_">AddEventListener(string, Action?, Union1)</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/removeEventListener"> <em>See also on MDN</em> </a></p>
 </div>

@@ -18,6 +18,17 @@
       
       
       
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
   </head>
 
   <script type="module">
@@ -91,7 +102,7 @@
   <dl><dt>Assembly</dt><dd>CSharpToJavaScript.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>The <strong><code>StorageManager</code></strong> interface of the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Storage_API">Storage API</a> provides an interface for managing persistence permissions and estimating available storage. You can get a reference to this interface using either <see cref="!:Navigator.Storage"></see> or <see cref="!:WorkerNavigator.Storage"></see>.</p>
+  <div class="markdown summary"><p>The <strong><code>StorageManager</code></strong> interface of the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Storage_API">Storage API</a> provides an interface for managing persistence permissions and estimating available storage. You can get a reference to this interface using either Navigator.Storage or WorkerNavigator.Storage.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -170,7 +181,7 @@ public class StorageManager</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="CSharpToJavaScript.APIs.JS.StorageEstimate.html">StorageEstimate</a>&gt;</dt>
-    <dd><p>A <see cref="!:'Promise'"></see> that resolves to an object with the following properties:<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> The returned values are not exact: between compression, deduplication, and obfuscation for security reasons, they will be imprecise.</blockquote>You may find that the <code>quota</code> varies from origin to origin. This variance is based on factors such as:
+    <dd><p>A 'Promise' that resolves to an object with the following properties:<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> The returned values are not exact: between compression, deduplication, and obfuscation for security reasons, they will be imprecise.</blockquote>You may find that the <code>quota</code> varies from origin to origin. This variance is based on factors such as:
 </dd>
   </dl>
 
@@ -181,8 +192,8 @@ public class StorageManager</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_StorageManager_Estimate_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This method operates asynchronously, so it returns a <see cref="!:Promise"></see> which resolves once the information is available. The promise's fulfillment handler is called with an object containing the usage and quota data.</p>
-<p>-Storage API<br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.Storage.html">Storage</a>, the object returned by <see cref="!:Window.LocalStorage"></see><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.StorageManager.html">StorageManager</a><br>-<see cref="!:Navigator.Storage"></see><br></p>
+  <div class="markdown level1 remarks"><p>This method operates asynchronously, so it returns a Promise which resolves once the information is available. The promise's fulfillment handler is called with an object containing the usage and quota data.</p>
+<p>-Storage API<br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.Storage.html">Storage</a>, the object returned by Window.LocalStorage<br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.StorageManager.html">StorageManager</a><br>-Navigator.Storage<br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/StorageManager/estimate"> <em>See also on MDN</em> </a></p>
 </div>
 
@@ -208,7 +219,7 @@ public class StorageManager</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
-    <dd><p>A <see cref="!:'Promise'"></see> that resolves to a <see cref="!:'Boolean'"></see>.</p>
+    <dd><p>A 'Promise' that resolves to a 'Boolean'.</p>
 </dd>
   </dl>
 
@@ -244,7 +255,7 @@ public class StorageManager</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
-    <dd><p>A <see cref="!:'Promise'"></see> that resolves to a <see cref="!:'Boolean'"></see>.</p>
+    <dd><p>A 'Promise' that resolves to a 'Boolean'.</p>
 </dd>
   </dl>
 

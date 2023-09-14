@@ -18,6 +18,17 @@
       
       
       
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
   </head>
 
   <script type="module">
@@ -234,7 +245,7 @@ public class History</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>History.state</code></strong> property<br>returns a value representing the state at the top of the history stack. This is<br>a way to look at the state without having to wait for a <see cref="!:Window/popstate_event"></see> event.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>History.state</code></strong> property<br>returns a value representing the state at the top of the history stack. This is<br>a way to look at the state without having to wait for a Window/popstate_event event.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -249,7 +260,7 @@ public class History</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><span class="xref">dynamic</span></dt>
-    <dd><p>The state at the top of the history stack. The value is <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><code>null</code>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null</a> until the<br><a class="xref" href="CSharpToJavaScript.APIs.JS.History.html#CSharpToJavaScript_APIs_JS_History_PushState_System_Object_System_String_System_String_">PushState(dynamic, string, string?)</a> or<br><a class="xref" href="CSharpToJavaScript.APIs.JS.History.html#CSharpToJavaScript_APIs_JS_History_ReplaceState_System_Object_System_String_System_String_">ReplaceState(dynamic, string, string?)</a> method is used.</p>
+    <dd><p>The state at the top of the history stack. The value is <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><code>null</code></a> until the<br><a class="xref" href="CSharpToJavaScript.APIs.JS.History.html#CSharpToJavaScript_APIs_JS_History_PushState_System_Object_System_String_System_String_">PushState(dynamic, string, string?)</a> or<br><a class="xref" href="CSharpToJavaScript.APIs.JS.History.html#CSharpToJavaScript_APIs_JS_History_ReplaceState_System_Object_System_String_System_String_">ReplaceState(dynamic, string, string?)</a> method is used.</p>
 </dd>
   </dl>
 
@@ -257,7 +268,7 @@ public class History</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_History_State_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/History_API/Working_with_the_History_API">Working with the History API</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/History/pushState"><code>History.pushState()</code>https://developer.mozilla.org/en-US/docs/Web/API/History/pushState</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/History/replaceState"><code>History.replaceState()</code>https://developer.mozilla.org/en-US/docs/Web/API/History/replaceState</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/PopStateEvent/state"><code>PopStateEvent.state</code>https://developer.mozilla.org/en-US/docs/Web/API/PopStateEvent/state</a><br></p>
+  <div class="markdown level1 remarks"><p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/History_API/Working_with_the_History_API">Working with the History API</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/History/pushState"><code>History.pushState()</code></a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/History/replaceState"><code>History.replaceState()</code></a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/PopStateEvent/state"><code>PopStateEvent.state</code></a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/History/state"> <em>See also on MDN</em> </a></p>
 </div>
 
@@ -298,7 +309,7 @@ public class History</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_History_Back_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>It has the same<br>effect as calling <a class="xref" href="CSharpToJavaScript.APIs.JS.History.html#CSharpToJavaScript_APIs_JS_History_Go_System_Int64_">Go(long)</a>. If there is no previous<br>page, this method call does nothing.</p><p>This method is <a href="https://developer.mozilla.org/en-US/docs/Glossary/asynchronous">asynchronous</a>. Add a listener for the<br><see cref="!:Window/popstate_event"></see> event in order to determine when the navigation has completed.</p>
+  <div class="markdown level1 remarks"><p>It has the same<br>effect as calling <a class="xref" href="CSharpToJavaScript.APIs.JS.History.html#CSharpToJavaScript_APIs_JS_History_Go_System_Int64_">Go(long)</a>. If there is no previous<br>page, this method call does nothing.</p><p>This method is <a href="https://developer.mozilla.org/en-US/docs/Glossary/asynchronous">asynchronous</a>. Add a listener for the<br>Window/popstate_event event in order to determine when the navigation has completed.</p>
 <p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.History.html">History</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/History_API/Working_with_the_History_API">Working with the History API</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/History/back"> <em>See also on MDN</em> </a></p>
 </div>
@@ -336,8 +347,8 @@ public class History</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_History_Forward_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This method is {{glossary("asynchronous")}}. Add a listener for the <see cref="!:Window/popstate_event"></see> event in order to determine when the navigation has completed.</p>
-<p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.History.html">History</a><br>-<see cref="!:Window/popstate_event"></see><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/History_API/Working_with_the_History_API">Working with the History API</a><br></p>
+  <div class="markdown level1 remarks"><p>This method is {{glossary("asynchronous")}}. Add a listener for the Window/popstate_event event in order to determine when the navigation has completed.</p>
+<p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.History.html">History</a><br>-Window/popstate_event<br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/History_API/Working_with_the_History_API">Working with the History API</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/History/forward"> <em>See also on MDN</em> </a></p>
 </div>
 
@@ -379,8 +390,8 @@ public class History</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_History_Go_System_Int64__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This method is <a href="https://developer.mozilla.org/en-US/docs/Glossary/asynchronous">asynchronous</a>. Add a listener for the<br><see cref="!:Window/popstate_event"></see> event in order to determine when the navigation has completed.</p>
-<p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.History.html">History</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.History.html#CSharpToJavaScript_APIs_JS_History_Back">Back()</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.History.html#CSharpToJavaScript_APIs_JS_History_Forward">Forward()</a><br>-<see cref="!:Window/popstate_event"></see> event<br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/History_API/Working_with_the_History_API">Working with the History API</a><br></p>
+  <div class="markdown level1 remarks"><p>This method is <a href="https://developer.mozilla.org/en-US/docs/Glossary/asynchronous">asynchronous</a>. Add a listener for the<br>Window/popstate_event event in order to determine when the navigation has completed.</p>
+<p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.History.html">History</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.History.html#CSharpToJavaScript_APIs_JS_History_Back">Back()</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.History.html#CSharpToJavaScript_APIs_JS_History_Forward">Forward()</a><br>-Window/popstate_event event<br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/History_API/Working_with_the_History_API">Working with the History API</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/History/go"> <em>See also on MDN</em> </a></p>
 </div>
 
@@ -426,7 +437,7 @@ public class History</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_History_PushState_System_Object_System_String_System_String__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This method is {{glossary("asynchronous")}}. Add a listener for the <see cref="!:Window/popstate_event"></see> event in order to determine when the navigation has completed. The <code>state</code> parameter will be available in it.</p>
+  <div class="markdown level1 remarks"><p>This method is {{glossary("asynchronous")}}. Add a listener for the Window/popstate_event event in order to determine when the navigation has completed. The <code>state</code> parameter will be available in it.</p>
 <p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/History_API/Working_with_the_History_API">Working with the History API</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/popstate_event">Window: popstate event</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/History/pushState"> <em>See also on MDN</em> </a></p>
 </div>
@@ -473,7 +484,7 @@ public class History</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_History_ReplaceState_System_Object_System_String_System_String__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This method is {{glossary("asynchronous")}}. Add a listener for the <see cref="!:Window/popstate_event"></see> event in order to determine when the navigation has completed. The <code>state</code> parameter will be available in it.</p>
+  <div class="markdown level1 remarks"><p>This method is {{glossary("asynchronous")}}. Add a listener for the Window/popstate_event event in order to determine when the navigation has completed. The <code>state</code> parameter will be available in it.</p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/History/replaceState"> <em>See also on MDN</em> </a></p>
 </div>
 

@@ -18,6 +18,17 @@
       
       
       
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
   </head>
 
   <script type="module">
@@ -211,7 +222,7 @@ public class MessageEvent : Event</code></pre>
 
   <h2 id="CSharpToJavaScript_APIs_JS_MessageEvent_remarks">Remarks</h2>
   <div class="markdown level0 remarks"><p>This is used to represent messages in:</p><p>The action triggered by this event is defined in a function set as the event handler for the relevant <code>message</code> event (e.g. using an <code>onmessage</code> handler as listed above).</p><p>AvailableInWorkers<br></p>
-<p>-<see cref="!:ExtendableMessageEvent"></see> — similar to this interface but used in interfaces that needs to give more flexibility to authors.<br></p>
+<p>-ExtendableMessageEvent — similar to this interface but used in interfaces that needs to give more flexibility to authors.<br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent"> <em>See also on MDN</em> </a></p>
 </div>
 
@@ -251,7 +262,7 @@ public class MessageEvent : Event</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_MessageEvent__ctor_System_String_CSharpToJavaScript_APIs_JS_MessageEventInit__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>-<see cref="!:ExtendableMessageEvent"></see> — similar to this interface but used in interfaces that needs to give more flexibility to authors.<br></p>
+  <div class="markdown level1 remarks"><p>-ExtendableMessageEvent — similar to this interface but used in interfaces that needs to give more flexibility to authors.<br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent/MessageEvent"> <em>See also on MDN</em> </a></p>
 </div>
 
@@ -284,7 +295,7 @@ public class MessageEvent : Event</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><span class="xref">dynamic</span></dt>
-    <dd><p>The data sent by the message emitter; this can be any data type.If the data is sent by a <see cref="!:WebSocket"></see> connector, the type of this property depends on the type of the WebSocket message and the value of <see cref="!:WebSocket.BinaryType"></see>.</p>
+    <dd><p>The data sent by the message emitter; this can be any data type.If the data is sent by a WebSocket connector, the type of this property depends on the type of the WebSocket message and the value of WebSocket.BinaryType.</p>
 </dd>
   </dl>
 
@@ -292,7 +303,7 @@ public class MessageEvent : Event</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_MessageEvent_Data_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>-<see cref="!:ExtendableMessageEvent"></see> — similar to this interface but used in<br>interfaces that needs to give more flexibility to authors.<br></p>
+  <div class="markdown level1 remarks"><p>-ExtendableMessageEvent — similar to this interface but used in<br>interfaces that needs to give more flexibility to authors.<br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent/data"> <em>See also on MDN</em> </a></p>
 </div>
 
@@ -329,7 +340,7 @@ public class MessageEvent : Event</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_MessageEvent_LastEventId_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>-<see cref="!:ExtendableMessageEvent"></see> — similar to this interface but used in<br>interfaces that needs to give more flexibility to authors.<br></p>
+  <div class="markdown level1 remarks"><p>-ExtendableMessageEvent — similar to this interface but used in<br>interfaces that needs to give more flexibility to authors.<br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent/lastEventId"> <em>See also on MDN</em> </a></p>
 </div>
 
@@ -366,7 +377,7 @@ public class MessageEvent : Event</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_MessageEvent_Origin_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>-<see cref="!:ExtendableMessageEvent"></see> — similar to this interface but used in<br>interfaces that needs to give more flexibility to authors.<br></p>
+  <div class="markdown level1 remarks"><p>-ExtendableMessageEvent — similar to this interface but used in<br>interfaces that needs to give more flexibility to authors.<br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent/origin"> <em>See also on MDN</em> </a></p>
 </div>
 
@@ -403,7 +414,7 @@ public class MessageEvent : Event</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_MessageEvent_Ports_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>-<see cref="!:ExtendableMessageEvent"></see> — similar to this interface but used in<br>interfaces that needs to give more flexibility to authors.<br></p>
+  <div class="markdown level1 remarks"><p>-ExtendableMessageEvent — similar to this interface but used in<br>interfaces that needs to give more flexibility to authors.<br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent/ports"> <em>See also on MDN</em> </a></p>
 </div>
 
@@ -417,7 +428,7 @@ public class MessageEvent : Event</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>source</code></strong> read-only property of the<br><a class="xref" href="CSharpToJavaScript.APIs.JS.MessageEvent.html">MessageEvent</a> interface is a <code>MessageEventSource</code> (which can be<br>a {{glossary(&quot;WindowProxy&quot;)}}, <a class="xref" href="CSharpToJavaScript.APIs.JS.MessagePort.html">MessagePort</a>, or<br><see cref="!:ServiceWorker"></see> object) representing the message emitter.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>source</code></strong> read-only property of the<br><a class="xref" href="CSharpToJavaScript.APIs.JS.MessageEvent.html">MessageEvent</a> interface is a <code>MessageEventSource</code> (which can be<br>a {{glossary(&quot;WindowProxy&quot;)}}, <a class="xref" href="CSharpToJavaScript.APIs.JS.MessagePort.html">MessagePort</a>, or<br>ServiceWorker object) representing the message emitter.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -432,7 +443,7 @@ public class MessageEvent : Event</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Union45.html">Union45</a>?</dt>
-    <dd><p>a <code>MessageEventSource</code> (which can be a <a href="https://developer.mozilla.org/en-US/docs/Glossary/WindowProxy">WindowProxy</a>,<br><a class="xref" href="CSharpToJavaScript.APIs.JS.MessagePort.html">MessagePort</a>, or <see cref="!:ServiceWorker"></see> object) representing the<br>message emitter.</p>
+    <dd><p>a <code>MessageEventSource</code> (which can be a <a href="https://developer.mozilla.org/en-US/docs/Glossary/WindowProxy">WindowProxy</a>,<br><a class="xref" href="CSharpToJavaScript.APIs.JS.MessagePort.html">MessagePort</a>, or ServiceWorker object) representing the<br>message emitter.</p>
 </dd>
   </dl>
 
@@ -440,7 +451,7 @@ public class MessageEvent : Event</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_MessageEvent_Source_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>-<see cref="!:ExtendableMessageEvent"></see> — similar to this interface but used in<br>interfaces that needs to give more flexibility to authors.<br></p>
+  <div class="markdown level1 remarks"><p>-ExtendableMessageEvent — similar to this interface but used in<br>interfaces that needs to give more flexibility to authors.<br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent/source"> <em>See also on MDN</em> </a></p>
 </div>
 

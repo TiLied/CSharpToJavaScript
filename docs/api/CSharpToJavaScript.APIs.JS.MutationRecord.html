@@ -18,6 +18,17 @@
       
       
       
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
   </head>
 
   <script type="module">
@@ -209,7 +220,7 @@ public class MutationRecord</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>If the record&amp;apos;s <a href="https://developer.mozilla.org/en-US/docs/Web/API/MutationRecord/type"><code>type</code>https://developer.mozilla.org/en-US/docs/Web/API/MutationRecord/type</a> is <code>attributes</code>, this is a string representing the name of the mutated attribute of the mutation target.If the record&amp;apos;s <a href="https://developer.mozilla.org/en-US/docs/Web/API/MutationRecord/type"><code>type</code>https://developer.mozilla.org/en-US/docs/Web/API/MutationRecord/type</a> is not <code>attributes</code>, this is <code>null</code>.</p>
+    <dd><p>If the record&amp;apos;s <a href="https://developer.mozilla.org/en-US/docs/Web/API/MutationRecord/type"><code>type</code></a> is <code>attributes</code>, this is a string representing the name of the mutated attribute of the mutation target.If the record&amp;apos;s <a href="https://developer.mozilla.org/en-US/docs/Web/API/MutationRecord/type"><code>type</code></a> is not <code>attributes</code>, this is <code>null</code>.</p>
 </dd>
   </dl>
 
@@ -245,7 +256,7 @@ public class MutationRecord</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>If the record&amp;apos;s <a href="https://developer.mozilla.org/en-US/docs/Web/API/MutationRecord/type"><code>type</code>https://developer.mozilla.org/en-US/docs/Web/API/MutationRecord/type</a> is <code>attributes</code>, the property is a string representing the namespace of the mutated attribute of the mutation target. The value is <code>null</code> otherwise.</p>
+    <dd><p>If the record&amp;apos;s <a href="https://developer.mozilla.org/en-US/docs/Web/API/MutationRecord/type"><code>type</code></a> is <code>attributes</code>, the property is a string representing the namespace of the mutated attribute of the mutation target. The value is <code>null</code> otherwise.</p>
 </dd>
   </dl>
 
@@ -266,7 +277,7 @@ public class MutationRecord</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <a class="xref" href="CSharpToJavaScript.APIs.JS.MutationRecord.html">MutationRecord</a> read-only property <strong><code>nextSibling</code></strong> is the next sibling of an added or removed child node of the <a href="https://developer.mozilla.org/en-US/docs/Web/API/MutationRecord/target"><code>target</code>https://developer.mozilla.org/en-US/docs/Web/API/MutationRecord/target</a> of a <a class="xref" href="CSharpToJavaScript.APIs.JS.MutationObserver.html">MutationObserver</a>.</p>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="CSharpToJavaScript.APIs.JS.MutationRecord.html">MutationRecord</a> read-only property <strong><code>nextSibling</code></strong> is the next sibling of an added or removed child node of the <a href="https://developer.mozilla.org/en-US/docs/Web/API/MutationRecord/target"><code>target</code></a> of a <a class="xref" href="CSharpToJavaScript.APIs.JS.MutationObserver.html">MutationObserver</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -281,7 +292,7 @@ public class MutationRecord</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a></dt>
-    <dd><p>If a node is added to or removed from the <a href="https://developer.mozilla.org/en-US/docs/Web/API/MutationRecord/target"><code>target</code>https://developer.mozilla.org/en-US/docs/Web/API/MutationRecord/target</a> of a <a class="xref" href="CSharpToJavaScript.APIs.JS.MutationObserver.html">MutationObserver</a>, the value is the <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a> that is the next sibling of the added or removed node: that is, the node immediately following this one in the parent's <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_ChildNodes">ChildNodes</a> list.The value is <code>null</code> if there are no added or removed nodes, or if the node is the last child of its parent.</p>
+    <dd><p>If a node is added to or removed from the <a href="https://developer.mozilla.org/en-US/docs/Web/API/MutationRecord/target"><code>target</code></a> of a <a class="xref" href="CSharpToJavaScript.APIs.JS.MutationObserver.html">MutationObserver</a>, the value is the <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a> that is the next sibling of the added or removed node: that is, the node immediately following this one in the parent's <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_ChildNodes">ChildNodes</a> list.The value is <code>null</code> if there are no added or removed nodes, or if the node is the last child of its parent.</p>
 </dd>
   </dl>
 
@@ -338,7 +349,7 @@ public class MutationRecord</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <a class="xref" href="CSharpToJavaScript.APIs.JS.MutationRecord.html">MutationRecord</a> read-only property <strong><code>previousSibling</code></strong> is the previous sibling of an added or removed child node of the <a href="https://developer.mozilla.org/en-US/docs/Web/API/MutationRecord/target"><code>target</code>https://developer.mozilla.org/en-US/docs/Web/API/MutationRecord/target</a> of a <a class="xref" href="CSharpToJavaScript.APIs.JS.MutationObserver.html">MutationObserver</a>.</p>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="CSharpToJavaScript.APIs.JS.MutationRecord.html">MutationRecord</a> read-only property <strong><code>previousSibling</code></strong> is the previous sibling of an added or removed child node of the <a href="https://developer.mozilla.org/en-US/docs/Web/API/MutationRecord/target"><code>target</code></a> of a <a class="xref" href="CSharpToJavaScript.APIs.JS.MutationObserver.html">MutationObserver</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -353,7 +364,7 @@ public class MutationRecord</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a></dt>
-    <dd><p>If a node is added to or removed from the <a href="https://developer.mozilla.org/en-US/docs/Web/API/MutationRecord/target"><code>target</code>https://developer.mozilla.org/en-US/docs/Web/API/MutationRecord/target</a> of a <a class="xref" href="CSharpToJavaScript.APIs.JS.MutationObserver.html">MutationObserver</a>, the value is the <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a> that is the previous sibling of the added or removed node: that is, the node immediately before this one in the parent's <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_ChildNodes">ChildNodes</a> list.The value is <code>null</code> if there are no added or removed nodes, or if the node is the first child of its parent.</p>
+    <dd><p>If a node is added to or removed from the <a href="https://developer.mozilla.org/en-US/docs/Web/API/MutationRecord/target"><code>target</code></a> of a <a class="xref" href="CSharpToJavaScript.APIs.JS.MutationObserver.html">MutationObserver</a>, the value is the <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html">Node</a> that is the previous sibling of the added or removed node: that is, the node immediately before this one in the parent's <a class="xref" href="CSharpToJavaScript.APIs.JS.Node.html#CSharpToJavaScript_APIs_JS_Node_ChildNodes">ChildNodes</a> list.The value is <code>null</code> if there are no added or removed nodes, or if the node is the first child of its parent.</p>
 </dd>
   </dl>
 

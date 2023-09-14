@@ -2,7 +2,7 @@
 
 Create new c# project.
 > [!NOTE]
-> Make sure to use full path in "GenerateAsync" method! 
+> Make sure to use full path in "GenerateOneAsync" method! 
 
 For example you want use "insertAdjacentHTML" but there is no such method in [Element](xref:CSharpToJavaScript.APIs.JS.Element), you need to create an extension method with [ToAttribute](xref:CSharpToJavaScript.Utils.ToAttribute).
 
@@ -12,22 +12,22 @@ using CSharpToJavaScript;
 using CSharpToJavaScript.APIs.JS;
 using CSharpToJavaScript.Utils;
 using System;
-using System.Reflection;
 using System.Threading.Tasks;
+
 namespace TestNuget;
 
 public class Program
 {
 	public static async Task Main()
 	{
-		Assembly executingAssembly = Assembly.GetExecutingAssembly();
-		
 		CSTOJSOptions opt = new()
 			{
 				CustomCSTypesToJS = new() { typeof(Extensions) }
 			};
-		CSTOJS cstojs = new(executingAssembly, opt);
-		await cstojs.GenerateAsync("C:\\GitReps\\TestNuget\\TestNuget\\CSharp\\Test.cs");
+			
+		CSTOJS cstojs = new(opt);
+		
+		await cstojs.GenerateOneAsync("C:\\GitReps\\TestNuget\\TestNuget\\CSharp\\Test.cs");
 		
 		Console.ReadKey();
 	}
@@ -57,8 +57,7 @@ public class Test
 {
 	public Test()
 	{
-		Element div = GlobalThis.Window.Document.CreateElement("div");
-		div.InsertAdjacentHTML("beforeend", "html string");
+		GlobalThis.Window.Document.Head.InsertAdjacentHTML("beforeend", "html string");
 	}
 }
 ```
@@ -70,8 +69,7 @@ class Test
 {
 	constructor()
  	{
-   		let div = globalThis.window.document.createElement("div");
-		div.insertAdjacentHTML("beforeend", "html string");
+		globalThis.window.document.head.insertAdjacentHTML("beforeend", "html string");
  	}
 }
 ```

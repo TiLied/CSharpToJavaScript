@@ -2,30 +2,28 @@
 
 Create new c# project.
 > [!NOTE]
-> Make sure to use full path in "GenerateAsync" method! 
+> Make sure to use full path in "GenerateOneAsync" method! 
 
 This options will add a string at the top/bottom of file. Useful when you want to initiate a class.
 
 Program.cs
 ```csharp
-using System.Reflection;
 using CSharpToJavaScript;
+
 namespace TestNuget;
 
 public class Program
 {
 	public static async Task Main()
 	{
-		Assembly executingAssembly = Assembly.GetExecutingAssembly();
-		
 		CSTOJSOptions opt = new()
 			{
 				AddSBInFront = new("//Comment at the top!"),
 				AddSBInEnd = new("//Comment at the bottom!")
 			};
 		
-		CSTOJS cstojs = new(executingAssembly, opt);
-		await cstojs.GenerateAsync("C:\\GitReps\\TestNuget\\TestNuget\\CSharp\\Test.cs");
+		CSTOJS cstojs = new(opt);
+		await cstojs.GenerateOneAsync("C:\\GitReps\\TestNuget\\TestNuget\\CSharp\\Test.cs");
 		
 		Console.ReadKey();
 	}

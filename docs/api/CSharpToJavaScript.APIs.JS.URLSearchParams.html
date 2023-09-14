@@ -18,6 +18,17 @@
       
       
       
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
   </head>
 
   <script type="module">
@@ -91,7 +102,7 @@
   <dl><dt>Assembly</dt><dd>CSharpToJavaScript.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>The <strong><code>searchParams</code></strong> readonly property of the<br><a class="xref" href="CSharpToJavaScript.APIs.JS.URL.html">URL</a> interface returns a <a class="xref" href="CSharpToJavaScript.APIs.JS.URLSearchParams.html">URLSearchParams</a> object allowing<br>access to the {{httpmethod(&quot;GET&quot;)}} decoded query arguments contained in the URL.</p>
+  <div class="markdown summary"><p>The <strong><code>URLSearchParams</code></strong> interface defines utility methods to work with the query string of a URL.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -143,8 +154,9 @@ public class URLSearchParams</code></pre>
 
 
   <h2 id="CSharpToJavaScript_APIs_JS_URLSearchParams_remarks">Remarks</h2>
-  <div class="markdown level0 remarks"><p>AvailableInWorkers</p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/URL/searchParams"> <em>See also on MDN</em> </a></p>
+  <div class="markdown level0 remarks"><p>An object implementing <code>URLSearchParams</code> can directly be used in a Statements/forOf structure to iterate over key/value pairs in the same order as they appear in the query string, for example the following two lines are equivalent:</p><p>availableinworkers</p>
+<p>-<a href="https://github.com/zloirock/core-js#url-and-urlsearchparams">Polyfill of <code>URLSearchParams</code> in <code>core-js</code></a><br>-The <a class="xref" href="CSharpToJavaScript.APIs.JS.URL.html">URL</a> interface.<br>-<a href="https://developer.chrome.com/blog/urlsearchparams/">Google Developers: Easy URL manipulation with URLSearchParams</a><br></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams"> <em>See also on MDN</em> </a></p>
 </div>
 
 

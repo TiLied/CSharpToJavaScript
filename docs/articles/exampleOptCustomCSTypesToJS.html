@@ -16,6 +16,17 @@
       
       
       
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
   </head>
 
   <script type="module">
@@ -81,7 +92,7 @@
 <p>Create new c# project.</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>Make sure to use full path in &quot;GenerateAsync&quot; method!</p>
+<p>Make sure to use full path in &quot;GenerateOneAsync&quot; method!</p>
 </div>
 <p>For example you want use &quot;insertAdjacentHTML&quot; but there is no such method in <a class="xref" href="../api/CSharpToJavaScript.APIs.JS.Element.html">Element</a>, you need to create an extension method with <a class="xref" href="../api/CSharpToJavaScript.Utils.ToAttribute.html">ToAttribute</a>.</p>
 <p>Program.cs</p>
@@ -89,22 +100,22 @@
 using CSharpToJavaScript.APIs.JS;
 using CSharpToJavaScript.Utils;
 using System;
-using System.Reflection;
 using System.Threading.Tasks;
+
 namespace TestNuget;
 
 public class Program
 {
 	public static async Task Main()
 	{
-		Assembly executingAssembly = Assembly.GetExecutingAssembly();
-		
 		CSTOJSOptions opt = new()
 			{
 				CustomCSTypesToJS = new() { typeof(Extensions) }
 			};
-		CSTOJS cstojs = new(executingAssembly, opt);
-		await cstojs.GenerateAsync(&quot;C:\\GitReps\\TestNuget\\TestNuget\\CSharp\\Test.cs&quot;);
+			
+		CSTOJS cstojs = new(opt);
+		
+		await cstojs.GenerateOneAsync(&quot;C:\\GitReps\\TestNuget\\TestNuget\\CSharp\\Test.cs&quot;);
 		
 		Console.ReadKey();
 	}
@@ -131,8 +142,7 @@ public class Test
 {
 	public Test()
 	{
-		Element div = GlobalThis.Window.Document.CreateElement(&quot;div&quot;);
-		div.InsertAdjacentHTML(&quot;beforeend&quot;, &quot;html string&quot;);
+		GlobalThis.Window.Document.Head.InsertAdjacentHTML(&quot;beforeend&quot;, &quot;html string&quot;);
 	}
 }
 </code></pre>
@@ -141,8 +151,7 @@ public class Test
 {
 	constructor()
  	{
-   		let div = globalThis.window.document.createElement(&quot;div&quot;);
-		div.insertAdjacentHTML(&quot;beforeend&quot;, &quot;html string&quot;);
+		globalThis.window.document.head.insertAdjacentHTML(&quot;beforeend&quot;, &quot;html string&quot;);
  	}
 }
 </code></pre>

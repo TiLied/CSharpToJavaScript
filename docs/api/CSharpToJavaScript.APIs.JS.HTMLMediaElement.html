@@ -18,6 +18,17 @@
       
       
       
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
   </head>
 
   <script type="module">
@@ -829,7 +840,7 @@ public AudioTrackList AudioTracks { get; }</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>HTMLMediaElement.autoplay</code></strong><br>property reflects the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#autoplay"><code>autoplay</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#autoplay</a> HTML attribute, indicating<br>whether playback should automatically begin as soon as enough media is available to do<br>so without interruption.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>HTMLMediaElement.autoplay</code></strong><br>property reflects the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#autoplay"><code>autoplay</code></a> HTML attribute, indicating<br>whether playback should automatically begin as soon as enough media is available to do<br>so without interruption.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -845,7 +856,7 @@ public bool Autoplay { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>A boolean value which is <code>true</code> if the media element will<br>begin playback as soon as enough content has loaded to allow it to do so without<br>interruption.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> Some browsers offer users the ability to override<br><code>autoplay</code> in order to prevent disruptive audio or video from playing<br>without permission or in the background. Do not rely on <code>autoplay</code> actually<br>starting playback and instead use <see cref="!:HTMLMediaElement.Play_event"></see><br>event.</blockquote>
+    <dd><p>A boolean value which is <code>true</code> if the media element will<br>begin playback as soon as enough content has loaded to allow it to do so without<br>interruption.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> Some browsers offer users the ability to override<br><code>autoplay</code> in order to prevent disruptive audio or video from playing<br>without permission or in the background. Do not rely on <code>autoplay</code> actually<br>starting playback and instead use HTMLMediaElement.Play_event<br>event.</blockquote>
 </dd>
   </dl>
 
@@ -853,7 +864,7 @@ public bool Autoplay { get; set; }</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_Autoplay_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>A media element whose source is a <see cref="!:MediaStream"></see> and whose<br><code>autoplay</code> property is <code>true</code> will begin playback when it becomes<br>active (that is, when <see cref="!:MediaStream.Active"></see> becomes <code>true</code>).</p><blockquote class="NOTE"><h5>NOTE</h5><p><strong>Note:</strong> Sites which automatically play audio (or videos with an audio<br>track) can be an unpleasant experience for users, so it should be avoided when<br>possible. If you must offer autoplay functionality, you should make it opt-in<br>(requiring a user to specifically enable it). However, autoplay can be useful when<br>creating media elements whose source will be set at a later time, under user control.</p></blockquote><p>For a much more in-depth look at autoplay, autoplay blocking, and how to respond when<br>autoplay is blocked by the user&amp;apos;s browser, see our article <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Autoplay_guide">Autoplay guide for media and Web Audio APIs</a>.</p>
+  <div class="markdown level1 remarks"><p>A media element whose source is a MediaStream and whose<br><code>autoplay</code> property is <code>true</code> will begin playback when it becomes<br>active (that is, when MediaStream.Active becomes <code>true</code>).</p><blockquote class="NOTE"><h5>NOTE</h5><p><strong>Note:</strong> Sites which automatically play audio (or videos with an audio<br>track) can be an unpleasant experience for users, so it should be avoided when<br>possible. If you must offer autoplay functionality, you should make it opt-in<br>(requiring a user to specifically enable it). However, autoplay can be useful when<br>creating media elements whose source will be set at a later time, under user control.</p></blockquote><p>For a much more in-depth look at autoplay, autoplay blocking, and how to respond when<br>autoplay is blocked by the user&amp;apos;s browser, see our article <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Autoplay_guide">Autoplay guide for media and Web Audio APIs</a>.</p>
 <p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLMediaElement.html">HTMLMediaElement</a>: Interface used to define the <code>HTMLMediaElement.autoplay</code> property<br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio">audio</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">video</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/autoplay"> <em>See also on MDN</em> </a></p>
 </div>
@@ -939,7 +950,7 @@ public bool BufferingThrottled { get; }</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>HTMLMediaElement.controls</code></strong> property reflects the<br><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#controls"><code>controls</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#controls</a> HTML attribute, which controls whether user<br>interface controls for playing the media item will be displayed.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>HTMLMediaElement.controls</code></strong> property reflects the<br><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#controls"><code>controls</code></a> HTML attribute, which controls whether user<br>interface controls for playing the media item will be displayed.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1091,7 +1102,7 @@ public double CurrentTime { get; set; }</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>HTMLMediaElement.defaultMuted</code></strong> property reflects the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#muted"><code>muted</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#muted</a> HTML attribute, which indicates whether the media element's audio output should be muted by default. This property has no dynamic effect. To mute and unmute the audio output, use the <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLMediaElement.html#CSharpToJavaScript_APIs_JS_HTMLMediaElement_Muted">Muted</a> property.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>HTMLMediaElement.defaultMuted</code></strong> property reflects the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#muted"><code>muted</code></a> HTML attribute, which indicates whether the media element's audio output should be muted by default. This property has no dynamic effect. To mute and unmute the audio output, use the <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLMediaElement.html#CSharpToJavaScript_APIs_JS_HTMLMediaElement_Muted">Muted</a> property.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1221,7 +1232,7 @@ public bool Ended { get; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>A boolean value which is <code>true</code> if the media contained in the<br>element has finished playing.If the source of the media is a <see cref="!:MediaStream"></see>, this value is<br><code>true</code> if the value of the stream&amp;apos;s {{domxref(&amp;quot;MediaStream.active&amp;quot;,<br>&amp;quot;active&amp;quot;)}} property is <code>false</code>.</p>
+    <dd><p>A boolean value which is <code>true</code> if the media contained in the<br>element has finished playing.If the source of the media is a MediaStream, this value is<br><code>true</code> if the value of the stream&amp;apos;s {{domxref(&amp;quot;MediaStream.active&amp;quot;,<br>&amp;quot;active&amp;quot;)}} property is <code>false</code>.</p>
 </dd>
   </dl>
 
@@ -1229,7 +1240,7 @@ public bool Ended { get; }</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_Ended_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLMediaElement.html">HTMLMediaElement</a>: Interface used to define the <code>HTMLMediaElement.ended</code> property<br>-<see cref="!:MediaStream"></see><br>-<see cref="!:MediaStream.Active"></see><br></p>
+  <div class="markdown level1 remarks"><p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLMediaElement.html">HTMLMediaElement</a>: Interface used to define the <code>HTMLMediaElement.ended</code> property<br>-MediaStream<br>-MediaStream.Active<br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/ended"> <em>See also on MDN</em> </a></p>
 </div>
 
@@ -1243,7 +1254,7 @@ public bool Ended { get; }</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>HTMLMediaElement.error</code></strong> property is the<br><a class="xref" href="CSharpToJavaScript.APIs.JS.MediaError.html">MediaError</a> object for the most recent error, or <code>null</code> if<br>there has not been an error. When an <see cref="!:HTMLMediaElement/error_event"></see> event is received by the<br>element, you can determine details about what happened by examining this object.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>HTMLMediaElement.error</code></strong> property is the<br><a class="xref" href="CSharpToJavaScript.APIs.JS.MediaError.html">MediaError</a> object for the most recent error, or <code>null</code> if<br>there has not been an error. When an HTMLMediaElement/error_event event is received by the<br>element, you can determine details about what happened by examining this object.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1281,7 +1292,7 @@ public MediaError? Error { get; }</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>HTMLMediaElement.loop</code></strong> property reflects the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#loop"><code>loop</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#loop</a> HTML attribute, which controls whether the media element should start over when it reaches the end.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>HTMLMediaElement.loop</code></strong> property reflects the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#loop"><code>loop</code></a> HTML attribute, which controls whether the media element should start over when it reaches the end.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1449,7 +1460,7 @@ public double PlaybackRate { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd><p>A <a href="https://en.wikipedia.org/wiki/Double-precision_floating-point_format"><code>double</code>https://en.wikipedia.org/wiki/Double-precision_floating-point_format</a>. <code>1.0</code> is &amp;quot;normal speed,&amp;quot; values lower than <code>1.0</code> make the media play slower than normal, higher values make it play faster. (<strong>Default:</strong> <code>1.0</code>)</p>
+    <dd><p>A <a href="https://en.wikipedia.org/wiki/Double-precision_floating-point_format"><code>double</code></a>. <code>1.0</code> is &amp;quot;normal speed,&amp;quot; values lower than <code>1.0</code> make the media play slower than normal, higher values make it play faster. (<strong>Default:</strong> <code>1.0</code>)</p>
 </dd>
   </dl>
 
@@ -1737,7 +1748,7 @@ public Union20? SrcObject { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.Union20.html">Union20</a>?</dt>
-    <dd><p>A <see cref="!:'MediaStream'"></see>, <see cref="!:'MediaSource'"></see>, <see cref="!:'Blob'"></see>, or<br><see cref="!:'File'"></see> object (though see the compatibility table for what is actually<br>supported).</p>
+    <dd><p>A 'MediaStream', 'MediaSource', 'Blob', or<br>'File' object (though see the compatibility table for what is actually<br>supported).</p>
 </dd>
   </dl>
 
@@ -1745,7 +1756,7 @@ public Union20? SrcObject { get; set; }</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_SrcObject_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>The object can be a <see cref="!:MediaStream"></see>, a <see cref="!:MediaSource"></see>, a<br><see cref="!:Blob"></see>, or a <see cref="!:File"></see> (which inherits from <code>Blob</code>).</p><blockquote class="NOTE"><h5>NOTE</h5><p><strong>Note:</strong> As of March 2020, only Safari has full support for <code>srcObject</code>, i.e. using <code>MediaSource</code>, <code>MediaStream</code>, <code>Blob</code>, and <code>File</code> objects as values. Other browsers support <code>MediaStream</code> objects; until they catch up, consider falling back to creating a URL with <see cref="!:URL.CreateObjectURL"></see> and assigning it to <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLMediaElement.html#CSharpToJavaScript_APIs_JS_HTMLMediaElement_Src">Src</a> (see below for an example). In addition, as of version 108 Chromium supports attaching a dedicated worker <code>MediaSource</code> object by assigning that object's <see cref="!:MediaSourceHandle"></see> instance (transferred from the worker) to <code>srcObject</code>.</p></blockquote>
+  <div class="markdown level1 remarks"><p>The object can be a MediaStream, a MediaSource, a<br>Blob, or a File (which inherits from <code>Blob</code>).</p><blockquote class="NOTE"><h5>NOTE</h5><p><strong>Note:</strong> As of March 2020, only Safari has full support for <code>srcObject</code>, i.e. using <code>MediaSource</code>, <code>MediaStream</code>, <code>Blob</code>, and <code>File</code> objects as values. Other browsers support <code>MediaStream</code> objects; until they catch up, consider falling back to creating a URL with URL.CreateObjectURL and assigning it to <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLMediaElement.html#CSharpToJavaScript_APIs_JS_HTMLMediaElement_Src">Src</a> (see below for an example). In addition, as of version 108 Chromium supports attaching a dedicated worker <code>MediaSource</code> object by assigning that object's MediaSourceHandle instance (transferred from the worker) to <code>srcObject</code>.</p></blockquote>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/srcObject"> <em>See also on MDN</em> </a></p>
 </div>
 
@@ -1775,7 +1786,7 @@ public TextTrackList TextTracks { get; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CSharpToJavaScript.APIs.JS.TextTrackList.html">TextTrackList</a></dt>
-    <dd><p>A <a class="xref" href="CSharpToJavaScript.APIs.JS.TextTrackList.html">TextTrackList</a> object representing the list of text tracks included in the media element. The list of tracks can be accessed using <code>textTracks[n]</code> to get the n-th text track from the object&amp;apos;s list of text tracks, or using the <code>textTracks</code>.<a href="https://developer.mozilla.org/en-US/docs/Web/API/TextTrackList/getTrackById"><code>getTrackById()</code>https://developer.mozilla.org/en-US/docs/Web/API/TextTrackList/getTrackById</a><br>method.Each track is represented by a <a class="xref" href="CSharpToJavaScript.APIs.JS.TextTrack.html">TextTrack</a> object which provides<br>information about the track.</p>
+    <dd><p>A <a class="xref" href="CSharpToJavaScript.APIs.JS.TextTrackList.html">TextTrackList</a> object representing the list of text tracks included in the media element. The list of tracks can be accessed using <code>textTracks[n]</code> to get the n-th text track from the object&amp;apos;s list of text tracks, or using the <code>textTracks</code>.<a href="https://developer.mozilla.org/en-US/docs/Web/API/TextTrackList/getTrackById"><code>getTrackById()</code></a><br>method.Each track is represented by a <a class="xref" href="CSharpToJavaScript.APIs.JS.TextTrack.html">TextTrack</a> object which provides<br>information about the track.</p>
 </dd>
   </dl>
 
@@ -1783,8 +1794,8 @@ public TextTrackList TextTracks { get; }</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_TextTracks_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>You can detect when tracks are added to and removed from an<br><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio"><code>&amp;lt;audio&amp;gt;</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio</a> or<br><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video"><code>&amp;lt;video&amp;gt;</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video</a> element<br>using the <code>addtrack</code> and <code>removetrack</code> events. However, these<br>events aren&amp;apos;t sent directly to the media element itself. Instead, they&amp;apos;re sent to the<br>track list object of the <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement"><code>HTMLMediaElement</code>https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement</a><br>that corresponds to the type of track that was added to the element</p><p>The returned list is <strong>live</strong>; that is, as tracks are added to and removed from<br>the media element, the list&amp;apos;s contents change dynamically. Once you have a reference to<br>the list, you can monitor it for changes to detect when new text tracks are added or<br>existing ones removed.</p><p>See <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextTrackList#events">TextTrackList events</a> to learn<br>more about watching for changes to a media element&amp;apos;s track list.</p>
-<p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLMediaElement.html">HTMLMediaElement</a>: Interface used to define the <code>HTMLMediaElement.textTracks</code> property<br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio">audio</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">video</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.AudioTrack.html">AudioTrack</a>, <a class="xref" href="CSharpToJavaScript.APIs.JS.AudioTrackList.html">AudioTrackList</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.VideoTrack.html">VideoTrack</a>, <a class="xref" href="CSharpToJavaScript.APIs.JS.VideoTrackList.html">VideoTrackList</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackList/addtrack_event"><code>addtrack</code>https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackList/addtrack_event</a>,<br><a href="https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackList/change_event"><code>change</code>https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackList/change_event</a>,<br><a href="https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackList/removetrack_event"><code>removetrack</code>https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackList/removetrack_event</a>: AudioTrackList events<br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackList/addtrack_event"><code>addtrack</code>https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackList/addtrack_event</a>,<br><a href="https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackList/change_event"><code>change</code>https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackList/change_event</a>,<br><a href="https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackList/removetrack_event"><code>removetrack</code>https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackList/removetrack_event</a>: VideoTrackList events<br></p>
+  <div class="markdown level1 remarks"><p>You can detect when tracks are added to and removed from an<br><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio"><code>&amp;lt;audio&amp;gt;</code></a> or<br><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video"><code>&amp;lt;video&amp;gt;</code></a> element<br>using the <code>addtrack</code> and <code>removetrack</code> events. However, these<br>events aren&amp;apos;t sent directly to the media element itself. Instead, they&amp;apos;re sent to the<br>track list object of the <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement"><code>HTMLMediaElement</code></a><br>that corresponds to the type of track that was added to the element</p><p>The returned list is <strong>live</strong>; that is, as tracks are added to and removed from<br>the media element, the list&amp;apos;s contents change dynamically. Once you have a reference to<br>the list, you can monitor it for changes to detect when new text tracks are added or<br>existing ones removed.</p><p>See <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextTrackList#events">TextTrackList events</a> to learn<br>more about watching for changes to a media element&amp;apos;s track list.</p>
+<p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLMediaElement.html">HTMLMediaElement</a>: Interface used to define the <code>HTMLMediaElement.textTracks</code> property<br>-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio">audio</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">video</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.AudioTrack.html">AudioTrack</a>, <a class="xref" href="CSharpToJavaScript.APIs.JS.AudioTrackList.html">AudioTrackList</a><br>-<a class="xref" href="CSharpToJavaScript.APIs.JS.VideoTrack.html">VideoTrack</a>, <a class="xref" href="CSharpToJavaScript.APIs.JS.VideoTrackList.html">VideoTrackList</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackList/addtrack_event"><code>addtrack</code></a>,<br><a href="https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackList/change_event"><code>change</code></a>,<br><a href="https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackList/removetrack_event"><code>removetrack</code></a>: AudioTrackList events<br>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackList/addtrack_event"><code>addtrack</code></a>,<br><a href="https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackList/change_event"><code>change</code></a>,<br><a href="https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackList/removetrack_event"><code>removetrack</code></a>: VideoTrackList events<br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/textTracks"> <em>See also on MDN</em> </a></p>
 </div>
 
@@ -1950,7 +1961,7 @@ public CanPlayTypeResult CanPlayType(string type)</code></pre>
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_CanPlayType_System_String__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><blockquote class="NOTE"><h5>NOTE</h5><p><strong>Note:</strong> This feature is not available in <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p></blockquote>
-<p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLMediaElement.html">HTMLMediaElement</a>: Interface used to define the <code>HTMLMediaElement.canPlayType()</code> method<br>-<see cref="!:MediaCapabilities"></see><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Support_issues">Handling media support issues in web content</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats">Media type and format guide</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/codecs_parameter">Codecs in common media types</a><br></p>
+<p>-<a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLMediaElement.html">HTMLMediaElement</a>: Interface used to define the <code>HTMLMediaElement.canPlayType()</code> method<br>-MediaCapabilities<br>-<a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Support_issues">Handling media support issues in web content</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats">Media type and format guide</a><br>-<a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/codecs_parameter">Codecs in common media types</a><br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/canPlayType"> <em>See also on MDN</em> </a></p>
 </div>
 
@@ -1993,7 +2004,7 @@ public GlobalObject.Undefined FastSeek(double time)</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_FastSeek_System_Double__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><blockquote class="NOTE"><h5>NOTE</h5><p><strong>Note:</strong> If you need to seek with precision, you should set <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/currentTime"><code>HTMLMediaElement.currentTime</code>https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/currentTime</a><br>instead.</p></blockquote>
+  <div class="markdown level1 remarks"><blockquote class="NOTE"><h5>NOTE</h5><p><strong>Note:</strong> If you need to seek with precision, you should set <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/currentTime"><code>HTMLMediaElement.currentTime</code></a><br>instead.</p></blockquote>
 <p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/currentTime">HTMLMediaElement.currentTime</a><br>for seeking without precision tradeoff<br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/fastSeek"> <em>See also on MDN</em> </a></p>
 </div>
@@ -2064,7 +2075,7 @@ public GlobalObject.Undefined Load()</code></pre>
 
 
   <h4 class="section" id="CSharpToJavaScript_APIs_JS_HTMLMediaElement_Load_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>The amount of media data that is<br>prefetched is determined by the value of the element&amp;apos;s <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#preload"><code>preload</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#preload</a> attribute.</p><p>This method is generally only useful when you&amp;apos;ve made dynamic changes to the set of<br>sources available for the media element, either by changing the element&amp;apos;s<br><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#src"><code>src</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#src</a> attribute or by adding or removing<br><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source">source</a> elements nested within the media element itself.<br><code>load()</code> will reset the element and rescan the available sources, thereby<br>causing the changes to take effect.</p>
+  <div class="markdown level1 remarks"><p>The amount of media data that is<br>prefetched is determined by the value of the element&amp;apos;s <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#preload"><code>preload</code></a> attribute.</p><p>This method is generally only useful when you&amp;apos;ve made dynamic changes to the set of<br>sources available for the media element, either by changing the element&amp;apos;s<br><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#src"><code>src</code></a> attribute or by adding or removing<br><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source">source</a> elements nested within the media element itself.<br><code>load()</code> will reset the element and rescan the available sources, thereby<br>causing the changes to take effect.</p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/load"> <em>See also on MDN</em> </a></p>
 </div>
 
@@ -2115,7 +2126,7 @@ public GlobalObject.Undefined Pause()</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLMediaElement.html">HTMLMediaElement</a><br><strong><code>play()</code></strong> method attempts to begin playback of the media.<br>It returns a <see cref="!:Promise"></see> which is resolved when playback has been<br>successfully started.</p>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLMediaElement.html">HTMLMediaElement</a><br><strong><code>play()</code></strong> method attempts to begin playback of the media.<br>It returns a Promise which is resolved when playback has been<br>successfully started.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2128,7 +2139,7 @@ public Task&lt;GlobalObject.Undefined&gt; Play()</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="CSharpToJavaScript.APIs.JS.GlobalObject.html">GlobalObject</a>.<a class="xref" href="CSharpToJavaScript.APIs.JS.GlobalObject.Undefined.html">Undefined</a>&gt;</dt>
-    <dd><p>A <see cref="!:Promise"></see> which is resolved when playback has been started, or is<br>rejected if for any reason playback cannot be started.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> Browsers released before 2019 may not return a value from<br><code>play()</code>.</blockquote>
+    <dd><p>A Promise which is resolved when playback has been started, or is<br>rejected if for any reason playback cannot be started.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> Browsers released before 2019 may not return a value from<br><code>play()</code>.</blockquote>
 </dd>
   </dl>
 

@@ -18,6 +18,17 @@
       
       
       
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
   </head>
 
   <script type="module">
@@ -91,7 +102,7 @@
   <dl><dt>Assembly</dt><dd>CSharpToJavaScript.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>The <strong><code>HTMLAnchorElement</code></strong> interface represents hyperlink elements and provides special properties and methods (beyond those of the regular <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLElement.html">HTMLElement</a> object interface that they inherit from) for manipulating the layout and presentation of such elements. This interface corresponds to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a"><code>&amp;lt;a&amp;gt;</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a</a> element; not to be confused with <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link"><code>&amp;lt;link&amp;gt;</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link</a>, which is represented by <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLLinkElement"><code>HTMLLinkElement</code>https://developer.mozilla.org/en-US/docs/Web/API/HTMLLinkElement</a>)</p>
+  <div class="markdown summary"><p>The <strong><code>HTMLAnchorElement</code></strong> interface represents hyperlink elements and provides special properties and methods (beyond those of the regular <a class="xref" href="CSharpToJavaScript.APIs.JS.HTMLElement.html">HTMLElement</a> object interface that they inherit from) for manipulating the layout and presentation of such elements. This interface corresponds to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a"><code>&amp;lt;a&amp;gt;</code></a> element; not to be confused with <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link"><code>&amp;lt;link&amp;gt;</code></a>, which is represented by <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLLinkElement"><code>HTMLLinkElement</code></a>)</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -536,7 +547,8 @@ public class HTMLAnchorElement : HTMLElement, ParentNode, NonDocumentTypeChildNo
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Charset { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public string Charset { get; set; }</code></pre>
   </div>
 
 
@@ -567,7 +579,8 @@ public class HTMLAnchorElement : HTMLElement, ParentNode, NonDocumentTypeChildNo
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Coords { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public string Coords { get; set; }</code></pre>
   </div>
 
 
@@ -668,7 +681,8 @@ public string Hreflang { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public string Name { get; set; }</code></pre>
   </div>
 
 
@@ -727,7 +741,7 @@ public string Ping { get; set; }</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The<br><strong><code>HTMLAnchorElement.referrerPolicy</code></strong><br>property reflect the HTML <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#referrerpolicy"><code>referrerpolicy</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#referrerpolicy</a> attribute of the<br><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a">a</a> element defining which referrer is sent when fetching the resource.</p>
+  <div class="markdown level1 summary"><p>The<br><strong><code>HTMLAnchorElement.referrerPolicy</code></strong><br>property reflect the HTML <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#referrerpolicy"><code>referrerpolicy</code></a> attribute of the<br><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a">a</a> element defining which referrer is sent when fetching the resource.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -765,7 +779,7 @@ public string ReferrerPolicy { get; set; }</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>HTMLAnchorElement.rel</code></strong> property reflects the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel"><code>rel</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel</a> attribute. It is a string containing a space-separated list of link types indicating the relationship between the resource represented by the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a">a</a> element and the current document.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>HTMLAnchorElement.rel</code></strong> property reflects the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel"><code>rel</code></a> attribute. It is a string containing a space-separated list of link types indicating the relationship between the resource represented by the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a">a</a> element and the current document.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -803,7 +817,7 @@ public string Rel { get; set; }</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <strong><code>HTMLAnchorElement.relList</code></strong> read-only property reflects the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel"><code>rel</code>https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel</a> attribute. It is a live <a class="xref" href="CSharpToJavaScript.APIs.JS.DOMTokenList.html">DOMTokenList</a> containing the set of link types indicating the relationship between the resource represented by the {{HTMLElement(&quot;a&quot;)}} element and the current document.</p>
+  <div class="markdown level1 summary"><p>The <strong><code>HTMLAnchorElement.relList</code></strong> read-only property reflects the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel"><code>rel</code></a> attribute. It is a live <a class="xref" href="CSharpToJavaScript.APIs.JS.DOMTokenList.html">DOMTokenList</a> containing the set of link types indicating the relationship between the resource represented by the {{HTMLElement(&quot;a&quot;)}} element and the current document.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -846,7 +860,8 @@ public DOMTokenList RelList { get; }</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Rev { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public string Rev { get; set; }</code></pre>
   </div>
 
 
@@ -877,7 +892,8 @@ public DOMTokenList RelList { get; }</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Shape { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[To(&quot;FirstCharToLowerCase&quot;)]
+public string Shape { get; set; }</code></pre>
   </div>
 
 

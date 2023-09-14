@@ -18,6 +18,17 @@
       
       
       
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
   </head>
 
   <script type="module">
@@ -91,7 +102,7 @@
   <dl><dt>Assembly</dt><dd>CSharpToJavaScript.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>The read-only <strong><code>sessionStorage</code></strong><br>property accesses a session <a class="xref" href="CSharpToJavaScript.APIs.JS.Storage.html">Storage</a> object for the current<br><a href="https://developer.mozilla.org/en-US/docs/Glossary/origin">origin</a>. <code>sessionStorage</code> is similar to<br><see cref="!:Window.LocalStorage"></see>; the difference is that while data<br>in <code>localStorage</code> doesn&amp;apos;t expire, data in <code>sessionStorage</code> is<br>cleared when the <strong>page session</strong> ends.</p>
+  <div class="markdown summary"><p>The read-only <strong><code>sessionStorage</code></strong><br>property accesses a session <a class="xref" href="CSharpToJavaScript.APIs.JS.Storage.html">Storage</a> object for the current<br><a href="https://developer.mozilla.org/en-US/docs/Glossary/origin">origin</a>. <code>sessionStorage</code> is similar to<br>Window.LocalStorage; the difference is that while data<br>in <code>localStorage</code> doesn&amp;apos;t expire, data in <code>sessionStorage</code> is<br>cleared when the <strong>page session</strong> ends.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -112,7 +123,7 @@ public interface WindowSessionStorage</code></pre>
 
   <h2 id="CSharpToJavaScript_APIs_JS_WindowSessionStorage_remarks">Remarks</h2>
   <div class="markdown level0 remarks"><p>Data stored in <code>sessionStorage</code> <strong>is specific to the protocol of the</strong><strong><br></strong><strong>page</strong>. In particular, data stored by a script on a site accessed with HTTP<br>(e.g., <a href="https://example.com">http://example.com</a>) is<br>put in a different <code>sessionStorage</code> object from the same site accessed with<br>HTTPS (e.g., <a href="https://example.com">https://example.com</a>).</p><p>The keys and the values are <strong>always</strong> in the UTF-16 string<br>format, which uses two bytes per character. As with objects, integer keys are<br>automatically converted to strings.</p>
-<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Using the Web Storage API</a><br>-<see cref="!:Window.LocalStorage"></see><br></p>
+<p>-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Using the Web Storage API</a><br>-Window.LocalStorage<br></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage"> <em>See also on MDN</em> </a></p>
 </div>
 

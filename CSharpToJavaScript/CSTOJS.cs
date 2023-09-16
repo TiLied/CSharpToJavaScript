@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using Microsoft.CodeAnalysis;
 using CSharpToJavaScript.Utils;
 using System.Linq;
-using System;
+using Microsoft.CodeAnalysis.Text;
 
 namespace CSharpToJavaScript
 {
@@ -103,9 +103,13 @@ namespace CSharpToJavaScript
 		{
 			_Walker = new(_Options);
 
-			string fileCS = await File.ReadAllTextAsync(path);
+			SyntaxTree? tree = null;
 
-			SyntaxTree tree = CSharpSyntaxTree.ParseText(fileCS);
+			using (var stream = File.OpenRead(path))
+			{
+				tree = CSharpSyntaxTree.ParseText(SourceText.From(stream), path: path);
+			}
+
 			CompilationUnitSyntax root = tree.GetCompilationUnitRoot();
 
 			string assemblyPath = Path.GetDirectoryName(assembly.Location);

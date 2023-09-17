@@ -38,7 +38,7 @@ class Test
 CSTOJS cstojs = new();
 await cstojs.GenerateOneAsync("FULL PATH TO CSHARP FILE YOU WHAT TO CONVERT");
 ```
-- 5 Run program and file will be generated in output path(default is "Directory.GetCurrentDirectory()") with name "main.js"(default)
+- 5 Run program and file will be generated in output path(default is "Directory.GetCurrentDirectory()") with name "|FILE NAME|.js"(default)
 - 6 See below for simple example "HelloWorld"
 
 ## Example "HelloWorld"
@@ -71,7 +71,7 @@ public class Test
 	}
 }
 ```
-Above code will generate "main.js" file that contains:
+Above code will generate "Test.js" file that contains:
 ```javascript
 class Test
 {

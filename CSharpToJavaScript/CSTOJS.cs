@@ -72,13 +72,18 @@ namespace CSharpToJavaScript
 		/// Method for generating js file.
 		/// </summary>
 		/// <param name="path">Full path to cs file.</param>
-		/// <param name="filename">Filename of a js file. Default: <c>main.js</c></param>
+		/// <param name="filename">Filename of a js file.</param>
 		/// <returns></returns>
-		public async Task GenerateOneAsync(string path, string filename = "main.js") 
+		public async Task GenerateOneAsync(string path, string? filename = null) 
 		{
 			Assembly assembly = Assembly.GetEntryAssembly();
 
-			await GenerateAsync(path, assembly, filename);
+			FileInfo file = new(path);
+
+			if(filename != null)
+				await GenerateAsync(path, assembly, filename);
+			else
+				await GenerateAsync(path, assembly, file.Name.Replace(".cs", ".js"));
 		}
 		/// <summary>
 		/// Method for generating multiply js files.

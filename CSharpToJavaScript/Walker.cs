@@ -19,7 +19,7 @@ namespace CSharpToJavaScript
 	{
 		public StringBuilder JSSB { get; set; } = new();
 
-		private readonly CSTOJSOptions _Options = new();
+		private readonly CSTOJS? _CSTOJS = null;
 
 		private SyntaxNode? _SNOriginal = null;
 		private SyntaxNode? _BaseConstructorInitializerNode = null;
@@ -33,9 +33,9 @@ namespace CSharpToJavaScript
 		{
 
 		}
-		public Walker(CSTOJSOptions options) : base(SyntaxWalkerDepth.Trivia)
+		public Walker(CSTOJS cstojs) : base(SyntaxWalkerDepth.Trivia)
 		{
-			_Options = options;
+			_CSTOJS = cstojs;
 		}
 
 		public override void VisitTrivia(SyntaxTrivia trivia)
@@ -54,7 +54,7 @@ namespace CSharpToJavaScript
 						return;
 					}
 				default:
-					SM.Log($"{syntaxKind}");
+					_CSTOJS.Log($"{syntaxKind}");
 					break;
 			}
 
@@ -131,7 +131,7 @@ namespace CSharpToJavaScript
 						return;
 					}
 				default:
-					SM.Log($"{syntaxKind}");
+					_CSTOJS.Log($"{syntaxKind}");
 					break;
 			}
 
@@ -152,7 +152,7 @@ namespace CSharpToJavaScript
 					{
 						Visit(member);
 					}
-					if (_Options.Debug)
+					if (_CSTOJS.Options.Debug)
 					{
 						JSSB.Append("/*");
 						JSSB.Append(node.ToFullString().Replace("*/", ""));
@@ -165,7 +165,7 @@ namespace CSharpToJavaScript
 					{
 						Visit(member);
 					}
-					if (_Options.Debug)
+					if (_CSTOJS.Options.Debug)
 					{
 						JSSB.Append("/*");
 						JSSB.Append(node.ToFullString().Replace("*/", ""));
@@ -211,7 +211,7 @@ namespace CSharpToJavaScript
 							Visit(asNode);
 							break;
 						default:
-							SM.Log($"asNode : {kind}");
+							_CSTOJS.Log($"asNode : {kind}");
 							break;
 					}
 				}
@@ -232,7 +232,7 @@ namespace CSharpToJavaScript
 							VisitToken(asToken);
 							break;
 						default:
-							SM.Log($"asToken : {kind}");
+							_CSTOJS.Log($"asToken : {kind}");
 							break;
 					}
 				}
@@ -266,7 +266,7 @@ namespace CSharpToJavaScript
 							Visit(asNode);
 							break;
 						default:
-							SM.Log($"asNode : {kind}");
+							_CSTOJS.Log($"asNode : {kind}");
 							break;
 					}
 				}
@@ -288,7 +288,7 @@ namespace CSharpToJavaScript
 								break;
 							}
 						default:
-							SM.Log($"asToken : {kind}");
+							_CSTOJS.Log($"asToken : {kind}");
 
 							break;
 					}
@@ -321,7 +321,7 @@ namespace CSharpToJavaScript
 						case SyntaxKind.PredefinedType:
 							break;
 						default:
-							SM.Log($"asNode : {kind}");
+							_CSTOJS.Log($"asNode : {kind}");
 							break;
 					}
 				}
@@ -338,7 +338,7 @@ namespace CSharpToJavaScript
 								break;
 							}
 						default:
-							SM.Log($"asToken : {kind}");
+							_CSTOJS.Log($"asToken : {kind}");
 							break;
 					}
 				}
@@ -380,7 +380,7 @@ namespace CSharpToJavaScript
 							Visit(asNode);
 							break;
 						default:
-							SM.Log($"asNode : {kind}");
+							_CSTOJS.Log($"asNode : {kind}");
 							break;
 					}
 				}
@@ -415,7 +415,7 @@ namespace CSharpToJavaScript
 								break;
 							}
 						default:
-							SM.Log($"asToken : {kind}");
+							_CSTOJS.Log($"asToken : {kind}");
 							break;
 					}
 				}
@@ -454,7 +454,7 @@ namespace CSharpToJavaScript
 								break;
 							}
 						default:
-							SM.Log($"asNode : {kind}");
+							_CSTOJS.Log($"asNode : {kind}");
 							break;
 					}
 				}
@@ -471,7 +471,7 @@ namespace CSharpToJavaScript
 								break;
 							}
 						default:
-							SM.Log($"asToken : {kind}");
+							_CSTOJS.Log($"asToken : {kind}");
 							break;
 					}
 				}
@@ -527,7 +527,7 @@ namespace CSharpToJavaScript
 								break;
 							}
 						default:
-							SM.Log($"asNode : {kind}");
+							_CSTOJS.Log($"asNode : {kind}");
 							break;
 					}
 				}
@@ -539,7 +539,7 @@ namespace CSharpToJavaScript
 					switch (kind)
 					{
 						default:
-							SM.Log($"asToken : {kind}");
+							_CSTOJS.Log($"asToken : {kind}");
 
 							break;
 					}
@@ -565,7 +565,7 @@ namespace CSharpToJavaScript
 							Visit(asNode);
 							break;
 						default:
-							SM.Log($"asNode : {kind}");
+							_CSTOJS.Log($"asNode : {kind}");
 							break;
 					}
 				}
@@ -583,7 +583,7 @@ namespace CSharpToJavaScript
 						case SyntaxKind.NewKeyword:
 							break;
 						default:
-							SM.Log($"asToken : {kind}");
+							_CSTOJS.Log($"asToken : {kind}");
 							break;
 					}
 				}
@@ -608,7 +608,7 @@ namespace CSharpToJavaScript
 							VisitIdentifierName(asNode as IdentifierNameSyntax);
 							break;
 						default:
-							SM.Log($"asNode : {kind}");
+							_CSTOJS.Log($"asNode : {kind}");
 							break;
 					}
 				}
@@ -625,7 +625,7 @@ namespace CSharpToJavaScript
 								break;
 							}
 						default:
-							SM.Log($"asToken : {kind}");
+							_CSTOJS.Log($"asToken : {kind}");
 							break;
 					}
 				}
@@ -654,7 +654,7 @@ namespace CSharpToJavaScript
 							Visit(asNode);
 							break;
 						default:
-							SM.Log($"asNode : {kind}");
+							_CSTOJS.Log($"asNode : {kind}");
 							break;
 					}
 				}
@@ -677,7 +677,7 @@ namespace CSharpToJavaScript
 								break;
 							}
 						default:
-							SM.Log($"asToken : {kind}");
+							_CSTOJS.Log($"asToken : {kind}");
 
 							break;
 					}
@@ -703,7 +703,7 @@ namespace CSharpToJavaScript
 							Visit(asNode);
 							break;
 						default:
-							SM.Log($"asNode : {kind}");
+							_CSTOJS.Log($"asNode : {kind}");
 							break;
 					}
 				}
@@ -722,7 +722,7 @@ namespace CSharpToJavaScript
 							VisitLeadingTrivia(asToken);
 							break;
 						default:
-							SM.Log($"asToken : {kind}");
+							_CSTOJS.Log($"asToken : {kind}");
 							break;
 					}
 				}
@@ -827,7 +827,7 @@ namespace CSharpToJavaScript
 							VisitAccessorList(asNode as AccessorListSyntax);
 							break;
 						default:
-							SM.Log($"asNode : {kind}");
+							_CSTOJS.Log($"asNode : {kind}");
 							break;
 					}
 				}
@@ -852,7 +852,7 @@ namespace CSharpToJavaScript
 							VisitToken(asToken);
 							break;
 						default:
-							SM.Log($"asToken : {kind}");
+							_CSTOJS.Log($"asToken : {kind}");
 							break;
 					}
 				}
@@ -1004,7 +1004,7 @@ namespace CSharpToJavaScript
 								break;
 							}
 						default:
-							SM.Log($"asNode : {kind}");
+							_CSTOJS.Log($"asNode : {kind}");
 							break;
 					}
 				}
@@ -1019,7 +1019,7 @@ namespace CSharpToJavaScript
 						case SyntaxKind.CloseBraceToken:
 							break;
 						default:
-							SM.Log($"asToken : {kind}");
+							_CSTOJS.Log($"asToken : {kind}");
 							break;
 					}
 				}
@@ -1044,7 +1044,7 @@ namespace CSharpToJavaScript
 							Visit(asNode);
 							break;
 						default:
-							SM.Log($"asNode : {kind}");
+							_CSTOJS.Log($"asNode : {kind}");
 							break;
 					}
 				}
@@ -1063,7 +1063,7 @@ namespace CSharpToJavaScript
 								break;
 							}
 						default:
-							SM.Log($"asToken : {kind}");
+							_CSTOJS.Log($"asToken : {kind}");
 
 							break;
 					}
@@ -1099,7 +1099,7 @@ namespace CSharpToJavaScript
 										VisitTrivia(_syntaxTrivias[_i]);
 									}
 
-									if(_Options.UseVarOverLet)
+									if(_CSTOJS.Options.UseVarOverLet)
 										JSSB.Append("var");
 									else
 										JSSB.Append("let");
@@ -1124,7 +1124,7 @@ namespace CSharpToJavaScript
 										VisitTrivia(_syntaxTrivias[_i]);
 									}
 
-									if (_Options.UseVarOverLet)
+									if (_CSTOJS.Options.UseVarOverLet)
 										JSSB.Append("var");
 									else
 										JSSB.Append("let");
@@ -1149,7 +1149,7 @@ namespace CSharpToJavaScript
 										VisitTrivia(_syntaxTrivias[_i]);
 									}
 
-									if (_Options.UseVarOverLet)
+									if (_CSTOJS.Options.UseVarOverLet)
 										JSSB.Append("var");
 									else
 										JSSB.Append("let");
@@ -1166,7 +1166,7 @@ namespace CSharpToJavaScript
 							Visit(asNode);
 							break;
 						default:
-							SM.Log($"asNode : {kind}");
+							_CSTOJS.Log($"asNode : {kind}");
 							break;
 					}
 				}
@@ -1181,7 +1181,7 @@ namespace CSharpToJavaScript
 							VisitToken(asToken);
 							break;
 						default:
-							SM.Log($"asToken : {kind}");
+							_CSTOJS.Log($"asToken : {kind}");
 							break;
 					}
 				}
@@ -1207,7 +1207,7 @@ namespace CSharpToJavaScript
 							Visit(asNode);
 							break;
 						default:
-							SM.Log($"asNode : {kind}");
+							_CSTOJS.Log($"asNode : {kind}");
 							break;
 					}
 				}
@@ -1223,7 +1223,7 @@ namespace CSharpToJavaScript
 							VisitToken(asToken);
 							break;
 						default:
-							SM.Log($"asToken : {kind}");
+							_CSTOJS.Log($"asToken : {kind}");
 							break;
 					}
 				}
@@ -1248,7 +1248,7 @@ namespace CSharpToJavaScript
 							Visit(asNode);
 							break;
 						default:
-							SM.Log($"asNode : {kind}");
+							_CSTOJS.Log($"asNode : {kind}");
 							break;
 					}
 				}
@@ -1263,7 +1263,7 @@ namespace CSharpToJavaScript
 							VisitToken(asToken);
 							break;
 						default:
-							SM.Log($"asToken : {kind}");
+							_CSTOJS.Log($"asToken : {kind}");
 							break;
 					}
 				}
@@ -1297,7 +1297,7 @@ namespace CSharpToJavaScript
 									VisitTrivia(_syntaxTrivias[_i]);
 								}
 
-								if (_Options.UseVarOverLet)
+								if (_CSTOJS.Options.UseVarOverLet)
 									JSSB.Append("var");
 								else
 									JSSB.Append("let");
@@ -1321,7 +1321,7 @@ namespace CSharpToJavaScript
 										VisitTrivia(_syntaxTrivias[_i]);
 									}
 
-									if (_Options.UseVarOverLet)
+									if (_CSTOJS.Options.UseVarOverLet)
 										JSSB.Append("var");
 									else
 										JSSB.Append("let");
@@ -1343,7 +1343,7 @@ namespace CSharpToJavaScript
 								break;
 							}
 						default:
-							SM.Log($"asNode : {kind}");
+							_CSTOJS.Log($"asNode : {kind}");
 							break;
 					}
 				}
@@ -1381,7 +1381,7 @@ namespace CSharpToJavaScript
 							VisitToken(asToken);
 							break;
 						default:
-							SM.Log($"asToken : {kind}");
+							_CSTOJS.Log($"asToken : {kind}");
 							break;
 					}
 				}
@@ -1406,7 +1406,7 @@ namespace CSharpToJavaScript
 							Visit(asNode);
 							break;
 						default:
-							SM.Log($"asNode : {kind}");
+							_CSTOJS.Log($"asNode : {kind}");
 							break;
 					}
 				}
@@ -1432,7 +1432,7 @@ namespace CSharpToJavaScript
 							VisitToken(asToken);
 							break;
 						default:
-							SM.Log($"asToken : {kind}");
+							_CSTOJS.Log($"asToken : {kind}");
 							break;
 					}
 				}
@@ -1463,7 +1463,7 @@ namespace CSharpToJavaScript
 								break;
 							}
 						default:
-							SM.Log($"asNode : {kind}");
+							_CSTOJS.Log($"asNode : {kind}");
 							break;
 					}
 				}
@@ -1479,7 +1479,7 @@ namespace CSharpToJavaScript
 							JSSB.Append('`');
 							break;
 						default:
-							SM.Log($"asToken : {kind}");
+							_CSTOJS.Log($"asToken : {kind}");
 							break;
 					}
 				}
@@ -1514,7 +1514,7 @@ namespace CSharpToJavaScript
 							_SNOriginal = null;
 							break;
 						default:
-							SM.Log($"asNode : {kind}");
+							_CSTOJS.Log($"asNode : {kind}");
 							break;
 					}
 				}
@@ -1535,7 +1535,7 @@ namespace CSharpToJavaScript
 							//VisitToken(asToken);
 							//break;
 						default:
-							SM.Log($"asToken : {kind}");
+							_CSTOJS.Log($"asToken : {kind}");
 							break;
 					}
 				}
@@ -1562,7 +1562,7 @@ namespace CSharpToJavaScript
 							Visit(asNode);
 							break;
 						default:
-							SM.Log($"asNode : {kind}");
+							_CSTOJS.Log($"asNode : {kind}");
 							break;
 					}
 				}
@@ -1577,7 +1577,7 @@ namespace CSharpToJavaScript
 						case SyntaxKind.CloseParenToken:
 							break;
 						default:
-							SM.Log($"asToken : {kind}");
+							_CSTOJS.Log($"asToken : {kind}");
 							break;
 					}
 				}
@@ -1602,7 +1602,7 @@ namespace CSharpToJavaScript
 							Visit(asNode); 
 							break;
 						default:
-							SM.Log($"asNode : {kind}");
+							_CSTOJS.Log($"asNode : {kind}");
 							break;
 					}
 				}
@@ -1627,7 +1627,7 @@ namespace CSharpToJavaScript
 								if (_vds == null)
 								{
 									AssignmentExpressionSyntax _aes = node.Ancestors().FirstOrDefault(e => e.IsKind(SyntaxKind.SimpleAssignmentExpression)) as AssignmentExpressionSyntax;
-									symbolInfo = CSTOJS.Model.GetSymbolInfo(_aes.Left);
+									symbolInfo = _CSTOJS.Model.GetSymbolInfo(_aes.Left);
 
 									ClassDeclarationSyntax classD = (ClassDeclarationSyntax)node.Ancestors().First(n => n.IsKind(SyntaxKind.ClassDeclaration));
 
@@ -1668,14 +1668,14 @@ namespace CSharpToJavaScript
 											//Todo?
 											//VariableDeclarationSyntax s = item.DescendantNodes().First(e => e.IsKind(SyntaxKind.VariableDeclaration)) as VariableDeclarationSyntax;
 											//syntaxNode = s.Type;
-											symbolInfo = CSTOJS.Model.GetSymbolInfo(syntaxNode);
+											symbolInfo = _CSTOJS.Model.GetSymbolInfo(syntaxNode);
 											break;
 										}
 									}
 								}
 								else
 								{
-									symbolInfo = CSTOJS.Model.GetSymbolInfo(_vds.Type);
+									symbolInfo = _CSTOJS.Model.GetSymbolInfo(_vds.Type);
 									syntaxNode = _vds.Type;
 								}
 
@@ -1737,7 +1737,7 @@ namespace CSharpToJavaScript
 										JSSB.Append(' ');
 										if (BuiltInTypesGenerics(syntaxNode.WithoutLeadingTrivia(), iSymbol) == false)
 										{
-											SM.Log($"TODO : {syntaxNode} ||| USE 'CustomCSNamesToJS' TO CONVERT.");
+											_CSTOJS.Log($"TODO : {syntaxNode} ||| USE 'CustomCSNamesToJS' TO CONVERT.");
 										}
 									}
 
@@ -1745,7 +1745,7 @@ namespace CSharpToJavaScript
 								break;
 							}
 						default:
-							SM.Log($"asToken : {kind}");
+							_CSTOJS.Log($"asToken : {kind}");
 							break;
 					}
 				}
@@ -1768,7 +1768,7 @@ namespace CSharpToJavaScript
 					{
 
 						default:
-							SM.Log($"asNode : {kind}");
+							_CSTOJS.Log($"asNode : {kind}");
 							break;
 					}
 				}
@@ -1784,7 +1784,7 @@ namespace CSharpToJavaScript
 							JSSB.Append($"super");
 							break;
 						default:
-							SM.Log($"asToken : {kind}");
+							_CSTOJS.Log($"asToken : {kind}");
 							break;
 					}
 				}
@@ -1809,7 +1809,7 @@ namespace CSharpToJavaScript
 						case SyntaxKind.IdentifierName:
 							break;
 						default:
-							SM.Log($"asNode : {kind}");
+							_CSTOJS.Log($"asNode : {kind}");
 							break;
 					}
 				}
@@ -1824,7 +1824,7 @@ namespace CSharpToJavaScript
 						case SyntaxKind.LessThanToken:
 							break;
 						default:
-							SM.Log($"asToken : {kind}");
+							_CSTOJS.Log($"asToken : {kind}");
 							break;
 					}
 				}
@@ -1851,7 +1851,7 @@ namespace CSharpToJavaScript
 								break;
 							}
 						default:
-							SM.Log($"asNode : {kind}");
+							_CSTOJS.Log($"asNode : {kind}");
 							break;
 					}
 				}
@@ -1871,7 +1871,7 @@ namespace CSharpToJavaScript
 								break;
 							}
 						default:
-							SM.Log($"asToken : {kind}");
+							_CSTOJS.Log($"asToken : {kind}");
 							break;
 					}
 				}
@@ -1893,7 +1893,7 @@ namespace CSharpToJavaScript
 					switch (kind)
 					{
 						default:
-							SM.Log($"asNode : {kind}");
+							_CSTOJS.Log($"asNode : {kind}");
 							break;
 					}
 				}
@@ -1913,7 +1913,7 @@ namespace CSharpToJavaScript
 								break;
 							}
 						default:
-							SM.Log($"asToken : {kind}");
+							_CSTOJS.Log($"asToken : {kind}");
 							break;
 					}
 				}
@@ -1949,7 +1949,7 @@ namespace CSharpToJavaScript
 					{
 						if (_syntaxToken.Text == text)
 						{
-							symbolInfo = CSTOJS.Model.GetSymbolInfo(_item.Parent as IdentifierNameSyntax);
+							symbolInfo = _CSTOJS.Model.GetSymbolInfo(_item.Parent as IdentifierNameSyntax);
 							break;
 						}
 					}
@@ -1960,18 +1960,26 @@ namespace CSharpToJavaScript
 			{
 				try
 				{
-					symbolInfo = CSTOJS.Model.GetSymbolInfo(node);
+					symbolInfo = _CSTOJS.Model.GetSymbolInfo(node);
+
+					if (_CSTOJS.Options.Debug)
+					{
+						var a = _CSTOJS.Model.GetDiagnostics();
+						foreach (Diagnostic item in a)
+						{
+							_CSTOJS.Log(item.ToString());
+						}
+					}
 				}
 				catch (Exception e)
 				{
 					symbolInfo = null;
-					var a = CSTOJS.Model.GetDeclarationDiagnostics();
+					var a = _CSTOJS.Model.GetDeclarationDiagnostics();
 					foreach (Diagnostic item in a)
 					{
-						SM.Log(item.ToString());
+						_CSTOJS.Log(item.ToString());
 					}
-					var b = CSTOJS.Model.GetDeclaredSymbol(node);
-					SM.Log(e.ToString());
+					_CSTOJS.Log(e.ToString());
 					//throw;
 				}
 			}
@@ -2037,7 +2045,7 @@ namespace CSharpToJavaScript
 							   select e;
 					}
 
-					SymbolInfo _symbolInfo = CSTOJS.Model.GetSymbolInfo(_all.First());
+					SymbolInfo _symbolInfo = _CSTOJS.Model.GetSymbolInfo(_all.First());
 					ISymbol? _iSymbol = null;
 
 					if (_symbolInfo.CandidateSymbols.Length >= 1)
@@ -2120,7 +2128,7 @@ namespace CSharpToJavaScript
 				return true;
 			}
 
-			foreach (Type type in _Options.CustomCSTypesToJS)
+			foreach (Type type in _CSTOJS.Options.CustomCSTypesToJS)
 			{
 				if (type.Name == text)
 				{
@@ -2214,17 +2222,17 @@ namespace CSharpToJavaScript
 			{
 				if (BuiltInTypesGenerics(node, iSymbol) == false)
 				{
-					if (_Options.Debug)
+					if (_CSTOJS.Options.Debug)
 					{
-						SM.Log("WARNING! Diagnostics starts ---");
-						ImmutableArray<Diagnostic> diag = CSTOJS.Model.GetDiagnostics();
+						_CSTOJS.Log("WARNING! Diagnostics starts ---");
+						ImmutableArray<Diagnostic> diag = _CSTOJS.Model.GetDiagnostics();
 						foreach (Diagnostic item in diag)
 						{
-							SM.Log(item.ToString());
+							_CSTOJS.Log(item.ToString());
 						}
-						SM.Log("WARNING! Diagnostics ends ---");
+						_CSTOJS.Log("WARNING! Diagnostics ends ---");
 					}
-					SM.Log($"WARNING! !-{node}-! By reaching this means, a name did not convert to JS. CHECK FOR UPPERCASE CHARACTERS IN NAMES IN THE JS FILE!");
+					_CSTOJS.Log($"WARNING! !-{node}-! By reaching this means, a name did not convert to JS. CHECK FOR UPPERCASE CHARACTERS IN NAMES IN THE JS FILE!");
 
 					//base.VisitIdentifierName(node);
 					return false;
@@ -2236,7 +2244,7 @@ namespace CSharpToJavaScript
 
 		private bool CustomCSNamesToJS(SyntaxNode node) 
 		{
-			foreach (Tuple<string, string> _item in _Options.CustomCSNamesToJS)
+			foreach (Tuple<string, string> _item in _CSTOJS.Options.CustomCSNamesToJS)
 			{
 				if (node is IdentifierNameSyntax _identifierName)
 				{
@@ -2266,7 +2274,7 @@ namespace CSharpToJavaScript
 
 			if (symbol == null) 
 			{
-				SM.Log($"WARNING! node: \"{node}\", symbol is null. USE \"CustomCSNamesToJS\"!");
+				_CSTOJS.Log($"WARNING! node: \"{node}\", symbol is null. USE \"CustomCSNamesToJS\"!");
 				return false;
 			}
 
@@ -2287,7 +2295,7 @@ namespace CSharpToJavaScript
 
 				if(typeSymbol.Kind != SymbolKind.NamedType) 
 				{
-					SM.Log($"WARNING! node: \"{node}\", typeSymbol is \"{typeSymbol.Kind}\". USE \"CustomCSNamesToJS\"!");
+					_CSTOJS.Log($"WARNING! node: \"{node}\", typeSymbol is \"{typeSymbol.Kind}\". USE \"CustomCSNamesToJS\"!");
 					return false;
 				}
 			}
@@ -2318,7 +2326,7 @@ namespace CSharpToJavaScript
 									return true;
 								}
 							default:
-								SM.Log($"WARNING! node: \"{node}\", typeSymbol: \"{typeSymbol}\", symbol: \"{symbol}\", Is not supported! USE \"CustomCSNamesToJS\"");
+								_CSTOJS.Log($"WARNING! node: \"{node}\", typeSymbol: \"{typeSymbol}\", symbol: \"{symbol}\", Is not supported! USE \"CustomCSNamesToJS\"");
 								return false;
 						}
 					}
@@ -2339,7 +2347,7 @@ namespace CSharpToJavaScript
 									return true;
 								}
 							default:
-								SM.Log($"WARNING! node: \"{node}\", typeSymbol: \"{typeSymbol}\", symbol: \"{symbol}\", Is not supported! USE \"CustomCSNamesToJS\"");
+								_CSTOJS.Log($"WARNING! node: \"{node}\", typeSymbol: \"{typeSymbol}\", symbol: \"{symbol}\", Is not supported! USE \"CustomCSNamesToJS\"");
 								return false;
 						}
 					}
@@ -2375,7 +2383,7 @@ namespace CSharpToJavaScript
 									return true;
 								}
 							default:
-								SM.Log($"WARNING! node: \"{node}\", typeSymbol: \"{typeSymbol}\", symbol: \"{symbol}\", Is not supported! USE \"CustomCSNamesToJS\"");
+								_CSTOJS.Log($"WARNING! node: \"{node}\", typeSymbol: \"{typeSymbol}\", symbol: \"{symbol}\", Is not supported! USE \"CustomCSNamesToJS\"");
 								return false;
 						}
 					}
@@ -2400,7 +2408,7 @@ namespace CSharpToJavaScript
 									return true;
 								}
 							default:
-								SM.Log($"WARNING! node: \"{node}\", typeSymbol: \"{typeSymbol}\", symbol: \"{symbol}\", Is not supported! USE \"CustomCSNamesToJS\"");
+								_CSTOJS.Log($"WARNING! node: \"{node}\", typeSymbol: \"{typeSymbol}\", symbol: \"{symbol}\", Is not supported! USE \"CustomCSNamesToJS\"");
 								return false;
 						}
 					}
@@ -2415,7 +2423,7 @@ namespace CSharpToJavaScript
 									return true;
 								}
 							default:
-								SM.Log($"WARNING! node: \"{node}\", typeSymbol: \"{typeSymbol}\", symbol: \"{symbol}\", Is not supported! USE \"CustomCSNamesToJS\"");
+								_CSTOJS.Log($"WARNING! node: \"{node}\", typeSymbol: \"{typeSymbol}\", symbol: \"{symbol}\", Is not supported! USE \"CustomCSNamesToJS\"");
 								return false;
 						}
 					}
@@ -2431,12 +2439,12 @@ namespace CSharpToJavaScript
 									return true;
 								}
 							default:
-								SM.Log($"WARNING! node: \"{node}\", typeSymbol: \"{typeSymbol}\", symbol: \"{symbol}\", Is not supported! USE \"CustomCSNamesToJS\"");
+								_CSTOJS.Log($"WARNING! node: \"{node}\", typeSymbol: \"{typeSymbol}\", symbol: \"{symbol}\", Is not supported! USE \"CustomCSNamesToJS\"");
 								return false;
 						}
 					}
 				default:
-					SM.Log($"WARNING! typeSymbol: \"{typeSymbol}\" Is not supported! USE \"CustomCSNamesToJS\"");
+					_CSTOJS.Log($"WARNING! typeSymbol: \"{typeSymbol}\" Is not supported! USE \"CustomCSNamesToJS\"");
 					return false;
 			}
 		}

@@ -6,9 +6,13 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.CSharp;
 using System.Threading.Tasks;
 using Microsoft.CodeAnalysis;
-using CSharpToJavaScript.Utils;
 using System.Linq;
 using Microsoft.CodeAnalysis.Text;
+using System.Text;
+using System.Runtime.CompilerServices;
+using System;
+using System.Reflection.Metadata;
+using System.Collections.Immutable;
 
 namespace CSharpToJavaScript
 {
@@ -17,9 +21,9 @@ namespace CSharpToJavaScript
 	/// </summary>
 	public class CSTOJS
 	{
-		public static SemanticModel Model { get; set; }
+		public SemanticModel Model { get; set; } = null;
 
-		private CSTOJSOptions _Options = new();
+		public CSTOJSOptions Options { get; set; } = new();
 
 		private Walker _Walker = new();
 
@@ -28,7 +32,7 @@ namespace CSharpToJavaScript
 		/// </summary>
 		public CSTOJS() 
 		{
-			if (_Options.Debug)
+			if (Options.Debug)
 			{
 				if (File.Exists(Directory.GetCurrentDirectory() + "/debug.txt"))
 					File.Delete(Directory.GetCurrentDirectory() + "/debug.txt");
@@ -41,7 +45,7 @@ namespace CSharpToJavaScript
 
 			Assembly assembly = Assembly.GetExecutingAssembly();
 			//https://stackoverflow.com/a/73474279
-			SM.Log($"{assembly.GetName().Name} {assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion}");
+			Log($"{assembly.GetName().Name} {assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion}");
 		}
 
 		/// <summary>
@@ -50,9 +54,9 @@ namespace CSharpToJavaScript
 		/// <param name="options">Options of <see cref="CSTOJS"/>, see <see cref="CSTOJSOptions"/>.</param>
 		public CSTOJS(CSTOJSOptions options)
 		{
-			_Options = options;
+			Options = options;
 
-			if (_Options.Debug)
+			if (Options.Debug)
 			{
 				if (File.Exists(Directory.GetCurrentDirectory() + "/debug.txt"))
 					File.Delete(Directory.GetCurrentDirectory() + "/debug.txt");
@@ -65,7 +69,7 @@ namespace CSharpToJavaScript
 
 			Assembly assembly = Assembly.GetExecutingAssembly();
 			//https://stackoverflow.com/a/73474279
-			SM.Log($"{assembly.GetName().Name} {assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion}");
+			Log($"{assembly.GetName().Name} {assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion}");
 		}
 
 		/// <summary>
@@ -80,10 +84,53 @@ namespace CSharpToJavaScript
 
 			FileInfo file = new(path);
 
-			if(filename != null)
-				await GenerateAsync(path, assembly, filename);
+			SyntaxTree? _tree = null;
+
+			using (var stream = File.OpenRead(path))
+			{
+				_tree = CSharpSyntaxTree.ParseText(SourceText.From(stream), path: path);
+			}
+
+			await GenerateAsync(_tree, assembly);
+
+			if (!Directory.Exists(Options.OutPutPath))
+			{
+				Directory.CreateDirectory(Options.OutPutPath);
+			}
+
+			string pathCombined = string.Empty;
+
+			if (filename != null)
+				pathCombined = Path.Combine(Options.OutPutPath, filename);
 			else
-				await GenerateAsync(path, assembly, file.Name.Replace(".cs", ".js"));
+				pathCombined = Path.Combine(Options.OutPutPath, file.Name.Replace(".cs", ".js"));
+
+
+			await File.WriteAllTextAsync(pathCombined, _Walker.JSSB.ToString());
+
+			Log($"--- Done!");
+			Log($"--- Path: {pathCombined}");
+			Log($"--- --- ---");
+		}
+
+		public async Task<StringBuilder> GenerateOneFromStringAsync(string csstring, List<MetadataReference>? references = null) 
+		{
+			if (csstring == null)
+				throw new ArgumentNullException(nameof(csstring));
+
+			Assembly assembly = Assembly.GetEntryAssembly();
+
+			SyntaxTree? _tree = CSharpSyntaxTree.ParseText(csstring.Normalize());
+			
+			if(references != null)
+				await GenerateAsync(_tree, assembly, references);
+			else
+				await GenerateAsync(_tree, assembly);
+
+			Log($"--- Done!");
+			Log($"--- --- ---");
+
+			return _Walker.JSSB;
 		}
 		/// <summary>
 		/// Method for generating multiply js files.
@@ -100,42 +147,65 @@ namespace CSharpToJavaScript
 
 			foreach (FileInfo file in Files)
 			{
-				await GenerateAsync(file.FullName, assembly, file.Name.Replace(".cs", ".js"));
+				SyntaxTree? _tree = null;
+
+				using (var stream = File.OpenRead(file.FullName))
+				{
+					_tree = CSharpSyntaxTree.ParseText(SourceText.From(stream), path: file.FullName);
+				}
+
+				await GenerateAsync(_tree, assembly);
+
+				if (!Directory.Exists(Options.OutPutPath))
+				{
+					Directory.CreateDirectory(Options.OutPutPath);
+				}
+
+				string pathCombined = Path.Combine(Options.OutPutPath, file.Name.Replace(".cs", ".js"));
+
+				await File.WriteAllTextAsync(pathCombined, _Walker.JSSB.ToString());
+
+				Log($"--- Done!");
+				Log($"--- Path: {pathCombined}");
+				Log($"--- --- ---");
 			}
 		}
 
-		private async Task GenerateAsync(string path, Assembly assembly, string filename = "main.js") 
+		private async Task GenerateAsync(SyntaxTree? tree, Assembly assembly, List<MetadataReference>? refs = null) 
 		{
-			_Walker = new(_Options);
-
-			SyntaxTree? tree = null;
-
-			using (var stream = File.OpenRead(path))
-			{
-				tree = CSharpSyntaxTree.ParseText(SourceText.From(stream), path: path);
-			}
+			_Walker = new(this);
 
 			CompilationUnitSyntax root = tree.GetCompilationUnitRoot();
+
 
 			string assemblyPath = Path.GetDirectoryName(assembly.Location);
 			List<MetadataReference> references = new() { };
 
 			string rtPath = Path.GetDirectoryName(typeof(object).Assembly.Location);
 
-			references.Add(MetadataReference.CreateFromFile(Path.Combine(rtPath, "System.Private.CoreLib.dll")));
-
-			AssemblyName[] a = assembly.GetReferencedAssemblies();
-			foreach (AssemblyName item in a)
+			if (refs == null)
 			{
-				if (File.Exists(Path.Combine(assemblyPath, item.Name + ".dll")))
-					references.Add(MetadataReference.CreateFromFile(Path.Combine(assemblyPath, item.Name + ".dll")));
-				else
+				if (rtPath != null && assemblyPath != null)
 				{
-					if (File.Exists(Path.Combine(rtPath, item.Name + ".dll")))
-						references.Add(MetadataReference.CreateFromFile(Path.Combine(rtPath, item.Name + ".dll")));
+					references.Add(MetadataReference.CreateFromFile(Path.Combine(rtPath, "System.Private.CoreLib.dll")));
+
+					AssemblyName[] a = assembly.GetReferencedAssemblies();
+					foreach (AssemblyName item in a)
+					{
+						if (File.Exists(Path.Combine(assemblyPath, item.Name + ".dll")))
+							references.Add(MetadataReference.CreateFromFile(Path.Combine(assemblyPath, item.Name + ".dll")));
+						else
+						{
+							if (File.Exists(Path.Combine(rtPath, item.Name + ".dll")))
+								references.Add(MetadataReference.CreateFromFile(Path.Combine(rtPath, item.Name + ".dll")));
+						}
+					}
 				}
 			}
-
+			else 
+			{
+				references = refs;
+			}
 
 			UsingDirectiveSyntax[] oldUsing = root.Usings.ToArray();
 
@@ -303,24 +373,31 @@ namespace CSharpToJavaScript
 
 			Model = compilation.GetSemanticModel(trueST);
 
-			_Walker.JSSB.Append(_Options.AddSBInFront);
+			_Walker.JSSB.Append(Options.AddSBInFront);
 
 			_Walker.Visit(trueRoot);
 
-			_Walker.JSSB.Append(_Options.AddSBInEnd);
+			_Walker.JSSB.Append(Options.AddSBInEnd);
+		}
 
-			if (!Directory.Exists(_Options.OutPutPath))
+		public void Log(string message, [CallerFilePath] string? file = null, [CallerMemberName] string? member = null, [CallerLineNumber] int line = 0)
+		{
+			if (Options.DisableConsoleColors == false)
 			{
-				Directory.CreateDirectory(_Options.OutPutPath);
+				if (message.StartsWith("---"))
+					Console.ForegroundColor = ConsoleColor.Green;
+
+				if (message.StartsWith("ERROR") || message.StartsWith("as"))
+					Console.ForegroundColor = ConsoleColor.Red;
+
+				if (message.StartsWith("WARNING"))
+					Console.ForegroundColor = ConsoleColor.Yellow;
 			}
 
-			string pathCombined = Path.Combine(_Options.OutPutPath, filename);
+			Trace.WriteLine($"({line}):{Path.GetFileName(file)} {member}: {message}");
 
-			await File.WriteAllTextAsync(pathCombined, _Walker.JSSB.ToString());
-
-			SM.Log($"--- Done!");
-			SM.Log($"--- Path: {pathCombined}");
-			SM.Log($"--- --- ---");
+			if (Options.DisableConsoleColors == false)
+				Console.ResetColor();
 		}
 	}
 }

@@ -19,6 +19,14 @@ namespace CSharpToJavaScript
 		public bool Debug { get; set; } = false;
 
 
+        /// <summary>
+        /// Self-explanatory, Disable Console Colors.
+        /// </summary>
+        /// <value>
+        /// Default: <c>false</c>
+        /// </value>
+        public bool DisableConsoleColors { get; set; } = false;
+
 		/// <summary>
 		/// Output path for javascript file.
 		/// </summary>

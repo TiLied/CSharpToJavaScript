@@ -11,8 +11,6 @@ using Microsoft.CodeAnalysis.Text;
 using System.Text;
 using System.Runtime.CompilerServices;
 using System;
-using System.Reflection.Metadata;
-using System.Collections.Immutable;
 
 namespace CSharpToJavaScript
 {
@@ -112,7 +110,13 @@ namespace CSharpToJavaScript
 			Log($"--- Path: {pathCombined}");
 			Log($"--- --- ---");
 		}
-
+		/// <summary>
+		/// Method for generating from string.
+		/// </summary>
+		/// <param name="csstring">CSharp string.</param>
+		/// <param name="references">Needed if you don't have access to files. Like if Blazor WebAssembly, because Assembly.location is empty.</param>
+		/// <returns>JS <see cref="StringBuilder"/></returns>
+		/// <exception cref="ArgumentNullException"></exception>
 		public async Task<StringBuilder> GenerateOneFromStringAsync(string csstring, List<MetadataReference>? references = null) 
 		{
 			if (csstring == null)

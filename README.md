@@ -4,6 +4,7 @@ Brute forcing conversion(translation) from C# to Javascript.
 This is a personal project with purpose to learn and understand better c# and js at the same time. Many stuff is not supported and some won't. Updates will be happening when I'm using this library.(irregular)
 
 [Nuget package](https://www.nuget.org/packages/CSharpToJavaScript/)
+[Try it online!](https://tilied.github.io/CSTOJS_Pages/BWA/)
 
 ### C#
 ```csharp
@@ -59,8 +60,6 @@ public class Program
 ```
 CSharp/Test.cs
 ```csharp
-using CSharpToJavaScript.APIs.JS;
-
 using static CSharpToJavaScript.APIs.JS.GlobalObject;
 
 namespace ConsoleAppTest.CSharp;
@@ -83,12 +82,12 @@ class Test
  	}
 }
 ```
-More examples [here](https://tilied.github.io/CSharpToJavaScript/articles/intro.html). WIP!
+More examples [here](https://tilied.github.io/CSTOJS_Pages/articles/intro.html). WIP!
 
 ## Some Todos
 - [x] ~More comments in code, especially in [CSTOJSOptions](https://github.com/TiLied/CSharpToJavaScript/blob/master/CSharpToJavaScript/CSTOJSOptions.cs)~
 - [ ] Wiki?????
-- [x] ~Better and more examples~ [Here](https://tilied.github.io/CSharpToJavaScript/articles/intro.html). WIP!
+- [x] ~Better and more examples~ [Here](https://tilied.github.io/CSTOJS_Pages/articles/intro.html). WIP!
 - [x] ~Figure out how to do docs for [api](https://github.com/TiLied/CSharpToJavaScript/tree/master/CSharpToJavaScript/APIs/JS)~ [Docs](https://tilied.github.io/CSharpToJavaScript/) WIP!
 - [ ] [CLI](https://learn.microsoft.com/en-us/dotnet/standard/commandline/)?
 - [ ] [Visual Studio extension](https://learn.microsoft.com/en-us/visualstudio/extensibility/starting-to-develop-visual-studio-extensions?view=vs-2022)?

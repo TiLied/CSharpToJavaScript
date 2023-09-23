@@ -9,7 +9,7 @@
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <Authors>TiLied</Authors>
     <Description>Brute forcing conversion(translation) from C# to Javascript.</Description>
-    <PackageProjectUrl>https://tilied.github.io/CSharpToJavaScript/</PackageProjectUrl>
+    <PackageProjectUrl>https://tilied.github.io/CSTOJS_Pages/</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/TiLied/CSharpToJavaScript/</RepositoryUrl>
     <PackageTags>csharp, c#, conversion, javascript, js, generating</PackageTags>
@@ -20,10 +20,6 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.7.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="APIs\JS\Generated\" />
   </ItemGroup>
 
   <ItemGroup>

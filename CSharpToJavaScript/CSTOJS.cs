@@ -30,15 +30,6 @@ namespace CSharpToJavaScript
 		/// </summary>
 		public CSTOJS() 
 		{
-			if (Options.Debug)
-			{
-				if (File.Exists(Directory.GetCurrentDirectory() + "/debug.txt"))
-					File.Delete(Directory.GetCurrentDirectory() + "/debug.txt");
-
-				Trace.Listeners.Add(new TextWriterTraceListener("debug.txt"));
-				Trace.AutoFlush = true;
-			}
-
 			ConsoleTraceListener consoleTraceListener = new();
 			if(Trace.Listeners.Contains(consoleTraceListener) == false)
 				Trace.Listeners.Add(consoleTraceListener);
@@ -56,22 +47,26 @@ namespace CSharpToJavaScript
 		{
 			Options = options;
 
-			if (Options.Debug)
+			if (Options.DisableConsoleOutput == false)
 			{
-				if (File.Exists(Directory.GetCurrentDirectory() + "/debug.txt"))
-					File.Delete(Directory.GetCurrentDirectory() + "/debug.txt");
+				if (Options.Debug)
+				{
+					if (File.Exists(Directory.GetCurrentDirectory() + "/debug.txt"))
+						File.Delete(Directory.GetCurrentDirectory() + "/debug.txt");
 
-				Trace.Listeners.Add(new TextWriterTraceListener("debug.txt"));
-				Trace.AutoFlush = true;
+					Trace.Listeners.Add(new TextWriterTraceListener("debug.txt"));
+					Trace.AutoFlush = true;
+				}
+
+				ConsoleTraceListener consoleTraceListener = new();
+				if (Trace.Listeners.Contains(consoleTraceListener) == false)
+					Trace.Listeners.Add(consoleTraceListener);
+
+
+				Assembly assembly = Assembly.GetExecutingAssembly();
+				//https://stackoverflow.com/a/73474279
+				Log($"{assembly.GetName().Name} {assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion}");
 			}
-
-			ConsoleTraceListener consoleTraceListener = new();
-			if (Trace.Listeners.Contains(consoleTraceListener) == false)
-				Trace.Listeners.Add(consoleTraceListener);
-
-			Assembly assembly = Assembly.GetExecutingAssembly();
-			//https://stackoverflow.com/a/73474279
-			Log($"{assembly.GetName().Name} {assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion}");
 		}
 
 		/// <summary>
@@ -132,7 +127,7 @@ namespace CSharpToJavaScript
 		/// Method for generating from string.
 		/// </summary>
 		/// <param name="csstring">CSharp string.</param>
-		/// <param name="references">Needed if you don't have access to files. Like if Blazor WebAssembly, because Assembly.location is empty.</param>
+		/// <param name="references">Needed if you don't have access to files. Because Assembly.location is null in Blazor WebAssembly.</param>
 		/// <returns>JS <see cref="StringBuilder"/></returns>
 		/// <exception cref="ArgumentNullException"></exception>
 		public async Task<StringBuilder> GenerateOneFromStringAsync(string csstring, List<MetadataReference>? references = null) 
@@ -349,6 +344,51 @@ namespace CSharpToJavaScript
 			//Should I make "NormalizeWhitespace" option??? TODO!
 			//.NormalizeWhitespace().AddUsings(oldUsing);
 
+			if (rtPath != null || rtPath != string.Empty)
+			{
+				if (File.Exists(Path.Combine(rtPath, "System.dll")))
+					references.Add(MetadataReference.CreateFromFile(Path.Combine(rtPath, "System.dll")));
+
+				if (File.Exists(Path.Combine(rtPath, "System.Collections.Generics.dll")))
+					references.Add(MetadataReference.CreateFromFile(Path.Combine(rtPath, "System.Collections.Generics.dll")));
+
+				if (File.Exists(Path.Combine(rtPath, "System.IO.dll")))
+					references.Add(MetadataReference.CreateFromFile(Path.Combine(rtPath, "System.IO.dll")));
+
+				if (File.Exists(Path.Combine(rtPath, "System.Linq.dll")))
+					references.Add(MetadataReference.CreateFromFile(Path.Combine(rtPath, "System.Linq.dll")));
+
+				if (File.Exists(Path.Combine(rtPath, "System.Net.Http.dll")))
+					references.Add(MetadataReference.CreateFromFile(Path.Combine(rtPath, "System.Net.Http.dll")));
+
+				if (File.Exists(Path.Combine(rtPath, "System.Threading.dll")))
+					references.Add(MetadataReference.CreateFromFile(Path.Combine(rtPath, "System.Threading.dll")));
+
+				if (File.Exists(Path.Combine(rtPath, "System.Threading.Tasks.dll")))
+					references.Add(MetadataReference.CreateFromFile(Path.Combine(rtPath, "System.Threading.Tasks.dll")));
+
+				foreach (UsingDirectiveSyntax oU in oldUsing)
+				{
+					if (File.Exists(Path.Combine(rtPath, oU.Name + ".dll")))
+						references.Add(MetadataReference.CreateFromFile(Path.Combine(rtPath, oU.Name + ".dll")));
+				}
+			}
+
+			references = references.Distinct().ToList();
+
+			if (Options.Debug)
+			{
+				Log($"+++");
+				Log($"assemblyPath: {assemblyPath}");
+				Log($"rtPath: {rtPath}");
+				Log($"List of references:");
+				foreach (MetadataReference reference in references)
+				{
+					Log(reference.Display);
+				}
+				Log($"+++");
+			}
+
 			SyntaxTree trueST = trueRoot.SyntaxTree;
 			CSharpCompilation compilation = CSharpCompilation
 				.Create("HelloWorld")
@@ -366,22 +406,26 @@ namespace CSharpToJavaScript
 
 		public void Log(string message, [CallerFilePath] string? file = null, [CallerMemberName] string? member = null, [CallerLineNumber] int line = 0)
 		{
-			if (Options.DisableConsoleColors == false)
+			if (Options.DisableConsoleOutput == false)
 			{
-				if (message.StartsWith("---"))
-					Console.ForegroundColor = ConsoleColor.Green;
+				if (Options.DisableConsoleColors == false)
+				{
+					if (message.StartsWith("---"))
+						Console.ForegroundColor = ConsoleColor.Green;
 
-				if (message.StartsWith("ERROR") || message.StartsWith("as"))
-					Console.ForegroundColor = ConsoleColor.Red;
+					if (message.StartsWith("ERROR") || message.StartsWith("as"))
+						Console.ForegroundColor = ConsoleColor.Red;
 
-				if (message.StartsWith("WARNING"))
-					Console.ForegroundColor = ConsoleColor.Yellow;
+					if (message.StartsWith("WARNING"))
+						Console.ForegroundColor = ConsoleColor.Yellow;
+				}
+
+
+				Trace.WriteLine($"({line}):{Path.GetFileName(file)} {member}: {message}");
+
+				if (Options.DisableConsoleColors == false)
+					Console.ResetColor();
 			}
-
-			Trace.WriteLine($"({line}):{Path.GetFileName(file)} {member}: {message}");
-
-			if (Options.DisableConsoleColors == false)
-				Console.ResetColor();
 		}
 	}
 }

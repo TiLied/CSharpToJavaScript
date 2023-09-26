@@ -19,11 +19,9 @@ namespace CSharpToJavaScript
 	/// </summary>
 	public class CSTOJS
 	{
-		public SemanticModel Model { get; set; } = null;
-
 		public CSTOJSOptions Options { get; set; } = new();
 
-		private Walker _Walker = new();
+		private Walker? _Walker = null;
 
 		/// <summary>
 		/// New instance of <see cref="CSTOJS"/> with default options, see <see cref="CSTOJSOptions"/>.
@@ -49,15 +47,6 @@ namespace CSharpToJavaScript
 
 			if (Options.DisableConsoleOutput == false)
 			{
-				if (Options.Debug)
-				{
-					if (File.Exists(Directory.GetCurrentDirectory() + "/debug.txt"))
-						File.Delete(Directory.GetCurrentDirectory() + "/debug.txt");
-
-					Trace.Listeners.Add(new TextWriterTraceListener("debug.txt"));
-					Trace.AutoFlush = true;
-				}
-
 				ConsoleTraceListener consoleTraceListener = new();
 				if (Trace.Listeners.Contains(consoleTraceListener) == false)
 					Trace.Listeners.Add(consoleTraceListener);
@@ -102,7 +91,7 @@ namespace CSharpToJavaScript
 					_tree = CSharpSyntaxTree.ParseText(SourceText.From(stream), path: file.FullName);
 				}
 
-				await GenerateAsync(_tree, assembly);
+				Generate(_tree, assembly);
 
 				if (!Directory.Exists(Options.OutPutPath))
 				{
@@ -123,6 +112,7 @@ namespace CSharpToJavaScript
 				Log($"--- --- ---");
 			}
 		}
+
 		/// <summary>
 		/// Method for generating from string.
 		/// </summary>
@@ -130,7 +120,7 @@ namespace CSharpToJavaScript
 		/// <param name="references">Needed if you don't have access to files. Because Assembly.location is null in Blazor WebAssembly.</param>
 		/// <returns>JS <see cref="StringBuilder"/></returns>
 		/// <exception cref="ArgumentNullException"></exception>
-		public async Task<StringBuilder> GenerateOneFromStringAsync(string csstring, List<MetadataReference>? references = null) 
+		public StringBuilder GenerateOneFromString(string csstring, List<MetadataReference>? references = null) 
 		{
 			if (csstring == null)
 				throw new ArgumentNullException(nameof(csstring));
@@ -140,9 +130,9 @@ namespace CSharpToJavaScript
 			SyntaxTree? _tree = CSharpSyntaxTree.ParseText(csstring.Normalize());
 			
 			if(references != null)
-				await GenerateAsync(_tree, assembly, references);
+				Generate(_tree, assembly, references);
 			else
-				await GenerateAsync(_tree, assembly);
+				Generate(_tree, assembly);
 
 			Log($"--- Done!");
 			Log($"--- --- ---");
@@ -150,10 +140,8 @@ namespace CSharpToJavaScript
 			return _Walker.JSSB;
 		}
 
-		private async Task GenerateAsync(SyntaxTree? tree, Assembly assembly, List<MetadataReference>? refs = null) 
+		private void Generate(SyntaxTree? tree, Assembly assembly, List<MetadataReference>? refs = null) 
 		{
-			_Walker = new(this);
-
 			CompilationUnitSyntax root = tree.GetCompilationUnitRoot();
 
 
@@ -344,7 +332,7 @@ namespace CSharpToJavaScript
 			//Should I make "NormalizeWhitespace" option??? TODO!
 			//.NormalizeWhitespace().AddUsings(oldUsing);
 
-			if (rtPath != null || rtPath != string.Empty)
+			if (rtPath != null && rtPath != string.Empty)
 			{
 				if (File.Exists(Path.Combine(rtPath, "System.dll")))
 					references.Add(MetadataReference.CreateFromFile(Path.Combine(rtPath, "System.dll")));
@@ -379,8 +367,8 @@ namespace CSharpToJavaScript
 			if (Options.Debug)
 			{
 				Log($"+++");
-				Log($"assemblyPath: {assemblyPath}");
-				Log($"rtPath: {rtPath}");
+				Log($"Path assembly: {assemblyPath}");
+				Log($"Path rt: {rtPath}");
 				Log($"List of references:");
 				foreach (MetadataReference reference in references)
 				{
@@ -395,7 +383,7 @@ namespace CSharpToJavaScript
 				.AddReferences(references.ToArray())
 				.AddSyntaxTrees(trueST);
 
-			Model = compilation.GetSemanticModel(trueST);
+			_Walker = new(this, compilation.GetSemanticModel(trueST));
 
 			_Walker.JSSB.Append(Options.AddSBInFront);
 

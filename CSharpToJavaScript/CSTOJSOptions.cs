@@ -11,7 +11,7 @@ namespace CSharpToJavaScript
 	public class CSTOJSOptions
 	{
 		/// <summary>
-		/// Debug. When set to true prints additional info to console, cs lines to js file and creates file Debug.txt 
+		/// Debug. When set to true prints additional info to console, cs lines to js file.
 		/// </summary>
 		/// <value>
 		/// Default: <c>false</c>

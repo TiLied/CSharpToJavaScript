@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CSharpToJavaScript.Utils;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
@@ -36,10 +37,10 @@ namespace CSharpToJavaScript
 		public bool DisableConsoleOutput { get; set; } = false;
 
 		/// <summary>
-		/// Output path for javascript file.
+		/// Output path for javascript file/files.
 		/// </summary>
 		/// <value>
-		/// Default: <c>Directory.GetCurrentDirectory()</c>
+		/// Default: <see cref="Directory.GetCurrentDirectory()" />
 		/// </value>
 		public string OutPutPath { get; set; } = Directory.GetCurrentDirectory();
 
@@ -53,34 +54,33 @@ namespace CSharpToJavaScript
 
 		/// <summary>
 		/// List of custom names to convert.
-		/// Example: new("Console","console").
-		/// Will convert "Console" to "console".
 		/// </summary>
+		/// <remarks>Example: <c>new List&lt;Tuple&lt;string, string&gt;&gt;(){new Tuple&lt;string, string&gt;("Console", "console")}</c>. Will convert "Console" to "console".</remarks>
 		/// <value>
 		/// Default: <c>new()</c>
 		/// </value>
 		public List<Tuple<string, string>> CustomCSNamesToJS { get; set; } = new();
 		/// <summary>
 		/// List of types to convert.
-		/// Example: Similar to CustomCSNamesToJS, but convers the type. You need to use <c>ToAttribute</c>
 		/// </summary>
+		/// <remarks>Example: Similar to <see cref="CSTOJSOptions.CustomCSNamesToJS" />, but convers the type. You need to use <see cref="ToAttribute" />.</remarks>
 		/// <value>
 		/// Default: <c>new()</c>
 		/// </value>
 		public List<Type> CustomCSTypesToJS { get; set; } = new();
 
 		/// <summary>
-		/// Add a <c>StringBuilder</c> to the front of a javascript file.
+		/// Add a <see cref="StringBuilder" /> to the front of a javascript file.
 		/// </summary>
-		/// <remarks>When using "GenerateManyAsync" applies to every file!</remarks>
+		/// <remarks>Note! When passing a folder path to <see cref="CSTOJS.GenerateOneAsync(string, string?)" /> applies to every file!</remarks>
 		/// <value>
 		/// Default: <c>new()</c>
 		/// </value>
 		public StringBuilder AddSBInFront { get; set; } = new();
 		/// <summary>
-		/// Add a <c>StringBuilder</c> to the end of a javascript file.
+		/// Add a <see cref="StringBuilder" /> to the end of a javascript file.
 		/// </summary>
-		/// <remarks>When using "GenerateManyAsync" applies to every file!</remarks>
+		/// <remarks>Note! When passing a folder path to <see cref="CSTOJS.GenerateOneAsync(string, string?)" /> applies to every file!</remarks>
 		/// <value>
 		/// Default: <c>new()</c>
 		/// </value>

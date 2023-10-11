@@ -1645,7 +1645,7 @@ namespace CSharpToJavaScript
 
 									foreach (MemberDeclarationSyntax item in mem)
 									{
-										SyntaxToken _sT = default;
+										SyntaxToken? _sT = null;
 										if (item is MethodDeclarationSyntax m)
 										{
 											_sT = m.Identifier;
@@ -1665,7 +1665,7 @@ namespace CSharpToJavaScript
 											_sT = d3.Last();
 										}
 
-										if (_aes.Left.ToString().Contains(_sT.Text))
+										if (_sT != null && _aes.Left.ToString() == _sT?.Text)
 										{
 											//Todo?
 											//VariableDeclarationSyntax s = item.DescendantNodes().First(e => e.IsKind(SyntaxKind.VariableDeclaration)) as VariableDeclarationSyntax;
@@ -1731,6 +1731,12 @@ namespace CSharpToJavaScript
 											JSSB.Append($" {(syntaxNode as GenericNameSyntax).Identifier.ToString()}");
 										}else
 											JSSB.Append($" {syntaxNode.ToString()}");
+										break;
+									}
+
+									//TODO??? Test??
+									if (syntaxNode.IsKind(SyntaxKind.PredefinedType)) 
+									{
 										break;
 									}
 
@@ -2057,8 +2063,9 @@ namespace CSharpToJavaScript
 
 					if (_iSymbol != null && _iSymbol.Kind == SymbolKind.Local)
 					{
-						//base.VisitIdentifierName(node);
-						return false;
+						//TODO! TEST THIS!
+						//DO NOT REMOVE BREAKPOINT TEST THIS!
+						//return false;
 					}
 
 					ClassDeclarationSyntax _class = (ClassDeclarationSyntax)node.Ancestors().First(n => n.Kind() == SyntaxKind.ClassDeclaration);
@@ -2074,7 +2081,7 @@ namespace CSharpToJavaScript
 														  select e;
 							_sT = d3.First();*/
 
-									_sT = m.Identifier;
+							_sT = m.Identifier;
 						}
 
 						if (item is PropertyDeclarationSyntax p)
@@ -2113,7 +2120,6 @@ namespace CSharpToJavaScript
 						}
 					}
 
-					//base.VisitIdentifierName(node);
 					return false;
 				}
 
@@ -2234,9 +2240,6 @@ namespace CSharpToJavaScript
 						}
 						_CSTOJS.Log("WARNING! Diagnostics ends ---");
 					}
-					//_CSTOJS.Log($"WARNING! !-{node}-! By reaching this means, a name did not convert to JS. CHECK FOR UPPERCASE CHARACTERS IN NAMES IN THE JS FILE!");
-
-					//base.VisitIdentifierName(node);
 					return false;
 				}
 			}

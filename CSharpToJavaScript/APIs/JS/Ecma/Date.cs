@@ -1,11 +1,4 @@
 ﻿using CSharpToJavaScript.Utils;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static CSharpToJavaScript.APIs.JS.Date;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace CSharpToJavaScript.APIs.JS
 {
@@ -33,7 +26,7 @@ namespace CSharpToJavaScript.APIs.JS
 		}
 
 		[To(ToAttribute.Default)]
-		public static float UTC(float year, float month = 0,float date = 1, float hours = 0, float minutes = 0, float seconds = 0, float ms = 0)
+		public static float UTC(float year, float month = 0, float date = 1, float hours = 0, float minutes = 0, float seconds = 0, float ms = 0)
 		{
 			throw new System.NotImplementedException();
 		}

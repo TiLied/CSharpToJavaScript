@@ -1,5 +1,4 @@
 ﻿using CSharpToJavaScript.Utils;
-using Microsoft.CodeAnalysis;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,14 +10,10 @@ namespace CSharpToJavaScript.APIs.JS
 	public partial class Document
 	{
 		[To(ToAttribute.FirstCharToLowerCase)]
-		public Element CreateElement(string localName, string options = "") 
+		public Element CreateElement(string localName, string options = "")
 		{
-			throw new System.NotImplementedException();
+			throw new NotImplementedException();
 		}
-		[To(ToAttribute.FirstCharToLowerCase)]
-		public Text CreateTextNode(string data) 
-		{
-			throw new System.NotImplementedException();
-		}
+		
 	}
 }

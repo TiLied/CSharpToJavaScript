@@ -12,8 +12,7 @@ namespace CSharpToJavaScript.APIs.JS
 		[To(ToAttribute.FirstCharToLowerCase)]
 		public CSSStyleDeclaration Style { get; }
 	}
-
-	public partial interface CSSStyleDeclaration
+	public partial class CSSStyleDeclaration
 	{
 		[To(ToAttribute.FirstCharToLowerCase)]
 		public string Display { get; set; }

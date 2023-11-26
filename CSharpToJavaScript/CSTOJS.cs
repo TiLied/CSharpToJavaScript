@@ -23,15 +23,17 @@ namespace CSharpToJavaScript
 
 		private Walker? _Walker = null;
 
+		static CSTOJS() 
+		{
+			ConsoleTraceListener consoleTraceListener = new();
+			Trace.Listeners.Add(consoleTraceListener);
+		}
+
 		/// <summary>
 		/// New instance of <see cref="CSTOJS"/> with default options, see <see cref="CSTOJSOptions"/>.
 		/// </summary>
 		public CSTOJS() 
 		{
-			ConsoleTraceListener consoleTraceListener = new();
-			if(Trace.Listeners.Contains(consoleTraceListener) == false)
-				Trace.Listeners.Add(consoleTraceListener);
-
 			Assembly assembly = Assembly.GetExecutingAssembly();
 			//https://stackoverflow.com/a/73474279
 			Log($"{assembly.GetName().Name} {assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion}");
@@ -47,11 +49,6 @@ namespace CSharpToJavaScript
 
 			if (Options.DisableConsoleOutput == false)
 			{
-				ConsoleTraceListener consoleTraceListener = new();
-				if (Trace.Listeners.Contains(consoleTraceListener) == false)
-					Trace.Listeners.Add(consoleTraceListener);
-
-
 				Assembly assembly = Assembly.GetExecutingAssembly();
 				//https://stackoverflow.com/a/73474279
 				Log($"{assembly.GetName().Name} {assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion}");
@@ -63,7 +60,7 @@ namespace CSharpToJavaScript
 		/// </summary>
 		/// <param name="path">Full path to cs file or to the folder with cs files.</param>
 		/// <param name="filename">Optional! Filename of a js file if you generating one file!</param>
-		/// <returns></returns>
+		/// <returns>empty Task</returns>
 		public async Task GenerateOneAsync(string path, string? filename = null) 
 		{
 			Assembly assembly = Assembly.GetEntryAssembly();
@@ -114,6 +111,50 @@ namespace CSharpToJavaScript
 		}
 
 		/// <summary>
+		/// Method for generating js StringBuilder/StringBuilders.
+		/// </summary>
+		/// <param name="path">Full path to cs file or to the folder with cs files.</param>
+		/// <returns>List of StringBuilder</returns>
+		public List<StringBuilder> GenerateOne(string path)
+		{
+			Assembly assembly = Assembly.GetEntryAssembly();
+			List<FileInfo> files = new();
+			List<StringBuilder> jsStringBuilders = new();
+
+			if (File.Exists(path))
+			{
+				files.Add(new FileInfo(path));
+			}
+			else
+			{
+				DirectoryInfo folder = new(path);
+
+				files = folder.GetFiles("*.cs").ToList();
+			}
+
+			foreach (FileInfo file in files)
+			{
+				SyntaxTree? _tree = null;
+
+				using (var stream = File.OpenRead(file.FullName))
+				{
+					_tree = CSharpSyntaxTree.ParseText(SourceText.From(stream), path: file.FullName);
+				}
+
+				Generate(_tree, assembly);
+
+				jsStringBuilders.Add(_Walker.JSSB);
+
+				Log($"--- Done!");
+				Log($"--- File name: {file.Name}");
+				Log($"--- --- ---");
+			}
+
+			return jsStringBuilders;
+		}
+
+
+		/// <summary>
 		/// Method for generating from string.
 		/// </summary>
 		/// <param name="csstring">CSharp string.</param>
@@ -139,6 +180,44 @@ namespace CSharpToJavaScript
 
 			return _Walker.JSSB;
 		}
+
+		/// <summary>
+		/// Method for generating from string. Writes a file.
+		/// </summary>
+		/// <param name="csstring">CSharp string.</param>
+		/// <param name="filename">Filename of a js file.</param>
+		/// <param name="references">Needed if you don't have access to files. Because Assembly.location is null in Blazor WebAssembly.</param>
+		/// <returns>empty Task</returns>
+		/// <exception cref="ArgumentNullException"></exception>
+		public async Task GenerateOneFromStringAsync(string csstring, string? filename = "main.js", List<MetadataReference>? references = null)
+		{
+			if (csstring == null)
+				throw new ArgumentNullException(nameof(csstring));
+
+			Assembly assembly = Assembly.GetEntryAssembly();
+
+			SyntaxTree? _tree = CSharpSyntaxTree.ParseText(csstring);
+
+			if (references != null)
+				Generate(_tree, assembly, references);
+			else
+				Generate(_tree, assembly);
+
+
+			if (!Directory.Exists(Options.OutPutPath))
+			{
+				Directory.CreateDirectory(Options.OutPutPath);
+			}
+
+			string pathCombined = Path.Combine(Options.OutPutPath, filename);
+			
+			await File.WriteAllTextAsync(pathCombined, _Walker.JSSB.ToString());
+
+			Log($"--- Done!");
+			Log($"--- Path: {pathCombined}");
+			Log($"--- --- ---");
+		}
+
 
 		private void Generate(SyntaxTree? tree, Assembly assembly, List<MetadataReference>? refs = null) 
 		{
@@ -354,14 +433,25 @@ namespace CSharpToJavaScript
 
 				if (File.Exists(Path.Combine(rtPath, "System.Threading.Tasks.dll")))
 					references.Add(MetadataReference.CreateFromFile(Path.Combine(rtPath, "System.Threading.Tasks.dll")));
+				
+				if (File.Exists(Path.Combine(rtPath, "System.Console.dll")))
+					references.Add(MetadataReference.CreateFromFile(Path.Combine(rtPath, "System.Console.dll")));
 
 				foreach (UsingDirectiveSyntax oU in oldUsing)
 				{
+
 					if (File.Exists(Path.Combine(rtPath, oU.Name + ".dll")))
 						references.Add(MetadataReference.CreateFromFile(Path.Combine(rtPath, oU.Name + ".dll")));
 				}
 			}
 
+			if (assemblyPath != null && assemblyPath != string.Empty)
+			{
+				if (File.Exists(Path.Combine(assemblyPath, "CSharpToJavaScript.dll")))
+					references.Add(MetadataReference.CreateFromFile(Path.Combine(assemblyPath, "CSharpToJavaScript.dll")));
+			}
+
+			//TODO! does not work... sigh
 			references = references.Distinct().ToList();
 
 			if (Options.Debug)

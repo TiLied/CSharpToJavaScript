@@ -3,7 +3,7 @@
   <PropertyGroup>
 		<VersionPrefix>0.0.05</VersionPrefix>
 		
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>disable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
@@ -39,6 +39,10 @@
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="APIs\JS\Generated\" />
   </ItemGroup>
 
 </Project>

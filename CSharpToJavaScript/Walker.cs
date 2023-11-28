@@ -1,5 +1,4 @@
-﻿using CSharpToJavaScript.APIs.JS;
-using CSharpToJavaScript.Utils;
+﻿using CSharpToJavaScript.Utils;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
@@ -28,7 +27,6 @@ namespace CSharpToJavaScript
 		private SyntaxNode? _BaseConstructorInitializerNode = null;
 
 		private string _NameSpaceStr = string.Empty;
-		private bool _UsedThis = false;
 
 		private bool _PropertyStatic = false;
 		private bool _ConstKeyword = false;
@@ -284,6 +282,9 @@ namespace CSharpToJavaScript
 						case SyntaxKind.StaticKeyword: 
 							{
 								VisitToken(asToken);
+								
+								JSSB.AppendLine();
+
 								for (int j = 0; j < nodesAndTokens.Count; j++)
 								{
 									asNode = nodesAndTokens[j].AsNode();
@@ -523,9 +524,7 @@ namespace CSharpToJavaScript
 						case SyntaxKind.DivideAssignmentExpression:
 						case SyntaxKind.AwaitExpression:
 							{
-								_UsedThis = false;
 								Visit(asNode);
-								_UsedThis = false;
 								break;
 							}
 						default:
@@ -580,25 +579,28 @@ namespace CSharpToJavaScript
 						case SyntaxKind.TrueLiteralExpression:
 						case SyntaxKind.StringLiteralExpression:
 						case SyntaxKind.InterpolatedStringExpression:
-						case SyntaxKind.ObjectCreationExpression:
-						case SyntaxKind.ImplicitObjectCreationExpression:
-						{
 								Visit(asNode);
 								break;
-						}
+						case SyntaxKind.ObjectCreationExpression:
+							VisitObjectCreationExpression(asNode as ObjectCreationExpressionSyntax);
+							break;
+						case SyntaxKind.ImplicitObjectCreationExpression:
+							VisitImplicitObjectCreationExpression(asNode as ImplicitObjectCreationExpressionSyntax);
+							break;
 						case SyntaxKind.AnonymousObjectCreationExpression:
 							{
 								VisitAnonymousObjectCreationExpression(asNode as AnonymousObjectCreationExpressionSyntax);
 								break;
 							}
-						
-						case SyntaxKind.ElementAccessExpression:
-						case SyntaxKind.IdentifierName:
 						case SyntaxKind.SimpleMemberAccessExpression:
+						case SyntaxKind.ElementAccessExpression:
 							{
-								_UsedThis = false;
 								Visit(asNode);
-								_UsedThis = false;
+								break;
+							}
+						case SyntaxKind.IdentifierName:
+							{
+								VisitIdentifierName(asNode as IdentifierNameSyntax);
 								break;
 							}
 						default:
@@ -816,18 +818,23 @@ namespace CSharpToJavaScript
 				{
 					SyntaxKind kind = asNode.Kind();
 
-					if (kind == SyntaxKind.AccessorList) 
+					if (kind == SyntaxKind.AccessorList)
 					{
-						string _getSetStr = asNode.ToString().Trim().Replace(" ","");
+						string _getSetStr = asNode.ToString().Trim().Replace(" ", "");
 
 						if (_getSetStr == "{get;set;}" || _getSetStr == "{get;}")
 						{
 							IEnumerable<SyntaxNodeOrToken> key = from n in nodesAndTokens
-									  where n.IsNode
-									  where n.AsNode().IsKind(SyntaxKind.PredefinedType)
-									  select n;
+																 where n.IsNode
+																 where n.AsNode().IsKind(SyntaxKind.PredefinedType)
+																 select n;
 
 							FieldDeclarationSyntax field = null;
+
+							string _indentifier = "_" + nodesAndTokens[i - 1].AsToken().ToString() + "_";
+
+							if (!_PropertyStatic)
+								_indentifier = "#" + _indentifier;
 
 							if (!key.Any())
 							{
@@ -839,17 +846,18 @@ namespace CSharpToJavaScript
 								if (!key.Any())
 								{
 									key = from n in nodesAndTokens
-											   where n.IsNode
-											   where n.AsNode().IsKind(SyntaxKind.GenericName)
-											   select n;
+										  where n.IsNode
+										  where n.AsNode().IsKind(SyntaxKind.GenericName)
+										  select n;
 								}
+
 
 								field = SyntaxFactory.FieldDeclaration(
 							   SyntaxFactory.VariableDeclaration(SyntaxFactory.IdentifierName(key.First().ToString()))
 							.WithVariables(
 								   SyntaxFactory.SingletonSeparatedList(
 									   SyntaxFactory.VariableDeclarator(
-										   SyntaxFactory.Identifier("#_" + nodesAndTokens[i - 1].AsToken().ToString() + "_")))))
+										   SyntaxFactory.Identifier(_indentifier)))))
 						   .WithModifiers(
 							   SyntaxFactory.TokenList(new[]
 							   {
@@ -858,7 +866,7 @@ namespace CSharpToJavaScript
 						   .WithLeadingTrivia(node.GetLeadingTrivia())
 							.WithTrailingTrivia(node.GetTrailingTrivia());
 							}
-							else 
+							else
 							{
 								key = key.First().ChildNodesAndTokens();
 								field = SyntaxFactory.FieldDeclaration(
@@ -867,7 +875,7 @@ namespace CSharpToJavaScript
 							.WithVariables(
 								   SyntaxFactory.SingletonSeparatedList(
 									   SyntaxFactory.VariableDeclarator(
-										   SyntaxFactory.Identifier("#_" + nodesAndTokens[i - 1].AsToken().ToString() + "_")))))
+										   SyntaxFactory.Identifier(_indentifier)))))
 						   .WithModifiers(
 							   SyntaxFactory.TokenList(new[]
 							   {
@@ -882,6 +890,15 @@ namespace CSharpToJavaScript
 						}
 					}
 				}
+				else 
+				{
+					SyntaxToken asToken = nodesAndTokens[i].AsToken();
+					SyntaxKind kind = asToken.Kind();
+
+					if (kind == SyntaxKind.StaticKeyword)
+						_PropertyStatic = true;
+				}
+
 			}
 
 			for (int i = 0; i < nodesAndTokens.Count; i++)
@@ -925,7 +942,6 @@ namespace CSharpToJavaScript
 							VisitLeadingTrivia(asToken);
 							break;
 						case SyntaxKind.StaticKeyword:
-							_PropertyStatic = true;
 							VisitToken(asToken);
 							break;
 						default:
@@ -1727,7 +1743,7 @@ namespace CSharpToJavaScript
 
 								if (iSymbol != null && iSymbol.Kind != SymbolKind.ErrorType)
 								{
-									if (iSymbol.ContainingNamespace.ToString().Contains(nameof(APIs.JS)))
+									if (iSymbol.ContainingNamespace.ToString().Contains(nameof(CSharpToJavaScript)))
 									{
 										string _text = string.Empty;
 										SyntaxToken _identifier = new();
@@ -1788,6 +1804,96 @@ namespace CSharpToJavaScript
 									}
 
 								}
+								break;
+							}
+						default:
+							_CSTOJS.Log($"asToken : {kind}");
+							break;
+					}
+				}
+			}
+		}
+
+		public override void VisitObjectCreationExpression(ObjectCreationExpressionSyntax node)
+		{
+			ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
+
+			for (int i = 0; i < nodesAndTokens.Count; i++)
+			{
+				SyntaxNode? asNode = nodesAndTokens[i].AsNode();
+
+				if (asNode != null)
+				{
+					SyntaxKind kind = asNode.Kind();
+
+					switch (kind)
+					{
+						case SyntaxKind.ArgumentList:
+							Visit(asNode);
+							break;
+						case SyntaxKind.IdentifierName:
+							{
+								VisitIdentifierName(asNode as IdentifierNameSyntax);
+								break;
+							}
+						case SyntaxKind.GenericName:
+							VisitGenericName(asNode as GenericNameSyntax);
+							break;
+						default:
+							_CSTOJS.Log($"asNode : {kind}");
+							break;
+					}
+				}
+				else
+				{
+					SyntaxToken asToken = nodesAndTokens[i].AsToken();
+					SyntaxKind kind = asToken.Kind();
+
+					switch (kind)
+					{
+						case SyntaxKind.NewKeyword:
+							{
+								VisitToken(asToken);
+								break;
+							}
+						default:
+							_CSTOJS.Log($"asToken : {kind}");
+							break;
+					}
+				}
+			}
+		}
+
+		public override void VisitThisExpression(ThisExpressionSyntax node)
+		{
+			ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
+
+			for (int i = 0; i < nodesAndTokens.Count; i++)
+			{
+				SyntaxNode? asNode = nodesAndTokens[i].AsNode();
+
+				if (asNode != null)
+				{
+					SyntaxKind kind = asNode.Kind();
+
+					switch (kind)
+					{
+
+						default:
+							_CSTOJS.Log($"asNode : {kind}");
+							break;
+					}
+				}
+				else
+				{
+					SyntaxToken asToken = nodesAndTokens[i].AsToken();
+					SyntaxKind kind = asToken.Kind();
+
+					switch (kind)
+					{
+						case SyntaxKind.ThisKeyword:
+							{
+								VisitToken(asToken);
 								break;
 							}
 						default:
@@ -2079,16 +2185,10 @@ namespace CSharpToJavaScript
 					{
 						return false;
 					}
-
-
-					DataFlowAnalysis _dfa = _Model.AnalyzeDataFlow(node);
-
-					if(_dfa.Succeeded == false)
-						_dfa = _Model.AnalyzeDataFlow(node.Parent);
-
-					if (_dfa.Succeeded == true)
+					/*
+					if (iSymbol.DeclaringSyntaxReferences.Length >= 0) 
 					{
-						if (_dfa.WrittenOutside[0].Name == "this" || iSymbol.IsStatic)
+						if (_UsedThis == false)
 						{
 							_UsedThis = true;
 
@@ -2102,9 +2202,7 @@ namespace CSharpToJavaScript
 							return true;
 						}
 					}
-
-
-					/*
+										
 					IEnumerable<SyntaxNode?> _all = from e in node.Parent.ChildNodes()
 													where e.IsKind(SyntaxKind.IdentifierName)
 													select e;
@@ -2129,7 +2227,7 @@ namespace CSharpToJavaScript
 						//TODO! TEST THIS!
 						//DO NOT REMOVE BREAKPOINT TEST THIS!
 						//return false;
-					}
+					}*/
 
 					ClassDeclarationSyntax _class = (ClassDeclarationSyntax)node.Ancestors().First(n => n.Kind() == SyntaxKind.ClassDeclaration);
 					var a = _class.Members;
@@ -2138,12 +2236,6 @@ namespace CSharpToJavaScript
 						SyntaxToken _sT = default;
 						if (item is MethodDeclarationSyntax m)
 						{
-							/*
-							IEnumerable<SyntaxToken> d3 = from e in m.ChildTokens()
-														  where e.IsKind(SyntaxKind.IdentifierToken)
-														  select e;
-							_sT = d3.First();
-
 							_sT = m.Identifier;
 						}
 
@@ -2167,21 +2259,31 @@ namespace CSharpToJavaScript
 
 						if (_sT.ToString() == node.ToString())
 						{
-							if (_UsedThis == false)
+							if (node.Parent.Parent != null &&
+								!node.Parent.Parent.IsKind(SyntaxKind.SimpleAssignmentExpression)) 
 							{
-								_UsedThis = true;
+								DataFlowAnalysis _dfa = _Model.AnalyzeDataFlow(node);
 
-								VisitLeadingTrivia(identifier);
+								if (_dfa.Succeeded == false)
+									_dfa = _Model.AnalyzeDataFlow(node.Parent);
 
-								JSSB.Append($"this.");
-								VisitToken(identifier.WithoutTrivia());
+								if (_dfa.Succeeded == true)
+								{
+									if (_dfa.WrittenOutside[0].Name == "this" || iSymbol.IsStatic)
+									{
+										VisitLeadingTrivia(identifier);
 
-								VisitTrailingTrivia(identifier);
+										JSSB.Append($"this.");
+										VisitToken(identifier.WithoutTrivia());
 
-								return true;
+										VisitTrailingTrivia(identifier);
+
+										return true;
+									}
+								}
 							}
 						}
-					}*/
+					}
 
 					return false;
 				}

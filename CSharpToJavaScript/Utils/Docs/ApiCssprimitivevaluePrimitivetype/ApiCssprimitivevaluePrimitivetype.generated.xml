@@ -1,0 +1,13 @@
+<docs>
+<CSSPrimitiveValuePrimitiveType>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>primitiveType</c></strong> read-only property of the<br/><see cref="CSSPrimitiveValue."/> interface represents the type of a CSS value.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This property was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do<br/>not implement it.</para><para>To achieve your purpose, you can use:</para></blockquote>
+<para>-<see cref="CSSStyleDeclaration.GetPropertyCSSValue."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSPrimitiveValue/primitiveType"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <c>unsigned short</c> representing the type of the value. Possible values are:</value>
+</CSSPrimitiveValuePrimitiveType>
+</docs>

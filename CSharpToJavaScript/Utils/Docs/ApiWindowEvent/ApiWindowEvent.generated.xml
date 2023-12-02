@@ -1,0 +1,12 @@
+<docs>
+<WindowEvent>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The read-only <see cref="Window."/> property <strong><c>event</c></strong> returns the <see cref="Event."/> which is currently being handled by the site's code. Outside the context of an event handler, the value is always <c>undefined</c>.
+</summary>
+<remarks>
+<para>You <strong>should</strong> avoid using this property in new code, and should instead use the <see cref="Event."/> passed into the event handler function. This property is not universally supported and even when supported introduces potential fragility to your code.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This property can be fragile, in that there may be situations in which the returned <c>Event</c> is not the expected value. In addition, <c>Window.event</c> is not accurate for events dispatched within <see href="https://developer.mozilla.org/en-US/docs/Glossary/shadow tree">shadow tree</see>.</para></blockquote>
+<para>-<see cref="Event.SrcElement."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Window/event"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WindowEvent>
+</docs>

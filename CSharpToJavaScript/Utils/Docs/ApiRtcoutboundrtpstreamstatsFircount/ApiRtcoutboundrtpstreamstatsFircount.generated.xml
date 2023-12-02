@@ -1,0 +1,12 @@
+<docs>
+<RTCOutboundRtpStreamStatsFirCount>
+<summary>
+The <strong><c>firCount</c></strong> property of the<br/><see cref="RTCOutboundRtpStreamStats."/> dictionary indicates the number of<br/><strong>Full Intra Request</strong> (<strong>FIR</strong>) that the remote<br/><see cref="RTCRtpReceiver."/> has sent to this <see cref="RTCRtpSender."/>.
+</summary>
+<remarks>
+<para>A FIR packet is sent when the receiver finds that it has fallen behind and needs to skip<br/>frames in order to catch up; the sender should respond by sending a full frame instead<br/>of a delta frame.</para><para>Available only on video media.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/firCount"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer value indicating how many FIR packets have been received by the sender<br/>during the current connection. This statistic is available only for video tracks.The receiver sends a FIR packet to the sender any time it falls behind or loses packets<br/>and cannot decode the incoming stream any longer because of the lost data. This tells<br/>the sender to send a full frame instead of a delta frame, so that the receiver can catch<br/>up.The higher <c>firCount</c> is, the more often frames were dropped, which may be<br/>an indication that the media&amp;apos;s bit rate is too high for the available bandwidth, or that<br/>the receiving device is overburdened and is therefore unable to process the incoming<br/>data.</value>
+</RTCOutboundRtpStreamStatsFirCount>
+</docs>

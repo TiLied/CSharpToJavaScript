@@ -1,0 +1,12 @@
+<docs>
+<CanvasRenderingContext2DGetTransform>
+<summary>
+The <strong><c>CanvasRenderingContext2D.getTransform()</c></strong> method of the Canvas 2D API retrieves the current transformation matrix being applied to the context.
+</summary>
+<remarks>
+<para>-The interface defining this method: <see cref="CanvasRenderingContext2D."/><br/>-<see cref="CanvasRenderingContext2D.Transform."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/getTransform"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="DOMMatrix."/> object.The transformation matrix is described by: &amp;lt;math&amp;gt;&amp;lt;semantics&amp;gt;&amp;lt;mrow&amp;gt;&amp;lt;mo&amp;gt;[&amp;lt;/mo&amp;gt;<br/>&amp;lt;mtable columnalign=&amp;quot;center center center&amp;quot; rowspacing=&amp;quot;0.5ex&amp;quot;&amp;gt;&amp;lt;mtr&amp;gt;&amp;lt;mtd&amp;gt;&amp;lt;mi&amp;gt;a&amp;lt;/mi&amp;gt;<br/>&amp;lt;/mtd&amp;gt;&amp;lt;mtd&amp;gt;&amp;lt;mi&amp;gt;c&amp;lt;/mi&amp;gt;<br/>&amp;lt;/mtd&amp;gt;&amp;lt;mtd&amp;gt;&amp;lt;mi&amp;gt;e&amp;lt;/mi&amp;gt;<br/>&amp;lt;/mtd&amp;gt;&amp;lt;/mtr&amp;gt;&amp;lt;mtr&amp;gt;&amp;lt;mtd&amp;gt;&amp;lt;mi&amp;gt;b&amp;lt;/mi&amp;gt;<br/>&amp;lt;/mtd&amp;gt;&amp;lt;mtd&amp;gt;&amp;lt;mi&amp;gt;d&amp;lt;/mi&amp;gt;<br/>&amp;lt;/mtd&amp;gt;&amp;lt;mtd&amp;gt;&amp;lt;mi&amp;gt;f&amp;lt;/mi&amp;gt;<br/>&amp;lt;/mtd&amp;gt;&amp;lt;/mtr&amp;gt;&amp;lt;mtr&amp;gt;&amp;lt;mtd&amp;gt;&amp;lt;mn&amp;gt;0&amp;lt;/mn&amp;gt;<br/>&amp;lt;/mtd&amp;gt;&amp;lt;mtd&amp;gt;&amp;lt;mn&amp;gt;0&amp;lt;/mn&amp;gt;<br/>&amp;lt;/mtd&amp;gt;&amp;lt;mtd&amp;gt;&amp;lt;mn&amp;gt;1&amp;lt;/mn&amp;gt;<br/>&amp;lt;/mtd&amp;gt;&amp;lt;/mtr&amp;gt;&amp;lt;/mtable&amp;gt;&amp;lt;mo&amp;gt;]&amp;lt;/mo&amp;gt;<br/>&amp;lt;/mrow&amp;gt;&amp;lt;annotation encoding=&amp;quot;TeX&amp;quot;&amp;gt;\left[ \begin a &amp;#x26; c &amp;#x26; e \ b &amp;#x26; d<br/>&amp;#x26; f \ 0 &amp;#x26; 0 &amp;#x26; 1 \end \right]&amp;lt;/annotation&amp;gt;&amp;lt;/semantics&amp;gt;&amp;lt;/math&amp;gt;<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> The returned object is not live, so updating it will not<br/>affect the current transformation matrix, and updating the current transformation<br/>matrix will not affect an already returned <c>DOMMatrix</c>.</blockquote></returns>
+</CanvasRenderingContext2DGetTransform>
+</docs>

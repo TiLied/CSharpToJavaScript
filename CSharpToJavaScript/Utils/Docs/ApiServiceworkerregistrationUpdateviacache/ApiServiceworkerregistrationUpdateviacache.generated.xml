@@ -1,0 +1,12 @@
+<docs>
+<ServiceWorkerRegistrationUpdateViaCache>
+<summary>
+The <strong><c>updateViaCache</c></strong> read-only property of the<br/><see cref="ServiceWorkerRegistration."/> interface updates the cache using<br/>the mode specified in the call to <see cref="'ServiceWorkerContainer.Register'."/>.<br/>Requests for <c>importScripts</c> still go via the HTTP cache. <c>updateViaCache</c> offers<br/>control over this behavior.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</see><br/>-<see href="https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker">Service workers basic code example</see><br/>-<see href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</see><br/>-<see cref="Promise"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web workers</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/updateViaCache"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>Returns one of the following values:</value>
+</ServiceWorkerRegistrationUpdateViaCache>
+</docs>

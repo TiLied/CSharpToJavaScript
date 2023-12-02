@@ -1,0 +1,11 @@
+<docs>
+<PerformanceEntryDuration>
+<summary>
+The read-only <strong><c>duration</c></strong> property returns a {{domxref(&amp;quot;DOMHighResTimeStamp&amp;quot;,&amp;quot;timestamp&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;no-code&amp;quot;)}} that is the duration of the {{domxref(&amp;quot;PerformanceEntry&amp;quot;,&amp;quot;performance entry&amp;quot;, &amp;quot;&amp;quot;, "no-code")}}. The meaning of this property depends on the value of this entry's <see cref="PerformanceEntry.EntryType."/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceEntry/duration"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DOMHighResTimeStamp."/> representing the duration of the {{domxref("PerformanceEntry","performance entry", &amp;quot;&amp;quot;, &amp;quot;no-code&amp;quot;)}}. If the duration concept doesn&amp;apos;t apply for a particular performance metric, a duration of <c>0</c> is returned.The meaning of this property depends on the value of this performance entry's <see cref="PerformanceEntry.EntryType."/>:For the following entry types, <c>duration</c> is not applicable, and in this case the value is always <c>0</c>:</value>
+</PerformanceEntryDuration>
+</docs>

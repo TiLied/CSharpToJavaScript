@@ -1,0 +1,12 @@
+<docs>
+<PaymentResponseMethodName>
+<summary>
+The <strong><c>methodName</c></strong> read-only<br/>property of the <see cref="PaymentResponse."/> interface returns a string uniquely<br/>identifying the payment handler selected by the user.
+</summary>
+<remarks>
+<para>This string may be either<br/>one of the standardized payment method identifiers or a URL used by the payment handler<br/>to process payments.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentResponse/methodName"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string uniquely identifying the payment handler being used to<br/>process the payment. This may be either a standardized identifier, or a URL used by the<br/>payment processor to handle payments. See<br/>how <see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API/Concepts#merchant_validation">merchant validation</see> works.</value>
+</PaymentResponseMethodName>
+</docs>

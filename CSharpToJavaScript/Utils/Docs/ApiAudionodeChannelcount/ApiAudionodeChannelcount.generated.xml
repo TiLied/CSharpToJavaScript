@@ -1,0 +1,13 @@
+<docs>
+<AudioNodeChannelCount>
+<summary>
+The <strong><c>channelCount</c></strong> property of the <see cref="AudioNode."/> interface represents an integer used to determine how many channels are used when <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing">up-mixing and down-mixing</see> connections to any inputs to the node.
+</summary>
+<remarks>
+<para><c>channelCount</c>'s usage and precise definition depend on the value of <see cref="AudioNode.ChannelCountMode."/>:</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioNode/channelCount"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer.</value>
+</AudioNodeChannelCount>
+</docs>

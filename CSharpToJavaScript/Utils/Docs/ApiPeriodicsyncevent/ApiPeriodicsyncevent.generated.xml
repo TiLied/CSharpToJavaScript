@@ -1,0 +1,12 @@
+<docs>
+<PeriodicSyncEvent>
+<summary>
+The <strong><c>PeriodicSyncEvent</c></strong> interface of the <see cref="'Web Periodic Background Synchronization API'."/> provides a way to run tasks in the service worker with network connectivity.
+</summary>
+<remarks>
+<para>An instance of this event is passed to the <see cref="'ServiceWorkerGlobalScope.Periodicsync_event'."/> handler. This happens periodically, at an interval greater than or equal to that set in the <see cref="'PeriodicSyncManager.Register'."/> method. Other implementation-specific factors such as the user's engagement with the site decide the actual interval.</para><para></para>
+<para>-<see href="https://developer.chrome.com/articles/periodic-background-sync/">Richer offline experiences with the Periodic Background Sync API</see><br/>-<see href="https://webplatformapis.com/periodic_sync/periodicSync_improved.html">A Periodic Background Sync demo app</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PeriodicSyncEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</PeriodicSyncEvent>
+</docs>

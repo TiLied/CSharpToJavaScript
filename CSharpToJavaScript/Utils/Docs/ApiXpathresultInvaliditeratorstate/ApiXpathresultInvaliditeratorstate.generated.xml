@@ -1,0 +1,12 @@
+<docs>
+<XPathResultInvalidIteratorState>
+<summary>
+The read-only <strong><c>invalidIteratorState</c></strong> property of the<br/><see cref="XPathResult."/> interface signifies that the iterator has become invalid. It<br/>is <c>true</c> if <see cref="XPathResult.ResultType."/> is<br/><c>UNORDERED_NODE_ITERATOR_TYPE</c> or <c>ORDERED_NODE_ITERATOR_TYPE</c> and<br/>the document has been modified since this result was returned.
+</summary>
+<remarks>
+<para>AvailableInWorkers</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XPathResult/invalidIteratorState"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value indicating whether the iterator has become invalid.</value>
+</XPathResultInvalidIteratorState>
+</docs>

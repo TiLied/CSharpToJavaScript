@@ -1,0 +1,11 @@
+<docs>
+<InputDeviceInfoGetCapabilities>
+<summary>
+The <strong><c>getCapabilities()</c></strong> method of the <see cref="InputDeviceInfo."/> interface returns a <c>MediaTrackCapabilities</c> object describing the primary audio or video track of the device's <see cref="MediaStream."/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/InputDeviceInfo/getCapabilities"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <c>MediaTrackCapabilities</c> object containing the following members:<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> If the user has not granted permission to access the input device an empty object will be returned.</blockquote></returns>
+</InputDeviceInfoGetCapabilities>
+</docs>

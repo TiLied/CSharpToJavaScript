@@ -1,4 +1,4 @@
-//22.10.2023 19:25:19
+//02.12.2023 13:14:55
 using static CSharpToJavaScript.APIs.JS.GlobalObject;
 using CSharpToJavaScript.Utils;
 using System.Collections.Generic;

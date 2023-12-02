@@ -1,0 +1,11 @@
+<docs>
+<MathMLElementMi>
+<summary>
+The <strong><c>&amp;lt;mi&amp;gt;</c></strong> <see href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</see> element indicates that the content should be rendered as an <strong>identifier</strong>, such as a function name, variable or symbolic constant.
+</summary>
+<remarks>
+<para>By default <c>&amp;lt;mi&amp;gt;</c> elements that contain multiple characters are a rendered as normal text, while single character characters are rendered as italic: the same formatting behaviour as the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform">CSS <c>text-transform</c></see> property with a value of <c>math-auto</c>.<br/>The <c>mathvariant</c> attribute with a value of <c>normal</c> can be used to reset a single character to the normal font.</para><para>In order to use a particular form of a character such as bold/italic, serif, sans-serif, script/calligraphy, monospaced, double-struck, and so on, you should use the appropriate <see href="https://en.wikipedia.org/wiki/Mathematical_Alphanumeric_Symbols">Mathematical Alphanumeric Symbols</see>.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> In a previous specification (MathML3), the <c>mathvariant</c> attribute was used to define logical classes that could apply the character formatting for mathematical alphanumeric symbols.<br/>The associated values are now deprecated, and expected to be removed from browsers in future releases.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/MathML/Element/mi"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</MathMLElementMi>
+</docs>

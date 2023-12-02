@@ -1,0 +1,13 @@
+<docs>
+<RangeExtractContents>
+<summary>
+The <strong><c>Range.extractContents()</c></strong> method moves contents of the<br/><see cref="Range."/> from the document tree into a <see cref="DocumentFragment."/>.
+</summary>
+<remarks>
+<para>Event listeners added using DOM Events are not retained during extraction. HTML<br/>attribute events are retained or duplicated as they are for the<br/><see cref="Node.CloneNode."/> method. HTML <c>id</c> attributes are also cloned,<br/>which can lead to an invalid document if a partially-selected node is extracted and<br/>appended to the document.</para><para>Partially selected nodes are cloned to include the parent tags necessary to make the<br/>document fragment valid.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Range/extractContents"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="DocumentFragment."/> object.</returns>
+</RangeExtractContents>
+</docs>

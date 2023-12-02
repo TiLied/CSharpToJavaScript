@@ -1,0 +1,12 @@
+<docs>
+<WebGLRenderingContextDrawingBufferWidth>
+<summary>
+The read-only <strong><c>WebGLRenderingContext.drawingBufferWidth</c></strong><br/>property represents the actual width of the current drawing buffer. It should match the<br/><c>width</c> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas">canvas</see> element associated with<br/>this context, but might differ if the implementation is not able to provide the<br/>requested width.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.DrawingBufferHeight."/><br/>-<see cref="WebGLRenderingContext.Viewport."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/drawingBufferWidth"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</WebGLRenderingContextDrawingBufferWidth>
+</docs>

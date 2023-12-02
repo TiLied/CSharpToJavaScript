@@ -1,0 +1,12 @@
+<docs>
+<HTTPStatus416>
+<summary>
+The HyperText Transfer Protocol (HTTP) <strong><c>416 Range Not Satisfiable</c></strong> error response code indicates that a server cannot serve the requested ranges. The most likely reason is that the document doesn't contain such ranges, or that the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Range">Range</see> header value, though syntactically correct, doesn't make sense.
+</summary>
+<remarks>
+<para>The <c>416</c> response message contains a <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Range">Content-Range</see> indicating an unsatisfied range (that is a <c>&amp;apos;*&amp;apos;</c>) followed by a <c>&amp;apos;/&amp;apos;</c> and the current length of the resource. E.g. <c>Content-Range: bytes */12777</c></para><para>Faced with this error, browsers usually either abort the operation (for example, a download will be considered as non-resumable) or ask for the whole document again.</para>
+<para>-{{HTTPStatus(206)}} <c>Partial Content</c><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Range">Content-Range</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Range">Range</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/416"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPStatus416>
+</docs>

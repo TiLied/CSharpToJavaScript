@@ -1,0 +1,13 @@
+<docs>
+<RTCPeerConnectionAddIceCandidate>
+<summary>
+When a website or app using <see cref="RTCPeerConnection."/> receives a new ICE candidate from the remote peer over its signaling channel, it delivers the newly-received candidate to the browser's {{Glossary("ICE")}} agent by calling <strong><c>RTCPeerConnection.addIceCandidate()</c></strong>.<br/>This adds this new remote candidate to the <c>RTCPeerConnection</c>&amp;apos;s remote description, which describes the state of the remote end of the connection.
+</summary>
+<remarks>
+<para>If the <c>candidate</c> parameter is missing or a value of <c>null</c> is given when calling <c>addIceCandidate()</c>, the added ICE candidate is an &amp;quot;end-of-candidates&amp;quot; indicator.<br/>The same is the case if the value of the specified object's <see cref="RTCIceCandidate.Candidate."/> is either missing or an empty string (<c>&amp;quot;&amp;quot;</c>), it signals that all remote candidates have been delivered.</para><para>The end-of-candidates notification is transmitted to the remote peer using a candidate with an a-line value of <c>end-of-candidates</c>.</para><para>During negotiation, your app will likely receive many candidates which you&amp;apos;ll deliver to the ICE agent in this way, allowing it to build up a list of potential connection methods.<br/>This is covered in more detail in the articles <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Connectivity">WebRTC connectivity</see> and<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling">Signaling and video calling</see>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling">Signaling and video calling</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Protocols">Introduction to WebRTC protocols</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Connectivity">WebRTC connectivity</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Session_lifetime">Lifetime of a WebRTC session</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/addIceCandidate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that is fulfilled when the candidate has been successfully<br/>added to the remote peer&amp;apos;s description by the ICE agent. The promise does not receive any input parameters.</returns>
+</RTCPeerConnectionAddIceCandidate>
+</docs>

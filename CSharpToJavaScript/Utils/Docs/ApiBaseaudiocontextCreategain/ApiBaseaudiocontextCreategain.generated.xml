@@ -1,0 +1,13 @@
+<docs>
+<BaseAudioContextCreateGain>
+<summary>
+The <c>createGain()</c> method of the <see cref="BaseAudioContext."/><br/>interface creates a <see cref="GainNode."/>, which can be used to control the<br/>overall gain (or volume) of the audio graph.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> The <see cref="GainNode.GainNode."/><br/>constructor is the recommended way to create a <see cref="GainNode."/>; see<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioNode#creating_an_audionode">Creating an AudioNode</see>.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createGain"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="GainNode."/> which takes as input one or more audio sources and outputs<br/>audio whose volume has been adjusted in gain (volume) to a level specified by the node&amp;apos;s<br/><see cref="GainNode.Gain."/> <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam#a-rate">a-rate</see><br/>parameter.</returns>
+</BaseAudioContextCreateGain>
+</docs>

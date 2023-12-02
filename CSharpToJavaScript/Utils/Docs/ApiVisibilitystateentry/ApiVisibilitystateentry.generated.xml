@@ -1,0 +1,12 @@
+<docs>
+<VisibilityStateEntry>
+<summary>
+The <strong><c>VisibilityStateEntry</c></strong> interface provides timings of page visibility state changes, i.e., when a tab changes from the foreground to the background or vice versa.
+</summary>
+<remarks>
+<para>This can be used to pinpoint visibility changes on the performance timeline, and cross-reference them against other performance entries such as "first-contentful-paint" (see <see cref="PerformancePaintTiming."/>).</para><para>There are two key visibility state change times that this API reports on:</para><para>The performance timeline will always have a &amp;quot;<c>visibility-state</c>&amp;quot; entry with a <c>startTime</c> of <c>0</c> and a <c>name</c> representing the initial page visibility state.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Like other Performance APIs, this API extends <see cref="PerformanceEntry."/>.</para></blockquote><para></para>
+<para><see href="https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API">Page Visibility API</see></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VisibilityStateEntry"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</VisibilityStateEntry>
+</docs>

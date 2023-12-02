@@ -1,0 +1,11 @@
+<docs>
+<DOMMatrixReadOnlyTranslate>
+<summary>
+The <c>translate()</c> method of the <see cref="DOMMatrixReadOnly."/> interface<br/>creates a new matrix being the result of the original matrix with a translation applied.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/translate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Returns a <see href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix"><c>DOMMatrix</c></see><br/>containing a new matrix being the result of the matrix being translated by the given<br/>vector. The original matrix is not modified.If a translation is applied about the z-axis, the resulting matrix will be a 4x4 3D<br/>matrix.</returns>
+</DOMMatrixReadOnlyTranslate>
+</docs>

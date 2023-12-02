@@ -1,0 +1,11 @@
+<docs>
+<MutationRecordOldValue>
+<summary>
+The <see cref="MutationRecord."/> read-only property <strong><c>oldValue</c></strong> contains the character data or attribute value of an observed node before it was changed.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MutationRecord/oldValue"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing the old value of an attribute which has been changed, if:A string representing the old value of a <see cref="CharacterData."/> node that has been changed, if:Otherwise this property is <c>null</c>.</value>
+</MutationRecordOldValue>
+</docs>

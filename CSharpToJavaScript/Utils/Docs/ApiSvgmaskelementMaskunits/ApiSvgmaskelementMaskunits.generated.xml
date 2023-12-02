@@ -1,0 +1,13 @@
+<docs>
+<SVGMaskElementMaskUnits>
+<summary>
+The read-only <strong><c>maskUnits</c></strong> property of the <see cref="SVGMaskElement."/> interface reflects the {{SVGAttr("maskUnits")}} attribute of a {{SVGElement("mask")}} element which defines the coordinate system to use for the mask of the element.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Although this property is read-only, it is merely a container for two values you can modify, <see cref="SVGAnimatedEnumeration.BaseVal."/> and <see cref="SVGAnimatedEnumeration.AnimVal."/>.</para></blockquote>
+<para>-maskUnits<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementmask">mask</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGMaskElement/maskUnits"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedEnumeration."/> representing the coordinate system. The possible values are defined in the <see cref="SVGUnitTypes."/> interface:</value>
+</SVGMaskElementMaskUnits>
+</docs>

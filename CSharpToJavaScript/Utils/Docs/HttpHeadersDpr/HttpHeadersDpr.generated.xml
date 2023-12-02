@@ -1,0 +1,12 @@
+<docs>
+<HTTPHeadersDPR>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>DPR</c></strong> <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Client_hints">device client hint</see> request header provides the client device pixel ratio. This ratio is the number of physical device pixels corresponding to every <see href="https://developer.mozilla.org/en-US/docs/Glossary/CSS pixel">CSS pixel</see>.
+</summary>
+<remarks>
+<para>The hint is useful when selecting image sources that best correspond to a screen&amp;apos;s pixel density. This is similar to the role played by <c>x</c> descriptors in the <c>&amp;lt;img&amp;gt;</c> <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#srcset"><c>srcset</c></see> attribute to allow user agents to select a preferred image.</para><para>If a server uses the <c>DPR</c> hint to choose which resource is sent in a response, the response must include the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-DPR">Content-DPR</see> header. The client must use the value in <c>Content-DPR</c> for layout if it differs from the value in the request&amp;apos;s <c>DPR</c> header.</para><para>If the <c>DPR</c> header appears more than once in a message the last occurrence is used.</para><blockquote><para><strong>Note:</strong></para></blockquote>
+<para>-<see href="https://developer.chrome.com/articles/user-agent-client-hints/">Improving user privacy and developer experience with User-Agent Client Hints</see> (web.dev)<br/>-Device client hints-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-DPR">Content-DPR</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Device-Memory">Device-Memory</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Viewport-Width">Viewport-Width</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Width">Width</see><br/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-CH">Accept-CH</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching#vary">HTTP Caching &amp;gt; Vary</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Vary">Vary</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/DPR"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPHeadersDPR>
+</docs>

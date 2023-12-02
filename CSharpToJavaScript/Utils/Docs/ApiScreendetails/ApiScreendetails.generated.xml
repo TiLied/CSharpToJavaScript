@@ -1,0 +1,12 @@
+<docs>
+<ScreenDetails>
+<summary>
+The <strong><c>ScreenDetails</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Window_Management_API">Window Management API</see> represents the details of all the screens available to the user&amp;apos;s device.
+</summary>
+<remarks>
+<para>This information is accessed via the <see cref="Window.GetScreenDetails."/> method.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> <c>ScreenDetails</c> is a live object, meaning that it updates as the available screens change. You can therefore keep querying the same object to get updated values, rather than repeatedly calling <c>getScreenDetails()</c>.</para></blockquote><para></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Window_Management_API">Window Management API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ScreenDetails"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</ScreenDetails>
+</docs>

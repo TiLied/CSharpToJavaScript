@@ -1,0 +1,12 @@
+<docs>
+<SourceBufferRemove>
+<summary>
+The <strong><c>remove()</c></strong> method of the <see cref="SourceBuffer."/><br/>interface removes media segments within a specific time range from the<br/><c>SourceBuffer</c>. This method can only be called when<br/><see cref="SourceBuffer.Updating."/> equals <c>false</c>. If<br/><c>SourceBuffer.updating</c> is not equal to <c>false</c>, call<br/><see cref="SourceBuffer.Abort."/>.
+</summary>
+<remarks>
+<para>-<see cref="MediaSource."/><br/>-<see cref="SourceBufferList."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/remove"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</SourceBufferRemove>
+</docs>

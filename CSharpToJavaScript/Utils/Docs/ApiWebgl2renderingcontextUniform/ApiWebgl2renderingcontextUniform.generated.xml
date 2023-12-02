@@ -1,0 +1,13 @@
+<docs>
+<WebGL2RenderingContextUniform>
+<summary>
+The <strong><c>WebGL2RenderingContext.uniform[1234][uif][v]()</c></strong><br/>methods of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> specify values of<br/>uniform variables.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> <c>ui</c> stands for <strong>unsigned integer</strong>, <c>i</c> for <strong>integer</strong>, <c>f</c> for <strong>float</strong>, and <c>v</c> for <strong>vector</strong>.<br/>Not all combinations are valid: <c>u</c> cannot be combined with <c>f</c>.<br/>See the syntax table below. Equivalent Regex: <c>uniform[1234](u?i|f)v?</c></para></blockquote>
+<para>-<see cref="WebGLRenderingContext.Uniform."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/uniform"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGL2RenderingContextUniform>
+</docs>

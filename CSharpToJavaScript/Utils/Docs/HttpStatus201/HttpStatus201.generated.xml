@@ -1,0 +1,12 @@
+<docs>
+<HTTPStatus201>
+<summary>
+The HTTP <strong><c>201 Created</c></strong> success status response code indicates that the request has<br/>succeeded and has led to the creation of a resource. The new resource, or a description<br/>and link to the new resource, is effectively created before the response is sent back<br/>and the newly created items are returned in the body of the message, located at either<br/>the URL of the request, or at the URL in the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Location">Location</see> header.
+</summary>
+<remarks>
+<para>The common use case of this status code is as the result of a {{HTTPMethod("POST")}}<br/>request.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods">HTTP request methods</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/201"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPStatus201>
+</docs>

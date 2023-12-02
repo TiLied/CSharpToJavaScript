@@ -1,0 +1,12 @@
+<docs>
+<CSSVar>
+<summary>
+The <strong><c>var()</c></strong> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</see> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Functions">function</see> can be used to insert the value of a <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/--*">custom property</see> (sometimes called a &amp;quot;CSS variable&amp;quot;) instead of any part of a value of another property.
+</summary>
+<remarks>
+<para>EmbedInteractiveExample("pages/css/var.html")</para><para>The <c>var()</c> function cannot be used in property names, selectors or anything else besides property values. (Doing so usually produces invalid syntax, or else a value whose meaning has no connection to the variable.)</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/env">env</see> – read‑only environment variables controlled by the user‑agent.<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">Using CSS variables</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@property">@property</see> at-rule<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/CSS/var"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CSSVar>
+</docs>

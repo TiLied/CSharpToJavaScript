@@ -1,0 +1,13 @@
+<docs>
+<CSSShape>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>&amp;lt;shape&amp;gt;</c></strong> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</see> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Types">data type</see> defines the specific form (shape) of a region. The region represents the part of an element to which the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/clip">clip</see> property applies.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> <c>&amp;lt;shape&amp;gt;</c> and <c>rect()</c> work in conjunction with <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/clip">clip</see>, which has been deprecated in favor of <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path">clip-path</see>. When possible, use <c>clip-path</c> and the {{cssxref(&amp;quot;&amp;lt;basic-shape&amp;gt;&amp;quot;)}} data type instead.</para></blockquote>
+<para>-Related CSS property: <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/clip">clip</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/CSS/shape"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value><see href="https://developer.mozilla.orgrect.png">A graph showing top, right, bottom, and left, as described below. These define the rectangle&amp;apos;s shape. The upper left corner is defined by the top and left values. The bottom right corner is defined by the bottom and right values.</see></value>
+</CSSShape>
+</docs>

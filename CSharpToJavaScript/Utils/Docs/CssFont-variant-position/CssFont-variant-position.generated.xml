@@ -1,0 +1,12 @@
+<docs>
+<CSSFont-variant-position>
+<summary>
+The <strong><c>font-variant-position</c></strong> CSS property controls the use of alternate, smaller glyphs that are positioned as superscript or subscript.
+</summary>
+<remarks>
+<para>The glyphs are positioned relative to the baseline of the font, which remains unchanged. These glyphs are typically used in <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/sub">sub</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/sup">sup</see> elements.</para><para>When the usage of these alternate glyphs is activated, if one character in the run doesn&amp;apos;t have such a typographically-enhanced glyph, the whole set of characters of the run is rendered using a fallback method, synthesizing these glyphs.</para><para>These alternate glyphs share the same em-box and the same baseline as the rest of the font. They are merely graphically enhanced, and have no effect on the line-height and other box characteristics.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant"><c>font-variant</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-alternates"><c>font-variant-alternates</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-caps"><c>font-variant-caps</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-east-asian"><c>font-variant-east-asian</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-emoji"><c>font-variant-emoji</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-ligatures"><c>font-variant-ligatures</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-numeric"><c>font-variant-numeric</c></see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-position"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CSSFont-variant-position>
+</docs>

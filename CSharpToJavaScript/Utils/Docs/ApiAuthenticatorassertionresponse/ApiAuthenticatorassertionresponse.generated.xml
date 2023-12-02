@@ -1,0 +1,12 @@
+<docs>
+<AuthenticatorAssertionResponse>
+<summary>
+The <strong><c>AuthenticatorAssertionResponse</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API">Web Authentication API</see> contains a <see href="https://developer.mozilla.org/en-US/docs/Glossary/Signature/Security">digital signature</see> from the private key of a particular WebAuthn credential. The relying party&amp;apos;s server can verify this signature to authenticate a user, for example when they sign in.
+</summary>
+<remarks>
+<para>An <c>AuthenticatorAssertionResponse</c> object instance is available in the <see cref="PublicKeyCredential.Response."/> property of a <see cref="PublicKeyCredential."/> object returned by a successful <see cref="CredentialsContainer.Get."/> call.</para><para>This interface inherits from <see cref="AuthenticatorResponse."/>.</para><para></para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This interface is restricted to top-level contexts. Use from within an <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</see> element will not have any effect.</para></blockquote>
+<para>-<see cref="AuthenticatorAttestationResponse."/>: the interface for the type of response given when creating a new credential<br/>-<see cref="AuthenticatorResponse."/>: the parent interface<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AuthenticatorAssertionResponse"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</AuthenticatorAssertionResponse>
+</docs>

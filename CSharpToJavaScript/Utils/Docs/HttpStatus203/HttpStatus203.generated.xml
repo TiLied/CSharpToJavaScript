@@ -1,0 +1,12 @@
+<docs>
+<HTTPStatus203>
+<summary>
+The HTTP <strong><c>203 Non-Authoritative Information</c></strong> response<br/>status indicates that the request was successful but the enclosed payload has been<br/>modified by a transforming <see href="https://developer.mozilla.org/en-US/docs/Glossary/Proxy server">Proxy server</see> from that of the origin<br/>server's {{HTTPStatus("200")}} (<c>OK</c>) response.
+</summary>
+<remarks>
+<para>The <c>203</c> response is similar to the value<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Warning#warning_codes"><c>214</c></see>,<br/>meaning <c>Transformation Applied</c>, of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Warning">Warning</see> header<br/>code, which has the additional advantage of being applicable to responses with any<br/>status code.</para>
+<para>-HTTPStatus("200")<br/>-<see href="https://developer.mozilla.org/en-US/docs/Glossary/Proxy server">Proxy server</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Warning">Warning</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/203"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPStatus203>
+</docs>

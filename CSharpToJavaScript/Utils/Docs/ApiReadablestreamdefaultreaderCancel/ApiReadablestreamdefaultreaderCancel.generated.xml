@@ -1,0 +1,13 @@
+<docs>
+<ReadableStreamDefaultReaderCancel>
+<summary>
+The <strong><c>cancel()</c></strong> method of the<br/><see cref="ReadableStreamDefaultReader."/> interface returns a {{jsxref("Promise")}} that resolves when the stream is canceled. Calling this method signals a loss of interest in the stream by a consumer.
+</summary>
+<remarks>
+<para>Cancel is used when you&amp;apos;ve completely finished with the stream and don&amp;apos;t need any more<br/>data from it, even if there are chunks enqueued waiting to be read. That data is lost<br/>after cancel is called, and the stream is not readable any more. To read those chunks<br/>still and not completely get rid of the stream, you&amp;apos;d use<br/><see cref="ReadableStreamDefaultController.Close."/>.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> If the reader is active, the<br/><c>cancel()</c> method behaves the same as that for the associated stream<br/>(<see cref="ReadableStream.Cancel."/>).</para></blockquote>
+<para>-<see cref="ReadableStreamDefaultReader.ReadableStreamDefaultReader."/> constructor<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_streams">Using readable streams</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableStreamDefaultReader/cancel"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/>, which fulfills with the value given in the <c>reason</c><br/>parameter.</returns>
+</ReadableStreamDefaultReaderCancel>
+</docs>

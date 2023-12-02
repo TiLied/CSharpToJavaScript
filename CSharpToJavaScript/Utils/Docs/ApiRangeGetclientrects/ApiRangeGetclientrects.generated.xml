@@ -1,0 +1,12 @@
+<docs>
+<RangeGetClientRects>
+<summary>
+The <strong><c>Range.getClientRects()</c></strong> method returns a list of {{<br/>domxref(&amp;quot;DOMRect&amp;quot;) }} objects representing the area of the screen occupied by the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Range">range</see>. This is created by aggregating the results of calls to<br/><see cref="Element.GetClientRects."/> for all the elements in the range.
+</summary>
+<remarks>
+<para>-<see cref="Range."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Range/getClientRects"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol">iterable</see> sequence of <see cref="DOMRect."/> objects.</returns>
+</RangeGetClientRects>
+</docs>

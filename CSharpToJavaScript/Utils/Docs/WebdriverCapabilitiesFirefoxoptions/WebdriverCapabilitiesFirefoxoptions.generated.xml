@@ -1,0 +1,12 @@
+<docs>
+<WebDriverCapabilitiesFirefoxOptions>
+<summary>
+The <strong><c>moz:firefoxOptions</c></strong><strong> capability</strong> is a namespaced set of<br/>capabilities specific to <see href="https://www.mozilla.org/en-US/firefox/">Firefox</see>. It is used to control the<br/>behavior of Firefox and can be used as a member of<br/><see href="https://developer.mozilla.org/en-US/docs/Web/WebDriver/Capabilities#alwaysmatch"><c>alwaysMatch</c></see> or as a member of one of the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/WebDriver/Capabilities#firstmatch"><c>firstMatch</c></see> entries.
+</summary>
+<remarks>
+<para>It is used to define options which control how Firefox gets started and run.</para><para><c>moz:firefoxOptions</c> is a JSON Object which may contain any of the following fields:</para><c>binary</c>
+<para>-<see href="https://firefox-source-docs.mozilla.org/testing/geckodriver/Capabilities.html">geckodriver&amp;apos;s documentation on supported Firefox capabilities</see><br/>-<see href="https://chromedriver.chromium.org/capabilities">Chrome-specific WebDriver capabilities</see><br/>(<c>goog:chromeOptions)</c><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/WebDriver/Capabilities">List of WebDriver capabilities</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/WebDriver/Commands/NewSession">New Session</see> command<br/>QuickLinksWithSubpages</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/WebDriver/Capabilities/firefoxOptions"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebDriverCapabilitiesFirefoxOptions>
+</docs>

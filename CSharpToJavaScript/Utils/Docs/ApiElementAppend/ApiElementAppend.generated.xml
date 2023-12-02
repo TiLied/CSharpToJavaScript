@@ -1,0 +1,13 @@
+<docs>
+<ElementAppend>
+<summary>
+The <strong><c>Element.append()</c></strong> method<br/>inserts a set of <see cref="Node."/> objects or string objects after<br/>the last child of the <c>Element</c>. String objects<br/>are inserted as equivalent <see cref="Text."/> nodes.
+</summary>
+<remarks>
+<para>Differences from <see cref="Node.AppendChild."/>:</para>
+<para>-<see cref="Element.Prepend."/><br/>-<see cref="Node.AppendChild."/><br/>-<see cref="Element.After."/><br/>-<see cref="Element.InsertAdjacentElement."/><br/>-<see cref="NodeList."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/append"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</ElementAppend>
+</docs>

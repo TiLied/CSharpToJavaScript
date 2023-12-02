@@ -1,0 +1,13 @@
+<docs>
+<MediaStreamMediaStream>
+<summary>
+The <strong><c>MediaStream()</c></strong> constructor returns a newly-created <see cref="MediaStream."/>, which serves as a collection of media tracks, each represented by a <see cref="MediaStreamTrack."/> object.
+</summary>
+<remarks>
+<para>If any parameters are given, the specified tracks are added to the new stream.<br/>Otherwise, the stream has no tracks.</para>
+<para>-<see cref="MediaStream."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/MediaStream"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A newly-created <see cref="MediaStream."/> object, either empty, or containing the<br/>tracks provided, if any.</returns>
+</MediaStreamMediaStream>
+</docs>

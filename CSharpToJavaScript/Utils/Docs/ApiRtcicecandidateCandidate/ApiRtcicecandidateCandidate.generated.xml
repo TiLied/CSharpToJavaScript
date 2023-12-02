@@ -1,0 +1,12 @@
+<docs>
+<RTCIceCandidateCandidate>
+<summary>
+The read-only property <strong><c>candidate</c></strong> on the <see cref="RTCIceCandidate."/> interface returns a string describing the candidate in detail.<br/>Most of the other properties of <c>RTCIceCandidate</c> are actually extracted from this string.
+</summary>
+<remarks>
+<para>This property can be configured using the <c>candidate</c> property of the object passed into the <see cref="RTCIceCandidate.RTCIceCandidate."/> or <see cref="RTCPeerConnection.AddIceCandidate."/>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/candidate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string describing the properties of the candidate, taken directly from the <see href="https://developer.mozilla.org/en-US/docs/Glossary/SDP">SDP</see> attribute <c>&amp;quot;candidate&amp;quot;</c>.<br/>The candidate string specifies the network connectivity information for the candidate.<br/>If the <c>candidate</c> is an empty string (<c>&amp;quot;&amp;quot;</c>), the end of the candidate list has been reached; this candidate is known as the &amp;quot;end-of-candidates&amp;quot; marker.The syntax of the candidate string is described in {{RFC(5245, &amp;quot;&amp;quot;, 15.1)}}. For an a-line (attribute line) that looks like this:the corresponding <c>candidate</c> string&amp;apos;s value will be: <c>&amp;quot;candidate:4234997325 1 udp 2043278322 192.0.2.172 44323 typ host&amp;quot;</c>.The <see href="https://developer.mozilla.org/en-US/docs/Glossary/user agent">user agent</see> always prefers candidates with the highest<br/><see cref="RTCIceCandidate.Priority."/>, all else being equal. In the<br/>example above, the priority is <c>2043278322</c>. The attributes are all separated<br/>by a single space character, and are in a specific order. The complete list of<br/>attributes for this example candidate is:</value>
+</RTCIceCandidateCandidate>
+</docs>

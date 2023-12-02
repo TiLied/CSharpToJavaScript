@@ -1,0 +1,13 @@
+<docs>
+<PerformanceNavigationTimingDomInteractive>
+<summary>
+The <strong><c>domInteractive</c></strong> read-only property returns a <see cref="DOMHighResTimeStamp."/> representing the time immediately before the user agent sets the document's <see href="https://developer.mozilla.org/en-US/docs/Web/API/Document/readyState"><c>readyState</c></see> to <c>&amp;quot;interactive&amp;quot;</c>.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This property is <strong>not</strong> <see href="https://developer.mozilla.org/en-US/docs/Glossary/Time to interactive">Time to interactive</see> (TTI). This property refers to the time when DOM construction is finished and interaction to it from JavaScript is possible. See also the <c>interactive</c> state of <see cref="Document.ReadyState."/> which corresponds to this property.</para></blockquote><para>Measuring DOM processing time may not be consequential unless your site has a very large HTML source to a construct a Document Object Model from.</para><para>If there is no parser-blocking JavaScript then the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event"><c>DOMContentLoaded</c></see> event (see <see href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/domContentLoadedEventStart"><c>domContentLoadedEventStart</c></see> for the timestamp) will fire immediately after <c>domInteractive</c>.</para>
+<para>-<see cref="Document.ReadyState."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/domInteractive"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DOMHighResTimeStamp."/> representing the time immediately before the user agent sets the document's <see href="https://developer.mozilla.org/en-US/docs/Web/API/Document/readyState"><c>readyState</c></see> to <c>&amp;quot;interactive&amp;quot;</c>.</value>
+</PerformanceNavigationTimingDomInteractive>
+</docs>

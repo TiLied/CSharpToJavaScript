@@ -1,0 +1,13 @@
+<docs>
+<AudioContextResume>
+<summary>
+The <strong><c>resume()</c></strong> method of the <see cref="AudioContext."/><br/>interface resumes the progression of time in an audio context that has previously been<br/>suspended.
+</summary>
+<remarks>
+<para>This method will cause an <c>INVALID_STATE_ERR</c> exception to be thrown if<br/>called on an <see cref="OfflineAudioContext."/>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/resume"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves when the context has resumed. The promise is<br/>rejected if the context has already been closed.</returns>
+</AudioContextResume>
+</docs>

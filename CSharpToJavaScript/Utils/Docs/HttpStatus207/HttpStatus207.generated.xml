@@ -1,0 +1,12 @@
+<docs>
+<HTTPStatus207>
+<summary>
+<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> The ability to return a <strong>collection of resources</strong> is part of the <see href="https://developer.mozilla.org/en-US/docs/Glossary/WebDAV">WebDAV</see> protocol (it may be received by web applications accessing a WebDAV server).<br/>Browsers accessing web pages will never encounter this status code.</blockquote>
+</summary>
+<remarks>
+<para>The HTTP <strong><c>207 Multi-Status</c></strong> response code indicates that there might be a mixture of responses.</para><para>The response body is a <c>text/xml</c> or <c>application/xml</c> HTTP entity with a <c>multistatus</c> root element. The XML body will list all individual response codes.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods">HTTP request methods</see><br/>-HTTPStatus("204")<br/>-HTTPStatus("403")<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/207"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPStatus207>
+</docs>

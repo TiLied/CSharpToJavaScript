@@ -1,0 +1,12 @@
+<docs>
+<HTTPHeadersVary>
+<summary>
+The <strong><c>Vary</c></strong> HTTP response header describes the parts of the request message aside from the method and URL that influenced the content of the response it occurs in. Most often, this is used to create a cache key when <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Content_negotiation">content negotiation</see> is in use.
+</summary>
+<remarks>
+<para>The same <c>Vary</c> header value should be used on all responses for a given URL, including {{HTTPStatus("304")}} <c>Not Modified</c> responses and the &amp;quot;default&amp;quot; response.</para>
+<para>-<see href="https://www.smashingmagazine.com/2017/11/understanding-vary-header/">Understanding The Vary Header - Smashing Magazine</see><br/>-<see href="https://www.fastly.com/blog/best-practices-using-vary-header">Best Practices for Using the Vary Header – fastly.com</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Content_negotiation">Content negotiation</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Vary"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPHeadersVary>
+</docs>

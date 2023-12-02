@@ -1,0 +1,12 @@
+<docs>
+<MerchantValidationEventMerchantValidationEvent>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>MerchantValidationEvent()</c></strong> constructor creates a new <see cref="MerchantValidationEvent."/> object. You should not have to create these events yourself; instead, just handle the <see cref="PaymentRequest.Merchantvalidation_event."/> event.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API">Payment Request API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API">Using the Payment Request API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API/Concepts">Payment processing concepts</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MerchantValidationEvent/MerchantValidationEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="MerchantValidationEvent."/> object providing the information<br/>that needs to be delivered to the client-side code to present to the {{Glossary("user agent")}} by calling <see cref="MerchantValidationEvent.Complete."/>.</returns>
+</MerchantValidationEventMerchantValidationEvent>
+</docs>

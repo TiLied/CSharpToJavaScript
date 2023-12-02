@@ -1,0 +1,12 @@
+<docs>
+<CSS-webkit-line-clamp>
+<summary>
+The <strong><c>-webkit-line-clamp</c></strong> CSS property allows limiting of the contents of a <see href="https://developer.mozilla.org/en-US/docs/Glossary/block">block</see> to the specified number of lines.
+</summary>
+<remarks>
+<para>It only works in combination with the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/display">display</see> property set to <c>-webkit-box</c> or <c>-webkit-inline-box</c> and the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-orient">box-orient</see> property set to <c>vertical</c>.</para><para>In most cases you will also want to set <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/overflow">overflow</see> to <c>hidden</c>, otherwise the contents won&amp;apos;t be clipped but an ellipsis will still be shown after the specified number of lines.</para><para>When applied to anchor elements, the truncating can happen in the middle of the text, not necessarily at the end.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This property was originally implemented in WebKit and has some issues. It got standardized in <see href="https://drafts.csswg.org/css-overflow-4/#propdef--webkit-line-clamp">CSS Overflow Module Level 4</see> for legacy support. The <see href="https://drafts.csswg.org/css-overflow-4/#propdef-line-clamp">CSS Overflow Module Level 4</see> specification also defines a <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/line-clamp">line-clamp</see> property, which is meant to replace this property and avoid its issues.</para></blockquote>
+<para>-<see href="https://css-tricks.com/line-clampin/">Line Clampin&amp;apos; (Truncating Multiple Line Text)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/line-clamp">line-clamp</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-line-clamp"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CSS-webkit-line-clamp>
+</docs>

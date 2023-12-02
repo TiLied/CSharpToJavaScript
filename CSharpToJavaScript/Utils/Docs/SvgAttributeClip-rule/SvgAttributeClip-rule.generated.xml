@@ -1,0 +1,12 @@
+<docs>
+<SVGAttributeClip-rule>
+<summary>
+« <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute">SVG Attribute reference home</see>
+</summary>
+<remarks>
+<para>The <c>clip-rule</c> attribute only applies to graphics elements that are contained within a <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementclipPath">clipPath</see> element. The <c>clip-rule</c> attribute basically works as the {{ SVGAttr("fill-rule") }} attribute, except that it applies to <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementclipPath">clipPath</see> definitions.</para><para>The following fragment of code will cause an evenodd clipping rule to be applied to the clipping path because <c>clip-rule</c> is specified on the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementpath">path</see> element that defines the clipping shape:</para><para>whereas the following fragment of code will not cause an evenodd clipping rule to be applied because the <c>clip-rule</c> is specified on the referencing element, not on the object defining the clipping shape:</para><para>As a presentation attribute, it also can be used as a property directly inside a CSS stylesheet</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementclipPath">clipPath</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/clip-rule"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</SVGAttributeClip-rule>
+</docs>

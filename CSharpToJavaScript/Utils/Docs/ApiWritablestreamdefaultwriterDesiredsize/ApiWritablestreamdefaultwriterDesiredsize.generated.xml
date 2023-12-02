@@ -1,0 +1,11 @@
+<docs>
+<WritableStreamDefaultWriterDesiredSize>
+<summary>
+The <strong><c>desiredSize</c></strong> read-only property of the<br/><see cref="WritableStreamDefaultWriter."/> interface returns the desired size required<br/>to fill the stream&amp;apos;s internal queue.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WritableStreamDefaultWriter/desiredSize"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer. Note that this can be negative if the queue is over-full.The value will be <c>null</c> if the stream cannot be successfully written to<br/>(due to either being errored, or having an abort queued up), and zero if the stream is<br/>closed.</value>
+</WritableStreamDefaultWriterDesiredSize>
+</docs>

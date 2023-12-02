@@ -1,0 +1,12 @@
+<docs>
+<CSSPrimitiveValueSetFloatValue>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>setFloatValue()</c></strong> method of the<br/><see cref="CSSPrimitiveValue."/> interface is used to set a float value. If the property<br/>attached to this value can&amp;apos;t accept the specified unit or the float value, the value<br/>will be unchanged and a <see cref="DOMException."/> will be raised.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This method was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do<br/>not implement it.</para><para>To achieve your purpose, you can use:</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSPrimitiveValue/setFloatValue"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</CSSPrimitiveValueSetFloatValue>
+</docs>

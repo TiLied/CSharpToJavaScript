@@ -1,0 +1,13 @@
+<docs>
+<Atob>
+<summary>
+The <strong><c>atob()</c></strong> function decodes a<br/>string of data which has been encoded using <see href="https://developer.mozilla.org/en-US/docs/Glossary/Base64">Base64</see> encoding. You can use<br/>the <see cref="Btoa."/> method to encode and transmit<br/>data which may otherwise cause communication problems, then transmit it and use the<br/><c>atob()</c> method to decode the data again. For example, you can encode,<br/>transmit, and decode control characters such as <see href="https://developer.mozilla.org/en-US/docs/Glossary/ASCII">ASCII</see> values 0 through 31.
+</summary>
+<remarks>
+<para>For use with arbitrary Unicode strings, see <see href="https://developer.mozilla.org/en-US/docs/Glossary/Base64#the_unicode_problem">The &amp;quot;Unicode Problem&amp;quot;</see> section of the <see href="https://developer.mozilla.org/en-US/docs/Glossary/Base64">Base64</see> glossary entry.</para>
+<para>-<see href="https://github.com/zloirock/core-js#base64-utility-methods">A polyfill of <c>atob</c></see> is available in <see href="https://github.com/zloirock/core-js"><c>core-js</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs"><c>data</c> URLs</see><br/>-<see cref="Btoa."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/atob"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An ASCII string containing decoded data from <c>encodedData</c>.</returns>
+</Atob>
+</docs>

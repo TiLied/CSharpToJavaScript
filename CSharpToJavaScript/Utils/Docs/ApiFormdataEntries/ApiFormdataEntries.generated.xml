@@ -1,0 +1,13 @@
+<docs>
+<FormDataEntries>
+<summary>
+The <strong><c>FormData.entries()</c></strong> method returns an <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols">iterator</see> which iterates through all key/value pairs contained in the <see cref="FormData."/>. The key of each pair is a string object, and the value is either a string or a <see cref="Blob."/>.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This method is available in <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">Web Workers</see>.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects">Using FormData objects</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Form">Form</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FormData/entries"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols">iterator</see> of <see cref="FormData."/>'s key/value pairs.</returns>
+</FormDataEntries>
+</docs>

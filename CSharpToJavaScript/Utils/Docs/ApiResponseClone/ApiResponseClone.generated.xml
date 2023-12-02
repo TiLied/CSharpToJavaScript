@@ -1,0 +1,13 @@
+<docs>
+<ResponseClone>
+<summary>
+The <strong><c>clone()</c></strong> method of the <see cref="Response."/> interface creates a clone of a response object, identical in every way, but stored in a different variable.
+</summary>
+<remarks>
+<para>Like the underlying <see cref="ReadableStream.Tee."/> api,<br/>the <see cref="Response.Body."/> of a cloned <c>Response</c><br/>will signal backpressure at the rate of the <strong>faster</strong> consumer of the two bodies,<br/>and unread data is enqueued internally on the slower consumed <c>body</c><br/>without any limit or backpressure.<br/>Backpressure refers to the mechanism by which the streaming consumer of data<br/>(in this case, the code that reads the body)<br/>slows down the producer of data (such as the TCP server)<br/>so as not to load large amounts of data in memory<br/>that is waiting to be used by the application.<br/>If only one cloned branch is consumed, then the entire body will be buffered in memory.<br/>Therefore, <c>clone()</c> is one way to read a response twice in sequence,<br/>but you should not use it to read very large bodies<br/>in parallel at different speeds.</para><para><c>clone()</c> throws a <see cref="TypeError"/> if the response body has already been used.<br/>In fact, the main reason <c>clone()</c> exists is to allow multiple uses of body objects (when they are one-use only.)</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Response/clone"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Response."/> object.</returns>
+</ResponseClone>
+</docs>

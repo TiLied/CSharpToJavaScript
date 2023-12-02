@@ -1,0 +1,13 @@
+<docs>
+<WebGL2RenderingContextDrawElementsInstanced>
+<summary>
+The <strong><c>WebGL2RenderingContext.drawElementsInstanced()</c></strong> method<br/>of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> renders primitives from<br/>array data like the {{domxref(&amp;quot;WebGLRenderingContext.drawElements()&amp;quot;,<br/>&amp;quot;gl.drawElements()&amp;quot;)}} method. In addition, it can execute multiple instances of a set<br/>of elements.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> When using {{domxref(&amp;quot;WebGLRenderingContext&amp;quot;, &amp;quot;WebGL 1&amp;quot;, &amp;quot;&amp;quot;, 1)}}, the <see cref="ANGLE_instanced_arrays."/> extension can provide this method,<br/>too.</para></blockquote>
+<para>-{{domxref(&amp;quot;ANGLE_instanced_arrays.drawArraysInstancedANGLE()&amp;quot;,<br/>&amp;quot;ext.drawArraysInstancedANGLE()&amp;quot;)}}<br/>-{{domxref(&amp;quot;ANGLE_instanced_arrays.vertexAttribDivisorANGLE()&amp;quot;,<br/>&amp;quot;ext.vertexAttribDivisorANGLE()&amp;quot;)}}<br/>-<see cref="WebGLRenderingContext.DrawArrays."/><br/>-<see cref="WebGLRenderingContext.DrawElements."/><br/>-<see cref="WebGL2RenderingContext.DrawArraysInstanced."/><br/>-<see cref="WebGL2RenderingContext.VertexAttribDivisor."/><br/>-<see cref="WEBGL_multi_draw.MultiDrawElementsInstancedWEBGL."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/drawElementsInstanced"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGL2RenderingContextDrawElementsInstanced>
+</docs>

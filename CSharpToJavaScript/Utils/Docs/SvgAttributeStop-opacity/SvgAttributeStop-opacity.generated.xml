@@ -1,0 +1,12 @@
+<docs>
+<SVGAttributeStop-opacity>
+<summary>
+The <strong><c>stop-opacity</c></strong> attribute defines the opacity of a given color gradient stop.
+</summary>
+<remarks>
+<para>The opacity value used for the gradient calculation is the product of the value of <c>stop-opacity</c> and the opacity of the value of the stop-color attribute. For <c>stop-color</c> values that don&amp;apos;t include explicit opacity information, the opacity is treated as <c>1</c>.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> As a presentation attribute, <c>stop-opacity</c> can be used as a CSS property.</para></blockquote><para>You can use this attribute with the following SVG elements:</para>
+<para>-stop-color<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stop-opacity"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</SVGAttributeStop-opacity>
+</docs>

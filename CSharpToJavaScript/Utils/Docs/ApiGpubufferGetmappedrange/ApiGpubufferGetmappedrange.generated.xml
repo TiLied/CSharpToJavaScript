@@ -1,0 +1,13 @@
+<docs>
+<GPUBufferGetMappedRange>
+<summary>
+The <strong><c>getMappedRange()</c></strong> method of the<br/><see cref="GPUBuffer."/> interface returns an {{jsxref("ArrayBuffer")}} containing the mapped contents of the <c>GPUBuffer</c> in the specified range.
+</summary>
+<remarks>
+<para>This can only happen once the <c>GPUBuffer</c> has been successfully mapped with <see cref="GPUBuffer.MapAsync."/> (this can be checked via <see cref="GPUBuffer.MapState."/>). While the <c>GPUBuffer</c> is mapped it cannot be used in any GPU commands.</para><para>When you have finished working with the <c>GPUBuffer</c> values, call <see cref="GPUBuffer.Unmap."/> to unmap it, making it accessible to the GPU again.</para>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUBuffer/getMappedRange"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="ArrayBuffer"/>.</returns>
+</GPUBufferGetMappedRange>
+</docs>

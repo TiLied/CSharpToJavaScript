@@ -1,0 +1,13 @@
+<docs>
+<RTCDTMFSenderToneBuffer>
+<summary>
+The <see cref="RTCDTMFSender."/> interface's toneBuffer property returns a string<br/>containing a list of the <see href="https://developer.mozilla.org/en-US/docs/Glossary/DTMF">DTMF</see> tones currently queued for sending to the<br/>remote peer over the <see cref="RTCPeerConnection."/>. To place tones into the buffer,<br/>call <see cref="RTCDTMFSender.InsertDTMF."/>.
+</summary>
+<remarks>
+<para>Tones are removed from the string as they&amp;apos;re played, so only upcoming tones are listed.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_DTMF">Using DTMF with WebRTC</see><br/>-<see cref="RTCDTMFSender.InsertDTMF."/><br/>-<see cref="RTCPeerConnection."/><br/>-<see cref="RTCDTMFSender."/><br/>-<see cref="RTCRtpSender."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDTMFSender/toneBuffer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string listing the tones to be played. If the string is empty,<br/>there are no tones pending.</value>
+</RTCDTMFSenderToneBuffer>
+</docs>

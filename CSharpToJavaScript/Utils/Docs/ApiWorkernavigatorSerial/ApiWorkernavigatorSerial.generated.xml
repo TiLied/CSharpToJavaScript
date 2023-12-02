@@ -1,0 +1,13 @@
+<docs>
+<WorkerNavigatorSerial>
+<summary>
+The <strong><c>serial</c></strong> read-only property of the <see cref="WorkerNavigator."/> interface returns a <see cref="Serial."/> object which represents the entry point into the <see cref="Web Serial API."/>.
+</summary>
+<remarks>
+<para>When getting, the same instance of the <see cref="Serial."/> object will always be returned.</para>
+<para>-<see href="https://developer.chrome.com/articles/serial/">Read from and write to a serial port</see><br/>-<see href="https://codelabs.developers.google.com/codelabs/web-serial#0">Getting started with the web serial API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerNavigator/serial"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Serial."/> object.</value>
+</WorkerNavigatorSerial>
+</docs>

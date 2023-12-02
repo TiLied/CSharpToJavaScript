@@ -1,0 +1,12 @@
+<docs>
+<PointerEventPressure>
+<summary>
+The <strong><c>pressure</c></strong> read-only property of the<br/><see cref="PointerEvent."/> interface indicates the normalized pressure of the pointer<br/>input.
+</summary>
+<remarks>
+<para>-<see cref="Touch.Force."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/pressure"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The normalized pressure of the pointer input in the range of <c>0</c> to <c>1</c>, inclusive, where <c>0</c> and <c>1</c> represent the minimum and maximum pressure the hardware is capable of detecting, respectively. For hardware that does not support pressure, such as a mouse, the value is <c>0.5</c> when the pointer is active buttons state and <c>0</c> otherwise.</value>
+</PointerEventPressure>
+</docs>

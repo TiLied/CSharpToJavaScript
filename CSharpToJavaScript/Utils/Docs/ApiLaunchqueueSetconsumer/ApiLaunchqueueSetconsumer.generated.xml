@@ -1,0 +1,12 @@
+<docs>
+<LaunchQueueSetConsumer>
+<summary>
+The <strong><c>setConsumer()</c></strong> method of the <see cref="LaunchQueue."/> interface is used to declare the callback that will handle custom launch navigation handling in a <see href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps">progressive web app</see> (PWA). Such custom navigation is initiated via <see cref="Window.LaunchQueue."/> when a PWA has been launched with a <see href="https://developer.mozilla.org/en-US/docs/Web/Manifest/launch_handler"><c>launch_handler</c></see> <c>client_mode</c> value of <c>focus-existing</c>, <c>navigate-new</c>, or <c>navigate-existing</c>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.chrome.com/docs/web-platform/launch-handler/">Launch Handler API: Control how your app is launched</see><br/>-<see cref="Window.LaunchQueue."/><br/>-<see href="https://launch-handler.glitch.me/">Musicr 2.0</see> demo app<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/LaunchQueue/setConsumer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns><c>undefined</c>.</returns>
+</LaunchQueueSetConsumer>
+</docs>

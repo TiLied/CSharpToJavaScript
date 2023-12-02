@@ -1,0 +1,12 @@
+<docs>
+<EXSLTExslObject-type>
+<summary>
+<c>exsl:object-type()</c> returns a string that indicates the type of the specified object.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Most <see href="https://developer.mozilla.org/en-US/docs/Web/XSLT">XSLT</see> object types can be coerced into each other safely; however, certain coercions to raise error conditions. In particular, treating something that&amp;apos;s not a node-set as a node-set will do so. This function lets authors of named templates and extension functions easily provide flexibility in parameter values.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/EXSLT/exsl/object-type"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>The object&amp;apos;s type, which will be one of the following:</returns>
+</EXSLTExslObject-type>
+</docs>

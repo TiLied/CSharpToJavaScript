@@ -1,0 +1,11 @@
+<docs>
+<XRInputSourceArray>
+<summary>
+The interface <strong><c>XRInputSourceArray</c></strong> represents a <strong>live</strong> list of WebXR input sources, and is used as the return value of the <see cref="XRSession."/> property <see cref="XRSession.InputSources."/>. Each entry is an <see cref="XRInputSource."/> representing one input device connected to the WebXR system.
+</summary>
+<remarks>
+<para>In addition to being able to access the input sources in the list using standard array notation (that is, with index numbers inside square brackets), methods are available to allow the use of iterators and the <see cref="XRInputSourceArray.ForEach."/> method is also available.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceArray"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</XRInputSourceArray>
+</docs>

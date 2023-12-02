@@ -1,0 +1,13 @@
+<docs>
+<EventBubbles>
+<summary>
+The <strong><c>bubbles</c></strong> read-only property of the <see cref="Event."/> interface indicates whether the event bubbles up through the DOM tree or not.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> See <see href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling">Event bubbling and capture</see> for more information on bubbling.</para></blockquote>
+<para>-<see cref="Event.StopPropagation."/> to prevent further propagation of the current event in the capturing and bubbling phases<br/>-<see cref="Event.StopImmediatePropagation."/> to not call any further listeners for the same event at the same level in the DOM<br/>-<see cref="Event.PreventDefault."/> to allow propagation to continue but to disallow the browser to perform its default action should no listeners handle the event<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Event/bubbles"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value, which is <c>true</c> if the event bubbles up through the DOM tree.</value>
+</EventBubbles>
+</docs>

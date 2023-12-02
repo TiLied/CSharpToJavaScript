@@ -1,0 +1,12 @@
+<docs>
+<HTTPHeadersETag>
+<summary>
+The <strong><c>ETag</c></strong> (or <strong>entity tag</strong>) HTTP response header is an identifier for a<br/>specific version of a resource. It lets caches be more efficient and save bandwidth, as<br/>a web server does not need to resend a full response if the content was not changed.<br/>Additionally, etags help to prevent simultaneous updates of a resource from overwriting<br/>each other (<see href="https://developer.mozilla.org#avoiding_mid-air_collisions">&amp;quot;mid-air collisions&amp;quot;</see>).
+</summary>
+<remarks>
+<para>If the resource at a given URL changes, a new <c>Etag</c> value <strong>must</strong> be<br/>generated. A comparison of them can determine whether two representations of a resource<br/>are the same.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Match">If-Match</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-None-Match">If-None-Match</see><br/>-HTTPStatus("304", "304 Not Modified")<br/>-HTTPStatus("412", "Precondition Failed")<br/>-<see href="https://www.w3.org/1999/04/Editing/">W3C Note: Editing the Web – Detecting the Lost Update Problem Using Unreserved Checkout</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/ETag"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPHeadersETag>
+</docs>

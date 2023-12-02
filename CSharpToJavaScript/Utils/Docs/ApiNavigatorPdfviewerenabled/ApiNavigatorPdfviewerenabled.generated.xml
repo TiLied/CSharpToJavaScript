@@ -1,0 +1,12 @@
+<docs>
+<NavigatorPdfViewerEnabled>
+<summary>
+The <strong><c>pdfViewerEnabled</c></strong> read-only property of the <see cref="Navigator."/> interface indicates whether the browser supports inline display of PDF files when navigating to them.
+</summary>
+<remarks>
+<para>If inline viewing is not supported the PDF is downloaded and may then be handled by some external application.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This method replaces a number of legacy methods of inferring support for inline viewing of PDF files.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/pdfViewerEnabled"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value><c>true</c> if the browser can display PDF files inline when navigating to the file (using either an internal viewer or a PDF viewer extension); otherwise <c>false</c>.</value>
+</NavigatorPdfViewerEnabled>
+</docs>

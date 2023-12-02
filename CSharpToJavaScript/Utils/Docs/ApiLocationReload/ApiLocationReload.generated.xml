@@ -1,0 +1,13 @@
+<docs>
+<LocationReload>
+<summary>
+The <strong><c>location.reload()</c></strong> method reloads the current URL, like the Refresh button.
+</summary>
+<remarks>
+<para>The reload may be blocked and a <c>SECURITY_ERROR</c> <see cref="DOMException."/><br/>thrown. This happens if the <see href="https://developer.mozilla.org/en-US/docs/Glossary/origin">origin</see> of the script calling<br/><c>location.reload()</c> differs from the origin of the page that owns the<br/><see cref="Location."/> object. See <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy">Same-origin policy</see> for more<br/>information.</para>
+<para>-The <see cref="Location."/> interface it belongs to.<br/>-Similar methods: <see cref="Location.Assign."/> and<br/><see cref="Location.Replace."/>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Location/reload"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</LocationReload>
+</docs>

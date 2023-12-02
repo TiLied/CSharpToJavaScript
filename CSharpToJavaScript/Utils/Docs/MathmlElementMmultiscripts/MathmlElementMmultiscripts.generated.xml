@@ -1,0 +1,12 @@
+<docs>
+<MathMLElementMmultiscripts>
+<summary>
+The <strong><c>&amp;lt;mmultiscripts&amp;gt;</c></strong> <see href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</see> element is used to attach an arbitrary number of subscripts and superscripts to an expression at once, generalizing the {{ MathMLElement("msubsup") }} element. Scripts can be either prescripts (placed before the expression) or postscripts (placed after it).
+</summary>
+<remarks>
+<para>MathML uses the syntax below, that is a base expression, followed by an arbitrary number of postsubscript-postsuperscript pairs (attached in the given order) optionally followed by an <c>&amp;lt;mprescripts&amp;gt;</c> and an arbitrary number of presubscript-presuperscript pairs (attached in the given order). In addition, empty <c>&amp;lt;mrow&amp;gt;</c> elements can be used to represent absent scripts.</para>
+<para>-{{ MathMLElement("msub") }} (Subscript)<br/>-{{ MathMLElement("msup") }} (Superscript)<br/>-{{ MathMLElement("msubsup") }} (Subscript-superscript pair)<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/MathML/Element/mmultiscripts"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</MathMLElementMmultiscripts>
+</docs>

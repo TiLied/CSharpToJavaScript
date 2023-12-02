@@ -1,0 +1,12 @@
+<docs>
+<VREyeParameters>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>VREyeParameters</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API">WebVR API</see> represents all the information required to correctly render a scene for a given eye, including field of view information.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This interface was part of the old <see href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</see>. It has been superseded by the <see href="https://immersive-web.github.io/webxr/">WebXR Device API</see>.</para></blockquote><para>This interface is accessible through the <see cref="VRDisplay.GetEyeParameters."/> method.</para><blockquote class="WARNING"><h5>WARNING</h5><para><strong>Warning:</strong> The values in this interface should not be used to compute view or projection matrices. In order to ensure the widest possible hardware compatibility use the matrices provided by <see cref="VRFrameData."/>.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API">WebVR API homepage</see><br/>-<see href="https://mixedreality.mozilla.org/"/> — demos, downloads, and other resources from the Mozilla VR team.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VREyeParameters"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</VREyeParameters>
+</docs>

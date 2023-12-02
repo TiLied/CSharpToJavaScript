@@ -1,0 +1,13 @@
+<docs>
+<CSSLog>
+<summary>
+The <strong><c>log()</c></strong> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</see> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Functions">function</see> is an exponential function that returns the logarithm of a number.
+</summary>
+<remarks>
+<para><see href="https://en.wikipedia.org/wiki/Logarithm">Logarithm</see> is the inverse of exponentiation. It is the number that a fixed base has to be raised to in order to yield the number passed as the first parameter.</para><para>In CSS, when a single parameter is passed, the natural logarithm <c>e</c>, or approximately <c>2.7182818</c>, is used, though the base can be set to any value with an optional second parameter.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/pow">pow</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/sqrt">sqrt</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/hypot">hypot</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/exp">exp</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/CSS/log"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>The logarithm of <c>value</c>, when <c>base</c> is defined.The natural logarithm (base <c>e</c>) of <c>value</c>, when <c>base</c> is not defined.</returns>
+</CSSLog>
+</docs>

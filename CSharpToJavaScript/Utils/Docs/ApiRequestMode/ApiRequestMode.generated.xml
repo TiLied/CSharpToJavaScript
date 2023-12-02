@@ -1,0 +1,11 @@
+<docs>
+<RequestMode>
+<summary>
+The <strong><c>mode</c></strong> read-only property of the <see cref="Request."/><br/>interface contains the mode of the request (e.g., <c>cors</c>,<br/><c>no-cors</c>, <c>same-origin</c>, <c>navigate</c> or <c>websocket</c>.) This is used<br/>to determine if cross-origin requests lead to valid responses, and which properties of the response are readable.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Request/mode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RequestMode>
+</docs>

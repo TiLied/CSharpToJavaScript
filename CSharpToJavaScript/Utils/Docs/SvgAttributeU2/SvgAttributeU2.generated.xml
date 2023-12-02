@@ -1,0 +1,11 @@
+<docs>
+<SVGAttributeU2>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>u2</c></strong> attribute specifies list of <see href="https://developer.mozilla.org/en-US/docs/Glossary/Unicode">Unicode</see> characters (refer to the description of the {{SVGAttr("unicode")}} attribute of the {{SVGElement("glyph")}} element for a description of how to express individual Unicode characters) and/or ranges of Unicode characters, which identify a set of possible second <see href="https://developer.mozilla.org/en-US/docs/Glossary/glyphs">glyphs</see> in a kerning pair.
+</summary>
+<remarks>
+<para>If a given Unicode character within the set has multiple corresponding <c>&amp;lt;glyph&amp;gt;</c> elements (i.e., there are multiple <c>&amp;lt;glyph&amp;gt;</c> elements with the same <c>unicode</c> attribute value but different glyph-name values), then all such glyphs are included in the set. Comma is the separator character; thus, to kern a comma, specify the comma as part of a range of Unicode characters or as a glyph name using the g2 attribute. The total set of possible second glyphs in the kerning pair is the union of glyphs specified by the <c>u2</c> and <c>g2</c> attributes.</para><para>You can use this attribute with the following SVG elements:</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/u2"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</SVGAttributeU2>
+</docs>

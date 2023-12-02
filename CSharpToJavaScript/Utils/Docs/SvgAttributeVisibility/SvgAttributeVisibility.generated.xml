@@ -1,0 +1,12 @@
+<docs>
+<SVGAttributeVisibility>
+<summary>
+The <strong><c>visibility</c></strong> attribute lets you control the visibility of graphical elements. With a value of <c>hidden</c> or <c>collapse</c> the current graphics element is invisible.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> If the <c>visibility</c> attribute is set to <c>hidden</c> on a text element, then the text is invisible but still takes up space in text layout calculations.</para></blockquote><para>Depending on the value of attribute pointer-events, graphics elements which have their <c>visibility</c> attribute set to <c>hidden</c> still might receive events.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> As a presentation attribute, <c>visibility</c> can be used as a CSS property. See the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/visibility">visibility</see> property for more information.</para></blockquote><para>You can use this attribute with the following SVG elements:</para>
+<para>-display attribute<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/visibility">visibility</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/visibility"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</SVGAttributeVisibility>
+</docs>

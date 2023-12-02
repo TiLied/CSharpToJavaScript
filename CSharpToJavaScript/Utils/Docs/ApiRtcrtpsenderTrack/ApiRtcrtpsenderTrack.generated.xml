@@ -1,0 +1,11 @@
+<docs>
+<RTCRtpSenderTrack>
+<summary>
+The <strong><c>track</c></strong> read-only property of<br/>the <see cref="RTCRtpSender."/> interface returns the <see cref="MediaStreamTrack."/><br/>which is being handled by the <c>RTCRtpSender</c>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSender/track"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="MediaStreamTrack."/> object representing the media associated with the<br/><c>RTCRtpSender</c>. If no track is associated with the sender, this value is<br/><c>null</c>, in which case the sender transmits nothing.</value>
+</RTCRtpSenderTrack>
+</docs>

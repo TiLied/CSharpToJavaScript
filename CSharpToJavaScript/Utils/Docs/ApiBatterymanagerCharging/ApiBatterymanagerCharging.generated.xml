@@ -1,0 +1,13 @@
+<docs>
+<BatteryManagerCharging>
+<summary>
+The <strong><c>BatteryManager.charging</c></strong> property is a Boolean value indicating whether or not the device's battery is currently being charged. When its value changes, the <see cref="BatteryManager/chargingchange_event."/> event is fired.
+</summary>
+<remarks>
+<para>If the battery is charging or the user agent is unable to report the battery status information, this value is <c>true</c>. Otherwise, it is <c>false</c>.</para>
+<para>-<see cref="BatteryManager."/><br/>-<see cref="Navigator.GetBattery."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BatteryManager/charging"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean.</value>
+</BatteryManagerCharging>
+</docs>

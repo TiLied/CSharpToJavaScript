@@ -1,0 +1,12 @@
+<docs>
+<HTMLDialogElementOpen>
+<summary>
+The <strong><c>open</c></strong> property of the<br/><see cref="HTMLDialogElement."/> interface is a boolean value reflecting the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog#open"><c>open</c></see> HTML attribute, indicating whether the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog">dialog</see> is<br/>available for interaction.
+</summary>
+<remarks>
+<para>-The HTML element implementing this interface: <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog">dialog</see>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement/open"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value representing the state of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog#open"><c>open</c></see> HTML attribute. <c>true</c> means it is set, and therefore the dialog<br/>is shown. <c>false</c> means it not set, and therefore the dialog is not shown.The property is not read only — it is possible to set the value to programmatically<br/>show or hide the dialog.</value>
+</HTMLDialogElementOpen>
+</docs>

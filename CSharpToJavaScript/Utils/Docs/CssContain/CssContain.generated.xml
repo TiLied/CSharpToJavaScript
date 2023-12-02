@@ -1,0 +1,13 @@
+<docs>
+<CSSContain>
+<summary>
+The <strong><c>contain</c></strong> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</see> property indicates that an element and its contents are, as much as possible, independent from the rest of the document tree.<br/>Containment enables isolating a subsection of the DOM, providing performance benefits by limiting calculations of layout, style, paint, size, or any combination to a DOM subtree rather than the entire page. Containment can also be used to scope CSS counters and quotes.
+</summary>
+<remarks>
+<para>EmbedInteractiveExample("pages/css/contain.html")</para><para>There are four types of CSS containment: size, layout, style, and paint, which are set on the container.<br/>The property is a space-separated list of a subset of the five standard values or one of the two shorthand values.<br/>Changes to the contained properties within the container are not propagated outside of the contained element to the rest of the page.<br/>The main benefit of containment is that the browser does not have to re-render the DOM or page layout as often, leading to small performance benefits during the rendering of static pages and greater performance benefits in more dynamic applications.</para><para>Using the <c>contain</c> property is useful on pages with groups of elements that are supposed to be independent, as it can prevent element internals from having side effects outside of its bounding-box.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> using <c>layout</c>, <c>paint</c>, <c>strict</c> or <c>content</c> values for this property creates:</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment">CSS containment</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_container_queries">CSS container queries</see><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/content-visibility">content-visibility</see> property<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/position">position</see> property<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/CSS/contain"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <c>contain</c> property can have any of the following values:The keywords have the following meanings:</value>
+</CSSContain>
+</docs>

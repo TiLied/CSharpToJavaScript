@@ -1,0 +1,13 @@
+<docs>
+<ViewTransitionFinished>
+<summary>
+The <strong><c>finished</c></strong> read-only property of the<br/><see cref="ViewTransition."/> interface is a {{jsxref("Promise")}} that fulfills once the transition animation is finished, and the new page view is visible and interactive to the user.
+</summary>
+<remarks>
+<para><c>finished</c> only rejects if the callback passed to <see cref="Document.StartViewTransition."/>throws or returns a promise that rejects, which indicates that the new state of the page wasn't created.</para><para>If a transition animation fails to start, or is skipped during the animation using <see cref="ViewTransition.SkipTransition."/>, the end state is still reached therefore <c>finished</c> still fulfills.</para>
+<para>-<see href="https://developer.chrome.com/docs/web-platform/view-transitions/">Smooth and simple transitions with the View Transitions API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ViewTransition/finished"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A promise.</value>
+</ViewTransitionFinished>
+</docs>

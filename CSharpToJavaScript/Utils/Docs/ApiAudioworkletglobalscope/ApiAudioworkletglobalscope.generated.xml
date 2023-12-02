@@ -1,0 +1,12 @@
+<docs>
+<AudioWorkletGlobalScope>
+<summary>
+The <strong><c>AudioWorkletGlobalScope</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see> represents a global execution context for user-supplied code, which defines custom <see cref="AudioWorkletProcessor."/>-derived classes.
+</summary>
+<remarks>
+<para>Each <see cref="BaseAudioContext."/> has a single <see cref="AudioWorklet."/> available under the <see cref="BaseAudioContext.AudioWorklet."/> property, which runs its code in a single <c>AudioWorkletGlobalScope</c>.</para><para>As the global execution context is shared across the current <c>BaseAudioContext</c>, it&amp;apos;s possible to define any other variables and perform any actions allowed in worklets — apart from defining <c>AudioWorkletProcessor</c> derived classes.</para><para></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_AudioWorklet">Using AudioWorklet</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioWorkletGlobalScope"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</AudioWorkletGlobalScope>
+</docs>

@@ -1,0 +1,11 @@
+<docs>
+<RTCTrackEventStreams>
+<summary>
+The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>interface <see cref="RTCTrackEvent."/>'s read-only<br/><strong><c>streams</c></strong> property specifies an array of<br/><see cref="MediaStream."/> objects, one for each of the streams that comprise the<br/>track being added to the <see cref="RTCPeerConnection."/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEvent/streams"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An {{jsxref("Array")}} of <see cref="MediaStream."/> objects, one for each stream that<br/>make up the new track.</value>
+</RTCTrackEventStreams>
+</docs>

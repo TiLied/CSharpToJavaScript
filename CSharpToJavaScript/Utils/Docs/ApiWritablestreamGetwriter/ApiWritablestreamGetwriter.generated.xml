@@ -1,0 +1,11 @@
+<docs>
+<WritableStreamGetWriter>
+<summary>
+The <strong><c>getWriter()</c></strong> method of the <see cref="WritableStream."/> interface returns a new instance of <see cref="WritableStreamDefaultWriter."/> and locks the stream to that instance.<br/>While the stream is locked, no other writer can be acquired until this one is released.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WritableStream/getWriter"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="WritableStreamDefaultWriter."/> object instance.</returns>
+</WritableStreamGetWriter>
+</docs>

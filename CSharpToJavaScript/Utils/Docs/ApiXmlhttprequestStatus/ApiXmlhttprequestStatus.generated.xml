@@ -1,0 +1,13 @@
+<docs>
+<XMLHttpRequestStatus>
+<summary>
+The read-only <strong><c>XMLHttpRequest.status</c></strong> property returns the numerical HTTP <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">status code</see> of the <c>XMLHttpRequest</c>&amp;apos;s response.
+</summary>
+<remarks>
+<para>Before the request completes, the value of <c>status</c> is 0. Browsers also report a status of 0 in case of <c>XMLHttpRequest</c> errors.</para>
+<para>-List of <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">HTTP status</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/status"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</XMLHttpRequestStatus>
+</docs>

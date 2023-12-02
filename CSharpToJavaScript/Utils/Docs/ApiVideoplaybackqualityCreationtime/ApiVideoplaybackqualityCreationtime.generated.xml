@@ -1,0 +1,12 @@
+<docs>
+<VideoPlaybackQualityCreationTime>
+<summary>
+The read-only <strong><c>creationTime</c></strong> property on the<br/><see cref="VideoPlaybackQuality."/> interface reports the number of milliseconds since<br/>the browsing context was created this quality sample was recorded.
+</summary>
+<remarks>
+<para>-The <see cref="HTMLVideoElement.GetVideoPlaybackQuality."/> method, which<br/>returns <c>VideoPlaybackQuality</c> objects<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoPlaybackQuality/creationTime"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DOMHighResTimeStamp."/> object which indicates the number of milliseconds<br/>that elapsed between the time the browsing context was created and the time at which<br/>this sample of the video quality was obtained.For details on how the time is determined, see <see cref="Performance.Now."/>.</value>
+</VideoPlaybackQualityCreationTime>
+</docs>

@@ -1,0 +1,12 @@
+<docs>
+<SVGAttributeColor-interpolation>
+<summary>
+The <strong><c>color-interpolation</c></strong> attribute specifies the color space for gradient interpolations, color animations, and alpha compositing.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> For filter effects, the color-interpolation-filters property controls which color space is used.</para></blockquote><para>The color-interpolation property chooses between color operations occurring in the sRGB color space or in a (light energy linear) linearized RGB color space. Having chosen the appropriate color space, component-wise linear interpolation is used.</para><para>When a child element is blended into a background, the value of the <c>color-interpolation</c> property on the child determines the type of blending, not the value of the <c>color-interpolation</c> on the parent. For gradients which make use of the href or the deprecated xlink:href attribute to reference another gradient, the gradient uses the property's value from the gradient element which is directly referenced by the fill or stroke property. When animating colors, color interpolation is performed according to the value of the <c>color-interpolation</c> property on the element being animated.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> As a presentation attribute, <c>color-interpolation</c> can be used as a CSS property.</para></blockquote><para>You can use this attribute with the following SVG elements:</para>
+<para>-<see href="https://webstore.iec.ch/publication/6169">sRGB specification</see><br/>-color-interpolation-filters<br/>-<see href="https://www.youtube.com/watch?v=LKnqECcg6Gw">Computer color is broken</see> - popular demonstration of linearRGB<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/color-interpolation"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</SVGAttributeColor-interpolation>
+</docs>

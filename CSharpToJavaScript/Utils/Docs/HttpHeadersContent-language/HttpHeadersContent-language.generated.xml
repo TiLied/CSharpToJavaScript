@@ -1,0 +1,12 @@
+<docs>
+<HTTPHeadersContent-Language>
+<summary>
+The <strong><c>Content-Language</c></strong> <see href="https://developer.mozilla.org/en-US/docs/Glossary/representation header">representation header</see> is used to <strong>describe the language(s) intended for the audience</strong>, so users can differentiate it according to their own preferred language.
+</summary>
+<remarks>
+<para>For example, if &amp;quot;<c>Content-Language: de-DE</c>&amp;quot; is set, it says that the document is intended for German language speakers (however, it doesn&amp;apos;t indicate the document is written in German. For example, it might be written in English as part of a language course for German speakers. If you want to indicate which language the document is written in, use the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang"><c>lang</c> attribute</see> instead).</para><para>If no <c>Content-Language</c> is specified, the default is that the content is intended for all language audiences. Multiple language tags are also possible, as well as applying the <c>Content-Language</c> header to various media types and not only to textual documents.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language">Accept-Language</see><br/>-<see href="https://www.w3.org/International/questions/qa-http-and-lang.en">HTTP headers, meta elements and language information</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang">HTML <c>lang</c> attribute</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Language"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPHeadersContent-Language>
+</docs>

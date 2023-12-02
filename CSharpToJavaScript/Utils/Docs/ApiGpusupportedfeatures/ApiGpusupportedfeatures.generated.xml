@@ -1,0 +1,12 @@
+<docs>
+<GPUSupportedFeatures>
+<summary>
+The <strong><c>GPUSupportedFeatures</c></strong> interface of the {{domxref(&amp;quot;WebGPU API&amp;quot;, &amp;quot;WebGPU API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} is a <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_browser_apis"><c>Set</c>-like object</see> that describes additional functionality supported by a <see cref="GPUAdapter."/>.
+</summary>
+<remarks>
+<para>The <c>GPUSupportedFeatures</c> object for the current adapter is accessed via the <see cref="GPUAdapter.Features."/> property.</para><para>You should note that not all features will be available to WebGPU in all browsers that support it, even if the features are supported by the underlying hardware. This could be due to constraints in the underlying system, browser, or adapter. For example:</para><para>If you are hoping to take advantage of a specific additional feature in a WebGPU app, thorough testing is advised.</para><para></para>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUSupportedFeatures"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</GPUSupportedFeatures>
+</docs>

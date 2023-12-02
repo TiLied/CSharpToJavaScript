@@ -1,0 +1,12 @@
+<docs>
+<MediaStreamTrackEvent>
+<summary>
+The <strong><c>MediaStreamTrackEvent</c></strong> interface represents events which indicate that a <see cref="MediaStream."/> has had tracks added to or removed from the stream through calls to <see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API">Media Capture and Streams API</see> methods. These events are sent to the stream when these changes occur.
+</summary>
+<remarks>
+<para></para><para>The events based on this interface are <see cref="MediaStream/addtrack_event."/> and <see cref="MediaStream/removetrack_event."/>.</para>
+<para>-<see cref="MediaStream."/>: <see cref="MediaStream/addtrack_event."/> and <see cref="MediaStream/removetrack_event."/> events<br/>-<see cref="MediaStreamTrack."/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API">Media Capture and Streams API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrackEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</MediaStreamTrackEvent>
+</docs>

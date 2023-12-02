@@ -1,0 +1,12 @@
+<docs>
+<HTTPStatus424>
+<summary>
+The HTTP <strong><c>424 Failed Dependency</c></strong> client error response code indicates that the method could not be performed on the resource because the requested action depended on another action, and that action failed.
+</summary>
+<remarks>
+<para>Regular web servers will normally not return this status code. But some other protocols, like <see href="https://developer.mozilla.org/en-US/docs/Glossary/WebDAV">WebDAV</see>, can return it. For example, in <see href="https://developer.mozilla.org/en-US/docs/Glossary/WebDAV">WebDAV</see>, if a <c>PROPPATCH</c> request was issued, and one command fails then automatically every other command will also fail with <c>424 Failed Dependency</c>.</para>
+<para>-{{HTTPStatus("403")}} (Forbidden)<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/424"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPStatus424>
+</docs>

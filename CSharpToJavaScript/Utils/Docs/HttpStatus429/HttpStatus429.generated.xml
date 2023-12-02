@@ -1,0 +1,12 @@
+<docs>
+<HTTPStatus429>
+<summary>
+The HTTP <strong><c>429 Too Many Requests</c></strong> response status code indicates the user has sent too many requests in a given amount of time (&amp;quot;rate limiting&amp;quot;).
+</summary>
+<remarks>
+<para>A <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Retry-After">Retry-After</see> header might be included to this response indicating how long to wait before making a new request.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Retry-After">Retry-After</see><br/>-<see href="https://httpwg.org/specs/rfc9110.html#status.429">HTTP Status Code Definitions</see><br/>-Python solution: <see href="https://stackoverflow.com/questions/22786068/how-to-avoid-http-error-429-too-many-requests-python">How to avoid HTTP error 429 python</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPStatus429>
+</docs>

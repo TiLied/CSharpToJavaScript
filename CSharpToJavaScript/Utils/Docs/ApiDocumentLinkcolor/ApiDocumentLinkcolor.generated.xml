@@ -1,0 +1,13 @@
+<docs>
+<DocumentLinkColor>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>Document.linkColor</c></strong> property gets/sets the color of<br/>links within the document.
+</summary>
+<remarks>
+<para>This property is deprecated. As an alternative, you can set the CSS<br/>{{cssxref("color")}} property on either HTML anchor links (<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a">a</see>) or on<br/><see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:link">:link</see> pseudo-classes. Another alternative is<br/><c>document.body.link</c>, although this is <see href="https://www.w3.org/TR/html401/struct/global.html#adef-link">deprecated in HTML 4.01</see>.</para>
+<para>-<see cref="Document.VlinkColor."/><br/>-<see cref="Document.AlinkColor."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/linkColor"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing the color as a word (e.g., <c>red</c>) or hexadecimal value (e.g., <c>#ff0000</c>).</value>
+</DocumentLinkColor>
+</docs>

@@ -1,0 +1,11 @@
+<docs>
+<NodeNodeValue>
+<summary>
+The <strong><c>nodeValue</c></strong> property of the <see cref="Node."/> interface returns or sets the value of the current node.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeValue"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing the value of the current node, if any.<br/>For the document itself, <c>nodeValue</c> returns <c>null</c>.<br/>For text, comment, and CDATA nodes, <c>nodeValue</c> returns the content of the node.<br/>For attribute nodes, the value of the attribute is returned.The following table shows the return values for different types of nodes.<table><tr><td>Node</td><td>Value of nodeValue</td></tr><tr><td><see cref="CDATASection."/></td><td>Content of the CDATA section</td></tr><tr><td><see cref="Comment."/></td><td>Content of the comment</td></tr><tr><td><see cref="Document."/></td><td><c>null</c></td></tr><tr><td><see cref="DocumentFragment."/></td><td><c>null</c></td></tr><tr><td><see cref="DocumentType."/></td><td><c>null</c></td></tr><tr><td><see cref="Element."/></td><td><c>null</c></td></tr><tr><td><see cref="NamedNodeMap."/></td><td><c>null</c></td></tr><tr><td><see cref="ProcessingInstruction."/></td><td>Entire content excluding the target</td></tr><tr><td><see cref="Text."/></td><td>Content of the text node</td></tr></table><blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> When <c>nodeValue</c> is defined to be <c>null</c>, setting it has no effect.</blockquote></value>
+</NodeNodeValue>
+</docs>

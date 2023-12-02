@@ -1,0 +1,12 @@
+<docs>
+<JavaScriptReferenceClassesStatic>
+<summary>
+The <strong><c>static</c></strong> keyword defines a <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#static_methods_and_fields">static method or field</see> for a class, or a <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks">static initialization block</see> (see the link for more information about this usage). Static properties cannot be directly accessed on instances of the class. Instead, they&amp;apos;re accessed on the class itself.
+</summary>
+<remarks>
+<para>Static methods are often utility functions, such as functions to create or clone objects, whereas static properties are useful for caches, fixed-configuration, or any other data you don&amp;apos;t need to be replicated across instances.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> In the context of classes, MDN Web Docs content uses the terms properties and <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields">fields</see> interchangeably.</para></blockquote><para>EmbedInteractiveExample("pages/js/classes-static.html", "taller")</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_classes">Using classes</see> guide<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes">Classes</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks">Static initialization blocks</see><br/>-<see cref="Statements/class"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/static"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</JavaScriptReferenceClassesStatic>
+</docs>

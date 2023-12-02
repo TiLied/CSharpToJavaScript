@@ -1,0 +1,13 @@
+<docs>
+<TouchEventTouchEvent>
+<summary>
+The <strong><c>TouchEvent()</c></strong> constructor creates a new <see cref="TouchEvent."/> object.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> If you construct a synthetic event using this constructor, that event will not be <strong>trusted</strong>, for security reasons.<br/>Only browser-generated <c>TouchEvent</c> objects are trusted and only trusted events trigger default actions.</para></blockquote>
+<para>-<see cref="TouchEvent."/>, the interface of the objects it constructs.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TouchEvent/TouchEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="TouchEvent."/> object.</returns>
+</TouchEventTouchEvent>
+</docs>

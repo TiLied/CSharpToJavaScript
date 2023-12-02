@@ -1,0 +1,11 @@
+<docs>
+<SVGAttributeIn>
+<summary>
+The <strong><c>in</c></strong> attribute identifies input for the given filter primitive.
+</summary>
+<remarks>
+<para>The value can be either one of the six keywords defined below, or a string which matches a previous {{SVGAttr("result")}} attribute value within the same <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementfilter">filter</see> element. If no value is provided and this is the first filter primitive, then this filter primitive will use <c>SourceGraphic</c> as its input. If no value is provided and this is a subsequent filter primitive, then this filter primitive will use the result from the previous filter primitive as its input.</para><para>If the value for {{SVGAttr("result")}} appears multiple times within a given <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementfilter">filter</see> element, then a reference to that result will use the closest preceding filter primitive with the given value for attribute {{SVGAttr("result")}}.</para><para>You can use this attribute with the following SVG elements:</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/in"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</SVGAttributeIn>
+</docs>

@@ -1,0 +1,12 @@
+<docs>
+<HTTPHeadersForwarded>
+<summary>
+The <strong><c>Forwarded</c></strong> request header contains information that may be added by <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling">reverse proxy servers</see> (load balancers, CDNs, and so on) that would otherwise be altered or lost when proxy servers are involved in the path of the request.
+</summary>
+<remarks>
+<para>For example, if a client is connecting to a web server through an HTTP proxy (or load balancer), server logs will only contain the IP address, host address, and protocol of the proxy; this header can be used to identify the IP address, host, and protocol, of the original request.<br/>The header is optional and may be added to, modified, or removed, by any of the proxy servers on the path to the server.</para><para>This header is used for debugging, statistics, and generating location-dependent content.<br/>By design, it exposes privacy sensitive information, such as the IP address of the client.<br/>Therefore, the user&amp;apos;s privacy must be kept in mind when deploying this header.</para><para>The alternative and de-facto standard versions of this header are the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-For">X-Forwarded-For</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-Host">X-Forwarded-Host</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-Proto">X-Forwarded-Proto</see> headers.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-For">X-Forwarded-For</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-Host">X-Forwarded-Host</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-Proto">X-Forwarded-Proto</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Via">Via</see> – provides information about the proxy itself, not about the client connecting to it.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Forwarded"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPHeadersForwarded>
+</docs>

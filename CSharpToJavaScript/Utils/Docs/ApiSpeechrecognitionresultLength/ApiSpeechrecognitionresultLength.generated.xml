@@ -1,0 +1,13 @@
+<docs>
+<SpeechRecognitionResultLength>
+<summary>
+The <strong><c>length</c></strong> read-only property of the<br/><see cref="SpeechRecognitionResult."/> interface returns the length of the "array"<br/>— the number of <see cref="SpeechRecognitionAlternative."/> objects contained<br/>in the result (also referred to as &amp;quot;n-best alternatives&amp;quot;.)
+</summary>
+<remarks>
+<para>The number of alternatives contained in the result depends on what the<br/><see cref="SpeechRecognition.MaxAlternatives."/> property was set to when the speech<br/>recognition was first initiated.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionResult/length"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</SpeechRecognitionResultLength>
+</docs>

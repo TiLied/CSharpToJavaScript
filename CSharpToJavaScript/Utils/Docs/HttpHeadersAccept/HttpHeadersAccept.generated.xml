@@ -1,0 +1,11 @@
+<docs>
+<HTTPHeadersAccept>
+<summary>
+The <strong><c>Accept</c></strong> request HTTP header indicates which content types, expressed as <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME types</see>, the client is able to understand. The server uses <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Content_negotiation">content negotiation</see> to select one of the proposals and informs the client of the choice with the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type">Content-Type</see> response header. Browsers set required values for this header based on the context of the request. For example, a browser uses different values in a request when fetching a CSS stylesheet, image, video, or a script.
+</summary>
+<remarks>
+<para>-HTTP <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Content_negotiation">content negotiation</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Content_negotiation/List_of_default_Accept_values">List of default Accept values</see><br/>-A header with the result of the content negotiation: <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type">Content-Type</see><br/>-Other similar headers: <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/TE">TE</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Encoding">Accept-Encoding</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language">Accept-Language</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPHeadersAccept>
+</docs>

@@ -1,0 +1,12 @@
+<docs>
+<ElementInternalsAriaDisabled>
+<summary>
+The <strong><c>ariaDisabled</c></strong> property of the <see cref="ElementInternals."/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-disabled"><c>aria-disabled</c></see> attribute, which indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaDisabled"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string with one of the following values:</value>
+</ElementInternalsAriaDisabled>
+</docs>

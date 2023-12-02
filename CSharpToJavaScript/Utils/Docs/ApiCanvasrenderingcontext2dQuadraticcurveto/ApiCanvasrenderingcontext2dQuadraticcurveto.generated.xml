@@ -1,0 +1,12 @@
+<docs>
+<CanvasRenderingContext2DQuadraticCurveTo>
+<summary>
+The<br/><strong><c>CanvasRenderingContext2D.quadraticCurveTo()</c></strong><br/>method of the Canvas 2D API adds a quadratic <see href="https://developer.mozilla.org/en-US/docs/Glossary/Bezier_curve">Bézier curve</see> to the current<br/>sub-path. It requires two points: the first one is a control point and the second one is<br/>the end point. The starting point is the latest point in the current path, which can be<br/>changed using <see cref="CanvasRenderingContext2D.MoveTo."/> before creating<br/>the quadratic Bézier curve.
+</summary>
+<remarks>
+<para>-The interface defining this method: <see cref="CanvasRenderingContext2D."/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Glossary/Bezier_curve">Bézier curve</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/quadraticCurveTo"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</CanvasRenderingContext2DQuadraticCurveTo>
+</docs>

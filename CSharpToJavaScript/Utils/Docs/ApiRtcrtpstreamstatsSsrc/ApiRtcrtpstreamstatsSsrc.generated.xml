@@ -1,0 +1,11 @@
+<docs>
+<RTCRtpStreamStatsSsrc>
+<summary>
+The <see cref="RTCRtpStreamStats."/> dictionary's<br/><strong><c>ssrc</c></strong> property provides the Synchronization Source<br/>(SSRC), an integer which uniquely identifies the source of the <see href="https://developer.mozilla.org/en-US/docs/Glossary/RTP">RTP</see><br/>packets whose statistics are covered by the <see cref="RTCStatsReport."/> that<br/>includes this <c>RTCRtpStreamStats</c> dictionary.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpStreamStats/ssrc"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The Synchronization Source (SSRC) is a 32-bit integer uniquely identifying the source<br/>of the RTP packets whose statistics are covered by the <see cref="RTCStatsReport."/><br/>object of which this <c>RTCRtpStreamStats</c> object is a component.The manner in which these values are generated is not mandated by the specification,<br/>although it does make recommendations. You should not make any assumptions based on the<br/>value of <c>ssrc</c> other than that any two objects with the same<br/><c>ssrc</c> value refer to the same source. See {{RFC(&amp;quot;3550&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;8&amp;quot;)}} for<br/>additional information about <c>ssrc</c>.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> The specification includes an example that generates values<br/>for <c>ssrc</c> using MD5. While not part of the standard, exactly, it is a good<br/>mechanism that may be used by some browsers; others may use other methods, such as<br/>random number generators. <strong>Do not</strong> rely upon these values meaning anything<br/>other than &amp;quot;these objects are associated with the same source.&amp;quot;</blockquote></value>
+</RTCRtpStreamStatsSsrc>
+</docs>

@@ -1,0 +1,12 @@
+<docs>
+<XRFrameGetLightEstimate>
+<summary>
+The <strong><c>getLightEstimate()</c></strong> method of the <see cref="XRFrame."/> interface returns an <see cref="XRLightEstimate."/> object containing estimated lighting values for a given <see cref="XRLightProbe."/>.
+</summary>
+<remarks>
+<para>-<see cref="XRLightEstimate."/><br/>-<see cref="XRLightProbe."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRFrame/getLightEstimate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="XRLightEstimate."/> object or <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><c>null</c></see> if the device cannot estimate lighting for this frame.</returns>
+</XRFrameGetLightEstimate>
+</docs>

@@ -1,0 +1,13 @@
+<docs>
+<IDBRequestTransaction>
+<summary>
+The <strong><c>transaction</c></strong> read-only property of the IDBRequest<br/>interface returns the transaction for the request, that is, the transaction the<br/>request is being made inside.
+</summary>
+<remarks>
+<para>This property can be <c>null</c> for requests not made within transactions,<br/>such as for requests returned from <see cref="IDBFactory.Open."/> — in this case<br/>you&amp;apos;re just connecting to a database, so there is no transaction to return. If a<br/>version upgrade is needed when opening a database then during the<br/><see cref="IDBOpenDBRequest.Upgradeneeded_event."/> event handler the<br/><strong><c>transaction</c></strong> property will be an<br/><see cref="IDBTransaction."/> with <see cref="IDBTransaction.Mode."/> equal<br/>to <c>&amp;quot;versionchange&amp;quot;</c>, and can be used to access existing object stores and<br/>indexes, or abort the upgrade. Following the upgrade, the<br/><strong><c>transaction</c></strong> property will again be <c>null</c>.</para><para>AvailableInWorkers</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase."/><br/>-Using transactions: <see cref="IDBTransaction."/><br/>-Setting a range of keys: <see cref="IDBKeyRange."/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore."/><br/>-Using cursors: <see cref="IDBCursor."/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBRequest/transaction"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="IDBTransaction."/>.</value>
+</IDBRequestTransaction>
+</docs>

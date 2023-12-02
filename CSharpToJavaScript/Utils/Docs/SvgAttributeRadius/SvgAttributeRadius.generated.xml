@@ -1,0 +1,11 @@
+<docs>
+<SVGAttributeRadius>
+<summary>
+The <strong><c>radius</c></strong> attribute represents the radius (or radii) for the operation on a given <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementfeMorphology">feMorphology</see> filter primitive.
+</summary>
+<remarks>
+<para>If two numbers are provided, the first number represents the x-radius and the second one the y-radius. If one number is provided, then that value is used for both x and y. The values are in the coordinate system established by the {{SVGAttr("primitiveUnits")}} attribute on the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementfilter">filter</see> element.</para><para>A negative or zero value disables the effect of the given filter primitive (i.e., the result is the filter input image).</para><para>You can use this attribute with the following SVG elements:</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/radius"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</SVGAttributeRadius>
+</docs>

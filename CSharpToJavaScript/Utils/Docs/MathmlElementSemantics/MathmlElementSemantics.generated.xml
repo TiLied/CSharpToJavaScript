@@ -1,0 +1,11 @@
+<docs>
+<MathMLElementSemantics>
+<summary>
+The <strong><c>&amp;lt;semantics&amp;gt;</c></strong> <see href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</see> element associates annotations with a MathML expression, for example its text source as a <see href="https://en.wikipedia.org/wiki/Lightweight_markup_language">lightweight markup language</see> or mathematical meaning expressed in a special <see href="https://developer.mozilla.org/en-US/docs/Glossary/XML">XML</see> dialect. Typically, its structure is:
+</summary>
+<remarks>
+<para>By default, only the first child of the <c>&amp;lt;semantics&amp;gt;</c> element is rendered while the others have their <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/display">display</see> set to <c>none</c>.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Legacy MathML specifications allowed renderers to decide the default rendering according to available annotations. The following rules for determining the visible child have been implemented in some browsers. See <see href="https://w3c.github.io/mathml/">MathML 4</see> for the distinction between Presentation and Content MathML.</para><para>Note that <c>&amp;quot;application/mathml+xml&amp;quot;</c> is <strong>not</strong> mentioned here as it does not distinguish between Content or Presentation MathML.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/MathML/Element/semantics"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</MathMLElementSemantics>
+</docs>

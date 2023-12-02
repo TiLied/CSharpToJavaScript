@@ -1,0 +1,12 @@
+<docs>
+<RTCPeerConnectionGetIdentityAssertion>
+<summary>
+The <strong><c>RTCPeerConnection.getIdentityAssertion()</c></strong> method<br/>initiates the gathering of an identity assertion. This has an effect only if the<br/><see cref="RTCPeerConnection.SignalingState."/> is not<br/><c>&amp;quot;closed&amp;quot;</c>.
+</summary>
+<remarks>
+<para>The method returns a JavaScript <see cref="Promise"/> which resolves to an<br/>identity assertion encoded as a string.</para><para>It is not expected for the application dealing with the <c>RTCPeerConnection</c>:<br/>this is automatically done; an explicit call only allows to anticipate the need.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/getIdentityAssertion"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RTCPeerConnectionGetIdentityAssertion>
+</docs>

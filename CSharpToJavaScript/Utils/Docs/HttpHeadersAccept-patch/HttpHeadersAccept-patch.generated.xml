@@ -1,0 +1,12 @@
+<docs>
+<HTTPHeadersAccept-Patch>
+<summary>
+The <strong><c>Accept-Patch</c></strong> response HTTP header advertises which media-type the server is able to understand in a PATCH request.
+</summary>
+<remarks>
+<para><strong><c>Accept-Patch</c></strong> in response to any method means that PATCH is allowed on the resource identified by the Request-URI. Two common cases lead to this:</para><para>A server receiving a PATCH request with an unsupported media type could reply with {{HTTPStatus("415")}} <c>Unsupported Media Type</c> and an Accept-Patch header referencing one or more supported media types.</para><blockquote><para><strong>Note:</strong></para></blockquote>
+<para>-Http method {{HTTPMethod("PATCH")}}<br/>-HTTP Semantic and context {{RFC("7231", "PUT", "4.3.4")}}<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Patch"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPHeadersAccept-Patch>
+</docs>

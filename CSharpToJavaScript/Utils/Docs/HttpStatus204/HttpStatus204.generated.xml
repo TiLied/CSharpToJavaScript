@@ -1,0 +1,12 @@
+<docs>
+<HTTPStatus204>
+<summary>
+The HTTP <strong><c>204 No Content</c></strong> success status response code<br/>indicates that a request has succeeded, but that the client doesn&amp;apos;t need to navigate away<br/>from its current page.
+</summary>
+<remarks>
+<para>This might be used, for example, when implementing &amp;quot;save and continue editing&amp;quot; functionality for a wiki site.<br/>In this case a {{HTTPMethod("PUT")}} request would be used to save the page, and the <c>204 No Content</c> response<br/>would be sent to indicate that the editor should not be replaced by some other page.</para><para>A 204 response is cacheable by default (an <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/ETag">ETag</see> header is included in such a response).</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods">HTTP request methods</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/204"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPStatus204>
+</docs>

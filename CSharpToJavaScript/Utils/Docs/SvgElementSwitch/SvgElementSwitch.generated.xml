@@ -1,0 +1,11 @@
+<docs>
+<SVGElementSwitch>
+<summary>
+The <strong><c>&amp;lt;switch&amp;gt;</c></strong> <see href="https://developer.mozilla.org/en-US/docs/Web/SVG">SVG</see> element evaluates any requiredFeatures, requiredExtensions and systemLanguage attributes on its direct child elements in order, and then renders the first child where these attributes evaluate to true.
+</summary>
+<remarks>
+<para>Other direct children will be bypassed and therefore not rendered. If a child element is a container element, like <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementg">g</see>, then its subtree is also processed/rendered or bypassed/not rendered.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> The <c>display</c> and <c>visibility</c> properties have no effect on <c>&amp;lt;switch&amp;gt;</c> element processing. In particular, setting <c>display:none</c> on a child has no effect on the true/false testing for <c>&amp;lt;switch&amp;gt;</c> processing.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/switch"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</SVGElementSwitch>
+</docs>

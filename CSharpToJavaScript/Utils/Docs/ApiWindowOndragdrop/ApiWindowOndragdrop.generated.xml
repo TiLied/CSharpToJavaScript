@@ -1,0 +1,11 @@
+<docs>
+<WindowOndragdrop>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="WARNING"><h5>WARNING</h5><strong>Warning:</strong> Removed in Firefox 50, and never implemented in any other browser. Use the modern standard <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API">HTML drag and drop</see> feature instead.</blockquote>
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Window/ondragdrop"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The event handler function to be registered.The <c>window.ondragdrop</c> property and the <c>ondragdrop</c> attribute are not implemented in Firefox (<see href="https://bugzil.la/112288">Firefox bug 112288</see>), you have to use <c>addEventListener</c>. See <see href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener</see> for details.</value>
+</WindowOndragdrop>
+</docs>

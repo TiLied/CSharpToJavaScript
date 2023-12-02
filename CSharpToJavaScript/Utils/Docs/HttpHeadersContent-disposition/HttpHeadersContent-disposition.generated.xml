@@ -1,0 +1,12 @@
+<docs>
+<HTTPHeadersContent-Disposition>
+<summary>
+In a regular HTTP response, the <strong><c>Content-Disposition</c></strong> response header is a header indicating if the content is expected to be displayed <strong>inline</strong> in the browser, that is, as a Web page or as part of a Web page, or as an <strong>attachment</strong>, that is downloaded and saved locally.
+</summary>
+<remarks>
+<para>In a <c>multipart/form-data</c> body, the HTTP <strong><c>Content-Disposition</c></strong> general header is a header that must be used on each subpart of a multipart body to give information about the field it applies to. The subpart is delimited by the <strong>boundary</strong> defined in the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type">Content-Type</see> header. Used on the body itself, <c>Content-Disposition</c> has no effect.</para><para>The <c>Content-Disposition</c> header is defined in the larger context of MIME messages for email, but only a subset of the possible parameters apply to HTTP forms and {{HTTPMethod("POST")}} requests. Only the value <c>form-data</c>, as well as the optional directive <c>name</c> and <c>filename</c>, can be used in the HTTP context.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Learn/Forms">HTML Forms</see><br/>-The <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type">Content-Type</see> defining the boundary of the multipart body.<br/>-The <see cref="FormData."/> interface used to manipulate form data for use in the <see cref="XMLHttpRequest."/> API.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Disposition"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPHeadersContent-Disposition>
+</docs>

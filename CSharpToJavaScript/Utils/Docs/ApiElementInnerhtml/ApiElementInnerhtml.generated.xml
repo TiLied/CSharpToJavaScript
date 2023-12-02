@@ -1,0 +1,13 @@
+<docs>
+<ElementInnerHTML>
+<summary>
+The <see cref="Element."/> property<br/><strong><c>innerHTML</c></strong> gets or sets the HTML or XML markup contained<br/>within the element.
+</summary>
+<remarks>
+<para>To insert the HTML into the document rather than replace the contents of an element,<br/>use the method <see cref="Element.InsertAdjacentHTML."/>.</para>
+<para>-<see cref="Node.TextContent."/> and <see cref="HTMLElement.InnerText."/><br/>-<see cref="Element.InsertAdjacentHTML."/><br/>-<see cref="Element.OuterHTML."/><br/>-<see cref="Element.SetHTML."/><br/>-Parsing HTML or XML into a DOM tree: <see cref="DOMParser."/><br/>-Serializing a DOM tree into an XML string: <see cref="XMLSerializer."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing the HTML serialization of the element&amp;apos;s<br/>descendants. Setting the value of <c>innerHTML</c> removes all of the element&amp;apos;s<br/>descendants and replaces them with nodes constructed by parsing the HTML given in the<br/>string <strong>htmlString</strong>.</value>
+</ElementInnerHTML>
+</docs>

@@ -1,0 +1,13 @@
+<docs>
+<URLSearchParamsDelete>
+<summary>
+The <strong><c>delete()</c></strong> method of the <see cref="URLSearchParams."/> interface deletes specified parameters and their associated value(s) from the list of all search parameters.
+</summary>
+<remarks>
+<para>A parameter name and optional value are used to match parameters.<br/>If only a parameter name is specified, then all search parameters that match the name are deleted, along with their associated values.<br/>If both a parameter name and value are specified, then all search parameters that match both the parameter name and value are deleted.</para><para>AvailableInWorkers</para>
+<para>-<see href="https://github.com/zloirock/core-js#url-and-urlsearchparams">Polyfill of <c>URLSearchParams</c> in <c>core-js</c></see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/delete"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</URLSearchParamsDelete>
+</docs>

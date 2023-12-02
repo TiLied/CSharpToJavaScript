@@ -1,0 +1,13 @@
+<docs>
+<CSSFlex-direction>
+<summary>
+The <strong><c>flex-direction</c></strong> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</see> property sets how flex items are placed in the flex container defining the main axis and the direction (normal or reversed).
+</summary>
+<remarks>
+<para>EmbedInteractiveExample("pages/css/flex-direction.html")</para><para>Note that the values <c>row</c> and <c>row-reverse</c> are affected by the directionality of the flex container. If its <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#dir"><c>dir</c></see> attribute is <c>ltr</c>, <c>row</c> represents the horizontal axis oriented from the left to the right, and <c>row-reverse</c> from the right to the left; if the <c>dir</c> attribute is <c>rtl</c>, <c>row</c> represents the axis oriented from the right to the left, and <c>row-reverse</c> from the left to the right.</para>
+<para>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-flow">flex-flow</see> shorthand property for the CSS <c>flex-direction</c> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap">flex-wrap</see> properties.<br/>-CSS Flexbox Guide: <strong><see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox">Basic Concepts of Flexbox</see></strong><br/>-CSS Flexbox Guide: <strong><see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items">Ordering flex items</see></strong><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The following values are accepted:</value>
+</CSSFlex-direction>
+</docs>

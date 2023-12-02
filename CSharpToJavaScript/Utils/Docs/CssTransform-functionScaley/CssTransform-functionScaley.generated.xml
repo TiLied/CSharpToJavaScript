@@ -1,0 +1,12 @@
+<docs>
+<CSSTransform-functionScaleY>
+<summary>
+The <strong><c>scaleY()</c></strong> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</see> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Functions">function</see> defines a transformation that resizes an element along the<br/>y-axis (vertically). Its result is a {{cssxref(&amp;quot;&amp;lt;transform-function&amp;gt;&amp;quot;)}} data type.
+</summary>
+<remarks>
+<para>EmbedInteractiveExample("pages/css/function-scaleY.html")</para><para>It modifies the ordinate (vertical, y-coordinate) of each element point by a constant factor, except when the scale factor is 1, in which case<br/>the function is the identity transform. The scaling is not isotropic, and the angles of the element are not conserved.<br/><c>scaleY(-1)</c> defines an <see href="https://en.wikipedia.org/wiki/Axial_symmetry">axial symmetry</see>, with a horizontal axis passing through the origin (as specified by the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-origin">transform-origin</see><br/>property).</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> <c>scaleY(sy)</c> is equivalent to<br/><c>scale(1, sy)</c> or<br/><c>scale3d(1, sy, 1)</c>.</para><para><c>transform: rotateX(180deg);</c> === <c>transform: scaleY(-1);</c></para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scaleX"><c>scaleX()</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scaleZ"><c>scaleZ()</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform">transform</see><br/>-{{cssxref(&amp;quot;&amp;lt;transform-function&amp;gt;&amp;quot;)}}<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-origin">transform-origin</see><br/>-Individual transform properties:-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/translate">translate</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/scale">scale</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/rotate">rotate</see><br/>-Note: there is no <c>skew</c> property<br/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scaleY"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CSSTransform-functionScaleY>
+</docs>

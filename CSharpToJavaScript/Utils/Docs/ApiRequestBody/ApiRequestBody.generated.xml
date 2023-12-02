@@ -1,0 +1,12 @@
+<docs>
+<RequestBody>
+<summary>
+The read-only <strong><c>body</c></strong> property of the <see cref="Request."/><br/>interface contains a <see cref="ReadableStream."/> with the body contents<br/>that have been added to the request. Note that a request using the<br/><c>GET</c> or <c>HEAD</c> method cannot have a body<br/>and <c>null</c> is returned in these cases.
+</summary>
+<remarks>
+<para>-<see cref="Request.BodyUsed."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Request/body"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="ReadableStream."/> or <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><c>null</c></see>.</value>
+</RequestBody>
+</docs>

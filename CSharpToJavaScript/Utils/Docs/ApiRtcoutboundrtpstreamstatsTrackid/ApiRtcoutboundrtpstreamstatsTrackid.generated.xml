@@ -1,0 +1,11 @@
+<docs>
+<RTCOutboundRtpStreamStatsTrackId>
+<summary>
+The <strong><c>trackId</c></strong> property of the <see cref="RTCOutboundRtpStreamStats."/> dictionary indicates the <see cref="RTCOutboundRtpStreamStats.Id."/> of the <see cref="RTCSenderAudioTrackAttachmentStats."/> or <see cref="RTCSenderVideoTrackAttachmentStats."/> object representing the <see cref="MediaStreamTrack."/> which is being sent on this stream.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/trackId"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing the ID of the <see cref="RTCSenderAudioTrackAttachmentStats."/> or <see cref="RTCSenderVideoTrackAttachmentStats."/> object representing the track which is the source of the media being sent on this stream.</value>
+</RTCOutboundRtpStreamStatsTrackId>
+</docs>

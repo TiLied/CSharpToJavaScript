@@ -1,0 +1,11 @@
+<docs>
+<ManifestId>
+<summary>
+The <c>id</c> member is a string that represents the <strong>identity of the web application</strong> — the unique identifier for the web application. If the web application ID does not match an existing ID, the application will be treated as a unique identity even if it is from the same URL.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> The <c>id</c> member can be used to uniquely identify applications. The <c>id</c> member is processed like a <c>start_url</c> but can be out of <see href="https://developer.mozilla.org/en-US/docs/Web/Manifest/scope">scope</see> because it does not point to a resource that can be navigated to.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/Manifest/id"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</ManifestId>
+</docs>

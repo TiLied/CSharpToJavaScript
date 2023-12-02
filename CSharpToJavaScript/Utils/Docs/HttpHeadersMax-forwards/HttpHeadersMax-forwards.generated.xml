@@ -1,0 +1,12 @@
+<docs>
+<HTTPHeadersMax-Forwards>
+<summary>
+The <strong><c>Max-Forwards</c></strong> request HTTP header is used with the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/TRACE"><c>TRACE</c></see> method to limit the number of nodes (usually proxies) that request goes through. Its value is an integer value indicating the <strong>maximum amount</strong> of nodes it must visit. At each node, the value is decremented and the <c>TRACE</c> request is forwarded to the next node, until the destination is reached, or the received value of <c>Max-Forwards</c> is zero. The request is then sent back, except for some headers, as the body of a <c>200 OK</c> response.
+</summary>
+<remarks>
+<para>If the <c>Max-Forwards</c> header is not present in a <c>TRACE</c> request, a node will assume that there is no maximum number of forwards.</para>
+<para>-The HTTP <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/TRACE"><c>TRACE</c></see> method<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Max-Forwards"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPHeadersMax-Forwards>
+</docs>

@@ -1,0 +1,13 @@
+<docs>
+<XRSessionInputSources>
+<summary>
+The read-only <strong><c>inputSources</c></strong> property of the<br/><see cref="XRSession."/> interface returns an <see cref="XRInputSourceArray."/> object<br/>which lists all controllers and input devices which are expressly associated with the<br/>XR device and are currently available. These controllers may include handheld<br/>controllers, XR-equipped gloves, optically tracked hands, and gaze-based input methods.<br/>Keyboards, gamepads, and mice are <strong>not</strong> considered WebXR input sources.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Traditional gamepad controllers are supported using the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API">Gamepad API</see>.</para></blockquote>
+<para>-<see cref="XRInputSource."/><br/>-The <see cref="XRSession.Inputsourceschange_event."/> event<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API">Gamepad API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRSession/inputSources"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="XRInputSourceArray."/> object listing all of the currently-connected<br/>input controllers which are linked specifically to the XR device currently in use. The<br/>returned object is <strong>live</strong>; as devices are connected to and removed from<br/>the user&amp;apos;s system, the list&amp;apos;s contents update to reflect the changes.</value>
+</XRSessionInputSources>
+</docs>

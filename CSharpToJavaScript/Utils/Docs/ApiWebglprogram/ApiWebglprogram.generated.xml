@@ -1,0 +1,12 @@
+<docs>
+<WebGLProgram>
+<summary>
+The <strong><c>WebGLProgram</c></strong> is part of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> and is a combination of two compiled <see cref="WebGLShader."/>s consisting of a vertex shader and a fragment shader (both written in GLSL).
+</summary>
+<remarks>
+<para></para><para>To create a <c>WebGLProgram</c>, call the GL context's <see cref="WebGLRenderingContext.CreateProgram."/> function. After attaching the shader programs using <see cref="WebGLRenderingContext.AttachShader."/>, you link them into a usable program. This is shown in the code below.</para><para>See <see cref="WebGLShader."/> for information on creating the <c>vertexShader</c> and <c>fragmentShader</c> in the above example.</para>
+<para>-<see cref="WebGLShader."/><br/>-<see cref="WebGLRenderingContext.AttachShader."/><br/>-<see cref="WebGLRenderingContext.CompileShader."/><br/>-<see cref="WebGLRenderingContext.CreateProgram."/><br/>-<see cref="WebGLRenderingContext.CreateShader."/><br/>-<see cref="WebGLRenderingContext.DeleteProgram."/><br/>-<see cref="WebGLRenderingContext.DeleteShader."/><br/>-<see cref="WebGLRenderingContext.DetachShader."/><br/>-<see cref="WebGLRenderingContext.GetAttachedShaders."/><br/>-<see cref="WebGLRenderingContext.GetProgramParameter."/><br/>-<see cref="WebGLRenderingContext.GetProgramInfoLog."/><br/>-<see cref="WebGLRenderingContext.GetShaderParameter."/><br/>-<see cref="WebGLRenderingContext.GetShaderPrecisionFormat."/><br/>-<see cref="WebGLRenderingContext.GetShaderInfoLog."/><br/>-<see cref="WebGLRenderingContext.GetShaderSource."/><br/>-<see cref="WebGLRenderingContext.IsProgram."/><br/>-<see cref="WebGLRenderingContext.IsShader."/><br/>-<see cref="WebGLRenderingContext.LinkProgram."/><br/>-<see cref="WebGLRenderingContext.ShaderSource."/><br/>-<see cref="WebGLRenderingContext.UseProgram."/><br/>-<see cref="WebGLRenderingContext.ValidateProgram."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLProgram"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebGLProgram>
+</docs>

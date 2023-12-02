@@ -1,0 +1,12 @@
+<docs>
+<DeprecationReportBodySourceFile>
+<summary>
+The <strong><c>sourceFile</c></strong> read-only property of the <see cref="DeprecationReportBody."/> interface returns the path to the source file where the deprecated feature was used.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This property can be used with <see cref="DeprecationReportBody.LineNumber."/> and <see cref="DeprecationReportBody.ColumnNumber."/> to locate the column and line in the file where the error occurred.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DeprecationReportBody/sourceFile"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string, or <c>null</c> if the path is not known.</value>
+</DeprecationReportBodySourceFile>
+</docs>

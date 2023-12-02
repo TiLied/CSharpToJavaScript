@@ -1,0 +1,13 @@
+<docs>
+<SelectionAnchorOffset>
+<summary>
+The <strong><c>Selection.anchorOffset</c></strong> read-only property returns the<br/>number of characters that the selection&amp;apos;s anchor is offset within the<br/><see cref="Selection.AnchorNode."/>.
+</summary>
+<remarks>
+<para>This number is zero-based. If the selection begins with the first character in the<br/><see cref="Selection.AnchorNode."/>, <c>0</c> is returned.</para>
+<para>-<see cref="Selection."/>, the interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Selection/anchorOffset"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</SelectionAnchorOffset>
+</docs>

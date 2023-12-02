@@ -1,0 +1,12 @@
+<docs>
+<HTTPHeadersAccess-Control-Allow-Headers>
+<summary>
+The <strong><c>Access-Control-Allow-Headers</c></strong> response header is used in response to a <see href="https://developer.mozilla.org/en-US/docs/Glossary/preflight request">preflight request</see> which includes the {{HTTPHeader("Access-Control-Request-Headers")}} to indicate which HTTP headers can be used during the actual request.
+</summary>
+<remarks>
+<para>This header is required if the request has an <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Request-Headers">Access-Control-Request-Headers</see> header.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> <see href="https://developer.mozilla.org/en-US/docs/Glossary/CORS-safelisted_request_header">CORS-safelisted_request_header</see> are always allowed and usually aren't listed in <c>Access-Control-Allow-Headers</c> (unless there is a need to circumvent the safelist <see href="https://developer.mozilla.org/en-US/docs/Glossary/CORS-safelisted_request_header#additional_restrictions">additional restrictions</see>).</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin">Access-Control-Allow-Origin</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Expose-Headers">Access-Control-Expose-Headers</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Methods">Access-Control-Allow-Methods</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Request-Headers">Access-Control-Request-Headers</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Headers"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPHeadersAccess-Control-Allow-Headers>
+</docs>

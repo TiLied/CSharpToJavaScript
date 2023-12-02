@@ -1,0 +1,12 @@
+<docs>
+<Touch>
+<summary>
+The <strong><c>Touch</c></strong> interface represents a single contact point on a touch-sensitive device. The contact point is commonly a finger or stylus and the device may be a touchscreen or trackpad.
+</summary>
+<remarks>
+<para>The <see cref="Touch.RadiusX."/>, <see cref="Touch.RadiusY."/>, and <see cref="Touch.RotationAngle."/> describe the area of contact between the user and the screen, the <strong>touch area</strong>. This can be helpful when dealing with imprecise pointing devices such as fingers. These values are set to describe an ellipse that as closely as possible matches the entire area of contact (such as the user&amp;apos;s fingertip).</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Many of the properties&amp;apos; values are hardware-dependent; for example, if the device doesn&amp;apos;t have a way to detect the amount of pressure placed on the surface, the <c>force</c> value will always be 0. This may also be the case for <c>radiusX</c> and <c>radiusY</c>; if the hardware reports only a single point, these values will be 1.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Touch_events">Touch events</see><br/>-<see cref="Document.CreateTouch."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Touch"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Touch>
+</docs>

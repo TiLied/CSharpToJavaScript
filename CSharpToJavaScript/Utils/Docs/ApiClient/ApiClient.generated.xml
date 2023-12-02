@@ -1,0 +1,11 @@
+<docs>
+<Client>
+<summary>
+The <c>Client</c> interface represents an executable context such as a <see cref="Worker."/>, or a <see cref="SharedWorker."/>. <see cref="Window."/> clients are represented by the more-specific <see cref="WindowClient."/>. You can get <c>Client</c>/<c>WindowClient</c> objects from methods such as <see cref="Clients.MatchAll."/> and <see cref="Clients.Get."/>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</see><br/>-<see href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promises</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Client"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Client>
+</docs>

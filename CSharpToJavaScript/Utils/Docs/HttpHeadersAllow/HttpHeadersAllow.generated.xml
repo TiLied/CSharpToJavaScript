@@ -1,0 +1,12 @@
+<docs>
+<HTTPHeadersAllow>
+<summary>
+The <strong><c>Allow</c></strong> header lists the set of methods supported by a resource.
+</summary>
+<remarks>
+<para>This header must be sent if the server responds with a {{HTTPStatus("405")}} <c>Method Not Allowed</c> status code to indicate which request methods can be used. An empty <c>Allow</c> header indicates that the resource allows no request methods, which might occur temporarily for a given resource, for example.</para>
+<para>-HTTPStatus("405")<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Server">Server</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Allow"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPHeadersAllow>
+</docs>

@@ -1,0 +1,13 @@
+<docs>
+<WindowScreenTop>
+<summary>
+The <strong><c>Window.screenTop</c></strong> read-only property returns the<br/>vertical distance, in CSS pixels, from the top border of the user&amp;apos;s browser viewport to<br/>the top side of the screen.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> <c>screenTop</c> is an alias of the older<br/><see cref="Window.ScreenY."/> property. <c>screenTop</c> was originally<br/>supported only in IE but was introduced everywhere due to popularity.</para></blockquote>
+<para>-<see cref="Window.ScreenLeft."/><br/>-<see cref="Window.ScreenY."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Window/screenTop"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number equal to the number of CSS pixels from the top edge of the browser viewport to<br/>the top edge of the screen.</value>
+</WindowScreenTop>
+</docs>

@@ -1,0 +1,11 @@
+<docs>
+<XRInputSourceGripSpace>
+<summary>
+The read-only <see cref="XRInputSource."/> property <strong><c>gripSpace</c></strong> returns an <see cref="XRSpace."/> whose native origin tracks the pose used to render virtual objects so they appear to be held in (or part of) the user's hand. For example, if a user were holding a virtual straight rod, the native origin of this <c>XRSpace</c> would be located at the approximate center of mass of the user&amp;apos;s fist.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSource/gripSpace"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="XRSpace."/> object representing the position and orientation of the input<br/>device in virtual space, suitable for rendering an image of the device into the scene.<br/><c>gripSpace</c> is <c>null</c> if the input source is inherently<br/>untrackable. For example, only inputs whose {{domxref(&amp;quot;XRInputSource.targetRayMode&amp;quot;,<br/>&amp;quot;targetRayMode&amp;quot;)}} is <c>tracked-pointer</c> provide a <c>gripSpace</c>.Imagine that the controller is shaped like a straight rod, held in the user&amp;apos;s fist. The<br/>native origin of the grip space is located at the centroid—the center of mass—of the<br/>user&amp;apos;s fist, tracking the position of the user&amp;apos;s hand.<strong>The coordinate system for the left hand&amp;apos;s grip space.</strong><see href="https://developer.mozilla.orggripspace-lefthand-light.svg">A diagram showing how the grip space indicates the local coordinate system for the player&amp;apos;s hand relative to the world.</see><strong>The coordinate system for the right hand&amp;apos;s grip space.</strong><see href="https://developer.mozilla.orggripspace-righthand-light.svg">A diagram showing how the grip space indicates the local coordinate system for the player&amp;apos;s hand relative to the world.</see>As shown in the diagram above, the coordinate system is oriented as follows:</value>
+</XRInputSourceGripSpace>
+</docs>

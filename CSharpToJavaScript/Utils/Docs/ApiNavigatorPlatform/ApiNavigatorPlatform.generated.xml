@@ -1,0 +1,13 @@
+<docs>
+<NavigatorPlatform>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>platform</c></strong> property read-only property of the <see cref="Navigator."/> interface returns a string identifying the platform on which the user's browser is running.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> In general, you should whenever possible avoid writing code that uses methods or properties like this one to try to find out information about the user&amp;apos;s environment, and instead write code that does <see href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection">feature detection</see>.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorUAData/platform"><c>navigator.userAgentData.platform</c></see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/platform"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string identifying the platform on which the user&amp;apos;s browser is running; for example: <c>&amp;quot;MacIntel&amp;quot;</c>, <c>&amp;quot;Win32&amp;quot;</c>, <c>&amp;quot;Linux x86_64&amp;quot;</c>, <c>&amp;quot;Linux armv81&amp;quot;</c>.</value>
+</NavigatorPlatform>
+</docs>

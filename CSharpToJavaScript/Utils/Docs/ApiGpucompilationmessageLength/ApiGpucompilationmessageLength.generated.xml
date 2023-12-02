@@ -1,0 +1,12 @@
+<docs>
+<GPUCompilationMessageLength>
+<summary>
+The <strong><c>length</c></strong> read-only property of the<br/><see cref="GPUCompilationMessage."/> interface is a number representing the length of the substring that the message corresponds to.
+</summary>
+<remarks>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUCompilationMessage/length"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.To be precise, <c>length</c> is the number of UTF-16 code units in the shader code substring that the message corresponds to. If the message corresponds to a single point rather than a substring, <c>length</c> will be 0.</value>
+</GPUCompilationMessageLength>
+</docs>

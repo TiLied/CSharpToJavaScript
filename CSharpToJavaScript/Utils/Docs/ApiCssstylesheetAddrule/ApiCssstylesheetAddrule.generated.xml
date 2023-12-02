@@ -1,0 +1,12 @@
+<docs>
+<CSSStyleSheetAddRule>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The obsolete <see cref="CSSStyleSheet."/> interface's<br/><strong><c>addRule()</c></strong> <strong>legacy method</strong> adds a new rule to the<br/>stylesheet. You should avoid using this method, and should instead use the more standard<br/><see cref="CSSStyleSheet.InsertRule."/> method.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model">CSS Object Model</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information">Using dynamic styling information</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleSheet/addRule"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Always returns -1.Note that due to somewhat esoteric rules about where you can legally insert rules,<br/>it&amp;apos;s possible that an exception may be thrown. See {{domxref(&amp;quot;CSSStyleSheet.insertRule&amp;quot;,<br/>&amp;quot;insertRule()&amp;quot;)}} for more information.</returns>
+</CSSStyleSheetAddRule>
+</docs>

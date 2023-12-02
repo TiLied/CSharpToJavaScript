@@ -1,0 +1,11 @@
+<docs>
+<PointerEventPointerType>
+<summary>
+The <strong><c>pointerType</c></strong> read-only property of the<br/><see cref="PointerEvent."/> interface indicates the device type (mouse, pen, or touch)<br/>that caused a given pointer event.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/pointerType"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The event&amp;apos;s pointer type. The supported values are the following strings:If the device type cannot be detected by the browser, the value can be an empty string<br/>(<c>&amp;quot;&amp;quot;</c>). If the browser supports pointer device types other than those listed<br/>above, the value should be <strong>vendor-prefixed</strong> to avoid conflicting names for<br/>different types of devices.</value>
+</PointerEventPointerType>
+</docs>

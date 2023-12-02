@@ -1,0 +1,13 @@
+<docs>
+<ElementSetCapture>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> Call this method during the handling of a mousedown event to retarget all mouse events<br/>to this element until the mouse button is released or {{<br/>domxref(&amp;quot;document.releaseCapture()&amp;quot;) }} is called.
+</summary>
+<remarks>
+<blockquote class="WARNING"><h5>WARNING</h5><para><strong>Warning:</strong> This interface never had much cross-browser<br/>support and you probably looking for <see cref="Element.SetPointerCapture."/> instead,<br/>from the Pointer Events API.</para></blockquote>
+<para>-<see cref="Document.ReleaseCapture."/><br/>-<see cref="Element.SetPointerCapture."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/setCapture"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</ElementSetCapture>
+</docs>

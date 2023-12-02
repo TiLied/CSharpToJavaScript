@@ -1,0 +1,13 @@
+<docs>
+<CSSBorder-radius>
+<summary>
+The <strong><c>border-radius</c></strong> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</see> property rounds the corners of an element&amp;apos;s outer border edge. You can set a single radius to make circular corners, or two radii to make elliptical corners.
+</summary>
+<remarks>
+<para>EmbedInteractiveExample("pages/css/border-radius.html")</para><para>The radius applies to the whole <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/background">background</see>, even if the element has no border; the exact position of the clipping is defined by the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-clip">background-clip</see> property.</para><para>The <c>border-radius</c> property does not apply to table elements when <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-collapse">border-collapse</see> is <c>collapse</c>.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> As with any shorthand property, individual sub-properties cannot inherit, such as in <c>border-radius:0 0 inherit inherit</c>, which would partially override existing definitions. Instead, the individual longhand properties have to be used.</para></blockquote>
+<para>-Border-radius-related CSS properties: <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-top-left-radius">border-top-left-radius</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-top-right-radius">border-top-right-radius</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-bottom-right-radius">border-bottom-right-radius</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-bottom-left-radius">border-bottom-left-radius</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-start-start-radius">border-start-start-radius</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-start-end-radius">border-start-end-radius</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-end-start-radius">border-end-start-radius</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-end-end-radius">border-end-end-radius</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>For example:</value>
+</CSSBorder-radius>
+</docs>

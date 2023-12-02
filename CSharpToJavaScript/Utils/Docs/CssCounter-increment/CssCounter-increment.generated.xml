@@ -1,0 +1,13 @@
+<docs>
+<CSSCounter-increment>
+<summary>
+The <strong><c>counter-increment</c></strong> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</see> property can be used to increase or decrease the value of the named <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters">CSS counters</see> by the specified values, or to prevent all counters or an individual counter&amp;apos;s value from being changed.
+</summary>
+<remarks>
+<para>If a named counter in the list of space-separated counters and values doesn&amp;apos;t exist, it will be created. If no value is provided for a counter in the list of counters, the counter will be increased by <c>1</c>.</para><para>The counter's value can be reset to any integer value with the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/counter-reset">counter-reset</see> CSS property.</para><para>EmbedInteractiveExample("pages/css/counter-increment.html")</para>
+<para>-Counter properties: <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/counter-set">counter-set</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/counter-reset">counter-reset</see><br/>-Counter at-rule: <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@counter-style">@counter-style</see><br/>-Counter functions: <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/counter">counter</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/counters">counters</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters">Using CSS counters</see> guide<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_lists">CSS lists and counters</see> module<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_counter_styles">CSS counter styles</see> module<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/CSS/counter-increment"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <c>counter-increment</c> property takes as its value either a list of space-separated counter names specified as <c>&amp;lt;custom-ident&amp;gt;</c> with an optional <c>&amp;lt;integer&amp;gt;</c> value or the keyword <c>none</c>. You may specify as many counters to increment as you want, with each name or name-number pair separated by a space.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> Using the <c>none</c> value prevents all counters from being increased or decreased for the selected elements where this rule applies. To prevent only specific counters from being increased or decreased, set the <c>integer</c> value as <c>0</c> on the relevant counter(s).</blockquote></value>
+</CSSCounter-increment>
+</docs>

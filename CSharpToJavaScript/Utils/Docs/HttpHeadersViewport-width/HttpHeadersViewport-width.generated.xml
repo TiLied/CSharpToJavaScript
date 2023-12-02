@@ -1,0 +1,12 @@
+<docs>
+<HTTPHeadersViewport-Width>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>Viewport-Width</c></strong> <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Client_hints">device client hint</see> request header provides the client's layout viewport width in <see href="https://developer.mozilla.org/en-US/docs/Glossary/CSS pixel">CSS pixel</see>. The value is rounded up to the smallest following integer (i.e. ceiling value).
+</summary>
+<remarks>
+<para>The hint can be used with other screen-specific hints to deliver images optimized for a specific screen size, or to omit resources that are not needed for a particular screen width.</para><para>If the <c>Viewport-Width</c> header appears more than once in a message the last occurrence is used.</para><blockquote><para><strong>Note:</strong></para></blockquote>
+<para>-<see href="https://developer.chrome.com/articles/user-agent-client-hints/">Improving user privacy and developer experience with User-Agent Client Hints</see> (web.dev)<br/>-Device client hints-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-DPR">Content-DPR</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Device-Memory">Device-Memory</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/DPR">DPR</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Width">Width</see><br/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-CH">Accept-CH</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching#vary">HTTP Caching &amp;gt; Vary</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Vary">Vary</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Viewport-Width"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPHeadersViewport-Width>
+</docs>

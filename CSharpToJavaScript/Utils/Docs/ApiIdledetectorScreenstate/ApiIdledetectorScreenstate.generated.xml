@@ -1,0 +1,11 @@
+<docs>
+<IdleDetectorScreenState>
+<summary>
+The <strong><c>screenState</c></strong> read-only property of the <see cref="IdleDetector."/> interface<br/>returns a string indicating whether the screen is locked, one of <c>&amp;quot;locked&amp;quot;</c> or<br/><c>&amp;quot;unlocked&amp;quot;</c>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IdleDetector/screenState"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>Either <c>&amp;quot;locked&amp;quot;</c> or <c>&amp;quot;unlocked&amp;quot;</c> if <see cref="IdleDetector.Start."/> has been called, or <c>null</c> otherwise.</value>
+</IdleDetectorScreenState>
+</docs>

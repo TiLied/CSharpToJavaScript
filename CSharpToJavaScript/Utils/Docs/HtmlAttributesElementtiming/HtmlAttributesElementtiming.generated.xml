@@ -1,0 +1,12 @@
+<docs>
+<HTMLAttributesElementtiming>
+<summary>
+The <strong><c>elementtiming</c></strong> attribute is used to indicate that an element is flagged for tracking by <see cref="PerformanceObserver."/> objects using the <c>&amp;quot;element&amp;quot;</c> type. For more details, see the <see cref="PerformanceElementTiming."/> interface.
+</summary>
+<remarks>
+<para>This attribute may be applied to <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">img</see>, {{SVGElement("image")}} elements inside an {{SVGElement("svg")}}, poster images of <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">video</see> elements, elements which have a {{cssxref("background-image")}}, and elements containing text nodes, such as a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p">p</see>.</para><para>In the DOM, this attribute is reflected as <see cref="Element.ElementTiming."/>.</para>
+<para>-<see cref="PerformanceElementTiming."/><br/>-<see cref="Element.ElementTiming."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/elementtiming"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLAttributesElementtiming>
+</docs>

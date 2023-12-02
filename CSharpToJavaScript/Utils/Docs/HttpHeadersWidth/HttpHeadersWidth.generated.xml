@@ -1,0 +1,12 @@
+<docs>
+<HTTPHeadersWidth>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>Width</c></strong> <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Client_hints#device_client_hints">device client hint</see> request header field indicates the desired resource width in physical pixels — the intrinsic size of an image. The provided pixel value is a number rounded to the smallest following integer (i.e. ceiling value).
+</summary>
+<remarks>
+<para>The hint is particularly useful because it allows the client to request a resource that is optimal for both the screen and the layout: taking into account both the density-corrected width of the screen and the image&amp;apos;s extrinsic size within the layout.</para><para>If the desired resource width is not known at the time of the request or the resource does not have a display width, the <c>Width</c> header field can be omitted.</para><para>If the <c>Width</c> header appears more than once in a message the last occurrence is used.</para><blockquote><para><strong>Note:</strong></para></blockquote>
+<para>-<see href="https://developer.chrome.com/articles/user-agent-client-hints/">Improving user privacy and developer experience with User-Agent Client Hints</see> (web.dev)<br/>-Device client hints-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-DPR">Content-DPR</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Device-Memory">Device-Memory</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/DPR">DPR</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Viewport-Width">Viewport-Width</see><br/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-CH">Accept-CH</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching#vary">HTTP Caching &amp;gt; Vary</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Vary">Vary</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Width"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPHeadersWidth>
+</docs>

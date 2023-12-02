@@ -1,0 +1,12 @@
+<docs>
+<AudioWorkletNode>
+<summary>
+<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> Although the interface is available outside <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts">secure contexts</see>, the <see cref="BaseAudioContext.AudioWorklet."/> property is not, thus custom <see cref="AudioWorkletProcessor."/>s cannot be defined outside them.</blockquote>
+</summary>
+<remarks>
+<para>The <strong><c>AudioWorkletNode</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see> represents a base class for a user-defined <see cref="AudioNode."/>, which can be connected to an audio routing graph along with other nodes. It has an associated <see cref="AudioWorkletProcessor."/>, which does the actual audio processing in a Web Audio rendering thread.</para><para></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_AudioWorklet">Using AudioWorklet</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioWorkletNode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</AudioWorkletNode>
+</docs>

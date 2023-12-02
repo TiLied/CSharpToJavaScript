@@ -1,0 +1,11 @@
+<docs>
+<HTMLImageElementFetchPriority>
+<summary>
+The <strong><c>fetchPriority</c></strong> property of the<br/><see cref="HTMLImageElement."/> interface represents a hint given to the browser on how<br/>it should prioritize the fetch of the image relative to other images.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/fetchPriority"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing the priority hint. Possible values are:The <c>fetchPriority</c> property allows you to signal high or low priority image<br/>fetches. This can be useful when applied to <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">img</see> elements<br/>to signal images that are &amp;quot;important&amp;quot; to the user experience early in the<br/>loading process.The effects of the hint on resource loading is browser-specific so make sure to<br/>test on multiple browser engines.Use it sparingly for exceptional cases where the browser may not be able to<br/>infer the best way to load the image automatically. Over use can result in<br/>degrading performance.</value>
+</HTMLImageElementFetchPriority>
+</docs>

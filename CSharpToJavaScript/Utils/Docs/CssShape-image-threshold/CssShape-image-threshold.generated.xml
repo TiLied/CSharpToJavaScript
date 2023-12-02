@@ -1,0 +1,12 @@
+<docs>
+<CSSShape-image-threshold>
+<summary>
+The <strong><c>shape-image-threshold</c></strong> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</see> property sets the alpha channel threshold used to extract the shape using an image as the value for <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/shape-outside">shape-outside</see>.
+</summary>
+<remarks>
+<para>EmbedInteractiveExample("pages/css/shape-image-threshold.html")</para><para>Any pixels whose alpha component&amp;apos;s value is greater than the threshold are considered to be part of the shape for the purposes of determining its boundaries. For example, a value of <c>0.5</c> means that the shape will enclose all the pixels that are more than 50% opaque.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_shapes">CSS Shapes</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_shapes/Overview_of_shapes">Overview of CSS Shapes</see><br/>-{{cssxref(&amp;quot;&amp;lt;basic-shape&amp;gt;&amp;quot;)}}<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/shape-outside">shape-outside</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/shape-margin">shape-margin</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/CSS/shape-image-threshold"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CSSShape-image-threshold>
+</docs>

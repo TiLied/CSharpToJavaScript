@@ -1,0 +1,12 @@
+<docs>
+<Clipboard>
+<summary>
+The <strong><c>Clipboard</c></strong> interface implements the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API">Clipboard API</see>, providing—if the user grants permission—both read and write access to the contents of the system clipboard. The Clipboard API can be used to implement cut, copy, and paste features within a web application.
+</summary>
+<remarks>
+<para></para><para>The system clipboard is exposed through the global <see cref="Navigator.Clipboard."/> property.</para><para>Calls to the methods of the <c>Clipboard</c> object will not succeed if the user hasn&amp;apos;t granted the needed permissions using the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Permissions_API">Permissions API</see> and the <c>&amp;apos;clipboard-read&amp;apos;</c> or <c>&amp;apos;clipboard-write&amp;apos;</c> permission as appropriate.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> In reality, at this time browser requirements for access to the clipboard vary significantly. Please see the section <see href="https://developer.mozilla.org#clipboard_availability">Clipboard availability</see> for details.</para></blockquote><para>All of the Clipboard API methods operate asynchronously; they return a <see cref="Promise"/> which is resolved once the clipboard access has been completed. The promise is rejected if clipboard access is denied.</para>
+<para>-<see cref="Document.ExecCommand."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Clipboard>
+</docs>

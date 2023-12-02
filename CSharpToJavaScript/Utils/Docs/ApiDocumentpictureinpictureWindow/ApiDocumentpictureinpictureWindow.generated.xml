@@ -1,0 +1,12 @@
+<docs>
+<DocumentPictureInPictureWindow>
+<summary>
+The <strong><c>window</c></strong> read-only property of the<br/><see cref="DocumentPictureInPicture."/> interface returns a <see cref="Window."/> instance representing the browsing context inside the Picture-in-Picture window.
+</summary>
+<remarks>
+<para>-{{domxref(&amp;quot;Document Picture-in-Picture API&amp;quot;, &amp;quot;Document Picture-in-Picture API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Picture-in-Picture_API/Using">Using the Document Picture-in-Picture API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentPictureInPicture/window"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Window."/> object instance if the Picture-in-Picture window has already been opened using <see cref="DocumentPictureInPicture.RequestWindow."/>, or <c>null</c> otherwise.</value>
+</DocumentPictureInPictureWindow>
+</docs>

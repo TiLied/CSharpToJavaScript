@@ -1,0 +1,11 @@
+<docs>
+<EventPreventDefault>
+<summary>
+The <strong><c>preventDefault()</c></strong> method of the <see cref="Event."/> interface tells the {{Glossary("user agent")}} that if the event does not get explicitly handled, its default action should not be taken as it normally would be.
+</summary>
+<remarks>
+<para>The event continues to propagate as usual,<br/>unless one of its event listeners calls<br/><see cref="Event.StopPropagation."/><br/>or <see cref="Event.StopImmediatePropagation."/>,<br/>either of which terminates propagation at once.</para><para>As noted below, calling <strong><c>preventDefault()</c></strong> for a<br/>non-cancelable event, such as one dispatched via<br/><see cref="EventTarget.DispatchEvent."/>, without specifying<br/><c>cancelable: true</c> has no effect.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</EventPreventDefault>
+</docs>

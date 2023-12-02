@@ -1,0 +1,13 @@
+<docs>
+<HTMLImageElementLoading>
+<summary>
+The <see cref="HTMLImageElement."/> property <strong><c>loading</c></strong> is a string whose value provides a hint to the <see href="https://developer.mozilla.org/en-US/docs/Glossary/user agent">user agent</see> on how to handle the loading of the image which is currently outside the window's <see href="https://developer.mozilla.org/en-US/docs/Glossary/visual viewport">visual viewport</see>.
+</summary>
+<remarks>
+<para>This helps to optimize the loading of the document&amp;apos;s contents by postponing loading the image until it&amp;apos;s expected to be needed, rather than immediately during the initial page load.</para>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">img</see> element<br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn/Performance">Web performance</see> in the MDN Learning Area<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Performance/Lazy_loading">Lazy loading</see> in the MDN web<br/>performance guide<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/loading"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string providing a hint to the user agent as to how to best schedule the loading of the image to optimize page performance.<br/>The possible values are:</value>
+</HTMLImageElementLoading>
+</docs>

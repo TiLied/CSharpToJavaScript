@@ -1,0 +1,12 @@
+<docs>
+<MediaErrorMsExtendedCode>
+<summary>
+In the event of an error, the media element&amp;apos;s error event will be fired. The element&amp;apos;s error property will then contain an <strong><c>msExtendedCode</c></strong> read-only property with platform-specific error code information.
+</summary>
+<remarks>
+<para><strong><c>msExtendedCode</c></strong> is a read-only proprietary property specific to Internet Explorer and Microsoft Edge.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaError/msExtendedCode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>Type: <strong>long</strong>; The platform specific error code.</value>
+</MediaErrorMsExtendedCode>
+</docs>

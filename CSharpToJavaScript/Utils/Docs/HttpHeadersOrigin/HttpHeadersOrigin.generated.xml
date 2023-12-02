@@ -1,0 +1,11 @@
+<docs>
+<HTTPHeadersOrigin>
+<summary>
+The <strong><c>Origin</c></strong> request header indicates the <see href="https://developer.mozilla.org/en-US/docs/Glossary/origin">origin</see> (scheme, hostname, and port) that <strong>caused</strong> the request.<br/>For example, if a user agent needs to request resources included in a page, or fetched by scripts that it executes, then the origin of the page may be included in the request.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Host">Host</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referer">Referer</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy">Same-origin policy</see><br/>-<see href="https://stackoverflow.com/questions/42239643/when-do-browsers-send-the-origin-header-when-do-browsers-set-the-origin-to-null/42242802">When do browsers send the Origin header? When do browsers set the origin to null?</see> (Stack Overflow)<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Origin"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPHeadersOrigin>
+</docs>

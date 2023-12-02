@@ -1,0 +1,11 @@
+<docs>
+<XMLHttpRequestResponseText>
+<summary>
+The read-only <see cref="XMLHttpRequest."/> property<br/><strong><c>responseText</c></strong> returns the text received from a server<br/>following a request being sent.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/responseText"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string which contains either the textual data received using the<br/><c>XMLHttpRequest</c> or <c>null</c> if the request failed or<br/><c>&amp;quot;&amp;quot;</c> if the request has not yet been sent by calling<br/><see cref="XMLHttpRequest.Send."/>.While handling an asynchronous request, the value of <c>responseText</c> always<br/>has the current content received from the server, even if it&amp;apos;s incomplete because the<br/>data has not been completely received yet.You know the entire content has been received when the value of<br/><see cref="XMLHttpRequest.ReadyState."/> becomes<br/><c>XMLHttpRequest.DONE</c> (<c>4</c>), and<br/><see cref="XMLHttpRequest.Status."/> becomes 200 (<c>&amp;quot;OK&amp;quot;</c>).</value>
+</XMLHttpRequestResponseText>
+</docs>

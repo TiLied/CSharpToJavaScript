@@ -1,0 +1,12 @@
+<docs>
+<CSSAttr>
+<summary>
+<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> The <c>attr()</c> function can be used with any CSS property, but support for properties other than <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/content">content</see> is experimental, and support for the type-or-unit parameter is sparse.</blockquote>
+</summary>
+<remarks>
+<para>The <strong><c>attr()</c></strong> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</see> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Functions">function</see> is used to retrieve the value of an attribute of the selected element and use it in the stylesheet. It can also be used on <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements">pseudo-elements</see>, in which case the value of the attribute on the pseudo-element&amp;apos;s originating element is returned.</para><para>EmbedInteractiveExample("pages/tabbed/function-attr.html", "tabbed-shorter")</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors">Attribute selectors</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/data-*">HTML <c>data-*</c> attributes</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/data-*">SVG <c>data-*</c> attributes</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/CSS/attr"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CSSAttr>
+</docs>

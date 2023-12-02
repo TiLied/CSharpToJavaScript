@@ -1,0 +1,13 @@
+<docs>
+<XMLHttpRequestOverrideMimeType>
+<summary>
+The <see cref="XMLHttpRequest."/> method<br/><strong><c>overrideMimeType()</c></strong> specifies a MIME type other than the<br/>one provided by the server to be used instead when interpreting the data being<br/>transferred in a request.
+</summary>
+<remarks>
+<para>This may be used, for example, to force a stream to<br/>be treated and parsed as <c>&amp;quot;text/xml&amp;quot;</c>, even if the server does not report it<br/>as such. This method must be called before calling {{domxref(&amp;quot;XMLHttpRequest.send&amp;quot;,<br/>&amp;quot;send()&amp;quot;)}}.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest">Using XMLHttpRequest</see><br/>-<see cref="XMLHttpRequest.ResponseType."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/overrideMimeType"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</XMLHttpRequestOverrideMimeType>
+</docs>

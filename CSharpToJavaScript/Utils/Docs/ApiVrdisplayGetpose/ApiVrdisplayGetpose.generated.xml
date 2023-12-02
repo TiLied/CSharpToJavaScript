@@ -1,0 +1,13 @@
+<docs>
+<VRDisplayGetPose>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>getPose()</c></strong> method of the <see cref="VRDisplay."/> interface returns a <see cref="VRPose."/> object defining the future predicted pose of the <c>VRDisplay</c> as it will be when the current frame is actually presented.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This method was part of the old <see href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</see>. It has been superseded by the <see href="https://immersive-web.github.io/webxr/">WebXR Device API</see>.</para><para>It was even deprecated there — instead, you should use <see cref="VRDisplay.GetFrameData."/>, which also provides a <see cref="VRPose."/> object.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API">WebVR API homepage</see><br/>-<see href="https://mixedreality.mozilla.org/"/> — demos, downloads, and other resources from the Mozilla VR team.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VRDisplay/getPose"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="VRPose."/> object.</returns>
+</VRDisplayGetPose>
+</docs>

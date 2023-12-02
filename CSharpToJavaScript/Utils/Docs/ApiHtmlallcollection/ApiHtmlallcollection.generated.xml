@@ -1,0 +1,12 @@
+<docs>
+<HTMLAllCollection>
+<summary>
+The <strong><c>HTMLAllCollection</c></strong> interface represents a collection of <strong>all</strong> of the document&amp;apos;s elements, accessible by index (like an array) and by the element&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id"><c>id</c></see>. It is returned by the <see cref="Document.All."/> property.
+</summary>
+<remarks>
+<para><c>HTMLAllCollection</c> has a very similar shape to <see cref="HTMLCollection."/>, but there are many subtle behavior differences — for example, <c>HTMLAllCollection</c> can be called as a function, and its <c>item()</c> method can be called with a string representing an element&amp;apos;s <c>id</c> or <c>name</c> attribute.</para>
+<para>-<see cref="HTMLCollection."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAllCollection"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLAllCollection>
+</docs>

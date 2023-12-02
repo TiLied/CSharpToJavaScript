@@ -1,0 +1,12 @@
+<docs>
+<XMLHttpRequestResponse>
+<summary>
+The <see cref="XMLHttpRequest."/><br/><strong><c>response</c></strong> property returns the response&amp;apos;s body content as<br/>an {{jsxref("ArrayBuffer")}}, a <see cref="Blob."/>, a <see cref="Document."/>,<br/>a JavaScript <see cref="Object"/>, or a string, depending on the value<br/>of the request's <see cref="XMLHttpRequest.ResponseType."/><br/>property.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest">Using XMLHttpRequest</see><br/>-Getting text and HTML/XML data: <see cref="XMLHttpRequest.ResponseText."/> and<br/><see cref="XMLHttpRequest.ResponseXML."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/response"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An appropriate object based on the value of {{domxref(&amp;quot;XMLHttpRequest.responseType&amp;quot;,<br/>&amp;quot;responseType&amp;quot;)}}. You may attempt to request the data be provided in a specific format<br/>by setting the value of <c>responseType</c> after calling<br/><see cref="XMLHttpRequest.Open."/> to initialize the request but before<br/>calling <see cref="XMLHttpRequest.Send."/> to send the request to the server.The value is <c>null</c> if the request is not yet complete or was unsuccessful,<br/>with the exception that when reading text data using a <c>responseType</c> of<br/><c>&amp;quot;text&amp;quot;</c> or the empty string (<c>&amp;quot;&amp;quot;</c>), the response can contain the<br/>response so far while the request is still in the <c>LOADING</c><br/><see cref="XMLHttpRequest.ReadyState."/> (3).</value>
+</XMLHttpRequestResponse>
+</docs>

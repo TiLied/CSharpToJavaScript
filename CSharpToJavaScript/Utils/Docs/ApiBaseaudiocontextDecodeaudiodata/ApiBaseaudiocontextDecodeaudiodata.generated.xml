@@ -1,0 +1,13 @@
+<docs>
+<BaseAudioContextDecodeAudioData>
+<summary>
+The <c>decodeAudioData()</c> method of the <see cref="BaseAudioContext."/><br/>Interface is used to asynchronously decode audio file data contained in an<br/>{{jsxref("ArrayBuffer")}} that is loaded from <see cref="Fetch."/>,<br/><see cref="XMLHttpRequest."/>, or <see cref="FileReader."/>. The decoded<br/><see cref="AudioBuffer."/> is resampled to the <see cref="AudioContext."/>'s sampling<br/>rate, then passed to a callback or promise.
+</summary>
+<remarks>
+<para>This is the preferred method of creating an audio source for Web Audio API from an<br/>audio track. This method only works on complete file data, not fragments of audio file<br/>data.</para><para>This function implements two alternative ways to asynchronously return the audio data or error messages: it returns a <see cref="Promise"/> that fulfills with the audio data, and also accepts callback arguments to handle success or failure. The primary method of interfacing with this function is via its Promise return value, and the callback parameters are provided for legacy reasons.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/decodeAudioData"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> object that fulfills with the <strong>decodedData</strong>. If you are using the<br/>XHR syntax you will ignore this return value and use a callback function instead.</returns>
+</BaseAudioContextDecodeAudioData>
+</docs>

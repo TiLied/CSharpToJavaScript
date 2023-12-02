@@ -1,0 +1,12 @@
+<docs>
+<CharacterDataBefore>
+<summary>
+The <strong><c>before()</c></strong> method of the <see cref="CharacterData."/> interface<br/>inserts a set of <see cref="Node."/> objects and strings<br/>in the children list of the <c>CharacterData</c>&amp;apos;s parent, just before the <c>CharacterData</c> node.
+</summary>
+<remarks>
+<para>Strings are inserted as <see cref="Text."/> nodes; the string is being passed as argument to the <see cref="Text/Text."/> constructor.</para>
+<para>-<see cref="CharacterData.AppendData."/><br/>-<see cref="CharacterData.After."/><br/>-<see cref="Element.Append."/><br/>-<see cref="Node.AppendChild."/><br/>-<see cref="Element.InsertAdjacentElement."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CharacterData/before"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CharacterDataBefore>
+</docs>

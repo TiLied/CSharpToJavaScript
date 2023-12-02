@@ -1,0 +1,12 @@
+<docs>
+<AesGcmParams>
+<summary>
+The <strong><c>AesGcmParams</c></strong> dictionary of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API">Web Crypto API</see> represents the object that should be passed as the <c>algorithm</c> parameter into <see cref="SubtleCrypto.Encrypt."/>, <see cref="SubtleCrypto.Decrypt."/>, <see cref="SubtleCrypto.WrapKey."/>, or <see cref="SubtleCrypto.UnwrapKey."/>, when using the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm">AES-GCM</see> algorithm.
+</summary>
+<remarks>
+<para>For details of how to supply appropriate values for this parameter, see the specification for AES-GCM: <see href="https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38d.pdf">NIST SP800-38D</see>, in particular section 5.2.1.1 on Input Data.</para>
+<para>-<see cref="SubtleCrypto.Encrypt."/>.<br/>-<see cref="SubtleCrypto.Decrypt."/>.<br/>-<see cref="SubtleCrypto.WrapKey."/>.<br/>-<see cref="SubtleCrypto.UnwrapKey."/>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AesGcmParams"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</AesGcmParams>
+</docs>

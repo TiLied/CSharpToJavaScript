@@ -1,0 +1,12 @@
+<docs>
+<PerformanceNavigationTiming>
+<summary>
+The <strong><c>PerformanceNavigationTiming</c></strong> interface provides methods and properties to store and retrieve metrics regarding the browser&amp;apos;s document navigation events. For example, this interface can be used to determine how much time it takes to load or unload a document.
+</summary>
+<remarks>
+<para>Only the current document is included in the performance timeline, so there is only one <c>PerformanceNavigationTiming</c> object in the performance timeline. It inherits all of the properties and methods of <see cref="PerformanceResourceTiming."/> and <see cref="PerformanceEntry."/>.</para><para></para><para>The following diagram shows all of the timestamp properties defined in <c>PerformanceNavigationTiming</c>.</para><para><see href="https://developer.mozilla.orgtimestamp-diagram.svg">Timestamp diagram listing timestamps in the order in which they are recorded for the fetching of a document</see></para>
+<para>-<see cref="Performance.Navigation."/><br/>-<see cref="PerformanceNavigation."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</PerformanceNavigationTiming>
+</docs>

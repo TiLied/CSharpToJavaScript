@@ -1,0 +1,13 @@
+<docs>
+<HTMLMetaElementScheme>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>HTMLMetaElement.scheme</c></strong> property defines the scheme of the value in the <see cref="HTMLMetaElement.Content."/> attribute.<br/>The <c>scheme</c> property was created to enable providing additional information to be used to interpret the value of the <c>content</c> property. The <c>scheme</c> property takes as its value a scheme format (i.e. <c>YYYY-MM-DD</c>) or scheme format name (i.e. <c>ISBN</c>), or a URI providing more information regarding the scheme format. The scheme defines the format of the value of the <c>content</c> attribute.<br/>The <c>scheme</c> content is interpreted as an extension of the element's <see cref="HTMLMetaElement.Name."/> if a browser or user agent recognizes the scheme.
+</summary>
+<remarks>
+<para>This property is deprecated and should not be used on new web pages.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta">meta</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMetaElement/scheme"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</HTMLMetaElementScheme>
+</docs>

@@ -1,0 +1,11 @@
+<docs>
+<HTTPHeadersService-Worker-Navigation-Preload>
+<summary>
+The <strong><c>Service-Worker-Navigation-Preload</c></strong> request header indicates that the request was the result of a <see cref="Fetch."/> operation made during service worker navigation preloading.<br/>It allows a server to respond with a different resource than for a normal <c>fetch()</c>.
+</summary>
+<remarks>
+<para>If a different response may result from setting this header, the server must set <c>Vary: Service-Worker-Navigation-Preload</c> to ensure that the different responses are cached.</para><para>For more information see <see cref="NavigationPreloadManager.SetHeaderValue."/> (and <see cref="NavigationPreloadManager."/>).</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Service-Worker-Navigation-Preload"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPHeadersService-Worker-Navigation-Preload>
+</docs>

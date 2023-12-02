@@ -1,0 +1,12 @@
+<docs>
+<WindowClientAncestorOrigins>
+<summary>
+The <strong><c>ancestorOrigins</c></strong> read-only property of the <see cref="WindowClient."/> interface is an array of strings listing the origins of all ancestors of the browsing context represented by this <c>WindowClient</c> in reverse order.
+</summary>
+<remarks>
+<para>The first element in the array is the origin of this window&amp;apos;s parent, and the last element is the origin of the top-level browsing context. If this window is itself a top-level browsing context, then <c>ancestorOrigins</c> is an empty array.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WindowClient/ancestorOrigins"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An array of strings.</value>
+</WindowClientAncestorOrigins>
+</docs>

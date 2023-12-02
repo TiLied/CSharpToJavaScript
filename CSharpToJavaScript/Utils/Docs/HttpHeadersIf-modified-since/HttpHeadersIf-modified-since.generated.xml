@@ -1,0 +1,12 @@
+<docs>
+<HTTPHeadersIf-Modified-Since>
+<summary>
+The <strong><c>If-Modified-Since</c></strong> request HTTP header makes the<br/>request conditional: the server sends back the requested resource, with a<br/>{{HTTPStatus("200")}} status, only if it has been last modified after the given date. If<br/>the resource has not been modified since, the response is a {{HTTPStatus("304")}}<br/>without any body; the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Last-Modified">Last-Modified</see> response header of a previous<br/>request contains the date of last modification. Unlike<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Unmodified-Since">If-Unmodified-Since</see>, <c>If-Modified-Since</c> can only be used<br/>with a {{HTTPMethod("GET")}} or {{HTTPMethod("HEAD")}}.
+</summary>
+<remarks>
+<para>When used in combination with <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-None-Match">If-None-Match</see>, it is ignored, unless<br/>the server doesn&amp;apos;t support <c>If-None-Match</c>.</para><para>The most common use case is to update a cached entity that has no associated<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/ETag">ETag</see>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/ETag">ETag</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Unmodified-since">If-Unmodified-since</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Match">If-Match</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-None-Match">If-None-Match</see><br/>-HTTPStatus("304", "304 Not Modified")<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Modified-Since"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPHeadersIf-Modified-Since>
+</docs>

@@ -1,0 +1,12 @@
+<docs>
+<RTCIceCandidatePairStatsBytesReceived>
+<summary>
+The <see cref="RTCIceCandidatePairStats."/> property<br/><strong><c>bytesReceived</c></strong> indicates the total number of payload<br/>bytes—that is, bytes which aren&amp;apos;t overhead such as headers or padding—that have been<br/>received to date on the connection described by the candidate pair.
+</summary>
+<remarks>
+<para>The <see cref="RTCIceCandidatePairStats.BytesSent."/> property reports the<br/>number of bytes sent so far on the described connection.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/bytesReceived"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer value indicating the total number of bytes received so far on the connection<br/>described by this candidate pair. Only data bytes are counted; overhead such as padding,<br/>headers, and the like are not included in this count.</value>
+</RTCIceCandidatePairStatsBytesReceived>
+</docs>

@@ -1,0 +1,12 @@
+<docs>
+<WebGL2RenderingContext>
+<summary>
+The <strong>WebGL2RenderingContext</strong> interface provides the OpenGL ES 3.0 rendering context for the drawing surface of an HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas">canvas</see> element.
+</summary>
+<remarks>
+<para>To get an object of this interface, call <see cref="HTMLCanvasElement.GetContext."/> on a <c>&amp;lt;canvas&amp;gt;</c> element, supplying &amp;quot;webgl2&amp;quot; as the argument:</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> WebGL 2 is an extension to WebGL 1. The <c>WebGL2RenderingContext</c> interface implements all members of the <see cref="WebGLRenderingContext."/> interface. Some methods of the WebGL 1 context can accept additional values when used in a WebGL 2 context. You will find this info noted on the WebGL 1 reference pages.</para></blockquote><para>The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</see> has more information, examples, and resources on how to get started with WebGL.</para>
+<para>-<see cref="HTMLCanvasElement."/><br/>-<see cref="WebGLRenderingContext."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebGL2RenderingContext>
+</docs>

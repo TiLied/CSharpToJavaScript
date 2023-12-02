@@ -1,0 +1,13 @@
+<docs>
+<DynamicsCompressorNodeReduction>
+<summary>
+The <strong><c>reduction</c></strong> read-only property of the <see cref="DynamicsCompressorNode."/> interface is a float representing the amount of gain reduction currently applied by the compressor to the signal.
+</summary>
+<remarks>
+<para>Intended for metering purposes, it returns a value in dB, or <c>0</c> (no gain reduction) if no signal is fed into the <c>DynamicsCompressorNode</c>. The range of this value is between <c>-20</c> and <c>0</c> (in dB).</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DynamicsCompressorNode/reduction"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A float.</value>
+</DynamicsCompressorNodeReduction>
+</docs>

@@ -1,0 +1,11 @@
+<docs>
+<MediaStreamActive>
+<summary>
+The <strong><c>active</c></strong> read-only property of the<br/><see cref="MediaStream."/> interface returns a Boolean value which is<br/><c>true</c> if the stream is currently active; otherwise, it returns<br/><c>false</c>. A stream is considered <strong>active</strong> if at least one of<br/>its <see cref="MediaStreamTrack."/>s does not have its property <see cref="MediaStreamTrack.ReadyState."/><br/>set to <c>ended</c>. Once every track has ended, the stream&amp;apos;s <c>active</c> property becomes<br/><c>false</c>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/active"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A Boolean value which is <c>true</c> if the stream is currently active;<br/>otherwise, the value is <c>false</c>.</value>
+</MediaStreamActive>
+</docs>

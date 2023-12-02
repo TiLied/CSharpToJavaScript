@@ -1,0 +1,12 @@
+<docs>
+<ElementAttributes>
+<summary>
+The <strong><c>Element.attributes</c></strong> property returns a live collection<br/>of all attribute nodes registered to the specified node. It is a<br/><see cref="NamedNodeMap."/>, not an <c>Array</c>, so it has no <see cref="Array"/><br/>methods and the <see cref="Attr."/> nodes' indexes may differ among browsers. To be more<br/>specific, <c>attributes</c> is a key/value pair of strings that represents any<br/>information regarding that attribute.
+</summary>
+<remarks>
+<para>-<see cref="NamedNodeMap."/>, the interface of the returned object<br/>-Cross-browser compatibility considerations: on <see href="https://quirksmode.org/dom/core/#attributes">quirksmode</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/attributes"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="NamedNodeMap."/> object.</value>
+</ElementAttributes>
+</docs>

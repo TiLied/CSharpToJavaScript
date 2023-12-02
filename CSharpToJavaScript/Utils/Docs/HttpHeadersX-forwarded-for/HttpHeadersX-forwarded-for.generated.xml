@@ -1,0 +1,12 @@
+<docs>
+<HTTPHeadersX-Forwarded-For>
+<summary>
+The <strong><c>X-Forwarded-For</c></strong> (XFF) request header is a de-facto standard header for identifying the originating IP address of a client connecting to a web server through a proxy server.
+</summary>
+<remarks>
+<blockquote class="WARNING"><h5>WARNING</h5><para><strong>Warning:</strong> Improper use of this header can be a security risk. For details, see the <see href="https://developer.mozilla.org#security_and_privacy_concerns">Security and privacy concerns</see> section.</para></blockquote><para>When a client connects directly to a server, the<br/>client&amp;apos;s IP address is sent to the server (and is often written to server<br/>access logs). But if a client connection passes through any <see href="https://en.wikipedia.org/wiki/Proxy_server">forward or reverse</see> proxies, the server only<br/>sees the final proxy&amp;apos;s IP address, which is often of little use. That&amp;apos;s especially true if<br/>the final proxy is a load balancer which is part of the same installation<br/>as the server. So, to provide a more-useful client IP address to the server, the <c>X-Forwarded-For</c> request header is<br/>used.</para><para>For detailed guidance on using this header, see the <see href="https://developer.mozilla.org#parsing">Parsing</see> and <see href="https://developer.mozilla.org#selecting_an_ip_address">Selecting an IP address</see> sections.</para><para>A standardized version of this header is the HTTP <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Forwarded">Forwarded</see> header.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Forwarded">Forwarded</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-Host">X-Forwarded-Host</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-Proto">X-Forwarded-Proto</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Via">Via</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-For"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPHeadersX-Forwarded-For>
+</docs>

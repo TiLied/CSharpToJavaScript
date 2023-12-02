@@ -1,0 +1,12 @@
+<docs>
+<AudioParamLinearRampToValueAtTime>
+<summary>
+The <c>linearRampToValueAtTime()</c> method of the <see cref="AudioParam."/><br/>Interface schedules a gradual linear change in the value of the<br/><c>AudioParam</c>. The change starts at the time specified for the<br/><strong>previous</strong> event, follows a linear ramp to the new value given in the<br/><c>value</c> parameter, and reaches the new value at the time given in the<br/><c>endTime</c> parameter.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/linearRampToValueAtTime"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A reference to this <c>AudioParam</c> object. In some browsers older<br/>implementations of this interface return <see cref="'undefined'"/>.</returns>
+</AudioParamLinearRampToValueAtTime>
+</docs>

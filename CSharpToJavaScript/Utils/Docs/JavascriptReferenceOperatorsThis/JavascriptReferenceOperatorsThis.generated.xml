@@ -1,0 +1,13 @@
+<docs>
+<JavaScriptReferenceOperatorsThis>
+<summary>
+A function&amp;apos;s <strong><c>this</c></strong> keyword behaves a little differently in JavaScript compared to other languages. It also has some differences between <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</see> and non-strict mode.
+</summary>
+<remarks>
+<para>In most cases, the value of <c>this</c> is determined by how a function is called (runtime {{Glossary("binding")}}). It can't be set by assignment during execution, and it may be different each time the function is called. The <see cref="FunctionPrototypeBind"/> method can <see href="https://developer.mozilla.org#the_bind_method">set the value of a function&amp;apos;s <c>this</c> regardless of how it&amp;apos;s called</see>, and <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow functions</see> don&amp;apos;t provide their own <c>this</c> binding (it retains the <c>this</c> value of the enclosing lexical context).</para><para>EmbedInteractiveExample("pages/js/expressions-this.html")</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode">Strict mode</see><br/>-<see cref="GlobalThis"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>In non–strict mode, <c>this</c> is always a reference to an object. In strict mode, it can be any value. For more information on how the value is determined, see the description below.</value>
+</JavaScriptReferenceOperatorsThis>
+</docs>

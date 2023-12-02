@@ -1,0 +1,12 @@
+<docs>
+<CSSContent-visibility>
+<summary>
+The <strong><c>content-visibility</c></strong> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</see> property controls whether or not an element renders its contents at all, along with forcing a strong set of containments, allowing user agents to potentially omit large swathes of layout and rendering work until it becomes needed. It enables the user agent to skip an element&amp;apos;s rendering work (including layout and painting) until it is needed — which makes the initial page load much faster.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> The <see cref="Element/contentvisibilityautostatechange_event."/> event fires on any element with <c>content-visibility: auto</c> set on it when its rendering work starts or stops being skipped. This provides a convenient way for an app's code to start or stop rendering processes (e.g. drawing on a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas">canvas</see>) when they are not needed, thereby conserving processing power.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment">CSS Containment</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/contain-intrinsic-size"><c>contain-intrinsic-size</c></see><br/>-<see cref="Element/contentvisibilityautostatechange_event."/><br/>-<see href="https://web.dev/articles/content-visibility">content-visibility: the new CSS property that boosts your rendering performance</see> (web.dev)<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/CSS/content-visibility"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CSSContent-visibility>
+</docs>

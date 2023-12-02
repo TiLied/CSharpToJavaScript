@@ -1,0 +1,12 @@
+<docs>
+<CSSCounters>
+<summary>
+The <strong><c>counters()</c></strong> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</see> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Functions">function</see> enables nested counters, returning a concatenated string representing the current values of the named counters, if there are any. The <c>counters()</c> function has two forms: <c>counters(name, string)</c> or <c>counters(name, string, style)</c>. It is generally used with <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements">pseudo-elements</see>, but can be used, theoretically, anywhere a <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/string"><c>&amp;lt;string&amp;gt;</c></see> value is supported. The generated text is the value of all counters with the given name, from outermost to innermost, separated by the specified string. The counters are rendered in the style indicated, defaulting to <c>decimal</c> if no style is specified.
+</summary>
+<remarks>
+<para>EmbedInteractiveExample("pages/tabbed/function-counters.html", "tabbed-standard")</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters">Using CSS Counters</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/counter-set">counter-set</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/counter-reset">counter-reset</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/counter-increment">counter-increment</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@counter-style">@counter-style</see><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/counter"><c>counter()</c></see> function<br/>-{{cssxref(&amp;quot;::marker&amp;quot;)}}<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_lists">CSS lists and counters</see> module<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_counter_styles">CSS counter styles</see> module<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_generated_content">CSS generated content</see> module<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/CSS/counters"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CSSCounters>
+</docs>

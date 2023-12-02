@@ -1,0 +1,13 @@
+<docs>
+<HistoryGo>
+<summary>
+The <strong><c>History.go()</c></strong> method loads a specific page from the<br/>session history. You can use it to move forwards and backwards through the history<br/>depending on the value of a parameter.
+</summary>
+<remarks>
+<para>This method is <see href="https://developer.mozilla.org/en-US/docs/Glossary/asynchronous">asynchronous</see>. Add a listener for the<br/><see cref="Window/popstate_event."/> event in order to determine when the navigation has completed.</para>
+<para>-<see cref="History."/><br/>-<see cref="History.Back."/><br/>-<see cref="History.Forward."/><br/>-<see cref="Window/popstate_event."/> event<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/History_API/Working_with_the_History_API">Working with the History API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/History/go"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</HistoryGo>
+</docs>

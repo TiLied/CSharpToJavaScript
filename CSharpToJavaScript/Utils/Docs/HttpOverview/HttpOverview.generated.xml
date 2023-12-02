@@ -1,0 +1,11 @@
+<docs>
+<HTTPOverview>
+<summary>
+<strong>HTTP</strong> is a <see href="https://developer.mozilla.org/en-US/docs/Glossary/protocol">protocol</see> for fetching resources such as HTML documents.<br/>It is the foundation of any data exchange on the Web and it is a client-server protocol, which means requests are initiated by the recipient, usually the Web browser.<br/>A complete document is reconstructed from the different sub-documents fetched, for instance, text, layout description, images, videos, scripts, and more.
+</summary>
+<remarks>
+<para><see href="https://developer.mozilla.orgfetching_a_page.png">A Web document is the composition of different resources</see></para><para>Clients and servers communicate by exchanging individual messages (as opposed to a stream of data).<br/>The messages sent by the client, usually a Web browser, are called <strong>requests</strong> and the messages sent by the server as an answer are called <strong>responses</strong>.</para><para><see href="https://developer.mozilla.orghttp-layers.png">HTTP as an application layer protocol, on top of TCP (transport layer) and IP (network layer) and below the presentation layer.</see>Designed in the early 1990s, HTTP is an extensible protocol which has evolved over time.<br/>It is an application layer protocol that is sent over <see href="https://developer.mozilla.org/en-US/docs/Glossary/TCP">TCP</see>, or over a <see href="https://developer.mozilla.org/en-US/docs/Glossary/TLS">TLS</see>-encrypted TCP connection, though any reliable transport protocol could theoretically be used.<br/>Due to its extensibility, it is used to not only fetch hypertext documents, but also images and videos or to post content to servers, like with HTML form results.<br/>HTTP can also be used to fetch parts of documents to update Web pages on demand.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPOverview>
+</docs>

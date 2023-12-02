@@ -1,0 +1,12 @@
+<docs>
+<CanvasRenderingContext2DFontStretch>
+<summary>
+The <strong><c>CanvasRenderingContext2D.fontStretch</c></strong> property of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas API</see> specifies how the font may be expanded or condensed when drawing text.
+</summary>
+<remarks>
+<para>The property corresponds to the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-stretch"><c>font-stretch</c></see> CSS property when used with keywords (percentage values are not supported).</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fontStretch"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The font stretch value as a string.<br/>This is one of: <c>ultra-condensed</c>, <c>extra-condensed</c>, <c>condensed</c>, <c>semi-condensed</c>, <c>normal</c> (default), <c>semi-expanded</c>, <c>expanded</c>, <c>extra-expanded</c>, <c>ultra-expanded</c>.The property can be used to get or set the font stretch value.</value>
+</CanvasRenderingContext2DFontStretch>
+</docs>

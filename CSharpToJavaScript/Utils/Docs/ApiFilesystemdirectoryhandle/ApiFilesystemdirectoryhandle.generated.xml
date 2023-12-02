@@ -1,0 +1,13 @@
+<docs>
+<FileSystemDirectoryHandle>
+<summary>
+The <strong><c>FileSystemDirectoryHandle</c></strong> interface of the {{domxref(&amp;quot;File System API&amp;quot;, &amp;quot;File System API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} provides a handle to a file system directory.
+</summary>
+<remarks>
+<para>The interface can be accessed via the <see cref="'window.ShowDirectoryPicker'."/>, <see cref="'StorageManager.GetDirectory'."/>, <see cref="'DataTransferItem.GetAsFileSystemHandle'."/>, and <see cref="'FileSystemDirectoryHandle.GetDirectoryHandle'."/> methods.</para><para></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_System_API">File System API</see><br/>-<see href="https://developer.chrome.com/articles/file-system-access/">The File System Access API: simplifying access to local files</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemDirectoryHandle"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>The following example returns a directory handle with the specified name; if the directory does not already exist it is created.The following asynchronous function uses <c>resolve()</c> to find the path to a chosen file, relative to a specified directory handle.The following example scans recursively through a directory to return <see cref="'FileSystemFileHandle'."/> objects for each file in that directory:</returns>
+</FileSystemDirectoryHandle>
+</docs>

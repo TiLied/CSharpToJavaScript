@@ -1,0 +1,13 @@
+<docs>
+<DocumentPictureInPictureEnabled>
+<summary>
+The read-only<br/><strong><c>pictureInPictureEnabled</c></strong> property of the<br/><see cref="Document."/> interface indicates whether or not picture-in-picture mode is<br/>available.
+</summary>
+<remarks>
+<para>Picture-in-Picture mode is available by default unless specified<br/>otherwise by a <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy/picture-in-picture">Permissions-Policy</see>.</para><para>Although this property is read-only, it will not throw if it is modified (even in<br/>strict mode); the setter is a no-operation and will be ignored.</para>
+<para>-<see cref="HTMLVideoElement.RequestPictureInPicture."/><br/>-<see cref="HTMLVideoElement.DisablePictureInPicture."/><br/>-<see cref="Document.ExitPictureInPicture."/><br/>-<see cref="Document.PictureInPictureElement."/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:picture-in-picture">:picture-in-picture</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/pictureInPictureEnabled"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value, which is <c>true</c> if a video can enter<br/>picture-in-picture and be displayed in a floating window by calling<br/><see cref="HTMLVideoElement.RequestPictureInPicture."/>. If picture-in-picture mode isn't<br/>available, this value is <c>false</c>.</value>
+</DocumentPictureInPictureEnabled>
+</docs>

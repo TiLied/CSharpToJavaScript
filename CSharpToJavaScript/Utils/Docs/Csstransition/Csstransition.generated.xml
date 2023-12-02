@@ -1,11 +1,12 @@
 <docs>
 <CSSTransition>
 <summary>
-The <strong><c>CSSTransition</c></strong> interface of the <see cref="'Web Animations API'"/> represents an <see cref="Animation"/> object used for a <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions">CSS Transition</see>.
+The <strong><c>transition</c></strong> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</see> property is a <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties">shorthand property</see> for <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-property">transition-property</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-duration">transition-duration</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function">transition-timing-function</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-delay">transition-delay</see>, and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-behavior">transition-behavior</see>.
 </summary>
 <remarks>
-<para></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSTransition"> <em>See also on MDN</em> </seealso></para>
+<para>EmbedInteractiveExample("pages/css/transition.html")</para><para>Transitions enable you to define the transition between two states of an element. Different states may be defined using <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes">pseudo-classes</see> like <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:hover">:hover</see> or <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:active">:active</see> or dynamically set using JavaScript.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transitions">CSS transitions</see> module<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions">Using CSS transitions</see><br/>-<see cref="TransitionEvent."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </CSSTransition>
 </docs>

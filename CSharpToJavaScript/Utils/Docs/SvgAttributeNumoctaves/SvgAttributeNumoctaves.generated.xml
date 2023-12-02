@@ -1,0 +1,12 @@
+<docs>
+<SVGAttributeNumOctaves>
+<summary>
+The <strong><c>numOctaves</c></strong> attribute defines the number of octaves for the noise function of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementfeTurbulence">feTurbulence</see> primitive.
+</summary>
+<remarks>
+<para>An octave is a noise function defined by its frequency and amplitude. A turbulence is built by accumulating several octaves with increasing frequencies and decreasing amplitudes.<br/>The higher the number of octaves, the more natural the noise looks. Though more octaves also require more calculations, resulting in a negative impact on performance.</para><para>You can use this attribute with the following SVG elements:</para>
+<para>-<see href="https://adrianb.io/2014/08/09/perlinnoise.html">Understanding Perlin Noise</see><br/>-baseFrequency<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/numOctaves"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</SVGAttributeNumOctaves>
+</docs>

@@ -1,0 +1,12 @@
+<docs>
+<WebGLRenderingContextCanvas>
+<summary>
+The <strong><c>WebGLRenderingContext.canvas</c></strong> property is a read-only<br/>reference to the <see cref="HTMLCanvasElement."/> or <see cref="OffscreenCanvas."/><br/>object that is associated with the context. It might be <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><c>null</c></see> if it is not<br/>associated with a {{HTMLElement("canvas")}} element or an <see cref="OffscreenCanvas."/><br/>object.
+</summary>
+<remarks>
+<para>-<see cref="CanvasRenderingContext2D.Canvas."/><br/>-The <see cref="OffscreenCanvas."/> interface<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/canvas"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Either a <see cref="HTMLCanvasElement."/> or <see cref="OffscreenCanvas."/> object or<br/><see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><c>null</c></see>.</returns>
+</WebGLRenderingContextCanvas>
+</docs>

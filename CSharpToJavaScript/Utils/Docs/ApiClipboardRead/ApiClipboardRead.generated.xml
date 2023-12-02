@@ -1,0 +1,13 @@
+<docs>
+<ClipboardRead>
+<summary>
+The <strong><c>read()</c></strong> method of the<br/><see cref="Clipboard."/> interface requests a copy of the clipboard's contents,<br/>delivering the data to the returned <see cref="Promise"/> when the promise is<br/>resolved. Unlike <see cref="Clipboard.ReadText."/>, the<br/><c>read()</c> method can return arbitrary data, such as images. This method can<br/>also return text.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> The asynchronous Clipboard and <see href="https://developer.mozilla.org/en-US/docs/Web/API/Permissions_API">Permissions APIs</see> are still in the<br/>process of being integrated into most browsers, so they often deviate from the<br/>official rules for permissions and the like. Be sure to review the <see href="https://developer.mozilla.org#browser_compatibility">compatibility table</see> before using these methods.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API">Clipboard API</see><br/>-<see href="https://async-clipboard-api.glitch.me/">Async Clipboard API demo on Glitch</see><br/>-<see href="https://web.dev/articles/async-clipboard">Image support for Async Clipboard article</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/read"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that resolves with an array of <see cref="ClipboardItem."/> objects<br/>containing the clipboard&amp;apos;s contents. The promise is rejected if permission to access the<br/>clipboard is not granted.</returns>
+</ClipboardRead>
+</docs>

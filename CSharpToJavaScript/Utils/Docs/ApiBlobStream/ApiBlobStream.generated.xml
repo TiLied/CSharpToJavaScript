@@ -1,0 +1,12 @@
+<docs>
+<BlobStream>
+<summary>
+The <strong><c>stream()</c></strong> method of the <see cref="Blob."/> interface returns a <see cref="ReadableStream."/> which upon reading returns the data contained within the <c>Blob</c>.
+</summary>
+<remarks>
+<para>-<see cref="Response.Body."/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API">Streams API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Blob/stream"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="ReadableStream."/> which, upon reading, returns the contents of the<br/><c>Blob</c>.</returns>
+</BlobStream>
+</docs>

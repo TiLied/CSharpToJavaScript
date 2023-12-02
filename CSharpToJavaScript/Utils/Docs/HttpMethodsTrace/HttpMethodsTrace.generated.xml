@@ -1,0 +1,12 @@
+<docs>
+<HTTPMethodsTRACE>
+<summary>
+The <strong>HTTP </strong><strong><c>TRACE</c></strong><strong> method</strong> performs a message loop-back test along the path to the target resource, providing a useful debugging mechanism.
+</summary>
+<remarks>
+<para>The final recipient of the request should reflect the message received, excluding any fields that might include sensitive data, back to the client as the message body of a {{HTTPStatus("200")}} (<c>OK</c>) response with a <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type">Content-Type</see> of <c>message/http</c>. The final recipient is either the origin server or the first server to receive a <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Max-Forwards">Max-Forwards</see> value of 0 in the request.</para><para>Note that the client must not send content in the request, or generate fields that might include sensitive data, such as stored user credentials or cookies.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods">HTTP methods</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/TRACE"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPMethodsTRACE>
+</docs>

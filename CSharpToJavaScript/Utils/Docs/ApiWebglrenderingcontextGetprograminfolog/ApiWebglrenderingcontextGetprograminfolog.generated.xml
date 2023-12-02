@@ -1,0 +1,12 @@
+<docs>
+<WebGLRenderingContextGetProgramInfoLog>
+<summary>
+The <strong>WebGLRenderingContext.getProgramInfoLog</strong> returns the information<br/>log for the specified <see cref="WebGLProgram."/> object. It contains errors that<br/>occurred during failed linking or validation of <c>WebGLProgram</c> objects.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.GetShaderInfoLog."/><br/>-<see cref="WebGLRenderingContext.GetError."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getProgramInfoLog"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A string that contains diagnostic messages, warning messages, and<br/>other information about the last linking or validation operation. When a<br/><see cref="WebGLProgram."/> object is initially created, its information log will be a<br/>string of length 0.</returns>
+</WebGLRenderingContextGetProgramInfoLog>
+</docs>

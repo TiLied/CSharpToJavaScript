@@ -1,0 +1,13 @@
+<docs>
+<CSSWord-break>
+<summary>
+The <strong><c>word-break</c></strong> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</see> property sets whether line breaks appear wherever the text would otherwise overflow its content box.
+</summary>
+<remarks>
+<para>EmbedInteractiveExample("pages/css/word-break.html")</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-wrap">overflow-wrap</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/hyphens">hyphens</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/line-break">line-break</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_text/Wrapping_breaking_text">Guide to wrapping and breaking text</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/CSS/word-break"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value><blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> In contrast to <c>word-break: break-word</c> and <c>overflow-wrap: break-word</c> (see <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-wrap">overflow-wrap</see>), <c>word-break: break-all</c> will create a break at the exact place where text would otherwise overflow its container (even if putting an entire word on its own line would negate the need for a break).</blockquote></value>
+</CSSWord-break>
+</docs>

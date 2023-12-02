@@ -1,0 +1,11 @@
+<docs>
+<RTCIceCandidatePairStatsLastPacketReceivedTimestamp>
+<summary>
+The <see cref="RTCIceCandidatePairStats."/> property<br/><strong><c>lastPacketReceivedTimestamp</c></strong> indicates the time at which<br/>the connection described by the candidate pair last received a packet.<br/><see href="https://developer.mozilla.org/en-US/docs/Glossary/STUN">STUN</see> packets are not included.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/lastPacketReceivedTimestamp"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DOMHighResTimeStamp."/> object indicating the timestamp at which the<br/>connection described by pair of candidates last received a packet, STUN packets<br/>excluded.</value>
+</RTCIceCandidatePairStatsLastPacketReceivedTimestamp>
+</docs>

@@ -1,0 +1,13 @@
+<docs>
+<HTMLElementInputTel>
+<summary>
+Despite the fact that inputs of type <c>tel</c> are functionally identical to standard <c>text</c> inputs, they do serve useful purposes; the most quickly apparent of these is that mobile browsers — especially on mobile phones — may opt to present a custom keypad optimized for entering phone numbers. Using a specific input type for telephone numbers also makes adding custom validation and handling of phone numbers more convenient.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Browsers that don&amp;apos;t support type <c>tel</c> fall back to being a standard <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/text">input/text</see> input.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Learn/Forms">HTML forms guide</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">input</see>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/text"><c>&amp;lt;input type=&amp;quot;text&amp;quot;&amp;gt;</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/email"><c>&amp;lt;input type=&amp;quot;email&amp;quot;&amp;gt;</c></see><br/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls">Compatibility of CSS properties</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/tel"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">input</see> element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#value"><c>value</c></see> attribute contains a string that either represents a telephone number or is an empty string (<c>&amp;quot;&amp;quot;</c>).</value>
+</HTMLElementInputTel>
+</docs>

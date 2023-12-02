@@ -1,0 +1,12 @@
+<docs>
+<PerformanceTimingMsFirstPaint>
+<summary>
+<strong><c>msFirstPaint</c></strong> is a read-only property which gets the time<br/>when the document loaded by the window object began to be displayed to the user.
+</summary>
+<remarks>
+<para>Put another way, <c>msFirstPaint</c> utilizes the browser to measure when the<br/>first content completes being painted in the window. It is available from JavaScript and<br/>can be reported from the field.</para><para>This proprietary property is specific to Internet Explorer and Microsoft Edge.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming/MsFirstPaint"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An Integer value that represents the time when the document began to be displayed or 0<br/>if the document could not be loaded.The numerical value reported represents the number of milliseconds between the recorded<br/>time and midnight January 1, 1970 (UTC).This property is supported only for documents displayed in IE9 Standards mode.</value>
+</PerformanceTimingMsFirstPaint>
+</docs>

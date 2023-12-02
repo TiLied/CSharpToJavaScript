@@ -1,0 +1,12 @@
+<docs>
+<HTTPMethodsPUT>
+<summary>
+The <strong>HTTP </strong><strong><c>PUT</c></strong><strong> request method</strong> creates a new resource or replaces a representation of the target resource with the request payload.
+</summary>
+<remarks>
+<para>The difference between <c>PUT</c> and {{HTTPMethod("POST")}} is that <c>PUT</c> is idempotent: calling it once or several times successively has the same effect (that is no <strong>side</strong> effect), whereas successive identical {{HTTPMethod("POST")}} requests may have additional effects, akin to placing an order several times.</para>
+<para>-HTTPStatus("201")<br/>-HTTPStatus("204")<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/PUT"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPMethodsPUT>
+</docs>

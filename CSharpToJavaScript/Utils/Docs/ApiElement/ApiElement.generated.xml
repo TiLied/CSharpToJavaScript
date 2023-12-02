@@ -1,0 +1,11 @@
+<docs>
+<Element>
+<summary>
+<strong><c>Element</c></strong> is the most general base class from which all element objects (i.e. objects that represent elements) in a <see cref="Document."/> inherit. It only has methods and properties common to all kinds of elements. More specific classes inherit from <c>Element</c>.
+</summary>
+<remarks>
+<para>For example, the <see cref="HTMLElement."/> interface is the base interface for HTML elements, while the <see cref="SVGElement."/> interface is the basis for all SVG elements. Most functionality is specified further down the class hierarchy.</para><para>Languages outside the realm of the Web platform, like XUL through the <c>XULElement</c> interface, also implement <c>Element</c>.</para><para></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Element>
+</docs>

@@ -1,0 +1,13 @@
+<docs>
+<HTMLCollectionItem>
+<summary>
+The <see cref="HTMLCollection."/> method <c>item()</c><br/>returns the element located at the specified offset into the collection.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Because the contents of an <c>HTMLCollection</c> are<br/>live, changes to the underlying DOM can and will cause the position of individual<br/>elements in the collection to change, so the index value will not necessarily remain<br/>constant for a given element.</para></blockquote>
+<para>-<see cref="NodeList.Item."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCollection/item"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>The <see cref="Element."/> at the specified index, or <c>null</c> if<br/><c>index</c> is less than zero or greater than or equal to the length property.</returns>
+</HTMLCollectionItem>
+</docs>

@@ -1,0 +1,13 @@
+<docs>
+<CSSAnimation-play-state>
+<summary>
+The <strong><c>animation-play-state</c></strong> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</see> property sets whether an animation is running or paused.
+</summary>
+<remarks>
+<para>EmbedInteractiveExample("pages/css/animation-play-state.html")</para><para>Resuming a paused animation will start the animation from where it left off at the time it was paused, rather than starting over from the beginning of the animation sequence.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations">Using CSS animations</see><br/>-JavaScript <see cref="AnimationEvent."/> API<br/>-Other related animation properties: <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation">animation</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-composition">animation-composition</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-delay">animation-delay</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction">animation-direction</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-duration">animation-duration</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-fill-mode">animation-fill-mode</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-iteration-count">animation-iteration-count</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-name">animation-name</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timeline">animation-timeline</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timing-function">animation-timing-function</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-play-state"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value><blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> When you specify multiple comma-separated values on an <c>animation-*</c> property, they are applied to the animations in the order in which the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-name">animation-name</see>s appear. For situations where the number of animations and <c>animation-*</c> property values do not match, see <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations#setting_multiple_animation_property_values">Setting multiple animation property values</see>.</blockquote></value>
+</CSSAnimation-play-state>
+</docs>

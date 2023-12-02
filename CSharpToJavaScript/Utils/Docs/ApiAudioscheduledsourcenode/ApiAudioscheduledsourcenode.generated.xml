@@ -1,0 +1,12 @@
+<docs>
+<AudioScheduledSourceNode>
+<summary>
+The <c>AudioScheduledSourceNode</c> interface—part of the Web Audio API—is a parent interface for several types of audio source node interfaces which share the ability to be started and stopped, optionally at specified times. Specifically, this interface defines the <see cref="AudioScheduledSourceNode.Start."/> and <see cref="AudioScheduledSourceNode.Stop."/> methods, as well as the <see cref="AudioScheduledSourceNode.Ended_event."/> event.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> You can&amp;apos;t create an <c>AudioScheduledSourceNode</c> object directly. Instead, use an interface which extends it, such as <see cref="AudioBufferSourceNode."/>, <see cref="OscillatorNode."/> or <see cref="ConstantSourceNode."/>.</para></blockquote><para>Unless stated otherwise, nodes based upon <c>AudioScheduledSourceNode</c> output silence when not playing (that is, before <c>start()</c> is called and after <c>stop()</c> is called). Silence is represented, as always, by a stream of samples with the value zero (0).</para><para></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/>-<see cref="AudioNode."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioScheduledSourceNode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</AudioScheduledSourceNode>
+</docs>

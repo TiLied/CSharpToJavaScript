@@ -1,0 +1,13 @@
+<docs>
+<CSSHyphenate-limit-chars>
+<summary>
+The <strong><c>hyphenate-limit-chars</c></strong> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</see> property specifies the minimum word length to allow hyphenation of words as well as the minimum number of characters before and after the hyphen.
+</summary>
+<remarks>
+<para>This property provides you with fine-grained control over hyphenation in text. This control enables you to avoid awkward hyphenations and set appropriate hyphenation for different languages, which, in turn, allows for better typography.</para><para>In the interactive example above, the default minimum word length setting of <c>hyphenate-limit-chars</c> is too large for either of the long words to be hyphenated, and so the output looks untidy. However, by choosing the other value option, the minimum word length limit is reduced. This allows both the long words to be hyphenated, making for a neater layout.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/hyphens">hyphens</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_text">CSS Text module</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/CSS/hyphenate-limit-chars"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>If <c>auto</c> is set for any of the values, the user agent will choose an appropriate value for the current layout. Unless the user agent can calculate a better value, the following default values will be used:<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> If a word is shorter than any of the provided values, it will not be hyphenated.</blockquote></value>
+</CSSHyphenate-limit-chars>
+</docs>

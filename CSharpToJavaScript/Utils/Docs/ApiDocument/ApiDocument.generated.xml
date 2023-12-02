@@ -1,0 +1,11 @@
+<docs>
+<Document>
+<summary>
+The <strong><c>Document</c></strong> interface represents any web page loaded in the browser and serves as an entry point into the web page&amp;apos;s content, which is the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_object_model/Using_the_Document_Object_Model#what_is_a_dom_tree">DOM tree</see>.
+</summary>
+<remarks>
+<para>The DOM tree includes elements such as <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body">body</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table">table</see>, among <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">many others</see>. It provides functionality globally to the document, like how to obtain the page&amp;apos;s URL and create new elements in the document.</para><para></para><para>The <c>Document</c> interface describes the common properties and methods for any kind of document. Depending on the document&amp;apos;s type (e.g. <see href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/XML">XML</see>, SVG, …), a larger API is available: HTML documents, served with the <c>&amp;quot;text/html&amp;quot;</c> content type, also implement the <see cref="HTMLDocument."/> interface, whereas XML and SVG documents implement the <see cref="XMLDocument."/> interface.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Document>
+</docs>

@@ -1,0 +1,11 @@
+<docs>
+<PaymentResponsePayerEmail>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <c>payerEmail</c> read-only property of the <see cref="PaymentResponse."/><br/>interface returns the email address supplied by the user. This option is only present<br/>when the <c>requestPayerEmail</c> option is set to <c>true</c> in the<br/><see cref="'PaymentOptions'."/> object passed to the<br/><see cref="'PaymentRequest.PaymentRequest'."/> constructor.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentResponse/payerEmail"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</PaymentResponsePayerEmail>
+</docs>

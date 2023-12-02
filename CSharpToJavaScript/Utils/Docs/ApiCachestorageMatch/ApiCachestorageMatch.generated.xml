@@ -1,0 +1,13 @@
+<docs>
+<CacheStorageMatch>
+<summary>
+The <strong><c>match()</c></strong> method of the <see cref="CacheStorage."/> interface checks if a given <see cref="Request."/> or URL string is a key for a stored <see cref="Response."/>.<br/>This method returns a {{jsxref("Promise")}} for a <see cref="Response."/>, or a {{jsxref("Promise")}} which resolves to <c>undefined</c> if no match is found.
+</summary>
+<remarks>
+<para>You can access <c>CacheStorage</c> through the global<br/><see cref="Caches."/> property.</para><para><c>Cache</c> objects are searched in creation order.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> <see cref="CacheStorage.Match."/> is a convenience method.<br/>Equivalent functionality is to call <see cref="Cache.Match."/> on each cache (in the order returned by <see cref="CacheStorage.Keys."/>) until a <see cref="Response."/> is returned.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</see><br/>-<see cref="Cache."/><br/>-<see cref="Caches."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage/match"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>a {{jsxref("Promise")}} that resolves to the matching <see cref="Response."/>. If<br/>no matching response to the specified request is found, the promise resolves<br/>with <c>undefined</c>.</returns>
+</CacheStorageMatch>
+</docs>

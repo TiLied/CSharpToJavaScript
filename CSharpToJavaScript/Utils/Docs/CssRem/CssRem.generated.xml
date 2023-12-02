@@ -1,0 +1,13 @@
+<docs>
+<CSSRem>
+<summary>
+The <strong><c>rem()</c></strong> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</see> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Functions">function</see> returns a remainder left over when the first parameter is divided by the second parameter, similar to the JavaScript <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Remainder">remainder operator (<c>%</c>)</see>. The remainder is the value left over when one operand, the dividend, is divided by a second operand, the divisor. It always takes the sign of the dividend.
+</summary>
+<remarks>
+<blockquote><para>For example, the CSS <c>rem(27, 5)</c> function returns the remainder of <c>2</c>. When dividing 27 by 5, the result is 5 with a remainder of 2. The full calculation is <c>27 / 5 = 5 * 5 + 2</c>.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/round">round</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/mod">mod</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/CSS/rem"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Returns a {{CSSxREF(&amp;quot;&amp;lt;number&amp;gt;&amp;quot;)}}, {{CSSxREF(&amp;quot;&amp;lt;dimension&amp;gt;&amp;quot;)}}, or {{CSSxREF(&amp;quot;&amp;lt;percentage&amp;gt;&amp;quot;)}} (corresponds to the parameters&amp;apos; type) representing the remainder, that is, the operation left over.</returns>
+</CSSRem>
+</docs>

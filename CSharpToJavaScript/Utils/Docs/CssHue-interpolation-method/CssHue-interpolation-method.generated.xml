@@ -1,0 +1,13 @@
+<docs>
+<CSSHue-interpolation-method>
+<summary>
+The <strong><c>&amp;lt;hue-interpolation-method&amp;gt;</c></strong> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</see> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Types">data type</see> represents the algorithm used for interpolation between {{CSSXref(&amp;quot;&amp;lt;hue&amp;gt;&amp;quot;)}} values.<br/>The interpolation method specifies how to find a midpoint between two hue values based on a color wheel.<br/>It is used as a component of the {{CSSXref(&amp;quot;&amp;lt;color-interpolation-method&amp;gt;&amp;quot;)}} data type.
+</summary>
+<remarks>
+<para>When interpolating <c>&amp;lt;hue&amp;gt;</c> values, the hue interpolation algorithm defaults to <see href="https://developer.mozilla.org#shorter"><c>shorter</c></see>.</para>
+<para>-{{CSSXref(&amp;quot;&amp;lt;color-interpolation-method&amp;gt;&amp;quot;)}}<br/>-{{CSSXref(&amp;quot;&amp;lt;hue&amp;gt;&amp;quot;)}} data type<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/CSS/hue-interpolation-method"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>Any pair of hue angles correspond to two radii on the <see href="https://developer.mozilla.org/en-US/docs/Glossary/color wheel">color wheel</see>, which cut the circumference into two possible arcs for interpolation. Both arcs start at the first radius and end at the second radius, but one goes clockwise and the other goes counterclockwise.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> The following descriptions and illustrations are based on color wheels in which hue angles increase in a clockwise direction. Be aware that there are color wheels where an increase in angles will be a counterclockwise operation.</blockquote>For a pair of hue angles <c>θ1</c> and <c>θ2</c> normalized to the range <c>[0deg, 360deg)</c>, there are four algorithms to determine which arc is used when interpolating from <c>θ1</c> to <c>θ2</c>:As there are only two arcs to choose from, these algorithms are pairwise equivalent under certain circumstances. Specifically:A notable feature of <c>increasing</c> and <c>decreasing</c> is that when the hue angle difference passes through <c>180deg</c> during transition or animation, the arc will not flip to the other side like <c>shorter</c> and <c>longer</c> do.</value>
+</CSSHue-interpolation-method>
+</docs>

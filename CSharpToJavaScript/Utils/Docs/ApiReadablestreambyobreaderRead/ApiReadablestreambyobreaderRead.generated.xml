@@ -1,0 +1,13 @@
+<docs>
+<ReadableStreamBYOBReaderRead>
+<summary>
+The <strong><c>read()</c></strong> method of the <see cref="ReadableStreamBYOBReader."/> interface is used to read data into a view on a user-supplied buffer from an associated <see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams">readable byte stream</see>.<br/>A request for data will be satisfied from the stream&amp;apos;s internal queues if there is any data present.<br/>If the stream queues are empty, the request may be supplied as a zero-copy transfer from the underlying byte source.
+</summary>
+<remarks>
+<para>The method takes as an argument a view on a buffer that supplied data is to be read into, and returns a <see cref="Promise"/>.<br/>The promise fulfills with an object that has properties <c>value</c> and <c>done</c> when data comes available, or if the stream is cancelled.<br/>If the stream is errored, the promise will be rejected with the relevant error object.</para><para>If a chunk of data is supplied, the <c>value</c> property will contain a new view.<br/>This will be a view over the same buffer/backing memory (and of the same type) as the original <c>view</c> passed to the <c>read()</c> method, now populated with the new chunk of data.<br/>Note that once the promise fulfills, the original <c>view</c> passed to the method will be detached and no longer usable.<br/>The promise will fulfill with a <c>value: undefined</c> if the stream has been cancelled.<br/>In this case the backing memory region of <c>view</c> is discarded and not returned to the caller (all previously read data in the view&amp;apos;s buffer is lost).</para><para>The <c>done</c> property indicates whether or not more data is expected.<br/>The value is set <c>true</c> if the stream is closed or cancelled, and <c>false</c> otherwise.</para>
+<para>-<see cref="ReadableStreamBYOBReader.ReadableStreamBYOBReader."/> constructor<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams">Using readable byte stream</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableStreamBYOBReader/read"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/>, which fulfills/rejects with a result depending on the state of the stream.The following are possible:</returns>
+</ReadableStreamBYOBReaderRead>
+</docs>

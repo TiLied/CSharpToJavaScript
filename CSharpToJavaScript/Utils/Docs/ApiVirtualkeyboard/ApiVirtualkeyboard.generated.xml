@@ -1,0 +1,12 @@
+<docs>
+<VirtualKeyboard>
+<summary>
+The <strong><c>VirtualKeyboard</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/VirtualKeyboard_API">VirtualKeyboard API</see> is useful on devices that have on-screen virtual keyboards, such as tablets, mobile phones, or other devices where a hardware keyboard may not be available.
+</summary>
+<remarks>
+<para>The <c>VirtualKeyboard</c> interface makes it possible to opt out of the automatic way browsers handle on-screen virtual keyboards by reducing the height of the viewport to make room for the virtual keyboard. You can prevent the browser from changing the size of the viewport, detect the position and size of the virtual keyboard — adapting the layout of your web page as a follow-up — and programmatically show or hide the virtual keyboard.</para><para>You access the <c>VirtualKeyboard</c> interface by using <see cref="Navigator.VirtualKeyboard."/>.</para><para></para>
+<para>-{{domxref(&amp;quot;VirtualKeyboard_API&amp;quot;, &amp;quot;The VirtualKeyboard API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://developer.chrome.com/docs/web-platform/virtual-keyboard/">Full control with the VirtualKeyboard API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VirtualKeyboard"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</VirtualKeyboard>
+</docs>

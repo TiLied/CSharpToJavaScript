@@ -1,0 +1,12 @@
+<docs>
+<WindowHistory>
+<summary>
+The <c>Window.history</c> read-only property returns a reference to the <see cref="History."/> object, which provides an interface for manipulating the browser <strong>session history</strong> (pages visited in the tab or frame that the current page is loaded in).
+</summary>
+<remarks>
+<para>See <see href="https://developer.mozilla.org/en-US/docs/Web/API/History_API">Manipulating the browser history</see> for examples and details. In particular, that article explains security features of the <see cref="History.PushState."/> and <see cref="History.ReplaceState."/> methods that you should be aware of before using them.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Window/history"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A reference to the <see cref="History."/> object.</value>
+</WindowHistory>
+</docs>

@@ -1,0 +1,11 @@
+<docs>
+<PresentationAvailabilityValue>
+<summary>
+The <strong><c>value</c></strong> attribute <strong>MUST</strong> return the last value from which it was set. The value is updated by the <see href="https://www.w3.org/TR/presentation-api/#dfn-monitor-the-list-of-available-presentation-displays">monitor the list of available presentation displays</see> algorithm.
+</summary>
+<remarks>
+<para>The <c>onchange</c> attribute is an <see href="https://www.w3.org/TR/presentation-api/#dfn-event-handler">event handler</see> whose corresponding <see href="https://www.w3.org/TR/presentation-api/#dfn-event-handler-event-type">event handler event type</see> is <c>change</c>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PresentationAvailability/value"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</PresentationAvailabilityValue>
+</docs>

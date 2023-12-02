@@ -1,0 +1,12 @@
+<docs>
+<FetchEventHandled>
+<summary>
+The <strong><c>handled</c></strong> property of the <see cref="FetchEvent."/> interface returns a promise indicating if the event has been handled by the fetch algorithm or not. This property allows executing code after the browser has consumed a response, and is usually used together with the <see cref="ExtendableEvent.WaitUntil."/> method.
+</summary>
+<remarks>
+<para>-<see cref="ExtendableEvent.WaitUntil."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FetchEvent/handled"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Promise"/> that is pending while the event has not been handled, and fulfilled once it has.</value>
+</FetchEventHandled>
+</docs>

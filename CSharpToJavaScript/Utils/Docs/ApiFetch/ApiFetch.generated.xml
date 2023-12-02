@@ -1,0 +1,13 @@
+<docs>
+<Fetch>
+<summary>
+The global <strong><c>fetch()</c></strong> method starts the process of fetching a resource from the network, returning a promise that is fulfilled once the response is available.
+</summary>
+<remarks>
+<para>The promise resolves to the <see cref="Response."/> object representing the response to your request.</para><para>A <see cref="Fetch."/> promise only rejects when a network error is encountered (which is usually when there's a permissions issue or similar).<br/>A <see cref="Fetch."/> promise <strong>does not</strong> reject on HTTP errors (<c>404</c>, etc.).<br/>Instead, a <c>then()</c> handler must check the <see cref="Response.Ok."/> and/or <see cref="Response.Status."/> properties.</para><para>The <c>fetch()</c> method is controlled by the <c>connect-src</c> directive of <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy">Content Security Policy</see> rather than the directive of the resources it&amp;apos;s retrieving.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> The <c>fetch()</c> method's parameters are identical to those of the <see cref="Request.Request."/> constructor.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/fetch"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that resolves to a <see cref="Response."/> object.</returns>
+</Fetch>
+</docs>

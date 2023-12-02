@@ -1,0 +1,13 @@
+<docs>
+<DOMPointY>
+<summary>
+The <strong><c>DOMPoint</c></strong> interface&amp;apos;s<br/><strong><c>y</c></strong> property holds the vertical coordinate, <strong>y</strong>,<br/>for a point in space.
+</summary>
+<remarks>
+<para>Unless transforms have been applied to alter the<br/>orientation, the value of <c>y</c> increases downward and decreases upward.</para>
+<para>-The other coordinate properties: <see cref="DOMPoint.X."/>,<br/><see cref="DOMPoint.Z."/>, and the perspective value, {{domxref("DOMPoint.w",<br/>&amp;quot;w&amp;quot;)}}.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMPoint/y"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A double-precision floating-point value indicating the <strong>y</strong> coordinate&amp;apos;s value<br/>for the point. This value is <strong>unrestricted</strong>, meaning that it is allowed<br/>to be infinite or invalid (that is, its value may be <see cref="NaN"/> or<br/><see cref="Infinity"/>).</value>
+</DOMPointY>
+</docs>

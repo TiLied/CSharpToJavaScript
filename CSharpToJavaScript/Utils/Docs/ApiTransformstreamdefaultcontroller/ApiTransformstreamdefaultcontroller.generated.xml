@@ -1,0 +1,11 @@
+<docs>
+<TransformStreamDefaultController>
+<summary>
+The <strong><c>TransformStreamDefaultController</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API">Streams API</see> provides methods to manipulate the associated <see cref="ReadableStream."/> and <see cref="WritableStream."/>.
+</summary>
+<remarks>
+<para>When constructing a <see cref="TransformStream."/>, the <c>TransformStreamDefaultController</c> is created. It therefore has no constructor. The way to get an instance of <c>TransformStreamDefaultController</c> is via the callback methods of <see cref="TransformStream.TransformStream."/>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TransformStreamDefaultController"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</TransformStreamDefaultController>
+</docs>

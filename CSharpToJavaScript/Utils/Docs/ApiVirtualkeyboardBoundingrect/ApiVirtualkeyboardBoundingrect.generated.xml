@@ -1,0 +1,13 @@
+<docs>
+<VirtualKeyboardBoundingRect>
+<summary>
+The <strong><c>boundingRect</c></strong> property of the <see cref="VirtualKeyboard."/> interface contains a <see cref="DOMRect."/> indicating the position and size of the on-screen virtual keyboard that overlays the web page.
+</summary>
+<remarks>
+<para>The on-screen virtual keyboard will overlay the viewport when the {{domxref(&amp;quot;VirtualKeyboard_API&amp;quot;, &amp;quot;Virtual Keyboard API&amp;quot;, &amp;quot;&amp;quot;, "nocode")}} is used to prevent the browser from resizing the viewport automatically. This is done by setting the <see cref="VirtualKeyboard.OverlaysContent."/> property to <c>true</c>.</para>
+<para>-{{domxref(&amp;quot;VirtualKeyboard_API&amp;quot;, &amp;quot;The VirtualKeyboard API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://developer.chrome.com/docs/web-platform/virtual-keyboard/">Full control with the VirtualKeyboard API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VirtualKeyboard/boundingRect"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DOMRect."/> which indicates the position and size of the virtual keyboard in the viewport.The <c>x</c>, <c>y</c>, <c>width</c>, and <c>height</c> coordinates of the rectangle are useful to reposition content in the webpage that needs to be visible even when the virtual keyboard is displayed.</value>
+</VirtualKeyboardBoundingRect>
+</docs>

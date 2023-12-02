@@ -1,0 +1,13 @@
+<docs>
+<XMLHttpRequestResponseType>
+<summary>
+The <see cref="XMLHttpRequest."/> property<br/><strong><c>responseType</c></strong> is an enumerated string value specifying<br/>the type of data contained in the response.
+</summary>
+<remarks>
+<para>It also lets the author change the<br/>response type. If an empty string is set as the value of <c>responseType</c>, the<br/>default value of <c>text</c> is used.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest">Using XMLHttpRequest</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest">HTML in XMLHttpRequest</see><br/>-The response data: <see cref="XMLHttpRequest.Response."/>,<br/><see cref="XMLHttpRequest.ResponseText."/>, and<br/><see cref="XMLHttpRequest.ResponseXML."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/responseType"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string which specifies what type of data the response contains.<br/>It can take the following values:<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> When setting <c>responseType</c> to a particular value, the author should make<br/>sure that the server is actually sending a response compatible with that format. If<br/>the server returns data that is not compatible with the <c>responseType</c> that<br/>was set, the value of <see cref="XMLHttpRequest.Response."/> will be<br/><c>null</c>.</blockquote></value>
+</XMLHttpRequestResponseType>
+</docs>

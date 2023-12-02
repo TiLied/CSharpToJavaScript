@@ -1,0 +1,11 @@
+<docs>
+<DocumentRootElement>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <strong><c>Document.rootElement</c></strong> returns the <see cref="Element."/><br/>that is the root element of the <see cref="Document."/> if it is an<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementsvg">svg</see> element, otherwise <c>null</c>. It is deprecated in favor of<br/><see cref="Document.DocumentElement."/>, which returns the root element for all<br/>documents.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/rootElement"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>For SVG elements, the <see cref="Element."/> that is the root element of the <see cref="Document."/>; otherwise <c>null</c>.If the document is a non-empty SVG document, then the <c>rootElement</c> will be<br/>an <see cref="SVGSVGElement."/>, identical to the <c>documentElement</c>.</value>
+</DocumentRootElement>
+</docs>

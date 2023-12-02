@@ -473,7 +473,6 @@ namespace CSharpToJavaScript
 				.AddReferences(references.ToArray())
 				.AddSyntaxTrees(trueST);
 
-
 			_Walker = new(this, compilation.GetSemanticModel(trueST));
 
 			_Walker.JSSB.Append(Options.AddSBInFront);

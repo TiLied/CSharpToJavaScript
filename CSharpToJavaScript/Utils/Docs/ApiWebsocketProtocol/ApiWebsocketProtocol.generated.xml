@@ -1,0 +1,11 @@
+<docs>
+<WebSocketProtocol>
+<summary>
+The <strong><c>WebSocket.protocol</c></strong> read-only property returns the<br/>name of the sub-protocol the server selected; this will be one of the strings specified<br/>in the <c>protocols</c> parameter when creating the <see cref="WebSocket."/><br/>object, or the empty string if no connection is established.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/protocol"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</WebSocketProtocol>
+</docs>

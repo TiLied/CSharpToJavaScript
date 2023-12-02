@@ -1,0 +1,13 @@
+<docs>
+<DOMPointReadOnlyZ>
+<summary>
+The <strong><c>DOMPointReadOnly</c></strong> interface&amp;apos;s<br/><strong><c>z</c></strong> property holds the depth coordinate, z, for a<br/>read-only point in space.
+</summary>
+<remarks>
+<para>If your script needs to be able to change the value<br/>of this property, you should instead use the <see cref="DOMPoint."/> object.</para><para>In general, positive values of <c>z</c> mean toward the user (out from the<br/>screen), and negative values of <c>z</c> mean away from the user (into the<br/>screen), assuming no transforms have resulted in a reversal.</para>
+<para>-The other coordinate properties: <see cref="DOMPointReadOnly.X."/>,<br/><see cref="DOMPointReadOnly.Y."/>, and the perspective value,<br/><see cref="DOMPointReadOnly.W."/>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMPointReadOnly/z"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A double-precision floating-point value indicating the z coordinate&amp;apos;s value for the<br/>point. This value is <strong>unrestricted</strong>, meaning that it is allowed to be<br/>infinite or invalid (that is, its value may be <see cref="NaN"/> or {{jsxref("Infinity",<br/>&amp;quot;±Infinity&amp;quot;)}}).</value>
+</DOMPointReadOnlyZ>
+</docs>

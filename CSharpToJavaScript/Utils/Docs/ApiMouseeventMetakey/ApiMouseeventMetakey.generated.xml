@@ -1,0 +1,13 @@
+<docs>
+<MouseEventMetaKey>
+<summary>
+The <strong><c>MouseEvent.metaKey</c></strong> read-only property is a boolean value that indicates whether the &amp;lt;kbd&amp;gt;meta&amp;lt;/kbd&amp;gt; key was pressed or not when a given mouse event occurs.
+</summary>
+<remarks>
+<para>Be aware that many operating systems bind special functionality to the &amp;lt;kbd&amp;gt;meta&amp;lt;/kbd&amp;gt; key, so this property may be <c>false</c> even when the key is actually pressed.<br/>On Windows, for example, this key may open the Start menu.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> On Macintosh keyboards, this key is the &amp;lt;kbd&amp;gt;command&amp;lt;/kbd&amp;gt; key (&amp;lt;kbd&amp;gt;⌘&amp;lt;/kbd&amp;gt;).<br/>On Windows keyboards, this key is the Windows key (&amp;lt;kbd&amp;gt;⊞&amp;lt;/kbd&amp;gt;).</para></blockquote>
+<para>-<see cref="MouseEvent."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/metaKey"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value, where <c>true</c> indicates that the key is pressed, and <c>false</c> indicates that the key is <strong>not</strong> pressed.</value>
+</MouseEventMetaKey>
+</docs>

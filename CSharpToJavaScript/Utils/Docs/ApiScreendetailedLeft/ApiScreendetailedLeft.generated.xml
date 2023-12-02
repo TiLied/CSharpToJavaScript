@@ -1,0 +1,13 @@
+<docs>
+<ScreenDetailedLeft>
+<summary>
+The <strong><c>left</c></strong> read-only property of the<br/><see cref="ScreenDetailed."/> interface is a number representing the x-coordinate (left-hand edge) of the total screen area inside the OS virtual screen arrangement, relative to the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Window_Management_API/Multi-screen_origin">multi-screen origin</see>.
+</summary>
+<remarks>
+<para>This is equal to the true left-hand edge, ignoring any OS UI element drawn at the left of the screen. Windows cannot be placed in those areas; to get the left-hand coordinate of the screen area that windows can be placed in, use <see cref="ScreenDetailed.AvailLeft."/>.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> In Firefox, a non-standard implementation of the <c>left</c> property is available on the <c>Screen</c> interface. See the <see href="https://developer.mozilla.org#non-standard_example">Non-standard example</see> below for usage details, and see the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Screen#browser_compatibility"><c>Screen</c></see> reference page for browser support information relating to the non-standard implementation.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Window_Management_API">Window Management API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ScreenDetailed/left"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</ScreenDetailedLeft>
+</docs>

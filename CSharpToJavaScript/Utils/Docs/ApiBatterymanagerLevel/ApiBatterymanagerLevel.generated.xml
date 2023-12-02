@@ -1,0 +1,12 @@
+<docs>
+<BatteryManagerLevel>
+<summary>
+The <strong><c>BatteryManager.level</c></strong> property indicates the current battery charge level as a value between <c>0.0</c> and <c>1.0</c>.<br/>A value of <c>0.0</c> means the battery is empty and the system is about to be suspended.<br/>A value of <c>1.0</c> means the battery is full or the user agent is unable to report the battery status information.<br/>When its value changes, the <see cref="BatteryManager/levelchange_event."/> event is fired.
+</summary>
+<remarks>
+<para>-<see cref="BatteryManager."/><br/>-<see cref="Navigator.GetBattery."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BatteryManager/level"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</BatteryManagerLevel>
+</docs>

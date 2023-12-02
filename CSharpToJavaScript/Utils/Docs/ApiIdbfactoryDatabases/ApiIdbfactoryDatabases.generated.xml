@@ -1,0 +1,13 @@
+<docs>
+<IDBFactoryDatabases>
+<summary>
+The <strong><c>databases</c></strong> method of the <see cref="IDBFactory."/> interface returns a list representing all the available databases, including their names and versions.
+</summary>
+<remarks>
+<para>AvailableInWorkers</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This method is introduced in a draft of a specifications and browser compatibility is limited.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase."/><br/>-Using transactions: <see cref="IDBTransaction."/><br/>-Setting a range of keys: <see cref="IDBKeyRange."/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore."/><br/>-Using cursors: <see cref="IDBCursor."/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBFactory/databases"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A promise that resolves either to an error or a list of dictionaries, each with two elements, <c>name</c> and <c>version</c>:</returns>
+</IDBFactoryDatabases>
+</docs>

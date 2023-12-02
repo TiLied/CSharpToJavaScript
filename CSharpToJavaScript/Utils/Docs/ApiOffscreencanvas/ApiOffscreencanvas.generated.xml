@@ -1,0 +1,12 @@
+<docs>
+<OffscreenCanvas>
+<summary>
+The <strong><c>OffscreenCanvas</c></strong> interface provides a canvas that can be rendered off screen, decoupling the DOM and the Canvas API so that the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas">canvas</see> element is no longer entirely dependent on the DOM.<br/>Rendering operations can also be run inside a <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">worker</see> context, allowing you to run some tasks in a separate thread and avoid heavy work on the main thread.
+</summary>
+<remarks>
+<para><c>OffscreenCanvas</c> is a <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Transferable_objects">transferable object</see>.</para><para>AvailableInWorkers</para><para></para>
+<para>-<see cref="CanvasRenderingContext2D."/><br/>-<see cref="OffscreenCanvasRenderingContext2D."/><br/>-<see cref="ImageBitmap."/><br/>-<see cref="ImageBitmapRenderingContext."/><br/>-<see cref="HTMLCanvasElement.TransferControlToOffscreen."/><br/>-<see cref="Window.RequestAnimationFrame."/><br/>-<see href="https://hacks.mozilla.org/2016/01/webgl-off-the-main-thread/">WebGL Off the Main Thread – Mozilla Hacks</see> (2016)<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</OffscreenCanvas>
+</docs>

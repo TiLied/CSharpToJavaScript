@@ -1,0 +1,12 @@
+<docs>
+<HistoryState>
+<summary>
+The <strong><c>History.state</c></strong> read-only property<br/>returns a value representing the state at the top of the history stack. This is<br/>a way to look at the state without having to wait for a <see cref="Window/popstate_event."/> event.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/History_API/Working_with_the_History_API">Working with the History API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/History/pushState"><c>History.pushState()</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/History/replaceState"><c>History.replaceState()</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/PopStateEvent/state"><c>PopStateEvent.state</c></see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/History/state"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The state at the top of the history stack. The value is <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><c>null</c></see> until the<br/><see cref="History.PushState."/> or<br/><see cref="History.ReplaceState."/> method is used.</value>
+</HistoryState>
+</docs>

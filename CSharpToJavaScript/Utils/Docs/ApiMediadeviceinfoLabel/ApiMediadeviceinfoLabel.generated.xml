@@ -1,0 +1,12 @@
+<docs>
+<MediaDeviceInfoLabel>
+<summary>
+The <strong><c>label</c></strong> readonly<br/>property of the <see cref="MediaDeviceInfo."/> interface returns a<br/>string describing this device (for example<br/>&amp;quot;External USB Webcam&amp;quot;).
+</summary>
+<remarks>
+<para>Only available during active <c>MediaStream</c><br/>use, or when persistent permissions have been granted.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDeviceInfo/label"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string which describes the media device. For security reasons, the<br/><c>label</c> is always an empty string (<c>&amp;quot;&amp;quot;</c>) if the user has not<br/>obtained permission to use at least one media device, either by starting a stream from<br/>the microphone or camera, or by persistent permissions being granted.</value>
+</MediaDeviceInfoLabel>
+</docs>

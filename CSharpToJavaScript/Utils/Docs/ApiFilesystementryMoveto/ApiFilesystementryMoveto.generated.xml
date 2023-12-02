@@ -1,0 +1,13 @@
+<docs>
+<FileSystemEntryMoveTo>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <see cref="FileSystemEntry."/> interface's method<br/><strong><c>moveTo()</c></strong> moves the file<br/>specified by the entry to a new location on the file system, or renames the file if<br/>the destination directory is the same as the source.
+</summary>
+<remarks>
+<para>There are some typical<br/>restrictions on what you can do:</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">Introduction to the File and Directory Entries API</see><br/>-<see cref="FileSystemEntry.CopyTo."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemEntry/moveTo"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</FileSystemEntryMoveTo>
+</docs>

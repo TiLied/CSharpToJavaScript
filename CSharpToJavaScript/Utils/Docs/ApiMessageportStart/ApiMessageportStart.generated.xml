@@ -1,0 +1,13 @@
+<docs>
+<MessagePortStart>
+<summary>
+The <strong><c>start()</c></strong> method of the <see cref="MessagePort."/><br/>interface starts the sending of messages queued on the port. This method is only needed<br/>when using <see cref="EventTarget.AddEventListener."/>; it is implied when using<br/><see cref="MessagePort.Message_event."/>.
+</summary>
+<remarks>
+<para>AvailableInWorkers</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging">Using channel messaging</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/start"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</MessagePortStart>
+</docs>

@@ -1,0 +1,13 @@
+<docs>
+<CSSScroll-snap-type>
+<summary>
+The <strong><c>scroll-snap-type</c></strong> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</see> property sets how strictly snap points are enforced on the scroll container in case there is one.
+</summary>
+<remarks>
+<para>EmbedInteractiveExample("pages/css/scroll-snap-type.html")</para><para>Specifying any precise animations or physics used to enforce those snap points is not covered by this property but instead left up to the user agent.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_scroll_snap">CSS scroll snap</see><br/>-<see href="https://web.dev/articles/css-scroll-snap">Well-controlled scrolling with CSS scroll snap</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-snap-type"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value><blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> If the content in the snap port is changed (e.g. added, moved, deleted, or resized) or the value of any scroll snap-related property (e.g. <c>scroll-snap-type</c> or <c>scroll-margin</c>) is changed, the scroll container will be <see href="https://drafts.csswg.org/css-scroll-snap/#re-snap">resnapped</see> according to the latest value of <c>scroll-snap-type</c>.</blockquote></value>
+</CSSScroll-snap-type>
+</docs>

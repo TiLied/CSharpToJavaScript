@@ -1,0 +1,11 @@
+<docs>
+<WebDriverCapabilitiesAcceptInsecureCerts>
+<summary>
+The <strong><c>acceptInsecureCerts</c></strong><strong> capability</strong> communicates whether expired or invalid <see href="https://developer.mozilla.org/en-US/docs/Glossary/TLS">TLS certificates</see> are checked when <see href="https://developer.mozilla.org/en-US/docs/Web/WebDriver/Commands/NavigateTo">navigating</see>. When the capability is false, an <see href="https://developer.mozilla.org/en-US/docs/Web/WebDriver/Errors/InsecureCertificate">insecure certificate</see> error will be returned as navigation encounters domains with certificate problems. Otherwise, self-signed or otherwise invalid certificates will be implicitly trusted by the browser on navigation. The capability has effect for the lifetime of the session.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/WebDriver/Capabilities">List of WebDriver capabilities</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/WebDriver/Commands/NavigateTo">Navigate To</see> command<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/WebDriver/Commands/NewSession">New Session</see> command<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/WebDriver/Capabilities/acceptInsecureCerts"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebDriverCapabilitiesAcceptInsecureCerts>
+</docs>

@@ -1,7 +1,6 @@
 # CSharpToJavaScript
 Brute forcing conversion(generating) from C# to Javascript.
-
-This is a personal project with purpose to learn and understand better c# and js at the same time. Many stuff is not supported and some won't. Updates will be happening when I'm using this library.(irregular)
+This is a personal project with the goal of learning and understanding c# and js at the same time. Many stuff is not supported and some won't. Updates will be happening when I'm using this library.(irregular)
 
 [Nuget package](https://www.nuget.org/packages/CSharpToJavaScript/)  | [Website](https://tilied.github.io/CSTOJS_Pages/) | [Try it online!](https://tilied.github.io/CSTOJS_Pages/BWA/) | [CLI](https://github.com/TiLied/CSTOJS_CLI) | [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=tilied.cstojs-vscode-ext) | [VS Extension](https://marketplace.visualstudio.com/items?itemName=tilied.cstojs-vs-ext)
 
@@ -35,7 +34,7 @@ class Test
 - 4 In the Main method add:
 ```csharp
 CSTOJS cstojs = new();
-await cstojs.GenerateOneAsync("FULL PATH TO CSHARP FILE YOU WHAT TO CONVERT");
+await cstojs.GenerateOneAsync("FULL PATH TO CSHARP FILE/FOLDER YOU WHAT TO CONVERT");
 ```
 - 5 Run program and file will be generated in output path(default is "Directory.GetCurrentDirectory()") with name "|CS FILE NAME|.js"(default)
 - 6 See below for simple example "HelloWorld"

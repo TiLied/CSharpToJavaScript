@@ -9,7 +9,6 @@ using Microsoft.CodeAnalysis;
 using System.Linq;
 using Microsoft.CodeAnalysis.Text;
 using System.Text;
-using System.Runtime.CompilerServices;
 using System;
 
 namespace CSharpToJavaScript
@@ -17,26 +16,23 @@ namespace CSharpToJavaScript
 	/// <summary>
 	/// Main type for CSharpToJavaScript.
 	/// </summary>
-	public class CSTOJS
-	{
-		public CSTOJSOptions Options { get; set; } = new();
-
+	public class CSTOJS : ILog
+    {
+        private CSTOJSOptions _Options = new();
+        private Stopwatch _Stopwatch = new();
 		private Walker? _Walker = null;
-
-		static CSTOJS() 
-		{
-			ConsoleTraceListener consoleTraceListener = new();
-			Trace.Listeners.Add(consoleTraceListener);
-		}
+        private readonly ILog? _Log = null;
 
 		/// <summary>
 		/// New instance of <see cref="CSTOJS"/> with default options, see <see cref="CSTOJSOptions"/>.
 		/// </summary>
 		public CSTOJS() 
 		{
+            _Log = this;
+
 			Assembly assembly = Assembly.GetExecutingAssembly();
-			//https://stackoverflow.com/a/73474279
-			Log($"{assembly.GetName().Name} {assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion}");
+            //https://stackoverflow.com/a/73474279
+            _Log.SuccessLine($"{assembly.GetName().Name} {assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion}");
 		}
 
 		/// <summary>
@@ -45,14 +41,16 @@ namespace CSharpToJavaScript
 		/// <param name="options">Options of <see cref="CSTOJS"/>, see <see cref="CSTOJSOptions"/>.</param>
 		public CSTOJS(CSTOJSOptions options)
 		{
-			Options = options;
+            _Options = options;
 
-			if (Options.DisableConsoleOutput == false)
+            _Log = ILog.GetILog(this, _Options);
+
+            if (_Options.DisableConsoleOutput == false)
 			{
 				Assembly assembly = Assembly.GetExecutingAssembly();
-				//https://stackoverflow.com/a/73474279
-				Log($"{assembly.GetName().Name} {assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion}");
-			}
+                //https://stackoverflow.com/a/73474279
+                _Log.SuccessLine($"{assembly.GetName().Name} {assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion}");
+            }
 		}
 
 		/// <summary>
@@ -90,23 +88,23 @@ namespace CSharpToJavaScript
 
 				Generate(_tree, assembly);
 
-				if (!Directory.Exists(Options.OutPutPath))
+				if (!Directory.Exists(_Options.OutPutPath))
 				{
-					Directory.CreateDirectory(Options.OutPutPath);
+					Directory.CreateDirectory(_Options.OutPutPath);
 				}
 
 				string pathCombined = string.Empty;
 
 				if (filename != null)
-					pathCombined = Path.Combine(Options.OutPutPath, filename);
+					pathCombined = Path.Combine(_Options.OutPutPath, filename);
 				else
-					pathCombined = Path.Combine(Options.OutPutPath, file.Name.Replace(".cs", ".js"));
+					pathCombined = Path.Combine(_Options.OutPutPath, file.Name.Replace(".cs", ".js"));
 
 				await File.WriteAllTextAsync(pathCombined, _Walker.JSSB.ToString());
 
-				Log($"--- Done!");
-				Log($"--- Path: {pathCombined}");
-				Log($"--- --- ---");
+				_Log.SuccessLine($"--- Done!");
+				_Log.SuccessLine($"--- Path: {pathCombined}");
+				_Log.SuccessLine($"--- --- ---");
 			}
 		}
 
@@ -145,9 +143,9 @@ namespace CSharpToJavaScript
 
 				jsStringBuilders.Add(_Walker.JSSB);
 
-				Log($"--- Done!");
-				Log($"--- File name: {file.Name}");
-				Log($"--- --- ---");
+				_Log.SuccessLine($"--- Done!");
+				_Log.SuccessLine($"--- File name: {file.Name}");
+				_Log.SuccessLine($"--- --- ---");
 			}
 
 			return jsStringBuilders;
@@ -175,8 +173,8 @@ namespace CSharpToJavaScript
 			else
 				Generate(_tree, assembly);
 
-			Log($"--- Done!");
-			Log($"--- --- ---");
+			_Log.SuccessLine($"--- Done!");
+			_Log.SuccessLine($"--- --- ---");
 
 			return _Walker.JSSB;
 		}
@@ -204,23 +202,29 @@ namespace CSharpToJavaScript
 				Generate(_tree, assembly);
 
 
-			if (!Directory.Exists(Options.OutPutPath))
+			if (!Directory.Exists(_Options.OutPutPath))
 			{
-				Directory.CreateDirectory(Options.OutPutPath);
+				Directory.CreateDirectory(_Options.OutPutPath);
 			}
 
-			string pathCombined = Path.Combine(Options.OutPutPath, filename);
+			string pathCombined = Path.Combine(_Options.OutPutPath, filename);
 			
 			await File.WriteAllTextAsync(pathCombined, _Walker.JSSB.ToString());
 
-			Log($"--- Done!");
-			Log($"--- Path: {pathCombined}");
-			Log($"--- --- ---");
+			_Log.SuccessLine($"--- Done!");
+			_Log.SuccessLine($"--- Path: {pathCombined}");
+			_Log.SuccessLine($"--- --- ---");
 		}
 
 
 		private void Generate(SyntaxTree? tree, Assembly assembly, List<MetadataReference>? refs = null) 
 		{
+            if(_Options.Debug) 
+            {
+                _Stopwatch.Restart();
+				_Log.WriteLine("Start stopwatch");
+            }
+
 			CompilationUnitSyntax root = tree.GetCompilationUnitRoot();
 
 
@@ -454,17 +458,17 @@ namespace CSharpToJavaScript
 			//TODO! does not work... sigh
 			references = references.Distinct().ToList();
 
-			if (Options.Debug)
+			if (_Options.Debug)
 			{
-				Log($"+++");
-				Log($"Path assembly: {assemblyPath}");
-				Log($"Path rt: {rtPath}");
-				Log($"List of references:");
+				_Log.SuccessLine($"+++");
+				_Log.WriteLine($"Path assembly: {assemblyPath}");
+				_Log.WriteLine($"Path rt: {rtPath}");
+				_Log.WriteLine($"List of references:");
 				foreach (MetadataReference reference in references)
 				{
-					Log(reference.Display);
+					_Log.WriteLine(reference.Display);
 				}
-				Log($"+++");
+				_Log.SuccessLine($"+++");
 			}
 
 			SyntaxTree trueST = trueRoot.SyntaxTree;
@@ -473,37 +477,20 @@ namespace CSharpToJavaScript
 				.AddReferences(references.ToArray())
 				.AddSyntaxTrees(trueST);
 
-			_Walker = new(this, compilation.GetSemanticModel(trueST));
+			_Walker = new(_Options, compilation.GetSemanticModel(trueST));
 
-			_Walker.JSSB.Append(Options.AddSBInFront);
+			_Walker.JSSB.Append(_Options.AddSBInFront);
 
 			_Walker.Visit(trueRoot);
 
-			_Walker.JSSB.Append(Options.AddSBInEnd);
-		}
+			_Walker.JSSB.Append(_Options.AddSBInEnd);
 
-		public void Log(string message, [CallerFilePath] string? file = null, [CallerMemberName] string? member = null, [CallerLineNumber] int line = 0)
-		{
-			if (Options.DisableConsoleOutput == false)
-			{
-				if (Options.DisableConsoleColors == false)
-				{
-					if (message.StartsWith("---"))
-						Console.ForegroundColor = ConsoleColor.Green;
+            if (_Options.Debug)
+            {
+                _Stopwatch.Stop();
+				_Log.WriteLine($"Stop stopwatch: {_Stopwatch.Elapsed}");
+            }
+        }
 
-					if (message.StartsWith("ERROR") || message.StartsWith("as"))
-						Console.ForegroundColor = ConsoleColor.Red;
-
-					if (message.StartsWith("WARNING"))
-						Console.ForegroundColor = ConsoleColor.Yellow;
-				}
-
-
-				Trace.WriteLine($"({line}):{Path.GetFileName(file.Replace("\\", "/"))} {member}: {message}");
-
-				if (Options.DisableConsoleColors == false)
-					Console.ResetColor();
-			}
-		}
 	}
 }

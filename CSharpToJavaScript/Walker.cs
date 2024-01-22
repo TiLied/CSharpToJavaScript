@@ -11,11 +11,11 @@ using System.Text;
 
 namespace CSharpToJavaScript
 {
-	//TODO maybe...
-	//https://learn.microsoft.com/en-us/dotnet/csharp/roslyn-sdk/get-started/syntax-transformation
-	//
+    //TODO maybe...
+    //https://learn.microsoft.com/en-us/dotnet/csharp/roslyn-sdk/get-started/syntax-transformation
+    //
 
-	internal class Walker : CSharpSyntaxWalker, ILog
+    internal class Walker : CSharpSyntaxWalker, ILog
 	{
 		public StringBuilder JSSB { get; set; } = new();
 

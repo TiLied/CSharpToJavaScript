@@ -11,11 +11,11 @@ using System.Text;
 
 namespace CSharpToJavaScript
 {
-    //TODO maybe...
-    //https://learn.microsoft.com/en-us/dotnet/csharp/roslyn-sdk/get-started/syntax-transformation
-    //
+	//TODO maybe...
+	//https://learn.microsoft.com/en-us/dotnet/csharp/roslyn-sdk/get-started/syntax-transformation
+	//
 
-    internal class Walker : CSharpSyntaxWalker, ILog
+	internal class Walker : CSharpSyntaxWalker, ILog
 	{
 		public StringBuilder JSSB { get; set; } = new();
 
@@ -795,6 +795,8 @@ namespace CSharpToJavaScript
 
 					switch (kind)
 					{
+						case SyntaxKind.ReadOnlyKeyword:
+							break;
 						case SyntaxKind.SemicolonToken:
 							VisitToken(asToken);
 							break;
@@ -936,6 +938,7 @@ namespace CSharpToJavaScript
 
 					switch (kind)
 					{
+						case SyntaxKind.RequiredKeyword:
 						case SyntaxKind.IdentifierToken:
 							break;
 						case SyntaxKind.SemicolonToken:

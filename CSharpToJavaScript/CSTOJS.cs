@@ -413,8 +413,43 @@ namespace CSharpToJavaScript
 		}
 	)
 ).AddUsings(oldUsing);
-			//Should I make "NormalizeWhitespace" option??? TODO!
-			//.NormalizeWhitespace().AddUsings(oldUsing);
+
+			if (_Options.KeepBraceOnTheSameLine)
+			{
+				//
+				//
+				//Overriding root works only once.
+				//I'm not sure how to properly fix this...
+				//Below is a very bad code...
+				//
+				//
+				List<SyntaxToken> allBraces = trueRoot.NormalizeWhitespace().DescendantTokens().Where((e) => e.IsKind(SyntaxKind.OpenBraceToken)).ToList();
+				int i = 0;
+				while (i < allBraces.Count)
+				{
+					for (int j = 0; j < allBraces.Count; j++)
+					{
+						SyntaxToken _token = allBraces[j].GetPreviousToken();
+						if (_token.HasTrailingTrivia)
+						{
+							SyntaxTrivia _trivia = _token.TrailingTrivia.Where((e) => e.IsKind(SyntaxKind.EndOfLineTrivia)).FirstOrDefault();
+							if (!_trivia.IsKind(SyntaxKind.None))
+							{
+								SyntaxToken _replacedToken = _token.ReplaceTrivia(_trivia, SyntaxFactory.Space);
+								trueRoot = trueRoot.ReplaceToken(_token, _replacedToken);
+								break;
+							}
+						}
+					}
+					allBraces = trueRoot.DescendantTokens().Where((e) => e.IsKind(SyntaxKind.OpenBraceToken)).ToList();
+					i++;
+				}
+
+			}
+
+			if (_Options.NormalizeWhitespace) 
+				trueRoot = trueRoot.NormalizeWhitespace();
+
 
 			if (rtPath != null && rtPath != string.Empty)
 			{
@@ -444,7 +479,6 @@ namespace CSharpToJavaScript
 
 				foreach (UsingDirectiveSyntax oU in oldUsing)
 				{
-
 					if (File.Exists(Path.Combine(rtPath, oU.Name + ".dll")))
 						references.Add(MetadataReference.CreateFromFile(Path.Combine(rtPath, oU.Name + ".dll")));
 				}

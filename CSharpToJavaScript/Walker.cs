@@ -80,7 +80,6 @@ namespace CSharpToJavaScript
 				case SyntaxKind.CloseParenToken:
 				case SyntaxKind.SemicolonToken:
 				case SyntaxKind.CloseBraceToken:
-				case SyntaxKind.OpenBraceToken:
 				case SyntaxKind.DotToken:
 				case SyntaxKind.IdentifierToken:
 				case SyntaxKind.EqualsToken:
@@ -132,6 +131,16 @@ namespace CSharpToJavaScript
 				case SyntaxKind.EndOfFileToken:
 					{
 						VisitLeadingTrivia(token);
+
+						JSSB.Append(token.Text);
+
+						VisitTrailingTrivia(token);
+						return;
+					}
+				case SyntaxKind.OpenBraceToken: 
+					{
+						if(!_Options.KeepBraceOnTheSameLine)
+							VisitLeadingTrivia(token);
 
 						JSSB.Append(token.Text);
 

@@ -4,9 +4,9 @@
 The <strong><c>DOMPoint</c></strong> interface&amp;apos;s<br/><strong><c>w</c></strong> property holds the point&amp;apos;s perspective value, w, for a<br/>point in space.
 </summary>
 <remarks>
-<para>-The other coordinate properties: <see cref="DOMPoint.X"/>,<br/><see cref="DOMPoint.Y"/>, and <see cref="DOMPoint.Z"/>.<br/></para>
+<para>-The other coordinate properties: <see cref="DOMPoint.X."/>,<br/><see cref="DOMPoint.Y."/>, and <see cref="DOMPoint.Z."/>.<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMPoint/w"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A double-precision floating-point value indicating the <strong>w</strong> perspective value for<br/>the point. This value is <strong>unrestricted</strong>, meaning that it is allowed to be<br/>infinite or invalid (that is, its value may be <see cref="NaN"/> or {{jsxref("Infinity",<br/>&amp;quot;±Infinity&amp;quot;)}}). The default is 1.0.</value>
+<value>A double-precision floating-point value indicating the <strong>w</strong> perspective value for<br/>the point. This value is <strong>unrestricted</strong>, meaning that it is allowed to be<br/>infinite or invalid (that is, its value may be <see cref="NaN"/> or <see cref="Infinity"/>).<br/>The default is 1.0.</value>
 </DOMPointW>
 </docs>

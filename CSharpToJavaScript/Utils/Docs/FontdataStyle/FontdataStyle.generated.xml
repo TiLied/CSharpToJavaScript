@@ -1,10 +1,11 @@
 <docs>
 <FontDataStyle>
 <summary>
-The <strong><c>style</c></strong> read-only property of the <see cref="FontData"/> interface returns the style of the font face.
+The <strong><c>style</c></strong> read-only property of the <see cref="FontData."/> interface returns the style of the font face.
 </summary>
 <remarks>
 <para>This is the value used to select the style of the font you want to use, for example inside the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-style">font-style</see> property.</para><para>Examples include:</para>
+<para>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/local-fonts">Use advanced typography with local fonts</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face">@font-face</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FontData/style"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A string.</value>

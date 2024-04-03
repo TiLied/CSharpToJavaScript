@@ -1,10 +1,10 @@
 <docs>
 <DocumentTypeSystemId>
 <summary>
-The read-only <strong><c>systemId</c></strong> property of the <see cref="DocumentType"/> returns the URL of the associated DTD.
+The read-only <strong><c>systemId</c></strong> property of the <see cref="DocumentType."/> returns the URL of the associated DTD.
 </summary>
 <remarks>
-<para>For synthetic <c>DocumentType</c>, this property reflects the value given in parameter to <see cref="DOMImplementation.CreateDocumentType"/>.</para><para>For HTML documents, browsers always set it up to <c>html</c>, whatever the actual <c>DOCTYPE</c> in the source code is. For SVG documents, for example, it can be <c>&amp;quot;http://www.w3.org/2000/svg&amp;quot;</c>.</para>
+<para>For synthetic <c>DocumentType</c>, this property reflects the value given in parameter to <see cref="DOMImplementation.CreateDocumentType."/>.</para><para>For HTML documents, browsers always set it up to <c>html</c>, whatever the actual <c>DOCTYPE</c> in the source code is. For SVG documents, for example, it can be <c>&amp;quot;http://www.w3.org/2000/svg&amp;quot;</c>.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentType/systemId"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A string.</value>

@@ -1,11 +1,11 @@
 <docs>
 <ClientsMatchAll>
 <summary>
-The <strong><c>matchAll()</c></strong> method of the <see cref="Clients"/><br/>interface returns a <see cref="Promise"/> for a list of service worker<br/><see cref="Client"/> objects. Include the <c>options</c> parameter to return all service worker<br/>clients whose origin is the same as the associated service worker&amp;apos;s origin. If options<br/>are not included, the method returns only the service worker clients controlled by the<br/>service worker.
+The <strong><c>matchAll()</c></strong> method of the <see cref="Clients."/><br/>interface returns a <see cref="Promise"/> for a list of service worker<br/><see cref="Client."/> objects. Include the <c>options</c> parameter to return all service worker<br/>clients whose origin is the same as the associated service worker&amp;apos;s origin. If options<br/>are not included, the method returns only the service worker clients controlled by the<br/>service worker.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Clients/matchAll"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A {{jsxref("Promise")}} that resolves to an array of <see cref="Client"/> objects. In<br/>Chrome 46/Firefox 54 and later, this method returns clients in most recently focused<br/>order, correct as per spec.</returns>
+<returns>A {{jsxref("Promise")}} that resolves to an array of <see cref="Client."/> objects. In<br/>Chrome 46/Firefox 54 and later, this method returns clients in most recently focused<br/>order, correct as per spec.</returns>
 </ClientsMatchAll>
 </docs>

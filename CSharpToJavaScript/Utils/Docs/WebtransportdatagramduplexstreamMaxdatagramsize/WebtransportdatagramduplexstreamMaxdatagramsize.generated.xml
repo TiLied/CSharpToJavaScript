@@ -1,11 +1,10 @@
 <docs>
 <WebTransportDatagramDuplexStreamMaxDatagramSize>
 <summary>
-The <strong><c>maxDatagramSize</c></strong> read-only property of the <see cref="WebTransportDatagramDuplexStream"/> interface returns the maximum allowable size of outgoing datagrams, in bytes, that can be written to <see cref="WebTransportDatagramDuplexStream.Writable"/>.
+The <strong><c>maxDatagramSize</c></strong> read-only property of the <see cref="WebTransportDatagramDuplexStream."/> interface returns the maximum allowable size of outgoing datagrams, in bytes, that can be written to <see cref="WebTransportDatagramDuplexStream.Writable."/>.
 </summary>
 <remarks>
-<para>AvailableInWorkers</para>
-<para>-<see href="https://web.dev/webtransport/">Using WebTransport</see><br/>-{{domxref(&amp;quot;WebSockets API&amp;quot;, &amp;quot;WebSockets API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-{{domxref(&amp;quot;Streams API&amp;quot;, &amp;quot;Streams API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://datatracker.ietf.org/doc/html/draft-ietf-webtrans-http3/">WebTransport over HTTP/3</see><br/></para>
+<para>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/webtransport">Using WebTransport</see><br/>-{{domxref(&amp;quot;WebSockets API&amp;quot;, &amp;quot;WebSockets API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-{{domxref(&amp;quot;Streams API&amp;quot;, &amp;quot;Streams API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://datatracker.ietf.org/doc/html/draft-ietf-webtrans-http3/">WebTransport over HTTP/3</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebTransportDatagramDuplexStream/maxDatagramSize"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A number.</value>

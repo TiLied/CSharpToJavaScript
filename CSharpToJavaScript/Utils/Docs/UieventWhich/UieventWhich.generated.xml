@@ -1,12 +1,12 @@
 <docs>
 <UIEventWhich>
 <summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>UIEvent.which</c></strong> read-only property of the <see cref="UIEvent"/> interface returns a number that indicates which button was pressed on the mouse, or the numeric <c>keyCode</c> or the character code (<c>charCode</c>) of the key pressed on the keyboard.
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>UIEvent.which</c></strong> read-only property of the <see cref="UIEvent."/> interface returns a number that indicates which button was pressed on the mouse, or the numeric <c>keyCode</c> or the character code (<c>charCode</c>) of the key pressed on the keyboard.
 </summary>
 <remarks>
-<para>-<see cref="KeyboardEvent"/><br/>-<see cref="MouseEvent"/><br/></para>
+<para>-<see cref="KeyboardEvent."/><br/>-<see cref="MouseEvent."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/UIEvent/which"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>For <see cref="KeyboardEvent"/>, <c>event.which</c> contains the numeric code for a particular key pressed, depending on whether an alphanumeric or non-alphanumeric key was pressed.<br/>Please see deprecated <see cref="KeyboardEvent.CharCode"/> and <see cref="KeyboardEvent.KeyCode"/> for more details.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> Consider <see cref="KeyboardEvent.Key"/> or <see cref="KeyboardEvent.Code"/> for new code.</blockquote>For <see cref="MouseEvent"/>, <c>event.which</c> is a number representing a given button:For a mouse configured for left-handed use, the button actions are reversed.<br/>In this case, the values are read from right to left.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> Consider <see cref="MouseEvent.Button"/> for new code.</blockquote></value>
+<value>For <see cref="KeyboardEvent."/>, <c>event.which</c> contains the numeric code for a particular key pressed, depending on whether an alphanumeric or non-alphanumeric key was pressed.<br/>Please see deprecated <see cref="KeyboardEvent.CharCode."/> and <see cref="KeyboardEvent.KeyCode."/> for more details.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> Consider <see cref="KeyboardEvent.Key."/> or <see cref="KeyboardEvent.Code."/> for new code.</blockquote>For <see cref="MouseEvent."/>, <c>event.which</c> is a number representing a given button:For a mouse configured for left-handed use, the button actions are reversed.<br/>In this case, the values are read from right to left.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> Consider <see cref="MouseEvent.Button."/> for new code.</blockquote></value>
 </UIEventWhich>
 </docs>

@@ -1,13 +1,13 @@
 <docs>
 <RTCPeerConnectionSctp>
 <summary>
-The read-only <strong><c>sctp</c></strong> property on the <see cref="RTCPeerConnection"/> interface returns an <see cref="RTCSctpTransport"/> describing the {{Glossary("SCTP")}} transport over which SCTP data is being sent and<br/>received.<br/>If SCTP hasn&amp;apos;t been negotiated, this value is <c>null</c>.
+The <strong><c>sctp</c></strong> read-only property of the <see cref="RTCPeerConnection."/> interface returns an <see cref="RTCSctpTransport."/> describing the {{Glossary("SCTP")}} transport over which SCTP data is being sent and received.<br/>If SCTP hasn&amp;apos;t been negotiated, this value is <c>null</c>.
 </summary>
 <remarks>
-<para>The SCTP transport is used for transmitting and receiving data for any and all <see cref="RTCDataChannel"/>s on the peer connection.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/>-<see cref="RTCPeerConnection"/><br/>-<see cref="RTCDataChannel"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Glossary/SCTP">SCTP</see><br/></para>
+<para>The SCTP transport is used for transmitting and receiving data for any and all <see cref="RTCDataChannel."/>s on the peer connection.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/>-<see cref="RTCPeerConnection."/><br/>-<see cref="RTCDataChannel."/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Glossary/SCTP">SCTP</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/sctp"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="RTCSctpTransport"/> object describing the SCTP transport being used by the <see cref="RTCPeerConnection"/> for transmitting and receiving on its data channels, or <c>null</c> if SCTP negotiation hasn&amp;apos;t happened.</value>
+<value>A <see cref="RTCSctpTransport."/> object describing the SCTP transport being used by the <see cref="RTCPeerConnection."/> for transmitting and receiving on its data channels, or <c>null</c> if SCTP negotiation hasn&amp;apos;t happened.</value>
 </RTCPeerConnectionSctp>
 </docs>

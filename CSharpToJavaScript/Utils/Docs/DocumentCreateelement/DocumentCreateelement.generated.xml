@@ -1,12 +1,12 @@
 <docs>
 <DocumentCreateElement>
 <summary>
-In an <see href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</see> document, the <strong><c>document.createElement()</c></strong> method creates the HTML element specified by <strong>tagName</strong>, or an <see cref="HTMLUnknownElement"/> if <strong>tagName</strong> isn&amp;apos;t recognized.
+In an <see href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</see> document, the <strong><c>document.createElement()</c></strong> method creates the HTML element specified by <strong>tagName</strong>, or an <see cref="HTMLUnknownElement."/> if <strong>tagName</strong> isn&amp;apos;t recognized.
 </summary>
 <remarks>
-<para>-<see cref="Node.RemoveChild"/><br/>-<see cref="Node.ReplaceChild"/><br/>-<see cref="Node.AppendChild"/><br/>-<see cref="Node.InsertBefore"/><br/>-<see cref="Node.HasChildNodes"/><br/>-<see cref="Document.CreateElementNS"/> — to explicitly specify the namespace URI for the element.<br/></para>
+<para>-<see cref="Node.RemoveChild."/><br/>-<see cref="Node.ReplaceChild."/><br/>-<see cref="Node.AppendChild."/><br/>-<see cref="Node.InsertBefore."/><br/>-<see cref="Node.HasChildNodes."/><br/>-<see cref="Document.CreateElementNS."/> — to explicitly specify the namespace URI for the element.<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>The new <see cref="Element"/>.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> A new {{domxref(&amp;quot;HTMLElement&amp;quot;, &amp;quot;HTMLElement&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;1&amp;quot;)}} is returned if the document is an {{domxref(&amp;quot;HTMLDocument&amp;quot;, &amp;quot;HTMLDocument&amp;quot;, <strong>, &amp;quot;1&amp;quot;)}}, which is the most common case. Otherwise a new {{domxref(&amp;quot;Element&amp;quot;,&amp;quot;Element&amp;quot;,</strong>,&amp;quot;1&amp;quot;)}} is returned.</blockquote></returns>
+<returns>The new <see cref="Element."/>.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> A new {{domxref(&amp;quot;HTMLElement&amp;quot;, &amp;quot;HTMLElement&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;1&amp;quot;)}} is returned if the document is an {{domxref(&amp;quot;HTMLDocument&amp;quot;, &amp;quot;HTMLDocument&amp;quot;, <strong>, &amp;quot;1&amp;quot;)}}, which is the most common case. Otherwise a new {{domxref(&amp;quot;Element&amp;quot;,&amp;quot;Element&amp;quot;,</strong>,&amp;quot;1&amp;quot;)}} is returned.</blockquote></returns>
 </DocumentCreateElement>
 </docs>

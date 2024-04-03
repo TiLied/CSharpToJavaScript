@@ -1,13 +1,13 @@
 <docs>
 <CanvasRenderingContext2DGetImageData>
 <summary>
-The <see cref="CanvasRenderingContext2D"/> method<br/><strong><c>getImageData()</c></strong> of the Canvas 2D API returns an<br/><see cref="ImageData"/> object representing the underlying pixel data for a specified<br/>portion of the canvas.
+The <see cref="CanvasRenderingContext2D."/> method<br/><strong><c>getImageData()</c></strong> of the Canvas 2D API returns an<br/><see cref="ImageData."/> object representing the underlying pixel data for a specified<br/>portion of the canvas.
 </summary>
 <remarks>
-<para>This method is not affected by the canvas&amp;apos;s transformation matrix. If the specified<br/>rectangle extends outside the bounds of the canvas, the pixels outside the canvas are<br/>transparent black in the returned <c>ImageData</c> object.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Image data can be painted onto a canvas using the<br/><see cref="CanvasRenderingContext2D.PutImageData"/> method.</para></blockquote><para>You can find more information about <c>getImageData()</c> and general<br/>manipulation of canvas contents in <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas">Pixel manipulation with canvas</see>.</para>
-<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="ImageData"/> object<br/>-<see cref="CanvasRenderingContext2D.PutImageData"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas">Pixel manipulation with canvas</see><br/></para>
+<para>This method is not affected by the canvas&amp;apos;s transformation matrix. If the specified<br/>rectangle extends outside the bounds of the canvas, the pixels outside the canvas are<br/>transparent black in the returned <c>ImageData</c> object.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Image data can be painted onto a canvas using the<br/><see cref="CanvasRenderingContext2D.PutImageData."/> method.</para></blockquote><para>You can find more information about <c>getImageData()</c> and general<br/>manipulation of canvas contents in <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas">Pixel manipulation with canvas</see>.</para>
+<para>-The interface defining this method: <see cref="CanvasRenderingContext2D."/><br/>-<see cref="ImageData."/> object<br/>-<see cref="CanvasRenderingContext2D.PutImageData."/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas">Pixel manipulation with canvas</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>An <see cref="ImageData"/> object containing the image data for the rectangle of the<br/>canvas specified. The coordinates of the rectangle&amp;apos;s top-left corner are<br/><c>(sx, sy)</c>, while the coordinates of the bottom corner are<br/><c>(sx + sw - 1, sy + sh - 1)</c>.</returns>
+<returns>An <see cref="ImageData."/> object containing the image data for the rectangle of the<br/>canvas specified. The coordinates of the rectangle&amp;apos;s top-left corner are<br/><c>(sx, sy)</c>, while the coordinates of the bottom corner are<br/><c>(sx + sw - 1, sy + sh - 1)</c>.</returns>
 </CanvasRenderingContext2DGetImageData>
 </docs>

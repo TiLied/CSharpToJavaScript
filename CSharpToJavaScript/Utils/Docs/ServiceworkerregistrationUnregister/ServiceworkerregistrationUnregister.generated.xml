@@ -1,11 +1,10 @@
 <docs>
 <ServiceWorkerRegistrationUnregister>
 <summary>
-The <strong><c>unregister()</c></strong> method of the<br/><see cref="ServiceWorkerRegistration"/> interface unregisters the service worker<br/>registration and returns a <see cref="Promise"/>. The promise will resolve to<br/><c>false</c> if no registration was found, otherwise it resolves to<br/><c>true</c> irrespective of whether unregistration happened or not (it may not<br/>unregister if someone else just called <see cref="ServiceWorkerContainer.Register"/><br/>with the same scope.) The service worker will finish any ongoing operations before it is<br/>unregistered.
+The <strong><c>unregister()</c></strong> method of the<br/><see cref="ServiceWorkerRegistration."/> interface unregisters the service worker<br/>registration and returns a <see cref="Promise"/>. The promise will resolve to<br/><c>false</c> if no registration was found, otherwise it resolves to<br/><c>true</c> irrespective of whether unregistration happened or not (it may not<br/>unregister if someone else just called <see cref="ServiceWorkerContainer.Register."/><br/>with the same scope.) The service worker will finish any ongoing operations before it is<br/>unregistered.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This feature is available in <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">Web Workers</see>.</para></blockquote>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</see><br/>-<see href="https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker">Service workers basic code example</see><br/>-<see href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</see><br/>-<see cref="Promise"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web workers</see><br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</see><br/>-<see href="https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker">Service workers basic code example</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web workers</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/unregister"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns><see cref="Promise"/> resolves with a boolean indicating whether the service worker has<br/>unregistered or not.</returns>

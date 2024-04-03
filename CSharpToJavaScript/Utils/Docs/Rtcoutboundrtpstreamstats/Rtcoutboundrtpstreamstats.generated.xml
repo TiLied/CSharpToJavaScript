@@ -1,11 +1,11 @@
 <docs>
 <RTCOutboundRtpStreamStats>
 <summary>
-The <strong><c>RTCOutboundRtpStreamStats</c></strong> dictionary of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see> is used to report metrics and statistics related to an outbound {{Glossary("RTP")}} stream being sent by an <see cref="RTCRtpSender"/>.
+The <strong><c>RTCOutboundRtpStreamStats</c></strong> dictionary of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see> is used to report metrics and statistics related to an outbound {{Glossary("RTP")}} stream being sent by an <see cref="RTCRtpSender."/>.
 </summary>
 <remarks>
-<para>The statistics can be obtained by iterating the <see cref="RTCStatsReport"/> returned by <see cref="RTCPeerConnection.GetStats"/> or <see cref="RTCRtpSender.GetStats"/> until you find a report with the <see href="https://developer.mozilla.org#type"><c>type</c></see> of <c>outbound-rtp</c>.</para>
-<para>-<see cref="RTCStatsReport"/><br/></para>
+<para>The statistics can be obtained by iterating the <see cref="RTCStatsReport."/> returned by <see cref="RTCPeerConnection.GetStats."/> or <see cref="RTCRtpSender.GetStats."/> until you find a report with the <see href="https://developer.mozilla.org#type"><c>type</c></see> of <c>outbound-rtp</c>.</para>
+<para>-<see cref="RTCStatsReport."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </RTCOutboundRtpStreamStats>

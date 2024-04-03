@@ -1,11 +1,11 @@
 <docs>
 <VREyeParametersRenderHeight>
 <summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>renderHeight</c></strong> read-only property of the <see cref="VREyeParameters"/> interface describes the recommended render target height of each eye viewport, in pixels.
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>renderHeight</c></strong> read-only property of the <see cref="VREyeParameters."/> interface describes the recommended render target height of each eye viewport, in pixels.
 </summary>
 <remarks>
 <blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This property was part of the old <see href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</see>. It has been superseded by the <see href="https://immersive-web.github.io/webxr/">WebXR Device API</see>.</para></blockquote><para>This is already in device pixel units, so there&amp;apos;s no need to multiply by <see href="https://developer.mozilla.org/en-US/docs/Web/API/Window/devicePixelRatio">Window.devicePixelRatio</see> before setting to <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/height">HTMLCanvasElement.height.</see></para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API">WebVR API homepage</see><br/>-<see href="https://mixedreality.mozilla.org/"/> — demos, downloads, and other resources from the Mozilla VR team.<br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API">WebVR API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VREyeParameters/renderHeight"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A number, representing the height in pixels.</value>

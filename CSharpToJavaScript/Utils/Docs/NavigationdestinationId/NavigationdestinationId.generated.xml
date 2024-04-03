@@ -1,13 +1,13 @@
 <docs>
 <NavigationDestinationId>
 <summary>
-The <strong><c>id</c></strong> read-only property of the<br/><see cref="NavigationDestination"/> interface returns the <see cref="NavigationHistoryEntry.Id"/> value of the destination <see cref="NavigationHistoryEntry"/> if the <see cref="NavigateEvent.NavigationType"/> is <c>traverse</c>, or <c>null</c> otherwise.
+The <strong><c>id</c></strong> read-only property of the<br/><see cref="NavigationDestination."/> interface returns the <see cref="NavigationHistoryEntry.Id."/> value of the destination <see cref="NavigationHistoryEntry."/> if the <see cref="NavigateEvent.NavigationType."/> is <c>traverse</c>, or an empty string otherwise.
 </summary>
 <remarks>
 <para>The <c>id</c> is a unique, UA-generated value that always represents the history entry, useful to correlate a history entry with an external resource such as a storage cache.</para>
 <para>-<see href="https://developer.chrome.com/docs/web-platform/navigation-api/">Modern client-side routing: the Navigation API</see><br/>-<see href="https://github.com/WICG/navigation-api/blob/main/README.md">Navigation API explainer</see><br/>-Domenic Denicola&amp;apos;s <see href="https://gigantic-honored-octagon.glitch.me/">Navigation API live demo</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NavigationDestination/id"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string representing the <c>id</c> of the destination <see cref="NavigationHistoryEntry"/>, or <c>null</c>.</value>
+<value>A string representing the <c>id</c> of the destination <see cref="NavigationHistoryEntry."/>, or an empty string.</value>
 </NavigationDestinationId>
 </docs>

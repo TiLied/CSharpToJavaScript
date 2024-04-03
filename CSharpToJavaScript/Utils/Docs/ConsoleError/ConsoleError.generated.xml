@@ -1,11 +1,10 @@
 <docs>
 <ConsoleError>
 <summary>
-The <strong><c>console.error()</c></strong> method outputs an error message to the Web console.
+The <strong><c>console.error()</c></strong> static method outputs an error message to the console.
 </summary>
 <remarks>
-<para>AvailableInWorkers</para>
-<para>-<see href="https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/samples/gg589530(v=vs.85)">MSDN: Using the F12 Tools Console to View Errors and Status</see><br/>-<see href="https://developer.chrome.com/docs/devtools/console/api/#error">Chrome Developer Tools: Using the Console</see><br/></para>
+<para>-<see href="https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api#error">Microsoft Edge&amp;apos;s documentation for <c>console.error()</c></see><br/>-<see href="https://nodejs.org/docs/latest/api/console.html#consoleerrordata-args">Node.JS documentation for <c>console.error()</c></see><br/>-<see href="https://developer.chrome.com/docs/devtools/console/api/#error">Google Chrome&amp;apos;s documentation for <c>console.error()</c></see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/console/error"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>

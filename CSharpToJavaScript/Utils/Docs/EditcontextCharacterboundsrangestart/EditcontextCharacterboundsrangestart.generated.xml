@@ -1,0 +1,12 @@
+<docs>
+<EditContextCharacterBoundsRangeStart>
+<summary>
+The <strong><c>characterBoundsRangeStart</c></strong> read-only property of the <see cref="EditContext."/> interface indicates the index of the character, within the editable text content, that corresponds to the first item in the <see cref="EditContext.CharacterBounds."/> array.
+</summary>
+<remarks>
+<para>For example, if the <c>EditContent</c> contains the characters <c>abc</c>, and if <c>characterBoundRangeStart</c> is <c>1</c>, the first item in the <c>characterBounds</c> array contains the bounds for the character <c>b</c>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/EditContext/characterBoundsRangeStart"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Number"/>.</value>
+</EditContextCharacterBoundsRangeStart>
+</docs>

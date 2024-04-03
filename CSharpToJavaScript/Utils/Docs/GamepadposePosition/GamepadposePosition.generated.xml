@@ -1,13 +1,13 @@
 <docs>
 <GamepadPosePosition>
 <summary>
-The <strong><c>position</c></strong> read-only property of the <see cref="GamepadPose"/> interface returns the position of the <see cref="Gamepad"/> as a 3D vector.
+The <strong><c>position</c></strong> read-only property of the <see cref="GamepadPose."/> interface returns the position of the <see cref="Gamepad."/> as a 3D vector.
 </summary>
 <remarks>
 <para>The coordinate system is as follows:</para><para>Positions are measured in meters from an origin point — this point is the position the sensor was first read at.</para>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API">WebVR API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API">Gamepad API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GamepadPose/position"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="Float32Array"/>, or <c>null</c> if the gamepad is not able to provide position data.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> User agents may provide emulated position values through certain techniques; when doing so they should still report <see cref="GamepadPose.HasPosition"/> as false.</blockquote></value>
+<value>A <see cref="Float32Array"/>, or <c>null</c> if the gamepad is not able to provide position data.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> User agents may provide emulated position values through certain techniques; when doing so they should still report <see cref="GamepadPose.HasPosition."/> as false.</blockquote></value>
 </GamepadPosePosition>
 </docs>

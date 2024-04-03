@@ -1,10 +1,10 @@
 <docs>
 <DocumentTypeName>
 <summary>
-The read-only <strong><c>name</c></strong> property of the <see cref="DocumentType"/> returns the type of the document.
+The read-only <strong><c>name</c></strong> property of the <see cref="DocumentType."/> returns the type of the document.
 </summary>
 <remarks>
-<para>For synthetic <c>DocumentType</c>, this property reflects the value given in parameter to <see cref="DOMImplementation.CreateDocumentType"/>.</para><para>For HTML documents, browsers always set it up to <c>html</c>, whatever the actual <c>DOCTYPE</c> in the source code is.</para>
+<para>For synthetic <c>DocumentType</c>, this property reflects the value given in parameter to <see cref="DOMImplementation.CreateDocumentType."/>.</para><para>For HTML documents, browsers always set it up to <c>html</c>, whatever the actual <c>DOCTYPE</c> in the source code is.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentType/name"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A string.</value>

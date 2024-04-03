@@ -1,12 +1,12 @@
 <docs>
 <AudioNodeChannelCountMode>
 <summary>
-The <c>channelCountMode</c> property of the <see cref="AudioNode"/> interface represents an enumerated value describing the way channels must be matched between the node's inputs and outputs.
+The <c>channelCountMode</c> property of the <see cref="AudioNode."/> interface represents an enumerated value describing the way channels must be matched between the node's inputs and outputs.
 </summary>
 <remarks>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioNode/channelCountMode"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>The possible values of the <c>channelCountMode</c> enumerated value, and their meanings are:<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> In older versions of the spec, the default for a <see cref="ChannelSplitterNode"/> was <c>max</c>.</blockquote></value>
+<value>The possible values of the <c>channelCountMode</c> enumerated value, and their meanings are:<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> In older versions of the spec, the default for a <see cref="ChannelSplitterNode."/> was <c>max</c>.</blockquote></value>
 </AudioNodeChannelCountMode>
 </docs>

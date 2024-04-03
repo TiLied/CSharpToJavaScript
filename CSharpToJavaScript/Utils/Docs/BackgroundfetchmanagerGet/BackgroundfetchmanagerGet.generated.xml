@@ -1,11 +1,11 @@
 <docs>
 <BackgroundFetchManagerGet>
 <summary>
-The <strong><c>get()</c></strong> method of the <see cref="BackgroundFetchManager"/> interface returns a {{jsxref("Promise")}} that resolves with the <see cref="BackgroundFetchRegistration"/> associated with the provided <c>id</c> or <see cref="Undefined"/> if the <c>id</c> is not found.
+The <strong><c>get()</c></strong> method of the <see cref="BackgroundFetchManager."/> interface returns a {{jsxref("Promise")}} that resolves with the <see cref="BackgroundFetchRegistration."/> associated with the provided <c>id</c> or <see cref="Undefined"/> if the <c>id</c> is not found.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BackgroundFetchManager/get"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A {{jsxref("Promise")}} that resolves with a <see cref="BackgroundFetchRegistration"/> or {{jsxref("undefined")}}.</returns>
+<returns>A {{jsxref("Promise")}} that resolves with a <see cref="BackgroundFetchRegistration."/> or {{jsxref("undefined")}}.</returns>
 </BackgroundFetchManagerGet>
 </docs>

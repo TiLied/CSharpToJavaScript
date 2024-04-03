@@ -1,13 +1,13 @@
 <docs>
 <MouseEventMovementX>
 <summary>
-The <strong><c>movementX</c></strong> read-only property of the <see cref="MouseEvent"/> interface provides the difference in the X coordinate of the mouse pointer between the given event and the previous <see cref="Element/mousemove_event"/> event.<br/>In other words, the value of the property is computed like this: <c>currentEvent.movementX = currentEvent.screenX - previousEvent.screenX</c>.
+The <strong><c>movementX</c></strong> read-only property of the <see cref="MouseEvent."/> interface provides the difference in the X coordinate of the mouse pointer between the given event and the previous <see cref="Element/mousemove_event."/> event.<br/>In other words, the value of the property is computed like this: <c>currentEvent.movementX = currentEvent.screenX - previousEvent.screenX</c>.
 </summary>
 <remarks>
-<blockquote class="WARNING"><h5>WARNING</h5><para><strong>Warning:</strong> Browsers <see href="https://github.com/w3c/pointerlock/issues/42">use different units for <c>movementX</c> and <see cref="MouseEvent.ScreenX"/></see> than what the specification defines. Depending on the browser and operating system, the <c>movementX</c> units may be a physical pixel, a logical pixel, or a CSS pixel.</para></blockquote>
-<para>-<see cref="MouseEvent.MovementY"/><br/>-<see cref="MouseEvent"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Pointer_Lock_API">Pointer Lock</see><br/></para>
+<blockquote class="WARNING"><h5>WARNING</h5><para><strong>Warning:</strong> Browsers <see href="https://github.com/w3c/pointerlock/issues/42">use different units for <c>movementX</c> and <see cref="MouseEvent.ScreenX."/></see> than what the specification defines. Depending on the browser and operating system, the <c>movementX</c> units may be a physical pixel, a logical pixel, or a CSS pixel. You may want to avoid the movement properties, and instead calculate the delta between the current client values (<see cref="MouseEvent.ScreenX."/>, <see cref="MouseEvent.ScreenY."/>) and the previous client values.</para></blockquote>
+<para>-<see cref="MouseEvent.MovementY."/><br/>-<see cref="MouseEvent."/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Pointer_Lock_API">Pointer Lock</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/movementX"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A number.</value>
+<value>A number. Always zero on any <see cref="MouseEvent."/> other than <c>mousemove</c>.</value>
 </MouseEventMovementX>
 </docs>

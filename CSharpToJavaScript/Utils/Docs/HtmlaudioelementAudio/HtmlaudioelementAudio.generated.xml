@@ -1,12 +1,12 @@
 <docs>
 <HTMLAudioElementAudio>
 <summary>
-The <strong><c>Audio()</c></strong> constructor creates<br/>and returns a new <see cref="HTMLAudioElement"/> which can be either attached to<br/>a document for the user to interact with and/or listen to, or can be used<br/>offscreen to manage and play audio.
+The <strong><c>Audio()</c></strong> constructor creates<br/>and returns a new <see cref="HTMLAudioElement."/> which can be either attached to<br/>a document for the user to interact with and/or listen to, or can be used<br/>offscreen to manage and play audio.
 </summary>
 <remarks>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Media">Web media technologies</see><br/>-HTML element implementing this interface: <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio">audio</see>.<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement/Audio"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A new <see cref="HTMLAudioElement"/> object, configured to be used for playing back<br/>the audio from the file specified by <c>url</c>. The new object&amp;apos;s<br/><see cref="HTMLMediaElement.Preload"/> property is set<br/>to <c>auto</c> and its <c>src</c> property is set to the specified URL<br/>or <c>null</c> if no URL is given. If a URL is specified, the browser begins<br/>to <strong>asynchronously</strong> load the media resource before returning the new object.</returns>
+<returns>A new <see cref="HTMLAudioElement."/> object, configured to be used for playing back<br/>the audio from the file specified by <c>url</c>. The new object&amp;apos;s<br/><see cref="HTMLMediaElement.Preload."/> property is set<br/>to <c>auto</c> and its <c>src</c> property is set to the specified URL<br/>or <c>null</c> if no URL is given. If a URL is specified, the browser begins<br/>to <strong>asynchronously</strong> load the media resource before returning the new object.</returns>
 </HTMLAudioElementAudio>
 </docs>

@@ -1,11 +1,10 @@
 <docs>
 <WindowClearImmediate>
 <summary>
-This method clears the action specified by <see cref="Window.SetImmediate"/>.
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> This method clears the action specified by <see cref="Window.SetImmediate."/>.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This method is not expected to become standard, and is nowadays only implemented<br/>by Node.js 0.10+. It meets resistance both from <see href="https://bugzil.la/686201">Gecko</see> (Firefox) and <see href="https://crbug.com/146172">Chromium/WebKit</see> (Chrome/Safari).</para></blockquote>
-<para>-<see href="https://github.com/zloirock/core-js#setimmediate">Polyfill of <c>clearImmediate</c> in <c>core-js</c></see><br/>-<see cref="Window.SetImmediate"/><br/></para>
+<para>-<see href="https://github.com/zloirock/core-js#setimmediate">Polyfill of <c>clearImmediate</c> in <c>core-js</c></see><br/>-<see cref="Window.SetImmediate."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Window/clearImmediate"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>

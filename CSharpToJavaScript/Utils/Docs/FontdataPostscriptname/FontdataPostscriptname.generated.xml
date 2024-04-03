@@ -1,10 +1,11 @@
 <docs>
 <FontDataPostscriptName>
 <summary>
-The <strong><c>postscriptName</c></strong> read-only property of the <see cref="FontData"/> interface returns the PostScript name of the font face.
+The <strong><c>postscriptName</c></strong> read-only property of the <see cref="FontData."/> interface returns the PostScript name of the font face.
 </summary>
 <remarks>
 <para>This is the name used to uniquely identify the PostScript font, and is generally an unbroken sequence of characters that includes the font&amp;apos;s name and style.</para><para>Examples include:</para>
+<para>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/local-fonts">Use advanced typography with local fonts</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face">@font-face</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FontData/postscriptName"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A string.</value>

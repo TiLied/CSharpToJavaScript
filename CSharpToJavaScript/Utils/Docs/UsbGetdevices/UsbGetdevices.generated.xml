@@ -1,11 +1,11 @@
 <docs>
 <USBGetDevices>
 <summary>
-The <strong><c>getDevices</c></strong> method of the <see cref="USB"/> interface<br/>returns a {{JSxRef("Promise")}} that resolves with an array of <see cref="USBDevice"/><br/>objects for paired attached devices. For information on pairing devices, see<br/><see cref="USB.RequestDevice"/>.
+The <strong><c>getDevices</c></strong> method of the <see cref="USB."/> interface<br/>returns a {{JSxRef("Promise")}} that resolves with an array of <see cref="USBDevice."/><br/>objects for paired attached devices. For information on pairing devices, see<br/><see cref="USB.RequestDevice."/>.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/USB/getDevices"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A {{JSxRef("Promise")}} that resolves with an array of <see cref="USBDevice"/><br/>objects.</returns>
+<returns>A {{JSxRef("Promise")}} that resolves with an array of <see cref="USBDevice."/><br/>objects.</returns>
 </USBGetDevices>
 </docs>

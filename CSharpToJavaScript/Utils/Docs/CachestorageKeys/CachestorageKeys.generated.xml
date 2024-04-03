@@ -1,13 +1,13 @@
 <docs>
 <CacheStorageKeys>
 <summary>
-The <strong><c>keys()</c></strong> method of the <see cref="CacheStorage"/> interface returns a {{jsxref("Promise")}} that will resolve with an array containing strings corresponding to all of the named <see cref="Cache"/> objects tracked by the <see cref="CacheStorage"/> object in the order they were created.<br/>Use this method to iterate over a list of all <see cref="Cache"/> objects.
+The <strong><c>keys()</c></strong> method of the <see cref="CacheStorage."/> interface returns a {{jsxref("Promise")}} that will resolve with an array containing strings corresponding to all of the named <see cref="Cache."/> objects tracked by the <see cref="CacheStorage."/> object in the order they were created.<br/>Use this method to iterate over a list of all <see cref="Cache."/> objects.
 </summary>
 <remarks>
-<para>You can access <c>CacheStorage</c> through the global <see cref="Caches"/> property.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</see><br/>-<see cref="Cache"/><br/>-<see cref="Caches"/><br/></para>
+<para>You can access <c>CacheStorage</c> through the global <see cref="Caches."/> property.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</see><br/>-<see cref="Cache."/><br/>-<see cref="Caches."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage/keys"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>a {{jsxref("Promise")}} that resolves with an array of the <see cref="Cache"/> names inside the <see cref="CacheStorage"/> object.</returns>
+<returns>a {{jsxref("Promise")}} that resolves with an array of the <see cref="Cache."/> names inside the <see cref="CacheStorage."/> object.</returns>
 </CacheStorageKeys>
 </docs>

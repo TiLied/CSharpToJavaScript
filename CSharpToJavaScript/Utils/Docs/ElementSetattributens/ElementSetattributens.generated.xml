@@ -4,6 +4,8 @@
 <c>setAttributeNS</c> adds a new attribute or changes the value of an attribute<br/>with the given namespace and name.
 </summary>
 <remarks>
+<para>If you are working with HTML documents and you don't need to specify the requested attribute as being part of a specific namespace, use the <see cref="Element.SetAttribute."/> method instead.</para>
+<para>-<see cref="Element.HasAttributeNS."/><br/>-<see cref="Element.GetAttributeNS."/><br/>-<see cref="Element.RemoveAttributeNS."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttributeNS"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>

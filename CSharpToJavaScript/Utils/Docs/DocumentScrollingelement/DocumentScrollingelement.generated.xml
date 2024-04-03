@@ -1,12 +1,12 @@
 <docs>
 <DocumentScrollingElement>
 <summary>
-The <strong><c>scrollingElement</c></strong> read-only property of the<br/><see cref="Document"/> interface returns a reference to the <see cref="Element"/> that<br/>scrolls the document. In standards mode, this is the root element of the<br/>document, <see cref="Document.DocumentElement"/>.
+The <strong><c>scrollingElement</c></strong> read-only property of the<br/><see cref="Document."/> interface returns a reference to the <see cref="Element."/> that<br/>scrolls the document. In standards mode, this is the root element of the<br/>document, <see cref="Document.DocumentElement."/>.
 </summary>
 <remarks>
 <para>When in quirks mode, the <c>scrollingElement</c> attribute returns the HTML<br/><c>body</c> element if it exists and is <see href="https://drafts.csswg.org/cssom-view/#potentially-scrollable">potentially scrollable</see>, otherwise it returns null.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/scrollingElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>The <see cref="Element"/> that scrolls the document, usually the root element (unless not in standard mode).</value>
+<value>The <see cref="Element."/> that scrolls the document, usually the root element (unless not in standard mode).</value>
 </DocumentScrollingElement>
 </docs>

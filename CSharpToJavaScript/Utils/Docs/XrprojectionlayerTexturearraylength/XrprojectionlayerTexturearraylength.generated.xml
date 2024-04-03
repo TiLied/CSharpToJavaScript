@@ -1,11 +1,11 @@
 <docs>
 <XRProjectionLayerTextureArrayLength>
 <summary>
-The read-only <strong><c>textureArrayLength</c></strong> property of the <see cref="XRProjectionLayer"/> interface indicates layer's layer count for array textures when using <c>texture-array</c> as the <c>textureType</c>.
+The read-only <strong><c>textureArrayLength</c></strong> property of the <see cref="XRProjectionLayer."/> interface indicates layer's layer count for array textures when using <c>texture-array</c> as the <c>textureType</c>.
 </summary>
 <remarks>
-<para>The projection layer's layer count for array textures is determined by the user agent or the device. It is reported in the <see cref="XRSubImage"/>, which can only be accessed inside the frame loop. If you want to manage your own depth buffers and don't want to wait for first frame after layer creation to determine the required dimensions for those buffers, the <c>textureArrayLength</c> property allows access to layer count for array textures outside the frame loop. Allocation of these buffers can happen directly after layer creation.</para>
-<para>-<see cref="XRSubImage"/><br/></para>
+<para>The projection layer's layer count for array textures is determined by the user agent or the device. It is reported in the <see cref="XRSubImage."/>, which can only be accessed inside the frame loop. If you want to manage your own depth buffers and don't want to wait for first frame after layer creation to determine the required dimensions for those buffers, the <c>textureArrayLength</c> property allows access to layer count for array textures outside the frame loop. Allocation of these buffers can happen directly after layer creation.</para>
+<para>-<see cref="XRSubImage."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRProjectionLayer/textureArrayLength"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A number indicating the number of layers of the color textures when using <c>texture-array</c> as the <c>textureType</c>. Otherwise it will be <c>1</c>.</value>

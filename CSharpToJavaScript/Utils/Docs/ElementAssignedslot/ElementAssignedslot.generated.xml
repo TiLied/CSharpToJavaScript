@@ -1,11 +1,11 @@
 <docs>
 <ElementAssignedSlot>
 <summary>
-The <strong><c>assignedSlot</c></strong> read-only<br/>property of the <see cref="Element"/> interface returns an<br/><see cref="HTMLSlotElement"/> representing the {{htmlelement("slot")}} element the<br/>node is inserted in.
+The <strong><c>assignedSlot</c></strong> read-only<br/>property of the <see cref="Element."/> interface returns an<br/><see cref="HTMLSlotElement."/> representing the {{htmlelement("slot")}} element the<br/>node is inserted in.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/assignedSlot"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An <see cref="'HTMLSlotElement'"/> instance, or <c>null</c> if the element is not<br/>assigned to a slot, or if the associated shadow root was attached with its<br/><see cref="ShadowRoot.Mode"/> set to <c>closed</c> (see<br/><see cref="Element.AttachShadow"/> for further details).</value>
+<value>An <see cref="'HTMLSlotElement'."/> instance, or <c>null</c> if the element is not<br/>assigned to a slot, or if the associated shadow root was attached with its<br/><see cref="ShadowRoot.Mode."/> set to <c>closed</c> (see<br/><see cref="Element.AttachShadow."/> for further details).</value>
 </ElementAssignedSlot>
 </docs>

@@ -1,10 +1,10 @@
 <docs>
 <ElementInternalsReportValidity>
 <summary>
-The <strong><c>reportValidity()</c></strong> method of the <see cref="ElementInternals"/> interface checks if the element meets any <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation">constraint validation</see> rules applied to it.
+The <strong><c>reportValidity()</c></strong> method of the <see cref="ElementInternals."/> interface checks if the element meets any <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation">constraint validation</see> rules applied to it.
 </summary>
 <remarks>
-<para>If <c>reportValidity</c> returns <c>false</c> then a cancelable <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/invalid_event">invalid event</see> is fired on the element.</para><para>This method behaves in a similar way to <see cref="ElementInternals.CheckValidity"/>, however it additionally sends the value of <see cref="ElementInternals.ValidationMessage"/> to the user agent for display.</para>
+<para>If <c>reportValidity</c> returns <c>false</c> then a cancelable <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/invalid_event">invalid event</see> is fired on the element.</para><para>This method behaves in a similar way to <see cref="ElementInternals.CheckValidity."/>, however it additionally sends the value of <see cref="ElementInternals.ValidationMessage."/> to the user agent for display.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/reportValidity"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>A boolean value, <c>true</c> if the element meets all validation constraints.</returns>

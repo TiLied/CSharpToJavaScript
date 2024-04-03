@@ -1,13 +1,13 @@
 <docs>
-<ConsoleTimeStamp>
+<ConsoleTimestamp>
 <summary>
-The <strong><c>console.timeStamp</c></strong> method adds a single marker to the browser&amp;apos;s Performance tool (<see href="https://profiler.firefox.com/docs/#/">Firefox</see>, <see href="https://developer.chrome.com/docs/devtools/evaluate-performance/reference/">Chrome</see>). This lets you<br/>correlate a point in your code with the other events recorded in the timeline, such as<br/>layout and paint events.
+The <strong><c>console.timeStamp()</c></strong> static method adds a single marker to the browser&amp;apos;s Performance tool (<see href="https://profiler.firefox.com/docs/#/">Firefox</see>, <see href="https://developer.chrome.com/docs/devtools/evaluate-performance/reference/">Chrome</see>). This lets you correlate a point in your code with the other events recorded in the timeline, such as layout and paint events.
 </summary>
 <remarks>
-<para>You can optionally supply an argument to label the timestamp, and this label will then<br/>be shown alongside the marker.</para><para>AvailableInWorkers</para>
-<para>-<see cref="Console.Time"/><br/>-<see cref="Console.TimeEnd"/><br/>-<see href="https://web.archive.org/web/20211207010020/https://firefox-source-docs.mozilla.org/devtools-user/performance/waterfall/index.html#adding-markers-with-the-console-api">Adding markers with the console API</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/console/timeStamp"> <em>See also on MDN</em> </seealso></para>
+<para>You can optionally supply an argument to label the timestamp, and this label will then be shown alongside the marker.</para>
+<para>-<see cref="Console/time_static."/><br/>-<see cref="Console/timeLog_static."/><br/>-<see cref="Console/timeEnd_static."/><br/>-<see href="https://web.archive.org/web/20211207010020/https://firefox-source-docs.mozilla.org/devtools-user/performance/waterfall/index.html#adding-markers-with-the-console-api">Adding markers with the console API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/console/timestamp"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
-</ConsoleTimeStamp>
+</ConsoleTimestamp>
 </docs>

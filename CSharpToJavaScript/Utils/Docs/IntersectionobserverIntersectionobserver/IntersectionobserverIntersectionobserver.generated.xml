@@ -1,12 +1,12 @@
 <docs>
 <IntersectionObserverIntersectionObserver>
 <summary>
-The <strong><c>IntersectionObserver()</c></strong> constructor creates and returns a new <see cref="IntersectionObserver"/> object.
+The <strong><c>IntersectionObserver()</c></strong> constructor creates and returns a new <see cref="IntersectionObserver."/> object.
 </summary>
 <remarks>
 <para>The <c>rootMargin</c>, if specified, is checked to ensure it&amp;apos;s syntactically correct.<br/>If not specified, or an empty string, the default is <c>0px 0px 0px 0px</c>.</para><para>The <c>threshold</c>s, if specified, are checked to ensure that they&amp;apos;re all in the range 0.0 and 1.0 inclusive, and the threshold list is sorted in ascending numeric order.<br/>If the threshold list is empty, it&amp;apos;s set to the array <c>[0.0]</c>.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A new <see cref="IntersectionObserver"/> which can be used to watch for the visibility of a target element within the specified <c>root</c> crossing through any of the<br/>specified visibility <c>threshold</c>s.<br/>Call its <see cref="IntersectionObserver.Observe"/> method to begin watching for the visibility changes on a given target.</returns>
+<returns>A new <see cref="IntersectionObserver."/> which can be used to watch for the visibility of a target element within the specified <c>root</c> crossing through any of the<br/>specified visibility <c>threshold</c>s.<br/>Call its <see cref="IntersectionObserver.Observe."/> method to begin watching for the visibility changes on a given target.</returns>
 </IntersectionObserverIntersectionObserver>
 </docs>

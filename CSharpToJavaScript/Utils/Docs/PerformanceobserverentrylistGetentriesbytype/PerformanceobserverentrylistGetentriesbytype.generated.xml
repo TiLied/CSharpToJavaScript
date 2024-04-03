@@ -1,11 +1,11 @@
 <docs>
 <PerformanceObserverEntryListGetEntriesByType>
 <summary>
-The <strong><c>getEntriesByType()</c></strong> method of the <see cref="PerformanceObserverEntryList"/> returns a list of explicitly <strong>observed</strong> <see cref="PerformanceEntry"/> objects for a given <see cref="PerformanceEntry.EntryType"/>. The list's members are determined by the set of <see cref="PerformanceEntry.EntryType"/> specified in the call to the <see cref="PerformanceObserver.Observe"/> method. The list is available in the observer's callback function (as the first parameter in the callback).
+The <strong><c>getEntriesByType()</c></strong> method of the <see cref="PerformanceObserverEntryList."/> returns a list of explicitly <strong>observed</strong> <see cref="PerformanceEntry."/> objects for a given <see cref="PerformanceEntry.EntryType."/>. The list's members are determined by the set of <see cref="PerformanceEntry.EntryType."/> specified in the call to the <see cref="PerformanceObserver.Observe."/> method. The list is available in the observer's callback function (as the first parameter in the callback).
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceObserverEntryList/getEntriesByType"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A list of explicitly <strong>observed</strong> <see cref="PerformanceEntry"/> objects that have the specified <c>type</c>. The items will be in chronological order based on the entries' <see cref="PerformanceEntry.StartTime"/>. If no objects have the specified <c>type</c>, or no argument is provided, an empty list is returned.</returns>
+<returns>A list of explicitly <strong>observed</strong> <see cref="PerformanceEntry."/> objects that have the specified <c>type</c>. The items will be in chronological order based on the entries' <see cref="PerformanceEntry.StartTime."/>. If no objects have the specified <c>type</c>, or no argument is provided, an empty list is returned.</returns>
 </PerformanceObserverEntryListGetEntriesByType>
 </docs>

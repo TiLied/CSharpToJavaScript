@@ -1,7 +1,7 @@
 <docs>
 <RTCCertificateGetFingerprints>
 <summary>
-The <strong><c>getFingerprints()</c></strong> method of the <strong><see cref="RTCCertificate"/></strong> interface is used to get an array of certificate fingerprints.
+The <strong><c>getFingerprints()</c></strong> method of the <strong><see cref="RTCCertificate."/></strong> interface is used to get an array of certificate fingerprints.
 </summary>
 <remarks>
 <para>An application can use this method to compare the client certificate fingerprints with the certificate fingerprints from the server.<br/>The server and client may support different sets of algorithms: all fingerprint values for the set of algorithms supported by both client and server should match.</para>

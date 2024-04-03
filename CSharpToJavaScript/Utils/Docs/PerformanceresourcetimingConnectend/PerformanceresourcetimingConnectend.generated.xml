@@ -1,7 +1,7 @@
 <docs>
 <PerformanceResourceTimingConnectEnd>
 <summary>
-The <strong><c>connectEnd</c></strong> read-only property returns the <see cref="DOMHighResTimeStamp"/> immediately after the browser finishes establishing the connection to the server to retrieve the resource. The timestamp value includes the time interval to establish the transport connection, as well as other time intervals such as TLS handshake and <see href="https://en.wikipedia.org/wiki/SOCKS">SOCKS</see> authentication.
+The <strong><c>connectEnd</c></strong> read-only property returns the <see cref="DOMHighResTimeStamp."/> immediately after the browser finishes establishing the connection to the server to retrieve the resource. The timestamp value includes the time interval to establish the transport connection, as well as other time intervals such as TLS handshake and <see href="https://en.wikipedia.org/wiki/SOCKS">SOCKS</see> authentication.
 </summary>
 <remarks>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Timing-Allow-Origin">Timing-Allow-Origin</see><br/></para>

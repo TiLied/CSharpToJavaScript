@@ -1,0 +1,12 @@
+<docs>
+<AbortSignalTimeout>
+<summary>
+The <strong><c>AbortSignal.timeout()</c></strong> static method returns an <see cref="AbortSignal."/> that will automatically abort after a specified time.
+</summary>
+<remarks>
+<para>The signal aborts with a <c>TimeoutError</c> <see cref="DOMException."/> on timeout, or with <c>AbortError</c> <see cref="DOMException."/> due to pressing a browser stop button (or some other inbuilt "stop" operation).<br/>This allows UIs to differentiate timeout errors, which typically require user notification, from user-triggered aborts that do not.</para><para>The timeout is based on active rather than elapsed time, and will effectively be paused if the code is running in a suspended worker, or while the document is in a back-forward cache (&amp;quot;<see href="https://web.dev/articles/bfcache">bfcache</see>&amp;quot;).</para><para>To combine multiple signals, you can use <see cref="AbortSignal/any_static."/>, for example, to directly abort a download using either a timeout signal or by calling <see cref="AbortController.Abort."/>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal/timeout"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="AbortSignal."/>.The signal will abort with its <see cref="AbortSignal.Reason."/> property set to a <c>TimeoutError</c> <see cref="DOMException."/> on timeout, or an <c>AbortError</c> <see cref="DOMException."/> if the operation was user-triggered.</returns>
+</AbortSignalTimeout>
+</docs>

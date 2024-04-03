@@ -1,11 +1,11 @@
 <docs>
 <EventComposedPath>
 <summary>
-The <strong><c>composedPath()</c></strong> method of the <see cref="Event"/><br/>interface returns the event&amp;apos;s path which is an array of the objects on which listeners<br/>will be invoked. This does not include nodes in shadow trees if the shadow root was<br/>created with its <see cref="ShadowRoot.Mode"/> closed.
+The <strong><c>composedPath()</c></strong> method of the <see cref="Event."/><br/>interface returns the event&amp;apos;s path which is an array of the objects on which listeners<br/>will be invoked. This does not include nodes in shadow trees if the shadow root was<br/>created with its <see cref="ShadowRoot.Mode."/> closed.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Event/composedPath"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>An array of <see cref="EventTarget"/> objects representing the objects on which an<br/>event listener will be invoked.</returns>
+<returns>An array of <see cref="EventTarget."/> objects representing the objects on which an<br/>event listener will be invoked.</returns>
 </EventComposedPath>
 </docs>

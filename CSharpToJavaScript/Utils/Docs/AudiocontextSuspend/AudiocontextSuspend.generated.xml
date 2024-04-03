@@ -1,10 +1,10 @@
 <docs>
 <AudioContextSuspend>
 <summary>
-The <c>suspend()</c> method of the <see cref="AudioContext"/> Interface suspends the progression of time in the audio context, temporarily halting audio hardware access and reducing CPU/battery usage in the process — this is useful if you want an application to power down the audio hardware when it will not be using an audio context for a while.
+The <c>suspend()</c> method of the <see cref="AudioContext."/> Interface suspends the progression of time in the audio context, temporarily halting audio hardware access and reducing CPU/battery usage in the process — this is useful if you want an application to power down the audio hardware when it will not be using an audio context for a while.
 </summary>
 <remarks>
-<para>This method will cause an <c>INVALID_STATE_ERR</c> exception to be thrown if called on an <see cref="OfflineAudioContext"/>.</para>
+<para>This method will cause an <c>INVALID_STATE_ERR</c> exception to be thrown if called on an <see cref="OfflineAudioContext."/>.</para>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/suspend"> <em>See also on MDN</em> </seealso></para>
 </remarks>

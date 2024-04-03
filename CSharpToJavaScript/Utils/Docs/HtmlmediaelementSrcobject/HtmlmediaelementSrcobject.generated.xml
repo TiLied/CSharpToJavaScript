@@ -1,12 +1,12 @@
 <docs>
 <HTMLMediaElementSrcObject>
 <summary>
-The <strong><c>srcObject</c></strong> property of the<br/><see cref="HTMLMediaElement"/> interface sets or returns the object which serves as<br/>the source of the media associated with the <see cref="HTMLMediaElement"/>.
+The <strong><c>srcObject</c></strong> property of the<br/><see cref="HTMLMediaElement."/> interface sets or returns the object which serves as<br/>the source of the media associated with the <see cref="HTMLMediaElement."/>.
 </summary>
 <remarks>
-<para>The object can be a <see cref="MediaStream"/>, a <see cref="MediaSource"/>, a<br/><see cref="Blob"/>, or a <see cref="File"/> (which inherits from <c>Blob</c>).</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> As of March 2020, only Safari has full support for <c>srcObject</c>, i.e. using <c>MediaSource</c>, <c>MediaStream</c>, <c>Blob</c>, and <c>File</c> objects as values. Other browsers support <c>MediaStream</c> objects; until they catch up, consider falling back to creating a URL with <see cref="URL.CreateObjectURL"/> and assigning it to <see cref="HTMLMediaElement.Src"/> (see below for an example). In addition, as of version 108 Chromium supports attaching a dedicated worker <c>MediaSource</c> object by assigning that object's <see cref="MediaSourceHandle"/> instance (transferred from the worker) to <c>srcObject</c>.</para></blockquote>
+<para>The object can be a <see cref="MediaStream."/>, a <see cref="MediaSource."/>, a<br/><see cref="Blob."/>, or a <see cref="File."/> (which inherits from <c>Blob</c>).</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> As of March 2020, only Safari has full support for <c>srcObject</c>, i.e. using <c>MediaSource</c>, <c>MediaStream</c>, <c>Blob</c>, and <c>File</c> objects as values. Other browsers support <c>MediaStream</c> objects; until they catch up, consider falling back to creating a URL with <see cref="URL.CreateObjectURL_static."/> and assigning it to <see cref="HTMLMediaElement.Src."/> (see below for an example). In addition, as of version 108 Chromium supports attaching a dedicated worker <c>MediaSource</c> object by assigning that object's <see cref="MediaSourceHandle."/> instance (transferred from the worker) to <c>srcObject</c>.</para></blockquote>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/srcObject"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="'MediaStream'"/>, <see cref="'MediaSource'"/>, <see cref="'Blob'"/>, or<br/><see cref="'File'"/> object (though see the compatibility table for what is actually<br/>supported).</value>
+<value>A <see cref="'MediaStream'."/>, <see cref="'MediaSource'."/>, <see cref="'Blob'."/>, or<br/><see cref="'File'."/> object (though see the compatibility table for what is actually<br/>supported).</value>
 </HTMLMediaElementSrcObject>
 </docs>

@@ -1,12 +1,12 @@
 <docs>
 <HTMLMediaElementError>
 <summary>
-The <strong><c>HTMLMediaElement.error</c></strong> property is the<br/><see cref="MediaError"/> object for the most recent error, or <c>null</c> if<br/>there has not been an error. When an <see cref="HTMLMediaElement/error_event"/> event is received by the<br/>element, you can determine details about what happened by examining this object.
+The <strong><c>HTMLMediaElement.error</c></strong> property is the<br/><see cref="MediaError."/> object for the most recent error, or <c>null</c> if<br/>there has not been an error. When an <see cref="HTMLMediaElement/error_event."/> event is received by the<br/>element, you can determine details about what happened by examining this object.
 </summary>
 <remarks>
-<para>-<see cref="HTMLMediaElement"/>: Interface used to define the <c>HTMLMediaElement.error</c> property<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio">audio</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">video</see><br/></para>
+<para>-<see cref="HTMLMediaElement."/>: Interface used to define the <c>HTMLMediaElement.error</c> property<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio">audio</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">video</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/error"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="MediaError"/> object describing the most recent error to occur on the<br/>media element or <c>null</c> if no errors have occurred.</value>
+<value>A <see cref="MediaError."/> object describing the most recent error to occur on the<br/>media element or <c>null</c> if no errors have occurred.</value>
 </HTMLMediaElementError>
 </docs>

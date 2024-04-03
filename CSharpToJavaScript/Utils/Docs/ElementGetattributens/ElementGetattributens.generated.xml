@@ -1,10 +1,11 @@
 <docs>
 <ElementGetAttributeNS>
 <summary>
-The <strong><c>getAttributeNS()</c></strong> method of the <see cref="Element"/><br/>interface returns the string value of the attribute with the specified namespace and<br/>name. If the named attribute does not exist, the value returned will either be<br/><c>null</c> or <c>&amp;quot;&amp;quot;</c> (the empty string); see <see href="https://developer.mozilla.org#notes">Notes</see> for<br/>details.
+The <strong><c>getAttributeNS()</c></strong> method of the <see cref="Element."/><br/>interface returns the string value of the attribute with the specified namespace and<br/>name. If the named attribute does not exist, the value returned will either be<br/><c>null</c> or <c>&amp;quot;&amp;quot;</c> (the empty string); see <see href="https://developer.mozilla.org#notes">Notes</see> for<br/>details.
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Code_snippets/getAttributeNS">Code snippets:getAttributeNS</see><br/></para>
+<para>If you are working with HTML documents and you don't need to specify the requested attribute as being part of a specific namespace, use the <see cref="Element.GetAttribute."/> method instead.</para>
+<para>-<see cref="Element.HasAttributeNS."/><br/>-<see cref="Element.SetAttributeNS."/><br/>-<see cref="Element.RemoveAttributeNS."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttributeNS"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>The string value of the specified attribute. If the attribute doesn&amp;apos;t exist, the result<br/>is <c>null</c>.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> Earlier versions of the DOM specification had<br/>this method described as returning an empty string for non-existent attributes, but it<br/>was not typically implemented this way since null makes more sense. The DOM4<br/>specification now says this method should return null for non-existent attributes.</blockquote></returns>

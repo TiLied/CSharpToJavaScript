@@ -1,12 +1,12 @@
 <docs>
 <CSSRuleType>
 <summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The read-only <strong><c>type</c></strong> property of the<br/><see cref="CSSRule"/> interface is a deprecated property that returns an integer<br/>indicating which type of rule the <see cref="CSSRule"/> represents.
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The read-only <strong><c>type</c></strong> property of the<br/><see cref="CSSRule."/> interface is a deprecated property that returns an integer<br/>indicating which type of rule the <see cref="CSSRule."/> represents.
 </summary>
 <remarks>
 <para>If you need to distinguish different types of CSS rule, a good alternative is to use <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/name"><c>constructor.name</c></see>:</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSRule/type"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>Both <c>CSSRule.UNKNOWN_RULE</c> (<c>0</c>) and <c>CSSRule.CHARSET_RULE</c> (<c>2</c>) are deprecated and cannot be obtained any more</value>
+<value>The values <c>CSSRule.UNKNOWN_RULE</c> (<c>0</c>), <c>CSSRule.CHARSET_RULE</c> (<c>2</c>), <c>CSSRule.DOCUMENT_RULE</c> (<c>13</c>), <c>CSSRule.VIEWPORT_RULE</c> (<c>14</c>), and <c>CSSRule.REGION_STYLE_RULE</c> (<c>16</c>) cannot be obtained anymore.</value>
 </CSSRuleType>
 </docs>

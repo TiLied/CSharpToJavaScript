@@ -1,10 +1,10 @@
 <docs>
 <NavigatorUADataToJSON>
 <summary>
-The <strong><c>toJSON()</c></strong> method of the <see cref="NavigatorUAData"/> interface is a <strong>serializer</strong> that returns a JSON representation of the <strong>low entropy</strong> properties of the <c>NavigatorUAData</c> object.
+The <strong><c>toJSON()</c></strong> method of the <see cref="NavigatorUAData."/> interface is a <strong>serializer</strong> that returns a JSON representation of the <strong>low entropy</strong> properties of the <c>NavigatorUAData</c> object.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> The terms <strong>high entropy</strong> and <strong>low entropy</strong> refer to the amount of information these values reveal about the browser. The low entropy values returned by this method are those which do not reveal information able to identify a user. High entropy values can only be returned by the <see cref="NavigatorUAData.GetHighEntropyValues"/> method.</para></blockquote>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> The terms <strong>high entropy</strong> and <strong>low entropy</strong> refer to the amount of information these values reveal about the browser. The low entropy values returned by this method are those which do not reveal information able to identify a user. High entropy values can only be returned by the <see cref="NavigatorUAData.GetHighEntropyValues."/> method.</para></blockquote>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorUAData/toJSON"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>A JSON object.</returns>

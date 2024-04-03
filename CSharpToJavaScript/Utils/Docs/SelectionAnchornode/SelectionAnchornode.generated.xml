@@ -1,13 +1,13 @@
 <docs>
 <SelectionAnchorNode>
 <summary>
-The <strong><c>Selection.anchorNode</c></strong> read-only property returns the<br/><see cref="Node"/> in which the selection begins.
+The <strong><c>Selection.anchorNode</c></strong> read-only property returns the<br/><see cref="Node."/> in which the selection begins.
 </summary>
 <remarks>
 <para>A user may make a selection from left to right (in document order) or right to left<br/>(reverse of document order). The anchor is where the user began the selection. This can<br/>be visualized by holding the Shift key and pressing the arrow keys on your keyboard. The<br/>selection&amp;apos;s anchor does not move, but the selection&amp;apos;s focus, the other end of the<br/>selection, does move.</para>
-<para>-<see cref="Selection"/>, the interface it belongs to.<br/></para>
+<para>-<see cref="Selection."/>, the interface it belongs to.<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Selection/anchorNode"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="Node"/> object.</value>
+<value>A <see cref="Node."/> object.</value>
 </SelectionAnchorNode>
 </docs>

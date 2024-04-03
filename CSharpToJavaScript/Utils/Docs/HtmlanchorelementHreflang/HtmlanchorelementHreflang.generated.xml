@@ -1,0 +1,13 @@
+<docs>
+<HTMLAnchorElementHreflang>
+<summary>
+The <strong><c>hreflang</c></strong> property of the <see cref="HTMLAnchorElement."/> interface is a string that is the language of the linked resource.
+</summary>
+<remarks>
+<para>It reflects the <c>hreflang</c> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a">a</see> element and is the empty string (<c>&amp;quot;&amp;quot;</c>) if there is no <c>hreflang</c> element.</para><para>Web browsers and search engines may use this information to understand the language of the linked content better, but they are not required to follow it. The value provided for the <c>hreflang</c> attribute adheres to the format defined in {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}. If not, it is ignored.</para><para>Web browsers do not rely solely on the <c>hreflang</c> attribute after fetching the linked resource. Instead, they use language information directly associated with the resource (e.g., through HTTP headers) to determine its language.</para>
+<para>-<see cref="HTMLLinkElement.Hreflang."/> property<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAnchorElement/hreflang"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string that contains a language tag, or the empty string (<c>&amp;quot;&amp;quot;</c>) if there is no <c>hreflang</c> element.</value>
+</HTMLAnchorElementHreflang>
+</docs>

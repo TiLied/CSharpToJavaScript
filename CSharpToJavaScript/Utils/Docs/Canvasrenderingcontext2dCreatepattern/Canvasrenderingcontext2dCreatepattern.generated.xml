@@ -1,13 +1,13 @@
 <docs>
 <CanvasRenderingContext2DCreatePattern>
 <summary>
-The <strong><c>CanvasRenderingContext2D.createPattern()</c></strong> method of the Canvas 2D API creates a pattern using the specified image and repetition.<br/>This method returns a <see cref="CanvasPattern"/>.
+The <strong><c>CanvasRenderingContext2D.createPattern()</c></strong> method of the Canvas 2D API creates a pattern using the specified image and repetition.<br/>This method returns a <see cref="CanvasPattern."/>.
 </summary>
 <remarks>
-<para>This method doesn&amp;apos;t draw anything to the canvas directly.<br/>The pattern it creates must be assigned to the <see cref="CanvasRenderingContext2D.FillStyle"/> or <see cref="CanvasRenderingContext2D.StrokeStyle"/> properties, after which it is applied to any subsequent drawing.</para>
-<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasPattern"/><br/></para>
+<para>This method doesn&amp;apos;t draw anything to the canvas directly.<br/>The pattern it creates must be assigned to the <see cref="CanvasRenderingContext2D.FillStyle."/> or <see cref="CanvasRenderingContext2D.StrokeStyle."/> properties, after which it is applied to any subsequent drawing.</para>
+<para>-The interface defining this method: <see cref="CanvasRenderingContext2D."/><br/>-<see cref="CanvasPattern."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createPattern"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>If the <c>image</c> is not fully loaded (<see cref="HTMLImageElement.Complete"/> is <c>false</c>), then <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><c>null</c></see> is returned.</returns>
+<returns>If the <c>image</c> is not fully loaded (<see cref="HTMLImageElement.Complete."/> is <c>false</c>), then <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><c>null</c></see> is returned.</returns>
 </CanvasRenderingContext2DCreatePattern>
 </docs>

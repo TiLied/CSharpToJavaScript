@@ -1,12 +1,12 @@
 <docs>
 <HTMLTableElementRows>
 <summary>
-The read-only <see cref="HTMLTableElement"/><br/>property <strong><c>rows</c></strong> returns a live<br/><see cref="HTMLCollection"/> of all the rows in the table, including the rows<br/>contained within any <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/thead">thead</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tfoot">tfoot</see>, and<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tbody">tbody</see> elements.
+The read-only <see cref="HTMLTableElement."/><br/>property <strong><c>rows</c></strong> returns a live<br/><see cref="HTMLCollection."/> of all the rows in the table, including the rows<br/>contained within any <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/thead">thead</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tfoot">tfoot</see>, and<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tbody">tbody</see> elements.
 </summary>
 <remarks>
 <para>Although the property itself is read-only, the returned object is live and allows the<br/>modification of its content.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/rows"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An <see cref="HTMLCollection"/> providing a live-updating list of the<br/><see cref="HTMLTableRowElement"/> objects representing all of the {{HTMLElement("tr")}}<br/>elements contained in the table. This provides quick access to all of the table rows,<br/>without having to manually search for them.</value>
+<value>An <see cref="HTMLCollection."/> providing a live-updating list of the<br/><see cref="HTMLTableRowElement."/> objects representing all of the {{HTMLElement("tr")}}<br/>elements contained in the table. This provides quick access to all of the table rows,<br/>without having to manually search for them.</value>
 </HTMLTableElementRows>
 </docs>

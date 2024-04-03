@@ -1,0 +1,11 @@
+<docs>
+<HTMLProgressElementPosition>
+<summary>
+The <strong><c>position</c></strong> read-only property of the <see cref="HTMLProgressElement."/> interface returns current progress of the {{HTMLElement("progress")}} element.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLProgressElement/position"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>For determinate progress bar returns the result of current value decided by max value, i.e., a fraction between <c>0.0</c> and <c>1.0</c>.For indeterminate progress bar the value is always <c>-1</c>.</value>
+</HTMLProgressElementPosition>
+</docs>

@@ -1,11 +1,11 @@
 <docs>
 <XRRigidTransformInverse>
 <summary>
-The read-only <strong><c>inverse</c></strong> property<br/>of the <see cref="XRRigidTransform"/> interface returns another<br/><see cref="XRRigidTransform"/> object which is the inverse of its owning<br/>transform. That is, you can always get the inverse of any<br/><c>XRRigidTransform</c> using its <c>inverse</c> property, instead of having<br/>to explicitly generate it.
+The read-only <strong><c>inverse</c></strong> property<br/>of the <see cref="XRRigidTransform."/> interface returns another<br/><see cref="XRRigidTransform."/> object which is the inverse of its owning<br/>transform. That is, you can always get the inverse of any<br/><c>XRRigidTransform</c> using its <c>inverse</c> property, instead of having<br/>to explicitly generate it.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRRigidTransform/inverse"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An <see cref="XRRigidTransform"/> which contains the inverse of the<br/><c>XRRigidTransform</c> on which it&amp;apos;s accessed.Applying the inverse of a transform to any object previously transformed by the parent<br/><c>XRRigidTransform</c> always undoes the transformation, resulting in the object<br/>returning to its previous pose. In other words, its position and orientation both return<br/>to their prior configurations.</value>
+<value>An <see cref="XRRigidTransform."/> which contains the inverse of the<br/><c>XRRigidTransform</c> on which it&amp;apos;s accessed.Applying the inverse of a transform to any object previously transformed by the parent<br/><c>XRRigidTransform</c> always undoes the transformation, resulting in the object<br/>returning to its previous pose. In other words, its position and orientation both return<br/>to their prior configurations.</value>
 </XRRigidTransformInverse>
 </docs>

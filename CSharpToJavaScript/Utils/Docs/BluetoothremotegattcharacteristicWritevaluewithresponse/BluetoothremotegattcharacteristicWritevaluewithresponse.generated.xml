@@ -1,7 +1,7 @@
 <docs>
 <BluetoothRemoteGATTCharacteristicWriteValueWithResponse>
 <summary>
-The <strong><c>BluetoothRemoteGATTCharacteristic.writeValueWithResponse()</c></strong> method sets a <see cref="BluetoothRemoteGATTCharacteristic"/> object's <c>value</c> property to the bytes contained in a given <see cref="ArrayBuffer"/>, calls <see href="https://webbluetoothcg.github.io/web-bluetooth/#writecharacteristicvalue"><c>WriteCharacteristicValue</c>(<strong>this</strong>=<c>this</c>, <strong>value=value</strong>, <strong>response</strong>=<c>&amp;quot;required&amp;quot;</c>)</see>, and returns the resulting <see cref="Promise"/>.
+The <strong><c>BluetoothRemoteGATTCharacteristic.writeValueWithResponse()</c></strong> method sets a <see cref="BluetoothRemoteGATTCharacteristic."/> object's <c>value</c> property to the bytes contained in a given <see cref="ArrayBuffer"/>, calls <see href="https://webbluetoothcg.github.io/web-bluetooth/#writecharacteristicvalue"><c>WriteCharacteristicValue</c>(<strong>this</strong>=<c>this</c>, <strong>value=value</strong>, <strong>response</strong>=<c>&amp;quot;required&amp;quot;</c>)</see>, and returns the resulting <see cref="Promise"/>.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/writeValueWithResponse"> <em>See also on MDN</em> </seealso></para>

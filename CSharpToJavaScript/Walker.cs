@@ -58,7 +58,7 @@ namespace CSharpToJavaScript
 						return;
 					}
 				default:
-					_Log.ErrorLine($"ERROR Trivia : {syntaxKind}");
+					_Log?.ErrorLine($"ERROR Trivia : {syntaxKind}");
 					break;
 			}
 
@@ -128,6 +128,22 @@ namespace CSharpToJavaScript
 				case SyntaxKind.ConstKeyword:
 				case SyntaxKind.PercentToken:
 				case SyntaxKind.QuestionQuestionToken:
+				case SyntaxKind.TildeToken:
+				case SyntaxKind.AmpersandToken:
+				case SyntaxKind.GreaterThanGreaterThanToken:
+				case SyntaxKind.LessThanLessThanToken:
+				case SyntaxKind.GreaterThanGreaterThanEqualsToken:
+				case SyntaxKind.LessThanLessThanEqualsToken:
+				case SyntaxKind.CaretEqualsToken:
+				case SyntaxKind.BarEqualsToken:
+				case SyntaxKind.AmpersandEqualsToken:
+				case SyntaxKind.BarToken:
+				case SyntaxKind.DoKeyword:
+				case SyntaxKind.ThrowStatement:
+				case SyntaxKind.CatchKeyword:
+				case SyntaxKind.TryKeyword:
+				case SyntaxKind.ThrowKeyword:
+				case SyntaxKind.FinallyKeyword:
 				case SyntaxKind.EndOfFileToken:
 					{
 						VisitLeadingTrivia(token);
@@ -148,7 +164,7 @@ namespace CSharpToJavaScript
 						return;
 					}
 				default:
-					_Log.ErrorLine($"ERROR Token : {syntaxKind}");
+					_Log?.ErrorLine($"ERROR Token : {syntaxKind}");
 					break;
 			}
 
@@ -228,7 +244,7 @@ namespace CSharpToJavaScript
 							Visit(asNode);
 							break;
 						default:
-							_Log.ErrorLine($"asNode : {kind}");
+							_Log?.ErrorLine($"asNode : {kind}");
 							break;
 					}
 				}
@@ -250,7 +266,7 @@ namespace CSharpToJavaScript
 							VisitToken(asToken);
 							break;
 						default:
-							_Log.ErrorLine($"asToken : {kind}");
+							_Log?.ErrorLine($"asToken : {kind}");
 							break;
 					}
 				}
@@ -284,7 +300,7 @@ namespace CSharpToJavaScript
 							Visit(asNode);
 							break;
 						default:
-							_Log.ErrorLine($"asNode : {kind}");
+							_Log?.ErrorLine($"asNode : {kind}");
 							break;
 					}
 				}
@@ -326,7 +342,7 @@ namespace CSharpToJavaScript
 								break;
 							}
 						default:
-							_Log.ErrorLine($"asToken : {kind}");
+							_Log?.ErrorLine($"asToken : {kind}");
 
 							break;
 					}
@@ -359,7 +375,7 @@ namespace CSharpToJavaScript
 						case SyntaxKind.PredefinedType:
 							break;
 						default:
-							_Log.ErrorLine($"asNode : {kind}");
+							_Log?.ErrorLine($"asNode : {kind}");
 							break;
 					}
 				}
@@ -376,7 +392,47 @@ namespace CSharpToJavaScript
 								break;
 							}
 						default:
-							_Log.ErrorLine($"asToken : {kind}");
+							_Log?.ErrorLine($"asToken : {kind}");
+							break;
+					}
+				}
+			}
+		}
+		public override void VisitCatchDeclaration(CatchDeclarationSyntax node)
+		{
+			ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
+
+			for (int i = 0; i < nodesAndTokens.Count; i++)
+			{
+				SyntaxNode? asNode = nodesAndTokens[i].AsNode();
+
+				if (asNode != null)
+				{
+					SyntaxKind kind = asNode.Kind();
+
+					switch (kind)
+					{
+						case SyntaxKind.IdentifierName:
+							break;
+						default:
+							_Log?.ErrorLine($"asNode : {kind}");
+							break;
+					}
+				}
+				else
+				{
+					SyntaxToken asToken = nodesAndTokens[i].AsToken();
+					SyntaxKind kind = asToken.Kind();
+
+					switch (kind)
+					{
+						case SyntaxKind.OpenParenToken:
+						case SyntaxKind.CloseParenToken:
+						case SyntaxKind.IdentifierToken:
+							VisitToken(asToken);
+							break;
+						default:
+							_Log?.ErrorLine($"asToken : {kind}");
 							break;
 					}
 				}
@@ -398,22 +454,19 @@ namespace CSharpToJavaScript
 					switch (kind)
 					{
 						case SyntaxKind.ExpressionStatement: 
-							{
-								VisitExpressionStatement(asNode as ExpressionStatementSyntax);
-								break;
-							}
+							VisitExpressionStatement(asNode as ExpressionStatementSyntax);
+							break;
 						case SyntaxKind.ForEachStatement: 
-							{
-								VisitForEachStatement(asNode as ForEachStatementSyntax);
-								break;
-							}
+							VisitForEachStatement(asNode as ForEachStatementSyntax);
+							break;
 						case SyntaxKind.LocalDeclarationStatement:
-							{
-								VisitLocalDeclarationStatement(asNode as LocalDeclarationStatementSyntax);
-								break;
-							}
-						case SyntaxKind.ReturnStatement:
+							VisitLocalDeclarationStatement(asNode as LocalDeclarationStatementSyntax);
+							break;
 						case SyntaxKind.IfStatement:
+						case SyntaxKind.TryStatement:
+						case SyntaxKind.ThrowStatement:
+						case SyntaxKind.DoStatement:
+						case SyntaxKind.ReturnStatement:
 						case SyntaxKind.ForStatement:
 						case SyntaxKind.BreakStatement:
 						case SyntaxKind.SwitchStatement:
@@ -422,7 +475,7 @@ namespace CSharpToJavaScript
 							Visit(asNode);
 							break;
 						default:
-							_Log.ErrorLine($"asNode : {kind}");
+							_Log?.ErrorLine($"asNode : {kind}");
 							break;
 					}
 				}
@@ -457,7 +510,7 @@ namespace CSharpToJavaScript
 								break;
 							}
 						default:
-							_Log.ErrorLine($"asToken : {kind}");
+							_Log?.ErrorLine($"asToken : {kind}");
 							break;
 					}
 				}
@@ -484,7 +537,7 @@ namespace CSharpToJavaScript
 								break;
 							}
 						default:
-							_Log.ErrorLine($"asNode : {kind}");
+							_Log?.ErrorLine($"asNode : {kind}");
 							break;
 					}
 				}
@@ -507,7 +560,7 @@ namespace CSharpToJavaScript
 								break;
 							}
 						default:
-							_Log.ErrorLine($"asToken : {kind}");
+							_Log?.ErrorLine($"asToken : {kind}");
 							break;
 					}
 				}
@@ -528,6 +581,11 @@ namespace CSharpToJavaScript
 
 					switch (kind)
 					{
+						case SyntaxKind.AndAssignmentExpression:
+						case SyntaxKind.OrAssignmentExpression:
+						case SyntaxKind.ExclusiveOrAssignmentExpression:
+						case SyntaxKind.LeftShiftAssignmentExpression:
+						case SyntaxKind.RightShiftAssignmentExpression:
 						case SyntaxKind.ConditionalAccessExpression:
 						case SyntaxKind.PostDecrementExpression:
 						case SyntaxKind.InvocationExpression:
@@ -545,7 +603,7 @@ namespace CSharpToJavaScript
 								break;
 							}
 						default:
-							_Log.ErrorLine($"asNode : {kind}");
+							_Log?.ErrorLine($"asNode : {kind}");
 							break;
 					}
 				}
@@ -562,7 +620,7 @@ namespace CSharpToJavaScript
 								break;
 							}
 						default:
-							_Log.ErrorLine($"asToken : {kind}");
+							_Log?.ErrorLine($"asToken : {kind}");
 							break;
 					}
 				}
@@ -617,7 +675,7 @@ namespace CSharpToJavaScript
 							VisitIdentifierName(asNode as IdentifierNameSyntax);
 							break;
 						default:
-							_Log.ErrorLine($"asNode : {kind}");
+							_Log?.ErrorLine($"asNode : {kind}");
 							break;
 					}
 				}
@@ -629,7 +687,7 @@ namespace CSharpToJavaScript
 					switch (kind)
 					{
 						default:
-							_Log.ErrorLine($"asToken : {kind}");
+							_Log?.ErrorLine($"asToken : {kind}");
 
 							break;
 					}
@@ -655,7 +713,7 @@ namespace CSharpToJavaScript
 							Visit(asNode);
 							break;
 						default:
-							_Log.ErrorLine($"asNode : {kind}");
+							_Log?.ErrorLine($"asNode : {kind}");
 							break;
 					}
 				}
@@ -673,7 +731,7 @@ namespace CSharpToJavaScript
 						case SyntaxKind.NewKeyword:
 							break;
 						default:
-							_Log.ErrorLine($"asToken : {kind}");
+							_Log?.ErrorLine($"asToken : {kind}");
 							break;
 					}
 				}
@@ -698,7 +756,7 @@ namespace CSharpToJavaScript
 							VisitEnumMemberDeclaration(asNode as EnumMemberDeclarationSyntax);
 							break;
 						default:
-							_Log.ErrorLine($"asNode : {kind}");
+							_Log?.ErrorLine($"asNode : {kind}");
 							break;
 					}
 				}
@@ -737,7 +795,7 @@ namespace CSharpToJavaScript
 								break;
 							}
 						default:
-							_Log.ErrorLine($"asToken : {kind}");
+							_Log?.ErrorLine($"asToken : {kind}");
 							break;
 					}
 				}
@@ -763,7 +821,7 @@ namespace CSharpToJavaScript
 							VisitLiteralExpression(((asNode as EqualsValueClauseSyntax).Value as LiteralExpressionSyntax));
 							break;
 						default:
-							_Log.ErrorLine($"asNode : {kind}");
+							_Log?.ErrorLine($"asNode : {kind}");
 							break;
 					}
 				}
@@ -788,7 +846,7 @@ namespace CSharpToJavaScript
 								break;
 							}
 						default:
-							_Log.ErrorLine($"asToken : {kind}");
+							_Log?.ErrorLine($"asToken : {kind}");
 							break;
 					}
 				}
@@ -813,7 +871,7 @@ namespace CSharpToJavaScript
 							VisitIdentifierName(asNode as IdentifierNameSyntax);
 							break;
 						default:
-							_Log.ErrorLine($"asNode : {kind}");
+							_Log?.ErrorLine($"asNode : {kind}");
 							break;
 					}
 				}
@@ -830,7 +888,7 @@ namespace CSharpToJavaScript
 								break;
 							}
 						default:
-							_Log.ErrorLine($"asToken : {kind}");
+							_Log?.ErrorLine($"asToken : {kind}");
 							break;
 					}
 				}
@@ -859,7 +917,7 @@ namespace CSharpToJavaScript
 							Visit(asNode);
 							break;
 						default:
-							_Log.ErrorLine($"asNode : {kind}");
+							_Log?.ErrorLine($"asNode : {kind}");
 							break;
 					}
 				}
@@ -882,7 +940,7 @@ namespace CSharpToJavaScript
 								break;
 							}
 						default:
-							_Log.ErrorLine($"asToken : {kind}");
+							_Log?.ErrorLine($"asToken : {kind}");
 
 							break;
 					}
@@ -908,7 +966,7 @@ namespace CSharpToJavaScript
 							Visit(asNode);
 							break;
 						default:
-							_Log.ErrorLine($"asNode : {kind}");
+							_Log?.ErrorLine($"asNode : {kind}");
 							break;
 					}
 				}
@@ -929,7 +987,7 @@ namespace CSharpToJavaScript
 							VisitLeadingTrivia(asToken);
 							break;
 						default:
-							_Log.ErrorLine($"asToken : {kind}");
+							_Log?.ErrorLine($"asToken : {kind}");
 							break;
 					}
 				}
@@ -1051,7 +1109,7 @@ namespace CSharpToJavaScript
 							VisitAccessorList(asNode as AccessorListSyntax);
 							break;
 						default:
-							_Log.ErrorLine($"asNode : {kind}");
+							_Log?.ErrorLine($"asNode : {kind}");
 							break;
 					}
 				}
@@ -1076,7 +1134,7 @@ namespace CSharpToJavaScript
 							VisitToken(asToken);
 							break;
 						default:
-							_Log.ErrorLine($"asToken : {kind}");
+							_Log?.ErrorLine($"asToken : {kind}");
 							break;
 					}
 				}
@@ -1234,7 +1292,7 @@ namespace CSharpToJavaScript
 								break;
 							}
 						default:
-							_Log.ErrorLine($"asNode : {kind}");
+							_Log?.ErrorLine($"asNode : {kind}");
 							break;
 					}
 				}
@@ -1249,7 +1307,7 @@ namespace CSharpToJavaScript
 						case SyntaxKind.CloseBraceToken:
 							break;
 						default:
-							_Log.ErrorLine($"asToken : {kind}");
+							_Log?.ErrorLine($"asToken : {kind}");
 							break;
 					}
 				}
@@ -1274,7 +1332,7 @@ namespace CSharpToJavaScript
 							Visit(asNode);
 							break;
 						default:
-							_Log.ErrorLine($"asNode : {kind}");
+							_Log?.ErrorLine($"asNode : {kind}");
 							break;
 					}
 				}
@@ -1293,7 +1351,7 @@ namespace CSharpToJavaScript
 								break;
 							}
 						default:
-							_Log.ErrorLine($"asToken : {kind}");
+							_Log?.ErrorLine($"asToken : {kind}");
 
 							break;
 					}
@@ -1353,7 +1411,7 @@ namespace CSharpToJavaScript
 							VisitVariableDeclarator(asNode as VariableDeclaratorSyntax);
 							break;
 						default:
-							_Log.ErrorLine($"asNode : {kind}");
+							_Log?.ErrorLine($"asNode : {kind}");
 							break;
 					}
 				}
@@ -1369,7 +1427,7 @@ namespace CSharpToJavaScript
 							VisitToken(asToken);
 							break;
 						default:
-							_Log.ErrorLine($"asToken : {kind}");
+							_Log?.ErrorLine($"asToken : {kind}");
 							break;
 					}
 				}
@@ -1395,7 +1453,7 @@ namespace CSharpToJavaScript
 							Visit(asNode);
 							break;
 						default:
-							_Log.ErrorLine($"asNode : {kind}");
+							_Log?.ErrorLine($"asNode : {kind}");
 							break;
 					}
 				}
@@ -1406,12 +1464,18 @@ namespace CSharpToJavaScript
 
 					switch (kind)
 					{
+						/*TODO!
+						case SyntaxKind.IntKeyword: 
+							{
+								JSSB.Append("Number");
+								break;
+							}*/
 						//case SyntaxKind.BoolKeyword:
 						case SyntaxKind.SemicolonToken:
 							VisitToken(asToken);
 							break;
 						default:
-							_Log.ErrorLine($"asToken : {kind}");
+							_Log?.ErrorLine($"asToken : {kind}");
 							break;
 					}
 				}
@@ -1436,7 +1500,7 @@ namespace CSharpToJavaScript
 							Visit(asNode);
 							break;
 						default:
-							_Log.ErrorLine($"asNode : {kind}");
+							_Log?.ErrorLine($"asNode : {kind}");
 							break;
 					}
 				}
@@ -1451,7 +1515,7 @@ namespace CSharpToJavaScript
 							VisitToken(asToken);
 							break;
 						default:
-							_Log.ErrorLine($"asToken : {kind}");
+							_Log?.ErrorLine($"asToken : {kind}");
 							break;
 					}
 				}
@@ -1531,7 +1595,7 @@ namespace CSharpToJavaScript
 								break;
 							}
 						default:
-							_Log.ErrorLine($"asNode : {kind}");
+							_Log?.ErrorLine($"asNode : {kind}");
 							break;
 					}
 				}
@@ -1569,7 +1633,7 @@ namespace CSharpToJavaScript
 							VisitToken(asToken);
 							break;
 						default:
-							_Log.ErrorLine($"asToken : {kind}");
+							_Log?.ErrorLine($"asToken : {kind}");
 							break;
 					}
 				}
@@ -1594,7 +1658,7 @@ namespace CSharpToJavaScript
 							Visit(asNode);
 							break;
 						default:
-							_Log.ErrorLine($"asNode : {kind}");
+							_Log?.ErrorLine($"asNode : {kind}");
 							break;
 					}
 				}
@@ -1620,7 +1684,7 @@ namespace CSharpToJavaScript
 							VisitToken(asToken);
 							break;
 						default:
-							_Log.ErrorLine($"asToken : {kind}");
+							_Log?.ErrorLine($"asToken : {kind}");
 							break;
 					}
 				}
@@ -1651,7 +1715,7 @@ namespace CSharpToJavaScript
 								break;
 							}
 						default:
-							_Log.ErrorLine($"asNode : {kind}");
+							_Log?.ErrorLine($"asNode : {kind}");
 							break;
 					}
 				}
@@ -1667,7 +1731,7 @@ namespace CSharpToJavaScript
 							JSSB.Append('`');
 							break;
 						default:
-							_Log.ErrorLine($"asToken : {kind}");
+							_Log?.ErrorLine($"asToken : {kind}");
 							break;
 					}
 				}
@@ -1703,7 +1767,7 @@ namespace CSharpToJavaScript
 							_SNOriginal = null;
 							break;
 						default:
-							_Log.ErrorLine($"asNode : {kind}");
+							_Log?.ErrorLine($"asNode : {kind}");
 							break;
 					}
 				}
@@ -1724,7 +1788,7 @@ namespace CSharpToJavaScript
 							//VisitToken(asToken);
 							//break;
 						default:
-							_Log.ErrorLine($"asToken : {kind}");
+							_Log?.ErrorLine($"asToken : {kind}");
 							break;
 					}
 				}
@@ -1752,7 +1816,7 @@ namespace CSharpToJavaScript
 							Visit(asNode);
 							break;
 						default:
-							_Log.ErrorLine($"asNode : {kind}");
+							_Log?.ErrorLine($"asNode : {kind}");
 							break;
 					}
 				}
@@ -1767,7 +1831,7 @@ namespace CSharpToJavaScript
 						case SyntaxKind.CloseParenToken:
 							break;
 						default:
-							_Log.ErrorLine($"asToken : {kind}");
+							_Log?.ErrorLine($"asToken : {kind}");
 							break;
 					}
 				}
@@ -1792,7 +1856,7 @@ namespace CSharpToJavaScript
 							Visit(asNode); 
 							break;
 						default:
-							_Log.ErrorLine($"asNode : {kind}");
+							_Log?.ErrorLine($"asNode : {kind}");
 							break;
 					}
 				}
@@ -1933,7 +1997,7 @@ namespace CSharpToJavaScript
 										JSSB.Append(' ');
 										if (BuiltInTypesGenerics(syntaxNode.WithoutLeadingTrivia(), iSymbol) == false)
 										{
-											_Log.WarningLine($"TODO : {syntaxNode} ||| USE 'CustomCSNamesToJS' TO CONVERT.");
+											_Log?.WarningLine($"TODO : {syntaxNode} ||| USE 'CustomCSNamesToJS' TO CONVERT.");
 										}
 									}
 
@@ -1941,7 +2005,7 @@ namespace CSharpToJavaScript
 								break;
 							}
 						default:
-							_Log.ErrorLine($"asToken : {kind}");
+							_Log?.ErrorLine($"asToken : {kind}");
 							break;
 					}
 				}
@@ -1974,7 +2038,7 @@ namespace CSharpToJavaScript
 							VisitGenericName(asNode as GenericNameSyntax);
 							break;
 						default:
-							_Log.ErrorLine($"asNode : {kind}");
+							_Log?.ErrorLine($"asNode : {kind}");
 							break;
 					}
 				}
@@ -1991,7 +2055,7 @@ namespace CSharpToJavaScript
 								break;
 							}
 						default:
-							_Log.ErrorLine($"asToken : {kind}");
+							_Log?.ErrorLine($"asToken : {kind}");
 							break;
 					}
 				}
@@ -2014,7 +2078,7 @@ namespace CSharpToJavaScript
 					{
 
 						default:
-							_Log.ErrorLine($"asNode : {kind}");
+							_Log?.ErrorLine($"asNode : {kind}");
 							break;
 					}
 				}
@@ -2031,7 +2095,7 @@ namespace CSharpToJavaScript
 								break;
 							}
 						default:
-							_Log.ErrorLine($"asToken : {kind}");
+							_Log?.ErrorLine($"asToken : {kind}");
 							break;
 					}
 				}
@@ -2054,7 +2118,7 @@ namespace CSharpToJavaScript
 					{
 
 						default:
-							_Log.ErrorLine($"asNode : {kind}");
+							_Log?.ErrorLine($"asNode : {kind}");
 							break;
 					}
 				}
@@ -2070,7 +2134,7 @@ namespace CSharpToJavaScript
 							JSSB.Append($"super");
 							break;
 						default:
-							_Log.ErrorLine($"asToken : {kind}");
+							_Log?.ErrorLine($"asToken : {kind}");
 							break;
 					}
 				}
@@ -2095,7 +2159,7 @@ namespace CSharpToJavaScript
 						case SyntaxKind.IdentifierName:
 							break;
 						default:
-							_Log.ErrorLine($"asNode : {kind}");
+							_Log?.ErrorLine($"asNode : {kind}");
 							break;
 					}
 				}
@@ -2110,7 +2174,7 @@ namespace CSharpToJavaScript
 						case SyntaxKind.LessThanToken:
 							break;
 						default:
-							_Log.ErrorLine($"asToken : {kind}");
+							_Log?.ErrorLine($"asToken : {kind}");
 							break;
 					}
 				}
@@ -2137,7 +2201,7 @@ namespace CSharpToJavaScript
 								break;
 							}
 						default:
-							_Log.ErrorLine($"asNode : {kind}");
+							_Log?.ErrorLine($"asNode : {kind}");
 							break;
 					}
 				}
@@ -2157,7 +2221,7 @@ namespace CSharpToJavaScript
 								break;
 							}
 						default:
-							_Log.ErrorLine($"asToken : {kind}");
+							_Log?.ErrorLine($"asToken : {kind}");
 							break;
 					}
 				}
@@ -2179,7 +2243,7 @@ namespace CSharpToJavaScript
 					switch (kind)
 					{
 						default:
-							_Log.ErrorLine($"asNode : {kind}");
+							_Log?.ErrorLine($"asNode : {kind}");
 							break;
 					}
 				}
@@ -2199,7 +2263,7 @@ namespace CSharpToJavaScript
 								break;
 							}
 						default:
-							_Log.ErrorLine($"asToken : {kind}");
+							_Log?.ErrorLine($"asToken : {kind}");
 							break;
 					}
 				}
@@ -2253,7 +2317,7 @@ namespace CSharpToJavaScript
 						var a = _Model.GetDiagnostics();
 						foreach (Diagnostic item in a)
 						{
-							_Log.WarningLine(item.ToString());
+							_Log?.WarningLine(item.ToString());
 						}
 					}
 				}
@@ -2263,9 +2327,9 @@ namespace CSharpToJavaScript
 					var a = _Model.GetDeclarationDiagnostics();
 					foreach (Diagnostic item in a)
 					{
-						_Log.WarningLine(item.ToString());
+						_Log?.WarningLine(item.ToString());
 					}
-					_Log.WarningLine(e.ToString());
+					_Log?.WarningLine(e.ToString());
 					//throw;
 				}
 			}
@@ -2531,13 +2595,13 @@ namespace CSharpToJavaScript
 				{
 					if (_Options.Debug)
 					{
-						_Log.WarningLine("WARNING! Diagnostics starts ---");
+						_Log?.WarningLine("WARNING! Diagnostics starts ---");
 						ImmutableArray<Diagnostic> diag = _Model.GetDiagnostics();
 						foreach (Diagnostic item in diag)
 						{
-							_Log.WarningLine(item.ToString());
+							_Log?.WarningLine(item.ToString());
 						}
-						_Log.WarningLine("WARNING! Diagnostics ends ---");
+						_Log?.WarningLine("WARNING! Diagnostics ends ---");
 					}
 					return false;
 				}
@@ -2578,7 +2642,7 @@ namespace CSharpToJavaScript
 
 			if (symbol == null) 
 			{
-				_Log.WarningLine($"WARNING! node: \"{node}\", symbol is null. USE \"CustomCSNamesToJS\"!");
+				_Log?.WarningLine($"WARNING! node: \"{node}\", symbol is null. USE \"CustomCSNamesToJS\"!");
 				return false;
 			}
 
@@ -2599,7 +2663,7 @@ namespace CSharpToJavaScript
 
 				if(typeSymbol.Kind != SymbolKind.NamedType) 
 				{
-					_Log.WarningLine($"WARNING! node: \"{node}\", typeSymbol is \"{typeSymbol.Kind}\". USE \"CustomCSNamesToJS\"!");
+					_Log?.WarningLine($"WARNING! node: \"{node}\", typeSymbol is \"{typeSymbol.Kind}\". USE \"CustomCSNamesToJS\"!");
 					return false;
 				}
 			}
@@ -2630,7 +2694,7 @@ namespace CSharpToJavaScript
 									return true;
 								}
 							default:
-								_Log.WarningLine($"WARNING! node: \"{node}\", typeSymbol: \"{typeSymbol}\", symbol: \"{symbol}\", Is not supported! USE \"CustomCSNamesToJS\"");
+								_Log?.WarningLine($"WARNING! node: \"{node}\", typeSymbol: \"{typeSymbol}\", symbol: \"{symbol}\", Is not supported! USE \"CustomCSNamesToJS\"");
 								return false;
 						}
 					}
@@ -2653,7 +2717,7 @@ namespace CSharpToJavaScript
 									return true;
 								}
 							default:
-								_Log.WarningLine($"WARNING! node: \"{node}\", typeSymbol: \"{typeSymbol}\", symbol: \"{symbol}\", Is not supported! USE \"CustomCSNamesToJS\"");
+								_Log?.WarningLine($"WARNING! node: \"{node}\", typeSymbol: \"{typeSymbol}\", symbol: \"{symbol}\", Is not supported! USE \"CustomCSNamesToJS\"");
 								return false;
 						}
 					}
@@ -2691,7 +2755,7 @@ namespace CSharpToJavaScript
 									return true;
 								}
 							default:
-								_Log.WarningLine($"WARNING! node: \"{node}\", typeSymbol: \"{typeSymbol}\", symbol: \"{symbol}\", Is not supported! USE \"CustomCSNamesToJS\"");
+								_Log?.WarningLine($"WARNING! node: \"{node}\", typeSymbol: \"{typeSymbol}\", symbol: \"{symbol}\", Is not supported! USE \"CustomCSNamesToJS\"");
 								return false;
 						}
 					}
@@ -2717,7 +2781,7 @@ namespace CSharpToJavaScript
 									return true;
 								}
 							default:
-								_Log.WarningLine($"WARNING! node: \"{node}\", typeSymbol: \"{typeSymbol}\", symbol: \"{symbol}\", Is not supported! USE \"CustomCSNamesToJS\"");
+								_Log?.WarningLine($"WARNING! node: \"{node}\", typeSymbol: \"{typeSymbol}\", symbol: \"{symbol}\", Is not supported! USE \"CustomCSNamesToJS\"");
 								return false;
 						}
 					}
@@ -2732,7 +2796,7 @@ namespace CSharpToJavaScript
 									return true;
 								}
 							default:
-								_Log.WarningLine($"WARNING! node: \"{node}\", typeSymbol: \"{typeSymbol}\", symbol: \"{symbol}\", Is not supported! USE \"CustomCSNamesToJS\"");
+								_Log?.WarningLine($"WARNING! node: \"{node}\", typeSymbol: \"{typeSymbol}\", symbol: \"{symbol}\", Is not supported! USE \"CustomCSNamesToJS\"");
 								return false;
 						}
 					}
@@ -2748,7 +2812,7 @@ namespace CSharpToJavaScript
 									return true;
 								}
 							default:
-								_Log.WarningLine($"WARNING! node: \"{node}\", typeSymbol: \"{typeSymbol}\", symbol: \"{symbol}\", Is not supported! USE \"CustomCSNamesToJS\"");
+								_Log?.WarningLine($"WARNING! node: \"{node}\", typeSymbol: \"{typeSymbol}\", symbol: \"{symbol}\", Is not supported! USE \"CustomCSNamesToJS\"");
 								return false;
 						}
 					}
@@ -2769,12 +2833,12 @@ namespace CSharpToJavaScript
 									return true;
 								}
 							default:
-								_Log.WarningLine($"WARNING! node: \"{node}\", typeSymbol: \"{typeSymbol}\", symbol: \"{symbol}\", Is not supported! USE \"CustomCSNamesToJS\"");
+								_Log?.WarningLine($"WARNING! node: \"{node}\", typeSymbol: \"{typeSymbol}\", symbol: \"{symbol}\", Is not supported! USE \"CustomCSNamesToJS\"");
 								return false;
 						}
 					}
 				default:
-					_Log.WarningLine($"WARNING! typeSymbol: \"{typeSymbol}\" Is not supported! USE \"CustomCSNamesToJS\"");
+					_Log?.WarningLine($"WARNING! typeSymbol: \"{typeSymbol}\" Is not supported! USE \"CustomCSNamesToJS\"");
 					return false;
 			}
 		}

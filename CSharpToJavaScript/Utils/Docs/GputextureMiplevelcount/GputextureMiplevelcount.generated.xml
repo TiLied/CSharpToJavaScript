@@ -1,10 +1,10 @@
 <docs>
 <GPUTextureMipLevelCount>
 <summary>
-The <strong><c>mipLevelCount</c></strong> read-only property of the<br/><see cref="GPUTexture"/> interface represents the number of mip levels of the <c>GPUTexture</c>.
+The <strong><c>mipLevelCount</c></strong> read-only property of the<br/><see cref="GPUTexture."/> interface represents the number of mip levels of the <c>GPUTexture</c>.
 </summary>
 <remarks>
-<para>This is set via the <c>mipLevelCount</c> property in the descriptor object passed into the originating <see cref="GPUDevice.CreateTexture"/> call. If omitted, this defaults to 1.</para>
+<para>This is set via the <c>mipLevelCount</c> property in the descriptor object passed into the originating <see cref="GPUDevice.CreateTexture."/> call. If omitted, this defaults to 1.</para>
 <para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUTexture/mipLevelCount"> <em>See also on MDN</em> </seealso></para>
 </remarks>

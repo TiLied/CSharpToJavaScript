@@ -1,12 +1,12 @@
 <docs>
 <GeolocationWatchPosition>
 <summary>
-The <see cref="Geolocation"/> method <strong><c>watchPosition()</c></strong> method is used to register a handler function that will be called automatically each time the position of the device changes.<br/>You can also, optionally, specify an error handling callback function.
+The <strong><c>watchPosition()</c></strong> method of the <see cref="Geolocation."/> interface is used to register a handler function that will be called automatically each time the position of the device changes.<br/>You can also, optionally, specify an error handling callback function.
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API">Using the Geolocation API</see><br/>-The interface it belongs to, <see cref="Geolocation"/>, and the way to access it —<br/><see cref="Navigator.Geolocation"/>.<br/>-The opposite operation: <see cref="Geolocation.ClearWatch"/><br/>-A similar method: <see cref="Geolocation.GetCurrentPosition"/><br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API">Using the Geolocation API</see><br/>-The interface it belongs to, <see cref="Geolocation."/>, and the way to access it —<br/><see cref="Navigator.Geolocation."/>.<br/>-The opposite operation: <see cref="Geolocation.ClearWatch."/><br/>-A similar method: <see cref="Geolocation.GetCurrentPosition."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/watchPosition"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>An integer ID that identifies the registered handler.<br/>The ID can be passed to the <see cref="Geolocation.ClearWatch"/> to unregister the handler.</returns>
+<returns>An integer ID that identifies the registered handler.<br/>The ID can be passed to the <see cref="Geolocation.ClearWatch."/> to unregister the handler.</returns>
 </GeolocationWatchPosition>
 </docs>

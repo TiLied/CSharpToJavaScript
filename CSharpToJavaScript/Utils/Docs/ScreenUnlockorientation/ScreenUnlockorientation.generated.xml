@@ -1,11 +1,11 @@
 <docs>
 <ScreenUnlockOrientation>
 <summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>Screen.unlockOrientation()</c></strong> method removes all the<br/>previous screen locks set by the page/app. The <see cref="ScreenOrientation.Unlock"/><br/>method should be used instead.
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>Screen.unlockOrientation()</c></strong> method removes all the<br/>previous screen locks set by the page/app. The <see cref="ScreenOrientation.Unlock."/><br/>method should be used instead.
 </summary>
 <remarks>
-<blockquote class="WARNING"><h5>WARNING</h5><para><strong>Warning:</strong> This feature is deprecated and should be avoided. Use the <see cref="ScreenOrientation.Unlock"/> method instead.</para></blockquote><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This method only works for installed Web apps or for Web pages<br/>in <see href="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API">fullscreen mode</see>.</para></blockquote>
-<para>-<see cref="Screen.Orientation"/><br/>-<see cref="Screen.LockOrientation"/><br/>-<see cref="Screen.Orientationchange_event"/> event<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation">Managing screen orientation</see><br/></para>
+<blockquote class="WARNING"><h5>WARNING</h5><para><strong>Warning:</strong> This feature is deprecated and should be avoided. Use the <see cref="ScreenOrientation.Unlock."/> method instead.</para></blockquote><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This method only works for installed Web apps or for Web pages<br/>in <see href="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API">fullscreen mode</see>.</para></blockquote>
+<para>-<see cref="Screen.Orientation."/><br/>-<see cref="Screen.LockOrientation."/><br/>-<see cref="Screen.Orientationchange_event."/> event<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation">Managing screen orientation</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Screen/unlockOrientation"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>Returns <c>true</c> if the orientation was successfully unlocked or<br/><c>false</c> if the orientation couldn&amp;apos;t be unlocked.</returns>

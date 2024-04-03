@@ -1,10 +1,11 @@
 <docs>
 <WindowMozInnerScreenX>
 <summary>
-
+Gets the X coordinate of the top-left corner of the window&amp;apos;s viewport, in screen<br/>coordinates.
 </summary>
 <remarks>
-<para>-<see cref="Window.MozInnerScreenY"/><br/>-<c>nsIDOMWindowUtils.screenPixelsPerCSSPixel</c><br/></para>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This coordinate is reported in CSS pixels, not in hardware pixels. That means it can be affected by the zoom level; to compute the actual number of physical screen pixels, you should use the <c>nsIDOMWindowUtils.screenPixelsPerCSSPixel</c> property.</para></blockquote>
+<para>-<see cref="Window.MozInnerScreenY."/><br/>-<c>nsIDOMWindowUtils.screenPixelsPerCSSPixel</c><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Window/mozInnerScreenX"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>The <c>window.mozInnerScreenX</c> property is a floating point, read-only value; it has no default value.</value>

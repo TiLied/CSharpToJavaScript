@@ -1,11 +1,11 @@
 <docs>
 <RTCPeerConnectionRemoteDescription>
 <summary>
-The read-only property<br/><strong><c>RTCPeerConnection.remoteDescription</c></strong> returns a<br/><see cref="RTCSessionDescription"/> describing the session (which includes<br/>configuration and media information) for the remote end of the connection. If this<br/>hasn&amp;apos;t been set yet, this is <c>null</c>.
+The <strong><c>remoteDescription</c></strong> read-only property of the <see cref="RTCPeerConnection."/> interface returns a <see cref="RTCSessionDescription."/> describing the session (which includes configuration and media information) for the remote end of the connection.<br/>If this hasn&amp;apos;t been set yet, this is <c>null</c>.
 </summary>
 <remarks>
-<para>The returned value typically reflects a remote description which has been received over<br/>the signaling server (as either an offer or an answer) and then put into effect by your<br/>code calling <see cref="RTCPeerConnection.SetRemoteDescription"/> in response.</para>
-<para>-<see cref="RTCPeerConnection.SetRemoteDescription"/>,<br/><see cref="RTCPeerConnection.PendingRemoteDescription"/>,<br/><see cref="RTCPeerConnection.CurrentRemoteDescription"/><br/>-<see cref="RTCPeerConnection.SetLocalDescription"/>,<br/><see cref="RTCPeerConnection.PendingLocalDescription"/>,<br/><see cref="RTCPeerConnection.CurrentLocalDescription"/>,<br/><see cref="RTCPeerConnection.LocalDescription"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/></para>
+<para>The returned value typically reflects a remote description which has been received over the signaling server (as either an offer or an answer) and then put into effect by your code calling <see cref="RTCPeerConnection.SetRemoteDescription."/> in response.</para>
+<para>-<see cref="RTCPeerConnection.SetRemoteDescription."/>, <see cref="RTCPeerConnection.PendingRemoteDescription."/>, <see cref="RTCPeerConnection.CurrentRemoteDescription."/><br/>-<see cref="RTCPeerConnection.SetLocalDescription."/>, <see cref="RTCPeerConnection.PendingLocalDescription."/>, <see cref="RTCPeerConnection.CurrentLocalDescription."/>, <see cref="RTCPeerConnection.LocalDescription."/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/remoteDescription"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </RTCPeerConnectionRemoteDescription>

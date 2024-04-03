@@ -1,13 +1,13 @@
 <docs>
 <RTCInboundRtpStreamStatsSliCount>
 <summary>
-The <strong><c>sliCount</c></strong> property of the<br/><see cref="RTCInboundRtpStreamStats"/> dictionary indicates how many <strong>Slice</strong><strong><br/></strong><strong>Loss Indication</strong> (<strong>SLI</strong>) packets the<br/><see cref="RTCRtpReceiver"/> for which this object provides statistics sent to the<br/>remote <see cref="RTCRtpSender"/>.
+The <strong><c>sliCount</c></strong> property of the<br/><see cref="RTCInboundRtpStreamStats."/> dictionary indicates how many <strong>Slice</strong><strong><br/></strong><strong>Loss Indication</strong> (<strong>SLI</strong>) packets the<br/><see cref="RTCRtpReceiver."/> for which this object provides statistics sent to the<br/>remote <see cref="RTCRtpSender."/>.
 </summary>
 <remarks>
 <para>An SLI packet is used by a decoder to let<br/>the encoder know that it&amp;apos;s detected corruption of one or more consecutive macroblocks<br/>(in scan order) in the received media.</para><para>In general, what&amp;apos;s usually of interest is that the higher this number is, the more the<br/>stream data is becoming corrupted between the sender and the receiver, requiring resends<br/>or dropping frames.</para>
 <para>-{{RFC(4585, &amp;quot;&amp;quot;, &amp;quot;6.3.2&amp;quot;)}}: Definition of &amp;quot;Slice Loss Indication&amp;quot; in the document<br/><strong>Extended RTP Profile for Real-time Transport Control Protocol (RTCP)-Based</strong><strong><br/></strong><strong>Feedback (RTP/AVPF)</strong>.<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/sliCount"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An unsigned integer indicating the number of SLI packets this receiver sent to the<br/>remote sender due to lost runs of macroblocks. A high value of <c>sliCount</c> may<br/>be an indication of an unreliable network.This is a very technical part of how video codecs work. For details, see {{RFC(4585,<br/>&amp;quot;6.3.2&amp;quot;)}}.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> This value is only present for video media.</blockquote></value>
+<value>An unsigned integer indicating the number of SLI packets this receiver sent to the<br/>remote sender due to lost runs of macroblocks. A high value of <c>sliCount</c> may<br/>be an indication of an unreliable network.This is a very technical part of how video codecs work. For details, see {{RFC(4585, "6.3.2")}}.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> This value is only present for video media.</blockquote></value>
 </RTCInboundRtpStreamStatsSliCount>
 </docs>

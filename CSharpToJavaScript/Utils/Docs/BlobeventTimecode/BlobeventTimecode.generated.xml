@@ -1,12 +1,12 @@
 <docs>
 <BlobEventTimecode>
 <summary>
-The <strong><c>timecode</c></strong> read only property of the <see cref="BlobEvent"/> interface indicates the difference between the timestamp of the first chunk of data, and the timestamp of the first chunk in the first <c>BlobEvent</c> produced by this recorder.
+The <strong><c>timecode</c></strong> read-only property of the <see cref="BlobEvent."/> interface indicates the difference between the timestamp of the first chunk of data, and the timestamp of the first chunk in the first <c>BlobEvent</c> produced by this recorder.
 </summary>
 <remarks>
 <para>Note that the <c>timecode</c> in the first produced <c>BlobEvent</c> does not need to be zero.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BlobEvent/timecode"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="DOMHighResTimeStamp"/>.</value>
+<value>A <see cref="DOMHighResTimeStamp."/>.</value>
 </BlobEventTimecode>
 </docs>

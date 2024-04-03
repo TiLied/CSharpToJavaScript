@@ -1,11 +1,11 @@
 <docs>
 <HistoryBack>
 <summary>
-The <strong><c>History.back()</c></strong> method causes<br/>the browser to move back one page in the session history.
+The <strong><c>back()</c></strong> method of the <see cref="History."/> interface causes<br/>the browser to move back one page in the session history.
 </summary>
 <remarks>
-<para>It has the same<br/>effect as calling <see cref="History.Go"/>. If there is no previous<br/>page, this method call does nothing.</para><para>This method is <see href="https://developer.mozilla.org/en-US/docs/Glossary/asynchronous">asynchronous</see>. Add a listener for the<br/><see cref="Window/popstate_event"/> event in order to determine when the navigation has completed.</para>
-<para>-<see cref="History"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/History_API/Working_with_the_History_API">Working with the History API</see><br/></para>
+<para>It has the same<br/>effect as calling <see cref="History.Go."/>. If there is no previous<br/>page, this method call does nothing.</para><para>This method is <see href="https://developer.mozilla.org/en-US/docs/Glossary/asynchronous">asynchronous</see>. Add a listener for the<br/><see cref="Window/popstate_event."/> event in order to determine when the navigation has completed.</para>
+<para>-<see cref="History."/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/History_API/Working_with_the_History_API">Working with the History API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/History/back"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>

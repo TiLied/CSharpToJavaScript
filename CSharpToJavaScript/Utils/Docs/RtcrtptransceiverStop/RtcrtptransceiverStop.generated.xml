@@ -1,11 +1,10 @@
 <docs>
 <RTCRtpTransceiverStop>
 <summary>
-The <strong><c>stop()</c></strong> method in the<br/><see cref="RTCRtpTransceiver"/> interface permanently stops the transceiver by<br/>stopping both the associated <see cref="RTCRtpSender"/> and<br/><see cref="RTCRtpReceiver"/>.
+The <strong><c>stop()</c></strong> method in the <see cref="RTCRtpTransceiver."/> interface permanently stops the transceiver by stopping both the associated <see cref="RTCRtpSender."/> and<br/><see cref="RTCRtpReceiver."/>.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Until recently, the <see cref="RTCRtpTransceiver.Stopped"/> property was provided to return <c>true</c> if the connection is<br/>stopped. That property has been deprecated and will be removed at some point. Instead,<br/>check the value of <see cref="RTCRtpTransceiver.CurrentDirection"/>. If it's <c>stopped</c>, the transceiver has been stopped.</para></blockquote><para>This method does nothing if the transceiver is already stopped.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP">Introduction to the Real-time Transport Protocol (RTP)</see><br/>-<see cref="MediaStreamTrack"/><br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP">Introduction to the Real-time Transport Protocol (RTP)</see><br/>-<see cref="MediaStreamTrack."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiver/stop"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>

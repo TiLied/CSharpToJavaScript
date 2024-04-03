@@ -1,11 +1,11 @@
 <docs>
 <DeviceMotionEvent>
 <summary>
-The <strong><c>DeviceMotionEvent</c></strong> interface provides web developers with information about the speed of changes for the device&amp;apos;s position and orientation.
+The <strong><c>DeviceMotionEvent</c></strong> interface of the {{domxref(&amp;quot;Device Orientation Events&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} provides web developers with information about the speed of changes for the device&amp;apos;s position and orientation.
 </summary>
 <remarks>
 <blockquote class="WARNING"><h5>WARNING</h5><para><strong>Warning:</strong> Currently, Firefox and Chrome do not handle the coordinates the same way. Take care about this while using them.</para></blockquote><para></para>
-<para>-<see cref="Window/deviceorientation_event"/><br/>-<see cref="DeviceOrientationEvent"/><br/>-<see cref="Window/devicemotion_event"/><br/>-<see cref="Accelerometer"/><br/>-<see cref="LinearAccelerationSensor"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation">Detecting device orientation</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained">Orientation and motion data explained</see><br/></para>
+<para>-{{domxref(&amp;quot;Device orientation events/Detecting device orientation&amp;quot;, &amp;quot;Detecting device orientation&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-{{domxref(&amp;quot;Device orientation events/Orientation and motion data explained&amp;quot;, &amp;quot;Orientation and motion data explained&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see cref="DeviceOrientationEvent."/><br/>-<see cref="Window.Deviceorientation_event."/> event<br/>-<see cref="Window.Deviceorientationabsolute_event."/> event<br/>-<see cref="Window/devicemotion_event."/> event<br/>-<see cref="Accelerometer."/><br/>-<see cref="LinearAccelerationSensor."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </DeviceMotionEvent>

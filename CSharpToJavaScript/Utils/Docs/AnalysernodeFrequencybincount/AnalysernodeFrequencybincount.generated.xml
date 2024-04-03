@@ -1,12 +1,12 @@
 <docs>
 <AnalyserNodeFrequencyBinCount>
 <summary>
-The <strong><c>frequencyBinCount</c></strong> read-only property of the <see cref="AnalyserNode"/> interface contains the total number of data points available to <see cref="AudioContext"/> <see cref="BaseAudioContext.SampleRate"/>. This is half of the <c>value</c> of the <see cref="AnalyserNode.FftSize"/>. The two methods' indices have a linear relationship with the frequencies they represent, between 0 and the <see href="https://en.wikipedia.org/wiki/Nyquist_frequency">Nyquist frequency</see>.
+The <strong><c>frequencyBinCount</c></strong> read-only property of the <see cref="AnalyserNode."/> interface contains the total number of data points available to <see cref="AudioContext."/> <see cref="BaseAudioContext.SampleRate."/>. This is half of the <c>value</c> of the <see cref="AnalyserNode.FftSize."/>. The two methods' indices have a linear relationship with the frequencies they represent, between 0 and the <see href="https://en.wikipedia.org/wiki/Nyquist_frequency">Nyquist frequency</see>.
 </summary>
 <remarks>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode/frequencyBinCount"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An unsigned integer, equal to the number of values that <see cref="AnalyserNode.GetByteFrequencyData"/> and <see cref="AnalyserNode.GetFloatFrequencyData"/> copy into the provided <c>TypedArray</c>.For technical reasons related to how the <see href="https://en.wikipedia.org/wiki/Fast_Fourier_transform">Fast Fourier transform</see> is defined, it is always half the value of <see cref="AnalyserNode.FftSize"/>. Therefore, it will be one of <c>16</c>, <c>32</c>, <c>64</c>, <c>128</c>, <c>256</c>, <c>512</c>, <c>1024</c>, <c>2048</c>, <c>4096</c>, <c>8192</c>, and <c>16384</c>.</value>
+<value>An unsigned integer, equal to the number of values that <see cref="AnalyserNode.GetByteFrequencyData."/> and <see cref="AnalyserNode.GetFloatFrequencyData."/> copy into the provided <c>TypedArray</c>.For technical reasons related to how the <see href="https://en.wikipedia.org/wiki/Fast_Fourier_transform">Fast Fourier transform</see> is defined, it is always half the value of <see cref="AnalyserNode.FftSize."/>. Therefore, it will be one of <c>16</c>, <c>32</c>, <c>64</c>, <c>128</c>, <c>256</c>, <c>512</c>, <c>1024</c>, <c>2048</c>, <c>4096</c>, <c>8192</c>, and <c>16384</c>.</value>
 </AnalyserNodeFrequencyBinCount>
 </docs>

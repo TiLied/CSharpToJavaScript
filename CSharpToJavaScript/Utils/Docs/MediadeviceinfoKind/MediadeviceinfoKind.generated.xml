@@ -1,11 +1,11 @@
 <docs>
 <MediaDeviceInfoKind>
 <summary>
-The <strong><c>kind</c></strong> readonly property of<br/>the <see cref="MediaDeviceInfo"/> interface returns an enumerated value, that is<br/>either &amp;quot;videoinput&amp;quot;, &amp;quot;audioinput&amp;quot; or &amp;quot;audiooutput&amp;quot;.
+The <strong><c>kind</c></strong> read-only property of<br/>the <see cref="MediaDeviceInfo."/> interface returns an enumerated value, that is<br/>either <c>&amp;quot;videoinput&amp;quot;</c>, <c>&amp;quot;audioinput&amp;quot;</c> or <c>&amp;quot;audiooutput&amp;quot;</c>.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDeviceInfo/kind"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string.</value>
+<value>One of <c>&amp;quot;videoinput&amp;quot;</c>, <c>&amp;quot;audioinput&amp;quot;</c> or <c>&amp;quot;audiooutput&amp;quot;</c>.</value>
 </MediaDeviceInfoKind>
 </docs>

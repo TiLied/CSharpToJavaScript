@@ -1,12 +1,12 @@
 <docs>
 <DocumentGetAnimations>
 <summary>
-The <c>getAnimations()</c> method of the <see cref="Document"/> interface<br/>returns an array of all <see cref="Animation"/> objects currently in effect whose<br/>target elements are descendants of the document. This array includes <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations">CSS Animations</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions">CSS Transitions</see>, and <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations</see>.
+The <c>getAnimations()</c> method of the <see cref="Document."/> interface<br/>returns an array of all <see cref="Animation."/> objects currently in effect whose<br/>target elements are descendants of the document. This array includes <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations">CSS Animations</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transitions">CSS Transitions</see>, and <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations</see>.
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations">CSS Animations</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions">CSS Transitions</see><br/>-<see cref="Element.GetAnimations"/> - Fetch only the animations on a single<br/><see cref="Element"/> and its descendants.<br/>-<see cref="Animation"/><br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations">CSS Animations</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transitions">CSS Transitions</see><br/>-<see cref="Element.GetAnimations."/> - Fetch only the animations on a single<br/><see cref="Element."/> and its descendants.<br/>-<see cref="Animation."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getAnimations"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>An {{jsxref("Array")}} of <see cref="Animation"/> objects, each representing one<br/>animation currently associated with elements which are descendants of the<br/><see cref="Document"/> on which it's called.</returns>
+<returns>An {{jsxref("Array")}} of <see cref="Animation."/> objects, each representing one<br/>animation currently associated with elements which are descendants of the<br/><see cref="Document."/> on which it's called.</returns>
 </DocumentGetAnimations>
 </docs>

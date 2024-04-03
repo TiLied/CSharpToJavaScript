@@ -1,10 +1,10 @@
 <docs>
 <XRCPUDepthInformationData>
 <summary>
-The <strong>read-only</strong> <strong><c>data</c></strong> property of the <see cref="XRCPUDepthInformation"/> interface is an {{jsxref("ArrayBuffer")}} containing depth-buffer information in raw format.
+The <strong>read-only</strong> <strong><c>data</c></strong> property of the <see cref="XRCPUDepthInformation."/> interface is an {{jsxref("ArrayBuffer")}} containing depth-buffer information in raw format.
 </summary>
 <remarks>
-<para>The data is stored in row-major format, without padding, with each entry corresponding to distance from the view's near plane to the users' environment, in unspecified units. The size of each data entry and the type is determined by <see cref="XRSession.DepthDataFormat"/>. The values can be converted from unspecified units to meters by multiplying them by <see cref="XRDepthInformation.RawValueToMeters"/>. The <see cref="XRDepthInformation.NormDepthBufferFromNormView"/> property can be used to transform from normalized view coordinates (an origin in the top left corner of the view, with X axis growing to the right, and Y axis growing downward) into the depth buffer's coordinate system.</para>
+<para>The data is stored in row-major format, without padding, with each entry corresponding to distance from the view's near plane to the users' environment, in unspecified units. The size of each data entry and the type is determined by <see cref="XRSession.DepthDataFormat."/>. The values can be converted from unspecified units to meters by multiplying them by <see cref="XRDepthInformation.RawValueToMeters."/>. The <see cref="XRDepthInformation.NormDepthBufferFromNormView."/> property can be used to transform from normalized view coordinates (an origin in the top left corner of the view, with X axis growing to the right, and Y axis growing downward) into the depth buffer's coordinate system.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRCPUDepthInformation/data"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>An <see cref="ArrayBuffer"/>.</value>

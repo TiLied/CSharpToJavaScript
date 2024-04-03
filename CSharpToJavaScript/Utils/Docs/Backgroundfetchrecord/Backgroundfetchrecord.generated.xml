@@ -1,10 +1,10 @@
 <docs>
 <BackgroundFetchRecord>
 <summary>
-The <strong><c>BackgroundFetchRecord</c></strong> interface of the <see cref="'Background Fetch API'"/> represents an individual request and response.
+The <strong><c>BackgroundFetchRecord</c></strong> interface of the <see cref="'Background Fetch API'."/> represents an individual request and response.
 </summary>
 <remarks>
-<para>A <c>BackgroundFetchRecord</c> is created by the <see cref="BackgroundFetchRegistration.Match"/> method, therefore there is no constructor for this interface.</para><para>There will be one <c>BackgroundFetchRecord</c> for each resource requested by <c>fetch()</c>.</para>
+<para>A <c>BackgroundFetchRecord</c> is created by the <see cref="BackgroundFetchRegistration.Match."/> method, therefore there is no constructor for this interface.</para><para>There will be one <c>BackgroundFetchRecord</c> for each resource requested by <c>fetch()</c>.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BackgroundFetchRecord"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </BackgroundFetchRecord>

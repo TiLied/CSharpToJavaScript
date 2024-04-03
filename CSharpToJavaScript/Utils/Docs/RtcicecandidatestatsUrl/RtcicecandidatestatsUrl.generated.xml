@@ -1,11 +1,11 @@
 <docs>
 <RTCIceCandidateStatsUrl>
 <summary>
-The <see cref="RTCIceCandidateStats"/> dictionary's<br/><strong><c>url</c></strong> property specifies the URL of the<br/><see href="https://developer.mozilla.org/en-US/docs/Glossary/ICE">ICE</see> server from which the described candidate was obtained. This<br/>property is <strong>only</strong> available for local candidates.
+The <see cref="RTCIceCandidateStats."/> dictionary's<br/><strong><c>url</c></strong> property specifies the URL of the<br/><see href="https://developer.mozilla.org/en-US/docs/Glossary/ICE">ICE</see> server from which the described candidate was obtained. This<br/>property is <strong>only</strong> available for local candidates.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/url"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string specifying the URL of the ICE server from which the<br/>candidate described by the <c>RTCIceCandidateStats</c> was obtained. This is the<br/>same URL that would be received in the <see cref="RTCPeerConnection.Icecandidate_event"/> event's<br/><see cref="RTCPeerConnectionIceEvent.Url"/> property.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> This property does not exist for remote candidates.</blockquote></value>
+<value>A string specifying the URL of the ICE server from which the<br/>candidate described by the <c>RTCIceCandidateStats</c> was obtained. This is the<br/>same URL that would be received in the <see cref="RTCPeerConnection.Icecandidate_event."/> event's<br/><see cref="RTCPeerConnectionIceEvent.Url."/> property.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> This property does not exist for remote candidates.</blockquote></value>
 </RTCIceCandidateStatsUrl>
 </docs>

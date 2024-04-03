@@ -1,11 +1,11 @@
 <docs>
 <CanvasRenderingContext2DFillRect>
 <summary>
-The<br/><strong><c>CanvasRenderingContext2D.fillRect()</c></strong><br/>method of the Canvas 2D API draws a rectangle that is filled according to the current<br/><see cref="CanvasRenderingContext2D.FillStyle"/>.
+The<br/><strong><c>CanvasRenderingContext2D.fillRect()</c></strong><br/>method of the Canvas 2D API draws a rectangle that is filled according to the current<br/><see cref="CanvasRenderingContext2D.FillStyle."/>.
 </summary>
 <remarks>
-<para>This method draws directly to the canvas without modifying the current path, so any<br/>subsequent <see cref="CanvasRenderingContext2D.Fill"/> or<br/><see cref="CanvasRenderingContext2D.Stroke"/> calls will have no effect<br/>on it.</para>
-<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.FillStyle"/><br/>-<see cref="CanvasRenderingContext2D.ClearRect"/><br/>-<see cref="CanvasRenderingContext2D.StrokeRect"/><br/></para>
+<para>This method draws directly to the canvas without modifying the current path, so any<br/>subsequent <see cref="CanvasRenderingContext2D.Fill."/> or<br/><see cref="CanvasRenderingContext2D.Stroke."/> calls will have no effect<br/>on it.</para>
+<para>-The interface defining this method: <see cref="CanvasRenderingContext2D."/><br/>-<see cref="CanvasRenderingContext2D.FillStyle."/><br/>-<see cref="CanvasRenderingContext2D.ClearRect."/><br/>-<see cref="CanvasRenderingContext2D.StrokeRect."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fillRect"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>

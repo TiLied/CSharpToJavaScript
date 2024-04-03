@@ -1,13 +1,13 @@
 <docs>
 <BiquadFilterNodeGain>
 <summary>
-The <c>gain</c> property of the <see cref="BiquadFilterNode"/> interface is an <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam#a-rate">a-rate</see> <see cref="AudioParam"/> — a double representing the <see href="https://en.wikipedia.org/wiki/Gain">gain</see> used in the current filtering algorithm.
+The <c>gain</c> property of the <see cref="BiquadFilterNode."/> interface is an <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam#a-rate">a-rate</see> <see cref="AudioParam."/> — a double representing the <see href="https://en.wikipedia.org/wiki/Gain">gain</see> used in the current filtering algorithm.
 </summary>
 <remarks>
 <para>When its value is positive, it represents a real gain; when negative, it represents an attenuation.</para><para>It is expressed in dB, has a default value of <c>0</c>, and can take a value in a nominal range of <c>-40</c> to <c>40</c>.</para>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BiquadFilterNode/gain"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An <see cref="AudioParam"/>.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> Though the <c>AudioParam</c> returned is read-only, the value it represents is not.</blockquote></value>
+<value>An <see cref="AudioParam."/>.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> Though the <c>AudioParam</c> returned is read-only, the value it represents is not.</blockquote></value>
 </BiquadFilterNodeGain>
 </docs>

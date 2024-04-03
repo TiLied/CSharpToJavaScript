@@ -1,13 +1,13 @@
 <docs>
 <ClipboardWrite>
 <summary>
-The <see cref="Clipboard"/> method<br/><strong><c>write()</c></strong> writes arbitrary data, such as images, to the<br/>clipboard. This can be used to implement cut and copy functionality.
+The <strong><c>write()</c></strong> method of the <see cref="Clipboard."/> interface writes arbitrary data to the clipboard, such as images, fulfilling the returned {{jsxref("Promise")}} on completion.<br/>This can be used to implement cut and copy functionality.
 </summary>
 <remarks>
-<para>The <c>&amp;quot;clipboard-write&amp;quot;</c> permission of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Permissions_API">Permissions API</see>, is granted<br/>automatically to pages when they are in the active tab.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Browser support for the asynchronous clipboard APIs is still<br/>in the process of being implemented. Be sure to check the <see href="https://developer.mozilla.org#browser_compatibility">compatibility table</see> as well as<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard#clipboard_availability">Clipboard availability</see> for more<br/>information.</para></blockquote><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> For parity with Google Chrome, Firefox only allows this function to work with text, HTML, and PNG data.</para></blockquote>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API">Clipboard API</see><br/>-<see href="https://async-clipboard-api.glitch.me/">Async Clipboard API demo on Glitch</see><br/>-<see href="https://web.dev/async-clipboard/">Image support for Async Clipboard article</see><br/></para>
+<para>The method can in theory write arbitrary data (unlike <see cref="Clipboard.WriteText."/>, which can only write text).<br/>Browsers commonly support writing text, HTML, and PNG image data — see <see href="https://developer.mozilla.org#browser_compatibility">browser compatibility</see> for more information.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API">Clipboard API</see><br/>-<see href="https://web.dev/articles/async-clipboard">Image support for Async Clipboard article</see><br/>-<see cref="Clipboard.WriteText."/><br/>-<see cref="Clipboard.Read."/><br/>-<see cref="Clipboard.ReadText."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/write"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A <see cref="Promise"/> which is resolved when the data has been written to the<br/>clipboard. The promise is rejected if the clipboard is unable to complete the clipboard<br/>access.</returns>
+<returns>A <see cref="Promise"/> which is resolved when the data has been written to the clipboard.<br/>Note that if the underlying OS does not support multiple native clipboard items on the system clipboard, then only the first <see cref="ClipboardItem."/> in the array is written.The promise is rejected if the clipboard is unable to write to the clipboard.</returns>
 </ClipboardWrite>
 </docs>

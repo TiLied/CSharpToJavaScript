@@ -1,12 +1,12 @@
 <docs>
 <ClipboardWriteText>
 <summary>
-The <see cref="Clipboard"/> interface's <strong><c>writeText()</c></strong><br/>property writes the specified text string to the system clipboard. Text may be read back<br/>using either <see cref="Clipboard.Read"/> or {{domxref("Clipboard.readText",<br/>&amp;quot;readText()&amp;quot;)}}.
+The <strong><c>writeText()</c></strong> method of the <see cref="Clipboard."/> interface writes the specified text to the system clipboard, returning a {{jsxref("Promise")}} that is resolved once the system clipboard has been updated.
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API">Clipboard API</see><br/>-<see href="https://async-clipboard-api.glitch.me/">Async Clipboard API demo on Glitch</see><br/>-<see href="https://web.dev/async-clipboard/">Image support for Async Clipboard article</see><br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API">Clipboard API</see><br/>-<see href="https://web.dev/articles/async-clipboard">Image support for Async Clipboard article</see><br/>-<see cref="Clipboard.Write."/><br/>-<see cref="Clipboard.Read."/><br/>-<see cref="Clipboard.ReadText."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/writeText"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A <see cref="Promise"/> which is resolved once the clipboard's contents have been<br/>updated. The promise is rejected if the caller does not have permission to write to the<br/>clipboard.</returns>
+<returns>A <see cref="Promise"/> that is resolved once the clipboard's contents have been updated.</returns>
 </ClipboardWriteText>
 </docs>

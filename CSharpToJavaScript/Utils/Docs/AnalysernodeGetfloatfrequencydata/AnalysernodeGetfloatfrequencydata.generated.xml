@@ -1,10 +1,10 @@
 <docs>
 <AnalyserNodeGetFloatFrequencyData>
 <summary>
-The <strong><c>getFloatFrequencyData()</c></strong> method of the <see cref="AnalyserNode"/> Interface copies the current frequency data into a {{jsxref("Float32Array")}} array passed into it. Each array value is a <strong>sample</strong>, the magnitude of the signal at a particular time.
+The <strong><c>getFloatFrequencyData()</c></strong> method of the <see cref="AnalyserNode."/> Interface copies the current frequency data into a {{jsxref("Float32Array")}} array passed into it. Each array value is a <strong>sample</strong>, the magnitude of the signal at a particular time.
 </summary>
 <remarks>
-<para>Each item in the array represents the decibel value for a specific frequency. The frequencies are spread linearly from 0 to 1/2 of the sample rate. For example, for a <c>48000</c> Hz sample rate, the last item of the array will represent the decibel value for <c>24000</c> Hz.</para><para>If you need higher performance and don't care about precision, you can use <see cref="AnalyserNode.GetByteFrequencyData"/> instead, which works on a {{jsxref("Uint8Array")}}.</para>
+<para>Each item in the array represents the decibel value for a specific frequency. The frequencies are spread linearly from 0 to 1/2 of the sample rate. For example, for a <c>48000</c> Hz sample rate, the last item of the array will represent the decibel value for <c>24000</c> Hz.</para><para>If you need higher performance and don't care about precision, you can use <see cref="AnalyserNode.GetByteFrequencyData."/> instead, which works on a {{jsxref("Uint8Array")}}.</para>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode/getFloatFrequencyData"> <em>See also on MDN</em> </seealso></para>
 </remarks>

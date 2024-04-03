@@ -1,11 +1,11 @@
 <docs>
 <URLPort>
 <summary>
-The <strong><c>port</c></strong> property of the <see cref="URL"/> interface is<br/>a string containing the port number of the URL.
+The <strong><c>port</c></strong> property of the <see cref="URL."/> interface is<br/>a string containing the port number of the URL.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> If an input string passed to the <see href="https://developer.mozilla.org/en-US/docs/Web/API/URL/URL"><c>URL()</c></see> constructor doesn&amp;apos;t contain an explicit port number (e.g., <c>https://localhost</c>) or contains a port number that&amp;apos;s the default port number corresponding to the protocol part of the input string (e.g., <c>https://localhost:443</c>), then in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/URL"><c>URL</c></see> object the constructor returns, the value of the port property will be the empty string: <c>&amp;apos;&amp;apos;</c>.</para></blockquote><para>AvailableInWorkers</para>
-<para>-The <see cref="URL"/> interface it belongs to.<br/></para>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> If an input string passed to the <see href="https://developer.mozilla.org/en-US/docs/Web/API/URL/URL"><c>URL()</c></see> constructor doesn&amp;apos;t contain an explicit port number (e.g., <c>https://localhost</c>) or contains a port number that&amp;apos;s the default port number corresponding to the protocol part of the input string (e.g., <c>https://localhost:443</c>), then in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/URL"><c>URL</c></see> object the constructor returns, the value of the port property will be the empty string: <c>&amp;apos;&amp;apos;</c>.</para></blockquote>
+<para>-The <see cref="URL."/> interface it belongs to.<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URL/port"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A string.</value>

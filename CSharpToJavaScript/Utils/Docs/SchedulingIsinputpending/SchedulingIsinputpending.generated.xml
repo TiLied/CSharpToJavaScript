@@ -1,12 +1,13 @@
 <docs>
 <SchedulingIsInputPending>
 <summary>
-The <c>isInputPending()</c> method allows you to check whether there are pending input events in the event queue, indicating that the user has interacted with the page or the system is about to dispatch such events.
+The <strong><c>isInputPending()</c></strong> method of the <see cref="Scheduling."/> interface allows you to check whether there are pending input events in the event queue, indicating that the user is attempting to interact with the page.
 </summary>
 <remarks>
-<para>This feature can be useful in scenarios where you want to check if there are any pending input events before performing a long-running operation or updating the UI. By checking the value of navigator.scheduling.isInputPending, you can avoid blocking the main thread when the user is interacting with the page.</para>
+<para>This feature is useful in situations where you have a queue of tasks to run, and you want to yield to the main thread regularly to allow user interaction to occur so that the app is kept as responsive and performant as possible. <c>isInputPending()</c> allows you to yield only when there is input pending, rather than having to do it at arbitrary intervals.</para><para><c>isInputPending()</c> is called using <c>navigator.scheduling.isInputPending()</c>.</para>
+<para>-<see href="https://engineering.fb.com/2019/04/22/developer-tools/isinputpending-api/">Faster input events with Facebook&amp;apos;s first browser API contribution</see> on engineering.fb.com (2019)<br/>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/isinputpending">Better JS scheduling with isInputPending()</see> on developer.chrome.com (2020)<br/>-<see href="https://web.dev/articles/optimize-long-tasks#yield_only_when_necessary">Optimizing long tasks</see> on web.dev (2022)<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Scheduling/isInputPending"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A boolean.The <c>navigator.scheduling.isInputPending()</c> method returns a Boolean value, indicating whether there are pending input events or not. It can have one of the following three possible values:</value>
+<returns>A boolean that indicates whether there are pending input events in the event queue (<c>true</c>) or not (<c>false</c>).</returns>
 </SchedulingIsInputPending>
 </docs>

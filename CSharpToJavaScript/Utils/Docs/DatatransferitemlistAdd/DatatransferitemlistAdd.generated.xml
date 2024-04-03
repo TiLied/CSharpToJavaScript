@@ -1,11 +1,11 @@
 <docs>
 <DataTransferItemListAdd>
 <summary>
-The <strong><c>DataTransferItemList.add()</c></strong> method creates a new<br/><see cref="DataTransferItem"/> using the specified data and adds it to the drag data<br/>list. The item may be a <see cref="File"/> or a string of a<br/>given type. If the item is successfully added to the list, the newly-created<br/><see cref="DataTransferItem"/> object is returned.
+The <strong><c>DataTransferItemList.add()</c></strong> method creates a new<br/><see cref="DataTransferItem."/> using the specified data and adds it to the drag data<br/>list. The item may be a <see cref="File."/> or a string of a<br/>given type. If the item is successfully added to the list, the newly-created<br/><see cref="DataTransferItem."/> object is returned.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItemList/add"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A <see cref="DataTransferItem"/> containing the specified data. If the drag item<br/>couldn't be created (for example, if the associated <see cref="DataTransfer"/> object<br/>has no data store), <c>null</c> is returned.</returns>
+<returns>A <see cref="DataTransferItem."/> containing the specified data. If the drag item<br/>couldn't be created (for example, if the associated <see cref="DataTransfer."/> object<br/>has no data store), <c>null</c> is returned.</returns>
 </DataTransferItemListAdd>
 </docs>

@@ -1,7 +1,7 @@
 <docs>
 <RTCRtpStreamStatsPliCount>
 <summary>
-The <strong><c>pliCount</c></strong> property of the<br/><see cref="RTCRtpStreamStats"/> dictionary states the number of times the stream's<br/>receiving end sent a <strong>Picture Loss Indication</strong> (<strong>PLI</strong>)<br/>packet to the sender.
+The <strong><c>pliCount</c></strong> property of the<br/><see cref="RTCRtpStreamStats."/> dictionary states the number of times the stream's<br/>receiving end sent a <strong>Picture Loss Indication</strong> (<strong>PLI</strong>)<br/>packet to the sender.
 </summary>
 <remarks>
 <para>A PLI packet indicates that some amount of encoded video<br/>data has been lost for one or more frames.</para>

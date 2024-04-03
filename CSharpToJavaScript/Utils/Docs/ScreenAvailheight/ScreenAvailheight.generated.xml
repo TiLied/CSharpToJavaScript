@@ -1,13 +1,13 @@
 <docs>
 <ScreenAvailHeight>
 <summary>
-The read-only <see cref="Screen"/> interface's<br/><strong><c>availHeight</c></strong> property returns the height, in CSS pixels, of<br/>the space available for Web content on the screen. Since <see cref="Screen"/> is<br/>exposed on the <see cref="Window"/> interface's {{DOMxRef("Window.screen",<br/>&amp;quot;window.screen&amp;quot;)}} property, you access <c>availHeight</c> using<br/><c>window.screen.availHeight</c>.
+The read-only <see cref="Screen."/> interface's<br/><strong><c>availHeight</c></strong> property returns the height, in CSS pixels, of<br/>the space available for Web content on the screen. Since <see cref="Screen."/> is<br/>exposed on the <see cref="Window."/> interface's <see cref="Window.Screen."/><br/>property, you access <c>availHeight</c> using <c>window.screen.availHeight</c>.
 </summary>
 <remarks>
-<para>You can similarly use <see cref="Screen.AvailWidth"/> to get the number of pixels<br/>which are horizontally available to the browser for its use.</para>
-<para>-<see cref="Window"/><br/>-<see cref="Screen"/><br/>-<see cref="Screen.AvailWidth"/><br/>-<see cref="Window.InnerHeight"/><br/></para>
+<para>You can similarly use <see cref="Screen.AvailWidth."/> to get the number of pixels<br/>which are horizontally available to the browser for its use.</para>
+<para>-<see cref="Window."/><br/>-<see cref="Screen."/><br/>-<see cref="Screen.AvailWidth."/><br/>-<see cref="Window.InnerHeight."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Screen/availHeight"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A numeric value indicating the number of CSS pixels tall the screen&amp;apos;s available space<br/>is. This can be no larger than the value of {{DOMxRef(&amp;quot;Screen.height&amp;quot;,<br/>&amp;quot;window.screen.height&amp;quot;)}}, and will be less if the device or user agent reserves any<br/>vertical space for itself.For instance, on a Mac whose Dock is located at the bottom of screen (which is the<br/>default), the value of <c>availHeight</c> is approximately the value of<br/><c>height</c> (the total height of the screen in CSS pixels) minus the heights of<br/>the Dock and menu bar, as seen in the diagram below.<see href="https://developer.mozilla.orgavailheight-diagram.svg"><see href="https://developer.mozilla.orgavailheight-diagram.svg">Diagram showing how Screen.availHeight relates to Screen.height and the screen&amp;apos;s contents</see></see></value>
+<value>A numeric value indicating the number of CSS pixels tall the screen&amp;apos;s available space<br/>is. This can be no larger than the value of <see cref="Screen.Height."/>,<br/>and will be less if the device or user agent reserves any<br/>vertical space for itself.For instance, on a Mac whose Dock is located at the bottom of screen (which is the<br/>default), the value of <c>availHeight</c> is approximately the value of<br/><c>height</c> (the total height of the screen in CSS pixels) minus the heights of<br/>the Dock and menu bar, as seen in the diagram below.<see href="https://developer.mozilla.orgavailheight-diagram.svg"><see href="https://developer.mozilla.orgavailheight-diagram.svg">Diagram showing how Screen.availHeight relates to Screen.height and the screen&amp;apos;s contents</see></see></value>
 </ScreenAvailHeight>
 </docs>

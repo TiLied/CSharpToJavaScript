@@ -1,10 +1,10 @@
 <docs>
 <SourceBufferAppendBufferAsync>
 <summary>
-The <strong><c>appendBufferAsync()</c></strong> method<br/>of the <see cref="SourceBuffer"/> interface begins the process of asynchronously<br/>appending media segment data from an <see cref="ArrayBuffer"/>,<br/>a <see cref="TypedArray"/> or a <see cref="DataView"/> object to the <c>SourceBuffer</c> object.<br/>It returns a <see cref="Promise"/> which is fulfilled once the buffer has been appended.
+The <strong><c>appendBufferAsync()</c></strong> method<br/>of the <see cref="SourceBuffer."/> interface begins the process of asynchronously<br/>appending media segment data from an <see cref="ArrayBuffer"/>,<br/>a <see cref="TypedArray"/> or a <see cref="DataView"/> object to the <c>SourceBuffer</c> object.<br/>It returns a <see cref="Promise"/> which is fulfilled once the buffer has been appended.
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Source_Extensions_API">Media Source Extensions API</see><br/>-<see cref="SourceBuffer.AppendBuffer"/><br/>-<see cref="MediaSource"/><br/>-<see cref="SourceBufferList"/><br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Source_Extensions_API">Media Source Extensions API</see><br/>-<see cref="SourceBuffer.AppendBuffer."/><br/>-<see cref="MediaSource."/><br/>-<see cref="SourceBufferList."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/appendBufferAsync"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>A <see cref="Promise"/> which is fulfilled when the buffer has been added successfully to the <c>SourceBuffer</c> object,<br/>or <c>null</c>, if the request could not be initiated.</returns>

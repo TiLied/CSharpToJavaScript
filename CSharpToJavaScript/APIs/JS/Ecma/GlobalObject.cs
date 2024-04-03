@@ -81,7 +81,6 @@ namespace CSharpToJavaScript.APIs.JS
 			public static Function Function(dynamic parameterArgs, dynamic? bodyArg = null)
 			{
 				throw new System.NotImplementedException();
-
 			}
 
 			[To(ToAttribute.Default)]

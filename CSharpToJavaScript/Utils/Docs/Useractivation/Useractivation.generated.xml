@@ -1,11 +1,11 @@
 <docs>
 <UserActivation>
 <summary>
-The <strong><c>UserActivation</c></strong> interface allows querying information about a window&amp;apos;s user activation state.
+The <strong><c>UserActivation</c></strong> interface provides information about whether a user is currently interacting with the page, or has completed an interaction since page load.
 </summary>
 <remarks>
-<para>A user activation either implies that the user is currently interacting with the page, or has completed an interaction since page load. Typically, this is a click on a button or some other user interaction with the UI.</para><para>There are two kinds of window user activation states:</para><para>See <see href="https://developer.mozilla.org/en-US/docs/Web/Security/User_activation">Features gated by user activation</see> for more information and a list of APIs that require either sticky or transient user activation.</para><para>This API is only available in the window context and not exposed to workers.</para>
-<para>-<see cref="Navigator.UserActivation"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Security/User_activation">Features gated by user activation</see><br/></para>
+<para>This API is only available in the window context and not exposed to workers.</para>
+<para>-<see cref="Navigator.UserActivation."/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Security/User_activation">Features gated by user activation</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/UserActivation"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </UserActivation>

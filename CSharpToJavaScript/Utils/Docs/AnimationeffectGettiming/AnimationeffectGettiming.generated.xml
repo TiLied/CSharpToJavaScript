@@ -1,11 +1,11 @@
 <docs>
 <AnimationEffectGetTiming>
 <summary>
-The <c>AnimationEffect.getTiming()</c> method of the <see cref="AnimationEffect"/> interface returns an object containing the timing properties for the Animation Effect.
+The <c>AnimationEffect.getTiming()</c> method of the <see cref="AnimationEffect."/> interface returns an object containing the timing properties for the Animation Effect.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Several of the timing properties returned by <c>getTiming()</c> may take on the placeholder value <c>&amp;quot;auto&amp;quot;</c>. To obtain resolved values for use in timing computations, instead use <see cref="AnimationEffect.GetComputedTiming"/>.</para><para>In the future, <c>&amp;quot;auto&amp;quot;</c> or similar values might be added to the types of more timing properties, and new types of <see cref="AnimationEffect"/> might resolve <c>&amp;quot;auto&amp;quot;</c> to different values.</para></blockquote>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/>-<see cref="AnimationEffect"/><br/></para>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Several of the timing properties returned by <c>getTiming()</c> may take on the placeholder value <c>&amp;quot;auto&amp;quot;</c>. To obtain resolved values for use in timing computations, instead use <see cref="AnimationEffect.GetComputedTiming."/>.</para><para>In the future, <c>&amp;quot;auto&amp;quot;</c> or similar values might be added to the types of more timing properties, and new types of <see cref="AnimationEffect."/> might resolve <c>&amp;quot;auto&amp;quot;</c> to different values.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/>-<see cref="AnimationEffect."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AnimationEffect/getTiming"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>An object containing the following properties:</returns>

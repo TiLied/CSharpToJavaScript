@@ -1,12 +1,12 @@
 <docs>
 <CSSImportRuleStylesheet>
 <summary>
-The read-only <strong><c>styleSheet</c></strong> property of the<br/><see cref="CSSImportRule"/> interface returns the CSS Stylesheet specified by the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@import">@import</see> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/At-rule">at-rule</see>. This will be<br/>in the form of a <see cref="CSSStyleSheet"/> object.
+The read-only <strong><c>styleSheet</c></strong> property of the<br/><see cref="CSSImportRule."/> interface returns the CSS Stylesheet specified by the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@import">@import</see> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/At-rule">at-rule</see>. This will be<br/>in the form of a <see cref="CSSStyleSheet."/> object.
 </summary>
 <remarks>
 <para>An <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@import">@import</see> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/At-rule">at-rule</see> always has<br/>an associated stylesheet.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSImportRule/stylesheet"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="CSSStyleSheet"/>.</value>
+<value>A <see cref="CSSStyleSheet."/>.</value>
 </CSSImportRuleStylesheet>
 </docs>

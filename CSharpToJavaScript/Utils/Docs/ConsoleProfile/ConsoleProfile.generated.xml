@@ -1,11 +1,11 @@
 <docs>
 <ConsoleProfile>
 <summary>
-The <strong><c>console.profile()</c></strong> starts recording a performance profile (for example, the <see href="https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html">Firefox performance tool</see>).
+The <strong><c>console.profile()</c></strong> static method starts recording a performance profile (for example, the <see href="https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html">Firefox performance tool</see>).
 </summary>
 <remarks>
-<para>You can optionally supply an argument to name the profile and this then enables you to<br/>stop only that profile if multiple profiles being recorded. See<br/><see cref="Console.ProfileEnd"/> to see how this argument is interpreted.</para><para>To stop recording call <see cref="Console.ProfileEnd"/>.</para><para>AvailableInWorkers</para>
-<para>-<see cref="Console.ProfileEnd"/><br/></para>
+<para>You can optionally supply an argument to name the profile and this then enables you to stop only that profile if multiple profiles being recorded. See <see cref="Console/profileEnd_static."/> to see how this argument is interpreted.</para><para>To stop recording call <see cref="Console/profileEnd_static."/>.</para>
+<para>-<see cref="Console/profileEnd_static."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/console/profile"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>

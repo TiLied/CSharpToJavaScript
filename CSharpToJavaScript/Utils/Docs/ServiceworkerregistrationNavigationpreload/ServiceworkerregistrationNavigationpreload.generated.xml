@@ -1,12 +1,12 @@
 <docs>
 <ServiceWorkerRegistrationNavigationPreload>
 <summary>
-The <strong><c>navigationPreload</c></strong> read-only property of the <see cref="ServiceWorkerRegistration"/> interface returns the <see cref="NavigationPreloadManager"/> associated with the current service worker registration.
+The <strong><c>navigationPreload</c></strong> read-only property of the <see cref="ServiceWorkerRegistration."/> interface returns the <see cref="NavigationPreloadManager."/> associated with the current service worker registration.
 </summary>
 <remarks>
 <para>The returned object allows resources managed by a service worker to be preemptively downloaded in parallel with service worker boot up.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/navigationPreload"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An instance of <see cref="NavigationPreloadManager"/>.</value>
+<value>An instance of <see cref="NavigationPreloadManager."/>.</value>
 </ServiceWorkerRegistrationNavigationPreload>
 </docs>

@@ -1,0 +1,11 @@
+<docs>
+<RTCCertificateStatsFingerprint>
+<summary>
+The <strong><c>fingerprint</c></strong> property of the <see cref="RTCCertificateStats."/> dictionary is a string containing the fingerprint value of the associated <see cref="RTCCertificate."/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCCertificateStats/fingerprint"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing the fingerprint of the associated certificate.This is a lowercase hex string, calculated using the hash function specified in the <see cref="RTCCertificateStats.FingerprintAlgorithm."/> property.<br/>The format is more precisely defined in <see href="https://www.rfc-editor.org/rfc/rfc4572#section-5">RFC4572, Section 5</see>.</value>
+</RTCCertificateStatsFingerprint>
+</docs>

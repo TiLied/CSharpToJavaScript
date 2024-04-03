@@ -5,7 +5,7 @@ The read-only <c>RTCDataChannel</c> property<br/><strong><c>protocol</c></strong
 </summary>
 <remarks>
 <blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> The permitted values of this property are defined by the website or app using the<br/>data channel.</para></blockquote><para>The ability for each channel to have a defined subprotocol lets your app, for example,<br/>use JSON objects as messages on one channel while another channel is plaintext and<br/>another is raw binary or even some other format.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/>-<see cref="RTCDataChannel"/><br/>-<see cref="RTCPeerConnection.CreateDataChannel"/><br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/>-<see cref="RTCDataChannel."/><br/>-<see cref="RTCPeerConnection.CreateDataChannel."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/protocol"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A string identifying the app-defined subprotocol being used for exchanging data on the<br/>channel. If none has been established, this is an empty string (&amp;quot;&amp;quot;).</value>

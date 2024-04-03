@@ -1,13 +1,13 @@
 <docs>
 <OfflineAudioContextStartRendering>
 <summary>
-The <c>startRendering()</c> method of the <see cref="OfflineAudioContext"/><br/>Interface starts rendering the audio graph, taking into account the current connections<br/>and the current scheduled changes.
+The <c>startRendering()</c> method of the <see cref="OfflineAudioContext."/> Interface starts rendering the audio graph, taking into account the current connections and the current scheduled changes.
 </summary>
 <remarks>
-<para>The <see cref="OfflineAudioContext/complete_event"/> event (of type <see cref="OfflineAudioCompletionEvent"/>) is<br/>raised when the rendering is finished, containing the resulting<br/><see cref="AudioBuffer"/> in its <c>renderedBuffer</c> property.</para><para>Browsers currently support two versions of the <c>startRendering()</c> method —<br/>an older event-based version and a newer promise-based version. The former will<br/>eventually be removed, but currently both mechanisms are provided for legacy reasons.</para>
+<para>The <see cref="OfflineAudioContext/complete_event."/> event (of type <see cref="OfflineAudioCompletionEvent."/>) is raised when the rendering is finished, containing the resulting <see cref="AudioBuffer."/> in its <c>renderedBuffer</c> property.</para><para>Browsers currently support two versions of the <c>startRendering()</c> method — an older event-based version and a newer promise-based version.<br/>The former will eventually be removed, but currently both mechanisms are provided for legacy reasons.</para>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/OfflineAudioContext/startRendering"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>None (<see cref="Undefined"/>).</returns>
+<returns>A {{jsxref("Promise")}} that fulfills with an <see cref="AudioBuffer."/>.</returns>
 </OfflineAudioContextStartRendering>
 </docs>

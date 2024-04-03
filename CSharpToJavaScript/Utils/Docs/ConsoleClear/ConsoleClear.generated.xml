@@ -1,9 +1,10 @@
 <docs>
 <ConsoleClear>
 <summary>
-The <strong><c>console.clear()</c></strong> method clears the console if the console allows it. A graphical console, like those running on browsers, will allow it; a console displaying on the terminal, like the one running on Node, will not support it, and will have no effect (and no error).
+The <strong><c>console.clear()</c></strong> static method clears the console if the console allows it. A graphical console, like those running on browsers, will allow it; a console displaying on the terminal, like the one running on Node, will not support it, and will have no effect (and no error).
 </summary>
 <remarks>
+<para>-<see href="https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api#clear">Microsoft Edge&amp;apos;s documentation for <c>console.clear()</c></see><br/>-<see href="https://nodejs.org/docs/latest/api/console.html#consoleclear">Node.JS documentation for <c>console.clear()</c></see><br/>-<see href="https://developer.chrome.com/docs/devtools/console/api/#clear">Google Chrome&amp;apos;s documentation for <c>console.clear()</c></see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/console/clear"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>

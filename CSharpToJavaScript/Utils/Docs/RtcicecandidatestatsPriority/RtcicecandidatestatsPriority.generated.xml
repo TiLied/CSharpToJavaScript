@@ -1,13 +1,13 @@
 <docs>
 <RTCIceCandidateStatsPriority>
 <summary>
-The <see cref="RTCIceCandidateStats"/> dictionary's<br/><strong><c>priority</c></strong> property is a positive integer value<br/>indicating the priority (or desirability) of the described candidate.
+The <see cref="RTCIceCandidateStats."/> dictionary's<br/><strong><c>priority</c></strong> property is a positive integer value<br/>indicating the priority (or desirability) of the described candidate.
 </summary>
 <remarks>
 <para>During <see href="https://developer.mozilla.org/en-US/docs/Glossary/ICE">ICE</see> negotiation while setting up a WebRTC peer connection, the<br/>priority values reported to the remote peer by a <see href="https://developer.mozilla.org/en-US/docs/Glossary/user agent">user agent</see> are used<br/>to determine which candidates are considered &amp;quot;more desirable&amp;quot;. The higher the value,<br/>the more desirable the candidate is.</para>
 <para>-{{RFC(5245, &amp;quot;&amp;quot;, &amp;quot;4.1.2.1&amp;quot;)}}: Recommended Formula section in the ICE specification<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/priority"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A positive integer indicating the priority of the <see cref="RTCIceCandidate"/><br/>described by the <c>RTCIceCandidateStats</c> object. The value may be anywhere<br/>from 1 to 2,147,483,647.</value>
+<value>A positive integer indicating the priority of the <see cref="RTCIceCandidate."/><br/>described by the <c>RTCIceCandidateStats</c> object. The value may be anywhere<br/>from 1 to 2,147,483,647.</value>
 </RTCIceCandidateStatsPriority>
 </docs>

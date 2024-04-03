@@ -1,10 +1,10 @@
 <docs>
 <XRSession>
 <summary>
-The <see cref="WebXR Device API"/>'s <strong><c>XRSession</c></strong> interface represents an ongoing XR session, providing methods and properties used to interact with and control the session. To open a WebXR session, use the <see cref="XRSystem"/> interface's <see cref="XRSystem.RequestSession"/> method.
+The <see cref="WebXR Device API."/>'s <strong><c>XRSession</c></strong> interface represents an ongoing XR session, providing methods and properties used to interact with and control the session. To open a WebXR session, use the <see cref="XRSystem."/> interface's <see cref="XRSystem.RequestSession."/> method.
 </summary>
 <remarks>
-<para>With <c>XRSession</c> methods, you can poll the viewer's position and orientation (the <see cref="XRViewerPose"/>), gather information about the user's environment, and present imagery to the user. <c>XRSession</c> supports both inline and immersive virtual and augmented reality modes.</para><para></para>
+<para>With <c>XRSession</c> methods, you can poll the viewer's position and orientation (the <see cref="XRViewerPose."/>), gather information about the user's environment, and present imagery to the user. <c>XRSession</c> supports both inline and immersive virtual and augmented reality modes.</para><para></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRSession"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </XRSession>

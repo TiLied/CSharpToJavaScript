@@ -4,7 +4,7 @@
 The <strong><c>RTCIceParameters</c></strong> dictionary specifies the username fragment and password assigned to an <see href="https://developer.mozilla.org/en-US/docs/Glossary/ICE">ICE</see> session.
 </summary>
 <remarks>
-<para>During ICE negotiation, each peer&amp;apos;s username fragment and password are recorded in an <c>RTCIceParameters</c> object, which can be obtained from the <see cref="RTCIceTransport"/> by calling its <see cref="RTCIceTransport.GetLocalParameters"/> or <see cref="RTCIceTransport.GetRemoteParameters"/> method, depending on which end interests you.</para>
+<para>During ICE negotiation, each peer&amp;apos;s username fragment and password are recorded in an <c>RTCIceParameters</c> object, which can be obtained from the <see cref="RTCIceTransport."/> by calling its <see cref="RTCIceTransport.GetLocalParameters."/> or <see cref="RTCIceTransport.GetRemoteParameters."/> method, depending on which end interests you.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceParameters"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </RTCIceParameters>

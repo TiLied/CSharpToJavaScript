@@ -1,12 +1,12 @@
 <docs>
 <RTCIceCandidateRTCIceCandidate>
 <summary>
-The<br/><strong><c>RTCIceCandidate()</c></strong><br/>constructor creates and returns a new <see cref="RTCIceCandidate"/> object, which can<br/>be configured to represent a single <see href="https://developer.mozilla.org/en-US/docs/Glossary/ICE">ICE</see> candidate.
+The<br/><strong><c>RTCIceCandidate()</c></strong><br/>constructor creates and returns a new <see cref="RTCIceCandidate."/> object, which can<br/>be configured to represent a single <see href="https://developer.mozilla.org/en-US/docs/Glossary/ICE">ICE</see> candidate.
 </summary>
 <remarks>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Protocols#ice">Introduction to WebRTC protocols</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Connectivity">WebRTC connectivity</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Session_lifetime">Lifetime of a WebRTC session</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling">Signaling and video calling</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/RTCIceCandidate"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A newly-created <see cref="RTCIceCandidate"/> object.If <c>candidateInfo</c> is provided, the new <c>RTCIceCandidate</c> is initialized as follows:<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> Parsing of the <c>candidate</c> string is performed using the <see href="https://w3c.github.io/webrtc-pc/#candidate-attribute-grammar">candidate-attribute grammar</see> from the WebRTC Specification.</blockquote></returns>
+<returns>A newly-created <see cref="RTCIceCandidate."/> object.If <c>candidateInfo</c> is provided, the new <c>RTCIceCandidate</c> is initialized as follows:<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> Parsing of the <c>candidate</c> string is performed using the <see href="https://w3c.github.io/webrtc-pc/#candidate-attribute-grammar">candidate-attribute grammar</see> from the WebRTC Specification.</blockquote></returns>
 </RTCIceCandidateRTCIceCandidate>
 </docs>

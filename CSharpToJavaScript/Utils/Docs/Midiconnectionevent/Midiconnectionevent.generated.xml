@@ -1,7 +1,7 @@
 <docs>
 <MIDIConnectionEvent>
 <summary>
-The <strong><c>MIDIConnectionEvent</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_MIDI_API">Web MIDI API</see> is the event passed to the <see cref="MIDIAccess.Statechange_event"/> event of the <see cref="MIDIAccess"/> interface and the <see cref="MIDIPort.Statechange_event"/> event of the <see cref="MIDIPort"/> interface. This occurs any time a new port becomes available, or when a previously available port becomes unavailable. For example, this event is fired whenever a MIDI device is either plugged in to or unplugged from a computer.
+The <strong><c>MIDIConnectionEvent</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_MIDI_API">Web MIDI API</see> is the event passed to the <see cref="MIDIAccess.Statechange_event."/> event of the <see cref="MIDIAccess."/> interface and the <see cref="MIDIPort.Statechange_event."/> event of the <see cref="MIDIPort."/> interface. This occurs any time a new port becomes available, or when a previously available port becomes unavailable. For example, this event is fired whenever a MIDI device is either plugged in to or unplugged from a computer.
 </summary>
 <remarks>
 <para></para>

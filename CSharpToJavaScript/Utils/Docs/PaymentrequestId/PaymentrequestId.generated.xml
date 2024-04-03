@@ -1,10 +1,10 @@
 <docs>
 <PaymentRequestId>
 <summary>
-The <strong><c>id</c></strong> read-only attribute of the<br/><see cref="PaymentRequest"/> interface returns a unique identifier for a particular<br/><see cref="PaymentRequest"/> instance.
+The <strong><c>id</c></strong> read-only attribute of the<br/><see cref="PaymentRequest."/> interface returns a unique identifier for a particular<br/><see cref="PaymentRequest."/> instance.
 </summary>
 <remarks>
-<para>When constructing an instance of the <see cref="PaymentRequest"/>, you are able to<br/>supply an custom id. If none is provided, the browser automatically sets the id value to a UUID.</para>
+<para>When constructing an instance of the <see cref="PaymentRequest."/>, you are able to<br/>supply an custom id. If none is provided, the browser automatically sets the id value to a UUID.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentRequest/id"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A string.</value>

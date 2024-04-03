@@ -1,12 +1,12 @@
 <docs>
 <WindowMatchMedia>
 <summary>
-The <see cref="Window"/> interface's <strong><c>matchMedia()</c></strong> method<br/>returns a new <see cref="MediaQueryList"/> object that can then be used to determine if<br/>the <see cref="Document"/> matches the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">media query</see> string,<br/>as well as to monitor the document to detect when it matches (or stops matching) that<br/>media query.
+The <see cref="Window."/> interface's <strong><c>matchMedia()</c></strong> method<br/>returns a new <see cref="MediaQueryList."/> object that can then be used to determine if<br/>the <see cref="Document."/> matches the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries">media query</see> string,<br/>as well as to monitor the document to detect when it matches (or stops matching) that<br/>media query.
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">Media queries</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries">Using media queries from code</see><br/>-<see cref="MediaQueryList"/><br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries">Media queries</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Testing_media_queries">Using media queries from code</see><br/>-<see cref="MediaQueryList."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Window/matchMedia"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A new <see cref="MediaQueryList"/> object for the media query. Use this object's<br/>properties and events to detect matches and to monitor for changes to those matches over<br/>time.</returns>
+<returns>A new <see cref="MediaQueryList."/> object for the media query. Use this object's<br/>properties and events to detect matches and to monitor for changes to those matches over<br/>time.</returns>
 </WindowMatchMedia>
 </docs>

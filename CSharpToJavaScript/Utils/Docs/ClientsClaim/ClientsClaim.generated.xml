@@ -1,11 +1,11 @@
 <docs>
 <ClientsClaim>
 <summary>
-The <strong><c>claim()</c></strong> method of the <see cref="Clients"/> interface allows an active service worker to set itself as the <see cref="ServiceWorkerContainer.Controller"/> for all clients within its <see cref="ServiceWorkerRegistration.Scope"/>.<br/>This triggers a &amp;quot;<c>controllerchange</c>" event on <see cref="ServiceWorkerContainer"/> in any clients that become controlled by this service worker.
+The <strong><c>claim()</c></strong> method of the <see cref="Clients."/> interface allows an active service worker to set itself as the <see cref="ServiceWorkerContainer.Controller."/> for all clients within its <see cref="ServiceWorkerRegistration.Scope."/>.<br/>This triggers a &amp;quot;<c>controllerchange</c>" event on <see cref="ServiceWorkerContainer."/> in any clients that become controlled by this service worker.
 </summary>
 <remarks>
 <para>When a service worker is initially registered, pages won&amp;apos;t use it until they next<br/>load. The <c>claim()</c> method causes those pages to be controlled immediately.<br/>Be aware that this results in your service worker controlling pages that loaded<br/>regularly over the network, or possibly via a different service worker.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</see><br/>-<see href="https://web.dev/service-worker-lifecycle/">The service worker lifecycle</see><br/>-<see href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</see><br/>-<see cref="Promise"/><br/>-<see cref="ServiceWorkerGlobalScope.SkipWaiting"/> - skip the service worker's waiting phase<br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</see><br/>-<see href="https://web.dev/articles/service-worker-lifecycle">The service worker lifecycle</see><br/>-<see cref="ServiceWorkerGlobalScope.SkipWaiting."/> - skip the service worker's waiting phase<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Clients/claim"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>A <see cref="Promise"/> that resolves to <c>undefined</c>.</returns>

@@ -4,9 +4,9 @@
 The <strong><c>HTMLMediaElement.currentSrc</c></strong> property contains the<br/>absolute URL of the chosen media resource. This could happen, for example, if the web<br/>server selects a media file based on the resolution of the user&amp;apos;s display. The value<br/>is an empty string if the <c>networkState</c> property is <c>EMPTY</c>.
 </summary>
 <remarks>
-<para>-<see cref="HTMLMediaElement"/>: Interface used to define the <c>HTMLMediaElement.currentSrc</c> property<br/></para>
+<para>-<see cref="HTMLMediaElement."/>: Interface used to define the <c>HTMLMediaElement.currentSrc</c> property<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/currentSrc"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string object containing the absolute URL of the chosen media<br/>source; this may be an empty string if <c>networkState</c> is <c>EMPTY</c>;<br/>otherwise, it will be one of the resources listed by the<br/><see cref="HTMLSourceElement"/> contained within the media element, or the value or src<br/>if no <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source">source</see> element is provided.</value>
+<value>A string object containing the absolute URL of the chosen media<br/>source; this may be an empty string if <c>networkState</c> is <c>EMPTY</c>;<br/>otherwise, it will be one of the resources listed by the<br/><see cref="HTMLSourceElement."/> contained within the media element, or the value or src<br/>if no <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source">source</see> element is provided.</value>
 </HTMLMediaElementCurrentSrc>
 </docs>

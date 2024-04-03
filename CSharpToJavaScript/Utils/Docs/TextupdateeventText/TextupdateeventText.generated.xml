@@ -1,0 +1,11 @@
+<docs>
+<TextUpdateEventText>
+<summary>
+The <strong><c>TextUpdateEvent.text</c></strong> read-only property contains the text that was inserted within the updated range of a <see cref="EditContext."/>'s <c>textupdate</c> event.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextUpdateEvent/text"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A {{jsxref("String")}} that contains the text that replaces the text contained between the <see cref="TextUpdateEvent/updateRangeStart."/> and <see cref="TextUpdateEvent/updateRangeEnd."/> indexes.</value>
+</TextUpdateEventText>
+</docs>

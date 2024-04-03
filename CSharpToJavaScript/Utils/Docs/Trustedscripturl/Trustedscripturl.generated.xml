@@ -1,11 +1,11 @@
 <docs>
 <TrustedScriptURL>
 <summary>
-The <strong><c>TrustedScriptURL</c></strong> interface of the <see cref="'Trusted Types API'"/> represents a string that a developer can insert into an <see href="https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API#injection_sinks">injection sink</see> that will parse it as a URL of an external script. These objects are created via <see cref="TrustedTypePolicy.CreateScriptURL"/> and therefore have no constructor.
+The <strong><c>TrustedScriptURL</c></strong> interface of the <see cref="'Trusted Types API'."/> represents a string that a developer can insert into an <see href="https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API#injection_sinks">injection sink</see> that will parse it as a URL of an external script. These objects are created via <see cref="TrustedTypePolicy.CreateScriptURL."/> and therefore have no constructor.
 </summary>
 <remarks>
 <para>The value of a <strong>TrustedScriptURL</strong> object is set when the object is created and cannot be changed by JavaScript as there is no setter exposed.</para>
-<para>-<see href="https://web.dev/trusted-types/">Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types</see><br/></para>
+<para>-<see href="https://web.dev/articles/trusted-types">Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TrustedScriptURL"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </TrustedScriptURL>

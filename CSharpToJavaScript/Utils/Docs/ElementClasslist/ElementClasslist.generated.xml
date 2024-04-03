@@ -1,13 +1,13 @@
 <docs>
 <ElementClassList>
 <summary>
-The <strong><c>Element.classList</c></strong> is a read-only property that<br/>returns a live <see cref="DOMTokenList"/> collection of the <c>class</c><br/>attributes of the element. This can then be used to manipulate the class list.
+The <strong><c>Element.classList</c></strong> is a read-only property that<br/>returns a live <see cref="DOMTokenList."/> collection of the <c>class</c><br/>attributes of the element. This can then be used to manipulate the class list.
 </summary>
 <remarks>
-<para>Using <c>classList</c> is a convenient alternative to accessing an element&amp;apos;s list<br/>of classes as a space-delimited string via <see cref="Element.ClassName"/>.</para>
-<para>-<see cref="Element.ClassName"/><br/>-<see cref="DOMTokenList"/><br/>-<see href="https://github.com/eligrey/classList.js"><c>classList.js</c></see> (a cross-browser JavaScript polyfill that fully implements <c>element.classList</c>)<br/></para>
+<para>Using <c>classList</c> is a convenient alternative to accessing an element&amp;apos;s list<br/>of classes as a space-delimited string via <see cref="Element.ClassName."/>.</para>
+<para>-<see cref="Element.ClassName."/><br/>-<see cref="DOMTokenList."/><br/>-<see href="https://github.com/eligrey/classList.js"><c>classList.js</c></see> (a cross-browser JavaScript polyfill that fully implements <c>element.classList</c>)<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/classList"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="DOMTokenList"/> representing the contents of the element's<br/><c>class</c> attribute. If the <c>class</c> attribute is not set or empty,<br/>it returns an empty <c>DOMTokenList</c>, i.e. a <c>DOMTokenList</c> with<br/>the <c>length</c> property equal to <c>0</c>.Although the <c>classList</c> property itself is read-only, you can modify its associated <c>DOMTokenList</c> using the <see cref="DOMTokenList/add"/>, <see cref="DOMTokenList/remove"/>, <see cref="DOMTokenList/replace"/>, and <see cref="DOMTokenList/toggle"/> methods.You can test whether the element contains a given class using the <see cref="DOMTokenList/contains"/> method.</value>
+<value>A <see cref="DOMTokenList."/> representing the contents of the element's<br/><c>class</c> attribute. If the <c>class</c> attribute is not set or empty,<br/>it returns an empty <c>DOMTokenList</c>, i.e. a <c>DOMTokenList</c> with<br/>the <c>length</c> property equal to <c>0</c>.Although the <c>classList</c> property itself is read-only, you can modify its associated <c>DOMTokenList</c> using the <see cref="DOMTokenList/add."/>, <see cref="DOMTokenList/remove."/>, <see cref="DOMTokenList/replace."/>, and <see cref="DOMTokenList/toggle."/> methods.You can test whether the element contains a given class using the <see cref="DOMTokenList/contains."/> method.</value>
 </ElementClassList>
 </docs>

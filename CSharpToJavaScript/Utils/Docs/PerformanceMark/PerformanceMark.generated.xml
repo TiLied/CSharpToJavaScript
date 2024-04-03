@@ -1,11 +1,11 @@
 <docs>
 <PerformanceMark>
 <summary>
-<strong><c>PerformanceMark</c></strong> is an interface for <see cref="PerformanceEntry"/> objects with an <see cref="PerformanceEntry.EntryType"/> of "<c>mark</c>&amp;quot;.
+<strong><c>PerformanceMark</c></strong> is an interface for <see cref="PerformanceEntry."/> objects with an <see cref="PerformanceEntry.EntryType."/> of "<c>mark</c>&amp;quot;.
 </summary>
 <remarks>
-<para>Entries of this type are typically created by calling <see cref="Performance.Mark"/> to add a <strong>named</strong> <see cref="DOMHighResTimeStamp"/> (the <strong>mark</strong>) to the browser&amp;apos;s performance timeline. To create a performance mark that isn&amp;apos;t added to the browser&amp;apos;s performance timeline, use the constructor.</para><para></para><para>AvailableInWorkers</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/User_Timing_API">User Timing (Overview)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/User_Timing_API/Using_the_User_Timing_API">Using the User Timing API</see><br/></para>
+<para>Entries of this type are typically created by calling <see cref="Performance.Mark."/> to add a <strong>named</strong> <see cref="DOMHighResTimeStamp."/> (the <strong>mark</strong>) to the browser&amp;apos;s performance timeline. To create a performance mark that isn&amp;apos;t added to the browser&amp;apos;s performance timeline, use the constructor.</para><para></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Performance_API/User_timing">User Timing (Overview)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Performance_API/User_timing">Using the User Timing API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceMark"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </PerformanceMark>

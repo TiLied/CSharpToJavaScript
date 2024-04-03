@@ -1,11 +1,11 @@
 <docs>
 <CharacterData>
 <summary>
-The <strong><c>CharacterData</c></strong> abstract interface represents a <see cref="Node"/> object that contains characters. This is an abstract interface, meaning there aren't any objects of type <c>CharacterData</c>: it is implemented by other interfaces like <see cref="Text"/>, <see cref="Comment"/>, <see cref="CDATASection"/>, or <see cref="ProcessingInstruction"/>, which aren't abstract.
+The <strong><c>CharacterData</c></strong> abstract interface represents a <see cref="Node."/> object that contains characters. This is an abstract interface, meaning there aren't any objects of type <c>CharacterData</c>: it is implemented by other interfaces like <see cref="Text."/>, <see cref="Comment."/>, <see cref="CDATASection."/>, or <see cref="ProcessingInstruction."/>, which aren't abstract.
 </summary>
 <remarks>
 <para></para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM overview page</see>.<br/>-The concrete interfaces implemented it: <see cref="Text"/>, <see cref="CDATASection"/>, <see cref="ProcessingInstruction"/>, and <see cref="Comment"/>.<br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM overview page</see>.<br/>-The concrete interfaces implemented it: <see cref="Text."/>, <see cref="CDATASection."/>, <see cref="ProcessingInstruction."/>, and <see cref="Comment."/>.<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CharacterData"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </CharacterData>

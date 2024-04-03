@@ -4,8 +4,8 @@
 The <strong><c>HTMLCanvasElement.height</c></strong> property is a<br/>positive <c>integer</c> reflecting the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas#height"><c>height</c></see> HTML<br/>attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas">canvas</see> element interpreted in CSS pixels. When the<br/>attribute is not specified, or if it is set to an invalid value, like a negative, the<br/>default value of <c>150</c> is used.
 </summary>
 <remarks>
-<para>This is one of the two properties, the other being<br/><see cref="HTMLCanvasElement.Width"/>, that controls the size of the canvas.</para>
-<para>-<see cref="HTMLCanvasElement"/>: Interface used to define the <c>HTMLCanvasElement.height</c> property<br/>-<see cref="HTMLCanvasElement.Width"/>: Other property used to control the size of the canvas<br/></para>
+<para>This is one of the two properties, the other being<br/><see cref="HTMLCanvasElement.Width."/>, that controls the size of the canvas.</para>
+<para>-<see cref="HTMLCanvasElement."/>: Interface used to define the <c>HTMLCanvasElement.height</c> property<br/>-<see cref="HTMLCanvasElement.Width."/>: Other property used to control the size of the canvas<br/>-<see cref="HTMLEmbedElement.Width."/><br/>-<see cref="HTMLIFrameElement.Width."/><br/>-<see cref="HTMLImageElement.Width."/><br/>-<see cref="HTMLObjectElement.Width."/><br/>-<see cref="HTMLSourceElement.Width."/><br/>-<see cref="HTMLVideoElement.Width."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/height"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A number.</value>

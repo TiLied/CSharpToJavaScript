@@ -1,10 +1,10 @@
 <docs>
 <DocumentExitPictureInPicture>
 <summary>
-The <see cref="Document"/> method<br/><strong><c>exitPictureInPicture()</c></strong> requests that a video contained<br/>in this document, which is currently floating, be taken out of picture-in-picture<br/>mode, restoring the previous state of the screen. This usually reverses the<br/>effects of a previous call to <see cref="HTMLVideoElement.RequestPictureInPicture"/>.
+The <strong><c>exitPictureInPicture()</c></strong> method of the <see cref="Document."/> interface<br/>requests that a video contained<br/>in this document, which is currently floating, be taken out of picture-in-picture<br/>mode, restoring the previous state of the screen. This usually reverses the<br/>effects of a previous call to <see cref="HTMLVideoElement.RequestPictureInPicture."/>.
 </summary>
 <remarks>
-<para>-<see cref="HTMLVideoElement.RequestPictureInPicture"/><br/>-<see cref="HTMLVideoElement.DisablePictureInPicture"/><br/>-<see cref="Document.PictureInPictureEnabled"/><br/>-<see cref="Document.PictureInPictureElement"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:picture-in-picture">:picture-in-picture</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Picture-in-Picture_API#events">Picture-in-Picture events</see><br/></para>
+<para>-<see cref="HTMLVideoElement.RequestPictureInPicture."/><br/>-<see cref="HTMLVideoElement.DisablePictureInPicture."/><br/>-<see cref="Document.PictureInPictureEnabled."/><br/>-<see cref="Document.PictureInPictureElement."/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:picture-in-picture">:picture-in-picture</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Picture-in-Picture_API#events">Picture-in-Picture events</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/exitPictureInPicture"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>A <see cref="Promise"/>, which is resolved once the {{Glossary("user agent")}} has<br/>finished exiting picture-in-picture mode. If an error occurs while attempting to exit<br/>fullscreen mode, the <c>catch()</c> handler for the promise is called.</returns>

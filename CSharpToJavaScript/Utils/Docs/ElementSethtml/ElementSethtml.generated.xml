@@ -1,11 +1,10 @@
 <docs>
 <ElementSetHTML>
 <summary>
-The <strong><c>setHTML()</c></strong> method of the <see cref="Element"/> interface is used to parse and sanitize a string of HTML and then insert it into the DOM as a subtree of the element.<br/>It should be used instead of <see cref="Element.InnerHTML"/> for inserting untrusted strings of HTML into an element.
+The <strong><c>setHTML()</c></strong> method of the <see cref="Element."/> interface is used to parse and sanitize a string of HTML and then insert it into the DOM as a subtree of the element.<br/>It should be used instead of <see cref="Element.InnerHTML."/> for inserting untrusted strings of HTML into an element.
 </summary>
 <remarks>
-<para>The parsing process drops any elements in the HTML string that are invalid in the context of the current element, while sanitizing removes any unsafe or otherwise unwanted elements, attributes or comments.<br/>The default <c>Sanitizer()</c> configuration strips out XSS-relevant input by default, including <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">script</see> tags, custom elements, and comments.<br/>The sanitizer configuration may be customized using <see cref="Sanitizer.Sanitizer"/> constructor options.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Use <see cref="Sanitizer.SanitizeFor"/> instead of this method if the string must be inserted into the DOM at a later point, for example if the target element is not yet available.</para></blockquote>
-<para>-<see cref="Sanitizer.SanitizeFor"/><br/>-<see cref="'HTML Sanitizer API'"/><br/></para>
+<para>The parsing process drops any elements in the HTML string that are invalid in the context of the current element, while sanitizing removes any unsafe or otherwise unwanted elements, attributes or comments.<br/>The default <c>Sanitizer()</c> configuration strips out XSS-relevant input by default, including <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">script</see> tags, custom elements, and comments.<br/>The sanitizer configuration may be customized using <see cref="Sanitizer.Sanitizer."/> constructor options.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/setHTML"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<c>undefined</c>).</returns>

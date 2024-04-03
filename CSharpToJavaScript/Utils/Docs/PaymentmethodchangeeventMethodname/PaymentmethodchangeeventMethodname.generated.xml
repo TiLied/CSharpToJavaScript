@@ -1,7 +1,7 @@
 <docs>
 <PaymentMethodChangeEventMethodName>
 <summary>
-The read-only <strong><c>methodName</c></strong> property of the <see cref="PaymentMethodChangeEvent"/> interface is a string which<br/>uniquely identifies the payment handler currently selected by the user. The<br/>payment handler may be a payment technology, such as Apple Pay or Android Pay, and each<br/>payment handler may support multiple payment methods; changes to the payment method<br/>within the payment handler are described by the <c>PaymentMethodChangeEvent</c>.
+The read-only <strong><c>methodName</c></strong> property of the <see cref="PaymentMethodChangeEvent."/> interface is a string which<br/>uniquely identifies the payment handler currently selected by the user. The<br/>payment handler may be a payment technology, such as Apple Pay or Android Pay, and each<br/>payment handler may support multiple payment methods; changes to the payment method<br/>within the payment handler are described by the <c>PaymentMethodChangeEvent</c>.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentMethodChangeEvent/methodName"> <em>See also on MDN</em> </seealso></para>

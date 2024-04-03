@@ -1,11 +1,11 @@
 <docs>
 <FileSystemEntryRemove>
 <summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <see cref="FileSystemEntry"/> interface's method<br/><strong><c>remove()</c></strong> deletes the file<br/>or directory from the file system. Directories must be empty before they can be<br/>removed.
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <see cref="FileSystemEntry."/> interface's method<br/><strong><c>remove()</c></strong> deletes the file<br/>or directory from the file system. Directories must be empty before they can be<br/>removed.
 </summary>
 <remarks>
-<para>To recursively remove a directory as well as all of its contents and its<br/>subdirectories, call <see cref="FileSystemDirectoryEntry.RemoveRecursively"/><br/>instead.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">Introduction to the File and Directory Entries API</see><br/>-<see cref="FileSystemDirectoryEntry.RemoveRecursively"/><br/></para>
+<para>To recursively remove a directory as well as all of its contents and its<br/>subdirectories, call <see cref="FileSystemDirectoryEntry.RemoveRecursively."/><br/>instead.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">Introduction to the File and Directory Entries API</see><br/>-<see cref="FileSystemDirectoryEntry.RemoveRecursively."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemEntry/remove"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>

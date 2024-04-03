@@ -1,11 +1,11 @@
 <docs>
 <EcdhKeyDeriveParams>
 <summary>
-The <strong><c>EcdhKeyDeriveParams</c></strong> dictionary of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API">Web Crypto API</see> represents the object that should be passed as the <c>algorithm</c> parameter into <see cref="SubtleCrypto.DeriveKey"/>, when using the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/deriveKey#ecdh">ECDH</see> algorithm.
+The <strong><c>EcdhKeyDeriveParams</c></strong> dictionary of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API">Web Crypto API</see> represents the object that should be passed as the <c>algorithm</c> parameter into <see cref="SubtleCrypto.DeriveKey."/>, when using the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/deriveKey#ecdh">ECDH</see> algorithm.
 </summary>
 <remarks>
 <para>ECDH enables two people who each have a key pair consisting of a public and a private key to derive a shared secret. They exchange public keys and use the combination of their private key and the other entity&amp;apos;s public key to derive a secret key that they — and no one else — share.</para><para>The parameters for ECDH <c>deriveKey()</c> therefore include the other entity&amp;apos;s public key, which is combined with this entity&amp;apos;s private key to derive the shared secret.</para>
-<para>-<see cref="SubtleCrypto.DeriveKey"/>.<br/></para>
+<para>-<see cref="SubtleCrypto.DeriveKey."/>.<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/EcdhKeyDeriveParams"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </EcdhKeyDeriveParams>

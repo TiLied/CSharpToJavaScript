@@ -1,10 +1,10 @@
 <docs>
 <RTCIceCandidatePairStats>
 <summary>
-The <strong><c>RTCIceCandidatePairStats</c></strong> dictionary of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see> is used to report statistics that provide insight into the quality and performance of an <see cref="RTCPeerConnection"/> while connected and configured as described by the specified pair of {{Glossary("ICE")}} candidates.
+The <strong><c>RTCIceCandidatePairStats</c></strong> dictionary of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see> is used to report statistics that provide insight into the quality and performance of an <see cref="RTCPeerConnection."/> while connected and configured as described by the specified pair of {{Glossary("ICE")}} candidates.
 </summary>
 <remarks>
-<para>The statistics can be obtained by iterating the <see cref="RTCStatsReport"/> returned by <see cref="RTCPeerConnection.GetStats"/> until you find an entry with the <see href="https://developer.mozilla.org#type"><c>type</c></see> of <c>&amp;quot;candidate-pair&amp;quot;</c>.</para>
+<para>The statistics can be obtained by iterating the <see cref="RTCStatsReport."/> returned by <see cref="RTCPeerConnection.GetStats."/> until you find an entry with the <see href="https://developer.mozilla.org#type"><c>type</c></see> of <c>&amp;quot;candidate-pair&amp;quot;</c>.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </RTCIceCandidatePairStats>

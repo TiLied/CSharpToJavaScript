@@ -1,13 +1,13 @@
 <docs>
 <RTCRtpTransceiverDirection>
 <summary>
-The <see cref="RTCRtpTransceiver"/> property<br/><strong><c>direction</c></strong> is a string which indicates the transceiver&amp;apos;s<br/>preferred directionality.
+The <see cref="RTCRtpTransceiver."/> property <strong><c>direction</c></strong> is a string that indicates the transceiver&amp;apos;s <strong>preferred</strong> directionality.
 </summary>
 <remarks>
-<para>Its value must be one of the strings defined in the table below.</para><para>The transceiver&amp;apos;s <strong>current</strong> direction is indicated by the<br/><see cref="RTCRtpTransceiver.CurrentDirection"/> property.</para>
-<para>-<see cref="RTCRtpTransceiver.CurrentDirection"/><br/></para>
+<para>The directionality indicates whether the transceiver will offer to send and/or receive <see href="https://developer.mozilla.org/en-US/docs/Glossary/RTP">RTP</see> data, or whether it is inactive or stopped (terminated).<br/>When setting the transceiver&amp;apos;s direction, the value is not applied immediately.<br/>The <strong>current</strong> direction is indicated by the <see cref="RTCRtpTransceiver.CurrentDirection."/> property.</para>
+<para>-<see cref="RTCRtpTransceiver.CurrentDirection."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiver/direction"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string whose value is one of the strings which are a member of the following values, indicating the transceiver&amp;apos;s preferred direction.</value>
+<value>A string with one of the following values:</value>
 </RTCRtpTransceiverDirection>
 </docs>

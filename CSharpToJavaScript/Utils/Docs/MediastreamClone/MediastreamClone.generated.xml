@@ -1,11 +1,11 @@
 <docs>
 <MediaStreamClone>
 <summary>
-The <strong><c>clone()</c></strong> method of the <see cref="MediaStream"/><br/>interface creates a duplicate of the <c>MediaStream</c>. This new<br/><c>MediaStream</c> object has a new unique <see cref="MediaStream.Id"/> and<br/>contains clones of every <see cref="MediaStreamTrack"/> contained by the<br/><c>MediaStream</c> on which <c>clone()</c> was called.
+The <strong><c>clone()</c></strong> method of the <see cref="MediaStream."/><br/>interface creates a duplicate of the <c>MediaStream</c>. This new<br/><c>MediaStream</c> object has a new unique <see cref="MediaStream.Id."/> and<br/>contains clones of every <see cref="MediaStreamTrack."/> contained by the<br/><c>MediaStream</c> on which <c>clone()</c> was called.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/clone"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A new <see cref="MediaStream"/> instance which has a new unique ID and contains clones<br/>of every <see cref="MediaStreamTrack"/> contained by the <c>MediaStream</c> on<br/>which <c>clone()</c> was called.</returns>
+<returns>A new <see cref="MediaStream."/> instance which has a new unique ID and contains clones<br/>of every <see cref="MediaStreamTrack."/> contained by the <c>MediaStream</c> on<br/>which <c>clone()</c> was called.</returns>
 </MediaStreamClone>
 </docs>

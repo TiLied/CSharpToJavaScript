@@ -1,7 +1,7 @@
 <docs>
 <TaskPriorityChangeEventPreviousPriority>
 <summary>
-The readonly <strong><c>previousPriority</c></strong> property of the <see cref="TaskPriorityChangeEvent"/> interface returns the priority of the corresponding <see cref="TaskSignal"/> before it was changed and this <see href="https://developer.mozilla.org/en-US/docs/Web/API/TaskSignal/prioritychange_event"><c>prioritychange</c></see> event was emitted.
+The readonly <strong><c>previousPriority</c></strong> property of the <see cref="TaskPriorityChangeEvent."/> interface returns the priority of the corresponding <see cref="TaskSignal."/> before it was changed and this <see href="https://developer.mozilla.org/en-US/docs/Web/API/TaskSignal/prioritychange_event"><c>prioritychange</c></see> event was emitted.
 </summary>
 <remarks>
 <para>This is the value that was set in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/TaskPriorityChangeEvent/TaskPriorityChangeEvent"><c>TaskPriorityChangeEvent</c> constructor</see> argument <c>options.previous</c>. &amp;lt;!-- link? --&amp;gt;</para><para>The new priority of the task can be read from <c>event.target.priority</c>.</para>

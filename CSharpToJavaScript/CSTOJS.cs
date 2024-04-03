@@ -61,9 +61,9 @@ namespace CSharpToJavaScript
 		/// <param name="path">Full path to cs file or to the folder with cs files.</param>
 		/// <param name="filename">Optional! Filename of a js file if you generating one file!</param>
 		/// <returns>empty Task</returns>
+		/// <exception cref="DirectoryNotFoundException"></exception>
 		public async Task GenerateOneAsync(string path, string? filename = null) 
 		{
-			
 			Assembly? assembly = Assembly.GetEntryAssembly();
 			List<FileInfo> files = new();
 
@@ -73,6 +73,9 @@ namespace CSharpToJavaScript
 			}
 			else 
 			{
+				if (!Directory.Exists(path))
+					throw new DirectoryNotFoundException(path);
+
 				DirectoryInfo folder = new(path);
 
 				files = folder.GetFiles("*.cs").ToList();
@@ -116,6 +119,7 @@ namespace CSharpToJavaScript
 		/// </summary>
 		/// <param name="path">Full path to cs file or to the folder with cs files.</param>
 		/// <returns>List of StringBuilder</returns>
+		/// <exception cref="DirectoryNotFoundException"></exception>
 		public List<StringBuilder> GenerateOne(string path)
 		{
 			Assembly? assembly = Assembly.GetEntryAssembly();
@@ -128,6 +132,9 @@ namespace CSharpToJavaScript
 			}
 			else
 			{
+				if (!Directory.Exists(path))
+					throw new DirectoryNotFoundException(path);
+
 				DirectoryInfo folder = new(path);
 
 				files = folder.GetFiles("*.cs").ToList();
@@ -414,6 +421,9 @@ namespace CSharpToJavaScript
 	)
 ).AddUsings(oldUsing);
 
+			if (_Options.NormalizeWhitespace)
+				trueRoot = trueRoot.NormalizeWhitespace();
+
 			if (_Options.KeepBraceOnTheSameLine)
 			{
 				//
@@ -446,10 +456,6 @@ namespace CSharpToJavaScript
 				}
 
 			}
-
-			if (_Options.NormalizeWhitespace) 
-				trueRoot = trueRoot.NormalizeWhitespace();
-
 
 			if (rtPath != null && rtPath != string.Empty)
 			{

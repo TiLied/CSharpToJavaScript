@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace CSharpToJavaScript.APIs.JS
 {
+	
 	public partial class Document
 	{
 		[To(ToAttribute.FirstCharToLowerCase)]

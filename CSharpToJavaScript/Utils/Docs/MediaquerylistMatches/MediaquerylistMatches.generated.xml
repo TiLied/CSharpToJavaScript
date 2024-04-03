@@ -1,13 +1,13 @@
 <docs>
 <MediaQueryListMatches>
 <summary>
-The <strong><c>matches</c></strong> read-only property of the<br/><see cref="MediaQueryList"/> interface is a boolean value that returns<br/><c>true</c> if the <see cref="Document"/> currently matches the media query list,<br/>or <c>false</c> if not.
+The <strong><c>matches</c></strong> read-only property of the<br/><see cref="MediaQueryList."/> interface is a boolean value that returns<br/><c>true</c> if the <see cref="Document."/> currently matches the media query list,<br/>or <c>false</c> if not.
 </summary>
 <remarks>
-<para>You can be notified when the value of <c>matches</c> changes by watching for the<br/><see cref="MediaQueryList.Change_event"/> event to be fired at the<br/><c>MediaQueryList</c>.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">Media queries</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries">Using media queries from code</see><br/>-<see cref="Window.MatchMedia"/><br/>-<see cref="MediaQueryList"/><br/>-<see cref="MediaQueryListEvent"/><br/></para>
+<para>You can be notified when the value of <c>matches</c> changes by watching for the<br/><see cref="MediaQueryList.Change_event."/> event to be fired at the<br/><c>MediaQueryList</c>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries">Media queries</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Testing_media_queries">Using media queries from code</see><br/>-<see cref="Window.MatchMedia."/><br/>-<see cref="MediaQueryList."/><br/>-<see cref="MediaQueryListEvent."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaQueryList/matches"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A boolean value that is <c>true</c> if the <see cref="Document"/><br/>currently matches the media query list; otherwise, it&amp;apos;s <c>false</c>.</value>
+<value>A boolean value that is <c>true</c> if the <see cref="Document."/><br/>currently matches the media query list; otherwise, it&amp;apos;s <c>false</c>.</value>
 </MediaQueryListMatches>
 </docs>

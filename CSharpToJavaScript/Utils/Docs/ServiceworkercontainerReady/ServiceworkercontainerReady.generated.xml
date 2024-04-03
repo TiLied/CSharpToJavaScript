@@ -1,11 +1,11 @@
 <docs>
 <ServiceWorkerContainerReady>
 <summary>
-The <strong><c>ready</c></strong> read-only property of<br/>the <see cref="ServiceWorkerContainer"/> interface provides a way of delaying code<br/>execution until a service worker is active. It returns a <see cref="Promise"/> that<br/>will never reject, and which waits indefinitely until<br/>the <see cref="ServiceWorkerRegistration"/> associated with the current page has<br/>an <see cref="ServiceWorkerRegistration.Active"/> worker. Once that<br/>condition is met, it resolves with<br/>the <see cref="ServiceWorkerRegistration"/>.
+The <strong><c>ready</c></strong> read-only property of<br/>the <see cref="ServiceWorkerContainer."/> interface provides a way of delaying code<br/>execution until a service worker is active. It returns a <see cref="Promise"/> that<br/>will never reject, and which waits indefinitely until<br/>the <see cref="ServiceWorkerRegistration."/> associated with the current page has<br/>an <see cref="ServiceWorkerRegistration.Active."/> worker. Once that<br/>condition is met, it resolves with<br/>the <see cref="ServiceWorkerRegistration."/>.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/ready"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="Promise"/> that will never reject, and which may eventually resolve with a<br/><see cref="ServiceWorkerRegistration"/>.</value>
+<value>A <see cref="Promise"/> that will never reject, and which may eventually resolve with a<br/><see cref="ServiceWorkerRegistration."/>.</value>
 </ServiceWorkerContainerReady>
 </docs>

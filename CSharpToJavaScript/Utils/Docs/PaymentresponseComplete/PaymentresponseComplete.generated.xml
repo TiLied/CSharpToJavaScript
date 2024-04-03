@@ -1,10 +1,10 @@
 <docs>
 <PaymentResponseComplete>
 <summary>
-The <see cref="PaymentRequest"/> method<br/><strong><c>complete()</c></strong> of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API">Payment Request API</see> notifies the<br/><see href="https://developer.mozilla.org/en-US/docs/Glossary/user agent">user agent</see> that the user interaction is over, and causes any remaining<br/>user interface to be closed.
+The <see cref="PaymentRequest."/> method<br/><strong><c>complete()</c></strong> of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API">Payment Request API</see> notifies the<br/><see href="https://developer.mozilla.org/en-US/docs/Glossary/user agent">user agent</see> that the user interaction is over, and causes any remaining<br/>user interface to be closed.
 </summary>
 <remarks>
-<para>This method must be called after the user accepts<br/>the payment request and the <see cref="Promise"/> returned by the<br/><see cref="'PaymentRequest.Show'"/> method is resolved.</para>
+<para>This method must be called after the user accepts<br/>the payment request and the <see cref="Promise"/> returned by the<br/><see cref="'PaymentRequest.Show'."/> method is resolved.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentResponse/complete"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>A <see cref="Promise"/> which resolves with no input value once the payment interface<br/>has been fully closed. If an error occurs, the promise instead rejects, returning one of<br/>the exceptions listed below.</returns>

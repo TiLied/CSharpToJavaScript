@@ -1,9 +1,10 @@
 <docs>
 <ElementToggleAttribute>
 <summary>
-The <strong><c>toggleAttribute()</c></strong> method of the<br/><see cref="Element"/> interface toggles a Boolean attribute (removing it if it is<br/>present and adding it if it is not present) on the given element.
+The <strong><c>toggleAttribute()</c></strong> method of the<br/><see cref="Element."/> interface toggles a Boolean attribute (removing it if it is<br/>present and adding it if it is not present) on the given element.
 </summary>
 <remarks>
+<para>-<see cref="Element.HasAttribute."/><br/>-<see cref="Element.GetAttribute."/><br/>-<see cref="Element.RemoveAttribute."/><br/>-<see cref="Element.SetAttribute."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/toggleAttribute"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns><c>true</c> if attribute <strong><c>name</c></strong> is eventually<br/>present, and <c>false</c> otherwise.</returns>

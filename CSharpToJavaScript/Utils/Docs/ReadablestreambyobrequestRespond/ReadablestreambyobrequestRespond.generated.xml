@@ -1,10 +1,10 @@
 <docs>
 <ReadableStreamBYOBRequestRespond>
 <summary>
-The <strong><c>respond()</c></strong> method of the <see cref="ReadableStreamBYOBRequest"/> interface is used to signal to the associated <see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams">readable byte stream</see> that the specified number of bytes were written into the <see cref="ReadableStreamBYOBRequest.View"/>.
+The <strong><c>respond()</c></strong> method of the <see cref="ReadableStreamBYOBRequest."/> interface is used to signal to the associated <see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams">readable byte stream</see> that the specified number of bytes were written into the <see cref="ReadableStreamBYOBRequest.View."/>.
 </summary>
 <remarks>
-<para>After this method is called, the <see cref="ReadableStreamBYOBRequest/view"/> will be transferred and no longer modifiable.</para>
+<para>After this method is called, the <see cref="ReadableStreamBYOBRequest/view."/> will be transferred and no longer modifiable.</para>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams">Using readable byte stream</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableStreamBYOBRequest/respond"> <em>See also on MDN</em> </seealso></para>
 </remarks>

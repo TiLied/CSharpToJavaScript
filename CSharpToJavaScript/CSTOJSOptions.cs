@@ -56,7 +56,7 @@ namespace CSharpToJavaScript
 		/// Keep Brace <c>{</c> on the same line. 
 		/// </summary>
 		/// <remarks>
-		/// <blockquote class="NOTE"><h5>NOTE</h5>Note: It is better write from the start in c#, then using this option.</blockquote>
+		/// <blockquote class="NOTE"><h5>NOTE</h5><para>Note: It is better write from the start in c#, then using this option.</para></blockquote>
 		/// </remarks>
 		/// <value>
 		/// Default: <c>false</c>
@@ -66,8 +66,8 @@ namespace CSharpToJavaScript
 		/// <summary>
 		/// Self-explanatory, Normalize Whitespace. />
 		/// </summary>
-		/// /// <remarks>
-		/// <blockquote class="NOTE"><h5>NOTE</h5>Note: Do not use with <see cref="CSTOJSOptions.KeepBraceOnTheSameLine" /></blockquote>
+		/// <remarks>
+		/// <blockquote class="NOTE"><h5>NOTE</h5><para>Note: If using with <see cref="CSTOJSOptions.KeepBraceOnTheSameLine" />. Normalization running before <see cref="CSTOJSOptions.KeepBraceOnTheSameLine" />.</para></blockquote>
 		/// </remarks>
 		/// <value>
 		/// Default: <c>false</c>

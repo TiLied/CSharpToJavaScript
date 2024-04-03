@@ -1,11 +1,11 @@
 <docs>
 <FormData>
 <summary>
-The <strong><c>FormData</c></strong> interface provides a way to construct a set of key/value pairs representing form fields and their values, which can be sent using the <see cref="Fetch"/>, <see cref="XMLHttpRequest.Send"/> or <see cref="Navigator.SendBeacon"/> methods. It uses the same format a form would use if the encoding type were set to <c>&amp;quot;multipart/form-data&amp;quot;</c>.
+The <strong><c>FormData</c></strong> interface provides a way to construct a set of key/value pairs representing form fields and their values, which can be sent using the <see cref="Fetch."/>, <see cref="XMLHttpRequest.Send."/> or <see cref="Navigator.SendBeacon."/> methods. It uses the same format a form would use if the encoding type were set to <c>&amp;quot;multipart/form-data&amp;quot;</c>.
 </summary>
 <remarks>
-<para>You can also pass it directly to the <see cref="URLSearchParams"/> constructor if you want to generate query parameters in the way a {{HTMLElement("form")}} would do if it were using simple <c>GET</c> submission.</para><para>An object implementing <c>FormData</c> can directly be used in a {{jsxref("Statements/for...of", "for...of")}} structure, instead of <see cref="'FormData.Entries'"/>: <c>for (const p of myFormData)</c> is equivalent to <c>for (const p of myFormData.entries())</c>.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This feature is available in <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">Web Workers</see>.</para></blockquote>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/FormData/Using_FormData_Objects">Using FormData objects</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Form">Form</see><br/></para>
+<para>You can also pass it directly to the <see cref="URLSearchParams."/> constructor if you want to generate query parameters in the way a {{HTMLElement("form")}} would do if it were using simple <c>GET</c> submission.</para><para>An object implementing <c>FormData</c> can directly be used in a {{jsxref("Statements/for...of", "for...of")}} structure, instead of <see cref="'FormData.Entries'."/>: <c>for (const p of myFormData)</c> is equivalent to <c>for (const p of myFormData.entries())</c>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects">Using FormData objects</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Form">Form</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FormData"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </FormData>

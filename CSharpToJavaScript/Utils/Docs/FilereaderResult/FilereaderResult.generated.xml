@@ -1,10 +1,10 @@
 <docs>
 <FileReaderResult>
 <summary>
-The <see cref="FileReader"/> <strong><c>result</c></strong> property returns the<br/>file&amp;apos;s contents. This property is only valid after the read operation is complete, and<br/>the format of the data depends on which of the methods was used to initiate the read<br/>operation.
+The <strong><c>result</c></strong> read-only property of the <see cref="FileReader."/> interface returns the<br/>file&amp;apos;s contents. This property is only valid after the read operation is complete, and<br/>the format of the data depends on which of the methods was used to initiate the read<br/>operation.
 </summary>
 <remarks>
-<para>-<see cref="FileReader"/><br/></para>
+<para>-<see cref="FileReader."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileReader/result"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>An appropriate string or <see cref="ArrayBuffer"/> based on which of the reading methods<br/>was used to initiate the read operation. The value is <c>null</c> if the reading<br/>is not yet complete or was unsuccessful.The result types are described below.</value>

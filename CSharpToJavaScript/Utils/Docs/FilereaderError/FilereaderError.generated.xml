@@ -1,12 +1,12 @@
 <docs>
 <FileReaderError>
 <summary>
-The <see cref="FileReader"/> <strong><c>error</c></strong> property returns the<br/>error that occurred while reading the file.
+The <strong><c>error</c></strong> read-only property of the <see cref="FileReader."/> interface returns the<br/>error that occurred while reading the file.
 </summary>
 <remarks>
-<para>-<see cref="FileReader"/><br/></para>
+<para>-<see cref="FileReader."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileReader/error"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="DOMError"/> containing the relevant error. In Chrome 48+/Firefox 58+ this<br/>property returns a <see cref="DOMException"/> because <c>DOMError</c> has been<br/>removed from the DOM standard.</value>
+<value>A <see cref="DOMException."/> containing the relevant error.</value>
 </FileReaderError>
 </docs>

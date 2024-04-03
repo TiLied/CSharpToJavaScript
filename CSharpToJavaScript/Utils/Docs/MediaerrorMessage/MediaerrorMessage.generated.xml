@@ -4,9 +4,9 @@
 The read-only property <strong><c>MediaError.message</c></strong> returns a<br/>human-readable string offering specific<br/>diagnostic details related to the error described by the <c>MediaError</c> object,<br/>or an empty string (<c>&amp;quot;&amp;quot;</c>) if no diagnostic information can be determined or<br/>provided.
 </summary>
 <remarks>
-<para>-<see cref="MediaError"/>: Interface used to define the <c>MediaError.message</c> property<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio">audio</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">video</see><br/></para>
+<para>-<see cref="MediaError."/>: Interface used to define the <c>MediaError.message</c> property<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio">audio</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">video</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaError/message"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string providing a detailed, specific explanation of what went<br/>wrong and possibly how it might be fixed. This is <strong>not</strong> a generic description of<br/>the <see cref="MediaError.Code"/> property's value, but instead goes deeper into the<br/>specifics of this particular error and its circumstances. If no specific details are<br/>available, this string is empty.</value>
+<value>A string providing a detailed, specific explanation of what went<br/>wrong and possibly how it might be fixed. This is <strong>not</strong> a generic description of<br/>the <see cref="MediaError.Code."/> property's value, but instead goes deeper into the<br/>specifics of this particular error and its circumstances. If no specific details are<br/>available, this string is empty.</value>
 </MediaErrorMessage>
 </docs>

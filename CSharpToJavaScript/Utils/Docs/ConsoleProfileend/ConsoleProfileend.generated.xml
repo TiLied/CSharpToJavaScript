@@ -1,13 +1,13 @@
 <docs>
-<ConsoleProfileEnd>
+<ConsoleProfileend>
 <summary>
-<blockquote class="WARNING"><h5>WARNING</h5><strong>Warning:</strong> Calling this API immediately after console.profile() can cause it to not work. To<br/>work around this, call it in a setTimeout with at least 5ms delay. See<br/><see href="https://bugzil.la/1240249">Firefox bug 1240249</see>.</blockquote>
+The <strong><c>console.profileEnd()</c></strong> static method stops recording a profile previously started with <see cref="Console/profile_static."/>.
 </summary>
 <remarks>
-<para>The <strong><c>console.profileEnd()</c></strong> method stops recording a profile previously started with<br/><see cref="Console.Profile"/>.</para><para>You can optionally supply an argument to name the profile. Doing so enables you to stop<br/>only that profile if you have multiple profiles being recorded.</para><para>AvailableInWorkers</para>
-<para>-<see cref="Console.Profile"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/console/profileEnd"> <em>See also on MDN</em> </seealso></para>
+<para>You can optionally supply an argument to name the profile. Doing so enables you to stop only that profile if you have multiple profiles being recorded.</para>
+<para>-<see cref="Console/profile_static."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/console/profileend"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>
-</ConsoleProfileEnd>
+</ConsoleProfileend>
 </docs>

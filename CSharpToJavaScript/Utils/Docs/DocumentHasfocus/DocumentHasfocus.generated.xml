@@ -1,11 +1,11 @@
 <docs>
 <DocumentHasFocus>
 <summary>
-The <strong><c>hasFocus()</c></strong> method of the <see cref="Document"/> interface returns a boolean value indicating whether the document or any element inside the document has focus.<br/>This method can be used to determine whether the active element in a document has focus.
+The <strong><c>hasFocus()</c></strong> method of the <see cref="Document."/> interface returns a boolean value indicating whether the document or any element inside the document has focus.<br/>This method can be used to determine whether the active element in a document has focus.
 </summary>
 <remarks>
 <blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> When viewing a document, an element with focus is always the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Document/activeElement">active element</see> in the document, but an active element does not necessarily have focus.<br/>For example, an active element within a popup window that is not the foreground doesn&amp;apos;t have focus.</para></blockquote>
-<para>-<see cref="Document.ActiveElement"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API">Using the Page Visibility API</see><br/></para>
+<para>-<see cref="Document.ActiveElement."/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API">Using the Page Visibility API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/hasFocus"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns><c>false</c> if the active element in the document has no focus;<br/><c>true</c> if the active element in the document has focus.</returns>

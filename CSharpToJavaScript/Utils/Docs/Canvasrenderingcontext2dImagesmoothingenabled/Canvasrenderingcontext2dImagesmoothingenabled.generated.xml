@@ -1,11 +1,11 @@
 <docs>
 <CanvasRenderingContext2DImageSmoothingEnabled>
 <summary>
-The <strong><c>imageSmoothingEnabled</c></strong> property of the<br/><see cref="CanvasRenderingContext2D"/> interface, part of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas API</see>, determines whether scaled images<br/>are smoothed (<c>true</c>, default) or not (<c>false</c>). On getting the<br/><c>imageSmoothingEnabled</c> property, the last value it was set to is returned.
+The <strong><c>imageSmoothingEnabled</c></strong> property of the<br/><see cref="CanvasRenderingContext2D."/> interface, part of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas API</see>, determines whether scaled images<br/>are smoothed (<c>true</c>, default) or not (<c>false</c>). On getting the<br/><c>imageSmoothingEnabled</c> property, the last value it was set to is returned.
 </summary>
 <remarks>
-<para>This property is useful for games and other apps that use pixel art. When enlarging<br/>images, the default resizing algorithm will blur the pixels. Set this property to<br/><c>false</c> to retain the pixels&amp;apos; sharpness.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> You can adjust the smoothing quality with the<br/><see cref="CanvasRenderingContext2D.ImageSmoothingQuality"/><br/>property.</para></blockquote>
-<para>-The interface defining this property: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.ImageSmoothingQuality"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/image-rendering">image-rendering</see><br/></para>
+<para>This property is useful for games and other apps that use pixel art. When enlarging<br/>images, the default resizing algorithm will blur the pixels. Set this property to<br/><c>false</c> to retain the pixels&amp;apos; sharpness.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> You can adjust the smoothing quality with the<br/><see cref="CanvasRenderingContext2D.ImageSmoothingQuality."/><br/>property.</para></blockquote>
+<para>-The interface defining this property: <see cref="CanvasRenderingContext2D."/><br/>-<see cref="CanvasRenderingContext2D.ImageSmoothingQuality."/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/image-rendering">image-rendering</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/imageSmoothingEnabled"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A boolean value indicating whether to smooth scaled images or not. The default value is <c>true</c>.</value>

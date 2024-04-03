@@ -4,7 +4,7 @@
 The width of the left border of an element in pixels. It includes the width of the<br/>vertical scrollbar if the text direction of the element is right-to-left and if there<br/>is an overflow causing a left vertical scrollbar to be rendered.<br/><c>clientLeft</c> does not include the left margin or the left padding.<br/><c>clientLeft</c> is read-only.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This property will round the value to an integer. If you<br/>need a fractional value, use <see cref="Element.GetBoundingClientRect"/>.</para></blockquote><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> When an element has<br/><c>display: inline</c>, <c>clientLeft</c> returns <c>0</c><br/>regardless of the element&amp;apos;s border.</para></blockquote>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This property will round the value to an integer. If you<br/>need a fractional value, use <see cref="Element.GetBoundingClientRect."/>.</para></blockquote><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> When an element has<br/><c>display: inline</c>, <c>clientLeft</c> returns <c>0</c><br/>regardless of the element&amp;apos;s border.</para></blockquote>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/clientLeft"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A number.</value>

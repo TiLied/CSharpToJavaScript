@@ -1,12 +1,12 @@
 <docs>
 <XRLightEstimatePrimaryLightDirection>
 <summary>
-The <strong>read-only</strong> <strong><c>primaryLightDirection</c></strong> property of the <see cref="XRLightEstimate"/> interface returns a <see cref="DOMPointReadOnly"/> representing the direction to the primary light source from the <c>probeSpace</c> of an <see cref="XRLightProbe"/>.
+The <strong>read-only</strong> <strong><c>primaryLightDirection</c></strong> property of the <see cref="XRLightEstimate."/> interface returns a <see cref="DOMPointReadOnly."/> representing the direction to the primary light source from the <c>probeSpace</c> of an <see cref="XRLightProbe."/>.
 </summary>
 <remarks>
-<para>-<see cref="XRLightEstimate.PrimaryLightIntensity"/><br/>-<see cref="XRLightProbe.ProbeSpace"/><br/></para>
+<para>-<see cref="XRLightEstimate.PrimaryLightIntensity."/><br/>-<see cref="XRLightProbe.ProbeSpace."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRLightEstimate/primaryLightDirection"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="DOMPointReadOnly"/> object. If no estimated values from the user's environment are available, the point will be <c>{ x: 0.0, y: 1.0, z: 0.0, w: 0.0 }</c>, representing a light shining straight down from above.</value>
+<value>A <see cref="DOMPointReadOnly."/> object. If no estimated values from the user's environment are available, the point will be <c>{ x: 0.0, y: 1.0, z: 0.0, w: 0.0 }</c>, representing a light shining straight down from above.</value>
 </XRLightEstimatePrimaryLightDirection>
 </docs>

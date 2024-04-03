@@ -4,8 +4,8 @@
 The <strong><c>setResourceTimingBufferSize()</c></strong> method sets the desired size of the browser&amp;apos;s resource timing buffer which stores the &amp;quot;<c>resource</c>&amp;quot; performance entries.
 </summary>
 <remarks>
-<para>The specification requires the resource timing buffer initially to be 250 or greater.</para><para>To clear the browser&amp;apos;s performance resource data buffer, use the<br/><see cref="Performance.ClearResourceTimings"/> method.</para><para>To get notified when the browser's resource timing buffer is full, listen for the <see cref="Performance.Resourcetimingbufferfull_event"/> event.</para>
-<para>-<see cref="Performance.ClearResourceTimings"/><br/>-<see cref="Performance.Resourcetimingbufferfull_event"/><br/></para>
+<para>The specification requires the resource timing buffer initially to be 250 or greater.</para><para>To clear the browser&amp;apos;s performance resource data buffer, use the<br/><see cref="Performance.ClearResourceTimings."/> method.</para><para>To get notified when the browser's resource timing buffer is full, listen for the <see cref="Performance.Resourcetimingbufferfull_event."/> event.</para>
+<para>-<see cref="Performance.ClearResourceTimings."/><br/>-<see cref="Performance.Resourcetimingbufferfull_event."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Performance/setResourceTimingBufferSize"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>

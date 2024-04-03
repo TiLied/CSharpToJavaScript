@@ -1,10 +1,10 @@
 <docs>
 <MutationEventInitMutationEvent>
 <summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>initMutationEvent()</c></strong> method of the <see cref="MutationEvent"/> interface initializes the<br/>value of a mutation event once it's been created (normally using the <see cref="Document.CreateEvent"/> method).
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>initMutationEvent()</c></strong> method of the <see cref="MutationEvent."/> interface initializes the<br/>value of a mutation event once it's been created (normally using the <see cref="Document.CreateEvent."/> method).
 </summary>
 <remarks>
-<para>This method must be called to set the event before it is dispatched, using <see cref="EventTarget.DispatchEvent"/>.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> In general, you won&amp;apos;t create these events yourself; they are created by the browser.</para></blockquote>
+<para>This method must be called to set the event before it is dispatched, using <see cref="EventTarget.DispatchEvent."/>.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> In general, you won&amp;apos;t create these events yourself; they are created by the browser.</para></blockquote>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MutationEvent/initMutationEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>

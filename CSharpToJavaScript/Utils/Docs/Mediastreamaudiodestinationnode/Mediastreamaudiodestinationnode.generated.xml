@@ -1,10 +1,10 @@
 <docs>
 <MediaStreamAudioDestinationNode>
 <summary>
-The <c>MediaStreamAudioDestinationNode</c> interface represents an audio destination consisting of a <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see> <see cref="MediaStream"/> with a single <c>AudioMediaStreamTrack</c>, which can be used in a similar way to a <c>MediaStream</c> obtained from {{domxref(&amp;quot;MediaDevices.getUserMedia&amp;quot;,<br/>&amp;quot;navigator.mediaDevices.getUserMedia()&amp;quot;)}}.
+The <c>MediaStreamAudioDestinationNode</c> interface represents an audio destination consisting of a <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see> <see cref="MediaStream."/> with a single <c>AudioMediaStreamTrack</c>, which can be used in a similar way to a <c>MediaStream</c> obtained from <see cref="MediaDevices.GetUserMedia."/>.
 </summary>
 <remarks>
-<para>It is an <see cref="AudioNode"/> that acts as an audio destination, created using the <see cref="AudioContext.CreateMediaStreamDestination"/> method.</para><para></para>
+<para>It is an <see cref="AudioNode."/> that acts as an audio destination, created using the <see cref="AudioContext.CreateMediaStreamDestination."/> method.</para><para></para>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamAudioDestinationNode"> <em>See also on MDN</em> </seealso></para>
 </remarks>

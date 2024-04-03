@@ -1,11 +1,11 @@
 <docs>
 <XRPoseTransform>
 <summary>
-The <c>transform</c> read-only attribute of the<br/><see cref="XRPose"/> interface is a <see cref="XRRigidTransform"/> object providing<br/>the position and orientation of the pose relative to the base <see cref="XRSpace"/><br/>as specified when the pose was obtained by calling<br/><see cref="XRFrame.GetPose"/>.
+The <c>transform</c> read-only attribute of the<br/><see cref="XRPose."/> interface is a <see cref="XRRigidTransform."/> object providing<br/>the position and orientation of the pose relative to the base <see cref="XRSpace."/><br/>as specified when the pose was obtained by calling<br/><see cref="XRFrame.GetPose."/>.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRPose/transform"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An <see cref="XRRigidTransform"/> which provides the position and orientation of the<br/><see cref="XRPose"/> relative to the <see cref="XRFrame"/> to which this<br/><c>XRPose</c> is aligned. This is the same pose that&amp;apos;s returned by the frame&amp;apos;s<br/><see cref="XRFrame.GetPose"/> method.</value>
+<value>An <see cref="XRRigidTransform."/> which provides the position and orientation of the<br/><see cref="XRPose."/> relative to the <see cref="XRFrame."/> to which this<br/><c>XRPose</c> is aligned. This is the same pose that&amp;apos;s returned by the frame&amp;apos;s<br/><see cref="XRFrame.GetPose."/> method.</value>
 </XRPoseTransform>
 </docs>

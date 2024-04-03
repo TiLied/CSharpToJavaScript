@@ -1,7 +1,7 @@
 <docs>
 <USBConfigurationConfigurationName>
 <summary>
-The <strong><c>configurationName</c></strong> read-only property<br/>of the <see cref="USBConfiguration"/> interface returns the name provided by the device<br/>to describe this configuration. This is equal to the value of the string descriptor with<br/>the index provided in the <see href="https://www.beyondlogic.org/usbnutshell/usb5.shtml#ConfigurationDescriptors"><c>iConfiguration</c></see><br/>field of the configuration descriptor defining this configuration.
+The <strong><c>configurationName</c></strong> read-only property<br/>of the <see cref="USBConfiguration."/> interface returns the name provided by the device<br/>to describe this configuration. This is equal to the value of the string descriptor with<br/>the index provided in the <see href="https://www.beyondlogic.org/usbnutshell/usb5.shtml#ConfigurationDescriptors"><c>iConfiguration</c></see><br/>field of the configuration descriptor defining this configuration.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/USBConfiguration/configurationName"> <em>See also on MDN</em> </seealso></para>

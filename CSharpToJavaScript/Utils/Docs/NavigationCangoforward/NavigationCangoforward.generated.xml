@@ -1,12 +1,12 @@
 <docs>
 <NavigationCanGoForward>
 <summary>
-The <strong><c>canGoForward</c></strong> read-only property of the<br/><see cref="Navigation"/> interface returns <c>true</c> if it is possible to navigate forwards in the navigation history<br/>(i.e. the <see cref="Navigation.CurrentEntry"/> is not the last one in the history entry list),<br/>and <c>false</c> if it is not.
+The <strong><c>canGoForward</c></strong> read-only property of the<br/><see cref="Navigation."/> interface returns <c>true</c> if it is possible to navigate forwards in the navigation history<br/>(i.e. the <see cref="Navigation.CurrentEntry."/> is not the last one in the history entry list),<br/>and <c>false</c> if it is not.
 </summary>
 <remarks>
 <para>-<see href="https://developer.chrome.com/docs/web-platform/navigation-api/">Modern client-side routing: the Navigation API</see><br/>-<see href="https://github.com/WICG/navigation-api/blob/main/README.md">Navigation API explainer</see><br/>-Domenic Denicola&amp;apos;s <see href="https://gigantic-honored-octagon.glitch.me/">Navigation API live demo</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigation/canGoForward"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A boolean value:<c>true</c> if it is possible to navigate forwards in the navigation history, <c>false</c>otherwise.</value>
+<value>A boolean value: <c>true</c> if it is possible to navigate forwards in the navigation history, <c>false</c> otherwise.</value>
 </NavigationCanGoForward>
 </docs>

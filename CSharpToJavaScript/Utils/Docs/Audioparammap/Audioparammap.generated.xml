@@ -4,7 +4,7 @@
 The <strong><c>AudioParamMap</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see> represents an iterable and read-only set of multiple audio parameters.
 </summary>
 <remarks>
-<para>An <c>AudioParamMap</c> instance is a read-only <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map#map-like_objects"><c>Map</c>-like object</see>, in which each key is the name string for a parameter, and the corresponding value is an <see cref="AudioParam"/> containing the value of that parameter.</para>
+<para>An <c>AudioParamMap</c> instance is a read-only <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map#map-like_browser_apis"><c>Map</c>-like object</see>, in which each key is the name string for a parameter, and the corresponding value is an <see cref="AudioParam."/> containing the value of that parameter.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParamMap"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </AudioParamMap>

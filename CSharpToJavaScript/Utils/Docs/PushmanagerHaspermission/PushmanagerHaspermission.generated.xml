@@ -1,10 +1,10 @@
 <docs>
 <PushManagerHasPermission>
 <summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>PushManager.hasPermission()</c></strong> method of the <see cref="PushManager"/> interface returns a {{jsxref("Promise")}} that resolves to the <c>PushPermissionStatus</c> of the requesting webapp, which will be one of <c>granted</c>, <c>denied</c>, or <c>default</c>.
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>PushManager.hasPermission()</c></strong> method of the <see cref="PushManager."/> interface returns a {{jsxref("Promise")}} that resolves to the <c>PushPermissionStatus</c> of the requesting webapp, which will be one of <c>granted</c>, <c>denied</c>, or <c>default</c>.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This feature has been superseded by the <see cref="PushManager.PermissionState"/> method.</para></blockquote>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This feature has been superseded by the <see cref="PushManager.PermissionState."/> method.</para></blockquote>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PushManager/hasPermission"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>A <see cref="Promise"/> that resolves to the <c>PushPermissionStatus</c>.</returns>

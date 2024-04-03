@@ -1,10 +1,10 @@
 <docs>
 <XREquirectLayerRadius>
 <summary>
-The <strong><c>radius</c></strong> property of the <see cref="XREquirectLayer"/> interface represents the radius of the sphere.
+The <strong><c>radius</c></strong> property of the <see cref="XREquirectLayer."/> interface represents the radius of the sphere.
 </summary>
 <remarks>
-<para>-<see cref="XREquirectLayer.CentralHorizontalAngle"/><br/>-<see cref="XREquirectLayer.LowerVerticalAngle"/><br/>-<see cref="XREquirectLayer.UpperVerticalAngle"/><br/></para>
+<para>-<see cref="XREquirectLayer.CentralHorizontalAngle."/><br/>-<see cref="XREquirectLayer.LowerVerticalAngle."/><br/>-<see cref="XREquirectLayer.UpperVerticalAngle."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XREquirectLayer/radius"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A number representing the non-negative radius (in meters) of the sphere. Values of zero or infinity are treated as representing an infinite sphere. Setting <c>radius</c> to a value less than 0 will set it to 0.</value>

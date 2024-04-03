@@ -1,7 +1,7 @@
 <docs>
 <Node>
 <summary>
-In addition, every kind of DOM node is represented by an interface based on<br/><c>Node</c>. These include <see cref="Attr"/>, <see cref="CharacterData"/><br/>(which <see cref="Text"/>, <see cref="Comment"/>, <see cref="CDATASection"/> and<br/><see cref="ProcessingInstruction"/> are all based on), and <see cref="DocumentType"/>.
+In addition, every kind of DOM node is represented by an interface based on<br/><c>Node</c>. These include <see cref="Attr."/>, <see cref="CharacterData."/><br/>(which <see cref="Text."/>, <see cref="Comment."/>, <see cref="CDATASection."/> and<br/><see cref="ProcessingInstruction."/> are all based on), and <see cref="DocumentType."/>.
 </summary>
 <remarks>
 <para>In some cases, a particular feature of the base <c>Node</c> interface may not<br/>apply to one of its child interfaces; in that case, the inheriting node may<br/>return <c>null</c> or throw an exception, depending on circumstances. For example,<br/>attempting to add children to a node type that cannot have children will throw an<br/>exception.</para><para></para>

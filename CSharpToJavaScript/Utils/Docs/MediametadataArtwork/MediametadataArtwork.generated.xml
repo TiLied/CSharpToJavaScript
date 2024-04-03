@@ -1,12 +1,11 @@
 <docs>
 <MediaMetadataArtwork>
 <summary>
-The <strong><c>artwork</c></strong> property of the<br/><see cref="MediaMetaData"/> interface returns or sets an array of<br/><see cref="MediaImage"/> objects representing images associated with playing<br/>media.
+The <strong><c>artwork</c></strong> property of the<br/><see cref="MediaMetaData."/> interface returns or sets an array of<br/>objects representing images associated with playing<br/>media.
 </summary>
 <remarks>
-<para>-<see cref="MediaImage"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaMetadata/artwork"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An {{jsxref("Array")}} of <see cref="MediaImage"/> objects.</value>
+<value>An <see cref="Array"/> of objects, each containing the following fields:</value>
 </MediaMetadataArtwork>
 </docs>

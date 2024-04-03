@@ -1,11 +1,10 @@
 <docs>
 <LocationReplace>
 <summary>
-The <strong><c>replace()</c></strong> method of the <see cref="Location"/><br/>interface replaces the current resource with the one at the provided URL. The difference<br/>from the <see cref="Location.Assign"/> method is that after using<br/><c>replace()</c> the current page will not be saved in session<br/><see cref="History"/>, meaning the user won't be able to use the <strong>back</strong> button<br/>to navigate to it.
+The <strong><c>replace()</c></strong> method of the <see cref="Location."/><br/>interface replaces the current resource with the one at the provided URL. The difference<br/>from the <see cref="Location.Assign."/> method is that after using<br/><c>replace()</c> the current page will not be saved in session <see cref="History."/>,<br/>meaning the user won&amp;apos;t be able to use the <strong>back</strong> button to navigate to it.
 </summary>
 <remarks>
-<para>If the assignment can&amp;apos;t happen because of a security violation, a<br/><see cref="DOMException"/> of the <c>SECURITY_ERROR</c> type is thrown. This<br/>happens if the origin of the script calling the method is different from the origin of<br/>the page originally described by the <see cref="Location"/> object, mostly when the<br/>script is hosted on a different domain.</para><para>If the provided URL is not valid, a <see cref="DOMException"/> of the<br/><c>SYNTAX_ERROR</c> type is thrown.</para>
-<para>-The <see cref="Location"/> interface it belongs to.<br/>-Similar methods: <see cref="Location.Assign"/> and<br/><see cref="Location.Reload"/>.<br/></para>
+<para>-The <see cref="Location."/> interface it belongs to.<br/>-Similar methods: <see cref="Location.Assign."/> and<br/><see cref="Location.Reload."/>.<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Location/replace"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>

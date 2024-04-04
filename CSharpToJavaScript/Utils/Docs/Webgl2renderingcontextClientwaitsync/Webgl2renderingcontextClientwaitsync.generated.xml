@@ -1,12 +1,12 @@
 <docs>
 <WebGL2RenderingContextClientWaitSync>
 <summary>
-The <strong><c>WebGL2RenderingContext.clientWaitSync()</c></strong> method of the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> blocks and waits for a<br/><see cref="WebGLSync."/> object to become signaled or a given timeout to be passed.
+The <strong><c>WebGL2RenderingContext.clientWaitSync()</c></strong> method of the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> blocks and waits for a<br/><see cref="WebGLSync"/> object to become signaled or a given timeout to be passed.
 </summary>
 <remarks>
-<para>-<see cref="WebGLSync."/><br/></para>
+<para>-<see cref="WebGLSync"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/clientWaitSync"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A <see cref="WebGL_API/Types."/> indicating the sync object's status.</returns>
+<returns>A <see cref="WebGL_API/Types"/> indicating the sync object's status.</returns>
 </WebGL2RenderingContextClientWaitSync>
 </docs>

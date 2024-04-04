@@ -1,11 +1,11 @@
 <docs>
 <ReadableStreamLocked>
 <summary>
-The <strong><c>locked</c></strong> read-only property of the <see cref="ReadableStream."/> interface returns whether or not the readable stream is locked to a reader.
+The <strong><c>locked</c></strong> read-only property of the <see cref="ReadableStream"/> interface returns whether or not the readable stream is locked to a reader.
 </summary>
 <remarks>
 <para>A readable stream can have at most one active reader at a time, and is locked to that reader until it is released.<br/>A reader might be obtained using <see href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream/getReader"><c>ReadableStream.getReader()</c></see> and released using the reader&amp;apos;s <c>releaseLock()</c> method.</para>
-<para>-<see cref="ReadableStream.ReadableStream."/> constructor<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_streams">Using readable streams</see><br/></para>
+<para>-<see cref="ReadableStream.ReadableStream"/> constructor<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_streams">Using readable streams</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream/locked"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A <see href="https://developer.mozilla.org/en-US/docs/Glossary/boolean">boolean</see> value indicating whether or not the readable stream is locked.</value>

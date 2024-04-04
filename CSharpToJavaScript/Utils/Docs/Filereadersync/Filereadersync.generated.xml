@@ -1,10 +1,10 @@
 <docs>
 <FileReaderSync>
 <summary>
-The <strong><c>FileReaderSync</c></strong> interface allows to read <see cref="File."/> or <see cref="Blob."/> objects synchronously. This interface is <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers">only available</see> in <see href="https://developer.mozilla.org/en-US/docs/Web/API/Worker">workers</see> as it enables synchronous I/O that could potentially block.
+The <strong><c>FileReaderSync</c></strong> interface allows to read <see cref="File"/> or <see cref="Blob"/> objects synchronously. This interface is <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers">only available</see> in <see href="https://developer.mozilla.org/en-US/docs/Web/API/Worker">workers</see> as it enables synchronous I/O that could potentially block.
 </summary>
 <remarks>
-<para>-<see cref="FileReader."/><br/>-<see cref="Blob."/><br/>-<see cref="File."/><br/></para>
+<para>-<see cref="FileReader"/><br/>-<see cref="Blob"/><br/>-<see cref="File"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileReaderSync"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </FileReaderSync>

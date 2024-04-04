@@ -1,11 +1,11 @@
 <docs>
 <AbortSignalAny>
 <summary>
-The <strong><c>AbortSignal.any()</c></strong> static method takes an iterable of abort signals and returns an <see cref="AbortSignal."/>. The returned abort signal is aborted when any of the input iterable abort signals are aborted. The {{domxref("AbortSignal.reason", "abort reason",&amp;quot;&amp;quot;,"true")}} will be set to the reason of the first signal that is aborted. If any of the given abort signals are already aborted then so will be the returned <see cref="AbortSignal."/>.
+The <strong><c>AbortSignal.any()</c></strong> static method takes an iterable of abort signals and returns an <see cref="AbortSignal"/>. The returned abort signal is aborted when any of the input iterable abort signals are aborted. The {{domxref("AbortSignal.reason", "abort reason",&amp;quot;&amp;quot;,"true")}} will be set to the reason of the first signal that is aborted. If any of the given abort signals are already aborted then so will be the returned <see cref="AbortSignal"/>.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal/any"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A <see cref="AbortSignal."/> that is:</returns>
+<returns>A <see cref="AbortSignal"/> that is:</returns>
 </AbortSignalAny>
 </docs>

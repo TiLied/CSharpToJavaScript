@@ -1,10 +1,10 @@
 <docs>
 <RangeInsertNode>
 <summary>
-The <strong><c>Range.insertNode()</c></strong> method inserts a node at the start<br/>of the <see cref="Range."/>.
+The <strong><c>Range.insertNode()</c></strong> method inserts a node at the start<br/>of the <see cref="Range"/>.
 </summary>
 <remarks>
-<para>The new node is inserted at the start boundary point of the <c>Range</c>. If the<br/>new node is to be added to a text <see cref="Node."/>, that <c>Node</c> is split<br/>at the insertion point, and the insertion occurs between the two text nodes.</para><para>If the new node is a document fragment, the children of the document fragment are<br/>inserted instead.</para>
+<para>The new node is inserted at the start boundary point of the <c>Range</c>. If the<br/>new node is to be added to a text <see cref="Node"/>, that <c>Node</c> is split<br/>at the insertion point, and the insertion occurs between the two text nodes.</para><para>If the new node is a document fragment, the children of the document fragment are<br/>inserted instead.</para>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Range/insertNode"> <em>See also on MDN</em> </seealso></para>
 </remarks>

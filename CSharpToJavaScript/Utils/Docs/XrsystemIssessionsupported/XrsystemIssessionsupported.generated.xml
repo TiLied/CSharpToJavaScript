@@ -1,10 +1,10 @@
 <docs>
 <XRSystemIsSessionSupported>
 <summary>
-The <see cref="XRSystem."/> method<br/><strong><c>isSessionSupported()</c></strong> returns a promise which resolves to<br/><c>true</c> if the specified WebXR session mode is supported by the user&amp;apos;s WebXR<br/>device. Otherwise, the promise resolves with <c>false</c>.
+The <see cref="XRSystem"/> method<br/><strong><c>isSessionSupported()</c></strong> returns a promise which resolves to<br/><c>true</c> if the specified WebXR session mode is supported by the user&amp;apos;s WebXR<br/>device. Otherwise, the promise resolves with <c>false</c>.
 </summary>
 <remarks>
-<para>If no devices are available or the browser doesn&amp;apos;t have permission<br/>to use the XR device, the promise is rejected with an appropriate<br/><see cref="DOMException."/>.</para>
+<para>If no devices are available or the browser doesn&amp;apos;t have permission<br/>to use the XR device, the promise is rejected with an appropriate<br/><see cref="DOMException"/>.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRSystem/isSessionSupported"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>A <see cref="Promise"/> that resolves to <c>true</c> if the specified session<br/>mode is supported; otherwise the promise resolves to <c>false</c>.</returns>

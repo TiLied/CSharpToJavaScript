@@ -1,13 +1,13 @@
 <docs>
 <AudioBufferSourceNodeDetune>
 <summary>
-The <strong><c>detune</c></strong> property of the<br/><see cref="AudioBufferSourceNode."/> interface is a <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam#k-rate">k-rate</see> <see cref="AudioParam."/><br/>representing detuning of oscillation in <see href="https://en.wikipedia.org/wiki/Cent_%28music%29">cents</see>.
+The <strong><c>detune</c></strong> property of the<br/><see cref="AudioBufferSourceNode"/> interface is a <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam#k-rate">k-rate</see> <see cref="AudioParam"/><br/>representing detuning of oscillation in <see href="https://en.wikipedia.org/wiki/Cent_%28music%29">cents</see>.
 </summary>
 <remarks>
 <para>For example, values of +100 and -100 detune the source up or down by one semitone,<br/>while +1200 and -1200 detune it up or down by one octave.</para>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioBufferSourceNode/detune"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam#k-rate">k-rate</see> <see cref="AudioParam."/><br/>whose value indicates the detuning of oscillation in <see href="https://en.wikipedia.org/wiki/Cent_%28music%29">cents</see>.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> Though the <c>AudioParam</c> returned is read-only, the<br/>value it represents is not.</blockquote></value>
+<value>A <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam#k-rate">k-rate</see> <see cref="AudioParam"/><br/>whose value indicates the detuning of oscillation in <see href="https://en.wikipedia.org/wiki/Cent_%28music%29">cents</see>.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> Though the <c>AudioParam</c> returned is read-only, the<br/>value it represents is not.</blockquote></value>
 </AudioBufferSourceNodeDetune>
 </docs>

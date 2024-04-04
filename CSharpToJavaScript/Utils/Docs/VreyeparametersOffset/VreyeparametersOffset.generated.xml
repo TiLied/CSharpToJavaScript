@@ -1,7 +1,7 @@
 <docs>
 <VREyeParametersOffset>
 <summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>offset</c></strong> read-only property of the <see cref="VREyeParameters."/> interface represents the offset from the center point between the user's eyes to the center of the eye, measured in meters.
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>offset</c></strong> read-only property of the <see cref="VREyeParameters"/> interface represents the offset from the center point between the user's eyes to the center of the eye, measured in meters.
 </summary>
 <remarks>
 <blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This property was part of the old <see href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</see>. It has been superseded by the <see href="https://immersive-web.github.io/webxr/">WebXR Device API</see>.</para></blockquote><para>This value should represent half the user&amp;apos;s interpupillary distance (IPD), but may also represent the distance from the center point of the headset to the center point of the lens for the given eye.</para>

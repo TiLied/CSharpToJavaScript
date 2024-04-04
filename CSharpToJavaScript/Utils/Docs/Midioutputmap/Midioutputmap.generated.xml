@@ -4,7 +4,7 @@
 The <strong><c>MIDIOutputMap</c></strong> read-only interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_MIDI_API">Web MIDI API</see> provides the set of MIDI output ports that are currently available.
 </summary>
 <remarks>
-<para>A <c>MIDIOutputMap</c> instance is a read-only <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map#map-like_browser_apis"><c>Map</c>-like object</see>, in which each key is the ID string for MIDI output, and the associated value is the corresponding <see cref="MIDIOutput."/> object.</para>
+<para>A <c>MIDIOutputMap</c> instance is a read-only <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map#map-like_browser_apis"><c>Map</c>-like object</see>, in which each key is the ID string for MIDI output, and the associated value is the corresponding <see cref="MIDIOutput"/> object.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MIDIOutputMap"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </MIDIOutputMap>

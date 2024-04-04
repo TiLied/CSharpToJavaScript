@@ -1,13 +1,13 @@
 <docs>
 <ClipboardRead>
 <summary>
-The <strong><c>read()</c></strong> method of the <see cref="Clipboard."/> interface requests a copy of the clipboard's contents, fulfilling the returned {{jsxref("Promise")}} with the data.
+The <strong><c>read()</c></strong> method of the <see cref="Clipboard"/> interface requests a copy of the clipboard's contents, fulfilling the returned {{jsxref("Promise")}} with the data.
 </summary>
 <remarks>
-<para>The method can in theory return arbitrary data (unlike <see cref="Clipboard.ReadText."/>, which can only return text).<br/>Browsers commonly support reading text, HTML, and PNG image data — see <see href="https://developer.mozilla.org#browser_compatibility">browser compatibility</see> for more information.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API">Clipboard API</see><br/>-<see href="https://web.dev/articles/async-clipboard">Unblocking clipboard access</see> on web.dev<br/>-<see href="https://developer.chrome.com/docs/web-platform/unsanitized-html-async-clipboard">Unsanitized HTML in the Async Clipboard API</see> on developer.chrome.com<br/>-<see cref="Clipboard.ReadText."/><br/>-<see cref="Clipboard.WriteText."/><br/>-<see cref="Clipboard.Write."/><br/></para>
+<para>The method can in theory return arbitrary data (unlike <see cref="Clipboard.ReadText"/>, which can only return text).<br/>Browsers commonly support reading text, HTML, and PNG image data — see <see href="https://developer.mozilla.org#browser_compatibility">browser compatibility</see> for more information.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API">Clipboard API</see><br/>-<see href="https://web.dev/articles/async-clipboard">Unblocking clipboard access</see> on web.dev<br/>-<see href="https://developer.chrome.com/docs/web-platform/unsanitized-html-async-clipboard">Unsanitized HTML in the Async Clipboard API</see> on developer.chrome.com<br/>-<see cref="Clipboard.ReadText"/><br/>-<see cref="Clipboard.WriteText"/><br/>-<see cref="Clipboard.Write"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/read"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A {{jsxref("Promise")}} that resolves with an array of <see cref="ClipboardItem."/> objects containing the clipboard's contents.</returns>
+<returns>A {{jsxref("Promise")}} that resolves with an array of <see cref="ClipboardItem"/> objects containing the clipboard's contents.</returns>
 </ClipboardRead>
 </docs>

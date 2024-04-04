@@ -1,10 +1,10 @@
 <docs>
 <GPUGetPreferredCanvasFormat>
 <summary>
-The <strong><c>getPreferredCanvasFormat()</c></strong> method of the<br/><see cref="GPU."/> interface returns the optimal canvas texture format for displaying 8-bit depth, standard dynamic range content on the current system.
+The <strong><c>getPreferredCanvasFormat()</c></strong> method of the<br/><see cref="GPU"/> interface returns the optimal canvas texture format for displaying 8-bit depth, standard dynamic range content on the current system.
 </summary>
 <remarks>
-<para>This is commonly used to provide a <see cref="GPUCanvasContext.Configure."/> call with the optimal <c>format</c> value for the current system. This is recommended — if you don&amp;apos;t use the preferred format when configuring the canvas context, you may incur additional overhead, such as additional texture copies, depending on the platform.</para>
+<para>This is commonly used to provide a <see cref="GPUCanvasContext.Configure"/> call with the optimal <c>format</c> value for the current system. This is recommended — if you don&amp;apos;t use the preferred format when configuring the canvas context, you may incur additional overhead, such as additional texture copies, depending on the platform.</para>
 <para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPU/getPreferredCanvasFormat"> <em>See also on MDN</em> </seealso></para>
 </remarks>

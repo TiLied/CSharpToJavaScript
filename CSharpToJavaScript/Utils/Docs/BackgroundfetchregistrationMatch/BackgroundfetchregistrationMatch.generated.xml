@@ -1,11 +1,11 @@
 <docs>
 <BackgroundFetchRegistrationMatch>
 <summary>
-The <strong><c>match()</c></strong> method of the <see cref="BackgroundFetchRegistration."/> interface returns the first matching <see cref="BackgroundFetchRecord."/>.
+The <strong><c>match()</c></strong> method of the <see cref="BackgroundFetchRegistration"/> interface returns the first matching <see cref="BackgroundFetchRecord"/>.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BackgroundFetchRegistration/match"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A {{jsxref("Promise")}} that resolves with the first <see cref="BackgroundFetchRecord."/> that matches<br/>the request or <see cref="Undefined"/> if no match is found.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> <c>BackgroundFetchRegistration.match()</c> is basically identical to<br/><see cref="BackgroundFetchRegistration.MatchAll."/>, except that rather than resolving with an array of<br/>all matching records, it resolves with the first matching record only.</blockquote></returns>
+<returns>A {{jsxref("Promise")}} that resolves with the first <see cref="BackgroundFetchRecord"/> that matches<br/>the request or <see cref="Undefined"/> if no match is found.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> <c>BackgroundFetchRegistration.match()</c> is basically identical to<br/><see cref="BackgroundFetchRegistration.MatchAll"/>, except that rather than resolving with an array of<br/>all matching records, it resolves with the first matching record only.</blockquote></returns>
 </BackgroundFetchRegistrationMatch>
 </docs>

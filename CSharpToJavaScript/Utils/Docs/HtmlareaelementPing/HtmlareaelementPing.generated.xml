@@ -1,11 +1,11 @@
 <docs>
 <HTMLAreaElementPing>
 <summary>
-The <strong><c>ping</c></strong> property of the <see cref="HTMLAreaElement."/> interface is a space-separated list of URLs. When the link is followed, the browser will send {{HTTPMethod("POST")}} requests with the body PING to the URLs.
+The <strong><c>ping</c></strong> property of the <see cref="HTMLAreaElement"/> interface is a space-separated list of URLs. When the link is followed, the browser will send {{HTTPMethod("POST")}} requests with the body PING to the URLs.
 </summary>
 <remarks>
 <para>It reflects the <c>ping</c> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area">area</see> element.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This property is not effective in Firefox and its usage may be limited due to privacy and security concerns.</para></blockquote>
-<para>-<see cref="HTMLAnchorElement.Ping."/> property<br/></para>
+<para>-<see cref="HTMLAnchorElement.Ping"/> property<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement/ping"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </HTMLAreaElementPing>

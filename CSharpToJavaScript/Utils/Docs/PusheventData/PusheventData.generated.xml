@@ -1,11 +1,11 @@
 <docs>
 <PushEventData>
 <summary>
-The <c>data</c> read-only property of the <strong><c>PushEvent</c></strong> interface returns a reference to a <see cref="PushMessageData."/> object containing data sent to the <see cref="PushSubscription."/>.
+The <c>data</c> read-only property of the <strong><c>PushEvent</c></strong> interface returns a reference to a <see cref="PushMessageData"/> object containing data sent to the <see cref="PushSubscription"/>.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PushEvent/data"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="PushMessageData."/> object or <c>null</c> if no <c>data</c> member is passed when the event instance initialized.</value>
+<value>A <see cref="PushMessageData"/> object or <c>null</c> if no <c>data</c> member is passed when the event instance initialized.</value>
 </PushEventData>
 </docs>

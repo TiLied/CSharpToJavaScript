@@ -1,7 +1,7 @@
 <docs>
 <HighlightType>
 <summary>
-The <c>type</c> property of the <see cref="Highlight."/> interface is an enumerated {{jsxref("String")}} used to specify the meaning of the highlight. This allows assistive technologies, such as screen readers, to include this meaning when exposing the highlight to users.
+The <c>type</c> property of the <see cref="Highlight"/> interface is an enumerated {{jsxref("String")}} used to specify the meaning of the highlight. This allows assistive technologies, such as screen readers, to include this meaning when exposing the highlight to users.
 </summary>
 <remarks>
 <para>By default, a highlight object will have its type set to <c>highlight</c>, but you can change it to <c>spelling-error</c> or <c>grammar-error</c>.</para>

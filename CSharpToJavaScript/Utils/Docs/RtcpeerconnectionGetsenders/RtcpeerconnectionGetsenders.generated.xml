@@ -1,12 +1,12 @@
 <docs>
 <RTCPeerConnectionGetSenders>
 <summary>
-The <strong><c>getSenders()</c></strong> method of the <see cref="RTCPeerConnection."/> interface returns an array of <see cref="RTCRtpSender."/> objects, each of which represents the RTP sender responsible for transmitting one track's data.<br/>A sender object provides methods and properties for examining and controlling the encoding and transmission of the track&amp;apos;s data.
+The <strong><c>getSenders()</c></strong> method of the <see cref="RTCPeerConnection"/> interface returns an array of <see cref="RTCRtpSender"/> objects, each of which represents the RTP sender responsible for transmitting one track's data.<br/>A sender object provides methods and properties for examining and controlling the encoding and transmission of the track&amp;apos;s data.
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/>-<see cref="RTCRtpSender."/><br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/>-<see cref="RTCRtpSender"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/getSenders"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>An array of <see cref="RTCRtpSender."/> objects, one for each track on the connection.<br/>The array is empty if there are no RTP senders on the connection.The order of the returned <c>RTCRtpSender</c> instances is not defined by the specification, and may change from one call to <c>getSenders()</c> to the next.The array does not include senders associated with transceivers that have been <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiver/currentDirection">stopped</see> (following offer/answer).</returns>
+<returns>An array of <see cref="RTCRtpSender"/> objects, one for each track on the connection.<br/>The array is empty if there are no RTP senders on the connection.The order of the returned <c>RTCRtpSender</c> instances is not defined by the specification, and may change from one call to <c>getSenders()</c> to the next.The array does not include senders associated with transceivers that have been <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiver/currentDirection">stopped</see> (following offer/answer).</returns>
 </RTCPeerConnectionGetSenders>
 </docs>

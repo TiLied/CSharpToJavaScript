@@ -5,7 +5,7 @@ The <strong><c>HTMLMediaElement.setSinkId()</c></strong> method of the <see href
 </summary>
 <remarks>
 <para>This only works when the application is permitted to use the specified device.<br/>For more information see the <see href="https://developer.mozilla.org#security_requirements">security requirements</see> below.</para>
-<para>-<see cref="MediaDevices.SelectAudioOutput."/><br/>-<see cref="HTMLMediaElement.SinkId."/><br/></para>
+<para>-<see cref="MediaDevices.SelectAudioOutput"/><br/>-<see cref="HTMLMediaElement.SinkId"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/setSinkId"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>A <see cref="Promise"/> that resolves to <see cref="Undefined"/>.</returns>

@@ -1,10 +1,10 @@
 <docs>
 <RTCRemoteOutboundRtpStreamStats>
 <summary>
-The <strong><c>RTCRemoteOutboundRtpStreamStats</c></strong> dictionary of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see> is used to report statistics from remote endpoint of its outbound RTP stream, which corresponds to an inbound stream that is currently received by an <see cref="RTCPeerConnection."/> object.
+The <strong><c>RTCRemoteOutboundRtpStreamStats</c></strong> dictionary of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see> is used to report statistics from remote endpoint of its outbound RTP stream, which corresponds to an inbound stream that is currently received by an <see cref="RTCPeerConnection"/> object.
 </summary>
 <remarks>
-<para>The statistics can be obtained by iterating the <see cref="RTCStatsReport."/> returned by <see cref="RTCPeerConnection.GetStats."/> until you find a report with the <see href="https://developer.mozilla.org#type"><c>type</c></see> of <c>remote-outbound-rtp</c>.</para>
+<para>The statistics can be obtained by iterating the <see cref="RTCStatsReport"/> returned by <see cref="RTCPeerConnection.GetStats"/> until you find a report with the <see href="https://developer.mozilla.org#type"><c>type</c></see> of <c>remote-outbound-rtp</c>.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRemoteOutboundRtpStreamStats"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </RTCRemoteOutboundRtpStreamStats>

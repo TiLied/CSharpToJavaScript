@@ -1,11 +1,11 @@
 <docs>
 <IdleDetectorUserState>
 <summary>
-The <strong><c>userState</c></strong> read-only property of the <see cref="IdleDetector."/> interface returns a string indicating whether the user has interacted with the device since the call to <c>start()</c>.
+The <strong><c>userState</c></strong> read-only property of the <see cref="IdleDetector"/> interface returns a string indicating whether the user has interacted with the device since the call to <c>start()</c>.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IdleDetector/userState"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>Either <c>&amp;quot;active&amp;quot;</c> or <c>&amp;quot;idle&amp;quot;</c> if <see cref="IdleDetector.Start."/> has been called, or <c>null</c> otherwise.</value>
+<value>Either <c>&amp;quot;active&amp;quot;</c> or <c>&amp;quot;idle&amp;quot;</c> if <see cref="IdleDetector.Start"/> has been called, or <c>null</c> otherwise.</value>
 </IdleDetectorUserState>
 </docs>

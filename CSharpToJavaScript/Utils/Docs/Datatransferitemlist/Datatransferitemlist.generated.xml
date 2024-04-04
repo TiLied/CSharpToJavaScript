@@ -1,7 +1,7 @@
 <docs>
 <DataTransferItemList>
 <summary>
-The <strong><c>DataTransferItemList</c></strong> object is a list of <see cref="DataTransferItem."/> objects representing items being dragged. During a <strong>drag operation</strong>, each <see cref="DragEvent."/> has a <see cref="DragEvent.DataTransfer."/> property and that property is a <c>DataTransferItemList</c>.
+The <strong><c>DataTransferItemList</c></strong> object is a list of <see cref="DataTransferItem"/> objects representing items being dragged. During a <strong>drag operation</strong>, each <see cref="DragEvent"/> has a <see cref="DragEvent.DataTransfer"/> property and that property is a <c>DataTransferItemList</c>.
 </summary>
 <remarks>
 <para>The individual items can be accessed using the <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors#bracket_notation">bracket notation</see> <c>[]</c>.</para><para>This interface has no constructor.</para>

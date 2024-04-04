@@ -1,10 +1,10 @@
 <docs>
 <StorageManagerPersist>
 <summary>
-The <strong><c>persist()</c></strong> method of the <see cref="StorageManager."/> interface requests permission to use persistent storage, and returns a {{jsxref('Promise')}} that resolves to <c>true</c> if permission is granted and bucket mode is persistent, and <c>false</c> otherwise.
+The <strong><c>persist()</c></strong> method of the <see cref="StorageManager"/> interface requests permission to use persistent storage, and returns a {{jsxref('Promise')}} that resolves to <c>true</c> if permission is granted and bucket mode is persistent, and <c>false</c> otherwise.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This method is not available in <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">Web Workers</see>, though the <see cref="StorageManager."/> interface is.</para></blockquote>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This method is not available in <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">Web Workers</see>, though the <see cref="StorageManager"/> interface is.</para></blockquote>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StorageManager/persist"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>A <see cref="'Promise'"/> that resolves to a <see cref="'Boolean'"/>.</returns>

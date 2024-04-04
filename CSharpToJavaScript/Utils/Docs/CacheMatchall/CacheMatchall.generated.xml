@@ -1,12 +1,12 @@
 <docs>
 <CacheMatchAll>
 <summary>
-The <strong><c>matchAll()</c></strong> method of the <see cref="Cache."/><br/>interface returns a <see cref="Promise"/> that resolves to an array of all matching<br/>responses in the <see cref="Cache."/> object.
+The <strong><c>matchAll()</c></strong> method of the <see cref="Cache"/><br/>interface returns a <see cref="Promise"/> that resolves to an array of all matching<br/>responses in the <see cref="Cache"/> object.
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</see><br/>-<see cref="Cache."/><br/>-<see cref="Caches."/><br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</see><br/>-<see cref="Cache"/><br/>-<see cref="Caches"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Cache/matchAll"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A <see cref="Promise"/> that resolves to an array of all matching responses in the<br/><see cref="Cache."/> object.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> <see cref="Cache.Match."/> is basically identical to<br/><c>Cache.matchAll()</c>, except that rather than resolving with an array of all<br/>matching responses, it resolves with the first matching response only (that is,<br/><c>response[0]</c>).</blockquote></returns>
+<returns>A <see cref="Promise"/> that resolves to an array of all matching responses in the<br/><see cref="Cache"/> object.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> <see cref="Cache.Match"/> is basically identical to<br/><c>Cache.matchAll()</c>, except that rather than resolving with an array of all<br/>matching responses, it resolves with the first matching response only (that is,<br/><c>response[0]</c>).</blockquote></returns>
 </CacheMatchAll>
 </docs>

@@ -1,13 +1,13 @@
 <docs>
 <FetchEventRequest>
 <summary>
-The <strong><c>request</c></strong> read-only property of the<br/><see cref="FetchEvent."/> interface returns the <see cref="Request."/> that triggered<br/>the event handler.
+The <strong><c>request</c></strong> read-only property of the<br/><see cref="FetchEvent"/> interface returns the <see cref="Request"/> that triggered<br/>the event handler.
 </summary>
 <remarks>
-<para>This property is non-nullable (since version 46, in the case of Firefox.) If a request<br/>is not provided by some other means, the constructor <c>options</c> object must<br/>contain a request (see <see cref="FetchEvent.FetchEvent."/>.)</para>
+<para>This property is non-nullable (since version 46, in the case of Firefox.) If a request<br/>is not provided by some other means, the constructor <c>options</c> object must<br/>contain a request (see <see cref="FetchEvent.FetchEvent"/>.)</para>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</see><br/>-<see href="https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker">Service workers basic code example</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web workers</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FetchEvent/request"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="Request."/> object.</value>
+<value>A <see cref="Request"/> object.</value>
 </FetchEventRequest>
 </docs>

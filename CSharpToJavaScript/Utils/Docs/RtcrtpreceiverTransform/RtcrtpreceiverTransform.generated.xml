@@ -1,13 +1,13 @@
 <docs>
 <RTCRtpReceiverTransform>
 <summary>
-The <strong><c>transform</c></strong> property of the <see cref="RTCRtpReceiver."/> object is used to insert a transform stream (<see cref="TransformStream."/>) running in a worker thread into the receiver pipeline.<br/>This allows stream transforms to be applied to encoded video and audio frames as they arrive from the packetizer (before they are played/rendered).
+The <strong><c>transform</c></strong> property of the <see cref="RTCRtpReceiver"/> object is used to insert a transform stream (<see cref="TransformStream"/>) running in a worker thread into the receiver pipeline.<br/>This allows stream transforms to be applied to encoded video and audio frames as they arrive from the packetizer (before they are played/rendered).
 </summary>
 <remarks>
-<para>The transform that is to be added is defined using an <see cref="RTCRtpScriptTransform."/> and its associated <see cref="Worker."/>.<br/>If the transform is set in the peer connection <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/track_event"><c>track</c> event</see> handler, the transform stream will receive the first full incoming frame for the track.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms">Using WebRTC Encoded Transforms</see><br/>-<see cref="RTCRtpSender.Transform."/><br/></para>
+<para>The transform that is to be added is defined using an <see cref="RTCRtpScriptTransform"/> and its associated <see cref="Worker"/>.<br/>If the transform is set in the peer connection <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/track_event"><c>track</c> event</see> handler, the transform stream will receive the first full incoming frame for the track.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms">Using WebRTC Encoded Transforms</see><br/>-<see cref="RTCRtpSender.Transform"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpReceiver/transform"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="RTCRtpScriptTransform."/>&amp;lt;!-- or {{domxref(&amp;quot;SFrameTransform&amp;quot;)}} --&amp;gt;, or <c>null</c> if the receiver has no associated transform stream.</value>
+<value>A <see cref="RTCRtpScriptTransform"/>&amp;lt;!-- or {{domxref(&amp;quot;SFrameTransform&amp;quot;)}} --&amp;gt;, or <c>null</c> if the receiver has no associated transform stream.</value>
 </RTCRtpReceiverTransform>
 </docs>

@@ -1,10 +1,10 @@
 <docs>
 <FenceReportEvent>
 <summary>
-The <strong><c>reportEvent()</c></strong> method of the<br/><see cref="Fence."/> interface triggers the submission of report data via a <see href="https://developer.mozilla.org/en-US/docs/Web/API/Beacon_API">beacon</see> to one or more specific URLs registered via the <see cref="InterestGroupReportingScriptRunnerGlobalScope.RegisterAdBeacon."/> method of the <see href="https://developers.google.com/privacy-sandbox/relevance/protected-audience">Protected Audience API</see>, for the purpose of collecting ad auction results.
+The <strong><c>reportEvent()</c></strong> method of the<br/><see cref="Fence"/> interface triggers the submission of report data via a <see href="https://developer.mozilla.org/en-US/docs/Web/API/Beacon_API">beacon</see> to one or more specific URLs registered via the <see cref="InterestGroupReportingScriptRunnerGlobalScope.RegisterAdBeacon"/> method of the <see href="https://developers.google.com/privacy-sandbox/relevance/protected-audience">Protected Audience API</see>, for the purpose of collecting ad auction results.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> <see cref="Fence.SetReportEventDataForAutomaticBeacons."/> provides similar report data submission, except in that case the submission is triggered via a navigation rather than by an explicit method call.</para></blockquote>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> <see cref="Fence.SetReportEventDataForAutomaticBeacons"/> provides similar report data submission, except in that case the submission is triggered via a navigation rather than by an explicit method call.</para></blockquote>
 <para>-<see href="https://developer.chrome.com/docs/privacy-sandbox/fenced-frame/">Fenced frames</see> on developer.chrome.com<br/>-<see href="https://developer.chrome.com/docs/privacy-sandbox/">The Privacy Sandbox</see> on developer.chrome.com<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Fence/reportEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>

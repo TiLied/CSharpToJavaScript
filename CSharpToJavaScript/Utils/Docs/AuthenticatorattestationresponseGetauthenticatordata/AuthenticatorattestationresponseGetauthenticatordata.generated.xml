@@ -1,12 +1,12 @@
 <docs>
 <AuthenticatorAttestationResponseGetAuthenticatorData>
 <summary>
-The <strong><c>getAuthenticatorData()</c></strong> method of the <see cref="AuthenticatorAttestationResponse."/> interface returns an {{jsxref("ArrayBuffer")}} containing the authenticator data contained within the <see cref="AuthenticatorAttestationResponse.AttestationObject."/> property.
+The <strong><c>getAuthenticatorData()</c></strong> method of the <see cref="AuthenticatorAttestationResponse"/> interface returns an {{jsxref("ArrayBuffer")}} containing the authenticator data contained within the <see cref="AuthenticatorAttestationResponse.AttestationObject"/> property.
 </summary>
 <remarks>
 <para>This is a convenience function, created to allow easy access to the authenticator data without having to write extra parsing code to extract it from the <c>attestationObject</c>.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AuthenticatorAttestationResponse/getAuthenticatorData"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>An <see cref="ArrayBuffer"/> with a <see cref="ArrayBufferByteLength"/> of at least 37 bytes, which contains the data structure explained in <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API/Authenticator_data">Authenticator data</see>.This will be equivalent to the authenticator data contained within the <see cref="AuthenticatorAttestationResponse.AttestationObject."/> property.</returns>
+<returns>An <see cref="ArrayBuffer"/> with a <see cref="ArrayBufferByteLength"/> of at least 37 bytes, which contains the data structure explained in <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API/Authenticator_data">Authenticator data</see>.This will be equivalent to the authenticator data contained within the <see cref="AuthenticatorAttestationResponse.AttestationObject"/> property.</returns>
 </AuthenticatorAttestationResponseGetAuthenticatorData>
 </docs>

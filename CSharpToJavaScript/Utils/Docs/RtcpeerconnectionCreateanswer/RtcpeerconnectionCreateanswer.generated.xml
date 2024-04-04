@@ -1,12 +1,12 @@
 <docs>
 <RTCPeerConnectionCreateAnswer>
 <summary>
-The <strong><c>createAnswer()</c></strong> method of the <see cref="RTCPeerConnection."/> interface creates an {{Glossary("SDP")}} answer to an offer received from a remote peer during the offer/answer negotiation of a WebRTC connection.
+The <strong><c>createAnswer()</c></strong> method of the <see cref="RTCPeerConnection"/> interface creates an {{Glossary("SDP")}} answer to an offer received from a remote peer during the offer/answer negotiation of a WebRTC connection.
 </summary>
 <remarks>
 <para>The answer contains information about any media already attached to the session, codecs and options supported by the browser, and any <see href="https://developer.mozilla.org/en-US/docs/Glossary/ICE">ICE</see> candidates already gathered.<br/>The answer is delivered to the returned <see cref="Promise"/>, and should then be sent to the source of the offer to continue the negotiation process.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/createAnswer"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A {{jsxref("Promise")}} whose fulfillment handler is called with an object conforming to the <see cref="RTCSessionDescriptionInit."/> dictionary which contains the SDP answer to be delivered to the other peer.</returns>
+<returns>A {{jsxref("Promise")}} whose fulfillment handler is called with an object conforming to the <see cref="RTCSessionDescriptionInit"/> dictionary which contains the SDP answer to be delivered to the other peer.</returns>
 </RTCPeerConnectionCreateAnswer>
 </docs>

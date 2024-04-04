@@ -1,13 +1,13 @@
 <docs>
 <PerformanceGetEntriesByName>
 <summary>
-The <strong><c>getEntriesByName()</c></strong> method returns an array of <see cref="PerformanceEntry."/> objects currently present in the performance timeline with the given <strong>name</strong> and <strong>type</strong>.
+The <strong><c>getEntriesByName()</c></strong> method returns an array of <see cref="PerformanceEntry"/> objects currently present in the performance timeline with the given <strong>name</strong> and <strong>type</strong>.
 </summary>
 <remarks>
-<para>If you are interested in performance entries of certain types, see <see cref="Performance.GetEntriesByType."/>. For all performance entries, see <see cref="Performance.GetEntries."/>.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This method does not notify you about new performance entries; you will only get entries that are present in the performance timeline at the time you call this method.<br/>To receive notifications about entries as they become available, use a <see cref="PerformanceObserver."/>.</para></blockquote><para>The following entry types are not supported by this method at all and won&amp;apos;t be returned even if entries for these types might exist:</para><para>To access entries of these types, you must use a <see cref="PerformanceObserver."/> instead.</para>
-<para>-<see cref="Performance.GetEntries."/><br/>-<see cref="Performance.GetEntriesByType."/><br/></para>
+<para>If you are interested in performance entries of certain types, see <see cref="Performance.GetEntriesByType"/>. For all performance entries, see <see cref="Performance.GetEntries"/>.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This method does not notify you about new performance entries; you will only get entries that are present in the performance timeline at the time you call this method.<br/>To receive notifications about entries as they become available, use a <see cref="PerformanceObserver"/>.</para></blockquote><para>The following entry types are not supported by this method at all and won&amp;apos;t be returned even if entries for these types might exist:</para><para>To access entries of these types, you must use a <see cref="PerformanceObserver"/> instead.</para>
+<para>-<see cref="Performance.GetEntries"/><br/>-<see cref="Performance.GetEntriesByType"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Performance/getEntriesByName"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>An {{jsxref("Array")}} of <see cref="PerformanceEntry."/> objects that have the specified <c>name</c> and <c>type</c>.<br/>The items will be in chronological order based on the entries' <see cref="PerformanceEntry.StartTime."/>. If no objects meet the<br/>specified criteria, an empty array is returned.</returns>
+<returns>An {{jsxref("Array")}} of <see cref="PerformanceEntry"/> objects that have the specified <c>name</c> and <c>type</c>.<br/>The items will be in chronological order based on the entries' <see cref="PerformanceEntry.StartTime"/>. If no objects meet the<br/>specified criteria, an empty array is returned.</returns>
 </PerformanceGetEntriesByName>
 </docs>

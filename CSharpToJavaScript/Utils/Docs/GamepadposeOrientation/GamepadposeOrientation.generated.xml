@@ -1,7 +1,7 @@
 <docs>
 <GamepadPoseOrientation>
 <summary>
-The <strong><c>orientation</c></strong> read-only property of the <see cref="GamepadPose."/> interface returns the orientation of the <see cref="Gamepad."/>, as a quarternion value.
+The <strong><c>orientation</c></strong> read-only property of the <see cref="GamepadPose"/> interface returns the orientation of the <see cref="Gamepad"/>, as a quarternion value.
 </summary>
 <remarks>
 <para>The value is a <see cref="Float32Array"/>, made up of the following values:</para><para>The orientation yaw (rotation around the y axis) is relative to the initial yaw of the sensor when it was first read.</para>

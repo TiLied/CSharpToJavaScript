@@ -1,11 +1,11 @@
 <docs>
 <ReadableStreamBYOBReaderCancel>
 <summary>
-The <strong><c>cancel()</c></strong> method of the <see cref="ReadableStreamBYOBReader."/> interface returns a {{jsxref("Promise")}} that resolves when the stream is canceled.<br/>Calling this method signals a loss of interest in the stream by a consumer.
+The <strong><c>cancel()</c></strong> method of the <see cref="ReadableStreamBYOBReader"/> interface returns a {{jsxref("Promise")}} that resolves when the stream is canceled.<br/>Calling this method signals a loss of interest in the stream by a consumer.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> If the reader is active, the <c>cancel()</c> method behaves the same as that for the associated stream (<see cref="ReadableStream.Cancel."/>).</para></blockquote>
-<para>-<see cref="ReadableStreamBYOBReader.ReadableStreamBYOBReader."/> constructor<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams">Using readable byte stream</see><br/></para>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> If the reader is active, the <c>cancel()</c> method behaves the same as that for the associated stream (<see cref="ReadableStream.Cancel"/>).</para></blockquote>
+<para>-<see cref="ReadableStreamBYOBReader.ReadableStreamBYOBReader"/> constructor<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams">Using readable byte stream</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableStreamBYOBReader/cancel"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>A <see cref="Promise"/>, which fulfills with the value given in the <c>reason</c> parameter.</returns>

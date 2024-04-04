@@ -1,13 +1,13 @@
 <docs>
 <EventCurrentTarget>
 <summary>
-The <strong><c>currentTarget</c></strong> read-only property of the <see cref="Event."/> interface identifies the element to which the event handler has been attached.
+The <strong><c>currentTarget</c></strong> read-only property of the <see cref="Event"/> interface identifies the element to which the event handler has been attached.
 </summary>
 <remarks>
-<para>This will not always be the same as the element on which the event was fired, because the event may have fired on a descendant of the element with the handler, and then <see href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling">bubbled</see> up to the element with the handler. The element on which the event was fired is given by <see cref="Event.Target."/>.</para>
+<para>This will not always be the same as the element on which the event was fired, because the event may have fired on a descendant of the element with the handler, and then <see href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling">bubbled</see> up to the element with the handler. The element on which the event was fired is given by <see cref="Event.Target"/>.</para>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Event/Comparison_of_Event_Targets">Comparison of Event Targets</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling">Event bubbling</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Event/currentTarget"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An <see cref="EventTarget."/> representing the object to which the current event handler is attached.</value>
+<value>An <see cref="EventTarget"/> representing the object to which the current event handler is attached.</value>
 </EventCurrentTarget>
 </docs>

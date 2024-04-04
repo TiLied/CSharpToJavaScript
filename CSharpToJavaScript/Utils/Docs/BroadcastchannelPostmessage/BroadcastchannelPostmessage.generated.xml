@@ -1,10 +1,10 @@
 <docs>
 <BroadcastChannelPostMessage>
 <summary>
-The <strong><c>BroadcastChannel.postMessage()</c></strong> sends a message,<br/>which can be of any kind of <see cref="Object"/>,<br/>to each listener in any <see href="https://developer.mozilla.org/en-US/docs/Glossary/browsing context">browsing context</see> with the same <see href="https://developer.mozilla.org/en-US/docs/Glossary/origin">origin</see>.<br/>The message is transmitted as a <see href="https://developer.mozilla.org/en-US/docs/Web/API/BroadcastChannel/message_event">&amp;apos;message&amp;apos;</see> event<br/>targeted at each <see cref="BroadcastChannel."/> bound to the channel.
+The <strong><c>BroadcastChannel.postMessage()</c></strong> sends a message,<br/>which can be of any kind of <see cref="Object"/>,<br/>to each listener in any <see href="https://developer.mozilla.org/en-US/docs/Glossary/browsing context">browsing context</see> with the same <see href="https://developer.mozilla.org/en-US/docs/Glossary/origin">origin</see>.<br/>The message is transmitted as a <see href="https://developer.mozilla.org/en-US/docs/Web/API/BroadcastChannel/message_event">&amp;apos;message&amp;apos;</see> event<br/>targeted at each <see cref="BroadcastChannel"/> bound to the channel.
 </summary>
 <remarks>
-<para>-<see cref="BroadcastChannel."/>, the interface it belongs to.<br/></para>
+<para>-<see cref="BroadcastChannel"/>, the interface it belongs to.<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BroadcastChannel/postMessage"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None.</returns>

@@ -1,7 +1,7 @@
 <docs>
 <RTCOutboundRtpStreamStatsFirCount>
 <summary>
-The <strong><c>firCount</c></strong> property of the<br/><see cref="RTCOutboundRtpStreamStats."/> dictionary indicates the number of<br/><strong>Full Intra Request</strong> (<strong>FIR</strong>) that the remote<br/><see cref="RTCRtpReceiver."/> has sent to this <see cref="RTCRtpSender."/>.
+The <strong><c>firCount</c></strong> property of the<br/><see cref="RTCOutboundRtpStreamStats"/> dictionary indicates the number of<br/><strong>Full Intra Request</strong> (<strong>FIR</strong>) that the remote<br/><see cref="RTCRtpReceiver"/> has sent to this <see cref="RTCRtpSender"/>.
 </summary>
 <remarks>
 <para>A FIR packet is sent when the receiver finds that it has fallen behind and needs to skip<br/>frames in order to catch up; the sender should respond by sending a full frame instead<br/>of a delta frame.</para><para>Available only on video media.</para>

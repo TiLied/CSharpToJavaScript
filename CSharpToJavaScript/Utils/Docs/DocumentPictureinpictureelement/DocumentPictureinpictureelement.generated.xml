@@ -1,13 +1,13 @@
 <docs>
 <DocumentPictureInPictureElement>
 <summary>
-The read-only <strong><c>pictureInPictureElement</c></strong> property of the <see cref="Document."/><br/>interface returns the <see cref="Element."/> that is currently being<br/>presented in picture-in-picture mode in this document, or <c>null</c> if<br/>picture-in-picture mode is not currently in use.
+The read-only <strong><c>pictureInPictureElement</c></strong> property of the <see cref="Document"/><br/>interface returns the <see cref="Element"/> that is currently being<br/>presented in picture-in-picture mode in this document, or <c>null</c> if<br/>picture-in-picture mode is not currently in use.
 </summary>
 <remarks>
 <para>Although this property is read-only, it will not throw if it is modified (even in<br/>strict mode); the setter is a no-operation and will be ignored.</para>
-<para>-<see cref="HTMLVideoElement.RequestPictureInPicture."/><br/>-<see cref="HTMLVideoElement.DisablePictureInPicture."/><br/>-<see cref="Document.PictureInPictureEnabled."/><br/>-<see cref="Document.ExitPictureInPicture."/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:picture-in-picture">:picture-in-picture</see><br/></para>
+<para>-<see cref="HTMLVideoElement.RequestPictureInPicture"/><br/>-<see cref="HTMLVideoElement.DisablePictureInPicture"/><br/>-<see cref="Document.PictureInPictureEnabled"/><br/>-<see cref="Document.ExitPictureInPicture"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:picture-in-picture">:picture-in-picture</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/pictureInPictureElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A reference to the <see cref="Element."/> object that's currently in<br/>picture-in-picture mode; if picture-in-picture mode isn&amp;apos;t currently in use by the<br/><c>document</c>, the returned value is <c>null</c>.</value>
+<value>A reference to the <see cref="Element"/> object that's currently in<br/>picture-in-picture mode; if picture-in-picture mode isn&amp;apos;t currently in use by the<br/><c>document</c>, the returned value is <c>null</c>.</value>
 </DocumentPictureInPictureElement>
 </docs>

@@ -1,11 +1,11 @@
 <docs>
 <ElementGetAttributeNode>
 <summary>
-Returns the specified attribute of the specified element, as an <see cref="Attr."/> node.
+Returns the specified attribute of the specified element, as an <see cref="Attr"/> node.
 </summary>
 <remarks>
-<para>This method is useful if you need the attribute&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/API/Attr#instance_properties">instance properties</see>.<br/>If you only need the attribute's value, you can use the <see cref="Element.GetAttribute."/> method instead.</para>
-<para>-<see cref="Document.CreateAttribute."/><br/>-<see cref="Element.SetAttributeNode."/><br/>-<see cref="Element.RemoveAttributeNode."/><br/></para>
+<para>This method is useful if you need the attribute&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/API/Attr#instance_properties">instance properties</see>.<br/>If you only need the attribute's value, you can use the <see cref="Element.GetAttribute"/> method instead.</para>
+<para>-<see cref="Document.CreateAttribute"/><br/>-<see cref="Element.SetAttributeNode"/><br/>-<see cref="Element.RemoveAttributeNode"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttributeNode"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>An <c>Attr</c> node for the attribute.</returns>

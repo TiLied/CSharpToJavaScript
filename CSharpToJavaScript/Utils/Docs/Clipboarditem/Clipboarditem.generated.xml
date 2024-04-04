@@ -1,10 +1,10 @@
 <docs>
 <ClipboardItem>
 <summary>
-The <strong><c>ClipboardItem</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API">Clipboard API</see> represents a single item format, used when reading or writing clipboard data using <see cref="Clipboard.Read."/> and <see cref="Clipboard.Write."/> respectively.
+The <strong><c>ClipboardItem</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API">Clipboard API</see> represents a single item format, used when reading or writing clipboard data using <see cref="Clipboard.Read"/> and <see cref="Clipboard.Write"/> respectively.
 </summary>
 <remarks>
-<para>The benefit of having the <strong><c>ClipboardItem</c></strong> interface to represent data, is that it enables developers to cope with the varying scope of file types and data.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> To work with text see the <see cref="Clipboard.ReadText."/> and <see cref="Clipboard.WriteText."/> methods of the <see cref="Clipboard."/> interface.</para></blockquote>
+<para>The benefit of having the <strong><c>ClipboardItem</c></strong> interface to represent data, is that it enables developers to cope with the varying scope of file types and data.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> To work with text see the <see cref="Clipboard.ReadText"/> and <see cref="Clipboard.WriteText"/> methods of the <see cref="Clipboard"/> interface.</para></blockquote>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API">Clipboard API</see><br/>-<see href="https://web.dev/articles/async-clipboard">Image support for Async Clipboard article</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ClipboardItem"> <em>See also on MDN</em> </seealso></para>
 </remarks>

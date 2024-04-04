@@ -1,11 +1,11 @@
 <docs>
 <RTCPeerConnectionGetStats>
 <summary>
-The <strong><c>getStats()</c></strong> method of the <see cref="RTCPeerConnection."/> interface returns a promise which resolves with data providing statistics about either the overall connection or about the specified <see cref="MediaStreamTrack."/>.
+The <strong><c>getStats()</c></strong> method of the <see cref="RTCPeerConnection"/> interface returns a promise which resolves with data providing statistics about either the overall connection or about the specified <see cref="MediaStreamTrack"/>.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/getStats"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A {{jsxref("Promise")}} which resolves with an <see cref="RTCStatsReport."/> object providing connection statistics.<br/>The report&amp;apos;s contents depend on the <c>selector</c> and other details of the connection.</returns>
+<returns>A {{jsxref("Promise")}} which resolves with an <see cref="RTCStatsReport"/> object providing connection statistics.<br/>The report&amp;apos;s contents depend on the <c>selector</c> and other details of the connection.</returns>
 </RTCPeerConnectionGetStats>
 </docs>

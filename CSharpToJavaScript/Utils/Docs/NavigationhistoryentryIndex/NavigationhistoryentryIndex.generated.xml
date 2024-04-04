@@ -1,7 +1,7 @@
 <docs>
 <NavigationHistoryEntryIndex>
 <summary>
-The <strong><c>index</c></strong> read-only property of the <see cref="NavigationHistoryEntry."/> interface returns the index of the history entry in the history entries list (that is, the list returned by <see cref="Navigation.Entries."/>), or <c>-1</c> if the entry does not appear in the list or if current document is not fully active.
+The <strong><c>index</c></strong> read-only property of the <see cref="NavigationHistoryEntry"/> interface returns the index of the history entry in the history entries list (that is, the list returned by <see cref="Navigation.Entries"/>), or <c>-1</c> if the entry does not appear in the list or if current document is not fully active.
 </summary>
 <remarks>
 <para>-<see href="https://developer.chrome.com/docs/web-platform/navigation-api/">Modern client-side routing: the Navigation API</see><br/>-<see href="https://github.com/WICG/navigation-api/blob/main/README.md">Navigation API explainer</see><br/>-Domenic Denicola&amp;apos;s <see href="https://gigantic-honored-octagon.glitch.me/">Navigation API live demo</see><br/></para>

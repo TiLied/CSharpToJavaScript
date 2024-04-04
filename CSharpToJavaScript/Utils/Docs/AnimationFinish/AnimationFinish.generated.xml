@@ -1,11 +1,11 @@
 <docs>
 <AnimationFinish>
 <summary>
-The <strong><c>finish()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see>'s <see cref="Animation."/> Interface sets the current playback time to the end of the animation corresponding to the current playback direction.
+The <strong><c>finish()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see>'s <see cref="Animation"/> Interface sets the current playback time to the end of the animation corresponding to the current playback direction.
 </summary>
 <remarks>
-<para>That is, if the animation is playing forward, it sets the playback time to the length of the animation sequence, and if the animation is playing in reverse (having had its <see cref="Animation.Reverse."/> method called), it sets the playback time to 0.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/>-<see cref="Animation."/> for other methods and properties you can use to control web page animation.<br/>-<see cref="Animation.Play."/> to play an animation forward.<br/>-<see cref="Animation.Reverse."/> to play an animation backward.<br/></para>
+<para>That is, if the animation is playing forward, it sets the playback time to the length of the animation sequence, and if the animation is playing in reverse (having had its <see cref="Animation.Reverse"/> method called), it sets the playback time to 0.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/>-<see cref="Animation"/> for other methods and properties you can use to control web page animation.<br/>-<see cref="Animation.Play"/> to play an animation forward.<br/>-<see cref="Animation.Reverse"/> to play an animation backward.<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Animation/finish"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>

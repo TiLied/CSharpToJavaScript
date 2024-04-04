@@ -1,10 +1,10 @@
 <docs>
 <DocumentQueryCommandState>
 <summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>queryCommandState()</c></strong> method will tell you if the current selection has a certain <see cref="Document.ExecCommand."/> command applied.
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>queryCommandState()</c></strong> method will tell you if the current selection has a certain <see cref="Document.ExecCommand"/> command applied.
 </summary>
 <remarks>
-<para>-<see cref="HTMLElement.ContentEditable."/><br/>-<see cref="Document.DesignMode."/><br/>-Browser bugs related to <c>queryCommandState()</c>: <see href="https://github.com/guardian/scribe/blob/master/BROWSERINCONSISTENCIES.md#documentquerycommandstate">Scribe&amp;apos;s &amp;quot;Browser Inconsistencies&amp;quot; documentation</see><br/></para>
+<para>-<see cref="HTMLElement.ContentEditable"/><br/>-<see cref="Document.DesignMode"/><br/>-Browser bugs related to <c>queryCommandState()</c>: <see href="https://github.com/guardian/scribe/blob/master/BROWSERINCONSISTENCIES.md#documentquerycommandstate">Scribe&amp;apos;s &amp;quot;Browser Inconsistencies&amp;quot; documentation</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/queryCommandState"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns><c>queryCommandState()</c> can return a boolean value or <c>null</c> if the state is unknown.</returns>

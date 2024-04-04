@@ -4,8 +4,8 @@
 The <strong><c>WebGLRenderingContext.clear()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> clears buffers to preset values.
 </summary>
 <remarks>
-<para>The preset values can be set by <see cref="WebGLRenderingContext.ClearColor."/>, <see cref="WebGLRenderingContext.ClearDepth."/> or <see cref="WebGLRenderingContext.ClearStencil."/>.</para><para>The scissor box, dithering, and buffer writemasks can affect the <c>clear()</c><br/>method.</para>
-<para>-<see cref="WebGLRenderingContext.ClearColor."/><br/>-<see cref="WebGLRenderingContext.ClearDepth."/><br/>-<see cref="WebGLRenderingContext.ClearStencil."/><br/></para>
+<para>The preset values can be set by <see cref="WebGLRenderingContext.ClearColor"/>, <see cref="WebGLRenderingContext.ClearDepth"/> or <see cref="WebGLRenderingContext.ClearStencil"/>.</para><para>The scissor box, dithering, and buffer writemasks can affect the <c>clear()</c><br/>method.</para>
+<para>-<see cref="WebGLRenderingContext.ClearColor"/><br/>-<see cref="WebGLRenderingContext.ClearDepth"/><br/>-<see cref="WebGLRenderingContext.ClearStencil"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/clear"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>

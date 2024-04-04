@@ -1,10 +1,10 @@
 <docs>
 <GPUComputePipelineLabel>
 <summary>
-The <strong><c>label</c></strong> property of the<br/><see cref="GPUComputePipeline."/> interface provides a label that can be used to identify the object, for example in <see cref="GPUError."/> messages or console warnings.
+The <strong><c>label</c></strong> property of the<br/><see cref="GPUComputePipeline"/> interface provides a label that can be used to identify the object, for example in <see cref="GPUError"/> messages or console warnings.
 </summary>
 <remarks>
-<para>This can be set by providing a <c>label</c> property in the descriptor object passed into the originating <see cref="GPUDevice.CreateComputePipeline."/> or <see cref="GPUDevice.CreateComputePipelineAsync."/> call, or you can get and set it directly on the <c>GPUComputePipeline</c> object.</para>
+<para>This can be set by providing a <c>label</c> property in the descriptor object passed into the originating <see cref="GPUDevice.CreateComputePipeline"/> or <see cref="GPUDevice.CreateComputePipelineAsync"/> call, or you can get and set it directly on the <c>GPUComputePipeline</c> object.</para>
 <para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUComputePipeline/label"> <em>See also on MDN</em> </seealso></para>
 </remarks>

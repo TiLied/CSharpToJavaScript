@@ -1,12 +1,12 @@
 <docs>
 <HTMLFencedFrameElementConfig>
 <summary>
-The <strong><c>config</c></strong> property of the <see cref="HTMLFencedFrameElement."/> contains a <see cref="FencedFrameConfig."/> object, which represents the navigation of a {{htmlelement("fencedframe")}}, i.e. what content will be displayed in it. A <c>FencedFrameConfig</c> is returned from a source such as the <see href="https://developer.chrome.com/docs/privacy-sandbox/fledge/">Protected Audience API</see>.
+The <strong><c>config</c></strong> property of the <see cref="HTMLFencedFrameElement"/> contains a <see cref="FencedFrameConfig"/> object, which represents the navigation of a {{htmlelement("fencedframe")}}, i.e. what content will be displayed in it. A <c>FencedFrameConfig</c> is returned from a source such as the <see href="https://developer.chrome.com/docs/privacy-sandbox/fledge/">Protected Audience API</see>.
 </summary>
 <remarks>
 <para>-<see href="https://developer.chrome.com/docs/privacy-sandbox/fenced-frame/">Fenced frames</see> on developer.chrome.com<br/>-<see href="https://developer.chrome.com/docs/privacy-sandbox/">The Privacy Sandbox</see> on developer.chrome.com<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFencedFrameElement/config"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>The value of <c>config</c> is initially <c>null</c>.When its value is set to a <see cref="FencedFrameConfig."/> object instance, the <c>FencedFrameConfig</c>&amp;apos;s internal properties (for example <c>mappedURL</c>) determine what is loaded inside the associated <c>&amp;lt;fencedframe&amp;gt;</c>. In addition:</value>
+<value>The value of <c>config</c> is initially <c>null</c>.When its value is set to a <see cref="FencedFrameConfig"/> object instance, the <c>FencedFrameConfig</c>&amp;apos;s internal properties (for example <c>mappedURL</c>) determine what is loaded inside the associated <c>&amp;lt;fencedframe&amp;gt;</c>. In addition:</value>
 </HTMLFencedFrameElementConfig>
 </docs>

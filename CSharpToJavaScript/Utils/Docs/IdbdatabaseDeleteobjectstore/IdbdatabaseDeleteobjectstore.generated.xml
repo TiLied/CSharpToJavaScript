@@ -1,11 +1,11 @@
 <docs>
 <IDBDatabaseDeleteObjectStore>
 <summary>
-The <strong><c>deleteObjectStore()</c></strong> method of the<br/><see cref="IDBDatabase."/> interface destroys the object store with the given name in<br/>the connected database, along with any indexes that reference it.
+The <strong><c>deleteObjectStore()</c></strong> method of the<br/><see cref="IDBDatabase"/> interface destroys the object store with the given name in<br/>the connected database, along with any indexes that reference it.
 </summary>
 <remarks>
-<para>As with <see cref="IDBDatabase.CreateObjectStore."/>, this method can be called<br/><strong>only</strong> within a <see href="https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction#version_change"><c>versionchange</c></see><br/>transaction.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase."/><br/>-Using transactions: <see cref="IDBTransaction."/><br/>-Setting a range of keys: <see cref="IDBKeyRange."/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore."/><br/>-Using cursors: <see cref="IDBCursor."/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
+<para>As with <see cref="IDBDatabase.CreateObjectStore"/>, this method can be called<br/><strong>only</strong> within a <see href="https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction#version_change"><c>versionchange</c></see><br/>transaction.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase"/><br/>-Using transactions: <see cref="IDBTransaction"/><br/>-Setting a range of keys: <see cref="IDBKeyRange"/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore"/><br/>-Using cursors: <see cref="IDBCursor"/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/deleteObjectStore"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>

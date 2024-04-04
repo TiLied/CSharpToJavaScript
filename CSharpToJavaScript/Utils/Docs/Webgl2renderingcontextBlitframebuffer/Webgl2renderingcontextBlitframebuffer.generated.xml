@@ -1,10 +1,10 @@
 <docs>
 <WebGL2RenderingContextBlitFramebuffer>
 <summary>
-The <strong><c>WebGL2RenderingContext.blitFramebuffer()</c></strong> method of<br/>the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> transfers a block of pixels<br/>from the read framebuffer to the draw framebuffer. Read and draw framebuffers are bound<br/>using <see cref="WebGLRenderingContext.BindFramebuffer."/>.
+The <strong><c>WebGL2RenderingContext.blitFramebuffer()</c></strong> method of<br/>the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> transfers a block of pixels<br/>from the read framebuffer to the draw framebuffer. Read and draw framebuffers are bound<br/>using <see cref="WebGLRenderingContext.BindFramebuffer"/>.
 </summary>
 <remarks>
-<para>-<see cref="WebGLRenderingContext.BindFramebuffer."/><br/>-<see cref="WebGLRenderingContext.GetRenderbufferParameter."/><br/></para>
+<para>-<see cref="WebGLRenderingContext.BindFramebuffer"/><br/>-<see cref="WebGLRenderingContext.GetRenderbufferParameter"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/blitFramebuffer"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>

@@ -1,11 +1,11 @@
 <docs>
 <RTCSctpTransport>
 <summary>
-The <strong><c>RTCSctpTransport</c></strong> interface provides information which describes a Stream Control Transmission Protocol (<strong><see href="https://developer.mozilla.org/en-US/docs/Glossary/SCTP">SCTP</see></strong>) transport. This provides information about limitations of the transport, but also provides a way to access the underlying Datagram Transport Layer Security (<strong><see href="https://developer.mozilla.org/en-US/docs/Glossary/DTLS">DTLS</see></strong>) transport over which SCTP packets for all of an <see cref="RTCPeerConnection."/>'s data channels are sent and received.
+The <strong><c>RTCSctpTransport</c></strong> interface provides information which describes a Stream Control Transmission Protocol (<strong><see href="https://developer.mozilla.org/en-US/docs/Glossary/SCTP">SCTP</see></strong>) transport. This provides information about limitations of the transport, but also provides a way to access the underlying Datagram Transport Layer Security (<strong><see href="https://developer.mozilla.org/en-US/docs/Glossary/DTLS">DTLS</see></strong>) transport over which SCTP packets for all of an <see cref="RTCPeerConnection"/>'s data channels are sent and received.
 </summary>
 <remarks>
-<para>You don't create <see cref="RTCSctpTransport."/> objects yourself; instead, you get access to the <c>RTCSctpTransport</c> for a given <c>RTCPeerConnection</c> through its <strong><see cref="RTCPeerConnection.Sctp."/></strong> property.</para><para>Possibly the most useful property on this interface is its <see href="https://developer.mozilla.org#rtcsctptransport.maxmessagesize"><c>maxMessageSize</c></see> property, which you can use to determine the upper limit on the size of messages you can send over a data channel on the peer connection.</para><para></para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/>-<see cref="RTCPeerConnection."/><br/>-<see cref="RTCPeerConnection.Sctp."/><br/></para>
+<para>You don't create <see cref="RTCSctpTransport"/> objects yourself; instead, you get access to the <c>RTCSctpTransport</c> for a given <c>RTCPeerConnection</c> through its <strong><see cref="RTCPeerConnection.Sctp"/></strong> property.</para><para>Possibly the most useful property on this interface is its <see href="https://developer.mozilla.org#rtcsctptransport.maxmessagesize"><c>maxMessageSize</c></see> property, which you can use to determine the upper limit on the size of messages you can send over a data channel on the peer connection.</para><para></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/>-<see cref="RTCPeerConnection"/><br/>-<see cref="RTCPeerConnection.Sctp"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCSctpTransport"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </RTCSctpTransport>

@@ -1,10 +1,10 @@
 <docs>
 <PerformanceObserverObserve>
 <summary>
-The <strong><c>observe()</c></strong> method of the <strong><see cref="PerformanceObserver."/></strong> interface is used to specify the set of performance entry types to observe.
+The <strong><c>observe()</c></strong> method of the <strong><see cref="PerformanceObserver"/></strong> interface is used to specify the set of performance entry types to observe.
 </summary>
 <remarks>
-<para>See <see cref="PerformanceEntry.EntryType."/> for a list of entry types and <see cref="PerformanceObserver.SupportedEntryTypes_static."/> for a list of entry types the user agent supports.</para><para>When a matching performance entry is recorded, the performance observer's callback function—set when creating the <see cref="PerformanceObserver."/>—is invoked.</para>
+<para>See <see cref="PerformanceEntry.EntryType"/> for a list of entry types and <see cref="PerformanceObserver.SupportedEntryTypes_static"/> for a list of entry types the user agent supports.</para><para>When a matching performance entry is recorded, the performance observer's callback function—set when creating the <see cref="PerformanceObserver"/>—is invoked.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceObserver/observe"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>

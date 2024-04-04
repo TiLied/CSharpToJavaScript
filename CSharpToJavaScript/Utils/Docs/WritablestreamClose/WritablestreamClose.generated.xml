@@ -1,10 +1,10 @@
 <docs>
 <WritableStreamClose>
 <summary>
-The <strong><c>close()</c></strong> method of the <see cref="WritableStream."/> interface closes the associated stream. All chunks written before this method is called are sent before the returned promise is fulfilled.
+The <strong><c>close()</c></strong> method of the <see cref="WritableStream"/> interface closes the associated stream. All chunks written before this method is called are sent before the returned promise is fulfilled.
 </summary>
 <remarks>
-<para>This is equivalent to getting a <see cref="WritableStreamDefaultWriter."/> with <see cref="WritableStream.GetWriter."/>, calling <see cref="WritableStreamDefaultWriter.Close."/> on it.</para>
+<para>This is equivalent to getting a <see cref="WritableStreamDefaultWriter"/> with <see cref="WritableStream.GetWriter"/>, calling <see cref="WritableStreamDefaultWriter.Close"/> on it.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WritableStream/close"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>A <see cref="Promise"/> which fulfills with the <c>undefined</c> when all<br/>remaining chunks were successfully written before the close, or rejects with an error if<br/>a problem was encountered during the process.</returns>

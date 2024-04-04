@@ -1,10 +1,10 @@
 <docs>
 <XRViewRequestViewportScale>
 <summary>
-The <strong><c>requestViewportScale()</c></strong> method of the <see cref="XRView."/> interface requests that the user agent sets the requested viewport scale for this viewport to the given value. This is used for dynamic viewport scaling which allows rendering to a subset of the WebXR viewport using a scale factor that can be changed every animation frame.
+The <strong><c>requestViewportScale()</c></strong> method of the <see cref="XRView"/> interface requests that the user agent sets the requested viewport scale for this viewport to the given value. This is used for dynamic viewport scaling which allows rendering to a subset of the WebXR viewport using a scale factor that can be changed every animation frame.
 </summary>
 <remarks>
-<para>-<see cref="XRView.RecommendedViewportScale."/><br/></para>
+<para>-<see cref="XRView.RecommendedViewportScale"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRView/requestViewportScale"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>

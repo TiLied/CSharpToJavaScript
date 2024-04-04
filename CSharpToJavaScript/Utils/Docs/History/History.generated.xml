@@ -4,8 +4,8 @@
 The <strong><c>History</c></strong> interface of the {{domxref(&amp;quot;History API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} allows manipulation of the browser <strong>session history</strong>, that is the pages visited in the tab or frame that the current page is loaded in.
 </summary>
 <remarks>
-<para>There is only one instance of <c>history</c> (It is a <strong>singleton</strong>.) accessible via the global object <see cref="Window.History."/>.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This interface is only available on the main thread (<see cref="Window."/>). It cannot be accessed in <see cref="Worker."/> or <see cref="Worklet."/> contexts.</para></blockquote>
-<para>-<see cref="Window.History."/> global object<br/></para>
+<para>There is only one instance of <c>history</c> (It is a <strong>singleton</strong>.) accessible via the global object <see cref="Window.History"/>.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This interface is only available on the main thread (<see cref="Window"/>). It cannot be accessed in <see cref="Worker"/> or <see cref="Worklet"/> contexts.</para></blockquote>
+<para>-<see cref="Window.History"/> global object<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/History"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </History>

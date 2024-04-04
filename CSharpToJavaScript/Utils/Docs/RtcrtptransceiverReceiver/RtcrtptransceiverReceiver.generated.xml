@@ -1,12 +1,12 @@
 <docs>
 <RTCRtpTransceiverReceiver>
 <summary>
-The read-only <strong><c>receiver</c></strong> property<br/>of WebRTC's <see cref="RTCRtpTransceiver."/> interface indicates the<br/><see cref="RTCRtpReceiver."/> responsible for receiving and decoding incoming media<br/>data for the transceiver&amp;apos;s stream.
+The read-only <strong><c>receiver</c></strong> property<br/>of WebRTC's <see cref="RTCRtpTransceiver"/> interface indicates the<br/><see cref="RTCRtpReceiver"/> responsible for receiving and decoding incoming media<br/>data for the transceiver&amp;apos;s stream.
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP">Introduction to the Real-time Transport Protocol (RTP)</see><br/>-<see cref="RTCRtpReceiver."/><br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP">Introduction to the Real-time Transport Protocol (RTP)</see><br/>-<see cref="RTCRtpReceiver"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiver/receiver"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An <see cref="RTCRtpReceiver."/> object which is responsible for receiving and decoding<br/>incoming media data whose media ID is the same as the current value of<br/><see cref="RTCRtpTransceiver.Mid."/>.</value>
+<value>An <see cref="RTCRtpReceiver"/> object which is responsible for receiving and decoding<br/>incoming media data whose media ID is the same as the current value of<br/><see cref="RTCRtpTransceiver.Mid"/>.</value>
 </RTCRtpTransceiverReceiver>
 </docs>

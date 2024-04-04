@@ -1,7 +1,7 @@
 <docs>
 <AudioParamSetValueCurveAtTime>
 <summary>
-The<br/><strong><c>setValueCurveAtTime()</c></strong> method of the<br/><see cref="AudioParam."/> interface schedules the parameter's value to change<br/>following a curve defined by a list of values.
+The<br/><strong><c>setValueCurveAtTime()</c></strong> method of the<br/><see cref="AudioParam"/> interface schedules the parameter's value to change<br/>following a curve defined by a list of values.
 </summary>
 <remarks>
 <para>The curve is a linear<br/>interpolation between the sequence of values defined in an array of floating-point<br/>values, which are scaled to fit into the given interval starting at<br/><c>startTime</c> and a specific duration.</para>

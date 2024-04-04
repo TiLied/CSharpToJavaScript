@@ -1,11 +1,11 @@
 <docs>
 <RTCRtpScriptTransformRTCRtpScriptTransform>
 <summary>
-The <strong><c>RTCRtpScriptTransform()</c></strong> constructor creates a new <see cref="RTCRtpScriptTransform."/> object.
+The <strong><c>RTCRtpScriptTransform()</c></strong> constructor creates a new <see cref="RTCRtpScriptTransform"/> object.
 </summary>
 <remarks>
-<para>Constructing the <c>RTCRtpScriptTransform</c> creates a counterpart <see cref="RTCRtpScriptTransformer."/> in the specified worker, along with passed options (if any). Objects in the third parameter to the constructor are transferred.</para><para>The <see cref="DedicatedWorkerGlobalScope.Rtctransform_event."/> event is then fired at the worker global object.<br/>Worker code can use the <c>event.transformer</c> property to get the counterpart <see cref="RTCRtpScriptTransformer."/>, and <c>event.transformer.options</c> is used to get the options.</para><para>Note that the options are primarily used to inform the worker whether the transformer is processing incoming or outgoing frames, so that it can apply an appropriate transform.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms">Using WebRTC Encoded Transforms</see><br/>-<see cref="RTCRtpSender.Transform."/><br/>-<see cref="RTCRtpReceiver.Transform."/><br/></para>
+<para>Constructing the <c>RTCRtpScriptTransform</c> creates a counterpart <see cref="RTCRtpScriptTransformer"/> in the specified worker, along with passed options (if any). Objects in the third parameter to the constructor are transferred.</para><para>The <see cref="DedicatedWorkerGlobalScope.Rtctransform_event"/> event is then fired at the worker global object.<br/>Worker code can use the <c>event.transformer</c> property to get the counterpart <see cref="RTCRtpScriptTransformer"/>, and <c>event.transformer.options</c> is used to get the options.</para><para>Note that the options are primarily used to inform the worker whether the transformer is processing incoming or outgoing frames, so that it can apply an appropriate transform.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms">Using WebRTC Encoded Transforms</see><br/>-<see cref="RTCRtpSender.Transform"/><br/>-<see cref="RTCRtpReceiver.Transform"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpScriptTransform/RTCRtpScriptTransform"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </RTCRtpScriptTransformRTCRtpScriptTransform>

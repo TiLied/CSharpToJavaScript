@@ -1,7 +1,7 @@
 <docs>
 <StyleSheetList>
 <summary>
-The <c>StyleSheetList</c> interface represents a list of <see cref="CSSStyleSheet."/> objects. An instance of this object can be returned by <see cref="Document.StyleSheets."/>.
+The <c>StyleSheetList</c> interface represents a list of <see cref="CSSStyleSheet"/> objects. An instance of this object can be returned by <see cref="Document.StyleSheets"/>.
 </summary>
 <remarks>
 <para>It is an array-like object but can't be iterated over using <see cref="Array"/> methods. However it can be iterated over in a standard <see cref="Statements/for"/> loop over its indices, or converted to an <see cref="Array"/>.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Typically list interfaces like <c>StyleSheetList</c> wrap around <see cref="Array"/> types, so you can use <c>Array</c> methods on them.<br/>This is not the case here for <see href="https://stackoverflow.com/questions/74630989/why-use-domstringlist-rather-than-an-array/74641156#74641156">historical reasons</see>.<br/>However, you can convert <c>StyleSheetList</c> to an <c>Array</c> in order to use those methods (see the example below).</para></blockquote>

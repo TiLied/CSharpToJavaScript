@@ -1,11 +1,11 @@
 <docs>
 <PerformanceTimingDomContentLoadedEventStart>
 <summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="WARNING"><h5>WARNING</h5><strong>Warning:</strong> This interface of this property is deprecated in the <see href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</see>. Please use the <see cref="PerformanceNavigationTiming."/><br/>interface instead.</blockquote>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="WARNING"><h5>WARNING</h5><strong>Warning:</strong> This interface of this property is deprecated in the <see href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</see>. Please use the <see cref="PerformanceNavigationTiming"/><br/>interface instead.</blockquote>
 </summary>
 <remarks>
-<para>The legacy<br/><strong><c>PerformanceTiming.domContentLoadedEventStart</c></strong><br/>read-only property returns an <c>unsigned long long</c> representing the moment,<br/>in milliseconds since the UNIX epoch, right before the parser sent the<br/><see cref="Document/DOMContentLoaded_event."/> event, that is right after all the scripts that need to be<br/>executed right after parsing has been executed.</para>
-<para>-The <see cref="PerformanceTiming."/> interface it belongs to.<br/></para>
+<para>The legacy<br/><strong><c>PerformanceTiming.domContentLoadedEventStart</c></strong><br/>read-only property returns an <c>unsigned long long</c> representing the moment,<br/>in milliseconds since the UNIX epoch, right before the parser sent the<br/><see cref="Document/DOMContentLoaded_event"/> event, that is right after all the scripts that need to be<br/>executed right after parsing has been executed.</para>
+<para>-The <see cref="PerformanceTiming"/> interface it belongs to.<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming/domContentLoadedEventStart"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>An <c>unsigned long long</c>.</value>

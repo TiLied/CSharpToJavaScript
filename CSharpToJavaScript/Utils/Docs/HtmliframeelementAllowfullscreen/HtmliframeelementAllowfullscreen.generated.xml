@@ -1,11 +1,11 @@
 <docs>
 <HTMLIFrameElementAllowFullscreen>
 <summary>
-The <strong><c>allowFullscreen</c></strong> property of the <see cref="HTMLIFrameElement."/> interface is a boolean value that reflects the <c>allowfullscreen</c> attribute of the {{HTMLElement("iframe")}} element, indicating whether to allow the iframe's contents to use <see cref="Element.RequestFullscreen."/>.
+The <strong><c>allowFullscreen</c></strong> property of the <see cref="HTMLIFrameElement"/> interface is a boolean value that reflects the <c>allowfullscreen</c> attribute of the {{HTMLElement("iframe")}} element, indicating whether to allow the iframe's contents to use <see cref="Element.RequestFullscreen"/>.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This property is considered a legacy property. Use <c>allow=&amp;quot;fullscreen&amp;quot;</c> and <see cref="HTMLIFrameElement.Allow."/> instead.</para></blockquote>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API">Fullscreen API</see><br/>-<see cref="Element.RequestFullscreen."/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Permissions_Policy">Permissions Policy</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy/fullscreen">Permissions-Policy/fullscreen</see> Permissions Policy directive<br/></para>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This property is considered a legacy property. Use <c>allow=&amp;quot;fullscreen&amp;quot;</c> and <see cref="HTMLIFrameElement.Allow"/> instead.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API">Fullscreen API</see><br/>-<see cref="Element.RequestFullscreen"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Permissions_Policy">Permissions Policy</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy/fullscreen">Permissions-Policy/fullscreen</see> Permissions Policy directive<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/allowFullscreen"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A boolean value.</value>

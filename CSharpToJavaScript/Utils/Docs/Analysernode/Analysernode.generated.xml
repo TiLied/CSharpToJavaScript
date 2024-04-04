@@ -1,7 +1,7 @@
 <docs>
 <AnalyserNode>
 <summary>
-The <strong><c>AnalyserNode</c></strong> interface represents a node able to provide real-time frequency and time-domain analysis information. It is an <see cref="AudioNode."/> that passes the audio stream unchanged from the input to the output, but allows you to take the generated data, process it, and create audio visualizations.
+The <strong><c>AnalyserNode</c></strong> interface represents a node able to provide real-time frequency and time-domain analysis information. It is an <see cref="AudioNode"/> that passes the audio stream unchanged from the input to the output, but allows you to take the generated data, process it, and create audio visualizations.
 </summary>
 <remarks>
 <para>An <c>AnalyserNode</c> has exactly one input and one output. The node works even if the output is not connected.</para><para><see href="https://developer.mozilla.orgfttaudiodata_en.svg">Without modifying the audio stream, the node allows to get the frequency and time-domain data associated to it, using a FFT.</see></para><para></para>

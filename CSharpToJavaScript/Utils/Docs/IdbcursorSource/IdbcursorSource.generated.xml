@@ -1,12 +1,12 @@
 <docs>
 <IDBCursorSource>
 <summary>
-The <strong><c>source</c></strong> read-only property of the<br/><see cref="IDBCursor."/> interface returns the <see cref="IDBObjectStore."/> or<br/><see cref="IDBIndex."/> that the cursor is iterating over. This function never returns<br/>null or throws an exception, even if the cursor is currently being iterated, has<br/>iterated past its end, or its transaction is not active.
+The <strong><c>source</c></strong> read-only property of the<br/><see cref="IDBCursor"/> interface returns the <see cref="IDBObjectStore"/> or<br/><see cref="IDBIndex"/> that the cursor is iterating over. This function never returns<br/>null or throws an exception, even if the cursor is currently being iterated, has<br/>iterated past its end, or its transaction is not active.
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase."/><br/>-Using transactions: <see cref="IDBTransaction."/><br/>-Setting a range of keys: <see cref="IDBKeyRange."/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore."/><br/>-Using cursors: <see cref="IDBCursor."/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase"/><br/>-Using transactions: <see cref="IDBTransaction"/><br/>-Setting a range of keys: <see cref="IDBKeyRange"/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore"/><br/>-Using cursors: <see cref="IDBCursor"/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBCursor/source"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>The <see cref="IDBObjectStore."/> or <see cref="IDBIndex."/> that the cursor is<br/>iterating over.</value>
+<value>The <see cref="IDBObjectStore"/> or <see cref="IDBIndex"/> that the cursor is<br/>iterating over.</value>
 </IDBCursorSource>
 </docs>

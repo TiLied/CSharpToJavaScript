@@ -1,13 +1,13 @@
 <docs>
 <HTMLMediaElementVideoTracks>
 <summary>
-The read-only <strong><c>videoTracks</c></strong><br/>property on <see cref="HTMLMediaElement."/> objects returns a<br/><see cref="VideoTrackList."/> object listing all of the <see cref="VideoTrack."/><br/>objects representing the media element&amp;apos;s video tracks.
+The read-only <strong><c>videoTracks</c></strong><br/>property on <see cref="HTMLMediaElement"/> objects returns a<br/><see cref="VideoTrackList"/> object listing all of the <see cref="VideoTrack"/><br/>objects representing the media element&amp;apos;s video tracks.
 </summary>
 <remarks>
 <para>The returned list is <strong>live</strong>; that is, as tracks are added to and removed from<br/>the media element, the list&amp;apos;s contents change dynamically. Once you have a reference to<br/>the list, you can monitor it for changes to detect when new video tracks are added or<br/>existing ones removed. See <see href="https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackList#events">VideoTrackList events</see><br/>to learn more about watching for changes to a media element&amp;apos;s track list.</para>
-<para>-<see cref="HTMLMediaElement."/>: Interface used to define the <c>HTMLMediaElement.videoTracks</c> property<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">video</see><br/>-<see cref="VideoTrack."/>, <see cref="VideoTrackList."/><br/></para>
+<para>-<see cref="HTMLMediaElement"/>: Interface used to define the <c>HTMLMediaElement.videoTracks</c> property<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">video</see><br/>-<see cref="VideoTrack"/>, <see cref="VideoTrackList"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/videoTracks"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="VideoTrackList."/> object representing the list of video tracks included<br/>in the media element. The list of tracks can be accessed using array notation, or using<br/>the object's <see cref="VideoTrackList.GetTrackById."/> method.Each track is represented by a <see cref="VideoTrack."/> object which provides<br/>information about the track.</value>
+<value>A <see cref="VideoTrackList"/> object representing the list of video tracks included<br/>in the media element. The list of tracks can be accessed using array notation, or using<br/>the object's <see cref="VideoTrackList.GetTrackById"/> method.Each track is represented by a <see cref="VideoTrack"/> object which provides<br/>information about the track.</value>
 </HTMLMediaElementVideoTracks>
 </docs>

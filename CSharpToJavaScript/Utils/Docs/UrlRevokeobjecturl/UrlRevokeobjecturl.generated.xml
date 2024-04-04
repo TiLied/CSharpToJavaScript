@@ -1,11 +1,11 @@
 <docs>
 <URLRevokeObjectURL>
 <summary>
-The <strong><c>URL.revokeObjectURL()</c></strong> static<br/>method releases an existing object URL which was previously created by calling<br/><see cref="URL.CreateObjectURL_static."/>.
+The <strong><c>URL.revokeObjectURL()</c></strong> static<br/>method releases an existing object URL which was previously created by calling<br/><see cref="URL.CreateObjectURL_static"/>.
 </summary>
 <remarks>
-<para>Call this method when you&amp;apos;ve finished<br/>using an object URL to let the browser know not to keep the reference to the file any<br/>longer.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This method is <strong>not</strong> available in <see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">Service Workers</see>, due to<br/>issues with the <see cref="Blob."/> interface's life cycle and the potential for leaks.</para></blockquote>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_API/Using_files_from_web_applications">Using files from web applications</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_API/Using_files_from_web_applications#example_using_object_urls_to_display_images">Using object URLs to display images</see><br/>-<see cref="URL.CreateObjectURL_static."/><br/></para>
+<para>Call this method when you&amp;apos;ve finished<br/>using an object URL to let the browser know not to keep the reference to the file any<br/>longer.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This method is <strong>not</strong> available in <see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">Service Workers</see>, due to<br/>issues with the <see cref="Blob"/> interface's life cycle and the potential for leaks.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_API/Using_files_from_web_applications">Using files from web applications</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_API/Using_files_from_web_applications#example_using_object_urls_to_display_images">Using object URLs to display images</see><br/>-<see cref="URL.CreateObjectURL_static"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URL/revokeObjectURL"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>

@@ -1,12 +1,12 @@
 <docs>
 <WindowControlsOverlayGetTitlebarAreaRect>
 <summary>
-The <strong><c>getTitlebarAreaRect()</c></strong> method of the <see cref="'WindowControlsOverlay'."/> interface queries the current geometry of the title bar area of the Progressive Web App window.
+The <strong><c>getTitlebarAreaRect()</c></strong> method of the <see cref="'WindowControlsOverlay'"/> interface queries the current geometry of the title bar area of the Progressive Web App window.
 </summary>
 <remarks>
 <para>This only applies to Progressive Web Apps installed on desktop operating systems and which use the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Window_Controls_Overlay_API">Window Controls Overlay API</see>.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WindowControlsOverlay/getTitlebarAreaRect"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A <see cref="DOMRect."/> that provides the coordinates and size of the title bar area within the app's content.</returns>
+<returns>A <see cref="DOMRect"/> that provides the coordinates and size of the title bar area within the app's content.</returns>
 </WindowControlsOverlayGetTitlebarAreaRect>
 </docs>

@@ -1,10 +1,10 @@
 <docs>
 <RangeCollapsed>
 <summary>
-The <strong><c>Range.collapsed</c></strong> read-only property returns a<br/>boolean flag indicating whether the start and end points of the<br/><see cref="Range."/> are at the same position. It returns <c>true</c> if the start<br/>and end boundary points of the <see cref="Range."/> are the same point in the DOM,<br/><c>false</c> if not.
+The <strong><c>Range.collapsed</c></strong> read-only property returns a<br/>boolean flag indicating whether the start and end points of the<br/><see cref="Range"/> are at the same position. It returns <c>true</c> if the start<br/>and end boundary points of the <see cref="Range"/> are the same point in the DOM,<br/><c>false</c> if not.
 </summary>
 <remarks>
-<para>A collapsed <see cref="Range."/> is empty (containing no content), and specifies a<br/>single point in a DOM tree. To collapse a range, see the <see cref="Range.Collapse."/><br/>method.</para>
+<para>A collapsed <see cref="Range"/> is empty (containing no content), and specifies a<br/>single point in a DOM tree. To collapse a range, see the <see cref="Range.Collapse"/><br/>method.</para>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Range/collapsed"> <em>See also on MDN</em> </seealso></para>
 </remarks>

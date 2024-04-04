@@ -1,13 +1,13 @@
 <docs>
 <ConstantSourceNodeOffset>
 <summary>
-The read-only <c>offset</c> property of the <see cref="ConstantSourceNode."/><br/>interface returns a <see cref="AudioParam."/> object indicating the numeric <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam#a-rate">a-rate</see> value which is always returned<br/>by the source when asked for the next sample.
+The read-only <c>offset</c> property of the <see cref="ConstantSourceNode"/><br/>interface returns a <see cref="AudioParam"/> object indicating the numeric <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam#a-rate">a-rate</see> value which is always returned<br/>by the source when asked for the next sample.
 </summary>
 <remarks>
 <blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> While the <c>AudioParam</c> named <c>offset</c> is read-only, the<br/><c>value</c> property within is not. So you can change the value of<br/><c>offset</c> by setting the value of<br/><c>ConstantSourceNode.offset.value</c>:</para></blockquote>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/>-<see cref="ConstantSourceNode."/><br/>-<see cref="AudioNode."/><br/>-<see cref="AudioParam."/><br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/>-<see cref="ConstantSourceNode"/><br/>-<see cref="AudioNode"/><br/>-<see cref="AudioParam"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ConstantSourceNode/offset"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An <see cref="AudioParam."/> object indicating the <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam#a-rate">a-rate</see> value returned for every<br/>sample by this node. The default value is 1.0.To access the <c>offset</c> parameter&amp;apos;s current value, access the parameter&amp;apos;s<br/><c>value</c> property, as shown in the syntax box above.</value>
+<value>An <see cref="AudioParam"/> object indicating the <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam#a-rate">a-rate</see> value returned for every<br/>sample by this node. The default value is 1.0.To access the <c>offset</c> parameter&amp;apos;s current value, access the parameter&amp;apos;s<br/><c>value</c> property, as shown in the syntax box above.</value>
 </ConstantSourceNodeOffset>
 </docs>

@@ -1,7 +1,7 @@
 <docs>
 <WebTransportReceiveStreamGetStats>
 <summary>
-The <strong><c>getStats()</c></strong> method of the <see cref="WebTransportReceiveStream."/> interface asynchronously returns an object containing statistics for the current stream.
+The <strong><c>getStats()</c></strong> method of the <see cref="WebTransportReceiveStream"/> interface asynchronously returns an object containing statistics for the current stream.
 </summary>
 <remarks>
 <para>The statistics include the total number of ordered bytes that have arrived on this stream (ignoring network overhead, up until the first missing byte) and the total number that have been read by the application.<br/>It therefore provides a measure of how quickly the application is consuming bytes from the server on this particular stream.</para>

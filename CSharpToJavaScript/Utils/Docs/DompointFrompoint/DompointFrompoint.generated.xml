@@ -1,12 +1,12 @@
 <docs>
 <DOMPointFromPoint>
 <summary>
-The <strong><see cref="DOMPoint."/></strong> static method<br/><c>fromPoint()</c> creates and returns a new mutable <c>DOMPoint</c><br/>object given a source point.
+The <strong><see cref="DOMPoint"/></strong> static method<br/><c>fromPoint()</c> creates and returns a new mutable <c>DOMPoint</c><br/>object given a source point.
 </summary>
 <remarks>
-<para>You can also create a new <c>DOMPoint</c> object using the<br/><see cref="DOMPoint.DOMPoint."/> constructor.</para><para>Although this interface is based on <c>DOMPointReadOnly</c>, it is not read-only;<br/>the properties within may be changed at will.</para>
+<para>You can also create a new <c>DOMPoint</c> object using the<br/><see cref="DOMPoint.DOMPoint"/> constructor.</para><para>Although this interface is based on <c>DOMPointReadOnly</c>, it is not read-only;<br/>the properties within may be changed at will.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMPoint/fromPoint"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A new <see cref="DOMPoint."/> object whose coordinate and perspective values are<br/>identical to those in the source point. The point&amp;apos;s properties are mutable and may be<br/>changed at any time.</returns>
+<returns>A new <see cref="DOMPoint"/> object whose coordinate and perspective values are<br/>identical to those in the source point. The point&amp;apos;s properties are mutable and may be<br/>changed at any time.</returns>
 </DOMPointFromPoint>
 </docs>

@@ -1,10 +1,10 @@
 <docs>
 <ReadableStreamDefaultReaderClosed>
 <summary>
-The <strong><c>closed</c></strong> read-only property of the<br/><see cref="ReadableStreamDefaultReader."/> interface returns a<br/><see cref="Promise"/> that fulfills when the stream closes, or rejects if the<br/>stream throws an error or the reader&amp;apos;s lock is released. This property enables you<br/>to write code that responds to an end to the streaming process.
+The <strong><c>closed</c></strong> read-only property of the<br/><see cref="ReadableStreamDefaultReader"/> interface returns a<br/><see cref="Promise"/> that fulfills when the stream closes, or rejects if the<br/>stream throws an error or the reader&amp;apos;s lock is released. This property enables you<br/>to write code that responds to an end to the streaming process.
 </summary>
 <remarks>
-<para>-<see cref="ReadableStreamDefaultReader.ReadableStreamDefaultReader."/> constructor<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_streams">Using readable streams</see><br/></para>
+<para>-<see cref="ReadableStreamDefaultReader.ReadableStreamDefaultReader"/> constructor<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_streams">Using readable streams</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableStreamDefaultReader/closed"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A <see cref="Promise"/>.</value>

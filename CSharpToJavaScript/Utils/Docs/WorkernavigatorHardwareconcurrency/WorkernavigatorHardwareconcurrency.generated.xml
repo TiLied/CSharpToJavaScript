@@ -4,9 +4,9 @@
 The <strong><c>navigator.hardwareConcurrency</c></strong> read-only property<br/>returns the number of logical processors available to run threads on the user&amp;apos;s<br/>computer.
 </summary>
 <remarks>
-<para>-<see cref="WorkerNavigator."/><br/></para>
+<para>-<see cref="WorkerNavigator"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerNavigator/hardwareConcurrency"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="Number"/> indicating the number of logical processor cores.Modern computers have multiple physical processor cores in their CPU (two or four cores<br/>is typical), but each physical core is also usually able to run more than one thread at<br/>a time using advanced scheduling techniques. So a four-core CPU may offer eight<br/><strong>logical processor cores</strong>, for example. The number of logical processor<br/>cores can be used to measure the number of threads which can effectively be run at once<br/>without them having to context switch.The browser may, however, choose to report a lower number of logical cores in order to<br/>represent more accurately the number of <see cref="Worker."/>s that can run at once, so<br/>don&amp;apos;t treat this as an absolute measurement of the number of cores in the user&amp;apos;s system.</value>
+<value>A <see cref="Number"/> indicating the number of logical processor cores.Modern computers have multiple physical processor cores in their CPU (two or four cores<br/>is typical), but each physical core is also usually able to run more than one thread at<br/>a time using advanced scheduling techniques. So a four-core CPU may offer eight<br/><strong>logical processor cores</strong>, for example. The number of logical processor<br/>cores can be used to measure the number of threads which can effectively be run at once<br/>without them having to context switch.The browser may, however, choose to report a lower number of logical cores in order to<br/>represent more accurately the number of <see cref="Worker"/>s that can run at once, so<br/>don&amp;apos;t treat this as an absolute measurement of the number of cores in the user&amp;apos;s system.</value>
 </WorkerNavigatorHardwareConcurrency>
 </docs>

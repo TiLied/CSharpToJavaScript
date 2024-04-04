@@ -1,13 +1,13 @@
 <docs>
 <WebTransportDatagramDuplexStreamWritable>
 <summary>
-The <strong><c>writable</c></strong> read-only property of the <see cref="WebTransportDatagramDuplexStream."/> interface returns a <see cref="WritableStream."/> instance that can be used to unreliably write outgoing datagrams to the stream.
+The <strong><c>writable</c></strong> read-only property of the <see cref="WebTransportDatagramDuplexStream"/> interface returns a <see cref="WritableStream"/> instance that can be used to unreliably write outgoing datagrams to the stream.
 </summary>
 <remarks>
 <para>&amp;quot;Unreliably&amp;quot; means that transmission of data is not guaranteed, nor is arrival in a specific order. This is fine in some situations and provides very fast delivery. For example, you might want to transmit regular game state updates where each message supersedes the last one that arrives, and order is not important.</para>
 <para>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/webtransport">Using WebTransport</see><br/>-{{domxref(&amp;quot;WebSockets API&amp;quot;, &amp;quot;WebSockets API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-{{domxref(&amp;quot;Streams API&amp;quot;, &amp;quot;Streams API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://datatracker.ietf.org/doc/html/draft-ietf-webtrans-http3/">WebTransport over HTTP/3</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebTransportDatagramDuplexStream/writable"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="WritableStream."/>.</value>
+<value>A <see cref="WritableStream"/>.</value>
 </WebTransportDatagramDuplexStreamWritable>
 </docs>

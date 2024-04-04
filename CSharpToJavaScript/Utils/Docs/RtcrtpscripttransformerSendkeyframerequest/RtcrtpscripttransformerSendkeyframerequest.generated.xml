@@ -1,11 +1,11 @@
 <docs>
 <RTCRtpScriptTransformerSendKeyFrameRequest>
 <summary>
-The <strong><c>sendKeyFrameRequest()</c></strong> method of the <see cref="RTCRtpScriptTransformer."/> interface may be called by a <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms">WebRTC Encoded Transform</see> that is processing incoming encoded video frames, in order to request a key frame from the sender.
+The <strong><c>sendKeyFrameRequest()</c></strong> method of the <see cref="RTCRtpScriptTransformer"/> interface may be called by a <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms">WebRTC Encoded Transform</see> that is processing incoming encoded video frames, in order to request a key frame from the sender.
 </summary>
 <remarks>
 <para>The method may only be called when receiving <strong>video</strong> (not audio) frames and if, for whatever reason, a recipient will not be able to decode the video without a new key frame.<br/>Note that the user agent can decide that the request for a key frame is not necessary, in which case the returned promise will fulfill even though the request was not actually sent.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> It might be called, for example, if a new user joins a WebRTC conference, in order to reduce the time before they receive a key frame and can hence start displaying video.<br/>For more information see <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms#triggering_a_key_frame">Triggering a key frame</see> in Using WebRTC Encoded Transforms.</para></blockquote>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms">Using WebRTC Encoded Transforms</see><br/>-<see cref="RTCRtpScriptTransformer."/><br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms">Using WebRTC Encoded Transforms</see><br/>-<see cref="RTCRtpScriptTransformer"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpScriptTransformer/sendKeyFrameRequest"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>A <see cref="Promise"/> that fulfills with <c>undefined</c> once the request is sent, or the user agent decides that it does not need to.</returns>

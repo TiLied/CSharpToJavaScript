@@ -1,10 +1,10 @@
 <docs>
 <NodeLookupNamespaceURI>
 <summary>
-The <strong><c>lookupNamespaceURI()</c></strong> method of the <see cref="Node."/> interface<br/>takes a prefix as parameter and returns the namespace URI associated with it on the given node if found (and<br/><c>null</c> if not).
+The <strong><c>lookupNamespaceURI()</c></strong> method of the <see cref="Node"/> interface<br/>takes a prefix as parameter and returns the namespace URI associated with it on the given node if found (and<br/><c>null</c> if not).
 </summary>
 <remarks>
-<para>-<see cref="Node.LookupPrefix."/><br/>-<see cref="Node.IsDefaultNameSpace."/><br/></para>
+<para>-<see cref="Node.LookupPrefix"/><br/>-<see cref="Node.IsDefaultNameSpace"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/lookupNamespaceURI"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>A string containing the namespace URI corresponding to the prefix.<br/>If the prefix is not found, it returns <c>null</c>.<br/>If the requested <c>prefix</c> is <c>null</c>, it returns the default namespace URI.</returns>

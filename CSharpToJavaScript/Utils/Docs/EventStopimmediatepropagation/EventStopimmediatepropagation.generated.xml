@@ -1,7 +1,7 @@
 <docs>
 <EventStopImmediatePropagation>
 <summary>
-The <strong><c>stopImmediatePropagation()</c></strong> method of the<br/><see cref="Event."/> interface prevents other listeners of the same event from being called.
+The <strong><c>stopImmediatePropagation()</c></strong> method of the<br/><see cref="Event"/> interface prevents other listeners of the same event from being called.
 </summary>
 <remarks>
 <para>If several listeners are attached to the same element for the same event type, they are called in the order in which they were added. If <c>stopImmediatePropagation()</c> is invoked during one such call, no remaining listeners will be called, either on that element or any other element.</para>

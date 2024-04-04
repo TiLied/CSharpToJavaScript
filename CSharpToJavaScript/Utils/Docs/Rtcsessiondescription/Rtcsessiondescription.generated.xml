@@ -1,11 +1,11 @@
 <docs>
 <RTCSessionDescription>
 <summary>
-The <strong><c>RTCSessionDescription</c></strong> interface describes one end of a connection—or potential connection—and how it&amp;apos;s configured. Each <c>RTCSessionDescription</c> consists of a description <see cref="RTCSessionDescription.Type."/> indicating which part of the offer/answer negotiation process it describes and of the {{Glossary("SDP")}} descriptor of the session.
+The <strong><c>RTCSessionDescription</c></strong> interface describes one end of a connection—or potential connection—and how it&amp;apos;s configured. Each <c>RTCSessionDescription</c> consists of a description <see cref="RTCSessionDescription.Type"/> indicating which part of the offer/answer negotiation process it describes and of the {{Glossary("SDP")}} descriptor of the session.
 </summary>
 <remarks>
 <para>The process of negotiating a connection between two peers involves exchanging <c>RTCSessionDescription</c> objects back and forth, with each description suggesting one combination of connection configuration options that the sender of the description supports. Once the two peers agree upon a configuration for the connection, negotiation is complete.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/>-<see cref="RTCPeerConnection.SetLocalDescription."/> and <see cref="RTCPeerConnection.SetRemoteDescription."/><br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/>-<see cref="RTCPeerConnection.SetLocalDescription"/> and <see cref="RTCPeerConnection.SetRemoteDescription"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCSessionDescription"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </RTCSessionDescription>

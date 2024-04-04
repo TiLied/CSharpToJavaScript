@@ -4,8 +4,8 @@
 The <strong><c>redirectCount</c></strong> read-only property returns a number representing the number of redirects since the last non-redirect navigation in the current browsing context.
 </summary>
 <remarks>
-<para>The higher the number of redirects on a page, the longer the page load time. To improve the performance of your web page, avoid multiple redirects.</para><para>The <see cref="PerformanceResourceTiming.RedirectStart."/> and <see cref="PerformanceResourceTiming.RedirectEnd."/> properties can be used to measure redirection time. Note that they will return <c>0</c> for cross-origin redirects.</para><para>Note that client side redirects, such as <c>&amp;lt;meta http-equiv=&amp;quot;refresh&amp;quot; content=&amp;quot;0; url=https://example.com/&amp;quot;&amp;gt;</c> are not considered here.</para>
-<para>-<see cref="PerformanceResourceTiming.RedirectStart."/><br/>-<see cref="PerformanceResourceTiming.RedirectEnd."/><br/></para>
+<para>The higher the number of redirects on a page, the longer the page load time. To improve the performance of your web page, avoid multiple redirects.</para><para>The <see cref="PerformanceResourceTiming.RedirectStart"/> and <see cref="PerformanceResourceTiming.RedirectEnd"/> properties can be used to measure redirection time. Note that they will return <c>0</c> for cross-origin redirects.</para><para>Note that client side redirects, such as <c>&amp;lt;meta http-equiv=&amp;quot;refresh&amp;quot; content=&amp;quot;0; url=https://example.com/&amp;quot;&amp;gt;</c> are not considered here.</para>
+<para>-<see cref="PerformanceResourceTiming.RedirectStart"/><br/>-<see cref="PerformanceResourceTiming.RedirectEnd"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/redirectCount"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>The <c>redirectCount</c> property can have the following values:</value>

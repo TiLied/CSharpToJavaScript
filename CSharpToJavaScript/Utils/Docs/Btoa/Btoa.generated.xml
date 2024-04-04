@@ -4,8 +4,8 @@
 The <strong><c>btoa()</c></strong> method creates a<br/><see href="https://developer.mozilla.org/en-US/docs/Glossary/Base64">Base64</see>-encoded <see href="https://developer.mozilla.org/en-US/docs/Glossary/ASCII">ASCII</see> string from a <strong>binary string</strong> (i.e., a<br/>string in which each character in the string is treated as a byte<br/>of binary data).
 </summary>
 <remarks>
-<para>You can use this method to encode data which may otherwise cause communication<br/>problems, transmit it, then use the <see cref="Atob."/> method to decode the data again.<br/>For example, you can encode control characters such as ASCII values 0 through 31.</para>
-<para>-<see href="https://github.com/zloirock/core-js#base64-utility-methods">A polyfill of <c>btoa</c></see> is available in <see href="https://github.com/zloirock/core-js"><c>core-js</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs"><c>data</c> URLs</see><br/>-<see cref="Atob."/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Glossary/Base64">Base64</see><br/></para>
+<para>You can use this method to encode data which may otherwise cause communication<br/>problems, transmit it, then use the <see cref="Atob"/> method to decode the data again.<br/>For example, you can encode control characters such as ASCII values 0 through 31.</para>
+<para>-<see href="https://github.com/zloirock/core-js#base64-utility-methods">A polyfill of <c>btoa</c></see> is available in <see href="https://github.com/zloirock/core-js"><c>core-js</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs"><c>data</c> URLs</see><br/>-<see cref="Atob"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Glossary/Base64">Base64</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/btoa"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>An ASCII string containing the Base64 representation of<br/><c>stringToEncode</c>.</returns>

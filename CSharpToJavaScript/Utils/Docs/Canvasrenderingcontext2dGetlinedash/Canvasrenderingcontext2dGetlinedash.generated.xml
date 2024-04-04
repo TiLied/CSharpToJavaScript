@@ -1,10 +1,10 @@
 <docs>
 <CanvasRenderingContext2DGetLineDash>
 <summary>
-The <strong><c>getLineDash()</c></strong> method of the Canvas 2D API&amp;apos;s<br/><see cref="CanvasRenderingContext2D."/> interface gets the current line dash pattern.
+The <strong><c>getLineDash()</c></strong> method of the Canvas 2D API&amp;apos;s<br/><see cref="CanvasRenderingContext2D"/> interface gets the current line dash pattern.
 </summary>
 <remarks>
-<para>-The interface defining this method: <see cref="CanvasRenderingContext2D."/><br/>-<see cref="CanvasRenderingContext2D.SetLineDash."/><br/>-<see cref="CanvasRenderingContext2D.LineDashOffset."/><br/></para>
+<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.SetLineDash"/><br/>-<see cref="CanvasRenderingContext2D.LineDashOffset"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/getLineDash"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>An <see cref="Array"/> of numbers that specify distances to alternately draw a line and<br/>a gap (in coordinate space units). If the number, when setting the elements, is odd, the<br/>elements of the array get copied and concatenated. For example, setting the line dash to<br/><c>[5, 15, 25]</c> will result in getting back<br/><c>[5, 15, 25, 5, 15, 25]</c>.</returns>

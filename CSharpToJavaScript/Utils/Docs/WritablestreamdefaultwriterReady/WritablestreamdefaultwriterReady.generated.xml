@@ -1,7 +1,7 @@
 <docs>
 <WritableStreamDefaultWriterReady>
 <summary>
-The <strong><c>ready</c></strong> read-only property of the<br/><see cref="WritableStreamDefaultWriter."/> interface returns a {{jsxref("Promise")}}<br/>that resolves when the desired size of the stream&amp;apos;s internal queue transitions from<br/>non-positive to positive, signaling that it is no longer applying backpressure.
+The <strong><c>ready</c></strong> read-only property of the<br/><see cref="WritableStreamDefaultWriter"/> interface returns a {{jsxref("Promise")}}<br/>that resolves when the desired size of the stream&amp;apos;s internal queue transitions from<br/>non-positive to positive, signaling that it is no longer applying backpressure.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WritableStreamDefaultWriter/ready"> <em>See also on MDN</em> </seealso></para>

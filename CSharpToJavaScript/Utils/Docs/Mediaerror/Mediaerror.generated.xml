@@ -1,11 +1,11 @@
 <docs>
 <MediaError>
 <summary>
-The <strong><c>MediaError</c></strong> interface represents an error which occurred while handling media in an HTML media element based on <see cref="HTMLMediaElement."/>, such as {{HTMLElement("audio")}} or {{HTMLElement("video")}}.
+The <strong><c>MediaError</c></strong> interface represents an error which occurred while handling media in an HTML media element based on <see cref="HTMLMediaElement"/>, such as {{HTMLElement("audio")}} or {{HTMLElement("video")}}.
 </summary>
 <remarks>
 <para>A <c>MediaError</c> object describes the error in general terms using a numeric <c>code</c> categorizing the kind of error, and a <c>message</c>, which provides specific diagnostics about what went wrong.</para>
-<para>-<see cref="HTMLMediaElement.Error."/><br/></para>
+<para>-<see cref="HTMLMediaElement.Error"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaError"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </MediaError>

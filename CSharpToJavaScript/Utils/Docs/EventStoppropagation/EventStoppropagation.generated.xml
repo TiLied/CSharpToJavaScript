@@ -1,7 +1,7 @@
 <docs>
 <EventStopPropagation>
 <summary>
-The <strong><c>stopPropagation()</c></strong> method of the <see cref="Event."/><br/>interface prevents further propagation of the current event in the capturing and<br/>bubbling phases. It does not, however, prevent any default behaviors from occurring; for<br/>instance, clicks on links are still processed. If you want to stop those behaviors, see<br/>the <see cref="Event.PreventDefault."/> method. It also does not<br/>prevent propagation to other event-handlers of the current element. If you want to stop those,<br/>see <see cref="Event.StopImmediatePropagation."/>.
+The <strong><c>stopPropagation()</c></strong> method of the <see cref="Event"/><br/>interface prevents further propagation of the current event in the capturing and<br/>bubbling phases. It does not, however, prevent any default behaviors from occurring; for<br/>instance, clicks on links are still processed. If you want to stop those behaviors, see<br/>the <see cref="Event.PreventDefault"/> method. It also does not<br/>prevent propagation to other event-handlers of the current element. If you want to stop those,<br/>see <see cref="Event.StopImmediatePropagation"/>.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Event/stopPropagation"> <em>See also on MDN</em> </seealso></para>

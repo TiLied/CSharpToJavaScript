@@ -1,7 +1,7 @@
 <docs>
 <TouchEventMetaKey>
 <summary>
-The read-only <strong><c>metaKey</c></strong> property of the <see cref="TouchEvent."/> interface returns a boolean value indicating whether or not the &amp;lt;kbd&amp;gt;Meta&amp;lt;/kbd&amp;gt; key is enabled when the touch event is created. If this key is enabled, the attribute&amp;apos;s value is <c>true</c>. Otherwise, it is <c>false</c>.
+The read-only <strong><c>metaKey</c></strong> property of the <see cref="TouchEvent"/> interface returns a boolean value indicating whether or not the &amp;lt;kbd&amp;gt;Meta&amp;lt;/kbd&amp;gt; key is enabled when the touch event is created. If this key is enabled, the attribute&amp;apos;s value is <c>true</c>. Otherwise, it is <c>false</c>.
 </summary>
 <remarks>
 <para>This property is {{ReadOnlyInline}}.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> On Macintosh keyboards, this is the &amp;lt;kbd&amp;gt;⌘ Command&amp;lt;/kbd&amp;gt; key. On Windows keyboards, this is the Windows key (&amp;lt;kbd&amp;gt;⊞&amp;lt;/kbd&amp;gt;).</para></blockquote>

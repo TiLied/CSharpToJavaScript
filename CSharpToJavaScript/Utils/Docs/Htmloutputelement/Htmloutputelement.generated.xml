@@ -1,13 +1,13 @@
 <docs>
 <HTMLOutputElement>
 <summary>
-The <strong><c>HTMLOutputElement</c></strong> interface provides properties and methods (beyond those inherited from <see cref="HTMLElement."/>) for manipulating the layout and presentation of {{HTMLElement("output")}} elements.
+The <strong><c>HTMLOutputElement</c></strong> interface provides properties and methods (beyond those inherited from <see cref="HTMLElement"/>) for manipulating the layout and presentation of {{HTMLElement("output")}} elements.
 </summary>
 <remarks>
 <para></para>
 <para>-The HTML element implementing this interface: <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/output">output</see>.<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLOutputElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>The element goes into value mode when the contents of the <c>value</c> property are set. The <c>value</c> property otherwise behaves like the <see cref="Node.TextContent."/> property. When the element is in value mode, the default value is accessible only through the <c>defaultValue</c> property.</value>
+<value>The element goes into value mode when the contents of the <c>value</c> property are set. The <c>value</c> property otherwise behaves like the <see cref="Node.TextContent"/> property. When the element is in value mode, the default value is accessible only through the <c>defaultValue</c> property.</value>
 </HTMLOutputElement>
 </docs>

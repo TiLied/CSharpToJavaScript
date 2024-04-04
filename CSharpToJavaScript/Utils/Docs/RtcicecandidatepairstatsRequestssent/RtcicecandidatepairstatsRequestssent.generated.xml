@@ -1,11 +1,11 @@
 <docs>
 <RTCIceCandidatePairStatsRequestsSent>
 <summary>
-The <see cref="RTCIceCandidatePairStats."/> dictionary's<br/><strong><c>requestsSent</c></strong> property indicates the total number of<br/><see href="https://developer.mozilla.org/en-US/docs/Glossary/STUN">STUN</see> connectivity check requests that have been sent so far on the<br/>connection described by this pair of candidates.
+The <see cref="RTCIceCandidatePairStats"/> dictionary's<br/><strong><c>requestsSent</c></strong> property indicates the total number of<br/><see href="https://developer.mozilla.org/en-US/docs/Glossary/STUN">STUN</see> connectivity check requests that have been sent so far on the<br/>connection described by this pair of candidates.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/requestsSent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An integer value which specifies the number of STUN connectivity requests that have<br/>been sent to date on the connection described by this pair of <see href="https://developer.mozilla.org/en-US/docs/Glossary/ICE">ICE</see><br/>candidates.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> The reported number of requests <strong>does not</strong> include<br/>retransmissions. If a request had to be repeated due to network issues, it will be<br/>counted multiple times here. This differs from<br/><see cref="RTCIceCandidatePairStats.RequestsReceived."/>, which<br/><strong>does</strong> include retransmissions.</blockquote></value>
+<value>An integer value which specifies the number of STUN connectivity requests that have<br/>been sent to date on the connection described by this pair of <see href="https://developer.mozilla.org/en-US/docs/Glossary/ICE">ICE</see><br/>candidates.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> The reported number of requests <strong>does not</strong> include<br/>retransmissions. If a request had to be repeated due to network issues, it will be<br/>counted multiple times here. This differs from<br/><see cref="RTCIceCandidatePairStats.RequestsReceived"/>, which<br/><strong>does</strong> include retransmissions.</blockquote></value>
 </RTCIceCandidatePairStatsRequestsSent>
 </docs>

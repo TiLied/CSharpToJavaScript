@@ -1,7 +1,7 @@
 <docs>
 <RTCInboundRtpStreamStatsNackCount>
 <summary>
-The <strong><c>nackCount</c></strong> property of the<br/><see cref="RTCInboundRtpStreamStats."/> dictionary is a numeric value indicating the<br/>number of times the receiver sent a <strong>NACK</strong> packet to the sender.
+The <strong><c>nackCount</c></strong> property of the<br/><see cref="RTCInboundRtpStreamStats"/> dictionary is a numeric value indicating the<br/>number of times the receiver sent a <strong>NACK</strong> packet to the sender.
 </summary>
 <remarks>
 <para>A NACK (Negative ACKnowledgement, also called &amp;quot;Generic NACK&amp;quot;) packet tells the sender<br/>that one or more of the <see href="https://developer.mozilla.org/en-US/docs/Glossary/RTP">RTP</see> packets it sent were lost in transport.</para>

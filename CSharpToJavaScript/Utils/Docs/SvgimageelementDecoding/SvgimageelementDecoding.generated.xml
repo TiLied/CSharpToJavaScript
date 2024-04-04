@@ -1,10 +1,10 @@
 <docs>
 <SVGImageElementDecoding>
 <summary>
-The <strong><c>decoding</c></strong> property of the <see cref="SVGImageElement."/> interface provides a hint to the browser as to whether it should perform image decoding synchronously or asynchronously.
+The <strong><c>decoding</c></strong> property of the <see cref="SVGImageElement"/> interface provides a hint to the browser as to whether it should perform image decoding synchronously or asynchronously.
 </summary>
 <remarks>
-<para>-The <see cref="SVGImageElement.Decode."/> method<br/>-The SVG <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementimage">image</see> element {{SVGAttr("decoding")}} attribute.<br/></para>
+<para>-The <see cref="SVGImageElement.Decode"/> method<br/>-The SVG <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementimage">image</see> element {{SVGAttr("decoding")}} attribute.<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGImageElement/decoding"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A string representing the decoding hint. Possible values are:</value>

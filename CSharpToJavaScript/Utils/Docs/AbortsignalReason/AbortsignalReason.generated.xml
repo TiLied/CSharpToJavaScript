@@ -4,7 +4,7 @@
 The <strong><c>reason</c></strong> read-only property returns a JavaScript value that indicates the abort reason.
 </summary>
 <remarks>
-<para>The property is <c>undefined</c> when the signal has not been aborted.<br/>It can be set to a specific value when the signal is aborted, using <see cref="AbortController.Abort."/> or <see cref="AbortSignal/abort_static."/>.<br/>If not explicitly set in those methods, it defaults to "AbortError" <see cref="DOMException."/>.</para>
+<para>The property is <c>undefined</c> when the signal has not been aborted.<br/>It can be set to a specific value when the signal is aborted, using <see cref="AbortController.Abort"/> or <see cref="AbortSignal/abort_static"/>.<br/>If not explicitly set in those methods, it defaults to "AbortError" <see cref="DOMException"/>.</para>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal/reason"> <em>See also on MDN</em> </seealso></para>
 </remarks>

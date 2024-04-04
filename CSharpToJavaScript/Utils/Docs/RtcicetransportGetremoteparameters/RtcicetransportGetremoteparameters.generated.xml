@@ -1,12 +1,12 @@
 <docs>
 <RTCIceTransportGetRemoteParameters>
 <summary>
-The <strong><c>getRemoteParameters()</c></strong> method of the <see cref="RTCIceTransport."/> interface returns an <see cref="RTCIceParameters."/> object that provides information uniquely identifying the remote peer for the duration of the ICE session.
+The <strong><c>getRemoteParameters()</c></strong> method of the <see cref="RTCIceTransport"/> interface returns an <see cref="RTCIceParameters"/> object that provides information uniquely identifying the remote peer for the duration of the ICE session.
 </summary>
 <remarks>
-<para>The remote peer's parameters are received during ICE signaling and delivered to the transport when the client calls <see cref="RTCPeerConnection.SetRemoteDescription."/>.</para>
+<para>The remote peer's parameters are received during ICE signaling and delivered to the transport when the client calls <see cref="RTCPeerConnection.SetRemoteDescription"/>.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/getRemoteParameters"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>An <see cref="RTCIceParameters."/> object indicating the <see cref="RTCIceParameters.UsernameFragment."/> and <see cref="RTCIceParameters.Password."/> which uniquely identify the remote peer for the duration of the ICE session.Returns <c>null</c> if the parameters haven&amp;apos;t been received yet.</returns>
+<returns>An <see cref="RTCIceParameters"/> object indicating the <see cref="RTCIceParameters.UsernameFragment"/> and <see cref="RTCIceParameters.Password"/> which uniquely identify the remote peer for the duration of the ICE session.Returns <c>null</c> if the parameters haven&amp;apos;t been received yet.</returns>
 </RTCIceTransportGetRemoteParameters>
 </docs>

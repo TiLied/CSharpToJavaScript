@@ -1,7 +1,7 @@
 <docs>
 <TrustedHTML>
 <summary>
-The <strong><c>TrustedHTML</c></strong> interface of the <see cref="'Trusted Types API'."/> represents a string that a developer can insert into an <see href="https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API#injection_sinks">injection sink</see> that will render it as HTML. These objects are created via <see cref="TrustedTypePolicy.CreateHTML."/> and therefore have no constructor.
+The <strong><c>TrustedHTML</c></strong> interface of the <see cref="'Trusted Types API'"/> represents a string that a developer can insert into an <see href="https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API#injection_sinks">injection sink</see> that will render it as HTML. These objects are created via <see cref="TrustedTypePolicy.CreateHTML"/> and therefore have no constructor.
 </summary>
 <remarks>
 <para>The value of a <strong>TrustedHTML</strong> object is set when the object is created and cannot be changed by JavaScript as there is no setter exposed.</para>

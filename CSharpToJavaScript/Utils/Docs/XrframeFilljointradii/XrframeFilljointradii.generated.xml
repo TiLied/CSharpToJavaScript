@@ -1,10 +1,10 @@
 <docs>
 <XRFrameFillJointRadii>
 <summary>
-The <strong><c>fillJointRadii()</c></strong> method of the <see cref="XRFrame."/> interface populates a {{jsxref("Float32Array")}} with radii for a list of hand joint spaces and returns <c>true</c> if successful for all spaces.
+The <strong><c>fillJointRadii()</c></strong> method of the <see cref="XRFrame"/> interface populates a {{jsxref("Float32Array")}} with radii for a list of hand joint spaces and returns <c>true</c> if successful for all spaces.
 </summary>
 <remarks>
-<para>-<see cref="XRHand."/><br/>-<see cref="XRJointSpace."/><br/>-<see cref="Float32Array"/><br/></para>
+<para>-<see cref="XRHand"/><br/>-<see cref="XRJointSpace"/><br/>-<see cref="Float32Array"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRFrame/fillJointRadii"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>A boolean indicating if all of the spaces have a valid pose.</returns>

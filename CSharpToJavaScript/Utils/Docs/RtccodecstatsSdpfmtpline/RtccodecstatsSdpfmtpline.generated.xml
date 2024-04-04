@@ -1,7 +1,7 @@
 <docs>
 <RTCCodecStatsSdpFmtpLine>
 <summary>
-The <strong><c>sdpFmtpLine</c></strong> property of the <see cref="RTCCodecStats."/> dictionary is a string containing the format-specific parameters of the codec.
+The <strong><c>sdpFmtpLine</c></strong> property of the <see cref="RTCCodecStats"/> dictionary is a string containing the format-specific parameters of the codec.
 </summary>
 <remarks>
 <para>These are the values in the <c>&amp;quot;a=fmtp&amp;quot;</c> line in the codec's <see href="https://developer.mozilla.org/en-US/docs/Glossary/SDP">SDP</see> (if present) after the payload type number (see <see href="https://datatracker.ietf.org/doc/html/draft-ietf-rtcweb-jsep-24#section-5.8">section 5.8 of the IETF specification for JSEP</see>).</para>

@@ -1,12 +1,12 @@
 <docs>
 <MediaRecorderIsTypeSupported>
 <summary>
-The <strong><c>isTypeSupported()</c></strong> static method of the <see cref="MediaRecorder."/> interface returns a {{jsxref("Boolean")}} which is <c>true</c> if the MIME media type specified is one the user agent should be able to successfully record.
+The <strong><c>isTypeSupported()</c></strong> static method of the <see cref="MediaRecorder"/> interface returns a {{jsxref("Boolean")}} which is <c>true</c> if the MIME media type specified is one the user agent should be able to successfully record.
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream_Recording_API">MediaStream Recording API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API">Using the MediaStream Recording API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats">Guide to media types and formats on the web</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/codecs_parameter">Codecs in common media types</see><br/>-<see cref="MediaStreamTrack."/><br/>-<see cref="MediaStream."/><br/>-<see cref="MediaCapabilities."/><br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream_Recording_API">MediaStream Recording API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API">Using the MediaStream Recording API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats">Guide to media types and formats on the web</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/codecs_parameter">Codecs in common media types</see><br/>-<see cref="MediaStreamTrack"/><br/>-<see cref="MediaStream"/><br/>-<see cref="MediaCapabilities"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/isTypeSupported"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A <see cref="Boolean"/>, <c>true</c> if the <see cref="MediaRecorder."/> implementation is capable of recording <see cref="Blob."/> objects for the specified MIME type.<br/>Recording may still fail if there are insufficient resources to support the recording and encoding process.<br/>If the value is <c>false</c>, the user agent is incapable of recording the specified format.</returns>
+<returns>A <see cref="Boolean"/>, <c>true</c> if the <see cref="MediaRecorder"/> implementation is capable of recording <see cref="Blob"/> objects for the specified MIME type.<br/>Recording may still fail if there are insufficient resources to support the recording and encoding process.<br/>If the value is <c>false</c>, the user agent is incapable of recording the specified format.</returns>
 </MediaRecorderIsTypeSupported>
 </docs>

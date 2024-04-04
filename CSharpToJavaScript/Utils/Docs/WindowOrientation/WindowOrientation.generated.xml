@@ -4,7 +4,7 @@
 <div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> Returns the orientation in degrees (in 90-degree increments) of the viewport relative to the device&amp;apos;s natural orientation.
 </summary>
 <remarks>
-<para>Its only possible values are <c>-90</c>, <c>0</c>, <c>90</c>, and <c>180</c>. Positive values are counterclockwise; negative values are clockwise.</para><para>This property is deprecated. Use the <see cref="Screen.Orientation."/> property instead, available on the <see cref="Window.Screen."/> property.</para>
+<para>Its only possible values are <c>-90</c>, <c>0</c>, <c>90</c>, and <c>180</c>. Positive values are counterclockwise; negative values are clockwise.</para><para>This property is deprecated. Use the <see cref="Screen.Orientation"/> property instead, available on the <see cref="Window.Screen"/> property.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Window/orientation"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </WindowOrientation>

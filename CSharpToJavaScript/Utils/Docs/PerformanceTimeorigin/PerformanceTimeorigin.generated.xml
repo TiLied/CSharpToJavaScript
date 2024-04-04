@@ -1,10 +1,10 @@
 <docs>
 <PerformanceTimeOrigin>
 <summary>
-The <strong><c>timeOrigin</c></strong> read-only property of the <see cref="Performance."/> interface returns the high resolution timestamp that is used as the baseline for performance-related timestamps.
+The <strong><c>timeOrigin</c></strong> read-only property of the <see cref="Performance"/> interface returns the high resolution timestamp that is used as the baseline for performance-related timestamps.
 </summary>
 <remarks>
-<para>In Window contexts, this value represents the time when navigation has started. In <see cref="Worker."/> and <see cref="ServiceWorker."/> contexts, this value represents the time when the worker is run. You can use this property to synchronize the time origins between the contexts (see example below).</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> The value of <c>performance.timeOrigin</c> may differ from the value returned by <see cref="DateNow"/> executed at the time origin, because <c>Date.now()</c> may have been impacted by system and user clock adjustments, clock skew, etc. The <c>timeOrigin</c> property is a <see href="https://w3c.github.io/hr-time/#dfn-monotonic-clock">monotonic clock</see> which current time never decreases and which isn&amp;apos;t subject to these adjustments.</para></blockquote>
+<para>In Window contexts, this value represents the time when navigation has started. In <see cref="Worker"/> and <see cref="ServiceWorker"/> contexts, this value represents the time when the worker is run. You can use this property to synchronize the time origins between the contexts (see example below).</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> The value of <c>performance.timeOrigin</c> may differ from the value returned by <see cref="DateNow"/> executed at the time origin, because <c>Date.now()</c> may have been impacted by system and user clock adjustments, clock skew, etc. The <c>timeOrigin</c> property is a <see href="https://w3c.github.io/hr-time/#dfn-monotonic-clock">monotonic clock</see> which current time never decreases and which isn&amp;apos;t subject to these adjustments.</para></blockquote>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Performance/timeOrigin"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A high resolution timestamp which considered to be the beginning of the current document&amp;apos;s lifetime. It&amp;apos;s calculated like this:</value>

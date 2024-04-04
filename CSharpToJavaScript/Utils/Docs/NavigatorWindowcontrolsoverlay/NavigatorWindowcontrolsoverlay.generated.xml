@@ -1,12 +1,12 @@
 <docs>
 <NavigatorWindowControlsOverlay>
 <summary>
-The <strong><c>windowControlsOverlay</c></strong> read-only property of the <see cref="Navigator."/><br/>interface returns the <see cref="WindowControlsOverlay."/> interface, which exposes<br/>information about the title bar geometry in desktop Progressive Web Apps that use the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Window_Controls_Overlay_API">Window Controls Overlay API</see>.
+The <strong><c>windowControlsOverlay</c></strong> read-only property of the <see cref="Navigator"/><br/>interface returns the <see cref="WindowControlsOverlay"/> interface, which exposes<br/>information about the title bar geometry in desktop Progressive Web Apps that use the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Window_Controls_Overlay_API">Window Controls Overlay API</see>.
 </summary>
 <remarks>
 <para>Progressive Web Apps installed on desktop Operating Systems can opt-in to the<br/>Window Controls Overlay feature by using the <c>window-controls-overlay</c> value in the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/Manifest/display_override"><c>display_override</c></see> web app manifest member.</para><para>Doing so hides the default window title bar and gives the app access to the full area<br/>of the app window.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/windowControlsOverlay"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>The <see cref="WindowControlsOverlay."/> interface.</value>
+<value>The <see cref="WindowControlsOverlay"/> interface.</value>
 </NavigatorWindowControlsOverlay>
 </docs>

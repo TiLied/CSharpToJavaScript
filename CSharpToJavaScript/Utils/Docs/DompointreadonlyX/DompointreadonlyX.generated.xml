@@ -5,7 +5,7 @@ The <strong><c>DOMPointReadOnly</c></strong> interface&amp;apos;s<br/><strong><c
 </summary>
 <remarks>
 <para>In general, positive values <c>x</c> mean to the right, and negative values of<br/><c>x</c> means to the left, assuming no transforms have resulted in a reversal.</para>
-<para>-The other coordinate properties: <see cref="DOMPointReadOnly.Y."/>,<br/><see cref="DOMPointReadOnly.Z."/>, and the perspective value,<br/><see cref="DOMPointReadOnly.W."/>.<br/></para>
+<para>-The other coordinate properties: <see cref="DOMPointReadOnly.Y"/>,<br/><see cref="DOMPointReadOnly.Z"/>, and the perspective value,<br/><see cref="DOMPointReadOnly.W"/>.<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMPointReadOnly/x"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A double-precision floating-point value indicating the x coordinate&amp;apos;s value for the<br/>point. This value is <strong>unrestricted</strong>, meaning that it is allowed to be<br/>infinite or invalid (that is, its value may be <see cref="NaN"/> or <see cref="Infinity"/>).</value>

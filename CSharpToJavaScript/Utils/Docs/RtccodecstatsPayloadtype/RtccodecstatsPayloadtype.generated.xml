@@ -1,7 +1,7 @@
 <docs>
 <RTCCodecStatsPayloadType>
 <summary>
-The <strong><c>payloadType</c></strong> property of the <see cref="RTCCodecStats."/> dictionary is a positive integer in the range from 0 to 127 that describes the format of the {{glossary("RTP")}} payload used in RTP encoding or decoding.
+The <strong><c>payloadType</c></strong> property of the <see cref="RTCCodecStats"/> dictionary is a positive integer in the range from 0 to 127 that describes the format of the {{glossary("RTP")}} payload used in RTP encoding or decoding.
 </summary>
 <remarks>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpCodecParameters#payloadtype"><c>RTCRtpCodecParameters.payloadType</c></see><br/>-<c>payloadType</c> returned by <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCEncodedAudioFrame/getMetadata#payloadtype"><c>RTCEncodedAudioFrame.getMetadata()</c></see><br/>-<c>payloadType</c> returned by <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCEncodedVideoFrame/getMetadata#payloadtype"><c>RTCEncodedVideoFrame.getMetadata()</c></see><br/></para>

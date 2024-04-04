@@ -1,12 +1,12 @@
 <docs>
 <ServiceWorkerRegistrationUpdate>
 <summary>
-The <strong><c>update()</c></strong> method of the<br/><see cref="ServiceWorkerRegistration."/> interface attempts to update the service<br/>worker. It fetches the worker&amp;apos;s script URL, and if the new worker is not byte-by-byte<br/>identical to the current worker, it installs the new worker. The fetch of the worker<br/>bypasses any browser caches if the previous fetch occurred over 24 hours ago.
+The <strong><c>update()</c></strong> method of the<br/><see cref="ServiceWorkerRegistration"/> interface attempts to update the service<br/>worker. It fetches the worker&amp;apos;s script URL, and if the new worker is not byte-by-byte<br/>identical to the current worker, it installs the new worker. The fetch of the worker<br/>bypasses any browser caches if the previous fetch occurred over 24 hours ago.
 </summary>
 <remarks>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</see><br/>-<see href="https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker">Service workers basic code example</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web workers</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/update"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A {{jsxref("Promise")}} that resolves with a <see cref="ServiceWorkerRegistration."/><br/>object.</returns>
+<returns>A {{jsxref("Promise")}} that resolves with a <see cref="ServiceWorkerRegistration"/><br/>object.</returns>
 </ServiceWorkerRegistrationUpdate>
 </docs>

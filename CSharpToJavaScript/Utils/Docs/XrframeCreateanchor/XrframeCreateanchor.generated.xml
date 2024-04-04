@@ -1,13 +1,13 @@
 <docs>
 <XRFrameCreateAnchor>
 <summary>
-The <strong><c>createAnchor()</c></strong> method of the <see cref="XRFrame."/> interface creates a free-floating <see cref="XRAnchor."/> which will be fixed relative to the real world.
+The <strong><c>createAnchor()</c></strong> method of the <see cref="XRFrame"/> interface creates a free-floating <see cref="XRAnchor"/> which will be fixed relative to the real world.
 </summary>
 <remarks>
-<para>See <see cref="XRHitTestResult.CreateAnchor."/> for creating an anchor from a hit test result that is attached to a real-world object.</para>
-<para>-<see cref="XRHitTestResult.CreateAnchor."/><br/></para>
+<para>See <see cref="XRHitTestResult.CreateAnchor"/> for creating an anchor from a hit test result that is attached to a real-world object.</para>
+<para>-<see cref="XRHitTestResult.CreateAnchor"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRFrame/createAnchor"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A {{jsxref("Promise")}} resolving to an <see cref="XRAnchor."/> object.</returns>
+<returns>A {{jsxref("Promise")}} resolving to an <see cref="XRAnchor"/> object.</returns>
 </XRFrameCreateAnchor>
 </docs>

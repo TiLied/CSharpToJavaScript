@@ -4,7 +4,7 @@
 The <strong><c>PerformanceEntry</c></strong> object encapsulates a single performance metric that is part of the browser&amp;apos;s performance timeline.
 </summary>
 <remarks>
-<para>The Performance API offers built-in metrics which are specialized subclasses of <c>PerformanceEntry</c>. This includes entries for resource loading, event timing, <see href="https://developer.mozilla.org/en-US/docs/Glossary/first input delay">first input delay</see> (FID), and more.</para><para>A performance entry can also be created by calling the <see cref="Performance.Mark."/> or <see cref="Performance.Measure."/> methods at an explicit point in an application. This allows you to add your own metrics to the performance timeline.</para><para>The <c>PerformanceEntry</c> instances will always be one of the following subclasses:</para>
+<para>The Performance API offers built-in metrics which are specialized subclasses of <c>PerformanceEntry</c>. This includes entries for resource loading, event timing, <see href="https://developer.mozilla.org/en-US/docs/Glossary/first input delay">first input delay</see> (FID), and more.</para><para>A performance entry can also be created by calling the <see cref="Performance.Mark"/> or <see cref="Performance.Measure"/> methods at an explicit point in an application. This allows you to add your own metrics to the performance timeline.</para><para>The <c>PerformanceEntry</c> instances will always be one of the following subclasses:</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceEntry"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </PerformanceEntry>

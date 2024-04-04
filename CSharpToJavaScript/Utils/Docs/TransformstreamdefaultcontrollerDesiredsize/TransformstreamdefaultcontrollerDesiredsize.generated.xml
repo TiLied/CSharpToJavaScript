@@ -1,7 +1,7 @@
 <docs>
 <TransformStreamDefaultControllerDesiredSize>
 <summary>
-The <strong><c>desiredSize</c></strong> read-only property of the <see cref="TransformStreamDefaultController."/> interface returns the desired size to fill the queue of the associated <see cref="ReadableStream."/>.
+The <strong><c>desiredSize</c></strong> read-only property of the <see cref="TransformStreamDefaultController"/> interface returns the desired size to fill the queue of the associated <see cref="ReadableStream"/>.
 </summary>
 <remarks>
 <para>The internal queue of a <c>ReadableStream</c> contains chunks that have been enqueued, but not yet read. The browser determines the <strong>desired size</strong> to fill the stream, and it is this value returned by the <c>desiredSize</c> property.</para><para>If the <c>desiredSize</c> is <c>0</c> then the queue is full. Therefore you can use this information to <see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Concepts#backpressure">manually apply backpressure</see> to manage the queue.</para>

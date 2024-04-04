@@ -1,12 +1,12 @@
 <docs>
 <CacheMatch>
 <summary>
-The <strong><c>match()</c></strong> method of the <see cref="Cache."/> interface returns a {{jsxref("Promise")}} that resolves to the <see cref="Response."/> associated with the first matching request in the <see cref="Cache."/> object.<br/>If no match is found, the <see cref="Promise"/> resolves to <see cref="Undefined"/>.
+The <strong><c>match()</c></strong> method of the <see cref="Cache"/> interface returns a {{jsxref("Promise")}} that resolves to the <see cref="Response"/> associated with the first matching request in the <see cref="Cache"/> object.<br/>If no match is found, the <see cref="Promise"/> resolves to <see cref="Undefined"/>.
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</see><br/>-<see cref="Cache."/><br/>-<see cref="Caches."/><br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</see><br/>-<see cref="Cache"/><br/>-<see cref="Caches"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Cache/match"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A {{jsxref("Promise")}} that resolves to the first <see cref="Response."/> that matches<br/>the request or to <see cref="Undefined"/> if no match is found.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> <c>Cache.match()</c> is basically identical to<br/><see cref="Cache.MatchAll."/>, except that rather than resolving with an array of<br/>all matching responses, it resolves with the first matching response only (that is,<br/><c>response[0]</c>).</blockquote></returns>
+<returns>A {{jsxref("Promise")}} that resolves to the first <see cref="Response"/> that matches<br/>the request or to <see cref="Undefined"/> if no match is found.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> <c>Cache.match()</c> is basically identical to<br/><see cref="Cache.MatchAll"/>, except that rather than resolving with an array of<br/>all matching responses, it resolves with the first matching response only (that is,<br/><c>response[0]</c>).</blockquote></returns>
 </CacheMatch>
 </docs>

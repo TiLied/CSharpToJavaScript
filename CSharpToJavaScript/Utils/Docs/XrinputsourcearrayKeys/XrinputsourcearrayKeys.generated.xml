@@ -1,10 +1,10 @@
 <docs>
 <XRInputSourceArrayKeys>
 <summary>
-The <strong><c>keys()</c></strong> method in the<br/><see cref="XRInputSourceArray."/> interface returns a {{Glossary("JavaScript")}}<br/><see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator"><c>iterator</c></see><br/>which can then be used to iterate over the keys used to reference each item in the array<br/>of input sources.
+The <strong><c>keys()</c></strong> method in the<br/><see cref="XRInputSourceArray"/> interface returns a {{Glossary("JavaScript")}}<br/><see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator"><c>iterator</c></see><br/>which can then be used to iterate over the keys used to reference each item in the array<br/>of input sources.
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Inputs">Inputs and input sources</see><br/>-The <see cref="XRInputSourceArray."/> method <see cref="XRInputSourceArray.Values."/><br/>-The <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"><c>Array</c></see> method <c>keys()</c><br/>-<see cref="XRInputSource."/><br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Inputs">Inputs and input sources</see><br/>-The <see cref="XRInputSourceArray"/> method <see cref="XRInputSourceArray.Values"/><br/>-The <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"><c>Array</c></see> method <c>keys()</c><br/>-<see cref="XRInputSource"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceArray/keys"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>A<br/>JavaScript <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator"><c>iterator</c></see> that<br/>can be used to walk through the keys for each entry in the list of input sources. The<br/>values returned by the iterator are the indexes of each entry in the list; that is, the<br/>numbers 0, 1, 2, and so forth through the index of the last item in the list.</returns>

@@ -4,7 +4,7 @@
 <blockquote class="WARNING"><h5>WARNING</h5><strong>Warning:</strong> This feature is currently opposed by two browser vendors. See the <see href="https://developer.mozilla.org#standards_positions">Standards positions</see> section below for details of opposition.</blockquote>
 </summary>
 <remarks>
-<para>The <strong><c>browsingTopics</c></strong> property of the <see cref="HTMLIFrameElement."/> interface is a boolean specifying that that the selected topics for the current user should be sent with the request for the associated {{htmlelement("iframe")}}'s source in a {{httpheader("Sec-Browsing-Topics")}} header. This reflects the <c>browsingtopics</c> HTML attribute.</para><para>See <see href="https://developer.mozilla.org/en-US/docs/Web/API/Topics_API/Using">Using the Topics API</see> for more details.</para>
+<para>The <strong><c>browsingTopics</c></strong> property of the <see cref="HTMLIFrameElement"/> interface is a boolean specifying that that the selected topics for the current user should be sent with the request for the associated {{htmlelement("iframe")}}'s source in a {{httpheader("Sec-Browsing-Topics")}} header. This reflects the <c>browsingtopics</c> HTML attribute.</para><para>See <see href="https://developer.mozilla.org/en-US/docs/Web/API/Topics_API/Using">Using the Topics API</see> for more details.</para>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Topics_API">Topics API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/browsingTopics"> <em>See also on MDN</em> </seealso></para>
 </remarks>

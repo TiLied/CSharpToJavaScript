@@ -1,10 +1,10 @@
 <docs>
 <CSSStyleSheetCSSStyleSheet>
 <summary>
-The <strong><c>CSSStyleSheet()</c></strong> constructor creates a new <see cref="CSSStyleSheet."/> object which represents a single <see href="https://developer.mozilla.org/en-US/docs/Glossary/Stylesheet">Stylesheet</see>.
+The <strong><c>CSSStyleSheet()</c></strong> constructor creates a new <see cref="CSSStyleSheet"/> object which represents a single <see href="https://developer.mozilla.org/en-US/docs/Glossary/Stylesheet">Stylesheet</see>.
 </summary>
 <remarks>
-<para>After constructing a stylesheet the <see cref="CSSStyleSheet.Replace."/>, <see cref="CSSStyleSheet.ReplaceSync."/>, <see cref="CSSStyleSheet.InsertRule."/>, and <see cref="CSSStyleSheet.DeleteRule."/> methods can be used to modify the rules of the new stylesheet.</para><para>A stylesheet created using this method is referred to as a &amp;quot;constructed stylesheet&amp;quot;.<br/>A constructed stylesheet can be shared between a document and its shadow DOM subtrees using <see cref="ShadowRoot.AdoptedStyleSheets."/> and <see cref="Document.AdoptedStyleSheets."/>.</para>
+<para>After constructing a stylesheet the <see cref="CSSStyleSheet.Replace"/>, <see cref="CSSStyleSheet.ReplaceSync"/>, <see cref="CSSStyleSheet.InsertRule"/>, and <see cref="CSSStyleSheet.DeleteRule"/> methods can be used to modify the rules of the new stylesheet.</para><para>A stylesheet created using this method is referred to as a &amp;quot;constructed stylesheet&amp;quot;.<br/>A constructed stylesheet can be shared between a document and its shadow DOM subtrees using <see cref="ShadowRoot.AdoptedStyleSheets"/> and <see cref="Document.AdoptedStyleSheets"/>.</para>
 <para>-<see href="https://web.dev/articles/constructable-stylesheets">Constructable Stylesheets</see> (web.dev)<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM">Using the Shadow DOM</see><br/>-<see href="https://www.npmjs.com/package/construct-style-sheets-polyfill">construct-style-sheets-polyfill</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleSheet/CSSStyleSheet"> <em>See also on MDN</em> </seealso></para>
 </remarks>

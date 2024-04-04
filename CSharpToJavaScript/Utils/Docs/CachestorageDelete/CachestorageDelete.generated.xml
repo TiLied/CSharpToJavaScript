@@ -1,13 +1,13 @@
 <docs>
 <CacheStorageDelete>
 <summary>
-The <strong><c>delete()</c></strong> method of the <see cref="CacheStorage."/> interface finds the <see cref="Cache."/> object matching the <c>cacheName</c>, and if found, deletes the <see cref="Cache."/> object and returns a {{jsxref("Promise")}} that resolves to <c>true</c>.<br/>If no <see cref="Cache."/> object is found, it resolves to <c>false</c>.
+The <strong><c>delete()</c></strong> method of the <see cref="CacheStorage"/> interface finds the <see cref="Cache"/> object matching the <c>cacheName</c>, and if found, deletes the <see cref="Cache"/> object and returns a {{jsxref("Promise")}} that resolves to <c>true</c>.<br/>If no <see cref="Cache"/> object is found, it resolves to <c>false</c>.
 </summary>
 <remarks>
-<para>You can access <c>CacheStorage</c> through the global <see cref="Caches."/> property.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</see><br/>-<see cref="Cache."/><br/>-<see cref="Caches."/><br/></para>
+<para>You can access <c>CacheStorage</c> through the global <see cref="Caches"/> property.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</see><br/>-<see cref="Cache"/><br/>-<see cref="Caches"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage/delete"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>a <see cref="Promise"/> that resolves to <c>true</c> if the <see cref="Cache."/><br/>object is found and deleted, and <c>false</c> otherwise.</returns>
+<returns>a <see cref="Promise"/> that resolves to <c>true</c> if the <see cref="Cache"/><br/>object is found and deleted, and <c>false</c> otherwise.</returns>
 </CacheStorageDelete>
 </docs>

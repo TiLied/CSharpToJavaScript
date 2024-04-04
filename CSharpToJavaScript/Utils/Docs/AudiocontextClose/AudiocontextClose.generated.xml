@@ -1,10 +1,10 @@
 <docs>
 <AudioContextClose>
 <summary>
-The <c>close()</c> method of the <see cref="AudioContext."/> Interface closes the audio context, releasing any system audio resources that it uses.
+The <c>close()</c> method of the <see cref="AudioContext"/> Interface closes the audio context, releasing any system audio resources that it uses.
 </summary>
 <remarks>
-<para>This function does not automatically release all <c>AudioContext</c>-created objects, unless other references have been released as well; however, it will forcibly release any system audio resources that might prevent additional <c>AudioContexts</c> from being created and used, suspend the progression of audio time in the audio context, and stop processing audio data. The returned <see cref="Promise"/> resolves when all <c>AudioContext</c>-creation-blocking resources have been released. This method throws an <c>INVALID_STATE_ERR</c> exception if called on an <see cref="OfflineAudioContext."/>.</para>
+<para>This function does not automatically release all <c>AudioContext</c>-created objects, unless other references have been released as well; however, it will forcibly release any system audio resources that might prevent additional <c>AudioContexts</c> from being created and used, suspend the progression of audio time in the audio context, and stop processing audio data. The returned <see cref="Promise"/> resolves when all <c>AudioContext</c>-creation-blocking resources have been released. This method throws an <c>INVALID_STATE_ERR</c> exception if called on an <see cref="OfflineAudioContext"/>.</para>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/close"> <em>See also on MDN</em> </seealso></para>
 </remarks>

@@ -1,13 +1,13 @@
 <docs>
 <VRDisplayRequestAnimationFrame>
 <summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>requestAnimationFrame()</c></strong> method of the <see cref="VRDisplay."/> interface is a special implementation of <see cref="Window.RequestAnimationFrame."/> containing a callback function that will be called every time a new frame of the <c>VRDisplay</c> presentation is rendered:
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>requestAnimationFrame()</c></strong> method of the <see cref="VRDisplay"/> interface is a special implementation of <see cref="Window.RequestAnimationFrame"/> containing a callback function that will be called every time a new frame of the <c>VRDisplay</c> presentation is rendered:
 </summary>
 <remarks>
 <blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This method was part of the old <see href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</see>. It has been superseded by the <see href="https://immersive-web.github.io/webxr/">WebXR Device API</see>.</para></blockquote>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API">WebVR API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VRDisplay/requestAnimationFrame"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A long representing the handle of the <c>requestAnimationFrame()</c> call. This can then be passed to a <see cref="VRDisplay.CancelAnimationFrame."/> call to unregister the callback.</returns>
+<returns>A long representing the handle of the <c>requestAnimationFrame()</c> call. This can then be passed to a <see cref="VRDisplay.CancelAnimationFrame"/> call to unregister the callback.</returns>
 </VRDisplayRequestAnimationFrame>
 </docs>

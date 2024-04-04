@@ -1,7 +1,7 @@
 <docs>
 <RTCCodecStatsMimeType>
 <summary>
-The <strong><c>mimeType</c></strong> property of the <see cref="RTCCodecStats."/> dictionary is a string containing the codec's {{glossary("MIME type")}} and subtype.
+The <strong><c>mimeType</c></strong> property of the <see cref="RTCCodecStats"/> dictionary is a string containing the codec's {{glossary("MIME type")}} and subtype.
 </summary>
 <remarks>
 <para>This is of the form <c>&amp;quot;type/subtype&amp;quot;</c>, such as &amp;quot;video/VP8&amp;quot; or &amp;quot;audio/opus&amp;quot;, as defined in the <see href="https://www.iana.org/assignments/rtp-parameters/rtp-parameters.xhtml#rtp-parameters-2">IANA registry of valid MIME types</see>.</para>

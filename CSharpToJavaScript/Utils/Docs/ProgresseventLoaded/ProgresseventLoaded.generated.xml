@@ -5,7 +5,7 @@ The <strong><c>ProgressEvent.loaded</c></strong> read-only property is a 64-bit 
 </summary>
 <remarks>
 <para>Note that for compressed requests of unknown total size, <c>loaded</c> might contain the size of the compressed, or decompressed, data, depending on the browser. As of 2024, it contains the size of the compressed data in Firefox, and the size of the uncompressed data in Chrome.</para>
-<para>-The <see cref="ProgressEvent."/> interface it belongs to.<br/></para>
+<para>-The <see cref="ProgressEvent"/> interface it belongs to.<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ProgressEvent/loaded"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A number.</value>

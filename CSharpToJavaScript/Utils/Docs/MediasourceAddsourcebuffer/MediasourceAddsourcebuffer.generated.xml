@@ -1,12 +1,12 @@
 <docs>
 <MediaSourceAddSourceBuffer>
 <summary>
-The <strong><c>addSourceBuffer()</c></strong> method of the<br/><see cref="MediaSource."/> interface creates a new <see cref="SourceBuffer."/> of the<br/>given <see href="https://developer.mozilla.org/en-US/docs/Glossary/MIME type">MIME type</see> and adds it to the <c>MediaSource</c>&amp;apos;s<br/><see cref="MediaSource.SourceBuffers."/> list. The new<br/><c>SourceBuffer</c> is also returned.
+The <strong><c>addSourceBuffer()</c></strong> method of the<br/><see cref="MediaSource"/> interface creates a new <see cref="SourceBuffer"/> of the<br/>given <see href="https://developer.mozilla.org/en-US/docs/Glossary/MIME type">MIME type</see> and adds it to the <c>MediaSource</c>&amp;apos;s<br/><see cref="MediaSource.SourceBuffers"/> list. The new<br/><c>SourceBuffer</c> is also returned.
 </summary>
 <remarks>
-<para>-<see cref="SourceBuffer."/><br/>-<see cref="SourceBufferList."/><br/></para>
+<para>-<see cref="SourceBuffer"/><br/>-<see cref="SourceBufferList"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaSource/addSourceBuffer"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A <see cref="SourceBuffer."/> object representing the new source buffer that has been<br/>created and added to the media source.</returns>
+<returns>A <see cref="SourceBuffer"/> object representing the new source buffer that has been<br/>created and added to the media source.</returns>
 </MediaSourceAddSourceBuffer>
 </docs>

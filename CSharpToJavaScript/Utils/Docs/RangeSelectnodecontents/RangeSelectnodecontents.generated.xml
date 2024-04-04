@@ -1,7 +1,7 @@
 <docs>
 <RangeSelectNodeContents>
 <summary>
-The <strong><c>Range.selectNodeContents()</c></strong> method sets the <see cref="Range."/> to contain the contents of a <see cref="Node."/>.
+The <strong><c>Range.selectNodeContents()</c></strong> method sets the <see cref="Range"/> to contain the contents of a <see cref="Node"/>.
 </summary>
 <remarks>
 <para>The parent <c>Node</c> of the start and end of the <c>Range</c> will be the<br/>reference node. The <c>startOffset</c> is 0, and the <c>endOffset</c> is the<br/>number of child <c>Node</c>s or number of characters contained in the reference<br/>node.</para>

@@ -1,13 +1,13 @@
 <docs>
 <EventTargetDispatchEvent>
 <summary>
-The <strong><c>dispatchEvent()</c></strong> method of the <see cref="EventTarget."/> sends an <see cref="Event."/> to the object, (synchronously) invoking the affected<br/>event listeners in the appropriate order. The normal event processing<br/>rules (including the capturing and optional bubbling phase) also apply to events<br/>dispatched manually with <c>dispatchEvent()</c>.
+The <strong><c>dispatchEvent()</c></strong> method of the <see cref="EventTarget"/> sends an <see cref="Event"/> to the object, (synchronously) invoking the affected<br/>event listeners in the appropriate order. The normal event processing<br/>rules (including the capturing and optional bubbling phase) also apply to events<br/>dispatched manually with <c>dispatchEvent()</c>.
 </summary>
 <remarks>
-<para>Calling <c>dispatchEvent()</c> is the last step to <strong>firing an event</strong>. The event<br/>should have already been created and initialized using an <see cref="Event/Event."/> constructor.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> When calling this method, the <see cref="Event.Target."/> property is initialized to the current <c>EventTarget</c>.</para></blockquote><para>Unlike &amp;quot;native&amp;quot; events, which are fired by the browser and invoke event handlers<br/>asynchronously via the <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Event_loop">event loop</see>,<br/><c>dispatchEvent()</c> invokes event handlers <strong>synchronously</strong>. All applicable event<br/>handlers are called and return before <c>dispatchEvent()</c> returns.</para>
+<para>Calling <c>dispatchEvent()</c> is the last step to <strong>firing an event</strong>. The event<br/>should have already been created and initialized using an <see cref="Event/Event"/> constructor.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> When calling this method, the <see cref="Event.Target"/> property is initialized to the current <c>EventTarget</c>.</para></blockquote><para>Unlike &amp;quot;native&amp;quot; events, which are fired by the browser and invoke event handlers<br/>asynchronously via the <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Event_loop">event loop</see>,<br/><c>dispatchEvent()</c> invokes event handlers <strong>synchronously</strong>. All applicable event<br/>handlers are called and return before <c>dispatchEvent()</c> returns.</para>
 <para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/Event">Event object reference</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/dispatchEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns><c>false</c> if <c>event</c> is cancelable, and at least one of the event handlers which received <c>event</c> called <see cref="Event.PreventDefault."/>. Otherwise <c>true</c>.</returns>
+<returns><c>false</c> if <c>event</c> is cancelable, and at least one of the event handlers which received <c>event</c> called <see cref="Event.PreventDefault"/>. Otherwise <c>true</c>.</returns>
 </EventTargetDispatchEvent>
 </docs>

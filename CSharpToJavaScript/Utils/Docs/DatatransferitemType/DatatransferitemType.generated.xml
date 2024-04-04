@@ -1,11 +1,11 @@
 <docs>
 <DataTransferItemType>
 <summary>
-The read-only <strong><c>DataTransferItem.type</c></strong> property returns the type (format) of the <see cref="DataTransferItem."/> object representing the drag data item.<br/>The <c>type</c> is a Unicode string generally given by a MIME type, although a MIME type is not required.
+The read-only <strong><c>DataTransferItem.type</c></strong> property returns the type (format) of the <see cref="DataTransferItem"/> object representing the drag data item.<br/>The <c>type</c> is a Unicode string generally given by a MIME type, although a MIME type is not required.
 </summary>
 <remarks>
 <para>Some example types are: <c>text/plain</c> and <c>text/html</c>.</para>
-<para>-<see cref="DataTransfer.Types."/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types">List of common MIME types</see><br/></para>
+<para>-<see cref="DataTransfer.Types"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types">List of common MIME types</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItem/type"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A string representing the drag data item&amp;apos;s type.</value>

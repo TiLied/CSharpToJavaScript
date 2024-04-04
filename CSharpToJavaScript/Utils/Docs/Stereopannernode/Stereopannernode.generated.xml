@@ -1,10 +1,10 @@
 <docs>
 <StereoPannerNode>
 <summary>
-The <c>StereoPannerNode</c> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see> represents a simple stereo panner node that can be used to pan an audio stream left or right. It is an <see cref="AudioNode."/> audio-processing module that positions an incoming audio stream in a stereo image using a low-cost equal-power <see href="https://webaudio.github.io/web-audio-api/#panning-algorithm">panning algorithm</see>.
+The <c>StereoPannerNode</c> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see> represents a simple stereo panner node that can be used to pan an audio stream left or right. It is an <see cref="AudioNode"/> audio-processing module that positions an incoming audio stream in a stereo image using a low-cost equal-power <see href="https://webaudio.github.io/web-audio-api/#panning-algorithm">panning algorithm</see>.
 </summary>
 <remarks>
-<para>The <see cref="StereoPannerNode.Pan."/> property takes a unitless value between <c>-1</c> (full left pan) and <c>1</c> (full right pan). This interface was introduced as a much simpler way to apply a simple panning effect than having to use a full <see cref="PannerNode."/>.</para><para><see href="https://developer.mozilla.orgstereopannernode.png">The Stereo Panner Node moved the sound&amp;apos;s position from the center of two speakers to the left.</see></para><para></para>
+<para>The <see cref="StereoPannerNode.Pan"/> property takes a unitless value between <c>-1</c> (full left pan) and <c>1</c> (full right pan). This interface was introduced as a much simpler way to apply a simple panning effect than having to use a full <see cref="PannerNode"/>.</para><para><see href="https://developer.mozilla.orgstereopannernode.png">The Stereo Panner Node moved the sound&amp;apos;s position from the center of two speakers to the left.</see></para><para></para>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StereoPannerNode"> <em>See also on MDN</em> </seealso></para>
 </remarks>

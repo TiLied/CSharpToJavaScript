@@ -1,10 +1,10 @@
 <docs>
 <XSLTProcessorGetParameter>
 <summary>
-The <c>getParameter()</c> method of the <see cref="XSLTProcessor."/> interface returns the value of a parameter (<c>&amp;lt;xsl:param&amp;gt;</c>) from the stylesheet imported in the processor.
+The <c>getParameter()</c> method of the <see cref="XSLTProcessor"/> interface returns the value of a parameter (<c>&amp;lt;xsl:param&amp;gt;</c>) from the stylesheet imported in the processor.
 </summary>
 <remarks>
-<para>-<see cref="XSLTProcessor.SetParameter."/><br/>-<see cref="XSLTProcessor.RemoveParameter."/><br/>-<see cref="XSLTProcessor.ClearParameters."/><br/>-<see cref="XSLTProcessor.Reset."/><br/></para>
+<para>-<see cref="XSLTProcessor.SetParameter"/><br/>-<see cref="XSLTProcessor.RemoveParameter"/><br/>-<see cref="XSLTProcessor.ClearParameters"/><br/>-<see cref="XSLTProcessor.Reset"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XSLTProcessor/getParameter"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>An object that is the value associated with the parameter. It can be of any type.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> Firefox supports any kind of parameter. Chrome, Edge and Safari only support string parameters.</blockquote></returns>

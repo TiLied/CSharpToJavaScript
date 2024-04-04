@@ -1,10 +1,10 @@
 <docs>
 <InterventionReportBodySourceFile>
 <summary>
-The <strong><c>sourceFile</c></strong> read-only property of the <see cref="InterventionReportBody."/> interface returns the path to the source file where the intervention occurred.
+The <strong><c>sourceFile</c></strong> read-only property of the <see cref="InterventionReportBody"/> interface returns the path to the source file where the intervention occurred.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This property can be used with <see cref="InterventionReportBody.LineNumber."/> and <see cref="InterventionReportBody.ColumnNumber."/> to locate the column and line in the file where the feature is used.</para></blockquote>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This property can be used with <see cref="InterventionReportBody.LineNumber"/> and <see cref="InterventionReportBody.ColumnNumber"/> to locate the column and line in the file where the feature is used.</para></blockquote>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/InterventionReportBody/sourceFile"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A string, or <c>null</c> if the path is not known.</value>

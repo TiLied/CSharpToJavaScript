@@ -1,11 +1,11 @@
 <docs>
 <FontFaceSetLoad>
 <summary>
-The <c>load()</c> method of the <see cref="FontFaceSet."/> forces all the fonts given in parameters to be loaded.
+The <c>load()</c> method of the <see cref="FontFaceSet"/> forces all the fonts given in parameters to be loaded.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FontFaceSet/load"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A {{jsxref("Promise")}} fulfilled with an {{jsxref("Array")}} of loaded <see cref="FontFace."/> objects. The<br/>promise is fulfilled when all the fonts are loaded; it is rejected if one of the fonts<br/>failed to load.</returns>
+<returns>A {{jsxref("Promise")}} fulfilled with an {{jsxref("Array")}} of loaded <see cref="FontFace"/> objects. The<br/>promise is fulfilled when all the fonts are loaded; it is rejected if one of the fonts<br/>failed to load.</returns>
 </FontFaceSetLoad>
 </docs>

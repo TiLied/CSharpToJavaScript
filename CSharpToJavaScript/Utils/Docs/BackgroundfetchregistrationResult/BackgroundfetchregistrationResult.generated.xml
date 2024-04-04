@@ -1,10 +1,10 @@
 <docs>
 <BackgroundFetchRegistrationResult>
 <summary>
-The <strong><c>result</c></strong> read-only property of the <see cref="BackgroundFetchRegistration."/> interface returns a string indicating whether the background fetch was successful or failed.
+The <strong><c>result</c></strong> read-only property of the <see cref="BackgroundFetchRegistration"/> interface returns a string indicating whether the background fetch was successful or failed.
 </summary>
 <remarks>
-<para>If the value of this property changes, the <see href="https://developer.mozilla.org/en-US/docs/Web/API/BackgroundFetchRegistration/progress_event">progress</see> event is fired at the associated <see cref="BackgroundFetchRegistration."/> object.</para>
+<para>If the value of this property changes, the <see href="https://developer.mozilla.org/en-US/docs/Web/API/BackgroundFetchRegistration/progress_event">progress</see> event is fired at the associated <see cref="BackgroundFetchRegistration"/> object.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BackgroundFetchRegistration/result"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>One of the following strings:</value>

@@ -1,7 +1,7 @@
 <docs>
 <NavigatorDeviceMemory>
 <summary>
-The <strong><c>deviceMemory</c></strong> read-only<br/>property of the <see cref="Navigator."/> interface returns the approximate amount of<br/>device memory in gigabytes.
+The <strong><c>deviceMemory</c></strong> read-only<br/>property of the <see cref="Navigator"/> interface returns the approximate amount of<br/>device memory in gigabytes.
 </summary>
 <remarks>
 <para>The reported value is imprecise to curtail <see href="https://developer.mozilla.org/en-US/docs/Glossary/fingerprinting">fingerprinting</see>. It's approximated by<br/>rounding down to the nearest power of 2, then dividing that number by 1024. It is then<br/>clamped within lower and upper bounds to protect the privacy of owners of very low-memory or<br/>high-memory devices.</para>

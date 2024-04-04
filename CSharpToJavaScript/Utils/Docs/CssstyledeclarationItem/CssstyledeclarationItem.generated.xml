@@ -1,7 +1,7 @@
 <docs>
 <CSSStyleDeclarationItem>
 <summary>
-The <c>CSSStyleDeclaration.item()</c><br/>method interface returns a CSS property name from a <see cref="'CSSStyleDeclaration'."/><br/>by index.
+The <c>CSSStyleDeclaration.item()</c><br/>method interface returns a CSS property name from a <see cref="'CSSStyleDeclaration'"/><br/>by index.
 </summary>
 <remarks>
 <para>This method doesn&amp;apos;t throw exceptions as long as you provide<br/>arguments; the empty string is returned if the index is out of range and a<br/><see cref="TypeError"/> is thrown if no argument is provided.</para>

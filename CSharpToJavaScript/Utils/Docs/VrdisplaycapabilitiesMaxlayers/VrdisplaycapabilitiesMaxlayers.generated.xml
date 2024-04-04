@@ -1,13 +1,13 @@
 <docs>
 <VRDisplayCapabilitiesMaxLayers>
 <summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>maxLayers</c></strong> read-only property of the <see cref="VRDisplayCapabilities."/> interface returns a number indicating the maximum number of <see cref="VRLayerInit."/>s that the VR display can present at once (e.g. the maximum length of the array that <see cref="VRDisplay.RequestPresent."/> can accept.)
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>maxLayers</c></strong> read-only property of the <see cref="VRDisplayCapabilities"/> interface returns a number indicating the maximum number of <see cref="VRLayerInit"/>s that the VR display can present at once (e.g. the maximum length of the array that <see cref="VRDisplay.RequestPresent"/> can accept.)
 </summary>
 <remarks>
 <blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This property was part of the old <see href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</see>. It has been superseded by the <see href="https://immersive-web.github.io/webxr/">WebXR Device API</see>.</para></blockquote>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API">WebVR API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VRDisplayCapabilities/maxLayers"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A number, which must be 1 if <see cref="VRDisplayCapabilities.CanPresent."/> is <c>true</c>, or 0 otherwise.</value>
+<value>A number, which must be 1 if <see cref="VRDisplayCapabilities.CanPresent"/> is <c>true</c>, or 0 otherwise.</value>
 </VRDisplayCapabilitiesMaxLayers>
 </docs>

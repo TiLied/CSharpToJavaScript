@@ -5,7 +5,7 @@ The <strong><c>Element.scrollLeft</c></strong> property gets or sets the number<
 </summary>
 <remarks>
 <para>If the element's <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/direction">direction</see> is <c>rtl</c> (right-to-left), then<br/><c>scrollLeft</c> is <c>0</c> when the scrollbar is at its rightmost<br/>position (at the start of the scrolled content), and then increasingly negative as you<br/>scroll towards the end of the content.</para><para>It can be specified as any integer value. However:</para><blockquote class="WARNING"><h5>WARNING</h5><para><strong>Warning:</strong> On systems using display scaling, <c>scrollLeft</c> may give you a decimal<br/>value.</para></blockquote>
-<para>-<see href="https://msdn.microsoft.com/library/hh781509(v=vs.85).aspx">MSDN&amp;apos;s Measuring Element Dimension and Location</see><br/>-<see cref="Element.ScrollTop."/><br/>-<see cref="Element.ScrollTo."/><br/></para>
+<para>-<see href="https://msdn.microsoft.com/library/hh781509(v=vs.85).aspx">MSDN&amp;apos;s Measuring Element Dimension and Location</see><br/>-<see cref="Element.ScrollTop"/><br/>-<see cref="Element.ScrollTo"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollLeft"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A number.</value>

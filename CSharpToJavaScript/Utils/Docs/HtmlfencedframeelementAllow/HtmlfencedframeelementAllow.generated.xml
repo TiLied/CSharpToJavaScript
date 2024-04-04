@@ -1,7 +1,7 @@
 <docs>
 <HTMLFencedFrameElementAllow>
 <summary>
-The <strong><c>allow</c></strong> property of the <see cref="HTMLFencedFrameElement."/> gets and sets the value of the corresponding {{htmlelement("fencedframe")}} <c>allow</c> attribute, which represents a <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Permissions_Policy">Permissions Policy</see> applied to the content when it is first embedded.
+The <strong><c>allow</c></strong> property of the <see cref="HTMLFencedFrameElement"/> gets and sets the value of the corresponding {{htmlelement("fencedframe")}} <c>allow</c> attribute, which represents a <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Permissions_Policy">Permissions Policy</see> applied to the content when it is first embedded.
 </summary>
 <remarks>
 <para>Not all permissions policies are allowed in fenced frames. The allowed permissions are listed at <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fencedframe#permissions_policies_available_to_fenced_frames">Permissions policies available to fenced frames</see> — these are required for fenced frame content originating from the specified APIs to load. If you don&amp;apos;t set the <c>allow</c> attribute, those permissions will be allowed by default. If you want to narrow down the permissions set, you need to make sure that all of the required permissions for the APIs you are using are set in the <c>allow</c> attribute.</para>

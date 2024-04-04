@@ -1,7 +1,7 @@
 <docs>
 <CSSRuleType>
 <summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The read-only <strong><c>type</c></strong> property of the<br/><see cref="CSSRule."/> interface is a deprecated property that returns an integer<br/>indicating which type of rule the <see cref="CSSRule."/> represents.
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The read-only <strong><c>type</c></strong> property of the<br/><see cref="CSSRule"/> interface is a deprecated property that returns an integer<br/>indicating which type of rule the <see cref="CSSRule"/> represents.
 </summary>
 <remarks>
 <para>If you need to distinguish different types of CSS rule, a good alternative is to use <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/name"><c>constructor.name</c></see>:</para>

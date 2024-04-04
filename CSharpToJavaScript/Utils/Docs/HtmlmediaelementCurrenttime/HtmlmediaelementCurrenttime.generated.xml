@@ -1,13 +1,13 @@
 <docs>
 <HTMLMediaElementCurrentTime>
 <summary>
-The <see cref="HTMLMediaElement."/> interface's<br/><strong><c>currentTime</c></strong> property specifies the current playback time<br/>in seconds.
+The <see cref="HTMLMediaElement"/> interface's<br/><strong><c>currentTime</c></strong> property specifies the current playback time<br/>in seconds.
 </summary>
 <remarks>
 <para>Changing the value of <c>currentTime</c> seeks the media to<br/>the new time.</para>
-<para>-<see cref="HTMLMediaElement."/>: Interface used to define the <c>HTMLMediaElement.currentTime</c> property<br/>-<see cref="HTMLMediaElement.FastSeek."/>: Another way to set the time<br/>-<see cref="HTMLMediaElement.Duration."/>: The duration of the media in seconds<br/></para>
+<para>-<see cref="HTMLMediaElement"/>: Interface used to define the <c>HTMLMediaElement.currentTime</c> property<br/>-<see cref="HTMLMediaElement.FastSeek"/>: Another way to set the time<br/>-<see cref="HTMLMediaElement.Duration"/>: The duration of the media in seconds<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/currentTime"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A double-precision floating-point value indicating the current playback time in<br/>seconds.If the media is not yet playing, the value of <c>currentTime</c> indicates the<br/>time position within the media at which playback will begin once the<br/><see cref="HTMLMediaElement.Play."/> method is called.Setting <c>currentTime</c> to a new value seeks the media to the given time, if<br/>the media is available.For media without a known duration—such as media being streamed live—it&amp;apos;s possible that<br/>the browser may not be able to obtain parts of the media that have expired from the<br/>media buffer. Also, media whose timeline doesn&amp;apos;t begin at 0 seconds cannot be seeked to<br/>a time before its timeline&amp;apos;s earliest time.The length of the media in seconds can be determined using the<br/><see cref="HTMLMediaElement.Duration."/> property.</value>
+<value>A double-precision floating-point value indicating the current playback time in<br/>seconds.If the media is not yet playing, the value of <c>currentTime</c> indicates the<br/>time position within the media at which playback will begin once the<br/><see cref="HTMLMediaElement.Play"/> method is called.Setting <c>currentTime</c> to a new value seeks the media to the given time, if<br/>the media is available.For media without a known duration—such as media being streamed live—it&amp;apos;s possible that<br/>the browser may not be able to obtain parts of the media that have expired from the<br/>media buffer. Also, media whose timeline doesn&amp;apos;t begin at 0 seconds cannot be seeked to<br/>a time before its timeline&amp;apos;s earliest time.The length of the media in seconds can be determined using the<br/><see cref="HTMLMediaElement.Duration"/> property.</value>
 </HTMLMediaElementCurrentTime>
 </docs>

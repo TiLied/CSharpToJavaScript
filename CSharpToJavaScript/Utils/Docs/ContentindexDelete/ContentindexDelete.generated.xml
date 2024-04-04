@@ -1,10 +1,10 @@
 <docs>
 <ContentIndexDelete>
 <summary>
-The <strong><c>delete()</c></strong> method of the<br/><see cref="ContentIndex."/> interface unregisters an item from the currently indexed<br/>content.
+The <strong><c>delete()</c></strong> method of the<br/><see cref="ContentIndex"/> interface unregisters an item from the currently indexed<br/>content.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Calling <c>delete()</c> only affects the index. It does not delete anything<br/>from the <see cref="'Cache'."/>.</para></blockquote>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Calling <c>delete()</c> only affects the index. It does not delete anything<br/>from the <see cref="'Cache'"/>.</para></blockquote>
 <para>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/content-indexing-api">An introductory article on the Content Index API</see><br/>-<see href="https://contentindex.dev/">An app which uses the Content Index API to list and remove &amp;apos;save for later&amp;apos; content</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">Service Worker API, along with information about Cache and CacheStorage</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ContentIndex/delete"> <em>See also on MDN</em> </seealso></para>
 </remarks>

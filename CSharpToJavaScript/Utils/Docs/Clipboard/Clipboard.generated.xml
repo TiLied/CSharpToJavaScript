@@ -4,8 +4,8 @@
 The <strong><c>Clipboard</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API">Clipboard API</see> provides read and write access to the contents of the system clipboard.<br/>This allows a web application to implement cut, copy, and paste features.
 </summary>
 <remarks>
-<para></para><para>The system clipboard is exposed through the global <see cref="Navigator.Clipboard."/> property.</para><para>All of the Clipboard API methods operate asynchronously; they return a <see cref="Promise"/> which is resolved once the clipboard access has been completed.<br/>The promise is rejected if clipboard access is denied.</para><para>All the methods require a <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts">secure context</see>.<br/>Additional requirements for using the API are discussed in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API#security_considerations">Security consideration</see> section of the API overview topic.</para>
-<para>-<see cref="Document.ExecCommand."/><br/></para>
+<para></para><para>The system clipboard is exposed through the global <see cref="Navigator.Clipboard"/> property.</para><para>All of the Clipboard API methods operate asynchronously; they return a <see cref="Promise"/> which is resolved once the clipboard access has been completed.<br/>The promise is rejected if clipboard access is denied.</para><para>All the methods require a <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts">secure context</see>.<br/>Additional requirements for using the API are discussed in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API#security_considerations">Security consideration</see> section of the API overview topic.</para>
+<para>-<see cref="Document.ExecCommand"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </Clipboard>

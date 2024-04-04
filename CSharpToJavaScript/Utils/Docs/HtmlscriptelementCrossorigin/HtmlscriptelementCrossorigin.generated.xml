@@ -1,10 +1,10 @@
 <docs>
 <HTMLScriptElementCrossOrigin>
 <summary>
-The <strong><c>crossOrigin</c></strong> property of the <see cref="HTMLScriptElement."/> interface reflects the {{Glossary("CORS", "Cross-Origin Resource Sharing")}} settings for the script element. For classic scripts from other <see href="https://developer.mozilla.org/en-US/docs/Glossary/Origin">origins</see>, this controls if full error information will be exposed. For module scripts, it controls the script itself and any script it imports. See <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/crossorigin">CORS settings attributes</see> for details.
+The <strong><c>crossOrigin</c></strong> property of the <see cref="HTMLScriptElement"/> interface reflects the {{Glossary("CORS", "Cross-Origin Resource Sharing")}} settings for the script element. For classic scripts from other <see href="https://developer.mozilla.org/en-US/docs/Glossary/Origin">origins</see>, this controls if full error information will be exposed. For module scripts, it controls the script itself and any script it imports. See <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/crossorigin">CORS settings attributes</see> for details.
 </summary>
 <remarks>
-<para>-<see cref="HTMLImageElement.CrossOrigin."/><br/>-<see cref="HTMLLinkElement.CrossOrigin."/><br/>-<see cref="HTMLMediaElement.CrossOrigin."/><br/></para>
+<para>-<see cref="HTMLImageElement.CrossOrigin"/><br/>-<see cref="HTMLLinkElement.CrossOrigin"/><br/>-<see cref="HTMLMediaElement.CrossOrigin"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLScriptElement/crossOrigin"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A string of a keyword specifying the CORS mode to use when fetching the resource. Possible values are:If the <c>crossOrigin</c> property is specified with any other value, it is the same as specifing it as the <c>anonymous</c>.If the <c>crossOrigin</c> property is not specified, the resource is fetched without CORS (the <c>no-cors</c> {{domxref(&amp;quot;Request.mode&amp;quot;, &amp;quot;mode&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} and the <c>same-origin</c> {{domxref(&amp;quot;Request.credentials&amp;quot;, &amp;quot;credentials&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} mode).</value>

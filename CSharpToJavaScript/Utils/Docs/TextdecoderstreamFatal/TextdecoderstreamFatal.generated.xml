@@ -1,7 +1,7 @@
 <docs>
 <TextDecoderStreamFatal>
 <summary>
-The <strong><c>fatal</c></strong> read-only property of the <see cref="TextDecoderStream."/> interface is a {{jsxref("boolean")}} indicating if the error mode of the <c>TextDecoderStream</c> object is set to <c>fatal</c>.
+The <strong><c>fatal</c></strong> read-only property of the <see cref="TextDecoderStream"/> interface is a {{jsxref("boolean")}} indicating if the error mode of the <c>TextDecoderStream</c> object is set to <c>fatal</c>.
 </summary>
 <remarks>
 <para>If the property is <c>true</c> then a decoder will throw a <see cref="TypeError"/> if it encounters malformed data while decoding.<br/>If <c>false</c> the decoder will substitute the invalid data with the replacement character <c>U+FFFD</c> (�).<br/>The value of the property is set in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoderStream/TextDecoderStream"><c>TextDecoderStream()</c> constructor</see>.</para>

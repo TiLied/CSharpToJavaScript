@@ -1,10 +1,10 @@
 <docs>
 <DeviceMotionEventInterval>
 <summary>
-The <strong><c>interval</c></strong> read-only property of the <see cref="DeviceMotionEvent."/> interface returns the interval, in milliseconds, at which data is obtained from the underlying<br/>hardware. You can use this to determine the granularity of motion events.
+The <strong><c>interval</c></strong> read-only property of the <see cref="DeviceMotionEvent"/> interface returns the interval, in milliseconds, at which data is obtained from the underlying<br/>hardware. You can use this to determine the granularity of motion events.
 </summary>
 <remarks>
-<para>-{{domxref(&amp;quot;Device orientation events/Detecting device orientation&amp;quot;, &amp;quot;Detecting device orientation&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-{{domxref(&amp;quot;Device orientation events/Orientation and motion data explained&amp;quot;, &amp;quot;Orientation and motion data explained&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see cref="Window/devicemotion_event."/> event<br/></para>
+<para>-{{domxref(&amp;quot;Device orientation events/Detecting device orientation&amp;quot;, &amp;quot;Detecting device orientation&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-{{domxref(&amp;quot;Device orientation events/Orientation and motion data explained&amp;quot;, &amp;quot;Orientation and motion data explained&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see cref="Window/devicemotion_event"/> event<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEvent/interval"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A number representing the interval of time, in milliseconds.</value>

@@ -1,7 +1,7 @@
 <docs>
 <WebTransportSendStreamSendOrder>
 <summary>
-The <strong><c>sendOrder</c></strong> property of the <see cref="WebTransportSendStream."/> interface indicates the send priority of this stream relative to other streams for which the value has been set.
+The <strong><c>sendOrder</c></strong> property of the <see cref="WebTransportSendStream"/> interface indicates the send priority of this stream relative to other streams for which the value has been set.
 </summary>
 <remarks>
 <para>Queued bytes are sent first for streams that have a higher value.<br/>If not set, the send order depends on the implementation.</para>

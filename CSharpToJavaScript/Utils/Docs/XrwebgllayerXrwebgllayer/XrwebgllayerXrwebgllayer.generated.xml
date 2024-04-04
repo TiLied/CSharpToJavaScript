@@ -1,12 +1,12 @@
 <docs>
 <XRWebGLLayerXRWebGLLayer>
 <summary>
-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</see> <strong><c>XRWebGLLayer()</c></strong> constructor creates and<br/>returns a new <see cref="XRWebGLLayer."/> object, providing the linkage between the<br/>WebXR device and the WebGL graphics layer used to render the 3D scene.
+The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</see> <strong><c>XRWebGLLayer()</c></strong> constructor creates and<br/>returns a new <see cref="XRWebGLLayer"/> object, providing the linkage between the<br/>WebXR device and the WebGL graphics layer used to render the 3D scene.
 </summary>
 <remarks>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL">Getting started with WebGL</see><br/>-<see href="https://www.khronos.org/webgl/wiki/HandlingContextLost">Handling lost context in WebGL</see>: Khronos WebGL wiki<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/XRWebGLLayer"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A newly-created <see cref="XRWebGLLayer."/> which links the specified<br/><see cref="XRSession."/> to the WebGL context given by <c>context</c>, which will<br/>be used as the renderer for the session. Any options specified in <c>layerInit</c><br/>are used to tailor the rendering system&amp;apos;s configuration.</returns>
+<returns>A newly-created <see cref="XRWebGLLayer"/> which links the specified<br/><see cref="XRSession"/> to the WebGL context given by <c>context</c>, which will<br/>be used as the renderer for the session. Any options specified in <c>layerInit</c><br/>are used to tailor the rendering system&amp;apos;s configuration.</returns>
 </XRWebGLLayerXRWebGLLayer>
 </docs>

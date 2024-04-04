@@ -1,7 +1,7 @@
 <docs>
 <CSSContainerRuleContainerQuery>
 <summary>
-The read-only <strong><c>containerQuery</c></strong> property of the <see cref="CSSContainerRule."/> interface returns a string representing the container conditions that are evaluated when the container changes size in order to determine if the styles in the associated {{cssxref("@container")}} are applied.
+The read-only <strong><c>containerQuery</c></strong> property of the <see cref="CSSContainerRule"/> interface returns a string representing the container conditions that are evaluated when the container changes size in order to determine if the styles in the associated {{cssxref("@container")}} are applied.
 </summary>
 <remarks>
 <para>For example, the value of <c>containerQuery</c> for the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@container">@container</see> below is <c>(min-width: 700px)</c>:</para>

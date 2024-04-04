@@ -1,12 +1,12 @@
 <docs>
 <TrustedTypePolicyFactoryIsScriptURL>
 <summary>
-The <strong><c>isScriptURL()</c></strong> method of the <see cref="TrustedTypePolicyFactory."/> interface returns true if it is passed a valid <see cref="TrustedScriptURL."/> object.
+The <strong><c>isScriptURL()</c></strong> method of the <see cref="TrustedTypePolicyFactory"/> interface returns true if it is passed a valid <see cref="TrustedScriptURL"/> object.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> The purpose of the functions <c>isScriptURL()</c>, <see cref="TrustedTypePolicyFactory.IsHTML."/>, and <see cref="TrustedTypePolicyFactory.IsScript."/> is to check if the object is a valid TrustedType object, created by a configured policy.</para></blockquote>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> The purpose of the functions <c>isScriptURL()</c>, <see cref="TrustedTypePolicyFactory.IsHTML"/>, and <see cref="TrustedTypePolicyFactory.IsScript"/> is to check if the object is a valid TrustedType object, created by a configured policy.</para></blockquote>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TrustedTypePolicyFactory/isScriptURL"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A {{jsxref("boolean")}}that is true if the object is a valid <see cref="TrustedScriptURL."/> object.</returns>
+<returns>A {{jsxref("boolean")}}that is true if the object is a valid <see cref="TrustedScriptURL"/> object.</returns>
 </TrustedTypePolicyFactoryIsScriptURL>
 </docs>

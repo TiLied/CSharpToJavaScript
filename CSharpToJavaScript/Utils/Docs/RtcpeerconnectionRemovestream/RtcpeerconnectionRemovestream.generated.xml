@@ -1,11 +1,11 @@
 <docs>
 <RTCPeerConnectionRemoveStream>
 <summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>removeStream()</c></strong> method of the <see cref="RTCPeerConnection."/> interface removes a <see cref="MediaStream."/> as a local source of audio or video.<br/>If the negotiation already happened, a new one will be needed for the remote peer to be able to use it.<br/>Because this method has been deprecated, you should instead use <see cref="RTCPeerConnection.RemoveTrack."/> if your target browser versions have implemented it.
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>removeStream()</c></strong> method of the <see cref="RTCPeerConnection"/> interface removes a <see cref="MediaStream"/> as a local source of audio or video.<br/>If the negotiation already happened, a new one will be needed for the remote peer to be able to use it.<br/>Because this method has been deprecated, you should instead use <see cref="RTCPeerConnection.RemoveTrack"/> if your target browser versions have implemented it.
 </summary>
 <remarks>
-<para>If the <see cref="RTCPeerConnection.SignalingState."/> is set to <c>&amp;quot;closed&amp;quot;</c>, an <c>InvalidStateError</c> is raised.<br/>If the <see cref="RTCPeerConnection.SignalingState."/> is set to <c>&amp;quot;stable&amp;quot;</c>, the event <see cref="RTCPeerConnection/negotiationneeded_event."/> is sent on the <see cref="RTCPeerConnection."/>.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/>-<see cref="RTCPeerConnection.RemoveTrack."/><br/>-<see cref="RTCPeerConnection.AddTrack."/><br/>-<see cref="RTCPeerConnection.AddStream."/><br/></para>
+<para>If the <see cref="RTCPeerConnection.SignalingState"/> is set to <c>&amp;quot;closed&amp;quot;</c>, an <c>InvalidStateError</c> is raised.<br/>If the <see cref="RTCPeerConnection.SignalingState"/> is set to <c>&amp;quot;stable&amp;quot;</c>, the event <see cref="RTCPeerConnection/negotiationneeded_event"/> is sent on the <see cref="RTCPeerConnection"/>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/>-<see cref="RTCPeerConnection.RemoveTrack"/><br/>-<see cref="RTCPeerConnection.AddTrack"/><br/>-<see cref="RTCPeerConnection.AddStream"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/removeStream"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns><see cref="Undefined"/>.</returns>

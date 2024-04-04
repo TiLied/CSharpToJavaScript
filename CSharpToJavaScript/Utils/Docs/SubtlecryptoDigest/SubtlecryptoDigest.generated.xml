@@ -1,7 +1,7 @@
 <docs>
 <SubtleCryptoDigest>
 <summary>
-The <strong><c>digest()</c></strong> method of the <see cref="SubtleCrypto."/><br/>interface generates a <see href="https://developer.mozilla.org/en-US/docs/Glossary/digest">digest</see> of the given data. A digest is a short<br/>fixed-length value derived from some variable-length input. Cryptographic digests should<br/>exhibit collision-resistance, meaning that it&amp;apos;s hard to come up with two different<br/>inputs that have the same digest value.
+The <strong><c>digest()</c></strong> method of the <see cref="SubtleCrypto"/><br/>interface generates a <see href="https://developer.mozilla.org/en-US/docs/Glossary/digest">digest</see> of the given data. A digest is a short<br/>fixed-length value derived from some variable-length input. Cryptographic digests should<br/>exhibit collision-resistance, meaning that it&amp;apos;s hard to come up with two different<br/>inputs that have the same digest value.
 </summary>
 <remarks>
 <para>It takes as its arguments an identifier for the digest algorithm to use and the data to<br/>digest. It returns a <see cref="Promise"/> which will be fulfilled with the digest.</para><para>Note that this API does not support streaming input: you must read the entire input into memory before passing it into the digest function.</para>

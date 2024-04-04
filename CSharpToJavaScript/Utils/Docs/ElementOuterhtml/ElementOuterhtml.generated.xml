@@ -1,11 +1,11 @@
 <docs>
 <ElementOuterHTML>
 <summary>
-The <strong><c>outerHTML</c></strong> attribute of the <see cref="Element."/><br/>DOM interface gets the serialized HTML fragment describing the element including its<br/>descendants. It can also be set to replace the element with nodes parsed from the given<br/>string.
+The <strong><c>outerHTML</c></strong> attribute of the <see cref="Element"/><br/>DOM interface gets the serialized HTML fragment describing the element including its<br/>descendants. It can also be set to replace the element with nodes parsed from the given<br/>string.
 </summary>
 <remarks>
-<para>To only obtain the HTML representation of the contents of an element, or to replace the<br/>contents of an element, use the <see cref="Element.InnerHTML."/> property<br/>instead.</para>
-<para>-Serializing DOM trees into XML strings: <see cref="XMLSerializer."/><br/>-Parsing XML or HTML into DOM trees: <see cref="DOMParser."/><br/>-<see cref="HTMLElement.OuterText."/><br/></para>
+<para>To only obtain the HTML representation of the contents of an element, or to replace the<br/>contents of an element, use the <see cref="Element.InnerHTML"/> property<br/>instead.</para>
+<para>-Serializing DOM trees into XML strings: <see cref="XMLSerializer"/><br/>-Parsing XML or HTML into DOM trees: <see cref="DOMParser"/><br/>-<see cref="HTMLElement.OuterText"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/outerHTML"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>Reading the value of <c>outerHTML</c> returns a string<br/>containing an HTML serialization of the <c>element</c> and its descendants.<br/>Setting the value of <c>outerHTML</c> replaces the element and all of its<br/>descendants with a new DOM tree constructed by parsing the specified<br/><c>htmlString</c>.</value>

@@ -1,7 +1,7 @@
 <docs>
 <AudioParamExponentialRampToValueAtTime>
 <summary>
-The <strong><c>exponentialRampToValueAtTime()</c></strong> method of the <see cref="AudioParam."/> Interface schedules a gradual exponential change in the value of the <see cref="AudioParam."/>.<br/>The change starts at the time specified for the <strong>previous</strong> event, follows an exponential ramp to the new value given in the <c>value</c> parameter, and reaches the new value at the time given in the<br/><c>endTime</c> parameter.
+The <strong><c>exponentialRampToValueAtTime()</c></strong> method of the <see cref="AudioParam"/> Interface schedules a gradual exponential change in the value of the <see cref="AudioParam"/>.<br/>The change starts at the time specified for the <strong>previous</strong> event, follows an exponential ramp to the new value given in the <c>value</c> parameter, and reaches the new value at the time given in the<br/><c>endTime</c> parameter.
 </summary>
 <remarks>
 <blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Exponential ramps are considered more useful when changing<br/>frequencies or playback rates than linear ramps because of the way the human ear<br/>works.</para></blockquote>

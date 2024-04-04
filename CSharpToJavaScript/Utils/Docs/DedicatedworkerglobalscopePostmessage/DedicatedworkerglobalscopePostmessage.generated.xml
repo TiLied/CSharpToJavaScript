@@ -1,11 +1,11 @@
 <docs>
 <DedicatedWorkerGlobalScopePostMessage>
 <summary>
-The <strong><c>postMessage()</c></strong> method of the <see cref="DedicatedWorkerGlobalScope."/> interface sends a message to the main thread that spawned it.
+The <strong><c>postMessage()</c></strong> method of the <see cref="DedicatedWorkerGlobalScope"/> interface sends a message to the main thread that spawned it.
 </summary>
 <remarks>
-<para>This accepts a data parameter, which contains data to copy from the worker to the main thread.<br/>The data may be any value or JavaScript object handled by the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">structured clone</see> algorithm, which includes cyclical references.</para><para>The method also accepts an optional array of <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Transferable_objects">transferable objects</see> to <strong>transfer</strong> to the main thread;<br/>Unlike the data parameter transferred objects are no longer usable in the worker thread.<br/>(Where possible, objects are transferred using a high performance zero-copy operation).</para><para>The main scope that spawned the worker can send back information to the thread that spawned it using the <see cref="Worker.PostMessage."/> method.</para>
-<para>The <see cref="DedicatedWorkerGlobalScope."/> interface it belongs to.</para>
+<para>This accepts a data parameter, which contains data to copy from the worker to the main thread.<br/>The data may be any value or JavaScript object handled by the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">structured clone</see> algorithm, which includes cyclical references.</para><para>The method also accepts an optional array of <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Transferable_objects">transferable objects</see> to <strong>transfer</strong> to the main thread;<br/>Unlike the data parameter transferred objects are no longer usable in the worker thread.<br/>(Where possible, objects are transferred using a high performance zero-copy operation).</para><para>The main scope that spawned the worker can send back information to the thread that spawned it using the <see cref="Worker.PostMessage"/> method.</para>
+<para>The <see cref="DedicatedWorkerGlobalScope"/> interface it belongs to.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DedicatedWorkerGlobalScope/postMessage"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>

@@ -1,11 +1,11 @@
 <docs>
 <PerformanceTimingRedirectStart>
 <summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="WARNING"><h5>WARNING</h5><strong>Warning:</strong> This interface of this property is deprecated in the <see href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</see>. Please use the <see cref="PerformanceNavigationTiming."/><br/>interface instead.</blockquote>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="WARNING"><h5>WARNING</h5><strong>Warning:</strong> This interface of this property is deprecated in the <see href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</see>. Please use the <see cref="PerformanceNavigationTiming"/><br/>interface instead.</blockquote>
 </summary>
 <remarks>
 <para>The legacy<br/><strong><c>PerformanceTiming.redirectStart</c></strong><br/>read-only property returns an <c>unsigned long long</c> representing the moment,<br/>in milliseconds since the UNIX epoch, the first HTTP redirect starts. If there is no<br/>redirect, or if one of the redirect is not of the same origin, the value returned is<br/><c>0</c>.</para>
-<para>-The <see cref="PerformanceTiming."/> interface it belongs to.<br/></para>
+<para>-The <see cref="PerformanceTiming"/> interface it belongs to.<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming/redirectStart"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>An <c>unsigned long long</c>.</value>

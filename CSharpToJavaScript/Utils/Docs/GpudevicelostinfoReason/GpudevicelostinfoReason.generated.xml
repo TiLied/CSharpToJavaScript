@@ -1,12 +1,12 @@
 <docs>
 <GPUDeviceLostInfoReason>
 <summary>
-The <strong><c>reason</c></strong> read-only property of the<br/><see cref="GPUDeviceLostInfo."/> interface defines the reason the device was lost in a machine-readable way.
+The <strong><c>reason</c></strong> read-only property of the<br/><see cref="GPUDeviceLostInfo"/> interface defines the reason the device was lost in a machine-readable way.
 </summary>
 <remarks>
 <para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUDeviceLostInfo/reason"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An enumerated value. At the moment the only value defined in the spec is <c>&amp;quot;destroyed&amp;quot;</c>, which indicates that the device was destroyed by a call to <see cref="GPUDevice.Destroy."/>.If the device was lost because of an unknown reason not covered in the available enumerated values, <c>reason</c> returns <c>undefined</c>.</value>
+<value>An enumerated value. At the moment the only value defined in the spec is <c>&amp;quot;destroyed&amp;quot;</c>, which indicates that the device was destroyed by a call to <see cref="GPUDevice.Destroy"/>.If the device was lost because of an unknown reason not covered in the available enumerated values, <c>reason</c> returns <c>undefined</c>.</value>
 </GPUDeviceLostInfoReason>
 </docs>

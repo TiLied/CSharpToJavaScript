@@ -1,7 +1,7 @@
 <docs>
 <ElementAriaBrailleRoleDescription>
 <summary>
-The <strong><c>ariaBrailleRoleDescription</c></strong> property of the <see cref="Element."/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-brailleroledescription"><c>aria-brailleroledescription</c></see> attribute, which defines the ARIA braille role description of the element.
+The <strong><c>ariaBrailleRoleDescription</c></strong> property of the <see cref="Element"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-brailleroledescription"><c>aria-brailleroledescription</c></see> attribute, which defines the ARIA braille role description of the element.
 </summary>
 <remarks>
 <para>This property may be used to provide an abbreviated version of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription"><c>aria-roledescription</c></see> value.<br/>It should only be used if <c>aria-roledescription</c> is present and in the rare case where it is is too verbose for braille.<br/>The <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-brailleroledescription"><c>aria-brailleroledescription</c></see> contains additional information about when the property should be set.</para>

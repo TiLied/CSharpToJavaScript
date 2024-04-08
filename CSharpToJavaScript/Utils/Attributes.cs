@@ -8,15 +8,21 @@ namespace CSharpToJavaScript.Utils
 	{
 		public IgnoreAttribute() { }
 	}
-	[AttributeUsage(AttributeTargets.Class)]
+
+	[AttributeUsage(AttributeTargets.All)]
 	internal class ValueAttribute : Attribute
 	{
-		public ValueAttribute() { }
+		public string Value { get; init; }
+		public ValueAttribute(string value) 
+		{
+			Value = value;
+		}
 	}
 
 	[AttributeUsage(AttributeTargets.All)]
 	public class ToAttribute : Attribute
 	{
+		public const string None = "None";
 		public const string Default = "Default";
 		public const string ToLower = "ToLower";
 		public const string FirstCharToLowerCase = "FirstCharToLowerCase";
@@ -35,6 +41,8 @@ namespace CSharpToJavaScript.Utils
 					return str.ToLower();
 				case FirstCharToLowerCase: 
 					return str.FirstCharToLowerCase();
+				case None:
+					return "";
 				case Default:
 				default: 
 					return str;

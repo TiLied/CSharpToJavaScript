@@ -979,6 +979,7 @@ namespace CSharpToJavaScript
 					{
 						case SyntaxKind.ReadOnlyKeyword:
 							break;
+						case SyntaxKind.StaticKeyword:
 						case SyntaxKind.SemicolonToken:
 							VisitToken(asToken);
 							break;
@@ -1809,6 +1810,7 @@ namespace CSharpToJavaScript
 
 					switch (kind)
 					{
+						case SyntaxKind.NullableType:
 						case SyntaxKind.PredefinedType:
 							break;
 						case SyntaxKind.InvocationExpression:

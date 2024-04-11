@@ -4,7 +4,7 @@ This is a personal project with the goal of learning and understanding c# and js
 
 [Nuget package](https://www.nuget.org/packages/CSharpToJavaScript/)  | [Website](https://tilied.github.io/CSTOJS_Pages/) | [Try it online!](https://tilied.github.io/CSTOJS_Pages/BWA/) | [CLI](https://github.com/TiLied/CSTOJS_CLI) | [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=tilied.cstojs-vscode-ext) | [VS Extension](https://marketplace.visualstudio.com/items?itemName=tilied.cstojs-vs-ext)
 
-### C#
+### C# input
 ```csharp
 namespace ConsoleAppTest.CSharp;
 
@@ -16,7 +16,7 @@ public class Test
 	}
 }
 ```
-### Javascript
+### Javascript output
 ```javascript
 class Test
 {
@@ -59,8 +59,8 @@ public class Program
 CSharp/Test.cs
 ```csharp
 using static CSharpToJavaScript.APIs.JS.GlobalObject;
-
 namespace ConsoleAppTest.CSharp;
+
 public class Test
 {
 	public Test()

@@ -1716,6 +1716,7 @@ namespace CSharpToJavaScript
 
 					switch (kind)
 					{
+						case SyntaxKind.PredefinedType:
 						case SyntaxKind.IdentifierName: 
 							{
 								JSSB.Append("Array");
@@ -1759,6 +1760,7 @@ namespace CSharpToJavaScript
 
 					switch (kind)
 					{
+						case SyntaxKind.NumericLiteralExpression:
 						case SyntaxKind.DivideExpression:
 							Visit(asNode);
 							break;
@@ -2750,6 +2752,8 @@ namespace CSharpToJavaScript
 									return true;
 								}
 
+								//Todo? Delete this
+								/*
 								DataFlowAnalysis _dfa = _Model.AnalyzeDataFlow(node);
 
 								if (_dfa.Succeeded == false)
@@ -2768,7 +2772,7 @@ namespace CSharpToJavaScript
 
 										return true;
 									}
-								}
+								}*/
 							}
 						}
 					}

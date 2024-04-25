@@ -258,6 +258,7 @@ namespace CSharpToJavaScript
 
 					switch (kind)
 					{
+ 						case SyntaxKind.PartialKeyword:
 						case SyntaxKind.StaticKeyword:
 							break;
 						case SyntaxKind.InternalKeyword:
@@ -2646,49 +2647,6 @@ namespace CSharpToJavaScript
 					{
 						return false;
 					}
-					/*
-					if (iSymbol.DeclaringSyntaxReferences.Length >= 0) 
-					{
-						if (_UsedThis == false)
-						{
-							_UsedThis = true;
-
-							VisitLeadingTrivia(identifier);
-
-							JSSB.Append($"this.");
-							VisitToken(identifier.WithoutTrivia());
-
-							VisitTrailingTrivia(identifier);
-
-							return true;
-						}
-					}
-										
-					IEnumerable<SyntaxNode?> _all = from e in node.Parent.ChildNodes()
-													where e.IsKind(SyntaxKind.IdentifierName)
-													select e;
-
-					if (!_all.Any()) 
-					{
-						_all = from e in node.Parent.ChildNodes()
-							   where e.IsKind(SyntaxKind.GenericName)
-							   select e;
-					}
-
-					SymbolInfo _symbolInfo = _Model.GetSymbolInfo(_all.First());
-					ISymbol? _iSymbol = null;
-
-					if (_symbolInfo.CandidateSymbols.Length >= 1)
-						_iSymbol = _symbolInfo.CandidateSymbols[0];
-					else
-						_iSymbol = _symbolInfo.Symbol;
-
-					if (_iSymbol != null && _iSymbol.Kind == SymbolKind.Local)
-					{
-						//TODO! TEST THIS!
-						//DO NOT REMOVE BREAKPOINT TEST THIS!
-						//return false;
-					}*/
 
 					ClassDeclarationSyntax _class = (ClassDeclarationSyntax)node.Ancestors().FirstOrDefault(n => n.IsKind(SyntaxKind.ClassDeclaration));
 
@@ -2751,28 +2709,6 @@ namespace CSharpToJavaScript
 
 									return true;
 								}
-
-								//Todo? Delete this
-								/*
-								DataFlowAnalysis _dfa = _Model.AnalyzeDataFlow(node);
-
-								if (_dfa.Succeeded == false)
-									_dfa = _Model.AnalyzeDataFlow(node.Parent);
-
-								if (_dfa.Succeeded == true)
-								{
-									if (_dfa.WrittenOutside[0].Name == "this" || iSymbol.IsStatic)
-									{
-										VisitLeadingTrivia(identifier);
-
-										JSSB.Append($"this.");
-										VisitToken(identifier.WithoutTrivia());
-
-										VisitTrailingTrivia(identifier);
-
-										return true;
-									}
-								}*/
 							}
 						}
 					}

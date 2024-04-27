@@ -1,7 +1,7 @@
 <docs>
 <HighlightRegistry>
 <summary>
-The <strong><c>HighlightRegistry</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Custom_Highlight_API">CSS Custom Highlight API</see> is used to register <see cref="Highlight"/> objects to be styled using the API.<br/>It is accessed via <see cref="CSS.Highlights_static"/>.
+The <strong><c>HighlightRegistry</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Custom_Highlight_API">CSS Custom Highlight API</see> is used to register <see cref="Highlight"/> objects to be styled using the API.<br/>It is accessed via <see cref="CSS.Highlights"/>.
 </summary>
 <remarks>
 <para>A <c>HighlightRegistry</c> instance is a <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map#map-like_browser_apis"><c>Map</c>-like object</see>, in which each key is the name string for a custom highlight, and the corresponding value is the associated <see cref="Highlight"/> object.</para><para></para>

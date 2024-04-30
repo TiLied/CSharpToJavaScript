@@ -230,6 +230,8 @@ namespace CSharpToJavaScript
 
 					switch (kind)
 					{
+						case SyntaxKind.AttributeList:
+							break;
 						case SyntaxKind.TypeParameterList:
 							{
 								SyntaxTriviaList _syntaxTrivias = asNode.GetTrailingTrivia();
@@ -296,6 +298,8 @@ namespace CSharpToJavaScript
 
 					switch (kind)
 					{
+						case SyntaxKind.AttributeList:
+							break;
 						case SyntaxKind.BaseConstructorInitializer:
 							_BaseConstructorInitializerNode = asNode;
 							SyntaxTriviaList _syntaxTrivias = asNode.GetTrailingTrivia();
@@ -917,6 +921,7 @@ namespace CSharpToJavaScript
 
 					switch (kind)
 					{
+						case SyntaxKind.AttributeList:
 						case SyntaxKind.GenericName:
 						case SyntaxKind.PredefinedType:
 							break;
@@ -970,6 +975,8 @@ namespace CSharpToJavaScript
 
 					switch (kind)
 					{
+						case SyntaxKind.AttributeList:
+							break;
 						case SyntaxKind.VariableDeclaration:
 							Visit(asNode);
 							break;
@@ -1111,6 +1118,7 @@ namespace CSharpToJavaScript
 					{
 						//TODO "EqualsValueClause" default value
 						case SyntaxKind.EqualsValueClause:
+						case SyntaxKind.AttributeList:
 						case SyntaxKind.PredefinedType:
 						case SyntaxKind.IdentifierName:
 						case SyntaxKind.GenericName:

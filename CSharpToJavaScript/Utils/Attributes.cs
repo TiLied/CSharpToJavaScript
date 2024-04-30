@@ -10,7 +10,7 @@ namespace CSharpToJavaScript.Utils
 	}
 
 	[AttributeUsage(AttributeTargets.All)]
-	internal class ValueAttribute : Attribute
+	public class ValueAttribute : Attribute
 	{
 		public string Value { get; init; }
 		public ValueAttribute(string value) 

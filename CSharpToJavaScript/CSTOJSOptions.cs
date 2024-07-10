@@ -64,7 +64,7 @@ namespace CSharpToJavaScript
 		public bool KeepBraceOnTheSameLine { get; set; } = false;
 
 		/// <summary>
-		/// Self-explanatory, Normalize Whitespace. />
+		/// Self-explanatory, Normalize Whitespace.
 		/// </summary>
 		/// <remarks>
 		/// <blockquote class="NOTE"><h5>NOTE</h5><para>Note: If using with <see cref="CSTOJSOptions.KeepBraceOnTheSameLine" />. Normalization running before <see cref="CSTOJSOptions.KeepBraceOnTheSameLine" />.</para></blockquote>

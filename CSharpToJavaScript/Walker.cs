@@ -11,8 +11,9 @@ using System.Text;
 
 namespace CSharpToJavaScript
 {
-	//TODO maybe...
-	//https://learn.microsoft.com/en-us/dotnet/csharp/roslyn-sdk/get-started/syntax-transformation
+	//Useful links:
+	//https://learn.microsoft.com/en-us/dotnet/csharp/roslyn-sdk/get-started/syntax-analysis
+	//https://roslynquoter.azurewebsites.net/
 	//
 
 	internal class Walker : CSharpSyntaxWalker, ILog
@@ -301,13 +302,15 @@ namespace CSharpToJavaScript
 						case SyntaxKind.AttributeList:
 							break;
 						case SyntaxKind.BaseConstructorInitializer:
-							_BaseConstructorInitializerNode = asNode;
-							SyntaxTriviaList _syntaxTrivias = asNode.GetTrailingTrivia();
-							for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
 							{
-								VisitTrivia(_syntaxTrivias[_i]);
+								_BaseConstructorInitializerNode = asNode;
+								SyntaxTriviaList _syntaxTrivias = asNode.GetTrailingTrivia();
+								for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
+								{
+									VisitTrivia(_syntaxTrivias[_i]);
+								}
+								break;
 							}
-							break;
 						case SyntaxKind.ParameterList:
 						case SyntaxKind.Block:
 							Visit(asNode);
@@ -500,10 +503,9 @@ namespace CSharpToJavaScript
 					switch (kind)
 					{
 						case SyntaxKind.CloseBraceToken: 
-							{
-								VisitToken(asToken);
-								break;
-							}
+							VisitToken(asToken);
+							break;
+
 						case SyntaxKind.OpenBraceToken: 
 							{
 								VisitToken(asToken);
@@ -527,6 +529,13 @@ namespace CSharpToJavaScript
 							break;
 					}
 				}
+				
+				if (_Options.Debug)
+				{
+					JSSB.Append("/*");
+					JSSB.Append(nodesAndTokens[i].ToFullString().Replace("*/", ""));
+					JSSB.Append("*/");
+				}
 			}
 		}
 
@@ -545,10 +554,8 @@ namespace CSharpToJavaScript
 					switch (kind)
 					{
 						case SyntaxKind.VariableDeclaration: 
-							{
-								VisitVariableDeclaration(asNode as VariableDeclarationSyntax);
-								break;
-							}
+							VisitVariableDeclaration(asNode as VariableDeclarationSyntax);
+							break;
 						default:
 							_Log.ErrorLine($"asNode : {kind}");
 							break;
@@ -568,10 +575,8 @@ namespace CSharpToJavaScript
 								break;
 							}
 						case SyntaxKind.SemicolonToken:
-							{
-								VisitToken(asToken);
-								break;
-							}
+							VisitToken(asToken);
+							break;
 						default:
 							_Log.ErrorLine($"asToken : {kind}");
 							break;
@@ -611,10 +616,8 @@ namespace CSharpToJavaScript
 						case SyntaxKind.MultiplyAssignmentExpression:
 						case SyntaxKind.DivideAssignmentExpression:
 						case SyntaxKind.AwaitExpression:
-							{
-								Visit(asNode);
-								break;
-							}
+							Visit(asNode);
+							break;
 						default:
 							_Log.ErrorLine($"asNode : {kind}");
 							break;
@@ -628,10 +631,8 @@ namespace CSharpToJavaScript
 					switch (kind)
 					{
 						case SyntaxKind.SemicolonToken:
-							{
-								VisitToken(asToken);
-								break;
-							}
+							VisitToken(asToken);
+							break;
 						default:
 							_Log.ErrorLine($"asToken : {kind}");
 							break;
@@ -672,8 +673,8 @@ namespace CSharpToJavaScript
 						case SyntaxKind.TrueLiteralExpression:
 						case SyntaxKind.StringLiteralExpression:
 						case SyntaxKind.InterpolatedStringExpression:
-								Visit(asNode);
-								break;
+							Visit(asNode);
+							break;
 						case SyntaxKind.ObjectCreationExpression:
 							VisitObjectCreationExpression(asNode as ObjectCreationExpressionSyntax);
 							break;
@@ -700,7 +701,6 @@ namespace CSharpToJavaScript
 					{
 						default:
 							_Log.ErrorLine($"asToken : {kind}");
-
 							break;
 					}
 				}
@@ -791,11 +791,13 @@ namespace CSharpToJavaScript
 								break;
 							}
 						case SyntaxKind.IdentifierToken:
-							VisitLeadingTrivia(asToken);
-							VisitToken(asToken.WithoutTrivia());
-							JSSB.Append(" = ");
-							VisitTrailingTrivia(asToken);
-							break;
+							{
+								VisitLeadingTrivia(asToken);
+								VisitToken(asToken.WithoutTrivia());
+								JSSB.Append(" = ");
+								VisitTrailingTrivia(asToken);
+								break;
+							}
 						case SyntaxKind.CommaToken:
 						case SyntaxKind.OpenBraceToken:
 							VisitToken(asToken);
@@ -829,9 +831,11 @@ namespace CSharpToJavaScript
 					switch (kind)
 					{
 						case SyntaxKind.EqualsValueClause:
-							JSSB.Append(": ");
-							VisitLiteralExpression(((asNode as EqualsValueClauseSyntax).Value as LiteralExpressionSyntax));
-							break;
+							{
+								JSSB.Append(": ");
+								VisitLiteralExpression(((asNode as EqualsValueClauseSyntax).Value as LiteralExpressionSyntax));
+								break;
+							}
 						default:
 							_Log.ErrorLine($"asNode : {kind}");
 							break;
@@ -895,10 +899,8 @@ namespace CSharpToJavaScript
 					switch (kind)
 					{
 						case SyntaxKind.EqualsToken:
-							{
-								JSSB.Append(':');
-								break;
-							}
+							JSSB.Append(':');
+							break;
 						default:
 							_Log.ErrorLine($"asToken : {kind}");
 							break;
@@ -948,13 +950,10 @@ namespace CSharpToJavaScript
 						case SyntaxKind.StaticKeyword:
 						case SyntaxKind.AsyncKeyword:
 						case SyntaxKind.IdentifierToken:
-							{
-								VisitToken(asToken);
-								break;
-							}
+							VisitToken(asToken);
+							break;
 						default:
 							_Log.ErrorLine($"asToken : {kind}");
-
 							break;
 					}
 				}
@@ -1034,7 +1033,7 @@ namespace CSharpToJavaScript
 																 where n.AsNode().IsKind(SyntaxKind.PredefinedType)
 																 select n;
 
-							FieldDeclarationSyntax field = null;
+							FieldDeclarationSyntax? field = null;
 
 							string _indentifier = "_" + nodesAndTokens[i - 1].AsToken().ToString() + "_";
 
@@ -1056,6 +1055,13 @@ namespace CSharpToJavaScript
 										  select n;
 								}
 
+								if (!key.Any())
+								{
+									key = from n in nodesAndTokens
+										  where n.IsNode
+										  where n.AsNode().IsKind(SyntaxKind.NullableType)
+										  select n;
+								}
 
 								field = SyntaxFactory.FieldDeclaration(
 							   SyntaxFactory.VariableDeclaration(SyntaxFactory.IdentifierName(key.First().ToString()))
@@ -1121,6 +1127,7 @@ namespace CSharpToJavaScript
 						case SyntaxKind.AttributeList:
 						case SyntaxKind.PredefinedType:
 						case SyntaxKind.IdentifierName:
+						case SyntaxKind.NullableType:
 						case SyntaxKind.GenericName:
 							break;
 						case SyntaxKind.AccessorList:
@@ -1370,7 +1377,6 @@ namespace CSharpToJavaScript
 							}
 						default:
 							_Log.ErrorLine($"asToken : {kind}");
-
 							break;
 					}
 				}
@@ -1701,10 +1707,8 @@ namespace CSharpToJavaScript
 						case SyntaxKind.NewKeyword:
 							VisitToken(asToken);
 							break;
-
 						default:
 							_Log.ErrorLine($"asToken : {kind}");
-
 							break;
 					}
 				}
@@ -1727,10 +1731,8 @@ namespace CSharpToJavaScript
 					{
 						case SyntaxKind.PredefinedType:
 						case SyntaxKind.IdentifierName: 
-							{
-								JSSB.Append("Array");
-								break;
-							}
+							JSSB.Append("Array");
+							break;
 						case SyntaxKind.ArrayRankSpecifier:
 							VisitArrayRankSpecifier(asNode as ArrayRankSpecifierSyntax);
 							break;
@@ -1748,7 +1750,6 @@ namespace CSharpToJavaScript
 					{
 						default:
 							_Log.ErrorLine($"asToken : {kind}");
-
 							break;
 					}
 				}
@@ -1810,7 +1811,6 @@ namespace CSharpToJavaScript
 							}
 						default:
 							_Log.ErrorLine($"asToken : {kind}");
-
 							break;
 					}
 				}
@@ -1995,14 +1995,16 @@ namespace CSharpToJavaScript
 							Visit(asNode);
 							break;
 						case SyntaxKind.AsExpression:
+							{
 
-							//Todo double/multiply asExpression?? How?
-							_SNOriginal = (asNode as BinaryExpressionSyntax).Left;
-							
-							Visit(_SNOriginal.WithoutTrailingTrivia());
-							
-							_SNOriginal = null;
-							break;
+								//Todo double/multiply asExpression?? How?
+								_SNOriginal = (asNode as BinaryExpressionSyntax).Left;
+
+								Visit(_SNOriginal.WithoutTrailingTrivia());
+
+								_SNOriginal = null;
+								break;
+							}
 						default:
 							_Log.ErrorLine($"asNode : {kind}");
 							break;
@@ -2283,6 +2285,7 @@ namespace CSharpToJavaScript
 					{
 						case SyntaxKind.ObjectInitializerExpression:
 							{
+								_Log.WarningLine($"'ObjectInitializerExpression' Ignored! Please use constructor for '{nodesAndTokens[1].ToString()}'");
 								//Todo? How? JS does not have object initializer...
 								break;
 							}
@@ -2308,10 +2311,8 @@ namespace CSharpToJavaScript
 					switch (kind)
 					{
 						case SyntaxKind.NewKeyword:
-							{
-								VisitToken(asToken);
-								break;
-							}
+							VisitToken(asToken);
+							break;
 						default:
 							_Log.ErrorLine($"asToken : {kind}");
 							break;
@@ -2348,10 +2349,8 @@ namespace CSharpToJavaScript
 					switch (kind)
 					{
 						case SyntaxKind.ThisKeyword:
-							{
-								VisitToken(asToken);
-								break;
-							}
+							VisitToken(asToken);
+							break;
 						default:
 							_Log.ErrorLine($"asToken : {kind}");
 							break;
@@ -2388,9 +2387,11 @@ namespace CSharpToJavaScript
 					switch (kind)
 					{
 						case SyntaxKind.BaseKeyword:
-							VisitLeadingTrivia(asToken);
-							JSSB.Append($"super");
-							break;
+							{
+								VisitLeadingTrivia(asToken);
+								JSSB.Append($"super");
+								break;
+							}
 						default:
 							_Log.ErrorLine($"asToken : {kind}");
 							break;
@@ -2454,10 +2455,8 @@ namespace CSharpToJavaScript
 					switch (kind)
 					{
 						case SyntaxKind.TypeArgumentList: 
-							{
-								VisitTypeArgumentList(asNode as TypeArgumentListSyntax);
-								break;
-							}
+							VisitTypeArgumentList(asNode as TypeArgumentListSyntax);
+							break;
 						default:
 							_Log.ErrorLine($"asNode : {kind}");
 							break;
@@ -2847,7 +2846,7 @@ namespace CSharpToJavaScript
 
 			//
 			//
-			//
+			//Adding trivia after a IdentifierToken.
 			if (node is IdentifierNameSyntax _identifierName)
 			{
 				VisitTrailingTrivia(_identifierName.Identifier);

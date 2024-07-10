@@ -434,6 +434,9 @@ namespace CSharpToJavaScript
 				//I'm not sure how to properly fix this...
 				//Below is a very bad code...
 				//
+				//Todo! Delete 'tab' before 'EndOfLineTrivia', if there is any.
+				//Also cant figure out how to use ReplaceTokens...
+				//https://learn.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxnodeextensions.replacetokens?view=roslyn-dotnet-4.9.0
 				List<SyntaxToken> allBraces = trueRoot.DescendantTokens().Where((e) => e.IsKind(SyntaxKind.OpenBraceToken)).ToList();
 				int i = 0;
 				while (i < allBraces.Count)

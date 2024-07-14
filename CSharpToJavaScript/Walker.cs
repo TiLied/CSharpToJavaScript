@@ -1014,7 +1014,11 @@ namespace CSharpToJavaScript
 		{
 			ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
 
-			for (int i = 0; i < nodesAndTokens.Count; i++)
+			FieldDeclarationSyntax? field = null;
+			bool hasDefault = false;
+			EqualsValueClauseSyntax? defaultValue = null;
+
+			for (int i = nodesAndTokens.Count - 1; i >= 0; i--)
 			{
 				SyntaxNode? asNode = nodesAndTokens[i].AsNode();
 
@@ -1032,8 +1036,6 @@ namespace CSharpToJavaScript
 																 where n.IsNode
 																 where n.AsNode().IsKind(SyntaxKind.PredefinedType)
 																 select n;
-
-							FieldDeclarationSyntax? field = null;
 
 							string _indentifier = "_" + nodesAndTokens[i - 1].AsToken().ToString() + "_";
 
@@ -1063,24 +1065,50 @@ namespace CSharpToJavaScript
 										  select n;
 								}
 
-								field = SyntaxFactory.FieldDeclaration(
-							   SyntaxFactory.VariableDeclaration(SyntaxFactory.IdentifierName(key.First().ToString()))
-							.WithVariables(
-								   SyntaxFactory.SingletonSeparatedList(
-									   SyntaxFactory.VariableDeclarator(
-										   SyntaxFactory.Identifier(_indentifier)))))
-						   .WithModifiers(
-							   SyntaxFactory.TokenList(new[]
-							   {
+
+								//
+								//
+								//TODO! change this mess!
+								if (hasDefault)
+								{
+									field = SyntaxFactory.FieldDeclaration(
+								   SyntaxFactory.VariableDeclaration(SyntaxFactory.IdentifierName(key.First().ToString()))
+								.WithVariables(
+									   SyntaxFactory.SingletonSeparatedList(
+										   SyntaxFactory.VariableDeclarator(
+											   SyntaxFactory.Identifier(_indentifier))
+											.WithInitializer(defaultValue))))
+							   .WithModifiers(
+								   SyntaxFactory.TokenList(new[]
+								   {
 									SyntaxFactory.Token(SyntaxKind.PrivateKeyword)
-							   }))
-						   .WithLeadingTrivia(node.GetLeadingTrivia())
-							.WithTrailingTrivia(node.GetTrailingTrivia());
+								   }))
+							   .WithLeadingTrivia(node.GetLeadingTrivia())
+								.WithTrailingTrivia(node.GetTrailingTrivia());
+								}
+								else
+								{
+									field = SyntaxFactory.FieldDeclaration(
+								   SyntaxFactory.VariableDeclaration(SyntaxFactory.IdentifierName(key.First().ToString()))
+								.WithVariables(
+									   SyntaxFactory.SingletonSeparatedList(
+										   SyntaxFactory.VariableDeclarator(
+											   SyntaxFactory.Identifier(_indentifier)))))
+							   .WithModifiers(
+								   SyntaxFactory.TokenList(new[]
+								   {
+									SyntaxFactory.Token(SyntaxKind.PrivateKeyword)
+								   }))
+							   .WithLeadingTrivia(node.GetLeadingTrivia())
+								.WithTrailingTrivia(node.GetTrailingTrivia());
+								}
 							}
 							else
 							{
 								key = key.First().ChildNodesAndTokens();
-								field = SyntaxFactory.FieldDeclaration(
+								if (hasDefault)
+								{
+									field = SyntaxFactory.FieldDeclaration(
 							   SyntaxFactory.VariableDeclaration(
 								   SyntaxFactory.PredefinedType(SyntaxFactory.Token(key.First().Kind())))
 							.WithVariables(
@@ -1094,14 +1122,36 @@ namespace CSharpToJavaScript
 							   }))
 						   .WithLeadingTrivia(node.GetLeadingTrivia())
 							.WithTrailingTrivia(node.GetTrailingTrivia());
+								}
+								else
+								{
+									field = SyntaxFactory.FieldDeclaration(
+							   SyntaxFactory.VariableDeclaration(
+								   SyntaxFactory.PredefinedType(SyntaxFactory.Token(key.First().Kind())))
+							.WithVariables(
+								   SyntaxFactory.SingletonSeparatedList(
+									   SyntaxFactory.VariableDeclarator(
+										   SyntaxFactory.Identifier(_indentifier))
+									   .WithInitializer(defaultValue))))
+						   .WithModifiers(
+							   SyntaxFactory.TokenList(new[]
+							   {
+									SyntaxFactory.Token(SyntaxKind.PrivateKeyword)
+							   }))
+						   .WithLeadingTrivia(node.GetLeadingTrivia())
+							.WithTrailingTrivia(node.GetTrailingTrivia());
+								}
 							}
-
-							VisitFieldDeclaration(field);
-							break;
 						}
 					}
+
+					if (kind == SyntaxKind.EqualsValueClause) 
+					{
+						hasDefault = true;
+						defaultValue = asNode as EqualsValueClauseSyntax;
+					}
 				}
-				else 
+				else
 				{
 					SyntaxToken asToken = nodesAndTokens[i].AsToken();
 					SyntaxKind kind = asToken.Kind();
@@ -1112,6 +1162,12 @@ namespace CSharpToJavaScript
 
 			}
 
+			if(field != null)
+				VisitFieldDeclaration(field);
+
+
+
+			//main for loop for property
 			for (int i = 0; i < nodesAndTokens.Count; i++)
 			{
 				SyntaxNode? asNode = nodesAndTokens[i].AsNode();
@@ -1122,7 +1178,6 @@ namespace CSharpToJavaScript
 
 					switch (kind)
 					{
-						//TODO "EqualsValueClause" default value
 						case SyntaxKind.EqualsValueClause:
 						case SyntaxKind.AttributeList:
 						case SyntaxKind.PredefinedType:

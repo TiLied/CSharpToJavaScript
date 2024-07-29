@@ -12,6 +12,7 @@ using System.Text;
 using System;
 using CSharpToJavaScript.Utils;
 
+
 namespace CSharpToJavaScript
 {
 	/// <summary>
@@ -500,18 +501,39 @@ namespace CSharpToJavaScript
 					references.Add(MetadataReference.CreateFromFile(Path.Combine(assemblyPath, "CSharpToJavaScript.dll")));
 			}
 
-			//TODO! does not work... sigh
-			//references = references.Distinct().ToList();
+
+			//https://stackoverflow.com/a/12073675
+			List<MetadataReference> trueReferences = new();
+
+			foreach (MetadataReference item in references)
+			{
+				bool found = false;
+				foreach (MetadataReference resultItem in trueReferences)
+				{
+					if (resultItem.Display == item.Display) 
+						found = true;
+				}
+
+				if (!found)
+				{
+					trueReferences.Add(item);
+				}
+			}
 
 			if (_Options.Debug)
 			{
 				_Log.SuccessLine($"+++");
 				_Log.WriteLine($"Path assembly: {assemblyPath}");
 				_Log.WriteLine($"Path rt: {rtPath}");
-				_Log.WriteLine($"List of references:");
+				_Log.WriteLine($"List of references({references.Count}):");
 				foreach (MetadataReference reference in references)
 				{
-					_Log.WriteLine(reference.Display);
+					_Log.WriteLine(reference.Display ?? "null display string");
+				}
+				_Log.WriteLine($"List of trueReferences({trueReferences.Count}):");
+				foreach (MetadataReference reference in trueReferences)
+				{
+					_Log.WriteLine(reference.Display ?? "null display string");
 				}
 				_Log.SuccessLine($"+++");
 			}
@@ -519,9 +541,10 @@ namespace CSharpToJavaScript
 			SyntaxTree trueST = trueRoot.SyntaxTree;
 			CSharpCompilation compilation = CSharpCompilation
 				.Create("HelloWorld")
-				.AddReferences(references.ToArray())
+				.AddReferences(trueReferences.ToArray())
 				.AddSyntaxTrees(trueST);
 
+			
 			_Walker = new(_Options, compilation.GetSemanticModel(trueST));
 
 			_Walker.JSSB.Append(_Options.AddSBInFront);

@@ -177,7 +177,7 @@ namespace CSharpToJavaScript
 
 			Assembly? assembly = Assembly.GetEntryAssembly();
 
-			SyntaxTree? _tree = CSharpSyntaxTree.ParseText(csstring);
+			SyntaxTree _tree = CSharpSyntaxTree.ParseText(csstring);
 			
 			if(references != null)
 				Generate(_tree, assembly, references);
@@ -204,7 +204,7 @@ namespace CSharpToJavaScript
 
 			Assembly? assembly = Assembly.GetEntryAssembly();
 
-			SyntaxTree? _tree = CSharpSyntaxTree.ParseText(csstring);
+			SyntaxTree _tree = CSharpSyntaxTree.ParseText(csstring);
 
 			if (references != null)
 				Generate(_tree, assembly, references);
@@ -227,7 +227,7 @@ namespace CSharpToJavaScript
 		}
 
 
-		private void Generate(SyntaxTree? tree, Assembly? assembly, List<MetadataReference>? refs = null) 
+		private void Generate(SyntaxTree tree, Assembly? assembly, List<MetadataReference>? refs = null) 
 		{
 			if(_Options.Debug) 
 			{
@@ -510,6 +510,9 @@ namespace CSharpToJavaScript
 				bool found = false;
 				foreach (MetadataReference resultItem in trueReferences)
 				{
+					if (item.Display == null)
+						continue;
+
 					if (resultItem.Display == item.Display) 
 						found = true;
 				}

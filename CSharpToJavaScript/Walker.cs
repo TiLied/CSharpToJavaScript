@@ -108,7 +108,6 @@ namespace CSharpToJavaScript
 				case SyntaxKind.CommaToken:
 				case SyntaxKind.NewKeyword:
 				case SyntaxKind.ThisKeyword:
-				case SyntaxKind.EqualsEqualsToken:
 				case SyntaxKind.ExclamationEqualsToken:
 				case SyntaxKind.MinusToken:
 				case SyntaxKind.MinusMinusToken:
@@ -160,10 +159,22 @@ namespace CSharpToJavaScript
 				case SyntaxKind.FinallyKeyword:
 				case SyntaxKind.CaretToken:
 				case SyntaxKind.CharacterLiteralToken:
-				{
+					{
 						VisitLeadingTrivia(token);
 
 						JSSB.Append(token.Text);
+
+						VisitTrailingTrivia(token);
+						return;
+					}
+				case SyntaxKind.EqualsEqualsToken:
+					{
+						VisitLeadingTrivia(token);
+
+						if(_Options.UseStrictEquality)
+							JSSB.Append("===");
+						else
+							JSSB.Append(token.Text);
 
 						VisitTrailingTrivia(token);
 						return;
@@ -284,6 +295,9 @@ namespace CSharpToJavaScript
 								}
 								break;
 							}
+						case SyntaxKind.ClassDeclaration:
+							VisitClassDeclaration(asNode as ClassDeclarationSyntax);
+							break;
 						case SyntaxKind.BaseList:
 						case SyntaxKind.FieldDeclaration:
 						case SyntaxKind.ConstructorDeclaration:
@@ -445,6 +459,9 @@ namespace CSharpToJavaScript
 
 					switch (kind)
 					{
+						case SyntaxKind.RefKeyword:
+							VisitLeadingTrivia(asToken);
+							break;
 						case SyntaxKind.IdentifierToken: 
 							{
 								VisitToken(asToken);
@@ -973,9 +990,17 @@ namespace CSharpToJavaScript
 					switch (kind)
 					{
 						case SyntaxKind.AttributeList:
+							break;
 						case SyntaxKind.GenericName:
 						case SyntaxKind.PredefinedType:
-							break;
+							{
+								SyntaxTriviaList _syntaxTrivias = asNode.GetLeadingTrivia();
+								for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
+								{
+									VisitTrivia(_syntaxTrivias[_i]);
+								}
+								break;
+							}
 						case SyntaxKind.ParameterList:
 						case SyntaxKind.Block:
 							Visit(asNode);
@@ -992,6 +1017,7 @@ namespace CSharpToJavaScript
 
 					switch (kind)
 					{
+						case SyntaxKind.PartialKeyword:
 						case SyntaxKind.PrivateKeyword:
 						case SyntaxKind.PublicKeyword:
 							VisitLeadingTrivia(asToken);
@@ -1499,6 +1525,7 @@ namespace CSharpToJavaScript
 
 					switch (kind)
 					{
+						case SyntaxKind.RefType:
 						case SyntaxKind.ArrayType:
 						case SyntaxKind.NullableType:
 						case SyntaxKind.PredefinedType:
@@ -1943,6 +1970,7 @@ namespace CSharpToJavaScript
 
 					switch (kind)
 					{
+						case SyntaxKind.StringLiteralExpression:
 						case SyntaxKind.NumericLiteralExpression:
 							Visit(asNode);
 							break;
@@ -2018,7 +2046,10 @@ namespace CSharpToJavaScript
 					{
 						case SyntaxKind.NumericLiteralToken: 
 							{
-								if (asToken.Text.EndsWith('f') || asToken.Text.EndsWith('d'))
+								if (asToken.Text.EndsWith('f') || 
+									asToken.Text.EndsWith('d') ||
+									asToken.Text.EndsWith('F') ||
+									asToken.Text.EndsWith('D'))
 									JSSB.Append(asToken.Text.Remove(asToken.Text.Length - 1));
 								else
 									VisitToken(asToken);
@@ -2116,6 +2147,7 @@ namespace CSharpToJavaScript
 						case SyntaxKind.GreaterThanOrEqualExpression:
 						case SyntaxKind.LessThanOrEqualExpression:
 						case SyntaxKind.NotEqualsExpression:
+						case SyntaxKind.SimpleAssignmentExpression:
 							Visit(asNode);
 							break;
 						case SyntaxKind.AsExpression:
@@ -2189,6 +2221,7 @@ namespace CSharpToJavaScript
 						case SyntaxKind.NullableType:
 						case SyntaxKind.PredefinedType:
 							break;
+						case SyntaxKind.IdentifierName:
 						case SyntaxKind.InvocationExpression:
 						case SyntaxKind.SimpleMemberAccessExpression:
 							Visit(asNode);
@@ -2567,6 +2600,7 @@ namespace CSharpToJavaScript
 
 					switch (kind)
 					{
+						case SyntaxKind.CommaToken:
 						case SyntaxKind.GreaterThanToken:
 						case SyntaxKind.LessThanToken:
 							break;
@@ -3102,7 +3136,7 @@ namespace CSharpToJavaScript
 								return false;
 						}
 					}
-				case string str when str.Contains(nameof(List<dynamic>)):
+				case string str when str.Contains(nameof(List<object>)):
 					{
 						string _name = symbol.Name;
 						switch (_name)
@@ -3113,26 +3147,56 @@ namespace CSharpToJavaScript
 									return true;
 								}
 							case string _str when 
-							_str.Contains(nameof(List<dynamic>.Sort)) || 
-							_str.Contains(nameof(List<dynamic>.FindLast)):
+							_str.Contains(nameof(List<object>.Sort)) || 
+							_str.Contains(nameof(List<object>.FindLast)):
 								{
 									toAttribute.To = ToAttribute.FirstCharToLowerCase;
 									JSSB.Append($"{toAttribute.Convert(node.Identifier.Text)}");
 									return true;
 								}
-							case string _str when _str.Contains(nameof(List<dynamic>.Count)):
+							case string _str when _str.Contains(nameof(List<object>.Count)):
 								{
 									JSSB.Append($"length");
 									return true;
 								}
-							case string _str when _str.Contains(nameof(List<dynamic>.Add)):
+							case string _str when _str.Contains(nameof(List<object>.Add)):
 								{
 									JSSB.Append($"push");
 									return true;
 								}
-							case string _str when _str.Contains(nameof(List<dynamic>.Contains)):
+							case string _str when _str.Contains(nameof(List<object>.Contains)):
 								{
 									JSSB.Append($"includes");
+									return true;
+								}
+							default:
+								_Log.WarningLine($"WARNING! node: \"{node}\", typeSymbol: \"{typeSymbol}\", symbol: \"{symbol}\", Is not supported! USE \"CustomCSNamesToJS\"");
+								return false;
+						}
+					}
+				case string str when str.Contains(nameof(Dictionary<object, object>)):
+					{
+						string _name = symbol.Name;
+						switch (_name)
+						{
+							case string _str when _str == typeName:
+								{
+									JSSB.Append($"Map");
+									return true;
+								}
+							case string _str when _str.Contains(nameof(Dictionary<object, object>.Keys)):
+								{
+									JSSB.Append($"keys()");
+									return true;
+								}
+							case string _str when _str.Contains(nameof(Dictionary<object, object>.Values)):
+								{
+									JSSB.Append($"values()");
+									return true;
+								}
+							case string _str when _str.Contains(nameof(Dictionary<object, object>.ContainsKey)):
+								{
+									JSSB.Append($"has");
 									return true;
 								}
 							default:

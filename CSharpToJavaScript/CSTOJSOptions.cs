@@ -45,7 +45,7 @@ namespace CSharpToJavaScript
 		public string OutPutPath { get; set; } = Directory.GetCurrentDirectory();
 
 		/// <summary>
-		/// Self-explanatory, Use var over let.
+		/// Self-explanatory, Use <c>var</c> over <c>let</c>.
 		/// </summary>
 		/// <value>
 		/// Default: <c>false</c>
@@ -73,6 +73,14 @@ namespace CSharpToJavaScript
 		/// Default: <c>false</c>
 		/// </value>
 		public bool NormalizeWhitespace { get; set; } = false;
+
+		/// <summary>
+		/// Replace '<c>==</c>' with '<c>===</c>'.
+		/// </summary>
+		/// <value>
+		/// Default: <c>false</c>
+		/// </value>
+		public bool UseStrictEquality { get; set; } = false;
 
 		/// <summary>
 		/// List of custom names to convert.

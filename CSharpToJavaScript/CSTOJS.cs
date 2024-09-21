@@ -26,11 +26,12 @@ namespace CSharpToJavaScript
 		private readonly Stopwatch _Stopwatch = new();
 
 		private Walker? _Walker = null;
+		private FileSystemWatcher? _FSWatcher = null;
 
 		/// <summary>
 		/// New instance of <see cref="CSTOJS"/> with default options, see <see cref="CSTOJSOptions"/>.
 		/// </summary>
-		public CSTOJS() 
+		public CSTOJS()
 		{
 			_Log = ILog.GetILog(this, _Options);
 
@@ -64,7 +65,7 @@ namespace CSharpToJavaScript
 		/// <param name="filename">Optional! Filename of a js file if you generating one file!</param>
 		/// <returns>empty Task</returns>
 		/// <exception cref="DirectoryNotFoundException"></exception>
-		public async Task GenerateOneAsync(string path, string? filename = null) 
+		public async Task GenerateOneAsync(string path, string? filename = null)
 		{
 			Assembly? assembly = Assembly.GetEntryAssembly();
 			List<FileInfo> files = new();
@@ -73,7 +74,7 @@ namespace CSharpToJavaScript
 			{
 				files.Add(new FileInfo(path));
 			}
-			else 
+			else
 			{
 				if (!Directory.Exists(path))
 					throw new DirectoryNotFoundException(path);
@@ -89,7 +90,7 @@ namespace CSharpToJavaScript
 			{
 				SyntaxTree? _tree = null;
 
-				using (var stream = File.OpenRead(file.FullName))
+				using (var stream = File.Open(file.FullName, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
 				{
 					_tree = CSharpSyntaxTree.ParseText(SourceText.From(stream), path: file.FullName);
 				}
@@ -171,15 +172,15 @@ namespace CSharpToJavaScript
 		/// <param name="references">Needed if you don't have access to files. Because Assembly.location is null in Blazor WebAssembly.</param>
 		/// <returns>JS <see cref="StringBuilder"/></returns>
 		/// <exception cref="ArgumentNullException"></exception>
-		public StringBuilder GenerateOneFromString(string csstring, List<MetadataReference>? references = null) 
+		public StringBuilder GenerateOneFromString(string csstring, List<MetadataReference>? references = null)
 		{
 			ArgumentNullException.ThrowIfNull(csstring);
 
 			Assembly? assembly = Assembly.GetEntryAssembly();
 
 			SyntaxTree _tree = CSharpSyntaxTree.ParseText(csstring);
-			
-			if(references != null)
+
+			if (references != null)
 				Generate(_tree, assembly, references);
 			else
 				Generate(_tree, assembly);
@@ -218,7 +219,7 @@ namespace CSharpToJavaScript
 			}
 
 			string pathCombined = Path.Combine(_Options.OutPutPath, filename);
-			
+
 			await File.WriteAllTextAsync(pathCombined, _Walker.JSSB.ToString());
 
 			_Log.SuccessLine($"--- Done!");
@@ -226,10 +227,92 @@ namespace CSharpToJavaScript
 			_Log.SuccessLine($"--- --- ---");
 		}
 
-
-		private void Generate(SyntaxTree tree, Assembly? assembly, List<MetadataReference>? refs = null) 
+		/// <summary>
+		/// Method for generating continuously by watching the cs file. Writes a file.
+		/// </summary>
+		/// <remarks>
+		/// <blockquote class="NOTE"><h5>NOTE</h5><para>Note: You must call <see cref="CSTOJS.StopWatching" /> before completing a program.</para></blockquote>
+		/// </remarks>
+		/// <param name="path">Full path to cs file.</param>
+		/// <returns>void</returns>
+		/// <exception cref="DirectoryNotFoundException"></exception>
+		/// <exception cref="FileNotFoundException"></exception>
+		public void GenerateOneContinuously(string path) 
 		{
-			if(_Options.Debug) 
+			if (File.Exists(path))
+			{
+				FileInfo file = new(path);
+
+				if(file.Directory == null)
+					throw new DirectoryNotFoundException(path);
+
+				_FSWatcher = new(file.Directory.FullName);
+
+				_FSWatcher.NotifyFilter = NotifyFilters.LastWrite;
+
+				_FSWatcher.Changed += OnChanged;
+				_FSWatcher.Created += OnCreated;
+				_FSWatcher.Deleted += OnDeleted;
+				_FSWatcher.Renamed += OnRenamed;
+				_FSWatcher.Error += OnError;
+
+				_FSWatcher.Filter = file.Name;
+				_FSWatcher.IncludeSubdirectories = true;
+				_FSWatcher.EnableRaisingEvents = true;
+			}
+			else
+			{
+				throw new FileNotFoundException(path);
+			}
+		}
+		private async void OnChanged(object sender, FileSystemEventArgs e)
+		{
+			if (e.ChangeType != WatcherChangeTypes.Changed)
+				return;
+
+			_Log.WriteLine($"Changed: {e.FullPath}");
+
+			await GenerateOneAsync(e.FullPath);
+		}
+
+		private void OnCreated(object sender, FileSystemEventArgs e)
+		{
+			string value = $"Created: {e.FullPath}";
+			_Log.WriteLine(value);
+		}
+
+		private void OnDeleted(object sender, FileSystemEventArgs e)
+		{
+			_Log.WriteLine($"Deleted: {e.FullPath}");
+		}
+
+		private void OnRenamed(object sender, RenamedEventArgs e)
+		{
+			_Log.WriteLine($"Renamed:");
+			_Log.WriteLine($"    Old: {e.OldFullPath}");
+			_Log.WriteLine($"    New: {e.FullPath}");
+		}
+
+		private void OnError(object sender, ErrorEventArgs e)
+		{
+			throw e.GetException();
+		}
+
+		/// <summary>
+		/// Method for stopping watching cs file. 
+		/// </summary>
+		public void StopWatching() 
+		{
+			if (_FSWatcher != null)
+			{
+				_FSWatcher.Dispose();
+				_FSWatcher = null;
+			}
+		}
+
+		private void Generate(SyntaxTree tree, Assembly? assembly, List<MetadataReference>? refs = null)
+		{
+			if (_Options.Debug)
 			{
 				_Stopwatch.Restart();
 				_Log.WriteLine("Start stopwatch");
@@ -262,7 +345,7 @@ namespace CSharpToJavaScript
 					}
 				}
 			}
-			else 
+			else
 			{
 				references = refs;
 			}
@@ -428,38 +511,23 @@ namespace CSharpToJavaScript
 
 			if (_Options.KeepBraceOnTheSameLine)
 			{
-				//
-				//
-				//Overriding root works only once.
-				//ReplaceTokens? how?
-				//I'm not sure how to properly fix this...
-				//Below is a very bad code...
-				//
-				//Todo! Delete 'tab' before 'EndOfLineTrivia', if there is any.
-				//Also cant figure out how to use ReplaceTokens...
-				//https://learn.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxnodeextensions.replacetokens?view=roslyn-dotnet-4.9.0
+				//TODO! remove whitespace trivia before brace!
 				List<SyntaxToken> allBraces = trueRoot.DescendantTokens().Where((e) => e.IsKind(SyntaxKind.OpenBraceToken)).ToList();
-				int i = 0;
-				while (i < allBraces.Count)
+				List<SyntaxTrivia> allTriviaToReplace = new();
+				for (int i = 0; i < allBraces.Count; i++)
 				{
-					for (int j = 0; j < allBraces.Count; j++)
+					SyntaxToken _token = allBraces[i].GetPreviousToken();
+					if (_token.HasTrailingTrivia)
 					{
-						SyntaxToken _token = allBraces[j].GetPreviousToken();
-						if (_token.HasTrailingTrivia)
+						SyntaxTrivia _trivia = _token.TrailingTrivia.Where((e) => e.IsKind(SyntaxKind.EndOfLineTrivia)).FirstOrDefault();
+						if (!_trivia.IsKind(SyntaxKind.None))
 						{
-							SyntaxTrivia _trivia = _token.TrailingTrivia.Where((e) => e.IsKind(SyntaxKind.EndOfLineTrivia)).FirstOrDefault();
-							if (!_trivia.IsKind(SyntaxKind.None))
-							{
-								SyntaxToken _replacedToken = _token.ReplaceTrivia(_trivia, SyntaxFactory.Space);
-								trueRoot = trueRoot.ReplaceToken(_token, _replacedToken);
-								break;
-							}
+							allTriviaToReplace.Add(_trivia);
 						}
 					}
-					allBraces = trueRoot.DescendantTokens().Where((e) => e.IsKind(SyntaxKind.OpenBraceToken)).ToList();
-					i++;
 				}
-
+				trueRoot = trueRoot.ReplaceTrivia(allTriviaToReplace, (o, r) => SyntaxFactory.Space);
+				
 			}
 
 			if (rtPath != null && rtPath != string.Empty)
@@ -484,7 +552,7 @@ namespace CSharpToJavaScript
 
 				if (File.Exists(Path.Combine(rtPath, "System.Threading.Tasks.dll")))
 					references.Add(MetadataReference.CreateFromFile(Path.Combine(rtPath, "System.Threading.Tasks.dll")));
-				
+
 				if (File.Exists(Path.Combine(rtPath, "System.Console.dll")))
 					references.Add(MetadataReference.CreateFromFile(Path.Combine(rtPath, "System.Console.dll")));
 
@@ -513,7 +581,7 @@ namespace CSharpToJavaScript
 					if (item.Display == null)
 						continue;
 
-					if (resultItem.Display == item.Display) 
+					if (resultItem.Display == item.Display)
 						found = true;
 				}
 
@@ -547,7 +615,7 @@ namespace CSharpToJavaScript
 				.AddReferences(trueReferences.ToArray())
 				.AddSyntaxTrees(trueST);
 
-			
+
 			_Walker = new(_Options, compilation.GetSemanticModel(trueST));
 
 			_Walker.JSSB.Append(_Options.AddSBInFront);

@@ -7,14 +7,34 @@
     <ImplicitUsings>disable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GenerateDocumentationFile>False</GenerateDocumentationFile>
+    <Authors>TiLied</Authors>
+    <Description>Brute forcing conversion(translation) from C# to Javascript.</Description>
+    <PackageProjectUrl>https://tilied.github.io/CSharpToJavaScript/</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/TiLied/CSharpToJavaScript/</RepositoryUrl>
+    <PackageTags>csharp, c#, conversion, javascript, js, generating</PackageTags>
+    <PackageReleaseNotes>First release.</PackageReleaseNotes>
+    <Title>CSharp to JavaScript</Title>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.5.0" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.6.0" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="APIs\JS\Generated\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,4 @@
-//19.07.2023 14:14:54
+//07.08.2023 14:37:48
 using static CSharpToJavaScript.APIs.JS.GlobalObject;
 using CSharpToJavaScript.Utils;
 using System.Collections.Generic;
@@ -32,9 +32,9 @@ using FormDataEntryValue = Union51;
 public partial class Window
 {
 	///<include file='Utils/Docs/WindowOrientation/WindowOrientation.generated.xml' path='docs/WindowOrientation/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-	public short Orientation { get; }
 	[To(ToAttribute.FirstCharToLowerCase)]
+	public short Orientation { get; }
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public EventHandler Onorientationchange { get; set; }
 }
 
@@ -42,7 +42,7 @@ public partial class Window
 [To(ToAttribute.Default)]
 public partial class HTMLBodyElement
 {
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public EventHandler Onorientationchange { get; set; }
 }
 
@@ -150,6 +150,7 @@ public partial class EventInit
 public partial class Window
 {
 	///<include file='Utils/Docs/WindowEvent/WindowEvent.generated.xml' path='docs/WindowEvent/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Union0 Event { get; }
 }
 
@@ -308,7 +309,7 @@ public partial class NodeList
 public partial class HTMLCollection
 {
 	///<include file='Utils/Docs/HTMLCollectionLength/HTMLCollectionLength.generated.xml' path='docs/HTMLCollectionLength/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Length { get; }
 	
 	
@@ -669,10 +670,10 @@ public partial class Text : CharacterData, Slottable
 	///<include file='Utils/Docs/TextText/TextText.generated.xml' path='docs/TextText/*'/>
 	public Text(string data) { }
 	///<include file='Utils/Docs/TextSplitText/TextSplitText.generated.xml' path='docs/TextSplitText/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Text SplitText(ulong offset) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/TextWholeText/TextWholeText.generated.xml' path='docs/TextWholeText/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string WholeText { get; }
 }
 
@@ -985,16 +986,16 @@ public partial interface TextDecoderCommon
 [To(ToAttribute.Default)]
 public partial class TextDecoderOptions
 {
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Fatal;
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public bool IgnoreBOM;
 }
 
 [To(ToAttribute.Default)]
 public partial class TextDecodeOptions
 {
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Stream;
 }
 
@@ -1005,7 +1006,7 @@ public partial class TextDecoder
 	///<include file='Utils/Docs/TextDecoderTextDecoder/TextDecoderTextDecoder.generated.xml' path='docs/TextDecoderTextDecoder/*'/>
 	public TextDecoder(string label, TextDecoderOptions options) { }
 	///<include file='Utils/Docs/TextDecoderDecode/TextDecoderDecode.generated.xml' path='docs/TextDecoderDecode/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string Decode(BufferSource input, TextDecodeOptions options) { throw new System.NotImplementedException(); }
 }
 
@@ -1019,9 +1020,9 @@ public partial interface TextEncoderCommon
 [To(ToAttribute.Default)]
 public partial class TextEncoderEncodeIntoResult
 {
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Read;
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Written;
 }
 
@@ -1032,10 +1033,10 @@ public partial class TextEncoder
 	///<include file='Utils/Docs/TextEncoderTextEncoder/TextEncoderTextEncoder.generated.xml' path='docs/TextEncoderTextEncoder/*'/>
 	public TextEncoder() { }
 	///<include file='Utils/Docs/TextEncoderEncode/TextEncoderEncode.generated.xml' path='docs/TextEncoderEncode/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public System.Byte Encode(string input) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/TextEncoderEncodeInto/TextEncoderEncodeInto.generated.xml' path='docs/TextEncoderEncodeInto/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public TextEncoderEncodeIntoResult EncodeInto(string source, System.Byte destination) { throw new System.NotImplementedException(); }
 }
 
@@ -1310,11 +1311,11 @@ public partial interface DocumentOrShadowRoot
 [To(ToAttribute.Default)]
 public partial class HTMLAllCollection
 {
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Length { get; }
 	
 	
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public Union14? Item(string nameOrIndex) { throw new System.NotImplementedException(); }
 }
 
@@ -1337,14 +1338,14 @@ public partial class RadioNodeList : NodeList
 [To(ToAttribute.Default)]
 public partial class HTMLOptionsCollection : HTMLCollection
 {
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Length { get; set; }
 	
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined Add(Union16 element, Union17? before) { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined Remove(long index) { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public long SelectedIndex { get; set; }
 }
 
@@ -1462,45 +1463,45 @@ public partial class HTMLElement : Element, GlobalEventHandlers, DocumentAndElem
 {
 		public HTMLElement() { }
 	///<include file='Utils/Docs/HTMLElementTitle/HTMLElementTitle.generated.xml' path='docs/HTMLElementTitle/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string Title { get; set; }
 	///<include file='Utils/Docs/HTMLElementLang/HTMLElementLang.generated.xml' path='docs/HTMLElementLang/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-	public string Lang { get; set; }
 	[To(ToAttribute.FirstCharToLowerCase)]
+	public string Lang { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Translate { get; set; }
 	///<include file='Utils/Docs/HTMLElementDir/HTMLElementDir.generated.xml' path='docs/HTMLElementDir/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string Dir { get; set; }
 	///<include file='Utils/Docs/HTMLElementHidden/HTMLElementHidden.generated.xml' path='docs/HTMLElementHidden/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Union19? Hidden { get; set; }
 	///<include file='Utils/Docs/HTMLElementInert/HTMLElementInert.generated.xml' path='docs/HTMLElementInert/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Inert { get; set; }
 	///<include file='Utils/Docs/HTMLElementClick/HTMLElementClick.generated.xml' path='docs/HTMLElementClick/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined Click() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HTMLElementAccessKey/HTMLElementAccessKey.generated.xml' path='docs/HTMLElementAccessKey/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string AccessKey { get; set; }
 	///<include file='Utils/Docs/HTMLElementAccessKeyLabel/HTMLElementAccessKeyLabel.generated.xml' path='docs/HTMLElementAccessKeyLabel/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string AccessKeyLabel { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Draggable { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Spellcheck { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Autocapitalize { get; set; }
 	///<include file='Utils/Docs/HTMLElementInnerText/HTMLElementInnerText.generated.xml' path='docs/HTMLElementInnerText/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string InnerText { get; set; }
 	///<include file='Utils/Docs/HTMLElementOuterText/HTMLElementOuterText.generated.xml' path='docs/HTMLElementOuterText/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string OuterText { get; set; }
 	///<include file='Utils/Docs/HTMLElementAttachInternals/HTMLElementAttachInternals.generated.xml' path='docs/HTMLElementAttachInternals/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public ElementInternals AttachInternals() { throw new System.NotImplementedException(); }
 }
 
@@ -1553,7 +1554,7 @@ public partial class HTMLHeadElement : HTMLElement
 public partial class HTMLTitleElement : HTMLElement
 {
 		public HTMLTitleElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Text { get; set; }
 }
 
@@ -1562,9 +1563,9 @@ public partial class HTMLTitleElement : HTMLElement
 public partial class HTMLBaseElement : HTMLElement
 {
 		public HTMLBaseElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Href { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Target { get; set; }
 }
 
@@ -1573,39 +1574,39 @@ public partial class HTMLBaseElement : HTMLElement
 public partial class HTMLLinkElement : HTMLElement
 {
 		public HTMLLinkElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Href { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string? CrossOrigin { get; set; }
 	///<include file='Utils/Docs/HTMLLinkElementRel/HTMLLinkElementRel.generated.xml' path='docs/HTMLLinkElementRel/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string Rel { get; set; }
 	///<include file='Utils/Docs/HTMLLinkElementAs/HTMLLinkElementAs.generated.xml' path='docs/HTMLLinkElementAs/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string As { get; set; }
 	///<include file='Utils/Docs/HTMLLinkElementRelList/HTMLLinkElementRelList.generated.xml' path='docs/HTMLLinkElementRelList/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMTokenList RelList { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Media { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Integrity { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Hreflang { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Type { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMTokenList Sizes { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string ImageSrcset { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string ImageSizes { get; set; }
 	///<include file='Utils/Docs/HTMLLinkElementReferrerPolicy/HTMLLinkElementReferrerPolicy.generated.xml' path='docs/HTMLLinkElementReferrerPolicy/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string ReferrerPolicy { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMTokenList Blocking { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Disabled { get; set; }
 }
 
@@ -1616,16 +1617,16 @@ public partial class HTMLMetaElement : HTMLElement
 {
 		public HTMLMetaElement() { }
 	///<include file='Utils/Docs/HTMLMetaElementName/HTMLMetaElementName.generated.xml' path='docs/HTMLMetaElementName/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string Name { get; set; }
 	///<include file='Utils/Docs/HTMLMetaElementHttpEquiv/HTMLMetaElementHttpEquiv.generated.xml' path='docs/HTMLMetaElementHttpEquiv/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string HttpEquiv { get; set; }
 	///<include file='Utils/Docs/HTMLMetaElementContent/HTMLMetaElementContent.generated.xml' path='docs/HTMLMetaElementContent/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string Content { get; set; }
 	///<include file='Utils/Docs/HTMLMetaElementMedia/HTMLMetaElementMedia.generated.xml' path='docs/HTMLMetaElementMedia/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string Media { get; set; }
 }
 
@@ -1635,12 +1636,12 @@ public partial class HTMLStyleElement : HTMLElement
 {
 		public HTMLStyleElement() { }
 	///<include file='Utils/Docs/HTMLStyleElementDisabled/HTMLStyleElementDisabled.generated.xml' path='docs/HTMLStyleElementDisabled/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Disabled { get; set; }
 	///<include file='Utils/Docs/HTMLStyleElementMedia/HTMLStyleElementMedia.generated.xml' path='docs/HTMLStyleElementMedia/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-	public string Media { get; set; }
 	[To(ToAttribute.FirstCharToLowerCase)]
+	public string Media { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMTokenList Blocking { get; }
 }
 
@@ -1685,7 +1686,7 @@ public partial class HTMLPreElement : HTMLElement
 public partial class HTMLQuoteElement : HTMLElement
 {
 		public HTMLQuoteElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Cite { get; set; }
 }
 
@@ -1694,11 +1695,11 @@ public partial class HTMLQuoteElement : HTMLElement
 public partial class HTMLOListElement : HTMLElement
 {
 		public HTMLOListElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Reversed { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public long Start { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Type { get; set; }
 }
 
@@ -1721,7 +1722,7 @@ public partial class HTMLMenuElement : HTMLElement
 public partial class HTMLLIElement : HTMLElement
 {
 		public HTMLLIElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public long Value { get; set; }
 }
 
@@ -1744,27 +1745,27 @@ public partial class HTMLDivElement : HTMLElement
 public partial class HTMLAnchorElement : HTMLElement, HTMLHyperlinkElementUtils
 {
 		public HTMLAnchorElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Target { get; set; }
 	///<include file='Utils/Docs/HTMLAnchorElementDownload/HTMLAnchorElementDownload.generated.xml' path='docs/HTMLAnchorElementDownload/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-	public string Download { get; set; }
 	[To(ToAttribute.FirstCharToLowerCase)]
+	public string Download { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Ping { get; set; }
 	///<include file='Utils/Docs/HTMLAnchorElementRel/HTMLAnchorElementRel.generated.xml' path='docs/HTMLAnchorElementRel/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string Rel { get; set; }
 	///<include file='Utils/Docs/HTMLAnchorElementRelList/HTMLAnchorElementRelList.generated.xml' path='docs/HTMLAnchorElementRelList/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMTokenList RelList { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Hreflang { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Type { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Text { get; set; }
 	///<include file='Utils/Docs/HTMLAnchorElementReferrerPolicy/HTMLAnchorElementReferrerPolicy.generated.xml' path='docs/HTMLAnchorElementReferrerPolicy/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string ReferrerPolicy { get; set; }
 }
 
@@ -1775,7 +1776,7 @@ public partial class HTMLDataElement : HTMLElement
 {
 		public HTMLDataElement() { }
 	///<include file='Utils/Docs/HTMLDataElementValue/HTMLDataElementValue.generated.xml' path='docs/HTMLDataElementValue/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string Value { get; set; }
 }
 
@@ -1785,7 +1786,7 @@ public partial class HTMLTimeElement : HTMLElement
 {
 		public HTMLTimeElement() { }
 	///<include file='Utils/Docs/HTMLTimeElementDateTime/HTMLTimeElementDateTime.generated.xml' path='docs/HTMLTimeElementDateTime/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string DateTime { get; set; }
 }
 
@@ -1824,9 +1825,9 @@ public partial interface HTMLHyperlinkElementUtils
 public partial class HTMLModElement : HTMLElement
 {
 		public HTMLModElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Cite { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string DateTime { get; set; }
 }
 
@@ -1842,19 +1843,19 @@ public partial class HTMLPictureElement : HTMLElement
 public partial class HTMLSourceElement : HTMLElement
 {
 		public HTMLSourceElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Src { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Type { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Srcset { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Sizes { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Media { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Width { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Height { get; set; }
 }
 
@@ -1864,55 +1865,55 @@ public partial class HTMLImageElement : HTMLElement
 {
 		public HTMLImageElement() { }
 	///<include file='Utils/Docs/HTMLImageElementAlt/HTMLImageElementAlt.generated.xml' path='docs/HTMLImageElementAlt/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string Alt { get; set; }
 	///<include file='Utils/Docs/HTMLImageElementSrc/HTMLImageElementSrc.generated.xml' path='docs/HTMLImageElementSrc/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string Src { get; set; }
 	///<include file='Utils/Docs/HTMLImageElementSrcset/HTMLImageElementSrcset.generated.xml' path='docs/HTMLImageElementSrcset/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string Srcset { get; set; }
 	///<include file='Utils/Docs/HTMLImageElementSizes/HTMLImageElementSizes.generated.xml' path='docs/HTMLImageElementSizes/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string Sizes { get; set; }
 	///<include file='Utils/Docs/HTMLImageElementCrossOrigin/HTMLImageElementCrossOrigin.generated.xml' path='docs/HTMLImageElementCrossOrigin/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string? CrossOrigin { get; set; }
 	///<include file='Utils/Docs/HTMLImageElementUseMap/HTMLImageElementUseMap.generated.xml' path='docs/HTMLImageElementUseMap/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string UseMap { get; set; }
 	///<include file='Utils/Docs/HTMLImageElementIsMap/HTMLImageElementIsMap.generated.xml' path='docs/HTMLImageElementIsMap/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool IsMap { get; set; }
 	///<include file='Utils/Docs/HTMLImageElementWidth/HTMLImageElementWidth.generated.xml' path='docs/HTMLImageElementWidth/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Width { get; set; }
 	///<include file='Utils/Docs/HTMLImageElementHeight/HTMLImageElementHeight.generated.xml' path='docs/HTMLImageElementHeight/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Height { get; set; }
 	///<include file='Utils/Docs/HTMLImageElementNaturalWidth/HTMLImageElementNaturalWidth.generated.xml' path='docs/HTMLImageElementNaturalWidth/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong NaturalWidth { get; }
 	///<include file='Utils/Docs/HTMLImageElementNaturalHeight/HTMLImageElementNaturalHeight.generated.xml' path='docs/HTMLImageElementNaturalHeight/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong NaturalHeight { get; }
 	///<include file='Utils/Docs/HTMLImageElementComplete/HTMLImageElementComplete.generated.xml' path='docs/HTMLImageElementComplete/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Complete { get; }
 	///<include file='Utils/Docs/HTMLImageElementCurrentSrc/HTMLImageElementCurrentSrc.generated.xml' path='docs/HTMLImageElementCurrentSrc/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string CurrentSrc { get; }
 	///<include file='Utils/Docs/HTMLImageElementReferrerPolicy/HTMLImageElementReferrerPolicy.generated.xml' path='docs/HTMLImageElementReferrerPolicy/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string ReferrerPolicy { get; set; }
 	///<include file='Utils/Docs/HTMLImageElementDecoding/HTMLImageElementDecoding.generated.xml' path='docs/HTMLImageElementDecoding/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string Decoding { get; set; }
 	///<include file='Utils/Docs/HTMLImageElementLoading/HTMLImageElementLoading.generated.xml' path='docs/HTMLImageElementLoading/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string Loading { get; set; }
 	///<include file='Utils/Docs/HTMLImageElementDecode/HTMLImageElementDecode.generated.xml' path='docs/HTMLImageElementDecode/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Task<Undefined> Decode() { throw new System.NotImplementedException(); }
 }
 
@@ -1922,35 +1923,35 @@ public partial class HTMLIFrameElement : HTMLElement
 {
 		public HTMLIFrameElement() { }
 	///<include file='Utils/Docs/HTMLIFrameElementSrc/HTMLIFrameElementSrc.generated.xml' path='docs/HTMLIFrameElementSrc/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string Src { get; set; }
 	///<include file='Utils/Docs/HTMLIFrameElementSrcdoc/HTMLIFrameElementSrcdoc.generated.xml' path='docs/HTMLIFrameElementSrcdoc/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string Srcdoc { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Name { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMTokenList Sandbox { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Allow { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public bool AllowFullscreen { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Width { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Height { get; set; }
 	///<include file='Utils/Docs/HTMLIFrameElementReferrerPolicy/HTMLIFrameElementReferrerPolicy.generated.xml' path='docs/HTMLIFrameElementReferrerPolicy/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-	public string ReferrerPolicy { get; set; }
 	[To(ToAttribute.FirstCharToLowerCase)]
+	public string ReferrerPolicy { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Loading { get; set; }
 	///<include file='Utils/Docs/HTMLIFrameElementContentDocument/HTMLIFrameElementContentDocument.generated.xml' path='docs/HTMLIFrameElementContentDocument/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Document? ContentDocument { get; }
 	///<include file='Utils/Docs/HTMLIFrameElementContentWindow/HTMLIFrameElementContentWindow.generated.xml' path='docs/HTMLIFrameElementContentWindow/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-	public Window? ContentWindow { get; }
 	[To(ToAttribute.FirstCharToLowerCase)]
+	public Window? ContentWindow { get; }
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public Document? GetSVGDocument() { throw new System.NotImplementedException(); }
 }
 
@@ -1959,15 +1960,15 @@ public partial class HTMLIFrameElement : HTMLElement
 public partial class HTMLEmbedElement : HTMLElement
 {
 		public HTMLEmbedElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Src { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Type { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Width { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Height { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public Document? GetSVGDocument() { throw new System.NotImplementedException(); }
 }
 
@@ -1977,47 +1978,47 @@ public partial class HTMLObjectElement : HTMLElement
 {
 		public HTMLObjectElement() { }
 	///<include file='Utils/Docs/HTMLObjectElementData/HTMLObjectElementData.generated.xml' path='docs/HTMLObjectElementData/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string Data { get; set; }
 	///<include file='Utils/Docs/HTMLObjectElementType/HTMLObjectElementType.generated.xml' path='docs/HTMLObjectElementType/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string Type { get; set; }
 	///<include file='Utils/Docs/HTMLObjectElementName/HTMLObjectElementName.generated.xml' path='docs/HTMLObjectElementName/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string Name { get; set; }
 	///<include file='Utils/Docs/HTMLObjectElementForm/HTMLObjectElementForm.generated.xml' path='docs/HTMLObjectElementForm/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLFormElement? Form { get; }
 	///<include file='Utils/Docs/HTMLObjectElementWidth/HTMLObjectElementWidth.generated.xml' path='docs/HTMLObjectElementWidth/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string Width { get; set; }
 	///<include file='Utils/Docs/HTMLObjectElementHeight/HTMLObjectElementHeight.generated.xml' path='docs/HTMLObjectElementHeight/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string Height { get; set; }
 	///<include file='Utils/Docs/HTMLObjectElementContentDocument/HTMLObjectElementContentDocument.generated.xml' path='docs/HTMLObjectElementContentDocument/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Document? ContentDocument { get; }
 	///<include file='Utils/Docs/HTMLObjectElementContentWindow/HTMLObjectElementContentWindow.generated.xml' path='docs/HTMLObjectElementContentWindow/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-	public Window? ContentWindow { get; }
 	[To(ToAttribute.FirstCharToLowerCase)]
+	public Window? ContentWindow { get; }
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public Document? GetSVGDocument() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HTMLObjectElementWillValidate/HTMLObjectElementWillValidate.generated.xml' path='docs/HTMLObjectElementWillValidate/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool WillValidate { get; }
 	///<include file='Utils/Docs/HTMLObjectElementValidity/HTMLObjectElementValidity.generated.xml' path='docs/HTMLObjectElementValidity/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public ValidityState Validity { get; }
 	///<include file='Utils/Docs/HTMLObjectElementValidationMessage/HTMLObjectElementValidationMessage.generated.xml' path='docs/HTMLObjectElementValidationMessage/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string ValidationMessage { get; }
 	///<include file='Utils/Docs/HTMLObjectElementCheckValidity/HTMLObjectElementCheckValidity.generated.xml' path='docs/HTMLObjectElementCheckValidity/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-	public bool CheckValidity() { throw new System.NotImplementedException(); }
 	[To(ToAttribute.FirstCharToLowerCase)]
+	public bool CheckValidity() { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public bool ReportValidity() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HTMLObjectElementSetCustomValidity/HTMLObjectElementSetCustomValidity.generated.xml' path='docs/HTMLObjectElementSetCustomValidity/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined SetCustomValidity(string error) { throw new System.NotImplementedException(); }
 }
 
@@ -2026,19 +2027,19 @@ public partial class HTMLObjectElement : HTMLElement
 public partial class HTMLVideoElement : HTMLMediaElement
 {
 		public HTMLVideoElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Width { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Height { get; set; }
 	///<include file='Utils/Docs/HTMLVideoElementVideoWidth/HTMLVideoElementVideoWidth.generated.xml' path='docs/HTMLVideoElementVideoWidth/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong VideoWidth { get; }
 	///<include file='Utils/Docs/HTMLVideoElementVideoHeight/HTMLVideoElementVideoHeight.generated.xml' path='docs/HTMLVideoElementVideoHeight/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong VideoHeight { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Poster { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public bool PlaysInline { get; set; }
 }
 
@@ -2054,28 +2055,28 @@ public partial class HTMLAudioElement : HTMLMediaElement
 public partial class HTMLTrackElement : HTMLElement
 {
 		public HTMLTrackElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Kind { get; set; }
 	///<include file='Utils/Docs/HTMLTrackElementSrc/HTMLTrackElementSrc.generated.xml' path='docs/HTMLTrackElementSrc/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string Src { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Srclang { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Label { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Default { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public const ushort NONE = 0;
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public const ushort LOADING = 1;
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public const ushort LOADED = 2;
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public const ushort ERROR = 3;
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public ushort ReadyState { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public TextTrack Track { get; }
 }
 
@@ -2092,124 +2093,124 @@ public enum CanPlayTypeResult
 public partial class HTMLMediaElement : HTMLElement
 {
 	///<include file='Utils/Docs/HTMLMediaElementError/HTMLMediaElementError.generated.xml' path='docs/HTMLMediaElementError/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public MediaError? Error { get; }
 	///<include file='Utils/Docs/HTMLMediaElementSrc/HTMLMediaElementSrc.generated.xml' path='docs/HTMLMediaElementSrc/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string Src { get; set; }
 	///<include file='Utils/Docs/HTMLMediaElementSrcObject/HTMLMediaElementSrcObject.generated.xml' path='docs/HTMLMediaElementSrcObject/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public MediaProvider? SrcObject { get; set; }
 	///<include file='Utils/Docs/HTMLMediaElementCurrentSrc/HTMLMediaElementCurrentSrc.generated.xml' path='docs/HTMLMediaElementCurrentSrc/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string CurrentSrc { get; }
 	///<include file='Utils/Docs/HTMLMediaElementCrossOrigin/HTMLMediaElementCrossOrigin.generated.xml' path='docs/HTMLMediaElementCrossOrigin/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string? CrossOrigin { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public const ushort NETWORK_EMPTY = 0;
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public const ushort NETWORK_IDLE = 1;
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public const ushort NETWORK_LOADING = 2;
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public const ushort NETWORK_NO_SOURCE = 3;
 	///<include file='Utils/Docs/HTMLMediaElementNetworkState/HTMLMediaElementNetworkState.generated.xml' path='docs/HTMLMediaElementNetworkState/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public ushort NetworkState { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Preload { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public bool BufferingThrottled { get; }
 	///<include file='Utils/Docs/HTMLMediaElementBuffered/HTMLMediaElementBuffered.generated.xml' path='docs/HTMLMediaElementBuffered/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public TimeRanges Buffered { get; }
 	///<include file='Utils/Docs/HTMLMediaElementLoad/HTMLMediaElementLoad.generated.xml' path='docs/HTMLMediaElementLoad/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined Load() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HTMLMediaElementCanPlayType/HTMLMediaElementCanPlayType.generated.xml' path='docs/HTMLMediaElementCanPlayType/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CanPlayTypeResult CanPlayType(string type) { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public const ushort HAVE_NOTHING = 0;
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public const ushort HAVE_METADATA = 1;
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public const ushort HAVE_CURRENT_DATA = 2;
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public const ushort HAVE_FUTURE_DATA = 3;
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public const ushort HAVE_ENOUGH_DATA = 4;
 	///<include file='Utils/Docs/HTMLMediaElementReadyState/HTMLMediaElementReadyState.generated.xml' path='docs/HTMLMediaElementReadyState/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-	public ushort ReadyState { get; }
 	[To(ToAttribute.FirstCharToLowerCase)]
+	public ushort ReadyState { get; }
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Seeking { get; }
 	///<include file='Utils/Docs/HTMLMediaElementCurrentTime/HTMLMediaElementCurrentTime.generated.xml' path='docs/HTMLMediaElementCurrentTime/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public double CurrentTime { get; set; }
 	///<include file='Utils/Docs/HTMLMediaElementFastSeek/HTMLMediaElementFastSeek.generated.xml' path='docs/HTMLMediaElementFastSeek/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined FastSeek(double time) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HTMLMediaElementDuration/HTMLMediaElementDuration.generated.xml' path='docs/HTMLMediaElementDuration/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-	public double Duration { get; }
 	[To(ToAttribute.FirstCharToLowerCase)]
+	public double Duration { get; }
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public object GetStartDate() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HTMLMediaElementPaused/HTMLMediaElementPaused.generated.xml' path='docs/HTMLMediaElementPaused/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Paused { get; }
 	///<include file='Utils/Docs/HTMLMediaElementDefaultPlaybackRate/HTMLMediaElementDefaultPlaybackRate.generated.xml' path='docs/HTMLMediaElementDefaultPlaybackRate/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public double DefaultPlaybackRate { get; set; }
 	///<include file='Utils/Docs/HTMLMediaElementPlaybackRate/HTMLMediaElementPlaybackRate.generated.xml' path='docs/HTMLMediaElementPlaybackRate/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public double PlaybackRate { get; set; }
 	///<include file='Utils/Docs/HTMLMediaElementPreservesPitch/HTMLMediaElementPreservesPitch.generated.xml' path='docs/HTMLMediaElementPreservesPitch/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-	public bool PreservesPitch { get; set; }
 	[To(ToAttribute.FirstCharToLowerCase)]
+	public bool PreservesPitch { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public TimeRanges Played { get; }
 	///<include file='Utils/Docs/HTMLMediaElementSeekable/HTMLMediaElementSeekable.generated.xml' path='docs/HTMLMediaElementSeekable/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public TimeRanges Seekable { get; }
 	///<include file='Utils/Docs/HTMLMediaElementEnded/HTMLMediaElementEnded.generated.xml' path='docs/HTMLMediaElementEnded/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Ended { get; }
 	///<include file='Utils/Docs/HTMLMediaElementAutoplay/HTMLMediaElementAutoplay.generated.xml' path='docs/HTMLMediaElementAutoplay/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Autoplay { get; set; }
 	///<include file='Utils/Docs/HTMLMediaElementLoop/HTMLMediaElementLoop.generated.xml' path='docs/HTMLMediaElementLoop/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Loop { get; set; }
 	///<include file='Utils/Docs/HTMLMediaElementPlay/HTMLMediaElementPlay.generated.xml' path='docs/HTMLMediaElementPlay/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Task<Undefined> Play() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HTMLMediaElementPause/HTMLMediaElementPause.generated.xml' path='docs/HTMLMediaElementPause/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined Pause() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HTMLMediaElementControls/HTMLMediaElementControls.generated.xml' path='docs/HTMLMediaElementControls/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Controls { get; set; }
 	///<include file='Utils/Docs/HTMLMediaElementVolume/HTMLMediaElementVolume.generated.xml' path='docs/HTMLMediaElementVolume/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public double Volume { get; set; }
 	///<include file='Utils/Docs/HTMLMediaElementMuted/HTMLMediaElementMuted.generated.xml' path='docs/HTMLMediaElementMuted/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Muted { get; set; }
 	///<include file='Utils/Docs/HTMLMediaElementDefaultMuted/HTMLMediaElementDefaultMuted.generated.xml' path='docs/HTMLMediaElementDefaultMuted/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool DefaultMuted { get; set; }
 	///<include file='Utils/Docs/HTMLMediaElementAudioTracks/HTMLMediaElementAudioTracks.generated.xml' path='docs/HTMLMediaElementAudioTracks/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public AudioTrackList AudioTracks { get; }
 	///<include file='Utils/Docs/HTMLMediaElementVideoTracks/HTMLMediaElementVideoTracks.generated.xml' path='docs/HTMLMediaElementVideoTracks/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public VideoTrackList VideoTracks { get; }
 	///<include file='Utils/Docs/HTMLMediaElementTextTracks/HTMLMediaElementTextTracks.generated.xml' path='docs/HTMLMediaElementTextTracks/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-	public TextTrackList TextTracks { get; }
 	[To(ToAttribute.FirstCharToLowerCase)]
+	public TextTrackList TextTracks { get; }
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public TextTrack AddTextTrack(TextTrackKind kind, string label, string language) { throw new System.NotImplementedException(); }
 }
 
@@ -2294,17 +2295,17 @@ public partial class VideoTrack
 public partial class TextTrackList : EventTarget
 {
 	///<include file='Utils/Docs/TextTrackListLength/TextTrackListLength.generated.xml' path='docs/TextTrackListLength/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Length { get; }
 	
 	///<include file='Utils/Docs/TextTrackListGetTrackById/TextTrackListGetTrackById.generated.xml' path='docs/TextTrackListGetTrackById/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public TextTrack? GetTrackById(string id) { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public EventHandler Onchange { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public EventHandler Onaddtrack { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public EventHandler Onremovetrack { get; set; }
 }
 
@@ -2331,36 +2332,36 @@ public enum TextTrackKind
 public partial class TextTrack : EventTarget
 {
 	///<include file='Utils/Docs/TextTrackKind/TextTrackKind.generated.xml' path='docs/TextTrackKind/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public TextTrackKind Kind { get; }
 	///<include file='Utils/Docs/TextTrackLabel/TextTrackLabel.generated.xml' path='docs/TextTrackLabel/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string Label { get; }
 	///<include file='Utils/Docs/TextTrackLanguage/TextTrackLanguage.generated.xml' path='docs/TextTrackLanguage/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string Language { get; }
 	///<include file='Utils/Docs/TextTrackId/TextTrackId.generated.xml' path='docs/TextTrackId/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string Id { get; }
 	///<include file='Utils/Docs/TextTrackInBandMetadataTrackDispatchType/TextTrackInBandMetadataTrackDispatchType.generated.xml' path='docs/TextTrackInBandMetadataTrackDispatchType/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string InBandMetadataTrackDispatchType { get; }
 	///<include file='Utils/Docs/TextTrackMode/TextTrackMode.generated.xml' path='docs/TextTrackMode/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public TextTrackMode Mode { get; set; }
 	///<include file='Utils/Docs/TextTrackCues/TextTrackCues.generated.xml' path='docs/TextTrackCues/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public TextTrackCueList? Cues { get; }
 	///<include file='Utils/Docs/TextTrackActiveCues/TextTrackActiveCues.generated.xml' path='docs/TextTrackActiveCues/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public TextTrackCueList? ActiveCues { get; }
 	///<include file='Utils/Docs/TextTrackAddCue/TextTrackAddCue.generated.xml' path='docs/TextTrackAddCue/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined AddCue(TextTrackCue cue) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/TextTrackRemoveCue/TextTrackRemoveCue.generated.xml' path='docs/TextTrackRemoveCue/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-	public Undefined RemoveCue(TextTrackCue cue) { throw new System.NotImplementedException(); }
 	[To(ToAttribute.FirstCharToLowerCase)]
+	public Undefined RemoveCue(TextTrackCue cue) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public EventHandler Oncuechange { get; set; }
 }
 
@@ -2369,11 +2370,11 @@ public partial class TextTrack : EventTarget
 public partial class TextTrackCueList
 {
 	///<include file='Utils/Docs/TextTrackCueListLength/TextTrackCueListLength.generated.xml' path='docs/TextTrackCueListLength/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Length { get; }
 	
 	///<include file='Utils/Docs/TextTrackCueListGetCueById/TextTrackCueListGetCueById.generated.xml' path='docs/TextTrackCueListGetCueById/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public TextTrackCue? GetCueById(string id) { throw new System.NotImplementedException(); }
 }
 
@@ -2382,23 +2383,23 @@ public partial class TextTrackCueList
 public partial class TextTrackCue : EventTarget
 {
 	///<include file='Utils/Docs/TextTrackCueTrack/TextTrackCueTrack.generated.xml' path='docs/TextTrackCueTrack/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public TextTrack? Track { get; }
 	///<include file='Utils/Docs/TextTrackCueId/TextTrackCueId.generated.xml' path='docs/TextTrackCueId/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string Id { get; set; }
 	///<include file='Utils/Docs/TextTrackCueStartTime/TextTrackCueStartTime.generated.xml' path='docs/TextTrackCueStartTime/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public double StartTime { get; set; }
 	///<include file='Utils/Docs/TextTrackCueEndTime/TextTrackCueEndTime.generated.xml' path='docs/TextTrackCueEndTime/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public double EndTime { get; set; }
 	///<include file='Utils/Docs/TextTrackCuePauseOnExit/TextTrackCuePauseOnExit.generated.xml' path='docs/TextTrackCuePauseOnExit/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool PauseOnExit { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public EventHandler Onenter { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public EventHandler Onexit { get; set; }
 }
 
@@ -2435,9 +2436,9 @@ public partial class TrackEventInit : EventInit
 public partial class HTMLMapElement : HTMLElement
 {
 		public HTMLMapElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Name { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLCollection Areas { get; }
 }
 
@@ -2446,26 +2447,26 @@ public partial class HTMLMapElement : HTMLElement
 public partial class HTMLAreaElement : HTMLElement, HTMLHyperlinkElementUtils
 {
 		public HTMLAreaElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Alt { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Coords { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Shape { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Target { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Download { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Ping { get; set; }
 	///<include file='Utils/Docs/HTMLAreaElementRel/HTMLAreaElementRel.generated.xml' path='docs/HTMLAreaElementRel/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string Rel { get; set; }
 	///<include file='Utils/Docs/HTMLAreaElementRelList/HTMLAreaElementRelList.generated.xml' path='docs/HTMLAreaElementRelList/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMTokenList RelList { get; }
 	///<include file='Utils/Docs/HTMLAreaElementReferrerPolicy/HTMLAreaElementReferrerPolicy.generated.xml' path='docs/HTMLAreaElementReferrerPolicy/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string ReferrerPolicy { get; set; }
 }
 
@@ -2476,46 +2477,46 @@ public partial class HTMLTableElement : HTMLElement
 {
 		public HTMLTableElement() { }
 	///<include file='Utils/Docs/HTMLTableElementCaption/HTMLTableElementCaption.generated.xml' path='docs/HTMLTableElementCaption/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLTableCaptionElement? Caption { get; set; }
 	///<include file='Utils/Docs/HTMLTableElementCreateCaption/HTMLTableElementCreateCaption.generated.xml' path='docs/HTMLTableElementCreateCaption/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLTableCaptionElement CreateCaption() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HTMLTableElementDeleteCaption/HTMLTableElementDeleteCaption.generated.xml' path='docs/HTMLTableElementDeleteCaption/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined DeleteCaption() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HTMLTableElementTHead/HTMLTableElementTHead.generated.xml' path='docs/HTMLTableElementTHead/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLTableSectionElement? THead { get; set; }
 	///<include file='Utils/Docs/HTMLTableElementCreateTHead/HTMLTableElementCreateTHead.generated.xml' path='docs/HTMLTableElementCreateTHead/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLTableSectionElement CreateTHead() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HTMLTableElementDeleteTHead/HTMLTableElementDeleteTHead.generated.xml' path='docs/HTMLTableElementDeleteTHead/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined DeleteTHead() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HTMLTableElementTFoot/HTMLTableElementTFoot.generated.xml' path='docs/HTMLTableElementTFoot/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLTableSectionElement? TFoot { get; set; }
 	///<include file='Utils/Docs/HTMLTableElementCreateTFoot/HTMLTableElementCreateTFoot.generated.xml' path='docs/HTMLTableElementCreateTFoot/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLTableSectionElement CreateTFoot() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HTMLTableElementDeleteTFoot/HTMLTableElementDeleteTFoot.generated.xml' path='docs/HTMLTableElementDeleteTFoot/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined DeleteTFoot() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HTMLTableElementTBodies/HTMLTableElementTBodies.generated.xml' path='docs/HTMLTableElementTBodies/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLCollection TBodies { get; }
 	///<include file='Utils/Docs/HTMLTableElementCreateTBody/HTMLTableElementCreateTBody.generated.xml' path='docs/HTMLTableElementCreateTBody/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLTableSectionElement CreateTBody() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HTMLTableElementRows/HTMLTableElementRows.generated.xml' path='docs/HTMLTableElementRows/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLCollection Rows { get; }
 	///<include file='Utils/Docs/HTMLTableElementInsertRow/HTMLTableElementInsertRow.generated.xml' path='docs/HTMLTableElementInsertRow/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLTableRowElement InsertRow(long index) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HTMLTableElementDeleteRow/HTMLTableElementDeleteRow.generated.xml' path='docs/HTMLTableElementDeleteRow/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined DeleteRow(long index) { throw new System.NotImplementedException(); }
 }
 
@@ -2531,7 +2532,7 @@ public partial class HTMLTableCaptionElement : HTMLElement
 public partial class HTMLTableColElement : HTMLElement
 {
 		public HTMLTableColElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Span { get; set; }
 }
 
@@ -2540,11 +2541,11 @@ public partial class HTMLTableColElement : HTMLElement
 public partial class HTMLTableSectionElement : HTMLElement
 {
 		public HTMLTableSectionElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLCollection Rows { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLTableRowElement InsertRow(long index) { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined DeleteRow(long index) { throw new System.NotImplementedException(); }
 }
 
@@ -2554,16 +2555,16 @@ public partial class HTMLTableRowElement : HTMLElement
 {
 		public HTMLTableRowElement() { }
 	///<include file='Utils/Docs/HTMLTableRowElementRowIndex/HTMLTableRowElementRowIndex.generated.xml' path='docs/HTMLTableRowElementRowIndex/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public long RowIndex { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public long SectionRowIndex { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLCollection Cells { get; }
 	///<include file='Utils/Docs/HTMLTableRowElementInsertCell/HTMLTableRowElementInsertCell.generated.xml' path='docs/HTMLTableRowElementInsertCell/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-	public HTMLTableCellElement InsertCell(long index) { throw new System.NotImplementedException(); }
 	[To(ToAttribute.FirstCharToLowerCase)]
+	public HTMLTableCellElement InsertCell(long index) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined DeleteCell(long index) { throw new System.NotImplementedException(); }
 }
 
@@ -2572,17 +2573,17 @@ public partial class HTMLTableRowElement : HTMLElement
 public partial class HTMLTableCellElement : HTMLElement
 {
 		public HTMLTableCellElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong ColSpan { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong RowSpan { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Headers { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public long CellIndex { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Scope { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Abbr { get; set; }
 }
 
@@ -2592,55 +2593,55 @@ public partial class HTMLFormElement : HTMLElement
 {
 		public HTMLFormElement() { }
 	///<include file='Utils/Docs/HTMLFormElementAcceptCharset/HTMLFormElementAcceptCharset.generated.xml' path='docs/HTMLFormElementAcceptCharset/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string AcceptCharset { get; set; }
 	///<include file='Utils/Docs/HTMLFormElementAction/HTMLFormElementAction.generated.xml' path='docs/HTMLFormElementAction/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-	public string Action { get; set; }
 	[To(ToAttribute.FirstCharToLowerCase)]
+	public string Action { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Autocomplete { get; set; }
 	///<include file='Utils/Docs/HTMLFormElementEnctype/HTMLFormElementEnctype.generated.xml' path='docs/HTMLFormElementEnctype/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string Enctype { get; set; }
 	///<include file='Utils/Docs/HTMLFormElementEncoding/HTMLFormElementEncoding.generated.xml' path='docs/HTMLFormElementEncoding/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string Encoding { get; set; }
 	///<include file='Utils/Docs/HTMLFormElementMethod/HTMLFormElementMethod.generated.xml' path='docs/HTMLFormElementMethod/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string Method { get; set; }
 	///<include file='Utils/Docs/HTMLFormElementName/HTMLFormElementName.generated.xml' path='docs/HTMLFormElementName/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-	public string Name { get; set; }
 	[To(ToAttribute.FirstCharToLowerCase)]
+	public string Name { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public bool NoValidate { get; set; }
 	///<include file='Utils/Docs/HTMLFormElementTarget/HTMLFormElementTarget.generated.xml' path='docs/HTMLFormElementTarget/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string Target { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Rel { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMTokenList RelList { get; }
 	///<include file='Utils/Docs/HTMLFormElementElements/HTMLFormElementElements.generated.xml' path='docs/HTMLFormElementElements/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLFormControlsCollection Elements { get; }
 	///<include file='Utils/Docs/HTMLFormElementLength/HTMLFormElementLength.generated.xml' path='docs/HTMLFormElementLength/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Length { get; }
 	
 	
 	///<include file='Utils/Docs/HTMLFormElementSubmit/HTMLFormElementSubmit.generated.xml' path='docs/HTMLFormElementSubmit/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined Submit() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HTMLFormElementRequestSubmit/HTMLFormElementRequestSubmit.generated.xml' path='docs/HTMLFormElementRequestSubmit/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined RequestSubmit(HTMLElement? submitter) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HTMLFormElementReset/HTMLFormElementReset.generated.xml' path='docs/HTMLFormElementReset/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-	public Undefined Reset() { throw new System.NotImplementedException(); }
 	[To(ToAttribute.FirstCharToLowerCase)]
+	public Undefined Reset() { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public bool CheckValidity() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HTMLFormElementReportValidity/HTMLFormElementReportValidity.generated.xml' path='docs/HTMLFormElementReportValidity/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool ReportValidity() { throw new System.NotImplementedException(); }
 }
 
@@ -2650,13 +2651,13 @@ public partial class HTMLLabelElement : HTMLElement
 {
 		public HTMLLabelElement() { }
 	///<include file='Utils/Docs/HTMLLabelElementForm/HTMLLabelElementForm.generated.xml' path='docs/HTMLLabelElementForm/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLFormElement? Form { get; }
 	///<include file='Utils/Docs/HTMLLabelElementHtmlFor/HTMLLabelElementHtmlFor.generated.xml' path='docs/HTMLLabelElementHtmlFor/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string HtmlFor { get; set; }
 	///<include file='Utils/Docs/HTMLLabelElementControl/HTMLLabelElementControl.generated.xml' path='docs/HTMLLabelElementControl/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLElement? Control { get; }
 }
 
@@ -2665,125 +2666,125 @@ public partial class HTMLLabelElement : HTMLElement
 public partial class HTMLInputElement : HTMLElement
 {
 		public HTMLInputElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Accept { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Alt { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Autocomplete { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public bool DefaultChecked { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Checked { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string DirName { get; set; }
 	///<include file='Utils/Docs/HTMLInputElementDisabled/HTMLInputElementDisabled.generated.xml' path='docs/HTMLInputElementDisabled/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-	public bool Disabled { get; set; }
 	[To(ToAttribute.FirstCharToLowerCase)]
+	public bool Disabled { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLFormElement? Form { get; }
 	///<include file='Utils/Docs/HTMLInputElementFiles/HTMLInputElementFiles.generated.xml' path='docs/HTMLInputElementFiles/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Unsupported /*FileList*/? Files { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string FormAction { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string FormEnctype { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string FormMethod { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public bool FormNoValidate { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string FormTarget { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Height { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Indeterminate { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLElement? List { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Max { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public long MaxLength { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Min { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public long MinLength { get; set; }
 	///<include file='Utils/Docs/HTMLInputElementMultiple/HTMLInputElementMultiple.generated.xml' path='docs/HTMLInputElementMultiple/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Multiple { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Name { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Pattern { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Placeholder { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public bool ReadOnly { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Required { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Size { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Src { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Step { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Type { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string DefaultValue { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Value { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public object? ValueAsDate { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public double ValueAsNumber { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Width { get; set; }
 	///<include file='Utils/Docs/HTMLInputElementStepUp/HTMLInputElementStepUp.generated.xml' path='docs/HTMLInputElementStepUp/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined StepUp(long n) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HTMLInputElementStepDown/HTMLInputElementStepDown.generated.xml' path='docs/HTMLInputElementStepDown/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined StepDown(long n) { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public bool WillValidate { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public ValidityState Validity { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string ValidationMessage { get; }
 	///<include file='Utils/Docs/HTMLInputElementCheckValidity/HTMLInputElementCheckValidity.generated.xml' path='docs/HTMLInputElementCheckValidity/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool CheckValidity() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HTMLInputElementReportValidity/HTMLInputElementReportValidity.generated.xml' path='docs/HTMLInputElementReportValidity/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool ReportValidity() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HTMLInputElementSetCustomValidity/HTMLInputElementSetCustomValidity.generated.xml' path='docs/HTMLInputElementSetCustomValidity/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined SetCustomValidity(string error) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HTMLInputElementLabels/HTMLInputElementLabels.generated.xml' path='docs/HTMLInputElementLabels/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public NodeList? Labels { get; }
 	///<include file='Utils/Docs/HTMLInputElementSelect/HTMLInputElementSelect.generated.xml' path='docs/HTMLInputElementSelect/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined Select() { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong? SelectionStart { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong? SelectionEnd { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string? SelectionDirection { get; set; }
 	///<include file='Utils/Docs/HTMLInputElementSetRangeText/HTMLInputElementSetRangeText.generated.xml' path='docs/HTMLInputElementSetRangeText/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined SetRangeText(string replacement) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HTMLInputElementSetRangeText/HTMLInputElementSetRangeText.generated.xml' path='docs/HTMLInputElementSetRangeText/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined SetRangeText(string replacement, ulong start, ulong end, SelectionMode selectionMode) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HTMLInputElementSetSelectionRange/HTMLInputElementSetSelectionRange.generated.xml' path='docs/HTMLInputElementSetSelectionRange/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined SetSelectionRange(ulong start, ulong end, string direction) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HTMLInputElementShowPicker/HTMLInputElementShowPicker.generated.xml' path='docs/HTMLInputElementShowPicker/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined ShowPicker() { throw new System.NotImplementedException(); }
 }
 
@@ -2793,40 +2794,40 @@ public partial class HTMLButtonElement : HTMLElement
 {
 		public HTMLButtonElement() { }
 	///<include file='Utils/Docs/HTMLButtonElementDisabled/HTMLButtonElementDisabled.generated.xml' path='docs/HTMLButtonElementDisabled/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Disabled { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLFormElement? Form { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string FormAction { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string FormEnctype { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string FormMethod { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public bool FormNoValidate { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string FormTarget { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Name { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Type { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Value { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public bool WillValidate { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public ValidityState Validity { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string ValidationMessage { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public bool CheckValidity() { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public bool ReportValidity() { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined SetCustomValidity(string error) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HTMLButtonElementLabels/HTMLButtonElementLabels.generated.xml' path='docs/HTMLButtonElementLabels/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public NodeList Labels { get; }
 }
 
@@ -2835,68 +2836,68 @@ public partial class HTMLButtonElement : HTMLElement
 public partial class HTMLSelectElement : HTMLElement
 {
 		public HTMLSelectElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Autocomplete { get; set; }
 	///<include file='Utils/Docs/HTMLSelectElementDisabled/HTMLSelectElementDisabled.generated.xml' path='docs/HTMLSelectElementDisabled/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Disabled { get; set; }
 	///<include file='Utils/Docs/HTMLSelectElementForm/HTMLSelectElementForm.generated.xml' path='docs/HTMLSelectElementForm/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLFormElement? Form { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Multiple { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Name { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Required { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Size { get; set; }
 	///<include file='Utils/Docs/HTMLSelectElementType/HTMLSelectElementType.generated.xml' path='docs/HTMLSelectElementType/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string Type { get; }
 	///<include file='Utils/Docs/HTMLSelectElementOptions/HTMLSelectElementOptions.generated.xml' path='docs/HTMLSelectElementOptions/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-	public HTMLOptionsCollection Options { get; }
 	[To(ToAttribute.FirstCharToLowerCase)]
+	public HTMLOptionsCollection Options { get; }
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Length { get; set; }
 	
 	///<include file='Utils/Docs/HTMLSelectElementNamedItem/HTMLSelectElementNamedItem.generated.xml' path='docs/HTMLSelectElementNamedItem/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLOptionElement? NamedItem(string name) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HTMLSelectElementAdd/HTMLSelectElementAdd.generated.xml' path='docs/HTMLSelectElementAdd/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined Add(Union24 element, Union25? before) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HTMLSelectElementRemove/HTMLSelectElementRemove.generated.xml' path='docs/HTMLSelectElementRemove/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined Remove() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HTMLSelectElementRemove/HTMLSelectElementRemove.generated.xml' path='docs/HTMLSelectElementRemove/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined Remove(long index) { throw new System.NotImplementedException(); }
 	
 	///<include file='Utils/Docs/HTMLSelectElementSelectedOptions/HTMLSelectElementSelectedOptions.generated.xml' path='docs/HTMLSelectElementSelectedOptions/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLCollection SelectedOptions { get; }
 	///<include file='Utils/Docs/HTMLSelectElementSelectedIndex/HTMLSelectElementSelectedIndex.generated.xml' path='docs/HTMLSelectElementSelectedIndex/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public long SelectedIndex { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Value { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public bool WillValidate { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public ValidityState Validity { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string ValidationMessage { get; }
 	///<include file='Utils/Docs/HTMLSelectElementCheckValidity/HTMLSelectElementCheckValidity.generated.xml' path='docs/HTMLSelectElementCheckValidity/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-	public bool CheckValidity() { throw new System.NotImplementedException(); }
 	[To(ToAttribute.FirstCharToLowerCase)]
+	public bool CheckValidity() { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public bool ReportValidity() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HTMLSelectElementSetCustomValidity/HTMLSelectElementSetCustomValidity.generated.xml' path='docs/HTMLSelectElementSetCustomValidity/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined SetCustomValidity(string error) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HTMLSelectElementLabels/HTMLSelectElementLabels.generated.xml' path='docs/HTMLSelectElementLabels/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public NodeList Labels { get; }
 }
 
@@ -2905,7 +2906,7 @@ public partial class HTMLSelectElement : HTMLElement
 public partial class HTMLDataListElement : HTMLElement
 {
 		public HTMLDataListElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLCollection Options { get; }
 }
 
@@ -2914,9 +2915,9 @@ public partial class HTMLDataListElement : HTMLElement
 public partial class HTMLOptGroupElement : HTMLElement
 {
 		public HTMLOptGroupElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Disabled { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Label { get; set; }
 }
 
@@ -2925,21 +2926,21 @@ public partial class HTMLOptGroupElement : HTMLElement
 public partial class HTMLOptionElement : HTMLElement
 {
 		public HTMLOptionElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Disabled { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLFormElement? Form { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Label { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public bool DefaultSelected { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Selected { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Value { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Text { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public long Index { get; }
 }
 
@@ -2948,68 +2949,68 @@ public partial class HTMLOptionElement : HTMLElement
 public partial class HTMLTextAreaElement : HTMLElement
 {
 		public HTMLTextAreaElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Autocomplete { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Cols { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string DirName { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Disabled { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLFormElement? Form { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public long MaxLength { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public long MinLength { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Name { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Placeholder { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public bool ReadOnly { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Required { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Rows { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Wrap { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Type { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string DefaultValue { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Value { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong TextLength { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public bool WillValidate { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public ValidityState Validity { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string ValidationMessage { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public bool CheckValidity() { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public bool ReportValidity() { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined SetCustomValidity(string error) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HTMLTextAreaElementLabels/HTMLTextAreaElementLabels.generated.xml' path='docs/HTMLTextAreaElementLabels/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public NodeList Labels { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined Select() { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong SelectionStart { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong SelectionEnd { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string SelectionDirection { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined SetRangeText(string replacement) { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined SetRangeText(string replacement, ulong start, ulong end, SelectionMode selectionMode) { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined SetSelectionRange(ulong start, ulong end, string direction) { throw new System.NotImplementedException(); }
 }
 
@@ -3018,32 +3019,32 @@ public partial class HTMLTextAreaElement : HTMLElement
 public partial class HTMLOutputElement : HTMLElement
 {
 		public HTMLOutputElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMTokenList HtmlFor { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLFormElement? Form { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Name { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Type { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string DefaultValue { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Value { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public bool WillValidate { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public ValidityState Validity { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string ValidationMessage { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public bool CheckValidity() { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public bool ReportValidity() { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined SetCustomValidity(string error) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HTMLOutputElementLabels/HTMLOutputElementLabels.generated.xml' path='docs/HTMLOutputElementLabels/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public NodeList Labels { get; }
 }
 
@@ -3052,14 +3053,14 @@ public partial class HTMLOutputElement : HTMLElement
 public partial class HTMLProgressElement : HTMLElement
 {
 		public HTMLProgressElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public double Value { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public double Max { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public double Position { get; }
 	///<include file='Utils/Docs/HTMLProgressElementLabels/HTMLProgressElementLabels.generated.xml' path='docs/HTMLProgressElementLabels/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public NodeList Labels { get; }
 }
 
@@ -3068,20 +3069,20 @@ public partial class HTMLProgressElement : HTMLElement
 public partial class HTMLMeterElement : HTMLElement
 {
 		public HTMLMeterElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public double Value { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public double Min { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public double Max { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public double Low { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public double High { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public double Optimum { get; set; }
 	///<include file='Utils/Docs/HTMLMeterElementLabels/HTMLMeterElementLabels.generated.xml' path='docs/HTMLMeterElementLabels/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public NodeList Labels { get; }
 }
 
@@ -3090,27 +3091,27 @@ public partial class HTMLMeterElement : HTMLElement
 public partial class HTMLFieldSetElement : HTMLElement
 {
 		public HTMLFieldSetElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Disabled { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLFormElement? Form { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Name { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Type { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLCollection Elements { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public bool WillValidate { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public ValidityState Validity { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string ValidationMessage { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public bool CheckValidity() { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public bool ReportValidity() { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined SetCustomValidity(string error) { throw new System.NotImplementedException(); }
 }
 
@@ -3119,7 +3120,7 @@ public partial class HTMLFieldSetElement : HTMLElement
 public partial class HTMLLegendElement : HTMLElement
 {
 		public HTMLLegendElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLFormElement? Form { get; }
 }
 
@@ -3195,7 +3196,7 @@ public partial class HTMLDetailsElement : HTMLElement
 {
 		public HTMLDetailsElement() { }
 	///<include file='Utils/Docs/HTMLDetailsElementOpen/HTMLDetailsElementOpen.generated.xml' path='docs/HTMLDetailsElementOpen/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Open { get; set; }
 }
 
@@ -3205,19 +3206,19 @@ public partial class HTMLDialogElement : HTMLElement
 {
 		public HTMLDialogElement() { }
 	///<include file='Utils/Docs/HTMLDialogElementOpen/HTMLDialogElementOpen.generated.xml' path='docs/HTMLDialogElementOpen/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Open { get; set; }
 	///<include file='Utils/Docs/HTMLDialogElementReturnValue/HTMLDialogElementReturnValue.generated.xml' path='docs/HTMLDialogElementReturnValue/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string ReturnValue { get; set; }
 	///<include file='Utils/Docs/HTMLDialogElementShow/HTMLDialogElementShow.generated.xml' path='docs/HTMLDialogElementShow/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined Show() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HTMLDialogElementShowModal/HTMLDialogElementShowModal.generated.xml' path='docs/HTMLDialogElementShowModal/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined ShowModal() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HTMLDialogElementClose/HTMLDialogElementClose.generated.xml' path='docs/HTMLDialogElementClose/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined Close(string returnValue) { throw new System.NotImplementedException(); }
 }
 
@@ -3226,28 +3227,28 @@ public partial class HTMLDialogElement : HTMLElement
 public partial class HTMLScriptElement : HTMLElement
 {
 		public HTMLScriptElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Src { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Type { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public bool NoModule { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Async { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Defer { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string? CrossOrigin { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Text { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Integrity { get; set; }
 	///<include file='Utils/Docs/HTMLScriptElementReferrerPolicy/HTMLScriptElementReferrerPolicy.generated.xml' path='docs/HTMLScriptElementReferrerPolicy/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string ReferrerPolicy { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMTokenList Blocking { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public static bool Supports(string type) { throw new System.NotImplementedException(); }
 }
 
@@ -3257,7 +3258,7 @@ public partial class HTMLTemplateElement : HTMLElement
 {
 		public HTMLTemplateElement() { }
 	///<include file='Utils/Docs/HTMLTemplateElementContent/HTMLTemplateElementContent.generated.xml' path='docs/HTMLTemplateElementContent/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DocumentFragment Content { get; }
 }
 
@@ -3267,16 +3268,16 @@ public partial class HTMLSlotElement : HTMLElement
 {
 		public HTMLSlotElement() { }
 	///<include file='Utils/Docs/HTMLSlotElementName/HTMLSlotElementName.generated.xml' path='docs/HTMLSlotElementName/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string Name { get; set; }
 	///<include file='Utils/Docs/HTMLSlotElementAssignedNodes/HTMLSlotElementAssignedNodes.generated.xml' path='docs/HTMLSlotElementAssignedNodes/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public List<Node> AssignedNodes(AssignedNodesOptions options) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HTMLSlotElementAssignedElements/HTMLSlotElementAssignedElements.generated.xml' path='docs/HTMLSlotElementAssignedElements/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public List<Element> AssignedElements(AssignedNodesOptions options) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HTMLSlotElementAssign/HTMLSlotElementAssign.generated.xml' path='docs/HTMLSlotElementAssign/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined Assign(params Union26[] nodes) { throw new System.NotImplementedException(); }
 }
 
@@ -3293,22 +3294,22 @@ public partial class HTMLCanvasElement : HTMLElement
 {
 		public HTMLCanvasElement() { }
 	///<include file='Utils/Docs/HTMLCanvasElementWidth/HTMLCanvasElementWidth.generated.xml' path='docs/HTMLCanvasElementWidth/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Width { get; set; }
 	///<include file='Utils/Docs/HTMLCanvasElementHeight/HTMLCanvasElementHeight.generated.xml' path='docs/HTMLCanvasElementHeight/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Height { get; set; }
 	///<include file='Utils/Docs/HTMLCanvasElementGetContext/HTMLCanvasElementGetContext.generated.xml' path='docs/HTMLCanvasElementGetContext/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public RenderingContext? GetContext(string contextId, dynamic options) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HTMLCanvasElementToDataURL/HTMLCanvasElementToDataURL.generated.xml' path='docs/HTMLCanvasElementToDataURL/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string ToDataURL(string type, dynamic quality) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HTMLCanvasElementToBlob/HTMLCanvasElementToBlob.generated.xml' path='docs/HTMLCanvasElementToBlob/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined ToBlob(BlobCallback callback, string type, dynamic quality) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HTMLCanvasElementTransferControlToOffscreen/HTMLCanvasElementTransferControlToOffscreen.generated.xml' path='docs/HTMLCanvasElementTransferControlToOffscreen/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public OffscreenCanvas TransferControlToOffscreen() { throw new System.NotImplementedException(); }
 }
 
@@ -3643,40 +3644,40 @@ public partial class CanvasPattern
 public partial class TextMetrics
 {
 	///<include file='Utils/Docs/TextMetricsWidth/TextMetricsWidth.generated.xml' path='docs/TextMetricsWidth/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public double Width { get; }
 	///<include file='Utils/Docs/TextMetricsActualBoundingBoxLeft/TextMetricsActualBoundingBoxLeft.generated.xml' path='docs/TextMetricsActualBoundingBoxLeft/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public double ActualBoundingBoxLeft { get; }
 	///<include file='Utils/Docs/TextMetricsActualBoundingBoxRight/TextMetricsActualBoundingBoxRight.generated.xml' path='docs/TextMetricsActualBoundingBoxRight/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public double ActualBoundingBoxRight { get; }
 	///<include file='Utils/Docs/TextMetricsFontBoundingBoxAscent/TextMetricsFontBoundingBoxAscent.generated.xml' path='docs/TextMetricsFontBoundingBoxAscent/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public double FontBoundingBoxAscent { get; }
 	///<include file='Utils/Docs/TextMetricsFontBoundingBoxDescent/TextMetricsFontBoundingBoxDescent.generated.xml' path='docs/TextMetricsFontBoundingBoxDescent/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public double FontBoundingBoxDescent { get; }
 	///<include file='Utils/Docs/TextMetricsActualBoundingBoxAscent/TextMetricsActualBoundingBoxAscent.generated.xml' path='docs/TextMetricsActualBoundingBoxAscent/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public double ActualBoundingBoxAscent { get; }
 	///<include file='Utils/Docs/TextMetricsActualBoundingBoxDescent/TextMetricsActualBoundingBoxDescent.generated.xml' path='docs/TextMetricsActualBoundingBoxDescent/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public double ActualBoundingBoxDescent { get; }
 	///<include file='Utils/Docs/TextMetricsEmHeightAscent/TextMetricsEmHeightAscent.generated.xml' path='docs/TextMetricsEmHeightAscent/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public double EmHeightAscent { get; }
 	///<include file='Utils/Docs/TextMetricsEmHeightDescent/TextMetricsEmHeightDescent.generated.xml' path='docs/TextMetricsEmHeightDescent/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public double EmHeightDescent { get; }
 	///<include file='Utils/Docs/TextMetricsHangingBaseline/TextMetricsHangingBaseline.generated.xml' path='docs/TextMetricsHangingBaseline/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public double HangingBaseline { get; }
 	///<include file='Utils/Docs/TextMetricsAlphabeticBaseline/TextMetricsAlphabeticBaseline.generated.xml' path='docs/TextMetricsAlphabeticBaseline/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public double AlphabeticBaseline { get; }
 	///<include file='Utils/Docs/TextMetricsIdeographicBaseline/TextMetricsIdeographicBaseline.generated.xml' path='docs/TextMetricsIdeographicBaseline/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public double IdeographicBaseline { get; }
 }
 
@@ -3961,75 +3962,111 @@ public partial class DragEventInit
 public partial class Window : EventTarget
 {
 	///<include file='Utils/Docs/WindowWindow/WindowWindow.generated.xml' path='docs/WindowWindow/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Window _window { get; }
 	///<include file='Utils/Docs/WindowSelf/WindowSelf.generated.xml' path='docs/WindowSelf/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Window Self { get; }
 	///<include file='Utils/Docs/WindowDocument/WindowDocument.generated.xml' path='docs/WindowDocument/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Document Document { get; }
 	///<include file='Utils/Docs/WindowName/WindowName.generated.xml' path='docs/WindowName/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string Name { get; set; }
 	///<include file='Utils/Docs/WindowLocation/WindowLocation.generated.xml' path='docs/WindowLocation/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Location Location { get; }
 	///<include file='Utils/Docs/WindowHistory/WindowHistory.generated.xml' path='docs/WindowHistory/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public History History { get; }
 	///<include file='Utils/Docs/WindowCustomElements/WindowCustomElements.generated.xml' path='docs/WindowCustomElements/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CustomElementRegistry CustomElements { get; }
 	///<include file='Utils/Docs/WindowLocationbar/WindowLocationbar.generated.xml' path='docs/WindowLocationbar/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public BarProp Locationbar { get; }
 	///<include file='Utils/Docs/WindowMenubar/WindowMenubar.generated.xml' path='docs/WindowMenubar/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public BarProp Menubar { get; }
 	///<include file='Utils/Docs/WindowPersonalbar/WindowPersonalbar.generated.xml' path='docs/WindowPersonalbar/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public BarProp Personalbar { get; }
 	///<include file='Utils/Docs/WindowScrollbars/WindowScrollbars.generated.xml' path='docs/WindowScrollbars/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public BarProp Scrollbars { get; }
 	///<include file='Utils/Docs/WindowStatusbar/WindowStatusbar.generated.xml' path='docs/WindowStatusbar/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public BarProp Statusbar { get; }
 	///<include file='Utils/Docs/WindowToolbar/WindowToolbar.generated.xml' path='docs/WindowToolbar/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public BarProp Toolbar { get; }
 	///<include file='Utils/Docs/WindowStatus/WindowStatus.generated.xml' path='docs/WindowStatus/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string Status { get; set; }
 	///<include file='Utils/Docs/WindowClose/WindowClose.generated.xml' path='docs/WindowClose/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined Close() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/WindowClosed/WindowClosed.generated.xml' path='docs/WindowClosed/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Closed { get; }
 	///<include file='Utils/Docs/WindowStop/WindowStop.generated.xml' path='docs/WindowStop/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined Stop() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/WindowFocus/WindowFocus.generated.xml' path='docs/WindowFocus/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined Focus() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/WindowBlur/WindowBlur.generated.xml' path='docs/WindowBlur/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined Blur() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/WindowFrames/WindowFrames.generated.xml' path='docs/WindowFrames/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Window Frames { get; }
 	///<include file='Utils/Docs/WindowLength/WindowLength.generated.xml' path='docs/WindowLength/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Length { get; }
 	///<include file='Utils/Docs/WindowTop/WindowTop.generated.xml' path='docs/WindowTop/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Window? Top { get; }
 	///<include file='Utils/Docs/WindowOpener/WindowOpener.generated.xml' path='docs/WindowOpener/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public dynamic Opener { get; set; }
 	///<include file='Utils/Docs/WindowParent/WindowParent.generated.xml' path='docs/WindowParent/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Window? Parent { get; }
 	///<include file='Utils/Docs/WindowFrameElement/WindowFrameElement.generated.xml' path='docs/WindowFrameElement/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Element? FrameElement { get; }
 	///<include file='Utils/Docs/WindowOpen/WindowOpen.generated.xml' path='docs/WindowOpen/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Window? Open(string url, string target, string features) { throw new System.NotImplementedException(); }
 	
 	///<include file='Utils/Docs/WindowNavigator/WindowNavigator.generated.xml' path='docs/WindowNavigator/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Navigator Navigator { get; }
-		public Navigator ClientInformation { get; }
-		public bool OriginAgentCluster { get; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public Navigator ClientInformation { get; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public bool OriginAgentCluster { get; }
 	///<include file='Utils/Docs/WindowAlert/WindowAlert.generated.xml' path='docs/WindowAlert/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined Alert() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/WindowAlert/WindowAlert.generated.xml' path='docs/WindowAlert/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined Alert(string message) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/WindowConfirm/WindowConfirm.generated.xml' path='docs/WindowConfirm/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Confirm(string message) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/WindowPrompt/WindowPrompt.generated.xml' path='docs/WindowPrompt/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string? Prompt(string message, string default_) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/WindowPrint/WindowPrint.generated.xml' path='docs/WindowPrint/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined Print() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/WindowPostMessage/WindowPostMessage.generated.xml' path='docs/WindowPostMessage/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined PostMessage(dynamic message, string targetOrigin, List<object> transfer) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/WindowPostMessage/WindowPostMessage.generated.xml' path='docs/WindowPostMessage/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined PostMessage(dynamic message, WindowPostMessageOptions options) { throw new System.NotImplementedException(); }
 }
 
@@ -4870,31 +4907,31 @@ public partial class StorageEventInit : EventInit
 public partial class HTMLMarqueeElement : HTMLElement
 {
 		public HTMLMarqueeElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Behavior { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string BgColor { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Direction { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Height { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Hspace { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public long Loop { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong ScrollAmount { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong ScrollDelay { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public bool TrueSpeed { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Vspace { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Width { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined Start() { throw new System.NotImplementedException(); }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined Stop() { throw new System.NotImplementedException(); }
 }
 
@@ -4903,9 +4940,9 @@ public partial class HTMLMarqueeElement : HTMLElement
 public partial class HTMLFrameSetElement : HTMLElement, WindowEventHandlers
 {
 		public HTMLFrameSetElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Cols { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Rows { get; set; }
 }
 
@@ -4914,102 +4951,125 @@ public partial class HTMLFrameSetElement : HTMLElement, WindowEventHandlers
 public partial class HTMLFrameElement : HTMLElement
 {
 		public HTMLFrameElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Name { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Scrolling { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Src { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string FrameBorder { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string LongDesc { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public bool NoResize { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public Document? ContentDocument { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public Window? ContentWindow { get; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string MarginHeight { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string MarginWidth { get; set; }
 }
 
 ///<include file='Utils/Docs/HTMLAnchorElement/HTMLAnchorElement.generated.xml' path='docs/HTMLAnchorElement/*'/>
 public partial class HTMLAnchorElement
 {
-		public string Coords { get; set; }
-		public string Charset { get; set; }
-		public string Name { get; set; }
-		public string Rev { get; set; }
-		public string Shape { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Coords { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Charset { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Name { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Rev { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Shape { get; set; }
 }
 
 ///<include file='Utils/Docs/HTMLAreaElement/HTMLAreaElement.generated.xml' path='docs/HTMLAreaElement/*'/>
 public partial class HTMLAreaElement
 {
-		public bool NoHref { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public bool NoHref { get; set; }
 }
 
 ///<include file='Utils/Docs/HTMLBodyElement/HTMLBodyElement.generated.xml' path='docs/HTMLBodyElement/*'/>
 public partial class HTMLBodyElement
 {
-		public string Text { get; set; }
-		public string Link { get; set; }
-		public string VLink { get; set; }
-		public string ALink { get; set; }
-		public string BgColor { get; set; }
-		public string Background { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Text { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Link { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string VLink { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string ALink { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string BgColor { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Background { get; set; }
 }
 
 ///<include file='Utils/Docs/HTMLBRElement/HTMLBRElement.generated.xml' path='docs/HTMLBRElement/*'/>
 public partial class HTMLBRElement
 {
-		public string Clear { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Clear { get; set; }
 }
 
 ///<include file='Utils/Docs/HTMLTableCaptionElement/HTMLTableCaptionElement.generated.xml' path='docs/HTMLTableCaptionElement/*'/>
 public partial class HTMLTableCaptionElement
 {
-		public string Align { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Align { get; set; }
 }
 
 ///<include file='Utils/Docs/HTMLTableColElement/HTMLTableColElement.generated.xml' path='docs/HTMLTableColElement/*'/>
 public partial class HTMLTableColElement
 {
-		public string Align { get; set; }
-		public string Ch { get; set; }
-		public string ChOff { get; set; }
-		public string VAlign { get; set; }
-		public string Width { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Align { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Ch { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string ChOff { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string VAlign { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Width { get; set; }
 }
 
 [To(ToAttribute.Default)]
 public partial class HTMLDirectoryElement : HTMLElement
 {
 		public HTMLDirectoryElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Compact { get; set; }
 }
 
 ///<include file='Utils/Docs/HTMLDivElement/HTMLDivElement.generated.xml' path='docs/HTMLDivElement/*'/>
 public partial class HTMLDivElement
 {
-		public string Align { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Align { get; set; }
 }
 
 ///<include file='Utils/Docs/HTMLDListElement/HTMLDListElement.generated.xml' path='docs/HTMLDListElement/*'/>
 public partial class HTMLDListElement
 {
-		public bool Compact { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public bool Compact { get; set; }
 }
 
 ///<include file='Utils/Docs/HTMLEmbedElement/HTMLEmbedElement.generated.xml' path='docs/HTMLEmbedElement/*'/>
 public partial class HTMLEmbedElement
 {
-		public string Align { get; set; }
-		public string Name { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Align { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Name { get; set; }
 }
 
 ///<include file='Utils/Docs/HTMLFontElement/HTMLFontElement.generated.xml' path='docs/HTMLFontElement/*'/>
@@ -5018,135 +5078,177 @@ public partial class HTMLFontElement : HTMLElement
 {
 		public HTMLFontElement() { }
 	///<include file='Utils/Docs/HTMLFontElementColor/HTMLFontElementColor.generated.xml' path='docs/HTMLFontElementColor/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string Color { get; set; }
 	///<include file='Utils/Docs/HTMLFontElementFace/HTMLFontElementFace.generated.xml' path='docs/HTMLFontElementFace/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string Face { get; set; }
 	///<include file='Utils/Docs/HTMLFontElementSize/HTMLFontElementSize.generated.xml' path='docs/HTMLFontElementSize/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string Size { get; set; }
 }
 
 ///<include file='Utils/Docs/HTMLHeadingElement/HTMLHeadingElement.generated.xml' path='docs/HTMLHeadingElement/*'/>
 public partial class HTMLHeadingElement
 {
-		public string Align { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Align { get; set; }
 }
 
 ///<include file='Utils/Docs/HTMLHRElement/HTMLHRElement.generated.xml' path='docs/HTMLHRElement/*'/>
 public partial class HTMLHRElement
 {
-		public string Align { get; set; }
-		public string Color { get; set; }
-		public bool NoShade { get; set; }
-		public string Size { get; set; }
-		public string Width { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Align { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Color { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public bool NoShade { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Size { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Width { get; set; }
 }
 
 ///<include file='Utils/Docs/HTMLHtmlElement/HTMLHtmlElement.generated.xml' path='docs/HTMLHtmlElement/*'/>
 public partial class HTMLHtmlElement
 {
 	///<include file='Utils/Docs/HTMLHtmlElementVersion/HTMLHtmlElementVersion.generated.xml' path='docs/HTMLHtmlElementVersion/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string Version { get; set; }
 }
 
 ///<include file='Utils/Docs/HTMLIFrameElement/HTMLIFrameElement.generated.xml' path='docs/HTMLIFrameElement/*'/>
 public partial class HTMLIFrameElement
 {
-		public string Align { get; set; }
-		public string Scrolling { get; set; }
-		public string FrameBorder { get; set; }
-		public string LongDesc { get; set; }
-		public string MarginHeight { get; set; }
-		public string MarginWidth { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Align { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Scrolling { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string FrameBorder { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string LongDesc { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string MarginHeight { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string MarginWidth { get; set; }
 }
 
 ///<include file='Utils/Docs/HTMLImageElement/HTMLImageElement.generated.xml' path='docs/HTMLImageElement/*'/>
 public partial class HTMLImageElement
 {
 	///<include file='Utils/Docs/HTMLImageElementName/HTMLImageElementName.generated.xml' path='docs/HTMLImageElementName/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string Name { get; set; }
-		public string Lowsrc { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Lowsrc { get; set; }
 	///<include file='Utils/Docs/HTMLImageElementAlign/HTMLImageElementAlign.generated.xml' path='docs/HTMLImageElementAlign/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string Align { get; set; }
 	///<include file='Utils/Docs/HTMLImageElementHspace/HTMLImageElementHspace.generated.xml' path='docs/HTMLImageElementHspace/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Hspace { get; set; }
 	///<include file='Utils/Docs/HTMLImageElementVspace/HTMLImageElementVspace.generated.xml' path='docs/HTMLImageElementVspace/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Vspace { get; set; }
 	///<include file='Utils/Docs/HTMLImageElementLongDesc/HTMLImageElementLongDesc.generated.xml' path='docs/HTMLImageElementLongDesc/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string LongDesc { get; set; }
 	///<include file='Utils/Docs/HTMLImageElementBorder/HTMLImageElementBorder.generated.xml' path='docs/HTMLImageElementBorder/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string Border { get; set; }
 }
 
 ///<include file='Utils/Docs/HTMLInputElement/HTMLInputElement.generated.xml' path='docs/HTMLInputElement/*'/>
 public partial class HTMLInputElement
 {
-		public string Align { get; set; }
-		public string UseMap { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Align { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string UseMap { get; set; }
 }
 
 ///<include file='Utils/Docs/HTMLLegendElement/HTMLLegendElement.generated.xml' path='docs/HTMLLegendElement/*'/>
 public partial class HTMLLegendElement
 {
-		public string Align { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Align { get; set; }
 }
 
 ///<include file='Utils/Docs/HTMLLIElement/HTMLLIElement.generated.xml' path='docs/HTMLLIElement/*'/>
 public partial class HTMLLIElement
 {
-		public string Type { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Type { get; set; }
 }
 
 ///<include file='Utils/Docs/HTMLLinkElement/HTMLLinkElement.generated.xml' path='docs/HTMLLinkElement/*'/>
 public partial class HTMLLinkElement
 {
-		public string Charset { get; set; }
-		public string Rev { get; set; }
-		public string Target { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Charset { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Rev { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Target { get; set; }
 }
 
 ///<include file='Utils/Docs/HTMLMenuElement/HTMLMenuElement.generated.xml' path='docs/HTMLMenuElement/*'/>
 public partial class HTMLMenuElement
 {
-		public bool Compact { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public bool Compact { get; set; }
 }
 
 ///<include file='Utils/Docs/HTMLMetaElement/HTMLMetaElement.generated.xml' path='docs/HTMLMetaElement/*'/>
 public partial class HTMLMetaElement
 {
 	///<include file='Utils/Docs/HTMLMetaElementScheme/HTMLMetaElementScheme.generated.xml' path='docs/HTMLMetaElementScheme/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string Scheme { get; set; }
 }
 
 ///<include file='Utils/Docs/HTMLObjectElement/HTMLObjectElement.generated.xml' path='docs/HTMLObjectElement/*'/>
 public partial class HTMLObjectElement
 {
-		public string Align { get; set; }
-		public string Archive { get; set; }
-		public string Code { get; set; }
-		public bool Declare { get; set; }
-		public ulong Hspace { get; set; }
-		public string Standby { get; set; }
-		public ulong Vspace { get; set; }
-		public string CodeBase { get; set; }
-		public string CodeType { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Align { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Archive { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Code { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public bool Declare { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public ulong Hspace { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Standby { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public ulong Vspace { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string CodeBase { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string CodeType { get; set; }
 	///<include file='Utils/Docs/HTMLObjectElementUseMap/HTMLObjectElementUseMap.generated.xml' path='docs/HTMLObjectElementUseMap/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string UseMap { get; set; }
-		public string Border { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Border { get; set; }
 }
 
 ///<include file='Utils/Docs/HTMLOListElement/HTMLOListElement.generated.xml' path='docs/HTMLOListElement/*'/>
 public partial class HTMLOListElement
 {
-		public bool Compact { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public bool Compact { get; set; }
 }
 
 ///<include file='Utils/Docs/HTMLParagraphElement/HTMLParagraphElement.generated.xml' path='docs/HTMLParagraphElement/*'/>
 public partial class HTMLParagraphElement
 {
-		public string Align { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Align { get; set; }
 }
 
 ///<include file='Utils/Docs/HTMLParamElement/HTMLParamElement.generated.xml' path='docs/HTMLParamElement/*'/>
@@ -5154,98 +5256,132 @@ public partial class HTMLParagraphElement
 public partial class HTMLParamElement : HTMLElement
 {
 		public HTMLParamElement() { }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Name { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Value { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Type { get; set; }
-	[To(ToAttribute.FirstCharToLowerCase)]
+		[To(ToAttribute.FirstCharToLowerCase)]
 	public string ValueType { get; set; }
 }
 
 ///<include file='Utils/Docs/HTMLPreElement/HTMLPreElement.generated.xml' path='docs/HTMLPreElement/*'/>
 public partial class HTMLPreElement
 {
-		public long Width { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public long Width { get; set; }
 }
 
 ///<include file='Utils/Docs/HTMLStyleElement/HTMLStyleElement.generated.xml' path='docs/HTMLStyleElement/*'/>
 public partial class HTMLStyleElement
 {
 	///<include file='Utils/Docs/HTMLStyleElementType/HTMLStyleElementType.generated.xml' path='docs/HTMLStyleElementType/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string Type { get; set; }
 }
 
 ///<include file='Utils/Docs/HTMLScriptElement/HTMLScriptElement.generated.xml' path='docs/HTMLScriptElement/*'/>
 public partial class HTMLScriptElement
 {
-		public string Charset { get; set; }
-		public string Event { get; set; }
-		public string HtmlFor { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Charset { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Event { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string HtmlFor { get; set; }
 }
 
 ///<include file='Utils/Docs/HTMLTableElement/HTMLTableElement.generated.xml' path='docs/HTMLTableElement/*'/>
 public partial class HTMLTableElement
 {
 	///<include file='Utils/Docs/HTMLTableElementAlign/HTMLTableElementAlign.generated.xml' path='docs/HTMLTableElementAlign/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string Align { get; set; }
 	///<include file='Utils/Docs/HTMLTableElementBorder/HTMLTableElementBorder.generated.xml' path='docs/HTMLTableElementBorder/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string Border { get; set; }
 	///<include file='Utils/Docs/HTMLTableElementFrame/HTMLTableElementFrame.generated.xml' path='docs/HTMLTableElementFrame/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string Frame { get; set; }
 	///<include file='Utils/Docs/HTMLTableElementRules/HTMLTableElementRules.generated.xml' path='docs/HTMLTableElementRules/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string Rules { get; set; }
 	///<include file='Utils/Docs/HTMLTableElementSummary/HTMLTableElementSummary.generated.xml' path='docs/HTMLTableElementSummary/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string Summary { get; set; }
 	///<include file='Utils/Docs/HTMLTableElementWidth/HTMLTableElementWidth.generated.xml' path='docs/HTMLTableElementWidth/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string Width { get; set; }
 	///<include file='Utils/Docs/HTMLTableElementBgColor/HTMLTableElementBgColor.generated.xml' path='docs/HTMLTableElementBgColor/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string BgColor { get; set; }
 	///<include file='Utils/Docs/HTMLTableElementCellPadding/HTMLTableElementCellPadding.generated.xml' path='docs/HTMLTableElementCellPadding/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string CellPadding { get; set; }
 	///<include file='Utils/Docs/HTMLTableElementCellSpacing/HTMLTableElementCellSpacing.generated.xml' path='docs/HTMLTableElementCellSpacing/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public string CellSpacing { get; set; }
 }
 
 ///<include file='Utils/Docs/HTMLTableSectionElement/HTMLTableSectionElement.generated.xml' path='docs/HTMLTableSectionElement/*'/>
 public partial class HTMLTableSectionElement
 {
-		public string Align { get; set; }
-		public string Ch { get; set; }
-		public string ChOff { get; set; }
-		public string VAlign { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Align { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Ch { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string ChOff { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string VAlign { get; set; }
 }
 
 ///<include file='Utils/Docs/HTMLTableCellElement/HTMLTableCellElement.generated.xml' path='docs/HTMLTableCellElement/*'/>
 public partial class HTMLTableCellElement
 {
-		public string Align { get; set; }
-		public string Axis { get; set; }
-		public string Height { get; set; }
-		public string Width { get; set; }
-		public string Ch { get; set; }
-		public string ChOff { get; set; }
-		public bool NoWrap { get; set; }
-		public string VAlign { get; set; }
-		public string BgColor { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Align { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Axis { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Height { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Width { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Ch { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string ChOff { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public bool NoWrap { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string VAlign { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string BgColor { get; set; }
 }
 
 ///<include file='Utils/Docs/HTMLTableRowElement/HTMLTableRowElement.generated.xml' path='docs/HTMLTableRowElement/*'/>
 public partial class HTMLTableRowElement
 {
-		public string Align { get; set; }
-		public string Ch { get; set; }
-		public string ChOff { get; set; }
-		public string VAlign { get; set; }
-		public string BgColor { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Align { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Ch { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string ChOff { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string VAlign { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string BgColor { get; set; }
 }
 
 ///<include file='Utils/Docs/HTMLUListElement/HTMLUListElement.generated.xml' path='docs/HTMLUListElement/*'/>
 public partial class HTMLUListElement
 {
-		public bool Compact { get; set; }
-		public string Type { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public bool Compact { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Type { get; set; }
 }
 
 ///<include file='Utils/Docs/Document/Document.generated.xml' path='docs/Document/*'/>
@@ -5277,10 +5413,13 @@ public partial class Document
 public partial class Window
 {
 	///<include file='Utils/Docs/WindowCaptureEvents/WindowCaptureEvents.generated.xml' path='docs/WindowCaptureEvents/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined CaptureEvents() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/WindowReleaseEvents/WindowReleaseEvents.generated.xml' path='docs/WindowReleaseEvents/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined ReleaseEvents() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/WindowExternal/WindowExternal.generated.xml' path='docs/WindowExternal/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public External External { get; }
 }
 

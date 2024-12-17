@@ -46,7 +46,6 @@ namespace CSharpToJavaScript
 		public CSTOJS(CSTOJSOptions options)
 		{
 			_Options = options;
-			_Walker = new(_Options);
 
 			if (_Options.Debug)
 			{
@@ -93,6 +92,8 @@ namespace CSharpToJavaScript
 
 		private async Task GenerateAsync(string path, Assembly assembly, string filename = "main.js") 
 		{
+			_Walker = new(_Options);
+
 			string fileCS = await File.ReadAllTextAsync(path);
 
 			SyntaxTree tree = CSharpSyntaxTree.ParseText(fileCS);
@@ -300,6 +301,7 @@ namespace CSharpToJavaScript
 			SM.Log($"--- Done!");
 			SM.Log($"--- Path: {_Options.OutPutPath}");
 			SM.Log($"--- File: {filename}");
+			SM.Log($"--- --- ---");
 		}
 	}
 }

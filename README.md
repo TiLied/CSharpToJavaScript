@@ -37,7 +37,7 @@ class Test
 ```csharp
 Assembly assembly = Assembly.GetExecutingAssembly();
 CSTOJS cstojs = new(assembly);
-cstojs.Generate2Async("FULL PATH TO CSHARP FILE YOU WHAT TO CONVERT");
+await cstojs.Generate2Async("FULL PATH TO CSHARP FILE YOU WHAT TO CONVERT");
 ```
 - 5 Run program and file will be generated in output path(default is "Directory.GetCurrentDirectory()") with name "main.js"(default)
 - 6 See below for simple example "HelloWorld"

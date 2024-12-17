@@ -7,14 +7,13 @@ This is a personal project with purpose to learn and understand better c# and js
 
 ### C#
 ```csharp
-using static CSharpToJavaScript.APIs.JS.GlobalObject.GlobalThis;
 namespace ConsoleAppTest.CSharp;
 
 public class Test							
 {
 	public Test()
 	{
-		Console.Log("HelloWorld!");
+		Console.WriteLine("HelloWorld!");
 	}
 }
 ```
@@ -38,7 +37,7 @@ class Test
 CSTOJS cstojs = new();
 await cstojs.GenerateOneAsync("FULL PATH TO CSHARP FILE YOU WHAT TO CONVERT");
 ```
-- 5 Run program and file will be generated in output path(default is "Directory.GetCurrentDirectory()") with name "|FILE NAME|.js"(default)
+- 5 Run program and file will be generated in output path(default is "Directory.GetCurrentDirectory()") with name "|CS FILE NAME|.js"(default)
 - 6 See below for simple example "HelloWorld"
 
 ## Example "HelloWorld"
@@ -60,14 +59,17 @@ public class Program
 ```
 CSharp/Test.cs
 ```csharp
-using static CSharpToJavaScript.APIs.JS.GlobalObject.GlobalThis;
+using CSharpToJavaScript.APIs.JS;
+
+using static CSharpToJavaScript.APIs.JS.GlobalObject;
+
 namespace ConsoleAppTest.CSharp;
 
 public class Test
 {
 	public Test()
 	{
-		Console.Log("HelloWorld");
+		GlobalThis.Console.Log("HelloWorld!");
 	}
 }
 ```
@@ -77,7 +79,7 @@ class Test
 {
 	constructor()
  	{
-   		console.log("HelloWorld");
+   		globalThis.console.log("HelloWorld!");
  	}
 }
 ```

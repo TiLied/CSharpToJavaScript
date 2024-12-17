@@ -1,0 +1,11 @@
+<docs>
+<HTTPStatus510>
+<summary>
+The HyperText Transfer Protocol (HTTP) <strong><c>510 Not Extended</c></strong><br/>response status code is sent in the context of the HTTP Extension Framework, defined in<br/><see href="https://datatracker.ietf.org/doc/html/rfc2774">RFC 2774</see>.
+</summary>
+<remarks>
+<para>In that specification a client may send a request that contains an extension<br/>declaration, that describes the extension to be used. If the server receives such a<br/>request, but any described extensions are not supported for the request, then the server<br/>responds with the 510 status code.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/510"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPStatus510>
+</docs>

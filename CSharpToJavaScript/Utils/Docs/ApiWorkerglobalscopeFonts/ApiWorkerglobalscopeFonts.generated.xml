@@ -1,0 +1,13 @@
+<docs>
+<WorkerGlobalScopeFonts>
+<summary>
+The <strong><c>fonts</c></strong> property of the <see cref="WorkerGlobalScope."/> interface returns the <see cref="FontFaceSet."/> interface of the worker.
+</summary>
+<remarks>
+<para>This property is part of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Font_Loading_API">CSS Font Loading API</see>.</para>
+<para>-<see cref="FontFaceSet."/> interface<br/>-<see cref="FontFace."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/fonts"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The returned value is the <see cref="FontFaceSet."/> interface of the worker.<br/>The <c>FontFaceSet</c> interface is useful for loading new fonts, checking the status of previously loaded fonts etc.</value>
+</WorkerGlobalScopeFonts>
+</docs>

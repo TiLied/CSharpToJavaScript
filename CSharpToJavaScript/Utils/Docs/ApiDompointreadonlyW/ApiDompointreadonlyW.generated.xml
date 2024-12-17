@@ -1,0 +1,13 @@
+<docs>
+<DOMPointReadOnlyW>
+<summary>
+The <strong><c>DOMPointReadOnly</c></strong> interface&amp;apos;s<br/><strong><c>w</c></strong> property holds the point&amp;apos;s perspective value,<br/><c>w</c>, for a read-only point in space.
+</summary>
+<remarks>
+<para>If your script needs to be able<br/>to change the value of this property, you should instead use the <see cref="DOMPoint."/><br/>object.</para>
+<para>-The other coordinate properties: <see cref="DOMPointReadOnly.X."/>,<br/><see cref="DOMPointReadOnly.Y."/>, and <see cref="DOMPointReadOnly.Z."/>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMPointReadOnly/w"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A double-precision floating-point value indicating the <c>w</c> perspective value<br/>for the point. This value is <strong>unrestricted</strong>, meaning that it is allowed<br/>to be infinite or invalid (that is, its value may be <see cref="NaN"/> or<br/><see cref="Infinity"/>). The default is <c>1.0</c>.</value>
+</DOMPointReadOnlyW>
+</docs>

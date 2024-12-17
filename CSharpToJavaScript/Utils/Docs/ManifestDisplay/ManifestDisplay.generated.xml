@@ -1,0 +1,12 @@
+<docs>
+<ManifestDisplay>
+<summary>
+The <c>display</c> member is a string that determines the developers&amp;apos; preferred display mode for the website. The display mode changes how much of browser UI is shown to the user and can range from <c>browser</c> (when the full browser window is shown) to <c>fullscreen</c> (when the app is fullscreened).
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> The browser follows a pre-defined fallback chain if it does not support a given mode: <c>fullscreen</c> → <c>standalone</c> → <c>minimal-ui</c> → <c>browser</c>, with <c>browser</c> being the default value if the <c>display</c> member is not specified.</para></blockquote><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> You can selectively apply CSS to your app based on the display mode, using the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/display-mode">@media/display-mode</see> media feature. This can be used to provide a consistent user experience between launching a site from a URL and launching it from a desktop icon.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/Manifest/display"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The possible values are:</value>
+</ManifestDisplay>
+</docs>

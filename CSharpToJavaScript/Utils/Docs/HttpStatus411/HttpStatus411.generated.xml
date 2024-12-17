@@ -1,0 +1,12 @@
+<docs>
+<HTTPStatus411>
+<summary>
+The HyperText Transfer Protocol (HTTP)<br/><strong><c>411 Length Required</c></strong> client error response code indicates<br/>that the server refuses to accept the request without a defined<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Length">Content-Length</see> header.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> by specification, when sending data in a series of chunks, the<br/><c>Content-Length</c> header is omitted and at the beginning of each chunk you<br/>need to add the length of the current chunk in hexadecimal format. See<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Transfer-Encoding">Transfer-Encoding</see> for more details.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Length">Content-Length</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Transfer-Encoding">Transfer-Encoding</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/411"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPStatus411>
+</docs>

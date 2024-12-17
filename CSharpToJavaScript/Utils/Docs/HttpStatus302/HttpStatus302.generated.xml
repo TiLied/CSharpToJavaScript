@@ -1,0 +1,12 @@
+<docs>
+<HTTPStatus302>
+<summary>
+The HyperText Transfer Protocol (HTTP) <strong><c>302 Found</c></strong> redirect<br/>status response code indicates that the resource requested has been temporarily moved to<br/>the URL given by the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Location">Location</see> header. A browser redirects to this page<br/>but search engines don&amp;apos;t update their links to the resource (in &amp;apos;SEO-speak&amp;apos;, it is said<br/>that the &amp;apos;link-juice&amp;apos; is not sent to the new URL).
+</summary>
+<remarks>
+<para>Even if the specification requires the method (and the body) not to be altered when the<br/>redirection is performed, not all user-agents conform here - you can still find this<br/>type of bugged software out there. It is therefore recommended to set the<br/><c>302</c> code only as a response for {{HTTPMethod("GET")}} or<br/>{{HTTPMethod("HEAD")}} methods and to use {{HTTPStatus("307", "307 Temporary<br/>Redirect&amp;quot;)}} instead, as the method change is explicitly prohibited in that case.</para><para>In the cases where you want the method used to be changed to {{HTTPMethod("GET")}}, use<br/>{{HTTPStatus("303", "303 See Other")}} instead. This is useful when you want to give a<br/>response to a {{HTTPMethod("PUT")}} method that is not the uploaded resource but a<br/>confirmation message such as: &amp;apos;you successfully uploaded XYZ&amp;apos;.</para>
+<para>-{{HTTPStatus("307", "307 Temporary Redirect")}}, the equivalent of this status code<br/>where the method used never changes.<br/>-{{HTTPStatus("303", "303 See Other")}}, a temporary redirect that changes the method<br/>used to {{HTTPMethod("GET")}}.<br/>-{{HTTPStatus("301", "301 Moved Permanently")}}, a permanent redirect.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/302"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPStatus302>
+</docs>

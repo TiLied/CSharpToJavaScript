@@ -1,0 +1,13 @@
+<docs>
+<NavigatorRequestMediaKeySystemAccess>
+<summary>
+The <strong><c>Navigator.requestMediaKeySystemAccess()</c></strong> method<br/>returns a {{jsxref('Promise')}} which delivers a <see cref="'MediaKeySystemAccess'."/><br/>object that can be used to access a particular media key system, which can in turn be<br/>used to create keys for decrypting a media stream. This method is part of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Encrypted_Media_Extensions_API">Encrypted Media Extensions API</see>, which brings support for encrypted media and DRM-protected video to the web.
+</summary>
+<remarks>
+<para>This method may have user-visible effects such as asking for permission to access one<br/>or more system resources. Consider that when deciding when to call<br/><c>requestMediaKeySystemAccess()</c>; you don&amp;apos;t want those requests<br/>to happen at inconvenient times. As a general rule, this function should be called only<br/>when it's about time to create and use a <see cref="MediaKeys."/> object by calling the<br/>returned <see cref="MediaKeySystemAccess."/> object's<br/><see cref="MediaKeySystemAccess.CreateMediaKeys."/> method.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Encrypted_Media_Extensions_API">Encrypted Media Extensions API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API">Media Capture and Streams API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/requestMediaKeySystemAccess"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="'Promise'"/> that, when resolved, delivers a<br/><see cref="'MediaKeySystemAccess'."/> object to your fulfillment handler function. The<br/>fulfillment handler receives as input just one parameter:</returns>
+</NavigatorRequestMediaKeySystemAccess>
+</docs>

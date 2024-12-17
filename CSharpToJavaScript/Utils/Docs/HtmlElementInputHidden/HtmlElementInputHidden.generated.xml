@@ -1,0 +1,12 @@
+<docs>
+<HTMLElementInputHidden>
+<summary>
+<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> The <see cref="HTMLElement/input_event."/> and <see cref="HTMLElement/change_event."/> events do not apply to this input type. Hidden inputs cannot be focused even using JavaScript (e.g. <c>hiddenInput.focus()</c>).</blockquote>
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Learn/Forms">HTML forms guide</see><br/>-{{HTMLElement("input")}} and the <see cref="HTMLInputElement."/> interface it's based upon<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/hidden"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">input</see> element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#value"><c>value</c></see> attribute holds a string that contains the hidden data you want to include when the form is submitted to the server. This specifically can&amp;apos;t be edited or seen by the user via the user interface, although you could edit the value via browser developer tools.<blockquote class="WARNING"><h5>WARNING</h5><strong>Warning:</strong> While the value isn&amp;apos;t displayed to the user in the page&amp;apos;s content, it is visible—and can be edited—using any browser&amp;apos;s developer tools or &amp;quot;View Source&amp;quot; functionality. Do not rely on <c>hidden</c> inputs as a form of security.</blockquote></value>
+</HTMLElementInputHidden>
+</docs>

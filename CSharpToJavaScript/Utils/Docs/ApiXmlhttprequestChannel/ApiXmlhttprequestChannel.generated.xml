@@ -1,0 +1,10 @@
+<docs>
+<XMLHttpRequestChannel>
+<summary>
+XMLHttpRequest.channel is an <c>nsIChannel</c> that used by the object when performing the request. This is <c>null</c> if the channel hasn&amp;apos;t been created yet. In the case of a multi-part request, this is the initial channel, not the different parts in the multi-part request. <strong>Requires elevated privileges to access.</strong>
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/channel"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</XMLHttpRequestChannel>
+</docs>

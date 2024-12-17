@@ -1,0 +1,11 @@
+<docs>
+<HTTPStatus303>
+<summary>
+The HyperText Transfer Protocol (HTTP) <strong><c>303 See Other</c></strong><br/>redirect status response code indicates that the redirects don&amp;apos;t link to the requested resource itself, but to another page (such as a confirmation page, a representation of a real-world object — see <see href="https://en.wikipedia.org/wiki/HTTPRange-14">HTTP range-14</see> — or an upload-progress page). This response code is often sent back as a result of<br/>{{HTTPMethod("PUT")}} or {{HTTPMethod("POST")}}. The method used to display this<br/>redirected page is always {{HTTPMethod("GET")}}.
+</summary>
+<remarks>
+<para>-{{HTTPStatus("302", "302 Found")}}, a temporary redirect<br/>-{{HTTPStatus("307", "307 Temporary Redirect")}}, a temporary redirect<br/>where the method used never changes.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/303"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPStatus303>
+</docs>

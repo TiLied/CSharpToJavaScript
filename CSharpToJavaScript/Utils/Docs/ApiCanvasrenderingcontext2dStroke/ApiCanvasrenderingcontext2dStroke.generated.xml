@@ -1,0 +1,13 @@
+<docs>
+<CanvasRenderingContext2DStroke>
+<summary>
+The<br/><strong><c>CanvasRenderingContext2D.stroke()</c></strong><br/>method of the Canvas 2D API strokes (outlines) the current or given path with the<br/>current stroke style.
+</summary>
+<remarks>
+<para>Strokes are aligned to the center of a path; in other words, half of the stroke is<br/>drawn on the inner side, and half on the outer side.</para><para>The stroke is drawn using the <see href="https://en.wikipedia.org/wiki/Nonzero-rule">non-zero winding rule</see>, which<br/>means that path intersections will still get filled.</para>
+<para>-The interface defining this method: <see cref="CanvasRenderingContext2D."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/stroke"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</CanvasRenderingContext2DStroke>
+</docs>

@@ -1,0 +1,13 @@
+<docs>
+<TextWholeText>
+<summary>
+The read-only <strong><c>wholeText</c></strong> property of the <see cref="Text."/> interface<br/>returns the full text of all <see cref="Text."/> nodes logically adjacent to the node.<br/>The text is concatenated in document order.<br/>This allows specifying any text node and obtaining all adjacent text as a single string.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This is similar to call <see cref="Node.Normalize."/> followed by reading the text value,<br/>but without modifying the tree.</para></blockquote>
+<para>-The <see cref="Text."/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Text/wholeText"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string with the concatenated text.</value>
+</TextWholeText>
+</docs>

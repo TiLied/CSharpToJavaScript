@@ -1,0 +1,12 @@
+<docs>
+<WakeLockRequest>
+<summary>
+The <strong><c>request()</c></strong> method of the<br/><see cref="WakeLock."/> interface returns a {{jsxref("Promise")}} that resolves with a<br/><see cref="WakeLockSentinel."/> object, which allows control over screen dimming and<br/>locking.
+</summary>
+<remarks>
+<para>-<see cref="WakeLock."/><br/>-<see cref="Navigator.WakeLock."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WakeLock/request"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that resolves with a <see cref="WakeLockSentinel."/> object.</returns>
+</WakeLockRequest>
+</docs>

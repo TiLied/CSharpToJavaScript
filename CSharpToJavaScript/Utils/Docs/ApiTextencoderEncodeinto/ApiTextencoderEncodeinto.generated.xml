@@ -1,0 +1,12 @@
+<docs>
+<TextEncoderEncodeInto>
+<summary>
+The <strong><c>TextEncoder.encodeInto()</c></strong> method takes a<br/>string to encode and a destination <see cref="Uint8Array"/> to put resulting UTF-8 encoded text into, and returns a dictionary object indicating the<br/>progress of the encoding.<br/>This is potentially more performant than the older <c>encode()</c> method — especially when the target buffer is a view into a Wasm heap.
+</summary>
+<remarks>
+<para>-The <see cref="TextEncoder."/> interface it belongs to.<br/>-<see cref="TextEncoder.Encode."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextEncoder/encodeInto"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An object, which contains two members:</returns>
+</TextEncoderEncodeInto>
+</docs>

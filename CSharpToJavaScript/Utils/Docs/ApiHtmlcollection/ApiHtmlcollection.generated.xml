@@ -1,0 +1,12 @@
+<docs>
+<HTMLCollection>
+<summary>
+The <strong><c>HTMLCollection</c></strong> interface represents a generic collection (array-like object similar to <see cref="Functions/arguments"/>) of elements (in document order) and offers methods and properties for selecting from the list.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This interface is called <c>HTMLCollection</c> for historical reasons (before the modern DOM, collections implementing this interface could only have HTML elements as their items).</para></blockquote><para>An <c>HTMLCollection</c> in the HTML DOM is live; it is automatically updated when the underlying document is changed. For this reason it is a good idea to make a copy (e.g., using <see cref="Array/from"/>) to iterate over if adding, moving, or removing nodes.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This interface was an <see href="https://stackoverflow.com/questions/74630989/why-use-domstringlist-rather-than-an-array/74641156#74641156">attempt to create an unmodifiable list</see> and only continues to be supported to not break code that&amp;apos;s already using it. Modern APIs use types that wrap around ECMAScript array types instead, so you can treat them like ECMAScript arrays, and at the same time impose additional semantics on their usage (such as making their items read-only).</para></blockquote>
+<para>-<see cref="NodeList."/><br/>-<see cref="HTMLFormControlsCollection."/>, <see cref="HTMLOptionsCollection."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCollection"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLCollection>
+</docs>

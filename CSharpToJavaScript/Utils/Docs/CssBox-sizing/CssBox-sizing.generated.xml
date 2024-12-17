@@ -1,0 +1,12 @@
+<docs>
+<CSSBox-sizing>
+<summary>
+The <strong><c>box-sizing</c></strong> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</see> property sets how the total width and height of an element is calculated.
+</summary>
+<remarks>
+<para>EmbedInteractiveExample("pages/css/box-sizing.html")</para><para>By default in the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model">CSS box model</see>, the <c>width</c> and <c>height</c> you assign to an element is applied only to the element&amp;apos;s content box. If the element has any border or padding, this is then added to the <c>width</c> and <c>height</c> to arrive at the size of the box that&amp;apos;s rendered on the screen. This means that when you set <c>width</c> and <c>height</c>, you have to adjust the value you give to allow for any border or padding that may be added. For example, if you have four boxes with <c>width: 25%;</c>, if any has left or right padding or a left or right border, they will not by default fit on one line within the constraints of the parent container.</para><para>The <c>box-sizing</c> property can be used to adjust this behavior:</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> It is often useful to set <c>box-sizing</c> to <c>border-box</c> to lay out elements. This makes dealing with the sizes of elements much easier, and generally eliminates a number of pitfalls you can stumble on while laying out your content. On the other hand, when using <c>position: relative</c> or <c>position: absolute</c>, use of <c>box-sizing: content-box</c> allows the positioning values to be relative to the content, and independent of changes to border and padding sizes, which is sometimes desirable.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model">CSS box model</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CSSBox-sizing>
+</docs>

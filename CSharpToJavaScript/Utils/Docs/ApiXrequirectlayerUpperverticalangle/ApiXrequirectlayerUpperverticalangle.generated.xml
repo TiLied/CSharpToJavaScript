@@ -1,0 +1,12 @@
+<docs>
+<XREquirectLayerUpperVerticalAngle>
+<summary>
+The <strong><c>upperVerticalAngle</c></strong> property of the <see cref="XREquirectLayer."/> interface represents the upper vertical angle in radians for the sphere.
+</summary>
+<remarks>
+<para>-<see cref="XREquirectLayer.Radius."/><br/>-<see cref="XREquirectLayer.CentralHorizontalAngle."/><br/>-<see cref="XREquirectLayer.LowerVerticalAngle."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XREquirectLayer/upperVerticalAngle"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number representing the upper vertical angle in radians for the sphere. Setting <c>upperVerticalAngle</c> to a value less than -π/2 will set it to -π/2 and setting it to a value higher than π/2 will set it to π/2.</value>
+</XREquirectLayerUpperVerticalAngle>
+</docs>

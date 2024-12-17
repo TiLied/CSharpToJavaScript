@@ -1,0 +1,12 @@
+<docs>
+<DocumentGetElementsByTagNameNS>
+<summary>
+Returns a list of elements with the given tag name belonging to the given namespace.<br/>The complete document is searched, including the root node.
+</summary>
+<remarks>
+<para>-<see cref="Element.GetElementsByTagNameNS."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByTagNameNS"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A live <see cref="NodeList."/> (but see the note below) of<br/>found elements in the order they appear in the tree.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> While the W3C specification says returned value is a <c>NodeList</c>, this method returns a <see cref="HTMLCollection."/> in Firefox.<br/>Opera returns a <c>NodeList</c>, but with a <c>namedItem</c> method implemented, which makes it similar to a <c>HTMLCollection</c>. As of January 2012, only in WebKit browsers is the returned value a pure <c>NodeList</c>.<br/>See <see href="https://bugzil.la/14869">bug 14869</see> for details.</blockquote><blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> Currently parameters in this method are case-sensitive, but they were case-insensitive in Firefox 3.5 and before.<br/>See the <see href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/3.6#dom">developer release note for Firefox 3.6</see> and a note in Browser compatibility section in <see cref="Element.GetElementsByTagNameNS."/> for details.</blockquote></returns>
+</DocumentGetElementsByTagNameNS>
+</docs>

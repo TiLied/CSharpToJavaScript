@@ -1,0 +1,13 @@
+<docs>
+<AnalyserNodeGetByteFrequencyData>
+<summary>
+The <strong><c>getByteFrequencyData()</c></strong> method of the <see cref="AnalyserNode."/> interface copies the current frequency data into a {{jsxref("Uint8Array")}} (unsigned byte array) passed into it.
+</summary>
+<remarks>
+<para>The frequency data is composed of integers on a scale from 0 to 255.</para><para>Each item in the array represents the decibel value for a specific frequency. The frequencies are spread linearly from 0 to 1/2 of the sample rate. For example, for <c>48000</c> sample rate, the last item of the array will represent the decibel value for <c>24000</c> Hz.</para><para>If the array has fewer elements than the <see cref="AnalyserNode.FrequencyBinCount."/>, excess elements are dropped. If it has more elements than needed, excess elements are ignored.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode/getByteFrequencyData"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</AnalyserNodeGetByteFrequencyData>
+</docs>

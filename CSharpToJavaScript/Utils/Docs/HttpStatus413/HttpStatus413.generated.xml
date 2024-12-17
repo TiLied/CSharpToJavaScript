@@ -1,0 +1,12 @@
+<docs>
+<HTTPStatus413>
+<summary>
+The HTTP <strong><c>413 Content Too Large</c></strong> response status code indicates that the request entity is larger than limits defined by server; the server might close the connection or return a <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Retry-After">Retry-After</see> header field.
+</summary>
+<remarks>
+<para>Prior to RFC 9110 the response phrase for the status was <strong><c>Payload Too Large</c></strong>. That name is still widely used.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Connection">Connection</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Retry-After">Retry-After</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/413"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPStatus413>
+</docs>

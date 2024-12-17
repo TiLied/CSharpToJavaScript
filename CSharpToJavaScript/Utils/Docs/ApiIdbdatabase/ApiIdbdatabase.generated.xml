@@ -1,0 +1,12 @@
+<docs>
+<IDBDatabase>
+<summary>
+The <strong><c>IDBDatabase</c></strong> interface of the IndexedDB API provides a <see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API#database_connection">connection to a database</see>; you can use an <c>IDBDatabase</c> object to open a <see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#transaction">transaction</see> on your database then create, manipulate, and delete objects (data) in that database. The interface provides the only way to get and manage versions of the database.
+</summary>
+<remarks>
+<para>AvailableInWorkers</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Everything you do in IndexedDB always happens in the context of a <see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#transaction">transaction</see>, representing interactions with data in the database. All objects in IndexedDB — including object stores, indexes, and cursors — are tied to a particular transaction. Thus, you cannot execute commands, access data, or open anything outside of a transaction.</para></blockquote><para></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase."/><br/>-Using transactions: <see cref="IDBTransaction."/><br/>-Setting a range of keys: <see cref="IDBKeyRange."/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore."/><br/>-Using cursors: <see cref="IDBCursor."/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</IDBDatabase>
+</docs>

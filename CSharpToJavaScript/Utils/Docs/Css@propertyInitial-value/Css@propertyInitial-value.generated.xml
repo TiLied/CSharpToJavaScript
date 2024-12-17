@@ -1,0 +1,13 @@
+<docs>
+<CSS_propertyInitial-value>
+<summary>
+The <strong><c>initial-value</c></strong> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</see> descriptor is required when using the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@property">@property</see> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/At-rule">at-rule</see> unless the syntax accepts any valid token stream. It sets the initial-value for the property.
+</summary>
+<remarks>
+<para>The value chosen as the <c>initial-value</c> must parse correctly according to the syntax definition. Therefore, if syntax is <c>&amp;lt;color&amp;gt;</c> then the initial-value must be a valid <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/color">color</see> value.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Properties_and_Values_API">CSS Properties and Values API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Painting_API">CSS Painting API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Typed_OM_API">CSS Typed Object Model</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Guide/Houdini">CSS Houdini</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/CSS/@property/initial-value"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string with a value which is a correct value for the chosen <c>syntax</c>.</value>
+</CSS_propertyInitial-value>
+</docs>

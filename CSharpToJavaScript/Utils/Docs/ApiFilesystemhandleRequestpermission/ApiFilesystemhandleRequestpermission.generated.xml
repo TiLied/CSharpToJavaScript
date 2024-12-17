@@ -1,0 +1,12 @@
+<docs>
+<FileSystemHandleRequestPermission>
+<summary>
+The <strong><c>requestPermission()</c></strong> method of the<br/><see cref="FileSystemHandle."/> interface requests read or readwrite permissions for the<br/>file handle.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_System_API">File System API</see><br/>-<see href="https://developer.chrome.com/articles/file-system-access/">The File System Access API: simplifying access to local files</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemHandle/requestPermission"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that resolves to a <see cref="PermissionStatus."/> object.</returns>
+</FileSystemHandleRequestPermission>
+</docs>

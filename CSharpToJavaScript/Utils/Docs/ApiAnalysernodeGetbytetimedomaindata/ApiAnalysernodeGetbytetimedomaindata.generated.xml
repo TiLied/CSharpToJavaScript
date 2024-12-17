@@ -1,0 +1,13 @@
+<docs>
+<AnalyserNodeGetByteTimeDomainData>
+<summary>
+The <strong><c>getByteTimeDomainData()</c></strong> method of the <see cref="AnalyserNode."/> Interface copies the current waveform, or time-domain, data into a {{jsxref("Uint8Array")}} (unsigned byte array) passed into it.
+</summary>
+<remarks>
+<para>If the array has fewer elements than the <see cref="AnalyserNode.FftSize."/>, excess elements are dropped. If it has more elements than needed, excess elements are ignored.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode/getByteTimeDomainData"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</AnalyserNodeGetByteTimeDomainData>
+</docs>

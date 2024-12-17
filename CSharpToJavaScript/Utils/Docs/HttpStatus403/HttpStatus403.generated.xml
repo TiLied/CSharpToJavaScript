@@ -1,0 +1,12 @@
+<docs>
+<HTTPStatus403>
+<summary>
+The HTTP <strong><c>403 Forbidden</c></strong> response status code indicates that the server understands the request but refuses to authorize it.
+</summary>
+<remarks>
+<para>This status is similar to {{HTTPStatus("401")}}, but for the <strong><c>403 Forbidden</c></strong> status code, re-authenticating makes no difference. The access is tied to the application logic, such as insufficient rights to a resource.</para>
+<para>-HTTPStatus("401")<br/>-<see href="https://httpwg.org/specs/rfc9110.html#status.403">HTTP Status Code Definitions</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPStatus403>
+</docs>

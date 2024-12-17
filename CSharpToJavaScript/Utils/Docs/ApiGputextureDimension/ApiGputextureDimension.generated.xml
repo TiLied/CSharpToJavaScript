@@ -1,0 +1,13 @@
+<docs>
+<GPUTextureDimension>
+<summary>
+The <strong><c>dimension</c></strong> read-only property of the<br/><see cref="GPUTexture."/> interface represents the dimension of the set of texels for each <c>GPUTexture</c> subresource.
+</summary>
+<remarks>
+<para>This is set via the <c>dimension</c> property in the descriptor object passed into the originating <see cref="GPUDevice.CreateTexture."/> call, which defaults to <c>&amp;quot;2d&amp;quot;</c> if omitted.</para>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUTexture/dimension"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An enumerated value. Possible values are:</value>
+</GPUTextureDimension>
+</docs>

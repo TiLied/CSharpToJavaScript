@@ -1,0 +1,13 @@
+<docs>
+<SpeechRecognitionEventEmma>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>emma</c></strong> read-only property of the<br/><see cref="SpeechRecognitionEvent."/> interface returns an Extensible<br/>MultiModal Annotation markup language (EMMA) — XML — representation of the<br/>result.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> EMMA is defined in the specification <see href="https://www.w3.org/TR/emma/">EMMA: Extensible MultiModal Annotation markup language</see>. You can see multiple EMMA examples in the spec.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionEvent/emma"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A valid XML document. The exact contents can vary across user agents and recognition<br/>engines, but all supporting implementations will expose a valid XML document complete<br/>with an EMMA namespace. If the speech recognition system does not supply EMMA data then<br/>the user agent will return <c>null</c>.</value>
+</SpeechRecognitionEventEmma>
+</docs>

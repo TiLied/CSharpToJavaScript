@@ -1,0 +1,12 @@
+<docs>
+<CSSContainer-type>
+<summary>
+An element can be established as a query container for <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_container_queries">container size queries</see> using the <strong><c>container-type</c></strong> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</see> property. <c>container-type</c> is used to define the type of size containment used in a container query.
+</summary>
+<remarks>
+<para>Size containment turns off the ability of an element to get size information from its contents, which is important for container queries to avoid infinite loops. If this were not the case, a CSS rule inside a container query could change the content size, which in turn could make the query evaluate to false and change the parent element&amp;apos;s size, which in turn could change the content size and flip the query back to true, and so on.</para><para>The container size has to be set explicitly or by context — for example, block elements, flex containers, and grid containers stretching to the full width of their parent. If an explicit or contextual size is not available, elements with size containment will collapse.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_container_queries">CSS container queries</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@container">@container</see> at-rule<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/container">container</see> shorthand property<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/container-name">container-name</see> property<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/content-visibility">content-visibility</see> property<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/CSS/container-type"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CSSContainer-type>
+</docs>

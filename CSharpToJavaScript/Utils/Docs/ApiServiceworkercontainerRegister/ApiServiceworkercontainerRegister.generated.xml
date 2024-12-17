@@ -1,0 +1,13 @@
+<docs>
+<ServiceWorkerContainerRegister>
+<summary>
+The <strong><c>register()</c></strong> method of the<br/><see cref="ServiceWorkerContainer."/> interface creates or updates a<br/><see cref="ServiceWorkerRegistration."/> for the given <c>scriptURL</c>.
+</summary>
+<remarks>
+<para>If successful, a service worker registration ties the provided script URL to a<br/><strong>scope</strong>, which is subsequently used for navigation matching. You can call this<br/>method unconditionally from the controlled page. I.e., you don&amp;apos;t need to first check<br/>whether there&amp;apos;s an active registration.</para><para>There is frequent confusion surrounding the meaning and use of <strong>scope</strong>. Since a<br/>service worker can&amp;apos;t have a scope broader than its own location, only use the<br/><c>scope</c> option when you need a scope that is narrower than the default.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/unregister">ServiceWorkerRegistration: <c>unregister()</c> method</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">Service worker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using service workers</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/register"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that resolves with a <see cref="ServiceWorkerRegistration."/><br/>object.</returns>
+</ServiceWorkerContainerRegister>
+</docs>

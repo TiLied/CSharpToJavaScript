@@ -1,0 +1,12 @@
+<docs>
+<SVGImageElementDecode>
+<summary>
+The <strong><c>decode()</c></strong> method of the<br/><see cref="SVGImageElement."/> interface initiates asynchronous decoding of an image,<br/>returning a <see cref="'Promise'"/> that resolves once the image is decoded and it is safe to append<br/>it to the DOM.
+</summary>
+<remarks>
+<para>-<see cref="HTMLImageElement.Decode."/>: The same thing, but for HTML <c>&amp;lt;img&amp;gt;</c> elements<br/>-<see href="https://www.tunetheweb.com/blog/what-does-the-image-decoding-attribute-actually-do/">What does the image decoding attribute actually do?</see> on tunetheweb.com (2023)<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGImageElement/decode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="'Promise'"/> that fulfills with <c>undefined</c> once the image data is ready to be used, for example by appending it to the DOM, replacing an existing image, and so forth.</returns>
+</SVGImageElementDecode>
+</docs>

@@ -1,0 +1,13 @@
+<docs>
+<HTMLElementInputRange>
+<summary>
+Because this kind of widget is imprecise, it should only be used if the control&amp;apos;s exact value isn&amp;apos;t important.
+</summary>
+<remarks>
+<para>EmbedInteractiveExample("pages/tabbed/input-range.html", "tabbed-standard")</para><para>If the user&amp;apos;s browser doesn&amp;apos;t support type <c>range</c>, it will fall back and treat it as a <c>{{HTMLElement(&amp;apos;input/text&amp;apos;, &amp;apos;text&amp;apos;)}}</c> input.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Learn/Forms">HTML Forms</see><br/>-{{HTMLElement("input")}} and the <see cref="HTMLInputElement."/> interface it's based upon<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/number"><c>&amp;lt;input type=&amp;quot;number&amp;quot;&amp;gt;</c></see><br/>-<see cref="'validityState.RangeOverflow'."/> and <see cref="'validityState.RangeUnderflow'."/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode">Controlling multiple parameters with ConstantSourceNode</see><br/>-<see href="https://css-tricks.com/sliding-nightmare-understanding-range-input/">Styling the range element</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls">Compatibility of CSS properties</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#value"><c>value</c></see> attribute contains a string which contains a string representation of the selected number. The value is never an empty string (<c>&amp;quot;&amp;quot;</c>). The default value is halfway between the specified minimum and maximum—unless the maximum is actually less than the minimum, in which case the default is set to the value of the <c>min</c> attribute. The algorithm for determining the default value is:If an attempt is made to set the value lower than the minimum, it is set to the minimum. Similarly, an attempt to set the value higher than the maximum results in it being set to the maximum.</value>
+</HTMLElementInputRange>
+</docs>

@@ -1,0 +1,12 @@
+<docs>
+<AuthenticatorAttestationResponseGetPublicKeyAlgorithm>
+<summary>
+The <strong><c>getPublicKeyAlgorithm()</c></strong> method of the <see cref="AuthenticatorAttestationResponse."/> interface returns a number that is equal to a <see href="https://www.iana.org/assignments/cose/cose.xhtml#algorithms">COSE Algorithm Identifier</see>, representing the cryptographic algorithm used for the new credential.
+</summary>
+<remarks>
+<para>This is a convenience function created to allow easy access to the algorithm type. This information will need to be stored in order to verify future authentication operations (i.e., using <see cref="CredentialsContainer.Get."/>).</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AuthenticatorAttestationResponse/getPublicKeyAlgorithm"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A number that is equal to a <see href="https://www.iana.org/assignments/cose/cose.xhtml#algorithms">COSE Algorithm Identifier</see>, representing the cryptographic algorithm used for the new credential.</returns>
+</AuthenticatorAttestationResponseGetPublicKeyAlgorithm>
+</docs>

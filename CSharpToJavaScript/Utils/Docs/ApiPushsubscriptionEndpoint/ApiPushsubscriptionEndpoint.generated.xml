@@ -1,0 +1,12 @@
+<docs>
+<PushSubscriptionEndpoint>
+<summary>
+The <strong><c>endpoint</c></strong> read-only property of the<br/><see cref="PushSubscription."/> interface returns a string containing<br/>the endpoint associated with the push subscription.
+</summary>
+<remarks>
+<para>The endpoint takes the form of a custom URL pointing to a push server, which can be<br/>used to send a push message to the particular service worker instance that subscribed to<br/>the push service. For this reason, it is a good idea to keep your endpoint a secret, so<br/>others do not hijack it and abuse the push functionality.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PushSubscription/endpoint"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</PushSubscriptionEndpoint>
+</docs>

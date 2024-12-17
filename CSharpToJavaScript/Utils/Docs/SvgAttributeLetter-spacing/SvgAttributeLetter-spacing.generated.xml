@@ -1,0 +1,12 @@
+<docs>
+<SVGAttributeLetter-spacing>
+<summary>
+The <strong><c>letter-spacing</c></strong> attribute controls spacing between text characters, in addition to any spacing from the kerning attribute.
+</summary>
+<remarks>
+<para>If the attribute value is a unitless number (like <c>128</c>), the browser processes it as a <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/length">length</see> in the current user coordinate system.</para><para>If the attribute value has a unit identifier, such as <c>.25em</c> or <c>1%</c>, then the browser converts the &amp;lt;length&amp;gt; into its corresponding value in the current user coordinate system.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> As a presentation attribute, <c>letter-spacing</c> can be used as a CSS property. See the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing">letter-spacing</see> property for more information.</para></blockquote><para>You can use this attribute with the following SVG elements:</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing">letter-spacing</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/letter-spacing"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</SVGAttributeLetter-spacing>
+</docs>

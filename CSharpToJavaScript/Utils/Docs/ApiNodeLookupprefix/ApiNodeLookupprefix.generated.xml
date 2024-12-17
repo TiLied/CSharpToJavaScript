@@ -1,0 +1,12 @@
+<docs>
+<NodeLookupPrefix>
+<summary>
+The <strong><c>lookupPrefix()</c></strong> method of the <see cref="Node."/> interface<br/>returns a string containing the prefix for a given namespace URI, if present,<br/>and <c>null</c> if not.<br/>When multiple prefixes are possible, the first prefix is returned.
+</summary>
+<remarks>
+<para>-<see href="https://www.w3.org/TR/DOM-Level-3-Core/core.html#Node3-lookupNamespacePrefix">http://www.w3.org/TR/DOM-Level-3-Cor...amespacePrefix</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/lookupPrefix"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A string containing the corresponding prefix, or <c>null</c> if none has been found.<br/>If <c>namespace</c> is null, or the empty string, <c>lookupPrefix()</c> returns <c>null</c>.If the node is a <see cref="DocumentType."/> or a <see cref="DocumentFragment."/>,<br/><c>lookupPrefix()</c> always returns <c>null</c>.</returns>
+</NodeLookupPrefix>
+</docs>

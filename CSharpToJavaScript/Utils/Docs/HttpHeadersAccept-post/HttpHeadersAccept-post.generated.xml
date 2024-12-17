@@ -1,0 +1,12 @@
+<docs>
+<HTTPHeadersAccept-Post>
+<summary>
+The <strong><c>Accept-Post</c></strong> response HTTP header advertises which <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">media types</see> are accepted by the server for HTTP post requests.
+</summary>
+<remarks>
+<para><strong><c>Accept-Post</c></strong> in response to any method means that <c>POST</c> is allowed on the requested resource (any document/media format in the header further indicates that the document format is allowed).</para><para>For example, a server receiving a <c>POST</c> request with an unsupported media type could reply with {{HTTPStatus("415")}} <c>Unsupported Media Type</c> and an <strong><c>Accept-Post</c></strong> header referencing one or more supported media types.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> An IANA registry maintains <see href="https://www.iana.org/assignments/http-parameters/http-parameters.xml#http-parameters-1">a complete list of official content encodings</see>.</para></blockquote>
+<para>-Http method {{HTTPMethod("POST")}}<br/>-HTTP Semantic and context {{RFC("7231", "POST", "4.3.3")}}<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Post"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPHeadersAccept-Post>
+</docs>

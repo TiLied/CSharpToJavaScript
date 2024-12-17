@@ -1,0 +1,13 @@
+<docs>
+<CSSWill-change>
+<summary>
+The <strong><c>will-change</c></strong> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</see> property hints to browsers how an element is expected to change. Browsers may set up optimizations before an element is actually changed. These kinds of optimizations can increase the responsiveness of a page by doing potentially expensive work before they are actually required.
+</summary>
+<remarks>
+<blockquote class="WARNING"><h5>WARNING</h5><para><strong>Warning:</strong> <c>will-change</c> is intended to be used as a last resort, in order to try to deal with existing performance problems. It should not be used to anticipate performance problems.</para></blockquote><para>Proper usage of this property can be a bit tricky:</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform">transform</see><br/>-Individual transform properties:-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/translate">translate</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/scale">scale</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/rotate">rotate</see><br/>-Note: there is no individual <c>skew</c> property<br/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/CSS/will-change"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <c>&amp;lt;animatable-feature&amp;gt;</c> can be one of the following values:</value>
+</CSSWill-change>
+</docs>

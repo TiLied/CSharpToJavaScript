@@ -1,0 +1,13 @@
+<docs>
+<MouseEventPageX>
+<summary>
+The <strong><c>pageX</c></strong> read-only property of the <see cref="MouseEvent."/> interface returns the X (horizontal) coordinate (in pixels) at which the mouse was clicked, relative to the left edge of the entire document.<br/>This includes any portion of the document not currently visible.
+</summary>
+<remarks>
+<para>Being based on the edge of the document as it is, this property takes into account any horizontal scrolling of the page.<br/>For example, if the page is scrolled such that 200 pixels of the left side of the document are scrolled out of view, and the mouse is clicked 100 pixels inward from the left edge of the view, the value returned by <c>pageX</c> will be 300.</para><para>Originally, this property was defined as a <c>long</c> integer. The <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSSOM_view">CSSOM View Module</see> redefined it as a<br/><c>double</c> float. See the <see href="https://developer.mozilla.org#browser_compatibility">Browser compatibility</see> section for<br/>details.</para><para>See <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems#page">Coordinate systems</see> for additional information about coordinates specified in this fashion.</para>
+<para>-<see cref="MouseEvent.PageY."/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems">Coordinate systems</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/pageX"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A floating-point number of pixels from the left edge of the <strong>document</strong> at which the mouse was clicked, regardless of any scrolling or viewport positioning that may be in effect.This property was originally specified in the Touch Events specification as a long integer, but was redefined in the CSSOM View Module to be a double-precision<br/>floating-point number to allow for subpixel precision.<br/>Even though numeric types both are represented by <c>Number</c> in JavaScript, they may be handled differently internally in the browser&amp;apos;s code, resulting in potential behavior differences.See <see href="https://developer.mozilla.org#browser_compatibility">Browser compatibility</see> to learn which browsers have been updated to use the revised data type.</value>
+</MouseEventPageX>
+</docs>

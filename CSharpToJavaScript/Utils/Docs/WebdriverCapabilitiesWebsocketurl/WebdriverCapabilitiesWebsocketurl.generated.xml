@@ -1,0 +1,11 @@
+<docs>
+<WebDriverCapabilitiesWebSocketUrl>
+<summary>
+With the <c>webSocketUrl</c> capability set to <c>true</c> a WebSocket server will be started in the browser, supporting bidirectional communication by using the <see href="https://w3c.github.io/webdriver-bidi/">WebDriver BiDi protocol</see>.<br/>When the <see href="https://developer.mozilla.org/en-US/docs/Web/WebDriver/Commands/NewSession">New Session</see> request has the <c>webSocketUrl</c> capability set to <c>true</c>, and the session starts successfully, the value of the <c>capabilities</c> field in the response will have a <c>webSocketUrl</c> property set to the URL of the WebSocket server.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/WebDriver/Capabilities">List of WebDriver capabilities</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/WebDriver/Commands/NewSession">New Session</see> command<br/>-<see href="https://w3c.github.io/webdriver-bidi/#establishing">Establishing a WebDriver BiDi connection</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/WebDriver/Capabilities/webSocketUrl"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebDriverCapabilitiesWebSocketUrl>
+</docs>

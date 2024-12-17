@@ -1,0 +1,12 @@
+<docs>
+<HTTPHeadersDate>
+<summary>
+The <strong><c>Date</c></strong> general HTTP header contains the date and time<br/>at which the message originated.
+</summary>
+<remarks>
+<blockquote class="WARNING"><h5>WARNING</h5><para><strong>Warning:</strong> <c>Date</c> is listed<br/>in the <see href="https://fetch.spec.whatwg.org/#forbidden-header-name">forbidden header names</see><br/>in the fetch spec, so this code will not send the <c>Date</c> header:</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Age">Age</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Date"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPHeadersDate>
+</docs>

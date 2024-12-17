@@ -1,0 +1,12 @@
+<docs>
+<HTTPHeadersSec-CH-Prefers-Reduced-Transparency>
+<summary>
+The <strong><c>Sec-CH-Prefers-Reduced-Transparency</c></strong> <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Client_hints#user_preference_media_features_client_hints">user agent client hint</see> request header indicates the user agent&amp;apos;s preference for reduced transparency.
+</summary>
+<remarks>
+<para>If a server signals to a client via the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-CH">Accept-CH</see> header that it accepts <c>Sec-CH-Prefers-Reduced-Transparency</c>, the client can then respond with this header to indicate the user&amp;apos;s preference for reduced transparency. The server can send the client appropriately adapted content — for example, CSS or images — to reduce the transparency of the content.</para><para>This header is modeled on the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-transparency">@media/prefers-reduced-transparency</see> media query.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Client_hints">Client hints</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/User-Agent_Client_Hints_API">User-Agent Client Hints API</see><br/>-<see href="https://developer.chrome.com/articles/user-agent-client-hints/">Improving user privacy and developer experience with User-Agent Client Hints</see> (web.dev)<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-CH">Accept-CH</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching#vary">HTTP Caching &amp;gt; Vary</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Vary">Vary</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-Prefers-Reduced-Transparency"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPHeadersSec-CH-Prefers-Reduced-Transparency>
+</docs>

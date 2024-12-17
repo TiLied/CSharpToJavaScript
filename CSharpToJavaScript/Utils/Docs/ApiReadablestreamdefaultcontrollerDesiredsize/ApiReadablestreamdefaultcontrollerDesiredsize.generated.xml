@@ -1,0 +1,12 @@
+<docs>
+<ReadableStreamDefaultControllerDesiredSize>
+<summary>
+The <strong><c>desiredSize</c></strong> read-only property of the<br/><see cref="ReadableStreamDefaultController."/> interface returns the desired size<br/>required to fill the stream&amp;apos;s internal queue.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_streams">Using readable streams</see><br/>-<see cref="ReadableStreamDefaultController."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableStreamDefaultController/desiredSize"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer. Note that this can be negative if the queue is over-full.</value>
+</ReadableStreamDefaultControllerDesiredSize>
+</docs>

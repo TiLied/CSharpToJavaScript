@@ -1,0 +1,12 @@
+<docs>
+<HTTPHeadersAccept-CH>
+<summary>
+The <strong><c>Accept-CH</c></strong> header may be set by a server to specify<br/>which <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Client_hints">client hints</see> headers a client<br/>should include in subsequent requests.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Client hints are accessible only on secure origins (via TLS).<br/><c>Accept-CH</c> (and <c>Accept-CH-Lifetime</c>) headers should be persisted for all secure requests to ensure client hints are sent reliably.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Vary">Vary</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-CH"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPHeadersAccept-CH>
+</docs>

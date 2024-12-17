@@ -1,0 +1,11 @@
+<docs>
+<WritableStreamDefaultWriterReleaseLock>
+<summary>
+The <strong><c>releaseLock()</c></strong> method of the<br/><see cref="WritableStreamDefaultWriter."/> interface releases the writer's lock on the<br/>corresponding stream. After the lock is released, the writer is no longer active. If the<br/>associated stream is errored when the lock is released, the writer will appear errored<br/>in the same way from now on; otherwise, the writer will appear closed.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WritableStreamDefaultWriter/releaseLock"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WritableStreamDefaultWriterReleaseLock>
+</docs>

@@ -1,0 +1,12 @@
+<docs>
+<HTTPHeadersSec-GPC>
+<summary>
+The <strong><c>Sec-GPC</c></strong> (<see href="https://globalprivacycontrol.org/"><strong>G</strong>lobal <strong>P</strong>rivacy <strong>C</strong>ontrol</see>) request header indicates whether the user consents to a website or service selling or sharing their personal information with third parties.
+</summary>
+<remarks>
+<para>The specification does not define how the user can withdraw or grant consent for website.<br/>Where possible the mechanism will be indicated in the <see href="https://developer.mozilla.org#browser_compatibility">browser compatibility</see> section below.</para>
+<para>-<see cref="Navigator.GlobalPrivacyControl."/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/DNT">DNT</see> header<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Tk">Tk</see> header<br/>-<see href="https://globalprivacycontrol.org/">globalprivacycontrol.org</see><br/>-<see href="https://privacycg.github.io/gpc-spec/">Global Privacy Control Spec</see><br/>-<see href="https://en.wikipedia.org/wiki/Do_Not_Track">Do Not Track on Wikipedia</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-GPC"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPHeadersSec-GPC>
+</docs>

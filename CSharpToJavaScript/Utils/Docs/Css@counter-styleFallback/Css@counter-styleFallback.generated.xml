@@ -1,0 +1,12 @@
+<docs>
+<CSS_counter-styleFallback>
+<summary>
+The <strong><c>fallback</c></strong> descriptor of the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@counter-style">@counter-style</see> at-rule can be used to specify a counter style to fall back to if the counter style being defined cannot create a marker representation for a particular counter value.
+</summary>
+<remarks>
+<para>-Other <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@counter-style">@counter-style</see> descriptors: <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@counter-style/system">@counter-style/system</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@counter-style/symbols">@counter-style/symbols</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@counter-style/additive-symbols">@counter-style/additive-symbols</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@counter-style/negative">@counter-style/negative</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@counter-style/prefix">@counter-style/prefix</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@counter-style/suffix">@counter-style/suffix</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@counter-style/range">@counter-style/range</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@counter-style/pad">@counter-style/pad</see>, and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@counter-style/speak-as">@counter-style/speak-as</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/list-style">list-style</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-image">list-style-image</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-position">list-style-position</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/symbols">symbols</see>: the functional notation for creating anonymous counter styles<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/CSS/@counter-style/fallback"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The descriptor takes a single <c>&amp;lt;counter-style-name&amp;gt;</c> as its value:If omitted, the counter fallback defaults to <c>decimal</c>.</value>
+</CSS_counter-styleFallback>
+</docs>

@@ -1,0 +1,11 @@
+<docs>
+<SVGAttributeGlyph-orientation-horizontal>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>glyph-orientation-horizontal</c></strong> attribute affects the amount that the current text position advances as each <see href="https://developer.mozilla.org/en-US/docs/Glossary/glyph">glyph</see> is rendered.
+</summary>
+<remarks>
+<para>When the reference orientation direction is horizontal and the <c>glyph-orientation-horizontal</c> results in an orientation angle that is a multiple of 180 degrees, then the current text position is incremented according to the horizontal metrics of the glyph. Otherwise, if the value of this attribute is not a multiple of 180 degrees, then the current text position is incremented according to the vertical metrics of the glyph.</para><para>This attribute is applied only to text written in a horizontal writing-mode.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> As a presentation attribute, <c>glyph-orientation-horizontal</c> can be used as a CSS property.</para></blockquote><para>You can use this attribute with the following SVG elements:</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/glyph-orientation-horizontal"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</SVGAttributeGlyph-orientation-horizontal>
+</docs>

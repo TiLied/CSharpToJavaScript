@@ -1,0 +1,12 @@
+<docs>
+<HTTPHeaders>
+<summary>
+<strong>HTTP headers</strong> let the client and the server pass additional information with an HTTP request or response. An HTTP header consists of its case-insensitive name followed by a colon (<c>:</c>), then by its value. <see href="https://developer.mozilla.org/en-US/docs/Glossary/Whitespace">Whitespace</see> before the value is ignored.
+</summary>
+<remarks>
+<para>Custom proprietary headers have historically been used with an <c>X-</c> prefix, but this convention was deprecated in June 2012 because of the inconveniences it caused when nonstandard fields became standard in <see href="https://datatracker.ietf.org/doc/html/rfc6648">RFC 6648</see>; others are listed in an <see href="https://www.iana.org/assignments/message-headers/message-headers.xhtml#perm-headers">IANA registry</see>, whose original content was defined in <see href="https://datatracker.ietf.org/doc/html/rfc4229">RFC 4229</see>. IANA also maintains a <see href="https://www.iana.org/assignments/message-headers/message-headers.xhtml#prov-headers">registry of proposed new HTTP headers</see>.</para><para>Headers can be grouped according to their contexts:</para><para>Headers can also be grouped according to how <see href="https://developer.mozilla.org/en-US/docs/Glossary/Proxy_server">Proxy_server</see> handle them:</para>
+<para>-<see href="https://en.wikipedia.org/wiki/List_of_HTTP_header_fields">Wikipedia page on List of HTTP headers</see><br/>-<see href="https://www.iana.org/assignments/message-headers/message-headers.xhtml#perm-headers">IANA registry</see><br/>-<see href="https://httpwg.org/specs/">HTTP Working Group</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPHeaders>
+</docs>

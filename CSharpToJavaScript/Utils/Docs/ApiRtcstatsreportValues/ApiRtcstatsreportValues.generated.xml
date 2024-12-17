@@ -1,0 +1,13 @@
+<docs>
+<RTCStatsReportValues>
+<summary>
+The <strong><c>values()</c></strong> method of the <see cref="RTCStatsReport."/> interface returns a new <strong><see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator">iterator</see></strong> object that can be used to iterate through the values for each element in the <c>RTCStatsReport</c> object, in insertion order.
+</summary>
+<remarks>
+<para>The values are <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCStatsReport#the_statistic_types">statistics dictionary objects</see>.</para><para>The method is otherwise the same as <see cref="MapPrototypeValues"/>.</para>
+<para>-<see cref="MapPrototypeValues"/><br/>-<see cref="RTCStatsReport.Keys."/><br/>-<see cref="RTCStatsReport.Entries."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCStatsReport/values"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator">iterable iterator object</see>.</returns>
+</RTCStatsReportValues>
+</docs>

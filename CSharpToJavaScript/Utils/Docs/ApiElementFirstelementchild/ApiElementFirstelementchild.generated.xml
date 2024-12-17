@@ -1,0 +1,13 @@
+<docs>
+<ElementFirstElementChild>
+<summary>
+The <strong><c>Element.firstElementChild</c></strong> read-only property<br/>returns an element's first child <see cref="Element."/>, or <c>null</c> if there<br/>are no child elements.
+</summary>
+<remarks>
+<para><c>Element.firstElementChild</c> includes only element nodes.<br/>To get all child nodes, including non-element nodes like text and comment nodes, use <see cref="Node.FirstChild."/>.</para>
+<para>-<see cref="Element.NextElementSibling."/><br/>-<see cref="Element.LastElementChild."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/firstElementChild"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="Element."/> object, or <c>null</c>.</value>
+</ElementFirstElementChild>
+</docs>

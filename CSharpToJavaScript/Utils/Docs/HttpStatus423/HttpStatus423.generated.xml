@@ -1,0 +1,11 @@
+<docs>
+<HTTPStatus423>
+<summary>
+<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> The ability to <strong>lock</strong> a resource is specific to some <see href="https://developer.mozilla.org/en-US/docs/Glossary/WebDAV">WebDAV</see> servers. Browsers accessing web pages will never encounter this status code; in the erroneous cases it happens, they will handle it as a generic <c>400</c> status code.</blockquote>
+</summary>
+<remarks>
+<para>The HTTP <strong><c>423 Locked</c></strong> error response code indicates that either the resources tentatively targeted by is <strong>locked</strong>, meaning it can&amp;apos;t be accessed. Its content should contain some information in WebDAV&amp;apos;s XML format.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/423"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPStatus423>
+</docs>

@@ -1,0 +1,13 @@
+<docs>
+<HighlightAdd>
+<summary>
+The <strong><c>add()</c></strong> method of the <see cref="Highlight."/> interface adds a new <see cref="Range."/> object to a highlight, to be styled using the {{domxref("css_custom_highlight_api", "CSS Custom Highlight API", &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}.
+</summary>
+<remarks>
+<para><c>Highlight</c> is a <see cref="Set"/>-like object, so this is similar to using <see cref="SetAdd"/>.</para>
+<para>-{{domxref(&amp;quot;css_custom_highlight_api&amp;quot;, &amp;quot;The CSS Custom Highlight API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://css-tricks.com/css-custom-highlight-api-early-look/">CSS Custom Highlight API: The Future of Highlighting Text Ranges on the Web</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Highlight/add"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>The <c>Highlight</c> object, with the added range.</returns>
+</HighlightAdd>
+</docs>

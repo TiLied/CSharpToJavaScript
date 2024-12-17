@@ -1,0 +1,11 @@
+<docs>
+<IDBLocaleAwareKeyRange>
+<summary>
+The <strong><c>IDBLocaleAwareKeyRange</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</see> is a Firefox-specific version of <see cref="IDBKeyRange."/> — it functions in exactly the same fashion, and has the same properties and methods, but it is intended for use with <see cref="IDBIndex."/> objects when the original index had a <c>locale</c> value specified upon its creation (see the <see href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/createIndex#options"><c>options</c></see> parameter to <see href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/createIndex"><c>IDBObjectStore.createIndex()</c></see>) — that is, it has <see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB#locale-aware_sorting">locale aware sorting</see> enabled.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase."/><br/>-Using transactions: <see cref="IDBTransaction."/><br/>-Setting a range of keys: <see cref="IDBKeyRange."/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore."/><br/>-Using cursors: <see cref="IDBCursor."/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBLocaleAwareKeyRange"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</IDBLocaleAwareKeyRange>
+</docs>

@@ -1,0 +1,12 @@
+<docs>
+<SVGMaskElementX>
+<summary>
+The read-only <strong><c>x</c></strong> property of the <see cref="SVGMaskElement."/> interface returns an <see cref="SVGAnimatedLength."/> object containing the value of the {{SVGattr("x")}} attribute of the {{SVGElement("mask")}}. It represents the x-axis coordinate of the <strong>top-left</strong> corner of the masking area.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Although this property is read-only, it is merely a container for two values you can modify, <see cref="SVGAnimatedLength.BaseVal."/> and <see cref="SVGAnimatedLength.AnimVal."/>.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGMaskElement/x"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedLength."/> object in the coordinate system defined by <see cref="SVGMaskElement.MaskUnits."/>. The <c>baseVal</c> property of this object returns an <see cref="SVGLength."/>, the value of which returns the initial <c>x</c> value.</value>
+</SVGMaskElementX>
+</docs>

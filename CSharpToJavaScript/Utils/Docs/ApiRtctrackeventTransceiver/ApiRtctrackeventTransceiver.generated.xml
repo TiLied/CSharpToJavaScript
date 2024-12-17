@@ -1,0 +1,12 @@
+<docs>
+<RTCTrackEventTransceiver>
+<summary>
+The WebRTC API interface <see cref="RTCTrackEvent."/>'s<br/>read-only <strong><c>transceiver</c></strong> property indicates the<br/><see cref="RTCRtpTransceiver."/> affiliated with the event's<br/><see cref="RTCTrackEvent.Track."/>.
+</summary>
+<remarks>
+<para>The transceiver pairs the track&amp;apos;s<br/><see cref="RTCTrackEvent.Receiver."/> with an <see cref="RTCRtpSender."/>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEvent/transceiver"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <see cref="RTCRtpTransceiver."/> which pairs the <c>receiver</c> with a<br/>sender and other properties which establish a single bidirectional <see href="https://developer.mozilla.org/en-US/docs/Glossary/RTP">RTP</see><br/>stream for use by the <see cref="RTCTrackEvent.Track."/> associated with the<br/><c>RTCTrackEvent</c>.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> The <see cref="RTCRtpReceiver."/> referred to by this<br/><c>RTCRtpReceiver</c>'s <see cref="RTCRtpTransceiver.Receiver."/><br/>property will always be the same as the <see cref="RTCTrackEvent."/>'s<br/><see cref="RTCTrackEvent.Receiver."/> property.</blockquote></value>
+</RTCTrackEventTransceiver>
+</docs>

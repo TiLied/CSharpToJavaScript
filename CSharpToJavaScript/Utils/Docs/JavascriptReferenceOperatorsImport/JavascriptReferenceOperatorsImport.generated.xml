@@ -1,0 +1,13 @@
+<docs>
+<JavaScriptReferenceOperatorsImport>
+<summary>
+The <strong><c>import()</c></strong> syntax, commonly called <strong>dynamic import</strong>, is a function-like expression that allows loading an ECMAScript module asynchronously and dynamically into a potentially non-module environment.
+</summary>
+<remarks>
+<para>Unlike the <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import">declaration-style counterpart</see>, dynamic imports are only evaluated when needed, and permit greater syntactic flexibility.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import"><c>import</c></see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/import"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Returns a promise which fulfills to a <see href="https://developer.mozilla.org#module_namespace_object">module namespace object</see>: an object containing all exports from <c>moduleName</c>.The evaluation of <c>import()</c> never synchronously throws an error. <c>moduleName</c> is <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion">coerced to a string</see>, and if coercion throws, the promise is rejected with the thrown error.</returns>
+</JavaScriptReferenceOperatorsImport>
+</docs>

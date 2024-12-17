@@ -1,0 +1,13 @@
+<docs>
+<SchedulingIsInputPending>
+<summary>
+The <strong><c>isInputPending()</c></strong> method of the <see cref="Scheduling."/> interface allows you to check whether there are pending input events in the event queue, indicating that the user is attempting to interact with the page.
+</summary>
+<remarks>
+<para>This feature is useful in situations where you have a queue of tasks to run, and you want to yield to the main thread regularly to allow user interaction to occur so that the app is kept as responsive and performant as possible. <c>isInputPending()</c> allows you to yield only when there is input pending, rather than having to do it at arbitrary intervals.</para><para><c>isInputPending()</c> is called using <c>navigator.scheduling.isInputPending()</c>.</para>
+<para>-<see href="https://engineering.fb.com/2019/04/22/developer-tools/isinputpending-api/">Faster input events with Facebook&amp;apos;s first browser API contribution</see> on engineering.fb.com (2019)<br/>-<see href="https://developer.chrome.com/articles/isinputpending/">Better JS scheduling with isInputPending()</see> on developer.chrome.com (2020)<br/>-<see href="https://web.dev/articles/optimize-long-tasks#yield_only_when_necessary">Optimizing long tasks</see> on web.dev (2022)<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Scheduling/isInputPending"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A boolean that indicates whether there are pending input events in the event queue (<c>true</c>) or not (<c>false</c>).</returns>
+</SchedulingIsInputPending>
+</docs>

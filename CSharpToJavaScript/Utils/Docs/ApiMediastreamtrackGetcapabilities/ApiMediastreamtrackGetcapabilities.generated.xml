@@ -1,0 +1,12 @@
+<docs>
+<MediaStreamTrackGetCapabilities>
+<summary>
+The <strong><c>getCapabilities()</c></strong> method of<br/>the <see cref="MediaStreamTrack."/> interface returns a<br/><see cref="'MediaTrackCapabilities'."/> object which specifies the values or range of<br/>values which each constrainable property, based upon the platform and {{Glossary(&amp;quot;user<br/>agent&amp;quot;)}}.
+</summary>
+<remarks>
+<para>Once you know what the browser&amp;apos;s capabilities are, your script can use<br/><see cref="MediaStreamTrack.ApplyConstraints."/> to ask for the<br/>track to be configured to match ideal or acceptable settings. See <see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints">Capabilities, constraints, and settings</see> for details on how to work with constrainable properties.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack/getCapabilities"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="'MediaTrackCapabilities'."/> object which specifies the value or range of values which are supported for each of the user agent's supported constrainable properties.</returns>
+</MediaStreamTrackGetCapabilities>
+</docs>

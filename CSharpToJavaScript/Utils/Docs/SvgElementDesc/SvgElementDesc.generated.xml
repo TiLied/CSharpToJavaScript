@@ -1,0 +1,12 @@
+<docs>
+<SVGElementDesc>
+<summary>
+The <strong><c>&amp;lt;desc&amp;gt;</c></strong> element provides an accessible, long-text description of any SVG <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element#container_elements">container element</see> or <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element#graphics_elements">graphics element</see>.
+</summary>
+<remarks>
+<para>Text in a <c>&amp;lt;desc&amp;gt;</c> element is not rendered as part of the graphic. If the element can be described by visible text, it is possible to reference that text with the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby"><c>aria-describedby</c></see> attribute. If <c>aria-describedby</c> is used, it will take precedence over <c>&amp;lt;desc&amp;gt;</c>.</para><para>The hidden text of a <c>&amp;lt;desc&amp;gt;</c> element can also be concatenated with the visible text of other elements using multiple IDs in an <c>aria-describedby</c> value. In that case, the <c>&amp;lt;desc&amp;gt;</c> element must provide an ID for reference.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementtitle">title</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/desc"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</SVGElementDesc>
+</docs>

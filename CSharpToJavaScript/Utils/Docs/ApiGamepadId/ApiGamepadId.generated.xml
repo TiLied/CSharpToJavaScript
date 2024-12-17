@@ -1,0 +1,13 @@
+<docs>
+<GamepadId>
+<summary>
+The <strong><c>Gamepad.id</c></strong> property of the <see cref="Gamepad."/><br/>interface returns a string containing some information about the controller.
+</summary>
+<remarks>
+<para>The exact syntax is not strictly specified, but in Firefox it will contain three pieces<br/>of information separated by dashes (<c>-</c>):</para><para>For example, a PS2 controller returned <strong>810-3-USB Gamepad</strong>.</para><para>This information is intended to allow you to find a mapping for the controls on the<br/>device as well as display useful feedback to the user.</para>
+<para><see href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API">Using the Gamepad API</see></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad/id"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string primitive.</value>
+</GamepadId>
+</docs>

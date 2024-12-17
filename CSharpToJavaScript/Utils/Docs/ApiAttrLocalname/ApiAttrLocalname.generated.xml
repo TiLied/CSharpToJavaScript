@@ -1,0 +1,13 @@
+<docs>
+<AttrLocalName>
+<summary>
+The read-only <strong><c>localName</c></strong> property of the <see cref="Attr."/> interface returns the <strong>local part</strong> of the <strong>qualified name</strong> of an attribute, that is the name of the attribute, stripped from any namespace in front of it. For example, if the qualified name is <c>xml:lang</c>, the returned local name is <c>lang</c>, if the element supports that namespace.
+</summary>
+<remarks>
+<para>The local name is always in lower case, whatever case at the attribute creation.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> HTML only supports a fixed set of namespaces on SVG and MathML elements. These are <c>xml</c> (for the <c>xml:lang</c> attribute), <c>xlink</c> (for the <c>xlink:href</c>, <c>xlink:show</c>, <c>xlink:target</c> and <c>xlink:title</c> attributes) and <c>xpath</c>.</para><para>That means that the local name of an attribute of an HTML element is always be equal to its qualified name: Colons are treated as regular characters. In XML, like in SVG or MathML, the colon denotes the end of the prefix and what is before is the namespace; the local name may be different from the qualified name.</para></blockquote>
+<para>-The properties <see cref="Attr.Name."/>, returning the qualified name of the attribute, and <see cref="Attr.Prefix."/>, the namespace prefix.<br/>-The <see cref="Element.LocalName."/> property, returning the local name of an <see cref="Element."/>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Attr/localName"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing the local part of the attribute&amp;apos;s qualified name.</value>
+</AttrLocalName>
+</docs>

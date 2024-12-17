@@ -1,0 +1,11 @@
+<docs>
+<VideoTrackSelected>
+<summary>
+The <strong><see cref="VideoTrack."/></strong> property<br/><strong><c>selected</c></strong> controls whether or not a particular video<br/>track is active.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoTrack/selected"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <c>selected</c> property is a Boolean whose value is <c>true</c> if the<br/>track is active. Only a single video track can be active at any given time, so setting<br/>this property to <c>true</c> for one track while another track is active will make<br/>that other track inactive.</value>
+</VideoTrackSelected>
+</docs>

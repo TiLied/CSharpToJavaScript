@@ -1,0 +1,13 @@
+<docs>
+<WorkerNavigatorAppName>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The value of the <strong><c>WorkerNavigator.appName</c></strong> property is always<br/>&amp;quot;<c>Netscape</c>&amp;quot;, in any browser. This property is kept only for compatibility<br/>purposes.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Do not rely on this property to return a real browser name. All browsers return &amp;quot;<c>Netscape</c>&amp;quot; as the value of this property.</para></blockquote>
+<para>-<see cref="WorkerNavigator.AppCodeName."/><br/>-<see cref="WorkerNavigator.Product."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerNavigator/appName"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The string &amp;quot;<c>Netscape</c>&amp;quot;.</value>
+</WorkerNavigatorAppName>
+</docs>

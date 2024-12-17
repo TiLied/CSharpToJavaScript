@@ -1,11 +1,12 @@
 <docs>
 <CSSScale>
 <summary>
-The <strong><c>CSSScale</c></strong> interface of the <see cref="'CSS_Object_Model#css_typed_object_model'"/> represents the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scale">scale()</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scale3d">scale3d()</see> values of the individual {{CSSXRef('transform')}} property in CSS. It inherits properties and methods from its parent <see cref="'CSSTransformValue'"/>.
+The <strong><c>scale</c></strong> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</see> property allows you to specify scale transforms individually and independently of the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform">transform</see> property. This maps better to typical user interface usage, and saves having to remember the exact order of transform functions to specify in the <c>transform</c> value.
 </summary>
 <remarks>
-<para></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSScale"> <em>See also on MDN</em> </seealso></para>
+<para>EmbedInteractiveExample("pages/css/scale.html")</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/'translate'">'translate'</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/'rotate'">'rotate'</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/'transform'">'transform'</see><br/>Note: skew is not an independent transform value</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/CSS/scale"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </CSSScale>
 </docs>

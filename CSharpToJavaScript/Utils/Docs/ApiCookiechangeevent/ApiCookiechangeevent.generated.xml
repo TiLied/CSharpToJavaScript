@@ -1,0 +1,11 @@
+<docs>
+<CookieChangeEvent>
+<summary>
+The <strong><c>CookieChangeEvent</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Cookie_Store_API">&amp;apos;Cookie Store API&amp;apos;</see> is the event type of the <see cref="CookieStore.Change_event."/> event fired at a <see cref="CookieStore."/> when any cookie changes occur. A cookie change consists of a cookie and a type (either "changed" or "deleted").
+</summary>
+<remarks>
+<para>Cookie changes that will cause the <c>CookieChangeEvent</c> to be dispatched are:</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> A cookie that is replaced due to the insertion of another cookie with the same name, domain, and path, is ignored and does not trigger a change event.</para></blockquote><para></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CookieChangeEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CookieChangeEvent>
+</docs>

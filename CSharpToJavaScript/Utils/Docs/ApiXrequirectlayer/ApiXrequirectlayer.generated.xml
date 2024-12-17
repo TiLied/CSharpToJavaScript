@@ -1,0 +1,12 @@
+<docs>
+<XREquirectLayer>
+<summary>
+The <strong><c>XREquirectLayer</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</see> is a layer that maps <see href="https://en.wikipedia.org/wiki/Equirectangular_projection">equirectangular</see> coded data onto the inside of a sphere.
+</summary>
+<remarks>
+<para><c>XREquirectLayer</c> requires the <c>layers</c> feature to be enabled for the <see cref="XRSession."/>. You can request it in <see cref="XRSystem.RequestSession."/>.</para><para>To create a new <c>XREquirectLayer</c>, call either:</para><para>To present layers to the XR device, add them to the <c>layers</c> render state using <see cref="XRSession.UpdateRenderState."/>.</para><para></para>
+<para>-<see cref="XRLayer."/><br/>-<see cref="EventTarget."/><br/>-<see cref="XRCompositionLayer."/><br/>-<see cref="XRCylinderLayer."/><br/>-<see cref="XRCubeLayer."/><br/>-<see cref="XRQuadLayer."/><br/>-<see cref="XRProjectionLayer."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XREquirectLayer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</XREquirectLayer>
+</docs>

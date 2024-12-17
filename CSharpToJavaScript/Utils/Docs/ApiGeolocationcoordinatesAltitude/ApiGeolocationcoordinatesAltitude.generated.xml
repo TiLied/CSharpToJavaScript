@@ -1,0 +1,12 @@
+<docs>
+<GeolocationCoordinatesAltitude>
+<summary>
+The <strong><c>GeolocationCoordinates.altitude</c></strong> read-only property is<br/>a <c>double</c> representing the altitude of the position in meters above the <see href="https://gis-lab.info/docs/nima-tr8350.2-wgs84fin.pdf">WGS84</see><br/>ellipsoid (which defines the nominal sea level surface). This value is <c>null</c><br/>if the implementation cannot provide this data.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API">Using the Geolocation API</see><br/>-The <see cref="GeolocationCoordinates."/> interface it belongs to.<br/>-<see href="https://gis-lab.info/docs/nima-tr8350.2-wgs84fin.pdf">National Imagery and Mapping Agency Technical Report 8350.2, Third Edition (WGS84)</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GeolocationCoordinates/altitude"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <c>double</c> representing the altitude of the position in meters above the <see href="https://gis-lab.info/docs/nima-tr8350.2-wgs84fin.pdf">WGS84</see><br/>ellipsoid.</value>
+</GeolocationCoordinatesAltitude>
+</docs>

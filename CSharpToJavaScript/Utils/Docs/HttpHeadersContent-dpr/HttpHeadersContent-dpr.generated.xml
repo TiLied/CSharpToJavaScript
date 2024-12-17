@@ -1,0 +1,12 @@
+<docs>
+<HTTPHeadersContent-DPR>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>Content-DPR</c></strong> response header is used to confirm the <strong>image</strong> device to pixel ratio in requests where the screen <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/DPR">DPR</see> <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Client_hints">client hint</see> was used to select an image resource.
+</summary>
+<remarks>
+<para>If the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/DPR">DPR</see> client hint is used to select an image the server must specify <c>Content-DPR</c> in the response. If the value in <c>Content-DPR</c> is different from the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/DPR">DPR</see> value in the request (i.e. image DPR is not the same as screen DPR) then the client must use the <c>Content-DPR</c> for determining intrinsic image size and scaling the image.</para><para>If the <c>Content-DPR</c> header appears more than once in a message the last occurrence is used.</para><blockquote><para><strong>Note:</strong></para></blockquote>
+<para>-<see href="https://developer.chrome.com/articles/user-agent-client-hints/">Improving user privacy and developer experience with User-Agent Client Hints</see> (web.dev)<br/>-Device client hints-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Device-Memory">Device-Memory</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/DPR">DPR</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Viewport-Width">Viewport-Width</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Width">Width</see><br/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-CH">Accept-CH</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching#vary">HTTP Caching &amp;gt; Vary</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Vary">Vary</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-DPR"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPHeadersContent-DPR>
+</docs>

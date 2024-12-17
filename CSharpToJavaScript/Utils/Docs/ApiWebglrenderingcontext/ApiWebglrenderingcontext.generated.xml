@@ -1,0 +1,12 @@
+<docs>
+<WebGLRenderingContext>
+<summary>
+The <strong><c>WebGLRenderingContext</c></strong> interface provides an interface to the OpenGL ES 2.0 graphics rendering context for the drawing surface of an HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas">canvas</see> element.
+</summary>
+<remarks>
+<para>To get an access to a WebGL context for 2D and/or 3D graphics rendering, call <see cref="HTMLCanvasElement.GetContext."/> on a <c>&amp;lt;canvas&amp;gt;</c> element, supplying &amp;quot;webgl&amp;quot; as the argument:</para><para>Once you have the WebGL rendering context for a canvas, you can render within it. The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</see> has more information, examples, and resources on how to get started with WebGL.</para><para>If you require a WebGL 2.0 context, see <see cref="WebGL2RenderingContext."/>; this supplies access to an implementation of OpenGL ES 3.0 graphics.</para>
+<para>-<see cref="HTMLCanvasElement."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebGLRenderingContext>
+</docs>

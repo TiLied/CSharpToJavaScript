@@ -1,0 +1,13 @@
+<docs>
+<ResponseStatusText>
+<summary>
+The <strong><c>statusText</c></strong> read-only property of the <see cref="Response."/> interface contains the status message corresponding to the HTTP status code in <see cref="Response.Status."/>.
+</summary>
+<remarks>
+<para>For example, this would be <c>OK</c> for a status code <c>200</c>, <c>Continue</c> for <c>100</c>, <c>Not Found</c> for <c>404</c>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Response/statusText"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="String"/> containing the HTTP status message associated with the response.<br/>The default value is &amp;quot;&amp;quot;.See <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">HTTP response status codes</see> for a list of codes and their associated status messages.<br/>Note that HTTP/2 <see href="https://fetch.spec.whatwg.org/#concept-response-status-message">does not support</see> status messages.</value>
+</ResponseStatusText>
+</docs>

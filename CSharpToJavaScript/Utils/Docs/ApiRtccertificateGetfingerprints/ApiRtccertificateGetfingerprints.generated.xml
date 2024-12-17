@@ -1,0 +1,12 @@
+<docs>
+<RTCCertificateGetFingerprints>
+<summary>
+The <strong><c>getFingerprints()</c></strong> method of the <strong><see cref="RTCCertificate."/></strong> interface is used to get an array of certificate fingerprints.
+</summary>
+<remarks>
+<para>An application can use this method to compare the client certificate fingerprints with the certificate fingerprints from the server.<br/>The server and client may support different sets of algorithms: all fingerprint values for the set of algorithms supported by both client and server should match.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCCertificate/getFingerprints"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</see> of fingerprint values.<br/>Each fingerprint is represented by an object with the following properties:</returns>
+</RTCCertificateGetFingerprints>
+</docs>

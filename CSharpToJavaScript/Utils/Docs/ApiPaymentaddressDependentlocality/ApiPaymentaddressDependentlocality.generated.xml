@@ -1,0 +1,11 @@
+<docs>
+<PaymentAddressDependentLocality>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The read-only <strong><c>dependentLocality</c></strong><br/>property of the <see cref="'PaymentAddress'."/> interface is a string containing a<br/>sublocality designation within a city, such as a neighborhood, borough, district, or,<br/>in the United Kingdom, a dependent locality. Also known as a <strong>post</strong><strong><br/></strong><strong>town</strong>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentAddress/dependentLocality"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string indicating the sublocality portion of the address. This may<br/>be an empty string if no sublocality is available or required. It&amp;apos;s used to provide<br/>disambiguation when a city may include areas that duplicate street namesA sublocality is an area within a city, such as a neighborhood, borough, or district.<br/>In the United Kingdom, this is used to indicate the <strong>post town</strong> in the<br/>United Kingdom (known officially by the Royal Mail as the <strong>dependent</strong><strong><br/></strong><strong>locality</strong>). This is a disambiguating feature of addresses in places where a<br/>city may have areas that duplicate street names.</value>
+</PaymentAddressDependentLocality>
+</docs>

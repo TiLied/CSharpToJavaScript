@@ -1,0 +1,12 @@
+<docs>
+<CSSTransform-functionRotateY>
+<summary>
+The <strong><c>rotateY()</c></strong> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</see> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Functions">function</see> defines a transformation that rotates an element around the<br/>y-axis (vertical) without deforming it. Its result is a {{cssxref(&amp;quot;&amp;lt;transform-function&amp;gt;&amp;quot;)}} data type.
+</summary>
+<remarks>
+<para>EmbedInteractiveExample("pages/css/function-rotateY.html")</para><para>The axis of rotation passes through an origin, defined by the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-origin">transform-origin</see> CSS property.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> <c>rotateY(a)</c> is equivalent to<br/><c>rotate3d(0, 1, 0, a)</c>.</para></blockquote><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Unlike rotations in the 2D plane, the composition of 3D rotations is usually<br/>not commutative. In other words, the order in which the rotations are applied impacts the result.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform">transform</see> property<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/rotate">rotate</see> property<br/>-{{cssxref(&amp;quot;&amp;lt;transform-function&amp;gt;&amp;quot;)}}<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotateY"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CSSTransform-functionRotateY>
+</docs>

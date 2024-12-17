@@ -1,0 +1,12 @@
+<docs>
+<XRLightEstimatePrimaryLightIntensity>
+<summary>
+The <strong>read-only</strong> <strong><c>primaryLightIntensity</c></strong> property of the <see cref="XRLightEstimate."/> interface returns a <see cref="DOMPointReadOnly."/> representing the intensity of the primary light source from the <c>probeSpace</c> of an <see cref="XRLightProbe."/>.
+</summary>
+<remarks>
+<para>-<see cref="XRLightEstimate.PrimaryLightDirection."/><br/>-<see cref="XRLightProbe.ProbeSpace."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRLightEstimate/primaryLightIntensity"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DOMPointReadOnly."/> object where an RGB value is mapped to the <c>x</c>, <c>y</c>, and <c>z</c> values. The <c>w</c> value is always <c>1.0</c>. If no estimated values from the user&amp;apos;s environment are available, the point will be <c>{x: 0.0, y: 0.0, z: 0.0, w: 1.0}</c>, representing no illumination.</value>
+</XRLightEstimatePrimaryLightIntensity>
+</docs>

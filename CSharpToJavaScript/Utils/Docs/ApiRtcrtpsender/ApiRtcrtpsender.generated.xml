@@ -1,0 +1,12 @@
+<docs>
+<RTCRtpSender>
+<summary>
+The <strong><c>RTCRtpSender</c></strong> interface provides the ability to control and obtain details about how a particular <see cref="MediaStreamTrack."/> is encoded and sent to a remote peer.
+</summary>
+<remarks>
+<para>With it, you can configure the encoding used for the corresponding track, get information about the device's media capabilities, and so forth. You can also obtain access to an <see cref="RTCDTMFSender."/> which can be used to send {{Glossary("DTMF")}} codes (to simulate the user pressing buttons on a telephone's dial pad) to the remote peer.</para>
+<para>-WebRTC API<br/>-<see cref="RTCPeerConnection.AddTrack."/><br/>-<see cref="RTCPeerConnection.GetSenders."/><br/>-<see cref="RTCRtpReceiver."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSender"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RTCRtpSender>
+</docs>

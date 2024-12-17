@@ -1,0 +1,13 @@
+<docs>
+<IDBTransactionError>
+<summary>
+The <strong><c>IDBTransaction.error</c></strong> property of the <see cref="IDBTransaction."/> interface<br/>returns the type of error when there is an unsuccessful transaction.
+</summary>
+<remarks>
+<para>AvailableInWorkers</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase."/><br/>-Using transactions: <see cref="IDBTransaction."/><br/>-Setting a range of keys: <see cref="IDBKeyRange."/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore."/><br/>-Using cursors: <see cref="IDBCursor."/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction/error"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DOMException."/> containing the relevant error, or <c>null</c> if there are none.It can be a reference to the same error as the request object that raised it, or a transaction<br/>failure (for example <c>QuotaExceededError</c>).This property is <c>null</c> if the transaction is not finished, or is finished and<br/>was successfully committed.</value>
+</IDBTransactionError>
+</docs>

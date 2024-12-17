@@ -1,0 +1,11 @@
+<docs>
+<MIDIInputMap>
+<summary>
+The <strong><c>MIDIInputMap</c></strong> read-only interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_MIDI_API">Web MIDI API</see> provides the set of MIDI input ports that are currently available.
+</summary>
+<remarks>
+<para>A <c>MIDIInputMap</c> instance is a read-only <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map#map-like_browser_apis"><c>Map</c>-like object</see>, in which each key is the ID string for MIDI input, and the associated value is the corresponding <see cref="MIDIInput."/> object.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MIDIInputMap"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</MIDIInputMap>
+</docs>

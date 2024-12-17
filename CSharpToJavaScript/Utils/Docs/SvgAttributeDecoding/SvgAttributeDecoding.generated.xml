@@ -1,0 +1,12 @@
+<docs>
+<SVGAttributeDecoding>
+<summary>
+The <c>decoding</c> attribute, valid on <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementimage">image</see> elements, provides a hint to the browser as to whether it should perform image decoding along with rendering other content in a single presentation step that looks more "correct" (<c>sync</c>), or render and present the other content first and then decode the image and present it later (<c>async</c>). In practice, <c>async</c> means that the next paint does not wait for the image to decode.
+</summary>
+<remarks>
+<para>It is often difficult to perceive any noticeable effect when using <c>decoding</c> on static <c>&amp;lt;image&amp;gt;</c> elements. They&amp;apos;ll likely be initially rendered as empty images while the image files are fetched (either from the network or from the cache) and then handled independently anyway, so the &amp;quot;syncing&amp;quot; of content updates is less apparent. However, the blocking of rendering while decoding happens, while often quite small, <strong>can</strong> be measured — even if it is difficult to observe with the human eye.</para><para>Using different <c>decoding</c> types can result in more noticeable differences when dynamically inserting <c>&amp;lt;image&amp;gt;</c> elements into the DOM via JavaScript — see <see cref="SVGImageElement.Decoding."/> for more details.</para><para>Allowed values:</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGImageElement/decoding">SVGImageElement: decoding property</see><br/>-<see href="https://www.tunetheweb.com/blog/what-does-the-image-decoding-attribute-actually-do/">What does the image decoding attribute actually do?</see> on tunetheweb.com (2023)<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/decoding"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</SVGAttributeDecoding>
+</docs>

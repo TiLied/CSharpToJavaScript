@@ -1,0 +1,12 @@
+<docs>
+<HTTPHeadersLast-Modified>
+<summary>
+The <strong><c>Last-Modified</c></strong> response HTTP header contains a date<br/>and time when the origin server believes the resource was last modified. It is used<br/>as a validator to determine if the resource is the same as the previously stored one. Less accurate<br/>than an <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/ETag">ETag</see> header, it is a fallback mechanism. Conditional requests<br/>containing <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Modified-Since">If-Modified-Since</see> or <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Unmodified-Since">If-Unmodified-Since</see><br/>headers make use of this field.
+</summary>
+<remarks>
+<para><c>Last-Modified</c> is also used by <see href="https://developer.mozilla.org/en-US/docs/Glossary/Crawler">crawlers</see> to adjust crawl frequency, by browsers in <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching#heuristic_caching">heuristic caching</see>, and by content management systems (CMS) to display the time the content was last modified.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Modified-Since">If-Modified-Since</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Unmodified-Since">If-Unmodified-Since</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Etag">Etag</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Last-Modified"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPHeadersLast-Modified>
+</docs>

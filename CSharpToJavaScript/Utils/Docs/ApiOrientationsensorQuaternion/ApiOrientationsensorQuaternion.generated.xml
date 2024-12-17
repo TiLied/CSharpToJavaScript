@@ -1,0 +1,12 @@
+<docs>
+<OrientationSensorQuaternion>
+<summary>
+The <strong><c>quaternion</c></strong> read-only<br/>property of the <see cref="OrientationSensor."/> interface returns a four element<br/><see cref="'Array'"/> whose elements contain the components of the unit<br/><see href="https://developer.mozilla.org/en-US/docs/Glossary/quaternion">quaternion</see> representing the device's orientation.
+</summary>
+<remarks>
+<para>Because <see cref="'OrientationSensor'."/> is a base class, <c>quaternion</c> may<br/>only be read from one of its derived classes.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/OrientationSensor/quaternion"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="'Array'"/> whose values are the x, y, z, and w components of the quaternion<br/>representing the device orientation.</value>
+</OrientationSensorQuaternion>
+</docs>

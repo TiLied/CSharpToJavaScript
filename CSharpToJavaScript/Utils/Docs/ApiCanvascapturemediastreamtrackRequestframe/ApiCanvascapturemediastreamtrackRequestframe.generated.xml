@@ -1,0 +1,13 @@
+<docs>
+<CanvasCaptureMediaStreamTrackRequestFrame>
+<summary>
+The <see cref="CanvasCaptureMediaStreamTrack."/> method<br/><strong><c>requestFrame()</c></strong> requests that a frame be captured from<br/>the canvas and sent to the stream.
+</summary>
+<remarks>
+<para>Applications that need to carefully control<br/>the timing of rendering and frame capture can use <c>requestFrame()</c> to<br/>directly specify when it&amp;apos;s time to capture a frame.</para><para>To prevent automatic capture of frames, so that frames are only captured when<br/><c>requestFrame()</c> is called, specify a value of 0 for the<br/><see cref="HTMLCanvasElement.CaptureStream."/> method when creating<br/>the stream.</para>
+<para>-<see cref="CanvasCaptureMediaStreamTrack."/>, the interface it belongs to.<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas">canvas</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasCaptureMediaStreamTrack/requestFrame"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns><c>undefined</c></returns>
+</CanvasCaptureMediaStreamTrackRequestFrame>
+</docs>

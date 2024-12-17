@@ -1,0 +1,12 @@
+<docs>
+<AudioWorklet>
+<summary>
+The <strong><c>AudioWorklet</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see> is used to supply custom audio processing scripts that execute in a separate thread to provide very low latency audio processing.
+</summary>
+<remarks>
+<para>The worklet's code is run in the <see cref="AudioWorkletGlobalScope."/> global execution context, using a separate Web Audio thread which is shared by the worklet and other audio nodes.</para><para>Access the audio context&amp;apos;s instance of <c>AudioWorklet</c> through the <see cref="BaseAudioContext.AudioWorklet."/> property.</para><para></para>
+<para>-<see cref="AudioWorkletGlobalScope."/> — the global execution context of an <c>AudioWorklet</c><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_AudioWorklet">Using AudioWorklet</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioWorklet"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</AudioWorklet>
+</docs>

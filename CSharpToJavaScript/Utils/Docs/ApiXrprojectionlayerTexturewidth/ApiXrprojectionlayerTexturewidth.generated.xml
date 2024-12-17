@@ -1,0 +1,13 @@
+<docs>
+<XRProjectionLayerTextureWidth>
+<summary>
+The read-only <strong><c>textureWidth</c></strong> property of the <see cref="XRProjectionLayer."/> interface indicates the width in pixels of the color textures of this layer.
+</summary>
+<remarks>
+<para>The projection layer's texture width is determined by the user agent or the device. It is reported in the <see cref="XRSubImage."/>, which can only be accessed inside the frame loop. If you want to manage your own depth buffers and don't want to wait for first frame after layer creation to determine the required dimensions for those buffers, the <c>textureWidth</c> property allows access to layer texture width outside the frame loop. Allocation of these buffers can happen directly after layer creation.</para>
+<para>-<see cref="XRWebGLBinding.CreateProjectionLayer."/><br/>-<see cref="WebGL2RenderingContext.RenderbufferStorageMultisample."/><br/>-<see cref="XRSubImage."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRProjectionLayer/textureWidth"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number indicating the width in pixels.</value>
+</XRProjectionLayerTextureWidth>
+</docs>

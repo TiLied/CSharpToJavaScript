@@ -1,0 +1,11 @@
+<docs>
+<RTCErrorSentAlert>
+<summary>
+The read-only <strong><c>sentAlert</c></strong> property in an<br/><see cref="RTCError."/> object specifies the {{Glossary("DTLS")}} alert number occurred<br/>while sending data to the remote peer, if the error represents an outbound DTLS error.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCError/sentAlert"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An unsigned integer value providing the DTLS alert number corresponding to the DTLS<br/>error which was sent to the remote peer, as represented by this <c>RTCError</c><br/>object. This property is <c>null</c> if {{domxref(&amp;quot;RTCError.errorDetail&amp;quot;,<br/>&amp;quot;errorDetail&amp;quot;)}} isn&amp;apos;t <c>dtls-failure</c>.</value>
+</RTCErrorSentAlert>
+</docs>

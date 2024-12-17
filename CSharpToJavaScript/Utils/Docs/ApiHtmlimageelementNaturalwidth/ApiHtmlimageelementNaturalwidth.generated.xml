@@ -1,0 +1,12 @@
+<docs>
+<HTMLImageElementNaturalWidth>
+<summary>
+The <see cref="HTMLImageElement."/> interface's read-only<br/><strong><c>naturalWidth</c></strong> property returns the intrinsic (natural),<br/>density-corrected width of the image in {{Glossary(&amp;quot;CSS pixel&amp;quot;, &amp;quot;CSS<br/>pixels&amp;quot;)}}.
+</summary>
+<remarks>
+<para>This is the width the image is if drawn with nothing constraining<br/>its width; if you neither specify a width for the image nor place the image inside a<br/>container that limits or expressly specifies the image width, this is the number of CSS<br/>pixels wide the image will be.</para><para>The corresponding <see cref="HTMLImageElement.NaturalHeight."/> method<br/>returns the natural height of the image.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Most of the time the natural width is the actual width of the image sent by the server.<br/>Nevertheless, browsers can modify an image before pushing it to the renderer. For example, Chrome<br/><see href="https://crbug.com/1187043#c7">degrades the resolution of images on low-end devices</see>. In such cases, <c>naturalWidth</c> will consider the width of the image modified<br/>by such browser interventions as the natural width, and returns this value.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/naturalWidth"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer value indicating the intrinsic width of the image, in CSS pixels. This is<br/>the width at which the image is naturally drawn when no constraint or specific value is<br/>established for the image. This natural width is corrected for the pixel density of the<br/>device on which it&amp;apos;s being presented, unlike the value of<br/><see cref="HTMLImageElement.Width."/>.If the intrinsic width is not available—either because the image does not specify an<br/>intrinsic width or because the image data is not available in order to obtain this<br/>information, <c>naturalWidth</c> returns 0.</value>
+</HTMLImageElementNaturalWidth>
+</docs>

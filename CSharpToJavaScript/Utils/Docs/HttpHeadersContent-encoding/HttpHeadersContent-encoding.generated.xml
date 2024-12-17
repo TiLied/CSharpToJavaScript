@@ -1,0 +1,12 @@
+<docs>
+<HTTPHeadersContent-Encoding>
+<summary>
+The <strong><c>Content-Encoding</c></strong> <see href="https://developer.mozilla.org/en-US/docs/Glossary/representation header">representation header</see> lists any encodings that have been applied to the representation (message payload), and in what order.<br/>This lets the recipient know how to decode the representation in order to obtain the original payload format.<br/>Content encoding is mainly used to compress the message data without losing information about the origin media type.
+</summary>
+<remarks>
+<para>Note that the original media/content type is specified in the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type">Content-Type</see> header, and that the <c>Content-Encoding</c> applies to the representation, or &amp;quot;coded form&amp;quot;, of the data. If the original media is encoded in some way (e.g. a zip file) then this information would not be included in the <c>Content-Encoding</c> header.</para><para>Servers are encouraged to compress data as much as possible, and should use content encoding where appropriate. Compressing a compressed media type such as a zip or jpeg may not be appropriate, as this can make the payload larger.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Encoding">Accept-Encoding</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Transfer-Encoding">Transfer-Encoding</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Encoding"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPHeadersContent-Encoding>
+</docs>

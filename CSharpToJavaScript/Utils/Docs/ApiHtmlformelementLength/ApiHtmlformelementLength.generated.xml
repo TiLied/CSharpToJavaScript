@@ -1,0 +1,12 @@
+<docs>
+<HTMLFormElementLength>
+<summary>
+The <strong><c>HTMLFormElement.length</c></strong><br/>read-only property returns the number of controls in the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see><br/>element.
+</summary>
+<remarks>
+<para>You can access the list of the form&amp;apos;s controls using the<br/><see cref="HTMLFormElement.Elements."/> property.</para><para>This includes both elements that are descendants of the <c>&amp;lt;form&amp;gt;</c><br/>element as well as elements that are made members of the form using their<br/><c>form</c> property.</para><para>Elements that are considered for this property are: <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button">button</see>,<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset">fieldset</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">input</see> (with the exception<br/>that any whose type is &amp;quot;image&amp;quot; are omitted for historical reasons),<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object">object</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/output">output</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">select</see>,<br/>and <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textarea</see>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/length"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</HTMLFormElementLength>
+</docs>

@@ -1,0 +1,13 @@
+<docs>
+<RTCPeerConnectionCanTrickleIceCandidates>
+<summary>
+The read-only <strong><see cref="RTCPeerConnection."/></strong> property <strong><c>canTrickleIceCandidates</c></strong><br/>returns a boolean value which indicates whether or not the remote peer can accept<br/><see href="https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-trickle-ice">trickled ICE candidates</see>.
+</summary>
+<remarks>
+<para><strong>ICE trickling</strong> is the process of continuing to send candidates after<br/>the initial offer or answer has already been sent to the other peer.</para><para>This property is only set after having called<br/><see cref="RTCPeerConnection.SetRemoteDescription."/>. Ideally, your signaling<br/>protocol provides a way to detect trickling support, so that you don&amp;apos;t need to rely on<br/>this property. A WebRTC browser will always support trickle ICE. If trickling isn&amp;apos;t<br/>supported, or you aren&amp;apos;t able to tell, you can check for a falsy value for this<br/>property and then wait until the value of<br/><see cref="RTCPeerConnection.IceGatheringState."/> changes to<br/><c>&amp;quot;completed&amp;quot;</c> before creating and sending the initial offer. That way, the<br/>offer contains all of the candidates.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/>-<see cref="RTCPeerConnection.AddIceCandidate."/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Session_lifetime">Lifetime of a WebRTC session</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/canTrickleIceCandidates"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value that is <c>true</c> if the remote peer can accept<br/>trickled ICE candidates and <c>false</c> if it cannot. If no remote peer has<br/>been established, this value is <c>null</c>.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> This property&amp;apos;s value is determined once the local peer has<br/>called <see cref="RTCPeerConnection.SetRemoteDescription."/>; the provided<br/>description is used by the ICE agent to determine whether or not the remote peer<br/>supports trickled ICE candidates.</blockquote></value>
+</RTCPeerConnectionCanTrickleIceCandidates>
+</docs>

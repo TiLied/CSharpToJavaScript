@@ -1,0 +1,11 @@
+<docs>
+<XRSpace>
+<summary>
+The <strong><c>XRSpace</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</see> is an abstract interface providing a common basis for every class which represents a virtual coordinate system within the virtual world, in which its origin corresponds to a physical location. Spatial data in WebXR is always expressed relative to an object based upon one of the descendant interfaces of <c>XRSpace</c>, at the time at which a given <see cref="XRFrame."/> takes place.
+</summary>
+<remarks>
+<para>Numeric values such as pose positions are thus coordinates in the corresponding <c>XRSpace</c>, relative to that space&amp;apos;s origin.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> The <c>XRSpace</c> interface is never used directly; instead, all spaces are created using one of the interfaces based on <c>XRSpace</c>. At this time, those are <see cref="XRReferenceSpace."/>, <see cref="XRBoundedReferenceSpace."/>, and <see cref="XRJointSpace."/>.</para></blockquote><para></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRSpace"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</XRSpace>
+</docs>

@@ -1,0 +1,13 @@
+<docs>
+<FileReaderSyncReadAsText>
+<summary>
+The <strong><c>readAsText()</c></strong> method of the <see cref="FileReaderSync."/> interface allows to read <see cref="File."/> or <see cref="Blob."/> objects in a synchronous way into a string. This interface is <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers">only available</see> in <see href="https://developer.mozilla.org/en-US/docs/Web/API/Worker">workers</see> as it enables synchronous I/O that could potentially block.
+</summary>
+<remarks>
+<para>AvailableInWorkers</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_API">File API</see><br/>-<see cref="File."/><br/>-<see cref="FileReaderSync."/><br/>-<see cref="FileReader."/><br/>-<see cref="Blob."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileReaderSync/readAsText"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A string representing the input data.</returns>
+</FileReaderSyncReadAsText>
+</docs>

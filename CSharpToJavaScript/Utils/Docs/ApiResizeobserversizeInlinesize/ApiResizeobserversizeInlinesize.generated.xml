@@ -1,0 +1,12 @@
+<docs>
+<ResizeObserverSizeInlineSize>
+<summary>
+The <strong><c>inlineSize</c></strong> read-only property of the <see cref="ResizeObserverSize."/> interface returns the length of the observed element's border box in the inline dimension. For boxes with a horizontal {{cssxref("writing-mode")}}, this is the horizontal dimension, or width; if the writing-mode is vertical, this is the vertical dimension, or height.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> For more explanation of writing modes and block and inline dimensions, read <see href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions">Handling different text directions</see>.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserverSize/inlineSize"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A decimal representing the inline size in pixels.</value>
+</ResizeObserverSizeInlineSize>
+</docs>

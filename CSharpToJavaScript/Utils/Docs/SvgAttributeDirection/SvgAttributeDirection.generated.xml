@@ -1,0 +1,12 @@
+<docs>
+<SVGAttributeDirection>
+<summary>
+The <strong><c>direction</c></strong> attribute specifies the inline-base direction of a <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementtext">text</see> or <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementtspan">tspan</see> element. It defines the start and end points of a line of text as used by the {{SVGAttr("text-anchor")}} and {{SVGAttr("inline-size")}} properties. It also may affect the direction in which characters are positioned if the {{SVGAttr("unicode-bidi")}} property's value is either <c>embed</c> or <c>bidi-override</c>.
+</summary>
+<remarks>
+<para>It applies only to glyphs oriented perpendicular to the inline-base direction, which includes the usual case of horizontally-oriented Latin or Arabic text and the case of narrow-cell Latin or Arabic characters rotated 90 degrees clockwise relative to a top-to-bottom inline-base direction.</para><para>In many cases, the bidirectional Unicode algorithm produces the desired result automatically, so this attribute doesn&amp;apos;t need to be specified in those cases. For other cases, such as when using right-to-left languages, it may be sufficient to add the <c>direction</c> attribute to the outermost <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementsvg">svg</see> element, and allow that direction to inherit to all text elements:</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> As a presentation attribute, <c>direction</c> can be used as a CSS property. See <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/direction">direction</see> for further information.</para></blockquote><para>You can use this attribute with the following SVG elements:</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/direction">direction</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/direction"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</SVGAttributeDirection>
+</docs>

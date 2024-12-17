@@ -1,0 +1,13 @@
+<docs>
+<DocumentVisibilityState>
+<summary>
+The <strong><c>Document.visibilityState</c></strong><br/>read-only property returns the visibility of the document. It can be used to check whether the document is in the background or in a minimized window, or is otherwise not visible to the user.
+</summary>
+<remarks>
+<para>When the value of this property changes, the <see cref="Document/visibilitychange_event."/> event is sent to the <see cref="Document."/>.</para><para>The <see cref="Document.Hidden."/> property provides an alternative way to determine whether the page is hidden.</para>
+<para>-<see cref="Document.Hidden."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/visibilityState"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string with one of the following values:</value>
+</DocumentVisibilityState>
+</docs>

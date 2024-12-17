@@ -1,0 +1,12 @@
+<docs>
+<WebGLRenderingContextFinish>
+<summary>
+The <strong><c>WebGLRenderingContext.finish()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> blocks execution until all<br/>previously called commands are finished.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.Flush."/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/WebGL_best_practices">WebGL best practices</see> (which recommends avoiding <c>finish()</c> as it may slow down<br/>your main rendering loop)<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/finish"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextFinish>
+</docs>

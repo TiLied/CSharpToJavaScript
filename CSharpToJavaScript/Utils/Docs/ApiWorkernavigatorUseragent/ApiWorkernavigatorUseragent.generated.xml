@@ -1,0 +1,13 @@
+<docs>
+<WorkerNavigatorUserAgent>
+<summary>
+The <strong><c>WorkerNavigator.userAgent</c></strong> read-only property returns the<br/>user agent string for the current browser.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> The specification asks browsers to provide as little information via this field as<br/>possible. Never assume that the value of this property will stay the same in future<br/>versions of the same browser. Try not to use it at all, or only for current and past<br/>versions of a browser. New browsers may start using the same UA, or part of it, as an<br/>older browser: you really have no guarantee that the browser agent is indeed the one<br/>advertised by this property.</para><para>Also keep in mind that users of a browser can change the value of this field if they<br/>want (UA spoofing).</para></blockquote><para>Browser identification based on detecting the user agent string is<br/><strong>unreliable</strong> and <strong>is not recommended</strong>, as the user agent<br/>string is user configurable. For example:</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent">User-Agent</see> HTTP header<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerNavigator/userAgent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string specifying the complete user agent string the browser<br/>provides both in <see href="https://developer.mozilla.org/en-US/docs/Glossary/HTTP">HTTP</see> headers and in response to this and other related<br/>methods on the <see cref="WorkerNavigator."/> object.The user agent string is built on a formal structure which can be decomposed into<br/>several pieces of info. Each of these pieces of info comes from other navigator<br/>properties which are also settable by the user. Gecko-based browsers comply with the<br/>following general structure:</value>
+</WorkerNavigatorUserAgent>
+</docs>

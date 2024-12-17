@@ -1,0 +1,12 @@
+<docs>
+<CSSAnimation-timelineView>
+<summary>
+The <strong><c>view()</c></strong> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Functions">CSS function</see> can be used with <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timeline">animation-timeline</see> to indicate a subject element that will provide an anonymous view progress timeline to animate. The view progress timeline is progressed through by a change in visibility of the subject element inside the nearest ancestor scroller. The visibility of the subject inside the scroller is tracked — by default, the timeline is at 0% when the subject is first visible at one edge of the scroller, and 100% when it reaches the opposite edge.
+</summary>
+<remarks>
+<para>The function parameters can specify the scrollbar axis along which timeline progress will be tracked and an inset that adjusts the position of the box in which the subject is deemed to be visible.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> If the indicated axis does not contain a scrollbar, then the animation timeline will be inactive (have zero progress).</para></blockquote><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Each use of <c>view()</c> corresponds to its own unique instance of <see cref="ViewTimeline."/> in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see>.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_scroll-driven_animations">CSS scroll-driven animations</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations">Using CSS animations</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timeline"><c>animation-timeline</c></see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timeline/view"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CSSAnimation-timelineView>
+</docs>

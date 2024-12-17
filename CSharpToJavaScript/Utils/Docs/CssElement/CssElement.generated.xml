@@ -1,0 +1,12 @@
+<docs>
+<CSSElement>
+<summary>
+The <strong><c>element()</c></strong> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</see> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Functions">function</see> defines an {{cssxref(&amp;quot;&amp;lt;image&amp;gt;&amp;quot;)}} value generated from an arbitrary HTML element. This image is live, meaning that if the HTML element is changed, the CSS properties using the resulting value are automatically updated.
+</summary>
+<remarks>
+<para>A particularly useful scenario for using this would be to render an image in an HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas">canvas</see> element, then use that as a background.</para><para>On Gecko browsers, you can use the non-standard <see cref="Document.MozSetImageElement."/> method to change the element being used as the background for a given CSS background element.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/image/image">image/image</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/image/image-set">image/image-set</see><br/>-{{cssxref(&amp;quot;&amp;lt;image&amp;gt;&amp;quot;)}}<br/>-{{cssxref(&amp;quot;&amp;lt;gradient&amp;gt;&amp;quot;)}}<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/cross-fade">cross-fade</see><br/>-<see cref="Document.MozSetImageElement."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/CSS/element"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CSSElement>
+</docs>

@@ -1,0 +1,12 @@
+<docs>
+<ManifestOrientation>
+<summary>
+The <c>orientation</c> member defines the default orientation for all the website's top-level <see href="https://developer.mozilla.org/en-US/docs/Glossary/Browsing context">Browsing context</see>.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> <c>orientation</c> and/or its specific values might not be supported by a user agent on various display modes because supporting them does not make sense for the particular context.</para></blockquote><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> The orientation can be changed at runtime via the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Screen/orientation">Screen Orientation API</see>.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/Manifest/orientation"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value><c>orientation</c> can take one of the following values:</value>
+</ManifestOrientation>
+</docs>

@@ -1,0 +1,11 @@
+<docs>
+<WebSocketBufferedAmount>
+<summary>
+The <strong><c>WebSocket.bufferedAmount</c></strong> read-only property returns<br/>the number of bytes of data that have been queued using calls to <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/send"><c>send()</c></see> but<br/>not yet transmitted to the network. This value resets to zero once all queued data has<br/>been sent. This value does not reset to zero when the connection is closed; if you keep<br/>calling <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/send"><c>send()</c></see>, this will continue to climb.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/bufferedAmount"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <c>unsigned long</c>.</value>
+</WebSocketBufferedAmount>
+</docs>

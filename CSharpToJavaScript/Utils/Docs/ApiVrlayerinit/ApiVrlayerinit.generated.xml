@@ -1,0 +1,12 @@
+<docs>
+<VRLayerInit>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>VRLayerInit</c></strong> dictionary of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API">WebVR API</see> represents a content layer (an <see cref="HTMLCanvasElement."/> or <see cref="OffscreenCanvas."/>) that you want to present in a VR display.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This dictionary was part of the old <see href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</see>. It has been superseded by the <see href="https://immersive-web.github.io/webxr/">WebXR Device API</see>.</para></blockquote><para>You can retrieve <c>VRLayerInit</c> objects using <see cref="VRDisplay.GetLayers."/>, and present them using the <see cref="VRDisplay.RequestPresent."/> method.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API">WebVR API homepage</see><br/>-<see href="https://mixedreality.mozilla.org/"/> — demos, downloads, and other resources from the Mozilla VR team.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VRLayerInit"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</VRLayerInit>
+</docs>

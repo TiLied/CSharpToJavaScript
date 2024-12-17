@@ -1,0 +1,12 @@
+<docs>
+<CSSContain-intrinsic-size>
+<summary>
+The <strong><c>contain-intrinsic-size</c></strong> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</see> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties">shorthand property</see> sets the size of an element that a browser will use for layout when the element is subject to <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment#size_containment">size containment</see>.
+</summary>
+<remarks>
+<para>-<see href="https://web.dev/articles/content-visibility">content-visibility: the new CSS property that boosts your rendering performance</see> (web.dev)<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/contain-intrinsic-block-size">contain-intrinsic-block-size</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/contain-intrinsic-inline-size">contain-intrinsic-inline-size</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/CSS/contain-intrinsic-size"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The following values may be specified for the <c>contain-intrinsic-size</c> property:If one value is provided as a keyword, a length or an <c>auto [&amp;lt;length&amp;gt; | none]</c> pair, it applies to both width and height.Two length values may be specified, which apply to the width and height in that order.<br/>If two <c>auto [&amp;lt;length&amp;gt; | none]</c> pairs are specified, the first pair applies to the width, and the second to the height.</value>
+</CSSContain-intrinsic-size>
+</docs>

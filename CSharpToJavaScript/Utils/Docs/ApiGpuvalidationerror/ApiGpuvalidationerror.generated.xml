@@ -1,0 +1,12 @@
+<docs>
+<GPUValidationError>
+<summary>
+The <strong><c>GPUValidationError</c></strong> interface of the {{domxref(&amp;quot;WebGPU API&amp;quot;, &amp;quot;WebGPU API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} describes an application error indicating that an operation did not pass the WebGPU API&amp;apos;s validation constraints.
+</summary>
+<remarks>
+<para>It represents one of the types of errors surfaced by <see cref="GPUDevice.PopErrorScope."/> and the <see cref="GPUDevice.Uncapturederror_event."/> event.</para><para>Validation errors occur whenever invalid inputs are given to a WebGPU call. These are consistent, predictable, and should not occur provided your app is well-formed. They will occur in the same way on every device your code runs on, so once you&amp;apos;ve fixed any errors that show up during development you probably don&amp;apos;t need to observe them directly most of the time. An exception to that rule is if you&amp;apos;re consuming user-supplied assets, shaders, etc., in which case watching for validation errors while loading could be helpful.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> We have attempted to provide useful information to help you understand why validation errors are occurring in your WebGPU code in &amp;quot;Validation&amp;quot; sections where appropriate, which list criteria to meet to avoid validation errors. See for example the <see href="https://developer.mozilla.org/en-US/docs/Web/API/GPUDevice/createBindGroup#validation"><c>GPUDevice.createBindGroup()</c> Validation section</see>.</para></blockquote><para></para>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/>-<see href="https://toji.dev/webgpu-best-practices/error-handling">WebGPU Error Handling best practices</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUValidationError"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</GPUValidationError>
+</docs>

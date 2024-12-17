@@ -1,0 +1,11 @@
+<docs>
+<HTMLAttributesRelPreload>
+<summary>
+The <c>preload</c> value of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link">link</see> element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link#rel"><c>rel</c></see> attribute lets you declare fetch requests in the<br/>HTML's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head">head</see>, specifying resources that your page will need very soon, which you want to start loading early in the page lifecycle,<br/>before browsers&amp;apos; main rendering machinery kicks in. This ensures they are available earlier and are less likely to block the page&amp;apos;s render, improving performance. Even though the name contains the term <strong>load</strong>, it doesn&amp;apos;t load and execute the script but only schedules it to be downloaded and cached with a higher priority.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Performance/Speculative_loading">Speculative loading</see> for a comparison of <c>&amp;lt;link rel=&amp;quot;preload&amp;quot;&amp;gt;</c> and other similar performance improvement features.<br/>-<see href="https://www.smashingmagazine.com/2016/02/preload-what-is-it-good-for/">Preload: What Is It Good For?</see> by Yoav Weiss<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel/preload"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLAttributesRelPreload>
+</docs>

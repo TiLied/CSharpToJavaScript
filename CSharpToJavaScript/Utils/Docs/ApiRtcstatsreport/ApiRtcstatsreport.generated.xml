@@ -1,0 +1,12 @@
+<docs>
+<RTCStatsReport>
+<summary>
+The <strong><c>RTCStatsReport</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see> provides a statistics report for a <see cref="RTCPeerConnection."/>, <see cref="RTCRtpSender."/>, or <see cref="RTCRtpReceiver."/>.
+</summary>
+<remarks>
+<para>An <c>RTCStatsReport</c> instance is a read-only <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map#map-like_browser_apis"><c>Map</c>-like object</see>, in which each key is an identifier for an object for which statistics are being reported, and the corresponding value is a dictionary object providing the statistics.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see cref="RTCPeerConnection."/><br/>-<see cref="RTCPeerConnection.GetStats."/>, <see cref="RTCRtpReceiver.GetStats."/>, and <see cref="RTCRtpSender.GetStats."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCStatsReport"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RTCStatsReport>
+</docs>

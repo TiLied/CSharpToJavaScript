@@ -1,0 +1,13 @@
+<docs>
+<CSSImage-rendering>
+<summary>
+The <strong><c>image-rendering</c></strong> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</see> property sets an image scaling algorithm. The property applies to an element itself, to any images set in its other properties, and to its descendants.
+</summary>
+<remarks>
+<para>EmbedInteractiveExample("pages/css/image-rendering.html")</para><para>The <see href="https://developer.mozilla.org/en-US/docs/Glossary/user agent">user agent</see> will scale an image when the page author specifies dimensions other than its natural size. Scaling may also occur due to user interaction (zooming). For example, if the natural size of an image is <c>100×100px</c><strong>,</strong> but its actual dimensions are <c>200×200px</c> (or <c>50×50px</c>), then the image will be upscaled (or downscaled) using the algorithm specified by <c>image-rendering</c>. This property has no effect on non-scaled images.</para>
+<para>-Other image-related CSS properties: <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit">object-fit</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/object-position">object-position</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/image-orientation">image-orientation</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/image-rendering">image-rendering</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/image-resolution">image-resolution</see>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/CSS/image-rendering"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value><blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> The values <c>optimizeQuality</c> and <c>optimizeSpeed</c> present in an early draft (and coming from its SVG counterpart image-rendering) are defined as synonyms for the <c>smooth</c> and <c>pixelated</c> values respectively.</blockquote></value>
+</CSSImage-rendering>
+</docs>

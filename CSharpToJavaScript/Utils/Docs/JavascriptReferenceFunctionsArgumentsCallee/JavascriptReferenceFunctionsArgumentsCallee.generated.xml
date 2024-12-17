@@ -1,0 +1,13 @@
+<docs>
+<JavaScriptReferenceFunctionsArgumentsCallee>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> Accessing <c>arguments.callee</c> in <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</see> will throw a <see cref="TypeError"/>. If a function must reference itself, either give the <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function">function expression</see> a name or use a <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function declaration</see>.</blockquote>
+</summary>
+<remarks>
+<para>The <strong><c>arguments.callee</c></strong> data property contains the currently executing function that the arguments belong to.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions">Functions</see> guide<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions">Functions</see><br/>-<see cref="Functions/arguments"/><br/>-<see cref="FunctionPrototypeCaller"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A reference to the currently executing function.js_property_attributes(1, 0, 1)<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> <c>callee</c> is a data property only in non-strict functions with simple parameters (in which case the <c>arguments</c> object is also <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments#assigning_to_indices">auto-syncing</see>). Otherwise, it is an accessor property whose getter and setter both throw a <see cref="TypeError"/>.</blockquote></value>
+</JavaScriptReferenceFunctionsArgumentsCallee>
+</docs>

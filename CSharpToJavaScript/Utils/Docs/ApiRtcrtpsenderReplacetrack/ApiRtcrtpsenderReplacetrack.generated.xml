@@ -1,0 +1,13 @@
+<docs>
+<RTCRtpSenderReplaceTrack>
+<summary>
+The <see cref="RTCRtpSender."/> method<br/><strong><c>replaceTrack()</c></strong> replaces the track currently being used<br/>as the sender's source with a new <see cref="MediaStreamTrack."/>.
+</summary>
+<remarks>
+<para>The new<br/>track must be of the same media kind (audio, video, etc.) and switching the track should<br/>not require negotiation.</para><para>Among the use cases for <c>replaceTrack()</c> is the common need to switch<br/>between the rear- and front-facing cameras on a phone. With <c>replaceTrack()</c>,<br/>you can have a track object for each camera and switch between the two as needed. See<br/>the example <see href="https://developer.mozilla.org#switching_cameras">Switching cameras</see> below.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSender/replaceTrack"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> which is fulfilled once the track has been successfully<br/>replaced. The promise is rejected if the track cannot be replaced for any reason; this<br/>is commonly because the change would require renegotiation of the codec, which is not<br/>allowed (see <see href="https://developer.mozilla.org#things_that_require_negotiation">Things that require negotiation</see>).If <c>newTrack</c> was omitted or was <c>null</c>,<br/><c>replaceTrack()</c> stops the sender. No negotiation is required in this case.When the promise is fulfilled, the fulfillment handler receives a value of<br/><c>undefined</c>.</returns>
+</RTCRtpSenderReplaceTrack>
+</docs>

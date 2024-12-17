@@ -1,0 +1,12 @@
+<docs>
+<WorkerNavigatorOnLine>
+<summary>
+Returns the online status of the browser. The property returns a boolean value, with <c>true</c> meaning online and <c>false</c> meaning offline. The property sends updates whenever the browser&amp;apos;s ability to connect to the network changes. The update occurs when the user follows links or when a script requests a remote page.
+</summary>
+<remarks>
+<para>For example, the property should return <c>false</c> when users click links soon after they lose internet connection.</para><para>Browsers implement this property differently.</para><para>In Chrome and Safari, if the browser is not able to connect to a local area network (LAN) or a router, it is offline; all other conditions return <c>true</c>. So while you can assume that the browser is offline when it returns a <c>false</c> value, you cannot assume that a true value necessarily means that the browser can access the internet. You could be getting false positives, such as in cases where the computer is running a virtualization software that has virtual ethernet adapters that are always<br/>&amp;quot;connected.&amp;quot; Therefore, if you really want to determine the online status of the browser, you should develop additional means for checking. To learn more, see the 2011 article, <see href="https://developer.chrome.com/docs/workbox/service-worker-overview/">Working Off the Grid</see>.</para><para>In Firefox, switching the browser to offline mode sends a <c>false</c> value.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerNavigator/onLine"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value><c>online</c> is a boolean <c>true</c> or <c>false</c>.</value>
+</WorkerNavigatorOnLine>
+</docs>

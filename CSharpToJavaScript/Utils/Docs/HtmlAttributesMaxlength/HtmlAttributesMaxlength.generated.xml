@@ -1,0 +1,12 @@
+<docs>
+<HTMLAttributesMaxlength>
+<summary>
+The <strong><c>maxlength</c></strong> attribute defines the maximum <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length">string length</see> that the user can enter into an <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/'input'">'input'</see> or <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/'textarea'">'textarea'</see>. The attribute must have an integer value of 0 or higher.
+</summary>
+<remarks>
+<para>The length is measured in UTF-16 code units, which (<see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length#strings_with_length_not_equal_to_the_number_of_characters">for most scripts</see>) is equivalent to the number of characters. If no <c>maxlength</c> is specified, or an invalid value is specified, the input has no maximum length.</para><para>Any <c>maxlength</c> value must be greater than or equal to the value of <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/minlength"><c>minlength</c></see>, if present and valid. The input will fail constraint validation if the length of the text value of the field is greater than maxlength UTF-16 code units long. Constraint validation is only applied when the value is changed by the user.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/minlength"><c>minlength</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/size"><c>size</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/pattern"><c>pattern</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation">Constraint validation</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation">Form validation</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/'input'">'input'</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/maxlength"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLAttributesMaxlength>
+</docs>

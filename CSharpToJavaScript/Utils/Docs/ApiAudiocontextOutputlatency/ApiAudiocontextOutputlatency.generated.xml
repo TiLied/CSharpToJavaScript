@@ -1,0 +1,13 @@
+<docs>
+<AudioContextOutputLatency>
+<summary>
+The <strong><c>outputLatency</c></strong> read-only property of<br/>the <see cref="AudioContext."/> Interface provides an estimation of the output latency<br/>of the current audio context.
+</summary>
+<remarks>
+<para>This is the time, in seconds, between the browser passing an audio buffer out of an<br/>audio graph over to the host system&amp;apos;s audio subsystem to play, and the time at which the<br/>first sample in the buffer is actually processed by the audio output device.</para><para>It varies depending on the platform and the available hardware.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/outputLatency"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A double representing the output latency in seconds.</value>
+</AudioContextOutputLatency>
+</docs>

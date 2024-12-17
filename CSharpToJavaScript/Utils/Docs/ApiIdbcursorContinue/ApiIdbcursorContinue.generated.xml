@@ -1,0 +1,13 @@
+<docs>
+<IDBCursorContinue>
+<summary>
+The <strong><c>continue()</c></strong> method of the <see cref="IDBCursor."/><br/>interface advances the cursor to the next position along its direction, to the item<br/>whose key matches the optional key parameter. If no key is specified, the cursor<br/>advances to the immediate next position, based on its direction.
+</summary>
+<remarks>
+<para>AvailableInWorkers</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase."/><br/>-Using transactions: <see cref="IDBTransaction."/><br/>-Setting a range of keys: <see cref="IDBKeyRange."/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore."/><br/>-Using cursors: <see cref="IDBCursor."/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBCursor/continue"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</IDBCursorContinue>
+</docs>

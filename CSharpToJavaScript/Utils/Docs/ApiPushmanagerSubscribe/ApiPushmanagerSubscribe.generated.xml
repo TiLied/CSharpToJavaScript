@@ -1,0 +1,12 @@
+<docs>
+<PushManagerSubscribe>
+<summary>
+The <strong><c>subscribe()</c></strong> method of the <see cref="PushManager."/><br/>interface subscribes to a push service.
+</summary>
+<remarks>
+<para>It returns a {{jsxref("Promise")}} that resolves to a <see cref="PushSubscription."/><br/>object containing details of a push subscription. A new push subscription is created if<br/>the current service worker does not have an existing subscription.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PushManager/subscribe"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that resolves to a <see cref="PushSubscription."/> object.</returns>
+</PushManagerSubscribe>
+</docs>

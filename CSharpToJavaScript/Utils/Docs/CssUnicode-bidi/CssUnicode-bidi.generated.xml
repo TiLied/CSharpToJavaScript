@@ -1,0 +1,12 @@
+<docs>
+<CSSUnicode-bidi>
+<summary>
+The <strong><c>unicode-bidi</c></strong> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</see> property, together with the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/direction">direction</see> property, determines how bidirectional text in a document is handled. For example, if a block of content contains both left-to-right and right-to-left text, the user-agent uses a complex Unicode algorithm to decide how to display the text. The <c>unicode-bidi</c> property overrides this algorithm and allows the developer to control the text embedding.
+</summary>
+<remarks>
+<para>EmbedInteractiveExample("pages/css/unicode-bidi.html")</para><para>The <c>unicode-bidi</c> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/direction">direction</see> properties are the only properties that are not affected by the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/all">all</see> shorthand.</para><blockquote class="WARNING"><h5>WARNING</h5><para><strong>Warning:</strong> This property is intended for Document Type Definition (DTD) designers. Web designers and similar authors <strong>should not</strong> override it.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/direction">direction</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/CSS/unicode-bidi"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CSSUnicode-bidi>
+</docs>

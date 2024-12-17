@@ -1,0 +1,12 @@
+<docs>
+<RangeCreateContextualFragment>
+<summary>
+The <strong><c>Range.createContextualFragment()</c></strong> method returns a<br/><see cref="DocumentFragment."/> by invoking the HTML fragment parsing algorithm or the<br/>XML fragment parsing algorithm with the start of the range (the <strong>parent</strong> of the<br/>selected node) as the context node. The HTML fragment parsing algorithm is used if the<br/>range belongs to a <c>Document</c> whose HTMLness bit is set. In the HTML case, if<br/>the context node would be <c>html</c>, for historical reasons the fragment parsing<br/>algorithm is invoked with <c>body</c> as the context instead.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Range/createContextualFragment"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="DocumentFragment."/> object.</returns>
+</RangeCreateContextualFragment>
+</docs>

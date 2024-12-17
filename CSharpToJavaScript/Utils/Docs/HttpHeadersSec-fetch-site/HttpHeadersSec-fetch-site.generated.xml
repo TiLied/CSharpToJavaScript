@@ -1,0 +1,12 @@
+<docs>
+<HTTPHeadersSec-Fetch-Site>
+<summary>
+The <strong><c>Sec-Fetch-Site</c></strong> <see href="https://developer.mozilla.org/en-US/docs/Glossary/Fetch metadata request header">Fetch metadata request header</see> indicates the relationship between a request initiator's origin and the origin of the requested resource.
+</summary>
+<remarks>
+<para>In other words, this header tells a server whether a request for a resource is coming from the same origin, the same site, a different site, or is a &amp;quot;user initiated&amp;quot; request. The server can then use this information to decide if the request should be allowed.</para><para>Same-origin requests would usually be allowed by default, but what happens for requests from other origins may further depend on what resource is being requested, or information in other <see href="https://developer.mozilla.org/en-US/docs/Glossary/Fetch metadata request header">Fetch metadata request header</see>. By default, requests that are not accepted should be rejected with a {{HTTPStatus("403")}} response code.</para>
+<para>-Related headers-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Mode">Sec-Fetch-Mode</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-User">Sec-Fetch-User</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Dest">Sec-Fetch-Dest</see><br/><br/>-<see href="https://web.dev/articles/fetch-metadata">Protect your resources from web attacks with Fetch Metadata</see> (web.dev)<br/>-<see href="https://secmetadata.appspot.com/">Fetch Metadata Request Headers playground</see> (secmetadata.appspot.com)<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Site"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPHeadersSec-Fetch-Site>
+</docs>

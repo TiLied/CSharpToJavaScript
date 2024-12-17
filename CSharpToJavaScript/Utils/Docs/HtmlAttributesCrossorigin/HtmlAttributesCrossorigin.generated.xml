@@ -1,0 +1,12 @@
+<docs>
+<HTMLAttributesCrossorigin>
+<summary>
+The <strong><c>crossorigin</c></strong> attribute, valid on the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio">audio</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">img</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link">link</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">script</see>, and <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">video</see> elements, provides support for <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">CORS</see>, defining how the element handles cross-origin requests, thereby enabling the configuration of the CORS requests for the element&amp;apos;s fetched data. Depending on the element, the attribute can be a CORS settings attribute.
+</summary>
+<remarks>
+<para>The <c>crossorigin</c> content attribute on media elements is a CORS settings attribute.</para><para>These attributes are <see href="https://developer.mozilla.org/en-US/docs/Glossary/Enumerated">enumerated</see>, and have the following possible values:</para><para>An invalid keyword and an empty string will be handled as the <c>anonymous</c> keyword.</para><para>By default (that is, when the attribute is not specified), CORS is not used at all. The user agent will not ask for permission for full access to the resource and in the case of a cross-origin request, certain limitations will be applied based on the type of element concerned:</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> The <c>crossorigin</c> attribute is not supported for <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel#icon"><c>rel=&amp;quot;icon&amp;quot;</c></see> in Chromium-based browsers. See the <see href="https://crbug.com/1121645">open Chromium issue</see>.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">Cross-Origin Resource Sharing (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel">HTML attribute: <c>rel</c></see><br/>QuickLinksWithSubpages("/en-US/docs/Web/HTML/")</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/crossorigin"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLAttributesCrossorigin>
+</docs>

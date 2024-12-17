@@ -1,0 +1,13 @@
+<docs>
+<DocumentLocation>
+<summary>
+The <strong><c>Document.location</c></strong> read-only property returns a<br/><see cref="Location."/> object, which contains information about the URL of the document<br/>and provides methods for changing that URL and loading another URL.
+</summary>
+<remarks>
+<para>Though <c>Document.location</c> is a <strong>read-only</strong> <c>Location</c><br/>object, you can also assign a string to it. This means that you can<br/>work with document.location as if it were a string in most cases:<br/><c>document.location = &amp;apos;http://www.example.com&amp;apos;</c> is a synonym of<br/><c>document.location.href = &amp;apos;http://www.example.com&amp;apos;</c>. If you assign another<br/>string to it, browser will load the website you assigned.</para><para>To retrieve just the URL as a string, the read-only <see cref="Document.URL."/><br/>property can also be used.</para><para>If the current document is not in a browsing context, the returned value is<br/><c>null</c>.</para>
+<para>-The interface of the returned value, <see cref="Location."/><br/>-A similar information, but attached to the <see href="https://developer.mozilla.org/en-US/docs/Glossary/browsing context">browsing context</see>,<br/><see cref="Window.Location."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/location"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Location."/> object.</value>
+</DocumentLocation>
+</docs>

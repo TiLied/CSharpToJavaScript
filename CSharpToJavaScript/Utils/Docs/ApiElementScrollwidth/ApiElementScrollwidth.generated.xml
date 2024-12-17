@@ -1,0 +1,13 @@
+<docs>
+<ElementScrollWidth>
+<summary>
+The <strong><c>Element.scrollWidth</c></strong> read-only property is a<br/>measurement of the width of an element&amp;apos;s content, including content not visible on the<br/>screen due to overflow.
+</summary>
+<remarks>
+<para>The <c>scrollWidth</c> value is equal to the minimum width the element would<br/>require in order to fit all the content in the viewport without using a horizontal<br/>scrollbar. The width is measured in the same way as {{domxref(&amp;quot;Element.clientWidth&amp;quot;,<br/>&amp;quot;clientWidth&amp;quot;)}}: it includes the element&amp;apos;s padding, but not its border, margin or<br/>vertical scrollbar (if present). It can also include the width of pseudo-elements such<br/>as {{cssxref(&amp;quot;::before&amp;quot;)}} or {{cssxref(&amp;quot;::after&amp;quot;)}}. If the element&amp;apos;s content can fit<br/>without a need for horizontal scrollbar, its <c>scrollWidth</c> is equal to<br/><see cref="Element.ClientWidth."/></para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This property will round the value to an integer. If you need a fractional value,<br/>use <see cref="Element.GetBoundingClientRect."/>.</para></blockquote>
+<para>-<see cref="Element.ClientWidth."/><br/>-<see cref="HTMLElement.OffsetWidth."/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements">Determining the dimensions of elements</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollWidth"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</ElementScrollWidth>
+</docs>

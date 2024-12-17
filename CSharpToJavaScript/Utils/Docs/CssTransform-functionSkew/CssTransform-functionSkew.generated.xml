@@ -1,0 +1,12 @@
+<docs>
+<CSSTransform-functionSkew>
+<summary>
+The <strong><c>skew()</c></strong> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</see> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Functions">function</see> defines a transformation that skews an element on the 2D<br/>plane. Its result is a {{cssxref(&amp;quot;&amp;lt;transform-function&amp;gt;&amp;quot;)}} data type.
+</summary>
+<remarks>
+<para>EmbedInteractiveExample("pages/css/function-skew.html")</para><para>This transformation is a shear mapping (<see href="https://en.wikipedia.org/wiki/Shear_mapping">transvection</see>) that distorts<br/>each point within an element by a certain angle in the horizontal and vertical directions. The effect is as if you<br/>grabbed each corner of the element and pulled them along a certain angle.</para><para>The coordinates of each point are modified by a value proportionate to the specified angle and the distance to the<br/>origin. Thus, the farther from the origin a point is, the greater the value added to it.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform">transform</see><br/>-{{cssxref(&amp;quot;&amp;lt;transform-function&amp;gt;&amp;quot;)}}<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/skewX">skewX()</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/skewY">skewY()</see><br/>-Individual transform properties:-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/translate">translate</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/scale">scale</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/rotate">rotate</see><br/>-Note: there is no <c>skew</c> property<br/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/skew"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CSSTransform-functionSkew>
+</docs>

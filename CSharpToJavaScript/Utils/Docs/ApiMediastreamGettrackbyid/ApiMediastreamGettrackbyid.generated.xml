@@ -1,0 +1,12 @@
+<docs>
+<MediaStreamGetTrackById>
+<summary>
+The <strong><c>MediaStream.getTrackById()</c></strong> method returns a<br/><see cref="MediaStreamTrack."/> object representing the track with the specified ID<br/>string. If there is no track with the specified ID, this method returns<br/><c>null</c>.
+</summary>
+<remarks>
+<para>-<see cref="MediaStream."/><br/>-<see cref="MediaStreamTrack.Id."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/getTrackById"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>If a track is found for which <see cref="MediaStreamTrack.Id."/> matches the specified<br/><c>id</c> string, that <see cref="MediaStreamTrack."/> object is returned.<br/>Otherwise, the returned value is <c>null</c>.</returns>
+</MediaStreamGetTrackById>
+</docs>

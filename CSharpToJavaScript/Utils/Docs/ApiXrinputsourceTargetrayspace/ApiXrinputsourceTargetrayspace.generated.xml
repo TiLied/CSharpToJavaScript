@@ -1,0 +1,13 @@
+<docs>
+<XRInputSourceTargetRaySpace>
+<summary>
+The read-only <see cref="XRInputSource."/> property<br/><strong><c>targetRaySpace</c></strong> returns an <see cref="XRSpace."/><br/>(typically an <see cref="XRReferenceSpace."/>) representing the position and<br/>orientation of the target ray in the virtual space. Its native origin tracks<br/>the position of the origin point of the target ray, and its orientation indicates the<br/>orientation of the controller device itself. These values, interpreted in the context of<br/>the input source's <see cref="XRInputSource.TargetRayMode."/>, can be<br/>used both to fully interpret the device as an input source.
+</summary>
+<remarks>
+<para>To obtain an <c>XRSpace</c> representing the input controller&amp;apos;s position and<br/>orientation in virtual space, use the {{domxref(&amp;quot;XRInputSource.gripSpace&amp;quot;,<br/>&amp;quot;gripSpace&amp;quot;)}} property.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Inputs">Inputs and input sources</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/WebXR%20Device%20API/Gamepads">Using gamepads in WebXR applications</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSource/targetRaySpace"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="XRSpace."/> object—typically an <see cref="XRReferenceSpace."/> or<br/><see cref="XRBoundedReferenceSpace."/>—which represents the position and orientation of<br/>the input controller&amp;apos;s target ray in virtual space.The native origin of the returned <c>XRSpace</c> is located at the point from<br/>which the target ray is emitted, and the orientation of the space indicates the<br/>direction in which the target ray is pointing.</value>
+</XRInputSourceTargetRaySpace>
+</docs>

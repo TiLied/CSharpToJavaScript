@@ -1,0 +1,12 @@
+<docs>
+<HTTPMethodsCONNECT>
+<summary>
+The <strong>HTTP </strong><strong><c>CONNECT</c></strong><strong> method</strong> starts two-way communications<br/>with the requested resource. It can be used to open a tunnel.
+</summary>
+<remarks>
+<para>For example, the <c>CONNECT</c> method can be used to access websites that use<br/><see href="https://developer.mozilla.org/en-US/docs/Glossary/TLS">TLS</see> (<see href="https://developer.mozilla.org/en-US/docs/Glossary/HTTPS">HTTPS</see>). The client asks an HTTP {{Glossary("Proxy<br/>server&amp;quot;)}} to tunnel the <see href="https://developer.mozilla.org/en-US/docs/Glossary/TCP">TCP</see> connection to<br/>the desired destination. The server then proceeds to make the connection on behalf of<br/>the client. Once the connection has been established by the server, the<br/><see href="https://developer.mozilla.org/en-US/docs/Glossary/Proxy server">Proxy server</see> continues to proxy the TCP stream to and<br/>from the client.</para><para><c>CONNECT</c> is a hop-by-hop method.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Glossary/Proxy server">Proxy server</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Proxy-Authorization">Proxy-Authorization</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/CONNECT"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPMethodsCONNECT>
+</docs>

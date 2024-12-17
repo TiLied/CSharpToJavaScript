@@ -1,0 +1,12 @@
+<docs>
+<HTTPStatus102>
+<summary>
+The HTTP <strong><c>102 Processing</c></strong> informational status response code indicates to client that a full request has been received and the server is working on it.
+</summary>
+<remarks>
+<para>This status code is only sent if the server expects the request to take significant time. It tells the client that your request is not dead yet.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This status code is deprecated and shouldn&amp;apos;t be sent any more. Clients may still accept it, but simply ignore them.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Expect">Expect</see><br/>-HTTPStatus("100")<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/102"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPStatus102>
+</docs>

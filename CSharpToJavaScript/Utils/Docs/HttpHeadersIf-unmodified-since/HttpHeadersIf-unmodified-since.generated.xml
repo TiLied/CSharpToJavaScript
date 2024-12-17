@@ -1,0 +1,12 @@
+<docs>
+<HTTPHeadersIf-Unmodified-Since>
+<summary>
+The HyperText Transfer Protocol (HTTP) <strong><c>If-Unmodified-Since</c></strong> request header makes the<br/>request for the resource conditional: the server will send the requested resource or accept it in<br/>the case of a {{HTTPMethod("POST")}} or another non-<see href="https://developer.mozilla.org/en-US/docs/Glossary/Safe/HTTP">Safe/HTTP</see> method only if the resource has not been modified after the date specified by this HTTP header. If the resource has been modified<br/>after the specified date, the response will be a {{HTTPStatus("412", "412 Precondition Failed")}} error.
+</summary>
+<remarks>
+<para>The <strong><c>If-Unmodified-Since</c></strong> HTTP header is commonly used in the following situations:</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Last-Modified">Last-Modified</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Modified-Since">If-Modified-Since</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Match">If-Match</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-None-Match">If-None-Match</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Range">Range</see><br/>-HTTPStatus("412", "412 Precondition Failed")<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Unmodified-Since"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPHeadersIf-Unmodified-Since>
+</docs>

@@ -1,0 +1,12 @@
+<docs>
+<HTTPHeadersCross-Origin-Opener-Policy>
+<summary>
+The HTTP <strong><c>Cross-Origin-Opener-Policy</c></strong> (COOP) response header allows you to ensure a top-level document does not share a browsing context group with cross-origin documents.
+</summary>
+<remarks>
+<para>COOP will process-isolate your document and potential attackers can&amp;apos;t access your global object if they were to open it in a popup, preventing a set of cross-origin attacks dubbed <see href="https://github.com/xsleaks/xsleaks">XS-Leaks</see>.</para><para>If a cross-origin document with COOP is opened in a new window, the opening document will not have a reference to it, and the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Window/opener"><c>window.opener</c></see> property of the new window will be <c>null</c>. This allows you to have more control over references to a window than <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel/noopener"><c>rel=noopener</c></see>, which only affects outgoing navigations.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy">Cross-Origin-Embedder-Policy</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPHeadersCross-Origin-Opener-Policy>
+</docs>

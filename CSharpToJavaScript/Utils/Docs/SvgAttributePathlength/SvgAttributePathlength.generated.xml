@@ -1,0 +1,11 @@
+<docs>
+<SVGAttributePathLength>
+<summary>
+The <strong><c>pathLength</c></strong> attribute lets authors specify a total length for the path, in user units. This value is then used to calibrate the browser&amp;apos;s distance calculations with those of the author, by scaling all distance computations using the ratio <c>pathLength</c> / (<strong>computed value of path length</strong>).
+</summary>
+<remarks>
+<para>This can affect the actual rendered lengths of paths; including text paths, animation paths, and various stroke operations. Basically, all computations that require the length of the path. 'stroke-dasharray', for example, will assume the start of the path being 0 and the end point the value defined in the <c>pathLength</c> attribute.</para><para>You can use this attribute with the following SVG elements:</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/pathLength"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</SVGAttributePathLength>
+</docs>

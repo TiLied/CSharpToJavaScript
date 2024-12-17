@@ -1,0 +1,13 @@
+<docs>
+<GPUComputePassEncoderPopDebugGroup>
+<summary>
+The <strong><c>popDebugGroup()</c></strong> method of the<br/><see cref="GPUComputePassEncoder."/> interface ends a compute pass debug group, which is begun with a <see cref="GPUComputePassEncoder.PushDebugGroup."/> call.
+</summary>
+<remarks>
+<para>This could be used for telemetry, or may be utilized in <see cref="GPUError."/> messages, browser dev tools, or other services in the future to help with debugging.</para>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUComputePassEncoder/popDebugGroup"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</GPUComputePassEncoderPopDebugGroup>
+</docs>

@@ -1,0 +1,13 @@
+<docs>
+<HTMLMediaElementCaptureStream>
+<summary>
+The <strong><c>captureStream()</c></strong> method of the<br/><see cref="HTMLMediaElement."/> interface returns a <see cref="'MediaStream'."/> object<br/>which is streaming a real-time capture of the content being rendered in the media<br/>element.
+</summary>
+<remarks>
+<para>This can be used, for example, as a source for a <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see> <see cref="RTCPeerConnection."/>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream_Recording_API/Recording_a_media_element">Recording a media element</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream_Recording_API">MediaStream Recording API</see><br/>-<see cref="HTMLCanvasElement.CaptureStream."/><br/>-<see cref="MediaStream."/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/captureStream"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="'MediaStream'."/> object which can be used as a source for audio and/or<br/>video data by other media processing code, or as a source for <see href="https://developer.mozilla.org/en-US/docs/Glossary/WebRTC">WebRTC</see>.</returns>
+</HTMLMediaElementCaptureStream>
+</docs>

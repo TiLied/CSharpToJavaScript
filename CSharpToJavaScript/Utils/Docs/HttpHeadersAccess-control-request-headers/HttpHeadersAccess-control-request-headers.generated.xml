@@ -1,0 +1,11 @@
+<docs>
+<HTTPHeadersAccess-Control-Request-Headers>
+<summary>
+The <strong><c>Access-Control-Request-Headers</c></strong> request header is used by browsers when issuing a <see href="https://developer.mozilla.org/en-US/docs/Glossary/preflight request">preflight request</see> to let the server know which <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers">HTTP headers</see> the client might send when the actual request is made (such as with <see cref="XMLHttpRequest.SetRequestHeader."/>). The complementary server-side header of {{HTTPHeader("Access-Control-Allow-Headers")}} will answer this browser-side header.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Request-Method">Access-Control-Request-Method</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Request-Headers"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPHeadersAccess-Control-Request-Headers>
+</docs>

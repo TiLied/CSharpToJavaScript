@@ -1,0 +1,11 @@
+<docs>
+<SVGAttributeBias>
+<summary>
+The <strong><c>bias</c></strong> attribute shifts the range of the filter. After applying the {{SVGAttr("kernelMatrix")}} of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementfeConvolveMatrix">feConvolveMatrix</see> element to the input image to yield a number and applied the {{SVGAttr("divisor")}} attribute, the <c>bias</c> attribute is added to each component. This allows representation of values that would otherwise be clamped to 0 or 1.
+</summary>
+<remarks>
+<para>You can use this attribute with the following SVG elements:</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/bias"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</SVGAttributeBias>
+</docs>

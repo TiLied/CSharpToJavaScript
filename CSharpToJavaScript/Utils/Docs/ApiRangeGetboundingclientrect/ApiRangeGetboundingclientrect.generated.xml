@@ -1,0 +1,13 @@
+<docs>
+<RangeGetBoundingClientRect>
+<summary>
+The <strong><c>Range.getBoundingClientRect()</c></strong> method returns a {{<br/>domxref(&amp;quot;DOMRect&amp;quot;) }} object that bounds the contents of the range; this is a rectangle<br/>enclosing the union of the bounding rectangles for all the elements in the range.
+</summary>
+<remarks>
+<para>This method is useful for determining the viewport coordinates of the cursor or<br/>selection inside a text box. See <see cref="Element.GetBoundingClientRect."/> for<br/>details on the returned value.</para>
+<para>-<see cref="Range.GetClientRects."/> - finer-grained result for non-rectangular<br/>ranges (e.g., when the selection wraps onto the next line);<br/>-<see cref="Element.GetBoundingClientRect."/><br/>-<see cref="Document.CaretPositionFromPoint."/> - to get the (node, offset) from<br/>viewport coordinates.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Range/getBoundingClientRect"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="DOMRect."/> object that encloses the union of the bounding rectangles for all elements in the range.</returns>
+</RangeGetBoundingClientRect>
+</docs>

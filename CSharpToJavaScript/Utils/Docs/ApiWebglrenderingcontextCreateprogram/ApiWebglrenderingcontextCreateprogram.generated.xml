@@ -1,0 +1,12 @@
+<docs>
+<WebGLRenderingContextCreateProgram>
+<summary>
+The <strong><c>WebGLRenderingContext.createProgram()</c></strong> method of the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> creates and initializes a<br/><see cref="WebGLProgram."/> object.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.DeleteProgram."/><br/>-<see cref="WebGLRenderingContext.IsProgram."/><br/>-<see cref="WebGLRenderingContext.LinkProgram."/><br/>-<see cref="WebGLRenderingContext.UseProgram."/><br/>-<see cref="WebGLRenderingContext.ValidateProgram."/><br/>-<see cref="WebGLRenderingContext.GetProgramParameter."/><br/>-<see cref="WebGLRenderingContext.GetProgramInfoLog."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/createProgram"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="WebGLProgram."/> object that is a combination of two compiled<br/><see cref="WebGLShader."/>s consisting of a vertex shader and a fragment shader (both<br/>written in GLSL). These are then linked into a usable program.</returns>
+</WebGLRenderingContextCreateProgram>
+</docs>

@@ -1,0 +1,13 @@
+<docs>
+<WindowPrint>
+<summary>
+Opens the print dialog to print the current document.
+</summary>
+<remarks>
+<para>If the document is still loading when this function is called, then the document will finish loading before opening the print dialog.</para><para>This method will block while the print dialog is open.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Printing">Printing</see><br/>-<see cref="Window.Beforeprint_event."/> event<br/>-<see cref="Window.Afterprint_event."/> event<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Window/print"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WindowPrint>
+</docs>

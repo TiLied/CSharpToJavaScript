@@ -1,0 +1,13 @@
+<docs>
+<BaseAudioContextCreateStereoPanner>
+<summary>
+The <c>createStereoPanner()</c> method of the <see cref="BaseAudioContext."/> interface creates a <see cref="StereoPannerNode."/>, which can be used to apply<br/>stereo panning to an audio source.<br/>It positions an incoming audio stream in a stereo image using a <see href="https://webaudio.github.io/web-audio-api/#stereopanner-algorithm">low-cost panning algorithm</see>.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> The <see cref="StereoPannerNode.StereoPannerNode."/><br/>constructor is the recommended way to create a <see cref="StereoPannerNode."/>; see<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioNode#creating_an_audionode">Creating an AudioNode</see>.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createStereoPanner"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="StereoPannerNode."/>.</returns>
+</BaseAudioContextCreateStereoPanner>
+</docs>

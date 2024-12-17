@@ -1,0 +1,12 @@
+<docs>
+<ScreenOrientationLock>
+<summary>
+The <strong><c>lock()</c></strong> property of the <see cref="ScreenOrientation."/> interface locks the orientation of the containing document to the specified orientation.
+</summary>
+<remarks>
+<para>Typically orientation locking is only enabled on mobile devices, and when the browser context is full screen.<br/>If locking is supported, then it must work for all the parameter values listed below.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ScreenOrientation/lock"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves after locking succeeds.</returns>
+</ScreenOrientationLock>
+</docs>

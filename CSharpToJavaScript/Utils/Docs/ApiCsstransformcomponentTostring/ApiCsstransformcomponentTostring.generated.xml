@@ -1,0 +1,11 @@
+<docs>
+<CSSTransformComponentToString>
+<summary>
+The <strong><c>toString()</c></strong> method of the <see cref="CSSTransformComponent."/> interface is a {{Glossary("stringifier")}} returning a <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transforms">CSS Transforms</see> function.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSTransformComponent/toString"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A string in the form of a CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function">transform-function</see>.This will use the value of <c>is2D</c> to return either a 2D or 3D transform. For example if the component represents <see cref="CSSRotate."/> and <c>is2D</c> is false then the string returned will be in the form of the CSS transformation <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate3d"><c>rotate3D()</c></see> function. If true the string returned will be in the form of the 2-dimensional <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate"><c>rotate3D()</c></see> function.</returns>
+</CSSTransformComponentToString>
+</docs>

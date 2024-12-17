@@ -1,0 +1,12 @@
+<docs>
+<RTCIceTransportGetLocalParameters>
+<summary>
+The <strong><see cref="RTCIceTransport."/></strong> method<br/><strong><c>getLocalParameters()</c></strong> returns an<br/><see cref="RTCIceParameters."/> object which provides information uniquely identifying<br/>the local peer for the duration of the ICE session.
+</summary>
+<remarks>
+<para>The local peer&amp;apos;s parameters are obtained during ICE signaling and delivered to the<br/>transport when the client calls <see cref="RTCPeerConnection.SetLocalDescription."/>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/getLocalParameters"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="RTCIceParameters."/> object indicating the<br/><see cref="RTCIceParameters.UsernameFragment."/> and<br/><see cref="RTCIceParameters.Password."/> which uniquely identify the local<br/>peer for the duration of the ICE session.Returns <c>null</c> if the parameters have not yet been received.</returns>
+</RTCIceTransportGetLocalParameters>
+</docs>

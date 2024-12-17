@@ -1,0 +1,13 @@
+<docs>
+<HTMLMediaElementSrc>
+<summary>
+The <strong><c>HTMLMediaElement.src</c></strong> property reflects the value of<br/>the HTML media element&amp;apos;s <c>src</c> attribute, which indicates the URL of a media<br/>resource to use in the element.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> The best way to know the URL of the media resource currently<br/>in active use in this element is to look at the value of the<br/><see cref="HTMLMediaElement.CurrentSrc."/> attribute, which also takes<br/>into account selection of a best or preferred media resource from a list provided in<br/>an <see cref="HTMLSourceElement."/> (which represents a {{HTMLElement("source")}}<br/>element).</para></blockquote>
+<para>-<see cref="HTMLMediaElement."/>: Interface used to define the <c>HTMLMediaElement.src</c> property<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/src"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string object containing the URL of a media resource to use in the<br/>element; this property reflects the value of the HTML element&amp;apos;s <c>src</c><br/>attribute.</value>
+</HTMLMediaElementSrc>
+</docs>

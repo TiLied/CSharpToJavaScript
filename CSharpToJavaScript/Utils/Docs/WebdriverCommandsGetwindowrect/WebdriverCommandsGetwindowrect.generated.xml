@@ -1,0 +1,12 @@
+<docs>
+<WebDriverCommandsGetWindowRect>
+<summary>
+The <strong>Get Window Rect</strong> <see href="https://developer.mozilla.org/en-US/docs/Web/WebDriver/Commands">command</see> of the <see href="https://developer.mozilla.org/en-US/docs/Web/WebDriver">WebDriver</see> API returns the size and position of the given <see href="https://developer.mozilla.org/en-US/docs/Web/WebDriver/WebElement"><c>WebElement</c></see>. Many <see href="https://developer.mozilla.org/en-US/docs/Web/WebDriver/Clients">WebDriver clients</see> present separate API methods for getting an element&amp;apos;s location and dimensions, but as an optimization they both use this primitive.
+</summary>
+<remarks>
+<para>The command operates on the currently selected window, and returns size and position of the operating system window. The returned <see href="https://developer.mozilla.org/en-US/docs/Web/WebDriver/WindowRect"><c>WindowRect</c></see> can be used as input for the <see href="https://developer.mozilla.org/en-US/docs/Web/WebDriver/SetWindowRect">Set Window Rect</see> command, which is for manipulating a window&amp;apos;s position and dimensions.</para>
+<para>-WebWindow<br/>-Associated commands:-<see href="https://developer.mozilla.org/en-US/docs/Web/WebDriver/Commands/SetWindowRect">Set Window Rect</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/WebDriver/Commands/GetWindowHandle">Get Window Handle</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/WebDriver/Commands/GetWindowHandles">Get Window Handles</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/WebDriver/Commands/CloseWindow">Close Window</see><br/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/WebDriver/Commands/GetWindowRect"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebDriverCommandsGetWindowRect>
+</docs>

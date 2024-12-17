@@ -1,0 +1,12 @@
+<docs>
+<HTMLElementNoframes>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>&amp;lt;noframes&amp;gt;</c></strong> <see href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</see> element provides content to be presented in browsers that don't support (or have disabled support for) the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/frame">frame</see> element. Although most commonly-used browsers support frames, there are exceptions, including certain special-use browsers including some mobile browsers, as well as text-mode browsers.
+</summary>
+<remarks>
+<para>A <c>&amp;lt;noframes&amp;gt;</c> element can contain any HTML elements that are allowed within the body of an HTML document, except for the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/frameset">frameset</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/frame">frame</see> elements, since using frames when they aren't supported doesn't make sense.</para><para><c>&amp;lt;noframes&amp;gt;</c> can be used to present a message explaining that the user&amp;apos;s browser doesn&amp;apos;t support frames, but ideally should be used to present an alternate form of the site that doesn&amp;apos;t use frames but still offers the same or similar functionality.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This element is obsolete and shouldn't be used, since the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/frame">frame</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/frameset">frameset</see> elements are also obsolete. When frames are needed at all, they should be presented using the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</see> element.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/frameset">frameset</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/frame">frame</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noframes"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLElementNoframes>
+</docs>

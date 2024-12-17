@@ -1,0 +1,12 @@
+<docs>
+<HTMLInputElementFiles>
+<summary>
+The <strong><c>HTMLInputElement.files</c></strong> property allows you to access the <see cref="FileList."/> selected with the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file"><c>&amp;lt;input type=&amp;quot;file&amp;quot;&amp;gt;</c></see> element.
+</summary>
+<remarks>
+<para>-<see cref="DataTransfer.Files."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/files"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="FileList."/> object listing the selected files, if any, or <c>null</c> if the <strong><c>HTMLInputElement</c></strong> is not of <c>type=&amp;quot;file&amp;quot;</c>.</value>
+</HTMLInputElementFiles>
+</docs>

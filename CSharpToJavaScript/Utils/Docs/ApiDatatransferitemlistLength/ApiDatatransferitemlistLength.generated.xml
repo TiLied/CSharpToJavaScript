@@ -1,0 +1,11 @@
+<docs>
+<DataTransferItemListLength>
+<summary>
+The read-only <strong><c>length</c></strong> property of the<br/><see cref="DataTransferItemList."/> interface returns the number of items currently in<br/>the drag item list.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItemList/length"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The number of drag data items in the list, or 0 if the list is empty or disabled. The<br/>drag item list is considered to be disabled if the item list&amp;apos;s<br/><see cref="DataTransfer."/> object is not associated with a drag data store.</value>
+</DataTransferItemListLength>
+</docs>

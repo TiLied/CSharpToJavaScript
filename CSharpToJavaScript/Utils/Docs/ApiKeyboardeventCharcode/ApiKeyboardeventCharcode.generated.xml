@@ -1,0 +1,12 @@
+<docs>
+<KeyboardEventCharCode>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>charCode</c></strong> read-only property of the<br/><see cref="KeyboardEvent."/> interface returns the Unicode value of a character key<br/>pressed during a <see cref="Element/keypress_event."/> event.
+</summary>
+<remarks>
+<blockquote class="WARNING"><h5>WARNING</h5><para><strong>Warning:</strong> Do not use this property, as it is deprecated. Instead, get the<br/>Unicode value of the character using the <see cref="KeyboardEvent.Key."/><br/>property.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/charCode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number that represents the Unicode value of the character key that was pressed.</value>
+</KeyboardEventCharCode>
+</docs>

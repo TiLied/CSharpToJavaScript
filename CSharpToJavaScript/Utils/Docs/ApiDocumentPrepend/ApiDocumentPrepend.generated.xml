@@ -1,0 +1,13 @@
+<docs>
+<DocumentPrepend>
+<summary>
+The <strong><c>Document.prepend()</c></strong> method<br/>inserts a set of <see cref="Node."/> objects or string objects before<br/>the first child of the document. String objects<br/>are inserted as equivalent <see cref="Text."/> nodes.
+</summary>
+<remarks>
+<para>This method prepends a child to a <c>Document</c>. To prepend to an arbitrary element in the tree, see <see cref="Element.Prepend."/>.</para>
+<para>-<see cref="Document.Append."/><br/>-<see cref="Element.Prepend."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/prepend"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</DocumentPrepend>
+</docs>

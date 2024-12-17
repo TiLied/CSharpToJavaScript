@@ -1,0 +1,12 @@
+<docs>
+<HTTPStatus101>
+<summary>
+The HTTP <strong><c>101 Switching Protocols</c></strong> response code indicates<br/>a protocol to which the server switches.<br/>The protocol is specified in the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Upgrade">Upgrade</see> request header received from a client.
+</summary>
+<remarks>
+<para>The server includes in this response an <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Upgrade">Upgrade</see> response header to<br/>indicate the protocol it switched to. The process is described in the following article:<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Protocol_upgrade_mechanism">Protocol upgrade mechanism</see>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Protocol_upgrade_mechanism">Protocol upgrade mechanism</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API">WebSockets</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Upgrade">Upgrade</see><br/>-{{HTTPStatus("426")}} <c>Upgrade Required</c><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/101"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPStatus101>
+</docs>

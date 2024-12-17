@@ -1,0 +1,13 @@
+<docs>
+<FileSystemWritableFileStreamTruncate>
+<summary>
+The <strong><c>truncate()</c></strong> method of the <see cref="FileSystemWritableFileStream."/> interface resizes the file associated with the stream to the specified size in bytes.
+</summary>
+<remarks>
+<para>If the size specified is larger than the current file size the file is padded with <c>0x00</c> bytes.</para><para>The file cursor is also updated when <c>truncate()</c> is called.<br/>If the offset is smaller than the size, it remains unchanged.<br/>If the offset is larger than size, the offset is set to that size.<br/>This ensures that subsequent writes do not error.</para><para>No changes are written to the actual file on disk until the stream has been closed.<br/>Changes are typically written to a temporary file instead.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_System_API">File System API</see><br/>-<see href="https://developer.chrome.com/articles/file-system-access/">The File System Access API: simplifying access to local files</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemWritableFileStream/truncate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="'Promise'"/> that returns <c>undefined</c>.</returns>
+</FileSystemWritableFileStreamTruncate>
+</docs>

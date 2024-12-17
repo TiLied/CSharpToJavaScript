@@ -1,0 +1,12 @@
+<docs>
+<GPURenderPassEncoder>
+<summary>
+The <strong><c>GPURenderPassEncoder</c></strong> interface of the {{domxref(&amp;quot;WebGPU API&amp;quot;, &amp;quot;WebGPU API&amp;quot;, &amp;quot;&amp;quot;, "nocode")}} encodes commands related to controlling the vertex and fragment shader stages, as issued by a <see cref="GPURenderPipeline."/>. It forms part of the overall encoding activity of a <see cref="GPUCommandEncoder."/>.
+</summary>
+<remarks>
+<para>A render pipeline renders graphics to <see cref="GPUTexture."/> attachments, typically intended for display in a {{htmlelement("canvas")}} element, but it could also render to textures used for other purposes that never appear onscreen. It has two main stages:</para><para>A <c>GPURenderPassEncoder</c> object instance is created via the <see cref="GPUCommandEncoder.BeginRenderPass."/> property.</para><para></para>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPURenderPassEncoder"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</GPURenderPassEncoder>
+</docs>

@@ -1,0 +1,11 @@
+<docs>
+<HTMLLinkElementFetchPriority>
+<summary>
+The <strong><c>fetchPriority</c></strong> property of the<br/><see cref="HTMLLinkElement."/> interface represents a hint given to the browser<br/>on how it should prioritize the preload of the given resource relative to other<br/>resources of the same type.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLLinkElement/fetchPriority"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing the priority hint. Possible values are:The <c>fetchPriority</c> property allows you to signal high or low priority preload<br/>fetches. This can be useful when applied to <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link">link</see> elements<br/>to signal preloads that are more or less important to the user experience early<br/>in the loading process.The effects of the hint on resource loading is browser-specific so make sure to<br/>test on multiple browser engines.Use it sparingly for exceptional cases where the browser may not be able to<br/>infer the best way to load the resource automatically. Over use can result in<br/>degrading performance.</value>
+</HTMLLinkElementFetchPriority>
+</docs>

@@ -1,0 +1,11 @@
+<docs>
+<USBDeviceForget>
+<summary>
+The <strong><c>forget()</c></strong> method of the <see cref="USBDevice."/> interface returns a {{jsxref("Promise")}} that resolves when all pending operations are aborted, all open interfaces are released, the device session has ended, and the permission is reset.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/USBDevice/forget"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> which resolves with <c>undefined</c> once the device access permission is revoked.</returns>
+</USBDeviceForget>
+</docs>

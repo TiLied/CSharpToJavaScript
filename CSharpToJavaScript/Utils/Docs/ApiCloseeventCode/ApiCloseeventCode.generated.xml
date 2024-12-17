@@ -1,0 +1,12 @@
+<docs>
+<CloseEventCode>
+<summary>
+The <strong><c>code</c></strong> read-only property of the <see cref="CloseEvent."/> interface returns a <see href="https://www.rfc-editor.org/rfc/rfc6455.html#section-7.1.5">WebSocket connection close code</see> indicating the reason the server gave for closing the connection.
+</summary>
+<remarks>
+<para>-<see href="https://www.rfc-editor.org/rfc/rfc6455.html">RFC 6455</see> (the WebSocket Protocol specification)<br/>-<see href="https://www.iana.org/assignments/websocket/websocket.xml#close-code-number">WebSocket Close Code Number Registry</see> (IANA)<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CloseEvent/code"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer <see href="https://www.rfc-editor.org/rfc/rfc6455.html#section-7.1.5">WebSocket connection close code</see> in the range <c>1000</c> - <c>4999</c>, indicating the reason the server gave for closing the connection.</value>
+</CloseEventCode>
+</docs>

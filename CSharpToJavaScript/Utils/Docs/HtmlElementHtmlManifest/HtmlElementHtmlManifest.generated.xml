@@ -1,0 +1,12 @@
+<docs>
+<HTMLElementHtmlManifest>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>manifest</c></strong> attribute of the <c>&amp;lt;html&amp;gt;</c> element specifies a URL of an application cache manifest that is downloaded in the early stages of page load.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> manifest-based caching mechanism has been deprecated. Use <see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">service workers</see> instead.</para></blockquote><para>The <c>manifest</c> attribute only had an effect during early stages of page load, thus changing it via regular DOM interfaces had no effect. The deprecated <see cref="Window.ApplicationCache."/> interface was used instead. The attribute functionality has been superceded by the <see href="https://developer.mozilla.org/en-US/docs/Web/Manifest">web app manifest</see>, an external JSON file associated with the HTML file through a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link">link</see> with <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel"><c>rel=&amp;quot;manifest&amp;quot;</c></see>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">Service Worker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json"><c>manifest.json</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Manifest">Web app manifests</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable">Making PWAs installable</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html/manifest"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLElementHtmlManifest>
+</docs>

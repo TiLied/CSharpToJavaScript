@@ -1,0 +1,13 @@
+<docs>
+<PerformanceEventTimingProcessingEnd>
+<summary>
+The read-only <strong><c>processingEnd</c></strong> property returns the time the last event handler finished executing.
+</summary>
+<remarks>
+<para>It's equal to <see cref="PerformanceEventTiming.ProcessingStart."/> when there are no such event handlers.</para>
+<para>-<see cref="PerformanceEventTiming.ProcessingStart."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceEventTiming/processingEnd"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DOMHighResTimeStamp."/> timestamp.</value>
+</PerformanceEventTimingProcessingEnd>
+</docs>

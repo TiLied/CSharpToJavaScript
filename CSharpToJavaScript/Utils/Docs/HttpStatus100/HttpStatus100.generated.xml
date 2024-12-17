@@ -1,0 +1,12 @@
+<docs>
+<HTTPStatus100>
+<summary>
+The HTTP <strong><c>100 Continue</c></strong> informational status response code<br/>indicates that everything so far is OK and that the client should continue with the<br/>request or ignore it if it is already finished.
+</summary>
+<remarks>
+<para>To have a server check the request&amp;apos;s headers, a client must send<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Expect">Expect</see><c>: 100-continue</c> as a header in its initial request<br/>and receive a <c>100 Continue</c> status code in response before sending the body.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Expect">Expect</see><br/>-HTTPStatus(417)<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/100"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPStatus100>
+</docs>

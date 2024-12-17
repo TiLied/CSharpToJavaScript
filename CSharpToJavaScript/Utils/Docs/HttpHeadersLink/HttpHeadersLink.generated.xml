@@ -1,0 +1,12 @@
+<docs>
+<HTTPHeadersLink>
+<summary>
+The HTTP <strong><c>Link</c></strong> entity-header field provides a means for serializing one or more links in HTTP headers. It is semantically equivalent to the HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link">link</see> element.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Some browsers do not support the &amp;quot;icon&amp;quot; relation via HTTP (<see href="https://bugzilla.mozilla.org/show_bug.cgi?id=1185705">FF#1185705</see>). Use HTML <c>&amp;lt;link rel=&amp;quot;icon&amp;quot;&amp;gt;</c> instead.</para></blockquote>
+<para>-HTTPStatus(103, "103 Early Hints")<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link">link</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Link"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPHeadersLink>
+</docs>

@@ -1,0 +1,12 @@
+<docs>
+<CSSOverflow-wrap>
+<summary>
+The <strong><c>overflow-wrap</c></strong> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</see> property applies to inline elements, setting whether the browser should insert line breaks within an otherwise unbreakable string to prevent text from overflowing its line box.
+</summary>
+<remarks>
+<para>EmbedInteractiveExample("pages/css/overflow-wrap.html")</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> In contrast to <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/word-break">word-break</see>, <c>overflow-wrap</c> will only create a break if an entire word cannot be placed on its own line without overflowing.</para></blockquote><para>The property was originally a nonstandard and unprefixed Microsoft extension called <c>word-wrap</c>, and was implemented by most browsers with the same name. It has since been renamed to <c>overflow-wrap</c>, with <c>word-wrap</c> being an alias.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/word-break">word-break</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/hyphens">hyphens</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-overflow">text-overflow</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_text/Wrapping_breaking_text">Guide to wrapping and breaking text</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-wrap"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CSSOverflow-wrap>
+</docs>

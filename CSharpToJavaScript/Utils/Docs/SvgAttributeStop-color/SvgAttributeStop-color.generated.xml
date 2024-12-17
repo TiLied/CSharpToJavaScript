@@ -1,0 +1,12 @@
+<docs>
+<SVGAttributeStop-color>
+<summary>
+The <strong><c>stop-color</c></strong> attribute indicates what color to use at a gradient stop.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> With respect to gradients, SVG treats the <c>transparent</c> keyword differently than CSS. SVG does not calculate gradients in pre-multiplied space, so <c>transparent</c> really means transparent black. So, specifying a <c>stop-color</c> with the value <c>transparent</c> is equivalent to specifying a <c>stop-color</c> with the value <c>black</c> and a stop-opacity with the value <c>0</c>.</para></blockquote><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> As a presentation attribute, <c>stop-color</c> can be used as a CSS property.</para></blockquote><para>You can use this attribute with the following SVG elements:</para>
+<para>-stop-opacity<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stop-color"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</SVGAttributeStop-color>
+</docs>

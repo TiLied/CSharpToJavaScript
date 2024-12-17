@@ -1,0 +1,13 @@
+<docs>
+<HTMLTableRowElementInsertCell>
+<summary>
+The <strong><c>HTMLTableRowElement.insertCell()</c></strong> method inserts a new<br/>cell (<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/td">td</see>) into a table row (<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tr">tr</see>) and returns a<br/>reference to the cell.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> <c>insertCell()</c> inserts the cell directly into the<br/>row. The cell does not need to be appended separately<br/>with <see cref="Node.AppendChild."/> as would be the case if<br/><see cref="Document.CreateElement."/> had been used to create the new<br/><c>&amp;lt;td&amp;gt;</c> element.</para><para>You can not use <c>insertCell()</c> to create a new <c>&amp;lt;th&amp;gt;</c><br/>element though.</para></blockquote>
+<para>-<see cref="HTMLTableElement.InsertRow."/><br/>-The HTML element representing cells: <see cref="HTMLTableCellElement."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableRowElement/insertCell"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="HTMLTableCellElement."/> that references the new<br/>cell.</returns>
+</HTMLTableRowElementInsertCell>
+</docs>

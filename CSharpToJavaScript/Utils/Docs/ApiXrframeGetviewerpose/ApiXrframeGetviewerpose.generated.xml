@@ -1,0 +1,12 @@
+<docs>
+<XRFrameGetViewerPose>
+<summary>
+The <strong><c>getViewerPose()</c></strong> method, a member of the <see cref="XRFrame."/> interface, returns a <see cref="XRViewerPose."/> object which describes the viewer's pose (position and orientation) relative to the specified reference space.
+</summary>
+<remarks>
+<para>See the <see cref="XRFrame.GetPose."/> method for a way to calculate a pose that represents the difference between two spaces.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRFrame/getViewerPose"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="XRViewerPose."/> describing the viewer's position and orientation relative<br/>to the specified reference space.</returns>
+</XRFrameGetViewerPose>
+</docs>

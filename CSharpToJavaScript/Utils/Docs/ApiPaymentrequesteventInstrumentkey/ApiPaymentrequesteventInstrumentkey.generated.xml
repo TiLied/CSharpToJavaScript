@@ -1,0 +1,11 @@
+<docs>
+<PaymentRequestEventInstrumentKey>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>instrumentKey</c></strong> read-only property of the<br/><see cref="PaymentRequestEvent."/> interface returns a<br/><c>PaymentInstrument</c> object reflecting the payment instrument selected by<br/>the user or an empty string if the user has not registered or chosen a payment<br/>instrument.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentRequestEvent/instrumentKey"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <c>PaymentInstrument</c> object.</value>
+</PaymentRequestEventInstrumentKey>
+</docs>

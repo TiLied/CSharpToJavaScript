@@ -1,0 +1,12 @@
+<docs>
+<CSS_media-moz-device-pixel-ratio>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>-moz-device-pixel-ratio</c></strong> Gecko-only <see href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</see> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media#media_features">media feature</see> can be used to apply styles based on the number of device pixels per CSS pixel.
+</summary>
+<remarks>
+<blockquote class="WARNING"><h5>WARNING</h5><para><strong>Warning:</strong> Do not use this feature. Use the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/resolution"><c>resolution</c></see> feature with the <c>dppx</c> unit instead.</para></blockquote><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This media feature is also implemented by WebKit as <c>-webkit-device-pixel-ratio</c>. The min and max prefixes as implemented by Gecko are named <c>min--moz-device-pixel-ratio</c> and <c>max--moz-device-pixel-ratio</c>; but the same prefixes as implemented by Webkit are named <c>-webkit-min-device-pixel-ratio</c> and <c>-webkit-max-device-pixel-ratio</c>.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries">Using Media Queries</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media">_media</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/-moz-device-pixel-ratio"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CSS_media-moz-device-pixel-ratio>
+</docs>

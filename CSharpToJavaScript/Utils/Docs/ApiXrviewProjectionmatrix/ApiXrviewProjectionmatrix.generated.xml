@@ -1,0 +1,12 @@
+<docs>
+<XRViewProjectionMatrix>
+<summary>
+The <see cref="XRView."/> interface's read-only<br/><strong><c>projectionMatrix</c></strong> property specifies the projection matrix<br/>to apply to the underlying view. This should be used to integrate perspective to<br/>everything in the scene, in order to ensure the result is consistent with what the eye<br/>expects to see.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Failure to apply proper perspective, or inconsistencies<br/>in perspective, may result in possibly serious user discomfort or distress.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRView/projectionMatrix"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Float32Array"/> object representing the projection matrix for the view.<br/>The projection matrix for each eye&amp;apos;s view is used to ensure that the correct area of the<br/>scene is presented to each eye in order to create a believable 3D scene without<br/>introducing discomfort for the user.</value>
+</XRViewProjectionMatrix>
+</docs>

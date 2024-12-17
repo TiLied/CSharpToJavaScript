@@ -1,0 +1,13 @@
+<docs>
+<CSSDirection>
+<summary>
+<blockquote class="WARNING"><h5>WARNING</h5><strong>Warning:</strong> Where possible, authors are encouraged to avoid using the <c>direction</c> CSS property and use the HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#dir"><c>dir</c></see> global attribute instead.</blockquote>
+</summary>
+<remarks>
+<para>The <strong><c>direction</c></strong> CSS property sets the direction of text, table columns, and horizontal overflow. Use <c>rtl</c> for languages written from right to left (like Hebrew or Arabic), and <c>ltr</c> for those written from left to right (like English and most other languages).</para><para>EmbedInteractiveExample("pages/css/direction.html")</para><para>Note that text direction is usually defined within a document (e.g., with <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/dir">HTML&amp;apos;s <c>dir</c> attribute</see>) rather than through direct use of the <c>direction</c> property.</para><para>The property sets the base text direction of block-level elements and the direction of embeddings created by the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/unicode-bidi">unicode-bidi</see> property. It also sets the default alignment of text, block-level elements, and the direction that cells flow within a table row.</para><para>Unlike the <c>dir</c> attribute in HTML, the <c>direction</c> property is not inherited from table columns into table cells, since CSS inheritance follows the document tree, and table cells are inside of rows but not inside of columns.</para><para>The <c>direction</c> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/unicode-bidi">unicode-bidi</see> properties are the two only properties which are not affected by the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/all">all</see> shorthand property.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/unicode-bidi">unicode-bidi</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/writing-mode">writing-mode</see><br/>-The HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#dir"><c>dir</c></see> global attribute<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/CSS/direction"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>For the <c>direction</c> property to have any effect on inline-level elements, the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/unicode-bidi">unicode-bidi</see> property's value must be <c>embed</c> or <c>override</c>.</value>
+</CSSDirection>
+</docs>

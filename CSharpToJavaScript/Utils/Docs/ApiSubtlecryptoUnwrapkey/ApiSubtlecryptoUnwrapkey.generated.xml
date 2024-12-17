@@ -1,0 +1,13 @@
+<docs>
+<SubtleCryptoUnwrapKey>
+<summary>
+The <strong><c>unwrapKey()</c></strong> method of the <see cref="SubtleCrypto."/> interface "unwraps" a key.<br/>This means that it takes as its input a key that has been exported and then encrypted (also called &amp;quot;wrapped&amp;quot;).<br/>It decrypts the key and then imports it, returning a <see cref="CryptoKey."/> object that can be used in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API">Web Crypto API</see>.
+</summary>
+<remarks>
+<para>As with <see href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey"><c>SubtleCrypto.importKey()</c></see>, you specify the key&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey#supported_formats">import format</see> and other attributes of the key to import details such as whether it is extractable, and which operations it can be used for.</para><para>But because <c>unwrapKey()</c> also decrypts the key to be imported, you also need to pass in the key that must be used to decrypt it.<br/>This is sometimes called the &amp;quot;unwrapping key&amp;quot;.</para><para>The inverse of <c>unwrapKey()</c> is <see cref="SubtleCrypto.WrapKey."/>: while <c>unwrapKey</c> is composed of decrypt + import, <c>wrapKey</c> is composed of encrypt + export.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey"><c>SubtleCrypto.importKey()</c></see><br/>-<see href="https://datatracker.ietf.org/doc/html/rfc5208">PKCS #8 format</see>.<br/>-<see href="https://datatracker.ietf.org/doc/html/rfc5280#section-4.1">SubjectPublicKeyInfo format</see>.<br/>-<see href="https://datatracker.ietf.org/doc/html/rfc7517">JSON Web Key format</see>.<br/>-<see href="https://datatracker.ietf.org/doc/html/rfc3394">AES-KW specification</see>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><c>Promise</c></see> that fulfills with the unwrapped key as a <see href="https://developer.mozilla.org/en-US/docs/Web/API/CryptoKey"><c>CryptoKey</c></see> object.</returns>
+</SubtleCryptoUnwrapKey>
+</docs>

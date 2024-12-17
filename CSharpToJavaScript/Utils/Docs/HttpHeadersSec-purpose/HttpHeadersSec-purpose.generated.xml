@@ -1,0 +1,12 @@
+<docs>
+<HTTPHeadersSec-Purpose>
+<summary>
+The <strong><c>Sec-Purpose</c></strong> <see href="https://developer.mozilla.org/en-US/docs/Glossary/Fetch metadata request header">Fetch metadata request header</see> indicates the purpose for which the requested resource will be used, when that purpose is something other than immediate use by the user-agent.
+</summary>
+<remarks>
+<para>The only purpose that is currently defined is <c>prefetch</c>, which indicates that the resource is being requested in anticipation that it will be needed by a page that is likely to be navigated to in the near future, such as a page linked in search results or a link that a user has hovered over.<br/>The server can use this knowledge to: adjust the caching expiry for the request, disallow the request, or perhaps to treat it differently when counting page visits.</para><para>The header is sent when a page is loaded that has a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link"><c>&amp;lt;link&amp;gt;</c></see> element with attribute <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel/prefetch"><c>rel=&amp;quot;prefetch&amp;quot;</c></see>.<br/>Note that if this header is set then a <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Dest">Sec-Fetch-Dest</see> header in the request must be set to <c>empty</c> (any value in the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link"><c>&amp;lt;link&amp;gt;</c></see> attribute <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link#as"><c>as</c></see> is ignored) and the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept">Accept</see> header should match the value used for normal navigation requests.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Glossary/Prefetch">Prefetch</see> (Glossary)<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link"><c>&amp;lt;link&amp;gt;</c></see> element with attribute <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel/prefetch"><c>rel=&amp;quot;prefetch&amp;quot;</c></see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Purpose"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPHeadersSec-Purpose>
+</docs>

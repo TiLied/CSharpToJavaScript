@@ -1,0 +1,11 @@
+<docs>
+<PresentationConnectionAvailableEvent>
+<summary>
+The <strong><c>PresentationConnectionAvailableEvent</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Presentation_API">Presentation API</see> is fired on a <see cref="PresentationRequest."/> when a connection associated with the object is created.
+</summary>
+<remarks>
+<para>A <see href="https://www.w3.org/TR/presentation-api/#dfn-controlling-user-agent">controlling user agent</see> <see href="https://www.w3.org/TR/presentation-api/#dfn-firing-an-event">fires</see> a <see href="https://www.w3.org/TR/presentation-api/#dfn-trusted-event">trusted event</see> named <see href="https://www.w3.org/TR/presentation-api/#dfn-connectionavailable"><c>connectionavailable</c></see> on a <see href="https://www.w3.org/TR/presentation-api/#idl-def-presentationrequest"><c>PresentationRequest</c></see> when a connection associated with the object is created. It is fired at the <c>PresentationRequest</c> instance, using the <see href="https://www.w3.org/TR/presentation-api/#idl-def-presentationconnectionavailableevent"><c>PresentationConnectionAvailableEvent</c></see> interface, with the <see href="https://www.w3.org/TR/presentation-api/#idl-def-presentationconnectionavailableevent-connection"><c>connection</c></see> attribute set to the <see href="https://www.w3.org/TR/presentation-api/#idl-def-presentationconnection"><c>PresentationConnection</c></see> object that was created. The event is fired for each connection that is created for the <see href="https://www.w3.org/TR/presentation-api/#dfn-controller">controller</see>, either by the <see href="https://www.w3.org/TR/presentation-api/#dfn-controller">controller</see> calling <c>start()</c> or <c>reconnect()</c>, or by the <see href="https://www.w3.org/TR/presentation-api/#dfn-controlling-user-agent">controlling user agent</see> creating a connection on the controller&amp;apos;s behalf via <see href="https://www.w3.org/TR/presentation-api/#dom-presentation-defaultrequest"><c>defaultRequest</c></see>.</para><para></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PresentationConnectionAvailableEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</PresentationConnectionAvailableEvent>
+</docs>

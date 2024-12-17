@@ -1,0 +1,12 @@
+<docs>
+<CSSTransform-functionTranslateZ>
+<summary>
+The <strong><c>translateZ()</c></strong> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</see> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Functions">function</see> repositions an element along the z-axis in 3D space, i.e.,<br/>closer to or farther away from the viewer. Its result is a {{cssxref(&amp;quot;&amp;lt;transform-function&amp;gt;&amp;quot;)}} data type.
+</summary>
+<remarks>
+<para>EmbedInteractiveExample("pages/css/function-translateZ.html")</para><para>This transformation is defined by a {{cssxref(&amp;quot;&amp;lt;length&amp;gt;&amp;quot;)}} which specifies how far inward or outward the<br/>element or elements move.</para><para>In the above interactive examples, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/perspective"><c>perspective: 550px;</c></see> (to<br/>create a 3D space) and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-style"><c>transform-style: preserve-3d;</c></see><br/>(so the children, the 6 sides of the cube, are also positioned in the 3D space), have been set on the cube.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> <c>translateZ(tz)</c> is equivalent to<br/><c>translate3d(0, 0, tz)</c>.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform">transform</see><br/>-{{cssxref(&amp;quot;&amp;lt;transform-function&amp;gt;&amp;quot;)}}<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/translate">translate</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translateZ"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CSSTransform-functionTranslateZ>
+</docs>

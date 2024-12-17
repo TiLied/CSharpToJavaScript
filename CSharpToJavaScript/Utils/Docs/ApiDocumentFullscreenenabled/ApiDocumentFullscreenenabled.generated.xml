@@ -1,0 +1,13 @@
+<docs>
+<DocumentFullscreenEnabled>
+<summary>
+The read-only <strong><c>fullscreenEnabled</c></strong><br/>property on the <see cref="Document."/> interface indicates whether or not fullscreen<br/>mode is available.
+</summary>
+<remarks>
+<para>fullscreen mode is available only for a page that has no<br/>windowed plug-ins in any of its documents, and if all <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</see> elements<br/>which contain the document have their <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#allowfullscreen"><c>allowfullscreen</c></see><br/>attribute set.</para><para>Although this property is read-only, it will not throw if it is modified (even in<br/>strict mode); the setter is a no-operation and it will be ignored.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API">Fullscreen API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API/Guide">Guide to the Fullscreen API</see><br/>-<see cref="Element.RequestFullscreen."/><br/>-<see cref="Document.ExitFullscreen."/><br/>-<see cref="Document.FullscreenElement."/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:fullscreen">:fullscreen</see> and {{cssxref("::backdrop&amp;quot;)}}<br/>-The <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</see> <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#allowfullscreen"><c>allowfullscreen</c></see><br/>attribute<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/fullscreenEnabled"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value which is <c>true</c> if the document and the<br/>elements within can be placed into fullscreen mode by calling<br/><see cref="Element.RequestFullscreen."/>. If fullscreen mode isn't available, this<br/>value is <c>false</c>.</value>
+</DocumentFullscreenEnabled>
+</docs>

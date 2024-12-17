@@ -1,0 +1,13 @@
+<docs>
+<AudioDestinationNodeMaxChannelCount>
+<summary>
+The <c>maxchannelCount</c> property of the <see cref="AudioDestinationNode."/> interface is an <c>unsigned long</c> defining the maximum amount of channels that the physical device can handle.
+</summary>
+<remarks>
+<para>The <see cref="AudioNode.ChannelCount."/> property can be set between 0 and this value (both included). If <c>maxChannelCount</c> is <c>0</c>, like in <see cref="OfflineAudioContext."/>, the channel count cannot be changed.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioDestinationNode/maxChannelCount"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <c>unsigned long</c>.</value>
+</AudioDestinationNodeMaxChannelCount>
+</docs>

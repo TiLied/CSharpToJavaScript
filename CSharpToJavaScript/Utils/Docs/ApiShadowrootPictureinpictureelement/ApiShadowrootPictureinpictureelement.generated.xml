@@ -1,0 +1,12 @@
+<docs>
+<ShadowRootPictureInPictureElement>
+<summary>
+The <strong><c>pictureInPictureElement</c></strong> read-only property of the<br/><see cref="ShadowRoot."/> interface returns the <see cref="Element."/> that is currently being<br/>presented in picture-in-picture mode in this shadow tree, or <c>null</c> if<br/>picture-in-picture mode is not currently in use.
+</summary>
+<remarks>
+<para>-<see cref="Document.PictureInPictureElement."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/pictureInPictureElement"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A reference to the <see cref="Element."/> object that's currently in<br/>picture-in-picture mode, or, if picture-in-picture mode isn&amp;apos;t currently in use by the<br/>shadow tree, the returned value is <c>null</c>.</value>
+</ShadowRootPictureInPictureElement>
+</docs>

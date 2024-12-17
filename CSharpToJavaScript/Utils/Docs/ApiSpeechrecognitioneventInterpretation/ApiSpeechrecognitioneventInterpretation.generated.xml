@@ -1,0 +1,13 @@
+<docs>
+<SpeechRecognitionEventInterpretation>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>interpretation</c></strong> read-only property of the<br/><see cref="SpeechRecognitionEvent."/> interface returns the semantic meaning of what the<br/>user said.
+</summary>
+<remarks>
+<para>This might be determined, for instance, through the SISR specification of semantics in<br/>a grammar (see<br/><see href="https://www.w3.org/TR/semantic-interpretation/">Semantic Interpretation for Speech Recognition (SISR) Version 1.0</see><br/>for specification and examples.)</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionEvent/interpretation"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The returned value can be of any type. If no semantic interpretation has been returned<br/>by the speech recognition system, <c>null</c> will be returned.</value>
+</SpeechRecognitionEventInterpretation>
+</docs>

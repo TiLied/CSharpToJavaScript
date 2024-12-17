@@ -1,0 +1,12 @@
+<docs>
+<RTCDataChannelOrdered>
+<summary>
+The read-only <c>RTCDataChannel</c> property <strong><c>ordered</c></strong> indicates<br/>whether or not the data channel guarantees in-order delivery of messages;<br/>the default is <c>true</c>,<br/>which indicates that the data channel is indeed ordered.<br/>This is set when the <see cref="RTCDataChannel."/> is created,<br/>by setting the <c>ordered</c> property<br/>on the object passed as <see cref="RTCPeerConnection.CreateDataChannel."/>'s <c>options</c> parameter.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/>-<see cref="RTCDataChannel."/><br/>-<see cref="RTCPeerConnection.CreateDataChannel."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/ordered"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value which is <c>true</c> if in-order delivery is<br/>guaranteed and is otherwise <c>false</c>.</value>
+</RTCDataChannelOrdered>
+</docs>

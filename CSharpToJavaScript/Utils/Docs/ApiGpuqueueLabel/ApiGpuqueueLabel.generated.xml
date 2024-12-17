@@ -1,0 +1,13 @@
+<docs>
+<GPUQueueLabel>
+<summary>
+The <strong><c>label</c></strong> read-only property of the<br/><see cref="GPUQueue."/> interface is a string providing a label that can be used to identify the object, for example in <see cref="GPUError."/> messages or console warnings.
+</summary>
+<remarks>
+<para>You can get and set it directly on the <c>GPUQueue</c> object.</para>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUQueue/label"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string. If no label value has previously been set, getting the label returns an empty string.</value>
+</GPUQueueLabel>
+</docs>

@@ -1,0 +1,11 @@
+<docs>
+<PushSubscriptionToJSON>
+<summary>
+The <c>toJSON()</c> method of the <see cref="PushSubscription."/> interface is a<br/>standard serializer: it returns a JSON representation of the subscription properties,<br/>providing a useful shortcut.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PushSubscription/toJSON"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A JSON object. It contains the subscription endpoint, <c>expirationTime</c> and public keys, as an<br/><c>endpoint</c> member, an <c>expirationTime</c> member and a <c>keys</c> member.</returns>
+</PushSubscriptionToJSON>
+</docs>

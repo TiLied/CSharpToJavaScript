@@ -1,0 +1,13 @@
+<docs>
+<NavigatorVibrate>
+<summary>
+The <strong><c>Navigator.vibrate()</c></strong> method pulses the vibration<br/>hardware on the device, if such hardware exists. If the device doesn&amp;apos;t support<br/>vibration, this method has no effect. If a vibration pattern is already in progress when<br/>this method is called, the previous pattern is halted and the new one begins instead.
+</summary>
+<remarks>
+<para>If the method was unable to vibrate because of invalid parameters, it will return<br/><c>false</c>, else it returns <c>true</c>. If the pattern leads to a too<br/>long vibration, it is truncated: the max length depends on the implementation.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Vibration_API">Vibration API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/vibrate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A boolean.</returns>
+</NavigatorVibrate>
+</docs>

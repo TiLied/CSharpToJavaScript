@@ -1,0 +1,13 @@
+<docs>
+<XRCompositionLayerMipLevels>
+<summary>
+The read-only <strong><c>mipLevels</c></strong> property of the <see cref="XRCompositionLayer."/> interface is a layer's number of mip levels in the color and texture data. See also <see href="https://en.wikipedia.org/wiki/Mipmap">Mipmap</see> on Wikipedia.
+</summary>
+<remarks>
+<para>The desired number of mip levels can be specified when creating layers. However, if the user agent can&amp;apos;t create the requested number, it can create less. Use <c>mipLevels</c> to determine the actual number of mip levels for a layer.</para><para>The <c>viewPixelWidth</c> and <c>viewPixelHeight</c> need to be powers of two as they get successively halved at each mip level.</para>
+<para>-<see href="https://en.wikipedia.org/wiki/Mipmap">Mipmap</see> on Wikipedia<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRCompositionLayer/mipLevels"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number equal or smaller to the requested mip levels when a layer has been created.</value>
+</XRCompositionLayerMipLevels>
+</docs>

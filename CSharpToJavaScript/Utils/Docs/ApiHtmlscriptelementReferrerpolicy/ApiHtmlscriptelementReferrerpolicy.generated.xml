@@ -1,0 +1,12 @@
+<docs>
+<HTMLScriptElementReferrerPolicy>
+<summary>
+The <strong><c>referrerPolicy</c></strong> property of the<br/><see cref="HTMLScriptElement."/> interface reflects the HTML<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#referrerpolicy"><c>referrerpolicy</c></see> of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">script</see> element, which defines how the referrer is set when fetching the script and any scripts it imports.
+</summary>
+<remarks>
+<para>-<see cref="HTMLIFrameElement.ReferrerPolicy."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLScriptElement/referrerPolicy"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string; one of the following:<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> An empty string value (<c>&amp;quot;&amp;quot;</c>) is both the default<br/>value, and a fallback value if <c>referrerpolicy</c> is not supported. If<br/><c>referrerpolicy</c> is not explicitly specified on the<br/><c>&amp;lt;script&amp;gt;</c> element, it will adopt a higher-level referrer policy,<br/>i.e. one set on the whole document or domain. If a higher-level policy is not<br/>available, the empty string is treated as being equivalent to<br/><c>no-referrer-when-downgrade</c>.</blockquote></value>
+</HTMLScriptElementReferrerPolicy>
+</docs>

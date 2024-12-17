@@ -1,0 +1,12 @@
+<docs>
+<WindowClose>
+<summary>
+The <strong><c>Window.close()</c></strong> method closes the current window, or<br/>the window on which it was called.
+</summary>
+<remarks>
+<para>This method can only be called on windows that were opened by a script using the<br/><see cref="Window.Open."/> method, or on top-level windows that have a single history entry. If the window doesn't match these requirements, an error<br/>similar to this one appears in the console:<br/><c>Scripts may not close windows that were not opened by script.</c></para><para>Note also that <c>close()</c> has no effect when called on <see cref="Window."/><br/>objects returned by<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/contentWindow"><c>HTMLIFrameElement.contentWindow</c></see>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Window/close"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WindowClose>
+</docs>

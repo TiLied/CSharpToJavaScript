@@ -1,0 +1,12 @@
+<docs>
+<HTMLElementLang>
+<summary>
+The <strong><c>HTMLElement.lang</c></strong> property gets or sets the base<br/>language of an element&amp;apos;s attribute values and text content.
+</summary>
+<remarks>
+<para>The language code returned by this property is defined in {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.<br/>Common examples include &amp;quot;en&amp;quot; for English, &amp;quot;ja&amp;quot; for<br/>Japanese, &amp;quot;es&amp;quot; for Spanish and so on. The default value of this attribute is<br/><c>unknown</c>. Note that this attribute, though valid at the individual element<br/>level described here, is most often specified for the root element of the document.</para><para>This also only works with the <c>lang</c> attribute and not with<br/><c>xml:lang</c>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/lang"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</HTMLElementLang>
+</docs>

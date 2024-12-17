@@ -1,0 +1,13 @@
+<docs>
+<HTMLCanvasElementToDataURL>
+<summary>
+The <strong><c>HTMLCanvasElement.toDataURL()</c></strong> method returns a <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs">data URL</see> containing a representation of the image in the format specified by the <c>type</c> parameter.
+</summary>
+<remarks>
+<para>The desired file format and image quality may be specified.<br/>If the file format is not specified, or if the given format is not supported, then the data will be exported as <c>image/png</c>.<br/>In other words, if the returned value starts with <c>data:image/png</c> for any other requested <c>type</c>, then that format is not supported.</para><para>Browsers are required to support <c>image/png</c>; many will support additional formats including <c>image/jpeg</c> and <c>image/webp</c>.</para><para>The created image data will have a resolution of 96dpi for file formats that support encoding resolution metadata.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs">Data URLs</see> in the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see> reference.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toDataURL"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A string containing the requested <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs">data URL</see>.If the height or width of the canvas is <c>0</c> or larger than the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas#maximum_canvas_size">maximum canvas size</see>, the string <c>&amp;quot;data:,&amp;quot;</c> is returned.</returns>
+</HTMLCanvasElementToDataURL>
+</docs>

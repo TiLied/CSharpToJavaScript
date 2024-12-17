@@ -1,11 +1,12 @@
 <docs>
 <CSSRotate>
 <summary>
-The <strong><c>CSSRotate</c></strong> interface of the <see cref="'CSS_Object_Model#css_typed_object_model'"/> represents the rotate value of the individual {{CSSXRef('transform')}} property in CSS. It inherits properties and methods from its parent <see cref="'CSSTransformValue'"/>.
+The <strong><c>rotate</c></strong> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</see> property allows you to specify rotation transforms individually and independently of the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform">transform</see> property. This maps better to typical user interface usage, and saves having to remember the exact order of transform functions to specify in the <c>transform</c> property.
 </summary>
 <remarks>
-<para></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSRotate"> <em>See also on MDN</em> </seealso></para>
+<para>EmbedInteractiveExample("pages/css/rotate.html")</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/'translate'">'translate'</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/'scale'">'scale'</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/'transform'">'transform'</see><br/>Note: <c>skew</c> is not an independent <c>transform</c> value</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/CSS/rotate"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </CSSRotate>
 </docs>

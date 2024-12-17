@@ -1,0 +1,11 @@
+<docs>
+<RTCIceCandidatePairLocal>
+<summary>
+The <strong><c>local</c></strong> property of the<br/><strong><see cref="RTCIceCandidatePair."/></strong> dictionary specifies the<br/><see cref="RTCIceCandidate."/> which describes the configuration of the local end of a<br/>viable WebRTC connection.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePair/local"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="RTCIceCandidate."/> which describes the configuration of the local end of<br/>a viable pair of ICE candidates. The <c>RTCIceCandidatePair</c> is returned by the<br/><see cref="RTCIceTransport."/> method<br/><see cref="RTCIceTransport.GetSelectedCandidatePair."/>.</value>
+</RTCIceCandidatePairLocal>
+</docs>

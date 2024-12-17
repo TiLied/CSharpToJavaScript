@@ -1,0 +1,12 @@
+<docs>
+<HTTPHeadersTE>
+<summary>
+The <strong><c>TE</c></strong> request header specifies the transfer encodings<br/>the user agent is willing to accept. (you could informally call it<br/><c>Accept-Transfer-Encoding</c>, which would be more intuitive).
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> In<br/><see href="https://httpwg.org/specs/rfc9113.html#ConnectionSpecific">HTTP/2</see> and<br/><see href="https://httpwg.org/specs/rfc9114.html#header-formatting">HTTP/3</see>, the <c>TE</c><br/>header field is only accepted if the <c>trailers</c> value is set.</para></blockquote><para>See also the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Transfer-Encoding">Transfer-Encoding</see> response header for more details on<br/>transfer encodings. Note that <c>chunked</c> is always acceptable for HTTP/1.1<br/>recipients and you don&amp;apos;t have to specify <c>&amp;quot;chunked&amp;quot;</c> using the<br/><c>TE</c> header. However, it is useful for setting if the client is accepting<br/>trailer fields in a chunked transfer coding using the &amp;quot;trailers&amp;quot; value.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Transfer-Encoding">Transfer-Encoding</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Trailer">Trailer</see><br/>-<see href="https://en.wikipedia.org/wiki/Chunked_transfer_encoding">Chunked transfer encoding</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/TE"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPHeadersTE>
+</docs>

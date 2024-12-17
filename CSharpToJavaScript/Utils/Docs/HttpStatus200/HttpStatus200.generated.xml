@@ -1,0 +1,12 @@
+<docs>
+<HTTPStatus200>
+<summary>
+The HTTP <strong><c>200 OK</c></strong> success status response code indicates that the request has succeeded. A 200 response is cacheable by default.
+</summary>
+<remarks>
+<para>The meaning of a success depends on the HTTP request method:</para><para>The successful result of a {{HTTPMethod("PUT")}} or a {{HTTPMethod("DELETE")}} is often not a <c>200 OK</c> but a {{HTTPStatus("204")}} <c>No Content</c> (or a {{HTTPStatus("201")}} <c>Created</c> when the resource is uploaded for the first time).</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods">HTTP request methods</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/200"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPStatus200>
+</docs>

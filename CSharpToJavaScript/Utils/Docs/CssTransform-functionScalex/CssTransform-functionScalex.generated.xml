@@ -1,0 +1,12 @@
+<docs>
+<CSSTransform-functionScaleX>
+<summary>
+The <strong><c>scaleX()</c></strong> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</see> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Functions">function</see> defines a transformation that resizes an element along the<br/>x-axis (horizontally). Its result is a {{cssxref(&amp;quot;&amp;lt;transform-function&amp;gt;&amp;quot;)}} data type.
+</summary>
+<remarks>
+<para>EmbedInteractiveExample("pages/css/function-scaleX.html")</para><para>It modifies the abscissa (horizontal, x-coordinate) of each element point by a constant factor, except when the scale factor is 1, in which case<br/>the function is the identity transform. The scaling is not isotropic, and the angles of the element are generally not conserved, except for multiples of 90 degrees.<br/><c>scaleX(-1)</c> defines an <see href="https://en.wikipedia.org/wiki/Axial_symmetry">axial symmetry</see>, with a vertical axis passing through the origin (as specified by the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-origin">transform-origin</see><br/>property).</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> <c>scaleX(sx)</c> is equivalent to<br/><c>scale(sx, 1)</c> or<br/><c>scale3d(sx, 1, 1)</c>.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scaleY"><c>scaleY()</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scaleZ"><c>scaleZ()</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform">transform</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/scale">scale</see><br/>-{{cssxref(&amp;quot;&amp;lt;transform-function&amp;gt;&amp;quot;)}}<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-origin">transform-origin</see><br/>-Other individual transform properties:-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/translate">translate</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/rotate">rotate</see><br/>-Note: there is no <c>skew</c> property<br/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scaleX"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CSSTransform-functionScaleX>
+</docs>

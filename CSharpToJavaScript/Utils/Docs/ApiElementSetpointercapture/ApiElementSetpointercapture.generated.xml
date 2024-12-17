@@ -1,0 +1,13 @@
+<docs>
+<ElementSetPointerCapture>
+<summary>
+The <strong><c>setPointerCapture()</c></strong> method of the<br/><see cref="Element."/> interface is used to designate a specific element as the<br/><strong>capture target</strong> of future pointer events. Subsequent events for the pointer will<br/>be targeted at the capture element until capture is released (via<br/><see cref="Element.ReleasePointerCapture."/> or the<br/><see cref="Element/pointerup_event."/> event is fired).
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Pointer capture will cause the target to capture all subsequent pointer events as if they were occurring over the capturing target. Accordingly, <c>pointerover</c>, <c>pointerenter</c>, <c>pointerleave</c>, and <c>pointerout</c> <strong>will not fire</strong> as long as this capture is set.<br/>For touchscreen browsers that allow <see href="https://w3c.github.io/pointerevents/#dfn-direct-manipulation">direct manipulation</see>, an <see href="https://w3c.github.io/pointerevents/#dfn-implicit-pointer-capture">implicit pointer capture</see> will be called on the element when a <c>pointerdown</c> event triggers. The capture can be released manually by calling <see cref="'element.ReleasePointerCapture'."/> on the target element, or it will be implicitly released after a <c>pointerup</c> or <c>pointercancel</c> event.</para></blockquote>
+<para>-<see cref="Element.HasPointerCapture."/><br/>-<see cref="Element.ReleasePointerCapture."/><br/>-<see cref="Pointer_events."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/setPointerCapture"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</ElementSetPointerCapture>
+</docs>

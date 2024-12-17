@@ -1,0 +1,13 @@
+<docs>
+<PerformanceResourceTimingRequestStart>
+<summary>
+The <strong><c>requestStart</c></strong> read-only property returns a <see cref="DOMHighResTimeStamp."/> of the time immediately before the browser starts requesting the resource from the server, cache, or local resource. If the transport connection fails and the browser retires the request, the value returned will be the start of the retry request.
+</summary>
+<remarks>
+<para>There is no <strong>end</strong> property for <c>requestStart</c>. To measure the request time, calculate <see cref="PerformanceResourceTiming.ResponseStart."/> - <c>requestStart</c> (see the example below).</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Timing-Allow-Origin">Timing-Allow-Origin</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming/requestStart"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <c>requestStart</c> property can have the following values:</value>
+</PerformanceResourceTimingRequestStart>
+</docs>

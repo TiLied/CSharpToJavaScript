@@ -1,0 +1,11 @@
+<docs>
+<EXSLTRegexpMatch>
+<summary>
+<c>regexp:match()</c> performs regular expression matching on a string, returning the submatches found as a result.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/EXSLT/regexp/match"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A node set of <c>match</c> elements, each of which has the string value equal to a portion of the first parameter string as captured by the regular expression. If the match isn&amp;apos;t a global one, the first match element has the value of the portion of the string matched by the entire regular expression.For example:This code generates the following output:</returns>
+</EXSLTRegexpMatch>
+</docs>

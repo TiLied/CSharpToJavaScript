@@ -1,0 +1,12 @@
+<docs>
+<CSSSystem-color>
+<summary>
+The <strong><c>&amp;lt;system-color&amp;gt;</c></strong> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</see> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Types">data type</see> usually reflects the default color choices used for the different parts of a web page.
+</summary>
+<remarks>
+<para>However, user agents can provide an accessibility feature called <strong>forced colors mode</strong>, in which colors are restricted into a user- and user agent-defined palette, overriding the author&amp;apos;s choice of colors in certain properties. In forced colors mode, <c>&amp;lt;system-color&amp;gt;</c> exposes the chosen colors, so that the rest of the page can integrate with them. An example of forced colors mode is <see href="https://blogs.windows.com/msedgedev/2020/09/17/styling-for-windows-high-contrast-with-new-standards-for-forced-colors/">high contrast mode on Windows</see>.</para><para>In forced colors mode, authors should use colors from the <c>&amp;lt;system-color&amp;gt;</c> type for all properties that are <strong>not</strong> in the set of properties whose colors are overridden. This ensures that the page consistently uses the same color palette across all properties.</para><para>Authors can detect forced colors mode using the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/forced-colors"><c>forced-colors</c></see> media feature.</para><para>A <c>&amp;lt;system-color&amp;gt;</c> value can be used anywhere a <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value"><c>&amp;lt;color&amp;gt;</c></see> can be used.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value"><c>&amp;lt;color&amp;gt;</c></see>: the data type these keywords belong to<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/CSS/system-color"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CSSSystem-color>
+</docs>

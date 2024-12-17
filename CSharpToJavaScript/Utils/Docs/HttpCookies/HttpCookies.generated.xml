@@ -1,0 +1,12 @@
+<docs>
+<HTTPCookies>
+<summary>
+An <strong>HTTP cookie</strong> (web cookie, browser cookie) is a small piece of data that a server sends to a user&amp;apos;s web browser.<br/>The browser may store the cookie and send it back to the same server with later requests.<br/>Typically, an HTTP cookie is used to tell if two requests come from the same browser—keeping a user logged in, for example. It remembers stateful information for the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview#http_is_stateless_but_not_sessionless">stateless</see> HTTP protocol.
+</summary>
+<remarks>
+<para>Cookies are mainly used for three purposes:</para><para>Cookies were once used for general client-side storage. While this made sense when they were the only way to store data on the client, modern storage APIs are now recommended. Cookies are sent with every request, so they can worsen performance (especially for mobile data connections). Modern APIs for client storage are the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API">Web Storage API</see> (<c>localStorage</c> and <c>sessionStorage</c>) and <see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API">IndexedDB</see>.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> To see stored cookies (and other storage that a web page can use), you can enable the <see href="https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html">Storage Inspector</see> in Developer Tools and select Cookies from the storage tree.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie">Set-Cookie</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cookie">Cookie</see><br/>-<see cref="Document.Cookie."/><br/>-<see cref="Navigator.CookieEnabled."/><br/>-<see href="https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html">Inspecting cookies using the Storage Inspector</see><br/>-<see href="https://datatracker.ietf.org/doc/html/rfc6265">Cookie specification: RFC 6265</see><br/>-<see href="https://en.wikipedia.org/wiki/HTTP_cookie">HTTP cookie on Wikipedia</see><br/>-<see href="https://gdpr.eu/cookies/">Cookies, the GDPR, and the ePrivacy Directive</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPCookies>
+</docs>

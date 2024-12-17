@@ -1,0 +1,12 @@
+<docs>
+<HTTPHeadersAuthorization>
+<summary>
+The HTTP <strong><c>Authorization</c></strong> request header can be used to provide credentials that authenticate a user agent with a server, allowing access to a protected resource.
+</summary>
+<remarks>
+<para>The <strong><c>Authorization</c></strong> header is usually, but not always, sent after the user agent first attempts to request a protected resource without credentials.<br/>The server responds with a {{HTTPStatus("401")}} <c>Unauthorized</c> message that includes at least one <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/WWW-Authenticate">WWW-Authenticate</see> header.<br/>This header indicates what authentication schemes can be used to access the resource (and any additional information needed by the client to use them).<br/>The user-agent should select the most secure authentication scheme that it supports from those offered, prompt the user for their credentials, and then re-request the resource (including the encoded credentials in the <strong><c>Authorization</c></strong> header).</para><para>This header is stripped from cross-origin redirects.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This header is part of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication#the_general_http_authentication_framework">General HTTP authentication framework</see>.<br/>It can be used with a number of <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication#authentication_schemes">authentication schemes</see>.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication">HTTP authentication</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/WWW-Authenticate">WWW-Authenticate</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Proxy-Authorization">Proxy-Authorization</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Proxy-Authenticate">Proxy-Authenticate</see><br/>-HTTPStatus("401"), HTTPStatus("403"), HTTPStatus("407")<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Authorization"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPHeadersAuthorization>
+</docs>

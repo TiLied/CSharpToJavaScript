@@ -1,0 +1,12 @@
+<docs>
+<CSSBorder-top-right-radius>
+<summary>
+The <strong><c>border-top-right-radius</c></strong> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</see> property rounds the top-right corner of an element by specifying the radius (or the radius of the semi-major and semi-minor axes) of the ellipse defining the curvature of the corner.
+</summary>
+<remarks>
+<para>EmbedInteractiveExample("pages/css/border-top-right-radius.html")</para><para>The rounding can be a circle or an ellipse, or if one of the value is <c>0</c> no rounding is done and the corner is square.</para><para><see href="https://developer.mozilla.orgborder-top-right-radius.png">border-top-right-radius.png</see></para><para>A background, being an image or a color, is clipped at the border, even a rounded one; the exact location of the clipping is defined by the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-clip">background-clip</see> property.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> If the value of this property is not set in a <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius">border-radius</see> shorthand property that is applied to the element after the <c>border-top-right-radius</c> CSS property, the value of this property is then reset to its initial value by the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties">shorthand property</see>.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius">border-radius</see> shorthand property<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-bottom-right-radius">border-bottom-right-radius</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-bottom-left-radius">border-bottom-left-radius</see>, and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-top-left-radius">border-top-left-radius</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-top-right-radius"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CSSBorder-top-right-radius>
+</docs>

@@ -1,0 +1,13 @@
+<docs>
+<ResponseRedirected>
+<summary>
+The read-only <strong><c>redirected</c></strong> property of the <see cref="Response."/> interface indicates whether or not the response is the result of a request you made which was redirected.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Relying on redirected to filter out redirects makes it easy for a forged redirect to prevent your content from working as expected.<br/>Instead, you should do the filtering when you call <see cref="Fetch."/>.<br/>See the example <see href="https://developer.mozilla.org#disallowing_redirects">Disallowing redirects</see>, which shows this being done.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Response/redirected"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value which is <c>true</c> if the response indicates that your request was redirected.</value>
+</ResponseRedirected>
+</docs>

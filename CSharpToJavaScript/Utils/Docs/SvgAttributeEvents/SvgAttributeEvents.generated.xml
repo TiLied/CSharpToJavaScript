@@ -1,0 +1,11 @@
+<docs>
+<SVGAttributeEvents>
+<summary>
+Event attributes always have their name starting with &amp;quot;on&amp;quot; followed by the name of the event for which they are intended. They specifies some script to run when the event of the given type is dispatched to the element on which the attributes are specified.
+</summary>
+<remarks>
+<para>For every event type that the browser supports, SVG supports that as an event attribute, following the same requirements as for HTML event attributes.</para><para>The global event attributes are available on <strong>all SVG elements</strong>. Other event attributes are available on a case by case basis for each elements.</para><para>All event attribute are <strong>not animatable</strong>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Events"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</SVGAttributeEvents>
+</docs>

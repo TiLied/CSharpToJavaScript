@@ -1,0 +1,12 @@
+<docs>
+<RTCIceTransportState>
+<summary>
+The read-only <strong><see cref="RTCIceTransport."/></strong><br/>property <strong><c>state</c></strong> returns the current state of the ICE<br/>transport, so you can determine the state of ICE gathering in which the ICE agent<br/>currently is operating.
+</summary>
+<remarks>
+<para>This differs from the <see cref="RTCIceTransport.GatheringState."/>,<br/>which only indicates whether or not ICE gathering is currently underway.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/state"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string whose value is one of the following:</value>
+</RTCIceTransportState>
+</docs>

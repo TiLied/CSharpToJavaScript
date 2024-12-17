@@ -1,0 +1,12 @@
+<docs>
+<CSSImageImage-set>
+<summary>
+The <strong><c>image-set()</c></strong> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</see> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Functions">functional</see> notation is a method of letting the browser pick the most appropriate CSS image from a given set, primarily for high pixel density screens.
+</summary>
+<remarks>
+<para>Resolution and bandwidth differ by device and network access. The <c>image-set()</c> function delivers the most appropriate image resolution for a user&amp;apos;s device, providing a set of image options — each with an associated resolution declaration — from which the browser picks the most appropriate for the device and settings. Resolution can be used as a proxy for filesize — a user agent on a slow mobile connection with a high-resolution screen may prefer to receive lower-resolution images rather than waiting for a higher resolution image to load.</para><para><c>image-set()</c> allows the author to provide options rather than determining what each individual user needs.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/image">image</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/image/image">image/image</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/element">element</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/url">url</see><br/>-{{cssxref(&amp;quot;&amp;lt;gradient&amp;gt;&amp;quot;)}}<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/cross-fade">cross-fade</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/CSS/image/image-set"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CSSImageImage-set>
+</docs>

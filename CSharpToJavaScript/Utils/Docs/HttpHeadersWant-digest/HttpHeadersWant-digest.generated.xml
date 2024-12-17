@@ -1,0 +1,12 @@
+<docs>
+<HTTPHeadersWant-Digest>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>Want-Digest</c></strong> HTTP header is primarily used in a request, to ask the server to provide a <see href="https://developer.mozilla.org/en-US/docs/Glossary/digest">digest</see> of the requested resource using the {{HTTPHeader("Digest")}} response header.
+</summary>
+<remarks>
+<para>The header contains identifiers for one or more digest algorithms that the sender wishes the server to use to create the digest.<br/>The request may use <see href="https://developer.mozilla.org/en-US/docs/Glossary/quality values">quality values</see> to indicate its preference/order for particular digest algorithms.</para><para>If <c>Want-Digest</c> does not include any digest algorithms that the server supports, the server may respond with:</para><para>See the page for the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Digest">Digest</see> header for more information.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Digest">Digest</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Want-Digest"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPHeadersWant-Digest>
+</docs>

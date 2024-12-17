@@ -1,0 +1,11 @@
+<docs>
+<RTCIceCandidatePairStatsRequestsReceived>
+<summary>
+The <see cref="RTCIceCandidatePairStats."/> dictionary's<br/><strong><c>requestsReceived</c></strong> property indicates the total number of<br/><see href="https://developer.mozilla.org/en-US/docs/Glossary/STUN">STUN</see> connectivity check requests that have been received so far on the<br/>connection described by this pairing of candidates.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/requestsReceived"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer value which specifies the number of STUN connectivity and/or consent<br/>requests that have been received to date on the connection described by this pair of<br/><see href="https://developer.mozilla.org/en-US/docs/Glossary/ICE">ICE</see> candidates.Because there&amp;apos;s no way to tell the difference between requests made to check<br/>connectivity and requests made to check consent, the returned figure includes both.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> The reported number of requests includes retransmissions. If a<br/>request had to be repeated due to network issues, it will be counted multiple times<br/>here. This differs from <see cref="RTCIceCandidatePairStats.RequestsSent."/>, which <strong>does not</strong> include retransmisions.</blockquote></value>
+</RTCIceCandidatePairStatsRequestsReceived>
+</docs>

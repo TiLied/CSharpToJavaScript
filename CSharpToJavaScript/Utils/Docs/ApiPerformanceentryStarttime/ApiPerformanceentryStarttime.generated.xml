@@ -1,0 +1,11 @@
+<docs>
+<PerformanceEntryStartTime>
+<summary>
+The read-only <strong><c>startTime</c></strong> property returns the first {{domxref(&amp;quot;DOMHighResTimeStamp&amp;quot;,&amp;quot;timestamp&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;no-code&amp;quot;)}} recorded for this {{domxref(&amp;quot;PerformanceEntry&amp;quot;,&amp;quot;performance entry&amp;quot;, &amp;quot;&amp;quot;, "no-code")}}. The meaning of this property depends on the value of this entry's <see cref="PerformanceEntry.EntryType."/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceEntry/startTime"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DOMHighResTimeStamp."/> representing the first timestamp when the<br/><see cref="PerformanceEntry."/> was created.The meaning of this property depends on the value of this performance entry's <see cref="PerformanceEntry.EntryType."/>:</value>
+</PerformanceEntryStartTime>
+</docs>

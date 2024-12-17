@@ -1,0 +1,13 @@
+<docs>
+<XRSessionVisibilityState>
+<summary>
+The <strong>read-only</strong> <strong><c>visibilityState</c></strong> property of the<br/><see cref="XRSession."/> interface is a string indicating whether the WebXR content is<br/>currently visible to the user, and if it is, whether it&amp;apos;s the primary focus.
+</summary>
+<remarks>
+<para>Every time the visibility state changes, a<br/><see cref="XRSession.Visibilitychange_event."/> event is fired on the<br/><see cref="XRSession."/> object.</para>
+<para>-<see cref="XRSession.Visibilitychange_event."/> event<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRSession/visibilityState"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string indicating whether or not the XR content is<br/>visible to the user and if it is, whether or not it&amp;apos;s currently the primary focus.The possible values of <c>visibilityState</c> are:</value>
+</XRSessionVisibilityState>
+</docs>

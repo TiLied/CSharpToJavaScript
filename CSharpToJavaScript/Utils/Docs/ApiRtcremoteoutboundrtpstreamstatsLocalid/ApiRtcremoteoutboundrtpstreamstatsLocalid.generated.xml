@@ -1,0 +1,12 @@
+<docs>
+<RTCRemoteOutboundRtpStreamStatsLocalId>
+<summary>
+The <see cref="RTCRemoteOutboundRtpStreamStats."/> dictionary's <strong><c>localId</c></strong> property is a string which can be used to identify the <see cref="RTCInboundRtpStreamStats."/> object whose <see cref="RTCInboundRtpStreamStats.RemoteId."/> matches this value.
+</summary>
+<remarks>
+<para>Together, these two objects provide statistics about the inbound and outbound sides of the same synchronization source (SSRC).</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRemoteOutboundRtpStreamStats/localId"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string which can be compared to the value of an <see cref="RTCInboundRtpStreamStats."/> object's <see cref="RTCInboundRtpStreamStats.RemoteId."/> property to see if the two represent statistics for each of the two sides of the same set of data received by the local peer.</value>
+</RTCRemoteOutboundRtpStreamStatsLocalId>
+</docs>

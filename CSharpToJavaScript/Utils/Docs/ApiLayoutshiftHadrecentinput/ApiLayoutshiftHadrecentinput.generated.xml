@@ -1,0 +1,13 @@
+<docs>
+<LayoutShiftHadRecentInput>
+<summary>
+The <strong><c>hadRecentInput</c></strong> read-only property of the <see cref="LayoutShift."/> interface returns <c>true</c> if <see cref="LayoutShift.LastInputTime."/> is less than 500 milliseconds in the past.
+</summary>
+<remarks>
+<para>Layout shifts are only a problem if the user is not expecting them, so layout shifts that are the result of user interactions (such as a user expanding a UI element) are often not considered in layout shift metrics. The <c>hadRecentInput</c> property allows you to exclude these shifts.</para>
+<para>-<see cref="LayoutShift.LastInputTime."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/LayoutShift/hadRecentInput"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean returning <c>true</c> if <see cref="LayoutShift.LastInputTime."/> is less than 500 milliseconds in the past; <c>false</c> otherwise.</value>
+</LayoutShiftHadRecentInput>
+</docs>

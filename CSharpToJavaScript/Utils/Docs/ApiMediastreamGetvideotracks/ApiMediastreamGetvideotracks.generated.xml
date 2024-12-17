@@ -1,0 +1,11 @@
+<docs>
+<MediaStreamGetVideoTracks>
+<summary>
+The <strong><c>getVideoTracks()</c></strong> method of the<br/><see cref="MediaStream."/> interface returns a sequence of<br/><see cref="MediaStreamTrack."/> objects representing the video tracks in this stream.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/getVideoTracks"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An array of <see cref="MediaStreamTrack."/> objects, one for each video track contained<br/>in the media stream. Video tracks are those tracks whose<br/><see cref="MediaStreamTrack.Kind."/> property is <c>video</c>. The array<br/>is empty if the stream contains no video tracks.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> The order of the tracks is not defined by the specification,<br/>and may not be the same from one call to <c>getVideoTracks()</c> to another.</blockquote></returns>
+</MediaStreamGetVideoTracks>
+</docs>

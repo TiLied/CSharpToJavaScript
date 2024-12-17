@@ -1,0 +1,13 @@
+<docs>
+<CSSWhite-space>
+<summary>
+The <strong><c>white-space</c></strong> CSS property sets how <see href="https://developer.mozilla.org/en-US/docs/Glossary/whitespace">whitespace</see> inside an element is handled.
+</summary>
+<remarks>
+<para>EmbedInteractiveExample("pages/css/white-space.html")</para><para>The property specifies two things:</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> To make words break <strong>within themselves</strong>, use <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-wrap">overflow-wrap</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/word-break">word-break</see>, or <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/hyphens">hyphens</see> instead.</para></blockquote>
+<para>-Properties that define how words break <strong>within themselves</strong>: <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-wrap">overflow-wrap</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/word-break">word-break</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/hyphens">hyphens</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/CSS/white-space"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value><c>white-space</c> property values can be specified as a single keyword chosen from the list of values below, or two values representing shorthand for the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/white-space-collapse">white-space-collapse</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-wrap">text-wrap</see> properties.The following table summarizes the behavior of the various <c>white-space</c> keyword values:<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> There is a distinction made between <strong>spaces</strong> and <strong>other space separators</strong>. These are defined as follows:Where white space is said to <strong>hang</strong>, this can affect the size of the box when measured for intrinsic sizing.</blockquote></value>
+</CSSWhite-space>
+</docs>

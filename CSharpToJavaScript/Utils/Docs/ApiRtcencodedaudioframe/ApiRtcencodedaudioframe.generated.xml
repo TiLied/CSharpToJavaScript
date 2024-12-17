@@ -1,0 +1,12 @@
+<docs>
+<RTCEncodedAudioFrame>
+<summary>
+The <strong><c>RTCEncodedAudioFrame</c></strong> of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see> represents an encoded audio frame in the WebRTC receiver or sender pipeline, which may be modified using a <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms">WebRTC Encoded Transform</see>.
+</summary>
+<remarks>
+<para>The interface provides methods and properties to get metadata about the frame, allowing its format and order in the sequence of frames to be determined.<br/>The <c>data</c> property gives access to the encoded frame data as a buffer, which might be encrypted, or otherwise modified by a transform.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This feature is available in <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API#worker_types"><strong>Dedicated</strong> Web Workers</see>.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms">Using WebRTC Encoded Transforms</see><br/>-<see cref="TransformStream."/><br/>-<see cref="RTCRtpScriptTransformer."/><br/>-<see cref="RTCEncodedVideoFrame."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCEncodedAudioFrame"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RTCEncodedAudioFrame>
+</docs>

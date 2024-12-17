@@ -1,0 +1,12 @@
+<docs>
+<FetchEventIsReload>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>isReload</c></strong> read-only property of the<br/><see cref="FetchEvent."/> interface returns <c>true</c> if the event was<br/>dispatched by the user attempting to reload the page, and <c>false</c> otherwise.<br/>Pressing the refresh button is a reload while clicking a link and pressing the back<br/>button is not.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</see><br/>-<see href="https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker">Service workers basic code example</see><br/>-<see href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</see><br/>-<see cref="Promise"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web workers</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FetchEvent/isReload"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value.</value>
+</FetchEventIsReload>
+</docs>

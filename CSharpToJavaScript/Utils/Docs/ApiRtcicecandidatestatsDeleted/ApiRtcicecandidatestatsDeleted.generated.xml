@@ -1,0 +1,11 @@
+<docs>
+<RTCIceCandidateStatsDeleted>
+<summary>
+The <see cref="RTCIceCandidateStats."/> dictionary's<br/><strong><c>deleted</c></strong> property indicates whether or not the candidate<br/>has been deleted or released.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/deleted"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A Boolean value indicating whether or not the candidate has been deleted or released.<br/>If this value is <c>true</c>, the candidate described by the<br/><see cref="RTCIceCandidateStats."/> object is no longer under consideration. The exact<br/>meaning varies depending on the type of candidate:The net result is the same; the candidate is no longer under consideration if this<br/>value is <c>true</c>.</value>
+</RTCIceCandidateStatsDeleted>
+</docs>

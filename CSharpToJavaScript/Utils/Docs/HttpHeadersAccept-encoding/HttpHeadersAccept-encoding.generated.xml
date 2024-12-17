@@ -1,0 +1,12 @@
+<docs>
+<HTTPHeadersAccept-Encoding>
+<summary>
+The <strong><c>Accept-Encoding</c></strong> request HTTP header indicates the content encoding (usually a compression algorithm) that the client can understand. The server uses <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Content_negotiation">content negotiation</see> to select one of the proposals and informs the client of that choice with the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Encoding">Content-Encoding</see> response header.
+</summary>
+<remarks>
+<para>Even if both the client and the server support the same compression algorithms, the server may choose not to compress the body of a response if the <c>identity</c> value is also acceptable. Two common cases lead to this:</para><para>As long as the <c>identity;q=0</c> or <c>*;q=0</c> directives do not explicitly forbid the <c>identity</c> value that means no encoding, the server must never return a {{HTTPStatus("406")}} <c>Not Acceptable</c> error.</para><blockquote><para><strong>Note:</strong></para></blockquote>
+<para>-HTTP <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Content_negotiation">content negotiation</see><br/>-A header with the result of the content negotiation: <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Encoding">Content-Encoding</see><br/>-Other similar headers: <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/TE">TE</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept">Accept</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language">Accept-Language</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Encoding"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPHeadersAccept-Encoding>
+</docs>

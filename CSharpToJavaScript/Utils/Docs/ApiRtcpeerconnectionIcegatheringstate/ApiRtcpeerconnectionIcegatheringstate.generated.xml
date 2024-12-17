@@ -1,0 +1,13 @@
+<docs>
+<RTCPeerConnectionIceGatheringState>
+<summary>
+The read-only property <strong><c>RTCPeerConnection.iceGatheringState</c></strong> returns a string<br/>that describes the connection&amp;apos;s ICE gathering state.<br/>This lets you detect, for example, when collection of ICE candidates has finished.
+</summary>
+<remarks>
+<para>You can detect when the value of this property changes by watching for an event of type<br/><see cref="RTCPeerConnection/icegatheringstatechange_event."/>.</para>
+<para>-<see cref="RTCPeerConnection/icegatheringstatechange_event."/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/iceGatheringState"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The possible values are:</value>
+</RTCPeerConnectionIceGatheringState>
+</docs>

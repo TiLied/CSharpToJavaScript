@@ -1,0 +1,13 @@
+<docs>
+<AbortSignalThrowIfAborted>
+<summary>
+The <strong><c>throwIfAborted()</c></strong> method throws the signal's abort <see cref="AbortSignal.Reason."/> if the signal has been aborted; otherwise it does nothing.
+</summary>
+<remarks>
+<para>An API that needs to support aborting can accept an <see cref="AbortSignal."/> object and use <c>throwIfAborted()</c> to test and throw when the <see href="https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal/abort_event"><c>abort</c></see> event is signalled.</para><para>This method can also be used to abort operations at particular points in code, rather than passing to functions that take a signal.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal/throwIfAborted"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</AbortSignalThrowIfAborted>
+</docs>

@@ -1,0 +1,13 @@
+<docs>
+<CSSCounter-reset>
+<summary>
+The <strong><c>counter-reset</c></strong> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</see> property creates named <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters">CSS counters</see> and initializes them to a specific value. It supports creating counters that count up from one to the number of elements, as well as those that count down from the number of elements to one.
+</summary>
+<remarks>
+<para>EmbedInteractiveExample("pages/css/counter-reset.html")</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters">Using CSS Counters</see> guide<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/counter-increment">counter-increment</see> property<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/counter-set">counter-set</see> property<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@counter-style">@counter-style</see> at-rule<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/counter">counter</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/counters">counters</see> functions<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/content">content</see> property<br/>-{{cssxref(&amp;quot;::marker&amp;quot;)}} pseudo-class<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_lists">CSS lists and counters</see> module<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_counter_styles">CSS counter styles</see> module<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/CSS/counter-reset"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <c>counter-reset</c> property accepts a list of one or more space-separated counter names or the keyword <c>none</c>. For counter names, regular counters use the format <c>&amp;lt;counter-name&amp;gt;</c>, and reversed counters use <c>reversed(&amp;lt;counter-name&amp;gt;)</c>, where <c>&amp;lt;counter-name&amp;gt;</c> is a {{cssxref(&amp;quot;custom-ident&amp;quot;, &amp;quot;&amp;lt;custom-ident&amp;gt;&amp;quot;)}} or <c>list-item</c> for the built-in <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol">ol</see> counter. Optionally, each counter name can be followed by an <c>&amp;lt;integer&amp;gt;</c> to set its initial value.</value>
+</CSSCounter-reset>
+</docs>

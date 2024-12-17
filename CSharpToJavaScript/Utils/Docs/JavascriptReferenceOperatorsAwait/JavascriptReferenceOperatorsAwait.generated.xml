@@ -1,0 +1,12 @@
+<docs>
+<JavaScriptReferenceOperatorsAwait>
+<summary>
+The <strong><c>await</c></strong> operator is used to wait for a <see cref="Promise"/> and get its fulfillment value. It can only be used inside an <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function">async function</see> or at the top level of a <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules">module</see>.
+</summary>
+<remarks>
+<para>-<see cref="Statements/async_function"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/async_function"><c>async function</c> expression</see><br/>-<see cref="AsyncFunction"/><br/>-<see href="https://v8.dev/features/top-level-await">Top-level await</see> on v8.dev (2019)<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>The fulfillment value of the promise or thenable object, or, if the expression is not thenable, the expression&amp;apos;s own value.</returns>
+</JavaScriptReferenceOperatorsAwait>
+</docs>

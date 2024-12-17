@@ -1,0 +1,13 @@
+<docs>
+<RTCRtpScriptTransformerReadable>
+<summary>
+The <strong><c>readable</c></strong> read-only property of the <see cref="RTCRtpScriptTransformer."/> interface returns a <see cref="ReadableStream."/> instance is a source for encoded media frames.
+</summary>
+<remarks>
+<para>When the corresponding <see cref="RTCRtpScriptTransform."/> is inserted into the WebRTC sender and receiver pipelines, this stream may be enqueued with outgoing or incoming encoded media frames (<see cref="RTCEncodedVideoFrame."/> or <see cref="RTCEncodedAudioFrame."/>).<br/>A WebRTC encoded transform can read the frames, modify them as needed, and then send them back into the WebRTC pipeline by writing them to <see cref="RTCRtpScriptTransformer.Writable."/>.<br/>A common way to perform this operation is to pipe the frames through a <see cref="TransformStream."/>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms">Using WebRTC Encoded Transforms</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpScriptTransformer/readable"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="ReadableStream."/>.</value>
+</RTCRtpScriptTransformerReadable>
+</docs>

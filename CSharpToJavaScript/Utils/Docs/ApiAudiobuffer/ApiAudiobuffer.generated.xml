@@ -1,0 +1,12 @@
+<docs>
+<AudioBuffer>
+<summary>
+The <strong><c>AudioBuffer</c></strong> interface represents a short audio asset residing in memory, created from an audio file using the <see cref="BaseAudioContext/decodeAudioData."/> method, or from raw data using <see cref="BaseAudioContext/createBuffer."/>. Once put into an AudioBuffer, the audio can then be played by being passed into an <see cref="AudioBufferSourceNode."/>.
+</summary>
+<remarks>
+<para>Objects of these types are designed to hold small audio snippets, typically less than 45 s. For longer sounds, objects implementing the <see cref="MediaElementAudioSourceNode."/> are more suitable. The buffer contains the audio signal waveform encoded as a series of amplitudes in the following format: non-interleaved IEEE754 32-bit linear PCM with a nominal range between <c>-1</c> and <c>+1</c>, that is, a 32-bit floating point buffer, with each sample between -1.0 and 1.0. If the <see cref="AudioBuffer."/> has multiple channels, they are stored in separate buffers.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioBuffer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</AudioBuffer>
+</docs>

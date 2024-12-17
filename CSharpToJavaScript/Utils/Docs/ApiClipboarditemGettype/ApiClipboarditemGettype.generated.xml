@@ -1,0 +1,12 @@
+<docs>
+<ClipboardItemGetType>
+<summary>
+The <strong><c>getType()</c></strong> method of the <see cref="ClipboardItem."/> interface returns a {{jsxref("Promise")}} that resolves with a <see cref="Blob."/> of the requested {{Glossary("MIME type")}} or an error if the MIME type is not found.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API">Clipboard API</see><br/>-<see href="https://async-clipboard-api.glitch.me/">Async Clipboard API demo on Glitch</see><br/>-<see href="https://web.dev/articles/async-clipboard">Image support for Async Clipboard article</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ClipboardItem/getType"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that resolves with a <see cref="Blob."/> object.</returns>
+</ClipboardItemGetType>
+</docs>

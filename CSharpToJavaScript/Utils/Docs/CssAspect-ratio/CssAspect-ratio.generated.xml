@@ -1,0 +1,12 @@
+<docs>
+<CSSAspect-ratio>
+<summary>
+The <strong><c>aspect-ratio</c></strong> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</see> property allows you to define the desired width-to-height ratio of an element&amp;apos;s box. This means that even if the parent container or viewport size changes, the browser will adjust the element&amp;apos;s dimensions to maintain the specified width-to-height ratio. The specified aspect ratio is used in the calculation of auto sizes and some other layout functions.
+</summary>
+<remarks>
+<para>At least one of the box&amp;apos;s sizes needs to be automatic in order for <c>aspect-ratio</c> to have any effect. If neither the width nor height is an automatic size, then the provided aspect ratio has no effect on the box&amp;apos;s preferred sizes.</para><para>EmbedInteractiveExample("pages/css/aspect-ratio.html")</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Learn/Performance/Multimedia#rendering_strategy_preventing_jank_when_loading_images">Image aspect-ratio: preventing jank</see><br/>-<see href="https://www.smashingmagazine.com/2019/03/aspect-ratio-unit-css/">Designing an aspect ratio unit for CSS</see><br/>-<see href="https://www.smashingmagazine.com/2020/03/setting-height-width-images-important-again/">Setting Height And Width On Images Is Important Again</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CSSAspect-ratio>
+</docs>

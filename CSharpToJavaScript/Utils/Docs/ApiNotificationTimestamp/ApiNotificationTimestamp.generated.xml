@@ -1,0 +1,13 @@
+<docs>
+<NotificationTimestamp>
+<summary>
+The <strong><c>timestamp</c></strong> read-only property of the<br/><see cref="Notification."/> interface returns a number, as<br/>specified in the <c>timestamp</c> option of the<br/><see cref="Notification.Notification."/> constructor.
+</summary>
+<remarks>
+<para>The notification&amp;apos;s timestamp can represent the time, in milliseconds since 00:00:00 UTC<br/>on 1 January 1970, of the event for which the notification was created, or it can be an<br/>arbitrary timestamp that you want associated with the notification. For example, a<br/>timestamp for an upcoming meeting could be set in the future, whereas a timestamp for a<br/>missed message could be set in the past.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/timestamp"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number representing a timestamp, given as <see href="https://developer.mozilla.org/en-US/docs/Glossary/Unix_time">Unix time</see> in milliseconds.</value>
+</NotificationTimestamp>
+</docs>

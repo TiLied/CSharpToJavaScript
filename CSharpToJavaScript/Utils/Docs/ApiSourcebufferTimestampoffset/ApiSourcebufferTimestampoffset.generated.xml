@@ -1,0 +1,13 @@
+<docs>
+<SourceBufferTimestampOffset>
+<summary>
+The <strong><c>timestampOffset</c></strong> property of the<br/><see cref="SourceBuffer."/> interface controls the offset applied to timestamps inside<br/>media segments that are appended to the <c>SourceBuffer</c>.
+</summary>
+<remarks>
+<para>The initial value of <c>timestampOffset</c> is 0.</para>
+<para>-<see cref="MediaSource."/><br/>-<see cref="SourceBufferList."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/timestampOffset"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A double, with the offset amount expressed in seconds.</value>
+</SourceBufferTimestampOffset>
+</docs>

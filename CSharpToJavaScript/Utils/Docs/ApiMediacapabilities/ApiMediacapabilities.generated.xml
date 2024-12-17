@@ -1,0 +1,12 @@
+<docs>
+<MediaCapabilities>
+<summary>
+The <strong><c>MediaCapabilities</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capabilities_API">Media Capabilities API</see> provides information about the decoding abilities of the device, system and browser. The API can be used to query the browser about the decoding abilities of the device based on codecs, profile, resolution, and bitrates. The information can be used to serve optimal media streams to the user and determine if playback should be smooth and power efficient.
+</summary>
+<remarks>
+<para>The information is accessed through the <strong><c>mediaCapabilities</c></strong> property of the <see cref="Navigator."/> interface.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement">HTMLMediaElement</see>&amp;apos;s method <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/canPlayType">canPlayType()</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/MediaSource">MediaSource</see>&amp;apos;s method <see href="https://developer.mozilla.org/en-US/docs/Web/API/MediaSource/isTypeSupported_static">isTypeSupported()</see><br/>-<see cref="Navigator."/> interface<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaCapabilities"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</MediaCapabilities>
+</docs>

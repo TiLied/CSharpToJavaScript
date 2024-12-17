@@ -1,0 +1,13 @@
+<docs>
+<RTCInboundRtpStreamStatsPliCount>
+<summary>
+The <strong><c>pliCount</c></strong> property of the<br/><see cref="RTCInboundRtpStreamStats."/> dictionary states the number of times the<br/><see cref="RTCRtpReceiver."/> described by these statistics sent a <strong>Picture</strong><strong><br/></strong><strong>Loss Indication</strong> (<strong>PLI</strong>) packet to the sender.
+</summary>
+<remarks>
+<para>A PLI<br/>packet indicates that some amount of encoded video data has been lost for one or more<br/>frames.</para>
+<para>-{{RFC(4585, &amp;quot;&amp;quot;, &amp;quot;6.3.1&amp;quot;)}}: Definition of &amp;quot;PLI messages&amp;quot; in the document <strong>Extended</strong><strong><br/></strong><strong>RTP Profile for Real-time Transport Control Protocol (RTCP)-Based Feedback</strong><strong><br/></strong><strong>(RTP/AVPF)</strong>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/pliCount"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer value indicating the number of times a PLI packet was sent by the<br/><see cref="RTCRtpReceiver."/> to the sender. These are sent by the receiver's decoder to<br/>notify the encoder (the sender) that an undefined amount of coded video data, which may<br/>span frame boundaries, has been lost. This information is only available for video<br/>streams.This may trigger the sender to send a full frame in order to allow the receiver to<br/>re-synchronize, since lost data may be an irrecoverable situation for decoding media.<br/>However, the primary purpose of this message is to allow the sender to consider<br/>techniques to mitigate network performance issues. This is often achieved by methods<br/>such as increasing the compression, lowering resolution, or finding other ways to reduce<br/>the bit rate of the stream.</value>
+</RTCInboundRtpStreamStatsPliCount>
+</docs>

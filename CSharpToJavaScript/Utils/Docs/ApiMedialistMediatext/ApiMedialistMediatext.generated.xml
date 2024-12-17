@@ -1,0 +1,11 @@
+<docs>
+<MediaListMediaText>
+<summary>
+The <strong><c>mediaText</c></strong> property of the <see cref="MediaList."/><br/>interface is a <see href="https://developer.mozilla.org/en-US/docs/Glossary/stringifier">stringifier</see> that returns a string representing the<br/><c>MediaList</c> as text, and also allows you to set a new <c>MediaList</c>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaList/mediaText"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing the media queries of a stylesheet. Each one is<br/>separated by a comma, for example<br/><c>screen and (min-width: 480px), print</c>.If you wish to set new media queries on the document, the string value must have the<br/>different queries separated by commas, e.g. <c>screen, print</c>. Note that the<br/><c>MediaList</c> is a live list; updating the list via<br/><c>mediaText</c> will immediately update the behavior of the<br/>document.Also note that is you try to set<br/><c>mediaText</c> to <c>null</c>, it will be treated as an empty<br/>string, i.e. the value will be set to<br/><c>&amp;quot;&amp;quot;</c>.</value>
+</MediaListMediaText>
+</docs>

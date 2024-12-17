@@ -1,0 +1,13 @@
+<docs>
+<GPUDeviceLimits>
+<summary>
+The <strong><c>limits</c></strong> read-only property of the<br/><see cref="GPUDevice."/> interface returns a <see cref="GPUSupportedLimits."/> object that describes the limits supported by the device. All limit values will be included, and the limits requested during the creation of the device (i.e. when <see cref="GPUAdapter.RequestDevice."/> is called) will be reflected in those values.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Not all limits will be reported as expected, even if they are supported by the underlying hardware. See <see cref="GPUAdapter.Limits."/> for more details.</para></blockquote>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUDevice/limits"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="GPUSupportedLimits."/> object instance.</value>
+</GPUDeviceLimits>
+</docs>

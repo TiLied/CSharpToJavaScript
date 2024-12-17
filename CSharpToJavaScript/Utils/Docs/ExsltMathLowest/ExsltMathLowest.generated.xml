@@ -1,0 +1,12 @@
+<docs>
+<EXSLTMathLowest>
+<summary>
+<c>math:lowest()</c> returns the node in the specified node-set with the lowest value (where the lowest value calculated using <see href="https://developer.mozilla.org/en-US/docs/Web/EXSLT/math/min"><c>math:min()</c></see>).
+</summary>
+<remarks>
+<para>A node has this minimum value if converting its string value to a number equals the minimum value.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/EXSLT/math/lowest"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A result tree fragment consisting of copies of the nodes returned by <see href="https://developer.mozilla.org/en-US/docs/Web/EXSLT/math/min"><c>math:min()</c></see>.</returns>
+</EXSLTMathLowest>
+</docs>

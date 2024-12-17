@@ -1,0 +1,13 @@
+<docs>
+<CanvasRenderingContext2DMiterLimit>
+<summary>
+The <strong><c>CanvasRenderingContext2D.miterLimit</c></strong> property of the<br/>Canvas 2D API sets the miter limit ratio.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> For more info about miters, see <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">Applying styles and color</see> in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas tutorial</see>.</para></blockquote>
+<para>-The interface defining this property: <see cref="CanvasRenderingContext2D."/><br/>-<see cref="CanvasRenderingContext2D.LineCap."/><br/>-<see cref="CanvasRenderingContext2D.LineJoin."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/miterLimit"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number specifying the miter limit ratio, in coordinate space units. Zero, negative, <see cref="Infinity"/>, and <see cref="NaN"/> values are ignored. The default value is <c>10.0</c>.</value>
+</CanvasRenderingContext2DMiterLimit>
+</docs>

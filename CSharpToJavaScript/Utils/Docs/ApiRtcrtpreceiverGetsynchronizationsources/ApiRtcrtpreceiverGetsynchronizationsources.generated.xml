@@ -1,0 +1,11 @@
+<docs>
+<RTCRtpReceiverGetSynchronizationSources>
+<summary>
+The <strong><c>getSynchronizationSources()</c></strong> method of the <see cref="RTCRtpReceiver."/> interface returns an array of objects, each corresponding to one SSRC (synchronization source) identifier received by the current <c>RTCRtpReceiver</c> in the last ten seconds.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpReceiver/getSynchronizationSources"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An array of objects, each describing one of the synchronization sources that provided data to the incoming stream in the past ten seconds.<br/>These objects contain the following properties:</returns>
+</RTCRtpReceiverGetSynchronizationSources>
+</docs>

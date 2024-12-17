@@ -1,0 +1,13 @@
+<docs>
+<NotificationLang>
+<summary>
+The <strong><c>lang</c></strong> read-only property of the<br/><see cref="Notification."/> interface indicates the language used in the notification,<br/>as specified in the <c>lang</c> option of the<br/><see cref="Notification.Notification."/> constructor.
+</summary>
+<remarks>
+<para>The language itself is specified using a string representing a language tag according to {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.<br/>See the Sitepoint <see href="https://www.sitepoint.com/iso-2-letter-language-codes/">ISO 2 letter language codes</see> page for a simple reference.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/lang"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string specifying the language tag.</value>
+</NotificationLang>
+</docs>

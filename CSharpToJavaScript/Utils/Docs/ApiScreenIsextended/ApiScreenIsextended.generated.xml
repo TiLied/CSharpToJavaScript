@@ -1,0 +1,13 @@
+<docs>
+<ScreenIsExtended>
+<summary>
+The <strong><c>isExtended</c></strong> read-only property of the<br/><see cref="Screen."/> interface returns <c>true</c> if the user&amp;apos;s device has multiple screens, and <c>false</c> if not.
+</summary>
+<remarks>
+<para>This property is typically accessed via <c>window.screen.isExtended</c>, and can be used to test whether multiple screens are available before attempting to create a multi-window, multi-screen layout using the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Window_Management_API">Window Management API</see>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Window_Management_API">Window Management API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Screen/isExtended"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value — <c>true</c> if the device has multiple screens, and <c>false</c> if not.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> If a <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy/window-management">Permissions-Policy/window-management</see> <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Permissions_Policy">Permissions-Policy</see> is set that blocks use the Window Management API, <c>isExtended</c> will always return <c>false</c>.</blockquote></value>
+</ScreenIsExtended>
+</docs>

@@ -1,0 +1,11 @@
+<docs>
+<RTCTransformEvent>
+<summary>
+The <strong><c>RTCTransformEvent</c></strong> of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see> represent an event that is fired in a dedicated worker when an encoded frame has been queued for processing by a <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms">WebRTC Encoded Transform</see>.
+</summary>
+<remarks>
+<para>The interface has a <see cref="RTCTransformEvent.Transformer."/> property that exposes a readable stream and a writable stream.<br/>A worker should read encoded frames from <c>transformer.readable</c>, modify them as needed, and write them to <c>transformer.writable</c> in the same order and without any duplication.</para><para>At time of writing there is just one event based on <c>RTCTransformEvent</c>: <see cref="DedicatedWorkerGlobalScope.Rtctransform_event."/>.</para><para></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTransformEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RTCTransformEvent>
+</docs>

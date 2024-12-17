@@ -1,0 +1,12 @@
+<docs>
+<HTTPHeadersX-Frame-Options>
+<summary>
+The <strong><c>X-Frame-Options</c></strong> <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see> response header can be used to indicate whether or not a browser should be allowed to render a page in a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/frame">frame</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/embed">embed</see> or <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object">object</see>. Sites can use this to avoid <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Types_of_attacks#click-jacking">click-jacking</see> attacks, by ensuring that their content is not embedded into other sites.
+</summary>
+<remarks>
+<para>The added security is provided only if the user accessing the document is using a browser that supports <c>X-Frame-Options</c>.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> The <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy">Content-Security-Policy</see> HTTP header has a <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors">Content-Security-Policy/frame-ancestors</see> directive which <see href="https://w3c.github.io/webappsec-csp/#frame-ancestors-and-frame-options">obsoletes</see> this header for supporting browsers.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy">Content-Security-Policy</see> directive <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors">Content-Security-Policy/frame-ancestors</see><br/>-<see href="https://docs.microsoft.com/archive/blogs/ie/ie8-security-part-vii-clickjacking-defenses">ClickJacking Defenses - IEBlog</see><br/>-<see href="https://docs.microsoft.com/archive/blogs/ieinternals/combating-clickjacking-with-x-frame-options">Combating ClickJacking with X-Frame-Options - IEInternals</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPHeadersX-Frame-Options>
+</docs>

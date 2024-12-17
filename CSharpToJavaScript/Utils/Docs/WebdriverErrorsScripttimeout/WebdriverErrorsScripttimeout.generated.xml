@@ -1,0 +1,12 @@
+<docs>
+<WebDriverErrorsScriptTimeout>
+<summary>
+The <strong>script timeout</strong> error is a <see href="https://developer.mozilla.org/en-US/docs/Web/WebDriver/Errors">WebDriver error</see> that occurs when a script the user has provided did not complete before the session&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/WebDriver/Capabilities#script-timeout">script timeout</see> duration expired.
+</summary>
+<remarks>
+<para>The script timeout duration is a configurable capability, which means you can change how long it will take before the driver interrupts an injected script. The driver will by default wait 30 seconds before interrupting the script and returning with a script timeout error, but this can be both extended, limited, and be set to indefinite.</para><para>If the session script timeout duration is set to indefinite by using a <c>null</c> value, you are at risk of putting the session into a non-recoverable state. Be aware that this should be used with caution.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/WebDriver/Errors">List of WebDriver errors</see><br/>-Associated commands and types:-<see href="https://developer.mozilla.org/en-US/docs/Web/WebDriver/Errors/JavaScriptError">JavaScript error</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/WebDriver/Commands/ExecuteScript">Execute Script</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/WebDriver/Commands/ExecuteAsyncScript">Execute Async Script</see><br/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/WebDriver/Errors/ScriptTimeout"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebDriverErrorsScriptTimeout>
+</docs>

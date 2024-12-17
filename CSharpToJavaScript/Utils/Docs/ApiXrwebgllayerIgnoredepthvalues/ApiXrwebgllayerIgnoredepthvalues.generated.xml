@@ -1,0 +1,13 @@
+<docs>
+<XRWebGLLayerIgnoreDepthValues>
+<summary>
+The read-only <see cref="XRWebGLLayer."/> property<br/><strong><c>ignoreDepthValues</c></strong> is a Boolean value which is<br/><c>true</c> if the session has been configured to ignore the values in the depth<br/>buffer while rendering the scene. If the depth buffer is being used to determine the<br/>position of vertices, this property is <c>false</c>.
+</summary>
+<remarks>
+<para>The value of <c>ignoreDepthValues</c> can only be set when the<br/><see cref="XRWebGLLayer."/> is instantiated, by setting the corresponding value in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/XRWebGLLayer">constructor&amp;apos;s</see> <c>options</c> parameter.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</see><br/>-WebGL depth buffer related methods: {{domxref(&amp;quot;WebGLRenderingContext.depthFunc&amp;quot;,<br/>"depthFunc()")}}, <see cref="WebGLRenderingContext.ClearDepth."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/ignoreDepthValues"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A Boolean value which is <c>true</c> if the WebGL context&amp;apos;s depth buffer is being<br/>used while computing the locations of points in the 3D world. Otherwise, if this is<br/><c>true</c>, the depth buffer&amp;apos;s values are being used to assist in placing objects<br/>in the scene. Since the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Fundamentals#the_webxr_compositor">XR compositor</see> uses the depth buffer by default, this value is <c>false</c><br/>unless explicitly set otherwise when creating the <see cref="XRWebGLLayer."/> using its<br/>constructor, <see cref="XRWebGLLayer.XRWebGLLayer."/>.</value>
+</XRWebGLLayerIgnoreDepthValues>
+</docs>

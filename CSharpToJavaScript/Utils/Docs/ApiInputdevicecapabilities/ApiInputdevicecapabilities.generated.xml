@@ -1,0 +1,11 @@
+<docs>
+<InputDeviceCapabilities>
+<summary>
+The <strong><c>InputDeviceCapabilities</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/InputDeviceCapabilities_API">Input Device Capabilities API</see> provides information about the physical device or a group of related devices responsible for generating input events. Events caused by the same physical input device get the same instance of this object, but the converse isn&amp;apos;t true. For example, two mice with the same capabilities in a system may appear as a single <c>InputDeviceCapabilities</c> instance.
+</summary>
+<remarks>
+<para>In some instances, <c>InputDeviceCapabilities</c> represents the capabilities of logical devices rather than physical devices. This allows, for example, touchscreen keyboards and physical keyboards to be represented the same way when they produce the same input.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/InputDeviceCapabilities"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</InputDeviceCapabilities>
+</docs>

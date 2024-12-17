@@ -1,0 +1,12 @@
+<docs>
+<SVGAttributeKeySplines>
+<summary>
+The <strong><c>keySplines</c></strong> attribute defines a set of <see href="https://developer.mozilla.org/en-US/docs/Glossary/Bezier_curve">Bézier curve</see> control points associated with the keyTimes list, defining a cubic Bézier function that controls interval pacing.
+</summary>
+<remarks>
+<para>This attribute is ignored unless the calcMode attribute is set to <c>spline</c>.</para><para>If there are any errors in the keySplines specification (bad values, too many or too few values), the animation will not occur.</para><para>You can use this attribute with the following SVG elements:</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Glossary/Bezier_curve">Bézier curve</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/keySplines"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</SVGAttributeKeySplines>
+</docs>

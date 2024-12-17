@@ -1,0 +1,12 @@
+<docs>
+<HTTPHeadersFrom>
+<summary>
+The <strong><c>From</c></strong> request header contains an Internet email<br/>address for a human user who controls the requesting user agent.
+</summary>
+<remarks>
+<para>If you are running a robotic user agent (e.g. a crawler), the <c>From</c> header<br/>must be sent, so you can be contacted if problems occur on servers, such as if the<br/>robot is sending excessive, unwanted, or invalid requests.</para><blockquote class="WARNING"><h5>WARNING</h5><para><strong>Warning:</strong> You must not use the <c>From</c> header for access control or authentication.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Host">Host</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/From"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTTPHeadersFrom>
+</docs>

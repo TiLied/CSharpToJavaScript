@@ -1,0 +1,11 @@
+<docs>
+<NotificationEventNotification>
+<summary>
+The <c>notification</c> read-only property of the <see cref="NotificationEvent."/> interface returns the instance of the <see cref="Notification."/> that was clicked to fire the event. The <see cref="Notification."/> provides read-only access to many properties that were set at the instantiation time of the Notification such as <c>tag</c> and <c>data</c> attributes that allow you to store information for deferred use in the <c>notificationclick</c> event.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NotificationEvent/notification"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Notification."/> object.</value>
+</NotificationEventNotification>
+</docs>

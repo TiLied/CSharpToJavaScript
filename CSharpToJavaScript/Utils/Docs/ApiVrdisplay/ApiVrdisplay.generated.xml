@@ -1,0 +1,12 @@
+<docs>
+<VRDisplay>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>VRDisplay</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API">WebVR API</see> represents any VR device supported by this API. It includes generic information such as device IDs and descriptions, as well as methods for starting to present a VR scene, retrieving eye parameters and display capabilities, and other important functionality.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This interface was part of the old <see href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</see>. It has been superseded by the <see href="https://immersive-web.github.io/webxr/">WebXR Device API</see>.</para></blockquote><para>An array of all connected VR Devices can be returned by invoking the <see cref="Navigator.GetVRDisplays."/> method.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API">WebVR API homepage</see><br/>-<see href="https://mixedreality.mozilla.org/"/> — demos, downloads, and other resources from the Mozilla VR team.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VRDisplay"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</VRDisplay>
+</docs>

@@ -1,0 +1,13 @@
+<docs>
+<WindowPostMessage>
+<summary>
+The <strong><c>window.postMessage()</c></strong> method safely enables<br/>cross-origin communication between <see cref="Window."/> objects; <strong>e.g.,</strong> between<br/>a page and a pop-up that it spawned, or between a page and an iframe embedded within it.
+</summary>
+<remarks>
+<para>Normally, scripts on different pages are allowed to access each other if and only if<br/>the pages they originate from share the same protocol, port number, and host (also known<br/>as the &amp;quot;<see href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy">same-origin policy</see>&amp;quot;).<br/><c>window.postMessage()</c> provides a controlled mechanism to securely circumvent this restriction (if used properly).</para><para>Broadly, one window may obtain a reference to another (<strong>e.g.,</strong> via<br/><c>targetWindow = window.opener</c>), and then dispatch a<br/><see cref="MessageEvent."/> on it with <c>targetWindow.postMessage()</c>. The<br/>receiving window is then free to <see href="https://developer.mozilla.org/en-US/docs/Web/Events/Event_handlers">handle this event</see> as needed. The arguments passed to <c>window.postMessage()</c><br/>(<strong>i.e.,</strong> the &amp;quot;message&amp;quot;) are <see href="https://developer.mozilla.org#the_dispatched_event">exposed to the receiving window through the event object</see>.</para>
+<para>-<see cref="Document.Domain."/><br/>-<see cref="CustomEvent."/><br/>-<see cref="BroadcastChannel."/> - For same-origin communication.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WindowPostMessage>
+</docs>

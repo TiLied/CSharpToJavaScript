@@ -1,0 +1,11 @@
+<docs>
+<XPathResultSingleNodeValue>
+<summary>
+The read-only <strong><c>singleNodeValue</c></strong> property of the<br/><see cref="XPathResult."/> interface returns a <see cref="Node."/> value or<br/><c>null</c> in case no node was matched of a result with<br/><see cref="XPathResult.ResultType."/> being <c>ANY_UNORDERED_NODE_TYPE</c> or<br/><c>FIRST_ORDERED_NODE_TYPE</c>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XPathResult/singleNodeValue"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The return value is the <see cref="Node."/> value of the <c>XPathResult</c><br/>returned by <see cref="Document.Evaluate."/>.</value>
+</XPathResultSingleNodeValue>
+</docs>

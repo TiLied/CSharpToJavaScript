@@ -1,0 +1,13 @@
+<docs>
+<IDBCursorDelete>
+<summary>
+The <strong><c>delete()</c></strong> method of the <see cref="IDBCursor."/><br/>interface returns an <see cref="IDBRequest."/> object, and, in a separate thread,<br/>deletes the record at the cursor&amp;apos;s position, without changing the cursor&amp;apos;s position.<br/>Once the record is deleted, the cursor&amp;apos;s value is set to null.
+</summary>
+<remarks>
+<para>Be aware that you can&amp;apos;t call <c>delete()</c> (or<br/><see cref="IDBCursor.Update."/>) on cursors obtained from<br/><see cref="IDBIndex.OpenKeyCursor."/>. For such needs, you have to use<br/><see cref="IDBIndex.OpenCursor."/> instead.</para><para>AvailableInWorkers</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase."/><br/>-Using transactions: <see cref="IDBTransaction."/><br/>-Setting a range of keys: <see cref="IDBKeyRange."/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore."/><br/>-Using cursors: <see cref="IDBCursor."/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBCursor/delete"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="IDBRequest."/> object on which subsequent events related to this<br/>operation are fired.If the operation is successful, the value of the request's <see cref="IDBRequest.Result."/> property is <c>undefined</c>.</returns>
+</IDBCursorDelete>
+</docs>

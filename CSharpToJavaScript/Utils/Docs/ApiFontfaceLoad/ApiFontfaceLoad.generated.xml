@@ -1,0 +1,12 @@
+<docs>
+<FontFaceLoad>
+<summary>
+The <strong><c>load()</c></strong> method of the <see cref="FontFace."/> interface requests and loads a font whose <c>source</c> was specified as a URL. It returns a <see cref="'Promise'"/> that resolves with the current <c>FontFace</c> object.
+</summary>
+<remarks>
+<para>If the <c>source</c> for the font face was specified as binary data, or the font <see cref="FontFace/status."/> property of the font face is anything other than <c>unloaded</c>, then this method does nothing.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FontFace/load"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="'Promise'"/> that resolves with a reference to the current <c>FontFace</c> object when the font loads or rejects with a <c>NetworkError</c> <see cref="DOMException."/> if the loading process fails.</returns>
+</FontFaceLoad>
+</docs>

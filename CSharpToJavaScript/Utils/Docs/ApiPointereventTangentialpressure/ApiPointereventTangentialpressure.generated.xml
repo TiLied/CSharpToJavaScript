@@ -1,0 +1,12 @@
+<docs>
+<PointerEventTangentialPressure>
+<summary>
+The <strong><c>tangentialPressure</c></strong> read-only property of the<br/><see cref="PointerEvent."/> interface represents the normalized tangential pressure of<br/>the pointer input (also known as barrel pressure or <see href="https://en.wikipedia.org/wiki/Cylinder_stress">cylinder stress</see>).
+</summary>
+<remarks>
+<para>-<see cref="Touch.Force."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/tangentialPressure"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <c>float</c> representing the normalized tangential pressure of the pointer<br/>input in the range <c>-1</c> to <c>1</c>, inclusive, where <c>0</c> is<br/>the neutral position of the control.Note that some hardware may only support positive values in the range <c>0</c> to<br/><c>1</c>. For hardware that does not support tangential pressure, the value will<br/>be <c>0</c>.</value>
+</PointerEventTangentialPressure>
+</docs>

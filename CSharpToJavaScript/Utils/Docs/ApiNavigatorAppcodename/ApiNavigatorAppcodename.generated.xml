@@ -1,0 +1,13 @@
+<docs>
+<NavigatorAppCodeName>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The value of the <strong><c>Navigator.appCodeName</c></strong> property is<br/>always &amp;quot;<c>Mozilla</c>&amp;quot;, in any browser. This property is kept only for<br/>compatibility purposes.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Do not rely on this property to return a real<br/>product name. All browsers return &amp;quot;<c>Mozilla</c>&amp;quot; as the value of this property.</para></blockquote>
+<para>-<see cref="Navigator.AppName."/><br/>-<see cref="Navigator.Product."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/appCodeName"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The string &amp;quot;<c>Mozilla</c>&amp;quot;.</value>
+</NavigatorAppCodeName>
+</docs>

@@ -1,0 +1,12 @@
+<docs>
+<IdleDeadline>
+<summary>
+The <c>IdleDeadline</c> interface is used as the data type of the input parameter to idle callbacks established by calling <see cref="Window.RequestIdleCallback."/>. It offers a method, <see cref="IdleDeadline.TimeRemaining."/>, which lets you determine how much longer the user agent estimates it will remain idle and a property, <see cref="IdleDeadline.DidTimeout."/>, which lets you determine if your callback is executing because its timeout duration expired.
+</summary>
+<remarks>
+<para>To learn more about how request callbacks work, see <see href="https://developer.mozilla.org/en-US/docs/Web/API/Background_Tasks_API">Collaborative Scheduling of Background Tasks</see>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Background_Tasks_API">Cooperative Scheduling of Background Tasks API</see><br/>-<see cref="Window.RequestIdleCallback."/><br/>-<see cref="Window.CancelIdleCallback."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IdleDeadline"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</IdleDeadline>
+</docs>

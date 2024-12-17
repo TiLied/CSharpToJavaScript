@@ -1,0 +1,12 @@
+<docs>
+<WindowOpen>
+<summary>
+The <strong><c>open()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Window"><c>Window</c></see> interface loads a specified resource into a new or existing browsing context (that is, a tab, a window, or an <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</see>) under a specified name.
+</summary>
+<remarks>
+<para>-<c>target</c> attribute documentation:-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#target"><c>&amp;lt;a&amp;gt;</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form#target"><c>&amp;lt;form&amp;gt;</c></see><br/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Window/close"><c>window.close()</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Window/closed"><c>window.closed</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Window/focus"><c>window.focus()</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Window/opener"><c>window.opener</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel#opener"><c>rel=&amp;quot;opener&amp;quot;</c></see> and <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel#noopener"><c>rel=&amp;quot;noopener&amp;quot;</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy">Same-origin policy</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Window/open"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>If the browser successfully opens the new browsing context, a <see href="https://developer.mozilla.org/en-US/docs/Glossary/WindowProxy"><c>WindowProxy</c></see> object is returned. The returned reference can be used to access properties and methods of the new context as long as it complies with <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy">the same-origin policy</see> security requirements.<c>null</c> is returned if the browser fails to open the new browsing context, for example because it was blocked by a browser popup blocker.</returns>
+</WindowOpen>
+</docs>

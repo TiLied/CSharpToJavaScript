@@ -50,7 +50,7 @@ public class Program
 	}
 }
 ```
-test.cs
+CSharp/test.cs
 ```csharp
 namespace ConsoleAppTest.CSharp;
 

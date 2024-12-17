@@ -1,4 +1,4 @@
-//08.04.2024 15:51:25
+//09.04.2024 17:35:30
 using static CSharpToJavaScript.APIs.JS.GlobalObject;
 using CSharpToJavaScript.Utils;
 using System.Collections.Generic;
@@ -12,45 +12,45 @@ using WindowProxy = Window;
 
 using ClipboardItemData = Task<string>;
 using ClipboardItems = List<ClipboardItem>;
-using PasswordCredentialInit = Union2;
-using BinaryData = Union4;
-using LayoutFragmentRequestOrIntrinsicSizesRequest = Union7;
-using CSSUnparsedSegment = Union14;
-using CSSKeywordish = Union15;
-using CSSNumberish = Union16;
-using CSSPerspectiveValue = Union17;
-using CSSColorRGBComp = Union19;
-using CSSColorPercent = Union20;
-using CSSColorNumber = Union21;
-using CSSColorAngle = Union22;
-using HeadersInit = Union31;
-using XMLHttpRequestBodyInit = Union32;
-using BodyInit = Union33;
-using RequestInfo = Union34;
-using FileSystemWriteChunkType = Union36;
-using BlobPart = Union37;
-using HTMLOrSVGScriptElement = Union46;
-using MediaProvider = Union48;
-using RenderingContext = Union55;
-using HTMLOrSVGImageElement = Union56;
-using CanvasImageSource = Union57;
-using OffscreenRenderingContext = Union64;
+using PasswordCredentialInit = Union0;
+using BinaryData = Union2;
+using LayoutFragmentRequestOrIntrinsicSizesRequest = Union5;
+using CSSUnparsedSegment = Union12;
+using CSSKeywordish = Union13;
+using CSSNumberish = Union14;
+using CSSPerspectiveValue = Union15;
+using CSSColorRGBComp = Union17;
+using CSSColorPercent = Union18;
+using CSSColorNumber = Union19;
+using CSSColorAngle = Union20;
+using HeadersInit = Union32;
+using XMLHttpRequestBodyInit = Union33;
+using BodyInit = Union34;
+using RequestInfo = Union35;
+using FileSystemWriteChunkType = Union37;
+using BlobPart = Union38;
+using HTMLOrSVGScriptElement = Union48;
+using MediaProvider = Union50;
+using RenderingContext = Union57;
+using HTMLOrSVGImageElement = Union58;
+using CanvasImageSource = Union59;
+using OffscreenRenderingContext = Union66;
 using EventHandler = EventHandlerNonNull;
 using OnErrorEventHandler = OnErrorEventHandlerNonNull;
 using OnBeforeUnloadEventHandler = OnBeforeUnloadEventHandlerNonNull;
-using TimerHandler = Union69;
-using ImageBitmapSource = Union70;
-using MessageEventSource = Union71;
-using ConstrainPoint2D = Union81;
-using RotationMatrixType = Union82;
+using TimerHandler = Union71;
+using ImageBitmapSource = Union72;
+using MessageEventSource = Union73;
+using ConstrainPoint2D = Union86;
+using RotationMatrixType = Union87;
 using ReportList = List<Report>;
-using ReadableStreamReader = Union87;
-using ReadableStreamController = Union88;
-using URLPatternInput = Union89;
-using URLPatternCompatible = Union90;
-using ArrayBufferView = Union92;
-using BufferSource = Union93;
-using AllowSharedBufferSource = Union94;
+using ReadableStreamReader = Union92;
+using ReadableStreamController = Union93;
+using URLPatternInput = Union94;
+using URLPatternCompatible = Union95;
+using ArrayBufferView = Union97;
+using BufferSource = Union98;
+using AllowSharedBufferSource = Union99;
 using AuthenticationExtensionsAuthenticatorInputs = Dictionary<string, string>;
 using COSEAlgorithmIdentifier = long;
 using AuthenticatorSelectionList = List<Unsupported /*AAGUID*/>;
@@ -58,15 +58,15 @@ using AAGUID = Unsupported /*BufferSource*/;
 using AuthenticationExtensionsSupported = List<string>;
 using UvmEntry = List<ulong>;
 using UvmEntries = List<Unsupported /*UvmEntry*/>;
-using ImageBufferSource = Union99;
+using ImageBufferSource = Union105;
 using GPUBufferUsageFlags = ulong;
 using GPUMapModeFlags = ulong;
 using GPUTextureUsageFlags = ulong;
 using GPUShaderStageFlags = ulong;
-using GPUBindingResource = Union101;
+using GPUBindingResource = Union107;
 using GPUPipelineConstantValue = Number;
 using GPUColorWriteFlags = ulong;
-using GPUImageCopyExternalImageSource = Union104;
+using GPUImageCopyExternalImageSource = Union110;
 using GPUBufferDynamicOffset = ulong;
 using GPUStencilValue = ulong;
 using GPUSampleMask = ulong;
@@ -80,18 +80,18 @@ using GPUSize64Out = ulong;
 using GPUIntegerCoordinateOut = ulong;
 using GPUSize32Out = ulong;
 using GPUFlagsConstant = ulong;
-using GPUColor = Union106;
-using GPUOrigin2D = Union107;
-using GPUOrigin3D = Union108;
-using GPUExtent3D = Union109;
+using GPUColor = Union112;
+using GPUOrigin2D = Union113;
+using GPUOrigin3D = Union114;
+using GPUExtent3D = Union115;
 using MLNamedArrayBufferViews = Dictionary<string, Unsupported /*ArrayBufferView*/>;
 using MLNamedOperands = Dictionary<string, MLOperand>;
-using RTCRtpTransform = Union110;
+using RTCRtpTransform = Union117;
 using SmallCryptoKeyID = ulong;
-using CryptoKeyID = Union111;
-using LineAndPositionSetting = Union114;
-using XRWebGLRenderingContext = Union115;
-using FormDataEntryValue = Union116;
+using CryptoKeyID = Union118;
+using LineAndPositionSetting = Union121;
+using XRWebGLRenderingContext = Union122;
+using FormDataEntryValue = Union124;
 
 ///<include file='Utils/Docs/Accelerometer/Accelerometer.generated.xml' path='docs/Accelerometer/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -172,6 +172,18 @@ public enum AutoplayPolicyMediaType
 	Audiocontext,
 }
 
+///<include file='Utils/Docs/Navigator/Navigator.generated.xml' path='docs/Navigator/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class Navigator
+{
+	///<include file='Utils/Docs/NavigatorGetAutoplayPolicy/NavigatorGetAutoplayPolicy.generated.xml' path='docs/NavigatorGetAutoplayPolicy/*'/>
+	public AutoplayPolicy GetAutoplayPolicy(AutoplayPolicyMediaType type) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/NavigatorGetAutoplayPolicy/NavigatorGetAutoplayPolicy.generated.xml' path='docs/NavigatorGetAutoplayPolicy/*'/>
+	public AutoplayPolicy GetAutoplayPolicy(HTMLMediaElement element) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/NavigatorGetAutoplayPolicy/NavigatorGetAutoplayPolicy.generated.xml' path='docs/NavigatorGetAutoplayPolicy/*'/>
+	public AutoplayPolicy GetAutoplayPolicy(AudioContext context) { throw new System.NotImplementedException(); }
+}
+
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class ClipboardEventInit : EventInit
 {
@@ -187,6 +199,13 @@ public partial class ClipboardEvent : Event
 	///<include file='Utils/Docs/ClipboardEventClipboardData/ClipboardEventClipboardData.generated.xml' path='docs/ClipboardEventClipboardData/*'/>
 	public DataTransfer? ClipboardData { get; }
 	public ClipboardEvent() { }
+}
+
+///<include file='Utils/Docs/Navigator/Navigator.generated.xml' path='docs/Navigator/*'/>
+public partial class Navigator
+{
+	///<include file='Utils/Docs/NavigatorClipboard/NavigatorClipboard.generated.xml' path='docs/NavigatorClipboard/*'/>
+	public Clipboard Clipboard { get; }
 }
 
 
@@ -243,63 +262,23 @@ public partial class ClipboardPermissionDescriptor
 		public bool AllowWithoutGesture;
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class Label
+///<include file='Utils/Docs/Window/Window.generated.xml' path='docs/Window/*'/>
+[To(ToAttribute.Default)]
+public partial class Window
 {
-		public Label() { }
-		public Label(string origin) { }
-		public bool Equals(Label other) { throw new System.NotImplementedException(); }
-		public bool Subsumes(Label other, Privilege priv) { throw new System.NotImplementedException(); }
-		public Label And(Union0 other) { throw new System.NotImplementedException(); }
-		public Label Or(Union1 other) { throw new System.NotImplementedException(); }
-		public object ToJSON() { throw new System.NotImplementedException(); }
-		public static Label FromJSON(object obj, string self) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/WindowOrientation/WindowOrientation.generated.xml' path='docs/WindowOrientation/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public Number Orientation { get; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public EventHandler Onorientationchange { get; set; }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class Privilege
+///<include file='Utils/Docs/HTMLBodyElement/HTMLBodyElement.generated.xml' path='docs/HTMLBodyElement/*'/>
+[To(ToAttribute.Default)]
+public partial class HTMLBodyElement
 {
-		public Privilege() { }
-		public static Privilege FreshPrivilege() { throw new System.NotImplementedException(); }
-		public Label AsLabel() { throw new System.NotImplementedException(); }
-		public Privilege Combine(Privilege other) { throw new System.NotImplementedException(); }
-		public Privilege Delegate(Label label) { throw new System.NotImplementedException(); }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class COWL
-{
-		public static Undefined Enable() { throw new System.NotImplementedException(); }
-		public static bool IsEnabled() { throw new System.NotImplementedException(); }
-		public static Label Confidentiality { get; set; }
-		public static Label Integrity { get; set; }
-		public static Privilege Privilege { get; set; }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class CILabel
-{
-		public Label? Confidentiality;
-		public Label? Integrity;
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class LabeledObject
-{
-		public LabeledObject(object obj, CILabel labels) { }
-		public Label Confidentiality { get; }
-		public Label Integrity { get; }
-		public object ProtectedObject { get; }
-		public LabeledObject Clone(CILabel labels) { throw new System.NotImplementedException(); }
-	public LabeledObject() { }
-}
-
-///<include file='Utils/Docs/XMLHttpRequestResponseType/XMLHttpRequestResponseType.generated.xml' path='docs/XMLHttpRequestResponseType/*'/>
-[To(ToAttribute.None)]
-public enum XMLHttpRequestResponseType
-{
-	[Value("labeled-json")]
-	LabeledJson,
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public EventHandler Onorientationchange { get; set; }
 }
 
 ///<include file='Utils/Docs/Console/Console.generated.xml' path='docs/Console/*'/>
@@ -344,6 +323,13 @@ public partial class console
 	public Undefined TimeLog(string label, params dynamic[] data) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/ConsoleTimeEnd/ConsoleTimeEnd.generated.xml' path='docs/ConsoleTimeEnd/*'/>
 	public Undefined TimeEnd(string label) { throw new System.NotImplementedException(); }
+}
+
+///<include file='Utils/Docs/Navigator/Navigator.generated.xml' path='docs/Navigator/*'/>
+public partial class Navigator
+{
+	///<include file='Utils/Docs/NavigatorContacts/NavigatorContacts.generated.xml' path='docs/NavigatorContacts/*'/>
+	public ContactsManager Contacts { get; }
 }
 
 [To(ToAttribute.None)]
@@ -413,6 +399,15 @@ public partial class ContactsManager
 	public Task<List<ContactProperty>> GetProperties() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/ContactsManagerSelect/ContactsManagerSelect.generated.xml' path='docs/ContactsManagerSelect/*'/>
 	public Task<List<ContactInfo>> Select(List<ContactProperty> properties, ContactsSelectOptions options) { throw new System.NotImplementedException(); }
+}
+
+///<include file='Utils/Docs/HTMLIFrameElement/HTMLIFrameElement.generated.xml' path='docs/HTMLIFrameElement/*'/>
+[To(ToAttribute.Default)]
+public partial class HTMLIFrameElement
+{
+	///<include file='Utils/Docs/HTMLIFrameElementCsp/HTMLIFrameElementCsp.generated.xml' path='docs/HTMLIFrameElementCsp/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public string Csp { get; set; }
 }
 
 ///<include file='Utils/Docs/CSPViolationReportBody/CSPViolationReportBody.generated.xml' path='docs/CSPViolationReportBody/*'/>
@@ -511,6 +506,13 @@ public partial interface CredentialUserData
 		public string IconURL { get { throw new System.NotImplementedException(); } }
 }
 
+///<include file='Utils/Docs/Navigator/Navigator.generated.xml' path='docs/Navigator/*'/>
+public partial class Navigator
+{
+	///<include file='Utils/Docs/NavigatorCredentials/NavigatorCredentials.generated.xml' path='docs/NavigatorCredentials/*'/>
+	public CredentialsContainer Credentials { get; }
+}
+
 ///<include file='Utils/Docs/CredentialsContainer/CredentialsContainer.generated.xml' path='docs/CredentialsContainer/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class CredentialsContainer
@@ -571,6 +573,11 @@ public partial class PasswordCredential : Credential, CredentialUserData
 }
 
 
+public partial class CredentialRequestOptions
+{
+		public bool Password;
+}
+
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class PasswordCredentialData : CredentialData
 {
@@ -581,9 +588,14 @@ public partial class PasswordCredentialData : CredentialData
 }
 
 
+public partial class CredentialCreationOptions
+{
+		public PasswordCredentialInit Password;
+}
+
 ///<include file='Utils/Docs/FederatedCredential/FederatedCredential.generated.xml' path='docs/FederatedCredential/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class FederatedCredential : Credential
+public partial class FederatedCredential : Credential, CredentialUserData
 {
 	///<include file='Utils/Docs/FederatedCredentialFederatedCredential/FederatedCredentialFederatedCredential.generated.xml' path='docs/FederatedCredentialFederatedCredential/*'/>
 	public FederatedCredential(FederatedCredentialInit data) { }
@@ -594,11 +606,17 @@ public partial class FederatedCredential : Credential
 	public FederatedCredential() { }
 }
 
+
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class FederatedCredentialRequestOptions
 {
 		public List<string> Providers;
 		public List<string> Protocols;
+}
+
+public partial class CredentialRequestOptions
+{
+		public FederatedCredentialRequestOptions Federated;
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -611,6 +629,11 @@ public partial class FederatedCredentialInit : CredentialData
 		public string Protocol;
 }
 
+public partial class CredentialCreationOptions
+{
+		public FederatedCredentialInit Federated;
+}
+
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class CSSPositionTryRule : CSSRule
 {
@@ -618,55 +641,19 @@ public partial class CSSPositionTryRule : CSSRule
 		public CSSStyleDeclaration Style { get; }
 }
 
-///<include file='Utils/Docs/AnimationEvent/AnimationEvent.generated.xml' path='docs/AnimationEvent/*'/>
+///<include file='Utils/Docs/CSSAnimation/CSSAnimation.generated.xml' path='docs/CSSAnimation/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class AnimationEvent : Event
+public partial class CSSAnimation : Animation
 {
-	///<include file='Utils/Docs/AnimationEventAnimationEvent/AnimationEventAnimationEvent.generated.xml' path='docs/AnimationEventAnimationEvent/*'/>
-	public AnimationEvent(string type, AnimationEventInit animationEventInitDict) { }
-	///<include file='Utils/Docs/AnimationEventAnimationName/AnimationEventAnimationName.generated.xml' path='docs/AnimationEventAnimationName/*'/>
+	///<include file='Utils/Docs/CSSAnimationAnimationName/CSSAnimationAnimationName.generated.xml' path='docs/CSSAnimationAnimationName/*'/>
 	public string AnimationName { get; }
-	///<include file='Utils/Docs/AnimationEventElapsedTime/AnimationEventElapsedTime.generated.xml' path='docs/AnimationEventElapsedTime/*'/>
-	public Number ElapsedTime { get; }
-	///<include file='Utils/Docs/AnimationEventPseudoElement/AnimationEventPseudoElement.generated.xml' path='docs/AnimationEventPseudoElement/*'/>
-	public string PseudoElement { get; }
-	public AnimationEvent() { }
 }
 
+///<include file='Utils/Docs/CSS/CSS.generated.xml' path='docs/CSS/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class AnimationEventInit : EventInit
+public partial class CSS
 {
-		public string AnimationName;
-		public Number ElapsedTime;
-		public string PseudoElement;
-}
-
-///<include file='Utils/Docs/CSSKeyframeRule/CSSKeyframeRule.generated.xml' path='docs/CSSKeyframeRule/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class CSSKeyframeRule : CSSRule
-{
-	///<include file='Utils/Docs/CSSKeyframeRuleKeyText/CSSKeyframeRuleKeyText.generated.xml' path='docs/CSSKeyframeRuleKeyText/*'/>
-	public string KeyText { get; set; }
-	///<include file='Utils/Docs/CSSKeyframeRuleStyle/CSSKeyframeRuleStyle.generated.xml' path='docs/CSSKeyframeRuleStyle/*'/>
-	public CSSStyleDeclaration Style { get; }
-}
-
-///<include file='Utils/Docs/CSSKeyframesRule/CSSKeyframesRule.generated.xml' path='docs/CSSKeyframesRule/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class CSSKeyframesRule : CSSRule
-{
-	///<include file='Utils/Docs/CSSKeyframesRuleName/CSSKeyframesRuleName.generated.xml' path='docs/CSSKeyframesRuleName/*'/>
-	public string Name { get; set; }
-	///<include file='Utils/Docs/CSSKeyframesRuleCssRules/CSSKeyframesRuleCssRules.generated.xml' path='docs/CSSKeyframesRuleCssRules/*'/>
-	public CSSRuleList CssRules { get; }
-		public ulong Length { get; }
-	
-	///<include file='Utils/Docs/CSSKeyframesRuleAppendRule/CSSKeyframesRuleAppendRule.generated.xml' path='docs/CSSKeyframesRuleAppendRule/*'/>
-	public Undefined AppendRule(string rule) { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/CSSKeyframesRuleDeleteRule/CSSKeyframesRuleDeleteRule.generated.xml' path='docs/CSSKeyframesRuleDeleteRule/*'/>
-	public Undefined DeleteRule(string select) { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/CSSKeyframesRuleFindRule/CSSKeyframesRuleFindRule.generated.xml' path='docs/CSSKeyframesRuleFindRule/*'/>
-	public CSSKeyframeRule? FindRule(string select) { throw new System.NotImplementedException(); }
+		public Worklet AnimationWorklet { get; }
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -698,7 +685,7 @@ public struct AnimatorInstanceConstructor
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class WorkletAnimation : Animation
 {
-		public WorkletAnimation(string animatorName, Union3? effects, AnimationTimeline? timeline, dynamic options) { }
+		public WorkletAnimation(string animatorName, Union1? effects, AnimationTimeline? timeline, dynamic options) { }
 		public string AnimatorName { get; }
 	public WorkletAnimation() { }
 }
@@ -707,6 +694,21 @@ public partial class WorkletAnimation : Animation
 public partial class WorkletGroupEffect
 {
 		public List<AnimationEffect> GetChildren() { throw new System.NotImplementedException(); }
+}
+
+///<include file='Utils/Docs/AnimationEffect/AnimationEffect.generated.xml' path='docs/AnimationEffect/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class AnimationEffect
+{
+		public Number LocalTime { get; set; }
+}
+
+///<include file='Utils/Docs/CSSImportRule/CSSImportRule.generated.xml' path='docs/CSSImportRule/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class CSSImportRule
+{
+	///<include file='Utils/Docs/CSSImportRuleLayerName/CSSImportRuleLayerName.generated.xml' path='docs/CSSImportRuleLayerName/*'/>
+	public string? LayerName { get; }
 }
 
 ///<include file='Utils/Docs/CSSLayerBlockRule/CSSLayerBlockRule.generated.xml' path='docs/CSSLayerBlockRule/*'/>
@@ -734,6 +736,13 @@ public partial class CSSColorProfileRule : CSSRule
 		public string Components { get; }
 }
 
+///<include file='Utils/Docs/CSSRule/CSSRule.generated.xml' path='docs/CSSRule/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class CSSRule
+{
+		public const ushort SUPPORTS_RULE = 12;
+}
+
 ///<include file='Utils/Docs/CSSConditionRule/CSSConditionRule.generated.xml' path='docs/CSSConditionRule/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class CSSConditionRule : CSSGroupingRule
@@ -756,10 +765,25 @@ public partial class CSSSupportsRule : CSSConditionRule
 {
 }
 
+///<include file='Utils/Docs/CSS/CSS.generated.xml' path='docs/CSS/*'/>
+public partial class CSS
+{
+	///<include file='Utils/Docs/CSSSupports/CSSSupports.generated.xml' path='docs/CSSSupports/*'/>
+	public bool Supports(string property, string value) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/CSSSupports/CSSSupports.generated.xml' path='docs/CSSSupports/*'/>
+	public bool Supports(string conditionText) { throw new System.NotImplementedException(); }
+}
+
 ///<include file='Utils/Docs/CSSContainerRule/CSSContainerRule.generated.xml' path='docs/CSSContainerRule/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class CSSContainerRule : CSSConditionRule
 {
+}
+
+///<include file='Utils/Docs/CSSRule/CSSRule.generated.xml' path='docs/CSSRule/*'/>
+public partial class CSSRule
+{
+		public const ushort COUNTER_STYLE_RULE = 11;
 }
 
 ///<include file='Utils/Docs/CSSCounterStyleRule/CSSCounterStyleRule.generated.xml' path='docs/CSSCounterStyleRule/*'/>
@@ -816,6 +840,13 @@ public partial class Highlight
 	public Highlight() { }
 }
 
+///<include file='Utils/Docs/CSS/CSS.generated.xml' path='docs/CSS/*'/>
+public partial class CSS
+{
+	///<include file='Utils/Docs/CSSHighlights/CSSHighlights.generated.xml' path='docs/CSSHighlights/*'/>
+	public HighlightRegistry Highlights { get; }
+}
+
 ///<include file='Utils/Docs/HighlightRegistry/HighlightRegistry.generated.xml' path='docs/HighlightRegistry/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class HighlightRegistry
@@ -858,7 +889,7 @@ public enum FontFaceLoadStatus
 public partial class FontFace
 {
 	///<include file='Utils/Docs/FontFaceFontFace/FontFaceFontFace.generated.xml' path='docs/FontFaceFontFace/*'/>
-	public FontFace(string family, Union5 source, FontFaceDescriptors descriptors) { }
+	public FontFace(string family, Union3 source, FontFaceDescriptors descriptors) { }
 	///<include file='Utils/Docs/FontFaceFamily/FontFaceFamily.generated.xml' path='docs/FontFaceFamily/*'/>
 	public string Family { get; set; }
 	///<include file='Utils/Docs/FontFaceStyle/FontFaceStyle.generated.xml' path='docs/FontFaceStyle/*'/>
@@ -931,6 +962,14 @@ public partial class FontFacePalettes
 	
 }
 
+///<include file='Utils/Docs/FontFace/FontFace.generated.xml' path='docs/FontFace/*'/>
+public partial class FontFace
+{
+		public FontFaceFeatures Features { get; }
+		public FontFaceVariations Variations { get; }
+		public FontFacePalettes Palettes { get; }
+}
+
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class FontFaceSetLoadEventInit : EventInit
 {
@@ -989,12 +1028,20 @@ public partial interface FontFaceSource
 		public FontFaceSet Fonts { get { throw new System.NotImplementedException(); } }
 }
 
+
+
 ///<include file='Utils/Docs/CSSFontFaceRule/CSSFontFaceRule.generated.xml' path='docs/CSSFontFaceRule/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class CSSFontFaceRule : CSSRule
 {
 	///<include file='Utils/Docs/CSSFontFaceRuleStyle/CSSFontFaceRuleStyle.generated.xml' path='docs/CSSFontFaceRuleStyle/*'/>
 	public CSSStyleDeclaration Style { get; }
+}
+
+///<include file='Utils/Docs/CSSRule/CSSRule.generated.xml' path='docs/CSSRule/*'/>
+public partial class CSSRule
+{
+		public const ushort FONT_FEATURE_VALUES_RULE = 14;
 }
 
 ///<include file='Utils/Docs/CSSFontFeatureValuesRule/CSSFontFeatureValuesRule.generated.xml' path='docs/CSSFontFeatureValuesRule/*'/>
@@ -1015,7 +1062,7 @@ public partial class CSSFontFeatureValuesRule : CSSRule
 public partial class CSSFontFeatureValuesMap
 {
 	
-		public Undefined Set(string featureValueName, Union6 values) { throw new System.NotImplementedException(); }
+		public Undefined Set(string featureValueName, Union4 values) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/CSSFontPaletteValuesRule/CSSFontPaletteValuesRule.generated.xml' path='docs/CSSFontPaletteValuesRule/*'/>
@@ -1030,6 +1077,12 @@ public partial class CSSFontPaletteValuesRule : CSSRule
 	public string BasePalette { get; }
 	///<include file='Utils/Docs/CSSFontPaletteValuesRuleOverrideColors/CSSFontPaletteValuesRuleOverrideColors.generated.xml' path='docs/CSSFontPaletteValuesRuleOverrideColors/*'/>
 	public string OverrideColors { get; }
+}
+
+///<include file='Utils/Docs/CSS/CSS.generated.xml' path='docs/CSS/*'/>
+public partial class CSS
+{
+		public dynamic ElementSources { get; }
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -1157,6 +1210,12 @@ public partial class LayoutEdges
 		public LayoutEdgeSizes All { get; }
 }
 
+///<include file='Utils/Docs/CSS/CSS.generated.xml' path='docs/CSS/*'/>
+public partial class CSS
+{
+		public Worklet LayoutWorklet { get; }
+}
+
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class LayoutWorkletGlobalScope : WorkletGlobalScope
 {
@@ -1245,6 +1304,15 @@ public partial class SVGMaskElement
 	public Unsupported /*SVGAnimatedLength*/ Height { get; }
 }
 
+///<include file='Utils/Docs/CSSStyleRule/CSSStyleRule.generated.xml' path='docs/CSSStyleRule/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class CSSStyleRule
+{
+		public CSSRuleList CssRules { get; }
+		public ulong InsertRule(string rule, ulong index) { throw new System.NotImplementedException(); }
+		public Undefined DeleteRule(ulong index) { throw new System.NotImplementedException(); }
+}
+
 ///<include file='Utils/Docs/MediaList/MediaList.generated.xml' path='docs/MediaList/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class MediaList
@@ -1269,7 +1337,7 @@ public partial class StyleSheet
 	///<include file='Utils/Docs/StyleSheetHref/StyleSheetHref.generated.xml' path='docs/StyleSheetHref/*'/>
 	public string? Href { get; }
 	///<include file='Utils/Docs/StyleSheetOwnerNode/StyleSheetOwnerNode.generated.xml' path='docs/StyleSheetOwnerNode/*'/>
-	public Union8? OwnerNode { get; }
+	public Union6? OwnerNode { get; }
 	///<include file='Utils/Docs/StyleSheetParentStyleSheet/StyleSheetParentStyleSheet.generated.xml' path='docs/StyleSheetParentStyleSheet/*'/>
 	public CSSStyleSheet? ParentStyleSheet { get; }
 	///<include file='Utils/Docs/StyleSheetTitle/StyleSheetTitle.generated.xml' path='docs/StyleSheetTitle/*'/>
@@ -1305,8 +1373,19 @@ public partial class CSSStyleSheet : StyleSheet
 public partial class CSSStyleSheetInit
 {
 		public string BaseURL;
-		public Union9 Media;
+		public Union7 Media;
 		public bool Disabled;
+}
+
+///<include file='Utils/Docs/CSSStyleSheet/CSSStyleSheet.generated.xml' path='docs/CSSStyleSheet/*'/>
+public partial class CSSStyleSheet
+{
+	///<include file='Utils/Docs/CSSStyleSheetRules/CSSStyleSheetRules.generated.xml' path='docs/CSSStyleSheetRules/*'/>
+	public CSSRuleList Rules { get; }
+	///<include file='Utils/Docs/CSSStyleSheetAddRule/CSSStyleSheetAddRule.generated.xml' path='docs/CSSStyleSheetAddRule/*'/>
+	public long AddRule(string selector, string style, ulong index) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/CSSStyleSheetRemoveRule/CSSStyleSheetRemoveRule.generated.xml' path='docs/CSSStyleSheetRemoveRule/*'/>
+	public Undefined RemoveRule(ulong index) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/StyleSheetList/StyleSheetList.generated.xml' path='docs/StyleSheetList/*'/>
@@ -1319,10 +1398,18 @@ public partial class StyleSheetList
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
+public partial interface DocumentOrShadowRoot
+{
+		public StyleSheetList StyleSheets { get { throw new System.NotImplementedException(); } }
+		public CSSStyleSheet[] AdoptedStyleSheets { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial interface LinkStyle
 {
 		public CSSStyleSheet? Sheet { get { throw new System.NotImplementedException(); } }
 }
+
 
 ///<include file='Utils/Docs/CSSRuleList/CSSRuleList.generated.xml' path='docs/CSSRuleList/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -1331,6 +1418,47 @@ public partial class CSSRuleList
 	
 	///<include file='Utils/Docs/CSSRuleListLength/CSSRuleListLength.generated.xml' path='docs/CSSRuleListLength/*'/>
 	public ulong Length { get; }
+}
+
+///<include file='Utils/Docs/CSSRule/CSSRule.generated.xml' path='docs/CSSRule/*'/>
+public partial class CSSRule
+{
+	///<include file='Utils/Docs/CSSRuleCssText/CSSRuleCssText.generated.xml' path='docs/CSSRuleCssText/*'/>
+	public string CssText { get; set; }
+	///<include file='Utils/Docs/CSSRuleParentRule/CSSRuleParentRule.generated.xml' path='docs/CSSRuleParentRule/*'/>
+	public CSSRule? ParentRule { get; }
+	///<include file='Utils/Docs/CSSRuleParentStyleSheet/CSSRuleParentStyleSheet.generated.xml' path='docs/CSSRuleParentStyleSheet/*'/>
+	public CSSStyleSheet? ParentStyleSheet { get; }
+	///<include file='Utils/Docs/CSSRuleType/CSSRuleType.generated.xml' path='docs/CSSRuleType/*'/>
+	public ushort Type { get; }
+		public const ushort STYLE_RULE = 1;
+		public const ushort CHARSET_RULE = 2;
+		public const ushort IMPORT_RULE = 3;
+		public const ushort MEDIA_RULE = 4;
+		public const ushort FONT_FACE_RULE = 5;
+		public const ushort PAGE_RULE = 6;
+		public const ushort MARGIN_RULE = 9;
+		public const ushort NAMESPACE_RULE = 10;
+}
+
+///<include file='Utils/Docs/CSSStyleRule/CSSStyleRule.generated.xml' path='docs/CSSStyleRule/*'/>
+public partial class CSSStyleRule : CSSRule
+{
+	///<include file='Utils/Docs/CSSStyleRuleSelectorText/CSSStyleRuleSelectorText.generated.xml' path='docs/CSSStyleRuleSelectorText/*'/>
+	public string SelectorText { get; set; }
+	///<include file='Utils/Docs/CSSStyleRuleStyle/CSSStyleRuleStyle.generated.xml' path='docs/CSSStyleRuleStyle/*'/>
+	public CSSStyleDeclaration Style { get; }
+}
+
+///<include file='Utils/Docs/CSSImportRule/CSSImportRule.generated.xml' path='docs/CSSImportRule/*'/>
+public partial class CSSImportRule : CSSRule
+{
+	///<include file='Utils/Docs/CSSImportRuleHref/CSSImportRuleHref.generated.xml' path='docs/CSSImportRuleHref/*'/>
+	public string Href { get; }
+	///<include file='Utils/Docs/CSSImportRuleMedia/CSSImportRuleMedia.generated.xml' path='docs/CSSImportRuleMedia/*'/>
+	public MediaList Media { get; }
+	///<include file='Utils/Docs/CSSImportRuleStyleSheet/CSSImportRuleStyleSheet.generated.xml' path='docs/CSSImportRuleStyleSheet/*'/>
+	public CSSStyleSheet StyleSheet { get; }
 }
 
 ///<include file='Utils/Docs/CSSGroupingRule/CSSGroupingRule.generated.xml' path='docs/CSSGroupingRule/*'/>
@@ -1401,6 +1529,31 @@ public partial interface ElementCSSInlineStyle
 		public CSSStyleDeclaration Style { get { throw new System.NotImplementedException(); } }
 }
 
+
+
+
+///<include file='Utils/Docs/Window/Window.generated.xml' path='docs/Window/*'/>
+public partial class Window
+{
+	///<include file='Utils/Docs/WindowGetComputedStyle/WindowGetComputedStyle.generated.xml' path='docs/WindowGetComputedStyle/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSStyleDeclaration GetComputedStyle(Element elt, string? pseudoElt) { throw new System.NotImplementedException(); }
+}
+
+///<include file='Utils/Docs/CSS/CSS.generated.xml' path='docs/CSS/*'/>
+public partial class CSS
+{
+	///<include file='Utils/Docs/CSSEscape/CSSEscape.generated.xml' path='docs/CSSEscape/*'/>
+	public string Escape(string ident) { throw new System.NotImplementedException(); }
+}
+
+///<include file='Utils/Docs/CSS/CSS.generated.xml' path='docs/CSS/*'/>
+public partial class CSS
+{
+	///<include file='Utils/Docs/CSSPaintWorklet/CSSPaintWorklet.generated.xml' path='docs/CSSPaintWorklet/*'/>
+	public Worklet PaintWorklet { get; }
+}
+
 ///<include file='Utils/Docs/PaintWorkletGlobalScope/PaintWorkletGlobalScope.generated.xml' path='docs/PaintWorkletGlobalScope/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class PaintWorkletGlobalScope : WorkletGlobalScope
@@ -1422,6 +1575,17 @@ public partial class PaintRenderingContext2D
 {
 }
 
+
+
+
+
+
+
+
+
+
+
+
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class PaintSize
 {
@@ -1436,6 +1600,13 @@ public partial class PropertyDefinition
 		public string Syntax;
 		public required bool Inherits;
 		public string InitialValue;
+}
+
+///<include file='Utils/Docs/CSS/CSS.generated.xml' path='docs/CSS/*'/>
+public partial class CSS
+{
+	///<include file='Utils/Docs/CSSRegisterProperty/CSSRegisterProperty.generated.xml' path='docs/CSSRegisterProperty/*'/>
+	public Undefined RegisterProperty(PropertyDefinition definition) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/CSSPropertyRule/CSSPropertyRule.generated.xml' path='docs/CSSPropertyRule/*'/>
@@ -1460,8 +1631,22 @@ public partial class CSSPseudoElement : EventTarget
 	public string Type { get; }
 	///<include file='Utils/Docs/CSSPseudoElementElement/CSSPseudoElementElement.generated.xml' path='docs/CSSPseudoElementElement/*'/>
 	public Element Element { get; }
-		public Union10 Parent { get; }
+		public Union8 Parent { get; }
 		public CSSPseudoElement? Pseudo(string type) { throw new System.NotImplementedException(); }
+}
+
+///<include file='Utils/Docs/Element/Element.generated.xml' path='docs/Element/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class Element
+{
+		public CSSPseudoElement? Pseudo(string type) { throw new System.NotImplementedException(); }
+}
+
+///<include file='Utils/Docs/Element/Element.generated.xml' path='docs/Element/*'/>
+public partial class Element
+{
+	///<include file='Utils/Docs/ElementPart/ElementPart.generated.xml' path='docs/ElementPart/*'/>
+	public DOMTokenList Part { get; }
 }
 
 [To(ToAttribute.None)]
@@ -1475,6 +1660,13 @@ public enum SpatialNavigationDirection
 	Left,
 	[Value("right")]
 	Right,
+}
+
+///<include file='Utils/Docs/Window/Window.generated.xml' path='docs/Window/*'/>
+public partial class Window
+{
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public Undefined Navigate(SpatialNavigationDirection dir) { throw new System.NotImplementedException(); }
 }
 
 [To(ToAttribute.None)]
@@ -1497,6 +1689,14 @@ public partial class SpatialNavigationSearchOptions
 {
 		public List<Node>? Candidates;
 		public Node? Container;
+}
+
+///<include file='Utils/Docs/Element/Element.generated.xml' path='docs/Element/*'/>
+public partial class Element
+{
+		public Node GetSpatialNavigationContainer() { throw new System.NotImplementedException(); }
+		public List<Node> FocusableAreas(FocusableAreasOption option) { throw new System.NotImplementedException(); }
+		public Node? SpatialNavigationSearch(SpatialNavigationDirection dir, SpatialNavigationSearchOptions options) { throw new System.NotImplementedException(); }
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -1546,7 +1746,7 @@ public partial class StylePropertyMapReadOnly
 {
 	public string this[int i]  {  get { throw new System.NotImplementedException(); }  set { throw new System.NotImplementedException(); }  } 
 	///<include file='Utils/Docs/StylePropertyMapReadOnlyGet/StylePropertyMapReadOnlyGet.generated.xml' path='docs/StylePropertyMapReadOnlyGet/*'/>
-	public Union11 Get(string property) { throw new System.NotImplementedException(); }
+	public Union9 Get(string property) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/StylePropertyMapReadOnlyGetAll/StylePropertyMapReadOnlyGetAll.generated.xml' path='docs/StylePropertyMapReadOnlyGetAll/*'/>
 	public List<CSSStyleValue> GetAll(string property) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/StylePropertyMapReadOnlyHas/StylePropertyMapReadOnlyHas.generated.xml' path='docs/StylePropertyMapReadOnlyHas/*'/>
@@ -1560,13 +1760,32 @@ public partial class StylePropertyMapReadOnly
 public partial class StylePropertyMap : StylePropertyMapReadOnly
 {
 	///<include file='Utils/Docs/StylePropertyMapSet/StylePropertyMapSet.generated.xml' path='docs/StylePropertyMapSet/*'/>
-	public Undefined Set(string property, params Union12[] values) { throw new System.NotImplementedException(); }
+	public Undefined Set(string property, params Union10[] values) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/StylePropertyMapAppend/StylePropertyMapAppend.generated.xml' path='docs/StylePropertyMapAppend/*'/>
-	public Undefined Append(string property, params Union13[] values) { throw new System.NotImplementedException(); }
+	public Undefined Append(string property, params Union11[] values) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/StylePropertyMapDelete/StylePropertyMapDelete.generated.xml' path='docs/StylePropertyMapDelete/*'/>
 	public Undefined Delete(string property) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/StylePropertyMapClear/StylePropertyMapClear.generated.xml' path='docs/StylePropertyMapClear/*'/>
 	public Undefined Clear() { throw new System.NotImplementedException(); }
+}
+
+///<include file='Utils/Docs/Element/Element.generated.xml' path='docs/Element/*'/>
+public partial class Element
+{
+	///<include file='Utils/Docs/ElementComputedStyleMap/ElementComputedStyleMap.generated.xml' path='docs/ElementComputedStyleMap/*'/>
+	public StylePropertyMapReadOnly ComputedStyleMap() { throw new System.NotImplementedException(); }
+}
+
+///<include file='Utils/Docs/CSSStyleRule/CSSStyleRule.generated.xml' path='docs/CSSStyleRule/*'/>
+public partial class CSSStyleRule
+{
+	///<include file='Utils/Docs/CSSStyleRuleStyleMap/CSSStyleRuleStyleMap.generated.xml' path='docs/CSSStyleRuleStyleMap/*'/>
+	public StylePropertyMap StyleMap { get; }
+}
+
+public partial interface ElementCSSInlineStyle
+{
+		public StylePropertyMap AttributeStyleMap { get { throw new System.NotImplementedException(); } }
 }
 
 ///<include file='Utils/Docs/CSSUnparsedValue/CSSUnparsedValue.generated.xml' path='docs/CSSUnparsedValue/*'/>
@@ -1796,6 +2015,74 @@ public enum CSSMathOperator
 	Clamp,
 }
 
+///<include file='Utils/Docs/CSS/CSS.generated.xml' path='docs/CSS/*'/>
+public partial class CSS
+{
+		public CSSUnitValue Number(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue Percent(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue Cap(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue Ch(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue Em(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue Ex(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue Ic(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue Lh(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue Rcap(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue Rch(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue Rem(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue Rex(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue Ric(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue Rlh(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue Vw(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue Vh(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue Vi(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue Vb(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue Vmin(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue Vmax(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue Svw(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue Svh(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue Svi(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue Svb(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue Svmin(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue Svmax(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue Lvw(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue Lvh(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue Lvi(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue Lvb(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue Lvmin(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue Lvmax(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue Dvw(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue Dvh(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue Dvi(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue Dvb(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue Dvmin(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue Dvmax(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue Cqw(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue Cqh(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue Cqi(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue Cqb(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue Cqmin(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue Cqmax(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue Cm(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue Mm(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue Q(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue In(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue Pt(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue Pc(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue Px(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue Deg(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue Grad(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue Rad(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue Turn(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue S(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue Ms(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue Hz(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue KHz(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue Dpi(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue Dpcm(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue Dppx(Number value) { throw new System.NotImplementedException(); }
+		public CSSUnitValue Fr(Number value) { throw new System.NotImplementedException(); }
+}
+
 ///<include file='Utils/Docs/CSSTransformValue/CSSTransformValue.generated.xml' path='docs/CSSTransformValue/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class CSSTransformValue : CSSStyleValue
@@ -1947,7 +2234,7 @@ public partial class CSSImageValue : CSSStyleValue
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class CSSColorValue : CSSStyleValue
 {
-		public static Union18 Parse(string cssText) { throw new System.NotImplementedException(); }
+		public static Union16 Parse(string cssText) { throw new System.NotImplementedException(); }
 }
 
 
@@ -2041,6 +2328,14 @@ public partial class CSSColor : CSSColorValue
 	public CSSColor() { }
 }
 
+///<include file='Utils/Docs/Document/Document.generated.xml' path='docs/Document/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class Document
+{
+	///<include file='Utils/Docs/DocumentStartViewTransition/DocumentStartViewTransition.generated.xml' path='docs/DocumentStartViewTransition/*'/>
+	public ViewTransition StartViewTransition(UpdateCallback? updateCallback) { throw new System.NotImplementedException(); }
+}
+
 [To(ToAttribute.FirstCharToLowerCase)]
 public struct UpdateCallback
 {
@@ -2065,6 +2360,15 @@ public partial class ViewTransition
 public partial interface NavigatorDeviceMemory
 {
 		public Number DeviceMemory { get { throw new System.NotImplementedException(); } }
+}
+
+
+
+///<include file='Utils/Docs/Window/Window.generated.xml' path='docs/Window/*'/>
+public partial class Window
+{
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public EventHandler Ondeviceorientation { get; set; }
 }
 
 ///<include file='Utils/Docs/DeviceOrientationEvent/DeviceOrientationEvent.generated.xml' path='docs/DeviceOrientationEvent/*'/>
@@ -2094,6 +2398,13 @@ public partial class DeviceOrientationEventInit : EventInit
 		public bool Absolute;
 }
 
+///<include file='Utils/Docs/Window/Window.generated.xml' path='docs/Window/*'/>
+public partial class Window
+{
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public EventHandler Ondeviceorientationabsolute { get; set; }
+}
+
 ///<include file='Utils/Docs/DeviceMotionEventAcceleration/DeviceMotionEventAcceleration.generated.xml' path='docs/DeviceMotionEventAcceleration/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class DeviceMotionEventAcceleration
@@ -2116,6 +2427,13 @@ public partial class DeviceMotionEventRotationRate
 	public Number? Beta { get; }
 	///<include file='Utils/Docs/DeviceMotionEventRotationRateGamma/DeviceMotionEventRotationRateGamma.generated.xml' path='docs/DeviceMotionEventRotationRateGamma/*'/>
 	public Number? Gamma { get; }
+}
+
+///<include file='Utils/Docs/Window/Window.generated.xml' path='docs/Window/*'/>
+public partial class Window
+{
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public EventHandler Ondevicemotion { get; set; }
 }
 
 ///<include file='Utils/Docs/DeviceMotionEvent/DeviceMotionEvent.generated.xml' path='docs/DeviceMotionEvent/*'/>
@@ -2218,6 +2536,14 @@ public partial class EventInit
 		public bool Composed;
 }
 
+///<include file='Utils/Docs/Window/Window.generated.xml' path='docs/Window/*'/>
+public partial class Window
+{
+	///<include file='Utils/Docs/WindowEvent/WindowEvent.generated.xml' path='docs/WindowEvent/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public Union21 Event { get; }
+}
+
 ///<include file='Utils/Docs/CustomEvent/CustomEvent.generated.xml' path='docs/CustomEvent/*'/>
 [To(ToAttribute.Default)]
 public partial class CustomEvent : Event
@@ -2246,9 +2572,9 @@ public partial class EventTarget
 	///<include file='Utils/Docs/EventTargetEventTarget/EventTargetEventTarget.generated.xml' path='docs/EventTargetEventTarget/*'/>
 	public EventTarget() { }
 	///<include file='Utils/Docs/EventTargetAddEventListener/EventTargetAddEventListener.generated.xml' path='docs/EventTargetAddEventListener/*'/>
-	public Undefined AddEventListener(string type, EventListener? callback, Union23 options) { throw new System.NotImplementedException(); }
+	public Undefined AddEventListener(string type, EventListener? callback, Union22 options) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/EventTargetRemoveEventListener/EventTargetRemoveEventListener.generated.xml' path='docs/EventTargetRemoveEventListener/*'/>
-	public Undefined RemoveEventListener(string type, EventListener? callback, Union24 options) { throw new System.NotImplementedException(); }
+	public Undefined RemoveEventListener(string type, EventListener? callback, Union23 options) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/EventTargetDispatchEvent/EventTargetDispatchEvent.generated.xml' path='docs/EventTargetDispatchEvent/*'/>
 	public bool DispatchEvent(Event event_) { throw new System.NotImplementedException(); }
 }
@@ -2312,6 +2638,14 @@ public partial interface NonElementParentNode
 	public Element? GetElementById(string elementId) { throw new System.NotImplementedException(); }
 }
 
+
+
+public partial interface DocumentOrShadowRoot
+{
+}
+
+
+
 ///<include file='Utils/Docs/Element/Element.generated.xml' path='docs/Element/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial interface ParentNode
@@ -2325,16 +2659,19 @@ public partial interface ParentNode
 	///<include file='Utils/Docs/ElementChildElementCount/ElementChildElementCount.generated.xml' path='docs/ElementChildElementCount/*'/>
 	public ulong ChildElementCount { get { throw new System.NotImplementedException(); } }
 	///<include file='Utils/Docs/ElementPrepend/ElementPrepend.generated.xml' path='docs/ElementPrepend/*'/>
-	public Undefined Prepend(params Union25[] nodes) { throw new System.NotImplementedException(); }
+	public Undefined Prepend(params Union24[] nodes) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/ElementAppend/ElementAppend.generated.xml' path='docs/ElementAppend/*'/>
-	public Undefined Append(params Union26[] nodes) { throw new System.NotImplementedException(); }
+	public Undefined Append(params Union25[] nodes) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/ElementReplaceChildren/ElementReplaceChildren.generated.xml' path='docs/ElementReplaceChildren/*'/>
-	public Undefined ReplaceChildren(params Union27[] nodes) { throw new System.NotImplementedException(); }
+	public Undefined ReplaceChildren(params Union26[] nodes) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/ElementQuerySelector/ElementQuerySelector.generated.xml' path='docs/ElementQuerySelector/*'/>
 	public Element? QuerySelector(string selectors) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/ElementQuerySelectorAll/ElementQuerySelectorAll.generated.xml' path='docs/ElementQuerySelectorAll/*'/>
 	public NodeList QuerySelectorAll(string selectors) { throw new System.NotImplementedException(); }
 }
+
+
+
 
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial interface NonDocumentTypeChildNode
@@ -2343,25 +2680,32 @@ public partial interface NonDocumentTypeChildNode
 		public Element? NextElementSibling { get { throw new System.NotImplementedException(); } }
 }
 
+
+
 ///<include file='Utils/Docs/Element/Element.generated.xml' path='docs/Element/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial interface ChildNode
 {
 	///<include file='Utils/Docs/ElementBefore/ElementBefore.generated.xml' path='docs/ElementBefore/*'/>
-	public Undefined Before(params Union28[] nodes) { throw new System.NotImplementedException(); }
+	public Undefined Before(params Union27[] nodes) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/ElementAfter/ElementAfter.generated.xml' path='docs/ElementAfter/*'/>
-	public Undefined After(params Union29[] nodes) { throw new System.NotImplementedException(); }
+	public Undefined After(params Union28[] nodes) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/ElementReplaceWith/ElementReplaceWith.generated.xml' path='docs/ElementReplaceWith/*'/>
-	public Undefined ReplaceWith(params Union30[] nodes) { throw new System.NotImplementedException(); }
+	public Undefined ReplaceWith(params Union29[] nodes) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/ElementRemove/ElementRemove.generated.xml' path='docs/ElementRemove/*'/>
 	public Undefined Remove() { throw new System.NotImplementedException(); }
 }
+
+
+
 
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial interface Slottable
 {
 		public HTMLSlotElement? AssignedSlot { get { throw new System.NotImplementedException(); } }
 }
+
+
 
 ///<include file='Utils/Docs/NodeList/NodeList.generated.xml' path='docs/NodeList/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -2528,6 +2872,67 @@ public partial class GetRootNodeOptions
 		public bool Composed;
 }
 
+///<include file='Utils/Docs/Document/Document.generated.xml' path='docs/Document/*'/>
+public partial class Document : Node
+{
+	///<include file='Utils/Docs/DocumentDocument/DocumentDocument.generated.xml' path='docs/DocumentDocument/*'/>
+	public Document() { }
+	///<include file='Utils/Docs/DocumentImplementation/DocumentImplementation.generated.xml' path='docs/DocumentImplementation/*'/>
+	public DOMImplementation Implementation { get; }
+	///<include file='Utils/Docs/DocumentURL/DocumentURL.generated.xml' path='docs/DocumentURL/*'/>
+	public string URL { get; }
+	///<include file='Utils/Docs/DocumentDocumentURI/DocumentDocumentURI.generated.xml' path='docs/DocumentDocumentURI/*'/>
+	public string DocumentURI { get; }
+	///<include file='Utils/Docs/DocumentCompatMode/DocumentCompatMode.generated.xml' path='docs/DocumentCompatMode/*'/>
+	public string CompatMode { get; }
+	///<include file='Utils/Docs/DocumentCharacterSet/DocumentCharacterSet.generated.xml' path='docs/DocumentCharacterSet/*'/>
+	public string CharacterSet { get; }
+		public string Charset { get; }
+		public string InputEncoding { get; }
+	///<include file='Utils/Docs/DocumentContentType/DocumentContentType.generated.xml' path='docs/DocumentContentType/*'/>
+	public string ContentType { get; }
+	///<include file='Utils/Docs/DocumentDoctype/DocumentDoctype.generated.xml' path='docs/DocumentDoctype/*'/>
+	public DocumentType? Doctype { get; }
+	///<include file='Utils/Docs/DocumentDocumentElement/DocumentDocumentElement.generated.xml' path='docs/DocumentDocumentElement/*'/>
+	public Element? DocumentElement { get; }
+	///<include file='Utils/Docs/DocumentGetElementsByTagName/DocumentGetElementsByTagName.generated.xml' path='docs/DocumentGetElementsByTagName/*'/>
+	public HTMLCollection GetElementsByTagName(string qualifiedName) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/DocumentGetElementsByTagNameNS/DocumentGetElementsByTagNameNS.generated.xml' path='docs/DocumentGetElementsByTagNameNS/*'/>
+	public HTMLCollection GetElementsByTagNameNS(string? namespace_, string localName) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/DocumentGetElementsByClassName/DocumentGetElementsByClassName.generated.xml' path='docs/DocumentGetElementsByClassName/*'/>
+	public HTMLCollection GetElementsByClassName(string classNames) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/DocumentCreateElement/DocumentCreateElement.generated.xml' path='docs/DocumentCreateElement/*'/>
+	public Element CreateElement(string localName, Union30 options) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/DocumentCreateElementNS/DocumentCreateElementNS.generated.xml' path='docs/DocumentCreateElementNS/*'/>
+	public Element CreateElementNS(string? namespace_, string qualifiedName, Union31 options) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/DocumentCreateDocumentFragment/DocumentCreateDocumentFragment.generated.xml' path='docs/DocumentCreateDocumentFragment/*'/>
+	public DocumentFragment CreateDocumentFragment() { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/DocumentCreateTextNode/DocumentCreateTextNode.generated.xml' path='docs/DocumentCreateTextNode/*'/>
+	public Text CreateTextNode(string data) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/DocumentCreateCDATASection/DocumentCreateCDATASection.generated.xml' path='docs/DocumentCreateCDATASection/*'/>
+	public CDATASection CreateCDATASection(string data) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/DocumentCreateComment/DocumentCreateComment.generated.xml' path='docs/DocumentCreateComment/*'/>
+	public Comment CreateComment(string data) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/DocumentCreateProcessingInstruction/DocumentCreateProcessingInstruction.generated.xml' path='docs/DocumentCreateProcessingInstruction/*'/>
+	public ProcessingInstruction CreateProcessingInstruction(string target, string data) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/DocumentImportNode/DocumentImportNode.generated.xml' path='docs/DocumentImportNode/*'/>
+	public Node ImportNode(Node node, bool deep) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/DocumentAdoptNode/DocumentAdoptNode.generated.xml' path='docs/DocumentAdoptNode/*'/>
+	public Node AdoptNode(Node node) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/DocumentCreateAttribute/DocumentCreateAttribute.generated.xml' path='docs/DocumentCreateAttribute/*'/>
+	public Attr CreateAttribute(string localName) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/DocumentCreateAttributeNS/DocumentCreateAttributeNS.generated.xml' path='docs/DocumentCreateAttributeNS/*'/>
+	public Attr CreateAttributeNS(string? namespace_, string qualifiedName) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/DocumentCreateEvent/DocumentCreateEvent.generated.xml' path='docs/DocumentCreateEvent/*'/>
+	public Event CreateEvent(string interface_) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/DocumentCreateRange/DocumentCreateRange.generated.xml' path='docs/DocumentCreateRange/*'/>
+	public Range CreateRange() { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/DocumentCreateNodeIterator/DocumentCreateNodeIterator.generated.xml' path='docs/DocumentCreateNodeIterator/*'/>
+	public NodeIterator CreateNodeIterator(Node root, ulong whatToShow, NodeFilter? filter) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/DocumentCreateTreeWalker/DocumentCreateTreeWalker.generated.xml' path='docs/DocumentCreateTreeWalker/*'/>
+	public TreeWalker CreateTreeWalker(Node root, ulong whatToShow, NodeFilter? filter) { throw new System.NotImplementedException(); }
+}
+
 ///<include file='Utils/Docs/XMLDocument/XMLDocument.generated.xml' path='docs/XMLDocument/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class XMLDocument : Document
@@ -2556,7 +2961,7 @@ public partial class DOMImplementation
 
 ///<include file='Utils/Docs/DocumentType/DocumentType.generated.xml' path='docs/DocumentType/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class DocumentType : Node
+public partial class DocumentType : Node, ChildNode
 {
 	///<include file='Utils/Docs/DocumentTypeName/DocumentTypeName.generated.xml' path='docs/DocumentTypeName/*'/>
 	public string Name { get; }
@@ -2568,7 +2973,7 @@ public partial class DocumentType : Node
 
 ///<include file='Utils/Docs/DocumentFragment/DocumentFragment.generated.xml' path='docs/DocumentFragment/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class DocumentFragment : Node
+public partial class DocumentFragment : Node, NonElementParentNode, ParentNode
 {
 	///<include file='Utils/Docs/DocumentFragmentDocumentFragment/DocumentFragmentDocumentFragment.generated.xml' path='docs/DocumentFragmentDocumentFragment/*'/>
 	public DocumentFragment() { }
@@ -2576,7 +2981,7 @@ public partial class DocumentFragment : Node
 
 ///<include file='Utils/Docs/ShadowRoot/ShadowRoot.generated.xml' path='docs/ShadowRoot/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class ShadowRoot : DocumentFragment
+public partial class ShadowRoot : DocumentFragment, DocumentOrShadowRoot
 {
 	///<include file='Utils/Docs/ShadowRootMode/ShadowRootMode.generated.xml' path='docs/ShadowRootMode/*'/>
 	public ShadowRootMode Mode { get; }
@@ -2608,6 +3013,80 @@ public enum SlotAssignmentMode
 	Manual,
 	[Value("named")]
 	Named,
+}
+
+///<include file='Utils/Docs/Element/Element.generated.xml' path='docs/Element/*'/>
+public partial class Element : Node
+{
+	///<include file='Utils/Docs/ElementNamespaceURI/ElementNamespaceURI.generated.xml' path='docs/ElementNamespaceURI/*'/>
+	public string? NamespaceURI { get; }
+	///<include file='Utils/Docs/ElementPrefix/ElementPrefix.generated.xml' path='docs/ElementPrefix/*'/>
+	public string? Prefix { get; }
+	///<include file='Utils/Docs/ElementLocalName/ElementLocalName.generated.xml' path='docs/ElementLocalName/*'/>
+	public string LocalName { get; }
+	///<include file='Utils/Docs/ElementTagName/ElementTagName.generated.xml' path='docs/ElementTagName/*'/>
+	public string TagName { get; }
+	///<include file='Utils/Docs/ElementId/ElementId.generated.xml' path='docs/ElementId/*'/>
+	public string Id { get; set; }
+	///<include file='Utils/Docs/ElementClassName/ElementClassName.generated.xml' path='docs/ElementClassName/*'/>
+	public string ClassName { get; set; }
+	///<include file='Utils/Docs/ElementClassList/ElementClassList.generated.xml' path='docs/ElementClassList/*'/>
+	public DOMTokenList ClassList { get; }
+	///<include file='Utils/Docs/ElementSlot/ElementSlot.generated.xml' path='docs/ElementSlot/*'/>
+	public string Slot { get; set; }
+	///<include file='Utils/Docs/ElementHasAttributes/ElementHasAttributes.generated.xml' path='docs/ElementHasAttributes/*'/>
+	public bool HasAttributes() { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/ElementAttributes/ElementAttributes.generated.xml' path='docs/ElementAttributes/*'/>
+	public NamedNodeMap Attributes { get; }
+	///<include file='Utils/Docs/ElementGetAttributeNames/ElementGetAttributeNames.generated.xml' path='docs/ElementGetAttributeNames/*'/>
+	public List<string> GetAttributeNames() { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/ElementGetAttribute/ElementGetAttribute.generated.xml' path='docs/ElementGetAttribute/*'/>
+	public string? GetAttribute(string qualifiedName) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/ElementGetAttributeNS/ElementGetAttributeNS.generated.xml' path='docs/ElementGetAttributeNS/*'/>
+	public string? GetAttributeNS(string? namespace_, string localName) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/ElementSetAttribute/ElementSetAttribute.generated.xml' path='docs/ElementSetAttribute/*'/>
+	public Undefined SetAttribute(string qualifiedName, string value) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/ElementSetAttributeNS/ElementSetAttributeNS.generated.xml' path='docs/ElementSetAttributeNS/*'/>
+	public Undefined SetAttributeNS(string? namespace_, string qualifiedName, string value) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/ElementRemoveAttribute/ElementRemoveAttribute.generated.xml' path='docs/ElementRemoveAttribute/*'/>
+	public Undefined RemoveAttribute(string qualifiedName) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/ElementRemoveAttributeNS/ElementRemoveAttributeNS.generated.xml' path='docs/ElementRemoveAttributeNS/*'/>
+	public Undefined RemoveAttributeNS(string? namespace_, string localName) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/ElementToggleAttribute/ElementToggleAttribute.generated.xml' path='docs/ElementToggleAttribute/*'/>
+	public bool ToggleAttribute(string qualifiedName, bool force) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/ElementHasAttribute/ElementHasAttribute.generated.xml' path='docs/ElementHasAttribute/*'/>
+	public bool HasAttribute(string qualifiedName) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/ElementHasAttributeNS/ElementHasAttributeNS.generated.xml' path='docs/ElementHasAttributeNS/*'/>
+	public bool HasAttributeNS(string? namespace_, string localName) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/ElementGetAttributeNode/ElementGetAttributeNode.generated.xml' path='docs/ElementGetAttributeNode/*'/>
+	public Attr? GetAttributeNode(string qualifiedName) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/ElementGetAttributeNodeNS/ElementGetAttributeNodeNS.generated.xml' path='docs/ElementGetAttributeNodeNS/*'/>
+	public Attr? GetAttributeNodeNS(string? namespace_, string localName) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/ElementSetAttributeNode/ElementSetAttributeNode.generated.xml' path='docs/ElementSetAttributeNode/*'/>
+	public Attr? SetAttributeNode(Attr attr) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/ElementSetAttributeNodeNS/ElementSetAttributeNodeNS.generated.xml' path='docs/ElementSetAttributeNodeNS/*'/>
+	public Attr? SetAttributeNodeNS(Attr attr) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/ElementRemoveAttributeNode/ElementRemoveAttributeNode.generated.xml' path='docs/ElementRemoveAttributeNode/*'/>
+	public Attr RemoveAttributeNode(Attr attr) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/ElementAttachShadow/ElementAttachShadow.generated.xml' path='docs/ElementAttachShadow/*'/>
+	public ShadowRoot AttachShadow(ShadowRootInit init) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/ElementShadowRoot/ElementShadowRoot.generated.xml' path='docs/ElementShadowRoot/*'/>
+	public ShadowRoot? ShadowRoot { get; }
+	///<include file='Utils/Docs/ElementClosest/ElementClosest.generated.xml' path='docs/ElementClosest/*'/>
+	public Element? Closest(string selectors) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/ElementMatches/ElementMatches.generated.xml' path='docs/ElementMatches/*'/>
+	public bool Matches(string selectors) { throw new System.NotImplementedException(); }
+		public bool WebkitMatchesSelector(string selectors) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/ElementGetElementsByTagName/ElementGetElementsByTagName.generated.xml' path='docs/ElementGetElementsByTagName/*'/>
+	public HTMLCollection GetElementsByTagName(string qualifiedName) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/ElementGetElementsByTagNameNS/ElementGetElementsByTagNameNS.generated.xml' path='docs/ElementGetElementsByTagNameNS/*'/>
+	public HTMLCollection GetElementsByTagNameNS(string? namespace_, string localName) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/ElementGetElementsByClassName/ElementGetElementsByClassName.generated.xml' path='docs/ElementGetElementsByClassName/*'/>
+	public HTMLCollection GetElementsByClassName(string classNames) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/ElementInsertAdjacentElement/ElementInsertAdjacentElement.generated.xml' path='docs/ElementInsertAdjacentElement/*'/>
+	public Element? InsertAdjacentElement(string where, Element element) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/ElementInsertAdjacentText/ElementInsertAdjacentText.generated.xml' path='docs/ElementInsertAdjacentText/*'/>
+	public Undefined InsertAdjacentText(string where, string data) { throw new System.NotImplementedException(); }
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -2661,7 +3140,7 @@ public partial class Attr : Node
 
 ///<include file='Utils/Docs/CharacterData/CharacterData.generated.xml' path='docs/CharacterData/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class CharacterData : Node
+public partial class CharacterData : Node, NonDocumentTypeChildNode, ChildNode
 {
 	///<include file='Utils/Docs/CharacterDataData/CharacterDataData.generated.xml' path='docs/CharacterDataData/*'/>
 	public string Data { get; set; }
@@ -2681,7 +3160,7 @@ public partial class CharacterData : Node
 
 ///<include file='Utils/Docs/Text/Text.generated.xml' path='docs/Text/*'/>
 [To(ToAttribute.Default)]
-public partial class Text : CharacterData
+public partial class Text : CharacterData, Slottable
 {
 	///<include file='Utils/Docs/TextText/TextText.generated.xml' path='docs/TextText/*'/>
 	public Text(string data) { }
@@ -2702,7 +3181,7 @@ public partial class CDATASection : Text
 
 ///<include file='Utils/Docs/ProcessingInstruction/ProcessingInstruction.generated.xml' path='docs/ProcessingInstruction/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class ProcessingInstruction : CharacterData
+public partial class ProcessingInstruction : CharacterData, LinkStyle
 {
 	///<include file='Utils/Docs/ProcessingInstructionTarget/ProcessingInstructionTarget.generated.xml' path='docs/ProcessingInstructionTarget/*'/>
 	public string Target { get; }
@@ -2960,6 +3439,7 @@ public partial interface XPathEvaluatorBase
 		public XPathResult Evaluate(string expression, Node contextNode, XPathNSResolver? resolver, ushort type, XPathResult? result) { throw new System.NotImplementedException(); }
 }
 
+
 ///<include file='Utils/Docs/XPathEvaluator/XPathEvaluator.generated.xml' path='docs/XPathEvaluator/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class XPathEvaluator
@@ -2967,6 +3447,7 @@ public partial class XPathEvaluator
 	///<include file='Utils/Docs/XPathEvaluatorXPathEvaluator/XPathEvaluatorXPathEvaluator.generated.xml' path='docs/XPathEvaluatorXPathEvaluator/*'/>
 	public XPathEvaluator() { }
 }
+
 
 ///<include file='Utils/Docs/XSLTProcessor/XSLTProcessor.generated.xml' path='docs/XSLTProcessor/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -3012,6 +3493,24 @@ public partial class XMLSerializer
 	public string SerializeToString(Node root) { throw new System.NotImplementedException(); }
 }
 
+///<include file='Utils/Docs/Element/Element.generated.xml' path='docs/Element/*'/>
+public partial class Element
+{
+	///<include file='Utils/Docs/ElementInnerHTML/ElementInnerHTML.generated.xml' path='docs/ElementInnerHTML/*'/>
+	public string InnerHTML { get; set; }
+	///<include file='Utils/Docs/ElementOuterHTML/ElementOuterHTML.generated.xml' path='docs/ElementOuterHTML/*'/>
+	public string OuterHTML { get; set; }
+	///<include file='Utils/Docs/ElementInsertAdjacentHTML/ElementInsertAdjacentHTML.generated.xml' path='docs/ElementInsertAdjacentHTML/*'/>
+	public Undefined InsertAdjacentHTML(string position, string text) { throw new System.NotImplementedException(); }
+}
+
+///<include file='Utils/Docs/Range/Range.generated.xml' path='docs/Range/*'/>
+public partial class Range
+{
+	///<include file='Utils/Docs/RangeCreateContextualFragment/RangeCreateContextualFragment.generated.xml' path='docs/RangeCreateContextualFragment/*'/>
+	public DocumentFragment CreateContextualFragment(string fragment) { throw new System.NotImplementedException(); }
+}
+
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial interface TextDecoderCommon
 {
@@ -3048,6 +3547,7 @@ public partial class TextDecoder
 	public TextDecoder() { }
 }
 
+
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial interface TextEncoderCommon
 {
@@ -3077,6 +3577,7 @@ public partial class TextEncoder
 	public TextEncoderEncodeIntoResult EncodeInto(string source, System.Byte destination) { throw new System.NotImplementedException(); }
 }
 
+
 ///<include file='Utils/Docs/TextDecoderStream/TextDecoderStream.generated.xml' path='docs/TextDecoderStream/*'/>
 [To(ToAttribute.Default)]
 public partial class TextDecoderStream
@@ -3086,6 +3587,8 @@ public partial class TextDecoderStream
 	public TextDecoderStream() { }
 }
 
+
+
 ///<include file='Utils/Docs/TextEncoderStream/TextEncoderStream.generated.xml' path='docs/TextEncoderStream/*'/>
 [To(ToAttribute.Default)]
 public partial class TextEncoderStream
@@ -3093,6 +3596,8 @@ public partial class TextEncoderStream
 	///<include file='Utils/Docs/TextEncoderStreamTextEncoderStream/TextEncoderStreamTextEncoderStream.generated.xml' path='docs/TextEncoderStreamTextEncoderStream/*'/>
 	public TextEncoderStream() { }
 }
+
+
 
 ///<include file='Utils/Docs/PerformanceEventTiming/PerformanceEventTiming.generated.xml' path='docs/PerformanceEventTiming/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -3117,6 +3622,21 @@ public partial class PerformanceEventTiming
 public partial class EventCounts
 {
 	
+}
+
+///<include file='Utils/Docs/Performance/Performance.generated.xml' path='docs/Performance/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class Performance
+{
+	///<include file='Utils/Docs/PerformanceEventCounts/PerformanceEventCounts.generated.xml' path='docs/PerformanceEventCounts/*'/>
+	public EventCounts EventCounts { get; }
+		public ulong InteractionCount { get; }
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class PerformanceObserverInit
+{
+		public Unsupported /*DOMHighResTimeStamp*/ DurationThreshold;
 }
 
 
@@ -3195,6 +3715,7 @@ public partial class Request
 	public Request Clone() { throw new System.NotImplementedException(); }
 	public Request() { }
 }
+
 
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class RequestInit
@@ -3369,6 +3890,7 @@ public partial class Response
 	public Response() { }
 }
 
+
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class ResponseInit
 {
@@ -3393,6 +3915,12 @@ public enum ResponseType
 	Opaque,
 	[Value("opaqueredirect")]
 	Opaqueredirect,
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial interface WindowOrWorkerGlobalScope
+{
+		public Task<Response> Fetch(RequestInfo input, RequestInit init) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/FileSystemHandleKind/FileSystemHandleKind.generated.xml' path='docs/FileSystemHandleKind/*'/>
@@ -3485,7 +4013,7 @@ public partial class WriteParams
 		public required WriteCommandType Type;
 		public ulong? Size;
 		public ulong? Position;
-		public Union35? Data;
+		public Union36? Data;
 }
 
 
@@ -3523,6 +4051,14 @@ public partial class FileSystemSyncAccessHandle
 	public Undefined Flush() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/FileSystemSyncAccessHandleClose/FileSystemSyncAccessHandleClose.generated.xml' path='docs/FileSystemSyncAccessHandleClose/*'/>
 	public Undefined Close() { throw new System.NotImplementedException(); }
+}
+
+///<include file='Utils/Docs/StorageManager/StorageManager.generated.xml' path='docs/StorageManager/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class StorageManager
+{
+	///<include file='Utils/Docs/StorageManagerGetDirectory/StorageManagerGetDirectory.generated.xml' path='docs/StorageManagerGetDirectory/*'/>
+	public Task<FileSystemDirectoryHandle> GetDirectory() { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/Blob/Blob.generated.xml' path='docs/Blob/*'/>
@@ -3613,7 +4149,7 @@ public partial class FileReader : EventTarget
 	///<include file='Utils/Docs/FileReaderReadyState/FileReaderReadyState.generated.xml' path='docs/FileReaderReadyState/*'/>
 	public ushort ReadyState { get; }
 	///<include file='Utils/Docs/FileReaderResult/FileReaderResult.generated.xml' path='docs/FileReaderResult/*'/>
-	public Union38? Result { get; }
+	public Union39? Result { get; }
 	///<include file='Utils/Docs/FileReaderError/FileReaderError.generated.xml' path='docs/FileReaderError/*'/>
 	public DOMException? Error { get; }
 		public EventHandler Onloadstart { get; set; }
@@ -3640,6 +4176,16 @@ public partial class FileReaderSync
 	public string ReadAsDataURL(Blob blob) { throw new System.NotImplementedException(); }
 }
 
+///<include file='Utils/Docs/URL/URL.generated.xml' path='docs/URL/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class URL
+{
+	///<include file='Utils/Docs/URLCreateObjectURL/URLCreateObjectURL.generated.xml' path='docs/URLCreateObjectURL/*'/>
+	public static string CreateObjectURL(Union40 obj) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/URLRevokeObjectURL/URLRevokeObjectURL.generated.xml' path='docs/URLRevokeObjectURL/*'/>
+	public static Undefined RevokeObjectURL(string url) { throw new System.NotImplementedException(); }
+}
+
 ///<include file='Utils/Docs/SVGFilterElement/SVGFilterElement.generated.xml' path='docs/SVGFilterElement/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class SVGFilterElement
@@ -3651,6 +4197,7 @@ public partial class SVGFilterElement
 		public Unsupported /*SVGAnimatedLength*/ Width { get; }
 		public Unsupported /*SVGAnimatedLength*/ Height { get; }
 }
+
 
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial interface SVGFilterPrimitiveStandardAttributes
@@ -3664,7 +4211,7 @@ public partial interface SVGFilterPrimitiveStandardAttributes
 
 ///<include file='Utils/Docs/SVGFEBlendElement/SVGFEBlendElement.generated.xml' path='docs/SVGFEBlendElement/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class SVGFEBlendElement
+public partial class SVGFEBlendElement : SVGFilterPrimitiveStandardAttributes
 {
 		public const ushort SVG_FEBLEND_MODE_UNKNOWN = 0;
 		public const ushort SVG_FEBLEND_MODE_NORMAL = 1;
@@ -3688,9 +4235,10 @@ public partial class SVGFEBlendElement
 		public Unsupported /*SVGAnimatedEnumeration*/ Mode { get; }
 }
 
+
 ///<include file='Utils/Docs/SVGFEColorMatrixElement/SVGFEColorMatrixElement.generated.xml' path='docs/SVGFEColorMatrixElement/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class SVGFEColorMatrixElement
+public partial class SVGFEColorMatrixElement : SVGFilterPrimitiveStandardAttributes
 {
 		public const ushort SVG_FECOLORMATRIX_TYPE_UNKNOWN = 0;
 		public const ushort SVG_FECOLORMATRIX_TYPE_MATRIX = 1;
@@ -3702,12 +4250,14 @@ public partial class SVGFEColorMatrixElement
 		public Unsupported /*SVGAnimatedNumberList*/ Values { get; }
 }
 
+
 ///<include file='Utils/Docs/SVGFEComponentTransferElement/SVGFEComponentTransferElement.generated.xml' path='docs/SVGFEComponentTransferElement/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class SVGFEComponentTransferElement
+public partial class SVGFEComponentTransferElement : SVGFilterPrimitiveStandardAttributes
 {
 		public Unsupported /*SVGAnimatedString*/ In1 { get; }
 }
+
 
 ///<include file='Utils/Docs/SVGComponentTransferFunctionElement/SVGComponentTransferFunctionElement.generated.xml' path='docs/SVGComponentTransferFunctionElement/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -3754,7 +4304,7 @@ public partial class SVGFEFuncAElement : SVGComponentTransferFunctionElement
 
 ///<include file='Utils/Docs/SVGFECompositeElement/SVGFECompositeElement.generated.xml' path='docs/SVGFECompositeElement/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class SVGFECompositeElement
+public partial class SVGFECompositeElement : SVGFilterPrimitiveStandardAttributes
 {
 		public const ushort SVG_FECOMPOSITE_OPERATOR_UNKNOWN = 0;
 		public const ushort SVG_FECOMPOSITE_OPERATOR_OVER = 1;
@@ -3772,9 +4322,10 @@ public partial class SVGFECompositeElement
 		public Unsupported /*SVGAnimatedNumber*/ K4 { get; }
 }
 
+
 ///<include file='Utils/Docs/SVGFEConvolveMatrixElement/SVGFEConvolveMatrixElement.generated.xml' path='docs/SVGFEConvolveMatrixElement/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class SVGFEConvolveMatrixElement
+public partial class SVGFEConvolveMatrixElement : SVGFilterPrimitiveStandardAttributes
 {
 		public const ushort SVG_EDGEMODE_UNKNOWN = 0;
 		public const ushort SVG_EDGEMODE_DUPLICATE = 1;
@@ -3794,9 +4345,10 @@ public partial class SVGFEConvolveMatrixElement
 		public Unsupported /*SVGAnimatedBoolean*/ PreserveAlpha { get; }
 }
 
+
 ///<include file='Utils/Docs/SVGFEDiffuseLightingElement/SVGFEDiffuseLightingElement.generated.xml' path='docs/SVGFEDiffuseLightingElement/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class SVGFEDiffuseLightingElement
+public partial class SVGFEDiffuseLightingElement : SVGFilterPrimitiveStandardAttributes
 {
 		public Unsupported /*SVGAnimatedString*/ In1 { get; }
 		public Unsupported /*SVGAnimatedNumber*/ SurfaceScale { get; }
@@ -3804,6 +4356,7 @@ public partial class SVGFEDiffuseLightingElement
 		public Unsupported /*SVGAnimatedNumber*/ KernelUnitLengthX { get; }
 		public Unsupported /*SVGAnimatedNumber*/ KernelUnitLengthY { get; }
 }
+
 
 ///<include file='Utils/Docs/SVGFEDistantLightElement/SVGFEDistantLightElement.generated.xml' path='docs/SVGFEDistantLightElement/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -3838,7 +4391,7 @@ public partial class SVGFESpotLightElement
 
 ///<include file='Utils/Docs/SVGFEDisplacementMapElement/SVGFEDisplacementMapElement.generated.xml' path='docs/SVGFEDisplacementMapElement/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class SVGFEDisplacementMapElement
+public partial class SVGFEDisplacementMapElement : SVGFilterPrimitiveStandardAttributes
 {
 		public const ushort SVG_CHANNEL_UNKNOWN = 0;
 		public const ushort SVG_CHANNEL_R = 1;
@@ -3852,9 +4405,10 @@ public partial class SVGFEDisplacementMapElement
 		public Unsupported /*SVGAnimatedEnumeration*/ YChannelSelector { get; }
 }
 
+
 ///<include file='Utils/Docs/SVGFEDropShadowElement/SVGFEDropShadowElement.generated.xml' path='docs/SVGFEDropShadowElement/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class SVGFEDropShadowElement
+public partial class SVGFEDropShadowElement : SVGFilterPrimitiveStandardAttributes
 {
 		public Unsupported /*SVGAnimatedString*/ In1 { get; }
 		public Unsupported /*SVGAnimatedNumber*/ Dx { get; }
@@ -3864,15 +4418,17 @@ public partial class SVGFEDropShadowElement
 		public Undefined SetStdDeviation(Number stdDeviationX, Number stdDeviationY) { throw new System.NotImplementedException(); }
 }
 
+
 ///<include file='Utils/Docs/SVGFEFloodElement/SVGFEFloodElement.generated.xml' path='docs/SVGFEFloodElement/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class SVGFEFloodElement
+public partial class SVGFEFloodElement : SVGFilterPrimitiveStandardAttributes
 {
 }
 
+
 ///<include file='Utils/Docs/SVGFEGaussianBlurElement/SVGFEGaussianBlurElement.generated.xml' path='docs/SVGFEGaussianBlurElement/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class SVGFEGaussianBlurElement
+public partial class SVGFEGaussianBlurElement : SVGFilterPrimitiveStandardAttributes
 {
 		public const ushort SVG_EDGEMODE_UNKNOWN = 0;
 		public const ushort SVG_EDGEMODE_DUPLICATE = 1;
@@ -3885,19 +4441,23 @@ public partial class SVGFEGaussianBlurElement
 		public Undefined SetStdDeviation(Number stdDeviationX, Number stdDeviationY) { throw new System.NotImplementedException(); }
 }
 
+
 ///<include file='Utils/Docs/SVGFEImageElement/SVGFEImageElement.generated.xml' path='docs/SVGFEImageElement/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class SVGFEImageElement
+public partial class SVGFEImageElement : SVGFilterPrimitiveStandardAttributes
 {
 		public Unsupported /*SVGAnimatedPreserveAspectRatio*/ PreserveAspectRatio { get; }
 		public Unsupported /*SVGAnimatedString*/ CrossOrigin { get; }
 }
 
+
+
 ///<include file='Utils/Docs/SVGFEMergeElement/SVGFEMergeElement.generated.xml' path='docs/SVGFEMergeElement/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class SVGFEMergeElement
+public partial class SVGFEMergeElement : SVGFilterPrimitiveStandardAttributes
 {
 }
+
 
 ///<include file='Utils/Docs/SVGFEMergeNodeElement/SVGFEMergeNodeElement.generated.xml' path='docs/SVGFEMergeNodeElement/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -3908,7 +4468,7 @@ public partial class SVGFEMergeNodeElement
 
 ///<include file='Utils/Docs/SVGFEMorphologyElement/SVGFEMorphologyElement.generated.xml' path='docs/SVGFEMorphologyElement/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class SVGFEMorphologyElement
+public partial class SVGFEMorphologyElement : SVGFilterPrimitiveStandardAttributes
 {
 		public const ushort SVG_MORPHOLOGY_OPERATOR_UNKNOWN = 0;
 		public const ushort SVG_MORPHOLOGY_OPERATOR_ERODE = 1;
@@ -3919,18 +4479,20 @@ public partial class SVGFEMorphologyElement
 		public Unsupported /*SVGAnimatedNumber*/ RadiusY { get; }
 }
 
+
 ///<include file='Utils/Docs/SVGFEOffsetElement/SVGFEOffsetElement.generated.xml' path='docs/SVGFEOffsetElement/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class SVGFEOffsetElement
+public partial class SVGFEOffsetElement : SVGFilterPrimitiveStandardAttributes
 {
 		public Unsupported /*SVGAnimatedString*/ In1 { get; }
 		public Unsupported /*SVGAnimatedNumber*/ Dx { get; }
 		public Unsupported /*SVGAnimatedNumber*/ Dy { get; }
 }
 
+
 ///<include file='Utils/Docs/SVGFESpecularLightingElement/SVGFESpecularLightingElement.generated.xml' path='docs/SVGFESpecularLightingElement/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class SVGFESpecularLightingElement
+public partial class SVGFESpecularLightingElement : SVGFilterPrimitiveStandardAttributes
 {
 		public Unsupported /*SVGAnimatedString*/ In1 { get; }
 		public Unsupported /*SVGAnimatedNumber*/ SurfaceScale { get; }
@@ -3940,16 +4502,18 @@ public partial class SVGFESpecularLightingElement
 		public Unsupported /*SVGAnimatedNumber*/ KernelUnitLengthY { get; }
 }
 
+
 ///<include file='Utils/Docs/SVGFETileElement/SVGFETileElement.generated.xml' path='docs/SVGFETileElement/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class SVGFETileElement
+public partial class SVGFETileElement : SVGFilterPrimitiveStandardAttributes
 {
 		public Unsupported /*SVGAnimatedString*/ In1 { get; }
 }
 
+
 ///<include file='Utils/Docs/SVGFETurbulenceElement/SVGFETurbulenceElement.generated.xml' path='docs/SVGFETurbulenceElement/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class SVGFETurbulenceElement
+public partial class SVGFETurbulenceElement : SVGFilterPrimitiveStandardAttributes
 {
 		public const ushort SVG_TURBULENCE_TYPE_UNKNOWN = 0;
 		public const ushort SVG_TURBULENCE_TYPE_FRACTALNOISE = 1;
@@ -3964,6 +4528,7 @@ public partial class SVGFETurbulenceElement
 		public Unsupported /*SVGAnimatedEnumeration*/ StitchTiles { get; }
 		public Unsupported /*SVGAnimatedEnumeration*/ Type { get; }
 }
+
 
 [To(ToAttribute.None)]
 public enum FullscreenNavigationUI
@@ -3980,6 +4545,33 @@ public enum FullscreenNavigationUI
 public partial class FullscreenOptions
 {
 		public FullscreenNavigationUI NavigationUI;
+}
+
+///<include file='Utils/Docs/Element/Element.generated.xml' path='docs/Element/*'/>
+public partial class Element
+{
+	///<include file='Utils/Docs/ElementRequestFullscreen/ElementRequestFullscreen.generated.xml' path='docs/ElementRequestFullscreen/*'/>
+	public Task<Undefined> RequestFullscreen(FullscreenOptions options) { throw new System.NotImplementedException(); }
+		public EventHandler Onfullscreenchange { get; set; }
+		public EventHandler Onfullscreenerror { get; set; }
+}
+
+///<include file='Utils/Docs/Document/Document.generated.xml' path='docs/Document/*'/>
+public partial class Document
+{
+	///<include file='Utils/Docs/DocumentFullscreenEnabled/DocumentFullscreenEnabled.generated.xml' path='docs/DocumentFullscreenEnabled/*'/>
+	public bool FullscreenEnabled { get; }
+	///<include file='Utils/Docs/DocumentFullscreen/DocumentFullscreen.generated.xml' path='docs/DocumentFullscreen/*'/>
+	public bool Fullscreen { get; }
+	///<include file='Utils/Docs/DocumentExitFullscreen/DocumentExitFullscreen.generated.xml' path='docs/DocumentExitFullscreen/*'/>
+	public Task<Undefined> ExitFullscreen() { throw new System.NotImplementedException(); }
+		public EventHandler Onfullscreenchange { get; set; }
+		public EventHandler Onfullscreenerror { get; set; }
+}
+
+public partial interface DocumentOrShadowRoot
+{
+		public Element? FullscreenElement { get { throw new System.NotImplementedException(); } }
 }
 
 ///<include file='Utils/Docs/Sensor/Sensor.generated.xml' path='docs/Sensor/*'/>
@@ -4202,7 +4794,7 @@ public partial class DOMQuadInit
 public partial class DOMMatrixReadOnly
 {
 	///<include file='Utils/Docs/DOMMatrixReadOnlyDOMMatrixReadOnly/DOMMatrixReadOnlyDOMMatrixReadOnly.generated.xml' path='docs/DOMMatrixReadOnlyDOMMatrixReadOnly/*'/>
-	public DOMMatrixReadOnly(Union39 init) { }
+	public DOMMatrixReadOnly(Union41 init) { }
 		public static DOMMatrixReadOnly FromMatrix(DOMMatrixInit other) { throw new System.NotImplementedException(); }
 		public static DOMMatrixReadOnly FromFloat32Array(System.Single array32) { throw new System.NotImplementedException(); }
 		public static DOMMatrixReadOnly FromFloat64Array(System.Double array64) { throw new System.NotImplementedException(); }
@@ -4259,7 +4851,7 @@ public partial class DOMMatrixReadOnly
 public partial class DOMMatrix : DOMMatrixReadOnly
 {
 	///<include file='Utils/Docs/DOMMatrixDOMMatrix/DOMMatrixDOMMatrix.generated.xml' path='docs/DOMMatrixDOMMatrix/*'/>
-	public DOMMatrix(Union40 init) { }
+	public DOMMatrix(Union42 init) { }
 		public static DOMMatrix FromMatrix(DOMMatrixInit other) { throw new System.NotImplementedException(); }
 		public static DOMMatrix FromFloat32Array(System.Single array32) { throw new System.NotImplementedException(); }
 		public static DOMMatrix FromFloat64Array(System.Double array64) { throw new System.NotImplementedException(); }
@@ -4374,7 +4966,7 @@ public partial class HTMLAllCollection
 	
 	///<include file='Utils/Docs/HTMLAllCollectionItem/HTMLAllCollectionItem.generated.xml' path='docs/HTMLAllCollectionItem/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
-	public Union42? Item(string nameOrIndex) { throw new System.NotImplementedException(); }
+	public Union44? Item(string nameOrIndex) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/HTMLFormControlsCollection/HTMLFormControlsCollection.generated.xml' path='docs/HTMLFormControlsCollection/*'/>
@@ -4400,7 +4992,7 @@ public partial class HTMLOptionsCollection : HTMLCollection
 	public ulong Length { get; set; }
 	
 		[To(ToAttribute.FirstCharToLowerCase)]
-	public Undefined Add(Union44 element, Union45? before) { throw new System.NotImplementedException(); }
+	public Undefined Add(Union46 element, Union47? before) { throw new System.NotImplementedException(); }
 		[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined Remove(long index) { throw new System.NotImplementedException(); }
 		[To(ToAttribute.FirstCharToLowerCase)]
@@ -4441,9 +5033,90 @@ public enum DocumentVisibilityState
 }
 
 
+///<include file='Utils/Docs/Document/Document.generated.xml' path='docs/Document/*'/>
+public partial class Document
+{
+		public static Document ParseHTMLUnsafe(Unsupported /*HTMLString*/ html) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/DocumentLocation/DocumentLocation.generated.xml' path='docs/DocumentLocation/*'/>
+	public Location? Location { get; }
+	///<include file='Utils/Docs/DocumentDomain/DocumentDomain.generated.xml' path='docs/DocumentDomain/*'/>
+	public string Domain { get; set; }
+	///<include file='Utils/Docs/DocumentReferrer/DocumentReferrer.generated.xml' path='docs/DocumentReferrer/*'/>
+	public string Referrer { get; }
+	///<include file='Utils/Docs/DocumentCookie/DocumentCookie.generated.xml' path='docs/DocumentCookie/*'/>
+	public string Cookie { get; set; }
+	///<include file='Utils/Docs/DocumentLastModified/DocumentLastModified.generated.xml' path='docs/DocumentLastModified/*'/>
+	public string LastModified { get; }
+	///<include file='Utils/Docs/DocumentReadyState/DocumentReadyState.generated.xml' path='docs/DocumentReadyState/*'/>
+	public DocumentReadyState ReadyState { get; }
+	
+	///<include file='Utils/Docs/DocumentTitle/DocumentTitle.generated.xml' path='docs/DocumentTitle/*'/>
+	public string Title { get; set; }
+	///<include file='Utils/Docs/DocumentDir/DocumentDir.generated.xml' path='docs/DocumentDir/*'/>
+	public string Dir { get; set; }
+	///<include file='Utils/Docs/DocumentBody/DocumentBody.generated.xml' path='docs/DocumentBody/*'/>
+	public HTMLElement? Body { get; set; }
+	///<include file='Utils/Docs/DocumentHead/DocumentHead.generated.xml' path='docs/DocumentHead/*'/>
+	public HTMLHeadElement? Head { get; }
+	///<include file='Utils/Docs/DocumentImages/DocumentImages.generated.xml' path='docs/DocumentImages/*'/>
+	public HTMLCollection Images { get; }
+	///<include file='Utils/Docs/DocumentEmbeds/DocumentEmbeds.generated.xml' path='docs/DocumentEmbeds/*'/>
+	public HTMLCollection Embeds { get; }
+	///<include file='Utils/Docs/DocumentPlugins/DocumentPlugins.generated.xml' path='docs/DocumentPlugins/*'/>
+	public HTMLCollection Plugins { get; }
+	///<include file='Utils/Docs/DocumentLinks/DocumentLinks.generated.xml' path='docs/DocumentLinks/*'/>
+	public HTMLCollection Links { get; }
+	///<include file='Utils/Docs/DocumentForms/DocumentForms.generated.xml' path='docs/DocumentForms/*'/>
+	public HTMLCollection Forms { get; }
+	///<include file='Utils/Docs/DocumentScripts/DocumentScripts.generated.xml' path='docs/DocumentScripts/*'/>
+	public HTMLCollection Scripts { get; }
+	///<include file='Utils/Docs/DocumentGetElementsByName/DocumentGetElementsByName.generated.xml' path='docs/DocumentGetElementsByName/*'/>
+	public NodeList GetElementsByName(string elementName) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/DocumentCurrentScript/DocumentCurrentScript.generated.xml' path='docs/DocumentCurrentScript/*'/>
+	public HTMLOrSVGScriptElement? CurrentScript { get; }
+	///<include file='Utils/Docs/DocumentOpen/DocumentOpen.generated.xml' path='docs/DocumentOpen/*'/>
+	public Document Open(string unused1, string unused2) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/DocumentOpen/DocumentOpen.generated.xml' path='docs/DocumentOpen/*'/>
+	public WindowProxy? Open(string url, string name, string features) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/DocumentClose/DocumentClose.generated.xml' path='docs/DocumentClose/*'/>
+	public Undefined Close() { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/DocumentWrite/DocumentWrite.generated.xml' path='docs/DocumentWrite/*'/>
+	public Undefined Write(params Unsupported /*HTMLString*/[] text) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/DocumentWriteln/DocumentWriteln.generated.xml' path='docs/DocumentWriteln/*'/>
+	public Undefined Writeln(params Unsupported /*HTMLString*/[] text) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/DocumentDefaultView/DocumentDefaultView.generated.xml' path='docs/DocumentDefaultView/*'/>
+	public WindowProxy? DefaultView { get; }
+	///<include file='Utils/Docs/DocumentHasFocus/DocumentHasFocus.generated.xml' path='docs/DocumentHasFocus/*'/>
+	public bool HasFocus() { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/DocumentDesignMode/DocumentDesignMode.generated.xml' path='docs/DocumentDesignMode/*'/>
+	public string DesignMode { get; set; }
+	///<include file='Utils/Docs/DocumentExecCommand/DocumentExecCommand.generated.xml' path='docs/DocumentExecCommand/*'/>
+	public bool ExecCommand(string commandId, bool showUI, string value) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/DocumentQueryCommandEnabled/DocumentQueryCommandEnabled.generated.xml' path='docs/DocumentQueryCommandEnabled/*'/>
+	public bool QueryCommandEnabled(string commandId) { throw new System.NotImplementedException(); }
+		public bool QueryCommandIndeterm(string commandId) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/DocumentQueryCommandState/DocumentQueryCommandState.generated.xml' path='docs/DocumentQueryCommandState/*'/>
+	public bool QueryCommandState(string commandId) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/DocumentQueryCommandSupported/DocumentQueryCommandSupported.generated.xml' path='docs/DocumentQueryCommandSupported/*'/>
+	public bool QueryCommandSupported(string commandId) { throw new System.NotImplementedException(); }
+		public string QueryCommandValue(string commandId) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/DocumentHidden/DocumentHidden.generated.xml' path='docs/DocumentHidden/*'/>
+	public bool Hidden { get; }
+	///<include file='Utils/Docs/DocumentVisibilityState/DocumentVisibilityState.generated.xml' path='docs/DocumentVisibilityState/*'/>
+	public DocumentVisibilityState VisibilityState { get; }
+		public EventHandler Onreadystatechange { get; set; }
+		public EventHandler Onvisibilitychange { get; set; }
+}
+
+
+public partial interface DocumentOrShadowRoot
+{
+		public Element? ActiveElement { get { throw new System.NotImplementedException(); } }
+}
+
 ///<include file='Utils/Docs/HTMLElement/HTMLElement.generated.xml' path='docs/HTMLElement/*'/>
 [To(ToAttribute.Default)]
-public partial class HTMLElement : Element
+public partial class HTMLElement : Element, ElementCSSInlineStyle, GlobalEventHandlers, ElementContentEditable, HTMLOrSVGElement
 {
 		public HTMLElement() { }
 	///<include file='Utils/Docs/HTMLElementTitle/HTMLElementTitle.generated.xml' path='docs/HTMLElementTitle/*'/>
@@ -4460,7 +5133,7 @@ public partial class HTMLElement : Element
 	public string Dir { get; set; }
 	///<include file='Utils/Docs/HTMLElementHidden/HTMLElementHidden.generated.xml' path='docs/HTMLElementHidden/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
-	public Union47? Hidden { get; set; }
+	public Union49? Hidden { get; set; }
 	///<include file='Utils/Docs/HTMLElementInert/HTMLElementInert.generated.xml' path='docs/HTMLElementInert/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Inert { get; set; }
@@ -4505,6 +5178,9 @@ public partial class HTMLElement : Element
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public string? Popover { get; set; }
 }
+
+
+
 
 ///<include file='Utils/Docs/HTMLUnknownElement/HTMLUnknownElement.generated.xml' path='docs/HTMLUnknownElement/*'/>
 [To(ToAttribute.Default)]
@@ -4570,7 +5246,7 @@ public partial class HTMLBaseElement : HTMLElement
 
 ///<include file='Utils/Docs/HTMLLinkElement/HTMLLinkElement.generated.xml' path='docs/HTMLLinkElement/*'/>
 [To(ToAttribute.Default)]
-public partial class HTMLLinkElement : HTMLElement
+public partial class HTMLLinkElement : HTMLElement, LinkStyle
 {
 		public HTMLLinkElement() { }
 		[To(ToAttribute.FirstCharToLowerCase)]
@@ -4614,6 +5290,7 @@ public partial class HTMLLinkElement : HTMLElement
 	public string FetchPriority { get; set; }
 }
 
+
 ///<include file='Utils/Docs/HTMLMetaElement/HTMLMetaElement.generated.xml' path='docs/HTMLMetaElement/*'/>
 [To(ToAttribute.Default)]
 public partial class HTMLMetaElement : HTMLElement
@@ -4635,7 +5312,7 @@ public partial class HTMLMetaElement : HTMLElement
 
 ///<include file='Utils/Docs/HTMLStyleElement/HTMLStyleElement.generated.xml' path='docs/HTMLStyleElement/*'/>
 [To(ToAttribute.Default)]
-public partial class HTMLStyleElement : HTMLElement
+public partial class HTMLStyleElement : HTMLElement, LinkStyle
 {
 		public HTMLStyleElement() { }
 	///<include file='Utils/Docs/HTMLStyleElementDisabled/HTMLStyleElementDisabled.generated.xml' path='docs/HTMLStyleElementDisabled/*'/>
@@ -4647,6 +5324,14 @@ public partial class HTMLStyleElement : HTMLElement
 		[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMTokenList Blocking { get; }
 }
+
+
+///<include file='Utils/Docs/HTMLBodyElement/HTMLBodyElement.generated.xml' path='docs/HTMLBodyElement/*'/>
+public partial class HTMLBodyElement : HTMLElement
+{
+		public HTMLBodyElement() { }
+}
+
 
 ///<include file='Utils/Docs/HTMLHeadingElement/HTMLHeadingElement.generated.xml' path='docs/HTMLHeadingElement/*'/>
 [To(ToAttribute.Default)]
@@ -4740,7 +5425,7 @@ public partial class HTMLDivElement : HTMLElement
 
 ///<include file='Utils/Docs/HTMLAnchorElement/HTMLAnchorElement.generated.xml' path='docs/HTMLAnchorElement/*'/>
 [To(ToAttribute.Default)]
-public partial class HTMLAnchorElement : HTMLElement
+public partial class HTMLAnchorElement : HTMLElement, HTMLHyperlinkElementUtils
 {
 		public HTMLAnchorElement() { }
 	///<include file='Utils/Docs/HTMLAnchorElementTarget/HTMLAnchorElementTarget.generated.xml' path='docs/HTMLAnchorElementTarget/*'/>
@@ -4771,6 +5456,7 @@ public partial class HTMLAnchorElement : HTMLElement
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public string ReferrerPolicy { get; set; }
 }
+
 
 ///<include file='Utils/Docs/HTMLDataElement/HTMLDataElement.generated.xml' path='docs/HTMLDataElement/*'/>
 [To(ToAttribute.Default)]
@@ -4922,6 +5608,48 @@ public partial class HTMLImageElement : HTMLElement
 	///<include file='Utils/Docs/HTMLImageElementDecode/HTMLImageElementDecode.generated.xml' path='docs/HTMLImageElementDecode/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public Task<Undefined> Decode() { throw new System.NotImplementedException(); }
+}
+
+///<include file='Utils/Docs/HTMLIFrameElement/HTMLIFrameElement.generated.xml' path='docs/HTMLIFrameElement/*'/>
+public partial class HTMLIFrameElement : HTMLElement
+{
+		public HTMLIFrameElement() { }
+	///<include file='Utils/Docs/HTMLIFrameElementSrc/HTMLIFrameElementSrc.generated.xml' path='docs/HTMLIFrameElementSrc/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public string Src { get; set; }
+	///<include file='Utils/Docs/HTMLIFrameElementSrcdoc/HTMLIFrameElementSrcdoc.generated.xml' path='docs/HTMLIFrameElementSrcdoc/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public Unsupported /*HTMLString*/ Srcdoc { get; set; }
+	///<include file='Utils/Docs/HTMLIFrameElementName/HTMLIFrameElementName.generated.xml' path='docs/HTMLIFrameElementName/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public string Name { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public DOMTokenList Sandbox { get; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Allow { get; set; }
+	///<include file='Utils/Docs/HTMLIFrameElementAllowFullscreen/HTMLIFrameElementAllowFullscreen.generated.xml' path='docs/HTMLIFrameElementAllowFullscreen/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public bool AllowFullscreen { get; set; }
+	///<include file='Utils/Docs/HTMLIFrameElementWidth/HTMLIFrameElementWidth.generated.xml' path='docs/HTMLIFrameElementWidth/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public string Width { get; set; }
+	///<include file='Utils/Docs/HTMLIFrameElementHeight/HTMLIFrameElementHeight.generated.xml' path='docs/HTMLIFrameElementHeight/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public string Height { get; set; }
+	///<include file='Utils/Docs/HTMLIFrameElementReferrerPolicy/HTMLIFrameElementReferrerPolicy.generated.xml' path='docs/HTMLIFrameElementReferrerPolicy/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public string ReferrerPolicy { get; set; }
+	///<include file='Utils/Docs/HTMLIFrameElementLoading/HTMLIFrameElementLoading.generated.xml' path='docs/HTMLIFrameElementLoading/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public string Loading { get; set; }
+	///<include file='Utils/Docs/HTMLIFrameElementContentDocument/HTMLIFrameElementContentDocument.generated.xml' path='docs/HTMLIFrameElementContentDocument/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public Document? ContentDocument { get; }
+	///<include file='Utils/Docs/HTMLIFrameElementContentWindow/HTMLIFrameElementContentWindow.generated.xml' path='docs/HTMLIFrameElementContentWindow/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public WindowProxy? ContentWindow { get; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public Document? GetSVGDocument() { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/HTMLEmbedElement/HTMLEmbedElement.generated.xml' path='docs/HTMLEmbedElement/*'/>
@@ -5408,14 +6136,14 @@ public partial class TrackEvent : Event
 	///<include file='Utils/Docs/TrackEventTrackEvent/TrackEventTrackEvent.generated.xml' path='docs/TrackEventTrackEvent/*'/>
 	public TrackEvent(string type, TrackEventInit eventInitDict) { }
 	///<include file='Utils/Docs/TrackEventTrack/TrackEventTrack.generated.xml' path='docs/TrackEventTrack/*'/>
-	public Union49? Track { get; }
+	public Union51? Track { get; }
 	public TrackEvent() { }
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class TrackEventInit : EventInit
 {
-		public Union50? Track;
+		public Union52? Track;
 }
 
 ///<include file='Utils/Docs/HTMLMapElement/HTMLMapElement.generated.xml' path='docs/HTMLMapElement/*'/>
@@ -5432,7 +6160,7 @@ public partial class HTMLMapElement : HTMLElement
 
 ///<include file='Utils/Docs/HTMLAreaElement/HTMLAreaElement.generated.xml' path='docs/HTMLAreaElement/*'/>
 [To(ToAttribute.Default)]
-public partial class HTMLAreaElement : HTMLElement
+public partial class HTMLAreaElement : HTMLElement, HTMLHyperlinkElementUtils
 {
 		public HTMLAreaElement() { }
 		[To(ToAttribute.FirstCharToLowerCase)]
@@ -5459,6 +6187,7 @@ public partial class HTMLAreaElement : HTMLElement
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public string ReferrerPolicy { get; set; }
 }
+
 
 ///<include file='Utils/Docs/HTMLTableElement/HTMLTableElement.generated.xml' path='docs/HTMLTableElement/*'/>
 [To(ToAttribute.Default)]
@@ -5652,7 +6381,7 @@ public partial class HTMLLabelElement : HTMLElement
 
 ///<include file='Utils/Docs/HTMLInputElement/HTMLInputElement.generated.xml' path='docs/HTMLInputElement/*'/>
 [To(ToAttribute.Default)]
-public partial class HTMLInputElement : HTMLElement
+public partial class HTMLInputElement : HTMLElement, PopoverInvokerElement
 {
 		public HTMLInputElement() { }
 		[To(ToAttribute.FirstCharToLowerCase)]
@@ -5781,9 +6510,10 @@ public partial class HTMLInputElement : HTMLElement
 	public Undefined ShowPicker() { throw new System.NotImplementedException(); }
 }
 
+
 ///<include file='Utils/Docs/HTMLButtonElement/HTMLButtonElement.generated.xml' path='docs/HTMLButtonElement/*'/>
 [To(ToAttribute.Default)]
-public partial class HTMLButtonElement : HTMLElement
+public partial class HTMLButtonElement : HTMLElement, PopoverInvokerElement
 {
 		public HTMLButtonElement() { }
 	///<include file='Utils/Docs/HTMLButtonElementDisabled/HTMLButtonElementDisabled.generated.xml' path='docs/HTMLButtonElementDisabled/*'/>
@@ -5825,6 +6555,7 @@ public partial class HTMLButtonElement : HTMLElement
 	public NodeList Labels { get; }
 }
 
+
 ///<include file='Utils/Docs/HTMLSelectElement/HTMLSelectElement.generated.xml' path='docs/HTMLSelectElement/*'/>
 [To(ToAttribute.Default)]
 public partial class HTMLSelectElement : HTMLElement
@@ -5860,7 +6591,7 @@ public partial class HTMLSelectElement : HTMLElement
 	public HTMLOptionElement? NamedItem(string name) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HTMLSelectElementAdd/HTMLSelectElementAdd.generated.xml' path='docs/HTMLSelectElementAdd/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
-	public Undefined Add(Union52 element, Union53? before) { throw new System.NotImplementedException(); }
+	public Undefined Add(Union54 element, Union55? before) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HTMLSelectElementRemove/HTMLSelectElementRemove.generated.xml' path='docs/HTMLSelectElementRemove/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined Remove() { throw new System.NotImplementedException(); }
@@ -6298,7 +7029,7 @@ public partial class HTMLSlotElement : HTMLElement
 	public List<Element> AssignedElements(AssignedNodesOptions options) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HTMLSlotElementAssign/HTMLSlotElementAssign.generated.xml' path='docs/HTMLSlotElementAssign/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
-	public Undefined Assign(params Union54[] nodes) { throw new System.NotImplementedException(); }
+	public Undefined Assign(params Union56[] nodes) { throw new System.NotImplementedException(); }
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -6388,6 +7119,22 @@ public partial class CanvasRenderingContext2D
 	public CanvasRenderingContext2DSettings GetContextAttributes() { throw new System.NotImplementedException(); }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial interface CanvasState
 {
@@ -6427,8 +7174,8 @@ public partial interface CanvasImageSmoothing
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial interface CanvasFillStrokeStyles
 {
-		public Union58 StrokeStyle { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public Union59 FillStyle { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public Union60 StrokeStyle { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public Union61 FillStyle { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
 		public CanvasGradient CreateLinearGradient(Number x0, Number y0, Number x1, Number y1) { throw new System.NotImplementedException(); }
 		public CanvasGradient CreateRadialGradient(Number x0, Number y0, Number r0, Number x1, Number y1, Number r1) { throw new System.NotImplementedException(); }
 		public CanvasGradient CreateConicGradient(Number startAngle, Number x, Number y) { throw new System.NotImplementedException(); }
@@ -6677,7 +7424,7 @@ public partial interface CanvasPath
 		public Undefined BezierCurveTo(double cp1x, double cp1y, double cp2x, double cp2y, double x, double y) { throw new System.NotImplementedException(); }
 		public Undefined ArcTo(double x1, double y1, double x2, double y2, double radius) { throw new System.NotImplementedException(); }
 		public Undefined Rect(double x, double y, double w, double h) { throw new System.NotImplementedException(); }
-		public Undefined RoundRect(double x, double y, double w, double h, Union60 radii) { throw new System.NotImplementedException(); }
+		public Undefined RoundRect(double x, double y, double w, double h, Union62 radii) { throw new System.NotImplementedException(); }
 		public Undefined Arc(double x, double y, double radius, double startAngle, double endAngle, bool counterclockwise) { throw new System.NotImplementedException(); }
 		public Undefined Ellipse(double x, double y, double radiusX, double radiusY, double rotation, double startAngle, double endAngle, bool counterclockwise) { throw new System.NotImplementedException(); }
 }
@@ -6770,17 +7517,18 @@ public partial class ImageData
 public partial class Path2D
 {
 	///<include file='Utils/Docs/Path2DPath2D/Path2DPath2D.generated.xml' path='docs/Path2DPath2D/*'/>
-	public Path2D(Union62 path) { }
+	public Path2D(Union64 path) { }
 	///<include file='Utils/Docs/Path2DAddPath/Path2DAddPath.generated.xml' path='docs/Path2DAddPath/*'/>
 	public Undefined AddPath(Path2D path, DOMMatrix2DInit transform) { throw new System.NotImplementedException(); }
 	public Path2D() { }
 }
 
+
 ///<include file='Utils/Docs/ImageBitmapRenderingContext/ImageBitmapRenderingContext.generated.xml' path='docs/ImageBitmapRenderingContext/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class ImageBitmapRenderingContext
 {
-		public Union63 Canvas { get; }
+		public Union65 Canvas { get; }
 	///<include file='Utils/Docs/ImageBitmapRenderingContextTransferFromImageBitmap/ImageBitmapRenderingContextTransferFromImageBitmap.generated.xml' path='docs/ImageBitmapRenderingContextTransferFromImageBitmap/*'/>
 	public Undefined TransferFromImageBitmap(ImageBitmap? bitmap) { throw new System.NotImplementedException(); }
 }
@@ -6844,6 +7592,21 @@ public partial class OffscreenCanvasRenderingContext2D
 		public OffscreenCanvas Canvas { get; }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ///<include file='Utils/Docs/CustomElementRegistry/CustomElementRegistry.generated.xml' path='docs/CustomElementRegistry/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class CustomElementRegistry
@@ -6851,7 +7614,7 @@ public partial class CustomElementRegistry
 	///<include file='Utils/Docs/CustomElementRegistryDefine/CustomElementRegistryDefine.generated.xml' path='docs/CustomElementRegistryDefine/*'/>
 	public Undefined Define(string name, CustomElementConstructor constructor, ElementDefinitionOptions options) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/CustomElementRegistryGet/CustomElementRegistryGet.generated.xml' path='docs/CustomElementRegistryGet/*'/>
-	public Union65 Get(string name) { throw new System.NotImplementedException(); }
+	public Union67 Get(string name) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/CustomElementRegistryGetName/CustomElementRegistryGetName.generated.xml' path='docs/CustomElementRegistryGetName/*'/>
 	public string? GetName(CustomElementConstructor constructor) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/CustomElementRegistryWhenDefined/CustomElementRegistryWhenDefined.generated.xml' path='docs/CustomElementRegistryWhenDefined/*'/>
@@ -6878,7 +7641,7 @@ public partial class ElementInternals
 	///<include file='Utils/Docs/ElementInternalsShadowRoot/ElementInternalsShadowRoot.generated.xml' path='docs/ElementInternalsShadowRoot/*'/>
 	public ShadowRoot? ShadowRoot { get; }
 	///<include file='Utils/Docs/ElementInternalsSetFormValue/ElementInternalsSetFormValue.generated.xml' path='docs/ElementInternalsSetFormValue/*'/>
-	public Undefined SetFormValue(Union66? value, Union67? state) { throw new System.NotImplementedException(); }
+	public Undefined SetFormValue(Union68? value, Union69? state) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/ElementInternalsForm/ElementInternalsForm.generated.xml' path='docs/ElementInternalsForm/*'/>
 	public HTMLFormElement? Form { get; }
 	///<include file='Utils/Docs/ElementInternalsSetValidity/ElementInternalsSetValidity.generated.xml' path='docs/ElementInternalsSetValidity/*'/>
@@ -6898,6 +7661,7 @@ public partial class ElementInternals
 	///<include file='Utils/Docs/ElementInternalsStates/ElementInternalsStates.generated.xml' path='docs/ElementInternalsStates/*'/>
 	public CustomStateSet States { get; }
 }
+
 
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class ValidityStateFlags
@@ -6939,6 +7703,13 @@ public partial class UserActivation
 	public bool HasBeenActive { get; }
 	///<include file='Utils/Docs/UserActivationIsActive/UserActivationIsActive.generated.xml' path='docs/UserActivationIsActive/*'/>
 	public bool IsActive { get; }
+}
+
+///<include file='Utils/Docs/Navigator/Navigator.generated.xml' path='docs/Navigator/*'/>
+public partial class Navigator
+{
+	///<include file='Utils/Docs/NavigatorUserActivation/NavigatorUserActivation.generated.xml' path='docs/NavigatorUserActivation/*'/>
+	public UserActivation UserActivation { get; }
 }
 
 ///<include file='Utils/Docs/ToggleEvent/ToggleEvent.generated.xml' path='docs/ToggleEvent/*'/>
@@ -7080,6 +7851,124 @@ public partial interface PopoverInvokerElement
 		public Element? PopoverTargetElement { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
 		public string PopoverTargetAction { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
 }
+
+///<include file='Utils/Docs/Window/Window.generated.xml' path='docs/Window/*'/>
+public partial class Window : EventTarget
+{
+	///<include file='Utils/Docs/WindowWindow/WindowWindow.generated.xml' path='docs/WindowWindow/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public WindowProxy _window { get; }
+	///<include file='Utils/Docs/WindowSelf/WindowSelf.generated.xml' path='docs/WindowSelf/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public WindowProxy Self { get; }
+	///<include file='Utils/Docs/WindowDocument/WindowDocument.generated.xml' path='docs/WindowDocument/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public Document Document { get; }
+	///<include file='Utils/Docs/WindowName/WindowName.generated.xml' path='docs/WindowName/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public string Name { get; set; }
+	///<include file='Utils/Docs/WindowLocation/WindowLocation.generated.xml' path='docs/WindowLocation/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public Location Location { get; }
+	///<include file='Utils/Docs/WindowHistory/WindowHistory.generated.xml' path='docs/WindowHistory/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public History History { get; }
+	///<include file='Utils/Docs/WindowNavigation/WindowNavigation.generated.xml' path='docs/WindowNavigation/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public Navigation Navigation { get; }
+	///<include file='Utils/Docs/WindowCustomElements/WindowCustomElements.generated.xml' path='docs/WindowCustomElements/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public CustomElementRegistry CustomElements { get; }
+	///<include file='Utils/Docs/WindowLocationbar/WindowLocationbar.generated.xml' path='docs/WindowLocationbar/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public BarProp Locationbar { get; }
+	///<include file='Utils/Docs/WindowMenubar/WindowMenubar.generated.xml' path='docs/WindowMenubar/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public BarProp Menubar { get; }
+	///<include file='Utils/Docs/WindowPersonalbar/WindowPersonalbar.generated.xml' path='docs/WindowPersonalbar/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public BarProp Personalbar { get; }
+	///<include file='Utils/Docs/WindowScrollbars/WindowScrollbars.generated.xml' path='docs/WindowScrollbars/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public BarProp Scrollbars { get; }
+	///<include file='Utils/Docs/WindowStatusbar/WindowStatusbar.generated.xml' path='docs/WindowStatusbar/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public BarProp Statusbar { get; }
+	///<include file='Utils/Docs/WindowToolbar/WindowToolbar.generated.xml' path='docs/WindowToolbar/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public BarProp Toolbar { get; }
+	///<include file='Utils/Docs/WindowStatus/WindowStatus.generated.xml' path='docs/WindowStatus/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public string Status { get; set; }
+	///<include file='Utils/Docs/WindowClose/WindowClose.generated.xml' path='docs/WindowClose/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public Undefined Close() { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/WindowClosed/WindowClosed.generated.xml' path='docs/WindowClosed/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public bool Closed { get; }
+	///<include file='Utils/Docs/WindowStop/WindowStop.generated.xml' path='docs/WindowStop/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public Undefined Stop() { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/WindowFocus/WindowFocus.generated.xml' path='docs/WindowFocus/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public Undefined Focus() { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/WindowBlur/WindowBlur.generated.xml' path='docs/WindowBlur/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public Undefined Blur() { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/WindowFrames/WindowFrames.generated.xml' path='docs/WindowFrames/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public WindowProxy Frames { get; }
+	///<include file='Utils/Docs/WindowLength/WindowLength.generated.xml' path='docs/WindowLength/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public ulong Length { get; }
+	///<include file='Utils/Docs/WindowTop/WindowTop.generated.xml' path='docs/WindowTop/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public WindowProxy? Top { get; }
+	///<include file='Utils/Docs/WindowOpener/WindowOpener.generated.xml' path='docs/WindowOpener/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public dynamic Opener { get; set; }
+	///<include file='Utils/Docs/WindowParent/WindowParent.generated.xml' path='docs/WindowParent/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public WindowProxy? Parent { get; }
+	///<include file='Utils/Docs/WindowFrameElement/WindowFrameElement.generated.xml' path='docs/WindowFrameElement/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public Element? FrameElement { get; }
+	///<include file='Utils/Docs/WindowOpen/WindowOpen.generated.xml' path='docs/WindowOpen/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public WindowProxy? Open(string url, string target, string features) { throw new System.NotImplementedException(); }
+	
+	///<include file='Utils/Docs/WindowNavigator/WindowNavigator.generated.xml' path='docs/WindowNavigator/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public Navigator Navigator { get; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public Navigator ClientInformation { get; }
+	///<include file='Utils/Docs/WindowOriginAgentCluster/WindowOriginAgentCluster.generated.xml' path='docs/WindowOriginAgentCluster/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public bool OriginAgentCluster { get; }
+	///<include file='Utils/Docs/WindowAlert/WindowAlert.generated.xml' path='docs/WindowAlert/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public Undefined Alert() { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/WindowAlert/WindowAlert.generated.xml' path='docs/WindowAlert/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public Undefined Alert(string message) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/WindowConfirm/WindowConfirm.generated.xml' path='docs/WindowConfirm/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public bool Confirm(string message) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/WindowPrompt/WindowPrompt.generated.xml' path='docs/WindowPrompt/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public string? Prompt(string message, string default_) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/WindowPrint/WindowPrint.generated.xml' path='docs/WindowPrint/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public Undefined Print() { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/WindowPostMessage/WindowPostMessage.generated.xml' path='docs/WindowPostMessage/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public Undefined PostMessage(dynamic message, string targetOrigin, List<object> transfer) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/WindowPostMessage/WindowPostMessage.generated.xml' path='docs/WindowPostMessage/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public Undefined PostMessage(dynamic message, WindowPostMessageOptions options) { throw new System.NotImplementedException(); }
+}
+
+
 
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class WindowPostMessageOptions : StructuredSerializeOptions
@@ -7577,6 +8466,86 @@ public struct OnBeforeUnloadEventHandlerNonNull
 
 
 [To(ToAttribute.FirstCharToLowerCase)]
+public partial interface GlobalEventHandlers
+{
+		public EventHandler Onabort { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Onauxclick { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Onbeforeinput { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Onbeforematch { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Onbeforetoggle { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Onblur { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Oncancel { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Oncanplay { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Oncanplaythrough { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Onchange { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Onclick { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Onclose { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Oncontextlost { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Oncontextmenu { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Oncontextrestored { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Oncopy { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Oncuechange { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Oncut { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Ondblclick { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Ondrag { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Ondragend { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Ondragenter { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Ondragleave { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Ondragover { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Ondragstart { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Ondrop { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Ondurationchange { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Onemptied { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Onended { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public OnErrorEventHandler Onerror { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Onfocus { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Onformdata { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Oninput { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Oninvalid { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Onkeydown { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Onkeypress { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Onkeyup { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Onload { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Onloadeddata { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Onloadedmetadata { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Onloadstart { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Onmousedown { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Onmouseenter { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Onmouseleave { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Onmousemove { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Onmouseout { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Onmouseover { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Onmouseup { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Onpaste { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Onpause { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Onplay { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Onplaying { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Onprogress { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Onratechange { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Onreset { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Onresize { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Onscroll { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Onscrollend { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Onsecuritypolicyviolation { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Onseeked { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Onseeking { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Onselect { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Onslotchange { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Onstalled { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Onsubmit { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Onsuspend { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Ontimeupdate { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Ontoggle { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Onvolumechange { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Onwaiting { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Onwebkitanimationend { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Onwebkitanimationiteration { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Onwebkitanimationstart { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Onwebkittransitionend { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public EventHandler Onwheel { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial interface WindowEventHandlers
 {
 		public EventHandler Onafterprint { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
@@ -7600,6 +8569,34 @@ public partial interface WindowEventHandlers
 }
 
 
+public partial interface WindowOrWorkerGlobalScope
+{
+		public string Origin { get { throw new System.NotImplementedException(); } }
+		public bool IsSecureContext { get { throw new System.NotImplementedException(); } }
+		public bool CrossOriginIsolated { get { throw new System.NotImplementedException(); } }
+		public Undefined ReportError(dynamic e) { throw new System.NotImplementedException(); }
+		public string Btoa(string data) { throw new System.NotImplementedException(); }
+		public string Atob(string data) { throw new System.NotImplementedException(); }
+		public long SetTimeout(TimerHandler handler, long timeout, params dynamic[] arguments) { throw new System.NotImplementedException(); }
+		public Undefined ClearTimeout(long id) { throw new System.NotImplementedException(); }
+		public long SetInterval(TimerHandler handler, long timeout, params dynamic[] arguments) { throw new System.NotImplementedException(); }
+		public Undefined ClearInterval(long id) { throw new System.NotImplementedException(); }
+		public Undefined QueueMicrotask(VoidFunction callback) { throw new System.NotImplementedException(); }
+		public Task<ImageBitmap> CreateImageBitmap(ImageBitmapSource image, ImageBitmapOptions options) { throw new System.NotImplementedException(); }
+		public Task<ImageBitmap> CreateImageBitmap(ImageBitmapSource image, long sx, long sy, long sw, long sh, ImageBitmapOptions options) { throw new System.NotImplementedException(); }
+		public dynamic StructuredClone(dynamic value, StructuredSerializeOptions options) { throw new System.NotImplementedException(); }
+}
+
+
+
+///<include file='Utils/Docs/DOMParser/DOMParser.generated.xml' path='docs/DOMParser/*'/>
+public partial class DOMParser
+{
+	
+	///<include file='Utils/Docs/DOMParserParseFromString/DOMParserParseFromString.generated.xml' path='docs/DOMParserParseFromString/*'/>
+	public Document ParseFromString(Unsupported /*HTMLString*/ string_, DOMParserSupportedType type) { throw new System.NotImplementedException(); }
+}
+
 [To(ToAttribute.None)]
 public enum DOMParserSupportedType
 {
@@ -7615,6 +8612,30 @@ public enum DOMParserSupportedType
 	ImageSvgXml,
 }
 
+///<include file='Utils/Docs/Element/Element.generated.xml' path='docs/Element/*'/>
+public partial class Element
+{
+		public Undefined SetHTMLUnsafe(Unsupported /*HTMLString*/ html) { throw new System.NotImplementedException(); }
+}
+
+///<include file='Utils/Docs/ShadowRoot/ShadowRoot.generated.xml' path='docs/ShadowRoot/*'/>
+public partial class ShadowRoot
+{
+		public Undefined SetHTMLUnsafe(Unsupported /*HTMLString*/ html) { throw new System.NotImplementedException(); }
+}
+
+///<include file='Utils/Docs/Navigator/Navigator.generated.xml' path='docs/Navigator/*'/>
+public partial class Navigator
+{
+}
+
+
+
+
+
+
+
+
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial interface NavigatorID
 {
@@ -7627,6 +8648,12 @@ public partial interface NavigatorID
 		public string UserAgent { get { throw new System.NotImplementedException(); } }
 		public string Vendor { get { throw new System.NotImplementedException(); } }
 		public string VendorSub { get { throw new System.NotImplementedException(); } }
+}
+
+public partial interface NavigatorID
+{
+		public bool TaintEnabled() { throw new System.NotImplementedException(); }
+		public string Oscpu { get { throw new System.NotImplementedException(); } }
 }
 
 ///<include file='Utils/Docs/NavigatorLanguage/NavigatorLanguage.generated.xml' path='docs/NavigatorLanguage/*'/>
@@ -7786,6 +8813,8 @@ public partial interface AnimationFrameProvider
 		public Undefined CancelAnimationFrame(ulong handle) { throw new System.NotImplementedException(); }
 }
 
+
+
 ///<include file='Utils/Docs/MessageEvent/MessageEvent.generated.xml' path='docs/MessageEvent/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class MessageEvent : Event
@@ -7900,7 +8929,7 @@ public partial class BroadcastChannel : EventTarget
 
 ///<include file='Utils/Docs/WorkerGlobalScope/WorkerGlobalScope.generated.xml' path='docs/WorkerGlobalScope/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class WorkerGlobalScope : EventTarget
+public partial class WorkerGlobalScope : EventTarget, FontFaceSource, WindowOrWorkerGlobalScope
 {
 	///<include file='Utils/Docs/WorkerGlobalScopeSelf/WorkerGlobalScopeSelf.generated.xml' path='docs/WorkerGlobalScopeSelf/*'/>
 	public WorkerGlobalScope Self { get; }
@@ -7920,7 +8949,7 @@ public partial class WorkerGlobalScope : EventTarget
 
 ///<include file='Utils/Docs/DedicatedWorkerGlobalScope/DedicatedWorkerGlobalScope.generated.xml' path='docs/DedicatedWorkerGlobalScope/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class DedicatedWorkerGlobalScope : WorkerGlobalScope
+public partial class DedicatedWorkerGlobalScope : WorkerGlobalScope, AnimationFrameProvider
 {
 	///<include file='Utils/Docs/DedicatedWorkerGlobalScopeName/DedicatedWorkerGlobalScopeName.generated.xml' path='docs/DedicatedWorkerGlobalScopeName/*'/>
 	public string Name { get; }
@@ -7953,7 +8982,7 @@ public partial interface AbstractWorker
 
 ///<include file='Utils/Docs/Worker/Worker.generated.xml' path='docs/Worker/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class Worker : EventTarget
+public partial class Worker : EventTarget, AbstractWorker
 {
 	///<include file='Utils/Docs/WorkerWorker/WorkerWorker.generated.xml' path='docs/WorkerWorker/*'/>
 	public Worker(Unsupported /*ScriptURLString*/ scriptURL, WorkerOptions options) { }
@@ -7985,16 +9014,18 @@ public enum WorkerType
 	Module,
 }
 
+
 ///<include file='Utils/Docs/SharedWorker/SharedWorker.generated.xml' path='docs/SharedWorker/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class SharedWorker : EventTarget
+public partial class SharedWorker : EventTarget, AbstractWorker
 {
 	///<include file='Utils/Docs/SharedWorkerSharedWorker/SharedWorkerSharedWorker.generated.xml' path='docs/SharedWorkerSharedWorker/*'/>
-	public SharedWorker(Unsupported /*ScriptURLString*/ scriptURL, Union72 options) { }
+	public SharedWorker(Unsupported /*ScriptURLString*/ scriptURL, Union74 options) { }
 	///<include file='Utils/Docs/SharedWorkerPort/SharedWorkerPort.generated.xml' path='docs/SharedWorkerPort/*'/>
 	public MessagePort Port { get; }
 	public SharedWorker() { }
 }
+
 
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial interface NavigatorConcurrentHardware
@@ -8007,6 +9038,10 @@ public partial interface NavigatorConcurrentHardware
 public partial class WorkerNavigator
 {
 }
+
+
+
+
 
 ///<include file='Utils/Docs/WorkerLocation/WorkerLocation.generated.xml' path='docs/WorkerLocation/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -8074,12 +9109,14 @@ public partial interface WindowSessionStorage
 		public Storage SessionStorage { get { throw new System.NotImplementedException(); } }
 }
 
+
 ///<include file='Utils/Docs/WindowLocalStorage/WindowLocalStorage.generated.xml' path='docs/WindowLocalStorage/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial interface WindowLocalStorage
 {
 		public Storage LocalStorage { get { throw new System.NotImplementedException(); } }
 }
+
 
 ///<include file='Utils/Docs/StorageEvent/StorageEvent.generated.xml' path='docs/StorageEvent/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -8147,7 +9184,7 @@ public partial class HTMLMarqueeElement : HTMLElement
 
 ///<include file='Utils/Docs/HTMLFrameSetElement/HTMLFrameSetElement.generated.xml' path='docs/HTMLFrameSetElement/*'/>
 [To(ToAttribute.Default)]
-public partial class HTMLFrameSetElement : HTMLElement
+public partial class HTMLFrameSetElement : HTMLElement, WindowEventHandlers
 {
 		public HTMLFrameSetElement() { }
 		[To(ToAttribute.FirstCharToLowerCase)]
@@ -8155,6 +9192,7 @@ public partial class HTMLFrameSetElement : HTMLElement
 		[To(ToAttribute.FirstCharToLowerCase)]
 	public string Rows { get; set; }
 }
+
 
 [To(ToAttribute.Default)]
 public partial class HTMLFrameElement : HTMLElement
@@ -8182,12 +9220,103 @@ public partial class HTMLFrameElement : HTMLElement
 	public string MarginWidth { get; set; }
 }
 
+///<include file='Utils/Docs/HTMLAnchorElement/HTMLAnchorElement.generated.xml' path='docs/HTMLAnchorElement/*'/>
+public partial class HTMLAnchorElement
+{
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Coords { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Charset { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Name { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Rev { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Shape { get; set; }
+}
+
+///<include file='Utils/Docs/HTMLAreaElement/HTMLAreaElement.generated.xml' path='docs/HTMLAreaElement/*'/>
+public partial class HTMLAreaElement
+{
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public bool NoHref { get; set; }
+}
+
+///<include file='Utils/Docs/HTMLBodyElement/HTMLBodyElement.generated.xml' path='docs/HTMLBodyElement/*'/>
+public partial class HTMLBodyElement
+{
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Text { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Link { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string VLink { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string ALink { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string BgColor { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Background { get; set; }
+}
+
+///<include file='Utils/Docs/HTMLBRElement/HTMLBRElement.generated.xml' path='docs/HTMLBRElement/*'/>
+public partial class HTMLBRElement
+{
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Clear { get; set; }
+}
+
+///<include file='Utils/Docs/HTMLTableCaptionElement/HTMLTableCaptionElement.generated.xml' path='docs/HTMLTableCaptionElement/*'/>
+public partial class HTMLTableCaptionElement
+{
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Align { get; set; }
+}
+
+///<include file='Utils/Docs/HTMLTableColElement/HTMLTableColElement.generated.xml' path='docs/HTMLTableColElement/*'/>
+public partial class HTMLTableColElement
+{
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Align { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Ch { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string ChOff { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string VAlign { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Width { get; set; }
+}
+
 [To(ToAttribute.Default)]
 public partial class HTMLDirectoryElement : HTMLElement
 {
 		public HTMLDirectoryElement() { }
 		[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Compact { get; set; }
+}
+
+///<include file='Utils/Docs/HTMLDivElement/HTMLDivElement.generated.xml' path='docs/HTMLDivElement/*'/>
+public partial class HTMLDivElement
+{
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Align { get; set; }
+}
+
+///<include file='Utils/Docs/HTMLDListElement/HTMLDListElement.generated.xml' path='docs/HTMLDListElement/*'/>
+public partial class HTMLDListElement
+{
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public bool Compact { get; set; }
+}
+
+///<include file='Utils/Docs/HTMLEmbedElement/HTMLEmbedElement.generated.xml' path='docs/HTMLEmbedElement/*'/>
+public partial class HTMLEmbedElement
+{
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Align { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Name { get; set; }
 }
 
 ///<include file='Utils/Docs/HTMLFontElement/HTMLFontElement.generated.xml' path='docs/HTMLFontElement/*'/>
@@ -8206,6 +9335,169 @@ public partial class HTMLFontElement : HTMLElement
 	public string Size { get; set; }
 }
 
+///<include file='Utils/Docs/HTMLHeadingElement/HTMLHeadingElement.generated.xml' path='docs/HTMLHeadingElement/*'/>
+public partial class HTMLHeadingElement
+{
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Align { get; set; }
+}
+
+///<include file='Utils/Docs/HTMLHRElement/HTMLHRElement.generated.xml' path='docs/HTMLHRElement/*'/>
+public partial class HTMLHRElement
+{
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Align { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Color { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public bool NoShade { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Size { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Width { get; set; }
+}
+
+///<include file='Utils/Docs/HTMLHtmlElement/HTMLHtmlElement.generated.xml' path='docs/HTMLHtmlElement/*'/>
+public partial class HTMLHtmlElement
+{
+	///<include file='Utils/Docs/HTMLHtmlElementVersion/HTMLHtmlElementVersion.generated.xml' path='docs/HTMLHtmlElementVersion/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public string Version { get; set; }
+}
+
+///<include file='Utils/Docs/HTMLIFrameElement/HTMLIFrameElement.generated.xml' path='docs/HTMLIFrameElement/*'/>
+public partial class HTMLIFrameElement
+{
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Align { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Scrolling { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string FrameBorder { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string LongDesc { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string MarginHeight { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string MarginWidth { get; set; }
+}
+
+///<include file='Utils/Docs/HTMLImageElement/HTMLImageElement.generated.xml' path='docs/HTMLImageElement/*'/>
+public partial class HTMLImageElement
+{
+	///<include file='Utils/Docs/HTMLImageElementName/HTMLImageElementName.generated.xml' path='docs/HTMLImageElementName/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public string Name { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Lowsrc { get; set; }
+	///<include file='Utils/Docs/HTMLImageElementAlign/HTMLImageElementAlign.generated.xml' path='docs/HTMLImageElementAlign/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public string Align { get; set; }
+	///<include file='Utils/Docs/HTMLImageElementHspace/HTMLImageElementHspace.generated.xml' path='docs/HTMLImageElementHspace/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public ulong Hspace { get; set; }
+	///<include file='Utils/Docs/HTMLImageElementVspace/HTMLImageElementVspace.generated.xml' path='docs/HTMLImageElementVspace/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public ulong Vspace { get; set; }
+	///<include file='Utils/Docs/HTMLImageElementLongDesc/HTMLImageElementLongDesc.generated.xml' path='docs/HTMLImageElementLongDesc/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public string LongDesc { get; set; }
+	///<include file='Utils/Docs/HTMLImageElementBorder/HTMLImageElementBorder.generated.xml' path='docs/HTMLImageElementBorder/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public string Border { get; set; }
+}
+
+///<include file='Utils/Docs/HTMLInputElement/HTMLInputElement.generated.xml' path='docs/HTMLInputElement/*'/>
+public partial class HTMLInputElement
+{
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Align { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string UseMap { get; set; }
+}
+
+///<include file='Utils/Docs/HTMLLegendElement/HTMLLegendElement.generated.xml' path='docs/HTMLLegendElement/*'/>
+public partial class HTMLLegendElement
+{
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Align { get; set; }
+}
+
+///<include file='Utils/Docs/HTMLLIElement/HTMLLIElement.generated.xml' path='docs/HTMLLIElement/*'/>
+public partial class HTMLLIElement
+{
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Type { get; set; }
+}
+
+///<include file='Utils/Docs/HTMLLinkElement/HTMLLinkElement.generated.xml' path='docs/HTMLLinkElement/*'/>
+public partial class HTMLLinkElement
+{
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Charset { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Rev { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Target { get; set; }
+}
+
+///<include file='Utils/Docs/HTMLMenuElement/HTMLMenuElement.generated.xml' path='docs/HTMLMenuElement/*'/>
+public partial class HTMLMenuElement
+{
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public bool Compact { get; set; }
+}
+
+///<include file='Utils/Docs/HTMLMetaElement/HTMLMetaElement.generated.xml' path='docs/HTMLMetaElement/*'/>
+public partial class HTMLMetaElement
+{
+	///<include file='Utils/Docs/HTMLMetaElementScheme/HTMLMetaElementScheme.generated.xml' path='docs/HTMLMetaElementScheme/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public string Scheme { get; set; }
+}
+
+///<include file='Utils/Docs/HTMLObjectElement/HTMLObjectElement.generated.xml' path='docs/HTMLObjectElement/*'/>
+public partial class HTMLObjectElement
+{
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Align { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Archive { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Code { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public bool Declare { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public ulong Hspace { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Standby { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public ulong Vspace { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string CodeBase { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string CodeType { get; set; }
+	///<include file='Utils/Docs/HTMLObjectElementUseMap/HTMLObjectElementUseMap.generated.xml' path='docs/HTMLObjectElementUseMap/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public string UseMap { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Border { get; set; }
+}
+
+///<include file='Utils/Docs/HTMLOListElement/HTMLOListElement.generated.xml' path='docs/HTMLOListElement/*'/>
+public partial class HTMLOListElement
+{
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public bool Compact { get; set; }
+}
+
+///<include file='Utils/Docs/HTMLParagraphElement/HTMLParagraphElement.generated.xml' path='docs/HTMLParagraphElement/*'/>
+public partial class HTMLParagraphElement
+{
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Align { get; set; }
+}
+
 ///<include file='Utils/Docs/HTMLParamElement/HTMLParamElement.generated.xml' path='docs/HTMLParamElement/*'/>
 [To(ToAttribute.Default)]
 public partial class HTMLParamElement : HTMLElement
@@ -8219,6 +9511,163 @@ public partial class HTMLParamElement : HTMLElement
 	public string Type { get; set; }
 		[To(ToAttribute.FirstCharToLowerCase)]
 	public string ValueType { get; set; }
+}
+
+///<include file='Utils/Docs/HTMLPreElement/HTMLPreElement.generated.xml' path='docs/HTMLPreElement/*'/>
+public partial class HTMLPreElement
+{
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public long Width { get; set; }
+}
+
+///<include file='Utils/Docs/HTMLStyleElement/HTMLStyleElement.generated.xml' path='docs/HTMLStyleElement/*'/>
+public partial class HTMLStyleElement
+{
+	///<include file='Utils/Docs/HTMLStyleElementType/HTMLStyleElementType.generated.xml' path='docs/HTMLStyleElementType/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public string Type { get; set; }
+}
+
+///<include file='Utils/Docs/HTMLScriptElement/HTMLScriptElement.generated.xml' path='docs/HTMLScriptElement/*'/>
+public partial class HTMLScriptElement
+{
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Charset { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Event { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string HtmlFor { get; set; }
+}
+
+///<include file='Utils/Docs/HTMLTableElement/HTMLTableElement.generated.xml' path='docs/HTMLTableElement/*'/>
+public partial class HTMLTableElement
+{
+	///<include file='Utils/Docs/HTMLTableElementAlign/HTMLTableElementAlign.generated.xml' path='docs/HTMLTableElementAlign/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public string Align { get; set; }
+	///<include file='Utils/Docs/HTMLTableElementBorder/HTMLTableElementBorder.generated.xml' path='docs/HTMLTableElementBorder/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public string Border { get; set; }
+	///<include file='Utils/Docs/HTMLTableElementFrame/HTMLTableElementFrame.generated.xml' path='docs/HTMLTableElementFrame/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public string Frame { get; set; }
+	///<include file='Utils/Docs/HTMLTableElementRules/HTMLTableElementRules.generated.xml' path='docs/HTMLTableElementRules/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public string Rules { get; set; }
+	///<include file='Utils/Docs/HTMLTableElementSummary/HTMLTableElementSummary.generated.xml' path='docs/HTMLTableElementSummary/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public string Summary { get; set; }
+	///<include file='Utils/Docs/HTMLTableElementWidth/HTMLTableElementWidth.generated.xml' path='docs/HTMLTableElementWidth/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public string Width { get; set; }
+	///<include file='Utils/Docs/HTMLTableElementBgColor/HTMLTableElementBgColor.generated.xml' path='docs/HTMLTableElementBgColor/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public string BgColor { get; set; }
+	///<include file='Utils/Docs/HTMLTableElementCellPadding/HTMLTableElementCellPadding.generated.xml' path='docs/HTMLTableElementCellPadding/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public string CellPadding { get; set; }
+	///<include file='Utils/Docs/HTMLTableElementCellSpacing/HTMLTableElementCellSpacing.generated.xml' path='docs/HTMLTableElementCellSpacing/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public string CellSpacing { get; set; }
+}
+
+///<include file='Utils/Docs/HTMLTableSectionElement/HTMLTableSectionElement.generated.xml' path='docs/HTMLTableSectionElement/*'/>
+public partial class HTMLTableSectionElement
+{
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Align { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Ch { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string ChOff { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string VAlign { get; set; }
+}
+
+///<include file='Utils/Docs/HTMLTableCellElement/HTMLTableCellElement.generated.xml' path='docs/HTMLTableCellElement/*'/>
+public partial class HTMLTableCellElement
+{
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Align { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Axis { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Height { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Width { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Ch { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string ChOff { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public bool NoWrap { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string VAlign { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string BgColor { get; set; }
+}
+
+///<include file='Utils/Docs/HTMLTableRowElement/HTMLTableRowElement.generated.xml' path='docs/HTMLTableRowElement/*'/>
+public partial class HTMLTableRowElement
+{
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Align { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Ch { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string ChOff { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string VAlign { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string BgColor { get; set; }
+}
+
+///<include file='Utils/Docs/HTMLUListElement/HTMLUListElement.generated.xml' path='docs/HTMLUListElement/*'/>
+public partial class HTMLUListElement
+{
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public bool Compact { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public string Type { get; set; }
+}
+
+///<include file='Utils/Docs/Document/Document.generated.xml' path='docs/Document/*'/>
+public partial class Document
+{
+	///<include file='Utils/Docs/DocumentFgColor/DocumentFgColor.generated.xml' path='docs/DocumentFgColor/*'/>
+	public string FgColor { get; set; }
+	///<include file='Utils/Docs/DocumentLinkColor/DocumentLinkColor.generated.xml' path='docs/DocumentLinkColor/*'/>
+	public string LinkColor { get; set; }
+	///<include file='Utils/Docs/DocumentVlinkColor/DocumentVlinkColor.generated.xml' path='docs/DocumentVlinkColor/*'/>
+	public string VlinkColor { get; set; }
+	///<include file='Utils/Docs/DocumentAlinkColor/DocumentAlinkColor.generated.xml' path='docs/DocumentAlinkColor/*'/>
+	public string AlinkColor { get; set; }
+	///<include file='Utils/Docs/DocumentBgColor/DocumentBgColor.generated.xml' path='docs/DocumentBgColor/*'/>
+	public string BgColor { get; set; }
+	///<include file='Utils/Docs/DocumentAnchors/DocumentAnchors.generated.xml' path='docs/DocumentAnchors/*'/>
+	public HTMLCollection Anchors { get; }
+	///<include file='Utils/Docs/DocumentApplets/DocumentApplets.generated.xml' path='docs/DocumentApplets/*'/>
+	public HTMLCollection Applets { get; }
+	///<include file='Utils/Docs/DocumentClear/DocumentClear.generated.xml' path='docs/DocumentClear/*'/>
+	public Undefined Clear() { throw new System.NotImplementedException(); }
+		public Undefined CaptureEvents() { throw new System.NotImplementedException(); }
+		public Undefined ReleaseEvents() { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/DocumentAll/DocumentAll.generated.xml' path='docs/DocumentAll/*'/>
+	public HTMLAllCollection All { get; }
+}
+
+///<include file='Utils/Docs/Window/Window.generated.xml' path='docs/Window/*'/>
+public partial class Window
+{
+	///<include file='Utils/Docs/WindowCaptureEvents/WindowCaptureEvents.generated.xml' path='docs/WindowCaptureEvents/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public Undefined CaptureEvents() { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/WindowReleaseEvents/WindowReleaseEvents.generated.xml' path='docs/WindowReleaseEvents/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public Undefined ReleaseEvents() { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/WindowExternal/WindowExternal.generated.xml' path='docs/WindowExternal/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public External External { get; }
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -8237,7 +9686,7 @@ public partial class IDBRequest : EventTarget
 	///<include file='Utils/Docs/IDBRequestError/IDBRequestError.generated.xml' path='docs/IDBRequestError/*'/>
 	public DOMException? Error { get; }
 	///<include file='Utils/Docs/IDBRequestSource/IDBRequestSource.generated.xml' path='docs/IDBRequestSource/*'/>
-	public Union73? Source { get; }
+	public Union75? Source { get; }
 	///<include file='Utils/Docs/IDBRequestTransaction/IDBRequestTransaction.generated.xml' path='docs/IDBRequestTransaction/*'/>
 	public IDBTransaction? Transaction { get; }
 	///<include file='Utils/Docs/IDBRequestReadyState/IDBRequestReadyState.generated.xml' path='docs/IDBRequestReadyState/*'/>
@@ -8284,6 +9733,11 @@ public partial class IDBVersionChangeEventInit : EventInit
 		public ulong? NewVersion;
 }
 
+public partial interface WindowOrWorkerGlobalScope
+{
+		public IDBFactory IndexedDB { get { throw new System.NotImplementedException(); } }
+}
+
 ///<include file='Utils/Docs/IDBFactory/IDBFactory.generated.xml' path='docs/IDBFactory/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class IDBFactory
@@ -8316,7 +9770,7 @@ public partial class IDBDatabase : EventTarget
 	///<include file='Utils/Docs/IDBDatabaseObjectStoreNames/IDBDatabaseObjectStoreNames.generated.xml' path='docs/IDBDatabaseObjectStoreNames/*'/>
 	public string ObjectStoreNames { get; }
 	///<include file='Utils/Docs/IDBDatabaseTransaction/IDBDatabaseTransaction.generated.xml' path='docs/IDBDatabaseTransaction/*'/>
-	public IDBTransaction Transaction(Union74 storeNames, IDBTransactionMode mode, IDBTransactionOptions options) { throw new System.NotImplementedException(); }
+	public IDBTransaction Transaction(Union76 storeNames, IDBTransactionMode mode, IDBTransactionOptions options) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/IDBDatabaseClose/IDBDatabaseClose.generated.xml' path='docs/IDBDatabaseClose/*'/>
 	public Undefined Close() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/IDBDatabaseCreateObjectStore/IDBDatabaseCreateObjectStore.generated.xml' path='docs/IDBDatabaseCreateObjectStore/*'/>
@@ -8350,7 +9804,7 @@ public partial class IDBTransactionOptions
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class IDBObjectStoreParameters
 {
-		public Union75? KeyPath;
+		public Union77? KeyPath;
 		public bool AutoIncrement;
 }
 
@@ -8393,7 +9847,7 @@ public partial class IDBObjectStore
 	///<include file='Utils/Docs/IDBObjectStoreIndex/IDBObjectStoreIndex.generated.xml' path='docs/IDBObjectStoreIndex/*'/>
 	public IDBIndex Index(string name) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/IDBObjectStoreCreateIndex/IDBObjectStoreCreateIndex.generated.xml' path='docs/IDBObjectStoreCreateIndex/*'/>
-	public IDBIndex CreateIndex(string name, Union76 keyPath, IDBIndexParameters options) { throw new System.NotImplementedException(); }
+	public IDBIndex CreateIndex(string name, Union78 keyPath, IDBIndexParameters options) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/IDBObjectStoreDeleteIndex/IDBObjectStoreDeleteIndex.generated.xml' path='docs/IDBObjectStoreDeleteIndex/*'/>
 	public Undefined DeleteIndex(string name) { throw new System.NotImplementedException(); }
 }
@@ -8464,7 +9918,7 @@ public partial class IDBKeyRange
 public partial class IDBCursor
 {
 	///<include file='Utils/Docs/IDBCursorSource/IDBCursorSource.generated.xml' path='docs/IDBCursorSource/*'/>
-	public Union77 Source { get; }
+	public Union79 Source { get; }
 	///<include file='Utils/Docs/IDBCursorDirection/IDBCursorDirection.generated.xml' path='docs/IDBCursorDirection/*'/>
 	public IDBCursorDirection Direction { get; }
 	///<include file='Utils/Docs/IDBCursorKey/IDBCursorKey.generated.xml' path='docs/IDBCursorKey/*'/>
@@ -8544,6 +9998,18 @@ public enum IDBTransactionMode
 	Versionchange,
 }
 
+///<include file='Utils/Docs/Element/Element.generated.xml' path='docs/Element/*'/>
+public partial class Element
+{
+		public DOMTokenList Uiactions { get; }
+}
+
+///<include file='Utils/Docs/Element/Element.generated.xml' path='docs/Element/*'/>
+public partial class Element
+{
+		public string Uitrigger { get; set; }
+}
+
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class UIRequestEvent : UIEvent
 {
@@ -8560,6 +10026,17 @@ public partial class UIRequestEventInit : UIEventInit
 		public WindowProxy? View;
 		public long Detail;
 		public EventTarget Receiver;
+}
+
+///<include file='Utils/Docs/Window/Window.generated.xml' path='docs/Window/*'/>
+public partial class Window
+{
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public Unsupported /*DOMstring*/? UserSetting(string key) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public Undefined AddUserSettingListener(string key, UserSettingListener callback) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public Undefined RemoveUserSettingListener(string key, UserSettingListener callback) { throw new System.NotImplementedException(); }
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -8595,7 +10072,7 @@ public partial class IntersectionObserver
 	///<include file='Utils/Docs/IntersectionObserverIntersectionObserver/IntersectionObserverIntersectionObserver.generated.xml' path='docs/IntersectionObserverIntersectionObserver/*'/>
 	public IntersectionObserver(IntersectionObserverCallback callback, IntersectionObserverInit options) { }
 	///<include file='Utils/Docs/IntersectionObserverRoot/IntersectionObserverRoot.generated.xml' path='docs/IntersectionObserverRoot/*'/>
-	public Union78? Root { get; }
+	public Union80? Root { get; }
 	///<include file='Utils/Docs/IntersectionObserverRootMargin/IntersectionObserverRootMargin.generated.xml' path='docs/IntersectionObserverRootMargin/*'/>
 	public string RootMargin { get; }
 		public string ScrollMargin { get; }
@@ -8649,10 +10126,10 @@ public partial class IntersectionObserverEntryInit
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class IntersectionObserverInit
 {
-		public Union79? Root;
+		public Union81? Root;
 		public string RootMargin;
 		public string ScrollMargin;
-		public Union80 Threshold;
+		public Union82 Threshold;
 }
 
 ///<include file='Utils/Docs/LargestContentfulPaint/LargestContentfulPaint.generated.xml' path='docs/LargestContentfulPaint/*'/>
@@ -8893,6 +10370,20 @@ public partial class MediaCapabilitiesEncodingInfo : MediaCapabilitiesInfo
 		public MediaEncodingConfiguration Configuration;
 }
 
+///<include file='Utils/Docs/Navigator/Navigator.generated.xml' path='docs/Navigator/*'/>
+public partial class Navigator
+{
+	///<include file='Utils/Docs/NavigatorMediaCapabilities/NavigatorMediaCapabilities.generated.xml' path='docs/NavigatorMediaCapabilities/*'/>
+	public MediaCapabilities MediaCapabilities { get; }
+}
+
+///<include file='Utils/Docs/WorkerNavigator/WorkerNavigator.generated.xml' path='docs/WorkerNavigator/*'/>
+public partial class WorkerNavigator
+{
+	///<include file='Utils/Docs/WorkerNavigatorMediaCapabilities/WorkerNavigatorMediaCapabilities.generated.xml' path='docs/WorkerNavigatorMediaCapabilities/*'/>
+	public MediaCapabilities MediaCapabilities { get; }
+}
+
 ///<include file='Utils/Docs/MediaCapabilities/MediaCapabilities.generated.xml' path='docs/MediaCapabilities/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class MediaCapabilities
@@ -8901,6 +10392,13 @@ public partial class MediaCapabilities
 	public Task<MediaCapabilitiesDecodingInfo> DecodingInfo(MediaDecodingConfiguration configuration) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/MediaCapabilitiesEncodingInfo/MediaCapabilitiesEncodingInfo.generated.xml' path='docs/MediaCapabilitiesEncodingInfo/*'/>
 	public Task<MediaCapabilitiesEncodingInfo> EncodingInfo(MediaEncodingConfiguration configuration) { throw new System.NotImplementedException(); }
+}
+
+///<include file='Utils/Docs/Navigator/Navigator.generated.xml' path='docs/Navigator/*'/>
+public partial class Navigator
+{
+	///<include file='Utils/Docs/NavigatorMediaSession/NavigatorMediaSession.generated.xml' path='docs/NavigatorMediaSession/*'/>
+	public MediaSession MediaSession { get; }
 }
 
 ///<include file='Utils/Docs/MediaSessionPlaybackState/MediaSessionPlaybackState.generated.xml' path='docs/MediaSessionPlaybackState/*'/>
@@ -9105,6 +10603,95 @@ public enum FillLightMode
 	Off,
 	[Value("flash")]
 	Flash,
+}
+
+///<include file='Utils/Docs/MediaTrackSupportedConstraints/MediaTrackSupportedConstraints.generated.xml' path='docs/MediaTrackSupportedConstraints/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class MediaTrackSupportedConstraints
+{
+		public bool WhiteBalanceMode;
+		public bool ExposureMode;
+		public bool FocusMode;
+		public bool PointsOfInterest;
+		public bool ExposureCompensation;
+		public bool ExposureTime;
+		public bool ColorTemperature;
+		public bool Iso;
+		public bool Brightness;
+		public bool Contrast;
+		public bool Pan;
+		public bool Saturation;
+		public bool Sharpness;
+		public bool FocusDistance;
+		public bool Tilt;
+		public bool Zoom;
+		public bool Torch;
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class MediaTrackCapabilities
+{
+		public List<string> WhiteBalanceMode;
+		public List<string> ExposureMode;
+		public List<string> FocusMode;
+		public MediaSettingsRange ExposureCompensation;
+		public MediaSettingsRange ExposureTime;
+		public MediaSettingsRange ColorTemperature;
+		public MediaSettingsRange Iso;
+		public MediaSettingsRange Brightness;
+		public MediaSettingsRange Contrast;
+		public MediaSettingsRange Saturation;
+		public MediaSettingsRange Sharpness;
+		public MediaSettingsRange FocusDistance;
+		public MediaSettingsRange Pan;
+		public MediaSettingsRange Tilt;
+		public MediaSettingsRange Zoom;
+		public List<bool> Torch;
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class MediaTrackConstraintSet
+{
+		public string WhiteBalanceMode;
+		public string ExposureMode;
+		public string FocusMode;
+		public ConstrainPoint2D PointsOfInterest;
+		public Unsupported /*ConstrainDouble*/ ExposureCompensation;
+		public Unsupported /*ConstrainDouble*/ ExposureTime;
+		public Unsupported /*ConstrainDouble*/ ColorTemperature;
+		public Unsupported /*ConstrainDouble*/ Iso;
+		public Unsupported /*ConstrainDouble*/ Brightness;
+		public Unsupported /*ConstrainDouble*/ Contrast;
+		public Unsupported /*ConstrainDouble*/ Saturation;
+		public Unsupported /*ConstrainDouble*/ Sharpness;
+		public Unsupported /*ConstrainDouble*/ FocusDistance;
+		public Union83 Pan;
+		public Union84 Tilt;
+		public Union85 Zoom;
+		public Unsupported /*ConstrainBoolean*/ Torch;
+}
+
+///<include file='Utils/Docs/MediaTrackSettings/MediaTrackSettings.generated.xml' path='docs/MediaTrackSettings/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class MediaTrackSettings
+{
+		public string WhiteBalanceMode;
+		public string ExposureMode;
+		public string FocusMode;
+		public List<Point2D> PointsOfInterest;
+		public Number ExposureCompensation;
+		public Number ExposureTime;
+		public Number ColorTemperature;
+		public Number Iso;
+		public Number Brightness;
+		public Number Contrast;
+		public Number Saturation;
+		public Number Sharpness;
+		public Number FocusDistance;
+		public Number Pan;
+		public Number Tilt;
+		public Number Zoom;
+		public bool Torch;
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -9315,6 +10902,22 @@ public partial class PerformanceNavigation
 	public ushort RedirectCount { get; }
 }
 
+///<include file='Utils/Docs/Performance/Performance.generated.xml' path='docs/Performance/*'/>
+public partial class Performance
+{
+	///<include file='Utils/Docs/PerformanceTiming/PerformanceTiming.generated.xml' path='docs/PerformanceTiming/*'/>
+	public PerformanceTiming Timing { get; }
+	///<include file='Utils/Docs/PerformanceNavigation/PerformanceNavigation.generated.xml' path='docs/PerformanceNavigation/*'/>
+	public PerformanceNavigation Navigation { get; }
+}
+
+///<include file='Utils/Docs/Window/Window.generated.xml' path='docs/Window/*'/>
+public partial class Window
+{
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public Performance Performance { get; }
+}
+
 ///<include file='Utils/Docs/Notification/Notification.generated.xml' path='docs/Notification/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class Notification : EventTarget
@@ -9427,6 +11030,16 @@ public partial class GetNotificationOptions
 		public string Tag;
 }
 
+///<include file='Utils/Docs/ServiceWorkerRegistration/ServiceWorkerRegistration.generated.xml' path='docs/ServiceWorkerRegistration/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class ServiceWorkerRegistration
+{
+	///<include file='Utils/Docs/ServiceWorkerRegistrationShowNotification/ServiceWorkerRegistrationShowNotification.generated.xml' path='docs/ServiceWorkerRegistrationShowNotification/*'/>
+	public Task<Undefined> ShowNotification(string title, NotificationOptions options) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/ServiceWorkerRegistrationGetNotifications/ServiceWorkerRegistrationGetNotifications.generated.xml' path='docs/ServiceWorkerRegistrationGetNotifications/*'/>
+	public Task<List<Notification>> GetNotifications(GetNotificationOptions filter) { throw new System.NotImplementedException(); }
+}
+
 ///<include file='Utils/Docs/NotificationEvent/NotificationEvent.generated.xml' path='docs/NotificationEvent/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class NotificationEvent : ExtendableEvent
@@ -9445,6 +11058,14 @@ public partial class NotificationEventInit : ExtendableEventInit
 {
 		public required Notification Notification;
 		public string Action;
+}
+
+///<include file='Utils/Docs/ServiceWorkerGlobalScope/ServiceWorkerGlobalScope.generated.xml' path='docs/ServiceWorkerGlobalScope/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class ServiceWorkerGlobalScope
+{
+		public EventHandler Onnotificationclick { get; set; }
+		public EventHandler Onnotificationclose { get; set; }
 }
 
 
@@ -9506,6 +11127,19 @@ public partial class PermissionsPolicy
 		public List<string> GetAllowlistForFeature(string feature) { throw new System.NotImplementedException(); }
 }
 
+///<include file='Utils/Docs/Document/Document.generated.xml' path='docs/Document/*'/>
+public partial class Document
+{
+		public PermissionsPolicy PermissionsPolicy { get; }
+}
+
+///<include file='Utils/Docs/HTMLIFrameElement/HTMLIFrameElement.generated.xml' path='docs/HTMLIFrameElement/*'/>
+public partial class HTMLIFrameElement
+{
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public PermissionsPolicy PermissionsPolicy { get; }
+}
+
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class PermissionsPolicyViolationReportBody : ReportBody
 {
@@ -9514,6 +11148,35 @@ public partial class PermissionsPolicyViolationReportBody : ReportBody
 		public long? LineNumber { get; }
 		public long? ColumnNumber { get; }
 		public string Disposition { get; }
+}
+
+///<include file='Utils/Docs/HTMLVideoElement/HTMLVideoElement.generated.xml' path='docs/HTMLVideoElement/*'/>
+public partial class HTMLVideoElement
+{
+	///<include file='Utils/Docs/HTMLVideoElementRequestPictureInPicture/HTMLVideoElementRequestPictureInPicture.generated.xml' path='docs/HTMLVideoElementRequestPictureInPicture/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public Task<PictureInPictureWindow> RequestPictureInPicture() { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public EventHandler Onenterpictureinpicture { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public EventHandler Onleavepictureinpicture { get; set; }
+	///<include file='Utils/Docs/HTMLVideoElementDisablePictureInPicture/HTMLVideoElementDisablePictureInPicture.generated.xml' path='docs/HTMLVideoElementDisablePictureInPicture/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public bool DisablePictureInPicture { get; set; }
+}
+
+///<include file='Utils/Docs/Document/Document.generated.xml' path='docs/Document/*'/>
+public partial class Document
+{
+	///<include file='Utils/Docs/DocumentPictureInPictureEnabled/DocumentPictureInPictureEnabled.generated.xml' path='docs/DocumentPictureInPictureEnabled/*'/>
+	public bool PictureInPictureEnabled { get; }
+	///<include file='Utils/Docs/DocumentExitPictureInPicture/DocumentExitPictureInPicture.generated.xml' path='docs/DocumentExitPictureInPicture/*'/>
+	public Task<Undefined> ExitPictureInPicture() { throw new System.NotImplementedException(); }
+}
+
+public partial interface DocumentOrShadowRoot
+{
+		public Element? PictureInPictureElement { get { throw new System.NotImplementedException(); } }
 }
 
 ///<include file='Utils/Docs/PictureInPictureWindow/PictureInPictureWindow.generated.xml' path='docs/PictureInPictureWindow/*'/>
@@ -9744,7 +11407,7 @@ public partial class ViewTimelineOptions
 {
 		public Element Subject;
 		public ScrollAxis Axis;
-		public Union83 Inset;
+		public Union88 Inset;
 }
 
 ///<include file='Utils/Docs/ViewTimeline/ViewTimeline.generated.xml' path='docs/ViewTimeline/*'/>
@@ -9768,6 +11431,13 @@ public partial class AnimationTimeOptions
 		public string? Range;
 }
 
+///<include file='Utils/Docs/AnimationTimeline/AnimationTimeline.generated.xml' path='docs/AnimationTimeline/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class AnimationTimeline
+{
+		public CSSNumericValue? GetCurrentTime(AnimationTimeOptions options) { throw new System.NotImplementedException(); }
+}
+
 ///<include file='Utils/Docs/SecurePaymentConfirmationRequest/SecurePaymentConfirmationRequest.generated.xml' path='docs/SecurePaymentConfirmationRequest/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class SecurePaymentConfirmationRequest
@@ -9782,6 +11452,19 @@ public partial class SecurePaymentConfirmationRequest
 		public AuthenticationExtensionsClientInputs Extensions;
 		public List<string> Locale;
 		public bool ShowOptOut;
+}
+
+///<include file='Utils/Docs/PaymentRequest/PaymentRequest.generated.xml' path='docs/PaymentRequest/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class PaymentRequest
+{
+		public static Task<bool> IsSecurePaymentConfirmationAvailable() { throw new System.NotImplementedException(); }
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class AuthenticationExtensionsClientInputs
+{
+		public AuthenticationExtensionsPaymentInputs Payment;
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -9823,7 +11506,7 @@ public partial class PaymentCredentialInstrument
 
 ///<include file='Utils/Docs/ServiceWorker/ServiceWorker.generated.xml' path='docs/ServiceWorker/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class ServiceWorker : EventTarget
+public partial class ServiceWorker : EventTarget, AbstractWorker
 {
 	///<include file='Utils/Docs/ServiceWorkerScriptURL/ServiceWorkerScriptURL.generated.xml' path='docs/ServiceWorkerScriptURL/*'/>
 	public string ScriptURL { get; }
@@ -9835,6 +11518,7 @@ public partial class ServiceWorker : EventTarget
 	public Undefined PostMessage(dynamic message, StructuredSerializeOptions options) { throw new System.NotImplementedException(); }
 		public EventHandler Onstatechange { get; set; }
 }
+
 
 ///<include file='Utils/Docs/ServiceWorkerState/ServiceWorkerState.generated.xml' path='docs/ServiceWorkerState/*'/>
 [To(ToAttribute.None)]
@@ -9854,6 +11538,28 @@ public enum ServiceWorkerState
 	Redundant,
 }
 
+///<include file='Utils/Docs/ServiceWorkerRegistration/ServiceWorkerRegistration.generated.xml' path='docs/ServiceWorkerRegistration/*'/>
+public partial class ServiceWorkerRegistration : EventTarget
+{
+	///<include file='Utils/Docs/ServiceWorkerRegistrationInstalling/ServiceWorkerRegistrationInstalling.generated.xml' path='docs/ServiceWorkerRegistrationInstalling/*'/>
+	public ServiceWorker? Installing { get; }
+	///<include file='Utils/Docs/ServiceWorkerRegistrationWaiting/ServiceWorkerRegistrationWaiting.generated.xml' path='docs/ServiceWorkerRegistrationWaiting/*'/>
+	public ServiceWorker? Waiting { get; }
+	///<include file='Utils/Docs/ServiceWorkerRegistrationActive/ServiceWorkerRegistrationActive.generated.xml' path='docs/ServiceWorkerRegistrationActive/*'/>
+	public ServiceWorker? Active { get; }
+	///<include file='Utils/Docs/ServiceWorkerRegistrationNavigationPreload/ServiceWorkerRegistrationNavigationPreload.generated.xml' path='docs/ServiceWorkerRegistrationNavigationPreload/*'/>
+	public NavigationPreloadManager NavigationPreload { get; }
+	///<include file='Utils/Docs/ServiceWorkerRegistrationScope/ServiceWorkerRegistrationScope.generated.xml' path='docs/ServiceWorkerRegistrationScope/*'/>
+	public string Scope { get; }
+	///<include file='Utils/Docs/ServiceWorkerRegistrationUpdateViaCache/ServiceWorkerRegistrationUpdateViaCache.generated.xml' path='docs/ServiceWorkerRegistrationUpdateViaCache/*'/>
+	public ServiceWorkerUpdateViaCache UpdateViaCache { get; }
+	///<include file='Utils/Docs/ServiceWorkerRegistrationUpdate/ServiceWorkerRegistrationUpdate.generated.xml' path='docs/ServiceWorkerRegistrationUpdate/*'/>
+	public Task<Undefined> Update() { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/ServiceWorkerRegistrationUnregister/ServiceWorkerRegistrationUnregister.generated.xml' path='docs/ServiceWorkerRegistrationUnregister/*'/>
+	public Task<bool> Unregister() { throw new System.NotImplementedException(); }
+		public EventHandler Onupdatefound { get; set; }
+}
+
 [To(ToAttribute.None)]
 public enum ServiceWorkerUpdateViaCache
 {
@@ -9863,6 +11569,20 @@ public enum ServiceWorkerUpdateViaCache
 	All,
 	[Value("none")]
 	None,
+}
+
+///<include file='Utils/Docs/Navigator/Navigator.generated.xml' path='docs/Navigator/*'/>
+public partial class Navigator
+{
+	///<include file='Utils/Docs/NavigatorServiceWorker/NavigatorServiceWorker.generated.xml' path='docs/NavigatorServiceWorker/*'/>
+	public ServiceWorkerContainer ServiceWorker { get; }
+}
+
+///<include file='Utils/Docs/WorkerNavigator/WorkerNavigator.generated.xml' path='docs/WorkerNavigator/*'/>
+public partial class WorkerNavigator
+{
+	///<include file='Utils/Docs/WorkerNavigatorServiceWorker/WorkerNavigatorServiceWorker.generated.xml' path='docs/WorkerNavigatorServiceWorker/*'/>
+	public ServiceWorkerContainer ServiceWorker { get; }
 }
 
 ///<include file='Utils/Docs/ServiceWorkerContainer/ServiceWorkerContainer.generated.xml' path='docs/ServiceWorkerContainer/*'/>
@@ -9913,6 +11633,24 @@ public partial class NavigationPreloadState
 {
 		public bool Enabled;
 		public string HeaderValue;
+}
+
+///<include file='Utils/Docs/ServiceWorkerGlobalScope/ServiceWorkerGlobalScope.generated.xml' path='docs/ServiceWorkerGlobalScope/*'/>
+public partial class ServiceWorkerGlobalScope : WorkerGlobalScope
+{
+	///<include file='Utils/Docs/ServiceWorkerGlobalScopeClients/ServiceWorkerGlobalScopeClients.generated.xml' path='docs/ServiceWorkerGlobalScopeClients/*'/>
+	public Clients Clients { get; }
+	///<include file='Utils/Docs/ServiceWorkerGlobalScopeRegistration/ServiceWorkerGlobalScopeRegistration.generated.xml' path='docs/ServiceWorkerGlobalScopeRegistration/*'/>
+	public ServiceWorkerRegistration Registration { get; }
+	///<include file='Utils/Docs/ServiceWorkerGlobalScopeServiceWorker/ServiceWorkerGlobalScopeServiceWorker.generated.xml' path='docs/ServiceWorkerGlobalScopeServiceWorker/*'/>
+	public ServiceWorker ServiceWorker { get; }
+	///<include file='Utils/Docs/ServiceWorkerGlobalScopeSkipWaiting/ServiceWorkerGlobalScopeSkipWaiting.generated.xml' path='docs/ServiceWorkerGlobalScopeSkipWaiting/*'/>
+	public Task<Undefined> SkipWaiting() { throw new System.NotImplementedException(); }
+		public EventHandler Oninstall { get; set; }
+		public EventHandler Onactivate { get; set; }
+		public EventHandler Onfetch { get; set; }
+		public EventHandler Onmessage { get; set; }
+		public EventHandler Onmessageerror { get; set; }
 }
 
 ///<include file='Utils/Docs/Client/Client.generated.xml' path='docs/Client/*'/>
@@ -10060,7 +11798,7 @@ public partial class ExtendableMessageEvent : ExtendableEvent
 	///<include file='Utils/Docs/ExtendableMessageEventLastEventId/ExtendableMessageEventLastEventId.generated.xml' path='docs/ExtendableMessageEventLastEventId/*'/>
 	public string LastEventId { get; }
 	///<include file='Utils/Docs/ExtendableMessageEventSource/ExtendableMessageEventSource.generated.xml' path='docs/ExtendableMessageEventSource/*'/>
-	public Union85? Source { get; }
+	public Union90? Source { get; }
 	///<include file='Utils/Docs/ExtendableMessageEventPorts/ExtendableMessageEventPorts.generated.xml' path='docs/ExtendableMessageEventPorts/*'/>
 	public MessagePort[] Ports { get; }
 	public ExtendableMessageEvent() { }
@@ -10072,8 +11810,13 @@ public partial class ExtendableMessageEventInit : ExtendableEventInit
 		public dynamic Data;
 		public string Origin;
 		public string LastEventId;
-		public Union86? Source;
+		public Union91? Source;
 		public List<MessagePort> Ports;
+}
+
+public partial interface WindowOrWorkerGlobalScope
+{
+		public CacheStorage Caches { get { throw new System.NotImplementedException(); } }
 }
 
 ///<include file='Utils/Docs/Cache/Cache.generated.xml' path='docs/Cache/*'/>
@@ -10131,6 +11874,19 @@ public partial class MultiCacheQueryOptions : CacheQueryOptions
 public partial interface NavigatorStorage
 {
 		public StorageManager Storage { get { throw new System.NotImplementedException(); } }
+}
+
+
+
+///<include file='Utils/Docs/StorageManager/StorageManager.generated.xml' path='docs/StorageManager/*'/>
+public partial class StorageManager
+{
+	///<include file='Utils/Docs/StorageManagerPersisted/StorageManagerPersisted.generated.xml' path='docs/StorageManagerPersisted/*'/>
+	public Task<bool> Persisted() { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/StorageManagerPersist/StorageManagerPersist.generated.xml' path='docs/StorageManagerPersist/*'/>
+	public Task<bool> Persist() { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/StorageManagerEstimate/StorageManagerEstimate.generated.xml' path='docs/StorageManagerEstimate/*'/>
+	public Task<StorageEstimate> Estimate() { throw new System.NotImplementedException(); }
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -10253,6 +12009,7 @@ public partial class ReadableStreamDefaultReader
 	public ReadableStreamDefaultReader() { }
 }
 
+
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class ReadableStreamReadResult
 {
@@ -10272,6 +12029,7 @@ public partial class ReadableStreamBYOBReader
 	public Undefined ReleaseLock() { throw new System.NotImplementedException(); }
 	public ReadableStreamBYOBReader() { }
 }
+
 
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class ReadableStreamBYOBReaderReadOptions
@@ -10567,6 +12325,15 @@ public partial class TouchEvent : UIEvent
 	public bool ShiftKey { get; }
 }
 
+///<include file='Utils/Docs/Document/Document.generated.xml' path='docs/Document/*'/>
+public partial class Document
+{
+	///<include file='Utils/Docs/DocumentCreateTouch/DocumentCreateTouch.generated.xml' path='docs/DocumentCreateTouch/*'/>
+	public Touch CreateTouch(WindowProxy view, EventTarget target, long identifier, long pageX, long pageY, long screenX, long screenY) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/DocumentCreateTouchList/DocumentCreateTouchList.generated.xml' path='docs/DocumentCreateTouchList/*'/>
+	public TouchList CreateTouchList(params Touch[] touches) { throw new System.NotImplementedException(); }
+}
+
 ///<include file='Utils/Docs/UIEvent/UIEvent.generated.xml' path='docs/UIEvent/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class UIEvent : Event
@@ -10784,6 +12551,61 @@ public partial class CompositionEventInit : UIEventInit
 		public string Data;
 }
 
+///<include file='Utils/Docs/UIEvent/UIEvent.generated.xml' path='docs/UIEvent/*'/>
+public partial class UIEvent
+{
+	///<include file='Utils/Docs/UIEventInitUIEvent/UIEventInitUIEvent.generated.xml' path='docs/UIEventInitUIEvent/*'/>
+	public Undefined InitUIEvent(string typeArg, bool bubblesArg, bool cancelableArg, Window? viewArg, long detailArg) { throw new System.NotImplementedException(); }
+}
+
+///<include file='Utils/Docs/MouseEvent/MouseEvent.generated.xml' path='docs/MouseEvent/*'/>
+public partial class MouseEvent
+{
+	///<include file='Utils/Docs/MouseEventInitMouseEvent/MouseEventInitMouseEvent.generated.xml' path='docs/MouseEventInitMouseEvent/*'/>
+	public Undefined InitMouseEvent(string typeArg, bool bubblesArg, bool cancelableArg, Window? viewArg, long detailArg, long screenXArg, long screenYArg, long clientXArg, long clientYArg, bool ctrlKeyArg, bool altKeyArg, bool shiftKeyArg, bool metaKeyArg, Number buttonArg, EventTarget? relatedTargetArg) { throw new System.NotImplementedException(); }
+}
+
+///<include file='Utils/Docs/KeyboardEvent/KeyboardEvent.generated.xml' path='docs/KeyboardEvent/*'/>
+public partial class KeyboardEvent
+{
+	///<include file='Utils/Docs/KeyboardEventInitKeyboardEvent/KeyboardEventInitKeyboardEvent.generated.xml' path='docs/KeyboardEventInitKeyboardEvent/*'/>
+	public Undefined InitKeyboardEvent(string typeArg, bool bubblesArg, bool cancelableArg, Window? viewArg, string keyArg, ulong locationArg, bool ctrlKey, bool altKey, bool shiftKey, bool metaKey) { throw new System.NotImplementedException(); }
+}
+
+///<include file='Utils/Docs/CompositionEvent/CompositionEvent.generated.xml' path='docs/CompositionEvent/*'/>
+public partial class CompositionEvent
+{
+	///<include file='Utils/Docs/CompositionEventInitCompositionEvent/CompositionEventInitCompositionEvent.generated.xml' path='docs/CompositionEventInitCompositionEvent/*'/>
+	public Undefined InitCompositionEvent(string typeArg, bool bubblesArg, bool cancelableArg, WindowProxy? viewArg, string dataArg) { throw new System.NotImplementedException(); }
+}
+
+///<include file='Utils/Docs/UIEvent/UIEvent.generated.xml' path='docs/UIEvent/*'/>
+public partial class UIEvent
+{
+	///<include file='Utils/Docs/UIEventWhich/UIEventWhich.generated.xml' path='docs/UIEventWhich/*'/>
+	public ulong Which { get; }
+}
+
+public partial class UIEventInit
+{
+		public ulong Which;
+}
+
+///<include file='Utils/Docs/KeyboardEvent/KeyboardEvent.generated.xml' path='docs/KeyboardEvent/*'/>
+public partial class KeyboardEvent
+{
+	///<include file='Utils/Docs/KeyboardEventCharCode/KeyboardEventCharCode.generated.xml' path='docs/KeyboardEventCharCode/*'/>
+	public ulong CharCode { get; }
+	///<include file='Utils/Docs/KeyboardEventKeyCode/KeyboardEventKeyCode.generated.xml' path='docs/KeyboardEventKeyCode/*'/>
+	public ulong KeyCode { get; }
+}
+
+public partial class KeyboardEventInit
+{
+		public ulong CharCode;
+		public ulong KeyCode;
+}
+
 [To(ToAttribute.Default)]
 public partial class TextEvent : UIEvent
 {
@@ -10889,12 +12711,49 @@ public partial class URLPatternComponentResult
 }
 
 
+///<include file='Utils/Docs/URL/URL.generated.xml' path='docs/URL/*'/>
+public partial class URL
+{
+	///<include file='Utils/Docs/URLURL/URLURL.generated.xml' path='docs/URLURL/*'/>
+	public URL(string url, string base_) { }
+		public static URL? Parse(string url, string base_) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/URLCanParse/URLCanParse.generated.xml' path='docs/URLCanParse/*'/>
+	public static bool CanParse(string url, string base_) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/URLHref/URLHref.generated.xml' path='docs/URLHref/*'/>
+	public string Href { get; set; }
+	///<include file='Utils/Docs/URLOrigin/URLOrigin.generated.xml' path='docs/URLOrigin/*'/>
+	public string Origin { get; }
+	///<include file='Utils/Docs/URLProtocol/URLProtocol.generated.xml' path='docs/URLProtocol/*'/>
+	public string Protocol { get; set; }
+	///<include file='Utils/Docs/URLUsername/URLUsername.generated.xml' path='docs/URLUsername/*'/>
+	public string Username { get; set; }
+	///<include file='Utils/Docs/URLPassword/URLPassword.generated.xml' path='docs/URLPassword/*'/>
+	public string Password { get; set; }
+	///<include file='Utils/Docs/URLHost/URLHost.generated.xml' path='docs/URLHost/*'/>
+	public string Host { get; set; }
+	///<include file='Utils/Docs/URLHostname/URLHostname.generated.xml' path='docs/URLHostname/*'/>
+	public string Hostname { get; set; }
+	///<include file='Utils/Docs/URLPort/URLPort.generated.xml' path='docs/URLPort/*'/>
+	public string Port { get; set; }
+	///<include file='Utils/Docs/URLPathname/URLPathname.generated.xml' path='docs/URLPathname/*'/>
+	public string Pathname { get; set; }
+	///<include file='Utils/Docs/URLSearch/URLSearch.generated.xml' path='docs/URLSearch/*'/>
+	public string Search { get; set; }
+	///<include file='Utils/Docs/URLSearchParams/URLSearchParams.generated.xml' path='docs/URLSearchParams/*'/>
+	public URLSearchParams SearchParams { get; }
+	///<include file='Utils/Docs/URLHash/URLHash.generated.xml' path='docs/URLHash/*'/>
+	public string Hash { get; set; }
+	///<include file='Utils/Docs/URLToJSON/URLToJSON.generated.xml' path='docs/URLToJSON/*'/>
+	public string ToJSON() { throw new System.NotImplementedException(); }
+	public URL() { }
+}
+
 ///<include file='Utils/Docs/URLSearchParams/URLSearchParams.generated.xml' path='docs/URLSearchParams/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class URLSearchParams
 {
 	///<include file='Utils/Docs/URLSearchParamsURLSearchParams/URLSearchParamsURLSearchParams.generated.xml' path='docs/URLSearchParamsURLSearchParams/*'/>
-	public URLSearchParams(Union91 init) { }
+	public URLSearchParams(Union96 init) { }
 	///<include file='Utils/Docs/URLSearchParamsSize/URLSearchParamsSize.generated.xml' path='docs/URLSearchParamsSize/*'/>
 	public ulong Size { get; }
 	///<include file='Utils/Docs/URLSearchParamsAppend/URLSearchParamsAppend.generated.xml' path='docs/URLSearchParamsAppend/*'/>
@@ -10969,6 +12828,61 @@ public struct VoidFunction
 {
 }
 
+///<include file='Utils/Docs/AnimationTimeline/AnimationTimeline.generated.xml' path='docs/AnimationTimeline/*'/>
+public partial class AnimationTimeline
+{
+	///<include file='Utils/Docs/AnimationTimelineCurrentTime/AnimationTimelineCurrentTime.generated.xml' path='docs/AnimationTimelineCurrentTime/*'/>
+	public CSSNumberish? CurrentTime { get; }
+		public CSSNumberish? Duration { get; }
+		public Animation Play(AnimationEffect? effect) { throw new System.NotImplementedException(); }
+}
+
+///<include file='Utils/Docs/Animation/Animation.generated.xml' path='docs/Animation/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class Animation
+{
+	///<include file='Utils/Docs/AnimationStartTime/AnimationStartTime.generated.xml' path='docs/AnimationStartTime/*'/>
+	public CSSNumberish? StartTime { get; set; }
+	///<include file='Utils/Docs/AnimationCurrentTime/AnimationCurrentTime.generated.xml' path='docs/AnimationCurrentTime/*'/>
+	public CSSNumberish? CurrentTime { get; set; }
+}
+
+///<include file='Utils/Docs/AnimationEffect/AnimationEffect.generated.xml' path='docs/AnimationEffect/*'/>
+public partial class AnimationEffect
+{
+		public GroupEffect? Parent { get; }
+		public AnimationEffect? PreviousSibling { get; }
+		public AnimationEffect? NextSibling { get; }
+		public Undefined Before(params AnimationEffect[] effects) { throw new System.NotImplementedException(); }
+		public Undefined After(params AnimationEffect[] effects) { throw new System.NotImplementedException(); }
+		public Undefined Replace(params AnimationEffect[] effects) { throw new System.NotImplementedException(); }
+		public Undefined Remove() { throw new System.NotImplementedException(); }
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class EffectTiming
+{
+		public Number Delay;
+		public Number EndDelay;
+		public Number PlaybackRate;
+		public Union100 Duration;
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class OptionalEffectTiming
+{
+		public Number PlaybackRate;
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class ComputedEffectTiming
+{
+		public CSSNumberish StartTime;
+		public CSSNumberish EndTime;
+		public CSSNumberish ActiveDuration;
+		public CSSNumberish? LocalTime;
+}
+
 [To(ToAttribute.None)]
 public enum FillMode
 {
@@ -10987,7 +12901,7 @@ public enum FillMode
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class GroupEffect
 {
-		public GroupEffect(List<AnimationEffect>? children, Union95 timing) { }
+		public GroupEffect(List<AnimationEffect>? children, Union101 timing) { }
 		public AnimationNodeList Children { get; }
 		public AnimationEffect? FirstChild { get; }
 		public AnimationEffect? LastChild { get; }
@@ -11007,9 +12921,23 @@ public partial class AnimationNodeList
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class SequenceEffect : GroupEffect
 {
-		public SequenceEffect(List<AnimationEffect>? children, Union96 timing) { }
+		public SequenceEffect(List<AnimationEffect>? children, Union102 timing) { }
 		public SequenceEffect Clone() { throw new System.NotImplementedException(); }
 	public SequenceEffect() { }
+}
+
+///<include file='Utils/Docs/KeyframeEffect/KeyframeEffect.generated.xml' path='docs/KeyframeEffect/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class KeyframeEffect
+{
+	///<include file='Utils/Docs/KeyframeEffectIterationComposite/KeyframeEffectIterationComposite.generated.xml' path='docs/KeyframeEffectIterationComposite/*'/>
+	public IterationCompositeOperation IterationComposite { get; set; }
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class KeyframeEffectOptions
+{
+		public IterationCompositeOperation IterationComposite;
 }
 
 [To(ToAttribute.None)]
@@ -11194,6 +13122,12 @@ public partial class RuntimeError
 {
 }
 
+public partial class WebAssembly
+{
+		public Task<Module> CompileStreaming(Task<Response> source) { throw new System.NotImplementedException(); }
+		public Task<WebAssemblyInstantiatedSource> InstantiateStreaming(Task<Response> source, object importObject) { throw new System.NotImplementedException(); }
+}
+
 [To(ToAttribute.None)]
 public enum AudioContextState
 {
@@ -11315,7 +13249,7 @@ public partial class AudioContext : BaseAudioContext
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class AudioContextOptions
 {
-		public Union98 LatencyHint;
+		public Union104 LatencyHint;
 		public Number SampleRate;
 }
 
@@ -12201,6 +14135,23 @@ public partial class PublicKeyCredential : Credential
 	public AuthenticationExtensionsClientOutputs GetClientExtensionResults() { throw new System.NotImplementedException(); }
 }
 
+public partial class CredentialCreationOptions
+{
+		public PublicKeyCredentialCreationOptions PublicKey;
+}
+
+public partial class CredentialRequestOptions
+{
+		public PublicKeyCredentialRequestOptions PublicKey;
+}
+
+///<include file='Utils/Docs/PublicKeyCredential/PublicKeyCredential.generated.xml' path='docs/PublicKeyCredential/*'/>
+public partial class PublicKeyCredential
+{
+	///<include file='Utils/Docs/PublicKeyCredentialIsUserVerifyingPlatformAuthenticatorAvail/PublicKeyCredentialIsUserVerifyingPlatformAuthenticatorAvail.generated.xml' path='docs/PublicKeyCredentialIsUserVerifyingPlatformAuthenticatorAvail/*'/>
+	public static Task<bool> IsUserVerifyingPlatformAuthenticatorAvailable() { throw new System.NotImplementedException(); }
+}
+
 ///<include file='Utils/Docs/AuthenticatorResponse/AuthenticatorResponse.generated.xml' path='docs/AuthenticatorResponse/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class AuthenticatorResponse
@@ -12309,6 +14260,10 @@ public partial class PublicKeyCredentialRequestOptions
 		public AuthenticationExtensionsClientInputs Extensions;
 }
 
+public partial class AuthenticationExtensionsClientInputs
+{
+}
+
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class AuthenticationExtensionsClientOutputs
 {
@@ -12380,6 +14335,26 @@ public enum UserVerificationRequirement
 	Discouraged,
 }
 
+public partial class AuthenticationExtensionsClientInputs
+{
+		public string Appid;
+}
+
+public partial class AuthenticationExtensionsClientOutputs
+{
+		public bool Appid;
+}
+
+public partial class AuthenticationExtensionsClientInputs
+{
+		public string TxAuthSimple;
+}
+
+public partial class AuthenticationExtensionsClientOutputs
+{
+		public string TxAuthSimple;
+}
+
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class txAuthGenericArg
 {
@@ -12387,10 +14362,70 @@ public partial class txAuthGenericArg
 		public required byte[] Content;
 }
 
+public partial class AuthenticationExtensionsClientInputs
+{
+		public txAuthGenericArg TxAuthGeneric;
+}
+
+public partial class AuthenticationExtensionsClientOutputs
+{
+		public byte[] TxAuthGeneric;
+}
+
+
+public partial class AuthenticationExtensionsClientInputs
+{
+		public AuthenticatorSelectionList AuthnSel;
+}
+
+
+public partial class AuthenticationExtensionsClientOutputs
+{
+		public bool AuthnSel;
+}
+
+public partial class AuthenticationExtensionsClientInputs
+{
+		public bool Exts;
+}
+
+
+public partial class AuthenticationExtensionsClientOutputs
+{
+		public AuthenticationExtensionsSupported Exts;
+}
+
+public partial class AuthenticationExtensionsClientInputs
+{
+		public bool Uvi;
+}
+
+public partial class AuthenticationExtensionsClientOutputs
+{
+		public byte[] Uvi;
+}
+
+public partial class AuthenticationExtensionsClientInputs
+{
+		public bool Loc;
+}
+
+public partial class AuthenticationExtensionsClientOutputs
+{
+		public Unsupported /*Coordinates*/ Loc;
+}
+
+public partial class AuthenticationExtensionsClientInputs
+{
+		public bool Uvm;
+}
 
 
 
-
+public partial class AuthenticationExtensionsClientOutputs
+{
+		public UvmEntries Uvm;
+}
 
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class authenticatorBiometricPerfBounds
@@ -13240,6 +15275,8 @@ public partial interface NavigatorGPU
 		public GPU Gpu { get { throw new System.NotImplementedException(); } }
 }
 
+
+
 ///<include file='Utils/Docs/GPU/GPU.generated.xml' path='docs/GPU/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class GPU
@@ -13321,7 +15358,7 @@ public enum GPUFeatureName
 
 ///<include file='Utils/Docs/GPUDevice/GPUDevice.generated.xml' path='docs/GPUDevice/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class GPUDevice : EventTarget
+public partial class GPUDevice : EventTarget, GPUObjectBase
 {
 	///<include file='Utils/Docs/GPUDeviceFeatures/GPUDeviceFeatures.generated.xml' path='docs/GPUDeviceFeatures/*'/>
 	public GPUSupportedFeatures Features { get; }
@@ -13363,6 +15400,7 @@ public partial class GPUDevice : EventTarget
 	public GPUQuerySet CreateQuerySet(GPUQuerySetDescriptor descriptor) { throw new System.NotImplementedException(); }
 }
 
+
 ///<include file='Utils/Docs/GPUBuffer/GPUBuffer.generated.xml' path='docs/GPUBuffer/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class GPUBuffer
@@ -13382,6 +15420,7 @@ public partial class GPUBuffer
 	///<include file='Utils/Docs/GPUBufferDestroy/GPUBufferDestroy.generated.xml' path='docs/GPUBufferDestroy/*'/>
 	public Undefined Destroy() { throw new System.NotImplementedException(); }
 }
+
 
 ///<include file='Utils/Docs/GPUBufferMapState/GPUBufferMapState.generated.xml' path='docs/GPUBufferMapState/*'/>
 [To(ToAttribute.None)]
@@ -13454,6 +15493,7 @@ public partial class GPUTexture
 	public GPUFlagsConstant Usage { get; }
 }
 
+
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class GPUTextureDescriptor : GPUObjectDescriptorBase
 {
@@ -13495,6 +15535,7 @@ public partial class GPUTextureUsage
 public partial class GPUTextureView
 {
 }
+
 
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class GPUTextureViewDescriptor : GPUObjectDescriptorBase
@@ -13738,10 +15779,11 @@ public partial class GPUExternalTexture
 {
 }
 
+
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class GPUExternalTextureDescriptor : GPUObjectDescriptorBase
 {
-		public required Union100 Source;
+		public required Union106 Source;
 		public PredefinedColorSpace ColorSpace;
 }
 
@@ -13750,6 +15792,7 @@ public partial class GPUExternalTextureDescriptor : GPUObjectDescriptorBase
 public partial class GPUSampler
 {
 }
+
 
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class GPUSamplerDescriptor : GPUObjectDescriptorBase
@@ -13821,6 +15864,7 @@ public enum GPUCompareFunction
 public partial class GPUBindGroupLayout
 {
 }
+
 
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class GPUBindGroupLayoutDescriptor : GPUObjectDescriptorBase
@@ -13938,6 +15982,7 @@ public partial class GPUBindGroup
 {
 }
 
+
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class GPUBindGroupDescriptor : GPUObjectDescriptorBase
 {
@@ -13967,6 +16012,7 @@ public partial class GPUPipelineLayout
 {
 }
 
+
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class GPUPipelineLayoutDescriptor : GPUObjectDescriptorBase
 {
@@ -13981,6 +16027,7 @@ public partial class GPUShaderModule
 	public Task<GPUCompilationInfo> GetCompilationInfo() { throw new System.NotImplementedException(); }
 }
 
+
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class GPUShaderModuleDescriptor : GPUObjectDescriptorBase
 {
@@ -13993,7 +16040,7 @@ public partial class GPUShaderModuleDescriptor : GPUObjectDescriptorBase
 public partial class GPUShaderModuleCompilationHint
 {
 		public required string EntryPoint;
-		public Union102 Layout;
+		public Union108 Layout;
 }
 
 ///<include file='Utils/Docs/GPUCompilationMessageType/GPUCompilationMessageType.generated.xml' path='docs/GPUCompilationMessageType/*'/>
@@ -14071,7 +16118,7 @@ public enum GPUAutoLayoutMode
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class GPUPipelineDescriptorBase : GPUObjectDescriptorBase
 {
-		public required Union103 Layout;
+		public required Union109 Layout;
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -14095,6 +16142,8 @@ public partial class GPUComputePipeline
 {
 }
 
+
+
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class GPUComputePipelineDescriptor : GPUPipelineDescriptorBase
 {
@@ -14106,6 +16155,8 @@ public partial class GPUComputePipelineDescriptor : GPUPipelineDescriptorBase
 public partial class GPURenderPipeline
 {
 }
+
+
 
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class GPURenderPipelineDescriptor : GPUPipelineDescriptorBase
@@ -14453,6 +16504,7 @@ public partial class GPUCommandBuffer
 {
 }
 
+
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class GPUCommandBufferDescriptor : GPUObjectDescriptorBase
 {
@@ -14487,6 +16539,9 @@ public partial class GPUCommandEncoder
 	public GPUCommandBuffer Finish(GPUCommandBufferDescriptor descriptor) { throw new System.NotImplementedException(); }
 }
 
+
+
+
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class GPUCommandEncoderDescriptor : GPUObjectDescriptorBase
 {
@@ -14520,6 +16575,10 @@ public partial class GPUComputePassEncoder
 	///<include file='Utils/Docs/GPUComputePassEncoderEnd/GPUComputePassEncoderEnd.generated.xml' path='docs/GPUComputePassEncoderEnd/*'/>
 	public Undefined End() { throw new System.NotImplementedException(); }
 }
+
+
+
+
 
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class GPUComputePassTimestampWrites
@@ -14556,6 +16615,11 @@ public partial class GPURenderPassEncoder
 	///<include file='Utils/Docs/GPURenderPassEncoderEnd/GPURenderPassEncoderEnd.generated.xml' path='docs/GPURenderPassEncoderEnd/*'/>
 	public Undefined End() { throw new System.NotImplementedException(); }
 }
+
+
+
+
+
 
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class GPURenderPassTimestampWrites
@@ -14644,6 +16708,7 @@ public partial class GPURenderBundle
 {
 }
 
+
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class GPURenderBundleDescriptor : GPUObjectDescriptorBase
 {
@@ -14656,6 +16721,11 @@ public partial class GPURenderBundleEncoder
 	///<include file='Utils/Docs/GPURenderBundleEncoderFinish/GPURenderBundleEncoderFinish.generated.xml' path='docs/GPURenderBundleEncoderFinish/*'/>
 	public GPURenderBundle Finish(GPURenderBundleDescriptor descriptor) { throw new System.NotImplementedException(); }
 }
+
+
+
+
+
 
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class GPURenderBundleEncoderDescriptor : GPURenderPassLayout
@@ -14685,6 +16755,7 @@ public partial class GPUQueue
 	public Undefined CopyExternalImageToTexture(GPUImageCopyExternalImage source, GPUImageCopyTextureTagged destination, GPUExtent3D copySize) { throw new System.NotImplementedException(); }
 }
 
+
 ///<include file='Utils/Docs/GPUQuerySet/GPUQuerySet.generated.xml' path='docs/GPUQuerySet/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class GPUQuerySet
@@ -14696,6 +16767,7 @@ public partial class GPUQuerySet
 	///<include file='Utils/Docs/GPUQuerySetCount/GPUQuerySetCount.generated.xml' path='docs/GPUQuerySetCount/*'/>
 	public GPUSize32Out Count { get; }
 }
+
 
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class GPUQuerySetDescriptor : GPUObjectDescriptorBase
@@ -14718,7 +16790,7 @@ public enum GPUQueryType
 public partial class GPUCanvasContext
 {
 	///<include file='Utils/Docs/GPUCanvasContextCanvas/GPUCanvasContextCanvas.generated.xml' path='docs/GPUCanvasContextCanvas/*'/>
-	public Union105 Canvas { get; }
+	public Union111 Canvas { get; }
 	///<include file='Utils/Docs/GPUCanvasContextConfigure/GPUCanvasContextConfigure.generated.xml' path='docs/GPUCanvasContextConfigure/*'/>
 	public Undefined Configure(GPUCanvasConfiguration configuration) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/GPUCanvasContextUnconfigure/GPUCanvasContextUnconfigure.generated.xml' path='docs/GPUCanvasContextUnconfigure/*'/>
@@ -14764,6 +16836,13 @@ public partial class GPUDeviceLostInfo
 	public GPUDeviceLostReason Reason { get; }
 	///<include file='Utils/Docs/GPUDeviceLostInfoMessage/GPUDeviceLostInfoMessage.generated.xml' path='docs/GPUDeviceLostInfoMessage/*'/>
 	public string Message { get; }
+}
+
+///<include file='Utils/Docs/GPUDevice/GPUDevice.generated.xml' path='docs/GPUDevice/*'/>
+public partial class GPUDevice
+{
+	///<include file='Utils/Docs/GPUDeviceLost/GPUDeviceLost.generated.xml' path='docs/GPUDeviceLost/*'/>
+	public Task<GPUDeviceLostInfo> Lost { get; }
 }
 
 ///<include file='Utils/Docs/GPUError/GPUError.generated.xml' path='docs/GPUError/*'/>
@@ -14812,6 +16891,15 @@ public enum GPUErrorFilter
 	Internal,
 }
 
+///<include file='Utils/Docs/GPUDevice/GPUDevice.generated.xml' path='docs/GPUDevice/*'/>
+public partial class GPUDevice
+{
+	///<include file='Utils/Docs/GPUDevicePushErrorScope/GPUDevicePushErrorScope.generated.xml' path='docs/GPUDevicePushErrorScope/*'/>
+	public Undefined PushErrorScope(GPUErrorFilter filter) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/GPUDevicePopErrorScope/GPUDevicePopErrorScope.generated.xml' path='docs/GPUDevicePopErrorScope/*'/>
+	public Task<GPUError?> PopErrorScope() { throw new System.NotImplementedException(); }
+}
+
 ///<include file='Utils/Docs/GPUUncapturedErrorEvent/GPUUncapturedErrorEvent.generated.xml' path='docs/GPUUncapturedErrorEvent/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class GPUUncapturedErrorEvent : Event
@@ -14827,6 +16915,12 @@ public partial class GPUUncapturedErrorEvent : Event
 public partial class GPUUncapturedErrorEventInit : EventInit
 {
 		public required GPUError Error;
+}
+
+///<include file='Utils/Docs/GPUDevice/GPUDevice.generated.xml' path='docs/GPUDevice/*'/>
+public partial class GPUDevice
+{
+		public EventHandler Onuncapturederror { get; set; }
 }
 
 
@@ -14884,6 +16978,8 @@ public partial interface NavigatorLocks
 {
 		public LockManager Locks { get { throw new System.NotImplementedException(); } }
 }
+
+
 
 ///<include file='Utils/Docs/LockManager/LockManager.generated.xml' path='docs/LockManager/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -14944,6 +17040,13 @@ public partial class Lock
 	public string Name { get; }
 	///<include file='Utils/Docs/LockMode/LockMode.generated.xml' path='docs/LockMode/*'/>
 	public LockMode Mode { get; }
+}
+
+///<include file='Utils/Docs/Navigator/Navigator.generated.xml' path='docs/Navigator/*'/>
+public partial class Navigator
+{
+	///<include file='Utils/Docs/NavigatorRequestMIDIAccess/NavigatorRequestMIDIAccess.generated.xml' path='docs/NavigatorRequestMIDIAccess/*'/>
+	public Task<MIDIAccess> RequestMIDIAccess(MIDIOptions options) { throw new System.NotImplementedException(); }
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -15098,6 +17201,8 @@ public partial interface NavigatorML
 		public ML Ml { get { throw new System.NotImplementedException(); } }
 }
 
+
+
 [To(ToAttribute.None)]
 public enum MLDeviceType
 {
@@ -15220,6 +17325,12 @@ public partial class MLArgMinMaxOptions
 		public bool SelectLastIndex;
 }
 
+public partial class MLGraphBuilder
+{
+		public MLOperand ArgMin(MLOperand input, MLArgMinMaxOptions options) { throw new System.NotImplementedException(); }
+		public MLOperand ArgMax(MLOperand input, MLArgMinMaxOptions options) { throw new System.NotImplementedException(); }
+}
+
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class MLBatchNormalizationOptions
 {
@@ -15230,11 +17341,32 @@ public partial class MLBatchNormalizationOptions
 		public MLActivation Activation;
 }
 
+public partial class MLGraphBuilder
+{
+		public MLOperand BatchNormalization(MLOperand input, MLOperand mean, MLOperand variance, MLBatchNormalizationOptions options) { throw new System.NotImplementedException(); }
+}
+
+public partial class MLGraphBuilder
+{
+		public MLOperand Cast(MLOperand input, MLOperandDataType type) { throw new System.NotImplementedException(); }
+}
+
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class MLClampOptions
 {
 		public Number MinValue;
 		public Number MaxValue;
+}
+
+public partial class MLGraphBuilder
+{
+		public MLOperand Clamp(MLOperand input, MLClampOptions options) { throw new System.NotImplementedException(); }
+		public MLActivation Clamp(MLClampOptions options) { throw new System.NotImplementedException(); }
+}
+
+public partial class MLGraphBuilder
+{
+		public MLOperand Concat(List<MLOperand> inputs, ulong axis) { throw new System.NotImplementedException(); }
 }
 
 [To(ToAttribute.None)]
@@ -15263,6 +17395,11 @@ public partial class MLConv2dOptions
 		public MLActivation Activation;
 }
 
+public partial class MLGraphBuilder
+{
+		public MLOperand Conv2d(MLOperand input, MLOperand filter, MLConv2dOptions options) { throw new System.NotImplementedException(); }
+}
+
 [To(ToAttribute.None)]
 public enum MLConvTranspose2dFilterOperandLayout
 {
@@ -15289,16 +17426,75 @@ public partial class MLConvTranspose2dOptions
 		public MLActivation Activation;
 }
 
+public partial class MLGraphBuilder
+{
+		public MLOperand ConvTranspose2d(MLOperand input, MLOperand filter, MLConvTranspose2dOptions options) { throw new System.NotImplementedException(); }
+}
+
+public partial class MLGraphBuilder
+{
+		public MLOperand Add(MLOperand a, MLOperand b) { throw new System.NotImplementedException(); }
+		public MLOperand Sub(MLOperand a, MLOperand b) { throw new System.NotImplementedException(); }
+		public MLOperand Mul(MLOperand a, MLOperand b) { throw new System.NotImplementedException(); }
+		public MLOperand Div(MLOperand a, MLOperand b) { throw new System.NotImplementedException(); }
+		public MLOperand Max(MLOperand a, MLOperand b) { throw new System.NotImplementedException(); }
+		public MLOperand Min(MLOperand a, MLOperand b) { throw new System.NotImplementedException(); }
+		public MLOperand Pow(MLOperand a, MLOperand b) { throw new System.NotImplementedException(); }
+}
+
+public partial class MLGraphBuilder
+{
+		public MLOperand Equal(MLOperand a, MLOperand b) { throw new System.NotImplementedException(); }
+		public MLOperand Greater(MLOperand a, MLOperand b) { throw new System.NotImplementedException(); }
+		public MLOperand GreaterOrEqual(MLOperand a, MLOperand b) { throw new System.NotImplementedException(); }
+		public MLOperand Lesser(MLOperand a, MLOperand b) { throw new System.NotImplementedException(); }
+		public MLOperand LesserOrEqual(MLOperand a, MLOperand b) { throw new System.NotImplementedException(); }
+		public MLOperand Not(MLOperand a) { throw new System.NotImplementedException(); }
+}
+
+public partial class MLGraphBuilder
+{
+		public MLOperand Abs(MLOperand input) { throw new System.NotImplementedException(); }
+		public MLOperand Ceil(MLOperand input) { throw new System.NotImplementedException(); }
+		public MLOperand Cos(MLOperand input) { throw new System.NotImplementedException(); }
+		public MLOperand Erf(MLOperand input) { throw new System.NotImplementedException(); }
+		public MLOperand Exp(MLOperand input) { throw new System.NotImplementedException(); }
+		public MLOperand Floor(MLOperand input) { throw new System.NotImplementedException(); }
+		public MLOperand Identity(MLOperand input) { throw new System.NotImplementedException(); }
+		public MLOperand Log(MLOperand input) { throw new System.NotImplementedException(); }
+		public MLOperand Neg(MLOperand input) { throw new System.NotImplementedException(); }
+		public MLOperand Reciprocal(MLOperand input) { throw new System.NotImplementedException(); }
+		public MLOperand Sin(MLOperand input) { throw new System.NotImplementedException(); }
+		public MLOperand Sqrt(MLOperand input) { throw new System.NotImplementedException(); }
+		public MLOperand Tan(MLOperand input) { throw new System.NotImplementedException(); }
+}
+
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class MLEluOptions
 {
 		public Number Alpha;
 }
 
+public partial class MLGraphBuilder
+{
+		public MLOperand Elu(MLOperand input, MLEluOptions options) { throw new System.NotImplementedException(); }
+		public MLActivation Elu(MLEluOptions options) { throw new System.NotImplementedException(); }
+}
+
+public partial class MLGraphBuilder
+{
+		public MLOperand Expand(MLOperand input, List<ulong> newShape) { throw new System.NotImplementedException(); }
+}
+
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class MLGatherOptions
 {
 		public ulong Axis;
+}
+
+public partial class MLGraphBuilder
+{
+		public MLOperand Gather(MLOperand input, MLOperand indices, MLGatherOptions options) { throw new System.NotImplementedException(); }
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -15309,6 +17505,11 @@ public partial class MLGemmOptions
 		public Number Beta;
 		public bool ATranspose;
 		public bool BTranspose;
+}
+
+public partial class MLGraphBuilder
+{
+		public MLOperand Gemm(MLOperand a, MLOperand b, MLGemmOptions options) { throw new System.NotImplementedException(); }
 }
 
 [To(ToAttribute.None)]
@@ -15344,6 +17545,11 @@ public partial class MLGruOptions
 		public List<MLActivation> Activations;
 }
 
+public partial class MLGraphBuilder
+{
+		public List<MLOperand> Gru(MLOperand input, MLOperand weight, MLOperand recurrentWeight, ulong steps, ulong hiddenSize, MLGruOptions options) { throw new System.NotImplementedException(); }
+}
+
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class MLGruCellOptions
 {
@@ -15354,11 +17560,28 @@ public partial class MLGruCellOptions
 		public List<MLActivation> Activations;
 }
 
+public partial class MLGraphBuilder
+{
+		public MLOperand GruCell(MLOperand input, MLOperand weight, MLOperand recurrentWeight, MLOperand hiddenState, ulong hiddenSize, MLGruCellOptions options) { throw new System.NotImplementedException(); }
+}
+
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class MLHardSigmoidOptions
 {
 		public Number Alpha;
 		public Number Beta;
+}
+
+public partial class MLGraphBuilder
+{
+		public MLOperand HardSigmoid(MLOperand input, MLHardSigmoidOptions options) { throw new System.NotImplementedException(); }
+		public MLActivation HardSigmoid(MLHardSigmoidOptions options) { throw new System.NotImplementedException(); }
+}
+
+public partial class MLGraphBuilder
+{
+		public MLOperand HardSwish(MLOperand input) { throw new System.NotImplementedException(); }
+		public MLActivation HardSwish() { throw new System.NotImplementedException(); }
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -15370,6 +17593,11 @@ public partial class MLInstanceNormalizationOptions
 		public MLInputOperandLayout Layout;
 }
 
+public partial class MLGraphBuilder
+{
+		public MLOperand InstanceNormalization(MLOperand input, MLInstanceNormalizationOptions options) { throw new System.NotImplementedException(); }
+}
+
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class MLLayerNormalizationOptions
 {
@@ -15379,10 +17607,21 @@ public partial class MLLayerNormalizationOptions
 		public Number Epsilon;
 }
 
+public partial class MLGraphBuilder
+{
+		public MLOperand LayerNormalization(MLOperand input, MLLayerNormalizationOptions options) { throw new System.NotImplementedException(); }
+}
+
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class MLLeakyReluOptions
 {
 		public Number Alpha;
+}
+
+public partial class MLGraphBuilder
+{
+		public MLOperand LeakyRelu(MLOperand input, MLLeakyReluOptions options) { throw new System.NotImplementedException(); }
+		public MLActivation LeakyRelu(MLLeakyReluOptions options) { throw new System.NotImplementedException(); }
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -15390,6 +17629,12 @@ public partial class MLLinearOptions
 {
 		public Number Alpha;
 		public Number Beta;
+}
+
+public partial class MLGraphBuilder
+{
+		public MLOperand Linear(MLOperand input, MLLinearOptions options) { throw new System.NotImplementedException(); }
+		public MLActivation Linear(MLLinearOptions options) { throw new System.NotImplementedException(); }
 }
 
 [To(ToAttribute.None)]
@@ -15415,6 +17660,11 @@ public partial class MLLstmOptions
 		public List<MLActivation> Activations;
 }
 
+public partial class MLGraphBuilder
+{
+		public List<MLOperand> Lstm(MLOperand input, MLOperand weight, MLOperand recurrentWeight, ulong steps, ulong hiddenSize, MLLstmOptions options) { throw new System.NotImplementedException(); }
+}
+
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class MLLstmCellOptions
 {
@@ -15423,6 +17673,16 @@ public partial class MLLstmCellOptions
 		public MLOperand PeepholeWeight;
 		public MLLstmWeightLayout Layout;
 		public List<MLActivation> Activations;
+}
+
+public partial class MLGraphBuilder
+{
+		public List<MLOperand> LstmCell(MLOperand input, MLOperand weight, MLOperand recurrentWeight, MLOperand hiddenState, MLOperand cellState, ulong hiddenSize, MLLstmCellOptions options) { throw new System.NotImplementedException(); }
+}
+
+public partial class MLGraphBuilder
+{
+		public MLOperand Matmul(MLOperand a, MLOperand b) { throw new System.NotImplementedException(); }
 }
 
 [To(ToAttribute.None)]
@@ -15443,6 +17703,11 @@ public partial class MLPadOptions
 {
 		public MLPaddingMode Mode;
 		public Number Value;
+}
+
+public partial class MLGraphBuilder
+{
+		public MLOperand Pad(MLOperand input, List<ulong> beginningPadding, List<ulong> endingPadding, MLPadOptions options) { throw new System.NotImplementedException(); }
 }
 
 [To(ToAttribute.None)]
@@ -15466,11 +17731,43 @@ public partial class MLPool2dOptions
 		public List<ulong> OutputSizes;
 }
 
+public partial class MLGraphBuilder
+{
+		public MLOperand AveragePool2d(MLOperand input, MLPool2dOptions options) { throw new System.NotImplementedException(); }
+		public MLOperand L2Pool2d(MLOperand input, MLPool2dOptions options) { throw new System.NotImplementedException(); }
+		public MLOperand MaxPool2d(MLOperand input, MLPool2dOptions options) { throw new System.NotImplementedException(); }
+}
+
+public partial class MLGraphBuilder
+{
+		public MLOperand Prelu(MLOperand input, MLOperand slope) { throw new System.NotImplementedException(); }
+}
+
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class MLReduceOptions
 {
 		public List<ulong> Axes;
 		public bool KeepDimensions;
+}
+
+public partial class MLGraphBuilder
+{
+		public MLOperand ReduceL1(MLOperand input, MLReduceOptions options) { throw new System.NotImplementedException(); }
+		public MLOperand ReduceL2(MLOperand input, MLReduceOptions options) { throw new System.NotImplementedException(); }
+		public MLOperand ReduceLogSum(MLOperand input, MLReduceOptions options) { throw new System.NotImplementedException(); }
+		public MLOperand ReduceLogSumExp(MLOperand input, MLReduceOptions options) { throw new System.NotImplementedException(); }
+		public MLOperand ReduceMax(MLOperand input, MLReduceOptions options) { throw new System.NotImplementedException(); }
+		public MLOperand ReduceMean(MLOperand input, MLReduceOptions options) { throw new System.NotImplementedException(); }
+		public MLOperand ReduceMin(MLOperand input, MLReduceOptions options) { throw new System.NotImplementedException(); }
+		public MLOperand ReduceProduct(MLOperand input, MLReduceOptions options) { throw new System.NotImplementedException(); }
+		public MLOperand ReduceSum(MLOperand input, MLReduceOptions options) { throw new System.NotImplementedException(); }
+		public MLOperand ReduceSumSquare(MLOperand input, MLReduceOptions options) { throw new System.NotImplementedException(); }
+}
+
+public partial class MLGraphBuilder
+{
+		public MLOperand Relu(MLOperand input) { throw new System.NotImplementedException(); }
+		public MLActivation Relu() { throw new System.NotImplementedException(); }
 }
 
 [To(ToAttribute.None)]
@@ -15491,10 +17788,49 @@ public partial class MLResample2dOptions
 		public List<ulong> Axes;
 }
 
+public partial class MLGraphBuilder
+{
+		public MLOperand Resample2d(MLOperand input, MLResample2dOptions options) { throw new System.NotImplementedException(); }
+}
+
+public partial class MLGraphBuilder
+{
+		public MLOperand Reshape(MLOperand input, List<ulong> newShape) { throw new System.NotImplementedException(); }
+}
+
+public partial class MLGraphBuilder
+{
+		public MLOperand Sigmoid(MLOperand input) { throw new System.NotImplementedException(); }
+		public MLActivation Sigmoid() { throw new System.NotImplementedException(); }
+}
+
+public partial class MLGraphBuilder
+{
+		public MLOperand Slice(MLOperand input, List<ulong> starts, List<ulong> sizes) { throw new System.NotImplementedException(); }
+}
+
+public partial class MLGraphBuilder
+{
+		public MLOperand Softmax(MLOperand input) { throw new System.NotImplementedException(); }
+		public MLActivation Softmax() { throw new System.NotImplementedException(); }
+}
+
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class MLSoftplusOptions
 {
 		public Number Steepness;
+}
+
+public partial class MLGraphBuilder
+{
+		public MLOperand Softplus(MLOperand input, MLSoftplusOptions options) { throw new System.NotImplementedException(); }
+		public MLActivation Softplus(MLSoftplusOptions options) { throw new System.NotImplementedException(); }
+}
+
+public partial class MLGraphBuilder
+{
+		public MLOperand Softsign(MLOperand input) { throw new System.NotImplementedException(); }
+		public MLActivation Softsign() { throw new System.NotImplementedException(); }
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -15503,10 +17839,26 @@ public partial class MLSplitOptions
 		public ulong Axis;
 }
 
+public partial class MLGraphBuilder
+{
+		public List<MLOperand> Split(MLOperand input, Union116 splits, MLSplitOptions options) { throw new System.NotImplementedException(); }
+}
+
+public partial class MLGraphBuilder
+{
+		public MLOperand Tanh(MLOperand input) { throw new System.NotImplementedException(); }
+		public MLActivation Tanh() { throw new System.NotImplementedException(); }
+}
+
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class MLTransposeOptions
 {
 		public List<ulong> Permutation;
+}
+
+public partial class MLGraphBuilder
+{
+		public MLOperand Transpose(MLOperand input, MLTransposeOptions options) { throw new System.NotImplementedException(); }
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -15516,6 +17868,32 @@ public partial class MLTriangularOptions
 		public long Diagonal;
 }
 
+public partial class MLGraphBuilder
+{
+		public MLOperand Triangular(MLOperand input, MLTriangularOptions options) { throw new System.NotImplementedException(); }
+}
+
+public partial class MLGraphBuilder
+{
+		public MLOperand Where(MLOperand condition, MLOperand input, MLOperand other) { throw new System.NotImplementedException(); }
+}
+
+
+///<include file='Utils/Docs/RTCRtpSender/RTCRtpSender.generated.xml' path='docs/RTCRtpSender/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class RTCRtpSender
+{
+	///<include file='Utils/Docs/RTCRtpSenderTransform/RTCRtpSenderTransform.generated.xml' path='docs/RTCRtpSenderTransform/*'/>
+	public RTCRtpTransform? Transform { get; set; }
+}
+
+///<include file='Utils/Docs/RTCRtpReceiver/RTCRtpReceiver.generated.xml' path='docs/RTCRtpReceiver/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class RTCRtpReceiver
+{
+	///<include file='Utils/Docs/RTCRtpReceiverTransform/RTCRtpReceiverTransform.generated.xml' path='docs/RTCRtpReceiverTransform/*'/>
+	public RTCRtpTransform? Transform { get; set; }
+}
 
 [To(ToAttribute.None)]
 public enum SFrameTransformRole
@@ -15535,13 +17913,14 @@ public partial class SFrameTransformOptions
 
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class SFrameTransform : EventTarget
+public partial class SFrameTransform : EventTarget, GenericTransformStream
 {
 		public SFrameTransform(SFrameTransformOptions options) { }
 		public Task<Undefined> SetEncryptionKey(Unsupported /*CryptoKey*/ key, CryptoKeyID keyID) { throw new System.NotImplementedException(); }
 		public EventHandler Onerror { get; set; }
 	public SFrameTransform() { }
 }
+
 
 [To(ToAttribute.None)]
 public enum SFrameTransformErrorEventType
@@ -15642,6 +18021,12 @@ public partial class RTCTransformEvent : Event
 	public RTCRtpScriptTransformer Transformer { get; }
 }
 
+///<include file='Utils/Docs/DedicatedWorkerGlobalScope/DedicatedWorkerGlobalScope.generated.xml' path='docs/DedicatedWorkerGlobalScope/*'/>
+public partial class DedicatedWorkerGlobalScope
+{
+		public EventHandler Onrtctransform { get; set; }
+}
+
 ///<include file='Utils/Docs/RTCRtpScriptTransformer/RTCRtpScriptTransformer.generated.xml' path='docs/RTCRtpScriptTransformer/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class RTCRtpScriptTransformer : EventTarget
@@ -15676,6 +18061,12 @@ public partial class KeyFrameRequestEvent : Event
 	public KeyFrameRequestEvent() { }
 }
 
+///<include file='Utils/Docs/RTCRtpSender/RTCRtpSender.generated.xml' path='docs/RTCRtpSender/*'/>
+public partial class RTCRtpSender
+{
+		public Task<Undefined> GenerateKeyFrame(List<string> rids) { throw new System.NotImplementedException(); }
+}
+
 [To(ToAttribute.None)]
 public enum RTCPriorityType
 {
@@ -15687,6 +18078,26 @@ public enum RTCPriorityType
 	Medium,
 	[Value("high")]
 	High,
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class RTCRtpEncodingParameters
+{
+		public RTCPriorityType Priority;
+		public RTCPriorityType NetworkPriority;
+}
+
+///<include file='Utils/Docs/RTCDataChannel/RTCDataChannel.generated.xml' path='docs/RTCDataChannel/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class RTCDataChannel
+{
+		public RTCPriorityType Priority { get; }
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class RTCDataChannelInit
+{
+		public RTCPriorityType Priority;
 }
 
 [To(ToAttribute.None)]
@@ -15703,7 +18114,7 @@ public enum BinaryType
 public partial class WebSocket : EventTarget
 {
 	///<include file='Utils/Docs/WebSocketWebSocket/WebSocketWebSocket.generated.xml' path='docs/WebSocketWebSocket/*'/>
-	public WebSocket(string url, Union112 protocols) { }
+	public WebSocket(string url, Union119 protocols) { }
 	///<include file='Utils/Docs/WebSocketUrl/WebSocketUrl.generated.xml' path='docs/WebSocketUrl/*'/>
 	public string Url { get; }
 		public const ushort CONNECTING = 0;
@@ -15727,7 +18138,7 @@ public partial class WebSocket : EventTarget
 	///<include file='Utils/Docs/WebSocketBinaryType/WebSocketBinaryType.generated.xml' path='docs/WebSocketBinaryType/*'/>
 	public BinaryType BinaryType { get; set; }
 	///<include file='Utils/Docs/WebSocketSend/WebSocketSend.generated.xml' path='docs/WebSocketSend/*'/>
-	public Undefined Send(Union113 data) { throw new System.NotImplementedException(); }
+	public Undefined Send(Union120 data) { throw new System.NotImplementedException(); }
 	public WebSocket() { }
 }
 
@@ -16090,6 +18501,14 @@ public enum XREnvironmentBlendMode
 	Additive,
 }
 
+///<include file='Utils/Docs/XRSession/XRSession.generated.xml' path='docs/XRSession/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class XRSession
+{
+	///<include file='Utils/Docs/XRSessionEnvironmentBlendMode/XRSessionEnvironmentBlendMode.generated.xml' path='docs/XRSessionEnvironmentBlendMode/*'/>
+	public XREnvironmentBlendMode EnvironmentBlendMode { get; }
+}
+
 [To(ToAttribute.None)]
 public enum XRInteractionMode
 {
@@ -16097,6 +18516,21 @@ public enum XRInteractionMode
 	ScreenSpace,
 	[Value("world-space")]
 	WorldSpace,
+}
+
+///<include file='Utils/Docs/XRSession/XRSession.generated.xml' path='docs/XRSession/*'/>
+public partial class XRSession
+{
+	///<include file='Utils/Docs/XRSessionInteractionMode/XRSessionInteractionMode.generated.xml' path='docs/XRSessionInteractionMode/*'/>
+	public XRInteractionMode InteractionMode { get; }
+}
+
+///<include file='Utils/Docs/XRView/XRView.generated.xml' path='docs/XRView/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class XRView
+{
+	///<include file='Utils/Docs/XRViewIsFirstPersonObserver/XRViewIsFirstPersonObserver.generated.xml' path='docs/XRViewIsFirstPersonObserver/*'/>
+	public bool IsFirstPersonObserver { get; }
 }
 
 [To(ToAttribute.None)]
@@ -16124,6 +18558,21 @@ public partial class XRDepthStateInit
 		public required List<XRDepthDataFormat> DataFormatPreference;
 }
 
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class XRSessionInit
+{
+		public XRDepthStateInit DepthSensing;
+}
+
+///<include file='Utils/Docs/XRSession/XRSession.generated.xml' path='docs/XRSession/*'/>
+public partial class XRSession
+{
+	///<include file='Utils/Docs/XRSessionDepthUsage/XRSessionDepthUsage.generated.xml' path='docs/XRSessionDepthUsage/*'/>
+	public XRDepthUsage DepthUsage { get; }
+	///<include file='Utils/Docs/XRSessionDepthDataFormat/XRSessionDepthDataFormat.generated.xml' path='docs/XRSessionDepthDataFormat/*'/>
+	public XRDepthDataFormat DepthDataFormat { get; }
+}
+
 ///<include file='Utils/Docs/XRDepthInformation/XRDepthInformation.generated.xml' path='docs/XRDepthInformation/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class XRDepthInformation
@@ -16148,12 +18597,35 @@ public partial class XRCPUDepthInformation : XRDepthInformation
 	public Number GetDepthInMeters(Number x, Number y) { throw new System.NotImplementedException(); }
 }
 
+///<include file='Utils/Docs/XRFrame/XRFrame.generated.xml' path='docs/XRFrame/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class XRFrame
+{
+	///<include file='Utils/Docs/XRFrameGetDepthInformation/XRFrameGetDepthInformation.generated.xml' path='docs/XRFrameGetDepthInformation/*'/>
+	public XRCPUDepthInformation? GetDepthInformation(XRView view) { throw new System.NotImplementedException(); }
+}
+
 ///<include file='Utils/Docs/XRWebGLDepthInformation/XRWebGLDepthInformation.generated.xml' path='docs/XRWebGLDepthInformation/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class XRWebGLDepthInformation : XRDepthInformation
 {
 	///<include file='Utils/Docs/XRWebGLDepthInformationTexture/XRWebGLDepthInformationTexture.generated.xml' path='docs/XRWebGLDepthInformationTexture/*'/>
 	public Unsupported /*WebGLTexture*/ Texture { get; }
+}
+
+///<include file='Utils/Docs/XRWebGLBinding/XRWebGLBinding.generated.xml' path='docs/XRWebGLBinding/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class XRWebGLBinding
+{
+	///<include file='Utils/Docs/XRWebGLBindingGetDepthInformation/XRWebGLBindingGetDepthInformation.generated.xml' path='docs/XRWebGLBindingGetDepthInformation/*'/>
+	public XRWebGLDepthInformation? GetDepthInformation(XRView view) { throw new System.NotImplementedException(); }
+}
+
+///<include file='Utils/Docs/Navigator/Navigator.generated.xml' path='docs/Navigator/*'/>
+public partial class Navigator
+{
+	///<include file='Utils/Docs/NavigatorXr/NavigatorXr.generated.xml' path='docs/NavigatorXr/*'/>
+	public XRSystem Xr { get; }
 }
 
 ///<include file='Utils/Docs/XRSystem/XRSystem.generated.xml' path='docs/XRSystem/*'/>
@@ -16178,6 +18650,12 @@ public enum XRSessionMode
 	ImmersiveAr,
 }
 
+public partial class XRSessionInit
+{
+		public List<string> RequiredFeatures;
+		public List<string> OptionalFeatures;
+}
+
 [To(ToAttribute.None)]
 public enum XRVisibilityState
 {
@@ -16187,6 +18665,42 @@ public enum XRVisibilityState
 	VisibleBlurred,
 	[Value("hidden")]
 	Hidden,
+}
+
+///<include file='Utils/Docs/XRSession/XRSession.generated.xml' path='docs/XRSession/*'/>
+public partial class XRSession : EventTarget
+{
+	///<include file='Utils/Docs/XRSessionVisibilityState/XRSessionVisibilityState.generated.xml' path='docs/XRSessionVisibilityState/*'/>
+	public XRVisibilityState VisibilityState { get; }
+		public Number? FrameRate { get; }
+		public System.Single? SupportedFrameRates { get; }
+	///<include file='Utils/Docs/XRSessionRenderState/XRSessionRenderState.generated.xml' path='docs/XRSessionRenderState/*'/>
+	public XRRenderState RenderState { get; }
+	///<include file='Utils/Docs/XRSessionInputSources/XRSessionInputSources.generated.xml' path='docs/XRSessionInputSources/*'/>
+	public XRInputSourceArray InputSources { get; }
+		public string[] EnabledFeatures { get; }
+		public bool IsSystemKeyboardSupported { get; }
+	///<include file='Utils/Docs/XRSessionUpdateRenderState/XRSessionUpdateRenderState.generated.xml' path='docs/XRSessionUpdateRenderState/*'/>
+	public Undefined UpdateRenderState(XRRenderStateInit state) { throw new System.NotImplementedException(); }
+		public Task<Undefined> UpdateTargetFrameRate(Number rate) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/XRSessionRequestReferenceSpace/XRSessionRequestReferenceSpace.generated.xml' path='docs/XRSessionRequestReferenceSpace/*'/>
+	public Task<XRReferenceSpace> RequestReferenceSpace(XRReferenceSpaceType type) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/XRSessionRequestAnimationFrame/XRSessionRequestAnimationFrame.generated.xml' path='docs/XRSessionRequestAnimationFrame/*'/>
+	public ulong RequestAnimationFrame(XRFrameRequestCallback callback) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/XRSessionCancelAnimationFrame/XRSessionCancelAnimationFrame.generated.xml' path='docs/XRSessionCancelAnimationFrame/*'/>
+	public Undefined CancelAnimationFrame(ulong handle) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/XRSessionEnd/XRSessionEnd.generated.xml' path='docs/XRSessionEnd/*'/>
+	public Task<Undefined> End() { throw new System.NotImplementedException(); }
+		public EventHandler Onend { get; set; }
+		public EventHandler Oninputsourceschange { get; set; }
+		public EventHandler Onselect { get; set; }
+		public EventHandler Onselectstart { get; set; }
+		public EventHandler Onselectend { get; set; }
+		public EventHandler Onsqueeze { get; set; }
+		public EventHandler Onsqueezestart { get; set; }
+		public EventHandler Onsqueezeend { get; set; }
+		public EventHandler Onvisibilitychange { get; set; }
+		public EventHandler Onframeratechange { get; set; }
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -16216,6 +18730,18 @@ public partial class XRRenderState
 [To(ToAttribute.FirstCharToLowerCase)]
 public struct XRFrameRequestCallback
 {
+}
+
+///<include file='Utils/Docs/XRFrame/XRFrame.generated.xml' path='docs/XRFrame/*'/>
+public partial class XRFrame
+{
+	///<include file='Utils/Docs/XRFrameSession/XRFrameSession.generated.xml' path='docs/XRFrameSession/*'/>
+	public XRSession Session { get; }
+		public Unsupported /*DOMHighResTimeStamp*/ PredictedDisplayTime { get; }
+	///<include file='Utils/Docs/XRFrameGetViewerPose/XRFrameGetViewerPose.generated.xml' path='docs/XRFrameGetViewerPose/*'/>
+	public XRViewerPose? GetViewerPose(XRReferenceSpace referenceSpace) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/XRFrameGetPose/XRFrameGetPose.generated.xml' path='docs/XRFrameGetPose/*'/>
+	public XRPose? GetPose(XRSpace space, XRSpace baseSpace) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/XRSpace/XRSpace.generated.xml' path='docs/XRSpace/*'/>
@@ -16265,6 +18791,21 @@ public enum XREye
 	Left,
 	[Value("right")]
 	Right,
+}
+
+///<include file='Utils/Docs/XRView/XRView.generated.xml' path='docs/XRView/*'/>
+public partial class XRView
+{
+	///<include file='Utils/Docs/XRViewEye/XRViewEye.generated.xml' path='docs/XRViewEye/*'/>
+	public XREye Eye { get; }
+	///<include file='Utils/Docs/XRViewProjectionMatrix/XRViewProjectionMatrix.generated.xml' path='docs/XRViewProjectionMatrix/*'/>
+	public System.Single ProjectionMatrix { get; }
+	///<include file='Utils/Docs/XRViewTransform/XRViewTransform.generated.xml' path='docs/XRViewTransform/*'/>
+	public XRRigidTransform Transform { get; }
+	///<include file='Utils/Docs/XRViewRecommendedViewportScale/XRViewRecommendedViewportScale.generated.xml' path='docs/XRViewRecommendedViewportScale/*'/>
+	public Number? RecommendedViewportScale { get; }
+	///<include file='Utils/Docs/XRViewRequestViewportScale/XRViewRequestViewportScale.generated.xml' path='docs/XRViewRequestViewportScale/*'/>
+	public Undefined RequestViewportScale(Number? scale) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/XRViewport/XRViewport.generated.xml' path='docs/XRViewport/*'/>
@@ -16413,6 +18954,18 @@ public partial class XRWebGLLayer : XRLayer
 	public XRWebGLLayer() { }
 }
 
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class WebGLContextAttributes
+{
+		public bool XrCompatible;
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial interface WebGLRenderingContextBase
+{
+		public Task<Undefined> MakeXRCompatible() { throw new System.NotImplementedException(); }
+}
+
 ///<include file='Utils/Docs/XRSessionEvent/XRSessionEvent.generated.xml' path='docs/XRSessionEvent/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class XRSessionEvent : Event
@@ -16513,6 +19066,23 @@ public partial class XRPermissionStatus
 		public string[] Granted { get; set; }
 }
 
+public partial interface GlobalEventHandlers
+{
+		public EventHandler Onbeforexrselect { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+}
+
+public partial class XRSessionInit
+{
+		public XRDOMOverlayInit? DomOverlay;
+}
+
+///<include file='Utils/Docs/XRSession/XRSession.generated.xml' path='docs/XRSession/*'/>
+public partial class XRSession
+{
+	///<include file='Utils/Docs/XRSessionDomOverlayState/XRSessionDomOverlayState.generated.xml' path='docs/XRSessionDomOverlayState/*'/>
+	public XRDOMOverlayState? DomOverlayState { get; }
+}
+
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class XRDOMOverlayInit
 {
@@ -16534,6 +19104,20 @@ public enum XRDOMOverlayType
 public partial class XRDOMOverlayState
 {
 		public XRDOMOverlayType Type;
+}
+
+///<include file='Utils/Docs/XRInputSource/XRInputSource.generated.xml' path='docs/XRInputSource/*'/>
+public partial class XRInputSource
+{
+	///<include file='Utils/Docs/XRInputSourceGamepad/XRInputSourceGamepad.generated.xml' path='docs/XRInputSourceGamepad/*'/>
+	public Unsupported /*Gamepad*/? Gamepad { get; }
+}
+
+///<include file='Utils/Docs/XRInputSource/XRInputSource.generated.xml' path='docs/XRInputSource/*'/>
+public partial class XRInputSource
+{
+	///<include file='Utils/Docs/XRInputSourceHand/XRInputSourceHand.generated.xml' path='docs/XRInputSourceHand/*'/>
+	public XRHand? Hand { get; }
 }
 
 [To(ToAttribute.None)]
@@ -16608,6 +19192,17 @@ public partial class XRJointSpace : XRSpace
 	public XRHandJoint JointName { get; }
 }
 
+///<include file='Utils/Docs/XRFrame/XRFrame.generated.xml' path='docs/XRFrame/*'/>
+public partial class XRFrame
+{
+	///<include file='Utils/Docs/XRFrameGetJointPose/XRFrameGetJointPose.generated.xml' path='docs/XRFrameGetJointPose/*'/>
+	public XRJointPose? GetJointPose(XRJointSpace joint, XRSpace baseSpace) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/XRFrameFillJointRadii/XRFrameFillJointRadii.generated.xml' path='docs/XRFrameFillJointRadii/*'/>
+	public bool FillJointRadii(List<XRJointSpace> jointSpaces, System.Single radii) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/XRFrameFillPoses/XRFrameFillPoses.generated.xml' path='docs/XRFrameFillPoses/*'/>
+	public bool FillPoses(List<XRSpace> spaces, XRSpace baseSpace, System.Single transforms) { throw new System.NotImplementedException(); }
+}
+
 ///<include file='Utils/Docs/XRJointPose/XRJointPose.generated.xml' path='docs/XRJointPose/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class XRJointPose : XRPose
@@ -16675,6 +19270,24 @@ public partial class XRTransientInputHitTestResult
 	public XRInputSource InputSource { get; }
 	///<include file='Utils/Docs/XRTransientInputHitTestResultResults/XRTransientInputHitTestResultResults.generated.xml' path='docs/XRTransientInputHitTestResultResults/*'/>
 	public XRHitTestResult[] Results { get; }
+}
+
+///<include file='Utils/Docs/XRSession/XRSession.generated.xml' path='docs/XRSession/*'/>
+public partial class XRSession
+{
+	///<include file='Utils/Docs/XRSessionRequestHitTestSource/XRSessionRequestHitTestSource.generated.xml' path='docs/XRSessionRequestHitTestSource/*'/>
+	public Task<XRHitTestSource> RequestHitTestSource(XRHitTestOptionsInit options) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/XRSessionRequestHitTestSourceForTransientInput/XRSessionRequestHitTestSourceForTransientInput.generated.xml' path='docs/XRSessionRequestHitTestSourceForTransientInput/*'/>
+	public Task<XRTransientInputHitTestSource> RequestHitTestSourceForTransientInput(XRTransientInputHitTestOptionsInit options) { throw new System.NotImplementedException(); }
+}
+
+///<include file='Utils/Docs/XRFrame/XRFrame.generated.xml' path='docs/XRFrame/*'/>
+public partial class XRFrame
+{
+	///<include file='Utils/Docs/XRFrameGetHitTestResults/XRFrameGetHitTestResults.generated.xml' path='docs/XRFrameGetHitTestResults/*'/>
+	public XRHitTestResult[] GetHitTestResults(XRHitTestSource hitTestSource) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/XRFrameGetHitTestResultsForTransientInput/XRFrameGetHitTestResultsForTransientInput.generated.xml' path='docs/XRFrameGetHitTestResultsForTransientInput/*'/>
+	public XRTransientInputHitTestResult[] GetHitTestResultsForTransientInput(XRTransientInputHitTestSource hitTestSource) { throw new System.NotImplementedException(); }
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -16925,6 +19538,31 @@ public partial class XRCubeLayerInit : XRLayerInit
 		public DOMPointReadOnly? Orientation;
 }
 
+///<include file='Utils/Docs/XRWebGLBinding/XRWebGLBinding.generated.xml' path='docs/XRWebGLBinding/*'/>
+public partial class XRWebGLBinding
+{
+	///<include file='Utils/Docs/XRWebGLBindingXRWebGLBinding/XRWebGLBindingXRWebGLBinding.generated.xml' path='docs/XRWebGLBindingXRWebGLBinding/*'/>
+	public XRWebGLBinding(XRSession session, XRWebGLRenderingContext context) { }
+	///<include file='Utils/Docs/XRWebGLBindingNativeProjectionScaleFactor/XRWebGLBindingNativeProjectionScaleFactor.generated.xml' path='docs/XRWebGLBindingNativeProjectionScaleFactor/*'/>
+	public Number NativeProjectionScaleFactor { get; }
+		public bool UsesDepthValues { get; }
+	///<include file='Utils/Docs/XRWebGLBindingCreateProjectionLayer/XRWebGLBindingCreateProjectionLayer.generated.xml' path='docs/XRWebGLBindingCreateProjectionLayer/*'/>
+	public XRProjectionLayer CreateProjectionLayer(XRProjectionLayerInit init) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/XRWebGLBindingCreateQuadLayer/XRWebGLBindingCreateQuadLayer.generated.xml' path='docs/XRWebGLBindingCreateQuadLayer/*'/>
+	public XRQuadLayer CreateQuadLayer(XRQuadLayerInit init) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/XRWebGLBindingCreateCylinderLayer/XRWebGLBindingCreateCylinderLayer.generated.xml' path='docs/XRWebGLBindingCreateCylinderLayer/*'/>
+	public XRCylinderLayer CreateCylinderLayer(XRCylinderLayerInit init) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/XRWebGLBindingCreateEquirectLayer/XRWebGLBindingCreateEquirectLayer.generated.xml' path='docs/XRWebGLBindingCreateEquirectLayer/*'/>
+	public XREquirectLayer CreateEquirectLayer(XREquirectLayerInit init) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/XRWebGLBindingCreateCubeLayer/XRWebGLBindingCreateCubeLayer.generated.xml' path='docs/XRWebGLBindingCreateCubeLayer/*'/>
+	public XRCubeLayer CreateCubeLayer(XRCubeLayerInit init) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/XRWebGLBindingGetSubImage/XRWebGLBindingGetSubImage.generated.xml' path='docs/XRWebGLBindingGetSubImage/*'/>
+	public XRWebGLSubImage GetSubImage(XRCompositionLayer layer, XRFrame frame, XREye eye) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/XRWebGLBindingGetViewSubImage/XRWebGLBindingGetViewSubImage.generated.xml' path='docs/XRWebGLBindingGetViewSubImage/*'/>
+	public XRWebGLSubImage GetViewSubImage(XRProjectionLayer layer, XRView view) { throw new System.NotImplementedException(); }
+	public XRWebGLBinding() { }
+}
+
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class XRMediaLayerInit
 {
@@ -16992,6 +19630,13 @@ public partial class XRLayerEventInit : EventInit
 		public required XRLayer Layer;
 }
 
+///<include file='Utils/Docs/XRRenderState/XRRenderState.generated.xml' path='docs/XRRenderState/*'/>
+public partial class XRRenderState
+{
+	///<include file='Utils/Docs/XRRenderStateLayers/XRRenderStateLayers.generated.xml' path='docs/XRRenderStateLayers/*'/>
+	public XRLayer[] Layers { get; }
+}
+
 ///<include file='Utils/Docs/XRLightProbe/XRLightProbe.generated.xml' path='docs/XRLightProbe/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class XRLightProbe : EventTarget
@@ -17028,6 +19673,46 @@ public partial class XRLightProbeInit
 		public XRReflectionFormat ReflectionFormat;
 }
 
+///<include file='Utils/Docs/XRSession/XRSession.generated.xml' path='docs/XRSession/*'/>
+public partial class XRSession
+{
+	///<include file='Utils/Docs/XRSessionRequestLightProbe/XRSessionRequestLightProbe.generated.xml' path='docs/XRSessionRequestLightProbe/*'/>
+	public Task<XRLightProbe> RequestLightProbe(XRLightProbeInit options) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/XRSessionPreferredReflectionFormat/XRSessionPreferredReflectionFormat.generated.xml' path='docs/XRSessionPreferredReflectionFormat/*'/>
+	public XRReflectionFormat PreferredReflectionFormat { get; }
+}
+
+///<include file='Utils/Docs/XRFrame/XRFrame.generated.xml' path='docs/XRFrame/*'/>
+public partial class XRFrame
+{
+	///<include file='Utils/Docs/XRFrameGetLightEstimate/XRFrameGetLightEstimate.generated.xml' path='docs/XRFrameGetLightEstimate/*'/>
+	public XRLightEstimate? GetLightEstimate(XRLightProbe lightProbe) { throw new System.NotImplementedException(); }
+}
+
+///<include file='Utils/Docs/XRWebGLBinding/XRWebGLBinding.generated.xml' path='docs/XRWebGLBinding/*'/>
+public partial class XRWebGLBinding
+{
+	///<include file='Utils/Docs/XRWebGLBindingGetReflectionCubeMap/XRWebGLBindingGetReflectionCubeMap.generated.xml' path='docs/XRWebGLBindingGetReflectionCubeMap/*'/>
+	public Unsupported /*WebGLTexture*/? GetReflectionCubeMap(XRLightProbe lightProbe) { throw new System.NotImplementedException(); }
+}
+
+///<include file='Utils/Docs/Screen/Screen.generated.xml' path='docs/Screen/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class Screen
+{
+	///<include file='Utils/Docs/ScreenIsExtended/ScreenIsExtended.generated.xml' path='docs/ScreenIsExtended/*'/>
+	public bool IsExtended { get; }
+		public EventHandler Onchange { get; set; }
+}
+
+///<include file='Utils/Docs/Window/Window.generated.xml' path='docs/Window/*'/>
+public partial class Window
+{
+	///<include file='Utils/Docs/WindowGetScreenDetails/WindowGetScreenDetails.generated.xml' path='docs/WindowGetScreenDetails/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public Task<ScreenDetails> GetScreenDetails() { throw new System.NotImplementedException(); }
+}
+
 ///<include file='Utils/Docs/ScreenDetails/ScreenDetails.generated.xml' path='docs/ScreenDetails/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class ScreenDetails : EventTarget
@@ -17062,6 +19747,11 @@ public partial class ScreenDetailed : Screen
 	public string Label { get; }
 }
 
+public partial class FullscreenOptions
+{
+		public ScreenDetailed Screen;
+}
+
 ///<include file='Utils/Docs/XMLHttpRequestEventTarget/XMLHttpRequestEventTarget.generated.xml' path='docs/XMLHttpRequestEventTarget/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class XMLHttpRequestEventTarget : EventTarget
@@ -17079,6 +19769,76 @@ public partial class XMLHttpRequestEventTarget : EventTarget
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class XMLHttpRequestUpload : XMLHttpRequestEventTarget
 {
+}
+
+///<include file='Utils/Docs/XMLHttpRequestResponseType/XMLHttpRequestResponseType.generated.xml' path='docs/XMLHttpRequestResponseType/*'/>
+[To(ToAttribute.None)]
+public enum XMLHttpRequestResponseType
+{
+	[Value("")]
+	Empty,
+	[Value("arraybuffer")]
+	Arraybuffer,
+	[Value("blob")]
+	Blob,
+	[Value("document")]
+	Document,
+	[Value("json")]
+	Json,
+	[Value("text")]
+	Text,
+}
+
+///<include file='Utils/Docs/XMLHttpRequest/XMLHttpRequest.generated.xml' path='docs/XMLHttpRequest/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class XMLHttpRequest : XMLHttpRequestEventTarget
+{
+	///<include file='Utils/Docs/XMLHttpRequestXMLHttpRequest/XMLHttpRequestXMLHttpRequest.generated.xml' path='docs/XMLHttpRequestXMLHttpRequest/*'/>
+	public XMLHttpRequest() { }
+		public EventHandler Onreadystatechange { get; set; }
+		public const ushort UNSENT = 0;
+		public const ushort OPENED = 1;
+		public const ushort HEADERS_RECEIVED = 2;
+		public const ushort LOADING = 3;
+		public const ushort DONE = 4;
+	///<include file='Utils/Docs/XMLHttpRequestReadyState/XMLHttpRequestReadyState.generated.xml' path='docs/XMLHttpRequestReadyState/*'/>
+	public ushort ReadyState { get; }
+	///<include file='Utils/Docs/XMLHttpRequestOpen/XMLHttpRequestOpen.generated.xml' path='docs/XMLHttpRequestOpen/*'/>
+	public Undefined Open(string method, string url) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/XMLHttpRequestOpen/XMLHttpRequestOpen.generated.xml' path='docs/XMLHttpRequestOpen/*'/>
+	public Undefined Open(string method, string url, bool async, string? username, string? password) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/XMLHttpRequestSetRequestHeader/XMLHttpRequestSetRequestHeader.generated.xml' path='docs/XMLHttpRequestSetRequestHeader/*'/>
+	public Undefined SetRequestHeader(string name, string value) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/XMLHttpRequestTimeout/XMLHttpRequestTimeout.generated.xml' path='docs/XMLHttpRequestTimeout/*'/>
+	public ulong Timeout { get; set; }
+	///<include file='Utils/Docs/XMLHttpRequestWithCredentials/XMLHttpRequestWithCredentials.generated.xml' path='docs/XMLHttpRequestWithCredentials/*'/>
+	public bool WithCredentials { get; set; }
+	///<include file='Utils/Docs/XMLHttpRequestUpload/XMLHttpRequestUpload.generated.xml' path='docs/XMLHttpRequestUpload/*'/>
+	public XMLHttpRequestUpload Upload { get; }
+	///<include file='Utils/Docs/XMLHttpRequestSend/XMLHttpRequestSend.generated.xml' path='docs/XMLHttpRequestSend/*'/>
+	public Undefined Send(Union123? body) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/XMLHttpRequestAbort/XMLHttpRequestAbort.generated.xml' path='docs/XMLHttpRequestAbort/*'/>
+	public Undefined Abort() { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/XMLHttpRequestResponseURL/XMLHttpRequestResponseURL.generated.xml' path='docs/XMLHttpRequestResponseURL/*'/>
+	public string ResponseURL { get; }
+	///<include file='Utils/Docs/XMLHttpRequestStatus/XMLHttpRequestStatus.generated.xml' path='docs/XMLHttpRequestStatus/*'/>
+	public ushort Status { get; }
+	///<include file='Utils/Docs/XMLHttpRequestStatusText/XMLHttpRequestStatusText.generated.xml' path='docs/XMLHttpRequestStatusText/*'/>
+	public string StatusText { get; }
+	///<include file='Utils/Docs/XMLHttpRequestGetResponseHeader/XMLHttpRequestGetResponseHeader.generated.xml' path='docs/XMLHttpRequestGetResponseHeader/*'/>
+	public string? GetResponseHeader(string name) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/XMLHttpRequestGetAllResponseHeaders/XMLHttpRequestGetAllResponseHeaders.generated.xml' path='docs/XMLHttpRequestGetAllResponseHeaders/*'/>
+	public string GetAllResponseHeaders() { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/XMLHttpRequestOverrideMimeType/XMLHttpRequestOverrideMimeType.generated.xml' path='docs/XMLHttpRequestOverrideMimeType/*'/>
+	public Undefined OverrideMimeType(string mime) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/XMLHttpRequestResponseType/XMLHttpRequestResponseType.generated.xml' path='docs/XMLHttpRequestResponseType/*'/>
+	public XMLHttpRequestResponseType ResponseType { get; set; }
+	///<include file='Utils/Docs/XMLHttpRequestResponse/XMLHttpRequestResponse.generated.xml' path='docs/XMLHttpRequestResponse/*'/>
+	public dynamic Response { get; }
+	///<include file='Utils/Docs/XMLHttpRequestResponseText/XMLHttpRequestResponseText.generated.xml' path='docs/XMLHttpRequestResponseText/*'/>
+	public string ResponseText { get; }
+	///<include file='Utils/Docs/XMLHttpRequestResponseXML/XMLHttpRequestResponseXML.generated.xml' path='docs/XMLHttpRequestResponseXML/*'/>
+	public Document? ResponseXML { get; }
 }
 
 
@@ -17131,2177 +19891,194 @@ public partial class ProgressEventInit : EventInit
 		public ulong Total;
 }
 
-///<include file='Utils/Docs/Navigator/Navigator.generated.xml' path='docs/Navigator/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class Navigator
-{
-	///<include file='Utils/Docs/NavigatorGetAutoplayPolicy/NavigatorGetAutoplayPolicy.generated.xml' path='docs/NavigatorGetAutoplayPolicy/*'/>
-	public AutoplayPolicy GetAutoplayPolicy(AutoplayPolicyMediaType type) { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/NavigatorGetAutoplayPolicy/NavigatorGetAutoplayPolicy.generated.xml' path='docs/NavigatorGetAutoplayPolicy/*'/>
-	public AutoplayPolicy GetAutoplayPolicy(HTMLMediaElement element) { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/NavigatorGetAutoplayPolicy/NavigatorGetAutoplayPolicy.generated.xml' path='docs/NavigatorGetAutoplayPolicy/*'/>
-	public AutoplayPolicy GetAutoplayPolicy(AudioContext context) { throw new System.NotImplementedException(); }
-}
-
-///<include file='Utils/Docs/Navigator/Navigator.generated.xml' path='docs/Navigator/*'/>
-public partial class Navigator
-{
-	///<include file='Utils/Docs/NavigatorClipboard/NavigatorClipboard.generated.xml' path='docs/NavigatorClipboard/*'/>
-	public Clipboard Clipboard { get; }
-}
-
-///<include file='Utils/Docs/Window/Window.generated.xml' path='docs/Window/*'/>
-[To(ToAttribute.Default)]
-public partial class Window
-{
-	///<include file='Utils/Docs/WindowOrientation/WindowOrientation.generated.xml' path='docs/WindowOrientation/*'/>
-	[To(ToAttribute.FirstCharToLowerCase)]
-	public Number Orientation { get; }
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public EventHandler Onorientationchange { get; set; }
-}
-
-///<include file='Utils/Docs/HTMLBodyElement/HTMLBodyElement.generated.xml' path='docs/HTMLBodyElement/*'/>
-[To(ToAttribute.Default)]
-public partial class HTMLBodyElement
-{
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public EventHandler Onorientationchange { get; set; }
-}
-
-///<include file='Utils/Docs/XMLHttpRequest/XMLHttpRequest.generated.xml' path='docs/XMLHttpRequest/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class XMLHttpRequest
-{
-	///<include file='Utils/Docs/XMLHttpRequestSend/XMLHttpRequestSend.generated.xml' path='docs/XMLHttpRequestSend/*'/>
-	public Undefined Send(LabeledObject lobj) { throw new System.NotImplementedException(); }
-}
-
-///<include file='Utils/Docs/Navigator/Navigator.generated.xml' path='docs/Navigator/*'/>
-public partial class Navigator
-{
-	///<include file='Utils/Docs/NavigatorContacts/NavigatorContacts.generated.xml' path='docs/NavigatorContacts/*'/>
-	public ContactsManager Contacts { get; }
-}
-
-///<include file='Utils/Docs/HTMLIFrameElement/HTMLIFrameElement.generated.xml' path='docs/HTMLIFrameElement/*'/>
-[To(ToAttribute.Default)]
-public partial class HTMLIFrameElement
-{
-	///<include file='Utils/Docs/HTMLIFrameElementCsp/HTMLIFrameElementCsp.generated.xml' path='docs/HTMLIFrameElementCsp/*'/>
-	[To(ToAttribute.FirstCharToLowerCase)]
-	public string Csp { get; set; }
-}
-
-///<include file='Utils/Docs/Navigator/Navigator.generated.xml' path='docs/Navigator/*'/>
-public partial class Navigator
-{
-	///<include file='Utils/Docs/NavigatorCredentials/NavigatorCredentials.generated.xml' path='docs/NavigatorCredentials/*'/>
-	public CredentialsContainer Credentials { get; }
-}
-
-public partial class CredentialRequestOptions
-{
-		public bool Password;
-}
-
-public partial class CredentialCreationOptions
-{
-		public PasswordCredentialInit Password;
-}
-
-public partial class CredentialRequestOptions
-{
-		public FederatedCredentialRequestOptions Federated;
-}
-
-public partial class CredentialCreationOptions
-{
-		public FederatedCredentialInit Federated;
-}
-
-///<include file='Utils/Docs/CSSRule/CSSRule.generated.xml' path='docs/CSSRule/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class CSSRule
-{
-		public const ushort KEYFRAMES_RULE = 7;
-		public const ushort KEYFRAME_RULE = 8;
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface GlobalEventHandlers
-{
-		public EventHandler Onanimationstart { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onanimationiteration { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onanimationend { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onanimationcancel { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-}
-
-///<include file='Utils/Docs/CSS/CSS.generated.xml' path='docs/CSS/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class CSS
-{
-		public Worklet AnimationWorklet { get; }
-}
-
-///<include file='Utils/Docs/AnimationEffect/AnimationEffect.generated.xml' path='docs/AnimationEffect/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class AnimationEffect
-{
-		public Number LocalTime { get; set; }
-}
-
-///<include file='Utils/Docs/CSSImportRule/CSSImportRule.generated.xml' path='docs/CSSImportRule/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class CSSImportRule
-{
-	///<include file='Utils/Docs/CSSImportRuleLayerName/CSSImportRuleLayerName.generated.xml' path='docs/CSSImportRuleLayerName/*'/>
-	public string? LayerName { get; }
-}
-
-///<include file='Utils/Docs/CSSRule/CSSRule.generated.xml' path='docs/CSSRule/*'/>
-public partial class CSSRule
-{
-		public const ushort SUPPORTS_RULE = 12;
-}
-
-///<include file='Utils/Docs/CSS/CSS.generated.xml' path='docs/CSS/*'/>
-public partial class CSS
-{
-	///<include file='Utils/Docs/CSSSupports/CSSSupports.generated.xml' path='docs/CSSSupports/*'/>
-	public bool Supports(string property, string value) { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/CSSSupports/CSSSupports.generated.xml' path='docs/CSSSupports/*'/>
-	public bool Supports(string conditionText) { throw new System.NotImplementedException(); }
-}
-
-///<include file='Utils/Docs/CSSRule/CSSRule.generated.xml' path='docs/CSSRule/*'/>
-public partial class CSSRule
-{
-		public const ushort COUNTER_STYLE_RULE = 11;
-}
-
-///<include file='Utils/Docs/CSS/CSS.generated.xml' path='docs/CSS/*'/>
-public partial class CSS
-{
-	///<include file='Utils/Docs/CSSHighlights/CSSHighlights.generated.xml' path='docs/CSSHighlights/*'/>
-	public HighlightRegistry Highlights { get; }
-}
-
-///<include file='Utils/Docs/FontFace/FontFace.generated.xml' path='docs/FontFace/*'/>
-public partial class FontFace
-{
-		public FontFaceFeatures Features { get; }
-		public FontFaceVariations Variations { get; }
-		public FontFacePalettes Palettes { get; }
-}
-
-///<include file='Utils/Docs/CSSRule/CSSRule.generated.xml' path='docs/CSSRule/*'/>
-public partial class CSSRule
-{
-		public const ushort FONT_FEATURE_VALUES_RULE = 14;
-}
-
-///<include file='Utils/Docs/CSS/CSS.generated.xml' path='docs/CSS/*'/>
-public partial class CSS
-{
-		public dynamic ElementSources { get; }
-}
-
-///<include file='Utils/Docs/CSS/CSS.generated.xml' path='docs/CSS/*'/>
-public partial class CSS
-{
-		public Worklet LayoutWorklet { get; }
-}
-
-///<include file='Utils/Docs/CSSStyleRule/CSSStyleRule.generated.xml' path='docs/CSSStyleRule/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class CSSStyleRule
-{
-		public CSSRuleList CssRules { get; }
-		public ulong InsertRule(string rule, ulong index) { throw new System.NotImplementedException(); }
-		public Undefined DeleteRule(ulong index) { throw new System.NotImplementedException(); }
-}
-
-///<include file='Utils/Docs/CSSStyleSheet/CSSStyleSheet.generated.xml' path='docs/CSSStyleSheet/*'/>
-public partial class CSSStyleSheet
-{
-	///<include file='Utils/Docs/CSSStyleSheetRules/CSSStyleSheetRules.generated.xml' path='docs/CSSStyleSheetRules/*'/>
-	public CSSRuleList Rules { get; }
-	///<include file='Utils/Docs/CSSStyleSheetAddRule/CSSStyleSheetAddRule.generated.xml' path='docs/CSSStyleSheetAddRule/*'/>
-	public long AddRule(string selector, string style, ulong index) { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/CSSStyleSheetRemoveRule/CSSStyleSheetRemoveRule.generated.xml' path='docs/CSSStyleSheetRemoveRule/*'/>
-	public Undefined RemoveRule(ulong index) { throw new System.NotImplementedException(); }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface DocumentOrShadowRoot
-{
-		public StyleSheetList StyleSheets { get { throw new System.NotImplementedException(); } }
-		public CSSStyleSheet[] AdoptedStyleSheets { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-}
-
-///<include file='Utils/Docs/Window/Window.generated.xml' path='docs/Window/*'/>
-public partial class Window
-{
-	///<include file='Utils/Docs/WindowGetComputedStyle/WindowGetComputedStyle.generated.xml' path='docs/WindowGetComputedStyle/*'/>
-	[To(ToAttribute.FirstCharToLowerCase)]
-	public CSSStyleDeclaration GetComputedStyle(Element elt, string? pseudoElt) { throw new System.NotImplementedException(); }
-}
-
-///<include file='Utils/Docs/CSS/CSS.generated.xml' path='docs/CSS/*'/>
-public partial class CSS
-{
-	///<include file='Utils/Docs/CSSPaintWorklet/CSSPaintWorklet.generated.xml' path='docs/CSSPaintWorklet/*'/>
-	public Worklet PaintWorklet { get; }
-}
-
-///<include file='Utils/Docs/CSS/CSS.generated.xml' path='docs/CSS/*'/>
-public partial class CSS
-{
-	///<include file='Utils/Docs/CSSRegisterProperty/CSSRegisterProperty.generated.xml' path='docs/CSSRegisterProperty/*'/>
-	public Undefined RegisterProperty(PropertyDefinition definition) { throw new System.NotImplementedException(); }
-}
-
-///<include file='Utils/Docs/Element/Element.generated.xml' path='docs/Element/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class Element
-{
-		public CSSPseudoElement? Pseudo(string type) { throw new System.NotImplementedException(); }
-}
-
-///<include file='Utils/Docs/Element/Element.generated.xml' path='docs/Element/*'/>
-public partial class Element
-{
-	///<include file='Utils/Docs/ElementPart/ElementPart.generated.xml' path='docs/ElementPart/*'/>
-	public DOMTokenList Part { get; }
-}
-
-///<include file='Utils/Docs/Window/Window.generated.xml' path='docs/Window/*'/>
-public partial class Window
-{
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public Undefined Navigate(SpatialNavigationDirection dir) { throw new System.NotImplementedException(); }
-}
-
-///<include file='Utils/Docs/Element/Element.generated.xml' path='docs/Element/*'/>
-public partial class Element
-{
-		public Node GetSpatialNavigationContainer() { throw new System.NotImplementedException(); }
-		public List<Node> FocusableAreas(FocusableAreasOption option) { throw new System.NotImplementedException(); }
-		public Node? SpatialNavigationSearch(SpatialNavigationDirection dir, SpatialNavigationSearchOptions options) { throw new System.NotImplementedException(); }
-}
-
-///<include file='Utils/Docs/Element/Element.generated.xml' path='docs/Element/*'/>
-public partial class Element
-{
-	///<include file='Utils/Docs/ElementComputedStyleMap/ElementComputedStyleMap.generated.xml' path='docs/ElementComputedStyleMap/*'/>
-	public StylePropertyMapReadOnly ComputedStyleMap() { throw new System.NotImplementedException(); }
-}
-
-///<include file='Utils/Docs/CSSStyleRule/CSSStyleRule.generated.xml' path='docs/CSSStyleRule/*'/>
-public partial class CSSStyleRule
-{
-	///<include file='Utils/Docs/CSSStyleRuleStyleMap/CSSStyleRuleStyleMap.generated.xml' path='docs/CSSStyleRuleStyleMap/*'/>
-	public StylePropertyMap StyleMap { get; }
-}
-
-public partial interface ElementCSSInlineStyle
-{
-		public StylePropertyMap AttributeStyleMap { get { throw new System.NotImplementedException(); } }
-}
-
-///<include file='Utils/Docs/CSS/CSS.generated.xml' path='docs/CSS/*'/>
-public partial class CSS
-{
-		public CSSUnitValue Number(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Percent(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Cap(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Ch(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Em(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Ex(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Ic(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Lh(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Rcap(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Rch(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Rem(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Rex(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Ric(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Rlh(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Vw(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Vh(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Vi(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Vb(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Vmin(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Vmax(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Svw(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Svh(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Svi(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Svb(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Svmin(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Svmax(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Lvw(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Lvh(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Lvi(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Lvb(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Lvmin(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Lvmax(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Dvw(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Dvh(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Dvi(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Dvb(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Dvmin(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Dvmax(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Cqw(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Cqh(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Cqi(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Cqb(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Cqmin(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Cqmax(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Cm(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Mm(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Q(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue In(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Pt(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Pc(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Px(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Deg(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Grad(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Rad(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Turn(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue S(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Ms(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Hz(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue KHz(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Dpi(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Dpcm(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Dppx(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Fr(Number value) { throw new System.NotImplementedException(); }
-}
-
-///<include file='Utils/Docs/Document/Document.generated.xml' path='docs/Document/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class Document
-{
-	///<include file='Utils/Docs/DocumentStartViewTransition/DocumentStartViewTransition.generated.xml' path='docs/DocumentStartViewTransition/*'/>
-	public ViewTransition StartViewTransition(UpdateCallback? updateCallback) { throw new System.NotImplementedException(); }
-}
-
-///<include file='Utils/Docs/Window/Window.generated.xml' path='docs/Window/*'/>
-public partial class Window
-{
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public EventHandler Ondeviceorientation { get; set; }
-}
-
-///<include file='Utils/Docs/Window/Window.generated.xml' path='docs/Window/*'/>
-public partial class Window
-{
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public EventHandler Ondeviceorientationabsolute { get; set; }
-}
-
-///<include file='Utils/Docs/Window/Window.generated.xml' path='docs/Window/*'/>
-public partial class Window
-{
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public EventHandler Ondevicemotion { get; set; }
-}
-
-///<include file='Utils/Docs/Window/Window.generated.xml' path='docs/Window/*'/>
-public partial class Window
-{
-	///<include file='Utils/Docs/WindowEvent/WindowEvent.generated.xml' path='docs/WindowEvent/*'/>
-	[To(ToAttribute.FirstCharToLowerCase)]
-	public Union117 Event { get; }
-}
-
-///<include file='Utils/Docs/Element/Element.generated.xml' path='docs/Element/*'/>
-public partial class Element
-{
-	///<include file='Utils/Docs/ElementInnerHTML/ElementInnerHTML.generated.xml' path='docs/ElementInnerHTML/*'/>
-	public string InnerHTML { get; set; }
-	///<include file='Utils/Docs/ElementOuterHTML/ElementOuterHTML.generated.xml' path='docs/ElementOuterHTML/*'/>
-	public string OuterHTML { get; set; }
-	///<include file='Utils/Docs/ElementInsertAdjacentHTML/ElementInsertAdjacentHTML.generated.xml' path='docs/ElementInsertAdjacentHTML/*'/>
-	public Undefined InsertAdjacentHTML(string position, string text) { throw new System.NotImplementedException(); }
-}
-
-///<include file='Utils/Docs/Range/Range.generated.xml' path='docs/Range/*'/>
-public partial class Range
-{
-	///<include file='Utils/Docs/RangeCreateContextualFragment/RangeCreateContextualFragment.generated.xml' path='docs/RangeCreateContextualFragment/*'/>
-	public DocumentFragment CreateContextualFragment(string fragment) { throw new System.NotImplementedException(); }
-}
-
-///<include file='Utils/Docs/Performance/Performance.generated.xml' path='docs/Performance/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class Performance
-{
-	///<include file='Utils/Docs/PerformanceEventCounts/PerformanceEventCounts.generated.xml' path='docs/PerformanceEventCounts/*'/>
-	public EventCounts EventCounts { get; }
-		public ulong InteractionCount { get; }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class PerformanceObserverInit
-{
-		public Unsupported /*DOMHighResTimeStamp*/ DurationThreshold;
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface WindowOrWorkerGlobalScope
-{
-		public Task<Response> Fetch(RequestInfo input, RequestInit init) { throw new System.NotImplementedException(); }
-}
-
-///<include file='Utils/Docs/StorageManager/StorageManager.generated.xml' path='docs/StorageManager/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class StorageManager
-{
-	///<include file='Utils/Docs/StorageManagerGetDirectory/StorageManagerGetDirectory.generated.xml' path='docs/StorageManagerGetDirectory/*'/>
-	public Task<FileSystemDirectoryHandle> GetDirectory() { throw new System.NotImplementedException(); }
-}
-
-///<include file='Utils/Docs/URL/URL.generated.xml' path='docs/URL/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class URL
-{
-	///<include file='Utils/Docs/URLCreateObjectURL/URLCreateObjectURL.generated.xml' path='docs/URLCreateObjectURL/*'/>
-	public static string CreateObjectURL(Union118 obj) { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/URLRevokeObjectURL/URLRevokeObjectURL.generated.xml' path='docs/URLRevokeObjectURL/*'/>
-	public static Undefined RevokeObjectURL(string url) { throw new System.NotImplementedException(); }
-}
-
-///<include file='Utils/Docs/Element/Element.generated.xml' path='docs/Element/*'/>
-public partial class Element
-{
-	///<include file='Utils/Docs/ElementRequestFullscreen/ElementRequestFullscreen.generated.xml' path='docs/ElementRequestFullscreen/*'/>
-	public Task<Undefined> RequestFullscreen(FullscreenOptions options) { throw new System.NotImplementedException(); }
-		public EventHandler Onfullscreenchange { get; set; }
-		public EventHandler Onfullscreenerror { get; set; }
-}
-
-///<include file='Utils/Docs/Document/Document.generated.xml' path='docs/Document/*'/>
-public partial class Document
-{
-	///<include file='Utils/Docs/DocumentFullscreenEnabled/DocumentFullscreenEnabled.generated.xml' path='docs/DocumentFullscreenEnabled/*'/>
-	public bool FullscreenEnabled { get; }
-	///<include file='Utils/Docs/DocumentFullscreen/DocumentFullscreen.generated.xml' path='docs/DocumentFullscreen/*'/>
-	public bool Fullscreen { get; }
-	///<include file='Utils/Docs/DocumentExitFullscreen/DocumentExitFullscreen.generated.xml' path='docs/DocumentExitFullscreen/*'/>
-	public Task<Undefined> ExitFullscreen() { throw new System.NotImplementedException(); }
-		public EventHandler Onfullscreenchange { get; set; }
-		public EventHandler Onfullscreenerror { get; set; }
-}
-
-public partial interface DocumentOrShadowRoot
-{
-		public Element? FullscreenElement { get { throw new System.NotImplementedException(); } }
-}
-
-///<include file='Utils/Docs/Document/Document.generated.xml' path='docs/Document/*'/>
-public partial class Document
-{
-		public static Document ParseHTMLUnsafe(Unsupported /*HTMLString*/ html) { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/DocumentLocation/DocumentLocation.generated.xml' path='docs/DocumentLocation/*'/>
-	public Location? Location { get; }
-	///<include file='Utils/Docs/DocumentDomain/DocumentDomain.generated.xml' path='docs/DocumentDomain/*'/>
-	public string Domain { get; set; }
-	///<include file='Utils/Docs/DocumentReferrer/DocumentReferrer.generated.xml' path='docs/DocumentReferrer/*'/>
-	public string Referrer { get; }
-	///<include file='Utils/Docs/DocumentCookie/DocumentCookie.generated.xml' path='docs/DocumentCookie/*'/>
-	public string Cookie { get; set; }
-	///<include file='Utils/Docs/DocumentLastModified/DocumentLastModified.generated.xml' path='docs/DocumentLastModified/*'/>
-	public string LastModified { get; }
-	///<include file='Utils/Docs/DocumentReadyState/DocumentReadyState.generated.xml' path='docs/DocumentReadyState/*'/>
-	public DocumentReadyState ReadyState { get; }
-	
-	///<include file='Utils/Docs/DocumentTitle/DocumentTitle.generated.xml' path='docs/DocumentTitle/*'/>
-	public string Title { get; set; }
-	///<include file='Utils/Docs/DocumentDir/DocumentDir.generated.xml' path='docs/DocumentDir/*'/>
-	public string Dir { get; set; }
-	///<include file='Utils/Docs/DocumentBody/DocumentBody.generated.xml' path='docs/DocumentBody/*'/>
-	public HTMLElement? Body { get; set; }
-	///<include file='Utils/Docs/DocumentHead/DocumentHead.generated.xml' path='docs/DocumentHead/*'/>
-	public HTMLHeadElement? Head { get; }
-	///<include file='Utils/Docs/DocumentImages/DocumentImages.generated.xml' path='docs/DocumentImages/*'/>
-	public HTMLCollection Images { get; }
-	///<include file='Utils/Docs/DocumentEmbeds/DocumentEmbeds.generated.xml' path='docs/DocumentEmbeds/*'/>
-	public HTMLCollection Embeds { get; }
-	///<include file='Utils/Docs/DocumentPlugins/DocumentPlugins.generated.xml' path='docs/DocumentPlugins/*'/>
-	public HTMLCollection Plugins { get; }
-	///<include file='Utils/Docs/DocumentLinks/DocumentLinks.generated.xml' path='docs/DocumentLinks/*'/>
-	public HTMLCollection Links { get; }
-	///<include file='Utils/Docs/DocumentForms/DocumentForms.generated.xml' path='docs/DocumentForms/*'/>
-	public HTMLCollection Forms { get; }
-	///<include file='Utils/Docs/DocumentScripts/DocumentScripts.generated.xml' path='docs/DocumentScripts/*'/>
-	public HTMLCollection Scripts { get; }
-	///<include file='Utils/Docs/DocumentGetElementsByName/DocumentGetElementsByName.generated.xml' path='docs/DocumentGetElementsByName/*'/>
-	public NodeList GetElementsByName(string elementName) { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/DocumentCurrentScript/DocumentCurrentScript.generated.xml' path='docs/DocumentCurrentScript/*'/>
-	public HTMLOrSVGScriptElement? CurrentScript { get; }
-	///<include file='Utils/Docs/DocumentOpen/DocumentOpen.generated.xml' path='docs/DocumentOpen/*'/>
-	public Document Open(string unused1, string unused2) { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/DocumentOpen/DocumentOpen.generated.xml' path='docs/DocumentOpen/*'/>
-	public WindowProxy? Open(string url, string name, string features) { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/DocumentClose/DocumentClose.generated.xml' path='docs/DocumentClose/*'/>
-	public Undefined Close() { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/DocumentWrite/DocumentWrite.generated.xml' path='docs/DocumentWrite/*'/>
-	public Undefined Write(params Unsupported /*HTMLString*/[] text) { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/DocumentWriteln/DocumentWriteln.generated.xml' path='docs/DocumentWriteln/*'/>
-	public Undefined Writeln(params Unsupported /*HTMLString*/[] text) { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/DocumentDefaultView/DocumentDefaultView.generated.xml' path='docs/DocumentDefaultView/*'/>
-	public WindowProxy? DefaultView { get; }
-	///<include file='Utils/Docs/DocumentHasFocus/DocumentHasFocus.generated.xml' path='docs/DocumentHasFocus/*'/>
-	public bool HasFocus() { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/DocumentDesignMode/DocumentDesignMode.generated.xml' path='docs/DocumentDesignMode/*'/>
-	public string DesignMode { get; set; }
-	///<include file='Utils/Docs/DocumentExecCommand/DocumentExecCommand.generated.xml' path='docs/DocumentExecCommand/*'/>
-	public bool ExecCommand(string commandId, bool showUI, string value) { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/DocumentQueryCommandEnabled/DocumentQueryCommandEnabled.generated.xml' path='docs/DocumentQueryCommandEnabled/*'/>
-	public bool QueryCommandEnabled(string commandId) { throw new System.NotImplementedException(); }
-		public bool QueryCommandIndeterm(string commandId) { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/DocumentQueryCommandState/DocumentQueryCommandState.generated.xml' path='docs/DocumentQueryCommandState/*'/>
-	public bool QueryCommandState(string commandId) { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/DocumentQueryCommandSupported/DocumentQueryCommandSupported.generated.xml' path='docs/DocumentQueryCommandSupported/*'/>
-	public bool QueryCommandSupported(string commandId) { throw new System.NotImplementedException(); }
-		public string QueryCommandValue(string commandId) { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/DocumentHidden/DocumentHidden.generated.xml' path='docs/DocumentHidden/*'/>
-	public bool Hidden { get; }
-	///<include file='Utils/Docs/DocumentVisibilityState/DocumentVisibilityState.generated.xml' path='docs/DocumentVisibilityState/*'/>
-	public DocumentVisibilityState VisibilityState { get; }
-		public EventHandler Onreadystatechange { get; set; }
-		public EventHandler Onvisibilitychange { get; set; }
-}
-
-public partial interface DocumentOrShadowRoot
-{
-		public Element? ActiveElement { get { throw new System.NotImplementedException(); } }
-}
-
-///<include file='Utils/Docs/Navigator/Navigator.generated.xml' path='docs/Navigator/*'/>
-public partial class Navigator
-{
-	///<include file='Utils/Docs/NavigatorUserActivation/NavigatorUserActivation.generated.xml' path='docs/NavigatorUserActivation/*'/>
-	public UserActivation UserActivation { get; }
-}
-
-///<include file='Utils/Docs/Element/Element.generated.xml' path='docs/Element/*'/>
-public partial class Element
-{
-		public Undefined SetHTMLUnsafe(Unsupported /*HTMLString*/ html) { throw new System.NotImplementedException(); }
-}
-
-///<include file='Utils/Docs/ShadowRoot/ShadowRoot.generated.xml' path='docs/ShadowRoot/*'/>
-public partial class ShadowRoot
-{
-		public Undefined SetHTMLUnsafe(Unsupported /*HTMLString*/ html) { throw new System.NotImplementedException(); }
-}
-
-public partial interface NavigatorID
-{
-		public bool TaintEnabled() { throw new System.NotImplementedException(); }
-		public string Oscpu { get { throw new System.NotImplementedException(); } }
-}
-
-///<include file='Utils/Docs/HTMLAnchorElement/HTMLAnchorElement.generated.xml' path='docs/HTMLAnchorElement/*'/>
-public partial class HTMLAnchorElement
-{
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string Coords { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string Charset { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string Name { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string Rev { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string Shape { get; set; }
-}
-
-///<include file='Utils/Docs/HTMLAreaElement/HTMLAreaElement.generated.xml' path='docs/HTMLAreaElement/*'/>
-public partial class HTMLAreaElement
-{
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public bool NoHref { get; set; }
-}
-
-///<include file='Utils/Docs/HTMLBodyElement/HTMLBodyElement.generated.xml' path='docs/HTMLBodyElement/*'/>
-public partial class HTMLBodyElement
-{
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string Text { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string Link { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string VLink { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string ALink { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string BgColor { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string Background { get; set; }
-}
-
-///<include file='Utils/Docs/HTMLBRElement/HTMLBRElement.generated.xml' path='docs/HTMLBRElement/*'/>
-public partial class HTMLBRElement
-{
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string Clear { get; set; }
-}
-
-///<include file='Utils/Docs/HTMLTableCaptionElement/HTMLTableCaptionElement.generated.xml' path='docs/HTMLTableCaptionElement/*'/>
-public partial class HTMLTableCaptionElement
-{
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string Align { get; set; }
-}
-
-///<include file='Utils/Docs/HTMLTableColElement/HTMLTableColElement.generated.xml' path='docs/HTMLTableColElement/*'/>
-public partial class HTMLTableColElement
-{
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string Align { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string Ch { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string ChOff { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string VAlign { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string Width { get; set; }
-}
-
-///<include file='Utils/Docs/HTMLDivElement/HTMLDivElement.generated.xml' path='docs/HTMLDivElement/*'/>
-public partial class HTMLDivElement
-{
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string Align { get; set; }
-}
-
-///<include file='Utils/Docs/HTMLDListElement/HTMLDListElement.generated.xml' path='docs/HTMLDListElement/*'/>
-public partial class HTMLDListElement
-{
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public bool Compact { get; set; }
-}
-
-///<include file='Utils/Docs/HTMLEmbedElement/HTMLEmbedElement.generated.xml' path='docs/HTMLEmbedElement/*'/>
-public partial class HTMLEmbedElement
-{
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string Align { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string Name { get; set; }
-}
-
-///<include file='Utils/Docs/HTMLHeadingElement/HTMLHeadingElement.generated.xml' path='docs/HTMLHeadingElement/*'/>
-public partial class HTMLHeadingElement
-{
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string Align { get; set; }
-}
-
-///<include file='Utils/Docs/HTMLHRElement/HTMLHRElement.generated.xml' path='docs/HTMLHRElement/*'/>
-public partial class HTMLHRElement
-{
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string Align { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string Color { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public bool NoShade { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string Size { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string Width { get; set; }
-}
-
-///<include file='Utils/Docs/HTMLHtmlElement/HTMLHtmlElement.generated.xml' path='docs/HTMLHtmlElement/*'/>
-public partial class HTMLHtmlElement
-{
-	///<include file='Utils/Docs/HTMLHtmlElementVersion/HTMLHtmlElementVersion.generated.xml' path='docs/HTMLHtmlElementVersion/*'/>
-	[To(ToAttribute.FirstCharToLowerCase)]
-	public string Version { get; set; }
-}
-
-///<include file='Utils/Docs/HTMLIFrameElement/HTMLIFrameElement.generated.xml' path='docs/HTMLIFrameElement/*'/>
-public partial class HTMLIFrameElement
-{
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string Align { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string Scrolling { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string FrameBorder { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string LongDesc { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string MarginHeight { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string MarginWidth { get; set; }
-}
-
-///<include file='Utils/Docs/HTMLImageElement/HTMLImageElement.generated.xml' path='docs/HTMLImageElement/*'/>
-public partial class HTMLImageElement
-{
-	///<include file='Utils/Docs/HTMLImageElementName/HTMLImageElementName.generated.xml' path='docs/HTMLImageElementName/*'/>
-	[To(ToAttribute.FirstCharToLowerCase)]
-	public string Name { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string Lowsrc { get; set; }
-	///<include file='Utils/Docs/HTMLImageElementAlign/HTMLImageElementAlign.generated.xml' path='docs/HTMLImageElementAlign/*'/>
-	[To(ToAttribute.FirstCharToLowerCase)]
-	public string Align { get; set; }
-	///<include file='Utils/Docs/HTMLImageElementHspace/HTMLImageElementHspace.generated.xml' path='docs/HTMLImageElementHspace/*'/>
-	[To(ToAttribute.FirstCharToLowerCase)]
-	public ulong Hspace { get; set; }
-	///<include file='Utils/Docs/HTMLImageElementVspace/HTMLImageElementVspace.generated.xml' path='docs/HTMLImageElementVspace/*'/>
-	[To(ToAttribute.FirstCharToLowerCase)]
-	public ulong Vspace { get; set; }
-	///<include file='Utils/Docs/HTMLImageElementLongDesc/HTMLImageElementLongDesc.generated.xml' path='docs/HTMLImageElementLongDesc/*'/>
-	[To(ToAttribute.FirstCharToLowerCase)]
-	public string LongDesc { get; set; }
-	///<include file='Utils/Docs/HTMLImageElementBorder/HTMLImageElementBorder.generated.xml' path='docs/HTMLImageElementBorder/*'/>
-	[To(ToAttribute.FirstCharToLowerCase)]
-	public string Border { get; set; }
-}
-
-///<include file='Utils/Docs/HTMLInputElement/HTMLInputElement.generated.xml' path='docs/HTMLInputElement/*'/>
-public partial class HTMLInputElement
-{
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string Align { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string UseMap { get; set; }
-}
-
-///<include file='Utils/Docs/HTMLLegendElement/HTMLLegendElement.generated.xml' path='docs/HTMLLegendElement/*'/>
-public partial class HTMLLegendElement
-{
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string Align { get; set; }
-}
-
-///<include file='Utils/Docs/HTMLLIElement/HTMLLIElement.generated.xml' path='docs/HTMLLIElement/*'/>
-public partial class HTMLLIElement
-{
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string Type { get; set; }
-}
-
-///<include file='Utils/Docs/HTMLLinkElement/HTMLLinkElement.generated.xml' path='docs/HTMLLinkElement/*'/>
-public partial class HTMLLinkElement
-{
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string Charset { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string Rev { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string Target { get; set; }
-}
-
-///<include file='Utils/Docs/HTMLMenuElement/HTMLMenuElement.generated.xml' path='docs/HTMLMenuElement/*'/>
-public partial class HTMLMenuElement
-{
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public bool Compact { get; set; }
-}
-
-///<include file='Utils/Docs/HTMLMetaElement/HTMLMetaElement.generated.xml' path='docs/HTMLMetaElement/*'/>
-public partial class HTMLMetaElement
-{
-	///<include file='Utils/Docs/HTMLMetaElementScheme/HTMLMetaElementScheme.generated.xml' path='docs/HTMLMetaElementScheme/*'/>
-	[To(ToAttribute.FirstCharToLowerCase)]
-	public string Scheme { get; set; }
-}
-
-///<include file='Utils/Docs/HTMLObjectElement/HTMLObjectElement.generated.xml' path='docs/HTMLObjectElement/*'/>
-public partial class HTMLObjectElement
-{
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string Align { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string Archive { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string Code { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public bool Declare { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public ulong Hspace { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string Standby { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public ulong Vspace { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string CodeBase { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string CodeType { get; set; }
-	///<include file='Utils/Docs/HTMLObjectElementUseMap/HTMLObjectElementUseMap.generated.xml' path='docs/HTMLObjectElementUseMap/*'/>
-	[To(ToAttribute.FirstCharToLowerCase)]
-	public string UseMap { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string Border { get; set; }
-}
-
-///<include file='Utils/Docs/HTMLOListElement/HTMLOListElement.generated.xml' path='docs/HTMLOListElement/*'/>
-public partial class HTMLOListElement
-{
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public bool Compact { get; set; }
-}
-
-///<include file='Utils/Docs/HTMLParagraphElement/HTMLParagraphElement.generated.xml' path='docs/HTMLParagraphElement/*'/>
-public partial class HTMLParagraphElement
-{
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string Align { get; set; }
-}
-
-///<include file='Utils/Docs/HTMLPreElement/HTMLPreElement.generated.xml' path='docs/HTMLPreElement/*'/>
-public partial class HTMLPreElement
-{
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public long Width { get; set; }
-}
-
-///<include file='Utils/Docs/HTMLStyleElement/HTMLStyleElement.generated.xml' path='docs/HTMLStyleElement/*'/>
-public partial class HTMLStyleElement
-{
-	///<include file='Utils/Docs/HTMLStyleElementType/HTMLStyleElementType.generated.xml' path='docs/HTMLStyleElementType/*'/>
-	[To(ToAttribute.FirstCharToLowerCase)]
-	public string Type { get; set; }
-}
-
-///<include file='Utils/Docs/HTMLScriptElement/HTMLScriptElement.generated.xml' path='docs/HTMLScriptElement/*'/>
-public partial class HTMLScriptElement
-{
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string Charset { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string Event { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string HtmlFor { get; set; }
-}
-
-///<include file='Utils/Docs/HTMLTableElement/HTMLTableElement.generated.xml' path='docs/HTMLTableElement/*'/>
-public partial class HTMLTableElement
-{
-	///<include file='Utils/Docs/HTMLTableElementAlign/HTMLTableElementAlign.generated.xml' path='docs/HTMLTableElementAlign/*'/>
-	[To(ToAttribute.FirstCharToLowerCase)]
-	public string Align { get; set; }
-	///<include file='Utils/Docs/HTMLTableElementBorder/HTMLTableElementBorder.generated.xml' path='docs/HTMLTableElementBorder/*'/>
-	[To(ToAttribute.FirstCharToLowerCase)]
-	public string Border { get; set; }
-	///<include file='Utils/Docs/HTMLTableElementFrame/HTMLTableElementFrame.generated.xml' path='docs/HTMLTableElementFrame/*'/>
-	[To(ToAttribute.FirstCharToLowerCase)]
-	public string Frame { get; set; }
-	///<include file='Utils/Docs/HTMLTableElementRules/HTMLTableElementRules.generated.xml' path='docs/HTMLTableElementRules/*'/>
-	[To(ToAttribute.FirstCharToLowerCase)]
-	public string Rules { get; set; }
-	///<include file='Utils/Docs/HTMLTableElementSummary/HTMLTableElementSummary.generated.xml' path='docs/HTMLTableElementSummary/*'/>
-	[To(ToAttribute.FirstCharToLowerCase)]
-	public string Summary { get; set; }
-	///<include file='Utils/Docs/HTMLTableElementWidth/HTMLTableElementWidth.generated.xml' path='docs/HTMLTableElementWidth/*'/>
-	[To(ToAttribute.FirstCharToLowerCase)]
-	public string Width { get; set; }
-	///<include file='Utils/Docs/HTMLTableElementBgColor/HTMLTableElementBgColor.generated.xml' path='docs/HTMLTableElementBgColor/*'/>
-	[To(ToAttribute.FirstCharToLowerCase)]
-	public string BgColor { get; set; }
-	///<include file='Utils/Docs/HTMLTableElementCellPadding/HTMLTableElementCellPadding.generated.xml' path='docs/HTMLTableElementCellPadding/*'/>
-	[To(ToAttribute.FirstCharToLowerCase)]
-	public string CellPadding { get; set; }
-	///<include file='Utils/Docs/HTMLTableElementCellSpacing/HTMLTableElementCellSpacing.generated.xml' path='docs/HTMLTableElementCellSpacing/*'/>
-	[To(ToAttribute.FirstCharToLowerCase)]
-	public string CellSpacing { get; set; }
-}
-
-///<include file='Utils/Docs/HTMLTableSectionElement/HTMLTableSectionElement.generated.xml' path='docs/HTMLTableSectionElement/*'/>
-public partial class HTMLTableSectionElement
-{
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string Align { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string Ch { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string ChOff { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string VAlign { get; set; }
-}
-
-///<include file='Utils/Docs/HTMLTableCellElement/HTMLTableCellElement.generated.xml' path='docs/HTMLTableCellElement/*'/>
-public partial class HTMLTableCellElement
-{
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string Align { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string Axis { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string Height { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string Width { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string Ch { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string ChOff { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public bool NoWrap { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string VAlign { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string BgColor { get; set; }
-}
-
-///<include file='Utils/Docs/HTMLTableRowElement/HTMLTableRowElement.generated.xml' path='docs/HTMLTableRowElement/*'/>
-public partial class HTMLTableRowElement
-{
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string Align { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string Ch { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string ChOff { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string VAlign { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string BgColor { get; set; }
-}
-
-///<include file='Utils/Docs/HTMLUListElement/HTMLUListElement.generated.xml' path='docs/HTMLUListElement/*'/>
-public partial class HTMLUListElement
-{
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public bool Compact { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public string Type { get; set; }
-}
-
-///<include file='Utils/Docs/Document/Document.generated.xml' path='docs/Document/*'/>
-public partial class Document
-{
-	///<include file='Utils/Docs/DocumentFgColor/DocumentFgColor.generated.xml' path='docs/DocumentFgColor/*'/>
-	public string FgColor { get; set; }
-	///<include file='Utils/Docs/DocumentLinkColor/DocumentLinkColor.generated.xml' path='docs/DocumentLinkColor/*'/>
-	public string LinkColor { get; set; }
-	///<include file='Utils/Docs/DocumentVlinkColor/DocumentVlinkColor.generated.xml' path='docs/DocumentVlinkColor/*'/>
-	public string VlinkColor { get; set; }
-	///<include file='Utils/Docs/DocumentAlinkColor/DocumentAlinkColor.generated.xml' path='docs/DocumentAlinkColor/*'/>
-	public string AlinkColor { get; set; }
-	///<include file='Utils/Docs/DocumentBgColor/DocumentBgColor.generated.xml' path='docs/DocumentBgColor/*'/>
-	public string BgColor { get; set; }
-	///<include file='Utils/Docs/DocumentAnchors/DocumentAnchors.generated.xml' path='docs/DocumentAnchors/*'/>
-	public HTMLCollection Anchors { get; }
-	///<include file='Utils/Docs/DocumentApplets/DocumentApplets.generated.xml' path='docs/DocumentApplets/*'/>
-	public HTMLCollection Applets { get; }
-	///<include file='Utils/Docs/DocumentClear/DocumentClear.generated.xml' path='docs/DocumentClear/*'/>
-	public Undefined Clear() { throw new System.NotImplementedException(); }
-		public Undefined CaptureEvents() { throw new System.NotImplementedException(); }
-		public Undefined ReleaseEvents() { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/DocumentAll/DocumentAll.generated.xml' path='docs/DocumentAll/*'/>
-	public HTMLAllCollection All { get; }
-}
-
-///<include file='Utils/Docs/Window/Window.generated.xml' path='docs/Window/*'/>
-public partial class Window
-{
-	///<include file='Utils/Docs/WindowCaptureEvents/WindowCaptureEvents.generated.xml' path='docs/WindowCaptureEvents/*'/>
-	[To(ToAttribute.FirstCharToLowerCase)]
-	public Undefined CaptureEvents() { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/WindowReleaseEvents/WindowReleaseEvents.generated.xml' path='docs/WindowReleaseEvents/*'/>
-	[To(ToAttribute.FirstCharToLowerCase)]
-	public Undefined ReleaseEvents() { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/WindowExternal/WindowExternal.generated.xml' path='docs/WindowExternal/*'/>
-	[To(ToAttribute.FirstCharToLowerCase)]
-	public External External { get; }
-}
-
-public partial interface WindowOrWorkerGlobalScope
-{
-		public IDBFactory IndexedDB { get { throw new System.NotImplementedException(); } }
-}
-
-///<include file='Utils/Docs/Element/Element.generated.xml' path='docs/Element/*'/>
-public partial class Element
-{
-		public DOMTokenList Uiactions { get; }
-}
-
-///<include file='Utils/Docs/Element/Element.generated.xml' path='docs/Element/*'/>
-public partial class Element
-{
-		public string Uitrigger { get; set; }
-}
-
-///<include file='Utils/Docs/Window/Window.generated.xml' path='docs/Window/*'/>
-public partial class Window
-{
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public Unsupported /*DOMstring*/? UserSetting(string key) { throw new System.NotImplementedException(); }
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public Undefined AddUserSettingListener(string key, UserSettingListener callback) { throw new System.NotImplementedException(); }
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public Undefined RemoveUserSettingListener(string key, UserSettingListener callback) { throw new System.NotImplementedException(); }
-}
-
-///<include file='Utils/Docs/Navigator/Navigator.generated.xml' path='docs/Navigator/*'/>
-public partial class Navigator
-{
-	///<include file='Utils/Docs/NavigatorMediaCapabilities/NavigatorMediaCapabilities.generated.xml' path='docs/NavigatorMediaCapabilities/*'/>
-	public MediaCapabilities MediaCapabilities { get; }
-}
-
-///<include file='Utils/Docs/WorkerNavigator/WorkerNavigator.generated.xml' path='docs/WorkerNavigator/*'/>
-public partial class WorkerNavigator
-{
-	///<include file='Utils/Docs/WorkerNavigatorMediaCapabilities/WorkerNavigatorMediaCapabilities.generated.xml' path='docs/WorkerNavigatorMediaCapabilities/*'/>
-	public MediaCapabilities MediaCapabilities { get; }
-}
-
-///<include file='Utils/Docs/Navigator/Navigator.generated.xml' path='docs/Navigator/*'/>
-public partial class Navigator
-{
-	///<include file='Utils/Docs/NavigatorMediaSession/NavigatorMediaSession.generated.xml' path='docs/NavigatorMediaSession/*'/>
-	public MediaSession MediaSession { get; }
-}
-
-///<include file='Utils/Docs/MediaTrackSupportedConstraints/MediaTrackSupportedConstraints.generated.xml' path='docs/MediaTrackSupportedConstraints/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class MediaTrackSupportedConstraints
-{
-		public bool WhiteBalanceMode;
-		public bool ExposureMode;
-		public bool FocusMode;
-		public bool PointsOfInterest;
-		public bool ExposureCompensation;
-		public bool ExposureTime;
-		public bool ColorTemperature;
-		public bool Iso;
-		public bool Brightness;
-		public bool Contrast;
-		public bool Pan;
-		public bool Saturation;
-		public bool Sharpness;
-		public bool FocusDistance;
-		public bool Tilt;
-		public bool Zoom;
-		public bool Torch;
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class MediaTrackCapabilities
-{
-		public List<string> WhiteBalanceMode;
-		public List<string> ExposureMode;
-		public List<string> FocusMode;
-		public MediaSettingsRange ExposureCompensation;
-		public MediaSettingsRange ExposureTime;
-		public MediaSettingsRange ColorTemperature;
-		public MediaSettingsRange Iso;
-		public MediaSettingsRange Brightness;
-		public MediaSettingsRange Contrast;
-		public MediaSettingsRange Saturation;
-		public MediaSettingsRange Sharpness;
-		public MediaSettingsRange FocusDistance;
-		public MediaSettingsRange Pan;
-		public MediaSettingsRange Tilt;
-		public MediaSettingsRange Zoom;
-		public List<bool> Torch;
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class MediaTrackConstraintSet
-{
-		public string WhiteBalanceMode;
-		public string ExposureMode;
-		public string FocusMode;
-		public ConstrainPoint2D PointsOfInterest;
-		public Unsupported /*ConstrainDouble*/ ExposureCompensation;
-		public Unsupported /*ConstrainDouble*/ ExposureTime;
-		public Unsupported /*ConstrainDouble*/ ColorTemperature;
-		public Unsupported /*ConstrainDouble*/ Iso;
-		public Unsupported /*ConstrainDouble*/ Brightness;
-		public Unsupported /*ConstrainDouble*/ Contrast;
-		public Unsupported /*ConstrainDouble*/ Saturation;
-		public Unsupported /*ConstrainDouble*/ Sharpness;
-		public Unsupported /*ConstrainDouble*/ FocusDistance;
-		public Union119 Pan;
-		public Union120 Tilt;
-		public Union121 Zoom;
-		public Unsupported /*ConstrainBoolean*/ Torch;
-}
-
-///<include file='Utils/Docs/MediaTrackSettings/MediaTrackSettings.generated.xml' path='docs/MediaTrackSettings/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class MediaTrackSettings
-{
-		public string WhiteBalanceMode;
-		public string ExposureMode;
-		public string FocusMode;
-		public List<Point2D> PointsOfInterest;
-		public Number ExposureCompensation;
-		public Number ExposureTime;
-		public Number ColorTemperature;
-		public Number Iso;
-		public Number Brightness;
-		public Number Contrast;
-		public Number Saturation;
-		public Number Sharpness;
-		public Number FocusDistance;
-		public Number Pan;
-		public Number Tilt;
-		public Number Zoom;
-		public bool Torch;
-}
-
-///<include file='Utils/Docs/Window/Window.generated.xml' path='docs/Window/*'/>
-public partial class Window
-{
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public Performance Performance { get; }
-}
-
-///<include file='Utils/Docs/ServiceWorkerRegistration/ServiceWorkerRegistration.generated.xml' path='docs/ServiceWorkerRegistration/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class ServiceWorkerRegistration
-{
-	///<include file='Utils/Docs/ServiceWorkerRegistrationShowNotification/ServiceWorkerRegistrationShowNotification.generated.xml' path='docs/ServiceWorkerRegistrationShowNotification/*'/>
-	public Task<Undefined> ShowNotification(string title, NotificationOptions options) { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/ServiceWorkerRegistrationGetNotifications/ServiceWorkerRegistrationGetNotifications.generated.xml' path='docs/ServiceWorkerRegistrationGetNotifications/*'/>
-	public Task<List<Notification>> GetNotifications(GetNotificationOptions filter) { throw new System.NotImplementedException(); }
-}
-
-///<include file='Utils/Docs/ServiceWorkerGlobalScope/ServiceWorkerGlobalScope.generated.xml' path='docs/ServiceWorkerGlobalScope/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class ServiceWorkerGlobalScope
-{
-		public EventHandler Onnotificationclick { get; set; }
-		public EventHandler Onnotificationclose { get; set; }
-}
-
-///<include file='Utils/Docs/Document/Document.generated.xml' path='docs/Document/*'/>
-public partial class Document
-{
-		public PermissionsPolicy PermissionsPolicy { get; }
-}
-
-///<include file='Utils/Docs/HTMLIFrameElement/HTMLIFrameElement.generated.xml' path='docs/HTMLIFrameElement/*'/>
-public partial class HTMLIFrameElement
-{
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public PermissionsPolicy PermissionsPolicy { get; }
-}
-
-///<include file='Utils/Docs/HTMLVideoElement/HTMLVideoElement.generated.xml' path='docs/HTMLVideoElement/*'/>
-public partial class HTMLVideoElement
-{
-	///<include file='Utils/Docs/HTMLVideoElementRequestPictureInPicture/HTMLVideoElementRequestPictureInPicture.generated.xml' path='docs/HTMLVideoElementRequestPictureInPicture/*'/>
-	[To(ToAttribute.FirstCharToLowerCase)]
-	public Task<PictureInPictureWindow> RequestPictureInPicture() { throw new System.NotImplementedException(); }
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public EventHandler Onenterpictureinpicture { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public EventHandler Onleavepictureinpicture { get; set; }
-	///<include file='Utils/Docs/HTMLVideoElementDisablePictureInPicture/HTMLVideoElementDisablePictureInPicture.generated.xml' path='docs/HTMLVideoElementDisablePictureInPicture/*'/>
-	[To(ToAttribute.FirstCharToLowerCase)]
-	public bool DisablePictureInPicture { get; set; }
-}
-
-///<include file='Utils/Docs/Document/Document.generated.xml' path='docs/Document/*'/>
-public partial class Document
-{
-	///<include file='Utils/Docs/DocumentPictureInPictureEnabled/DocumentPictureInPictureEnabled.generated.xml' path='docs/DocumentPictureInPictureEnabled/*'/>
-	public bool PictureInPictureEnabled { get; }
-	///<include file='Utils/Docs/DocumentExitPictureInPicture/DocumentExitPictureInPicture.generated.xml' path='docs/DocumentExitPictureInPicture/*'/>
-	public Task<Undefined> ExitPictureInPicture() { throw new System.NotImplementedException(); }
-}
-
-public partial interface DocumentOrShadowRoot
-{
-		public Element? PictureInPictureElement { get { throw new System.NotImplementedException(); } }
-}
-
-///<include file='Utils/Docs/AnimationTimeline/AnimationTimeline.generated.xml' path='docs/AnimationTimeline/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class AnimationTimeline
-{
-		public CSSNumericValue? GetCurrentTime(AnimationTimeOptions options) { throw new System.NotImplementedException(); }
-}
-
-///<include file='Utils/Docs/PaymentRequest/PaymentRequest.generated.xml' path='docs/PaymentRequest/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class PaymentRequest
-{
-		public static Task<bool> IsSecurePaymentConfirmationAvailable() { throw new System.NotImplementedException(); }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class AuthenticationExtensionsClientInputs
-{
-		public AuthenticationExtensionsPaymentInputs Payment;
-}
-
-///<include file='Utils/Docs/Navigator/Navigator.generated.xml' path='docs/Navigator/*'/>
-public partial class Navigator
-{
-	///<include file='Utils/Docs/NavigatorServiceWorker/NavigatorServiceWorker.generated.xml' path='docs/NavigatorServiceWorker/*'/>
-	public ServiceWorkerContainer ServiceWorker { get; }
-}
-
-///<include file='Utils/Docs/WorkerNavigator/WorkerNavigator.generated.xml' path='docs/WorkerNavigator/*'/>
-public partial class WorkerNavigator
-{
-	///<include file='Utils/Docs/WorkerNavigatorServiceWorker/WorkerNavigatorServiceWorker.generated.xml' path='docs/WorkerNavigatorServiceWorker/*'/>
-	public ServiceWorkerContainer ServiceWorker { get; }
-}
-
-public partial interface WindowOrWorkerGlobalScope
-{
-		public CacheStorage Caches { get { throw new System.NotImplementedException(); } }
-}
-
-///<include file='Utils/Docs/Document/Document.generated.xml' path='docs/Document/*'/>
-public partial class Document
-{
-	///<include file='Utils/Docs/DocumentCreateTouch/DocumentCreateTouch.generated.xml' path='docs/DocumentCreateTouch/*'/>
-	public Touch CreateTouch(WindowProxy view, EventTarget target, long identifier, long pageX, long pageY, long screenX, long screenY) { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/DocumentCreateTouchList/DocumentCreateTouchList.generated.xml' path='docs/DocumentCreateTouchList/*'/>
-	public TouchList CreateTouchList(params Touch[] touches) { throw new System.NotImplementedException(); }
-}
-
-///<include file='Utils/Docs/UIEvent/UIEvent.generated.xml' path='docs/UIEvent/*'/>
-public partial class UIEvent
-{
-	///<include file='Utils/Docs/UIEventInitUIEvent/UIEventInitUIEvent.generated.xml' path='docs/UIEventInitUIEvent/*'/>
-	public Undefined InitUIEvent(string typeArg, bool bubblesArg, bool cancelableArg, Window? viewArg, long detailArg) { throw new System.NotImplementedException(); }
-}
-
-///<include file='Utils/Docs/MouseEvent/MouseEvent.generated.xml' path='docs/MouseEvent/*'/>
-public partial class MouseEvent
-{
-	///<include file='Utils/Docs/MouseEventInitMouseEvent/MouseEventInitMouseEvent.generated.xml' path='docs/MouseEventInitMouseEvent/*'/>
-	public Undefined InitMouseEvent(string typeArg, bool bubblesArg, bool cancelableArg, Window? viewArg, long detailArg, long screenXArg, long screenYArg, long clientXArg, long clientYArg, bool ctrlKeyArg, bool altKeyArg, bool shiftKeyArg, bool metaKeyArg, Number buttonArg, EventTarget? relatedTargetArg) { throw new System.NotImplementedException(); }
-}
-
-///<include file='Utils/Docs/KeyboardEvent/KeyboardEvent.generated.xml' path='docs/KeyboardEvent/*'/>
-public partial class KeyboardEvent
-{
-	///<include file='Utils/Docs/KeyboardEventInitKeyboardEvent/KeyboardEventInitKeyboardEvent.generated.xml' path='docs/KeyboardEventInitKeyboardEvent/*'/>
-	public Undefined InitKeyboardEvent(string typeArg, bool bubblesArg, bool cancelableArg, Window? viewArg, string keyArg, ulong locationArg, bool ctrlKey, bool altKey, bool shiftKey, bool metaKey) { throw new System.NotImplementedException(); }
-}
-
-///<include file='Utils/Docs/CompositionEvent/CompositionEvent.generated.xml' path='docs/CompositionEvent/*'/>
-public partial class CompositionEvent
-{
-	///<include file='Utils/Docs/CompositionEventInitCompositionEvent/CompositionEventInitCompositionEvent.generated.xml' path='docs/CompositionEventInitCompositionEvent/*'/>
-	public Undefined InitCompositionEvent(string typeArg, bool bubblesArg, bool cancelableArg, WindowProxy? viewArg, string dataArg) { throw new System.NotImplementedException(); }
-}
-
-///<include file='Utils/Docs/UIEvent/UIEvent.generated.xml' path='docs/UIEvent/*'/>
-public partial class UIEvent
-{
-	///<include file='Utils/Docs/UIEventWhich/UIEventWhich.generated.xml' path='docs/UIEventWhich/*'/>
-	public ulong Which { get; }
-}
-
-public partial class UIEventInit
-{
-		public ulong Which;
-}
-
-///<include file='Utils/Docs/KeyboardEvent/KeyboardEvent.generated.xml' path='docs/KeyboardEvent/*'/>
-public partial class KeyboardEvent
-{
-	///<include file='Utils/Docs/KeyboardEventCharCode/KeyboardEventCharCode.generated.xml' path='docs/KeyboardEventCharCode/*'/>
-	public ulong CharCode { get; }
-	///<include file='Utils/Docs/KeyboardEventKeyCode/KeyboardEventKeyCode.generated.xml' path='docs/KeyboardEventKeyCode/*'/>
-	public ulong KeyCode { get; }
-}
-
-public partial class KeyboardEventInit
-{
-		public ulong CharCode;
-		public ulong KeyCode;
-}
-
-///<include file='Utils/Docs/AnimationTimeline/AnimationTimeline.generated.xml' path='docs/AnimationTimeline/*'/>
-public partial class AnimationTimeline
-{
-	///<include file='Utils/Docs/AnimationTimelineCurrentTime/AnimationTimelineCurrentTime.generated.xml' path='docs/AnimationTimelineCurrentTime/*'/>
-	public CSSNumberish? CurrentTime { get; }
-		public CSSNumberish? Duration { get; }
-		public Animation Play(AnimationEffect? effect) { throw new System.NotImplementedException(); }
-}
-
-///<include file='Utils/Docs/Animation/Animation.generated.xml' path='docs/Animation/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class Animation
-{
-	///<include file='Utils/Docs/AnimationStartTime/AnimationStartTime.generated.xml' path='docs/AnimationStartTime/*'/>
-	public CSSNumberish? StartTime { get; set; }
-	///<include file='Utils/Docs/AnimationCurrentTime/AnimationCurrentTime.generated.xml' path='docs/AnimationCurrentTime/*'/>
-	public CSSNumberish? CurrentTime { get; set; }
-}
-
-///<include file='Utils/Docs/AnimationEffect/AnimationEffect.generated.xml' path='docs/AnimationEffect/*'/>
-public partial class AnimationEffect
-{
-		public GroupEffect? Parent { get; }
-		public AnimationEffect? PreviousSibling { get; }
-		public AnimationEffect? NextSibling { get; }
-		public Undefined Before(params AnimationEffect[] effects) { throw new System.NotImplementedException(); }
-		public Undefined After(params AnimationEffect[] effects) { throw new System.NotImplementedException(); }
-		public Undefined Replace(params AnimationEffect[] effects) { throw new System.NotImplementedException(); }
-		public Undefined Remove() { throw new System.NotImplementedException(); }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class EffectTiming
-{
-		public Number Delay;
-		public Number EndDelay;
-		public Number PlaybackRate;
-		public Union122 Duration;
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class OptionalEffectTiming
-{
-		public Number PlaybackRate;
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class ComputedEffectTiming
-{
-		public CSSNumberish StartTime;
-		public CSSNumberish EndTime;
-		public CSSNumberish ActiveDuration;
-		public CSSNumberish? LocalTime;
-}
-
-///<include file='Utils/Docs/KeyframeEffect/KeyframeEffect.generated.xml' path='docs/KeyframeEffect/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class KeyframeEffect
-{
-	///<include file='Utils/Docs/KeyframeEffectIterationComposite/KeyframeEffectIterationComposite.generated.xml' path='docs/KeyframeEffectIterationComposite/*'/>
-	public IterationCompositeOperation IterationComposite { get; set; }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class KeyframeEffectOptions
-{
-		public IterationCompositeOperation IterationComposite;
-}
-
-public partial class WebAssembly
-{
-		public Task<Module> CompileStreaming(Task<Response> source) { throw new System.NotImplementedException(); }
-		public Task<WebAssemblyInstantiatedSource> InstantiateStreaming(Task<Response> source, object importObject) { throw new System.NotImplementedException(); }
-}
-
-public partial class CredentialCreationOptions
-{
-		public PublicKeyCredentialCreationOptions PublicKey;
-}
-
-public partial class CredentialRequestOptions
-{
-		public PublicKeyCredentialRequestOptions PublicKey;
-}
-
-///<include file='Utils/Docs/PublicKeyCredential/PublicKeyCredential.generated.xml' path='docs/PublicKeyCredential/*'/>
-public partial class PublicKeyCredential
-{
-	///<include file='Utils/Docs/PublicKeyCredentialIsUserVerifyingPlatformAuthenticatorAvail/PublicKeyCredentialIsUserVerifyingPlatformAuthenticatorAvail.generated.xml' path='docs/PublicKeyCredentialIsUserVerifyingPlatformAuthenticatorAvail/*'/>
-	public static Task<bool> IsUserVerifyingPlatformAuthenticatorAvailable() { throw new System.NotImplementedException(); }
-}
-
-public partial class AuthenticationExtensionsClientInputs
-{
-		public string Appid;
-}
-
-public partial class AuthenticationExtensionsClientOutputs
-{
-		public bool Appid;
-}
-
-public partial class AuthenticationExtensionsClientInputs
-{
-		public string TxAuthSimple;
-}
-
-public partial class AuthenticationExtensionsClientOutputs
-{
-		public string TxAuthSimple;
-}
-
-public partial class AuthenticationExtensionsClientInputs
-{
-		public txAuthGenericArg TxAuthGeneric;
-}
-
-public partial class AuthenticationExtensionsClientOutputs
-{
-		public byte[] TxAuthGeneric;
-}
-
-public partial class AuthenticationExtensionsClientInputs
-{
-		public AuthenticatorSelectionList AuthnSel;
-}
-
-public partial class AuthenticationExtensionsClientOutputs
-{
-		public bool AuthnSel;
-}
-
-public partial class AuthenticationExtensionsClientInputs
-{
-		public bool Exts;
-}
-
-public partial class AuthenticationExtensionsClientOutputs
-{
-		public AuthenticationExtensionsSupported Exts;
-}
-
-public partial class AuthenticationExtensionsClientInputs
-{
-		public bool Uvi;
-}
-
-public partial class AuthenticationExtensionsClientOutputs
-{
-		public byte[] Uvi;
-}
-
-public partial class AuthenticationExtensionsClientInputs
-{
-		public bool Loc;
-}
-
-public partial class AuthenticationExtensionsClientOutputs
-{
-		public Unsupported /*Coordinates*/ Loc;
-}
-
-public partial class AuthenticationExtensionsClientInputs
-{
-		public bool Uvm;
-}
-
-public partial class AuthenticationExtensionsClientOutputs
-{
-		public UvmEntries Uvm;
-}
-
-///<include file='Utils/Docs/GPUDevice/GPUDevice.generated.xml' path='docs/GPUDevice/*'/>
-public partial class GPUDevice
-{
-	///<include file='Utils/Docs/GPUDeviceLost/GPUDeviceLost.generated.xml' path='docs/GPUDeviceLost/*'/>
-	public Task<GPUDeviceLostInfo> Lost { get; }
-}
-
-///<include file='Utils/Docs/GPUDevice/GPUDevice.generated.xml' path='docs/GPUDevice/*'/>
-public partial class GPUDevice
-{
-	///<include file='Utils/Docs/GPUDevicePushErrorScope/GPUDevicePushErrorScope.generated.xml' path='docs/GPUDevicePushErrorScope/*'/>
-	public Undefined PushErrorScope(GPUErrorFilter filter) { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/GPUDevicePopErrorScope/GPUDevicePopErrorScope.generated.xml' path='docs/GPUDevicePopErrorScope/*'/>
-	public Task<GPUError?> PopErrorScope() { throw new System.NotImplementedException(); }
-}
-
-///<include file='Utils/Docs/GPUDevice/GPUDevice.generated.xml' path='docs/GPUDevice/*'/>
-public partial class GPUDevice
-{
-		public EventHandler Onuncapturederror { get; set; }
-}
-
-///<include file='Utils/Docs/Navigator/Navigator.generated.xml' path='docs/Navigator/*'/>
-public partial class Navigator
-{
-	///<include file='Utils/Docs/NavigatorRequestMIDIAccess/NavigatorRequestMIDIAccess.generated.xml' path='docs/NavigatorRequestMIDIAccess/*'/>
-	public Task<MIDIAccess> RequestMIDIAccess(MIDIOptions options) { throw new System.NotImplementedException(); }
-}
-
-public partial class MLGraphBuilder
-{
-		public MLOperand ArgMin(MLOperand input, MLArgMinMaxOptions options) { throw new System.NotImplementedException(); }
-		public MLOperand ArgMax(MLOperand input, MLArgMinMaxOptions options) { throw new System.NotImplementedException(); }
-}
-
-public partial class MLGraphBuilder
-{
-		public MLOperand BatchNormalization(MLOperand input, MLOperand mean, MLOperand variance, MLBatchNormalizationOptions options) { throw new System.NotImplementedException(); }
-}
-
-public partial class MLGraphBuilder
-{
-		public MLOperand Cast(MLOperand input, MLOperandDataType type) { throw new System.NotImplementedException(); }
-}
-
-public partial class MLGraphBuilder
-{
-		public MLOperand Clamp(MLOperand input, MLClampOptions options) { throw new System.NotImplementedException(); }
-		public MLActivation Clamp(MLClampOptions options) { throw new System.NotImplementedException(); }
-}
-
-public partial class MLGraphBuilder
-{
-		public MLOperand Concat(List<MLOperand> inputs, ulong axis) { throw new System.NotImplementedException(); }
-}
-
-public partial class MLGraphBuilder
-{
-		public MLOperand Conv2d(MLOperand input, MLOperand filter, MLConv2dOptions options) { throw new System.NotImplementedException(); }
-}
-
-public partial class MLGraphBuilder
-{
-		public MLOperand ConvTranspose2d(MLOperand input, MLOperand filter, MLConvTranspose2dOptions options) { throw new System.NotImplementedException(); }
-}
-
-public partial class MLGraphBuilder
-{
-		public MLOperand Add(MLOperand a, MLOperand b) { throw new System.NotImplementedException(); }
-		public MLOperand Sub(MLOperand a, MLOperand b) { throw new System.NotImplementedException(); }
-		public MLOperand Mul(MLOperand a, MLOperand b) { throw new System.NotImplementedException(); }
-		public MLOperand Div(MLOperand a, MLOperand b) { throw new System.NotImplementedException(); }
-		public MLOperand Max(MLOperand a, MLOperand b) { throw new System.NotImplementedException(); }
-		public MLOperand Min(MLOperand a, MLOperand b) { throw new System.NotImplementedException(); }
-		public MLOperand Pow(MLOperand a, MLOperand b) { throw new System.NotImplementedException(); }
-}
-
-public partial class MLGraphBuilder
-{
-		public MLOperand Equal(MLOperand a, MLOperand b) { throw new System.NotImplementedException(); }
-		public MLOperand Greater(MLOperand a, MLOperand b) { throw new System.NotImplementedException(); }
-		public MLOperand GreaterOrEqual(MLOperand a, MLOperand b) { throw new System.NotImplementedException(); }
-		public MLOperand Lesser(MLOperand a, MLOperand b) { throw new System.NotImplementedException(); }
-		public MLOperand LesserOrEqual(MLOperand a, MLOperand b) { throw new System.NotImplementedException(); }
-		public MLOperand Not(MLOperand a) { throw new System.NotImplementedException(); }
-}
-
-public partial class MLGraphBuilder
-{
-		public MLOperand Abs(MLOperand input) { throw new System.NotImplementedException(); }
-		public MLOperand Ceil(MLOperand input) { throw new System.NotImplementedException(); }
-		public MLOperand Cos(MLOperand input) { throw new System.NotImplementedException(); }
-		public MLOperand Erf(MLOperand input) { throw new System.NotImplementedException(); }
-		public MLOperand Exp(MLOperand input) { throw new System.NotImplementedException(); }
-		public MLOperand Floor(MLOperand input) { throw new System.NotImplementedException(); }
-		public MLOperand Identity(MLOperand input) { throw new System.NotImplementedException(); }
-		public MLOperand Log(MLOperand input) { throw new System.NotImplementedException(); }
-		public MLOperand Neg(MLOperand input) { throw new System.NotImplementedException(); }
-		public MLOperand Reciprocal(MLOperand input) { throw new System.NotImplementedException(); }
-		public MLOperand Sin(MLOperand input) { throw new System.NotImplementedException(); }
-		public MLOperand Sqrt(MLOperand input) { throw new System.NotImplementedException(); }
-		public MLOperand Tan(MLOperand input) { throw new System.NotImplementedException(); }
-}
-
-public partial class MLGraphBuilder
-{
-		public MLOperand Elu(MLOperand input, MLEluOptions options) { throw new System.NotImplementedException(); }
-		public MLActivation Elu(MLEluOptions options) { throw new System.NotImplementedException(); }
-}
-
-public partial class MLGraphBuilder
-{
-		public MLOperand Expand(MLOperand input, List<ulong> newShape) { throw new System.NotImplementedException(); }
-}
-
-public partial class MLGraphBuilder
-{
-		public MLOperand Gather(MLOperand input, MLOperand indices, MLGatherOptions options) { throw new System.NotImplementedException(); }
-}
-
-public partial class MLGraphBuilder
-{
-		public MLOperand Gemm(MLOperand a, MLOperand b, MLGemmOptions options) { throw new System.NotImplementedException(); }
-}
-
-public partial class MLGraphBuilder
-{
-		public List<MLOperand> Gru(MLOperand input, MLOperand weight, MLOperand recurrentWeight, ulong steps, ulong hiddenSize, MLGruOptions options) { throw new System.NotImplementedException(); }
-}
-
-public partial class MLGraphBuilder
-{
-		public MLOperand GruCell(MLOperand input, MLOperand weight, MLOperand recurrentWeight, MLOperand hiddenState, ulong hiddenSize, MLGruCellOptions options) { throw new System.NotImplementedException(); }
-}
-
-public partial class MLGraphBuilder
-{
-		public MLOperand HardSigmoid(MLOperand input, MLHardSigmoidOptions options) { throw new System.NotImplementedException(); }
-		public MLActivation HardSigmoid(MLHardSigmoidOptions options) { throw new System.NotImplementedException(); }
-}
-
-public partial class MLGraphBuilder
-{
-		public MLOperand HardSwish(MLOperand input) { throw new System.NotImplementedException(); }
-		public MLActivation HardSwish() { throw new System.NotImplementedException(); }
-}
-
-public partial class MLGraphBuilder
-{
-		public MLOperand InstanceNormalization(MLOperand input, MLInstanceNormalizationOptions options) { throw new System.NotImplementedException(); }
-}
-
-public partial class MLGraphBuilder
-{
-		public MLOperand LayerNormalization(MLOperand input, MLLayerNormalizationOptions options) { throw new System.NotImplementedException(); }
-}
-
-public partial class MLGraphBuilder
-{
-		public MLOperand LeakyRelu(MLOperand input, MLLeakyReluOptions options) { throw new System.NotImplementedException(); }
-		public MLActivation LeakyRelu(MLLeakyReluOptions options) { throw new System.NotImplementedException(); }
-}
-
-public partial class MLGraphBuilder
-{
-		public MLOperand Linear(MLOperand input, MLLinearOptions options) { throw new System.NotImplementedException(); }
-		public MLActivation Linear(MLLinearOptions options) { throw new System.NotImplementedException(); }
-}
-
-public partial class MLGraphBuilder
-{
-		public List<MLOperand> Lstm(MLOperand input, MLOperand weight, MLOperand recurrentWeight, ulong steps, ulong hiddenSize, MLLstmOptions options) { throw new System.NotImplementedException(); }
-}
-
-public partial class MLGraphBuilder
-{
-		public List<MLOperand> LstmCell(MLOperand input, MLOperand weight, MLOperand recurrentWeight, MLOperand hiddenState, MLOperand cellState, ulong hiddenSize, MLLstmCellOptions options) { throw new System.NotImplementedException(); }
-}
-
-public partial class MLGraphBuilder
-{
-		public MLOperand Matmul(MLOperand a, MLOperand b) { throw new System.NotImplementedException(); }
-}
-
-public partial class MLGraphBuilder
-{
-		public MLOperand Pad(MLOperand input, List<ulong> beginningPadding, List<ulong> endingPadding, MLPadOptions options) { throw new System.NotImplementedException(); }
-}
-
-public partial class MLGraphBuilder
-{
-		public MLOperand AveragePool2d(MLOperand input, MLPool2dOptions options) { throw new System.NotImplementedException(); }
-		public MLOperand L2Pool2d(MLOperand input, MLPool2dOptions options) { throw new System.NotImplementedException(); }
-		public MLOperand MaxPool2d(MLOperand input, MLPool2dOptions options) { throw new System.NotImplementedException(); }
-}
-
-public partial class MLGraphBuilder
-{
-		public MLOperand Prelu(MLOperand input, MLOperand slope) { throw new System.NotImplementedException(); }
-}
-
-public partial class MLGraphBuilder
-{
-		public MLOperand ReduceL1(MLOperand input, MLReduceOptions options) { throw new System.NotImplementedException(); }
-		public MLOperand ReduceL2(MLOperand input, MLReduceOptions options) { throw new System.NotImplementedException(); }
-		public MLOperand ReduceLogSum(MLOperand input, MLReduceOptions options) { throw new System.NotImplementedException(); }
-		public MLOperand ReduceLogSumExp(MLOperand input, MLReduceOptions options) { throw new System.NotImplementedException(); }
-		public MLOperand ReduceMax(MLOperand input, MLReduceOptions options) { throw new System.NotImplementedException(); }
-		public MLOperand ReduceMean(MLOperand input, MLReduceOptions options) { throw new System.NotImplementedException(); }
-		public MLOperand ReduceMin(MLOperand input, MLReduceOptions options) { throw new System.NotImplementedException(); }
-		public MLOperand ReduceProduct(MLOperand input, MLReduceOptions options) { throw new System.NotImplementedException(); }
-		public MLOperand ReduceSum(MLOperand input, MLReduceOptions options) { throw new System.NotImplementedException(); }
-		public MLOperand ReduceSumSquare(MLOperand input, MLReduceOptions options) { throw new System.NotImplementedException(); }
-}
-
-public partial class MLGraphBuilder
-{
-		public MLOperand Relu(MLOperand input) { throw new System.NotImplementedException(); }
-		public MLActivation Relu() { throw new System.NotImplementedException(); }
-}
-
-public partial class MLGraphBuilder
-{
-		public MLOperand Resample2d(MLOperand input, MLResample2dOptions options) { throw new System.NotImplementedException(); }
-}
-
-public partial class MLGraphBuilder
-{
-		public MLOperand Reshape(MLOperand input, List<ulong> newShape) { throw new System.NotImplementedException(); }
-}
-
-public partial class MLGraphBuilder
-{
-		public MLOperand Sigmoid(MLOperand input) { throw new System.NotImplementedException(); }
-		public MLActivation Sigmoid() { throw new System.NotImplementedException(); }
-}
-
-public partial class MLGraphBuilder
-{
-		public MLOperand Slice(MLOperand input, List<ulong> starts, List<ulong> sizes) { throw new System.NotImplementedException(); }
-}
-
-public partial class MLGraphBuilder
-{
-		public MLOperand Softmax(MLOperand input) { throw new System.NotImplementedException(); }
-		public MLActivation Softmax() { throw new System.NotImplementedException(); }
-}
-
-public partial class MLGraphBuilder
-{
-		public MLOperand Softplus(MLOperand input, MLSoftplusOptions options) { throw new System.NotImplementedException(); }
-		public MLActivation Softplus(MLSoftplusOptions options) { throw new System.NotImplementedException(); }
-}
-
-public partial class MLGraphBuilder
-{
-		public MLOperand Softsign(MLOperand input) { throw new System.NotImplementedException(); }
-		public MLActivation Softsign() { throw new System.NotImplementedException(); }
-}
-
-public partial class MLGraphBuilder
-{
-		public List<MLOperand> Split(MLOperand input, Union123 splits, MLSplitOptions options) { throw new System.NotImplementedException(); }
-}
-
-public partial class MLGraphBuilder
-{
-		public MLOperand Tanh(MLOperand input) { throw new System.NotImplementedException(); }
-		public MLActivation Tanh() { throw new System.NotImplementedException(); }
-}
-
-public partial class MLGraphBuilder
-{
-		public MLOperand Transpose(MLOperand input, MLTransposeOptions options) { throw new System.NotImplementedException(); }
-}
-
-public partial class MLGraphBuilder
-{
-		public MLOperand Triangular(MLOperand input, MLTriangularOptions options) { throw new System.NotImplementedException(); }
-}
-
-public partial class MLGraphBuilder
-{
-		public MLOperand Where(MLOperand condition, MLOperand input, MLOperand other) { throw new System.NotImplementedException(); }
-}
-
-///<include file='Utils/Docs/RTCRtpSender/RTCRtpSender.generated.xml' path='docs/RTCRtpSender/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class RTCRtpSender
-{
-	///<include file='Utils/Docs/RTCRtpSenderTransform/RTCRtpSenderTransform.generated.xml' path='docs/RTCRtpSenderTransform/*'/>
-	public RTCRtpTransform? Transform { get; set; }
-}
-
-///<include file='Utils/Docs/RTCRtpReceiver/RTCRtpReceiver.generated.xml' path='docs/RTCRtpReceiver/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class RTCRtpReceiver
-{
-	///<include file='Utils/Docs/RTCRtpReceiverTransform/RTCRtpReceiverTransform.generated.xml' path='docs/RTCRtpReceiverTransform/*'/>
-	public RTCRtpTransform? Transform { get; set; }
-}
-
-///<include file='Utils/Docs/DedicatedWorkerGlobalScope/DedicatedWorkerGlobalScope.generated.xml' path='docs/DedicatedWorkerGlobalScope/*'/>
-public partial class DedicatedWorkerGlobalScope
-{
-		public EventHandler Onrtctransform { get; set; }
-}
-
-///<include file='Utils/Docs/RTCRtpSender/RTCRtpSender.generated.xml' path='docs/RTCRtpSender/*'/>
-public partial class RTCRtpSender
-{
-		public Task<Undefined> GenerateKeyFrame(List<string> rids) { throw new System.NotImplementedException(); }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class RTCRtpEncodingParameters
-{
-		public RTCPriorityType Priority;
-		public RTCPriorityType NetworkPriority;
-}
-
-///<include file='Utils/Docs/RTCDataChannel/RTCDataChannel.generated.xml' path='docs/RTCDataChannel/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class RTCDataChannel
-{
-		public RTCPriorityType Priority { get; }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class RTCDataChannelInit
-{
-		public RTCPriorityType Priority;
-}
-
-///<include file='Utils/Docs/XRSession/XRSession.generated.xml' path='docs/XRSession/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class XRSession
-{
-	///<include file='Utils/Docs/XRSessionEnvironmentBlendMode/XRSessionEnvironmentBlendMode.generated.xml' path='docs/XRSessionEnvironmentBlendMode/*'/>
-	public XREnvironmentBlendMode EnvironmentBlendMode { get; }
-}
-
-///<include file='Utils/Docs/XRSession/XRSession.generated.xml' path='docs/XRSession/*'/>
-public partial class XRSession
-{
-	///<include file='Utils/Docs/XRSessionInteractionMode/XRSessionInteractionMode.generated.xml' path='docs/XRSessionInteractionMode/*'/>
-	public XRInteractionMode InteractionMode { get; }
-}
-
-///<include file='Utils/Docs/XRView/XRView.generated.xml' path='docs/XRView/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class XRView
-{
-	///<include file='Utils/Docs/XRViewIsFirstPersonObserver/XRViewIsFirstPersonObserver.generated.xml' path='docs/XRViewIsFirstPersonObserver/*'/>
-	public bool IsFirstPersonObserver { get; }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class XRSessionInit
-{
-		public XRDepthStateInit DepthSensing;
-}
-
-///<include file='Utils/Docs/XRSession/XRSession.generated.xml' path='docs/XRSession/*'/>
-public partial class XRSession
-{
-	///<include file='Utils/Docs/XRSessionDepthUsage/XRSessionDepthUsage.generated.xml' path='docs/XRSessionDepthUsage/*'/>
-	public XRDepthUsage DepthUsage { get; }
-	///<include file='Utils/Docs/XRSessionDepthDataFormat/XRSessionDepthDataFormat.generated.xml' path='docs/XRSessionDepthDataFormat/*'/>
-	public XRDepthDataFormat DepthDataFormat { get; }
-}
-
-///<include file='Utils/Docs/XRFrame/XRFrame.generated.xml' path='docs/XRFrame/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class XRFrame
-{
-	///<include file='Utils/Docs/XRFrameGetDepthInformation/XRFrameGetDepthInformation.generated.xml' path='docs/XRFrameGetDepthInformation/*'/>
-	public XRCPUDepthInformation? GetDepthInformation(XRView view) { throw new System.NotImplementedException(); }
-}
-
-///<include file='Utils/Docs/XRWebGLBinding/XRWebGLBinding.generated.xml' path='docs/XRWebGLBinding/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class XRWebGLBinding
-{
-	///<include file='Utils/Docs/XRWebGLBindingGetDepthInformation/XRWebGLBindingGetDepthInformation.generated.xml' path='docs/XRWebGLBindingGetDepthInformation/*'/>
-	public XRWebGLDepthInformation? GetDepthInformation(XRView view) { throw new System.NotImplementedException(); }
-}
-
-///<include file='Utils/Docs/Navigator/Navigator.generated.xml' path='docs/Navigator/*'/>
-public partial class Navigator
-{
-	///<include file='Utils/Docs/NavigatorXr/NavigatorXr.generated.xml' path='docs/NavigatorXr/*'/>
-	public XRSystem Xr { get; }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class WebGLContextAttributes
-{
-		public bool XrCompatible;
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface WebGLRenderingContextBase
-{
-		public Task<Undefined> MakeXRCompatible() { throw new System.NotImplementedException(); }
-}
-
-public partial interface GlobalEventHandlers
-{
-		public EventHandler Onbeforexrselect { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-}
-
-public partial class XRSessionInit
-{
-		public XRDOMOverlayInit? DomOverlay;
-}
-
-///<include file='Utils/Docs/XRSession/XRSession.generated.xml' path='docs/XRSession/*'/>
-public partial class XRSession
-{
-	///<include file='Utils/Docs/XRSessionDomOverlayState/XRSessionDomOverlayState.generated.xml' path='docs/XRSessionDomOverlayState/*'/>
-	public XRDOMOverlayState? DomOverlayState { get; }
-}
-
-///<include file='Utils/Docs/XRInputSource/XRInputSource.generated.xml' path='docs/XRInputSource/*'/>
-public partial class XRInputSource
-{
-	///<include file='Utils/Docs/XRInputSourceGamepad/XRInputSourceGamepad.generated.xml' path='docs/XRInputSourceGamepad/*'/>
-	public Unsupported /*Gamepad*/? Gamepad { get; }
-}
-
-///<include file='Utils/Docs/XRInputSource/XRInputSource.generated.xml' path='docs/XRInputSource/*'/>
-public partial class XRInputSource
-{
-	///<include file='Utils/Docs/XRInputSourceHand/XRInputSourceHand.generated.xml' path='docs/XRInputSourceHand/*'/>
-	public XRHand? Hand { get; }
-}
-
-///<include file='Utils/Docs/XRFrame/XRFrame.generated.xml' path='docs/XRFrame/*'/>
-public partial class XRFrame
-{
-	///<include file='Utils/Docs/XRFrameGetJointPose/XRFrameGetJointPose.generated.xml' path='docs/XRFrameGetJointPose/*'/>
-	public XRJointPose? GetJointPose(XRJointSpace joint, XRSpace baseSpace) { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/XRFrameFillJointRadii/XRFrameFillJointRadii.generated.xml' path='docs/XRFrameFillJointRadii/*'/>
-	public bool FillJointRadii(List<XRJointSpace> jointSpaces, System.Single radii) { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/XRFrameFillPoses/XRFrameFillPoses.generated.xml' path='docs/XRFrameFillPoses/*'/>
-	public bool FillPoses(List<XRSpace> spaces, XRSpace baseSpace, System.Single transforms) { throw new System.NotImplementedException(); }
-}
-
-///<include file='Utils/Docs/XRSession/XRSession.generated.xml' path='docs/XRSession/*'/>
-public partial class XRSession
-{
-	///<include file='Utils/Docs/XRSessionRequestHitTestSource/XRSessionRequestHitTestSource.generated.xml' path='docs/XRSessionRequestHitTestSource/*'/>
-	public Task<XRHitTestSource> RequestHitTestSource(XRHitTestOptionsInit options) { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/XRSessionRequestHitTestSourceForTransientInput/XRSessionRequestHitTestSourceForTransientInput.generated.xml' path='docs/XRSessionRequestHitTestSourceForTransientInput/*'/>
-	public Task<XRTransientInputHitTestSource> RequestHitTestSourceForTransientInput(XRTransientInputHitTestOptionsInit options) { throw new System.NotImplementedException(); }
-}
-
-///<include file='Utils/Docs/XRFrame/XRFrame.generated.xml' path='docs/XRFrame/*'/>
-public partial class XRFrame
-{
-	///<include file='Utils/Docs/XRFrameGetHitTestResults/XRFrameGetHitTestResults.generated.xml' path='docs/XRFrameGetHitTestResults/*'/>
-	public XRHitTestResult[] GetHitTestResults(XRHitTestSource hitTestSource) { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/XRFrameGetHitTestResultsForTransientInput/XRFrameGetHitTestResultsForTransientInput.generated.xml' path='docs/XRFrameGetHitTestResultsForTransientInput/*'/>
-	public XRTransientInputHitTestResult[] GetHitTestResultsForTransientInput(XRTransientInputHitTestSource hitTestSource) { throw new System.NotImplementedException(); }
-}
-
-///<include file='Utils/Docs/XRRenderState/XRRenderState.generated.xml' path='docs/XRRenderState/*'/>
-public partial class XRRenderState
-{
-	///<include file='Utils/Docs/XRRenderStateLayers/XRRenderStateLayers.generated.xml' path='docs/XRRenderStateLayers/*'/>
-	public XRLayer[] Layers { get; }
-}
-
-///<include file='Utils/Docs/XRSession/XRSession.generated.xml' path='docs/XRSession/*'/>
-public partial class XRSession
-{
-	///<include file='Utils/Docs/XRSessionRequestLightProbe/XRSessionRequestLightProbe.generated.xml' path='docs/XRSessionRequestLightProbe/*'/>
-	public Task<XRLightProbe> RequestLightProbe(XRLightProbeInit options) { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/XRSessionPreferredReflectionFormat/XRSessionPreferredReflectionFormat.generated.xml' path='docs/XRSessionPreferredReflectionFormat/*'/>
-	public XRReflectionFormat PreferredReflectionFormat { get; }
-}
-
-///<include file='Utils/Docs/XRFrame/XRFrame.generated.xml' path='docs/XRFrame/*'/>
-public partial class XRFrame
-{
-	///<include file='Utils/Docs/XRFrameGetLightEstimate/XRFrameGetLightEstimate.generated.xml' path='docs/XRFrameGetLightEstimate/*'/>
-	public XRLightEstimate? GetLightEstimate(XRLightProbe lightProbe) { throw new System.NotImplementedException(); }
-}
-
-///<include file='Utils/Docs/XRWebGLBinding/XRWebGLBinding.generated.xml' path='docs/XRWebGLBinding/*'/>
-public partial class XRWebGLBinding
-{
-	///<include file='Utils/Docs/XRWebGLBindingGetReflectionCubeMap/XRWebGLBindingGetReflectionCubeMap.generated.xml' path='docs/XRWebGLBindingGetReflectionCubeMap/*'/>
-	public Unsupported /*WebGLTexture*/? GetReflectionCubeMap(XRLightProbe lightProbe) { throw new System.NotImplementedException(); }
-}
-
-///<include file='Utils/Docs/Screen/Screen.generated.xml' path='docs/Screen/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class Screen
-{
-	///<include file='Utils/Docs/ScreenIsExtended/ScreenIsExtended.generated.xml' path='docs/ScreenIsExtended/*'/>
-	public bool IsExtended { get; }
-		public EventHandler Onchange { get; set; }
-}
-
-///<include file='Utils/Docs/Window/Window.generated.xml' path='docs/Window/*'/>
-public partial class Window
-{
-	///<include file='Utils/Docs/WindowGetScreenDetails/WindowGetScreenDetails.generated.xml' path='docs/WindowGetScreenDetails/*'/>
-	[To(ToAttribute.FirstCharToLowerCase)]
-	public Task<ScreenDetails> GetScreenDetails() { throw new System.NotImplementedException(); }
-}
-
-public partial class FullscreenOptions
-{
-		public ScreenDetailed Screen;
-}
-
 ///<summary>
-///<see cref="Label"/> or <see cref="string"/>
+///<see cref="PasswordCredentialData"/> or <see cref="HTMLFormElement"/>
 ///</summary>
 public struct Union0
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union0(Label value){return new Union0 { Value = value };}
-	public static implicit operator Union0(string value){return new Union0 { Value = value };}
-}
-
-///<summary>
-///<see cref="Label"/> or <see cref="string"/>
-///</summary>
-public struct Union1
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union1(Label value){return new Union1 { Value = value };}
-	public static implicit operator Union1(string value){return new Union1 { Value = value };}
-}
-
-///<summary>
-///<see cref="PasswordCredentialData"/> or <see cref="HTMLFormElement"/>
-///</summary>
-public struct Union2
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union2(PasswordCredentialData value){return new Union2 { Value = value };}
-	public static implicit operator Union2(HTMLFormElement value){return new Union2 { Value = value };}
+	public static implicit operator Union0(PasswordCredentialData value){return new Union0 { Value = value };}
+	public static implicit operator Union0(HTMLFormElement value){return new Union0 { Value = value };}
 }
 
 ///<summary>
 ///<see cref="AnimationEffect"/> or <c>List{AnimationEffect}</c>
 ///</summary>
-public struct Union3
+public struct Union1
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union3(AnimationEffect value){return new Union3 { Value = value };}
-	public static implicit operator Union3(List<AnimationEffect> value){return new Union3 { Value = value };}
+	public static implicit operator Union1(AnimationEffect value){return new Union1 { Value = value };}
+	public static implicit operator Union1(List<AnimationEffect> value){return new Union1 { Value = value };}
 }
 
 ///<summary>
 ///<see cref="byte"/> or <see cref="ArrayBufferView"/>
 ///</summary>
-public struct Union4
+public struct Union2
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union4(byte[] value){return new Union4 { Value = value };}
-	public static implicit operator Union4(ArrayBufferView value){return new Union4 { Value = value };}
+	public static implicit operator Union2(byte[] value){return new Union2 { Value = value };}
+	public static implicit operator Union2(ArrayBufferView value){return new Union2 { Value = value };}
 }
 
 ///<summary>
 ///<see cref="string"/> or <see cref="BinaryData"/>
 ///</summary>
-public struct Union5
+public struct Union3
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union5(string value){return new Union5 { Value = value };}
-	public static implicit operator Union5(BinaryData value){return new Union5 { Value = value };}
+	public static implicit operator Union3(string value){return new Union3 { Value = value };}
+	public static implicit operator Union3(BinaryData value){return new Union3 { Value = value };}
 }
 
 ///<summary>
 ///<see cref="ulong"/> or <c>List{ulong}</c>
 ///</summary>
-public struct Union6
+public struct Union4
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union6(ulong value){return new Union6 { Value = value };}
-	public static implicit operator Union6(List<ulong> value){return new Union6 { Value = value };}
+	public static implicit operator Union4(ulong value){return new Union4 { Value = value };}
+	public static implicit operator Union4(List<ulong> value){return new Union4 { Value = value };}
 }
 
 ///<summary>
 ///<see cref="IntrinsicSizesRequest"/> or <see cref="LayoutFragmentRequest"/>
 ///</summary>
-public struct Union7
+public struct Union5
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union7(IntrinsicSizesRequest value){return new Union7 { Value = value };}
-	public static implicit operator Union7(LayoutFragmentRequest value){return new Union7 { Value = value };}
+	public static implicit operator Union5(IntrinsicSizesRequest value){return new Union5 { Value = value };}
+	public static implicit operator Union5(LayoutFragmentRequest value){return new Union5 { Value = value };}
 }
 
 ///<summary>
 ///<see cref="Element"/> or <see cref="ProcessingInstruction"/>
 ///</summary>
-public struct Union8
+public struct Union6
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union8(Element value){return new Union8 { Value = value };}
-	public static implicit operator Union8(ProcessingInstruction value){return new Union8 { Value = value };}
+	public static implicit operator Union6(Element value){return new Union6 { Value = value };}
+	public static implicit operator Union6(ProcessingInstruction value){return new Union6 { Value = value };}
 }
 
 ///<summary>
 ///<see cref="MediaList"/> or <see cref="string"/>
 ///</summary>
-public struct Union9
+public struct Union7
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union9(MediaList value){return new Union9 { Value = value };}
-	public static implicit operator Union9(string value){return new Union9 { Value = value };}
+	public static implicit operator Union7(MediaList value){return new Union7 { Value = value };}
+	public static implicit operator Union7(string value){return new Union7 { Value = value };}
 }
 
 ///<summary>
 ///<see cref="Element"/> or <see cref="CSSPseudoElement"/>
 ///</summary>
-public struct Union10
+public struct Union8
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union10(Element value){return new Union10 { Value = value };}
-	public static implicit operator Union10(CSSPseudoElement value){return new Union10 { Value = value };}
+	public static implicit operator Union8(Element value){return new Union8 { Value = value };}
+	public static implicit operator Union8(CSSPseudoElement value){return new Union8 { Value = value };}
 }
 
 ///<summary>
 ///<see cref="Undefined"/> or <see cref="CSSStyleValue"/>
 ///</summary>
+public struct Union9
+{
+	public dynamic Value { get; set; }
+	public static implicit operator Union9(Undefined value){return new Union9 { Value = value };}
+	public static implicit operator Union9(CSSStyleValue value){return new Union9 { Value = value };}
+}
+
+///<summary>
+///<see cref="CSSStyleValue"/> or <see cref="string"/>
+///</summary>
+public struct Union10
+{
+	public dynamic Value { get; set; }
+	public static implicit operator Union10(CSSStyleValue value){return new Union10 { Value = value };}
+	public static implicit operator Union10(string value){return new Union10 { Value = value };}
+}
+
+///<summary>
+///<see cref="CSSStyleValue"/> or <see cref="string"/>
+///</summary>
 public struct Union11
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union11(Undefined value){return new Union11 { Value = value };}
 	public static implicit operator Union11(CSSStyleValue value){return new Union11 { Value = value };}
-}
-
-///<summary>
-///<see cref="CSSStyleValue"/> or <see cref="string"/>
-///</summary>
-public struct Union12
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union12(CSSStyleValue value){return new Union12 { Value = value };}
-	public static implicit operator Union12(string value){return new Union12 { Value = value };}
-}
-
-///<summary>
-///<see cref="CSSStyleValue"/> or <see cref="string"/>
-///</summary>
-public struct Union13
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union13(CSSStyleValue value){return new Union13 { Value = value };}
-	public static implicit operator Union13(string value){return new Union13 { Value = value };}
+	public static implicit operator Union11(string value){return new Union11 { Value = value };}
 }
 
 ///<summary>
 ///<see cref="string"/> or <see cref="CSSVariableReferenceValue"/>
 ///</summary>
-public struct Union14
+public struct Union12
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union14(string value){return new Union14 { Value = value };}
-	public static implicit operator Union14(CSSVariableReferenceValue value){return new Union14 { Value = value };}
+	public static implicit operator Union12(string value){return new Union12 { Value = value };}
+	public static implicit operator Union12(CSSVariableReferenceValue value){return new Union12 { Value = value };}
 }
 
 ///<summary>
 ///<see cref="string"/> or <see cref="CSSKeywordValue"/>
 ///</summary>
-public struct Union15
+public struct Union13
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union15(string value){return new Union15 { Value = value };}
-	public static implicit operator Union15(CSSKeywordValue value){return new Union15 { Value = value };}
+	public static implicit operator Union13(string value){return new Union13 { Value = value };}
+	public static implicit operator Union13(CSSKeywordValue value){return new Union13 { Value = value };}
 }
 
 ///<summary>
 ///<see cref="Number"/> or <see cref="CSSNumericValue"/>
 ///</summary>
-public struct Union16
+public struct Union14
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union16(Number value){return new Union16 { Value = value };}
-	public static implicit operator Union16(CSSNumericValue value){return new Union16 { Value = value };}
+	public static implicit operator Union14(Number value){return new Union14 { Value = value };}
+	public static implicit operator Union14(CSSNumericValue value){return new Union14 { Value = value };}
 }
 
 ///<summary>
 ///<see cref="CSSNumericValue"/> or <see cref="CSSKeywordish"/>
 ///</summary>
-public struct Union17
+public struct Union15
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union17(CSSNumericValue value){return new Union17 { Value = value };}
-	public static implicit operator Union17(CSSKeywordish value){return new Union17 { Value = value };}
+	public static implicit operator Union15(CSSNumericValue value){return new Union15 { Value = value };}
+	public static implicit operator Union15(CSSKeywordish value){return new Union15 { Value = value };}
 }
 
 ///<summary>
 ///<see cref="CSSColorValue"/> or <see cref="CSSStyleValue"/>
 ///</summary>
+public struct Union16
+{
+	public dynamic Value { get; set; }
+	public static implicit operator Union16(CSSColorValue value){return new Union16 { Value = value };}
+	public static implicit operator Union16(CSSStyleValue value){return new Union16 { Value = value };}
+}
+
+///<summary>
+///<see cref="CSSNumberish"/> or <see cref="CSSKeywordish"/>
+///</summary>
+public struct Union17
+{
+	public dynamic Value { get; set; }
+	public static implicit operator Union17(CSSNumberish value){return new Union17 { Value = value };}
+	public static implicit operator Union17(CSSKeywordish value){return new Union17 { Value = value };}
+}
+
+///<summary>
+///<see cref="CSSNumberish"/> or <see cref="CSSKeywordish"/>
+///</summary>
 public struct Union18
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union18(CSSColorValue value){return new Union18 { Value = value };}
-	public static implicit operator Union18(CSSStyleValue value){return new Union18 { Value = value };}
+	public static implicit operator Union18(CSSNumberish value){return new Union18 { Value = value };}
+	public static implicit operator Union18(CSSKeywordish value){return new Union18 { Value = value };}
 }
 
 ///<summary>
@@ -19325,43 +20102,43 @@ public struct Union20
 }
 
 ///<summary>
-///<see cref="CSSNumberish"/> or <see cref="CSSKeywordish"/>
+///<see cref="Event"/> or <see cref="Undefined"/>
 ///</summary>
 public struct Union21
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union21(CSSNumberish value){return new Union21 { Value = value };}
-	public static implicit operator Union21(CSSKeywordish value){return new Union21 { Value = value };}
-}
-
-///<summary>
-///<see cref="CSSNumberish"/> or <see cref="CSSKeywordish"/>
-///</summary>
-public struct Union22
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union22(CSSNumberish value){return new Union22 { Value = value };}
-	public static implicit operator Union22(CSSKeywordish value){return new Union22 { Value = value };}
+	public static implicit operator Union21(Event value){return new Union21 { Value = value };}
+	public static implicit operator Union21(Undefined value){return new Union21 { Value = value };}
 }
 
 ///<summary>
 ///<see cref="AddEventListenerOptions"/> or <see cref="bool"/>
 ///</summary>
-public struct Union23
+public struct Union22
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union23(AddEventListenerOptions value){return new Union23 { Value = value };}
-	public static implicit operator Union23(bool value){return new Union23 { Value = value };}
+	public static implicit operator Union22(AddEventListenerOptions value){return new Union22 { Value = value };}
+	public static implicit operator Union22(bool value){return new Union22 { Value = value };}
 }
 
 ///<summary>
 ///<see cref="EventListenerOptions"/> or <see cref="bool"/>
 ///</summary>
+public struct Union23
+{
+	public dynamic Value { get; set; }
+	public static implicit operator Union23(EventListenerOptions value){return new Union23 { Value = value };}
+	public static implicit operator Union23(bool value){return new Union23 { Value = value };}
+}
+
+///<summary>
+///<see cref="Node"/> or <see cref="string"/>
+///</summary>
 public struct Union24
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union24(EventListenerOptions value){return new Union24 { Value = value };}
-	public static implicit operator Union24(bool value){return new Union24 { Value = value };}
+	public static implicit operator Union24(Node value){return new Union24 { Value = value };}
+	public static implicit operator Union24(string value){return new Union24 { Value = value };}
 }
 
 ///<summary>
@@ -19415,71 +20192,70 @@ public struct Union29
 }
 
 ///<summary>
-///<see cref="Node"/> or <see cref="string"/>
+///<see cref="string"/> or <see cref="ElementCreationOptions"/>
 ///</summary>
 public struct Union30
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union30(Node value){return new Union30 { Value = value };}
 	public static implicit operator Union30(string value){return new Union30 { Value = value };}
+	public static implicit operator Union30(ElementCreationOptions value){return new Union30 { Value = value };}
+}
+
+///<summary>
+///<see cref="string"/> or <see cref="ElementCreationOptions"/>
+///</summary>
+public struct Union31
+{
+	public dynamic Value { get; set; }
+	public static implicit operator Union31(string value){return new Union31 { Value = value };}
+	public static implicit operator Union31(ElementCreationOptions value){return new Union31 { Value = value };}
 }
 
 ///<summary>
 ///<c>List{List{string}}</c> or <c>Dictionary{string, string}</c>
 ///</summary>
-public struct Union31
+public struct Union32
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union31(List<List<string>> value){return new Union31 { Value = value };}
-	public static implicit operator Union31(Dictionary<string, string> value){return new Union31 { Value = value };}
+	public static implicit operator Union32(List<List<string>> value){return new Union32 { Value = value };}
+	public static implicit operator Union32(Dictionary<string, string> value){return new Union32 { Value = value };}
 }
 
 ///<summary>
 ///<see cref="Blob"/> or <see cref="BufferSource"/> or <see cref="FormData"/> or <see cref="URLSearchParams"/> or <see cref="string"/>
 ///</summary>
-public struct Union32
+public struct Union33
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union32(Blob value){return new Union32 { Value = value };}
-	public static implicit operator Union32(BufferSource value){return new Union32 { Value = value };}
-	public static implicit operator Union32(FormData value){return new Union32 { Value = value };}
-	public static implicit operator Union32(URLSearchParams value){return new Union32 { Value = value };}
-	public static implicit operator Union32(string value){return new Union32 { Value = value };}
+	public static implicit operator Union33(Blob value){return new Union33 { Value = value };}
+	public static implicit operator Union33(BufferSource value){return new Union33 { Value = value };}
+	public static implicit operator Union33(FormData value){return new Union33 { Value = value };}
+	public static implicit operator Union33(URLSearchParams value){return new Union33 { Value = value };}
+	public static implicit operator Union33(string value){return new Union33 { Value = value };}
 }
 
 ///<summary>
 ///<see cref="ReadableStream"/> or <see cref="XMLHttpRequestBodyInit"/>
 ///</summary>
-public struct Union33
+public struct Union34
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union33(ReadableStream value){return new Union33 { Value = value };}
-	public static implicit operator Union33(XMLHttpRequestBodyInit value){return new Union33 { Value = value };}
+	public static implicit operator Union34(ReadableStream value){return new Union34 { Value = value };}
+	public static implicit operator Union34(XMLHttpRequestBodyInit value){return new Union34 { Value = value };}
 }
 
 ///<summary>
 ///<see cref="Request"/> or <see cref="string"/>
 ///</summary>
-public struct Union34
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union34(Request value){return new Union34 { Value = value };}
-	public static implicit operator Union34(string value){return new Union34 { Value = value };}
-}
-
-///<summary>
-///<see cref="BufferSource"/> or <see cref="Blob"/> or <see cref="string"/>
-///</summary>
 public struct Union35
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union35(BufferSource value){return new Union35 { Value = value };}
-	public static implicit operator Union35(Blob value){return new Union35 { Value = value };}
+	public static implicit operator Union35(Request value){return new Union35 { Value = value };}
 	public static implicit operator Union35(string value){return new Union35 { Value = value };}
 }
 
 ///<summary>
-///<see cref="BufferSource"/> or <see cref="Blob"/> or <see cref="string"/> or <see cref="WriteParams"/>
+///<see cref="BufferSource"/> or <see cref="Blob"/> or <see cref="string"/>
 ///</summary>
 public struct Union36
 {
@@ -19487,11 +20263,10 @@ public struct Union36
 	public static implicit operator Union36(BufferSource value){return new Union36 { Value = value };}
 	public static implicit operator Union36(Blob value){return new Union36 { Value = value };}
 	public static implicit operator Union36(string value){return new Union36 { Value = value };}
-	public static implicit operator Union36(WriteParams value){return new Union36 { Value = value };}
 }
 
 ///<summary>
-///<see cref="BufferSource"/> or <see cref="Blob"/> or <see cref="string"/>
+///<see cref="BufferSource"/> or <see cref="Blob"/> or <see cref="string"/> or <see cref="WriteParams"/>
 ///</summary>
 public struct Union37
 {
@@ -19499,405 +20274,407 @@ public struct Union37
 	public static implicit operator Union37(BufferSource value){return new Union37 { Value = value };}
 	public static implicit operator Union37(Blob value){return new Union37 { Value = value };}
 	public static implicit operator Union37(string value){return new Union37 { Value = value };}
+	public static implicit operator Union37(WriteParams value){return new Union37 { Value = value };}
+}
+
+///<summary>
+///<see cref="BufferSource"/> or <see cref="Blob"/> or <see cref="string"/>
+///</summary>
+public struct Union38
+{
+	public dynamic Value { get; set; }
+	public static implicit operator Union38(BufferSource value){return new Union38 { Value = value };}
+	public static implicit operator Union38(Blob value){return new Union38 { Value = value };}
+	public static implicit operator Union38(string value){return new Union38 { Value = value };}
 }
 
 ///<summary>
 ///<see cref="string"/> or <see cref="byte"/>
 ///</summary>
-public struct Union38
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union38(string value){return new Union38 { Value = value };}
-	public static implicit operator Union38(byte[] value){return new Union38 { Value = value };}
-}
-
-///<summary>
-///<see cref="string"/> or <c>List{double}</c>
-///</summary>
 public struct Union39
 {
 	public dynamic Value { get; set; }
 	public static implicit operator Union39(string value){return new Union39 { Value = value };}
-	public static implicit operator Union39(List<double> value){return new Union39 { Value = value };}
+	public static implicit operator Union39(byte[] value){return new Union39 { Value = value };}
+}
+
+///<summary>
+///<see cref="Blob"/> or <see cref="Unsupported /*MediaSource*/"/>
+///</summary>
+public struct Union40
+{
+	public dynamic Value { get; set; }
+	public static implicit operator Union40(Blob value){return new Union40 { Value = value };}
+	public static implicit operator Union40(Unsupported /*MediaSource*/ value){return new Union40 { Value = value };}
 }
 
 ///<summary>
 ///<see cref="string"/> or <c>List{double}</c>
 ///</summary>
-public struct Union40
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union40(string value){return new Union40 { Value = value };}
-	public static implicit operator Union40(List<double> value){return new Union40 { Value = value };}
-}
-
-///<summary>
-///<see cref="HTMLCollection"/> or <see cref="Element"/>
-///</summary>
 public struct Union41
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union41(HTMLCollection value){return new Union41 { Value = value };}
-	public static implicit operator Union41(Element value){return new Union41 { Value = value };}
+	public static implicit operator Union41(string value){return new Union41 { Value = value };}
+	public static implicit operator Union41(List<double> value){return new Union41 { Value = value };}
 }
 
 ///<summary>
-///<see cref="HTMLCollection"/> or <see cref="Element"/>
+///<see cref="string"/> or <c>List{double}</c>
 ///</summary>
 public struct Union42
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union42(HTMLCollection value){return new Union42 { Value = value };}
-	public static implicit operator Union42(Element value){return new Union42 { Value = value };}
+	public static implicit operator Union42(string value){return new Union42 { Value = value };}
+	public static implicit operator Union42(List<double> value){return new Union42 { Value = value };}
+}
+
+///<summary>
+///<see cref="HTMLCollection"/> or <see cref="Element"/>
+///</summary>
+public struct Union43
+{
+	public dynamic Value { get; set; }
+	public static implicit operator Union43(HTMLCollection value){return new Union43 { Value = value };}
+	public static implicit operator Union43(Element value){return new Union43 { Value = value };}
+}
+
+///<summary>
+///<see cref="HTMLCollection"/> or <see cref="Element"/>
+///</summary>
+public struct Union44
+{
+	public dynamic Value { get; set; }
+	public static implicit operator Union44(HTMLCollection value){return new Union44 { Value = value };}
+	public static implicit operator Union44(Element value){return new Union44 { Value = value };}
 }
 
 ///<summary>
 ///<see cref="RadioNodeList"/> or <see cref="Element"/>
 ///</summary>
-public struct Union43
+public struct Union45
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union43(RadioNodeList value){return new Union43 { Value = value };}
-	public static implicit operator Union43(Element value){return new Union43 { Value = value };}
+	public static implicit operator Union45(RadioNodeList value){return new Union45 { Value = value };}
+	public static implicit operator Union45(Element value){return new Union45 { Value = value };}
 }
 
 ///<summary>
 ///<see cref="HTMLOptionElement"/> or <see cref="HTMLOptGroupElement"/>
 ///</summary>
-public struct Union44
+public struct Union46
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union44(HTMLOptionElement value){return new Union44 { Value = value };}
-	public static implicit operator Union44(HTMLOptGroupElement value){return new Union44 { Value = value };}
+	public static implicit operator Union46(HTMLOptionElement value){return new Union46 { Value = value };}
+	public static implicit operator Union46(HTMLOptGroupElement value){return new Union46 { Value = value };}
 }
 
 ///<summary>
 ///<see cref="HTMLElement"/> or <see cref="long"/>
 ///</summary>
-public struct Union45
+public struct Union47
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union45(HTMLElement value){return new Union45 { Value = value };}
-	public static implicit operator Union45(long value){return new Union45 { Value = value };}
+	public static implicit operator Union47(HTMLElement value){return new Union47 { Value = value };}
+	public static implicit operator Union47(long value){return new Union47 { Value = value };}
 }
 
 ///<summary>
 ///<see cref="HTMLScriptElement"/> or <see cref="Unsupported /*SVGScriptElement*/"/>
 ///</summary>
-public struct Union46
+public struct Union48
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union46(HTMLScriptElement value){return new Union46 { Value = value };}
-	public static implicit operator Union46(Unsupported /*SVGScriptElement*/ value){return new Union46 { Value = value };}
+	public static implicit operator Union48(HTMLScriptElement value){return new Union48 { Value = value };}
+	public static implicit operator Union48(Unsupported /*SVGScriptElement*/ value){return new Union48 { Value = value };}
 }
 
 ///<summary>
 ///<see cref="bool"/> or <see cref="double"/> or <see cref="string"/>
 ///</summary>
-public struct Union47
+public struct Union49
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union47(bool value){return new Union47 { Value = value };}
-	public static implicit operator Union47(double value){return new Union47 { Value = value };}
-	public static implicit operator Union47(string value){return new Union47 { Value = value };}
+	public static implicit operator Union49(bool value){return new Union49 { Value = value };}
+	public static implicit operator Union49(double value){return new Union49 { Value = value };}
+	public static implicit operator Union49(string value){return new Union49 { Value = value };}
 }
 
 ///<summary>
 ///<see cref="Unsupported /*MediaStream*/"/> or <see cref="Unsupported /*MediaSource*/"/> or <see cref="Blob"/>
 ///</summary>
-public struct Union48
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union48(Unsupported /*MediaStream*/ value){return new Union48 { Value = value };}
-	public static implicit operator Union48(Blob value){return new Union48 { Value = value };}
-}
-
-///<summary>
-///<see cref="VideoTrack"/> or <see cref="AudioTrack"/> or <see cref="TextTrack"/>
-///</summary>
-public struct Union49
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union49(VideoTrack value){return new Union49 { Value = value };}
-	public static implicit operator Union49(AudioTrack value){return new Union49 { Value = value };}
-	public static implicit operator Union49(TextTrack value){return new Union49 { Value = value };}
-}
-
-///<summary>
-///<see cref="VideoTrack"/> or <see cref="AudioTrack"/> or <see cref="TextTrack"/>
-///</summary>
 public struct Union50
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union50(VideoTrack value){return new Union50 { Value = value };}
-	public static implicit operator Union50(AudioTrack value){return new Union50 { Value = value };}
-	public static implicit operator Union50(TextTrack value){return new Union50 { Value = value };}
+	public static implicit operator Union50(Unsupported /*MediaStream*/ value){return new Union50 { Value = value };}
+	public static implicit operator Union50(Blob value){return new Union50 { Value = value };}
+}
+
+///<summary>
+///<see cref="VideoTrack"/> or <see cref="AudioTrack"/> or <see cref="TextTrack"/>
+///</summary>
+public struct Union51
+{
+	public dynamic Value { get; set; }
+	public static implicit operator Union51(VideoTrack value){return new Union51 { Value = value };}
+	public static implicit operator Union51(AudioTrack value){return new Union51 { Value = value };}
+	public static implicit operator Union51(TextTrack value){return new Union51 { Value = value };}
+}
+
+///<summary>
+///<see cref="VideoTrack"/> or <see cref="AudioTrack"/> or <see cref="TextTrack"/>
+///</summary>
+public struct Union52
+{
+	public dynamic Value { get; set; }
+	public static implicit operator Union52(VideoTrack value){return new Union52 { Value = value };}
+	public static implicit operator Union52(AudioTrack value){return new Union52 { Value = value };}
+	public static implicit operator Union52(TextTrack value){return new Union52 { Value = value };}
 }
 
 ///<summary>
 ///<see cref="RadioNodeList"/> or <see cref="Element"/>
 ///</summary>
-public struct Union51
+public struct Union53
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union51(RadioNodeList value){return new Union51 { Value = value };}
-	public static implicit operator Union51(Element value){return new Union51 { Value = value };}
+	public static implicit operator Union53(RadioNodeList value){return new Union53 { Value = value };}
+	public static implicit operator Union53(Element value){return new Union53 { Value = value };}
 }
 
 ///<summary>
 ///<see cref="HTMLOptionElement"/> or <see cref="HTMLOptGroupElement"/>
 ///</summary>
-public struct Union52
+public struct Union54
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union52(HTMLOptionElement value){return new Union52 { Value = value };}
-	public static implicit operator Union52(HTMLOptGroupElement value){return new Union52 { Value = value };}
+	public static implicit operator Union54(HTMLOptionElement value){return new Union54 { Value = value };}
+	public static implicit operator Union54(HTMLOptGroupElement value){return new Union54 { Value = value };}
 }
 
 ///<summary>
 ///<see cref="HTMLElement"/> or <see cref="long"/>
 ///</summary>
-public struct Union53
+public struct Union55
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union53(HTMLElement value){return new Union53 { Value = value };}
-	public static implicit operator Union53(long value){return new Union53 { Value = value };}
+	public static implicit operator Union55(HTMLElement value){return new Union55 { Value = value };}
+	public static implicit operator Union55(long value){return new Union55 { Value = value };}
 }
 
 ///<summary>
 ///<see cref="Element"/> or <see cref="Text"/>
 ///</summary>
-public struct Union54
+public struct Union56
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union54(Element value){return new Union54 { Value = value };}
-	public static implicit operator Union54(Text value){return new Union54 { Value = value };}
+	public static implicit operator Union56(Element value){return new Union56 { Value = value };}
+	public static implicit operator Union56(Text value){return new Union56 { Value = value };}
 }
 
 ///<summary>
 ///<see cref="CanvasRenderingContext2D"/> or <see cref="ImageBitmapRenderingContext"/> or <see cref="Unsupported /*WebGLRenderingContext*/"/> or <see cref="Unsupported /*WebGL2RenderingContext*/"/> or <see cref="GPUCanvasContext"/>
 ///</summary>
-public struct Union55
+public struct Union57
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union55(CanvasRenderingContext2D value){return new Union55 { Value = value };}
-	public static implicit operator Union55(ImageBitmapRenderingContext value){return new Union55 { Value = value };}
-	public static implicit operator Union55(Unsupported /*WebGLRenderingContext*/ value){return new Union55 { Value = value };}
-	public static implicit operator Union55(GPUCanvasContext value){return new Union55 { Value = value };}
+	public static implicit operator Union57(CanvasRenderingContext2D value){return new Union57 { Value = value };}
+	public static implicit operator Union57(ImageBitmapRenderingContext value){return new Union57 { Value = value };}
+	public static implicit operator Union57(Unsupported /*WebGLRenderingContext*/ value){return new Union57 { Value = value };}
+	public static implicit operator Union57(GPUCanvasContext value){return new Union57 { Value = value };}
 }
 
 ///<summary>
 ///<see cref="HTMLImageElement"/> or <see cref="Unsupported /*SVGImageElement*/"/>
 ///</summary>
-public struct Union56
+public struct Union58
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union56(HTMLImageElement value){return new Union56 { Value = value };}
-	public static implicit operator Union56(Unsupported /*SVGImageElement*/ value){return new Union56 { Value = value };}
+	public static implicit operator Union58(HTMLImageElement value){return new Union58 { Value = value };}
+	public static implicit operator Union58(Unsupported /*SVGImageElement*/ value){return new Union58 { Value = value };}
 }
 
 ///<summary>
 ///<see cref="HTMLOrSVGImageElement"/> or <see cref="HTMLVideoElement"/> or <see cref="HTMLCanvasElement"/> or <see cref="ImageBitmap"/> or <see cref="OffscreenCanvas"/> or <see cref="VideoFrame"/>
 ///</summary>
-public struct Union57
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union57(HTMLOrSVGImageElement value){return new Union57 { Value = value };}
-	public static implicit operator Union57(HTMLVideoElement value){return new Union57 { Value = value };}
-	public static implicit operator Union57(HTMLCanvasElement value){return new Union57 { Value = value };}
-	public static implicit operator Union57(ImageBitmap value){return new Union57 { Value = value };}
-	public static implicit operator Union57(OffscreenCanvas value){return new Union57 { Value = value };}
-	public static implicit operator Union57(VideoFrame value){return new Union57 { Value = value };}
-}
-
-///<summary>
-///<see cref="string"/> or <see cref="CanvasGradient"/> or <see cref="CanvasPattern"/>
-///</summary>
-public struct Union58
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union58(string value){return new Union58 { Value = value };}
-	public static implicit operator Union58(CanvasGradient value){return new Union58 { Value = value };}
-	public static implicit operator Union58(CanvasPattern value){return new Union58 { Value = value };}
-}
-
-///<summary>
-///<see cref="string"/> or <see cref="CanvasGradient"/> or <see cref="CanvasPattern"/>
-///</summary>
 public struct Union59
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union59(string value){return new Union59 { Value = value };}
-	public static implicit operator Union59(CanvasGradient value){return new Union59 { Value = value };}
-	public static implicit operator Union59(CanvasPattern value){return new Union59 { Value = value };}
+	public static implicit operator Union59(HTMLOrSVGImageElement value){return new Union59 { Value = value };}
+	public static implicit operator Union59(HTMLVideoElement value){return new Union59 { Value = value };}
+	public static implicit operator Union59(HTMLCanvasElement value){return new Union59 { Value = value };}
+	public static implicit operator Union59(ImageBitmap value){return new Union59 { Value = value };}
+	public static implicit operator Union59(OffscreenCanvas value){return new Union59 { Value = value };}
+	public static implicit operator Union59(VideoFrame value){return new Union59 { Value = value };}
+}
+
+///<summary>
+///<see cref="string"/> or <see cref="CanvasGradient"/> or <see cref="CanvasPattern"/>
+///</summary>
+public struct Union60
+{
+	public dynamic Value { get; set; }
+	public static implicit operator Union60(string value){return new Union60 { Value = value };}
+	public static implicit operator Union60(CanvasGradient value){return new Union60 { Value = value };}
+	public static implicit operator Union60(CanvasPattern value){return new Union60 { Value = value };}
+}
+
+///<summary>
+///<see cref="string"/> or <see cref="CanvasGradient"/> or <see cref="CanvasPattern"/>
+///</summary>
+public struct Union61
+{
+	public dynamic Value { get; set; }
+	public static implicit operator Union61(string value){return new Union61 { Value = value };}
+	public static implicit operator Union61(CanvasGradient value){return new Union61 { Value = value };}
+	public static implicit operator Union61(CanvasPattern value){return new Union61 { Value = value };}
 }
 
 ///<summary>
 ///<see cref="double"/> or <see cref="DOMPointInit"/>
 ///</summary>
-public struct Union61
+public struct Union63
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union61(double value){return new Union61 { Value = value };}
-	public static implicit operator Union61(DOMPointInit value){return new Union61 { Value = value };}
+	public static implicit operator Union63(double value){return new Union63 { Value = value };}
+	public static implicit operator Union63(DOMPointInit value){return new Union63 { Value = value };}
 }
 
 ///<summary>
-///<see cref="double"/> or <see cref="DOMPointInit"/> or <c>List{Union61}</c>
+///<see cref="double"/> or <see cref="DOMPointInit"/> or <c>List{Union63}</c>
 ///</summary>
-public struct Union60
+public struct Union62
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union60(double value){return new Union60 { Value = value };}
-	public static implicit operator Union60(DOMPointInit value){return new Union60 { Value = value };}
-	public static implicit operator Union60(List<Union61> value){return new Union60 { Value = value };}
+	public static implicit operator Union62(double value){return new Union62 { Value = value };}
+	public static implicit operator Union62(DOMPointInit value){return new Union62 { Value = value };}
+	public static implicit operator Union62(List<Union63> value){return new Union62 { Value = value };}
 }
 
 ///<summary>
 ///<see cref="Path2D"/> or <see cref="string"/>
 ///</summary>
-public struct Union62
+public struct Union64
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union62(Path2D value){return new Union62 { Value = value };}
-	public static implicit operator Union62(string value){return new Union62 { Value = value };}
+	public static implicit operator Union64(Path2D value){return new Union64 { Value = value };}
+	public static implicit operator Union64(string value){return new Union64 { Value = value };}
 }
 
 ///<summary>
 ///<see cref="HTMLCanvasElement"/> or <see cref="OffscreenCanvas"/>
 ///</summary>
-public struct Union63
+public struct Union65
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union63(HTMLCanvasElement value){return new Union63 { Value = value };}
-	public static implicit operator Union63(OffscreenCanvas value){return new Union63 { Value = value };}
+	public static implicit operator Union65(HTMLCanvasElement value){return new Union65 { Value = value };}
+	public static implicit operator Union65(OffscreenCanvas value){return new Union65 { Value = value };}
 }
 
 ///<summary>
 ///<see cref="OffscreenCanvasRenderingContext2D"/> or <see cref="ImageBitmapRenderingContext"/> or <see cref="Unsupported /*WebGLRenderingContext*/"/> or <see cref="Unsupported /*WebGL2RenderingContext*/"/> or <see cref="GPUCanvasContext"/>
 ///</summary>
-public struct Union64
+public struct Union66
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union64(OffscreenCanvasRenderingContext2D value){return new Union64 { Value = value };}
-	public static implicit operator Union64(ImageBitmapRenderingContext value){return new Union64 { Value = value };}
-	public static implicit operator Union64(Unsupported /*WebGLRenderingContext*/ value){return new Union64 { Value = value };}
-	public static implicit operator Union64(GPUCanvasContext value){return new Union64 { Value = value };}
+	public static implicit operator Union66(OffscreenCanvasRenderingContext2D value){return new Union66 { Value = value };}
+	public static implicit operator Union66(ImageBitmapRenderingContext value){return new Union66 { Value = value };}
+	public static implicit operator Union66(Unsupported /*WebGLRenderingContext*/ value){return new Union66 { Value = value };}
+	public static implicit operator Union66(GPUCanvasContext value){return new Union66 { Value = value };}
 }
 
 ///<summary>
 ///<see cref="CustomElementConstructor"/> or <see cref="Undefined"/>
 ///</summary>
-public struct Union65
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union65(CustomElementConstructor value){return new Union65 { Value = value };}
-	public static implicit operator Union65(Undefined value){return new Union65 { Value = value };}
-}
-
-///<summary>
-///<see cref="File"/> or <see cref="string"/> or <see cref="FormData"/>
-///</summary>
-public struct Union66
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union66(File value){return new Union66 { Value = value };}
-	public static implicit operator Union66(string value){return new Union66 { Value = value };}
-	public static implicit operator Union66(FormData value){return new Union66 { Value = value };}
-}
-
-///<summary>
-///<see cref="File"/> or <see cref="string"/> or <see cref="FormData"/>
-///</summary>
 public struct Union67
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union67(File value){return new Union67 { Value = value };}
-	public static implicit operator Union67(string value){return new Union67 { Value = value };}
-	public static implicit operator Union67(FormData value){return new Union67 { Value = value };}
+	public static implicit operator Union67(CustomElementConstructor value){return new Union67 { Value = value };}
+	public static implicit operator Union67(Undefined value){return new Union67 { Value = value };}
+}
+
+///<summary>
+///<see cref="File"/> or <see cref="string"/> or <see cref="FormData"/>
+///</summary>
+public struct Union68
+{
+	public dynamic Value { get; set; }
+	public static implicit operator Union68(File value){return new Union68 { Value = value };}
+	public static implicit operator Union68(string value){return new Union68 { Value = value };}
+	public static implicit operator Union68(FormData value){return new Union68 { Value = value };}
+}
+
+///<summary>
+///<see cref="File"/> or <see cref="string"/> or <see cref="FormData"/>
+///</summary>
+public struct Union69
+{
+	public dynamic Value { get; set; }
+	public static implicit operator Union69(File value){return new Union69 { Value = value };}
+	public static implicit operator Union69(string value){return new Union69 { Value = value };}
+	public static implicit operator Union69(FormData value){return new Union69 { Value = value };}
 }
 
 ///<summary>
 ///<see cref="Event"/> or <see cref="string"/>
 ///</summary>
-public struct Union68
+public struct Union70
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union68(Event value){return new Union68 { Value = value };}
-	public static implicit operator Union68(string value){return new Union68 { Value = value };}
+	public static implicit operator Union70(Event value){return new Union70 { Value = value };}
+	public static implicit operator Union70(string value){return new Union70 { Value = value };}
 }
 
 ///<summary>
 ///<see cref="string"/> or <see cref="Function"/>
 ///</summary>
-public struct Union69
+public struct Union71
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union69(string value){return new Union69 { Value = value };}
-	public static implicit operator Union69(Function value){return new Union69 { Value = value };}
+	public static implicit operator Union71(string value){return new Union71 { Value = value };}
+	public static implicit operator Union71(Function value){return new Union71 { Value = value };}
 }
 
 ///<summary>
 ///<see cref="CanvasImageSource"/> or <see cref="Blob"/> or <see cref="ImageData"/>
 ///</summary>
-public struct Union70
+public struct Union72
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union70(CanvasImageSource value){return new Union70 { Value = value };}
-	public static implicit operator Union70(Blob value){return new Union70 { Value = value };}
-	public static implicit operator Union70(ImageData value){return new Union70 { Value = value };}
+	public static implicit operator Union72(CanvasImageSource value){return new Union72 { Value = value };}
+	public static implicit operator Union72(Blob value){return new Union72 { Value = value };}
+	public static implicit operator Union72(ImageData value){return new Union72 { Value = value };}
 }
 
 ///<summary>
 ///<see cref="WindowProxy"/> or <see cref="MessagePort"/> or <see cref="ServiceWorker"/>
 ///</summary>
-public struct Union71
+public struct Union73
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union71(WindowProxy value){return new Union71 { Value = value };}
-	public static implicit operator Union71(MessagePort value){return new Union71 { Value = value };}
-	public static implicit operator Union71(ServiceWorker value){return new Union71 { Value = value };}
+	public static implicit operator Union73(WindowProxy value){return new Union73 { Value = value };}
+	public static implicit operator Union73(MessagePort value){return new Union73 { Value = value };}
+	public static implicit operator Union73(ServiceWorker value){return new Union73 { Value = value };}
 }
 
 ///<summary>
 ///<see cref="string"/> or <see cref="WorkerOptions"/>
 ///</summary>
-public struct Union72
+public struct Union74
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union72(string value){return new Union72 { Value = value };}
-	public static implicit operator Union72(WorkerOptions value){return new Union72 { Value = value };}
+	public static implicit operator Union74(string value){return new Union74 { Value = value };}
+	public static implicit operator Union74(WorkerOptions value){return new Union74 { Value = value };}
 }
 
 ///<summary>
 ///<see cref="IDBObjectStore"/> or <see cref="IDBIndex"/> or <see cref="IDBCursor"/>
 ///</summary>
-public struct Union73
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union73(IDBObjectStore value){return new Union73 { Value = value };}
-	public static implicit operator Union73(IDBIndex value){return new Union73 { Value = value };}
-	public static implicit operator Union73(IDBCursor value){return new Union73 { Value = value };}
-}
-
-///<summary>
-///<see cref="string"/> or <c>List{string}</c>
-///</summary>
-public struct Union74
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union74(string value){return new Union74 { Value = value };}
-	public static implicit operator Union74(List<string> value){return new Union74 { Value = value };}
-}
-
-///<summary>
-///<see cref="string"/> or <c>List{string}</c>
-///</summary>
 public struct Union75
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union75(string value){return new Union75 { Value = value };}
-	public static implicit operator Union75(List<string> value){return new Union75 { Value = value };}
+	public static implicit operator Union75(IDBObjectStore value){return new Union75 { Value = value };}
+	public static implicit operator Union75(IDBIndex value){return new Union75 { Value = value };}
+	public static implicit operator Union75(IDBCursor value){return new Union75 { Value = value };}
 }
 
 ///<summary>
@@ -19911,495 +20688,505 @@ public struct Union76
 }
 
 ///<summary>
-///<see cref="IDBObjectStore"/> or <see cref="IDBIndex"/>
+///<see cref="string"/> or <c>List{string}</c>
 ///</summary>
 public struct Union77
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union77(IDBObjectStore value){return new Union77 { Value = value };}
-	public static implicit operator Union77(IDBIndex value){return new Union77 { Value = value };}
-}
-
-///<summary>
-///<see cref="Element"/> or <see cref="Document"/>
-///</summary>
-public struct Union78
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union78(Element value){return new Union78 { Value = value };}
-	public static implicit operator Union78(Document value){return new Union78 { Value = value };}
-}
-
-///<summary>
-///<see cref="Element"/> or <see cref="Document"/>
-///</summary>
-public struct Union79
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union79(Element value){return new Union79 { Value = value };}
-	public static implicit operator Union79(Document value){return new Union79 { Value = value };}
-}
-
-///<summary>
-///<see cref="Number"/> or <c>List{Number}</c>
-///</summary>
-public struct Union80
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union80(Number value){return new Union80 { Value = value };}
-	public static implicit operator Union80(List<Number> value){return new Union80 { Value = value };}
-}
-
-///<summary>
-///<c>List{Point2D}</c> or <see cref="ConstrainPoint2DParameters"/>
-///</summary>
-public struct Union81
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union81(List<Point2D> value){return new Union81 { Value = value };}
-	public static implicit operator Union81(ConstrainPoint2DParameters value){return new Union81 { Value = value };}
-}
-
-///<summary>
-///<see cref="System.Single"/> or <see cref="System.Double"/> or <see cref="DOMMatrix"/>
-///</summary>
-public struct Union82
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union82(System.Single value){return new Union82 { Value = value };}
-	public static implicit operator Union82(System.Double value){return new Union82 { Value = value };}
-	public static implicit operator Union82(DOMMatrix value){return new Union82 { Value = value };}
-}
-
-///<summary>
-///<see cref="CSSNumericValue"/> or <see cref="CSSKeywordValue"/>
-///</summary>
-public struct Union84
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union84(CSSNumericValue value){return new Union84 { Value = value };}
-	public static implicit operator Union84(CSSKeywordValue value){return new Union84 { Value = value };}
-}
-
-///<summary>
-///<see cref="string"/> or <c>List{Union84}</c>
-///</summary>
-public struct Union83
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union83(string value){return new Union83 { Value = value };}
-	public static implicit operator Union83(List<Union84> value){return new Union83 { Value = value };}
-}
-
-///<summary>
-///<see cref="Client"/> or <see cref="ServiceWorker"/> or <see cref="MessagePort"/>
-///</summary>
-public struct Union85
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union85(Client value){return new Union85 { Value = value };}
-	public static implicit operator Union85(ServiceWorker value){return new Union85 { Value = value };}
-	public static implicit operator Union85(MessagePort value){return new Union85 { Value = value };}
-}
-
-///<summary>
-///<see cref="Client"/> or <see cref="ServiceWorker"/> or <see cref="MessagePort"/>
-///</summary>
-public struct Union86
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union86(Client value){return new Union86 { Value = value };}
-	public static implicit operator Union86(ServiceWorker value){return new Union86 { Value = value };}
-	public static implicit operator Union86(MessagePort value){return new Union86 { Value = value };}
-}
-
-///<summary>
-///<see cref="ReadableStreamDefaultReader"/> or <see cref="ReadableStreamBYOBReader"/>
-///</summary>
-public struct Union87
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union87(ReadableStreamDefaultReader value){return new Union87 { Value = value };}
-	public static implicit operator Union87(ReadableStreamBYOBReader value){return new Union87 { Value = value };}
-}
-
-///<summary>
-///<see cref="ReadableStreamDefaultController"/> or <see cref="ReadableByteStreamController"/>
-///</summary>
-public struct Union88
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union88(ReadableStreamDefaultController value){return new Union88 { Value = value };}
-	public static implicit operator Union88(ReadableByteStreamController value){return new Union88 { Value = value };}
-}
-
-///<summary>
-///<see cref="string"/> or <see cref="URLPatternInit"/>
-///</summary>
-public struct Union89
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union89(string value){return new Union89 { Value = value };}
-	public static implicit operator Union89(URLPatternInit value){return new Union89 { Value = value };}
-}
-
-///<summary>
-///<see cref="string"/> or <see cref="URLPatternInit"/> or <see cref="URLPattern"/>
-///</summary>
-public struct Union90
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union90(string value){return new Union90 { Value = value };}
-	public static implicit operator Union90(URLPatternInit value){return new Union90 { Value = value };}
-	public static implicit operator Union90(URLPattern value){return new Union90 { Value = value };}
-}
-
-///<summary>
-///<c>List{List{string}}</c> or <c>Dictionary{string, string}</c> or <see cref="string"/>
-///</summary>
-public struct Union91
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union91(List<List<string>> value){return new Union91 { Value = value };}
-	public static implicit operator Union91(Dictionary<string, string> value){return new Union91 { Value = value };}
-	public static implicit operator Union91(string value){return new Union91 { Value = value };}
-}
-
-///<summary>
-///<see cref="System.SByte"/> or <see cref="System.Int16"/> or <see cref="System.Int32"/> or <see cref="System.Byte"/> or <see cref="System.UInt16"/> or <see cref="System.UInt32"/> or <see cref="Unsupported /*Uint8ClampedArray*/"/> or <see cref="System.Int64"/> or <see cref="System.UInt64"/> or <see cref="System.Single"/> or <see cref="System.Double"/> or <see cref="Unsupported /*DataView*/"/>
-///</summary>
-public struct Union92
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union92(System.SByte value){return new Union92 { Value = value };}
-	public static implicit operator Union92(System.Int16 value){return new Union92 { Value = value };}
-	public static implicit operator Union92(System.Int32 value){return new Union92 { Value = value };}
-	public static implicit operator Union92(System.Byte value){return new Union92 { Value = value };}
-	public static implicit operator Union92(System.UInt16 value){return new Union92 { Value = value };}
-	public static implicit operator Union92(System.UInt32 value){return new Union92 { Value = value };}
-	public static implicit operator Union92(Unsupported /*Uint8ClampedArray*/ value){return new Union92 { Value = value };}
-	public static implicit operator Union92(System.Int64 value){return new Union92 { Value = value };}
-	public static implicit operator Union92(System.UInt64 value){return new Union92 { Value = value };}
-	public static implicit operator Union92(System.Single value){return new Union92 { Value = value };}
-	public static implicit operator Union92(System.Double value){return new Union92 { Value = value };}
-}
-
-///<summary>
-///<see cref="ArrayBufferView"/> or <see cref="byte"/>
-///</summary>
-public struct Union93
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union93(ArrayBufferView value){return new Union93 { Value = value };}
-	public static implicit operator Union93(byte[] value){return new Union93 { Value = value };}
-}
-
-///<summary>
-///<see cref="byte"/> or <see cref="Unsupported /*SharedArrayBuffer*/"/> or <see cref="ArrayBufferView"/>
-///</summary>
-public struct Union94
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union94(byte[] value){return new Union94 { Value = value };}
-	public static implicit operator Union94(Unsupported /*SharedArrayBuffer*/ value){return new Union94 { Value = value };}
-	public static implicit operator Union94(ArrayBufferView value){return new Union94 { Value = value };}
-}
-
-///<summary>
-///<see cref="double"/> or <see cref="EffectTiming"/>
-///</summary>
-public struct Union95
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union95(double value){return new Union95 { Value = value };}
-	public static implicit operator Union95(EffectTiming value){return new Union95 { Value = value };}
-}
-
-///<summary>
-///<see cref="double"/> or <see cref="EffectTiming"/>
-///</summary>
-public struct Union96
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union96(double value){return new Union96 { Value = value };}
-	public static implicit operator Union96(EffectTiming value){return new Union96 { Value = value };}
-}
-
-///<summary>
-///<see cref="Element"/> or <see cref="CSSPseudoElement"/>
-///</summary>
-public struct Union97
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union97(Element value){return new Union97 { Value = value };}
-	public static implicit operator Union97(CSSPseudoElement value){return new Union97 { Value = value };}
-}
-
-///<summary>
-///<see cref="AudioContextLatencyCategory"/> or <see cref="Number"/>
-///</summary>
-public struct Union98
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union98(AudioContextLatencyCategory value){return new Union98 { Value = value };}
-	public static implicit operator Union98(Number value){return new Union98 { Value = value };}
-}
-
-///<summary>
-///<see cref="BufferSource"/> or <see cref="ReadableStream"/>
-///</summary>
-public struct Union99
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union99(BufferSource value){return new Union99 { Value = value };}
-	public static implicit operator Union99(ReadableStream value){return new Union99 { Value = value };}
-}
-
-///<summary>
-///<see cref="HTMLVideoElement"/> or <see cref="VideoFrame"/>
-///</summary>
-public struct Union100
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union100(HTMLVideoElement value){return new Union100 { Value = value };}
-	public static implicit operator Union100(VideoFrame value){return new Union100 { Value = value };}
-}
-
-///<summary>
-///<see cref="GPUSampler"/> or <see cref="GPUTextureView"/> or <see cref="GPUBufferBinding"/> or <see cref="GPUExternalTexture"/>
-///</summary>
-public struct Union101
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union101(GPUSampler value){return new Union101 { Value = value };}
-	public static implicit operator Union101(GPUTextureView value){return new Union101 { Value = value };}
-	public static implicit operator Union101(GPUBufferBinding value){return new Union101 { Value = value };}
-	public static implicit operator Union101(GPUExternalTexture value){return new Union101 { Value = value };}
-}
-
-///<summary>
-///<see cref="GPUPipelineLayout"/> or <see cref="GPUAutoLayoutMode"/>
-///</summary>
-public struct Union102
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union102(GPUPipelineLayout value){return new Union102 { Value = value };}
-	public static implicit operator Union102(GPUAutoLayoutMode value){return new Union102 { Value = value };}
-}
-
-///<summary>
-///<see cref="GPUPipelineLayout"/> or <see cref="GPUAutoLayoutMode"/>
-///</summary>
-public struct Union103
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union103(GPUPipelineLayout value){return new Union103 { Value = value };}
-	public static implicit operator Union103(GPUAutoLayoutMode value){return new Union103 { Value = value };}
-}
-
-///<summary>
-///<see cref="ImageBitmap"/> or <see cref="ImageData"/> or <see cref="HTMLImageElement"/> or <see cref="HTMLVideoElement"/> or <see cref="VideoFrame"/> or <see cref="HTMLCanvasElement"/> or <see cref="OffscreenCanvas"/>
-///</summary>
-public struct Union104
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union104(ImageBitmap value){return new Union104 { Value = value };}
-	public static implicit operator Union104(ImageData value){return new Union104 { Value = value };}
-	public static implicit operator Union104(HTMLImageElement value){return new Union104 { Value = value };}
-	public static implicit operator Union104(HTMLVideoElement value){return new Union104 { Value = value };}
-	public static implicit operator Union104(VideoFrame value){return new Union104 { Value = value };}
-	public static implicit operator Union104(HTMLCanvasElement value){return new Union104 { Value = value };}
-	public static implicit operator Union104(OffscreenCanvas value){return new Union104 { Value = value };}
-}
-
-///<summary>
-///<see cref="HTMLCanvasElement"/> or <see cref="OffscreenCanvas"/>
-///</summary>
-public struct Union105
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union105(HTMLCanvasElement value){return new Union105 { Value = value };}
-	public static implicit operator Union105(OffscreenCanvas value){return new Union105 { Value = value };}
-}
-
-///<summary>
-///<c>List{Number}</c> or <see cref="GPUColorDict"/>
-///</summary>
-public struct Union106
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union106(List<Number> value){return new Union106 { Value = value };}
-	public static implicit operator Union106(GPUColorDict value){return new Union106 { Value = value };}
-}
-
-///<summary>
-///<c>List{GPUIntegerCoordinate}</c> or <see cref="GPUOrigin2DDict"/>
-///</summary>
-public struct Union107
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union107(List<GPUIntegerCoordinate> value){return new Union107 { Value = value };}
-	public static implicit operator Union107(GPUOrigin2DDict value){return new Union107 { Value = value };}
-}
-
-///<summary>
-///<c>List{GPUIntegerCoordinate}</c> or <see cref="GPUOrigin3DDict"/>
-///</summary>
-public struct Union108
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union108(List<GPUIntegerCoordinate> value){return new Union108 { Value = value };}
-	public static implicit operator Union108(GPUOrigin3DDict value){return new Union108 { Value = value };}
-}
-
-///<summary>
-///<c>List{GPUIntegerCoordinate}</c> or <see cref="GPUExtent3DDict"/>
-///</summary>
-public struct Union109
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union109(List<GPUIntegerCoordinate> value){return new Union109 { Value = value };}
-	public static implicit operator Union109(GPUExtent3DDict value){return new Union109 { Value = value };}
-}
-
-///<summary>
-///<see cref="SFrameTransform"/> or <see cref="RTCRtpScriptTransform"/>
-///</summary>
-public struct Union110
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union110(SFrameTransform value){return new Union110 { Value = value };}
-	public static implicit operator Union110(RTCRtpScriptTransform value){return new Union110 { Value = value };}
-}
-
-///<summary>
-///<see cref="SmallCryptoKeyID"/> or <see cref="double"/>
-///</summary>
-public struct Union111
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union111(SmallCryptoKeyID value){return new Union111 { Value = value };}
-	public static implicit operator Union111(double value){return new Union111 { Value = value };}
+	public static implicit operator Union77(string value){return new Union77 { Value = value };}
+	public static implicit operator Union77(List<string> value){return new Union77 { Value = value };}
 }
 
 ///<summary>
 ///<see cref="string"/> or <c>List{string}</c>
 ///</summary>
-public struct Union112
+public struct Union78
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union112(string value){return new Union112 { Value = value };}
-	public static implicit operator Union112(List<string> value){return new Union112 { Value = value };}
+	public static implicit operator Union78(string value){return new Union78 { Value = value };}
+	public static implicit operator Union78(List<string> value){return new Union78 { Value = value };}
 }
 
 ///<summary>
-///<see cref="BufferSource"/> or <see cref="Blob"/> or <see cref="string"/>
+///<see cref="IDBObjectStore"/> or <see cref="IDBIndex"/>
 ///</summary>
-public struct Union113
+public struct Union79
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union113(BufferSource value){return new Union113 { Value = value };}
-	public static implicit operator Union113(Blob value){return new Union113 { Value = value };}
-	public static implicit operator Union113(string value){return new Union113 { Value = value };}
+	public static implicit operator Union79(IDBObjectStore value){return new Union79 { Value = value };}
+	public static implicit operator Union79(IDBIndex value){return new Union79 { Value = value };}
 }
 
 ///<summary>
-///<see cref="Number"/> or <see cref="AutoKeyword"/>
+///<see cref="Element"/> or <see cref="Document"/>
 ///</summary>
-public struct Union114
+public struct Union80
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union114(Number value){return new Union114 { Value = value };}
-	public static implicit operator Union114(AutoKeyword value){return new Union114 { Value = value };}
+	public static implicit operator Union80(Element value){return new Union80 { Value = value };}
+	public static implicit operator Union80(Document value){return new Union80 { Value = value };}
 }
 
 ///<summary>
-///<see cref="Unsupported /*WebGLRenderingContext*/"/> or <see cref="Unsupported /*WebGL2RenderingContext*/"/>
+///<see cref="Element"/> or <see cref="Document"/>
 ///</summary>
-public struct Union115
+public struct Union81
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union115(Unsupported /*WebGLRenderingContext*/ value){return new Union115 { Value = value };}
+	public static implicit operator Union81(Element value){return new Union81 { Value = value };}
+	public static implicit operator Union81(Document value){return new Union81 { Value = value };}
 }
 
 ///<summary>
-///<see cref="File"/> or <see cref="string"/>
+///<see cref="Number"/> or <c>List{Number}</c>
 ///</summary>
-public struct Union116
+public struct Union82
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union116(File value){return new Union116 { Value = value };}
-	public static implicit operator Union116(string value){return new Union116 { Value = value };}
-}
-
-///<summary>
-///<see cref="Event"/> or <see cref="Undefined"/>
-///</summary>
-public struct Union117
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union117(Event value){return new Union117 { Value = value };}
-	public static implicit operator Union117(Undefined value){return new Union117 { Value = value };}
-}
-
-///<summary>
-///<see cref="Blob"/> or <see cref="Unsupported /*MediaSource*/"/>
-///</summary>
-public struct Union118
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union118(Blob value){return new Union118 { Value = value };}
-	public static implicit operator Union118(Unsupported /*MediaSource*/ value){return new Union118 { Value = value };}
+	public static implicit operator Union82(Number value){return new Union82 { Value = value };}
+	public static implicit operator Union82(List<Number> value){return new Union82 { Value = value };}
 }
 
 ///<summary>
 ///<see cref="bool"/> or <see cref="Unsupported /*ConstrainDouble*/"/>
 ///</summary>
-public struct Union119
+public struct Union83
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union119(bool value){return new Union119 { Value = value };}
-	public static implicit operator Union119(Unsupported /*ConstrainDouble*/ value){return new Union119 { Value = value };}
+	public static implicit operator Union83(bool value){return new Union83 { Value = value };}
+	public static implicit operator Union83(Unsupported /*ConstrainDouble*/ value){return new Union83 { Value = value };}
 }
 
 ///<summary>
 ///<see cref="bool"/> or <see cref="Unsupported /*ConstrainDouble*/"/>
 ///</summary>
-public struct Union120
+public struct Union84
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union120(bool value){return new Union120 { Value = value };}
-	public static implicit operator Union120(Unsupported /*ConstrainDouble*/ value){return new Union120 { Value = value };}
+	public static implicit operator Union84(bool value){return new Union84 { Value = value };}
+	public static implicit operator Union84(Unsupported /*ConstrainDouble*/ value){return new Union84 { Value = value };}
 }
 
 ///<summary>
 ///<see cref="bool"/> or <see cref="Unsupported /*ConstrainDouble*/"/>
 ///</summary>
-public struct Union121
+public struct Union85
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union121(bool value){return new Union121 { Value = value };}
-	public static implicit operator Union121(Unsupported /*ConstrainDouble*/ value){return new Union121 { Value = value };}
+	public static implicit operator Union85(bool value){return new Union85 { Value = value };}
+	public static implicit operator Union85(Unsupported /*ConstrainDouble*/ value){return new Union85 { Value = value };}
+}
+
+///<summary>
+///<c>List{Point2D}</c> or <see cref="ConstrainPoint2DParameters"/>
+///</summary>
+public struct Union86
+{
+	public dynamic Value { get; set; }
+	public static implicit operator Union86(List<Point2D> value){return new Union86 { Value = value };}
+	public static implicit operator Union86(ConstrainPoint2DParameters value){return new Union86 { Value = value };}
+}
+
+///<summary>
+///<see cref="System.Single"/> or <see cref="System.Double"/> or <see cref="DOMMatrix"/>
+///</summary>
+public struct Union87
+{
+	public dynamic Value { get; set; }
+	public static implicit operator Union87(System.Single value){return new Union87 { Value = value };}
+	public static implicit operator Union87(System.Double value){return new Union87 { Value = value };}
+	public static implicit operator Union87(DOMMatrix value){return new Union87 { Value = value };}
+}
+
+///<summary>
+///<see cref="CSSNumericValue"/> or <see cref="CSSKeywordValue"/>
+///</summary>
+public struct Union89
+{
+	public dynamic Value { get; set; }
+	public static implicit operator Union89(CSSNumericValue value){return new Union89 { Value = value };}
+	public static implicit operator Union89(CSSKeywordValue value){return new Union89 { Value = value };}
+}
+
+///<summary>
+///<see cref="string"/> or <c>List{Union89}</c>
+///</summary>
+public struct Union88
+{
+	public dynamic Value { get; set; }
+	public static implicit operator Union88(string value){return new Union88 { Value = value };}
+	public static implicit operator Union88(List<Union89> value){return new Union88 { Value = value };}
+}
+
+///<summary>
+///<see cref="Client"/> or <see cref="ServiceWorker"/> or <see cref="MessagePort"/>
+///</summary>
+public struct Union90
+{
+	public dynamic Value { get; set; }
+	public static implicit operator Union90(Client value){return new Union90 { Value = value };}
+	public static implicit operator Union90(ServiceWorker value){return new Union90 { Value = value };}
+	public static implicit operator Union90(MessagePort value){return new Union90 { Value = value };}
+}
+
+///<summary>
+///<see cref="Client"/> or <see cref="ServiceWorker"/> or <see cref="MessagePort"/>
+///</summary>
+public struct Union91
+{
+	public dynamic Value { get; set; }
+	public static implicit operator Union91(Client value){return new Union91 { Value = value };}
+	public static implicit operator Union91(ServiceWorker value){return new Union91 { Value = value };}
+	public static implicit operator Union91(MessagePort value){return new Union91 { Value = value };}
+}
+
+///<summary>
+///<see cref="ReadableStreamDefaultReader"/> or <see cref="ReadableStreamBYOBReader"/>
+///</summary>
+public struct Union92
+{
+	public dynamic Value { get; set; }
+	public static implicit operator Union92(ReadableStreamDefaultReader value){return new Union92 { Value = value };}
+	public static implicit operator Union92(ReadableStreamBYOBReader value){return new Union92 { Value = value };}
+}
+
+///<summary>
+///<see cref="ReadableStreamDefaultController"/> or <see cref="ReadableByteStreamController"/>
+///</summary>
+public struct Union93
+{
+	public dynamic Value { get; set; }
+	public static implicit operator Union93(ReadableStreamDefaultController value){return new Union93 { Value = value };}
+	public static implicit operator Union93(ReadableByteStreamController value){return new Union93 { Value = value };}
+}
+
+///<summary>
+///<see cref="string"/> or <see cref="URLPatternInit"/>
+///</summary>
+public struct Union94
+{
+	public dynamic Value { get; set; }
+	public static implicit operator Union94(string value){return new Union94 { Value = value };}
+	public static implicit operator Union94(URLPatternInit value){return new Union94 { Value = value };}
+}
+
+///<summary>
+///<see cref="string"/> or <see cref="URLPatternInit"/> or <see cref="URLPattern"/>
+///</summary>
+public struct Union95
+{
+	public dynamic Value { get; set; }
+	public static implicit operator Union95(string value){return new Union95 { Value = value };}
+	public static implicit operator Union95(URLPatternInit value){return new Union95 { Value = value };}
+	public static implicit operator Union95(URLPattern value){return new Union95 { Value = value };}
+}
+
+///<summary>
+///<c>List{List{string}}</c> or <c>Dictionary{string, string}</c> or <see cref="string"/>
+///</summary>
+public struct Union96
+{
+	public dynamic Value { get; set; }
+	public static implicit operator Union96(List<List<string>> value){return new Union96 { Value = value };}
+	public static implicit operator Union96(Dictionary<string, string> value){return new Union96 { Value = value };}
+	public static implicit operator Union96(string value){return new Union96 { Value = value };}
+}
+
+///<summary>
+///<see cref="System.SByte"/> or <see cref="System.Int16"/> or <see cref="System.Int32"/> or <see cref="System.Byte"/> or <see cref="System.UInt16"/> or <see cref="System.UInt32"/> or <see cref="Unsupported /*Uint8ClampedArray*/"/> or <see cref="System.Int64"/> or <see cref="System.UInt64"/> or <see cref="System.Single"/> or <see cref="System.Double"/> or <see cref="Unsupported /*DataView*/"/>
+///</summary>
+public struct Union97
+{
+	public dynamic Value { get; set; }
+	public static implicit operator Union97(System.SByte value){return new Union97 { Value = value };}
+	public static implicit operator Union97(System.Int16 value){return new Union97 { Value = value };}
+	public static implicit operator Union97(System.Int32 value){return new Union97 { Value = value };}
+	public static implicit operator Union97(System.Byte value){return new Union97 { Value = value };}
+	public static implicit operator Union97(System.UInt16 value){return new Union97 { Value = value };}
+	public static implicit operator Union97(System.UInt32 value){return new Union97 { Value = value };}
+	public static implicit operator Union97(Unsupported /*Uint8ClampedArray*/ value){return new Union97 { Value = value };}
+	public static implicit operator Union97(System.Int64 value){return new Union97 { Value = value };}
+	public static implicit operator Union97(System.UInt64 value){return new Union97 { Value = value };}
+	public static implicit operator Union97(System.Single value){return new Union97 { Value = value };}
+	public static implicit operator Union97(System.Double value){return new Union97 { Value = value };}
+}
+
+///<summary>
+///<see cref="ArrayBufferView"/> or <see cref="byte"/>
+///</summary>
+public struct Union98
+{
+	public dynamic Value { get; set; }
+	public static implicit operator Union98(ArrayBufferView value){return new Union98 { Value = value };}
+	public static implicit operator Union98(byte[] value){return new Union98 { Value = value };}
+}
+
+///<summary>
+///<see cref="byte"/> or <see cref="Unsupported /*SharedArrayBuffer*/"/> or <see cref="ArrayBufferView"/>
+///</summary>
+public struct Union99
+{
+	public dynamic Value { get; set; }
+	public static implicit operator Union99(byte[] value){return new Union99 { Value = value };}
+	public static implicit operator Union99(Unsupported /*SharedArrayBuffer*/ value){return new Union99 { Value = value };}
+	public static implicit operator Union99(ArrayBufferView value){return new Union99 { Value = value };}
 }
 
 ///<summary>
 ///<see cref="double"/> or <see cref="CSSNumericValue"/> or <see cref="string"/>
 ///</summary>
-public struct Union122
+public struct Union100
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union122(double value){return new Union122 { Value = value };}
-	public static implicit operator Union122(CSSNumericValue value){return new Union122 { Value = value };}
-	public static implicit operator Union122(string value){return new Union122 { Value = value };}
+	public static implicit operator Union100(double value){return new Union100 { Value = value };}
+	public static implicit operator Union100(CSSNumericValue value){return new Union100 { Value = value };}
+	public static implicit operator Union100(string value){return new Union100 { Value = value };}
+}
+
+///<summary>
+///<see cref="double"/> or <see cref="EffectTiming"/>
+///</summary>
+public struct Union101
+{
+	public dynamic Value { get; set; }
+	public static implicit operator Union101(double value){return new Union101 { Value = value };}
+	public static implicit operator Union101(EffectTiming value){return new Union101 { Value = value };}
+}
+
+///<summary>
+///<see cref="double"/> or <see cref="EffectTiming"/>
+///</summary>
+public struct Union102
+{
+	public dynamic Value { get; set; }
+	public static implicit operator Union102(double value){return new Union102 { Value = value };}
+	public static implicit operator Union102(EffectTiming value){return new Union102 { Value = value };}
+}
+
+///<summary>
+///<see cref="Element"/> or <see cref="CSSPseudoElement"/>
+///</summary>
+public struct Union103
+{
+	public dynamic Value { get; set; }
+	public static implicit operator Union103(Element value){return new Union103 { Value = value };}
+	public static implicit operator Union103(CSSPseudoElement value){return new Union103 { Value = value };}
+}
+
+///<summary>
+///<see cref="AudioContextLatencyCategory"/> or <see cref="Number"/>
+///</summary>
+public struct Union104
+{
+	public dynamic Value { get; set; }
+	public static implicit operator Union104(AudioContextLatencyCategory value){return new Union104 { Value = value };}
+	public static implicit operator Union104(Number value){return new Union104 { Value = value };}
+}
+
+///<summary>
+///<see cref="BufferSource"/> or <see cref="ReadableStream"/>
+///</summary>
+public struct Union105
+{
+	public dynamic Value { get; set; }
+	public static implicit operator Union105(BufferSource value){return new Union105 { Value = value };}
+	public static implicit operator Union105(ReadableStream value){return new Union105 { Value = value };}
+}
+
+///<summary>
+///<see cref="HTMLVideoElement"/> or <see cref="VideoFrame"/>
+///</summary>
+public struct Union106
+{
+	public dynamic Value { get; set; }
+	public static implicit operator Union106(HTMLVideoElement value){return new Union106 { Value = value };}
+	public static implicit operator Union106(VideoFrame value){return new Union106 { Value = value };}
+}
+
+///<summary>
+///<see cref="GPUSampler"/> or <see cref="GPUTextureView"/> or <see cref="GPUBufferBinding"/> or <see cref="GPUExternalTexture"/>
+///</summary>
+public struct Union107
+{
+	public dynamic Value { get; set; }
+	public static implicit operator Union107(GPUSampler value){return new Union107 { Value = value };}
+	public static implicit operator Union107(GPUTextureView value){return new Union107 { Value = value };}
+	public static implicit operator Union107(GPUBufferBinding value){return new Union107 { Value = value };}
+	public static implicit operator Union107(GPUExternalTexture value){return new Union107 { Value = value };}
+}
+
+///<summary>
+///<see cref="GPUPipelineLayout"/> or <see cref="GPUAutoLayoutMode"/>
+///</summary>
+public struct Union108
+{
+	public dynamic Value { get; set; }
+	public static implicit operator Union108(GPUPipelineLayout value){return new Union108 { Value = value };}
+	public static implicit operator Union108(GPUAutoLayoutMode value){return new Union108 { Value = value };}
+}
+
+///<summary>
+///<see cref="GPUPipelineLayout"/> or <see cref="GPUAutoLayoutMode"/>
+///</summary>
+public struct Union109
+{
+	public dynamic Value { get; set; }
+	public static implicit operator Union109(GPUPipelineLayout value){return new Union109 { Value = value };}
+	public static implicit operator Union109(GPUAutoLayoutMode value){return new Union109 { Value = value };}
+}
+
+///<summary>
+///<see cref="ImageBitmap"/> or <see cref="ImageData"/> or <see cref="HTMLImageElement"/> or <see cref="HTMLVideoElement"/> or <see cref="VideoFrame"/> or <see cref="HTMLCanvasElement"/> or <see cref="OffscreenCanvas"/>
+///</summary>
+public struct Union110
+{
+	public dynamic Value { get; set; }
+	public static implicit operator Union110(ImageBitmap value){return new Union110 { Value = value };}
+	public static implicit operator Union110(ImageData value){return new Union110 { Value = value };}
+	public static implicit operator Union110(HTMLImageElement value){return new Union110 { Value = value };}
+	public static implicit operator Union110(HTMLVideoElement value){return new Union110 { Value = value };}
+	public static implicit operator Union110(VideoFrame value){return new Union110 { Value = value };}
+	public static implicit operator Union110(HTMLCanvasElement value){return new Union110 { Value = value };}
+	public static implicit operator Union110(OffscreenCanvas value){return new Union110 { Value = value };}
+}
+
+///<summary>
+///<see cref="HTMLCanvasElement"/> or <see cref="OffscreenCanvas"/>
+///</summary>
+public struct Union111
+{
+	public dynamic Value { get; set; }
+	public static implicit operator Union111(HTMLCanvasElement value){return new Union111 { Value = value };}
+	public static implicit operator Union111(OffscreenCanvas value){return new Union111 { Value = value };}
+}
+
+///<summary>
+///<c>List{Number}</c> or <see cref="GPUColorDict"/>
+///</summary>
+public struct Union112
+{
+	public dynamic Value { get; set; }
+	public static implicit operator Union112(List<Number> value){return new Union112 { Value = value };}
+	public static implicit operator Union112(GPUColorDict value){return new Union112 { Value = value };}
+}
+
+///<summary>
+///<c>List{GPUIntegerCoordinate}</c> or <see cref="GPUOrigin2DDict"/>
+///</summary>
+public struct Union113
+{
+	public dynamic Value { get; set; }
+	public static implicit operator Union113(List<GPUIntegerCoordinate> value){return new Union113 { Value = value };}
+	public static implicit operator Union113(GPUOrigin2DDict value){return new Union113 { Value = value };}
+}
+
+///<summary>
+///<c>List{GPUIntegerCoordinate}</c> or <see cref="GPUOrigin3DDict"/>
+///</summary>
+public struct Union114
+{
+	public dynamic Value { get; set; }
+	public static implicit operator Union114(List<GPUIntegerCoordinate> value){return new Union114 { Value = value };}
+	public static implicit operator Union114(GPUOrigin3DDict value){return new Union114 { Value = value };}
+}
+
+///<summary>
+///<c>List{GPUIntegerCoordinate}</c> or <see cref="GPUExtent3DDict"/>
+///</summary>
+public struct Union115
+{
+	public dynamic Value { get; set; }
+	public static implicit operator Union115(List<GPUIntegerCoordinate> value){return new Union115 { Value = value };}
+	public static implicit operator Union115(GPUExtent3DDict value){return new Union115 { Value = value };}
 }
 
 ///<summary>
 ///<see cref="ulong"/> or <c>List{ulong}</c>
 ///</summary>
+public struct Union116
+{
+	public dynamic Value { get; set; }
+	public static implicit operator Union116(ulong value){return new Union116 { Value = value };}
+	public static implicit operator Union116(List<ulong> value){return new Union116 { Value = value };}
+}
+
+///<summary>
+///<see cref="SFrameTransform"/> or <see cref="RTCRtpScriptTransform"/>
+///</summary>
+public struct Union117
+{
+	public dynamic Value { get; set; }
+	public static implicit operator Union117(SFrameTransform value){return new Union117 { Value = value };}
+	public static implicit operator Union117(RTCRtpScriptTransform value){return new Union117 { Value = value };}
+}
+
+///<summary>
+///<see cref="SmallCryptoKeyID"/> or <see cref="double"/>
+///</summary>
+public struct Union118
+{
+	public dynamic Value { get; set; }
+	public static implicit operator Union118(SmallCryptoKeyID value){return new Union118 { Value = value };}
+	public static implicit operator Union118(double value){return new Union118 { Value = value };}
+}
+
+///<summary>
+///<see cref="string"/> or <c>List{string}</c>
+///</summary>
+public struct Union119
+{
+	public dynamic Value { get; set; }
+	public static implicit operator Union119(string value){return new Union119 { Value = value };}
+	public static implicit operator Union119(List<string> value){return new Union119 { Value = value };}
+}
+
+///<summary>
+///<see cref="BufferSource"/> or <see cref="Blob"/> or <see cref="string"/>
+///</summary>
+public struct Union120
+{
+	public dynamic Value { get; set; }
+	public static implicit operator Union120(BufferSource value){return new Union120 { Value = value };}
+	public static implicit operator Union120(Blob value){return new Union120 { Value = value };}
+	public static implicit operator Union120(string value){return new Union120 { Value = value };}
+}
+
+///<summary>
+///<see cref="Number"/> or <see cref="AutoKeyword"/>
+///</summary>
+public struct Union121
+{
+	public dynamic Value { get; set; }
+	public static implicit operator Union121(Number value){return new Union121 { Value = value };}
+	public static implicit operator Union121(AutoKeyword value){return new Union121 { Value = value };}
+}
+
+///<summary>
+///<see cref="Unsupported /*WebGLRenderingContext*/"/> or <see cref="Unsupported /*WebGL2RenderingContext*/"/>
+///</summary>
+public struct Union122
+{
+	public dynamic Value { get; set; }
+	public static implicit operator Union122(Unsupported /*WebGLRenderingContext*/ value){return new Union122 { Value = value };}
+}
+
+///<summary>
+///<see cref="Document"/> or <see cref="XMLHttpRequestBodyInit"/>
+///</summary>
 public struct Union123
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union123(ulong value){return new Union123 { Value = value };}
-	public static implicit operator Union123(List<ulong> value){return new Union123 { Value = value };}
+	public static implicit operator Union123(Document value){return new Union123 { Value = value };}
+	public static implicit operator Union123(XMLHttpRequestBodyInit value){return new Union123 { Value = value };}
+}
+
+///<summary>
+///<see cref="File"/> or <see cref="string"/>
+///</summary>
+public struct Union124
+{
+	public dynamic Value { get; set; }
+	public static implicit operator Union124(File value){return new Union124 { Value = value };}
+	public static implicit operator Union124(string value){return new Union124 { Value = value };}
 }
 

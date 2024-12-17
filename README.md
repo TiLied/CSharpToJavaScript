@@ -1,5 +1,5 @@
 # CSharpToJavaScript
-Brute forcing conversion(translation) from C# to Javascript.
+Brute forcing conversion(generating) from C# to Javascript.
 
 This is a personal project with purpose to learn and understand better c# and js at the same time. Many stuff is not supported and some won't. Updates will be happening when I'm using this library.(irregular)
 
@@ -90,16 +90,20 @@ More examples [here](https://tilied.github.io/CSTOJS_Pages/articles/intro.html).
 - [ ] Wiki?????
 - [x] ~Better and more examples~ [Here](https://tilied.github.io/CSTOJS_Pages/articles/intro.html). WIP!
 - [x] ~Figure out how to do docs for [api](https://github.com/TiLied/CSharpToJavaScript/tree/master/CSharpToJavaScript/APIs/JS)~ [Docs](https://tilied.github.io/CSTOJS_Pages/) WIP!
-- [ ] [CLI](https://learn.microsoft.com/en-us/dotnet/standard/commandline/)?
+- [x] ~[CLI](https://learn.microsoft.com/en-us/dotnet/standard/commandline/)?~ [Here](https://github.com/TiLied/CSTOJS_CLI)
 - [ ] [Visual Studio extension](https://learn.microsoft.com/en-us/visualstudio/extensibility/starting-to-develop-visual-studio-extensions?view=vs-2022)?
 - [ ] [Visual Studio Code extension](https://code.visualstudio.com/api)??? Can I?
 
 ## Related Repository 
-https://github.com/TiLied/GenDocsLib
+- Library for generating docs: https://github.com/TiLied/GenDocsLib
+- Library for generating csharp: https://github.com/TiLied/GenCSharpLib
 
-https://github.com/TiLied/GenCSharpLib
+CLI for library: https://github.com/TiLied/CSTOJS_CLI
+  
+Website/documentation: https://github.com/TiLied/CSTOJS_Pages
+- Blazor WebAssembly: https://github.com/TiLied/CSTOJS_BWA
 
-## Thanks and usings
+## Thanks for packages and content <3
 [Microsoft CodeAnalysis CSharp](https://www.nuget.org/packages/Microsoft.CodeAnalysis.CSharp/) nuget package
 
 [MDN-content](https://github.com/mdn/content) for js docs

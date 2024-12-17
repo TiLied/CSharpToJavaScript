@@ -28,6 +28,14 @@ namespace CSharpToJavaScript
         public bool DisableConsoleColors { get; set; } = false;
 
 		/// <summary>
+		/// Self-explanatory, Disable Console Output.
+		/// </summary>
+		/// <value>
+		/// Default: <c>false</c>
+		/// </value>
+		public bool DisableConsoleOutput { get; set; } = false;
+
+		/// <summary>
 		/// Output path for javascript file.
 		/// </summary>
 		/// <value>

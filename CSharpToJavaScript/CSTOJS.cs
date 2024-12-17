@@ -10,6 +10,7 @@ using System.Linq;
 using Microsoft.CodeAnalysis.Text;
 using System.Text;
 using System;
+using CSharpToJavaScript.Utils;
 
 namespace CSharpToJavaScript
 {
@@ -17,22 +18,23 @@ namespace CSharpToJavaScript
 	/// Main type for CSharpToJavaScript.
 	/// </summary>
 	public class CSTOJS : ILog
-    {
-        private CSTOJSOptions _Options = new();
-        private Stopwatch _Stopwatch = new();
+	{
+		private readonly CSTOJSOptions _Options = new();
+		private readonly Stopwatch _Stopwatch = new();
+		private readonly ILog? _Log = null;
+
 		private Walker? _Walker = null;
-        private readonly ILog? _Log = null;
 
 		/// <summary>
 		/// New instance of <see cref="CSTOJS"/> with default options, see <see cref="CSTOJSOptions"/>.
 		/// </summary>
 		public CSTOJS() 
 		{
-            _Log = this;
+			_Log = this;
 
 			Assembly assembly = Assembly.GetExecutingAssembly();
-            //https://stackoverflow.com/a/73474279
-            _Log.SuccessLine($"{assembly.GetName().Name} {assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion}");
+			//https://stackoverflow.com/a/73474279
+			_Log.SuccessLine($"{assembly.GetName().Name} {assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion}");
 		}
 
 		/// <summary>
@@ -41,16 +43,16 @@ namespace CSharpToJavaScript
 		/// <param name="options">Options of <see cref="CSTOJS"/>, see <see cref="CSTOJSOptions"/>.</param>
 		public CSTOJS(CSTOJSOptions options)
 		{
-            _Options = options;
+			_Options = options;
 
-            _Log = ILog.GetILog(this, _Options);
+			_Log = ILog.GetILog(this, _Options);
 
-            if (_Options.DisableConsoleOutput == false)
+			if (_Options.DisableConsoleOutput == false)
 			{
 				Assembly assembly = Assembly.GetExecutingAssembly();
-                //https://stackoverflow.com/a/73474279
-                _Log.SuccessLine($"{assembly.GetName().Name} {assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion}");
-            }
+				//https://stackoverflow.com/a/73474279
+				_Log.SuccessLine($"{assembly.GetName().Name} {assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion}");
+			}
 		}
 
 		/// <summary>
@@ -61,7 +63,8 @@ namespace CSharpToJavaScript
 		/// <returns>empty Task</returns>
 		public async Task GenerateOneAsync(string path, string? filename = null) 
 		{
-			Assembly assembly = Assembly.GetEntryAssembly();
+			
+			Assembly? assembly = Assembly.GetEntryAssembly();
 			List<FileInfo> files = new();
 
 			if (File.Exists(path))
@@ -100,7 +103,7 @@ namespace CSharpToJavaScript
 				else
 					pathCombined = Path.Combine(_Options.OutPutPath, file.Name.Replace(".cs", ".js"));
 
-				await File.WriteAllTextAsync(pathCombined, _Walker.JSSB.ToString());
+				await File.WriteAllTextAsync(pathCombined, _Walker?.JSSB.ToString());
 
 				_Log.SuccessLine($"--- Done!");
 				_Log.SuccessLine($"--- Path: {pathCombined}");
@@ -115,7 +118,7 @@ namespace CSharpToJavaScript
 		/// <returns>List of StringBuilder</returns>
 		public List<StringBuilder> GenerateOne(string path)
 		{
-			Assembly assembly = Assembly.GetEntryAssembly();
+			Assembly? assembly = Assembly.GetEntryAssembly();
 			List<FileInfo> files = new();
 			List<StringBuilder> jsStringBuilders = new();
 
@@ -161,10 +164,9 @@ namespace CSharpToJavaScript
 		/// <exception cref="ArgumentNullException"></exception>
 		public StringBuilder GenerateOneFromString(string csstring, List<MetadataReference>? references = null) 
 		{
-			if (csstring == null)
-				throw new ArgumentNullException(nameof(csstring));
+			ArgumentNullException.ThrowIfNull(csstring);
 
-			Assembly assembly = Assembly.GetEntryAssembly();
+			Assembly? assembly = Assembly.GetEntryAssembly();
 
 			SyntaxTree? _tree = CSharpSyntaxTree.ParseText(csstring);
 			
@@ -189,10 +191,9 @@ namespace CSharpToJavaScript
 		/// <exception cref="ArgumentNullException"></exception>
 		public async Task GenerateOneFromStringAsync(string csstring, string? filename = "main.js", List<MetadataReference>? references = null)
 		{
-			if (csstring == null)
-				throw new ArgumentNullException(nameof(csstring));
+			ArgumentNullException.ThrowIfNull(csstring);
 
-			Assembly assembly = Assembly.GetEntryAssembly();
+			Assembly? assembly = Assembly.GetEntryAssembly();
 
 			SyntaxTree? _tree = CSharpSyntaxTree.ParseText(csstring);
 
@@ -217,21 +218,21 @@ namespace CSharpToJavaScript
 		}
 
 
-		private void Generate(SyntaxTree? tree, Assembly assembly, List<MetadataReference>? refs = null) 
+		private void Generate(SyntaxTree? tree, Assembly? assembly, List<MetadataReference>? refs = null) 
 		{
-            if(_Options.Debug) 
-            {
-                _Stopwatch.Restart();
+			if(_Options.Debug) 
+			{
+				_Stopwatch.Restart();
 				_Log.WriteLine("Start stopwatch");
-            }
+			}
 
 			CompilationUnitSyntax root = tree.GetCompilationUnitRoot();
 
 
-			string assemblyPath = Path.GetDirectoryName(assembly.Location);
+			string? assemblyPath = Path.GetDirectoryName(assembly?.Location);
 			List<MetadataReference> references = new() { };
 
-			string rtPath = Path.GetDirectoryName(typeof(object).Assembly.Location);
+			string? rtPath = Path.GetDirectoryName(typeof(object).Assembly.Location);
 
 			if (refs == null)
 			{
@@ -485,12 +486,12 @@ namespace CSharpToJavaScript
 
 			_Walker.JSSB.Append(_Options.AddSBInEnd);
 
-            if (_Options.Debug)
-            {
-                _Stopwatch.Stop();
+			if (_Options.Debug)
+			{
+				_Stopwatch.Stop();
 				_Log.WriteLine($"Stop stopwatch: {_Stopwatch.Elapsed}");
-            }
-        }
+			}
+		}
 
 	}
 }

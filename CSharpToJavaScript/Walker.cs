@@ -494,10 +494,17 @@ namespace CSharpToJavaScript
 						case SyntaxKind.StringLiteralExpression:
 						case SyntaxKind.InterpolatedStringExpression:
 						case SyntaxKind.ObjectCreationExpression:
-							{
+						case SyntaxKind.ImplicitObjectCreationExpression:
+						{
 								Visit(asNode);
 								break;
+						}
+						case SyntaxKind.AnonymousObjectCreationExpression:
+							{
+								VisitAnonymousObjectCreationExpression(asNode as AnonymousObjectCreationExpressionSyntax);
+								break;
 							}
+						
 						case SyntaxKind.ElementAccessExpression:
 						case SyntaxKind.IdentifierName:
 						case SyntaxKind.SimpleMemberAccessExpression:
@@ -522,6 +529,91 @@ namespace CSharpToJavaScript
 						default:
 							SM.Log($"asToken : {kind}");
 
+							break;
+					}
+				}
+			}
+		}
+
+		public override void VisitAnonymousObjectCreationExpression(AnonymousObjectCreationExpressionSyntax node)
+		{
+			ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
+
+			for (int i = 0; i < nodesAndTokens.Count; i++)
+			{
+				SyntaxNode? asNode = nodesAndTokens[i].AsNode();
+
+				if (asNode != null)
+				{
+					SyntaxKind kind = asNode.Kind();
+
+					switch (kind)
+					{
+						case SyntaxKind.AnonymousObjectMemberDeclarator:
+							Visit(asNode);
+							break;
+						default:
+							SM.Log($"asNode : {kind}");
+							break;
+					}
+				}
+				else
+				{
+					SyntaxToken asToken = nodesAndTokens[i].AsToken();
+					SyntaxKind kind = asToken.Kind();
+
+					switch (kind)
+					{
+						case SyntaxKind.OpenBraceToken:
+						case SyntaxKind.CloseBraceToken:
+							VisitToken(asToken);
+							break;
+						case SyntaxKind.NewKeyword:
+							break;
+						default:
+							SM.Log($"asToken : {kind}");
+							break;
+					}
+				}
+			}
+		}
+
+		public override void VisitNameEquals(NameEqualsSyntax node)
+		{
+			ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
+
+			for (int i = 0; i < nodesAndTokens.Count; i++)
+			{
+				SyntaxNode? asNode = nodesAndTokens[i].AsNode();
+
+				if (asNode != null)
+				{
+					SyntaxKind kind = asNode.Kind();
+
+					switch (kind)
+					{
+						case SyntaxKind.IdentifierName:
+							VisitIdentifierName(asNode as IdentifierNameSyntax);
+							break;
+						default:
+							SM.Log($"asNode : {kind}");
+							break;
+					}
+				}
+				else
+				{
+					SyntaxToken asToken = nodesAndTokens[i].AsToken();
+					SyntaxKind kind = asToken.Kind();
+
+					switch (kind)
+					{
+						case SyntaxKind.EqualsToken:
+							{
+								JSSB.Append(":");
+								break;
+							}
+						default:
+							SM.Log($"asToken : {kind}");
 							break;
 					}
 				}
@@ -1772,6 +1864,7 @@ namespace CSharpToJavaScript
 						}
 					}
 				}
+				node = _SNOriginal;
 			}
 			else
 			{
@@ -1917,6 +2010,17 @@ namespace CSharpToJavaScript
 					return false;
 				}
 
+			}
+
+			if (iSymbol != null && iSymbol.ContainingType != null && iSymbol.ContainingType.IsAnonymousType == true)
+			{
+				if (CustomCSNamesToJS(node) == false)
+				{
+					VisitLeadingTrivia(identifier);
+					JSSB.Append(text);
+					VisitTrailingTrivia(identifier);
+				}
+				return true;
 			}
 
 			foreach (Type type in _Options.CustomCSTypesToJS)

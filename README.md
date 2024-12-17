@@ -71,7 +71,7 @@ public class Test
 	}
 }
 ```
-Above code will generate test.js file that contains:
+Above code will generate "main.js" file that contains:
 ```javascript
 class Test
 {

@@ -71,44 +71,58 @@ namespace CSharpToJavaScript
 		}
 
 		/// <summary>
-		/// Method for generating js file.
+		/// Method for generating js file/files.
 		/// </summary>
-		/// <param name="path">Full path to cs file.</param>
-		/// <param name="filename">Filename of a js file.</param>
+		/// <param name="path">Full path to cs file or to the folder with cs files.</param>
+		/// <param name="filename">Optional! Filename of a js file if you generating one file!</param>
 		/// <returns></returns>
 		public async Task GenerateOneAsync(string path, string? filename = null) 
 		{
 			Assembly assembly = Assembly.GetEntryAssembly();
+			List<FileInfo> files = new();
 
-			FileInfo file = new(path);
-
-			SyntaxTree? _tree = null;
-
-			using (var stream = File.OpenRead(path))
+			if (File.Exists(path))
 			{
-				_tree = CSharpSyntaxTree.ParseText(SourceText.From(stream), path: path);
+				files.Add(new FileInfo(path));
+			}
+			else 
+			{
+				DirectoryInfo folder = new(path);
+
+				files = folder.GetFiles("*.cs").ToList();
+
+				filename = null;
 			}
 
-			await GenerateAsync(_tree, assembly);
-
-			if (!Directory.Exists(Options.OutPutPath))
+			foreach (FileInfo file in files)
 			{
-				Directory.CreateDirectory(Options.OutPutPath);
+				SyntaxTree? _tree = null;
+
+				using (var stream = File.OpenRead(file.FullName))
+				{
+					_tree = CSharpSyntaxTree.ParseText(SourceText.From(stream), path: file.FullName);
+				}
+
+				await GenerateAsync(_tree, assembly);
+
+				if (!Directory.Exists(Options.OutPutPath))
+				{
+					Directory.CreateDirectory(Options.OutPutPath);
+				}
+
+				string pathCombined = string.Empty;
+
+				if (filename != null)
+					pathCombined = Path.Combine(Options.OutPutPath, filename);
+				else
+					pathCombined = Path.Combine(Options.OutPutPath, file.Name.Replace(".cs", ".js"));
+
+				await File.WriteAllTextAsync(pathCombined, _Walker.JSSB.ToString());
+
+				Log($"--- Done!");
+				Log($"--- Path: {pathCombined}");
+				Log($"--- --- ---");
 			}
-
-			string pathCombined = string.Empty;
-
-			if (filename != null)
-				pathCombined = Path.Combine(Options.OutPutPath, filename);
-			else
-				pathCombined = Path.Combine(Options.OutPutPath, file.Name.Replace(".cs", ".js"));
-
-
-			await File.WriteAllTextAsync(pathCombined, _Walker.JSSB.ToString());
-
-			Log($"--- Done!");
-			Log($"--- Path: {pathCombined}");
-			Log($"--- --- ---");
 		}
 		/// <summary>
 		/// Method for generating from string.
@@ -135,44 +149,6 @@ namespace CSharpToJavaScript
 			Log($"--- --- ---");
 
 			return _Walker.JSSB;
-		}
-		/// <summary>
-		/// Method for generating multiply js files.
-		/// </summary>
-		/// <param name="path">Full path to the folder/directory.</param>
-		/// <returns></returns>
-		public async Task GenerateManyAsync(string path)
-		{
-			Assembly assembly = Assembly.GetEntryAssembly();
-
-			DirectoryInfo folder = new(path);
-
-			FileInfo[] Files = folder.GetFiles("*.cs");
-
-			foreach (FileInfo file in Files)
-			{
-				SyntaxTree? _tree = null;
-
-				using (var stream = File.OpenRead(file.FullName))
-				{
-					_tree = CSharpSyntaxTree.ParseText(SourceText.From(stream), path: file.FullName);
-				}
-
-				await GenerateAsync(_tree, assembly);
-
-				if (!Directory.Exists(Options.OutPutPath))
-				{
-					Directory.CreateDirectory(Options.OutPutPath);
-				}
-
-				string pathCombined = Path.Combine(Options.OutPutPath, file.Name.Replace(".cs", ".js"));
-
-				await File.WriteAllTextAsync(pathCombined, _Walker.JSSB.ToString());
-
-				Log($"--- Done!");
-				Log($"--- Path: {pathCombined}");
-				Log($"--- --- ---");
-			}
 		}
 
 		private async Task GenerateAsync(SyntaxTree? tree, Assembly assembly, List<MetadataReference>? refs = null) 

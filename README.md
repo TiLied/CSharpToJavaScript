@@ -30,14 +30,14 @@ class Test
 ```
 
 ## How to use
-- 1 Create c# project or use existed one
-- 2 Install [nuget package](https://www.nuget.org/packages/CSharpToJavaScript/) or Download a specific version(visit [releases](https://github.com/TiLied/CSharpToJavaScript/releases)) or Download a master(Code-Local-Download ZIP)
-- 3 Skip this if using Nuget package. Follow [this](https://learn.microsoft.com/en-us/dotnet/core/tutorials/library-with-visual-studio?pivots=dotnet-7-0#add-a-project-reference) to add reference to project.
+- 1 Create c# project or use existed one.
+- 2 Install [nuget package](https://www.nuget.org/packages/CSharpToJavaScript/) or Download a specific version(visit [releases](https://github.com/TiLied/CSharpToJavaScript/releases)) or Download a master(Code-Local-Download ZIP).
+- 3 Skip this if using Nuget package. Follow [this](https://learn.microsoft.com/en-us/dotnet/core/tutorials/library-with-visual-studio?pivots=dotnet-7-0#add-a-project-reference) to add reference to the project.
 - 4 In the Main method add:
 ```csharp
 Assembly assembly = Assembly.GetExecutingAssembly();
 CSTOJS cstojs = new(assembly);
-await cstojs.Generate2Async("FULL PATH TO CSHARP FILE YOU WHAT TO CONVERT");
+await cstojs.GenerateAsync("FULL PATH TO CSHARP FILE YOU WHAT TO CONVERT");
 ```
 - 5 Run program and file will be generated in output path(default is "Directory.GetCurrentDirectory()") with name "main.js"(default)
 - 6 See below for simple example "HelloWorld"
@@ -55,7 +55,7 @@ public class Program
 	{
 		Assembly executingAssembly = Assembly.GetExecutingAssembly();
 		CSTOJS cstojs = new(executingAssembly);
-		await cstojs.Generate2Async("C:\\GitReps\\ConsoleAppTest\\CSharp\\Test.cs");
+		await cstojs.GenerateAsync("C:\\GitReps\\ConsoleAppTest\\CSharp\\Test.cs");
 
 		Console.ReadKey();
 	}
@@ -87,9 +87,9 @@ class Test
 More examples [here](https://tilied.github.io/CSharpToJavaScript/articles/intro.html). WIP!
 
 ## Some Todos
-- [ ] More comments in code, especially in [CSTOJSOptions](https://github.com/TiLied/CSharpToJavaScript/blob/master/CSharpToJavaScript/CSTOJSOptions.cs)
-- [ ] Wiki?
-- [ ] Better and more examples
+- [x] ~More comments in code, especially in [CSTOJSOptions](https://github.com/TiLied/CSharpToJavaScript/blob/master/CSharpToJavaScript/CSTOJSOptions.cs)~
+- [ ] Wiki???
+- [x] ~Better and more examples~ [Here](https://tilied.github.io/CSharpToJavaScript/articles/intro.html). WIP!
 - [x] ~Figure out how to do docs for [api](https://github.com/TiLied/CSharpToJavaScript/tree/master/CSharpToJavaScript/APIs/JS)~ [Docs](https://tilied.github.io/CSharpToJavaScript/) WIP!
 
 ## Related Repository 

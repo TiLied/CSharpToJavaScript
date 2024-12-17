@@ -743,7 +743,9 @@ namespace CSharpToJavaScript
 
 					if (kind == SyntaxKind.AccessorList) 
 					{
-						if (asNode.ToString() == "{ get; set; }") 
+						string _getSetStr = asNode.ToString().Trim().Replace(" ","");
+
+						if (_getSetStr == "{get;set;}" || _getSetStr == "{get;}")
 						{
 							IEnumerable<SyntaxNodeOrToken> key = from n in nodesAndTokens
 									  where n.IsNode
@@ -778,8 +780,8 @@ namespace CSharpToJavaScript
 							   {
 									SyntaxFactory.Token(SyntaxKind.PrivateKeyword)
 							   }))
-						   .WithLeadingTrivia(SyntaxFactory.ParseLeadingTrivia("\t\t"))
-							.WithTrailingTrivia(SyntaxFactory.ParseLeadingTrivia("\r\n"));
+						   .WithLeadingTrivia(node.GetLeadingTrivia())
+							.WithTrailingTrivia(node.GetTrailingTrivia());
 							}
 							else 
 							{
@@ -796,8 +798,8 @@ namespace CSharpToJavaScript
 							   {
 									SyntaxFactory.Token(SyntaxKind.PrivateKeyword)
 							   }))
-						   .WithLeadingTrivia(SyntaxFactory.ParseLeadingTrivia("\t\t"))
-							.WithTrailingTrivia(SyntaxFactory.ParseLeadingTrivia("\r\n"));
+						   .WithLeadingTrivia(node.GetLeadingTrivia())
+							.WithTrailingTrivia(node.GetTrailingTrivia());
 							}
 
 							VisitFieldDeclaration(field);

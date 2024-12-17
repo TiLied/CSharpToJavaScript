@@ -39,7 +39,9 @@ namespace CSharpToJavaScript
 				Trace.AutoFlush = true;
 			}
 
-			Trace.Listeners.Add(new ConsoleTraceListener());
+			ConsoleTraceListener consoleTraceListener = new();
+			if(Trace.Listeners.Contains(consoleTraceListener) == false)
+				Trace.Listeners.Add(consoleTraceListener);
 
 			Assembly assembly = Assembly.GetExecutingAssembly();
 			//https://stackoverflow.com/a/73474279
@@ -63,7 +65,9 @@ namespace CSharpToJavaScript
 				Trace.AutoFlush = true;
 			}
 
-			Trace.Listeners.Add(new ConsoleTraceListener());
+			ConsoleTraceListener consoleTraceListener = new();
+			if (Trace.Listeners.Contains(consoleTraceListener) == false)
+				Trace.Listeners.Add(consoleTraceListener);
 
 			Assembly assembly = Assembly.GetExecutingAssembly();
 			//https://stackoverflow.com/a/73474279

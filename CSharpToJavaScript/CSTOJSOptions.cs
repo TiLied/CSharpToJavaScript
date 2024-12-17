@@ -53,6 +53,28 @@ namespace CSharpToJavaScript
 		public bool UseVarOverLet { get; set; } = false;
 
 		/// <summary>
+		/// Keep Brace <c>{</c> on the same line. 
+		/// </summary>
+		/// <remarks>
+		/// <blockquote class="NOTE"><h5>NOTE</h5>Note: It is better write from the start in c#, then using this option.</blockquote>
+		/// </remarks>
+		/// <value>
+		/// Default: <c>false</c>
+		/// </value>
+		public bool KeepBraceOnTheSameLine { get; set; } = false;
+
+		/// <summary>
+		/// Self-explanatory, Normalize Whitespace. />
+		/// </summary>
+		/// /// <remarks>
+		/// <blockquote class="NOTE"><h5>NOTE</h5>Note: Do not use with <see cref="CSTOJSOptions.KeepBraceOnTheSameLine" /></blockquote>
+		/// </remarks>
+		/// <value>
+		/// Default: <c>false</c>
+		/// </value>
+		public bool NormalizeWhitespace { get; set; } = false;
+
+		/// <summary>
 		/// List of custom names to convert.
 		/// </summary>
 		/// <remarks>Example: <c>new List&lt;Tuple&lt;string, string&gt;&gt;(){new Tuple&lt;string, string&gt;("Console", "console")}</c>. Will convert "Console" to "console".</remarks>

@@ -25,8 +25,8 @@ namespace CSharpToJavaScript
 		private readonly CSTOJSOptions _Options;
 		private readonly SemanticModel _Model;
 
-		private SyntaxNode? _SNOriginal = null;
-		private SyntaxNode? _BaseConstructorInitializerNode = null;
+		private SyntaxNode? _SNOriginalAsExpression = null;
+		private SyntaxNode? _SNBaseConstructorInitializerNode = null;
 		private SyntaxNode? _SNPropertyType = null;
 
 		private string _NameSpaceStr = string.Empty;
@@ -359,7 +359,7 @@ namespace CSharpToJavaScript
 							break;
 						case SyntaxKind.BaseConstructorInitializer:
 							{
-								_BaseConstructorInitializerNode = asNode;
+								_SNBaseConstructorInitializerNode = asNode;
 								SyntaxTriviaList _syntaxTrivias = asNode.GetTrailingTrivia();
 								for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
 								{
@@ -569,7 +569,7 @@ namespace CSharpToJavaScript
 						case SyntaxKind.OpenBraceToken: 
 							{
 								VisitToken(asToken);
-								if (_BaseConstructorInitializerNode != null)
+								if (_SNBaseConstructorInitializerNode != null)
 								{
 									SyntaxTriviaList _syntaxTrivias = asToken.LeadingTrivia;
 									for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
@@ -577,10 +577,10 @@ namespace CSharpToJavaScript
 										VisitTrivia(_syntaxTrivias[_i]);
 									}
 									JSSB.Append("\tsuper");
-									Visit((_BaseConstructorInitializerNode as ConstructorInitializerSyntax).ArgumentList);
+									Visit((_SNBaseConstructorInitializerNode as ConstructorInitializerSyntax).ArgumentList);
 									//Todo!
 									//JSSB.Append(";");
-									_BaseConstructorInitializerNode = null;
+									_SNBaseConstructorInitializerNode = null;
 								}
 								break;
 							}
@@ -2152,13 +2152,12 @@ namespace CSharpToJavaScript
 							break;
 						case SyntaxKind.AsExpression:
 							{
-
 								//Todo double/multiply asExpression?? How?
-								_SNOriginal = (asNode as BinaryExpressionSyntax).Left;
+								_SNOriginalAsExpression = (asNode as BinaryExpressionSyntax).Left;
 
-								Visit(_SNOriginal.WithoutTrailingTrivia());
+								Visit(_SNOriginalAsExpression.WithoutTrailingTrivia());
 
-								_SNOriginal = null;
+								_SNOriginalAsExpression = null;
 								break;
 							}
 						default:
@@ -2717,9 +2716,9 @@ namespace CSharpToJavaScript
 			}
 
 			SymbolInfo? symbolInfo = null;
-			if (_SNOriginal != null)
+			if (_SNOriginalAsExpression != null)
 			{
-				IEnumerable<SyntaxNodeOrToken> _identifierNameSyntax = _SNOriginal.DescendantNodesAndTokens().Where(e => e.IsToken == true);
+				IEnumerable<SyntaxNodeOrToken> _identifierNameSyntax = _SNOriginalAsExpression.DescendantNodesAndTokens().Where(e => e.IsToken == true);
 				foreach (SyntaxNodeOrToken _item in _identifierNameSyntax)
 				{
 					SyntaxToken _syntaxToken = _item.AsToken();
@@ -2733,7 +2732,7 @@ namespace CSharpToJavaScript
 						}
 					}
 				}
-				node = _SNOriginal;
+				node = _SNOriginalAsExpression;
 			}
 			else
 			{
@@ -2909,7 +2908,7 @@ namespace CSharpToJavaScript
 					object[] _attrs = type.GetCustomAttributes(true);
 					foreach (object _attr in _attrs)
 					{
-						ToAttribute _authAttr = _attr as ToAttribute;
+						ToAttribute? _authAttr = _attr as ToAttribute;
 						if (_authAttr != null)
 						{
 							VisitLeadingTrivia(identifier);
@@ -2922,64 +2921,28 @@ namespace CSharpToJavaScript
 				}
 
 				MemberInfo[] _Members = type.GetMembers();
-				foreach (MemberInfo _memberInfo in _Members)
+
+				bool b = _CheckMembersInNestedClasses(_Members);
+
+				if (b == true)
+					return true;
+			}
+			bool _CheckMembersInNestedClasses(MemberInfo[] _members)
+			{
+				foreach (MemberInfo _memberInfo in _members)
 				{
-					//TODO! A better way for nested classes!
-					var c = _memberInfo as Type;
-
-					if (c != null && c.IsClass)
+					Type? _type = _memberInfo as Type;
+					if (_type != null && _type.IsClass)
 					{
-						MemberInfo[] _Members1 = c.GetMembers();
-						foreach (MemberInfo _memberInfo1 in _Members1)
-						{
-							//TODO!  A better way for nested classes!
-							var c1 = _memberInfo1 as Type;
-
-							if (c1 != null && c1.IsClass)
-							{
-								MemberInfo[] _Members2 = c1.GetMembers();
-								foreach (MemberInfo _memberInfo2 in _Members2)
-								{
-									if (_memberInfo2.Name == text)
-									{
-										object[] _attrs2 = _memberInfo2.GetCustomAttributes(true);
-										foreach (object _attr2 in _attrs2)
-										{
-											ToAttribute _authAttr2 = _attr2 as ToAttribute;
-											if (_authAttr2 != null)
-											{
-												JSSB.Append($"{_authAttr2.Convert(text)}");
-												return true;
-											}
-										}
-
-										return true;
-									}
-								}
-							}
-							if (_memberInfo1.Name == text)
-							{
-								object[] _attrs1 = _memberInfo1.GetCustomAttributes(true);
-								foreach (object _attr1 in _attrs1)
-								{
-									ToAttribute _authAttr1 = _attr1 as ToAttribute;
-									if (_authAttr1 != null)
-									{
-										JSSB.Append($"{_authAttr1.Convert(text)}");
-										return true;
-									}
-								}
-
-								return true;
-							}
-						}
+						return _CheckMembersInNestedClasses(_type.GetMembers());
 					}
 					if (_memberInfo.Name == text)
 					{
 						object[] _attrs = _memberInfo.GetCustomAttributes(true);
+
 						foreach (object _attr in _attrs)
 						{
-							ToAttribute _authAttr = _attr as ToAttribute;
+							ToAttribute? _authAttr = _attr as ToAttribute;
 							if (_authAttr != null)
 							{
 								JSSB.Append($"{_authAttr.Convert(text)}");
@@ -2990,6 +2953,8 @@ namespace CSharpToJavaScript
 						return true;
 					}
 				}
+
+				return false;
 			}
 
 			if (CustomCSNamesToJS(node) == false)

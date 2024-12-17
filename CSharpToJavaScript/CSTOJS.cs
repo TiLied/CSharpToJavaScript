@@ -512,9 +512,9 @@ namespace CSharpToJavaScript
 			if (_Options.KeepBraceOnTheSameLine)
 			{
 				//TODO! remove whitespace trivia before brace!
-				List<SyntaxToken> allBraces = trueRoot.DescendantTokens().Where((e) => e.IsKind(SyntaxKind.OpenBraceToken)).ToList();
+				SyntaxToken[] allBraces = trueRoot.DescendantTokens().Where((e) => e.IsKind(SyntaxKind.OpenBraceToken)).ToArray();
 				List<SyntaxTrivia> allTriviaToReplace = new();
-				for (int i = 0; i < allBraces.Count; i++)
+				for (int i = 0; i < allBraces.Length; i++)
 				{
 					SyntaxToken _token = allBraces[i].GetPreviousToken();
 					if (_token.HasTrailingTrivia)

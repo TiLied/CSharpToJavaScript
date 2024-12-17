@@ -12,7 +12,7 @@ namespace CSharpToJavaScript.Utils
 			if (message.StartsWith("---"))
 				Console.ForegroundColor = ConsoleColor.Green;
 
-			if (message.StartsWith("ERROR"))
+			if (message.StartsWith("ERROR") || message.StartsWith("as"))
 				Console.ForegroundColor = ConsoleColor.Red;
 
 			if (message.StartsWith("WARNING"))

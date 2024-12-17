@@ -25,9 +25,9 @@ namespace CSharpToJavaScript
 		private readonly CSTOJSOptions _Options;
 		private readonly SemanticModel _Model;
 
-
 		private SyntaxNode? _SNOriginal = null;
 		private SyntaxNode? _BaseConstructorInitializerNode = null;
+		private SyntaxNode? _SNPropertyType = null;
 
 		private string _NameSpaceStr = string.Empty;
 		private string _CurrentClassStr = string.Empty;
@@ -61,6 +61,16 @@ namespace CSharpToJavaScript
 						JSSB.Append(_full);
 						return;
 					}
+					/* Todo? how? convert to jsdoc?
+				case SyntaxKind.SingleLineDocumentationCommentTrivia:
+				case SyntaxKind.MultiLineDocumentationCommentTrivia: 
+					{
+						JSSB.Append("/**");
+						string _full = trivia.ToFullString();
+						JSSB.Append(_full);
+						JSSB.AppendLine("");
+						return;
+					}*/
 				default:
 					_Log.ErrorLine($"ERROR Trivia : {syntaxKind}");
 					break;
@@ -148,6 +158,14 @@ namespace CSharpToJavaScript
 				case SyntaxKind.TryKeyword:
 				case SyntaxKind.ThrowKeyword:
 				case SyntaxKind.FinallyKeyword:
+					{
+						VisitLeadingTrivia(token);
+
+						JSSB.Append(token.Text);
+
+						VisitTrailingTrivia(token);
+						return;
+					}
 				case SyntaxKind.EndOfFileToken:
 					{
 						VisitLeadingTrivia(token);
@@ -155,6 +173,15 @@ namespace CSharpToJavaScript
 						JSSB.Append(token.Text);
 
 						VisitTrailingTrivia(token);
+
+						if (_Options.Debug)
+						{
+							ImmutableArray<Diagnostic> diagnostics = _Model.GetDiagnostics();
+							foreach (Diagnostic item in diagnostics)
+							{
+								_Log.WarningLine(item.ToString());
+							}
+						}
 						return;
 					}
 				case SyntaxKind.OpenBraceToken: 
@@ -177,44 +204,53 @@ namespace CSharpToJavaScript
 
 		public override void Visit(SyntaxNode? node)
 		{
-			SyntaxKind syntaxKind = node.Kind();
-
-			switch (syntaxKind)
+			if (node == null)
 			{
-				case SyntaxKind.UsingDirective:
-					return;
-				case SyntaxKind.FileScopedNamespaceDeclaration:
-					_NameSpaceStr = (node as FileScopedNamespaceDeclarationSyntax).Name.ToString();
-					foreach (MemberDeclarationSyntax member in (node as FileScopedNamespaceDeclarationSyntax).Members)
-					{
-						Visit(member);
-					}
-					if (_Options.Debug)
-					{
-						JSSB.Append("/*");
-						JSSB.Append(node.ToFullString().Replace("*/", ""));
-						JSSB.Append("*/");
-					}
-					return;
-				case SyntaxKind.NamespaceDeclaration:
-					_NameSpaceStr = (node as NamespaceDeclarationSyntax).Name.ToString();
-					foreach (MemberDeclarationSyntax member in (node as NamespaceDeclarationSyntax).Members)
-					{
-						Visit(member);
-					}
-					if (_Options.Debug)
-					{
-						JSSB.Append("/*");
-						JSSB.Append(node.ToFullString().Replace("*/", ""));
-						JSSB.Append("*/");
-					}
-					return;
-				default:
-					//CSTOJS.Log($"{syntaxKind}");
-					break;
+				_Log.ErrorLine($"Visit node is null");
+				return;
 			}
+			else
+			{
 
-			base.Visit(node);
+				SyntaxKind syntaxKind = node.Kind();
+
+				switch (syntaxKind)
+				{
+					case SyntaxKind.UsingDirective:
+						return;
+					case SyntaxKind.FileScopedNamespaceDeclaration:
+						_NameSpaceStr = (node as FileScopedNamespaceDeclarationSyntax).Name.ToString();
+						foreach (MemberDeclarationSyntax member in (node as FileScopedNamespaceDeclarationSyntax).Members)
+						{
+							Visit(member);
+						}
+						if (_Options.Debug)
+						{
+							JSSB.Append("/*");
+							JSSB.Append(node.ToFullString().Replace("*/", ""));
+							JSSB.Append("*/");
+						}
+						return;
+					case SyntaxKind.NamespaceDeclaration:
+						_NameSpaceStr = (node as NamespaceDeclarationSyntax).Name.ToString();
+						foreach (MemberDeclarationSyntax member in (node as NamespaceDeclarationSyntax).Members)
+						{
+							Visit(member);
+						}
+						if (_Options.Debug)
+						{
+							JSSB.Append("/*");
+							JSSB.Append(node.ToFullString().Replace("*/", ""));
+							JSSB.Append("*/");
+						}
+						return;
+					default:
+						//CSTOJS.Log($"{syntaxKind}");
+						break;
+				}
+
+				base.Visit(node);
+			}
 		}
 
 		public override void VisitClassDeclaration(ClassDeclarationSyntax node)
@@ -385,6 +421,7 @@ namespace CSharpToJavaScript
 								Visit(asNode);
 								break;
 							}
+						case SyntaxKind.ArrayType:
 						case SyntaxKind.NullableType:
 						case SyntaxKind.GenericName:
 						case SyntaxKind.IdentifierName:
@@ -1015,8 +1052,15 @@ namespace CSharpToJavaScript
 			ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
 
 			FieldDeclarationSyntax? field = null;
+
 			bool hasDefault = false;
-			EqualsValueClauseSyntax? defaultValue = null;
+			
+			SyntaxNode? defaultValue = nodesAndTokens.FirstOrDefault(n => n.IsKind(SyntaxKind.EqualsValueClause)).AsNode();
+			if (defaultValue != default)
+				hasDefault = true;
+
+			if(nodesAndTokens.Any(n => n.IsKind(SyntaxKind.StaticKeyword)))
+				_PropertyStatic = true;
 
 			for (int i = nodesAndTokens.Count - 1; i >= 0; i--)
 			{
@@ -1065,6 +1109,7 @@ namespace CSharpToJavaScript
 										  select n;
 								}
 
+								_SNPropertyType = key.FirstOrDefault().AsNode();
 
 								//
 								//
@@ -1072,34 +1117,34 @@ namespace CSharpToJavaScript
 								if (hasDefault)
 								{
 									field = SyntaxFactory.FieldDeclaration(
-								   SyntaxFactory.VariableDeclaration(SyntaxFactory.IdentifierName(key.First().ToString()))
+									SyntaxFactory.VariableDeclaration(SyntaxFactory.IdentifierName(key.First().ToString()))
 								.WithVariables(
-									   SyntaxFactory.SingletonSeparatedList(
-										   SyntaxFactory.VariableDeclarator(
-											   SyntaxFactory.Identifier(_indentifier))
-											.WithInitializer(defaultValue))))
-							   .WithModifiers(
-								   SyntaxFactory.TokenList(new[]
-								   {
-									SyntaxFactory.Token(SyntaxKind.PrivateKeyword)
-								   }))
-							   .WithLeadingTrivia(node.GetLeadingTrivia())
+										SyntaxFactory.SingletonSeparatedList(
+											SyntaxFactory.VariableDeclarator(
+												SyntaxFactory.Identifier(_indentifier))
+											.WithInitializer(defaultValue as EqualsValueClauseSyntax))))
+								.WithModifiers(
+									SyntaxFactory.TokenList(new[]
+									{
+								SyntaxFactory.Token(SyntaxKind.PrivateKeyword)
+									}))
+								.WithLeadingTrivia(node.GetLeadingTrivia())
 								.WithTrailingTrivia(node.GetTrailingTrivia());
 								}
 								else
 								{
 									field = SyntaxFactory.FieldDeclaration(
-								   SyntaxFactory.VariableDeclaration(SyntaxFactory.IdentifierName(key.First().ToString()))
+									SyntaxFactory.VariableDeclaration(SyntaxFactory.IdentifierName(key.First().ToString()))
 								.WithVariables(
-									   SyntaxFactory.SingletonSeparatedList(
-										   SyntaxFactory.VariableDeclarator(
-											   SyntaxFactory.Identifier(_indentifier)))))
-							   .WithModifiers(
-								   SyntaxFactory.TokenList(new[]
-								   {
-									SyntaxFactory.Token(SyntaxKind.PrivateKeyword)
-								   }))
-							   .WithLeadingTrivia(node.GetLeadingTrivia())
+										SyntaxFactory.SingletonSeparatedList(
+											SyntaxFactory.VariableDeclarator(
+												SyntaxFactory.Identifier(_indentifier)))))
+								.WithModifiers(
+									SyntaxFactory.TokenList(new[]
+									{
+								SyntaxFactory.Token(SyntaxKind.PrivateKeyword)
+									}))
+								.WithLeadingTrivia(node.GetLeadingTrivia())
 								.WithTrailingTrivia(node.GetTrailingTrivia());
 								}
 							}
@@ -1109,62 +1154,52 @@ namespace CSharpToJavaScript
 								if (hasDefault)
 								{
 									field = SyntaxFactory.FieldDeclaration(
-							   SyntaxFactory.VariableDeclaration(
-								   SyntaxFactory.PredefinedType(SyntaxFactory.Token(key.First().Kind())))
+								SyntaxFactory.VariableDeclaration(
+									SyntaxFactory.PredefinedType(SyntaxFactory.Token(key.First().Kind())))
 							.WithVariables(
-								   SyntaxFactory.SingletonSeparatedList(
-									   SyntaxFactory.VariableDeclarator(
-										   SyntaxFactory.Identifier(_indentifier)))))
-						   .WithModifiers(
-							   SyntaxFactory.TokenList(new[]
-							   {
-									SyntaxFactory.Token(SyntaxKind.PrivateKeyword)
-							   }))
-						   .WithLeadingTrivia(node.GetLeadingTrivia())
+									SyntaxFactory.SingletonSeparatedList(
+										SyntaxFactory.VariableDeclarator(
+											SyntaxFactory.Identifier(_indentifier)))))
+							.WithModifiers(
+								SyntaxFactory.TokenList(new[]
+								{
+								SyntaxFactory.Token(SyntaxKind.PrivateKeyword)
+								}))
+							.WithLeadingTrivia(node.GetLeadingTrivia())
 							.WithTrailingTrivia(node.GetTrailingTrivia());
 								}
 								else
 								{
 									field = SyntaxFactory.FieldDeclaration(
-							   SyntaxFactory.VariableDeclaration(
-								   SyntaxFactory.PredefinedType(SyntaxFactory.Token(key.First().Kind())))
+								SyntaxFactory.VariableDeclaration(
+									SyntaxFactory.PredefinedType(SyntaxFactory.Token(key.First().Kind())))
 							.WithVariables(
-								   SyntaxFactory.SingletonSeparatedList(
-									   SyntaxFactory.VariableDeclarator(
-										   SyntaxFactory.Identifier(_indentifier))
-									   .WithInitializer(defaultValue))))
-						   .WithModifiers(
-							   SyntaxFactory.TokenList(new[]
-							   {
-									SyntaxFactory.Token(SyntaxKind.PrivateKeyword)
-							   }))
-						   .WithLeadingTrivia(node.GetLeadingTrivia())
+									SyntaxFactory.SingletonSeparatedList(
+										SyntaxFactory.VariableDeclarator(
+											SyntaxFactory.Identifier(_indentifier))
+										.WithInitializer(defaultValue as EqualsValueClauseSyntax))))
+							.WithModifiers(
+								SyntaxFactory.TokenList(new[]
+								{
+								SyntaxFactory.Token(SyntaxKind.PrivateKeyword)
+								}))
+							.WithLeadingTrivia(node.GetLeadingTrivia())
 							.WithTrailingTrivia(node.GetTrailingTrivia());
 								}
 							}
+
+							break;
 						}
 					}
-
-					if (kind == SyntaxKind.EqualsValueClause) 
-					{
-						hasDefault = true;
-						defaultValue = asNode as EqualsValueClauseSyntax;
-					}
-				}
-				else
-				{
-					SyntaxToken asToken = nodesAndTokens[i].AsToken();
-					SyntaxKind kind = asToken.Kind();
-
-					if (kind == SyntaxKind.StaticKeyword)
-						_PropertyStatic = true;
 				}
 
 			}
 
-			if(field != null)
+			if (field != null)
+			{
 				VisitFieldDeclaration(field);
-
+				_SNPropertyType = null;
+			}
 
 
 			//main for loop for property
@@ -1615,6 +1650,9 @@ namespace CSharpToJavaScript
 
 					switch (kind)
 					{
+						case SyntaxKind.ExpressionStatement:
+							VisitExpressionStatement(asNode as ExpressionStatementSyntax);
+							break;
 						case SyntaxKind.Block:
 							VisitBlock(asNode as BlockSyntax);
 							break;
@@ -1642,33 +1680,40 @@ namespace CSharpToJavaScript
 							}
 						case SyntaxKind.IdentifierName: 
 							{
-								IdentifierNameSyntax _ins = asNode as IdentifierNameSyntax;
-								if (_ins.IsVar)
+								IdentifierNameSyntax? _ins = asNode as IdentifierNameSyntax;
+								if (_ins != null)
 								{
-									SyntaxTriviaList _syntaxTrivias = asNode.GetLeadingTrivia();
-
-									for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
+									if (_ins.IsVar)
 									{
-										VisitTrivia(_syntaxTrivias[_i]);
+										SyntaxTriviaList _syntaxTrivias = asNode.GetLeadingTrivia();
+
+										for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
+										{
+											VisitTrivia(_syntaxTrivias[_i]);
+										}
+
+										if (_Options.UseVarOverLet)
+											JSSB.Append("var");
+										else
+											JSSB.Append("let");
+
+										_syntaxTrivias = asNode.GetTrailingTrivia();
+										for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
+										{
+											VisitTrivia(_syntaxTrivias[_i]);
+										}
 									}
-
-									if (_Options.UseVarOverLet)
-										JSSB.Append("var");
 									else
-										JSSB.Append("let");
-
-									_syntaxTrivias = asNode.GetTrailingTrivia();
-									for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
 									{
-										VisitTrivia(_syntaxTrivias[_i]);
+										if (IdentifierToken(asNode) == false)
+										{
+											VisitIdentifierName(_ins);
+										}
 									}
 								}
 								else 
 								{
-									if (IdentifierToken(asNode) == false)
-									{
-										VisitIdentifierName(_ins);
-									}
+									_Log.ErrorLine($"_ins is null");
 								}
 
 								break;
@@ -1886,6 +1931,9 @@ namespace CSharpToJavaScript
 
 					switch (kind)
 					{
+						case SyntaxKind.NumericLiteralExpression:
+							Visit(asNode);
+							break;
 						case SyntaxKind.ObjectCreationExpression:
 							VisitObjectCreationExpression(asNode as ObjectCreationExpressionSyntax);
 							break;
@@ -1958,7 +2006,7 @@ namespace CSharpToJavaScript
 					{
 						case SyntaxKind.NumericLiteralToken: 
 							{
-								if (asToken.Text.EndsWith('f'))
+								if (asToken.Text.EndsWith('f') || asToken.Text.EndsWith('d'))
 									JSSB.Append(asToken.Text.Remove(asToken.Text.Length - 1));
 								else
 									VisitToken(asToken);
@@ -1967,6 +2015,7 @@ namespace CSharpToJavaScript
 						case SyntaxKind.TrueKeyword:
 						case SyntaxKind.FalseKeyword:
 						case SyntaxKind.StringLiteralToken:
+						case SyntaxKind.CharacterLiteralToken:
 						case SyntaxKind.NullKeyword:
 							VisitToken(asToken);
 							break;
@@ -2184,7 +2233,7 @@ namespace CSharpToJavaScript
 								VisitToken(asToken);
 
 
-								VariableDeclarationSyntax _vds = node.Ancestors().FirstOrDefault(e => e.IsKind(SyntaxKind.VariableDeclaration)) as VariableDeclarationSyntax;
+								VariableDeclarationSyntax? _vds = node.Ancestors().FirstOrDefault(e => e.IsKind(SyntaxKind.VariableDeclaration)) as VariableDeclarationSyntax;
 
 								SymbolInfo? symbolInfo = null;
 								ISymbol? iSymbol = null;
@@ -2192,10 +2241,23 @@ namespace CSharpToJavaScript
 
 								if (_vds == null)
 								{
-									AssignmentExpressionSyntax _aes = node.Ancestors().FirstOrDefault(e => e.IsKind(SyntaxKind.SimpleAssignmentExpression)) as AssignmentExpressionSyntax;
+									AssignmentExpressionSyntax? _aes = node.Ancestors().FirstOrDefault(e => e.IsKind(SyntaxKind.SimpleAssignmentExpression)) as AssignmentExpressionSyntax;
+
+									if (_aes == null) 
+									{
+										_Log.ErrorLine($"_aes is null");
+										break;
+									}
+
 									symbolInfo = _Model.GetSymbolInfo(_aes.Left);
 
-									ClassDeclarationSyntax classD = (ClassDeclarationSyntax)node.Ancestors().First(n => n.IsKind(SyntaxKind.ClassDeclaration));
+									ClassDeclarationSyntax? classD = node.Ancestors().First(n => n.IsKind(SyntaxKind.ClassDeclaration)) as ClassDeclarationSyntax;
+
+									if (classD == null)
+									{
+										_Log.ErrorLine($"classD is null");
+										break;
+									}
 
 									IEnumerable<ClassDeclarationSyntax> classesD = from n in classD.Parent.DescendantNodes()
 																				   where n.IsKind(SyntaxKind.ClassDeclaration)
@@ -2241,7 +2303,11 @@ namespace CSharpToJavaScript
 								}
 								else
 								{
-									symbolInfo = _Model.GetSymbolInfo(_vds.Type);
+									if (_SNPropertyType != null)
+										symbolInfo = _Model.GetSymbolInfo(_SNPropertyType);
+									else
+										symbolInfo = _Model.GetSymbolInfo(_vds.Type);
+
 									syntaxNode = _vds.Type;
 								}
 
@@ -2622,16 +2688,10 @@ namespace CSharpToJavaScript
 			{
 				try
 				{
-					symbolInfo = _Model.GetSymbolInfo(node);
-
-					if (_Options.Debug)
-					{
-						var a = _Model.GetDiagnostics();
-						foreach (Diagnostic item in a)
-						{
-							_Log.WarningLine(item.ToString());
-						}
-					}
+					if (_SNPropertyType != null)
+						symbolInfo = _Model.GetSymbolInfo(_SNPropertyType);
+					else
+						symbolInfo = _Model.GetSymbolInfo(node);
 				}
 				catch (Exception e)
 				{
@@ -2914,7 +2974,7 @@ namespace CSharpToJavaScript
 			return true;
 		}
 
-		private bool CustomCSNamesToJS(SyntaxNode node) 
+		private bool CustomCSNamesToJS(SyntaxNode? node) 
 		{
 			foreach (Tuple<string, string> _item in _Options.CustomCSNamesToJS)
 			{
@@ -2940,9 +3000,9 @@ namespace CSharpToJavaScript
 			return false;
 		}
 
-		private bool BuiltInTypesGenerics(SyntaxNode nodeL, ISymbol symbol) 
+		private bool BuiltInTypesGenerics(SyntaxNode nodeL, ISymbol? symbol) 
 		{
-			IdentifierNameSyntax node = nodeL as IdentifierNameSyntax;
+			IdentifierNameSyntax? node = nodeL as IdentifierNameSyntax;
 
 			if (symbol == null) 
 			{

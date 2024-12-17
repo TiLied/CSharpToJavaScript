@@ -1,4 +1,4 @@
-//02.04.2024 22:15:19
+//08.04.2024 15:51:25
 using static CSharpToJavaScript.APIs.JS.GlobalObject;
 using CSharpToJavaScript.Utils;
 using System.Collections.Generic;
@@ -108,9 +108,12 @@ public partial class Accelerometer : Sensor
 	public Accelerometer() { }
 }
 
+[To(ToAttribute.None)]
 public enum AccelerometerLocalCoordinateSystem
 {
+	[Value("device")]
 	Device,
+	[Value("screen")]
 	Screen,
 }
 
@@ -149,16 +152,23 @@ public partial class AmbientLightSensor : Sensor
 	public AmbientLightSensor() { }
 }
 
+[To(ToAttribute.None)]
 public enum AutoplayPolicy
 {
+	[Value("allowed")]
 	Allowed,
+	[Value("allowed-muted")]
 	AllowedMuted,
+	[Value("disallowed")]
 	Disallowed,
 }
 
+[To(ToAttribute.None)]
 public enum AutoplayPolicyMediaType
 {
+	[Value("mediaelement")]
 	Mediaelement,
+	[Value("audiocontext")]
 	Audiocontext,
 }
 
@@ -195,10 +205,14 @@ public partial class ClipboardItem
 	public ClipboardItem() { }
 }
 
+[To(ToAttribute.None)]
 public enum PresentationStyle
 {
+	[Value("unspecified")]
 	Unspecified,
+	[Value("inline")]
 	Inline,
+	[Value("attachment")]
 	Attachment,
 }
 
@@ -281,8 +295,10 @@ public partial class LabeledObject
 }
 
 ///<include file='Utils/Docs/XMLHttpRequestResponseType/XMLHttpRequestResponseType.generated.xml' path='docs/XMLHttpRequestResponseType/*'/>
+[To(ToAttribute.None)]
 public enum XMLHttpRequestResponseType
 {
+	[Value("labeled-json")]
 	LabeledJson,
 }
 
@@ -330,12 +346,18 @@ public partial class console
 	public Undefined TimeEnd(string label) { throw new System.NotImplementedException(); }
 }
 
+[To(ToAttribute.None)]
 public enum ContactProperty
 {
+	[Value("address")]
 	Address,
+	[Value("email")]
 	Email,
+	[Value("icon")]
 	Icon,
+	[Value("name")]
 	Name,
+	[Value("tel")]
 	Tel,
 }
 
@@ -412,9 +434,12 @@ public partial class CSPViolationReportBody : ReportBody
 }
 
 ///<include file='Utils/Docs/SecurityPolicyViolationEventDisposition/SecurityPolicyViolationEventDisposition.generated.xml' path='docs/SecurityPolicyViolationEventDisposition/*'/>
+[To(ToAttribute.None)]
 public enum SecurityPolicyViolationEventDisposition
 {
+	[Value("enforce")]
 	Enforce,
+	[Value("report")]
 	Report,
 }
 
@@ -513,11 +538,16 @@ public partial class CredentialRequestOptions
 		public AbortSignal Signal;
 }
 
+[To(ToAttribute.None)]
 public enum CredentialMediationRequirement
 {
+	[Value("silent")]
 	Silent,
+	[Value("optional")]
 	Optional,
+	[Value("conditional")]
 	Conditional,
+	[Value("required")]
 	Required,
 }
 
@@ -761,10 +791,14 @@ public partial class CSSCounterStyleRule : CSSRule
 }
 
 ///<include file='Utils/Docs/HighlightType/HighlightType.generated.xml' path='docs/HighlightType/*'/>
+[To(ToAttribute.None)]
 public enum HighlightType
 {
+	[Value("highlight")]
 	Highlight,
+	[Value("spelling-error")]
 	SpellingError,
+	[Value("grammar-error")]
 	GrammarError,
 }
 
@@ -806,11 +840,16 @@ public partial class FontFaceDescriptors
 		public string LineGapOverride;
 }
 
+[To(ToAttribute.None)]
 public enum FontFaceLoadStatus
 {
+	[Value("unloaded")]
 	Unloaded,
+	[Value("loading")]
 	Loading,
+	[Value("loaded")]
 	Loaded,
+	[Value("error")]
 	Error,
 }
 
@@ -909,9 +948,12 @@ public partial class FontFaceSetLoadEvent : Event
 	public FontFaceSetLoadEvent() { }
 }
 
+[To(ToAttribute.None)]
 public enum FontFaceSetLoadStatus
 {
+	[Value("loading")]
 	Loading,
+	[Value("loaded")]
 	Loaded,
 }
 
@@ -1046,11 +1088,16 @@ public partial class LayoutConstraintsOptions
 		public dynamic Data;
 }
 
+[To(ToAttribute.None)]
 public enum BlockFragmentationType
 {
+	[Value("none")]
 	None,
+	[Value("page")]
 	Page,
+	[Value("column")]
 	Column,
+	[Value("region")]
 	Region,
 }
 
@@ -1075,12 +1122,18 @@ public partial class BreakTokenOptions
 		public dynamic Data;
 }
 
+[To(ToAttribute.None)]
 public enum BreakType
 {
+	[Value("none")]
 	None,
+	[Value("line")]
 	Line,
+	[Value("column")]
 	Column,
+	[Value("page")]
 	Page,
+	[Value("region")]
 	Region,
 }
 
@@ -1117,15 +1170,21 @@ public partial class LayoutOptions
 		public LayoutSizingMode Sizing;
 }
 
+[To(ToAttribute.None)]
 public enum ChildDisplayType
 {
+	[Value("block")]
 	Block,
+	[Value("normal")]
 	Normal,
 }
 
+[To(ToAttribute.None)]
 public enum LayoutSizingMode
 {
+	[Value("block-like")]
 	BlockLike,
+	[Value("manual")]
 	Manual,
 }
 
@@ -1405,17 +1464,25 @@ public partial class CSSPseudoElement : EventTarget
 		public CSSPseudoElement? Pseudo(string type) { throw new System.NotImplementedException(); }
 }
 
+[To(ToAttribute.None)]
 public enum SpatialNavigationDirection
 {
+	[Value("up")]
 	Up,
+	[Value("down")]
 	Down,
+	[Value("left")]
 	Left,
+	[Value("right")]
 	Right,
 }
 
+[To(ToAttribute.None)]
 public enum FocusableAreaSearchMode
 {
+	[Value("visible")]
 	Visible,
+	[Value("all")]
 	All,
 }
 
@@ -1543,14 +1610,22 @@ public partial class CSSKeywordValue : CSSStyleValue
 
 
 
+[To(ToAttribute.None)]
 public enum CSSNumericBaseType
 {
+	[Value("length")]
 	Length,
+	[Value("angle")]
 	Angle,
+	[Value("time")]
 	Time,
+	[Value("frequency")]
 	Frequency,
+	[Value("resolution")]
 	Resolution,
+	[Value("flex")]
 	Flex,
+	[Value("percent")]
 	Percent,
 }
 
@@ -1702,14 +1777,22 @@ public partial class CSSNumericArray
 	
 }
 
+[To(ToAttribute.None)]
 public enum CSSMathOperator
 {
+	[Value("sum")]
 	Sum,
+	[Value("product")]
 	Product,
+	[Value("negate")]
 	Negate,
+	[Value("invert")]
 	Invert,
+	[Value("min")]
 	Min,
+	[Value("max")]
 	Max,
+	[Value("clamp")]
 	Clamp,
 }
 
@@ -2509,15 +2592,21 @@ public partial class ShadowRoot : DocumentFragment
 }
 
 ///<include file='Utils/Docs/ShadowRootMode/ShadowRootMode.generated.xml' path='docs/ShadowRootMode/*'/>
+[To(ToAttribute.None)]
 public enum ShadowRootMode
 {
+	[Value("open")]
 	Open,
+	[Value("closed")]
 	Closed,
 }
 
+[To(ToAttribute.None)]
 public enum SlotAssignmentMode
 {
+	[Value("manual")]
 	Manual,
+	[Value("named")]
 	Named,
 }
 
@@ -3128,76 +3217,124 @@ public partial class RequestInit
 }
 
 ///<include file='Utils/Docs/RequestDestination/RequestDestination.generated.xml' path='docs/RequestDestination/*'/>
+[To(ToAttribute.None)]
 public enum RequestDestination
 {
+	[Value("")]
 	Empty,
+	[Value("audio")]
 	Audio,
+	[Value("audioworklet")]
 	Audioworklet,
+	[Value("document")]
 	Document,
+	[Value("embed")]
 	Embed,
+	[Value("font")]
 	Font,
+	[Value("frame")]
 	Frame,
+	[Value("iframe")]
 	Iframe,
+	[Value("image")]
 	Image,
+	[Value("json")]
 	Json,
+	[Value("manifest")]
 	Manifest,
+	[Value("object")]
 	Object,
+	[Value("paintworklet")]
 	Paintworklet,
+	[Value("report")]
 	Report,
+	[Value("script")]
 	Script,
+	[Value("sharedworker")]
 	Sharedworker,
+	[Value("style")]
 	Style,
+	[Value("track")]
 	Track,
+	[Value("video")]
 	Video,
+	[Value("worker")]
 	Worker,
+	[Value("xslt")]
 	Xslt,
 }
 
 ///<include file='Utils/Docs/RequestMode/RequestMode.generated.xml' path='docs/RequestMode/*'/>
+[To(ToAttribute.None)]
 public enum RequestMode
 {
+	[Value("navigate")]
 	Navigate,
+	[Value("same-origin")]
 	SameOrigin,
+	[Value("no-cors")]
 	NoCors,
+	[Value("cors")]
 	Cors,
 }
 
 ///<include file='Utils/Docs/RequestCredentials/RequestCredentials.generated.xml' path='docs/RequestCredentials/*'/>
+[To(ToAttribute.None)]
 public enum RequestCredentials
 {
+	[Value("omit")]
 	Omit,
+	[Value("same-origin")]
 	SameOrigin,
+	[Value("include")]
 	Include,
 }
 
 ///<include file='Utils/Docs/RequestCache/RequestCache.generated.xml' path='docs/RequestCache/*'/>
+[To(ToAttribute.None)]
 public enum RequestCache
 {
+	[Value("default")]
 	Default,
+	[Value("no-store")]
 	NoStore,
+	[Value("reload")]
 	Reload,
+	[Value("no-cache")]
 	NoCache,
+	[Value("force-cache")]
 	ForceCache,
+	[Value("only-if-cached")]
 	OnlyIfCached,
 }
 
 ///<include file='Utils/Docs/RequestRedirect/RequestRedirect.generated.xml' path='docs/RequestRedirect/*'/>
+[To(ToAttribute.None)]
 public enum RequestRedirect
 {
+	[Value("follow")]
 	Follow,
+	[Value("error")]
 	Error,
+	[Value("manual")]
 	Manual,
 }
 
+[To(ToAttribute.None)]
 public enum RequestDuplex
 {
+	[Value("half")]
 	Half,
 }
 
+[To(ToAttribute.None)]
 public enum RequestPriority
 {
+	[Value("high")]
 	High,
+	[Value("low")]
 	Low,
+	[Value("auto")]
 	Auto,
 }
 
@@ -3241,20 +3378,30 @@ public partial class ResponseInit
 }
 
 ///<include file='Utils/Docs/ResponseType/ResponseType.generated.xml' path='docs/ResponseType/*'/>
+[To(ToAttribute.None)]
 public enum ResponseType
 {
+	[Value("basic")]
 	Basic,
+	[Value("cors")]
 	Cors,
+	[Value("default")]
 	Default,
+	[Value("error")]
 	Error,
+	[Value("opaque")]
 	Opaque,
+	[Value("opaqueredirect")]
 	Opaqueredirect,
 }
 
 ///<include file='Utils/Docs/FileSystemHandleKind/FileSystemHandleKind.generated.xml' path='docs/FileSystemHandleKind/*'/>
+[To(ToAttribute.None)]
 public enum FileSystemHandleKind
 {
+	[Value("file")]
 	File,
+	[Value("directory")]
 	Directory,
 }
 
@@ -3321,10 +3468,14 @@ public partial class FileSystemDirectoryHandle : FileSystemHandle
 	public Task<List<string>?> Resolve(FileSystemHandle possibleDescendant) { throw new System.NotImplementedException(); }
 }
 
+[To(ToAttribute.None)]
 public enum WriteCommandType
 {
+	[Value("write")]
 	Write,
+	[Value("seek")]
 	Seek,
+	[Value("truncate")]
 	Truncate,
 }
 
@@ -3395,9 +3546,12 @@ public partial class Blob
 	public Blob() { }
 }
 
+[To(ToAttribute.None)]
 public enum EndingType
 {
+	[Value("transparent")]
 	Transparent,
+	[Value("native")]
 	Native,
 }
 
@@ -3811,10 +3965,14 @@ public partial class SVGFETurbulenceElement
 		public Unsupported /*SVGAnimatedEnumeration*/ Type { get; }
 }
 
+[To(ToAttribute.None)]
 public enum FullscreenNavigationUI
 {
+	[Value("auto")]
 	Auto,
+	[Value("show")]
 	Show,
+	[Value("hide")]
 	Hide,
 }
 
@@ -4190,9 +4348,12 @@ public partial class Gyroscope : Sensor
 	public Gyroscope() { }
 }
 
+[To(ToAttribute.None)]
 public enum GyroscopeLocalCoordinateSystem
 {
+	[Value("device")]
 	Device,
+	[Value("screen")]
 	Screen,
 }
 
@@ -4258,17 +4419,24 @@ public partial class DOMStringList
 }
 
 ///<include file='Utils/Docs/DocumentReadyState/DocumentReadyState.generated.xml' path='docs/DocumentReadyState/*'/>
+[To(ToAttribute.None)]
 public enum DocumentReadyState
 {
+	[Value("loading")]
 	Loading,
+	[Value("interactive")]
 	Interactive,
+	[Value("complete")]
 	Complete,
 }
 
 ///<include file='Utils/Docs/DocumentVisibilityState/DocumentVisibilityState.generated.xml' path='docs/DocumentVisibilityState/*'/>
+[To(ToAttribute.None)]
 public enum DocumentVisibilityState
 {
+	[Value("visible")]
 	Visible,
+	[Value("hidden")]
 	Hidden,
 }
 
@@ -4886,10 +5054,14 @@ public partial class HTMLTrackElement : HTMLElement
 	public TextTrack Track { get; }
 }
 
+[To(ToAttribute.None)]
 public enum CanPlayTypeResult
 {
+	[Value("")]
 	Empty,
+	[Value("maybe")]
 	Maybe,
+	[Value("probably")]
 	Probably,
 }
 
@@ -5114,20 +5286,30 @@ public partial class TextTrackList : EventTarget
 }
 
 ///<include file='Utils/Docs/TextTrackMode/TextTrackMode.generated.xml' path='docs/TextTrackMode/*'/>
+[To(ToAttribute.None)]
 public enum TextTrackMode
 {
+	[Value("disabled")]
 	Disabled,
+	[Value("hidden")]
 	Hidden,
+	[Value("showing")]
 	Showing,
 }
 
 ///<include file='Utils/Docs/TextTrackKind/TextTrackKind.generated.xml' path='docs/TextTrackKind/*'/>
+[To(ToAttribute.None)]
 public enum TextTrackKind
 {
+	[Value("subtitles")]
 	Subtitles,
+	[Value("captions")]
 	Captions,
+	[Value("descriptions")]
 	Descriptions,
+	[Value("chapters")]
 	Chapters,
+	[Value("metadata")]
 	Metadata,
 }
 
@@ -5943,11 +6125,16 @@ public partial class HTMLLegendElement : HTMLElement
 	public HTMLFormElement? Form { get; }
 }
 
+[To(ToAttribute.None)]
 public enum SelectionMode
 {
+	[Value("select")]
 	Select,
+	[Value("start")]
 	Start,
+	[Value("end")]
 	End,
+	[Value("preserve")]
 	Preserve,
 }
 
@@ -6153,15 +6340,21 @@ public struct BlobCallback
 
 
 
+[To(ToAttribute.None)]
 public enum PredefinedColorSpace
 {
+	[Value("srgb")]
 	Srgb,
+	[Value("display-p3")]
 	DisplayP3,
 }
 
+[To(ToAttribute.None)]
 public enum CanvasFillRule
 {
+	[Value("nonzero")]
 	Nonzero,
+	[Value("evenodd")]
 	Evenodd,
 }
 
@@ -6174,10 +6367,14 @@ public partial class CanvasRenderingContext2DSettings
 		public bool WillReadFrequently;
 }
 
+[To(ToAttribute.None)]
 public enum ImageSmoothingQuality
 {
+	[Value("low")]
 	Low,
+	[Value("medium")]
 	Medium,
+	[Value("high")]
 	High,
 }
 
@@ -6312,82 +6509,134 @@ public partial interface CanvasImageData
 		public Undefined PutImageData(ImageData imagedata, long dx, long dy, long dirtyX, long dirtyY, long dirtyWidth, long dirtyHeight) { throw new System.NotImplementedException(); }
 }
 
+[To(ToAttribute.None)]
 public enum CanvasLineCap
 {
+	[Value("butt")]
 	Butt,
+	[Value("round")]
 	Round,
+	[Value("square")]
 	Square,
 }
 
+[To(ToAttribute.None)]
 public enum CanvasLineJoin
 {
+	[Value("round")]
 	Round,
+	[Value("bevel")]
 	Bevel,
+	[Value("miter")]
 	Miter,
 }
 
+[To(ToAttribute.None)]
 public enum CanvasTextAlign
 {
+	[Value("start")]
 	Start,
+	[Value("end")]
 	End,
+	[Value("left")]
 	Left,
+	[Value("right")]
 	Right,
+	[Value("center")]
 	Center,
 }
 
+[To(ToAttribute.None)]
 public enum CanvasTextBaseline
 {
+	[Value("top")]
 	Top,
+	[Value("hanging")]
 	Hanging,
+	[Value("middle")]
 	Middle,
+	[Value("alphabetic")]
 	Alphabetic,
+	[Value("ideographic")]
 	Ideographic,
+	[Value("bottom")]
 	Bottom,
 }
 
+[To(ToAttribute.None)]
 public enum CanvasDirection
 {
+	[Value("ltr")]
 	Ltr,
+	[Value("rtl")]
 	Rtl,
+	[Value("inherit")]
 	Inherit,
 }
 
+[To(ToAttribute.None)]
 public enum CanvasFontKerning
 {
+	[Value("auto")]
 	Auto,
+	[Value("normal")]
 	Normal,
+	[Value("none")]
 	None,
 }
 
+[To(ToAttribute.None)]
 public enum CanvasFontStretch
 {
+	[Value("ultra-condensed")]
 	UltraCondensed,
+	[Value("extra-condensed")]
 	ExtraCondensed,
+	[Value("condensed")]
 	Condensed,
+	[Value("semi-condensed")]
 	SemiCondensed,
+	[Value("normal")]
 	Normal,
+	[Value("semi-expanded")]
 	SemiExpanded,
+	[Value("expanded")]
 	Expanded,
+	[Value("extra-expanded")]
 	ExtraExpanded,
+	[Value("ultra-expanded")]
 	UltraExpanded,
 }
 
+[To(ToAttribute.None)]
 public enum CanvasFontVariantCaps
 {
+	[Value("normal")]
 	Normal,
+	[Value("small-caps")]
 	SmallCaps,
+	[Value("all-small-caps")]
 	AllSmallCaps,
+	[Value("petite-caps")]
 	PetiteCaps,
+	[Value("all-petite-caps")]
 	AllPetiteCaps,
+	[Value("unicase")]
 	Unicase,
+	[Value("titling-caps")]
 	TitlingCaps,
 }
 
+[To(ToAttribute.None)]
 public enum CanvasTextRendering
 {
+	[Value("auto")]
 	Auto,
+	[Value("optimizeSpeed")]
 	OptimizeSpeed,
+	[Value("optimizeLegibility")]
 	OptimizeLegibility,
+	[Value("geometricPrecision")]
 	GeometricPrecision,
 }
 
@@ -6550,12 +6799,18 @@ public partial class ImageEncodeOptions
 		public double Quality;
 }
 
+[To(ToAttribute.None)]
 public enum OffscreenRenderingContextId
 {
+	[Value("2d")]
 	_2d,
+	[Value("bitmaprenderer")]
 	Bitmaprenderer,
+	[Value("webgl")]
 	Webgl,
+	[Value("webgl2")]
 	Webgl2,
+	[Value("webgpu")]
 	Webgpu,
 }
 
@@ -6872,9 +7127,12 @@ public partial class Location
 	public string AncestorOrigins { get; }
 }
 
+[To(ToAttribute.None)]
 public enum ScrollRestoration
 {
+	[Value("auto")]
 	Auto,
+	[Value("manual")]
 	Manual,
 }
 
@@ -6965,18 +7223,27 @@ public partial class NavigationResult
 		public Task<NavigationHistoryEntry> Finished;
 }
 
+[To(ToAttribute.None)]
 public enum NavigationHistoryBehavior
 {
+	[Value("auto")]
 	Auto,
+	[Value("push")]
 	Push,
+	[Value("replace")]
 	Replace,
 }
 
+[To(ToAttribute.None)]
 public enum NavigationType
 {
+	[Value("push")]
 	Push,
+	[Value("replace")]
 	Replace,
+	[Value("reload")]
 	Reload,
+	[Value("traverse")]
 	Traverse,
 }
 
@@ -7074,15 +7341,21 @@ public partial class NavigationInterceptOptions
 		public NavigationScrollBehavior Scroll;
 }
 
+[To(ToAttribute.None)]
 public enum NavigationFocusReset
 {
+	[Value("after-transition")]
 	AfterTransition,
+	[Value("manual")]
 	Manual,
 }
 
+[To(ToAttribute.None)]
 public enum NavigationScrollBehavior
 {
+	[Value("after-transition")]
 	AfterTransition,
+	[Value("manual")]
 	Manual,
 }
 
@@ -7327,12 +7600,18 @@ public partial interface WindowEventHandlers
 }
 
 
+[To(ToAttribute.None)]
 public enum DOMParserSupportedType
 {
+	[Value("text/html")]
 	TextHtml,
+	[Value("text/xml")]
 	TextXml,
+	[Value("application/xml")]
 	ApplicationXml,
+	[Value("application/xhtml+xml")]
 	ApplicationXhtmlXml,
+	[Value("image/svg+xml")]
 	ImageSvgXml,
 }
 
@@ -7442,30 +7721,45 @@ public partial class ImageBitmap
 }
 
 
+[To(ToAttribute.None)]
 public enum ImageOrientation
 {
+	[Value("from-image")]
 	FromImage,
+	[Value("flipY")]
 	FlipY,
 }
 
+[To(ToAttribute.None)]
 public enum PremultiplyAlpha
 {
+	[Value("none")]
 	None,
+	[Value("premultiply")]
 	Premultiply,
+	[Value("default")]
 	Default,
 }
 
+[To(ToAttribute.None)]
 public enum ColorSpaceConversion
 {
+	[Value("none")]
 	None,
+	[Value("default")]
 	Default,
 }
 
+[To(ToAttribute.None)]
 public enum ResizeQuality
 {
+	[Value("pixelated")]
 	Pixelated,
+	[Value("low")]
 	Low,
+	[Value("medium")]
 	Medium,
+	[Value("high")]
 	High,
 }
 
@@ -7682,9 +7976,12 @@ public partial class WorkerOptions
 		public string Name;
 }
 
+[To(ToAttribute.None)]
 public enum WorkerType
 {
+	[Value("classic")]
 	Classic,
+	[Value("module")]
 	Module,
 }
 
@@ -7950,9 +8247,12 @@ public partial class IDBRequest : EventTarget
 }
 
 ///<include file='Utils/Docs/IDBRequestReadyState/IDBRequestReadyState.generated.xml' path='docs/IDBRequestReadyState/*'/>
+[To(ToAttribute.None)]
 public enum IDBRequestReadyState
 {
+	[Value("pending")]
 	Pending,
+	[Value("done")]
 	Done,
 }
 
@@ -8030,10 +8330,14 @@ public partial class IDBDatabase : EventTarget
 }
 
 ///<include file='Utils/Docs/IDBTransactionDurability/IDBTransactionDurability.generated.xml' path='docs/IDBTransactionDurability/*'/>
+[To(ToAttribute.None)]
 public enum IDBTransactionDurability
 {
+	[Value("default")]
 	Default,
+	[Value("strict")]
 	Strict,
+	[Value("relaxed")]
 	Relaxed,
 }
 
@@ -8182,11 +8486,16 @@ public partial class IDBCursor
 }
 
 ///<include file='Utils/Docs/IDBCursorDirection/IDBCursorDirection.generated.xml' path='docs/IDBCursorDirection/*'/>
+[To(ToAttribute.None)]
 public enum IDBCursorDirection
 {
+	[Value("next")]
 	Next,
+	[Value("nextunique")]
 	Nextunique,
+	[Value("prev")]
 	Prev,
+	[Value("prevunique")]
 	Prevunique,
 }
 
@@ -8224,10 +8533,14 @@ public partial class IDBTransaction : EventTarget
 }
 
 ///<include file='Utils/Docs/IDBTransactionMode/IDBTransactionMode.generated.xml' path='docs/IDBTransactionMode/*'/>
+[To(ToAttribute.None)]
 public enum IDBTransactionMode
 {
+	[Value("readonly")]
 	Readonly,
+	[Value("readwrite")]
 	Readwrite,
+	[Value("versionchange")]
 	Versionchange,
 }
 
@@ -8255,12 +8568,18 @@ public partial interface UserSettingListener
 		public Undefined HandleUserSettingChanged(string key) { throw new System.NotImplementedException(); }
 }
 
+[To(ToAttribute.None)]
 public enum RestrictionCategory
 {
+	[Value("none")]
 	None,
+	[Value("userColors")]
 	UserColors,
+	[Value("userFonts")]
 	UserFonts,
+	[Value("userMediaSettings")]
 	UserMediaSettings,
+	[Value("userScreenReaderSettings")]
 	UserScreenReaderSettings,
 }
 
@@ -8405,9 +8724,12 @@ public partial class Magnetometer : Sensor
 	public Magnetometer() { }
 }
 
+[To(ToAttribute.None)]
 public enum MagnetometerLocalCoordinateSystem
 {
+	[Value("device")]
 	Device,
+	[Value("screen")]
 	Screen,
 }
 
@@ -8450,16 +8772,23 @@ public partial class MediaEncodingConfiguration : MediaConfiguration
 		public required MediaEncodingType Type;
 }
 
+[To(ToAttribute.None)]
 public enum MediaDecodingType
 {
+	[Value("file")]
 	File,
+	[Value("media-source")]
 	MediaSource,
+	[Value("webrtc")]
 	Webrtc,
 }
 
+[To(ToAttribute.None)]
 public enum MediaEncodingType
 {
+	[Value("record")]
 	Record,
+	[Value("webrtc")]
 	Webrtc,
 }
 
@@ -8479,24 +8808,36 @@ public partial class VideoConfiguration
 		public bool SpatialScalability;
 }
 
+[To(ToAttribute.None)]
 public enum HdrMetadataType
 {
+	[Value("smpteSt2086")]
 	SmpteSt2086,
+	[Value("smpteSt2094-10")]
 	SmpteSt209410,
+	[Value("smpteSt2094-40")]
 	SmpteSt209440,
 }
 
+[To(ToAttribute.None)]
 public enum ColorGamut
 {
+	[Value("srgb")]
 	Srgb,
+	[Value("p3")]
 	P3,
+	[Value("rec2020")]
 	Rec2020,
 }
 
+[To(ToAttribute.None)]
 public enum TransferFunction
 {
+	[Value("srgb")]
 	Srgb,
+	[Value("pq")]
 	Pq,
+	[Value("hlg")]
 	Hlg,
 }
 
@@ -8563,29 +8904,49 @@ public partial class MediaCapabilities
 }
 
 ///<include file='Utils/Docs/MediaSessionPlaybackState/MediaSessionPlaybackState.generated.xml' path='docs/MediaSessionPlaybackState/*'/>
+[To(ToAttribute.None)]
 public enum MediaSessionPlaybackState
 {
+	[Value("none")]
 	None,
+	[Value("paused")]
 	Paused,
+	[Value("playing")]
 	Playing,
 }
 
+[To(ToAttribute.None)]
 public enum MediaSessionAction
 {
+	[Value("play")]
 	Play,
+	[Value("pause")]
 	Pause,
+	[Value("seekbackward")]
 	Seekbackward,
+	[Value("seekforward")]
 	Seekforward,
+	[Value("previoustrack")]
 	Previoustrack,
+	[Value("nexttrack")]
 	Nexttrack,
+	[Value("skipad")]
 	Skipad,
+	[Value("stop")]
 	Stop,
+	[Value("seekto")]
 	Seekto,
+	[Value("togglemicrophone")]
 	Togglemicrophone,
+	[Value("togglecamera")]
 	Togglecamera,
+	[Value("hangup")]
 	Hangup,
+	[Value("previousslide")]
 	Previousslide,
+	[Value("nextslide")]
 	Nextslide,
+	[Value("enterpictureinpicture")]
 	Enterpictureinpicture,
 }
 
@@ -8724,17 +9085,25 @@ public partial class MediaSettingsRange
 		public Number Step;
 }
 
+[To(ToAttribute.None)]
 public enum RedEyeReduction
 {
+	[Value("never")]
 	Never,
+	[Value("always")]
 	Always,
+	[Value("controllable")]
 	Controllable,
 }
 
+[To(ToAttribute.None)]
 public enum FillLightMode
 {
+	[Value("auto")]
 	Auto,
+	[Value("off")]
 	Off,
+	[Value("flash")]
 	Flash,
 }
 
@@ -8746,11 +9115,16 @@ public partial class ConstrainPoint2DParameters
 }
 
 
+[To(ToAttribute.None)]
 public enum MeteringMode
 {
+	[Value("none")]
 	None,
+	[Value("manual")]
 	Manual,
+	[Value("single-shot")]
 	SingleShot,
+	[Value("continuous")]
 	Continuous,
 }
 
@@ -8812,16 +9186,23 @@ public partial class MediaRecorderOptions
 		public ulong VideoKeyFrameIntervalCount;
 }
 
+[To(ToAttribute.None)]
 public enum BitrateMode
 {
+	[Value("constant")]
 	Constant,
+	[Value("variable")]
 	Variable,
 }
 
+[To(ToAttribute.None)]
 public enum RecordingState
 {
+	[Value("inactive")]
 	Inactive,
+	[Value("recording")]
 	Recording,
+	[Value("paused")]
 	Paused,
 }
 
@@ -9005,17 +9386,25 @@ public partial class NotificationOptions
 }
 
 ///<include file='Utils/Docs/NotificationPermission/NotificationPermission.generated.xml' path='docs/NotificationPermission/*'/>
+[To(ToAttribute.None)]
 public enum NotificationPermission
 {
+	[Value("default")]
 	Default,
+	[Value("denied")]
 	Denied,
+	[Value("granted")]
 	Granted,
 }
 
+[To(ToAttribute.None)]
 public enum NotificationDirection
 {
+	[Value("auto")]
 	Auto,
+	[Value("ltr")]
 	Ltr,
+	[Value("rtl")]
 	Rtl,
 }
 
@@ -9069,9 +9458,12 @@ public partial class OrientationSensor : Sensor
 	public Undefined PopulateMatrix(RotationMatrixType targetMatrix) { throw new System.NotImplementedException(); }
 }
 
+[To(ToAttribute.None)]
 public enum OrientationSensorLocalCoordinateSystem
 {
+	[Value("device")]
 	Device,
+	[Value("screen")]
 	Screen,
 }
 
@@ -9162,16 +9554,26 @@ public partial class ProximitySensor : Sensor
 	public ProximitySensor() { }
 }
 
+[To(ToAttribute.None)]
 public enum ReferrerPolicy
 {
+	[Value("")]
 	Empty,
+	[Value("no-referrer")]
 	NoReferrer,
+	[Value("no-referrer-when-downgrade")]
 	NoReferrerWhenDowngrade,
+	[Value("same-origin")]
 	SameOrigin,
+	[Value("origin")]
 	Origin,
+	[Value("strict-origin")]
 	StrictOrigin,
+	[Value("origin-when-cross-origin")]
 	OriginWhenCrossOrigin,
+	[Value("strict-origin-when-cross-origin")]
 	StrictOriginWhenCrossOrigin,
+	[Value("unsafe-url")]
 	UnsafeUrl,
 }
 
@@ -9231,10 +9633,14 @@ public partial class GenerateTestReportParameters
 		public string Group;
 }
 
+[To(ToAttribute.None)]
 public enum ResizeObserverBoxOptions
 {
+	[Value("border-box")]
 	BorderBox,
+	[Value("content-box")]
 	ContentBox,
+	[Value("device-pixel-content-box")]
 	DevicePixelContentBox,
 }
 
@@ -9300,11 +9706,16 @@ public partial class ResizeObservation
 	public ResizeObservation() { }
 }
 
+[To(ToAttribute.None)]
 public enum ScrollAxis
 {
+	[Value("block")]
 	Block,
+	[Value("inline")]
 	Inline,
+	[Value("x")]
 	X,
+	[Value("y")]
 	Y,
 }
 
@@ -9426,20 +9837,31 @@ public partial class ServiceWorker : EventTarget
 }
 
 ///<include file='Utils/Docs/ServiceWorkerState/ServiceWorkerState.generated.xml' path='docs/ServiceWorkerState/*'/>
+[To(ToAttribute.None)]
 public enum ServiceWorkerState
 {
+	[Value("parsed")]
 	Parsed,
+	[Value("installing")]
 	Installing,
+	[Value("installed")]
 	Installed,
+	[Value("activating")]
 	Activating,
+	[Value("activated")]
 	Activated,
+	[Value("redundant")]
 	Redundant,
 }
 
+[To(ToAttribute.None)]
 public enum ServiceWorkerUpdateViaCache
 {
+	[Value("imports")]
 	Imports,
+	[Value("all")]
 	All,
+	[Value("none")]
 	None,
 }
 
@@ -9527,11 +9949,16 @@ public partial class WindowClient : Client
 	public Task<WindowClient?> Navigate(string url) { throw new System.NotImplementedException(); }
 }
 
+[To(ToAttribute.None)]
 public enum FrameType
 {
+	[Value("auxiliary")]
 	Auxiliary,
+	[Value("top-level")]
 	TopLevel,
+	[Value("nested")]
 	Nested,
+	[Value("none")]
 	None,
 }
 
@@ -9557,11 +9984,16 @@ public partial class ClientQueryOptions
 }
 
 ///<include file='Utils/Docs/ClientType/ClientType.generated.xml' path='docs/ClientType/*'/>
+[To(ToAttribute.None)]
 public enum ClientType
 {
+	[Value("window")]
 	Window,
+	[Value("worker")]
 	Worker,
+	[Value("sharedworker")]
 	Sharedworker,
+	[Value("all")]
 	All,
 }
 
@@ -9733,8 +10165,10 @@ public partial class ReadableStream
 }
 
 
+[To(ToAttribute.None)]
 public enum ReadableStreamReaderMode
 {
+	[Value("byob")]
 	Byob,
 }
 
@@ -9792,8 +10226,10 @@ public struct UnderlyingSourceCancelCallback
 {
 }
 
+[To(ToAttribute.None)]
 public enum ReadableStreamType
 {
+	[Value("bytes")]
 	Bytes,
 }
 
@@ -10533,12 +10969,18 @@ public struct VoidFunction
 {
 }
 
+[To(ToAttribute.None)]
 public enum FillMode
 {
+	[Value("none")]
 	None,
+	[Value("forwards")]
 	Forwards,
+	[Value("backwards")]
 	Backwards,
+	[Value("both")]
 	Both,
+	[Value("auto")]
 	Auto,
 }
 
@@ -10570,9 +11012,12 @@ public partial class SequenceEffect : GroupEffect
 	public SequenceEffect() { }
 }
 
+[To(ToAttribute.None)]
 public enum IterationCompositeOperation
 {
+	[Value("replace")]
 	Replace,
+	[Value("accumulate")]
 	Accumulate,
 }
 
@@ -10617,11 +11062,16 @@ public partial class WebAssembly
 		public Task<Instance> Instantiate(Module moduleObject, object importObject) { throw new System.NotImplementedException(); }
 }
 
+[To(ToAttribute.None)]
 public enum ImportExportKind
 {
+	[Value("function")]
 	Function,
+	[Value("table")]
 	Table,
+	[Value("memory")]
 	Memory,
+	[Value("global")]
 	Global,
 }
 
@@ -10674,8 +11124,10 @@ public partial class Memory
 	public Memory() { }
 }
 
+[To(ToAttribute.None)]
 public enum TableKind
 {
+	[Value("anyfunc")]
 	Anyfunc,
 }
 
@@ -10698,11 +11150,16 @@ public partial class Table
 	public Table() { }
 }
 
+[To(ToAttribute.None)]
 public enum ValueType
 {
+	[Value("i32")]
 	I32,
+	[Value("i64")]
 	I64,
+	[Value("f32")]
 	F32,
+	[Value("f64")]
 	F64,
 }
 
@@ -10737,10 +11194,14 @@ public partial class RuntimeError
 {
 }
 
+[To(ToAttribute.None)]
 public enum AudioContextState
 {
+	[Value("suspended")]
 	Suspended,
+	[Value("running")]
 	Running,
+	[Value("closed")]
 	Closed,
 }
 
@@ -10811,10 +11272,14 @@ public partial class BaseAudioContext : EventTarget
 	public Task<AudioBuffer> DecodeAudioData(byte[] audioData, DecodeSuccessCallback? successCallback, DecodeErrorCallback? errorCallback) { throw new System.NotImplementedException(); }
 }
 
+[To(ToAttribute.None)]
 public enum AudioContextLatencyCategory
 {
+	[Value("balanced")]
 	Balanced,
+	[Value("interactive")]
 	Interactive,
+	[Value("playback")]
 	Playback,
 }
 
@@ -10973,16 +11438,23 @@ public partial class AudioNode : EventTarget
 	public ChannelInterpretation ChannelInterpretation { get; set; }
 }
 
+[To(ToAttribute.None)]
 public enum ChannelCountMode
 {
+	[Value("max")]
 	Max,
+	[Value("clamped-max")]
 	ClampedMax,
+	[Value("explicit")]
 	Explicit,
 }
 
+[To(ToAttribute.None)]
 public enum ChannelInterpretation
 {
+	[Value("speakers")]
 	Speakers,
+	[Value("discrete")]
 	Discrete,
 }
 
@@ -10994,9 +11466,12 @@ public partial class AudioNodeOptions
 		public ChannelInterpretation ChannelInterpretation;
 }
 
+[To(ToAttribute.None)]
 public enum AutomationRate
 {
+	[Value("a-rate")]
 	ARate,
+	[Value("k-rate")]
 	KRate,
 }
 
@@ -11169,15 +11644,24 @@ public partial class AudioProcessingEventInit : EventInit
 		public required AudioBuffer OutputBuffer;
 }
 
+[To(ToAttribute.None)]
 public enum BiquadFilterType
 {
+	[Value("lowpass")]
 	Lowpass,
+	[Value("highpass")]
 	Highpass,
+	[Value("bandpass")]
 	Bandpass,
+	[Value("lowshelf")]
 	Lowshelf,
+	[Value("highshelf")]
 	Highshelf,
+	[Value("peaking")]
 	Peaking,
+	[Value("notch")]
 	Notch,
+	[Value("allpass")]
 	Allpass,
 }
 
@@ -11423,12 +11907,18 @@ public partial class MediaStreamTrackAudioSourceOptions
 		public required Unsupported /*MediaStreamTrack*/ MediaStreamTrack;
 }
 
+[To(ToAttribute.None)]
 public enum OscillatorType
 {
+	[Value("sine")]
 	Sine,
+	[Value("square")]
 	Square,
+	[Value("sawtooth")]
 	Sawtooth,
+	[Value("triangle")]
 	Triangle,
+	[Value("custom")]
 	Custom,
 }
 
@@ -11458,16 +11948,23 @@ public partial class OscillatorOptions : AudioNodeOptions
 		public PeriodicWave PeriodicWave;
 }
 
+[To(ToAttribute.None)]
 public enum PanningModelType
 {
+	[Value("equalpower")]
 	Equalpower,
+	[Value("HRTF")]
 	HRTF,
 }
 
+[To(ToAttribute.None)]
 public enum DistanceModelType
 {
+	[Value("linear")]
 	Linear,
+	[Value("inverse")]
 	Inverse,
+	[Value("exponential")]
 	Exponential,
 }
 
@@ -11579,10 +12076,14 @@ public partial class StereoPannerOptions : AudioNodeOptions
 		public Number Pan;
 }
 
+[To(ToAttribute.None)]
 public enum OverSampleType
 {
+	[Value("none")]
 	None,
+	[Value("2x")]
 	_2x,
+	[Value("4x")]
 	_4x,
 }
 
@@ -11777,16 +12278,23 @@ public partial class AuthenticatorSelectionCriteria
 		public UserVerificationRequirement UserVerification;
 }
 
+[To(ToAttribute.None)]
 public enum AuthenticatorAttachment
 {
+	[Value("platform")]
 	Platform,
+	[Value("cross-platform")]
 	CrossPlatform,
 }
 
+[To(ToAttribute.None)]
 public enum AttestationConveyancePreference
 {
+	[Value("none")]
 	None,
+	[Value("indirect")]
 	Indirect,
+	[Value("direct")]
 	Direct,
 }
 
@@ -11823,14 +12331,19 @@ public partial class TokenBinding
 		public string Id;
 }
 
+[To(ToAttribute.None)]
 public enum TokenBindingStatus
 {
+	[Value("present")]
 	Present,
+	[Value("supported")]
 	Supported,
 }
 
+[To(ToAttribute.None)]
 public enum PublicKeyCredentialType
 {
+	[Value("public-key")]
 	PublicKey,
 }
 
@@ -11842,19 +12355,28 @@ public partial class PublicKeyCredentialDescriptor
 		public List<AuthenticatorTransport> Transports;
 }
 
+[To(ToAttribute.None)]
 public enum AuthenticatorTransport
 {
+	[Value("usb")]
 	Usb,
+	[Value("nfc")]
 	Nfc,
+	[Value("ble")]
 	Ble,
+	[Value("internal")]
 	Internal,
 }
 
 
+[To(ToAttribute.None)]
 public enum UserVerificationRequirement
 {
+	[Value("required")]
 	Required,
+	[Value("preferred")]
 	Preferred,
+	[Value("discouraged")]
 	Discouraged,
 }
 
@@ -12128,22 +12650,32 @@ public partial class VideoEncoderConfig
 		public string ContentHint;
 }
 
+[To(ToAttribute.None)]
 public enum HardwareAcceleration
 {
+	[Value("no-preference")]
 	NoPreference,
+	[Value("prefer-hardware")]
 	PreferHardware,
+	[Value("prefer-software")]
 	PreferSoftware,
 }
 
+[To(ToAttribute.None)]
 public enum AlphaOption
 {
+	[Value("keep")]
 	Keep,
+	[Value("discard")]
 	Discard,
 }
 
+[To(ToAttribute.None)]
 public enum LatencyMode
 {
+	[Value("quality")]
 	Quality,
+	[Value("realtime")]
 	Realtime,
 }
 
@@ -12153,17 +12685,25 @@ public partial class VideoEncoderEncodeOptions
 		public bool KeyFrame;
 }
 
+[To(ToAttribute.None)]
 public enum VideoEncoderBitrateMode
 {
+	[Value("constant")]
 	Constant,
+	[Value("variable")]
 	Variable,
+	[Value("quantizer")]
 	Quantizer,
 }
 
+[To(ToAttribute.None)]
 public enum CodecState
 {
+	[Value("unconfigured")]
 	Unconfigured,
+	[Value("configured")]
 	Configured,
+	[Value("closed")]
 	Closed,
 }
 
@@ -12202,9 +12742,12 @@ public partial class EncodedAudioChunkInit
 }
 
 ///<include file='Utils/Docs/EncodedAudioChunkType/EncodedAudioChunkType.generated.xml' path='docs/EncodedAudioChunkType/*'/>
+[To(ToAttribute.None)]
 public enum EncodedAudioChunkType
 {
+	[Value("key")]
 	Key,
+	[Value("delta")]
 	Delta,
 }
 
@@ -12238,9 +12781,12 @@ public partial class EncodedVideoChunkInit
 }
 
 ///<include file='Utils/Docs/EncodedVideoChunkType/EncodedVideoChunkType.generated.xml' path='docs/EncodedVideoChunkType/*'/>
+[To(ToAttribute.None)]
 public enum EncodedVideoChunkType
 {
+	[Value("key")]
 	Key,
+	[Value("delta")]
 	Delta,
 }
 
@@ -12294,15 +12840,24 @@ public partial class AudioDataCopyToOptions
 		public AudioSampleFormat Format;
 }
 
+[To(ToAttribute.None)]
 public enum AudioSampleFormat
 {
+	[Value("u8")]
 	U8,
+	[Value("s16")]
 	S16,
+	[Value("s32")]
 	S32,
+	[Value("f32")]
 	F32,
+	[Value("u8-planar")]
 	U8Planar,
+	[Value("s16-planar")]
 	S16Planar,
+	[Value("s32-planar")]
 	S32Planar,
+	[Value("f32-planar")]
 	F32Planar,
 }
 
@@ -12393,30 +12948,54 @@ public partial class PlaneLayout
 		public required ulong Stride;
 }
 
+[To(ToAttribute.None)]
 public enum VideoPixelFormat
 {
+	[Value("I420")]
 	I420,
+	[Value("I420P10")]
 	I420P10,
+	[Value("I420P12")]
 	I420P12,
+	[Value("I420A")]
 	I420A,
+	[Value("I420AP10")]
 	I420AP10,
+	[Value("I420AP12")]
 	I420AP12,
+	[Value("I422")]
 	I422,
+	[Value("I422P10")]
 	I422P10,
+	[Value("I422P12")]
 	I422P12,
+	[Value("I422A")]
 	I422A,
+	[Value("I422AP10")]
 	I422AP10,
+	[Value("I422AP12")]
 	I422AP12,
+	[Value("I444")]
 	I444,
+	[Value("I444P10")]
 	I444P10,
+	[Value("I444P12")]
 	I444P12,
+	[Value("I444A")]
 	I444A,
+	[Value("I444AP10")]
 	I444AP10,
+	[Value("I444AP12")]
 	I444AP12,
+	[Value("NV12")]
 	NV12,
+	[Value("RGBA")]
 	RGBA,
+	[Value("RGBX")]
 	RGBX,
+	[Value("BGRA")]
 	BGRA,
+	[Value("BGRX")]
 	BGRX,
 }
 
@@ -12448,31 +13027,50 @@ public partial class VideoColorSpaceInit
 		public bool? FullRange;
 }
 
+[To(ToAttribute.None)]
 public enum VideoColorPrimaries
 {
+	[Value("bt709")]
 	Bt709,
+	[Value("bt470bg")]
 	Bt470bg,
+	[Value("smpte170m")]
 	Smpte170m,
+	[Value("bt2020")]
 	Bt2020,
+	[Value("smpte432")]
 	Smpte432,
 }
 
+[To(ToAttribute.None)]
 public enum VideoTransferCharacteristics
 {
+	[Value("bt709")]
 	Bt709,
+	[Value("smpte170m")]
 	Smpte170m,
+	[Value("iec61966-2-1")]
 	Iec6196621,
+	[Value("linear")]
 	Linear,
+	[Value("pq")]
 	Pq,
+	[Value("hlg")]
 	Hlg,
 }
 
+[To(ToAttribute.None)]
 public enum VideoMatrixCoefficients
 {
+	[Value("rgb")]
 	Rgb,
+	[Value("bt709")]
 	Bt709,
+	[Value("bt470bg")]
 	Bt470bg,
+	[Value("smpte170m")]
 	Smpte170m,
+	[Value("bt2020-ncl")]
 	Bt2020Ncl,
 }
 
@@ -12661,9 +13259,12 @@ public partial class GPURequestAdapterOptions
 		public bool ForceFallbackAdapter;
 }
 
+[To(ToAttribute.None)]
 public enum GPUPowerPreference
 {
+	[Value("low-power")]
 	LowPower,
+	[Value("high-performance")]
 	HighPerformance,
 }
 
@@ -12691,18 +13292,30 @@ public partial class GPUDeviceDescriptor : GPUObjectDescriptorBase
 		public GPUQueueDescriptor DefaultQueue;
 }
 
+[To(ToAttribute.None)]
 public enum GPUFeatureName
 {
+	[Value("depth-clip-control")]
 	DepthClipControl,
+	[Value("depth32float-stencil8")]
 	Depth32floatStencil8,
+	[Value("texture-compression-bc")]
 	TextureCompressionBc,
+	[Value("texture-compression-etc2")]
 	TextureCompressionEtc2,
+	[Value("texture-compression-astc")]
 	TextureCompressionAstc,
+	[Value("timestamp-query")]
 	TimestampQuery,
+	[Value("indirect-first-instance")]
 	IndirectFirstInstance,
+	[Value("shader-f16")]
 	ShaderF16,
+	[Value("rg11b10ufloat-renderable")]
 	Rg11b10ufloatRenderable,
+	[Value("bgra8unorm-storage")]
 	Bgra8unormStorage,
+	[Value("float32-filterable")]
 	Float32Filterable,
 }
 
@@ -12771,10 +13384,14 @@ public partial class GPUBuffer
 }
 
 ///<include file='Utils/Docs/GPUBufferMapState/GPUBufferMapState.generated.xml' path='docs/GPUBufferMapState/*'/>
+[To(ToAttribute.None)]
 public enum GPUBufferMapState
 {
+	[Value("unmapped")]
 	Unmapped,
+	[Value("pending")]
 	Pending,
+	[Value("mapped")]
 	Mapped,
 }
 
@@ -12850,10 +13467,14 @@ public partial class GPUTextureDescriptor : GPUObjectDescriptorBase
 }
 
 ///<include file='Utils/Docs/GPUTextureDimension/GPUTextureDimension.generated.xml' path='docs/GPUTextureDimension/*'/>
+[To(ToAttribute.None)]
 public enum GPUTextureDimension
 {
+	[Value("1d")]
 	_1d,
+	[Value("2d")]
 	_2d,
+	[Value("3d")]
 	_3d,
 }
 
@@ -12887,120 +13508,227 @@ public partial class GPUTextureViewDescriptor : GPUObjectDescriptorBase
 		public GPUIntegerCoordinate ArrayLayerCount;
 }
 
+[To(ToAttribute.None)]
 public enum GPUTextureViewDimension
 {
+	[Value("1d")]
 	_1d,
+	[Value("2d")]
 	_2d,
+	[Value("2d-array")]
 	_2dArray,
+	[Value("cube")]
 	Cube,
+	[Value("cube-array")]
 	CubeArray,
+	[Value("3d")]
 	_3d,
 }
 
+[To(ToAttribute.None)]
 public enum GPUTextureAspect
 {
+	[Value("all")]
 	All,
+	[Value("stencil-only")]
 	StencilOnly,
+	[Value("depth-only")]
 	DepthOnly,
 }
 
 ///<include file='Utils/Docs/GPUTextureFormat/GPUTextureFormat.generated.xml' path='docs/GPUTextureFormat/*'/>
+[To(ToAttribute.None)]
 public enum GPUTextureFormat
 {
+	[Value("r8unorm")]
 	R8unorm,
+	[Value("r8snorm")]
 	R8snorm,
+	[Value("r8uint")]
 	R8uint,
+	[Value("r8sint")]
 	R8sint,
+	[Value("r16uint")]
 	R16uint,
+	[Value("r16sint")]
 	R16sint,
+	[Value("r16float")]
 	R16float,
+	[Value("rg8unorm")]
 	Rg8unorm,
+	[Value("rg8snorm")]
 	Rg8snorm,
+	[Value("rg8uint")]
 	Rg8uint,
+	[Value("rg8sint")]
 	Rg8sint,
+	[Value("r32uint")]
 	R32uint,
+	[Value("r32sint")]
 	R32sint,
+	[Value("r32float")]
 	R32float,
+	[Value("rg16uint")]
 	Rg16uint,
+	[Value("rg16sint")]
 	Rg16sint,
+	[Value("rg16float")]
 	Rg16float,
+	[Value("rgba8unorm")]
 	Rgba8unorm,
+	[Value("rgba8unorm-srgb")]
 	Rgba8unormSrgb,
+	[Value("rgba8snorm")]
 	Rgba8snorm,
+	[Value("rgba8uint")]
 	Rgba8uint,
+	[Value("rgba8sint")]
 	Rgba8sint,
+	[Value("bgra8unorm")]
 	Bgra8unorm,
+	[Value("bgra8unorm-srgb")]
 	Bgra8unormSrgb,
+	[Value("rgb9e5ufloat")]
 	Rgb9e5ufloat,
+	[Value("rgb10a2uint")]
 	Rgb10a2uint,
+	[Value("rgb10a2unorm")]
 	Rgb10a2unorm,
+	[Value("rg11b10ufloat")]
 	Rg11b10ufloat,
+	[Value("rg32uint")]
 	Rg32uint,
+	[Value("rg32sint")]
 	Rg32sint,
+	[Value("rg32float")]
 	Rg32float,
+	[Value("rgba16uint")]
 	Rgba16uint,
+	[Value("rgba16sint")]
 	Rgba16sint,
+	[Value("rgba16float")]
 	Rgba16float,
+	[Value("rgba32uint")]
 	Rgba32uint,
+	[Value("rgba32sint")]
 	Rgba32sint,
+	[Value("rgba32float")]
 	Rgba32float,
+	[Value("stencil8")]
 	Stencil8,
+	[Value("depth16unorm")]
 	Depth16unorm,
+	[Value("depth24plus")]
 	Depth24plus,
+	[Value("depth24plus-stencil8")]
 	Depth24plusStencil8,
+	[Value("depth32float")]
 	Depth32float,
+	[Value("depth32float-stencil8")]
 	Depth32floatStencil8,
+	[Value("bc1-rgba-unorm")]
 	Bc1RgbaUnorm,
+	[Value("bc1-rgba-unorm-srgb")]
 	Bc1RgbaUnormSrgb,
+	[Value("bc2-rgba-unorm")]
 	Bc2RgbaUnorm,
+	[Value("bc2-rgba-unorm-srgb")]
 	Bc2RgbaUnormSrgb,
+	[Value("bc3-rgba-unorm")]
 	Bc3RgbaUnorm,
+	[Value("bc3-rgba-unorm-srgb")]
 	Bc3RgbaUnormSrgb,
+	[Value("bc4-r-unorm")]
 	Bc4RUnorm,
+	[Value("bc4-r-snorm")]
 	Bc4RSnorm,
+	[Value("bc5-rg-unorm")]
 	Bc5RgUnorm,
+	[Value("bc5-rg-snorm")]
 	Bc5RgSnorm,
+	[Value("bc6h-rgb-ufloat")]
 	Bc6hRgbUfloat,
+	[Value("bc6h-rgb-float")]
 	Bc6hRgbFloat,
+	[Value("bc7-rgba-unorm")]
 	Bc7RgbaUnorm,
+	[Value("bc7-rgba-unorm-srgb")]
 	Bc7RgbaUnormSrgb,
+	[Value("etc2-rgb8unorm")]
 	Etc2Rgb8unorm,
+	[Value("etc2-rgb8unorm-srgb")]
 	Etc2Rgb8unormSrgb,
+	[Value("etc2-rgb8a1unorm")]
 	Etc2Rgb8a1unorm,
+	[Value("etc2-rgb8a1unorm-srgb")]
 	Etc2Rgb8a1unormSrgb,
+	[Value("etc2-rgba8unorm")]
 	Etc2Rgba8unorm,
+	[Value("etc2-rgba8unorm-srgb")]
 	Etc2Rgba8unormSrgb,
+	[Value("eac-r11unorm")]
 	EacR11unorm,
+	[Value("eac-r11snorm")]
 	EacR11snorm,
+	[Value("eac-rg11unorm")]
 	EacRg11unorm,
+	[Value("eac-rg11snorm")]
 	EacRg11snorm,
+	[Value("astc-4x4-unorm")]
 	Astc4x4Unorm,
+	[Value("astc-4x4-unorm-srgb")]
 	Astc4x4UnormSrgb,
+	[Value("astc-5x4-unorm")]
 	Astc5x4Unorm,
+	[Value("astc-5x4-unorm-srgb")]
 	Astc5x4UnormSrgb,
+	[Value("astc-5x5-unorm")]
 	Astc5x5Unorm,
+	[Value("astc-5x5-unorm-srgb")]
 	Astc5x5UnormSrgb,
+	[Value("astc-6x5-unorm")]
 	Astc6x5Unorm,
+	[Value("astc-6x5-unorm-srgb")]
 	Astc6x5UnormSrgb,
+	[Value("astc-6x6-unorm")]
 	Astc6x6Unorm,
+	[Value("astc-6x6-unorm-srgb")]
 	Astc6x6UnormSrgb,
+	[Value("astc-8x5-unorm")]
 	Astc8x5Unorm,
+	[Value("astc-8x5-unorm-srgb")]
 	Astc8x5UnormSrgb,
+	[Value("astc-8x6-unorm")]
 	Astc8x6Unorm,
+	[Value("astc-8x6-unorm-srgb")]
 	Astc8x6UnormSrgb,
+	[Value("astc-8x8-unorm")]
 	Astc8x8Unorm,
+	[Value("astc-8x8-unorm-srgb")]
 	Astc8x8UnormSrgb,
+	[Value("astc-10x5-unorm")]
 	Astc10x5Unorm,
+	[Value("astc-10x5-unorm-srgb")]
 	Astc10x5UnormSrgb,
+	[Value("astc-10x6-unorm")]
 	Astc10x6Unorm,
+	[Value("astc-10x6-unorm-srgb")]
 	Astc10x6UnormSrgb,
+	[Value("astc-10x8-unorm")]
 	Astc10x8Unorm,
+	[Value("astc-10x8-unorm-srgb")]
 	Astc10x8UnormSrgb,
+	[Value("astc-10x10-unorm")]
 	Astc10x10Unorm,
+	[Value("astc-10x10-unorm-srgb")]
 	Astc10x10UnormSrgb,
+	[Value("astc-12x10-unorm")]
 	Astc12x10Unorm,
+	[Value("astc-12x10-unorm-srgb")]
 	Astc12x10UnormSrgb,
+	[Value("astc-12x12-unorm")]
 	Astc12x12Unorm,
+	[Value("astc-12x12-unorm-srgb")]
 	Astc12x12UnormSrgb,
 }
 
@@ -13038,34 +13766,53 @@ public partial class GPUSamplerDescriptor : GPUObjectDescriptorBase
 		public ushort MaxAnisotropy;
 }
 
+[To(ToAttribute.None)]
 public enum GPUAddressMode
 {
+	[Value("clamp-to-edge")]
 	ClampToEdge,
+	[Value("repeat")]
 	Repeat,
+	[Value("mirror-repeat")]
 	MirrorRepeat,
 }
 
+[To(ToAttribute.None)]
 public enum GPUFilterMode
 {
+	[Value("nearest")]
 	Nearest,
+	[Value("linear")]
 	Linear,
 }
 
+[To(ToAttribute.None)]
 public enum GPUMipmapFilterMode
 {
+	[Value("nearest")]
 	Nearest,
+	[Value("linear")]
 	Linear,
 }
 
+[To(ToAttribute.None)]
 public enum GPUCompareFunction
 {
+	[Value("never")]
 	Never,
+	[Value("less")]
 	Less,
+	[Value("equal")]
 	Equal,
+	[Value("less-equal")]
 	LessEqual,
+	[Value("greater")]
 	Greater,
+	[Value("not-equal")]
 	NotEqual,
+	[Value("greater-equal")]
 	GreaterEqual,
+	[Value("always")]
 	Always,
 }
 
@@ -13102,10 +13849,14 @@ public partial class GPUShaderStage
 		public const GPUFlagsConstant COMPUTE = 0x4;
 }
 
+[To(ToAttribute.None)]
 public enum GPUBufferBindingType
 {
+	[Value("uniform")]
 	Uniform,
+	[Value("storage")]
 	Storage,
+	[Value("read-only-storage")]
 	ReadOnlyStorage,
 }
 
@@ -13117,10 +13868,14 @@ public partial class GPUBufferBindingLayout
 		public GPUSize64 MinBindingSize;
 }
 
+[To(ToAttribute.None)]
 public enum GPUSamplerBindingType
 {
+	[Value("filtering")]
 	Filtering,
+	[Value("non-filtering")]
 	NonFiltering,
+	[Value("comparison")]
 	Comparison,
 }
 
@@ -13130,12 +13885,18 @@ public partial class GPUSamplerBindingLayout
 		public GPUSamplerBindingType Type;
 }
 
+[To(ToAttribute.None)]
 public enum GPUTextureSampleType
 {
+	[Value("float")]
 	Float,
+	[Value("unfilterable-float")]
 	UnfilterableFloat,
+	[Value("depth")]
 	Depth,
+	[Value("sint")]
 	Sint,
+	[Value("uint")]
 	Uint,
 }
 
@@ -13147,10 +13908,14 @@ public partial class GPUTextureBindingLayout
 		public bool Multisampled;
 }
 
+[To(ToAttribute.None)]
 public enum GPUStorageTextureAccess
 {
+	[Value("write-only")]
 	WriteOnly,
+	[Value("read-only")]
 	ReadOnly,
+	[Value("read-write")]
 	ReadWrite,
 }
 
@@ -13232,10 +13997,14 @@ public partial class GPUShaderModuleCompilationHint
 }
 
 ///<include file='Utils/Docs/GPUCompilationMessageType/GPUCompilationMessageType.generated.xml' path='docs/GPUCompilationMessageType/*'/>
+[To(ToAttribute.None)]
 public enum GPUCompilationMessageType
 {
+	[Value("error")]
 	Error,
+	[Value("warning")]
 	Warning,
+	[Value("info")]
 	Info,
 }
 
@@ -13283,14 +14052,19 @@ public partial class GPUPipelineErrorInit
 }
 
 ///<include file='Utils/Docs/GPUPipelineErrorReason/GPUPipelineErrorReason.generated.xml' path='docs/GPUPipelineErrorReason/*'/>
+[To(ToAttribute.None)]
 public enum GPUPipelineErrorReason
 {
+	[Value("validation")]
 	Validation,
+	[Value("internal")]
 	Internal,
 }
 
+[To(ToAttribute.None)]
 public enum GPUAutoLayoutMode
 {
+	[Value("auto")]
 	Auto,
 }
 
@@ -13353,25 +14127,38 @@ public partial class GPUPrimitiveState
 		public bool UnclippedDepth;
 }
 
+[To(ToAttribute.None)]
 public enum GPUPrimitiveTopology
 {
+	[Value("point-list")]
 	PointList,
+	[Value("line-list")]
 	LineList,
+	[Value("line-strip")]
 	LineStrip,
+	[Value("triangle-list")]
 	TriangleList,
+	[Value("triangle-strip")]
 	TriangleStrip,
 }
 
+[To(ToAttribute.None)]
 public enum GPUFrontFace
 {
+	[Value("ccw")]
 	Ccw,
+	[Value("cw")]
 	Cw,
 }
 
+[To(ToAttribute.None)]
 public enum GPUCullMode
 {
+	[Value("none")]
 	None,
+	[Value("front")]
 	Front,
+	[Value("back")]
 	Back,
 }
 
@@ -13423,29 +14210,49 @@ public partial class GPUBlendComponent
 		public GPUBlendFactor DstFactor;
 }
 
+[To(ToAttribute.None)]
 public enum GPUBlendFactor
 {
+	[Value("zero")]
 	Zero,
+	[Value("one")]
 	One,
+	[Value("src")]
 	Src,
+	[Value("one-minus-src")]
 	OneMinusSrc,
+	[Value("src-alpha")]
 	SrcAlpha,
+	[Value("one-minus-src-alpha")]
 	OneMinusSrcAlpha,
+	[Value("dst")]
 	Dst,
+	[Value("one-minus-dst")]
 	OneMinusDst,
+	[Value("dst-alpha")]
 	DstAlpha,
+	[Value("one-minus-dst-alpha")]
 	OneMinusDstAlpha,
+	[Value("src-alpha-saturated")]
 	SrcAlphaSaturated,
+	[Value("constant")]
 	Constant,
+	[Value("one-minus-constant")]
 	OneMinusConstant,
 }
 
+[To(ToAttribute.None)]
 public enum GPUBlendOperation
 {
+	[Value("add")]
 	Add,
+	[Value("subtract")]
 	Subtract,
+	[Value("reverse-subtract")]
 	ReverseSubtract,
+	[Value("min")]
 	Min,
+	[Value("max")]
 	Max,
 }
 
@@ -13473,62 +14280,109 @@ public partial class GPUStencilFaceState
 		public GPUStencilOperation PassOp;
 }
 
+[To(ToAttribute.None)]
 public enum GPUStencilOperation
 {
+	[Value("keep")]
 	Keep,
+	[Value("zero")]
 	Zero,
+	[Value("replace")]
 	Replace,
+	[Value("invert")]
 	Invert,
+	[Value("increment-clamp")]
 	IncrementClamp,
+	[Value("decrement-clamp")]
 	DecrementClamp,
+	[Value("increment-wrap")]
 	IncrementWrap,
+	[Value("decrement-wrap")]
 	DecrementWrap,
 }
 
+[To(ToAttribute.None)]
 public enum GPUIndexFormat
 {
+	[Value("uint16")]
 	Uint16,
+	[Value("uint32")]
 	Uint32,
 }
 
+[To(ToAttribute.None)]
 public enum GPUVertexFormat
 {
+	[Value("uint8x2")]
 	Uint8x2,
+	[Value("uint8x4")]
 	Uint8x4,
+	[Value("sint8x2")]
 	Sint8x2,
+	[Value("sint8x4")]
 	Sint8x4,
+	[Value("unorm8x2")]
 	Unorm8x2,
+	[Value("unorm8x4")]
 	Unorm8x4,
+	[Value("snorm8x2")]
 	Snorm8x2,
+	[Value("snorm8x4")]
 	Snorm8x4,
+	[Value("uint16x2")]
 	Uint16x2,
+	[Value("uint16x4")]
 	Uint16x4,
+	[Value("sint16x2")]
 	Sint16x2,
+	[Value("sint16x4")]
 	Sint16x4,
+	[Value("unorm16x2")]
 	Unorm16x2,
+	[Value("unorm16x4")]
 	Unorm16x4,
+	[Value("snorm16x2")]
 	Snorm16x2,
+	[Value("snorm16x4")]
 	Snorm16x4,
+	[Value("float16x2")]
 	Float16x2,
+	[Value("float16x4")]
 	Float16x4,
+	[Value("float32")]
 	Float32,
+	[Value("float32x2")]
 	Float32x2,
+	[Value("float32x3")]
 	Float32x3,
+	[Value("float32x4")]
 	Float32x4,
+	[Value("uint32")]
 	Uint32,
+	[Value("uint32x2")]
 	Uint32x2,
+	[Value("uint32x3")]
 	Uint32x3,
+	[Value("uint32x4")]
 	Uint32x4,
+	[Value("sint32")]
 	Sint32,
+	[Value("sint32x2")]
 	Sint32x2,
+	[Value("sint32x3")]
 	Sint32x3,
+	[Value("sint32x4")]
 	Sint32x4,
+	[Value("unorm10-10-10-2")]
 	Unorm1010102,
 }
 
+[To(ToAttribute.None)]
 public enum GPUVertexStepMode
 {
+	[Value("vertex")]
 	Vertex,
+	[Value("instance")]
 	Instance,
 }
 
@@ -13746,15 +14600,21 @@ public partial class GPURenderPassDepthStencilAttachment
 		public bool StencilReadOnly;
 }
 
+[To(ToAttribute.None)]
 public enum GPULoadOp
 {
+	[Value("load")]
 	Load,
+	[Value("clear")]
 	Clear,
 }
 
+[To(ToAttribute.None)]
 public enum GPUStoreOp
 {
+	[Value("store")]
 	Store,
+	[Value("discard")]
 	Discard,
 }
 
@@ -13844,9 +14704,12 @@ public partial class GPUQuerySetDescriptor : GPUObjectDescriptorBase
 		public required GPUSize32 Count;
 }
 
+[To(ToAttribute.None)]
 public enum GPUQueryType
 {
+	[Value("occlusion")]
 	Occlusion,
+	[Value("timestamp")]
 	Timestamp,
 }
 
@@ -13864,9 +14727,12 @@ public partial class GPUCanvasContext
 	public GPUTexture GetCurrentTexture() { throw new System.NotImplementedException(); }
 }
 
+[To(ToAttribute.None)]
 public enum GPUCanvasAlphaMode
 {
+	[Value("opaque")]
 	Opaque,
+	[Value("premultiplied")]
 	Premultiplied,
 }
 
@@ -13881,9 +14747,12 @@ public partial class GPUCanvasConfiguration
 		public GPUCanvasAlphaMode AlphaMode;
 }
 
+[To(ToAttribute.None)]
 public enum GPUDeviceLostReason
 {
+	[Value("unknown")]
 	Unknown,
+	[Value("destroyed")]
 	Destroyed,
 }
 
@@ -13932,10 +14801,14 @@ public partial class GPUInternalError : GPUError
 	public GPUInternalError() { }
 }
 
+[To(ToAttribute.None)]
 public enum GPUErrorFilter
 {
+	[Value("validation")]
 	Validation,
+	[Value("out-of-memory")]
 	OutOfMemory,
+	[Value("internal")]
 	Internal,
 }
 
@@ -14030,9 +14903,12 @@ public struct LockGrantedCallback
 }
 
 ///<include file='Utils/Docs/LockMode/LockMode.generated.xml' path='docs/LockMode/*'/>
+[To(ToAttribute.None)]
 public enum LockMode
 {
+	[Value("shared")]
 	Shared,
+	[Value("exclusive")]
 	Exclusive,
 }
 
@@ -14109,22 +14985,32 @@ public partial class MIDIAccess : EventTarget
 }
 
 ///<include file='Utils/Docs/MIDIPortType/MIDIPortType.generated.xml' path='docs/MIDIPortType/*'/>
+[To(ToAttribute.None)]
 public enum MIDIPortType
 {
+	[Value("input")]
 	Input,
+	[Value("output")]
 	Output,
 }
 
+[To(ToAttribute.None)]
 public enum MIDIPortDeviceState
 {
+	[Value("disconnected")]
 	Disconnected,
+	[Value("connected")]
 	Connected,
 }
 
+[To(ToAttribute.None)]
 public enum MIDIPortConnectionState
 {
+	[Value("open")]
 	Open,
+	[Value("closed")]
 	Closed,
+	[Value("pending")]
 	Pending,
 }
 
@@ -14212,16 +15098,23 @@ public partial interface NavigatorML
 		public ML Ml { get { throw new System.NotImplementedException(); } }
 }
 
+[To(ToAttribute.None)]
 public enum MLDeviceType
 {
+	[Value("cpu")]
 	Cpu,
+	[Value("gpu")]
 	Gpu,
 }
 
+[To(ToAttribute.None)]
 public enum MLPowerPreference
 {
+	[Value("default")]
 	Default,
+	[Value("high-performance")]
 	HighPerformance,
+	[Value("low-power")]
 	LowPower,
 }
 
@@ -14258,21 +15151,33 @@ public partial class MLGraph
 {
 }
 
+[To(ToAttribute.None)]
 public enum MLInputOperandLayout
 {
+	[Value("nchw")]
 	Nchw,
+	[Value("nhwc")]
 	Nhwc,
 }
 
+[To(ToAttribute.None)]
 public enum MLOperandDataType
 {
+	[Value("float32")]
 	Float32,
+	[Value("float16")]
 	Float16,
+	[Value("int32")]
 	Int32,
+	[Value("uint32")]
 	Uint32,
+	[Value("int64")]
 	Int64,
+	[Value("uint64")]
 	Uint64,
+	[Value("int8")]
 	Int8,
+	[Value("uint8")]
 	Uint8,
 }
 
@@ -14332,11 +15237,16 @@ public partial class MLClampOptions
 		public Number MaxValue;
 }
 
+[To(ToAttribute.None)]
 public enum MLConv2dFilterOperandLayout
 {
+	[Value("oihw")]
 	Oihw,
+	[Value("hwio")]
 	Hwio,
+	[Value("ohwi")]
 	Ohwi,
+	[Value("ihwo")]
 	Ihwo,
 }
 
@@ -14353,10 +15263,14 @@ public partial class MLConv2dOptions
 		public MLActivation Activation;
 }
 
+[To(ToAttribute.None)]
 public enum MLConvTranspose2dFilterOperandLayout
 {
+	[Value("iohw")]
 	Iohw,
+	[Value("hwoi")]
 	Hwoi,
+	[Value("ohwi")]
 	Ohwi,
 }
 
@@ -14397,16 +15311,23 @@ public partial class MLGemmOptions
 		public bool BTranspose;
 }
 
+[To(ToAttribute.None)]
 public enum MLGruWeightLayout
 {
+	[Value("zrn")]
 	Zrn,
+	[Value("rzn")]
 	Rzn,
 }
 
+[To(ToAttribute.None)]
 public enum MLRecurrentNetworkDirection
 {
+	[Value("forward")]
 	Forward,
+	[Value("backward")]
 	Backward,
+	[Value("both")]
 	Both,
 }
 
@@ -14471,9 +15392,12 @@ public partial class MLLinearOptions
 		public Number Beta;
 }
 
+[To(ToAttribute.None)]
 public enum MLLstmWeightLayout
 {
+	[Value("iofg")]
 	Iofg,
+	[Value("ifgo")]
 	Ifgo,
 }
 
@@ -14501,11 +15425,16 @@ public partial class MLLstmCellOptions
 		public List<MLActivation> Activations;
 }
 
+[To(ToAttribute.None)]
 public enum MLPaddingMode
 {
+	[Value("constant")]
 	Constant,
+	[Value("edge")]
 	Edge,
+	[Value("reflection")]
 	Reflection,
+	[Value("symmetric")]
 	Symmetric,
 }
 
@@ -14516,9 +15445,12 @@ public partial class MLPadOptions
 		public Number Value;
 }
 
+[To(ToAttribute.None)]
 public enum MLRoundingType
 {
+	[Value("floor")]
 	Floor,
+	[Value("ceil")]
 	Ceil,
 }
 
@@ -14541,9 +15473,12 @@ public partial class MLReduceOptions
 		public bool KeepDimensions;
 }
 
+[To(ToAttribute.None)]
 public enum MLInterpolationMode
 {
+	[Value("nearest-neighbor")]
 	NearestNeighbor,
+	[Value("linear")]
 	Linear,
 }
 
@@ -14582,9 +15517,12 @@ public partial class MLTriangularOptions
 }
 
 
+[To(ToAttribute.None)]
 public enum SFrameTransformRole
 {
+	[Value("encrypt")]
 	Encrypt,
+	[Value("decrypt")]
 	Decrypt,
 }
 
@@ -14605,10 +15543,14 @@ public partial class SFrameTransform : EventTarget
 	public SFrameTransform() { }
 }
 
+[To(ToAttribute.None)]
 public enum SFrameTransformErrorEventType
 {
+	[Value("authentication")]
 	Authentication,
+	[Value("keyID")]
 	KeyID,
+	[Value("syntax")]
 	Syntax,
 }
 
@@ -14631,10 +15573,14 @@ public partial class SFrameTransformErrorEventInit : EventInit
 }
 
 ///<include file='Utils/Docs/RTCEncodedVideoFrameType/RTCEncodedVideoFrameType.generated.xml' path='docs/RTCEncodedVideoFrameType/*'/>
+[To(ToAttribute.None)]
 public enum RTCEncodedVideoFrameType
 {
+	[Value("empty")]
 	Empty,
+	[Value("key")]
 	Key,
+	[Value("delta")]
 	Delta,
 }
 
@@ -14730,17 +15676,25 @@ public partial class KeyFrameRequestEvent : Event
 	public KeyFrameRequestEvent() { }
 }
 
+[To(ToAttribute.None)]
 public enum RTCPriorityType
 {
+	[Value("very-low")]
 	VeryLow,
+	[Value("low")]
 	Low,
+	[Value("medium")]
 	Medium,
+	[Value("high")]
 	High,
 }
 
+[To(ToAttribute.None)]
 public enum BinaryType
 {
+	[Value("blob")]
 	Blob,
+	[Value("arraybuffer")]
 	Arraybuffer,
 }
 
@@ -14854,10 +15808,14 @@ public partial class WebTransport
 	public WebTransport() { }
 }
 
+[To(ToAttribute.None)]
 public enum WebTransportReliabilityMode
 {
+	[Value("pending")]
 	Pending,
+	[Value("reliable-only")]
 	ReliableOnly,
+	[Value("supports-unreliable")]
 	SupportsUnreliable,
 }
 
@@ -14878,10 +15836,14 @@ public partial class WebTransportOptions
 }
 
 ///<include file='Utils/Docs/WebTransportCongestionControl/WebTransportCongestionControl.generated.xml' path='docs/WebTransportCongestionControl/*'/>
+[To(ToAttribute.None)]
 public enum WebTransportCongestionControl
 {
+	[Value("default")]
 	Default,
+	[Value("throughput")]
 	Throughput,
+	[Value("low-latency")]
 	LowLatency,
 }
 
@@ -14995,46 +15957,70 @@ public partial class WebTransportErrorOptions
 }
 
 ///<include file='Utils/Docs/WebTransportErrorSource/WebTransportErrorSource.generated.xml' path='docs/WebTransportErrorSource/*'/>
+[To(ToAttribute.None)]
 public enum WebTransportErrorSource
 {
+	[Value("stream")]
 	Stream,
+	[Value("session")]
 	Session,
 }
 
+[To(ToAttribute.None)]
 public enum AutoKeyword
 {
+	[Value("auto")]
 	Auto,
 }
 
 
+[To(ToAttribute.None)]
 public enum DirectionSetting
 {
+	[Value("")]
 	Empty,
+	[Value("rl")]
 	Rl,
+	[Value("lr")]
 	Lr,
 }
 
+[To(ToAttribute.None)]
 public enum LineAlignSetting
 {
+	[Value("start")]
 	Start,
+	[Value("center")]
 	Center,
+	[Value("end")]
 	End,
 }
 
+[To(ToAttribute.None)]
 public enum PositionAlignSetting
 {
+	[Value("line-left")]
 	LineLeft,
+	[Value("center")]
 	Center,
+	[Value("line-right")]
 	LineRight,
+	[Value("auto")]
 	Auto,
 }
 
+[To(ToAttribute.None)]
 public enum AlignSetting
 {
+	[Value("start")]
 	Start,
+	[Value("center")]
 	Center,
+	[Value("end")]
 	End,
+	[Value("left")]
 	Left,
+	[Value("right")]
 	Right,
 }
 
@@ -15069,9 +16055,12 @@ public partial class VTTCue : TextTrackCue
 	public VTTCue() { }
 }
 
+[To(ToAttribute.None)]
 public enum ScrollSetting
 {
+	[Value("")]
 	Empty,
+	[Value("up")]
 	Up,
 }
 
@@ -15090,28 +16079,41 @@ public partial class VTTRegion
 		public ScrollSetting Scroll { get; set; }
 }
 
+[To(ToAttribute.None)]
 public enum XREnvironmentBlendMode
 {
+	[Value("opaque")]
 	Opaque,
+	[Value("alpha-blend")]
 	AlphaBlend,
+	[Value("additive")]
 	Additive,
 }
 
+[To(ToAttribute.None)]
 public enum XRInteractionMode
 {
+	[Value("screen-space")]
 	ScreenSpace,
+	[Value("world-space")]
 	WorldSpace,
 }
 
+[To(ToAttribute.None)]
 public enum XRDepthUsage
 {
+	[Value("cpu-optimized")]
 	CpuOptimized,
+	[Value("gpu-optimized")]
 	GpuOptimized,
 }
 
+[To(ToAttribute.None)]
 public enum XRDepthDataFormat
 {
+	[Value("luminance-alpha")]
 	LuminanceAlpha,
+	[Value("float32")]
 	Float32,
 }
 
@@ -15165,17 +16167,25 @@ public partial class XRSystem : EventTarget
 		public EventHandler Ondevicechange { get; set; }
 }
 
+[To(ToAttribute.None)]
 public enum XRSessionMode
 {
+	[Value("inline")]
 	Inline,
+	[Value("immersive-vr")]
 	ImmersiveVr,
+	[Value("immersive-ar")]
 	ImmersiveAr,
 }
 
+[To(ToAttribute.None)]
 public enum XRVisibilityState
 {
+	[Value("visible")]
 	Visible,
+	[Value("visible-blurred")]
 	VisibleBlurred,
+	[Value("hidden")]
 	Hidden,
 }
 
@@ -15214,12 +16224,18 @@ public partial class XRSpace : EventTarget
 {
 }
 
+[To(ToAttribute.None)]
 public enum XRReferenceSpaceType
 {
+	[Value("viewer")]
 	Viewer,
+	[Value("local")]
 	Local,
+	[Value("local-floor")]
 	LocalFloor,
+	[Value("bounded-floor")]
 	BoundedFloor,
+	[Value("unbounded")]
 	Unbounded,
 }
 
@@ -15240,10 +16256,14 @@ public partial class XRBoundedReferenceSpace : XRReferenceSpace
 	public DOMPointReadOnly[] BoundsGeometry { get; }
 }
 
+[To(ToAttribute.None)]
 public enum XREye
 {
+	[Value("none")]
 	None,
+	[Value("left")]
 	Left,
+	[Value("right")]
 	Right,
 }
 
@@ -15300,18 +16320,27 @@ public partial class XRViewerPose : XRPose
 	public XRView[] Views { get; }
 }
 
+[To(ToAttribute.None)]
 public enum XRHandedness
 {
+	[Value("none")]
 	None,
+	[Value("left")]
 	Left,
+	[Value("right")]
 	Right,
 }
 
+[To(ToAttribute.None)]
 public enum XRTargetRayMode
 {
+	[Value("gaze")]
 	Gaze,
+	[Value("tracked-pointer")]
 	TrackedPointer,
+	[Value("screen")]
 	Screen,
+	[Value("transient-pointer")]
 	TransientPointer,
 }
 
@@ -15490,10 +16519,14 @@ public partial class XRDOMOverlayInit
 		public required Element Root;
 }
 
+[To(ToAttribute.None)]
 public enum XRDOMOverlayType
 {
+	[Value("screen")]
 	Screen,
+	[Value("floating")]
 	Floating,
+	[Value("head-locked")]
 	HeadLocked,
 }
 
@@ -15503,32 +16536,58 @@ public partial class XRDOMOverlayState
 		public XRDOMOverlayType Type;
 }
 
+[To(ToAttribute.None)]
 public enum XRHandJoint
 {
+	[Value("wrist")]
 	Wrist,
+	[Value("thumb-metacarpal")]
 	ThumbMetacarpal,
+	[Value("thumb-phalanx-proximal")]
 	ThumbPhalanxProximal,
+	[Value("thumb-phalanx-distal")]
 	ThumbPhalanxDistal,
+	[Value("thumb-tip")]
 	ThumbTip,
+	[Value("index-finger-metacarpal")]
 	IndexFingerMetacarpal,
+	[Value("index-finger-phalanx-proximal")]
 	IndexFingerPhalanxProximal,
+	[Value("index-finger-phalanx-intermediate")]
 	IndexFingerPhalanxIntermediate,
+	[Value("index-finger-phalanx-distal")]
 	IndexFingerPhalanxDistal,
+	[Value("index-finger-tip")]
 	IndexFingerTip,
+	[Value("middle-finger-metacarpal")]
 	MiddleFingerMetacarpal,
+	[Value("middle-finger-phalanx-proximal")]
 	MiddleFingerPhalanxProximal,
+	[Value("middle-finger-phalanx-intermediate")]
 	MiddleFingerPhalanxIntermediate,
+	[Value("middle-finger-phalanx-distal")]
 	MiddleFingerPhalanxDistal,
+	[Value("middle-finger-tip")]
 	MiddleFingerTip,
+	[Value("ring-finger-metacarpal")]
 	RingFingerMetacarpal,
+	[Value("ring-finger-phalanx-proximal")]
 	RingFingerPhalanxProximal,
+	[Value("ring-finger-phalanx-intermediate")]
 	RingFingerPhalanxIntermediate,
+	[Value("ring-finger-phalanx-distal")]
 	RingFingerPhalanxDistal,
+	[Value("ring-finger-tip")]
 	RingFingerTip,
+	[Value("pinky-finger-metacarpal")]
 	PinkyFingerMetacarpal,
+	[Value("pinky-finger-phalanx-proximal")]
 	PinkyFingerPhalanxProximal,
+	[Value("pinky-finger-phalanx-intermediate")]
 	PinkyFingerPhalanxIntermediate,
+	[Value("pinky-finger-phalanx-distal")]
 	PinkyFingerPhalanxDistal,
+	[Value("pinky-finger-tip")]
 	PinkyFingerTip,
 }
 
@@ -15557,10 +16616,14 @@ public partial class XRJointPose : XRPose
 	public Number Radius { get; }
 }
 
+[To(ToAttribute.None)]
 public enum XRHitTestTrackableType
 {
+	[Value("point")]
 	Point,
+	[Value("plane")]
 	Plane,
+	[Value("mesh")]
 	Mesh,
 }
 
@@ -15640,19 +16703,29 @@ public partial class XRRay
 	public XRRay() { }
 }
 
+[To(ToAttribute.None)]
 public enum XRLayerLayout
 {
+	[Value("default")]
 	Default,
+	[Value("mono")]
 	Mono,
+	[Value("stereo")]
 	Stereo,
+	[Value("stereo-left-right")]
 	StereoLeftRight,
+	[Value("stereo-top-bottom")]
 	StereoTopBottom,
 }
 
+[To(ToAttribute.None)]
 public enum XRLayerQuality
 {
+	[Value("default")]
 	Default,
+	[Value("text-optimized")]
 	TextOptimized,
+	[Value("graphics-optimized")]
 	GraphicsOptimized,
 }
 
@@ -15783,9 +16856,12 @@ public partial class XRWebGLSubImage : XRSubImage
 		public ulong? MotionVectorTextureHeight { get; }
 }
 
+[To(ToAttribute.None)]
 public enum XRTextureType
 {
+	[Value("texture")]
 	Texture,
+	[Value("texture-array")]
 	TextureArray,
 }
 
@@ -15925,9 +17001,12 @@ public partial class XRLightProbe : EventTarget
 		public EventHandler Onreflectionchange { get; set; }
 }
 
+[To(ToAttribute.None)]
 public enum XRReflectionFormat
 {
+	[Value("srgba8")]
 	Srgba8,
+	[Value("rgba16f")]
 	Rgba16f,
 }
 

@@ -7,7 +7,7 @@ namespace CSharpToJavaScript.APIs.JS
 	public partial class GlobalObject
 	{
 		[To(ToAttribute.FirstCharToLowerCase)]
-		public class GlobalThis : GlobalObject
+		public partial class GlobalThis : GlobalObject
 		{
 			public static Window Window { get; } = new();
 			public static console Console { get; } = new();

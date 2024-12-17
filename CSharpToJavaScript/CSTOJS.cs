@@ -19,9 +19,10 @@ namespace CSharpToJavaScript
 	/// </summary>
 	public class CSTOJS : ILog
 	{
+		private readonly ILog _Log;
+
 		private readonly CSTOJSOptions _Options = new();
 		private readonly Stopwatch _Stopwatch = new();
-		private readonly ILog? _Log = null;
 
 		private Walker? _Walker = null;
 

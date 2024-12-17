@@ -1,0 +1,13 @@
+<docs>
+<HTMLInputElementSetSelectionRange>
+<summary>
+The <strong><c>HTMLInputElement.setSelectionRange()</c></strong> method sets the<br/>start and end positions of the current text selection in an <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">input</see><br/>or <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textarea</see> element.
+</summary>
+<remarks>
+<para>Optionally, in newer browser versions, you can specify the direction in which selection<br/>should be considered to have occurred. This lets you indicate, for example, that the<br/>selection was set by the user clicking and dragging from the end of the selected text<br/>toward the beginning.</para><para>This method updates the <c>HTMLInputElement.selectionStart</c>,<br/><c>selectionEnd</c>, and <c>selectionDirection</c> properties in one call.</para><para>Note that according to the <see href="https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply">WHATWG forms spec</see> <c>selectionStart</c>, <c>selectionEnd</c> properties and<br/><c>setSelectionRange</c> method apply only to inputs of types text, search, URL,<br/>tel and password. Chrome, starting from version 33, throws an exception while accessing<br/>those properties and method on the rest of input types. For example, on input of type<br/>number: &amp;quot;Failed to read the &amp;apos;selectionStart&amp;apos; property from &amp;apos;HTMLInputElement&amp;apos;: The input<br/>element&amp;apos;s type (&amp;apos;number&amp;apos;) does not support selection&amp;quot;.</para><para>If you wish to select <strong>all</strong> text of an input element, you can use the <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/select">HTMLInputElement.select()</see><br/>method instead.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">input</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textarea</see><br/>-<see cref="HTMLInputElement"/><br/>-<see cref="Selection"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/setSelectionRange"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</HTMLInputElementSetSelectionRange>
+</docs>

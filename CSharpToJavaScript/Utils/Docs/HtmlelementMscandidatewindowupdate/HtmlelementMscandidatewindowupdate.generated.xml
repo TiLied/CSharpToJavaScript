@@ -1,0 +1,12 @@
+<docs>
+<HTMLElementMscandidatewindowupdate_event>
+<summary>
+The <strong><c>mscandidatewindowupdate</c></strong> event is thrown after the Input Method Editor (IME) candidate window has been identified as needing to change size, but before any visual updates have rendered.
+</summary>
+<remarks>
+<para>This proprietary method is specific to Internet Explorer.</para><para>An IME candidate window may be identified as needing to change size for any of the following reasons:</para><para>Web applications need only register for this event once per element (the handler will remain valid for the lifetime of the element).</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Microsoft_Extensions">Microsoft API extensions</see><br/>-Related events: <see cref="HTMLElement/mscandidatewindowshow_event"/> and <see cref="HTMLElement/mscandidatewindowhide_event"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/mscandidatewindowupdate_event"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLElementMscandidatewindowupdate_event>
+</docs>

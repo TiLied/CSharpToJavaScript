@@ -1,0 +1,12 @@
+<docs>
+<XRTransientInputHitTestSource>
+<summary>
+The <strong><c>XRTransientInputHitTestSource</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</see> handles transient input hit test subscriptions. You can get an <c>XRTransientInputHitTestSource</c> object by calling the <see cref="XRSession.RequestHitTestSourceForTransientInput"/>.
+</summary>
+<remarks>
+<para>This object doesn't itself contain transient input hit test results, but it is used to compute hit tests for each <see cref="XRFrame"/> by calling <see cref="XRFrame.GetHitTestResultsForTransientInput"/>, which returns <see cref="XRTransientInputHitTestResult"/> objects.</para>
+<para>-<see cref="XRTransientInputHitTestResult"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRTransientInputHitTestSource"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</XRTransientInputHitTestSource>
+</docs>

@@ -1,0 +1,13 @@
+<docs>
+<PointerEventAzimuthAngle>
+<summary>
+The <strong><c>azimuth angle</c></strong> read-only property of the <see cref="PointerEvent"/> interface represents the angle between the Y-Z plane and the plane containing both the transducer (pointer or stylus) axis and the Y axis.
+</summary>
+<remarks>
+<para>Depending on the specific hardware and platform, user agents will likely only receive one set of values for the transducer orientation relative to the screen plane — either <see cref="PointerEvent.Tiltx"/> and <see cref="PointerEvent.Tilty"/> or <see cref="PointerEvent.AltitudeAngle"/> and <c>azimuthAngle</c>.</para><para><see href="https://developer.mozilla.orgazimuth_altitude_angles.svg">The azimuth angle of a pointer compared to the altitude angle</see></para><para>For an additional illustration of this property, see <see href="https://w3c.github.io/pointerevents/#figure_azimuthAngle">Figure 5 in the specification</see>.</para>
+<para>-<see cref="PointerEvent.AltitudeAngle"/><br/>-<see cref="PointerEvent.TiltX"/><br/>-<see cref="PointerEvent.TiltY"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/azimuthAngle"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An angle in radians between <c>0</c> and <c>2π</c> where <c>0</c> represents a transducer whose cap is pointing in the direction of increasing X values (point to &amp;quot;3 o&amp;apos;clock&amp;quot; if looking straight down) on the X-Y plane, and the values progressively increase when going clockwise (<c>π/2</c> at &amp;quot;6 o&amp;apos;clock&amp;quot;, <c>π</c> at &amp;quot;9 o&amp;apos;clock&amp;quot;, <c>3π/2</c> at &amp;quot;12 o&amp;apos;clock&amp;quot;).When the transducer is perpendicular to the surface (<see cref="PointerEvent.AltitudeAngle"/> of <c>π/2</c>), the value is 0.<br/>For hardware and platforms that do not report tilt or angle, the value is <c>0</c>.</value>
+</PointerEventAzimuthAngle>
+</docs>

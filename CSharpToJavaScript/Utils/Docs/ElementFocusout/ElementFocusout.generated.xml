@@ -1,0 +1,12 @@
+<docs>
+<ElementFocusout_event>
+<summary>
+The <strong><c>focusout</c></strong> event fires when an element has lost focus, after the <see cref="Element/blur_event"/> event. The two events differ in that <c>focusout</c> bubbles, while <c>blur</c> does not.
+</summary>
+<remarks>
+<para>The opposite of <c>focusout</c> is the <see cref="Element/focusin_event"/> event, which fires when the element has received focus.</para><para>The <c>focusout</c> event is not cancelable.</para>
+<para>-Related events: <see cref="Element/blur_event"/>, <see cref="Element/focus_event"/>, <see cref="Element/focusin_event"/><br/>-<see href="https://javascript.info/focus-blur">Focusing: focus/blur</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/focusout_event"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</ElementFocusout_event>
+</docs>

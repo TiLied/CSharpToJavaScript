@@ -1,0 +1,12 @@
+<docs>
+<HTMLMediaElementLoad>
+<summary>
+The <see cref="HTMLMediaElement"/> method<br/><strong><c>load()</c></strong> resets the media element to its initial state and<br/>begins the process of selecting a media source and loading the media in preparation<br/>for playback to begin at the beginning.
+</summary>
+<remarks>
+<para>The amount of media data that is<br/>prefetched is determined by the value of the element&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#preload"><c>preload</c></see> attribute.</para><para>This method is generally only useful when you&amp;apos;ve made dynamic changes to the set of<br/>sources available for the media element, either by changing the element&amp;apos;s<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#src"><c>src</c></see> attribute or by adding or removing<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source">source</see> elements nested within the media element itself.<br/><c>load()</c> will reset the element and rescan the available sources, thereby<br/>causing the changes to take effect.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/load"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</HTMLMediaElementLoad>
+</docs>

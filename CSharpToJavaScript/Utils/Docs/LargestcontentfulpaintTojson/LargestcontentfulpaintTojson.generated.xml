@@ -1,0 +1,12 @@
+<docs>
+<LargestContentfulPaintToJSON>
+<summary>
+The <strong><c>toJSON()</c></strong> method of the <see cref="LargestContentfulPaint"/> interface is a {{Glossary("Serialization","serializer")}}; it returns a JSON representation of the <see cref="LargestContentfulPaint"/> object.
+</summary>
+<remarks>
+<para>-<see cref="JSON"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/LargestContentfulPaint/toJSON"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("JSON")}} object that is the serialization of the <see cref="LargestContentfulPaint"/> object.The JSON doesn't contain the <see cref="LargestContentfulPaint.Element"/> property because it is of type <see cref="Element"/>, which doesn't provide a <c>toJSON()</c> operation.</returns>
+</LargestContentfulPaintToJSON>
+</docs>

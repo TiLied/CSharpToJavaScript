@@ -1,0 +1,12 @@
+<docs>
+<ResponseText>
+<summary>
+The <strong><c>text()</c></strong> method of the <see cref="Response"/> interface takes a <see cref="Response"/> stream and reads it to completion.<br/>It returns a promise that resolves with a <see cref="String"/>.<br/>The response is <strong>always</strong> decoded using UTF-8.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Response/text"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A Promise that resolves with a <see cref="String"/>.</returns>
+</ResponseText>
+</docs>

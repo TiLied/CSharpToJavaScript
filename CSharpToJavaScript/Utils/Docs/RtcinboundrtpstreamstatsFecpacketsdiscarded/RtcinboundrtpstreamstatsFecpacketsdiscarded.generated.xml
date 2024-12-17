@@ -1,0 +1,11 @@
+<docs>
+<RTCInboundRtpStreamStatsFecPacketsDiscarded>
+<summary>
+The <strong><c>fecPacketsDiscarded</c></strong> property<br/>of the <see cref="RTCInboundRtpStreamStats"/> dictionary is a numeric value<br/>indicating the number of <see href="https://developer.mozilla.org/en-US/docs/Glossary/RTP">RTP</see> Forward Error Correction (FEC) packets<br/>that have been discarded.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/fecPacketsDiscarded"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An unsigned integer value indicating how many FEC packets have been received whose<br/>error correction payload has been discarded.This can happen if all the packets covered by the FEC packet have already been received<br/>or recovered using another FEC packet, or if the FEC packet arrived outside the recovery<br/>window and the lost RTP packets have already been skipped during playback as a result.<br/>The value of <c>fecPacketsReceived</c> includes these discarded packets.</value>
+</RTCInboundRtpStreamStatsFecPacketsDiscarded>
+</docs>

@@ -1,0 +1,13 @@
+<docs>
+<HTMLElementClick>
+<summary>
+The <strong><c>HTMLElement.click()</c></strong> method simulates a mouse click on<br/>an element.
+</summary>
+<remarks>
+<para>When <c>click()</c> is used with supported elements (such as an<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">input</see>), it fires the element's click event. This event then bubbles<br/>up to elements higher in the document tree (or event chain) and fires their click<br/>events.</para>
+<para>-Related event handlers-<see cref="Element.Click_event"/><br/>-<see cref="Element.Dblclick_event"/><br/>-<see cref="Element.Auxclick_event"/><br/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/click"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</HTMLElementClick>
+</docs>

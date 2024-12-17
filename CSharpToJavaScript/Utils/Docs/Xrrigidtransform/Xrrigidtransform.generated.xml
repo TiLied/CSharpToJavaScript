@@ -1,0 +1,11 @@
+<docs>
+<XRRigidTransform>
+<summary>
+The <strong><c>XRRigidTransform</c></strong> is a <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR API</see> interface that represents the 3D geometric transform described by a position and orientation.
+</summary>
+<remarks>
+<para><c>XRRigidTransform</c> is used to specify transforms throughout the WebXR APIs, including:</para><para>Using <c>XRRigidTransform</c> in these places rather than bare arrays that provide the matrix data has an advantage. It automatically computes the inverse of the transform and even caches it making subsequent requests significantly faster.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRRigidTransform"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</XRRigidTransform>
+</docs>

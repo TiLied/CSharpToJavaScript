@@ -1,0 +1,11 @@
+<docs>
+<USBDeviceClearHalt>
+<summary>
+The <strong><c>clearHalt()</c></strong> method of the <see cref="USBDevice"/><br/>interface returns a <see cref="Promise"/> that resolves when a halt condition is<br/>cleared. A halt condition is when a data transfer to or from the device has a status<br/>of <c>&amp;apos;stall&amp;apos;</c>, which requires the web page (the <strong>host</strong> system, in USB<br/>terminology) to clear that condition. See the for details.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/USBDevice/clearHalt"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/>.</returns>
+</USBDeviceClearHalt>
+</docs>

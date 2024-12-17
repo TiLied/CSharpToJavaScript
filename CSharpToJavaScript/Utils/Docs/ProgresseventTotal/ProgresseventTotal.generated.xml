@@ -1,0 +1,13 @@
+<docs>
+<ProgressEventTotal>
+<summary>
+The <strong><c>ProgressEvent.total</c></strong> read-only property is an unsigned<br/>64-bit integer value indicating the total size of the data being processed or<br/>transmitted. In the case of an HTTP transmission, this is the size of the body of the<br/>message (the <c>Content-Length</c>), and does not include headers and other<br/>overhead.
+</summary>
+<remarks>
+<para>If the event's <see cref="ProgressEvent.LengthComputable"/><br/>property is <c>false</c>, this value is meaningless and should be ignored.</para>
+<para>-The <see cref="ProgressEvent"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ProgressEvent/total"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer.</value>
+</ProgressEventTotal>
+</docs>

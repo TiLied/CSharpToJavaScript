@@ -1,0 +1,13 @@
+<docs>
+<AuthenticatorAssertionResponseUserHandle>
+<summary>
+The <strong><c>userHandle</c></strong> read-only property of the <see cref="AuthenticatorAssertionResponse"/> interface is an {{jsxref("ArrayBuffer")}} object providing an opaque identifier for the given user. Such an identifier can be used by the relying party's server to link the user account with its corresponding credentials and other data.
+</summary>
+<remarks>
+<para>This value is specified as <c>user.id</c> in the options passed to the originating <see cref="CredentialsContainer.Create"/> call.</para>
+<para>-<see cref="CredentialsContainer.Create"/> that sets the value of this property<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AuthenticatorAssertionResponse/userHandle"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="ArrayBuffer"/> object representing an identifier for the current user. This is not intended to be human-readable. The relying party should make sure that the <c>user.id</c> passed into the originating <c>create()</c> call does <strong>not</strong> contain any personally identifying information (for example user name, email, or phone number).For <see cref="CredentialsContainer.Create"/> calls made with a non-empty <c>allowCredentials</c> properties, the returned <c>userHandle</c> may be null.</value>
+</AuthenticatorAssertionResponseUserHandle>
+</docs>

@@ -1,0 +1,11 @@
+<docs>
+<WorkerNavigatorPlatform>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> Returns a string representing the platform of the browser. The specification allows<br/>browsers to always return the empty string, so don&amp;apos;t rely on this property to get a<br/>reliable answer.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerNavigator/platform"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string identifying the platform on which the browser is running, or<br/>an empty string if the browser declines to (or is unable to) identify the platform.<br/><c>platform</c> is a string that must be an empty string or a string representing<br/>the platform on which the browser is executing.For example: &amp;quot;<c>MacIntel</c>&amp;quot;, &amp;quot;<c>Win32</c>&amp;quot;, &amp;quot;<c>FreeBSD i386</c>&amp;quot;, &amp;quot;<c>WebTV OS</c>&amp;quot;.</value>
+</WorkerNavigatorPlatform>
+</docs>

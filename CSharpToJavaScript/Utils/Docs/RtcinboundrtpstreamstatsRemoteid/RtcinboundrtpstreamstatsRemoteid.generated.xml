@@ -1,0 +1,11 @@
+<docs>
+<RTCInboundRtpStreamStatsRemoteId>
+<summary>
+The <strong><c>remoteId</c></strong> property of the<br/><see cref="RTCInboundRtpStreamStats"/> dictionary specifies the <see cref="RTCInboundRtpStreamStats.Id"/> of the <see cref="RTCRemoteOutboundRtpStreamStats"/> object representing the remote peer's <see cref="RTCRtpSender"/> which is sending the media to the local peer.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/remoteId"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing the ID of the<br/><see cref="RTCRemoteOutboundRtpStreamStats"/> object that represents the remote peer's<br/><see cref="RTCRtpSender"/> for the synchronization source represented by this stats<br/>object.</value>
+</RTCInboundRtpStreamStatsRemoteId>
+</docs>

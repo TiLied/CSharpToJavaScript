@@ -1,0 +1,12 @@
+<docs>
+<NavigateEventIntercept>
+<summary>
+The <strong><c>intercept()</c></strong> method of the<br/><see cref="NavigateEvent"/> interface intercepts this navigation, turning it into a same-document navigation to the <see cref="NavigationDestination.Url"/> URL.
+</summary>
+<remarks>
+<para>-<see href="https://developer.chrome.com/docs/web-platform/navigation-api/">Modern client-side routing: the Navigation API</see><br/>-<see href="https://github.com/WICG/navigation-api/blob/main/README.md">Navigation API explainer</see><br/>-Domenic Denicola&amp;apos;s <see href="https://gigantic-honored-octagon.glitch.me/">Navigation API live demo</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NavigateEvent/intercept"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<c>undefined</c>).</returns>
+</NavigateEventIntercept>
+</docs>

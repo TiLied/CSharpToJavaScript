@@ -1,0 +1,13 @@
+<docs>
+<FormDataGetAll>
+<summary>
+The <strong><c>getAll()</c></strong> method of the <see cref="FormData"/> interface returns all the values associated with a given key from within a <c>FormData</c> object.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This method is available in <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">Web Workers</see>.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/FormData/Using_FormData_Objects">Using FormData objects</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Form">Form</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FormData/getAll"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An array of values whose key matches the specified <c>name</c>. Otherwise, an empty list.</returns>
+</FormDataGetAll>
+</docs>

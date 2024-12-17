@@ -1,0 +1,12 @@
+<docs>
+<DocumentGetElementsByName>
+<summary>
+The <strong><c>getElementsByName()</c></strong> method<br/>of the <see cref="Document"/> object returns a <see cref="NodeList"/> Collection of<br/>elements with a given <c>name</c> attribute in the document.
+</summary>
+<remarks>
+<para>-<see cref="Document.GetElementById"/> to return a reference to an element by its<br/>unique <c>id</c><br/>-<see cref="Document.GetElementsByTagName"/> to return references to elements with<br/>the same <see href="https://developer.mozilla.org/en-US/docs/Web/API/Element/tagName">tag name</see><br/>-<see cref="Document.QuerySelector"/> to return references to elements via CSS<br/>selectors like <c>&amp;apos;div.myclass&amp;apos;</c><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByName"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A live <see cref="NodeList"/> collection, meaning it automatically updates as new elements with the same <c>name</c> are added to, or removed from, the document.</returns>
+</DocumentGetElementsByName>
+</docs>

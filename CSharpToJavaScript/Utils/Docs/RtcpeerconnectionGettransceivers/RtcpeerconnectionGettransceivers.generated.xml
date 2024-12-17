@@ -1,0 +1,12 @@
+<docs>
+<RTCPeerConnectionGetTransceivers>
+<summary>
+The <see cref="RTCPeerConnection"/> interface's<br/><strong><c>getTransceivers()</c></strong> method returns a list of the<br/><see cref="RTCRtpTransceiver"/> objects being used to send and receive data on the<br/>connection.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling">Signaling and video calling</see><br/>-<see cref="RTCPeerConnection.AddTransceiver"/><br/>-<see cref="ArrayForEach"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/getTransceivers"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An array of the <see cref="RTCRtpTransceiver"/> objects representing the transceivers<br/>handling sending and receiving all media on the <c>RTCPeerConnection</c>. The list<br/>is in the order in which the transceivers were added to the connection.</returns>
+</RTCPeerConnectionGetTransceivers>
+</docs>

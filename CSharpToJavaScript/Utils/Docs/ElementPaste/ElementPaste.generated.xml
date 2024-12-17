@@ -1,0 +1,12 @@
+<docs>
+<ElementPaste_event>
+<summary>
+The <strong><c>paste</c></strong> event is fired when the user has initiated a &amp;quot;paste&amp;quot; action through the browser&amp;apos;s user interface.
+</summary>
+<remarks>
+<para>If the cursor is in an editable context (for example, in a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textarea</see> or an element with <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/contenteditable"><c>contenteditable</c></see> attribute set to <c>true</c>) then the default action is to insert the contents of the clipboard into the document at the cursor position.</para><para>A handler for this event can access the clipboard contents by calling <see cref="DataTransfer/getData"/> on the event's <c>clipboardData</c> property.</para><para>To override the default behavior (for example to insert some different data or a transformation of the clipboard contents) an event handler must cancel the default action using <see cref="Event/preventDefault"/>, and then insert its desired data manually.</para><para>It&amp;apos;s possible to construct and dispatch a <see href="https://developer.mozilla.org/en-US/docs/Web/Events/Creating_and_triggering_events">synthetic</see> <c>paste</c> event, but this will not affect the document&amp;apos;s contents.</para>
+<para>-Related events: <see cref="Element/cut_event"/>, <see cref="Element/copy_event"/><br/>-This event on <see cref="Document"/> targets: <see cref="Document/paste_event"/><br/>-This event on <see cref="Window"/> targets: <see cref="Window/paste_event"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/paste_event"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</ElementPaste_event>
+</docs>

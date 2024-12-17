@@ -1,0 +1,12 @@
+<docs>
+<HTMLInputElementInvalid_event>
+<summary>
+The <strong><c>invalid</c></strong> event fires when a submittable element has been checked for validity and doesn&amp;apos;t satisfy its constraints.
+</summary>
+<remarks>
+<para>This event can be useful for displaying a summary of the problems with a form on submission. When a form is submitted, <c>invalid</c> events are fired at each form control that is invalid. The validity of submittable elements is checked before submitting their owner <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see>, or after the <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/checkValidity"><c>checkValidity()</c></see> method of the element or its owner <c>&amp;lt;form&amp;gt;</c> is called.</para><para>It is not checked on <see cref="Element/blur_event"/>.</para>
+<para>-HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see> element<br/>-Related event: <see cref="HTMLFormElement/submit_event"/><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:invalid">:invalid</see> pseudo class<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/invalid_event"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLInputElementInvalid_event>
+</docs>

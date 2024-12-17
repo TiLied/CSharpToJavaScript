@@ -1,0 +1,12 @@
+<docs>
+<DataTransferItemListClear>
+<summary>
+The <see cref="DataTransferItemList"/> method<br/><strong><c>clear()</c></strong> removes all <see cref="DataTransferItem"/><br/>objects from the drag data items list, leaving the list empty.
+</summary>
+<remarks>
+<para>The drag data store in which this list is kept is only writable while handling the<br/><see cref="HTMLElement/dragstart_event"/> event. While handling <see cref="HTMLElement/drop_event"/>, the drag data store is<br/>in read-only mode, and this method silently does nothing. No exception is thrown.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItemList/clear"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</DataTransferItemListClear>
+</docs>

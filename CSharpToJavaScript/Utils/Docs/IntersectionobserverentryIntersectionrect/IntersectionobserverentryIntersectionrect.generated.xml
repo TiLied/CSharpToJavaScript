@@ -1,0 +1,11 @@
+<docs>
+<IntersectionObserverEntryIntersectionRect>
+<summary>
+The <see cref="IntersectionObserverEntry"/> interface's<br/>read-only <strong><c>intersectionRect</c></strong> property is a<br/><see cref="DOMRectReadOnly"/> object which describes the smallest rectangle that<br/>contains the entire portion of the target element which is currently visible within<br/>the intersection root.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserverEntry/intersectionRect"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DOMRectReadOnly"/> which describes the part of the target element that's<br/>currently visible within the root&amp;apos;s intersection rectangle.This rectangle is computed by taking the intersection of<br/><see cref="IntersectionObserverEntry"/> with each of the<br/><see cref="IntersectionObserverEntry.Target"/>'s ancestors' clip rectangles,<br/>with the exception of the intersection <see cref="IntersectionObserver.Root"/><br/>itself.</value>
+</IntersectionObserverEntryIntersectionRect>
+</docs>

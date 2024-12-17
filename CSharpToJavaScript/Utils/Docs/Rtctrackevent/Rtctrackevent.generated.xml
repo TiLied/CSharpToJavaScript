@@ -1,0 +1,11 @@
+<docs>
+<RTCTrackEvent>
+<summary>
+The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see> interface <strong><c>RTCTrackEvent</c></strong> represents the <see cref="RTCPeerConnection.Track_event"/> event, which is sent when a new <see cref="MediaStreamTrack"/> is added to an <see cref="RTCRtpReceiver"/> which is part of the <see cref="RTCPeerConnection"/>.
+</summary>
+<remarks>
+<para>The target is the <c>RTCPeerConnection</c> object to which the track is being added.</para><para>This event is sent by the WebRTC layer to the website or application, so you will not typically need to instantiate an <c>RTCTrackEvent</c> yourself.</para><para></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RTCTrackEvent>
+</docs>

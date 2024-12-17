@@ -1,0 +1,13 @@
+<docs>
+<HTMLVideoElementRequestPictureInPicture>
+<summary>
+The <strong><see cref="HTMLVideoElement"/></strong> method<br/><strong><c>requestPictureInPicture()</c></strong> issues an asynchronous request<br/>to display the video in picture-in-picture mode.
+</summary>
+<remarks>
+<para>It&amp;apos;s not guaranteed that the video will be put into picture-in-picture. If permission<br/>to enter that mode is granted, the returned <see cref="Promise"/> will resolve and the<br/>video will receive a {{domxref(&amp;quot;HTMLVideoElement.enterpictureinpicture_event&amp;quot;,<br/>&amp;quot;enterpictureinpicture&amp;quot;)}} event to let it know that it&amp;apos;s now in picture-in-picture.</para>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">video</see> element<br/>-<see cref="HTMLVideoElement.DisablePictureInPicture"/><br/>-<see cref="Document.PictureInPictureEnabled"/><br/>-<see cref="Document.ExitPictureInPicture"/><br/>-<see cref="Document.PictureInPictureElement"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:picture-in-picture">:picture-in-picture</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement/requestPictureInPicture"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that will resolve to a <see cref="PictureInPictureWindow"/><br/>object that can be used to listen when a user will resize that floating window.</returns>
+</HTMLVideoElementRequestPictureInPicture>
+</docs>

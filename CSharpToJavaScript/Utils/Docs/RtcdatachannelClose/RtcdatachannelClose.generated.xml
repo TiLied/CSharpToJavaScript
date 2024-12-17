@@ -1,0 +1,12 @@
+<docs>
+<RTCDataChannelClose_event>
+<summary>
+The <strong><c>close</c></strong> event is sent to the <see cref="RTCDataChannel.Close_event"/> event handler on an <see cref="RTCDataChannel"/> instance when the data transport for the data channel has closed. Before any further data can be transferred using <c>RTCDataChannel</c>, a new &amp;apos;RTCDataChannel&amp;apos; instance must be created.
+</summary>
+<remarks>
+<para>This event is not cancelable and does not bubble.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample">A simple RTCDataChannel example</see><br/>-Related events: <see cref="RTCDataChannel.Open_event"/>, <see cref="RTCDataChannel.Message_event"/>, and <see cref="RTCDataChannel.Error_event"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/close_event"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RTCDataChannelClose_event>
+</docs>

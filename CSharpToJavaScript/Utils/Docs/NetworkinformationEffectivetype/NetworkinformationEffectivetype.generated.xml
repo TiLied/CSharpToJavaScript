@@ -1,0 +1,12 @@
+<docs>
+<NetworkInformationEffectiveType>
+<summary>
+The <strong><c>effectiveType</c></strong> read-only property of the<br/><see cref="NetworkInformation"/> interface returns the effective type of the connection<br/>meaning one of &amp;apos;slow-2g&amp;apos;, &amp;apos;2g&amp;apos;, &amp;apos;3g&amp;apos;, or &amp;apos;4g&amp;apos;. This value is determined using a<br/>combination of recently observed, round-trip time and downlink values.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Glossary/Effective_connection_type">Effective Connection Type</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/ECT">ECT</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NetworkInformation/effectiveType"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string that is either &amp;apos;slow-2g&amp;apos;, &amp;apos;2g&amp;apos;, &amp;apos;3g&amp;apos;, or &amp;apos;4g&amp;apos;.</value>
+</NetworkInformationEffectiveType>
+</docs>

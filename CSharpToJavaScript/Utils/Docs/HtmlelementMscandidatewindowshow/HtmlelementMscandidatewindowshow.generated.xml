@@ -1,0 +1,12 @@
+<docs>
+<HTMLElementMscandidatewindowshow_event>
+<summary>
+The <strong><c>mscandidatewindowshow</c></strong> event is thrown immediately after the Input Method Editor (IME) candidate window is set to appear, but before it renders.
+</summary>
+<remarks>
+<para>This proprietary method is specific to Internet Explorer.</para><para>This event fires after the positioning information of the IME candidate window has been determined. You can obtain the positioning information using the <see href="https://developer.mozilla.org/en-US/docs/Web/API/getCandidateWindowClientRect">getCandidateWindowClientRect</see> method, and adjust your layout as needed to avoid any occlusions with the IME candidate window.</para><para>Web applications need only register for this event once per element (the handler will remain valid for the lifetime of the element).</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Microsoft_Extensions">Microsoft API extensions</see><br/>-Related events: <see cref="HTMLElement/mscandidatewindowupdate_event"/> and <see cref="HTMLElement/mscandidatewindowhide_event"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/mscandidatewindowshow_event"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLElementMscandidatewindowshow_event>
+</docs>

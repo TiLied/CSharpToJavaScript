@@ -1,0 +1,12 @@
+<docs>
+<ViewTransition>
+<summary>
+The <strong><c>ViewTransition</c></strong> interface of the {{domxref(&amp;quot;View Transitions API&amp;quot;, &amp;quot;View Transitions API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} represents a view transition, and provides functionality to react to the transition reaching different states (e.g. ready to run the animation, or animation finished) or skip the transition altogether.
+</summary>
+<remarks>
+<para>This object type is returned by the <see cref="Document.StartViewTransition"/> method. When <c>startViewTransition()</c> is invoked, a sequence of steps is followed as explained in <see href="https://developer.mozilla.org/en-US/docs/Web/API/View_Transitions_API#the_view_transition_process">The view transition process</see>. This also explains when the different promises fulfill.</para><para></para>
+<para>-<see href="https://developer.chrome.com/docs/web-platform/view-transitions/">Smooth and simple transitions with the View Transitions API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ViewTransition"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</ViewTransition>
+</docs>

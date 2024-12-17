@@ -1,0 +1,12 @@
+<docs>
+<ElementMatches>
+<summary>
+The <strong><c>matches()</c></strong> method of the <see cref="Element"/> interface tests whether the element would be selected by the specified <see href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors">CSS selector</see>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors">CSS selectors reference</see><br/>-Other <see cref="Element"/> methods that take selectors: <see cref="Element.QuerySelector"/>, <see cref="Element.QuerySelectorAll"/>, and <see cref="Element.Closest"/>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/matches"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns><c>true</c> if the <see cref="Element"/> matches the <c>selectors</c>. Otherwise, <c>false</c>.</returns>
+</ElementMatches>
+</docs>

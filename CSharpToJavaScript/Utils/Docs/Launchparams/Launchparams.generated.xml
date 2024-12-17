@@ -1,0 +1,12 @@
+<docs>
+<LaunchParams>
+<summary>
+The <strong><c>LaunchParams</c></strong> interface of the {{domxref(&amp;quot;Launch Handler API&amp;quot;, &amp;quot;Launch Handler API&amp;quot;, &amp;quot;&amp;quot;, "nocode")}} is used when implementing custom launch navigation handling in a PWA. When <see cref="LaunchQueue.SetConsumer"/> is invoked to set up the launch navigation handling functionality, the callback function inside <c>setConsumer()</c> is passed a <c>LaunchParams</c> object instance.
+</summary>
+<remarks>
+<para>Such custom navigation handling is initiated via <see cref="Window.LaunchQueue"/> when a PWA has been launched with a <see href="https://developer.mozilla.org/en-US/docs/Web/Manifest/launch_handler"><c>launch_handler</c></see> <c>client_mode</c> value of <c>focus-existing</c>, <c>navigate-new</c>, or <c>navigate-existing</c>.</para><para></para>
+<para>-<see href="https://developer.chrome.com/docs/web-platform/launch-handler/">Launch Handler API: Control how your app is launched</see><br/>-<see cref="Window.LaunchQueue"/><br/>-<see href="https://launch-handler.glitch.me/">Musicr 2.0</see> demo app<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/LaunchParams"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</LaunchParams>
+</docs>

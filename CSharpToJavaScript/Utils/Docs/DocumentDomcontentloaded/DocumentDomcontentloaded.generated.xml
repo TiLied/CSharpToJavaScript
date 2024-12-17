@@ -1,0 +1,12 @@
+<docs>
+<DocumentDOMContentLoaded_event>
+<summary>
+The <strong><c>DOMContentLoaded</c></strong> event fires when the initial HTML document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading.
+</summary>
+<remarks>
+<para>A different event, <see cref="Window/load_event"/>, should be used only to detect a fully-loaded page. It is a common mistake to use <c>load</c> where <c>DOMContentLoaded</c> would be more appropriate.</para><para>Synchronous JavaScript pauses parsing of the DOM. If you want the DOM to get parsed as fast as possible after the user has requested the page, you can make your <see href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests">JavaScript asynchronous</see> and <see href="https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery">optimize loading of stylesheets</see>. If loaded as usual, stylesheets slow down DOM parsing as they&amp;apos;re loaded in parallel, &amp;quot;stealing&amp;quot; traffic from the main HTML document.</para><para>This event is not cancelable.</para>
+<para>-Related events: <see cref="Window/load_event"/>, <see cref="Document/readystatechange_event"/>, <see cref="Window/beforeunload_event"/>, <see cref="Window/unload_event"/><br/>-This event on <see cref="Window"/> targets: <see cref="Window/DOMContentLoaded_event"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</DocumentDOMContentLoaded_event>
+</docs>

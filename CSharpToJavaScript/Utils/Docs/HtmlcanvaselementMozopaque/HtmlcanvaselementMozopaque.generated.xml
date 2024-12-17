@@ -1,0 +1,13 @@
+<docs>
+<HTMLCanvasElementMozOpaque>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The non-standard <strong><c>HTMLCanvasElement.mozOpaque</c></strong> property is<br/>a boolean value reflecting the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas#moz-opaque"><c>moz-opaque</c></see> HTML<br/>attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas">canvas</see> element. It lets the canvas know whether or<br/>not translucency will be a factor. If the canvas knows there&amp;apos;s no translucency, painting<br/>performance can be optimized.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This has been standardized as setting the <c>alpha</c> option to<br/><c>false</c> when creating a drawing context with<br/><see cref="HTMLCanvasElement.GetContext"/>. Use of <c>mozOpaque</c> should be<br/>avoided. Firefox will stop supporting it in the future.</para></blockquote>
+<para>-<see cref="HTMLCanvasElement"/>: Interface used to define the <c>HTMLCanvasElement.mozOpaque</c> property<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas#moz-opaque"><c>moz-opaque</c></see>: HTML attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas">canvas</see> element<br/>-<see href="https://hacks.mozilla.org/2013/05/optimizing-your-javascript-game-for-firefox-os/">Optimizing your JavaScript game for Firefox OS</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/mozOpaque"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value.</value>
+</HTMLCanvasElementMozOpaque>
+</docs>

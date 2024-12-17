@@ -1,0 +1,12 @@
+<docs>
+<DocumentExitFullscreen>
+<summary>
+The <see cref="Document"/> method<br/><strong><c>exitFullscreen()</c></strong> requests that the element on this<br/>document which is currently being presented in fullscreen mode be taken out of<br/>fullscreen mode, restoring the previous state of the screen. This usually<br/>reverses the effects of a previous call to <see cref="Element.RequestFullscreen"/>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API">Fullscreen API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API/Guide">Guide to the Fullscreen API</see><br/>-<see cref="Element.RequestFullscreen"/><br/>-<see cref="Document.FullscreenElement"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:fullscreen">:fullscreen</see> and {{cssxref("::backdrop&amp;quot;)}}<br/>-The <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</see> <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#allowfullscreen"><c>allowfullscreen</c></see><br/>attribute<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/exitFullscreen"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> which is resolved once the {{Glossary("user agent")}} has<br/>finished exiting fullscreen mode. If an error occurs while attempting to exit<br/>fullscreen mode, the <c>catch()</c> handler for the promise is called.</returns>
+</DocumentExitFullscreen>
+</docs>

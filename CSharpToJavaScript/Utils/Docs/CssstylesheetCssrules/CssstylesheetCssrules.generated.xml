@@ -1,0 +1,12 @@
+<docs>
+<CSSStyleSheetCssRules>
+<summary>
+The read-only <see cref="CSSStyleSheet"/> property<br/><strong><c>cssRules</c></strong> returns a live <see cref="CSSRuleList"/> which<br/>provides a real-time, up-to-date list of every CSS rule which comprises the<br/>stylesheet. Each item in the list is a <see cref="CSSRule"/> defining a single<br/>rule.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model">CSS Object Model</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information">Using dynamic styling information</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleSheet/cssRules"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A live-updating <see cref="CSSRuleList"/> containing each of the CSS rules making up<br/>the stylesheet. Each entry in the rule list is a <see cref="CSSRule"/> object<br/>describing one rule making up the stylesheet.</value>
+</CSSStyleSheetCssRules>
+</docs>

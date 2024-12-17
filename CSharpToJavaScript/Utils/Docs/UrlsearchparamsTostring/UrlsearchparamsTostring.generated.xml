@@ -1,0 +1,13 @@
+<docs>
+<URLSearchParamsToString>
+<summary>
+The <strong><c>toString()</c></strong> method of the<br/><see cref="URLSearchParams"/> interface returns a query string suitable for use in a<br/>URL.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This method returns the query string without the question<br/>mark. This is different from <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAnchorElement/search">window.location.search</see>,<br/>which includes it.</para></blockquote><para>availableinworkers</para>
+<para>-The <see cref="URL"/> interface.<br/>-<see href="https://developer.chrome.com/blog/urlsearchparams/">Google Developers: Easy URL manipulation with URLSearchParams</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/toString"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A string, without the question mark. (Returns an empty string if no<br/>search parameters have been set.)</returns>
+</URLSearchParamsToString>
+</docs>

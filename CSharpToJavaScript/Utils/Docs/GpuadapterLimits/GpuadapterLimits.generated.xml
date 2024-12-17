@@ -1,0 +1,13 @@
+<docs>
+<GPUAdapterLimits>
+<summary>
+The <strong><c>limits</c></strong> read-only property of the<br/><see cref="GPUAdapter"/> interface returns a <see cref="GPUSupportedLimits"/> object that describes the limits supported by the adapter.
+</summary>
+<remarks>
+<para>You should note that, rather than reporting the exact limits of each GPU, browsers will likely report different tier values of different limits to reduce the unique information available to drive-by fingerprinting. For example, the tiers of a certain limit might be 2048, 8192, and 32768. If your GPU&amp;apos;s actual limit is 16384, the browser will still report 8192.</para><para>Given that different browsers will handle this differently and the tier values may change over time, it is hard to provide an accurate account of what limit values to expect — thorough testing is advised.</para>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUAdapter/limits"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="GPUSupportedLimits"/> object instance.</value>
+</GPUAdapterLimits>
+</docs>

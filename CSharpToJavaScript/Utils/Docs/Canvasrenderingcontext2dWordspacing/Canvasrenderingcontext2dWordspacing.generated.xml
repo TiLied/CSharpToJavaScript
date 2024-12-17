@@ -1,0 +1,13 @@
+<docs>
+<CanvasRenderingContext2DWordSpacing>
+<summary>
+The <strong><c>CanvasRenderingContext2D.wordSpacing</c></strong> property of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas API</see> specifies the spacing between words when drawing text.
+</summary>
+<remarks>
+<para>This corresponds to the CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/word-spacing"><c>word-spacing</c></see> property.</para>
+<para>-<see cref="CanvasRenderingContext2D.LetterSpacing"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/wordSpacing"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The word spacing as a string in the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/length">CSS length</see> data format.<br/>The default is <c>0px</c>.The property can be used to get or set the spacing.<br/>The property value will remain unchanged if set to an invalid/unparsable value.</value>
+</CanvasRenderingContext2DWordSpacing>
+</docs>

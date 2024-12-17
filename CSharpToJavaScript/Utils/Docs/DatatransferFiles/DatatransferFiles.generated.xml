@@ -1,0 +1,12 @@
+<docs>
+<DataTransferFiles>
+<summary>
+The <strong><c>files</c></strong> property of <see href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer"><c>DataTransfer</c></see> objects is a <see cref="FileList"/> in the drag operation. If the operation includes no files, the list is empty.
+</summary>
+<remarks>
+<para>This feature can be used to drag files from a user&amp;apos;s desktop to the browser.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> The <c>files</c> property of <see href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer"><c>DataTransfer</c></see> objects can only be accessed from within the <c>drop</c> event. For all other events, the <c>files</c> property will be empty — because its underlying data store will be in a <see href="https://html.spec.whatwg.org/multipage/dnd.html#the-drag-data-store">protected mode</see>.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/files"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="FileList"/> of the files in a drag operation, one list item for<br/>each file in the operation. If the drag operation had no files, the list is empty.</value>
+</DataTransferFiles>
+</docs>

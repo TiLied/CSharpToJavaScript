@@ -1,0 +1,11 @@
+<docs>
+<AuthenticatorResponseClientDataJSON>
+<summary>
+The <strong><c>clientDataJSON</c></strong> property of the <see cref="AuthenticatorResponse"/> interface stores a <see href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON">JSON</see> string in an<br/>{{jsxref("ArrayBuffer")}}, representing the client data that was passed to <see cref="CredentialsContainer.Create"/> or <see cref="CredentialsContainer.Get"/>. This property is only accessed on one of the child objects of <c>AuthenticatorResponse</c>, specifically <see cref="AuthenticatorAttestationResponse"/> or <see cref="AuthenticatorAssertionResponse"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AuthenticatorResponse/clientDataJSON"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="ArrayBuffer"/>.</value>
+</AuthenticatorResponseClientDataJSON>
+</docs>

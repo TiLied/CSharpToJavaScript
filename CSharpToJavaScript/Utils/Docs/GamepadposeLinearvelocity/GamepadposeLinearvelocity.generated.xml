@@ -1,0 +1,13 @@
+<docs>
+<GamepadPoseLinearVelocity>
+<summary>
+The <strong><c>linearVelocity</c></strong> read-only property of the <see cref="GamepadPose"/> interface returns an array representing the linear velocity vector of the <see cref="Gamepad"/>, in meters per second.
+</summary>
+<remarks>
+<para>In other words, the current velocity at which the sensor is moving along the <c>x</c>, <c>y</c>, and <c>z</c> axes.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API">WebVR API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API">Gamepad API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GamepadPose/linearVelocity"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Float32Array"/>, or <c>null</c> if the gamepad is not able to provide linear velocity data.</value>
+</GamepadPoseLinearVelocity>
+</docs>

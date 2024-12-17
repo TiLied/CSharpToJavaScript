@@ -1,0 +1,11 @@
+<docs>
+<PresentationConnectionTerminate>
+<summary>
+When the <c>terminate()</c> method is called on a <see cref="PresentationConnection"/>, the {{Glossary("user agent")}} begins the process of terminating the presentation. The exact process differs depending on whether <c>terminate()</c> is called in the controlling or the presenting context.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PresentationConnection/terminate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</PresentationConnectionTerminate>
+</docs>

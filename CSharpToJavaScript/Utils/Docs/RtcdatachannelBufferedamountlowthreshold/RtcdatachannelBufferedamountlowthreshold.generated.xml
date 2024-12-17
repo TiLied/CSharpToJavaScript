@@ -1,0 +1,13 @@
+<docs>
+<RTCDataChannelBufferedAmountLowThreshold>
+<summary>
+The <c>RTCDataChannel</c> property<br/><strong><c>bufferedAmountLowThreshold</c></strong> is used to specify the number<br/>of bytes of buffered outgoing data that is considered &amp;quot;low.&amp;quot; The default value is<br/>0. When the number of buffered outgoing bytes, as indicated by the<br/><see cref="RTCDataChannel.BufferedAmount"/> property, falls to or<br/>below this value, a <see cref="RTCDataChannel.Bufferedamountlow_event"/> event is fired. This event may be<br/>used, for example, to implement code which queues more messages to be sent whenever<br/>there&amp;apos;s room to buffer them. Listeners may be added with<br/><see cref="RTCDataChannel.Bufferedamountlow_event"/> or<br/><see cref="EventTarget.AddEventListener"/>.
+</summary>
+<remarks>
+<para>The user agent may implement the process of actually sending data in any way it<br/>chooses; this may be done periodically during the event loop or truly asynchronously. As<br/>messages are actually sent, this value is reduced accordingly.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> <c>bufferedamountlow</c> events are not fired after the data channel is closed.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_data_channels">Using WebRTC data channels</see><br/>-<see cref="RTCDataChannel"/><br/>-<see cref="RTCDataChannel.BufferedAmount"/><br/>-<see cref="RTCDataChannel.Bufferedamountlow_event"/> event<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/bufferedAmountLowThreshold"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The number of queued outgoing data bytes below which the buffer is considered to be<br/>&amp;quot;low.&amp;quot;</value>
+</RTCDataChannelBufferedAmountLowThreshold>
+</docs>

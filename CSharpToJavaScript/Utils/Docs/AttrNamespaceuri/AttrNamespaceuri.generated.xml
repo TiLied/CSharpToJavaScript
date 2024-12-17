@@ -1,0 +1,13 @@
+<docs>
+<AttrNamespaceURI>
+<summary>
+The read-only <strong><c>namespaceURI</c></strong> property of the <see cref="Attr"/> interface returns the namespace URI of the attribute,<br/>or <c>null</c> if the element is not in a namespace.
+</summary>
+<remarks>
+<para>The namespace URI is set at the <see cref="Attr"/> creation and cannot be changed.<br/>An attribute with a namespace can be created using <see cref="Element.SetAttributeNS"/>.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> an attribute does not inherit its namespace from the element it is attached to.<br/>If an attribute is not explicitly given a namespace, it has no namespace.</para></blockquote><para>The browser does not handle or enforce namespace validation per se. It is up to the JavaScript<br/>application to do any necessary validation. Note, too, that the namespace prefix, once it<br/>is associated with a particular attribute node, cannot be changed.</para>
+<para>-The properties <see cref="Attr.Name"/>, returning the qualified name of the attribute, <see cref="Attr.LocalName"/>, the local part of the name, and <see cref="Attr.Prefix"/>, the namespace prefix.<br/>-The <see cref="Element.NamespaceURI"/> property, equivalent to this one but for an <see cref="Element"/>.<br/>-The <see cref="Element.SetAttributeNS"/> method, creating an attribute with a given namespace.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Attr/namespaceURI"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing the URI of the namespace, or <c>null</c> if the attribute is not in a namespace.</value>
+</AttrNamespaceURI>
+</docs>

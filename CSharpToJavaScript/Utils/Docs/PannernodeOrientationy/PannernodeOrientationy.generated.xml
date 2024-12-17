@@ -1,0 +1,13 @@
+<docs>
+<PannerNodeOrientationY>
+<summary>
+The <strong><c>orientationY</c></strong> property of the <see cref="PannerNode"/> interface<br/>indicates the Y (vertical) component of the direction the audio source is facing, in 3D Cartesian coordinate space.
+</summary>
+<remarks>
+<para>The complete vector is defined by the position of the audio source, given as<br/>(<see cref="PannerNode.PositionX"/>, {{domxref("PannerNode.positionY",<br/>"positionY")}}, <see cref="PannerNode.PositionZ"/>), and the orientation<br/>of the audio source (that is, the direction in which it&amp;apos;s facing), given as<br/>(<see cref="PannerNode.OrientationX"/>,<br/><see cref="PannerNode.OrientationY"/>,<br/><see cref="PannerNode.OrientationZ"/>).</para><para>Depending on the directionality of the sound (as specified using the attributes<br/><see cref="PannerNode.ConeInnerAngle"/>,<br/><see cref="PannerNode.ConeOuterAngle"/>, and<br/><see cref="PannerNode.ConeOuterGain"/>), the orientation of the<br/>sound may alter the perceived volume of the sound as it&amp;apos;s being played. If the sound<br/>is pointing toward the listener, it will be louder than if the sound is pointed away<br/>from the listener.</para><para>The <see cref="AudioParam"/> contained by this property is read only; however, you<br/>can still change the value of the parameter by assigning a new value to its<br/><see cref="AudioParam.Value"/> property.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics">Web Audio spatialization basics</see><br/>-<see cref="PannerNode"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PannerNode/orientationY"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="AudioParam"/> whose <c>value</c> is the Y component of the<br/>direction the audio source is facing, in 3D Cartesian coordinate space.</value>
+</PannerNodeOrientationY>
+</docs>

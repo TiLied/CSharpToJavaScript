@@ -1,0 +1,11 @@
+<docs>
+<NDEFRecordEncoding>
+<summary>
+The <strong><c>encoding</c></strong><br/>property of the <see cref="NDEFRecord"/> interface returns the encoding of<br/>a textual payload, or <c>null</c> otherwise.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NDEFRecord/encoding"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string which can be one of the following: <c>&amp;quot;utf-8&amp;quot;</c>,<br/><c>&amp;quot;utf-16&amp;quot;</c>, <c>&amp;quot;utf-16le&amp;quot;</c>, or <c>&amp;quot;utf-16be&amp;quot;</c>.</value>
+</NDEFRecordEncoding>
+</docs>

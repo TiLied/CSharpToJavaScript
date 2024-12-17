@@ -1,0 +1,11 @@
+<docs>
+<WindowResize_event>
+<summary>
+The <strong><c>resize</c></strong> event fires when the document view (window) has been resized.
+</summary>
+<remarks>
+<para>This event is not cancelable and does not bubble.</para><para>In some earlier browsers it was possible to register <c>resize</c> event handlers on any HTML element. It is still possible to set <c>onresize</c> attributes or use <see cref="EventTarget.AddEventListener"/> to set a handler on any element. However, <c>resize</c> events are only fired on the <see cref="Window"/> object (i.e. returned by <see cref="Document.DefaultView"/>). Only handlers registered on the <c>window</c> object will receive <c>resize</c> events.</para><para>While the <c>resize</c> event fires only for the window nowadays, you can get resize notifications for other elements using the <see href="https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver">ResizeObserver</see> API.</para><para>If the resize event is triggered too many times for your application, see <see href="https://web.archive.org/web/20220714020647/https://bencentra.com/code/2015/02/27/optimizing-window-resize.html">Optimizing window.onresize</see> to control the time after which the event fires.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Window/resize_event"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WindowResize_event>
+</docs>

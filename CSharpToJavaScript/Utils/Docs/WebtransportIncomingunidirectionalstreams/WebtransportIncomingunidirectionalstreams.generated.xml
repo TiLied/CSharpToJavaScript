@@ -1,0 +1,13 @@
+<docs>
+<WebTransportIncomingUnidirectionalStreams>
+<summary>
+The <strong><c>incomingUnidirectionalStreams</c></strong> read-only property of the <see cref="WebTransport"/> interface represents one or more unidirectional streams opened by the server. Returns a <see cref="ReadableStream"/> of <see cref="WebTransportReceiveStream"/> objects. Each one can be used to reliably read data from the server.
+</summary>
+<remarks>
+<para>"Reliable" means that transmission and order of data are guaranteed. This provides slower delivery (albeit faster than with WebSockets) than <see cref="WebTransport.Datagrams"/>, but is needed in situations where reliability and ordering are important, like chat applications.</para><para>AvailableInWorkers</para>
+<para>-<see href="https://web.dev/webtransport/">Using WebTransport</see><br/>-{{domxref(&amp;quot;WebSockets API&amp;quot;, &amp;quot;WebSockets API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-{{domxref(&amp;quot;Streams API&amp;quot;, &amp;quot;Streams API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://datatracker.ietf.org/doc/html/draft-ietf-webtrans-http3/">WebTransport over HTTP/3</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebTransport/incomingUnidirectionalStreams"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="ReadableStream"/> of <see cref="WebTransportReceiveStream"/> objects.</value>
+</WebTransportIncomingUnidirectionalStreams>
+</docs>

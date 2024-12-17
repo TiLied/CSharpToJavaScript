@@ -1,0 +1,12 @@
+<docs>
+<BluetoothRemoteGATTCharacteristicWriteValue>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> Use <see cref="BluetoothRemoteGATTCharacteristic.WriteValueWithResponse"/> and <see cref="BluetoothRemoteGATTCharacteristic.WriteValueWithoutResponse"/> instead.
+</summary>
+<remarks>
+<para>The <strong><c>BluetoothRemoteGATTCharacteristic.writeValue()</c></strong> method sets a <see cref="BluetoothRemoteGATTCharacteristic"/> object's <c>value</c> property to the bytes contained in a given <see cref="ArrayBuffer"/>, calls <see href="https://webbluetoothcg.github.io/web-bluetooth/#writecharacteristicvalue"><c>WriteCharacteristicValue</c>(<strong>this</strong>=<c>this</c>, <strong>value=value</strong>, <strong>response</strong>=<c>&amp;quot;optional&amp;quot;</c>)</see>, and returns the resulting <see cref="Promise"/>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/writeValue"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/>.</returns>
+</BluetoothRemoteGATTCharacteristicWriteValue>
+</docs>

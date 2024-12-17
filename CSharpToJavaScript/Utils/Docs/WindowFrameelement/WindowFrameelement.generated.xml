@@ -1,0 +1,13 @@
+<docs>
+<WindowFrameElement>
+<summary>
+The <strong><c>Window.frameElement</c></strong> property<br/>returns the element (such as <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</see> or <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object">object</see>)<br/>in which the window is embedded.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Despite this property&amp;apos;s name, it works for documents embedded<br/>within any embedding point, including <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object">object</see>,<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</see>, or <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/embed">embed</see>.</para></blockquote>
+<para>-<see cref="Window.Frames"/> returns an array-like object, listing the direct<br/>sub-frames of the current window.<br/>-<see cref="Window.Parent"/> returns the parent window, which is the window<br/>containing the <c>frameElement</c> of the child window.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Window/frameElement"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The element which the window is embedded into. If the window isn&amp;apos;t embedded into<br/>another document, or if the document into which it&amp;apos;s embedded has a different<br/><see href="https://developer.mozilla.org/en-US/docs/Glossary/origin">origin</see>, the value is <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><c>null</c></see> instead.</value>
+</WindowFrameElement>
+</docs>

@@ -1,0 +1,12 @@
+<docs>
+<ConsoleTrace>
+<summary>
+The <strong><c>console.trace()</c></strong> method outputs a stack trace to the<br/><see href="https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html">Web console</see>.
+</summary>
+<remarks>
+<para>AvailableInWorkers</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> In some browsers, <c>console.trace()</c> may also output the sequence of calls and asynchronous events leading to the current <c>console.trace()</c> which are not on the call stack — to help identify the origin of the current event evaluation loop.</para></blockquote><para>See <see href="https://developer.mozilla.org/en-US/docs/Web/API/console#stack_traces">Stack traces</see> in the<br/><see cref="Console"/> documentation for details and examples.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/console/trace"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</ConsoleTrace>
+</docs>

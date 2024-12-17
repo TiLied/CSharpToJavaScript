@@ -1,0 +1,12 @@
+<docs>
+<NavigatorGlobalPrivacyControl>
+<summary>
+The <strong><c>Navigator.globalPrivacyControl</c></strong> property returns the user&amp;apos;s Global Privacy Control setting. This setting indicates whether the user consents to a website or service selling or sharing their personal information with third parties.
+</summary>
+<remarks>
+<para>The value of the property reflects that of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-GPC">Sec-GPC</see> HTTP header.</para><table><tr><td><para>Sec-GPC Value</para></td><td><para>Meaning</para></td></tr><tr><td><para>1</para></td><td><para>User <strong>does not</strong> provide consent to sell or share their data.</para></td></tr><tr><td><para>0</para></td><td><para>User <strong>does</strong> provide consent to sell or share their data.</para></td></tr><tr><td><para>unspecified</para></td><td><para>User has not yet provided consent with regard to their data.</para></td></tr></table>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-GPC">Sec-GPC</see> header<br/>-<see href="https://globalprivacycontrol.org/">globalprivacycontrol.org</see><br/>-<see href="https://globalprivacycontrol.github.io/gpc-spec/">Global Privacy Control Spec</see><br/>-<see href="https://en.wikipedia.org/wiki/Do_Not_Track">Do Not Track on Wikipedia</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/globalPrivacyControl"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</NavigatorGlobalPrivacyControl>
+</docs>

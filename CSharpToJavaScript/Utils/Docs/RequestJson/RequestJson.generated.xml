@@ -1,0 +1,13 @@
+<docs>
+<RequestJson>
+<summary>
+The <strong><c>json()</c></strong> method of the <see cref="Request"/> interface<br/>reads the request body and returns it as a promise that resolves with the result of parsing the body text as <see cref="JSON"/>.
+</summary>
+<remarks>
+<para>Note that despite the method being named <c>json()</c>, the result is not JSON but is instead the result of taking JSON as input and parsing it to produce a JavaScript object.</para>
+<para>-<see cref="Response.Json"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Request/json"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves to a JavaScript object. This object could be<br/>anything that can be represented by JSON — an object, an array, a string, a number…</returns>
+</RequestJson>
+</docs>

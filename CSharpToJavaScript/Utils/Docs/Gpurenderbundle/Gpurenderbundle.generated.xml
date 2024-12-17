@@ -1,0 +1,12 @@
+<docs>
+<GPURenderBundle>
+<summary>
+The <strong><c>GPURenderBundle</c></strong> interface of the {{domxref(&amp;quot;WebGPU API&amp;quot;, &amp;quot;WebGPU API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} represents a container for pre-recorded bundles of commands.
+</summary>
+<remarks>
+<para>The command bundles are encoded using a <see cref="GPURenderBundleEncoder"/>; once the desired commands have been encoded, they are recorded into a <c>GPURenderBundle</c> object instance using the <see cref="GPURenderBundleEncoder.Finish"/> method.</para><para>These command bundles can then be reused across multiple render passes by passing the <c>GPURenderBundle</c> objects into <see cref="GPURenderPassEncoder.ExecuteBundles"/> calls. Reusing pre-recoded commands can significantly improve app performance in situations where JavaScript draw call overhead is a bottleneck. Render bundles are most effective in situations where a batch of objects will be drawn the same way across multiple views or frames, with the only differences being the buffer content being used (such as updated matrix uniforms).</para><para>A good example is VR rendering. Recording the rendering as a render bundle and then tweaking the view matrix and replaying it for each eye is a more efficient way to issue draw calls for both renderings of the scene.</para><para></para>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPURenderBundle"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</GPURenderBundle>
+</docs>

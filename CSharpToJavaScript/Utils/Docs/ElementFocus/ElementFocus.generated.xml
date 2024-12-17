@@ -1,0 +1,12 @@
+<docs>
+<ElementFocus_event>
+<summary>
+The <strong><c>focus</c></strong> event fires when an element has received focus. The event does not bubble, but the related <see cref="Element/focusin_event"/> event that follows does bubble.
+</summary>
+<remarks>
+<para>The opposite of <c>focus</c> is the <see cref="Element/blur_event"/> event, which fires when the element has <strong>lost</strong> focus.</para><para>The <c>focus</c> event is not cancelable.</para>
+<para>-The <see cref="HTMLElement.Focus"/> method<br/>-Related events: <see cref="Element/blur_event"/>, <see cref="Element/focusin_event"/>, <see cref="Element/focusout_event"/><br/>-This event on <c>Window</c> targets: <see cref="Window/focus_event"/> event<br/>-<see href="https://javascript.info/focus-blur">Focusing: focus/blur</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/focus_event"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</ElementFocus_event>
+</docs>

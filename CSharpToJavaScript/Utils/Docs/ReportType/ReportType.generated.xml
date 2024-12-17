@@ -1,0 +1,12 @@
+<docs>
+<ReportType>
+<summary>
+The <strong><c>type</c></strong> read-only property of the <see cref="Report"/><br/>interface returns the type of report generated, e.g. <c>deprecation</c> or<br/><c>intervention</c>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Reporting_API">Reporting API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Report/type"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing the type of the report. Currently the available types are<br/><c>deprecation</c>, <c>intervention</c>, and <c>crash</c>.</value>
+</ReportType>
+</docs>

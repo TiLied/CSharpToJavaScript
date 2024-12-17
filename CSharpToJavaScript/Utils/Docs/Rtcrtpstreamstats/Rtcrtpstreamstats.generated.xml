@@ -1,0 +1,11 @@
+<docs>
+<RTCRtpStreamStats>
+<summary>
+The <see cref="RTCRtpStreamStats"/> dictionary is returned by the <see cref="RTCPeerConnection.GetStats"/>, <see cref="RTCRtpSender.GetStats"/>, and <see cref="RTCRtpReceiver.GetStats"/> methods to provide detailed statistics about WebRTC connectivity.
+</summary>
+<remarks>
+<para>While the dictionary has a base set of properties that are present in each of these cases, there are also additional properties added depending on which interface the method is called on.</para><para><c>RTCRtpStreamStats</c> is the base class for all RTP-related statistics reports.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This interface was called <c>RTCRTPStreamStats</c> until a specification update in the spring of 2017.<br/>Check the <see href="https://developer.mozilla.org#browser_compatibility">Browser compatibility</see> table to know if and when the name change was implemented in specific browsers.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpStreamStats"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RTCRtpStreamStats>
+</docs>

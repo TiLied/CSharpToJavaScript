@@ -1,0 +1,11 @@
+<docs>
+<CSSStyleDeclarationParentRule>
+<summary>
+The <strong>CSSStyleDeclaration.parentRule</strong> read-only<br/>property returns a <see cref="'CSSRule'"/> that is the parent of this style<br/>block, e.g. a <see cref="'CSSStyleRule'"/> representing the style for a CSS<br/>selector.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/parentRule"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The CSS rule that contains this declaration block or <c>null</c> if this<br/><see cref="'CSSStyleDeclaration'"/> is not attached to a <see cref="'CSSRule'"/>.</value>
+</CSSStyleDeclarationParentRule>
+</docs>

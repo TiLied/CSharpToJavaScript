@@ -1,0 +1,11 @@
+<docs>
+<NavigatorWakeLock>
+<summary>
+The <strong><c>wakeLock</c></strong> read-only property<br/>returns a <see cref="WakeLock"/> interface which allows a document to acquire a<br/>screen wake lock. While a screen wake lock is active, the user agent will try to<br/>prevent the device from dimming the screen, turning it off completely, or showing a<br/>screensaver.
+</summary>
+<remarks>
+<para>-<see cref="WakeLock.Request"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Screen_Wake_Lock_API">Screen Wake Lock API</see><br/>-<see href="https://web.dev/wake-lock/">Blog post - Stay awake with the Screen Wake Lock API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/wakeLock"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</NavigatorWakeLock>
+</docs>

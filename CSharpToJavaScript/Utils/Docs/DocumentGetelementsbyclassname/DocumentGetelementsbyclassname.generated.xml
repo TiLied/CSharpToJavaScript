@@ -1,0 +1,12 @@
+<docs>
+<DocumentGetElementsByClassName>
+<summary>
+The <strong><c>getElementsByClassName</c></strong> method of<br/><see cref="Document"/> interface returns an array-like object<br/>of all child elements which have all of the given class name(s).
+</summary>
+<remarks>
+<para>When called on<br/>the <see cref="Document"/> object, the complete document is searched, including the<br/>root node. You may also call {{domxref(&amp;quot;Element.getElementsByClassName&amp;quot;,<br/>&amp;quot;getElementsByClassName()&amp;quot;)}} on any element; it will return only elements which are<br/>descendants of the specified root element with the given class name(s).</para><blockquote class="WARNING"><h5>WARNING</h5><para><strong>Warning:</strong> This is a live <see cref="HTMLCollection"/>. Changes in the DOM will<br/>reflect in the array as the changes occur. If an element selected by this array no<br/>longer qualifies for the selector, it will automatically be removed. Be aware of this<br/>for iteration purposes.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A live <see cref="HTMLCollection"/> of found elements.</returns>
+</DocumentGetElementsByClassName>
+</docs>

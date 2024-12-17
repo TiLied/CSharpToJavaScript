@@ -1,0 +1,12 @@
+<docs>
+<PaymentRequestMerchantvalidation_event>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <strong><c>merchantvalidation</c></strong> events are delivered by the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API">Payment Request API</see> to a <see cref="PaymentRequest"/> object when a payment handler requires that the merchant requesting the purchase validate itself as permitted to use the payment handler.
+</summary>
+<remarks>
+<para>Learn how the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API/Concepts#merchant_validation">merchant validation</see> process works.</para><para>This event is not cancelable and does not bubble.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API">Payment Request API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API">Using the Payment Request API</see><br/>-<c>onmerchantvalidation</c> event handler property<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API/Concepts#merchant_validation">Merchant validation</see><br/>-<see cref="PaymentRequest"/><br/>-<see cref="PaymentRequest.Payerdetailchange_event"/> event<br/>-<see cref="PaymentRequest.Paymentmethodchange_event"/> event<br/>-<see cref="PaymentRequest.Shippingaddresschange_event"/> event<br/>-<see cref="PaymentRequest.Shippingoptionchange_event"/> event<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentRequest/merchantvalidation_event"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</PaymentRequestMerchantvalidation_event>
+</docs>

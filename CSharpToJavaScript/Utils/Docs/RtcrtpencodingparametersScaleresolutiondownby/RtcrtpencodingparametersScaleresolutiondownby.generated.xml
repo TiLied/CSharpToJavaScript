@@ -1,0 +1,12 @@
+<docs>
+<RTCRtpEncodingParametersScaleResolutionDownBy>
+<summary>
+The <see cref="RTCRtpEncodingParameters"/> dictionary's<br/><strong><c>scaleResolutionDownBy</c></strong> property can be used to specify a<br/>factor by which to reduce the size of a video track during encoding.
+</summary>
+<remarks>
+<para>This property is only available for tracks whose {{domxref(&amp;quot;MediaStreamTrack.kind&amp;quot;,<br/>&amp;quot;kind&amp;quot;)}} is <c>video</c>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpEncodingParameters/scaleResolutionDownBy"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A double-precision floating-point number specifying the amount by which to reduce the<br/>size of the video during encoding. The default value, 1.0, means that the video will be<br/>encoded at its original size. A value of 2.0 would reduce the size of the video by a<br/>factor of 2 both horizontally and vertically, resulting in a video 25% the original<br/>size.A value less than 1.0 would cause the video to get larger rather than smaller, which is<br/>not the intent of this property. Therefore, specifying a value less than 1.0 is not<br/>permitted and will cause a <see cref="RangeError"/> exception to be thrown by<br/><see cref="RTCPeerConnection.AddTransceiver"/> or<br/><see cref="RTCRtpSender.SetParameters"/>.</value>
+</RTCRtpEncodingParametersScaleResolutionDownBy>
+</docs>

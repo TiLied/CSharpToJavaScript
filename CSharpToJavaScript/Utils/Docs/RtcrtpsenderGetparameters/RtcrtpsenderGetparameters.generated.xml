@@ -1,0 +1,12 @@
+<docs>
+<RTCRtpSenderGetParameters>
+<summary>
+The <strong><c>getParameters()</c></strong> method of the <see cref="RTCRtpSender"/> interface returns an object describing the current configuration for how the sender's <see cref="RTCRtpSender.Track"/> will be encoded and transmitted to a remote <see cref="RTCRtpReceiver"/>.
+</summary>
+<remarks>
+<para>-<see cref="RTCRtpSender.SetParameters"/><br/>-<see cref="RTCRtpReceiver.GetParameters"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSender/getParameters"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An object indicating the current configuration of the sender. &amp;lt;!-- RTCRtpSendParameters, derived from RTCRtpParameters --&amp;gt;</returns>
+</RTCRtpSenderGetParameters>
+</docs>

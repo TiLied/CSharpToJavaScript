@@ -1,0 +1,12 @@
+<docs>
+<HTMLElementMscandidatewindowhide_event>
+<summary>
+The <strong><c>mscandidatewindowhide</c></strong> event is thrown after the Input Method Editor (IME) candidate window closes and is fully hidden.
+</summary>
+<remarks>
+<para>This proprietary method is specific to Internet Explorer.</para><para>The handler of this event will see that the <c>isCandidateWindowVisible</c> method returns <c>false</c>, and no <c>ClientRect</c> object is returned from <c>getCandidateWindowClientRect()</c>.</para><para>Web applications need only register for this event once per element (the handler will remain valid for the lifetime of the element).</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Microsoft_Extensions">Microsoft API extensions</see><br/>-Related events: <see cref="HTMLElement/mscandidatewindowupdate_event"/> and <see cref="HTMLElement/mscandidatewindowshow_event"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/mscandidatewindowhide_event"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLElementMscandidatewindowhide_event>
+</docs>

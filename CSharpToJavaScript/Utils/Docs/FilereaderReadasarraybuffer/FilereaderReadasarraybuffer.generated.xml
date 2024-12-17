@@ -1,0 +1,13 @@
+<docs>
+<FileReaderReadAsArrayBuffer>
+<summary>
+The <see cref="FileReader"/> interface's<br/><strong><c>readAsArrayBuffer()</c></strong> method is used to start reading the<br/>contents of a specified <see cref="Blob"/> or <see cref="File"/>. When the read<br/>operation is finished, the <see cref="FileReader.ReadyState"/> becomes<br/><c>DONE</c>, and the <see cref="FileReader/loadend_event"/> is<br/>triggered. At that time, the <see cref="FileReader.Result"/> attribute<br/>contains an <see cref="ArrayBuffer"/> representing the file's data.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> The <see cref="Blob.ArrayBuffer"/> method is a newer promise-based API to read a<br/>file as an array buffer.</para></blockquote>
+<para>-<see cref="FileReader"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileReader/readAsArrayBuffer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</FileReaderReadAsArrayBuffer>
+</docs>

@@ -1,0 +1,11 @@
+<docs>
+<ResizeObserverEntryContentRect>
+<summary>
+The <c>contentRect</c> read-only property of the<br/><see cref="ResizeObserverEntry"/> interface returns a <see cref="'DOMRectReadOnly'"/><br/>object containing the new size of the observed element when the callback is run. Note<br/>that this is better supported than <see cref="ResizeObserverEntry.BorderBoxSize"/> or<br/><see cref="ResizeObserverEntry.ContentBoxSize"/>, but it is left over from an earlier<br/>implementation of the Resize Observer API, is still included in the spec for web compat<br/>reasons, and may be deprecated in future versions.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserverEntry/contentRect"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="'DOMRectReadOnly'"/> object containing the new size of the element<br/>indicated by the <see cref="ResizeObserverEntry.Target"/> property.If the <c>target</c> is an HTML <see cref="Element"/>, the returned<br/><c>contentRect</c> is the element&amp;apos;s content box. If the <c>target</c> is an<br/><see cref="SVGElement"/>, the returned <c>contentRect</c> is the SVG&amp;apos;s bounding<br/>box.</value>
+</ResizeObserverEntryContentRect>
+</docs>

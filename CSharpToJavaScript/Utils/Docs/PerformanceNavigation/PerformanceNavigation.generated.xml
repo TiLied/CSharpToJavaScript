@@ -1,0 +1,12 @@
+<docs>
+<PerformanceNavigation>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The legacy <strong><c>PerformanceNavigation</c></strong> interface represents information about how the navigation to the current document was done.
+</summary>
+<remarks>
+<blockquote class="WARNING"><h5>WARNING</h5><para><strong>Warning:</strong> This interface is deprecated in the <see href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</see>.<br/>Please use the <see cref="PerformanceNavigationTiming"/> interface instead.</para></blockquote><para>An object of this type can be obtained by calling the <see cref="Performance.Navigation"/> read-only attribute.</para>
+<para>-The <see cref="Performance"/> that allows access to an object of this type.<br/>-<see cref="PerformanceNavigationTiming"/> (part of Navigation Timing Level 2) that has superseded this API.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigation"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</PerformanceNavigation>
+</docs>

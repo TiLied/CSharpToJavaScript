@@ -1,0 +1,12 @@
+<docs>
+<ElementBlur_event>
+<summary>
+The <strong><c>blur</c></strong> event fires when an element has lost focus. The event does not bubble, but the related <see cref="Element/focusout_event"/> event that follows does bubble.
+</summary>
+<remarks>
+<para>An element will lose focus if another element is selected.<br/>An element will also lose focus if a style that does not allow focus is applied, such as <c>hidden</c>, or if the element is removed from the document — in both of these cases focus moves to the <c>body</c> element (viewport).<br/>Note however that <c>blur</c> is not fired when a focused element is removed from the document.</para><para>The opposite of <c>blur</c> is the <see cref="Element/focus_event"/> event, which fires when the element has <strong>received</strong> focus.</para><para>The <c>blur</c> event is not cancelable.</para>
+<para>-The <see cref="HTMLElement.Blur"/> method<br/>-Related events: <see cref="Element/focus_event"/>, <see cref="Element/focusin_event"/>, <see cref="Element/focusout_event"/><br/>-This event on <c>Window</c> targets: <see cref="Window/blur_event"/> event<br/>-<see href="https://javascript.info/focus-blur">Focusing: focus/blur</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/blur_event"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</ElementBlur_event>
+</docs>

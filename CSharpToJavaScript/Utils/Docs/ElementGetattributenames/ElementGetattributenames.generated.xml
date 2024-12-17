@@ -1,0 +1,12 @@
+<docs>
+<ElementGetAttributeNames>
+<summary>
+The <strong><c>getAttributeNames()</c></strong> method of the<br/><see cref="Element"/> interface returns the attribute names of the element as an<br/><see cref="Array"/> of strings. If the element has no attributes it returns an empty<br/>array.
+</summary>
+<remarks>
+<para>Using <c>getAttributeNames()</c> along with<br/><see cref="Element.GetAttribute"/>, is a memory-efficient and<br/>performant alternative to accessing <see cref="Element.Attributes"/>.</para><para>The names returned by <strong><c>getAttributeNames()</c></strong> are <strong>qualified</strong> attribute names, meaning that attributes with a namespace prefix have their names returned with that namespace prefix (<strong>not</strong> the actual namespace), followed by a colon, followed by the attribute name (for example, <strong><c>xlink:href</c></strong>), while any attributes which have no namespace prefix have their names returned as-is (for example, <strong><c>href</c></strong>).</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttributeNames"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</ElementGetAttributeNames>
+</docs>

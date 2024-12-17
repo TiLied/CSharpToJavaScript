@@ -1,0 +1,11 @@
+<docs>
+<MediaKeysSetServerCertificate>
+<summary>
+The <strong><c>MediaKeys.setServerCertificate()</c></strong> method provides a<br/>server certificate to be used to encrypt messages to the license server.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeys/setServerCertificate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="'Promise'"/> that resolves to a boolean. If the Key System implementation represented by this object's content decryption module's implementation value does not support server certificates, return a promise resolved with false.</returns>
+</MediaKeysSetServerCertificate>
+</docs>

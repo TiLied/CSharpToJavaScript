@@ -1,0 +1,12 @@
+<docs>
+<ElementWebkitmouseforcewillbegin_event>
+<summary>
+Safari for macOS fires the non-standard <strong><c>webkitmouseforcewillbegin</c></strong> event at an <see cref="Element"/> before firing the initial <see cref="Element/mousedown_event"/> event.
+</summary>
+<remarks>
+<para>This offers the opportunity to tell the system not to trigger any default Force Touch actions if and when the click turns into a <see href="https://developer.mozilla.org/en-US/docs/Web/API/Force_Touch_events">Force Touch event</see>.</para><para>To instruct macOS not to engage any default Force Touch actions if the user apply enough pressure to activate a Force Touch event, call <see cref="Event.PreventDefault"/> on the <c>webkitmouseforcewillbegin</c> event object.</para><para><strong><c>webkitmouseforcewillbegin</c></strong> is a proprietary, WebKit-specific event. It is part of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Force_Touch_events">Force Touch events</see> feature.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Force_Touch_events">Force Touch events</see><br/>-<see cref="Element/webkitmouseforcedown_event"/><br/>-<see cref="Element/webkitmouseforceup_event"/><br/>-<see cref="Element/webkitmouseforcechanged_event"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/webkitmouseforcewillbegin_event"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</ElementWebkitmouseforcewillbegin_event>
+</docs>

@@ -1,0 +1,11 @@
+<docs>
+<LayoutShiftValue>
+<summary>
+The <strong><c>value</c></strong> read-only property of the <see cref="LayoutShift"/> interface returns the layout shift score calculated as the impact fraction (fraction of the viewport that was shifted) multiplied by the distance fraction (distance moved as a fraction of viewport).
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/LayoutShift/value"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number between <c>0.0</c> and <c>1.0</c> indicating the layout shift score.It is calculated as the impact fraction (fraction of the viewport that was shifted) multiplied by the distance fraction (distance moved as a fraction of viewport).For more details, see <see href="https://web.dev/cls/#layout-shift-score">Layout shift score</see> on web.dev.</value>
+</LayoutShiftValue>
+</docs>

@@ -1,0 +1,12 @@
+<docs>
+<NavigatorStorage>
+<summary>
+The <strong><c>Navigator.storage</c></strong><br/>read-only property returns the singleton <see cref="StorageManager"/> object used to<br/>access the overall storage capabilities of the browser for the current site or app.<br/>The returned object lets you examine and configure persistence of data stores and<br/>learn approximately how much more space your browser has available for local storage<br/>use.
+</summary>
+<remarks>
+<para>-<see cref="StorageManager"/><br/>-<see cref="Navigator"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/storage"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="StorageManager"/> object you can use to maintain persistence for stored<br/>data, as well as to determine roughly how much room there is for data to be stored.</value>
+</NavigatorStorage>
+</docs>

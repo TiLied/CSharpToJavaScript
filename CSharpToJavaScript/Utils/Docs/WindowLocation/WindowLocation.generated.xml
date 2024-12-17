@@ -1,0 +1,13 @@
+<docs>
+<WindowLocation>
+<summary>
+The <strong><c>Window.location</c></strong> read-only property returns a<br/><see cref="Location"/> object with information about the current location of the<br/>document.
+</summary>
+<remarks>
+<para>Though <c>Window.location</c> is a <strong>read-only</strong> <c>Location</c><br/>object, you can also assign a string to it. This means that you can<br/>work with <c>location</c> as if it were a string in most cases:<br/><c>location = &amp;apos;http://www.example.com&amp;apos;</c> is a synonym of<br/><c>location.href = &amp;apos;http://www.example.com&amp;apos;</c>.</para><para>See <see cref="Location"/> for all available properties.</para>
+<para>-The interface of the returned value, <see cref="Location"/><br/>-A similar information, but attached to the document,<br/><see cref="Document.Location"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/History_API">Manipulating the browser history</see><br/>-<see cref="Window/hashchange_event"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Window/location"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Location"/> object.</value>
+</WindowLocation>
+</docs>

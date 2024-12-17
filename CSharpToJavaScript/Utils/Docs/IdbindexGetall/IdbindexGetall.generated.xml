@@ -1,0 +1,13 @@
+<docs>
+<IDBIndexGetAll>
+<summary>
+The <strong><c>getAll()</c></strong> method of the <see cref="IDBIndex"/><br/>interface retrieves all objects that are inside the index.
+</summary>
+<remarks>
+<para>There is a performance cost associated with looking at the <c>value</c> property<br/>of a cursor, because the object is created lazily. To use a feature<br/>like <c>getAll()</c>, the browser has to create all the objects at once. If you<br/>are just interested in looking at each of the keys, for instance, it is more efficient<br/>to use a <see href="https://developer.mozilla.org/en-US/docs/Web/API/IDBCursor">cursor</see>. If you are trying to get an<br/>array of all the objects in an object store, though, you should<br/>use <c>getAll()</c>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase"/><br/>-Using transactions: <see cref="IDBTransaction"/><br/>-Setting a range of keys: <see cref="IDBKeyRange"/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore"/><br/>-Using cursors: <see cref="IDBCursor"/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBIndex/getAll"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="IDBRequest"/> object on which subsequent events related to this operation are fired.If the operation is successful, the value of the request's <see cref="IDBRequest.Result"/> property is an {{jsxref("Array")}} of the values of all records matching the given query, up to the value of <c>count</c>, if <c>count</c> was supplied.</returns>
+</IDBIndexGetAll>
+</docs>

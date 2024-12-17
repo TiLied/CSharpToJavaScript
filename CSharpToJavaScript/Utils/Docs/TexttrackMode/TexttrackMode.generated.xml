@@ -1,0 +1,13 @@
+<docs>
+<TextTrackMode>
+<summary>
+The <see cref="TextTrack"/> interface's<br/><strong><c>mode</c></strong> property is a string specifying and controlling the<br/>text track&amp;apos;s mode: <c>disabled</c>, <c>hidden</c>, or<br/><c>showing</c>. You can read this value to determine the current mode,<br/>and you can change this value to switch modes.
+</summary>
+<remarks>
+<para>Safari additionally requires the <strong><c>default</c></strong><br/>boolean attribute to be set to true when implementing your own video player controls in<br/>order for the subtitles cues to be shown.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebVTT_API">WebVTT</see><br/>-<see cref="TextTrack"/><br/>-<see cref="TextTrackList"/><br/>-<see cref="TextTrackCueList"/><br/>-<see cref="VTTCue"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track">track</see><br/>-<see cref="HTMLTrackElement"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextTrack/mode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string which indicates the track&amp;apos;s current mode. One of:</value>
+</TextTrackMode>
+</docs>

@@ -1,0 +1,13 @@
+<docs>
+<RTCRtpSenderSetParameters>
+<summary>
+The <strong><c>setParameters()</c></strong> method of the <see cref="RTCRtpSender"/> interface applies changes the configuration of sender's <see cref="RTCRtpSender.Track"/>, which is the <see cref="MediaStreamTrack"/> for which the <c>RTCRtpSender</c> is responsible.
+</summary>
+<remarks>
+<para>In other words, <c>setParameters()</c> updates the configuration of the <see href="https://developer.mozilla.org/en-US/docs/Glossary/RTP">RTP</see> transmission as well as the encoding configuration for a specific outgoing media track on the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see> connection.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/WebRTC_codecs">Codecs used by WebRTC</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Media">Web media technologies</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSender/setParameters"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that resolves when the <see cref="RTCRtpSender.Track"/> property is updated with the given parameters.</returns>
+</RTCRtpSenderSetParameters>
+</docs>

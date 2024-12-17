@@ -1,0 +1,13 @@
+<docs>
+<WindowScreenY>
+<summary>
+The <strong><c>Window.screenY</c></strong> read-only property returns the vertical distance, in CSS pixels, of the top border of the user&amp;apos;s browser viewport to the top edge of the screen.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> An alias of <c>screenY</c> was implemented across modern browsers in more recent times — <see cref="Window.ScreenTop"/>. This was originally supported only in IE but was introduced everywhere due to popularity.</para></blockquote>
+<para>-<see cref="Window.ScreenTop"/><br/>-<see cref="Window.ScreenX"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Window/screenY"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number equal to the number of CSS pixels from the top edge of the browser viewport to the top edge of the screen.</value>
+</WindowScreenY>
+</docs>

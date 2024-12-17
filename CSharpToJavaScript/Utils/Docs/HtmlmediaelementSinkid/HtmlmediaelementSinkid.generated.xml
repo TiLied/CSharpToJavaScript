@@ -1,0 +1,12 @@
+<docs>
+<HTMLMediaElementSinkId>
+<summary>
+The <strong><c>HTMLMediaElement.sinkId</c></strong> read-only property returns a string that is the unique ID of the audio device delivering output.<br/>If it is using the user agent default, it returns an empty string.<br/>This ID should be one of the <see cref="MediaDeviceInfo.DeviceId"/> values returned from <see cref="MediaDevices.EnumerateDevices"/>, <c>id-multimedia</c>, or <c>id-communications</c>.
+</summary>
+<remarks>
+<para><see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/setSinkId"><c>HTMLMediaElement.setSinkId()</c></see></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/sinkId"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</HTMLMediaElementSinkId>
+</docs>

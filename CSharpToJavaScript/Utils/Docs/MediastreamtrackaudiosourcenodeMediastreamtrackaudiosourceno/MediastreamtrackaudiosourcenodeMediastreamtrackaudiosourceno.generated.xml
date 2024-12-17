@@ -1,0 +1,12 @@
+<docs>
+<MediaStreamTrackAudioSourceNodeMediaStreamTrackAudioSourceNode>
+<summary>
+The <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see>&amp;apos;s <strong><c>MediaStreamTrackAudioSourceNode()</c></strong> constructor creates and returns a new <see cref="MediaStreamTrackAudioSourceNode"/> object whose audio is taken from the <see cref="MediaStreamTrack"/> specified in the given options object.
+</summary>
+<remarks>
+<para>Another way to create a <c>MediaStreamTrackAudioSourceNode</c> is to call the <see cref="AudioContext.CreateMediaStreamTrackSource"/> method, specifying the <see cref="MediaStreamTrack"/> from which you want to obtain audio.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrackAudioSourceNode/MediaStreamTrackAudioSourceNode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="MediaStreamTrackAudioSourceNode"/> object representing the audio node whose media is obtained from the specified media track.</returns>
+</MediaStreamTrackAudioSourceNodeMediaStreamTrackAudioSourceNode>
+</docs>

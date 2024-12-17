@@ -1,0 +1,13 @@
+<docs>
+<HTMLLinkElementRel>
+<summary>
+The <strong><c>HTMLLinkElement.rel</c></strong> property reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel"><c>rel</c></see> attribute. It is a string containing a space-separated list of link types indicating the relationship between the resource represented by the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link">link</see> element and the current document.
+</summary>
+<remarks>
+<para>The most common use of this attribute is to specify a link to an external style sheet:<br/>the property is set to <c>stylesheet</c>, and the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link#href"><c>href</c></see><br/>attribute is set to the URL of an external style sheet to format the page.</para>
+<para>-The equivalent property on <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a">a</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area">area</see>,<br/><see cref="HTMLAnchorElement.Rel"/> and <see cref="HTMLAreaElement.Rel"/>.<br/>-The very same list but as tokens: <see cref="HTMLLinkElement.RelList"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLLinkElement/rel"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</HTMLLinkElementRel>
+</docs>

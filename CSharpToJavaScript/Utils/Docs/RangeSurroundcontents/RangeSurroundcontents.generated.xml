@@ -1,0 +1,13 @@
+<docs>
+<RangeSurroundContents>
+<summary>
+The <strong><c>Range.surroundContents()</c></strong> method moves content of the<br/><see cref="Range"/> into a new node, placing the new node at the start of the<br/>specified range.
+</summary>
+<remarks>
+<para>This method is nearly equivalent to<br/><c>newNode.appendChild(range.extractContents()); range.insertNode(newNode)</c>.<br/>After surrounding, the boundary points of the <c>range</c> include<br/><c>newNode</c>.</para><para>An exception will be thrown, however, if the <see cref="Range"/> splits a non-{{<br/>domxref(&amp;quot;Text&amp;quot;) }} node with only one of its boundary points. That is, unlike the<br/>alternative above, if there are partially selected nodes, they will not be cloned and<br/>instead the operation will fail.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Range/surroundContents"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</RangeSurroundContents>
+</docs>

@@ -1,0 +1,13 @@
+<docs>
+<DataTransferSetData>
+<summary>
+The <strong><c>DataTransfer.setData()</c></strong> method sets the drag<br/>operation's <see cref="DataTransfer"/> to the specified data and type. If<br/>data for the given type does not exist, it is added at the end of the drag data store,<br/>such that the last item in the <see cref="DataTransfer.Types"/> list will be<br/>the new type. If data for the given type already exists, the existing data is replaced<br/>in the same position. That is, the order of the<br/><see cref="DataTransfer.Types"/> list is not changed when replacing data of the<br/>same type.
+</summary>
+<remarks>
+<para>Example data types are <c>text/plain</c> and <c>text/uri-list</c>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API">Drag and drop</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations">Drag Operations</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types">Recommended Drag Types</see><br/>-<see href="https://codepen.io/tech_query/pen/MqGgap">DataTransfer test - Paste or Drag</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/setData"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</DataTransferSetData>
+</docs>

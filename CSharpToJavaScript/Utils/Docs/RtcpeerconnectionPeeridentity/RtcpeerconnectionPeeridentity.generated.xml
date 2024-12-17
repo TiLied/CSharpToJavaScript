@@ -1,0 +1,12 @@
+<docs>
+<RTCPeerConnectionPeerIdentity>
+<summary>
+The read-only <see cref="RTCPeerConnection"/> property<br/><strong><c>peerIdentity</c></strong> returns a JavaScript <see cref="Promise"/><br/>that resolves to an <see cref="RTCIdentityAssertion"/> which contains a<br/>string identifying the remote peer. Once this promise<br/>resolves successfully, the resulting identity is the <strong>target peer</strong><strong><br/></strong><strong>identity</strong> and cannot change for the duration of the connection.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/peerIdentity"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A JavaScript <see cref="Promise"/> which resolves to an<br/><see cref="RTCIdentityAssertion"/> that describes the remote peer's identity.If an error occurs while attempting to validate an incoming identity assertion (that<br/>is, the information describing a peer&amp;apos;s identity), the promise is rejected. If there<br/>isn&amp;apos;t already a target peer identity, <c>peerIdentity</c> is set to a newly<br/>created promise and the process begins again, until the process succeeds or no further<br/>attempts to authenticate occur.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> The promise returned by<br/><see cref="RTCPeerConnection.SetRemoteDescription"/> cannot<br/>resolve until any target peer identity that&amp;apos;s been set is validated. If the identity<br/>hasn&amp;apos;t been validated yet, the promise returned by <c>setRemoteDescription()</c><br/>will be rejected. If there&amp;apos;s no target peer identity,<br/><c>setRemoteDescription()</c> doesn&amp;apos;t need to wait for validation to occur<br/>before it resolves.</blockquote></value>
+</RTCPeerConnectionPeerIdentity>
+</docs>

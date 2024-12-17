@@ -1,0 +1,12 @@
+<docs>
+<PopStateEvent>
+<summary>
+<strong><c>PopStateEvent</c></strong> is an interface for the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Window/popstate_event"><c>popstate</c></see> event.
+</summary>
+<remarks>
+<para>A <c>popstate</c> event is dispatched to the window every time the active history<br/>entry changes between two history entries for the same document. If the history entry<br/>being activated was created by a call to <c>history.pushState()</c> or was<br/>affected by a call to <c>history.replaceState()</c>, the <c>popstate</c><br/>event&amp;apos;s <c>state</c> property contains a copy of the history entry&amp;apos;s state object.</para><para></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Window/popstate_event"><c>popstate</c></see> event<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Window/hashchange_event"><c>hashchange</c></see> event<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PopStateEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</PopStateEvent>
+</docs>

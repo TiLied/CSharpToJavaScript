@@ -1,0 +1,13 @@
+<docs>
+<AudioListenerSetPosition>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <c>setPosition()</c> method of the <see cref="AudioListener"/> Interface defines the position of the listener.
+</summary>
+<remarks>
+<para>The three parameters <c>x</c>, <c>y</c> and <c>z</c> are unitless and describe the listener's position in 3D space according to the right-hand Cartesian coordinate system. <see cref="PannerNode"/> objects use this position relative to individual audio sources for spatialization.</para><para>The default value of the position vector is <c>(0, 0, 0)</c>.</para><blockquote><para>**Note: ** As this method is deprecated, use the three <see cref="AudioListener.PositionX"/>, <see cref="AudioListener.PositionY"/>, and <see cref="AudioListener.PositionZ"/> properties instead.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioListener/setPosition"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</AudioListenerSetPosition>
+</docs>

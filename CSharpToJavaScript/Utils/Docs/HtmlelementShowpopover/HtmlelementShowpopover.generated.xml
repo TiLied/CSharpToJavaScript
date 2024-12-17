@@ -1,0 +1,13 @@
+<docs>
+<HTMLElementShowPopover>
+<summary>
+The <strong><c>showPopover()</c></strong> method of the <see cref="HTMLElement"/> interface shows a {{domxref("Popover_API", "popover", &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} element (i.e. one that has a valid <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/popover"><c>popover</c></see> attribute) by adding it to the <see href="https://developer.mozilla.org/en-US/docs/Glossary/top layer">top layer</see>.
+</summary>
+<remarks>
+<para>When <c>showPopover()</c> is called on an element with the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/popover"><c>popover</c></see> attribute that is currently hidden, a <see cref="HTMLElement/beforetoggle_event"/> event will be fired, followed by the popover showing, and then the <see cref="HTMLElement/toggle_event"/> event firing. If the element is already showing, an error will be thrown.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API">Popover API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/showPopover"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</HTMLElementShowPopover>
+</docs>

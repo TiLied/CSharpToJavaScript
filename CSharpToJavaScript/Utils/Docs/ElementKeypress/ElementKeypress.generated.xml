@@ -1,0 +1,12 @@
+<docs>
+<ElementKeypress_event>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>keypress</c></strong> event is fired when a key that produces a character value is pressed down.
+</summary>
+<remarks>
+<para>Examples of keys that produce a character value are alphabetic, numeric, and punctuation keys. Examples of keys that don&amp;apos;t produce a character value are modifier keys such as &amp;lt;kbd&amp;gt;Alt&amp;lt;/kbd&amp;gt;, &amp;lt;kbd&amp;gt;Shift&amp;lt;/kbd&amp;gt;, &amp;lt;kbd&amp;gt;Ctrl&amp;lt;/kbd&amp;gt;, or &amp;lt;kbd&amp;gt;Meta&amp;lt;/kbd&amp;gt;.</para><blockquote class="WARNING"><h5>WARNING</h5><para><strong>Warning:</strong> Since this event has been deprecated, you should use <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/beforeinput_event"><c>beforeinput</c></see> or <see href="https://developer.mozilla.org/en-US/docs/Web/API/Element/keydown_event"><c>keydown</c></see> instead.</para></blockquote>
+<para>-The <see cref="Document"/> interface, which the event also targets.<br/>-Related events:-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/input_event"><c>input</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Element/keydown_event"><c>keydown</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Element/keyup_event"><c>keyup</c></see><br/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/keypress_event"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</ElementKeypress_event>
+</docs>

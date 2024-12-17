@@ -1,0 +1,12 @@
+<docs>
+<AudioNodeContext>
+<summary>
+The read-only <c>context</c> property of the<br/><see cref="AudioNode"/> interface returns the associated<br/><see cref="BaseAudioContext"/>, that is the object representing the processing graph<br/>the node is participating in.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioNode/context"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <see cref="AudioContext"/> or <see cref="OfflineAudioContext"/> object that was<br/>used to construct this <c>AudioNode</c>.</value>
+</AudioNodeContext>
+</docs>

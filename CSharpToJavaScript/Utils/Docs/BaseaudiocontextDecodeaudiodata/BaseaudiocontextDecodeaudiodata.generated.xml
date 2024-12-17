@@ -1,0 +1,13 @@
+<docs>
+<BaseAudioContextDecodeAudioData>
+<summary>
+The <c>decodeAudioData()</c> method of the <see cref="BaseAudioContext"/><br/>Interface is used to asynchronously decode audio file data contained in an<br/><see cref="ArrayBuffer"/>. In this case the <c>ArrayBuffer</c> is loaded from<br/><see cref="XMLHttpRequest"/> and <see cref="FileReader"/>. The decoded<br/><see cref="AudioBuffer"/> is resampled to the <see cref="AudioContext"/>'s sampling<br/>rate, then passed to a callback or promise.
+</summary>
+<remarks>
+<para>This is the preferred method of creating an audio source for Web Audio API from an<br/>audio track. This method only works on complete file data, not fragments of audio file<br/>data.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/decodeAudioData"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>) or a <see cref="Promise"/> object that fulfills with the<br/><strong>decodedData</strong>.</returns>
+</BaseAudioContextDecodeAudioData>
+</docs>

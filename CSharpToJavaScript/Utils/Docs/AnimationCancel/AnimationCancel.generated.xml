@@ -1,0 +1,12 @@
+<docs>
+<AnimationCancel_event>
+<summary>
+The <strong><c>cancel</c></strong> event of the <see cref="Animation"/> interface is fired when the <see cref="Animation.Cancel"/> method is called or when the animation enters the <c>&amp;quot;idle&amp;quot;</c> play state from another state, such as when the animation is removed from an element before it finishes playing.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Creating a new animation that is initially idle does not trigger a <c>cancel</c> event on the new animation.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/>-<see cref="Animation"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Animation/cancel_event"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</AnimationCancel_event>
+</docs>

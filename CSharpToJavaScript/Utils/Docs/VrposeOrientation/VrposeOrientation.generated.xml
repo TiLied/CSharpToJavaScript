@@ -1,0 +1,13 @@
+<docs>
+<VRPoseOrientation>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>orientation</c></strong> read-only property of the <see cref="VRPose"/> interface returns the orientation of the sensor at the current <see cref="VRPose.Timestamp"/>, as a quarternion value.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This property was part of the old <see href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</see>. It has been superseded by the <see href="https://immersive-web.github.io/webxr/">WebXR Device API</see>.</para></blockquote><para>The value is a <see cref="Float32Array"/>, made up of the following values:</para><para>The orientation yaw (rotation around the y axis) is relative to the initial yaw of the sensor when it was first read or the yaw of the sensor at the point that <see cref="VRDisplay.ResetPose"/> was last called.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API">WebVR API homepage</see><br/>-<see href="https://mixedreality.mozilla.org/"/> — demos, downloads, and other resources from the Mozilla VR team.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VRPose/orientation"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Float32Array"/>, or <c>null</c> if the VR sensor is not able to provide orientation data.</value>
+</VRPoseOrientation>
+</docs>

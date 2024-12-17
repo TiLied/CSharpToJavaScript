@@ -1,0 +1,12 @@
+<docs>
+<WebGLRenderingContextGetFramebufferAttachmentParameter>
+<summary>
+The<br/><strong><c>WebGLRenderingContext.getFramebufferAttachmentParameter()</c></strong><br/>method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> returns information<br/>about a framebuffer&amp;apos;s attachment.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.CreateFramebuffer"/><br/>-<see cref="WebGLRenderingContext.DeleteFramebuffer"/><br/>-<see cref="WebGLRenderingContext.IsFramebuffer"/><br/>-Other buffers: <see cref="WebGLBuffer"/>, <see cref="WebGLRenderbuffer"/><br/>-<see cref="EXT_sRGB"/><br/>-<see cref="WEBGL_draw_buffers"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getFramebufferAttachmentParameter"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Depends on the requested information (as specified with <c>pname</c>). Either a<br/><see cref="WebGL_API/Types"/>, a <see cref="WebGL_API/Types"/>, a <see cref="WebGLRenderbuffer"/>, or a<br/><see cref="WebGLTexture"/>.</returns>
+</WebGLRenderingContextGetFramebufferAttachmentParameter>
+</docs>

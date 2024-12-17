@@ -1,0 +1,13 @@
+<docs>
+<InkPresenterPresentationArea>
+<summary>
+The <strong><c>presentationArea</c></strong> read-only property of the <see cref="InkPresenter"/> interface returns the <see cref="Element"/> inside which rendering of ink strokes is confined.
+</summary>
+<remarks>
+<para>If the preceding <see cref="Ink.RequestPresenter"/> method call included a specific <c>presentationArea</c> element definition, then that will be the element returned. Otherwise, the default is returned, which is the containing viewport.</para><para>This area is always the client coordinates for the element&amp;apos;s border box, so moving the element or scrolling the element requires no recalculation on the developer&amp;apos;s part.</para>
+<para>-<see href="https://blogs.windows.com/msedgedev/2021/08/18/enhancing-inking-on-the-web/">Enhancing Inking on the Web</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/InkPresenter/presentationArea"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="Element"/>.</value>
+</InkPresenterPresentationArea>
+</docs>

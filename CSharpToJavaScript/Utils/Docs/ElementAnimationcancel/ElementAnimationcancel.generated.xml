@@ -1,0 +1,12 @@
+<docs>
+<ElementAnimationcancel_event>
+<summary>
+The <strong><c>animationcancel</c></strong> event is fired when a <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations">CSS Animation</see> unexpectedly aborts. In other words, any time it stops running without sending an <see cref="Element/animationend_event"/> event. This might happen when the {{cssxref("animation-name")}} is changed such that the animation is removed, or when the animating node is hidden using CSS. Therefore, either directly or because any of its containing nodes are hidden.
+</summary>
+<remarks>
+<para>An event handler for this event can be added by setting the <c>onanimationcancel</c> property, or using <see cref="EventTarget.AddEventListener"/>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations">CSS Animations</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">Using CSS Animations</see><br/>-<see cref="AnimationEvent"/><br/>-Related events: <see cref="Element/animationstart_event"/>, <see cref="Element/animationend_event"/>, <see cref="Element/animationiteration_event"/><br/>-This event on <see cref="Document"/> targets: <see cref="Document/animationcancel_event"/><br/>-This event on <see cref="Window"/> targets: <see cref="Window/animationcancel_event"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/animationcancel_event"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</ElementAnimationcancel_event>
+</docs>

@@ -1,0 +1,12 @@
+<docs>
+<RTCPeerConnectionCreateOffer>
+<summary>
+The <strong><c>createOffer()</c></strong> method<br/>of the <see cref="RTCPeerConnection"/> interface<br/>initiates the creation of an <see href="https://developer.mozilla.org/en-US/docs/Glossary/SDP">SDP</see> offer<br/>for the purpose of starting a new WebRTC connection to a remote peer.<br/>The SDP offer includes information<br/>about any <see cref="MediaStreamTrack"/> objects<br/>already attached to the WebRTC session, codec, and options supported by the browser,<br/>and any candidates already gathered by the <see href="https://developer.mozilla.org/en-US/docs/Glossary/ICE">ICE</see> agent,<br/>for the purpose of being sent over the signaling channel<br/>to a potential peer<br/>to request a connection<br/>or to update the configuration of an existing connection.
+</summary>
+<remarks>
+<para>The return value is a <see cref="Promise"/> which, when the offer has been created, is<br/>resolved with a <see cref="RTCSessionDescription"/> object containing the newly-created<br/>offer.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/createOffer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> whose fulfillment handler will receive an object conforming to<br/>the <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCSessionDescription/RTCSessionDescription#rtcsessiondescriptioninit">RTCSessionDescriptionInit</see> dictionary which contains the SDP<br/>describing the generated offer. That received offer should be delivered through the<br/>signaling server to a remote peer.</returns>
+</RTCPeerConnectionCreateOffer>
+</docs>

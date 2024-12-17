@@ -1,0 +1,13 @@
+<docs>
+<AudioContextCreateMediaStreamDestination>
+<summary>
+The <c>createMediaStreamDestination()</c> method of the <see cref="AudioContext"/> Interface is used to create a new <see cref="MediaStreamAudioDestinationNode"/> object associated with a <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see> <see cref="MediaStream"/> representing an audio stream, which may be stored in a local file or sent to another computer.
+</summary>
+<remarks>
+<para>The <see cref="MediaStream"/> is created when the node is created and is accessible via the <see cref="MediaStreamAudioDestinationNode"/>'s <c>stream</c> attribute. This stream can be used in a similar way as a <c>MediaStream</c> obtained via <see cref="Navigator.GetUserMedia"/> — it can, for example, be sent to a remote peer using the <c>addStream()</c> method of <c>RTCPeerConnection</c>.</para><para>For more details about media stream destination nodes, check out the <see cref="MediaStreamAudioDestinationNode"/> reference page.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/createMediaStreamDestination"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="MediaStreamAudioDestinationNode"/>.</returns>
+</AudioContextCreateMediaStreamDestination>
+</docs>

@@ -1,0 +1,11 @@
+<docs>
+<SVGAngle>
+<summary>
+The <c>SVGAngle</c> interface is used to represent a value that can be an {{cssxref(&amp;quot;&amp;lt;angle&amp;gt;&amp;quot;)}} or {{cssxref(&amp;quot;&amp;lt;number&amp;gt;&amp;quot;)}} value. An <c>SVGAngle</c> reflected through the animVal attribute is always read only.
+</summary>
+<remarks>
+<para>An <c>SVGAngle</c> object can be designated as read only, which means that attempts to modify the object will result in an exception being thrown.</para><para>An <c>SVGAngle</c> object can be associated with a particular element. The associated element is used to determine which element&amp;apos;s content attribute to update if the object reflects an attribute. Unless otherwise described, an <c>SVGAngle</c> object is not associated with any element.</para><para>Every <c>SVGAngle</c> object operates in one of two modes:</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAngle"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</SVGAngle>
+</docs>

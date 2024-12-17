@@ -1,0 +1,12 @@
+<docs>
+<NavigatorContacts>
+<summary>
+The <strong><c>contacts</c></strong> read-only property of the<br/><see cref="Navigator"/> interface returns a <see cref="'ContactsManager'"/> interface<br/>which allows users to select entries from their contact list and share limited details<br/>of the selected entries with a website or application.
+</summary>
+<remarks>
+<para>-<see href="https://web.dev/contact-picker/">A Contact Picker for the Web</see><br/>-<see href="https://contact-picker.glitch.me/">A Contact Picker demo on glitch</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/contacts"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="'ContactsManager'"/> object. Two successive calls return the same object.</value>
+</NavigatorContacts>
+</docs>

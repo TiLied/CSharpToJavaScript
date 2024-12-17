@@ -1,0 +1,12 @@
+<docs>
+<PerformanceNow>
+<summary>
+The <strong><c>performance.now()</c></strong> method returns a high resolution timestamp in milliseconds. It represents the time elapsed since <see cref="Performance.TimeOrigin"/> (the time when navigation has started in window contexts, or the time when the worker is run in <see cref="Worker"/> and <see cref="ServiceWorker"/> contexts).
+</summary>
+<remarks>
+<para>-<see cref="Performance.TimeOrigin"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Performance/now"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Returns a <see cref="DOMHighResTimeStamp"/> measured in milliseconds.</returns>
+</PerformanceNow>
+</docs>

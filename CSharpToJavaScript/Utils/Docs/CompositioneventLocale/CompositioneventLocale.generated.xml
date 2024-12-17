@@ -1,0 +1,13 @@
+<docs>
+<CompositionEventLocale>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>locale</c></strong> read-only property of the<br/><see cref="CompositionEvent"/> interface returns the locale of current input method<br/>(for example, the keyboard layout locale if the composition is associated with IME).
+</summary>
+<remarks>
+<blockquote class="WARNING"><h5>WARNING</h5><para><strong>Warning:</strong> Even for browsers supporting it, don&amp;apos;t trust the value contained in this property.<br/>Even if technically it is accessible, the way to set it up when creating a <see cref="CompositionEvent"/><br/>is not guaranteed to be coherent.</para></blockquote>
+<para>-<see cref="CompositionEvent"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CompositionEvent/locale"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing the locale of current input method.</value>
+</CompositionEventLocale>
+</docs>

@@ -1,0 +1,13 @@
+<docs>
+<CacheKeys>
+<summary>
+The <strong><c>keys()</c></strong> method of the <see cref="Cache"/> interface returns a<br/>{{jsxref("Promise")}} that resolves to an array of <see cref="Request"/> objects<br/>representing the keys of the <see cref="Cache"/>.
+</summary>
+<remarks>
+<para>The requests are returned in the same order that they were inserted.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Requests with duplicate URLs but different headers can be<br/>returned if their responses have the <c>VARY</c> header set on them.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</see><br/>-<see cref="Cache"/><br/>-<see cref="Caches"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Cache/keys"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that resolves to an array of <see cref="Request"/><br/>objects.</returns>
+</CacheKeys>
+</docs>

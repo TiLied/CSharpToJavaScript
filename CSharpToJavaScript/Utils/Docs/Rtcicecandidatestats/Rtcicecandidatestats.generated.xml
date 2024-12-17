@@ -1,0 +1,11 @@
+<docs>
+<RTCIceCandidateStats>
+<summary>
+The <strong><c>RTCIceCandidateStats</c></strong> dictionary of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see> is used to report statistics related to an <see cref="RTCIceCandidate"/>.
+</summary>
+<remarks>
+<para>The statistics can be obtained by iterating the <see cref="RTCStatsReport"/> returned by <see cref="RTCPeerConnection.GetStats"/> until you find a report with the <see href="https://developer.mozilla.org#type"><c>type</c></see> of <c>local-candidate</c>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RTCIceCandidateStats>
+</docs>

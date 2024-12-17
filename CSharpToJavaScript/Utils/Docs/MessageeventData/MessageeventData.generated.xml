@@ -1,0 +1,12 @@
+<docs>
+<MessageEventData>
+<summary>
+The <strong><c>data</c></strong> read-only property of the<br/><see cref="MessageEvent"/> interface represents the data sent by the message emitter.
+</summary>
+<remarks>
+<para>-<see cref="ExtendableMessageEvent"/> — similar to this interface but used in<br/>interfaces that needs to give more flexibility to authors.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent/data"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The data sent by the message emitter; this can be any data type.If the data is sent by a <see cref="WebSocket"/> connector, the type of this property depends on the type of the WebSocket message and the value of <see cref="WebSocket.BinaryType"/>.</value>
+</MessageEventData>
+</docs>

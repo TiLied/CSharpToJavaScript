@@ -1,0 +1,13 @@
+<docs>
+<URLPatternExec>
+<summary>
+The <strong><c>exec()</c></strong> method of the <see cref="URLPattern"/> interface takes a URL or<br/>object of URL parts, and returns either an object containing the results of<br/>matching the URL to the pattern, or <c>null</c> if the URL does not match the<br/>pattern.
+</summary>
+<remarks>
+<para>AvailableInWorkers</para>
+<para>-A polyfill of <c>URLPattern</c> is available<br/><see href="https://github.com/kenchris/urlpattern-polyfill">on GitHub</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URLPattern/exec"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="Object"/> with an <c>inputs</c> key containing the array of arguments<br/>passed into the function, and keys for each of the URL parts containing the<br/>matched input, and matched groups for that part.</returns>
+</URLPatternExec>
+</docs>

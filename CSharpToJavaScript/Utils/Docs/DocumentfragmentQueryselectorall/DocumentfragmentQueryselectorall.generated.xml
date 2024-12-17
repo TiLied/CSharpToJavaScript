@@ -1,0 +1,13 @@
+<docs>
+<DocumentFragmentQuerySelectorAll>
+<summary>
+The <strong><c>DocumentFragment.querySelectorAll()</c></strong> method returns a<br/><see cref="NodeList"/> of elements within the <see cref="DocumentFragment"/> (using<br/>depth-first pre-order traversal of the document&amp;apos;s nodes) that matches the specified<br/>group of selectors.
+</summary>
+<remarks>
+<para>If the selectors specified in parameter are invalid a <see cref="DOMException"/> with<br/>a <c>SYNTAX_ERR</c> value is raised.</para>
+<para>-The <see cref="DocumentFragment"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment/querySelectorAll"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A non-live <see cref="NodeList"/> containing one <see cref="Element"/> object for<br/>each element that matches at least one of the specified selectors or an empty<br/><see cref="NodeList"/> in case of no matches.</returns>
+</DocumentFragmentQuerySelectorAll>
+</docs>

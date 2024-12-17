@@ -1,0 +1,13 @@
+<docs>
+<FileReaderReadyState>
+<summary>
+The <see cref="FileReader"/> <strong><c>readyState</c></strong> property provides the current state of the reading operation a <c>FileReader</c> is in. A <c>FileReader</c> exists in one of the following states:
+</summary>
+<remarks>
+<table><tr><td><para>Value</para></td><td><para>State</para></td><td><para>Description</para></td></tr><tr><td><para><c>0</c></para></td><td><para><c>EMPTY</c></para></td><td><para>Reader has been created. None of the read methods called yet.</para></td></tr><tr><td><para><c>1</c></para></td><td><para><c>LOADING</c></para></td><td><para>A read method has been called.</para></td></tr><tr><td><para><c>2</c></para></td><td><para><c>DONE</c></para></td><td><para>The operation is complete.</para></td></tr></table>
+<para>-<see cref="Blob"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileReader/readyState"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number which is one of the three possible state constants define for the <see cref="FileReader"/> API.</value>
+</FileReaderReadyState>
+</docs>

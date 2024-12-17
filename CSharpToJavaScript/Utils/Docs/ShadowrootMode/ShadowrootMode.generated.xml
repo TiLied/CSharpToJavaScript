@@ -1,0 +1,12 @@
+<docs>
+<ShadowRootMode>
+<summary>
+The <strong><c>mode</c></strong> read-only property of the <see cref="ShadowRoot"/><br/>specifies its mode — either <c>open</c> or <c>closed</c>. This defines<br/>whether or not the shadow root&amp;apos;s internal features are accessible from JavaScript.
+</summary>
+<remarks>
+<para>When the <c>mode</c> of a shadow root is &amp;quot;<c>closed</c>&amp;quot;, the shadow root&amp;apos;s<br/>implementation internals are inaccessible and unchangeable from JavaScript—in the same<br/>way the implementation internals of, for example, the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">video</see> element<br/>are inaccessible and unchangeable from JavaScript.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/mode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A value defined in the<br/><see href="https://dom.spec.whatwg.org/#enumdef-shadowrootmode"><c>ShadowRootMode</c></see><br/>enum — either <c>open</c> or <c>closed</c>.</value>
+</ShadowRootMode>
+</docs>

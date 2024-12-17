@@ -1,0 +1,12 @@
+<docs>
+<DocumentFullscreenchange_event>
+<summary>
+The <c>fullscreenchange</c> event is fired immediately after the browser switches into or out of fullscreen mode.
+</summary>
+<remarks>
+<para>The event is sent to the <c>Element</c> that is transitioning into or out of fullscreen mode, and this event then bubbles up to the <c>Document</c>.</para><para>To find out whether the <c>Element</c> is entering or exiting fullscreen mode, check the value of <see cref="Document.FullscreenElement"/>: if this value is <c>null</c> then the element is exiting fullscreen mode, otherwise it is entering fullscreen mode.</para><para>This event is not cancelable.</para>
+<para>-<see cref="Document/fullscreenerror_event"/><br/>-<see cref="Element"/>: <see cref="Element/fullscreenchange_event"/> event<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API">Fullscreen API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API/Guide">Guide to the Fullscreen API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/fullscreenchange_event"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</DocumentFullscreenchange_event>
+</docs>

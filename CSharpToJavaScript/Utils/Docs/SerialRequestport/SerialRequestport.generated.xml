@@ -1,0 +1,11 @@
+<docs>
+<SerialRequestPort>
+<summary>
+The <strong><c>Serial.requestPort()</c></strong> method of the <see cref="Serial"/> interface returns a {{jsxref("Promise")}} that resolves with an instance of <see cref="SerialPort"/> representing the device chosen by the user or rejects if no device was selected.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Serial/requestPort"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that resolves with an instance of <see cref="SerialPort"/>.</returns>
+</SerialRequestPort>
+</docs>

@@ -1,0 +1,13 @@
+<docs>
+<NavigatorGetBattery>
+<summary>
+The <strong><c>getBattery()</c></strong> method provides information about the system&amp;apos;s battery.<br/>It returns a battery promise, which is resolved in a <see cref="BatteryManager"/> object providing also some new events you can handle to monitor the battery status.<br/>This implements the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Battery_Status_API">Battery Status API</see>; see that documentation for additional details, a guide to using the API, and sample code.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Access to this feature may be controlled by the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy">Permissions-Policy</see> directive <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy/battery">Permissions-Policy/battery</see>.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Battery_Status_API">Battery Status API</see><br/>-<c>Permissions-Policy</c> <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy/battery">Permissions-Policy/battery</see> feature<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/getBattery"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{JSxRef("Promise")}} that fulfills with a <see cref="BatteryManager"/> object which you can use to get information about the battery's state.</returns>
+</NavigatorGetBattery>
+</docs>

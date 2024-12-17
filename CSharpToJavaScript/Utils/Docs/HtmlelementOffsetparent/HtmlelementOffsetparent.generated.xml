@@ -1,0 +1,12 @@
+<docs>
+<HTMLElementOffsetParent>
+<summary>
+The <strong><c>HTMLElement.offsetParent</c></strong> read-only property returns a<br/>reference to the element which is the closest (nearest in the containment hierarchy)<br/>positioned ancestor element.
+</summary>
+<remarks>
+<para>A positioned ancestor is either:</para><para>If there is no positioned ancestor element, the <c>body</c> is returned.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> <c>offsetParent</c> returns <c>null</c> in the following<br/>situations:</para></blockquote><para><c>offsetParent</c> is useful because<br/><see cref="HTMLElement.OffsetTop"/> and<br/><see cref="HTMLElement.OffsetLeft"/> are relative to its padding edge.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetParent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An object reference to the element in which the current element is offset.</value>
+</HTMLElementOffsetParent>
+</docs>

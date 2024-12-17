@@ -1,0 +1,13 @@
+<docs>
+<HistoryPushState>
+<summary>
+In an <see href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</see> document, the<br/><strong><c>history.pushState()</c></strong> method adds an entry to the browser&amp;apos;s<br/>session history stack.
+</summary>
+<remarks>
+<para>This method is {{glossary("asynchronous")}}. Add a listener for the <see cref="Window/popstate_event"/> event in order to determine when the navigation has completed. The <c>state</c> parameter will be available in it.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/History_API/Working_with_the_History_API">Working with the History API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Window/popstate_event">Window: popstate event</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/History/pushState"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</HistoryPushState>
+</docs>

@@ -1,0 +1,11 @@
+<docs>
+<HTMLVideoElementVideoHeight>
+<summary>
+The <see cref="HTMLVideoElement"/> interface's read-only <strong><c>videoHeight</c></strong> property indicates the <see href="https://developer.mozilla.org#about_intrinsic_width_and_height">intrinsic height</see> of the video, expressed in CSS pixels.<br/>In simple terms, this is the height of the media in its natural size.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement/videoHeight"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer value specifying the intrinsic height of the video in CSS pixels.<br/>If the element's <see cref="HTMLMediaElement.ReadyState"/> is <c>HTMLMediaElement.HAVE_NOTHING</c>, then the value of this property is 0, because neither video nor poster frame size information is yet available.</value>
+</HTMLVideoElementVideoHeight>
+</docs>

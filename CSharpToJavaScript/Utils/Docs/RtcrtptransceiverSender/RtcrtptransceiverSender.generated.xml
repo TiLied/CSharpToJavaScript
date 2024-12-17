@@ -1,0 +1,12 @@
+<docs>
+<RTCRtpTransceiverSender>
+<summary>
+The read-only <strong><c>sender</c></strong> property<br/>of WebRTC's <see cref="RTCRtpTransceiver"/> interface indicates the<br/><see cref="RTCRtpSender"/> responsible for encoding and sending outgoing media data<br/>for the transceiver&amp;apos;s stream.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP">Introduction to the Real-time Transport Protocol (RTP)</see><br/>-<see cref="RTCRtpSender"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiver/sender"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="RTCRtpSender"/> object used to encode and send media whose media ID<br/>matches the current value of <see cref="RTCRtpTransceiver.Mid"/>.</value>
+</RTCRtpTransceiverSender>
+</docs>

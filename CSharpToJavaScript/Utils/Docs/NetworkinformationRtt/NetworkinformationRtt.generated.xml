@@ -1,0 +1,13 @@
+<docs>
+<NetworkInformationRtt>
+<summary>
+The <strong><c>NetworkInformation.rtt</c></strong> read-only property returns the<br/>estimated effective round-trip time of the current connection, rounded to the nearest<br/>multiple of 25 milliseconds. This value is based on recently observed application-layer<br/>RTT measurements across recently active connections. It excludes connections made to a<br/>private address space. If no recent measurement data is available, the value is based on<br/>the properties of the underlying connection technology.
+</summary>
+<remarks>
+<para>AvailableInWorkers</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/RTT">RTT</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NetworkInformation/rtt"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</NetworkInformationRtt>
+</docs>

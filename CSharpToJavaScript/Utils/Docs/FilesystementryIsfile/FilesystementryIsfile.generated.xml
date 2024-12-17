@@ -1,0 +1,13 @@
+<docs>
+<FileSystemEntryIsFile>
+<summary>
+The read-only <strong><c>isFile</c></strong> property of<br/>the <see cref="FileSystemEntry"/> interface is <c>true</c> if the entry<br/>represents a file (meaning it's a <see cref="FileSystemFileEntry"/>) and<br/><c>false</c> if it&amp;apos;s not.
+</summary>
+<remarks>
+<para>You can also use <see cref="FileSystemEntry.IsDirectory"/> to determine<br/>if the entry is a directory.</para><blockquote class="WARNING"><h5>WARNING</h5><para><strong>Warning:</strong> You should not assume that any entry which isn&amp;apos;t a file is a directory or vice versa.<br/>There are other types of file descriptors on many operating systems. Be sure to use<br/>both <c>isDirectory</c> and <c>isFile</c> as needed to ensure that the<br/>entry is something you know how to work with.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">Introduction to the File and Directory Entries API</see><br/>-<see cref="FileSystemEntry"/><br/>-<see cref="FileSystemEntry.IsDirectory"/><br/>-<see cref="FileSystemFileEntry"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemEntry/isFile"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A Boolean indicating whether or not the <see cref="FileSystemEntry"/> is a file.</value>
+</FileSystemEntryIsFile>
+</docs>

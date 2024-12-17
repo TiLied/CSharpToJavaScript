@@ -1,0 +1,12 @@
+<docs>
+<XREquirectLayerLowerVerticalAngle>
+<summary>
+The <strong><c>lowerVerticalAngle</c></strong> property of the <see cref="XREquirectLayer"/> interface represents the lower vertical angle in radians for the sphere.
+</summary>
+<remarks>
+<para>-<see cref="XREquirectLayer.Radius"/><br/>-<see cref="XREquirectLayer.CentralHorizontalAngle"/><br/>-<see cref="XREquirectLayer.UpperVerticalAngle"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XREquirectLayer/lowerVerticalAngle"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number representing the lower vertical angle in radians for the sphere. Setting <c>lowerVerticalAngle</c> to a value less than -π/2 will set it to -π/2 and setting it to a value higher than π/2 will set it to π/2.</value>
+</XREquirectLayerLowerVerticalAngle>
+</docs>

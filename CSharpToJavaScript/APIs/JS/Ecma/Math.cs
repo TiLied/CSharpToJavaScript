@@ -20,6 +20,11 @@ namespace CSharpToJavaScript.APIs.JS
 		public const float SQRT1_2  = 0.7071067811865476f;
 		public const float SQRT2  = 1.4142135623730951f;
 
+		//test
+		/////<include file='Utils/include.xml' path='docs/Math/*'/>
+		/////<include file='Utils/include2.xml' path='docs/Math/*'/>
+		//test
+
 		[To(ToAttribute.FirstCharToLowerCase)]
 		public static float Abs(float x) 
 		{

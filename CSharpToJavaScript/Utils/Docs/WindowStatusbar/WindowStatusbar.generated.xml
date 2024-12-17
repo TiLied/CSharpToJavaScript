@@ -1,0 +1,13 @@
+<docs>
+<WindowStatusbar>
+<summary>
+Returns the <c>statusbar</c> object.
+</summary>
+<remarks>
+<para>This is one of a group of <c>Window</c> properties that contain a boolean <c>visible</c> property, that used to represent whether or not a particular part of a web browser&amp;apos;s user interface was visible.</para><para>For privacy and interoperability reasons, the value of the <c>visible</c> property is now <c>false</c> if this <c>Window</c> is a popup, and <c>true</c> otherwise.</para>
+<para>-<see cref="Window.Locationbar"/><br/>-<see cref="Window.Menubar"/><br/>-<see cref="Window.Personalbar"/><br/>-<see cref="Window.Scrollbars"/><br/>-<see cref="Window.Toolbar"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Window/statusbar"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An object containing a single property:</value>
+</WindowStatusbar>
+</docs>

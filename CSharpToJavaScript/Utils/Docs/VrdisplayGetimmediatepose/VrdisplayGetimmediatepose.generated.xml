@@ -1,0 +1,13 @@
+<docs>
+<VRDisplayGetImmediatePose>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>getImmediatePose()</c></strong> method of the <see cref="VRDisplay"/> interface returns a <see cref="VRPose"/> object defining the current pose of the <c>VRDisplay</c>, with no prediction applied.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This method was part of the old <see href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</see>. It has been superseded by the <see href="https://immersive-web.github.io/webxr/">WebXR Device API</see>.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API">WebVR API homepage</see>.<br/>-<see href="https://mixedreality.mozilla.org/"/> — demos, downloads, and other resources from the Mozilla VR team.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VRDisplay/getImmediatePose"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="VRPose"/> object.</returns>
+</VRDisplayGetImmediatePose>
+</docs>

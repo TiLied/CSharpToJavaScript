@@ -1,0 +1,11 @@
+<docs>
+<RTCOutboundRtpStreamStatsLastPacketSentTimestamp>
+<summary>
+The <strong><c>lastPacketSentTimestamp</c></strong><br/>property of the <see cref="RTCOutboundRtpStreamStats"/> dictionary indicates the time<br/>at which the <see cref="RTCRtpSender"/> described by this<br/><see cref="RTCOutboundRtpStreamStats"/> object last transmitted a packet to the<br/>remote receiver.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/lastPacketSentTimestamp"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DOMHighResTimeStamp"/> which specifies the time at which the most recently received packet arrived on this RTP stream.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> This value differs from the <see cref="RTCOutboundRtpStreamStats.Timestamp"/>, which represents the time at which the statistics object was created.</blockquote></value>
+</RTCOutboundRtpStreamStatsLastPacketSentTimestamp>
+</docs>

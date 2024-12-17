@@ -1,0 +1,12 @@
+<docs>
+<DocumentVisibilitychange_event>
+<summary>
+The <c>visibilitychange</c> event is fired at the document when the contents of its tab have become visible or have been hidden.
+</summary>
+<remarks>
+<para>The event is not cancelable.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API">Page Visibility API</see><br/>-<see cref="Document.VisibilityState"/><br/>-<see href="https://www.igvita.com/2015/11/20/dont-lose-user-and-app-state-use-page-visibility/">Don&amp;apos;t lose user and app state, use Page Visibility</see> explains in detail why you should use <c>visibilitychange</c>, not <c>beforeunload</c>/<c>unload</c>.<br/>-<see href="https://developer.chrome.com/blog/page-lifecycle-api/">Page Lifecycle API</see> gives best-practices guidance on handling page lifecycle behavior in your web applications.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/visibilitychange_event"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</DocumentVisibilitychange_event>
+</docs>

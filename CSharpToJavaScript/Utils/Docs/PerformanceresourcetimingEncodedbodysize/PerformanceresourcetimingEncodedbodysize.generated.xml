@@ -1,0 +1,12 @@
+<docs>
+<PerformanceResourceTimingEncodedBodySize>
+<summary>
+The <strong><c>encodedBodySize</c></strong> read-only property represents the size (in octets) received from the fetch (HTTP or cache) of the payload body before removing any applied content encodings (like gzip or Brotli). If the resource is retrieved from an application cache or a local resource, it must<br/>return the size of the payload body before removing any applied content encoding.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Timing-Allow-Origin">Timing-Allow-Origin</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming/encodedBodySize"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <c>encodedBodySize</c> property can have the following values:</value>
+</PerformanceResourceTimingEncodedBodySize>
+</docs>

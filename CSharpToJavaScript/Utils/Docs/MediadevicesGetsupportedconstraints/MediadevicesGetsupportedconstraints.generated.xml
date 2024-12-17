@@ -1,0 +1,11 @@
+<docs>
+<MediaDevicesGetSupportedConstraints>
+<summary>
+The<br/><strong><c>getSupportedConstraints()</c></strong><br/>method of the <see cref="MediaDevices"/> interface returns an object based on the<br/><see cref="MediaTrackSupportedConstraints"/> dictionary, whose member fields each<br/>specify one of the constrainable properties the <see href="https://developer.mozilla.org/en-US/docs/Glossary/user agent">user agent</see> understands.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getSupportedConstraints"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new object based on the <see cref="MediaTrackSupportedConstraints"/> dictionary<br/>listing the constraints supported by the user agent. Because only constraints supported<br/>by the user agent are included in the list, each of these Boolean properties has the<br/>value <c>true</c>.</returns>
+</MediaDevicesGetSupportedConstraints>
+</docs>

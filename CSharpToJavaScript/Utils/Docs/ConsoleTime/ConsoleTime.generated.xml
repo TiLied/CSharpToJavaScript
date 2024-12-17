@@ -1,0 +1,13 @@
+<docs>
+<ConsoleTime>
+<summary>
+The <strong><c>console.time()</c></strong> method starts a timer you can use to track<br/>how long an operation takes. You give each timer a unique name, and may have up to 10,000 timers<br/>running on a given page. When you call <see cref="Console.TimeEnd"/> with the same name, the<br/>browser will output the time, in milliseconds, that elapsed since the timer was started.
+</summary>
+<remarks>
+<para>See <see href="https://developer.mozilla.org/en-US/docs/Web/API/console#timers">Timers</see> in the<br/><see cref="Console"/> documentation for details and examples.</para><para>AvailableInWorkers</para>
+<para>-<see cref="Console.TimeEnd"/><br/>-<see cref="Console.TimeLog"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/console/time"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</ConsoleTime>
+</docs>

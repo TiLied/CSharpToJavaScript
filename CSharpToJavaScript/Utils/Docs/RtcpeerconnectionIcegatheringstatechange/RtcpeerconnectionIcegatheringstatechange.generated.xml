@@ -1,0 +1,12 @@
+<docs>
+<RTCPeerConnectionIcegatheringstatechange_event>
+<summary>
+The <strong><c>icegatheringstatechange</c></strong> event is sent to the <c>onicegatheringstatechange</c> event handler on an <see cref="RTCPeerConnection"/> when the state of the {{Glossary("ICE")}} candidate gathering process changes.<br/>This signifies that the value of the connection's <see cref="RTCPeerConnection.IceGatheringState"/> property has changed.
+</summary>
+<remarks>
+<para>When ICE first starts to gather connection candidates, the value changes from <c>new</c> to <c>gathering</c> to indicate that the process of collecting candidate configurations for the connection has begun. When the value changes to <c>complete</c>, all of the transports that make up the <c>RTCPeerConnection</c> have finished gathering ICE candidates.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> While you can determine that ICE candidate gathering is complete by watching for <c>icegatheringstatechange</c> events and checking for the value of <see cref="RTCPeerConnection.IceGatheringState"/> to become <c>complete</c>, you can also have your handler for the <see cref="RTCPeerConnection.Icecandidate_event"/> event look to see if its <see cref="RTCPeerConnectionIceEvent.Candidate"/> property is <c>null</c>. This also indicates that collection of candidates is finished.</para></blockquote><para>This event is not cancelable and does not bubble.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling">Signaling and video calling</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Connectivity">WebRTC connectivity</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Session_lifetime">Lifetime of a WebRTC session</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/icegatheringstatechange_event"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RTCPeerConnectionIcegatheringstatechange_event>
+</docs>

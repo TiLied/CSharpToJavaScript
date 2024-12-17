@@ -1,0 +1,13 @@
+<docs>
+<VirtualKeyboardHide>
+<summary>
+The <strong><c>hide()</c></strong> method of the <see cref="VirtualKeyboard"/> interface programmatically hides the on-screen virtual keyboard. This is useful when the page needs to implement its own virtual keyboard logic by using the {{domxref("VirtualKeyboard_API", "VirtualKeyboard API", &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}.
+</summary>
+<remarks>
+<para>This method only works if the currently-focused element is a form control — such as an <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">input</see> or <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textarea</see> element — or if the focused element is <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#contenteditable"><c>contenteditable</c></see>.</para><para>The <c>hide()</c> method always returns <c>undefined</c> and triggers a <see cref="VirtualKeyboard.Geometrychange_event"/> event.</para>
+<para>-{{domxref(&amp;quot;VirtualKeyboard_API&amp;quot;, &amp;quot;The VirtualKeyboard API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://developer.chrome.com/docs/web-platform/virtual-keyboard/">Full control with the VirtualKeyboard API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VirtualKeyboard/hide"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Undefined.</returns>
+</VirtualKeyboardHide>
+</docs>

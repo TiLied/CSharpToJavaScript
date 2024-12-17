@@ -1,0 +1,12 @@
+<docs>
+<FileSystemSyncAccessHandle>
+<summary>
+The <strong><c>FileSystemSyncAccessHandle</c></strong> interface of the {{domxref(&amp;quot;File System Access API&amp;quot;, &amp;quot;File System Access API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} represents a synchronous handle to a file system entry. The synchronous nature of the file reads and writes allows for higher performance for critical methods in contexts where asynchronous operations come with high overhead, e.g., <see href="https://developer.mozilla.org/en-US/docs/WebAssembly">WebAssembly</see>.
+</summary>
+<remarks>
+<para>This class is only accessible inside dedicated <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">Web Workers</see> for files within the <see href="https://developer.mozilla.org/en-US/docs/Web/API/File_System_Access_API#origin_private_file_system">origin private file system</see>.</para><para>The interface is accessed through the <see cref="'FileSystemFileHandle.CreateSyncAccessHandle'"/> method.</para><para></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_System_Access_API">File System Access API</see><br/>-<see href="https://web.dev/file-system-access/">The File System Access API: simplifying access to local files</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemSyncAccessHandle"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</FileSystemSyncAccessHandle>
+</docs>

@@ -1,0 +1,13 @@
+<docs>
+<NavigatorSendBeacon>
+<summary>
+The <strong><c>navigator.sendBeacon()</c></strong><br/>method <see href="https://developer.mozilla.org/en-US/docs/Glossary/Asynchronous">Asynchronous</see> sends an <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST">HTTP POST</see> request containing a small amount of data to a web server.
+</summary>
+<remarks>
+<para>It&amp;apos;s intended to be used for<br/>sending analytics data to a web server, and avoids some of the problems with<br/>legacy techniques for sending analytics, such as the use of<br/><see cref="XMLHttpRequest"/>.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> For use cases that need the ability to send requests with methods other than <c>POST</c>, or to change any request properties, or that need access to the server response, instead use the <see href="https://developer.mozilla.org/en-US/docs/Web/API/fetch"><c>fetch()</c></see> method with <see href="https://developer.mozilla.org/en-US/docs/Web/API/fetch#keepalive"><c>keepalive</c></see> set to true.</para></blockquote>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/Document/visibilitychange_event"><c>visibilitychange</c></see> event.<br/>-<see cref="Beacon_API"/> overview page.<br/>-<see href="https://www.igvita.com/2015/11/20/dont-lose-user-and-app-state-use-page-visibility/">Don&amp;apos;t lose user and app state, use Page Visibility</see> explains in<br/>detail why you should use <c>visibilitychange</c>, not<br/><c>beforeunload</c>/<c>unload</c>.<br/>-<see href="https://developer.chrome.com/blog/page-lifecycle-api/#developer-recommendations-for-each-state">Page Lifecycle API</see> gives best-practices guidance on handling<br/>page lifecycle behavior in your web applications.<br/>-<see href="https://github.com/GoogleChromeLabs/page-lifecycle">PageLifecycle.js</see>: a JavaScript library that deals with cross-browser inconsistencies in page lifecycle behavior.<br/>-<see href="https://web.dev/bfcache/">Back/forward cache</see> explains what the back/forward cache is, and its implications for various page lifecycle events.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>The <strong><c>sendBeacon()</c></strong> method returns <c>true</c> if the<br/><see href="https://developer.mozilla.org/en-US/docs/Glossary/user agent">user agent</see> successfully queued the <c>data</c> for transfer.<br/>Otherwise, it returns <c>false</c>.</returns>
+</NavigatorSendBeacon>
+</docs>

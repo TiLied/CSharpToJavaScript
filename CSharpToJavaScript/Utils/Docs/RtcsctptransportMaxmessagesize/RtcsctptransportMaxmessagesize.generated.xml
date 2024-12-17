@@ -1,0 +1,12 @@
+<docs>
+<RTCSctpTransportMaxMessageSize>
+<summary>
+The <strong><c>maxMessageSize</c></strong> read-only property of the <see cref="RTCSctpTransport"/> interface indicates the maximum size of a message that can be sent using the <see cref="RTCDataChannel.Send"/> method.
+</summary>
+<remarks>
+<para>-<see cref="RTCSctpTransport"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_data_channels#understanding_message_size_limits">Understanding message size limits</see> section of <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_data_channels">Using WebRTC data channels</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCSctpTransport/maxMessageSize"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer value giving the maximum size, in bytes, of a message which can be sent using the <see cref="RTCDataChannel.Send"/> method.</value>
+</RTCSctpTransportMaxMessageSize>
+</docs>

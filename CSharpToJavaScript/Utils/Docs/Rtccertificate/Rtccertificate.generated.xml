@@ -1,0 +1,12 @@
+<docs>
+<RTCCertificate>
+<summary>
+The <strong><c>RTCCertificate</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see> provides an object representing a certificate that an <see cref="RTCPeerConnection"/> uses to authenticate.
+</summary>
+<remarks>
+<para><c>RTCCertificate</c> is a {{Glossary("serializable object")}}, so it can be cloned with <see cref="StructuredClone"/> or copied between <see href="https://developer.mozilla.org/en-US/docs/Web/API/Worker">Workers</see> using <see cref="Worker/postMessage"/>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/RTCPeerConnection#certificates"><c>RTCPeerConnection.RTCPeerConnection()</c> argument <c>configuration.certificates</c></see><br/>-<see cref="RTCPeerConnection.GenerateCertificate"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCCertificate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RTCCertificate>
+</docs>

@@ -1,0 +1,12 @@
+<docs>
+<FileSystemDirectoryHandleResolve>
+<summary>
+The <strong><c>resolve()</c></strong> method of the<br/><see cref="FileSystemDirectoryHandle"/> interface returns an {{jsxref('Array')}} of<br/>directory names from the parent handle to the specified child entry, with the name of<br/>the child entry as the last array item.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_System_Access_API">File System Access API</see><br/>-<see href="https://web.dev/file-system-access/">The File System Access API: simplifying access to local files</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemDirectoryHandle/resolve"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="'Promise'"/> which resolves with an <see cref="'Array'"/> of<br/>strings, or <c>null</c> if <c>possibleDescendant</c> is not a descendant of this <see cref="'FileSystemDirectoryHandle'"/>.</returns>
+</FileSystemDirectoryHandleResolve>
+</docs>

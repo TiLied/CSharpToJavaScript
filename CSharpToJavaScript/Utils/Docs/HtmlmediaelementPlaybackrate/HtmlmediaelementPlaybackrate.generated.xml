@@ -1,0 +1,13 @@
+<docs>
+<HTMLMediaElementPlaybackRate>
+<summary>
+The <strong><c>HTMLMediaElement.playbackRate</c></strong> property sets the rate at which the media is being played back. This is used to implement user controls for fast forward, slow motion, and so forth. The normal playback rate is multiplied by this value to obtain the current rate, so a value of 1.0 indicates normal speed.
+</summary>
+<remarks>
+<para>If <c>playbackRate</c> is negative, the media is <strong>not</strong> played backwards.</para><para>The audio is muted when the fast forward or slow motion is outside a useful range (for example, Gecko mutes the sound outside the range <c>0.25</c> to <c>4.0</c>).</para><para>The pitch of the audio is corrected by default. You can disable pitch correction using the <see cref="HTMLMediaElement.PreservesPitch"/> property.</para>
+<para>-<see cref="HTMLMediaElement"/>: Interface used to define the <c>HTMLMediaElement.playbackRate</c> property<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/playbackRate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see href="https://en.wikipedia.org/wiki/Double-precision_floating-point_format"><c>double</c></see>. <c>1.0</c> is &amp;quot;normal speed,&amp;quot; values lower than <c>1.0</c> make the media play slower than normal, higher values make it play faster. (<strong>Default:</strong> <c>1.0</c>)</value>
+</HTMLMediaElementPlaybackRate>
+</docs>

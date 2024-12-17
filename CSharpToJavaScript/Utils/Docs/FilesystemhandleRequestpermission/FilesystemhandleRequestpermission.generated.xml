@@ -1,0 +1,12 @@
+<docs>
+<FileSystemHandleRequestPermission>
+<summary>
+The <strong><c>requestPermission()</c></strong> method of the<br/><see cref="FileSystemHandle"/> interface requests read or readwrite permissions for the<br/>file handle.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_System_Access_API">File System Access API</see><br/>-<see href="https://web.dev/file-system-access/">The File System Access API: simplifying access to local files</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemHandle/requestPermission"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns><see cref="'PermissionStatus.State'"/> which is one of <c>&amp;apos;granted&amp;apos;</c>,<br/><c>&amp;apos;denied&amp;apos;</c> or <c>&amp;apos;prompt&amp;apos;</c>.</returns>
+</FileSystemHandleRequestPermission>
+</docs>

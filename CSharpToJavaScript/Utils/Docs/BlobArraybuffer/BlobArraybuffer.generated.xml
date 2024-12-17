@@ -1,0 +1,12 @@
+<docs>
+<BlobArrayBuffer>
+<summary>
+The <strong><c>arrayBuffer()</c></strong> method in the <see cref="Blob"/><br/>interface returns a <see cref="Promise"/> that resolves with the contents of the blob as<br/>binary data contained in an <see cref="ArrayBuffer"/>.
+</summary>
+<remarks>
+<para>-<see cref="Response.ArrayBuffer"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API">Streams API</see><br/>-<see cref="FileReader.ReadAsArrayBuffer"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Blob/arrayBuffer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A promise that resolves with an <see cref="ArrayBuffer"/> that contains the blob's<br/>data in binary form.</returns>
+</BlobArrayBuffer>
+</docs>

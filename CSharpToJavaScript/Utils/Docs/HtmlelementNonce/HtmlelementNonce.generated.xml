@@ -1,0 +1,12 @@
+<docs>
+<HTMLElementNonce>
+<summary>
+The <strong><c>nonce</c></strong> property of the <see cref="HTMLElement"/> interface returns the cryptographic number used once that is used by <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">Content Security Policy</see> to determine whether a given fetch will be allowed to proceed.
+</summary>
+<remarks>
+<para>In later implementations, elements only expose their <c>nonce</c> attribute to scripts (and not to side-channels like CSS attribute selectors).</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/nonce"><c>nonce</c> global attribute</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">Content Security Policy</see><br/>-CSP: {{CSP("script-src")}}<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/nonce"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLElementNonce>
+</docs>

@@ -1,0 +1,12 @@
+<docs>
+<MediaDevicesSelectAudioOutput>
+<summary>
+The <see cref="MediaDevices"/> method <strong><c>selectAudioOutput()</c></strong> prompts the user to select a specific audio output device, for example a speaker or headset.<br/>On success, the returned {{jsxref("Promise")}} is resolved with a <see cref="MediaDeviceInfo"/> describing the selected device.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see> - the introductory page to the API<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/selectAudioOutput"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{ jsxref("Promise") }} that receives a <see cref="MediaDeviceInfo"/> object when the promise is fulfilled.<br/>The object describes the user-selected audio output device.</returns>
+</MediaDevicesSelectAudioOutput>
+</docs>

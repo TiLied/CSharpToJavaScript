@@ -1,0 +1,13 @@
+<docs>
+<MediaDevicesGetUserMedia>
+<summary>
+The <see cref="MediaDevices"/><strong><c>.getUserMedia()</c></strong> method prompts the user for permission to use a media input which produces a <see cref="MediaStream"/> with tracks containing the requested types of media.
+</summary>
+<remarks>
+<para>That stream can include, for example, a video track (produced by either a hardware or virtual video source such as a camera, video recording device, screen sharing service, and so forth), an audio track (similarly, produced by a physical or virtual audio source like a microphone, A/D converter, or the like), and possibly other track types.</para><para>It returns a {{jsxref("Promise")}} that resolves to a <see cref="MediaStream"/> object.<br/>If the user denies permission, or matching media is not available, then the promise is rejected with <c>NotAllowedError</c> or <c>NotFoundError</c> <see cref="DOMException"/> respectively.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> It&amp;apos;s possible for the returned promise to <strong>neither</strong> resolve nor reject, as the user is not required to make a choice at all and may ignore the request.</para></blockquote>
+<para>-The older <see cref="Navigator.GetUserMedia"/> legacy API<br/>-<see cref="MediaDevices.EnumerateDevices"/>: Listing available media devices<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API">Media Capture and Streams API (Media Streams)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Screen_Capture_API">Screen Capture API</see>: Capturing<br/>screen contents as a <see cref="MediaStream"/><br/>-<see cref="MediaDevices.GetDisplayMedia"/>: Getting a stream containing screen<br/>contents<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos">Taking webcam photos</see>: A tutorial on using <c>getUserMedia()</c> to take still photos<br/>rather than video<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} whose fulfillment handler receives a <see cref="MediaStream"/><br/>object when the requested media has successfully been obtained.</returns>
+</MediaDevicesGetUserMedia>
+</docs>

@@ -1,0 +1,13 @@
+<docs>
+<BaseAudioContextCreateIIRFilter>
+<summary>
+The <strong><c>createIIRFilter()</c></strong> method of the {{<br/>domxref("BaseAudioContext") }} interface creates an <see cref="IIRFilterNode"/>,<br/>which represents a general <strong><see href="https://en.wikipedia.org/wiki/Infinite_impulse_response">infinite impulse response</see></strong> (IIR) filter which can be configured to serve as various types<br/>of filter.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> The <see cref="IIRFilterNode.IIRFilterNode"/><br/>constructor is the recommended way to create a <see cref="IIRFilterNode"/>; see<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioNode#creating_an_audionode">Creating an AudioNode</see>.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/>-<see cref="IIRFilterNode"/><br/>-<see cref="AudioNode"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createIIRFilter"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="IIRFilterNode"/> implementing the filter with the specified feedback and<br/>feedforward coefficient arrays.</returns>
+</BaseAudioContextCreateIIRFilter>
+</docs>

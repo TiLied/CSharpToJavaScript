@@ -1,0 +1,11 @@
+<docs>
+<MutationRecordAttributeNamespace>
+<summary>
+The <see cref="MutationRecord"/> read-only property <strong><c>attributeNamespace</c></strong> is the namespace of the mutated attribute in the <see cref="MutationRecord"/> observed by a <see cref="MutationObserver"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MutationRecord/attributeNamespace"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>If the record&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/API/MutationRecord/type"><c>type</c></see> is <c>attributes</c>, the property is a string representing the namespace of the mutated attribute of the mutation target. The value is <c>null</c> otherwise.</value>
+</MutationRecordAttributeNamespace>
+</docs>

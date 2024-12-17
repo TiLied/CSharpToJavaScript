@@ -1,0 +1,12 @@
+<docs>
+<AuthenticatorAssertionResponseSignature>
+<summary>
+The <strong><c>signature</c></strong> read-only property of the<br/><see cref="AuthenticatorAssertionResponse"/> interface is an {{jsxref("ArrayBuffer")}}<br/>object which is the signature of the authenticator for both<br/><see cref="AuthenticatorAssertionResponse.AuthenticatorData"/> and a SHA-256 hash of<br/>the client data<br/>(<see cref="AuthenticatorResponse.ClientDataJSON"/>).
+</summary>
+<remarks>
+<para>This signature will be sent to the server for control, as part of the response. It<br/>provides the proof that an authenticator does possess the private key which was used for<br/>the credential&amp;apos;s generation.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AuthenticatorAssertionResponse/signature"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="ArrayBuffer"/> object which the signature of the authenticator (using its<br/>private key) for both <see cref="AuthenticatorAssertionResponse.AuthenticatorData"/><br/>and a SHA-256 hash given by the client for its data (the challenge, the origin, etc. and<br/>available from<br/><see cref="AuthenticatorResponse.ClientDataJSON"/>).</value>
+</AuthenticatorAssertionResponseSignature>
+</docs>

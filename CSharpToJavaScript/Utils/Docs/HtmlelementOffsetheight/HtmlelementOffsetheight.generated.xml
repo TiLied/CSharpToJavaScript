@@ -1,0 +1,13 @@
+<docs>
+<HTMLElementOffsetHeight>
+<summary>
+The <strong><c>HTMLElement.offsetHeight</c></strong> read-only property returns<br/>the height of an element, including vertical padding and borders, as an integer.
+</summary>
+<remarks>
+<para>Typically, <c>offsetHeight</c> is a measurement in pixels of the element&amp;apos;s CSS<br/>height, including any borders, padding, and horizontal scrollbars (if rendered). It does<br/>not include the height of pseudo-elements such as <c>::before</c> or<br/><c>::after</c>. For the document body object, the measurement includes total<br/>linear content height instead of the element&amp;apos;s CSS height. Floated elements extending<br/>below other linear content are ignored.</para><para>If the element is hidden (for example, by setting <c>style.display</c> on the<br/>element or one of its ancestors to <c>&amp;quot;none&amp;quot;</c>), then <c>0</c> is<br/>returned.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This property will round the value to an integer. If you need a fractional value, use<br/><see cref="Element.GetBoundingClientRect"/>.</para></blockquote>
+<para>-<see cref="Element.ClientHeight"/><br/>-<see cref="Element.ScrollHeight"/><br/>-<see cref="HTMLElement.OffsetWidth"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements">Determining the dimensions of elements</see><br/>-<see href="https://docs.microsoft.com/previous-versions/hh781509(v=vs.85)">MSDN Measuring Element Dimension and Location</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetHeight"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</HTMLElementOffsetHeight>
+</docs>

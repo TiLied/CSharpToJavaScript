@@ -1,0 +1,13 @@
+<docs>
+<HTMLTableElementTBodies>
+<summary>
+The <strong><c>HTMLTableElement.tBodies</c></strong> read-only property returns a<br/>live <see cref="HTMLCollection"/> of the bodies in a {{htmlElement("table")}}.
+</summary>
+<remarks>
+<para>Although the property is read-only, the returned object is live and allows the<br/>modification of its content.</para><para>The collection returned includes implicit <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tbody">tbody</see> elements. For<br/>example:</para><para>The HTML DOM generated from the above HTML will have a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tbody">tbody</see> element<br/>even though the tags are not included in the source HTML.</para>
+<para>-<see cref="HTMLCollection"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tbody">tbody</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/tBodies"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A live <see cref="HTMLCollection"/>.</value>
+</HTMLTableElementTBodies>
+</docs>

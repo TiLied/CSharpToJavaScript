@@ -1,0 +1,11 @@
+<docs>
+<RTCIceCandidatePairStatsTransportId>
+<summary>
+The <strong><c>transportId</c></strong> property<br/>uniquely identifies the <see cref="RTCIceTransport"/> that was inspected to obtain<br/>the transport-related statistics contained in the<br/><see cref="RTCIceCandidatePairStats"/> object.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/transportId"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string which uniquely identifies the <c>RTCIceTransport</c><br/>object from which the transport-related data was obtained for the statistics contained<br/>in this <see cref="RTCIceCandidatePairStats"/> object.The transport-related statistics come from the <see cref="RTCTransportStats"/><br/>dictionary&amp;apos;s properties.</value>
+</RTCIceCandidatePairStatsTransportId>
+</docs>

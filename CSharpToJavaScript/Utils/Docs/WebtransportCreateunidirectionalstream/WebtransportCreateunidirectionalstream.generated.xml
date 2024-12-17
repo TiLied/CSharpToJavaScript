@@ -1,0 +1,13 @@
+<docs>
+<WebTransportCreateUnidirectionalStream>
+<summary>
+The <strong><c>createUnidirectionalStream()</c></strong> method of the <see cref="WebTransport"/> interface asynchronously opens a unidirectional stream.
+</summary>
+<remarks>
+<para>The method returns a {{jsxref("Promise")}} that resolves to a <see cref="WritableStream"/> object, which can be used to reliably write data to the server.</para><para>"Reliable" means that transmission and order of data are guaranteed. This provides slower delivery (albeit faster than with WebSockets) than <see cref="WebTransport.Datagrams"/>, but is needed in situations where reliability and ordering are important, like chat applications.</para><para>AvailableInWorkers</para>
+<para>-<see href="https://web.dev/webtransport/">Using WebTransport</see><br/>-{{domxref(&amp;quot;WebSockets API&amp;quot;, &amp;quot;WebSockets API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-{{domxref(&amp;quot;Streams API&amp;quot;, &amp;quot;Streams API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://datatracker.ietf.org/doc/html/draft-ietf-webtrans-http3/">WebTransport over HTTP/3</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebTransport/createUnidirectionalStream"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that resolves to a <see cref="WritableStream"/> object.</returns>
+</WebTransportCreateUnidirectionalStream>
+</docs>

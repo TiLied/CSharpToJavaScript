@@ -1,0 +1,12 @@
+<docs>
+<WindowUnhandledrejection_event>
+<summary>
+The <strong><c>unhandledrejection</c></strong> event is sent to the global scope of a script when a JavaScript {{jsxref("Promise")}} that has no rejection handler is rejected; typically, this is the <see cref="Window"/>, but may also be a <see cref="Worker"/>.
+</summary>
+<remarks>
+<para>This is useful for debugging and for providing fallback error handling for unexpected situations.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises#promise_rejection_events">Promise rejection events</see><br/>-<see cref="Window/rejectionhandled_event"/> event<br/>-<see cref="Promise"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Window/unhandledrejection_event"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WindowUnhandledrejection_event>
+</docs>

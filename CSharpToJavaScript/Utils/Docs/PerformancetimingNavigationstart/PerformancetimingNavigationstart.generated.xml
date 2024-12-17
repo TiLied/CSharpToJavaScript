@@ -1,0 +1,13 @@
+<docs>
+<PerformanceTimingNavigationStart>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="WARNING"><h5>WARNING</h5><strong>Warning:</strong> This interface of this property is deprecated in the <see href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</see>.<br/>Please use the <see cref="PerformanceNavigationTiming"/> interface instead.</blockquote>
+</summary>
+<remarks>
+<para>The legacy<br/><strong><c>PerformanceTiming.navigationStart</c></strong><br/>read-only property returns an <c>unsigned long long</c> representing the moment,<br/>in milliseconds since the UNIX epoch, right after the prompt for unload terminates on<br/>the previous document in the same browsing context. If there is no previous document,<br/>this value will be the same as <see cref="PerformanceTiming.FetchStart"/>.</para>
+<para>-The <see cref="PerformanceTiming"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming/navigationStart"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <c>unsigned long long</c>.</value>
+</PerformanceTimingNavigationStart>
+</docs>

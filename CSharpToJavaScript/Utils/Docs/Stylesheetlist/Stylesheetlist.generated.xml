@@ -1,0 +1,11 @@
+<docs>
+<StyleSheetList>
+<summary>
+The <c>StyleSheetList</c> interface represents a list of <see cref="CSSStyleSheet"/> objects. An instance of this object can be returned by <see cref="Document.StyleSheets"/>.
+</summary>
+<remarks>
+<para>It is an array-like object but can't be iterated over using <see cref="Array"/> methods. However it can be iterated over in a standard <see cref="Statements/for"/> loop over its indices, or converted to an <see cref="Array"/>.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This interface was an <see href="https://stackoverflow.com/questions/74630989/why-use-domstringlist-rather-than-an-array/74641156#74641156">attempt to create an unmodifiable list</see> and only continues to be supported to not break code that&amp;apos;s already using it. Modern APIs use types that wrap around ECMAScript array types instead, so you can treat them like ECMAScript arrays, and at the same time impose additional semantics on their usage (such as making their items read-only).</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StyleSheetList"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</StyleSheetList>
+</docs>

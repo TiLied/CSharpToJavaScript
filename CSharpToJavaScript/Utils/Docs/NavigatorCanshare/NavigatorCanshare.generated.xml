@@ -1,0 +1,13 @@
+<docs>
+<NavigatorCanShare>
+<summary>
+The <strong><c>Navigator.canShare()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Share_API">Web Share API</see> returns <c>true</c> if the equivalent call to <see cref="Navigator.Share"/> would succeed.
+</summary>
+<remarks>
+<para>The method returns <c>false</c> if the data cannot be <strong>validated</strong>. Reasons the data might be invalid include:</para><para>The Web Share API is gated by the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy/web-share">web-share</see> permission policy.<br/>The <strong><c>canShare()</c></strong> method will return <c>false</c> if the permission is supported but has not been granted.</para>
+<para>-<see cref="Navigator.Share"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/canShare"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Returns <c>true</c> if the specified <c>data</c> can be shared with <see cref="Navigator.Share"/>, otherwise <c>false</c>.</returns>
+</NavigatorCanShare>
+</docs>

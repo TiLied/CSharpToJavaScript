@@ -1,0 +1,12 @@
+<docs>
+<RTCRtpTransceiver>
+<summary>
+The WebRTC interface <strong><c>RTCRtpTransceiver</c></strong> describes a permanent pairing of an <see cref="RTCRtpSender"/> and an <see cref="RTCRtpReceiver"/>, along with some shared state.
+</summary>
+<remarks>
+<para>Each {{Glossary("SDP")}} media section describes one bidirectional SRTP ("Secure Real Time Protocol") stream (excepting the media section for <see cref="RTCDataChannel"/>, if present). This pairing of send and receive SRTP streams is significant for some applications, so <c>RTCRtpTransceiver</c> is used to represent this pairing, along with other important state from the media section. Each non-disabled SRTP media section is always represented by exactly one transceiver.</para><para>A transceiver is uniquely identified using its <see cref="RTCRtpTransceiver.Mid"/> property, which is the same as the media ID (<c>mid</c>) of its corresponding m-line. An <c>RTCRtpTransceiver</c> is <strong>associated</strong> with an m-line if its <c>mid</c> is non-null; otherwise it&amp;apos;s considered disassociated.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP">Introduction to the Real-time Transport Protocol (RTP)</see><br/>-<see cref="RTCPeerConnection.AddTrack"/> and <see cref="RTCPeerConnection.AddTransceiver"/> both create transceivers<br/>-<see cref="RTCRtpReceiver"/> and <see cref="RTCRtpSender"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiver"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RTCRtpTransceiver>
+</docs>

@@ -1,0 +1,12 @@
+<docs>
+<CryptoKeyExtractable>
+<summary>
+The read-only <strong><c>extractable</c></strong> property of the <see cref="CryptoKey"/> interface indicates whether or not the key may be extracted using <see href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/exportKey"><c>SubtleCrypto.exportKey()</c></see> or <see href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/wrapKey"><c>SubtleCrypto.wrapKey()</c></see>.
+</summary>
+<remarks>
+<para>If the key cannot be exported, <see href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/exportKey"><c>exportKey()</c></see> or <see href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/wrapKey"><c>wrapKey()</c></see> will throw an exception if used to extract it.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CryptoKey/extractable"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value that is <c>true</c> if the key can be exported and <c>false</c> if not.</value>
+</CryptoKeyExtractable>
+</docs>

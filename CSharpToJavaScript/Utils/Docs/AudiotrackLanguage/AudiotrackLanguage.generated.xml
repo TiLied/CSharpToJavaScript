@@ -1,0 +1,12 @@
+<docs>
+<AudioTrackLanguage>
+<summary>
+The read-only <strong><see cref="AudioTrack"/></strong><br/>property <strong><c>language</c></strong> returns a string identifying the<br/>language used in the audio track.
+</summary>
+<remarks>
+<para>For tracks that include multiple languages<br/>(such as a movie in English in which a few lines are spoken in other languages), this<br/>should be the video&amp;apos;s primary language.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioTrack/language"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string specifying the BCP 47 ({{RFC(5646)}}) format language tag of<br/>the primary language used in the audio track, or an empty string (<c>&amp;quot;&amp;quot;</c>) if<br/>the language is not specified or known, or if the track doesn&amp;apos;t contain speech.For example, if the primary language used in the track is United States English, this<br/>value would be <c>&amp;quot;en-US&amp;quot;</c>. For Brazilian Portuguese, the value would be<br/><c>&amp;quot;pt-BR&amp;quot;</c>.</value>
+</AudioTrackLanguage>
+</docs>

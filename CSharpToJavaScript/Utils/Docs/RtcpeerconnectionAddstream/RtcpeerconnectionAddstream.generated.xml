@@ -1,0 +1,12 @@
+<docs>
+<RTCPeerConnectionAddstream_event>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The obsolete <strong><c>addstream</c></strong> event is sent to an <see cref="RTCPeerConnection"/> when new media, in the form of a <see cref="MediaStream"/> object, has been added to it.
+</summary>
+<remarks>
+<blockquote class="WARNING"><h5>WARNING</h5><para><strong>Warning:</strong> This event has been removed from the WebRTC specification. You should instead watch for the <see cref="RTCPeerConnection.Track_event"/> event, which is sent for each media track added to the <c>RTCPeerConnection</c>.</para></blockquote><para>You can, similarly, watch for streams to be removed from the connection by monitoring the <see cref="RTCPeerConnection.Removestream_event"/> event.</para><para>This event is not cancelable and does not bubble.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see cref="RTCPeerConnection.AddStream"/><br/>-<see cref="MediaStreamEvent"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/addstream_event"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RTCPeerConnectionAddstream_event>
+</docs>

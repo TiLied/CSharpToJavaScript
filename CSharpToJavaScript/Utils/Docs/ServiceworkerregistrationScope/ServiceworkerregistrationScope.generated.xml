@@ -1,0 +1,13 @@
+<docs>
+<ServiceWorkerRegistrationScope>
+<summary>
+The <strong><c>scope</c></strong> read-only property of the<br/><see cref="ServiceWorkerRegistration"/> interface returns a unique identifier for a<br/>service worker registration. The service worker must be on the same origin as the<br/>document that registers the <see cref="ServiceWorker"/>.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This feature is available in <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">Web Workers</see>.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</see><br/>-<see href="https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker">Service workers basic code example</see><br/>-<see href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</see><br/>-<see cref="Promise"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web workers</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/scope"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A unique identifier.</value>
+</ServiceWorkerRegistrationScope>
+</docs>

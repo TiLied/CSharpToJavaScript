@@ -1,0 +1,12 @@
+<docs>
+<AnimationPlayState>
+<summary>
+The read-only <strong><c>Animation.playState</c></strong> property of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see> returns an enumerated value describing the playback state of an animation.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/>-<see cref="Animation"/> for other methods and properties you can use to control web page animation.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Animation/playState"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>Previously, Web Animations defined a <strong><c>pending</c></strong> value to indicate that some asynchronous operation such as initiating playback was yet to complete. This is now indicated by the separate <see cref="Animation.Pending"/> property.</value>
+</AnimationPlayState>
+</docs>

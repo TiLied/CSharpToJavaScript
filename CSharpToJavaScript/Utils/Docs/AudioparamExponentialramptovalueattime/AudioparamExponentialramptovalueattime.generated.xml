@@ -1,0 +1,13 @@
+<docs>
+<AudioParamExponentialRampToValueAtTime>
+<summary>
+The <strong><c>exponentialRampToValueAtTime()</c></strong> method of the {{<br/>domxref(&amp;quot;AudioParam&amp;quot;) }} Interface schedules a gradual exponential change in the value<br/>of the <see cref="AudioParam"/>. The change starts at the time specified for the<br/><strong>previous</strong> event, follows an exponential ramp to the new value given in the<br/><c>value</c> parameter, and reaches the new value at the time given in the<br/><c>endTime</c> parameter.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Exponential ramps are considered more useful when changing<br/>frequencies or playback rates than linear ramps because of the way the human ear<br/>works.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/exponentialRampToValueAtTime"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A reference to this <c>AudioParam</c> object. In some browsers older<br/>implementations of this interface return <see cref="'undefined'"/>.</returns>
+</AudioParamExponentialRampToValueAtTime>
+</docs>

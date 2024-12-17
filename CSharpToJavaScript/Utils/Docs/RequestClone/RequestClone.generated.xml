@@ -1,0 +1,13 @@
+<docs>
+<RequestClone>
+<summary>
+The <strong><c>clone()</c></strong> method of the <see cref="Request"/> interface creates a copy of the current <c>Request</c> object.
+</summary>
+<remarks>
+<para>Like the underlying <see cref="ReadableStream.Tee"/> api,<br/>the <see cref="Request.Body"/> of a cloned <c>Response</c><br/>will signal backpressure at the rate of the <strong>faster</strong> consumer of the two bodies,<br/>and unread data is enqueued internally on the slower consumed <c>body</c><br/>without any limit or backpressure.<br/>Beware when you construct a <c>Request</c> from a stream and then <c>clone</c> it.</para><para><c>clone()</c> throws a <see cref="TypeError"/> if the request body has already been used. In fact, the main reason <c>clone()</c> exists is to allow multiple uses of body objects (when they are one-use only.)</para><para>If you intend to modify the request, you may prefer the <see cref="Request"/> constructor.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Request/clone"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Request"/> object, which is an exact copy of the <c>Request</c> that <c>clone()</c> was called on.</returns>
+</RequestClone>
+</docs>

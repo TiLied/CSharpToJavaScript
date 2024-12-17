@@ -1,0 +1,12 @@
+<docs>
+<VideoPlaybackQualityDroppedVideoFrames>
+<summary>
+The read-only <strong><c>droppedVideoFrames</c></strong><br/>property of the <see cref="VideoPlaybackQuality"/> interface returns the number of<br/>video frames which have been dropped rather than being displayed since the last time<br/>the media was loaded into the <see cref="HTMLVideoElement"/>.
+</summary>
+<remarks>
+<para>-The <see cref="HTMLVideoElement.GetVideoPlaybackQuality"/> method, which creates<br/>and returns <c>VideoPlaybackQuality</c> objects<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoPlaybackQuality/droppedVideoFrames"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An unsigned 64-bit value indicating the number of frames that have been dropped since<br/>the last time the media in the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">video</see> element was loaded or reloaded.<br/>This information can be used to determine whether or not to downgrade the video stream<br/>to avoid dropping frames.Frames are typically dropped either before or after decoding them, when it&amp;apos;s determined<br/>that it will not be possible to draw them to the screen at the correct time.</value>
+</VideoPlaybackQualityDroppedVideoFrames>
+</docs>

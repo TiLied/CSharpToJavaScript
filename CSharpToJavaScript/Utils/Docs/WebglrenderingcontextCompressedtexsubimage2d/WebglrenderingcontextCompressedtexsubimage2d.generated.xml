@@ -1,0 +1,13 @@
+<docs>
+<WebGLRenderingContextCompressedTexSubImage2D>
+<summary>
+The <strong><c>WebGLRenderingContext.compressedTexSubImage2D()</c></strong><br/>method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> specifies a<br/>two-dimensional sub-rectangle for a texture image in a compressed format.
+</summary>
+<remarks>
+<para>Compressed image formats must be enabled by <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Using_Extensions">WebGL extensions</see> before<br/>using this method or a <see cref="WebGL2RenderingContext"/> must be used.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Using_Extensions">Using WebGL extensions</see><br/>-<see cref="WebGLRenderingContext.GetExtension"/><br/>-<see cref="WebGLRenderingContext.CompressedTexImage2D"/><br/>-<see cref="WEBGL_compressed_texture_s3tc"/><br/>-<see cref="WEBGL_compressed_texture_s3tc_srgb"/><br/>-<see cref="WEBGL_compressed_texture_etc"/><br/>-<see cref="WEBGL_compressed_texture_pvrtc"/><br/>-<see cref="WEBGL_compressed_texture_astc"/><br/>-<see cref="EXT_texture_compression_bptc"/><br/>-<see cref="EXT_texture_compression_rgtc"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compressedTexSubImage2D"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextCompressedTexSubImage2D>
+</docs>

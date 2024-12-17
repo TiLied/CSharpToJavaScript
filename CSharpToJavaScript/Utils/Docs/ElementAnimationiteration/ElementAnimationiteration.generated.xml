@@ -1,0 +1,11 @@
+<docs>
+<ElementAnimationiteration_event>
+<summary>
+The <strong><c>animationiteration</c></strong> event is fired when an iteration of a <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations">CSS Animation</see> ends, and another one begins. This event does not occur at the same time as the <see cref="Element/animationend_event"/> event, and therefore does not occur for animations with an <c>animation-iteration-count</c> of one.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations">CSS Animations</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">Using CSS Animations</see><br/>-<see cref="AnimationEvent"/><br/>-Related events: <see cref="Element/animationstart_event"/>, <see cref="Element/animationend_event"/>, <see cref="Element/animationcancel_event"/><br/>-This event on <see cref="Document"/> targets: <see cref="Document/animationiteration_event"/><br/>-This event on <see cref="Window"/> targets: <see cref="Window/animationiteration_event"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/animationiteration_event"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</ElementAnimationiteration_event>
+</docs>

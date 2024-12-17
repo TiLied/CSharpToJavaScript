@@ -1,0 +1,12 @@
+<docs>
+<CSSPrimitiveValueGetCounterValue>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>getCounterValue()</c></strong> method of the<br/><see cref="CSSPrimitiveValue"/> interface is used to get the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters">counter</see><br/>value. If this CSS value doesn't contain a counter value, a <see cref="DOMException"/><br/>is raised. Modification to the corresponding style property can be achieved using the<br/><see cref="Counter"/> interface.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This method was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do<br/>not implement it.</para><para>To achieve your purpose, you can use:</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSPrimitiveValue/getCounterValue"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Counter"/> object representing the counter value.</returns>
+</CSSPrimitiveValueGetCounterValue>
+</docs>

@@ -1,0 +1,11 @@
+<docs>
+<DOMMatrixReadOnlyScale>
+<summary>
+The <strong><c>scale()</c></strong> method of the<br/><see cref="DOMMatrixReadOnly"/> interface creates a new matrix being the result of the<br/>original matrix with a scale transform applied.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/scale"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Returns a <see href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix"><c>DOMMatrix</c></see><br/>containing a new matrix being the result of the matrix x and y dimensions being scaled<br/>by the given factor, centered on the origin given. The original matrix is not modified.If a scale is applied about the z-axis, the resulting matrix will be a 4✕4 3D matrix.</returns>
+</DOMMatrixReadOnlyScale>
+</docs>

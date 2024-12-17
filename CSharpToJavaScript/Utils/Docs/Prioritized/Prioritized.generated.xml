@@ -1,0 +1,12 @@
+<docs>
+<Prioritized_Task_Scheduling_API>
+<summary>
+The <strong>Prioritized Task Scheduling API</strong> provides a standardized way to prioritize all tasks belonging to an application, whether they defined in a website developer&amp;apos;s code, or in third party libraries and frameworks.
+</summary>
+<remarks>
+<para>The <see href="https://developer.mozilla.org#task-priorities">task priorities</see> are very coarse-grained, and are based around whether tasks block user interaction, or otherwise impact the user experience, or can run in the background.<br/>Developers and frameworks may implement more fine-grained prioritization schemes within the broad categories defined by the API.</para><para>The API is promise-based and supports the ability to set and change task priorities, to delay tasks being added to the scheduler, to abort tasks, and to monitor for priority change and abort events.</para>
+<para>-<see href="https://medium.com/airbnb-engineering/building-a-faster-web-experience-with-the-posttask-scheduler-276b83454e91">Building a Faster Web Experience with the postTask Scheduler</see> (Airbnb blog)<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Prioritized_Task_Scheduling_API"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Prioritized_Task_Scheduling_API>
+</docs>

@@ -1,0 +1,13 @@
+<docs>
+<NotificationRequireInteraction>
+<summary>
+The <strong><c>requireInteraction</c></strong> read-only property of the <see cref="Notification"/> interface returns a boolean value indicating that a notification should remain active until the user clicks or dismisses it, rather than closing automatically.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This can be set when the notification is first created by setting the <c>requireInteraction</c> option to <c>true</c> in the options object of the <see cref="Notification.Notification"/> constructor.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/requireInteraction"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value.</value>
+</NotificationRequireInteraction>
+</docs>

@@ -1,0 +1,11 @@
+<docs>
+<ShadowRootDelegatesFocus>
+<summary>
+The <strong><c>delegatesFocus</c></strong> read-only property of the <see cref="ShadowRoot"/> interface returns <c>true</c> if the shadow root delegates focus, and <c>false</c> otherwise.
+</summary>
+<remarks>
+<para>If <c>true</c>, when a non-focusable part of the shadow DOM is clicked, or <c>.focus()</c> is called on the host element, the first focusable part is given focus, and the shadow host is given any available <c>:focus</c> styling.</para><para>Focus is of particular importance for keyboard users (including those using screen readers). <c>delegatesFocus</c> default behavior is to focus the first focusable element — which may be undesirable if that element is not meant to be part of the tabbing order (for example, an element with <c>tabindex=&amp;quot;-1&amp;quot;</c>), or if a more &amp;apos;important&amp;apos; focusable element should receive initial focus (for instance, the first text field rather than the &amp;apos;close&amp;apos; button which precedes it). In such cases, the <c>autofocus</c> attribute can be specified on the element which should receive initial focus. Use the <c>autofocus</c> attribute with caution as it can introduce accessibility issues, such as bypassing important content which may go unnoticed due to focus being set to an element later in the DOM order.</para><para>The property value is set using the <c>delegatesFocus</c> property of the object passed to <see cref="Element.AttachShadow"/>).</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/delegatesFocus"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</ShadowRootDelegatesFocus>
+</docs>

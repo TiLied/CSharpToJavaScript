@@ -1,0 +1,12 @@
+<docs>
+<RTCRtpContributingSourceSource>
+<summary>
+The read-only <strong><c>source</c></strong> property of<br/>the <see cref="RTCRtpContributingSource"/> dictionary contains the source identifier of<br/>a particular stream of RTP packets.
+</summary>
+<remarks>
+<para>The value is the contributing source (CSRC)<br/>or synchronization source (SSRC) identifier, depending on whether the object is an<br/><c>RTCRtpContributingSource</c> or <see cref="RTCRtpSynchronizationSource"/>,<br/>which is based on the former.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpContributingSource/source"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An unsigned, 32-bit integer value which uniquely identifies the source of RTP packets<br/>described by this <c>RTCRtpContributingSource</c> (in which case the value is a<br/>CSRC identifier) or <c>RTCRtpSynchronizationSource</c> (the value is an SSRC<br/>identifier).</value>
+</RTCRtpContributingSourceSource>
+</docs>

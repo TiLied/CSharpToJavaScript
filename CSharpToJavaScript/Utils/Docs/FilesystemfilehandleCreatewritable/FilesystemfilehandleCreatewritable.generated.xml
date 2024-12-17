@@ -1,0 +1,13 @@
+<docs>
+<FileSystemFileHandleCreateWritable>
+<summary>
+The <strong><c>createWritable()</c></strong> method of the<br/><see cref="FileSystemFileHandle"/> interface creates<br/>a <see cref="'FileSystemWritableFileStream'"/> that can be used to write to a file.<br/>The method returns a <see cref="'Promise'"/> which resolves to this created stream.
+</summary>
+<remarks>
+<para>Any changes made through the stream won&amp;apos;t be reflected in the file represented by the<br/>file handle until the stream has been closed. This is typically implemented by writing<br/>data to a temporary file, and only replacing the file represented by file handle with<br/>the temporary file when the writable filestream is closed.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_System_Access_API">File System Access API</see><br/>-<see href="https://web.dev/file-system-access/">The File System Access API: simplifying access to local files</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemFileHandle/createWritable"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref('Promise')}} which resolves to a <see cref="'FileSystemWritableFileStream'"/> object.</returns>
+</FileSystemFileHandleCreateWritable>
+</docs>

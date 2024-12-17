@@ -1,0 +1,11 @@
+<docs>
+<MutationEventPrevValue>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>prevValue</c></strong> read-only property of the <see cref="MutationEvent"/> interface returns a string. In <c>DOMAttrModified</c> events, it represents the previous value of the <see cref="Attr"/> node. In <c>DOMCharacterDataModified</c> events, it contains the previous value of the <see cref="CharacterData"/> node. In all other cases, returns the empty string (<c>&amp;quot;&amp;quot;</c>).
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MutationEvent/prevValue"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</MutationEventPrevValue>
+</docs>

@@ -1,0 +1,12 @@
+<docs>
+<CSPViolationReportBody>
+<summary>
+The <c>CSPViolationReportBody</c> interface contains the report data for a Content Security Policy (CSP) violation. CSP violations are thrown when the webpage attempts to load a resource that violates the CSP set by the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy">Content-Security-Policy</see> HTTP header.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> this interface is similar, but not identical to, the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP#violation_report_syntax">JSON objects</see> sent back to the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-uri"><c>report-uri</c></see> or <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-to"><c>report-to</c></see> policy directive of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy">Content-Security-Policy</see> header.</para></blockquote><para></para>
+<para>-<see cref="ReportBody"/><br/>-<see cref="ReportingObserver"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy">Content-Security-Policy</see><br/>-<see cref="SecurityPolicyViolationEvent"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSPViolationReportBody"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CSPViolationReportBody>
+</docs>

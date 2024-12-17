@@ -1,0 +1,11 @@
+<docs>
+<IntersectionObserverEntryIntersectionRatio>
+<summary>
+The <see cref="IntersectionObserverEntry"/> interface's<br/>read-only <strong><c>intersectionRatio</c></strong> property tells you how much<br/>of the target element is currently visible within the root&amp;apos;s intersection ratio, as a<br/>value between 0.0 and 1.0.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserverEntry/intersectionRatio"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number between 0.0 and 1.0 which indicates how much of the target element is actually<br/>visible within the root&amp;apos;s intersection rectangle. More precisely, this value is the<br/>ratio of the area of the intersection rectangle<br/>(<see cref="IntersectionObserverEntry.IntersectionRect"/>) to the<br/>area of the target&amp;apos;s bounds rectangle<br/>(<see cref="IntersectionObserverEntry.BoundingClientRect"/>).If the area of the target&amp;apos;s bounds rectangle is zero, the returned value is 1 if<br/><see cref="IntersectionObserverEntry.IsIntersecting"/> is<br/><c>true</c> or 0 if not.</value>
+</IntersectionObserverEntryIntersectionRatio>
+</docs>

@@ -1,0 +1,13 @@
+<docs>
+<DocumentFragmentQuerySelector>
+<summary>
+The <strong><c>DocumentFragment.querySelector()</c></strong> method returns the<br/>first element, or <c>null</c> if no matches are found, within the<br/><see cref="DocumentFragment"/> (using depth-first pre-order traversal of the<br/>document&amp;apos;s nodes) that matches the specified group of selectors.
+</summary>
+<remarks>
+<para>If the selector matches an ID and this ID is erroneously used several times in the<br/>document, it returns the first matching element.</para><para>If the selectors specified in parameter are invalid a <see cref="DOMException"/> with<br/>a <c>SYNTAX_ERR</c> value is raised.</para>
+<para>-The <see cref="DocumentFragment"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment/querySelector"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="Element"/> object representing the first element in the document<br/>that matches the specified set of <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors">CSS selectors</see>, or <c>null</c> is returned if there are no matches.</returns>
+</DocumentFragmentQuerySelector>
+</docs>

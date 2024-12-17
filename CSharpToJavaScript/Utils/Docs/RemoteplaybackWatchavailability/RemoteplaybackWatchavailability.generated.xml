@@ -1,0 +1,11 @@
+<docs>
+<RemotePlaybackWatchAvailability>
+<summary>
+The <strong><c>watchAvailability()</c></strong> method of the <see cref="RemotePlayback"/> interface watches the list of available remote playback devices and returns a {{jsxref("Promise")}} that resolves with the <c>callbackId</c> of a remote playback device.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RemotePlayback/watchAvailability"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves with an integer. This is the <c>callbackId</c> for the identified remote playback device.</returns>
+</RemotePlaybackWatchAvailability>
+</docs>

@@ -1,0 +1,12 @@
+<docs>
+<SVGGraphicsElementCopy_event>
+<summary>
+The <strong><c>copy</c></strong> event fires on <see cref="SVGGraphicsElement"/> when the user initiates a copy action through the browser's user interface.
+</summary>
+<remarks>
+<para>The event&amp;apos;s default action is to copy the selection (if any) to the clipboard.</para><para>A handler for this event can <strong>modify</strong> the clipboard contents by calling <see cref="DataTransfer.SetData"/> on the event's <see cref="ClipboardEvent.ClipboardData"/> property, and cancelling the event's default action using <see href="https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault"><c>event.preventDefault()</c></see>.</para><para>However, the handler cannot <strong>read</strong> the clipboard data.</para><para>It&amp;apos;s possible to construct and dispatch a <see href="https://developer.mozilla.org/en-US/docs/Web/Events/Creating_and_triggering_events">synthetic</see> <c>copy</c> event, but this will not affect the system clipboard.</para>
+<para>-Related events: <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGGraphicsElement/cut_event"><c>cut</c></see>, <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGGraphicsElement/paste_event"><c>paste</c></see><br/>-This event on HTML <see cref="Element"/> targets: <see href="https://developer.mozilla.org/en-US/docs/Web/API/Element/copy_event"><c>copy</c></see><br/>-This event on <see cref="Document"/> targets: <see href="https://developer.mozilla.org/en-US/docs/Web/API/Document/copy_event"><c>copy</c></see><br/>-This event on <see cref="Window"/> targets: <see href="https://developer.mozilla.org/en-US/docs/Web/API/Window/copy_event"><c>copy</c></see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGGraphicsElement/copy_event"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</SVGGraphicsElementCopy_event>
+</docs>

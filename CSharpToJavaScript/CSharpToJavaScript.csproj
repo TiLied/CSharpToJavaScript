@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
 		<VersionPrefix>0.0.01</VersionPrefix>
@@ -6,7 +6,7 @@
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>disable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <GenerateDocumentationFile>False</GenerateDocumentationFile>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <Authors>TiLied</Authors>
     <Description>Brute forcing conversion(translation) from C# to Javascript.</Description>
     <PackageProjectUrl>https://tilied.github.io/CSharpToJavaScript/</PackageProjectUrl>

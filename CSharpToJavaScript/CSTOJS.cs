@@ -6,6 +6,8 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.CSharp;
 using System.Threading.Tasks;
 using Microsoft.CodeAnalysis;
+using CSharpToJavaScript.Utils;
+using System;
 
 namespace CSharpToJavaScript
 {
@@ -57,20 +59,14 @@ namespace CSharpToJavaScript
 		{
 			string fileCS = await File.ReadAllTextAsync(path);
 
-			Microsoft.CodeAnalysis.SyntaxTree tree = CSharpSyntaxTree.ParseText(fileCS);
+			SyntaxTree tree = CSharpSyntaxTree.ParseText(fileCS);
 			CompilationUnitSyntax root = tree.GetCompilationUnitRoot();
 
-			//Walker walker = new();
 			string assemblyPath = Path.GetDirectoryName(_Assembly.Location);
-			List<MetadataReference> references = new()
-			{
-				//MetadataReference.CreateFromFile(_Assembly.Location),
-				//MetadataReference.CreateFromFile(typeof(CSTOJS).Assembly.Location)
-				//MetadataReference.CreateFromFile(Path.Combine(assemblyPath, "System.Private.CoreLib.dll"))
-			};
+			List<MetadataReference> references = new() { };
 
 			string rtPath = Path.GetDirectoryName(typeof(object).Assembly.Location);
-			//references.Add(MetadataReference.CreateFromFile(Path.Combine(rtPath, "System.dll")));
+
 			references.Add(MetadataReference.CreateFromFile(Path.Combine(rtPath, "System.Private.CoreLib.dll")));
 
 			var a = _Assembly.GetReferencedAssemblies();
@@ -78,34 +74,19 @@ namespace CSharpToJavaScript
 			{
 				if (File.Exists(Path.Combine(assemblyPath, item.Name + ".dll")))
 					references.Add(MetadataReference.CreateFromFile(Path.Combine(assemblyPath, item.Name + ".dll")));
-				else 
+				else
 				{
 					if (File.Exists(Path.Combine(rtPath, item.Name + ".dll")))
 						references.Add(MetadataReference.CreateFromFile(Path.Combine(rtPath, item.Name + ".dll")));
 				}
 			}
-			/*
-			var sss = root.DescendantNodes()
-	.OfType<BinaryExpressionSyntax>()
-	.Single();*/
-			//https://learn.microsoft.com/en-us/dotnet/csharp/roslyn-sdk/get-started/semantic-analysis
-			//CSharpCompilation compilation = CSharpCompilation.Create("HelloWorld"),
-			//	references: references.ToArray(),
-			//	options: new CSharpCompilationOptions(OutputKind.ConsoleApplication))
+
 			CSharpCompilation compilation = CSharpCompilation
 				.Create("HelloWorld")
 				.AddReferences(references.ToArray())
 				.AddSyntaxTrees(root.SyntaxTree);
 
 			Model = compilation.GetSemanticModel(root.SyntaxTree);
-
-			// Use the syntax tree to find "using System;"
-			UsingDirectiveSyntax usingSystem = root.Usings[0];
-			NameSyntax systemName = usingSystem.Name;
-
-			// Use the semantic model for symbol information:
-			SymbolInfo nameInfo = Model.GetSymbolInfo(systemName);
-			var systemSymbol = (INamespaceSymbol)nameInfo.Symbol;
 
 			_Walker.JSSB.Append(_Options.AddSBInFront);
 
@@ -119,6 +100,7 @@ namespace CSharpToJavaScript
 			}
 
 			await File.WriteAllTextAsync(Path.Combine(_Options.OutPutPath, _Options.OutPutFileName), _Walker.JSSB.ToString());
+			SM.Log($"path: {_Options.OutPutPath} file: {_Options.OutPutFileName}");
 		}
 	}
 }

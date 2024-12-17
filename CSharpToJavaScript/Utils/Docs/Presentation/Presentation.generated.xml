@@ -1,12 +1,11 @@
 <docs>
-<Presentation_API>
+<Presentation>
 <summary>
-<see href="https://developer.mozilla.orgpresentation_mode_illustration.png">1-UA mode loaded the Controlling and Presenting pages together before outputting to displays. 2-UA mode loaded them separately using the Presentation Control Protocol.</see>
+The <strong><c>Presentation</c></strong> can be defined as two possible user agents in the context: <strong>Controlling user agent</strong> and <strong>Receiving user agent</strong>.
 </summary>
 <remarks>
-<para>In general, a web page uses the Presentation Controller API to specify the web content to be rendered on presentation device and initiate the presentation session. With Presentation Receiver API, the presenting web content obtains the session status. With providing both the controller page and the receiver one with a messaged-based channel, a Web developer can implement the interaction between these two pages.</para><para>Depending on the connection mechanism provided by the presentation device, any controller- and receiver page can be rendered by the same user agent, or by separated user agents.</para>
-<para><see href="https://mediascape.github.io/presentation-api-polyfill/">Presentation API polyfill</see> contains a JavaScript polyfill of the <see href="https://w3c.github.io/presentation-api/">Presentation API</see> specification under standardization within the <see href="https://www.w3.org/2014/secondscreen/">Second Screen Working Group</see> at W3C. The polyfill is mostly intended for exploring how the Presentation API may be implemented on top of different presentation mechanisms.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Presentation_API"> <em>See also on MDN</em> </seealso></para>
+<para>In controlling browsing context, the <c>Presentation</c> interface provides a mechanism to override the browser default behavior of launching presentation to external screen. In receiving browsing context, <c>Presentation</c> interface provides the access to the available presentation connections.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Presentation"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-</Presentation_API>
+</Presentation>
 </docs>

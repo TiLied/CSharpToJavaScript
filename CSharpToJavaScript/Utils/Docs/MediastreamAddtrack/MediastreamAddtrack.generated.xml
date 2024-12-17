@@ -1,12 +1,13 @@
 <docs>
-<MediaStreamAddtrack_event>
+<MediaStreamAddTrack>
 <summary>
-The <c>addtrack</c> event is fired when a new <see href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack"><c>MediaStreamTrack</c></see> object has been added to a <see href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream"><c>MediaStream</c></see>.
+The <strong><c>MediaStream.addTrack()</c></strong> method adds a new track to the<br/>stream. The track is specified as a parameter of type <see cref="MediaStreamTrack"/>.
 </summary>
 <remarks>
-<para>This event is not cancelable and does not bubble.</para>
-<para>-Related events: <see href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/removetrack_event"><c>removetrack</c></see><br/>-This event on <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioTrackList"><c>AudioTrackList</c></see> targets: <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioTrackList/addtrack_event"><c>addtrack</c></see><br/>-This event on <see href="https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackList"><c>VideoTrackList</c></see> targets: <see href="https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackList/addtrack_event"><c>addtrack</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API">Media Capture and Streams API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/addtrack_event"> <em>See also on MDN</em> </seealso></para>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> If the specified track is already in the stream&amp;apos;s track set, this method has no<br/>effect.</para></blockquote>
+<para>-<see cref="MediaStream"/>, the interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/addTrack"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-</MediaStreamAddtrack_event>
+<returns>None (<see cref="Undefined"/>).</returns>
+</MediaStreamAddTrack>
 </docs>

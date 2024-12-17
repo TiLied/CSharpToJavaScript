@@ -1,11 +1,12 @@
 <docs>
-<IndexedDB_APIUsing_IndexedDB>
+<IndexedDB>
 <summary>
-IndexedDB is a way for you to persistently store data inside a user&amp;apos;s browser. Because it lets you create web applications with rich query abilities regardless of network availability, your applications can work both online and offline.
+The global <strong><c>indexedDB</c></strong> read-only property provides a mechanism for applications to<br/>asynchronously access the capabilities of indexed databases.
 </summary>
 <remarks>
-<para>Further reading for you to find out more information if desired.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB"> <em>See also on MDN</em> </seealso></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase"/><br/>-Using transactions: <see cref="IDBTransaction"/><br/>-Setting a range of keys: <see cref="IDBKeyRange"/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore"/><br/>-Using cursors: <see cref="IDBCursor"/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/indexedDB"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-</IndexedDB_APIUsing_IndexedDB>
+<value>An <see cref="IDBFactory"/> object.</value>
+</IndexedDB>
 </docs>

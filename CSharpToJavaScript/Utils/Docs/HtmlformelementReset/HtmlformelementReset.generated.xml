@@ -1,11 +1,12 @@
 <docs>
-<HTMLFormElementReset_event>
+<HTMLFormElementReset>
 <summary>
-The <strong><c>reset</c></strong> event fires when a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see> is reset.
+The <strong><c>HTMLFormElement.reset()</c></strong> method restores a form<br/>element&amp;apos;s default values. This method does the same thing as clicking the form&amp;apos;s<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/reset"><c>&amp;lt;input type=&amp;quot;reset&amp;quot;&amp;gt;</c></see> control.
 </summary>
 <remarks>
-<para>-HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see> element<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/reset_event"> <em>See also on MDN</em> </seealso></para>
+<para>If a form control (such as a reset button) has a name or id of <strong>reset</strong> it will<br/>mask the form&amp;apos;s reset method. It does not reset other attributes in the input, such as<br/><c>disabled</c>.</para><para>Note that if <see cref="Element.SetAttribute"/> is called to set<br/>the value of a particular attribute, a subsequent call to <c>reset()</c> won&amp;apos;t<br/>reset the attribute to its default value, but instead will keep the attribute at<br/>whatever value the <see cref="Element.SetAttribute"/> call set it to.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/reset"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-</HTMLFormElementReset_event>
+<returns>None (<see cref="Undefined"/>).</returns>
+</HTMLFormElementReset>
 </docs>

@@ -1,11 +1,11 @@
 <docs>
-<ElementScroll_event>
+<ElementScroll>
 <summary>
-The <strong><c>scroll</c></strong> event fires when an element has been scrolled.<br/>To detect when scrolling has completed, see the <see cref="Element/scrollend_event"/>.
+The <strong><c>scroll()</c></strong> method of the <see cref="Element"/><br/>interface scrolls the element to a particular set of coordinates inside a given<br/>element.
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollend_event">Element <c>scrollend</c> event</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document/scroll_event">Document <c>scroll</c> event</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document/scrollend_event">Document <c>scrollend</c> event</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/scroll_event"> <em>See also on MDN</em> </seealso></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/scroll"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-</ElementScroll_event>
+<returns>None (<see cref="Undefined"/>).</returns>
+</ElementScroll>
 </docs>

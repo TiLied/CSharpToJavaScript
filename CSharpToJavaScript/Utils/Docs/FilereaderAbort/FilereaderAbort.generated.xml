@@ -1,12 +1,12 @@
 <docs>
-<FileReaderAbort_event>
+<FileReaderAbort>
 <summary>
-The <c>abort</c> event is fired when a read has been aborted: for instance because the program called <see cref="FileReader.Abort"/>.
+The <strong><c>abort</c></strong> method aborts the read operation. Upon return,<br/>the <see cref="FileReader.ReadyState"/> will be <c>DONE</c>.
 </summary>
 <remarks>
-<para>This event is not cancelable and does not bubble.</para>
-<para>-Related events: <see cref="FileReader.Loadstart_event"/>, <see cref="FileReader.Loadend_event"/>, <see cref="FileReader.Progress_event"/>, <see cref="FileReader.Error_event"/>, <see cref="FileReader.Load_event"/>.<br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileReader/abort_event"> <em>See also on MDN</em> </seealso></para>
+<para>-<see cref="FileReader"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileReader/abort"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-</FileReaderAbort_event>
+<returns>None (<see cref="Undefined"/>).</returns>
+</FileReaderAbort>
 </docs>

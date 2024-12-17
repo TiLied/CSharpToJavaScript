@@ -1,11 +1,12 @@
 <docs>
-<Gamepad_APIUsing_the_Gamepad_API>
+<Gamepad>
 <summary>
-HTML provides the necessary components for rich, interactive game development. Technologies like <c>&amp;lt;canvas&amp;gt;</c>, WebGL, <c>&amp;lt;audio&amp;gt;</c>, and <c>&amp;lt;video&amp;gt;</c>, along with JavaScript implementations, support tasks that provide similar, if not the same, features as native code. The Gamepad API allows developers and designers to access and use gamepads and other game controllers.
+The <strong><c>Gamepad</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API">Gamepad API</see> defines an individual gamepad or other controller, allowing access to information such as button presses, axis positions, and id.
 </summary>
 <remarks>
-<para>The <see href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API">Gamepad API</see> introduces new events on the <see cref="Window"/> object for reading gamepad and controller (hereby referred to as <strong>gamepad</strong>) state. In addition to these events, the API also adds a <see cref="Gamepad"/> object, which you can use to query the state of a connected gamepad, and a <see cref="Navigator.GetGamepads"/> method which you can use to get a list of gamepads known to the page.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API"> <em>See also on MDN</em> </seealso></para>
+<para>A Gamepad object can be returned in one of two ways: via the <c>gamepad</c> property of the <see cref="Window.Gamepadconnected_event"/> and <see cref="Window.Gamepaddisconnected_event"/> events, or by grabbing any position in the array returned by the <see cref="Navigator.GetGamepads"/> method.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API">Using the Gamepad API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API">Gamepad API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-</Gamepad_APIUsing_the_Gamepad_API>
+</Gamepad>
 </docs>

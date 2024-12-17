@@ -1,12 +1,13 @@
 <docs>
-<HTMLMediaElementPlay_event>
+<HTMLMediaElementPlay>
 <summary>
-The <c>play</c> event is fired when the <c>paused</c> property is changed from <c>true</c> to <c>false</c>, as a result of the <c>play</c> method, or the <c>autoplay</c> attribute.
+The <see cref="HTMLMediaElement"/><br/><strong><c>play()</c></strong> method attempts to begin playback of the media.<br/>It returns a <see cref="Promise"/> which is resolved when playback has been<br/>successfully started.
 </summary>
 <remarks>
-<para>This event is not cancelable and does not bubble.</para>
-<para>-<see cref="HTMLAudioElement"/><br/>-<see cref="HTMLVideoElement"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio">audio</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">video</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/play_event"> <em>See also on MDN</em> </seealso></para>
+<para>Failure to begin playback for any reason, such as<br/>permission issues, result in the promise being rejected.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Media">Web media technologies</see><br/>-Learning: <see href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content">Video and audio content</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Media/Autoplay_guide">Autoplay guide for media and Web Audio APIs</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/play"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-</HTMLMediaElementPlay_event>
+<returns>A <see cref="Promise"/> which is resolved when playback has been started, or is<br/>rejected if for any reason playback cannot be started.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> Browsers released before 2019 may not return a value from<br/><c>play()</c>.</blockquote></returns>
+</HTMLMediaElementPlay>
 </docs>

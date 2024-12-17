@@ -1,12 +1,13 @@
 <docs>
-<AnimationCancel_event>
+<AnimationCancel>
 <summary>
-The <strong><c>cancel</c></strong> event of the <see cref="Animation"/> interface is fired when the <see cref="Animation.Cancel"/> method is called or when the animation enters the <c>&amp;quot;idle&amp;quot;</c> play state from another state, such as when the animation is removed from an element before it finishes playing.
+The Web Animations API&amp;apos;s <strong><c>cancel()</c></strong> method of the <see cref="Animation"/> interface clears all <see cref="KeyframeEffect"/>s caused by this animation and aborts its playback.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Creating a new animation that is initially idle does not trigger a <c>cancel</c> event on the new animation.</para></blockquote>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/>-<see cref="Animation"/><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Animation/cancel_event"> <em>See also on MDN</em> </seealso></para>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> When an animation is cancelled, its <see cref="Animation.StartTime"/> and <see cref="Animation.CurrentTime"/> are set to <c>null</c>.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/>-<see cref="KeyframeEffect"/><br/>-<see cref="Animation"/><br/>-<see cref="Animation.PlayState"/><br/>-<see cref="Animation.Finished"/> returns the promise this action will reject if the animation's <c>playState</c> is not <c>&amp;quot;idle&amp;quot;</c>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Animation/cancel"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-</AnimationCancel_event>
+<returns>None (<see cref="Undefined"/>).</returns>
+</AnimationCancel>
 </docs>

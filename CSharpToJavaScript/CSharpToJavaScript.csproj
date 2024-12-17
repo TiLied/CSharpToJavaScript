@@ -8,7 +8,7 @@
     <Nullable>enable</Nullable>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <Authors>TiLied</Authors>
-    <Description>Brute forcing conversion(translation) from C# to Javascript.</Description>
+    <Description>Brute forcing conversion(generating) from C# to Javascript.</Description>
     <PackageProjectUrl>https://tilied.github.io/CSTOJS_Pages/</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/TiLied/CSharpToJavaScript/</RepositoryUrl>
@@ -16,6 +16,7 @@
     <PackageReleaseNotes></PackageReleaseNotes>
     <Title>CSharp to JavaScript</Title>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageIcon>CSTOJS.png</PackageIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -28,6 +29,13 @@
       <PackagePath>\</PackagePath>
     </None>
     <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Utils\CSTOJS.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>

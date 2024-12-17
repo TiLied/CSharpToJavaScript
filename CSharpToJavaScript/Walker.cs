@@ -19,7 +19,9 @@ namespace CSharpToJavaScript
 	{
 		public StringBuilder JSSB { get; set; } = new();
 
+
 		private readonly CSTOJS? _CSTOJS = null;
+		private readonly SemanticModel? _Model = null;
 
 		private SyntaxNode? _SNOriginal = null;
 		private SyntaxNode? _BaseConstructorInitializerNode = null;
@@ -29,13 +31,10 @@ namespace CSharpToJavaScript
 
 		private bool _PropertyStatic = false;
 
-		public Walker() : base(SyntaxWalkerDepth.Trivia)
-		{
-
-		}
-		public Walker(CSTOJS cstojs) : base(SyntaxWalkerDepth.Trivia)
+		public Walker(CSTOJS cstojs, SemanticModel? model) : base(SyntaxWalkerDepth.Trivia)
 		{
 			_CSTOJS = cstojs;
+			_Model = model;
 		}
 
 		public override void VisitTrivia(SyntaxTrivia trivia)
@@ -1629,7 +1628,7 @@ namespace CSharpToJavaScript
 								if (_vds == null)
 								{
 									AssignmentExpressionSyntax _aes = node.Ancestors().FirstOrDefault(e => e.IsKind(SyntaxKind.SimpleAssignmentExpression)) as AssignmentExpressionSyntax;
-									symbolInfo = _CSTOJS.Model.GetSymbolInfo(_aes.Left);
+									symbolInfo = _Model.GetSymbolInfo(_aes.Left);
 
 									ClassDeclarationSyntax classD = (ClassDeclarationSyntax)node.Ancestors().First(n => n.IsKind(SyntaxKind.ClassDeclaration));
 
@@ -1670,14 +1669,14 @@ namespace CSharpToJavaScript
 											//Todo?
 											//VariableDeclarationSyntax s = item.DescendantNodes().First(e => e.IsKind(SyntaxKind.VariableDeclaration)) as VariableDeclarationSyntax;
 											//syntaxNode = s.Type;
-											symbolInfo = _CSTOJS.Model.GetSymbolInfo(syntaxNode);
+											symbolInfo = _Model.GetSymbolInfo(syntaxNode);
 											break;
 										}
 									}
 								}
 								else
 								{
-									symbolInfo = _CSTOJS.Model.GetSymbolInfo(_vds.Type);
+									symbolInfo = _Model.GetSymbolInfo(_vds.Type);
 									syntaxNode = _vds.Type;
 								}
 
@@ -1951,7 +1950,7 @@ namespace CSharpToJavaScript
 					{
 						if (_syntaxToken.Text == text)
 						{
-							symbolInfo = _CSTOJS.Model.GetSymbolInfo(_item.Parent as IdentifierNameSyntax);
+							symbolInfo = _Model.GetSymbolInfo(_item.Parent as IdentifierNameSyntax);
 							break;
 						}
 					}
@@ -1962,11 +1961,11 @@ namespace CSharpToJavaScript
 			{
 				try
 				{
-					symbolInfo = _CSTOJS.Model.GetSymbolInfo(node);
+					symbolInfo = _Model.GetSymbolInfo(node);
 
 					if (_CSTOJS.Options.Debug)
 					{
-						var a = _CSTOJS.Model.GetDiagnostics();
+						var a = _Model.GetDiagnostics();
 						foreach (Diagnostic item in a)
 						{
 							_CSTOJS.Log(item.ToString());
@@ -1976,7 +1975,7 @@ namespace CSharpToJavaScript
 				catch (Exception e)
 				{
 					symbolInfo = null;
-					var a = _CSTOJS.Model.GetDeclarationDiagnostics();
+					var a = _Model.GetDeclarationDiagnostics();
 					foreach (Diagnostic item in a)
 					{
 						_CSTOJS.Log(item.ToString());
@@ -2047,7 +2046,7 @@ namespace CSharpToJavaScript
 							   select e;
 					}
 
-					SymbolInfo _symbolInfo = _CSTOJS.Model.GetSymbolInfo(_all.First());
+					SymbolInfo _symbolInfo = _Model.GetSymbolInfo(_all.First());
 					ISymbol? _iSymbol = null;
 
 					if (_symbolInfo.CandidateSymbols.Length >= 1)
@@ -2227,14 +2226,14 @@ namespace CSharpToJavaScript
 					if (_CSTOJS.Options.Debug)
 					{
 						_CSTOJS.Log("WARNING! Diagnostics starts ---");
-						ImmutableArray<Diagnostic> diag = _CSTOJS.Model.GetDiagnostics();
+						ImmutableArray<Diagnostic> diag = _Model.GetDiagnostics();
 						foreach (Diagnostic item in diag)
 						{
 							_CSTOJS.Log(item.ToString());
 						}
 						_CSTOJS.Log("WARNING! Diagnostics ends ---");
 					}
-					_CSTOJS.Log($"WARNING! !-{node}-! By reaching this means, a name did not convert to JS. CHECK FOR UPPERCASE CHARACTERS IN NAMES IN THE JS FILE!");
+					//_CSTOJS.Log($"WARNING! !-{node}-! By reaching this means, a name did not convert to JS. CHECK FOR UPPERCASE CHARACTERS IN NAMES IN THE JS FILE!");
 
 					//base.VisitIdentifierName(node);
 					return false;

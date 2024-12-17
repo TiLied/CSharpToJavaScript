@@ -4,8 +4,8 @@
 The read-only <strong><c>entryType</c></strong> property returns a string representing the type of performance metric that this entry represents.
 </summary>
 <remarks>
-<para>All supported <c>entryTypes</c> are available using the static property <see cref="PerformanceObserver.SupportedEntryTypes_static"/>.</para>
-<para>-<see cref="PerformanceObserver.SupportedEntryTypes_static"/><br/>-<see cref="Performance.GetEntriesByType"/><br/>-<see cref="PerformanceObserverEntryList.GetEntriesByType"/><br/></para>
+<para>All supported <c>entryTypes</c> are available using the static property <see cref="PerformanceObserver.SupportedEntryTypes"/>.</para>
+<para>-<see cref="PerformanceObserver.SupportedEntryTypes"/><br/>-<see cref="Performance.GetEntriesByType"/><br/>-<see cref="PerformanceObserverEntryList.GetEntriesByType"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceEntry/entryType"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A string. The return value depends on the subtype of the <c>PerformanceEntry</c> object. Some subtypes have more than one <c>entryType</c>.</value>

@@ -4,7 +4,7 @@
 The <strong><c>DOMPointReadOnly</c></strong> interface specifies the coordinate and perspective fields used by <see cref="DOMPoint"/> to define a 2D or 3D point in a coordinate system.
 </summary>
 <remarks>
-<para>There are two ways to create a new <c>DOMPointReadOnly</c> instance. First, you can use its constructor, passing in the values of the parameters for each dimension and, optionally, the perspective:</para><para>The other option is to use the static <see cref="DOMPointReadOnly.FromPoint_static"/> method:</para>
+<para>There are two ways to create a new <c>DOMPointReadOnly</c> instance. First, you can use its constructor, passing in the values of the parameters for each dimension and, optionally, the perspective:</para><para>The other option is to use the static <see cref="DOMPointReadOnly.FromPoint"/> method:</para>
 <para>-<see cref="DOMPoint"/><br/>-<see cref="DOMRect"/><br/>-<see cref="DOMMatrix"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMPointReadOnly"> <em>See also on MDN</em> </seealso></para>
 </remarks>

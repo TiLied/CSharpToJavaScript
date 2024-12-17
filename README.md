@@ -30,47 +30,46 @@ using CSharpToJavaScript;
 namespace ProgramTest;
 
 public class Program
+{
+	public static void Main()
 	{
-		public static void Main()
+		Assembly executingAssembly = Assembly.GetExecutingAssembly();
+		
+		CSTOJSOptions opt = new()
 		{
-			Assembly executingAssembly = Assembly.GetExecutingAssembly();
-			CSTOJSOptions opt = new()
+			CustomCSNamesToJS = new List<Tuple<string, string>>()
 			{
-				CustomCSNamesToJS = new List<Tuple<string, string>>()
-				{
-					new Tuple<string, string>("Console","console"),
-					new Tuple<string, string>("WriteLine", "log")					
-				},
-				OutPutFileName = "test.js"
-			};
+				new Tuple<string, string>("Console","console"),
+				new Tuple<string, string>("WriteLine", "log")					
+			},
+			OutPutFileName = "test.js"
+		};
 
-			CSTOJS cstojs = new(executingAssembly, opt);
-			cstojs.Generate2Async("C:\\GitReps\\Program\\Program\\CSharp\\test.cs");
-		}
-
+		CSTOJS cstojs = new(executingAssembly, opt);
+		cstojs.Generate2Async("C:\\GitReps\\Program\\Program\\CSharp\\test.cs");
 	}
+}
 ```
 test.cs
 ```csharp
 namespace ProgramTest;
 
 public class Test
+{
+	public Test()
 	{
-		public Test()
-		{
-			Console.WriteLine("HelloWorld");
-		}
-
+		Console.WriteLine("HelloWorld");
 	}
+}
 ```
 Above code will generate test.js file that contains:
 ```javascript
 class Test
 {
- constructor()
- {
-   console.log("HelloWorld");
- }
+	constructor()
+ 	{
+   		console.log("HelloWorld");
+ 	}
 }
 ```
 ## Some Todos
@@ -87,6 +86,6 @@ https://github.com/TiLied/GenCSharpLib
 ## Thanks and usings
 [Microsoft CodeAnalysis CSharp](https://www.nuget.org/packages/Microsoft.CodeAnalysis.CSharp/) nuget package
 
-[MDN-content](https://github.com/mdn/content) for docs
+[MDN-content](https://github.com/mdn/content) for js docs
 
 

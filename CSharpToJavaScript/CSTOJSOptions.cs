@@ -5,8 +5,17 @@ using System.Text;
 
 namespace CSharpToJavaScript
 {
+	/// <summary>
+	/// Options for <see cref="CSTOJS" />.
+	/// </summary>
 	public class CSTOJSOptions
 	{
+		/// <summary>
+		/// Debug. When set to true prints additional info to console, cs lines to js file and creates file Debug.txt 
+		/// </summary>
+		/// <value>
+		/// Default: <c>false</c>
+		/// </value>
 		public bool Debug { get; set; } = false;
 
 
@@ -65,7 +74,9 @@ namespace CSharpToJavaScript
 		/// Default: <c>new()</c>
 		/// </value>
 		public StringBuilder AddSBInEnd { get; set; } = new();
-
+		/// <summary>
+		/// Creates new default options. See <see cref="CSTOJSOptions" />.
+		/// </summary>
 		public CSTOJSOptions() 
 		{
 

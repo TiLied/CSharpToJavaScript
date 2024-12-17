@@ -35,9 +35,8 @@ class Test
 - 3 Skip this if using Nuget package. Follow [this](https://learn.microsoft.com/en-us/dotnet/core/tutorials/library-with-visual-studio?pivots=dotnet-7-0#add-a-project-reference) to add reference to the project.
 - 4 In the Main method add:
 ```csharp
-Assembly assembly = Assembly.GetExecutingAssembly();
-CSTOJS cstojs = new(assembly);
-await cstojs.GenerateAsync("FULL PATH TO CSHARP FILE YOU WHAT TO CONVERT");
+CSTOJS cstojs = new();
+await cstojs.GenerateOneAsync("FULL PATH TO CSHARP FILE YOU WHAT TO CONVERT");
 ```
 - 5 Run program and file will be generated in output path(default is "Directory.GetCurrentDirectory()") with name "main.js"(default)
 - 6 See below for simple example "HelloWorld"
@@ -45,7 +44,6 @@ await cstojs.GenerateAsync("FULL PATH TO CSHARP FILE YOU WHAT TO CONVERT");
 ## Example "HelloWorld"
 Program.cs
 ```csharp
-using System.Reflection;
 using CSharpToJavaScript;
 namespace ConsoleAppTest;
 
@@ -53,9 +51,8 @@ public class Program
 {
 	public static async Task Main()
 	{
-		Assembly executingAssembly = Assembly.GetExecutingAssembly();
-		CSTOJS cstojs = new(executingAssembly);
-		await cstojs.GenerateAsync("C:\\GitReps\\ConsoleAppTest\\CSharp\\Test.cs");
+		CSTOJS cstojs = new();
+		await cstojs.GenerateOneAsync("C:\\GitReps\\ConsoleAppTest\\CSharp\\Test.cs");
 
 		Console.ReadKey();
 	}
@@ -88,7 +85,7 @@ More examples [here](https://tilied.github.io/CSharpToJavaScript/articles/intro.
 
 ## Some Todos
 - [x] ~More comments in code, especially in [CSTOJSOptions](https://github.com/TiLied/CSharpToJavaScript/blob/master/CSharpToJavaScript/CSTOJSOptions.cs)~
-- [ ] Wiki???
+- [ ] Wiki?????
 - [x] ~Better and more examples~ [Here](https://tilied.github.io/CSharpToJavaScript/articles/intro.html). WIP!
 - [x] ~Figure out how to do docs for [api](https://github.com/TiLied/CSharpToJavaScript/tree/master/CSharpToJavaScript/APIs/JS)~ [Docs](https://tilied.github.io/CSharpToJavaScript/) WIP!
 

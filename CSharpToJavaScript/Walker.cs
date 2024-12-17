@@ -434,6 +434,7 @@ namespace CSharpToJavaScript
 						case SyntaxKind.SubtractAssignmentExpression:
 						case SyntaxKind.MultiplyAssignmentExpression:
 						case SyntaxKind.DivideAssignmentExpression:
+						case SyntaxKind.AwaitExpression:
 							{
 								_UsedThis = false;
 								Visit(asNode);
@@ -493,6 +494,7 @@ namespace CSharpToJavaScript
 						case SyntaxKind.TrueLiteralExpression:
 						case SyntaxKind.StringLiteralExpression:
 						case SyntaxKind.InterpolatedStringExpression:
+						case SyntaxKind.ObjectCreationExpression:
 							{
 								Visit(asNode);
 								break;

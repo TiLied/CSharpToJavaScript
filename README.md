@@ -27,7 +27,7 @@ Program.cs
 ```csharp
 using System.Reflection;
 using CSharpToJavaScript;
-namespace ProgramTest;
+namespace ConsoleAppTest;
 
 public class Program
 {
@@ -46,13 +46,13 @@ public class Program
 		};
 
 		CSTOJS cstojs = new(executingAssembly, opt);
-		cstojs.Generate2Async("C:\\GitReps\\Program\\Program\\CSharp\\test.cs");
+		cstojs.Generate2Async("C:\\GitReps\\ConsoleAppTest\\CSharp\\test.cs");
 	}
 }
 ```
 test.cs
 ```csharp
-namespace ProgramTest;
+namespace ConsoleAppTest.CSharp;
 
 public class Test
 {

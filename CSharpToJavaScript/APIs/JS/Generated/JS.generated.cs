@@ -1,4 +1,4 @@
-//07.05.2023 21:25:48
+//05.07.2023 15:43:15
 using CSharpToJavaScript.Utils;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -343,7 +343,12 @@ public partial class NodeList
 	
 	///<include file='Utils/Docs.generated.xml' path='docs/NodeListLength/*'/>
 	public ulong Length { get; }
-	
+	public Node this[int i]
+	{
+		get { throw new System.NotImplementedException(); }
+		set { throw new System.NotImplementedException(); }
+	}
+
 }
 
 [To(ToAttribute.Default)]
@@ -985,7 +990,12 @@ public partial class DOMTokenList
 	public bool Supports(string token) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/DOMTokenListValue/*'/>
 	public string Value { get; set; }
-	
+	public string this[int i]
+	{
+		get { throw new System.NotImplementedException(); }
+		set { throw new System.NotImplementedException(); }
+	}
+
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -1211,7 +1221,12 @@ public partial class Headers
 	public bool Has(string name) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/HeadersSet/*'/>
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Set(string name, string value) { throw new System.NotImplementedException(); }
-	
+	public string this[int i]
+	{
+		get { throw new System.NotImplementedException(); }
+		set { throw new System.NotImplementedException(); }
+	}
+
 }
 
 
@@ -6632,7 +6647,12 @@ public partial class URLSearchParams
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Set(string name, string value) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/URLSearchParamsSort/*'/>
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Sort() { throw new System.NotImplementedException(); }
-	
+	public string this[int i]
+	{
+		get { throw new System.NotImplementedException(); }
+		set { throw new System.NotImplementedException(); }
+	}
+
 	
 }
 
@@ -6832,7 +6852,12 @@ public partial class FormData
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Set(string name, string value) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/FormDataSet/*'/>
 	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Set(string name, CSharpToJavaScript.Utils.Unsupported /*Blob*/ blobValue, string filename) { throw new System.NotImplementedException(); }
-	
+	public string this[int i]
+	{
+		get { throw new System.NotImplementedException(); }
+		set { throw new System.NotImplementedException(); }
+	}
+
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]

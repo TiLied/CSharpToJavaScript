@@ -127,7 +127,7 @@ namespace CSharpToJavaScript
 
 			Assembly assembly = Assembly.GetEntryAssembly();
 
-			SyntaxTree? _tree = CSharpSyntaxTree.ParseText(csstring.Normalize());
+			SyntaxTree? _tree = CSharpSyntaxTree.ParseText(csstring);
 			
 			if(references != null)
 				Generate(_tree, assembly, references);
@@ -409,7 +409,7 @@ namespace CSharpToJavaScript
 				}
 
 
-				Trace.WriteLine($"({line}):{Path.GetFileName(file)} {member}: {message}");
+				Trace.WriteLine($"({line}):{Path.GetFileName(file.Replace("\\", "/"))} {member}: {message}");
 
 				if (Options.DisableConsoleColors == false)
 					Console.ResetColor();

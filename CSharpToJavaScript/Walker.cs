@@ -53,7 +53,7 @@ namespace CSharpToJavaScript
 						return;
 					}
 				default:
-					_CSTOJS.Log($"{syntaxKind}");
+					_CSTOJS.Log($"ERROR Trivia : {syntaxKind}");
 					break;
 			}
 
@@ -120,6 +120,7 @@ namespace CSharpToJavaScript
 				case SyntaxKind.WhileKeyword:
 				case SyntaxKind.InterpolatedStringTextToken:
 				case SyntaxKind.QuestionToken:
+				case SyntaxKind.LessThanEqualsToken:
 				case SyntaxKind.EndOfFileToken:
 					{
 						VisitLeadingTrivia(token);
@@ -130,7 +131,7 @@ namespace CSharpToJavaScript
 						return;
 					}
 				default:
-					_CSTOJS.Log($"{syntaxKind}");
+					_CSTOJS.Log($"ERROR Token : {syntaxKind}");
 					break;
 			}
 

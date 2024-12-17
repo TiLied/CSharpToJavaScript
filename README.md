@@ -8,7 +8,7 @@ This is a personal project with purpose to learn and understand better c# and js
 | <pre>using static CSharpToJavaScript.APIs.JS.GlobalThis;<br>namespace ConsoleAppTest.CSharp;<br><br>public class Test<br>{<br> public Test()<br> {<br>   Console.Log("HelloWorld!");<br> }<br>}</pre> | <pre>class Test<br>{<br> constructor()<br> {<br>   console.log("HelloWorld!");<br> }<br>}</pre>|
 
 ## How to use
-*Nuget package will be available once I figure out ~how to do docs for api(should be easy)~ and what to do with esmascript and how to convert to c#.*
+*Nuget package will be available once I figure out ~how to do docs for api(should be easy) and what to do with esmascript and how to convert to c#.~ NUGET PACKAGE SOON!*
 
 - Download a library(Code-Local-Download ZIP)
 - Create c# project or use existed one

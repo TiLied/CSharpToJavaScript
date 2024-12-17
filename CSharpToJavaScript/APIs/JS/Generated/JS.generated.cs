@@ -1,4 +1,5 @@
-//10.07.2023 12:48:53
+//11.07.2023 12:45:05
+using static CSharpToJavaScript.APIs.JS.GlobalObject;
 using CSharpToJavaScript.Utils;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -50,43 +51,43 @@ public partial class HTMLBodyElement
 public partial class console
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/consoleAssert/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Assert(bool condition, params dynamic[] data) { throw new System.NotImplementedException(); }
+	public Undefined Assert(bool condition, params dynamic[] data) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/consoleClear/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Clear() { throw new System.NotImplementedException(); }
+	public Undefined Clear() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/consoleDebug/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Debug(params dynamic[] data) { throw new System.NotImplementedException(); }
+	public Undefined Debug(params dynamic[] data) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/consoleError/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Error(params dynamic[] data) { throw new System.NotImplementedException(); }
+	public Undefined Error(params dynamic[] data) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/consoleInfo/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Info(params dynamic[] data) { throw new System.NotImplementedException(); }
+	public Undefined Info(params dynamic[] data) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/consoleLog/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Log(params dynamic[] data) { throw new System.NotImplementedException(); }
+	public Undefined Log(params dynamic[] data) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/consoleTable/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Table(dynamic tabularData, List<string> properties) { throw new System.NotImplementedException(); }
+	public Undefined Table(dynamic tabularData, List<string> properties) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/consoleTrace/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Trace(params dynamic[] data) { throw new System.NotImplementedException(); }
+	public Undefined Trace(params dynamic[] data) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/consoleWarn/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Warn(params dynamic[] data) { throw new System.NotImplementedException(); }
+	public Undefined Warn(params dynamic[] data) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/consoleDir/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Dir(dynamic item, object? options) { throw new System.NotImplementedException(); }
+	public Undefined Dir(dynamic item, object? options) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/consoleDirxml/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Dirxml(params dynamic[] data) { throw new System.NotImplementedException(); }
+	public Undefined Dirxml(params dynamic[] data) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/consoleCount/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Count(string label) { throw new System.NotImplementedException(); }
+	public Undefined Count(string label) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/consoleCountReset/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ CountReset(string label) { throw new System.NotImplementedException(); }
+	public Undefined CountReset(string label) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/consoleGroup/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Group(params dynamic[] data) { throw new System.NotImplementedException(); }
+	public Undefined Group(params dynamic[] data) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/consoleGroupCollapsed/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ GroupCollapsed(params dynamic[] data) { throw new System.NotImplementedException(); }
+	public Undefined GroupCollapsed(params dynamic[] data) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/consoleGroupEnd/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ GroupEnd() { throw new System.NotImplementedException(); }
+	public Undefined GroupEnd() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/consoleTime/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Time(string label) { throw new System.NotImplementedException(); }
+	public Undefined Time(string label) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/consoleTimeLog/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ TimeLog(string label, params dynamic[] data) { throw new System.NotImplementedException(); }
+	public Undefined TimeLog(string label, params dynamic[] data) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/consoleTimeEnd/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ TimeEnd(string label) { throw new System.NotImplementedException(); }
+	public Undefined TimeEnd(string label) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs.generated.xml' path='docs/Event/*'/>
@@ -116,11 +117,11 @@ public partial class Event
 	///<include file='Utils/Docs.generated.xml' path='docs/EventEventPhase/*'/>
 	public ushort EventPhase { get; }
 	///<include file='Utils/Docs.generated.xml' path='docs/EventStopPropagation/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ StopPropagation() { throw new System.NotImplementedException(); }
+	public Undefined StopPropagation() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/EventCancelBubble/*'/>
 	public bool CancelBubble { get; set; }
 	///<include file='Utils/Docs.generated.xml' path='docs/EventStopImmediatePropagation/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ StopImmediatePropagation() { throw new System.NotImplementedException(); }
+	public Undefined StopImmediatePropagation() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/EventBubbles/*'/>
 	public bool Bubbles { get; }
 	///<include file='Utils/Docs.generated.xml' path='docs/EventCancelable/*'/>
@@ -128,7 +129,7 @@ public partial class Event
 	///<include file='Utils/Docs.generated.xml' path='docs/EventReturnValue/*'/>
 	public bool ReturnValue { get; set; }
 	///<include file='Utils/Docs.generated.xml' path='docs/EventPreventDefault/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ PreventDefault() { throw new System.NotImplementedException(); }
+	public Undefined PreventDefault() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/EventDefaultPrevented/*'/>
 	public bool DefaultPrevented { get; }
 	///<include file='Utils/Docs.generated.xml' path='docs/EventComposed/*'/>
@@ -136,9 +137,9 @@ public partial class Event
 	///<include file='Utils/Docs.generated.xml' path='docs/EventIsTrusted/*'/>
 	public bool IsTrusted { get; }
 	///<include file='Utils/Docs.generated.xml' path='docs/EventTimeStamp/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*DOMHighResTimeStamp*/ TimeStamp { get; }
+	public Unsupported /*DOMHighResTimeStamp*/ TimeStamp { get; }
 	///<include file='Utils/Docs.generated.xml' path='docs/EventInitEvent/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ InitEvent(string type, bool bubbles, bool cancelable) { throw new System.NotImplementedException(); }
+	public Undefined InitEvent(string type, bool bubbles, bool cancelable) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs.generated.xml' path='docs/EventInit/*'/>
@@ -169,7 +170,7 @@ public partial class CustomEvent : Event
 	///<include file='Utils/Docs.generated.xml' path='docs/CustomEventDetail/*'/>
 	public dynamic Detail { get; }
 	///<include file='Utils/Docs.generated.xml' path='docs/CustomEventInitCustomEvent/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ InitCustomEvent(string type, bool bubbles, bool cancelable, dynamic detail) { throw new System.NotImplementedException(); }
+	public Undefined InitCustomEvent(string type, bool bubbles, bool cancelable, dynamic detail) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs.generated.xml' path='docs/CustomEventInit/*'/>
@@ -187,9 +188,9 @@ public partial class EventTarget
 	///<include file='Utils/Docs.generated.xml' path='docs/EventTargetEventTarget/*'/>
 	public EventTarget() { }
 	///<include file='Utils/Docs.generated.xml' path='docs/EventTargetAddEventListener/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ AddEventListener(string type, EventListener? callback, Union1 options) { throw new System.NotImplementedException(); }
+	public Undefined AddEventListener(string type, EventListener? callback, Union1 options) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/EventTargetRemoveEventListener/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ RemoveEventListener(string type, EventListener? callback, Union2 options) { throw new System.NotImplementedException(); }
+	public Undefined RemoveEventListener(string type, EventListener? callback, Union2 options) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/EventTargetDispatchEvent/*'/>
 	public bool DispatchEvent(Event event_) { throw new System.NotImplementedException(); }
 }
@@ -199,7 +200,7 @@ public partial class EventTarget
 public partial interface EventListener
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/EventListenerHandleEvent/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ HandleEvent(Event event_) { throw new System.NotImplementedException(); }
+	public Undefined HandleEvent(Event event_) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs.generated.xml' path='docs/EventListenerOptions/*'/>
@@ -231,7 +232,7 @@ public partial class AbortController
 	///<include file='Utils/Docs.generated.xml' path='docs/AbortControllerSignal/*'/>
 	public AbortSignal Signal { get; }
 	///<include file='Utils/Docs.generated.xml' path='docs/AbortControllerAbort/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Abort(dynamic reason) { throw new System.NotImplementedException(); }
+	public Undefined Abort(dynamic reason) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs.generated.xml' path='docs/AbortSignal/*'/>
@@ -247,7 +248,7 @@ public partial class AbortSignal : EventTarget
 	///<include file='Utils/Docs.generated.xml' path='docs/AbortSignalReason/*'/>
 	public dynamic Reason { get; }
 	///<include file='Utils/Docs.generated.xml' path='docs/AbortSignalThrowIfAborted/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ ThrowIfAborted() { throw new System.NotImplementedException(); }
+	public Undefined ThrowIfAborted() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/AbortSignalOnabort/*'/>
 	public EventHandler Onabort { get; set; }
 }
@@ -283,11 +284,11 @@ public partial interface ParentNode
 	///<include file='Utils/Docs.generated.xml' path='docs/ParentNodeChildElementCount/*'/>
 	public ulong ChildElementCount { get { throw new System.NotImplementedException(); } }
 	///<include file='Utils/Docs.generated.xml' path='docs/ParentNodePrepend/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Prepend(params Union3[] nodes) { throw new System.NotImplementedException(); }
+	public Undefined Prepend(params Union3[] nodes) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/ParentNodeAppend/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Append(params Union4[] nodes) { throw new System.NotImplementedException(); }
+	public Undefined Append(params Union4[] nodes) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/ParentNodeReplaceChildren/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ ReplaceChildren(params Union5[] nodes) { throw new System.NotImplementedException(); }
+	public Undefined ReplaceChildren(params Union5[] nodes) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/ParentNodeQuerySelector/*'/>
 	public Element? QuerySelector(string selectors) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/ParentNodeQuerySelectorAll/*'/>
@@ -314,13 +315,13 @@ public partial interface NonDocumentTypeChildNode
 public partial interface ChildNode
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/ChildNodeBefore/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Before(params Union6[] nodes) { throw new System.NotImplementedException(); }
+	public Undefined Before(params Union6[] nodes) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/ChildNodeAfter/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ After(params Union7[] nodes) { throw new System.NotImplementedException(); }
+	public Undefined After(params Union7[] nodes) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/ChildNodeReplaceWith/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ ReplaceWith(params Union8[] nodes) { throw new System.NotImplementedException(); }
+	public Undefined ReplaceWith(params Union8[] nodes) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/ChildNodeRemove/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Remove() { throw new System.NotImplementedException(); }
+	public Undefined Remove() { throw new System.NotImplementedException(); }
 }
 
 
@@ -364,9 +365,9 @@ public partial class MutationObserver
 	///<include file='Utils/Docs.generated.xml' path='docs/MutationObserverMutationObserver/*'/>
 	public MutationObserver(MutationCallback callback) { }
 	///<include file='Utils/Docs.generated.xml' path='docs/MutationObserverObserve/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Observe(Node target, MutationObserverInit options) { throw new System.NotImplementedException(); }
+	public Undefined Observe(Node target, MutationObserverInit options) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/MutationObserverDisconnect/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Disconnect() { throw new System.NotImplementedException(); }
+	public Undefined Disconnect() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/MutationObserverTakeRecords/*'/>
 	public List<MutationRecord> TakeRecords() { throw new System.NotImplementedException(); }
 }
@@ -482,7 +483,7 @@ public partial class Node : EventTarget
 	///<include file='Utils/Docs.generated.xml' path='docs/NodeTextContent/*'/>
 	public string? TextContent { get; set; }
 	///<include file='Utils/Docs.generated.xml' path='docs/NodeNormalize/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Normalize() { throw new System.NotImplementedException(); }
+	public Undefined Normalize() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/NodeCloneNode/*'/>
 	public Node CloneNode(bool deep) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/NodeIsEqualNode/*'/>
@@ -536,7 +537,7 @@ public partial class DOMImplementation
 	///<include file='Utils/Docs.generated.xml' path='docs/DOMImplementationCreateDocumentType/*'/>
 	public DocumentType CreateDocumentType(string qualifiedName, string publicId, string systemId) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/DOMImplementationCreateDocument/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*XMLDocument*/ CreateDocument(string? namespace_, string qualifiedName, DocumentType? doctype) { throw new System.NotImplementedException(); }
+	public Unsupported /*XMLDocument*/ CreateDocument(string? namespace_, string qualifiedName, DocumentType? doctype) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/DOMImplementationCreateHTMLDocument/*'/>
 	public Document CreateHTMLDocument(string title) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/DOMImplementationHasFeature/*'/>
@@ -624,13 +625,13 @@ public partial class Element : Node, ParentNode, NonDocumentTypeChildNode, Child
 	///<include file='Utils/Docs.generated.xml' path='docs/ElementGetAttributeNS/*'/>
 	public string? GetAttributeNS(string? namespace_, string localName) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/ElementSetAttribute/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ SetAttribute(string qualifiedName, string value) { throw new System.NotImplementedException(); }
+	public Undefined SetAttribute(string qualifiedName, string value) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/ElementSetAttributeNS/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ SetAttributeNS(string? namespace_, string qualifiedName, string value) { throw new System.NotImplementedException(); }
+	public Undefined SetAttributeNS(string? namespace_, string qualifiedName, string value) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/ElementRemoveAttribute/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ RemoveAttribute(string qualifiedName) { throw new System.NotImplementedException(); }
+	public Undefined RemoveAttribute(string qualifiedName) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/ElementRemoveAttributeNS/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ RemoveAttributeNS(string? namespace_, string localName) { throw new System.NotImplementedException(); }
+	public Undefined RemoveAttributeNS(string? namespace_, string localName) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/ElementToggleAttribute/*'/>
 	public bool ToggleAttribute(string qualifiedName, bool force) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/ElementHasAttribute/*'/>
@@ -666,7 +667,7 @@ public partial class Element : Node, ParentNode, NonDocumentTypeChildNode, Child
 	///<include file='Utils/Docs.generated.xml' path='docs/ElementInsertAdjacentElement/*'/>
 	public Element? InsertAdjacentElement(string where, Element element) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/ElementInsertAdjacentText/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ InsertAdjacentText(string where, string data) { throw new System.NotImplementedException(); }
+	public Undefined InsertAdjacentText(string where, string data) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs.generated.xml' path='docs/ShadowRootInit/*'/>
@@ -732,13 +733,13 @@ public partial class CharacterData : Node, NonDocumentTypeChildNode, ChildNode
 	///<include file='Utils/Docs.generated.xml' path='docs/CharacterDataSubstringData/*'/>
 	public string SubstringData(ulong offset, ulong count) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/CharacterDataAppendData/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ AppendData(string data) { throw new System.NotImplementedException(); }
+	public Undefined AppendData(string data) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/CharacterDataInsertData/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ InsertData(ulong offset, string data) { throw new System.NotImplementedException(); }
+	public Undefined InsertData(ulong offset, string data) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/CharacterDataDeleteData/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ DeleteData(ulong offset, ulong count) { throw new System.NotImplementedException(); }
+	public Undefined DeleteData(ulong offset, ulong count) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/CharacterDataReplaceData/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ ReplaceData(ulong offset, ulong count, string data) { throw new System.NotImplementedException(); }
+	public Undefined ReplaceData(ulong offset, ulong count, string data) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs.generated.xml' path='docs/Text/*'/>
@@ -824,23 +825,23 @@ public partial class Range : AbstractRange
 	///<include file='Utils/Docs.generated.xml' path='docs/RangeCommonAncestorContainer/*'/>
 	public Node CommonAncestorContainer { get; }
 	///<include file='Utils/Docs.generated.xml' path='docs/RangeSetStart/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ SetStart(Node node, ulong offset) { throw new System.NotImplementedException(); }
+	public Undefined SetStart(Node node, ulong offset) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/RangeSetEnd/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ SetEnd(Node node, ulong offset) { throw new System.NotImplementedException(); }
+	public Undefined SetEnd(Node node, ulong offset) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/RangeSetStartBefore/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ SetStartBefore(Node node) { throw new System.NotImplementedException(); }
+	public Undefined SetStartBefore(Node node) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/RangeSetStartAfter/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ SetStartAfter(Node node) { throw new System.NotImplementedException(); }
+	public Undefined SetStartAfter(Node node) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/RangeSetEndBefore/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ SetEndBefore(Node node) { throw new System.NotImplementedException(); }
+	public Undefined SetEndBefore(Node node) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/RangeSetEndAfter/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ SetEndAfter(Node node) { throw new System.NotImplementedException(); }
+	public Undefined SetEndAfter(Node node) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/RangeCollapse/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Collapse(bool toStart) { throw new System.NotImplementedException(); }
+	public Undefined Collapse(bool toStart) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/RangeSelectNode/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ SelectNode(Node node) { throw new System.NotImplementedException(); }
+	public Undefined SelectNode(Node node) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/RangeSelectNodeContents/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ SelectNodeContents(Node node) { throw new System.NotImplementedException(); }
+	public Undefined SelectNodeContents(Node node) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/RangeSTART_TO_START/*'/>
 	public const ushort START_TO_START = 0;
 	///<include file='Utils/Docs.generated.xml' path='docs/RangeSTART_TO_END/*'/>
@@ -852,19 +853,19 @@ public partial class Range : AbstractRange
 	///<include file='Utils/Docs.generated.xml' path='docs/RangeCompareBoundaryPoints/*'/>
 	public short CompareBoundaryPoints(ushort how, Range sourceRange) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/RangeDeleteContents/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ DeleteContents() { throw new System.NotImplementedException(); }
+	public Undefined DeleteContents() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/RangeExtractContents/*'/>
 	public DocumentFragment ExtractContents() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/RangeCloneContents/*'/>
 	public DocumentFragment CloneContents() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/RangeInsertNode/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ InsertNode(Node node) { throw new System.NotImplementedException(); }
+	public Undefined InsertNode(Node node) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/RangeSurroundContents/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ SurroundContents(Node newParent) { throw new System.NotImplementedException(); }
+	public Undefined SurroundContents(Node newParent) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/RangeCloneRange/*'/>
 	public Range CloneRange() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/RangeDetach/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Detach() { throw new System.NotImplementedException(); }
+	public Undefined Detach() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/RangeIsPointInRange/*'/>
 	public bool IsPointInRange(Node node, ulong offset) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/RangeComparePoint/*'/>
@@ -893,7 +894,7 @@ public partial class NodeIterator
 	///<include file='Utils/Docs.generated.xml' path='docs/NodeIteratorPreviousNode/*'/>
 	public Node? PreviousNode() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/NodeIteratorDetach/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Detach() { throw new System.NotImplementedException(); }
+	public Undefined Detach() { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs.generated.xml' path='docs/TreeWalker/*'/>
@@ -974,9 +975,9 @@ public partial class DOMTokenList
 	///<include file='Utils/Docs.generated.xml' path='docs/DOMTokenListContains/*'/>
 	public bool Contains(string token) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/DOMTokenListAdd/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Add(params string[] tokens) { throw new System.NotImplementedException(); }
+	public Undefined Add(params string[] tokens) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/DOMTokenListRemove/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Remove(params string[] tokens) { throw new System.NotImplementedException(); }
+	public Undefined Remove(params string[] tokens) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/DOMTokenListToggle/*'/>
 	public bool Toggle(string token, bool force) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/DOMTokenListReplace/*'/>
@@ -1077,21 +1078,21 @@ public partial class XSLTProcessor
 	///<include file='Utils/Docs.generated.xml' path='docs/XSLTProcessorXSLTProcessor/*'/>
 	public XSLTProcessor() { }
 	///<include file='Utils/Docs.generated.xml' path='docs/XSLTProcessorImportStylesheet/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ ImportStylesheet(Node style) { throw new System.NotImplementedException(); }
+	public Undefined ImportStylesheet(Node style) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/XSLTProcessorTransformToFragment/*'/>
 	public DocumentFragment TransformToFragment(Node source, Document output) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/XSLTProcessorTransformToDocument/*'/>
 	public Document TransformToDocument(Node source) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/XSLTProcessorSetParameter/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ SetParameter(string namespaceURI, string localName, dynamic value) { throw new System.NotImplementedException(); }
+	public Undefined SetParameter(string namespaceURI, string localName, dynamic value) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/XSLTProcessorGetParameter/*'/>
 	public dynamic GetParameter(string namespaceURI, string localName) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/XSLTProcessorRemoveParameter/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ RemoveParameter(string namespaceURI, string localName) { throw new System.NotImplementedException(); }
+	public Undefined RemoveParameter(string namespaceURI, string localName) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/XSLTProcessorClearParameters/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ ClearParameters() { throw new System.NotImplementedException(); }
+	public Undefined ClearParameters() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/XSLTProcessorReset/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Reset() { throw new System.NotImplementedException(); }
+	public Undefined Reset() { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs.generated.xml' path='docs/TextDecoderCommon/*'/>
@@ -1202,15 +1203,15 @@ public partial class Headers
 	///<include file='Utils/Docs.generated.xml' path='docs/HeadersHeaders/*'/>
 	public Headers(HeadersInit init) { }
 	///<include file='Utils/Docs.generated.xml' path='docs/HeadersAppend/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Append(string name, string value) { throw new System.NotImplementedException(); }
+	public Undefined Append(string name, string value) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/HeadersDelete/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Delete(string name) { throw new System.NotImplementedException(); }
+	public Undefined Delete(string name) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/HeadersGet/*'/>
 	public string? Get(string name) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/HeadersHas/*'/>
 	public bool Has(string name) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/HeadersSet/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Set(string name, string value) { throw new System.NotImplementedException(); }
+	public Undefined Set(string name, string value) { throw new System.NotImplementedException(); }
 	public string this[int i]  {  get { throw new System.NotImplementedException(); }  set { throw new System.NotImplementedException(); }  } 
 }
 
@@ -1221,13 +1222,13 @@ public partial class Headers
 public partial interface Body
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/BodyBody/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*ReadableStream*/? Body { get { throw new System.NotImplementedException(); } }
+	public Unsupported /*ReadableStream*/? Body { get { throw new System.NotImplementedException(); } }
 	///<include file='Utils/Docs.generated.xml' path='docs/BodyBodyUsed/*'/>
 	public bool BodyUsed { get { throw new System.NotImplementedException(); } }
 	///<include file='Utils/Docs.generated.xml' path='docs/BodyArrayBuffer/*'/>
 	public Task<byte[]> ArrayBuffer() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/BodyBlob/*'/>
-	public Task<CSharpToJavaScript.Utils.Unsupported /*Blob*/> Blob() { throw new System.NotImplementedException(); }
+	public Task<Unsupported /*Blob*/> Blob() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/BodyFormData/*'/>
 	public Task<FormData> FormData() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/BodyJson/*'/>
@@ -1254,7 +1255,7 @@ public partial class Request
 	///<include file='Utils/Docs.generated.xml' path='docs/RequestReferrer/*'/>
 	public string Referrer { get; }
 	///<include file='Utils/Docs.generated.xml' path='docs/RequestReferrerPolicy/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*ReferrerPolicy*/ ReferrerPolicy { get; }
+	public Unsupported /*ReferrerPolicy*/ ReferrerPolicy { get; }
 	///<include file='Utils/Docs.generated.xml' path='docs/RequestMode/*'/>
 	public RequestMode Mode { get; }
 	///<include file='Utils/Docs.generated.xml' path='docs/RequestCredentials/*'/>
@@ -1291,7 +1292,7 @@ public partial class RequestInit
 	///<include file='Utils/Docs.generated.xml' path='docs/RequestInitReferrer/*'/>
 	public string Referrer;
 	///<include file='Utils/Docs.generated.xml' path='docs/RequestInitReferrerPolicy/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*ReferrerPolicy*/ ReferrerPolicy;
+	public Unsupported /*ReferrerPolicy*/ ReferrerPolicy;
 	///<include file='Utils/Docs.generated.xml' path='docs/RequestInitMode/*'/>
 	public RequestMode Mode;
 	///<include file='Utils/Docs.generated.xml' path='docs/RequestInitCredentials/*'/>
@@ -1453,7 +1454,7 @@ public partial class FullscreenOptions
 public partial class Element
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/ElementRequestFullscreen/*'/>
-	public Task<CSharpToJavaScript.Utils.Unsupported /*undefined*/> RequestFullscreen(FullscreenOptions options) { throw new System.NotImplementedException(); }
+	public Task<Undefined> RequestFullscreen(FullscreenOptions options) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/ElementOnfullscreenchange/*'/>
 	public EventHandler Onfullscreenchange { get; set; }
 	///<include file='Utils/Docs.generated.xml' path='docs/ElementOnfullscreenerror/*'/>
@@ -1469,7 +1470,7 @@ public partial class Document
 	///<include file='Utils/Docs.generated.xml' path='docs/DocumentFullscreen/*'/>
 	public bool Fullscreen { get; }
 	///<include file='Utils/Docs.generated.xml' path='docs/DocumentExitFullscreen/*'/>
-	public Task<CSharpToJavaScript.Utils.Unsupported /*undefined*/> ExitFullscreen() { throw new System.NotImplementedException(); }
+	public Task<Undefined> ExitFullscreen() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/DocumentOnfullscreenchange/*'/>
 	public EventHandler Onfullscreenchange { get; set; }
 	///<include file='Utils/Docs.generated.xml' path='docs/DocumentOnfullscreenerror/*'/>
@@ -1522,10 +1523,10 @@ public partial class HTMLOptionsCollection : HTMLCollection
 	
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLOptionsCollectionAdd/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Add(Union16 element, Union17? before) { throw new System.NotImplementedException(); }
+	public Undefined Add(Union16 element, Union17? before) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLOptionsCollectionRemove/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Remove(long index) { throw new System.NotImplementedException(); }
+	public Undefined Remove(long index) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLOptionsCollectionSelectedIndex/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 	public long SelectedIndex { get; set; }
@@ -1603,11 +1604,11 @@ public partial class Document
 	///<include file='Utils/Docs.generated.xml' path='docs/DocumentOpen/*'/>
 	public Window? Open(string url, string name, string features) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/DocumentClose/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Close() { throw new System.NotImplementedException(); }
+	public Undefined Close() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/DocumentWrite/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Write(params string[] text) { throw new System.NotImplementedException(); }
+	public Undefined Write(params string[] text) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/DocumentWriteln/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Writeln(params string[] text) { throw new System.NotImplementedException(); }
+	public Undefined Writeln(params string[] text) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/DocumentDefaultView/*'/>
 	public Window? DefaultView { get; }
 	///<include file='Utils/Docs.generated.xml' path='docs/DocumentHasFocus/*'/>
@@ -1671,7 +1672,7 @@ public partial class HTMLElement : Element, GlobalEventHandlers, DocumentAndElem
 	public bool Inert { get; set; }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLElementClick/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Click() { throw new System.NotImplementedException(); }
+	public Undefined Click() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLElementAccessKey/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 	public string AccessKey { get; set; }
@@ -1721,9 +1722,9 @@ public partial interface HTMLOrSVGElement
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLOrSVGElementTabIndex/*'/>
 	public long TabIndex { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLOrSVGElementFocus/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Focus(FocusOptions options) { throw new System.NotImplementedException(); }
+	public Undefined Focus(FocusOptions options) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLOrSVGElementBlur/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Blur() { throw new System.NotImplementedException(); }
+	public Undefined Blur() { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs.generated.xml' path='docs/DOMStringMap/*'/>
@@ -2188,7 +2189,7 @@ public partial class HTMLImageElement : HTMLElement
 	public string Loading { get; set; }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLImageElementDecode/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-	public Task<CSharpToJavaScript.Utils.Unsupported /*undefined*/> Decode() { throw new System.NotImplementedException(); }
+	public Task<Undefined> Decode() { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLIFrameElement/*'/>
@@ -2311,7 +2312,7 @@ public partial class HTMLObjectElement : HTMLElement
 	public bool ReportValidity() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLObjectElementSetCustomValidity/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ SetCustomValidity(string error) { throw new System.NotImplementedException(); }
+	public Undefined SetCustomValidity(string error) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLVideoElement/*'/>
@@ -2443,7 +2444,7 @@ public partial class HTMLMediaElement : HTMLElement
 	public TimeRanges Buffered { get; }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementLoad/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Load() { throw new System.NotImplementedException(); }
+	public Undefined Load() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementCanPlayType/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 	public CanPlayTypeResult CanPlayType(string type) { throw new System.NotImplementedException(); }
@@ -2473,7 +2474,7 @@ public partial class HTMLMediaElement : HTMLElement
 	public double CurrentTime { get; set; }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementFastSeek/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ FastSeek(double time) { throw new System.NotImplementedException(); }
+	public Undefined FastSeek(double time) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementDuration/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 	public double Duration { get; }
@@ -2509,10 +2510,10 @@ public partial class HTMLMediaElement : HTMLElement
 	public bool Loop { get; set; }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementPlay/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-	public Task<CSharpToJavaScript.Utils.Unsupported /*undefined*/> Play() { throw new System.NotImplementedException(); }
+	public Task<Undefined> Play() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementPause/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Pause() { throw new System.NotImplementedException(); }
+	public Undefined Pause() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMediaElementControls/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 	public bool Controls { get; set; }
@@ -2695,10 +2696,10 @@ public partial class TextTrack : EventTarget
 	public TextTrackCueList? ActiveCues { get; }
 	///<include file='Utils/Docs.generated.xml' path='docs/TextTrackAddCue/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ AddCue(TextTrackCue cue) { throw new System.NotImplementedException(); }
+	public Undefined AddCue(TextTrackCue cue) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/TextTrackRemoveCue/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ RemoveCue(TextTrackCue cue) { throw new System.NotImplementedException(); }
+	public Undefined RemoveCue(TextTrackCue cue) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/TextTrackOncuechange/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 	public EventHandler Oncuechange { get; set; }
@@ -2838,7 +2839,7 @@ public partial class HTMLTableElement : HTMLElement
 	public HTMLTableCaptionElement CreateCaption() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableElementDeleteCaption/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ DeleteCaption() { throw new System.NotImplementedException(); }
+	public Undefined DeleteCaption() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableElementTHead/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLTableSectionElement? THead { get; set; }
@@ -2847,7 +2848,7 @@ public partial class HTMLTableElement : HTMLElement
 	public HTMLTableSectionElement CreateTHead() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableElementDeleteTHead/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ DeleteTHead() { throw new System.NotImplementedException(); }
+	public Undefined DeleteTHead() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableElementTFoot/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLTableSectionElement? TFoot { get; set; }
@@ -2856,7 +2857,7 @@ public partial class HTMLTableElement : HTMLElement
 	public HTMLTableSectionElement CreateTFoot() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableElementDeleteTFoot/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ DeleteTFoot() { throw new System.NotImplementedException(); }
+	public Undefined DeleteTFoot() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableElementTBodies/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLCollection TBodies { get; }
@@ -2871,7 +2872,7 @@ public partial class HTMLTableElement : HTMLElement
 	public HTMLTableRowElement InsertRow(long index) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableElementDeleteRow/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ DeleteRow(long index) { throw new System.NotImplementedException(); }
+	public Undefined DeleteRow(long index) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableCaptionElement/*'/>
@@ -2907,7 +2908,7 @@ public partial class HTMLTableSectionElement : HTMLElement
 	public HTMLTableRowElement InsertRow(long index) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableSectionElementDeleteRow/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ DeleteRow(long index) { throw new System.NotImplementedException(); }
+	public Undefined DeleteRow(long index) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableRowElement/*'/>
@@ -2930,7 +2931,7 @@ public partial class HTMLTableRowElement : HTMLElement
 	public HTMLTableCellElement InsertCell(long index) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableRowElementDeleteCell/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ DeleteCell(long index) { throw new System.NotImplementedException(); }
+	public Undefined DeleteCell(long index) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLTableCellElement/*'/>
@@ -3008,13 +3009,13 @@ public partial class HTMLFormElement : HTMLElement
 	
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLFormElementSubmit/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Submit() { throw new System.NotImplementedException(); }
+	public Undefined Submit() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLFormElementRequestSubmit/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ RequestSubmit(HTMLElement? submitter) { throw new System.NotImplementedException(); }
+	public Undefined RequestSubmit(HTMLElement? submitter) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLFormElementReset/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Reset() { throw new System.NotImplementedException(); }
+	public Undefined Reset() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLFormElementCheckValidity/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 	public bool CheckValidity() { throw new System.NotImplementedException(); }
@@ -3072,7 +3073,7 @@ public partial class HTMLInputElement : HTMLElement
 	public HTMLFormElement? Form { get; }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementFiles/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-	public CSharpToJavaScript.Utils.Unsupported /*FileList*/? Files { get; set; }
+	public Unsupported /*FileList*/? Files { get; set; }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementFormAction/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 	public string FormAction { get; set; }
@@ -3156,10 +3157,10 @@ public partial class HTMLInputElement : HTMLElement
 	public ulong Width { get; set; }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementStepUp/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ StepUp(long n) { throw new System.NotImplementedException(); }
+	public Undefined StepUp(long n) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementStepDown/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ StepDown(long n) { throw new System.NotImplementedException(); }
+	public Undefined StepDown(long n) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementWillValidate/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 	public bool WillValidate { get; }
@@ -3177,13 +3178,13 @@ public partial class HTMLInputElement : HTMLElement
 	public bool ReportValidity() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementSetCustomValidity/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ SetCustomValidity(string error) { throw new System.NotImplementedException(); }
+	public Undefined SetCustomValidity(string error) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementLabels/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 	public NodeList? Labels { get; }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementSelect/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Select() { throw new System.NotImplementedException(); }
+	public Undefined Select() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementSelectionStart/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 	public ulong? SelectionStart { get; set; }
@@ -3195,16 +3196,16 @@ public partial class HTMLInputElement : HTMLElement
 	public string? SelectionDirection { get; set; }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementSetRangeText/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ SetRangeText(string replacement) { throw new System.NotImplementedException(); }
+	public Undefined SetRangeText(string replacement) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementSetRangeText/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ SetRangeText(string replacement, ulong start, ulong end, SelectionMode selectionMode) { throw new System.NotImplementedException(); }
+	public Undefined SetRangeText(string replacement, ulong start, ulong end, SelectionMode selectionMode) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementSetSelectionRange/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ SetSelectionRange(ulong start, ulong end, string direction) { throw new System.NotImplementedException(); }
+	public Undefined SetSelectionRange(ulong start, ulong end, string direction) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLInputElementShowPicker/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ ShowPicker() { throw new System.NotImplementedException(); }
+	public Undefined ShowPicker() { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLButtonElement/*'/>
@@ -3260,7 +3261,7 @@ public partial class HTMLButtonElement : HTMLElement
 	public bool ReportValidity() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLButtonElementSetCustomValidity/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ SetCustomValidity(string error) { throw new System.NotImplementedException(); }
+	public Undefined SetCustomValidity(string error) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLButtonElementLabels/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 	public NodeList Labels { get; }
@@ -3308,13 +3309,13 @@ public partial class HTMLSelectElement : HTMLElement
 	public HTMLOptionElement? NamedItem(string name) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLSelectElementAdd/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Add(Union24 element, Union25? before) { throw new System.NotImplementedException(); }
+	public Undefined Add(Union24 element, Union25? before) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLSelectElementRemove/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Remove() { throw new System.NotImplementedException(); }
+	public Undefined Remove() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLSelectElementRemove/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Remove(long index) { throw new System.NotImplementedException(); }
+	public Undefined Remove(long index) { throw new System.NotImplementedException(); }
 	
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLSelectElementSelectedOptions/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -3342,7 +3343,7 @@ public partial class HTMLSelectElement : HTMLElement
 	public bool ReportValidity() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLSelectElementSetCustomValidity/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ SetCustomValidity(string error) { throw new System.NotImplementedException(); }
+	public Undefined SetCustomValidity(string error) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLSelectElementLabels/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 	public NodeList Labels { get; }
@@ -3479,13 +3480,13 @@ public partial class HTMLTextAreaElement : HTMLElement
 	public bool ReportValidity() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementSetCustomValidity/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ SetCustomValidity(string error) { throw new System.NotImplementedException(); }
+	public Undefined SetCustomValidity(string error) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementLabels/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 	public NodeList Labels { get; }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementSelect/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Select() { throw new System.NotImplementedException(); }
+	public Undefined Select() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementSelectionStart/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 	public ulong SelectionStart { get; set; }
@@ -3497,13 +3498,13 @@ public partial class HTMLTextAreaElement : HTMLElement
 	public string SelectionDirection { get; set; }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementSetRangeText/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ SetRangeText(string replacement) { throw new System.NotImplementedException(); }
+	public Undefined SetRangeText(string replacement) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementSetRangeText/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ SetRangeText(string replacement, ulong start, ulong end, SelectionMode selectionMode) { throw new System.NotImplementedException(); }
+	public Undefined SetRangeText(string replacement, ulong start, ulong end, SelectionMode selectionMode) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLTextAreaElementSetSelectionRange/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ SetSelectionRange(ulong start, ulong end, string direction) { throw new System.NotImplementedException(); }
+	public Undefined SetSelectionRange(ulong start, ulong end, string direction) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLOutputElement/*'/>
@@ -3547,7 +3548,7 @@ public partial class HTMLOutputElement : HTMLElement
 	public bool ReportValidity() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLOutputElementSetCustomValidity/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ SetCustomValidity(string error) { throw new System.NotImplementedException(); }
+	public Undefined SetCustomValidity(string error) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLOutputElementLabels/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 	public NodeList Labels { get; }
@@ -3640,7 +3641,7 @@ public partial class HTMLFieldSetElement : HTMLElement
 	public bool ReportValidity() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLFieldSetElementSetCustomValidity/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ SetCustomValidity(string error) { throw new System.NotImplementedException(); }
+	public Undefined SetCustomValidity(string error) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLLegendElement/*'/>
@@ -3752,13 +3753,13 @@ public partial class HTMLDialogElement : HTMLElement
 	public string ReturnValue { get; set; }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLDialogElementShow/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Show() { throw new System.NotImplementedException(); }
+	public Undefined Show() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLDialogElementShowModal/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ ShowModal() { throw new System.NotImplementedException(); }
+	public Undefined ShowModal() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLDialogElementClose/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Close(string returnValue) { throw new System.NotImplementedException(); }
+	public Undefined Close(string returnValue) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLScriptElement/*'/>
@@ -3830,7 +3831,7 @@ public partial class HTMLSlotElement : HTMLElement
 	public List<Element> AssignedElements(AssignedNodesOptions options) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLSlotElementAssign/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Assign(params Union26[] nodes) { throw new System.NotImplementedException(); }
+	public Undefined Assign(params Union26[] nodes) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs.generated.xml' path='docs/AssignedNodesOptions/*'/>
@@ -3862,7 +3863,7 @@ public partial class HTMLCanvasElement : HTMLElement
 	public string ToDataURL(string type, dynamic quality) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLCanvasElementToBlob/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ ToBlob(BlobCallback callback, string type, dynamic quality) { throw new System.NotImplementedException(); }
+	public Undefined ToBlob(BlobCallback callback, string type, dynamic quality) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLCanvasElementTransferControlToOffscreen/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 	public OffscreenCanvas TransferControlToOffscreen() { throw new System.NotImplementedException(); }
@@ -3943,11 +3944,11 @@ public partial class CanvasRenderingContext2D
 public partial interface CanvasState
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasStateSave/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Save() { throw new System.NotImplementedException(); }
+	public Undefined Save() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasStateRestore/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Restore() { throw new System.NotImplementedException(); }
+	public Undefined Restore() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasStateReset/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Reset() { throw new System.NotImplementedException(); }
+	public Undefined Reset() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasStateIsContextLost/*'/>
 	public bool IsContextLost() { throw new System.NotImplementedException(); }
 }
@@ -3957,21 +3958,21 @@ public partial interface CanvasState
 public partial interface CanvasTransform
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasTransformScale/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Scale(double x, double y) { throw new System.NotImplementedException(); }
+	public Undefined Scale(double x, double y) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasTransformRotate/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Rotate(double angle) { throw new System.NotImplementedException(); }
+	public Undefined Rotate(double angle) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasTransformTranslate/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Translate(double x, double y) { throw new System.NotImplementedException(); }
+	public Undefined Translate(double x, double y) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasTransformTransform/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Transform(double a, double b, double c, double d, double e, double f) { throw new System.NotImplementedException(); }
+	public Undefined Transform(double a, double b, double c, double d, double e, double f) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasTransformGetTransform/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*DOMMatrix*/ GetTransform() { throw new System.NotImplementedException(); }
+	public Unsupported /*DOMMatrix*/ GetTransform() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasTransformSetTransform/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ SetTransform(double a, double b, double c, double d, double e, double f) { throw new System.NotImplementedException(); }
+	public Undefined SetTransform(double a, double b, double c, double d, double e, double f) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasTransformSetTransform/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ SetTransform(CSharpToJavaScript.Utils.Unsupported /*DOMMatrix2DInit*/ transform) { throw new System.NotImplementedException(); }
+	public Undefined SetTransform(Unsupported /*DOMMatrix2DInit*/ transform) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasTransformResetTransform/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ ResetTransform() { throw new System.NotImplementedException(); }
+	public Undefined ResetTransform() { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs.generated.xml' path='docs/CanvasCompositing/*'/>
@@ -4048,11 +4049,11 @@ public partial class CanvasFilter
 public partial interface CanvasRect
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasRectClearRect/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ ClearRect(double x, double y, double w, double h) { throw new System.NotImplementedException(); }
+	public Undefined ClearRect(double x, double y, double w, double h) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasRectFillRect/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ FillRect(double x, double y, double w, double h) { throw new System.NotImplementedException(); }
+	public Undefined FillRect(double x, double y, double w, double h) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasRectStrokeRect/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ StrokeRect(double x, double y, double w, double h) { throw new System.NotImplementedException(); }
+	public Undefined StrokeRect(double x, double y, double w, double h) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs.generated.xml' path='docs/CanvasDrawPath/*'/>
@@ -4060,19 +4061,19 @@ public partial interface CanvasRect
 public partial interface CanvasDrawPath
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasDrawPathBeginPath/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ BeginPath() { throw new System.NotImplementedException(); }
+	public Undefined BeginPath() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasDrawPathFill/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Fill(CanvasFillRule fillRule) { throw new System.NotImplementedException(); }
+	public Undefined Fill(CanvasFillRule fillRule) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasDrawPathFill/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Fill(Path2D path, CanvasFillRule fillRule) { throw new System.NotImplementedException(); }
+	public Undefined Fill(Path2D path, CanvasFillRule fillRule) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasDrawPathStroke/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Stroke() { throw new System.NotImplementedException(); }
+	public Undefined Stroke() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasDrawPathStroke/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Stroke(Path2D path) { throw new System.NotImplementedException(); }
+	public Undefined Stroke(Path2D path) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasDrawPathClip/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Clip(CanvasFillRule fillRule) { throw new System.NotImplementedException(); }
+	public Undefined Clip(CanvasFillRule fillRule) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasDrawPathClip/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Clip(Path2D path, CanvasFillRule fillRule) { throw new System.NotImplementedException(); }
+	public Undefined Clip(Path2D path, CanvasFillRule fillRule) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasDrawPathIsPointInPath/*'/>
 	public bool IsPointInPath(double x, double y, CanvasFillRule fillRule) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasDrawPathIsPointInPath/*'/>
@@ -4088,13 +4089,13 @@ public partial interface CanvasDrawPath
 public partial interface CanvasUserInterface
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasUserInterfaceDrawFocusIfNeeded/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ DrawFocusIfNeeded(Element element) { throw new System.NotImplementedException(); }
+	public Undefined DrawFocusIfNeeded(Element element) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasUserInterfaceDrawFocusIfNeeded/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ DrawFocusIfNeeded(Path2D path, Element element) { throw new System.NotImplementedException(); }
+	public Undefined DrawFocusIfNeeded(Path2D path, Element element) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasUserInterfaceScrollPathIntoView/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ ScrollPathIntoView() { throw new System.NotImplementedException(); }
+	public Undefined ScrollPathIntoView() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasUserInterfaceScrollPathIntoView/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ ScrollPathIntoView(Path2D path) { throw new System.NotImplementedException(); }
+	public Undefined ScrollPathIntoView(Path2D path) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs.generated.xml' path='docs/CanvasText/*'/>
@@ -4102,9 +4103,9 @@ public partial interface CanvasUserInterface
 public partial interface CanvasText
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasTextFillText/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ FillText(string text, double x, double y, double maxWidth) { throw new System.NotImplementedException(); }
+	public Undefined FillText(string text, double x, double y, double maxWidth) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasTextStrokeText/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ StrokeText(string text, double x, double y, double maxWidth) { throw new System.NotImplementedException(); }
+	public Undefined StrokeText(string text, double x, double y, double maxWidth) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasTextMeasureText/*'/>
 	public TextMetrics MeasureText(string text) { throw new System.NotImplementedException(); }
 }
@@ -4114,11 +4115,11 @@ public partial interface CanvasText
 public partial interface CanvasDrawImage
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasDrawImageDrawImage/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ DrawImage(CanvasImageSource image, double dx, double dy) { throw new System.NotImplementedException(); }
+	public Undefined DrawImage(CanvasImageSource image, double dx, double dy) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasDrawImageDrawImage/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ DrawImage(CanvasImageSource image, double dx, double dy, double dw, double dh) { throw new System.NotImplementedException(); }
+	public Undefined DrawImage(CanvasImageSource image, double dx, double dy, double dw, double dh) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasDrawImageDrawImage/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ DrawImage(CanvasImageSource image, double sx, double sy, double sw, double sh, double dx, double dy, double dw, double dh) { throw new System.NotImplementedException(); }
+	public Undefined DrawImage(CanvasImageSource image, double sx, double sy, double sw, double sh, double dx, double dy, double dw, double dh) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs.generated.xml' path='docs/CanvasImageData/*'/>
@@ -4132,9 +4133,9 @@ public partial interface CanvasImageData
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasImageDataGetImageData/*'/>
 	public ImageData GetImageData(long sx, long sy, long sw, long sh, ImageDataSettings settings) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasImageDataPutImageData/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ PutImageData(ImageData imagedata, long dx, long dy) { throw new System.NotImplementedException(); }
+	public Undefined PutImageData(ImageData imagedata, long dx, long dy) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasImageDataPutImageData/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ PutImageData(ImageData imagedata, long dx, long dy, long dirtyX, long dirtyY, long dirtyWidth, long dirtyHeight) { throw new System.NotImplementedException(); }
+	public Undefined PutImageData(ImageData imagedata, long dx, long dy, long dirtyX, long dirtyY, long dirtyWidth, long dirtyHeight) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs.generated.xml' path='docs/CanvasLineCap/*'/>
@@ -4238,7 +4239,7 @@ public partial interface CanvasPathDrawingStyles
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasPathDrawingStylesMiterLimit/*'/>
 	public double MiterLimit { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasPathDrawingStylesSetLineDash/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ SetLineDash(List<double> segments) { throw new System.NotImplementedException(); }
+	public Undefined SetLineDash(List<double> segments) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasPathDrawingStylesGetLineDash/*'/>
 	public List<double> GetLineDash() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasPathDrawingStylesLineDashOffset/*'/>
@@ -4276,25 +4277,25 @@ public partial interface CanvasTextDrawingStyles
 public partial interface CanvasPath
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasPathClosePath/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ ClosePath() { throw new System.NotImplementedException(); }
+	public Undefined ClosePath() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasPathMoveTo/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ MoveTo(double x, double y) { throw new System.NotImplementedException(); }
+	public Undefined MoveTo(double x, double y) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasPathLineTo/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ LineTo(double x, double y) { throw new System.NotImplementedException(); }
+	public Undefined LineTo(double x, double y) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasPathQuadraticCurveTo/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ QuadraticCurveTo(double cpx, double cpy, double x, double y) { throw new System.NotImplementedException(); }
+	public Undefined QuadraticCurveTo(double cpx, double cpy, double x, double y) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasPathBezierCurveTo/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ BezierCurveTo(double cp1x, double cp1y, double cp2x, double cp2y, double x, double y) { throw new System.NotImplementedException(); }
+	public Undefined BezierCurveTo(double cp1x, double cp1y, double cp2x, double cp2y, double x, double y) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasPathArcTo/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ ArcTo(double x1, double y1, double x2, double y2, double radius) { throw new System.NotImplementedException(); }
+	public Undefined ArcTo(double x1, double y1, double x2, double y2, double radius) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasPathRect/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Rect(double x, double y, double w, double h) { throw new System.NotImplementedException(); }
+	public Undefined Rect(double x, double y, double w, double h) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasPathRoundRect/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ RoundRect(double x, double y, double w, double h, Union34 radii) { throw new System.NotImplementedException(); }
+	public Undefined RoundRect(double x, double y, double w, double h, Union34 radii) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasPathArc/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Arc(double x, double y, double radius, double startAngle, double endAngle, bool counterclockwise) { throw new System.NotImplementedException(); }
+	public Undefined Arc(double x, double y, double radius, double startAngle, double endAngle, bool counterclockwise) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasPathEllipse/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Ellipse(double x, double y, double radiusX, double radiusY, double rotation, double startAngle, double endAngle, bool counterclockwise) { throw new System.NotImplementedException(); }
+	public Undefined Ellipse(double x, double y, double radiusX, double radiusY, double rotation, double startAngle, double endAngle, bool counterclockwise) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs.generated.xml' path='docs/CanvasGradient/*'/>
@@ -4302,7 +4303,7 @@ public partial interface CanvasPath
 public partial class CanvasGradient
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasGradientAddColorStop/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ AddColorStop(double offset, string color) { throw new System.NotImplementedException(); }
+	public Undefined AddColorStop(double offset, string color) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs.generated.xml' path='docs/CanvasPattern/*'/>
@@ -4310,7 +4311,7 @@ public partial class CanvasGradient
 public partial class CanvasPattern
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/CanvasPatternSetTransform/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ SetTransform(CSharpToJavaScript.Utils.Unsupported /*DOMMatrix2DInit*/ transform) { throw new System.NotImplementedException(); }
+	public Undefined SetTransform(Unsupported /*DOMMatrix2DInit*/ transform) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs.generated.xml' path='docs/TextMetrics/*'/>
@@ -4370,13 +4371,13 @@ public partial class ImageData
 	///<include file='Utils/Docs.generated.xml' path='docs/ImageDataImageData/*'/>
 	public ImageData(ulong sw, ulong sh, ImageDataSettings settings) { }
 	///<include file='Utils/Docs.generated.xml' path='docs/ImageDataImageData/*'/>
-	public ImageData(CSharpToJavaScript.Utils.Unsupported /*Uint8ClampedArray*/ data, ulong sw, ulong sh, ImageDataSettings settings) { }
+	public ImageData(Unsupported /*Uint8ClampedArray*/ data, ulong sw, ulong sh, ImageDataSettings settings) { }
 	///<include file='Utils/Docs.generated.xml' path='docs/ImageDataWidth/*'/>
 	public ulong Width { get; }
 	///<include file='Utils/Docs.generated.xml' path='docs/ImageDataHeight/*'/>
 	public ulong Height { get; }
 	///<include file='Utils/Docs.generated.xml' path='docs/ImageDataData/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*Uint8ClampedArray*/ Data { get; }
+	public Unsupported /*Uint8ClampedArray*/ Data { get; }
 	///<include file='Utils/Docs.generated.xml' path='docs/ImageDataColorSpace/*'/>
 	public PredefinedColorSpace ColorSpace { get; }
 }
@@ -4388,7 +4389,7 @@ public partial class Path2D
 	///<include file='Utils/Docs.generated.xml' path='docs/Path2DPath2D/*'/>
 	public Path2D(Union36 path) { }
 	///<include file='Utils/Docs.generated.xml' path='docs/Path2DAddPath/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ AddPath(Path2D path, CSharpToJavaScript.Utils.Unsupported /*DOMMatrix2DInit*/ transform) { throw new System.NotImplementedException(); }
+	public Undefined AddPath(Path2D path, Unsupported /*DOMMatrix2DInit*/ transform) { throw new System.NotImplementedException(); }
 }
 
 
@@ -4399,7 +4400,7 @@ public partial class ImageBitmapRenderingContext
 	///<include file='Utils/Docs.generated.xml' path='docs/ImageBitmapRenderingContextCanvas/*'/>
 	public Union37 Canvas { get; }
 	///<include file='Utils/Docs.generated.xml' path='docs/ImageBitmapRenderingContextTransferFromImageBitmap/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ TransferFromImageBitmap(ImageBitmap? bitmap) { throw new System.NotImplementedException(); }
+	public Undefined TransferFromImageBitmap(ImageBitmap? bitmap) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs.generated.xml' path='docs/ImageBitmapRenderingContextSettings/*'/>
@@ -4446,7 +4447,7 @@ public partial class OffscreenCanvas : EventTarget
 	///<include file='Utils/Docs.generated.xml' path='docs/OffscreenCanvasTransferToImageBitmap/*'/>
 	public ImageBitmap TransferToImageBitmap() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/OffscreenCanvasConvertToBlob/*'/>
-	public Task<CSharpToJavaScript.Utils.Unsupported /*Blob*/> ConvertToBlob(ImageEncodeOptions options) { throw new System.NotImplementedException(); }
+	public Task<Unsupported /*Blob*/> ConvertToBlob(ImageEncodeOptions options) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/OffscreenCanvasOncontextlost/*'/>
 	public EventHandler Oncontextlost { get; set; }
 	///<include file='Utils/Docs.generated.xml' path='docs/OffscreenCanvasOncontextrestored/*'/>
@@ -4458,7 +4459,7 @@ public partial class OffscreenCanvas : EventTarget
 public partial class OffscreenCanvasRenderingContext2D
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/OffscreenCanvasRenderingContext2DCommit/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Commit() { throw new System.NotImplementedException(); }
+	public Undefined Commit() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/OffscreenCanvasRenderingContext2DCanvas/*'/>
 	public OffscreenCanvas Canvas { get; }
 }
@@ -4483,13 +4484,13 @@ public partial class OffscreenCanvasRenderingContext2D
 public partial class CustomElementRegistry
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/CustomElementRegistryDefine/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Define(string name, CustomElementConstructor constructor, ElementDefinitionOptions options) { throw new System.NotImplementedException(); }
+	public Undefined Define(string name, CustomElementConstructor constructor, ElementDefinitionOptions options) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/CustomElementRegistryGet/*'/>
 	public Union39 Get(string name) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/CustomElementRegistryWhenDefined/*'/>
 	public Task<CustomElementConstructor> WhenDefined(string name) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/CustomElementRegistryUpgrade/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Upgrade(Node root) { throw new System.NotImplementedException(); }
+	public Undefined Upgrade(Node root) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs.generated.xml' path='docs/CustomElementConstructor/*'/>
@@ -4513,11 +4514,11 @@ public partial class ElementInternals
 	///<include file='Utils/Docs.generated.xml' path='docs/ElementInternalsShadowRoot/*'/>
 	public ShadowRoot? ShadowRoot { get; }
 	///<include file='Utils/Docs.generated.xml' path='docs/ElementInternalsSetFormValue/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ SetFormValue(Union40? value, Union41? state) { throw new System.NotImplementedException(); }
+	public Undefined SetFormValue(Union40? value, Union41? state) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/ElementInternalsForm/*'/>
 	public HTMLFormElement? Form { get; }
 	///<include file='Utils/Docs.generated.xml' path='docs/ElementInternalsSetValidity/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ SetValidity(ValidityStateFlags flags, string message, HTMLElement anchor) { throw new System.NotImplementedException(); }
+	public Undefined SetValidity(ValidityStateFlags flags, string message, HTMLElement anchor) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/ElementInternalsWillValidate/*'/>
 	public bool WillValidate { get; }
 	///<include file='Utils/Docs.generated.xml' path='docs/ElementInternalsValidity/*'/>
@@ -4596,17 +4597,17 @@ public partial class DataTransfer
 	///<include file='Utils/Docs.generated.xml' path='docs/DataTransferItems/*'/>
 	public DataTransferItemList Items { get; }
 	///<include file='Utils/Docs.generated.xml' path='docs/DataTransferSetDragImage/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ SetDragImage(Element image, long x, long y) { throw new System.NotImplementedException(); }
+	public Undefined SetDragImage(Element image, long x, long y) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/DataTransferTypes/*'/>
 	public string[] Types { get; }
 	///<include file='Utils/Docs.generated.xml' path='docs/DataTransferGetData/*'/>
 	public string GetData(string format) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/DataTransferSetData/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ SetData(string format, string data) { throw new System.NotImplementedException(); }
+	public Undefined SetData(string format, string data) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/DataTransferClearData/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ ClearData(string format) { throw new System.NotImplementedException(); }
+	public Undefined ClearData(string format) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/DataTransferFiles/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*FileList*/ Files { get; }
+	public Unsupported /*FileList*/ Files { get; }
 }
 
 ///<include file='Utils/Docs.generated.xml' path='docs/DataTransferItemList/*'/>
@@ -4619,11 +4620,11 @@ public partial class DataTransferItemList
 	///<include file='Utils/Docs.generated.xml' path='docs/DataTransferItemListAdd/*'/>
 	public DataTransferItem? Add(string data, string type) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/DataTransferItemListAdd/*'/>
-	public DataTransferItem? Add(CSharpToJavaScript.Utils.Unsupported /*File*/ data) { throw new System.NotImplementedException(); }
+	public DataTransferItem? Add(Unsupported /*File*/ data) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/DataTransferItemListRemove/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Remove(ulong index) { throw new System.NotImplementedException(); }
+	public Undefined Remove(ulong index) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/DataTransferItemListClear/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Clear() { throw new System.NotImplementedException(); }
+	public Undefined Clear() { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs.generated.xml' path='docs/DataTransferItem/*'/>
@@ -4635,9 +4636,9 @@ public partial class DataTransferItem
 	///<include file='Utils/Docs.generated.xml' path='docs/DataTransferItemType/*'/>
 	public string Type { get; }
 	///<include file='Utils/Docs.generated.xml' path='docs/DataTransferItemGetAsString/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ GetAsString(FunctionStringCallback? callback) { throw new System.NotImplementedException(); }
+	public Undefined GetAsString(FunctionStringCallback? callback) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/DataTransferItemGetAsFile/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*File*/? GetAsFile() { throw new System.NotImplementedException(); }
+	public Unsupported /*File*/? GetAsFile() { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs.generated.xml' path='docs/FunctionStringCallback/*'/>
@@ -4702,15 +4703,15 @@ public partial class Window : EventTarget
 	///<include file='Utils/Docs.generated.xml' path='docs/WindowStatus/*'/>
 	public string Status { get; set; }
 	///<include file='Utils/Docs.generated.xml' path='docs/WindowClose/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Close() { throw new System.NotImplementedException(); }
+	public Undefined Close() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/WindowClosed/*'/>
 	public bool Closed { get; }
 	///<include file='Utils/Docs.generated.xml' path='docs/WindowStop/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Stop() { throw new System.NotImplementedException(); }
+	public Undefined Stop() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/WindowFocus/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Focus() { throw new System.NotImplementedException(); }
+	public Undefined Focus() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/WindowBlur/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Blur() { throw new System.NotImplementedException(); }
+	public Undefined Blur() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/WindowFrames/*'/>
 	public Window Frames { get; }
 	///<include file='Utils/Docs.generated.xml' path='docs/WindowLength/*'/>
@@ -4733,19 +4734,19 @@ public partial class Window : EventTarget
 	///<include file='Utils/Docs.generated.xml' path='docs/WindowOriginAgentCluster/*'/>
 	public bool OriginAgentCluster { get; }
 	///<include file='Utils/Docs.generated.xml' path='docs/WindowAlert/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Alert() { throw new System.NotImplementedException(); }
+	public Undefined Alert() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/WindowAlert/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Alert(string message) { throw new System.NotImplementedException(); }
+	public Undefined Alert(string message) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/WindowConfirm/*'/>
 	public bool Confirm(string message) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/WindowPrompt/*'/>
 	public string? Prompt(string message, string default_) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/WindowPrint/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Print() { throw new System.NotImplementedException(); }
+	public Undefined Print() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/WindowPostMessage/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ PostMessage(dynamic message, string targetOrigin, List<object> transfer) { throw new System.NotImplementedException(); }
+	public Undefined PostMessage(dynamic message, string targetOrigin, List<object> transfer) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/WindowPostMessage/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ PostMessage(dynamic message, WindowPostMessageOptions options) { throw new System.NotImplementedException(); }
+	public Undefined PostMessage(dynamic message, WindowPostMessageOptions options) { throw new System.NotImplementedException(); }
 }
 
 
@@ -4784,15 +4785,15 @@ public partial class History
 	///<include file='Utils/Docs.generated.xml' path='docs/HistoryState/*'/>
 	public dynamic State { get; }
 	///<include file='Utils/Docs.generated.xml' path='docs/HistoryGo/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Go(long delta) { throw new System.NotImplementedException(); }
+	public Undefined Go(long delta) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/HistoryBack/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Back() { throw new System.NotImplementedException(); }
+	public Undefined Back() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/HistoryForward/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Forward() { throw new System.NotImplementedException(); }
+	public Undefined Forward() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/HistoryPushState/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ PushState(dynamic data, string unused, string? url) { throw new System.NotImplementedException(); }
+	public Undefined PushState(dynamic data, string unused, string? url) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/HistoryReplaceState/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ ReplaceState(dynamic data, string unused, string? url) { throw new System.NotImplementedException(); }
+	public Undefined ReplaceState(dynamic data, string unused, string? url) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs.generated.xml' path='docs/Location/*'/>
@@ -4818,11 +4819,11 @@ public partial class Location
 	///<include file='Utils/Docs.generated.xml' path='docs/LocationHash/*'/>
 	public string Hash { get; set; }
 	///<include file='Utils/Docs.generated.xml' path='docs/LocationAssign/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Assign(string url) { throw new System.NotImplementedException(); }
+	public Undefined Assign(string url) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/LocationReplace/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Replace(string url) { throw new System.NotImplementedException(); }
+	public Undefined Replace(string url) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/LocationReload/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Reload() { throw new System.NotImplementedException(); }
+	public Undefined Reload() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/LocationAncestorOrigins/*'/>
 	public string AncestorOrigins { get; }
 }
@@ -5177,7 +5178,7 @@ public partial interface WindowOrWorkerGlobalScope
 	///<include file='Utils/Docs.generated.xml' path='docs/WindowOrWorkerGlobalScopeCrossOriginIsolated/*'/>
 	public bool CrossOriginIsolated { get { throw new System.NotImplementedException(); } }
 	///<include file='Utils/Docs.generated.xml' path='docs/WindowOrWorkerGlobalScopeReportError/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ ReportError(dynamic e) { throw new System.NotImplementedException(); }
+	public Undefined ReportError(dynamic e) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/WindowOrWorkerGlobalScopeBtoa/*'/>
 	public string Btoa(string data) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/WindowOrWorkerGlobalScopeAtob/*'/>
@@ -5185,13 +5186,13 @@ public partial interface WindowOrWorkerGlobalScope
 	///<include file='Utils/Docs.generated.xml' path='docs/WindowOrWorkerGlobalScopeSetTimeout/*'/>
 	public long SetTimeout(TimerHandler handler, long timeout, params dynamic[] arguments) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/WindowOrWorkerGlobalScopeClearTimeout/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ ClearTimeout(long id) { throw new System.NotImplementedException(); }
+	public Undefined ClearTimeout(long id) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/WindowOrWorkerGlobalScopeSetInterval/*'/>
 	public long SetInterval(TimerHandler handler, long timeout, params dynamic[] arguments) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/WindowOrWorkerGlobalScopeClearInterval/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ ClearInterval(long id) { throw new System.NotImplementedException(); }
+	public Undefined ClearInterval(long id) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/WindowOrWorkerGlobalScopeQueueMicrotask/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ QueueMicrotask(VoidFunction callback) { throw new System.NotImplementedException(); }
+	public Undefined QueueMicrotask(VoidFunction callback) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/WindowOrWorkerGlobalScopeCreateImageBitmap/*'/>
 	public Task<ImageBitmap> CreateImageBitmap(ImageBitmapSource image, ImageBitmapOptions options) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/WindowOrWorkerGlobalScopeCreateImageBitmap/*'/>
@@ -5291,9 +5292,9 @@ public partial interface NavigatorOnLine
 public partial interface NavigatorContentUtils
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/NavigatorContentUtilsRegisterProtocolHandler/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ RegisterProtocolHandler(string scheme, string url) { throw new System.NotImplementedException(); }
+	public Undefined RegisterProtocolHandler(string scheme, string url) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/NavigatorContentUtilsUnregisterProtocolHandler/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ UnregisterProtocolHandler(string scheme, string url) { throw new System.NotImplementedException(); }
+	public Undefined UnregisterProtocolHandler(string scheme, string url) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs.generated.xml' path='docs/NavigatorCookies/*'/>
@@ -5323,7 +5324,7 @@ public partial interface NavigatorPlugins
 public partial class PluginArray
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/PluginArrayRefresh/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Refresh() { throw new System.NotImplementedException(); }
+	public Undefined Refresh() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/PluginArrayLength/*'/>
 	public ulong Length { get; }
 	
@@ -5379,7 +5380,7 @@ public partial class ImageBitmap
 	///<include file='Utils/Docs.generated.xml' path='docs/ImageBitmapHeight/*'/>
 	public ulong Height { get; }
 	///<include file='Utils/Docs.generated.xml' path='docs/ImageBitmapClose/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Close() { throw new System.NotImplementedException(); }
+	public Undefined Close() { throw new System.NotImplementedException(); }
 }
 
 
@@ -5445,7 +5446,7 @@ public partial interface AnimationFrameProvider
 	///<include file='Utils/Docs.generated.xml' path='docs/AnimationFrameProviderRequestAnimationFrame/*'/>
 	public ulong RequestAnimationFrame(FrameRequestCallback callback) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/AnimationFrameProviderCancelAnimationFrame/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ CancelAnimationFrame(ulong handle) { throw new System.NotImplementedException(); }
+	public Undefined CancelAnimationFrame(ulong handle) { throw new System.NotImplementedException(); }
 }
 
 
@@ -5467,7 +5468,7 @@ public partial class MessageEvent : Event
 	///<include file='Utils/Docs.generated.xml' path='docs/MessageEventPorts/*'/>
 	public MessagePort[] Ports { get; }
 	///<include file='Utils/Docs.generated.xml' path='docs/MessageEventInitMessageEvent/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ InitMessageEvent(string type, bool bubbles, bool cancelable, dynamic data, string origin, string lastEventId, MessageEventSource? source, List<MessagePort> ports) { throw new System.NotImplementedException(); }
+	public Undefined InitMessageEvent(string type, bool bubbles, bool cancelable, dynamic data, string origin, string lastEventId, MessageEventSource? source, List<MessagePort> ports) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs.generated.xml' path='docs/MessageEventInit/*'/>
@@ -5512,7 +5513,7 @@ public partial class EventSource : EventTarget
 	///<include file='Utils/Docs.generated.xml' path='docs/EventSourceOnerror/*'/>
 	public EventHandler Onerror { get; set; }
 	///<include file='Utils/Docs.generated.xml' path='docs/EventSourceClose/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Close() { throw new System.NotImplementedException(); }
+	public Undefined Close() { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs.generated.xml' path='docs/EventSourceInit/*'/>
@@ -5540,13 +5541,13 @@ public partial class MessageChannel
 public partial class MessagePort : EventTarget
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/MessagePortPostMessage/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ PostMessage(dynamic message, List<object> transfer) { throw new System.NotImplementedException(); }
+	public Undefined PostMessage(dynamic message, List<object> transfer) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/MessagePortPostMessage/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ PostMessage(dynamic message, StructuredSerializeOptions options) { throw new System.NotImplementedException(); }
+	public Undefined PostMessage(dynamic message, StructuredSerializeOptions options) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/MessagePortStart/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Start() { throw new System.NotImplementedException(); }
+	public Undefined Start() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/MessagePortClose/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Close() { throw new System.NotImplementedException(); }
+	public Undefined Close() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/MessagePortOnmessage/*'/>
 	public EventHandler Onmessage { get; set; }
 	///<include file='Utils/Docs.generated.xml' path='docs/MessagePortOnmessageerror/*'/>
@@ -5570,9 +5571,9 @@ public partial class BroadcastChannel : EventTarget
 	///<include file='Utils/Docs.generated.xml' path='docs/BroadcastChannelName/*'/>
 	public string Name { get; }
 	///<include file='Utils/Docs.generated.xml' path='docs/BroadcastChannelPostMessage/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ PostMessage(dynamic message) { throw new System.NotImplementedException(); }
+	public Undefined PostMessage(dynamic message) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/BroadcastChannelClose/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Close() { throw new System.NotImplementedException(); }
+	public Undefined Close() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/BroadcastChannelOnmessage/*'/>
 	public EventHandler Onmessage { get; set; }
 	///<include file='Utils/Docs.generated.xml' path='docs/BroadcastChannelOnmessageerror/*'/>
@@ -5590,7 +5591,7 @@ public partial class WorkerGlobalScope : EventTarget, WindowOrWorkerGlobalScope
 	///<include file='Utils/Docs.generated.xml' path='docs/WorkerGlobalScopeNavigator/*'/>
 	public WorkerNavigator Navigator { get; }
 	///<include file='Utils/Docs.generated.xml' path='docs/WorkerGlobalScopeImportScripts/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ ImportScripts(params string[] urls) { throw new System.NotImplementedException(); }
+	public Undefined ImportScripts(params string[] urls) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/WorkerGlobalScopeOnerror/*'/>
 	public OnErrorEventHandler Onerror { get; set; }
 	///<include file='Utils/Docs.generated.xml' path='docs/WorkerGlobalScopeOnlanguagechange/*'/>
@@ -5612,11 +5613,11 @@ public partial class DedicatedWorkerGlobalScope : WorkerGlobalScope, AnimationFr
 	///<include file='Utils/Docs.generated.xml' path='docs/DedicatedWorkerGlobalScopeName/*'/>
 	public string Name { get; }
 	///<include file='Utils/Docs.generated.xml' path='docs/DedicatedWorkerGlobalScopePostMessage/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ PostMessage(dynamic message, List<object> transfer) { throw new System.NotImplementedException(); }
+	public Undefined PostMessage(dynamic message, List<object> transfer) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/DedicatedWorkerGlobalScopePostMessage/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ PostMessage(dynamic message, StructuredSerializeOptions options) { throw new System.NotImplementedException(); }
+	public Undefined PostMessage(dynamic message, StructuredSerializeOptions options) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/DedicatedWorkerGlobalScopeClose/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Close() { throw new System.NotImplementedException(); }
+	public Undefined Close() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/DedicatedWorkerGlobalScopeOnmessage/*'/>
 	public EventHandler Onmessage { get; set; }
 	///<include file='Utils/Docs.generated.xml' path='docs/DedicatedWorkerGlobalScopeOnmessageerror/*'/>
@@ -5630,7 +5631,7 @@ public partial class SharedWorkerGlobalScope : WorkerGlobalScope
 	///<include file='Utils/Docs.generated.xml' path='docs/SharedWorkerGlobalScopeName/*'/>
 	public string Name { get; }
 	///<include file='Utils/Docs.generated.xml' path='docs/SharedWorkerGlobalScopeClose/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Close() { throw new System.NotImplementedException(); }
+	public Undefined Close() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/SharedWorkerGlobalScopeOnconnect/*'/>
 	public EventHandler Onconnect { get; set; }
 }
@@ -5650,11 +5651,11 @@ public partial class Worker : EventTarget, AbstractWorker
 	///<include file='Utils/Docs.generated.xml' path='docs/WorkerWorker/*'/>
 	public Worker(string scriptURL, WorkerOptions options) { }
 	///<include file='Utils/Docs.generated.xml' path='docs/WorkerTerminate/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Terminate() { throw new System.NotImplementedException(); }
+	public Undefined Terminate() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/WorkerPostMessage/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ PostMessage(dynamic message, List<object> transfer) { throw new System.NotImplementedException(); }
+	public Undefined PostMessage(dynamic message, List<object> transfer) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/WorkerPostMessage/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ PostMessage(dynamic message, StructuredSerializeOptions options) { throw new System.NotImplementedException(); }
+	public Undefined PostMessage(dynamic message, StructuredSerializeOptions options) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/WorkerOnmessage/*'/>
 	public EventHandler Onmessage { get; set; }
 	///<include file='Utils/Docs.generated.xml' path='docs/WorkerOnmessageerror/*'/>
@@ -5745,7 +5746,7 @@ public partial class WorkletGlobalScope
 public partial class Worklet
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/WorkletAddModule/*'/>
-	public Task<CSharpToJavaScript.Utils.Unsupported /*undefined*/> AddModule(string moduleURL, WorkletOptions options) { throw new System.NotImplementedException(); }
+	public Task<Undefined> AddModule(string moduleURL, WorkletOptions options) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs.generated.xml' path='docs/WorkletOptions/*'/>
@@ -5768,7 +5769,7 @@ public partial class Storage
 	
 	
 	///<include file='Utils/Docs.generated.xml' path='docs/StorageClear/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Clear() { throw new System.NotImplementedException(); }
+	public Undefined Clear() { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs.generated.xml' path='docs/WindowSessionStorage/*'/>
@@ -5806,7 +5807,7 @@ public partial class StorageEvent : Event
 	///<include file='Utils/Docs.generated.xml' path='docs/StorageEventStorageArea/*'/>
 	public Storage? StorageArea { get; }
 	///<include file='Utils/Docs.generated.xml' path='docs/StorageEventInitStorageEvent/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ InitStorageEvent(string type, bool bubbles, bool cancelable, string? key, string? oldValue, string? newValue, string url, Storage? storageArea) { throw new System.NotImplementedException(); }
+	public Undefined InitStorageEvent(string type, bool bubbles, bool cancelable, string? key, string? oldValue, string? newValue, string url, Storage? storageArea) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs.generated.xml' path='docs/StorageEventInit/*'/>
@@ -5866,10 +5867,10 @@ public partial class HTMLMarqueeElement : HTMLElement
 	public string Width { get; set; }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMarqueeElementStart/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Start() { throw new System.NotImplementedException(); }
+	public Undefined Start() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/HTMLMarqueeElementStop/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Stop() { throw new System.NotImplementedException(); }
+	public Undefined Stop() { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs.generated.xml' path='docs/HTMLFrameSetElement/*'/>
@@ -6344,11 +6345,11 @@ public partial class Document
 	///<include file='Utils/Docs.generated.xml' path='docs/DocumentApplets/*'/>
 	public HTMLCollection Applets { get; }
 	///<include file='Utils/Docs.generated.xml' path='docs/DocumentClear/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Clear() { throw new System.NotImplementedException(); }
+	public Undefined Clear() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/DocumentCaptureEvents/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ CaptureEvents() { throw new System.NotImplementedException(); }
+	public Undefined CaptureEvents() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/DocumentReleaseEvents/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ ReleaseEvents() { throw new System.NotImplementedException(); }
+	public Undefined ReleaseEvents() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/DocumentAll/*'/>
 	public HTMLAllCollection All { get; }
 }
@@ -6357,9 +6358,9 @@ public partial class Document
 public partial class Window
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/WindowCaptureEvents/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ CaptureEvents() { throw new System.NotImplementedException(); }
+	public Undefined CaptureEvents() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/WindowReleaseEvents/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ ReleaseEvents() { throw new System.NotImplementedException(); }
+	public Undefined ReleaseEvents() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/WindowExternal/*'/>
 	public External External { get; }
 }
@@ -6369,9 +6370,9 @@ public partial class Window
 public partial class External
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/ExternalAddSearchProvider/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ AddSearchProvider() { throw new System.NotImplementedException(); }
+	public Undefined AddSearchProvider() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/ExternalIsSearchProviderInstalled/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ IsSearchProviderInstalled() { throw new System.NotImplementedException(); }
+	public Undefined IsSearchProviderInstalled() { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs.generated.xml' path='docs/Notification/*'/>
@@ -6413,7 +6414,7 @@ public partial class Notification : EventTarget
 	///<include file='Utils/Docs.generated.xml' path='docs/NotificationVibrate/*'/>
 	public ulong[] Vibrate { get; }
 	///<include file='Utils/Docs.generated.xml' path='docs/NotificationTimestamp/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*EpochTimeStamp*/ Timestamp { get; }
+	public Unsupported /*EpochTimeStamp*/ Timestamp { get; }
 	///<include file='Utils/Docs.generated.xml' path='docs/NotificationRenotify/*'/>
 	public bool Renotify { get; }
 	///<include file='Utils/Docs.generated.xml' path='docs/NotificationSilent/*'/>
@@ -6425,7 +6426,7 @@ public partial class Notification : EventTarget
 	///<include file='Utils/Docs.generated.xml' path='docs/NotificationActions/*'/>
 	public NotificationAction[] Actions { get; }
 	///<include file='Utils/Docs.generated.xml' path='docs/NotificationClose/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Close() { throw new System.NotImplementedException(); }
+	public Undefined Close() { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs.generated.xml' path='docs/NotificationOptions/*'/>
@@ -6447,9 +6448,9 @@ public partial class NotificationOptions
 	///<include file='Utils/Docs.generated.xml' path='docs/NotificationOptionsBadge/*'/>
 	public string Badge;
 	///<include file='Utils/Docs.generated.xml' path='docs/NotificationOptionsVibrate/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*VibratePattern*/ Vibrate;
+	public Unsupported /*VibratePattern*/ Vibrate;
 	///<include file='Utils/Docs.generated.xml' path='docs/NotificationOptionsTimestamp/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*EpochTimeStamp*/ Timestamp;
+	public Unsupported /*EpochTimeStamp*/ Timestamp;
 	///<include file='Utils/Docs.generated.xml' path='docs/NotificationOptionsRenotify/*'/>
 	public bool Renotify;
 	///<include file='Utils/Docs.generated.xml' path='docs/NotificationOptionsSilent/*'/>
@@ -6509,7 +6510,7 @@ public partial class GetNotificationOptions
 public partial class ServiceWorkerRegistration
 {
 	///<include file='Utils/Docs.generated.xml' path='docs/ServiceWorkerRegistrationShowNotification/*'/>
-	public Task<CSharpToJavaScript.Utils.Unsupported /*undefined*/> ShowNotification(string title, NotificationOptions options) { throw new System.NotImplementedException(); }
+	public Task<Undefined> ShowNotification(string title, NotificationOptions options) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/ServiceWorkerRegistrationGetNotifications/*'/>
 	public Task<List<Notification>> GetNotifications(GetNotificationOptions filter) { throw new System.NotImplementedException(); }
 }
@@ -6619,9 +6620,9 @@ public partial class URLSearchParams
 	///<include file='Utils/Docs.generated.xml' path='docs/URLSearchParamsURLSearchParams/*'/>
 	public URLSearchParams(Union47 init) { }
 	///<include file='Utils/Docs.generated.xml' path='docs/URLSearchParamsAppend/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Append(string name, string value) { throw new System.NotImplementedException(); }
+	public Undefined Append(string name, string value) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/URLSearchParamsDelete/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Delete(string name) { throw new System.NotImplementedException(); }
+	public Undefined Delete(string name) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/URLSearchParamsGet/*'/>
 	public string? Get(string name) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/URLSearchParamsGetAll/*'/>
@@ -6629,9 +6630,9 @@ public partial class URLSearchParams
 	///<include file='Utils/Docs.generated.xml' path='docs/URLSearchParamsHas/*'/>
 	public bool Has(string name) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/URLSearchParamsSet/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Set(string name, string value) { throw new System.NotImplementedException(); }
+	public Undefined Set(string name, string value) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/URLSearchParamsSort/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Sort() { throw new System.NotImplementedException(); }
+	public Undefined Sort() { throw new System.NotImplementedException(); }
 	public string this[int i]  {  get { throw new System.NotImplementedException(); }  set { throw new System.NotImplementedException(); }  } 
 	
 }
@@ -6772,11 +6773,11 @@ public partial class XMLHttpRequest : XMLHttpRequestEventTarget
 	///<include file='Utils/Docs.generated.xml' path='docs/XMLHttpRequestReadyState/*'/>
 	public ushort ReadyState { get; }
 	///<include file='Utils/Docs.generated.xml' path='docs/XMLHttpRequestOpen/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Open(string method, string url) { throw new System.NotImplementedException(); }
+	public Undefined Open(string method, string url) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/XMLHttpRequestOpen/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Open(string method, string url, bool async, string? username, string? password) { throw new System.NotImplementedException(); }
+	public Undefined Open(string method, string url, bool async, string? username, string? password) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/XMLHttpRequestSetRequestHeader/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ SetRequestHeader(string name, string value) { throw new System.NotImplementedException(); }
+	public Undefined SetRequestHeader(string name, string value) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/XMLHttpRequestTimeout/*'/>
 	public ulong Timeout { get; set; }
 	///<include file='Utils/Docs.generated.xml' path='docs/XMLHttpRequestWithCredentials/*'/>
@@ -6784,9 +6785,9 @@ public partial class XMLHttpRequest : XMLHttpRequestEventTarget
 	///<include file='Utils/Docs.generated.xml' path='docs/XMLHttpRequestUpload/*'/>
 	public XMLHttpRequestUpload Upload { get; }
 	///<include file='Utils/Docs.generated.xml' path='docs/XMLHttpRequestSend/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Send(Union50? body) { throw new System.NotImplementedException(); }
+	public Undefined Send(Union50? body) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/XMLHttpRequestAbort/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Abort() { throw new System.NotImplementedException(); }
+	public Undefined Abort() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/XMLHttpRequestResponseURL/*'/>
 	public string ResponseURL { get; }
 	///<include file='Utils/Docs.generated.xml' path='docs/XMLHttpRequestStatus/*'/>
@@ -6798,7 +6799,7 @@ public partial class XMLHttpRequest : XMLHttpRequestEventTarget
 	///<include file='Utils/Docs.generated.xml' path='docs/XMLHttpRequestGetAllResponseHeaders/*'/>
 	public string GetAllResponseHeaders() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/XMLHttpRequestOverrideMimeType/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ OverrideMimeType(string mime) { throw new System.NotImplementedException(); }
+	public Undefined OverrideMimeType(string mime) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/XMLHttpRequestResponseType/*'/>
 	public XMLHttpRequestResponseType ResponseType { get; set; }
 	///<include file='Utils/Docs.generated.xml' path='docs/XMLHttpRequestResponse/*'/>
@@ -6817,11 +6818,11 @@ public partial class FormData
 	///<include file='Utils/Docs.generated.xml' path='docs/FormDataFormData/*'/>
 	public FormData(HTMLFormElement form) { }
 	///<include file='Utils/Docs.generated.xml' path='docs/FormDataAppend/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Append(string name, string value) { throw new System.NotImplementedException(); }
+	public Undefined Append(string name, string value) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/FormDataAppend/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Append(string name, CSharpToJavaScript.Utils.Unsupported /*Blob*/ blobValue, string filename) { throw new System.NotImplementedException(); }
+	public Undefined Append(string name, Unsupported /*Blob*/ blobValue, string filename) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/FormDataDelete/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Delete(string name) { throw new System.NotImplementedException(); }
+	public Undefined Delete(string name) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/FormDataGet/*'/>
 	public FormDataEntryValue? Get(string name) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/FormDataGetAll/*'/>
@@ -6829,9 +6830,9 @@ public partial class FormData
 	///<include file='Utils/Docs.generated.xml' path='docs/FormDataHas/*'/>
 	public bool Has(string name) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/FormDataSet/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Set(string name, string value) { throw new System.NotImplementedException(); }
+	public Undefined Set(string name, string value) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs.generated.xml' path='docs/FormDataSet/*'/>
-	public CSharpToJavaScript.Utils.Unsupported /*undefined*/ Set(string name, CSharpToJavaScript.Utils.Unsupported /*Blob*/ blobValue, string filename) { throw new System.NotImplementedException(); }
+	public Undefined Set(string name, Unsupported /*Blob*/ blobValue, string filename) { throw new System.NotImplementedException(); }
 	public string this[int i]  {  get { throw new System.NotImplementedException(); }  set { throw new System.NotImplementedException(); }  } 
 }
 
@@ -6865,7 +6866,7 @@ public struct Union0
 {
 	public dynamic Value { get; set; }
 	public static implicit operator Union0(Event value){return new Union0 { Value = value };}
-	public static implicit operator Union0(CSharpToJavaScript.Utils.Unsupported /*undefined*/ value){return new Union0 { Value = value };}
+	public static implicit operator Union0(Undefined value){return new Union0 { Value = value };}
 }
 
 public struct Union1
@@ -6934,7 +6935,7 @@ public struct Union9
 public struct Union10
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union10(CSharpToJavaScript.Utils.Unsupported /*Blob*/ value){return new Union10 { Value = value };}
+	public static implicit operator Union10(Unsupported /*Blob*/ value){return new Union10 { Value = value };}
 	public static implicit operator Union10(BufferSource value){return new Union10 { Value = value };}
 	public static implicit operator Union10(FormData value){return new Union10 { Value = value };}
 	public static implicit operator Union10(URLSearchParams value){return new Union10 { Value = value };}
@@ -6944,7 +6945,7 @@ public struct Union10
 public struct Union11
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union11(CSharpToJavaScript.Utils.Unsupported /*ReadableStream*/ value){return new Union11 { Value = value };}
+	public static implicit operator Union11(Unsupported /*ReadableStream*/ value){return new Union11 { Value = value };}
 	public static implicit operator Union11(XMLHttpRequestBodyInit value){return new Union11 { Value = value };}
 }
 
@@ -6994,7 +6995,7 @@ public struct Union18
 {
 	public dynamic Value { get; set; }
 	public static implicit operator Union18(HTMLScriptElement value){return new Union18 { Value = value };}
-	public static implicit operator Union18(CSharpToJavaScript.Utils.Unsupported /*SVGScriptElement*/ value){return new Union18 { Value = value };}
+	public static implicit operator Union18(Unsupported /*SVGScriptElement*/ value){return new Union18 { Value = value };}
 }
 
 public struct Union19
@@ -7008,7 +7009,7 @@ public struct Union19
 public struct Union20
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union20(CSharpToJavaScript.Utils.Unsupported /*MediaStream*/ value){return new Union20 { Value = value };}
+	public static implicit operator Union20(Unsupported /*MediaStream*/ value){return new Union20 { Value = value };}
 }
 
 public struct Union21
@@ -7060,14 +7061,14 @@ public struct Union27
 	public dynamic Value { get; set; }
 	public static implicit operator Union27(CanvasRenderingContext2D value){return new Union27 { Value = value };}
 	public static implicit operator Union27(ImageBitmapRenderingContext value){return new Union27 { Value = value };}
-	public static implicit operator Union27(CSharpToJavaScript.Utils.Unsupported /*WebGLRenderingContext*/ value){return new Union27 { Value = value };}
+	public static implicit operator Union27(Unsupported /*WebGLRenderingContext*/ value){return new Union27 { Value = value };}
 }
 
 public struct Union28
 {
 	public dynamic Value { get; set; }
 	public static implicit operator Union28(HTMLImageElement value){return new Union28 { Value = value };}
-	public static implicit operator Union28(CSharpToJavaScript.Utils.Unsupported /*SVGImageElement*/ value){return new Union28 { Value = value };}
+	public static implicit operator Union28(Unsupported /*SVGImageElement*/ value){return new Union28 { Value = value };}
 }
 
 public struct Union29
@@ -7078,7 +7079,7 @@ public struct Union29
 	public static implicit operator Union29(HTMLCanvasElement value){return new Union29 { Value = value };}
 	public static implicit operator Union29(ImageBitmap value){return new Union29 { Value = value };}
 	public static implicit operator Union29(OffscreenCanvas value){return new Union29 { Value = value };}
-	public static implicit operator Union29(CSharpToJavaScript.Utils.Unsupported /*VideoFrame*/ value){return new Union29 { Value = value };}
+	public static implicit operator Union29(Unsupported /*VideoFrame*/ value){return new Union29 { Value = value };}
 }
 
 public struct Union30
@@ -7115,14 +7116,14 @@ public struct Union35
 {
 	public dynamic Value { get; set; }
 	public static implicit operator Union35(double value){return new Union35 { Value = value };}
-	public static implicit operator Union35(CSharpToJavaScript.Utils.Unsupported /*DOMPointInit*/ value){return new Union35 { Value = value };}
+	public static implicit operator Union35(Unsupported /*DOMPointInit*/ value){return new Union35 { Value = value };}
 }
 
 public struct Union34
 {
 	public dynamic Value { get; set; }
 	public static implicit operator Union34(double value){return new Union34 { Value = value };}
-	public static implicit operator Union34(CSharpToJavaScript.Utils.Unsupported /*DOMPointInit*/ value){return new Union34 { Value = value };}
+	public static implicit operator Union34(Unsupported /*DOMPointInit*/ value){return new Union34 { Value = value };}
 	public static implicit operator Union34(List<Union35> value){return new Union34 { Value = value };}
 }
 
@@ -7145,20 +7146,20 @@ public struct Union38
 	public dynamic Value { get; set; }
 	public static implicit operator Union38(OffscreenCanvasRenderingContext2D value){return new Union38 { Value = value };}
 	public static implicit operator Union38(ImageBitmapRenderingContext value){return new Union38 { Value = value };}
-	public static implicit operator Union38(CSharpToJavaScript.Utils.Unsupported /*WebGLRenderingContext*/ value){return new Union38 { Value = value };}
+	public static implicit operator Union38(Unsupported /*WebGLRenderingContext*/ value){return new Union38 { Value = value };}
 }
 
 public struct Union39
 {
 	public dynamic Value { get; set; }
 	public static implicit operator Union39(CustomElementConstructor value){return new Union39 { Value = value };}
-	public static implicit operator Union39(CSharpToJavaScript.Utils.Unsupported /*undefined*/ value){return new Union39 { Value = value };}
+	public static implicit operator Union39(Undefined value){return new Union39 { Value = value };}
 }
 
 public struct Union40
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union40(CSharpToJavaScript.Utils.Unsupported /*File*/ value){return new Union40 { Value = value };}
+	public static implicit operator Union40(Unsupported /*File*/ value){return new Union40 { Value = value };}
 	public static implicit operator Union40(string value){return new Union40 { Value = value };}
 	public static implicit operator Union40(FormData value){return new Union40 { Value = value };}
 }
@@ -7166,7 +7167,7 @@ public struct Union40
 public struct Union41
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union41(CSharpToJavaScript.Utils.Unsupported /*File*/ value){return new Union41 { Value = value };}
+	public static implicit operator Union41(Unsupported /*File*/ value){return new Union41 { Value = value };}
 	public static implicit operator Union41(string value){return new Union41 { Value = value };}
 	public static implicit operator Union41(FormData value){return new Union41 { Value = value };}
 }
@@ -7189,7 +7190,7 @@ public struct Union44
 {
 	public dynamic Value { get; set; }
 	public static implicit operator Union44(CanvasImageSource value){return new Union44 { Value = value };}
-	public static implicit operator Union44(CSharpToJavaScript.Utils.Unsupported /*Blob*/ value){return new Union44 { Value = value };}
+	public static implicit operator Union44(Unsupported /*Blob*/ value){return new Union44 { Value = value };}
 	public static implicit operator Union44(ImageData value){return new Union44 { Value = value };}
 }
 
@@ -7198,7 +7199,7 @@ public struct Union45
 	public dynamic Value { get; set; }
 	public static implicit operator Union45(Window value){return new Union45 { Value = value };}
 	public static implicit operator Union45(MessagePort value){return new Union45 { Value = value };}
-	public static implicit operator Union45(CSharpToJavaScript.Utils.Unsupported /*ServiceWorker*/ value){return new Union45 { Value = value };}
+	public static implicit operator Union45(Unsupported /*ServiceWorker*/ value){return new Union45 { Value = value };}
 }
 
 public struct Union46
@@ -7225,7 +7226,7 @@ public struct Union48
 	public static implicit operator Union48(System.Byte value){return new Union48 { Value = value };}
 	public static implicit operator Union48(System.UInt16 value){return new Union48 { Value = value };}
 	public static implicit operator Union48(System.UInt32 value){return new Union48 { Value = value };}
-	public static implicit operator Union48(CSharpToJavaScript.Utils.Unsupported /*Uint8ClampedArray*/ value){return new Union48 { Value = value };}
+	public static implicit operator Union48(Unsupported /*Uint8ClampedArray*/ value){return new Union48 { Value = value };}
 	public static implicit operator Union48(System.Int64 value){return new Union48 { Value = value };}
 	public static implicit operator Union48(System.UInt64 value){return new Union48 { Value = value };}
 	public static implicit operator Union48(System.Single value){return new Union48 { Value = value };}
@@ -7249,7 +7250,7 @@ public struct Union50
 public struct Union51
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union51(CSharpToJavaScript.Utils.Unsupported /*File*/ value){return new Union51 { Value = value };}
+	public static implicit operator Union51(Unsupported /*File*/ value){return new Union51 { Value = value };}
 	public static implicit operator Union51(string value){return new Union51 { Value = value };}
 }
 

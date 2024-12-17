@@ -1,4 +1,4 @@
-//11.07.2023 12:45:05
+//15.07.2023 16:32:33
 using static CSharpToJavaScript.APIs.JS.GlobalObject;
 using CSharpToJavaScript.Utils;
 using System.Collections.Generic;
@@ -6862,6 +6862,9 @@ public partial class ProgressEventInit : EventInit
 	public ulong Total;
 }
 
+///<summary>
+///<see cref="Event"/> or <see cref="Undefined"/>
+///</summary>
 public struct Union0
 {
 	public dynamic Value { get; set; }
@@ -6869,6 +6872,9 @@ public struct Union0
 	public static implicit operator Union0(Undefined value){return new Union0 { Value = value };}
 }
 
+///<summary>
+///<see cref="AddEventListenerOptions"/> or <see cref="bool"/>
+///</summary>
 public struct Union1
 {
 	public dynamic Value { get; set; }
@@ -6876,6 +6882,9 @@ public struct Union1
 	public static implicit operator Union1(bool value){return new Union1 { Value = value };}
 }
 
+///<summary>
+///<see cref="EventListenerOptions"/> or <see cref="bool"/>
+///</summary>
 public struct Union2
 {
 	public dynamic Value { get; set; }
@@ -6883,6 +6892,9 @@ public struct Union2
 	public static implicit operator Union2(bool value){return new Union2 { Value = value };}
 }
 
+///<summary>
+///<see cref="Node"/> or <see cref="string"/>
+///</summary>
 public struct Union3
 {
 	public dynamic Value { get; set; }
@@ -6890,6 +6902,9 @@ public struct Union3
 	public static implicit operator Union3(string value){return new Union3 { Value = value };}
 }
 
+///<summary>
+///<see cref="Node"/> or <see cref="string"/>
+///</summary>
 public struct Union4
 {
 	public dynamic Value { get; set; }
@@ -6897,6 +6912,9 @@ public struct Union4
 	public static implicit operator Union4(string value){return new Union4 { Value = value };}
 }
 
+///<summary>
+///<see cref="Node"/> or <see cref="string"/>
+///</summary>
 public struct Union5
 {
 	public dynamic Value { get; set; }
@@ -6904,6 +6922,9 @@ public struct Union5
 	public static implicit operator Union5(string value){return new Union5 { Value = value };}
 }
 
+///<summary>
+///<see cref="Node"/> or <see cref="string"/>
+///</summary>
 public struct Union6
 {
 	public dynamic Value { get; set; }
@@ -6911,6 +6932,9 @@ public struct Union6
 	public static implicit operator Union6(string value){return new Union6 { Value = value };}
 }
 
+///<summary>
+///<see cref="Node"/> or <see cref="string"/>
+///</summary>
 public struct Union7
 {
 	public dynamic Value { get; set; }
@@ -6918,6 +6942,9 @@ public struct Union7
 	public static implicit operator Union7(string value){return new Union7 { Value = value };}
 }
 
+///<summary>
+///<see cref="Node"/> or <see cref="string"/>
+///</summary>
 public struct Union8
 {
 	public dynamic Value { get; set; }
@@ -6925,6 +6952,9 @@ public struct Union8
 	public static implicit operator Union8(string value){return new Union8 { Value = value };}
 }
 
+///<summary>
+///<c>List{List{string}}</c> or <c>Dictionary{string, string}</c>
+///</summary>
 public struct Union9
 {
 	public dynamic Value { get; set; }
@@ -6932,6 +6962,9 @@ public struct Union9
 	public static implicit operator Union9(Dictionary<string, string> value){return new Union9 { Value = value };}
 }
 
+///<summary>
+///<see cref="Unsupported /*Blob*/"/> or <see cref="BufferSource"/> or <see cref="FormData"/> or <see cref="URLSearchParams"/> or <see cref="string"/>
+///</summary>
 public struct Union10
 {
 	public dynamic Value { get; set; }
@@ -6942,6 +6975,9 @@ public struct Union10
 	public static implicit operator Union10(string value){return new Union10 { Value = value };}
 }
 
+///<summary>
+///<see cref="Unsupported /*ReadableStream*/"/> or <see cref="XMLHttpRequestBodyInit"/>
+///</summary>
 public struct Union11
 {
 	public dynamic Value { get; set; }
@@ -6949,6 +6985,9 @@ public struct Union11
 	public static implicit operator Union11(XMLHttpRequestBodyInit value){return new Union11 { Value = value };}
 }
 
+///<summary>
+///<see cref="Request"/> or <see cref="string"/>
+///</summary>
 public struct Union12
 {
 	public dynamic Value { get; set; }
@@ -6956,6 +6995,9 @@ public struct Union12
 	public static implicit operator Union12(string value){return new Union12 { Value = value };}
 }
 
+///<summary>
+///<see cref="HTMLCollection"/> or <see cref="Element"/>
+///</summary>
 public struct Union13
 {
 	public dynamic Value { get; set; }
@@ -6963,6 +7005,9 @@ public struct Union13
 	public static implicit operator Union13(Element value){return new Union13 { Value = value };}
 }
 
+///<summary>
+///<see cref="HTMLCollection"/> or <see cref="Element"/>
+///</summary>
 public struct Union14
 {
 	public dynamic Value { get; set; }
@@ -6970,6 +7015,9 @@ public struct Union14
 	public static implicit operator Union14(Element value){return new Union14 { Value = value };}
 }
 
+///<summary>
+///<see cref="RadioNodeList"/> or <see cref="Element"/>
+///</summary>
 public struct Union15
 {
 	public dynamic Value { get; set; }
@@ -6977,6 +7025,9 @@ public struct Union15
 	public static implicit operator Union15(Element value){return new Union15 { Value = value };}
 }
 
+///<summary>
+///<see cref="HTMLOptionElement"/> or <see cref="HTMLOptGroupElement"/>
+///</summary>
 public struct Union16
 {
 	public dynamic Value { get; set; }
@@ -6984,6 +7035,9 @@ public struct Union16
 	public static implicit operator Union16(HTMLOptGroupElement value){return new Union16 { Value = value };}
 }
 
+///<summary>
+///<see cref="HTMLElement"/> or <see cref="long"/>
+///</summary>
 public struct Union17
 {
 	public dynamic Value { get; set; }
@@ -6991,6 +7045,9 @@ public struct Union17
 	public static implicit operator Union17(long value){return new Union17 { Value = value };}
 }
 
+///<summary>
+///<see cref="HTMLScriptElement"/> or <see cref="Unsupported /*SVGScriptElement*/"/>
+///</summary>
 public struct Union18
 {
 	public dynamic Value { get; set; }
@@ -6998,6 +7055,9 @@ public struct Union18
 	public static implicit operator Union18(Unsupported /*SVGScriptElement*/ value){return new Union18 { Value = value };}
 }
 
+///<summary>
+///<see cref="bool"/> or <see cref="double"/> or <see cref="string"/>
+///</summary>
 public struct Union19
 {
 	public dynamic Value { get; set; }
@@ -7006,12 +7066,18 @@ public struct Union19
 	public static implicit operator Union19(string value){return new Union19 { Value = value };}
 }
 
+///<summary>
+///<see cref="Unsupported /*MediaStream*/"/> or <see cref="Unsupported /*MediaSource*/"/> or <see cref="Unsupported /*Blob*/"/>
+///</summary>
 public struct Union20
 {
 	public dynamic Value { get; set; }
 	public static implicit operator Union20(Unsupported /*MediaStream*/ value){return new Union20 { Value = value };}
 }
 
+///<summary>
+///<see cref="VideoTrack"/> or <see cref="AudioTrack"/> or <see cref="TextTrack"/>
+///</summary>
 public struct Union21
 {
 	public dynamic Value { get; set; }
@@ -7020,6 +7086,9 @@ public struct Union21
 	public static implicit operator Union21(TextTrack value){return new Union21 { Value = value };}
 }
 
+///<summary>
+///<see cref="VideoTrack"/> or <see cref="AudioTrack"/> or <see cref="TextTrack"/>
+///</summary>
 public struct Union22
 {
 	public dynamic Value { get; set; }
@@ -7028,6 +7097,9 @@ public struct Union22
 	public static implicit operator Union22(TextTrack value){return new Union22 { Value = value };}
 }
 
+///<summary>
+///<see cref="RadioNodeList"/> or <see cref="Element"/>
+///</summary>
 public struct Union23
 {
 	public dynamic Value { get; set; }
@@ -7035,6 +7107,9 @@ public struct Union23
 	public static implicit operator Union23(Element value){return new Union23 { Value = value };}
 }
 
+///<summary>
+///<see cref="HTMLOptionElement"/> or <see cref="HTMLOptGroupElement"/>
+///</summary>
 public struct Union24
 {
 	public dynamic Value { get; set; }
@@ -7042,6 +7117,9 @@ public struct Union24
 	public static implicit operator Union24(HTMLOptGroupElement value){return new Union24 { Value = value };}
 }
 
+///<summary>
+///<see cref="HTMLElement"/> or <see cref="long"/>
+///</summary>
 public struct Union25
 {
 	public dynamic Value { get; set; }
@@ -7049,6 +7127,9 @@ public struct Union25
 	public static implicit operator Union25(long value){return new Union25 { Value = value };}
 }
 
+///<summary>
+///<see cref="Element"/> or <see cref="Text"/>
+///</summary>
 public struct Union26
 {
 	public dynamic Value { get; set; }
@@ -7056,6 +7137,9 @@ public struct Union26
 	public static implicit operator Union26(Text value){return new Union26 { Value = value };}
 }
 
+///<summary>
+///<see cref="CanvasRenderingContext2D"/> or <see cref="ImageBitmapRenderingContext"/> or <see cref="Unsupported /*WebGLRenderingContext*/"/> or <see cref="Unsupported /*WebGL2RenderingContext*/"/> or <see cref="Unsupported /*GPUCanvasContext*/"/>
+///</summary>
 public struct Union27
 {
 	public dynamic Value { get; set; }
@@ -7064,6 +7148,9 @@ public struct Union27
 	public static implicit operator Union27(Unsupported /*WebGLRenderingContext*/ value){return new Union27 { Value = value };}
 }
 
+///<summary>
+///<see cref="HTMLImageElement"/> or <see cref="Unsupported /*SVGImageElement*/"/>
+///</summary>
 public struct Union28
 {
 	public dynamic Value { get; set; }
@@ -7071,6 +7158,9 @@ public struct Union28
 	public static implicit operator Union28(Unsupported /*SVGImageElement*/ value){return new Union28 { Value = value };}
 }
 
+///<summary>
+///<see cref="HTMLOrSVGImageElement"/> or <see cref="HTMLVideoElement"/> or <see cref="HTMLCanvasElement"/> or <see cref="ImageBitmap"/> or <see cref="OffscreenCanvas"/> or <see cref="Unsupported /*VideoFrame*/"/>
+///</summary>
 public struct Union29
 {
 	public dynamic Value { get; set; }
@@ -7082,6 +7172,9 @@ public struct Union29
 	public static implicit operator Union29(Unsupported /*VideoFrame*/ value){return new Union29 { Value = value };}
 }
 
+///<summary>
+///<see cref="string"/> or <see cref="CanvasGradient"/> or <see cref="CanvasPattern"/>
+///</summary>
 public struct Union30
 {
 	public dynamic Value { get; set; }
@@ -7090,6 +7183,9 @@ public struct Union30
 	public static implicit operator Union30(CanvasPattern value){return new Union30 { Value = value };}
 }
 
+///<summary>
+///<see cref="string"/> or <see cref="CanvasGradient"/> or <see cref="CanvasPattern"/>
+///</summary>
 public struct Union31
 {
 	public dynamic Value { get; set; }
@@ -7098,6 +7194,9 @@ public struct Union31
 	public static implicit operator Union31(CanvasPattern value){return new Union31 { Value = value };}
 }
 
+///<summary>
+///<see cref="string"/> or <see cref="CanvasFilter"/>
+///</summary>
 public struct Union32
 {
 	public dynamic Value { get; set; }
@@ -7105,6 +7204,9 @@ public struct Union32
 	public static implicit operator Union32(CanvasFilter value){return new Union32 { Value = value };}
 }
 
+///<summary>
+///<see cref="CanvasFilterInput"/> or <c>List{CanvasFilterInput}</c>
+///</summary>
 public struct Union33
 {
 	public dynamic Value { get; set; }
@@ -7112,6 +7214,9 @@ public struct Union33
 	public static implicit operator Union33(List<CanvasFilterInput> value){return new Union33 { Value = value };}
 }
 
+///<summary>
+///<see cref="double"/> or <see cref="Unsupported /*DOMPointInit*/"/>
+///</summary>
 public struct Union35
 {
 	public dynamic Value { get; set; }
@@ -7119,6 +7224,9 @@ public struct Union35
 	public static implicit operator Union35(Unsupported /*DOMPointInit*/ value){return new Union35 { Value = value };}
 }
 
+///<summary>
+///<see cref="double"/> or <see cref="Unsupported /*DOMPointInit*/"/> or <c>List{Union35}</c>
+///</summary>
 public struct Union34
 {
 	public dynamic Value { get; set; }
@@ -7127,6 +7235,9 @@ public struct Union34
 	public static implicit operator Union34(List<Union35> value){return new Union34 { Value = value };}
 }
 
+///<summary>
+///<see cref="Path2D"/> or <see cref="string"/>
+///</summary>
 public struct Union36
 {
 	public dynamic Value { get; set; }
@@ -7134,6 +7245,9 @@ public struct Union36
 	public static implicit operator Union36(string value){return new Union36 { Value = value };}
 }
 
+///<summary>
+///<see cref="HTMLCanvasElement"/> or <see cref="OffscreenCanvas"/>
+///</summary>
 public struct Union37
 {
 	public dynamic Value { get; set; }
@@ -7141,6 +7255,9 @@ public struct Union37
 	public static implicit operator Union37(OffscreenCanvas value){return new Union37 { Value = value };}
 }
 
+///<summary>
+///<see cref="OffscreenCanvasRenderingContext2D"/> or <see cref="ImageBitmapRenderingContext"/> or <see cref="Unsupported /*WebGLRenderingContext*/"/> or <see cref="Unsupported /*WebGL2RenderingContext*/"/> or <see cref="Unsupported /*GPUCanvasContext*/"/>
+///</summary>
 public struct Union38
 {
 	public dynamic Value { get; set; }
@@ -7149,6 +7266,9 @@ public struct Union38
 	public static implicit operator Union38(Unsupported /*WebGLRenderingContext*/ value){return new Union38 { Value = value };}
 }
 
+///<summary>
+///<see cref="CustomElementConstructor"/> or <see cref="Undefined"/>
+///</summary>
 public struct Union39
 {
 	public dynamic Value { get; set; }
@@ -7156,6 +7276,9 @@ public struct Union39
 	public static implicit operator Union39(Undefined value){return new Union39 { Value = value };}
 }
 
+///<summary>
+///<see cref="Unsupported /*File*/"/> or <see cref="string"/> or <see cref="FormData"/>
+///</summary>
 public struct Union40
 {
 	public dynamic Value { get; set; }
@@ -7164,6 +7287,9 @@ public struct Union40
 	public static implicit operator Union40(FormData value){return new Union40 { Value = value };}
 }
 
+///<summary>
+///<see cref="Unsupported /*File*/"/> or <see cref="string"/> or <see cref="FormData"/>
+///</summary>
 public struct Union41
 {
 	public dynamic Value { get; set; }
@@ -7172,6 +7298,9 @@ public struct Union41
 	public static implicit operator Union41(FormData value){return new Union41 { Value = value };}
 }
 
+///<summary>
+///<see cref="Event"/> or <see cref="string"/>
+///</summary>
 public struct Union42
 {
 	public dynamic Value { get; set; }
@@ -7179,6 +7308,9 @@ public struct Union42
 	public static implicit operator Union42(string value){return new Union42 { Value = value };}
 }
 
+///<summary>
+///<see cref="string"/> or <see cref="Function"/>
+///</summary>
 public struct Union43
 {
 	public dynamic Value { get; set; }
@@ -7186,6 +7318,9 @@ public struct Union43
 	public static implicit operator Union43(Function value){return new Union43 { Value = value };}
 }
 
+///<summary>
+///<see cref="CanvasImageSource"/> or <see cref="Unsupported /*Blob*/"/> or <see cref="ImageData"/>
+///</summary>
 public struct Union44
 {
 	public dynamic Value { get; set; }
@@ -7194,6 +7329,9 @@ public struct Union44
 	public static implicit operator Union44(ImageData value){return new Union44 { Value = value };}
 }
 
+///<summary>
+///<see cref="Window"/> or <see cref="MessagePort"/> or <see cref="Unsupported /*ServiceWorker*/"/>
+///</summary>
 public struct Union45
 {
 	public dynamic Value { get; set; }
@@ -7202,6 +7340,9 @@ public struct Union45
 	public static implicit operator Union45(Unsupported /*ServiceWorker*/ value){return new Union45 { Value = value };}
 }
 
+///<summary>
+///<see cref="string"/> or <see cref="WorkerOptions"/>
+///</summary>
 public struct Union46
 {
 	public dynamic Value { get; set; }
@@ -7209,6 +7350,9 @@ public struct Union46
 	public static implicit operator Union46(WorkerOptions value){return new Union46 { Value = value };}
 }
 
+///<summary>
+///<c>List{List{string}}</c> or <c>Dictionary{string, string}</c> or <see cref="string"/>
+///</summary>
 public struct Union47
 {
 	public dynamic Value { get; set; }
@@ -7217,6 +7361,9 @@ public struct Union47
 	public static implicit operator Union47(string value){return new Union47 { Value = value };}
 }
 
+///<summary>
+///<see cref="System.SByte"/> or <see cref="System.Int16"/> or <see cref="System.Int32"/> or <see cref="System.Byte"/> or <see cref="System.UInt16"/> or <see cref="System.UInt32"/> or <see cref="Unsupported /*Uint8ClampedArray*/"/> or <see cref="System.Int64"/> or <see cref="System.UInt64"/> or <see cref="System.Single"/> or <see cref="System.Double"/> or <see cref="Unsupported /*DataView*/"/>
+///</summary>
 public struct Union48
 {
 	public dynamic Value { get; set; }
@@ -7233,6 +7380,9 @@ public struct Union48
 	public static implicit operator Union48(System.Double value){return new Union48 { Value = value };}
 }
 
+///<summary>
+///<see cref="ArrayBufferView"/> or <see cref="byte[]"/>
+///</summary>
 public struct Union49
 {
 	public dynamic Value { get; set; }
@@ -7240,6 +7390,9 @@ public struct Union49
 	public static implicit operator Union49(byte[] value){return new Union49 { Value = value };}
 }
 
+///<summary>
+///<see cref="Document"/> or <see cref="XMLHttpRequestBodyInit"/>
+///</summary>
 public struct Union50
 {
 	public dynamic Value { get; set; }
@@ -7247,6 +7400,9 @@ public struct Union50
 	public static implicit operator Union50(XMLHttpRequestBodyInit value){return new Union50 { Value = value };}
 }
 
+///<summary>
+///<see cref="Unsupported /*File*/"/> or <see cref="string"/>
+///</summary>
 public struct Union51
 {
 	public dynamic Value { get; set; }

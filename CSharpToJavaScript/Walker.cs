@@ -116,6 +116,9 @@ namespace CSharpToJavaScript
 				case SyntaxKind.MinusEqualsToken:
 				case SyntaxKind.AsteriskEqualsToken:
 				case SyntaxKind.SlashEqualsToken:
+				case SyntaxKind.WhileKeyword:
+				case SyntaxKind.InterpolatedStringTextToken:
+				case SyntaxKind.QuestionToken:
 				case SyntaxKind.EndOfFileToken:
 					{
 						VisitLeadingTrivia(token);
@@ -361,6 +364,7 @@ namespace CSharpToJavaScript
 						case SyntaxKind.BreakStatement:
 						case SyntaxKind.SwitchStatement:
 						case SyntaxKind.ContinueStatement:
+						case SyntaxKind.WhileStatement:
 							Visit(asNode);
 							break;
 						default:
@@ -488,6 +492,7 @@ namespace CSharpToJavaScript
 						case SyntaxKind.FalseLiteralExpression:
 						case SyntaxKind.TrueLiteralExpression:
 						case SyntaxKind.StringLiteralExpression:
+						case SyntaxKind.InterpolatedStringExpression:
 							{
 								Visit(asNode);
 								break;
@@ -1300,6 +1305,53 @@ namespace CSharpToJavaScript
 			}
 		}
 
+		public override void VisitInterpolatedStringExpression(InterpolatedStringExpressionSyntax node)
+		{
+			ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
+
+			for (int i = 0; i < nodesAndTokens.Count; i++)
+			{
+				SyntaxNode? asNode = nodesAndTokens[i].AsNode();
+
+				if (asNode != null)
+				{
+					SyntaxKind kind = asNode.Kind();
+
+					switch (kind)
+					{
+						case SyntaxKind.InterpolatedStringText:
+							Visit(asNode);
+							break;
+						case SyntaxKind.Interpolation:
+							{
+								JSSB.Append("$");
+								Visit(asNode);
+								break;
+							}
+						default:
+							SM.Log($"asNode : {kind}");
+							break;
+					}
+				}
+				else
+				{
+					SyntaxToken asToken = nodesAndTokens[i].AsToken();
+					SyntaxKind kind = asToken.Kind();
+
+					switch (kind)
+					{
+						case SyntaxKind.InterpolatedStringStartToken:
+						case SyntaxKind.InterpolatedStringEndToken:
+							JSSB.Append("`");
+							break;
+						default:
+							SM.Log($"asToken : {kind}");
+							break;
+					}
+				}
+			}
+		}
+
 		public override void VisitParenthesizedExpression(ParenthesizedExpressionSyntax node)
 		{
 			ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
@@ -1314,6 +1366,7 @@ namespace CSharpToJavaScript
 
 					switch (kind)
 					{
+						case SyntaxKind.LogicalOrExpression:
 						case SyntaxKind.AddExpression:
 							Visit(asNode);
 							break;

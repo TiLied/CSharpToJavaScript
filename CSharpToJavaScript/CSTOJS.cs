@@ -72,7 +72,7 @@ namespace CSharpToJavaScript
 		/// </summary>
 		/// <param name="path">Full path to cs file.</param>
 		/// <returns></returns>
-		public async Task Generate2Async(string path) 
+		public async Task GenerateAsync(string path) 
 		{
 			string fileCS = await File.ReadAllTextAsync(path);
 

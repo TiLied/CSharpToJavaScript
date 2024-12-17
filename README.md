@@ -3,9 +3,7 @@ Brute forcing conversion(generating) from C# to Javascript.
 
 This is a personal project with purpose to learn and understand better c# and js at the same time. Many stuff is not supported and some won't. Updates will be happening when I'm using this library.(irregular)
 
-[Nuget package](https://www.nuget.org/packages/CSharpToJavaScript/)
-
-[Try it online!](https://tilied.github.io/CSTOJS_Pages/BWA/)
+[Nuget package](https://www.nuget.org/packages/CSharpToJavaScript/)  | [Website](https://tilied.github.io/CSTOJS_Pages/) | [Try it online!](https://tilied.github.io/CSTOJS_Pages/BWA/) | [CLI](https://github.com/TiLied/CSTOJS_CLI) | [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=tilied.cstojs-vscode-ext) | [VS Extension](https://marketplace.visualstudio.com/items?itemName=tilied.cstojs-vs-ext)
 
 ### C#
 ```csharp
@@ -64,7 +62,6 @@ CSharp/Test.cs
 using static CSharpToJavaScript.APIs.JS.GlobalObject;
 
 namespace ConsoleAppTest.CSharp;
-
 public class Test
 {
 	public Test()
@@ -87,19 +84,23 @@ More examples [here](https://tilied.github.io/CSTOJS_Pages/articles/intro.html).
 
 ## Some Todos
 - [x] ~More comments in code, especially in [CSTOJSOptions](https://github.com/TiLied/CSharpToJavaScript/blob/master/CSharpToJavaScript/CSTOJSOptions.cs)~
-- [ ] Wiki?????
+- [ ] Wiki???????
 - [x] ~Better and more examples~ [Here](https://tilied.github.io/CSTOJS_Pages/articles/intro.html). WIP!
 - [x] ~Figure out how to do docs for [api](https://github.com/TiLied/CSharpToJavaScript/tree/master/CSharpToJavaScript/APIs/JS)~ [Docs](https://tilied.github.io/CSTOJS_Pages/) WIP!
 - [x] ~[CLI](https://learn.microsoft.com/en-us/dotnet/standard/commandline/)?~ [Here](https://github.com/TiLied/CSTOJS_CLI)
-- [ ] [Visual Studio extension](https://learn.microsoft.com/en-us/visualstudio/extensibility/starting-to-develop-visual-studio-extensions?view=vs-2022)?
-- [ ] [Visual Studio Code extension](https://code.visualstudio.com/api)??? Can I?
+- [x] ~[Visual Studio extension](https://learn.microsoft.com/en-us/visualstudio/extensibility/starting-to-develop-visual-studio-extensions?view=vs-2022)?~ [Here](https://marketplace.visualstudio.com/items?itemName=tilied.cstojs-vs-ext)
+- [x] ~[Visual Studio Code extension](https://code.visualstudio.com/api)??? Can I?~ [Here](https://marketplace.visualstudio.com/items?itemName=tilied.cstojs-vscode-ext)
 
 ## Related Repository 
 - Library for generating docs: https://github.com/TiLied/GenDocsLib
 - Library for generating csharp: https://github.com/TiLied/GenCSharpLib
 
 CLI for library: https://github.com/TiLied/CSTOJS_CLI
-  
+
+VS Code Extension using CLI: https://github.com/TiLied/CSTOJS_VSCode_Ext
+
+VS Extension using CLI: https://github.com/TiLied/CSTOJS_VS_Ext
+
 Website/documentation: https://github.com/TiLied/CSTOJS_Pages
 - Blazor WebAssembly: https://github.com/TiLied/CSTOJS_BWA
 

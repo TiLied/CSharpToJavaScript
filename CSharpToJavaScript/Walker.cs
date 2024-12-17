@@ -33,6 +33,8 @@ namespace CSharpToJavaScript
 		private bool _PropertyStatic = false;
 		private bool _ConstKeyword = false;
 
+		private int _EnumMembers = 0;
+
 		public Walker(CSTOJSOptions options, SemanticModel? model) : base(SyntaxWalkerDepth.Trivia)
 		{
 			_Log = this;
@@ -125,6 +127,8 @@ namespace CSharpToJavaScript
 				case SyntaxKind.QuestionToken:
 				case SyntaxKind.LessThanEqualsToken:
 				case SyntaxKind.ConstKeyword:
+				case SyntaxKind.PercentToken:
+				case SyntaxKind.QuestionQuestionToken:
 				case SyntaxKind.EndOfFileToken:
 					{
 						VisitLeadingTrivia(token);
@@ -227,7 +231,6 @@ namespace CSharpToJavaScript
 					switch (kind)
 					{
 						case SyntaxKind.InternalKeyword:
-							break;
 						case SyntaxKind.PublicKeyword:
 							VisitLeadingTrivia(asToken);
 							break;
@@ -516,6 +519,7 @@ namespace CSharpToJavaScript
 
 					switch (kind)
 					{
+						case SyntaxKind.ConditionalAccessExpression:
 						case SyntaxKind.PostDecrementExpression:
 						case SyntaxKind.InvocationExpression:
 						case SyntaxKind.SimpleAssignmentExpression:
@@ -570,6 +574,8 @@ namespace CSharpToJavaScript
 
 					switch (kind)
 					{
+						case SyntaxKind.SimpleLambdaExpression:
+						case SyntaxKind.SubtractExpression:
 						case SyntaxKind.EqualsExpression:
 						case SyntaxKind.AsExpression:
 						case SyntaxKind.MultiplyExpression:
@@ -592,21 +598,15 @@ namespace CSharpToJavaScript
 							VisitImplicitObjectCreationExpression(asNode as ImplicitObjectCreationExpressionSyntax);
 							break;
 						case SyntaxKind.AnonymousObjectCreationExpression:
-							{
-								VisitAnonymousObjectCreationExpression(asNode as AnonymousObjectCreationExpressionSyntax);
-								break;
-							}
+							VisitAnonymousObjectCreationExpression(asNode as AnonymousObjectCreationExpressionSyntax);
+							break;
 						case SyntaxKind.SimpleMemberAccessExpression:
 						case SyntaxKind.ElementAccessExpression:
-							{
-								Visit(asNode);
-								break;
-							}
+							Visit(asNode);
+							break;
 						case SyntaxKind.IdentifierName:
-							{
-								VisitIdentifierName(asNode as IdentifierNameSyntax);
-								break;
-							}
+							VisitIdentifierName(asNode as IdentifierNameSyntax);
+							break;
 						default:
 							_Log.ErrorLine($"asNode : {kind}");
 							break;
@@ -663,6 +663,121 @@ namespace CSharpToJavaScript
 							break;
 						case SyntaxKind.NewKeyword:
 							break;
+						default:
+							_Log.ErrorLine($"asToken : {kind}");
+							break;
+					}
+				}
+			}
+		}
+
+		public override void VisitEnumDeclaration(EnumDeclarationSyntax node)
+		{
+			ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
+
+			for (int i = 0; i < nodesAndTokens.Count; i++)
+			{
+				SyntaxNode? asNode = nodesAndTokens[i].AsNode();
+
+				if (asNode != null)
+				{
+					SyntaxKind kind = asNode.Kind();
+
+					switch (kind)
+					{
+						case SyntaxKind.EnumMemberDeclaration:
+							VisitEnumMemberDeclaration(asNode as EnumMemberDeclarationSyntax);
+							break;
+						default:
+							_Log.ErrorLine($"asNode : {kind}");
+							break;
+					}
+				}
+				else
+				{
+					SyntaxToken asToken = nodesAndTokens[i].AsToken();
+					SyntaxKind kind = asToken.Kind();
+
+					switch (kind)
+					{
+						case SyntaxKind.PrivateKeyword:
+						case SyntaxKind.PublicKeyword:
+							VisitLeadingTrivia(asToken);
+							break;
+						case SyntaxKind.EnumKeyword:
+							{
+								VisitLeadingTrivia(asToken);
+								JSSB.Append("const");
+								VisitTrailingTrivia(asToken);
+								break;
+							}
+						case SyntaxKind.IdentifierToken:
+							VisitLeadingTrivia(asToken);
+							VisitToken(asToken.WithoutTrivia());
+							JSSB.Append(" = ");
+							VisitTrailingTrivia(asToken);
+							break;
+						case SyntaxKind.CommaToken:
+						case SyntaxKind.OpenBraceToken:
+							VisitToken(asToken);
+							break;
+						case SyntaxKind.CloseBraceToken:
+							{
+								VisitToken(asToken);
+								_EnumMembers = 0;
+								break;
+							}
+						default:
+							_Log.ErrorLine($"asToken : {kind}");
+							break;
+					}
+				}
+			}
+		}
+
+		public override void VisitEnumMemberDeclaration(EnumMemberDeclarationSyntax node)
+		{
+			ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
+
+			for (int i = 0; i < nodesAndTokens.Count; i++)
+			{
+				SyntaxNode? asNode = nodesAndTokens[i].AsNode();
+
+				if (asNode != null)
+				{
+					SyntaxKind kind = asNode.Kind();
+
+					switch (kind)
+					{
+						case SyntaxKind.EqualsValueClause:
+							JSSB.Append(": ");
+							VisitLiteralExpression(((asNode as EqualsValueClauseSyntax).Value as LiteralExpressionSyntax));
+							break;
+						default:
+							_Log.ErrorLine($"asNode : {kind}");
+							break;
+					}
+				}
+				else
+				{
+					SyntaxToken asToken = nodesAndTokens[i].AsToken();
+					SyntaxKind kind = asToken.Kind();
+
+					switch (kind)
+					{
+						case SyntaxKind.IdentifierToken:
+							{
+								if (nodesAndTokens.Count == 1)
+								{
+									VisitLeadingTrivia(asToken);
+									VisitToken(asToken.WithoutTrivia());
+									JSSB.Append($" : {_EnumMembers++}");
+									VisitTrailingTrivia(asToken);
+								}
+								else
+									VisitToken(asToken);
+								break;
+							}
 						default:
 							_Log.ErrorLine($"asToken : {kind}");
 							break;
@@ -1240,6 +1355,7 @@ namespace CSharpToJavaScript
 
 					switch (kind)
 					{
+						case SyntaxKind.CommaToken:
 						case SyntaxKind.SemicolonToken:
 							VisitToken(asToken);
 							break;
@@ -1563,6 +1679,7 @@ namespace CSharpToJavaScript
 
 					switch (kind)
 					{
+						case SyntaxKind.CoalesceExpression:
 						case SyntaxKind.LogicalOrExpression:
 						case SyntaxKind.AddExpression:
 							Visit(asNode);
@@ -1621,6 +1738,7 @@ namespace CSharpToJavaScript
 					{
 						case SyntaxKind.PredefinedType:
 							break;
+						case SyntaxKind.InvocationExpression:
 						case SyntaxKind.SimpleMemberAccessExpression:
 							Visit(asNode);
 							break;
@@ -2518,7 +2636,9 @@ namespace CSharpToJavaScript
 									JSSB.Append($"{toAttribute.Convert(node.Identifier.Text)}");
 									return true;
 								}
-							case string _str when _str.Contains(nameof(Console.WriteLine)):
+							case string _str when 
+							_str.Contains(nameof(Console.WriteLine)) ||
+							_str.Contains(nameof(Console.Write)):
 								{
 									JSSB.Append($"log");
 									return true;
@@ -2538,7 +2658,9 @@ namespace CSharpToJavaScript
 									JSSB.Append($"Array");
 									return true;
 								}
-							case string _str when _str.Contains(nameof(List<dynamic>.Sort)):
+							case string _str when 
+							_str.Contains(nameof(List<dynamic>.Sort)) || 
+							_str.Contains(nameof(List<dynamic>.FindLast)):
 								{
 									toAttribute.To = ToAttribute.FirstCharToLowerCase;
 									JSSB.Append($"{toAttribute.Convert(node.Identifier.Text)}");
@@ -2575,6 +2697,7 @@ namespace CSharpToJavaScript
 									return true;
 								}
 							case string _str when
+							_str.Contains(nameof(string.Length)) ||
 							_str.Contains(nameof(string.Trim)) ||
 							_str.Contains(nameof(string.Substring)) ||
 							_str.Contains(nameof(string.StartsWith)) ||
@@ -2610,6 +2733,27 @@ namespace CSharpToJavaScript
 						switch (_name)
 						{
 							case string _str when _str.Contains(nameof(Array.Length)):
+								{
+									toAttribute.To = ToAttribute.FirstCharToLowerCase;
+									JSSB.Append($"{toAttribute.Convert(node.Identifier.Text)}");
+									return true;
+								}
+							default:
+								_Log.WarningLine($"WARNING! node: \"{node}\", typeSymbol: \"{typeSymbol}\", symbol: \"{symbol}\", Is not supported! USE \"CustomCSNamesToJS\"");
+								return false;
+						}
+					}
+				case string str when str.Contains(nameof(Math)):
+					{
+						string _name = symbol.Name;
+						switch (_name)
+						{
+							case string _str when _str == typeName:
+								{
+									JSSB.Append(nameof(Math));
+									return true;
+								}
+							case string _str when _str.Contains(nameof(Math.Sqrt)):
 								{
 									toAttribute.To = ToAttribute.FirstCharToLowerCase;
 									JSSB.Append($"{toAttribute.Convert(node.Identifier.Text)}");

@@ -13,11 +13,11 @@ namespace CSharpToJavaScript.APIs.JS
 		[To(ToAttribute.FirstCharToLowerCase)]
 		public static NumberPrototype Prototype { get; } = new();
 
-		public const double EPSILON = 2.2204460492503130808472633361816 * 10-16;
-		public const double MAX_SAFE_INTEGER = 9007199254740992;
-		public const double MAX_VALUE = 1.7976931348623157 * 10308;
+		public const double EPSILON = 2.2204460492503130808472633361816E-16;
+		public const double MAX_SAFE_INTEGER = 9007199254740991;
+		public const double MAX_VALUE = 1.79E+308;
 		public const double MIN_SAFE_INTEGER = -9007199254740991;
-		public const double MIN_VALUE = 5 * 10 -324;
+		public const double MIN_VALUE = 5e-324;
 		public GlobalObject.NaN NaN = new();
 		public const double NEGATIVE_INFINITY = double.NegativeInfinity;
 		public const double POSITIVE_INFINITY = double.PositiveInfinity;

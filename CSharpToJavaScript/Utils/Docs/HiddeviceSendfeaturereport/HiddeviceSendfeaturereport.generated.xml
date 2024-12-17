@@ -1,10 +1,10 @@
 <docs>
 <HIDDeviceSendFeatureReport>
 <summary>
-The <strong><c>sendFeatureReport()</c></strong> method of the <see cref="HIDDevice."/> interface sends a feature report to the HID device. Feature reports are a way for HID devices and applications to exchange non-standardized HID data.
+The <strong><c>sendFeatureReport()</c></strong> method of the <see cref="HIDDevice"/> interface sends a feature report to the HID device. Feature reports are a way for HID devices and applications to exchange non-standardized HID data.
 </summary>
 <remarks>
-<para>The <c>reportId</c> for each of the report formats that this device supports can be retrieved from <see cref="HIDDevice.Collections."/>.</para>
+<para>The <c>reportId</c> for each of the report formats that this device supports can be retrieved from <see cref="HIDDevice.Collections"/>.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HIDDevice/sendFeatureReport"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>A <see cref="Promise"/> that resolves with <c>undefined</c> once the report has been sent.</returns>

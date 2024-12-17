@@ -1,7 +1,7 @@
 <docs>
 <RTCInboundRtpStreamStatsFecPacketsReceived>
 <summary>
-The <strong><c>fecPacketsReceived</c></strong> property<br/>of the <see cref="RTCInboundRtpStreamStats."/> dictionary indicates how many<br/>Forward Error Correction (FEC) packets have been received by this RTP receiver<br/>from the remote peer.
+The <strong><c>fecPacketsReceived</c></strong> property<br/>of the <see cref="RTCInboundRtpStreamStats"/> dictionary indicates how many<br/>Forward Error Correction (FEC) packets have been received by this RTP receiver<br/>from the remote peer.
 </summary>
 <remarks>
 <para>An FEC packet provides parity information which can<br/>be used to attempt to reconstruct RTP data packets which have been corrupted in<br/>transit.</para>

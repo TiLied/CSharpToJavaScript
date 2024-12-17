@@ -1,12 +1,12 @@
 <docs>
 <PointerEventGetPredictedEvents>
 <summary>
-The <strong><c>getPredictedEvents()</c></strong> method of the <see cref="PointerEvent."/> interface returns a sequence of <c>PointerEvent</c> instances that are estimated future pointer positions.<br/>How the predicted positions are calculated depends on the user agent, but they are based on past points, current velocity, and trajectory.
+The <strong><c>getPredictedEvents()</c></strong> method of the <see cref="PointerEvent"/> interface returns a sequence of <c>PointerEvent</c> instances that are estimated future pointer positions.<br/>How the predicted positions are calculated depends on the user agent, but they are based on past points, current velocity, and trajectory.
 </summary>
 <remarks>
 <para>Applications can use the predicted events to &amp;quot;draw ahead&amp;quot; to a predicted position which may reduce perceived latency depending on the application&amp;apos;s interpretation of the predicted events and the use case.</para><para>For an illustration of predicted events, see <see href="https://w3c.github.io/pointerevents/#figure_predicted">Figure 8 in the specification</see>.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/getPredictedEvents"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A sequence of <see cref="'PointerEvent'."/> instances.</returns>
+<returns>A sequence of <see cref="'PointerEvent'"/> instances.</returns>
 </PointerEventGetPredictedEvents>
 </docs>

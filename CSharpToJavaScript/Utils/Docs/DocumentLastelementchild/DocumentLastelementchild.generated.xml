@@ -1,11 +1,11 @@
 <docs>
 <DocumentLastElementChild>
 <summary>
-The <strong><c>Document.lastElementChild</c></strong> read-only property<br/>returns the document's last child <see cref="Element."/>, or <c>null</c> if there<br/>are no child elements.
+The <strong><c>Document.lastElementChild</c></strong> read-only property<br/>returns the document's last child <see cref="Element"/>, or <c>null</c> if there<br/>are no child elements.
 </summary>
 <remarks>
-<para>For HTML documents, this is usually the only child, the root <c>&amp;lt;html&amp;gt;</c> element.</para><para>See <see cref="Element.LastElementChild."/> for the last child element of specific elements within a document.</para>
-<para>-<see cref="Element.LastElementChild."/><br/></para>
+<para>For HTML documents, this is usually the only child, the root <c>&amp;lt;html&amp;gt;</c> element.</para><para>See <see cref="Element.LastElementChild"/> for the last child element of specific elements within a document.</para>
+<para>-<see cref="Element.LastElementChild"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/lastElementChild"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>The root <c>&amp;lt;html&amp;gt;</c> element.</value>

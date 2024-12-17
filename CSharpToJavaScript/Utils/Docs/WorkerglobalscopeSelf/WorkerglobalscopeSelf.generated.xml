@@ -1,10 +1,10 @@
 <docs>
 <WorkerGlobalScopeSelf>
 <summary>
-The <strong><c>self</c></strong> read-only property of the <see cref="WorkerGlobalScope."/> interface returns a reference to the <c>WorkerGlobalScope</c> itself. Most of the time it is a specific scope like <see cref="DedicatedWorkerGlobalScope."/>, <see cref="SharedWorkerGlobalScope."/>, or <see cref="ServiceWorkerGlobalScope."/>.
+The <strong><c>self</c></strong> read-only property of the <see cref="WorkerGlobalScope"/> interface returns a reference to the <c>WorkerGlobalScope</c> itself. Most of the time it is a specific scope like <see cref="DedicatedWorkerGlobalScope"/>, <see cref="SharedWorkerGlobalScope"/>, or <see cref="ServiceWorkerGlobalScope"/>.
 </summary>
 <remarks>
-<para><see cref="WorkerGlobalScope."/></para>
+<para><see cref="WorkerGlobalScope"/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/self"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A global scope object (differs depending on the type of worker you are dealing with, as indicated above).</value>

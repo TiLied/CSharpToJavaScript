@@ -1,11 +1,11 @@
 <docs>
 <MediaTrackSettingsWidth>
 <summary>
-The <see cref="MediaTrackSettings."/> dictionary's <strong><c>width</c></strong><br/>property is an integer indicating the number of pixels wide<br/><see cref="MediaStreamTrack."/> is currently configured to be. This lets you determine<br/>what value was selected to comply with your specified constraints for this property&amp;apos;s<br/>value as described in the <see cref="MediaTrackConstraints.Width."/> property you<br/>provided when calling either <see cref="MediaDevices.GetUserMedia."/><br/>or <see cref="MediaStreamTrack.ApplyConstraints."/>.
+The <see cref="MediaTrackSettings"/> dictionary's <strong><c>width</c></strong><br/>property is an integer indicating the number of pixels wide<br/><see cref="MediaStreamTrack"/> is currently configured to be. This lets you determine<br/>what value was selected to comply with your specified constraints for this property&amp;apos;s<br/>value as described in the <see cref="MediaTrackConstraints.Width"/> property you<br/>provided when calling either <see cref="MediaDevices.GetUserMedia"/><br/>or <see cref="MediaStreamTrack.ApplyConstraints"/>.
 </summary>
 <remarks>
-<para>If needed, you can determine whether or not this constraint is supported by checking<br/>the value of <see cref="MediaTrackSupportedConstraints.Width."/> as returned by a call<br/>to <see cref="MediaDevices.GetSupportedConstraints."/>. However, typically this is<br/>unnecessary since browsers will ignore any constraints they&amp;apos;re unfamiliar with.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API">Media Capture and Streams API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints">Capabilities, constraints, and settings</see><br/>-<see cref="MediaTrackConstraints.Width."/><br/>-<see cref="MediaTrackSettings."/><br/></para>
+<para>If needed, you can determine whether or not this constraint is supported by checking<br/>the value of <see cref="MediaTrackSupportedConstraints.Width"/> as returned by a call<br/>to <see cref="MediaDevices.GetSupportedConstraints"/>. However, typically this is<br/>unnecessary since browsers will ignore any constraints they&amp;apos;re unfamiliar with.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API">Media Capture and Streams API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints">Capabilities, constraints, and settings</see><br/>-<see cref="MediaTrackConstraints.Width"/><br/>-<see cref="MediaTrackSettings"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/width"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>An integer value indicating the width, in pixels, of the video track as currently configured.</value>

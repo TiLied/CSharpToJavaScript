@@ -1,11 +1,11 @@
 <docs>
 <MouseEvent>
 <summary>
-The <strong><c>MouseEvent</c></strong> interface represents events that occur due to the user interacting with a pointing device (such as a mouse).<br/>Common events using this interface include <see cref="Element/click_event."/>, <see cref="Element/dblclick_event."/>, <see cref="Element/mouseup_event."/>, <see cref="Element/mousedown_event."/>.
+The <strong><c>MouseEvent</c></strong> interface represents events that occur due to the user interacting with a pointing device (such as a mouse).<br/>Common events using this interface include <see cref="Element/click_event"/>, <see cref="Element/dblclick_event"/>, <see cref="Element/mouseup_event"/>, <see cref="Element/mousedown_event"/>.
 </summary>
 <remarks>
-<para><c>MouseEvent</c> derives from <see cref="UIEvent."/>, which in turn derives from <see cref="Event."/>.<br/>Though the <see cref="MouseEvent.InitMouseEvent."/> method is kept for backward compatibility, creating of a <c>MouseEvent</c> object should be done using the <see cref="MouseEvent.MouseEvent."/> constructor.</para><para>Several more specific events are based on <c>MouseEvent</c>, including <see cref="WheelEvent."/>, <see cref="DragEvent."/>, and <see cref="PointerEvent."/>.</para><para></para>
-<para>-Its direct parent, <see cref="UIEvent."/><br/>-<see cref="PointerEvent."/>: For advanced pointer events, including multi-touch<br/></para>
+<para><c>MouseEvent</c> derives from <see cref="UIEvent"/>, which in turn derives from <see cref="Event"/>.<br/>Though the <see cref="MouseEvent.InitMouseEvent"/> method is kept for backward compatibility, creating of a <c>MouseEvent</c> object should be done using the <see cref="MouseEvent.MouseEvent"/> constructor.</para><para>Several more specific events are based on <c>MouseEvent</c>, including <see cref="WheelEvent"/>, <see cref="DragEvent"/>, and <see cref="PointerEvent"/>.</para><para></para>
+<para>-Its direct parent, <see cref="UIEvent"/><br/>-<see cref="PointerEvent"/>: For advanced pointer events, including multi-touch<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </MouseEvent>

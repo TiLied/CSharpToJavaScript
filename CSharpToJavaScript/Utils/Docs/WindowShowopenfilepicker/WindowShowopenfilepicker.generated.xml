@@ -1,12 +1,12 @@
 <docs>
 <WindowShowOpenFilePicker>
 <summary>
-The <strong><c>showOpenFilePicker()</c></strong> method of the<br/><see cref="Window."/> interface shows a file picker that allows a user to select a file<br/>or multiple files and returns a handle for the file(s).
+The <strong><c>showOpenFilePicker()</c></strong> method of the<br/><see cref="Window"/> interface shows a file picker that allows a user to select a file<br/>or multiple files and returns a handle for the file(s).
 </summary>
 <remarks>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_System_API">File System API</see><br/>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/file-system-access">The File System Access API: simplifying access to local files</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Window/showOpenFilePicker"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A {{jsxref("Promise")}} whose fulfillment handler receives an {{jsxref('Array')}} of <see cref="'FileSystemFileHandle'."/> objects.</returns>
+<returns>A {{jsxref("Promise")}} whose fulfillment handler receives an {{jsxref('Array')}} of <see cref="'FileSystemFileHandle'"/> objects.</returns>
 </WindowShowOpenFilePicker>
 </docs>

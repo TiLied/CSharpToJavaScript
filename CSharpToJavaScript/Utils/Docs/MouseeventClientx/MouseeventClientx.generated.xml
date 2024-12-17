@@ -1,11 +1,11 @@
 <docs>
 <MouseEventClientX>
 <summary>
-The <strong><c>clientX</c></strong> read-only property of the <see cref="MouseEvent."/> interface provides the horizontal coordinate within the application's {{glossary("viewport")}} at which the event occurred (as opposed to the coordinate within the page).
+The <strong><c>clientX</c></strong> read-only property of the <see cref="MouseEvent"/> interface provides the horizontal coordinate within the application's {{glossary("viewport")}} at which the event occurred (as opposed to the coordinate within the page).
 </summary>
 <remarks>
 <para>For example, clicking on the left edge of the viewport will always result in a mouse event with a <c>clientX</c> value of <c>0</c>, regardless of whether the page is scrolled horizontally.</para>
-<para>-<see cref="MouseEvent."/><br/>-<see cref="MouseEvent.ClientY."/><br/>-<see cref="MouseEvent.ScreenX."/> / <see cref="MouseEvent.ScreenY."/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems">Coordinate systems</see><br/></para>
+<para>-<see cref="MouseEvent"/><br/>-<see cref="MouseEvent.ClientY"/><br/>-<see cref="MouseEvent.ScreenX"/> / <see cref="MouseEvent.ScreenY"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems">Coordinate systems</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/clientX"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A <c>double</c> floating point value.</value>

@@ -1,7 +1,7 @@
 <docs>
 <PeriodicSyncEventTag>
 <summary>
-The <strong><c>tag</c></strong> read-only property of the<br/><see cref="PeriodicSyncEvent."/> interface returns the developer-defined identifier for<br/>the <see cref="'PeriodicSyncEvent'."/>. This is specified when calling the<br/><see cref="'PeriodicSyncManager.Register'."/> method of the<br/><see cref="'PeriodicSyncManager'."/> interface. Multiple tags can be used by the web app<br/>to run different periodic tasks at different frequencies.
+The <strong><c>tag</c></strong> read-only property of the<br/><see cref="PeriodicSyncEvent"/> interface returns the developer-defined identifier for<br/>the <see cref="'PeriodicSyncEvent'"/>. This is specified when calling the<br/><see cref="'PeriodicSyncManager.Register'"/> method of the<br/><see cref="'PeriodicSyncManager'"/> interface. Multiple tags can be used by the web app<br/>to run different periodic tasks at different frequencies.
 </summary>
 <remarks>
 <para>-<see href="https://developer.chrome.com/docs/capabilities/periodic-background-sync">Richer offline experiences with the Periodic Background Sync API</see><br/>-<see href="https://webplatformapis.com/periodic_sync/periodicSync_improved.html">A Periodic Background Sync demo app</see><br/></para>

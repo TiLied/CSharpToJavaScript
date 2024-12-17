@@ -1,13 +1,13 @@
 <docs>
 <MediaRecorderErrorEventError>
 <summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>error</c></strong> read-only property of the<br/><see cref="MediaRecorderErrorEvent."/> interface is a<br/><see cref="DOMException."/> object providing details about the exception that was thrown<br/>by a <see cref="MediaRecorder."/> instance.
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>error</c></strong> read-only property of the<br/><see cref="MediaRecorderErrorEvent"/> interface is a<br/><see cref="DOMException"/> object providing details about the exception that was thrown<br/>by a <see cref="MediaRecorder"/> instance.
 </summary>
 <remarks>
-<para>When a <c>MediaRecorderErrorEvent</c> occurs, you can determine to some extent<br/>what went wrong by examining the <c>error</c> property within the<br/><c>MediaRecorderErrorEvent</c> received by the <c>MediaRecorder</c>&amp;apos;s<br/><see cref="MediaRecorder/error_event."/> event handler, <see cref="MediaRecorder/error_event."/>.</para>
+<para>When a <c>MediaRecorderErrorEvent</c> occurs, you can determine to some extent<br/>what went wrong by examining the <c>error</c> property within the<br/><c>MediaRecorderErrorEvent</c> received by the <c>MediaRecorder</c>&amp;apos;s<br/><see cref="MediaRecorder/error_event"/> event handler, <see cref="MediaRecorder/error_event"/>.</para>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream_Recording_API">MediaStream Recording API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API">Using the MediaStream Recording API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorderErrorEvent/error"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="DOMException."/> describing the error represented by the event. The<br/>error's <see cref="DOMException.Name."/> property's value may be any exception<br/>that makes sense during the handling of media recording, including these specifically<br/>identified by the specification. The descriptions here are generic ones; you&amp;apos;ll find<br/>more specific ones to various scenarios in which they may occur in the corresponding<br/>method references.</value>
+<value>A <see cref="DOMException"/> describing the error represented by the event. The<br/>error's <see cref="DOMException.Name"/> property's value may be any exception<br/>that makes sense during the handling of media recording, including these specifically<br/>identified by the specification. The descriptions here are generic ones; you&amp;apos;ll find<br/>more specific ones to various scenarios in which they may occur in the corresponding<br/>method references.</value>
 </MediaRecorderErrorEventError>
 </docs>

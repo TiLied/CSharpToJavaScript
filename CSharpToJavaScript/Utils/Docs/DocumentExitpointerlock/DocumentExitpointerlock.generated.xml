@@ -1,11 +1,11 @@
 <docs>
 <DocumentExitPointerLock>
 <summary>
-The <strong><c>exitPointerLock()</c></strong> method of the <see cref="Document."/> interface asynchronously releases a pointer lock previously requested through <see cref="Element.RequestPointerLock."/>.
+The <strong><c>exitPointerLock()</c></strong> method of the <see cref="Document"/> interface asynchronously releases a pointer lock previously requested through <see cref="Element.RequestPointerLock"/>.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> While the <strong><c>exitPointerLock()</c></strong> method is called on the document, the <strong><c>requestPointerLock()</c></strong> method is called on an element.</para></blockquote><para>To track the success or failure of the request, it is necessary to listen for the <see cref="Document/pointerlockchange_event."/> and <see cref="Document/pointerlockerror_event."/> events.</para>
-<para>-<see cref="Document.PointerLockElement."/><br/>-<see cref="Element.RequestPointerLock."/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Pointer_Lock_API">Pointer Lock</see><br/></para>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> While the <strong><c>exitPointerLock()</c></strong> method is called on the document, the <strong><c>requestPointerLock()</c></strong> method is called on an element.</para></blockquote><para>To track the success or failure of the request, it is necessary to listen for the <see cref="Document/pointerlockchange_event"/> and <see cref="Document/pointerlockerror_event"/> events.</para>
+<para>-<see cref="Document.PointerLockElement"/><br/>-<see cref="Element.RequestPointerLock"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Pointer_Lock_API">Pointer Lock</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/exitPointerLock"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>

@@ -1,11 +1,11 @@
 <docs>
 <MediaSessionMetadata>
 <summary>
-The <strong><c>metadata</c></strong> property of the <see cref="MediaSession."/><br/>interface contains a <see cref="MediaMetadata."/> object providing descriptive<br/>information about the currently playing media, or <c>null</c> if the metadata has<br/>not been set. This metadata is provided by the browser to the device for presentation in<br/>any standard media control user interface the device might offer.
+The <strong><c>metadata</c></strong> property of the <see cref="MediaSession"/><br/>interface contains a <see cref="MediaMetadata"/> object providing descriptive<br/>information about the currently playing media, or <c>null</c> if the metadata has<br/>not been set. This metadata is provided by the browser to the device for presentation in<br/>any standard media control user interface the device might offer.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaSession/metadata"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An instance of <see cref="MediaMetadata."/> containing information about the media<br/>currently being played.</value>
+<value>An instance of <see cref="MediaMetadata"/> containing information about the media<br/>currently being played.</value>
 </MediaSessionMetadata>
 </docs>

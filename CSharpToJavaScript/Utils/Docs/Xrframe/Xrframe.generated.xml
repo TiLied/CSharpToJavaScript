@@ -1,10 +1,10 @@
 <docs>
 <XRFrame>
 <summary>
-A <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</see> <strong><c>XRFrame</c></strong> object is passed into the <see cref="XRSession.RequestAnimationFrame."/> callback function and provides access to the information needed in order to render a single frame of animation for an <see cref="XRSession."/> describing a VR or AR scene. Events which communicate the tracking state of objects also provide an <c>XRFrame</c> reference as part of their structure.
+A <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</see> <strong><c>XRFrame</c></strong> object is passed into the <see cref="XRSession.RequestAnimationFrame"/> callback function and provides access to the information needed in order to render a single frame of animation for an <see cref="XRSession"/> describing a VR or AR scene. Events which communicate the tracking state of objects also provide an <c>XRFrame</c> reference as part of their structure.
 </summary>
 <remarks>
-<para>In addition to providing a reference to the <see cref="XRSession."/> for which this frame is to be rendered, the <see cref="XRFrame.GetViewerPose."/> method is provided to obtain the <see cref="XRViewerPose."/> describing the viewer's position and orientation in space, and <see cref="XRFrame.GetPose."/> can be used to create an <see cref="XRPose."/> describing the relative position of one <see cref="XRSpace."/> relative to another.</para>
+<para>In addition to providing a reference to the <see cref="XRSession"/> for which this frame is to be rendered, the <see cref="XRFrame.GetViewerPose"/> method is provided to obtain the <see cref="XRViewerPose"/> describing the viewer's position and orientation in space, and <see cref="XRFrame.GetPose"/> can be used to create an <see cref="XRPose"/> describing the relative position of one <see cref="XRSpace"/> relative to another.</para>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Spatial_tracking">Spatial tracking in WebXR</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRFrame"> <em>See also on MDN</em> </seealso></para>
 </remarks>

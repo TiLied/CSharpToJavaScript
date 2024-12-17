@@ -1,11 +1,11 @@
 <docs>
 <URLPathname>
 <summary>
-The <strong><c>pathname</c></strong> property of the <see cref="URL."/> interface represents a location in a hierarchical structure. It is a string constructed from a list of path segments, each of which is prefixed by a <c>/</c> character. If the URL has no path segments, the value of its <c>pathname</c> property will be the empty string.
+The <strong><c>pathname</c></strong> property of the <see cref="URL"/> interface represents a location in a hierarchical structure. It is a string constructed from a list of path segments, each of which is prefixed by a <c>/</c> character. If the URL has no path segments, the value of its <c>pathname</c> property will be the empty string.
 </summary>
 <remarks>
 <para>URLs such as <c>https</c> and <c>http</c> URLs that have <see href="https://www.rfc-editor.org/rfc/rfc3986#section-1.2.3">hierarchical schemes</see> (which the URL standard calls &amp;quot;<see href="https://url.spec.whatwg.org/#special-scheme">special schemes</see>&amp;quot;) always have at least one (invisible) path segment: the empty string. Thus the <c>pathname</c> value for such &amp;quot;special scheme&amp;quot; URLs can never be the empty string, but will instead always have a least one <c>/</c> character.</para><para>For example, the URL <c>https://developer.mozilla.org</c> has just one path segment: the empty string, so its <c>pathname</c> value is constructed by prefixing a <c>/</c> character to the empty string.</para><para>Some systems define the term <strong>slug</strong> to mean the final segment of a non-empty path if it identifies a page in human-readable keywords. For example, the URL <c>https://example.org/articles/this-that-other-outre-collection</c> has <c>this-that-other-outre-collection</c> as its slug.</para><para>Some systems use the <c>;</c> and <c>=</c> characters to delimit parameters and parameter values applicable to a path segment. For example, with the URL <c>https://example.org/users;id=42/tasks;state=open?sort=modified</c>, a system might extract and use the path segment parameters <c>id=42</c> and <c>state=open</c> from the path segments <c>users;id=42</c> and <c>tasks;state=open</c>.</para>
-<para>-The <see cref="URL."/> interface it belongs to.<br/></para>
+<para>-The <see cref="URL"/> interface it belongs to.<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URL/pathname"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A string.</value>

@@ -1,12 +1,12 @@
 <docs>
 <TreeWalkerParentNode>
 <summary>
-The <strong><c>TreeWalker.parentNode()</c></strong> method moves the current<br/><see cref="Node."/> to the first <strong>visible</strong> ancestor node in the document order,<br/>and returns the found node. If no such node exists, or if it is above the<br/><c>TreeWalker</c>&amp;apos;s <strong>root node</strong>, it returns <c>null</c> and the current<br/>node is not changed.
+The <strong><c>TreeWalker.parentNode()</c></strong> method moves the current<br/><see cref="Node"/> to the first <strong>visible</strong> ancestor node in the document order,<br/>and returns the found node. If no such node exists, or if it is above the<br/><c>TreeWalker</c>&amp;apos;s <strong>root node</strong>, it returns <c>null</c> and the current<br/>node is not changed.
 </summary>
 <remarks>
-<para>-The <see cref="TreeWalker."/> interface it belongs to.<br/></para>
+<para>-The <see cref="TreeWalker"/> interface it belongs to.<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker/parentNode"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A <see cref="Node."/> object or <c>null</c>.</returns>
+<returns>A <see cref="Node"/> object or <c>null</c>.</returns>
 </TreeWalkerParentNode>
 </docs>

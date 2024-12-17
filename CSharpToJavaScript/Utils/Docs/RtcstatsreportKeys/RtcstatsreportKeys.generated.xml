@@ -1,11 +1,11 @@
 <docs>
 <RTCStatsReportKeys>
 <summary>
-The <strong><c>keys()</c></strong> method of the <see cref="RTCStatsReport."/> interface returns a new <strong><see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator">iterator</see></strong> object that can be used to iterate through the keys for each element in the <c>RTCStatsReport</c> object, in insertion order.
+The <strong><c>keys()</c></strong> method of the <see cref="RTCStatsReport"/> interface returns a new <strong><see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator">iterator</see></strong> object that can be used to iterate through the keys for each element in the <c>RTCStatsReport</c> object, in insertion order.
 </summary>
 <remarks>
 <para>The keys in the <c>RTCStatsReport</c> are unique string <c>id</c> values, which represent the monitored statistics objects from which the statistics are derived.</para><para>The method is otherwise the same as <see cref="MapPrototypeKeys"/>.</para>
-<para>-<see cref="MapPrototypeKeys"/><br/>-<see cref="RTCStatsReport.Values."/><br/>-<see cref="RTCStatsReport.Entries."/><br/></para>
+<para>-<see cref="MapPrototypeKeys"/><br/>-<see cref="RTCStatsReport.Values"/><br/>-<see cref="RTCStatsReport.Entries"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCStatsReport/keys"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>A new <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator">iterable iterator object</see>.</returns>

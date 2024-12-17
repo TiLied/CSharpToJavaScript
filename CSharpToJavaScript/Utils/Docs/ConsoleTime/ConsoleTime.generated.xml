@@ -1,11 +1,11 @@
 <docs>
 <ConsoleTime>
 <summary>
-The <strong><c>console.time()</c></strong> static method starts a timer you can use to track how long an operation takes. You give each timer a unique name, and may have up to 10,000 timers running on a given page. When you call <see cref="Console/timeEnd_static."/> with the same name, the browser will output the time, in milliseconds, that elapsed since the timer was started.
+The <strong><c>console.time()</c></strong> static method starts a timer you can use to track how long an operation takes. You give each timer a unique name, and may have up to 10,000 timers running on a given page. When you call <see cref="Console/timeEnd_static"/> with the same name, the browser will output the time, in milliseconds, that elapsed since the timer was started.
 </summary>
 <remarks>
-<para>See <see href="https://developer.mozilla.org/en-US/docs/Web/API/console#timers">Timers</see> in the <see cref="Console."/> documentation for details and examples.</para>
-<para>-<see cref="Console/timeEnd_static."/><br/>-<see cref="Console/timeLog_static."/><br/>-<see href="https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api#time">Microsoft Edge&amp;apos;s documentation for <c>console.time()</c></see><br/>-<see href="https://nodejs.org/docs/latest/api/console.html#consoletimelabel">Node.JS documentation for <c>console.time()</c></see><br/>-<see href="https://developer.chrome.com/docs/devtools/console/api/#time">Google Chrome&amp;apos;s documentation for <c>console.time()</c></see><br/></para>
+<para>See <see href="https://developer.mozilla.org/en-US/docs/Web/API/console#timers">Timers</see> in the <see cref="Console"/> documentation for details and examples.</para>
+<para>-<see cref="Console/timeEnd_static"/><br/>-<see cref="Console/timeLog_static"/><br/>-<see href="https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api#time">Microsoft Edge&amp;apos;s documentation for <c>console.time()</c></see><br/>-<see href="https://nodejs.org/docs/latest/api/console.html#consoletimelabel">Node.JS documentation for <c>console.time()</c></see><br/>-<see href="https://developer.chrome.com/docs/devtools/console/api/#time">Google Chrome&amp;apos;s documentation for <c>console.time()</c></see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/console/time"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>

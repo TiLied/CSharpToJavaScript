@@ -1,12 +1,12 @@
 <docs>
 <DocumentCreateAttributeNS>
 <summary>
-The <strong><c>Document.createAttributeNS()</c></strong> method creates a new attribute node<br/>with the specified namespace URI and qualified name, and returns it.<br/>The object created is a node implementing the<br/><see cref="Attr."/> interface. The DOM does not enforce what sort of attributes can be<br/>added to a particular element in this manner.
+The <strong><c>Document.createAttributeNS()</c></strong> method creates a new attribute node<br/>with the specified namespace URI and qualified name, and returns it.<br/>The object created is a node implementing the<br/><see cref="Attr"/> interface. The DOM does not enforce what sort of attributes can be<br/>added to a particular element in this manner.
 </summary>
 <remarks>
-<para>-<see cref="Document.CreateAttribute."/><br/>-<see cref="Document.CreateElementNS."/><br/>-<see cref="Element.SetAttributeNS."/><br/>-<see cref="Element.SetAttributeNode."/><br/>-<see cref="Element.SetAttributeNodeNS."/><br/></para>
+<para>-<see cref="Document.CreateAttribute"/><br/>-<see cref="Document.CreateElementNS"/><br/>-<see cref="Element.SetAttributeNS"/><br/>-<see cref="Element.SetAttributeNode"/><br/>-<see cref="Element.SetAttributeNodeNS"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createAttributeNS"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>The new <see cref="Attr."/> node.</returns>
+<returns>The new <see cref="Attr"/> node.</returns>
 </DocumentCreateAttributeNS>
 </docs>

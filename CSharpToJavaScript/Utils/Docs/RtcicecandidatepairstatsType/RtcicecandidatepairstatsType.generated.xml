@@ -1,10 +1,10 @@
 <docs>
 <RTCIceCandidatePairStatsType>
 <summary>
-The <strong><c>type</c></strong> property of the <see cref="RTCIceCandidatePairStats."/> dictionary is a string with the value <c>&amp;quot;candidate-pair&amp;quot;</c>.
+The <strong><c>type</c></strong> property of the <see cref="RTCIceCandidatePairStats"/> dictionary is a string with the value <c>&amp;quot;candidate-pair&amp;quot;</c>.
 </summary>
 <remarks>
-<para>Different statistics are obtained by iterating the <see cref="RTCStatsReport."/> object returned by a call to <see cref="RTCPeerConnection.GetStats."/>.<br/>The type indicates the set of statistics available through the object in a particular iteration step.<br/>A value of <c>&amp;quot;candidate-pair&amp;quot;</c> indicates that the statistics available in the current step are those defined in <see cref="RTCIceCandidatePairStats."/>.</para>
+<para>Different statistics are obtained by iterating the <see cref="RTCStatsReport"/> object returned by a call to <see cref="RTCPeerConnection.GetStats"/>.<br/>The type indicates the set of statistics available through the object in a particular iteration step.<br/>A value of <c>&amp;quot;candidate-pair&amp;quot;</c> indicates that the statistics available in the current step are those defined in <see cref="RTCIceCandidatePairStats"/>.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/type"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A string with the value <c>&amp;quot;candidate-pair&amp;quot;</c>.</value>

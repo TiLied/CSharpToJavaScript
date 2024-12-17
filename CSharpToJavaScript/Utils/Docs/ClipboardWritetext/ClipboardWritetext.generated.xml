@@ -1,10 +1,10 @@
 <docs>
 <ClipboardWriteText>
 <summary>
-The <strong><c>writeText()</c></strong> method of the <see cref="Clipboard."/> interface writes the specified text to the system clipboard, returning a {{jsxref("Promise")}} that is resolved once the system clipboard has been updated.
+The <strong><c>writeText()</c></strong> method of the <see cref="Clipboard"/> interface writes the specified text to the system clipboard, returning a {{jsxref("Promise")}} that is resolved once the system clipboard has been updated.
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API">Clipboard API</see><br/>-<see href="https://web.dev/articles/async-clipboard">Image support for Async Clipboard article</see><br/>-<see cref="Clipboard.Write."/><br/>-<see cref="Clipboard.Read."/><br/>-<see cref="Clipboard.ReadText."/><br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API">Clipboard API</see><br/>-<see href="https://web.dev/articles/async-clipboard">Image support for Async Clipboard article</see><br/>-<see cref="Clipboard.Write"/><br/>-<see cref="Clipboard.Read"/><br/>-<see cref="Clipboard.ReadText"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/writeText"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>A <see cref="Promise"/> that is resolved once the clipboard's contents have been updated.</returns>

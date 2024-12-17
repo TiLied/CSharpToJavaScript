@@ -4,8 +4,8 @@
 The <strong><c>CSSStyleSheet.insertRule()</c></strong><br/>method inserts a new <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSSRule">CSS rule</see> into the <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleSheet">current style sheet</see>.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Although <c>insertRule()</c> is exclusively a method of<br/><see cref="CSSStyleSheet."/>, it actually inserts the rule into<br/><c>{{domxref(&amp;quot;CSSStyleSheet&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;1&amp;quot;)}}.cssRules</c> — its internal<br/><see cref="CSSRuleList."/>.</para></blockquote>
-<para>-<see cref="CSSStyleSheet.DeleteRule."/><br/>-<see href="https://web.dev/articles/constructable-stylesheets">Constructable Stylesheets</see> (web.dev)<br/></para>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Although <c>insertRule()</c> is exclusively a method of<br/><see cref="CSSStyleSheet"/>, it actually inserts the rule into<br/><c>{{domxref(&amp;quot;CSSStyleSheet&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;1&amp;quot;)}}.cssRules</c> — its internal<br/><see cref="CSSRuleList"/>.</para></blockquote>
+<para>-<see cref="CSSStyleSheet.DeleteRule"/><br/>-<see href="https://web.dev/articles/constructable-stylesheets">Constructable Stylesheets</see> (web.dev)<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleSheet/insertRule"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>The newly inserted rule&amp;apos;s index within the stylesheet&amp;apos;s rule-list.</returns>

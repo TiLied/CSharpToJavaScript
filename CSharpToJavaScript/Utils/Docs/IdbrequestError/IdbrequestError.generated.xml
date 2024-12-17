@@ -1,12 +1,12 @@
 <docs>
 <IDBRequestError>
 <summary>
-The <strong><c>error</c></strong> read-only property of the<br/><see cref="IDBRequest."/> interface returns the error in the event of an unsuccessful<br/>request.
+The <strong><c>error</c></strong> read-only property of the<br/><see cref="IDBRequest"/> interface returns the error in the event of an unsuccessful<br/>request.
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase."/><br/>-Using transactions: <see cref="IDBTransaction."/><br/>-Setting a range of keys: <see cref="IDBKeyRange."/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore."/><br/>-Using cursors: <see cref="IDBCursor."/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase"/><br/>-Using transactions: <see cref="IDBTransaction"/><br/>-Setting a range of keys: <see cref="IDBKeyRange"/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore"/><br/>-Using cursors: <see cref="IDBCursor"/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBRequest/error"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="DOMException."/> or <c>null</c> if there is no error. The following error names are returned<br/>in the exception object:In addition to the error codes sent to the <see cref="IDBRequest."/> object,<br/>asynchronous operations can also raise exceptions. The list describes problems that<br/>could occur when the request is being executed, but you might also encounter other<br/>problems when the request is being made. For example, if the result is accessed<br/>while the request is not completed, the <c>InvalidStateError</c> exception is thrown.</value>
+<value>A <see cref="DOMException"/> or <c>null</c> if there is no error. The following error names are returned<br/>in the exception object:In addition to the error codes sent to the <see cref="IDBRequest"/> object,<br/>asynchronous operations can also raise exceptions. The list describes problems that<br/>could occur when the request is being executed, but you might also encounter other<br/>problems when the request is being made. For example, if the result is accessed<br/>while the request is not completed, the <c>InvalidStateError</c> exception is thrown.</value>
 </IDBRequestError>
 </docs>

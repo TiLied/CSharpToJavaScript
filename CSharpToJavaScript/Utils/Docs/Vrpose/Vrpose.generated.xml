@@ -4,7 +4,7 @@
 <div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>VRPose</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API">WebVR API</see> represents the state of a VR sensor at a given timestamp (which includes orientation, position, velocity, and acceleration information).
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This interface was part of the old <see href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</see>. It has been superseded by the <see href="https://immersive-web.github.io/webxr/">WebXR Device API</see>.</para></blockquote><para>This interface is accessible through the <see cref="VRDisplay.GetPose."/> and <see cref="VRDisplay.GetFrameData."/> methods. <see cref="VRDisplay.GetPose."/> is deprecated.</para>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This interface was part of the old <see href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</see>. It has been superseded by the <see href="https://immersive-web.github.io/webxr/">WebXR Device API</see>.</para></blockquote><para>This interface is accessible through the <see cref="VRDisplay.GetPose"/> and <see cref="VRDisplay.GetFrameData"/> methods. <see cref="VRDisplay.GetPose"/> is deprecated.</para>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API">WebVR API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VRPose"> <em>See also on MDN</em> </seealso></para>
 </remarks>

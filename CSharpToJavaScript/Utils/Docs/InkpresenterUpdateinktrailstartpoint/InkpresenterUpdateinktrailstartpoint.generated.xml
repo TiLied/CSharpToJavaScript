@@ -1,7 +1,7 @@
 <docs>
 <InkPresenterUpdateInkTrailStartPoint>
 <summary>
-The <strong><c>updateInkTrailStartPoint()</c></strong> method of the <see cref="InkPresenter."/> interface indicates which <see cref="PointerEvent."/> was used as the last rendering point for the current frame, allowing the OS-level compositor to render a delegated ink trail ahead of the next pointer event being dispatched.
+The <strong><c>updateInkTrailStartPoint()</c></strong> method of the <see cref="InkPresenter"/> interface indicates which <see cref="PointerEvent"/> was used as the last rendering point for the current frame, allowing the OS-level compositor to render a delegated ink trail ahead of the next pointer event being dispatched.
 </summary>
 <remarks>
 <para>-<see href="https://blogs.windows.com/msedgedev/2021/08/18/enhancing-inking-on-the-web/">Enhancing Inking on the Web</see><br/></para>

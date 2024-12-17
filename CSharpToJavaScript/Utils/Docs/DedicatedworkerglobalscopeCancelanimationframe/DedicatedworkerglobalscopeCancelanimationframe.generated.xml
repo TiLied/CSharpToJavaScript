@@ -1,11 +1,11 @@
 <docs>
 <DedicatedWorkerGlobalScopeCancelAnimationFrame>
 <summary>
-The <strong><c>cancelAnimationFrame()</c></strong> method of the <see cref="DedicatedWorkerGlobalScope."/> interface cancels an animation frame request previously scheduled through a call to <see cref="DedicatedWorkerGlobalScope.RequestAnimationFrame."/>.
+The <strong><c>cancelAnimationFrame()</c></strong> method of the <see cref="DedicatedWorkerGlobalScope"/> interface cancels an animation frame request previously scheduled through a call to <see cref="DedicatedWorkerGlobalScope.RequestAnimationFrame"/>.
 </summary>
 <remarks>
-<para>Calling the <c>cancelAnimationFrame()</c> method requires the current worker to have an associated owner <see cref="Window."/>. That means that the current worker must be created by <see cref="Window."/> or by a dedicated worker that also has an associated owner <see cref="Window."/>.</para>
-<para>-<see cref="DedicatedWorkerGlobalScope.RequestAnimationFrame."/><br/>-<see cref="Window.CancelAnimationFrame."/><br/></para>
+<para>Calling the <c>cancelAnimationFrame()</c> method requires the current worker to have an associated owner <see cref="Window"/>. That means that the current worker must be created by <see cref="Window"/> or by a dedicated worker that also has an associated owner <see cref="Window"/>.</para>
+<para>-<see cref="DedicatedWorkerGlobalScope.RequestAnimationFrame"/><br/>-<see cref="Window.CancelAnimationFrame"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DedicatedWorkerGlobalScope/cancelAnimationFrame"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>

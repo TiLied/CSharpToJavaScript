@@ -1,11 +1,11 @@
 <docs>
 <BluetoothGetDevices>
 <summary>
-The <strong><c>getDevices()</c></strong> method of the <see cref="Bluetooth."/> interface returns an array containing the Bluetooth devices that this origin is allowed to access — including those that are out of range and powered off.
+The <strong><c>getDevices()</c></strong> method of the <see cref="Bluetooth"/> interface returns an array containing the Bluetooth devices that this origin is allowed to access — including those that are out of range and powered off.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth/getDevices"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A {{JSxRef("Promise")}} that resolves with an array of <see cref="BluetoothDevice."/> objects.</returns>
+<returns>A {{JSxRef("Promise")}} that resolves with an array of <see cref="BluetoothDevice"/> objects.</returns>
 </BluetoothGetDevices>
 </docs>

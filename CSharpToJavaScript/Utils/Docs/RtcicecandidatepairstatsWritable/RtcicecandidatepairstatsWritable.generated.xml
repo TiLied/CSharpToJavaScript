@@ -1,11 +1,11 @@
 <docs>
 <RTCIceCandidatePairStatsWritable>
 <summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong>obsolete</strong> <see cref="RTCIceCandidatePairStats."/><br/>property <strong><c>writable</c></strong> reports whether or not the connection<br/>described by the candidate pair is writable.
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong>obsolete</strong> <see cref="RTCIceCandidatePairStats"/><br/>property <strong><c>writable</c></strong> reports whether or not the connection<br/>described by the candidate pair is writable.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/writable"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A Boolean value which is <c>true</c> if the connection described by this<br/>candidate pair has received acknowledgement of receipt (ACK) for at least one ICE<br/>request <strong>and</strong> that <see href="https://developer.mozilla.org/en-US/docs/Glossary/STUN">STUN</see> consent hasn't expired.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> This property was removed from the specification in early 2017<br/>because you can determine whether or not an incoming ICE request is available to read<br/>by checking to see if <see cref="RTCIceCandidatePairStats.ResponsesReceived."/> is greater than 0 and that the time specified by<br/><see cref="RTCIceCandidatePairStats.ConsentExpiredTimestamp."/> has not passed:</blockquote></value>
+<value>A Boolean value which is <c>true</c> if the connection described by this<br/>candidate pair has received acknowledgement of receipt (ACK) for at least one ICE<br/>request <strong>and</strong> that <see href="https://developer.mozilla.org/en-US/docs/Glossary/STUN">STUN</see> consent hasn't expired.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> This property was removed from the specification in early 2017<br/>because you can determine whether or not an incoming ICE request is available to read<br/>by checking to see if <see cref="RTCIceCandidatePairStats.ResponsesReceived"/> is greater than 0 and that the time specified by<br/><see cref="RTCIceCandidatePairStats.ConsentExpiredTimestamp"/> has not passed:</blockquote></value>
 </RTCIceCandidatePairStatsWritable>
 </docs>

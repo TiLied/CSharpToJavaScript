@@ -1,12 +1,12 @@
 <docs>
 <XRSessionRequestHitTestSourceForTransientInput>
 <summary>
-The <strong><c>requestHitTestSourceForTransientInput()</c></strong> method of the<br/><see cref="XRSession."/> interface returns a {{jsxref("Promise")}} that resolves with an <see cref="XRTransientInputHitTestSource."/> object that can be passed to <see cref="XRFrame.GetHitTestResultsForTransientInput."/>.
+The <strong><c>requestHitTestSourceForTransientInput()</c></strong> method of the<br/><see cref="XRSession"/> interface returns a {{jsxref("Promise")}} that resolves with an <see cref="XRTransientInputHitTestSource"/> object that can be passed to <see cref="XRFrame.GetHitTestResultsForTransientInput"/>.
 </summary>
 <remarks>
-<para>-<see cref="XRSession.RequestHitTestSource."/><br/></para>
+<para>-<see cref="XRSession.RequestHitTestSource"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRSession/requestHitTestSourceForTransientInput"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A {{jsxref("Promise")}} that resolves with an <see cref="XRTransientInputHitTestSource."/> object.</returns>
+<returns>A {{jsxref("Promise")}} that resolves with an <see cref="XRTransientInputHitTestSource"/> object.</returns>
 </XRSessionRequestHitTestSourceForTransientInput>
 </docs>

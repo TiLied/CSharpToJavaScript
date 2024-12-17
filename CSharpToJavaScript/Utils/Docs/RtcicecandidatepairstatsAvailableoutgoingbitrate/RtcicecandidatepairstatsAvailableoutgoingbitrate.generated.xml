@@ -1,10 +1,10 @@
 <docs>
 <RTCIceCandidatePairStatsAvailableOutgoingBitrate>
 <summary>
-The <see cref="RTCIceCandidatePairStats."/> property<br/><strong><c>availableOutgoingBitrate</c></strong> returns a value indicative of<br/>the available outbound capacity of the network connection represented by the candidate<br/>pair. The higher the value, the more bandwidth you can assume is available for<br/>outgoing data.
+The <see cref="RTCIceCandidatePairStats"/> property<br/><strong><c>availableOutgoingBitrate</c></strong> returns a value indicative of<br/>the available outbound capacity of the network connection represented by the candidate<br/>pair. The higher the value, the more bandwidth you can assume is available for<br/>outgoing data.
 </summary>
 <remarks>
-<para>You can get the incoming available bitrate from<br/><see cref="RTCIceCandidatePairStats.AvailableIncomingBitrate."/>.</para>
+<para>You can get the incoming available bitrate from<br/><see cref="RTCIceCandidatePairStats.AvailableIncomingBitrate"/>.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/availableOutgoingBitrate"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A floating-point value which approximates the amount of available bandwidth for<br/>outgoing data on the network connection described by the<br/><c>RTCIceCandidatePair</c>. The value is reported in bits per second and is<br/>computed over a 1-second interval.The returned value is <c>undefined</c> in each of the following situations:The value returned is calculated by adding up the available bit rate for every<br/><see href="https://developer.mozilla.org/en-US/docs/Glossary/RTP">RTP</see> stream using the connection described by this candidate pair. The<br/>returned value doesn&amp;apos;t take into account overhead introduced by underlying protocols,<br/>including IP, UDP, or TCP.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> The returned value is computed using a method similar—but not<br/>identical—to the Transport Independent Application Specific Maximum (TIAS) described<br/>in {{RFC(3890, &amp;quot;&amp;quot;, &amp;quot;6.2&amp;quot;)}}.</blockquote></value>

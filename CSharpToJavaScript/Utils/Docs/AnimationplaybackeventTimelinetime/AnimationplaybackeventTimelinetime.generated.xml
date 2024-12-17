@@ -1,10 +1,10 @@
 <docs>
 <AnimationPlaybackEventTimelineTime>
 <summary>
-The <strong><c>timelineTime</c></strong> read-only property of the <see cref="AnimationPlaybackEvent."/> interface represents the time value of the animation's <see cref="AnimationTimeline."/> at the moment the event is queued. This will be unresolved if the animation was not associated with a timeline at the time the event was generated or if the associated timeline was inactive.
+The <strong><c>timelineTime</c></strong> read-only property of the <see cref="AnimationPlaybackEvent"/> interface represents the time value of the animation's <see cref="AnimationTimeline"/> at the moment the event is queued. This will be unresolved if the animation was not associated with a timeline at the time the event was generated or if the associated timeline was inactive.
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/>-<see cref="AnimationPlayBackEvent."/><br/>-<see cref="AnimationTimeline."/><br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/>-<see cref="AnimationPlayBackEvent"/><br/>-<see cref="AnimationTimeline"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AnimationPlaybackEvent/timelineTime"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A number representing the current time in milliseconds, or <c>null</c>.</value>

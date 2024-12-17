@@ -1,7 +1,7 @@
 <docs>
 <SpeechSynthesisVoiceLocalService>
 <summary>
-The <strong><c>localService</c></strong> read-only property of the<br/><see cref="SpeechSynthesisVoice."/> interface returns a boolean value<br/>indicating whether the voice is supplied by a local speech synthesizer service<br/>(<c>true</c>), or a remote speech synthesizer service (<c>false</c>.)
+The <strong><c>localService</c></strong> read-only property of the<br/><see cref="SpeechSynthesisVoice"/> interface returns a boolean value<br/>indicating whether the voice is supplied by a local speech synthesizer service<br/>(<c>true</c>), or a remote speech synthesizer service (<c>false</c>.)
 </summary>
 <remarks>
 <para>This property is provided to allow differentiation in the case that some voice options<br/>are provided by a remote service; it is possible that remote voices might have extra<br/>latency, bandwidth or cost associated with them, so such distinction may be useful.</para>

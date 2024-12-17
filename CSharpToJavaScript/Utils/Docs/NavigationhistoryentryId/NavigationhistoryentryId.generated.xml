@@ -1,13 +1,13 @@
 <docs>
 <NavigationHistoryEntryId>
 <summary>
-The <strong><c>id</c></strong> read-only property of the <see cref="NavigationHistoryEntry."/> interface returns the <c>id</c> of the history entry, or an empty string if current document is not fully active. This is a unique, UA-generated value that always represents a specific history entry, useful to correlate it with an external resource such as a storage cache.
+The <strong><c>id</c></strong> read-only property of the <see cref="NavigationHistoryEntry"/> interface returns the <c>id</c> of the history entry, or an empty string if current document is not fully active. This is a unique, UA-generated value that always represents a specific history entry, useful to correlate it with an external resource such as a storage cache.
 </summary>
 <remarks>
-<para>This differs from the <see cref="NavigationHistoryEntry.Key."/> of a history entry. The <c>key</c> is a unique, UA-generated value that represents the history entry's slot in the entries list rather than the entry itself. It is used to navigate that particular slot via <see cref="Navigation.TraverseTo."/>. The <c>key</c> will be reused by other entries that replace the entry in the list (that is, if the <see cref="NavigateEvent.NavigationType."/> is <c>replace</c>).</para>
+<para>This differs from the <see cref="NavigationHistoryEntry.Key"/> of a history entry. The <c>key</c> is a unique, UA-generated value that represents the history entry's slot in the entries list rather than the entry itself. It is used to navigate that particular slot via <see cref="Navigation.TraverseTo"/>. The <c>key</c> will be reused by other entries that replace the entry in the list (that is, if the <see cref="NavigateEvent.NavigationType"/> is <c>replace</c>).</para>
 <para>-<see href="https://developer.chrome.com/docs/web-platform/navigation-api/">Modern client-side routing: the Navigation API</see><br/>-<see href="https://github.com/WICG/navigation-api/blob/main/README.md">Navigation API explainer</see><br/>-Domenic Denicola&amp;apos;s <see href="https://gigantic-honored-octagon.glitch.me/">Navigation API live demo</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NavigationHistoryEntry/id"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string representing the <c>id</c> of the <see cref="NavigationHistoryEntry."/>.</value>
+<value>A string representing the <c>id</c> of the <see cref="NavigationHistoryEntry"/>.</value>
 </NavigationHistoryEntryId>
 </docs>

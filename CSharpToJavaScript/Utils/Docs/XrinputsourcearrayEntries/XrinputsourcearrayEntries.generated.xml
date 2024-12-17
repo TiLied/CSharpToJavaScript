@@ -1,7 +1,7 @@
 <docs>
 <XRInputSourceArrayEntries>
 <summary>
-The <see cref="XRInputSourceArray."/> interface's<br/><strong><c>entries()</c></strong> method returns a JavaScript<br/><see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols"><c>iterator</c></see><br/>which can then be used to iterate over the key/value pairs in the input source<br/>array. Each item in the array is an <see cref="XRInputSource."/> object.
+The <see cref="XRInputSourceArray"/> interface's<br/><strong><c>entries()</c></strong> method returns a JavaScript<br/><see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols"><c>iterator</c></see><br/>which can then be used to iterate over the key/value pairs in the input source<br/>array. Each item in the array is an <see cref="XRInputSource"/> object.
 </summary>
 <remarks>
 <para>Most frequently, you will use this in tandem with statements such as<br/><see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of"><c>for...of</c></see>.</para>

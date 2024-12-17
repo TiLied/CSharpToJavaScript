@@ -1,12 +1,12 @@
 <docs>
 <BaseAudioContextCreateConstantSource>
 <summary>
-The <strong><c>createConstantSource()</c></strong><br/>property of the <see cref="BaseAudioContext."/> interface creates a<br/><see cref="ConstantSourceNode."/> object, which is an audio source that continuously<br/>outputs a monaural (one-channel) sound signal whose samples all have the same<br/>value.
+The <strong><c>createConstantSource()</c></strong><br/>property of the <see cref="BaseAudioContext"/> interface creates a<br/><see cref="ConstantSourceNode"/> object, which is an audio source that continuously<br/>outputs a monaural (one-channel) sound signal whose samples all have the same<br/>value.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> The <see cref="ConstantSourceNode.ConstantSourceNode."/><br/>constructor is the recommended way to create a <see cref="ConstantSourceNode."/>; see<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioNode#creating_an_audionode">Creating an AudioNode</see>.</para></blockquote>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> The <see cref="ConstantSourceNode.ConstantSourceNode"/><br/>constructor is the recommended way to create a <see cref="ConstantSourceNode"/>; see<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioNode#creating_an_audionode">Creating an AudioNode</see>.</para></blockquote>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createConstantSource"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A <see cref="'ConstantSourceNode'."/> instance.</returns>
+<returns>A <see cref="'ConstantSourceNode'"/> instance.</returns>
 </BaseAudioContextCreateConstantSource>
 </docs>

@@ -1,11 +1,11 @@
 <docs>
 <RTCPeerConnectionIceGatheringState>
 <summary>
-The <strong><c>iceGatheringState</c></strong> read-only property of the <see cref="RTCPeerConnection."/> interface returns a string that describes the overall ICE gathering state for this connection.<br/>This lets you detect, for example, when collection of ICE candidates has finished.
+The <strong><c>iceGatheringState</c></strong> read-only property of the <see cref="RTCPeerConnection"/> interface returns a string that describes the overall ICE gathering state for this connection.<br/>This lets you detect, for example, when collection of ICE candidates has finished.
 </summary>
 <remarks>
-<para>You can detect when the value of this property changes by watching for an event of type <see cref="RTCPeerConnection/icegatheringstatechange_event."/>.</para><para>Note that <strong><c>iceGatheringState</c></strong> represents the overall gathering state of the connection, including every <see cref="RTCIceTransport."/> used by every <see cref="RTCRtpSender."/> and every <see cref="RTCRtpReceiver."/> on the entire connection.<br/>This contrasts with <see cref="RTCIceTransport.GatheringState."/>, which represents the gathering state for a single transport.</para>
-<para>-<see cref="RTCPeerConnection/icegatheringstatechange_event."/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/></para>
+<para>You can detect when the value of this property changes by watching for an event of type <see cref="RTCPeerConnection/icegatheringstatechange_event"/>.</para><para>Note that <strong><c>iceGatheringState</c></strong> represents the overall gathering state of the connection, including every <see cref="RTCIceTransport"/> used by every <see cref="RTCRtpSender"/> and every <see cref="RTCRtpReceiver"/> on the entire connection.<br/>This contrasts with <see cref="RTCIceTransport.GatheringState"/>, which represents the gathering state for a single transport.</para>
+<para>-<see cref="RTCPeerConnection/icegatheringstatechange_event"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/iceGatheringState"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>The possible values are:</value>

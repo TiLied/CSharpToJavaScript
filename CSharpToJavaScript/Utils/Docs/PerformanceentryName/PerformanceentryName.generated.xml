@@ -1,10 +1,10 @@
 <docs>
 <PerformanceEntryName>
 <summary>
-The read-only <strong><c>name</c></strong> property of the <see cref="PerformanceEntry."/> interface is a string representing the name for a performance entry. It acts as an identifier, but it does not have to be unique. The value depends on the subclass.
+The read-only <strong><c>name</c></strong> property of the <see cref="PerformanceEntry"/> interface is a string representing the name for a performance entry. It acts as an identifier, but it does not have to be unique. The value depends on the subclass.
 </summary>
 <remarks>
-<para>-<see cref="Performance.GetEntriesByName."/><br/>-<see cref="PerformanceObserverEntryList.GetEntriesByName."/><br/></para>
+<para>-<see cref="Performance.GetEntriesByName"/><br/>-<see cref="PerformanceObserverEntryList.GetEntriesByName"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceEntry/name"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A string. The value depends on the subclass of the <c>PerformanceEntry</c> object as shown by the table below.</value>

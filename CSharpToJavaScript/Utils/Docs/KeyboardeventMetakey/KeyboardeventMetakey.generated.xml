@@ -5,7 +5,7 @@ The <strong><c>KeyboardEvent.metaKey</c></strong> read-only property returning a
 </summary>
 <remarks>
 <blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> On Macintosh keyboards, this is the &amp;lt;kbd&amp;gt;⌘ Command&amp;lt;/kbd&amp;gt; key.</para></blockquote><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Before Firefox 118, the &amp;lt;kbd&amp;gt;⊞ Windows&amp;lt;/kbd&amp;gt; key was handled<br/>as an &amp;quot;OS&amp;quot; key rather than the &amp;quot;Meta&amp;quot; key. <c>KeyboardEvent.metaKey</c> was<br/><c>false</c> when the &amp;lt;kbd&amp;gt;⊞ Windows&amp;lt;/kbd&amp;gt; key was pressed.</para></blockquote>
-<para>-<see cref="KeyboardEvent."/><br/></para>
+<para>-<see cref="KeyboardEvent"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/metaKey"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A boolean value.</value>

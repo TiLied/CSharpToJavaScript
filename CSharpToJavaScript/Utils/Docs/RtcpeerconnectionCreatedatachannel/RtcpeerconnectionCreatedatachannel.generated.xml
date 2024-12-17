@@ -1,13 +1,13 @@
 <docs>
 <RTCPeerConnectionCreateDataChannel>
 <summary>
-The <strong><c>createDataChannel()</c></strong> method of the <see cref="RTCPeerConnection."/> interface creates a new channel linked with the remote peer, over which any kind of data may be transmitted.<br/>This can be useful for back-channel content, such as images, file transfer, text chat, game update packets, and so forth.
+The <strong><c>createDataChannel()</c></strong> method of the <see cref="RTCPeerConnection"/> interface creates a new channel linked with the remote peer, over which any kind of data may be transmitted.<br/>This can be useful for back-channel content, such as images, file transfer, text chat, game update packets, and so forth.
 </summary>
 <remarks>
-<para>If the new data channel is the first one added to the connection, renegotiation is started by delivering a <see cref="RTCPeerConnection/negotiationneeded_event."/> event.</para>
-<para>-<see cref="RTCDataChannel."/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample">A simple RTCDataChannel sample</see><br/>-<see cref="RTCPeerConnection."/><br/></para>
+<para>If the new data channel is the first one added to the connection, renegotiation is started by delivering a <see cref="RTCPeerConnection/negotiationneeded_event"/> event.</para>
+<para>-<see cref="RTCDataChannel"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample">A simple RTCDataChannel sample</see><br/>-<see cref="RTCPeerConnection"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/createDataChannel"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A new <see cref="RTCDataChannel."/> object with the specified <c>label</c>, configured using the options specified by <c>options</c> if that parameter is included; otherwise, the defaults listed above are established.</returns>
+<returns>A new <see cref="RTCDataChannel"/> object with the specified <c>label</c>, configured using the options specified by <c>options</c> if that parameter is included; otherwise, the defaults listed above are established.</returns>
 </RTCPeerConnectionCreateDataChannel>
 </docs>

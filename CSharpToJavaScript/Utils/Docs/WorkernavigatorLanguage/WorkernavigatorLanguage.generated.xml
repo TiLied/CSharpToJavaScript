@@ -4,7 +4,7 @@
 The <strong><c>WorkerNavigator.language</c></strong> read-only property returns<br/>a string representing the preferred language of the user, usually the language of the<br/>browser UI.
 </summary>
 <remarks>
-<para>-<see cref="WorkerNavigator.Languages."/><br/>-<see cref="WorkerNavigator."/><br/></para>
+<para>-<see cref="WorkerNavigator.Languages"/><br/>-<see cref="WorkerNavigator"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerNavigator/language"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A string representing the<br/>language version as defined in {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}. Examples of valid language<br/>codes include &amp;quot;en&amp;quot;, &amp;quot;en-US&amp;quot;, &amp;quot;fr&amp;quot;, &amp;quot;fr-FR&amp;quot;, &amp;quot;es-ES&amp;quot;, etc.Note that in Safari on iOS prior to 10.2, the country code returned is lowercase:<br/>&amp;quot;en-us&amp;quot;, &amp;quot;fr-fr&amp;quot; etc.</value>

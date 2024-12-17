@@ -1,12 +1,12 @@
 <docs>
 <DocumentLastStyleSheetSet>
 <summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>Document.lastStyleSheetSet</c></strong> property returns the last enabled style sheet set. This property&amp;apos;s<br/>value changes whenever the <see cref="Document.SelectedStyleSheetSet."/> property is<br/>changed.
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>Document.lastStyleSheetSet</c></strong> property returns the last enabled style sheet set. This property&amp;apos;s<br/>value changes whenever the <see cref="Document.SelectedStyleSheetSet"/> property is<br/>changed.
 </summary>
 <remarks>
-<para>-<see cref="Document.PreferredStyleSheetSet."/><br/>-<see cref="Document.SelectedStyleSheetSet."/><br/>-<see cref="Document.StyleSheetSets."/><br/>-<see cref="Document.EnableStyleSheetsForSet."/><br/></para>
+<para>-<see cref="Document.PreferredStyleSheetSet"/><br/>-<see cref="Document.SelectedStyleSheetSet"/><br/>-<see cref="Document.StyleSheetSets"/><br/>-<see cref="Document.EnableStyleSheetsForSet"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/lastStyleSheetSet"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>The style sheet set that was most recently set. If the current style sheet set has not been changed by setting <see cref="Document.SelectedStyleSheetSet."/>, the returned value is <c>null</c>.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> This value doesn&amp;apos;t change when<br/><see cref="Document.EnableStyleSheetsForSet."/> is called.</blockquote></value>
+<value>The style sheet set that was most recently set. If the current style sheet set has not been changed by setting <see cref="Document.SelectedStyleSheetSet"/>, the returned value is <c>null</c>.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> This value doesn&amp;apos;t change when<br/><see cref="Document.EnableStyleSheetsForSet"/> is called.</blockquote></value>
 </DocumentLastStyleSheetSet>
 </docs>

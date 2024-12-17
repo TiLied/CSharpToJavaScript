@@ -1,12 +1,12 @@
 <docs>
 <DocumentAdoptNode>
 <summary>
-<strong><c>Document.adoptNode()</c></strong> transfers a <see href="https://developer.mozilla.org/en-US/docs/Glossary/node/dom">node/dom</see> from another {{domxref("Document", "document", &amp;quot;&amp;quot;, &amp;quot;1&amp;quot;)}} into the method&amp;apos;s document.<br/>The adopted node and its subtree are removed from their original document (if any), and their <see cref="Node.OwnerDocument."/> is changed to the current document.<br/>The node can then be inserted into the current document.
+<strong><c>Document.adoptNode()</c></strong> transfers a <see href="https://developer.mozilla.org/en-US/docs/Glossary/node/dom">node/dom</see> from another {{domxref("Document", "document", &amp;quot;&amp;quot;, &amp;quot;1&amp;quot;)}} into the method&amp;apos;s document.<br/>The adopted node and its subtree are removed from their original document (if any), and their <see cref="Node.OwnerDocument"/> is changed to the current document.<br/>The node can then be inserted into the current document.
 </summary>
 <remarks>
-<para>-<see cref="Document.ImportNode."/><br/></para>
+<para>-<see cref="Document.ImportNode"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/adoptNode"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>The copied <c>importedNode</c> in the scope of the importing document.After calling this method, <c>importedNode</c> and<br/><c>externalNode</c> are the same object.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> <c>importedNode</c>&amp;apos;s<br/><see cref="Node.ParentNode."/> is <c>null</c>, since it has not yet been<br/>inserted into the document tree!</blockquote></returns>
+<returns>The copied <c>importedNode</c> in the scope of the importing document.After calling this method, <c>importedNode</c> and<br/><c>externalNode</c> are the same object.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> <c>importedNode</c>&amp;apos;s<br/><see cref="Node.ParentNode"/> is <c>null</c>, since it has not yet been<br/>inserted into the document tree!</blockquote></returns>
 </DocumentAdoptNode>
 </docs>

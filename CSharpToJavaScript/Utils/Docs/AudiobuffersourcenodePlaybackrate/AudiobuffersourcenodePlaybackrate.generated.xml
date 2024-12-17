@@ -1,13 +1,13 @@
 <docs>
 <AudioBufferSourceNodePlaybackRate>
 <summary>
-The <strong><c>playbackRate</c></strong> property of<br/>the <see cref="AudioBufferSourceNode."/> interface Is a <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam#k-rate">k-rate</see> <see cref="AudioParam."/> that<br/>defines the speed at which the audio asset will be played.
+The <strong><c>playbackRate</c></strong> property of<br/>the <see cref="AudioBufferSourceNode"/> interface Is a <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam#k-rate">k-rate</see> <see cref="AudioParam"/> that<br/>defines the speed at which the audio asset will be played.
 </summary>
 <remarks>
 <para>A value of 1.0 indicates it should play at the same speed as its sampling rate,<br/>values less than 1.0 cause the sound to play more slowly, while values greater than<br/>1.0 result in audio playing faster than normal. The default value is <c>1.0</c>.<br/>When set to another value, the <c>AudioBufferSourceNode</c> resamples the audio<br/>before sending it to the output.</para>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioBufferSourceNode/playbackRate"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An <see cref="AudioParam."/> whose <see cref="AudioParam.Value."/> is a<br/>floating-point value indicating the playback rate of the audio as a decimal proportion<br/>of the original sampling rate.Consider a sound buffer containing audio sampled at 44.1 kHz (44,100 samples per<br/>second). Let&amp;apos;s see what a few values of <c>playbackRate</c> do:</value>
+<value>An <see cref="AudioParam"/> whose <see cref="AudioParam.Value"/> is a<br/>floating-point value indicating the playback rate of the audio as a decimal proportion<br/>of the original sampling rate.Consider a sound buffer containing audio sampled at 44.1 kHz (44,100 samples per<br/>second). Let&amp;apos;s see what a few values of <c>playbackRate</c> do:</value>
 </AudioBufferSourceNodePlaybackRate>
 </docs>

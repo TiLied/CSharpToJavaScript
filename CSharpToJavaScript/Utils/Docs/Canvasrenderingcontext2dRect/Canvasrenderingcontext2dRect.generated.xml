@@ -4,8 +4,8 @@
 The<br/><strong><c>CanvasRenderingContext2D.rect()</c></strong><br/>method of the Canvas 2D API adds a rectangle to the current path.
 </summary>
 <remarks>
-<para>Like other methods that modify the current path, this method does not directly render<br/>anything. To draw the rectangle onto a canvas, you can use the<br/><see cref="CanvasRenderingContext2D.Fill."/> or<br/><see cref="CanvasRenderingContext2D.Stroke."/> methods.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> To both create and render a rectangle in one step, use the<br/><see cref="CanvasRenderingContext2D.FillRect."/> or<br/><see cref="CanvasRenderingContext2D.StrokeRect."/> methods.</para></blockquote>
-<para>-The interface defining this method: <see cref="CanvasRenderingContext2D."/><br/>-<see cref="CanvasRenderingContext2D.FillRect."/><br/>-<see cref="CanvasRenderingContext2D.StrokeRect."/><br/>-<see cref="CanvasRenderingContext2D.Fill."/><br/>-<see cref="CanvasRenderingContext2D.Stroke."/><br/></para>
+<para>Like other methods that modify the current path, this method does not directly render<br/>anything. To draw the rectangle onto a canvas, you can use the<br/><see cref="CanvasRenderingContext2D.Fill"/> or<br/><see cref="CanvasRenderingContext2D.Stroke"/> methods.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> To both create and render a rectangle in one step, use the<br/><see cref="CanvasRenderingContext2D.FillRect"/> or<br/><see cref="CanvasRenderingContext2D.StrokeRect"/> methods.</para></blockquote>
+<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.FillRect"/><br/>-<see cref="CanvasRenderingContext2D.StrokeRect"/><br/>-<see cref="CanvasRenderingContext2D.Fill"/><br/>-<see cref="CanvasRenderingContext2D.Stroke"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/rect"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>

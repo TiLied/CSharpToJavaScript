@@ -1,12 +1,12 @@
 <docs>
 <RTCTrackEventRTCTrackEvent>
 <summary>
-The <strong><c>RTCTrackEvent()</c></strong> constructor creates and returns a new <see cref="RTCTrackEvent."/> object,<br/>configured to describe the track which has been added to the <see cref="RTCPeerConnection."/>.
+The <strong><c>RTCTrackEvent()</c></strong> constructor creates and returns a new <see cref="RTCTrackEvent"/> object,<br/>configured to describe the track which has been added to the <see cref="RTCPeerConnection"/>.
 </summary>
 <remarks>
-<para>In general, you won&amp;apos;t need to use this constructor, as <c>RTCTrackEvent</c><br/>objects are created by WebRTC and delivered to your <c>RTCPeerConnector</c>&amp;apos;s<br/><see cref="RTCPeerConnection.Track_event."/> event handler as appropriate.</para>
+<para>In general, you won&amp;apos;t need to use this constructor, as <c>RTCTrackEvent</c><br/>objects are created by WebRTC and delivered to your <c>RTCPeerConnector</c>&amp;apos;s<br/><see cref="RTCPeerConnection.Track_event"/> event handler as appropriate.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEvent/RTCTrackEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A new <see cref="RTCTrackEvent."/> describing a track which has been added to the<br/><c>RTCPeerConnection</c>.</returns>
+<returns>A new <see cref="RTCTrackEvent"/> describing a track which has been added to the<br/><c>RTCPeerConnection</c>.</returns>
 </RTCTrackEventRTCTrackEvent>
 </docs>

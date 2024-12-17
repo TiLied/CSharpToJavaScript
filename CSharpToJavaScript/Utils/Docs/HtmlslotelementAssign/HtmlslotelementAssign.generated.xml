@@ -1,11 +1,11 @@
 <docs>
 <HTMLSlotElementAssign>
 <summary>
-The <strong><c>assign()</c></strong> method of the <see cref="HTMLSlotElement."/> interface sets the slot's <strong>manually assigned nodes</strong> to an ordered set of slottables. The manually assigned nodes set is initially empty until nodes are assigned using <c>assign()</c>.
+The <strong><c>assign()</c></strong> method of the <see cref="HTMLSlotElement"/> interface sets the slot's <strong>manually assigned nodes</strong> to an ordered set of slottables. The manually assigned nodes set is initially empty until nodes are assigned using <c>assign()</c>.
 </summary>
 <remarks>
 <blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> you cannot mix manually (imperative) and named (declarative, automatic) slot assignments. Therefore, for this method to work, the shadow tree needs to have been <see href="https://developer.mozilla.org/en-US/docs/Web/API/Element/attachShadow">created</see> with the <c>slotAssignment: &amp;quot;manual&amp;quot;</c> option.</para></blockquote>
-<para>-<see cref="Element.AttachShadow."/><br/></para>
+<para>-<see cref="Element.AttachShadow"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSlotElement/assign"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>

@@ -1,10 +1,10 @@
 <docs>
 <HTMLImageElementDecoding>
 <summary>
-The <strong><c>decoding</c></strong> property of the <see cref="HTMLImageElement."/> interface provides a hint to the browser as to how it should decode the image. More specifically, whether it should wait for the image to be decoded before presenting other content updates or not.
+The <strong><c>decoding</c></strong> property of the <see cref="HTMLImageElement"/> interface provides a hint to the browser as to how it should decode the image. More specifically, whether it should wait for the image to be decoded before presenting other content updates or not.
 </summary>
 <remarks>
-<para>-The <see cref="HTMLImageElement.Decode."/> method<br/>-The <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">img</see> element <c>decoding</c> attribute<br/>-<see href="https://www.tunetheweb.com/blog/what-does-the-image-decoding-attribute-actually-do/">What does the image decoding attribute actually do?</see> on tunetheweb.com (2023)<br/></para>
+<para>-The <see cref="HTMLImageElement.Decode"/> method<br/>-The <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">img</see> element <c>decoding</c> attribute<br/>-<see href="https://www.tunetheweb.com/blog/what-does-the-image-decoding-attribute-actually-do/">What does the image decoding attribute actually do?</see> on tunetheweb.com (2023)<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/decoding"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A string representing the decoding hint. Possible values are:</value>

@@ -1,11 +1,11 @@
 <docs>
 <IntersectionObserverEntryBoundingClientRect>
 <summary>
-The <see cref="IntersectionObserverEntry."/> interface's read-only<br/><strong><c>boundingClientRect</c></strong> property returns a<br/><see cref="DOMRectReadOnly."/> which in essence describes a rectangle describing the<br/>smallest rectangle that contains the entire target element.
+The <see cref="IntersectionObserverEntry"/> interface's read-only<br/><strong><c>boundingClientRect</c></strong> property returns a<br/><see cref="DOMRectReadOnly"/> which in essence describes a rectangle describing the<br/>smallest rectangle that contains the entire target element.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserverEntry/boundingClientRect"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="DOMRectReadOnly."/> which describes the smallest rectangle that contains<br/>every part of the target element whose intersection change is being described. This<br/>value is obtained using the same algorithm as<br/><see cref="Element.GetBoundingClientRect."/>, so refer to that article for details on<br/>precisely what is done to obtain this rectangle and what is and is not included within<br/>its bounds.In the general case, however, it&amp;apos;s safe to think of this as the bounds rectangle of the<br/>target element.</value>
+<value>A <see cref="DOMRectReadOnly"/> which describes the smallest rectangle that contains<br/>every part of the target element whose intersection change is being described. This<br/>value is obtained using the same algorithm as<br/><see cref="Element.GetBoundingClientRect"/>, so refer to that article for details on<br/>precisely what is done to obtain this rectangle and what is and is not included within<br/>its bounds.In the general case, however, it&amp;apos;s safe to think of this as the bounds rectangle of the<br/>target element.</value>
 </IntersectionObserverEntryBoundingClientRect>
 </docs>

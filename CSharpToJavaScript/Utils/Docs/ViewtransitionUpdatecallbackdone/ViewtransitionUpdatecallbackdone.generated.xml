@@ -1,7 +1,7 @@
 <docs>
 <ViewTransitionUpdateCallbackDone>
 <summary>
-The <strong><c>updateCallbackDone</c></strong> read-only property of the<br/><see cref="ViewTransition."/> interface is a {{jsxref("Promise")}} that fulfills when the promise returned by the <see cref="Document.StartViewTransition."/>'s callback fulfills, or rejects when it rejects.
+The <strong><c>updateCallbackDone</c></strong> read-only property of the<br/><see cref="ViewTransition"/> interface is a {{jsxref("Promise")}} that fulfills when the promise returned by the <see cref="Document.StartViewTransition"/>'s callback fulfills, or rejects when it rejects.
 </summary>
 <remarks>
 <para><c>updateCallbackDone</c> is useful when you don&amp;apos;t care about the success/failure of the transition animation, and just want to know if and when the DOM is updated.</para>

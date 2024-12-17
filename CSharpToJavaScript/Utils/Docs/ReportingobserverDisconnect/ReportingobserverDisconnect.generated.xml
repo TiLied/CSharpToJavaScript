@@ -1,10 +1,10 @@
 <docs>
 <ReportingObserverDisconnect>
 <summary>
-The <strong><c>disconnect()</c></strong> method of the<br/><see cref="ReportingObserver."/> interface stops a reporting observer that had<br/>previously started observing from collecting reports.
+The <strong><c>disconnect()</c></strong> method of the<br/><see cref="ReportingObserver"/> interface stops a reporting observer that had<br/>previously started observing from collecting reports.
 </summary>
 <remarks>
-<para>After calling <c>disconnect()</c>, neither<br/><see cref="ReportingObserver.TakeRecords."/> nor the <c>records</c> parameter of<br/>the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/ReportingObserver/ReportingObserver"><c>ReportingObserver()</c></see><br/>callback will return any reports. The associated observer will no longer be active.</para>
+<para>After calling <c>disconnect()</c>, neither<br/><see cref="ReportingObserver.TakeRecords"/> nor the <c>records</c> parameter of<br/>the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/ReportingObserver/ReportingObserver"><c>ReportingObserver()</c></see><br/>callback will return any reports. The associated observer will no longer be active.</para>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Reporting_API">Reporting API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ReportingObserver/disconnect"> <em>See also on MDN</em> </seealso></para>
 </remarks>

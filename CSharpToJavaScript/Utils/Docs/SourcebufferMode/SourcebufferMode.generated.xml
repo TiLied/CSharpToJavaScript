@@ -1,11 +1,11 @@
 <docs>
 <SourceBufferMode>
 <summary>
-The <strong><c>mode</c></strong> property of the <see cref="SourceBuffer."/><br/>interface controls whether media segments can be appended to the<br/><c>SourceBuffer</c> in any order, or in a strict sequence.
+The <strong><c>mode</c></strong> property of the <see cref="SourceBuffer"/><br/>interface controls whether media segments can be appended to the<br/><c>SourceBuffer</c> in any order, or in a strict sequence.
 </summary>
 <remarks>
-<para>The two available values are:</para><para>The mode value is initially set when the <c>SourceBuffer</c> is created using<br/><c>MediaSource.addSourceBuffer()</c>. If timestamps already exist for the media<br/>segments, then the value will be set to <c>segments</c>; if they don&amp;apos;t, then the<br/>value will be set to <c>sequence</c>.</para><para>If you try to set the <c>mode</c> property value to <c>segments</c> when<br/>the initial value is <c>sequence</c>, an exception will be thrown. The existing<br/>segment order must be maintained in <c>sequence</c> mode. You can, however, change<br/>the value from <c>segments</c> to <c>sequence</c>. It just means the play<br/>order will be fixed, and new timestamps generated to reflect this.</para><para>This property cannot be changed during while the <c>SourceBuffer</c> is<br/>processing either an <see cref="SourceBuffer.AppendBuffer."/> or<br/><see cref="SourceBuffer.Remove."/> call.</para>
-<para>-<see cref="MediaSource."/><br/>-<see cref="SourceBufferList."/><br/></para>
+<para>The two available values are:</para><para>The mode value is initially set when the <c>SourceBuffer</c> is created using<br/><c>MediaSource.addSourceBuffer()</c>. If timestamps already exist for the media<br/>segments, then the value will be set to <c>segments</c>; if they don&amp;apos;t, then the<br/>value will be set to <c>sequence</c>.</para><para>If you try to set the <c>mode</c> property value to <c>segments</c> when<br/>the initial value is <c>sequence</c>, an exception will be thrown. The existing<br/>segment order must be maintained in <c>sequence</c> mode. You can, however, change<br/>the value from <c>segments</c> to <c>sequence</c>. It just means the play<br/>order will be fixed, and new timestamps generated to reflect this.</para><para>This property cannot be changed during while the <c>SourceBuffer</c> is<br/>processing either an <see cref="SourceBuffer.AppendBuffer"/> or<br/><see cref="SourceBuffer.Remove"/> call.</para>
+<para>-<see cref="MediaSource"/><br/>-<see cref="SourceBufferList"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/mode"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A string.</value>

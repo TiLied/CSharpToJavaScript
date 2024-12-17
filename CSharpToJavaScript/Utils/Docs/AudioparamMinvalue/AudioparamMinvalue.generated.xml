@@ -1,10 +1,10 @@
 <docs>
 <AudioParamMinValue>
 <summary>
-The <strong><c>minValue</c></strong><br/>read-only property of the <see cref="AudioParam."/> interface represents the minimum<br/>possible value for the parameter&amp;apos;s nominal (effective) range.
+The <strong><c>minValue</c></strong><br/>read-only property of the <see cref="AudioParam"/> interface represents the minimum<br/>possible value for the parameter&amp;apos;s nominal (effective) range.
 </summary>
 <remarks>
-<para>-<see cref="AudioParam.MaxValue."/><br/></para>
+<para>-<see cref="AudioParam.MaxValue"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/minValue"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A floating-point <see cref="Number"/> indicating the minimum value permitted for the<br/>parameter&amp;apos;s nominal range.The default value of <c>minValue</c> is the minimum negative single-precision<br/>floating-point value (-340,282,346,638,528,859,811,704,183,484,516,925,440).</value>

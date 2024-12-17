@@ -4,8 +4,8 @@
 The <strong><c>ViewTimeline</c></strong> interface of the {{domxref(&amp;quot;Web Animations API&amp;quot;, &amp;quot;Web Animations API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} represents a view progress timeline (see <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_scroll-driven_animations">CSS scroll-driven animations</see> for more details).
 </summary>
 <remarks>
-<para>Pass a <c>ViewTimeline</c> instance to the <see cref="Animation.Animation."/> constructor or the <see cref="Element.Animate."/> method to specify it as the timeline that will control the progress of the animation.</para><para></para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_scroll-driven_animations">CSS scroll-driven animations</see><br/>-<see cref="AnimationTimeline."/>, <see cref="ScrollTimeline."/><br/></para>
+<para>Pass a <c>ViewTimeline</c> instance to the <see cref="Animation.Animation"/> constructor or the <see cref="Element.Animate"/> method to specify it as the timeline that will control the progress of the animation.</para><para></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_scroll-driven_animations">CSS scroll-driven animations</see><br/>-<see cref="AnimationTimeline"/>, <see cref="ScrollTimeline"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ViewTimeline"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </ViewTimeline>

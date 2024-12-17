@@ -1,11 +1,11 @@
 <docs>
 <EditContextUpdateControlBounds>
 <summary>
-The <strong><c>EditContext.updateControlBounds()</c></strong> method of the <see cref="EditContext."/> interface is used to inform the operating system about the position and size of the editable text region of the <c>EditContext</c> object.
+The <strong><c>EditContext.updateControlBounds()</c></strong> method of the <see cref="EditContext"/> interface is used to inform the operating system about the position and size of the editable text region of the <c>EditContext</c> object.
 </summary>
 <remarks>
 <para>Call this method to tell the operating system the bounds of the current editable region. You should call it when initializing the EditContext, and whenever the editable region's bounds change such as when the webpage is resized. These bounds are used to position platform-specific editing-related UI surfaces such as an <see href="https://developer.mozilla.org/en-US/docs/Glossary/Input Method Editor">Input Method Editor</see> (IME) window.</para>
-<para>-The <see cref="EditContext."/> interface it belongs to.<br/></para>
+<para>-The <see cref="EditContext"/> interface it belongs to.<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/EditContext/updateControlBounds"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </EditContextUpdateControlBounds>

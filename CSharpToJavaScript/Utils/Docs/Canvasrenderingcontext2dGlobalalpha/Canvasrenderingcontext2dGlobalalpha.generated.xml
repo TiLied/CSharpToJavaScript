@@ -5,7 +5,7 @@ The<br/><strong><c>CanvasRenderingContext2D.globalAlpha</c></strong><br/>propert
 </summary>
 <remarks>
 <blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> See also the chapter <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">Applying styles and color</see> in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas Tutorial</see>.</para></blockquote>
-<para>-The interface defining this property: <see cref="CanvasRenderingContext2D."/><br/>-<see cref="CanvasRenderingContext2D.GlobalCompositeOperation."/><br/></para>
+<para>-The interface defining this property: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.GlobalCompositeOperation"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/globalAlpha"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A number between <c>0.0</c> (fully transparent) and <c>1.0</c> (fully opaque), inclusive. The default value is <c>1.0</c>. Values outside that range, including <see cref="Infinity"/> and <see cref="NaN"/>, will not be set, and <c>globalAlpha</c> will retain its previous value.</value>

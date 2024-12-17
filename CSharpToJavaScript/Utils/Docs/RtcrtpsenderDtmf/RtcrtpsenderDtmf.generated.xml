@@ -1,12 +1,12 @@
 <docs>
 <RTCRtpSenderDtmf>
 <summary>
-The read-only <strong><c>dtmf</c></strong> property on the<br/><strong><see cref="RTCRtpSender."/></strong> interface returns a<br/><see cref="RTCDTMFSender."/> object which can be used to send {{Glossary("DTMF")}} tones<br/>over the <see cref="RTCPeerConnection."/>. See <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_DTMF">Using DTMF</see> for details on how to<br/>make use of the returned <c>RTCDTMFSender</c> object.
+The read-only <strong><c>dtmf</c></strong> property on the<br/><strong><see cref="RTCRtpSender"/></strong> interface returns a<br/><see cref="RTCDTMFSender"/> object which can be used to send {{Glossary("DTMF")}} tones<br/>over the <see cref="RTCPeerConnection"/>. See <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_DTMF">Using DTMF</see> for details on how to<br/>make use of the returned <c>RTCDTMFSender</c> object.
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_DTMF">Using DTMF with WebRTC</see><br/>-<see cref="RTCPeerConnection."/><br/>-<see cref="RTCDTMFSender."/><br/>-<see cref="RTCRtpSender."/><br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_DTMF">Using DTMF with WebRTC</see><br/>-<see cref="RTCPeerConnection"/><br/>-<see cref="RTCDTMFSender"/><br/>-<see cref="RTCRtpSender"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSender/dtmf"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An <see cref="RTCDTMFSender."/> which can be used to send DTMF over the RTP session, or<br/><c>null</c> if the track being carried by the RTP session or the<br/><see cref="RTCPeerConnection."/> as a whole doesn't support DTMF.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> Only audio tracks can support DTMF, and typically only one audio track per<br/><c>RTCPeerConnection</c> will have an associated <see cref="RTCDTMFSender."/></blockquote></value>
+<value>An <see cref="RTCDTMFSender"/> which can be used to send DTMF over the RTP session, or<br/><c>null</c> if the track being carried by the RTP session or the<br/><see cref="RTCPeerConnection"/> as a whole doesn't support DTMF.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> Only audio tracks can support DTMF, and typically only one audio track per<br/><c>RTCPeerConnection</c> will have an associated <see cref="RTCDTMFSender"/></blockquote></value>
 </RTCRtpSenderDtmf>
 </docs>

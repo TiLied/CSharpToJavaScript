@@ -1,10 +1,10 @@
 <docs>
 <RTCAudioSourceStatsKind>
 <summary>
-The <strong><c>kind</c></strong> property of the <see cref="RTCAudioSourceStats."/> dictionary is a string with the value <c>audio</c>.
+The <strong><c>kind</c></strong> property of the <see cref="RTCAudioSourceStats"/> dictionary is a string with the value <c>audio</c>.
 </summary>
 <remarks>
-<para>The <c>kind</c> is used to differentiate between audio and video media sources when iterating an <see cref="RTCStatsReport."/>, which both have a <see cref="RTCAudioSourceStats.Type."/> of <c>media-source</c> (a <c>kind</c> of <c>video</c> indicates an <see cref="RTCVideoSourceStats."/> object).</para>
+<para>The <c>kind</c> is used to differentiate between audio and video media sources when iterating an <see cref="RTCStatsReport"/>, which both have a <see cref="RTCAudioSourceStats.Type"/> of <c>media-source</c> (a <c>kind</c> of <c>video</c> indicates an <see cref="RTCVideoSourceStats"/> object).</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCAudioSourceStats/kind"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A string with the value <c>audio</c>.</value>

@@ -1,11 +1,11 @@
 <docs>
 <RTCCertificateStats>
 <summary>
-The <strong><c>RTCCertificateStats</c></strong> dictionary of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see> is used to report information about a certificate used by an <see cref="RTCDtlsTransport."/> and its underlying <see cref="RTCIceTransport."/>.
+The <strong><c>RTCCertificateStats</c></strong> dictionary of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see> is used to report information about a certificate used by an <see cref="RTCDtlsTransport"/> and its underlying <see cref="RTCIceTransport"/>.
 </summary>
 <remarks>
-<para>The report can be obtained by iterating the <see cref="RTCStatsReport."/> returned by <see cref="RTCPeerConnection.GetStats."/> until you find an entry with the <see href="https://developer.mozilla.org#type"><c>type</c></see> of <c>certificate</c>.</para>
-<para>-<see cref="RTCStatsReport."/><br/>-<see cref="RTCCertificate."/><br/></para>
+<para>The report can be obtained by iterating the <see cref="RTCStatsReport"/> returned by <see cref="RTCPeerConnection.GetStats"/> until you find an entry with the <see href="https://developer.mozilla.org#type"><c>type</c></see> of <c>certificate</c>.</para>
+<para>-<see cref="RTCStatsReport"/><br/>-<see cref="RTCCertificate"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCCertificateStats"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </RTCCertificateStats>

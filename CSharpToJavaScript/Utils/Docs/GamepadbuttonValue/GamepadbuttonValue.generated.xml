@@ -1,7 +1,7 @@
 <docs>
 <GamepadButtonValue>
 <summary>
-The <strong><c>GamepadButton.value</c></strong> property of the<br/><see cref="GamepadButton."/> interface returns a double value used to represent the<br/>current state of analog buttons on many modern gamepads, such as the triggers.
+The <strong><c>GamepadButton.value</c></strong> property of the<br/><see cref="GamepadButton"/> interface returns a double value used to represent the<br/>current state of analog buttons on many modern gamepads, such as the triggers.
 </summary>
 <remarks>
 <para>The values are normalized to the range <c>0.0</c> — <c>1.0</c>, with<br/><c>0.0</c> representing a button that is not pressed, and 1.0 representing a<br/>button that is fully pressed.</para>

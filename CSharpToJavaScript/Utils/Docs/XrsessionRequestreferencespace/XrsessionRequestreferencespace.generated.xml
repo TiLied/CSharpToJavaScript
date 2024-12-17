@@ -1,11 +1,11 @@
 <docs>
 <XRSessionRequestReferenceSpace>
 <summary>
-The <strong><c>requestReferenceSpace()</c></strong> method of the<br/><see cref="XRSession."/> interface returns a {{JSxRef("promise")}} that resolves with<br/>an instance of either <see cref="XRReferenceSpace."/><br/>or <see cref="XRBoundedReferenceSpace."/> as appropriate given the type of reference<br/>space requested.
+The <strong><c>requestReferenceSpace()</c></strong> method of the<br/><see cref="XRSession"/> interface returns a {{JSxRef("promise")}} that resolves with<br/>an instance of either <see cref="XRReferenceSpace"/><br/>or <see cref="XRBoundedReferenceSpace"/> as appropriate given the type of reference<br/>space requested.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRSession/requestReferenceSpace"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A {{JSxRef("Promise")}} that resolves with an <see cref="XRReferenceSpace."/> object.The types of reference space are listed below, with brief information about their use cases and which interface is used to implement them.</returns>
+<returns>A {{JSxRef("Promise")}} that resolves with an <see cref="XRReferenceSpace"/> object.The types of reference space are listed below, with brief information about their use cases and which interface is used to implement them.</returns>
 </XRSessionRequestReferenceSpace>
 </docs>

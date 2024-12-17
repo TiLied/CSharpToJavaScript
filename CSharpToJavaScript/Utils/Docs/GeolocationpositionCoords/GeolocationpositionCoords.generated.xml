@@ -1,12 +1,12 @@
 <docs>
 <GeolocationPositionCoords>
 <summary>
-The <strong><c>coords</c></strong> read-only property of the <see cref="GeolocationPosition."/> interface returns a <see cref="GeolocationCoordinates."/> object representing a geographic position. It contains the location, that is longitude and latitude on the Earth, the altitude, and the speed of the object concerned, regrouped inside the returned value. It also contains accuracy information about these values.
+The <strong><c>coords</c></strong> read-only property of the <see cref="GeolocationPosition"/> interface returns a <see cref="GeolocationCoordinates"/> object representing a geographic position. It contains the location, that is longitude and latitude on the Earth, the altitude, and the speed of the object concerned, regrouped inside the returned value. It also contains accuracy information about these values.
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API">Using the Geolocation API</see><br/>-<see cref="GeolocationPosition."/><br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API">Using the Geolocation API</see><br/>-<see cref="GeolocationPosition"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GeolocationPosition/coords"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="GeolocationCoordinates."/> object instance.</value>
+<value>A <see cref="GeolocationCoordinates"/> object instance.</value>
 </GeolocationPositionCoords>
 </docs>

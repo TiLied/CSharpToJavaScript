@@ -1,7 +1,7 @@
 <docs>
 <TextDecoderStreamEncoding>
 <summary>
-The <strong><c>encoding</c></strong> read-only property of the <see cref="TextDecoderStream."/> interface returns a string containing the name of the encoding algorithm used by the specific decoder.
+The <strong><c>encoding</c></strong> read-only property of the <see cref="TextDecoderStream"/> interface returns a string containing the name of the encoding algorithm used by the specific decoder.
 </summary>
 <remarks>
 <para>The encoding is set by the <see href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoderStream/TextDecoderStream">constructor</see> <c>label</c> parameter, and defaults to <c>utf-8</c>.</para>

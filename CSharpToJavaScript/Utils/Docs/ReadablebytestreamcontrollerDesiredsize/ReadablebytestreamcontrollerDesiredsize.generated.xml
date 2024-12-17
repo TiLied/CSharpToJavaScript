@@ -1,11 +1,11 @@
 <docs>
 <ReadableByteStreamControllerDesiredSize>
 <summary>
-The <strong><c>desiredSize</c></strong> read-only property of the <see cref="ReadableByteStreamController."/> interface returns the number of bytes required to fill the stream's internal queue to its "desired size".
+The <strong><c>desiredSize</c></strong> read-only property of the <see cref="ReadableByteStreamController"/> interface returns the number of bytes required to fill the stream's internal queue to its "desired size".
 </summary>
 <remarks>
 <para>The value is used by the stream to indicate a preferred flow rate to the underlying source.<br/>Sources that support throttling or pausing their inflow of data (not all do!) should control the inflow such that <c>desiredSize</c> of the stream buffer is kept positive and as close to zero as possible.</para><para>The <c>desiredSize</c> is used to apply <see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Concepts#backpressure">backpressure</see> from downstream consumers.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams">Using readable byte streams</see><br/>-<see cref="ReadableByteStreamController."/><br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams">Using readable byte streams</see><br/>-<see cref="ReadableByteStreamController"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableByteStreamController/desiredSize"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>An integer. Note that this can be negative if the queue is over-full.The value will be <c>null</c> if the stream has errored and <c>0</c> if it is closed.</value>

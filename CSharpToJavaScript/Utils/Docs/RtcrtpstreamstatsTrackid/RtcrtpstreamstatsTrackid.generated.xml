@@ -1,11 +1,11 @@
 <docs>
 <RTCRtpStreamStatsTrackId>
 <summary>
-The <see cref="RTCRtpStreamStats."/> dictionary's<br/><strong><c>trackId</c></strong> property is a string which uniquely identifies<br/>the <see cref="RTCMediaStreamTrackStats."/> object which contains the track statistics<br/>for the <see cref="MediaStreamTrack."/> for which statistics are provided in this<br/>object.
+The <see cref="RTCRtpStreamStats"/> dictionary's<br/><strong><c>trackId</c></strong> property is a string which uniquely identifies<br/>the <see cref="RTCMediaStreamTrackStats"/> object which contains the track statistics<br/>for the <see cref="MediaStreamTrack"/> for which statistics are provided in this<br/>object.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpStreamStats/trackId"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string which uniquely identifies the<br/><see cref="RTCMediaStreamTrackStats."/> object that provides statistics for the track<br/>for which statistics are being collected by this <see cref="RTCStatsReport."/>.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> This value is <strong>not</strong> the same as the value of<br/><see cref="MediaStreamTrack.Id."/>.</blockquote></value>
+<value>A string which uniquely identifies the<br/><see cref="RTCMediaStreamTrackStats"/> object that provides statistics for the track<br/>for which statistics are being collected by this <see cref="RTCStatsReport"/>.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> This value is <strong>not</strong> the same as the value of<br/><see cref="MediaStreamTrack.Id"/>.</blockquote></value>
 </RTCRtpStreamStatsTrackId>
 </docs>

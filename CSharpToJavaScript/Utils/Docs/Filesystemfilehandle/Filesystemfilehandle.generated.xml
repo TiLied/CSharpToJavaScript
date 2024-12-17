@@ -1,10 +1,10 @@
 <docs>
 <FileSystemFileHandle>
 <summary>
-The <strong><c>FileSystemFileHandle</c></strong> interface of the {{domxref(&amp;quot;File System API&amp;quot;, &amp;quot;File System API&amp;quot;, &amp;quot;&amp;quot;, "nocode")}} represents a handle to a file system entry. The interface is accessed through the <see cref="'window.ShowOpenFilePicker'."/> method.
+The <strong><c>FileSystemFileHandle</c></strong> interface of the {{domxref(&amp;quot;File System API&amp;quot;, &amp;quot;File System API&amp;quot;, &amp;quot;&amp;quot;, "nocode")}} represents a handle to a file system entry. The interface is accessed through the <see cref="'window.ShowOpenFilePicker'"/> method.
 </summary>
 <remarks>
-<para>Note that read and write operations depend on file-access permissions that do not persist after a page refresh if no other tabs for that origin remain open. The <see cref="FileSystemHandle.QueryPermission."/> method of the <see cref="FileSystemHandle."/> interface can be used to verify permission state before accessing a file.</para><para></para>
+<para>Note that read and write operations depend on file-access permissions that do not persist after a page refresh if no other tabs for that origin remain open. The <see cref="FileSystemHandle.QueryPermission"/> method of the <see cref="FileSystemHandle"/> interface can be used to verify permission state before accessing a file.</para><para></para>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_System_API">File System API</see><br/>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/file-system-access">The File System Access API: simplifying access to local files</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemFileHandle"> <em>See also on MDN</em> </seealso></para>
 </remarks>

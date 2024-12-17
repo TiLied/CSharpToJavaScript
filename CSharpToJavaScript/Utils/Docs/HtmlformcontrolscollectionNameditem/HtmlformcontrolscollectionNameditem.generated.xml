@@ -1,11 +1,11 @@
 <docs>
 <HTMLFormControlsCollectionNamedItem>
 <summary>
-The <strong><c>HTMLFormControlsCollection.namedItem()</c></strong> method returns<br/>the <see cref="RadioNodeList."/> or the <see cref="Element."/> in the collection whose<br/><c>name</c> or <c>id</c> match the specified name, or <c>null</c> if<br/>no node matches.
+The <strong><c>HTMLFormControlsCollection.namedItem()</c></strong> method returns<br/>the <see cref="RadioNodeList"/> or the <see cref="Element"/> in the collection whose<br/><c>name</c> or <c>id</c> match the specified name, or <c>null</c> if<br/>no node matches.
 </summary>
 <remarks>
-<para>Note that this version of <c>namedItem()</c> hides the one inherited from<br/><see cref="HTMLCollection."/>. Like that one, in JavaScript, using the array bracket<br/>syntax with a <see cref="String"/>, like <c>collection[&amp;quot;value&amp;quot;]</c> is<br/>equivalent to <c>collection.namedItem(&amp;quot;value&amp;quot;)</c>.</para>
-<para>-<see cref="HTMLCollection.NamedItem."/> that it replaces<br/></para>
+<para>Note that this version of <c>namedItem()</c> hides the one inherited from<br/><see cref="HTMLCollection"/>. Like that one, in JavaScript, using the array bracket<br/>syntax with a <see cref="String"/>, like <c>collection[&amp;quot;value&amp;quot;]</c> is<br/>equivalent to <c>collection.namedItem(&amp;quot;value&amp;quot;)</c>.</para>
+<para>-<see cref="HTMLCollection.NamedItem"/> that it replaces<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormControlsCollection/namedItem"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </HTMLFormControlsCollectionNamedItem>

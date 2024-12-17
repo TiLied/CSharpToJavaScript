@@ -1,11 +1,11 @@
 <docs>
 <HTMLElementOffsetLeft>
 <summary>
-The <strong><c>HTMLElement.offsetLeft</c></strong> read-only property returns the number of pixels that the <strong>upper left corner</strong> of the current element is offset to the left within the <see cref="HTMLElement.OffsetParent."/> node.
+The <strong><c>HTMLElement.offsetLeft</c></strong> read-only property returns the number of pixels that the <strong>upper left corner</strong> of the current element is offset to the left within the <see cref="HTMLElement.OffsetParent"/> node.
 </summary>
 <remarks>
-<para>For block-level elements, <c>offsetTop</c>, <c>offsetLeft</c>, <c>offsetWidth</c>, and <c>offsetHeight</c> describe the border box of an element relative to the <c>offsetParent</c>.</para><para>However, for inline-level elements (such as <strong>span</strong>) that can wrap from one line to the next, <c>offsetTop</c> and <c>offsetLeft</c> describe the positions of the <strong>first</strong> border box (use <see cref="Element.GetClientRects."/> to get its width and height), while <c>offsetWidth</c> and <c>offsetHeight</c> describe the dimensions of the <strong>bounding</strong> border box (use <see cref="Element.GetBoundingClientRect."/> to get its position). Therefore, a box with the left, top, width and height of <c>offsetLeft</c>, <c>offsetTop</c>, <c>offsetWidth</c> and <c>offsetHeight</c> will not be a bounding box for a span with wrapped text.</para>
-<para>-<see cref="HTMLElement.OffsetParent."/>, <see cref="HTMLElement.OffsetTop."/>, <see cref="HTMLElement.OffsetWidth."/>, <see cref="HTMLElement.OffsetHeight."/><br/></para>
+<para>For block-level elements, <c>offsetTop</c>, <c>offsetLeft</c>, <c>offsetWidth</c>, and <c>offsetHeight</c> describe the border box of an element relative to the <c>offsetParent</c>.</para><para>However, for inline-level elements (such as <strong>span</strong>) that can wrap from one line to the next, <c>offsetTop</c> and <c>offsetLeft</c> describe the positions of the <strong>first</strong> border box (use <see cref="Element.GetClientRects"/> to get its width and height), while <c>offsetWidth</c> and <c>offsetHeight</c> describe the dimensions of the <strong>bounding</strong> border box (use <see cref="Element.GetBoundingClientRect"/> to get its position). Therefore, a box with the left, top, width and height of <c>offsetLeft</c>, <c>offsetTop</c>, <c>offsetWidth</c> and <c>offsetHeight</c> will not be a bounding box for a span with wrapped text.</para>
+<para>-<see cref="HTMLElement.OffsetParent"/>, <see cref="HTMLElement.OffsetTop"/>, <see cref="HTMLElement.OffsetWidth"/>, <see cref="HTMLElement.OffsetHeight"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetLeft"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>An integer.</value>

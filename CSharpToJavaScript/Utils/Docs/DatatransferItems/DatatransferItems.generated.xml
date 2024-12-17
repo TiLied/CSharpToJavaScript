@@ -1,12 +1,12 @@
 <docs>
 <DataTransferItems>
 <summary>
-The read-only <see cref="DataTransfer."/> property <c>items</c> property is a<br/><see cref="DataTransferItemList."/> of the {{domxref("DataTransferItem","data transfer items", &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} in a drag operation. The list includes one item for each item in the operation and if the operation had no items, the list is empty.
+The read-only <see cref="DataTransfer"/> property <c>items</c> property is a<br/><see cref="DataTransferItemList"/> of the {{domxref("DataTransferItem","data transfer items", &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} in a drag operation. The list includes one item for each item in the operation and if the operation had no items, the list is empty.
 </summary>
 <remarks>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API">Drag and drop</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations">Drag Operations</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types">Recommended Drag Types</see><br/>-<see href="https://codepen.io/tech_query/pen/MqGgap">DataTransfer test - Paste or Drag</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/items"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="DataTransferItemList."/> object containing <see cref="DataTransferItem."/><br/>objects representing the items being dragged in a drag operation, one list item for each<br/>object being dragged. If the drag operation had no data, the list is empty.</value>
+<value>A <see cref="DataTransferItemList"/> object containing <see cref="DataTransferItem"/><br/>objects representing the items being dragged in a drag operation, one list item for each<br/>object being dragged. If the drag operation had no data, the list is empty.</value>
 </DataTransferItems>
 </docs>

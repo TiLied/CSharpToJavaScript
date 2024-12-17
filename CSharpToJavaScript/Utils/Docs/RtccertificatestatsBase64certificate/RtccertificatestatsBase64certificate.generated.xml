@@ -1,7 +1,7 @@
 <docs>
 <RTCCertificateStatsBase64Certificate>
 <summary>
-The <strong><c>base64Certificate</c></strong> property of the <see cref="RTCCertificateStats."/> dictionary is a string containing the base-64 representation of the DER-encoded certificate.
+The <strong><c>base64Certificate</c></strong> property of the <see cref="RTCCertificateStats"/> dictionary is a string containing the base-64 representation of the DER-encoded certificate.
 </summary>
 <remarks>
 <para>This is essentially an encoding of the original certificate as a string that can safely serialized and deserialized when sent over an IP network.</para>

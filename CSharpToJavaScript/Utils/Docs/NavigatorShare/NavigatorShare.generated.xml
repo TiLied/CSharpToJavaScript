@@ -5,7 +5,7 @@ The <strong><c>navigator.share()</c></strong> method of the <see href="https://d
 </summary>
 <remarks>
 <para>The method resolves a <see cref="Promise"/> with <c>undefined</c>.<br/>On Windows this happens when the share popup is launched, while on Android the promise resolves once the data has successfully been passed to the <strong>share target</strong>.</para>
-<para>-<see cref="Navigator.CanShare."/><br/>-<see href="https://wpt.live/web-share/"/> (web platform tests)<br/></para>
+<para>-<see cref="Navigator.CanShare"/><br/>-<see href="https://wpt.live/web-share/"/> (web platform tests)<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>A <see cref="Promise"/> that resolves with <c>undefined</c>, or rejected with one of the <see href="https://developer.mozilla.org#exceptions">Exceptions</see> given below.</returns>

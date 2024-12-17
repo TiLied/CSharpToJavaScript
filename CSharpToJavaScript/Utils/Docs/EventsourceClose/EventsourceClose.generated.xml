@@ -1,11 +1,11 @@
 <docs>
 <EventSourceClose>
 <summary>
-The <strong><c>close()</c></strong> method of the <see cref="EventSource."/><br/>interface closes the connection, if one is made, and sets the<br/><see cref="EventSource.ReadyState."/> attribute to <c>2</c> (closed).
+The <strong><c>close()</c></strong> method of the <see cref="EventSource"/><br/>interface closes the connection, if one is made, and sets the<br/><see cref="EventSource.ReadyState"/> attribute to <c>2</c> (closed).
 </summary>
 <remarks>
 <blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> If the connection is already closed, the method does nothing.</para></blockquote>
-<para>-<see cref="EventSource."/><br/></para>
+<para>-<see cref="EventSource"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/EventSource/close"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>

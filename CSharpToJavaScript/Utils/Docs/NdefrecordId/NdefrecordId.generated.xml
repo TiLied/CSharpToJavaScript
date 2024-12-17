@@ -1,7 +1,7 @@
 <docs>
 <NDEFRecordId>
 <summary>
-The <strong><c>id</c></strong> property of the<br/><see cref="NDEFRecord."/> interface returns the record identifier, which is an<br/>absolute or relative URL used to identify the record.
+The <strong><c>id</c></strong> property of the<br/><see cref="NDEFRecord"/> interface returns the record identifier, which is an<br/>absolute or relative URL used to identify the record.
 </summary>
 <remarks>
 <para>This identifier is created by the generator of the record which is solely responsible<br/>for enforcing record identifier uniqueness. Web NFC does not sign the NFC content, thus<br/>record consumer should not make any assumptions about integrity or authenticity of the<br/>identifier or any other part of the records.</para>

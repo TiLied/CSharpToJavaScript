@@ -1,10 +1,10 @@
 <docs>
 <WorkerTerminate>
 <summary>
-The <strong><c>terminate()</c></strong> method of the <see cref="Worker."/> interface immediately terminates the <see cref="Worker."/>. This does not offer the worker an opportunity to finish its operations; it is stopped at once.
+The <strong><c>terminate()</c></strong> method of the <see cref="Worker"/> interface immediately terminates the <see cref="Worker"/>. This does not offer the worker an opportunity to finish its operations; it is stopped at once.
 </summary>
 <remarks>
-<para>-<see cref="Worker."/> interface<br/>-<see cref="DedicatedWorkerGlobalScope.Close."/><br/>-<see cref="SharedWorkerGlobalScope.Close."/><br/></para>
+<para>-<see cref="Worker"/> interface<br/>-<see cref="DedicatedWorkerGlobalScope.Close"/><br/>-<see cref="SharedWorkerGlobalScope.Close"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Worker/terminate"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>

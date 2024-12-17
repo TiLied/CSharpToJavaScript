@@ -1,11 +1,11 @@
 <docs>
 <PerformanceResourceTimingRedirectEnd>
 <summary>
-The <strong><c>redirectEnd</c></strong> read-only property returns a <see cref="DOMHighResTimeStamp."/> immediately after receiving the last byte of the response of the last redirect.
+The <strong><c>redirectEnd</c></strong> read-only property returns a <see cref="DOMHighResTimeStamp"/> immediately after receiving the last byte of the response of the last redirect.
 </summary>
 <remarks>
-<para>When fetching a resource, if there are multiple HTTP redirects, and any of the redirects have an origin that is different from the current document, and the timing allow check algorithm passes for each redirected resource, this property returns the time immediately after receiving the last byte of the response of the last redirect; otherwise, zero is returned.</para><para>To get the amount of redirects, see also <see cref="PerformanceNavigationTiming.RedirectCount."/>.</para>
-<para>-<see cref="PerformanceNavigationTiming.RedirectCount."/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Timing-Allow-Origin">Timing-Allow-Origin</see><br/></para>
+<para>When fetching a resource, if there are multiple HTTP redirects, and any of the redirects have an origin that is different from the current document, and the timing allow check algorithm passes for each redirected resource, this property returns the time immediately after receiving the last byte of the response of the last redirect; otherwise, zero is returned.</para><para>To get the amount of redirects, see also <see cref="PerformanceNavigationTiming.RedirectCount"/>.</para>
+<para>-<see cref="PerformanceNavigationTiming.RedirectCount"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Timing-Allow-Origin">Timing-Allow-Origin</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming/redirectEnd"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>The <c>redirectEnd</c> property can have the following values:</value>

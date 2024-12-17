@@ -1,10 +1,10 @@
 <docs>
 <HIDDeviceReceiveFeatureReport>
 <summary>
-The <strong><c>receiveFeatureReport()</c></strong> method of the <see cref="HIDDevice."/> interface receives a feature report from the HID device. Feature reports are a way for HID devices and applications to exchange non-standardized HID data.
+The <strong><c>receiveFeatureReport()</c></strong> method of the <see cref="HIDDevice"/> interface receives a feature report from the HID device. Feature reports are a way for HID devices and applications to exchange non-standardized HID data.
 </summary>
 <remarks>
-<para>The <c>reportId</c> for each of the report formats that this device supports can be retrieved from <see cref="HIDDevice.Collections."/>.</para>
+<para>The <c>reportId</c> for each of the report formats that this device supports can be retrieved from <see cref="HIDDevice.Collections"/>.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HIDDevice/receiveFeatureReport"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>A <see cref="Promise"/> which resolves with a <see cref="DataView"/> object containing the feature report.</returns>

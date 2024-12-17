@@ -1,12 +1,12 @@
 <docs>
 <SubtleCryptoGenerateKey>
 <summary>
-Use the <strong><c>generateKey()</c></strong> method of the<br/><see cref="SubtleCrypto."/> interface to generate a new key (for symmetric algorithms)<br/>or key pair (for public-key algorithms).
+Use the <strong><c>generateKey()</c></strong> method of the<br/><see cref="SubtleCrypto"/> interface to generate a new key (for symmetric algorithms)<br/>or key pair (for public-key algorithms).
 </summary>
 <remarks>
 <para>-<see href="https://www.keylength.com/">Cryptographic key length recommendations</see>.<br/>-<see href="https://csrc.nist.gov/publications/detail/sp/800-131a/rev-2/final">NIST Transitioning the Use of Cryptographic Algorithms and Key Lengths</see>.<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/generateKey"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A <see cref="Promise"/> that fulfills with a<br/><see cref="CryptoKey."/> (for symmetric algorithms) or a <see cref="CryptoKeyPair."/><br/>(for public-key algorithms).</returns>
+<returns>A <see cref="Promise"/> that fulfills with a<br/><see cref="CryptoKey"/> (for symmetric algorithms) or a <see cref="CryptoKeyPair"/><br/>(for public-key algorithms).</returns>
 </SubtleCryptoGenerateKey>
 </docs>

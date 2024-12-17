@@ -4,7 +4,7 @@
 <div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>preferredStyleSheetSet</c></strong> property returns the preferred style sheet set as set by the page<br/>author.
 </summary>
 <remarks>
-<para>-<see cref="Document.LastStyleSheetSet."/><br/>-<see cref="Document.SelectedStyleSheetSet."/><br/>-<see cref="Document.StyleSheetSets."/><br/>-<see cref="Document.EnableStyleSheetsForSet."/><br/></para>
+<para>-<see cref="Document.LastStyleSheetSet"/><br/>-<see cref="Document.SelectedStyleSheetSet"/><br/>-<see cref="Document.StyleSheetSets"/><br/>-<see cref="Document.EnableStyleSheetsForSet"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/preferredStyleSheetSet"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>The author&amp;apos;s preferred style sheet set. This is determined from the order of style sheet declarations and the<br/><c>Default-Style</c> HTTP header.If there isn&amp;apos;t a preferred style sheet set defined by the author, the empty string (<c>&amp;quot;&amp;quot;</c>) is returned.</value>

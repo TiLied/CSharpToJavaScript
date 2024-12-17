@@ -1,7 +1,7 @@
 <docs>
 <GPUQueueWriteTexture>
 <summary>
-The <strong><c>writeTexture()</c></strong> method of the<br/><see cref="GPUQueue."/> interface writes a provided data source into a given <see cref="GPUTexture."/>.
+The <strong><c>writeTexture()</c></strong> method of the<br/><see cref="GPUQueue"/> interface writes a provided data source into a given <see cref="GPUTexture"/>.
 </summary>
 <remarks>
 <para>This is a convenience function, which provides an alternative to setting texture data via buffer mapping and buffer-to-texture copies. It lets the user agent determine the most efficient way to copy the data over.</para>

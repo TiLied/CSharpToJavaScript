@@ -1,11 +1,11 @@
 <docs>
 <IntersectionObserverEntryTime>
 <summary>
-The <see cref="IntersectionObserverEntry."/> interface's<br/>read-only <strong><c>time</c></strong> property is a<br/><see cref="DOMHighResTimeStamp."/> that indicates the time at which the intersection<br/>change occurred relative to the time at which the document was created.
+The <see cref="IntersectionObserverEntry"/> interface's<br/>read-only <strong><c>time</c></strong> property is a<br/><see cref="DOMHighResTimeStamp"/> that indicates the time at which the intersection<br/>change occurred relative to the time at which the document was created.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserverEntry/time"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="DOMHighResTimeStamp."/> which indicates the time at which the<br/><see cref="IntersectionObserverEntry.Target."/> element experienced the<br/>intersection change described by the <c>IntersectionObserverEntry</c>. The time is<br/>specified in milliseconds since the creation of the containing document.</value>
+<value>A <see cref="DOMHighResTimeStamp"/> which indicates the time at which the<br/><see cref="IntersectionObserverEntry.Target"/> element experienced the<br/>intersection change described by the <c>IntersectionObserverEntry</c>. The time is<br/>specified in milliseconds since the creation of the containing document.</value>
 </IntersectionObserverEntryTime>
 </docs>

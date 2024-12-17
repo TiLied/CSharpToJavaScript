@@ -1,7 +1,7 @@
 <docs>
 <AudioWorkletGlobalScopeCurrentFrame>
 <summary>
-The read-only <strong><c>currentFrame</c></strong> property of the <see cref="AudioWorkletGlobalScope."/> interface returns an integer that represents the ever-increasing current sample-frame of the audio block being processed. It is incremented by 128 (the size of a render quantum) after the processing of each audio block.
+The read-only <strong><c>currentFrame</c></strong> property of the <see cref="AudioWorkletGlobalScope"/> interface returns an integer that represents the ever-increasing current sample-frame of the audio block being processed. It is incremented by 128 (the size of a render quantum) after the processing of each audio block.
 </summary>
 <remarks>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>

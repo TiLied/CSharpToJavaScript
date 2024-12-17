@@ -1,7 +1,7 @@
 <docs>
 <Worklet>
 <summary>
-The <strong><c>Worklet</c></strong> interface is a lightweight version of <see cref="Worker."/> and gives developers access to low-level parts of the rendering pipeline.
+The <strong><c>Worklet</c></strong> interface is a lightweight version of <see cref="Worker"/> and gives developers access to low-level parts of the rendering pipeline.
 </summary>
 <remarks>
 <para>With Worklets, you can run JavaScript and <see href="https://developer.mozilla.org/en-US/docs/WebAssembly">WebAssembly</see> code to do graphics rendering or audio processing where high performance is required.</para><para>Worklets allow static import of <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules">ECMAScript modules</see>, if supported, using <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import"><c>import</c></see>.<br/>Dynamic import is disallowed by the specification — calling <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/import"><c>import()</c></see> will throw.</para>

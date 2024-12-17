@@ -1,11 +1,11 @@
 <docs>
 <RTCInboundRtpStreamStats>
 <summary>
-The <strong><c>RTCInboundRtpStreamStats</c></strong> dictionary of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see> is used to report statistics related to the receiving end of an RTP stream on the local end of the <see cref="RTCPeerConnection."/>.
+The <strong><c>RTCInboundRtpStreamStats</c></strong> dictionary of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see> is used to report statistics related to the receiving end of an RTP stream on the local end of the <see cref="RTCPeerConnection"/>.
 </summary>
 <remarks>
-<para>The statistics can be obtained by iterating the <see cref="RTCStatsReport."/> returned by <see cref="RTCPeerConnection.GetStats."/> or <see cref="RTCRtpReceiver.GetStats."/> until you find a report with the <see href="https://developer.mozilla.org#type"><c>type</c></see> of <c>inbound-rtp</c>.</para>
-<para>-<see cref="RTCStatsReport."/><br/></para>
+<para>The statistics can be obtained by iterating the <see cref="RTCStatsReport"/> returned by <see cref="RTCPeerConnection.GetStats"/> or <see cref="RTCRtpReceiver.GetStats"/> until you find a report with the <see href="https://developer.mozilla.org#type"><c>type</c></see> of <c>inbound-rtp</c>.</para>
+<para>-<see cref="RTCStatsReport"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </RTCInboundRtpStreamStats>

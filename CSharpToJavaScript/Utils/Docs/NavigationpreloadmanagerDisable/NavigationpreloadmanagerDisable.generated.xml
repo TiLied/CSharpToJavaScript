@@ -1,11 +1,11 @@
 <docs>
 <NavigationPreloadManagerDisable>
 <summary>
-The <strong><c>disable()</c></strong> method of the <see cref="NavigationPreloadManager."/> interface halts the automatic preloading of service-worker-managed resources previously started using <see cref="NavigationPreloadManager.Enable."/><br/>It returns a promise that resolves with <c>undefined</c>.
+The <strong><c>disable()</c></strong> method of the <see cref="NavigationPreloadManager"/> interface halts the automatic preloading of service-worker-managed resources previously started using <see cref="NavigationPreloadManager.Enable"/><br/>It returns a promise that resolves with <c>undefined</c>.
 </summary>
 <remarks>
 <para>The method may be called in the service worker&amp;apos;s <c>activate</c> event handler (before the <c>fetch</c> event handler can be called).</para>
-<para><see cref="NavigationPreloadManager.Enable."/></para>
+<para><see cref="NavigationPreloadManager.Enable"/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NavigationPreloadManager/disable"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>A <see cref="Promise"/> that resolves with <see cref="'undefined'"/>.</returns>

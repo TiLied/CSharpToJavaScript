@@ -1,13 +1,13 @@
 <docs>
 <DynamicsCompressorNodeRatio>
 <summary>
-The <c>ratio</c> property of the <see cref="DynamicsCompressorNode."/> interface Is a <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam#k-rate">k-rate</see> <see cref="AudioParam."/> representing the amount of change, in dB, needed in the input for a 1 dB change in the output.
+The <c>ratio</c> property of the <see cref="DynamicsCompressorNode"/> interface Is a <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam#k-rate">k-rate</see> <see cref="AudioParam"/> representing the amount of change, in dB, needed in the input for a 1 dB change in the output.
 </summary>
 <remarks>
 <para>The <c>ratio</c> property&amp;apos;s default value is <c>12</c> and it can be set between <c>1</c> and <c>20</c>.</para><para><see href="https://developer.mozilla.orgwebaudioratio.png">Describes the effect of different ratio on the output signal</see></para>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DynamicsCompressorNode/ratio"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An <see cref="AudioParam."/>.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> Though the <see cref="AudioParam."/> returned is read-only, the value it represents is not.</blockquote></value>
+<value>An <see cref="AudioParam"/>.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> Though the <see cref="AudioParam"/> returned is read-only, the value it represents is not.</blockquote></value>
 </DynamicsCompressorNodeRatio>
 </docs>

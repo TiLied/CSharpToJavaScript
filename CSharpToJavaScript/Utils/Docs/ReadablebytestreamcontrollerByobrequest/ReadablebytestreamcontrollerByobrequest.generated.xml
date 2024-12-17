@@ -1,13 +1,13 @@
 <docs>
 <ReadableByteStreamControllerByobRequest>
 <summary>
-The <strong><c>byobRequest</c></strong> read-only property of the <see cref="ReadableByteStreamController."/> interface returns the current BYOB request, or <c>null</c> if there are no pending requests.
+The <strong><c>byobRequest</c></strong> read-only property of the <see cref="ReadableByteStreamController"/> interface returns the current BYOB request, or <c>null</c> if there are no pending requests.
 </summary>
 <remarks>
-<para>An underlying byte source should check this property, and use it to write data to the stream if it exists (rather than using <see cref="ReadableByteStreamController.Enqueue."/>).<br/>This will result in an efficient zero-byte transfer of the data to the consumer.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams">Using readable byte streams</see><br/>-<see cref="ReadableByteStreamController."/><br/></para>
+<para>An underlying byte source should check this property, and use it to write data to the stream if it exists (rather than using <see cref="ReadableByteStreamController.Enqueue"/>).<br/>This will result in an efficient zero-byte transfer of the data to the consumer.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams">Using readable byte streams</see><br/>-<see cref="ReadableByteStreamController"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableByteStreamController/byobRequest"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="ReadableStreamBYOBRequest."/> object instance, or <c>null</c>.</value>
+<value>A <see cref="ReadableStreamBYOBRequest"/> object instance, or <c>null</c>.</value>
 </ReadableByteStreamControllerByobRequest>
 </docs>

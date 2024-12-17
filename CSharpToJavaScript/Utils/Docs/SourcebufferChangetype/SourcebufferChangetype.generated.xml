@@ -1,11 +1,11 @@
 <docs>
 <SourceBufferChangeType>
 <summary>
-The <strong><c>changeType()</c></strong> method of the<br/><see cref="SourceBuffer."/> interface sets the MIME type that future calls to<br/><see cref="SourceBuffer.AppendBuffer."/> should expect the new media<br/>data to conform to. This makes it possible to change codecs or container type<br/>mid-stream.
+The <strong><c>changeType()</c></strong> method of the<br/><see cref="SourceBuffer"/> interface sets the MIME type that future calls to<br/><see cref="SourceBuffer.AppendBuffer"/> should expect the new media<br/>data to conform to. This makes it possible to change codecs or container type<br/>mid-stream.
 </summary>
 <remarks>
 <para>One scenario in which this is helpful is to support adapting the media source to<br/>changing bandwidth availability, by transitioning from one codec to another as resource<br/>constraints change.</para>
-<para>-<see cref="MediaSource."/><br/>-<see cref="SourceBufferList."/><br/></para>
+<para>-<see cref="MediaSource"/><br/>-<see cref="SourceBufferList"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/changeType"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>

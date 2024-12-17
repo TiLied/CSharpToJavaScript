@@ -1,13 +1,13 @@
 <docs>
 <NavigationDestinationKey>
 <summary>
-The <strong><c>key</c></strong> read-only property of the<br/><see cref="NavigationDestination."/> interface returns the <see cref="NavigationHistoryEntry.Key."/> value of the destination <see cref="NavigationHistoryEntry."/> if the <see cref="NavigateEvent.NavigationType."/> is <c>traverse</c>, or an empty string otherwise.
+The <strong><c>key</c></strong> read-only property of the<br/><see cref="NavigationDestination"/> interface returns the <see cref="NavigationHistoryEntry.Key"/> value of the destination <see cref="NavigationHistoryEntry"/> if the <see cref="NavigateEvent.NavigationType"/> is <c>traverse</c>, or an empty string otherwise.
 </summary>
 <remarks>
-<para>The <c>key</c> is a unique, UA-generated value that represents the history entry's slot in the history entries list, used to navigate to this place in the history via <see cref="Navigation.TraverseTo."/>. It will be reused by other entries that replace the entry in the list (i.e. if the <see cref="NavigateEvent.NavigationType."/> is <c>replace</c>).</para>
+<para>The <c>key</c> is a unique, UA-generated value that represents the history entry's slot in the history entries list, used to navigate to this place in the history via <see cref="Navigation.TraverseTo"/>. It will be reused by other entries that replace the entry in the list (i.e. if the <see cref="NavigateEvent.NavigationType"/> is <c>replace</c>).</para>
 <para>-<see href="https://developer.chrome.com/docs/web-platform/navigation-api/">Modern client-side routing: the Navigation API</see><br/>-<see href="https://github.com/WICG/navigation-api/blob/main/README.md">Navigation API explainer</see><br/>-Domenic Denicola&amp;apos;s <see href="https://gigantic-honored-octagon.glitch.me/">Navigation API live demo</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NavigationDestination/key"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string representing the <c>key</c> of the destination <see cref="NavigationHistoryEntry."/>, or an empty string.</value>
+<value>A string representing the <c>key</c> of the destination <see cref="NavigationHistoryEntry"/>, or an empty string.</value>
 </NavigationDestinationKey>
 </docs>

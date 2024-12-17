@@ -1,10 +1,10 @@
 <docs>
 <GeolocationCoordinatesAltitudeAccuracy>
 <summary>
-The <strong><c>altitudeAccuracy</c></strong> read-only property of the <see cref="GeolocationCoordinates."/> interface is a strictly positive <c>double</c> representing the accuracy, with a 95% confidence level, of the <c>altitude</c> expressed in meters. This value is <c>null</c> if the implementation doesn&amp;apos;t support measuring altitude.
+The <strong><c>altitudeAccuracy</c></strong> read-only property of the <see cref="GeolocationCoordinates"/> interface is a strictly positive <c>double</c> representing the accuracy, with a 95% confidence level, of the <c>altitude</c> expressed in meters. This value is <c>null</c> if the implementation doesn&amp;apos;t support measuring altitude.
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API">Using the Geolocation API</see><br/>-<see cref="GeolocationCoordinates."/><br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API">Using the Geolocation API</see><br/>-<see cref="GeolocationCoordinates"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GeolocationCoordinates/altitudeAccuracy"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A positive <c>double</c> representing the accuracy, with a 95% confidence level,<br/>of the <c>altitude</c> expressed in meters.</value>

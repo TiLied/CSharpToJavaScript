@@ -1,10 +1,10 @@
 <docs>
 <ImageDataData>
 <summary>
-The readonly <strong><c>ImageData.data</c></strong> property returns a<br/>{{jsxref("Uint8ClampedArray")}} that contains the <see cref="ImageData."/> object's<br/>pixel data. Data is stored as a one-dimensional array in the RGBA order, with integer<br/>values between <c>0</c> and <c>255</c> (inclusive).
+The readonly <strong><c>ImageData.data</c></strong> property returns a<br/>{{jsxref("Uint8ClampedArray")}} that contains the <see cref="ImageData"/> object's<br/>pixel data. Data is stored as a one-dimensional array in the RGBA order, with integer<br/>values between <c>0</c> and <c>255</c> (inclusive).
 </summary>
 <remarks>
-<para>-<see cref="ImageData.Height."/><br/>-<see cref="ImageData.Width."/><br/>-<see cref="ImageData."/><br/>-<see cref="CanvasRenderingContext2D.CreateImageData."/><br/>-<see cref="CanvasRenderingContext2D.PutImageData."/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas">Pixel manipulation with canvas</see><br/></para>
+<para>-<see cref="ImageData.Height"/><br/>-<see cref="ImageData.Width"/><br/>-<see cref="ImageData"/><br/>-<see cref="CanvasRenderingContext2D.CreateImageData"/><br/>-<see cref="CanvasRenderingContext2D.PutImageData"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas">Pixel manipulation with canvas</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ImageData/data"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A <see cref="Uint8ClampedArray"/>.</value>

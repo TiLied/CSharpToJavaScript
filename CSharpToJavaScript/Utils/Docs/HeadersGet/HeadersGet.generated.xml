@@ -1,7 +1,7 @@
 <docs>
 <HeadersGet>
 <summary>
-The <strong><c>get()</c></strong> method of the <see cref="Headers."/> interface<br/>returns a byte string of all the values of a header within a <c>Headers</c> object<br/>with a given name. If the requested header doesn&amp;apos;t exist in the <c>Headers</c><br/>object, it returns <c>null</c>.
+The <strong><c>get()</c></strong> method of the <see cref="Headers"/> interface<br/>returns a byte string of all the values of a header within a <c>Headers</c> object<br/>with a given name. If the requested header doesn&amp;apos;t exist in the <c>Headers</c><br/>object, it returns <c>null</c>.
 </summary>
 <remarks>
 <para>For security reasons, some headers can only be controlled by the user agent. These<br/>headers include the <see href="https://developer.mozilla.org/en-US/docs/Glossary/Forbidden_header_name">Forbidden_header_name</see><br/>and <see href="https://developer.mozilla.org/en-US/docs/Glossary/Forbidden_response_header_name">Forbidden_response_header_name</see>.</para>

@@ -4,8 +4,8 @@
 The <strong><c>releaseCapture()</c></strong> method releases mouse capture if<br/>it&amp;apos;s currently enabled on an element within this document.<br/>Once mouse capture is released, mouse events will no longer all be directed to the element on which capture is enabled.
 </summary>
 <remarks>
-<para>Enabling mouse capture on an element is done by calling <see cref="Element.SetCapture."/>.</para>
-<para>-<see cref="Element.SetCapture."/><br/></para>
+<para>Enabling mouse capture on an element is done by calling <see cref="Element.SetCapture"/>.</para>
+<para>-<see cref="Element.SetCapture"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/releaseCapture"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>

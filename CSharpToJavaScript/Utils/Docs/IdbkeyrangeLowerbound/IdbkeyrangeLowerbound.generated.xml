@@ -1,12 +1,12 @@
 <docs>
 <IDBKeyRangeLowerBound>
 <summary>
-The <strong><c>lowerBound()</c></strong> static method of the<br/><see cref="IDBKeyRange."/> interface creates a new key range with only a lower bound.<br/>By default, it includes the lower endpoint value and is closed.
+The <strong><c>lowerBound()</c></strong> static method of the<br/><see cref="IDBKeyRange"/> interface creates a new key range with only a lower bound.<br/>By default, it includes the lower endpoint value and is closed.
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase."/><br/>-Using transactions: <see cref="IDBTransaction."/><br/>-Setting a range of keys: <see cref="IDBKeyRange."/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore."/><br/>-Using cursors: <see cref="IDBCursor."/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase"/><br/>-Using transactions: <see cref="IDBTransaction"/><br/>-Setting a range of keys: <see cref="IDBKeyRange"/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore"/><br/>-Using cursors: <see cref="IDBCursor"/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange/lowerBound"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns><see cref="IDBKeyRange."/>: The newly created key range.</returns>
+<returns><see cref="IDBKeyRange"/>: The newly created key range.</returns>
 </IDBKeyRangeLowerBound>
 </docs>

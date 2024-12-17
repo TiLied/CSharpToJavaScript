@@ -1,10 +1,10 @@
 <docs>
 <CSSStyleDeclarationCssFloat>
 <summary>
-The <strong><c>cssFloat</c></strong> property of the <see cref="CSSStyleDeclaration."/> interface returns the result of invoking <see cref="CSSStyleDeclaration.GetPropertyValue."/> with <c>float</c> as an argument.
+The <strong><c>cssFloat</c></strong> property of the <see cref="CSSStyleDeclaration"/> interface returns the result of invoking <see cref="CSSStyleDeclaration.GetPropertyValue"/> with <c>float</c> as an argument.
 </summary>
 <remarks>
-<para>When setting, it invokes <see cref="CSSStyleDeclaration.SetProperty."/> with <c>float</c> as the first argument, and the given value as the second argument. The given value must be a valid value for the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/float">float</see> property.</para>
+<para>When setting, it invokes <see cref="CSSStyleDeclaration.SetProperty"/> with <c>float</c> as the first argument, and the given value as the second argument. The given value must be a valid value for the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/float">float</see> property.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/cssFloat"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A string.</value>

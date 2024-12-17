@@ -1,7 +1,7 @@
 <docs>
 <RTCInboundRtpStreamStatsSliCount>
 <summary>
-The <strong><c>sliCount</c></strong> property of the<br/><see cref="RTCInboundRtpStreamStats."/> dictionary indicates how many <strong>Slice</strong><strong><br/></strong><strong>Loss Indication</strong> (<strong>SLI</strong>) packets the<br/><see cref="RTCRtpReceiver."/> for which this object provides statistics sent to the<br/>remote <see cref="RTCRtpSender."/>.
+The <strong><c>sliCount</c></strong> property of the<br/><see cref="RTCInboundRtpStreamStats"/> dictionary indicates how many <strong>Slice</strong><strong><br/></strong><strong>Loss Indication</strong> (<strong>SLI</strong>) packets the<br/><see cref="RTCRtpReceiver"/> for which this object provides statistics sent to the<br/>remote <see cref="RTCRtpSender"/>.
 </summary>
 <remarks>
 <para>An SLI packet is used by a decoder to let<br/>the encoder know that it&amp;apos;s detected corruption of one or more consecutive macroblocks<br/>(in scan order) in the received media.</para><para>In general, what&amp;apos;s usually of interest is that the higher this number is, the more the<br/>stream data is becoming corrupted between the sender and the receiver, requiring resends<br/>or dropping frames.</para>

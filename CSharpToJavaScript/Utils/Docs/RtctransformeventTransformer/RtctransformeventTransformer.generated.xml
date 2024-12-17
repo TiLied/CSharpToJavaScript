@@ -1,13 +1,13 @@
 <docs>
 <RTCTransformEventTransformer>
 <summary>
-The read-only <strong><c>transformer</c></strong> property of the <see cref="RTCTransformEvent."/> interface returns the <see cref="RTCRtpScriptTransformer."/> associated with the event.
+The read-only <strong><c>transformer</c></strong> property of the <see cref="RTCTransformEvent"/> interface returns the <see cref="RTCRtpScriptTransformer"/> associated with the event.
 </summary>
 <remarks>
 <para>The property exposes the WebRTC sender or receiver pipeline as a readable and writable stream of encoded media frames, which a <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms">WebRTC Encoded Transform</see> can insert itself into in order to modify frames.</para>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms">Using WebRTC Encoded Transforms</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTransformEvent/transformer"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="RTCRtpScriptTransformer."/>.</value>
+<value>A <see cref="RTCRtpScriptTransformer"/>.</value>
 </RTCTransformEventTransformer>
 </docs>

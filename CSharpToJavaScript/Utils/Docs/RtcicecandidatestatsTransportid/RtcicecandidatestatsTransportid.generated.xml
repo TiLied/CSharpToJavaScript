@@ -1,11 +1,11 @@
 <docs>
 <RTCIceCandidateStatsTransportId>
 <summary>
-The <see cref="RTCIceCandidateStats."/> dictionary's<br/><strong><c>transportId</c></strong> property is a string that uniquely<br/>identifies the transport that produced the <see cref="RTCTransportStats."/> from which<br/>information about this candidate was taken.
+The <see cref="RTCIceCandidateStats"/> dictionary's<br/><strong><c>transportId</c></strong> property is a string that uniquely<br/>identifies the transport that produced the <see cref="RTCTransportStats"/> from which<br/>information about this candidate was taken.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/transportId"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string whose value uniquely identifies the transport from which any<br/>transport-related information accumulated in the <see cref="RTCIceCandidateStats."/> was<br/>taken. This can be used to compare candidates that would use the same transport, for<br/>example.</value>
+<value>A string whose value uniquely identifies the transport from which any<br/>transport-related information accumulated in the <see cref="RTCIceCandidateStats"/> was<br/>taken. This can be used to compare candidates that would use the same transport, for<br/>example.</value>
 </RTCIceCandidateStatsTransportId>
 </docs>

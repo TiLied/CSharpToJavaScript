@@ -1,12 +1,12 @@
 <docs>
 <RTCPeerConnectionStatsDataChannelsClosed>
 <summary>
-The <strong><c>dataChannelsClosed</c></strong> property of the <see cref="RTCPeerConnectionStats."/> dictionary indicates the number of unique <see cref="RTCDataChannel."/> objects that have left the <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/readyState#open"><c>open</c></see> state during their lifetime.
+The <strong><c>dataChannelsClosed</c></strong> property of the <see cref="RTCPeerConnectionStats"/> dictionary indicates the number of unique <see cref="RTCDataChannel"/> objects that have left the <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/readyState#open"><c>open</c></see> state during their lifetime.
 </summary>
 <remarks>
 <para>A channel will leave the <c>open</c> state if either end of the connection or the underlying transport is closed.<br/>Note that channels that transition to <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/readyState#closing"><c>closing</c></see> or <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/readyState#closed"><c>closed</c></see> without ever being <c>open</c> are not counted in this number.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnectionStats/dataChannelsClosed"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A positive integer that indicates the number of unique <see cref="RTCDataChannel."/> objects that have left the <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/readyState#open"><c>open</c></see> state during their lifetime.</value>
+<value>A positive integer that indicates the number of unique <see cref="RTCDataChannel"/> objects that have left the <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/readyState#open"><c>open</c></see> state during their lifetime.</value>
 </RTCPeerConnectionStatsDataChannelsClosed>
 </docs>

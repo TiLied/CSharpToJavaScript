@@ -1,7 +1,7 @@
 <docs>
 <WebGLRenderingContextMakeXRCompatible>
 <summary>
-The <see cref="WebGLRenderingContext."/> method<br/><strong><c>makeXRCompatible()</c></strong> ensures that the rendering context<br/>described by the <c>WebGLRenderingContext</c> is ready to render the scene for the<br/>immersive <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR</see> device on which it<br/>will be displayed. If necessary, the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL</see><br/>layer may reconfigure the context to be ready to render to a different device than it<br/>originally was.
+The <see cref="WebGLRenderingContext"/> method<br/><strong><c>makeXRCompatible()</c></strong> ensures that the rendering context<br/>described by the <c>WebGLRenderingContext</c> is ready to render the scene for the<br/>immersive <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR</see> device on which it<br/>will be displayed. If necessary, the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL</see><br/>layer may reconfigure the context to be ready to render to a different device than it<br/>originally was.
 </summary>
 <remarks>
 <para>This is useful if you have an application which can start out being presented on a<br/>standard 2D display but can then be transitioned to a 3D immersion system.</para>

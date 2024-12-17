@@ -1,12 +1,12 @@
 <docs>
 <RTCPeerConnectionGenerateCertificate>
 <summary>
-The <strong><c>generateCertificate()</c></strong> static function of the <see cref="RTCPeerConnection."/> interface creates an X.509 certificate and corresponding private key, returning a promise that resolves with the new <see cref="RTCCertificate."/> once it's generated.
+The <strong><c>generateCertificate()</c></strong> static function of the <see cref="RTCPeerConnection"/> interface creates an X.509 certificate and corresponding private key, returning a promise that resolves with the new <see cref="RTCCertificate"/> once it's generated.
 </summary>
 <remarks>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API">Web Crypto API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Website_security">Website security</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Security">Web security</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Glossary/Symmetric-key cryptography">Symmetric-key cryptography</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Crypto"><c>crypto</c></see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/generateCertificate"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A promise which resolves to a new <see cref="RTCCertificate."/> object containing a new key based on the specified options.</returns>
+<returns>A promise which resolves to a new <see cref="RTCCertificate"/> object containing a new key based on the specified options.</returns>
 </RTCPeerConnectionGenerateCertificate>
 </docs>

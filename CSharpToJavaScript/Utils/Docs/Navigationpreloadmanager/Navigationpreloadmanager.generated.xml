@@ -4,7 +4,7 @@
 The <strong><c>NavigationPreloadManager</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">Service Worker API</see> provides methods for managing the preloading of resources in parallel with service worker bootup.
 </summary>
 <remarks>
-<para>If supported, an object of this type is returned by <see cref="ServiceWorkerRegistration.NavigationPreload."/>.<br/>The result of a preload fetch request is waited on using the promise returned by <see cref="FetchEvent.PreloadResponse."/>.</para>
+<para>If supported, an object of this type is returned by <see cref="ServiceWorkerRegistration.NavigationPreload"/>.<br/>The result of a preload fetch request is waited on using the promise returned by <see cref="FetchEvent.PreloadResponse"/>.</para>
 <para>-<see href="https://developer.chrome.com/blog/navigation-preload/">Speed up Service Worker with Navigation Preloads</see> (developer.chrome.com)<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NavigationPreloadManager"> <em>See also on MDN</em> </seealso></para>
 </remarks>

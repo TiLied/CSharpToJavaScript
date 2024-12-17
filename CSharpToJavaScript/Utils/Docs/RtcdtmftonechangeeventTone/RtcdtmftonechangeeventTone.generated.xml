@@ -1,10 +1,10 @@
 <docs>
 <RTCDTMFToneChangeEventTone>
 <summary>
-The read-only property <strong><c>RTCDTMFToneChangeEvent.tone</c></strong><br/>returns the DTMF character which has just begun to play, or an empty string<br/>(<c>&amp;quot;&amp;quot;</c>). if all queued tones have finished playing (that is,<br/><see cref="RTCDTMFSender.ToneBuffer."/> is empty).
+The read-only property <strong><c>RTCDTMFToneChangeEvent.tone</c></strong><br/>returns the DTMF character which has just begun to play, or an empty string<br/>(<c>&amp;quot;&amp;quot;</c>). if all queued tones have finished playing (that is,<br/><see cref="RTCDTMFSender.ToneBuffer"/> is empty).
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_DTMF">Using DTMF with WebRTC</see><br/>-<see cref="RTCDTMFSender/tonechange_event."/><br/>-<see cref="RTCDTMFToneChangeEvent."/><br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_DTMF">Using DTMF with WebRTC</see><br/>-<see cref="RTCDTMFSender/tonechange_event"/><br/>-<see cref="RTCDTMFToneChangeEvent"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDTMFToneChangeEvent/tone"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A string with the DTML character playing, or the empty string.</value>

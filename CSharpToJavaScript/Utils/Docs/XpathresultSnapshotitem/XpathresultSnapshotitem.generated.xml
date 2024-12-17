@@ -1,11 +1,11 @@
 <docs>
 <XPathResultSnapshotItem>
 <summary>
-The <strong><c>snapshotItem()</c></strong> method of the<br/><see cref="XPathResult."/> interface returns an item of the snapshot collection or<br/><c>null</c> in case the index is not within the range of nodes. Unlike the<br/>iterator result, the snapshot does not become invalid, but may not correspond to the<br/>current document if it is mutated.
+The <strong><c>snapshotItem()</c></strong> method of the<br/><see cref="XPathResult"/> interface returns an item of the snapshot collection or<br/><c>null</c> in case the index is not within the range of nodes. Unlike the<br/>iterator result, the snapshot does not become invalid, but may not correspond to the<br/>current document if it is mutated.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XPathResult/snapshotItem"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>The <see cref="Node."/> at the given index within the node set of the<br/><c>XPathResult</c>.</returns>
+<returns>The <see cref="Node"/> at the given index within the node set of the<br/><c>XPathResult</c>.</returns>
 </XPathResultSnapshotItem>
 </docs>

@@ -1,11 +1,11 @@
 <docs>
 <PerformanceElementTimingIntersectionRect>
 <summary>
-The <strong><c>intersectionRect</c></strong> read-only property of the <see cref="PerformanceElementTiming."/> interface returns the rectangle of the element within the viewport.
+The <strong><c>intersectionRect</c></strong> read-only property of the <see cref="PerformanceElementTiming"/> interface returns the rectangle of the element within the viewport.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceElementTiming/intersectionRect"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="DOMRectReadOnly."/> which is the rectangle of the element within the viewport.For display images this is the display rectangle of the image within the viewport. For text this is the display rectangle of the node in the viewport. This being the smallest rectangle that contains the union of all text nodes that belong to the element.</value>
+<value>A <see cref="DOMRectReadOnly"/> which is the rectangle of the element within the viewport.For display images this is the display rectangle of the image within the viewport. For text this is the display rectangle of the node in the viewport. This being the smallest rectangle that contains the union of all text nodes that belong to the element.</value>
 </PerformanceElementTimingIntersectionRect>
 </docs>

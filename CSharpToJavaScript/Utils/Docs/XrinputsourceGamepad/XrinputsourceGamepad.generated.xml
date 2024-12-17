@@ -1,10 +1,10 @@
 <docs>
 <XRInputSourceGamepad>
 <summary>
-The read-only <see cref="XRInputSource."/> property <strong><c>gamepad</c></strong> returns a <see cref="Gamepad."/> object describing the state of the buttons and axes on the XR input source, if it is a gamepad or comparable device. If the device isn't a gamepad-like device, this property's value is <c>null</c>.
+The read-only <see cref="XRInputSource"/> property <strong><c>gamepad</c></strong> returns a <see cref="Gamepad"/> object describing the state of the buttons and axes on the XR input source, if it is a gamepad or comparable device. If the device isn't a gamepad-like device, this property's value is <c>null</c>.
 </summary>
 <remarks>
-<para>The <see cref="Gamepad."/> instance returned behaves as described by the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API">Gamepad API</see>. However, there are a few things to note:</para>
+<para>The <see cref="Gamepad"/> instance returned behaves as described by the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API">Gamepad API</see>. However, there are a few things to note:</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSource/gamepad"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </XRInputSourceGamepad>

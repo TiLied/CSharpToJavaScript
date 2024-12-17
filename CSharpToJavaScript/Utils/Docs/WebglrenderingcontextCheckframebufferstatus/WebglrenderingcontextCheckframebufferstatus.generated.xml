@@ -1,12 +1,12 @@
 <docs>
 <WebGLRenderingContextCheckFramebufferStatus>
 <summary>
-The <strong><c>WebGLRenderingContext.checkFramebufferStatus()</c></strong> method<br/>of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> returns the completeness<br/>status of the <see cref="WebGLFramebuffer."/> object.
+The <strong><c>WebGLRenderingContext.checkFramebufferStatus()</c></strong> method<br/>of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> returns the completeness<br/>status of the <see cref="WebGLFramebuffer"/> object.
 </summary>
 <remarks>
-<para>-<see cref="WebGLRenderingContext.CreateFramebuffer."/><br/>-<see cref="WebGLRenderingContext.DeleteFramebuffer."/><br/>-<see cref="WebGLRenderingContext.IsFramebuffer."/><br/>-Other buffers: <see cref="WebGLBuffer."/>, <see cref="WebGLRenderbuffer."/><br/></para>
+<para>-<see cref="WebGLRenderingContext.CreateFramebuffer"/><br/>-<see cref="WebGLRenderingContext.DeleteFramebuffer"/><br/>-<see cref="WebGLRenderingContext.IsFramebuffer"/><br/>-Other buffers: <see cref="WebGLBuffer"/>, <see cref="WebGLRenderbuffer"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/checkFramebufferStatus"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A <see cref="WebGL_API/Types."/> indicating the completeness status of the framebuffer or<br/><c>0</c> if an error occurs. Possible enum return values:</returns>
+<returns>A <see cref="WebGL_API/Types"/> indicating the completeness status of the framebuffer or<br/><c>0</c> if an error occurs. Possible enum return values:</returns>
 </WebGLRenderingContextCheckFramebufferStatus>
 </docs>

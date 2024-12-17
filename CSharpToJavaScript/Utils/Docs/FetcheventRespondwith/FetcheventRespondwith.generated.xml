@@ -1,7 +1,7 @@
 <docs>
 <FetchEventRespondWith>
 <summary>
-The <strong><c>respondWith()</c></strong> method of<br/><see cref="FetchEvent."/> prevents the browser's default fetch handling, and<br/>allows you to provide a promise for a <see cref="Response."/> yourself.
+The <strong><c>respondWith()</c></strong> method of<br/><see cref="FetchEvent"/> prevents the browser's default fetch handling, and<br/>allows you to provide a promise for a <see cref="Response"/> yourself.
 </summary>
 <remarks>
 <para>In most cases you can provide any response that the receiver understands. For example,<br/>if an <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/'img'">'img'</see> initiates the request, the response body needs to be<br/>image data. For security reasons, there are a few global rules:</para>

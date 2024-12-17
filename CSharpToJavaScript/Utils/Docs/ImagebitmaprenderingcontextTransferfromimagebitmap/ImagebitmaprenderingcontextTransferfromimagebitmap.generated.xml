@@ -1,11 +1,11 @@
 <docs>
 <ImageBitmapRenderingContextTransferFromImageBitmap>
 <summary>
-The <strong><c>ImageBitmapRenderingContext.transferFromImageBitmap()</c></strong><br/>method displays the given <see cref="ImageBitmap."/> in the canvas associated with this<br/>rendering context. The ownership of the <c>ImageBitmap</c> is transferred to the<br/>canvas as well.
+The <strong><c>ImageBitmapRenderingContext.transferFromImageBitmap()</c></strong><br/>method displays the given <see cref="ImageBitmap"/> in the canvas associated with this<br/>rendering context. The ownership of the <c>ImageBitmap</c> is transferred to the<br/>canvas as well.
 </summary>
 <remarks>
 <para>This method was previously named <c>transferImageBitmap()</c>, but was renamed in<br/>a spec change. The old name is being kept as an alias to avoid code breakage.</para>
-<para>-The interface defining this method, <see cref="ImageBitmapRenderingContext."/><br/>-<see cref="OffscreenCanvas."/><br/>-<see cref="OffscreenCanvas.TransferToImageBitmap."/><br/></para>
+<para>-The interface defining this method, <see cref="ImageBitmapRenderingContext"/><br/>-<see cref="OffscreenCanvas"/><br/>-<see cref="OffscreenCanvas.TransferToImageBitmap"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ImageBitmapRenderingContext/transferFromImageBitmap"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>

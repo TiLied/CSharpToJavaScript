@@ -1,7 +1,7 @@
 <docs>
 <HeadersDelete>
 <summary>
-The <strong><c>delete()</c></strong> method of the <see cref="Headers."/><br/>interface deletes a header from the current <c>Headers</c> object.
+The <strong><c>delete()</c></strong> method of the <see cref="Headers"/><br/>interface deletes a header from the current <c>Headers</c> object.
 </summary>
 <remarks>
 <para>This method throws a <see cref="TypeError"/> for the following reasons:</para><para>For security reasons, some headers can only be controlled by the user agent. These<br/>headers include the <see href="https://developer.mozilla.org/en-US/docs/Glossary/Forbidden_header_name">Forbidden_header_name</see><br/>and <see href="https://developer.mozilla.org/en-US/docs/Glossary/Forbidden_response_header_name">Forbidden_response_header_name</see>.</para>

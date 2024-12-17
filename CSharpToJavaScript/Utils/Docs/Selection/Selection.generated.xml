@@ -1,11 +1,11 @@
 <docs>
 <Selection>
 <summary>
-A <strong><c>Selection</c></strong> object represents the range of text selected by the user or the current position of the caret. To obtain a <c>Selection</c> object for examination or manipulation, call <see cref="Window.GetSelection."/>.
+A <strong><c>Selection</c></strong> object represents the range of text selected by the user or the current position of the caret. To obtain a <c>Selection</c> object for examination or manipulation, call <see cref="Window.GetSelection"/>.
 </summary>
 <remarks>
 <para>A user may make a selection from left to right (in document order) or right to left (reverse of document order). The <strong><strong>anchor</strong></strong> is where the user began the selection and the <strong><strong>focus</strong></strong> is where the user ends the selection. If you make a selection with a desktop mouse, the anchor is placed where you pressed the mouse button, and the focus is placed where you released the mouse button.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> <strong>Anchor</strong> and <strong>focus</strong> should not be confused with the <strong>start</strong> and <strong>end</strong> positions of a selection. The anchor can be placed before the focus or vice versa, depending on the direction you made your selection.</para></blockquote>
-<para>-<see cref="Window.GetSelection."/>, <see cref="Document.GetSelection."/>, <see cref="Range."/><br/>-Selection-related events: <see cref="Document/selectionchange_event."/> and <see cref="Node/selectstart_event."/><br/>-HTML inputs provide simpler helper APIs for working with selection (see <see cref="HTMLInputElement.SetSelectionRange."/>)<br/>-<see cref="Document.ActiveElement."/>, <see cref="HTMLElement.Focus."/>, and <see cref="HTMLElement.Blur."/><br/></para>
+<para>-<see cref="Window.GetSelection"/>, <see cref="Document.GetSelection"/>, <see cref="Range"/><br/>-Selection-related events: <see cref="Document/selectionchange_event"/> and <see cref="Node/selectstart_event"/><br/>-HTML inputs provide simpler helper APIs for working with selection (see <see cref="HTMLInputElement.SetSelectionRange"/>)<br/>-<see cref="Document.ActiveElement"/>, <see cref="HTMLElement.Focus"/>, and <see cref="HTMLElement.Blur"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Selection"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </Selection>

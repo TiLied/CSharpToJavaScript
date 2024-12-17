@@ -1,7 +1,7 @@
 <docs>
 <AudioContextOutputLatency>
 <summary>
-The <strong><c>outputLatency</c></strong> read-only property of<br/>the <see cref="AudioContext."/> Interface provides an estimation of the output latency<br/>of the current audio context.
+The <strong><c>outputLatency</c></strong> read-only property of<br/>the <see cref="AudioContext"/> Interface provides an estimation of the output latency<br/>of the current audio context.
 </summary>
 <remarks>
 <para>This is the time, in seconds, between the browser passing an audio buffer out of an<br/>audio graph over to the host system&amp;apos;s audio subsystem to play, and the time at which the<br/>first sample in the buffer is actually processed by the audio output device.</para><para>It varies depending on the platform and the available hardware.</para>

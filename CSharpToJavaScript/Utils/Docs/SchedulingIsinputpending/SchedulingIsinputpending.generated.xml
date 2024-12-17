@@ -1,7 +1,7 @@
 <docs>
 <SchedulingIsInputPending>
 <summary>
-The <strong><c>isInputPending()</c></strong> method of the <see cref="Scheduling."/> interface allows you to check whether there are pending input events in the event queue, indicating that the user is attempting to interact with the page.
+The <strong><c>isInputPending()</c></strong> method of the <see cref="Scheduling"/> interface allows you to check whether there are pending input events in the event queue, indicating that the user is attempting to interact with the page.
 </summary>
 <remarks>
 <para>This feature is useful in situations where you have a queue of tasks to run, and you want to yield to the main thread regularly to allow user interaction to occur so that the app is kept as responsive and performant as possible. <c>isInputPending()</c> allows you to yield only when there is input pending, rather than having to do it at arbitrary intervals.</para><para><c>isInputPending()</c> is called using <c>navigator.scheduling.isInputPending()</c>.</para>

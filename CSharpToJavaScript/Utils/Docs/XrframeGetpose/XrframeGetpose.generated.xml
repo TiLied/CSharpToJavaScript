@@ -1,12 +1,12 @@
 <docs>
 <XRFrameGetPose>
 <summary>
-The <see cref="XRFrame."/> method <strong><c>getPose()</c></strong> returns the relative position and<br/>orientation—the pose—of one <see cref="XRSpace."/> to that of another space. With this, you can observe the motion of objects relative to each other and to fixed locations throughout the scene.
+The <see cref="XRFrame"/> method <strong><c>getPose()</c></strong> returns the relative position and<br/>orientation—the pose—of one <see cref="XRSpace"/> to that of another space. With this, you can observe the motion of objects relative to each other and to fixed locations throughout the scene.
 </summary>
 <remarks>
-<para>For example, to get the position of a controller relative to the viewer's head, you would compare the controller's <see cref="XRInputSource.GripSpace."/> to the <see cref="XRReferenceSpace."/> of type <c>viewer</c>.</para>
+<para>For example, to get the position of a controller relative to the viewer's head, you would compare the controller's <see cref="XRInputSource.GripSpace"/> to the <see cref="XRReferenceSpace"/> of type <c>viewer</c>.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRFrame/getPose"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>An <see cref="XRPose."/> object specifying the position and orientation, relative to<br/>the <see cref="XRSpace."/> indicated by <c>baseSpace</c>.</returns>
+<returns>An <see cref="XRPose"/> object specifying the position and orientation, relative to<br/>the <see cref="XRSpace"/> indicated by <c>baseSpace</c>.</returns>
 </XRFrameGetPose>
 </docs>

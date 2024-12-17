@@ -1,13 +1,13 @@
 <docs>
 <WakeLockRequest>
 <summary>
-The <strong><c>request()</c></strong> method of the <see cref="WakeLock."/> interface returns a {{jsxref("Promise")}} that fullfills with a <see cref="WakeLockSentinel."/> object if the system screen wake lock is granted.
+The <strong><c>request()</c></strong> method of the <see cref="WakeLock"/> interface returns a {{jsxref("Promise")}} that fullfills with a <see cref="WakeLockSentinel"/> object if the system screen wake lock is granted.
 </summary>
 <remarks>
 <para>The screen wake lock prevents device screens from dimming or locking when an application needs to keep running.</para>
 <para>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/wake-lock/">Stay awake with the Screen Wake Lock API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WakeLock/request"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A {{jsxref("Promise")}} that resolves with a <see cref="WakeLockSentinel."/> object.</returns>
+<returns>A {{jsxref("Promise")}} that resolves with a <see cref="WakeLockSentinel"/> object.</returns>
 </WakeLockRequest>
 </docs>

@@ -4,10 +4,10 @@
 This method adapts any DOM node to resolve namespaces so that an XPath expression can<br/>be easily evaluated relative to the context of the node where it appeared within the<br/>document.
 </summary>
 <remarks>
-<para>This adapter works like the DOM Level 3 method <see cref="Node.LookupNamespaceURI."/><br/>in resolving the namespace URI from a given prefix using<br/>the current information available in the node&amp;apos;s hierarchy at the time the method is<br/>called, also correctly resolving the implicit <c>xml</c> prefix.</para>
-<para>-<see cref="Document.CreateNSResolver."/><br/>-<see cref="XPathExpression."/><br/></para>
+<para>This adapter works like the DOM Level 3 method <see cref="Node.LookupNamespaceURI"/><br/>in resolving the namespace URI from a given prefix using<br/>the current information available in the node&amp;apos;s hierarchy at the time the method is<br/>called, also correctly resolving the implicit <c>xml</c> prefix.</para>
+<para>-<see cref="Document.CreateNSResolver"/><br/>-<see cref="XPathExpression"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XPathEvaluator/createNSResolver"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>An <see cref="XPathNSResolver."/> object which resolves namespaces with respect to the<br/>definitions in scope for a specified node.</returns>
+<returns>An <see cref="XPathNSResolver"/> object which resolves namespaces with respect to the<br/>definitions in scope for a specified node.</returns>
 </XPathEvaluatorCreateNSResolver>
 </docs>

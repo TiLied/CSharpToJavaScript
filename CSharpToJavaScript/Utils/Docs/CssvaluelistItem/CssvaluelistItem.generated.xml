@@ -1,12 +1,12 @@
 <docs>
 <CSSValueListItem>
 <summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>item()</c></strong> method of the <see cref="CSSValueList."/><br/>interface is used to retrieve a <see cref="CSSValue."/> by ordinal index.
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>item()</c></strong> method of the <see cref="CSSValueList"/><br/>interface is used to retrieve a <see cref="CSSValue"/> by ordinal index.
 </summary>
 <remarks>
 <para>The order in this collection represents the order of the values in the CSS style<br/>property. If the index is greater than or equal to the number of values in the list,<br/>this method returns <c>null</c>.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This method was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do<br/>not implement it.</para><para>To achieve your purpose, you can use:</para></blockquote>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSValueList/item"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A <see cref="CSSValue."/> object at the <c>index</c> position in the<br/><c>CSSValueList</c>, or <c>null</c> if that is not a valid index.</returns>
+<returns>A <see cref="CSSValue"/> object at the <c>index</c> position in the<br/><c>CSSValueList</c>, or <c>null</c> if that is not a valid index.</returns>
 </CSSValueListItem>
 </docs>

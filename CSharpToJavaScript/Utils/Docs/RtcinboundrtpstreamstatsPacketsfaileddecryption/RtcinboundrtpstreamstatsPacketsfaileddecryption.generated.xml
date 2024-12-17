@@ -1,7 +1,7 @@
 <docs>
 <RTCInboundRtpStreamStatsPacketsFailedDecryption>
 <summary>
-The <strong><c>packetsFailedDecryption</c></strong><br/>property of the <see cref="RTCInboundRtpStreamStats."/> dictionary indicates the total<br/>number of <see href="https://developer.mozilla.org/en-US/docs/Glossary/RTP">RTP</see> packets which failed to be decrypted successfully after<br/>being received by the local end of the connection during this session.
+The <strong><c>packetsFailedDecryption</c></strong><br/>property of the <see cref="RTCInboundRtpStreamStats"/> dictionary indicates the total<br/>number of <see href="https://developer.mozilla.org/en-US/docs/Glossary/RTP">RTP</see> packets which failed to be decrypted successfully after<br/>being received by the local end of the connection during this session.
 </summary>
 <remarks>
 <para>-{{RFC(3711, &amp;quot;&amp;quot;, &amp;quot;3.3&amp;quot;)}}: Description of the decryption process for secure RTP packets<br/></para>

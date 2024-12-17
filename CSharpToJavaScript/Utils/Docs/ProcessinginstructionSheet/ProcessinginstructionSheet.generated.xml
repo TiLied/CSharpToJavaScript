@@ -1,13 +1,13 @@
 <docs>
 <ProcessingInstructionSheet>
 <summary>
-The read-only <strong><c>sheet</c></strong> property of the <see cref="ProcessingInstruction."/> interface<br/>contains the stylesheet associated to the <c>ProcessingInstruction</c>.
+The read-only <strong><c>sheet</c></strong> property of the <see cref="ProcessingInstruction"/> interface<br/>contains the stylesheet associated to the <c>ProcessingInstruction</c>.
 </summary>
 <remarks>
 <para>The <c>xml-stylesheet</c> processing instruction is used to associate a stylesheet in an XML file.</para>
 <para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">DOM API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ProcessingInstruction/sheet"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>The associated <see cref="Stylesheet."/> object, or <c>null</c> if there are none.</value>
+<value>The associated <see cref="Stylesheet"/> object, or <c>null</c> if there are none.</value>
 </ProcessingInstructionSheet>
 </docs>

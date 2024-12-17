@@ -1,11 +1,11 @@
 <docs>
 <USBDeviceTransferIn>
 <summary>
-The <strong><c>transferIn()</c></strong> method of the <see cref="USBDevice."/><br/>interface returns a <see cref="Promise"/> that resolves with a<br/><see cref="USBInTransferResult."/> when bulk or interrupt data is received from the USB<br/>device.
+The <strong><c>transferIn()</c></strong> method of the <see cref="USBDevice"/><br/>interface returns a <see cref="Promise"/> that resolves with a<br/><see cref="USBInTransferResult"/> when bulk or interrupt data is received from the USB<br/>device.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/USBDevice/transferIn"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A {{jsxref("promise")}} that resolves with a <see cref="USBInTransferResult."/>.</returns>
+<returns>A {{jsxref("promise")}} that resolves with a <see cref="USBInTransferResult"/>.</returns>
 </USBDeviceTransferIn>
 </docs>

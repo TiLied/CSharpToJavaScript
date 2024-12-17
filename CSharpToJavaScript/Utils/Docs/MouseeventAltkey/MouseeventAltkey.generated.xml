@@ -5,7 +5,7 @@ The <strong><c>MouseEvent.altKey</c></strong> read-only property is a boolean va
 </summary>
 <remarks>
 <para>Be aware that the browser can&amp;apos;t always detect the &amp;lt;kbd&amp;gt;alt&amp;lt;/kbd&amp;gt; key on some operating systems.<br/>On some Linux variants, for example, a left mouse click combined with the &amp;lt;kbd&amp;gt;alt&amp;lt;/kbd&amp;gt; key is used to move or resize windows.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> On Macintosh keyboards, this key is also known as the &amp;lt;kbd&amp;gt;option&amp;lt;/kbd&amp;gt; key.</para></blockquote>
-<para>-<see cref="MouseEvent."/><br/></para>
+<para>-<see cref="MouseEvent"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/altKey"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A boolean value, where <c>true</c> indicates that the key is pressed, and <c>false</c> indicates that the key is <strong>not</strong> pressed.</value>

@@ -1,7 +1,7 @@
 <docs>
 <FetchEventReplacesClientId>
 <summary>
-The <strong><c>replacesClientId</c></strong> read-only property of the<br/><see cref="FetchEvent."/> interface is the <see cref="Client.Id."/> of the<br/><see cref="Client."/> that is being replaced during a page navigation.
+The <strong><c>replacesClientId</c></strong> read-only property of the<br/><see cref="FetchEvent"/> interface is the <see cref="Client.Id"/> of the<br/><see cref="Client"/> that is being replaced during a page navigation.
 </summary>
 <remarks>
 <para>For example, when navigating from page A to page B <c>replacesClientId</c> is the<br/>ID of the client associated with page A. It can be an empty string when navigating from<br/><c>about:blank</c> to another page, as <c>about:blank</c>&amp;apos;s client will be<br/>reused, rather than be replaced.</para><para>Additionally, if the fetch isn&amp;apos;t a navigation, <c>replacesClientId</c> will be an<br/>empty string. This could be used to access/communicate with a client that will<br/>imminently be replaced, right before a navigation.</para>

@@ -1,13 +1,13 @@
 <docs>
 <EventReturnValue>
 <summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <see cref="Event."/> property<br/><strong><c>returnValue</c></strong> indicates whether the default action for<br/>this event has been prevented or not.
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <see cref="Event"/> property<br/><strong><c>returnValue</c></strong> indicates whether the default action for<br/>this event has been prevented or not.
 </summary>
 <remarks>
-<para>It is set to <c>true</c> by<br/>default, allowing the default action to occur. Setting this property to<br/><c>false</c> prevents the default action.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> While <c>returnValue</c> has been adopted into the DOM<br/>standard, it is present primarily to support existing code. Use<br/><see cref="Event.PreventDefault."/>, and<br/><see cref="Event.DefaultPrevented."/> instead of this historical<br/>property.</para></blockquote>
-<para>-<see cref="HTMLDialogElement.ReturnValue."/>: the return value for the {{HTMLElement("dialog")}}.<br/></para>
+<para>It is set to <c>true</c> by<br/>default, allowing the default action to occur. Setting this property to<br/><c>false</c> prevents the default action.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> While <c>returnValue</c> has been adopted into the DOM<br/>standard, it is present primarily to support existing code. Use<br/><see cref="Event.PreventDefault"/>, and<br/><see cref="Event.DefaultPrevented"/> instead of this historical<br/>property.</para></blockquote>
+<para>-<see cref="HTMLDialogElement.ReturnValue"/>: the return value for the {{HTMLElement("dialog")}}.<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Event/returnValue"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A boolean value which is <c>true</c> if the event has not been<br/>canceled; otherwise, if the event has been canceled or the default has been prevented,<br/>the value is <c>false</c>.The value of <c>returnValue</c> is the opposite of the value returned by<br/><see cref="Event.DefaultPrevented."/>.</value>
+<value>A boolean value which is <c>true</c> if the event has not been<br/>canceled; otherwise, if the event has been canceled or the default has been prevented,<br/>the value is <c>false</c>.The value of <c>returnValue</c> is the opposite of the value returned by<br/><see cref="Event.DefaultPrevented"/>.</value>
 </EventReturnValue>
 </docs>

@@ -1,12 +1,12 @@
 <docs>
 <ShadowRootPointerLockElement>
 <summary>
-The <strong><c>pointerLockElement</c></strong> read-only property of the <see cref="ShadowRoot."/> interface provides the element set as the target for mouse events while the pointer is locked.<br/>It is <c>null</c> if lock is pending, pointer is unlocked, or the target is in another tree.
+The <strong><c>pointerLockElement</c></strong> read-only property of the <see cref="ShadowRoot"/> interface provides the element set as the target for mouse events while the pointer is locked.<br/>It is <c>null</c> if lock is pending, pointer is unlocked, or the target is in another tree.
 </summary>
 <remarks>
-<para>-<see cref="Document.ExitPointerLock."/><br/>-<see cref="Element.RequestPointerLock."/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Pointer_Lock_API">Pointer Lock</see><br/></para>
+<para>-<see cref="Document.ExitPointerLock"/><br/>-<see cref="Element.RequestPointerLock"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Pointer_Lock_API">Pointer Lock</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/pointerLockElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An <see cref="Element."/> or <c>null</c>.</value>
+<value>An <see cref="Element"/> or <c>null</c>.</value>
 </ShadowRootPointerLockElement>
 </docs>

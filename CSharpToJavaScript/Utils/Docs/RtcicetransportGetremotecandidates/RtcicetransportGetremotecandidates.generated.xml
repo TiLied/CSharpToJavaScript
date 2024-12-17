@@ -1,12 +1,12 @@
 <docs>
 <RTCIceTransportGetRemoteCandidates>
 <summary>
-The <strong><c>getRemoteCandidates()</c></strong> method of the <see cref="RTCIceTransport."/> interface returns an array that contains one <see cref="RTCIceCandidate."/> for each of the candidates that have been received from the remote peer so far during the current {{Glossary("ICE")}} gathering session.
+The <strong><c>getRemoteCandidates()</c></strong> method of the <see cref="RTCIceTransport"/> interface returns an array that contains one <see cref="RTCIceCandidate"/> for each of the candidates that have been received from the remote peer so far during the current {{Glossary("ICE")}} gathering session.
 </summary>
 <remarks>
-<para>Each time your signaling code calls <see cref="RTCPeerConnection.AddIceCandidate."/> to add a received candidate to the ICE session, the ICE agent places it in the list returned by this function.</para>
+<para>Each time your signaling code calls <see cref="RTCPeerConnection.AddIceCandidate"/> to add a received candidate to the ICE session, the ICE agent places it in the list returned by this function.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/getRemoteCandidates"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>An array containing one <see cref="RTCIceCandidate."/> object for each candidate that has been received so far from the remote peer during the current ICE candidate gathering session.It&amp;apos;s important to keep in mind that there&amp;apos;s no way to correlate these remote candidates with compatible local candidates.<br/>To find the best match found so far, call <see cref="RTCIceTransport.GetSelectedCandidatePair."/>.</returns>
+<returns>An array containing one <see cref="RTCIceCandidate"/> object for each candidate that has been received so far from the remote peer during the current ICE candidate gathering session.It&amp;apos;s important to keep in mind that there&amp;apos;s no way to correlate these remote candidates with compatible local candidates.<br/>To find the best match found so far, call <see cref="RTCIceTransport.GetSelectedCandidatePair"/>.</returns>
 </RTCIceTransportGetRemoteCandidates>
 </docs>

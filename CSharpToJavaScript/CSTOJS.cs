@@ -430,11 +430,11 @@ namespace CSharpToJavaScript
 				//
 				//
 				//Overriding root works only once.
+				//ReplaceTokens? how?
 				//I'm not sure how to properly fix this...
 				//Below is a very bad code...
 				//
-				//
-				List<SyntaxToken> allBraces = trueRoot.NormalizeWhitespace().DescendantTokens().Where((e) => e.IsKind(SyntaxKind.OpenBraceToken)).ToList();
+				List<SyntaxToken> allBraces = trueRoot.DescendantTokens().Where((e) => e.IsKind(SyntaxKind.OpenBraceToken)).ToList();
 				int i = 0;
 				while (i < allBraces.Count)
 				{
@@ -498,7 +498,7 @@ namespace CSharpToJavaScript
 			}
 
 			//TODO! does not work... sigh
-			references = references.Distinct().ToList();
+			//references = references.Distinct().ToList();
 
 			if (_Options.Debug)
 			{

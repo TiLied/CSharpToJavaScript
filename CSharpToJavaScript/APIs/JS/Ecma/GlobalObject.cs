@@ -1,6 +1,5 @@
 ﻿using CSharpToJavaScript.Utils;
 
-
 namespace CSharpToJavaScript.APIs.JS
 {
 	[To(ToAttribute.FirstCharToLowerCase)]
@@ -11,13 +10,151 @@ namespace CSharpToJavaScript.APIs.JS
 		public class GlobalThis : GlobalObject
 		{
 			public static Window Window { get; } = new();
-			public static console Console { get; set; } = new();
+			public static console Console { get; } = new();
 
+
+			//
+			//https://262.ecma-international.org/14.0/#sec-constructor-properties-of-the-global-object
+			//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
+			//
+			//As far as I can understand, you can only access Global Object through GlobalThis in Classes.
+			//It's only beneficial! We can emulate construction without "new" like GlobalThis.Date()
+			//
+			//
+			//Not included:
+			//ArrayBuffer, BigInt64Array, BigUint64Array, DataView, FinalizationRegistry,
+			//Float32Array, Float64Array, Int8Array, Int16Array, Int32Array, Map, Promise,
+			//Proxy, Set, SharedArrayBuffer, Uint8Array, Uint8ClampedArray, Uint16Array,
+			//Uint32Array, WeakMap, WeakRef, WeakSet
+			/*
 			[To(ToAttribute.Default)]
-			public static string Date(string x)
+			public static AggregateError AggregateError(dynamic errors, dynamic? message = null,dynamic? options = null)
 			{
 				throw new System.NotImplementedException();
 			}
+			*/
+			/*
+			[To(ToAttribute.Default)]
+			public static Array Array(params dynamic[] values)
+			{
+				throw new System.NotImplementedException();
+			}
+			*/
+			/*
+			[To(ToAttribute.Default)]
+			public static BigInt BigInt(dynamic value)
+			{
+				throw new System.NotImplementedException();
+			}
+			*/
+
+			[To(ToAttribute.Default)]
+			public static bool Boolean(dynamic value)
+			{
+				throw new System.NotImplementedException();
+			}
+
+			[To(ToAttribute.Default)]
+			public static string Date()
+			{
+				throw new System.NotImplementedException();
+			}
+
+			/*
+			[To(ToAttribute.Default)]
+			public static Error Error(dynamic message, dynamic? options = null)
+			{
+				throw new System.NotImplementedException();
+			}*/
+
+			/*
+			[To(ToAttribute.Default)]
+			public static EvalError EvalError(dynamic message, dynamic? options = null)
+			{
+				throw new System.NotImplementedException();
+			
+			}*/
+
+			//https://262.ecma-international.org/14.0/#sec-function-p1-p2-pn-body
+			//see NOTE!
+			[To(ToAttribute.Default)]
+			public static Function Function(dynamic parameterArgs, dynamic? bodyArg = null)
+			{
+				throw new System.NotImplementedException();
+
+			}
+
+			[To(ToAttribute.Default)]
+			public static double Number(dynamic value)
+			{
+				throw new System.NotImplementedException();
+
+			}
+
+			[To(ToAttribute.Default)]
+			public static Object Object(dynamic? value = null)
+			{
+				throw new System.NotImplementedException();
+
+			}
+			/*
+			[To(ToAttribute.Default)]
+			public static RangeError RangeError(dynamic message, dynamic? options = null)
+			{
+				throw new System.NotImplementedException();
+
+			}*/
+			/*
+			[To(ToAttribute.Default)]
+			public static ReferenceError ReferenceError(dynamic message, dynamic? options = null)
+			{
+				throw new System.NotImplementedException();
+
+			}*/
+			
+			[To(ToAttribute.Default)]
+			public static string RegExp(string pattern, string? flags = null)
+			{
+				throw new System.NotImplementedException();
+
+			}
+			
+			[To(ToAttribute.Default)]
+			public static string String(dynamic value)
+			{
+				throw new System.NotImplementedException();
+
+			}
+
+			/*
+			[To(ToAttribute.Default)]
+			public static Symbol Symbol(dynamic? description = null)
+			{
+				throw new System.NotImplementedException();
+
+			}*/
+			/*
+			[To(ToAttribute.Default)]
+			public static SyntaxError SyntaxError(dynamic message, dynamic? options = null)
+			{
+				throw new System.NotImplementedException();
+
+			}*/
+			/*
+			[To(ToAttribute.Default)]
+			public static TypeError TypeError(dynamic message, dynamic? options = null)
+			{
+				throw new System.NotImplementedException();
+
+			}*/
+			/*
+			[To(ToAttribute.Default)]
+			public static URIError URIError(dynamic message, dynamic? options = null)
+			{
+				throw new System.NotImplementedException();
+
+			}*/
+
 		}
 
 		[To(ToAttribute.Default)]
@@ -36,21 +173,6 @@ namespace CSharpToJavaScript.APIs.JS
 		{
 
 		}
-
-		//Do I need this? TODO!
-		//https://262.ecma-international.org/14.0/#sec-constructor-properties-of-the-global-object
-		//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
-		//
-		//DO THIS IN !GlobalThis!
-		//As far as I can understand, you can only access Global Object through GlobalThis in Classes.
-		//It's only beneficial! We can emulate construction without "new" like GlobalThis.Date()
-		//DO THIS IN !GlobalThis!
-		//
-		//[To(ToAttribute.Default)]
-		//public static string Date(string x)
-		//{
-		//throw new System.NotImplementedException();
-		//}
 
 		[To(ToAttribute.FirstCharToLowerCase)]
 		public static dynamic Eval(string x) 

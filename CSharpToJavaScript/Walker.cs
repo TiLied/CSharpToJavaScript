@@ -489,7 +489,6 @@ namespace CSharpToJavaScript
 						case SyntaxKind.ThisExpression:
 						case SyntaxKind.ParenthesizedLambdaExpression:
 						case SyntaxKind.NumericLiteralExpression:
-						case SyntaxKind.ElementAccessExpression:
 						case SyntaxKind.FalseLiteralExpression:
 						case SyntaxKind.TrueLiteralExpression:
 						case SyntaxKind.StringLiteralExpression:
@@ -499,6 +498,7 @@ namespace CSharpToJavaScript
 								Visit(asNode);
 								break;
 							}
+						case SyntaxKind.ElementAccessExpression:
 						case SyntaxKind.IdentifierName:
 						case SyntaxKind.SimpleMemberAccessExpression:
 							{
@@ -1373,6 +1373,8 @@ namespace CSharpToJavaScript
 							Visit(asNode);
 							break;
 						case SyntaxKind.AsExpression:
+
+							//Todo double/multiply asExpression?? How?
 							_SNOriginal = (asNode as BinaryExpressionSyntax).Left;
 							
 							Visit(_SNOriginal.WithoutTrailingTrivia());
@@ -1866,18 +1868,18 @@ namespace CSharpToJavaScript
 						SyntaxToken _sT = default;
 						if (item is MethodDeclarationSyntax m)
 						{
+							/*
 							IEnumerable<SyntaxToken> d3 = from e in m.ChildTokens()
 														  where e.IsKind(SyntaxKind.IdentifierToken)
 														  select e;
-							_sT = d3.First();
+							_sT = d3.First();*/
+
+							_sT = m.Identifier;
 						}
 
 						if (item is PropertyDeclarationSyntax p)
 						{
-							IEnumerable<SyntaxToken> d3 = from e in p.DescendantTokens()
-														  where e.IsKind(SyntaxKind.IdentifierToken)
-														  select e;
-							_sT = d3.Last();
+							_sT = p.Identifier;
 						}
 
 						if (item is FieldDeclarationSyntax f)

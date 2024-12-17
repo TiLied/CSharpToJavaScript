@@ -158,7 +158,9 @@ namespace CSharpToJavaScript
 				case SyntaxKind.TryKeyword:
 				case SyntaxKind.ThrowKeyword:
 				case SyntaxKind.FinallyKeyword:
-					{
+				case SyntaxKind.CaretToken:
+				case SyntaxKind.CharacterLiteralToken:
+				{
 						VisitLeadingTrivia(token);
 
 						JSSB.Append(token.Text);
@@ -219,31 +221,35 @@ namespace CSharpToJavaScript
 					case SyntaxKind.UsingDirective:
 						return;
 					case SyntaxKind.FileScopedNamespaceDeclaration:
-						_NameSpaceStr = (node as FileScopedNamespaceDeclarationSyntax).Name.ToString();
-						foreach (MemberDeclarationSyntax member in (node as FileScopedNamespaceDeclarationSyntax).Members)
 						{
-							Visit(member);
+							_NameSpaceStr = (node as FileScopedNamespaceDeclarationSyntax).Name.ToString();
+							foreach (MemberDeclarationSyntax member in (node as FileScopedNamespaceDeclarationSyntax).Members)
+							{
+								Visit(member);
+							}
+							if (_Options.Debug)
+							{
+								JSSB.Append("/*");
+								JSSB.Append(node.ToFullString().Replace("*/", ""));
+								JSSB.Append("*/");
+							}
+							return;
 						}
-						if (_Options.Debug)
-						{
-							JSSB.Append("/*");
-							JSSB.Append(node.ToFullString().Replace("*/", ""));
-							JSSB.Append("*/");
-						}
-						return;
 					case SyntaxKind.NamespaceDeclaration:
-						_NameSpaceStr = (node as NamespaceDeclarationSyntax).Name.ToString();
-						foreach (MemberDeclarationSyntax member in (node as NamespaceDeclarationSyntax).Members)
 						{
-							Visit(member);
+							_NameSpaceStr = (node as NamespaceDeclarationSyntax).Name.ToString();
+							foreach (MemberDeclarationSyntax member in (node as NamespaceDeclarationSyntax).Members)
+							{
+								Visit(member);
+							}
+							if (_Options.Debug)
+							{
+								JSSB.Append("/*");
+								JSSB.Append(node.ToFullString().Replace("*/", ""));
+								JSSB.Append("*/");
+							}
+							return;
 						}
-						if (_Options.Debug)
-						{
-							JSSB.Append("/*");
-							JSSB.Append(node.ToFullString().Replace("*/", ""));
-							JSSB.Append("*/");
-						}
-						return;
 					default:
 						//CSTOJS.Log($"{syntaxKind}");
 						break;
@@ -653,6 +659,7 @@ namespace CSharpToJavaScript
 						case SyntaxKind.MultiplyAssignmentExpression:
 						case SyntaxKind.DivideAssignmentExpression:
 						case SyntaxKind.AwaitExpression:
+						case SyntaxKind.ModuloAssignmentExpression:
 							Visit(asNode);
 							break;
 						default:
@@ -710,6 +717,11 @@ namespace CSharpToJavaScript
 						case SyntaxKind.TrueLiteralExpression:
 						case SyntaxKind.StringLiteralExpression:
 						case SyntaxKind.InterpolatedStringExpression:
+						case SyntaxKind.AddAssignmentExpression:
+						case SyntaxKind.SubtractAssignmentExpression:
+						case SyntaxKind.MultiplyAssignmentExpression:
+						case SyntaxKind.DivideAssignmentExpression:
+						case SyntaxKind.ModuloAssignmentExpression:
 							Visit(asNode);
 							break;
 						case SyntaxKind.ObjectCreationExpression:
@@ -2096,6 +2108,14 @@ namespace CSharpToJavaScript
 						case SyntaxKind.CoalesceExpression:
 						case SyntaxKind.LogicalOrExpression:
 						case SyntaxKind.AddExpression:
+						case SyntaxKind.DivideExpression:
+						case SyntaxKind.ModuloExpression:
+						case SyntaxKind.EqualsExpression:
+						case SyntaxKind.GreaterThanExpression:
+						case SyntaxKind.LessThanExpression:
+						case SyntaxKind.GreaterThanOrEqualExpression:
+						case SyntaxKind.LessThanOrEqualExpression:
+						case SyntaxKind.NotEqualsExpression:
 							Visit(asNode);
 							break;
 						case SyntaxKind.AsExpression:
@@ -2134,12 +2154,9 @@ namespace CSharpToJavaScript
 							}
 						case SyntaxKind.CloseParenToken:
 							{
-								if (_IgnoreAsParenthesis) 
-								{
-								
-								}
-								else
+								if (!_IgnoreAsParenthesis)
 									VisitToken(asToken);
+
 								break;
 							}
 						//case SyntaxKind.StringLiteralToken:

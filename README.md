@@ -58,7 +58,7 @@ public class Program
 	}
 }
 ```
-CSharp/test.cs
+CSharp/Test.cs
 ```csharp
 using static CSharpToJavaScript.APIs.JS.GlobalObject.GlobalThis;
 namespace ConsoleAppTest.CSharp;
@@ -88,6 +88,9 @@ More examples [here](https://tilied.github.io/CSharpToJavaScript/articles/intro.
 - [ ] Wiki?????
 - [x] ~Better and more examples~ [Here](https://tilied.github.io/CSharpToJavaScript/articles/intro.html). WIP!
 - [x] ~Figure out how to do docs for [api](https://github.com/TiLied/CSharpToJavaScript/tree/master/CSharpToJavaScript/APIs/JS)~ [Docs](https://tilied.github.io/CSharpToJavaScript/) WIP!
+- [ ] [CLI](https://learn.microsoft.com/en-us/dotnet/standard/commandline/)?
+- [ ] [Visual Studio extension](https://learn.microsoft.com/en-us/visualstudio/extensibility/starting-to-develop-visual-studio-extensions?view=vs-2022)?
+- [ ] [Visual Studio Code extension](https://code.visualstudio.com/api)??? Can I?
 
 ## Related Repository 
 https://github.com/TiLied/GenDocsLib

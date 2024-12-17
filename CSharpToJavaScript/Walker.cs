@@ -1,4 +1,5 @@
-﻿using CSharpToJavaScript.Utils;
+﻿using CSharpToJavaScript.APIs.JS;
+using CSharpToJavaScript.Utils;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
@@ -30,7 +31,7 @@ namespace CSharpToJavaScript
 		private bool _UsedThis = false;
 
 		private bool _PropertyStatic = false;
-
+		private bool _ConstKeyword = false;
 		public Walker(CSTOJS cstojs, SemanticModel? model) : base(SyntaxWalkerDepth.Trivia)
 		{
 			_CSTOJS = cstojs;
@@ -121,6 +122,7 @@ namespace CSharpToJavaScript
 				case SyntaxKind.InterpolatedStringTextToken:
 				case SyntaxKind.QuestionToken:
 				case SyntaxKind.LessThanEqualsToken:
+				case SyntaxKind.ConstKeyword:
 				case SyntaxKind.EndOfFileToken:
 					{
 						VisitLeadingTrivia(token);
@@ -222,6 +224,8 @@ namespace CSharpToJavaScript
 
 					switch (kind)
 					{
+						case SyntaxKind.InternalKeyword:
+							break;
 						case SyntaxKind.PublicKeyword:
 							VisitLeadingTrivia(asToken);
 							break;
@@ -277,6 +281,23 @@ namespace CSharpToJavaScript
 
 					switch (kind)
 					{
+						case SyntaxKind.StaticKeyword: 
+							{
+								VisitToken(asToken);
+								for (int j = 0; j < nodesAndTokens.Count; j++)
+								{
+									asNode = nodesAndTokens[j].AsNode();
+									if (asNode != null) 
+									{
+										if (asNode.IsKind(SyntaxKind.Block)) 
+										{
+											Visit(asNode);
+											break;
+										}
+									}
+								}
+								return;
+							}
 						case SyntaxKind.PublicKeyword:
 							VisitLeadingTrivia(asToken);
 							break;
@@ -370,6 +391,10 @@ namespace CSharpToJavaScript
 								break;
 							}
 						case SyntaxKind.LocalDeclarationStatement:
+							{
+								VisitLocalDeclarationStatement(asNode as LocalDeclarationStatementSyntax);
+								break;
+							}
 						case SyntaxKind.ReturnStatement:
 						case SyntaxKind.IfStatement:
 						case SyntaxKind.ForStatement:
@@ -412,6 +437,56 @@ namespace CSharpToJavaScript
 									//JSSB.Append(";");
 									_BaseConstructorInitializerNode = null;
 								}
+								break;
+							}
+						default:
+							_CSTOJS.Log($"asToken : {kind}");
+							break;
+					}
+				}
+			}
+		}
+
+		public override void VisitLocalDeclarationStatement(LocalDeclarationStatementSyntax node)
+		{
+			ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
+
+			for (int i = 0; i < nodesAndTokens.Count; i++)
+			{
+				SyntaxNode? asNode = nodesAndTokens[i].AsNode();
+
+				if (asNode != null)
+				{
+					SyntaxKind kind = asNode.Kind();
+
+					switch (kind)
+					{
+						case SyntaxKind.VariableDeclaration: 
+							{
+								VisitVariableDeclaration(asNode as VariableDeclarationSyntax);
+								break;
+							}
+						default:
+							_CSTOJS.Log($"asNode : {kind}");
+							break;
+					}
+				}
+				else
+				{
+					SyntaxToken asToken = nodesAndTokens[i].AsToken();
+					SyntaxKind kind = asToken.Kind();
+
+					switch (kind)
+					{
+						case SyntaxKind.ConstKeyword:
+							{
+								_ConstKeyword = true;
+								VisitToken(asToken);
+								break;
+							}
+						case SyntaxKind.SemicolonToken:
+							{
+								VisitToken(asToken);
 								break;
 							}
 						default:
@@ -774,7 +849,7 @@ namespace CSharpToJavaScript
 							.WithVariables(
 								   SyntaxFactory.SingletonSeparatedList(
 									   SyntaxFactory.VariableDeclarator(
-										   SyntaxFactory.Identifier("_" + nodesAndTokens[i - 1].AsToken().ToString() + "_")))))
+										   SyntaxFactory.Identifier("#_" + nodesAndTokens[i - 1].AsToken().ToString() + "_")))))
 						   .WithModifiers(
 							   SyntaxFactory.TokenList(new[]
 							   {
@@ -792,7 +867,7 @@ namespace CSharpToJavaScript
 							.WithVariables(
 								   SyntaxFactory.SingletonSeparatedList(
 									   SyntaxFactory.VariableDeclarator(
-										   SyntaxFactory.Identifier("_" + nodesAndTokens[i - 1].AsToken().ToString() + "_")))))
+										   SyntaxFactory.Identifier("#_" + nodesAndTokens[i - 1].AsToken().ToString() + "_")))))
 						   .WithModifiers(
 							   SyntaxFactory.TokenList(new[]
 							   {
@@ -923,14 +998,19 @@ namespace CSharpToJavaScript
 									//JSSB.Append($"\n");
 
 									SyntaxTriviaList _syntaxTrivias = asNode.Parent.Parent.GetLeadingTrivia();
-									
+
 									/* Todo! Why there is already "/t/t" in JSSB????
 									for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
 									{
 										VisitTrivia(_syntaxTrivias[_i]);
 									}*/
 
-									JSSB.Append($"get {d3.Text}() {{ return this._{d3.Text}_; }}");
+									if (_PropertyStatic == true)
+									{
+										JSSB.Append($"get {d3.Text}() {{ return this._{d3.Text}_; }}");
+									}
+									else
+										JSSB.Append($"get {d3.Text}() {{ return this.#_{d3.Text}_; }}");
 
 									_syntaxTrivias = asNode.GetTrailingTrivia();
 									for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
@@ -992,9 +1072,10 @@ namespace CSharpToJavaScript
 									if (_PropertyStatic == true)
 									{
 										JSSB.Append($"static ");
+										JSSB.Append($"set {d3.Text}(value) {{ this._{d3.Text}_ = value; }}");
 										_PropertyStatic = false;
-									}
-									JSSB.Append($"set {d3.Text}(value) {{ this._{d3.Text}_ = value; }}");
+									}else
+										JSSB.Append($"set {d3.Text}(value) {{ this.#_{d3.Text}_ = value; }}");
 
 									_syntaxTrivias = asNode.Parent.GetTrailingTrivia();
 									for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
@@ -1090,82 +1171,39 @@ namespace CSharpToJavaScript
 						case SyntaxKind.ArrayType:
 						case SyntaxKind.NullableType:
 						case SyntaxKind.PredefinedType:
+						case SyntaxKind.IdentifierName:
+						case SyntaxKind.GenericName:
 							{
 								if (node.Parent.IsKind(SyntaxKind.LocalDeclarationStatement) ||
 									node.Parent.IsKind(SyntaxKind.ForStatement))
 								{
-									SyntaxTriviaList _syntaxTrivias = asNode.GetLeadingTrivia();
-
-									for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
-									{
-										VisitTrivia(_syntaxTrivias[_i]);
-									}
-
-									if(_CSTOJS.Options.UseVarOverLet)
-										JSSB.Append("var");
+									if (_ConstKeyword == true)
+										_ConstKeyword = false;
 									else
-										JSSB.Append("let");
-
-									_syntaxTrivias = asNode.GetTrailingTrivia();
-									for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
 									{
-										VisitTrivia(_syntaxTrivias[_i]);
-									}
-								}
-								break;
-							}
-						case SyntaxKind.IdentifierName: 
-							{
-								if (node.Parent.IsKind(SyntaxKind.LocalDeclarationStatement) ||
-									node.Parent.IsKind(SyntaxKind.ForStatement))
-								{
-									SyntaxTriviaList _syntaxTrivias = asNode.GetLeadingTrivia();
+										SyntaxTriviaList _syntaxTrivias = asNode.GetLeadingTrivia();
 
-									for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
-									{
-										VisitTrivia(_syntaxTrivias[_i]);
-									}
+										for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
+										{
+											VisitTrivia(_syntaxTrivias[_i]);
+										}
 
-									if (_CSTOJS.Options.UseVarOverLet)
-										JSSB.Append("var");
-									else
-										JSSB.Append("let");
+										if (_CSTOJS.Options.UseVarOverLet)
+											JSSB.Append("var");
+										else
+											JSSB.Append("let");
 
-									_syntaxTrivias = asNode.GetTrailingTrivia();
-									for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
-									{
-										VisitTrivia(_syntaxTrivias[_i]);
-									}
-								}
-								break;
-							}
-						case SyntaxKind.GenericName: 
-							{
-								if (node.Parent.IsKind(SyntaxKind.LocalDeclarationStatement) ||
-									node.Parent.IsKind(SyntaxKind.ForStatement))
-								{
-									SyntaxTriviaList _syntaxTrivias = asNode.GetLeadingTrivia();
-
-									for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
-									{
-										VisitTrivia(_syntaxTrivias[_i]);
-									}
-
-									if (_CSTOJS.Options.UseVarOverLet)
-										JSSB.Append("var");
-									else
-										JSSB.Append("let");
-
-									_syntaxTrivias = asNode.GetTrailingTrivia();
-									for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
-									{
-										VisitTrivia(_syntaxTrivias[_i]);
+										_syntaxTrivias = asNode.GetTrailingTrivia();
+										for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
+										{
+											VisitTrivia(_syntaxTrivias[_i]);
+										}
 									}
 								}
 								break;
 							}
 						case SyntaxKind.VariableDeclarator:
-							Visit(asNode);
+							VisitVariableDeclarator(asNode as VariableDeclaratorSyntax);
 							break;
 						default:
 							_CSTOJS.Log($"asNode : {kind}");
@@ -1421,7 +1459,7 @@ namespace CSharpToJavaScript
 					{
 						case SyntaxKind.NumericLiteralToken: 
 							{
-								if (asToken.Text.EndsWith("f"))
+								if (asToken.Text.EndsWith('f'))
 									JSSB.Append(asToken.Text.Remove(asToken.Text.Length - 1));
 								else
 									VisitToken(asToken);
@@ -2001,7 +2039,7 @@ namespace CSharpToJavaScript
 
 			if (iSymbol != null && iSymbol.Kind != SymbolKind.ErrorType && iSymbol.Kind != SymbolKind.DynamicType)
 			{
-				if (iSymbol.ContainingNamespace.ToString().Contains(nameof(APIs.JS)))
+				if (iSymbol.ContainingNamespace.ToString().Contains(nameof(CSharpToJavaScript)))
 				{
 					ImmutableArray<AttributeData> _attributeDatas = iSymbol.GetAttributes();
 					foreach (AttributeData _attr in _attributeDatas)
@@ -2042,6 +2080,31 @@ namespace CSharpToJavaScript
 						return false;
 					}
 
+
+					DataFlowAnalysis _dfa = _Model.AnalyzeDataFlow(node);
+
+					if(_dfa.Succeeded == false)
+						_dfa = _Model.AnalyzeDataFlow(node.Parent);
+
+					if (_dfa.Succeeded == true)
+					{
+						if (_dfa.WrittenOutside[0].Name == "this" || iSymbol.IsStatic)
+						{
+							_UsedThis = true;
+
+							VisitLeadingTrivia(identifier);
+
+							JSSB.Append($"this.");
+							VisitToken(identifier.WithoutTrivia());
+
+							VisitTrailingTrivia(identifier);
+
+							return true;
+						}
+					}
+
+
+					/*
 					IEnumerable<SyntaxNode?> _all = from e in node.Parent.ChildNodes()
 													where e.IsKind(SyntaxKind.IdentifierName)
 													select e;
@@ -2079,7 +2142,7 @@ namespace CSharpToJavaScript
 							IEnumerable<SyntaxToken> d3 = from e in m.ChildTokens()
 														  where e.IsKind(SyntaxKind.IdentifierToken)
 														  select e;
-							_sT = d3.First();*/
+							_sT = d3.First();
 
 							_sT = m.Identifier;
 						}
@@ -2118,7 +2181,7 @@ namespace CSharpToJavaScript
 								return true;
 							}
 						}
-					}
+					}*/
 
 					return false;
 				}

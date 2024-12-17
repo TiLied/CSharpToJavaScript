@@ -9,7 +9,7 @@ namespace CSharpToJavaScript
 	/// <summary>
 	/// Options for <see cref="CSTOJS" />.
 	/// </summary>
-	public class CSTOJSOptions
+	public record class CSTOJSOptions
 	{
 		/// <summary>
 		/// Debug. When set to true prints additional info to console, cs lines to js file.

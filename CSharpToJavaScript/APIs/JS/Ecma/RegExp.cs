@@ -1,4 +1,5 @@
 ﻿using CSharpToJavaScript.Utils;
+using System.Diagnostics.CodeAnalysis;
 
 namespace CSharpToJavaScript.APIs.JS
 {
@@ -9,8 +10,8 @@ namespace CSharpToJavaScript.APIs.JS
 		[To(ToAttribute.FirstCharToLowerCase)]
 		public static RegExpPrototype Prototype { get; } = new();
 
-		public RegExp(string pattern) { }
-		public RegExp(string pattern, string flags) { }
+		public RegExp([StringSyntax(StringSyntaxAttribute.Regex)] string pattern) { }
+		public RegExp([StringSyntax(StringSyntaxAttribute.Regex)] string pattern, string flags) { }
 	}
 
 	//TODO! match etc.!!!! How? Extension methods?

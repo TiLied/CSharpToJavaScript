@@ -30,7 +30,7 @@ namespace CSharpToJavaScript
 		/// </summary>
 		public CSTOJS() 
 		{
-			_Log = this;
+			_Log = ILog.GetILog(this, _Options);
 
 			Assembly assembly = Assembly.GetExecutingAssembly();
 			//https://stackoverflow.com/a/73474279

@@ -1,12 +1,12 @@
 <docs>
 <RTCRtpStreamStatsKind>
 <summary>
-The <strong><c>kind</c></strong> property of the<br/><see cref="RTCRtpStreamStats"/> dictionary is a string indicating whether the<br/>described <see href="https://developer.mozilla.org/en-US/docs/Glossary/RTP">RTP</see> stream contains audio or video media.
+The <strong><c>kind</c></strong> property of the<br/><see cref="RTCRtpStreamStats."/> dictionary is a string indicating whether the<br/>described <see href="https://developer.mozilla.org/en-US/docs/Glossary/RTP">RTP</see> stream contains audio or video media.
 </summary>
 <remarks>
 <para>Its value<br/>is always either <c>&amp;quot;audio&amp;quot;</c> or <c>&amp;quot;video&amp;quot;</c>.</para><para>This property was previously called <c>mediaType</c>. The name was changed in the<br/>specification in February, 2018. See <see href="https://developer.mozilla.org#browser_compatibility">Browser compatibility</see> below to<br/>determine how this affects the browsers you&amp;apos;re targeting.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpStreamStats/kind"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string whose value is <c>&amp;quot;audio&amp;quot;</c> if the track whose<br/>statistics are given by the <c>RTCRtpStreamStats</c> object contains audio, or<br/><c>&amp;quot;video&amp;quot;</c> if the track contains video media.This string will always be the same as the one provided by the associated<br/><see cref="MediaStreamTrack"/> object's <see cref="MediaStreamTrack.Kind"/><br/>property. It will also match the statistics object's <see cref="RTCCodecStats.Codec"/><br/>property&amp;apos;s media type.</value>
+<value>A string whose value is <c>&amp;quot;audio&amp;quot;</c> if the track whose<br/>statistics are given by the <c>RTCRtpStreamStats</c> object contains audio, or<br/><c>&amp;quot;video&amp;quot;</c> if the track contains video media.This string will always be the same as the one provided by the associated<br/><see cref="MediaStreamTrack."/> object's <see cref="MediaStreamTrack.Kind."/><br/>property. It will also match the statistics object's <see cref="RTCCodecStats.Codec."/><br/>property&amp;apos;s media type.</value>
 </RTCRtpStreamStatsKind>
 </docs>

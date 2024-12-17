@@ -1,7 +1,7 @@
 <docs>
 <HighlightValues>
 <summary>
-The <strong><c>values()</c></strong> method of the <see cref="Highlight"/> interface returns a new <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators">Iterator</see> object that contains the values for each <c>Range</c> object in the <c>Highlight</c> object in insertion order.
+The <strong><c>values()</c></strong> method of the <see cref="Highlight."/> interface returns a new <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators">Iterator</see> object that contains the values for each <c>Range</c> object in the <c>Highlight</c> object in insertion order.
 </summary>
 <remarks>
 <blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> The <strong><c>keys()</c></strong> method is an alias for this method. It behaves exactly the same and returns <strong>values</strong> of <c>Highlight</c> elements.</para></blockquote><para><c>Highlight</c> is a <see cref="Set"/>-like object, so this is similar to using <see cref="SetValues"/>.</para>

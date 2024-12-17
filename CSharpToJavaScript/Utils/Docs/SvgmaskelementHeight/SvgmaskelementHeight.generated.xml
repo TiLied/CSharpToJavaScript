@@ -1,12 +1,12 @@
 <docs>
 <SVGMaskElementHeight>
 <summary>
-The read-only <strong><c>height</c></strong> property of the <see cref="SVGMaskElement"/> interface returns an <see cref="SVGAnimatedLength"/> object containing the value of the {{SVGattr("height")}} attribute of the {{SVGElement("marker")}}.
+The read-only <strong><c>height</c></strong> property of the <see cref="SVGMaskElement."/> interface returns an <see cref="SVGAnimatedLength."/> object containing the value of the {{SVGattr("height")}} attribute of the {{SVGElement("marker")}}.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Although this property is read-only, it is merely a container for two values you can modify, <see cref="SVGAnimatedLength.BaseVal"/> and <see cref="SVGAnimatedLength.AnimVal"/>.</para></blockquote>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Although this property is read-only, it is merely a container for two values you can modify, <see cref="SVGAnimatedLength.BaseVal."/> and <see cref="SVGAnimatedLength.AnimVal."/>.</para></blockquote>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGMaskElement/height"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An <see cref="SVGAnimatedLength"/> object. The <c>baseVal</c> property of this object returns an <see cref="SVGLength"/>, the value of which returns the <c>height</c> value.</value>
+<value>An <see cref="SVGAnimatedLength."/> object. The <c>baseVal</c> property of this object returns an <see cref="SVGLength."/>, the value of which returns the <c>height</c> value.</value>
 </SVGMaskElementHeight>
 </docs>

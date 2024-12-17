@@ -1,10 +1,10 @@
 <docs>
 <NavigationDestinationGetState>
 <summary>
-The <strong><c>getState()</c></strong> method of the<br/><see cref="NavigationDestination"/> interface returns a clone of the developer-supplied state associated with the destination <see cref="NavigationHistoryEntry"/>, or navigation operation (e.g. <see cref="Navigation.Navigate"/>) as appropriate.
+The <strong><c>getState()</c></strong> method of the<br/><see cref="NavigationDestination."/> interface returns a clone of the developer-supplied state associated with the destination <see cref="NavigationHistoryEntry."/>, or navigation operation (e.g. <see cref="Navigation.Navigate."/>) as appropriate.
 </summary>
 <remarks>
-<para>-<see href="https://developer.chrome.com/docs/web-platform/navigation-api/">Modern client-side routing: the Navigation API</see><br/>-<see href="https://github.com/WICG/navigation-api/blob/main/README.md">Navigation API explainer</see><br/>-Domenic Denicola&amp;apos;s <see href="https://gigantic-honored-octagon.glitch.me/">Navigation API live demo</see><br/>-Methods that allow state to be updated — <see cref="Navigation.Navigate"/>, <see cref="Navigation.Reload"/>, and <see cref="Navigation.UpdateCurrentEntry"/><br/></para>
+<para>-<see href="https://developer.chrome.com/docs/web-platform/navigation-api/">Modern client-side routing: the Navigation API</see><br/>-<see href="https://github.com/WICG/navigation-api/blob/main/README.md">Navigation API explainer</see><br/>-Domenic Denicola&amp;apos;s <see href="https://gigantic-honored-octagon.glitch.me/">Navigation API live demo</see><br/>-Methods that allow state to be updated — <see cref="Navigation.Navigate."/>, <see cref="Navigation.Reload."/>, and <see cref="Navigation.UpdateCurrentEntry."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NavigationDestination/getState"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>A value representing the state. This can be any type.If no state is defined, it returns <c>undefined</c>.</returns>

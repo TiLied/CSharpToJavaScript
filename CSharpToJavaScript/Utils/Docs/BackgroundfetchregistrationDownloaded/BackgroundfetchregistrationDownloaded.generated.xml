@@ -1,10 +1,10 @@
 <docs>
 <BackgroundFetchRegistrationDownloaded>
 <summary>
-The <strong><c>downloaded</c></strong> read-only property of the <see cref="BackgroundFetchRegistration"/> interface returns the size in bytes that has been downloaded, initially <c>0</c>.
+The <strong><c>downloaded</c></strong> read-only property of the <see cref="BackgroundFetchRegistration."/> interface returns the size in bytes that has been downloaded, initially <c>0</c>.
 </summary>
 <remarks>
-<para>If the value of this property changes, the <see href="https://developer.mozilla.org/en-US/docs/Web/API/BackgroundFetchRegistration/progress_event">progress</see> event is fired at the associated <see cref="BackgroundFetchRegistration"/> object.</para>
+<para>If the value of this property changes, the <see href="https://developer.mozilla.org/en-US/docs/Web/API/BackgroundFetchRegistration/progress_event">progress</see> event is fired at the associated <see cref="BackgroundFetchRegistration."/> object.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BackgroundFetchRegistration/downloaded"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A <see cref="Number"/>.</value>

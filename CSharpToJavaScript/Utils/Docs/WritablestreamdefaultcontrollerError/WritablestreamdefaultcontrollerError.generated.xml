@@ -1,7 +1,7 @@
 <docs>
 <WritableStreamDefaultControllerError>
 <summary>
-The <strong><c>error()</c></strong> method of the<br/><see cref="WritableStreamDefaultController"/> interface causes any future interactions<br/>with the associated stream to error.
+The <strong><c>error()</c></strong> method of the<br/><see cref="WritableStreamDefaultController."/> interface causes any future interactions<br/>with the associated stream to error.
 </summary>
 <remarks>
 <para>This method is rarely used, since usually it suffices to return a rejected promise from<br/>one of the underlying sink&amp;apos;s methods. However, it can be useful for suddenly shutting<br/>down a stream in response to an event outside the normal lifecycle of interactions with<br/>the underlying sink.</para>

@@ -4,8 +4,8 @@
 The<br/><strong><c>CanvasRenderingContext2D.closePath()</c></strong><br/>method of the Canvas 2D API attempts to add a straight line from the current point to<br/>the start of the current sub-path. If the shape has already been closed or has only one<br/>point, this function does nothing.
 </summary>
 <remarks>
-<para>This method doesn&amp;apos;t draw anything to the canvas directly. You can render the path using<br/>the <see cref="CanvasRenderingContext2D.Stroke"/> or<br/><see cref="CanvasRenderingContext2D.Fill"/> methods.</para>
-<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.BeginPath"/><br/></para>
+<para>This method doesn&amp;apos;t draw anything to the canvas directly. You can render the path using<br/>the <see cref="CanvasRenderingContext2D.Stroke."/> or<br/><see cref="CanvasRenderingContext2D.Fill."/> methods.</para>
+<para>-The interface defining this method: <see cref="CanvasRenderingContext2D."/><br/>-<see cref="CanvasRenderingContext2D.BeginPath."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/closePath"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>

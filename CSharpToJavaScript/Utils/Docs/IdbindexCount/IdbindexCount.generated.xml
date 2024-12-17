@@ -1,13 +1,12 @@
 <docs>
 <IDBIndexCount>
 <summary>
-The <strong><c>count()</c></strong> method of the <see cref="IDBIndex"/><br/>interface returns an <see cref="IDBRequest"/> object, and in a separate thread,<br/>returns the number of records within a key range.
+The <strong><c>count()</c></strong> method of the <see cref="IDBIndex."/><br/>interface returns an <see cref="IDBRequest."/> object, and in a separate thread,<br/>returns the number of records within a key range.
 </summary>
 <remarks>
-<para>AvailableInWorkers</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase"/><br/>-Using transactions: <see cref="IDBTransaction"/><br/>-Setting a range of keys: <see cref="IDBKeyRange"/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore"/><br/>-Using cursors: <see cref="IDBCursor"/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase."/><br/>-Using transactions: <see cref="IDBTransaction."/><br/>-Setting a range of keys: <see cref="IDBKeyRange."/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore."/><br/>-Using cursors: <see cref="IDBCursor."/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBIndex/count"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A <see cref="IDBRequest"/> object on which subsequent events related to this operation are fired.If the operation is successful, the value of the request's <see cref="IDBRequest.Result"/> property is the number of records that match the given key or key range.</returns>
+<returns>A <see cref="IDBRequest."/> object on which subsequent events related to this operation are fired.If the operation is successful, the value of the request's <see cref="IDBRequest.Result."/> property is the number of records that match the given key or key range.</returns>
 </IDBIndexCount>
 </docs>

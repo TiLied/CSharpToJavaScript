@@ -5,7 +5,7 @@ The <strong><c>MouseEvent.ctrlKey</c></strong> read-only property is a boolean v
 </summary>
 <remarks>
 <para>On Macintosh keyboards, this key is labeled the &amp;lt;kbd&amp;gt;control&amp;lt;/kbd&amp;gt; key. Also, note that on a Mac, a click combined with the &amp;lt;kbd&amp;gt;control&amp;lt;/kbd&amp;gt; key is intercepted by the operating system and used to open a context menu, so <c>ctrlKey</c> is not detectable on click events.</para>
-<para>-<see cref="MouseEvent"/><br/></para>
+<para>-<see cref="MouseEvent."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/ctrlKey"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A boolean value, where <c>true</c> indicates that the key is pressed, and <c>false</c> indicates that the key is <strong>not</strong> pressed.</value>

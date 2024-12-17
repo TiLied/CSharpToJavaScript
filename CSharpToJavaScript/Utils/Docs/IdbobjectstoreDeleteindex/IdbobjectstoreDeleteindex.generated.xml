@@ -1,11 +1,11 @@
 <docs>
 <IDBObjectStoreDeleteIndex>
 <summary>
-The <strong><c>deleteIndex()</c></strong> method of the<br/><see cref="IDBObjectStore"/> interface destroys the index with the specified name in<br/>the connected database, used during a version upgrade.
+The <strong><c>deleteIndex()</c></strong> method of the<br/><see cref="IDBObjectStore."/> interface destroys the index with the specified name in<br/>the connected database, used during a version upgrade.
 </summary>
 <remarks>
-<para>Note that this method must be called only from a <c>VersionChange</c> transaction<br/>mode callback. Note that this method synchronously modifies the<br/><see cref="IDBObjectStore.IndexNames"/> property.</para><para>AvailableInWorkers</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase"/><br/>-Using transactions: <see cref="IDBTransaction"/><br/>-Setting a range of keys: <see cref="IDBKeyRange"/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore"/><br/>-Using cursors: <see cref="IDBCursor"/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
+<para>Note that this method must be called only from a <c>VersionChange</c> transaction<br/>mode callback. Note that this method synchronously modifies the<br/><see cref="IDBObjectStore.IndexNames."/> property.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase."/><br/>-Using transactions: <see cref="IDBTransaction."/><br/>-Setting a range of keys: <see cref="IDBKeyRange."/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore."/><br/>-Using cursors: <see cref="IDBCursor."/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/deleteIndex"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>

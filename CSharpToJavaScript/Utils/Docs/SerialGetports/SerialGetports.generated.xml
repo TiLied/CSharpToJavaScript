@@ -1,11 +1,11 @@
 <docs>
 <SerialGetPorts>
 <summary>
-The <strong><c>getPorts()</c></strong> method of the <see cref="Serial"/> interface returns a {{jsxref("Promise")}} that resolves with an array of <see cref="SerialPort"/> objects representing serial ports connected to the host which the origin has permission to access.
+The <strong><c>getPorts()</c></strong> method of the <see cref="Serial."/> interface returns a {{jsxref("Promise")}} that resolves with an array of <see cref="SerialPort."/> objects representing serial ports connected to the host which the origin has permission to access.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Serial/getPorts"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A {{jsxref("Promise")}} that resolves with an array of <see cref="SerialPort"/> objects.</returns>
+<returns>A {{jsxref("Promise")}} that resolves with an array of <see cref="SerialPort."/> objects.</returns>
 </SerialGetPorts>
 </docs>

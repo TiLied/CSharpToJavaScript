@@ -1,9 +1,11 @@
 <docs>
 <CustomStateSet>
 <summary>
-The <strong><c>CustomStateSet</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">Document Object Model</see> stores a list of possible states for a custom element to be in, and allows states to be added and removed from the set.
+The <strong><c>CustomStateSet</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">Document Object Model</see> stores a list of states for an <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements#types_of_custom_element">autonomous custom element</see>, and allows states to be added and removed from the set.
 </summary>
 <remarks>
+<para>The interface can be used to expose the internal states of a custom element, allowing them to be used in CSS selectors by code that uses the element.</para>
+<para><see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements">Using custom elements</see></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CustomStateSet"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </CustomStateSet>

@@ -1,0 +1,12 @@
+<docs>
+<HTMLLinkElementCrossOrigin>
+<summary>
+The <strong><c>crossOrigin</c></strong> property of the <see cref="HTMLLinkElement."/> interface specifies the Cross-Origin Resource Sharing ({{Glossary("CORS")}}) setting to use when retrieving the resource.
+</summary>
+<remarks>
+<para>-<see cref="HTMLImageElement.CrossOrigin."/><br/>-<see cref="HTMLMediaElement.CrossOrigin."/><br/>-<see cref="HTMLScriptElement.CrossOrigin."/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLLinkElement/crossOrigin"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string of a keyword specifying the CORS mode to use when fetching the resource. Possible values are:If the <c>crossOrigin</c> property is specified with any other value, it is the same as specifing as the <c>anonymous</c>.If the <c>crossOrigin</c> property is not specified, the resource is fetched without CORS (the <c>no-cors</c> {{domxref(&amp;quot;Request.mode&amp;quot;, &amp;quot;mode&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} and the <c>same-origin</c> {{domxref(&amp;quot;Request.credentials&amp;quot;, &amp;quot;credentials&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} mode).</value>
+</HTMLLinkElementCrossOrigin>
+</docs>

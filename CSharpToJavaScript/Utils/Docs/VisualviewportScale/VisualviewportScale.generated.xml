@@ -1,7 +1,7 @@
 <docs>
 <VisualViewportScale>
 <summary>
-The <strong><c>scale</c></strong> read-only property of the<br/><see cref="VisualViewport"/> interface returns the pinch-zoom scaling factor applied<br/>to the visual viewport.
+The <strong><c>scale</c></strong> read-only property of the <see cref="VisualViewport."/> interface returns the pinch-zoom scaling factor applied to the visual viewport, or <c>0</c> if current document is not fully active, or <c>1</c> if there is no output device.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VisualViewport/scale"> <em>See also on MDN</em> </seealso></para>

@@ -1,7 +1,7 @@
 <docs>
 <ElementInternalsWillValidate>
 <summary>
-The <strong><c>willValidate</c></strong> read-only property of the <see cref="ElementInternals"/> interface returns <c>true</c> if the element is a submittable element that is a candidate for <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation">constraint validation</see>.
+The <strong><c>willValidate</c></strong> read-only property of the <see cref="ElementInternals."/> interface returns <c>true</c> if the element is a submittable element that is a candidate for <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation">constraint validation</see>.
 </summary>
 <remarks>
 <para>Elements that are barred from being candidates for constraint validation include those that have the attributes: <c>disabled</c>, <c>hidden</c> or <c>readonly</c>, input elements of <c>type=button</c> or <c>type=reset</c>, or any element that is a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist">datalist</see> element or has a <c>&amp;lt;datalist&amp;gt;</c> element ancestor.</para>

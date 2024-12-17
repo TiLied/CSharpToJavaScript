@@ -1,11 +1,11 @@
 <docs>
 <XRLightProbe>
 <summary>
-The <strong><c>XRLightProbe</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</see> contains lighting information at a given point in the user&amp;apos;s environment. You can get an <c>XRLighting</c> object using the <see cref="XRSession.RequestLightProbe"/> method.
+The <strong><c>XRLightProbe</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</see> contains lighting information at a given point in the user&amp;apos;s environment. You can get an <c>XRLighting</c> object using the <see cref="XRSession.RequestLightProbe."/> method.
 </summary>
 <remarks>
-<para>This object doesn't itself contain lighting values, but it is used to collect lighting states for each <see cref="XRFrame"/>. See <see cref="XRLightEstimate"/> for the estimated lighting values for an <c>XRLightProbe</c>.</para><para></para>
-<para>-<see cref="XRSession.RequestLightProbe"/><br/></para>
+<para>This object doesn't itself contain lighting values, but it is used to collect lighting states for each <see cref="XRFrame."/>. See <see cref="XRLightEstimate."/> for the estimated lighting values for an <c>XRLightProbe</c>.</para><para></para>
+<para>-<see cref="XRSession.RequestLightProbe."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRLightProbe"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </XRLightProbe>

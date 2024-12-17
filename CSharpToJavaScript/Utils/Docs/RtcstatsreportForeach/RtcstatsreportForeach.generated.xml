@@ -1,7 +1,7 @@
 <docs>
 <RTCStatsReportForEach>
 <summary>
-The <strong><c>forEach()</c></strong> method of the <see cref="RTCStatsReport"/> interface executes a provided function once for each key/value pair in the <c>RTCStatsReport</c> object, in insertion order.
+The <strong><c>forEach()</c></strong> method of the <see cref="RTCStatsReport."/> interface executes a provided function once for each key/value pair in the <c>RTCStatsReport</c> object, in insertion order.
 </summary>
 <remarks>
 <para>The keys are unique <c>id</c> values for the monitored statistics objects from which the statistics are derived, and the associated values are <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCStatsReport#the_statistic_types">statistics dictionary objects</see>.</para><para>The method is otherwise the same as <see cref="MapPrototypeForEach"/>.</para>

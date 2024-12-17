@@ -5,7 +5,7 @@ The <strong><c>SVGStyleElement.disabled</c></strong> property can be used to get
 </summary>
 <remarks>
 <para>Note that there is no corresponding <c>disabled</c> attribute on the <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/style">SVG <c>&amp;lt;style&amp;gt;</c> element</see>.</para>
-<para>-<see cref="HTMLStyleElement.Disabled"/><br/></para>
+<para>-<see cref="HTMLStyleElement.Disabled."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGStyleElement/disabled"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>Returns <c>true</c> if the stylesheet is disabled, or there is no associated stylesheet; otherwise <c>false</c>.<br/>The value is <c>false</c> by default (if there is an associated stylesheet).The property can be used to enable or disable an associated stylesheet.<br/>Setting the property to <c>true</c> when there is no associated stylesheet has no effect.</value>

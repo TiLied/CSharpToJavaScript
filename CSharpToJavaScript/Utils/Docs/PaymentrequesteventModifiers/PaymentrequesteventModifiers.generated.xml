@@ -1,12 +1,12 @@
 <docs>
 <PaymentRequestEventModifiers>
 <summary>
-The <strong><c>modifiers</c></strong> read-only property of the<br/><see cref="PaymentRequestEvent"/> interface returns an array of <c>PaymentDetailsModifier</c> objects containing modifiers for payment details.
+The <strong><c>modifiers</c></strong> read-only property of the<br/><see cref="PaymentRequestEvent."/> interface returns an {{jsxref("Array")}} of <c>PaymentDetailsModifier</c> objects containing modifiers for payment details.
 </summary>
 <remarks>
-<para>-<see href="https://web.dev/web-based-payment-apps-overview/">Web-based payment apps overview</see><br/>-<see href="https://web.dev/setting-up-a-payment-method/">Setting up a payment method</see><br/>-<see href="https://web.dev/life-of-a-payment-transaction/">Life of a payment transaction</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API">Using the Payment Request API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API/Concepts">Payment processing concepts</see><br/></para>
+<para>-<see href="https://web.dev/articles/web-based-payment-apps-overview">Web-based payment apps overview</see><br/>-<see href="https://web.dev/articles/setting-up-a-payment-method">Setting up a payment method</see><br/>-<see href="https://web.dev/articles/life-of-a-payment-transaction">Life of a payment transaction</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API">Using the Payment Request API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API/Concepts">Payment processing concepts</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentRequestEvent/modifiers"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An array of <c>PaymentDetailsModifier</c> objects containing modifiers for payment details. These objects contain the following properties:</value>
+<value>An array of objects containing modifiers for payment details. These objects contain the following properties:</value>
 </PaymentRequestEventModifiers>
 </docs>

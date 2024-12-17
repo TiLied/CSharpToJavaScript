@@ -1,12 +1,12 @@
 <docs>
 <WakeLockSentinelRelease>
 <summary>
-The <strong><c>release()</c></strong> method of the<br/><see cref="WakeLockSentinel"/> interface releases the<br/><see cref="WakeLockSentinel"/>, returning a {{jsxref("Promise")}} that is resolved<br/>once the sentinel has been successfully released.
+The <strong><c>release()</c></strong> method of the <see cref="WakeLockSentinel."/> interface releases the <see cref="WakeLockSentinel."/>, returning a {{jsxref("Promise")}} that is resolved once the sentinel has been successfully released.
 </summary>
 <remarks>
-<para>-<see cref="WakeLockSentinel"/><br/>-<see cref="WakeLock.Request"/><br/></para>
+<para>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/wake-lock/">Stay awake with the Screen Wake Lock API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WakeLockSentinel/release"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>Returns a <see cref="Promise"/> that resolves with <c>undefined</c></returns>
+<returns>Returns a <see cref="Promise"/> that resolves with <c>undefined</c>.</returns>
 </WakeLockSentinelRelease>
 </docs>

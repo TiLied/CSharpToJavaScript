@@ -1,12 +1,12 @@
 <docs>
 <FileSystemHandleQueryPermission>
 <summary>
-The <strong><c>queryPermission()</c></strong> method of the<br/><see cref="FileSystemHandle"/> interface queries the current permission state of the<br/>current handle.
+The <strong><c>queryPermission()</c></strong> method of the<br/><see cref="FileSystemHandle."/> interface queries the current permission state of the<br/>current handle.
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_System_Access_API">File System Access API</see><br/>-<see href="https://web.dev/file-system-access/">The File System Access API: simplifying access to local files</see><br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_System_API">File System API</see><br/>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/file-system-access">The File System Access API: simplifying access to local files</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemHandle/queryPermission"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns><see cref="'PermissionStatus.State'"/> which is one of <c>&amp;apos;granted&amp;apos;</c>,<br/><c>&amp;apos;denied&amp;apos;</c> or <c>&amp;apos;prompt&amp;apos;</c>.If this returns &amp;quot;prompt&amp;quot; the website will have to call requestPermission() before any<br/>operations on the handle can be done. If this returns &amp;quot;denied&amp;quot; any operations will<br/>reject. Usually handles returned by the local file system handle factories will<br/>initially return &amp;quot;granted&amp;quot; for their read permission state. However, other than through<br/>the user revoking permission, a handle retrieved from IndexedDB is also likely to return<br/>&amp;quot;prompt&amp;quot;.</returns>
+<returns>A {{jsxref("Promise")}} that resolves to a <see cref="PermissionStatus."/> object.If <see cref="'PermissionStatus.State'."/> returns "prompt" the website will have to call requestPermission() before any<br/>operations on the handle can be done. If this returns &amp;quot;denied&amp;quot; any operations will<br/>reject. Usually handles returned by the local file system handle factories will<br/>initially return &amp;quot;granted&amp;quot; for their read permission state. However, other than through<br/>the user revoking permission, a handle retrieved from IndexedDB is also likely to return<br/>&amp;quot;prompt&amp;quot;.</returns>
 </FileSystemHandleQueryPermission>
 </docs>

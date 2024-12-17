@@ -1,12 +1,12 @@
 <docs>
 <NavigationHistoryEntryUrl>
 <summary>
-The <strong><c>url</c></strong> read-only property of the<br/><see cref="NavigationHistoryEntry"/> interface returns the absolute URL of this history entry.
+The <strong><c>url</c></strong> read-only property of the <see cref="NavigationHistoryEntry."/> interface returns the absolute URL of this history entry. If the entry corresponds to a different Document than the current one (like <c>sameDocument</c> property is <c>false</c>), and that Document was fetched with a <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy">Referrer-Policy</see> header set to <c>no-referrer</c> or <c>origin</c>, the property returns <c>null</c>. If current document is not fully active, it returns an empty string.
 </summary>
 <remarks>
 <para>-<see href="https://developer.chrome.com/docs/web-platform/navigation-api/">Modern client-side routing: the Navigation API</see><br/>-<see href="https://github.com/WICG/navigation-api/blob/main/README.md">Navigation API explainer</see><br/>-Domenic Denicola&amp;apos;s <see href="https://gigantic-honored-octagon.glitch.me/">Navigation API live demo</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NavigationHistoryEntry/url"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string representing the URL.</value>
+<value>A string representing the URL or <c>null</c>.</value>
 </NavigationHistoryEntryUrl>
 </docs>

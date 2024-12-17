@@ -1,7 +1,7 @@
 <docs>
 <NavigatorRequestMIDIAccess>
 <summary>
-The <strong><c>requestMIDIAccess()</c></strong> method of the <see cref="'Navigator'"/> interface returns a {{jsxref('Promise')}} representing a request for access to MIDI devices on a user's system.<br/>This method is part of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_MIDI_API">Web MIDI API</see>, which provides a means for accessing, enumerating, and manipulating MIDI devices.
+The <strong><c>requestMIDIAccess()</c></strong> method of the <see cref="'Navigator'."/> interface returns a {{jsxref('Promise')}} representing a request for access to MIDI devices on a user's system.<br/>This method is part of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_MIDI_API">Web MIDI API</see>, which provides a means for accessing, enumerating, and manipulating MIDI devices.
 </summary>
 <remarks>
 <para>This method may prompt the user for access to MIDI devices available to their system, or it may use a previously established preference to grant or deny access.<br/>If permission is granted then the <see cref="'Promise'"/> resolves and a <see href="https://developer.mozilla.org/en-US/docs/Web/API/MIDIAccess"><c>MIDIAccess</c></see> object is returned.</para>

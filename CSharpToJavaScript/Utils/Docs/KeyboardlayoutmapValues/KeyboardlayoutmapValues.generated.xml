@@ -1,11 +1,13 @@
 <docs>
 <KeyboardLayoutMapValues>
 <summary>
-The <strong><c>values</c></strong> read-only property of<br/>the <see cref="KeyboardLayoutMap"/> interface returns a new Array<br/>Iterator object that contains the values for each index in the<br/>map.
+The <strong><c>values()</c></strong> method of the <see cref="KeyboardLayoutMap."/> interface returns a new <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator">Iterator</see> object that contains the values for each index in the <c>KeyboardLayoutMap</c> object.
 </summary>
 <remarks>
+<para>The method is otherwise the same as <see cref="MapPrototypeValues"/>.</para>
+<para>-<see cref="MapPrototypeValues"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardLayoutMap/values"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An iterator.</value>
+<value>A new <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator">Iterator</see> object.</value>
 </KeyboardLayoutMapValues>
 </docs>

@@ -1,10 +1,10 @@
 <docs>
 <WebTransportReceiveStreamGetStats>
 <summary>
-The <strong><c>getStats()</c></strong> method of the <see cref="WebTransportReceiveStream"/> interface asynchronously returns an object containing statistics for the current stream.
+The <strong><c>getStats()</c></strong> method of the <see cref="WebTransportReceiveStream."/> interface asynchronously returns an object containing statistics for the current stream.
 </summary>
 <remarks>
-<para>The statistics include the total number of ordered bytes that have arrived on this stream (ignoring network overhead, up until the first missing byte) and the total number that have been read by the application.<br/>It therefore provides a measure of how quickly the application is consuming bytes from the server on this particular stream.</para><para>AvailableInWorkers</para>
+<para>The statistics include the total number of ordered bytes that have arrived on this stream (ignoring network overhead, up until the first missing byte) and the total number that have been read by the application.<br/>It therefore provides a measure of how quickly the application is consuming bytes from the server on this particular stream.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebTransportReceiveStream/getStats"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>A <see cref="Promise"/> that resolves to a object containing statistics about the current stream.<br/>The returned object has the following properties:</returns>

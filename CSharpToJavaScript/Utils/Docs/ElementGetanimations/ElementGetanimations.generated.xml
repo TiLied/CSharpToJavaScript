@@ -1,13 +1,13 @@
 <docs>
 <ElementGetAnimations>
 <summary>
-The <c>getAnimations()</c> method of the <see cref="Element"/> interface<br/>(specified on the <c>Animatable</c> mixin) returns an array of all<br/><see cref="Animation"/> objects affecting this element or which are scheduled to do so<br/>in future. It can optionally return <see cref="Animation"/> objects for descendant<br/>elements too.
+The <c>getAnimations()</c> method of the <see cref="Element."/> interface<br/>(specified on the <c>Animatable</c> mixin) returns an array of all<br/><see cref="Animation."/> objects affecting this element or which are scheduled to do so<br/>in future. It can optionally return <see cref="Animation."/> objects for descendant<br/>elements too.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This array includes <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations">CSS Animations</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions">CSS Transitions</see>, and <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations</see>.</para></blockquote>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations">CSS Animations</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions">CSS Transitions</see><br/>-<see cref="Document.GetAnimations"/> - Fetch all animations in the document<br/>-<see cref="Animation"/><br/></para>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This array includes <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations">CSS Animations</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transitions">CSS Transitions</see>, and <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations</see>.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations">CSS Animations</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transitions">CSS Transitions</see><br/>-<see cref="Document.GetAnimations."/> - Fetch all animations in the document<br/>-<see cref="Animation."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getAnimations"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>An {{jsxref("Array")}} of <see cref="Animation"/> objects, each representing an<br/>animation currently targeting the <see cref="Element"/> on which this method is called,<br/>or one of its descendant elements if <c>{ subtree: true }</c> is specified.</returns>
+<returns>An {{jsxref("Array")}} of <see cref="Animation."/> objects, each representing an<br/>animation currently targeting the <see cref="Element."/> on which this method is called,<br/>or one of its descendant elements if <c>{ subtree: true }</c> is specified.</returns>
 </ElementGetAnimations>
 </docs>

@@ -1,7 +1,7 @@
 <docs>
 <LocationHash>
 <summary>
-The <strong><c>hash</c></strong> property of the<br/><see cref="Location"/> interface returns a string containing a<br/><c>&amp;apos;#&amp;apos;</c> followed by the fragment identifier of the URL — the ID on the page<br/>that the URL is trying to target.
+The <strong><c>hash</c></strong> property of the<br/><see cref="Location."/> interface returns a string containing a<br/><c>&amp;apos;#&amp;apos;</c> followed by the fragment identifier of the URL — the ID on the page<br/>that the URL is trying to target.
 </summary>
 <remarks>
 <para>The fragment is not <see href="https://en.wikipedia.org/wiki/URL_encoding">URL decoded</see>. If the URL does not<br/>have a fragment identifier, this property contains an empty string, <c>&amp;quot;&amp;quot;</c>.</para>

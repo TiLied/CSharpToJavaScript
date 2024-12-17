@@ -4,8 +4,8 @@
 The <c>AnimationEffect</c> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see> is an interface representing animation effects.
 </summary>
 <remarks>
-<para><c>AnimationEffect</c> is an abstract interface and so isn't directly instantiable. However, concrete interfaces such as <see cref="KeyframeEffect"/> inherit from it, and instances of these interfaces can be passed to <see cref="Animation"/> objects for playing, and may also be used by <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations">CSS Animations</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions">Transitions</see>.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/>-<see cref="Animation.Effect"/><br/></para>
+<para><c>AnimationEffect</c> is an abstract interface and so isn't directly instantiable. However, concrete interfaces such as <see cref="KeyframeEffect."/> inherit from it, and instances of these interfaces can be passed to <see cref="Animation."/> objects for playing, and may also be used by <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations">CSS Animations</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transitions">Transitions</see>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/>-<see cref="Animation.Effect."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AnimationEffect"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </AnimationEffect>

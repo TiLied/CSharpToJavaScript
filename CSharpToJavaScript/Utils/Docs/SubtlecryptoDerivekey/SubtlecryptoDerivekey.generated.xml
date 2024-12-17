@@ -1,13 +1,13 @@
 <docs>
 <SubtleCryptoDeriveKey>
 <summary>
-The <strong><c>deriveKey()</c></strong> method of the <see cref="SubtleCrypto"/><br/>interface can be used to derive a secret key from a master key.
+The <strong><c>deriveKey()</c></strong> method of the <see cref="SubtleCrypto."/><br/>interface can be used to derive a secret key from a master key.
 </summary>
 <remarks>
-<para>It takes as arguments some initial key material, the derivation algorithm to use, and<br/>the desired properties for the key to derive. It returns a <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><c>Promise</c></see><br/>which will be fulfilled with a <see cref="CryptoKey"/> object representing the new key.</para><para>It&amp;apos;s worth noting that the three key derivation algorithms you can use have quite<br/>different characteristics and are appropriate in quite different situations. See <see href="https://developer.mozilla.org#supported_algorithms">Supported algorithms</see> for some more detail on this.</para>
+<para>It takes as arguments some initial key material, the derivation algorithm to use, and<br/>the desired properties for the key to derive. It returns a <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><c>Promise</c></see><br/>which will be fulfilled with a <see cref="CryptoKey."/> object representing the new key.</para><para>It&amp;apos;s worth noting that the three key derivation algorithms you can use have quite<br/>different characteristics and are appropriate in quite different situations. See <see href="https://developer.mozilla.org#supported_algorithms">Supported algorithms</see> for some more detail on this.</para>
 <para>-<see href="https://datatracker.ietf.org/doc/html/rfc5869">HKDF specification</see>.<br/>-<see href="https://csrc.nist.gov/publications/detail/sp/800-132/final">NIST guidelines for password-based key derivation</see>.<br/>-<see href="https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html">Password storage cheat sheet</see>.<br/>-<see href="https://security.stackexchange.com/questions/3959/recommended-of-iterations-when-using-pbkdf2-sha256/3993#3993">Advice on choosing an iteration count for PBKDF2</see>.<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/deriveKey"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A {{jsxref("Promise")}} that fulfills with a <see cref="CryptoKey"/>.</returns>
+<returns>A {{jsxref("Promise")}} that fulfills with a <see cref="CryptoKey."/>.</returns>
 </SubtleCryptoDeriveKey>
 </docs>

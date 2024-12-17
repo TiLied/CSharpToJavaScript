@@ -1,0 +1,12 @@
+<docs>
+<AbortSignalAbort>
+<summary>
+The <strong><c>AbortSignal.abort()</c></strong> static method returns an <see cref="AbortSignal."/> that is already set as aborted (and which does not trigger an <see cref="AbortSignal/abort_event."/> event).
+</summary>
+<remarks>
+<para>This is shorthand for the following code:</para><para>This could, for example, be passed to a fetch method in order to run its abort logic (i.e. it may be that code is organized such that the abort logic should be run even if the intended fetch operation has not been started).</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> The method is similar in purpose to <see cref="PromiseReject"/>.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal/abort"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <c>AbortSignal</c> instance with the <see cref="AbortSignal.Aborted."/> property set to <c>true</c>, and <see cref="AbortSignal.Reason."/> set to the specified or default reason value.</returns>
+</AbortSignalAbort>
+</docs>

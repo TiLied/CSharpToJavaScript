@@ -1,11 +1,10 @@
 <docs>
 <URLHost>
 <summary>
-The <strong><c>host</c></strong> property of the <see cref="URL"/> interface is<br/>a string containing the host, that is the {{domxref(&amp;quot;URL.hostname&amp;quot;,<br/>"hostname")}}, and then, if the <see href="https://developer.mozilla.org/en-US/docs/Glossary/port">port</see> of the URL is nonempty, a<br/><c>&amp;apos;:&amp;apos;</c>, followed by the <see cref="URL.Port"/> of the URL.
+The <strong><c>host</c></strong> property of the <see cref="URL."/> interface is<br/>a string containing the host, that is the <see cref="URL.Hostname."/>, and then, if the {{glossary("port")}} of the URL is nonempty, a<br/><c>&amp;apos;:&amp;apos;</c>, followed by the <see cref="URL.Port."/> of the URL.
 </summary>
 <remarks>
-<para>AvailableInWorkers</para>
-<para>-The <see cref="URL"/> interface it belongs to.<br/></para>
+<para>-The <see cref="URL."/> interface it belongs to.<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URL/host"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A string.</value>

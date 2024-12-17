@@ -1,12 +1,12 @@
 <docs>
 <ServiceWorkerRegistrationPaymentManager>
 <summary>
-The <strong><c>paymentManager</c></strong> property of the<br/><see cref="ServiceWorkerRegistration"/> interface returns a payment app's <see cref="PaymentManager"/> instance, which is used to manage various payment app functionality.
+The <strong><c>paymentManager</c></strong> read-only property of the<br/><see cref="ServiceWorkerRegistration."/> interface returns a payment app's <see cref="PaymentManager."/> instance, which is used to manage various payment app functionality.
 </summary>
 <remarks>
-<para>-{{domxref(&amp;quot;Payment Handler API&amp;quot;, &amp;quot;Payment Handler API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://web.dev/web-based-payment-apps-overview/">Web-based payment apps overview</see><br/>-<see href="https://web.dev/setting-up-a-payment-method/">Setting up a payment method</see><br/>-<see href="https://web.dev/life-of-a-payment-transaction/">Life of a payment transaction</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API">Using the Payment Request API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API/Concepts">Payment processing concepts</see><br/></para>
+<para>-{{domxref(&amp;quot;Payment Handler API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://web.dev/articles/web-based-payment-apps-overview">Web-based payment apps overview</see><br/>-<see href="https://web.dev/articles/setting-up-a-payment-method">Setting up a payment method</see><br/>-<see href="https://web.dev/articles/life-of-a-payment-transaction">Life of a payment transaction</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API">Using the Payment Request API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API/Concepts">Payment processing concepts</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/paymentManager"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="PaymentManager"/> object instance.</value>
+<value>A <see cref="PaymentManager."/> object instance.</value>
 </ServiceWorkerRegistrationPaymentManager>
 </docs>

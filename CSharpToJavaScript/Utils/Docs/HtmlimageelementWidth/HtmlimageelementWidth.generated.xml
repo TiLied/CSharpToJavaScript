@@ -1,9 +1,10 @@
 <docs>
 <HTMLImageElementWidth>
 <summary>
-The <strong><c>width</c></strong> property of the<br/><see cref="HTMLImageElement"/> interface indicates the width at which an image is<br/>drawn in <see href="https://developer.mozilla.org/en-US/docs/Glossary/CSS pixel">CSS pixel</see> if it's being drawn or rendered to<br/>any visual medium such as a screen or printer. Otherwise, it&amp;apos;s the natural, pixel<br/>density-corrected width of the image.
+The <strong><c>width</c></strong> property of the<br/><see cref="HTMLImageElement."/> interface indicates the width at which an image is<br/>drawn in <see href="https://developer.mozilla.org/en-US/docs/Glossary/CSS pixel">CSS pixel</see> if it's being drawn or rendered to<br/>any visual medium such as a screen or printer. Otherwise, it&amp;apos;s the natural, pixel<br/>density-corrected width of the image.
 </summary>
 <remarks>
+<para>-<see cref="HTMLCanvasElement.Width."/><br/>-<see cref="HTMLEmbedElement.Width."/><br/>-<see cref="HTMLIFrameElement.Width."/><br/>-<see cref="HTMLObjectElement.Width."/><br/>-<see cref="HTMLSourceElement.Width."/><br/>-<see cref="HTMLVideoElement.Width."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/width"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>An integer value indicating the width of the image. The way the width is defined<br/>depends on whether or not the image is being rendered to a visual medium, such as a<br/>screen or printer:</value>

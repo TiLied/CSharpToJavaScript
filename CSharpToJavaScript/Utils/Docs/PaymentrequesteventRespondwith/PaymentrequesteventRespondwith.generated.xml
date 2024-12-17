@@ -1,10 +1,10 @@
 <docs>
 <PaymentRequestEventRespondWith>
 <summary>
-The <strong><c>respondWith()</c></strong> method of the <see cref="PaymentRequestEvent"/> interface prevents the default event handling and allows you to provide a {{jsxref("Promise")}} for a <see cref="PaymentResponse"/> object yourself.
+The <strong><c>respondWith()</c></strong> method of the <see cref="PaymentRequestEvent."/> interface prevents the default event handling and allows you to provide a {{jsxref("Promise")}} for a <see cref="PaymentResponse."/> object yourself.
 </summary>
 <remarks>
-<para>-<see href="https://web.dev/web-based-payment-apps-overview/">Web-based payment apps overview</see><br/>-<see href="https://web.dev/setting-up-a-payment-method/">Setting up a payment method</see><br/>-<see href="https://web.dev/life-of-a-payment-transaction/">Life of a payment transaction</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API">Using the Payment Request API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API/Concepts">Payment processing concepts</see><br/></para>
+<para>-<see href="https://web.dev/articles/web-based-payment-apps-overview">Web-based payment apps overview</see><br/>-<see href="https://web.dev/articles/setting-up-a-payment-method">Setting up a payment method</see><br/>-<see href="https://web.dev/articles/life-of-a-payment-transaction">Life of a payment transaction</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API">Using the Payment Request API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API/Concepts">Payment processing concepts</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentRequestEvent/respondWith"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>A <c>PaymentHandlerResponse</c> object. This contains the following properties:</returns>

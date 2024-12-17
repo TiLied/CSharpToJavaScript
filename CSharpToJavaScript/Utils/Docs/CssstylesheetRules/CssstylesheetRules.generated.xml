@@ -1,13 +1,13 @@
 <docs>
 <CSSStyleSheetRules>
 <summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <strong><c>rules</c></strong> is a <strong>deprecated</strong><br/><strong>legacy property</strong> of the <see cref="CSSStyleSheet"/> interface. Functionally<br/>identical to the preferred <see cref="CSSStyleSheet.CssRules"/> property,<br/>it provides access to a live-updating list of the CSS rules comprising the<br/>stylesheet.
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <strong><c>rules</c></strong> is a <strong>deprecated</strong><br/><strong>legacy property</strong> of the <see cref="CSSStyleSheet."/> interface. Functionally<br/>identical to the preferred <see cref="CSSStyleSheet.CssRules."/> property,<br/>it provides access to a live-updating list of the CSS rules comprising the<br/>stylesheet.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> As a legacy property, you should not use <c>rules</c> and<br/>should instead use the preferred <see cref="CSSStyleSheet.CssRules"/>.<br/>While <c>rules</c> is unlikely to be removed soon, its availability is not as<br/>widespread and using it will result in compatibility problems for your site or app.</para></blockquote>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> As a legacy property, you should not use <c>rules</c> and<br/>should instead use the preferred <see cref="CSSStyleSheet.CssRules."/>.<br/>While <c>rules</c> is unlikely to be removed soon, its availability is not as<br/>widespread and using it will result in compatibility problems for your site or app.</para></blockquote>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model">CSS Object Model</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information">Using dynamic styling information</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleSheet/rules"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A live-updating <see cref="CSSRuleList"/> containing each of the CSS rules making up<br/>the stylesheet. Each entry in the rule list is a <see cref="CSSRule"/> object<br/>describing one rule making up the stylesheet.</value>
+<value>A live-updating <see cref="CSSRuleList."/> containing each of the CSS rules making up<br/>the stylesheet. Each entry in the rule list is a <see cref="CSSRule."/> object<br/>describing one rule making up the stylesheet.</value>
 </CSSStyleSheetRules>
 </docs>

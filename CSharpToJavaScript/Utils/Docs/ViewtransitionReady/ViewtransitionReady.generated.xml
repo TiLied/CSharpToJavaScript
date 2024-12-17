@@ -1,13 +1,13 @@
 <docs>
 <ViewTransitionReady>
 <summary>
-The <strong><c>ready</c></strong> read-only property of the<br/><see cref="ViewTransition"/> interface is a {{jsxref("Promise")}} that fulfills once the pseudo-element tree is created and the transition animation is about to start.
+The <strong><c>ready</c></strong> read-only property of the<br/><see cref="ViewTransition."/> interface is a {{jsxref("Promise")}} that fulfills once the pseudo-element tree is created and the transition animation is about to start.
 </summary>
 <remarks>
-<para><c>ready</c> will reject if the transition cannot begin. This can be due to misconfiguration, for example duplicate {{cssxref("view-transition-name")}}s, or if the callback passed to <see cref="Document.StartViewTransition"/> throws or returns a promise that rejects.</para>
+<para><c>ready</c> will reject if the transition cannot begin. This can be due to misconfiguration, for example duplicate {{cssxref("view-transition-name")}}s, or if the callback passed to <see cref="Document.StartViewTransition."/> throws or returns a promise that rejects.</para>
 <para>-<see href="https://developer.chrome.com/docs/web-platform/view-transitions/">Smooth and simple transitions with the View Transitions API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ViewTransition/ready"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A promise.</value>
+<value>A Promise.</value>
 </ViewTransitionReady>
 </docs>

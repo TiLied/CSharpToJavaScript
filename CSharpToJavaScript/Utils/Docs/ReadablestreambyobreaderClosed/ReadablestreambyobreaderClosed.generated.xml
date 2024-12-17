@@ -1,11 +1,11 @@
 <docs>
 <ReadableStreamBYOBReaderClosed>
 <summary>
-The <strong><c>closed</c></strong> read-only property of the <see cref="ReadableStreamBYOBReader"/> interface returns a {{jsxref("Promise")}} that fulfills when the stream closes, or rejects if the stream throws an error or the reader's lock is released.
+The <strong><c>closed</c></strong> read-only property of the <see cref="ReadableStreamBYOBReader."/> interface returns a {{jsxref("Promise")}} that fulfills when the stream closes, or rejects if the stream throws an error or the reader's lock is released.
 </summary>
 <remarks>
 <para>This property enables you to write code that responds to an end to the streaming process.</para>
-<para>-<see cref="ReadableStreamBYOBReader.ReadableStreamBYOBReader"/> constructor<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams">Using readable byte stream</see><br/></para>
+<para>-<see cref="ReadableStreamBYOBReader.ReadableStreamBYOBReader."/> constructor<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams">Using readable byte stream</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableStreamBYOBReader/closed"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A <see cref="Promise"/>.</value>

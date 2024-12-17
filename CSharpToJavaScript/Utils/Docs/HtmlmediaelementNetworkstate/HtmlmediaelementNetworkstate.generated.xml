@@ -4,7 +4,7 @@
 The<br/><strong><c>HTMLMediaElement.networkState</c></strong> property indicates the<br/>current state of the fetching of media over the network.
 </summary>
 <remarks>
-<para>-<see cref="HTMLMediaElement"/>: Interface used to define the <c>HTMLMediaElement.networkState</c> property<br/></para>
+<para>-<see cref="HTMLMediaElement."/>: Interface used to define the <c>HTMLMediaElement.networkState</c> property<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/networkState"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>An <c>unsigned short</c>. Possible values are:<table><tr><td>Constant</td><td>Value</td><td>Description</td></tr><tr><td><c>NETWORK_EMPTY</c></td><td>0</td><td>There is no data yet. Also, <c>readyState</c> is <c>HAVE_NOTHING</c>.</td></tr><tr><td><c>NETWORK_IDLE</c></td><td>1</td><td>HTMLMediaElement is active and has selected a resource, but is not using the network.</td></tr><tr><td><c>NETWORK_LOADING</c></td><td>2</td><td>The browser is downloading HTMLMediaElement data.</td></tr><tr><td><c>NETWORK_NO_SOURCE</c></td><td>3</td><td>No HTMLMediaElement src found.</td></tr></table></value>

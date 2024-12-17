@@ -1,12 +1,12 @@
 <docs>
 <PointerEventGetCoalescedEvents>
 <summary>
-The <strong><c>getCoalescedEvents()</c></strong> method of the <see cref="PointerEvent"/> interface returns a sequence of <c>PointerEvent</c> instances that were coalesced (merged) into a single <see cref="'Element/pointermove_event'"/> or <see cref="'Element/pointerrawupdate_event'"/> event.<br/>Instead of a stream of many <see cref="'Element/pointermove_event'"/> events, user agents coalesce multiple updates into a single event.<br/>This helps with performance as the user agent has less event handling to perform, but there is a reduction in the granularity and accuracy when tracking, especially with fast and large movements.
+The <strong><c>getCoalescedEvents()</c></strong> method of the <see cref="PointerEvent."/> interface returns a sequence of <c>PointerEvent</c> instances that were coalesced (merged) into a single <see cref="'Element/pointermove_event'."/> or <see cref="'Element/pointerrawupdate_event'."/> event.<br/>Instead of a stream of many <see cref="'Element/pointermove_event'."/> events, user agents coalesce multiple updates into a single event.<br/>This helps with performance as the user agent has less event handling to perform, but there is a reduction in the granularity and accuracy when tracking, especially with fast and large movements.
 </summary>
 <remarks>
 <para>The <strong><c>getCoalescedEvents()</c></strong> method lets applications access all un-coalesced position changes for precise handling of pointer movement data where necessary.<br/>Un-coalesced position changes are desirable in drawing applications, for instance, where having access to all events helps to build smoother curves that better match the movement of a pointer.</para><para>For an illustration of coalesced events, see <see href="https://w3c.github.io/pointerevents/#figure_coalesced">Figure 7 in the specification</see>.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/getCoalescedEvents"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A sequence of <see cref="'PointerEvent'"/> instances.</returns>
+<returns>A sequence of <see cref="'PointerEvent'."/> instances.</returns>
 </PointerEventGetCoalescedEvents>
 </docs>

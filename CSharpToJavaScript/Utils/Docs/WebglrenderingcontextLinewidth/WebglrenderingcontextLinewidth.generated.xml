@@ -5,7 +5,7 @@ The <strong><c>WebGLRenderingContext.lineWidth()</c></strong> method of the <see
 </summary>
 <remarks>
 <blockquote class="WARNING"><h5>WARNING</h5><para><strong>Warning:</strong> The webgl spec, based on the OpenGL ES 2.0/3.0 specs points out that the minimum and<br/>maximum width for a line is implementation defined. The maximum minimum width is<br/>allowed to be 1.0. The minimum maximum width is also allowed to be 1.0. Because of<br/>these implementation defined limits it is not recommended to use line widths other<br/>than 1.0 since there is no guarantee any user&amp;apos;s browser will display any other width.</para><para>As of January 2017 most implementations of WebGL only support a minimum of 1 and a<br/>maximum of 1 as the technology they are based on has these same limits.</para></blockquote>
-<para>-<see cref="WebGLRenderingContext"/><br/></para>
+<para>-<see cref="WebGLRenderingContext."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/lineWidth"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>

@@ -1,11 +1,11 @@
 <docs>
 <PushSubscriptionExpirationTime>
 <summary>
-The <strong><c>expirationTime</c></strong> read-only property of the<br/><see cref="PushSubscription"/> interface returns a <see cref="DOMHighResTimeStamp"/><br/>of the subscription expiration time associated with the push subscription, if there is<br/>one, or null otherwise.
+The <strong><c>expirationTime</c></strong> read-only property of the<br/><see cref="PushSubscription."/> interface returns a <see cref="DOMHighResTimeStamp."/><br/>of the subscription expiration time associated with the push subscription, if there is<br/>one, or <c>null</c> otherwise.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PushSubscription/expirationTime"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="DOMHighResTimeStamp"/>.</value>
+<value>A <see cref="DOMHighResTimeStamp."/> or <c>null</c>.</value>
 </PushSubscriptionExpirationTime>
 </docs>

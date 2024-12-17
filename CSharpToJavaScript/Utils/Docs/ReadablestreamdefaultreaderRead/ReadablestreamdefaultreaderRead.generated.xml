@@ -1,10 +1,10 @@
 <docs>
 <ReadableStreamDefaultReaderRead>
 <summary>
-The <strong><c>read()</c></strong> method of the <see cref="ReadableStreamDefaultReader"/> interface returns a {{jsxref("Promise")}} providing access to the next chunk in the stream's internal queue.
+The <strong><c>read()</c></strong> method of the <see cref="ReadableStreamDefaultReader."/> interface returns a {{jsxref("Promise")}} providing access to the next chunk in the stream's internal queue.
 </summary>
 <remarks>
-<para>-<see cref="ReadableStreamDefaultReader.ReadableStreamDefaultReader"/> constructor<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_streams">Using readable streams</see><br/></para>
+<para>-<see cref="ReadableStreamDefaultReader.ReadableStreamDefaultReader."/> constructor<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_streams">Using readable streams</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableStreamDefaultReader/read"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>A <see cref="Promise"/>, which fulfills/rejects with a result depending on the state of the stream.<br/>The different possibilities are as follows:</returns>

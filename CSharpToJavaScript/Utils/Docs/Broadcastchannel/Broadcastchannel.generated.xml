@@ -1,11 +1,11 @@
 <docs>
 <BroadcastChannel>
 <summary>
-The <strong><c>BroadcastChannel</c></strong> interface represents a named channel that any {{glossary("browsing context")}} of a given {{glossary("origin")}} can subscribe to. It allows communication between different documents (in different windows, tabs, frames or iframes) of the same origin. Messages are broadcasted via a <see cref="BroadcastChannel/message_event"/> event fired at all <c>BroadcastChannel</c> objects listening to the channel, except the object that sent the message.
+The <strong><c>BroadcastChannel</c></strong> interface represents a named channel that any {{glossary("browsing context")}} of a given {{glossary("origin")}} can subscribe to. It allows communication between different documents (in different windows, tabs, frames or iframes) of the same origin. Messages are broadcasted via a <see cref="BroadcastChannel/message_event."/> event fired at all <c>BroadcastChannel</c> objects listening to the channel, except the object that sent the message.
 </summary>
 <remarks>
-<para>AvailableInWorkers</para><para></para>
-<para>-Another, more heavyweight, way of communicating between browser contexts: <see cref="ServiceWorker"/>.<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Broadcast_Channel_API">Broadcast Channel API overview</see><br/></para>
+<para></para>
+<para>-Another, more heavyweight, way of communicating between browser contexts: <see cref="ServiceWorker."/>.<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Broadcast_Channel_API">Broadcast Channel API overview</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BroadcastChannel"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </BroadcastChannel>

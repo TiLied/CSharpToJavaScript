@@ -1,10 +1,10 @@
 <docs>
 <KeyboardEventInitKeyEvent>
 <summary>
-<blockquote class="WARNING"><h5>WARNING</h5><strong>Warning:</strong> Do NOT use this method; Use the <see cref="KeyboardEvent.KeyboardEvent"/> constructor instead!</blockquote>
+<blockquote class="WARNING"><h5>WARNING</h5><strong>Warning:</strong> Do NOT use this method; Use the <see cref="KeyboardEvent.KeyboardEvent."/> constructor instead!</blockquote>
 </summary>
 <remarks>
-<para>The method has been removed from the DOM specification and is not supported by any current browser.<br/>Firefox hides this method behind the preference (<c>dom.keyboardevent.init_key_event.enabled</c>) from version 93 and plans to remove it shortly afterwards.</para><para><div class="IMPORTANT"><strong>Deprecated</strong></div></para><para>The <strong><c>KeyboardEvent.initKeyEvent()</c></strong> method is used to<br/>initialize the value of an event created using<br/><see cref="Document.CreateEvent"/> <c>(&amp;quot;KeyboardEvent&amp;quot;)</c>. Events initialized in<br/>this way must have been created with the<br/><see cref="Document.CreateEvent"/> <c>(&amp;quot;KeyboardEvent&amp;quot;)</c> method.<br/><c>initKeyEvent()</c> must be called to set the event before it is <see href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/dispatchEvent">dispatched</see>.</para>
+<para>The method has been removed from the DOM specification and is not supported by any current browser.<br/>Firefox hides this method behind the preference (<c>dom.keyboardevent.init_key_event.enabled</c>) from version 93 and plans to remove it shortly afterwards.</para><para><div class="IMPORTANT"><strong>Deprecated</strong></div></para><para>The <strong><c>KeyboardEvent.initKeyEvent()</c></strong> method is used to<br/>initialize the value of an event created using<br/><see cref="Document.CreateEvent."/> <c>(&amp;quot;KeyboardEvent&amp;quot;)</c>. Events initialized in<br/>this way must have been created with the<br/><see cref="Document.CreateEvent."/> <c>(&amp;quot;KeyboardEvent&amp;quot;)</c> method.<br/><c>initKeyEvent()</c> must be called to set the event before it is <see href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/dispatchEvent">dispatched</see>.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/initKeyEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>

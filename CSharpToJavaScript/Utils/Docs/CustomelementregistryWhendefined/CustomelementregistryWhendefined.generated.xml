@@ -1,11 +1,11 @@
 <docs>
 <CustomElementRegistryWhenDefined>
 <summary>
-The <strong><c>whenDefined()</c></strong> method of the<br/><see cref="CustomElementRegistry"/> interface returns a {{jsxref("Promise")}} that<br/>resolves when the named element is defined.
+The <strong><c>whenDefined()</c></strong> method of the<br/><see cref="CustomElementRegistry."/> interface returns a {{jsxref("Promise")}} that<br/>resolves when the named element is defined.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CustomElementRegistry/whenDefined"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A <see cref="Promise"/> that fulfills with the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements">custom element</see>&amp;apos;s constructor when a custom element becomes defined with the given name. If a custom element has already been defined with the name, the promise will immediately fulfill.The promise is rejected with a <c>SyntaxError</c> <see cref="DOMException"/> if the name is not a <see href="https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name">valid custom element name</see>.</returns>
+<returns>A <see cref="Promise"/> that fulfills with the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements">custom element</see>&amp;apos;s constructor when a custom element becomes defined with the given name. If a custom element has already been defined with the name, the promise will immediately fulfill.The promise is rejected with a <c>SyntaxError</c> <see cref="DOMException."/> if the name is not a <see href="https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name">valid custom element name</see>.</returns>
 </CustomElementRegistryWhenDefined>
 </docs>

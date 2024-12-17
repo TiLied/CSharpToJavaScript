@@ -1,13 +1,13 @@
 <docs>
 <DocumentElementsFromPoint>
 <summary>
-The <strong><c>elementsFromPoint()</c></strong> method<br/>of the <see cref="Document"/> interface returns an array of all elements<br/>at the specified coordinates (relative to the viewport).<br/>The elements are ordered from the topmost to the bottommost box of the viewport.
+The <strong><c>elementsFromPoint()</c></strong> method<br/>of the <see cref="Document."/> interface returns an array of all elements<br/>at the specified coordinates (relative to the viewport).<br/>The elements are ordered from the topmost to the bottommost box of the viewport.
 </summary>
 <remarks>
-<para>It operates in a similar way to the {{domxref(&amp;quot;Document.elementFromPoint&amp;quot;,<br/>&amp;quot;elementFromPoint()&amp;quot;)}} method.</para>
-<para>-<see cref="Document.ElementFromPoint"/><br/></para>
+<para>It operates in a similar way to the <see cref="Document.ElementFromPoint."/> method.</para>
+<para>-<see cref="Document.ElementFromPoint."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/elementsFromPoint"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>An array of <see cref="'Element'"/> objects, ordered from the topmost to the bottommost box of the viewport.</returns>
+<returns>An array of <see cref="'Element'."/> objects, ordered from the topmost to the bottommost box of the viewport.</returns>
 </DocumentElementsFromPoint>
 </docs>

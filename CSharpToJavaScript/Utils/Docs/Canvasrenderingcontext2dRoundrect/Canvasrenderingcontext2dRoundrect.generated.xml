@@ -4,8 +4,8 @@
 The <strong><c>CanvasRenderingContext2D.roundRect()</c></strong> method of the Canvas 2D API adds a rounded rectangle to the current path.
 </summary>
 <remarks>
-<para>The radii of the corners can be specified in much the same way as the CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius"><c>border-radius</c></see> property.</para><para>Like other methods that modify the current path, this method does not directly render anything.<br/>To draw the rounded rectangle onto a canvas, you can use the <see cref="CanvasRenderingContext2D.Fill"/> or <see cref="CanvasRenderingContext2D.Stroke"/> methods.</para>
-<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.Rect"/><br/>-<see cref="CanvasRenderingContext2D.FillRect"/><br/>-<see cref="CanvasRenderingContext2D.StrokeRect"/><br/>-<see cref="CanvasRenderingContext2D.Fill"/><br/>-<see cref="CanvasRenderingContext2D.Stroke"/><br/></para>
+<para>The radii of the corners can be specified in much the same way as the CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius"><c>border-radius</c></see> property.</para><para>Like other methods that modify the current path, this method does not directly render anything.<br/>To draw the rounded rectangle onto a canvas, you can use the <see cref="CanvasRenderingContext2D.Fill."/> or <see cref="CanvasRenderingContext2D.Stroke."/> methods.</para>
+<para>-The interface defining this method: <see cref="CanvasRenderingContext2D."/><br/>-<see cref="CanvasRenderingContext2D.Rect."/><br/>-<see cref="CanvasRenderingContext2D.FillRect."/><br/>-<see cref="CanvasRenderingContext2D.StrokeRect."/><br/>-<see cref="CanvasRenderingContext2D.Fill."/><br/>-<see cref="CanvasRenderingContext2D.Stroke."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/roundRect"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>

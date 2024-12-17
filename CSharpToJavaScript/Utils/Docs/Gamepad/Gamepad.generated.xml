@@ -4,7 +4,7 @@
 The <strong><c>Gamepad</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API">Gamepad API</see> defines an individual gamepad or other controller, allowing access to information such as button presses, axis positions, and id.
 </summary>
 <remarks>
-<para>A Gamepad object can be returned in one of two ways: via the <c>gamepad</c> property of the <see cref="Window.Gamepadconnected_event"/> and <see cref="Window.Gamepaddisconnected_event"/> events, or by grabbing any position in the array returned by the <see cref="Navigator.GetGamepads"/> method.</para>
+<para>A Gamepad object can be returned in one of two ways: via the <c>gamepad</c> property of the <see cref="Window.Gamepadconnected_event."/> and <see cref="Window.Gamepaddisconnected_event."/> events, or by grabbing any position in the array returned by the <see cref="Navigator.GetGamepads."/> method.</para>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API">Using the Gamepad API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API">Gamepad API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad"> <em>See also on MDN</em> </seealso></para>
 </remarks>

@@ -4,7 +4,7 @@
 The <strong><c>measureUserAgentSpecificMemory()</c></strong> method is used to estimate the memory usage of a web application including all its iframes and workers.
 </summary>
 <remarks>
-<para>-<see cref="SetTimeout"/><br/>-<see href="https://web.dev/monitor-total-page-memory-usage/">Monitor your web page&amp;apos;s total memory usage with measureUserAgentSpecificMemory() - web.dev</see><br/></para>
+<para>-<see cref="SetTimeout."/><br/>-<see href="https://web.dev/articles/monitor-total-page-memory-usage">Monitor your web page&amp;apos;s total memory usage with measureUserAgentSpecificMemory() - web.dev</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Performance/measureUserAgentSpecificMemory"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>A <see cref="Promise"/> that resolves to an object containing the following properties:An example return value looks like this:</returns>

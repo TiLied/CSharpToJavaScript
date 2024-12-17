@@ -1,11 +1,13 @@
 <docs>
 <KeyboardLayoutMapEntries>
 <summary>
-The <strong><c>entries</c></strong> read-only property<br/>of the <see cref="KeyboardLayoutMap"/> interface returns an array of a given object's<br/>own enumerable property <c>[key, value]</c> pairs, in the same order as that<br/>provided by a <see cref="Statements/forIn"/> loop (the difference being<br/>that a for-in loop enumerates properties in the prototype chain as well).
+The <strong><c>entries()</c></strong> method of the <see cref="KeyboardLayoutMap."/> interface returns a new <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator">Iterator</see> object that contains the key/value pairs, in the same order as that provided by a <see cref="Statements/forIn"/> loop (the difference being that a <c>for-in</c> loop enumerates properties in the prototype chain as well).
 </summary>
 <remarks>
+<para>The method is otherwise the same as <see cref="MapPrototypeEntries"/>.</para>
+<para>-<see cref="MapPrototypeEntries"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardLayoutMap/entries"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An array of the given <c>KeyboardLayoutMap</c> object&amp;apos;s own enumerable property<br/><c>[key, value]</c> pairs.</value>
+<value>A new <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator">Iterator</see> object.</value>
 </KeyboardLayoutMapEntries>
 </docs>

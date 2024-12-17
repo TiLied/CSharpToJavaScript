@@ -1,0 +1,12 @@
+<docs>
+<SharedStorageWorklet>
+<summary>
+The <strong><c>SharedStorageWorklet</c></strong> interface of the {{domxref(&amp;quot;Shared Storage API&amp;quot;, &amp;quot;Shared Storage API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} represents the shared storage worklet for the current origin.
+</summary>
+<remarks>
+<para><c>SharedStorageWorklet</c> does not have its own properties or methods. Rather, it inherits the <see cref="Worklet.AddModule."/> method from the <see cref="Worklet."/> interface. This method is used for adding a module.</para><para>Unlike a regular <see cref="Worklet."/>:</para><para><c>SharedStorageWorklet</c> is accessed via <see cref="WindowSharedStorage.Worklet."/>.</para><para></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Shared_Storage_API">Shared Storage API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SharedStorageWorklet"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</SharedStorageWorklet>
+</docs>

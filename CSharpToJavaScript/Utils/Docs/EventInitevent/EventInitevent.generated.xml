@@ -1,11 +1,11 @@
 <docs>
 <EventInitEvent>
 <summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>Event.initEvent()</c></strong> method is used to initialize the<br/>value of an <see cref="Event"/> created using <see cref="Document.CreateEvent"/>.
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>Event.initEvent()</c></strong> method is used to initialize the<br/>value of an <see cref="Event."/> created using <see cref="Document.CreateEvent."/>.
 </summary>
 <remarks>
-<para>Events initialized in this way must have been created with the<br/><see cref="Document.CreateEvent"/> method.<br/>This method must be called to set the event<br/>before it is dispatched, using <see cref="EventTarget.DispatchEvent"/>.<br/>Once dispatched, it doesn&amp;apos;t do anything anymore.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> <strong>Do not use this method anymore as it is deprecated.</strong><br/>Instead use specific event constructors, like <see cref="Event.Event"/>.<br/>The page on <see href="https://developer.mozilla.org/en-US/docs/Web/Events/Creating_and_triggering_events">Creating and triggering events</see> gives more information about the way to use these.</para></blockquote>
-<para>-The constructor to use instead of this deprecated method:<br/><see cref="Event.Event"/>. To create more specific event interfaces than <c>Event</c>, use the constructor defined for the desired event interface.<br/></para>
+<para>Events initialized in this way must have been created with the<br/><see cref="Document.CreateEvent."/> method.<br/>This method must be called to set the event<br/>before it is dispatched, using <see cref="EventTarget.DispatchEvent."/>.<br/>Once dispatched, it doesn&amp;apos;t do anything anymore.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> <strong>Do not use this method anymore as it is deprecated.</strong><br/>Instead use specific event constructors, like <see cref="Event.Event."/>.<br/>The page on <see href="https://developer.mozilla.org/en-US/docs/Web/Events/Creating_and_triggering_events">Creating and triggering events</see> gives more information about the way to use these.</para></blockquote>
+<para>-The constructor to use instead of this deprecated method:<br/><see cref="Event.Event."/>. To create more specific event interfaces than <c>Event</c>, use the constructor defined for the desired event interface.<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Event/initEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None.</returns>

@@ -1,12 +1,12 @@
 <docs>
 <EventType>
 <summary>
-The <strong><c>type</c></strong> read-only property of the <see cref="Event"/><br/>interface returns a string containing the event&amp;apos;s type. It is set when the event is<br/>constructed and is the name commonly used to refer to the specific event, such as<br/><c>click</c>, <c>load</c>, or <c>error</c>.
+The <strong><c>type</c></strong> read-only property of the <see cref="Event."/><br/>interface returns a string containing the event&amp;apos;s type. It is set when the event is<br/>constructed and is the name commonly used to refer to the specific event, such as<br/><c>click</c>, <c>load</c>, or <c>error</c>.
 </summary>
 <remarks>
-<para>-<see cref="EventTarget.AddEventListener"/><br/>-<see cref="EventTarget.RemoveEventListener"/><br/></para>
+<para>-<see cref="EventTarget.AddEventListener."/><br/>-<see cref="EventTarget.RemoveEventListener."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Event/type"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string containing the type of <see cref="Event"/>.</value>
+<value>A string containing the type of <see cref="Event."/>.</value>
 </EventType>
 </docs>

@@ -1,11 +1,11 @@
 <docs>
 <MediaTrackSettingsSuppressLocalAudioPlayback>
 <summary>
-The <see cref="MediaTrackSettings"/> dictionary's <strong><c>suppressLocalAudioPlayback</c></strong> property controls whether the audio playing in a tab will continue to be played out of a user&amp;apos;s local speakers when the tab is captured.
+The <see cref="MediaTrackSettings."/> dictionary's <strong><c>suppressLocalAudioPlayback</c></strong> property controls whether the audio playing in a tab will continue to be played out of a user&amp;apos;s local speakers when the tab is captured.
 </summary>
 <remarks>
 <para>For example, in cases where you broadcast a video call to an external AV system in a conference room, you will want the audio to play out of the AV system, and not the local speakers. This way, the audio will be louder and clearer, and also in sync with the conference video.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Screen_Capture_API">Screen Capture API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture">Using the screen capture API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints">Capabilities, constraints, and settings</see><br/>-<see cref="MediaDevices.GetDisplayMedia"/><br/>-<see cref="MediaStreamTrack.GetConstraints"/><br/>-<see cref="MediaStreamTrack.ApplyConstraints"/><br/>-<see cref="MediaStreamTrack.GetSettings"/><br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Screen_Capture_API">Screen Capture API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture">Using the screen capture API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints">Capabilities, constraints, and settings</see><br/>-<see cref="MediaDevices.GetDisplayMedia."/><br/>-<see cref="MediaStreamTrack.GetConstraints."/><br/>-<see cref="MediaStreamTrack.ApplyConstraints."/><br/>-<see cref="MediaStreamTrack.GetSettings."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/suppressLocalAudioPlayback"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>The value of <c>suppressLocalAudioPlayback</c> is a boolean — <c>true</c> enables local audio playback suppression, and <c>false</c> disables it.</value>

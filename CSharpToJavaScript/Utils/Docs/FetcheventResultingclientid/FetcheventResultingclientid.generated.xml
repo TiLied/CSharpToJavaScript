@@ -1,11 +1,11 @@
 <docs>
 <FetchEventResultingClientId>
 <summary>
-The <strong><c>resultingClientId</c></strong> read-only property of the<br/><see cref="FetchEvent"/> interface is the <see cref="Client.Id"/> of the<br/><see cref="Client"/> that replaces the previous client during a page<br/>navigation.
+The <strong><c>resultingClientId</c></strong> read-only property of the<br/><see cref="FetchEvent."/> interface is the <see cref="Client.Id."/> of the<br/><see cref="Client."/> that replaces the previous client during a page<br/>navigation.
 </summary>
 <remarks>
 <para>For example, when navigating from page A to page B <c>resultingClientId</c> is<br/>the ID of the client associated with page B.</para><para>If the fetch request is a subresource request or the request&amp;apos;s<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/Request/destination"><c>destination</c></see> is<br/><c>report</c>, <c>resultingClientId</c> will be an empty string.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</see><br/>-<see href="https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker">Service workers basic code example</see><br/>-<see href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</see><br/>-<see cref="Promise"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web workers</see><br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</see><br/>-<see href="https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker">Service workers basic code example</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web workers</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FetchEvent/resultingClientId"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A string.</value>

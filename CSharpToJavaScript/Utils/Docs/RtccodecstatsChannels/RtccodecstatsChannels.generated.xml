@@ -1,0 +1,13 @@
+<docs>
+<RTCCodecStatsChannels>
+<summary>
+The <strong><c>channels</c></strong> property of the <see cref="RTCCodecStats."/> dictionary is a positive number containing the number of channels supported by the codec.
+</summary>
+<remarks>
+<para>For audio codecs, a value of 1 specifies monaural sound while 2 indicates stereo.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpCodecParameters#channels"><c>RTCRtpCodecParameters.channels</c></see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCCodecStats/channels"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A positive number indicating the number of channels.</value>
+</RTCCodecStatsChannels>
+</docs>

@@ -1,10 +1,10 @@
 <docs>
 <TaskSignalPriority>
 <summary>
-The read-only <strong><c>priority</c></strong> property of the <see cref="TaskSignal"/> interface indicates the signal <see href="https://developer.mozilla.org/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#task_priorities">priority</see>.
+The read-only <strong><c>priority</c></strong> property of the <see cref="TaskSignal."/> interface indicates the signal <see href="https://developer.mozilla.org/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#task_priorities">priority</see>.
 </summary>
 <remarks>
-<para>The initial value is set in the associated <see cref="TaskController"/> by specifying it as an argument to the <see href="https://developer.mozilla.org/en-US/docs/Web/API/TaskController/TaskController"><c>TaskController</c> constructor</see> (by default it is <c>&amp;quot;user-visible&amp;quot;</c>).<br/>The priority of the signal can be changed by calling <see cref="TaskController.SetPriority"/> on the associated controller.</para><para>For <see href="https://developer.mozilla.org/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#mutable_and_immutable_task_priority">tasks with a mutable priority</see>, this value is used to set the initial task priority and later to change it.<br/>Tasks with an immutable priority will ignore the value.</para>
+<para>The initial value is set in the associated <see cref="TaskController."/> by specifying it as an argument to the <see href="https://developer.mozilla.org/en-US/docs/Web/API/TaskController/TaskController"><c>TaskController</c> constructor</see> (by default it is <c>&amp;quot;user-visible&amp;quot;</c>).<br/>The priority of the signal can be changed by calling <see cref="TaskController.SetPriority."/> on the associated controller.</para><para>For <see href="https://developer.mozilla.org/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#mutable_and_immutable_task_priority">tasks with a mutable priority</see>, this value is used to set the initial task priority and later to change it.<br/>Tasks with an immutable priority will ignore the value.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TaskSignal/priority"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A string indicating the signal <see href="https://developer.mozilla.org/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#task_priorities">priority</see>.<br/>This will be one of: <c>&amp;quot;user-blocking&amp;quot;</c>, <c>&amp;quot;user-visible&amp;quot;</c>, <c>&amp;quot;background&amp;quot;</c>.</value>

@@ -1,11 +1,11 @@
 <docs>
 <BatteryManager>
 <summary>
-The <c>BatteryManager</c> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Battery_Status_API">Battery Status API</see> provides information about the system's battery charge level. The <see cref="Navigator.GetBattery"/> method returns a promise that resolves with a <c>BatteryManager</c> interface.
+The <strong><c>BatteryManager</c></strong> interface of the {{domxref(&amp;quot;Battery Status API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, "nocode")}} provides information about the system's battery charge level. The <see cref="Navigator.GetBattery."/> method returns a promise that resolves with a <c>BatteryManager</c> interface.
 </summary>
 <remarks>
-<para></para>
-<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/Battery_Status_API">Battery Status API</see><br/>-<see cref="Navigator.GetBattery"/><br/></para>
+<para>Since Chrome 103, the <c>BatteryManager</c> interface of {{domxref(&amp;quot;Battery Status API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} only expose to secure context.</para><para></para>
+<para>-The {{domxref(&amp;quot;Battery Status API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see cref="Navigator.GetBattery."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BatteryManager"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </BatteryManager>

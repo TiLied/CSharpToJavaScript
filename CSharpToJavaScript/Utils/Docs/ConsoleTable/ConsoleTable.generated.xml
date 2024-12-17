@@ -1,10 +1,11 @@
 <docs>
 <ConsoleTable>
 <summary>
-The <strong><c>console.table()</c></strong> method displays tabular data as a table.
+The <strong><c>console.table()</c></strong> static method displays tabular data as a table.
 </summary>
 <remarks>
-<para>This function takes one mandatory argument <c>data</c>, which must be an array or<br/>an object, and one additional optional parameter <c>columns</c>.</para><para>It logs <c>data</c> as a table. Each element in the array (or enumerable property<br/>if <c>data</c> is an object) will be a row in the table.</para><para>The first column in the table will be labeled <c>(index)</c>. If<br/><c>data</c> is an array, then its values will be the array indices. If<br/><c>data</c> is an object, then its values will be the property names. Note that<br/>(in Firefox) <c>console.table</c> is limited to displaying 1000 rows (first row is<br/>the labeled index).</para><para>AvailableInWorkers</para>
+<para>This function takes one mandatory argument <c>data</c>, which must be an array or an object, and one additional optional parameter <c>columns</c>.</para><para>It logs <c>data</c> as a table. Each element in the array (or enumerable property if <c>data</c> is an object) will be a row in the table.</para><para>The first column in the table will be labeled <c>(index)</c>. If <c>data</c> is an array, then its values will be the array indices. If <c>data</c> is an object, then its values will be the property names. Note that (in Firefox) <c>console.table</c> is limited to displaying 1000 rows (first row is the labeled index).</para>
+<para>-<see href="https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api#table">Microsoft Edge&amp;apos;s documentation for <c>console.table()</c></see><br/>-<see href="https://nodejs.org/docs/latest/api/console.html#consoletabletabulardata-properties">Node.JS documentation for <c>console.table()</c></see><br/>-<see href="https://developer.chrome.com/docs/devtools/console/api/#table">Google Chrome&amp;apos;s documentation for <c>console.table()</c></see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/console/table"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>

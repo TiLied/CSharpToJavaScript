@@ -1,13 +1,13 @@
 <docs>
 <BaseAudioContextCreateBuffer>
 <summary>
-The <c>createBuffer()</c> method of the <see cref="BaseAudioContext"/><br/>Interface is used to create a new, empty <see cref="AudioBuffer"/> object, which<br/>can then be populated by data, and played via an {{ domxref(&amp;quot;AudioBufferSourceNode&amp;quot;)<br/>}}
+The <c>createBuffer()</c> method of the <see cref="BaseAudioContext."/><br/>Interface is used to create a new, empty <see cref="AudioBuffer."/> object, which<br/>can then be populated by data, and played via an <see cref="AudioBufferSourceNode."/>.
 </summary>
 <remarks>
-<para>For more details about audio buffers, check out the <see cref="AudioBuffer"/><br/>reference page.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> <c>createBuffer()</c> used to be able to take compressed<br/>data and give back decoded samples, but this ability was removed from the specification,<br/>because all the decoding was done on the main thread, so<br/><c>createBuffer()</c> was blocking other code execution. The asynchronous method<br/><c>decodeAudioData()</c> does the same thing — takes compressed audio, such as an<br/>MP3 file, and directly gives you back an <see cref="AudioBuffer"/> that you can<br/>then play via an <see cref="AudioBufferSourceNode"/>. For simple use cases<br/>like playing an MP3, <c>decodeAudioData()</c> is what you should be using.</para></blockquote>
+<para>For more details about audio buffers, check out the <see cref="AudioBuffer."/><br/>reference page.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> <c>createBuffer()</c> used to be able to take compressed<br/>data and give back decoded samples, but this ability was removed from the specification,<br/>because all the decoding was done on the main thread, so<br/><c>createBuffer()</c> was blocking other code execution. The asynchronous method<br/><c>decodeAudioData()</c> does the same thing — takes compressed audio, such as an<br/>MP3 file, and directly gives you back an <see cref="AudioBuffer."/> that you can<br/>then play via an <see cref="AudioBufferSourceNode."/>. For simple use cases<br/>like playing an MP3, <c>decodeAudioData()</c> is what you should be using.</para></blockquote>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createBuffer"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>An <see cref="AudioBuffer"/> configured based on the specified options.</returns>
+<returns>An <see cref="AudioBuffer."/> configured based on the specified options.</returns>
 </BaseAudioContextCreateBuffer>
 </docs>

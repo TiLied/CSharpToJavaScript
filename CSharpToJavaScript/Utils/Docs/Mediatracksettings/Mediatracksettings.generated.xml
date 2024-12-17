@@ -1,11 +1,11 @@
 <docs>
 <MediaTrackSettings>
 <summary>
-The <strong><c>MediaTrackSettings</c></strong> dictionary is used to return the current values configured for each of a <see cref="MediaStreamTrack"/>'s settings. These values will adhere as closely as possible to any constraints previously described using a <see cref="MediaTrackConstraints"/> object and set using <see cref="MediaStreamTrack.ApplyConstraints"/>, and will adhere to the default constraints for any properties whose constraints haven't been changed, or whose customized constraints couldn't be matched.
+The <strong><c>MediaTrackSettings</c></strong> dictionary is used to return the current values configured for each of a <see cref="MediaStreamTrack."/>'s settings. These values will adhere as closely as possible to any constraints previously described using a <see cref="MediaTrackConstraints."/> object and set using <see cref="MediaStreamTrack.ApplyConstraints."/>, and will adhere to the default constraints for any properties whose constraints haven't been changed, or whose customized constraints couldn't be matched.
 </summary>
 <remarks>
 <para>To learn more about how constraints and settings work, see <see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints">Capabilities, constraints, and settings</see>.</para>
-<para>-<see cref="MediaDevices.GetUserMedia"/><br/>-<see cref="MediaDevices.GetDisplayMedia"/><br/>-<see cref="MediaStreamTrack.GetConstraints"/><br/>-<see cref="MediaStreamTrack.ApplyConstraints"/><br/>-<see cref="MediaStreamTrack.GetSettings"/><br/></para>
+<para>-<see cref="MediaDevices.GetUserMedia."/><br/>-<see cref="MediaDevices.GetDisplayMedia."/><br/>-<see cref="MediaStreamTrack.GetConstraints."/><br/>-<see cref="MediaStreamTrack.ApplyConstraints."/><br/>-<see cref="MediaStreamTrack.GetSettings."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </MediaTrackSettings>

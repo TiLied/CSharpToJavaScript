@@ -1,13 +1,13 @@
 <docs>
 <TreeWalkerFilter>
 <summary>
-The <strong><c>TreeWalker.filter</c></strong> read-only property returns a<br/><see cref="NodeFilter"/> that is the filtering object associated with the<br/><see cref="TreeWalker"/>.
+The <strong><c>TreeWalker.filter</c></strong> read-only property returns a<br/><c>NodeFilter</c> that is the filtering object associated with the<br/><see cref="TreeWalker."/>.
 </summary>
 <remarks>
-<para>When creating the <c>TreeWalker</c>, the filter object is passed in as the third<br/>parameter, and its method <see cref="NodeFilter.AcceptNode"/> is called on every<br/>single node to determine whether or not to accept it.</para>
-<para>-The <see cref="TreeWalker"/> interface it belongs to.<br/></para>
+<para>When creating the <c>TreeWalker</c>, the filter object is passed in as the third<br/>parameter, and its method <c>acceptNode()</c> is called on every<br/>single node to determine whether or not to accept it.</para>
+<para>-The <see cref="TreeWalker."/> interface it belongs to.<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker/filter"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="NodeFilter"/> object.</value>
+<value>A <c>NodeFilter</c> object.</value>
 </TreeWalkerFilter>
 </docs>

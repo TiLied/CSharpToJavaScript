@@ -1,11 +1,11 @@
 <docs>
 <FileReaderReadAsBinaryString>
 <summary>
-The <c>readAsBinaryString</c> method is used to start reading the contents of the<br/>specified <see cref="Blob"/> or <see cref="File"/>. When the read operation is<br/>finished, the <see cref="FileReader.ReadyState"/> becomes<br/><c>DONE</c>, and the <see cref="FileReader.Loadend_event"/> is triggered. At that time, the<br/><see cref="FileReader.Result"/> attribute contains the raw binary data from<br/>the file.
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> This method is deprecated in favor of <see cref="FileReader.ReadAsArrayBuffer."/>.</blockquote>
 </summary>
 <remarks>
-<para>Note that this method was once removed from the File API specification, but<br/>re-introduced for backward compatibility.<br/>Using <see cref="FileReader.ReadAsArrayBuffer"/> is recommended.</para>
-<para>-<see cref="FileReader"/><br/></para>
+<para>The <strong><c>readAsBinaryString</c></strong> method of the <see cref="FileReader."/> interface is used to start reading the contents of the<br/>specified <see cref="Blob."/> or <see cref="File."/>. When the read operation is<br/>finished, the <see cref="FileReader.ReadyState."/> becomes<br/><c>DONE</c>, and the <see cref="FileReader.Loadend_event."/> is triggered. At that time, the<br/><see cref="FileReader.Result."/> attribute contains the raw binary data from<br/>the file.</para><para>Note that this method was once removed from the File API specification, but<br/>re-introduced for backward compatibility.<br/>Using <see cref="FileReader.ReadAsArrayBuffer."/> is recommended.</para>
+<para>-<see cref="FileReader."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileReader/readAsBinaryString"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>

@@ -1,11 +1,11 @@
 <docs>
 <IDBIndexMultiEntry>
 <summary>
-The <strong><c>multiEntry</c></strong> read-only property of the<br/><see cref="IDBIndex"/> interface returns a boolean value that affects how the index<br/>behaves when the result of evaluating the index&amp;apos;s key path yields an array.
+The <strong><c>multiEntry</c></strong> read-only property of the<br/><see cref="IDBIndex."/> interface returns a boolean value that affects how the index<br/>behaves when the result of evaluating the index&amp;apos;s key path yields an array.
 </summary>
 <remarks>
-<para>This is decided when the index is created, using the<br/><see cref="IDBObjectStore.CreateIndex"/> method. This method takes an optional<br/><c>options</c> parameter whose <c>multiEntry</c> property is set to <c>true</c>/<c>false</c>.</para><para>AvailableInWorkers</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase"/><br/>-Using transactions: <see cref="IDBTransaction"/><br/>-Setting a range of keys: <see cref="IDBKeyRange"/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore"/><br/>-Using cursors: <see cref="IDBCursor"/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
+<para>This is decided when the index is created, using the<br/><see cref="IDBObjectStore.CreateIndex."/> method. This method takes an optional<br/><c>options</c> parameter whose <c>multiEntry</c> property is set to <c>true</c>/<c>false</c>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase."/><br/>-Using transactions: <see cref="IDBTransaction."/><br/>-Setting a range of keys: <see cref="IDBKeyRange."/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore."/><br/>-Using cursors: <see cref="IDBCursor."/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBIndex/multiEntry"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A boolean value:<table><tr><td>Value</td><td>Effect</td></tr><tr><td>true</td><td>There is one record in the index for each item in an array of keys.</td></tr><tr><td>false</td><td>There is one record for each key that is an array.</td></tr></table></value>

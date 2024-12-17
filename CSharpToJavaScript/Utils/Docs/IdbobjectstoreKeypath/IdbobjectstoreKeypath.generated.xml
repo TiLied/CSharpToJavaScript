@@ -1,11 +1,11 @@
 <docs>
 <IDBObjectStoreKeyPath>
 <summary>
-The <strong><c>keyPath</c></strong> read-only property of the<br/><see cref="IDBObjectStore"/> interface returns the <see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_path">key path</see> of this object store.
+The <strong><c>keyPath</c></strong> read-only property of the<br/><see cref="IDBObjectStore."/> interface returns the <see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_path">key path</see> of this object store.
 </summary>
 <remarks>
-<para>If this property is null, the application must provide a key for each modification<br/>operation.</para><para>AvailableInWorkers</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase"/><br/>-Using transactions: <see cref="IDBTransaction"/><br/>-Setting a range of keys: <see cref="IDBKeyRange"/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore"/><br/>-Using cursors: <see cref="IDBCursor"/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
+<para>If this property is null, the application must provide a key for each modification<br/>operation.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase."/><br/>-Using transactions: <see cref="IDBTransaction."/><br/>-Setting a range of keys: <see cref="IDBKeyRange."/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore."/><br/>-Using cursors: <see cref="IDBCursor."/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/keyPath"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>Any value type.</value>

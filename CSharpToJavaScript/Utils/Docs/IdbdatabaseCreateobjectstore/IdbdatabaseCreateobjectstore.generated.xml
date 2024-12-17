@@ -1,13 +1,13 @@
 <docs>
 <IDBDatabaseCreateObjectStore>
 <summary>
-The <strong><c>createObjectStore()</c></strong> method of the<br/><see cref="IDBDatabase"/> interface creates and returns a new <see cref="IDBObjectStore"/>.
+The <strong><c>createObjectStore()</c></strong> method of the<br/><see cref="IDBDatabase."/> interface creates and returns a new <see cref="IDBObjectStore."/>.
 </summary>
 <remarks>
-<para>The method takes the name of the store as well as a parameter object that lets you<br/>define important optional properties. You can use the property to uniquely identify<br/>individual objects in the store. As the property is an identifier, it should be unique<br/>to every object, and every object should have that property.</para><para>This method can be called <strong>only</strong> within a <see href="https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction#version_change"><c>versionchange</c></see><br/>transaction.</para><para>AvailableInWorkers</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase"/><br/>-Using transactions: <see cref="IDBTransaction"/><br/>-Setting a range of keys: <see cref="IDBKeyRange"/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore"/><br/>-Using cursors: <see cref="IDBCursor"/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
+<para>The method takes the name of the store as well as a parameter object that lets you<br/>define important optional properties. You can use the property to uniquely identify<br/>individual objects in the store. As the property is an identifier, it should be unique<br/>to every object, and every object should have that property.</para><para>This method can be called <strong>only</strong> within a <see href="https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction#version_change"><c>versionchange</c></see><br/>transaction.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase."/><br/>-Using transactions: <see cref="IDBTransaction."/><br/>-Setting a range of keys: <see cref="IDBKeyRange."/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore."/><br/>-Using cursors: <see cref="IDBCursor."/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/createObjectStore"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A new <see cref="IDBObjectStore"/>.</returns>
+<returns>A new <see cref="IDBObjectStore."/>.</returns>
 </IDBDatabaseCreateObjectStore>
 </docs>

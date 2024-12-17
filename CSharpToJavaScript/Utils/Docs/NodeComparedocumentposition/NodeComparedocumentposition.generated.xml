@@ -1,12 +1,12 @@
 <docs>
 <NodeCompareDocumentPosition>
 <summary>
-The <strong><c>compareDocumentPosition()</c></strong> method of the <see cref="Node"/> interface<br/>reports the position of its argument node relative to the node on which it is called.
+The <strong><c>compareDocumentPosition()</c></strong> method of the <see cref="Node."/> interface<br/>reports the position of its argument node relative to the node on which it is called.
 </summary>
 <remarks>
-<para>-<see cref="Node.Contains"/><br/></para>
+<para>-<see cref="Node.Contains."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/compareDocumentPosition"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>An integer value representing <c>otherNode</c>&amp;apos;s position relative to <c>node</c><br/>as a <see href="https://en.wikipedia.org/wiki/Mask_(computing)">bitmask</see> combining the<br/>following constant properties of <see cref="Node"/>:More than one bit is set if multiple scenarios apply. For example, if<br/><c>otherNode</c> is located earlier in the document <strong><strong>and</strong></strong><br/>contains the node on which <c>compareDocumentPosition()</c> was<br/>called, then both the <c>DOCUMENT_POSITION_CONTAINS</c> and<br/><c>DOCUMENT_POSITION_PRECEDING</c> bits would be set, producing a value of <c>10</c> (<c>0x0A</c>).</returns>
+<returns>An integer value representing <c>otherNode</c>&amp;apos;s position relative to <c>node</c><br/>as a <see href="https://en.wikipedia.org/wiki/Mask_(computing)">bitmask</see> combining the<br/>following constant properties of <see cref="Node."/>:Zero or more bits can be set, depending on which scenarios apply. For example, if<br/><c>otherNode</c> is located earlier in the document <strong><strong>and</strong></strong><br/>contains the node on which <c>compareDocumentPosition()</c> was<br/>called, then both the <c>DOCUMENT_POSITION_CONTAINS</c> and<br/><c>DOCUMENT_POSITION_PRECEDING</c> bits would be set, producing a value of <c>10</c> (<c>0x0A</c>).</returns>
 </NodeCompareDocumentPosition>
 </docs>

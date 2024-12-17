@@ -1,12 +1,12 @@
 <docs>
 <SensorTimestamp>
 <summary>
-The <strong><c>timestamp</c></strong> read-only property<br/>of the <see cref="Sensor"/> interface returns the timestamp of the latest sensor<br/>reading.
+The <strong><c>timestamp</c></strong> read-only property<br/>of the <see cref="Sensor."/> interface returns the timestamp of the latest sensor<br/>reading.
 </summary>
 <remarks>
-<para>Because <see cref="'Sensor'"/> is a base class, <c>timestamp</c> may only be read<br/>from one of its derived classes.</para>
+<para>Because <see cref="'Sensor'."/> is a base class, <c>timestamp</c> may only be read<br/>from one of its derived classes.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Sensor/timestamp"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="DOMHighResTimeStamp"/>.</value>
+<value>A <see cref="DOMHighResTimeStamp."/>.</value>
 </SensorTimestamp>
 </docs>

@@ -1,11 +1,11 @@
 <docs>
 <SubtleCryptoVerify>
 <summary>
-The <strong><c>verify()</c></strong> method of the <see cref="SubtleCrypto"/><br/>interface verifies a digital <see href="https://developer.mozilla.org/en-US/docs/Glossary/signature">signature</see>.
+The <strong><c>verify()</c></strong> method of the <see cref="SubtleCrypto."/><br/>interface verifies a digital <see href="https://developer.mozilla.org/en-US/docs/Glossary/signature">signature</see>.
 </summary>
 <remarks>
 <para>It takes as its arguments a <see href="https://developer.mozilla.org/en-US/docs/Glossary/key">key</see> to verify the signature with, some<br/>algorithm-specific parameters, the signature, and the original signed data. It returns a<br/><see cref="Promise"/> which will be fulfilled with a boolean value<br/>indicating whether the signature is valid.</para>
-<para>-<see cref="SubtleCrypto.Sign"/>.<br/>-<see href="https://datatracker.ietf.org/doc/html/rfc3447">RFC 3447</see> specifies RSASSA-PKCS1-v1_5.<br/>-<see href="https://datatracker.ietf.org/doc/html/rfc3447">RFC 3447</see> specifies RSA-PSS.<br/>-<see href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf">FIPS-186</see> specifies ECDSA.<br/>-<see href="https://csrc.nist.gov/csrc/media/publications/fips/198/1/final/documents/fips-198-1_final.pdf">FIPS 198-1</see> specifies HMAC.<br/></para>
+<para>-<see cref="SubtleCrypto.Sign."/>.<br/>-<see href="https://datatracker.ietf.org/doc/html/rfc3447">RFC 3447</see> specifies RSASSA-PKCS1-v1_5.<br/>-<see href="https://datatracker.ietf.org/doc/html/rfc3447">RFC 3447</see> specifies RSA-PSS.<br/>-<see href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf">FIPS-186</see> specifies ECDSA.<br/>-<see href="https://csrc.nist.gov/csrc/media/publications/fips/198/1/final/documents/fips-198-1_final.pdf">FIPS 198-1</see> specifies HMAC.<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/verify"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>A <see cref="Promise"/> that fulfills with a<br/>boolean value: <c>true</c> if the signature is valid, <c>false</c><br/>otherwise.</returns>

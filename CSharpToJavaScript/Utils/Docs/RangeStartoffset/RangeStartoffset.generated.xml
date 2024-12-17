@@ -4,7 +4,7 @@
 The <strong><c>Range.startOffset</c></strong> read-only property returns a number<br/>representing where in the <c>startContainer</c> the <c>Range</c> starts.
 </summary>
 <remarks>
-<para>If the <c>startContainer</c> is a <see cref="Node"/> of type<br/><see cref="Text"/>, <see cref="Comment"/>, or <see cref="CDATASection"/>, then the<br/>offset is the number of characters from the start of the <c>startContainer</c> to<br/>the boundary point of the <see cref="Range"/>. For other <see cref="Node"/> types, the<br/><c>startOffset</c> is the number of child nodes between the start of the<br/><c>startContainer</c> and the boundary point of the <see cref="Range"/>.</para><para>To change the <c>startOffset</c> of a <see cref="Range"/>, use the<br/><see cref="Range.SetStart"/> method.</para>
+<para>If the <c>startContainer</c> is a <see cref="Node."/> of type<br/><see cref="Text."/>, <see cref="Comment."/>, or <see cref="CDATASection."/>, then the<br/>offset is the number of characters from the start of the <c>startContainer</c> to<br/>the boundary point of the <see cref="Range."/>. For other <see cref="Node."/> types, the<br/><c>startOffset</c> is the number of child nodes between the start of the<br/><c>startContainer</c> and the boundary point of the <see cref="Range."/>.</para><para>To change the <c>startOffset</c> of a <see cref="Range."/>, use the<br/><see cref="Range.SetStart."/> method.</para>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Range/startOffset"> <em>See also on MDN</em> </seealso></para>
 </remarks>

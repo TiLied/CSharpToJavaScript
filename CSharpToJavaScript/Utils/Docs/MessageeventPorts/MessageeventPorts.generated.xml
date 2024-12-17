@@ -1,12 +1,12 @@
 <docs>
 <MessageEventPorts>
 <summary>
-The <strong><c>ports</c></strong> read-only property of the<br/><see cref="MessageEvent"/> interface is an array of <see cref="MessagePort"/> objects<br/>representing the ports associated with the channel the message is being sent through<br/>(where appropriate, e.g. in channel messaging or when sending a message to a shared<br/>worker).
+The <strong><c>ports</c></strong> read-only property of the<br/><see cref="MessageEvent."/> interface is an array of <see cref="MessagePort."/> objects<br/>representing the ports associated with the channel the message is being sent through<br/>(where appropriate, e.g. in channel messaging or when sending a message to a shared<br/>worker).
 </summary>
 <remarks>
-<para>-<see cref="ExtendableMessageEvent"/> — similar to this interface but used in<br/>interfaces that needs to give more flexibility to authors.<br/></para>
+<para>-<see cref="ExtendableMessageEvent."/> — similar to this interface but used in<br/>interfaces that needs to give more flexibility to authors.<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent/ports"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An array of <see cref="MessagePort"/> objects.</value>
+<value>An array of <see cref="MessagePort."/> objects.</value>
 </MessageEventPorts>
 </docs>

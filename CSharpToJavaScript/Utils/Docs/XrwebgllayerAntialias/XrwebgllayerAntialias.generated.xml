@@ -1,12 +1,12 @@
 <docs>
 <XRWebGLLayerAntialias>
 <summary>
-The read-only <see cref="XRWebGLLayer"/> property<br/><strong><c>antialias</c></strong> is a Boolean value which is <c>true</c><br/>if the rendering layer&amp;apos;s frame buffer supports anti-aliasing. Otherwise, this<br/>property&amp;apos;s value is <c>false</c>. The specific anti-aliasing technique used is left<br/>to the <see href="https://developer.mozilla.org/en-US/docs/Glossary/user agent">user agent</see> discretion and cannot be specified by<br/>the website or web app.
+The read-only <see cref="XRWebGLLayer."/> property<br/><strong><c>antialias</c></strong> is a Boolean value which is <c>true</c><br/>if the rendering layer&amp;apos;s frame buffer supports anti-aliasing. Otherwise, this<br/>property&amp;apos;s value is <c>false</c>. The specific anti-aliasing technique used is left<br/>to the <see href="https://developer.mozilla.org/en-US/docs/Glossary/user agent">user agent</see> discretion and cannot be specified by<br/>the website or web app.
 </summary>
 <remarks>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/antialias"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A Boolean value which is <c>true</c> if the WebGL rendering layer&amp;apos;s frame buffer<br/>is configured to support anti-aliasing. Otherwise, this property is <c>false</c>.When the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Fundamentals#the_webxr_compositor">WebXR compositor</see> is enabled, this value corresponds to the value of the<br/><c>antialias</c> property on the object returned by the WebGL context&amp;apos;s<br/><see cref="WebGLRenderingContext.GetContextAttributes"/><br/>method.</value>
+<value>A Boolean value which is <c>true</c> if the WebGL rendering layer&amp;apos;s frame buffer<br/>is configured to support anti-aliasing. Otherwise, this property is <c>false</c>.When the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Fundamentals#the_webxr_compositor">WebXR compositor</see> is enabled, this value corresponds to the value of the<br/><c>antialias</c> property on the object returned by the WebGL context&amp;apos;s<br/><see cref="WebGLRenderingContext.GetContextAttributes."/><br/>method.</value>
 </XRWebGLLayerAntialias>
 </docs>

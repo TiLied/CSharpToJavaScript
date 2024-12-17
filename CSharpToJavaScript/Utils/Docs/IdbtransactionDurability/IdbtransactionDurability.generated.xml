@@ -1,10 +1,10 @@
 <docs>
 <IDBTransactionDurability>
 <summary>
-The <strong><c>durability</c></strong> read-only property of the<br/><see cref="IDBTransaction"/> interface returns the durability hint the transaction was<br/>created with. This is a hint to the user agent of whether to prioritize performance or<br/>durability when committing the transaction.
+The <strong><c>durability</c></strong> read-only property of the<br/><see cref="IDBTransaction."/> interface returns the durability hint the transaction was<br/>created with. This is a hint to the user agent of whether to prioritize performance or<br/>durability when committing the transaction.
 </summary>
 <remarks>
-<para>The value of this property is defined in the <c>options</c> parameter when creating a transaction using <see cref="IDBDatabase.Transaction"/>.</para>
+<para>The value of this property is defined in the <c>options</c> parameter when creating a transaction using <see cref="IDBDatabase.Transaction."/>.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction/durability"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>Any of the following literal <see cref="'String'"/>:</value>

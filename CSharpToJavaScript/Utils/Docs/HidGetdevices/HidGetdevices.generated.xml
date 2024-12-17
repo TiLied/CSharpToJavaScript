@@ -1,11 +1,11 @@
 <docs>
 <HIDGetDevices>
 <summary>
-The <strong><c>getDevices()</c></strong> method of the <see cref="HID"/> interface gets a list of the connected HID devices that the user has previously been granted access to in response to a <see cref="HID.RequestDevice"/> call.
+The <strong><c>getDevices()</c></strong> method of the <see cref="HID."/> interface gets a list of the connected HID devices that the user has previously been granted access to in response to a <see cref="HID.RequestDevice."/> call.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HID/getDevices"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A {{jsxref("Promise")}} that resolves with a list of <see cref="HIDDevice"/> objects.</returns>
+<returns>A {{jsxref("Promise")}} that resolves with a list of <see cref="HIDDevice."/> objects.</returns>
 </HIDGetDevices>
 </docs>

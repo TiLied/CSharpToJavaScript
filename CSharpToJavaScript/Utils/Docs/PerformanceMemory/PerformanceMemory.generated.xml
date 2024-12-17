@@ -4,8 +4,8 @@
 <div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The non-standard and legacy <c>performance.memory</c> property returns the size of the JavaScript heap which can be helpful to measure and reduce the memory footprint of websites.
 </summary>
 <remarks>
-<para>Note that the information this API provides is unreliable as it might overestimate actual memory usage if web pages share the same heap, or might underestimate actual memory usage if web pages use workers and/or cross-site iframes that are allocated in separate heaps. It is not standardized what &amp;quot;heap&amp;quot; means exactly. The API is only available in Chromium-based browsers.</para><para>A new API aiming to replace <c>performance.memory</c> is <see cref="Performance.MeasureUserAgentSpecificMemory"/>. It tries to estimate the memory used by a web page.</para>
-<para>-<see cref="Performance.MeasureUserAgentSpecificMemory"/><br/></para>
+<para>Note that the information this API provides is unreliable as it might overestimate actual memory usage if web pages share the same heap, or might underestimate actual memory usage if web pages use workers and/or cross-site iframes that are allocated in separate heaps. It is not standardized what &amp;quot;heap&amp;quot; means exactly. The API is only available in Chromium-based browsers.</para><para>A new API aiming to replace <c>performance.memory</c> is <see cref="Performance.MeasureUserAgentSpecificMemory."/>. It tries to estimate the memory used by a web page.</para>
+<para>-<see cref="Performance.MeasureUserAgentSpecificMemory."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Performance/memory"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>The read-only <c>performance.memory</c> property is an object with the following properties:</value>

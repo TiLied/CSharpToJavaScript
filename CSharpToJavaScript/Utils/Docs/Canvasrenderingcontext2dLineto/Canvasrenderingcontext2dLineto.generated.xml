@@ -1,11 +1,11 @@
 <docs>
 <CanvasRenderingContext2DLineTo>
 <summary>
-The <see cref="CanvasRenderingContext2D"/> method<br/><strong><c>lineTo()</c></strong>, part of the Canvas 2D API, adds a straight line<br/>to the current sub-path by connecting the sub-path&amp;apos;s last point to the specified<br/><c>(x, y)</c> coordinates.
+The <see cref="CanvasRenderingContext2D."/> method<br/><strong><c>lineTo()</c></strong>, part of the Canvas 2D API, adds a straight line<br/>to the current sub-path by connecting the sub-path&amp;apos;s last point to the specified<br/><c>(x, y)</c> coordinates.
 </summary>
 <remarks>
-<para>Like other methods that modify the current path, this method does not directly render<br/>anything. To draw the path onto a canvas, you can use the<br/><see cref="CanvasRenderingContext2D.Fill"/> or<br/><see cref="CanvasRenderingContext2D.Stroke"/> methods.</para>
-<para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.MoveTo"/><br/>-<see cref="CanvasRenderingContext2D.Stroke"/><br/></para>
+<para>Like other methods that modify the current path, this method does not directly render<br/>anything. To draw the path onto a canvas, you can use the<br/><see cref="CanvasRenderingContext2D.Fill."/> or<br/><see cref="CanvasRenderingContext2D.Stroke."/> methods.</para>
+<para>-The interface defining this method: <see cref="CanvasRenderingContext2D."/><br/>-<see cref="CanvasRenderingContext2D.MoveTo."/><br/>-<see cref="CanvasRenderingContext2D.Stroke."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineTo"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>

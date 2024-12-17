@@ -1,11 +1,11 @@
 <docs>
 <PaymentAddressToJSON>
 <summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>toJSON()</c></strong> property of the<br/><see cref="PaymentAddress"/> interface is a standard serializer that returns a JSON<br/>representation of the PaymentAddress object&amp;apos;s properties.
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>toJSON()</c></strong> method of the <see cref="PaymentAddress."/> interface is a standard serializer that returns a JSON representation of the PaymentAddress object's properties.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentAddress/toJSON"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A JSON object.</value>
+<returns>A JSON object.</returns>
 </PaymentAddressToJSON>
 </docs>

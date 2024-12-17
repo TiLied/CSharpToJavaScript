@@ -1,12 +1,12 @@
 <docs>
 <HTMLTableElementCreateTBody>
 <summary>
-The <strong><c>createTBody()</c></strong> method of<br/><see cref="HTMLTableElement"/> objects creates and returns a new<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tbody">tbody</see> element associated with a given <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table">table</see>.
+The <strong><c>createTBody()</c></strong> method of<br/><see cref="HTMLTableElement."/> objects creates and returns a new<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tbody">tbody</see> element associated with a given <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table">table</see>.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Unlike <see cref="HTMLTableElement.CreateTHead"/> and<br/><see cref="HTMLTableElement.CreateTFoot"/>, <c>createTBody()</c><br/>systematically creates a new <c>&amp;lt;tbody&amp;gt;</c> element, even if the table<br/>already contains one or more bodies. If so, the new one is inserted after the existing<br/>ones.</para></blockquote>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Unlike <see cref="HTMLTableElement.CreateTHead."/> and<br/><see cref="HTMLTableElement.CreateTFoot."/>, <c>createTBody()</c><br/>systematically creates a new <c>&amp;lt;tbody&amp;gt;</c> element, even if the table<br/>already contains one or more bodies. If so, the new one is inserted after the existing<br/>ones.</para></blockquote>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/createTBody"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns><see cref="HTMLTableSectionElement"/></returns>
+<returns><see cref="HTMLTableSectionElement."/></returns>
 </HTMLTableElementCreateTBody>
 </docs>

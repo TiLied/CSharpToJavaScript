@@ -1,0 +1,12 @@
+<docs>
+<ElementCheckVisibility>
+<summary>
+The <strong><c>checkVisibility()</c></strong> method of the <see cref="Element."/> interface checks whether the element is visible.
+</summary>
+<remarks>
+<para>The method returns <c>false</c> in either of the following situations:</para><para>The optional parameter enables additional checks to test for other interpretations of what &amp;quot;visible&amp;quot; means.<br/>For example, you can further check whether an element has an opacity of <c>0</c>, if the value of the element <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/visibility"><c>visibility</c></see> property makes it invisible, or if the element <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/content-visibility">content-visibility</see> property has a value of <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/content-visibility#auto"><c>auto</c></see> and its rendering is currently being skipped.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/checkVisibility"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns><c>false</c> if any of the following conditions are met, otherwise <c>true</c>:</returns>
+</ElementCheckVisibility>
+</docs>

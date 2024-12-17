@@ -1,7 +1,7 @@
 <docs>
 <WaveShaperNodeOversample>
 <summary>
-The <c>oversample</c> property of the <see cref="WaveShaperNode"/> interface is an enumerated value indicating if oversampling must be used. Oversampling is a technique for creating more samples (up-sampling) before applying a distortion effect to the audio signal.
+The <c>oversample</c> property of the <see cref="WaveShaperNode."/> interface is an enumerated value indicating if oversampling must be used. Oversampling is a technique for creating more samples (up-sampling) before applying a distortion effect to the audio signal.
 </summary>
 <remarks>
 <para>Once applied, the number of samples is reduced to its initial numbers. This leads to better results by avoiding some aliasing, but comes at the expense of a lower precision shaping curve.</para><para>The possible <c>oversample</c> values are:</para><table><tr><td><para>Value</para></td><td><para>Effect</para></td></tr><tr><td><para><c>&amp;apos;none&amp;apos;</c></para></td><td><para>Do not perform any oversampling.</para></td></tr><tr><td><para><c>&amp;apos;2x&amp;apos;</c></para></td><td><para>Double the amount of samples before applying the shaping curve.</para></td></tr><tr><td><para><c>&amp;apos;4x&amp;apos;</c></para></td><td><para>Multiply by 4 the amount of samples before applying the shaping curve.</para></td></tr></table>

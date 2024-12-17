@@ -1,0 +1,12 @@
+<docs>
+<WindowOriginAgentCluster>
+<summary>
+The <strong><c>originAgentCluster</c></strong> read-only property of the <see cref="Window."/> interface returns <c>true</c> if this window belongs to an <strong>origin-keyed </strong><strong><see href="https://tc39.es/ecma262/#sec-agent-clusters">agent cluster</see></strong>: this means that the operating system has provided dedicated resources (for example an operating system process) to this window&amp;apos;s origin that are not shared with windows from other origins.
+</summary>
+<remarks>
+<para>Otherwise this property returns <c>false</c>.</para><para>Windows that are part of an origin-keyed agent cluster are subjects to some additional restrictions, compared with windows that are not. In particular, they cannot:</para><para>To request that the browser assign this window to an origin-keyed agent cluster, the server must send the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Origin-Agent-Cluster">Origin-Agent-Cluster</see> response header.</para><para>Note that the origin-keyed agent cluster feature is only supported in <see href="https://developer.mozilla.org/en-US/docs/Glossary/Secure Context">Secure Context</see>. If a site is not a secure context, the <c>window.originAgentCluster</c> will always return <c>false</c>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Origin-Agent-Cluster">Origin-Agent-Cluster</see> HTTP response header<br/>-<see href="https://web.dev/articles/origin-agent-cluster">Requesting performance isolation with the Origin-Agent-Cluster header</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Window/originAgentCluster"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WindowOriginAgentCluster>
+</docs>

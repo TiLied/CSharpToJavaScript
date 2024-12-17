@@ -1,10 +1,10 @@
 <docs>
 <ElementHasAttributes>
 <summary>
-The <strong><c>hasAttributes()</c></strong> method of the <see cref="Element"/><br/>interface returns a boolean value indicating whether the current element has any<br/>attributes or not.
+The <strong><c>hasAttributes()</c></strong> method of the <see cref="Element."/><br/>interface returns a boolean value indicating whether the current element has any<br/>attributes or not.
 </summary>
 <remarks>
-<para>-<see cref="Element.Attributes"/><br/>-<see cref="Element.HasAttribute"/><br/></para>
+<para>-<see cref="Element.Attributes."/><br/>-<see cref="Element.HasAttribute."/><br/>-<see cref="Element.GetAttribute."/><br/>-<see cref="Element.SetAttribute."/><br/>-<see cref="Element.RemoveAttribute."/><br/>-<see cref="Element.ToggleAttribute."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/hasAttributes"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>A boolean.</returns>

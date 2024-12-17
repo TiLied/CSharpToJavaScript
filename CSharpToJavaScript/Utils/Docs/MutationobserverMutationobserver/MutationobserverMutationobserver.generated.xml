@@ -1,12 +1,12 @@
 <docs>
 <MutationObserverMutationObserver>
 <summary>
-The DOM <strong><c>MutationObserver()</c></strong><br/>constructor — part of the <see cref="MutationObserver"/> interface — creates and<br/>returns a new observer which invokes a specified callback when DOM events<br/>occur.
+The DOM <strong><c>MutationObserver()</c></strong><br/>constructor — part of the <see cref="MutationObserver."/> interface — creates and<br/>returns a new observer which invokes a specified callback when DOM events<br/>occur.
 </summary>
 <remarks>
-<para>DOM observation does not begin immediately; the<br/><see cref="MutationObserver.Observe"/> method must be called first to<br/>establish which portion of the DOM to watch and what kinds of changes to watch for.</para>
+<para>DOM observation does not begin immediately; the<br/><see cref="MutationObserver.Observe."/> method must be called first to<br/>establish which portion of the DOM to watch and what kinds of changes to watch for.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver/MutationObserver"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A new <see cref="MutationObserver"/> object, configured to call the specified<br/><c>callback</c> when DOM mutations occur.</returns>
+<returns>A new <see cref="MutationObserver."/> object, configured to call the specified<br/><c>callback</c> when DOM mutations occur.</returns>
 </MutationObserverMutationObserver>
 </docs>

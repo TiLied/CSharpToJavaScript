@@ -1,12 +1,12 @@
 <docs>
 <NavigatorClipboard>
 <summary>
-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API">Clipboard API</see> adds to the <strong><see cref="Navigator"/></strong> interface the<br/>read-only <strong><c>clipboard</c></strong> property, which returns the<br/><see cref="Clipboard"/> object used to read and write the clipboard's<br/>contents.
+The <strong><c>clipboard</c></strong> read-only property of the <see cref="Navigator."/> interface returns a <see cref="Clipboard."/> object used to read and write the clipboard's contents.
 </summary>
 <remarks>
-<para>The Clipboard API can be used to implement cut, copy, and paste<br/>features within a web application.</para><para>Use of the asynchronous clipboard read and write methods requires that the user grant<br/>the website or app permission to access the clipboard. This permission must be obtained<br/>from the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Permissions_API">Permissions API</see> using the<br/><c>&amp;quot;clipboard-read&amp;quot;</c> and/or <c>&amp;quot;clipboard-write&amp;quot;</c> permissions.</para>
+<para>This is the entry point to the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API">Clipboard API</see>, which can be used to implement cut, copy, and paste features within a web application.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/clipboard"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>The <see cref="Clipboard"/> object used to access the system clipboard.</value>
+<value>The <see cref="Clipboard."/> object used to access the system clipboard.</value>
 </NavigatorClipboard>
 </docs>

@@ -1,11 +1,11 @@
 <docs>
 <USBRequestDevice>
 <summary>
-The <strong><c>requestDevice()</c></strong> method of the <see cref="USB"/><br/>interface returns a <see cref="Promise"/> that resolves with an instance of<br/><see cref="USBDevice"/> if the specified device is found. Calling this function<br/>triggers the user agent&amp;apos;s pairing flow.
+The <strong><c>requestDevice()</c></strong> method of the <see cref="USB."/><br/>interface returns a <see cref="Promise"/> that resolves with an instance of<br/><see cref="USBDevice."/> if the specified device is found. Calling this function<br/>triggers the user agent&amp;apos;s pairing flow.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/USB/requestDevice"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A {{JSxRef("Promise")}} that resolves with an instance of <see cref="USBDevice"/>.</returns>
+<returns>A {{JSxRef("Promise")}} that resolves with an instance of <see cref="USBDevice."/>.</returns>
 </USBRequestDevice>
 </docs>

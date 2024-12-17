@@ -1,12 +1,12 @@
 <docs>
 <RTCIceCandidateStatsRelayProtocol>
 <summary>
-The <see cref="RTCIceCandidateStats"/> dictionary's<br/><strong><c>relayProtocol</c></strong> property specifies the protocol being used<br/>by a local <see href="https://developer.mozilla.org/en-US/docs/Glossary/ICE">ICE</see> candidate to communicate with the <see href="https://developer.mozilla.org/en-US/docs/Glossary/TURN">TURN</see><br/>server.
+The <see cref="RTCIceCandidateStats."/> dictionary's<br/><strong><c>relayProtocol</c></strong> property specifies the protocol being used<br/>by a local <see href="https://developer.mozilla.org/en-US/docs/Glossary/ICE">ICE</see> candidate to communicate with the <see href="https://developer.mozilla.org/en-US/docs/Glossary/TURN">TURN</see><br/>server.
 </summary>
 <remarks>
-<para>The ICE protocol being used by the candidate otherwise can be obtained from the<br/><see cref="RTCIceCandidateStats.Protocol"/> property.</para>
+<para>The ICE protocol being used by the candidate otherwise can be obtained from the<br/><see cref="RTCIceCandidateStats.Protocol."/> property.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/relayProtocol"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string identifying the protocol being used by the endpoint to<br/>communicate with the TURN server. The possible values are:<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> This property is only present on<br/><see cref="RTCIceCandidateStats"/> objects that represent local candidates.</blockquote></value>
+<value>A string identifying the protocol being used by the endpoint to<br/>communicate with the TURN server. The possible values are:<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> This property is only present on<br/><see cref="RTCIceCandidateStats."/> objects that represent local candidates.</blockquote></value>
 </RTCIceCandidateStatsRelayProtocol>
 </docs>

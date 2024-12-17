@@ -1,13 +1,13 @@
 <docs>
 <RTCIceCandidateTcpType>
 <summary>
-The <strong><see cref="RTCIceCandidate"/></strong> interface&amp;apos;s read-only <strong><c>tcpType</c></strong> property is included on TCP candidates to provide additional details about the candidate type.
+The <strong><see cref="RTCIceCandidate."/></strong> interface&amp;apos;s read-only <strong><c>tcpType</c></strong> property is included on TCP candidates to provide additional details about the candidate type.
 </summary>
 <remarks>
-<para>The <c>tcpType</c> field&amp;apos;s value is set from the <c>candidateInfo</c> options object passed to the <see cref="RTCIceCandidate.RTCIceCandidate"/> constructor.<br/>You can&amp;apos;t specify the value of <c>tcpType</c> directly in the options object, but its value is automatically extracted from the object&amp;apos;s <c>candidate</c> a-line, if it&amp;apos;s formatted properly.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Protocols">Introduction to WebRTC protocols</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Connectivity">WebRTC connectivity</see><br/>-<see cref="RTCIceCandidate.Protocol"/><br/>-<see cref="RTCIceCandidate.Type"/><br/></para>
+<para>The <c>tcpType</c> field&amp;apos;s value is set from the <c>candidateInfo</c> options object passed to the <see cref="RTCIceCandidate.RTCIceCandidate."/> constructor.<br/>You can&amp;apos;t specify the value of <c>tcpType</c> directly in the options object, but its value is automatically extracted from the object&amp;apos;s <c>candidate</c> a-line, if it&amp;apos;s formatted properly.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Protocols">Introduction to WebRTC protocols</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Connectivity">WebRTC connectivity</see><br/>-<see cref="RTCIceCandidate.Protocol."/><br/>-<see cref="RTCIceCandidate.Type."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/tcpType"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>If the <see cref="RTCIceCandidate.Protocol"/> is "tcp", <c>tcpType</c> has one of the following values:<c>tcpType</c> is <c>null</c> for <see href="https://developer.mozilla.org/en-US/docs/Glossary/UDP">UDP</see> candidates.</value>
+<value>If the <see cref="RTCIceCandidate.Protocol."/> is "tcp", <c>tcpType</c> has one of the following values:<c>tcpType</c> is <c>null</c> for <see href="https://developer.mozilla.org/en-US/docs/Glossary/UDP">UDP</see> candidates.</value>
 </RTCIceCandidateTcpType>
 </docs>

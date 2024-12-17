@@ -1,11 +1,11 @@
 <docs>
 <AudioContext>
 <summary>
-The <c>AudioContext</c> interface represents an audio-processing graph built from audio modules linked together, each represented by an <see cref="AudioNode"/>.
+The <c>AudioContext</c> interface represents an audio-processing graph built from audio modules linked together, each represented by an <see cref="AudioNode."/>.
 </summary>
 <remarks>
 <para>An audio context controls both the creation of the nodes it contains and the execution of the audio processing, or decoding. You need to create an <c>AudioContext</c> before you do anything else, as everything happens inside a context. It&amp;apos;s recommended to create one AudioContext and reuse it instead of initializing a new one each time, and it&amp;apos;s OK to use a single <c>AudioContext</c> for several different audio sources and pipeline concurrently.</para><para></para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/>-<see cref="OfflineAudioContext"/><br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/>-<see cref="OfflineAudioContext."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContext"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </AudioContext>

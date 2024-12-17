@@ -1,11 +1,11 @@
 <docs>
 <WorkerLocation>
 <summary>
-The <strong><c>WorkerLocation</c></strong> interface defines the absolute location of the script executed by the <see cref="Worker"/>. Such an object is initialized for each worker and is available via the <see cref="WorkerGlobalScope.Location"/> property obtained by calling <c>self.location</c>.
+The <strong><c>WorkerLocation</c></strong> interface defines the absolute location of the script executed by the <see cref="Worker."/>. Such an object is initialized for each worker and is available via the <see cref="WorkerGlobalScope.Location."/> property obtained by calling <c>self.location</c>.
 </summary>
 <remarks>
 <para>This interface is only visible from inside a JavaScript script executed in the context of a Web worker.</para>
-<para>-Other Worker-related interfaces: <see cref="Worker"/>, <see cref="WorkerNavigator"/>, and <see cref="WorkerGlobalScope"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web workers</see><br/></para>
+<para>-Other Worker-related interfaces: <see cref="Worker."/>, <see cref="WorkerNavigator."/>, and <see cref="WorkerGlobalScope."/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web workers</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerLocation"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </WorkerLocation>

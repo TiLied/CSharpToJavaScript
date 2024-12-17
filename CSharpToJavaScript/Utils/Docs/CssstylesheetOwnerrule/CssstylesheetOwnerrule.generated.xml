@@ -1,12 +1,12 @@
 <docs>
 <CSSStyleSheetOwnerRule>
 <summary>
-The read-only <see cref="CSSStyleSheet"/> property<br/><strong><c>ownerRule</c></strong> returns the <see cref="CSSImportRule"/><br/>corresponding to the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@import">@import</see> at-rule which imported the stylesheet into<br/>the document. If the stylesheet wasn&amp;apos;t imported into the document using<br/><c>_import</c>, the returned value is <c>null</c>.
+The read-only <see cref="CSSStyleSheet."/> property<br/><strong><c>ownerRule</c></strong> returns the <see cref="CSSImportRule."/><br/>corresponding to the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@import">@import</see> at-rule which imported the stylesheet into<br/>the document. If the stylesheet wasn&amp;apos;t imported into the document using<br/><c>_import</c>, the returned value is <c>null</c>.
 </summary>
 <remarks>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model">CSS Object Model</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information">Using dynamic styling information</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleSheet/ownerRule"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="CSSImportRule"/> corresponding to the {{cssxref("@import")}} rule which<br/>imported the stylesheet into the document. If the stylesheet wasn&amp;apos;t imported into the<br/>document using <c>_import</c>, the returned value is <c>null</c>.</value>
+<value>A <see cref="CSSImportRule."/> corresponding to the {{cssxref("@import")}} rule which<br/>imported the stylesheet into the document. If the stylesheet wasn&amp;apos;t imported into the<br/>document using <c>_import</c>, the returned value is <c>null</c>.</value>
 </CSSStyleSheetOwnerRule>
 </docs>

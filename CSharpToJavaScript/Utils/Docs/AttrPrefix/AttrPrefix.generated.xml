@@ -1,11 +1,11 @@
 <docs>
 <AttrPrefix>
 <summary>
-The read-only <strong><c>prefix</c></strong> property of the <see cref="Attr"/> returns the namespace prefix of the attribute, or <c>null</c> if no prefix is specified.
+The read-only <strong><c>prefix</c></strong> property of the <see cref="Attr."/> returns the namespace prefix of the attribute, or <c>null</c> if no prefix is specified.
 </summary>
 <remarks>
 <para>The prefix is always in lower case, whatever case is used at the attribute creation.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Only XML supports namespaces. HTML does not. That means that the prefix of an attribute of an HTML element will always be <c>null</c>.</para></blockquote><para>Also, only the <c>xml</c> (for the <c>xml:lang</c> attribute), <c>xlink</c> (for the <c>xlink:href</c>, <c>xlink:show</c>, <c>xlink:target</c> and <c>xlink:title</c> attributes) and <c>xpath</c> namespaces are supported, and only on SVG and MathML elements.</para>
-<para>-The properties <see cref="Attr.Name"/>, returning the qualified name of the attribute, and <see cref="Attr.LocalName"/>, its local name.<br/>-The <see cref="Element.Prefix"/> property, returning the namespace prefix of an <see cref="Element"/>.<br/></para>
+<para>-The properties <see cref="Attr.Name."/>, returning the qualified name of the attribute, and <see cref="Attr.LocalName."/>, its local name.<br/>-The <see cref="Element.Prefix."/> property, returning the namespace prefix of an <see cref="Element."/>.<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Attr/prefix"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A string containing the prefix of the namespace the attribute belongs too. If none, it returns <c>null</c>.</value>

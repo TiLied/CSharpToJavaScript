@@ -1,11 +1,11 @@
 <docs>
 <ServiceWorkerGlobalScopeSkipWaiting>
 <summary>
-The <strong><c>ServiceWorkerGlobalScope.skipWaiting()</c></strong> method of the <see cref="ServiceWorkerGlobalScope"/> forces the waiting service worker to become the active service worker.
+The <strong><c>ServiceWorkerGlobalScope.skipWaiting()</c></strong> method of the <see cref="ServiceWorkerGlobalScope."/> forces the waiting service worker to become the active service worker.
 </summary>
 <remarks>
-<para>Use this method with <see cref="Clients.Claim"/> to ensure that updates to the underlying service worker take effect immediately for both the current client and all other active clients.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</see><br/>-<see href="https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker">Service workers basic code example</see><br/>-<see href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</see><br/>-<see cref="Clients.Claim"/><br/>-<see cref="Promise"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web workers</see><br/></para>
+<para>Use this method with <see cref="Clients.Claim."/> to ensure that updates to the underlying service worker take effect immediately for both the current client and all other active clients.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</see><br/>-<see href="https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker">Service workers basic code example</see><br/>-<see cref="Clients.Claim."/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web workers</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerGlobalScope/skipWaiting"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>A <see cref="Promise"/> that resolves with <c>undefined</c> after trying to activate the newly installed service worker.</returns>

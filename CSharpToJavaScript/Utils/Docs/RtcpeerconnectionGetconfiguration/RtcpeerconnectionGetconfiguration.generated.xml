@@ -1,13 +1,13 @@
 <docs>
 <RTCPeerConnectionGetConfiguration>
 <summary>
-The <strong><c>RTCPeerConnection.getConfiguration()</c></strong> method returns<br/>an object which indicates the current configuration of<br/>the <see cref="RTCPeerConnection"/> on which the method is called.
+The <strong><c>getConfiguration()</c></strong> method of the <see cref="RTCPeerConnection."/> interface returns an object which indicates the current configuration of the <see cref="RTCPeerConnection."/> on which the method is called.
 </summary>
 <remarks>
-<para>The returned configuration is the last configuration applied via<br/><see cref="RTCPeerConnection.SetConfiguration"/>, or if<br/><c>setConfiguration()</c> hasn&amp;apos;t been called, the configuration the<br/><c>RTCPeerConnection</c> was constructed with. The configuration includes a list<br/>of the ICE servers used by the connection, information about transport policies, and<br/>identity information.</para>
-<para>-<see cref="RTCPeerConnection.SetConfiguration"/><br/>-<see cref="RTCPeerConnection.RTCPeerConnection"/><br/>-<see cref="RTCPeerConnection"/><br/></para>
+<para>The returned configuration is the last configuration applied via <see cref="RTCPeerConnection.SetConfiguration."/>, or if<br/><c>setConfiguration()</c> hasn&amp;apos;t been called, the configuration the <c>RTCPeerConnection</c> was constructed with.<br/>The configuration includes a list of the ICE servers used by the connection, information about transport policies, and identity information.</para>
+<para>-<see cref="RTCPeerConnection.SetConfiguration."/><br/>-<see cref="RTCPeerConnection.RTCPeerConnection."/><br/>-<see cref="RTCPeerConnection."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/getConfiguration"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>An object describing the <see cref="RTCPeerConnection"/>'s current configuration. See <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/RTCPeerConnection#parameters"><c>RTCPeerConnection()</c></see> for more information on what options are allowed.</returns>
+<returns>An object describing the <see cref="RTCPeerConnection."/>'s current configuration.<br/>See <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/RTCPeerConnection#parameters"><c>RTCPeerConnection()</c></see> for more information on what options are allowed.</returns>
 </RTCPeerConnectionGetConfiguration>
 </docs>

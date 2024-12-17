@@ -1,11 +1,11 @@
 <docs>
 <RTCSctpTransportMaxChannels>
 <summary>
-The <strong><c>maxChannels</c></strong> read-only property of the <see cref="RTCSctpTransport"/> interface indicates the maximum number of <see cref="RTCDataChannel"/> objects that can be opened simultaneously.
+The <strong><c>maxChannels</c></strong> read-only property of the <see cref="RTCSctpTransport."/> interface indicates the maximum number of <see cref="RTCDataChannel."/> objects that can be opened simultaneously.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCSctpTransport/maxChannels"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An integer value indicating the maximum number of <see cref="RTCDataChannel"/> objects that can be opened simultaneously, or <c>null</c> before the SCTP transport goes into the &amp;quot;connected&amp;quot; <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCSctpTransport/state">state</see>.</value>
+<value>An integer value indicating the maximum number of <see cref="RTCDataChannel."/> objects that can be opened simultaneously, or <c>null</c> before the SCTP transport goes into the &amp;quot;connected&amp;quot; <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCSctpTransport/state">state</see>.</value>
 </RTCSctpTransportMaxChannels>
 </docs>

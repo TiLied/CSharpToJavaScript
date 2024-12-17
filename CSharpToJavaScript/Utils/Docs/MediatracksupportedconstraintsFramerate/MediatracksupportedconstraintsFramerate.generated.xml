@@ -1,11 +1,11 @@
 <docs>
 <MediaTrackSupportedConstraintsFrameRate>
 <summary>
-The <see cref="MediaTrackSupportedConstraints"/> dictionary's <strong><c>frameRate</c></strong> property is a read-only Boolean value which is<br/>present (and set to <c>true</c>) in the object returned by <see cref="MediaDevices.GetSupportedConstraints"/> if and only if the {{Glossary("user agent")}} supports the <see cref="MediaTrackConstraints.FrameRate"/> constraint.
+The <see cref="MediaTrackSupportedConstraints."/> dictionary's <strong><c>frameRate</c></strong> property is a read-only Boolean value which is<br/>present (and set to <c>true</c>) in the object returned by <see cref="MediaDevices.GetSupportedConstraints."/> if and only if the {{Glossary("user agent")}} supports the <see cref="MediaTrackConstraints.FrameRate."/> constraint.
 </summary>
 <remarks>
 <para>If the constraint isn&amp;apos;t supported, it&amp;apos;s not included in the list, so this value will never be <c>false</c>.</para><para>The <c>frameRate</c> constraint can be used to establish acceptable upper and lower bounds on the video frame rate for a new video track, or to specify an exact frame rate that must be provided for the request to succeed.<br/>Checking the value of this property lets you determine if the user agent allows constraining the video track configuration by frame rate. See the <see href="https://developer.mozilla.org#examples">example</see> to see how this can be used.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API">Media Capture and Streams API</see><br/>-<see cref="MediaDevices.GetSupportedConstraints"/><br/>-<see cref="MediaTrackSupportedConstraints"/><br/>-<see cref="MediaStreamTrack"/><br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API">Media Capture and Streams API</see><br/>-<see cref="MediaDevices.GetSupportedConstraints."/><br/>-<see cref="MediaTrackSupportedConstraints."/><br/>-<see cref="MediaStreamTrack."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/frameRate"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>This property is present in the dictionary if the user agent supports the <c>frameRate</c> constraint.<br/>If the property isn&amp;apos;t present, the user agent doesn&amp;apos;t allow specifying limits on the frame rate for video tracks.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> If this property is present, its value is always <c>true</c>.</blockquote></value>

@@ -1,13 +1,13 @@
 <docs>
 <PerformanceGetEntries>
 <summary>
-The <strong><c>getEntries()</c></strong> method returns an array of all <see cref="PerformanceEntry"/> objects currently present in the performance timeline.
+The <strong><c>getEntries()</c></strong> method returns an array of all <see cref="PerformanceEntry."/> objects currently present in the performance timeline.
 </summary>
 <remarks>
-<para>If you are only interested in performance entries of certain types or that have certain names, see <see cref="Performance.GetEntriesByType"/> and <see cref="Performance.GetEntriesByName"/>.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This method does not notify you about new performance entries; you will only get entries that are present in the performance timeline at the time you call this method.<br/>To receive notifications about entries as they become available, use a <see cref="PerformanceObserver"/>.</para></blockquote><para>The following entry types are not supported by this method at all and won&amp;apos;t be returned even if entries for these types might exist:</para><para>To access entries of these types, you must use a <see cref="PerformanceObserver"/> instead.</para>
-<para>-<see cref="Performance.GetEntriesByType"/><br/>-<see cref="Performance.GetEntriesByName"/><br/></para>
+<para>If you are only interested in performance entries of certain types or that have certain names, see <see cref="Performance.GetEntriesByType."/> and <see cref="Performance.GetEntriesByName."/>.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This method does not notify you about new performance entries; you will only get entries that are present in the performance timeline at the time you call this method.<br/>To receive notifications about entries as they become available, use a <see cref="PerformanceObserver."/>.</para></blockquote><para>The following entry types are not supported by this method at all and won&amp;apos;t be returned even if entries for these types might exist:</para><para>To access entries of these types, you must use a <see cref="PerformanceObserver."/> instead.</para>
+<para>-<see cref="Performance.GetEntriesByType."/><br/>-<see cref="Performance.GetEntriesByName."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Performance/getEntries"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>An {{jsxref("Array")}} of <see cref="PerformanceEntry"/> objects. The items will be in chronological order based on the entries' <see cref="PerformanceEntry.StartTime"/>.</returns>
+<returns>An {{jsxref("Array")}} of <see cref="PerformanceEntry."/> objects. The items will be in chronological order based on the entries' <see cref="PerformanceEntry.StartTime."/>.</returns>
 </PerformanceGetEntries>
 </docs>

@@ -1,10 +1,10 @@
 <docs>
 <HeadersAppend>
 <summary>
-The <strong><c>append()</c></strong> method of the <see cref="Headers"/><br/>interface appends a new value onto an existing header inside a <c>Headers</c><br/>object, or adds the header if it does not already exist.
+The <strong><c>append()</c></strong> method of the <see cref="Headers."/><br/>interface appends a new value onto an existing header inside a <c>Headers</c><br/>object, or adds the header if it does not already exist.
 </summary>
 <remarks>
-<para>The difference between <see cref="Headers.Set"/> and <c>append()</c> is<br/>that if the specified header already exists and accepts multiple values,<br/><c>set()</c> will overwrite the existing value with the new one, whereas<br/><c>append()</c> will append the new value onto the end of the set of values.</para><para>For security reasons, some headers can only be controlled by the user agent. These<br/>headers include the <see href="https://developer.mozilla.org/en-US/docs/Glossary/Forbidden_header_name">Forbidden_header_name</see><br/>and <see href="https://developer.mozilla.org/en-US/docs/Glossary/Forbidden_response_header_name">Forbidden_response_header_name</see>.</para>
+<para>The difference between <see cref="Headers.Set."/> and <c>append()</c> is<br/>that if the specified header already exists and accepts multiple values,<br/><c>set()</c> will overwrite the existing value with the new one, whereas<br/><c>append()</c> will append the new value onto the end of the set of values.</para><para>For security reasons, some headers can only be controlled by the user agent. These<br/>headers include the <see href="https://developer.mozilla.org/en-US/docs/Glossary/Forbidden_header_name">Forbidden_header_name</see><br/>and <see href="https://developer.mozilla.org/en-US/docs/Glossary/Forbidden_response_header_name">Forbidden_response_header_name</see>.</para>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Headers/append"> <em>See also on MDN</em> </seealso></para>
 </remarks>

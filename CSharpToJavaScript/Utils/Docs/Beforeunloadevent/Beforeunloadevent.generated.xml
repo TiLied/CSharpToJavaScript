@@ -1,11 +1,11 @@
 <docs>
 <BeforeUnloadEvent>
 <summary>
-<strong><c>BeforeUnloadEvent</c></strong> is an interface for the <see cref="Window/beforeunload_event"/> event.
+The <strong><c>BeforeUnloadEvent</c></strong> interface represents the event object for the <see cref="Window/beforeunload_event."/> event, which is fired when the current window, contained document, and associated resources are about to be unloaded.
 </summary>
 <remarks>
-<para>The <c>beforeunload</c> event is fired when the window, the document and its resources are about to be unloaded.</para><para>When a non-empty string is assigned to the <c>returnValue</c> Event property, a dialog box appears, asking the users for confirmation to leave the page (see example below). When no value is provided, the event is processed silently. Some implementations only show the dialog box if the frame or any embedded frame receives a user gesture or user interaction. See <see href="https://developer.mozilla.org#browser_compatibility">Browser compatibility</see> for more information.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> For security reasons, only a generic string not under the control of the webpage is shown instead of the returned string.</para></blockquote><para></para>
-<para>-<see cref="Document/DOMContentLoaded_event"/><br/>-<see cref="Document/readystatechange_event"/><br/>-<see cref="Window/load_event"/><br/>-<see cref="Window/beforeunload_event"/><br/>-<see cref="Window/unload_event"/><br/>-<see href="https://html.spec.whatwg.org/multipage/browsing-the-web.html#prompt-to-unload-a-document">Unloading Documents — Prompt to unload a document</see><br/></para>
+<para>See the <see cref="Window/beforeunload_event."/> event reference for detailed guidance on using this event.</para><para></para>
+<para>-<see cref="Window/beforeunload_event."/> event<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeUnloadEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </BeforeUnloadEvent>

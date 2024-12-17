@@ -1,10 +1,10 @@
 <docs>
 <HIDDeviceOpen>
 <summary>
-The <strong><c>open()</c></strong> method of the <see cref="HIDDevice"/> interface requests that the operating system opens the HID device.
+The <strong><c>open()</c></strong> method of the <see cref="HIDDevice."/> interface requests that the operating system opens the HID device.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> HID devices are not opened automatically. Therefore, a <see cref="HIDDevice"/> returned by <see cref="HID.RequestDevice"/> must be opened with this method before it is available to transfer data.</para></blockquote>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> HID devices are not opened automatically. Therefore, a <see cref="HIDDevice."/> returned by <see cref="HID.RequestDevice."/> must be opened with this method before it is available to transfer data.</para></blockquote>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HIDDevice/open"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>A <see cref="Promise"/> that resolves with <c>undefined</c> once the connection is opened.</returns>

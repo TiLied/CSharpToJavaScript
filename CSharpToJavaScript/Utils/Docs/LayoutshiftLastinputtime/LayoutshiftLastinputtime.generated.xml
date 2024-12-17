@@ -1,13 +1,13 @@
 <docs>
 <LayoutShiftLastInputTime>
 <summary>
-The <strong><c>lastInputTime</c></strong> read-only property of the <see cref="LayoutShift"/> interface returns the time of the most recent excluding input or <c>0</c> if no excluding input has occurred.
+The <strong><c>lastInputTime</c></strong> read-only property of the <see cref="LayoutShift."/> interface returns the time of the most recent excluding input or <c>0</c> if no excluding input has occurred.
 </summary>
 <remarks>
-<para>Layout shifts are only bad if the user wasn&amp;apos;t expecting them. Many layout shift metrics (like <see href="https://web.dev/cls/">Cumulative Layout Shift (CLS)</see>) exclude shifts that occurred soon after certain user interactions. These interactions are called <strong>excluding inputs</strong>. Excluding inputs are:</para><para>The <see href="https://developer.mozilla.org/en-US/docs/Web/API/Element/mousemove_event"><c>mousemove</c></see> and <see href="https://developer.mozilla.org/en-US/docs/Web/API/Element/pointermove_event"><c>pointermove</c></see> events are <strong>not</strong> excluding inputs.</para>
-<para>-<see cref="LayoutShift.HadRecentInput"/><br/></para>
+<para>Layout shifts are only bad if the user wasn&amp;apos;t expecting them. Many layout shift metrics (like <see href="https://web.dev/articles/cls">Cumulative Layout Shift (CLS)</see>) exclude shifts that occurred soon after certain user interactions. These interactions are called <strong>excluding inputs</strong>. Excluding inputs are:</para><para>The <see href="https://developer.mozilla.org/en-US/docs/Web/API/Element/mousemove_event"><c>mousemove</c></see> and <see href="https://developer.mozilla.org/en-US/docs/Web/API/Element/pointermove_event"><c>pointermove</c></see> events are <strong>not</strong> excluding inputs.</para>
+<para>-<see cref="LayoutShift.HadRecentInput."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/LayoutShift/lastInputTime"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="DOMHighResTimeStamp"/> indicating the most recent excluding input time or <c>0</c> if no excluding input has occurred.</value>
+<value>A <see cref="DOMHighResTimeStamp."/> indicating the most recent excluding input time or <c>0</c> if no excluding input has occurred.</value>
 </LayoutShiftLastInputTime>
 </docs>

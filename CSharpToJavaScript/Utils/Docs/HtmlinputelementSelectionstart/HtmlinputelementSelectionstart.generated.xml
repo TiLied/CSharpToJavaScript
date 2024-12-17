@@ -1,0 +1,13 @@
+<docs>
+<HTMLInputElementSelectionStart>
+<summary>
+The <strong><c>selectionStart</c></strong> property of the <see cref="HTMLInputElement."/> interface is a number that represents the beginning index of the selected text. When nothing is selected, then returns the position of the text input cursor (caret) inside of the <c>&amp;lt;input&amp;gt;</c> element.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> According to the <see href="https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply">WHATWG forms spec</see> <c>selectionStart</c> property applies only to inputs of types text, search, URL, tel, and password. In modern browsers, throws an exception while setting <c>selectionStart</c> property on the rest of input types. Additionally, this property returns <c>null</c> while accessing <c>selectionStart</c> property on non-text input elements.</para></blockquote><para>If <c>selectionStart</c> is greater than <c>selectionEnd</c>, then both are<br/>treated as the value of <c>selectionEnd</c>.</para>
+<para>-<see cref="HTMLTextAreaElement.SelectionStart."/> property<br/>-<see cref="HTMLInputElement.SelectionEnd."/> property<br/>-<see cref="HTMLInputElement.SetSelectionRange."/> method<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/selectionStart"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A non-negative number.</value>
+</HTMLInputElementSelectionStart>
+</docs>

@@ -1,7 +1,7 @@
 <docs>
 <RTCRtpSenderReplaceTrack>
 <summary>
-The <see cref="RTCRtpSender"/> method<br/><strong><c>replaceTrack()</c></strong> replaces the track currently being used<br/>as the sender's source with a new <see cref="MediaStreamTrack"/>.
+The <see cref="RTCRtpSender."/> method<br/><strong><c>replaceTrack()</c></strong> replaces the track currently being used<br/>as the sender's source with a new <see cref="MediaStreamTrack."/>.
 </summary>
 <remarks>
 <para>The new<br/>track must be of the same media kind (audio, video, etc.) and switching the track should<br/>not require negotiation.</para><para>Among the use cases for <c>replaceTrack()</c> is the common need to switch<br/>between the rear- and front-facing cameras on a phone. With <c>replaceTrack()</c>,<br/>you can have a track object for each camera and switch between the two as needed. See<br/>the example <see href="https://developer.mozilla.org#switching_cameras">Switching cameras</see> below.</para>

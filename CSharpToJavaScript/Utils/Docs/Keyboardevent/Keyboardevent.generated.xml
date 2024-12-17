@@ -1,11 +1,11 @@
 <docs>
 <KeyboardEvent>
 <summary>
-<strong><c>KeyboardEvent</c></strong> objects describe a user interaction with the keyboard; each event describes a single interaction between the user and a key (or combination of a key with modifier keys) on the keyboard. The event type (<see cref="Element/keydown_event"/>, <see cref="Element/keypress_event"/>, or <see cref="Element/keyup_event"/>) identifies what kind of keyboard activity occurred.
+<strong><c>KeyboardEvent</c></strong> objects describe a user interaction with the keyboard; each event describes a single interaction between the user and a key (or combination of a key with modifier keys) on the keyboard. The event type (<see cref="Element/keydown_event."/>, <see cref="Element/keypress_event."/>, or <see cref="Element/keyup_event."/>) identifies what kind of keyboard activity occurred.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> <c>KeyboardEvent</c> events just indicate what interaction the user had with a key on the keyboard at a low level, providing no contextual meaning to that interaction. When you need to handle text input, use the <see cref="HTMLElement/input_event"/> event instead. Keyboard events may not be fired if the user is using an alternate means of entering text, such as a handwriting system on a tablet or graphics tablet.</para></blockquote><para></para>
-<para>-<see cref="KeyboardEvent.Code"/>.<br/>-<see cref="KeyboardEvent.Key"/>.<br/>-<see cref="KeyboardEvent.GetModifierState"/><br/></para>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> <c>KeyboardEvent</c> events just indicate what interaction the user had with a key on the keyboard at a low level, providing no contextual meaning to that interaction. When you need to handle text input, use the <see cref="Element/input_event."/> event instead. Keyboard events may not be fired if the user is using an alternate means of entering text, such as a handwriting system on a tablet or graphics tablet.</para></blockquote><para></para>
+<para>-<see cref="KeyboardEvent.Code."/>.<br/>-<see cref="KeyboardEvent.Key."/>.<br/>-<see cref="KeyboardEvent.GetModifierState."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </KeyboardEvent>

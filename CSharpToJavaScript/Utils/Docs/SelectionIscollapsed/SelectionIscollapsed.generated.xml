@@ -4,8 +4,8 @@
 The <strong><c>Selection.isCollapsed</c></strong> read-only property returns a<br/>boolean value which indicates whether or not there is currently any text<br/>selected. No text is selected when the selection&amp;apos;s start and end points are at the same<br/>position in the content.
 </summary>
 <remarks>
-<para>Keep in mind that a collapsed selection may still have one (or more, in Gecko)<br/><see cref="Range"/>s, so <see cref="Selection.RangeCount"/> may not be zero. In that<br/>scenario, calling a <see cref="Selection"/> object's {{domxref("Selection.getRangeAt",<br/>&amp;quot;getRangeAt()&amp;quot;)}} method may return a <c>Range</c> object which is collapsed.</para>
-<para>-<see cref="Selection"/><br/>-<see cref="Range"/><br/></para>
+<para>Keep in mind that a collapsed selection may still have one (or more, in Gecko)<br/><see cref="Range."/>s, so <see cref="Selection.RangeCount."/> may not be zero. In that<br/>scenario, calling a <see cref="Selection."/> object's <see cref="Selection.GetRangeAt."/><br/>method may return a <c>Range</c> object which is collapsed.</para>
+<para>-<see cref="Selection."/><br/>-<see cref="Range."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Selection/isCollapsed"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A boolean.</value>

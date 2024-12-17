@@ -1,11 +1,11 @@
 <docs>
 <TextDecoderStreamIgnoreBOM>
 <summary>
-The <strong><c>ignoreBOM</c></strong> read-only property of the <see cref="TextDecoderStream"/> interface returns a {{jsxref("boolean")}} indicating if the byte order mark (BOM) is to be ignored.
+The <strong><c>ignoreBOM</c></strong> read-only property of the <see cref="TextDecoderStream."/> interface is a {{jsxref('Boolean')}} indicating whether the <see href="https://www.w3.org/International/questions/qa-byte-order-mark">byte order mark</see> will be included in the output or skipped over.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoderStream/ignoreBOM"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="Boolean"/>, initially <c>false</c>.</value>
+<value><c>true</c> if the <see href="https://www.w3.org/International/questions/qa-byte-order-mark">byte order mark</see> will be included in the decoded text; <c>false</c> if it will be skipped over when decoding and omitted.</value>
 </TextDecoderStreamIgnoreBOM>
 </docs>

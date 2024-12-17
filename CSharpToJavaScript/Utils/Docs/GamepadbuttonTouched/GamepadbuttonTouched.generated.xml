@@ -1,10 +1,10 @@
 <docs>
 <GamepadButtonTouched>
 <summary>
-The <strong><c>touched</c></strong> property of the<br/><see cref="GamepadButton"/> interface returns a <c>boolean</c> indicating whether<br/>a button capable of detecting touch is currently touched (<c>true</c>) or not touched (<c>false</c>).
+The <strong><c>touched</c></strong> property of the<br/><see cref="GamepadButton."/> interface returns a <c>boolean</c> indicating whether<br/>a button capable of detecting touch is currently touched (<c>true</c>) or not touched (<c>false</c>).
 </summary>
 <remarks>
-<para>If the button is not capable of detecting touch but can return an analog value, the property will be <c>true</c> if the value is greater than <c>0</c>, and <c>false</c> otherwise. If the button is not capable of detecting touch and can only report a digital value, then it should mirror the <see cref="GamepadButton.Pressed"/> property.</para>
+<para>If the button is not capable of detecting touch but can return an analog value, the property will be <c>true</c> if the value is greater than <c>0</c>, and <c>false</c> otherwise. If the button is not capable of detecting touch and can only report a digital value, then it should mirror the <see cref="GamepadButton.Pressed."/> property.</para>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API">Using the Gamepad API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GamepadButton/touched"> <em>See also on MDN</em> </seealso></para>
 </remarks>

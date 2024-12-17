@@ -1,10 +1,10 @@
 <docs>
 <URLSearchParamsHas>
 <summary>
-The <strong><c>has()</c></strong> method of the <see cref="URLSearchParams"/> interface returns a boolean value that indicates whether the specified parameter is in the search parameters.
+The <strong><c>has()</c></strong> method of the <see cref="URLSearchParams."/> interface returns a boolean value that indicates whether the specified parameter is in the search parameters.
 </summary>
 <remarks>
-<para>A parameter name and optional value are used to match parameters.<br/>If only a parameter name is specified, then the method will return <c>true</c> if any parameters in the query string match the name, and <c>false</c> otherwise.<br/>If both a parameter name and value are specified, then the method will return <c>true</c> if a parameter matches both the name and value.</para><para>AvailableInWorkers</para>
+<para>A parameter name and optional value are used to match parameters.<br/>If only a parameter name is specified, then the method will return <c>true</c> if any parameters in the query string match the name, and <c>false</c> otherwise.<br/>If both a parameter name and value are specified, then the method will return <c>true</c> if a parameter matches both the name and value.</para>
 <para>-<see href="https://github.com/zloirock/core-js#url-and-urlsearchparams">Polyfill of <c>URLSearchParams</c> in <c>core-js</c></see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/has"> <em>See also on MDN</em> </seealso></para>
 </remarks>

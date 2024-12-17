@@ -4,7 +4,7 @@
 The <strong><c>MediaCapabilities.decodingInfo()</c></strong> method, part of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/MediaCapabilities">Media Capabilities API</see>, returns a promise with the tested media configuration&amp;apos;s capabilities info.<br/>This contains the three boolean properties <c>supported</c>, <c>smooth</c>, and <c>powerefficient</c>, which describe whether decoding the media described would be supported, smooth, and powerefficient.
 </summary>
 <remarks>
-<para>-<see cref="MediaCapabilities.EncodingInfo"/><br/>-<see cref="HTMLMediaElement.CanPlayType"/> for file<br/>-<see cref="MediaSource.IsTypeSupported"/> for media-source<br/></para>
+<para>-<see cref="MediaCapabilities.EncodingInfo."/><br/>-<see cref="HTMLMediaElement.CanPlayType."/> for file<br/>-<see cref="MediaSource.IsTypeSupported_static."/> for media-source<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaCapabilities/decodingInfo"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>A <see cref="'Promise'"/> fulfilling with an object containing three Boolean attributes:Browsers will report a supported media configuration as <c>smooth</c> and <c>powerEfficient</c> until stats on this device have been recorded.<br/>All supported audio codecs are reported to be power efficient.</returns>

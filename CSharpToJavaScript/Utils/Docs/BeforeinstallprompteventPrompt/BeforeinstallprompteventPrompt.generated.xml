@@ -1,11 +1,11 @@
 <docs>
 <BeforeInstallPromptEventPrompt>
 <summary>
-The <strong><c>prompt()</c></strong> method of the <see cref="BeforeInstallPromptEvent"/> interface allows a developer to show the<br/>install prompt at a time of their own choosing. Typically this will be called in the event handler for the app&amp;apos;s custom install UI.
+The <strong><c>prompt()</c></strong> method of the <see cref="BeforeInstallPromptEvent."/> interface allows a developer to show the<br/>install prompt at a time of their own choosing. Typically this will be called in the event handler for the app&amp;apos;s custom install UI.
 </summary>
 <remarks>
 <para>This method must be called in the event handler for a user action (such as a button click) and may only be called once on a given <c>BeforeInstallPromptEvent</c> instance.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable">Making PWAs installable</see><br/>-<see href="https://web.dev/customize-install/">How to provide your own in-app install experience</see> on web.dev (2021)<br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable">Making PWAs installable</see><br/>-<see href="https://web.dev/articles/customize-install">How to provide your own in-app install experience</see> on web.dev (2021)<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent/prompt"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>A <see cref="Promise"/> resolving to an object containing the following properties:</returns>

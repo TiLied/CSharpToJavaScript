@@ -1,10 +1,10 @@
 <docs>
 <FileLastModified>
 <summary>
-The <strong><c>File.lastModified</c></strong> read-only property provides the<br/>last modified date of the file as the number of milliseconds since the Unix<br/>epoch (January 1, 1970 at midnight). Files without a known last modified date return the<br/>current date.
+The <strong><c>lastModified</c></strong> read-only property of the <see cref="File."/> interface provides the<br/>last modified date of the file as the number of milliseconds since the Unix<br/>epoch (January 1, 1970 at midnight). Files without a known last modified date return the<br/>current date.
 </summary>
 <remarks>
-<para>-<see cref="File"/><br/></para>
+<para>-<see cref="File."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/File/lastModified"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A number that represents the number of milliseconds since the Unix epoch.</value>

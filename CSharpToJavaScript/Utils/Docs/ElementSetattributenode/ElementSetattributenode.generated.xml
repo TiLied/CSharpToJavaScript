@@ -1,10 +1,11 @@
 <docs>
 <ElementSetAttributeNode>
 <summary>
-The <strong><c>setAttributeNode()</c></strong> method adds a new<br/><c>Attr</c> node to the specified element.
+The <strong><c>setAttributeNode()</c></strong> method of the <see cref="Element."/> interface adds a new <see cref="Attr."/> node to the specified element.
 </summary>
 <remarks>
-<para>-<see cref="Document.CreateAttribute"/><br/></para>
+<para>If you don't need to work with the attribute node (such as cloning from another element) before adding it, you can use the <see cref="Element.SetAttribute."/> method instead.</para>
+<para>-<see cref="Document.CreateAttribute."/><br/>-<see cref="Element.GetAttributeNode."/><br/>-<see cref="Element.RemoveAttributeNode."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttributeNode"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>The replaced attribute node, if any, returned by this function.</returns>

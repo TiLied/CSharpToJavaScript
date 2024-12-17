@@ -1,11 +1,11 @@
 <docs>
 <AudioTrackListLength>
 <summary>
-The read-only <strong><see cref="AudioTrackList"/></strong><br/>property <strong><c>length</c></strong> returns the number of entries in the<br/><c>AudioTrackList</c>, each of which is an <see cref="AudioTrack"/><br/>representing one audio track in the media element. A value of 0 indicates that<br/>there are no audio tracks in the media.
+The read-only <strong><see cref="AudioTrackList."/></strong><br/>property <strong><c>length</c></strong> returns the number of entries in the<br/><c>AudioTrackList</c>, each of which is an <see cref="AudioTrack."/><br/>representing one audio track in the media element. A value of 0 indicates that<br/>there are no audio tracks in the media.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioTrackList/length"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A number indicating how many audio tracks are included in the<br/><c>AudioTrackList</c>. Each track can be accessed by treating the<br/><c>AudioTrackList</c> as an array of objects of type <see cref="AudioTrack"/>.</value>
+<value>A number indicating how many audio tracks are included in the<br/><c>AudioTrackList</c>. Each track can be accessed by treating the<br/><c>AudioTrackList</c> as an array of objects of type <see cref="AudioTrack."/>.</value>
 </AudioTrackListLength>
 </docs>

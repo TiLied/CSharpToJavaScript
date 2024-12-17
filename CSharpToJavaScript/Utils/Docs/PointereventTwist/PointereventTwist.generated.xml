@@ -1,10 +1,10 @@
 <docs>
 <PointerEventTwist>
 <summary>
-The <strong><c>twist</c></strong> read-only property of the<br/><see cref="PointerEvent"/> interface represents the clockwise rotation of the pointer<br/>(e.g., pen stylus) around its major axis, in degrees.
+The <strong><c>twist</c></strong> read-only property of the<br/><see cref="PointerEvent."/> interface represents the clockwise rotation of the pointer<br/>(e.g., pen stylus) around its major axis, in degrees.
 </summary>
 <remarks>
-<para>-<see cref="Touch.Force"/><br/></para>
+<para>-<see cref="Touch.Force."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/twist"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A <c>long</c> value representing the amount of twist, in degrees, applied to the<br/>transducer (pointer). The value is in the range <c>0</c> to <c>359</c>,<br/>inclusive. For devices that do not report <c>twist</c>, the value is<br/><c>0</c>.</value>

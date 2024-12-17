@@ -1,10 +1,10 @@
 <docs>
 <FileSystemHandleKind>
 <summary>
-The <strong><c>kind</c></strong> read-only property of the<br/><see cref="FileSystemHandle"/> interface returns the type of entry. This is<br/><c>&amp;apos;file&amp;apos;</c> if the associated entry is a file or <c>&amp;apos;directory&amp;apos;</c>. It is<br/>used to distinguish files from directories when iterating over the contents of a<br/>directory.
+The <strong><c>kind</c></strong> read-only property of the<br/><see cref="FileSystemHandle."/> interface returns the type of entry. This is<br/><c>&amp;apos;file&amp;apos;</c> if the associated entry is a file or <c>&amp;apos;directory&amp;apos;</c>. It is<br/>used to distinguish files from directories when iterating over the contents of a<br/>directory.
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_System_Access_API">File System Access API</see><br/>-<see href="https://web.dev/file-system-access/">The File System Access API: simplifying access to local files</see><br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_System_API">File System API</see><br/>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/file-system-access">The File System Access API: simplifying access to local files</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemHandle/kind"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A string that can be:</value>

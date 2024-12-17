@@ -1,11 +1,12 @@
 <docs>
 <DocumentAll>
 <summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <see cref="Document"/> interface's read-only <strong><c>all</c></strong><br/>property returns an <see cref="HTMLAllCollection"/> rooted at the document node. In<br/>other words, it returns all of the document&amp;apos;s elements, accessible by order (like an<br/>array) and by ID (like a regular object).
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <see cref="Document."/> interface's read-only <strong><c>all</c></strong> property returns an <see cref="HTMLAllCollection."/> rooted at the document node.
 </summary>
 <remarks>
+<para>Rather than using <c>document.all</c> to return an <see cref="HTMLAllCollection."/> of all the document's elements in document order, you can use <see cref="Document.QuerySelectorAll."/> to return a <see cref="NodeList."/> of all the document's elements in document order:</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/all"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An <see cref="HTMLAllCollection"/> which contains every element in the document.</value>
+<value>An <see cref="HTMLAllCollection."/> which contains every element in the document.</value>
 </DocumentAll>
 </docs>

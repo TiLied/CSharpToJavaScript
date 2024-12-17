@@ -1,9 +1,11 @@
 <docs>
 <ElementHasAttributeNS>
 <summary>
-<c>hasAttributeNS</c> returns a boolean value indicating whether the current element has the specified attribute.
+The <strong><c>hasAttributeNS()</c></strong> method of the <see cref="Element."/> interface returns a boolean value indicating whether the current element has the specified attribute with the specified namespace.
 </summary>
 <remarks>
+<para>If you are working with HTML documents and you don't need to specify the requested attribute as being part of a specific namespace, use the <see cref="Element.HasAttribute."/> method instead.</para>
+<para>-<see cref="Element.GetAttributeNS."/><br/>-<see cref="Element.SetAttributeNS."/><br/>-<see cref="Element.RemoveAttributeNS."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/hasAttributeNS"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>A boolean.</returns>

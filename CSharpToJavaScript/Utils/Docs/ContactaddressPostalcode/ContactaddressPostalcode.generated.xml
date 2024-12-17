@@ -1,0 +1,12 @@
+<docs>
+<ContactAddressPostalCode>
+<summary>
+The <strong><c>postalCode</c></strong> read-only property of the <see cref="ContactAddress."/> interface returns a string containing a code used by a jurisdiction for mail routing, for example, the <see href="https://en.wikipedia.org/wiki/ZIP_Code">ZIP Code</see> in the United States or the <see href="https://en.wikipedia.org/wiki/Postal_Index_Number">Postal Index Number</see> (PIN code) in India.
+</summary>
+<remarks>
+<para>-Universal Postal Union: <see href="https://www.upu.int/en/Postal-Solutions/Programmes-Services/Addressing-Solutions">Universal Post*Code® Database</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ContactAddress/postalCode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string which contains the postal code portion of the address. A postal code is a string (either numeric or alphanumeric) which is used by a postal service to optimize mail routing and delivery.Various countries use different terms for this. In most of the world, it&amp;apos;s known as the &amp;quot;post code&amp;quot; or &amp;quot;postal code&amp;quot;. In the United States, the ZIP code is used. India uses PIN codes.</value>
+</ContactAddressPostalCode>
+</docs>

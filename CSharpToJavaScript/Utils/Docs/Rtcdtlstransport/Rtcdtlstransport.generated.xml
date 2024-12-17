@@ -1,11 +1,11 @@
 <docs>
 <RTCDtlsTransport>
 <summary>
-The <strong><c>RTCDtlsTransport</c></strong> interface provides access to information about the Datagram Transport Layer Security (<strong><see href="https://developer.mozilla.org/en-US/docs/Glossary/DTLS">DTLS</see></strong>) transport over which a <see cref="RTCPeerConnection"/>'s {{Glossary("RTP")}} and {{Glossary("RTCP")}} packets are sent and received by its <see cref="RTCRtpSender"/> and <see cref="RTCRtpReceiver"/> objects.
+The <strong><c>RTCDtlsTransport</c></strong> interface provides access to information about the Datagram Transport Layer Security (<strong><see href="https://developer.mozilla.org/en-US/docs/Glossary/DTLS">DTLS</see></strong>) transport over which a <see cref="RTCPeerConnection."/>'s {{Glossary("RTP")}} and {{Glossary("RTCP")}} packets are sent and received by its <see cref="RTCRtpSender."/> and <see cref="RTCRtpReceiver."/> objects.
 </summary>
 <remarks>
-<para>A <c>RTCDtlsTransport</c> object is also used to provide information about <see href="https://developer.mozilla.org/en-US/docs/Glossary/SCTP">SCTP</see> packets transmitted and received by an connection's <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel">data channels</see>.</para><para>Features of the DTLS transport include the addition of security to the underlying transport; the <c>RTCDtlsTransport</c> interface can be used to obtain information about the underlying transport and the security added to it by the DTLS layer.</para><para></para>
-<para>-<see cref="RTCRtpSender.Transport"/> and <see cref="RTCRtpReceiver.Transport"/><br/>-<see cref="RTCSctpTransport.Transport"/><br/></para>
+<para>A <c>RTCDtlsTransport</c> object is also used to provide information about <see href="https://developer.mozilla.org/en-US/docs/Glossary/SCTP">SCTP</see> packets transmitted and received by a connection's <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel">data channels</see>.</para><para>Features of the DTLS transport include the addition of security to the underlying transport; the <c>RTCDtlsTransport</c> interface can be used to obtain information about the underlying transport and the security added to it by the DTLS layer.</para><para></para>
+<para>-<see cref="RTCRtpSender.Transport."/> and <see cref="RTCRtpReceiver.Transport."/><br/>-<see cref="RTCSctpTransport.Transport."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDtlsTransport"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </RTCDtlsTransport>

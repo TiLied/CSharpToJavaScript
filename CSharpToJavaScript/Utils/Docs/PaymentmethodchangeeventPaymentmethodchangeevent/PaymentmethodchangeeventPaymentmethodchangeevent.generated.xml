@@ -1,12 +1,12 @@
 <docs>
 <PaymentMethodChangeEventPaymentMethodChangeEvent>
 <summary>
-The <strong><c>PaymentMethodChangeEvent()</c></strong><br/>constructor creates a new <see cref="PaymentMethodChangeEvent"/> object providing<br/>details about a <see cref="PaymentRequest.Paymentmethodchange_event"/> event.
+The <strong><c>PaymentMethodChangeEvent()</c></strong><br/>constructor creates a new <see cref="PaymentMethodChangeEvent."/> object providing<br/>details about a <see cref="PaymentRequest.Paymentmethodchange_event."/> event.
 </summary>
 <remarks>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API">Payment Request API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API">Using the Payment Request API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API/Concepts">Payment processing concepts</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentMethodChangeEvent/PaymentMethodChangeEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A new <see cref="PaymentMethodChangeEvent"/> object describing a change to<br/>the options specified for the payment method given in the <c>methodName</c><br/>property.The type of the <c>methodDetails</c> property depends on the payment method. For<br/>example, if <c>methodName</c> is <c>https://example.com/pay</c>, indicating that the<br/>Example Pay payment method is being used for validation, the shape of <c>methodDetails</c><br/>is defined by the payment method.</returns>
+<returns>A new <see cref="PaymentMethodChangeEvent."/> object describing a change to<br/>the options specified for the payment method given in the <c>methodName</c><br/>property.The type of the <c>methodDetails</c> property depends on the payment method. For<br/>example, if <c>methodName</c> is <c>https://example.com/pay</c>, indicating that the<br/>Example Pay payment method is being used for validation, the shape of <c>methodDetails</c><br/>is defined by the payment method.</returns>
 </PaymentMethodChangeEventPaymentMethodChangeEvent>
 </docs>

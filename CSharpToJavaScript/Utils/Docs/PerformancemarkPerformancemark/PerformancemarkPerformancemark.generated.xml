@@ -1,13 +1,13 @@
 <docs>
 <PerformanceMarkPerformanceMark>
 <summary>
-The <strong><c>PerformanceMark()</c></strong> constructor creates a <see cref="DOMHighResTimeStamp"/> with the given name.
+The <strong><c>PerformanceMark()</c></strong> constructor creates a <see cref="DOMHighResTimeStamp."/> with the given name.
 </summary>
 <remarks>
-<para>Unlike <see cref="Performance.Mark"/>, performance marks created by the constructor aren't added to the browser's performance timeline. This means that calls to the <see cref="Performance"/> interface's <c>getEntries*()</c> methods (<see cref="Performance.GetEntries"/>, <see cref="Performance.GetEntriesByName"/> or <see cref="Performance.GetEntriesByType"/>) won't show entries for these marks.</para>
-<para>-<see cref="Performance.Mark"/><br/></para>
+<para>Unlike <see cref="Performance.Mark."/>, performance marks created by the constructor aren't added to the browser's performance timeline. This means that calls to the <see cref="Performance."/> interface's <c>getEntries*()</c> methods (<see cref="Performance.GetEntries."/>, <see cref="Performance.GetEntriesByName."/> or <see cref="Performance.GetEntriesByType."/>) won't show entries for these marks.</para>
+<para>-<see cref="Performance.Mark."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceMark/PerformanceMark"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A <see cref="PerformanceMark"/> object.</returns>
+<returns>A <see cref="PerformanceMark."/> object.</returns>
 </PerformanceMarkPerformanceMark>
 </docs>

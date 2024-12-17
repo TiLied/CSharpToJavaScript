@@ -1,10 +1,11 @@
 <docs>
 <ElementSetAttributeNodeNS>
 <summary>
-<c>setAttributeNodeNS</c> adds a new namespaced attribute node to an element.
+The <strong><c>setAttributeNodeNS()</c></strong> method of the <see cref="Element."/> interface adds a new namespaced <see cref="Attr."/> node to an element.
 </summary>
 <remarks>
-<para>-<see cref="Document.CreateAttribute"/><br/>-<see cref="Document.CreateAttributeNS"/><br/></para>
+<para>If you don't need to work with the attribute node (such as cloning from another element) before adding it, you can use the <see cref="Element.SetAttributeNS."/> method instead.</para><para>If you are working with HTML documents and you don't need to specify the requested attribute as being part of a specific namespace, use the <see cref="Element.SetAttribute."/> method instead.</para>
+<para>-<see cref="Document.CreateAttribute."/><br/>-<see cref="Document.CreateAttributeNS."/><br/>-<see cref="Element.GetAttributeNodeNS."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttributeNodeNS"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>The replaced attribute node, if any, returned by this function.</returns>

@@ -1,13 +1,13 @@
 <docs>
 <HTMLAnchorElementRelList>
 <summary>
-The <strong><c>HTMLAnchorElement.relList</c></strong> read-only property reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel"><c>rel</c></see> attribute. It is a live <see cref="DOMTokenList"/> containing the set of link types indicating the relationship between the resource represented by the {{HTMLElement("a")}} element and the current document.
+The <strong><c>HTMLAnchorElement.relList</c></strong> read-only property reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel"><c>rel</c></see> attribute. It is a live <see cref="DOMTokenList."/> containing the set of link types indicating the relationship between the resource represented by the {{HTMLElement("a")}} element and the current document.
 </summary>
 <remarks>
-<para>The property itself is read-only, meaning you can&amp;apos;t substitute the<br/><see cref="DOMTokenList"/> with another one, but its contents can still be changed.</para>
-<para>-The equivalent property on <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area">area</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link">link</see>,<br/><see cref="HTMLAreaElement.RelList"/> and <see cref="HTMLLinkElement.RelList"/>.<br/>-The very same list but as a space-separated tokens in a string:<br/><see cref="HTMLAnchorElement.Rel"/><br/></para>
+<para>The property itself is read-only, meaning you can&amp;apos;t substitute the<br/><see cref="DOMTokenList."/> with another one, but its contents can still be changed.</para>
+<para>-The equivalent property on <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area">area</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link">link</see>,<br/><see cref="HTMLAreaElement.RelList."/> and <see cref="HTMLLinkElement.RelList."/>.<br/>-The very same list but as a space-separated tokens in a string:<br/><see cref="HTMLAnchorElement.Rel."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAnchorElement/relList"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A live <see cref="DOMTokenList"/> of strings.</value>
+<value>A live <see cref="DOMTokenList."/> of strings.</value>
 </HTMLAnchorElementRelList>
 </docs>

@@ -1,12 +1,12 @@
 <docs>
 <XRInputSourceHand>
 <summary>
-The read-only <strong><c>hand</c></strong> property of the <see cref="XRInputSource"/> interface is a <see cref="XRHand"/> object providing access to a hand-tracking device.
+The read-only <strong><c>hand</c></strong> property of the <see cref="XRInputSource."/> interface is a <see cref="XRHand."/> object providing access to a hand-tracking device.
 </summary>
 <remarks>
-<para>-<see cref="XRHand"/><br/></para>
+<para>-<see cref="XRHand."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSource/hand"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An <see cref="XRHand"/> object or <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><c>null</c></see> if the <see cref="XRSession"/> has not been <see href="https://developer.mozilla.org/en-US/docs/Web/API/XRSystem/requestSession">requested</see> with the <c>hand-tracking</c> feature descriptor.</value>
+<value>An <see cref="XRHand."/> object or <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><c>null</c></see> if the <see cref="XRSession."/> has not been <see href="https://developer.mozilla.org/en-US/docs/Web/API/XRSystem/requestSession">requested</see> with the <c>hand-tracking</c> feature descriptor.</value>
 </XRInputSourceHand>
 </docs>

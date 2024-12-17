@@ -1,10 +1,10 @@
 <docs>
 <RTCRtpCodecParameters>
 <summary>
-The <see cref="RTCRtpCodecParameters"/> dictionary, part of the WebRTC API, is used to describe the configuration parameters for a single media {{Glossary("codec")}}.
+The <see cref="RTCRtpCodecParameters."/> dictionary, part of the WebRTC API, is used to describe the configuration parameters for a single media {{Glossary("codec")}}.
 </summary>
 <remarks>
-<para>It's used in <see cref="RTCRtpSender.GetParameters"/>, <see cref="RTCRtpSender.SetParameters"/> and <see cref="RTCRtpReceiver.GetParameters"/>.<br/>Its also use used when calling <see cref="RTCRtpTransceiver.SetCodecPreferences"/> to configure a transceiver's codecs before beginning the offer/answer process to establish a WebRTC peer connection.</para><para>Most of the fields in this property take values which are defined and maintained by the Internet Assigned Numbers Authority (IANA). References to relevant IANA documents are provided in the <see href="https://developer.mozilla.org#see_also">see also</see> section at the end of this article.</para>
+<para>It's used in <see cref="RTCRtpSender.GetParameters."/>, <see cref="RTCRtpSender.SetParameters."/> and <see cref="RTCRtpReceiver.GetParameters."/>.<br/>Its also use used when calling <see cref="RTCRtpTransceiver.SetCodecPreferences."/> to configure a transceiver's codecs before beginning the offer/answer process to establish a WebRTC peer connection.</para><para>Most of the fields in this property take values which are defined and maintained by the Internet Assigned Numbers Authority (IANA). References to relevant IANA documents are provided in the <see href="https://developer.mozilla.org#see_also">see also</see> section at the end of this article.</para>
 <para>-<see href="https://www.iana.org/assignments/rtp-parameters/rtp-parameters.xhtml">Real-Time Transport Protocol (RTP) Parameters</see>-: The IANA document providing registries of permitted values for the RTP parameters used by this dictionary.<br/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpCodecParameters"> <em>See also on MDN</em> </seealso></para>
 </remarks>

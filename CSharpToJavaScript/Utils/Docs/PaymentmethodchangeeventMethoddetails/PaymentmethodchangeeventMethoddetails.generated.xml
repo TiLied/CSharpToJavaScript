@@ -1,11 +1,11 @@
 <docs>
 <PaymentMethodChangeEventMethodDetails>
 <summary>
-The read-only <strong><c>methodDetails</c></strong> property of the <see cref="PaymentMethodChangeEvent"/> interface is an object<br/>containing any data the payment handler may provide to describe the change the user<br/>has made to their payment method. The value is <c>null</c> if no details<br/>are available.
+The read-only <strong><c>methodDetails</c></strong> property of the <see cref="PaymentMethodChangeEvent."/> interface is an object<br/>containing any data the payment handler may provide to describe the change the user<br/>has made to their payment method. The value is <c>null</c> if no details<br/>are available.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentMethodChangeEvent/methodDetails"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An object containing any data needed to describe the changes made to the payment<br/>method. The contents vary depending on the actual payment method chosen, so you will<br/>need to refer to the <see cref="PaymentMethodChangeEvent.MethodName"/><br/>property first, then interpret the <c>methodDetails</c> after that.The default value is <c>null</c>, indicating that no additional details are<br/>available.</value>
+<value>An object containing any data needed to describe the changes made to the payment<br/>method. The contents vary depending on the actual payment method chosen, so you will<br/>need to refer to the <see cref="PaymentMethodChangeEvent.MethodName."/><br/>property first, then interpret the <c>methodDetails</c> after that.The default value is <c>null</c>, indicating that no additional details are<br/>available.</value>
 </PaymentMethodChangeEventMethodDetails>
 </docs>

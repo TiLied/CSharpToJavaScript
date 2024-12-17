@@ -1,11 +1,11 @@
 <docs>
 <PromiseRejectionEventPromiseRejectionEvent>
 <summary>
-The <strong><c>PromiseRejectionEvent()</c></strong><br/>constructor returns a new <see cref="PromiseRejectionEvent"/> object, which<br/>represents events fired when a JavaScript <see cref="Promise"/> is rejected.
+The <strong><c>PromiseRejectionEvent()</c></strong><br/>constructor returns a new <see cref="PromiseRejectionEvent."/> object, which<br/>represents events fired when a JavaScript <see cref="Promise"/> is rejected.
 </summary>
 <remarks>
-<para>With promise rejection events, it becomes possible to detect and report promises which<br/>fail and whose failures go unnoticed. It also becomes easier to write a global handler<br/>for errors.</para><para>There are two types of <c>PromiseRejectionEvent</c>:<br/><see cref="Window.Unhandledrejection_event"/> is sent by the JavaScript runtime when a promise is<br/>rejected but the rejection goes unhandled. A <see cref="Window.Rejectionhandled_event"/>event is<br/>emitted if a promise is rejected but the rejection is caught by a rejection handler.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises">Using promises</see><br/>-<see cref="Promise"/><br/>-<see cref="PromiseRejectionEvent"/><br/></para>
+<para>With promise rejection events, it becomes possible to detect and report promises which<br/>fail and whose failures go unnoticed. It also becomes easier to write a global handler<br/>for errors.</para><para>There are two types of <c>PromiseRejectionEvent</c>:<br/><see cref="Window.Unhandledrejection_event."/> is sent by the JavaScript runtime when a promise is<br/>rejected but the rejection goes unhandled. A <see cref="Window.Rejectionhandled_event."/>event is<br/>emitted if a promise is rejected but the rejection is caught by a rejection handler.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises">Using promises</see><br/>-<see cref="Promise"/><br/>-<see cref="PromiseRejectionEvent."/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PromiseRejectionEvent/PromiseRejectionEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>A new <c>PromiseRejectionEvent</c> object configured as specified by the parameters.</returns>

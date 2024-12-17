@@ -1,0 +1,13 @@
+<docs>
+<DocumentBrowsingTopics>
+<summary>
+<blockquote class="WARNING"><h5>WARNING</h5><strong>Warning:</strong> This feature is currently opposed by two browser vendors. See the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Topics_API#standards_positions">Standards positions</see> section below for details of opposition.</blockquote>
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> An <see href="https://developer.mozilla.org/en-US/docs/Web/Privacy/Privacy_sandbox/Enrollment">Enrollment process</see> is required to use this feature in your applications.</para></blockquote><para>The <c>browsingTopics()</c> method of the <see cref="Document."/> interface returns a promise that fulfills with an array of objects representing the top topics for the user, one from each of the last three epochs. These topics could then be returned to the ad tech platform in a subsequent fetch request. By default, the method also causes the browser to record the current page visit as observed by the caller, so the page's hostname can later be used in topics calculation.</para><para>See <see href="https://developer.mozilla.org/en-US/docs/Web/API/Topics_API/Using">Using the Topics API</see> for more details.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> <c>browsingTopics()</c> does not rely on HTTP headers to send topics and mark topics as observed like the other <see href="https://developer.mozilla.org/en-US/docs/Web/API/Topics_API/Using#what_api_features_enable_the_topics_api">Topics API enabling features</see>, but it is somewhat less performant. You are advised to use one of the HTTP header-using features, falling back to <c>browsingTopics()</c> only in situations where the headers cannot be modified.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Topics_API">Topics API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/browsingTopics"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that fulfills with an array of up to three objects representing the current user's selected topics for the last three epochs. Each object contains the following properties:The exact property values may vary by browser implementation. An example object from Chrome might look as follows:</returns>
+</DocumentBrowsingTopics>
+</docs>

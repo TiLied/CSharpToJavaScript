@@ -1,13 +1,13 @@
 <docs>
 <PerformanceResourceTimingServerTiming>
 <summary>
-The <strong><c>serverTiming</c></strong> read-only property returns an array of <see cref="PerformanceServerTiming"/> entries containing server timing metrics.
+The <strong><c>serverTiming</c></strong> read-only property returns an array of <see cref="PerformanceServerTiming."/> entries containing server timing metrics.
 </summary>
 <remarks>
 <para>Server timing metrics require the server to send the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Server-Timing">Server-Timing</see> header. For example:</para><para>The <c>serverTiming</c> entries can live on <c>navigation</c> and <c>resource</c> entries.</para>
-<para>-<see cref="PerformanceServerTiming"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Server-Timing">Server-Timing</see><br/></para>
+<para>-<see cref="PerformanceServerTiming."/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Server-Timing">Server-Timing</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming/serverTiming"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An array of <see cref="PerformanceServerTiming"/> entries.</value>
+<value>An array of <see cref="PerformanceServerTiming."/> entries.</value>
 </PerformanceResourceTimingServerTiming>
 </docs>

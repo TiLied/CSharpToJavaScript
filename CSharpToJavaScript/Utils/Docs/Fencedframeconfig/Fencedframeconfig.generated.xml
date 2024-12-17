@@ -1,0 +1,12 @@
+<docs>
+<FencedFrameConfig>
+<summary>
+The <strong><c>FencedFrameConfig</c></strong> interface represents the navigation of a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fencedframe">fencedframe</see>, i.e. what content will be displayed in it.
+</summary>
+<remarks>
+<para><c>FencedFrameConfig</c> objects cannot be constructed manually via JavaScript. They are returned from a source such as the <see href="https://developer.chrome.com/docs/privacy-sandbox/fledge/">Protected Audience API</see> and set as the value of <see cref="HTMLFencedFrameElement.Config."/>.</para><para>A <c>FencedFrameConfig</c> object instance has an exposed method, but it also maps to internal config information containing opaque properties not accessible from JavaScript. This includes information such as the source of the loaded content and interest groups for advertising purposes. It is key to how fenced frames help to implement key use cases while respecting user privacy.</para><para></para>
+<para>-<see href="https://developer.chrome.com/docs/privacy-sandbox/fenced-frame/">Fenced frames</see> on developer.chrome.com<br/>-<see href="https://developer.chrome.com/docs/privacy-sandbox/">The Privacy Sandbox</see> on developer.chrome.com<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FencedFrameConfig"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</FencedFrameConfig>
+</docs>

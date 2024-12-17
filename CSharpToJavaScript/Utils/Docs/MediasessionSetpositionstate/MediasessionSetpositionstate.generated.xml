@@ -1,10 +1,10 @@
 <docs>
 <MediaSessionSetPositionState>
 <summary>
-The <see cref="MediaSession"/> method<br/><strong><c>setPositionState()</c></strong> is used to update the current<br/>document&amp;apos;s media playback position and speed for presentation by user&amp;apos;s device in any<br/>kind of interface that provides details about ongoing media. This can be<br/>particularly useful if your code implements a player for type of media not directly<br/>supported by the browser.
+The <strong><c>setPositionState()</c></strong> method of the<br/><see cref="MediaSession."/> interface is used to update the current<br/>document&amp;apos;s media playback position and speed for presentation by user&amp;apos;s device in any<br/>kind of interface that provides details about ongoing media. This can be<br/>particularly useful if your code implements a player for type of media not directly<br/>supported by the browser.
 </summary>
 <remarks>
-<para>Call this method on the <c>navigator</c> object&amp;apos;s<br/><see cref="Navigator.MediaSession"/> object.</para>
+<para>Call this method on the <c>navigator</c> object&amp;apos;s<br/><see cref="Navigator.MediaSession."/> object.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaSession/setPositionState"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>

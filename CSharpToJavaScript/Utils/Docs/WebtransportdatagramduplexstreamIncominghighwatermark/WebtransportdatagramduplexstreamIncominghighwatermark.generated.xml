@@ -1,11 +1,10 @@
 <docs>
 <WebTransportDatagramDuplexStreamIncomingHighWaterMark>
 <summary>
-The <strong><c>incomingHighWaterMark</c></strong> property of the <see cref="WebTransportDatagramDuplexStream"/> interface gets or sets the high water mark for incoming chunks of data — this is the maximum size, in chunks, that the incoming <see cref="ReadableStream"/>'s internal queue can reach before it is considered full. See <see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Concepts#internal_queues_and_queuing_strategies">Internal queues and queuing strategies</see> for more information.
+The <strong><c>incomingHighWaterMark</c></strong> property of the <see cref="WebTransportDatagramDuplexStream."/> interface gets or sets the high water mark for incoming chunks of data — this is the maximum size, in chunks, that the incoming <see cref="ReadableStream."/>'s internal queue can reach before it is considered full. See <see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Concepts#internal_queues_and_queuing_strategies">Internal queues and queuing strategies</see> for more information.
 </summary>
 <remarks>
-<para>AvailableInWorkers</para>
-<para>-<see href="https://web.dev/webtransport/">Using WebTransport</see><br/>-{{domxref(&amp;quot;WebSockets API&amp;quot;, &amp;quot;WebSockets API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-{{domxref(&amp;quot;Streams API&amp;quot;, &amp;quot;Streams API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://datatracker.ietf.org/doc/html/draft-ietf-webtrans-http3/">WebTransport over HTTP/3</see><br/></para>
+<para>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/webtransport">Using WebTransport</see><br/>-{{domxref(&amp;quot;WebSockets API&amp;quot;, &amp;quot;WebSockets API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-{{domxref(&amp;quot;Streams API&amp;quot;, &amp;quot;Streams API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://datatracker.ietf.org/doc/html/draft-ietf-webtrans-http3/">WebTransport over HTTP/3</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebTransportDatagramDuplexStream/incomingHighWaterMark"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A number.</value>

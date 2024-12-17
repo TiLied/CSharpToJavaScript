@@ -1,10 +1,9 @@
 <docs>
 <URLToJSON>
 <summary>
-The <strong><c>toJSON()</c></strong> method of the <see cref="URL"/> interface<br/>returns a string containing a serialized version of the URL,<br/>although in practice it seems to have the same effect as<br/><see cref="URL.ToString"/>.
+The <strong><c>toJSON()</c></strong> method of the <see cref="URL."/> interface<br/>returns a string containing a serialized version of the URL,<br/>although in practice it seems to have the same effect as<br/><see cref="URL.ToString."/>.
 </summary>
 <remarks>
-<para>AvailableInWorkers</para>
 <para>-<see href="https://github.com/zloirock/core-js#url-and-urlsearchparams">Polyfill of <c>URL.prototype.toJSON</c> in <c>core-js</c></see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URL/toJSON"> <em>See also on MDN</em> </seealso></para>
 </remarks>

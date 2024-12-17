@@ -1,12 +1,12 @@
 <docs>
 <XRViewTransform>
 <summary>
-The read-only <strong><c>transform</c></strong> property of the<br/><see cref="XRView"/> interface is an <see cref="XRRigidTransform"/> object which<br/>provides the position and orientation of the viewpoint relative to the<br/><see cref="XRReferenceSpace"/> specified when the<br/><see cref="XRFrame.GetViewerPose"/> method was called to obtain the view object.
+The read-only <strong><c>transform</c></strong> property of the<br/><see cref="XRView."/> interface is an <see cref="XRRigidTransform."/> object which<br/>provides the position and orientation of the viewpoint relative to the<br/><see cref="XRReferenceSpace."/> specified when the<br/><see cref="XRFrame.GetViewerPose."/> method was called to obtain the view object.
 </summary>
 <remarks>
-<para>With the <c>transform</c>, you can then position the view as a camera within the<br/>3D scene. If you instead need the more traditional view matrix, you can get using<br/><c>view.transform.inverse.matrix</c>; this gets the underlying<br/><see cref="XRRigidTransform.Matrix"/> of the transform's<br/><see cref="XRRigidTransform.Inverse"/>.</para>
+<para>With the <c>transform</c>, you can then position the view as a camera within the<br/>3D scene. If you instead need the more traditional view matrix, you can get using<br/><c>view.transform.inverse.matrix</c>; this gets the underlying<br/><see cref="XRRigidTransform.Matrix."/> of the transform's<br/><see cref="XRRigidTransform.Inverse."/>.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRView/transform"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="XRRigidTransform"/> object specifying the position and orientation of the<br/>viewpoint represented by the <c>XRView</c>.</value>
+<value>A <see cref="XRRigidTransform."/> object specifying the position and orientation of the<br/>viewpoint represented by the <c>XRView</c>.</value>
 </XRViewTransform>
 </docs>

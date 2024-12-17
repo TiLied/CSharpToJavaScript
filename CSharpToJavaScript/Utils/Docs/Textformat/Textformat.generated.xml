@@ -1,0 +1,11 @@
+<docs>
+<TextFormat>
+<summary>
+The <strong><c>TextFormat</c></strong> interface represents specific formatting that should be applied to a range of text in an editable text region that's attached to an <see cref="EditContext."/> instance. The text formatting is requested by the {{glossary("Input Method Editor")}} (IME) window that the user is composing text with.
+</summary>
+<remarks>
+<para>When using one of the default editable regions of the web, such as a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea"><c>&amp;lt;textarea&amp;gt;</c></see> element, IME composition is handled by the browser and operating system for you. For example, when using Japanese IME in a textarea, on Windows, the following text formats can be applied:</para><para>When creating your own custom editable region by using the {{domxref(&amp;quot;EditContext API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, "nocode")}}, you need to handle IME composition yourself. You should listen for the <see cref="EditContext/textformatupdate_event."/> event, which gives you the list of text formats that the IME window wants to apply to the text being composed. You should then update the formatting of the text displayed in your editable region accordingly.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextFormat"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</TextFormat>
+</docs>

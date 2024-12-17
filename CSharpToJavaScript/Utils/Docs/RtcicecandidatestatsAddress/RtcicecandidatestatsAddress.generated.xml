@@ -1,7 +1,7 @@
 <docs>
 <RTCIceCandidateStatsAddress>
 <summary>
-The <strong><c>address</c></strong> property of the<br/><see cref="RTCIceCandidateStats"/> dictionary indicates the address of the<br/><see href="https://developer.mozilla.org/en-US/docs/Glossary/ICE">ICE</see> candidate. While it's preferred that the address be specified as<br/>an IPv4 or IPv6 numeric address, a fully-qualified domain name can be used as<br/>well.
+The <strong><c>address</c></strong> property of the<br/><see cref="RTCIceCandidateStats."/> dictionary indicates the address of the<br/><see href="https://developer.mozilla.org/en-US/docs/Glossary/ICE">ICE</see> candidate. While it's preferred that the address be specified as<br/>an IPv4 or IPv6 numeric address, a fully-qualified domain name can be used as<br/>well.
 </summary>
 <remarks>
 <para>When a domain name is specified, the first IP address selected for that<br/>address is used, even if the domain name maps to multiple IP addresses.</para>

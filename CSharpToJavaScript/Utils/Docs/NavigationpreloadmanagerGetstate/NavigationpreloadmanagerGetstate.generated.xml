@@ -1,7 +1,7 @@
 <docs>
 <NavigationPreloadManagerGetState>
 <summary>
-The <strong><c>getState()</c></strong> method of the <see cref="NavigationPreloadManager"/> interface returns a {{jsxref("Promise")}} that resolves to an object with properties that indicate whether preload is enabled and what value will be sent in the {{HTTPHeader("Service-Worker-Navigation-Preload")}} HTTP header.
+The <strong><c>getState()</c></strong> method of the <see cref="NavigationPreloadManager."/> interface returns a {{jsxref("Promise")}} that resolves to an object with properties that indicate whether preload is enabled and what value will be sent in the {{HTTPHeader("Service-Worker-Navigation-Preload")}} HTTP header.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NavigationPreloadManager/getState"> <em>See also on MDN</em> </seealso></para>

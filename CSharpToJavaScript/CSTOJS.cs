@@ -18,8 +18,6 @@ namespace CSharpToJavaScript
 	{
 		public static SemanticModel Model { get; set; }
 
-		private readonly Assembly _Assembly;
-
 		private CSTOJSOptions _Options = new();
 
 		private Walker _Walker = new();
@@ -27,11 +25,8 @@ namespace CSharpToJavaScript
 		/// <summary>
 		/// New instance of <see cref="CSTOJS"/> with default options, see <see cref="CSTOJSOptions"/>.
 		/// </summary>
-		/// <param name="assembly">Assembly of a project, get by <see cref="Assembly.GetExecutingAssembly" /></param>
-		public CSTOJS(Assembly assembly) 
+		public CSTOJS() 
 		{
-			_Assembly = assembly;
-
 			if (_Options.Debug)
 			{
 				if (File.Exists(Directory.GetCurrentDirectory() + "/debug.txt"))
@@ -45,13 +40,11 @@ namespace CSharpToJavaScript
 		}
 
 		/// <summary>
-		/// 
+		/// New instance of <see cref="CSTOJS"/>
 		/// </summary>
-		/// <param name="assembly">Assembly of a project, get by <see cref="Assembly.GetExecutingAssembly" /></param>
 		/// <param name="options">Options of <see cref="CSTOJS"/>, see <see cref="CSTOJSOptions"/>.</param>
-		public CSTOJS(Assembly assembly, CSTOJSOptions options)
+		public CSTOJS(CSTOJSOptions options)
 		{
-			_Assembly = assembly;
 			_Options = options;
 			_Walker = new(_Options);
 
@@ -71,22 +64,48 @@ namespace CSharpToJavaScript
 		/// Method for generating js file.
 		/// </summary>
 		/// <param name="path">Full path to cs file.</param>
+		/// <param name="filename">Filename of a js file. Default: <c>main.js</c></param>
 		/// <returns></returns>
-		public async Task GenerateAsync(string path) 
+		public async Task GenerateOneAsync(string path, string filename = "main.js") 
+		{
+			Assembly assembly = Assembly.GetEntryAssembly();
+
+			await GenerateAsync(path, assembly, filename);
+		}
+		/// <summary>
+		/// Method for generating multiply js files.
+		/// </summary>
+		/// <param name="path">Full path to the folder/directory.</param>
+		/// <returns></returns>
+		public async Task GenerateManyAsync(string path)
+		{
+			Assembly assembly = Assembly.GetEntryAssembly();
+
+			DirectoryInfo folder = new(path);
+
+			FileInfo[] Files = folder.GetFiles("*.cs");
+
+			foreach (FileInfo file in Files)
+			{
+				await GenerateAsync(file.FullName, assembly, file.Name.Replace(".cs", ".js"));
+			}
+		}
+
+		private async Task GenerateAsync(string path, Assembly assembly, string filename = "main.js") 
 		{
 			string fileCS = await File.ReadAllTextAsync(path);
 
 			SyntaxTree tree = CSharpSyntaxTree.ParseText(fileCS);
 			CompilationUnitSyntax root = tree.GetCompilationUnitRoot();
 
-			string assemblyPath = Path.GetDirectoryName(_Assembly.Location);
+			string assemblyPath = Path.GetDirectoryName(assembly.Location);
 			List<MetadataReference> references = new() { };
 
 			string rtPath = Path.GetDirectoryName(typeof(object).Assembly.Location);
 
 			references.Add(MetadataReference.CreateFromFile(Path.Combine(rtPath, "System.Private.CoreLib.dll")));
 
-			AssemblyName[] a = _Assembly.GetReferencedAssemblies();
+			AssemblyName[] a = assembly.GetReferencedAssemblies();
 			foreach (AssemblyName item in a)
 			{
 				if (File.Exists(Path.Combine(assemblyPath, item.Name + ".dll")))
@@ -98,7 +117,7 @@ namespace CSharpToJavaScript
 				}
 			}
 
-			
+
 			UsingDirectiveSyntax[] oldUsing = root.Usings.ToArray();
 
 			//https://roslynquoter.azurewebsites.net/
@@ -254,8 +273,7 @@ namespace CSharpToJavaScript
 		}
 	)
 ).AddUsings(oldUsing);
-
-			//Should I make "NormalizeWhitespace" optoion??? TODO!
+			//Should I make "NormalizeWhitespace" option??? TODO!
 			//.NormalizeWhitespace().AddUsings(oldUsing);
 
 			SyntaxTree trueST = trueRoot.SyntaxTree;
@@ -263,7 +281,7 @@ namespace CSharpToJavaScript
 				.Create("HelloWorld")
 				.AddReferences(references.ToArray())
 				.AddSyntaxTrees(trueST);
-			
+
 			Model = compilation.GetSemanticModel(trueST);
 
 			_Walker.JSSB.Append(_Options.AddSBInFront);
@@ -277,11 +295,11 @@ namespace CSharpToJavaScript
 				Directory.CreateDirectory(_Options.OutPutPath);
 			}
 
-			await File.WriteAllTextAsync(Path.Combine(_Options.OutPutPath, _Options.OutPutFileName), _Walker.JSSB.ToString());
-			
+			await File.WriteAllTextAsync(Path.Combine(_Options.OutPutPath, filename), _Walker.JSSB.ToString());
+
 			SM.Log($"--- Done!");
 			SM.Log($"--- Path: {_Options.OutPutPath}");
-			SM.Log($"--- File: {_Options.OutPutFileName}");
+			SM.Log($"--- File: {filename}");
 		}
 	}
 }

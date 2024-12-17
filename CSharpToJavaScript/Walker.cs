@@ -19,7 +19,7 @@ namespace CSharpToJavaScript
 	{
 		public StringBuilder JSSB { get; set; } = new();
 
-		private CSTOJSOptions _Options = new();
+		private readonly CSTOJSOptions _Options = new();
 
 		private SyntaxNode? _SNOriginal = null;
 		private SyntaxNode? _BaseConstructorInitializerNode = null;
@@ -621,7 +621,7 @@ namespace CSharpToJavaScript
 					{
 						case SyntaxKind.EqualsToken:
 							{
-								JSSB.Append(":");
+								JSSB.Append(':');
 								break;
 							}
 						default:
@@ -752,14 +752,14 @@ namespace CSharpToJavaScript
 
 							FieldDeclarationSyntax field = null;
 
-							if (key.Count() == 0)
+							if (!key.Any())
 							{
 								key = from n in nodesAndTokens
 									  where n.IsNode
 									  where n.AsNode().IsKind(SyntaxKind.IdentifierName)
 									  select n;
 
-								if (key.Count() == 0)
+								if (!key.Any())
 								{
 									key = from n in nodesAndTokens
 											   where n.IsNode
@@ -979,7 +979,7 @@ namespace CSharpToJavaScript
 								}
 								else
 								{
-									JSSB.Append($"\n");
+									JSSB.AppendLine();
 									SyntaxTriviaList _syntaxTrivias = asNode.Parent.Parent.GetLeadingTrivia();
 
 									for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
@@ -1458,7 +1458,7 @@ namespace CSharpToJavaScript
 							break;
 						case SyntaxKind.Interpolation:
 							{
-								JSSB.Append("$");
+								JSSB.Append('$');
 								Visit(asNode);
 								break;
 							}
@@ -1476,7 +1476,7 @@ namespace CSharpToJavaScript
 					{
 						case SyntaxKind.InterpolatedStringStartToken:
 						case SyntaxKind.InterpolatedStringEndToken:
-							JSSB.Append("`");
+							JSSB.Append('`');
 							break;
 						default:
 							SM.Log($"asToken : {kind}");
@@ -1734,7 +1734,7 @@ namespace CSharpToJavaScript
 
 									if (CustomCSNamesToJS(syntaxNode) == false)
 									{
-										JSSB.Append($" ");
+										JSSB.Append(' ');
 										if (BuiltInTypesGenerics(syntaxNode.WithoutLeadingTrivia(), iSymbol) == false)
 										{
 											SM.Log($"TODO : {syntaxNode} ||| USE 'CustomCSNamesToJS' TO CONVERT.");

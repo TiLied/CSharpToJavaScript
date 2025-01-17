@@ -1,4 +1,5 @@
-﻿using CSharpToJavaScript.Utils;
+﻿using CSharpToJavaScript.APIs.JS.Ecma;
+using CSharpToJavaScript.Utils;
 
 namespace CSharpToJavaScript.APIs.JS
 {
@@ -26,13 +27,13 @@ namespace CSharpToJavaScript.APIs.JS
 			//Float32Array, Float64Array, Int8Array, Int16Array, Int32Array, Map, Promise,
 			//Proxy, Set, SharedArrayBuffer, Uint8Array, Uint8ClampedArray, Uint16Array,
 			//Uint32Array, WeakMap, WeakRef, WeakSet
-			/*
+			
 			[To(ToAttribute.Default)]
-			public static AggregateError AggregateError(dynamic errors, dynamic? message = null,dynamic? options = null)
+			public static AggregateError AggregateError(object[] errors, string? message = null, object? options = null)
 			{
 				throw new System.NotImplementedException();
 			}
-			*/
+			
 			/*
 			[To(ToAttribute.Default)]
 			public static Array Array(params dynamic[] values)
@@ -40,13 +41,13 @@ namespace CSharpToJavaScript.APIs.JS
 				throw new System.NotImplementedException();
 			}
 			*/
-			/*
+			
 			[To(ToAttribute.Default)]
 			public static BigInt BigInt(dynamic value)
 			{
 				throw new System.NotImplementedException();
 			}
-			*/
+			
 
 			[To(ToAttribute.Default)]
 			public static bool Boolean(dynamic value)
@@ -60,20 +61,20 @@ namespace CSharpToJavaScript.APIs.JS
 				throw new System.NotImplementedException();
 			}
 
-			/*
+			
 			[To(ToAttribute.Default)]
-			public static Error Error(dynamic message, dynamic? options = null)
+			public static Error Error(string message, object? options = null)
 			{
 				throw new System.NotImplementedException();
-			}*/
+			}
 
-			/*
+			
 			[To(ToAttribute.Default)]
-			public static EvalError EvalError(dynamic message, dynamic? options = null)
+			public static EvalError EvalError(string message, object? options = null)
 			{
 				throw new System.NotImplementedException();
 			
-			}*/
+			}
 
 			//https://262.ecma-international.org/14.0/#sec-function-p1-p2-pn-body
 			//see NOTE!
@@ -96,21 +97,21 @@ namespace CSharpToJavaScript.APIs.JS
 				throw new System.NotImplementedException();
 
 			}
-			/*
-			[To(ToAttribute.Default)]
-			public static RangeError RangeError(dynamic message, dynamic? options = null)
-			{
-				throw new System.NotImplementedException();
-
-			}*/
-			/*
-			[To(ToAttribute.Default)]
-			public static ReferenceError ReferenceError(dynamic message, dynamic? options = null)
-			{
-				throw new System.NotImplementedException();
-
-			}*/
 			
+			[To(ToAttribute.Default)]
+			public static RangeError RangeError(string message, object? options = null)
+			{
+				throw new System.NotImplementedException();
+
+			}
+			
+			[To(ToAttribute.Default)]
+			public static ReferenceError ReferenceError(string message, object? options = null)
+			{
+				throw new System.NotImplementedException();
+
+			}
+
 			[To(ToAttribute.Default)]
 			public static string RegExp(string pattern, string? flags = null)
 			{
@@ -132,27 +133,27 @@ namespace CSharpToJavaScript.APIs.JS
 				throw new System.NotImplementedException();
 
 			}*/
-			/*
+			
 			[To(ToAttribute.Default)]
-			public static SyntaxError SyntaxError(dynamic message, dynamic? options = null)
+			public static SyntaxError SyntaxError(string message, object? options = null)
 			{
 				throw new System.NotImplementedException();
 
-			}*/
-			/*
+			}
+			
 			[To(ToAttribute.Default)]
-			public static TypeError TypeError(dynamic message, dynamic? options = null)
+			public static TypeError TypeError(string message, object? options = null)
 			{
 				throw new System.NotImplementedException();
 
-			}*/
-			/*
+			}
+			
 			[To(ToAttribute.Default)]
-			public static URIError URIError(dynamic message, dynamic? options = null)
+			public static URIError URIError(string message, object? options = null)
 			{
 				throw new System.NotImplementedException();
 
-			}*/
+			}
 
 		}
 

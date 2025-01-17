@@ -8,12 +8,20 @@ namespace CSharpToJavaScript.Utils
 	{
 		public IgnoreAttribute() { }
 	}
-
 	[AttributeUsage(AttributeTargets.All)]
 	public class ValueAttribute : Attribute
 	{
 		public string Value { get; init; }
-		public ValueAttribute(string value) 
+		public ValueAttribute(string value)
+		{
+			Value = value;
+		}
+	}
+	[AttributeUsage(AttributeTargets.All)]
+	public class EnumValueAttribute : Attribute
+	{
+		public string Value { get; init; }
+		public EnumValueAttribute(string value) 
 		{
 			Value = value;
 		}

@@ -36,6 +36,7 @@ namespace CSharpToJavaScript
 		private bool _ConstKeyword = false;
 		private bool _IgnoreArrayType = false;
 		private bool _IgnoreAsParenthesis = false;
+		private bool _IgnoreTailingDot = false;
 
 		private int _EnumMembers = 0;
 
@@ -773,6 +774,63 @@ namespace CSharpToJavaScript
 			}
 		}
 
+		public override void VisitMemberAccessExpression(MemberAccessExpressionSyntax node)
+		{
+			ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
+
+			for (int i = 0; i < nodesAndTokens.Count; i++)
+			{
+				SyntaxNode? asNode = nodesAndTokens[i].AsNode();
+
+				if (asNode != null)
+				{
+					SyntaxKind kind = asNode.Kind();
+
+					switch (kind)
+					{
+						case SyntaxKind.IdentifierName:
+							VisitIdentifierName((IdentifierNameSyntax)asNode);
+							break;
+						case SyntaxKind.ThisExpression:
+							VisitThisExpression((ThisExpressionSyntax)asNode);
+							break;
+						case SyntaxKind.ParenthesizedExpression:
+							VisitParenthesizedExpression((ParenthesizedExpressionSyntax)asNode);
+							break;
+						case SyntaxKind.InvocationExpression:
+						case SyntaxKind.ElementAccessExpression:
+						case SyntaxKind.SimpleMemberAccessExpression:
+						case SyntaxKind.MemberBindingExpression:
+							Visit(asNode);
+							break;
+						default:
+							_Log.ErrorLine($"asNode : {kind}");
+							break;
+					}
+				}
+				else
+				{
+					SyntaxToken asToken = nodesAndTokens[i].AsToken();
+					SyntaxKind kind = asToken.Kind();
+
+					switch (kind)
+					{
+						case SyntaxKind.DotToken:
+							{
+								if (_IgnoreTailingDot)
+									_IgnoreTailingDot = false;
+								else
+									VisitToken(asToken);
+
+								break;
+							}
+						default:
+							_Log.ErrorLine($"asToken : {kind}");
+							break;
+					}
+				}
+			}
+		}
 		public override void VisitAnonymousObjectCreationExpression(AnonymousObjectCreationExpressionSyntax node)
 		{
 			ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
@@ -2746,8 +2804,8 @@ namespace CSharpToJavaScript
 				catch (Exception e)
 				{
 					symbolInfo = null;
-					var a = _Model.GetDeclarationDiagnostics();
-					foreach (Diagnostic item in a)
+					ImmutableArray<Diagnostic> diags = _Model.GetDeclarationDiagnostics();
+					foreach (Diagnostic item in diags)
 					{
 						_Log.WarningLine(item.ToString());
 					}
@@ -2767,39 +2825,64 @@ namespace CSharpToJavaScript
 			{
 				if (iSymbol.ContainingNamespace.ToString().Contains(nameof(CSharpToJavaScript)))
 				{
+					//
+					//
+					//Checking attribute data of a types, see Utils/Attributes.
+
+					//Attributes of this node(type)
 					ImmutableArray<AttributeData> _attributeDatas = iSymbol.GetAttributes();
 					foreach (AttributeData _attr in _attributeDatas)
 					{
-						if (_attr.AttributeClass.Name == nameof(ValueAttribute)) 
+						if (_attr.AttributeClass.Name == nameof(EnumValueAttribute)) 
 						{
-							ValueAttribute _attrLocal = new(_attr.ConstructorArguments[0].Value as string);
+							EnumValueAttribute _attrLocal = new(_attr.ConstructorArguments[0].Value as string);
 
 							VisitLeadingTrivia(identifier);
-
-							//Todo? Better delete the dot, elsewhere.
-							JSSB.Remove(JSSB.Length - 1, 1);
-							
 							JSSB.Append($"\"{_attrLocal.Value}\"");
 							VisitTrailingTrivia(identifier);
 							return true;
 						}
 
+						if (_attr.AttributeClass.Name == nameof(ValueAttribute))
+						{
+							ValueAttribute _attrLocal = new(_attr.ConstructorArguments[0].Value as string);
+
+							VisitLeadingTrivia(identifier);
+							JSSB.Append($"{_attrLocal.Value}");
+							VisitTrailingTrivia(identifier);
+							return true;
+						}
+
 						if (_attr.AttributeClass.Name == nameof(ToAttribute))
 						{
 							ToAttribute _attrLocal = new(_attr.ConstructorArguments[0].Value as string);
+
+							if (_attrLocal.To == ToAttribute.None)
+								_IgnoreTailingDot = true;
 
 							VisitLeadingTrivia(identifier);
 							JSSB.Append($"{_attrLocal.Convert(text)}");
 							VisitTrailingTrivia(identifier);
 							return true;
+							
 						}
 					}
-					//if (_attributeDatas.Length == 0) 
-					//{
+
+					//Attributes of a parent node(type)
 					_attributeDatas = iSymbol.ContainingType.GetAttributes();
 					foreach (AttributeData _attr in _attributeDatas)
 					{
-						if (_attr.AttributeClass.Name == nameof(ToAttribute))
+						if (_attr.AttributeClass.Name == nameof(ValueAttribute))
+						{
+							ValueAttribute _attrLocal = new(_attr.ConstructorArguments[0].Value as string);
+
+							VisitLeadingTrivia(identifier);
+							JSSB.Append($"{_attrLocal.Value}");
+							VisitTrailingTrivia(identifier);
+							return true;
+						}
+
+						if (_attr.AttributeClass?.Name == nameof(ToAttribute))
 						{
 							ToAttribute _attrLocal = new(_attr.ConstructorArguments[0].Value as string);
 
@@ -2809,7 +2892,6 @@ namespace CSharpToJavaScript
 							return true;
 						}
 					}
-					//}
 				}
 
 				if (iSymbol.ContainingNamespace.ToString().Contains(_NameSpaceStr))
@@ -2830,9 +2912,9 @@ namespace CSharpToJavaScript
 						return false;
 					}
 
-					SyntaxList<MemberDeclarationSyntax> a = _class.Members;
+					SyntaxList<MemberDeclarationSyntax> _members = _class.Members;
 
-					foreach (MemberDeclarationSyntax item in a)
+					foreach (MemberDeclarationSyntax item in _members)
 					{
 						SyntaxToken _sT = default;
 						if (item is MethodDeclarationSyntax m)
@@ -2908,11 +2990,18 @@ namespace CSharpToJavaScript
 					object[] _attrs = type.GetCustomAttributes(true);
 					foreach (object _attr in _attrs)
 					{
-						ToAttribute? _authAttr = _attr as ToAttribute;
-						if (_authAttr != null)
+
+						if (_attr is ValueAttribute valueAttribute)
 						{
 							VisitLeadingTrivia(identifier);
-							JSSB.Append($"{_authAttr.Convert(text)}");
+							JSSB.Append($"{valueAttribute.Value}");
+							VisitTrailingTrivia(identifier);
+							return true;
+						}
+						if (_attr is ToAttribute toAttribute)
+						{
+							VisitLeadingTrivia(identifier);
+							JSSB.Append($"{toAttribute.Convert(text)}");
 							return true;
 						}
 					}
@@ -2942,10 +3031,17 @@ namespace CSharpToJavaScript
 
 						foreach (object _attr in _attrs)
 						{
-							ToAttribute? _authAttr = _attr as ToAttribute;
-							if (_authAttr != null)
+							if (_attr is ValueAttribute valueAttribute)
 							{
-								JSSB.Append($"{_authAttr.Convert(text)}");
+								VisitLeadingTrivia(identifier);
+								JSSB.Append($"{valueAttribute.Value}");
+								VisitTrailingTrivia(identifier);
+								return true;
+							}
+							if (_attr is ToAttribute toAttribute)
+							{
+								VisitLeadingTrivia(identifier);
+								JSSB.Append($"{toAttribute.Convert(text)}");
 								return true;
 							}
 						}

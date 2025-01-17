@@ -7,8 +7,12 @@ namespace CSharpToJavaScript.APIs.JS
 	public partial class Number : NumberPrototype
 	{
 		public dynamic Value { get; set; }
+
 		public static implicit operator Number(double value) { return new Number { Value = value }; }
+		public static implicit operator Number(int value) { return new Number { Value = value }; }
+		
 		public static implicit operator double(Number value) { return new Number { Value = value }; }
+		public static implicit operator int(Number value) { return new Number { Value = value }; }
 
 		[To(ToAttribute.FirstCharToLowerCase)]
 		public static NumberPrototype Prototype { get; } = new();
@@ -24,6 +28,7 @@ namespace CSharpToJavaScript.APIs.JS
 
 		public Number() { }
 		public Number(double value) { }
+		public Number(int value) { }
 
 		[To(ToAttribute.FirstCharToLowerCase)]
 		public bool IsFinite(double number) 

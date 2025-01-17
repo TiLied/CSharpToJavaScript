@@ -28,6 +28,8 @@ namespace CSharpToJavaScript
 		private Walker? _Walker = null;
 		private FileSystemWatcher? _FSWatcher = null;
 
+		private bool _IsRunning = false;
+
 		/// <summary>
 		/// New instance of <see cref="CSTOJS"/> with default options, see <see cref="CSTOJSOptions"/>.
 		/// </summary>
@@ -272,7 +274,8 @@ namespace CSharpToJavaScript
 
 			_Log.WriteLine($"Changed: {e.FullPath}");
 
-			await GenerateOneAsync(e.FullPath);
+			if(!_IsRunning)
+				await GenerateOneAsync(e.FullPath);
 		}
 
 		private void OnCreated(object sender, FileSystemEventArgs e)
@@ -312,6 +315,8 @@ namespace CSharpToJavaScript
 
 		private void Generate(SyntaxTree tree, Assembly? assembly, List<MetadataReference>? refs = null)
 		{
+			_IsRunning = true;
+
 			if (_Options.Debug)
 			{
 				_Stopwatch.Restart();
@@ -511,9 +516,29 @@ namespace CSharpToJavaScript
 
 			if (_Options.KeepBraceOnTheSameLine)
 			{
-				//TODO! remove whitespace trivia before brace!
+				//Mostly deleted whitespaces, still TODO?
 				SyntaxToken[] allBraces = trueRoot.DescendantTokens().Where((e) => e.IsKind(SyntaxKind.OpenBraceToken)).ToArray();
+			
+				List<SyntaxTrivia> allTriviaToDelete = new();
+				
+				for (int i = 0; i < allBraces.Length; i++)
+				{
+					if (allBraces[i].HasLeadingTrivia)
+					{
+						SyntaxTriviaList _lt = allBraces[i].LeadingTrivia;
+						for (int j = 0; j < _lt.Count; j++)
+						{
+							allTriviaToDelete.Add(_lt[j]);
+						}
+					}
+				}
+				//Is this the right way to delete trivia?
+				trueRoot = trueRoot.ReplaceTrivia(allTriviaToDelete, (o, r) => SyntaxFactory.ElasticMarker);
+
+				allBraces = trueRoot.DescendantTokens().Where((e) => e.IsKind(SyntaxKind.OpenBraceToken)).ToArray();
+
 				List<SyntaxTrivia> allTriviaToReplace = new();
+
 				for (int i = 0; i < allBraces.Length; i++)
 				{
 					SyntaxToken _token = allBraces[i].GetPreviousToken();
@@ -527,7 +552,6 @@ namespace CSharpToJavaScript
 					}
 				}
 				trueRoot = trueRoot.ReplaceTrivia(allTriviaToReplace, (o, r) => SyntaxFactory.Space);
-				
 			}
 
 			if (rtPath != null && rtPath != string.Empty)
@@ -629,6 +653,8 @@ namespace CSharpToJavaScript
 				_Stopwatch.Stop();
 				_Log.WriteLine($"Stop stopwatch: {_Stopwatch.Elapsed}");
 			}
+
+			_IsRunning = false;
 		}
 
 	}

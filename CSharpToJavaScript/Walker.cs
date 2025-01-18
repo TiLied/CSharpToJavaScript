@@ -20,6 +20,7 @@ namespace CSharpToJavaScript
 	{
 		public StringBuilder JSSB { get; set; } = new();
 
+		private readonly NETAPI _NETAPI = new();
 
 		private readonly ILog _Log;
 		private readonly CSTOJSOptions _Options;
@@ -109,7 +110,6 @@ namespace CSharpToJavaScript
 				case SyntaxKind.CommaToken:
 				case SyntaxKind.NewKeyword:
 				case SyntaxKind.ThisKeyword:
-				case SyntaxKind.ExclamationEqualsToken:
 				case SyntaxKind.MinusToken:
 				case SyntaxKind.MinusMinusToken:
 				case SyntaxKind.SlashToken:
@@ -164,6 +164,18 @@ namespace CSharpToJavaScript
 						VisitLeadingTrivia(token);
 
 						JSSB.Append(token.Text);
+
+						VisitTrailingTrivia(token);
+						return;
+					}
+				case SyntaxKind.ExclamationEqualsToken:
+					{
+						VisitLeadingTrivia(token);
+
+						if (_Options.UseStrictEquality)
+							JSSB.Append("!==");
+						else
+							JSSB.Append(token.Text);
 
 						VisitTrailingTrivia(token);
 						return;
@@ -717,6 +729,9 @@ namespace CSharpToJavaScript
 
 					switch (kind)
 					{
+						case SyntaxKind.ConditionalExpression:
+						case SyntaxKind.UnaryMinusExpression:
+						case SyntaxKind.DivideExpression:
 						case SyntaxKind.SimpleMemberAccessExpression:
 						case SyntaxKind.ElementAccessExpression:
 						case SyntaxKind.PostIncrementExpression:
@@ -1059,6 +1074,9 @@ namespace CSharpToJavaScript
 								}
 								break;
 							}
+						case SyntaxKind.IdentifierName:
+							VisitIdentifierName((IdentifierNameSyntax)asNode);
+							break;
 						case SyntaxKind.ParameterList:
 						case SyntaxKind.Block:
 							Visit(asNode);
@@ -2006,6 +2024,9 @@ namespace CSharpToJavaScript
 								}
 								break;
 							}
+						case SyntaxKind.CommaToken:
+							VisitToken(asToken);
+							break;
 						default:
 							_Log.ErrorLine($"asToken : {kind}");
 							break;
@@ -2028,6 +2049,7 @@ namespace CSharpToJavaScript
 
 					switch (kind)
 					{
+						case SyntaxKind.ArrayInitializerExpression:
 						case SyntaxKind.StringLiteralExpression:
 						case SyntaxKind.NumericLiteralExpression:
 							Visit(asNode);
@@ -3147,205 +3169,30 @@ namespace CSharpToJavaScript
 			string typeName = typeSymbol.Name;
 			ToAttribute toAttribute = new(ToAttribute.Default);
 
-			switch (typeName)
+			string? jsStr = _NETAPI.ReturnJSString(typeName);
+			if (jsStr == null)
 			{
-				case string str when str.Contains(nameof(System.Text.Json.JsonSerializer)): 
-					{
-						string _name = symbol.Name;
-						switch (_name)
-						{
-							case string _str when _str == typeName:
-								{
-									JSSB.Append($"JSON");
-									return true;
-								}
-							case string _str when _str.Contains(nameof(System.Text.Json.JsonSerializer.Deserialize)):
-								{
-									JSSB.Append($"parse");
-									return true;
-								}
-							case string _str when _str.Contains(nameof(System.Text.Json.JsonSerializer.Serialize)):
-								{
-									JSSB.Append($"stringify");
-									return true;
-								}
-							default:
-								_Log.WarningLine($"WARNING! node: \"{node}\", typeSymbol: \"{typeSymbol}\", symbol: \"{symbol}\", Is not supported! USE \"CustomCSNamesToJS\"");
-								return false;
-						}
-					}
-				case string str when str.Contains(nameof(Console)):
-					{
-						string _name = symbol.Name;
-						switch (_name)
-						{
-							case string _str when _str == typeName:
-								{
-									toAttribute.To = ToAttribute.FirstCharToLowerCase;
-									JSSB.Append($"{toAttribute.Convert(node.Identifier.Text)}");
-									return true;
-								}
-							case string _str when 
-							_str.Contains(nameof(Console.WriteLine)) ||
-							_str.Contains(nameof(Console.Write)):
-								{
-									JSSB.Append($"log");
-									return true;
-								}
-							default:
-								_Log.WarningLine($"WARNING! node: \"{node}\", typeSymbol: \"{typeSymbol}\", symbol: \"{symbol}\", Is not supported! USE \"CustomCSNamesToJS\"");
-								return false;
-						}
-					}
-				case string str when str.Contains(nameof(List<object>)):
-					{
-						string _name = symbol.Name;
-						switch (_name)
-						{
-							case string _str when _str == typeName:
-								{
-									JSSB.Append($"Array");
-									return true;
-								}
-							case string _str when 
-							_str.Contains(nameof(List<object>.Sort)) || 
-							_str.Contains(nameof(List<object>.FindLast)):
-								{
-									toAttribute.To = ToAttribute.FirstCharToLowerCase;
-									JSSB.Append($"{toAttribute.Convert(node.Identifier.Text)}");
-									return true;
-								}
-							case string _str when _str.Contains(nameof(List<object>.Count)):
-								{
-									JSSB.Append($"length");
-									return true;
-								}
-							case string _str when _str.Contains(nameof(List<object>.Add)):
-								{
-									JSSB.Append($"push");
-									return true;
-								}
-							case string _str when _str.Contains(nameof(List<object>.Contains)):
-								{
-									JSSB.Append($"includes");
-									return true;
-								}
-							default:
-								_Log.WarningLine($"WARNING! node: \"{node}\", typeSymbol: \"{typeSymbol}\", symbol: \"{symbol}\", Is not supported! USE \"CustomCSNamesToJS\"");
-								return false;
-						}
-					}
-				case string str when str.Contains(nameof(Dictionary<object, object>)):
-					{
-						string _name = symbol.Name;
-						switch (_name)
-						{
-							case string _str when _str == typeName:
-								{
-									JSSB.Append($"Map");
-									return true;
-								}
-							case string _str when _str.Contains(nameof(Dictionary<object, object>.Keys)):
-								{
-									JSSB.Append($"keys()");
-									return true;
-								}
-							case string _str when _str.Contains(nameof(Dictionary<object, object>.Values)):
-								{
-									JSSB.Append($"values()");
-									return true;
-								}
-							case string _str when _str.Contains(nameof(Dictionary<object, object>.ContainsKey)):
-								{
-									JSSB.Append($"has");
-									return true;
-								}
-							default:
-								_Log.WarningLine($"WARNING! node: \"{node}\", typeSymbol: \"{typeSymbol}\", symbol: \"{symbol}\", Is not supported! USE \"CustomCSNamesToJS\"");
-								return false;
-						}
-					}
-				case string str when str.Contains(nameof(String)):
-					{
-						string _name = symbol.Name;
-						switch (_name)
-						{
-							case string _str when _str.Contains(nameof(string.Contains)):
-								{
-									JSSB.Append($"includes");
-									return true;
-								}
-							case string _str when
-							_str.Contains(nameof(string.Length)) ||
-							_str.Contains(nameof(string.Trim)) ||
-							_str.Contains(nameof(string.Substring)) ||
-							_str.Contains(nameof(string.StartsWith)) ||
-							_str.Contains(nameof(string.Replace)):
-								{
-									toAttribute.To = ToAttribute.FirstCharToLowerCase;
-									JSSB.Append($"{toAttribute.Convert(node.Identifier.Text)}");
-									return true;
-								}
-							default:
-								_Log.WarningLine($"WARNING! node: \"{node}\", typeSymbol: \"{typeSymbol}\", symbol: \"{symbol}\", Is not supported! USE \"CustomCSNamesToJS\"");
-								return false;
-						}
-					}
-				case string str when str.Contains(nameof(System.Threading.Tasks.Task<dynamic>)):
-					{
-						string _name = symbol.Name;
-						switch (_name)
-						{
-							case string _str when _str.Contains(nameof(System.Threading.Tasks.Task.ContinueWith)):
-								{
-									JSSB.Append($"then");
-									return true;
-								}
-							default:
-								_Log.WarningLine($"WARNING! node: \"{node}\", typeSymbol: \"{typeSymbol}\", symbol: \"{symbol}\", Is not supported! USE \"CustomCSNamesToJS\"");
-								return false;
-						}
-					}
-				case string str when str.Contains(nameof(Array)):
-					{
-						string _name = symbol.Name;
-						switch (_name)
-						{
-							case string _str when _str.Contains(nameof(Array.Length)):
-								{
-									toAttribute.To = ToAttribute.FirstCharToLowerCase;
-									JSSB.Append($"{toAttribute.Convert(node.Identifier.Text)}");
-									return true;
-								}
-							default:
-								_Log.WarningLine($"WARNING! node: \"{node}\", typeSymbol: \"{typeSymbol}\", symbol: \"{symbol}\", Is not supported! USE \"CustomCSNamesToJS\"");
-								return false;
-						}
-					}
-				case string str when str.Contains(nameof(Math)):
-					{
-						string _name = symbol.Name;
-						switch (_name)
-						{
-							case string _str when _str == typeName:
-								{
-									JSSB.Append(nameof(Math));
-									return true;
-								}
-							case string _str when _str.Contains(nameof(Math.Sqrt)):
-								{
-									toAttribute.To = ToAttribute.FirstCharToLowerCase;
-									JSSB.Append($"{toAttribute.Convert(node.Identifier.Text)}");
-									return true;
-								}
-							default:
-								_Log.WarningLine($"WARNING! node: \"{node}\", typeSymbol: \"{typeSymbol}\", symbol: \"{symbol}\", Is not supported! USE \"CustomCSNamesToJS\"");
-								return false;
-						}
-					}
-				default:
-					_Log.WarningLine($"WARNING! typeSymbol: \"{typeSymbol}\" Is not supported! USE \"CustomCSNamesToJS\"");
+				_Log.WarningLine($"WARNING! typeSymbol: \"{typeSymbol}\" Is not supported! USE \"CustomCSNamesToJS\"");
+				return false;
+			}
+			else
+			{
+				if (typeName == symbol.Name)
+				{
+					JSSB.Append($"{jsStr}");
+					return true;
+				}
+				jsStr = _NETAPI.ReturnJSString(typeName, symbol.Name);
+				if (jsStr == null)
+				{
+					_Log.WarningLine($"WARNING! node: \"{node}\", typeSymbol: \"{typeSymbol}\", symbol: \"{symbol}\", Is not supported! USE \"CustomCSNamesToJS\"");
 					return false;
+				}
+				else
+				{
+					JSSB.Append($"{jsStr}");
+					return true;
+				}
 			}
 		}
 	}

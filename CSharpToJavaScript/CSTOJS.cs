@@ -261,6 +261,8 @@ namespace CSharpToJavaScript
 				_FSWatcher.Filter = file.Name;
 				_FSWatcher.IncludeSubdirectories = true;
 				_FSWatcher.EnableRaisingEvents = true;
+
+				_Log.WriteLine($"Watching to: {path}");
 			}
 			else
 			{

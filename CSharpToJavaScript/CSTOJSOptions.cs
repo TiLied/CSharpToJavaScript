@@ -40,7 +40,7 @@ namespace CSharpToJavaScript
 		/// Output path for javascript file/files.
 		/// </summary>
 		/// <value>
-		/// Default: <see cref="Directory.GetCurrentDirectory()" />
+		/// Default: <see cref="Directory.GetCurrentDirectory" />
 		/// </value>
 		public string OutPutPath { get; set; } = Directory.GetCurrentDirectory();
 
@@ -75,7 +75,7 @@ namespace CSharpToJavaScript
 		public bool NormalizeWhitespace { get; set; } = false;
 
 		/// <summary>
-		/// Replace '<c>==</c>' with '<c>===</c>'.
+		/// Replace '<c>==</c>' with '<c>===</c>' and '<c>!=</c>' with '<c>!==</c>'.
 		/// </summary>
 		/// <value>
 		/// Default: <c>false</c>

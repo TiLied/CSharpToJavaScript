@@ -5,7 +5,7 @@ The <strong>read-only</strong> <see cref="HTMLSelectElement"/> property<br/><str
 </summary>
 <remarks>
 <para>An option is considered selected if it has an <see cref="HTMLOptionElement.Selected"/><br/>attribute.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Learn/Forms/Other_form_controls#drop-down_controls">Drop-down controls</see><br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Other_form_controls#drop-down_controls">Drop-down controls</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/selectedOptions"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>An <see cref="HTMLCollection"/> which lists every currently selected<br/><see cref="HTMLOptionElement"/> which is either a child of the<br/><see cref="HTMLSelectElement"/> or of an <see cref="HTMLOptGroupElement"/> within the<br/><c>&amp;lt;select&amp;gt;</c> element.In other words, any option contained within the <c>&amp;lt;select&amp;gt;</c> element may<br/>be part of the results, but option groups are not included in the list.If no options are currently selected, the collection is empty and returns a<br/><see cref="HTMLCollection.Length"/> of 0.</value>

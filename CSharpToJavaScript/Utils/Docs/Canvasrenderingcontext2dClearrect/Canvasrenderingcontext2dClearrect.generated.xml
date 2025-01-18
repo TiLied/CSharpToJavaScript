@@ -4,7 +4,7 @@
 The<br/><strong><c>CanvasRenderingContext2D.clearRect()</c></strong><br/>method of the Canvas 2D API erases the pixels in a rectangular area by setting them to<br/>transparent black.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Be aware that <c>clearRect()</c> may cause unintended<br/>side effects if you&amp;apos;re not <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes#drawing_paths">using paths properly</see>. Make sure to call<br/><see cref="CanvasRenderingContext2D.BeginPath"/> before starting to<br/>draw new items after calling <c>clearRect()</c>.</para></blockquote>
+<blockquote><para>Be aware that <c>clearRect()</c> may cause unintended<br/>side effects if you&amp;apos;re not <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes#drawing_paths">using paths properly</see>. Make sure to call<br/><see cref="CanvasRenderingContext2D.BeginPath"/> before starting to<br/>draw new items after calling <c>clearRect()</c>.</para></blockquote>
 <para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasRenderingContext2D.FillRect"/><br/>-<see cref="CanvasRenderingContext2D.StrokeRect"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/clearRect"> <em>See also on MDN</em> </seealso></para>
 </remarks>

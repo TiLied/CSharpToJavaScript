@@ -1,0 +1,13 @@
+<docs>
+<MediaMetadataChapterInfo>
+<summary>
+The <strong><c>chapterInfo</c></strong> read-only property of the <see cref="MediaMetadata"/> interface returns an array of chapter information metadata associated with playing media, represented by <see cref="ChapterInformation"/> object instances.
+</summary>
+<remarks>
+<para>The <c>chapterInfo</c> for a given media resource is set when it is first created, via the <c>chapterInfo</c> property of the <see cref="MediaMetadata.MediaMetadata"/> constructor's initialization object.</para>
+<para>-<see cref="ChapterInformation"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaMetadata/chapterInfo"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An array of <see cref="ChapterInformation"/> object instances.</value>
+</MediaMetadataChapterInfo>
+</docs>

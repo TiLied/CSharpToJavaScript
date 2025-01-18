@@ -1,0 +1,13 @@
+<docs>
+<SchedulerYield>
+<summary>
+The <strong><c>yield()</c></strong> method of the <see cref="'Scheduler'"/> interface is used for yielding to the <see href="https://developer.mozilla.org/en-US/docs/Glossary/Main_thread">main thread</see> during a task and continuing execution later, with the continuation scheduled as a prioritized task (see the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Prioritized_Task_Scheduling_API">Prioritized Task Scheduling API</see> for more information). This allows long-running work to be broken up so the browser stays responsive.
+</summary>
+<remarks>
+<para>The task can continue when the promise returned by the method is resolved. The priority for when the promise is resolved defaults to <see href="https://developer.mozilla.org/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#user-visible"><c>&amp;quot;user-visible&amp;quot;</c></see>, but can inherit a different priority if the <c>yield()</c> call occurs within a <see cref="'Scheduler.PostTask'"/> callback.</para><para>In addition, the continuation of work after the <c>yield()</c> call can be canceled if it occurs within a <c>postTask()</c> callback and the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Scheduler/postTask#aborting_tasks">task is aborted</see>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Prioritized_Task_Scheduling_API">Prioritized Task Scheduling API</see><br/>-<see cref="'Scheduler'"/><br/>-<see cref="'Scheduler.PostTask'"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Scheduler/yield"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Returns a {{jsxref('Promise')}} that is fulfilled with {{jsxref('undefined')}}, or rejected with an <see cref="'AbortSignal.Reason'"/>.</returns>
+</SchedulerYield>
+</docs>

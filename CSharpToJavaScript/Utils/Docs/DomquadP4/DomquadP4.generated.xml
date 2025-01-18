@@ -1,0 +1,12 @@
+<docs>
+<DOMQuadP4>
+<summary>
+The <strong><c>DOMQuad</c></strong> interface&amp;apos;s <strong><c>p4</c></strong> property holds the <see cref="DOMPoint"/> object that represents one of the four corners of the <c>DOMQuad</c>. When created from <see cref="DOMQuad.FromRect"/>, it is the point (x, y + height).
+</summary>
+<remarks>
+<para>-The other <c>DOMPoint</c> properties: <see cref="DOMQuad.P1"/>,<br/><see cref="DOMQuad.P2"/>, and <see cref="DOMQuad.P3"/>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMQuad/p4"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <see cref="DOMPoint"/> object includes the following double-precision floating-point values:Each of these values is <strong>unrestricted</strong>, meaning that it is allowed to be infinite or invalid (that is, its value may be <see cref="NaN"/> or <see cref="Infinity"/>).</value>
+</DOMQuadP4>
+</docs>

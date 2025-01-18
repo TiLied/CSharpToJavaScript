@@ -8,6 +8,6 @@ The read-only <strong><c>pictureInPictureElement</c></strong> property of the <s
 <para>-<see cref="HTMLVideoElement.RequestPictureInPicture"/><br/>-<see cref="HTMLVideoElement.DisablePictureInPicture"/><br/>-<see cref="Document.PictureInPictureEnabled"/><br/>-<see cref="Document.ExitPictureInPicture"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:picture-in-picture">:picture-in-picture</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/pictureInPictureElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A reference to the <see cref="Element"/> object that's currently in<br/>picture-in-picture mode; if picture-in-picture mode isn&amp;apos;t currently in use by the<br/><c>document</c>, the returned value is <c>null</c>.</value>
+<value>A reference to the <see cref="Element"/> object that's currently in picture-in-picture mode.Returns <c>null</c> if the document has no associated element in picture-in-picture mode. For example, there&amp;apos;s no picture-in-picture element, or the element is from an iframe.</value>
 </DocumentPictureInPictureElement>
 </docs>

@@ -1,12 +1,12 @@
 <docs>
 <GamepadHapticActuatorPlayEffect>
 <summary>
-The <strong><c>playEffect()</c></strong> method of the <see cref="GamepadHapticActuator"/> interface makes the hardware play a specific vibration pattern.
+The <strong><c>playEffect()</c></strong> method of the <see cref="GamepadHapticActuator"/> interface causes the hardware to play a specific vibration effect.
 </summary>
 <remarks>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API">Gamepad API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GamepadHapticActuator/playEffect"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A promise that resolves with <c>true</c> when the playEffect successfully completes.</returns>
+<returns>A promise that resolves with <c>&amp;quot;complete&amp;quot;</c> when the effect successfully completes, or <c>&amp;quot;preempted&amp;quot;</c> if the current effect is stopped or replaced by another effect.The promise may reject with the following exception types:</returns>
 </GamepadHapticActuatorPlayEffect>
 </docs>

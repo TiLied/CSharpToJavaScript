@@ -1,0 +1,12 @@
+<docs>
+<CloseWatcherDestroy>
+<summary>
+The <strong><c>destroy()</c></strong> method of the <see cref="CloseWatcher"/> interface deactivates the close watcher. This is intended to be called if the relevant UI element is torn down in some other way than being closed.
+</summary>
+<remarks>
+<para>After being deactivated, this <c>CloseWatcher</c> will no longer receive <c>cancel</c> or <c>close</c> events, and it will be possible to create new independent <c>CloseWatcher</c> instances.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CloseWatcher/destroy"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</CloseWatcherDestroy>
+</docs>

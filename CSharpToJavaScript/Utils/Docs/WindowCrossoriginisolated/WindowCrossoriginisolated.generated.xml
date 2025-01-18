@@ -1,0 +1,13 @@
+<docs>
+<WindowCrossOriginIsolated>
+<summary>
+The <strong><c>crossOriginIsolated</c></strong> read-only property of the <see cref="Window"/> interface returns a boolean value that indicates whether the document is cross-origin isolated.
+</summary>
+<remarks>
+<para>A cross-origin isolated document only shares its <see href="https://developer.mozilla.org/en-US/docs/Glossary/Browsing context">Browsing context</see> with same-origin documents in popups and navigations, and resources (both same-origin and cross-origin) that the document has opted into using via <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">CORS</see> (and <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy">COEP</see> for <c>&amp;lt;iframe&amp;gt;</c>).<br/>The relationship between a cross-origin opener of the document or any cross-origin popups that it opens are severed.<br/>The document may also be hosted in a separate OS process alongside other documents with which it can communicate by operating on shared memory.<br/>This mitigates the risk of side-channel attacks and cross-origin attacks referred to as <see href="https://xsleaks.dev/">XS-Leaks</see>.</para><para>Cross-origin isolated documents operate with fewer restrictions when using the following APIs:</para><para>A document will be cross-origin isolated if it is returned with an HTTP response that includes the headers:</para><para>Access to the APIs must also be allowed by the <c>Permissions-Policy</c> <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy/cross-origin-isolated">Permissions-Policy/cross-origin-isolated</see>.<br/>Otherwise <c>crossOriginIsolated</c> property will return <c>false</c>, and the document will not be able to use the APIs listed above with reduced restrictions.</para>
+<para>-<see cref="WorkerGlobalScope.CrossOriginIsolated"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Window/crossOriginIsolated"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value.</value>
+</WindowCrossOriginIsolated>
+</docs>

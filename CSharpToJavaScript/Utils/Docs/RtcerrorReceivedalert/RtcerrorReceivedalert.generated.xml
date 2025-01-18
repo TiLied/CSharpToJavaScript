@@ -6,6 +6,6 @@ The <see cref="RTCError"/> read-only property<br/><strong><c>receivedAlert</c></
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCError/receivedAlert"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An unsigned long integer value specifying the fatal <see href="https://developer.mozilla.org/en-US/docs/Glossary/DTLS">DTLS</see> error which<br/>resulted in an alert being received from the remote peer.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> This property is <c>null</c> if the <c>RTCError</c> doesn&amp;apos;t represent a<br/>DTLS error (with <see cref="RTCError.ErrorDetail"/> set to<br/><c>dtls-failure</c>).</blockquote></value>
+<value>An unsigned long integer value specifying the fatal <see href="https://developer.mozilla.org/en-US/docs/Glossary/DTLS">DTLS</see> error which<br/>resulted in an alert being received from the remote peer.<blockquote>This property is <c>null</c> if the <c>RTCError</c> doesn&amp;apos;t represent a<br/>DTLS error (with <see cref="RTCError.ErrorDetail"/> set to<br/><c>dtls-failure</c>).</blockquote></value>
 </RTCErrorReceivedAlert>
 </docs>

@@ -1,0 +1,13 @@
+<docs>
+<HTMLFieldSetElementSetCustomValidity>
+<summary>
+The <strong><c>setCustomValidity()</c></strong> method of the <see cref="HTMLFieldSetElement"/> interface sets the custom validity message for the {{htmlelement("fieldset")}} element. Use the empty string to indicate that the element does <strong>not</strong> have a custom validity error.
+</summary>
+<remarks>
+<para>The <c>&amp;lt;fieldset&amp;gt;</c> element is not a candidate for constraint validation. The <see cref="HTMLFieldSetElement.ReportValidity"/> method will not cause the custom error message to be displayed to the user, but does set the <see cref="ValidityState.CustomError"/> property of the element's <see cref="ValidityState"/> object to <c>true</c> and the <see cref="ValidityState.Valid"/> property to <c>false</c>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset">fieldset</see><br/>-<see cref="HTMLFieldSetElement"/><br/>-<see cref="HTMLFieldSetElement.Validity"/><br/>-<see cref="HTMLFieldSetElement.CheckValidity"/><br/>-<see cref="HTMLFieldSetElement.ReportValidity"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation">Form validation</see>.<br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation">Learn: Client-side form validation</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation">Guide: Constraint validation</see><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:valid">:valid</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:invalid">:invalid</see> pseudo-classes<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFieldSetElement/setCustomValidity"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</HTMLFieldSetElementSetCustomValidity>
+</docs>

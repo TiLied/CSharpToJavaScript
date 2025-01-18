@@ -1,0 +1,12 @@
+<docs>
+<NotRestoredReasonsId>
+<summary>
+The <strong><c>id</c></strong> read-only property of the<br/><see cref="NotRestoredReasons"/> interface returns a string representing the <c>id</c> attribute value of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</see> the document is contained in (for example <c>&amp;lt;iframe id=&amp;quot;foo&amp;quot; src=&amp;quot;...&amp;quot;&amp;gt;</c>).
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Performance_API/Monitoring_bfcache_blocking_reasons">Monitoring bfcache blocking reasons</see><br/>-<see cref="PerformanceNavigationTiming.NotRestoredReasons"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NotRestoredReasons/id"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.If the document is not in an <c>&amp;lt;iframe&amp;gt;</c> or the <c>&amp;lt;iframe&amp;gt;</c> has no <c>id</c> set, <c>id</c> will return <c>null</c>.</value>
+</NotRestoredReasonsId>
+</docs>

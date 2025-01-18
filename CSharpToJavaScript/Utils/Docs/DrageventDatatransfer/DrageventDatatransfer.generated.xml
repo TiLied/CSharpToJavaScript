@@ -6,6 +6,6 @@ The <strong><c>DragEvent.dataTransfer</c></strong> read-only property holds the 
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DragEvent/dataTransfer"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="DataTransfer"/> object which contains the <see cref="DragEvent"/>.</value>
+<value>A <see cref="DataTransfer"/> object which contains the {{domxref("DragEvent","drag event's data", &amp;quot;&amp;quot;, 1)}}.The property can be <c>null</c> when the event is created using the constructor. It is never <c>null</c> when dispatched by the browser.</value>
 </DragEventDataTransfer>
 </docs>

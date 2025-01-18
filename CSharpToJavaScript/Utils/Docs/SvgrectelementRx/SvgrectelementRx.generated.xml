@@ -1,0 +1,13 @@
+<docs>
+<SVGRectElementRx>
+<summary>
+The <strong><c>rx</c></strong> read-only property of the <see cref="SVGRectElement"/> interface describes the horizontal curve of the corners of an SVG rectangle as a <see cref="SVGAnimatedLength"/>. The length is in user coordinate system units along the x-axis. Its syntax is the same as that for <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see>.
+</summary>
+<remarks>
+<para>It reflects the {{SVGElement("rect")}} element's {{SVGAttr("rx")}} presentational attribute. The CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/rx">rx</see> property takes precedence over the SVG <c>rx</c> presentational attribute, so the value may not reflect the actual size of the rounded corners. The default value is <c>0</c>, which draws a rectangle with square corners.</para>
+<para>-<see cref="SVGRectElement.Ry"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGRectElement/rx"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedLength"/>.</value>
+</SVGRectElementRx>
+</docs>

@@ -4,7 +4,7 @@
 The <strong><c>clockRate</c></strong> property of the <see cref="RTCCodecStats"/> dictionary is a positive number containing the media sampling rate in hertz (Hz).
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpCodecParameters#clockrate"><c>RTCRtpCodecParameters.clockRate</c></see><br/></para>
+<para>-<c>codecs.clockRate</c> option in parameter passed to <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiver/setCodecPreferences#clockrate"><c>RTCRtpTransceiver.setCodecPreferences()</c></see> and <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSender/setParameters#clockrate"><c>RTCRtpSender.setParameters()</c></see>.<br/>-<c>codecs.clockRate</c> in object returned by <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSender/getParameters#clockrate"><c>RTCRtpSender.getParameters()</c></see> and <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpReceiver/getParameters#clockrate"><c>RTCRtpReceiver.getParameters()</c></see>.<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCCodecStats/clockRate"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A positive number indicating the media sampling rate.</value>

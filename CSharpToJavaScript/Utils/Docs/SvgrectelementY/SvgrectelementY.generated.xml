@@ -1,0 +1,13 @@
+<docs>
+<SVGRectElementY>
+<summary>
+The <strong><c>y</c></strong> read-only property of the <see cref="SVGRectElement"/> interface describes the vertical coordinate of the position of an SVG rectangle as a <see cref="SVGAnimatedLength"/>. The <c>&amp;lt;coordinate&amp;gt;</c> is a length in the user coordinate system that is the given distance from the origin of the user coordinate system along the y-axis. Its syntax is the same as that for <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see>.
+</summary>
+<remarks>
+<para>It reflects the {{SVGElement("rect")}} element's {{SVGAttr("y")}} geometric attribute value. The CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/y">y</see> property takes precedence over the SVG <c>y</c> attribute, so the value may not reflect the element&amp;apos;s appearance. The default value is <c>0</c>.</para>
+<para>-<see cref="DOMRect.Y"/><br/>-<see cref="SVGRectElement.X"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGRectElement/y"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedLength"/>.</value>
+</SVGRectElementY>
+</docs>

@@ -4,7 +4,7 @@
 The Web Animations API&amp;apos;s <strong><c>cancel()</c></strong> method of the <see cref="Animation"/> interface clears all <see cref="KeyframeEffect"/>s caused by this animation and aborts its playback.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> When an animation is cancelled, its <see cref="Animation.StartTime"/> and <see cref="Animation.CurrentTime"/> are set to <c>null</c>.</para></blockquote>
+<blockquote><para>When an animation is cancelled, its <see cref="Animation.StartTime"/> and <see cref="Animation.CurrentTime"/> are set to <c>null</c>.</para></blockquote>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/>-<see cref="KeyframeEffect"/><br/>-<see cref="Animation"/><br/>-<see cref="Animation.PlayState"/><br/>-<see cref="Animation.Finished"/> returns the promise this action will reject if the animation's <c>playState</c> is not <c>&amp;quot;idle&amp;quot;</c>.<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Animation/cancel"> <em>See also on MDN</em> </seealso></para>
 </remarks>

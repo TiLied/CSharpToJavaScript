@@ -1,0 +1,13 @@
+<docs>
+<HTMLInputElementMaxLength>
+<summary>
+The <strong><c>maxLength</c></strong> property of the <see cref="HTMLInputElement"/> interface indicates the maximum number of characters (in UTF-16 code units) allowed to be entered for the value of the {{HTMLElement("input")}} element, and the maximum number of characters allowed for the value to be valid. It reflects the element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#maxlength"><c>maxlength</c></see> attribute. <c>-1</c> means there is no limit on the length of the value.
+</summary>
+<remarks>
+<blockquote><para>Browser generally prevent users from entering more characters than the <c>maxlength</c> attribute allows. Should the length be longer, the element is considered invalid and the <see cref="ValidityState"/> object's <see cref="ValidityState.TooLong"/> property will be <c>true</c>.</para></blockquote>
+<para>-<see cref="HTMLInputElement.Value"/><br/>-<see cref="HTMLInputElement.MinLength"/><br/>-<see cref="ValidityState.TooLong"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/maxLength"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number representing the element&amp;apos;s <c>maxlength</c> if present, or <c>-1</c>.</value>
+</HTMLInputElementMaxLength>
+</docs>

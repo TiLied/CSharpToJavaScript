@@ -1,0 +1,13 @@
+<docs>
+<SVGNumberListInitialize>
+<summary>
+The <c>initialize()</c> method of the <see cref="SVGNumberList"/> interface clears all existing current items from the list and re-initializes the list to hold the single item specified by the parameter.
+</summary>
+<remarks>
+<para>If the inserted item is already in a list, it is removed from its previous list before it is inserted into this list. The inserted item is the item itself and not a copy.</para>
+<para>-<see cref="SVGNumber"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGNumberList/initialize"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="SVGNumber"/> object; the item inserted into the list.</returns>
+</SVGNumberListInitialize>
+</docs>

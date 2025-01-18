@@ -7,6 +7,6 @@ The <strong><see cref="RTCIceCandidate"/></strong><br/>interface&amp;apos;s read
 <para>The <c>foundation</c> can therefore be used to correlate candidates that are present on<br/>multiple <see cref="RTCIceTransport"/> objects</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/foundation"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string which uniquely identifies the candidate across all<br/><c>RTCIceTransport</c>s on which it is available.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> If <c>port</c> is <c>null</c> — and<br/><c>port</c> is supported by the <see href="https://developer.mozilla.org/en-US/docs/Glossary/user agent">user agent</see> — passing the<br/>candidate to <see cref="RTCPeerConnection.AddIceCandidate"/><br/>will fail, throwing an <c>OperationError</c> exception.</blockquote></value>
+<value>A string which uniquely identifies the candidate across all<br/><c>RTCIceTransport</c>s on which it is available.<blockquote>If <c>port</c> is <c>null</c> — and<br/><c>port</c> is supported by the <see href="https://developer.mozilla.org/en-US/docs/Glossary/user agent">user agent</see> — passing the<br/>candidate to <see cref="RTCPeerConnection.AddIceCandidate"/><br/>will fail, throwing an <c>OperationError</c> exception.</blockquote></value>
 </RTCIceCandidateFoundation>
 </docs>

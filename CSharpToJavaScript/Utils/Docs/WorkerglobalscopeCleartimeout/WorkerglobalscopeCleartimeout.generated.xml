@@ -1,0 +1,13 @@
+<docs>
+<WorkerGlobalScopeClearTimeout>
+<summary>
+The <strong><c>clearTimeout()</c></strong> method of the <see cref="WorkerGlobalScope"/> interface cancels a timeout previously established by calling <see cref="WorkerGlobalScope.SetTimeout"/>.
+</summary>
+<remarks>
+<para>If the parameter provided does not identify a previously established action,<br/>this method does nothing.</para>
+<para>-<see cref="Window.ClearTimeout"/><br/>-<see cref="WorkerGlobalScope.SetTimeout"/><br/>-<see cref="WorkerGlobalScope.ClearInterval"/><br/>-<see cref="DedicatedWorkerGlobalScope.RequestAnimationFrame"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/clearTimeout"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WorkerGlobalScopeClearTimeout>
+</docs>

@@ -4,7 +4,7 @@
 The <strong><c>formData()</c></strong> method of the <see cref="Response"/> interface<br/>takes a <see cref="Response"/> stream and reads it to completion. It returns a promise<br/>that resolves with a <see cref="FormData"/> object.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This is mainly relevant to <see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">service workers</see>. If a user submits<br/>a form and a service worker intercepts the request, you could for example call<br/><c>formData()</c> on it to obtain a key-value map, modify some fields, then send<br/>the form onwards to the server (or use it locally).</para></blockquote>
+<blockquote><para>This is mainly relevant to <see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">service workers</see>. If a user submits<br/>a form and a service worker intercepts the request, you could for example call<br/><c>formData()</c> on it to obtain a key-value map, modify some fields, then send<br/>the form onwards to the server (or use it locally).</para></blockquote>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Response/formData"> <em>See also on MDN</em> </seealso></para>
 </remarks>

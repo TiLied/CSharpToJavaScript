@@ -1,11 +1,12 @@
 <docs>
 <HTMLFormElementAcceptCharset>
 <summary>
-The <strong><c>HTMLFormElement.acceptCharset</c></strong> property represents a<br/>list of the supported <see href="https://developer.mozilla.org/en-US/docs/Glossary/Character_encoding">character encodings</see> for the given <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see> element. This list can be<br/>comma-separated or space-separated.
+The <strong><c>HTMLFormElement.acceptCharset</c></strong> property represents the <see href="https://developer.mozilla.org/en-US/docs/Glossary/character encoding">character encoding</see> for the given {{htmlelement("form")}} element.
 </summary>
 <remarks>
+<para>The specification allows a single case-insensitive value of <c>&amp;quot;UTF-8&amp;quot;</c>, reflecting the ubiquity of this encoding (historically multiple character encodings could be specified as a comma-separated or space-separated list).</para><para>This reflects the value of the form&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form#accept-charset"><c>accept-charset</c></see> HTML attribute.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/acceptCharset"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string.</value>
+<value>A string which may be a case-insensitive match for <c>UTF-8</c>.</value>
 </HTMLFormElementAcceptCharset>
 </docs>

@@ -1,10 +1,10 @@
 <docs>
 <VTTCue>
 <summary>
-The <c>VTTCue</c> interface—part of the API for handling WebVTT (text tracks on media presentations)—describes and controls the text track associated with a particular <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track">track</see> element.
+The <c>VTTCue</c> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebVTT_API">WebVTT API</see> represents a cue that can be added to the text track associated with a particular video (or other media).
 </summary>
 <remarks>
-<para></para>
+<para>A cue defines the text to display in a particular timeslice of a video or audio track, along with display properties such as its size, alignment, and position.</para><para></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VTTCue"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </VTTCue>

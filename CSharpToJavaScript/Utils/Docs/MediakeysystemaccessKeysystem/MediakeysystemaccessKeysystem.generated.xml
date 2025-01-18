@@ -1,9 +1,10 @@
 <docs>
 <MediaKeySystemAccessKeySystem>
 <summary>
-The <c>MediaKeySystemAccess.keySystem</c> read-only property returns a<br/>string identifying the key system being used.
+The <strong><c>keySystem</c></strong> read-only property of the <see cref="MediaKeySystemAccess"/> interface returns a string identifying the key system being used.
 </summary>
 <remarks>
+<para>This is the value that was passed to <see cref="Navigator.RequestMediaKeySystemAccess"/> when system access is requested.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemAccess/keySystem"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A string.</value>

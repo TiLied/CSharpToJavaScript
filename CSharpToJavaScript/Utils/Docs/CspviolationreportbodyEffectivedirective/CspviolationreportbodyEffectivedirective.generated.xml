@@ -1,0 +1,13 @@
+<docs>
+<CSPViolationReportBodyEffectiveDirective>
+<summary>
+The <strong><c>effectiveDirective</c></strong> read-only property of the <see cref="CSPViolationReportBody"/> interface is a string that represents the effective <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">Content Security Policy (CSP)</see> directive that was violated.
+</summary>
+<remarks>
+<para>Note that this contains the specific directive that was effectively violated, such as <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src-elem"><c>script-src-elem</c></see> for violations related to script elements, and not the policy that was specified, which may have been the (more general) <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src"><c>default-src</c></see>.</para>
+<para>-<see cref="SecurityPolicyViolationEvent.EffectiveDirective"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSPViolationReportBody/effectiveDirective"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing the effective <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#directives"><c>Content-Security-Policy</c> directive</see> that was violated.</value>
+</CSPViolationReportBodyEffectiveDirective>
+</docs>

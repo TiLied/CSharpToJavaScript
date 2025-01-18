@@ -1,0 +1,12 @@
+<docs>
+<CSPViolationReportBodyToJSON>
+<summary>
+The <strong><c>toJSON()</c></strong> method of the <see cref="CSPViolationReportBody"/> interface is a <strong>serializer</strong>, which returns a JSON representation of the <c>CSPViolationReportBody</c> object.
+</summary>
+<remarks>
+<para>The existence of a <c>toJSON()</c> method allows <c>CSPViolationReportBody</c> objects to be converted to a string using the <see cref="JSONStringify"/> method.</para><para>This is used by the reporting API when creating a serialized version of a violation report to send to a reporting endpoint.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSPViolationReportBody/toJSON"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A JSON object that is the serialization of the <see cref="CSPViolationReportBody"/> object.</returns>
+</CSPViolationReportBodyToJSON>
+</docs>

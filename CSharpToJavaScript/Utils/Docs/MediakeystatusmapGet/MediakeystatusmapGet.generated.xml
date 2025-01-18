@@ -1,11 +1,12 @@
 <docs>
 <MediaKeyStatusMapGet>
 <summary>
-The <strong><c>get</c></strong> property of the<br/><see cref="MediaKeyStatusMap"/> interface returns the value associated with the given<br/>key, or <c>undefined</c> if there is none.
+The <strong><c>get()</c></strong> method of the <see cref="MediaKeyStatusMap"/> interface returns the status value associated with the given key, or <c>undefined</c> if there is none.
 </summary>
 <remarks>
+<para>The status value indicates whether or not the specific key can be used for decryption.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap/get"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>The value associated with the given key, or <c>undefined</c>.</returns>
+<returns>A string specifying the status value associated with the given key, or <c>undefined</c>.The following status values are allowed:</returns>
 </MediaKeyStatusMapGet>
 </docs>

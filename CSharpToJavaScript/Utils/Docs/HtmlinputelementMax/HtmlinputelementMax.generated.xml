@@ -1,0 +1,12 @@
+<docs>
+<HTMLInputElementMax>
+<summary>
+The <strong><c>max</c></strong> property of the <see cref="HTMLInputElement"/> interface reflects the {{HTMLElement("input")}} element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#max"><c>max</c></see> attribute, which generally defines the maximum valid value for a numeric or date-time input. If the attribute is not explicitly set, the <c>max</c> property is an empty string.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">input</see> of type <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range">input/range</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/number">input/number</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date">input/date</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/month">input/month</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/week">input/week</see>, and <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/time">input/time</see><br/>-<see cref="HTMLInputElement.Min"/><br/>-<see cref="HTMLInputElement.Value"/><br/>-<see cref="HTMLInputElement.Type"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/max"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing the element&amp;apos;s <c>max</c> value or an empty string if no <c>max</c> is explicitly set.</value>
+</HTMLInputElementMax>
+</docs>

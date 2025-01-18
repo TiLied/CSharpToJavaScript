@@ -4,7 +4,7 @@
 The <strong><c>initiatorType</c></strong> read-only property is a string representing web platform feature that initiated the resource load.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This property does not represent the type of content fetched. A <c>.css</c> file can be fetched using a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link">link</see> element leading to an <c>initiatorType</c> of <c>link</c>. When loading images using <c>background: url()</c> in a CSS file, the <c>initiatorType</c> will be <c>css</c> and not <c>img</c>.</para></blockquote>
+<blockquote><para>This property does not represent the type of content fetched. A <c>.css</c> file can be fetched using a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link">link</see> element leading to an <c>initiatorType</c> of <c>link</c>. When loading images using <c>background: url()</c> in a CSS file, the <c>initiatorType</c> will be <c>css</c> and not <c>img</c>.</para></blockquote>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming/initiatorType"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>The <c>initiatorType</c> property can have the following values, or <c>other</c> if none of the conditions match.</value>

@@ -1,9 +1,10 @@
 <docs>
 <HTMLAreaElementPort>
 <summary>
-The <strong><c>HTMLAreaElement.port</c></strong> property is a<br/>string containing the port number of the URL. If the URL does not<br/>contain an explicit port number, it will be set to <c>&amp;apos;&amp;apos;</c>.
+The <strong><c>port</c></strong> property of the <see cref="HTMLAreaElement"/> interface is a string containing the port number of the URL, or the empty string if the port is the default for the protocol.
 </summary>
 <remarks>
+<blockquote><para>If the <see cref="HTMLAreaElement"/> object refers to a URL that doesn't contain an explicit port number (e.g., <c>https://localhost</c>) or contains a port number that&amp;apos;s the default port number corresponding to the protocol part of the URL (e.g., <c>https://localhost:443</c>), then the <c>port</c> property will be the empty string: <c>&amp;apos;&amp;apos;</c>.</para></blockquote>
 <para>-The <see cref="HTMLAreaElement"/> interface it belongs to.<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement/port"> <em>See also on MDN</em> </seealso></para>
 </remarks>

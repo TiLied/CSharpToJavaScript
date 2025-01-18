@@ -1,0 +1,12 @@
+<docs>
+<HTMLLIElementValue>
+<summary>
+The <strong><c>value</c></strong> property of the <see cref="HTMLLIElement"/> interface indicates the ordinal position of the <strong>list element</strong> inside a given <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol">ol</see>. It can be smaller than <c>0</c>. If the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li">li</see> element is not a child of an <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol">ol</see> element, the property has no meaning.
+</summary>
+<remarks>
+<para>It reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li#value"><c>value</c></see> attribute of the corresponding <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li">li</see> element. If the <c>&amp;lt;li&amp;gt;</c> element does not have a <c>value</c> content attribute specified, then this property returns <c>0</c> by default even when the element may have a default serially-assigned ordinal value when rendered.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLLIElement/value"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer.</value>
+</HTMLLIElementValue>
+</docs>

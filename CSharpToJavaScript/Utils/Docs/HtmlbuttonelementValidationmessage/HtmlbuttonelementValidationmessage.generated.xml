@@ -1,0 +1,13 @@
+<docs>
+<HTMLButtonElementValidationMessage>
+<summary>
+The <strong><c>validationMessage</c></strong> read-only property of the <see cref="HTMLButtonElement"/> interface returns a string representing a localized message that describes the validation constraints that the {{htmlelement("button")}} control does not satisfy (if any). This is the empty string if the control is not a candidate for constraint validation (the <c>&amp;lt;button&amp;gt;</c>&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#type"><c>type</c></see> is <c>button</c> or <c>reset</c>), or it satisfies its constraints.
+</summary>
+<remarks>
+<para>If the <c>&amp;lt;button&amp;gt;</c> is a candidate for constraint validation (the <c>type</c> is set or defaults to <c>submit</c> and <see cref="HTMLButtonElement.WillValidate"/> is <c>true</c>) and the constraints are not met (there is a non-null <see cref="ValidityState.CustomError"/>), the value is the error message that would be shown to the user during element validation.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button">button</see><br/>-<see cref="HTMLButtonElement"/><br/>-<see cref="HTMLButtonElement.WillValidate"/><br/>-<see cref="HTMLButtonElement.Validity"/><br/>-<see cref="HTMLButtonElement.CheckValidity"/><br/>-<see cref="HTMLButtonElement.ReportValidity"/><br/>-<see cref="HTMLButtonElement.SetCustomValidity"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation">Learn: Client-side form validation</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation">Guide: Constraint validation</see><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:valid">:valid</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:invalid">:invalid</see> pseudo-classes<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLButtonElement/validationMessage"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</HTMLButtonElementValidationMessage>
+</docs>

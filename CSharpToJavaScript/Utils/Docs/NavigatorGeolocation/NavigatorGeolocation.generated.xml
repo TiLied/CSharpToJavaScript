@@ -4,7 +4,7 @@
 The <strong><c>Navigator.geolocation</c></strong> read-only property returns a<br/><see cref="Geolocation"/> object that gives Web content access to the location of the<br/>device. This allows a website or app to offer customized results based on the user&amp;apos;s<br/>location.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> For security reasons, when a web page tries to access location<br/>information, the user is notified and asked to grant permission. Be aware that each<br/>browser has its own policies and methods for requesting this permission.</para></blockquote>
+<blockquote><para>For security reasons, when a web page tries to access location<br/>information, the user is notified and asked to grant permission. Be aware that each<br/>browser has its own policies and methods for requesting this permission.</para></blockquote>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API">Using the Geolocation API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/geolocation"> <em>See also on MDN</em> </seealso></para>
 </remarks>

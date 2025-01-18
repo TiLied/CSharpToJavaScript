@@ -1,9 +1,10 @@
 <docs>
 <HTMLObjectElementValidity>
 <summary>
-The <strong><c>validity</c></strong> read-only property of the<br/><see cref="HTMLObjectElement"/> interface returns a <see cref="ValidityState"/> with<br/>the validity states that this element is in.
+The <strong><c>validity</c></strong> read-only property of the <see cref="HTMLObjectElement"/> interface returns a <see cref="ValidityState"/> object that represents the validity states this element is in. Although {{HTMLElement("object")}} elements are never candidates for <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation">constraint validation</see>, the validity state may still be invalid if a custom validity message has been set.
 </summary>
 <remarks>
+<para>-<see cref="HTMLObjectElement.CheckValidity"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object">object</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation">Learn: Client-side form validation</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation">Guide: Constraint validation</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement/validity"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A <see cref="ValidityState"/> object.</value>

@@ -1,7 +1,7 @@
 <docs>
 <TrackEvent>
 <summary>
-The <strong><c>TrackEvent</c></strong> interface, which is part of the HTML DOM specification, is used for events which represent changes to a set of available tracks on an HTML media element; these events are <c>addtrack</c> and <c>removetrack</c>.
+The <strong><c>TrackEvent</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API">HTML DOM API</see> is used for events which represent changes to a set of available tracks on an HTML media element; these events are <c>addtrack</c> and <c>removetrack</c>.
 </summary>
 <remarks>
 <para>It&amp;apos;s important not to confuse <c>TrackEvent</c> with the <see cref="RTCTrackEvent"/> interface, which is used for tracks which are part of an <see cref="RTCPeerConnection"/>.</para><para>Events based on <c>TrackEvent</c> are always sent to one of the media track list types:</para><para></para>

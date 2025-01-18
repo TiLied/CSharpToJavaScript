@@ -5,7 +5,7 @@ The <strong><c>replaceWith()</c></strong> method of the <see cref="CharacterData
 </summary>
 <remarks>
 <para>Strings are inserted as <see cref="Text"/> nodes; the string is being passed as argument to the <see cref="Text/Text"/> constructor.</para>
-<para>-<see cref="CharacterData.ReplaceData"/><br/></para>
+<para>-<see cref="CharacterData.ReplaceData"/><br/>-<see cref="DocumentType.ReplaceWith"/><br/>-<see cref="Element.ReplaceWith"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CharacterData/replaceWith"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>

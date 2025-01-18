@@ -1,7 +1,7 @@
 <docs>
 <HTMLLinkElementRelList>
 <summary>
-The <strong><c>HTMLLinkElement.relList</c></strong> read-only property reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel"><c>rel</c></see> attribute. It is a live <see cref="DOMTokenList"/> containing the set of link types indicating the relationship between the resource represented by the {{HTMLElement("link")}} element and the current document.
+The <strong><c>relList</c></strong> read-only property of the <see cref="HTMLLinkElement"/> interface reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel"><c>rel</c></see> attribute. It is a live <see cref="DOMTokenList"/> containing the set of link types indicating the relationship between the resource represented by the {{HTMLElement("link")}} element and the current document.
 </summary>
 <remarks>
 <para>The property itself is read-only, meaning you can not substitute the<br/><see cref="DOMTokenList"/> by another one, but the content of the returned list can be<br/>changed.</para>

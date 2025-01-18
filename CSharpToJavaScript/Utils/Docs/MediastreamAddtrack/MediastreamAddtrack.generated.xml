@@ -4,7 +4,7 @@
 The <strong><c>addTrack()</c></strong> method of the <see cref="MediaStream"/> interface adds a new track to the<br/>stream. The track is specified as a parameter of type <see cref="MediaStreamTrack"/>.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> If the specified track is already in the stream&amp;apos;s track set, this method has no<br/>effect.</para></blockquote>
+<blockquote><para>If the specified track is already in the stream&amp;apos;s track set, this method has no<br/>effect.</para></blockquote>
 <para>-<see cref="MediaStream"/>, the interface it belongs to.<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/addTrack"> <em>See also on MDN</em> </seealso></para>
 </remarks>

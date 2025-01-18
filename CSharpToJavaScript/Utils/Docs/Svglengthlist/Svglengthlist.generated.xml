@@ -1,9 +1,11 @@
 <docs>
 <SVGLengthList>
 <summary>
-
+The <c>SVGLengthList</c> interface defines a list of <see cref="SVGLength"/> objects. It is used for the <see cref="SVGAnimatedLengthList.BaseVal"/> and <see cref="SVGAnimatedLengthList.AnimVal"/> properties of <see cref="SVGAnimatedLengthList"/>.
 </summary>
 <remarks>
+<para>An <c>SVGLengthList</c> object can be designated as read only, which means that attempts to modify the object will result in an exception being thrown.</para><para>An <c>SVGLengthList</c> object is indexable and can be accessed like an array.</para>
+<para>-<see cref="SVGNumberList"/><br/>-<see cref="SVGPointList"/><br/>-<see cref="SVGStringList"/><br/>-<see cref="SVGTransformList"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGLengthList"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </SVGLengthList>

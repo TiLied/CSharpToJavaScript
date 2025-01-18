@@ -1,0 +1,12 @@
+<docs>
+<PerformanceScriptTimingInvokerType>
+<summary>
+The <strong><c>invokerType</c></strong> read-only property of the <see cref="PerformanceScriptTiming"/> interface returns a string value indicating the type of feature that, when invoked, ran the script.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Performance_API/Long_animation_frame_timing">Long animation frame timing</see><br/>-<see cref="PerformanceLongAnimationFrameTiming"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceScriptTiming/invokerType"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string indicating the invoker type of the script entry point. Possible values are:The structure of the <see cref="PerformanceScriptTiming.Invoker"/> value depends on the script's <c>invokerType</c> value. Check out the <c>invoker</c> page for more details.</value>
+</PerformanceScriptTimingInvokerType>
+</docs>

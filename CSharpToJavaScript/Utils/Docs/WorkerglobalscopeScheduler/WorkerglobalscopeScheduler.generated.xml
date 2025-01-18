@@ -1,0 +1,13 @@
+<docs>
+<WorkerGlobalScopeScheduler>
+<summary>
+The <strong><c>scheduler</c></strong> read-only property of the <see cref="WorkerGlobalScope"/> interface is the entry point for using the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Prioritized_Task_Scheduling_API">Prioritized Task Scheduling API</see>.
+</summary>
+<remarks>
+<para>It returns a <see cref="Scheduler"/> object instance containing <see cref="'Scheduler.PostTask'"/> and <see cref="'Scheduler.Yield'"/> methods that can be used to schedule prioritized tasks.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Prioritized_Task_Scheduling_API">Prioritized Task Scheduling API</see><br/>-<see cref="'Scheduler.PostTask'"/><br/>-<see cref="'Scheduler.Yield'"/><br/>-<see cref="'TaskController'"/><br/>-<see cref="Window.Scheduler"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/scheduler"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Scheduler"/>.</value>
+</WorkerGlobalScopeScheduler>
+</docs>

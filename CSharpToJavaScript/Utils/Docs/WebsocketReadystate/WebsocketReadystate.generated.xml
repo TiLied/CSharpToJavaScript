@@ -6,6 +6,6 @@ The <strong><c>WebSocket.readyState</c></strong> read-only property returns the<
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/readyState"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>One of the following <c>unsigned short</c> values:<table><tr><td>Value</td><td>State</td><td>Description</td></tr><tr><td><c>0</c></td><td><c>CONNECTING</c></td><td>Socket has been created. The connection is not yet open.</td></tr><tr><td><c>1</c></td><td><c>OPEN</c></td><td>The connection is open and ready to communicate.</td></tr><tr><td><c>2</c></td><td><c>CLOSING</c></td><td>The connection is in the process of closing.</td></tr><tr><td><c>3</c></td><td><c>CLOSED</c></td><td>The connection is closed or couldn&amp;apos;t be opened.</td></tr></table></value>
+<value>A number which is one of the four possible state constants defined on the <see cref="WebSocket"/> interface:</value>
 </WebSocketReadyState>
 </docs>

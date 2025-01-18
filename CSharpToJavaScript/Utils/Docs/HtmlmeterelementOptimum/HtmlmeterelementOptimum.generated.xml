@@ -1,0 +1,13 @@
+<docs>
+<HTMLMeterElementOptimum>
+<summary>
+The <strong><c>optimum</c></strong> property of the <see cref="HTMLMeterElement"/> interface represents the optimum boundary of the {{htmlelement("meter")}} element as a floating-point number. It reflects the element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meter#optimum"><c>optimum</c></see> attribute, or the midpoint between <c>min</c> and <c>max</c> values if not defined. The value of <c>optimum</c> is clamped by the <c>min</c> and <c>max</c> values.
+</summary>
+<remarks>
+<para>This property can also be set directly, for example to set a default value based on some condition.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meter">meter</see><br/>-<see cref="HTMLMeterElement.Value"/><br/>-<see cref="HTMLMeterElement.High"/><br/>-<see cref="HTMLMeterElement.Low"/><br/>-<see cref="HTMLProgressElement"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMeterElement/optimum"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number. Defaults to the midpoint between <see cref="HTMLMeterElement.Min"/> and <see cref="HTMLMeterElement.Max"/> if not defined.</value>
+</HTMLMeterElementOptimum>
+</docs>

@@ -4,7 +4,7 @@
 The <strong><c>URLSearchParams</c></strong> interface defines utility methods to work with the query string of a URL.
 </summary>
 <remarks>
-<para>An object implementing <c>URLSearchParams</c> can directly be used in a <see cref="Statements/forOf"/> structure to iterate over key/value pairs in the same order as they appear in the query string, for example the following two lines are equivalent:</para>
+<para><c>URLSearchParams</c> objects are <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol">iterable</see>, so they can directly be used in a <see cref="Statements/forOf"/> structure to iterate over key/value pairs in the same order as they appear in the query string, for example the following two lines are equivalent:</para><para>Although <c>URLSearchParams</c> is functionally similar to a <see cref="Map"/>, when iterating, it may suffer from some <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#concurrent_modifications_when_iterating">pitfalls</see> that <c>Map</c> doesn&amp;apos;t encounter due to how it&amp;apos;s implemented.</para>
 <para>-<see href="https://github.com/zloirock/core-js#url-and-urlsearchparams">Polyfill of <c>URLSearchParams</c> in <c>core-js</c></see><br/>-The <see cref="URL"/> interface.<br/>-<see href="https://developer.chrome.com/blog/urlsearchparams/">Google Developers: Easy URL manipulation with URLSearchParams</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams"> <em>See also on MDN</em> </seealso></para>
 </remarks>

@@ -1,10 +1,10 @@
 <docs>
 <VideoEncoderReset>
 <summary>
-The <strong><c>reset()</c></strong> method of the <see cref="VideoEncoder"/> interface synchronously cancels all pending encodes and callbacks, frees all underlying resources and sets the <see cref="VideoEncoder.State"/> to "unconfigured".<br/>After calling <see cref="VideoEncoder.Reset"/>, <see cref="VideoEncoder.Configure"/> must be called before resuming <see cref="VideoEncoder.Encode"/> calls.
+The <strong><c>reset()</c></strong> method of the <see cref="VideoEncoder"/> interface synchronously cancels all pending encodes and callbacks, frees all underlying resources and sets the <see cref="VideoEncoder.State"/> to "unconfigured".<br/>After calling <c>reset()</c>, <see cref="VideoEncoder.Configure"/> must be called before resuming <see cref="VideoEncoder.Encode"/> calls.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> To avoid discarding frames queued via <see cref="VideoEncoder.Encode"/>, <see cref="VideoEncoder.Flush"/> should be called and completed before calling <see cref="VideoEncoder.Reset"/>.</para></blockquote>
+<blockquote><para>To avoid discarding frames queued via <see cref="VideoEncoder.Encode"/>, <see cref="VideoEncoder.Flush"/> should be called and completed before calling <c>reset()</c>.</para></blockquote>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoEncoder/reset"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>

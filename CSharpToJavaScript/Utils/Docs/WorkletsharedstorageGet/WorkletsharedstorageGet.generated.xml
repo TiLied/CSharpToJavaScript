@@ -4,7 +4,7 @@
 The <strong><c>get()</c></strong> method of the<br/><see cref="WorkletSharedStorage"/> interface retrieves a value from shared storage.
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Shared_Storage_API">Shared Storage API</see><br/>-<see href="https://developers.google.com/privacy-sandbox/relevance/private-aggregation/fundamentals#noise_and_scaling">Noise and scaling</see> on developer.chrome.com (2023)<br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Shared_Storage_API">Shared Storage API</see><br/>-<see href="https://developers.google.com/privacy-sandbox/private-advertising/private-aggregation/fundamentals#noise_and_scaling">Noise and scaling</see> on developers.google.com (2023)<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkletSharedStorage/get"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>A <see cref="Promise"/> that fulfills with either a string equal to the value of the retrieved key-value pair or <c>undefined</c> if the specified <c>key</c> is not found in the shared storage.</returns>

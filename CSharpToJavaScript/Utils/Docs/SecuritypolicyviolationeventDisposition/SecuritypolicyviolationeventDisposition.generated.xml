@@ -1,12 +1,12 @@
 <docs>
 <SecurityPolicyViolationEventDisposition>
 <summary>
-The <strong><c>disposition</c></strong> read-only property of the<br/><see cref="SecurityPolicyViolationEvent"/> interface indicates how the violated policy<br/>is configured to be treated by the user agent.
+The <strong><c>disposition</c></strong> read-only property of the <see cref="SecurityPolicyViolationEvent"/> interface indicates how the violated <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">Content Security Policy (CSP)</see> is configured to be treated by the user agent.
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">Content Security Policy (CSP)</see><br/></para>
+<para>-<see cref="CSPViolationReportBody.Disposition"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SecurityPolicyViolationEvent/disposition"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A value defined in the <see href="https://w3c.github.io/webappsec-csp/#enumdef-securitypolicyviolationeventdisposition">SecurityPolicyViolationEventDisposition enum</see><br/>representing the URI of the blocked resource. Possible values are <c>&amp;quot;enforce&amp;quot;</c> or <c>&amp;quot;report&amp;quot;</c></value>
+<value>Possible values are:</value>
 </SecurityPolicyViolationEventDisposition>
 </docs>

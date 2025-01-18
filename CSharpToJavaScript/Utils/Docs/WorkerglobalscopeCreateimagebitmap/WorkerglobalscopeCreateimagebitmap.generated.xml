@@ -1,0 +1,12 @@
+<docs>
+<WorkerGlobalScopeCreateImageBitmap>
+<summary>
+The <strong><c>createImageBitmap()</c></strong> method of the <see cref="WorkerGlobalScope"/> interface creates a bitmap from a given source, optionally cropped to contain only a portion of that source.<br/>It accepts a variety of different image sources, and returns a {{jsxref("Promise")}} which resolves to an <see cref="ImageBitmap"/>.
+</summary>
+<remarks>
+<para>-<see cref="Window.CreateImageBitmap"/><br/>-<see cref="CanvasRenderingContext2D.DrawImage"/><br/>-<see cref="ImageData"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/createImageBitmap"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} which resolves to an <see cref="ImageBitmap"/> object containing bitmap data from the given rectangle.</returns>
+</WorkerGlobalScopeCreateImageBitmap>
+</docs>

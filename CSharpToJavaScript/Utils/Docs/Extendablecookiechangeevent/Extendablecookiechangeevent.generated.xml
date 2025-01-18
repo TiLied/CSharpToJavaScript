@@ -4,7 +4,7 @@
 The <strong><c>ExtendableCookieChangeEvent</c></strong> interface of the {{domxref(&amp;quot;Cookie Store API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, "nocode")}} is the event type passed to <see cref="ServiceWorkerGlobalScope/cookiechange_event"/> event fired at the <see cref="ServiceWorkerGlobalScope"/> when any cookie changes occur which match the service worker's cookie change subscription list. A cookie change event consists of a cookie and a type. (either "changed" or "deleted")
 </summary>
 <remarks>
-<para>Cookie changes that cause the <c>ExtendableCookieChangeEvent</c> to be dispatched are:</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> A cookie that is replaced due to the insertion of another cookie with the same name, domain, and path, is ignored and does not trigger a change event.</para></blockquote><para></para>
+<para>Cookie changes that cause the <c>ExtendableCookieChangeEvent</c> to be dispatched are:</para><blockquote><para>A cookie that is replaced due to the insertion of another cookie with the same name, domain, and path, is ignored and does not trigger a change event.</para></blockquote><para></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ExtendableCookieChangeEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </ExtendableCookieChangeEvent>

@@ -1,7 +1,7 @@
 <docs>
 <PerformanceTiming>
 <summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="WARNING"><h5>WARNING</h5><strong>Warning:</strong> This interface is deprecated in the <see href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</see>. Please use the <see cref="PerformanceNavigationTiming"/> interface instead.</blockquote>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote>This interface is deprecated in the <see href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</see>. Please use the <see cref="PerformanceNavigationTiming"/> interface instead.</blockquote>
 </summary>
 <remarks>
 <para>The <strong><c>PerformanceTiming</c></strong> interface is a legacy interface kept for backwards compatibility and contains properties that offer performance timing information for various events which occur during the loading and use of the current page. You get a <c>PerformanceTiming</c> object describing your page using the <see cref="Performance.Timing"/> property.</para>

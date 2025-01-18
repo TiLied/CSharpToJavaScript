@@ -1,0 +1,13 @@
+<docs>
+<HTMLLinkElementDisabled>
+<summary>
+The <strong><c>disabled</c></strong> property of the <see cref="HTMLLinkElement"/> interface is a boolean value that represents whether the link is disabled. It only has an effect with style sheet links (<c>rel</c> property set to <c>stylesheet</c>).
+</summary>
+<remarks>
+<para>If <c>disabled</c> attribute is specified in the HTML when it is loaded, the stylesheet will not be loaded during page load. Instead, the stylesheet will be loaded only when the <c>disabled</c> property is set to <c>false</c> or removed. Setting the <c>disabled</c> property using JavaScript causes the stylesheet to be removed from the document's <see cref="Document.StyleSheets"/> list.</para><para>It reflects the <c>disabled</c> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link">link</see> element.</para>
+<para>-<see cref="HTMLScriptElement.Integrity"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity">Subresource Integrity</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLLinkElement/disabled"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean.</value>
+</HTMLLinkElementDisabled>
+</docs>

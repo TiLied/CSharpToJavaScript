@@ -4,7 +4,7 @@
 The <strong><c>SpeechRecognition</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see> is the controller interface for the recognition service; this also handles the <see cref="SpeechRecognitionEvent"/> sent from the recognition service.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> On some browsers, like Chrome, using Speech Recognition on a web page involves a server-based recognition engine. Your audio is sent to a web service for recognition processing, so it won&amp;apos;t work offline.</para></blockquote><para></para>
+<blockquote><para>On some browsers, like Chrome, using Speech Recognition on a web page involves a server-based recognition engine. Your audio is sent to a web service for recognition processing, so it won&amp;apos;t work offline.</para></blockquote><para></para>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition"> <em>See also on MDN</em> </seealso></para>
 </remarks>

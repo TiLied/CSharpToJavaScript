@@ -1,0 +1,13 @@
+<docs>
+<WindowClearTimeout>
+<summary>
+The <strong><c>clearTimeout()</c></strong> method of the <see cref="Window"/> interface cancels a timeout previously established by calling <see cref="Window.SetTimeout"/>.
+</summary>
+<remarks>
+<para>If the parameter provided does not identify a previously established action,<br/>this method does nothing.</para>
+<para>-<see cref="Window.SetTimeout"/><br/>-<see cref="WorkerGlobalScope.ClearTimeout"/><br/>-<see cref="Window.ClearInterval"/><br/>-<see cref="Window.CancelAnimationFrame"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Window/clearTimeout"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WindowClearTimeout>
+</docs>

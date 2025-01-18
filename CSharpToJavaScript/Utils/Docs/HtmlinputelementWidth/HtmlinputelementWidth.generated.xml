@@ -1,0 +1,13 @@
+<docs>
+<HTMLInputElementWidth>
+<summary>
+The <strong><c>width</c></strong> property of the <see cref="HTMLInputElement"/> interface specifies the width of a control. It reflects the {{htmlelement("input")}} element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#width"><c>width</c></see> attribute.
+</summary>
+<remarks>
+<para>The <c>width</c> property is valid for the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/image"><c>image</c></see> type only. It defines the preferred horizontal size of the image button, in pixels. The property value is the width of the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-edge#content-box">content-box</see> of the rendered button. CSS box model properties impacting the size of the control take precedence.</para><para>If no <c>width</c> is set and no CSS width properties impact the control, the <c>width</c> will be the intrinsic width of the image. If the image didn&amp;apos;t load, the value will be the maximum intrinsic width of the <c>alt</c> text. The <c>width</c> will be <c>0</c> if the width is not known; if no <c>width</c> is set, no CSS dimensions apply, no image loaded, and either the value of the <see cref="HTMLInputElement.Alt"/> is the empty string or no <c>src</c> is set.</para>
+<para>-<see cref="HTMLInputElement.Height"/><br/>-<see cref="HTMLInputElement.Src"/><br/>-<see cref="HTMLInputElement.Alt"/><br/>-<see cref="HTMLButtonElement"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button">button</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">input</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">img</see><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/inline-size">inline-size</see> property<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/width">width</see> property<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio">aspect-ratio</see> property<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_box_sizing">CSS box sizing</see> module<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/width"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</HTMLInputElementWidth>
+</docs>

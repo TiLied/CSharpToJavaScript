@@ -7,6 +7,6 @@
 <para>The property is read-only.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/cookieEnabled"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A boolean.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> When the browser is configured to block third-party cookies, and <c>navigator.cookieEnabled</c> is invoked inside a third-party iframe, it returns <c>true</c> in Safari, Edge Spartan and IE (while trying to set a cookie in such scenario would fail). It returns <c>false</c> in Firefox and Chromium-based browsers.</blockquote><blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> Web browsers may prevent writing certain cookies in certain scenarios. For example, Chrome-based browsers, as well as some experimental version of Firefox, does not allow creating cookies with <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value"><c>SameSite=None</c></see> attribute, unless they are created over HTTPS and with <c>Secure</c> attribute.</blockquote></value>
+<value>A boolean.<blockquote>Web browsers may prevent writing certain cookies in certain scenarios. For example, Chrome-based browsers, as well as some experimental version of Firefox, does not allow creating cookies with <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value"><c>SameSite=None</c></see> attribute, unless they are created over HTTPS and with <c>Secure</c> attribute.</blockquote></value>
 </NavigatorCookieEnabled>
 </docs>

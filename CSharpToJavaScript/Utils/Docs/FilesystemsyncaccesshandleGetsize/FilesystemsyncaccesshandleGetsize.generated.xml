@@ -4,7 +4,7 @@
 The <strong><c>getSize()</c></strong> method of the<br/><see cref="FileSystemSyncAccessHandle"/> interface returns the size of the file associated with the handle in bytes.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> In earlier versions of the spec, <see cref="FileSystemSyncAccessHandle.Close"/>, <see cref="FileSystemSyncAccessHandle.Flush"/>, <c>getSize()</c>, and <see cref="FileSystemSyncAccessHandle.Truncate"/> were wrongly specified as asynchronous methods, and older versions of some browsers implement them in this way. However, all current browsers that support these methods implement them as synchronous methods.</para></blockquote>
+<blockquote><para>In earlier versions of the spec, <see cref="FileSystemSyncAccessHandle.Close"/>, <see cref="FileSystemSyncAccessHandle.Flush"/>, <c>getSize()</c>, and <see cref="FileSystemSyncAccessHandle.Truncate"/> were wrongly specified as asynchronous methods, and older versions of some browsers implement them in this way. However, all current browsers that support these methods implement them as synchronous methods.</para></blockquote>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_System_API">File System API</see><br/>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/file-system-access">The File System Access API: simplifying access to local files</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemSyncAccessHandle/getSize"> <em>See also on MDN</em> </seealso></para>
 </remarks>

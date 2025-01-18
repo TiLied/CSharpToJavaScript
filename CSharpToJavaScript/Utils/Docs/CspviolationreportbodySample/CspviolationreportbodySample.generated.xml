@@ -1,0 +1,13 @@
+<docs>
+<CSPViolationReportBodySample>
+<summary>
+The <strong><c>sample</c></strong> read-only property of the <see cref="CSPViolationReportBody"/> interface is a string that contains a part of the resource that violated the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">Content Security Policy (CSP)</see>.
+</summary>
+<remarks>
+<para>This sample is usually the first 40 characters of the inline script, event handler, or style that violated a CSP restriction.<br/>If not populated it is the empty string <c>&amp;quot;&amp;quot;</c>.</para><para>Note that this is only populated when attempting to load <strong>inline</strong> scripts, event handlers, or styles that violate CSP <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#script-src"><c>script-src*</c></see> and <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#style-src"><c>style-src*</c></see> rules — external resources that violate the CSP will not generate a sample.<br/>In addition, a sample is only included if the <c>Content-Security-Policy</c> directive that was violated also contains the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#report-sample"><c>&amp;apos;report-sample&amp;apos;</c></see> keyword.</para><blockquote><para>[!NOTE] Violation reports should be considered attacker-controlled data.<br/>The content of this field <strong>in particular</strong> should be sanitized before storing or rendering.</para></blockquote>
+<para>-<see cref="SecurityPolicyViolationEvent.Sample"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSPViolationReportBody/sample"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing a sample of the inline resource that violated the CSP, usually the first 40 characters, or the empty string.</value>
+</CSPViolationReportBodySample>
+</docs>

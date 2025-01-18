@@ -1,0 +1,12 @@
+<docs>
+<HTMLTableColElementSpan>
+<summary>
+The <strong><c>span</c></strong> read-only property of the <see cref="HTMLTableColElement"/> interface represents the number of columns this {{htmlelement("col")}} or {{htmlelement("colgroup")}} must span; this lets the column occupy space across multiple columns of the table. It reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/col#span"><c>span</c></see> attribute.
+</summary>
+<remarks>
+<para>-<see cref="HTMLTableCellElement.ColSpan"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableColElement/span"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A positive number representing the number of columns.<blockquote>When setting a new value, the value is <strong>clamped</strong> to the nearest strictly positive number (up to 1000).</blockquote></value>
+</HTMLTableColElementSpan>
+</docs>

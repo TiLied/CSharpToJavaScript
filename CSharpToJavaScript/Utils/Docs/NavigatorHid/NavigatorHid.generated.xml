@@ -1,7 +1,7 @@
 <docs>
 <NavigatorHid>
 <summary>
-The <strong><c>Navigator.hid</c></strong><br/>read-only property returns an <see cref="HID"/> object providing methods<br/>for connecting to HID devices, listing attached HID devices, and event<br/>handlers for connected HID devices.
+The <strong><c>Navigator.hid</c></strong><br/>read-only property returns an <see cref="HID"/> object providing methods for accessing HID device connections and events that fire when the user agent connects to or disconnects from a device.
 </summary>
 <remarks>
 <para>Where a defined <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Permissions_Policy">Permissions Policy</see> blocks WebHID usage, the <c>Navigator.hid</c> property will not be available.</para>

@@ -1,0 +1,13 @@
+<docs>
+<WebGL2RenderingContextUnpackColorSpace>
+<summary>
+The <strong><c>WebGL2RenderingContext.unpackColorSpace</c></strong> property specifies the color space to convert to when importing textures. Along with the default (<c>srgb</c>), the <c>display-p3</c> color space can be used.
+</summary>
+<remarks>
+<para>Texture image sources can be the following:</para><para>Textures are imported using the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D"><c>WebGLRenderingContext.texImage2D()</c></see> and <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D"><c>WebGLRenderingContext.texSubImage2D()</c></see> methods and conversion to the specified <c>unpackColorSpace</c> color space happens during import.</para><para>Note that this doesn&amp;apos;t apply to <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement"><c>HTMLImageElement</c></see> when the <c>UNPACK_COLORSPACE_CONVERSION_WEBGL</c> pixel storage parameter is set to <c>NONE</c>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/drawingBufferColorSpace"><c>WebGL2RenderingContext.drawingBufferColorSpace</c></see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/unpackColorSpace"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>This property can have the following values:If an invalid value is specified, then the value of <c>unpackColorSpace</c> will remain unchanged.</value>
+</WebGL2RenderingContextUnpackColorSpace>
+</docs>

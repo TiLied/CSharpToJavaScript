@@ -4,6 +4,7 @@
 The <strong><c>getCurrentPosition()</c></strong> method of the <see cref="Geolocation"/> interface is used to get the current position of the device.
 </summary>
 <remarks>
+<para>Note that in addition to requiring a secure context this feature may be blocked by the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy/geolocation"><c>geolocation</c></see> <c>Permissions-Policy</c>, and also requires that explicit permission be granted by the user.<br/>If required, the user will be prompted when this method is called.<br/>The permission state can be queried using the <c>geolocation</c> user permission in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Permissions_API">Permissions API</see>.</para>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API">Using the Geolocation API</see><br/>-<see cref="Navigator.Geolocation"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition"> <em>See also on MDN</em> </seealso></para>
 </remarks>

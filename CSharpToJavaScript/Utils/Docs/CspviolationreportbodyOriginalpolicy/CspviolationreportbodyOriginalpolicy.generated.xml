@@ -1,0 +1,13 @@
+<docs>
+<CSPViolationReportBodyOriginalPolicy>
+<summary>
+The <strong><c>originalPolicy</c></strong> read-only property of the <see cref="CSPViolationReportBody"/> interface is a string that represents the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">Content Security Policy (CSP)</see> whose enforcement uncovered the violation.
+</summary>
+<remarks>
+<para>This is the string in the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy">Content-Security-Policy</see> HTTP response header that contains the list of <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#directives">directives</see> and their values that make the CSP policy.<br/>Note that differs from the <see cref="CSPViolationReportBody.EffectiveDirective"/>, which is the specific directive that is effectively being violated (and which might not be explicitly listed in the policy if <c>default-src</c> is used).</para>
+<para>-<see cref="SecurityPolicyViolationEvent.OriginalPolicy"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSPViolationReportBody/originalPolicy"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing the policy whose enforcement uncovered the violation.</value>
+</CSPViolationReportBodyOriginalPolicy>
+</docs>

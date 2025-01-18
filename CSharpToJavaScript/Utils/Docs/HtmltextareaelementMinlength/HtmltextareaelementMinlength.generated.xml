@@ -1,0 +1,13 @@
+<docs>
+<HTMLTextAreaElementMinLength>
+<summary>
+The <strong><c>minLength</c></strong> property of the <see cref="HTMLTextAreaElement"/> interface indicates the minimum number of characters (in UTF-16 code units) required for the value of the {{HTMLElement("textarea")}} element to be valid. It reflects the element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea#minlength"><c>minlength</c></see> attribute. <c>-1</c> means there is no minimum length requirement.
+</summary>
+<remarks>
+<blockquote><para>If the textarea has a value, and that value has fewer characters than the <c>minlength</c> attribute requires, the element is considered invalid and the <see cref="ValidityState"/> object's <see cref="ValidityState.TooShort"/> property will be <c>true</c>.</para></blockquote>
+<para>-<see cref="HTMLTextAreaElement.Value"/><br/>-<see cref="HTMLTextAreaElement.MaxLength"/><br/>-<see cref="ValidityState.TooShort"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement/minLength"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number representing the element&amp;apos;s <c>minlength</c> if present or <c>-1</c>.</value>
+</HTMLTextAreaElementMinLength>
+</docs>

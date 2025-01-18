@@ -1,10 +1,10 @@
 <docs>
 <TextTrack>
 <summary>
-The <c>TextTrack</c> interface—part of the API for handling WebVTT (text tracks on media presentations)—describes and controls the text track associated with a particular <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track">track</see> element.
+The <strong><c>TextTrack</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebVTT_API">WebVTT API</see> represents a text track associated with a media element.
 </summary>
 <remarks>
-<para></para>
+<para>An object of this type owns the list of <see cref="VTTCue"/> objects that will be displayed over the video at various points.</para><para><c>TextTrack</c> objects can be added to a <see cref="HTMLVideoElement"/> or <see cref="HTMLAudioElement"/> element using the <see cref="HTMLMediaElement.AddTextTrack"/> method, which has the same effect as adding text tracks declaratively using {{htmlelement("track")}} elements inside a {{htmlelement("video")}} or {{htmlelement("audio")}} element.<br/>The <c>TextTrack</c> objects are stored in a <see cref="TextTrackList"/>, which can be retrieved using the <see cref="HTMLMediaElement.TextTracks"/> property.</para><para></para>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebVTT_API">WebVTT</see><br/>-<see cref="TextTrackCueList"/><br/>-<see cref="VTTCue"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track">track</see><br/>-<see cref="HTMLTrackElement"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextTrack"> <em>See also on MDN</em> </seealso></para>
 </remarks>

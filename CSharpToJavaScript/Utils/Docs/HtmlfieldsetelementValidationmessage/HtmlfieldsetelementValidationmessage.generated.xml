@@ -1,0 +1,12 @@
+<docs>
+<HTMLFieldSetElementValidationMessage>
+<summary>
+The <strong><c>validationMessage</c></strong> read-only property of the <see cref="HTMLFieldSetElement"/> interface returns a string representing a localized message that describes the validation constraints that the {{htmlelement("fieldset")}} control does not satisfy (if any). This is the empty string as <c>&amp;lt;fieldset&amp;gt;</c> elements are not candidates for constraint validation (<see cref="HTMLFieldSetElement.WillValidate"/> is <c>false</c>).
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset">fieldset</see><br/>-<see cref="HTMLFieldSetElement"/><br/>-<see cref="HTMLFieldSetElement.WillValidate"/><br/>-<see cref="HTMLFieldSetElement.Validity"/><br/>-<see cref="HTMLFieldSetElement.CheckValidity"/><br/>-<see cref="HTMLFieldSetElement.ReportValidity"/><br/>-<see cref="HTMLFieldSetElement.SetCustomValidity"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation">Learn: Client-side form validation</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation">Guide: Constraint validation</see><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:valid">:valid</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:invalid">:invalid</see> pseudo-classes<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFieldSetElement/validationMessage"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The empty string, <c>&amp;quot;&amp;quot;</c>;</value>
+</HTMLFieldSetElementValidationMessage>
+</docs>

@@ -4,8 +4,9 @@
 The <strong><c>namedItem()</c></strong> method of the <see cref="HTMLCollection"/> interface returns<br/>the first <see cref="Element"/> in the collection whose <c>id</c> or <c>name</c> attribute match the specified name, or <c>null</c> if no element matches.
 </summary>
 <remarks>
-<para>In JavaScript, using the array bracket syntax with a <see cref="String"/>, like <c>collection[&amp;quot;value&amp;quot;]</c> is equivalent to <c>collection.namedItem(&amp;quot;value&amp;quot;)</c>.</para>
+<para>In JavaScript, instead of calling <c>collection.namedItem(&amp;quot;value&amp;quot;)</c>, you can also directly access the name on the collection, like <c>collection[&amp;quot;value&amp;quot;]</c>, unless the name collides with one of the existing <c>HTMLCollection</c> properties.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCollection/namedItem"> <em>See also on MDN</em> </seealso></para>
 </remarks>
+<returns>The first <see cref="Element"/> in the <see cref="HTMLCollection"/> matching the <c>key</c>, or <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><c>null</c></see> if there is none. Always returns <c>null</c> if <c>key</c> is the empty string.</returns>
 </HTMLCollectionNamedItem>
 </docs>

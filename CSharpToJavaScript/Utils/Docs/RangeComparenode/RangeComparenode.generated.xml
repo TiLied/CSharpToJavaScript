@@ -4,7 +4,7 @@
 <div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>Range.compareNode()</c></strong> returns a constant indicating the<br/>position of the <see cref="Node"/>.
 </summary>
 <remarks>
-<para>The possible values are:</para><blockquote class="WARNING"><h5>WARNING</h5><para><strong>Warning:</strong> This method <see href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/3/Site_compatibility">has been removed</see> from <see href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/3">Gecko 1.9</see> and<br/>will not exist in future versions of Firefox, which was the only browser implementing<br/>it; you should switch to <see cref="Range.CompareBoundaryPoints"/> as soon as<br/>possible.</para></blockquote><para>The following function can be used as replacement:</para>
+<para>The possible values are:</para><blockquote><para>This method <see href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/3/Site_compatibility">has been removed</see> from <see href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/3">Gecko 1.9</see> and<br/>will not exist in future versions of Firefox, which was the only browser implementing<br/>it; you should switch to <see cref="Range.CompareBoundaryPoints"/> as soon as<br/>possible.</para></blockquote><para>The following function can be used as replacement:</para>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Range/compareNode"> <em>See also on MDN</em> </seealso></para>
 </remarks>

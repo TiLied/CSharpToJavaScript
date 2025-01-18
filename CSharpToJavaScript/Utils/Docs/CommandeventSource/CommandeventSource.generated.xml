@@ -1,0 +1,12 @@
+<docs>
+<CommandEventSource>
+<summary>
+The <strong><c>source</c></strong> read-only property of the <see cref="CommandEvent"/> interface returns an <see cref="EventTarget"/> representing the control that invoked the given command.
+</summary>
+<remarks>
+<para>-{{domxref(&amp;quot;Invoker Commands API&amp;quot;, &amp;quot;Invoker Commands API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see cref="HTMLButtonElement.Command"/><br/>-<see cref="HTMLButtonElement.CommandForElement"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CommandEvent/source"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="EventTarget"/> object. Usually an <see cref="HTMLButtonElement"/>.</value>
+</CommandEventSource>
+</docs>

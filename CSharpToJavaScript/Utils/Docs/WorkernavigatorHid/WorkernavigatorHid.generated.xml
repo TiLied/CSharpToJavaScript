@@ -1,0 +1,13 @@
+<docs>
+<WorkerNavigatorHid>
+<summary>
+The <strong><c>WorkerNavigator.hid</c></strong><br/>read-only property returns an <see cref="HID"/> object providing methods for accessing HID device connections and events that fire when the user agent connects to or disconnects from a device.
+</summary>
+<remarks>
+<para>Where a defined <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Permissions_Policy">Permissions Policy</see> blocks WebHID usage, the <c>WorkerNavigator.hid</c> property will not be available.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebHID_API">WebHID API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerNavigator/hid"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="HID"/> object.</value>
+</WorkerNavigatorHid>
+</docs>

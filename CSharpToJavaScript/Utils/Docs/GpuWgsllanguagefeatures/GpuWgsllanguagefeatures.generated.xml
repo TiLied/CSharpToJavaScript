@@ -4,7 +4,7 @@
 The <strong><c>wgslLanguageFeatures</c></strong> read-only property of the<br/><see cref="GPU"/> interface returns a <see cref="WGSLLanguageFeatures"/> object that reports the <see href="https://gpuweb.github.io/gpuweb/wgsl/#language-extension">WGSL language extensions</see> supported by the WebGPU implementation.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Not all WGSL language extensions are available to WebGPU in all browsers that support the API. We recommend you thoroughly test any extensions you choose to use.</para></blockquote>
+<blockquote><para>Not all WGSL language extensions are available to WebGPU in all browsers that support the API. We recommend you thoroughly test any extensions you choose to use.</para></blockquote>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPU/wgslLanguageFeatures"> <em>See also on MDN</em> </seealso></para>
 </remarks>

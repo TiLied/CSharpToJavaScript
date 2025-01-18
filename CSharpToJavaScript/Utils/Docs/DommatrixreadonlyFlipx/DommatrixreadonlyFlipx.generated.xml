@@ -1,11 +1,12 @@
 <docs>
 <DOMMatrixReadOnlyFlipX>
 <summary>
-The <c>flipX()</c> method of the <see cref="DOMMatrixReadOnly"/> interface creates a new matrix being the result of the original matrix flipped about the x-axis.
+The <strong><c>flipX()</c></strong> method of the <see cref="DOMMatrixReadOnly"/> interface creates a new matrix being the result of the original matrix flipped about the x-axis. This is equivalent to multiplying the matrix by <c>DOMMatrix(-1, 0, 0, 1, 0, 0)</c>. The original matrix is not modified.
 </summary>
 <remarks>
+<para>-<see cref="DOMMatrixReadOnly.FlipY"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/flipX"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>Returns a <see href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix"><c>DOMMatrix</c></see> containing a new matrix being the result of the original matrix flipped about the x-axis, which is equivalent to multiplying the matrix by <c>DOMMatrix(-1, 0, 0, 1, 0, 0)</c>. The original matrix is not modified.</returns>
+<returns>Returns a <see href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix"><c>DOMMatrix</c></see>.</returns>
 </DOMMatrixReadOnlyFlipX>
 </docs>

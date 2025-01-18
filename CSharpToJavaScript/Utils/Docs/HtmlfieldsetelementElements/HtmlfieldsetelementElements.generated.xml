@@ -1,0 +1,13 @@
+<docs>
+<HTMLFieldSetElementElements>
+<summary>
+The <strong><c>elements</c></strong> read-only property of the <see cref="HTMLFieldSetElement"/> interface returns an <see cref="HTMLCollection"/> object containing all form control elements ({{htmlelement("button")}}, {{htmlelement("fieldset")}}, {{htmlelement("input")}}, {{htmlelement("object")}}, {{htmlelement("output")}}, {{htmlelement("select")}}, and {{htmlelement("textarea")}}) that are descendants of this field set.
+</summary>
+<remarks>
+<para>You can access a particular form control in the returned collection by using either an<br/>index or the element&amp;apos;s <c>name</c> or <c>id</c> attributes. If multiple form controls share the same name, as is common with a group of radio buttons, using the shared name returns the first element with that value.</para>
+<para>-<see cref="HTMLFieldSetElement"/><br/>-<see cref="HTMLFormElement.Elements"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset">fieldset</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFieldSetElement/elements"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="HTMLCollection"/>.</value>
+</HTMLFieldSetElementElements>
+</docs>

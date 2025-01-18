@@ -1,0 +1,12 @@
+<docs>
+<RTCRtpReceiverJitterBufferTarget>
+<summary>
+The <strong><c>jitterBufferTarget</c></strong> property of the <see cref="RTCRtpReceiver"/> interface is a <see cref="DOMHighResTimeStamp"/> that indicates the application's preferred duration, in milliseconds, for which the jitter buffer should hold media before playing it out.
+</summary>
+<remarks>
+<para>The application can use it to influence the tradeoff between playout delay and the risk of running out of audio or video frames due to network jitter.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpReceiver/jitterBufferTarget"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DOMHighResTimeStamp"/> that indicates the current jitter buffer target hold time, in milliseconds.The value can be set to a positive value of no greater than 4000 milliseconds.</value>
+</RTCRtpReceiverJitterBufferTarget>
+</docs>

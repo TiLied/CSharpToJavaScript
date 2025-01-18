@@ -1,11 +1,11 @@
 <docs>
 <TaskAttributionTimingContainerName>
 <summary>
-The <strong><c>containerName</c></strong> readonly property of the <see cref="TaskAttributionTiming"/> interface returns the container's <c>name</c><br/>attribute. A container is the iframe, embed or object etc. that is being implicated, on the whole, for a long task.
+The <strong><c>containerName</c></strong> read-only property of the <see cref="TaskAttributionTiming"/> interface returns the container's <c>name</c><br/>attribute. A container is the iframe, embed or object etc. that is being implicated, on the whole, for a long task.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TaskAttributionTiming/containerName"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string containing the container&amp;apos;s <c>name</c> HTML content attribute (e.g. <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#name"><c>&amp;lt;iframe name=&amp;quot;myIframe&amp;quot;</c></see> or <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object#name"><c>&amp;lt;object name=&amp;quot;myObject&amp;quot;</c></see>).</value>
+<value>A string containing the container&amp;apos;s <c>name</c> HTML content attribute (e.g. <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#name"><c>&amp;lt;iframe name=&amp;quot;myIframe&amp;quot;&amp;gt;</c></see> or <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object#name"><c>&amp;lt;object name=&amp;quot;myObject&amp;quot;&amp;gt;</c></see>).</value>
 </TaskAttributionTimingContainerName>
 </docs>

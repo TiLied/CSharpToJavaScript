@@ -1,0 +1,13 @@
+<docs>
+<SVGNumberListGetItem>
+<summary>
+The <c>getItem()</c> method of the <see cref="SVGNumberList"/> interface returns the specified item from the list.
+</summary>
+<remarks>
+<para>The returned item is the item itself and not a copy. Any changes made to the item are immediately reflected in the list.</para><para>The first item is indexed at <c>0</c>.</para>
+<para>-<see cref="SVGNumber"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGNumberList/getItem"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="SVGNumber"/> object; the specified item from the list.</returns>
+</SVGNumberListGetItem>
+</docs>

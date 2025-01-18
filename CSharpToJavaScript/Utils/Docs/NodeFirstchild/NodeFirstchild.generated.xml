@@ -4,7 +4,7 @@
 The read-only <strong><c>firstChild</c></strong> property of the <see cref="Node"/> interface<br/>returns the node&amp;apos;s first child in the tree,<br/>or <c>null</c> if the node has no children.
 </summary>
 <remarks>
-<para>If the node is a <see cref="Document"/>,<br/>this property returns the first node in the list of its direct children.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This property returns any type of node that is the first child of this one.<br/>It may be a <see cref="Text"/> or a <see cref="Comment"/> node.<br/>If you want to get the first <see cref="Element"/> that is a child of another element,<br/>consider using <see cref="Element.FirstElementChild"/>.</para></blockquote>
+<para>If the node is a <see cref="Document"/>,<br/>this property returns the first node in the list of its direct children.</para><blockquote><para>This property returns any type of node that is the first child of this one.<br/>It may be a <see cref="Text"/> or a <see cref="Comment"/> node.<br/>If you want to get the first <see cref="Element"/> that is a child of another element,<br/>consider using <see cref="Element.FirstElementChild"/>.</para></blockquote>
 <para>-<see cref="Element.FirstElementChild"/><br/>-<see cref="Node.LastChild"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/firstChild"> <em>See also on MDN</em> </seealso></para>
 </remarks>

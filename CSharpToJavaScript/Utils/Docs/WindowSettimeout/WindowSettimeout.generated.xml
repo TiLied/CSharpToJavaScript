@@ -1,0 +1,12 @@
+<docs>
+<WindowSetTimeout>
+<summary>
+The <strong><c>setTimeout()</c></strong> method of the <see cref="Window"/> interface sets a timer which executes a function or specified piece of code once the timer expires.
+</summary>
+<remarks>
+<para>-<see href="https://github.com/zloirock/core-js#settimeout-and-setinterval">Polyfill of <c>setTimeout</c> which allows passing arguments to the callback in <c>core-js</c></see><br/>-<see cref="Window.ClearTimeout"/><br/>-<see cref="WorkerGlobalScope.SetTimeout"/><br/>-<see cref="Window.SetInterval"/><br/>-<see cref="Window.RequestAnimationFrame"/><br/>-<see cref="Window.QueueMicrotask"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Window/setTimeout"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>The returned <c>timeoutID</c> is a positive integer value which<br/>identifies the timer created by the call to <c>setTimeout()</c>. This value can be<br/>passed to <see cref="Window.ClearTimeout"/> to<br/>cancel the timeout.It is guaranteed that a <c>timeoutID</c> value will never be reused by a subsequent call to <c>setTimeout()</c> or <c>setInterval()</c> on the same window while the timer is still active. However, different objects use separate pools of IDs.</returns>
+</WindowSetTimeout>
+</docs>

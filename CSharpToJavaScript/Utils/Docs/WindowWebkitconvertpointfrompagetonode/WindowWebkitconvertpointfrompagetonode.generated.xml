@@ -4,8 +4,8 @@
 <div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> Given a <see cref="WebKitPoint"/> specified in the page's coordinate system, the<br/><see cref="Window"/> method <strong><c>webkitConvertPointFromPageToNode()</c></strong><br/>returns a <c>Point</c> object specifying the same location in the coordinate<br/>system of the specified DOM <see cref="Node"/>.
 </summary>
 <remarks>
-<blockquote class="WARNING"><h5>WARNING</h5><para><strong>Warning:</strong> Please review the <see href="https://developer.mozilla.org#browser_compatibility">Browser compatibility</see> section before using this method,<br/>as it's not widely supported (nor is the <see cref="WebKitPoint"/> object it uses).</para></blockquote>
-<para>-<see cref="Window.WebkitConvertPointFromNodeToPage"/><br/>-Mozilla implementation bug: <see href="https://bugzil.la/850808">Firefox bug 850808</see><br/>-<see href="https://msdn.microsoft.com/library/ie/dn760735(v=vs.85).aspx"><c>webkitConvertPointFromPageToNode</c> documentation at IE Dev Center</see><br/></para>
+<blockquote><para>Please review the <see href="https://developer.mozilla.org#browser_compatibility">Browser compatibility</see> section before using this method,<br/>as it's not widely supported (nor is the <see cref="WebKitPoint"/> object it uses).</para></blockquote>
+<para>-<see cref="Window.WebkitConvertPointFromNodeToPage"/><br/>-Mozilla implementation bug: <see href="https://bugzil.la/850808">Firefox bug 850808</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Window/webkitConvertPointFromPageToNode"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>A <c>Point</c> object describing the specified location in the node&amp;apos;s coordinate<br/>system.</returns>

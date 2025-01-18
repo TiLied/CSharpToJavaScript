@@ -1,0 +1,13 @@
+<docs>
+<PerformanceScriptTimingSourceFunctionName>
+<summary>
+The <strong><c>sourceFunctionName</c></strong> read-only property of the <see cref="PerformanceScriptTiming"/> interface returns a string representing the name of the function that contributed to the long animation frame (LoAF).
+</summary>
+<remarks>
+<para>It is important to note that the reported function name will be the &amp;quot;entry point&amp;quot; of the script, that is, the top level of the stack, not any specific slow sub-function.</para><para>For example, if an event handler calls a top-level function, which then calls a slow sub-function, the <c>source*</c> fields will report the name and location of the top-level function, not the slow sub-function — the function that was passed to the platform API is always the one reported. This is because of performance reasons; a full stack trace is costly.</para><para>In the following snippet:</para><para><c>sourceFunctionName</c> would report <c>lib_func</c>, not <c>slow_function</c>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Performance_API/Long_animation_frame_timing">Long animation frame timing</see><br/>-<see cref="PerformanceLongAnimationFrameTiming"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceScriptTiming/sourceFunctionName"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string. Returns an empty string if the function name was not found.</value>
+</PerformanceScriptTimingSourceFunctionName>
+</docs>

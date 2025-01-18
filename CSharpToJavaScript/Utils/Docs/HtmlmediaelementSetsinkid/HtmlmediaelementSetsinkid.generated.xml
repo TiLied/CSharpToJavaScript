@@ -1,11 +1,11 @@
 <docs>
 <HTMLMediaElementSetSinkId>
 <summary>
-The <strong><c>HTMLMediaElement.setSinkId()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Audio_Output_Devices_API">Audio Output Devices API</see> sets the ID of the audio device to use for output and returns a <see cref="Promise"/>.
+The <strong><c>setSinkId()</c></strong> method of the <see cref="HTMLMediaElement"/> interface sets the ID of the audio device to use for output and returns a {{jsxref("Promise")}}.
 </summary>
 <remarks>
 <para>This only works when the application is permitted to use the specified device.<br/>For more information see the <see href="https://developer.mozilla.org#security_requirements">security requirements</see> below.</para>
-<para>-<see cref="MediaDevices.SelectAudioOutput"/><br/>-<see cref="HTMLMediaElement.SinkId"/><br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Audio_Output_Devices_API">Audio Output Devices API</see><br/>-<see cref="MediaDevices.SelectAudioOutput"/><br/>-<see cref="HTMLMediaElement.SinkId"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/setSinkId"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>A <see cref="Promise"/> that resolves to <see cref="Undefined"/>.</returns>

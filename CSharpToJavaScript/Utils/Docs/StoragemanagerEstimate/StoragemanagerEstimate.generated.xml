@@ -8,6 +8,6 @@ The <strong><c>estimate()</c></strong> method of the <see cref="StorageManager"/
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Storage_API">Storage API</see><br/>-<see cref="Storage"/>, the object returned by <see cref="Window.LocalStorage"/><br/>-<see cref="StorageManager"/><br/>-<see cref="Navigator.Storage"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StorageManager/estimate"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A <see cref="'Promise'"/> that resolves to an object with the following properties:<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> The returned values are not exact: between compression, deduplication, and obfuscation for security reasons, they will be imprecise.</blockquote>You may find that the <c>quota</c> varies from origin to origin. This variance is based on factors such as:</returns>
+<returns>A <see cref="'Promise'"/> that resolves to an object with the following properties:<blockquote>The returned values are not exact: between compression, deduplication, and obfuscation for security reasons, they will be imprecise.</blockquote>You may find that the <c>quota</c> varies from origin to origin. This variance is based on factors such as:</returns>
 </StorageManagerEstimate>
 </docs>

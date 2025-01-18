@@ -1,12 +1,12 @@
 <docs>
 <WindowGetSelection>
 <summary>
-The <strong><c>Window.getSelection()</c></strong> method returns a<br/><see cref="Selection"/> object representing the range of text selected by the user or<br/>the current position of the caret.
+The <strong><c>getSelection()</c></strong> method of the <see cref="Window"/> interface returns the <see cref="Selection"/> object associated with the window's <see cref="Document"/>, representing the range of text selected by the user or the current position of the caret.
 </summary>
 <remarks>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Selection">Selection API</see><br/>-<see cref="Selection"/><br/>-<see cref="Range"/><br/>-<see cref="Document.GetSelection"/><br/>-<see cref="HTMLInputElement.SetSelectionRange"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Window/getSelection"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A <see cref="Selection"/> object.When cast to string, either by appending an empty string (<c>&amp;quot;&amp;quot;</c>) or using<br/><see cref="Selection.ToString"/>, this object returns the text selected.When called on an <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</see> that is not displayed (e.g., where<br/><c>display: none</c> is set) Firefox will return <c>null</c>, whereas other<br/>browsers will return a <see cref="Selection"/> object with<br/><see cref="Selection.Type"/> set to <c>None</c>.</returns>
+<returns>A <see cref="Selection"/> object, or <c>null</c> if the associated document has no <see href="https://developer.mozilla.org/en-US/docs/Glossary/Browsing_context">browsing context</see> (for example, the window is an <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</see> that is not attached to a document).When called on an <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</see> that is not displayed (e.g., where <c>display: none</c> is set) Firefox returns <c>null</c>, whereas other browsers returns a <see cref="Selection"/> object with <see cref="Selection.Type"/> set to <c>None</c>.</returns>
 </WindowGetSelection>
 </docs>

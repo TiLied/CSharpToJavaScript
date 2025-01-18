@@ -1,0 +1,12 @@
+<docs>
+<RTCRemoteInboundRtpStreamStatsPacketsLost>
+<summary>
+The <strong><c>packetsLost</c></strong> property of the <see cref="RTCRemoteInboundRtpStreamStats"/> dictionary returns the total number of {{Glossary("RTP")}} packets lost from the <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRemoteInboundRtpStreamStats/ssrc">synchronization source (SSRC)</see>, as reported by the remote endpoint, since the beginning of reception.
+</summary>
+<remarks>
+<para>-<see cref="RTCRemoteInboundRtpStreamStats.Ssrc"/><br/>-<see cref="RTCInboundRtpStreamStats.PacketsLost"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRemoteInboundRtpStreamStats/packetsLost"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer value indicating the number of lost RTP packets.This value can be negative.<br/>It is determined by subtracting the number of packets received from the number of packets that are expected.<br/>The number of packets that are expected is calculated in a way that assumes that all packets only need to be sent once (based on sequence numbers), while the number of packets received also includes any packets that had to be resent (and hence may be bigger).<br/>For more information see the &amp;quot;cumulative number of packets lost&amp;quot; section in {{RFC(&amp;quot;3550&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;6.4.1&amp;quot;)}}.</value>
+</RTCRemoteInboundRtpStreamStatsPacketsLost>
+</docs>

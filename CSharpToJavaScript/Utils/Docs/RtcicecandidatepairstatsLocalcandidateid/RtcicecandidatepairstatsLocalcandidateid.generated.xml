@@ -1,11 +1,11 @@
 <docs>
 <RTCIceCandidatePairStatsLocalCandidateId>
 <summary>
-The <see cref="RTCIceCandidatePairStats"/> property<br/><strong><c>localCandidateId</c></strong> is a string that uniquely identifies<br/>the local <see href="https://developer.mozilla.org/en-US/docs/Glossary/ICE">ICE</see> candidate which was analyzed to generate the<br/><see cref="RTCIceCandidateStats"/> used to compute the statistics for this pair of<br/>candidates.
+The <strong><c>localCandidateId</c></strong> property of the <see cref="RTCIceCandidatePairStats"/> dictionary is a string that uniquely identifies the local {{Glossary("ICE")}} candidate which was analyzed to generate the <see cref="RTCIceCandidateStats"/> used to compute the statistics for this pair of candidates.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/localCandidateId"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string giving a unique identifier for the local<br/><see cref="RTCIceCandidate"/> for the connection described by this<br/><c>RTCIceCandidatePairStats</c> object.This candidate is the source of one of the two <see cref="RTCIceCandidateStats"/><br/>objects that were used to compute the contents of this<br/><see cref="RTCIceCandidatePairStats"/> object.</value>
+<value>A string giving a unique identifier for the local <see cref="RTCIceCandidate"/> for the connection described by this <c>RTCIceCandidatePairStats</c> object.This candidate is the source of one of the two <see cref="RTCIceCandidateStats"/> objects that were used to compute the contents of this <see cref="RTCIceCandidatePairStats"/> object.</value>
 </RTCIceCandidatePairStatsLocalCandidateId>
 </docs>

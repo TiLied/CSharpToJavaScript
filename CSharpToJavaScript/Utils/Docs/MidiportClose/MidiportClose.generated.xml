@@ -4,7 +4,7 @@
 The <strong><c>close()</c></strong> method of the <see cref="MIDIPort"/> interface makes the access to the MIDI device connected to this <c>MIDIPort</c> unavailable.
 </summary>
 <remarks>
-<para>If the port is successfully closed a new <see cref="MIDIConnectionEvent"/> is queued to the <see cref="MIDIPort.Statechange_event"/> and <see cref="MIDIAccess.Statechange_event"/> events, and the <see cref="MIDIPort.Connection"/> property is changed to <c>&amp;quot;closed&amp;quot;</c>.</para>
+<para>If the port is successfully closed a new <see cref="MIDIConnectionEvent"/> is queued to the <c>MIDIPort</c> <see cref="MIDIPort.Statechange_event"/> and <c>MIDIAccess</c> <see cref="MIDIAccess.Statechange_event"/> events, and the <see cref="MIDIPort.Connection"/> property is changed to <c>&amp;quot;closed&amp;quot;</c>.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MIDIPort/close"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>Returns a <see cref="Promise"/> which resolves once the port has been closed.</returns>

@@ -1,0 +1,12 @@
+<docs>
+<PointerEventPersistentDeviceId>
+<summary>
+The <strong><c>persistentDeviceId</c></strong> read-only property of the<br/><see cref="PointerEvent"/> interface is a unique identifier for the pointing device generating the <c>PointerEvent</c>. This provides a secure, reliable way to identify multiple pointing devices (such as pens) interacting with the screen simultaneously.
+</summary>
+<remarks>
+<para>A <c>persistentDeviceId</c> persists for the lifetime of a browsing session. To avoid the risk of fingerprinting/tracking, pointing devices are assigned a new <c>persistentDeviceId</c> at the start of each session.</para><para>Pointer events whose generating device could not be identified are assigned a <c>persistentDeviceId</c> value of <c>0</c>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/persistentDeviceId"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer, or <c>0</c> if the device generating the <c>PointerEvent</c> could not be identified.<blockquote>Due to digitizer and pointing device hardware constraints, a <c>persistentDeviceId</c> may not be available for all pointer events, particularly with older hardware. For example, the pointing device might not report its hardware ID to the digitizer in time for <c>pointerdown</c> to receive a <c>persistentDeviceId</c>: it may initially be <c>0</c> and change to a valid value for later events in the stroke.</blockquote></value>
+</PointerEventPersistentDeviceId>
+</docs>

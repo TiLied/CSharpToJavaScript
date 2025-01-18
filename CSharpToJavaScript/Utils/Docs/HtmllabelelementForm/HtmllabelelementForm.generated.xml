@@ -1,13 +1,13 @@
 <docs>
 <HTMLLabelElementForm>
 <summary>
-The read-only <strong><c>HTMLLabelElement.form</c></strong> property returns an<br/><see cref="HTMLFormElement"/> object which represents the form of which the label's<br/>associated control is a part, or null if there is either no associated control, or if<br/>that control isn&amp;apos;t in a form.
+The <strong><c>form</c></strong> read-only property of the <see cref="HTMLLabelElement"/> interface returns an <see cref="HTMLFormElement"/> object that owns the <see cref="HTMLLabelElement.Control"/> associated with this {{HTMLElement("label")}}, or <c>null</c> if this label is not associated with a control owned by a form.
 </summary>
 <remarks>
-<para>This property is just a shortcut for <c>HTMLLabelElement.control.form</c>.</para>
-<para>-<see cref="HTMLLabelElement"/><br/>-<see cref="HTMLElement"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label">label</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn/Forms">HTML forms guide</see><br/></para>
+<para>This property is just a shortcut for <c>label.control.form</c>.</para>
+<para>-<see cref="HTMLLabelElement"/><br/>-<see cref="HTMLInputElement.Form"/><br/>-<see cref="HTMLFormElement"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label">label</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms">HTML forms guide</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLLabelElement/form"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An <see cref="HTMLFormElement"/> which represents the form with which the label's<br/><see cref="HTMLLabelElement.Control"/> is associated. If<br/><see cref="HTMLLabelElement.Control"/> is <c>null</c> (meaning the<br/>label isn&amp;apos;t associated with a control), or if the control isn&amp;apos;t part of a form, this<br/>property returns <c>null</c>.</value>
+<value>An <see cref="HTMLFormElement"/> or <c>null</c>.</value>
 </HTMLLabelElementForm>
 </docs>

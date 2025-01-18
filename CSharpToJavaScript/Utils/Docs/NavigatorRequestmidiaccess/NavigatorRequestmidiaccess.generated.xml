@@ -5,7 +5,7 @@ The <strong><c>requestMIDIAccess()</c></strong> method of the <see cref="'Naviga
 </summary>
 <remarks>
 <para>This method may prompt the user for access to MIDI devices available to their system, or it may use a previously established preference to grant or deny access.<br/>If permission is granted then the <see cref="'Promise'"/> resolves and a <see href="https://developer.mozilla.org/en-US/docs/Web/API/MIDIAccess"><c>MIDIAccess</c></see> object is returned.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_MIDI_API">Web MIDI API</see><br/>-<see href="https://code.tutsplus.com/tutorials/introduction-to-web-midi--cms-25220">Introduction to Web MIDI</see><br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_MIDI_API">Web MIDI API</see><br/>-<see href="https://code.tutsplus.com/introduction-to-web-midi--cms-25220t">Introduction to Web MIDI</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/requestMIDIAccess"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>A <see cref="'Promise'"/> that resolves with a <see href="https://developer.mozilla.org/en-US/docs/Web/API/MIDIAccess"><c>MIDIAccess</c></see> object.</returns>

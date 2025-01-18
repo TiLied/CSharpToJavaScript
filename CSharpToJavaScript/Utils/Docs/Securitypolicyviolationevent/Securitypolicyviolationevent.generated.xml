@@ -1,11 +1,11 @@
 <docs>
 <SecurityPolicyViolationEvent>
 <summary>
-The <strong><c>SecurityPolicyViolationEvent</c></strong> interface inherits from <see cref="Event"/>, and represents the event object of an event sent on a document or worker when its content security policy is violated.
+The <strong><c>SecurityPolicyViolationEvent</c></strong> interface inherits from <see cref="Event"/>, and represents the event object of a <c>securitypolicyviolation</c> event sent on an <see cref="Element/securitypolicyviolation_event"/>, <see cref="Document/securitypolicyviolation_event"/>, or {{domxref("WorkerGlobalScope/securitypolicyviolation_event", "worker",&amp;quot;&amp;quot;,&amp;quot;nocode&amp;quot;)}} when its <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">Content Security Policy (CSP)</see> is violated.
 </summary>
 <remarks>
 <para></para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">Content Security Policy (CSP)</see><br/></para>
+<para>-HTTP <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">Content Security Policy (CSP)</see><br/>-<see cref="CSPViolationReportBody"/><br/>-The <see cref="Element/securitypolicyviolation_event"/> event of the <see cref="Element"/> interface<br/>-The <see cref="Document/securitypolicyviolation_event"/> event of the <see cref="Document"/> interface<br/>-The <see cref="WorkerGlobalScope/securitypolicyviolation_event"/> event of the <see cref="WorkerGlobalScope"/> interface<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SecurityPolicyViolationEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </SecurityPolicyViolationEvent>

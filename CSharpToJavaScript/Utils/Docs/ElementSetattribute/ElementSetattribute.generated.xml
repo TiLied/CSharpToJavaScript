@@ -1,7 +1,7 @@
 <docs>
 <ElementSetAttribute>
 <summary>
-Sets the value of an attribute on the specified element. If<br/>the attribute already exists, the value is updated; otherwise a new attribute is added<br/>with the specified name and value.
+The <strong><c>setAttribute()</c></strong> method of the <see cref="Element"/> interface sets the value of an attribute on the specified element. If the attribute already exists, the value is updated; otherwise a new attribute is added with the specified name and value.
 </summary>
 <remarks>
 <para>To get the current value of an attribute, use <see cref="Element.GetAttribute"/>; to remove an attribute, call <see cref="Element.RemoveAttribute"/>.</para><para>If you need to work with the <see cref="Attr"/> node (such as cloning from another element) before adding it, you can use the <see cref="Element.SetAttributeNode"/> method instead.</para>

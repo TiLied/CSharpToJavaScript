@@ -1,10 +1,10 @@
 <docs>
 <ContentIndexEventId>
 <summary>
-The read-only <strong><c>id</c></strong> property of the<br/><see cref="ContentIndexEvent"/> interface is a {{jsxref('String')}} which identifies<br/>the deleted content index via its <c>id</c>.
+The <strong><c>id</c></strong> read-only property of the<br/><see cref="ContentIndexEvent"/> interface is a {{jsxref('String')}} which identifies<br/>the deleted content index via its <c>id</c>.
 </summary>
 <remarks>
-<para>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/content-indexing-api">An introductory article on the Content Index API</see><br/>-<see href="https://contentindex.dev/">An app which uses the Content Index API to list and remove &amp;apos;save for later&amp;apos; content</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">Service Worker API, along with information about Cache and CacheStorage</see><br/></para>
+<para>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/content-indexing-api">An introductory article on the Content Index API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">Service Worker API, along with information about Cache and CacheStorage</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ContentIndexEvent/id"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A <see cref="String"/> representation of the deleted content index id.</value>

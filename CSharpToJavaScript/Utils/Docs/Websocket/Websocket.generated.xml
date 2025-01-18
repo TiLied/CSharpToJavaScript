@@ -4,7 +4,7 @@
 The <c>WebSocket</c> object provides the API for creating and managing a <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API">WebSocket</see> connection to a server, as well as for sending and receiving data on the connection.
 </summary>
 <remarks>
-<para>To construct a <c>WebSocket</c>, use the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/WebSocket"><c>WebSocket()</c></see> constructor.</para><para></para>
+<para>To construct a <c>WebSocket</c>, use the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/WebSocket"><c>WebSocket()</c></see> constructor.</para><blockquote><para>The <c>WebSocket</c> API has no way to apply <see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Concepts#backpressure">backpressure</see>, therefore when messages arrive faster than the application can process them, the application will either fill up the device's memory by buffering those messages, become unresponsive due to 100% CPU usage, or both. For an alternative that provides backpressure automatically, see <see cref="WebSocketStream"/>.</para></blockquote><para></para>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications">Writing WebSocket client applications</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocket"> <em>See also on MDN</em> </seealso></para>
 </remarks>

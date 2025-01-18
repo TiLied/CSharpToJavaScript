@@ -1,0 +1,13 @@
+<docs>
+<RTCInboundRtpStreamStatsSsrc>
+<summary>
+The <strong><c>ssrc</c></strong> property of the <see cref="RTCInboundRtpStreamStats"/> dictionary contains a positive integer value that identifies the synchronization source (SSRC) of this stream of {{Glossary("RTP")}} packets.
+</summary>
+<remarks>
+<para>A source might be something like a microphone, or a mixer application that combines multiple sources.<br/>All packets from the same source share the same time source and sequence space, and so can be ordered relative to each other.<br/>Note that two streams with the same <c>ssrc</c> value refer to the same source.</para>
+<para>-<see cref="RTCRtpReceiver.GetSynchronizationSources"/><br/>-<see cref="RTCEncodedAudioFrame.GetMetadata"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/ssrc"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A positive 32-bit integer uniquely identifying the SSRC of the RTP packets whose statistics are covered by this <see cref="RTCInboundRtpStreamStats"/> object.The manner in which SSRC values are generated is not mandated by the specification, although it does make recommendations.<br/>You should not make any assumptions based on the value of <c>ssrc</c> other than that any two objects with the same <c>ssrc</c> value refer to the same source.<br/>See {{RFC(&amp;quot;3550&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;8&amp;quot;)}} for additional information about <c>ssrc</c>.<blockquote>The specification includes an example that generates values for <c>ssrc</c> using MD5.<br/>While not part of the standard, exactly, it is a good mechanism that may be used by some browsers; others may use other methods, such as random number generators.<br/><strong>Do not</strong> rely upon these values meaning anything other than &amp;quot;these objects are associated with the same source.&amp;quot;</blockquote></value>
+</RTCInboundRtpStreamStatsSsrc>
+</docs>

@@ -4,7 +4,7 @@
 The read-only <strong><c>clipPathUnits</c></strong> property of the <see cref="SVGClipPathElement"/> interface reflects the {{SVGAttr("clipPathUnits")}} attribute of a {{SVGElement("clipPath")}} element which defines the coordinate system to use for the content of the element.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Although this property is read-only, it is merely a container for two values you can modify, <see cref="SVGAnimatedEnumeration.BaseVal"/> and <see cref="SVGAnimatedEnumeration.AnimVal"/>.</para></blockquote>
+<blockquote><para>Although this property is read-only, it is merely a container for two values you can modify, <see cref="SVGAnimatedEnumeration.BaseVal"/> and <see cref="SVGAnimatedEnumeration.AnimVal"/>.</para></blockquote>
 <para>-clipPathUnits<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementclipPath">clipPath</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGClipPathElement/clipPathUnits"> <em>See also on MDN</em> </seealso></para>
 </remarks>

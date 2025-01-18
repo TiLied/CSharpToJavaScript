@@ -1,0 +1,13 @@
+<docs>
+<SVGAngleValue>
+<summary>
+The <c>value</c> property of the <see cref="SVGAngle"/> interface represents the floating point value of the <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Content_type#angle"><c>&amp;lt;angle&amp;gt;</c></see> in degrees.
+</summary>
+<remarks>
+<para>Setting this attribute will cause <see cref="SVGAngle.ValueInSpecifiedUnits"/> and <see cref="SVGAngle.ValueAsString"/> to be updated automatically to reflect this setting.</para>
+<para>-<see cref="SVGAnimatedAngle"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAngle/value"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number; the angle value in degrees.</value>
+</SVGAngleValue>
+</docs>

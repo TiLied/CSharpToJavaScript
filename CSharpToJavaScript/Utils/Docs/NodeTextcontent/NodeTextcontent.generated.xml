@@ -8,6 +8,6 @@ The <strong><c>textContent</c></strong> property of the <see cref="Node"/><br/>i
 <para>-<see cref="HTMLElement.InnerText"/><br/>-<see cref="Element.InnerHTML"/><br/>-<see href="https://developer.mozilla.orghttp://perfectionkills.com/the-poor-misunderstood-innerText/">More on differences between <c>innerText</c> and <c>textContent</c></see><br/>(blog post)<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string, or <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><c>null</c></see>. Its value depends on the situation:<blockquote class="WARNING"><h5>WARNING</h5><strong>Warning:</strong> Setting <c>textContent</c> on a node removes <strong>all</strong> of the node&amp;apos;s children<br/>and replaces them with a single text node with the given string value.</blockquote></value>
+<value>A string, or <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><c>null</c></see>. Its value depends on the situation:<blockquote>Setting <c>textContent</c> on a node removes <strong>all</strong> of the node&amp;apos;s children<br/>and replaces them with a single text node with the given string value.</blockquote></value>
 </NodeTextContent>
 </docs>

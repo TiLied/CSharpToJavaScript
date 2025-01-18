@@ -4,7 +4,7 @@
 The <strong><c>totalAudioEnergy</c></strong> property of the <see cref="RTCAudioSourceStats"/> dictionary represents the total audio energy of the media source over the lifetime of this stats object.
 </summary>
 <remarks>
-<para>The total energy across a particular duration can be determined by subtracting the value of this property returned by two different <c>getStats()</c> calls.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> For audio energy of remotely sourced tracks, see <see cref="RTCInboundRtpStreamStats.TotalAudioEnergy"/>.</para></blockquote>
+<para>The total energy across a particular duration can be determined by subtracting the value of this property returned by two different <c>getStats()</c> calls.</para><blockquote><para>For audio energy of remotely sourced tracks, see <see cref="RTCInboundRtpStreamStats.TotalAudioEnergy"/>.</para></blockquote>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCAudioSourceStats/totalAudioEnergy"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A number produced by summing the energy of every sample over the lifetime of this stats object.The energy of each sample is calculated by dividing the sample&amp;apos;s value by the highest-intensity encodable value, squaring the result, and then multiplying by the duration of the sample in seconds.<br/>This is shown as an equation below:Note that if multiple audio channels are used, the audio energy of a sample refers to the highest energy of any channel.</value>

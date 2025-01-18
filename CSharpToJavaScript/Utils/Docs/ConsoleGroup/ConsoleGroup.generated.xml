@@ -1,10 +1,10 @@
 <docs>
 <ConsoleGroup>
 <summary>
-The <strong><c>console.group()</c></strong> static method creates a new inline group in the <see href="https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html">Web console</see> log, causing any subsequent console messages to be indented by an additional level, until <see cref="Console/groupend"/> is called.
+The <strong><c>console.group()</c></strong> static method creates a new inline group in the <see href="https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html">Web console</see> log, causing any subsequent console messages to be indented by an additional level, until <see cref="Console/groupEnd"/> is called.
 </summary>
 <remarks>
-<para>-<see cref="Console/groupEnd"/><br/>-<see cref="Console/groupCollapsed"/><br/>-<see href="https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api#group">Microsoft Edge&amp;apos;s documentation for <c>console.group()</c></see><br/>-<see href="https://nodejs.org/docs/latest/api/console.html#consolegrouplabel">Node.JS documentation for <c>console.group()</c></see><br/>-<see href="https://developer.chrome.com/docs/devtools/console/api/#group">Google Chrome&amp;apos;s documentation for <c>console.group()</c></see><br/></para>
+<para>-<see cref="Console/groupEnd"/><br/>-<see cref="Console/groupCollapsed"/><br/>-<see href="https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api#group">Microsoft Edge&amp;apos;s documentation for <c>console.group()</c></see><br/>-<see href="https://nodejs.org/docs/latest/api/console.html#consolegrouplabel">Node.js documentation for <c>console.group()</c></see><br/>-<see href="https://developer.chrome.com/docs/devtools/console/api/#group">Google Chrome&amp;apos;s documentation for <c>console.group()</c></see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/console/group"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>

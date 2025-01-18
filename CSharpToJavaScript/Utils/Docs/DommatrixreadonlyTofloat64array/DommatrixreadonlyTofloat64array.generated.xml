@@ -1,0 +1,12 @@
+<docs>
+<DOMMatrixReadOnlyToFloat64Array>
+<summary>
+The <strong><c>toFloat64Array()</c></strong> method of the <see cref="DOMMatrixReadOnly"/> interface returns a new {{jsxref("Float64Array")}} containing all 16 elements (<c>m11</c>, <c>m12</c>, <c>m13</c>, <c>m14</c>, <c>m21</c>, <c>m22</c>, <c>m23</c>, <c>m24</c>, <c>m31</c>, <c>m32</c>, <c>m33</c>, <c>m34</c>, <c>m41</c>, <c>m42</c>, <c>m43</c>, <c>m44</c>) which comprise the matrix. The elements are stored into the array as double-precision floating-point numbers in column-major (colexographical access, or &amp;quot;colex&amp;quot;) order. (In other words, down the first column from top to bottom, then the second column, and so forth.)
+</summary>
+<remarks>
+<para>-<see cref="DOMMatrixReadOnly.ToFloat32Array"/><br/>-<see cref="DOMMatrix.SetMatrixValue"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/toFloat64Array"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Float64Array"/>; an array of the matrix's 16 element values.</returns>
+</DOMMatrixReadOnlyToFloat64Array>
+</docs>

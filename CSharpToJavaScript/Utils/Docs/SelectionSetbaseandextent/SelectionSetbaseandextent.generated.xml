@@ -1,9 +1,10 @@
 <docs>
 <SelectionSetBaseAndExtent>
 <summary>
-The <strong><c>setBaseAndExtent()</c></strong> method of the<br/><see cref="Selection"/> interface sets the selection to be a range including all or<br/>parts of two specified DOM nodes, and any content located between them.
+The <strong><c>setBaseAndExtent()</c></strong> method of the <see cref="Selection"/> interface sets the selection to be a range including all or parts of two specified DOM nodes, and any content located between them.
 </summary>
 <remarks>
+<para>The anchor and focus nodes can be located in a <see href="https://developer.mozilla.org/en-US/docs/Glossary/shadow tree">shadow tree</see>, if supported by the browser.</para>
 <para>-<see cref="Selection"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Selection/setBaseAndExtent"> <em>See also on MDN</em> </seealso></para>
 </remarks>

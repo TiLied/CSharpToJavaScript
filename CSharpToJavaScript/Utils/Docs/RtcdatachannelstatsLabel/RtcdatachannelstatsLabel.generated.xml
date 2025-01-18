@@ -1,0 +1,13 @@
+<docs>
+<RTCDataChannelStatsLabel>
+<summary>
+The <strong><c>label</c></strong> property of the <see cref="RTCDataChannelStats"/> dictionary returns the <see cref="RTCDataChannel.Label"/> of the associated data channel.
+</summary>
+<remarks>
+<para>The value of the label need not be unique, and its meaning is defined by the website or app when it creates the data channel.</para>
+<para>-<see cref="RTCDataChannel.Label"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannelStats/label"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing the same value as the <see cref="RTCDataChannel.Label"/> property of the associated data channel.</value>
+</RTCDataChannelStatsLabel>
+</docs>

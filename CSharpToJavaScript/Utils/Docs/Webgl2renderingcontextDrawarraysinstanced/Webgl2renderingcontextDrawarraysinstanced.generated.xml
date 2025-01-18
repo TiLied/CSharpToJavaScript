@@ -4,7 +4,7 @@
 The <strong><c>WebGL2RenderingContext.drawArraysInstanced()</c></strong> method<br/>of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> renders primitives from<br/>array data like the <see cref="WebGLRenderingContext.DrawArrays"/><br/>method. In addition, it can execute multiple instances of the range of elements.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> When using {{domxref(&amp;quot;WebGLRenderingContext&amp;quot;, &amp;quot;WebGL 1&amp;quot;, &amp;quot;&amp;quot;, 1)}},<br/>the <see cref="ANGLE_instanced_arrays"/> extension can provide this method,<br/>too.</para></blockquote>
+<blockquote><para>When using {{domxref(&amp;quot;WebGLRenderingContext&amp;quot;, &amp;quot;WebGL 1&amp;quot;, &amp;quot;&amp;quot;, 1)}},<br/>the <see cref="ANGLE_instanced_arrays"/> extension can provide this method,<br/>too.</para></blockquote>
 <para>-<see cref="ANGLE_instanced_arrays.DrawArraysInstancedANGLE"/><br/>-<see cref="WEBGL_multi_draw.MultiDrawArraysInstancedWEBGL"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/drawArraysInstanced"> <em>See also on MDN</em> </seealso></para>
 </remarks>

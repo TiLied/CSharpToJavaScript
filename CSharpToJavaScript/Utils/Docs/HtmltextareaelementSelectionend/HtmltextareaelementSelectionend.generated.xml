@@ -1,0 +1,13 @@
+<docs>
+<HTMLTextAreaElementSelectionEnd>
+<summary>
+The <strong><c>selectionEnd</c></strong> property of the <see cref="HTMLTextAreaElement"/> interface specifies the end position of the current text selection in a {{HTMLElement("textarea")}} element. It is a number representing the last index of the selected text. It can be used to both retrieve and set the index of the end of a <c>&amp;lt;textarea&amp;gt;</c>s selected text.
+</summary>
+<remarks>
+<para>When nothing is selected, the value of both the <see cref="HTMLTextAreaElement.SelectionStart"/> and <c>selectionEnd</c> is the position of the cursor (caret) inside the <c>&amp;lt;textarea&amp;gt;</c> element.</para><para>Setting <c>selectionEnd</c> to a value less than the current value of <see cref="HTMLTextAreaElement.SelectionStart"/> updates both the <c>selectionEnd</c> and <c>selectionStart</c> properties to that value. If both value are less than 0, both properties are set to the <see cref="HTMLTextAreaElement.TextLength"/> property value.</para><para>The property value can be retrieved and set without the <c>&amp;lt;textarea&amp;gt;</c> having focus, but the element does need to have focus for the {{cssxref(&amp;quot;::selection&amp;quot;)}} pseudo-element to match the selected text.</para><para>Setting the <c>selectionEnd</c> to a new value fires the <see cref="HTMLTextAreaElement.Selectionchange_event"/> and <see cref="HTMLTextAreaElement.Select_event"/> events.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textarea</see><br/>-<see cref="HTMLTextAreaElement"/><br/>-<see cref="HTMLTextAreaElement.SelectionStart"/><br/>-<see cref="HTMLTextAreaElement.SelectionDirection"/><br/>-<see cref="HTMLTextAreaElement.TextLength"/><br/>-<see cref="HTMLTextAreaElement.SelectionChange_event"/> event<br/>-<see cref="HTMLTextAreaElement.Select"/><br/>-<see cref="HTMLTextAreaElement.SetSelectionRange"/><br/>-<see cref="HTMLTextAreaElement.SetRangeText"/><br/>-<see cref="HTMLInputElement.SelectionEnd"/><br/>-<see cref="Selection"/><br/>-{{cssxref(&amp;quot;::selection&amp;quot;)}} pseudo-element<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement/selectionEnd"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A non-negative number.</value>
+</HTMLTextAreaElementSelectionEnd>
+</docs>

@@ -4,7 +4,7 @@
 <div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>cssText</c></strong> property of the <see cref="CSSValue"/><br/>interface represents the current computed CSS property value.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This property was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do<br/>not implement it.</para><para>To achieve your purpose, you can use:</para></blockquote>
+<blockquote><para>This property was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do<br/>not implement it.</para><para>To achieve your purpose, you can use:</para></blockquote>
 <para>-<see cref="CSSStyleDeclaration.GetPropertyCSSValue"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSValue/cssText"> <em>See also on MDN</em> </seealso></para>
 </remarks>

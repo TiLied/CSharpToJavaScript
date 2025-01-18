@@ -1,0 +1,13 @@
+<docs>
+<HTMLSourceElementSrcset>
+<summary>
+The <strong><c>srcset</c></strong> property of the <see cref="HTMLSourceElement"/> interface is a string containing a comma-separated list of candidate images.
+</summary>
+<remarks>
+<para>Each candidate image includes the URL of an image resource to use as the source for the element and optionally a descriptor indicating the circumstances in which the image should be used. The descriptor is either a number followed by <c>&amp;apos;w&amp;apos;</c>, indicating the element width, or a number followed by <c>&amp;apos;x&amp;apos;</c>, indicating the device pixel density.</para><para>It reflects the <c>srcset</c> attribute of the {{HTMLElement("source")}} element nested in a {{htmlelement("picture")}} element. It has no meaning and is ignored when it is nested in an {{htmlelement("audio")}} or {{htmlelement("video")}} element, which use the <see cref="HTMLSourceElement.Src"/> attribute instead.</para>
+<para>-<see cref="HTMLSourceElement.Type"/><br/>-<see cref="HTMLSourceElement.Src"/><br/>-<see cref="HTMLSourceElement.Media"/><br/>-<see cref="HTMLSourceElement.Sizes"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source">source</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture">picture</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSourceElement/srcset"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</HTMLSourceElementSrcset>
+</docs>

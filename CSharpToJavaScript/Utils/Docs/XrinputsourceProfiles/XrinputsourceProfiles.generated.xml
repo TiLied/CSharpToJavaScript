@@ -4,7 +4,7 @@
 The read-only <see cref="XRInputSource"/> property <strong><c>profiles</c></strong> returns an array of strings, each describing a configuration profile for the input source. The profile strings are listed in order of specificity, with the most specific profile listed first.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> The <c>profiles</c> list is always empty when the WebXR<br/>session is in inline mode.</para></blockquote>
+<blockquote><para>The <c>profiles</c> list is always empty when the WebXR<br/>session is in inline mode.</para></blockquote>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Inputs">Inputs and input sources</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSource/profiles"> <em>See also on MDN</em> </seealso></para>
 </remarks>

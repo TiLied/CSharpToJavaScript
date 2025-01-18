@@ -1,0 +1,13 @@
+<docs>
+<HTMLMeterElementMax>
+<summary>
+The <strong><c>max</c></strong> property of the <see cref="HTMLMeterElement"/> interface represents the maximum value of the {{htmlelement("meter")}} element as a floating-point number. It reflects the element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meter#max"><c>max</c></see> attribute, or the <c>min</c> value if no <c>max</c> is set, or <c>1</c> if neither the <c>min</c> or the <c>max</c> is defined.
+</summary>
+<remarks>
+<para>This property can also be set directly, for example to set a default value based on some condition.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meter">meter</see><br/>-<see cref="HTMLMeterElement.Value"/><br/>-<see cref="HTMLMeterElement.Min"/><br/>-<see cref="HTMLProgressElement"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMeterElement/max"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</HTMLMeterElementMax>
+</docs>

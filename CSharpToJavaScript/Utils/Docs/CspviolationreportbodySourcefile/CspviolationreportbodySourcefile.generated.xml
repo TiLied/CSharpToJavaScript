@@ -1,0 +1,13 @@
+<docs>
+<CSPViolationReportBodySourceFile>
+<summary>
+The <strong><c>sourceFile</c></strong> read-only property of the <see cref="CSPViolationReportBody"/> interface indicates the URL of the source file that violated the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">Content Security Policy (CSP)</see>.
+</summary>
+<remarks>
+<para>For a violation triggered by the use of an inline script, <c>sourceFile</c> is the URL of the current document.<br/>Similarly, if a document successfully loads a script that then violates the document CSP, the <c>sourceFile</c> is the URL of the script.</para><para>Note however that if a document with a CSP that blocks external resources attempts to load an external resource, <c>sourceFile</c> will be <c>null</c>.<br/>This is because the browser extracts the value from <strong>the global object</strong> of the file that triggered the violation.<br/>Because of the CSP restriction the external resource is never loaded, and therefore has no corresponding global object.</para><para>This property is most useful alongside <see cref="CSPViolationReportBody.LineNumber"/> and <see cref="CSPViolationReportBody.ColumnNumber"/>, which provide the location within the file that resulted in a violation.</para>
+<para>-<see cref="SecurityPolicyViolationEvent.SourceFile"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSPViolationReportBody/sourceFile"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing the URL of the file that triggered the violation, or <c>null</c>.</value>
+</CSPViolationReportBodySourceFile>
+</docs>

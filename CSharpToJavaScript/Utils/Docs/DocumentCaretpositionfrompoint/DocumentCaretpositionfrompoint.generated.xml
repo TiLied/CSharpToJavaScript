@@ -1,12 +1,12 @@
 <docs>
 <DocumentCaretPositionFromPoint>
 <summary>
-The <strong><c>caretPositionFromPoint()</c></strong><br/>method of the <see cref="Document"/> interface returns a<br/><see cref="'CaretPosition'"/> object, containing the DOM node, along with the caret and<br/>caret&amp;apos;s character offset within that node.
+The <strong><c>caretPositionFromPoint()</c></strong> method of the <see cref="Document"/> interface returns a <see cref="'CaretPosition'"/> object, containing the DOM node, along with the caret and caret's character offset within that node.
 </summary>
 <remarks>
 <para>-<see cref="'CaretPosition'"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/caretPositionFromPoint"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A <see cref="'CaretPosition'"/> object.</returns>
+<returns>A <see cref="'CaretPosition'"/> object or <c>null</c>.The returned value is <c>null</c> if there is no viewport associated with the document, if the <c>x</c> or <c>y</c> are negative or outside of the viewport region, or if the coordinates indicate a point where no text insertion point indicator could be inserted.</returns>
 </DocumentCaretPositionFromPoint>
 </docs>

@@ -1,10 +1,10 @@
 <docs>
 <InstallEvent>
 <summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> Instead of using the deprecated <c>ServiceWorkerGlobalScope.oninstall</c> handler to catch events of this type, handle the (non-deprecated) <see cref="ServiceWorkerGlobalScope/install_event"/> event using a listener added with <see cref="EventTarget/addEventListener"/>.</blockquote>
+The parameter passed into an <see cref="ServiceWorkerGlobalScope.Install_event"/> event handler function, the <c>InstallEvent</c> interface represents an install action that is dispatched on the <see cref="ServiceWorkerGlobalScope"/> of a <see cref="ServiceWorker"/>. As a child of <see cref="ExtendableEvent"/>, it ensures that functional events such as <see cref="FetchEvent"/> are not dispatched during installation.
 </summary>
 <remarks>
-<para>The parameter passed into the <see cref="ServiceWorkerGlobalScope.Install_event"/> handler, the <c>InstallEvent</c> interface represents an install action that is dispatched on the <see cref="ServiceWorkerGlobalScope"/> of a <see cref="ServiceWorker"/>. As a child of <see cref="ExtendableEvent"/>, it ensures that functional events such as <see cref="FetchEvent"/> are not dispatched during installation.</para><para>This interface inherits from the <see cref="ExtendableEvent"/> interface.</para><para></para>
+<para>This interface inherits from the <see cref="ExtendableEvent"/> interface.</para><para></para>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerGlobalScope/install_event"><c>install</c> event</see><br/>-<see cref="NotificationEvent"/><br/>-<see cref="Promise"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/InstallEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>

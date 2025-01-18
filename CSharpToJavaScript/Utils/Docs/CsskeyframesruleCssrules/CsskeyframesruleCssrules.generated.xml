@@ -4,6 +4,7 @@
 The read-only <strong><c>cssRules</c></strong> property of the <see cref="CSSKeyframeRule"/> interface returns a <see cref="CSSRuleList"/> containing the rules in the keyframes <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/At-rule">at-rule</see>.
 </summary>
 <remarks>
+<blockquote><para>The <c>CSSKeyframeRule</c> itself is indexable like an array, and functions similarly to its <c>cssRules</c> property.</para></blockquote>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSKeyframesRule/cssRules"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A <see cref="'CSSRuleList'"/>.</value>

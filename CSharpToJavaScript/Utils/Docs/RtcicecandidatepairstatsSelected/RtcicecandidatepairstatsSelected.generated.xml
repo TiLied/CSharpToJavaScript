@@ -1,11 +1,12 @@
 <docs>
 <RTCIceCandidatePairStatsSelected>
 <summary>
-The <strong>non-standard</strong>, Firefox-specific <see cref="RTCIceCandidatePairStats"/> property <strong><c>selected</c></strong> indicates whether or not the candidate pair described by the object is the one currently being used to communicate with the remote peer.
+The <strong><c>selected</c></strong> property of the <see cref="RTCIceCandidatePairStats"/> dictionary indicates whether or not the candidate pair described by the object is the one currently being used to communicate with the remote peer.
 </summary>
 <remarks>
+<para>This property is non-standard and is only supported by Firefox.<br/>The standard way to determine the selected candidate pair is to look at the <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTransportStats#selectedcandidatepairid"><c>selectedCandidatePairId</c></see> property of the stats object of type <c>transport</c>.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/selected"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A Firefox-specific Boolean value which is <c>true</c> if the candidate pair described by this object is the one currently in use.In any other browser, you can determine the selected candidate pair by looking for a stats object of type <c>transport</c>, which is an <see cref="RTCTransportStats"/> object. That object's <see cref="RTCTransportStats.SelectedCandidatePairId"/> property indicates whether or not the specified transport is the one being used.</value>
+<value><c>true</c> if the candidate pair described by this object is the one currently in use, and <c>false</c> otherwise.</value>
 </RTCIceCandidatePairStatsSelected>
 </docs>

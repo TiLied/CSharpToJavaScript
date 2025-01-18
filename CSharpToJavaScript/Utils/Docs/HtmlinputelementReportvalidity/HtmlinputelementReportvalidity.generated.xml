@@ -1,10 +1,10 @@
 <docs>
 <HTMLInputElementReportValidity>
 <summary>
-The <strong><c>reportValidity()</c></strong> method of the <see cref="'HTMLInputElement'"/> interface performs the same validity checking steps as the <see cref="HTMLInputElement.CheckValidity"/> method. If the value is invalid, this method also fires the <see cref="HTMLInputElement.Invalid_event"/> event on the element, and (if the event isn't canceled) reports the problem to the user.
+The <strong><c>reportValidity()</c></strong> method of the <see cref="HTMLInputElement"/> interface performs the same validity checking steps as the <see cref="HTMLInputElement.CheckValidity"/> method. In addition, if the <see cref="HTMLElement/invalid_event"/> event is not canceled, the browser displays the problem to the user.
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/checkValidity">checkValidity</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation">Learn: Client-side form validation</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation">Guide: Constraint validation</see><br/></para>
+<para>-<see cref="HTMLInputElement.CheckValidity"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">input</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation">Learn: Client-side form validation</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation">Guide: Constraint validation</see><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:valid">:valid</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:invalid">:invalid</see> pseudo-classes<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/reportValidity"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>Returns <c>true</c> if the element&amp;apos;s value has no validity problems; otherwise, returns <c>false</c>.</returns>

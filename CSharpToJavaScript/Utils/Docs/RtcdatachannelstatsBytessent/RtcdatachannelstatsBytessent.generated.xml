@@ -1,0 +1,13 @@
+<docs>
+<RTCDataChannelStatsBytesSent>
+<summary>
+The <strong><c>bytesSent</c></strong> property of the <see cref="RTCDataChannelStats"/> dictionary returns the total number of payload bytes sent on the associated <see cref="RTCDataChannel"/>.
+</summary>
+<remarks>
+<para>Note that non-payload bytes, such as those for framing and in headers, are not included.</para>
+<para>-<see cref="RTCDataChannel"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannelStats/bytesSent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A positive integer value indicating the total number of payload bytes sent on the associated data channel.</value>
+</RTCDataChannelStatsBytesSent>
+</docs>

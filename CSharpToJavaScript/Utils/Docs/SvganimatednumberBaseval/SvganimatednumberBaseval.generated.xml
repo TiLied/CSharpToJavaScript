@@ -1,0 +1,13 @@
+<docs>
+<SVGAnimatedNumberBaseVal>
+<summary>
+The <strong><c>baseVal</c></strong> property of the <see cref="SVGAnimatedNumber"/> interface represents the base (non-animated) value of an animatable numeric attribute.
+</summary>
+<remarks>
+<para>Some animatable SVG attributes accept a single numeric value, such as the {{SVGAttr("radius")}} attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementcircle">circle</see> or <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementellipse">ellipse</see> elements and the {{SVGAttr("width")}} and {{SVGAttr("height")}} attributes of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementrect">rect</see> element, and many others. The <c>baseVal</c> property reflects and updates the base, or non-animated, value of the numeric attribute.</para>
+<para>-<see cref="SVGAnimatedInteger"/><br/>-<see cref="SVGElement"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAnimatedNumber/baseVal"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <c>number</c>; the base value of the attribute as a float.</value>
+</SVGAnimatedNumberBaseVal>
+</docs>

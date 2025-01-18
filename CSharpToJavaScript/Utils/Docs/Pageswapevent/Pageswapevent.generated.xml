@@ -1,0 +1,12 @@
+<docs>
+<PageSwapEvent>
+<summary>
+The <strong><c>PageSwapEvent</c></strong> event object is made available inside handler functions for the <see cref="Window.Pageswap_event"/> event.
+</summary>
+<remarks>
+<para>The <c>pageswap</c> event is fired when you navigate across documents, when the previous document is about to unload. During a cross-document navigation, the <c>PageSwapEvent</c> event object allows you to manipulate the related <see href="https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API">view transition</see> (providing access to the relevant <see cref="ViewTransition"/> object) from the document being navigated <strong>from</strong>, if a view transition was triggered by the navigation. It also provides access to information on the navigation type and current and destination documents.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API">View Transition API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PageSwapEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</PageSwapEvent>
+</docs>

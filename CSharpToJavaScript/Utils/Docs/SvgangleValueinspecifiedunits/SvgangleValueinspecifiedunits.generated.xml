@@ -1,0 +1,13 @@
+<docs>
+<SVGAngleValueInSpecifiedUnits>
+<summary>
+The <c>valueInSpecifiedUnits</c> property of the <see cref="SVGAngle"/> interface represents the value of this angle as a number, in the units expressed by the angle's <see cref="SVGAngle.UnitType"/>.
+</summary>
+<remarks>
+<para>Setting this attribute will cause <see cref="SVGAngle.Value"/> and <see cref="SVGAngle.ValueAsString"/> to be updated automatically to reflect this setting.</para>
+<para>-<see cref="SVGAnimatedAngle"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAngle/valueInSpecifiedUnits"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number; the numeric factor of the angle.</value>
+</SVGAngleValueInSpecifiedUnits>
+</docs>

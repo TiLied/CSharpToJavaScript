@@ -1,12 +1,13 @@
 <docs>
 <MediaCapabilitiesDecodingInfo>
 <summary>
-The <strong><c>MediaCapabilities.decodingInfo()</c></strong> method, part of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/MediaCapabilities">Media Capabilities API</see>, returns a promise with the tested media configuration&amp;apos;s capabilities info.<br/>This contains the three boolean properties <c>supported</c>, <c>smooth</c>, and <c>powerefficient</c>, which describe whether decoding the media described would be supported, smooth, and powerefficient.
+The <strong><c>decodingInfo()</c></strong> method of the <see cref="MediaCapabilities"/> interface returns a promise that fulfils with information about how well the user agent can decode/display media with a given configuration.
 </summary>
 <remarks>
-<para>-<see cref="MediaCapabilities.EncodingInfo"/><br/>-<see cref="HTMLMediaElement.CanPlayType"/> for file<br/>-<see cref="MediaSource.IsTypeSupported"/> for media-source<br/></para>
+<para>The resolved object contains three boolean properties <c>supported</c>, <c>smooth</c>, and <c>powerefficient</c>, which indicate whether decoding the media described would be supported, and if so, whether decoding would be smooth and power-efficient.</para><para>The method can also be used to test the user agent capabilities for decoding media encoded with a key system, but only when called in the main thread and in a secure context.<br/>If the configuration passed in the <c>configuration.keySystemConfiguration</c> property is supported for decoding the data, the resolved promise also includes a <see cref="MediaKeySystemAccess"/> object that can be used to create a <see cref="MediaKeys"/> object to setup encrypted playback.</para><blockquote><para>Calling <c>decodingInfo()</c> with this property may result in user-visible effects, such as asking for permission to access one or more system resources.<br/>As such, this function should only be called when the application is ready to create and use a <c>MediaKeys</c> object with the provided configuration.</para></blockquote>
+<para>-<see cref="MediaCapabilities.EncodingInfo"/><br/>-<see cref="HTMLMediaElement.CanPlayType"/> for file<br/>-<see cref="MediaSource.IsTypeSupported"/> for media-source<br/>-<see cref="Navigator.RequestMediaKeySystemAccess"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaCapabilities/decodingInfo"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A <see cref="'Promise'"/> fulfilling with an object containing three Boolean attributes:Browsers will report a supported media configuration as <c>smooth</c> and <c>powerEfficient</c> until stats on this device have been recorded.<br/>All supported audio codecs are reported to be power efficient.</returns>
+<returns>A <see cref="'Promise'"/> fulfilling with an object containing the following attributes:Browsers will report a supported media configuration as <c>smooth</c> and <c>powerEfficient</c> until stats on this device have been recorded.<br/>All supported audio codecs report <c>powerEfficient</c> as true.</returns>
 </MediaCapabilitiesDecodingInfo>
 </docs>

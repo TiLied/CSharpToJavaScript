@@ -1,0 +1,13 @@
+<docs>
+<HTMLButtonElementFormMethod>
+<summary>
+The <strong><c>formMethod</c></strong> property of the <see cref="HTMLButtonElement"/> interface is the {{Glossary("HTTP")}} method used to submit the {{HtmlElement("form")}} if the {{HTMLElement("button")}} element is the control that submits the form. It reflects the value of the <c>&amp;lt;button&amp;gt;</c>&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#formmethod"><c>formmethod</c></see> attribute.
+</summary>
+<remarks>
+<para>The value overrides the <see cref="HTMLFormElement.Method"/> property of the <see cref="HTMLFormElement"/> interface if the form is submitted via the button. This property can be retrieved or set. If set with an empty or invalid value, the invalid default value is <c>&amp;quot;get&amp;quot;</c>. If not set at all, the value is the empty string (<c>&amp;quot;&amp;quot;</c>).</para>
+<para>-<see cref="HTMLButtonElement.FormAction"/><br/>-<see cref="HTMLButtonElement.FormEnctype"/><br/>-<see cref="HTMLButtonElement.FormNoValidate"/><br/>-<see cref="HTMLButtonElement.FormTarget"/><br/>-<see cref="HTMLFormElement.Method"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data">Sending form data</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLButtonElement/formMethod"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string; <c>&amp;quot;post&amp;quot;</c>, <c>&amp;quot;get&amp;quot;</c>, <c>&amp;quot;dialog&amp;quot;</c>, or <c>&amp;quot;&amp;quot;</c>.</value>
+</HTMLButtonElementFormMethod>
+</docs>

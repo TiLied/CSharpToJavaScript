@@ -4,8 +4,9 @@
 The <strong><c>kind</c></strong> property of the <see cref="RTCRemoteOutboundRtpStreamStats"/> dictionary is a string indicating whether the described {{Glossary("RTP")}} stream contains audio or video media.
 </summary>
 <remarks>
+<para>This string will always be the same as the <see cref="MediaStreamTrack.Kind"/> of the <see cref="MediaStreamTrack"/> object carried by the stream.<br/>It will also match the statistics object's <see cref="RTCCodecStats.Codec"/> property's media type.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRemoteOutboundRtpStreamStats/kind"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>The kinds is always one of:This string will always be the same as the one provided by the associated <see cref="MediaStreamTrack"/> object's <see cref="MediaStreamTrack.Kind"/> property.<br/>It will also match the statistics object's <see cref="RTCCodecStats.Codec"/> property's media type.</value>
+<value>The kinds is always one of:</value>
 </RTCRemoteOutboundRtpStreamStatsKind>
 </docs>

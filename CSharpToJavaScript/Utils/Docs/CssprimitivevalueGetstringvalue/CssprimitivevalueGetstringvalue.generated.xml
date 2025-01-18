@@ -4,7 +4,7 @@
 <div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>getStringValue()</c></strong> method of the<br/><see cref="CSSPrimitiveValue"/> interface is used to get a string value. If this CSS<br/>value doesn't contain a string value, a <see cref="DOMException"/> is raised.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This method was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do<br/>not implement it.</para><para>To achieve your purpose, you can use:</para></blockquote>
+<blockquote><para>This method was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do<br/>not implement it.</para><para>To achieve your purpose, you can use:</para></blockquote>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSPrimitiveValue/getStringValue"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>A <c>string</c> value.</returns>

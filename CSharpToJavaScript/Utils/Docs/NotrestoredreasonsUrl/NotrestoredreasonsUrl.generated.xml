@@ -1,0 +1,12 @@
+<docs>
+<NotRestoredReasonsUrl>
+<summary>
+The <strong><c>url</c></strong> read-only property of the<br/><see cref="NotRestoredReasons"/> interface returns a string representing the URL of the navigated page or {{htmlelement("iframe")}}.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Performance_API/Monitoring_bfcache_blocking_reasons">Monitoring bfcache blocking reasons</see><br/>-<see cref="PerformanceNavigationTiming.NotRestoredReasons"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NotRestoredReasons/url"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.If the document is in a cross-origin <c>&amp;lt;iframe&amp;gt;</c>, <c>url</c> will return <c>null</c>.</value>
+</NotRestoredReasonsUrl>
+</docs>

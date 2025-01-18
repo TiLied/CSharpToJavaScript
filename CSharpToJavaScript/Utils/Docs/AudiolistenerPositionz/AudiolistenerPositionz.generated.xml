@@ -4,7 +4,7 @@
 The <c>positionZ</c> read-only property of the <see cref="AudioListener"/> interface is an <see cref="AudioParam"/> representing the z position of the listener in 3D cartesian space.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> The parameter is <strong>a-rate</strong> when used with a <see cref="PannerNode"/> whose <see cref="PannerNode.PanningModel"/> is set to equalpower, or <strong>k-rate</strong> otherwise.</para></blockquote>
+<blockquote><para>The parameter is <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam#a-rate"><strong>a-rate</strong></see> when used with a <see cref="PannerNode"/> whose <see cref="PannerNode.PanningModel"/> is set to equalpower, or <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam#k-rate"><strong>k-rate</strong></see> otherwise.</para></blockquote>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioListener/positionZ"> <em>See also on MDN</em> </seealso></para>
 </remarks>

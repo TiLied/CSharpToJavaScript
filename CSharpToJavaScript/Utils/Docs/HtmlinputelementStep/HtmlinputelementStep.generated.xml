@@ -1,0 +1,12 @@
+<docs>
+<HTMLInputElementStep>
+<summary>
+The <strong><c>step</c></strong> property of the <see cref="HTMLInputElement"/> interface indicates the step by which numeric or date-time {{HTMLElement("input")}} elements can change. It reflects the element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#step"><c>step</c></see> attribute. Valid values include the string <c>&amp;quot;any&amp;quot;</c> or a string containing a positive floating point number. If the attribute is not explicitly set, the <c>step</c> property is an empty string.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">input</see> of type <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range">input/range</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/number">input/number</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date">input/date</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/month">input/month</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/week">input/week</see>, and <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/time">input/time</see><br/>-<see cref="HTMLInputElement.Value"/><br/>-<see cref="HTMLInputElement.Type"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/step"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing the element&amp;apos;s <c>step</c> value or an empty string if no step is explicitly set.</value>
+</HTMLInputElementStep>
+</docs>

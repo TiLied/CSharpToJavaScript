@@ -1,0 +1,13 @@
+<docs>
+<HTMLAreaElementCoords>
+<summary>
+The <strong><c>coords</c></strong> property of the <see cref="HTMLAreaElement"/> interface specifies the coordinates of the element's shape as a list of floating-point numbers. It reflects the {{htmlelement("area")}} element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area#coords"><c>coords</c></see> attribute.
+</summary>
+<remarks>
+<para>If the <c>shape</c> is <c>rect</c>, the shape is a rectangle and the string value&amp;apos;s four comma separated numbers specify the coordinates of the top-left and bottom-right corners of the rectangle. For example, <c>0,0,200,20</c> defines the coordinates as <c>0,0</c>, which is the top-left of the image map, and <c>200,20</c>, which is 200px from the left and 20px from the top of the top-left corner of the image map.</para><para>If the <c>shape</c> is <c>circle</c>, the three comma-separated numbers represent the x and y coordinates of the circle&amp;apos;s center and the radius.</para><para>If the shape is <c>poly</c>, the string consists of at least 6 comma-separated numbers representing at least 3 pairs of coordinates that define the vertices of the polygon.</para><para>For all coordinates, the origin is the top-left corner of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/map">map</see> element's image.</para>
+<para>-<see cref="HTMLAreaElement.Shape"/><br/>-<see cref="HTMLAreaElement.Alt"/><br/>-<see cref="HTMLMapElement"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area">area</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/map">map</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a">a</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement/coords"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string; composed of a comma separated series of numbers.</value>
+</HTMLAreaElementCoords>
+</docs>

@@ -1,0 +1,13 @@
+<docs>
+<RTCRemoteInboundRtpStreamStatsJitter>
+<summary>
+The <strong><c>jitter</c></strong> property of the <see cref="RTCRemoteInboundRtpStreamStats"/> dictionary returns the {{glossary("Jitter", "packet jitter")}} for the <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRemoteInboundRtpStreamStats/ssrc">synchronization source (SSRC)</see> as measured by the remote endpoint.
+</summary>
+<remarks>
+<para>High packet jitter values indicate that packet arrival rates vary significantly, which may degrade video, audio, and other real-time communications over WebRTC.</para>
+<para>-<see cref="RTCRemoteInboundRtpStreamStats.Ssrc"/><br/>-<see cref="RTCInboundRtpStreamStats.Jitter"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRemoteInboundRtpStreamStats/jitter"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>Packet jitter, in seconds.The value is calculated using the &amp;quot;interarrival jitter&amp;quot; algorithm described in {{RFC(&amp;quot;3550&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;6.4.1&amp;quot;)}}.</value>
+</RTCRemoteInboundRtpStreamStatsJitter>
+</docs>

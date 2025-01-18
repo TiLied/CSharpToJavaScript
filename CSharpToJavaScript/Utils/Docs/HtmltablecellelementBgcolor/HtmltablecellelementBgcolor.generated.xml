@@ -1,0 +1,13 @@
+<docs>
+<HTMLTableCellElementBgColor>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>HTMLTableCellElement.bgColor</c></strong> property is used to set the background color of a cell or get the value of the obsolete <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/td#bgcolor"><c>bgColor</c></see> attribute, if present.
+</summary>
+<remarks>
+<blockquote><para>This property is deprecated and CSS should be used to set the background color. Use the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-color">background-color</see> property instead.</para></blockquote>
+<para>-<see cref="HTMLTableRowElement.BgColor"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableCellElement/bgColor"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>One of the following value types can be used:<blockquote>The values accepted here are a limited subset of the CSS color values. Only <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/named-color">named-color</see> and 3- or 6-digit <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/hex-color">hex-color</see> (with no alpha-channel). While all HTML color values are valid in CSS, this is not true in the other direction.</blockquote></value>
+</HTMLTableCellElementBgColor>
+</docs>

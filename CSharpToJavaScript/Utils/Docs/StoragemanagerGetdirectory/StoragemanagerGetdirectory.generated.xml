@@ -4,7 +4,7 @@
 The <strong><c>getDirectory()</c></strong> method of the <see cref="StorageManager"/> interface is used to obtain a reference to a <see cref="FileSystemDirectoryHandle"/> object allowing access to a directory and its contents, stored in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/File_System_API/Origin_private_file_system">origin private file system</see> (OPFS).
 </summary>
 <remarks>
-<para>-<see cref="StorageManager"/><br/>-<see cref="Navigator.Storage"/><br/>-<see cref="FileSystemDirectoryHandle"/><br/></para>
+<para>-<see cref="StorageManager"/><br/>-<see cref="Navigator.Storage"/><br/>-<see cref="WorkerNavigator.Storage"/><br/>-<see cref="FileSystemDirectoryHandle"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StorageManager/getDirectory"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>A {{jsxref('Promise')}} that fulfills with a <see cref="FileSystemDirectoryHandle"/> object.</returns>

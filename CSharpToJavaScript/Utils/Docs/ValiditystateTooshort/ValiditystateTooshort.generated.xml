@@ -1,11 +1,12 @@
 <docs>
 <ValidityStateTooShort>
 <summary>
-The read-only <strong><c>tooShort</c></strong> property of a <strong><see href="https://developer.mozilla.org/en-US/docs/Web/API/ValidityState"><c>ValidityState</c></see></strong> object indicates if the value of an <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">input</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button">button</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">select</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/output">output</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset">fieldset</see> or <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textarea</see>, after having been edited by the user, is less than the minimum code-unit length established by the element's <c>minlength</c> attribute.
+The read-only <strong><c>tooShort</c></strong> property of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/ValidityState"><c>ValidityState</c></see> interface indicates if the value of an <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">input</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button">button</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">select</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/output">output</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset">fieldset</see> or <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textarea</see>, after having been edited by the user, is less than the minimum code-unit length established by the element's <c>minlength</c> attribute.
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation">Guide: Constraint validation</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation">Tutorial: Form data validation</see><br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation">Guide: Constraint validation</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation">Tutorial: Form data validation</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ValidityState/tooShort"> <em>See also on MDN</em> </seealso></para>
 </remarks>
+<value>A boolean that is <c>true</c> if the <c>ValidityState</c> does not conform to the constraints.</value>
 </ValidityStateTooShort>
 </docs>

@@ -1,0 +1,12 @@
+<docs>
+<RTCOutboundRtpStreamStatsKind>
+<summary>
+The <strong><c>kind</c></strong> property of the <see cref="RTCOutboundRtpStreamStats"/> dictionary is a string indicating whether the described {{Glossary("RTP")}} stream contains audio or video media.
+</summary>
+<remarks>
+<para>This string will always be the same as the <see cref="MediaStreamTrack.Kind"/> of the <see cref="MediaStreamTrack"/> object carried by the stream.<br/>It will also match the media type of the codec associated with this statistics objects (i.e. the MIME type of the associated codec's <see cref="RTCCodecStats.MimeType"/> property).</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/kind"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The kind is always one of:</value>
+</RTCOutboundRtpStreamStatsKind>
+</docs>

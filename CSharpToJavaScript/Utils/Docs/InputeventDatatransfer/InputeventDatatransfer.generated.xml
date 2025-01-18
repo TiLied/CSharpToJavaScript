@@ -6,6 +6,6 @@ The <strong><c>dataTransfer</c></strong> read-only property of the<br/><see cref
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/InputEvent/dataTransfer"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="DataTransfer"/> object.</value>
+<value>A <see cref="DataTransfer"/> object or <c>null</c>. The spec has an <see href="https://w3c.github.io/input-events/#overview">overview</see> of its value in various cases.</value>
 </InputEventDataTransfer>
 </docs>

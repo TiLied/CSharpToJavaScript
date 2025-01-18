@@ -4,7 +4,7 @@
 The <strong><c>Element.attachShadow()</c></strong> method attaches a shadow DOM tree to the specified element and returns a reference to its <see cref="ShadowRoot"/>.
 </summary>
 <remarks>
-<para>-<see cref="ShadowRoot.Mode"/><br/>-<see cref="ShadowRoot.DelegatesFocus"/><br/>-<see cref="ShadowRoot.SlotAssignment"/><br/></para>
+<para>-<see cref="ShadowRoot.Mode"/><br/>-<see cref="ShadowRoot.DelegatesFocus"/><br/>-<see cref="ShadowRoot.SlotAssignment"/><br/>-Declaratively attach a shadow root with the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template#shadowrootmode"><c>shadowrootmode</c></see> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template"><c>&amp;lt;template&amp;gt;</c> element</see><br/>-<see href="https://web.dev/articles/declarative-shadow-dom">Declarative shadow DOM</see> on web.dev (2023)<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/attachShadow"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>Returns a <see cref="ShadowRoot"/> object.</returns>

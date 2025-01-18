@@ -6,6 +6,6 @@ The <strong><c>devicePixelContentBoxSize</c></strong> read-only property of<br/>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserverEntry/devicePixelContentBoxSize"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An array containing objects with the new size of the observed element in device pixels. The<br/>array is necessary to support elements that have multiple fragments, which occur in<br/>multi-column scenarios. Each object in the array contains two properties:<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> For more information about writing modes and block and inline<br/>dimensions, read <see href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions">Handling different text directions</see>.</blockquote></value>
+<value>An array containing objects with the new size of the observed element in device pixels. The<br/>array is necessary to support elements that have multiple fragments, which occur in<br/>multi-column scenarios. Each object in the array contains two properties:<blockquote>For more information about writing modes and block and inline<br/>dimensions, read <see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions">Handling different text directions</see>.</blockquote></value>
 </ResizeObserverEntryDevicePixelContentBoxSize>
 </docs>

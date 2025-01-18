@@ -8,6 +8,6 @@ The <strong><c>isExtended</c></strong> read-only property of the<br/><see cref="
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Window_Management_API">Window Management API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Screen/isExtended"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A boolean value — <c>true</c> if the device has multiple screens, and <c>false</c> if not.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> If a <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy/window-management">Permissions-Policy/window-management</see> <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Permissions_Policy">Permissions-Policy</see> is set that blocks use the Window Management API, <c>isExtended</c> will always return <c>false</c>.</blockquote></value>
+<value>A boolean value — <c>true</c> if the device has multiple screens, and <c>false</c> if not.<blockquote>If a <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy/window-management">Permissions-Policy/window-management</see> <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Permissions_Policy">Permissions-Policy</see> is set that blocks use the Window Management API, <c>isExtended</c> will always return <c>false</c>.</blockquote></value>
 </ScreenIsExtended>
 </docs>

@@ -4,10 +4,10 @@
 <div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The obsolete<br/><strong><c>HTMLFontElement.color</c></strong><br/>property is a string that reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/font#color"><c>color</c></see> HTML attribute, containing either a named color or a color specified in the<br/>hexadecimal #RRGGBB format.
 </summary>
 <remarks>
-<para>The format of the string must follow one of the following HTML microsyntaxes:</para><table><tr><td><para>Microsyntax</para></td><td><para>Description</para></td><td><para>Examples</para></td></tr><tr><td><para>Valid name color string</para></td><td><para><strong>nameOfColor (case insensitive)</strong></para></td><td><para><c>Green</c>, <c>green</c>, <c>GREEN</c></para></td></tr><tr><td><para>Valid hex color string</para></td><td><para><strong>in</strong> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value">color_value</see><strong>: #RRGGBB</strong></para></td><td><para><c>#008000</c></para></td></tr><tr><td><para>RGB using decimal values</para></td><td><para><strong>rgb(x,x,x) (x in 0-255 range)</strong></para></td><td><para><c>rgb(0 128 0)</c></para></td></tr></table>
+<para>The format of the string must follow one of the following HTML microsyntaxes (see <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value"><c>&amp;lt;color&amp;gt;</c></see>):</para><table><tr><td><para>Microsyntax</para></td><td><para>Description</para></td><td><para>Examples</para></td></tr><tr><td><para>Valid name color string</para></td><td><para><strong>nameOfColor (case insensitive)</strong></para></td><td><para><c>Green</c>, <c>green</c>, <c>GREEN</c></para></td></tr><tr><td><para>Valid hex color string</para></td><td><para><strong>#RRGGBB</strong></para></td><td><para><c>#008000</c></para></td></tr><tr><td><para>RGB using decimal values</para></td><td><para><strong>rgb(x x x) (x in 0-255 range)</strong></para></td><td><para><c>rgb(0 128 0)</c></para></td></tr></table>
 <para>-The <see cref="HTMLFontElement"/> interface it belongs to.<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFontElement/color"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string.</value>
+<value>A string.When set to the <c>null</c> value, that <c>null</c> value is converted to the empty string (<c>&amp;quot;&amp;quot;</c>), so <c>elt.color = null</c> is equivalent to <c>elt.color = &amp;quot;&amp;quot;</c>.</value>
 </HTMLFontElementColor>
 </docs>

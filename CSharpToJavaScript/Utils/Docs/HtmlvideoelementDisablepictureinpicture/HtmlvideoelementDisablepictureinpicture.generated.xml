@@ -4,6 +4,7 @@
 The <see cref="HTMLVideoElement"/> <strong><c>disablePictureInPicture</c></strong> property reflects the HTML attribute indicating whether the picture-in-picture feature is disabled for the current element.
 </summary>
 <remarks>
+<para>This value only represents a request from the website to the user agent. User configuration may change the eventual behavior—for example, Firefox users can change the <c>media.videocontrols.picture-in-picture.respect-disablePictureInPicture</c> setting to ignore the request to disable PiP.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement/disablePictureInPicture"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A boolean value that is <c>true</c> if the picture-in-picture feature is disabled for this element. This means that the user agent should not suggest that feature to users, or request it automatically.</value>

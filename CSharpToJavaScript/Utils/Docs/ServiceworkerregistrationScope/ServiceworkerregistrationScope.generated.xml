@@ -1,12 +1,12 @@
 <docs>
 <ServiceWorkerRegistrationScope>
 <summary>
-The <strong><c>scope</c></strong> read-only property of the<br/><see cref="ServiceWorkerRegistration"/> interface returns a unique identifier for a<br/>service worker registration. The service worker must be on the same origin as the<br/>document that registers the <see cref="ServiceWorker"/>.
+The <strong><c>scope</c></strong> read-only property of the <see cref="ServiceWorkerRegistration"/> interface returns a string representing a URL that defines a service worker's registration scope; that is, the range of URLs a service worker can control. This is set using the <c>scope</c> parameter specified in the call to <see cref="'ServiceWorkerContainer.Register'"/> which registered the service worker.
 </summary>
 <remarks>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</see><br/>-<see href="https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker">Service workers basic code example</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web workers</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/scope"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A unique identifier.</value>
+<value>Returns a string representing a URL that defines a service worker&amp;apos;s registration scope.</value>
 </ServiceWorkerRegistrationScope>
 </docs>

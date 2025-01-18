@@ -1,0 +1,13 @@
+<docs>
+<HTMLFieldSetElementDisabled>
+<summary>
+The <strong><c>disabled</c></strong> property of the <see cref="HTMLFieldSetElement"/> interface is a boolean value that reflects the {{htmlelement("fieldset")}} element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset#disabled"><c>disabled</c></see> attribute, which indicates whether the control is disabled.
+</summary>
+<remarks>
+<para>When disabled, all the form control descendants of the <c>&amp;lt;fieldset&amp;gt;</c> element, excluding elements that are descendants of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/legend">legend</see> child of the <c>&amp;lt;fieldset&amp;gt;</c>, if any, are disabled. A disabled element is unusable and un-clickable, and match the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:disabled">:disabled</see> selector, even if their <c>disabled</c> property value is false.</para>
+<para>-HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/disabled"><c>disabled</c></see> attribute<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:disabled">:disabled</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:enabled">:enabled</see> pseudoclasses<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFieldSetElement/disabled"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value.</value>
+</HTMLFieldSetElementDisabled>
+</docs>

@@ -1,7 +1,7 @@
 <docs>
 <ServiceWorkerGlobalScopeSkipWaiting>
 <summary>
-The <strong><c>ServiceWorkerGlobalScope.skipWaiting()</c></strong> method of the <see cref="ServiceWorkerGlobalScope"/> forces the waiting service worker to become the active service worker.
+The <strong><c>skipWaiting()</c></strong> method of the <see cref="ServiceWorkerGlobalScope"/> interface forces the waiting service worker to become the active service worker.
 </summary>
 <remarks>
 <para>Use this method with <see cref="Clients.Claim"/> to ensure that updates to the underlying service worker take effect immediately for both the current client and all other active clients.</para>

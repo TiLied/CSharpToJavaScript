@@ -4,7 +4,7 @@
 The <strong><c>DataTransferItem</c></strong> object represents one drag data item. During a <strong>drag operation</strong>, each <see cref="DragEvent"/> has a <see cref="DragEvent.DataTransfer"/> property which contains a <see cref="DataTransferItemList"/> of drag data items. Each item in the list is a <c>DataTransferItem</c> object.
 </summary>
 <remarks>
-<para>This interface has no constructor.</para>
+<para><c>DataTransferItem</c> was primarily designed for the <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API">HTML Drag and Drop API</see>, and is still specified in the HTML drag-and-drop section, but it is now also used by other APIs, such as <see cref="ClipboardEvent.ClipboardData"/> and <see cref="InputEvent.DataTransfer"/>. Documentation of <c>DataTransferItem</c> will primarily discuss its usage in drag-and-drop operations, and you should refer to the other APIs&amp;apos; documentation for usage of <c>DataTransferItem</c> in those contexts.</para><para>This interface has no constructor.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItem"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </DataTransferItem>

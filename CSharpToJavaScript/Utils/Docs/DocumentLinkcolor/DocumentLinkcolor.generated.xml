@@ -8,6 +8,6 @@
 <para>-<see cref="Document.VlinkColor"/><br/>-<see cref="Document.AlinkColor"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/linkColor"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string representing the color as a word (e.g., <c>red</c>) or hexadecimal value (e.g., <c>#ff0000</c>).</value>
+<value>A string representing the color as a word (e.g., <c>red</c>) or hexadecimal value (e.g., <c>#ff0000</c>).When set to the <c>null</c> value, that <c>null</c> value is converted to the empty string (<c>&amp;quot;&amp;quot;</c>), so <c>document.linkColor = null</c> is equivalent to <c>document.linkColor = &amp;quot;&amp;quot;</c>.</value>
 </DocumentLinkColor>
 </docs>

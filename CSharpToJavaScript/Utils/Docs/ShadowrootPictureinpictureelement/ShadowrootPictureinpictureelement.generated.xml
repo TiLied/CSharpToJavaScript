@@ -7,6 +7,6 @@ The <strong><c>pictureInPictureElement</c></strong> read-only property of the<br
 <para>-<see cref="Document.PictureInPictureElement"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/pictureInPictureElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A reference to the <see cref="Element"/> object that's currently in<br/>picture-in-picture mode, or, if picture-in-picture mode isn&amp;apos;t currently in use by the<br/>shadow tree, the returned value is <c>null</c>.</value>
+<value>A reference to the <see cref="Element"/> object that's currently in picture-in-picture mode.Returns <c>null</c> if the shadow tree has no associated element in picture-in-picture mode. For example, there&amp;apos;s no picture-in-picture element, or the element is not in the shadow tree.</value>
 </ShadowRootPictureInPictureElement>
 </docs>

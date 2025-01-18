@@ -1,0 +1,12 @@
+<docs>
+<GamepadHapticActuatorEffects>
+<summary>
+The <strong><c>effects</c></strong> read-only property of the <see cref="GamepadHapticActuator"/> interface returns an array of enumerated values representing the different haptic effects that the actuator supports.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API">Gamepad API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GamepadHapticActuator/effects"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An array representing the supported haptic effects. Possible included values are:<blockquote>If an effect is not listed that is known to be supported by the hardware, it may be that the browser does not support playing effects of that type.</blockquote></value>
+</GamepadHapticActuatorEffects>
+</docs>

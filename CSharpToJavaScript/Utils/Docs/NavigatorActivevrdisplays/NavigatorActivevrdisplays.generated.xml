@@ -1,10 +1,10 @@
 <docs>
 <NavigatorActiveVRDisplays>
 <summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>activeVRDisplays</c></strong> read-only property of the<br/><see cref="Navigator"/> interface returns an array containing every<br/><see cref="VRDisplay"/> object that is currently presenting<br/>(<see cref="VRDisplay.Ispresenting"/> is <c>true</c>).
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>activeVRDisplays</c></strong> read-only property of the<br/><see cref="Navigator"/> interface returns an array containing every<br/><see cref="VRDisplay"/> object that is currently presenting<br/>(<see cref="VRDisplay.IsPresenting"/> is <c>true</c>).
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This property was part of the old <see href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</see>. It has been superseded by the <see href="https://immersive-web.github.io/webxr/">WebXR Device API</see>.</para></blockquote>
+<blockquote><para>This property was part of the old <see href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</see>. It has been superseded by the <see href="https://immersive-web.github.io/webxr/">WebXR Device API</see>.</para></blockquote>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API">WebVR API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/activeVRDisplays"> <em>See also on MDN</em> </seealso></para>
 </remarks>

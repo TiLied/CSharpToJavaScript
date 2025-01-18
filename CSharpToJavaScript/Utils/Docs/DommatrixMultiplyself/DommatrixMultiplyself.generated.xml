@@ -1,0 +1,13 @@
+<docs>
+<DOMMatrixMultiplySelf>
+<summary>
+The <strong><c>multiplySelf()</c></strong> method of the <see cref="DOMMatrix"/> interface multiplies a matrix by the <c>otherMatrix</c> parameter, computing the dot product of the original matrix and the specified matrix: <c>A⋅B</c>. If no matrix is specified as the multiplier, the matrix is multiplied by a matrix in which every element is <c>0</c> <strong>except</strong> the bottom-right corner and the element immediately above and to its left: <c>m33</c> and <c>m34</c>. These have the default value of <c>1</c>.
+</summary>
+<remarks>
+<para>To multiply a matrix without mutating it, see <see cref="DOMMatrixReadOnly.Multiply"/>.</para>
+<para>-<see cref="DOMMatrixReadOnly.Multiply"/><br/>-<see cref="DOMMatrix.PreMultiplySelf"/><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix">transform-function/matrix</see> function<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix3d">transform-function/matrix3d</see> function<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix/multiplySelf"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Returns itself; the <see href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix"><c>DOMMatrix</c></see> updated to the results of the applied multiplications.</returns>
+</DOMMatrixMultiplySelf>
+</docs>

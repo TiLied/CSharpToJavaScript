@@ -1,7 +1,7 @@
 <docs>
 <PerformanceMeasure>
 <summary>
-<strong><c>PerformanceMeasure</c></strong> is an <strong>abstract</strong> interface for <see cref="PerformanceEntry"/> objects with an <see cref="PerformanceEntry.EntryType"/> of "<c>measure</c>". Entries of this type are created by calling <see cref="Performance.Measure"/> to add a <strong>named</strong> <see cref="DOMHighResTimeStamp"/> (the <strong>measure</strong>) between two <strong>marks</strong> to the browser&amp;apos;s <strong>performance timeline</strong>.
+<strong><c>PerformanceMeasure</c></strong> is an <strong>abstract</strong> interface for <see cref="PerformanceEntry"/> objects with an <see cref="PerformanceEntry.EntryType"/> of <c>&amp;quot;measure&amp;quot;</c>. Entries of this type are created by calling <see cref="Performance.Measure"/> to add a <strong>named</strong> <see cref="DOMHighResTimeStamp"/> (the <strong>measure</strong>) between two <strong>marks</strong> to the browser&amp;apos;s <strong>performance timeline</strong>.
 </summary>
 <remarks>
 <para></para>

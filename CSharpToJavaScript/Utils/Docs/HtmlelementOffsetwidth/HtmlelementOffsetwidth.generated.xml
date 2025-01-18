@@ -8,6 +8,6 @@ The <strong><c>HTMLElement.offsetWidth</c></strong> read-only property returns<b
 <para>-<see cref="Element.ClientWidth"/><br/>-<see cref="Element.ScrollWidth"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements">Determining the dimensions of elements</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetWidth"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An integer corresponding to the <c>offsetWidth</c> pixel value of the element. The <c>offsetWidth</c> property is a read-only.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> This property will round the value to an integer. If you need a fractional value, use<br/><see cref="Element.GetBoundingClientRect"/>.</blockquote></value>
+<value>An integer corresponding to the <c>offsetWidth</c> pixel value of the element. The <c>offsetWidth</c> property is a read-only.<blockquote>This property will round the value to an integer. If you need a fractional value, use<br/><see cref="Element.GetBoundingClientRect"/>.</blockquote></value>
 </HTMLElementOffsetWidth>
 </docs>

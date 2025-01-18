@@ -1,0 +1,12 @@
+<docs>
+<SVGTransformSetMatrix>
+<summary>
+The <c>setMatrix()</c> method of the <see cref="SVGTransform"/> interface sets the transform type to <c>SVG_TRANSFORM_MATRIX</c>, with parameter <c>matrix</c> defining the new transformation.
+</summary>
+<remarks>
+<para>Note that the values from the parameter <c>matrix</c> are copied, meaning changes to the <c>matrix</c> object after calling this method will not affect the transformation.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGTransform/setMatrix"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="'undefined'"/>).</returns>
+</SVGTransformSetMatrix>
+</docs>

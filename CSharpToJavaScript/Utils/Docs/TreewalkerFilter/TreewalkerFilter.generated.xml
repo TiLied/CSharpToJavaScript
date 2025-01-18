@@ -1,7 +1,7 @@
 <docs>
 <TreeWalkerFilter>
 <summary>
-The <strong><c>TreeWalker.filter</c></strong> read-only property returns a<br/><c>NodeFilter</c> that is the filtering object associated with the<br/><see cref="TreeWalker"/>.
+The <strong><c>TreeWalker.filter</c></strong> read-only property returns the <c>NodeFilter</c><br/>associated with the <see cref="TreeWalker"/>.
 </summary>
 <remarks>
 <para>When creating the <c>TreeWalker</c>, the filter object is passed in as the third<br/>parameter, and its method <c>acceptNode()</c> is called on every<br/>single node to determine whether or not to accept it.</para>

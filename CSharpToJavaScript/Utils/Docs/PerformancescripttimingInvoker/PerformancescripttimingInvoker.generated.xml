@@ -1,0 +1,12 @@
+<docs>
+<PerformanceScriptTimingInvoker>
+<summary>
+The <strong><c>invoker</c></strong> read-only property of the <see cref="PerformanceScriptTiming"/> interface returns a string value indicating the identity of the feature that, when invoked, ran the script.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Performance_API/Long_animation_frame_timing">Long animation frame timing</see><br/>-<see cref="PerformanceLongAnimationFrameTiming"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceScriptTiming/invoker"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string, the structure of which depends on the script's <see cref="PerformanceScriptTiming.InvokerType"/> value:<table><tr><td><c>invokerType</c></td><td><c>invoker</c> string structure</td><td>Example(s)</td></tr><tr><td><c>&amp;quot;user-callback&amp;quot;</c></td><td>The object class the containing function is defined on, followed by a dot, followed by the function name.</td><td><c>&amp;quot;Window.requestAnimationFrame&amp;quot;</c>, <c>&amp;quot;Window.setTimeout&amp;quot;</c></td></tr><tr><td><c>&amp;quot;event-listener&amp;quot;</c></td><td>The <see cref="Element.TagName"/> of the element, followed by a hash and its <c>id</c> (<c>#id</c>) or by <c>src=</c> and its <c>src</c> value in square brackets (<c>[src=url]</c>) if an <c>id</c> is not present, followed by a dot, followed by the event handler property.</td><td><c>&amp;quot;IMG#hero.onload&amp;quot;</c>, <c>&amp;quot;IMG[src=https://example.com/img.jpg].onload&amp;quot;</c>, <c>&amp;quot;BUTTON#updateCart.onclick&amp;quot;</c></td></tr><tr><td><c>&amp;quot;resolve-promise&amp;quot;</c> or <c>&amp;quot;reject-promise&amp;quot;</c></td><td>The object and method that invoked the promise, followed by a dot, followed by <c>&amp;quot;then&amp;quot;</c> for <c>&amp;quot;resolve-promise&amp;quot;</c> and <c>&amp;quot;catch&amp;quot;</c> for <c>&amp;quot;reject-promise&amp;quot;</c>.</td><td><c>&amp;quot;Response.json.then&amp;quot;</c>, <c>&amp;quot;Response.json.catch&amp;quot;</c></td></tr><tr><td><c>&amp;quot;classic-script&amp;quot;</c> or <c>&amp;quot;module-script&amp;quot;</c></td><td>The source URL of the invoking script.</td><td><c>&amp;quot;https://example.com/scripts/myscript.js&amp;quot;</c></td></tr></table></value>
+</PerformanceScriptTimingInvoker>
+</docs>

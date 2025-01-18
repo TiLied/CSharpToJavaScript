@@ -1,11 +1,11 @@
 <docs>
 <FragmentDirective>
 <summary>
-The <strong><c>FragmentDirective</c></strong> interface is an object exposed for feature detectability, that is, whether or not a browser supports text fragments.
+The <strong><c>FragmentDirective</c></strong> interface is an object exposed to allow code to check whether or not a browser supports <see href="https://developer.mozilla.org/en-US/docs/Web/URI/Fragment/Text_fragments">text fragments</see>.
 </summary>
 <remarks>
 <para>It is accessed via the <see cref="Document.FragmentDirective"/> property.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Text_fragments">Text fragments</see><br/>-{{cssxref(&amp;quot;::target-text&amp;quot;)}}<br/></para>
+<para>-{{cssxref(&amp;quot;::target-text&amp;quot;)}}<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FragmentDirective"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </FragmentDirective>

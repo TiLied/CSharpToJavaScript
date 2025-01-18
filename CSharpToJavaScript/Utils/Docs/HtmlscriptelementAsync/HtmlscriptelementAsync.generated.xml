@@ -1,0 +1,13 @@
+<docs>
+<HTMLScriptElementAsync>
+<summary>
+The <strong><c>async</c></strong> property of the <see cref="HTMLScriptElement"/> interface is a boolean value that controls how the script should be executed. For classic scripts, if the <c>async</c> property is set to <c>true</c>, the external script will be fetched in parallel to parsing and evaluated as soon as it is available. For <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules">module scripts</see>, if the <c>async</c> property is set to <c>true</c>, the script and all their dependencies will be fetched in parallel to parsing and evaluated as soon as they are available.
+</summary>
+<remarks>
+<para>It reflects the <c>async</c> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">script</see> element.</para>
+<para>-<see cref="HTMLScriptElement.Defer"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLScriptElement/async"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean.</value>
+</HTMLScriptElementAsync>
+</docs>

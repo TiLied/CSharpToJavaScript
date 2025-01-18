@@ -1,0 +1,13 @@
+<docs>
+<HTMLInputElementFormMethod>
+<summary>
+The <strong><c>formMethod</c></strong> property of the <see cref="HTMLInputElement"/> interface is the {{Glossary("HTTP")}} method used to submit the {{HtmlElement("form")}} if the {{HTMLElement("input")}} element is the control that submits the form. It reflects the value of the <c>&amp;lt;input&amp;gt;</c>&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#formmethod"><c>formmethod</c></see> attribute.
+</summary>
+<remarks>
+<para>This property is valid only for <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/submit"><c>submit</c></see> and <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/image"><c>image</c></see> <c>&amp;lt;input&amp;gt;</c> elements.</para><para>The value overrides the <see cref="HTMLFormElement.Method"/> property of the <see cref="HTMLFormElement"/> interface if the form is submitted via the input. This property can be retrieved or set. If set with an empty or invalid value, the invalid default value is <c>&amp;quot;get&amp;quot;</c>. If not set at all, the value is the empty string (<c>&amp;quot;&amp;quot;</c>).</para>
+<para>-<see cref="HTMLInputElement.FormAction"/><br/>-<see cref="HTMLInputElement.FormEnctype"/><br/>-<see cref="HTMLInputElement.FormNoValidate"/><br/>-<see cref="HTMLInputElement.FormTarget"/><br/>-<see cref="HTMLFormElement.Method"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/submit"><c>&amp;lt;input type=&amp;quot;submit&amp;quot;&amp;gt;</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/image"><c>&amp;lt;input type=&amp;quot;image&amp;quot;&amp;gt;</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data">Sending form data</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/formMethod"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string; <c>&amp;quot;post&amp;quot;</c>, <c>&amp;quot;get&amp;quot;</c>, <c>&amp;quot;dialog&amp;quot;</c>, or <c>&amp;quot;&amp;quot;</c>.</value>
+</HTMLInputElementFormMethod>
+</docs>

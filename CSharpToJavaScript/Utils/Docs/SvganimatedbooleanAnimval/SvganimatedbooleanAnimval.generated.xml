@@ -1,0 +1,13 @@
+<docs>
+<SVGAnimatedBooleanAnimVal>
+<summary>
+The <strong><c>animVal</c></strong> read-only property of the <see cref="SVGAnimatedBoolean"/> interface represents the current animated value of the associated animatable boolean SVG attribute. If the attribute is not animated, <c>animVal</c> is the same as <see cref="SVGAnimatedBoolean.BaseVal"/>.
+</summary>
+<remarks>
+<para>Some boolean SVG attributes, such as <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/preserveAlpha"><c>preserveAlpha</c></see>, are animatable. In such cases, <c>SVGAnimatedBoolean.animVal</c> property is <c>true</c> when the attribute value resolves to true. Otherwise, the value is <c>false</c>.</para>
+<para>-<see cref="SVGElement"/><br/>-<see cref="SVGAnimationElement"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAnimatedBoolean/animVal"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean; the value of the animatable boolean attribute.</value>
+</SVGAnimatedBooleanAnimVal>
+</docs>

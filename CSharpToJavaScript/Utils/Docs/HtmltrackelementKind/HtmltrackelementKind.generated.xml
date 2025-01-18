@@ -1,0 +1,13 @@
+<docs>
+<HTMLTrackElementKind>
+<summary>
+The <strong><c>kind</c></strong> property of the <see cref="HTMLTrackElement"/> interface represents the type of track, or how the text track is meant to be used. It reflects the {{htmlelement("track")}} element's enumerated <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track#kind"><c>kind</c></see> attribute.
+</summary>
+<remarks>
+<para>If no <c>kind</c> is set, <c>subtitles</c> is used. If the attribute is not set to one of the valid enumerated values, it is invalid and <c>metadata</c> is used. Other valid values include <c>captions</c>, <c>descriptions</c>, and <c>chapters</c>.</para>
+<para>-<see cref="HTMLTrackElement.Track"/><br/>-<see cref="HTMLTrackElement.Label"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTrackElement/kind"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string; lowercase <c>captions</c>, <c>descriptions</c>, <c>chapters</c>, <c>subtitles</c> or <c>metadata</c>.</value>
+</HTMLTrackElementKind>
+</docs>

@@ -1,10 +1,10 @@
 <docs>
 <TextTrackList>
 <summary>
-The <strong><c>TextTrackList</c></strong> interface is used to represent a list of the text tracks defined by the {{HTMLElement("track")}} element, with each track represented by a separate <see cref="TextTrack"/> object in the list.
+The <strong><c>TextTrackList</c></strong> interface is used to represent a list of the text tracks defined for the associated video or audio element, with each track represented by a separate <see cref="TextTrack"/> object in the list.
 </summary>
 <remarks>
-<para>Retrieve an instance of this object with the <see cref="'HTMLMediaElement.TextTracks'"/> property of an <see cref="'HTMLMediaElement'"/> object.</para><para>For a given <see cref="'HTMLMediaElement'"/> object <strong>media</strong>, the individual tracks can be accessed using:</para><para></para>
+<para>Text tracks can be added to a media element declaratively using the {{HTMLElement("track")}} element or programmatically using the <see cref="'HTMLMediaElement.AddTextTrack'"/> method.</para><para>An instance of this object can be retrieved using the <see cref="'HTMLMediaElement.TextTracks'"/> property of an <see cref="'HTMLMediaElement'"/> object.</para><para>For a given <see cref="'HTMLMediaElement'"/> object <strong>media</strong>, the individual tracks can be accessed using:</para><para></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextTrackList"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </TextTrackList>

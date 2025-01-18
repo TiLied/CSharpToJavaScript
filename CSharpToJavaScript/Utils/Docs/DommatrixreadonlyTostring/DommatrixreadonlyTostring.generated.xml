@@ -1,0 +1,13 @@
+<docs>
+<DOMMatrixReadOnlyToString>
+<summary>
+The <strong><c>toString()</c></strong> {{Glossary("stringifier")}} of the <see cref="DOMMatrixReadOnly"/> interface returns the value of the matrix as a string in the form of a <c>matrix()</c> or <c>matrix3d()</c> CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function">transform function</see>; comma-separated lists of 6 or 16 coordinate values, prepended by <c>&amp;quot;matrix(</c> or <c>&amp;quot;matrix3d(</c> respectively, appended by <c>)&amp;quot;</c>.
+</summary>
+<remarks>
+<para>For a 2D matrix, the elements <see href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix#a"><c>a</c> through <c>f</c></see> are listed, for a total of six values and the form <c>matrix(a, b, c, d, e, f)</c>. See the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix">transform-function/matrix</see> CSS function for details on this syntax.</para><para>For a 3D matrix, the returned string contains all <see href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix#m11">16 elements</see> and takes the form <c>matrix3d(m11, m12, m13, m14, m21, m22, m23, m24, m31, m32, m33, m34, m41, m42, m43, m44)</c>. See the CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix3d">transform-function/matrix3d</see> function for details on the 3D notation's syntax.</para>
+<para>-<see cref="DOMMatrixReadOnly.ToJSON"/><br/>-<see cref="DOMMatrix.SetMatrixValue"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/toString"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A string; the values of the list separated by commas, within <c>matrix()</c> or <c>matrix3d()</c> function syntax.</returns>
+</DOMMatrixReadOnlyToString>
+</docs>

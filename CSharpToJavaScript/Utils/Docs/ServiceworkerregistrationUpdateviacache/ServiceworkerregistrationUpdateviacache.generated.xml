@@ -1,7 +1,7 @@
 <docs>
 <ServiceWorkerRegistrationUpdateViaCache>
 <summary>
-The <strong><c>updateViaCache</c></strong> read-only property of the<br/><see cref="ServiceWorkerRegistration"/> interface updates the cache using<br/>the mode specified in the call to <see cref="'ServiceWorkerContainer.Register'"/>.<br/>Requests for <c>importScripts</c> still go via the HTTP cache. <c>updateViaCache</c> offers<br/>control over this behavior.
+The <strong><c>updateViaCache</c></strong> read-only property of the <see cref="ServiceWorkerRegistration"/> interface returns the value of the setting used to determine the circumstances in which the browser will consult the HTTP cache when it tries to update the service worker or any scripts that are imported via <see cref="WorkerGlobalScope.ImportScripts"/>.
 </summary>
 <remarks>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</see><br/>-<see href="https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker">Service workers basic code example</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web workers</see><br/></para>

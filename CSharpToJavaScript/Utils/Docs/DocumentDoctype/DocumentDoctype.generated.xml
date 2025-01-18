@@ -1,7 +1,7 @@
 <docs>
 <DocumentDoctype>
 <summary>
-Returns the Document Type Declaration (DTD) associated with current document. The<br/>returned object implements the <see cref="DocumentType"/> interface. Use<br/><see cref="DOMImplementation.CreateDocumentType"/> to create a<br/><c>DocumentType</c>.
+The <strong><c>doctype</c></strong> read-only property of the <see cref="Document"/> interface is a <see cref="DocumentType"/> object representing the {{glossary("Doctype", "Document Type Declaration (DTD)")}} associated with the current document.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/doctype"> <em>See also on MDN</em> </seealso></para>

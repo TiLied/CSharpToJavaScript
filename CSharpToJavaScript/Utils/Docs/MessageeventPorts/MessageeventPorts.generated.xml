@@ -1,7 +1,7 @@
 <docs>
 <MessageEventPorts>
 <summary>
-The <strong><c>ports</c></strong> read-only property of the<br/><see cref="MessageEvent"/> interface is an array of <see cref="MessagePort"/> objects<br/>representing the ports associated with the channel the message is being sent through<br/>(where appropriate, e.g. in channel messaging or when sending a message to a shared<br/>worker).
+The <strong><c>ports</c></strong> read-only property of the<br/><see cref="MessageEvent"/> interface is an array of <see cref="MessagePort"/> objects<br/>containing all <see cref="MessagePort"/> objects sent with the message, in order.
 </summary>
 <remarks>
 <para>-<see cref="ExtendableMessageEvent"/> — similar to this interface but used in<br/>interfaces that needs to give more flexibility to authors.<br/></para>

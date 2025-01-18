@@ -1,0 +1,13 @@
+<docs>
+<HTMLTableSectionElementAlign>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>align</c></strong> property of the <see cref="HTMLTableSectionElement"/> interface is a string indicating how to horizontally align text in a {{htmlelement("thead")}}, {{htmlelement("tbody")}} or {{htmlelement("tfoot")}} table section. Individual rows and cells can override it.
+</summary>
+<remarks>
+<blockquote><para>This property is deprecated, and CSS should be used to align text horizontally in a cell. Use the CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-align">text-align</see> property, which takes precedence, to horizontally align text in section cells instead.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-align">text-align</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Tables">Learn: Styling tables</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableSectionElement/align"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The possible values are:</value>
+</HTMLTableSectionElementAlign>
+</docs>

@@ -1,0 +1,13 @@
+<docs>
+<RequestIsHistoryNavigation>
+<summary>
+The <strong><c>isHistoryNavigation</c></strong> read-only property of the <see cref="Request"/> interface is a boolean indicating whether the request is a history navigation.
+</summary>
+<remarks>
+<para>A history navigation is a navigation within the browser's history, made by calling <see cref="History.Go"/>, <see cref="History.Back"/>, <see cref="History.Forward"/>, <see cref="Navigation.TraverseTo"/>, <see cref="Navigation.Back"/>, <see cref="Navigation.Forward"/>, or directly by clicking the browser's back or forward navigation button.</para>
+<para>-{{domxref(&amp;quot;History API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, 1)}}<br/>-{{domxref(&amp;quot;Navigation API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, 1)}}<br/>-{{domxref(&amp;quot;Service Worker API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, 1)}}<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Request/isHistoryNavigation"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value.</value>
+</RequestIsHistoryNavigation>
+</docs>

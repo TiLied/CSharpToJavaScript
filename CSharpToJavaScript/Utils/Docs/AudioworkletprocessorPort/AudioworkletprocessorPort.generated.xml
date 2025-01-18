@@ -4,7 +4,7 @@
 The read-only <strong><c>port</c></strong> property of the<br/><see cref="AudioWorkletProcessor"/> interface returns the associated<br/><see cref="MessagePort"/>. It can be used to communicate between the processor and the<br/><see cref="AudioWorkletNode"/> to which it belongs.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> The port at the other end of the channel is<br/>available under the <see cref="AudioWorkletNode.Port"/> property of the node.</para></blockquote>
+<blockquote><para>The port at the other end of the channel is<br/>available under the <see cref="AudioWorkletNode.Port"/> property of the node.</para></blockquote>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioWorkletProcessor/port"> <em>See also on MDN</em> </seealso></para>
 </remarks>

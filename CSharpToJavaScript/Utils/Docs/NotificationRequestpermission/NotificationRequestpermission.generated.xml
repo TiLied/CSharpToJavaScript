@@ -4,9 +4,10 @@
 The <strong><c>requestPermission()</c></strong> static method of the <see cref="Notification"/> interface requests permission from the user for the current origin to display notifications.
 </summary>
 <remarks>
+<para>The method returns a <see cref="Promise"/> that fulfills with a string indicating whether permission was granted or denied.</para>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/requestPermission"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A <see cref="Promise"/> that resolves to a string with the permission picked by the user. Possible values for this string are:</returns>
+<returns>A <see cref="Promise"/> that resolves to a string with the permission picked by the user.<br/>Possible values for this string are:The deprecated version of the method returns <c>undefined</c>.</returns>
 </NotificationRequestPermission>
 </docs>

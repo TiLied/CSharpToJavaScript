@@ -1,0 +1,12 @@
+<docs>
+<StorageAccessHandleCaches>
+<summary>
+The <strong><c>caches</c></strong> property of the <see cref="StorageAccessHandle"/> interface returns an unpartitioned <see cref="CacheStorage"/> object if access was granted, and throws a <c>SecurityError</c> <see cref="DOMException"/> otherwise.
+</summary>
+<remarks>
+<para>-<see cref="Document.RequestStorageAccess"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Storage_Access_API/Using">Using the Storage Access API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StorageAccessHandle/caches"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="CacheStorage"/> object.</value>
+</StorageAccessHandleCaches>
+</docs>

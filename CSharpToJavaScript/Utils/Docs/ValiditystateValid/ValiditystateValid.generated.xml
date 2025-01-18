@@ -1,0 +1,13 @@
+<docs>
+<ValidityStateValid>
+<summary>
+The read-only <strong><c>valid</c></strong> property of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/ValidityState"><c>ValidityState</c></see> interface indicates if the value of an <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">input</see> element meets all its validation constraints, and is therefore considered to be valid.
+</summary>
+<remarks>
+<para>If <c>true</c>, the element matches the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:valid">:valid</see> CSS pseudo-class; otherwise the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:invalid">:invalid</see> CSS pseudo-class applies.</para>
+<para>-ValidityState <see href="https://developer.mozilla.org/en-US/docs/Web/API/ValidityState/badInput">badInput</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/API/ValidityState/customError">customError</see> properties.<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation">Constraint validation</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation">Forms: Data form validation</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ValidityState/valid"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean that is <c>true</c> if the <c>ValidityState</c> does conform to all the constraints.</value>
+</ValidityStateValid>
+</docs>

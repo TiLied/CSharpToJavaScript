@@ -1,7 +1,7 @@
 <docs>
 <DataTransferSetData>
 <summary>
-The <strong><c>DataTransfer.setData()</c></strong> method sets the drag<br/>operation's <see cref="DataTransfer"/> to the specified data and type. If<br/>data for the given type does not exist, it is added at the end of the drag data store,<br/>such that the last item in the <see cref="DataTransfer.Types"/> list will be<br/>the new type. If data for the given type already exists, the existing data is replaced<br/>in the same position. That is, the order of the<br/><see cref="DataTransfer.Types"/> list is not changed when replacing data of the<br/>same type.
+The <strong><c>DataTransfer.setData()</c></strong> method sets the drag<br/>operation&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer">drag data</see> to the specified data and type. If<br/>data for the given type does not exist, it is added at the end of the drag data store,<br/>such that the last item in the <see cref="DataTransfer.Types"/> list will be<br/>the new type. If data for the given type already exists, the existing data is replaced<br/>in the same position. That is, the order of the<br/><see cref="DataTransfer.Types"/> list is not changed when replacing data of the<br/>same type.
 </summary>
 <remarks>
 <para>Example data types are <c>text/plain</c> and <c>text/uri-list</c>.</para>

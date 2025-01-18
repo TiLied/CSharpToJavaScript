@@ -5,7 +5,7 @@ The <c>launchQueue</c> read-only property of the <see cref="Window"/> interface 
 </summary>
 <remarks>
 <para>The custom launch navigation handling functionality is controlled by the properties of the <see cref="LaunchParams"/> object passed into the <see cref="LaunchQueue.SetConsumer"/> callback function.</para>
-<para>-{{domxref(&amp;quot;Launch Handler API&amp;quot;, &amp;quot;Launch Handler API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://developer.chrome.com/docs/web-platform/launch-handler/">Launch Handler API: Control how your app is launched</see><br/>-<see cref="Window.LaunchQueue"/><br/>-<see href="https://launch-handler.glitch.me/">Musicr 2.0</see> demo app<br/></para>
+<para>-{{domxref(&amp;quot;Launch Handler API&amp;quot;, &amp;quot;Launch Handler API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://developer.chrome.com/docs/web-platform/launch-handler/">Launch Handler API: Control how your app is launched</see><br/>-<c>Window.launchQueue</c><br/>-<see href="https://launch-handler.glitch.me/">Musicr 2.0</see> demo app<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Window/launchQueue"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A <see cref="LaunchQueue"/> object instance.</value>

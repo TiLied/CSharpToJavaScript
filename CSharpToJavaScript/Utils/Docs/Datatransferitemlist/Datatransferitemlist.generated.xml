@@ -4,7 +4,7 @@
 The <strong><c>DataTransferItemList</c></strong> object is a list of <see cref="DataTransferItem"/> objects representing items being dragged. During a <strong>drag operation</strong>, each <see cref="DragEvent"/> has a <see cref="DragEvent.DataTransfer"/> property and that property is a <c>DataTransferItemList</c>.
 </summary>
 <remarks>
-<para>The individual items can be accessed using the <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors#bracket_notation">bracket notation</see> <c>[]</c>.</para><para>This interface has no constructor.</para>
+<para>The individual items can be accessed using the <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors#bracket_notation">bracket notation</see> <c>[]</c>.</para><para><c>DataTransferItemList</c> was primarily designed for the <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API">HTML Drag and Drop API</see>, and is still specified in the HTML drag-and-drop section, but it is now also used by other APIs, such as <see cref="ClipboardEvent.ClipboardData"/> and <see cref="InputEvent.DataTransfer"/>. Documentation of <c>DataTransferItemList</c> will primarily discuss its usage in drag-and-drop operations, and you should refer to the other APIs&amp;apos; documentation for usage of <c>DataTransferItemList</c> in those contexts.</para><para>This interface has no constructor.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItemList"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </DataTransferItemList>

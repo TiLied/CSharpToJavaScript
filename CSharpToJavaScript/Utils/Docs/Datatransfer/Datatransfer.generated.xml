@@ -1,10 +1,10 @@
 <docs>
 <DataTransfer>
 <summary>
-The <strong><c>DataTransfer</c></strong> object is used to hold the data that is being dragged during a drag and drop operation. It may hold one or more data items, each of one or more data types. For more information about drag and drop, see <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API">HTML Drag and Drop API</see>.
+The <strong><c>DataTransfer</c></strong> object is used to hold any data transferred between contexts, such as a drag and drop operation, or clipboard read/write. It may hold one or more data items, each of one or more data types.
 </summary>
 <remarks>
-<para>This object is available from the <see cref="DragEvent.DataTransfer"/> property of all <see cref="DragEvent"/>.</para>
+<para><c>DataTransfer</c> was primarily designed for the <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API">HTML Drag and Drop API</see>, as the <see cref="DragEvent.DataTransfer"/> property, and is still specified in the HTML drag-and-drop section, but it is now also used by other APIs, such as <see cref="ClipboardEvent.ClipboardData"/> and <see cref="InputEvent.DataTransfer"/>. However, other APIs only use certain parts of its interface, ignoring properties such as <c>dropEffect</c>. Documentation of <c>DataTransfer</c> will primarily discuss its usage in drag-and-drop operations, and you should refer to the other APIs&amp;apos; documentation for usage of <c>DataTransfer</c> in those contexts.</para>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API">Drag and drop</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations">Drag Operations</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types">Recommended Drag Types</see><br/>-<see href="https://codepen.io/tech_query/pen/MqGgap">DataTransfer test - Paste or Drag</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer"> <em>See also on MDN</em> </seealso></para>
 </remarks>

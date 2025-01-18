@@ -4,7 +4,7 @@
 The <strong><c>Range.deleteContents()</c></strong> method removes the contents of<br/>the <see cref="Range"/> from the <see cref="Document"/>.
 </summary>
 <remarks>
-<para>Unlike <see cref="Range.ExtractContents"/>, this method does not return a<br/><see cref="DocumentFragment"/> containing the deleted content.</para>
+<para>In the context of a <see cref="Range"/>, when a node is partially selected—meaning it overlaps with the start or end of the selection—only the selected portion of the text is deleted, while the node itself remains intact. However, if a node is fully selected, the entire node and its contents are removed.</para><para>Unlike <see cref="Range.ExtractContents"/>, this method does not return a<br/><see cref="DocumentFragment"/> containing the deleted content.</para>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Range/deleteContents"> <em>See also on MDN</em> </seealso></para>
 </remarks>

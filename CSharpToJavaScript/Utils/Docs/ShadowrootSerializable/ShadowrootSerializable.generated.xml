@@ -1,0 +1,12 @@
+<docs>
+<ShadowRootSerializable>
+<summary>
+The <strong><c>serializable</c></strong> read-only property of the <see cref="ShadowRoot"/> interface returns <c>true</c> if the shadow root is serializable.
+</summary>
+<remarks>
+<para>If set, the shadow root may be serialized by calling the <see cref="'Element.GetHTML'"/> or <see cref="'ShadowRoot.GetHTML'"/> methods with the <c>options.serializableShadowRoots</c> parameter set <c>true</c>.</para><para>The serializable property of a shadow root is specified when the shadow root is created, either declaratively by adding the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template#shadowrootserializable"><c>shadowrootserializable</c></see> attribute on a <c>&amp;lt;template&amp;gt;</c> element (along with an allowed <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template#shadowrootmode"><c>shadowrootmode</c></see> value), or by setting the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Element/attachShadow#serializable"><c>options.serializable</c></see> parameter to <c>true</c> when using <see href="https://developer.mozilla.org/en-US/docs/Web/API/Element/attachShadow"><c>Element.attachShadow()</c></see>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/serializable"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value><c>true</c> if the shadow root is serializable; <c>false</c> otherwise.</value>
+</ShadowRootSerializable>
+</docs>

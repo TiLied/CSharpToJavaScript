@@ -4,7 +4,7 @@
 The <strong><c>NamedNodeMap</c></strong> interface represents a collection of <see cref="Attr"/> objects. Objects inside a <c>NamedNodeMap</c> are not in any particular order, unlike <see cref="NodeList"/>, although they may be accessed by an index as in an array.
 </summary>
 <remarks>
-<para>A <c>NamedNodeMap</c> object is <strong>live</strong> and will thus be auto-updated if changes are made to its contents internally or elsewhere.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Although called <c>NamedNodeMap</c>, this interface doesn't deal with <see cref="Node"/> objects but with <see cref="Attr"/> objects, which are a specialized class of <see cref="Node"/> objects.</para></blockquote>
+<para>A <c>NamedNodeMap</c> object is <strong>live</strong> and will thus be auto-updated if changes are made to its contents internally or elsewhere.</para><blockquote><para>Although called <c>NamedNodeMap</c>, this interface doesn't deal with <see cref="Node"/> objects but with <see cref="Attr"/> objects, which are a specialized class of <see cref="Node"/> objects.</para></blockquote>
 <para>-<see cref="Element.Attributes"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NamedNodeMap"> <em>See also on MDN</em> </seealso></para>
 </remarks>

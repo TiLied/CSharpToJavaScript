@@ -6,6 +6,6 @@
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/cellSpacing"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string which is either a number of pixels (such as<br/><c>&amp;quot;10&amp;quot;</c>) or a percentage value (like <c>&amp;quot;10%&amp;quot;</c>).</value>
+<value>A string which is either a number of pixels (such as <c>&amp;quot;10&amp;quot;</c>) or a percentage value (like <c>&amp;quot;10%&amp;quot;</c>).When set to the <c>null</c> value, that <c>null</c> value is converted to the empty string (<c>&amp;quot;&amp;quot;</c>), so <c>elt.cellSpacing = null</c> is equivalent to <c>elt.cellSpacing = &amp;quot;&amp;quot;</c>.</value>
 </HTMLTableElementCellSpacing>
 </docs>

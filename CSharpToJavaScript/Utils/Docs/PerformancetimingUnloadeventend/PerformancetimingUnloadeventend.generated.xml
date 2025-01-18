@@ -1,7 +1,7 @@
 <docs>
 <PerformanceTimingUnloadEventEnd>
 <summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="WARNING"><h5>WARNING</h5><strong>Warning:</strong> This interface of this property is deprecated in the <see href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</see>. Please use the <see cref="PerformanceNavigationTiming"/><br/>interface instead.</blockquote>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote>This interface of this property is deprecated in the <see href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</see>. Please use the <see cref="PerformanceNavigationTiming"/><br/>interface instead.</blockquote>
 </summary>
 <remarks>
 <para>The legacy<br/><strong><c>PerformanceTiming.unloadEventEnd</c></strong><br/>read-only property returns an <c>unsigned long long</c> representing the moment,<br/>in milliseconds since the UNIX epoch, the <see cref="Window/unload_event"/> event handler finishes. If<br/>there is no previous document, or if the previous document, or one of the needed<br/>redirects, is not of the same origin, the value returned is <c>0</c>.</para>

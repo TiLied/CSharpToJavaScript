@@ -1,0 +1,13 @@
+<docs>
+<SVGAnimatedRectBaseVal>
+<summary>
+The <strong><c>baseVal</c></strong> read-only property of the <see cref="SVGAnimatedRect"/> interface represents the current non-animated value of the <c>viewBox</c> attribute of an SVG element.
+</summary>
+<remarks>
+<para>This property reflects the SVG element's {{SVGAttr("viewBox")}} attribute value as a read-only <see cref="DOMRect"/> object. It provides access to the static rectangle defined by the <c>viewBox</c> attribute, including the <c>x</c>, <c>y</c>, <c>width</c>, and <c>height</c> values.</para>
+<para>-viewBox<br/>-<see cref="DOMRect"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAnimatedRect/baseVal"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DOMRect"/> object representing the current non-animated value of the <c>viewBox</c> attribute.</value>
+</SVGAnimatedRectBaseVal>
+</docs>

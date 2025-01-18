@@ -1,0 +1,13 @@
+<docs>
+<HTMLButtonElementFormAction>
+<summary>
+The <strong><c>formAction</c></strong> property of the <see cref="HTMLButtonElement"/> interface is the URL of the program that is executed on the server when the form that owns this control is submitted. It reflects the value of the <c>&amp;lt;button&amp;gt;</c>&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#formaction"><c>formaction</c></see> attribute.
+</summary>
+<remarks>
+<para>The value overrides the <see cref="HTMLFormElement.Action"/> property of the <see cref="HTMLFormElement"/> interface if the form is submitted via the button. This property can be retrieved or set.</para>
+<para>-<see cref="HTMLButtonElement.FormEnctype"/><br/>-<see cref="HTMLButtonElement.FormMethod"/><br/>-<see cref="HTMLButtonElement.FormNoValidate"/><br/>-<see cref="HTMLButtonElement.FormTarget"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data">Sending form data</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLButtonElement/formAction"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string. The URL for form submission.</value>
+</HTMLButtonElementFormAction>
+</docs>

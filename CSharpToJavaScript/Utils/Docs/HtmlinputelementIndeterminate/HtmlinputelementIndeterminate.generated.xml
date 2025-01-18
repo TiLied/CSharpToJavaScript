@@ -1,0 +1,13 @@
+<docs>
+<HTMLInputElementIndeterminate>
+<summary>
+The <strong><c>indeterminate</c></strong> property of the <see cref="HTMLInputElement"/> interface returns a boolean value that indicates whether the checkbox is in the <strong>indeterminate</strong> state. For example, a &amp;quot;select all/deselect all&amp;quot; checkbox may be in the indeterminate state when some but not all of its sub-controls are checked. The <c>indeterminate</c> state can only be set via JavaScript and is only relevant to <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox"><c>checkbox</c></see> controls.
+</summary>
+<remarks>
+<para>It is unrelated to the <see cref="HTMLInputElement.Checked"/> property, and an indeterminate checkbox can be either checked or unchecked. Being indeterminate only affects the checkbox's appearance (see example below), not its presence when submitted (which is controlled by the checkedness).</para>
+<para>-<see cref="HTMLInputElement"/><br/>-<see cref="HTMLInputElement.Checked"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">input</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox#indeterminate_state_checkboxes">Indeterminate state checkboxes</see><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:indeterminate">:indeterminate</see> property<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/indeterminate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean.</value>
+</HTMLInputElementIndeterminate>
+</docs>

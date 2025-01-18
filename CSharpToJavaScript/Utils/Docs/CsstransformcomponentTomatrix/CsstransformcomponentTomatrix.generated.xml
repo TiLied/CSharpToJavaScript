@@ -4,7 +4,7 @@
 The <strong><c>toMatrix()</c></strong> method of the<br/><see cref="CSSTransformComponent"/> interface returns a <see cref="'DOMMatrix'"/><br/>object.
 </summary>
 <remarks>
-<para>All transform functions can be represented mathematically as a 4x4 transformation matrix. This is explained in detail in <see href="https://dev.opera.com/articles/understanding-the-css-transforms-matrix/">Understanding the CSS Transforms matrix</see>.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> The <c>is2D</c> property affects what transform, and therefore type of matrix that will be returned. CSS 2D and 3D transforms are different for legacy reasons. A brief explanation of 2D vs. 3D transforms can be found in <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms">Using CSS transforms</see>.</para></blockquote>
+<para>All transform functions can be represented mathematically as a 4x4 transformation matrix.</para><blockquote><para>The <c>is2D</c> property affects what transform, and therefore type of matrix that will be returned. CSS 2D and 3D transforms are different for legacy reasons. A brief explanation of 2D vs. 3D transforms can be found in <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms">Using CSS transforms</see>.</para></blockquote>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSTransformComponent/toMatrix"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>A <see cref="'DOMMatrix'"/> object</returns>

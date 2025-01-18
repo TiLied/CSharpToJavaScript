@@ -8,6 +8,6 @@ The <see cref="MediaTrackSupportedConstraints"/> dictionary's <strong><c>frameRa
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API">Media Capture and Streams API</see><br/>-<see cref="MediaDevices.GetSupportedConstraints"/><br/>-<see cref="MediaTrackSupportedConstraints"/><br/>-<see cref="MediaStreamTrack"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/frameRate"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>This property is present in the dictionary if the user agent supports the <c>frameRate</c> constraint.<br/>If the property isn&amp;apos;t present, the user agent doesn&amp;apos;t allow specifying limits on the frame rate for video tracks.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> If this property is present, its value is always <c>true</c>.</blockquote></value>
+<value>This property is present in the dictionary if the user agent supports the <c>frameRate</c> constraint.<br/>If the property isn&amp;apos;t present, the user agent doesn&amp;apos;t allow specifying limits on the frame rate for video tracks.<blockquote>If this property is present, its value is always <c>true</c>.</blockquote></value>
 </MediaTrackSupportedConstraintsFrameRate>
 </docs>

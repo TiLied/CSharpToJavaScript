@@ -1,0 +1,13 @@
+<docs>
+<HTMLInputElementValueAsNumber>
+<summary>
+The <strong><c>valueAsNumber</c></strong> property of the <see cref="HTMLInputElement"/> interface represents the current value of the {{htmlelement("input")}} element as a number or <c>NaN</c> if converting to a numeric value is not possible.
+</summary>
+<remarks>
+<para>This property can also be set directly, for example to set a default numeric value based on some condition.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">input</see><br/>-<see cref="HTMLInputElement.Value"/><br/>-<see cref="HTMLInputElement.ValueAsDate"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/valueAsNumber"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number that represents the value of the element or <c>NaN</c> if numeric conversion is impossible.</value>
+</HTMLInputElementValueAsNumber>
+</docs>

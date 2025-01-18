@@ -1,0 +1,11 @@
+<docs>
+<RTCDataChannelStats>
+<summary>
+The <strong><c>RTCDataChannelStats</c></strong> dictionary of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see> provides statistics related to one <see cref="RTCDataChannel"/> object on the connection.
+</summary>
+<remarks>
+<para>The report can be obtained by iterating the <see cref="RTCStatsReport"/> returned by <see cref="RTCPeerConnection.GetStats"/> until you find an entry with the <see href="https://developer.mozilla.org#type"><c>type</c></see> of <c>data-channel</c>.</para><para>The data channels statistics may be correlated to a particular channel by comparing the <see href="https://developer.mozilla.org#datachannelidentifier"><c>dataChannelIdentifier</c></see> property to a matching <see cref="RTCDataChannel.Id"/>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannelStats"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RTCDataChannelStats>
+</docs>

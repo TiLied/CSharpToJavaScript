@@ -4,7 +4,7 @@
 The <strong><c>audioLevel</c></strong> property of the <see cref="RTCAudioSourceStats"/> dictionary represents the audio level of the media source.
 </summary>
 <remarks>
-<para>The level is averaged over some small implementation-dependent interval.<br/>Users can alternatively calculate the average audio level over some arbitrary duration using the algorithm described in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCAudioSourceStats#description"><c>RTCAudioSourceStats</c> description</see>.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> For audio levels of remotely sourced tracks, see <see cref="RTCInboundRtpStreamStats.AudioLevel"/>.</para></blockquote>
+<para>The level is averaged over some small implementation-dependent interval.<br/>Users can alternatively calculate the average audio level over some arbitrary duration using the algorithm described in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCAudioSourceStats#description"><c>RTCAudioSourceStats</c> description</see>.</para><blockquote><para>For audio levels of remotely sourced tracks, see <see cref="RTCInboundRtpStreamStats.AudioLevel"/>.</para></blockquote>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCAudioSourceStats/audioLevel"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A number between 0 and 1 (linear), where 1.0 represents 0 dBov (<see href="https://en.wikipedia.org/wiki/DBFS">decibels relative to full scale (DBFS)</see>), 0 represents silence, and 0.5 represents approximately 6 dB SPL change in the <see href="https://en.wikipedia.org/wiki/Sound_pressure#Sound_pressure_level">sound pressure level</see> from 0 dBov.</value>

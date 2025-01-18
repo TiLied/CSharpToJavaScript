@@ -1,10 +1,10 @@
 <docs>
 <DOMMatrix>
 <summary>
-The <strong><c>DOMMatrix</c></strong> interface represents 4×4 matrices, suitable for 2D and 3D operations including rotation and translation. It is a mutable version of the <see cref="DOMMatrixReadOnly"/> interface.
+The <strong><c>DOMMatrix</c></strong> interface represents 4×4 matrices, suitable for 2D and 3D operations including rotation and translation. It is a mutable version of the <see cref="DOMMatrixReadOnly"/> interface.<br/>The interface is available inside <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">web workers</see>.
 </summary>
 <remarks>
-<para><strong><c>WebKitCSSMatrix</c></strong> and <strong><c>SVGMatrix</c></strong> are aliases to <strong><c>DOMMatrix</c></strong>.</para><para>This interface should be available inside <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">web workers</see>, though some implementations don&amp;apos;t allow it yet.</para><para></para>
+<para><strong><c>WebKitCSSMatrix</c></strong> and <strong><c>SVGMatrix</c></strong> are aliases to <strong><c>DOMMatrix</c></strong>.</para><para></para>
 <para>-Its non-modifiable counterpart, <see cref="DOMMatrixReadOnly"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix"> <em>See also on MDN</em> </seealso></para>
 </remarks>

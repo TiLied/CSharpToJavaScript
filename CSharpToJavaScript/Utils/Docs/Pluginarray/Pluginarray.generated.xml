@@ -1,10 +1,10 @@
 <docs>
 <PluginArray>
 <summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <c>PluginArray</c> interface is used to store a list of <see cref="Plugin"/> objects describing the available <see href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Plugins">plugins</see>; it's returned by the <see cref="Navigator.Plugins"/> property. The <c>PluginArray</c> is not a JavaScript array, but has the <c>length</c> property and supports accessing individual items using bracket notation (<c>plugins[2]</c>), as well as via <c>item(index)</c> and <c>namedItem(&amp;quot;name&amp;quot;)</c> methods.
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <c>PluginArray</c> interface is used to store a list of <see cref="Plugin"/> objects; it's returned by the <see cref="Navigator.Plugins"/> property. The <c>PluginArray</c> is not a JavaScript array, but has the <c>length</c> property and supports accessing individual items using bracket notation (<c>plugins[2]</c>), as well as via <c>item(index)</c> and <c>namedItem(&amp;quot;name&amp;quot;)</c> methods.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Own properties of <c>PluginArray</c> objects are no longer enumerable in the latest browser versions.</para></blockquote>
+<blockquote><para>Own properties of <c>PluginArray</c> objects are no longer enumerable in the latest browser versions.</para></blockquote>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PluginArray"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </PluginArray>

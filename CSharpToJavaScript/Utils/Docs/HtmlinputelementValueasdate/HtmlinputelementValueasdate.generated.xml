@@ -1,0 +1,13 @@
+<docs>
+<HTMLInputElementValueAsDate>
+<summary>
+The <strong><c>valueAsDate</c></strong> property of the <see cref="HTMLInputElement"/> interface represents the current value of the {{htmlelement("input")}} element as a {{jsxref("Date")}}, or <c>null</c> if conversion is not possible.
+</summary>
+<remarks>
+<para>This property can also be set directly, for example to set a default date based on some condition. If the provided value is neither <c>null</c> nor a <c>Date</c> object, a <see cref="TypeError"/> is thrown. If the provided value is <c>null</c> or an <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date">invalid date</see>, the input value is set to the empty string.</para><para>This property always returns <c>null</c> when accessed on an input that isn&amp;apos;t date- or time-based. When setting this property on such an input, an <c>InvalidStateError</c> <see cref="DOMException"/> is thrown.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">input</see><br/>-<see cref="HTMLInputElement.Value"/><br/>-<see cref="HTMLInputElement.ValueAsNumber"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/valueAsDate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Date"/> object or <c>null</c> if a conversion is impossible.</value>
+</HTMLInputElementValueAsDate>
+</docs>

@@ -1,0 +1,12 @@
+<docs>
+<PerformanceScriptTimingWindowAttribution>
+<summary>
+The <strong><c>windowAttribution</c></strong> read-only property of the <see cref="PerformanceScriptTiming"/> interface returns an enumerated value describing the relationship of the container (i.e., either the top-level document or an {{htmlelement("iframe")}}) in which the long animation frame (LoAF)-causing script was executed, relative to the window running the current document.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Performance_API/Long_animation_frame_timing">Long animation frame timing</see><br/>-<see cref="PerformanceLongAnimationFrameTiming"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceScriptTiming/windowAttribution"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An enumerated value, which can be one of:</value>
+</PerformanceScriptTimingWindowAttribution>
+</docs>

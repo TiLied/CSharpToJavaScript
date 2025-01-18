@@ -1,0 +1,13 @@
+<docs>
+<HTMLOptionElementLabel>
+<summary>
+The <strong><c>label</c></strong> property of the <see cref="HTMLOptionElement"/> represents the text displayed for an option in a {{htmlelement("select")}} element or as part of a list of suggestions in a {{htmlelement("datalist")}} element. It reflects the {{htmlelement("option")}} element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option#label"><c>label</c></see> attribute.
+</summary>
+<remarks>
+<para>If the attribute is omitted or the empty string, the <c>label</c> property returns the element's <see cref="HTMLOptionElement.Text"/> content.</para>
+<para>-<see cref="HTMLOptionElement.Value"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">select</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist">datalist</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/optgroup">optgroup</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLOptionElement/label"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</HTMLOptionElementLabel>
+</docs>

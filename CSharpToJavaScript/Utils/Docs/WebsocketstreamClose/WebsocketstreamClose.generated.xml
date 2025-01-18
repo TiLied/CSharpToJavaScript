@@ -1,0 +1,13 @@
+<docs>
+<WebSocketStreamClose>
+<summary>
+The <strong><c>close()</c></strong> method of the<br/><see cref="WebSocketStream"/> interface closes the WebSocket connection. The method optionally accepts an object containing a custom code and/or reason indicating why the connection was closed.
+</summary>
+<remarks>
+<para>An alternative mechanism for closing a <c>WebSocketStream</c> is to specify an <see cref="AbortSignal"/> in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocketStream/WebSocketStream#signal"><c>signal</c></see> option of the constructor upon creation. The associated <see cref="AbortController"/> can then be used to close the WebSocket connection. This is generally the preferred mechanism. However, <c>close()</c> can be used if you wish to specify a custom code and/or reason.</para>
+<para>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/websocketstream">WebSocketStream: integrating streams with the WebSocket API</see>, developer.chrome.com (2020)<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocketStream/close"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<c>undefined</c>).</returns>
+</WebSocketStreamClose>
+</docs>

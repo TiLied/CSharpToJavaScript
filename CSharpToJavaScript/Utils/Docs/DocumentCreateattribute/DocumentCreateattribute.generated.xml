@@ -4,7 +4,7 @@
 The <strong><c>Document.createAttribute()</c></strong> method creates a new<br/>attribute node, and returns it. The object created is a node implementing the<br/><see cref="Attr"/> interface. The DOM does not enforce what sort of attributes can be<br/>added to a particular element in this manner.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> The string given in parameter is converted to lowercase.</para></blockquote>
+<blockquote><para>The string given in parameter is converted to lowercase.</para></blockquote>
 <para>-<see cref="Document.CreateAttributeNS"/><br/>-<see cref="Document.CreateElement"/><br/>-<see cref="Element.SetAttribute"/><br/>-<see cref="Element.SetAttributeNode"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createAttribute"> <em>See also on MDN</em> </seealso></para>
 </remarks>

@@ -1,10 +1,11 @@
 <docs>
 <SVGRect>
 <summary>
-The <strong><c>SVGRect</c></strong> represents a rectangle. Rectangles consist of an <c>x</c> and <c>y</c> coordinate pair identifying a minimum <c>x</c> value, a minimum <c>y</c> value, and a <c>width</c> and <c>height</c>, which are constrained to be non-negative.
+The <strong><c>SVGRect</c></strong>, an alias for <see cref="DOMRect"/>, represents a rectangle. Rectangles consist of an <c>x</c> and <c>y</c> coordinate pair identifying a minimum <c>x</c> value, a minimum <c>y</c> value, and a <c>width</c> and <c>height</c>, which are constrained to be non-negative.
 </summary>
 <remarks>
-<para>An <strong><c>SVGRect</c></strong> object can be designated as read only, which means that attempts to modify the object will result in an exception being thrown.</para>
+<para>An <c>SVGRect</c> object can be designated as read only, which means that attempts to modify the object will result in an exception being thrown.</para>
+<para>-<see cref="DOMRect"/><br/>-<see cref="DOMPoint"/> alias <see cref="SVGPoint"/><br/>-<see cref="DOMMatrix"/> alias <see cref="SVGMatrix"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGRect"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </SVGRect>

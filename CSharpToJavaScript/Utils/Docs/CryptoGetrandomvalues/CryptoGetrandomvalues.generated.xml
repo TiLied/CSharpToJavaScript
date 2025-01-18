@@ -5,7 +5,7 @@ The <strong><c>Crypto.getRandomValues()</c></strong> method lets you get cryptog
 </summary>
 <remarks>
 <para>To guarantee enough performance, implementations are not using a truly random number generator, but they are using a pseudo-random number generator <strong>seeded</strong> with a value with enough entropy.<br/>The pseudo-random number generator algorithm (PRNG) may vary across <see href="https://developer.mozilla.org/en-US/docs/Glossary/user agent">user agent</see>, but is suitable for cryptographic purposes.</para><para><c>getRandomValues()</c> is the only member of the <c>Crypto</c> interface which can be used from an insecure context.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API">Web Crypto API</see><br/>-<see cref="Crypto_property"/> to get a <see cref="Crypto"/> object.<br/>-<see cref="MathRandom"/>, a non-cryptographic source of random numbers.<br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API">Web Crypto API</see><br/>-<see cref="MathRandom"/>, a non-cryptographic source of random numbers.<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>The same array passed as <c>typedArray</c> but with its contents replaced with the newly generated random numbers.<br/>Note that <c>typedArray</c> is modified in-place, and no copy is made.</returns>

@@ -1,0 +1,13 @@
+<docs>
+<RTCRemoteInboundRtpStreamStatsRoundTripTime>
+<summary>
+The <strong><c>roundTripTime</c></strong> property of the <see cref="RTCRemoteInboundRtpStreamStats"/> dictionary indicates the estimated round trip time (RTT) for this <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRemoteInboundRtpStreamStats/ssrc">synchronization source (SSRC)</see>, in seconds.
+</summary>
+<remarks>
+<para>The round trip time is calculated based on the RTCP timestamps in the RTCP Sender Report (SR), and requires a report with a Delay Since Last SR (DLSR) block that has a value other than 0.<br/>The property does not exist until such a report has been received.</para><para>Note that the <strong>average</strong> RTT for the session can be computed by dividing <see cref="RTCRemoteInboundRtpStreamStats.TotalRoundTripTime"/> by <see cref="RTCRemoteInboundRtpStreamStats.RoundTripTimeMeasurements"/>.</para>
+<para>-rfc("3550","SR: Sender Report RTCP Packet", "6.4.1")<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRemoteInboundRtpStreamStats/roundTripTime"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number indicating the current estimated round trip time, in seconds.</value>
+</RTCRemoteInboundRtpStreamStatsRoundTripTime>
+</docs>

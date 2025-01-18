@@ -1,7 +1,7 @@
 <docs>
 <TrustedTypePolicy>
 <summary>
-The <strong><c>TrustedTypePolicy</c></strong> interface of the <see cref="'Trusted Types API'"/> defines a group of functions which create <see cref="'TrustedType'"/> objects.
+The <strong><c>TrustedTypePolicy</c></strong> interface of the {{domxref(&amp;quot;Trusted Types API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} defines a group of functions which create <c>TrustedType</c> objects.
 </summary>
 <remarks>
 <para>A <c>TrustedTypePolicy</c> object is created by <see cref="TrustedTypePolicyFactory.CreatePolicy"/> to define a policy for enforcing security rules on input. Therefore, <c>TrustedTypePolicy</c> has no constructor.</para>

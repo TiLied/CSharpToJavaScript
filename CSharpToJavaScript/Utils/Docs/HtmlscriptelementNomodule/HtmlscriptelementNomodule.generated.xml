@@ -1,0 +1,12 @@
+<docs>
+<HTMLScriptElementNoModule>
+<summary>
+The <strong><c>noModule</c></strong> property of the <see cref="HTMLScriptElement"/> interface is a boolean value that indicates whether the script should be executed in browsers that support <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules">ES modules</see>. Practically, this can be used to serve fallback scripts to older browsers that do not support JavaScript modules.
+</summary>
+<remarks>
+<para>It reflects the <c>nomodule</c> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">script</see> element.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLScriptElement/noModule"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean, <c>true</c> means that the script should not be executed in browsers that support ES modules, <c>false</c> otherwise.</value>
+</HTMLScriptElementNoModule>
+</docs>

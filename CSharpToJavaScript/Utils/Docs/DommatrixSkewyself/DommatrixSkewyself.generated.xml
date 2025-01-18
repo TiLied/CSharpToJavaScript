@@ -1,0 +1,13 @@
+<docs>
+<DOMMatrixSkewYSelf>
+<summary>
+The <c>skewYSelf()</c> method of the <see cref="DOMMatrix"/> interface is a mutable transformation method that modifies a matrix. It skews the source matrix by applying the specified skew transformation along the Y-axis and returns the skewed matrix.
+</summary>
+<remarks>
+<para>To skew a matrix along the Y-axis without mutating it, see <see cref="DOMMatrixReadOnly.SkewY"/></para>
+<para>-<see cref="DOMMatrixReadOnly.SkewY"/><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform">transform</see> property<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function">transform-function</see> functions-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/skew">transform-function/skew</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/skewX">transform-function/skewX</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/skewY">transform-function/skewY</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/skewZ">transform-function/skewZ</see><br/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transforms">CSS transforms</see> module<br/>-SVG <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/transform"><c>transform</c></see> attribute<br/>-<see cref="CanvasRenderingContext2D"/> interface methods-<see cref="CanvasRenderingContext2D.Transform"/><br/>-<see cref="CanvasRenderingContext2D.SetTransform"/><br/>-<see cref="CanvasRenderingContext2D.ResetTransform"/><br/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix/skewYSelf"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Returns itself; the <see href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix"><c>DOMMatrix</c></see> skewed along the Y-axis by the given<br/>angle.</returns>
+</DOMMatrixSkewYSelf>
+</docs>

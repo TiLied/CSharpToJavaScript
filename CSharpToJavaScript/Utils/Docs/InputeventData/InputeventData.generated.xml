@@ -6,6 +6,6 @@ The <strong><c>data</c></strong> read-only property of the<br/><see cref="InputE
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/InputEvent/data"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string.</value>
+<value>A string or <c>null</c>. The spec has an <see href="https://w3c.github.io/input-events/#overview">overview</see> of its value in various cases.</value>
 </InputEventData>
 </docs>

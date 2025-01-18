@@ -1,0 +1,11 @@
+<docs>
+<CloseWatcherRequestClose>
+<summary>
+The <strong><c>requestClose()</c></strong> method of the <see cref="CloseWatcher"/> interface fires a <c>cancel</c> event and if that event is not canceled with <see cref="Event.PreventDefault"/>, proceeds to fire a <c>close</c> event, and then finally deactivates the close watcher as if <c>destroy()</c> was called.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CloseWatcher/requestClose"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</CloseWatcherRequestClose>
+</docs>

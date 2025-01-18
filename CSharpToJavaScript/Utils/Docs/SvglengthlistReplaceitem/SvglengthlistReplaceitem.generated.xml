@@ -1,0 +1,11 @@
+<docs>
+<SVGLengthListReplaceItem>
+<summary>
+The <strong><c>replaceItem()</c></strong> method of the <see cref="SVGLengthList"/> interface replaces an existing item in the list with a new item. If the new item is already in a list, it is removed from its previous list before it is inserted into this list. The inserted item is the item itself and not a copy. If the item is already in this list, note that the index of the item to replace is before the removal of the item.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGLengthList/replaceItem"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>The <see cref="SVGLength"/> that was added the list.</returns>
+</SVGLengthListReplaceItem>
+</docs>

@@ -1,10 +1,12 @@
 <docs>
 <ShadowRootClonable>
 <summary>
-The <strong><c>clonable</c></strong> read-only property of the <see cref="ShadowRoot"/> interface returns <c>true</c> if the shadow root is clonable, and <c>false</c> otherwise. It always returns <c>true</c> for shadow roots created via declarative shadow DOM. It can be set to <c>true</c> using the <c>clonable</c> option of the <see cref="Element.AttachShadow"/> method.
+The <strong><c>clonable</c></strong> read-only property of the <see cref="ShadowRoot"/> interface returns <c>true</c> if the shadow root is clonable, and <c>false</c> otherwise.
 </summary>
 <remarks>
+<para>When the value is <c>true</c>, a shadow host cloned with <see cref="Node.CloneNode"/> or <see cref="Document.ImportNode"/> will include a copy of the shadow root.</para><para>By default the value is <c>false</c>.<br/>It can be set to <c>true</c> using the <c>clonable</c> option of the <see cref="Element.AttachShadow"/> method or by setting the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template#shadowrootclonable"><c>shadowrootclonable</c></see> attribute of the <c>&amp;lt;template&amp;gt;</c> element that is being used to declaratively attach a shadow root.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/clonable"> <em>See also on MDN</em> </seealso></para>
 </remarks>
+<value><c>true</c> if the shadow root is clonable, and <c>false</c> otherwise.</value>
 </ShadowRootClonable>
 </docs>

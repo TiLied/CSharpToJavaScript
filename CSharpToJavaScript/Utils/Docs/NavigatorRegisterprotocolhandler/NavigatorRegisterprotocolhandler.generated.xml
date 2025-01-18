@@ -1,11 +1,10 @@
 <docs>
 <NavigatorRegisterProtocolHandler>
 <summary>
-The <strong><see cref="Navigator"/></strong> method <strong><c>registerProtocolHandler()</c></strong> lets websites register their ability to open or handle particular URL schemes (aka protocols).
+The <strong><see cref="Navigator"/></strong> method <strong><c>registerProtocolHandler()</c></strong> lets websites register their ability to open or handle particular URL schemes (also known as protocols).
 </summary>
 <remarks>
-<para>For example, this API lets webmail sites open <c>mailto:</c> URLs, or VoIP sites open <c>tel:</c> URLs.</para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers">Web-based protocol handlers</see><br/>-<see href="https://blog.mozilla.org/webdev/2010/07/26/registerprotocolhandler-enhancing-the-federated-web/">RegisterProtocolHandler Enhancing the Federated Web</see> (Mozilla Webdev)<br/></para>
+<para>For example, this API lets webmail sites open <c>mailto:</c> URLs, or VoIP sites open <c>tel:</c> URLs.</para><para>To register a protocol handler, a website calls <c>registerProtocolHandler()</c>, passing in the protocol to register and a template URL.</para><para>When the user activates a link that uses the registered protocol, the browser will insert the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#href"><c>href</c></see> from the activated link into the URL template supplied during handler registration, and navigate the current page to the resulting URL.</para><para>The browser may ask the user to confirm that they want the page to be allowed to handle the protocol, either when the protocol is registered or when the user activates the link.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/registerProtocolHandler"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>

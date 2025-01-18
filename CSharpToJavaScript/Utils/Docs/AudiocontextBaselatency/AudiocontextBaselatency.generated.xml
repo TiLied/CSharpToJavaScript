@@ -4,7 +4,7 @@
 The <strong><c>baseLatency</c></strong> read-only property of the<br/><see cref="AudioContext"/> interface returns a double that represents the number of<br/>seconds of processing latency incurred by the <c>AudioContext</c> passing an audio<br/>buffer from the <see cref="AudioDestinationNode"/> — i.e. the end of the audio graph —<br/>into the host system&amp;apos;s audio subsystem ready for playing.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> You can request a certain latency during<br/>{{domxref(&amp;quot;AudioContext.AudioContext()&amp;quot;, &amp;quot;construction time&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;true&amp;quot;)}} with the<br/><c>latencyHint</c> option, but the browser may ignore the option.</para></blockquote>
+<blockquote><para>You can request a certain latency during<br/>{{domxref(&amp;quot;AudioContext.AudioContext()&amp;quot;, &amp;quot;construction time&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;true&amp;quot;)}} with the<br/><c>latencyHint</c> option, but the browser may ignore the option.</para></blockquote>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/baseLatency"> <em>See also on MDN</em> </seealso></para>
 </remarks>

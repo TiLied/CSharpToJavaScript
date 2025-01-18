@@ -1,0 +1,13 @@
+<docs>
+<HTMLTableCellElementCh>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>ch</c></strong> property of the <see cref="HTMLTableCellElement"/> interface does nothing. It reflects the <c>char</c> attribute of the cell element.
+</summary>
+<remarks>
+<blockquote><para>This property was designed to participate to the ability to align table cell content on a specific character (typically the decimal point), but was never implemented by browsers.</para><para>To achieve such alignment, watch for the support of a string value with the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-align">text-align</see> CSS property.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-align">text-align</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableCellElement/ch"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A single character.</value>
+</HTMLTableCellElementCh>
+</docs>

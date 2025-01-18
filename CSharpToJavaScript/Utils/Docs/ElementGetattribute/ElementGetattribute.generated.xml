@@ -4,10 +4,10 @@
 The <strong><c>getAttribute()</c></strong> method of the<br/><see cref="Element"/> interface returns the value of a specified attribute on the<br/>element.
 </summary>
 <remarks>
-<para>If the given attribute does not exist, the value returned will<br/>either be <c>null</c> or <c>&amp;quot;&amp;quot;</c> (the empty string); see <see href="https://developer.mozilla.org#non-existing_attributes">Non-existing attributes</see> for details.</para><para>If you need to inspect the <see cref="Attr"/> node's properties, you can use the <see cref="Element.GetAttributeNode"/> method instead.</para>
+<para>If the given attribute does not exist, the value returned will be <c>null</c>.</para><para>If you need to inspect the <see cref="Attr"/> node's properties, you can use the <see cref="Element.GetAttributeNode"/> method instead.</para>
 <para>-<see cref="Element.HasAttribute"/><br/>-<see cref="Element.SetAttribute"/><br/>-<see cref="Element.RemoveAttribute"/><br/>-<see cref="Element.ToggleAttribute"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttribute"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A string containing the value of <c>attributeName</c>.</returns>
+<returns>A string containing the value of <c>attributeName</c> if the attribute exists, otherwise <c>null</c>.</returns>
 </ElementGetAttribute>
 </docs>

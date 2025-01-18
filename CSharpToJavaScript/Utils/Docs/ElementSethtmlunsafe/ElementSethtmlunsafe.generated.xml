@@ -1,0 +1,13 @@
+<docs>
+<ElementSetHTMLUnsafe>
+<summary>
+The <strong><c>setHTMLUnsafe()</c></strong> method of the <see cref="Element"/> interface is used to parse a string of HTML into a <see cref="DocumentFragment"/>, which then replaces the element's subtree in the DOM.<br/>The input HTML may include <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template#declarative_shadow_dom">declarative shadow roots</see>.
+</summary>
+<remarks>
+<para>The suffix &amp;quot;Unsafe&amp;quot; in the method name indicates that the method does not sanitize or remove potentially unsafe XSS-relevant input, such as <c>&amp;lt;script&amp;gt;</c> elements, and script or event handler content attributes.</para><para>If the string of HTML defines more than one <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template#declarative_shadow_dom">declarative shadow root</see> in a particular shadow host then only the first <see cref="ShadowRoot"/> is created — subsequent declarations are parsed as <c>&amp;lt;template&amp;gt;</c> elements within that shadow root.</para><blockquote><para>This method should be used instead of <see cref="Element.InnerHTML"/> when a string of HTML may contain declarative shadow roots.</para></blockquote>
+<para>-<see cref="ShadowRoot.SetHTMLUnsafe"/><br/>-<see cref="Element.InnerHTML"/><br/>-<see cref="Document.ParseHTMLUnsafe"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/setHTMLUnsafe"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<c>undefined</c>).</returns>
+</ElementSetHTMLUnsafe>
+</docs>

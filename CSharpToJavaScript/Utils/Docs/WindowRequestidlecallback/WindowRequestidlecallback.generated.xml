@@ -4,8 +4,8 @@
 The <strong><c>window.requestIdleCallback()</c></strong> method queues a function<br/>to be called during a browser&amp;apos;s idle periods. This enables developers to perform<br/>background and low priority work on the main event loop, without impacting<br/>latency-critical events such as animation and input response. Functions are generally<br/>called in first-in-first-out order; however, callbacks which have a <c>timeout</c><br/>specified may be called out-of-order if necessary in order to run them before the<br/>timeout elapses.
 </summary>
 <remarks>
-<para>You can call <c>requestIdleCallback()</c> within an idle callback function to<br/>schedule another callback to take place no sooner than the next pass through the event<br/>loop.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> A <c>timeout</c> option is strongly recommended for required work,<br/>as otherwise it&amp;apos;s possible multiple seconds will elapse before the callback is fired.</para></blockquote>
-<para>-<see cref="Window.CancelIdleCallback"/><br/>-<see cref="IdleDeadline"/><br/>-<see cref="SetTimeout"/><br/>-<see cref="SetInterval"/><br/>-<see cref="Window.RequestAnimationFrame"/><br/></para>
+<para>You can call <c>requestIdleCallback()</c> within an idle callback function to<br/>schedule another callback to take place no sooner than the next pass through the event<br/>loop.</para><blockquote><para>A <c>timeout</c> option is strongly recommended for required work,<br/>as otherwise it&amp;apos;s possible multiple seconds will elapse before the callback is fired.</para></blockquote>
+<para>-<see cref="Window.CancelIdleCallback"/><br/>-<see cref="IdleDeadline"/><br/>-<see cref="Window.SetTimeout"/><br/>-<see cref="Window.SetInterval"/><br/>-<see cref="Window.RequestAnimationFrame"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Window/requestIdleCallback"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>An ID which can be used to cancel the callback by passing it into the<br/><see cref="Window.CancelIdleCallback"/> method.</returns>

@@ -6,6 +6,6 @@ The read-only <see cref="XRViewport"/> interface's<br/><strong><c>y</c></strong>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRViewport/y"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>The offset from the bottom edge of the rendering surface to the bottom edge of the<br/>viewport, in pixels.<blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> Although other web APIs typically consider the <c>y</c><br/>axis to begin at the top and grow larger progressing downward, WebGL reverses this,<br/>with <c>y</c> growing larger as it goes upward on the screen.</blockquote></value>
+<value>The offset from the bottom edge of the rendering surface to the bottom edge of the<br/>viewport, in pixels.<blockquote>Although other web APIs typically consider the <c>y</c><br/>axis to begin at the top and grow larger progressing downward, WebGL reverses this,<br/>with <c>y</c> growing larger as it goes upward on the screen.</blockquote></value>
 </XRViewportY>
 </docs>

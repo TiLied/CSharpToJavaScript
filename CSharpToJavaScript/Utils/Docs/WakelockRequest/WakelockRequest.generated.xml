@@ -1,7 +1,7 @@
 <docs>
 <WakeLockRequest>
 <summary>
-The <strong><c>request()</c></strong> method of the <see cref="WakeLock"/> interface returns a {{jsxref("Promise")}} that fullfills with a <see cref="WakeLockSentinel"/> object if the system screen wake lock is granted.
+The <strong><c>request()</c></strong> method of the <see cref="WakeLock"/> interface returns a {{jsxref("Promise")}} that fulfills with a <see cref="WakeLockSentinel"/> object if the system screen wake lock is granted.
 </summary>
 <remarks>
 <para>The screen wake lock prevents device screens from dimming or locking when an application needs to keep running.</para>

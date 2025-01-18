@@ -1,0 +1,13 @@
+<docs>
+<DocumentParseHTMLUnsafe>
+<summary>
+The <strong><c>parseHTMLUnsafe()</c></strong> static method of the <see cref="Document"/> object is used to parse a string of HTML, which may contain <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template#declarative_shadow_dom">declarative shadow roots</see>, in order to create a new <see cref="Document"/> instance.
+</summary>
+<remarks>
+<para>The suffix &amp;quot;Unsafe&amp;quot; in the method name indicates that, while <c>&amp;lt;script&amp;gt;</c> elements are not evaluated during parsing, the method does not sanitize other potentially unsafe XSS-relevant input.</para><para>The resulting <c>Document</c> will have a <see href="https://developer.mozilla.org/en-US/docs/Web/API/Document/contentType">content type</see> of &amp;quot;text/html&amp;quot;, a <see href="https://developer.mozilla.org/en-US/docs/Web/API/Document/characterSet">character set</see> of UTF-8, and a URL of &amp;quot;about:blank&amp;quot;</para>
+<para>-<see cref="DOMParser.ParseFromString"/> for parsing HTML or XML into a DOM tree<br/>-<see cref="Element.SetHTMLUnsafe"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/parseHTMLUnsafe"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Document"/>.</returns>
+</DocumentParseHTMLUnsafe>
+</docs>

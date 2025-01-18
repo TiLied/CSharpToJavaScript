@@ -1,0 +1,13 @@
+<docs>
+<WindowBtoa>
+<summary>
+The <strong><c>btoa()</c></strong> method of the <see cref="Window"/> interface creates a<br/><see href="https://developer.mozilla.org/en-US/docs/Glossary/Base64">Base64</see>-encoded <see href="https://developer.mozilla.org/en-US/docs/Glossary/ASCII">ASCII</see> string from a <strong>binary string</strong> (i.e., a<br/>string in which each character in the string is treated as a byte<br/>of binary data).
+</summary>
+<remarks>
+<para>You can use this method to encode data which may otherwise cause communication<br/>problems, transmit it, then use the <see cref="Window.Atob"/> method to decode the data again.<br/>For example, you can encode control characters such as ASCII values 0 through 31.</para><para>Also consider using the <see cref="Uint8ArrayPrototypeToBase64"/> method if your data is in a <c>Uint8Array</c> object to avoid creating a string containing raw bytes.</para>
+<para>-<see href="https://github.com/zloirock/core-js#base64-utility-methods">A polyfill of <c>btoa</c></see> is available in <see href="https://github.com/zloirock/core-js"><c>core-js</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/URI/Schemes/data"><c>data</c> URLs</see><br/>-<see cref="WorkerGlobalScope.Btoa"/>: the same method, but in worker scopes.<br/>-<see cref="Window.Atob"/><br/>-<see cref="Uint8ArrayPrototypeToBase64"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Glossary/Base64">Base64</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Window/btoa"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An ASCII string containing the Base64 representation of <c>stringToEncode</c>.</returns>
+</WindowBtoa>
+</docs>

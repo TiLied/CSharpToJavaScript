@@ -1,0 +1,12 @@
+<docs>
+<SVGElementNonce>
+<summary>
+The <strong><c>nonce</c></strong> property of the <see cref="SVGElement"/> interface returns the nonce that is used by <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">Content Security Policy</see> to determine whether a given fetch will be allowed to proceed.
+</summary>
+<remarks>
+<para>-<see cref="HTMLElement.Nonce"/> a similar method for HTML elements.<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/nonce"><c>nonce</c> global attribute</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">Content Security Policy</see><br/>-CSP: {{CSP("script-src")}}<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/nonce"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A String; the cryptographic nonce, or an empty string if no nonce is set.</value>
+</SVGElementNonce>
+</docs>

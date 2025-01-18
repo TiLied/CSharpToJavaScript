@@ -4,7 +4,7 @@
 The <strong><c>item()</c></strong> method of the <see cref="DOMTokenList"/> interface returns an item in the list,<br/>determined by its position in the list, its index.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This method is equivalent as the <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors#bracket_notation">bracket notation</see>.<br/>So <c>aList.item(i)</c> is the same as <c>aList[i]</c>.</para></blockquote>
+<blockquote><para>This method is equivalent as the <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors#bracket_notation">bracket notation</see>.<br/>So <c>aList.item(i)</c> is the same as <c>aList[i]</c>.</para></blockquote>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/item"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>A string representing the returned item,<br/>or <c>null</c> if the number is greater than or equal to the <c>length</c> of the list.</returns>

@@ -1,0 +1,13 @@
+<docs>
+<HTMLTextAreaElementSetSelectionRange>
+<summary>
+The <strong><c>setSelectionRange()</c></strong> method of the <see cref="HTMLTextAreaElement"/> interface sets the start and end positions of the current text selection, and optionally the direction, in an {{HTMLElement("textarea")}} element. The direction indicates the in which selection should be considered to have occurred; for example, that the selection was set by the user clicking and dragging from the end of the selected text toward the beginning. In addition, the <see cref="HTMLTextAreaElement.Select_event"/> and <see cref="HTMLTextAreaElement.Selectionchange_event"/> events are fired.
+</summary>
+<remarks>
+<para>This method also updates the <see cref="HTMLTextAreaElement.SelectionStart"/>, <see cref="HTMLTextAreaElement.SelectionEnd"/>, and <see cref="HTMLTextAreaElement.SelectionDirection"/> properties.</para><blockquote><para>The <c>&amp;lt;textarea&amp;gt;</c> must be focused to enable selecting a subsection of the text to be selected using the <c>setSelectionRange()</c> method. Setting focus also fires a <c>selectchange</c> event.</para></blockquote><para>To select <strong>all</strong> of the text of an <c>&amp;lt;textarea&amp;gt;</c> element, use the <see cref="HTMLTextAreaElement.Select"/> method.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textarea</see><br/>-<see cref="HTMLTextAreaElement"/><br/>-<see cref="HTMLTextAreaElement.Select"/><br/>-<see cref="HTMLTextAreaElement.TextLength"/><br/>-<see cref="Selection"/><br/>-{{cssxref(&amp;quot;::selection&amp;quot;)}} pseudo-element<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement/setSelectionRange"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</HTMLTextAreaElementSetSelectionRange>
+</docs>

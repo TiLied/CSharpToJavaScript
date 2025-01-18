@@ -1,11 +1,11 @@
 <docs>
 <Worklet>
 <summary>
-The <strong><c>Worklet</c></strong> interface is a lightweight version of <see cref="Worker"/> and gives developers access to low-level parts of the rendering pipeline.
+The <strong><c>Worklet</c></strong> interface is a lightweight version of <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">Web Workers</see> and gives developers access to low-level parts of the rendering pipeline.
 </summary>
 <remarks>
 <para>With Worklets, you can run JavaScript and <see href="https://developer.mozilla.org/en-US/docs/WebAssembly">WebAssembly</see> code to do graphics rendering or audio processing where high performance is required.</para><para>Worklets allow static import of <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules">ECMAScript modules</see>, if supported, using <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import"><c>import</c></see>.<br/>Dynamic import is disallowed by the specification — calling <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/import"><c>import()</c></see> will throw.</para>
-<para>-<see href="https://developer.chrome.com/blog/houdini/">Houdini: Demystifying CSS</see> on Google Developers (2016)<br/>-<see href="https://www.youtube.com/watch?v=g1L4O1smMC0&amp;t=1m33s">AudioWorklet :: What, Why, and How</see> on YouTube (2017)<br/>-<see href="https://developer.chrome.com/blog/audio-worklet/">Enter AudioWorklet</see> on Google Developers (2017)<br/>-<see href="https://www.youtube.com/watch?v=ZPkMMShYxKU&amp;t=0m19s">Animation Worklet - HTTP203 Advent</see> on YouTube (2017)<br/></para>
+<para>-<see href="https://developer.chrome.com/docs/css-ui/houdini">Houdini: Demystifying CSS</see> on Google Developers (2016)<br/>-<see href="https://www.youtube.com/watch?v=g1L4O1smMC0&amp;t=1m33s">AudioWorklet :: What, Why, and How</see> on YouTube (2017)<br/>-<see href="https://developer.chrome.com/blog/audio-worklet/">Enter AudioWorklet</see> on Google Developers (2017)<br/>-<see href="https://www.youtube.com/watch?v=ZPkMMShYxKU&amp;t=0m19s">Animation Worklet - HTTP203 Advent</see> on YouTube (2017)<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Worklet"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </Worklet>

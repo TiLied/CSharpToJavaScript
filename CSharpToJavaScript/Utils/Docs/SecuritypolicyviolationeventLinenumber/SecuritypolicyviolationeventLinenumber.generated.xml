@@ -1,10 +1,10 @@
 <docs>
 <SecurityPolicyViolationEventLineNumber>
 <summary>
-The <strong><c>lineNumber</c></strong> read-only property of the<br/><see cref="SecurityPolicyViolationEvent"/> interface is the line number in the document<br/>or worker at which the violation occurred.
+The <strong><c>lineNumber</c></strong> read-only property of the <see cref="SecurityPolicyViolationEvent"/> interface is the line number in the document or worker script at which the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">Content Security Policy (CSP)</see> violation occurred.
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">Content Security Policy (CSP)</see><br/></para>
+<para>-<see cref="CSPViolationReportBody.LineNumber"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SecurityPolicyViolationEvent/lineNumber"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A number representing the line number at which the violation occurred.</value>

@@ -1,10 +1,10 @@
 <docs>
 <ViewTransitionSkipTransition>
 <summary>
-The <strong><c>skipTransition()</c></strong> method of the<br/><see cref="ViewTransition"/> interface skips the animation part of the view transition, but doesn't skip running the <see cref="Document.StartViewTransition"/> callback that updates the DOM.
+The <strong><c>skipTransition()</c></strong> method of the<br/><see cref="ViewTransition"/> interface skips the animation part of the view transition, but doesn't skip running the associated view update.
 </summary>
 <remarks>
-<para>-<see href="https://developer.chrome.com/docs/web-platform/view-transitions/">Smooth and simple transitions with the View Transitions API</see><br/></para>
+<para>-<see href="https://developer.chrome.com/docs/web-platform/view-transitions/">Smooth transitions with the View Transition API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ViewTransition/skipTransition"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns><c>undefined</c>.</returns>

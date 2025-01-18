@@ -4,7 +4,7 @@
 The <strong><c>createRenderPipelineAsync()</c></strong> method of the<br/><see cref="GPUDevice"/> interface returns a {{jsxref("Promise")}} that fulfills with a <see cref="GPURenderPipeline"/>, which can control the vertex and fragment shader stages and be used in a <see cref="GPURenderPassEncoder"/> or <see cref="GPURenderBundleEncoder"/>, once the pipeline can be used without any stalling.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> It is generally preferable to use this method over <see cref="GPUDevice.CreateRenderPipeline"/> whenever possible, as it prevents blocking of GPU operation execution on pipeline compilation.</para></blockquote>
+<blockquote><para>It is generally preferable to use this method over <see cref="GPUDevice.CreateRenderPipeline"/> whenever possible, as it prevents blocking of GPU operation execution on pipeline compilation.</para></blockquote>
 <para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUDevice/createRenderPipelineAsync"> <em>See also on MDN</em> </seealso></para>
 </remarks>

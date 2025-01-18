@@ -4,7 +4,7 @@
 The read-only <strong><c>lastChild</c></strong> property of the <see cref="Node"/> interface<br/>returns the last child of the node, or <c>null</c> if there are no child nodes.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> This property returns any type of node that is the last child of this one.<br/>It may be a <see cref="Text"/> or a <see cref="Comment"/> node.<br/>If you want to get the last <see cref="Element"/> that is a child of another element,<br/>consider using <see cref="Element.LastElementChild"/>.</para></blockquote>
+<blockquote><para>This property returns any type of node that is the last child of this one.<br/>It may be a <see cref="Text"/> or a <see cref="Comment"/> node.<br/>If you want to get the last <see cref="Element"/> that is a child of another element,<br/>consider using <see cref="Element.LastElementChild"/>.</para></blockquote>
 <para>-<see cref="Node.FirstChild"/><br/>-<see cref="Element.LastElementChild"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/lastChild"> <em>See also on MDN</em> </seealso></para>
 </remarks>

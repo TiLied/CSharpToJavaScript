@@ -1,0 +1,12 @@
+<docs>
+<HTMLInputElementAccept>
+<summary>
+The <strong><c>accept</c></strong> property of the <see cref="HTMLInputElement"/> interface reflects the {{HTMLElement("input")}} element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#accept"><c>accept</c></see> attribute, generally a comma-separated list of unique file type specifiers providing a hint for the expected file type for an <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file"><c>&amp;lt;input&amp;gt;</c> of type <c>file</c></see>. If the attribute is not explicitly set, the <c>accept</c> property is an empty string.
+</summary>
+<remarks>
+<para>-<see cref="HTMLInputElement.Type"/><br/>-<see cref="HTMLInputElement.Multiple"/><br/>-<see cref="HTMLInputElement.Capture"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file#unique_file_type_specifiers">File type specifiers</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_API/Using_files_from_web_applications">Using files from web applications</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_API">File API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/accept"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing the element&amp;apos;s <c>accept</c> value or an empty string if no <c>accept</c> is explicitly set.</value>
+</HTMLInputElementAccept>
+</docs>

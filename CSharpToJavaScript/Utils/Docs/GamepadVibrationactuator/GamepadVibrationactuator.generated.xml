@@ -4,6 +4,7 @@
 The <strong><c>vibrationActuator</c></strong> read-only property of the <see cref="Gamepad"/> interface returns a <see cref="GamepadHapticActuator"/> object, which represents haptic feedback hardware available on the controller.
 </summary>
 <remarks>
+<blockquote><para>Support for this property may vary across different combinations of platforms and controllers. Even if the controller supports haptic feedback, the platform may not support it.</para></blockquote>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API">Gamepad API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad/vibrationActuator"> <em>See also on MDN</em> </seealso></para>
 </remarks>

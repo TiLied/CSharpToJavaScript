@@ -1,12 +1,13 @@
 <docs>
 <SecurityPolicyViolationEventSample>
 <summary>
-The <strong><c>sample</c></strong> read-only property of the<br/><see cref="SecurityPolicyViolationEvent"/> interface is a string<br/>representing a sample of the resource that caused the violation.
+The <strong><c>sample</c></strong> read-only property of the <see cref="SecurityPolicyViolationEvent"/> interface is a string representing a sample of the resource that caused the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">Content Security Policy (CSP)</see> violation.
 </summary>
 <remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">Content Security Policy (CSP)</see><br/></para>
+<para>This is only <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#script-src"><c>script-src*</c></see> and <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#style-src"><c>style-src*</c></see> violations, when the corresponding <c>Content-Security-Policy</c> directive contains the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#report-sample"><c>&amp;apos;report-sample&amp;apos;</c></see> keyword.<br/>In addition, this will only be populated if the resource is an inline script, event handler, or style — external resources causing a violation will not generate a sample.</para><blockquote><para>[!NOTE] Violation reports should be considered attacker-controlled data.<br/>The content of this field should be sanitized before storing or rendering.</para></blockquote>
+<para>-<see cref="CSPViolationReportBody.Sample"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SecurityPolicyViolationEvent/sample"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string containing a sample of the resource that caused the<br/>violation, usually the first 40 characters. This will only be populated if the resource<br/>is an inline script, event handler, or style — external resources causing a violation<br/>will not generate a sample.</value>
+<value>A string containing a sample of the resource that caused the violation, usually the first 40 characters, or the empty string.</value>
 </SecurityPolicyViolationEventSample>
 </docs>

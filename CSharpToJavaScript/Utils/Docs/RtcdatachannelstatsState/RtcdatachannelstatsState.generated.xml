@@ -1,0 +1,13 @@
+<docs>
+<RTCDataChannelStatsState>
+<summary>
+The <strong><c>state</c></strong> property of the <c>RTCDataChannelStats</c> dictionary returns a string that indicates the <see cref="RTCDataChannel.ReadyState"/> of the data channel's underlying data connection: <c>connecting</c>, <c>open</c>, <c>closing</c> or <c>closed</c>.
+</summary>
+<remarks>
+<para>Note that this property is required.</para>
+<para>-<see cref="RTCDataChannel.ReadyState"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannelStats/state"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing the same value as the <see cref="RTCDataChannel.ReadyState"/> property of the associated data channel.</value>
+</RTCDataChannelStatsState>
+</docs>

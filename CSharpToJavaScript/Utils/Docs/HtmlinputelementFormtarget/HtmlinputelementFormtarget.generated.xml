@@ -1,0 +1,13 @@
+<docs>
+<HTMLInputElementFormTarget>
+<summary>
+The <strong><c>formTarget</c></strong> property of the <see cref="HTMLInputElement"/> interface is the tab, window, or iframe where the response of the submitted {{HtmlElement("form")}} is to be displayed. It reflects the value of the {{HTMLElement("input")}} element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#formtarget"><c>formtarget</c></see> attribute.
+</summary>
+<remarks>
+<para>This property is valid only for <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/submit"><c>submit</c></see> and <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/image"><c>image</c></see> <c>&amp;lt;input&amp;gt;</c> elements.</para><para>Its value overrides the <see cref="HTMLFormElement.Target"/> property of the <see cref="HTMLFormElement"/> interface if the form is submitted via the input. This property can be retrieved or set. If not set, the value is the empty string (<c>&amp;quot;&amp;quot;</c>).</para>
+<para>-<see cref="HTMLInputElement.FormAction"/><br/>-<see cref="HTMLInputElement.FormEnctype"/><br/>-<see cref="HTMLInputElement.FormNoValidate"/><br/>-<see cref="HTMLInputElement.FormMethod"/><br/>-<see cref="HTMLFormElement.Target"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/submit"><c>&amp;lt;input type=&amp;quot;submit&amp;quot;&amp;gt;</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/image"><c>&amp;lt;input type=&amp;quot;image&amp;quot;&amp;gt;</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data">Sending form data</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/formTarget"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</HTMLInputElementFormTarget>
+</docs>

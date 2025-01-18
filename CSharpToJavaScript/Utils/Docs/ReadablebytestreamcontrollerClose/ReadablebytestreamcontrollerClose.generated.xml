@@ -4,7 +4,7 @@
 The <strong><c>close()</c></strong> method of the <see cref="ReadableByteStreamController"/> interface closes the associated stream.
 </summary>
 <remarks>
-<para>This might be called by the underlying source when its data source has been exhausted/completed.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> Readers will still be able to read any previously-enqueued chunks from the stream, but once those are read, the stream will become closed.<br/>However if there is an outstanding and partially written <see cref="ReadableByteStreamController.ByobRequest"/> when <c>close()</c> is called, the stream will be errored.</para></blockquote>
+<para>This might be called by the underlying source when its data source has been exhausted/completed.</para><blockquote><para>Readers will still be able to read any previously-enqueued chunks from the stream, but once those are read, the stream will become closed.<br/>However if there is an outstanding and partially written <see cref="ReadableByteStreamController.ByobRequest"/> when <c>close()</c> is called, the stream will be errored.</para></blockquote>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams">Using readable byte streams</see><br/>-<see cref="ReadableByteStreamController"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableByteStreamController/close"> <em>See also on MDN</em> </seealso></para>
 </remarks>

@@ -1,0 +1,13 @@
+<docs>
+<SVGFEDiffuseLightingElementResult>
+<summary>
+The <strong><c>result</c></strong> read-only property of the <see cref="SVGFEDiffuseLightingElement"/> interface describes the assigned name of an SVG filter primitive as a <see cref="SVGAnimatedString"/>.
+</summary>
+<remarks>
+<para>It reflects the {{SVGElement("feDiffuseLighting")}} element's {{SVGAttr("result")}} attribute. The filter lights an image using the alpha channel as a bump map. The attribute value is a <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/custom-ident">custom-ident</see>. If supplied, then graphics that result from processing this filter primitive can be referenced by an {{SVGAttr("in")}} attribute on a subsequent filter primitive within the same {{SVGElement("filter")}} element.</para><para>If no <c>result</c> attribute is defined, the filter&amp;apos;s <c>result.baseVal</c> and <c>result.animVal</c> are empty strings, and the output of the <c>&amp;lt;feDiffuseLighting&amp;gt;</c> filter will only be available for re-use as the implicit input into the next filter primitive if that filter primitive provides no value for its <c>in</c> attribute.</para>
+<para>-<see cref="SVGFEDiffuseLightingElement.In1"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/custom-ident">custom-ident</see> data type<br/>-<see cref="SVGFESpecularLightingElement"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementfeSpecularLighting">feSpecularLighting</see><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/blend-mode">blend-mode</see> data type<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode">mix-blend-mode</see> property<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEDiffuseLightingElement/result"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedString"/>.</value>
+</SVGFEDiffuseLightingElementResult>
+</docs>

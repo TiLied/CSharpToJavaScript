@@ -1,0 +1,13 @@
+<docs>
+<WindowStructuredClone>
+<summary>
+The <strong><c>structuredClone()</c></strong> method of the <see cref="Window"/> interface creates a <see href="https://developer.mozilla.org/en-US/docs/Glossary/Deep_copy">deep clone</see> of a given value using the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">structured clone algorithm</see>.
+</summary>
+<remarks>
+<para>The method also allows <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Transferable_objects">transferable objects</see> in the original value to be <strong>transferred</strong> rather than cloned to the new object.<br/>Transferred objects are detached from the original object and attached to the new object; they are no longer accessible in the original object.</para>
+<para>-<see href="https://github.com/zloirock/core-js#structuredclone">A polyfill of <c>structuredClone</c></see> is available in <see href="https://github.com/zloirock/core-js"><c>core-js</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">Structured clone algorithm</see><br/>-<see href="https://github.com/ungap/structured-clone">Structured clone polyfill</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Window/structuredClone"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see href="https://developer.mozilla.org/en-US/docs/Glossary/Deep_copy">deep copy</see> of the original <c>value</c>.</returns>
+</WindowStructuredClone>
+</docs>

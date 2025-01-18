@@ -4,7 +4,7 @@
 <div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> Returns the encoding as determined by the XML declaration. Should be <c>null</c> if unspecified or unknown.
 </summary>
 <remarks>
-<blockquote class="WARNING"><h5>WARNING</h5><para><strong>Warning:</strong> Do not use this attribute; it has been removed from the DOM Level 4 specification and is no longer supported in Firefox 10.0.</para></blockquote><para>Consider the following XML Declaration:</para><para>Then, the result should be &amp;quot;UTF-16&amp;quot;.</para>
+<blockquote><para>Do not use this attribute; it has been removed from the DOM Level 4 specification and is no longer supported in Firefox 10.0.</para></blockquote><para>Consider the following XML Declaration:</para><para>Then, the result should be &amp;quot;UTF-16&amp;quot;.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/xmlEncoding"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </DocumentXmlEncoding>

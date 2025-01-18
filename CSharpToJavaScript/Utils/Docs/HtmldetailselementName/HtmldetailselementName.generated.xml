@@ -1,0 +1,13 @@
+<docs>
+<HTMLDetailsElementName>
+<summary>
+The <strong><c>name</c></strong> property of the <see cref="HTMLDetailsElement"/> interface reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details#name"><c>name</c></see> attribute of <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details">details</see> elements. It enables multiple <c>&amp;lt;details&amp;gt;</c> elements to be connected together, where only one for the <c>&amp;lt;details&amp;gt;</c> elements can be open at once. This allows developers to easily create UI features such as accordions without scripting.
+</summary>
+<remarks>
+<para>The name attribute specifies a group name — give multiple <c>&amp;lt;details&amp;gt;</c> elements the same name value to group them. Only one of the grouped <c>&amp;lt;details&amp;gt;</c> elements can be open at a time — opening one will cause another to close. If multiple grouped <c>&amp;lt;details&amp;gt;</c> elements are given the <c>open</c> attribute, only the first one in the source order will be rendered open.</para>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details">details</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/summary">summary</see> elements<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLDetailsElement/name"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string. The empty string if the element is not part of any group.</value>
+</HTMLDetailsElementName>
+</docs>

@@ -1,0 +1,12 @@
+<docs>
+<SVGPatternElementPatternTransform>
+<summary>
+The <strong><c>patternTransform</c></strong> read-only property of the <see cref="SVGPatternElement"/> interface reflects the {{SVGAttr("patternTransform")}} attribute of the given {{SVGElement("pattern")}} element. This property holds the transformation applied to the pattern itself, allowing for operations like <c>translate</c>, <c>rotate</c>, <c>scale</c>, and <c>skew</c>.
+</summary>
+<remarks>
+<para>-<see cref="SVGAnimatedEnumeration"/><br/>-<see cref="SVGUnitTypes"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGPatternElement/patternTransform"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedTransformList"/> object.</value>
+</SVGPatternElementPatternTransform>
+</docs>

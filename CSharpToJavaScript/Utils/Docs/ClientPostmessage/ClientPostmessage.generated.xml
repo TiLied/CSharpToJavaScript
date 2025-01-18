@@ -1,7 +1,7 @@
 <docs>
 <ClientPostMessage>
 <summary>
-The <strong><c>postMessage()</c></strong> method of the<br/><see cref="Client"/> interface allows a service worker to send a message to a client<br/>(a <see cref="Window"/>, <see cref="Worker"/>, or <see cref="SharedWorker"/>). The<br/>message is received in the &amp;quot;<c>message</c>&amp;quot; event on<br/><see cref="ServiceWorkerContainer"/>.
+The <strong><c>postMessage()</c></strong> method of the<br/><see cref="Client"/> interface allows a service worker to send a message to a client<br/>(a <see cref="Window"/>, <see cref="Worker"/>, or <see cref="SharedWorker"/>). The<br/>message is received in the <c>message</c> event on<br/><see cref="ServiceWorkerContainer"/>.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Client/postMessage"> <em>See also on MDN</em> </seealso></para>

@@ -1,0 +1,13 @@
+<docs>
+<SelectionGetComposedRanges>
+<summary>
+The <strong><c>Selection.getComposedRanges()</c></strong> method returns an array of <see cref="StaticRange"/> objects representing the current selection ranges, and can return ranges that potentially cross shadow boundaries.
+</summary>
+<remarks>
+<para>As the selection range endpoints may be within a shadow tree, or even different shadow trees, and because these may be closed, the method cannot by default return nodes from within a shadow tree.<br/>If the method needs to return a selection that includes nodes inside shadow trees, then the <see cref="ShadowRoot"/> objects for these trees must be passed as arguments to the method.<br/>If a corresponding roots are not provided and the start or endpoint of the selection are within a shadow tree, the returned range is re-scoped to include the host of the shadow root rather than some node with in the root.</para><para>The returned ranges represent the range at the time that <c>getComposedRanges()</c> was called.<br/>If the DOM or a shadow DOM is mutated, the selected range is likely to be incorrect.<br/>Application code might use a <see cref="MutationObserver"/> to monitor for DOM mutations and then call <see cref="Selection.SetBaseAndExtent"/> to update the selection.</para><blockquote><para>This method should be used instead of <see cref="Selection.GetRangeAt"/> when selecting ranges that can potentially cross shadow root boundaries.<br/><see cref="Selection.GetRangeAt"/> is not aware of shadow roots.<br/>The returned range is not specified, and varies between browsers.</para></blockquote>
+<para>-<see cref="Selection"/>, the interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Selection/getComposedRanges"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An array of <see cref="StaticRange"/> objects that represent the selected ranges within the composed (flattened) tree of the document.<br/>At time of writing the specification expects this array to only contain one object.</returns>
+</SelectionGetComposedRanges>
+</docs>

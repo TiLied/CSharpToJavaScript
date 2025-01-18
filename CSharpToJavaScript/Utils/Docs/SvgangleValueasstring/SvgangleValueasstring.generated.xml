@@ -1,0 +1,13 @@
+<docs>
+<SVGAngleValueAsString>
+<summary>
+The <c>valueAsString</c> property of the <see cref="SVGAngle"/> interface represents the angle's value as a string, in the units expressed by <see cref="SVGAngle.UnitType"/>.
+</summary>
+<remarks>
+<para>Setting this attribute will cause <see cref="SVGAngle.Value"/>, <see cref="SVGAngle.ValueInSpecifiedUnits"/>, and <see cref="SVGAngle.UnitType"/> to be updated automatically to reflect this setting.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Content_type#angle"><c>&amp;lt;angle&amp;gt;</c></see><br/>-<see cref="SVGAnimatedAngle"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAngle/valueAsString"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string; the value of the angle.</value>
+</SVGAngleValueAsString>
+</docs>

@@ -4,7 +4,7 @@
 The <strong><c>XMLHttpRequest.timeout</c></strong> property is an <c>unsigned long</c> representing the number of milliseconds a request can take before automatically being terminated. The default value is 0, which means there is no timeout. Timeout shouldn't be used for synchronous XMLHttpRequests requests used in a <see href="https://developer.mozilla.org/en-US/docs/Glossary/'document environment'">'document environment'</see> or it will throw an <c>InvalidAccessError</c> exception. When a timeout happens, a <see href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/timeout_event">timeout</see> event is fired.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> You may not use a timeout for synchronous requests with an owning window.</para></blockquote><para><see href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests#example_using_a_timeout">Using a timeout with an asynchronous request</see>.</para>
+<blockquote><para>You may not use a timeout for synchronous requests with an owning window.</para></blockquote><para><see href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests#example_using_a_timeout">Using a timeout with an asynchronous request</see>.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/timeout"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </XMLHttpRequestTimeout>

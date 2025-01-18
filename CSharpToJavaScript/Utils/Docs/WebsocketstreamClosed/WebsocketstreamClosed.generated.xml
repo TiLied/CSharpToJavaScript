@@ -1,0 +1,12 @@
+<docs>
+<WebSocketStreamClosed>
+<summary>
+The <strong><c>closed</c></strong> read-only property of the<br/><see cref="WebSocketStream"/> interface returns a {{jsxref("Promise")}} that fulfills with an object once the socket connection is closed. The object contains the closing code and reason.
+</summary>
+<remarks>
+<para>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/websocketstream">WebSocketStream: integrating streams with the WebSocket API</see>, developer.chrome.com (2020)<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocketStream/closed"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A promise, which fulfills with an object containing the following properties:The promise rejects if the WebSocket connection did not close cleanly (for a clean close, the associated TCP connection must be closed <strong>after</strong> the WebSocket closing handshake is completed).</value>
+</WebSocketStreamClosed>
+</docs>

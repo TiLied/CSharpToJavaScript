@@ -4,7 +4,7 @@
 The <strong><c>totalSamplesDuration</c></strong> property of the <see cref="RTCAudioSourceStats"/> dictionary represents the combined duration of all samples produced by the media source over the lifetime of this stats object, in seconds.<br/>It does not include samples dropped before reaching this media source. &amp;lt;!-- Dropped samples in `droppedSamplesDuration`; not implemented --&amp;gt;
 </summary>
 <remarks>
-<para>This can be used with <see cref="RTCAudioSourceStats.TotalAudioEnergy"/> to compute an <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCAudioSourceStats#description">average audio level over different intervals</see>.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> For audio duration of remotely sourced tracks, see <see cref="RTCInboundRtpStreamStats.TotalSamplesDuration"/>.</para></blockquote>
+<para>This can be used with <see cref="RTCAudioSourceStats.TotalAudioEnergy"/> to compute an <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCAudioSourceStats#description">average audio level over different intervals</see>.</para><blockquote><para>For audio duration of remotely sourced tracks, see <see cref="RTCInboundRtpStreamStats.TotalSamplesDuration"/>.</para></blockquote>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCAudioSourceStats/totalSamplesDuration"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A number indicating the total duration of all samples produced by this source over the lifetime this stats object, in seconds.</value>

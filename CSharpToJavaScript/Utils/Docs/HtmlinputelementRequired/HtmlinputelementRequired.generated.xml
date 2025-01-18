@@ -1,0 +1,13 @@
+<docs>
+<HTMLInputElementRequired>
+<summary>
+The <strong><c>required</c></strong> property of the <see cref="HTMLInputElement"/> interface specifies that the user must fill in a value before submitting a form. It reflects the {{htmlelement("input")}} element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#required"><c>required</c></see> attribute.
+</summary>
+<remarks>
+<para>While the HTML boolean <c>required</c> attribute is ignored if the type is <c>hidden</c>, <c>range</c>, <c>color</c>, <c>submit</c>, <c>reset</c>, <c>button</c>, and <c>image</c>, the <c>required</c> property is <c>true</c> for these input types if the attribute is present, <c>false</c> otherwise.</para><para>If a required input doesn't have a value, the <see cref="'ValidityState'"/> object's read-only <see cref="'ValidityState.ValueMissing'"/> property will be true.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">input</see><br/>-<see cref="HTMLInputElement.Validity"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:required">:required</see> pseudo-class<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/required"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean.</value>
+</HTMLInputElementRequired>
+</docs>

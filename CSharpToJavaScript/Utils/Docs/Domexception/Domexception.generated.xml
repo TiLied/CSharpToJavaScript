@@ -4,7 +4,7 @@
 The <strong><c>DOMException</c></strong> interface represents an abnormal event (called an <strong>exception</strong>) that occurs as a result of calling a method or accessing a property of a web API. This is how error conditions are described in web APIs.
 </summary>
 <remarks>
-<para>Each exception has a <strong>name</strong>, which is a short &amp;quot;PascalCase&amp;quot;-style string identifying the error or abnormal condition.</para><para><c>DOMException</c> is a {{Glossary("Serializable object")}}, so it can be cloned with <see cref="StructuredClone"/> or copied between <see href="https://developer.mozilla.org/en-US/docs/Web/API/Worker">Workers</see> using <see cref="Worker.PostMessage"/>.</para>
+<para>Each exception has a <strong>name</strong>, which is a short &amp;quot;PascalCase&amp;quot;-style string identifying the error or abnormal condition.</para><para><c>DOMException</c> is a {{Glossary("Serializable object")}}, so it can be cloned with <see cref="Window.StructuredClone"/> or copied between <see href="https://developer.mozilla.org/en-US/docs/Web/API/Worker">Workers</see> using <see cref="Worker.PostMessage"/>.</para>
 <para>-<see href="https://github.com/zloirock/core-js#domexception">A polyfill of <c>DOMException</c></see> is available in <see href="https://github.com/zloirock/core-js"><c>core-js</c></see><br/>-<see cref="DOMError"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMException"> <em>See also on MDN</em> </seealso></para>
 </remarks>

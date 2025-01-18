@@ -1,7 +1,7 @@
 <docs>
 <RTCRtpTransceiverStopped>
 <summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="NOTE"><h5>NOTE</h5><strong>Note:</strong> Instead of using this deprecated property, compare <see cref="RTCRtpTransceiver.CurrentDirection"/> to <c>&amp;quot;stopped&amp;quot;</c>.</blockquote>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote>Instead of using this deprecated property, compare <see cref="RTCRtpTransceiver.CurrentDirection"/> to <c>&amp;quot;stopped&amp;quot;</c>.</blockquote>
 </summary>
 <remarks>
 <para>The read-only <strong><c>stopped</c></strong> property on the <see cref="RTCRtpTransceiver"/> interface indicates whether or not the transceiver's associated sender and receiver have both been stopped.</para><para>The transceiver is stopped if the <see cref="RTCRtpTransceiver.Stop"/> method has been called or if a change to either the local or the remote description has caused the transceiver to be stopped for some reason.</para>

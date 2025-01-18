@@ -1,9 +1,10 @@
 <docs>
 <HTMLSelectElementSelectedIndex>
 <summary>
-The <strong><c>HTMLSelectElement.selectedIndex</c></strong> property is a<br/><c>long</c> that reflects the index of the first or last selected<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option">option</see> element, depending on the value of <c>multiple</c>. The<br/>value <c>-1</c> indicates that no element is selected.
+The <strong><c>selectedIndex</c></strong> property of the <see cref="HTMLSelectElement"/> interface is the numeric index of the first selected {{HTMLElement("option")}} element in a {{HTMLElement("select")}} element, if any, or <c>−1</c> if no <c>&amp;lt;option&amp;gt;</c> is selected. Setting this property selects the option at that index and deselects all other options, while setting it to <c>-1</c> deselects any currently selected options.
 </summary>
 <remarks>
+<para>-<see cref="HTMLSelectElement"/><br/>-<see cref="HTMLOptionElement"/><br/>-<see cref="HTMLOptionsCollection"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/selectedIndex"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A number.</value>

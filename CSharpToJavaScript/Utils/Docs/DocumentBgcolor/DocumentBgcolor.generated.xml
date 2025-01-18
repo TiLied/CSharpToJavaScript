@@ -6,6 +6,6 @@
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/bgColor"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string representing the color as a word (e.g., &amp;quot;red&amp;quot;) or hexadecimal value (e.g., &amp;quot;<c>#ff0000</c>&amp;quot;).</value>
+<value>A string representing the color as a word (e.g., <c>&amp;quot;red&amp;quot;</c>) or hexadecimal value (e.g., <c>&amp;quot;#ff0000&amp;quot;</c>).When set to the <c>null</c> value, that <c>null</c> value is converted to the empty string (<c>&amp;quot;&amp;quot;</c>), so <c>document.bgColor = null</c> is equivalent to <c>document.bgColor = &amp;quot;&amp;quot;</c>.</value>
 </DocumentBgColor>
 </docs>

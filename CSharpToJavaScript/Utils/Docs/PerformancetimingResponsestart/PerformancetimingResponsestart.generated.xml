@@ -1,7 +1,7 @@
 <docs>
 <PerformanceTimingResponseStart>
 <summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="WARNING"><h5>WARNING</h5><strong>Warning:</strong> This interface of this property is deprecated in the <see href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</see>. Please use the <see cref="PerformanceNavigationTiming"/><br/>interface instead.</blockquote>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote>This interface of this property is deprecated in the <see href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</see>. Please use the <see cref="PerformanceNavigationTiming"/><br/>interface instead.</blockquote>
 </summary>
 <remarks>
 <para>The legacy<br/><strong><c>PerformanceTiming.responseStart</c></strong><br/>read-only property returns an <c>unsigned long long</c> representing the moment in<br/>time (in milliseconds since the UNIX epoch) when the browser received the first byte of<br/>the response from the server, cache, or local resource.</para>

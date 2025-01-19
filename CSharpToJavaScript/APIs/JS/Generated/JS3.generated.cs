@@ -1,4 +1,5 @@
-//27.04.2024 18:40:17
+//19.01.2025 21:21:41
+
 using static CSharpToJavaScript.APIs.JS.GlobalObject;
 using CSharpToJavaScript.Utils;
 using System.Collections.Generic;
@@ -17,84 +18,80 @@ using ClipboardItemData = Task<string>;
 using ClipboardItems = List<ClipboardItem>;
 using CookieList = List<CookieListItem>;
 using PasswordCredentialInit = Union1;
-using BinaryData = Union3;
-using CSSStringSource = Union6;
-using CSSToken = Union7;
-using CSSUnparsedSegment = Union12;
-using CSSKeywordish = Union13;
-using CSSNumberish = Union14;
-using CSSPerspectiveValue = Union15;
-using CSSColorRGBComp = Union17;
-using CSSColorPercent = Union18;
-using CSSColorNumber = Union19;
-using CSSColorAngle = Union20;
-using GeometryNode = Union23;
+using CSSStringSource = Union5;
+using CSSToken = Union6;
+using CSSUnparsedSegment = Union11;
+using CSSKeywordish = Union12;
+using CSSNumberish = Union13;
+using CSSPerspectiveValue = Union14;
+using CSSColorRGBComp = Union16;
+using CSSColorPercent = Union17;
+using CSSColorNumber = Union18;
+using CSSColorAngle = Union19;
+using GeometryNode = Union22;
 using CSSOMString = string;
 using GLuint64EXT = ulong;
-using FencedFrameConfigSize = Union38;
-using FencedFrameConfigURL = string;
-using UrnOrConfig = Union39;
-using ReportEventType = Union40;
-using HeadersInit = Union41;
-using XMLHttpRequestBodyInit = Union42;
-using BodyInit = Union43;
-using RequestInfo = Union44;
-using StartInDirectory = Union45;
-using BlobPart = Union46;
-using FileSystemWriteChunkType = Union50;
+using UrnOrConfig = Union37;
+using ReportEventType = Union38;
+using HeadersInit = Union39;
+using XMLHttpRequestBodyInit = Union40;
+using BodyInit = Union41;
+using RequestInfo = Union42;
+using StartInDirectory = Union43;
+using BlobPart = Union44;
+using FileSystemWriteChunkType = Union48;
 using DOMHighResTimeStamp = Number;
 using EpochTimeStamp = ulong;
-using HTMLOrSVGScriptElement = Union58;
-using MediaProvider = Union60;
-using RenderingContext = Union67;
-using HTMLOrSVGImageElement = Union68;
-using CanvasImageSource = Union69;
-using OffscreenRenderingContext = Union76;
+using HTMLOrSVGScriptElement = Union56;
+using MediaProvider = Union63;
+using RenderingContext = Union70;
+using HTMLOrSVGImageElement = Union71;
+using CanvasImageSource = Union72;
+using OffscreenRenderingContext = Union79;
 using EventHandler = EventHandlerNonNull;
 using OnErrorEventHandler = OnErrorEventHandlerNonNull;
 using OnBeforeUnloadEventHandler = OnBeforeUnloadEventHandlerNonNull;
-using TimerHandler = Union81;
-using ImageBitmapSource = Union82;
-using MessageEventSource = Union83;
-using ConstrainPoint2D = Union88;
+using TimerHandler = Union84;
+using ImageBitmapSource = Union93;
+using MessageEventSource = Union94;
+using ConstrainPoint2D = Union102;
 using ProfilerResource = string;
-using ConstrainULong = Union101;
-using ConstrainDouble = Union102;
-using ConstrainBoolean = Union103;
-using ConstrainDOMString = Union104;
+using ConstrainULong = Union115;
+using ConstrainDouble = Union116;
+using ConstrainBoolean = Union117;
+using ConstrainDOMString = Union118;
 using Megabit = double;
 using Millisecond = ulong;
-using RotationMatrixType = Union107;
+using ObserverUnion = Union119;
+using ObservableInspectorUnion = Union120;
+using RotationMatrixType = Union121;
 using PerformanceEntryList = List<PerformanceEntry>;
-using PushMessageDataInit = Union109;
+using PushMessageDataInit = Union123;
 using ReportList = List<Report>;
-using SanitizerElement = Union111;
-using SanitizerElementWithAttributes = Union112;
-using SanitizerAttribute = Union113;
-using RouterSource = Union120;
-using SharedStorageResponse = Union123;
-using ReadableStreamReader = Union124;
-using ReadableStreamController = Union125;
-using HTMLString = string;
-using ScriptString = string;
-using ScriptURLString = string;
-using TrustedType = Union127;
-using URLPatternInput = Union130;
-using URLPatternCompatible = Union131;
-using VibratePattern = Union135;
+using SanitizerElement = Union129;
+using SanitizerElementWithAttributes = Union130;
+using SanitizerAttribute = Union131;
+using RouterSource = Union139;
+using SharedStorageResponse = Union142;
+using ReadableStreamReader = Union143;
+using ReadableStreamController = Union144;
+using TrustedType = Union146;
+using PreviousWinElement = Union152;
+using PreviousWin = List<Unsupported /*PreviousWinElement*/>;
+using URLPatternInput = Union154;
+using URLPatternCompatible = Union155;
+using VibratePattern = Union159;
 using UUID = string;
-using BluetoothServiceUUID = Union152;
-using BluetoothCharacteristicUUID = Union153;
-using BluetoothDescriptorUUID = Union154;
-using NDEFMessageSource = Union155;
+using BluetoothServiceUUID = Union176;
+using BluetoothCharacteristicUUID = Union177;
+using BluetoothDescriptorUUID = Union178;
+using NDEFMessageSource = Union179;
 using Base64URLString = string;
-using PublicKeyCredentialJSON = object;
+using PublicKeyCredentialJSON = Object;
 using PublicKeyCredentialClientCapabilities = Dictionary<string, bool>;
 using COSEAlgorithmIdentifier = long;
-using UvmEntry = List<ulong>;
-using UvmEntries = List<Unsupported /*UvmEntry*/>;
-using ImageBufferSource = Union162;
-using AlgorithmIdentifier = Union163;
+using ImageBufferSource = Union186;
+using AlgorithmIdentifier = Union187;
 using HashAlgorithmIdentifier = Unsupported /*AlgorithmIdentifier*/;
 using BigInteger = System.Byte;
 using NamedCurve = string;
@@ -112,20 +109,20 @@ using GLushort = ushort;
 using GLuint = ulong;
 using GLfloat = float;
 using GLclampf = float;
-using TexImageSource = Union165;
-using Float32List = Union166;
-using Int32List = Union167;
+using TexImageSource = Union189;
+using Float32List = Union190;
+using Int32List = Union191;
 using GLint64 = long;
 using GLuint64 = ulong;
-using Uint32List = Union169;
+using Uint32List = Union193;
 using GPUBufferUsageFlags = ulong;
 using GPUMapModeFlags = ulong;
 using GPUTextureUsageFlags = ulong;
 using GPUShaderStageFlags = ulong;
-using GPUBindingResource = Union190;
+using GPUBindingResource = Union214;
 using GPUPipelineConstantValue = Number;
 using GPUColorWriteFlags = ulong;
-using GPUImageCopyExternalImageSource = Union193;
+using GPUCopyExternalImageSource = Union217;
 using GPUBufferDynamicOffset = ulong;
 using GPUStencilValue = ulong;
 using GPUSampleMask = ulong;
@@ -139,21 +136,23 @@ using GPUSize64Out = ulong;
 using GPUIntegerCoordinateOut = ulong;
 using GPUSize32Out = ulong;
 using GPUFlagsConstant = ulong;
-using GPUColor = Union195;
-using GPUOrigin2D = Union196;
-using GPUOrigin3D = Union197;
-using GPUExtent3D = Union198;
-using ArrayBufferView = Union199;
-using BufferSource = Union200;
-using AllowSharedBufferSource = Union201;
-using MLNamedArrayBufferViews = Dictionary<string, Unsupported /*ArrayBufferView*/>;
+using GPUColor = Union219;
+using GPUOrigin2D = Union220;
+using GPUOrigin3D = Union221;
+using GPUExtent3D = Union222;
+using ArrayBufferView = Union223;
+using BufferSource = Union224;
+using AllowSharedBufferSource = Union225;
+using MLNamedTensors = Dictionary<string, MLTensor>;
+using MLNumber = Union226;
 using MLNamedOperands = Dictionary<string, MLOperand>;
-using RTCRtpTransform = Union203;
+using RTCRtpTransform = Union228;
 using SmallCryptoKeyID = ulong;
-using CryptoKeyID = Union204;
-using LineAndPositionSetting = Union209;
-using XRWebGLRenderingContext = Union210;
-using FormDataEntryValue = Union212;
+using CryptoKeyID = Union229;
+using LineAndPositionSetting = Union234;
+using XRWebGLRenderingContext = Union235;
+using FormDataEntryValue = Union237;
+
 
 ///<include file='Utils/Docs/Accelerometer/Accelerometer.generated.xml' path='docs/Accelerometer/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -168,15 +167,6 @@ public partial class Accelerometer : Sensor
 	///<include file='Utils/Docs/AccelerometerZ/AccelerometerZ.generated.xml' path='docs/AccelerometerZ/*'/>
 	public Number? Z { get; }
 	public Accelerometer() { }
-}
-
-[To(ToAttribute.None)]
-public enum AccelerometerLocalCoordinateSystem
-{
-	[Value("device")]
-	Device,
-	[Value("screen")]
-	Screen,
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -292,21 +282,13 @@ public partial class Window
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial interface HTMLAttributionSrcElementUtils
-{
-		public USVString AttributionSrc { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-}
-
-
-
-
-[To(ToAttribute.FirstCharToLowerCase)]
 public partial class AttributionReportingRequestOptions
 {
 		public required bool EventSourceEligible;
 		public required bool TriggerEligible;
 }
 
+///<include file='Utils/Docs/RequestInit/RequestInit.generated.xml' path='docs/RequestInit/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class RequestInit
 {
@@ -317,7 +299,8 @@ public partial class RequestInit
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class XMLHttpRequest
 {
-		public Undefined SetAttributionReporting(AttributionReportingRequestOptions options) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/XMLHttpRequestSetAttributionReporting/XMLHttpRequestSetAttributionReporting.generated.xml' path='docs/XMLHttpRequestSetAttributionReporting/*'/>
+	public Undefined SetAttributionReporting(AttributionReportingRequestOptions options) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/HTMLMediaElement/HTMLMediaElement.generated.xml' path='docs/HTMLMediaElement/*'/>
@@ -346,41 +329,6 @@ public partial class AudioOutputOptions
 		public DOMString DeviceId;
 }
 
-[To(ToAttribute.None)]
-public enum AudioSessionState
-{
-	[Value("inactive")]
-	Inactive,
-	[Value("active")]
-	Active,
-	[Value("interrupted")]
-	Interrupted,
-}
-
-[To(ToAttribute.None)]
-public enum AudioSessionType
-{
-	[Value("auto")]
-	Auto,
-	[Value("playback")]
-	Playback,
-	[Value("transient")]
-	Transient,
-	[Value("transient-solo")]
-	TransientSolo,
-	[Value("ambient")]
-	Ambient,
-	[Value("play-and-record")]
-	PlayAndRecord,
-}
-
-///<include file='Utils/Docs/Navigator/Navigator.generated.xml' path='docs/Navigator/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class Navigator
-{
-		public AudioSession AudioSession { get; }
-}
-
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class AudioSession : EventTarget
 {
@@ -389,24 +337,11 @@ public partial class AudioSession : EventTarget
 		public EventHandler Onstatechange { get; set; }
 }
 
-[To(ToAttribute.None)]
-public enum AutoplayPolicy
+///<include file='Utils/Docs/Navigator/Navigator.generated.xml' path='docs/Navigator/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class Navigator
 {
-	[Value("allowed")]
-	Allowed,
-	[Value("allowed-muted")]
-	AllowedMuted,
-	[Value("disallowed")]
-	Disallowed,
-}
-
-[To(ToAttribute.None)]
-public enum AutoplayPolicyMediaType
-{
-	[Value("mediaelement")]
-	Mediaelement,
-	[Value("audiocontext")]
-	Audiocontext,
+		public AudioSession AudioSession { get; }
 }
 
 ///<include file='Utils/Docs/Navigator/Navigator.generated.xml' path='docs/Navigator/*'/>
@@ -492,34 +427,6 @@ public partial class BackgroundFetchRegistration : EventTarget
 	public Task<List<BackgroundFetchRecord>> MatchAll(RequestInfo request, CacheQueryOptions options) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.None)]
-public enum BackgroundFetchResult
-{
-	[Value("")]
-	Empty,
-	[Value("success")]
-	Success,
-	[Value("failure")]
-	Failure,
-}
-
-[To(ToAttribute.None)]
-public enum BackgroundFetchFailureReason
-{
-	[Value("")]
-	Empty,
-	[Value("aborted")]
-	Aborted,
-	[Value("bad-status")]
-	BadStatus,
-	[Value("fetch-error")]
-	FetchError,
-	[Value("quota-exceeded")]
-	QuotaExceeded,
-	[Value("download-total-exceeded")]
-	DownloadTotalExceeded,
-}
-
 ///<include file='Utils/Docs/BackgroundFetchRecord/BackgroundFetchRecord.generated.xml' path='docs/BackgroundFetchRecord/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class BackgroundFetchRecord
@@ -600,15 +507,6 @@ public partial class SyncEventInit : ExtendableEventInit
 		public required DOMString Tag;
 		public bool LastChance;
 }
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface NavigatorBadge
-{
-		public Task<Undefined> SetAppBadge(ulong contents) { throw new System.NotImplementedException(); }
-		public Task<Undefined> ClearAppBadge() { throw new System.NotImplementedException(); }
-}
-
-
 
 ///<include file='Utils/Docs/Navigator/Navigator.generated.xml' path='docs/Navigator/*'/>
 public partial class Navigator
@@ -736,19 +634,9 @@ public partial class ClipboardItem
 	public DOMString[] Types { get; }
 	///<include file='Utils/Docs/ClipboardItemGetType/ClipboardItemGetType.generated.xml' path='docs/ClipboardItemGetType/*'/>
 	public Task<Blob> GetType(DOMString type) { throw new System.NotImplementedException(); }
-		public static bool Supports(DOMString type) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/ClipboardItemSupports/ClipboardItemSupports.generated.xml' path='docs/ClipboardItemSupports/*'/>
+	public static bool Supports(DOMString type) { throw new System.NotImplementedException(); }
 	public ClipboardItem() { }
-}
-
-[To(ToAttribute.None)]
-public enum PresentationStyle
-{
-	[Value("unspecified")]
-	Unspecified,
-	[Value("inline")]
-	Inline,
-	[Value("attachment")]
-	Attachment,
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -802,17 +690,6 @@ public partial class HTMLBodyElement
 	public EventHandler Onorientationchange { get; set; }
 }
 
-[To(ToAttribute.None)]
-public enum CompressionFormat
-{
-	[Value("deflate")]
-	Deflate,
-	[Value("deflate-raw")]
-	DeflateRaw,
-	[Value("gzip")]
-	Gzip,
-}
-
 ///<include file='Utils/Docs/CompressionStream/CompressionStream.generated.xml' path='docs/CompressionStream/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class CompressionStream
@@ -833,52 +710,37 @@ public partial class DecompressionStream
 }
 
 
-[To(ToAttribute.None)]
-public enum PressureSource
-{
-	[Value("thermals")]
-	Thermals,
-	[Value("cpu")]
-	Cpu,
-}
-
-[To(ToAttribute.None)]
-public enum PressureState
-{
-	[Value("nominal")]
-	Nominal,
-	[Value("fair")]
-	Fair,
-	[Value("serious")]
-	Serious,
-	[Value("critical")]
-	Critical,
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct PressureUpdateCallback
-{
-}
-
+///<include file='Utils/Docs/PressureObserver/PressureObserver.generated.xml' path='docs/PressureObserver/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class PressureObserver
 {
-		public PressureObserver(PressureUpdateCallback callback) { }
-		public Task<Undefined> Observe(PressureSource source, PressureObserverOptions options) { throw new System.NotImplementedException(); }
-		public Undefined Unobserve(PressureSource source) { throw new System.NotImplementedException(); }
-		public Undefined Disconnect() { throw new System.NotImplementedException(); }
-		public List<PressureRecord> TakeRecords() { throw new System.NotImplementedException(); }
-		public static PressureSource[] SupportedSources { get; }
+	///<include file='Utils/Docs/PressureObserverPressureObserver/PressureObserverPressureObserver.generated.xml' path='docs/PressureObserverPressureObserver/*'/>
+	public PressureObserver(PressureUpdateCallback callback) { }
+	///<include file='Utils/Docs/PressureObserverObserve/PressureObserverObserve.generated.xml' path='docs/PressureObserverObserve/*'/>
+	public Task<Undefined> Observe(PressureSource source, PressureObserverOptions options) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/PressureObserverUnobserve/PressureObserverUnobserve.generated.xml' path='docs/PressureObserverUnobserve/*'/>
+	public Undefined Unobserve(PressureSource source) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/PressureObserverDisconnect/PressureObserverDisconnect.generated.xml' path='docs/PressureObserverDisconnect/*'/>
+	public Undefined Disconnect() { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/PressureObserverTakeRecords/PressureObserverTakeRecords.generated.xml' path='docs/PressureObserverTakeRecords/*'/>
+	public List<PressureRecord> TakeRecords() { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/PressureObserverKnownSources/PressureObserverKnownSources.generated.xml' path='docs/PressureObserverKnownSources/*'/>
+	public static PressureSource[] KnownSources { get; }
 	public PressureObserver() { }
 }
 
+///<include file='Utils/Docs/PressureRecord/PressureRecord.generated.xml' path='docs/PressureRecord/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class PressureRecord
 {
-		public PressureSource Source { get; }
-		public PressureState State { get; }
-		public DOMHighResTimeStamp Time { get; }
-		public object ToJSON() { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/PressureRecordSource/PressureRecordSource.generated.xml' path='docs/PressureRecordSource/*'/>
+	public PressureSource Source { get; }
+	///<include file='Utils/Docs/PressureRecordState/PressureRecordState.generated.xml' path='docs/PressureRecordState/*'/>
+	public PressureState State { get; }
+	///<include file='Utils/Docs/PressureRecordTime/PressureRecordTime.generated.xml' path='docs/PressureRecordTime/*'/>
+	public DOMHighResTimeStamp Time { get; }
+	///<include file='Utils/Docs/PressureRecordToJSON/PressureRecordToJSON.generated.xml' path='docs/PressureRecordToJSON/*'/>
+	public Object ToJSON() { throw new System.NotImplementedException(); }
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -910,7 +772,7 @@ public partial class console
 	///<include file='Utils/Docs/ConsoleWarn/ConsoleWarn.generated.xml' path='docs/ConsoleWarn/*'/>
 	public Undefined Warn(params dynamic[] data) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/ConsoleDir/ConsoleDir.generated.xml' path='docs/ConsoleDir/*'/>
-	public Undefined Dir(dynamic item, object? options) { throw new System.NotImplementedException(); }
+	public Undefined Dir(dynamic item, Object? options) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/ConsoleDirxml/ConsoleDirxml.generated.xml' path='docs/ConsoleDirxml/*'/>
 	public Undefined Dirxml(params dynamic[] data) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/ConsoleCount/ConsoleCount.generated.xml' path='docs/ConsoleCount/*'/>
@@ -938,27 +800,12 @@ public partial class Navigator
 	public ContactsManager Contacts { get; }
 }
 
-[To(ToAttribute.None)]
-public enum ContactProperty
-{
-	[Value("address")]
-	Address,
-	[Value("email")]
-	Email,
-	[Value("icon")]
-	Icon,
-	[Value("name")]
-	Name,
-	[Value("tel")]
-	Tel,
-}
-
 ///<include file='Utils/Docs/ContactAddress/ContactAddress.generated.xml' path='docs/ContactAddress/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class ContactAddress
 {
 	///<include file='Utils/Docs/ContactAddressToJSON/ContactAddressToJSON.generated.xml' path='docs/ContactAddressToJSON/*'/>
-	public object ToJSON() { throw new System.NotImplementedException(); }
+	public Object ToJSON() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/ContactAddressCity/ContactAddressCity.generated.xml' path='docs/ContactAddressCity/*'/>
 	public DOMString City { get; }
 	///<include file='Utils/Docs/ContactAddressCountry/ContactAddressCountry.generated.xml' path='docs/ContactAddressCountry/*'/>
@@ -1018,21 +865,6 @@ public partial class ServiceWorkerRegistration
 {
 	///<include file='Utils/Docs/ServiceWorkerRegistrationIndex/ServiceWorkerRegistrationIndex.generated.xml' path='docs/ServiceWorkerRegistrationIndex/*'/>
 	public ContentIndex Index { get; }
-}
-
-[To(ToAttribute.None)]
-public enum ContentCategory
-{
-	[Value("")]
-	Empty,
-	[Value("homepage")]
-	Homepage,
-	[Value("article")]
-	Article,
-	[Value("video")]
-	Video,
-	[Value("audio")]
-	Audio,
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -1103,17 +935,6 @@ public partial class CookieStoreGetOptions
 {
 		public USVString Name;
 		public USVString Url;
-}
-
-[To(ToAttribute.None)]
-public enum CookieSameSite
-{
-	[Value("strict")]
-	Strict,
-	[Value("lax")]
-	Lax,
-	[Value("none")]
-	None,
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -1229,8 +1050,9 @@ public partial class ServiceWorkerGlobalScope
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class CrashReportBody : ReportBody
 {
-		public object ToJSON() { throw new System.NotImplementedException(); }
+		public Object ToJSON() { throw new System.NotImplementedException(); }
 		public DOMString? Reason { get; }
+		public DOMString? Stack { get; }
 }
 
 ///<include file='Utils/Docs/Credential/Credential.generated.xml' path='docs/Credential/*'/>
@@ -1242,13 +1064,7 @@ public partial class Credential
 	///<include file='Utils/Docs/CredentialType/CredentialType.generated.xml' path='docs/CredentialType/*'/>
 	public DOMString Type { get; }
 		public static Task<bool> IsConditionalMediationAvailable() { throw new System.NotImplementedException(); }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface CredentialUserData
-{
-		public USVString Name { get { throw new System.NotImplementedException(); } }
-		public USVString IconURL { get { throw new System.NotImplementedException(); } }
+		public static Task<Undefined> WillRequestConditionalCreation() { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/Navigator/Navigator.generated.xml' path='docs/Navigator/*'/>
@@ -1285,22 +1101,10 @@ public partial class CredentialRequestOptions
 		public AbortSignal Signal;
 }
 
-[To(ToAttribute.None)]
-public enum CredentialMediationRequirement
-{
-	[Value("silent")]
-	Silent,
-	[Value("optional")]
-	Optional,
-	[Value("conditional")]
-	Conditional,
-	[Value("required")]
-	Required,
-}
-
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class CredentialCreationOptions
 {
+		public CredentialMediationRequirement Mediation;
 		public AbortSignal Signal;
 }
 
@@ -1364,6 +1168,7 @@ public partial class CredentialRequestOptions
 		public FederatedCredentialRequestOptions Federated;
 }
 
+///<include file='Utils/Docs/FederatedCredentialInit/FederatedCredentialInit.generated.xml' path='docs/FederatedCredentialInit/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class FederatedCredentialInit : CredentialData
 {
@@ -1387,23 +1192,10 @@ public partial class HTMLIFrameElement
 	public DOMString Csp { get; set; }
 }
 
-[To(ToAttribute.None)]
-public enum ScriptingPolicyViolationType
-{
-	[Value("externalScript")]
-	ExternalScript,
-	[Value("inlineScript")]
-	InlineScript,
-	[Value("inlineEventHandler")]
-	InlineEventHandler,
-	[Value("eval")]
-	Eval,
-}
-
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class ScriptingPolicyReportBody : ReportBody
 {
-		public object ToJSON() { throw new System.NotImplementedException(); }
+		public Object ToJSON() { throw new System.NotImplementedException(); }
 		public DOMString ViolationType { get; }
 		public USVString? ViolationURL { get; }
 		public USVString? ViolationSample { get; }
@@ -1415,28 +1207,30 @@ public partial class ScriptingPolicyReportBody : ReportBody
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class CSPViolationReportBody : ReportBody
 {
-		public object ToJSON() { throw new System.NotImplementedException(); }
-		public USVString DocumentURL { get; }
-		public USVString? Referrer { get; }
-		public USVString? BlockedURL { get; }
-		public DOMString EffectiveDirective { get; }
-		public DOMString OriginalPolicy { get; }
-		public USVString? SourceFile { get; }
-		public DOMString? Sample { get; }
-		public SecurityPolicyViolationEventDisposition Disposition { get; }
-		public ushort StatusCode { get; }
-		public ulong? LineNumber { get; }
-		public ulong? ColumnNumber { get; }
-}
-
-///<include file='Utils/Docs/SecurityPolicyViolationEventDisposition/SecurityPolicyViolationEventDisposition.generated.xml' path='docs/SecurityPolicyViolationEventDisposition/*'/>
-[To(ToAttribute.None)]
-public enum SecurityPolicyViolationEventDisposition
-{
-	[Value("enforce")]
-	Enforce,
-	[Value("report")]
-	Report,
+	///<include file='Utils/Docs/CSPViolationReportBodyToJSON/CSPViolationReportBodyToJSON.generated.xml' path='docs/CSPViolationReportBodyToJSON/*'/>
+	public Object ToJSON() { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/CSPViolationReportBodyDocumentURL/CSPViolationReportBodyDocumentURL.generated.xml' path='docs/CSPViolationReportBodyDocumentURL/*'/>
+	public USVString DocumentURL { get; }
+	///<include file='Utils/Docs/CSPViolationReportBodyReferrer/CSPViolationReportBodyReferrer.generated.xml' path='docs/CSPViolationReportBodyReferrer/*'/>
+	public USVString? Referrer { get; }
+	///<include file='Utils/Docs/CSPViolationReportBodyBlockedURL/CSPViolationReportBodyBlockedURL.generated.xml' path='docs/CSPViolationReportBodyBlockedURL/*'/>
+	public USVString? BlockedURL { get; }
+	///<include file='Utils/Docs/CSPViolationReportBodyEffectiveDirective/CSPViolationReportBodyEffectiveDirective.generated.xml' path='docs/CSPViolationReportBodyEffectiveDirective/*'/>
+	public DOMString EffectiveDirective { get; }
+	///<include file='Utils/Docs/CSPViolationReportBodyOriginalPolicy/CSPViolationReportBodyOriginalPolicy.generated.xml' path='docs/CSPViolationReportBodyOriginalPolicy/*'/>
+	public DOMString OriginalPolicy { get; }
+	///<include file='Utils/Docs/CSPViolationReportBodySourceFile/CSPViolationReportBodySourceFile.generated.xml' path='docs/CSPViolationReportBodySourceFile/*'/>
+	public USVString? SourceFile { get; }
+	///<include file='Utils/Docs/CSPViolationReportBodySample/CSPViolationReportBodySample.generated.xml' path='docs/CSPViolationReportBodySample/*'/>
+	public DOMString? Sample { get; }
+	///<include file='Utils/Docs/CSPViolationReportBodyDisposition/CSPViolationReportBodyDisposition.generated.xml' path='docs/CSPViolationReportBodyDisposition/*'/>
+	public SecurityPolicyViolationEventDisposition Disposition { get; }
+	///<include file='Utils/Docs/CSPViolationReportBodyStatusCode/CSPViolationReportBodyStatusCode.generated.xml' path='docs/CSPViolationReportBodyStatusCode/*'/>
+	public ushort StatusCode { get; }
+	///<include file='Utils/Docs/CSPViolationReportBodyLineNumber/CSPViolationReportBodyLineNumber.generated.xml' path='docs/CSPViolationReportBodyLineNumber/*'/>
+	public ulong? LineNumber { get; }
+	///<include file='Utils/Docs/CSPViolationReportBodyColumnNumber/CSPViolationReportBodyColumnNumber.generated.xml' path='docs/CSPViolationReportBodyColumnNumber/*'/>
+	public ulong? ColumnNumber { get; }
 }
 
 ///<include file='Utils/Docs/SecurityPolicyViolationEvent/SecurityPolicyViolationEvent.generated.xml' path='docs/SecurityPolicyViolationEvent/*'/>
@@ -1489,104 +1283,176 @@ public partial class SecurityPolicyViolationEventInit : EventInit
 		public ulong ColumnNumber;
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+///<include file='Utils/Docs/CSSPositionTryRule/CSSPositionTryRule.generated.xml' path='docs/CSSPositionTryRule/*'/>
+[To(ToAttribute.Default)]
 public partial class CSSPositionTryRule : CSSRule
 {
-		public CSSOMString Name { get; }
-		public CSSPositionTryDescriptors Style { get; }
+	///<include file='Utils/Docs/CSSPositionTryRuleName/CSSPositionTryRuleName.generated.xml' path='docs/CSSPositionTryRuleName/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Name { get; }
+	///<include file='Utils/Docs/CSSPositionTryRuleStyle/CSSPositionTryRuleStyle.generated.xml' path='docs/CSSPositionTryRuleStyle/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSPositionTryDescriptors Style { get; }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+///<include file='Utils/Docs/CSSPositionTryDescriptors/CSSPositionTryDescriptors.generated.xml' path='docs/CSSPositionTryDescriptors/*'/>
+[To(ToAttribute.Default)]
 public partial class CSSPositionTryDescriptors : CSSStyleDeclaration
 {
-		public CSSOMString Margin { get; set; }
-		public CSSOMString MarginTop { get; set; }
-		public CSSOMString MarginRight { get; set; }
-		public CSSOMString MarginBottom { get; set; }
-		public CSSOMString MarginLeft { get; set; }
-		public CSSOMString MarginBlock { get; set; }
-		public CSSOMString MarginBlockStart { get; set; }
-		public CSSOMString MarginBlockEnd { get; set; }
-		public CSSOMString MarginInline { get; set; }
-		public CSSOMString MarginInlineStart { get; set; }
-		public CSSOMString MarginInlineEnd { get; set; }
-		public CSSOMString Margin_top { get; set; }
-		public CSSOMString Margin_right { get; set; }
-		public CSSOMString Margin_bottom { get; set; }
-		public CSSOMString Margin_left { get; set; }
-		public CSSOMString Margin_block { get; set; }
-		public CSSOMString Margin_block_start { get; set; }
-		public CSSOMString Margin_block_end { get; set; }
-		public CSSOMString Margin_inline { get; set; }
-		public CSSOMString Margin_inline_start { get; set; }
-		public CSSOMString Margin_inline_end { get; set; }
-		public CSSOMString Inset { get; set; }
-		public CSSOMString InsetBlock { get; set; }
-		public CSSOMString InsetBlockStart { get; set; }
-		public CSSOMString InsetBlockEnd { get; set; }
-		public CSSOMString InsetInline { get; set; }
-		public CSSOMString InsetInlineStart { get; set; }
-		public CSSOMString InsetInlineEnd { get; set; }
-		public CSSOMString Top { get; set; }
-		public CSSOMString Left { get; set; }
-		public CSSOMString Right { get; set; }
-		public CSSOMString Bottom { get; set; }
-		public CSSOMString Inset_block { get; set; }
-		public CSSOMString Inset_block_start { get; set; }
-		public CSSOMString Inset_block_end { get; set; }
-		public CSSOMString Inset_inline { get; set; }
-		public CSSOMString Inset_inline_start { get; set; }
-		public CSSOMString Inset_inline_end { get; set; }
-		public CSSOMString Width { get; set; }
-		public CSSOMString MinWidth { get; set; }
-		public CSSOMString MaxWidth { get; set; }
-		public CSSOMString Height { get; set; }
-		public CSSOMString MinHeight { get; set; }
-		public CSSOMString MaxHeight { get; set; }
-		public CSSOMString BlockSize { get; set; }
-		public CSSOMString MinBlockSize { get; set; }
-		public CSSOMString MaxBlockSize { get; set; }
-		public CSSOMString InlineSize { get; set; }
-		public CSSOMString MinInlineSize { get; set; }
-		public CSSOMString MaxInlineSize { get; set; }
-		public CSSOMString Min_width { get; set; }
-		public CSSOMString Max_width { get; set; }
-		public CSSOMString Min_height { get; set; }
-		public CSSOMString Max_height { get; set; }
-		public CSSOMString Block_size { get; set; }
-		public CSSOMString Min_block_size { get; set; }
-		public CSSOMString Max_block_size { get; set; }
-		public CSSOMString Inline_size { get; set; }
-		public CSSOMString Min_inline_size { get; set; }
-		public CSSOMString Max_inline_size { get; set; }
-		public CSSOMString PlaceSelf { get; set; }
-		public CSSOMString AlignSelf { get; set; }
-		public CSSOMString JustifySelf { get; set; }
-		public CSSOMString Place_self { get; set; }
-		public CSSOMString Align_self { get; set; }
-		public CSSOMString Justify_self { get; set; }
-		public CSSOMString PositionAnchor { get; set; }
-		public CSSOMString Position_anchor { get; set; }
-		public CSSOMString InsetArea { get; set; }
-		public CSSOMString Inset_area { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Margin { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString MarginTop { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString MarginRight { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString MarginBottom { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString MarginLeft { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString MarginBlock { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString MarginBlockStart { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString MarginBlockEnd { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString MarginInline { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString MarginInlineStart { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString MarginInlineEnd { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Margin_top { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Margin_right { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Margin_bottom { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Margin_left { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Margin_block { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Margin_block_start { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Margin_block_end { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Margin_inline { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Margin_inline_start { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Margin_inline_end { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Inset { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString InsetBlock { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString InsetBlockStart { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString InsetBlockEnd { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString InsetInline { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString InsetInlineStart { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString InsetInlineEnd { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Top { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Left { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Right { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Bottom { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Inset_block { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Inset_block_start { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Inset_block_end { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Inset_inline { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Inset_inline_start { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Inset_inline_end { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Width { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString MinWidth { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString MaxWidth { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Height { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString MinHeight { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString MaxHeight { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString BlockSize { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString MinBlockSize { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString MaxBlockSize { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString InlineSize { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString MinInlineSize { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString MaxInlineSize { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Min_width { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Max_width { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Min_height { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Max_height { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Block_size { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Min_block_size { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Max_block_size { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Inline_size { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Min_inline_size { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Max_inline_size { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString PlaceSelf { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString AlignSelf { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString JustifySelf { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Place_self { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Align_self { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Justify_self { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString PositionAnchor { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Position_anchor { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString PositionArea { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Position_area { get; set; }
 }
 
 ///<include file='Utils/Docs/CSS/CSS.generated.xml' path='docs/CSS/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSS
 {
-		public Worklet AnimationWorklet { get; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public Worklet AnimationWorklet { get; }
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class AnimationWorkletGlobalScope : WorkletGlobalScope
 {
 		public Undefined RegisterAnimator(DOMString name, AnimatorInstanceConstructor animatorCtor) { throw new System.NotImplementedException(); }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct AnimatorInstanceConstructor
-{
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -1612,10 +1478,11 @@ public partial class WorkletGroupEffect
 }
 
 ///<include file='Utils/Docs/CSSAnimation/CSSAnimation.generated.xml' path='docs/CSSAnimation/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSAnimation : Animation
 {
 	///<include file='Utils/Docs/CSSAnimationAnimationName/CSSAnimationAnimationName.generated.xml' path='docs/CSSAnimationAnimationName/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSOMString AnimationName { get; }
 }
 
@@ -1643,130 +1510,151 @@ public partial class AnimationEventInit : EventInit
 }
 
 ///<include file='Utils/Docs/CSSRule/CSSRule.generated.xml' path='docs/CSSRule/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSRule
 {
-		public const ushort KEYFRAMES_RULE = 7;
-		public const ushort KEYFRAME_RULE = 8;
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public const ushort KEYFRAMES_RULE = 7;
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public const ushort KEYFRAME_RULE = 8;
 }
 
 ///<include file='Utils/Docs/CSSKeyframeRule/CSSKeyframeRule.generated.xml' path='docs/CSSKeyframeRule/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSKeyframeRule : CSSRule
 {
 	///<include file='Utils/Docs/CSSKeyframeRuleKeyText/CSSKeyframeRuleKeyText.generated.xml' path='docs/CSSKeyframeRuleKeyText/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSOMString KeyText { get; set; }
 	///<include file='Utils/Docs/CSSKeyframeRuleStyle/CSSKeyframeRuleStyle.generated.xml' path='docs/CSSKeyframeRuleStyle/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSStyleProperties Style { get; }
 }
 
 ///<include file='Utils/Docs/CSSKeyframesRule/CSSKeyframesRule.generated.xml' path='docs/CSSKeyframesRule/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSKeyframesRule : CSSRule
 {
 	///<include file='Utils/Docs/CSSKeyframesRuleName/CSSKeyframesRuleName.generated.xml' path='docs/CSSKeyframesRuleName/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSOMString Name { get; set; }
 	///<include file='Utils/Docs/CSSKeyframesRuleCssRules/CSSKeyframesRuleCssRules.generated.xml' path='docs/CSSKeyframesRuleCssRules/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSRuleList CssRules { get; }
-		public ulong Length { get; }
+	///<include file='Utils/Docs/CSSKeyframesRuleLength/CSSKeyframesRuleLength.generated.xml' path='docs/CSSKeyframesRuleLength/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public ulong Length { get; }
 	
 	///<include file='Utils/Docs/CSSKeyframesRuleAppendRule/CSSKeyframesRuleAppendRule.generated.xml' path='docs/CSSKeyframesRuleAppendRule/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined AppendRule(CSSOMString rule) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/CSSKeyframesRuleDeleteRule/CSSKeyframesRuleDeleteRule.generated.xml' path='docs/CSSKeyframesRuleDeleteRule/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined DeleteRule(CSSOMString select) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/CSSKeyframesRuleFindRule/CSSKeyframesRuleFindRule.generated.xml' path='docs/CSSKeyframesRuleFindRule/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSKeyframeRule? FindRule(CSSOMString select) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface GlobalEventHandlers
-{
-		public EventHandler Onanimationstart { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onanimationiteration { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onanimationend { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onanimationcancel { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-}
-
 ///<include file='Utils/Docs/CSSScopeRule/CSSScopeRule.generated.xml' path='docs/CSSScopeRule/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSScopeRule : CSSGroupingRule
 {
 	///<include file='Utils/Docs/CSSScopeRuleStart/CSSScopeRuleStart.generated.xml' path='docs/CSSScopeRuleStart/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSOMString? Start { get; }
 	///<include file='Utils/Docs/CSSScopeRuleEnd/CSSScopeRuleEnd.generated.xml' path='docs/CSSScopeRuleEnd/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSOMString? End { get; }
 }
 
 ///<include file='Utils/Docs/CSSLayerBlockRule/CSSLayerBlockRule.generated.xml' path='docs/CSSLayerBlockRule/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSLayerBlockRule : CSSGroupingRule
 {
 	///<include file='Utils/Docs/CSSLayerBlockRuleName/CSSLayerBlockRuleName.generated.xml' path='docs/CSSLayerBlockRuleName/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSOMString Name { get; }
 }
 
 ///<include file='Utils/Docs/CSSLayerStatementRule/CSSLayerStatementRule.generated.xml' path='docs/CSSLayerStatementRule/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSLayerStatementRule : CSSRule
 {
 	///<include file='Utils/Docs/CSSLayerStatementRuleNameList/CSSLayerStatementRuleNameList.generated.xml' path='docs/CSSLayerStatementRuleNameList/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSOMString[] NameList { get; }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSColorProfileRule : CSSRule
 {
-		public CSSOMString Name { get; }
-		public CSSOMString Src { get; }
-		public CSSOMString RenderingIntent { get; }
-		public CSSOMString Components { get; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Name { get; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Src { get; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString RenderingIntent { get; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Components { get; }
+}
+
+///<include file='Utils/Docs/CSSContainerRule/CSSContainerRule.generated.xml' path='docs/CSSContainerRule/*'/>
+[To(ToAttribute.Default)]
+public partial class CSSContainerRule : CSSConditionRule
+{
+	///<include file='Utils/Docs/CSSContainerRuleContainerName/CSSContainerRuleContainerName.generated.xml' path='docs/CSSContainerRuleContainerName/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString ContainerName { get; }
+	///<include file='Utils/Docs/CSSContainerRuleContainerQuery/CSSContainerRuleContainerQuery.generated.xml' path='docs/CSSContainerRuleContainerQuery/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString ContainerQuery { get; }
 }
 
 ///<include file='Utils/Docs/CSSRule/CSSRule.generated.xml' path='docs/CSSRule/*'/>
 public partial class CSSRule
 {
-		public const ushort SUPPORTS_RULE = 12;
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public const ushort SUPPORTS_RULE = 12;
 }
 
 ///<include file='Utils/Docs/CSSConditionRule/CSSConditionRule.generated.xml' path='docs/CSSConditionRule/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSConditionRule : CSSGroupingRule
 {
 	///<include file='Utils/Docs/CSSConditionRuleConditionText/CSSConditionRuleConditionText.generated.xml' path='docs/CSSConditionRuleConditionText/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSOMString ConditionText { get; }
 }
 
 ///<include file='Utils/Docs/CSSMediaRule/CSSMediaRule.generated.xml' path='docs/CSSMediaRule/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSMediaRule : CSSConditionRule
 {
 	///<include file='Utils/Docs/CSSMediaRuleMedia/CSSMediaRuleMedia.generated.xml' path='docs/CSSMediaRuleMedia/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public MediaList Media { get; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public bool Matches { get; }
 }
 
 ///<include file='Utils/Docs/CSSSupportsRule/CSSSupportsRule.generated.xml' path='docs/CSSSupportsRule/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSSupportsRule : CSSConditionRule
 {
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public bool Matches { get; }
 }
 
 ///<include file='Utils/Docs/CSS/CSS.generated.xml' path='docs/CSS/*'/>
 public partial class CSS
 {
 	///<include file='Utils/Docs/CSSSupports/CSSSupports.generated.xml' path='docs/CSSSupports/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Supports(CSSOMString property, CSSOMString value) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/CSSSupports/CSSSupports.generated.xml' path='docs/CSSSupports/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Supports(CSSOMString conditionText) { throw new System.NotImplementedException(); }
-}
-
-///<include file='Utils/Docs/CSSContainerRule/CSSContainerRule.generated.xml' path='docs/CSSContainerRule/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class CSSContainerRule : CSSConditionRule
-{
-	///<include file='Utils/Docs/CSSContainerRuleContainerName/CSSContainerRuleContainerName.generated.xml' path='docs/CSSContainerRuleContainerName/*'/>
-	public CSSOMString ContainerName { get; }
-	///<include file='Utils/Docs/CSSContainerRuleContainerQuery/CSSContainerRuleContainerQuery.generated.xml' path='docs/CSSContainerRuleContainerQuery/*'/>
-	public CSSOMString ContainerQuery { get; }
 }
 
 ///<include file='Utils/Docs/ContentVisibilityAutoStateChangeEvent/ContentVisibilityAutoStateChangeEvent.generated.xml' path='docs/ContentVisibilityAutoStateChangeEvent/*'/>
@@ -1789,37 +1677,48 @@ public partial class ContentVisibilityAutoStateChangeEventInit : EventInit
 ///<include file='Utils/Docs/CSSRule/CSSRule.generated.xml' path='docs/CSSRule/*'/>
 public partial class CSSRule
 {
-		public const ushort COUNTER_STYLE_RULE = 11;
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public const ushort COUNTER_STYLE_RULE = 11;
 }
 
 ///<include file='Utils/Docs/CSSCounterStyleRule/CSSCounterStyleRule.generated.xml' path='docs/CSSCounterStyleRule/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSCounterStyleRule : CSSRule
 {
 	///<include file='Utils/Docs/CSSCounterStyleRuleName/CSSCounterStyleRuleName.generated.xml' path='docs/CSSCounterStyleRuleName/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSOMString Name { get; set; }
 	///<include file='Utils/Docs/CSSCounterStyleRuleSystem/CSSCounterStyleRuleSystem.generated.xml' path='docs/CSSCounterStyleRuleSystem/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSOMString System { get; set; }
 	///<include file='Utils/Docs/CSSCounterStyleRuleSymbols/CSSCounterStyleRuleSymbols.generated.xml' path='docs/CSSCounterStyleRuleSymbols/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSOMString Symbols { get; set; }
 	///<include file='Utils/Docs/CSSCounterStyleRuleAdditiveSymbols/CSSCounterStyleRuleAdditiveSymbols.generated.xml' path='docs/CSSCounterStyleRuleAdditiveSymbols/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSOMString AdditiveSymbols { get; set; }
 	///<include file='Utils/Docs/CSSCounterStyleRuleNegative/CSSCounterStyleRuleNegative.generated.xml' path='docs/CSSCounterStyleRuleNegative/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSOMString Negative { get; set; }
 	///<include file='Utils/Docs/CSSCounterStyleRulePrefix/CSSCounterStyleRulePrefix.generated.xml' path='docs/CSSCounterStyleRulePrefix/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSOMString Prefix { get; set; }
 	///<include file='Utils/Docs/CSSCounterStyleRuleSuffix/CSSCounterStyleRuleSuffix.generated.xml' path='docs/CSSCounterStyleRuleSuffix/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSOMString Suffix { get; set; }
 	///<include file='Utils/Docs/CSSCounterStyleRuleRange/CSSCounterStyleRuleRange.generated.xml' path='docs/CSSCounterStyleRuleRange/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSOMString Range { get; set; }
 	///<include file='Utils/Docs/CSSCounterStyleRulePad/CSSCounterStyleRulePad.generated.xml' path='docs/CSSCounterStyleRulePad/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSOMString Pad { get; set; }
 	///<include file='Utils/Docs/CSSCounterStyleRuleSpeakAs/CSSCounterStyleRuleSpeakAs.generated.xml' path='docs/CSSCounterStyleRuleSpeakAs/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSOMString SpeakAs { get; set; }
 	///<include file='Utils/Docs/CSSCounterStyleRuleFallback/CSSCounterStyleRuleFallback.generated.xml' path='docs/CSSCounterStyleRuleFallback/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSOMString Fallback { get; set; }
 }
-
 
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class FontFaceDescriptors
@@ -1836,25 +1735,12 @@ public partial class FontFaceDescriptors
 		public CSSOMString LineGapOverride;
 }
 
-[To(ToAttribute.None)]
-public enum FontFaceLoadStatus
-{
-	[Value("unloaded")]
-	Unloaded,
-	[Value("loading")]
-	Loading,
-	[Value("loaded")]
-	Loaded,
-	[Value("error")]
-	Error,
-}
-
 ///<include file='Utils/Docs/FontFace/FontFace.generated.xml' path='docs/FontFace/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class FontFace
 {
 	///<include file='Utils/Docs/FontFaceFontFace/FontFaceFontFace.generated.xml' path='docs/FontFaceFontFace/*'/>
-	public FontFace(CSSOMString family, Union4 source, FontFaceDescriptors descriptors) { }
+	public FontFace(CSSOMString family, Union3 source, FontFaceDescriptors descriptors) { }
 	///<include file='Utils/Docs/FontFaceFamily/FontFaceFamily.generated.xml' path='docs/FontFaceFamily/*'/>
 	public CSSOMString Family { get; set; }
 	///<include file='Utils/Docs/FontFaceStyle/FontFaceStyle.generated.xml' path='docs/FontFaceStyle/*'/>
@@ -1950,20 +1836,10 @@ public partial class FontFaceSetLoadEvent : Event
 	public FontFaceSetLoadEvent() { }
 }
 
-[To(ToAttribute.None)]
-public enum FontFaceSetLoadStatus
-{
-	[Value("loading")]
-	Loading,
-	[Value("loaded")]
-	Loaded,
-}
-
 ///<include file='Utils/Docs/FontFaceSet/FontFaceSet.generated.xml' path='docs/FontFaceSet/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class FontFaceSet : EventTarget
 {
-		public FontFaceSet(List<FontFace> initialFaces) { }
 	
 	///<include file='Utils/Docs/FontFaceSetAdd/FontFaceSetAdd.generated.xml' path='docs/FontFaceSetAdd/*'/>
 	public FontFaceSet Add(FontFace font) { throw new System.NotImplementedException(); }
@@ -1982,111 +1858,158 @@ public partial class FontFaceSet : EventTarget
 	public Task<FontFaceSet> Ready { get; }
 	///<include file='Utils/Docs/FontFaceSetStatus/FontFaceSetStatus.generated.xml' path='docs/FontFaceSetStatus/*'/>
 	public FontFaceSetLoadStatus Status { get; }
-	public FontFaceSet() { }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface FontFaceSource
-{
-		public FontFaceSet Fonts { get { throw new System.NotImplementedException(); } }
-}
-
-
-
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSFontFaceDescriptors : CSSStyleDeclaration
 {
-		public CSSOMString Src { get; set; }
-		public CSSOMString FontFamily { get; set; }
-		public CSSOMString Font_family { get; set; }
-		public CSSOMString FontStyle { get; set; }
-		public CSSOMString Font_style { get; set; }
-		public CSSOMString FontWeight { get; set; }
-		public CSSOMString Font_weight { get; set; }
-		public CSSOMString FontStretch { get; set; }
-		public CSSOMString Font_stretch { get; set; }
-		public CSSOMString FontWidth { get; set; }
-		public CSSOMString Font_width { get; set; }
-		public CSSOMString UnicodeRange { get; set; }
-		public CSSOMString Unicode_range { get; set; }
-		public CSSOMString FontFeatureSettings { get; set; }
-		public CSSOMString Font_feature_settings { get; set; }
-		public CSSOMString FontVariationSettings { get; set; }
-		public CSSOMString Font_variation_settings { get; set; }
-		public CSSOMString FontNamedInstance { get; set; }
-		public CSSOMString Font_named_instance { get; set; }
-		public CSSOMString FontDisplay { get; set; }
-		public CSSOMString Font_display { get; set; }
-		public CSSOMString FontLanguageOverride { get; set; }
-		public CSSOMString Font_language_override { get; set; }
-		public CSSOMString AscentOverride { get; set; }
-		public CSSOMString Ascent_override { get; set; }
-		public CSSOMString DescentOverride { get; set; }
-		public CSSOMString Descent_override { get; set; }
-		public CSSOMString LineGapOverride { get; set; }
-		public CSSOMString Line_gap_override { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Src { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString FontFamily { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Font_family { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString FontStyle { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Font_style { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString FontWeight { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Font_weight { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString FontStretch { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Font_stretch { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString FontWidth { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Font_width { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString FontSize { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Font_size { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString SizeAdjust { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Size_adjust { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString UnicodeRange { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Unicode_range { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString FontFeatureSettings { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Font_feature_settings { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString FontVariationSettings { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Font_variation_settings { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString FontNamedInstance { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Font_named_instance { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString FontDisplay { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Font_display { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString FontLanguageOverride { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Font_language_override { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString AscentOverride { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Ascent_override { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString DescentOverride { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Descent_override { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString LineGapOverride { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Line_gap_override { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString SuperscriptPositionOverride { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Superscript_position_override { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString SubscriptPositionOverride { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Subscript_position_override { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString SuperscriptSizeOverride { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Superscript_size_override { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString SubscriptSizeOverride { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Subscript_size_override { get; set; }
 }
 
 ///<include file='Utils/Docs/CSSFontFaceRule/CSSFontFaceRule.generated.xml' path='docs/CSSFontFaceRule/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSFontFaceRule : CSSRule
 {
 	///<include file='Utils/Docs/CSSFontFaceRuleStyle/CSSFontFaceRuleStyle.generated.xml' path='docs/CSSFontFaceRuleStyle/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSFontFaceDescriptors Style { get; }
 }
 
 ///<include file='Utils/Docs/CSSRule/CSSRule.generated.xml' path='docs/CSSRule/*'/>
 public partial class CSSRule
 {
-		public const ushort FONT_FEATURE_VALUES_RULE = 14;
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public const ushort FONT_FEATURE_VALUES_RULE = 14;
 }
 
 ///<include file='Utils/Docs/CSSFontFeatureValuesRule/CSSFontFeatureValuesRule.generated.xml' path='docs/CSSFontFeatureValuesRule/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSFontFeatureValuesRule : CSSRule
 {
 	///<include file='Utils/Docs/CSSFontFeatureValuesRuleFontFamily/CSSFontFeatureValuesRuleFontFamily.generated.xml' path='docs/CSSFontFeatureValuesRuleFontFamily/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSOMString FontFamily { get; set; }
-		public CSSFontFeatureValuesMap Annotation { get; }
-		public CSSFontFeatureValuesMap Ornaments { get; }
-		public CSSFontFeatureValuesMap Stylistic { get; }
-		public CSSFontFeatureValuesMap Swash { get; }
-		public CSSFontFeatureValuesMap CharacterVariant { get; }
-		public CSSFontFeatureValuesMap Styleset { get; }
-		public CSSFontFeatureValuesMap HistoricalForms { get; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSFontFeatureValuesMap Annotation { get; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSFontFeatureValuesMap Ornaments { get; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSFontFeatureValuesMap Stylistic { get; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSFontFeatureValuesMap Swash { get; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSFontFeatureValuesMap CharacterVariant { get; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSFontFeatureValuesMap Styleset { get; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSFontFeatureValuesMap HistoricalForms { get; }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSFontFeatureValuesMap
 {
 	
-		public Undefined Set(CSSOMString featureValueName, Union5 values) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public Undefined Set(CSSOMString featureValueName, Union4 values) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/CSSFontPaletteValuesRule/CSSFontPaletteValuesRule.generated.xml' path='docs/CSSFontPaletteValuesRule/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSFontPaletteValuesRule : CSSRule
 {
 	///<include file='Utils/Docs/CSSFontPaletteValuesRuleName/CSSFontPaletteValuesRuleName.generated.xml' path='docs/CSSFontPaletteValuesRuleName/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSOMString Name { get; }
 	///<include file='Utils/Docs/CSSFontPaletteValuesRuleFontFamily/CSSFontPaletteValuesRuleFontFamily.generated.xml' path='docs/CSSFontPaletteValuesRuleFontFamily/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSOMString FontFamily { get; }
 	///<include file='Utils/Docs/CSSFontPaletteValuesRuleBasePalette/CSSFontPaletteValuesRuleBasePalette.generated.xml' path='docs/CSSFontPaletteValuesRuleBasePalette/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSOMString BasePalette { get; }
 	///<include file='Utils/Docs/CSSFontPaletteValuesRuleOverrideColors/CSSFontPaletteValuesRuleOverrideColors.generated.xml' path='docs/CSSFontPaletteValuesRuleOverrideColors/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSOMString OverrideColors { get; }
-}
-
-///<include file='Utils/Docs/HighlightType/HighlightType.generated.xml' path='docs/HighlightType/*'/>
-[To(ToAttribute.None)]
-public enum HighlightType
-{
-	[Value("highlight")]
-	Highlight,
-	[Value("spelling-error")]
-	SpellingError,
-	[Value("grammar-error")]
-	GrammarError,
 }
 
 ///<include file='Utils/Docs/Highlight/Highlight.generated.xml' path='docs/Highlight/*'/>
@@ -2107,6 +2030,7 @@ public partial class Highlight
 public partial class CSS
 {
 	///<include file='Utils/Docs/CSSHighlights/CSSHighlights.generated.xml' path='docs/CSSHighlights/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public HighlightRegistry Highlights { get; }
 }
 
@@ -2120,13 +2044,15 @@ public partial class HighlightRegistry
 ///<include file='Utils/Docs/CSS/CSS.generated.xml' path='docs/CSS/*'/>
 public partial class CSS
 {
-		public dynamic ElementSources { get; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public dynamic ElementSources { get; }
 }
 
 ///<include file='Utils/Docs/CSS/CSS.generated.xml' path='docs/CSS/*'/>
 public partial class CSS
 {
-		public Worklet LayoutWorklet { get; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public Worklet LayoutWorklet { get; }
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -2140,24 +2066,6 @@ public partial class LayoutOptions
 {
 		public ChildDisplayType ChildDisplay;
 		public LayoutSizingMode Sizing;
-}
-
-[To(ToAttribute.None)]
-public enum ChildDisplayType
-{
-	[Value("block")]
-	Block,
-	[Value("normal")]
-	Normal,
-}
-
-[To(ToAttribute.None)]
-public enum LayoutSizingMode
-{
-	[Value("block-like")]
-	BlockLike,
-	[Value("manual")]
-	Manual,
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -2200,19 +2108,6 @@ public partial class LayoutConstraints
 		public dynamic Data { get; }
 }
 
-[To(ToAttribute.None)]
-public enum BlockFragmentationType
-{
-	[Value("none")]
-	None,
-	[Value("page")]
-	Page,
-	[Value("column")]
-	Column,
-	[Value("region")]
-	Region,
-}
-
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class LayoutConstraintsOptions
 {
@@ -2246,21 +2141,6 @@ public partial class BreakTokenOptions
 {
 		public List<ChildBreakToken> ChildBreakTokens;
 		public dynamic Data;
-}
-
-[To(ToAttribute.None)]
-public enum BreakType
-{
-	[Value("none")]
-	None,
-	[Value("line")]
-	Line,
-	[Value("column")]
-	Column,
-	[Value("page")]
-	Page,
-	[Value("region")]
-	Region,
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -2329,17 +2209,23 @@ public partial class SVGMaskElement : SVGElement
 	public SVGAnimatedLength Height { get; }
 }
 
-[To(ToAttribute.None)]
-public enum SpatialNavigationDirection
+[To(ToAttribute.Default)]
+public partial class CSSFunctionRule : CSSGroupingRule
 {
-	[Value("up")]
-	Up,
-	[Value("down")]
-	Down,
-	[Value("left")]
-	Left,
-	[Value("right")]
-	Right,
+}
+
+[To(ToAttribute.Default)]
+public partial class CSSFunctionDescriptors : CSSStyleDeclaration
+{
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Result { get; set; }
+}
+
+[To(ToAttribute.Default)]
+public partial class CSSFunctionDeclarations : CSSRule
+{
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSFunctionDescriptors Style { get; }
 }
 
 ///<include file='Utils/Docs/Window/Window.generated.xml' path='docs/Window/*'/>
@@ -2347,15 +2233,6 @@ public partial class Window
 {
 		[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined Navigate(SpatialNavigationDirection dir) { throw new System.NotImplementedException(); }
-}
-
-[To(ToAttribute.None)]
-public enum FocusableAreaSearchMode
-{
-	[Value("visible")]
-	Visible,
-	[Value("all")]
-	All,
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -2396,16 +2273,20 @@ public partial class NavigationEventInit : UIEventInit
 		public EventTarget? RelatedTarget;
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class CSSNestRule : CSSGroupingRule
+///<include file='Utils/Docs/CSSNestedDeclarations/CSSNestedDeclarations.generated.xml' path='docs/CSSNestedDeclarations/*'/>
+[To(ToAttribute.Default)]
+public partial class CSSNestedDeclarations : CSSRule
 {
-		public CSSStyleProperties Style { get; }
+	///<include file='Utils/Docs/CSSNestedDeclarationsStyle/CSSNestedDeclarationsStyle.generated.xml' path='docs/CSSNestedDeclarationsStyle/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSStyleProperties Style { get; }
 }
 
 ///<include file='Utils/Docs/CSS/CSS.generated.xml' path='docs/CSS/*'/>
 public partial class CSS
 {
 	///<include file='Utils/Docs/CSSPaintWorklet/CSSPaintWorklet.generated.xml' path='docs/CSSPaintWorklet/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Worklet PaintWorklet { get; }
 }
 
@@ -2453,79 +2334,99 @@ public partial class PaintSize
 ///<include file='Utils/Docs/CSS/CSS.generated.xml' path='docs/CSS/*'/>
 public partial class CSS
 {
-		public Task<List<CSSParserRule>> ParseStylesheet(CSSStringSource css, CSSParserOptions options) { throw new System.NotImplementedException(); }
-		public Task<List<CSSParserRule>> ParseRuleList(CSSStringSource css, CSSParserOptions options) { throw new System.NotImplementedException(); }
-		public Task<CSSParserRule> ParseRule(CSSStringSource css, CSSParserOptions options) { throw new System.NotImplementedException(); }
-		public Task<List<CSSParserRule>> ParseDeclarationList(CSSStringSource css, CSSParserOptions options) { throw new System.NotImplementedException(); }
-		public CSSParserDeclaration ParseDeclaration(DOMString css, CSSParserOptions options) { throw new System.NotImplementedException(); }
-		public CSSToken ParseValue(DOMString css) { throw new System.NotImplementedException(); }
-		public List<CSSToken> ParseValueList(DOMString css) { throw new System.NotImplementedException(); }
-		public List<List<CSSToken>> ParseCommaValueList(DOMString css) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public Task<List<CSSParserRule>> ParseStylesheet(CSSStringSource css, CSSParserOptions options) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public Task<List<CSSParserRule>> ParseRuleList(CSSStringSource css, CSSParserOptions options) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public Task<CSSParserRule> ParseRule(CSSStringSource css, CSSParserOptions options) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public Task<List<CSSParserRule>> ParseDeclarationList(CSSStringSource css, CSSParserOptions options) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSParserDeclaration ParseDeclaration(DOMString css, CSSParserOptions options) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSToken ParseValue(DOMString css) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public List<CSSToken> ParseValueList(DOMString css) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public List<List<CSSToken>> ParseCommaValueList(DOMString css) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSParserOptions
 {
-		public object AtRules;
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public Object AtRules;
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSParserRule
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSParserAtRule : CSSParserRule
 {
 		public CSSParserAtRule(DOMString name, List<CSSToken> prelude, List<CSSParserRule>? body) { }
-		public DOMString Name { get; }
-		public CSSParserValue[] Prelude { get; }
-		public CSSParserRule[]? Body { get; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public DOMString Name { get; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSParserValue[] Prelude { get; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSParserRule[]? Body { get; }
 	
 	public CSSParserAtRule() { }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSParserQualifiedRule : CSSParserRule
 {
 		public CSSParserQualifiedRule(List<CSSToken> prelude, List<CSSParserRule>? body) { }
-		public CSSParserValue[] Prelude { get; }
-		public CSSParserRule[] Body { get; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSParserValue[] Prelude { get; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSParserRule[] Body { get; }
 	
 	public CSSParserQualifiedRule() { }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSParserDeclaration : CSSParserRule
 {
 		public CSSParserDeclaration(DOMString name, List<CSSParserRule> body) { }
-		public DOMString Name { get; }
-		public CSSParserValue[] Body { get; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public DOMString Name { get; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSParserValue[] Body { get; }
 	
 	public CSSParserDeclaration() { }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSParserValue
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSParserBlock : CSSParserValue
 {
 		public CSSParserBlock(DOMString name, List<CSSParserValue> body) { }
-		public DOMString Name { get; }
-		public CSSParserValue[] Body { get; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public DOMString Name { get; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSParserValue[] Body { get; }
 	
 	public CSSParserBlock() { }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSParserFunction : CSSParserValue
 {
 		public CSSParserFunction(DOMString name, List<List<CSSParserValue>> args) { }
-		public DOMString Name { get; }
-		public CSSParserValue[][] Args { get; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public DOMString Name { get; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSParserValue[][] Args { get; }
 	
 	public CSSParserFunction() { }
 }
@@ -2543,33 +2444,42 @@ public partial class PropertyDefinition
 public partial class CSS
 {
 	///<include file='Utils/Docs/CSSRegisterProperty/CSSRegisterProperty.generated.xml' path='docs/CSSRegisterProperty/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined RegisterProperty(PropertyDefinition definition) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/CSSPropertyRule/CSSPropertyRule.generated.xml' path='docs/CSSPropertyRule/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSPropertyRule : CSSRule
 {
 	///<include file='Utils/Docs/CSSPropertyRuleName/CSSPropertyRuleName.generated.xml' path='docs/CSSPropertyRuleName/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSOMString Name { get; }
 	///<include file='Utils/Docs/CSSPropertyRuleSyntax/CSSPropertyRuleSyntax.generated.xml' path='docs/CSSPropertyRuleSyntax/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSOMString Syntax { get; }
 	///<include file='Utils/Docs/CSSPropertyRuleInherits/CSSPropertyRuleInherits.generated.xml' path='docs/CSSPropertyRuleInherits/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Inherits { get; }
 	///<include file='Utils/Docs/CSSPropertyRuleInitialValue/CSSPropertyRuleInitialValue.generated.xml' path='docs/CSSPropertyRuleInitialValue/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSOMString? InitialValue { get; }
 }
 
 ///<include file='Utils/Docs/CSSPseudoElement/CSSPseudoElement.generated.xml' path='docs/CSSPseudoElement/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSPseudoElement : EventTarget, GeometryUtils
 {
 	///<include file='Utils/Docs/CSSPseudoElementType/CSSPseudoElementType.generated.xml' path='docs/CSSPseudoElementType/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSOMString Type { get; }
 	///<include file='Utils/Docs/CSSPseudoElementElement/CSSPseudoElementElement.generated.xml' path='docs/CSSPseudoElementElement/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Element Element { get; }
-		public Union8 Parent { get; }
-		public CSSPseudoElement? Pseudo(CSSOMString type) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public Union7 Parent { get; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSPseudoElement? Pseudo(CSSOMString type) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/Element/Element.generated.xml' path='docs/Element/*'/>
@@ -2603,26 +2513,22 @@ public partial class NamedFlow : EventTarget
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial interface Region
-{
-		public CSSOMString RegionOverset { get { throw new System.NotImplementedException(); } }
-		public List<Range>? GetRegionFlowRanges() { throw new System.NotImplementedException(); }
-}
-
-
-[To(ToAttribute.FirstCharToLowerCase)]
 public partial class SnapEventInit : EventInit
 {
 		public Node? SnapTargetBlock;
 		public Node? SnapTargetInline;
 }
 
+///<include file='Utils/Docs/SnapEvent/SnapEvent.generated.xml' path='docs/SnapEvent/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class SnapEvent : Event
 {
-		public SnapEvent(DOMString type, SnapEventInit eventInitDict) { }
-		public Node? SnapTargetBlock { get; }
-		public Node? SnapTargetInline { get; }
+	///<include file='Utils/Docs/SnapEventSnapEvent/SnapEventSnapEvent.generated.xml' path='docs/SnapEventSnapEvent/*'/>
+	public SnapEvent(DOMString type, SnapEventInit eventInitDict) { }
+	///<include file='Utils/Docs/SnapEventSnapTargetBlock/SnapEventSnapTargetBlock.generated.xml' path='docs/SnapEventSnapTargetBlock/*'/>
+	public Node? SnapTargetBlock { get; }
+	///<include file='Utils/Docs/SnapEventSnapTargetInline/SnapEventSnapTargetInline.generated.xml' path='docs/SnapEventSnapTargetInline/*'/>
+	public Node? SnapTargetInline { get; }
 	public SnapEvent() { }
 }
 
@@ -2634,16 +2540,17 @@ public partial class Element
 }
 
 ///<include file='Utils/Docs/CSSStartingStyleRule/CSSStartingStyleRule.generated.xml' path='docs/CSSStartingStyleRule/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSStartingStyleRule : CSSGroupingRule
 {
 }
 
 ///<include file='Utils/Docs/CSSTransition/CSSTransition.generated.xml' path='docs/CSSTransition/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSTransition : Animation
 {
 	///<include file='Utils/Docs/CSSTransitionTransitionProperty/CSSTransitionTransitionProperty.generated.xml' path='docs/CSSTransitionTransitionProperty/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSOMString TransitionProperty { get; }
 }
 
@@ -2670,22 +2577,16 @@ public partial class TransitionEventInit : EventInit
 		public CSSOMString PseudoElement;
 }
 
-public partial interface GlobalEventHandlers
-{
-		public EventHandler Ontransitionrun { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Ontransitionstart { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Ontransitionend { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Ontransitioncancel { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-}
-
 ///<include file='Utils/Docs/CSSStyleValue/CSSStyleValue.generated.xml' path='docs/CSSStyleValue/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSStyleValue
 {
 	
 	///<include file='Utils/Docs/CSSStyleValueParse/CSSStyleValueParse.generated.xml' path='docs/CSSStyleValueParse/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public static CSSStyleValue Parse(USVString property, USVString cssText) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/CSSStyleValueParseAll/CSSStyleValueParseAll.generated.xml' path='docs/CSSStyleValueParseAll/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public static List<CSSStyleValue> ParseAll(USVString property, USVString cssText) { throw new System.NotImplementedException(); }
 }
 
@@ -2695,7 +2596,7 @@ public partial class StylePropertyMapReadOnly
 {
 	public USVString this[int i]  {  get { throw new System.NotImplementedException(); }  set { throw new System.NotImplementedException(); }  } 
 	///<include file='Utils/Docs/StylePropertyMapReadOnlyGet/StylePropertyMapReadOnlyGet.generated.xml' path='docs/StylePropertyMapReadOnlyGet/*'/>
-	public Union9 Get(USVString property) { throw new System.NotImplementedException(); }
+	public Union8 Get(USVString property) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/StylePropertyMapReadOnlyGetAll/StylePropertyMapReadOnlyGetAll.generated.xml' path='docs/StylePropertyMapReadOnlyGetAll/*'/>
 	public List<CSSStyleValue> GetAll(USVString property) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/StylePropertyMapReadOnlyHas/StylePropertyMapReadOnlyHas.generated.xml' path='docs/StylePropertyMapReadOnlyHas/*'/>
@@ -2709,9 +2610,9 @@ public partial class StylePropertyMapReadOnly
 public partial class StylePropertyMap : StylePropertyMapReadOnly
 {
 	///<include file='Utils/Docs/StylePropertyMapSet/StylePropertyMapSet.generated.xml' path='docs/StylePropertyMapSet/*'/>
-	public Undefined Set(USVString property, params Union10[] values) { throw new System.NotImplementedException(); }
+	public Undefined Set(USVString property, params Union9[] values) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/StylePropertyMapAppend/StylePropertyMapAppend.generated.xml' path='docs/StylePropertyMapAppend/*'/>
-	public Undefined Append(USVString property, params Union11[] values) { throw new System.NotImplementedException(); }
+	public Undefined Append(USVString property, params Union10[] values) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/StylePropertyMapDelete/StylePropertyMapDelete.generated.xml' path='docs/StylePropertyMapDelete/*'/>
 	public Undefined Delete(USVString property) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/StylePropertyMapClear/StylePropertyMapClear.generated.xml' path='docs/StylePropertyMapClear/*'/>
@@ -2726,27 +2627,23 @@ public partial class Element
 }
 
 ///<include file='Utils/Docs/CSSStyleRule/CSSStyleRule.generated.xml' path='docs/CSSStyleRule/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSStyleRule
 {
 	///<include file='Utils/Docs/CSSStyleRuleStyleMap/CSSStyleRuleStyleMap.generated.xml' path='docs/CSSStyleRuleStyleMap/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public StylePropertyMap StyleMap { get; }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface ElementCSSInlineStyle
-{
-		public StylePropertyMap AttributeStyleMap { get { throw new System.NotImplementedException(); } }
-}
-
 ///<include file='Utils/Docs/CSSUnparsedValue/CSSUnparsedValue.generated.xml' path='docs/CSSUnparsedValue/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSUnparsedValue : CSSStyleValue
 {
 	///<include file='Utils/Docs/CSSUnparsedValueCSSUnparsedValue/CSSUnparsedValueCSSUnparsedValue.generated.xml' path='docs/CSSUnparsedValueCSSUnparsedValue/*'/>
 	public CSSUnparsedValue(List<CSSUnparsedSegment> members) { }
 	public CSSUnparsedSegment this[int i]  {  get { throw new System.NotImplementedException(); }  set { throw new System.NotImplementedException(); }  } 
 	///<include file='Utils/Docs/CSSUnparsedValueLength/CSSUnparsedValueLength.generated.xml' path='docs/CSSUnparsedValueLength/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Length { get; }
 	
 	
@@ -2755,332 +2652,400 @@ public partial class CSSUnparsedValue : CSSStyleValue
 
 
 ///<include file='Utils/Docs/CSSVariableReferenceValue/CSSVariableReferenceValue.generated.xml' path='docs/CSSVariableReferenceValue/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSVariableReferenceValue
 {
 	///<include file='Utils/Docs/CSSVariableReferenceValueCSSVariableReferenceValue/CSSVariableReferenceValueCSSVariableReferenceValue.generated.xml' path='docs/CSSVariableReferenceValueCSSVariableReferenceValue/*'/>
 	public CSSVariableReferenceValue(USVString variable, CSSUnparsedValue? fallback) { }
 	///<include file='Utils/Docs/CSSVariableReferenceValueVariable/CSSVariableReferenceValueVariable.generated.xml' path='docs/CSSVariableReferenceValueVariable/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public USVString Variable { get; set; }
 	///<include file='Utils/Docs/CSSVariableReferenceValueFallback/CSSVariableReferenceValueFallback.generated.xml' path='docs/CSSVariableReferenceValueFallback/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSUnparsedValue? Fallback { get; }
 	public CSSVariableReferenceValue() { }
 }
 
 ///<include file='Utils/Docs/CSSKeywordValue/CSSKeywordValue.generated.xml' path='docs/CSSKeywordValue/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSKeywordValue : CSSStyleValue
 {
 	///<include file='Utils/Docs/CSSKeywordValueCSSKeywordValue/CSSKeywordValueCSSKeywordValue.generated.xml' path='docs/CSSKeywordValueCSSKeywordValue/*'/>
 	public CSSKeywordValue(USVString value) { }
 	///<include file='Utils/Docs/CSSKeywordValueValue/CSSKeywordValueValue.generated.xml' path='docs/CSSKeywordValueValue/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public USVString Value { get; set; }
 	public CSSKeywordValue() { }
 }
 
 
 
-[To(ToAttribute.None)]
-public enum CSSNumericBaseType
-{
-	[Value("length")]
-	Length,
-	[Value("angle")]
-	Angle,
-	[Value("time")]
-	Time,
-	[Value("frequency")]
-	Frequency,
-	[Value("resolution")]
-	Resolution,
-	[Value("flex")]
-	Flex,
-	[Value("percent")]
-	Percent,
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSNumericType
 {
-		public long Length;
-		public long Angle;
-		public long Time;
-		public long Frequency;
-		public long Resolution;
-		public long Flex;
-		public long Percent;
-		public CSSNumericBaseType PercentHint;
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public long Length;
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public long Angle;
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public long Time;
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public long Frequency;
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public long Resolution;
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public long Flex;
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public long Percent;
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSNumericBaseType PercentHint;
 }
 
 ///<include file='Utils/Docs/CSSNumericValue/CSSNumericValue.generated.xml' path='docs/CSSNumericValue/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSNumericValue : CSSStyleValue
 {
 	///<include file='Utils/Docs/CSSNumericValueAdd/CSSNumericValueAdd.generated.xml' path='docs/CSSNumericValueAdd/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSNumericValue Add(params CSSNumberish[] values) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/CSSNumericValueSub/CSSNumericValueSub.generated.xml' path='docs/CSSNumericValueSub/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSNumericValue Sub(params CSSNumberish[] values) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/CSSNumericValueMul/CSSNumericValueMul.generated.xml' path='docs/CSSNumericValueMul/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSNumericValue Mul(params CSSNumberish[] values) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/CSSNumericValueDiv/CSSNumericValueDiv.generated.xml' path='docs/CSSNumericValueDiv/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSNumericValue Div(params CSSNumberish[] values) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/CSSNumericValueMin/CSSNumericValueMin.generated.xml' path='docs/CSSNumericValueMin/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSNumericValue Min(params CSSNumberish[] values) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/CSSNumericValueMax/CSSNumericValueMax.generated.xml' path='docs/CSSNumericValueMax/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSNumericValue Max(params CSSNumberish[] values) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/CSSNumericValueEquals/CSSNumericValueEquals.generated.xml' path='docs/CSSNumericValueEquals/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Equals(params CSSNumberish[] value) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/CSSNumericValueTo/CSSNumericValueTo.generated.xml' path='docs/CSSNumericValueTo/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSUnitValue To(USVString unit) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/CSSNumericValueToSum/CSSNumericValueToSum.generated.xml' path='docs/CSSNumericValueToSum/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSMathSum ToSum(params USVString[] units) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/CSSNumericValueType/CSSNumericValueType.generated.xml' path='docs/CSSNumericValueType/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSNumericType Type() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/CSSNumericValueParse/CSSNumericValueParse.generated.xml' path='docs/CSSNumericValueParse/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public static CSSNumericValue Parse(USVString cssText) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/CSSUnitValue/CSSUnitValue.generated.xml' path='docs/CSSUnitValue/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSUnitValue : CSSNumericValue
 {
 	///<include file='Utils/Docs/CSSUnitValueCSSUnitValue/CSSUnitValueCSSUnitValue.generated.xml' path='docs/CSSUnitValueCSSUnitValue/*'/>
 	public CSSUnitValue(Number value, USVString unit) { }
 	///<include file='Utils/Docs/CSSUnitValueValue/CSSUnitValueValue.generated.xml' path='docs/CSSUnitValueValue/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Number Value { get; set; }
 	///<include file='Utils/Docs/CSSUnitValueUnit/CSSUnitValueUnit.generated.xml' path='docs/CSSUnitValueUnit/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public USVString Unit { get; }
 	public CSSUnitValue() { }
 }
 
 ///<include file='Utils/Docs/CSSMathValue/CSSMathValue.generated.xml' path='docs/CSSMathValue/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSMathValue : CSSNumericValue
 {
 	///<include file='Utils/Docs/CSSMathValueOperator/CSSMathValueOperator.generated.xml' path='docs/CSSMathValueOperator/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSMathOperator Operator { get; }
 }
 
 ///<include file='Utils/Docs/CSSMathSum/CSSMathSum.generated.xml' path='docs/CSSMathSum/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSMathSum : CSSMathValue
 {
 	///<include file='Utils/Docs/CSSMathSumCSSMathSum/CSSMathSumCSSMathSum.generated.xml' path='docs/CSSMathSumCSSMathSum/*'/>
 	public CSSMathSum(params CSSNumberish[] args) { }
 	///<include file='Utils/Docs/CSSMathSumValues/CSSMathSumValues.generated.xml' path='docs/CSSMathSumValues/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSNumericArray Values { get; }
 	public CSSMathSum() { }
 }
 
 ///<include file='Utils/Docs/CSSMathProduct/CSSMathProduct.generated.xml' path='docs/CSSMathProduct/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSMathProduct : CSSMathValue
 {
 	///<include file='Utils/Docs/CSSMathProductCSSMathProduct/CSSMathProductCSSMathProduct.generated.xml' path='docs/CSSMathProductCSSMathProduct/*'/>
 	public CSSMathProduct(params CSSNumberish[] args) { }
 	///<include file='Utils/Docs/CSSMathProductValues/CSSMathProductValues.generated.xml' path='docs/CSSMathProductValues/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSNumericArray Values { get; }
 	public CSSMathProduct() { }
 }
 
 ///<include file='Utils/Docs/CSSMathNegate/CSSMathNegate.generated.xml' path='docs/CSSMathNegate/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSMathNegate : CSSMathValue
 {
 	///<include file='Utils/Docs/CSSMathNegateCSSMathNegate/CSSMathNegateCSSMathNegate.generated.xml' path='docs/CSSMathNegateCSSMathNegate/*'/>
 	public CSSMathNegate(CSSNumberish arg) { }
 	///<include file='Utils/Docs/CSSMathNegateValue/CSSMathNegateValue.generated.xml' path='docs/CSSMathNegateValue/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSNumericValue Value { get; }
 	public CSSMathNegate() { }
 }
 
 ///<include file='Utils/Docs/CSSMathInvert/CSSMathInvert.generated.xml' path='docs/CSSMathInvert/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSMathInvert : CSSMathValue
 {
 	///<include file='Utils/Docs/CSSMathInvertCSSMathInvert/CSSMathInvertCSSMathInvert.generated.xml' path='docs/CSSMathInvertCSSMathInvert/*'/>
 	public CSSMathInvert(CSSNumberish arg) { }
 	///<include file='Utils/Docs/CSSMathInvertValue/CSSMathInvertValue.generated.xml' path='docs/CSSMathInvertValue/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSNumericValue Value { get; }
 	public CSSMathInvert() { }
 }
 
 ///<include file='Utils/Docs/CSSMathMin/CSSMathMin.generated.xml' path='docs/CSSMathMin/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSMathMin : CSSMathValue
 {
 	///<include file='Utils/Docs/CSSMathMinCSSMathMin/CSSMathMinCSSMathMin.generated.xml' path='docs/CSSMathMinCSSMathMin/*'/>
 	public CSSMathMin(params CSSNumberish[] args) { }
 	///<include file='Utils/Docs/CSSMathMinValues/CSSMathMinValues.generated.xml' path='docs/CSSMathMinValues/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSNumericArray Values { get; }
 	public CSSMathMin() { }
 }
 
 ///<include file='Utils/Docs/CSSMathMax/CSSMathMax.generated.xml' path='docs/CSSMathMax/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSMathMax : CSSMathValue
 {
 	///<include file='Utils/Docs/CSSMathMaxCSSMathMax/CSSMathMaxCSSMathMax.generated.xml' path='docs/CSSMathMaxCSSMathMax/*'/>
 	public CSSMathMax(params CSSNumberish[] args) { }
 	///<include file='Utils/Docs/CSSMathMaxValues/CSSMathMaxValues.generated.xml' path='docs/CSSMathMaxValues/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSNumericArray Values { get; }
 	public CSSMathMax() { }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSMathClamp : CSSMathValue
 {
 		public CSSMathClamp(CSSNumberish lower, CSSNumberish value, CSSNumberish upper) { }
-		public CSSNumericValue Lower { get; }
-		public CSSNumericValue Value { get; }
-		public CSSNumericValue Upper { get; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSNumericValue Lower { get; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSNumericValue Value { get; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSNumericValue Upper { get; }
 	public CSSMathClamp() { }
 }
 
 ///<include file='Utils/Docs/CSSNumericArray/CSSNumericArray.generated.xml' path='docs/CSSNumericArray/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSNumericArray
 {
 	public CSSNumericValue this[int i]  {  get { throw new System.NotImplementedException(); }  set { throw new System.NotImplementedException(); }  } 
 	///<include file='Utils/Docs/CSSNumericArrayLength/CSSNumericArrayLength.generated.xml' path='docs/CSSNumericArrayLength/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Length { get; }
 	
-}
-
-[To(ToAttribute.None)]
-public enum CSSMathOperator
-{
-	[Value("sum")]
-	Sum,
-	[Value("product")]
-	Product,
-	[Value("negate")]
-	Negate,
-	[Value("invert")]
-	Invert,
-	[Value("min")]
-	Min,
-	[Value("max")]
-	Max,
-	[Value("clamp")]
-	Clamp,
 }
 
 ///<include file='Utils/Docs/CSS/CSS.generated.xml' path='docs/CSS/*'/>
 public partial class CSS
 {
-		public CSSUnitValue Number(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Percent(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Cap(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Ch(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Em(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Ex(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Ic(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Lh(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Rcap(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Rch(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Rem(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Rex(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Ric(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Rlh(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Vw(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Vh(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Vi(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Vb(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Vmin(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Vmax(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Svw(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Svh(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Svi(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Svb(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Svmin(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Svmax(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Lvw(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Lvh(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Lvi(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Lvb(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Lvmin(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Lvmax(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Dvw(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Dvh(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Dvi(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Dvb(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Dvmin(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Dvmax(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Cqw(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Cqh(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Cqi(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Cqb(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Cqmin(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Cqmax(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Cm(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Mm(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Q(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue In(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Pt(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Pc(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Px(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Deg(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Grad(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Rad(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Turn(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue S(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Ms(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Hz(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue KHz(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Dpi(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Dpcm(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Dppx(Number value) { throw new System.NotImplementedException(); }
-		public CSSUnitValue Fr(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue Number(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue Percent(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue Cap(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue Ch(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue Em(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue Ex(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue Ic(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue Lh(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue Rcap(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue Rch(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue Rem(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue Rex(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue Ric(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue Rlh(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue Vw(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue Vh(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue Vi(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue Vb(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue Vmin(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue Vmax(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue Svw(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue Svh(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue Svi(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue Svb(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue Svmin(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue Svmax(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue Lvw(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue Lvh(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue Lvi(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue Lvb(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue Lvmin(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue Lvmax(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue Dvw(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue Dvh(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue Dvi(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue Dvb(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue Dvmin(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue Dvmax(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue Cqw(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue Cqh(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue Cqi(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue Cqb(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue Cqmin(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue Cqmax(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue Cm(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue Mm(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue Q(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue In(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue Pt(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue Pc(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue Px(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue Deg(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue Grad(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue Rad(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue Turn(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue S(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue Ms(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue Hz(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue KHz(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue Dpi(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue Dpcm(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue Dppx(Number value) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSUnitValue Fr(Number value) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/CSSTransformValue/CSSTransformValue.generated.xml' path='docs/CSSTransformValue/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSTransformValue : CSSStyleValue
 {
 	///<include file='Utils/Docs/CSSTransformValueCSSTransformValue/CSSTransformValueCSSTransformValue.generated.xml' path='docs/CSSTransformValueCSSTransformValue/*'/>
 	public CSSTransformValue(List<CSSTransformComponent> transforms) { }
 	public CSSTransformComponent this[int i]  {  get { throw new System.NotImplementedException(); }  set { throw new System.NotImplementedException(); }  } 
 	///<include file='Utils/Docs/CSSTransformValueLength/CSSTransformValueLength.generated.xml' path='docs/CSSTransformValueLength/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Length { get; }
 	
 	
 	///<include file='Utils/Docs/CSSTransformValueIs2D/CSSTransformValueIs2D.generated.xml' path='docs/CSSTransformValueIs2D/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Is2D { get; }
 	///<include file='Utils/Docs/CSSTransformValueToMatrix/CSSTransformValueToMatrix.generated.xml' path='docs/CSSTransformValueToMatrix/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMMatrix ToMatrix() { throw new System.NotImplementedException(); }
 	public CSSTransformValue() { }
 }
 
 
 ///<include file='Utils/Docs/CSSTransformComponent/CSSTransformComponent.generated.xml' path='docs/CSSTransformComponent/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSTransformComponent
 {
 	
 	///<include file='Utils/Docs/CSSTransformComponentIs2D/CSSTransformComponentIs2D.generated.xml' path='docs/CSSTransformComponentIs2D/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Is2D { get; set; }
 	///<include file='Utils/Docs/CSSTransformComponentToMatrix/CSSTransformComponentToMatrix.generated.xml' path='docs/CSSTransformComponentToMatrix/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMMatrix ToMatrix() { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/CSSTranslate/CSSTranslate.generated.xml' path='docs/CSSTranslate/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSTranslate : CSSTransformComponent
 {
 	///<include file='Utils/Docs/CSSTranslateCSSTranslate/CSSTranslateCSSTranslate.generated.xml' path='docs/CSSTranslateCSSTranslate/*'/>
 	public CSSTranslate(CSSNumericValue x, CSSNumericValue y, CSSNumericValue z) { }
 	///<include file='Utils/Docs/CSSTranslateX/CSSTranslateX.generated.xml' path='docs/CSSTranslateX/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSNumericValue X { get; set; }
 	///<include file='Utils/Docs/CSSTranslateY/CSSTranslateY.generated.xml' path='docs/CSSTranslateY/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSNumericValue Y { get; set; }
 	///<include file='Utils/Docs/CSSTranslateZ/CSSTranslateZ.generated.xml' path='docs/CSSTranslateZ/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSNumericValue Z { get; set; }
 	public CSSTranslate() { }
 }
 
 ///<include file='Utils/Docs/CSSRotate/CSSRotate.generated.xml' path='docs/CSSRotate/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSRotate : CSSTransformComponent
 {
 	///<include file='Utils/Docs/CSSRotateCSSRotate/CSSRotateCSSRotate.generated.xml' path='docs/CSSRotateCSSRotate/*'/>
@@ -3088,217 +3053,250 @@ public partial class CSSRotate : CSSTransformComponent
 	///<include file='Utils/Docs/CSSRotateCSSRotate/CSSRotateCSSRotate.generated.xml' path='docs/CSSRotateCSSRotate/*'/>
 	public CSSRotate(CSSNumberish x, CSSNumberish y, CSSNumberish z, CSSNumericValue angle) { }
 	///<include file='Utils/Docs/CSSRotateX/CSSRotateX.generated.xml' path='docs/CSSRotateX/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSNumberish X { get; set; }
 	///<include file='Utils/Docs/CSSRotateY/CSSRotateY.generated.xml' path='docs/CSSRotateY/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSNumberish Y { get; set; }
 	///<include file='Utils/Docs/CSSRotateZ/CSSRotateZ.generated.xml' path='docs/CSSRotateZ/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSNumberish Z { get; set; }
 	///<include file='Utils/Docs/CSSRotateAngle/CSSRotateAngle.generated.xml' path='docs/CSSRotateAngle/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSNumericValue Angle { get; set; }
 	public CSSRotate() { }
 }
 
 ///<include file='Utils/Docs/CSSScale/CSSScale.generated.xml' path='docs/CSSScale/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSScale : CSSTransformComponent
 {
 	///<include file='Utils/Docs/CSSScaleCSSScale/CSSScaleCSSScale.generated.xml' path='docs/CSSScaleCSSScale/*'/>
 	public CSSScale(CSSNumberish x, CSSNumberish y, CSSNumberish z) { }
 	///<include file='Utils/Docs/CSSScaleX/CSSScaleX.generated.xml' path='docs/CSSScaleX/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSNumberish X { get; set; }
 	///<include file='Utils/Docs/CSSScaleY/CSSScaleY.generated.xml' path='docs/CSSScaleY/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSNumberish Y { get; set; }
 	///<include file='Utils/Docs/CSSScaleZ/CSSScaleZ.generated.xml' path='docs/CSSScaleZ/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSNumberish Z { get; set; }
 	public CSSScale() { }
 }
 
 ///<include file='Utils/Docs/CSSSkew/CSSSkew.generated.xml' path='docs/CSSSkew/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSSkew : CSSTransformComponent
 {
 	///<include file='Utils/Docs/CSSSkewCSSSkew/CSSSkewCSSSkew.generated.xml' path='docs/CSSSkewCSSSkew/*'/>
 	public CSSSkew(CSSNumericValue ax, CSSNumericValue ay) { }
 	///<include file='Utils/Docs/CSSSkewAx/CSSSkewAx.generated.xml' path='docs/CSSSkewAx/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSNumericValue Ax { get; set; }
 	///<include file='Utils/Docs/CSSSkewAy/CSSSkewAy.generated.xml' path='docs/CSSSkewAy/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSNumericValue Ay { get; set; }
 	public CSSSkew() { }
 }
 
 ///<include file='Utils/Docs/CSSSkewX/CSSSkewX.generated.xml' path='docs/CSSSkewX/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSSkewX : CSSTransformComponent
 {
 	///<include file='Utils/Docs/CSSSkewXCSSSkewX/CSSSkewXCSSSkewX.generated.xml' path='docs/CSSSkewXCSSSkewX/*'/>
 	public CSSSkewX(CSSNumericValue ax) { }
 	///<include file='Utils/Docs/CSSSkewXAx/CSSSkewXAx.generated.xml' path='docs/CSSSkewXAx/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSNumericValue Ax { get; set; }
 	public CSSSkewX() { }
 }
 
 ///<include file='Utils/Docs/CSSSkewY/CSSSkewY.generated.xml' path='docs/CSSSkewY/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSSkewY : CSSTransformComponent
 {
 	///<include file='Utils/Docs/CSSSkewYCSSSkewY/CSSSkewYCSSSkewY.generated.xml' path='docs/CSSSkewYCSSSkewY/*'/>
 	public CSSSkewY(CSSNumericValue ay) { }
 	///<include file='Utils/Docs/CSSSkewYAy/CSSSkewYAy.generated.xml' path='docs/CSSSkewYAy/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSNumericValue Ay { get; set; }
 	public CSSSkewY() { }
 }
 
 ///<include file='Utils/Docs/CSSPerspective/CSSPerspective.generated.xml' path='docs/CSSPerspective/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSPerspective : CSSTransformComponent
 {
 	///<include file='Utils/Docs/CSSPerspectiveCSSPerspective/CSSPerspectiveCSSPerspective.generated.xml' path='docs/CSSPerspectiveCSSPerspective/*'/>
 	public CSSPerspective(CSSPerspectiveValue length) { }
 	///<include file='Utils/Docs/CSSPerspectiveLength/CSSPerspectiveLength.generated.xml' path='docs/CSSPerspectiveLength/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSPerspectiveValue Length { get; set; }
 	public CSSPerspective() { }
 }
 
 ///<include file='Utils/Docs/CSSMatrixComponent/CSSMatrixComponent.generated.xml' path='docs/CSSMatrixComponent/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSMatrixComponent : CSSTransformComponent
 {
 	///<include file='Utils/Docs/CSSMatrixComponentCSSMatrixComponent/CSSMatrixComponentCSSMatrixComponent.generated.xml' path='docs/CSSMatrixComponentCSSMatrixComponent/*'/>
 	public CSSMatrixComponent(DOMMatrixReadOnly matrix, CSSMatrixComponentOptions options) { }
 	///<include file='Utils/Docs/CSSMatrixComponentMatrix/CSSMatrixComponentMatrix.generated.xml' path='docs/CSSMatrixComponentMatrix/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMMatrix Matrix { get; set; }
 	public CSSMatrixComponent() { }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSMatrixComponentOptions
 {
-		public bool Is2D;
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public bool Is2D;
 }
 
 ///<include file='Utils/Docs/CSSImageValue/CSSImageValue.generated.xml' path='docs/CSSImageValue/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSImageValue : CSSStyleValue
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSColorValue : CSSStyleValue
 {
-		public static Union16 Parse(USVString cssText) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public static Union15 Parse(USVString cssText) { throw new System.NotImplementedException(); }
 }
 
 
 
 
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSRGB : CSSColorValue
 {
 		public CSSRGB(CSSColorRGBComp r, CSSColorRGBComp g, CSSColorRGBComp b, CSSColorPercent alpha) { }
-		public CSSColorRGBComp R { get; set; }
-		public CSSColorRGBComp G { get; set; }
-		public CSSColorRGBComp B { get; set; }
-		public CSSColorPercent Alpha { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSColorRGBComp R { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSColorRGBComp G { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSColorRGBComp B { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSColorPercent Alpha { get; set; }
 	public CSSRGB() { }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSHSL : CSSColorValue
 {
 		public CSSHSL(CSSColorAngle h, CSSColorPercent s, CSSColorPercent l, CSSColorPercent alpha) { }
-		public CSSColorAngle H { get; set; }
-		public CSSColorPercent S { get; set; }
-		public CSSColorPercent L { get; set; }
-		public CSSColorPercent Alpha { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSColorAngle H { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSColorPercent S { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSColorPercent L { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSColorPercent Alpha { get; set; }
 	public CSSHSL() { }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSHWB : CSSColorValue
 {
 		public CSSHWB(CSSNumericValue h, CSSNumberish w, CSSNumberish b, CSSNumberish alpha) { }
-		public CSSNumericValue H { get; set; }
-		public CSSNumberish W { get; set; }
-		public CSSNumberish B { get; set; }
-		public CSSNumberish Alpha { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSNumericValue H { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSNumberish W { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSNumberish B { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSNumberish Alpha { get; set; }
 	public CSSHWB() { }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSLab : CSSColorValue
 {
 		public CSSLab(CSSColorPercent l, CSSColorNumber a, CSSColorNumber b, CSSColorPercent alpha) { }
-		public CSSColorPercent L { get; set; }
-		public CSSColorNumber A { get; set; }
-		public CSSColorNumber B { get; set; }
-		public CSSColorPercent Alpha { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSColorPercent L { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSColorNumber A { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSColorNumber B { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSColorPercent Alpha { get; set; }
 	public CSSLab() { }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSLCH : CSSColorValue
 {
 		public CSSLCH(CSSColorPercent l, CSSColorPercent c, CSSColorAngle h, CSSColorPercent alpha) { }
-		public CSSColorPercent L { get; set; }
-		public CSSColorPercent C { get; set; }
-		public CSSColorAngle H { get; set; }
-		public CSSColorPercent Alpha { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSColorPercent L { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSColorPercent C { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSColorAngle H { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSColorPercent Alpha { get; set; }
 	public CSSLCH() { }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSOKLab : CSSColorValue
 {
 		public CSSOKLab(CSSColorPercent l, CSSColorNumber a, CSSColorNumber b, CSSColorPercent alpha) { }
-		public CSSColorPercent L { get; set; }
-		public CSSColorNumber A { get; set; }
-		public CSSColorNumber B { get; set; }
-		public CSSColorPercent Alpha { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSColorPercent L { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSColorNumber A { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSColorNumber B { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSColorPercent Alpha { get; set; }
 	public CSSOKLab() { }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSOKLCH : CSSColorValue
 {
 		public CSSOKLCH(CSSColorPercent l, CSSColorPercent c, CSSColorAngle h, CSSColorPercent alpha) { }
-		public CSSColorPercent L { get; set; }
-		public CSSColorPercent C { get; set; }
-		public CSSColorAngle H { get; set; }
-		public CSSColorPercent Alpha { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSColorPercent L { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSColorPercent C { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSColorAngle H { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSColorPercent Alpha { get; set; }
 	public CSSOKLCH() { }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSColor : CSSColorValue
 {
 		public CSSColor(CSSKeywordish colorSpace, List<CSSColorPercent> channels, CSSNumberish alpha) { }
-		public CSSKeywordish ColorSpace { get; set; }
-		public CSSColorPercent[] Channels { get; set; }
-		public CSSNumberish Alpha { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSKeywordish ColorSpace { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSColorPercent[] Channels { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSNumberish Alpha { get; set; }
 	public CSSColor() { }
 }
 
-///<include file='Utils/Docs/CSSRule/CSSRule.generated.xml' path='docs/CSSRule/*'/>
-public partial class CSSRule
-{
-		public const ushort VIEW_TRANSITION_RULE = 15;
-}
-
-[To(ToAttribute.None)]
-public enum ViewTransitionNavigation
-{
-	[Value("auto")]
-	Auto,
-	[Value("none")]
-	None,
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSViewTransitionRule : CSSRule
 {
-		public ViewTransitionNavigation Navigation { get; }
-		public CSSOMString[] Types { get; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Navigation { get; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString[] Types { get; }
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -3317,7 +3315,7 @@ public partial class ViewTransition
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class StartViewTransitionOptions
 {
-		public UpdateCallback? Update;
+		public ViewTransitionUpdateCallback? Update;
 		public List<DOMString>? Types;
 }
 
@@ -3325,12 +3323,7 @@ public partial class StartViewTransitionOptions
 public partial class Document
 {
 	///<include file='Utils/Docs/DocumentStartViewTransition/DocumentStartViewTransition.generated.xml' path='docs/DocumentStartViewTransition/*'/>
-	public ViewTransition StartViewTransition(Union21 callbackOptions) { throw new System.NotImplementedException(); }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct UpdateCallback
-{
+	public ViewTransition StartViewTransition(Union20 callbackOptions) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/ViewTransition/ViewTransition.generated.xml' path='docs/ViewTransition/*'/>
@@ -3346,15 +3339,17 @@ public partial class ViewTransition
 	public Undefined SkipTransition() { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.None)]
-public enum ScrollBehavior
+///<include file='Utils/Docs/Window/Window.generated.xml' path='docs/Window/*'/>
+public partial class Window
 {
-	[Value("auto")]
-	Auto,
-	[Value("instant")]
-	Instant,
-	[Value("smooth")]
-	Smooth,
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public Viewport Viewport { get; }
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class Viewport
+{
+		public DOMRect[]? Segments { get; }
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -3512,9 +3507,15 @@ public partial class Document
 	///<include file='Utils/Docs/DocumentElementsFromPoint/DocumentElementsFromPoint.generated.xml' path='docs/DocumentElementsFromPoint/*'/>
 	public List<Element> ElementsFromPoint(Number x, Number y) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/DocumentCaretPositionFromPoint/DocumentCaretPositionFromPoint.generated.xml' path='docs/DocumentCaretPositionFromPoint/*'/>
-	public CaretPosition? CaretPositionFromPoint(Number x, Number y) { throw new System.NotImplementedException(); }
+	public CaretPosition? CaretPositionFromPoint(Number x, Number y, CaretPositionFromPointOptions options) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/DocumentScrollingElement/DocumentScrollingElement.generated.xml' path='docs/DocumentScrollingElement/*'/>
 	public Element? ScrollingElement { get; }
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class CaretPositionFromPointOptions
+{
+		public List<ShadowRoot> ShadowRoots;
 }
 
 ///<include file='Utils/Docs/CaretPosition/CaretPosition.generated.xml' path='docs/CaretPosition/*'/>
@@ -3524,19 +3525,6 @@ public partial class CaretPosition
 		public Node OffsetNode { get; }
 		public ulong Offset { get; }
 		public DOMRect? GetClientRect() { throw new System.NotImplementedException(); }
-}
-
-[To(ToAttribute.None)]
-public enum ScrollLogicalPosition
-{
-	[Value("start")]
-	Start,
-	[Value("center")]
-	Center,
-	[Value("end")]
-	End,
-	[Value("nearest")]
-	Nearest,
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -3566,7 +3554,7 @@ public partial class Element
 	///<include file='Utils/Docs/ElementCheckVisibility/ElementCheckVisibility.generated.xml' path='docs/ElementCheckVisibility/*'/>
 	public bool CheckVisibility(CheckVisibilityOptions options) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/ElementScrollIntoView/ElementScrollIntoView.generated.xml' path='docs/ElementScrollIntoView/*'/>
-	public Undefined ScrollIntoView(Union22 arg) { throw new System.NotImplementedException(); }
+	public Undefined ScrollIntoView(Union21 arg) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/ElementScroll/ElementScroll.generated.xml' path='docs/ElementScroll/*'/>
 	public Undefined Scroll(ScrollToOptions options) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/ElementScroll/ElementScroll.generated.xml' path='docs/ElementScroll/*'/>
@@ -3595,7 +3583,8 @@ public partial class Element
 	public long ClientWidth { get; }
 	///<include file='Utils/Docs/ElementClientHeight/ElementClientHeight.generated.xml' path='docs/ElementClientHeight/*'/>
 	public long ClientHeight { get; }
-		public Number CurrentCSSZoom { get; }
+	///<include file='Utils/Docs/ElementCurrentCSSZoom/ElementCurrentCSSZoom.generated.xml' path='docs/ElementCurrentCSSZoom/*'/>
+	public Number CurrentCSSZoom { get; }
 }
 
 ///<include file='Utils/Docs/HTMLElement/HTMLElement.generated.xml' path='docs/HTMLElement/*'/>
@@ -3659,19 +3648,6 @@ public partial class MouseEvent
 	public Number OffsetY { get; }
 }
 
-[To(ToAttribute.None)]
-public enum CSSBoxType
-{
-	[Value("margin")]
-	Margin,
-	[Value("border")]
-	Border,
-	[Value("padding")]
-	Padding,
-	[Value("content")]
-	Content,
-}
-
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class BoxQuadOptions
 {
@@ -3685,20 +3661,6 @@ public partial class ConvertCoordinateOptions
 		public CSSBoxType FromBox;
 		public CSSBoxType ToBox;
 }
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface GeometryUtils
-{
-		public List<DOMQuad> GetBoxQuads(BoxQuadOptions options) { throw new System.NotImplementedException(); }
-		public DOMQuad ConvertQuadFromNode(DOMQuadInit quad, GeometryNode from, ConvertCoordinateOptions options) { throw new System.NotImplementedException(); }
-		public DOMQuad ConvertRectFromNode(DOMRectReadOnly rect, GeometryNode from, ConvertCoordinateOptions options) { throw new System.NotImplementedException(); }
-		public DOMPoint ConvertPointFromNode(DOMPointInit point, GeometryNode from, ConvertCoordinateOptions options) { throw new System.NotImplementedException(); }
-}
-
-
-
-
-
 
 ///<include file='Utils/Docs/VisualViewport/VisualViewport.generated.xml' path='docs/VisualViewport/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -3748,7 +3710,7 @@ public partial class StyleSheet
 	///<include file='Utils/Docs/StyleSheetHref/StyleSheetHref.generated.xml' path='docs/StyleSheetHref/*'/>
 	public USVString? Href { get; }
 	///<include file='Utils/Docs/StyleSheetOwnerNode/StyleSheetOwnerNode.generated.xml' path='docs/StyleSheetOwnerNode/*'/>
-	public Union24? OwnerNode { get; }
+	public Union23? OwnerNode { get; }
 	///<include file='Utils/Docs/StyleSheetParentStyleSheet/StyleSheetParentStyleSheet.generated.xml' path='docs/StyleSheetParentStyleSheet/*'/>
 	public CSSStyleSheet? ParentStyleSheet { get; }
 	///<include file='Utils/Docs/StyleSheetTitle/StyleSheetTitle.generated.xml' path='docs/StyleSheetTitle/*'/>
@@ -3760,42 +3722,54 @@ public partial class StyleSheet
 }
 
 ///<include file='Utils/Docs/CSSStyleSheet/CSSStyleSheet.generated.xml' path='docs/CSSStyleSheet/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSStyleSheet : StyleSheet
 {
 	///<include file='Utils/Docs/CSSStyleSheetCSSStyleSheet/CSSStyleSheetCSSStyleSheet.generated.xml' path='docs/CSSStyleSheetCSSStyleSheet/*'/>
 	public CSSStyleSheet(CSSStyleSheetInit options) { }
 	///<include file='Utils/Docs/CSSStyleSheetOwnerRule/CSSStyleSheetOwnerRule.generated.xml' path='docs/CSSStyleSheetOwnerRule/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSRule? OwnerRule { get; }
 	///<include file='Utils/Docs/CSSStyleSheetCssRules/CSSStyleSheetCssRules.generated.xml' path='docs/CSSStyleSheetCssRules/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSRuleList CssRules { get; }
 	///<include file='Utils/Docs/CSSStyleSheetInsertRule/CSSStyleSheetInsertRule.generated.xml' path='docs/CSSStyleSheetInsertRule/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong InsertRule(CSSOMString rule, ulong index) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/CSSStyleSheetDeleteRule/CSSStyleSheetDeleteRule.generated.xml' path='docs/CSSStyleSheetDeleteRule/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined DeleteRule(ulong index) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/CSSStyleSheetReplace/CSSStyleSheetReplace.generated.xml' path='docs/CSSStyleSheetReplace/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Task<CSSStyleSheet> Replace(USVString text) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/CSSStyleSheetReplaceSync/CSSStyleSheetReplaceSync.generated.xml' path='docs/CSSStyleSheetReplaceSync/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined ReplaceSync(USVString text) { throw new System.NotImplementedException(); }
 	public CSSStyleSheet() { }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSStyleSheetInit
 {
-		public DOMString BaseURL;
-		public Union25 Media;
-		public bool Disabled;
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public DOMString BaseURL;
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public Union24 Media;
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public bool Disabled;
 }
 
 ///<include file='Utils/Docs/CSSStyleSheet/CSSStyleSheet.generated.xml' path='docs/CSSStyleSheet/*'/>
 public partial class CSSStyleSheet
 {
 	///<include file='Utils/Docs/CSSStyleSheetRules/CSSStyleSheetRules.generated.xml' path='docs/CSSStyleSheetRules/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSRuleList Rules { get; }
 	///<include file='Utils/Docs/CSSStyleSheetAddRule/CSSStyleSheetAddRule.generated.xml' path='docs/CSSStyleSheetAddRule/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public long AddRule(DOMString selector, DOMString style, ulong index) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/CSSStyleSheetRemoveRule/CSSStyleSheetRemoveRule.generated.xml' path='docs/CSSStyleSheetRemoveRule/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined RemoveRule(ulong index) { throw new System.NotImplementedException(); }
 }
 
@@ -3808,26 +3782,13 @@ public partial class StyleSheetList
 	public ulong Length { get; }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface DocumentOrShadowRoot
-{
-		public StyleSheetList StyleSheets { get { throw new System.NotImplementedException(); } }
-		public CSSStyleSheet[] AdoptedStyleSheets { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface LinkStyle
-{
-		public CSSStyleSheet? Sheet { get { throw new System.NotImplementedException(); } }
-}
-
-
 ///<include file='Utils/Docs/CSSRuleList/CSSRuleList.generated.xml' path='docs/CSSRuleList/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSRuleList
 {
 	
 	///<include file='Utils/Docs/CSSRuleListLength/CSSRuleListLength.generated.xml' path='docs/CSSRuleListLength/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Length { get; }
 }
 
@@ -3835,138 +3796,183 @@ public partial class CSSRuleList
 public partial class CSSRule
 {
 	///<include file='Utils/Docs/CSSRuleCssText/CSSRuleCssText.generated.xml' path='docs/CSSRuleCssText/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSOMString CssText { get; set; }
 	///<include file='Utils/Docs/CSSRuleParentRule/CSSRuleParentRule.generated.xml' path='docs/CSSRuleParentRule/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSRule? ParentRule { get; }
 	///<include file='Utils/Docs/CSSRuleParentStyleSheet/CSSRuleParentStyleSheet.generated.xml' path='docs/CSSRuleParentStyleSheet/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSStyleSheet? ParentStyleSheet { get; }
 	///<include file='Utils/Docs/CSSRuleType/CSSRuleType.generated.xml' path='docs/CSSRuleType/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public ushort Type { get; }
-		public const ushort STYLE_RULE = 1;
-		public const ushort CHARSET_RULE = 2;
-		public const ushort IMPORT_RULE = 3;
-		public const ushort MEDIA_RULE = 4;
-		public const ushort FONT_FACE_RULE = 5;
-		public const ushort PAGE_RULE = 6;
-		public const ushort MARGIN_RULE = 9;
-		public const ushort NAMESPACE_RULE = 10;
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public const ushort STYLE_RULE = 1;
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public const ushort CHARSET_RULE = 2;
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public const ushort IMPORT_RULE = 3;
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public const ushort MEDIA_RULE = 4;
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public const ushort FONT_FACE_RULE = 5;
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public const ushort PAGE_RULE = 6;
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public const ushort MARGIN_RULE = 9;
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public const ushort NAMESPACE_RULE = 10;
 }
 
 ///<include file='Utils/Docs/CSSStyleRule/CSSStyleRule.generated.xml' path='docs/CSSStyleRule/*'/>
 public partial class CSSStyleRule : CSSGroupingRule
 {
 	///<include file='Utils/Docs/CSSStyleRuleSelectorText/CSSStyleRuleSelectorText.generated.xml' path='docs/CSSStyleRuleSelectorText/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSOMString SelectorText { get; set; }
 	///<include file='Utils/Docs/CSSStyleRuleStyle/CSSStyleRuleStyle.generated.xml' path='docs/CSSStyleRuleStyle/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSStyleProperties Style { get; }
 }
 
 ///<include file='Utils/Docs/CSSImportRule/CSSImportRule.generated.xml' path='docs/CSSImportRule/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSImportRule : CSSRule
 {
 	///<include file='Utils/Docs/CSSImportRuleHref/CSSImportRuleHref.generated.xml' path='docs/CSSImportRuleHref/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public USVString Href { get; }
 	///<include file='Utils/Docs/CSSImportRuleMedia/CSSImportRuleMedia.generated.xml' path='docs/CSSImportRuleMedia/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public MediaList Media { get; }
 	///<include file='Utils/Docs/CSSImportRuleStyleSheet/CSSImportRuleStyleSheet.generated.xml' path='docs/CSSImportRuleStyleSheet/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSStyleSheet? StyleSheet { get; }
 	///<include file='Utils/Docs/CSSImportRuleLayerName/CSSImportRuleLayerName.generated.xml' path='docs/CSSImportRuleLayerName/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSOMString? LayerName { get; }
 	///<include file='Utils/Docs/CSSImportRuleSupportsText/CSSImportRuleSupportsText.generated.xml' path='docs/CSSImportRuleSupportsText/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSOMString? SupportsText { get; }
 }
 
 ///<include file='Utils/Docs/CSSGroupingRule/CSSGroupingRule.generated.xml' path='docs/CSSGroupingRule/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSGroupingRule : CSSRule
 {
 	///<include file='Utils/Docs/CSSGroupingRuleCssRules/CSSGroupingRuleCssRules.generated.xml' path='docs/CSSGroupingRuleCssRules/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSRuleList CssRules { get; }
 	///<include file='Utils/Docs/CSSGroupingRuleInsertRule/CSSGroupingRuleInsertRule.generated.xml' path='docs/CSSGroupingRuleInsertRule/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong InsertRule(CSSOMString rule, ulong index) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/CSSGroupingRuleDeleteRule/CSSGroupingRuleDeleteRule.generated.xml' path='docs/CSSGroupingRuleDeleteRule/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined DeleteRule(ulong index) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+///<include file='Utils/Docs/CSSPageDescriptors/CSSPageDescriptors.generated.xml' path='docs/CSSPageDescriptors/*'/>
+[To(ToAttribute.Default)]
 public partial class CSSPageDescriptors : CSSStyleDeclaration
 {
-		public CSSOMString Margin { get; set; }
-		public CSSOMString MarginTop { get; set; }
-		public CSSOMString MarginRight { get; set; }
-		public CSSOMString MarginBottom { get; set; }
-		public CSSOMString MarginLeft { get; set; }
-		public CSSOMString Margin_top { get; set; }
-		public CSSOMString Margin_right { get; set; }
-		public CSSOMString Margin_bottom { get; set; }
-		public CSSOMString Margin_left { get; set; }
-		public CSSOMString Size { get; set; }
-		public CSSOMString Marks { get; set; }
-		public CSSOMString Bleed { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Margin { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString MarginTop { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString MarginRight { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString MarginBottom { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString MarginLeft { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Margin_top { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Margin_right { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Margin_bottom { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Margin_left { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Size { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString PageOrientation { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Page_orientation { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Marks { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Bleed { get; set; }
 }
 
 ///<include file='Utils/Docs/CSSPageRule/CSSPageRule.generated.xml' path='docs/CSSPageRule/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSPageRule : CSSGroupingRule
 {
 	///<include file='Utils/Docs/CSSPageRuleSelectorText/CSSPageRuleSelectorText.generated.xml' path='docs/CSSPageRuleSelectorText/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSOMString SelectorText { get; set; }
 	///<include file='Utils/Docs/CSSPageRuleStyle/CSSPageRuleStyle.generated.xml' path='docs/CSSPageRuleStyle/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSPageDescriptors Style { get; }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSMarginRule : CSSRule
 {
-		public CSSOMString Name { get; }
-		public CSSStyleDeclaration Style { get; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString Name { get; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSStyleDeclaration Style { get; }
 }
 
 ///<include file='Utils/Docs/CSSNamespaceRule/CSSNamespaceRule.generated.xml' path='docs/CSSNamespaceRule/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSNamespaceRule : CSSRule
 {
 	///<include file='Utils/Docs/CSSNamespaceRuleNamespaceURI/CSSNamespaceRuleNamespaceURI.generated.xml' path='docs/CSSNamespaceRuleNamespaceURI/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSOMString NamespaceURI { get; }
 	///<include file='Utils/Docs/CSSNamespaceRulePrefix/CSSNamespaceRulePrefix.generated.xml' path='docs/CSSNamespaceRulePrefix/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSOMString Prefix { get; }
 }
 
 ///<include file='Utils/Docs/CSSStyleDeclaration/CSSStyleDeclaration.generated.xml' path='docs/CSSStyleDeclaration/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSStyleDeclaration
 {
 	///<include file='Utils/Docs/CSSStyleDeclarationCssText/CSSStyleDeclarationCssText.generated.xml' path='docs/CSSStyleDeclarationCssText/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSOMString CssText { get; set; }
 	///<include file='Utils/Docs/CSSStyleDeclarationLength/CSSStyleDeclarationLength.generated.xml' path='docs/CSSStyleDeclarationLength/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Length { get; }
 	
 	///<include file='Utils/Docs/CSSStyleDeclarationGetPropertyValue/CSSStyleDeclarationGetPropertyValue.generated.xml' path='docs/CSSStyleDeclarationGetPropertyValue/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSOMString GetPropertyValue(CSSOMString property) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/CSSStyleDeclarationGetPropertyPriority/CSSStyleDeclarationGetPropertyPriority.generated.xml' path='docs/CSSStyleDeclarationGetPropertyPriority/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSOMString GetPropertyPriority(CSSOMString property) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/CSSStyleDeclarationSetProperty/CSSStyleDeclarationSetProperty.generated.xml' path='docs/CSSStyleDeclarationSetProperty/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined SetProperty(CSSOMString property, CSSOMString value, CSSOMString priority) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/CSSStyleDeclarationRemoveProperty/CSSStyleDeclarationRemoveProperty.generated.xml' path='docs/CSSStyleDeclarationRemoveProperty/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSOMString RemoveProperty(CSSOMString property) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/CSSStyleDeclarationParentRule/CSSStyleDeclarationParentRule.generated.xml' path='docs/CSSStyleDeclarationParentRule/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSRule? ParentRule { get; }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class CSSStyleProperties : CSSStyleDeclaration
 {
-		public CSSOMString CssFloat { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public CSSOMString CssFloat { get; set; }
 }
-
-public partial interface ElementCSSInlineStyle
-{
-		public CSSStyleDeclaration Style { get { throw new System.NotImplementedException(); } }
-}
-
-
-
 
 ///<include file='Utils/Docs/Window/Window.generated.xml' path='docs/Window/*'/>
 public partial class Window
@@ -3980,6 +3986,7 @@ public partial class Window
 public partial class CSS
 {
 	///<include file='Utils/Docs/CSSEscape/CSSEscape.generated.xml' path='docs/CSSEscape/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public CSSOMString Escape(CSSOMString ident) { throw new System.NotImplementedException(); }
 }
 
@@ -3997,11 +4004,11 @@ public partial class DataCue : TextTrackCue
 public partial class DeprecationReportBody : ReportBody
 {
 	///<include file='Utils/Docs/DeprecationReportBodyToJSON/DeprecationReportBodyToJSON.generated.xml' path='docs/DeprecationReportBodyToJSON/*'/>
-	public object ToJSON() { throw new System.NotImplementedException(); }
+	public Object ToJSON() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/DeprecationReportBodyId/DeprecationReportBodyId.generated.xml' path='docs/DeprecationReportBodyId/*'/>
 	public DOMString Id { get; }
 	///<include file='Utils/Docs/DeprecationReportBodyAnticipatedRemoval/DeprecationReportBodyAnticipatedRemoval.generated.xml' path='docs/DeprecationReportBodyAnticipatedRemoval/*'/>
-	public object? AnticipatedRemoval { get; }
+	public Object? AnticipatedRemoval { get; }
 	///<include file='Utils/Docs/DeprecationReportBodyMessage/DeprecationReportBodyMessage.generated.xml' path='docs/DeprecationReportBodyMessage/*'/>
 	public DOMString Message { get; }
 	///<include file='Utils/Docs/DeprecationReportBodySourceFile/DeprecationReportBodySourceFile.generated.xml' path='docs/DeprecationReportBodySourceFile/*'/>
@@ -4022,15 +4029,6 @@ public partial class NavigatorManagedData
 		public Task<DOMString> GetSerialNumber() { throw new System.NotImplementedException(); }
 }
 
-///<include file='Utils/Docs/NavigatorDeviceMemory/NavigatorDeviceMemory.generated.xml' path='docs/NavigatorDeviceMemory/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface NavigatorDeviceMemory
-{
-		public Number DeviceMemory { get { throw new System.NotImplementedException(); } }
-}
-
-
-
 ///<include file='Utils/Docs/Navigator/Navigator.generated.xml' path='docs/Navigator/*'/>
 public partial class Navigator
 {
@@ -4044,13 +4042,29 @@ public partial class DevicePosture : EventTarget
 		public EventHandler Onchange { get; set; }
 }
 
-[To(ToAttribute.None)]
-public enum DevicePostureType
+public partial class CredentialRequestOptions
 {
-	[Value("continuous")]
-	Continuous,
-	[Value("folded")]
-	Folded,
+		public DigitalCredentialRequestOptions Digital;
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class DigitalCredentialRequestOptions
+{
+		public List<DigitalCredentialRequest> Requests;
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class DigitalCredentialRequest
+{
+		public required DOMString Protocol;
+		public required Object Data;
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class DigitalCredential : Credential
+{
+		public DOMString Protocol { get; }
+		public Object Data { get; }
 }
 
 ///<include file='Utils/Docs/Window/Window.generated.xml' path='docs/Window/*'/>
@@ -4085,51 +4099,11 @@ public partial class ItemDetails
 		public ulong IntroductoryPriceCycles;
 }
 
-[To(ToAttribute.None)]
-public enum ItemType
-{
-	[Value("product")]
-	Product,
-	[Value("subscription")]
-	Subscription,
-}
-
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class PurchaseDetails
 {
 		public required DOMString ItemId;
 		public required DOMString PurchaseToken;
-}
-
-///<include file='Utils/Docs/Navigator/Navigator.generated.xml' path='docs/Navigator/*'/>
-public partial class Navigator
-{
-		public CredentialsContainer Identity { get; }
-}
-
-public partial class CredentialRequestOptions
-{
-		public DigitalCredentialRequestOptions Digital;
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class DigitalCredentialRequestOptions
-{
-		public List<IdentityRequestProvider> Providers;
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class IdentityRequestProvider
-{
-		public required DOMString Protocol;
-		public required object Request;
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class DigitalCredential : Credential
-{
-		public DOMString Protocol { get; }
-		public System.Byte Data { get; }
 }
 
 ///<include file='Utils/Docs/Window/Window.generated.xml' path='docs/Window/*'/>
@@ -4157,6 +4131,7 @@ public partial class DocumentPictureInPictureOptions
 		public ulong Width;
 		public ulong Height;
 		public bool DisallowReturnToOpener;
+		public bool PreferInitialWindowPlacement;
 }
 
 ///<include file='Utils/Docs/DocumentPictureInPictureEvent/DocumentPictureInPictureEvent.generated.xml' path='docs/DocumentPictureInPictureEvent/*'/>
@@ -4184,13 +4159,6 @@ public partial class XMLSerializer
 	public XMLSerializer() { }
 	///<include file='Utils/Docs/XMLSerializerSerializeToString/XMLSerializerSerializeToString.generated.xml' path='docs/XMLSerializerSerializeToString/*'/>
 	public DOMString SerializeToString(Node root) { throw new System.NotImplementedException(); }
-}
-
-///<include file='Utils/Docs/Range/Range.generated.xml' path='docs/Range/*'/>
-public partial class Range
-{
-	///<include file='Utils/Docs/RangeCreateContextualFragment/RangeCreateContextualFragment.generated.xml' path='docs/RangeCreateContextualFragment/*'/>
-	public DocumentFragment CreateContextualFragment(HTMLString fragment) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/Event/Event.generated.xml' path='docs/Event/*'/>
@@ -4255,7 +4223,7 @@ public partial class Window
 {
 	///<include file='Utils/Docs/WindowEvent/WindowEvent.generated.xml' path='docs/WindowEvent/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
-	public Union26 Event { get; }
+	public Union25 Event { get; }
 }
 
 ///<include file='Utils/Docs/CustomEvent/CustomEvent.generated.xml' path='docs/CustomEvent/*'/>
@@ -4286,17 +4254,11 @@ public partial class EventTarget
 	///<include file='Utils/Docs/EventTargetEventTarget/EventTargetEventTarget.generated.xml' path='docs/EventTargetEventTarget/*'/>
 	public EventTarget() { }
 	///<include file='Utils/Docs/EventTargetAddEventListener/EventTargetAddEventListener.generated.xml' path='docs/EventTargetAddEventListener/*'/>
-	public Undefined AddEventListener(DOMString type, EventListener? callback, Union27 options) { throw new System.NotImplementedException(); }
+	public Undefined AddEventListener(DOMString type, EventListener? callback, Union26 options) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/EventTargetRemoveEventListener/EventTargetRemoveEventListener.generated.xml' path='docs/EventTargetRemoveEventListener/*'/>
-	public Undefined RemoveEventListener(DOMString type, EventListener? callback, Union28 options) { throw new System.NotImplementedException(); }
+	public Undefined RemoveEventListener(DOMString type, EventListener? callback, Union27 options) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/EventTargetDispatchEvent/EventTargetDispatchEvent.generated.xml' path='docs/EventTargetDispatchEvent/*'/>
 	public bool DispatchEvent(Event event_) { throw new System.NotImplementedException(); }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface EventListener
-{
-		public Undefined HandleEvent(Event event_) { throw new System.NotImplementedException(); }
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -4344,83 +4306,6 @@ public partial class AbortSignal : EventTarget
 		public EventHandler Onabort { get; set; }
 }
 
-///<include file='Utils/Docs/Document/Document.generated.xml' path='docs/Document/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface NonElementParentNode
-{
-	///<include file='Utils/Docs/DocumentGetElementById/DocumentGetElementById.generated.xml' path='docs/DocumentGetElementById/*'/>
-	public Element? GetElementById(DOMString elementId) { throw new System.NotImplementedException(); }
-}
-
-
-
-public partial interface DocumentOrShadowRoot
-{
-}
-
-
-
-///<include file='Utils/Docs/Element/Element.generated.xml' path='docs/Element/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface ParentNode
-{
-	///<include file='Utils/Docs/ElementChildren/ElementChildren.generated.xml' path='docs/ElementChildren/*'/>
-	public HTMLCollection Children { get { throw new System.NotImplementedException(); } }
-	///<include file='Utils/Docs/ElementFirstElementChild/ElementFirstElementChild.generated.xml' path='docs/ElementFirstElementChild/*'/>
-	public Element? FirstElementChild { get { throw new System.NotImplementedException(); } }
-	///<include file='Utils/Docs/ElementLastElementChild/ElementLastElementChild.generated.xml' path='docs/ElementLastElementChild/*'/>
-	public Element? LastElementChild { get { throw new System.NotImplementedException(); } }
-	///<include file='Utils/Docs/ElementChildElementCount/ElementChildElementCount.generated.xml' path='docs/ElementChildElementCount/*'/>
-	public ulong ChildElementCount { get { throw new System.NotImplementedException(); } }
-	///<include file='Utils/Docs/ElementPrepend/ElementPrepend.generated.xml' path='docs/ElementPrepend/*'/>
-	public Undefined Prepend(params Union29[] nodes) { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/ElementAppend/ElementAppend.generated.xml' path='docs/ElementAppend/*'/>
-	public Undefined Append(params Union30[] nodes) { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/ElementReplaceChildren/ElementReplaceChildren.generated.xml' path='docs/ElementReplaceChildren/*'/>
-	public Undefined ReplaceChildren(params Union31[] nodes) { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/ElementQuerySelector/ElementQuerySelector.generated.xml' path='docs/ElementQuerySelector/*'/>
-	public Element? QuerySelector(DOMString selectors) { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/ElementQuerySelectorAll/ElementQuerySelectorAll.generated.xml' path='docs/ElementQuerySelectorAll/*'/>
-	public NodeList QuerySelectorAll(DOMString selectors) { throw new System.NotImplementedException(); }
-}
-
-
-
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface NonDocumentTypeChildNode
-{
-		public Element? PreviousElementSibling { get { throw new System.NotImplementedException(); } }
-		public Element? NextElementSibling { get { throw new System.NotImplementedException(); } }
-}
-
-
-
-///<include file='Utils/Docs/Element/Element.generated.xml' path='docs/Element/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface ChildNode
-{
-	///<include file='Utils/Docs/ElementBefore/ElementBefore.generated.xml' path='docs/ElementBefore/*'/>
-	public Undefined Before(params Union32[] nodes) { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/ElementAfter/ElementAfter.generated.xml' path='docs/ElementAfter/*'/>
-	public Undefined After(params Union33[] nodes) { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/ElementReplaceWith/ElementReplaceWith.generated.xml' path='docs/ElementReplaceWith/*'/>
-	public Undefined ReplaceWith(params Union34[] nodes) { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/ElementRemove/ElementRemove.generated.xml' path='docs/ElementRemove/*'/>
-	public Undefined Remove() { throw new System.NotImplementedException(); }
-}
-
-
-
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface Slottable
-{
-		public HTMLSlotElement? AssignedSlot { get { throw new System.NotImplementedException(); } }
-}
-
-
-
 ///<include file='Utils/Docs/NodeList/NodeList.generated.xml' path='docs/NodeList/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class NodeList
@@ -4455,11 +4340,6 @@ public partial class MutationObserver
 	///<include file='Utils/Docs/MutationObserverTakeRecords/MutationObserverTakeRecords.generated.xml' path='docs/MutationObserverTakeRecords/*'/>
 	public List<MutationRecord> TakeRecords() { throw new System.NotImplementedException(); }
 	public MutationObserver() { }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct MutationCallback
-{
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -4549,7 +4429,7 @@ public partial class Node : EventTarget
 	///<include file='Utils/Docs/NodeNormalize/NodeNormalize.generated.xml' path='docs/NodeNormalize/*'/>
 	public Undefined Normalize() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/NodeCloneNode/NodeCloneNode.generated.xml' path='docs/NodeCloneNode/*'/>
-	public Node CloneNode(bool deep) { throw new System.NotImplementedException(); }
+	public Node CloneNode(bool subtree) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/NodeIsEqualNode/NodeIsEqualNode.generated.xml' path='docs/NodeIsEqualNode/*'/>
 	public bool IsEqualNode(Node? otherNode) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/NodeIsSameNode/NodeIsSameNode.generated.xml' path='docs/NodeIsSameNode/*'/>
@@ -4616,9 +4496,9 @@ public partial class Document : Node
 	///<include file='Utils/Docs/DocumentGetElementsByClassName/DocumentGetElementsByClassName.generated.xml' path='docs/DocumentGetElementsByClassName/*'/>
 	public HTMLCollection GetElementsByClassName(DOMString classNames) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/DocumentCreateElement/DocumentCreateElement.generated.xml' path='docs/DocumentCreateElement/*'/>
-	public Element CreateElement(DOMString localName, Union35 options) { throw new System.NotImplementedException(); }
+	public Element CreateElement(DOMString localName, Union34 options) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/DocumentCreateElementNS/DocumentCreateElementNS.generated.xml' path='docs/DocumentCreateElementNS/*'/>
-	public Element CreateElementNS(DOMString? namespace_, DOMString qualifiedName, Union36 options) { throw new System.NotImplementedException(); }
+	public Element CreateElementNS(DOMString? namespace_, DOMString qualifiedName, Union35 options) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/DocumentCreateDocumentFragment/DocumentCreateDocumentFragment.generated.xml' path='docs/DocumentCreateDocumentFragment/*'/>
 	public DocumentFragment CreateDocumentFragment() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/DocumentCreateTextNode/DocumentCreateTextNode.generated.xml' path='docs/DocumentCreateTextNode/*'/>
@@ -4630,7 +4510,7 @@ public partial class Document : Node
 	///<include file='Utils/Docs/DocumentCreateProcessingInstruction/DocumentCreateProcessingInstruction.generated.xml' path='docs/DocumentCreateProcessingInstruction/*'/>
 	public ProcessingInstruction CreateProcessingInstruction(DOMString target, DOMString data) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/DocumentImportNode/DocumentImportNode.generated.xml' path='docs/DocumentImportNode/*'/>
-	public Node ImportNode(Node node, bool deep) { throw new System.NotImplementedException(); }
+	public Node ImportNode(Node node, bool subtree) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/DocumentAdoptNode/DocumentAdoptNode.generated.xml' path='docs/DocumentAdoptNode/*'/>
 	public Node AdoptNode(Node node) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/DocumentCreateAttribute/DocumentCreateAttribute.generated.xml' path='docs/DocumentCreateAttribute/*'/>
@@ -4705,29 +4585,11 @@ public partial class ShadowRoot : DocumentFragment, DocumentOrShadowRoot
 	public SlotAssignmentMode SlotAssignment { get; }
 	///<include file='Utils/Docs/ShadowRootClonable/ShadowRootClonable.generated.xml' path='docs/ShadowRootClonable/*'/>
 	public bool Clonable { get; }
-		public bool Serializable { get; }
+	///<include file='Utils/Docs/ShadowRootSerializable/ShadowRootSerializable.generated.xml' path='docs/ShadowRootSerializable/*'/>
+	public bool Serializable { get; }
 	///<include file='Utils/Docs/ShadowRootHost/ShadowRootHost.generated.xml' path='docs/ShadowRootHost/*'/>
 	public Element Host { get; }
 		public EventHandler Onslotchange { get; set; }
-}
-
-///<include file='Utils/Docs/ShadowRootMode/ShadowRootMode.generated.xml' path='docs/ShadowRootMode/*'/>
-[To(ToAttribute.None)]
-public enum ShadowRootMode
-{
-	[Value("open")]
-	Open,
-	[Value("closed")]
-	Closed,
-}
-
-[To(ToAttribute.None)]
-public enum SlotAssignmentMode
-{
-	[Value("manual")]
-	Manual,
-	[Value("named")]
-	Named,
 }
 
 ///<include file='Utils/Docs/Element/Element.generated.xml' path='docs/Element/*'/>
@@ -5050,28 +4912,6 @@ public partial class TreeWalker
 	public Node? NextNode() { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface NodeFilter
-{
-		public const ushort FILTER_ACCEPT = 1;
-		public const ushort FILTER_REJECT = 2;
-		public const ushort FILTER_SKIP = 3;
-		public const ulong SHOW_ALL = 0xFFFFFFFF;
-		public const ulong SHOW_ELEMENT = 0x1;
-		public const ulong SHOW_ATTRIBUTE = 0x2;
-		public const ulong SHOW_TEXT = 0x4;
-		public const ulong SHOW_CDATA_SECTION = 0x8;
-		public const ulong SHOW_ENTITY_REFERENCE = 0x10;
-		public const ulong SHOW_ENTITY = 0x20;
-		public const ulong SHOW_PROCESSING_INSTRUCTION = 0x40;
-		public const ulong SHOW_COMMENT = 0x80;
-		public const ulong SHOW_DOCUMENT = 0x100;
-		public const ulong SHOW_DOCUMENT_TYPE = 0x200;
-		public const ulong SHOW_DOCUMENT_FRAGMENT = 0x400;
-		public const ulong SHOW_NOTATION = 0x800;
-		public ushort AcceptNode(Node node) { throw new System.NotImplementedException(); }
-}
-
 ///<include file='Utils/Docs/DOMTokenList/DOMTokenList.generated.xml' path='docs/DOMTokenList/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class DOMTokenList
@@ -5137,23 +4977,6 @@ public partial class XPathExpression
 	///<include file='Utils/Docs/XPathExpressionEvaluate/XPathExpressionEvaluate.generated.xml' path='docs/XPathExpressionEvaluate/*'/>
 	public XPathResult Evaluate(Node contextNode, ushort type, XPathResult? result) { throw new System.NotImplementedException(); }
 }
-
-///<include file='Utils/Docs/XPathNSResolver/XPathNSResolver.generated.xml' path='docs/XPathNSResolver/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface XPathNSResolver
-{
-	///<include file='Utils/Docs/XPathNSResolverLookupNamespaceURI/XPathNSResolverLookupNamespaceURI.generated.xml' path='docs/XPathNSResolverLookupNamespaceURI/*'/>
-	public DOMString? LookupNamespaceURI(DOMString? prefix) { throw new System.NotImplementedException(); }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface XPathEvaluatorBase
-{
-		public XPathExpression CreateExpression(DOMString expression, XPathNSResolver? resolver) { throw new System.NotImplementedException(); }
-		public Node CreateNSResolver(Node nodeResolver) { throw new System.NotImplementedException(); }
-		public XPathResult Evaluate(DOMString expression, Node contextNode, XPathNSResolver? resolver, ushort type, XPathResult? result) { throw new System.NotImplementedException(); }
-}
-
 
 ///<include file='Utils/Docs/XPathEvaluator/XPathEvaluator.generated.xml' path='docs/XPathEvaluator/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -5283,32 +5106,6 @@ public partial class TextUpdateEvent : Event
 	public TextUpdateEvent() { }
 }
 
-[To(ToAttribute.None)]
-public enum UnderlineStyle
-{
-	[Value("none")]
-	None,
-	[Value("solid")]
-	Solid,
-	[Value("dotted")]
-	Dotted,
-	[Value("dashed")]
-	Dashed,
-	[Value("wavy")]
-	Wavy,
-}
-
-[To(ToAttribute.None)]
-public enum UnderlineThickness
-{
-	[Value("none")]
-	None,
-	[Value("thin")]
-	Thin,
-	[Value("thick")]
-	Thick,
-}
-
 [To(ToAttribute.Default)]
 public partial class TextFormatInit
 {
@@ -5396,7 +5193,7 @@ public partial class BrowserCaptureMediaStreamTrack
 
 ///<include file='Utils/Docs/PerformanceElementTiming/PerformanceElementTiming.generated.xml' path='docs/PerformanceElementTiming/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class PerformanceElementTiming : PerformanceEntry
+public partial class PerformanceElementTiming : PerformanceEntry, PaintTimingMixin
 {
 	///<include file='Utils/Docs/PerformanceElementTimingRenderTime/PerformanceElementTimingRenderTime.generated.xml' path='docs/PerformanceElementTimingRenderTime/*'/>
 	public DOMHighResTimeStamp RenderTime { get; }
@@ -5417,22 +5214,15 @@ public partial class PerformanceElementTiming : PerformanceEntry
 	///<include file='Utils/Docs/PerformanceElementTimingUrl/PerformanceElementTimingUrl.generated.xml' path='docs/PerformanceElementTimingUrl/*'/>
 	public DOMString Url { get; }
 	///<include file='Utils/Docs/PerformanceElementTimingToJSON/PerformanceElementTimingToJSON.generated.xml' path='docs/PerformanceElementTimingToJSON/*'/>
-	public object ToJSON() { throw new System.NotImplementedException(); }
+	public Object ToJSON() { throw new System.NotImplementedException(); }
 }
+
 
 ///<include file='Utils/Docs/Element/Element.generated.xml' path='docs/Element/*'/>
 public partial class Element
 {
 	///<include file='Utils/Docs/ElementElementTiming/ElementElementTiming.generated.xml' path='docs/ElementElementTiming/*'/>
 	public DOMString ElementTiming { get; set; }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface TextDecoderCommon
-{
-		public DOMString Encoding { get { throw new System.NotImplementedException(); } }
-		public bool Fatal { get { throw new System.NotImplementedException(); } }
-		public bool IgnoreBOM { get { throw new System.NotImplementedException(); } }
 }
 
 [To(ToAttribute.Default)]
@@ -5463,12 +5253,6 @@ public partial class TextDecoder
 	public TextDecoder() { }
 }
 
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface TextEncoderCommon
-{
-		public DOMString Encoding { get { throw new System.NotImplementedException(); } }
-}
 
 [To(ToAttribute.Default)]
 public partial class TextEncoderEncodeIntoResult
@@ -5522,17 +5306,6 @@ public partial class Navigator
 	public Task<MediaKeySystemAccess> RequestMediaKeySystemAccess(DOMString keySystem, List<MediaKeySystemConfiguration> supportedConfigurations) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.None)]
-public enum MediaKeysRequirement
-{
-	[Value("required")]
-	Required,
-	[Value("optional")]
-	Optional,
-	[Value("not-allowed")]
-	NotAllowed,
-}
-
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class MediaKeySystemConfiguration
 {
@@ -5565,22 +5338,14 @@ public partial class MediaKeySystemAccess
 	public Task<MediaKeys> CreateMediaKeys() { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.None)]
-public enum MediaKeySessionType
-{
-	[Value("temporary")]
-	Temporary,
-	[Value("persistent-license")]
-	PersistentLicense,
-}
-
 ///<include file='Utils/Docs/MediaKeys/MediaKeys.generated.xml' path='docs/MediaKeys/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class MediaKeys
 {
 	///<include file='Utils/Docs/MediaKeysCreateSession/MediaKeysCreateSession.generated.xml' path='docs/MediaKeysCreateSession/*'/>
 	public MediaKeySession CreateSession(MediaKeySessionType sessionType) { throw new System.NotImplementedException(); }
-		public Task<MediaKeyStatus> GetStatusForPolicy(MediaKeysPolicy policy) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/MediaKeysGetStatusForPolicy/MediaKeysGetStatusForPolicy.generated.xml' path='docs/MediaKeysGetStatusForPolicy/*'/>
+	public Task<MediaKeyStatus> GetStatusForPolicy(MediaKeysPolicy policy) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/MediaKeysSetServerCertificate/MediaKeysSetServerCertificate.generated.xml' path='docs/MediaKeysSetServerCertificate/*'/>
 	public Task<bool> SetServerCertificate(BufferSource serverCertificate) { throw new System.NotImplementedException(); }
 }
@@ -5588,45 +5353,7 @@ public partial class MediaKeys
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class MediaKeysPolicy
 {
-		public HDCPVersion MinHdcpVersion;
-}
-
-[To(ToAttribute.None)]
-public enum HDCPVersion
-{
-	[Value("1.0")]
-	_1_0,
-	[Value("1.1")]
-	_1_1,
-	[Value("1.2")]
-	_1_2,
-	[Value("1.3")]
-	_1_3,
-	[Value("1.4")]
-	_1_4,
-	[Value("2.0")]
-	_2_0,
-	[Value("2.1")]
-	_2_1,
-	[Value("2.2")]
-	_2_2,
-	[Value("2.3")]
-	_2_3,
-}
-
-[To(ToAttribute.None)]
-public enum MediaKeySessionClosedReason
-{
-	[Value("internal-error")]
-	InternalError,
-	[Value("closed-by-application")]
-	ClosedByApplication,
-	[Value("release-acknowledged")]
-	ReleaseAcknowledged,
-	[Value("hardware-context-reset")]
-	HardwareContextReset,
-	[Value("resource-evicted")]
-	ResourceEvicted,
+		public DOMString MinHdcpVersion;
 }
 
 ///<include file='Utils/Docs/MediaKeySession/MediaKeySession.generated.xml' path='docs/MediaKeySession/*'/>
@@ -5665,41 +5392,7 @@ public partial class MediaKeyStatusMap
 	///<include file='Utils/Docs/MediaKeyStatusMapHas/MediaKeyStatusMapHas.generated.xml' path='docs/MediaKeyStatusMapHas/*'/>
 	public bool Has(BufferSource keyId) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/MediaKeyStatusMapGet/MediaKeyStatusMapGet.generated.xml' path='docs/MediaKeyStatusMapGet/*'/>
-	public Union37 Get(BufferSource keyId) { throw new System.NotImplementedException(); }
-}
-
-[To(ToAttribute.None)]
-public enum MediaKeyStatus
-{
-	[Value("usable")]
-	Usable,
-	[Value("expired")]
-	Expired,
-	[Value("released")]
-	Released,
-	[Value("output-restricted")]
-	OutputRestricted,
-	[Value("output-downscaled")]
-	OutputDownscaled,
-	[Value("usable-in-future")]
-	UsableInFuture,
-	[Value("status-pending")]
-	StatusPending,
-	[Value("internal-error")]
-	InternalError,
-}
-
-[To(ToAttribute.None)]
-public enum MediaKeyMessageType
-{
-	[Value("license-request")]
-	LicenseRequest,
-	[Value("license-renewal")]
-	LicenseRenewal,
-	[Value("license-release")]
-	LicenseRelease,
-	[Value("individualization-request")]
-	IndividualizationRequest,
+	public Union36 Get(BufferSource keyId) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/MediaKeyMessageEvent/MediaKeyMessageEvent.generated.xml' path='docs/MediaKeyMessageEvent/*'/>
@@ -5785,11 +5478,6 @@ public partial class DataTransferItem
 	public FileSystemEntry? WebkitGetAsEntry() { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct ErrorCallback
-{
-}
-
 ///<include file='Utils/Docs/FileSystemEntry/FileSystemEntry.generated.xml' path='docs/FileSystemEntry/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class FileSystemEntry
@@ -5827,11 +5515,6 @@ public partial class FileSystemFlags
 		public bool Exclusive;
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct FileSystemEntryCallback
-{
-}
-
 ///<include file='Utils/Docs/FileSystemDirectoryReader/FileSystemDirectoryReader.generated.xml' path='docs/FileSystemDirectoryReader/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class FileSystemDirectoryReader
@@ -5840,22 +5523,12 @@ public partial class FileSystemDirectoryReader
 	public Undefined ReadEntries(FileSystemEntriesCallback successCallback, ErrorCallback errorCallback) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct FileSystemEntriesCallback
-{
-}
-
 ///<include file='Utils/Docs/FileSystemFileEntry/FileSystemFileEntry.generated.xml' path='docs/FileSystemFileEntry/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class FileSystemFileEntry : FileSystemEntry
 {
 	///<include file='Utils/Docs/FileSystemFileEntryFile/FileSystemFileEntryFile.generated.xml' path='docs/FileSystemFileEntryFile/*'/>
 	public Undefined File(FileCallback successCallback, ErrorCallback errorCallback) { throw new System.NotImplementedException(); }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct FileCallback
-{
 }
 
 ///<include file='Utils/Docs/FileSystem/FileSystem.generated.xml' path='docs/FileSystem/*'/>
@@ -5883,7 +5556,7 @@ public partial class PerformanceEventTiming : PerformanceEntry
 	///<include file='Utils/Docs/PerformanceEventTimingInteractionId/PerformanceEventTimingInteractionId.generated.xml' path='docs/PerformanceEventTimingInteractionId/*'/>
 	public ulong InteractionId { get; }
 	///<include file='Utils/Docs/PerformanceEventTimingToJSON/PerformanceEventTimingToJSON.generated.xml' path='docs/PerformanceEventTimingToJSON/*'/>
-	public object ToJSON() { throw new System.NotImplementedException(); }
+	public Object ToJSON() { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/EventCounts/EventCounts.generated.xml' path='docs/EventCounts/*'/>
@@ -5945,7 +5618,7 @@ public partial class EXT_disjoint_timer_query
 		public const GLenum TIME_ELAPSED_EXT = 0x88BF;
 		public const GLenum TIMESTAMP_EXT = 0x8E28;
 		public const GLenum GPU_DISJOINT_EXT = 0x8FBB;
-		public WebGLTimerQueryEXT? CreateQueryEXT() { throw new System.NotImplementedException(); }
+		public WebGLTimerQueryEXT CreateQueryEXT() { throw new System.NotImplementedException(); }
 		public Undefined DeleteQueryEXT(WebGLTimerQueryEXT? query) { throw new System.NotImplementedException(); }
 		public bool IsQueryEXT(WebGLTimerQueryEXT? query) { throw new System.NotImplementedException(); }
 		public Undefined BeginQueryEXT(GLenum target, WebGLTimerQueryEXT query) { throw new System.NotImplementedException(); }
@@ -6049,30 +5722,6 @@ public partial class EyeDropper
 	public Task<ColorSelectionResult> Open(ColorSelectionOptions options) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.None)]
-public enum LoginStatus
-{
-	[Value("logged-in")]
-	LoggedIn,
-	[Value("logged-out")]
-	LoggedOut,
-}
-
-///<include file='Utils/Docs/NavigatorLogin/NavigatorLogin.generated.xml' path='docs/NavigatorLogin/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class NavigatorLogin
-{
-	///<include file='Utils/Docs/NavigatorLoginSetStatus/NavigatorLoginSetStatus.generated.xml' path='docs/NavigatorLoginSetStatus/*'/>
-	public Task<Undefined> SetStatus(LoginStatus status) { throw new System.NotImplementedException(); }
-}
-
-///<include file='Utils/Docs/Navigator/Navigator.generated.xml' path='docs/Navigator/*'/>
-public partial class Navigator
-{
-	///<include file='Utils/Docs/NavigatorLogin/NavigatorLogin.generated.xml' path='docs/NavigatorLogin/*'/>
-	public NavigatorLogin Login { get; }
-}
-
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class IdentityCredentialDisconnectOptions : IdentityProviderConfig
 {
@@ -6101,24 +5750,13 @@ public partial class CredentialRequestOptions
 		public IdentityCredentialRequestOptions Identity;
 }
 
-[To(ToAttribute.None)]
-public enum IdentityCredentialRequestOptionsContext
-{
-	[Value("signin")]
-	Signin,
-	[Value("signup")]
-	Signup,
-	[Value("use")]
-	Use,
-	[Value("continue")]
-	Continue,
-}
-
+///<include file='Utils/Docs/IdentityCredentialRequestOptions/IdentityCredentialRequestOptions.generated.xml' path='docs/IdentityCredentialRequestOptions/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class IdentityCredentialRequestOptions
 {
 		public required List<IdentityProviderRequestOptions> Providers;
 		public IdentityCredentialRequestOptionsContext Context;
+		public IdentityCredentialRequestOptionsMode Mode;
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -6134,12 +5772,16 @@ public partial class IdentityProviderRequestOptions : IdentityProviderConfig
 		public USVString Nonce;
 		public DOMString LoginHint;
 		public DOMString DomainHint;
+		public List<USVString> Fields;
+		public dynamic Params;
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class IdentityProviderWellKnown
 {
-		public required List<USVString> Provider_urls;
+		public List<USVString> Provider_urls;
+		public USVString Accounts_endpoint;
+		public USVString Login_url;
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -6189,9 +5831,10 @@ public partial class IdentityProviderAccountList
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class IdentityProviderToken
+public partial class IdentityAssertionResponse
 {
-		public required USVString Token;
+		public USVString Token;
+		public USVString Continue_on;
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -6210,12 +5853,19 @@ public partial class IdentityUserInfo
 		public USVString Picture;
 }
 
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class IdentityResolveOptions
+{
+		public USVString AccountId;
+}
+
 ///<include file='Utils/Docs/IdentityProvider/IdentityProvider.generated.xml' path='docs/IdentityProvider/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class IdentityProvider
 {
 	///<include file='Utils/Docs/IdentityProviderClose/IdentityProviderClose.generated.xml' path='docs/IdentityProviderClose/*'/>
 	public static Undefined Close() { throw new System.NotImplementedException(); }
+		public static Undefined Resolve(DOMString token, IdentityResolveOptions options) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/IdentityProviderGetUserInfo/IdentityProviderGetUserInfo.generated.xml' path='docs/IdentityProviderGetUserInfo/*'/>
 	public static Task<List<IdentityUserInfo>> GetUserInfo(IdentityProviderConfig config) { throw new System.NotImplementedException(); }
 }
@@ -6234,30 +5884,21 @@ public partial class HTMLFencedFrameElement : HTMLElement
 	///<include file='Utils/Docs/HTMLFencedFrameElementHeight/HTMLFencedFrameElementHeight.generated.xml' path='docs/HTMLFencedFrameElementHeight/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Height { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public DOMTokenList Sandbox { get; }
 	///<include file='Utils/Docs/HTMLFencedFrameElementAllow/HTMLFencedFrameElementAllow.generated.xml' path='docs/HTMLFencedFrameElementAllow/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Allow { get; set; }
 }
 
-[To(ToAttribute.None)]
-public enum OpaqueProperty
-{
-	[Value("opaque")]
-	Opaque,
-}
-
-
-
 ///<include file='Utils/Docs/FencedFrameConfig/FencedFrameConfig.generated.xml' path='docs/FencedFrameConfig/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class FencedFrameConfig
 {
-		public FencedFrameConfigSize? ContainerWidth { get; }
-		public FencedFrameConfigSize? ContainerHeight { get; }
-		public FencedFrameConfigSize? ContentWidth { get; }
-		public FencedFrameConfigSize? ContentHeight { get; }
+		public FencedFrameConfig(USVString url) { }
 	///<include file='Utils/Docs/FencedFrameConfigSetSharedStorageContext/FencedFrameConfigSetSharedStorageContext.generated.xml' path='docs/FencedFrameConfigSetSharedStorageContext/*'/>
 	public Undefined SetSharedStorageContext(DOMString contextString) { throw new System.NotImplementedException(); }
+	public FencedFrameConfig() { }
 }
 
 
@@ -6266,21 +5907,8 @@ public partial class Navigator
 {
 	///<include file='Utils/Docs/NavigatorDeprecatedReplaceInURN/NavigatorDeprecatedReplaceInURN.generated.xml' path='docs/NavigatorDeprecatedReplaceInURN/*'/>
 	public Task<Undefined> DeprecatedReplaceInURN(UrnOrConfig urnOrConfig, Dictionary<USVString, USVString> replacements) { throw new System.NotImplementedException(); }
-}
-
-[To(ToAttribute.None)]
-public enum FenceReportingDestination
-{
-	[Value("buyer")]
-	Buyer,
-	[Value("seller")]
-	Seller,
-	[Value("component-seller")]
-	ComponentSeller,
-	[Value("direct-seller")]
-	DirectSeller,
-	[Value("shared-storage-select-url")]
-	SharedStorageSelectUrl,
+		public Task<USVString> DeprecatedURNtoURL(UrnOrConfig urnOrConfig, bool send_reports) { throw new System.NotImplementedException(); }
+		public List<USVString> AdAuctionComponents(ushort numAdComponents) { throw new System.NotImplementedException(); }
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -6289,8 +5917,8 @@ public partial class FenceEvent
 		public DOMString EventType;
 		public DOMString EventData;
 		public List<FenceReportingDestination> Destination;
-		public bool Once;
 		public bool CrossOriginExposed;
+		public bool Once;
 		public USVString DestinationURL;
 }
 
@@ -6305,6 +5933,8 @@ public partial class Fence
 	public Undefined SetReportEventDataForAutomaticBeacons(FenceEvent event_) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/FenceGetNestedConfigs/FenceGetNestedConfigs.generated.xml' path='docs/FenceGetNestedConfigs/*'/>
 	public List<FencedFrameConfig> GetNestedConfigs() { throw new System.NotImplementedException(); }
+		public Task<Undefined> DisableUntrustedNetwork() { throw new System.NotImplementedException(); }
+		public Undefined NotifyEvent(Event event_) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/Window/Window.generated.xml' path='docs/Window/*'/>
@@ -6314,7 +5944,6 @@ public partial class Window
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public Fence? Fence { get; }
 }
-
 
 ///<include file='Utils/Docs/Headers/Headers.generated.xml' path='docs/Headers/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -6338,19 +5967,6 @@ public partial class Headers
 	public Headers() { }
 }
 
-
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface Body
-{
-		public ReadableStream? Body { get { throw new System.NotImplementedException(); } }
-		public bool BodyUsed { get { throw new System.NotImplementedException(); } }
-		public Task<byte[]> ArrayBuffer() { throw new System.NotImplementedException(); }
-		public Task<Blob> Blob() { throw new System.NotImplementedException(); }
-		public Task<FormData> FormData() { throw new System.NotImplementedException(); }
-		public Task<dynamic> Json() { throw new System.NotImplementedException(); }
-		public Task<USVString> Text() { throw new System.NotImplementedException(); }
-}
 
 
 ///<include file='Utils/Docs/Request/Request.generated.xml' path='docs/Request/*'/>
@@ -6381,9 +5997,11 @@ public partial class Request
 	public RequestRedirect Redirect { get; }
 	///<include file='Utils/Docs/RequestIntegrity/RequestIntegrity.generated.xml' path='docs/RequestIntegrity/*'/>
 	public DOMString Integrity { get; }
-		public bool Keepalive { get; }
+	///<include file='Utils/Docs/RequestKeepalive/RequestKeepalive.generated.xml' path='docs/RequestKeepalive/*'/>
+	public bool Keepalive { get; }
 		public bool IsReloadNavigation { get; }
-		public bool IsHistoryNavigation { get; }
+	///<include file='Utils/Docs/RequestIsHistoryNavigation/RequestIsHistoryNavigation.generated.xml' path='docs/RequestIsHistoryNavigation/*'/>
+	public bool IsHistoryNavigation { get; }
 	///<include file='Utils/Docs/RequestSignal/RequestSignal.generated.xml' path='docs/RequestSignal/*'/>
 	public AbortSignal Signal { get; }
 		public RequestDuplex Duplex { get; }
@@ -6393,6 +6011,7 @@ public partial class Request
 }
 
 
+///<include file='Utils/Docs/RequestInit/RequestInit.generated.xml' path='docs/RequestInit/*'/>
 public partial class RequestInit
 {
 		public ByteString Method;
@@ -6410,128 +6029,6 @@ public partial class RequestInit
 		public RequestDuplex Duplex;
 		public RequestPriority Priority;
 		public dynamic Window;
-}
-
-///<include file='Utils/Docs/RequestDestination/RequestDestination.generated.xml' path='docs/RequestDestination/*'/>
-[To(ToAttribute.None)]
-public enum RequestDestination
-{
-	[Value("")]
-	Empty,
-	[Value("audio")]
-	Audio,
-	[Value("audioworklet")]
-	Audioworklet,
-	[Value("document")]
-	Document,
-	[Value("embed")]
-	Embed,
-	[Value("font")]
-	Font,
-	[Value("frame")]
-	Frame,
-	[Value("iframe")]
-	Iframe,
-	[Value("image")]
-	Image,
-	[Value("json")]
-	Json,
-	[Value("manifest")]
-	Manifest,
-	[Value("object")]
-	Object,
-	[Value("paintworklet")]
-	Paintworklet,
-	[Value("report")]
-	Report,
-	[Value("script")]
-	Script,
-	[Value("sharedworker")]
-	Sharedworker,
-	[Value("style")]
-	Style,
-	[Value("track")]
-	Track,
-	[Value("video")]
-	Video,
-	[Value("worker")]
-	Worker,
-	[Value("xslt")]
-	Xslt,
-}
-
-///<include file='Utils/Docs/RequestMode/RequestMode.generated.xml' path='docs/RequestMode/*'/>
-[To(ToAttribute.None)]
-public enum RequestMode
-{
-	[Value("navigate")]
-	Navigate,
-	[Value("same-origin")]
-	SameOrigin,
-	[Value("no-cors")]
-	NoCors,
-	[Value("cors")]
-	Cors,
-}
-
-///<include file='Utils/Docs/RequestCredentials/RequestCredentials.generated.xml' path='docs/RequestCredentials/*'/>
-[To(ToAttribute.None)]
-public enum RequestCredentials
-{
-	[Value("omit")]
-	Omit,
-	[Value("same-origin")]
-	SameOrigin,
-	[Value("include")]
-	Include,
-}
-
-///<include file='Utils/Docs/RequestCache/RequestCache.generated.xml' path='docs/RequestCache/*'/>
-[To(ToAttribute.None)]
-public enum RequestCache
-{
-	[Value("default")]
-	Default,
-	[Value("no-store")]
-	NoStore,
-	[Value("reload")]
-	Reload,
-	[Value("no-cache")]
-	NoCache,
-	[Value("force-cache")]
-	ForceCache,
-	[Value("only-if-cached")]
-	OnlyIfCached,
-}
-
-///<include file='Utils/Docs/RequestRedirect/RequestRedirect.generated.xml' path='docs/RequestRedirect/*'/>
-[To(ToAttribute.None)]
-public enum RequestRedirect
-{
-	[Value("follow")]
-	Follow,
-	[Value("error")]
-	Error,
-	[Value("manual")]
-	Manual,
-}
-
-[To(ToAttribute.None)]
-public enum RequestDuplex
-{
-	[Value("half")]
-	Half,
-}
-
-[To(ToAttribute.None)]
-public enum RequestPriority
-{
-	[Value("high")]
-	High,
-	[Value("low")]
-	Low,
-	[Value("auto")]
-	Auto,
 }
 
 ///<include file='Utils/Docs/Response/Response.generated.xml' path='docs/Response/*'/>
@@ -6572,30 +6069,6 @@ public partial class ResponseInit
 		public ushort Status;
 		public ByteString StatusText;
 		public HeadersInit Headers;
-}
-
-///<include file='Utils/Docs/ResponseType/ResponseType.generated.xml' path='docs/ResponseType/*'/>
-[To(ToAttribute.None)]
-public enum ResponseType
-{
-	[Value("basic")]
-	Basic,
-	[Value("cors")]
-	Cors,
-	[Value("default")]
-	Default,
-	[Value("error")]
-	Error,
-	[Value("opaque")]
-	Opaque,
-	[Value("opaqueredirect")]
-	Opaqueredirect,
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface WindowOrWorkerGlobalScope
-{
-		public Task<Response> Fetch(RequestInfo input, RequestInit init) { throw new System.NotImplementedException(); }
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -6655,15 +6128,6 @@ public partial class AuthenticationExtensionsClientOutputs
 		public HMACGetSecretOutput HmacGetSecret;
 }
 
-[To(ToAttribute.None)]
-public enum FileSystemPermissionMode
-{
-	[Value("read")]
-	Read,
-	[Value("readwrite")]
-	Readwrite,
-}
-
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class FileSystemPermissionDescriptor : PermissionDescriptor
 {
@@ -6686,24 +6150,6 @@ public partial class FileSystemHandle
 	///<include file='Utils/Docs/FileSystemHandleRequestPermission/FileSystemHandleRequestPermission.generated.xml' path='docs/FileSystemHandleRequestPermission/*'/>
 	public Task<PermissionState> RequestPermission(FileSystemHandlePermissionDescriptor descriptor) { throw new System.NotImplementedException(); }
 }
-
-[To(ToAttribute.None)]
-public enum WellKnownDirectory
-{
-	[Value("desktop")]
-	Desktop,
-	[Value("documents")]
-	Documents,
-	[Value("downloads")]
-	Downloads,
-	[Value("music")]
-	Music,
-	[Value("pictures")]
-	Pictures,
-	[Value("videos")]
-	Videos,
-}
-
 
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class FilePickerAcceptType
@@ -6780,16 +6226,9 @@ public partial class Blob
 	public Task<USVString> Text() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/BlobArrayBuffer/BlobArrayBuffer.generated.xml' path='docs/BlobArrayBuffer/*'/>
 	public Task<byte[]> ArrayBuffer() { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/BlobBytes/BlobBytes.generated.xml' path='docs/BlobBytes/*'/>
+	public Task<System.Byte> Bytes() { throw new System.NotImplementedException(); }
 	public Blob() { }
-}
-
-[To(ToAttribute.None)]
-public enum EndingType
-{
-	[Value("transparent")]
-	Transparent,
-	[Value("native")]
-	Native,
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -6849,7 +6288,7 @@ public partial class FileReader : EventTarget
 	///<include file='Utils/Docs/FileReaderReadyState/FileReaderReadyState.generated.xml' path='docs/FileReaderReadyState/*'/>
 	public ushort ReadyState { get; }
 	///<include file='Utils/Docs/FileReaderResult/FileReaderResult.generated.xml' path='docs/FileReaderResult/*'/>
-	public Union47? Result { get; }
+	public Union45? Result { get; }
 	///<include file='Utils/Docs/FileReaderError/FileReaderError.generated.xml' path='docs/FileReaderError/*'/>
 	public DOMException? Error { get; }
 		public EventHandler Onloadstart { get; set; }
@@ -6881,7 +6320,7 @@ public partial class FileReaderSync
 public partial class URL
 {
 	///<include file='Utils/Docs/URLCreateObjectURL/URLCreateObjectURL.generated.xml' path='docs/URLCreateObjectURL/*'/>
-	public static DOMString CreateObjectURL(Union48 obj) { throw new System.NotImplementedException(); }
+	public static DOMString CreateObjectURL(Union46 obj) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/URLRevokeObjectURL/URLRevokeObjectURL.generated.xml' path='docs/URLRevokeObjectURL/*'/>
 	public static Undefined RevokeObjectURL(DOMString url) { throw new System.NotImplementedException(); }
 }
@@ -6890,24 +6329,20 @@ public partial class URL
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class SVGFilterElement : SVGElement, SVGURIReference
 {
-		public SVGAnimatedEnumeration FilterUnits { get; }
-		public SVGAnimatedEnumeration PrimitiveUnits { get; }
-		public SVGAnimatedLength X { get; }
-		public SVGAnimatedLength Y { get; }
-		public SVGAnimatedLength Width { get; }
-		public SVGAnimatedLength Height { get; }
+	///<include file='Utils/Docs/SVGFilterElementFilterUnits/SVGFilterElementFilterUnits.generated.xml' path='docs/SVGFilterElementFilterUnits/*'/>
+	public SVGAnimatedEnumeration FilterUnits { get; }
+	///<include file='Utils/Docs/SVGFilterElementPrimitiveUnits/SVGFilterElementPrimitiveUnits.generated.xml' path='docs/SVGFilterElementPrimitiveUnits/*'/>
+	public SVGAnimatedEnumeration PrimitiveUnits { get; }
+	///<include file='Utils/Docs/SVGFilterElementX/SVGFilterElementX.generated.xml' path='docs/SVGFilterElementX/*'/>
+	public SVGAnimatedLength X { get; }
+	///<include file='Utils/Docs/SVGFilterElementY/SVGFilterElementY.generated.xml' path='docs/SVGFilterElementY/*'/>
+	public SVGAnimatedLength Y { get; }
+	///<include file='Utils/Docs/SVGFilterElementWidth/SVGFilterElementWidth.generated.xml' path='docs/SVGFilterElementWidth/*'/>
+	public SVGAnimatedLength Width { get; }
+	///<include file='Utils/Docs/SVGFilterElementHeight/SVGFilterElementHeight.generated.xml' path='docs/SVGFilterElementHeight/*'/>
+	public SVGAnimatedLength Height { get; }
 }
 
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface SVGFilterPrimitiveStandardAttributes
-{
-		public SVGAnimatedLength X { get { throw new System.NotImplementedException(); } }
-		public SVGAnimatedLength Y { get { throw new System.NotImplementedException(); } }
-		public SVGAnimatedLength Width { get { throw new System.NotImplementedException(); } }
-		public SVGAnimatedLength Height { get { throw new System.NotImplementedException(); } }
-		public SVGAnimatedString Result { get { throw new System.NotImplementedException(); } }
-}
 
 ///<include file='Utils/Docs/SVGFEBlendElement/SVGFEBlendElement.generated.xml' path='docs/SVGFEBlendElement/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -6945,9 +6380,12 @@ public partial class SVGFEColorMatrixElement : SVGElement, SVGFilterPrimitiveSta
 		public const ushort SVG_FECOLORMATRIX_TYPE_SATURATE = 2;
 		public const ushort SVG_FECOLORMATRIX_TYPE_HUEROTATE = 3;
 		public const ushort SVG_FECOLORMATRIX_TYPE_LUMINANCETOALPHA = 4;
-		public SVGAnimatedString In1 { get; }
-		public SVGAnimatedEnumeration Type { get; }
-		public SVGAnimatedNumberList Values { get; }
+	///<include file='Utils/Docs/SVGFEColorMatrixElementIn1/SVGFEColorMatrixElementIn1.generated.xml' path='docs/SVGFEColorMatrixElementIn1/*'/>
+	public SVGAnimatedString In1 { get; }
+	///<include file='Utils/Docs/SVGFEColorMatrixElementType/SVGFEColorMatrixElementType.generated.xml' path='docs/SVGFEColorMatrixElementType/*'/>
+	public SVGAnimatedEnumeration Type { get; }
+	///<include file='Utils/Docs/SVGFEColorMatrixElementValues/SVGFEColorMatrixElementValues.generated.xml' path='docs/SVGFEColorMatrixElementValues/*'/>
+	public SVGAnimatedNumberList Values { get; }
 }
 
 
@@ -6969,13 +6407,20 @@ public partial class SVGComponentTransferFunctionElement : SVGElement
 		public const ushort SVG_FECOMPONENTTRANSFER_TYPE_DISCRETE = 3;
 		public const ushort SVG_FECOMPONENTTRANSFER_TYPE_LINEAR = 4;
 		public const ushort SVG_FECOMPONENTTRANSFER_TYPE_GAMMA = 5;
-		public SVGAnimatedEnumeration Type { get; }
-		public SVGAnimatedNumberList TableValues { get; }
-		public SVGAnimatedNumber Slope { get; }
-		public SVGAnimatedNumber Intercept { get; }
-		public SVGAnimatedNumber Amplitude { get; }
-		public SVGAnimatedNumber Exponent { get; }
-		public SVGAnimatedNumber Offset { get; }
+	///<include file='Utils/Docs/SVGComponentTransferFunctionElementType/SVGComponentTransferFunctionElementType.generated.xml' path='docs/SVGComponentTransferFunctionElementType/*'/>
+	public SVGAnimatedEnumeration Type { get; }
+	///<include file='Utils/Docs/SVGComponentTransferFunctionElementTableValues/SVGComponentTransferFunctionElementTableValues.generated.xml' path='docs/SVGComponentTransferFunctionElementTableValues/*'/>
+	public SVGAnimatedNumberList TableValues { get; }
+	///<include file='Utils/Docs/SVGComponentTransferFunctionElementSlope/SVGComponentTransferFunctionElementSlope.generated.xml' path='docs/SVGComponentTransferFunctionElementSlope/*'/>
+	public SVGAnimatedNumber Slope { get; }
+	///<include file='Utils/Docs/SVGComponentTransferFunctionElementIntercept/SVGComponentTransferFunctionElementIntercept.generated.xml' path='docs/SVGComponentTransferFunctionElementIntercept/*'/>
+	public SVGAnimatedNumber Intercept { get; }
+	///<include file='Utils/Docs/SVGComponentTransferFunctionElementAmplitude/SVGComponentTransferFunctionElementAmplitude.generated.xml' path='docs/SVGComponentTransferFunctionElementAmplitude/*'/>
+	public SVGAnimatedNumber Amplitude { get; }
+	///<include file='Utils/Docs/SVGComponentTransferFunctionElementExponent/SVGComponentTransferFunctionElementExponent.generated.xml' path='docs/SVGComponentTransferFunctionElementExponent/*'/>
+	public SVGAnimatedNumber Exponent { get; }
+	///<include file='Utils/Docs/SVGComponentTransferFunctionElementOffset/SVGComponentTransferFunctionElementOffset.generated.xml' path='docs/SVGComponentTransferFunctionElementOffset/*'/>
+	public SVGAnimatedNumber Offset { get; }
 }
 
 ///<include file='Utils/Docs/SVGFEFuncRElement/SVGFEFuncRElement.generated.xml' path='docs/SVGFEFuncRElement/*'/>
@@ -7050,11 +6495,16 @@ public partial class SVGFEConvolveMatrixElement : SVGElement, SVGFilterPrimitive
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class SVGFEDiffuseLightingElement : SVGElement, SVGFilterPrimitiveStandardAttributes
 {
-		public SVGAnimatedString In1 { get; }
-		public SVGAnimatedNumber SurfaceScale { get; }
-		public SVGAnimatedNumber DiffuseConstant { get; }
-		public SVGAnimatedNumber KernelUnitLengthX { get; }
-		public SVGAnimatedNumber KernelUnitLengthY { get; }
+	///<include file='Utils/Docs/SVGFEDiffuseLightingElementIn1/SVGFEDiffuseLightingElementIn1.generated.xml' path='docs/SVGFEDiffuseLightingElementIn1/*'/>
+	public SVGAnimatedString In1 { get; }
+	///<include file='Utils/Docs/SVGFEDiffuseLightingElementSurfaceScale/SVGFEDiffuseLightingElementSurfaceScale.generated.xml' path='docs/SVGFEDiffuseLightingElementSurfaceScale/*'/>
+	public SVGAnimatedNumber SurfaceScale { get; }
+	///<include file='Utils/Docs/SVGFEDiffuseLightingElementDiffuseConstant/SVGFEDiffuseLightingElementDiffuseConstant.generated.xml' path='docs/SVGFEDiffuseLightingElementDiffuseConstant/*'/>
+	public SVGAnimatedNumber DiffuseConstant { get; }
+	///<include file='Utils/Docs/SVGFEDiffuseLightingElementKernelUnitLengthX/SVGFEDiffuseLightingElementKernelUnitLengthX.generated.xml' path='docs/SVGFEDiffuseLightingElementKernelUnitLengthX/*'/>
+	public SVGAnimatedNumber KernelUnitLengthX { get; }
+	///<include file='Utils/Docs/SVGFEDiffuseLightingElementKernelUnitLengthY/SVGFEDiffuseLightingElementKernelUnitLengthY.generated.xml' path='docs/SVGFEDiffuseLightingElementKernelUnitLengthY/*'/>
+	public SVGAnimatedNumber KernelUnitLengthY { get; }
 }
 
 
@@ -7062,8 +6512,10 @@ public partial class SVGFEDiffuseLightingElement : SVGElement, SVGFilterPrimitiv
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class SVGFEDistantLightElement : SVGElement
 {
-		public SVGAnimatedNumber Azimuth { get; }
-		public SVGAnimatedNumber Elevation { get; }
+	///<include file='Utils/Docs/SVGFEDistantLightElementAzimuth/SVGFEDistantLightElementAzimuth.generated.xml' path='docs/SVGFEDistantLightElementAzimuth/*'/>
+	public SVGAnimatedNumber Azimuth { get; }
+	///<include file='Utils/Docs/SVGFEDistantLightElementElevation/SVGFEDistantLightElementElevation.generated.xml' path='docs/SVGFEDistantLightElementElevation/*'/>
+	public SVGAnimatedNumber Elevation { get; }
 }
 
 ///<include file='Utils/Docs/SVGFEPointLightElement/SVGFEPointLightElement.generated.xml' path='docs/SVGFEPointLightElement/*'/>
@@ -7134,11 +6586,15 @@ public partial class SVGFEGaussianBlurElement : SVGElement, SVGFilterPrimitiveSt
 		public const ushort SVG_EDGEMODE_DUPLICATE = 1;
 		public const ushort SVG_EDGEMODE_WRAP = 2;
 		public const ushort SVG_EDGEMODE_NONE = 3;
-		public SVGAnimatedString In1 { get; }
-		public SVGAnimatedNumber StdDeviationX { get; }
-		public SVGAnimatedNumber StdDeviationY { get; }
+	///<include file='Utils/Docs/SVGFEGaussianBlurElementIn1/SVGFEGaussianBlurElementIn1.generated.xml' path='docs/SVGFEGaussianBlurElementIn1/*'/>
+	public SVGAnimatedString In1 { get; }
+	///<include file='Utils/Docs/SVGFEGaussianBlurElementStdDeviationX/SVGFEGaussianBlurElementStdDeviationX.generated.xml' path='docs/SVGFEGaussianBlurElementStdDeviationX/*'/>
+	public SVGAnimatedNumber StdDeviationX { get; }
+	///<include file='Utils/Docs/SVGFEGaussianBlurElementStdDeviationY/SVGFEGaussianBlurElementStdDeviationY.generated.xml' path='docs/SVGFEGaussianBlurElementStdDeviationY/*'/>
+	public SVGAnimatedNumber StdDeviationY { get; }
 		public SVGAnimatedEnumeration EdgeMode { get; }
-		public Undefined SetStdDeviation(Number stdDeviationX, Number stdDeviationY) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/SVGFEGaussianBlurElementSetStdDeviation/SVGFEGaussianBlurElementSetStdDeviation.generated.xml' path='docs/SVGFEGaussianBlurElementSetStdDeviation/*'/>
+	public Undefined SetStdDeviation(Number stdDeviationX, Number stdDeviationY) { throw new System.NotImplementedException(); }
 }
 
 
@@ -7163,7 +6619,8 @@ public partial class SVGFEMergeElement : SVGElement, SVGFilterPrimitiveStandardA
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class SVGFEMergeNodeElement : SVGElement
 {
-		public SVGAnimatedString In1 { get; }
+	///<include file='Utils/Docs/SVGFEMergeNodeElementIn1/SVGFEMergeNodeElementIn1.generated.xml' path='docs/SVGFEMergeNodeElementIn1/*'/>
+	public SVGAnimatedString In1 { get; }
 }
 
 ///<include file='Utils/Docs/SVGFEMorphologyElement/SVGFEMorphologyElement.generated.xml' path='docs/SVGFEMorphologyElement/*'/>
@@ -7173,10 +6630,14 @@ public partial class SVGFEMorphologyElement : SVGElement, SVGFilterPrimitiveStan
 		public const ushort SVG_MORPHOLOGY_OPERATOR_UNKNOWN = 0;
 		public const ushort SVG_MORPHOLOGY_OPERATOR_ERODE = 1;
 		public const ushort SVG_MORPHOLOGY_OPERATOR_DILATE = 2;
-		public SVGAnimatedString In1 { get; }
-		public SVGAnimatedEnumeration Operator { get; }
-		public SVGAnimatedNumber RadiusX { get; }
-		public SVGAnimatedNumber RadiusY { get; }
+	///<include file='Utils/Docs/SVGFEMorphologyElementIn1/SVGFEMorphologyElementIn1.generated.xml' path='docs/SVGFEMorphologyElementIn1/*'/>
+	public SVGAnimatedString In1 { get; }
+	///<include file='Utils/Docs/SVGFEMorphologyElementOperator/SVGFEMorphologyElementOperator.generated.xml' path='docs/SVGFEMorphologyElementOperator/*'/>
+	public SVGAnimatedEnumeration Operator { get; }
+	///<include file='Utils/Docs/SVGFEMorphologyElementRadiusX/SVGFEMorphologyElementRadiusX.generated.xml' path='docs/SVGFEMorphologyElementRadiusX/*'/>
+	public SVGAnimatedNumber RadiusX { get; }
+	///<include file='Utils/Docs/SVGFEMorphologyElementRadiusY/SVGFEMorphologyElementRadiusY.generated.xml' path='docs/SVGFEMorphologyElementRadiusY/*'/>
+	public SVGAnimatedNumber RadiusY { get; }
 }
 
 
@@ -7194,10 +6655,14 @@ public partial class SVGFEOffsetElement : SVGElement, SVGFilterPrimitiveStandard
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class SVGFESpecularLightingElement : SVGElement, SVGFilterPrimitiveStandardAttributes
 {
-		public SVGAnimatedString In1 { get; }
-		public SVGAnimatedNumber SurfaceScale { get; }
-		public SVGAnimatedNumber SpecularConstant { get; }
-		public SVGAnimatedNumber SpecularExponent { get; }
+	///<include file='Utils/Docs/SVGFESpecularLightingElementIn1/SVGFESpecularLightingElementIn1.generated.xml' path='docs/SVGFESpecularLightingElementIn1/*'/>
+	public SVGAnimatedString In1 { get; }
+	///<include file='Utils/Docs/SVGFESpecularLightingElementSurfaceScale/SVGFESpecularLightingElementSurfaceScale.generated.xml' path='docs/SVGFESpecularLightingElementSurfaceScale/*'/>
+	public SVGAnimatedNumber SurfaceScale { get; }
+	///<include file='Utils/Docs/SVGFESpecularLightingElementSpecularConstant/SVGFESpecularLightingElementSpecularConstant.generated.xml' path='docs/SVGFESpecularLightingElementSpecularConstant/*'/>
+	public SVGAnimatedNumber SpecularConstant { get; }
+	///<include file='Utils/Docs/SVGFESpecularLightingElementSpecularExponent/SVGFESpecularLightingElementSpecularExponent.generated.xml' path='docs/SVGFESpecularLightingElementSpecularExponent/*'/>
+	public SVGAnimatedNumber SpecularExponent { get; }
 		public SVGAnimatedNumber KernelUnitLengthX { get; }
 		public SVGAnimatedNumber KernelUnitLengthY { get; }
 }
@@ -7270,16 +6735,6 @@ public partial class Font
 		public ulong GlyphsRendered { get; }
 }
 
-///<include file='Utils/Docs/FileSystemHandleKind/FileSystemHandleKind.generated.xml' path='docs/FileSystemHandleKind/*'/>
-[To(ToAttribute.None)]
-public enum FileSystemHandleKind
-{
-	[Value("file")]
-	File,
-	[Value("directory")]
-	Directory,
-}
-
 ///<include file='Utils/Docs/FileSystemHandle/FileSystemHandle.generated.xml' path='docs/FileSystemHandle/*'/>
 public partial class FileSystemHandle
 {
@@ -7342,24 +6797,13 @@ public partial class FileSystemDirectoryHandle : FileSystemHandle
 	public Task<List<USVString>?> Resolve(FileSystemHandle possibleDescendant) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.None)]
-public enum WriteCommandType
-{
-	[Value("write")]
-	Write,
-	[Value("seek")]
-	Seek,
-	[Value("truncate")]
-	Truncate,
-}
-
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class WriteParams
 {
 		public required WriteCommandType Type;
 		public ulong? Size;
 		public ulong? Position;
-		public Union49? Data;
+		public Union47? Data;
 }
 
 
@@ -7407,17 +6851,6 @@ public partial class StorageManager
 	public Task<FileSystemDirectoryHandle> GetDirectory() { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.None)]
-public enum FullscreenNavigationUI
-{
-	[Value("auto")]
-	Auto,
-	[Value("show")]
-	Show,
-	[Value("hide")]
-	Hide,
-}
-
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class FullscreenOptions
 {
@@ -7444,23 +6877,6 @@ public partial class Document
 	public Task<Undefined> ExitFullscreen() { throw new System.NotImplementedException(); }
 		public EventHandler Onfullscreenchange { get; set; }
 		public EventHandler Onfullscreenerror { get; set; }
-}
-
-public partial interface DocumentOrShadowRoot
-{
-		public Element? FullscreenElement { get { throw new System.NotImplementedException(); } }
-}
-
-///<include file='Utils/Docs/GamepadHand/GamepadHand.generated.xml' path='docs/GamepadHand/*'/>
-[To(ToAttribute.None)]
-public enum GamepadHand
-{
-	[Value("")]
-	Empty,
-	[Value("left")]
-	Left,
-	[Value("right")]
-	Right,
 }
 
 ///<include file='Utils/Docs/GamepadPose/GamepadPose.generated.xml' path='docs/GamepadPose/*'/>
@@ -7548,42 +6964,15 @@ public partial class GamepadButton
 	public Number Value { get; }
 }
 
-[To(ToAttribute.None)]
-public enum GamepadMappingType
-{
-	[Value("")]
-	Empty,
-	[Value("standard")]
-	Standard,
-	[Value("xr-standard")]
-	XrStandard,
-}
-
 ///<include file='Utils/Docs/GamepadHapticActuator/GamepadHapticActuator.generated.xml' path='docs/GamepadHapticActuator/*'/>
 public partial class GamepadHapticActuator
 {
-		public GamepadHapticEffectType[] Effects { get; }
+	///<include file='Utils/Docs/GamepadHapticActuatorEffects/GamepadHapticActuatorEffects.generated.xml' path='docs/GamepadHapticActuatorEffects/*'/>
+	public GamepadHapticEffectType[] Effects { get; }
 	///<include file='Utils/Docs/GamepadHapticActuatorPlayEffect/GamepadHapticActuatorPlayEffect.generated.xml' path='docs/GamepadHapticActuatorPlayEffect/*'/>
 	public Task<GamepadHapticsResult> PlayEffect(GamepadHapticEffectType type, GamepadEffectParameters params_) { throw new System.NotImplementedException(); }
-		public Task<GamepadHapticsResult> Reset() { throw new System.NotImplementedException(); }
-}
-
-[To(ToAttribute.None)]
-public enum GamepadHapticsResult
-{
-	[Value("complete")]
-	Complete,
-	[Value("preempted")]
-	Preempted,
-}
-
-[To(ToAttribute.None)]
-public enum GamepadHapticEffectType
-{
-	[Value("dual-rumble")]
-	DualRumble,
-	[Value("trigger-rumble")]
-	TriggerRumble,
+	///<include file='Utils/Docs/GamepadHapticActuatorReset/GamepadHapticActuatorReset.generated.xml' path='docs/GamepadHapticActuatorReset/*'/>
+	public Task<GamepadHapticsResult> Reset() { throw new System.NotImplementedException(); }
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -7619,13 +7008,6 @@ public partial class GamepadEvent : Event
 public partial class GamepadEventInit : EventInit
 {
 		public required Gamepad Gamepad;
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface WindowEventHandlers
-{
-		public EventHandler Ongamepadconnected { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Ongamepaddisconnected { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
 }
 
 ///<include file='Utils/Docs/Sensor/Sensor.generated.xml' path='docs/Sensor/*'/>
@@ -7729,16 +7111,6 @@ public partial class Geolocation
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct PositionCallback
-{
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct PositionErrorCallback
-{
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
 public partial class PositionOptions
 {
 		public bool EnableHighAccuracy;
@@ -7754,6 +7126,8 @@ public partial class GeolocationPosition
 	public GeolocationCoordinates Coords { get; }
 	///<include file='Utils/Docs/GeolocationPositionTimestamp/GeolocationPositionTimestamp.generated.xml' path='docs/GeolocationPositionTimestamp/*'/>
 	public EpochTimeStamp Timestamp { get; }
+	///<include file='Utils/Docs/GeolocationPositionToJSON/GeolocationPositionToJSON.generated.xml' path='docs/GeolocationPositionToJSON/*'/>
+	public Object ToJSON() { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/GeolocationCoordinates/GeolocationCoordinates.generated.xml' path='docs/GeolocationCoordinates/*'/>
@@ -7774,6 +7148,8 @@ public partial class GeolocationCoordinates
 	public Number? Heading { get; }
 	///<include file='Utils/Docs/GeolocationCoordinatesSpeed/GeolocationCoordinatesSpeed.generated.xml' path='docs/GeolocationCoordinatesSpeed/*'/>
 	public Number? Speed { get; }
+	///<include file='Utils/Docs/GeolocationCoordinatesToJSON/GeolocationCoordinatesToJSON.generated.xml' path='docs/GeolocationCoordinatesToJSON/*'/>
+	public Object ToJSON() { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/GeolocationPositionError/GeolocationPositionError.generated.xml' path='docs/GeolocationPositionError/*'/>
@@ -7805,9 +7181,10 @@ public partial class DOMPointReadOnly
 	public double Z { get; }
 	///<include file='Utils/Docs/DOMPointReadOnlyW/DOMPointReadOnlyW.generated.xml' path='docs/DOMPointReadOnlyW/*'/>
 	public double W { get; }
-		public DOMPoint MatrixTransform(DOMMatrixInit matrix) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/DOMPointReadOnlyMatrixTransform/DOMPointReadOnlyMatrixTransform.generated.xml' path='docs/DOMPointReadOnlyMatrixTransform/*'/>
+	public DOMPoint MatrixTransform(DOMMatrixInit matrix) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/DOMPointReadOnlyToJSON/DOMPointReadOnlyToJSON.generated.xml' path='docs/DOMPointReadOnlyToJSON/*'/>
-	public object ToJSON() { throw new System.NotImplementedException(); }
+	public Object ToJSON() { throw new System.NotImplementedException(); }
 	public DOMPointReadOnly() { }
 }
 
@@ -7863,7 +7240,8 @@ public partial class DOMRectReadOnly
 	public double Bottom { get; }
 	///<include file='Utils/Docs/DOMRectReadOnlyLeft/DOMRectReadOnlyLeft.generated.xml' path='docs/DOMRectReadOnlyLeft/*'/>
 	public double Left { get; }
-		public object ToJSON() { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/DOMRectReadOnlyToJSON/DOMRectReadOnlyToJSON.generated.xml' path='docs/DOMRectReadOnlyToJSON/*'/>
+	public Object ToJSON() { throw new System.NotImplementedException(); }
 	public DOMRectReadOnly() { }
 }
 
@@ -7875,10 +7253,14 @@ public partial class DOMRect : DOMRectReadOnly
 	public DOMRect(double x, double y, double width, double height) { }
 	///<include file='Utils/Docs/DOMRectFromRect/DOMRectFromRect.generated.xml' path='docs/DOMRectFromRect/*'/>
 	public static DOMRect FromRect(DOMRectInit other) { throw new System.NotImplementedException(); }
-		public double X { get; set; }
-		public double Y { get; set; }
-		public double Width { get; set; }
-		public double Height { get; set; }
+	///<include file='Utils/Docs/DOMRectX/DOMRectX.generated.xml' path='docs/DOMRectX/*'/>
+	public double X { get; set; }
+	///<include file='Utils/Docs/DOMRectY/DOMRectY.generated.xml' path='docs/DOMRectY/*'/>
+	public double Y { get; set; }
+	///<include file='Utils/Docs/DOMRectWidth/DOMRectWidth.generated.xml' path='docs/DOMRectWidth/*'/>
+	public double Width { get; set; }
+	///<include file='Utils/Docs/DOMRectHeight/DOMRectHeight.generated.xml' path='docs/DOMRectHeight/*'/>
+	public double Height { get; set; }
 	public DOMRect() { }
 }
 
@@ -7891,10 +7273,12 @@ public partial class DOMRectInit
 		public double Height;
 }
 
+///<include file='Utils/Docs/DOMRectList/DOMRectList.generated.xml' path='docs/DOMRectList/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class DOMRectList
 {
-		public ulong Length { get; }
+	///<include file='Utils/Docs/DOMRectListLength/DOMRectListLength.generated.xml' path='docs/DOMRectListLength/*'/>
+	public ulong Length { get; }
 	
 }
 
@@ -7902,15 +7286,22 @@ public partial class DOMRectList
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class DOMQuad
 {
-		public DOMQuad(DOMPointInit p1, DOMPointInit p2, DOMPointInit p3, DOMPointInit p4) { }
+	///<include file='Utils/Docs/DOMQuadDOMQuad/DOMQuadDOMQuad.generated.xml' path='docs/DOMQuadDOMQuad/*'/>
+	public DOMQuad(DOMPointInit p1, DOMPointInit p2, DOMPointInit p3, DOMPointInit p4) { }
 		public static DOMQuad FromRect(DOMRectInit other) { throw new System.NotImplementedException(); }
 		public static DOMQuad FromQuad(DOMQuadInit other) { throw new System.NotImplementedException(); }
-		public DOMPoint P1 { get; }
-		public DOMPoint P2 { get; }
-		public DOMPoint P3 { get; }
-		public DOMPoint P4 { get; }
-		public DOMRect GetBounds() { throw new System.NotImplementedException(); }
-		public object ToJSON() { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/DOMQuadP1/DOMQuadP1.generated.xml' path='docs/DOMQuadP1/*'/>
+	public DOMPoint P1 { get; }
+	///<include file='Utils/Docs/DOMQuadP2/DOMQuadP2.generated.xml' path='docs/DOMQuadP2/*'/>
+	public DOMPoint P2 { get; }
+	///<include file='Utils/Docs/DOMQuadP3/DOMQuadP3.generated.xml' path='docs/DOMQuadP3/*'/>
+	public DOMPoint P3 { get; }
+	///<include file='Utils/Docs/DOMQuadP4/DOMQuadP4.generated.xml' path='docs/DOMQuadP4/*'/>
+	public DOMPoint P4 { get; }
+	///<include file='Utils/Docs/DOMQuadGetBounds/DOMQuadGetBounds.generated.xml' path='docs/DOMQuadGetBounds/*'/>
+	public DOMRect GetBounds() { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/DOMQuadToJSON/DOMQuadToJSON.generated.xml' path='docs/DOMQuadToJSON/*'/>
+	public Object ToJSON() { throw new System.NotImplementedException(); }
 	public DOMQuad() { }
 }
 
@@ -7928,7 +7319,7 @@ public partial class DOMQuadInit
 public partial class DOMMatrixReadOnly
 {
 	///<include file='Utils/Docs/DOMMatrixReadOnlyDOMMatrixReadOnly/DOMMatrixReadOnlyDOMMatrixReadOnly.generated.xml' path='docs/DOMMatrixReadOnlyDOMMatrixReadOnly/*'/>
-	public DOMMatrixReadOnly(Union51 init) { }
+	public DOMMatrixReadOnly(Union49 init) { }
 		public static DOMMatrixReadOnly FromMatrix(DOMMatrixInit other) { throw new System.NotImplementedException(); }
 		public static DOMMatrixReadOnly FromFloat32Array(System.Single array32) { throw new System.NotImplementedException(); }
 		public static DOMMatrixReadOnly FromFloat64Array(System.Double array64) { throw new System.NotImplementedException(); }
@@ -7967,16 +7358,23 @@ public partial class DOMMatrixReadOnly
 		public DOMMatrix RotateAxisAngle(double x, double y, double z, double angle) { throw new System.NotImplementedException(); }
 		public DOMMatrix SkewX(double sx) { throw new System.NotImplementedException(); }
 		public DOMMatrix SkewY(double sy) { throw new System.NotImplementedException(); }
-		public DOMMatrix Multiply(DOMMatrixInit other) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/DOMMatrixReadOnlyMultiply/DOMMatrixReadOnlyMultiply.generated.xml' path='docs/DOMMatrixReadOnlyMultiply/*'/>
+	public DOMMatrix Multiply(DOMMatrixInit other) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/DOMMatrixReadOnlyFlipX/DOMMatrixReadOnlyFlipX.generated.xml' path='docs/DOMMatrixReadOnlyFlipX/*'/>
 	public DOMMatrix FlipX() { throw new System.NotImplementedException(); }
-		public DOMMatrix FlipY() { throw new System.NotImplementedException(); }
-		public DOMMatrix Inverse() { throw new System.NotImplementedException(); }
-		public DOMPoint TransformPoint(DOMPointInit point) { throw new System.NotImplementedException(); }
-		public System.Single ToFloat32Array() { throw new System.NotImplementedException(); }
-		public System.Double ToFloat64Array() { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/DOMMatrixReadOnlyFlipY/DOMMatrixReadOnlyFlipY.generated.xml' path='docs/DOMMatrixReadOnlyFlipY/*'/>
+	public DOMMatrix FlipY() { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/DOMMatrixReadOnlyInverse/DOMMatrixReadOnlyInverse.generated.xml' path='docs/DOMMatrixReadOnlyInverse/*'/>
+	public DOMMatrix Inverse() { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/DOMMatrixReadOnlyTransformPoint/DOMMatrixReadOnlyTransformPoint.generated.xml' path='docs/DOMMatrixReadOnlyTransformPoint/*'/>
+	public DOMPoint TransformPoint(DOMPointInit point) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/DOMMatrixReadOnlyToFloat32Array/DOMMatrixReadOnlyToFloat32Array.generated.xml' path='docs/DOMMatrixReadOnlyToFloat32Array/*'/>
+	public System.Single ToFloat32Array() { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/DOMMatrixReadOnlyToFloat64Array/DOMMatrixReadOnlyToFloat64Array.generated.xml' path='docs/DOMMatrixReadOnlyToFloat64Array/*'/>
+	public System.Double ToFloat64Array() { throw new System.NotImplementedException(); }
 	
-		public object ToJSON() { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/DOMMatrixReadOnlyToJSON/DOMMatrixReadOnlyToJSON.generated.xml' path='docs/DOMMatrixReadOnlyToJSON/*'/>
+	public Object ToJSON() { throw new System.NotImplementedException(); }
 	public DOMMatrixReadOnly() { }
 }
 
@@ -7985,7 +7383,7 @@ public partial class DOMMatrixReadOnly
 public partial class DOMMatrix : DOMMatrixReadOnly
 {
 	///<include file='Utils/Docs/DOMMatrixDOMMatrix/DOMMatrixDOMMatrix.generated.xml' path='docs/DOMMatrixDOMMatrix/*'/>
-	public DOMMatrix(Union52 init) { }
+	public DOMMatrix(Union50 init) { }
 		public static DOMMatrix FromMatrix(DOMMatrixInit other) { throw new System.NotImplementedException(); }
 		public static DOMMatrix FromFloat32Array(System.Single array32) { throw new System.NotImplementedException(); }
 		public static DOMMatrix FromFloat64Array(System.Double array64) { throw new System.NotImplementedException(); }
@@ -8011,18 +7409,26 @@ public partial class DOMMatrix : DOMMatrixReadOnly
 		public double M42 { get; set; }
 		public double M43 { get; set; }
 		public double M44 { get; set; }
-		public DOMMatrix MultiplySelf(DOMMatrixInit other) { throw new System.NotImplementedException(); }
-		public DOMMatrix PreMultiplySelf(DOMMatrixInit other) { throw new System.NotImplementedException(); }
-		public DOMMatrix TranslateSelf(double tx, double ty, double tz) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/DOMMatrixMultiplySelf/DOMMatrixMultiplySelf.generated.xml' path='docs/DOMMatrixMultiplySelf/*'/>
+	public DOMMatrix MultiplySelf(DOMMatrixInit other) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/DOMMatrixPreMultiplySelf/DOMMatrixPreMultiplySelf.generated.xml' path='docs/DOMMatrixPreMultiplySelf/*'/>
+	public DOMMatrix PreMultiplySelf(DOMMatrixInit other) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/DOMMatrixTranslateSelf/DOMMatrixTranslateSelf.generated.xml' path='docs/DOMMatrixTranslateSelf/*'/>
+	public DOMMatrix TranslateSelf(double tx, double ty, double tz) { throw new System.NotImplementedException(); }
 		public DOMMatrix ScaleSelf(double scaleX, double scaleY, double scaleZ, double originX, double originY, double originZ) { throw new System.NotImplementedException(); }
 		public DOMMatrix Scale3dSelf(double scale, double originX, double originY, double originZ) { throw new System.NotImplementedException(); }
-		public DOMMatrix RotateSelf(double rotX, double rotY, double rotZ) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/DOMMatrixRotateSelf/DOMMatrixRotateSelf.generated.xml' path='docs/DOMMatrixRotateSelf/*'/>
+	public DOMMatrix RotateSelf(double rotX, double rotY, double rotZ) { throw new System.NotImplementedException(); }
 		public DOMMatrix RotateFromVectorSelf(double x, double y) { throw new System.NotImplementedException(); }
 		public DOMMatrix RotateAxisAngleSelf(double x, double y, double z, double angle) { throw new System.NotImplementedException(); }
-		public DOMMatrix SkewXSelf(double sx) { throw new System.NotImplementedException(); }
-		public DOMMatrix SkewYSelf(double sy) { throw new System.NotImplementedException(); }
-		public DOMMatrix InvertSelf() { throw new System.NotImplementedException(); }
-		public DOMMatrix SetMatrixValue(DOMString transformList) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/DOMMatrixSkewXSelf/DOMMatrixSkewXSelf.generated.xml' path='docs/DOMMatrixSkewXSelf/*'/>
+	public DOMMatrix SkewXSelf(double sx) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/DOMMatrixSkewYSelf/DOMMatrixSkewYSelf.generated.xml' path='docs/DOMMatrixSkewYSelf/*'/>
+	public DOMMatrix SkewYSelf(double sy) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/DOMMatrixInvertSelf/DOMMatrixInvertSelf.generated.xml' path='docs/DOMMatrixInvertSelf/*'/>
+	public DOMMatrix InvertSelf() { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/DOMMatrixSetMatrixValue/DOMMatrixSetMatrixValue.generated.xml' path='docs/DOMMatrixSetMatrixValue/*'/>
+	public DOMMatrix SetMatrixValue(DOMString transformList) { throw new System.NotImplementedException(); }
 	public DOMMatrix() { }
 }
 
@@ -8090,19 +7496,112 @@ public partial class Gyroscope : Sensor
 	public Gyroscope() { }
 }
 
-[To(ToAttribute.None)]
-public enum GyroscopeLocalCoordinateSystem
-{
-	[Value("device")]
-	Device,
-	[Value("screen")]
-	Screen,
-}
-
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class GyroscopeSensorOptions : SensorOptions
 {
 		public GyroscopeLocalCoordinateSystem ReferenceFrame;
+}
+
+///<include file='Utils/Docs/Navigator/Navigator.generated.xml' path='docs/Navigator/*'/>
+public partial class Navigator
+{
+		public Task<HandwritingRecognizerQueryResult?> QueryHandwritingRecognizer(HandwritingModelConstraint constraint) { throw new System.NotImplementedException(); }
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class HandwritingModelConstraint
+{
+		public required List<DOMString> Languages;
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class HandwritingRecognizerQueryResult
+{
+		public bool TextAlternatives;
+		public bool TextSegmentation;
+		public HandwritingHintsQueryResult Hints;
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class HandwritingHintsQueryResult
+{
+		public List<HandwritingRecognitionType> RecognitionType;
+		public List<HandwritingInputType> InputType;
+		public bool TextContext;
+		public bool Alternatives;
+}
+
+///<include file='Utils/Docs/Navigator/Navigator.generated.xml' path='docs/Navigator/*'/>
+public partial class Navigator
+{
+		public Task<HandwritingRecognizer> CreateHandwritingRecognizer(HandwritingModelConstraint constraint) { throw new System.NotImplementedException(); }
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class HandwritingRecognizer
+{
+		public HandwritingDrawing StartDrawing(HandwritingHints hints) { throw new System.NotImplementedException(); }
+		public Undefined Finish() { throw new System.NotImplementedException(); }
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class HandwritingHints
+{
+		public DOMString RecognitionType;
+		public DOMString InputType;
+		public DOMString TextContext;
+		public ulong Alternatives;
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class HandwritingDrawing
+{
+		public Undefined AddStroke(HandwritingStroke stroke) { throw new System.NotImplementedException(); }
+		public Undefined RemoveStroke(HandwritingStroke stroke) { throw new System.NotImplementedException(); }
+		public Undefined Clear() { throw new System.NotImplementedException(); }
+		public List<HandwritingStroke> GetStrokes() { throw new System.NotImplementedException(); }
+		public Task<List<HandwritingPrediction>> GetPrediction() { throw new System.NotImplementedException(); }
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class HandwritingStroke
+{
+		public HandwritingStroke() { }
+		public Undefined AddPoint(HandwritingPoint point) { throw new System.NotImplementedException(); }
+		public List<HandwritingPoint> GetPoints() { throw new System.NotImplementedException(); }
+		public Undefined Clear() { throw new System.NotImplementedException(); }
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class HandwritingPoint
+{
+		public required Number X;
+		public required Number Y;
+		public DOMHighResTimeStamp T;
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class HandwritingPrediction
+{
+		public required DOMString Text;
+		public List<HandwritingSegment> SegmentationResult;
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class HandwritingSegment
+{
+		public required DOMString Grapheme;
+		public required ulong BeginIndex;
+		public required ulong EndIndex;
+		public required List<HandwritingDrawingSegment> DrawingSegments;
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class HandwritingDrawingSegment
+{
+		public required ulong StrokeIndex;
+		public required ulong BeginPointIndex;
+		public required ulong EndPointIndex;
 }
 
 
@@ -8115,18 +7614,14 @@ public partial class Performance : EventTarget
 	///<include file='Utils/Docs/PerformanceTimeOrigin/PerformanceTimeOrigin.generated.xml' path='docs/PerformanceTimeOrigin/*'/>
 	public DOMHighResTimeStamp TimeOrigin { get; }
 	///<include file='Utils/Docs/PerformanceToJSON/PerformanceToJSON.generated.xml' path='docs/PerformanceToJSON/*'/>
-	public object ToJSON() { throw new System.NotImplementedException(); }
-}
-
-public partial interface WindowOrWorkerGlobalScope
-{
-		public Performance Performance { get { throw new System.NotImplementedException(); } }
+	public Object ToJSON() { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/HTMLInputElement/HTMLInputElement.generated.xml' path='docs/HTMLInputElement/*'/>
 public partial class HTMLInputElement
 {
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLInputElementCapture/HTMLInputElementCapture.generated.xml' path='docs/HTMLInputElementCapture/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Capture { get; set; }
 }
 
@@ -8141,7 +7636,7 @@ public partial class HTMLAllCollection
 	
 	///<include file='Utils/Docs/HTMLAllCollectionItem/HTMLAllCollectionItem.generated.xml' path='docs/HTMLAllCollectionItem/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
-	public Union54? Item(DOMString nameOrIndex) { throw new System.NotImplementedException(); }
+	public Union52? Item(DOMString nameOrIndex) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/HTMLFormControlsCollection/HTMLFormControlsCollection.generated.xml' path='docs/HTMLFormControlsCollection/*'/>
@@ -8163,14 +7658,18 @@ public partial class RadioNodeList : NodeList
 [To(ToAttribute.Default)]
 public partial class HTMLOptionsCollection : HTMLCollection
 {
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLOptionsCollectionLength/HTMLOptionsCollectionLength.generated.xml' path='docs/HTMLOptionsCollectionLength/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Length { get; set; }
 	
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public Undefined Add(Union56 element, Union57? before) { throw new System.NotImplementedException(); }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLOptionsCollectionAdd/HTMLOptionsCollectionAdd.generated.xml' path='docs/HTMLOptionsCollectionAdd/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public Undefined Add(Union54 element, Union55? before) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/HTMLOptionsCollectionRemove/HTMLOptionsCollectionRemove.generated.xml' path='docs/HTMLOptionsCollectionRemove/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined Remove(long index) { throw new System.NotImplementedException(); }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLOptionsCollectionSelectedIndex/HTMLOptionsCollectionSelectedIndex.generated.xml' path='docs/HTMLOptionsCollectionSelectedIndex/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public long SelectedIndex { get; set; }
 }
 
@@ -8185,33 +7684,11 @@ public partial class DOMStringList
 	public bool Contains(DOMString string_) { throw new System.NotImplementedException(); }
 }
 
-///<include file='Utils/Docs/DocumentReadyState/DocumentReadyState.generated.xml' path='docs/DocumentReadyState/*'/>
-[To(ToAttribute.None)]
-public enum DocumentReadyState
-{
-	[Value("loading")]
-	Loading,
-	[Value("interactive")]
-	Interactive,
-	[Value("complete")]
-	Complete,
-}
-
-///<include file='Utils/Docs/DocumentVisibilityState/DocumentVisibilityState.generated.xml' path='docs/DocumentVisibilityState/*'/>
-[To(ToAttribute.None)]
-public enum DocumentVisibilityState
-{
-	[Value("visible")]
-	Visible,
-	[Value("hidden")]
-	Hidden,
-}
-
-
 ///<include file='Utils/Docs/Document/Document.generated.xml' path='docs/Document/*'/>
 public partial class Document
 {
-		public static Document ParseHTMLUnsafe(HTMLString html) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/DocumentParseHTMLUnsafe/DocumentParseHTMLUnsafe.generated.xml' path='docs/DocumentParseHTMLUnsafe/*'/>
+	public static Document ParseHTMLUnsafe(Union57 html) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/DocumentLocation/DocumentLocation.generated.xml' path='docs/DocumentLocation/*'/>
 	public Location? Location { get; }
 	///<include file='Utils/Docs/DocumentDomain/DocumentDomain.generated.xml' path='docs/DocumentDomain/*'/>
@@ -8256,9 +7733,9 @@ public partial class Document
 	///<include file='Utils/Docs/DocumentClose/DocumentClose.generated.xml' path='docs/DocumentClose/*'/>
 	public Undefined Close() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/DocumentWrite/DocumentWrite.generated.xml' path='docs/DocumentWrite/*'/>
-	public Undefined Write(params HTMLString[] text) { throw new System.NotImplementedException(); }
+	public Undefined Write(params Union58[] text) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/DocumentWriteln/DocumentWriteln.generated.xml' path='docs/DocumentWriteln/*'/>
-	public Undefined Writeln(params HTMLString[] text) { throw new System.NotImplementedException(); }
+	public Undefined Writeln(params Union59[] text) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/DocumentDefaultView/DocumentDefaultView.generated.xml' path='docs/DocumentDefaultView/*'/>
 	public WindowProxy? DefaultView { get; }
 	///<include file='Utils/Docs/DocumentHasFocus/DocumentHasFocus.generated.xml' path='docs/DocumentHasFocus/*'/>
@@ -8284,11 +7761,6 @@ public partial class Document
 }
 
 
-public partial interface DocumentOrShadowRoot
-{
-		public Element? ActiveElement { get { throw new System.NotImplementedException(); } }
-}
-
 ///<include file='Utils/Docs/HTMLElement/HTMLElement.generated.xml' path='docs/HTMLElement/*'/>
 public partial class HTMLElement : Element
 {
@@ -8307,7 +7779,7 @@ public partial class HTMLElement : Element
 	public DOMString Dir { get; set; }
 	///<include file='Utils/Docs/HTMLElementHidden/HTMLElementHidden.generated.xml' path='docs/HTMLElementHidden/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
-	public Union59? Hidden { get; set; }
+	public Union60? Hidden { get; set; }
 	///<include file='Utils/Docs/HTMLElementInert/HTMLElementInert.generated.xml' path='docs/HTMLElementInert/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Inert { get; set; }
@@ -8326,10 +7798,15 @@ public partial class HTMLElement : Element
 	///<include file='Utils/Docs/HTMLElementSpellcheck/HTMLElementSpellcheck.generated.xml' path='docs/HTMLElementSpellcheck/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Spellcheck { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLElementWritingSuggestions/HTMLElementWritingSuggestions.generated.xml' path='docs/HTMLElementWritingSuggestions/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString WritingSuggestions { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLElementAutocapitalize/HTMLElementAutocapitalize.generated.xml' path='docs/HTMLElementAutocapitalize/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Autocapitalize { get; set; }
+	///<include file='Utils/Docs/HTMLElementAutocorrect/HTMLElementAutocorrect.generated.xml' path='docs/HTMLElementAutocorrect/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public bool Autocorrect { get; set; }
 	///<include file='Utils/Docs/HTMLElementInnerText/HTMLElementInnerText.generated.xml' path='docs/HTMLElementInnerText/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString InnerText { get; set; }
@@ -8341,16 +7818,28 @@ public partial class HTMLElement : Element
 	public ElementInternals AttachInternals() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HTMLElementShowPopover/HTMLElementShowPopover.generated.xml' path='docs/HTMLElementShowPopover/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
-	public Undefined ShowPopover() { throw new System.NotImplementedException(); }
+	public Undefined ShowPopover(ShowPopoverOptions options) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HTMLElementHidePopover/HTMLElementHidePopover.generated.xml' path='docs/HTMLElementHidePopover/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined HidePopover() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HTMLElementTogglePopover/HTMLElementTogglePopover.generated.xml' path='docs/HTMLElementTogglePopover/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
-	public bool TogglePopover(bool force) { throw new System.NotImplementedException(); }
+	public bool TogglePopover(Union61 options) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HTMLElementPopover/HTMLElementPopover.generated.xml' path='docs/HTMLElementPopover/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString? Popover { get; set; }
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class ShowPopoverOptions
+{
+		public HTMLElement Source;
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class TogglePopoverOptions : ShowPopoverOptions
+{
+		public bool Force;
 }
 
 
@@ -8360,17 +7849,6 @@ public partial class HTMLElement : Element
 [To(ToAttribute.Default)]
 public partial class HTMLUnknownElement : HTMLElement
 {
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface HTMLOrSVGElement
-{
-		public DOMStringMap Dataset { get { throw new System.NotImplementedException(); } }
-		public DOMString Nonce { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public bool Autofocus { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public long TabIndex { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public Undefined Focus(FocusOptions options) { throw new System.NotImplementedException(); }
-		public Undefined Blur() { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/DOMStringMap/DOMStringMap.generated.xml' path='docs/DOMStringMap/*'/>
@@ -8411,7 +7889,8 @@ public partial class HTMLTitleElement : HTMLElement
 public partial class HTMLBaseElement : HTMLElement
 {
 		public HTMLBaseElement() { }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLBaseElementHref/HTMLBaseElementHref.generated.xml' path='docs/HTMLBaseElementHref/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public USVString Href { get; set; }
 	///<include file='Utils/Docs/HTMLBaseElementTarget/HTMLBaseElementTarget.generated.xml' path='docs/HTMLBaseElementTarget/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
@@ -8423,7 +7902,8 @@ public partial class HTMLBaseElement : HTMLElement
 public partial class HTMLLinkElement : HTMLElement, LinkStyle
 {
 		public HTMLLinkElement() { }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLLinkElementHref/HTMLLinkElementHref.generated.xml' path='docs/HTMLLinkElementHref/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public USVString Href { get; set; }
 	///<include file='Utils/Docs/HTMLLinkElementCrossOrigin/HTMLLinkElementCrossOrigin.generated.xml' path='docs/HTMLLinkElementCrossOrigin/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
@@ -8437,16 +7917,20 @@ public partial class HTMLLinkElement : HTMLElement, LinkStyle
 	///<include file='Utils/Docs/HTMLLinkElementRelList/HTMLLinkElementRelList.generated.xml' path='docs/HTMLLinkElementRelList/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMTokenList RelList { get; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLLinkElementMedia/HTMLLinkElementMedia.generated.xml' path='docs/HTMLLinkElementMedia/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Media { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLLinkElementIntegrity/HTMLLinkElementIntegrity.generated.xml' path='docs/HTMLLinkElementIntegrity/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Integrity { get; set; }
 	///<include file='Utils/Docs/HTMLLinkElementHreflang/HTMLLinkElementHreflang.generated.xml' path='docs/HTMLLinkElementHreflang/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Hreflang { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLLinkElementType/HTMLLinkElementType.generated.xml' path='docs/HTMLLinkElementType/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Type { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLLinkElementSizes/HTMLLinkElementSizes.generated.xml' path='docs/HTMLLinkElementSizes/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMTokenList Sizes { get; }
 		[To(ToAttribute.FirstCharToLowerCase)]
 	public USVString ImageSrcset { get; set; }
@@ -8455,9 +7939,11 @@ public partial class HTMLLinkElement : HTMLElement, LinkStyle
 	///<include file='Utils/Docs/HTMLLinkElementReferrerPolicy/HTMLLinkElementReferrerPolicy.generated.xml' path='docs/HTMLLinkElementReferrerPolicy/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString ReferrerPolicy { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLLinkElementBlocking/HTMLLinkElementBlocking.generated.xml' path='docs/HTMLLinkElementBlocking/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMTokenList Blocking { get; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLLinkElementDisabled/HTMLLinkElementDisabled.generated.xml' path='docs/HTMLLinkElementDisabled/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Disabled { get; set; }
 	///<include file='Utils/Docs/HTMLLinkElementFetchPriority/HTMLLinkElementFetchPriority.generated.xml' path='docs/HTMLLinkElementFetchPriority/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
@@ -8495,7 +7981,8 @@ public partial class HTMLStyleElement : HTMLElement, LinkStyle
 	///<include file='Utils/Docs/HTMLStyleElementMedia/HTMLStyleElementMedia.generated.xml' path='docs/HTMLStyleElementMedia/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Media { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLStyleElementBlocking/HTMLStyleElementBlocking.generated.xml' path='docs/HTMLStyleElementBlocking/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMTokenList Blocking { get; }
 }
 
@@ -8540,7 +8027,8 @@ public partial class HTMLPreElement : HTMLElement
 public partial class HTMLQuoteElement : HTMLElement
 {
 		public HTMLQuoteElement() { }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLQuoteElementCite/HTMLQuoteElementCite.generated.xml' path='docs/HTMLQuoteElementCite/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public USVString Cite { get; set; }
 }
 
@@ -8579,7 +8067,8 @@ public partial class HTMLMenuElement : HTMLElement
 public partial class HTMLLIElement : HTMLElement
 {
 		public HTMLLIElement() { }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLLIElementValue/HTMLLIElementValue.generated.xml' path='docs/HTMLLIElementValue/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public long Value { get; set; }
 }
 
@@ -8666,28 +8155,13 @@ public partial class HTMLBRElement : HTMLElement
 		public HTMLBRElement() { }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface HTMLHyperlinkElementUtils
-{
-		public USVString Href { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public USVString Origin { get { throw new System.NotImplementedException(); } }
-		public USVString Protocol { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public USVString Username { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public USVString Password { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public USVString Host { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public USVString Hostname { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public USVString Port { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public USVString Pathname { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public USVString Search { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public USVString Hash { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-}
-
 ///<include file='Utils/Docs/HTMLModElement/HTMLModElement.generated.xml' path='docs/HTMLModElement/*'/>
 [To(ToAttribute.Default)]
 public partial class HTMLModElement : HTMLElement
 {
 		public HTMLModElement() { }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLModElementCite/HTMLModElementCite.generated.xml' path='docs/HTMLModElementCite/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public USVString Cite { get; set; }
 		[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString DateTime { get; set; }
@@ -8705,15 +8179,20 @@ public partial class HTMLPictureElement : HTMLElement
 public partial class HTMLSourceElement : HTMLElement
 {
 		public HTMLSourceElement() { }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLSourceElementSrc/HTMLSourceElementSrc.generated.xml' path='docs/HTMLSourceElementSrc/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public USVString Src { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLSourceElementType/HTMLSourceElementType.generated.xml' path='docs/HTMLSourceElementType/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Type { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLSourceElementSrcset/HTMLSourceElementSrcset.generated.xml' path='docs/HTMLSourceElementSrcset/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public USVString Srcset { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLSourceElementSizes/HTMLSourceElementSizes.generated.xml' path='docs/HTMLSourceElementSizes/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Sizes { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLSourceElementMedia/HTMLSourceElementMedia.generated.xml' path='docs/HTMLSourceElementMedia/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Media { get; set; }
 	///<include file='Utils/Docs/HTMLSourceElementWidth/HTMLSourceElementWidth.generated.xml' path='docs/HTMLSourceElementWidth/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
@@ -8792,13 +8271,15 @@ public partial class HTMLIFrameElement : HTMLElement
 	public USVString Src { get; set; }
 	///<include file='Utils/Docs/HTMLIFrameElementSrcdoc/HTMLIFrameElementSrcdoc.generated.xml' path='docs/HTMLIFrameElementSrcdoc/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
-	public HTMLString Srcdoc { get; set; }
+	public Union62 Srcdoc { get; set; }
 	///<include file='Utils/Docs/HTMLIFrameElementName/HTMLIFrameElementName.generated.xml' path='docs/HTMLIFrameElementName/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Name { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLIFrameElementSandbox/HTMLIFrameElementSandbox.generated.xml' path='docs/HTMLIFrameElementSandbox/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMTokenList Sandbox { get; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLIFrameElementAllow/HTMLIFrameElementAllow.generated.xml' path='docs/HTMLIFrameElementAllow/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Allow { get; set; }
 	///<include file='Utils/Docs/HTMLIFrameElementAllowFullscreen/HTMLIFrameElementAllowFullscreen.generated.xml' path='docs/HTMLIFrameElementAllowFullscreen/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
@@ -8821,7 +8302,8 @@ public partial class HTMLIFrameElement : HTMLElement
 	///<include file='Utils/Docs/HTMLIFrameElementContentWindow/HTMLIFrameElementContentWindow.generated.xml' path='docs/HTMLIFrameElementContentWindow/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public WindowProxy? ContentWindow { get; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLIFrameElementGetSVGDocument/HTMLIFrameElementGetSVGDocument.generated.xml' path='docs/HTMLIFrameElementGetSVGDocument/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Document? GetSVGDocument() { throw new System.NotImplementedException(); }
 }
 
@@ -8830,9 +8312,11 @@ public partial class HTMLIFrameElement : HTMLElement
 public partial class HTMLEmbedElement : HTMLElement
 {
 		public HTMLEmbedElement() { }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLEmbedElementSrc/HTMLEmbedElementSrc.generated.xml' path='docs/HTMLEmbedElementSrc/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public USVString Src { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLEmbedElementType/HTMLEmbedElementType.generated.xml' path='docs/HTMLEmbedElementType/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Type { get; set; }
 	///<include file='Utils/Docs/HTMLEmbedElementWidth/HTMLEmbedElementWidth.generated.xml' path='docs/HTMLEmbedElementWidth/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
@@ -8840,7 +8324,8 @@ public partial class HTMLEmbedElement : HTMLElement
 	///<include file='Utils/Docs/HTMLEmbedElementHeight/HTMLEmbedElementHeight.generated.xml' path='docs/HTMLEmbedElementHeight/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Height { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLEmbedElementGetSVGDocument/HTMLEmbedElementGetSVGDocument.generated.xml' path='docs/HTMLEmbedElementGetSVGDocument/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Document? GetSVGDocument() { throw new System.NotImplementedException(); }
 }
 
@@ -8873,7 +8358,8 @@ public partial class HTMLObjectElement : HTMLElement
 	///<include file='Utils/Docs/HTMLObjectElementContentWindow/HTMLObjectElementContentWindow.generated.xml' path='docs/HTMLObjectElementContentWindow/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public WindowProxy? ContentWindow { get; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLObjectElementGetSVGDocument/HTMLObjectElementGetSVGDocument.generated.xml' path='docs/HTMLObjectElementGetSVGDocument/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Document? GetSVGDocument() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HTMLObjectElementWillValidate/HTMLObjectElementWillValidate.generated.xml' path='docs/HTMLObjectElementWillValidate/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
@@ -8887,7 +8373,8 @@ public partial class HTMLObjectElement : HTMLElement
 	///<include file='Utils/Docs/HTMLObjectElementCheckValidity/HTMLObjectElementCheckValidity.generated.xml' path='docs/HTMLObjectElementCheckValidity/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool CheckValidity() { throw new System.NotImplementedException(); }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLObjectElementReportValidity/HTMLObjectElementReportValidity.generated.xml' path='docs/HTMLObjectElementReportValidity/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool ReportValidity() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HTMLObjectElementSetCustomValidity/HTMLObjectElementSetCustomValidity.generated.xml' path='docs/HTMLObjectElementSetCustomValidity/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
@@ -8930,16 +8417,20 @@ public partial class HTMLAudioElement : HTMLMediaElement
 public partial class HTMLTrackElement : HTMLElement
 {
 		public HTMLTrackElement() { }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTrackElementKind/HTMLTrackElementKind.generated.xml' path='docs/HTMLTrackElementKind/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Kind { get; set; }
 	///<include file='Utils/Docs/HTMLTrackElementSrc/HTMLTrackElementSrc.generated.xml' path='docs/HTMLTrackElementSrc/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public USVString Src { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTrackElementSrclang/HTMLTrackElementSrclang.generated.xml' path='docs/HTMLTrackElementSrclang/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Srclang { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTrackElementLabel/HTMLTrackElementLabel.generated.xml' path='docs/HTMLTrackElementLabel/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Label { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTrackElementDefault/HTMLTrackElementDefault.generated.xml' path='docs/HTMLTrackElementDefault/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Default { get; set; }
 		[To(ToAttribute.FirstCharToLowerCase)]
 	public const ushort NONE = 0;
@@ -8949,23 +8440,13 @@ public partial class HTMLTrackElement : HTMLElement
 	public const ushort LOADED = 2;
 		[To(ToAttribute.FirstCharToLowerCase)]
 	public const ushort ERROR = 3;
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTrackElementReadyState/HTMLTrackElementReadyState.generated.xml' path='docs/HTMLTrackElementReadyState/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public ushort ReadyState { get; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTrackElementTrack/HTMLTrackElementTrack.generated.xml' path='docs/HTMLTrackElementTrack/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public TextTrack Track { get; }
 }
-
-[To(ToAttribute.None)]
-public enum CanPlayTypeResult
-{
-	[Value("")]
-	Empty,
-	[Value("maybe")]
-	Maybe,
-	[Value("probably")]
-	Probably,
-}
-
 
 ///<include file='Utils/Docs/HTMLMediaElement/HTMLMediaElement.generated.xml' path='docs/HTMLMediaElement/*'/>
 public partial class HTMLMediaElement : HTMLElement
@@ -8996,7 +8477,8 @@ public partial class HTMLMediaElement : HTMLElement
 	///<include file='Utils/Docs/HTMLMediaElementNetworkState/HTMLMediaElementNetworkState.generated.xml' path='docs/HTMLMediaElementNetworkState/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public ushort NetworkState { get; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLMediaElementPreload/HTMLMediaElementPreload.generated.xml' path='docs/HTMLMediaElementPreload/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Preload { get; set; }
 	///<include file='Utils/Docs/HTMLMediaElementBuffered/HTMLMediaElementBuffered.generated.xml' path='docs/HTMLMediaElementBuffered/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
@@ -9020,7 +8502,8 @@ public partial class HTMLMediaElement : HTMLElement
 	///<include file='Utils/Docs/HTMLMediaElementReadyState/HTMLMediaElementReadyState.generated.xml' path='docs/HTMLMediaElementReadyState/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public ushort ReadyState { get; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLMediaElementSeeking/HTMLMediaElementSeeking.generated.xml' path='docs/HTMLMediaElementSeeking/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Seeking { get; }
 	///<include file='Utils/Docs/HTMLMediaElementCurrentTime/HTMLMediaElementCurrentTime.generated.xml' path='docs/HTMLMediaElementCurrentTime/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
@@ -9032,7 +8515,7 @@ public partial class HTMLMediaElement : HTMLElement
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public double Duration { get; }
 		[To(ToAttribute.FirstCharToLowerCase)]
-	public object GetStartDate() { throw new System.NotImplementedException(); }
+	public Object GetStartDate() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HTMLMediaElementPaused/HTMLMediaElementPaused.generated.xml' path='docs/HTMLMediaElementPaused/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Paused { get; }
@@ -9045,7 +8528,8 @@ public partial class HTMLMediaElement : HTMLElement
 	///<include file='Utils/Docs/HTMLMediaElementPreservesPitch/HTMLMediaElementPreservesPitch.generated.xml' path='docs/HTMLMediaElementPreservesPitch/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool PreservesPitch { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLMediaElementPlayed/HTMLMediaElementPlayed.generated.xml' path='docs/HTMLMediaElementPlayed/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public TimeRanges Played { get; }
 	///<include file='Utils/Docs/HTMLMediaElementSeekable/HTMLMediaElementSeekable.generated.xml' path='docs/HTMLMediaElementSeekable/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
@@ -9086,7 +8570,8 @@ public partial class HTMLMediaElement : HTMLElement
 	///<include file='Utils/Docs/HTMLMediaElementTextTracks/HTMLMediaElementTextTracks.generated.xml' path='docs/HTMLMediaElementTextTracks/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public TextTrackList TextTracks { get; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLMediaElementAddTextTrack/HTMLMediaElementAddTextTrack.generated.xml' path='docs/HTMLMediaElementAddTextTrack/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public TextTrack AddTextTrack(TextTrackKind kind, DOMString label, DOMString language) { throw new System.NotImplementedException(); }
 }
 
@@ -9185,34 +8670,6 @@ public partial class TextTrackList : EventTarget
 	public EventHandler Onremovetrack { get; set; }
 }
 
-///<include file='Utils/Docs/TextTrackMode/TextTrackMode.generated.xml' path='docs/TextTrackMode/*'/>
-[To(ToAttribute.None)]
-public enum TextTrackMode
-{
-	[Value("disabled")]
-	Disabled,
-	[Value("hidden")]
-	Hidden,
-	[Value("showing")]
-	Showing,
-}
-
-///<include file='Utils/Docs/TextTrackKind/TextTrackKind.generated.xml' path='docs/TextTrackKind/*'/>
-[To(ToAttribute.None)]
-public enum TextTrackKind
-{
-	[Value("subtitles")]
-	Subtitles,
-	[Value("captions")]
-	Captions,
-	[Value("descriptions")]
-	Descriptions,
-	[Value("chapters")]
-	Chapters,
-	[Value("metadata")]
-	Metadata,
-}
-
 ///<include file='Utils/Docs/TextTrack/TextTrack.generated.xml' path='docs/TextTrack/*'/>
 [To(ToAttribute.Default)]
 public partial class TextTrack : EventTarget
@@ -9308,14 +8765,14 @@ public partial class TrackEvent : Event
 	///<include file='Utils/Docs/TrackEventTrackEvent/TrackEventTrackEvent.generated.xml' path='docs/TrackEventTrackEvent/*'/>
 	public TrackEvent(DOMString type, TrackEventInit eventInitDict) { }
 	///<include file='Utils/Docs/TrackEventTrack/TrackEventTrack.generated.xml' path='docs/TrackEventTrack/*'/>
-	public Union61? Track { get; }
+	public Union64? Track { get; }
 	public TrackEvent() { }
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class TrackEventInit : EventInit
 {
-		public Union62? Track;
+		public Union65? Track;
 }
 
 ///<include file='Utils/Docs/HTMLMapElement/HTMLMapElement.generated.xml' path='docs/HTMLMapElement/*'/>
@@ -9326,25 +8783,30 @@ public partial class HTMLMapElement : HTMLElement
 	///<include file='Utils/Docs/HTMLMapElementName/HTMLMapElementName.generated.xml' path='docs/HTMLMapElementName/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Name { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLMapElementAreas/HTMLMapElementAreas.generated.xml' path='docs/HTMLMapElementAreas/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLCollection Areas { get; }
 }
 
 ///<include file='Utils/Docs/HTMLAreaElement/HTMLAreaElement.generated.xml' path='docs/HTMLAreaElement/*'/>
 [To(ToAttribute.Default)]
-public partial class HTMLAreaElement : HTMLElement, HTMLHyperlinkElementUtils
+public partial class HTMLAreaElement : HTMLElement, HTMLAttributionSrcElementUtils, HTMLHyperlinkElementUtils
 {
 		public HTMLAreaElement() { }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLAreaElementAlt/HTMLAreaElementAlt.generated.xml' path='docs/HTMLAreaElementAlt/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Alt { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLAreaElementCoords/HTMLAreaElementCoords.generated.xml' path='docs/HTMLAreaElementCoords/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Coords { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLAreaElementShape/HTMLAreaElementShape.generated.xml' path='docs/HTMLAreaElementShape/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Shape { get; set; }
 	///<include file='Utils/Docs/HTMLAreaElementTarget/HTMLAreaElementTarget.generated.xml' path='docs/HTMLAreaElementTarget/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Target { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLAreaElementDownload/HTMLAreaElementDownload.generated.xml' path='docs/HTMLAreaElementDownload/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Download { get; set; }
 	///<include file='Utils/Docs/HTMLAreaElementPing/HTMLAreaElementPing.generated.xml' path='docs/HTMLAreaElementPing/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
@@ -9422,7 +8884,8 @@ public partial class HTMLTableCaptionElement : HTMLElement
 public partial class HTMLTableColElement : HTMLElement
 {
 		public HTMLTableColElement() { }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTableColElementSpan/HTMLTableColElementSpan.generated.xml' path='docs/HTMLTableColElementSpan/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Span { get; set; }
 }
 
@@ -9431,11 +8894,14 @@ public partial class HTMLTableColElement : HTMLElement
 public partial class HTMLTableSectionElement : HTMLElement
 {
 		public HTMLTableSectionElement() { }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTableSectionElementRows/HTMLTableSectionElementRows.generated.xml' path='docs/HTMLTableSectionElementRows/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLCollection Rows { get; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTableSectionElementInsertRow/HTMLTableSectionElementInsertRow.generated.xml' path='docs/HTMLTableSectionElementInsertRow/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLTableRowElement InsertRow(long index) { throw new System.NotImplementedException(); }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTableSectionElementDeleteRow/HTMLTableSectionElementDeleteRow.generated.xml' path='docs/HTMLTableSectionElementDeleteRow/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined DeleteRow(long index) { throw new System.NotImplementedException(); }
 }
 
@@ -9447,14 +8913,17 @@ public partial class HTMLTableRowElement : HTMLElement
 	///<include file='Utils/Docs/HTMLTableRowElementRowIndex/HTMLTableRowElementRowIndex.generated.xml' path='docs/HTMLTableRowElementRowIndex/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public long RowIndex { get; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTableRowElementSectionRowIndex/HTMLTableRowElementSectionRowIndex.generated.xml' path='docs/HTMLTableRowElementSectionRowIndex/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public long SectionRowIndex { get; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTableRowElementCells/HTMLTableRowElementCells.generated.xml' path='docs/HTMLTableRowElementCells/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLCollection Cells { get; }
 	///<include file='Utils/Docs/HTMLTableRowElementInsertCell/HTMLTableRowElementInsertCell.generated.xml' path='docs/HTMLTableRowElementInsertCell/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLTableCellElement InsertCell(long index) { throw new System.NotImplementedException(); }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTableRowElementDeleteCell/HTMLTableRowElementDeleteCell.generated.xml' path='docs/HTMLTableRowElementDeleteCell/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined DeleteCell(long index) { throw new System.NotImplementedException(); }
 }
 
@@ -9463,17 +8932,23 @@ public partial class HTMLTableRowElement : HTMLElement
 public partial class HTMLTableCellElement : HTMLElement
 {
 		public HTMLTableCellElement() { }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTableCellElementColSpan/HTMLTableCellElementColSpan.generated.xml' path='docs/HTMLTableCellElementColSpan/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong ColSpan { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTableCellElementRowSpan/HTMLTableCellElementRowSpan.generated.xml' path='docs/HTMLTableCellElementRowSpan/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong RowSpan { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTableCellElementHeaders/HTMLTableCellElementHeaders.generated.xml' path='docs/HTMLTableCellElementHeaders/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Headers { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTableCellElementCellIndex/HTMLTableCellElementCellIndex.generated.xml' path='docs/HTMLTableCellElementCellIndex/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public long CellIndex { get; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTableCellElementScope/HTMLTableCellElementScope.generated.xml' path='docs/HTMLTableCellElementScope/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Scope { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTableCellElementAbbr/HTMLTableCellElementAbbr.generated.xml' path='docs/HTMLTableCellElementAbbr/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Abbr { get; set; }
 }
 
@@ -9488,7 +8963,8 @@ public partial class HTMLFormElement : HTMLElement
 	///<include file='Utils/Docs/HTMLFormElementAction/HTMLFormElementAction.generated.xml' path='docs/HTMLFormElementAction/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public USVString Action { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLFormElementAutocomplete/HTMLFormElementAutocomplete.generated.xml' path='docs/HTMLFormElementAutocomplete/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Autocomplete { get; set; }
 	///<include file='Utils/Docs/HTMLFormElementEnctype/HTMLFormElementEnctype.generated.xml' path='docs/HTMLFormElementEnctype/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
@@ -9502,7 +8978,8 @@ public partial class HTMLFormElement : HTMLElement
 	///<include file='Utils/Docs/HTMLFormElementName/HTMLFormElementName.generated.xml' path='docs/HTMLFormElementName/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Name { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLFormElementNoValidate/HTMLFormElementNoValidate.generated.xml' path='docs/HTMLFormElementNoValidate/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool NoValidate { get; set; }
 	///<include file='Utils/Docs/HTMLFormElementTarget/HTMLFormElementTarget.generated.xml' path='docs/HTMLFormElementTarget/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
@@ -9528,7 +9005,8 @@ public partial class HTMLFormElement : HTMLElement
 	///<include file='Utils/Docs/HTMLFormElementReset/HTMLFormElementReset.generated.xml' path='docs/HTMLFormElementReset/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined Reset() { throw new System.NotImplementedException(); }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLFormElementCheckValidity/HTMLFormElementCheckValidity.generated.xml' path='docs/HTMLFormElementCheckValidity/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool CheckValidity() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HTMLFormElementReportValidity/HTMLFormElementReportValidity.generated.xml' path='docs/HTMLFormElementReportValidity/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
@@ -9555,81 +9033,116 @@ public partial class HTMLLabelElement : HTMLElement
 public partial class HTMLInputElement : HTMLElement
 {
 		public HTMLInputElement() { }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLInputElementAccept/HTMLInputElementAccept.generated.xml' path='docs/HTMLInputElementAccept/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Accept { get; set; }
 		[To(ToAttribute.FirstCharToLowerCase)]
+	public bool Alpha { get; set; }
+	///<include file='Utils/Docs/HTMLInputElementAlt/HTMLInputElementAlt.generated.xml' path='docs/HTMLInputElementAlt/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Alt { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLInputElementAutocomplete/HTMLInputElementAutocomplete.generated.xml' path='docs/HTMLInputElementAutocomplete/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Autocomplete { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLInputElementDefaultChecked/HTMLInputElementDefaultChecked.generated.xml' path='docs/HTMLInputElementDefaultChecked/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool DefaultChecked { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLInputElementChecked/HTMLInputElementChecked.generated.xml' path='docs/HTMLInputElementChecked/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Checked { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public DOMString ColorSpace { get; set; }
 		[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString DirName { get; set; }
 	///<include file='Utils/Docs/HTMLInputElementDisabled/HTMLInputElementDisabled.generated.xml' path='docs/HTMLInputElementDisabled/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Disabled { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLInputElementForm/HTMLInputElementForm.generated.xml' path='docs/HTMLInputElementForm/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLFormElement? Form { get; }
 	///<include file='Utils/Docs/HTMLInputElementFiles/HTMLInputElementFiles.generated.xml' path='docs/HTMLInputElementFiles/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public FileList? Files { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLInputElementFormAction/HTMLInputElementFormAction.generated.xml' path='docs/HTMLInputElementFormAction/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public USVString FormAction { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLInputElementFormEnctype/HTMLInputElementFormEnctype.generated.xml' path='docs/HTMLInputElementFormEnctype/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString FormEnctype { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLInputElementFormMethod/HTMLInputElementFormMethod.generated.xml' path='docs/HTMLInputElementFormMethod/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString FormMethod { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLInputElementFormNoValidate/HTMLInputElementFormNoValidate.generated.xml' path='docs/HTMLInputElementFormNoValidate/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool FormNoValidate { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLInputElementFormTarget/HTMLInputElementFormTarget.generated.xml' path='docs/HTMLInputElementFormTarget/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString FormTarget { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLInputElementHeight/HTMLInputElementHeight.generated.xml' path='docs/HTMLInputElementHeight/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Height { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLInputElementIndeterminate/HTMLInputElementIndeterminate.generated.xml' path='docs/HTMLInputElementIndeterminate/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Indeterminate { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLInputElementList/HTMLInputElementList.generated.xml' path='docs/HTMLInputElementList/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLDataListElement? List { get; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLInputElementMax/HTMLInputElementMax.generated.xml' path='docs/HTMLInputElementMax/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Max { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLInputElementMaxLength/HTMLInputElementMaxLength.generated.xml' path='docs/HTMLInputElementMaxLength/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public long MaxLength { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLInputElementMin/HTMLInputElementMin.generated.xml' path='docs/HTMLInputElementMin/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Min { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLInputElementMinLength/HTMLInputElementMinLength.generated.xml' path='docs/HTMLInputElementMinLength/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public long MinLength { get; set; }
 	///<include file='Utils/Docs/HTMLInputElementMultiple/HTMLInputElementMultiple.generated.xml' path='docs/HTMLInputElementMultiple/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Multiple { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLInputElementName/HTMLInputElementName.generated.xml' path='docs/HTMLInputElementName/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Name { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLInputElementPattern/HTMLInputElementPattern.generated.xml' path='docs/HTMLInputElementPattern/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Pattern { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLInputElementPlaceholder/HTMLInputElementPlaceholder.generated.xml' path='docs/HTMLInputElementPlaceholder/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Placeholder { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLInputElementReadOnly/HTMLInputElementReadOnly.generated.xml' path='docs/HTMLInputElementReadOnly/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool ReadOnly { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLInputElementRequired/HTMLInputElementRequired.generated.xml' path='docs/HTMLInputElementRequired/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Required { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLInputElementSize/HTMLInputElementSize.generated.xml' path='docs/HTMLInputElementSize/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Size { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLInputElementSrc/HTMLInputElementSrc.generated.xml' path='docs/HTMLInputElementSrc/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public USVString Src { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLInputElementStep/HTMLInputElementStep.generated.xml' path='docs/HTMLInputElementStep/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Step { get; set; }
 	///<include file='Utils/Docs/HTMLInputElementType/HTMLInputElementType.generated.xml' path='docs/HTMLInputElementType/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Type { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLInputElementDefaultValue/HTMLInputElementDefaultValue.generated.xml' path='docs/HTMLInputElementDefaultValue/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString DefaultValue { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLInputElementValue/HTMLInputElementValue.generated.xml' path='docs/HTMLInputElementValue/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Value { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
-	public object? ValueAsDate { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLInputElementValueAsDate/HTMLInputElementValueAsDate.generated.xml' path='docs/HTMLInputElementValueAsDate/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public Object? ValueAsDate { get; set; }
+	///<include file='Utils/Docs/HTMLInputElementValueAsNumber/HTMLInputElementValueAsNumber.generated.xml' path='docs/HTMLInputElementValueAsNumber/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public double ValueAsNumber { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLInputElementWidth/HTMLInputElementWidth.generated.xml' path='docs/HTMLInputElementWidth/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Width { get; set; }
 	///<include file='Utils/Docs/HTMLInputElementStepUp/HTMLInputElementStepUp.generated.xml' path='docs/HTMLInputElementStepUp/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
@@ -9637,11 +9150,14 @@ public partial class HTMLInputElement : HTMLElement
 	///<include file='Utils/Docs/HTMLInputElementStepDown/HTMLInputElementStepDown.generated.xml' path='docs/HTMLInputElementStepDown/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined StepDown(long n) { throw new System.NotImplementedException(); }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLInputElementWillValidate/HTMLInputElementWillValidate.generated.xml' path='docs/HTMLInputElementWillValidate/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool WillValidate { get; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLInputElementValidity/HTMLInputElementValidity.generated.xml' path='docs/HTMLInputElementValidity/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public ValidityState Validity { get; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLInputElementValidationMessage/HTMLInputElementValidationMessage.generated.xml' path='docs/HTMLInputElementValidationMessage/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString ValidationMessage { get; }
 	///<include file='Utils/Docs/HTMLInputElementCheckValidity/HTMLInputElementCheckValidity.generated.xml' path='docs/HTMLInputElementCheckValidity/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
@@ -9690,36 +9206,50 @@ public partial class HTMLButtonElement : HTMLElement, PopoverInvokerElement
 	///<include file='Utils/Docs/HTMLButtonElementDisabled/HTMLButtonElementDisabled.generated.xml' path='docs/HTMLButtonElementDisabled/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Disabled { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLButtonElementForm/HTMLButtonElementForm.generated.xml' path='docs/HTMLButtonElementForm/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLFormElement? Form { get; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLButtonElementFormAction/HTMLButtonElementFormAction.generated.xml' path='docs/HTMLButtonElementFormAction/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public USVString FormAction { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLButtonElementFormEnctype/HTMLButtonElementFormEnctype.generated.xml' path='docs/HTMLButtonElementFormEnctype/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString FormEnctype { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLButtonElementFormMethod/HTMLButtonElementFormMethod.generated.xml' path='docs/HTMLButtonElementFormMethod/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString FormMethod { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLButtonElementFormNoValidate/HTMLButtonElementFormNoValidate.generated.xml' path='docs/HTMLButtonElementFormNoValidate/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool FormNoValidate { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLButtonElementFormTarget/HTMLButtonElementFormTarget.generated.xml' path='docs/HTMLButtonElementFormTarget/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString FormTarget { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLButtonElementName/HTMLButtonElementName.generated.xml' path='docs/HTMLButtonElementName/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Name { get; set; }
 	///<include file='Utils/Docs/HTMLButtonElementType/HTMLButtonElementType.generated.xml' path='docs/HTMLButtonElementType/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Type { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLButtonElementValue/HTMLButtonElementValue.generated.xml' path='docs/HTMLButtonElementValue/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Value { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLButtonElementWillValidate/HTMLButtonElementWillValidate.generated.xml' path='docs/HTMLButtonElementWillValidate/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool WillValidate { get; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLButtonElementValidity/HTMLButtonElementValidity.generated.xml' path='docs/HTMLButtonElementValidity/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public ValidityState Validity { get; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLButtonElementValidationMessage/HTMLButtonElementValidationMessage.generated.xml' path='docs/HTMLButtonElementValidationMessage/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString ValidationMessage { get; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLButtonElementCheckValidity/HTMLButtonElementCheckValidity.generated.xml' path='docs/HTMLButtonElementCheckValidity/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool CheckValidity() { throw new System.NotImplementedException(); }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLButtonElementReportValidity/HTMLButtonElementReportValidity.generated.xml' path='docs/HTMLButtonElementReportValidity/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool ReportValidity() { throw new System.NotImplementedException(); }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLButtonElementSetCustomValidity/HTMLButtonElementSetCustomValidity.generated.xml' path='docs/HTMLButtonElementSetCustomValidity/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined SetCustomValidity(DOMString error) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HTMLButtonElementLabels/HTMLButtonElementLabels.generated.xml' path='docs/HTMLButtonElementLabels/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
@@ -9732,7 +9262,8 @@ public partial class HTMLButtonElement : HTMLElement, PopoverInvokerElement
 public partial class HTMLSelectElement : HTMLElement
 {
 		public HTMLSelectElement() { }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLSelectElementAutocomplete/HTMLSelectElementAutocomplete.generated.xml' path='docs/HTMLSelectElementAutocomplete/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Autocomplete { get; set; }
 	///<include file='Utils/Docs/HTMLSelectElementDisabled/HTMLSelectElementDisabled.generated.xml' path='docs/HTMLSelectElementDisabled/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
@@ -9740,13 +9271,17 @@ public partial class HTMLSelectElement : HTMLElement
 	///<include file='Utils/Docs/HTMLSelectElementForm/HTMLSelectElementForm.generated.xml' path='docs/HTMLSelectElementForm/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLFormElement? Form { get; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLSelectElementMultiple/HTMLSelectElementMultiple.generated.xml' path='docs/HTMLSelectElementMultiple/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Multiple { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLSelectElementName/HTMLSelectElementName.generated.xml' path='docs/HTMLSelectElementName/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Name { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLSelectElementRequired/HTMLSelectElementRequired.generated.xml' path='docs/HTMLSelectElementRequired/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Required { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLSelectElementSize/HTMLSelectElementSize.generated.xml' path='docs/HTMLSelectElementSize/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Size { get; set; }
 	///<include file='Utils/Docs/HTMLSelectElementType/HTMLSelectElementType.generated.xml' path='docs/HTMLSelectElementType/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
@@ -9754,7 +9289,8 @@ public partial class HTMLSelectElement : HTMLElement
 	///<include file='Utils/Docs/HTMLSelectElementOptions/HTMLSelectElementOptions.generated.xml' path='docs/HTMLSelectElementOptions/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLOptionsCollection Options { get; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLSelectElementLength/HTMLSelectElementLength.generated.xml' path='docs/HTMLSelectElementLength/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Length { get; set; }
 	
 	///<include file='Utils/Docs/HTMLSelectElementNamedItem/HTMLSelectElementNamedItem.generated.xml' path='docs/HTMLSelectElementNamedItem/*'/>
@@ -9762,7 +9298,7 @@ public partial class HTMLSelectElement : HTMLElement
 	public HTMLOptionElement? NamedItem(DOMString name) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HTMLSelectElementAdd/HTMLSelectElementAdd.generated.xml' path='docs/HTMLSelectElementAdd/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
-	public Undefined Add(Union64 element, Union65? before) { throw new System.NotImplementedException(); }
+	public Undefined Add(Union67 element, Union68? before) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HTMLSelectElementRemove/HTMLSelectElementRemove.generated.xml' path='docs/HTMLSelectElementRemove/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined Remove() { throw new System.NotImplementedException(); }
@@ -9776,18 +9312,23 @@ public partial class HTMLSelectElement : HTMLElement
 	///<include file='Utils/Docs/HTMLSelectElementSelectedIndex/HTMLSelectElementSelectedIndex.generated.xml' path='docs/HTMLSelectElementSelectedIndex/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public long SelectedIndex { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLSelectElementValue/HTMLSelectElementValue.generated.xml' path='docs/HTMLSelectElementValue/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Value { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLSelectElementWillValidate/HTMLSelectElementWillValidate.generated.xml' path='docs/HTMLSelectElementWillValidate/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool WillValidate { get; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLSelectElementValidity/HTMLSelectElementValidity.generated.xml' path='docs/HTMLSelectElementValidity/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public ValidityState Validity { get; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLSelectElementValidationMessage/HTMLSelectElementValidationMessage.generated.xml' path='docs/HTMLSelectElementValidationMessage/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString ValidationMessage { get; }
 	///<include file='Utils/Docs/HTMLSelectElementCheckValidity/HTMLSelectElementCheckValidity.generated.xml' path='docs/HTMLSelectElementCheckValidity/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool CheckValidity() { throw new System.NotImplementedException(); }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLSelectElementReportValidity/HTMLSelectElementReportValidity.generated.xml' path='docs/HTMLSelectElementReportValidity/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool ReportValidity() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HTMLSelectElementSetCustomValidity/HTMLSelectElementSetCustomValidity.generated.xml' path='docs/HTMLSelectElementSetCustomValidity/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
@@ -9805,7 +9346,8 @@ public partial class HTMLSelectElement : HTMLElement
 public partial class HTMLDataListElement : HTMLElement
 {
 		public HTMLDataListElement() { }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLDataListElementOptions/HTMLDataListElementOptions.generated.xml' path='docs/HTMLDataListElementOptions/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLCollection Options { get; }
 }
 
@@ -9814,9 +9356,11 @@ public partial class HTMLDataListElement : HTMLElement
 public partial class HTMLOptGroupElement : HTMLElement
 {
 		public HTMLOptGroupElement() { }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLOptGroupElementDisabled/HTMLOptGroupElementDisabled.generated.xml' path='docs/HTMLOptGroupElementDisabled/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Disabled { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLOptGroupElementLabel/HTMLOptGroupElementLabel.generated.xml' path='docs/HTMLOptGroupElementLabel/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Label { get; set; }
 }
 
@@ -9825,21 +9369,29 @@ public partial class HTMLOptGroupElement : HTMLElement
 public partial class HTMLOptionElement : HTMLElement
 {
 		public HTMLOptionElement() { }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLOptionElementDisabled/HTMLOptionElementDisabled.generated.xml' path='docs/HTMLOptionElementDisabled/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Disabled { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLOptionElementForm/HTMLOptionElementForm.generated.xml' path='docs/HTMLOptionElementForm/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLFormElement? Form { get; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLOptionElementLabel/HTMLOptionElementLabel.generated.xml' path='docs/HTMLOptionElementLabel/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Label { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLOptionElementDefaultSelected/HTMLOptionElementDefaultSelected.generated.xml' path='docs/HTMLOptionElementDefaultSelected/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool DefaultSelected { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLOptionElementSelected/HTMLOptionElementSelected.generated.xml' path='docs/HTMLOptionElementSelected/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Selected { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLOptionElementValue/HTMLOptionElementValue.generated.xml' path='docs/HTMLOptionElementValue/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Value { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLOptionElementText/HTMLOptionElementText.generated.xml' path='docs/HTMLOptionElementText/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Text { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLOptionElementIndex/HTMLOptionElementIndex.generated.xml' path='docs/HTMLOptionElementIndex/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public long Index { get; }
 }
 
@@ -9848,69 +9400,97 @@ public partial class HTMLOptionElement : HTMLElement
 public partial class HTMLTextAreaElement : HTMLElement
 {
 		public HTMLTextAreaElement() { }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTextAreaElementAutocomplete/HTMLTextAreaElementAutocomplete.generated.xml' path='docs/HTMLTextAreaElementAutocomplete/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Autocomplete { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTextAreaElementCols/HTMLTextAreaElementCols.generated.xml' path='docs/HTMLTextAreaElementCols/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Cols { get; set; }
 		[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString DirName { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTextAreaElementDisabled/HTMLTextAreaElementDisabled.generated.xml' path='docs/HTMLTextAreaElementDisabled/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Disabled { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTextAreaElementForm/HTMLTextAreaElementForm.generated.xml' path='docs/HTMLTextAreaElementForm/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLFormElement? Form { get; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTextAreaElementMaxLength/HTMLTextAreaElementMaxLength.generated.xml' path='docs/HTMLTextAreaElementMaxLength/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public long MaxLength { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTextAreaElementMinLength/HTMLTextAreaElementMinLength.generated.xml' path='docs/HTMLTextAreaElementMinLength/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public long MinLength { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTextAreaElementName/HTMLTextAreaElementName.generated.xml' path='docs/HTMLTextAreaElementName/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Name { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTextAreaElementPlaceholder/HTMLTextAreaElementPlaceholder.generated.xml' path='docs/HTMLTextAreaElementPlaceholder/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Placeholder { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTextAreaElementReadOnly/HTMLTextAreaElementReadOnly.generated.xml' path='docs/HTMLTextAreaElementReadOnly/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool ReadOnly { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTextAreaElementRequired/HTMLTextAreaElementRequired.generated.xml' path='docs/HTMLTextAreaElementRequired/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Required { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTextAreaElementRows/HTMLTextAreaElementRows.generated.xml' path='docs/HTMLTextAreaElementRows/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong Rows { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTextAreaElementWrap/HTMLTextAreaElementWrap.generated.xml' path='docs/HTMLTextAreaElementWrap/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Wrap { get; set; }
 	///<include file='Utils/Docs/HTMLTextAreaElementType/HTMLTextAreaElementType.generated.xml' path='docs/HTMLTextAreaElementType/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Type { get; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTextAreaElementDefaultValue/HTMLTextAreaElementDefaultValue.generated.xml' path='docs/HTMLTextAreaElementDefaultValue/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString DefaultValue { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTextAreaElementValue/HTMLTextAreaElementValue.generated.xml' path='docs/HTMLTextAreaElementValue/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Value { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTextAreaElementTextLength/HTMLTextAreaElementTextLength.generated.xml' path='docs/HTMLTextAreaElementTextLength/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong TextLength { get; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTextAreaElementWillValidate/HTMLTextAreaElementWillValidate.generated.xml' path='docs/HTMLTextAreaElementWillValidate/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool WillValidate { get; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTextAreaElementValidity/HTMLTextAreaElementValidity.generated.xml' path='docs/HTMLTextAreaElementValidity/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public ValidityState Validity { get; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTextAreaElementValidationMessage/HTMLTextAreaElementValidationMessage.generated.xml' path='docs/HTMLTextAreaElementValidationMessage/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString ValidationMessage { get; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTextAreaElementCheckValidity/HTMLTextAreaElementCheckValidity.generated.xml' path='docs/HTMLTextAreaElementCheckValidity/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool CheckValidity() { throw new System.NotImplementedException(); }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTextAreaElementReportValidity/HTMLTextAreaElementReportValidity.generated.xml' path='docs/HTMLTextAreaElementReportValidity/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool ReportValidity() { throw new System.NotImplementedException(); }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTextAreaElementSetCustomValidity/HTMLTextAreaElementSetCustomValidity.generated.xml' path='docs/HTMLTextAreaElementSetCustomValidity/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined SetCustomValidity(DOMString error) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HTMLTextAreaElementLabels/HTMLTextAreaElementLabels.generated.xml' path='docs/HTMLTextAreaElementLabels/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public NodeList Labels { get; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTextAreaElementSelect/HTMLTextAreaElementSelect.generated.xml' path='docs/HTMLTextAreaElementSelect/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined Select() { throw new System.NotImplementedException(); }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTextAreaElementSelectionStart/HTMLTextAreaElementSelectionStart.generated.xml' path='docs/HTMLTextAreaElementSelectionStart/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong SelectionStart { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTextAreaElementSelectionEnd/HTMLTextAreaElementSelectionEnd.generated.xml' path='docs/HTMLTextAreaElementSelectionEnd/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong SelectionEnd { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTextAreaElementSelectionDirection/HTMLTextAreaElementSelectionDirection.generated.xml' path='docs/HTMLTextAreaElementSelectionDirection/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString SelectionDirection { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTextAreaElementSetRangeText/HTMLTextAreaElementSetRangeText.generated.xml' path='docs/HTMLTextAreaElementSetRangeText/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined SetRangeText(DOMString replacement) { throw new System.NotImplementedException(); }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTextAreaElementSetRangeText/HTMLTextAreaElementSetRangeText.generated.xml' path='docs/HTMLTextAreaElementSetRangeText/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined SetRangeText(DOMString replacement, ulong start, ulong end, SelectionMode selectionMode) { throw new System.NotImplementedException(); }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTextAreaElementSetSelectionRange/HTMLTextAreaElementSetSelectionRange.generated.xml' path='docs/HTMLTextAreaElementSetSelectionRange/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined SetSelectionRange(ulong start, ulong end, DOMString direction) { throw new System.NotImplementedException(); }
 }
 
@@ -9919,29 +9499,41 @@ public partial class HTMLTextAreaElement : HTMLElement
 public partial class HTMLOutputElement : HTMLElement
 {
 		public HTMLOutputElement() { }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLOutputElementHtmlFor/HTMLOutputElementHtmlFor.generated.xml' path='docs/HTMLOutputElementHtmlFor/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMTokenList HtmlFor { get; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLOutputElementForm/HTMLOutputElementForm.generated.xml' path='docs/HTMLOutputElementForm/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLFormElement? Form { get; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLOutputElementName/HTMLOutputElementName.generated.xml' path='docs/HTMLOutputElementName/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Name { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLOutputElementType/HTMLOutputElementType.generated.xml' path='docs/HTMLOutputElementType/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Type { get; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLOutputElementDefaultValue/HTMLOutputElementDefaultValue.generated.xml' path='docs/HTMLOutputElementDefaultValue/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString DefaultValue { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLOutputElementValue/HTMLOutputElementValue.generated.xml' path='docs/HTMLOutputElementValue/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Value { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLOutputElementWillValidate/HTMLOutputElementWillValidate.generated.xml' path='docs/HTMLOutputElementWillValidate/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool WillValidate { get; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLOutputElementValidity/HTMLOutputElementValidity.generated.xml' path='docs/HTMLOutputElementValidity/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public ValidityState Validity { get; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLOutputElementValidationMessage/HTMLOutputElementValidationMessage.generated.xml' path='docs/HTMLOutputElementValidationMessage/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString ValidationMessage { get; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLOutputElementCheckValidity/HTMLOutputElementCheckValidity.generated.xml' path='docs/HTMLOutputElementCheckValidity/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool CheckValidity() { throw new System.NotImplementedException(); }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLOutputElementReportValidity/HTMLOutputElementReportValidity.generated.xml' path='docs/HTMLOutputElementReportValidity/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool ReportValidity() { throw new System.NotImplementedException(); }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLOutputElementSetCustomValidity/HTMLOutputElementSetCustomValidity.generated.xml' path='docs/HTMLOutputElementSetCustomValidity/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined SetCustomValidity(DOMString error) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HTMLOutputElementLabels/HTMLOutputElementLabels.generated.xml' path='docs/HTMLOutputElementLabels/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
@@ -9972,17 +9564,23 @@ public partial class HTMLProgressElement : HTMLElement
 public partial class HTMLMeterElement : HTMLElement
 {
 		public HTMLMeterElement() { }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLMeterElementValue/HTMLMeterElementValue.generated.xml' path='docs/HTMLMeterElementValue/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Number Value { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLMeterElementMin/HTMLMeterElementMin.generated.xml' path='docs/HTMLMeterElementMin/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Number Min { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLMeterElementMax/HTMLMeterElementMax.generated.xml' path='docs/HTMLMeterElementMax/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Number Max { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLMeterElementLow/HTMLMeterElementLow.generated.xml' path='docs/HTMLMeterElementLow/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Number Low { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLMeterElementHigh/HTMLMeterElementHigh.generated.xml' path='docs/HTMLMeterElementHigh/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Number High { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLMeterElementOptimum/HTMLMeterElementOptimum.generated.xml' path='docs/HTMLMeterElementOptimum/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Number Optimum { get; set; }
 	///<include file='Utils/Docs/HTMLMeterElementLabels/HTMLMeterElementLabels.generated.xml' path='docs/HTMLMeterElementLabels/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
@@ -9994,27 +9592,38 @@ public partial class HTMLMeterElement : HTMLElement
 public partial class HTMLFieldSetElement : HTMLElement
 {
 		public HTMLFieldSetElement() { }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLFieldSetElementDisabled/HTMLFieldSetElementDisabled.generated.xml' path='docs/HTMLFieldSetElementDisabled/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Disabled { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLFieldSetElementForm/HTMLFieldSetElementForm.generated.xml' path='docs/HTMLFieldSetElementForm/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLFormElement? Form { get; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLFieldSetElementName/HTMLFieldSetElementName.generated.xml' path='docs/HTMLFieldSetElementName/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Name { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLFieldSetElementType/HTMLFieldSetElementType.generated.xml' path='docs/HTMLFieldSetElementType/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Type { get; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLFieldSetElementElements/HTMLFieldSetElementElements.generated.xml' path='docs/HTMLFieldSetElementElements/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLCollection Elements { get; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLFieldSetElementWillValidate/HTMLFieldSetElementWillValidate.generated.xml' path='docs/HTMLFieldSetElementWillValidate/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool WillValidate { get; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLFieldSetElementValidity/HTMLFieldSetElementValidity.generated.xml' path='docs/HTMLFieldSetElementValidity/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public ValidityState Validity { get; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLFieldSetElementValidationMessage/HTMLFieldSetElementValidationMessage.generated.xml' path='docs/HTMLFieldSetElementValidationMessage/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString ValidationMessage { get; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLFieldSetElementCheckValidity/HTMLFieldSetElementCheckValidity.generated.xml' path='docs/HTMLFieldSetElementCheckValidity/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool CheckValidity() { throw new System.NotImplementedException(); }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLFieldSetElementReportValidity/HTMLFieldSetElementReportValidity.generated.xml' path='docs/HTMLFieldSetElementReportValidity/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool ReportValidity() { throw new System.NotImplementedException(); }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLFieldSetElementSetCustomValidity/HTMLFieldSetElementSetCustomValidity.generated.xml' path='docs/HTMLFieldSetElementSetCustomValidity/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined SetCustomValidity(DOMString error) { throw new System.NotImplementedException(); }
 }
 
@@ -10023,21 +9632,9 @@ public partial class HTMLFieldSetElement : HTMLElement
 public partial class HTMLLegendElement : HTMLElement
 {
 		public HTMLLegendElement() { }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLLegendElementForm/HTMLLegendElementForm.generated.xml' path='docs/HTMLLegendElementForm/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public HTMLFormElement? Form { get; }
-}
-
-[To(ToAttribute.None)]
-public enum SelectionMode
-{
-	[Value("select")]
-	Select,
-	[Value("start")]
-	Start,
-	[Value("end")]
-	End,
-	[Value("preserve")]
-	Preserve,
 }
 
 ///<include file='Utils/Docs/ValidityState/ValidityState.generated.xml' path='docs/ValidityState/*'/>
@@ -10062,8 +9659,10 @@ public partial class ValidityState
 	public bool StepMismatch { get; }
 	///<include file='Utils/Docs/ValidityStateBadInput/ValidityStateBadInput.generated.xml' path='docs/ValidityStateBadInput/*'/>
 	public bool BadInput { get; }
-		public bool CustomError { get; }
-		public bool Valid { get; }
+	///<include file='Utils/Docs/ValidityStateCustomError/ValidityStateCustomError.generated.xml' path='docs/ValidityStateCustomError/*'/>
+	public bool CustomError { get; }
+	///<include file='Utils/Docs/ValidityStateValid/ValidityStateValid.generated.xml' path='docs/ValidityStateValid/*'/>
+	public bool Valid { get; }
 }
 
 ///<include file='Utils/Docs/SubmitEvent/SubmitEvent.generated.xml' path='docs/SubmitEvent/*'/>
@@ -10105,7 +9704,8 @@ public partial class FormDataEventInit : EventInit
 public partial class HTMLDetailsElement : HTMLElement
 {
 		public HTMLDetailsElement() { }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLDetailsElementName/HTMLDetailsElementName.generated.xml' path='docs/HTMLDetailsElementName/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Name { get; set; }
 	///<include file='Utils/Docs/HTMLDetailsElementOpen/HTMLDetailsElementOpen.generated.xml' path='docs/HTMLDetailsElementOpen/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
@@ -10123,6 +9723,8 @@ public partial class HTMLDialogElement : HTMLElement
 	///<include file='Utils/Docs/HTMLDialogElementReturnValue/HTMLDialogElementReturnValue.generated.xml' path='docs/HTMLDialogElementReturnValue/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString ReturnValue { get; set; }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public DOMString ClosedBy { get; set; }
 	///<include file='Utils/Docs/HTMLDialogElementShow/HTMLDialogElementShow.generated.xml' path='docs/HTMLDialogElementShow/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined Show() { throw new System.NotImplementedException(); }
@@ -10132,6 +9734,8 @@ public partial class HTMLDialogElement : HTMLElement
 	///<include file='Utils/Docs/HTMLDialogElementClose/HTMLDialogElementClose.generated.xml' path='docs/HTMLDialogElementClose/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined Close(DOMString returnValue) { throw new System.NotImplementedException(); }
+		[To(ToAttribute.FirstCharToLowerCase)]
+	public Undefined RequestClose(DOMString returnValue) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/HTMLScriptElement/HTMLScriptElement.generated.xml' path='docs/HTMLScriptElement/*'/>
@@ -10139,29 +9743,38 @@ public partial class HTMLDialogElement : HTMLElement
 public partial class HTMLScriptElement : HTMLElement, HTMLAttributionSrcElementUtils
 {
 		public HTMLScriptElement() { }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLScriptElementSrc/HTMLScriptElementSrc.generated.xml' path='docs/HTMLScriptElementSrc/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public USVString Src { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLScriptElementType/HTMLScriptElementType.generated.xml' path='docs/HTMLScriptElementType/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Type { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLScriptElementNoModule/HTMLScriptElementNoModule.generated.xml' path='docs/HTMLScriptElementNoModule/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool NoModule { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLScriptElementAsync/HTMLScriptElementAsync.generated.xml' path='docs/HTMLScriptElementAsync/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Async { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLScriptElementDefer/HTMLScriptElementDefer.generated.xml' path='docs/HTMLScriptElementDefer/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Defer { get; set; }
 	///<include file='Utils/Docs/HTMLScriptElementCrossOrigin/HTMLScriptElementCrossOrigin.generated.xml' path='docs/HTMLScriptElementCrossOrigin/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString? CrossOrigin { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLScriptElementText/HTMLScriptElementText.generated.xml' path='docs/HTMLScriptElementText/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Text { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLScriptElementIntegrity/HTMLScriptElementIntegrity.generated.xml' path='docs/HTMLScriptElementIntegrity/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Integrity { get; set; }
 	///<include file='Utils/Docs/HTMLScriptElementReferrerPolicy/HTMLScriptElementReferrerPolicy.generated.xml' path='docs/HTMLScriptElementReferrerPolicy/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString ReferrerPolicy { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLScriptElementBlocking/HTMLScriptElementBlocking.generated.xml' path='docs/HTMLScriptElementBlocking/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMTokenList Blocking { get; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLScriptElementFetchPriority/HTMLScriptElementFetchPriority.generated.xml' path='docs/HTMLScriptElementFetchPriority/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString FetchPriority { get; set; }
 	///<include file='Utils/Docs/HTMLScriptElementSupports/HTMLScriptElementSupports.generated.xml' path='docs/HTMLScriptElementSupports/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
@@ -10176,13 +9789,17 @@ public partial class HTMLTemplateElement : HTMLElement
 	///<include file='Utils/Docs/HTMLTemplateElementContent/HTMLTemplateElementContent.generated.xml' path='docs/HTMLTemplateElementContent/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public DocumentFragment Content { get; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTemplateElementShadowRootMode/HTMLTemplateElementShadowRootMode.generated.xml' path='docs/HTMLTemplateElementShadowRootMode/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString ShadowRootMode { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTemplateElementShadowRootDelegatesFocus/HTMLTemplateElementShadowRootDelegatesFocus.generated.xml' path='docs/HTMLTemplateElementShadowRootDelegatesFocus/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool ShadowRootDelegatesFocus { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTemplateElementShadowRootClonable/HTMLTemplateElementShadowRootClonable.generated.xml' path='docs/HTMLTemplateElementShadowRootClonable/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool ShadowRootClonable { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTemplateElementShadowRootSerializable/HTMLTemplateElementShadowRootSerializable.generated.xml' path='docs/HTMLTemplateElementShadowRootSerializable/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool ShadowRootSerializable { get; set; }
 }
 
@@ -10202,7 +9819,7 @@ public partial class HTMLSlotElement : HTMLElement
 	public List<Element> AssignedElements(AssignedNodesOptions options) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HTMLSlotElementAssign/HTMLSlotElementAssign.generated.xml' path='docs/HTMLSlotElementAssign/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
-	public Undefined Assign(params Union66[] nodes) { throw new System.NotImplementedException(); }
+	public Undefined Assign(params Union69[] nodes) { throw new System.NotImplementedException(); }
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -10238,48 +9855,12 @@ public partial class HTMLCanvasElement : HTMLElement
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct BlobCallback
-{
-}
-
-
-
-[To(ToAttribute.None)]
-public enum PredefinedColorSpace
-{
-	[Value("srgb")]
-	Srgb,
-	[Value("display-p3")]
-	DisplayP3,
-}
-
-[To(ToAttribute.None)]
-public enum CanvasFillRule
-{
-	[Value("nonzero")]
-	Nonzero,
-	[Value("evenodd")]
-	Evenodd,
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
 public partial class CanvasRenderingContext2DSettings
 {
 		public bool Alpha;
 		public bool Desynchronized;
 		public PredefinedColorSpace ColorSpace;
 		public bool WillReadFrequently;
-}
-
-[To(ToAttribute.None)]
-public enum ImageSmoothingQuality
-{
-	[Value("low")]
-	Low,
-	[Value("medium")]
-	Medium,
-	[Value("high")]
-	High,
 }
 
 ///<include file='Utils/Docs/CanvasRenderingContext2D/CanvasRenderingContext2D.generated.xml' path='docs/CanvasRenderingContext2D/*'/>
@@ -10307,300 +9888,6 @@ public partial class CanvasRenderingContext2D
 
 
 
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface CanvasState
-{
-		public Undefined Save() { throw new System.NotImplementedException(); }
-		public Undefined Restore() { throw new System.NotImplementedException(); }
-		public Undefined Reset() { throw new System.NotImplementedException(); }
-		public bool IsContextLost() { throw new System.NotImplementedException(); }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface CanvasTransform
-{
-		public Undefined Scale(double x, double y) { throw new System.NotImplementedException(); }
-		public Undefined Rotate(double angle) { throw new System.NotImplementedException(); }
-		public Undefined Translate(double x, double y) { throw new System.NotImplementedException(); }
-		public Undefined Transform(double a, double b, double c, double d, double e, double f) { throw new System.NotImplementedException(); }
-		public DOMMatrix GetTransform() { throw new System.NotImplementedException(); }
-		public Undefined SetTransform(double a, double b, double c, double d, double e, double f) { throw new System.NotImplementedException(); }
-		public Undefined SetTransform(DOMMatrix2DInit transform) { throw new System.NotImplementedException(); }
-		public Undefined ResetTransform() { throw new System.NotImplementedException(); }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface CanvasCompositing
-{
-		public double GlobalAlpha { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public DOMString GlobalCompositeOperation { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface CanvasImageSmoothing
-{
-		public bool ImageSmoothingEnabled { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public ImageSmoothingQuality ImageSmoothingQuality { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface CanvasFillStrokeStyles
-{
-		public Union70 StrokeStyle { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public Union71 FillStyle { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public CanvasGradient CreateLinearGradient(Number x0, Number y0, Number x1, Number y1) { throw new System.NotImplementedException(); }
-		public CanvasGradient CreateRadialGradient(Number x0, Number y0, Number r0, Number x1, Number y1, Number r1) { throw new System.NotImplementedException(); }
-		public CanvasGradient CreateConicGradient(Number startAngle, Number x, Number y) { throw new System.NotImplementedException(); }
-		public CanvasPattern? CreatePattern(CanvasImageSource image, DOMString repetition) { throw new System.NotImplementedException(); }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface CanvasShadowStyles
-{
-		public double ShadowOffsetX { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public double ShadowOffsetY { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public double ShadowBlur { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public DOMString ShadowColor { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface CanvasFilters
-{
-		public DOMString Filter { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface CanvasRect
-{
-		public Undefined ClearRect(double x, double y, double w, double h) { throw new System.NotImplementedException(); }
-		public Undefined FillRect(double x, double y, double w, double h) { throw new System.NotImplementedException(); }
-		public Undefined StrokeRect(double x, double y, double w, double h) { throw new System.NotImplementedException(); }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface CanvasDrawPath
-{
-		public Undefined BeginPath() { throw new System.NotImplementedException(); }
-		public Undefined Fill(CanvasFillRule fillRule) { throw new System.NotImplementedException(); }
-		public Undefined Fill(Path2D path, CanvasFillRule fillRule) { throw new System.NotImplementedException(); }
-		public Undefined Stroke() { throw new System.NotImplementedException(); }
-		public Undefined Stroke(Path2D path) { throw new System.NotImplementedException(); }
-		public Undefined Clip(CanvasFillRule fillRule) { throw new System.NotImplementedException(); }
-		public Undefined Clip(Path2D path, CanvasFillRule fillRule) { throw new System.NotImplementedException(); }
-		public bool IsPointInPath(double x, double y, CanvasFillRule fillRule) { throw new System.NotImplementedException(); }
-		public bool IsPointInPath(Path2D path, double x, double y, CanvasFillRule fillRule) { throw new System.NotImplementedException(); }
-		public bool IsPointInStroke(double x, double y) { throw new System.NotImplementedException(); }
-		public bool IsPointInStroke(Path2D path, double x, double y) { throw new System.NotImplementedException(); }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface CanvasUserInterface
-{
-		public Undefined DrawFocusIfNeeded(Element element) { throw new System.NotImplementedException(); }
-		public Undefined DrawFocusIfNeeded(Path2D path, Element element) { throw new System.NotImplementedException(); }
-		public Undefined ScrollPathIntoView() { throw new System.NotImplementedException(); }
-		public Undefined ScrollPathIntoView(Path2D path) { throw new System.NotImplementedException(); }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface CanvasText
-{
-		public Undefined FillText(DOMString text, double x, double y, double maxWidth) { throw new System.NotImplementedException(); }
-		public Undefined StrokeText(DOMString text, double x, double y, double maxWidth) { throw new System.NotImplementedException(); }
-		public TextMetrics MeasureText(DOMString text) { throw new System.NotImplementedException(); }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface CanvasDrawImage
-{
-		public Undefined DrawImage(CanvasImageSource image, double dx, double dy) { throw new System.NotImplementedException(); }
-		public Undefined DrawImage(CanvasImageSource image, double dx, double dy, double dw, double dh) { throw new System.NotImplementedException(); }
-		public Undefined DrawImage(CanvasImageSource image, double sx, double sy, double sw, double sh, double dx, double dy, double dw, double dh) { throw new System.NotImplementedException(); }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface CanvasImageData
-{
-		public ImageData CreateImageData(long sw, long sh, ImageDataSettings settings) { throw new System.NotImplementedException(); }
-		public ImageData CreateImageData(ImageData imagedata) { throw new System.NotImplementedException(); }
-		public ImageData GetImageData(long sx, long sy, long sw, long sh, ImageDataSettings settings) { throw new System.NotImplementedException(); }
-		public Undefined PutImageData(ImageData imagedata, long dx, long dy) { throw new System.NotImplementedException(); }
-		public Undefined PutImageData(ImageData imagedata, long dx, long dy, long dirtyX, long dirtyY, long dirtyWidth, long dirtyHeight) { throw new System.NotImplementedException(); }
-}
-
-[To(ToAttribute.None)]
-public enum CanvasLineCap
-{
-	[Value("butt")]
-	Butt,
-	[Value("round")]
-	Round,
-	[Value("square")]
-	Square,
-}
-
-[To(ToAttribute.None)]
-public enum CanvasLineJoin
-{
-	[Value("round")]
-	Round,
-	[Value("bevel")]
-	Bevel,
-	[Value("miter")]
-	Miter,
-}
-
-[To(ToAttribute.None)]
-public enum CanvasTextAlign
-{
-	[Value("start")]
-	Start,
-	[Value("end")]
-	End,
-	[Value("left")]
-	Left,
-	[Value("right")]
-	Right,
-	[Value("center")]
-	Center,
-}
-
-[To(ToAttribute.None)]
-public enum CanvasTextBaseline
-{
-	[Value("top")]
-	Top,
-	[Value("hanging")]
-	Hanging,
-	[Value("middle")]
-	Middle,
-	[Value("alphabetic")]
-	Alphabetic,
-	[Value("ideographic")]
-	Ideographic,
-	[Value("bottom")]
-	Bottom,
-}
-
-[To(ToAttribute.None)]
-public enum CanvasDirection
-{
-	[Value("ltr")]
-	Ltr,
-	[Value("rtl")]
-	Rtl,
-	[Value("inherit")]
-	Inherit,
-}
-
-[To(ToAttribute.None)]
-public enum CanvasFontKerning
-{
-	[Value("auto")]
-	Auto,
-	[Value("normal")]
-	Normal,
-	[Value("none")]
-	None,
-}
-
-[To(ToAttribute.None)]
-public enum CanvasFontStretch
-{
-	[Value("ultra-condensed")]
-	UltraCondensed,
-	[Value("extra-condensed")]
-	ExtraCondensed,
-	[Value("condensed")]
-	Condensed,
-	[Value("semi-condensed")]
-	SemiCondensed,
-	[Value("normal")]
-	Normal,
-	[Value("semi-expanded")]
-	SemiExpanded,
-	[Value("expanded")]
-	Expanded,
-	[Value("extra-expanded")]
-	ExtraExpanded,
-	[Value("ultra-expanded")]
-	UltraExpanded,
-}
-
-[To(ToAttribute.None)]
-public enum CanvasFontVariantCaps
-{
-	[Value("normal")]
-	Normal,
-	[Value("small-caps")]
-	SmallCaps,
-	[Value("all-small-caps")]
-	AllSmallCaps,
-	[Value("petite-caps")]
-	PetiteCaps,
-	[Value("all-petite-caps")]
-	AllPetiteCaps,
-	[Value("unicase")]
-	Unicase,
-	[Value("titling-caps")]
-	TitlingCaps,
-}
-
-[To(ToAttribute.None)]
-public enum CanvasTextRendering
-{
-	[Value("auto")]
-	Auto,
-	[Value("optimizeSpeed")]
-	OptimizeSpeed,
-	[Value("optimizeLegibility")]
-	OptimizeLegibility,
-	[Value("geometricPrecision")]
-	GeometricPrecision,
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface CanvasPathDrawingStyles
-{
-		public double LineWidth { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public CanvasLineCap LineCap { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public CanvasLineJoin LineJoin { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public double MiterLimit { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public Undefined SetLineDash(List<double> segments) { throw new System.NotImplementedException(); }
-		public List<double> GetLineDash() { throw new System.NotImplementedException(); }
-		public double LineDashOffset { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface CanvasTextDrawingStyles
-{
-		public DOMString Font { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public CanvasTextAlign TextAlign { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public CanvasTextBaseline TextBaseline { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public CanvasDirection Direction { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public DOMString LetterSpacing { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public CanvasFontKerning FontKerning { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public CanvasFontStretch FontStretch { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public CanvasFontVariantCaps FontVariantCaps { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public CanvasTextRendering TextRendering { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public DOMString WordSpacing { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface CanvasPath
-{
-		public Undefined ClosePath() { throw new System.NotImplementedException(); }
-		public Undefined MoveTo(double x, double y) { throw new System.NotImplementedException(); }
-		public Undefined LineTo(double x, double y) { throw new System.NotImplementedException(); }
-		public Undefined QuadraticCurveTo(double cpx, double cpy, double x, double y) { throw new System.NotImplementedException(); }
-		public Undefined BezierCurveTo(double cp1x, double cp1y, double cp2x, double cp2y, double x, double y) { throw new System.NotImplementedException(); }
-		public Undefined ArcTo(double x1, double y1, double x2, double y2, double radius) { throw new System.NotImplementedException(); }
-		public Undefined Rect(double x, double y, double w, double h) { throw new System.NotImplementedException(); }
-		public Undefined RoundRect(double x, double y, double w, double h, Union72 radii) { throw new System.NotImplementedException(); }
-		public Undefined Arc(double x, double y, double radius, double startAngle, double endAngle, bool counterclockwise) { throw new System.NotImplementedException(); }
-		public Undefined Ellipse(double x, double y, double radiusX, double radiusY, double rotation, double startAngle, double endAngle, bool counterclockwise) { throw new System.NotImplementedException(); }
-}
 
 ///<include file='Utils/Docs/CanvasGradient/CanvasGradient.generated.xml' path='docs/CanvasGradient/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -10690,7 +9977,7 @@ public partial class ImageData
 public partial class Path2D
 {
 	///<include file='Utils/Docs/Path2DPath2D/Path2DPath2D.generated.xml' path='docs/Path2DPath2D/*'/>
-	public Path2D(Union74 path) { }
+	public Path2D(Union77 path) { }
 	///<include file='Utils/Docs/Path2DAddPath/Path2DAddPath.generated.xml' path='docs/Path2DAddPath/*'/>
 	public Undefined AddPath(Path2D path, DOMMatrix2DInit transform) { throw new System.NotImplementedException(); }
 	public Path2D() { }
@@ -10701,7 +9988,8 @@ public partial class Path2D
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class ImageBitmapRenderingContext
 {
-		public Union75 Canvas { get; }
+	///<include file='Utils/Docs/ImageBitmapRenderingContextCanvas/ImageBitmapRenderingContextCanvas.generated.xml' path='docs/ImageBitmapRenderingContextCanvas/*'/>
+	public Union78 Canvas { get; }
 	///<include file='Utils/Docs/ImageBitmapRenderingContextTransferFromImageBitmap/ImageBitmapRenderingContextTransferFromImageBitmap.generated.xml' path='docs/ImageBitmapRenderingContextTransferFromImageBitmap/*'/>
 	public Undefined TransferFromImageBitmap(ImageBitmap? bitmap) { throw new System.NotImplementedException(); }
 }
@@ -10718,21 +10006,6 @@ public partial class ImageEncodeOptions
 {
 		public DOMString Type;
 		public double Quality;
-}
-
-[To(ToAttribute.None)]
-public enum OffscreenRenderingContextId
-{
-	[Value("2d")]
-	_2d,
-	[Value("bitmaprenderer")]
-	Bitmaprenderer,
-	[Value("webgl")]
-	Webgl,
-	[Value("webgl2")]
-	Webgl2,
-	[Value("webgpu")]
-	Webgpu,
 }
 
 ///<include file='Utils/Docs/OffscreenCanvas/OffscreenCanvas.generated.xml' path='docs/OffscreenCanvas/*'/>
@@ -10785,18 +10058,13 @@ public partial class CustomElementRegistry
 	///<include file='Utils/Docs/CustomElementRegistryDefine/CustomElementRegistryDefine.generated.xml' path='docs/CustomElementRegistryDefine/*'/>
 	public Undefined Define(DOMString name, CustomElementConstructor constructor, ElementDefinitionOptions options) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/CustomElementRegistryGet/CustomElementRegistryGet.generated.xml' path='docs/CustomElementRegistryGet/*'/>
-	public Union77 Get(DOMString name) { throw new System.NotImplementedException(); }
+	public Union80 Get(DOMString name) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/CustomElementRegistryGetName/CustomElementRegistryGetName.generated.xml' path='docs/CustomElementRegistryGetName/*'/>
 	public DOMString? GetName(CustomElementConstructor constructor) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/CustomElementRegistryWhenDefined/CustomElementRegistryWhenDefined.generated.xml' path='docs/CustomElementRegistryWhenDefined/*'/>
 	public Task<CustomElementConstructor> WhenDefined(DOMString name) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/CustomElementRegistryUpgrade/CustomElementRegistryUpgrade.generated.xml' path='docs/CustomElementRegistryUpgrade/*'/>
 	public Undefined Upgrade(Node root) { throw new System.NotImplementedException(); }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct CustomElementConstructor
-{
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -10812,7 +10080,7 @@ public partial class ElementInternals
 	///<include file='Utils/Docs/ElementInternalsShadowRoot/ElementInternalsShadowRoot.generated.xml' path='docs/ElementInternalsShadowRoot/*'/>
 	public ShadowRoot? ShadowRoot { get; }
 	///<include file='Utils/Docs/ElementInternalsSetFormValue/ElementInternalsSetFormValue.generated.xml' path='docs/ElementInternalsSetFormValue/*'/>
-	public Undefined SetFormValue(Union78? value, Union79? state) { throw new System.NotImplementedException(); }
+	public Undefined SetFormValue(Union81? value, Union82? state) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/ElementInternalsForm/ElementInternalsForm.generated.xml' path='docs/ElementInternalsForm/*'/>
 	public HTMLFormElement? Form { get; }
 	///<include file='Utils/Docs/ElementInternalsSetValidity/ElementInternalsSetValidity.generated.xml' path='docs/ElementInternalsSetValidity/*'/>
@@ -10910,22 +10178,18 @@ public partial class FocusOptions
 		public bool FocusVisible;
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface ElementContentEditable
-{
-		public DOMString ContentEditable { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public DOMString EnterKeyHint { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public bool IsContentEditable { get { throw new System.NotImplementedException(); } }
-		public DOMString InputMode { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-}
-
+///<include file='Utils/Docs/CloseWatcher/CloseWatcher.generated.xml' path='docs/CloseWatcher/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class CloseWatcher : EventTarget
 {
-		public CloseWatcher(CloseWatcherOptions options) { }
-		public Undefined RequestClose() { throw new System.NotImplementedException(); }
-		public Undefined Close() { throw new System.NotImplementedException(); }
-		public Undefined Destroy() { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/CloseWatcherCloseWatcher/CloseWatcherCloseWatcher.generated.xml' path='docs/CloseWatcherCloseWatcher/*'/>
+	public CloseWatcher(CloseWatcherOptions options) { }
+	///<include file='Utils/Docs/CloseWatcherRequestClose/CloseWatcherRequestClose.generated.xml' path='docs/CloseWatcherRequestClose/*'/>
+	public Undefined RequestClose() { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/CloseWatcherClose/CloseWatcherClose.generated.xml' path='docs/CloseWatcherClose/*'/>
+	public Undefined Close() { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/CloseWatcherDestroy/CloseWatcherDestroy.generated.xml' path='docs/CloseWatcherDestroy/*'/>
+	public Undefined Destroy() { throw new System.NotImplementedException(); }
 		public EventHandler Oncancel { get; set; }
 		public EventHandler Onclose { get; set; }
 	public CloseWatcher() { }
@@ -10993,11 +10257,6 @@ public partial class DataTransferItem
 	public File? GetAsFile() { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct FunctionStringCallback
-{
-}
-
 ///<include file='Utils/Docs/DragEvent/DragEvent.generated.xml' path='docs/DragEvent/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class DragEvent : MouseEvent
@@ -11013,13 +10272,6 @@ public partial class DragEvent : MouseEvent
 public partial class DragEventInit : MouseEventInit
 {
 		public DataTransfer? DataTransfer;
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface PopoverInvokerElement
-{
-		public Element? PopoverTargetElement { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public DOMString PopoverTargetAction { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
 }
 
 ///<include file='Utils/Docs/Window/Window.generated.xml' path='docs/Window/*'/>
@@ -11132,7 +10384,7 @@ public partial class Window : EventTarget
 	public Undefined Print() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/WindowPostMessage/WindowPostMessage.generated.xml' path='docs/WindowPostMessage/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
-	public Undefined PostMessage(dynamic message, USVString targetOrigin, List<object> transfer) { throw new System.NotImplementedException(); }
+	public Undefined PostMessage(dynamic message, USVString targetOrigin, List<Object> transfer) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/WindowPostMessage/WindowPostMessage.generated.xml' path='docs/WindowPostMessage/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined PostMessage(dynamic message, WindowPostMessageOptions options) { throw new System.NotImplementedException(); }
@@ -11186,15 +10438,6 @@ public partial class Location
 	public DOMStringList AncestorOrigins { get; }
 }
 
-[To(ToAttribute.None)]
-public enum ScrollRestoration
-{
-	[Value("auto")]
-	Auto,
-	[Value("manual")]
-	Manual,
-}
-
 ///<include file='Utils/Docs/History/History.generated.xml' path='docs/History/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class History
@@ -11229,7 +10472,8 @@ public partial class Navigation : EventTarget
 	public Undefined UpdateCurrentEntry(NavigationUpdateCurrentEntryOptions options) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/NavigationTransition/NavigationTransition.generated.xml' path='docs/NavigationTransition/*'/>
 	public NavigationTransition? Transition { get; }
-		public NavigationActivation? Activation { get; }
+	///<include file='Utils/Docs/NavigationActivation/NavigationActivation.generated.xml' path='docs/NavigationActivation/*'/>
+	public NavigationActivation? Activation { get; }
 	///<include file='Utils/Docs/NavigationCanGoBack/NavigationCanGoBack.generated.xml' path='docs/NavigationCanGoBack/*'/>
 	public bool CanGoBack { get; }
 	///<include file='Utils/Docs/NavigationCanGoForward/NavigationCanGoForward.generated.xml' path='docs/NavigationCanGoForward/*'/>
@@ -11282,30 +10526,6 @@ public partial class NavigationResult
 		public Task<NavigationHistoryEntry> Finished;
 }
 
-[To(ToAttribute.None)]
-public enum NavigationHistoryBehavior
-{
-	[Value("auto")]
-	Auto,
-	[Value("push")]
-	Push,
-	[Value("replace")]
-	Replace,
-}
-
-[To(ToAttribute.None)]
-public enum NavigationType
-{
-	[Value("push")]
-	Push,
-	[Value("replace")]
-	Replace,
-	[Value("reload")]
-	Reload,
-	[Value("traverse")]
-	Traverse,
-}
-
 ///<include file='Utils/Docs/NavigationHistoryEntry/NavigationHistoryEntry.generated.xml' path='docs/NavigationHistoryEntry/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class NavigationHistoryEntry : EventTarget
@@ -11337,12 +10557,16 @@ public partial class NavigationTransition
 	public Task<Undefined> Finished { get; }
 }
 
+///<include file='Utils/Docs/NavigationActivation/NavigationActivation.generated.xml' path='docs/NavigationActivation/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class NavigationActivation
 {
-		public NavigationHistoryEntry? From { get; }
-		public NavigationHistoryEntry Entry { get; }
-		public NavigationType NavigationType { get; }
+	///<include file='Utils/Docs/NavigationActivationFrom/NavigationActivationFrom.generated.xml' path='docs/NavigationActivationFrom/*'/>
+	public NavigationHistoryEntry? From { get; }
+	///<include file='Utils/Docs/NavigationActivationEntry/NavigationActivationEntry.generated.xml' path='docs/NavigationActivationEntry/*'/>
+	public NavigationHistoryEntry Entry { get; }
+	///<include file='Utils/Docs/NavigationActivationNavigationType/NavigationActivationNavigationType.generated.xml' path='docs/NavigationActivationNavigationType/*'/>
+	public NavigationType NavigationType { get; }
 }
 
 ///<include file='Utils/Docs/NavigateEvent/NavigateEvent.generated.xml' path='docs/NavigateEvent/*'/>
@@ -11369,7 +10593,8 @@ public partial class NavigateEvent : Event
 	public DOMString? DownloadRequest { get; }
 	///<include file='Utils/Docs/NavigateEventInfo/NavigateEventInfo.generated.xml' path='docs/NavigateEventInfo/*'/>
 	public dynamic Info { get; }
-		public bool HasUAVisualTransition { get; }
+	///<include file='Utils/Docs/NavigateEventHasUAVisualTransition/NavigateEventHasUAVisualTransition.generated.xml' path='docs/NavigateEventHasUAVisualTransition/*'/>
+	public bool HasUAVisualTransition { get; }
 	///<include file='Utils/Docs/NavigateEventIntercept/NavigateEventIntercept.generated.xml' path='docs/NavigateEventIntercept/*'/>
 	public Undefined Intercept(NavigationInterceptOptions options) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/NavigateEventScroll/NavigateEventScroll.generated.xml' path='docs/NavigateEventScroll/*'/>
@@ -11398,29 +10623,6 @@ public partial class NavigationInterceptOptions
 		public NavigationInterceptHandler Handler;
 		public NavigationFocusReset FocusReset;
 		public NavigationScrollBehavior Scroll;
-}
-
-[To(ToAttribute.None)]
-public enum NavigationFocusReset
-{
-	[Value("after-transition")]
-	AfterTransition,
-	[Value("manual")]
-	Manual,
-}
-
-[To(ToAttribute.None)]
-public enum NavigationScrollBehavior
-{
-	[Value("after-transition")]
-	AfterTransition,
-	[Value("manual")]
-	Manual,
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct NavigationInterceptHandler
-{
 }
 
 ///<include file='Utils/Docs/NavigationDestination/NavigationDestination.generated.xml' path='docs/NavigationDestination/*'/>
@@ -11469,7 +10671,8 @@ public partial class PopStateEvent : Event
 	public PopStateEvent(DOMString type, PopStateEventInit eventInitDict) { }
 	///<include file='Utils/Docs/PopStateEventState/PopStateEventState.generated.xml' path='docs/PopStateEventState/*'/>
 	public dynamic State { get; }
-		public bool HasUAVisualTransition { get; }
+	///<include file='Utils/Docs/PopStateEventHasUAVisualTransition/PopStateEventHasUAVisualTransition.generated.xml' path='docs/PopStateEventHasUAVisualTransition/*'/>
+	public bool HasUAVisualTransition { get; }
 	public PopStateEvent() { }
 }
 
@@ -11500,12 +10703,16 @@ public partial class HashChangeEventInit : EventInit
 		public USVString NewURL;
 }
 
+///<include file='Utils/Docs/PageSwapEvent/PageSwapEvent.generated.xml' path='docs/PageSwapEvent/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class PageSwapEvent : Event
 {
-		public PageSwapEvent(DOMString type, PageSwapEventInit eventInitDict) { }
-		public NavigationActivation? Activation { get; }
-		public ViewTransition? ViewTransition { get; }
+	///<include file='Utils/Docs/PageSwapEventPageSwapEvent/PageSwapEventPageSwapEvent.generated.xml' path='docs/PageSwapEventPageSwapEvent/*'/>
+	public PageSwapEvent(DOMString type, PageSwapEventInit eventInitDict) { }
+	///<include file='Utils/Docs/PageSwapEventActivation/PageSwapEventActivation.generated.xml' path='docs/PageSwapEventActivation/*'/>
+	public NavigationActivation? Activation { get; }
+	///<include file='Utils/Docs/PageSwapEventViewTransition/PageSwapEventViewTransition.generated.xml' path='docs/PageSwapEventViewTransition/*'/>
+	public ViewTransition? ViewTransition { get; }
 	public PageSwapEvent() { }
 }
 
@@ -11516,11 +10723,14 @@ public partial class PageSwapEventInit : EventInit
 		public ViewTransition? ViewTransition;
 }
 
+///<include file='Utils/Docs/PageRevealEvent/PageRevealEvent.generated.xml' path='docs/PageRevealEvent/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class PageRevealEvent : Event
 {
-		public PageRevealEvent(DOMString type, PageRevealEventInit eventInitDict) { }
-		public ViewTransition? ViewTransition { get; }
+	///<include file='Utils/Docs/PageRevealEventPageRevealEvent/PageRevealEventPageRevealEvent.generated.xml' path='docs/PageRevealEventPageRevealEvent/*'/>
+	public PageRevealEvent(DOMString type, PageRevealEventInit eventInitDict) { }
+	///<include file='Utils/Docs/PageRevealEventViewTransition/PageRevealEventViewTransition.generated.xml' path='docs/PageRevealEventViewTransition/*'/>
+	public ViewTransition? ViewTransition { get; }
 	public PageRevealEvent() { }
 }
 
@@ -11555,35 +10765,52 @@ public partial class BeforeUnloadEvent : Event
 	public DOMString ReturnValue { get; set; }
 }
 
+///<include file='Utils/Docs/NotRestoredReasonDetails/NotRestoredReasonDetails.generated.xml' path='docs/NotRestoredReasonDetails/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class NotRestoredReasonDetails
 {
-		public DOMString Reason { get; }
-		public object ToJSON() { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/NotRestoredReasonDetailsReason/NotRestoredReasonDetailsReason.generated.xml' path='docs/NotRestoredReasonDetailsReason/*'/>
+	public DOMString Reason { get; }
+	///<include file='Utils/Docs/NotRestoredReasonDetailsToJSON/NotRestoredReasonDetailsToJSON.generated.xml' path='docs/NotRestoredReasonDetailsToJSON/*'/>
+	public Object ToJSON() { throw new System.NotImplementedException(); }
 }
 
+///<include file='Utils/Docs/NotRestoredReasons/NotRestoredReasons.generated.xml' path='docs/NotRestoredReasons/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class NotRestoredReasons
 {
-		public DOMString? Src { get; }
-		public DOMString? Id { get; }
-		public DOMString? Name { get; }
-		public DOMString? Url { get; }
-		public NotRestoredReasonDetails[]? Reasons { get; }
-		public NotRestoredReasons[]? Children { get; }
-		public object ToJSON() { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/NotRestoredReasonsSrc/NotRestoredReasonsSrc.generated.xml' path='docs/NotRestoredReasonsSrc/*'/>
+	public DOMString? Src { get; }
+	///<include file='Utils/Docs/NotRestoredReasonsId/NotRestoredReasonsId.generated.xml' path='docs/NotRestoredReasonsId/*'/>
+	public DOMString? Id { get; }
+	///<include file='Utils/Docs/NotRestoredReasonsName/NotRestoredReasonsName.generated.xml' path='docs/NotRestoredReasonsName/*'/>
+	public DOMString? Name { get; }
+	///<include file='Utils/Docs/NotRestoredReasonsUrl/NotRestoredReasonsUrl.generated.xml' path='docs/NotRestoredReasonsUrl/*'/>
+	public DOMString? Url { get; }
+	///<include file='Utils/Docs/NotRestoredReasonsReasons/NotRestoredReasonsReasons.generated.xml' path='docs/NotRestoredReasonsReasons/*'/>
+	public NotRestoredReasonDetails[]? Reasons { get; }
+	///<include file='Utils/Docs/NotRestoredReasonsChildren/NotRestoredReasonsChildren.generated.xml' path='docs/NotRestoredReasonsChildren/*'/>
+	public NotRestoredReasons[]? Children { get; }
+	///<include file='Utils/Docs/NotRestoredReasonsToJSON/NotRestoredReasonsToJSON.generated.xml' path='docs/NotRestoredReasonsToJSON/*'/>
+	public Object ToJSON() { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/ErrorEvent/ErrorEvent.generated.xml' path='docs/ErrorEvent/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class ErrorEvent : Event
 {
-		public ErrorEvent(DOMString type, ErrorEventInit eventInitDict) { }
-		public DOMString Message { get; }
-		public USVString Filename { get; }
-		public ulong Lineno { get; }
-		public ulong Colno { get; }
-		public dynamic Error { get; }
+	///<include file='Utils/Docs/ErrorEventErrorEvent/ErrorEventErrorEvent.generated.xml' path='docs/ErrorEventErrorEvent/*'/>
+	public ErrorEvent(DOMString type, ErrorEventInit eventInitDict) { }
+	///<include file='Utils/Docs/ErrorEventMessage/ErrorEventMessage.generated.xml' path='docs/ErrorEventMessage/*'/>
+	public DOMString Message { get; }
+	///<include file='Utils/Docs/ErrorEventFilename/ErrorEventFilename.generated.xml' path='docs/ErrorEventFilename/*'/>
+	public USVString Filename { get; }
+	///<include file='Utils/Docs/ErrorEventLineno/ErrorEventLineno.generated.xml' path='docs/ErrorEventLineno/*'/>
+	public ulong Lineno { get; }
+	///<include file='Utils/Docs/ErrorEventColno/ErrorEventColno.generated.xml' path='docs/ErrorEventColno/*'/>
+	public ulong Colno { get; }
+	///<include file='Utils/Docs/ErrorEventError/ErrorEventError.generated.xml' path='docs/ErrorEventError/*'/>
+	public dynamic Error { get; }
 	public ErrorEvent() { }
 }
 
@@ -11604,7 +10831,7 @@ public partial class PromiseRejectionEvent : Event
 	///<include file='Utils/Docs/PromiseRejectionEventPromiseRejectionEvent/PromiseRejectionEventPromiseRejectionEvent.generated.xml' path='docs/PromiseRejectionEventPromiseRejectionEvent/*'/>
 	public PromiseRejectionEvent(DOMString type, PromiseRejectionEventInit eventInitDict) { }
 	///<include file='Utils/Docs/PromiseRejectionEventPromise/PromiseRejectionEventPromise.generated.xml' path='docs/PromiseRejectionEventPromise/*'/>
-	public object Promise { get; }
+	public Object Promise { get; }
 	///<include file='Utils/Docs/PromiseRejectionEventReason/PromiseRejectionEventReason.generated.xml' path='docs/PromiseRejectionEventReason/*'/>
 	public dynamic Reason { get; }
 	public PromiseRejectionEvent() { }
@@ -11613,170 +10840,34 @@ public partial class PromiseRejectionEvent : Event
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class PromiseRejectionEventInit : EventInit
 {
-		public required object Promise;
+		public required Object Promise;
 		public dynamic Reason;
 }
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct EventHandlerNonNull
-{
-}
-
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct OnErrorEventHandlerNonNull
-{
-}
-
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct OnBeforeUnloadEventHandlerNonNull
-{
-}
-
-
-public partial interface GlobalEventHandlers
-{
-		public EventHandler Onabort { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onauxclick { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onbeforeinput { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onbeforematch { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onbeforetoggle { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onblur { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Oncancel { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Oncanplay { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Oncanplaythrough { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onchange { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onclick { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onclose { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Oncontextlost { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Oncontextmenu { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Oncontextrestored { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Oncopy { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Oncuechange { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Oncut { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Ondblclick { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Ondrag { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Ondragend { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Ondragenter { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Ondragleave { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Ondragover { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Ondragstart { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Ondrop { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Ondurationchange { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onemptied { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onended { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public OnErrorEventHandler Onerror { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onfocus { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onformdata { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Oninput { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Oninvalid { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onkeydown { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onkeypress { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onkeyup { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onload { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onloadeddata { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onloadedmetadata { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onloadstart { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onmousedown { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onmouseenter { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onmouseleave { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onmousemove { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onmouseout { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onmouseover { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onmouseup { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onpaste { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onpause { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onplay { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onplaying { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onprogress { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onratechange { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onreset { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onresize { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onscroll { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onscrollend { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onsecuritypolicyviolation { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onseeked { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onseeking { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onselect { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onslotchange { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onstalled { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onsubmit { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onsuspend { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Ontimeupdate { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Ontoggle { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onvolumechange { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onwaiting { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onwebkitanimationend { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onwebkitanimationiteration { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onwebkitanimationstart { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onwebkittransitionend { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onwheel { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-}
-
-public partial interface WindowEventHandlers
-{
-		public EventHandler Onafterprint { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onbeforeprint { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public OnBeforeUnloadEventHandler Onbeforeunload { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onhashchange { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onlanguagechange { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onmessage { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onmessageerror { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onoffline { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Ononline { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onpagehide { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onpagereveal { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onpageshow { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onpageswap { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onpopstate { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onrejectionhandled { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onstorage { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onunhandledrejection { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onunload { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-}
-
-
-public partial interface WindowOrWorkerGlobalScope
-{
-		public USVString Origin { get { throw new System.NotImplementedException(); } }
-		public bool IsSecureContext { get { throw new System.NotImplementedException(); } }
-		public bool CrossOriginIsolated { get { throw new System.NotImplementedException(); } }
-		public Undefined ReportError(dynamic e) { throw new System.NotImplementedException(); }
-		public DOMString Btoa(DOMString data) { throw new System.NotImplementedException(); }
-		public ByteString Atob(DOMString data) { throw new System.NotImplementedException(); }
-		public long SetTimeout(TimerHandler handler, long timeout, params dynamic[] arguments) { throw new System.NotImplementedException(); }
-		public Undefined ClearTimeout(long id) { throw new System.NotImplementedException(); }
-		public long SetInterval(TimerHandler handler, long timeout, params dynamic[] arguments) { throw new System.NotImplementedException(); }
-		public Undefined ClearInterval(long id) { throw new System.NotImplementedException(); }
-		public Undefined QueueMicrotask(VoidFunction callback) { throw new System.NotImplementedException(); }
-		public Task<ImageBitmap> CreateImageBitmap(ImageBitmapSource image, ImageBitmapOptions options) { throw new System.NotImplementedException(); }
-		public Task<ImageBitmap> CreateImageBitmap(ImageBitmapSource image, long sx, long sy, long sw, long sh, ImageBitmapOptions options) { throw new System.NotImplementedException(); }
-		public dynamic StructuredClone(dynamic value, StructuredSerializeOptions options) { throw new System.NotImplementedException(); }
-}
-
-
 
 ///<include file='Utils/Docs/Element/Element.generated.xml' path='docs/Element/*'/>
 public partial class Element
 {
-		public Undefined SetHTMLUnsafe(HTMLString html) { throw new System.NotImplementedException(); }
-		public DOMString GetHTML(GetHTMLOptions options) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/ElementSetHTMLUnsafe/ElementSetHTMLUnsafe.generated.xml' path='docs/ElementSetHTMLUnsafe/*'/>
+	public Undefined SetHTMLUnsafe(Union85 html) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/ElementGetHTML/ElementGetHTML.generated.xml' path='docs/ElementGetHTML/*'/>
+	public DOMString GetHTML(GetHTMLOptions options) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/ElementInnerHTML/ElementInnerHTML.generated.xml' path='docs/ElementInnerHTML/*'/>
-	public HTMLString InnerHTML { get; set; }
+	public Union86 InnerHTML { get; set; }
 	///<include file='Utils/Docs/ElementOuterHTML/ElementOuterHTML.generated.xml' path='docs/ElementOuterHTML/*'/>
-	public HTMLString OuterHTML { get; set; }
+	public Union87 OuterHTML { get; set; }
 	///<include file='Utils/Docs/ElementInsertAdjacentHTML/ElementInsertAdjacentHTML.generated.xml' path='docs/ElementInsertAdjacentHTML/*'/>
-	public Undefined InsertAdjacentHTML(DOMString position, HTMLString string_) { throw new System.NotImplementedException(); }
+	public Undefined InsertAdjacentHTML(DOMString position, Union88 string_) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/ShadowRoot/ShadowRoot.generated.xml' path='docs/ShadowRoot/*'/>
 public partial class ShadowRoot
 {
-		public Undefined SetHTMLUnsafe(HTMLString html) { throw new System.NotImplementedException(); }
-		public DOMString GetHTML(GetHTMLOptions options) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/ShadowRootSetHTMLUnsafe/ShadowRootSetHTMLUnsafe.generated.xml' path='docs/ShadowRootSetHTMLUnsafe/*'/>
+	public Undefined SetHTMLUnsafe(Union89 html) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/ShadowRootGetHTML/ShadowRootGetHTML.generated.xml' path='docs/ShadowRootGetHTML/*'/>
+	public DOMString GetHTML(GetHTMLOptions options) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/ShadowRootInnerHTML/ShadowRootInnerHTML.generated.xml' path='docs/ShadowRootInnerHTML/*'/>
-	public HTMLString InnerHTML { get; set; }
+	public Union90 InnerHTML { get; set; }
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -11793,22 +10884,14 @@ public partial class DOMParser
 	///<include file='Utils/Docs/DOMParserDOMParser/DOMParserDOMParser.generated.xml' path='docs/DOMParserDOMParser/*'/>
 	public DOMParser() { }
 	///<include file='Utils/Docs/DOMParserParseFromString/DOMParserParseFromString.generated.xml' path='docs/DOMParserParseFromString/*'/>
-	public Document ParseFromString(HTMLString string_, DOMParserSupportedType type) { throw new System.NotImplementedException(); }
+	public Document ParseFromString(Union91 string_, DOMParserSupportedType type) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.None)]
-public enum DOMParserSupportedType
+///<include file='Utils/Docs/Range/Range.generated.xml' path='docs/Range/*'/>
+public partial class Range
 {
-	[Value("text/html")]
-	TextHtml,
-	[Value("text/xml")]
-	TextXml,
-	[Value("application/xml")]
-	ApplicationXml,
-	[Value("application/xhtml+xml")]
-	ApplicationXhtmlXml,
-	[Value("image/svg+xml")]
-	ImageSvgXml,
+	///<include file='Utils/Docs/RangeCreateContextualFragment/RangeCreateContextualFragment.generated.xml' path='docs/RangeCreateContextualFragment/*'/>
+	public DocumentFragment CreateContextualFragment(Union92 string_) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/Navigator/Navigator.generated.xml' path='docs/Navigator/*'/>
@@ -11822,64 +10905,6 @@ public partial class Navigator
 
 
 
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface NavigatorID
-{
-		public DOMString AppCodeName { get { throw new System.NotImplementedException(); } }
-		public DOMString AppName { get { throw new System.NotImplementedException(); } }
-		public DOMString AppVersion { get { throw new System.NotImplementedException(); } }
-		public DOMString Platform { get { throw new System.NotImplementedException(); } }
-		public DOMString Product { get { throw new System.NotImplementedException(); } }
-		public DOMString ProductSub { get { throw new System.NotImplementedException(); } }
-		public DOMString UserAgent { get { throw new System.NotImplementedException(); } }
-		public DOMString Vendor { get { throw new System.NotImplementedException(); } }
-		public DOMString VendorSub { get { throw new System.NotImplementedException(); } }
-}
-
-public partial interface NavigatorID
-{
-		public bool TaintEnabled() { throw new System.NotImplementedException(); }
-		public DOMString Oscpu { get { throw new System.NotImplementedException(); } }
-}
-
-///<include file='Utils/Docs/NavigatorLanguage/NavigatorLanguage.generated.xml' path='docs/NavigatorLanguage/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface NavigatorLanguage
-{
-		public DOMString Language { get { throw new System.NotImplementedException(); } }
-		public DOMString[] Languages { get { throw new System.NotImplementedException(); } }
-}
-
-///<include file='Utils/Docs/NavigatorOnLine/NavigatorOnLine.generated.xml' path='docs/NavigatorOnLine/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface NavigatorOnLine
-{
-		public bool OnLine { get { throw new System.NotImplementedException(); } }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface NavigatorContentUtils
-{
-		public Undefined RegisterProtocolHandler(DOMString scheme, USVString url) { throw new System.NotImplementedException(); }
-		public Undefined UnregisterProtocolHandler(DOMString scheme, USVString url) { throw new System.NotImplementedException(); }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface NavigatorCookies
-{
-		public bool CookieEnabled { get { throw new System.NotImplementedException(); } }
-}
-
-///<include file='Utils/Docs/NavigatorPlugins/NavigatorPlugins.generated.xml' path='docs/NavigatorPlugins/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface NavigatorPlugins
-{
-		public PluginArray Plugins { get { throw new System.NotImplementedException(); } }
-		public MimeTypeArray MimeTypes { get { throw new System.NotImplementedException(); } }
-		public bool JavaEnabled() { throw new System.NotImplementedException(); }
-		public bool PdfViewerEnabled { get { throw new System.NotImplementedException(); } }
-}
 
 ///<include file='Utils/Docs/PluginArray/PluginArray.generated.xml' path='docs/PluginArray/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -11935,48 +10960,6 @@ public partial class ImageBitmap
 }
 
 
-[To(ToAttribute.None)]
-public enum ImageOrientation
-{
-	[Value("from-image")]
-	FromImage,
-	[Value("flipY")]
-	FlipY,
-}
-
-[To(ToAttribute.None)]
-public enum PremultiplyAlpha
-{
-	[Value("none")]
-	None,
-	[Value("premultiply")]
-	Premultiply,
-	[Value("default")]
-	Default,
-}
-
-[To(ToAttribute.None)]
-public enum ColorSpaceConversion
-{
-	[Value("none")]
-	None,
-	[Value("default")]
-	Default,
-}
-
-[To(ToAttribute.None)]
-public enum ResizeQuality
-{
-	[Value("pixelated")]
-	Pixelated,
-	[Value("low")]
-	Low,
-	[Value("medium")]
-	Medium,
-	[Value("high")]
-	High,
-}
-
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class ImageBitmapOptions
 {
@@ -11987,20 +10970,6 @@ public partial class ImageBitmapOptions
 		public ulong ResizeHeight;
 		public ResizeQuality ResizeQuality;
 }
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct FrameRequestCallback
-{
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface AnimationFrameProvider
-{
-		public ulong RequestAnimationFrame(FrameRequestCallback callback) { throw new System.NotImplementedException(); }
-		public Undefined CancelAnimationFrame(ulong handle) { throw new System.NotImplementedException(); }
-}
-
-
 
 ///<include file='Utils/Docs/MessageEvent/MessageEvent.generated.xml' path='docs/MessageEvent/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -12076,25 +11045,24 @@ public partial class MessageChannel
 
 ///<include file='Utils/Docs/MessagePort/MessagePort.generated.xml' path='docs/MessagePort/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class MessagePort : EventTarget
+public partial class MessagePort : EventTarget, MessageEventTarget
 {
 	///<include file='Utils/Docs/MessagePortPostMessage/MessagePortPostMessage.generated.xml' path='docs/MessagePortPostMessage/*'/>
-	public Undefined PostMessage(dynamic message, List<object> transfer) { throw new System.NotImplementedException(); }
+	public Undefined PostMessage(dynamic message, List<Object> transfer) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/MessagePortPostMessage/MessagePortPostMessage.generated.xml' path='docs/MessagePortPostMessage/*'/>
 	public Undefined PostMessage(dynamic message, StructuredSerializeOptions options) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/MessagePortStart/MessagePortStart.generated.xml' path='docs/MessagePortStart/*'/>
 	public Undefined Start() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/MessagePortClose/MessagePortClose.generated.xml' path='docs/MessagePortClose/*'/>
 	public Undefined Close() { throw new System.NotImplementedException(); }
-		public EventHandler Onmessage { get; set; }
-		public EventHandler Onmessageerror { get; set; }
 		public EventHandler Onclose { get; set; }
 }
+
 
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class StructuredSerializeOptions
 {
-		public List<object> Transfer;
+		public List<Object> Transfer;
 }
 
 ///<include file='Utils/Docs/BroadcastChannel/BroadcastChannel.generated.xml' path='docs/BroadcastChannel/*'/>
@@ -12125,7 +11093,7 @@ public partial class WorkerGlobalScope : EventTarget, FontFaceSource, WindowOrWo
 	///<include file='Utils/Docs/WorkerGlobalScopeNavigator/WorkerGlobalScopeNavigator.generated.xml' path='docs/WorkerGlobalScopeNavigator/*'/>
 	public WorkerNavigator Navigator { get; }
 	///<include file='Utils/Docs/WorkerGlobalScopeImportScripts/WorkerGlobalScopeImportScripts.generated.xml' path='docs/WorkerGlobalScopeImportScripts/*'/>
-	public Undefined ImportScripts(params ScriptURLString[] urls) { throw new System.NotImplementedException(); }
+	public Undefined ImportScripts(params Union95[] urls) { throw new System.NotImplementedException(); }
 		public OnErrorEventHandler Onerror { get; set; }
 		public EventHandler Onlanguagechange { get; set; }
 		public EventHandler Onoffline { get; set; }
@@ -12136,19 +11104,18 @@ public partial class WorkerGlobalScope : EventTarget, FontFaceSource, WindowOrWo
 
 ///<include file='Utils/Docs/DedicatedWorkerGlobalScope/DedicatedWorkerGlobalScope.generated.xml' path='docs/DedicatedWorkerGlobalScope/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class DedicatedWorkerGlobalScope : WorkerGlobalScope, AnimationFrameProvider
+public partial class DedicatedWorkerGlobalScope : WorkerGlobalScope, AnimationFrameProvider, MessageEventTarget
 {
 	///<include file='Utils/Docs/DedicatedWorkerGlobalScopeName/DedicatedWorkerGlobalScopeName.generated.xml' path='docs/DedicatedWorkerGlobalScopeName/*'/>
 	public DOMString Name { get; }
 	///<include file='Utils/Docs/DedicatedWorkerGlobalScopePostMessage/DedicatedWorkerGlobalScopePostMessage.generated.xml' path='docs/DedicatedWorkerGlobalScopePostMessage/*'/>
-	public Undefined PostMessage(dynamic message, List<object> transfer) { throw new System.NotImplementedException(); }
+	public Undefined PostMessage(dynamic message, List<Object> transfer) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/DedicatedWorkerGlobalScopePostMessage/DedicatedWorkerGlobalScopePostMessage.generated.xml' path='docs/DedicatedWorkerGlobalScopePostMessage/*'/>
 	public Undefined PostMessage(dynamic message, StructuredSerializeOptions options) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/DedicatedWorkerGlobalScopeClose/DedicatedWorkerGlobalScopeClose.generated.xml' path='docs/DedicatedWorkerGlobalScopeClose/*'/>
 	public Undefined Close() { throw new System.NotImplementedException(); }
-		public EventHandler Onmessage { get; set; }
-		public EventHandler Onmessageerror { get; set; }
 }
+
 
 ///<include file='Utils/Docs/SharedWorkerGlobalScope/SharedWorkerGlobalScope.generated.xml' path='docs/SharedWorkerGlobalScope/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -12161,26 +11128,18 @@ public partial class SharedWorkerGlobalScope : WorkerGlobalScope
 		public EventHandler Onconnect { get; set; }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface AbstractWorker
-{
-		public EventHandler Onerror { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-}
-
 ///<include file='Utils/Docs/Worker/Worker.generated.xml' path='docs/Worker/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class Worker : EventTarget, AbstractWorker
+public partial class Worker : EventTarget, AbstractWorker, MessageEventTarget
 {
 	///<include file='Utils/Docs/WorkerWorker/WorkerWorker.generated.xml' path='docs/WorkerWorker/*'/>
-	public Worker(ScriptURLString scriptURL, WorkerOptions options) { }
+	public Worker(Union96 scriptURL, WorkerOptions options) { }
 	///<include file='Utils/Docs/WorkerTerminate/WorkerTerminate.generated.xml' path='docs/WorkerTerminate/*'/>
 	public Undefined Terminate() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/WorkerPostMessage/WorkerPostMessage.generated.xml' path='docs/WorkerPostMessage/*'/>
-	public Undefined PostMessage(dynamic message, List<object> transfer) { throw new System.NotImplementedException(); }
+	public Undefined PostMessage(dynamic message, List<Object> transfer) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/WorkerPostMessage/WorkerPostMessage.generated.xml' path='docs/WorkerPostMessage/*'/>
 	public Undefined PostMessage(dynamic message, StructuredSerializeOptions options) { throw new System.NotImplementedException(); }
-		public EventHandler Onmessage { get; set; }
-		public EventHandler Onmessageerror { get; set; }
 	public Worker() { }
 }
 
@@ -12192,33 +11151,17 @@ public partial class WorkerOptions
 		public DOMString Name;
 }
 
-[To(ToAttribute.None)]
-public enum WorkerType
-{
-	[Value("classic")]
-	Classic,
-	[Value("module")]
-	Module,
-}
-
-
 ///<include file='Utils/Docs/SharedWorker/SharedWorker.generated.xml' path='docs/SharedWorker/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class SharedWorker : EventTarget, AbstractWorker
 {
 	///<include file='Utils/Docs/SharedWorkerSharedWorker/SharedWorkerSharedWorker.generated.xml' path='docs/SharedWorkerSharedWorker/*'/>
-	public SharedWorker(ScriptURLString scriptURL, Union84 options) { }
+	public SharedWorker(Union97 scriptURL, Union98 options) { }
 	///<include file='Utils/Docs/SharedWorkerPort/SharedWorkerPort.generated.xml' path='docs/SharedWorkerPort/*'/>
 	public MessagePort Port { get; }
 	public SharedWorker() { }
 }
 
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface NavigatorConcurrentHardware
-{
-		public ulong HardwareConcurrency { get { throw new System.NotImplementedException(); } }
-}
 
 ///<include file='Utils/Docs/WorkerNavigator/WorkerNavigator.generated.xml' path='docs/WorkerNavigator/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -12288,22 +11231,6 @@ public partial class Storage
 	///<include file='Utils/Docs/StorageClear/StorageClear.generated.xml' path='docs/StorageClear/*'/>
 	public Undefined Clear() { throw new System.NotImplementedException(); }
 }
-
-///<include file='Utils/Docs/WindowSessionStorage/WindowSessionStorage.generated.xml' path='docs/WindowSessionStorage/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface WindowSessionStorage
-{
-		public Storage SessionStorage { get { throw new System.NotImplementedException(); } }
-}
-
-
-///<include file='Utils/Docs/WindowLocalStorage/WindowLocalStorage.generated.xml' path='docs/WindowLocalStorage/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface WindowLocalStorage
-{
-		public Storage LocalStorage { get { throw new System.NotImplementedException(); } }
-}
-
 
 ///<include file='Utils/Docs/StorageEvent/StorageEvent.generated.xml' path='docs/StorageEvent/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -12456,20 +11383,25 @@ public partial class HTMLBRElement
 ///<include file='Utils/Docs/HTMLTableCaptionElement/HTMLTableCaptionElement.generated.xml' path='docs/HTMLTableCaptionElement/*'/>
 public partial class HTMLTableCaptionElement
 {
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTableCaptionElementAlign/HTMLTableCaptionElementAlign.generated.xml' path='docs/HTMLTableCaptionElementAlign/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Align { get; set; }
 }
 
 ///<include file='Utils/Docs/HTMLTableColElement/HTMLTableColElement.generated.xml' path='docs/HTMLTableColElement/*'/>
 public partial class HTMLTableColElement
 {
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTableColElementAlign/HTMLTableColElementAlign.generated.xml' path='docs/HTMLTableColElementAlign/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Align { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTableColElementCh/HTMLTableColElementCh.generated.xml' path='docs/HTMLTableColElementCh/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Ch { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTableColElementChOff/HTMLTableColElementChOff.generated.xml' path='docs/HTMLTableColElementChOff/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString ChOff { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTableColElementVAlign/HTMLTableColElementVAlign.generated.xml' path='docs/HTMLTableColElementVAlign/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString VAlign { get; set; }
 		[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Width { get; set; }
@@ -12761,20 +11693,25 @@ public partial class HTMLTableElement
 ///<include file='Utils/Docs/HTMLTableSectionElement/HTMLTableSectionElement.generated.xml' path='docs/HTMLTableSectionElement/*'/>
 public partial class HTMLTableSectionElement
 {
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTableSectionElementAlign/HTMLTableSectionElementAlign.generated.xml' path='docs/HTMLTableSectionElementAlign/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Align { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTableSectionElementCh/HTMLTableSectionElementCh.generated.xml' path='docs/HTMLTableSectionElementCh/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Ch { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTableSectionElementChOff/HTMLTableSectionElementChOff.generated.xml' path='docs/HTMLTableSectionElementChOff/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString ChOff { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTableSectionElementVAlign/HTMLTableSectionElementVAlign.generated.xml' path='docs/HTMLTableSectionElementVAlign/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString VAlign { get; set; }
 }
 
 ///<include file='Utils/Docs/HTMLTableCellElement/HTMLTableCellElement.generated.xml' path='docs/HTMLTableCellElement/*'/>
 public partial class HTMLTableCellElement
 {
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTableCellElementAlign/HTMLTableCellElementAlign.generated.xml' path='docs/HTMLTableCellElementAlign/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Align { get; set; }
 		[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Axis { get; set; }
@@ -12782,30 +11719,40 @@ public partial class HTMLTableCellElement
 	public DOMString Height { get; set; }
 		[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Width { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTableCellElementCh/HTMLTableCellElementCh.generated.xml' path='docs/HTMLTableCellElementCh/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Ch { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTableCellElementChOff/HTMLTableCellElementChOff.generated.xml' path='docs/HTMLTableCellElementChOff/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString ChOff { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTableCellElementNoWrap/HTMLTableCellElementNoWrap.generated.xml' path='docs/HTMLTableCellElementNoWrap/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool NoWrap { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTableCellElementVAlign/HTMLTableCellElementVAlign.generated.xml' path='docs/HTMLTableCellElementVAlign/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString VAlign { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTableCellElementBgColor/HTMLTableCellElementBgColor.generated.xml' path='docs/HTMLTableCellElementBgColor/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString BgColor { get; set; }
 }
 
 ///<include file='Utils/Docs/HTMLTableRowElement/HTMLTableRowElement.generated.xml' path='docs/HTMLTableRowElement/*'/>
 public partial class HTMLTableRowElement
 {
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTableRowElementAlign/HTMLTableRowElementAlign.generated.xml' path='docs/HTMLTableRowElementAlign/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Align { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTableRowElementCh/HTMLTableRowElementCh.generated.xml' path='docs/HTMLTableRowElementCh/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Ch { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTableRowElementChOff/HTMLTableRowElementChOff.generated.xml' path='docs/HTMLTableRowElementChOff/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString ChOff { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTableRowElementVAlign/HTMLTableRowElementVAlign.generated.xml' path='docs/HTMLTableRowElementVAlign/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString VAlign { get; set; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/HTMLTableRowElementBgColor/HTMLTableRowElementBgColor.generated.xml' path='docs/HTMLTableRowElementBgColor/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString BgColor { get; set; }
 }
 
@@ -12862,24 +11809,6 @@ public partial class External
 {
 		public Undefined AddSearchProvider() { throw new System.NotImplementedException(); }
 		public Undefined IsSearchProviderInstalled() { throw new System.NotImplementedException(); }
-}
-
-[To(ToAttribute.None)]
-public enum UserIdleState
-{
-	[Value("active")]
-	Active,
-	[Value("idle")]
-	Idle,
-}
-
-[To(ToAttribute.None)]
-public enum ScreenIdleState
-{
-	[Value("locked")]
-	Locked,
-	[Value("unlocked")]
-	Unlocked,
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -12951,28 +11880,6 @@ public partial class MediaSettingsRange
 		public Number Step;
 }
 
-[To(ToAttribute.None)]
-public enum RedEyeReduction
-{
-	[Value("never")]
-	Never,
-	[Value("always")]
-	Always,
-	[Value("controllable")]
-	Controllable,
-}
-
-[To(ToAttribute.None)]
-public enum FillLightMode
-{
-	[Value("auto")]
-	Auto,
-	[Value("off")]
-	Off,
-	[Value("flash")]
-	Flash,
-}
-
 ///<include file='Utils/Docs/MediaTrackSupportedConstraints/MediaTrackSupportedConstraints.generated.xml' path='docs/MediaTrackSupportedConstraints/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class MediaTrackSupportedConstraints
@@ -13033,9 +11940,9 @@ public partial class MediaTrackConstraintSet
 		public ConstrainDouble Saturation;
 		public ConstrainDouble Sharpness;
 		public ConstrainDouble FocusDistance;
-		public Union85 Pan;
-		public Union86 Tilt;
-		public Union87 Zoom;
+		public Union99 Pan;
+		public Union100 Tilt;
+		public Union101 Zoom;
 		public ConstrainBoolean Torch;
 }
 
@@ -13070,19 +11977,6 @@ public partial class ConstrainPoint2DParameters
 }
 
 
-[To(ToAttribute.None)]
-public enum MeteringMode
-{
-	[Value("none")]
-	None,
-	[Value("manual")]
-	Manual,
-	[Value("single-shot")]
-	SingleShot,
-	[Value("continuous")]
-	Continuous,
-}
-
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class Point2D
 {
@@ -13108,23 +12002,13 @@ public partial class IDBRequest : EventTarget
 	///<include file='Utils/Docs/IDBRequestError/IDBRequestError.generated.xml' path='docs/IDBRequestError/*'/>
 	public DOMException? Error { get; }
 	///<include file='Utils/Docs/IDBRequestSource/IDBRequestSource.generated.xml' path='docs/IDBRequestSource/*'/>
-	public Union89? Source { get; }
+	public Union103? Source { get; }
 	///<include file='Utils/Docs/IDBRequestTransaction/IDBRequestTransaction.generated.xml' path='docs/IDBRequestTransaction/*'/>
 	public IDBTransaction? Transaction { get; }
 	///<include file='Utils/Docs/IDBRequestReadyState/IDBRequestReadyState.generated.xml' path='docs/IDBRequestReadyState/*'/>
 	public IDBRequestReadyState ReadyState { get; }
 		public EventHandler Onsuccess { get; set; }
 		public EventHandler Onerror { get; set; }
-}
-
-///<include file='Utils/Docs/IDBRequestReadyState/IDBRequestReadyState.generated.xml' path='docs/IDBRequestReadyState/*'/>
-[To(ToAttribute.None)]
-public enum IDBRequestReadyState
-{
-	[Value("pending")]
-	Pending,
-	[Value("done")]
-	Done,
 }
 
 ///<include file='Utils/Docs/IDBOpenDBRequest/IDBOpenDBRequest.generated.xml' path='docs/IDBOpenDBRequest/*'/>
@@ -13153,11 +12037,6 @@ public partial class IDBVersionChangeEventInit : EventInit
 {
 		public ulong OldVersion;
 		public ulong? NewVersion;
-}
-
-public partial interface WindowOrWorkerGlobalScope
-{
-		public IDBFactory IndexedDB { get { throw new System.NotImplementedException(); } }
 }
 
 ///<include file='Utils/Docs/IDBFactory/IDBFactory.generated.xml' path='docs/IDBFactory/*'/>
@@ -13192,7 +12071,7 @@ public partial class IDBDatabase : EventTarget
 	///<include file='Utils/Docs/IDBDatabaseObjectStoreNames/IDBDatabaseObjectStoreNames.generated.xml' path='docs/IDBDatabaseObjectStoreNames/*'/>
 	public DOMStringList ObjectStoreNames { get; }
 	///<include file='Utils/Docs/IDBDatabaseTransaction/IDBDatabaseTransaction.generated.xml' path='docs/IDBDatabaseTransaction/*'/>
-	public IDBTransaction Transaction(Union90 storeNames, IDBTransactionMode mode, IDBTransactionOptions options) { throw new System.NotImplementedException(); }
+	public IDBTransaction Transaction(Union104 storeNames, IDBTransactionMode mode, IDBTransactionOptions options) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/IDBDatabaseClose/IDBDatabaseClose.generated.xml' path='docs/IDBDatabaseClose/*'/>
 	public Undefined Close() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/IDBDatabaseCreateObjectStore/IDBDatabaseCreateObjectStore.generated.xml' path='docs/IDBDatabaseCreateObjectStore/*'/>
@@ -13205,18 +12084,6 @@ public partial class IDBDatabase : EventTarget
 		public EventHandler Onversionchange { get; set; }
 }
 
-///<include file='Utils/Docs/IDBTransactionDurability/IDBTransactionDurability.generated.xml' path='docs/IDBTransactionDurability/*'/>
-[To(ToAttribute.None)]
-public enum IDBTransactionDurability
-{
-	[Value("default")]
-	Default,
-	[Value("strict")]
-	Strict,
-	[Value("relaxed")]
-	Relaxed,
-}
-
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class IDBTransactionOptions
 {
@@ -13226,7 +12093,7 @@ public partial class IDBTransactionOptions
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class IDBObjectStoreParameters
 {
-		public Union91? KeyPath;
+		public Union105? KeyPath;
 		public bool AutoIncrement;
 }
 
@@ -13269,7 +12136,7 @@ public partial class IDBObjectStore
 	///<include file='Utils/Docs/IDBObjectStoreIndex/IDBObjectStoreIndex.generated.xml' path='docs/IDBObjectStoreIndex/*'/>
 	public IDBIndex Index(DOMString name) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/IDBObjectStoreCreateIndex/IDBObjectStoreCreateIndex.generated.xml' path='docs/IDBObjectStoreCreateIndex/*'/>
-	public IDBIndex CreateIndex(DOMString name, Union92 keyPath, IDBIndexParameters options) { throw new System.NotImplementedException(); }
+	public IDBIndex CreateIndex(DOMString name, Union106 keyPath, IDBIndexParameters options) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/IDBObjectStoreDeleteIndex/IDBObjectStoreDeleteIndex.generated.xml' path='docs/IDBObjectStoreDeleteIndex/*'/>
 	public Undefined DeleteIndex(DOMString name) { throw new System.NotImplementedException(); }
 }
@@ -13340,7 +12207,7 @@ public partial class IDBKeyRange
 public partial class IDBCursor
 {
 	///<include file='Utils/Docs/IDBCursorSource/IDBCursorSource.generated.xml' path='docs/IDBCursorSource/*'/>
-	public Union93 Source { get; }
+	public Union107 Source { get; }
 	///<include file='Utils/Docs/IDBCursorDirection/IDBCursorDirection.generated.xml' path='docs/IDBCursorDirection/*'/>
 	public IDBCursorDirection Direction { get; }
 	///<include file='Utils/Docs/IDBCursorKey/IDBCursorKey.generated.xml' path='docs/IDBCursorKey/*'/>
@@ -13359,20 +12226,6 @@ public partial class IDBCursor
 	public IDBRequest Update(dynamic value) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/IDBCursorDelete/IDBCursorDelete.generated.xml' path='docs/IDBCursorDelete/*'/>
 	public IDBRequest Delete() { throw new System.NotImplementedException(); }
-}
-
-///<include file='Utils/Docs/IDBCursorDirection/IDBCursorDirection.generated.xml' path='docs/IDBCursorDirection/*'/>
-[To(ToAttribute.None)]
-public enum IDBCursorDirection
-{
-	[Value("next")]
-	Next,
-	[Value("nextunique")]
-	Nextunique,
-	[Value("prev")]
-	Prev,
-	[Value("prevunique")]
-	Prevunique,
 }
 
 ///<include file='Utils/Docs/IDBCursorWithValue/IDBCursorWithValue.generated.xml' path='docs/IDBCursorWithValue/*'/>
@@ -13408,24 +12261,12 @@ public partial class IDBTransaction : EventTarget
 		public EventHandler Onerror { get; set; }
 }
 
-///<include file='Utils/Docs/IDBTransactionMode/IDBTransactionMode.generated.xml' path='docs/IDBTransactionMode/*'/>
-[To(ToAttribute.None)]
-public enum IDBTransactionMode
-{
-	[Value("readonly")]
-	Readonly,
-	[Value("readwrite")]
-	Readwrite,
-	[Value("versionchange")]
-	Versionchange,
-}
-
 ///<include file='Utils/Docs/Ink/Ink.generated.xml' path='docs/Ink/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class Ink
 {
 	///<include file='Utils/Docs/InkRequestPresenter/InkRequestPresenter.generated.xml' path='docs/InkRequestPresenter/*'/>
-	public Task<InkPresenter> RequestPresenter(InkPresenterParam param) { throw new System.NotImplementedException(); }
+	public Task<DelegatedInkTrailPresenter> RequestPresenter(InkPresenterParam param) { throw new System.NotImplementedException(); }
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -13434,15 +12275,13 @@ public partial class InkPresenterParam
 		public Element? PresentationArea;
 }
 
-///<include file='Utils/Docs/InkPresenter/InkPresenter.generated.xml' path='docs/InkPresenter/*'/>
+///<include file='Utils/Docs/DelegatedInkTrailPresenter/DelegatedInkTrailPresenter.generated.xml' path='docs/DelegatedInkTrailPresenter/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class InkPresenter
+public partial class DelegatedInkTrailPresenter
 {
-	///<include file='Utils/Docs/InkPresenterPresentationArea/InkPresenterPresentationArea.generated.xml' path='docs/InkPresenterPresentationArea/*'/>
+	///<include file='Utils/Docs/DelegatedInkTrailPresenterPresentationArea/DelegatedInkTrailPresenterPresentationArea.generated.xml' path='docs/DelegatedInkTrailPresenterPresentationArea/*'/>
 	public Element? PresentationArea { get; }
-	///<include file='Utils/Docs/InkPresenterExpectedImprovement/InkPresenterExpectedImprovement.generated.xml' path='docs/InkPresenterExpectedImprovement/*'/>
-	public ulong ExpectedImprovement { get; }
-	///<include file='Utils/Docs/InkPresenterUpdateInkTrailStartPoint/InkPresenterUpdateInkTrailStartPoint.generated.xml' path='docs/InkPresenterUpdateInkTrailStartPoint/*'/>
+	///<include file='Utils/Docs/DelegatedInkTrailPresenterUpdateInkTrailStartPoint/DelegatedInkTrailPresenterUpdateInkTrailStartPoint.generated.xml' path='docs/DelegatedInkTrailPresenterUpdateInkTrailStartPoint/*'/>
 	public Undefined UpdateInkTrailStartPoint(PointerEvent event_, InkTrailStyle style) { throw new System.NotImplementedException(); }
 }
 
@@ -13510,11 +12349,6 @@ public partial class InputEventInit
 		public List<StaticRange> TargetRanges;
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct IntersectionObserverCallback
-{
-}
-
 ///<include file='Utils/Docs/IntersectionObserver/IntersectionObserver.generated.xml' path='docs/IntersectionObserver/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class IntersectionObserver
@@ -13522,12 +12356,14 @@ public partial class IntersectionObserver
 	///<include file='Utils/Docs/IntersectionObserverIntersectionObserver/IntersectionObserverIntersectionObserver.generated.xml' path='docs/IntersectionObserverIntersectionObserver/*'/>
 	public IntersectionObserver(IntersectionObserverCallback callback, IntersectionObserverInit options) { }
 	///<include file='Utils/Docs/IntersectionObserverRoot/IntersectionObserverRoot.generated.xml' path='docs/IntersectionObserverRoot/*'/>
-	public Union94? Root { get; }
+	public Union108? Root { get; }
 	///<include file='Utils/Docs/IntersectionObserverRootMargin/IntersectionObserverRootMargin.generated.xml' path='docs/IntersectionObserverRootMargin/*'/>
 	public DOMString RootMargin { get; }
 		public DOMString ScrollMargin { get; }
 	///<include file='Utils/Docs/IntersectionObserverThresholds/IntersectionObserverThresholds.generated.xml' path='docs/IntersectionObserverThresholds/*'/>
 	public Number[] Thresholds { get; }
+		public long Delay { get; }
+		public bool TrackVisibility { get; }
 	///<include file='Utils/Docs/IntersectionObserverObserve/IntersectionObserverObserve.generated.xml' path='docs/IntersectionObserverObserve/*'/>
 	public Undefined Observe(Element target) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/IntersectionObserverUnobserve/IntersectionObserverUnobserve.generated.xml' path='docs/IntersectionObserverUnobserve/*'/>
@@ -13554,6 +12390,7 @@ public partial class IntersectionObserverEntry
 	public DOMRectReadOnly IntersectionRect { get; }
 	///<include file='Utils/Docs/IntersectionObserverEntryIsIntersecting/IntersectionObserverEntryIsIntersecting.generated.xml' path='docs/IntersectionObserverEntryIsIntersecting/*'/>
 	public bool IsIntersecting { get; }
+		public bool IsVisible { get; }
 	///<include file='Utils/Docs/IntersectionObserverEntryIntersectionRatio/IntersectionObserverEntryIntersectionRatio.generated.xml' path='docs/IntersectionObserverEntryIntersectionRatio/*'/>
 	public Number IntersectionRatio { get; }
 	///<include file='Utils/Docs/IntersectionObserverEntryTarget/IntersectionObserverEntryTarget.generated.xml' path='docs/IntersectionObserverEntryTarget/*'/>
@@ -13569,6 +12406,7 @@ public partial class IntersectionObserverEntryInit
 		public required DOMRectInit BoundingClientRect;
 		public required DOMRectInit IntersectionRect;
 		public required bool IsIntersecting;
+		public required bool IsVisible;
 		public required Number IntersectionRatio;
 		public required Element Target;
 }
@@ -13576,10 +12414,12 @@ public partial class IntersectionObserverEntryInit
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class IntersectionObserverInit
 {
-		public Union95? Root;
+		public Union109? Root;
 		public DOMString RootMargin;
 		public DOMString ScrollMargin;
-		public Union96 Threshold;
+		public Union110 Threshold;
+		public long Delay;
+		public bool TrackVisibility;
 }
 
 ///<include file='Utils/Docs/InterventionReportBody/InterventionReportBody.generated.xml' path='docs/InterventionReportBody/*'/>
@@ -13587,7 +12427,7 @@ public partial class IntersectionObserverInit
 public partial class InterventionReportBody : ReportBody
 {
 	///<include file='Utils/Docs/InterventionReportBodyToJSON/InterventionReportBodyToJSON.generated.xml' path='docs/InterventionReportBodyToJSON/*'/>
-	public object ToJSON() { throw new System.NotImplementedException(); }
+	public Object ToJSON() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/InterventionReportBodyId/InterventionReportBodyId.generated.xml' path='docs/InterventionReportBodyId/*'/>
 	public DOMString Id { get; }
 	///<include file='Utils/Docs/InterventionReportBodyMessage/InterventionReportBodyMessage.generated.xml' path='docs/InterventionReportBodyMessage/*'/>
@@ -13726,7 +12566,7 @@ public partial class LargestContentfulPaint : PerformanceEntry
 	///<include file='Utils/Docs/LargestContentfulPaintElement/LargestContentfulPaintElement.generated.xml' path='docs/LargestContentfulPaintElement/*'/>
 	public Element? Element { get; }
 	///<include file='Utils/Docs/LargestContentfulPaintToJSON/LargestContentfulPaintToJSON.generated.xml' path='docs/LargestContentfulPaintToJSON/*'/>
-	public object ToJSON() { throw new System.NotImplementedException(); }
+	public Object ToJSON() { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/LayoutShift/LayoutShift.generated.xml' path='docs/LayoutShift/*'/>
@@ -13742,7 +12582,7 @@ public partial class LayoutShift : PerformanceEntry
 	///<include file='Utils/Docs/LayoutShiftSources/LayoutShiftSources.generated.xml' path='docs/LayoutShiftSources/*'/>
 	public LayoutShiftAttribution[] Sources { get; }
 	///<include file='Utils/Docs/LayoutShiftToJSON/LayoutShiftToJSON.generated.xml' path='docs/LayoutShiftToJSON/*'/>
-	public object ToJSON() { throw new System.NotImplementedException(); }
+	public Object ToJSON() { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/LayoutShiftAttribution/LayoutShiftAttribution.generated.xml' path='docs/LayoutShiftAttribution/*'/>
@@ -13787,53 +12627,45 @@ public partial class FontData
 	public USVString Style { get; }
 }
 
+///<include file='Utils/Docs/NavigatorLogin/NavigatorLogin.generated.xml' path='docs/NavigatorLogin/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class PerformanceLongAnimationFrameTiming : PerformanceEntry
+public partial class NavigatorLogin
+{
+	///<include file='Utils/Docs/NavigatorLoginSetStatus/NavigatorLoginSetStatus.generated.xml' path='docs/NavigatorLoginSetStatus/*'/>
+	public Task<Undefined> SetStatus(LoginStatus status) { throw new System.NotImplementedException(); }
+}
+
+///<include file='Utils/Docs/Navigator/Navigator.generated.xml' path='docs/Navigator/*'/>
+public partial class Navigator
+{
+	///<include file='Utils/Docs/NavigatorLogin/NavigatorLogin.generated.xml' path='docs/NavigatorLogin/*'/>
+	public NavigatorLogin Login { get; }
+}
+
+///<include file='Utils/Docs/PerformanceLongAnimationFrameTiming/PerformanceLongAnimationFrameTiming.generated.xml' path='docs/PerformanceLongAnimationFrameTiming/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class PerformanceLongAnimationFrameTiming : PerformanceEntry, PaintTimingMixin
 {
 		public DOMHighResTimeStamp StartTime { get; }
 		public DOMHighResTimeStamp Duration { get; }
 		public DOMString Name { get; }
 		public DOMString EntryType { get; }
-		public DOMHighResTimeStamp RenderStart { get; }
-		public DOMHighResTimeStamp StyleAndLayoutStart { get; }
-		public DOMHighResTimeStamp BlockingDuration { get; }
-		public DOMHighResTimeStamp FirstUIEventTimestamp { get; }
-		public PerformanceScriptTiming[] Scripts { get; }
-		public object ToJSON() { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/PerformanceLongAnimationFrameTimingRenderStart/PerformanceLongAnimationFrameTimingRenderStart.generated.xml' path='docs/PerformanceLongAnimationFrameTimingRenderStart/*'/>
+	public DOMHighResTimeStamp RenderStart { get; }
+	///<include file='Utils/Docs/PerformanceLongAnimationFrameTimingStyleAndLayoutStart/PerformanceLongAnimationFrameTimingStyleAndLayoutStart.generated.xml' path='docs/PerformanceLongAnimationFrameTimingStyleAndLayoutStart/*'/>
+	public DOMHighResTimeStamp StyleAndLayoutStart { get; }
+	///<include file='Utils/Docs/PerformanceLongAnimationFrameTimingBlockingDuration/PerformanceLongAnimationFrameTimingBlockingDuration.generated.xml' path='docs/PerformanceLongAnimationFrameTimingBlockingDuration/*'/>
+	public DOMHighResTimeStamp BlockingDuration { get; }
+	///<include file='Utils/Docs/PerformanceLongAnimationFrameTimingFirstUIEventTimestamp/PerformanceLongAnimationFrameTimingFirstUIEventTimestamp.generated.xml' path='docs/PerformanceLongAnimationFrameTimingFirstUIEventTimestamp/*'/>
+	public DOMHighResTimeStamp FirstUIEventTimestamp { get; }
+	///<include file='Utils/Docs/PerformanceLongAnimationFrameTimingScripts/PerformanceLongAnimationFrameTimingScripts.generated.xml' path='docs/PerformanceLongAnimationFrameTimingScripts/*'/>
+	public PerformanceScriptTiming[] Scripts { get; }
+	///<include file='Utils/Docs/PerformanceLongAnimationFrameTimingToJSON/PerformanceLongAnimationFrameTimingToJSON.generated.xml' path='docs/PerformanceLongAnimationFrameTimingToJSON/*'/>
+	public Object ToJSON() { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.None)]
-public enum ScriptInvokerType
-{
-	[Value("classic-script")]
-	ClassicScript,
-	[Value("module-script")]
-	ModuleScript,
-	[Value("event-listener")]
-	EventListener,
-	[Value("user-callback")]
-	UserCallback,
-	[Value("resolve-promise")]
-	ResolvePromise,
-	[Value("reject-promise")]
-	RejectPromise,
-}
 
-[To(ToAttribute.None)]
-public enum ScriptWindowAttribution
-{
-	[Value("self")]
-	Self,
-	[Value("descendant")]
-	Descendant,
-	[Value("ancestor")]
-	Ancestor,
-	[Value("same-page")]
-	SamePage,
-	[Value("other")]
-	Other,
-}
-
+///<include file='Utils/Docs/PerformanceScriptTiming/PerformanceScriptTiming.generated.xml' path='docs/PerformanceScriptTiming/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class PerformanceScriptTiming : PerformanceEntry
 {
@@ -13841,17 +12673,28 @@ public partial class PerformanceScriptTiming : PerformanceEntry
 		public DOMHighResTimeStamp Duration { get; }
 		public DOMString Name { get; }
 		public DOMString EntryType { get; }
-		public ScriptInvokerType InvokerType { get; }
-		public DOMString Invoker { get; }
-		public DOMHighResTimeStamp ExecutionStart { get; }
-		public DOMString SourceURL { get; }
-		public DOMString SourceFunctionName { get; }
-		public long SourceCharPosition { get; }
-		public DOMHighResTimeStamp PauseDuration { get; }
-		public DOMHighResTimeStamp ForcedStyleAndLayoutDuration { get; }
-		public Window? _window { get; }
-		public ScriptWindowAttribution WindowAttribution { get; }
-		public object ToJSON() { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/PerformanceScriptTimingInvokerType/PerformanceScriptTimingInvokerType.generated.xml' path='docs/PerformanceScriptTimingInvokerType/*'/>
+	public ScriptInvokerType InvokerType { get; }
+	///<include file='Utils/Docs/PerformanceScriptTimingInvoker/PerformanceScriptTimingInvoker.generated.xml' path='docs/PerformanceScriptTimingInvoker/*'/>
+	public DOMString Invoker { get; }
+	///<include file='Utils/Docs/PerformanceScriptTimingExecutionStart/PerformanceScriptTimingExecutionStart.generated.xml' path='docs/PerformanceScriptTimingExecutionStart/*'/>
+	public DOMHighResTimeStamp ExecutionStart { get; }
+	///<include file='Utils/Docs/PerformanceScriptTimingSourceURL/PerformanceScriptTimingSourceURL.generated.xml' path='docs/PerformanceScriptTimingSourceURL/*'/>
+	public DOMString SourceURL { get; }
+	///<include file='Utils/Docs/PerformanceScriptTimingSourceFunctionName/PerformanceScriptTimingSourceFunctionName.generated.xml' path='docs/PerformanceScriptTimingSourceFunctionName/*'/>
+	public DOMString SourceFunctionName { get; }
+	///<include file='Utils/Docs/PerformanceScriptTimingSourceCharPosition/PerformanceScriptTimingSourceCharPosition.generated.xml' path='docs/PerformanceScriptTimingSourceCharPosition/*'/>
+	public long SourceCharPosition { get; }
+	///<include file='Utils/Docs/PerformanceScriptTimingPauseDuration/PerformanceScriptTimingPauseDuration.generated.xml' path='docs/PerformanceScriptTimingPauseDuration/*'/>
+	public DOMHighResTimeStamp PauseDuration { get; }
+	///<include file='Utils/Docs/PerformanceScriptTimingForcedStyleAndLayoutDuration/PerformanceScriptTimingForcedStyleAndLayoutDuration.generated.xml' path='docs/PerformanceScriptTimingForcedStyleAndLayoutDuration/*'/>
+	public DOMHighResTimeStamp ForcedStyleAndLayoutDuration { get; }
+	///<include file='Utils/Docs/PerformanceScriptTimingWindow/PerformanceScriptTimingWindow.generated.xml' path='docs/PerformanceScriptTimingWindow/*'/>
+	public Window? _window { get; }
+	///<include file='Utils/Docs/PerformanceScriptTimingWindowAttribution/PerformanceScriptTimingWindowAttribution.generated.xml' path='docs/PerformanceScriptTimingWindowAttribution/*'/>
+	public ScriptWindowAttribution WindowAttribution { get; }
+	///<include file='Utils/Docs/PerformanceScriptTimingToJSON/PerformanceScriptTimingToJSON.generated.xml' path='docs/PerformanceScriptTimingToJSON/*'/>
+	public Object ToJSON() { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/PerformanceLongTaskTiming/PerformanceLongTaskTiming.generated.xml' path='docs/PerformanceLongTaskTiming/*'/>
@@ -13865,7 +12708,7 @@ public partial class PerformanceLongTaskTiming : PerformanceEntry
 	///<include file='Utils/Docs/PerformanceLongTaskTimingAttribution/PerformanceLongTaskTimingAttribution.generated.xml' path='docs/PerformanceLongTaskTimingAttribution/*'/>
 	public TaskAttributionTiming[] Attribution { get; }
 	///<include file='Utils/Docs/PerformanceLongTaskTimingToJSON/PerformanceLongTaskTimingToJSON.generated.xml' path='docs/PerformanceLongTaskTimingToJSON/*'/>
-	public object ToJSON() { throw new System.NotImplementedException(); }
+	public Object ToJSON() { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/TaskAttributionTiming/TaskAttributionTiming.generated.xml' path='docs/TaskAttributionTiming/*'/>
@@ -13885,7 +12728,7 @@ public partial class TaskAttributionTiming : PerformanceEntry
 	///<include file='Utils/Docs/TaskAttributionTimingContainerName/TaskAttributionTimingContainerName.generated.xml' path='docs/TaskAttributionTimingContainerName/*'/>
 	public DOMString ContainerName { get; }
 	///<include file='Utils/Docs/TaskAttributionTimingToJSON/TaskAttributionTimingToJSON.generated.xml' path='docs/TaskAttributionTimingToJSON/*'/>
-	public object ToJSON() { throw new System.NotImplementedException(); }
+	public Object ToJSON() { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/Magnetometer/Magnetometer.generated.xml' path='docs/Magnetometer/*'/>
@@ -13901,15 +12744,6 @@ public partial class Magnetometer : Sensor
 	///<include file='Utils/Docs/MagnetometerZ/MagnetometerZ.generated.xml' path='docs/MagnetometerZ/*'/>
 	public Number? Z { get; }
 	public Magnetometer() { }
-}
-
-[To(ToAttribute.None)]
-public enum MagnetometerLocalCoordinateSystem
-{
-	[Value("device")]
-	Device,
-	[Value("screen")]
-	Screen,
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -13939,7 +12773,7 @@ public partial class Navigator
 
 public partial class NavigatorManagedData : EventTarget
 {
-		public Task<Dictionary<DOMString, object>> GetManagedConfiguration(List<DOMString> keys) { throw new System.NotImplementedException(); }
+		public Task<Dictionary<DOMString, Object>> GetManagedConfiguration(List<DOMString> keys) { throw new System.NotImplementedException(); }
 		public EventHandler Onmanagedconfigurationchange { get; set; }
 }
 
@@ -13958,15 +12792,6 @@ public partial class BeforeInstallPromptEvent : Event
 public partial class PromptResponseObject
 {
 		public AppBannerPromptOutcome UserChoice;
-}
-
-[To(ToAttribute.None)]
-public enum AppBannerPromptOutcome
-{
-	[Value("accepted")]
-	Accepted,
-	[Value("dismissed")]
-	Dismissed,
 }
 
 ///<include file='Utils/Docs/Window/Window.generated.xml' path='docs/Window/*'/>
@@ -14006,26 +12831,6 @@ public partial class MediaEncodingConfiguration : MediaConfiguration
 		public required MediaEncodingType Type;
 }
 
-[To(ToAttribute.None)]
-public enum MediaDecodingType
-{
-	[Value("file")]
-	File,
-	[Value("media-source")]
-	MediaSource,
-	[Value("webrtc")]
-	Webrtc,
-}
-
-[To(ToAttribute.None)]
-public enum MediaEncodingType
-{
-	[Value("record")]
-	Record,
-	[Value("webrtc")]
-	Webrtc,
-}
-
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class VideoConfiguration
 {
@@ -14040,39 +12845,6 @@ public partial class VideoConfiguration
 		public TransferFunction TransferFunction;
 		public DOMString ScalabilityMode;
 		public bool SpatialScalability;
-}
-
-[To(ToAttribute.None)]
-public enum HdrMetadataType
-{
-	[Value("smpteSt2086")]
-	SmpteSt2086,
-	[Value("smpteSt2094-10")]
-	SmpteSt209410,
-	[Value("smpteSt2094-40")]
-	SmpteSt209440,
-}
-
-[To(ToAttribute.None)]
-public enum ColorGamut
-{
-	[Value("srgb")]
-	Srgb,
-	[Value("p3")]
-	P3,
-	[Value("rec2020")]
-	Rec2020,
-}
-
-[To(ToAttribute.None)]
-public enum TransferFunction
-{
-	[Value("srgb")]
-	Srgb,
-	[Value("pq")]
-	Pq,
-	[Value("hlg")]
-	Hlg,
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -14173,26 +12945,6 @@ public partial class VideoPlaybackQuality
 	public ulong CorruptedVideoFrames { get; }
 }
 
-[To(ToAttribute.None)]
-public enum ReadyState
-{
-	[Value("closed")]
-	Closed,
-	[Value("open")]
-	Open,
-	[Value("ended")]
-	Ended,
-}
-
-[To(ToAttribute.None)]
-public enum EndOfStreamError
-{
-	[Value("network")]
-	Network,
-	[Value("decode")]
-	Decode,
-}
-
 ///<include file='Utils/Docs/MediaSource/MediaSource.generated.xml' path='docs/MediaSource/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class MediaSource : EventTarget
@@ -14232,15 +12984,6 @@ public partial class MediaSource : EventTarget
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class MediaSourceHandle
 {
-}
-
-[To(ToAttribute.None)]
-public enum AppendMode
-{
-	[Value("segments")]
-	Segments,
-	[Value("sequence")]
-	Sequence,
 }
 
 ///<include file='Utils/Docs/SourceBuffer/SourceBuffer.generated.xml' path='docs/SourceBuffer/*'/>
@@ -14339,17 +13082,9 @@ public partial class VideoTrack
 ///<include file='Utils/Docs/TextTrack/TextTrack.generated.xml' path='docs/TextTrack/*'/>
 public partial class TextTrack
 {
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/TextTrackSourceBuffer/TextTrackSourceBuffer.generated.xml' path='docs/TextTrackSourceBuffer/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public SourceBuffer? SourceBuffer { get; }
-}
-
-[To(ToAttribute.None)]
-public enum MockCapturePromptResult
-{
-	[Value("granted")]
-	Granted,
-	[Value("denied")]
-	Denied,
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -14411,19 +13146,6 @@ public partial class MediaDevices
 {
 		public Undefined SetSupportedCaptureActions(List<DOMString> actions) { throw new System.NotImplementedException(); }
 		public EventHandler Oncaptureaction { get; set; }
-}
-
-[To(ToAttribute.None)]
-public enum CaptureAction
-{
-	[Value("next")]
-	Next,
-	[Value("previous")]
-	Previous,
-	[Value("first")]
-	First,
-	[Value("last")]
-	Last,
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -14523,15 +13245,6 @@ public partial class MediaStreamTrack : EventTarget
 	public Task<Undefined> ApplyConstraints(MediaTrackConstraints constraints) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.None)]
-public enum MediaStreamTrackState
-{
-	[Value("live")]
-	Live,
-	[Value("ended")]
-	Ended,
-}
-
 ///<include file='Utils/Docs/MediaTrackSupportedConstraints/MediaTrackSupportedConstraints.generated.xml' path='docs/MediaTrackSupportedConstraints/*'/>
 public partial class MediaTrackSupportedConstraints
 {
@@ -14564,6 +13277,7 @@ public partial class MediaTrackSupportedConstraints
 	public bool DeviceId;
 	///<include file='Utils/Docs/MediaTrackSupportedConstraintsGroupId/MediaTrackSupportedConstraintsGroupId.generated.xml' path='docs/MediaTrackSupportedConstraintsGroupId/*'/>
 	public bool GroupId;
+		public bool BackgroundBlur;
 }
 
 public partial class MediaTrackCapabilities
@@ -14583,6 +13297,7 @@ public partial class MediaTrackCapabilities
 		public ULongRange ChannelCount;
 		public DOMString DeviceId;
 		public DOMString GroupId;
+		public List<bool> BackgroundBlur;
 }
 
 ///<include file='Utils/Docs/MediaTrackConstraints/MediaTrackConstraints.generated.xml' path='docs/MediaTrackConstraints/*'/>
@@ -14609,6 +13324,7 @@ public partial class MediaTrackConstraintSet
 		public ConstrainULong ChannelCount;
 		public ConstrainDOMString DeviceId;
 		public ConstrainDOMString GroupId;
+		public ConstrainBoolean BackgroundBlur;
 }
 
 ///<include file='Utils/Docs/MediaTrackSettings/MediaTrackSettings.generated.xml' path='docs/MediaTrackSettings/*'/>
@@ -14643,28 +13359,7 @@ public partial class MediaTrackSettings
 	public DOMString DeviceId;
 	///<include file='Utils/Docs/MediaTrackSettingsGroupId/MediaTrackSettingsGroupId.generated.xml' path='docs/MediaTrackSettingsGroupId/*'/>
 	public DOMString GroupId;
-}
-
-[To(ToAttribute.None)]
-public enum VideoFacingModeEnum
-{
-	[Value("user")]
-	User,
-	[Value("environment")]
-	Environment,
-	[Value("left")]
-	Left,
-	[Value("right")]
-	Right,
-}
-
-[To(ToAttribute.None)]
-public enum VideoResizeModeEnum
-{
-	[Value("none")]
-	None,
-	[Value("crop-and-scale")]
-	CropAndScale,
+		public bool BackgroundBlur;
 }
 
 ///<include file='Utils/Docs/MediaStreamTrackEvent/MediaStreamTrackEvent.generated.xml' path='docs/MediaStreamTrackEvent/*'/>
@@ -14723,18 +13418,7 @@ public partial class MediaDeviceInfo
 	///<include file='Utils/Docs/MediaDeviceInfoGroupId/MediaDeviceInfoGroupId.generated.xml' path='docs/MediaDeviceInfoGroupId/*'/>
 	public DOMString GroupId { get; }
 	///<include file='Utils/Docs/MediaDeviceInfoToJSON/MediaDeviceInfoToJSON.generated.xml' path='docs/MediaDeviceInfoToJSON/*'/>
-	public object ToJSON() { throw new System.NotImplementedException(); }
-}
-
-[To(ToAttribute.None)]
-public enum MediaDeviceKind
-{
-	[Value("audioinput")]
-	Audioinput,
-	[Value("audiooutput")]
-	Audiooutput,
-	[Value("videoinput")]
-	Videoinput,
+	public Object ToJSON() { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/InputDeviceInfo/InputDeviceInfo.generated.xml' path='docs/InputDeviceInfo/*'/>
@@ -14743,6 +13427,21 @@ public partial class InputDeviceInfo : MediaDeviceInfo
 {
 	///<include file='Utils/Docs/InputDeviceInfoGetCapabilities/InputDeviceInfoGetCapabilities.generated.xml' path='docs/InputDeviceInfoGetCapabilities/*'/>
 	public MediaTrackCapabilities GetCapabilities() { throw new System.NotImplementedException(); }
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class DeviceChangeEvent : Event
+{
+		public DeviceChangeEvent(DOMString type, DeviceChangeEventInit eventInitDict) { }
+		public MediaDeviceInfo[] Devices { get; }
+		public MediaDeviceInfo[] UserInsertedDevices { get; }
+	public DeviceChangeEvent() { }
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class DeviceChangeEventInit : EventInit
+{
+		public List<MediaDeviceInfo> Devices;
 }
 
 ///<include file='Utils/Docs/MediaDevices/MediaDevices.generated.xml' path='docs/MediaDevices/*'/>
@@ -14757,8 +13456,8 @@ public partial class MediaDevices
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class MediaStreamConstraints
 {
-		public Union97 Video;
-		public Union98 Audio;
+		public Union111 Video;
+		public Union112 Audio;
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -14799,8 +13498,8 @@ public partial class ConstrainBooleanParameters
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class ConstrainDOMStringParameters
 {
-		public Union99 Exact;
-		public Union100 Ideal;
+		public Union113 Exact;
+		public Union114 Ideal;
 }
 
 
@@ -14813,6 +13512,22 @@ public partial class CameraDevicePermissionDescriptor : PermissionDescriptor
 		public bool PanTiltZoom;
 }
 
+///<include file='Utils/Docs/CaptureController/CaptureController.generated.xml' path='docs/CaptureController/*'/>
+public partial class CaptureController
+{
+		public List<long> GetSupportedZoomLevels() { throw new System.NotImplementedException(); }
+		public long GetZoomLevel() { throw new System.NotImplementedException(); }
+		public Task<Undefined> SetZoomLevel(long zoomLevel) { throw new System.NotImplementedException(); }
+		public EventHandler Oncapturedzoomlevelchange { get; set; }
+}
+
+///<include file='Utils/Docs/CaptureController/CaptureController.generated.xml' path='docs/CaptureController/*'/>
+public partial class CaptureController
+{
+	
+		public Task<Undefined> ForwardWheel(HTMLElement? element) { throw new System.NotImplementedException(); }
+}
+
 ///<include file='Utils/Docs/MediaStreamTrackProcessor/MediaStreamTrackProcessor.generated.xml' path='docs/MediaStreamTrackProcessor/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class MediaStreamTrackProcessor
@@ -14820,7 +13535,7 @@ public partial class MediaStreamTrackProcessor
 	///<include file='Utils/Docs/MediaStreamTrackProcessorMediaStreamTrackProcessor/MediaStreamTrackProcessorMediaStreamTrackProcessor.generated.xml' path='docs/MediaStreamTrackProcessorMediaStreamTrackProcessor/*'/>
 	public MediaStreamTrackProcessor(MediaStreamTrackProcessorInit init) { }
 	///<include file='Utils/Docs/MediaStreamTrackProcessorReadable/MediaStreamTrackProcessorReadable.generated.xml' path='docs/MediaStreamTrackProcessorReadable/*'/>
-	public ReadableStream Readable { get; set; }
+	public ReadableStream Readable { get; }
 	public MediaStreamTrackProcessor() { }
 }
 
@@ -14843,14 +13558,34 @@ public partial class VideoTrackGenerator
 ///<include file='Utils/Docs/MediaDevices/MediaDevices.generated.xml' path='docs/MediaDevices/*'/>
 public partial class MediaDevices
 {
-		public Task<MediaStream> GetViewportMedia(ViewportMediaStreamConstraints constraints) { throw new System.NotImplementedException(); }
+		public Task<MediaStream> GetViewportMedia(DisplayMediaStreamOptions options) { throw new System.NotImplementedException(); }
+}
+
+///<include file='Utils/Docs/Navigator/Navigator.generated.xml' path='docs/Navigator/*'/>
+public partial class Navigator
+{
+		public PreferenceManager Preferences { get; }
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class ViewportMediaStreamConstraints
+public partial class PreferenceManager
 {
-		public Union105 Video;
-		public Union106 Audio;
+		public PreferenceObject ColorScheme { get; }
+		public PreferenceObject Contrast { get; }
+		public PreferenceObject ReducedMotion { get; }
+		public PreferenceObject ReducedTransparency { get; }
+		public PreferenceObject ReducedData { get; }
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class PreferenceObject : EventTarget
+{
+		public DOMString? Override { get; }
+		public DOMString Value { get; }
+		public DOMString[] ValidValues { get; }
+		public Undefined ClearOverride() { throw new System.NotImplementedException(); }
+		public Task<Undefined> RequestOverride(DOMString? value) { throw new System.NotImplementedException(); }
+		public EventHandler Onchange { get; set; }
 }
 
 ///<include file='Utils/Docs/Navigator/Navigator.generated.xml' path='docs/Navigator/*'/>
@@ -14858,58 +13593,6 @@ public partial class Navigator
 {
 	///<include file='Utils/Docs/NavigatorMediaSession/NavigatorMediaSession.generated.xml' path='docs/NavigatorMediaSession/*'/>
 	public MediaSession MediaSession { get; }
-}
-
-///<include file='Utils/Docs/MediaSessionPlaybackState/MediaSessionPlaybackState.generated.xml' path='docs/MediaSessionPlaybackState/*'/>
-[To(ToAttribute.None)]
-public enum MediaSessionPlaybackState
-{
-	[Value("none")]
-	None,
-	[Value("paused")]
-	Paused,
-	[Value("playing")]
-	Playing,
-}
-
-[To(ToAttribute.None)]
-public enum MediaSessionAction
-{
-	[Value("play")]
-	Play,
-	[Value("pause")]
-	Pause,
-	[Value("seekbackward")]
-	Seekbackward,
-	[Value("seekforward")]
-	Seekforward,
-	[Value("previoustrack")]
-	Previoustrack,
-	[Value("nexttrack")]
-	Nexttrack,
-	[Value("skipad")]
-	Skipad,
-	[Value("stop")]
-	Stop,
-	[Value("seekto")]
-	Seekto,
-	[Value("togglemicrophone")]
-	Togglemicrophone,
-	[Value("togglecamera")]
-	Togglecamera,
-	[Value("hangup")]
-	Hangup,
-	[Value("previousslide")]
-	Previousslide,
-	[Value("nextslide")]
-	Nextslide,
-	[Value("enterpictureinpicture")]
-	Enterpictureinpicture,
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct MediaSessionActionHandler
-{
 }
 
 ///<include file='Utils/Docs/MediaSession/MediaSession.generated.xml' path='docs/MediaSession/*'/>
@@ -14928,6 +13611,7 @@ public partial class MediaSession
 	public Task<Undefined> SetMicrophoneActive(bool active) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/MediaSessionSetCameraActive/MediaSessionSetCameraActive.generated.xml' path='docs/MediaSessionSetCameraActive/*'/>
 	public Task<Undefined> SetCameraActive(bool active) { throw new System.NotImplementedException(); }
+		public Task<Undefined> SetScreenshareActive(bool active) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/MediaMetadata/MediaMetadata.generated.xml' path='docs/MediaMetadata/*'/>
@@ -14943,8 +13627,9 @@ public partial class MediaMetadata
 	///<include file='Utils/Docs/MediaMetadataAlbum/MediaMetadataAlbum.generated.xml' path='docs/MediaMetadataAlbum/*'/>
 	public DOMString Album { get; set; }
 	///<include file='Utils/Docs/MediaMetadataArtwork/MediaMetadataArtwork.generated.xml' path='docs/MediaMetadataArtwork/*'/>
-	public MediaImage[] Artwork { get; set; }
-		public ChapterInformation[] ChapterInfo { get; }
+	public Object[] Artwork { get; set; }
+	///<include file='Utils/Docs/MediaMetadataChapterInfo/MediaMetadataChapterInfo.generated.xml' path='docs/MediaMetadataChapterInfo/*'/>
+	public ChapterInformation[] ChapterInfo { get; }
 	public MediaMetadata() { }
 }
 
@@ -14958,12 +13643,16 @@ public partial class MediaMetadataInit
 		public List<ChapterInformationInit> ChapterInfo;
 }
 
+///<include file='Utils/Docs/ChapterInformation/ChapterInformation.generated.xml' path='docs/ChapterInformation/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class ChapterInformation
 {
-		public DOMString Title { get; }
-		public Number StartTime { get; }
-		public MediaImage[] Artwork { get; }
+	///<include file='Utils/Docs/ChapterInformationTitle/ChapterInformationTitle.generated.xml' path='docs/ChapterInformationTitle/*'/>
+	public DOMString Title { get; }
+	///<include file='Utils/Docs/ChapterInformationStartTime/ChapterInformationStartTime.generated.xml' path='docs/ChapterInformationStartTime/*'/>
+	public Number StartTime { get; }
+	///<include file='Utils/Docs/ChapterInformationArtwork/ChapterInformationArtwork.generated.xml' path='docs/ChapterInformationArtwork/*'/>
+	public MediaImage[] Artwork { get; }
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -14994,24 +13683,9 @@ public partial class MediaPositionState
 public partial class MediaSessionActionDetails
 {
 		public required MediaSessionAction Action;
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class MediaSessionSeekActionDetails : MediaSessionActionDetails
-{
 		public Number SeekOffset;
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class MediaSessionSeekToActionDetails : MediaSessionActionDetails
-{
-		public required Number SeekTime;
+		public Number SeekTime;
 		public bool FastSeek;
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class MediaSessionCaptureActionDetails : MediaSessionActionDetails
-{
 		public bool IsActivating;
 }
 
@@ -15066,26 +13740,6 @@ public partial class MediaRecorderOptions
 		public ulong VideoKeyFrameIntervalCount;
 }
 
-[To(ToAttribute.None)]
-public enum BitrateMode
-{
-	[Value("constant")]
-	Constant,
-	[Value("variable")]
-	Variable,
-}
-
-[To(ToAttribute.None)]
-public enum RecordingState
-{
-	[Value("inactive")]
-	Inactive,
-	[Value("recording")]
-	Recording,
-	[Value("paused")]
-	Paused,
-}
-
 ///<include file='Utils/Docs/BlobEvent/BlobEvent.generated.xml' path='docs/BlobEvent/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class BlobEvent : Event
@@ -15116,17 +13770,6 @@ public partial class MediaStreamTrack
 {
 	///<include file='Utils/Docs/MediaStreamTrackContentHint/MediaStreamTrackContentHint.generated.xml' path='docs/MediaStreamTrackContentHint/*'/>
 	public DOMString ContentHint { get; set; }
-}
-
-[To(ToAttribute.None)]
-public enum RTCDegradationPreference
-{
-	[Value("maintain-framerate")]
-	MaintainFramerate,
-	[Value("maintain-resolution")]
-	MaintainResolution,
-	[Value("balanced")]
-	Balanced,
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -15161,22 +13804,10 @@ public partial class PerformanceNavigationTiming : PerformanceResourceTiming
 	public ushort RedirectCount { get; }
 	///<include file='Utils/Docs/PerformanceNavigationTimingCriticalCHRestart/PerformanceNavigationTimingCriticalCHRestart.generated.xml' path='docs/PerformanceNavigationTimingCriticalCHRestart/*'/>
 	public DOMHighResTimeStamp CriticalCHRestart { get; }
-		public NotRestoredReasons? NotRestoredReasons { get; }
+	///<include file='Utils/Docs/PerformanceNavigationTimingNotRestoredReasons/PerformanceNavigationTimingNotRestoredReasons.generated.xml' path='docs/PerformanceNavigationTimingNotRestoredReasons/*'/>
+	public NotRestoredReasons? NotRestoredReasons { get; }
 	///<include file='Utils/Docs/PerformanceNavigationTimingToJSON/PerformanceNavigationTimingToJSON.generated.xml' path='docs/PerformanceNavigationTimingToJSON/*'/>
-	public object ToJSON() { throw new System.NotImplementedException(); }
-}
-
-[To(ToAttribute.None)]
-public enum NavigationTimingType
-{
-	[Value("navigate")]
-	Navigate,
-	[Value("reload")]
-	Reload,
-	[Value("back_forward")]
-	Back_forward,
-	[Value("prerender")]
-	Prerender,
+	public Object ToJSON() { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/PerformanceTiming/PerformanceTiming.generated.xml' path='docs/PerformanceTiming/*'/>
@@ -15226,7 +13857,7 @@ public partial class PerformanceTiming
 	///<include file='Utils/Docs/PerformanceTimingLoadEventEnd/PerformanceTimingLoadEventEnd.generated.xml' path='docs/PerformanceTimingLoadEventEnd/*'/>
 	public ulong LoadEventEnd { get; }
 	///<include file='Utils/Docs/PerformanceTimingToJSON/PerformanceTimingToJSON.generated.xml' path='docs/PerformanceTimingToJSON/*'/>
-	public object ToJSON() { throw new System.NotImplementedException(); }
+	public Object ToJSON() { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/PerformanceNavigation/PerformanceNavigation.generated.xml' path='docs/PerformanceNavigation/*'/>
@@ -15242,7 +13873,7 @@ public partial class PerformanceNavigation
 	///<include file='Utils/Docs/PerformanceNavigationRedirectCount/PerformanceNavigationRedirectCount.generated.xml' path='docs/PerformanceNavigationRedirectCount/*'/>
 	public ushort RedirectCount { get; }
 	///<include file='Utils/Docs/PerformanceNavigationToJSON/PerformanceNavigationToJSON.generated.xml' path='docs/PerformanceNavigationToJSON/*'/>
-	public object ToJSON() { throw new System.NotImplementedException(); }
+	public Object ToJSON() { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/Performance/Performance.generated.xml' path='docs/Performance/*'/>
@@ -15253,50 +13884,6 @@ public partial class Performance
 	///<include file='Utils/Docs/PerformanceNavigation/PerformanceNavigation.generated.xml' path='docs/PerformanceNavigation/*'/>
 	public PerformanceNavigation Navigation { get; }
 }
-
-[To(ToAttribute.None)]
-public enum ConnectionType
-{
-	[Value("bluetooth")]
-	Bluetooth,
-	[Value("cellular")]
-	Cellular,
-	[Value("ethernet")]
-	Ethernet,
-	[Value("mixed")]
-	Mixed,
-	[Value("none")]
-	None,
-	[Value("other")]
-	Other,
-	[Value("unknown")]
-	Unknown,
-	[Value("wifi")]
-	Wifi,
-	[Value("wimax")]
-	Wimax,
-}
-
-[To(ToAttribute.None)]
-public enum EffectiveConnectionType
-{
-	[Value("2g")]
-	_2g,
-	[Value("3g")]
-	_3g,
-	[Value("4g")]
-	_4g,
-	[Value("slow-2g")]
-	Slow2g,
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface NavigatorNetworkInformation
-{
-		public NetworkInformation Connection { get { throw new System.NotImplementedException(); } }
-}
-
-
 
 ///<include file='Utils/Docs/NetworkInformation/NetworkInformation.generated.xml' path='docs/NetworkInformation/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -15387,40 +13974,12 @@ public partial class NotificationOptions
 		public List<NotificationAction> Actions;
 }
 
-///<include file='Utils/Docs/NotificationPermission/NotificationPermission.generated.xml' path='docs/NotificationPermission/*'/>
-[To(ToAttribute.None)]
-public enum NotificationPermission
-{
-	[Value("default")]
-	Default,
-	[Value("denied")]
-	Denied,
-	[Value("granted")]
-	Granted,
-}
-
-[To(ToAttribute.None)]
-public enum NotificationDirection
-{
-	[Value("auto")]
-	Auto,
-	[Value("ltr")]
-	Ltr,
-	[Value("rtl")]
-	Rtl,
-}
-
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class NotificationAction
 {
 		public required DOMString Action;
 		public required DOMString Title;
 		public USVString Icon;
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct NotificationPermissionCallback
-{
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -15463,6 +14022,83 @@ public partial class ServiceWorkerGlobalScope
 {
 		public EventHandler Onnotificationclick { get; set; }
 		public EventHandler Onnotificationclose { get; set; }
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class Subscriber
+{
+		public Undefined Next(dynamic value) { throw new System.NotImplementedException(); }
+		public Undefined Error(dynamic error) { throw new System.NotImplementedException(); }
+		public Undefined Complete() { throw new System.NotImplementedException(); }
+		public Undefined AddTeardown(VoidFunction teardown) { throw new System.NotImplementedException(); }
+		public bool Active { get; }
+		public AbortSignal Signal { get; }
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class SubscriptionObserver
+{
+		public ObservableSubscriptionCallback Next;
+		public ObservableSubscriptionCallback Error;
+		public VoidFunction Complete;
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class ObservableInspector
+{
+		public ObservableSubscriptionCallback Next;
+		public ObservableSubscriptionCallback Error;
+		public VoidFunction Complete;
+		public VoidFunction Subscribe;
+		public ObservableInspectorAbortHandler Abort;
+}
+
+
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class SubscribeOptions
+{
+		public AbortSignal Signal;
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class Observable
+{
+		public Observable(SubscribeCallback callback) { }
+		public Undefined Subscribe(ObserverUnion observer, SubscribeOptions options) { throw new System.NotImplementedException(); }
+		public static Observable From(dynamic value) { throw new System.NotImplementedException(); }
+		public Observable TakeUntil(dynamic notifier) { throw new System.NotImplementedException(); }
+		public Observable Map(Mapper mapper) { throw new System.NotImplementedException(); }
+		public Observable Filter(Predicate predicate) { throw new System.NotImplementedException(); }
+		public Observable Take(ulong amount) { throw new System.NotImplementedException(); }
+		public Observable Drop(ulong amount) { throw new System.NotImplementedException(); }
+		public Observable FlatMap(Mapper mapper) { throw new System.NotImplementedException(); }
+		public Observable SwitchMap(Mapper mapper) { throw new System.NotImplementedException(); }
+		public Observable Inspect(ObservableInspectorUnion inspectorUnion) { throw new System.NotImplementedException(); }
+		public Observable Catch(CatchCallback callback) { throw new System.NotImplementedException(); }
+		public Observable Finally(VoidFunction callback) { throw new System.NotImplementedException(); }
+		public Task<List<dynamic>> ToArray(SubscribeOptions options) { throw new System.NotImplementedException(); }
+		public Task<Undefined> ForEach(Visitor callback, SubscribeOptions options) { throw new System.NotImplementedException(); }
+		public Task<bool> Every(Predicate predicate, SubscribeOptions options) { throw new System.NotImplementedException(); }
+		public Task<dynamic> First(SubscribeOptions options) { throw new System.NotImplementedException(); }
+		public Task<dynamic> Last(SubscribeOptions options) { throw new System.NotImplementedException(); }
+		public Task<dynamic> Find(Predicate predicate, SubscribeOptions options) { throw new System.NotImplementedException(); }
+		public Task<bool> Some(Predicate predicate, SubscribeOptions options) { throw new System.NotImplementedException(); }
+		public Task<dynamic> Reduce(Reducer reducer, dynamic initialValue, SubscribeOptions options) { throw new System.NotImplementedException(); }
+	public Observable() { }
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class ObservableEventListenerOptions
+{
+		public bool Capture;
+		public bool Passive;
+}
+
+///<include file='Utils/Docs/EventTarget/EventTarget.generated.xml' path='docs/EventTarget/*'/>
+public partial class EventTarget
+{
+		public Observable When(DOMString type, ObservableEventListenerOptions options) { throw new System.NotImplementedException(); }
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -15523,7 +14159,7 @@ public partial class WebGLVertexArrayObjectOES : WebGLObject
 public partial class OES_vertex_array_object
 {
 		public const GLenum VERTEX_ARRAY_BINDING_OES = 0x85B5;
-		public WebGLVertexArrayObjectOES? CreateVertexArrayOES() { throw new System.NotImplementedException(); }
+		public WebGLVertexArrayObjectOES CreateVertexArrayOES() { throw new System.NotImplementedException(); }
 		public Undefined DeleteVertexArrayOES(WebGLVertexArrayObjectOES? arrayObject) { throw new System.NotImplementedException(); }
 		public bool IsVertexArrayOES(WebGLVertexArrayObjectOES? arrayObject) { throw new System.NotImplementedException(); }
 		public Undefined BindVertexArrayOES(WebGLVertexArrayObjectOES? arrayObject) { throw new System.NotImplementedException(); }
@@ -15655,15 +14291,6 @@ public partial class OrientationSensor : Sensor
 	public Undefined PopulateMatrix(RotationMatrixType targetMatrix) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.None)]
-public enum OrientationSensorLocalCoordinateSystem
-{
-	[Value("device")]
-	Device,
-	[Value("screen")]
-	Screen,
-}
-
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class OrientationSensorOptions : SensorOptions
 {
@@ -15713,20 +14340,12 @@ public partial class Client
 		public ClientLifecycleState LifecycleState { get; }
 }
 
-[To(ToAttribute.None)]
-public enum ClientLifecycleState
-{
-	[Value("active")]
-	Active,
-	[Value("frozen")]
-	Frozen,
-}
-
 ///<include file='Utils/Docs/PerformancePaintTiming/PerformancePaintTiming.generated.xml' path='docs/PerformancePaintTiming/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class PerformancePaintTiming : PerformanceEntry
+public partial class PerformancePaintTiming : PerformanceEntry, PaintTimingMixin
 {
 }
+
 
 ///<include file='Utils/Docs/ServiceWorkerRegistration/ServiceWorkerRegistration.generated.xml' path='docs/ServiceWorkerRegistration/*'/>
 public partial class ServiceWorkerRegistration
@@ -15743,19 +14362,6 @@ public partial class PaymentManager
 	public DOMString UserHint { get; set; }
 	///<include file='Utils/Docs/PaymentManagerEnableDelegations/PaymentManagerEnableDelegations.generated.xml' path='docs/PaymentManagerEnableDelegations/*'/>
 	public Task<Undefined> EnableDelegations(List<PaymentDelegation> delegations) { throw new System.NotImplementedException(); }
-}
-
-[To(ToAttribute.None)]
-public enum PaymentDelegation
-{
-	[Value("shippingAddress")]
-	ShippingAddress,
-	[Value("payerName")]
-	PayerName,
-	[Value("payerPhone")]
-	PayerPhone,
-	[Value("payerEmail")]
-	PayerEmail,
 }
 
 ///<include file='Utils/Docs/ServiceWorkerGlobalScope/ServiceWorkerGlobalScope.generated.xml' path='docs/ServiceWorkerGlobalScope/*'/>
@@ -15788,7 +14394,7 @@ public partial class PaymentRequestDetailsUpdate
 		public PaymentCurrencyAmount Total;
 		public List<PaymentDetailsModifier> Modifiers;
 		public List<PaymentShippingOption> ShippingOptions;
-		public object PaymentMethodErrors;
+		public Object PaymentMethodErrors;
 		public AddressErrors ShippingAddressErrors;
 }
 
@@ -15807,15 +14413,15 @@ public partial class PaymentRequestEvent : ExtendableEvent
 	///<include file='Utils/Docs/PaymentRequestEventMethodData/PaymentRequestEventMethodData.generated.xml' path='docs/PaymentRequestEventMethodData/*'/>
 	public PaymentMethodData[] MethodData { get; }
 	///<include file='Utils/Docs/PaymentRequestEventTotal/PaymentRequestEventTotal.generated.xml' path='docs/PaymentRequestEventTotal/*'/>
-	public object Total { get; }
+	public Object Total { get; }
 	///<include file='Utils/Docs/PaymentRequestEventModifiers/PaymentRequestEventModifiers.generated.xml' path='docs/PaymentRequestEventModifiers/*'/>
 	public PaymentDetailsModifier[] Modifiers { get; }
-		public object? PaymentOptions { get; }
+		public Object? PaymentOptions { get; }
 		public PaymentShippingOption[]? ShippingOptions { get; }
 	///<include file='Utils/Docs/PaymentRequestEventOpenWindow/PaymentRequestEventOpenWindow.generated.xml' path='docs/PaymentRequestEventOpenWindow/*'/>
 	public Task<WindowClient?> OpenWindow(USVString url) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/PaymentRequestEventChangePaymentMethod/PaymentRequestEventChangePaymentMethod.generated.xml' path='docs/PaymentRequestEventChangePaymentMethod/*'/>
-	public Task<PaymentRequestDetailsUpdate?> ChangePaymentMethod(DOMString methodName, object? methodDetails) { throw new System.NotImplementedException(); }
+	public Task<PaymentRequestDetailsUpdate?> ChangePaymentMethod(DOMString methodName, Object? methodDetails) { throw new System.NotImplementedException(); }
 		public Task<PaymentRequestDetailsUpdate?> ChangeShippingAddress(AddressInit shippingAddress) { throw new System.NotImplementedException(); }
 		public Task<PaymentRequestDetailsUpdate?> ChangeShippingOption(DOMString shippingOption) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/PaymentRequestEventRespondWith/PaymentRequestEventRespondWith.generated.xml' path='docs/PaymentRequestEventRespondWith/*'/>
@@ -15840,7 +14446,7 @@ public partial class PaymentRequestEventInit : ExtendableEventInit
 public partial class PaymentHandlerResponse
 {
 		public DOMString MethodName;
-		public object Details;
+		public Object Details;
 		public DOMString? PayerName;
 		public DOMString? PayerEmail;
 		public DOMString? PayerPhone;
@@ -15863,6 +14469,80 @@ public partial class AddressInit
 		public DOMString Phone;
 }
 
+///<include file='Utils/Docs/PaymentRequest/PaymentRequest.generated.xml' path='docs/PaymentRequest/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class PaymentRequest : EventTarget
+{
+	///<include file='Utils/Docs/PaymentRequestPaymentRequest/PaymentRequestPaymentRequest.generated.xml' path='docs/PaymentRequestPaymentRequest/*'/>
+	public PaymentRequest(List<PaymentMethodData> methodData, PaymentDetailsInit details, PaymentOptions options) { }
+	///<include file='Utils/Docs/PaymentRequestShow/PaymentRequestShow.generated.xml' path='docs/PaymentRequestShow/*'/>
+	public Task<PaymentResponse> Show(Task<PaymentDetailsUpdate> detailsPromise) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/PaymentRequestAbort/PaymentRequestAbort.generated.xml' path='docs/PaymentRequestAbort/*'/>
+	public Task<Undefined> Abort() { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/PaymentRequestCanMakePayment/PaymentRequestCanMakePayment.generated.xml' path='docs/PaymentRequestCanMakePayment/*'/>
+	public Task<bool> CanMakePayment() { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/PaymentRequestId/PaymentRequestId.generated.xml' path='docs/PaymentRequestId/*'/>
+	public DOMString Id { get; }
+	///<include file='Utils/Docs/PaymentRequestShippingAddress/PaymentRequestShippingAddress.generated.xml' path='docs/PaymentRequestShippingAddress/*'/>
+	public ContactAddress? ShippingAddress { get; }
+	///<include file='Utils/Docs/PaymentRequestShippingOption/PaymentRequestShippingOption.generated.xml' path='docs/PaymentRequestShippingOption/*'/>
+	public DOMString? ShippingOption { get; }
+	///<include file='Utils/Docs/PaymentRequestShippingType/PaymentRequestShippingType.generated.xml' path='docs/PaymentRequestShippingType/*'/>
+	public PaymentShippingType? ShippingType { get; }
+		public EventHandler Onshippingaddresschange { get; set; }
+		public EventHandler Onshippingoptionchange { get; set; }
+		public EventHandler Onpaymentmethodchange { get; set; }
+	public PaymentRequest() { }
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class PaymentMethodData
+{
+		public required DOMString SupportedMethods;
+		public Object Data;
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class PaymentCurrencyAmount
+{
+		public required DOMString Currency;
+		public required DOMString Value;
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class PaymentDetailsBase
+{
+		public List<PaymentItem> DisplayItems;
+		public List<PaymentShippingOption> ShippingOptions;
+		public List<PaymentDetailsModifier> Modifiers;
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class PaymentDetailsInit : PaymentDetailsBase
+{
+		public DOMString Id;
+		public required PaymentItem Total;
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class PaymentDetailsUpdate : PaymentDetailsBase
+{
+		public DOMString Error;
+		public PaymentItem Total;
+		public AddressErrors ShippingAddressErrors;
+		public PayerErrors PayerErrors;
+		public Object PaymentMethodErrors;
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class PaymentDetailsModifier
+{
+		public required DOMString SupportedMethods;
+		public PaymentItem Total;
+		public List<PaymentItem> AdditionalDisplayItems;
+		public Object Data;
+}
+
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class PaymentOptions
 {
@@ -15875,6 +14555,20 @@ public partial class PaymentOptions
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
+public partial class PaymentItem
+{
+		public required DOMString Label;
+		public required PaymentCurrencyAmount Amount;
+		public bool Pending;
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class PaymentCompleteDetails
+{
+		public Object? Data;
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class PaymentShippingOption
 {
 		public required DOMString Id;
@@ -15883,15 +14577,50 @@ public partial class PaymentShippingOption
 		public bool Selected;
 }
 
-[To(ToAttribute.None)]
-public enum PaymentShippingType
+///<include file='Utils/Docs/PaymentResponse/PaymentResponse.generated.xml' path='docs/PaymentResponse/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class PaymentResponse : EventTarget
 {
-	[Value("shipping")]
-	Shipping,
-	[Value("delivery")]
-	Delivery,
-	[Value("pickup")]
-	Pickup,
+	///<include file='Utils/Docs/PaymentResponseToJSON/PaymentResponseToJSON.generated.xml' path='docs/PaymentResponseToJSON/*'/>
+	public Object ToJSON() { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/PaymentResponseRequestId/PaymentResponseRequestId.generated.xml' path='docs/PaymentResponseRequestId/*'/>
+	public DOMString RequestId { get; }
+	///<include file='Utils/Docs/PaymentResponseMethodName/PaymentResponseMethodName.generated.xml' path='docs/PaymentResponseMethodName/*'/>
+	public DOMString MethodName { get; }
+	///<include file='Utils/Docs/PaymentResponseDetails/PaymentResponseDetails.generated.xml' path='docs/PaymentResponseDetails/*'/>
+	public Object Details { get; }
+	///<include file='Utils/Docs/PaymentResponseShippingAddress/PaymentResponseShippingAddress.generated.xml' path='docs/PaymentResponseShippingAddress/*'/>
+	public ContactAddress? ShippingAddress { get; }
+	///<include file='Utils/Docs/PaymentResponseShippingOption/PaymentResponseShippingOption.generated.xml' path='docs/PaymentResponseShippingOption/*'/>
+	public DOMString? ShippingOption { get; }
+	///<include file='Utils/Docs/PaymentResponsePayerName/PaymentResponsePayerName.generated.xml' path='docs/PaymentResponsePayerName/*'/>
+	public DOMString? PayerName { get; }
+	///<include file='Utils/Docs/PaymentResponsePayerEmail/PaymentResponsePayerEmail.generated.xml' path='docs/PaymentResponsePayerEmail/*'/>
+	public DOMString? PayerEmail { get; }
+	///<include file='Utils/Docs/PaymentResponsePayerPhone/PaymentResponsePayerPhone.generated.xml' path='docs/PaymentResponsePayerPhone/*'/>
+	public DOMString? PayerPhone { get; }
+	///<include file='Utils/Docs/PaymentResponseComplete/PaymentResponseComplete.generated.xml' path='docs/PaymentResponseComplete/*'/>
+	public Task<Undefined> Complete(PaymentComplete result, PaymentCompleteDetails details) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/PaymentResponseRetry/PaymentResponseRetry.generated.xml' path='docs/PaymentResponseRetry/*'/>
+	public Task<Undefined> Retry(PaymentValidationErrors errorFields) { throw new System.NotImplementedException(); }
+		public EventHandler Onpayerdetailchange { get; set; }
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class PaymentValidationErrors
+{
+		public PayerErrors Payer;
+		public AddressErrors ShippingAddress;
+		public DOMString Error;
+		public Object PaymentMethod;
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class PayerErrors
+{
+		public DOMString Email;
+		public DOMString Name;
+		public DOMString Phone;
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -15909,118 +14638,6 @@ public partial class AddressErrors
 		public DOMString SortingCode;
 }
 
-///<include file='Utils/Docs/PaymentRequest/PaymentRequest.generated.xml' path='docs/PaymentRequest/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class PaymentRequest : EventTarget
-{
-	///<include file='Utils/Docs/PaymentRequestPaymentRequest/PaymentRequestPaymentRequest.generated.xml' path='docs/PaymentRequestPaymentRequest/*'/>
-	public PaymentRequest(List<PaymentMethodData> methodData, PaymentDetailsInit details) { }
-	///<include file='Utils/Docs/PaymentRequestShow/PaymentRequestShow.generated.xml' path='docs/PaymentRequestShow/*'/>
-	public Task<PaymentResponse> Show(Task<PaymentDetailsUpdate> detailsPromise) { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/PaymentRequestAbort/PaymentRequestAbort.generated.xml' path='docs/PaymentRequestAbort/*'/>
-	public Task<Undefined> Abort() { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/PaymentRequestCanMakePayment/PaymentRequestCanMakePayment.generated.xml' path='docs/PaymentRequestCanMakePayment/*'/>
-	public Task<bool> CanMakePayment() { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/PaymentRequestId/PaymentRequestId.generated.xml' path='docs/PaymentRequestId/*'/>
-	public DOMString Id { get; }
-		public EventHandler Onpaymentmethodchange { get; set; }
-	public PaymentRequest() { }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class PaymentMethodData
-{
-		public required DOMString SupportedMethods;
-		public object Data;
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class PaymentCurrencyAmount
-{
-		public required DOMString Currency;
-		public required DOMString Value;
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class PaymentDetailsBase
-{
-		public List<PaymentItem> DisplayItems;
-		public List<PaymentDetailsModifier> Modifiers;
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class PaymentDetailsInit : PaymentDetailsBase
-{
-		public DOMString Id;
-		public required PaymentItem Total;
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class PaymentDetailsUpdate : PaymentDetailsBase
-{
-		public PaymentItem Total;
-		public object PaymentMethodErrors;
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class PaymentDetailsModifier
-{
-		public required DOMString SupportedMethods;
-		public PaymentItem Total;
-		public List<PaymentItem> AdditionalDisplayItems;
-		public object Data;
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class PaymentItem
-{
-		public required DOMString Label;
-		public required PaymentCurrencyAmount Amount;
-		public bool Pending;
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class PaymentCompleteDetails
-{
-		public object? Data;
-}
-
-[To(ToAttribute.None)]
-public enum PaymentComplete
-{
-	[Value("fail")]
-	Fail,
-	[Value("success")]
-	Success,
-	[Value("unknown")]
-	Unknown,
-}
-
-///<include file='Utils/Docs/PaymentResponse/PaymentResponse.generated.xml' path='docs/PaymentResponse/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class PaymentResponse : EventTarget
-{
-	///<include file='Utils/Docs/PaymentResponseToJSON/PaymentResponseToJSON.generated.xml' path='docs/PaymentResponseToJSON/*'/>
-	public object ToJSON() { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/PaymentResponseRequestId/PaymentResponseRequestId.generated.xml' path='docs/PaymentResponseRequestId/*'/>
-	public DOMString RequestId { get; }
-	///<include file='Utils/Docs/PaymentResponseMethodName/PaymentResponseMethodName.generated.xml' path='docs/PaymentResponseMethodName/*'/>
-	public DOMString MethodName { get; }
-	///<include file='Utils/Docs/PaymentResponseDetails/PaymentResponseDetails.generated.xml' path='docs/PaymentResponseDetails/*'/>
-	public object Details { get; }
-	///<include file='Utils/Docs/PaymentResponseComplete/PaymentResponseComplete.generated.xml' path='docs/PaymentResponseComplete/*'/>
-	public Task<Undefined> Complete(PaymentComplete result, PaymentCompleteDetails details) { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/PaymentResponseRetry/PaymentResponseRetry.generated.xml' path='docs/PaymentResponseRetry/*'/>
-	public Task<Undefined> Retry(PaymentValidationErrors errorFields) { throw new System.NotImplementedException(); }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class PaymentValidationErrors
-{
-		public DOMString Error;
-		public object PaymentMethod;
-}
-
 ///<include file='Utils/Docs/PaymentMethodChangeEvent/PaymentMethodChangeEvent.generated.xml' path='docs/PaymentMethodChangeEvent/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class PaymentMethodChangeEvent : PaymentRequestUpdateEvent
@@ -16030,7 +14647,7 @@ public partial class PaymentMethodChangeEvent : PaymentRequestUpdateEvent
 	///<include file='Utils/Docs/PaymentMethodChangeEventMethodName/PaymentMethodChangeEventMethodName.generated.xml' path='docs/PaymentMethodChangeEventMethodName/*'/>
 	public DOMString MethodName { get; }
 	///<include file='Utils/Docs/PaymentMethodChangeEventMethodDetails/PaymentMethodChangeEventMethodDetails.generated.xml' path='docs/PaymentMethodChangeEventMethodDetails/*'/>
-	public object? MethodDetails { get; }
+	public Object? MethodDetails { get; }
 	public PaymentMethodChangeEvent() { }
 }
 
@@ -16038,7 +14655,7 @@ public partial class PaymentMethodChangeEvent : PaymentRequestUpdateEvent
 public partial class PaymentMethodChangeEventInit : PaymentRequestUpdateEventInit
 {
 		public DOMString MethodName;
-		public object? MethodDetails;
+		public Object? MethodDetails;
 }
 
 ///<include file='Utils/Docs/PaymentRequestUpdateEvent/PaymentRequestUpdateEvent.generated.xml' path='docs/PaymentRequestUpdateEvent/*'/>
@@ -16121,12 +14738,7 @@ public partial class PerformanceEntry
 	public DOMHighResTimeStamp Duration { get; }
 		public ulong NavigationId { get; }
 	///<include file='Utils/Docs/PerformanceEntryToJSON/PerformanceEntryToJSON.generated.xml' path='docs/PerformanceEntryToJSON/*'/>
-	public object ToJSON() { throw new System.NotImplementedException(); }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct PerformanceObserverCallback
-{
+	public Object ToJSON() { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/PerformanceObserver/PerformanceObserver.generated.xml' path='docs/PerformanceObserver/*'/>
@@ -16244,25 +14856,27 @@ public partial class HTMLIFrameElement
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class PermissionsPolicyViolationReportBody : ReportBody
 {
+		public Object ToJSON() { throw new System.NotImplementedException(); }
 		public DOMString FeatureId { get; }
 		public DOMString? SourceFile { get; }
 		public long? LineNumber { get; }
 		public long? ColumnNumber { get; }
 		public DOMString Disposition { get; }
+		public DOMString? AllowAttribute { get; }
 }
 
 ///<include file='Utils/Docs/Permissions/Permissions.generated.xml' path='docs/Permissions/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class Permissions
 {
-		public Task<PermissionStatus> Request(object permissionDesc) { throw new System.NotImplementedException(); }
+		public Task<PermissionStatus> Request(Object permissionDesc) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/Permissions/Permissions.generated.xml' path='docs/Permissions/*'/>
 public partial class Permissions
 {
 	///<include file='Utils/Docs/PermissionsRevoke/PermissionsRevoke.generated.xml' path='docs/PermissionsRevoke/*'/>
-	public Task<PermissionStatus> Revoke(object permissionDesc) { throw new System.NotImplementedException(); }
+	public Task<PermissionStatus> Revoke(Object permissionDesc) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/Navigator/Navigator.generated.xml' path='docs/Navigator/*'/>
@@ -16283,7 +14897,7 @@ public partial class WorkerNavigator
 public partial class Permissions
 {
 	///<include file='Utils/Docs/PermissionsQuery/PermissionsQuery.generated.xml' path='docs/PermissionsQuery/*'/>
-	public Task<PermissionStatus> Query(object permissionDesc) { throw new System.NotImplementedException(); }
+	public Task<PermissionStatus> Query(Object permissionDesc) { throw new System.NotImplementedException(); }
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -16303,21 +14917,10 @@ public partial class PermissionStatus : EventTarget
 		public EventHandler Onchange { get; set; }
 }
 
-[To(ToAttribute.None)]
-public enum PermissionState
-{
-	[Value("granted")]
-	Granted,
-	[Value("denied")]
-	Denied,
-	[Value("prompt")]
-	Prompt,
-}
-
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class PermissionSetParameters
 {
-		public required object Descriptor;
+		public required Object Descriptor;
 		public required PermissionState State;
 }
 
@@ -16343,11 +14946,6 @@ public partial class Document
 	public bool PictureInPictureEnabled { get; }
 	///<include file='Utils/Docs/DocumentExitPictureInPicture/DocumentExitPictureInPicture.generated.xml' path='docs/DocumentExitPictureInPicture/*'/>
 	public Task<Undefined> ExitPictureInPicture() { throw new System.NotImplementedException(); }
-}
-
-public partial interface DocumentOrShadowRoot
-{
-		public Element? PictureInPictureElement { get { throw new System.NotImplementedException(); } }
 }
 
 ///<include file='Utils/Docs/PictureInPictureWindow/PictureInPictureWindow.generated.xml' path='docs/PictureInPictureWindow/*'/>
@@ -16393,6 +14991,7 @@ public partial class PointerEventInit : MouseEventInit
 		public Number AzimuthAngle;
 		public DOMString PointerType;
 		public bool IsPrimary;
+		public long PersistentDeviceId;
 		public List<PointerEvent> CoalescedEvents;
 		public List<PointerEvent> PredictedEvents;
 }
@@ -16427,6 +15026,8 @@ public partial class PointerEvent : MouseEvent
 	public DOMString PointerType { get; }
 	///<include file='Utils/Docs/PointerEventIsPrimary/PointerEventIsPrimary.generated.xml' path='docs/PointerEventIsPrimary/*'/>
 	public bool IsPrimary { get; }
+	///<include file='Utils/Docs/PointerEventPersistentDeviceId/PointerEventPersistentDeviceId.generated.xml' path='docs/PointerEventPersistentDeviceId/*'/>
+	public long PersistentDeviceId { get; }
 	///<include file='Utils/Docs/PointerEventGetCoalescedEvents/PointerEventGetCoalescedEvents.generated.xml' path='docs/PointerEventGetCoalescedEvents/*'/>
 	public List<PointerEvent> GetCoalescedEvents() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/PointerEventGetPredictedEvents/PointerEventGetPredictedEvents.generated.xml' path='docs/PointerEventGetPredictedEvents/*'/>
@@ -16445,21 +15046,6 @@ public partial class Element
 	public bool HasPointerCapture(long pointerId) { throw new System.NotImplementedException(); }
 }
 
-public partial interface GlobalEventHandlers
-{
-		public EventHandler Onpointerover { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onpointerenter { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onpointerdown { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onpointermove { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onpointerrawupdate { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onpointerup { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onpointercancel { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onpointerout { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onpointerleave { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Ongotpointercapture { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onlostpointercapture { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-}
-
 ///<include file='Utils/Docs/Navigator/Navigator.generated.xml' path='docs/Navigator/*'/>
 public partial class Navigator
 {
@@ -16467,11 +15053,17 @@ public partial class Navigator
 	public long MaxTouchPoints { get; }
 }
 
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class PointerLockOptions
+{
+		public bool UnadjustedMovement;
+}
+
 ///<include file='Utils/Docs/Element/Element.generated.xml' path='docs/Element/*'/>
 public partial class Element
 {
 	///<include file='Utils/Docs/ElementRequestPointerLock/ElementRequestPointerLock.generated.xml' path='docs/ElementRequestPointerLock/*'/>
-	public Undefined RequestPointerLock() { throw new System.NotImplementedException(); }
+	public Task<Undefined> RequestPointerLock(PointerLockOptions options) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/Document/Document.generated.xml' path='docs/Document/*'/>
@@ -16481,11 +15073,6 @@ public partial class Document
 		public EventHandler Onpointerlockerror { get; set; }
 	///<include file='Utils/Docs/DocumentExitPointerLock/DocumentExitPointerLock.generated.xml' path='docs/DocumentExitPointerLock/*'/>
 	public Undefined ExitPointerLock() { throw new System.NotImplementedException(); }
-}
-
-public partial interface DocumentOrShadowRoot
-{
-		public Element? PointerLockElement { get { throw new System.NotImplementedException(); } }
 }
 
 ///<include file='Utils/Docs/MouseEvent/MouseEvent.generated.xml' path='docs/MouseEvent/*'/>
@@ -16556,11 +15143,6 @@ public partial class PortalActivateEvent : Event
 public partial class PortalActivateEventInit : EventInit
 {
 		public dynamic Data;
-}
-
-public partial interface WindowEventHandlers
-{
-		public EventHandler Onportalactivate { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
 }
 
 public partial class MediaStreamConstraints
@@ -16654,20 +15236,6 @@ public partial class PresentationConnectionAvailableEventInit : EventInit
 		public required PresentationConnection Connection;
 }
 
-///<include file='Utils/Docs/PresentationConnectionState/PresentationConnectionState.generated.xml' path='docs/PresentationConnectionState/*'/>
-[To(ToAttribute.None)]
-public enum PresentationConnectionState
-{
-	[Value("connecting")]
-	Connecting,
-	[Value("connected")]
-	Connected,
-	[Value("closed")]
-	Closed,
-	[Value("terminated")]
-	Terminated,
-}
-
 ///<include file='Utils/Docs/PresentationConnection/PresentationConnection.generated.xml' path='docs/PresentationConnection/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class PresentationConnection : EventTarget
@@ -16696,17 +15264,6 @@ public partial class PresentationConnection : EventTarget
 	public Undefined Send(byte[] data) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/PresentationConnectionSend/PresentationConnectionSend.generated.xml' path='docs/PresentationConnectionSend/*'/>
 	public Undefined Send(ArrayBufferView data) { throw new System.NotImplementedException(); }
-}
-
-[To(ToAttribute.None)]
-public enum PresentationConnectionCloseReason
-{
-	[Value("error")]
-	Error,
-	[Value("closed")]
-	Closed,
-	[Value("wentaway")]
-	Wentaway,
 }
 
 ///<include file='Utils/Docs/PresentationConnectionCloseEvent/PresentationConnectionCloseEvent.generated.xml' path='docs/PresentationConnectionCloseEvent/*'/>
@@ -16741,22 +15298,32 @@ public partial class PresentationConnectionList : EventTarget
 		public EventHandler Onconnectionavailable { get; set; }
 }
 
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class PrivateAggregation
+{
+		public Undefined ContributeToHistogram(PAHistogramContribution contribution) { throw new System.NotImplementedException(); }
+		public Undefined EnableDebugMode(PADebugModeOptions options) { throw new System.NotImplementedException(); }
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class PAHistogramContribution
+{
+		public required BigInt Bucket;
+		public required long Value;
+		public BigInt FilteringId;
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class PADebugModeOptions
+{
+		public required BigInt DebugKey;
+}
+
 ///<include file='Utils/Docs/HTMLAnchorElement/HTMLAnchorElement.generated.xml' path='docs/HTMLAnchorElement/*'/>
 public partial class HTMLAnchorElement
 {
 		[To(ToAttribute.FirstCharToLowerCase)]
 	public ulong AttributionSourceId { get; set; }
-}
-
-[To(ToAttribute.None)]
-public enum IPAddressSpace
-{
-	[Value("public")]
-	Public,
-	[Value("private")]
-	Private,
-	[Value("local")]
-	Local,
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -16765,6 +15332,7 @@ public partial class PrivateNetworkAccessPermissionDescriptor : PermissionDescri
 		public DOMString Id;
 }
 
+///<include file='Utils/Docs/RequestInit/RequestInit.generated.xml' path='docs/RequestInit/*'/>
 public partial class RequestInit
 {
 		public IPAddressSpace TargetAddressSpace;
@@ -16827,7 +15395,7 @@ public partial class PushSubscriptionOptions
 public partial class PushSubscriptionOptionsInit
 {
 		public bool UserVisibleOnly;
-		public Union108? ApplicationServerKey;
+		public Union122? ApplicationServerKey;
 }
 
 ///<include file='Utils/Docs/PushSubscription/PushSubscription.generated.xml' path='docs/PushSubscription/*'/>
@@ -16856,15 +15424,6 @@ public partial class PushSubscriptionJSON
 		public Dictionary<DOMString, USVString> Keys;
 }
 
-[To(ToAttribute.None)]
-public enum PushEncryptionKeyName
-{
-	[Value("p256dh")]
-	P256dh,
-	[Value("auth")]
-	Auth,
-}
-
 ///<include file='Utils/Docs/PushMessageData/PushMessageData.generated.xml' path='docs/PushMessageData/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class PushMessageData
@@ -16873,6 +15432,8 @@ public partial class PushMessageData
 	public byte[] ArrayBuffer() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/PushMessageDataBlob/PushMessageDataBlob.generated.xml' path='docs/PushMessageDataBlob/*'/>
 	public Blob Blob() { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/PushMessageDataBytes/PushMessageDataBytes.generated.xml' path='docs/PushMessageDataBytes/*'/>
+	public System.Byte Bytes() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/PushMessageDataJson/PushMessageDataJson.generated.xml' path='docs/PushMessageDataJson/*'/>
 	public dynamic Json() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/PushMessageDataText/PushMessageDataText.generated.xml' path='docs/PushMessageDataText/*'/>
@@ -16963,29 +15524,6 @@ public partial class XRFrame
 		public XRMeshSet DetectedMeshes { get; }
 }
 
-[To(ToAttribute.None)]
-public enum ReferrerPolicy
-{
-	[Value("")]
-	Empty,
-	[Value("no-referrer")]
-	NoReferrer,
-	[Value("no-referrer-when-downgrade")]
-	NoReferrerWhenDowngrade,
-	[Value("same-origin")]
-	SameOrigin,
-	[Value("origin")]
-	Origin,
-	[Value("strict-origin")]
-	StrictOrigin,
-	[Value("origin-when-cross-origin")]
-	OriginWhenCrossOrigin,
-	[Value("strict-origin-when-cross-origin")]
-	StrictOriginWhenCrossOrigin,
-	[Value("unsafe-url")]
-	UnsafeUrl,
-}
-
 ///<include file='Utils/Docs/RemotePlayback/RemotePlayback.generated.xml' path='docs/RemotePlayback/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class RemotePlayback : EventTarget
@@ -17001,23 +15539,6 @@ public partial class RemotePlayback : EventTarget
 		public EventHandler Ondisconnect { get; set; }
 	///<include file='Utils/Docs/RemotePlaybackPrompt/RemotePlaybackPrompt.generated.xml' path='docs/RemotePlaybackPrompt/*'/>
 	public Task<Undefined> Prompt() { throw new System.NotImplementedException(); }
-}
-
-///<include file='Utils/Docs/RemotePlaybackState/RemotePlaybackState.generated.xml' path='docs/RemotePlaybackState/*'/>
-[To(ToAttribute.None)]
-public enum RemotePlaybackState
-{
-	[Value("connecting")]
-	Connecting,
-	[Value("connected")]
-	Connected,
-	[Value("disconnected")]
-	Disconnected,
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct RemotePlaybackAvailabilityCallback
-{
 }
 
 ///<include file='Utils/Docs/HTMLMediaElement/HTMLMediaElement.generated.xml' path='docs/HTMLMediaElement/*'/>
@@ -17036,14 +15557,14 @@ public partial class HTMLMediaElement
 public partial class ReportBody
 {
 	///<include file='Utils/Docs/ReportBodyToJSON/ReportBodyToJSON.generated.xml' path='docs/ReportBodyToJSON/*'/>
-	public object ToJSON() { throw new System.NotImplementedException(); }
+	public Object ToJSON() { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/Report/Report.generated.xml' path='docs/Report/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class Report
 {
-		public object ToJSON() { throw new System.NotImplementedException(); }
+		public Object ToJSON() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/ReportType/ReportType.generated.xml' path='docs/ReportType/*'/>
 	public DOMString Type { get; }
 	///<include file='Utils/Docs/ReportUrl/ReportUrl.generated.xml' path='docs/ReportUrl/*'/>
@@ -17065,11 +15586,6 @@ public partial class ReportingObserver
 	///<include file='Utils/Docs/ReportingObserverTakeRecords/ReportingObserverTakeRecords.generated.xml' path='docs/ReportingObserverTakeRecords/*'/>
 	public ReportList TakeRecords() { throw new System.NotImplementedException(); }
 	public ReportingObserver() { }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct ReportingObserverCallback
-{
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -17114,11 +15630,6 @@ public partial class IdleDeadline
 	public bool DidTimeout { get; }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct IdleRequestCallback
-{
-}
-
 ///<include file='Utils/Docs/Document/Document.generated.xml' path='docs/Document/*'/>
 public partial class Document
 {
@@ -17130,17 +15641,6 @@ public partial class Document
 public partial class TopLevelStorageAccessPermissionDescriptor : PermissionDescriptor
 {
 		public USVString RequestedOrigin;
-}
-
-[To(ToAttribute.None)]
-public enum ResizeObserverBoxOptions
-{
-	[Value("border-box")]
-	BorderBox,
-	[Value("content-box")]
-	ContentBox,
-	[Value("device-pixel-content-box")]
-	DevicePixelContentBox,
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -17162,11 +15662,6 @@ public partial class ResizeObserver
 	///<include file='Utils/Docs/ResizeObserverDisconnect/ResizeObserverDisconnect.generated.xml' path='docs/ResizeObserverDisconnect/*'/>
 	public Undefined Disconnect() { throw new System.NotImplementedException(); }
 	public ResizeObserver() { }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct ResizeObserverCallback
-{
 }
 
 ///<include file='Utils/Docs/ResizeObserverEntry/ResizeObserverEntry.generated.xml' path='docs/ResizeObserverEntry/*'/>
@@ -17225,6 +15720,7 @@ public partial class PerformanceResourceTiming : PerformanceEntry
 	public DOMHighResTimeStamp SecureConnectionStart { get; }
 	///<include file='Utils/Docs/PerformanceResourceTimingRequestStart/PerformanceResourceTimingRequestStart.generated.xml' path='docs/PerformanceResourceTimingRequestStart/*'/>
 	public DOMHighResTimeStamp RequestStart { get; }
+		public DOMHighResTimeStamp FinalResponseHeadersStart { get; }
 	///<include file='Utils/Docs/PerformanceResourceTimingFirstInterimResponseStart/PerformanceResourceTimingFirstInterimResponseStart.generated.xml' path='docs/PerformanceResourceTimingFirstInterimResponseStart/*'/>
 	public DOMHighResTimeStamp FirstInterimResponseStart { get; }
 	///<include file='Utils/Docs/PerformanceResourceTimingResponseStart/PerformanceResourceTimingResponseStart.generated.xml' path='docs/PerformanceResourceTimingResponseStart/*'/>
@@ -17241,18 +15737,10 @@ public partial class PerformanceResourceTiming : PerformanceEntry
 	public ushort ResponseStatus { get; }
 	///<include file='Utils/Docs/PerformanceResourceTimingRenderBlockingStatus/PerformanceResourceTimingRenderBlockingStatus.generated.xml' path='docs/PerformanceResourceTimingRenderBlockingStatus/*'/>
 	public RenderBlockingStatusType RenderBlockingStatus { get; }
-		public DOMString ContentType { get; }
+	///<include file='Utils/Docs/PerformanceResourceTimingContentType/PerformanceResourceTimingContentType.generated.xml' path='docs/PerformanceResourceTimingContentType/*'/>
+	public DOMString ContentType { get; }
 	///<include file='Utils/Docs/PerformanceResourceTimingToJSON/PerformanceResourceTimingToJSON.generated.xml' path='docs/PerformanceResourceTimingToJSON/*'/>
-	public object ToJSON() { throw new System.NotImplementedException(); }
-}
-
-[To(ToAttribute.None)]
-public enum RenderBlockingStatusType
-{
-	[Value("blocking")]
-	Blocking,
-	[Value("non-blocking")]
-	NonBlocking,
+	public Object ToJSON() { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/Performance/Performance.generated.xml' path='docs/Performance/*'/>
@@ -17266,19 +15754,89 @@ public partial class Performance
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class SetHTMLOptions
+public partial class StorageAccessTypes
 {
-		public Union110 Sanitizer;
+		public bool All;
+		public bool Cookies;
+		public bool SessionStorage;
+		public bool LocalStorage;
+		public bool IndexedDB;
+		public bool Locks;
+		public bool Caches;
+		public bool GetDirectory;
+		public bool Estimate;
+		public bool CreateObjectURL;
+		public bool RevokeObjectURL;
+		public bool BroadcastChannel;
+		public bool SharedWorker;
 }
 
-///<include file='Utils/Docs/Sanitizer/Sanitizer.generated.xml' path='docs/Sanitizer/*'/>
+///<include file='Utils/Docs/StorageAccessHandle/StorageAccessHandle.generated.xml' path='docs/StorageAccessHandle/*'/>
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class StorageAccessHandle
+{
+	///<include file='Utils/Docs/StorageAccessHandleSessionStorage/StorageAccessHandleSessionStorage.generated.xml' path='docs/StorageAccessHandleSessionStorage/*'/>
+	public Storage SessionStorage { get; }
+	///<include file='Utils/Docs/StorageAccessHandleLocalStorage/StorageAccessHandleLocalStorage.generated.xml' path='docs/StorageAccessHandleLocalStorage/*'/>
+	public Storage LocalStorage { get; }
+	///<include file='Utils/Docs/StorageAccessHandleIndexedDB/StorageAccessHandleIndexedDB.generated.xml' path='docs/StorageAccessHandleIndexedDB/*'/>
+	public IDBFactory IndexedDB { get; }
+	///<include file='Utils/Docs/StorageAccessHandleLocks/StorageAccessHandleLocks.generated.xml' path='docs/StorageAccessHandleLocks/*'/>
+	public LockManager Locks { get; }
+	///<include file='Utils/Docs/StorageAccessHandleCaches/StorageAccessHandleCaches.generated.xml' path='docs/StorageAccessHandleCaches/*'/>
+	public CacheStorage Caches { get; }
+	///<include file='Utils/Docs/StorageAccessHandleGetDirectory/StorageAccessHandleGetDirectory.generated.xml' path='docs/StorageAccessHandleGetDirectory/*'/>
+	public Task<FileSystemDirectoryHandle> GetDirectory() { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/StorageAccessHandleEstimate/StorageAccessHandleEstimate.generated.xml' path='docs/StorageAccessHandleEstimate/*'/>
+	public Task<StorageEstimate> Estimate() { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/StorageAccessHandleCreateObjectURL/StorageAccessHandleCreateObjectURL.generated.xml' path='docs/StorageAccessHandleCreateObjectURL/*'/>
+	public DOMString CreateObjectURL(Union124 obj) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/StorageAccessHandleRevokeObjectURL/StorageAccessHandleRevokeObjectURL.generated.xml' path='docs/StorageAccessHandleRevokeObjectURL/*'/>
+	public Undefined RevokeObjectURL(DOMString url) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/StorageAccessHandleBroadcastChannel/StorageAccessHandleBroadcastChannel.generated.xml' path='docs/StorageAccessHandleBroadcastChannel/*'/>
+	public BroadcastChannel BroadcastChannel(DOMString name) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/StorageAccessHandleSharedWorker/StorageAccessHandleSharedWorker.generated.xml' path='docs/StorageAccessHandleSharedWorker/*'/>
+	public SharedWorker SharedWorker(USVString scriptURL, Union125 options) { throw new System.NotImplementedException(); }
+}
+
+///<include file='Utils/Docs/Document/Document.generated.xml' path='docs/Document/*'/>
+public partial class Document
+{
+	///<include file='Utils/Docs/DocumentHasUnpartitionedCookieAccess/DocumentHasUnpartitionedCookieAccess.generated.xml' path='docs/DocumentHasUnpartitionedCookieAccess/*'/>
+	public Task<bool> HasUnpartitionedCookieAccess() { throw new System.NotImplementedException(); }
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class SharedWorkerOptions : WorkerOptions
+{
+		public SameSiteCookiesType SameSiteCookies;
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class SetHTMLOptions
+{
+		public Union126 Sanitizer;
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class SetHTMLUnsafeOptions
+{
+		public Union127 Sanitizer;
+}
+
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class Sanitizer
 {
-	///<include file='Utils/Docs/SanitizerSanitizer/SanitizerSanitizer.generated.xml' path='docs/SanitizerSanitizer/*'/>
-	public Sanitizer(SanitizerConfig config) { }
+		public Sanitizer(Union128 configuration) { }
 		public SanitizerConfig Get() { throw new System.NotImplementedException(); }
-		public SanitizerConfig GetUnsafe() { throw new System.NotImplementedException(); }
+		public Undefined AllowElement(SanitizerElementWithAttributes element) { throw new System.NotImplementedException(); }
+		public Undefined RemoveElement(SanitizerElement element) { throw new System.NotImplementedException(); }
+		public Undefined ReplaceElementWithChildren(SanitizerElement element) { throw new System.NotImplementedException(); }
+		public Undefined AllowAttribute(SanitizerAttribute attribute) { throw new System.NotImplementedException(); }
+		public Undefined RemoveAttribute(SanitizerAttribute attribute) { throw new System.NotImplementedException(); }
+		public Undefined SetComments(bool allow) { throw new System.NotImplementedException(); }
+		public Undefined SetDataAttributes(bool allow) { throw new System.NotImplementedException(); }
+		public Undefined RemoveUnsafe() { throw new System.NotImplementedException(); }
 	public Sanitizer() { }
 }
 
@@ -17318,25 +15876,6 @@ public partial class SanitizerConfig
 		public bool DataAttributes;
 }
 
-///<include file='Utils/Docs/NetworkInformationSaveData/NetworkInformationSaveData.generated.xml' path='docs/NetworkInformationSaveData/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface NetworkInformationSaveData
-{
-		public bool SaveData { get { throw new System.NotImplementedException(); } }
-}
-
-
-[To(ToAttribute.None)]
-public enum TaskPriority
-{
-	[Value("user-blocking")]
-	UserBlocking,
-	[Value("user-visible")]
-	UserVisible,
-	[Value("background")]
-	Background,
-}
-
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class SchedulerPostTaskOptions
 {
@@ -17345,17 +15884,14 @@ public partial class SchedulerPostTaskOptions
 		public ulong Delay;
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct SchedulerPostTaskCallback
-{
-}
-
 ///<include file='Utils/Docs/Scheduler/Scheduler.generated.xml' path='docs/Scheduler/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class Scheduler
 {
 	///<include file='Utils/Docs/SchedulerPostTask/SchedulerPostTask.generated.xml' path='docs/SchedulerPostTask/*'/>
 	public Task<dynamic> PostTask(SchedulerPostTaskCallback callback, SchedulerPostTaskOptions options) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/SchedulerYield/SchedulerYield.generated.xml' path='docs/SchedulerYield/*'/>
+	public Task<Undefined> Yield() { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/TaskPriorityChangeEvent/TaskPriorityChangeEvent.generated.xml' path='docs/TaskPriorityChangeEvent/*'/>
@@ -17395,7 +15931,7 @@ public partial class TaskController : AbortController
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class TaskSignalAnyInit
 {
-		public Union114 Priority;
+		public Union132 Priority;
 }
 
 ///<include file='Utils/Docs/TaskSignal/TaskSignal.generated.xml' path='docs/TaskSignal/*'/>
@@ -17409,11 +15945,6 @@ public partial class TaskSignal : AbortSignal
 		public EventHandler Onprioritychange { get; set; }
 }
 
-public partial interface WindowOrWorkerGlobalScope
-{
-		public Scheduler Scheduler { get { throw new System.NotImplementedException(); } }
-}
-
 ///<include file='Utils/Docs/MediaDevices/MediaDevices.generated.xml' path='docs/MediaDevices/*'/>
 public partial class MediaDevices
 {
@@ -17421,67 +15952,19 @@ public partial class MediaDevices
 	public Task<MediaStream> GetDisplayMedia(DisplayMediaStreamOptions options) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.None)]
-public enum CaptureStartFocusBehavior
-{
-	[Value("focus-capturing-application")]
-	FocusCapturingApplication,
-	[Value("focus-captured-surface")]
-	FocusCapturedSurface,
-	[Value("no-focus-change")]
-	NoFocusChange,
-}
-
 ///<include file='Utils/Docs/CaptureController/CaptureController.generated.xml' path='docs/CaptureController/*'/>
 public partial class CaptureController : EventTarget
 {
-	///<include file='Utils/Docs/CaptureControllerCaptureController/CaptureControllerCaptureController.generated.xml' path='docs/CaptureControllerCaptureController/*'/>
-	public CaptureController() { }
+	
 	///<include file='Utils/Docs/CaptureControllerSetFocusBehavior/CaptureControllerSetFocusBehavior.generated.xml' path='docs/CaptureControllerSetFocusBehavior/*'/>
 	public Undefined SetFocusBehavior(CaptureStartFocusBehavior focusBehavior) { throw new System.NotImplementedException(); }
-}
-
-[To(ToAttribute.None)]
-public enum SelfCapturePreferenceEnum
-{
-	[Value("include")]
-	Include,
-	[Value("exclude")]
-	Exclude,
-}
-
-[To(ToAttribute.None)]
-public enum SystemAudioPreferenceEnum
-{
-	[Value("include")]
-	Include,
-	[Value("exclude")]
-	Exclude,
-}
-
-[To(ToAttribute.None)]
-public enum SurfaceSwitchingPreferenceEnum
-{
-	[Value("include")]
-	Include,
-	[Value("exclude")]
-	Exclude,
-}
-
-[To(ToAttribute.None)]
-public enum MonitorTypeSurfacesEnum
-{
-	[Value("include")]
-	Include,
-	[Value("exclude")]
-	Exclude,
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class DisplayMediaStreamOptions
 {
-		public Union115 Video;
-		public Union116 Audio;
+		public Union133 Video;
+		public Union134 Audio;
 		public CaptureController Controller;
 		public SelfCapturePreferenceEnum SelfBrowserSurface;
 		public SystemAudioPreferenceEnum SystemAudio;
@@ -17532,28 +16015,6 @@ public partial class MediaTrackCapabilities
 		public List<DOMString> Cursor;
 }
 
-[To(ToAttribute.None)]
-public enum DisplayCaptureSurfaceType
-{
-	[Value("monitor")]
-	Monitor,
-	[Value("window")]
-	Window,
-	[Value("browser")]
-	Browser,
-}
-
-[To(ToAttribute.None)]
-public enum CursorCaptureConstraint
-{
-	[Value("never")]
-	Never,
-	[Value("always")]
-	Always,
-	[Value("motion")]
-	Motion,
-}
-
 ///<include file='Utils/Docs/Screen/Screen.generated.xml' path='docs/Screen/*'/>
 public partial class Screen
 {
@@ -17574,40 +16035,6 @@ public partial class ScreenOrientation : EventTarget
 	///<include file='Utils/Docs/ScreenOrientationAngle/ScreenOrientationAngle.generated.xml' path='docs/ScreenOrientationAngle/*'/>
 	public ushort Angle { get; }
 		public EventHandler Onchange { get; set; }
-}
-
-[To(ToAttribute.None)]
-public enum OrientationLockType
-{
-	[Value("any")]
-	Any,
-	[Value("natural")]
-	Natural,
-	[Value("landscape")]
-	Landscape,
-	[Value("portrait")]
-	Portrait,
-	[Value("portrait-primary")]
-	PortraitPrimary,
-	[Value("portrait-secondary")]
-	PortraitSecondary,
-	[Value("landscape-primary")]
-	LandscapePrimary,
-	[Value("landscape-secondary")]
-	LandscapeSecondary,
-}
-
-[To(ToAttribute.None)]
-public enum OrientationType
-{
-	[Value("portrait-primary")]
-	PortraitPrimary,
-	[Value("portrait-secondary")]
-	PortraitSecondary,
-	[Value("landscape-primary")]
-	LandscapePrimary,
-	[Value("landscape-secondary")]
-	LandscapeSecondary,
 }
 
 ///<include file='Utils/Docs/Navigator/Navigator.generated.xml' path='docs/Navigator/*'/>
@@ -17638,26 +16065,6 @@ public partial class WakeLockSentinel : EventTarget
 		public EventHandler Onrelease { get; set; }
 }
 
-[To(ToAttribute.None)]
-public enum WakeLockType
-{
-	[Value("screen")]
-	Screen,
-}
-
-[To(ToAttribute.None)]
-public enum ScrollAxis
-{
-	[Value("block")]
-	Block,
-	[Value("inline")]
-	Inline,
-	[Value("x")]
-	X,
-	[Value("y")]
-	Y,
-}
-
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class ScrollTimelineOptions
 {
@@ -17683,7 +16090,7 @@ public partial class ViewTimelineOptions
 {
 		public Element Subject;
 		public ScrollAxis Axis;
-		public Union117 Inset;
+		public Union135 Inset;
 }
 
 ///<include file='Utils/Docs/ViewTimeline/ViewTimeline.generated.xml' path='docs/ViewTimeline/*'/>
@@ -17796,7 +16203,8 @@ public partial class Selection
 	public ulong RangeCount { get; }
 	///<include file='Utils/Docs/SelectionType/SelectionType.generated.xml' path='docs/SelectionType/*'/>
 	public DOMString Type { get; }
-		public DOMString Direction { get; }
+	///<include file='Utils/Docs/SelectionDirection/SelectionDirection.generated.xml' path='docs/SelectionDirection/*'/>
+	public DOMString Direction { get; }
 	///<include file='Utils/Docs/SelectionGetRangeAt/SelectionGetRangeAt.generated.xml' path='docs/SelectionGetRangeAt/*'/>
 	public Range GetRangeAt(ulong index) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/SelectionAddRange/SelectionAddRange.generated.xml' path='docs/SelectionAddRange/*'/>
@@ -17807,7 +16215,8 @@ public partial class Selection
 	public Undefined RemoveAllRanges() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/SelectionEmpty/SelectionEmpty.generated.xml' path='docs/SelectionEmpty/*'/>
 	public Undefined Empty() { throw new System.NotImplementedException(); }
-		public List<StaticRange> GetComposedRanges(params ShadowRoot[] shadowRoots) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/SelectionGetComposedRanges/SelectionGetComposedRanges.generated.xml' path='docs/SelectionGetComposedRanges/*'/>
+	public List<StaticRange> GetComposedRanges(GetComposedRangesOptions options) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/SelectionCollapse/SelectionCollapse.generated.xml' path='docs/SelectionCollapse/*'/>
 	public Undefined Collapse(Node? node, ulong offset) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/SelectionSetPosition/SelectionSetPosition.generated.xml' path='docs/SelectionSetPosition/*'/>
@@ -17831,6 +16240,12 @@ public partial class Selection
 	
 }
 
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class GetComposedRangesOptions
+{
+		public List<ShadowRoot> ShadowRoots;
+}
+
 ///<include file='Utils/Docs/Document/Document.generated.xml' path='docs/Document/*'/>
 public partial class Document
 {
@@ -17844,12 +16259,6 @@ public partial class Window
 	///<include file='Utils/Docs/WindowGetSelection/WindowGetSelection.generated.xml' path='docs/WindowGetSelection/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public Selection? GetSelection() { throw new System.NotImplementedException(); }
-}
-
-public partial interface GlobalEventHandlers
-{
-		public EventHandler Onselectstart { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onselectionchange { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
 }
 
 ///<include file='Utils/Docs/Navigator/Navigator.generated.xml' path='docs/Navigator/*'/>
@@ -17899,7 +16308,8 @@ public partial class SerialPort : EventTarget
 {
 		public EventHandler Onconnect { get; set; }
 		public EventHandler Ondisconnect { get; set; }
-		public bool Connected { get; }
+	///<include file='Utils/Docs/SerialPortConnected/SerialPortConnected.generated.xml' path='docs/SerialPortConnected/*'/>
+	public bool Connected { get; }
 	///<include file='Utils/Docs/SerialPortReadable/SerialPortReadable.generated.xml' path='docs/SerialPortReadable/*'/>
 	public ReadableStream Readable { get; }
 	///<include file='Utils/Docs/SerialPortWritable/SerialPortWritable.generated.xml' path='docs/SerialPortWritable/*'/>
@@ -17937,26 +16347,6 @@ public partial class SerialOptions
 		public FlowControlType FlowControl;
 }
 
-[To(ToAttribute.None)]
-public enum ParityType
-{
-	[Value("none")]
-	None,
-	[Value("even")]
-	Even,
-	[Value("odd")]
-	Odd,
-}
-
-[To(ToAttribute.None)]
-public enum FlowControlType
-{
-	[Value("none")]
-	None,
-	[Value("hardware")]
-	Hardware,
-}
-
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class SerialOutputSignals
 {
@@ -17985,7 +16375,7 @@ public partial class PerformanceServerTiming
 	///<include file='Utils/Docs/PerformanceServerTimingDescription/PerformanceServerTimingDescription.generated.xml' path='docs/PerformanceServerTimingDescription/*'/>
 	public DOMString Description { get; }
 	///<include file='Utils/Docs/PerformanceServerTimingToJSON/PerformanceServerTimingToJSON.generated.xml' path='docs/PerformanceServerTimingToJSON/*'/>
-	public object ToJSON() { throw new System.NotImplementedException(); }
+	public Object ToJSON() { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/PerformanceResourceTiming/PerformanceResourceTiming.generated.xml' path='docs/PerformanceResourceTiming/*'/>
@@ -18004,30 +16394,12 @@ public partial class ServiceWorker : EventTarget, AbstractWorker
 	///<include file='Utils/Docs/ServiceWorkerState/ServiceWorkerState.generated.xml' path='docs/ServiceWorkerState/*'/>
 	public ServiceWorkerState State { get; }
 	///<include file='Utils/Docs/ServiceWorkerPostMessage/ServiceWorkerPostMessage.generated.xml' path='docs/ServiceWorkerPostMessage/*'/>
-	public Undefined PostMessage(dynamic message, List<object> transfer) { throw new System.NotImplementedException(); }
+	public Undefined PostMessage(dynamic message, List<Object> transfer) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/ServiceWorkerPostMessage/ServiceWorkerPostMessage.generated.xml' path='docs/ServiceWorkerPostMessage/*'/>
 	public Undefined PostMessage(dynamic message, StructuredSerializeOptions options) { throw new System.NotImplementedException(); }
 		public EventHandler Onstatechange { get; set; }
 }
 
-
-///<include file='Utils/Docs/ServiceWorkerState/ServiceWorkerState.generated.xml' path='docs/ServiceWorkerState/*'/>
-[To(ToAttribute.None)]
-public enum ServiceWorkerState
-{
-	[Value("parsed")]
-	Parsed,
-	[Value("installing")]
-	Installing,
-	[Value("installed")]
-	Installed,
-	[Value("activating")]
-	Activating,
-	[Value("activated")]
-	Activated,
-	[Value("redundant")]
-	Redundant,
-}
 
 ///<include file='Utils/Docs/ServiceWorkerRegistration/ServiceWorkerRegistration.generated.xml' path='docs/ServiceWorkerRegistration/*'/>
 public partial class ServiceWorkerRegistration : EventTarget
@@ -18049,17 +16421,6 @@ public partial class ServiceWorkerRegistration : EventTarget
 	///<include file='Utils/Docs/ServiceWorkerRegistrationUnregister/ServiceWorkerRegistrationUnregister.generated.xml' path='docs/ServiceWorkerRegistrationUnregister/*'/>
 	public Task<bool> Unregister() { throw new System.NotImplementedException(); }
 		public EventHandler Onupdatefound { get; set; }
-}
-
-[To(ToAttribute.None)]
-public enum ServiceWorkerUpdateViaCache
-{
-	[Value("imports")]
-	Imports,
-	[Value("all")]
-	All,
-	[Value("none")]
-	None,
 }
 
 ///<include file='Utils/Docs/Navigator/Navigator.generated.xml' path='docs/Navigator/*'/>
@@ -18085,7 +16446,7 @@ public partial class ServiceWorkerContainer : EventTarget
 	///<include file='Utils/Docs/ServiceWorkerContainerReady/ServiceWorkerContainerReady.generated.xml' path='docs/ServiceWorkerContainerReady/*'/>
 	public Task<ServiceWorkerRegistration> Ready { get; }
 	///<include file='Utils/Docs/ServiceWorkerContainerRegister/ServiceWorkerContainerRegister.generated.xml' path='docs/ServiceWorkerContainerRegister/*'/>
-	public Task<ServiceWorkerRegistration> Register(USVString scriptURL, RegistrationOptions options) { throw new System.NotImplementedException(); }
+	public Task<ServiceWorkerRegistration> Register(Union137 scriptURL, RegistrationOptions options) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/ServiceWorkerContainerGetRegistration/ServiceWorkerContainerGetRegistration.generated.xml' path='docs/ServiceWorkerContainerGetRegistration/*'/>
 	public Task<ServiceWorkerRegistration> GetRegistration(USVString clientURL) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/ServiceWorkerContainerGetRegistrations/ServiceWorkerContainerGetRegistrations.generated.xml' path='docs/ServiceWorkerContainerGetRegistrations/*'/>
@@ -18156,7 +16517,7 @@ public partial class Client
 	///<include file='Utils/Docs/ClientType/ClientType.generated.xml' path='docs/ClientType/*'/>
 	public ClientType Type { get; }
 	///<include file='Utils/Docs/ClientPostMessage/ClientPostMessage.generated.xml' path='docs/ClientPostMessage/*'/>
-	public Undefined PostMessage(dynamic message, List<object> transfer) { throw new System.NotImplementedException(); }
+	public Undefined PostMessage(dynamic message, List<Object> transfer) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/ClientPostMessage/ClientPostMessage.generated.xml' path='docs/ClientPostMessage/*'/>
 	public Undefined PostMessage(dynamic message, StructuredSerializeOptions options) { throw new System.NotImplementedException(); }
 }
@@ -18175,19 +16536,6 @@ public partial class WindowClient : Client
 	public Task<WindowClient> Focus() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/WindowClientNavigate/WindowClientNavigate.generated.xml' path='docs/WindowClientNavigate/*'/>
 	public Task<WindowClient?> Navigate(USVString url) { throw new System.NotImplementedException(); }
-}
-
-[To(ToAttribute.None)]
-public enum FrameType
-{
-	[Value("auxiliary")]
-	Auxiliary,
-	[Value("top-level")]
-	TopLevel,
-	[Value("nested")]
-	Nested,
-	[Value("none")]
-	None,
 }
 
 ///<include file='Utils/Docs/Clients/Clients.generated.xml' path='docs/Clients/*'/>
@@ -18211,20 +16559,6 @@ public partial class ClientQueryOptions
 		public ClientType Type;
 }
 
-///<include file='Utils/Docs/ClientType/ClientType.generated.xml' path='docs/ClientType/*'/>
-[To(ToAttribute.None)]
-public enum ClientType
-{
-	[Value("window")]
-	Window,
-	[Value("worker")]
-	Worker,
-	[Value("sharedworker")]
-	Sharedworker,
-	[Value("all")]
-	All,
-}
-
 ///<include file='Utils/Docs/ExtendableEvent/ExtendableEvent.generated.xml' path='docs/ExtendableEvent/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class ExtendableEvent : Event
@@ -18245,7 +16579,11 @@ public partial class ExtendableEventInit : EventInit
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class InstallEvent : ExtendableEvent
 {
-		public Task<Undefined> AddRoutes(Union119 rules) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/InstallEventInstallEvent/InstallEventInstallEvent.generated.xml' path='docs/InstallEventInstallEvent/*'/>
+	public InstallEvent(DOMString type, ExtendableEventInit eventInitDict) { }
+	///<include file='Utils/Docs/InstallEventAddRoutes/InstallEventAddRoutes.generated.xml' path='docs/InstallEventAddRoutes/*'/>
+	public Task<Undefined> AddRoutes(Union138 rules) { throw new System.NotImplementedException(); }
+	public InstallEvent() { }
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -18272,28 +16610,6 @@ public partial class RouterCondition
 public partial class RouterSourceDict
 {
 		public DOMString CacheName;
-}
-
-[To(ToAttribute.None)]
-public enum RunningStatus
-{
-	[Value("running")]
-	Running,
-	[Value("not-running")]
-	NotRunning,
-}
-
-[To(ToAttribute.None)]
-public enum RouterSourceEnum
-{
-	[Value("cache")]
-	Cache,
-	[Value("fetch-event")]
-	FetchEvent,
-	[Value("network")]
-	Network,
-	[Value("race-network-and-fetch-handler")]
-	RaceNetworkAndFetchHandler,
 }
 
 ///<include file='Utils/Docs/FetchEvent/FetchEvent.generated.xml' path='docs/FetchEvent/*'/>
@@ -18343,7 +16659,7 @@ public partial class ExtendableMessageEvent : ExtendableEvent
 	///<include file='Utils/Docs/ExtendableMessageEventLastEventId/ExtendableMessageEventLastEventId.generated.xml' path='docs/ExtendableMessageEventLastEventId/*'/>
 	public DOMString LastEventId { get; }
 	///<include file='Utils/Docs/ExtendableMessageEventSource/ExtendableMessageEventSource.generated.xml' path='docs/ExtendableMessageEventSource/*'/>
-	public Union121? Source { get; }
+	public Union140? Source { get; }
 	///<include file='Utils/Docs/ExtendableMessageEventPorts/ExtendableMessageEventPorts.generated.xml' path='docs/ExtendableMessageEventPorts/*'/>
 	public MessagePort[] Ports { get; }
 	public ExtendableMessageEvent() { }
@@ -18355,13 +16671,8 @@ public partial class ExtendableMessageEventInit : ExtendableEventInit
 		public dynamic Data;
 		public USVString Origin;
 		public DOMString LastEventId;
-		public Union122? Source;
+		public Union141? Source;
 		public List<MessagePort> Ports;
-}
-
-public partial interface WindowOrWorkerGlobalScope
-{
-		public CacheStorage Caches { get { throw new System.NotImplementedException(); } }
 }
 
 ///<include file='Utils/Docs/Cache/Cache.generated.xml' path='docs/Cache/*'/>
@@ -18443,17 +16754,6 @@ public partial class Landmark
 		public LandmarkType Type;
 }
 
-[To(ToAttribute.None)]
-public enum LandmarkType
-{
-	[Value("mouth")]
-	Mouth,
-	[Value("eye")]
-	Eye,
-	[Value("nose")]
-	Nose,
-}
-
 ///<include file='Utils/Docs/BarcodeDetector/BarcodeDetector.generated.xml' path='docs/BarcodeDetector/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class BarcodeDetector
@@ -18482,51 +16782,12 @@ public partial class DetectedBarcode
 		public required List<Point2D> CornerPoints;
 }
 
-[To(ToAttribute.None)]
-public enum BarcodeFormat
-{
-	[Value("aztec")]
-	Aztec,
-	[Value("code_128")]
-	Code_128,
-	[Value("code_39")]
-	Code_39,
-	[Value("code_93")]
-	Code_93,
-	[Value("codabar")]
-	Codabar,
-	[Value("data_matrix")]
-	Data_matrix,
-	[Value("ean_13")]
-	Ean_13,
-	[Value("ean_8")]
-	Ean_8,
-	[Value("itf")]
-	Itf,
-	[Value("pdf417")]
-	Pdf417,
-	[Value("qr_code")]
-	Qr_code,
-	[Value("unknown")]
-	Unknown,
-	[Value("upc_a")]
-	Upc_a,
-	[Value("upc_e")]
-	Upc_e,
-}
-
-
 ///<include file='Utils/Docs/SharedStorageWorklet/SharedStorageWorklet.generated.xml' path='docs/SharedStorageWorklet/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class SharedStorageWorklet : Worklet
 {
-		public Task<SharedStorageResponse> SelectURL(DOMString name, SharedStorageUrlWithMetadata[] urls, SharedStorageRunOperationMethodOptions options) { throw new System.NotImplementedException(); }
+		public Task<SharedStorageResponse> SelectURL(DOMString name, List<SharedStorageUrlWithMetadata> urls, SharedStorageRunOperationMethodOptions options) { throw new System.NotImplementedException(); }
 		public Task<dynamic> Run(DOMString name, SharedStorageRunOperationMethodOptions options) { throw new System.NotImplementedException(); }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct RunFunctionForSharedStorageSelectURLOperation
-{
 }
 
 ///<include file='Utils/Docs/SharedStorageWorkletGlobalScope/SharedStorageWorkletGlobalScope.generated.xml' path='docs/SharedStorageWorkletGlobalScope/*'/>
@@ -18536,14 +16797,70 @@ public partial class SharedStorageWorkletGlobalScope : WorkletGlobalScope
 	///<include file='Utils/Docs/SharedStorageWorkletGlobalScopeRegister/SharedStorageWorkletGlobalScopeRegister.generated.xml' path='docs/SharedStorageWorkletGlobalScopeRegister/*'/>
 	public Undefined Register(DOMString name, Function operationCtor) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/SharedStorageWorkletGlobalScopeSharedStorage/SharedStorageWorkletGlobalScopeSharedStorage.generated.xml' path='docs/SharedStorageWorkletGlobalScopeSharedStorage/*'/>
-	public WorkletSharedStorage SharedStorage { get; }
+	public SharedStorage SharedStorage { get; }
+		public PrivateAggregation PrivateAggregation { get; }
+		public Task<List<StorageInterestGroup>> InterestGroups() { throw new System.NotImplementedException(); }
+		public SharedStorageWorkletNavigator Navigator { get; }
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class SharedStorageUrlWithMetadata
 {
 		public required USVString Url;
-		public object ReportingMetadata;
+		public Object ReportingMetadata;
+}
+
+///<include file='Utils/Docs/Window/Window.generated.xml' path='docs/Window/*'/>
+public partial class Window
+{
+	///<include file='Utils/Docs/WindowSharedStorage/WindowSharedStorage.generated.xml' path='docs/WindowSharedStorage/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
+	public SharedStorage? SharedStorage { get; }
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class SharedStorageModifierMethod
+{
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class SharedStorageSetMethod : SharedStorageModifierMethod
+{
+		public SharedStorageSetMethod(DOMString key, DOMString value, SharedStorageSetMethodOptions options) { }
+	public SharedStorageSetMethod() { }
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class SharedStorageAppendMethod : SharedStorageModifierMethod
+{
+		public SharedStorageAppendMethod(DOMString key, DOMString value, SharedStorageModifierMethodOptions options) { }
+	public SharedStorageAppendMethod() { }
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class SharedStorageDeleteMethod : SharedStorageModifierMethod
+{
+		public SharedStorageDeleteMethod(DOMString key, SharedStorageModifierMethodOptions options) { }
+	public SharedStorageDeleteMethod() { }
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class SharedStorageClearMethod : SharedStorageModifierMethod
+{
+		public SharedStorageClearMethod(SharedStorageModifierMethodOptions options) { }
+	public SharedStorageClearMethod() { }
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class SharedStorageModifierMethodOptions
+{
+		public DOMString WithLock;
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class SharedStorageSetMethodOptions : SharedStorageModifierMethodOptions
+{
+		public bool IgnoreIfPresent;
 }
 
 ///<include file='Utils/Docs/SharedStorage/SharedStorage.generated.xml' path='docs/SharedStorage/*'/>
@@ -18553,73 +16870,58 @@ public partial class SharedStorage
 	///<include file='Utils/Docs/SharedStorageSet/SharedStorageSet.generated.xml' path='docs/SharedStorageSet/*'/>
 	public Task<dynamic> Set(DOMString key, DOMString value, SharedStorageSetMethodOptions options) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/SharedStorageAppend/SharedStorageAppend.generated.xml' path='docs/SharedStorageAppend/*'/>
-	public Task<dynamic> Append(DOMString key, DOMString value) { throw new System.NotImplementedException(); }
+	public Task<dynamic> Append(DOMString key, DOMString value, SharedStorageModifierMethodOptions options) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/SharedStorageDelete/SharedStorageDelete.generated.xml' path='docs/SharedStorageDelete/*'/>
-	public Task<dynamic> Delete(DOMString key) { throw new System.NotImplementedException(); }
+	public Task<dynamic> Delete(DOMString key, SharedStorageModifierMethodOptions options) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/SharedStorageClear/SharedStorageClear.generated.xml' path='docs/SharedStorageClear/*'/>
-	public Task<dynamic> Clear() { throw new System.NotImplementedException(); }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class SharedStorageSetMethodOptions
-{
-		public bool IgnoreIfPresent;
-}
-
-///<include file='Utils/Docs/WindowSharedStorage/WindowSharedStorage.generated.xml' path='docs/WindowSharedStorage/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class WindowSharedStorage : SharedStorage
-{
-	///<include file='Utils/Docs/WindowSharedStorageSelectURL/WindowSharedStorageSelectURL.generated.xml' path='docs/WindowSharedStorageSelectURL/*'/>
-	public Task<SharedStorageResponse> SelectURL(DOMString name, SharedStorageUrlWithMetadata[] urls, SharedStorageRunOperationMethodOptions options) { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/WindowSharedStorageRun/WindowSharedStorageRun.generated.xml' path='docs/WindowSharedStorageRun/*'/>
-	public Task<dynamic> Run(DOMString name, SharedStorageRunOperationMethodOptions options) { throw new System.NotImplementedException(); }
-		public Task<SharedStorageWorklet> CreateWorklet(USVString moduleURL, WorkletOptions options) { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/WindowSharedStorageWorklet/WindowSharedStorageWorklet.generated.xml' path='docs/WindowSharedStorageWorklet/*'/>
+	public Task<dynamic> Clear(SharedStorageModifierMethodOptions options) { throw new System.NotImplementedException(); }
+		public Task<dynamic> BatchUpdate(List<SharedStorageModifierMethod> methods, SharedStorageModifierMethodOptions options) { throw new System.NotImplementedException(); }
+		public Task<SharedStorageResponse> SelectURL(DOMString name, List<SharedStorageUrlWithMetadata> urls, SharedStorageRunOperationMethodOptions options) { throw new System.NotImplementedException(); }
+		public Task<dynamic> Run(DOMString name, SharedStorageRunOperationMethodOptions options) { throw new System.NotImplementedException(); }
+		public Task<SharedStorageWorklet> CreateWorklet(USVString moduleURL, SharedStorageWorkletOptions options) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/SharedStorageWorklet/SharedStorageWorklet.generated.xml' path='docs/SharedStorageWorklet/*'/>
 	public SharedStorageWorklet Worklet { get; }
+		public Task<DOMString> Get(DOMString key) { throw new System.NotImplementedException(); }
+		public Task<ulong> Length() { throw new System.NotImplementedException(); }
+		public Task<Number> RemainingBudget() { throw new System.NotImplementedException(); }
+	public DOMString this[int i]  {  get { throw new System.NotImplementedException(); }  set { throw new System.NotImplementedException(); }  } 
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class SharedStoragePrivateAggregationConfig
+{
+		public USVString AggregationCoordinatorOrigin;
+		public USVString ContextId;
+		public ulong FilteringIdMaxBytes;
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class SharedStorageRunOperationMethodOptions
 {
-		public object Data;
+		public Object Data;
 		public bool ResolveToConfig;
 		public bool KeepAlive;
-}
-
-///<include file='Utils/Docs/Window/Window.generated.xml' path='docs/Window/*'/>
-public partial class Window
-{
-	///<include file='Utils/Docs/WindowSharedStorage/WindowSharedStorage.generated.xml' path='docs/WindowSharedStorage/*'/>
-	[To(ToAttribute.FirstCharToLowerCase)]
-	public WindowSharedStorage? SharedStorage { get; }
-}
-
-///<include file='Utils/Docs/WorkletSharedStorage/WorkletSharedStorage.generated.xml' path='docs/WorkletSharedStorage/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class WorkletSharedStorage : SharedStorage
-{
-	///<include file='Utils/Docs/WorkletSharedStorageGet/WorkletSharedStorageGet.generated.xml' path='docs/WorkletSharedStorageGet/*'/>
-	public Task<DOMString> Get(DOMString key) { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/WorkletSharedStorageLength/WorkletSharedStorageLength.generated.xml' path='docs/WorkletSharedStorageLength/*'/>
-	public Task<ulong> Length() { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/WorkletSharedStorageRemainingBudget/WorkletSharedStorageRemainingBudget.generated.xml' path='docs/WorkletSharedStorageRemainingBudget/*'/>
-	public Task<Number> RemainingBudget() { throw new System.NotImplementedException(); }
-	public DOMString this[int i]  {  get { throw new System.NotImplementedException(); }  set { throw new System.NotImplementedException(); }  } 
+		public SharedStoragePrivateAggregationConfig PrivateAggregationConfig;
+		public DOMString SavedQuery;
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial interface HTMLSharedStorageWritableElementUtils
+public partial class SharedStorageWorkletOptions : WorkletOptions
 {
-		public bool SharedStorageWritable { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
+		public USVString DataOrigin;
 }
 
-
-
+///<include file='Utils/Docs/RequestInit/RequestInit.generated.xml' path='docs/RequestInit/*'/>
 public partial class RequestInit
 {
 		public bool SharedStorageWritable;
 }
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class SharedStorageWorkletNavigator
+{
+}
+
 
 ///<include file='Utils/Docs/SpeechRecognition/SpeechRecognition.generated.xml' path='docs/SpeechRecognition/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -18654,27 +16956,6 @@ public partial class SpeechRecognition : EventTarget
 		public EventHandler Onerror { get; set; }
 		public EventHandler Onstart { get; set; }
 		public EventHandler Onend { get; set; }
-}
-
-[To(ToAttribute.None)]
-public enum SpeechRecognitionErrorCode
-{
-	[Value("no-speech")]
-	NoSpeech,
-	[Value("aborted")]
-	Aborted,
-	[Value("audio-capture")]
-	AudioCapture,
-	[Value("network")]
-	Network,
-	[Value("not-allowed")]
-	NotAllowed,
-	[Value("service-not-allowed")]
-	ServiceNotAllowed,
-	[Value("bad-grammar")]
-	BadGrammar,
-	[Value("language-not-supported")]
-	LanguageNotSupported,
 }
 
 ///<include file='Utils/Docs/SpeechRecognitionErrorEvent/SpeechRecognitionErrorEvent.generated.xml' path='docs/SpeechRecognitionErrorEvent/*'/>
@@ -18858,35 +17139,6 @@ public partial class SpeechSynthesisEventInit : EventInit
 		public DOMString Name;
 }
 
-[To(ToAttribute.None)]
-public enum SpeechSynthesisErrorCode
-{
-	[Value("canceled")]
-	Canceled,
-	[Value("interrupted")]
-	Interrupted,
-	[Value("audio-busy")]
-	AudioBusy,
-	[Value("audio-hardware")]
-	AudioHardware,
-	[Value("network")]
-	Network,
-	[Value("synthesis-unavailable")]
-	SynthesisUnavailable,
-	[Value("synthesis-failed")]
-	SynthesisFailed,
-	[Value("language-unavailable")]
-	LanguageUnavailable,
-	[Value("voice-unavailable")]
-	VoiceUnavailable,
-	[Value("text-too-long")]
-	TextTooLong,
-	[Value("invalid-argument")]
-	InvalidArgument,
-	[Value("not-allowed")]
-	NotAllowed,
-}
-
 ///<include file='Utils/Docs/SpeechSynthesisErrorEvent/SpeechSynthesisErrorEvent.generated.xml' path='docs/SpeechSynthesisErrorEvent/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class SpeechSynthesisErrorEvent : SpeechSynthesisEvent
@@ -18930,14 +17182,6 @@ public partial class Document
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial interface NavigatorStorageBuckets
-{
-		public StorageBucketManager StorageBuckets { get { throw new System.NotImplementedException(); } }
-}
-
-
-
-[To(ToAttribute.FirstCharToLowerCase)]
 public partial class StorageBucketManager
 {
 		public Task<StorageBucket> Open(DOMString name, StorageBucketOptions options) { throw new System.NotImplementedException(); }
@@ -18967,15 +17211,6 @@ public partial class StorageBucket
 		public Task<FileSystemDirectoryHandle> GetDirectory() { throw new System.NotImplementedException(); }
 }
 
-///<include file='Utils/Docs/NavigatorStorage/NavigatorStorage.generated.xml' path='docs/NavigatorStorage/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface NavigatorStorage
-{
-		public StorageManager Storage { get { throw new System.NotImplementedException(); } }
-}
-
-
-
 ///<include file='Utils/Docs/StorageManager/StorageManager.generated.xml' path='docs/StorageManager/*'/>
 public partial class StorageManager
 {
@@ -18999,7 +17234,7 @@ public partial class StorageEstimate
 public partial class ReadableStream
 {
 	///<include file='Utils/Docs/ReadableStreamReadableStream/ReadableStreamReadableStream.generated.xml' path='docs/ReadableStreamReadableStream/*'/>
-	public ReadableStream(object underlyingSource, QueuingStrategy strategy) { }
+	public ReadableStream(Object underlyingSource, QueuingStrategy strategy) { }
 	///<include file='Utils/Docs/ReadableStreamFrom/ReadableStreamFrom.generated.xml' path='docs/ReadableStreamFrom/*'/>
 	public static ReadableStream From(dynamic asyncIterable) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/ReadableStreamLocked/ReadableStreamLocked.generated.xml' path='docs/ReadableStreamLocked/*'/>
@@ -19018,13 +17253,6 @@ public partial class ReadableStream
 	public ReadableStream() { }
 }
 
-
-[To(ToAttribute.None)]
-public enum ReadableStreamReaderMode
-{
-	[Value("byob")]
-	Byob,
-}
 
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class ReadableStreamGetReaderOptions
@@ -19064,35 +17292,6 @@ public partial class UnderlyingSource
 		public ulong AutoAllocateChunkSize;
 }
 
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct UnderlyingSourceStartCallback
-{
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct UnderlyingSourcePullCallback
-{
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct UnderlyingSourceCancelCallback
-{
-}
-
-[To(ToAttribute.None)]
-public enum ReadableStreamType
-{
-	[Value("bytes")]
-	Bytes,
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface ReadableStreamGenericReader
-{
-		public Task<Undefined> Closed { get { throw new System.NotImplementedException(); } }
-		public Task<Undefined> Cancel(dynamic reason) { throw new System.NotImplementedException(); }
-}
 
 ///<include file='Utils/Docs/ReadableStreamDefaultReader/ReadableStreamDefaultReader.generated.xml' path='docs/ReadableStreamDefaultReader/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -19182,7 +17381,7 @@ public partial class ReadableStreamBYOBRequest
 public partial class WritableStream
 {
 	///<include file='Utils/Docs/WritableStreamWritableStream/WritableStreamWritableStream.generated.xml' path='docs/WritableStreamWritableStream/*'/>
-	public WritableStream(object underlyingSink, QueuingStrategy strategy) { }
+	public WritableStream(Object underlyingSink, QueuingStrategy strategy) { }
 	///<include file='Utils/Docs/WritableStreamLocked/WritableStreamLocked.generated.xml' path='docs/WritableStreamLocked/*'/>
 	public bool Locked { get; }
 	///<include file='Utils/Docs/WritableStreamAbort/WritableStreamAbort.generated.xml' path='docs/WritableStreamAbort/*'/>
@@ -19202,26 +17401,6 @@ public partial class UnderlyingSink
 		public UnderlyingSinkCloseCallback Close;
 		public UnderlyingSinkAbortCallback Abort;
 		public dynamic Type;
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct UnderlyingSinkStartCallback
-{
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct UnderlyingSinkWriteCallback
-{
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct UnderlyingSinkCloseCallback
-{
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct UnderlyingSinkAbortCallback
-{
 }
 
 ///<include file='Utils/Docs/WritableStreamDefaultWriter/WritableStreamDefaultWriter.generated.xml' path='docs/WritableStreamDefaultWriter/*'/>
@@ -19262,7 +17441,7 @@ public partial class WritableStreamDefaultController
 public partial class TransformStream
 {
 	///<include file='Utils/Docs/TransformStreamTransformStream/TransformStreamTransformStream.generated.xml' path='docs/TransformStreamTransformStream/*'/>
-	public TransformStream(object transformer, QueuingStrategy writableStrategy, QueuingStrategy readableStrategy) { }
+	public TransformStream(Object transformer, QueuingStrategy writableStrategy, QueuingStrategy readableStrategy) { }
 	///<include file='Utils/Docs/TransformStreamReadable/TransformStreamReadable.generated.xml' path='docs/TransformStreamReadable/*'/>
 	public ReadableStream Readable { get; }
 	///<include file='Utils/Docs/TransformStreamWritable/TransformStreamWritable.generated.xml' path='docs/TransformStreamWritable/*'/>
@@ -19279,26 +17458,6 @@ public partial class Transformer
 		public TransformerCancelCallback Cancel;
 		public dynamic ReadableType;
 		public dynamic WritableType;
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct TransformerStartCallback
-{
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct TransformerFlushCallback
-{
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct TransformerTransformCallback
-{
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct TransformerCancelCallback
-{
 }
 
 ///<include file='Utils/Docs/TransformStreamDefaultController/TransformStreamDefaultController.generated.xml' path='docs/TransformStreamDefaultController/*'/>
@@ -19320,11 +17479,6 @@ public partial class QueuingStrategy
 {
 		public double HighWaterMark;
 		public QueuingStrategySize Size;
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct QueuingStrategySize
-{
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -19359,13 +17513,6 @@ public partial class CountQueuingStrategy
 	public CountQueuingStrategy() { }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface GenericTransformStream
-{
-		public ReadableStream Readable { get { throw new System.NotImplementedException(); } }
-		public WritableStream Writable { get { throw new System.NotImplementedException(); } }
-}
-
 ///<include file='Utils/Docs/TimeEvent/TimeEvent.generated.xml' path='docs/TimeEvent/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class TimeEvent : Event
@@ -19387,10 +17534,14 @@ public partial class SVGAnimationElement : SVGElement, SVGTests
 		public Number GetStartTime() { throw new System.NotImplementedException(); }
 		public Number GetCurrentTime() { throw new System.NotImplementedException(); }
 		public Number GetSimpleDuration() { throw new System.NotImplementedException(); }
-		public Undefined BeginElement() { throw new System.NotImplementedException(); }
-		public Undefined BeginElementAt(Number offset) { throw new System.NotImplementedException(); }
-		public Undefined EndElement() { throw new System.NotImplementedException(); }
-		public Undefined EndElementAt(Number offset) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/SVGAnimationElementBeginElement/SVGAnimationElementBeginElement.generated.xml' path='docs/SVGAnimationElementBeginElement/*'/>
+	public Undefined BeginElement() { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/SVGAnimationElementBeginElementAt/SVGAnimationElementBeginElementAt.generated.xml' path='docs/SVGAnimationElementBeginElementAt/*'/>
+	public Undefined BeginElementAt(Number offset) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/SVGAnimationElementEndElement/SVGAnimationElementEndElement.generated.xml' path='docs/SVGAnimationElementEndElement/*'/>
+	public Undefined EndElement() { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/SVGAnimationElementEndElementAt/SVGAnimationElementEndElementAt.generated.xml' path='docs/SVGAnimationElementEndElementAt/*'/>
+	public Undefined EndElementAt(Number offset) { throw new System.NotImplementedException(); }
 }
 
 
@@ -19446,8 +17597,10 @@ public partial class SVGSVGElement
 public partial class SVGElement : Element, ElementCSSInlineStyle, GlobalEventHandlers, SVGElementInstance, HTMLOrSVGElement
 {
 		public SVGAnimatedString ClassName { get; }
-		public SVGSVGElement? OwnerSVGElement { get; }
-		public SVGElement? ViewportElement { get; }
+	///<include file='Utils/Docs/SVGElementOwnerSVGElement/SVGElementOwnerSVGElement.generated.xml' path='docs/SVGElementOwnerSVGElement/*'/>
+	public SVGSVGElement? OwnerSVGElement { get; }
+	///<include file='Utils/Docs/SVGElementViewportElement/SVGElementViewportElement.generated.xml' path='docs/SVGElementViewportElement/*'/>
+	public SVGElement? ViewportElement { get; }
 }
 
 
@@ -19529,27 +17682,41 @@ public partial class SVGAngle
 		public const ushort SVG_ANGLETYPE_DEG = 2;
 		public const ushort SVG_ANGLETYPE_RAD = 3;
 		public const ushort SVG_ANGLETYPE_GRAD = 4;
-		public ushort UnitType { get; }
-		public Number Value { get; set; }
-		public Number ValueInSpecifiedUnits { get; set; }
-		public DOMString ValueAsString { get; set; }
-		public Undefined NewValueSpecifiedUnits(ushort unitType, Number valueInSpecifiedUnits) { throw new System.NotImplementedException(); }
-		public Undefined ConvertToSpecifiedUnits(ushort unitType) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/SVGAngleUnitType/SVGAngleUnitType.generated.xml' path='docs/SVGAngleUnitType/*'/>
+	public ushort UnitType { get; }
+	///<include file='Utils/Docs/SVGAngleValue/SVGAngleValue.generated.xml' path='docs/SVGAngleValue/*'/>
+	public Number Value { get; set; }
+	///<include file='Utils/Docs/SVGAngleValueInSpecifiedUnits/SVGAngleValueInSpecifiedUnits.generated.xml' path='docs/SVGAngleValueInSpecifiedUnits/*'/>
+	public Number ValueInSpecifiedUnits { get; set; }
+	///<include file='Utils/Docs/SVGAngleValueAsString/SVGAngleValueAsString.generated.xml' path='docs/SVGAngleValueAsString/*'/>
+	public DOMString ValueAsString { get; set; }
+	///<include file='Utils/Docs/SVGAngleNewValueSpecifiedUnits/SVGAngleNewValueSpecifiedUnits.generated.xml' path='docs/SVGAngleNewValueSpecifiedUnits/*'/>
+	public Undefined NewValueSpecifiedUnits(ushort unitType, Number valueInSpecifiedUnits) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/SVGAngleConvertToSpecifiedUnits/SVGAngleConvertToSpecifiedUnits.generated.xml' path='docs/SVGAngleConvertToSpecifiedUnits/*'/>
+	public Undefined ConvertToSpecifiedUnits(ushort unitType) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/SVGNumberList/SVGNumberList.generated.xml' path='docs/SVGNumberList/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class SVGNumberList
 {
-		public ulong Length { get; }
-		public ulong NumberOfItems { get; }
-		public Undefined Clear() { throw new System.NotImplementedException(); }
-		public SVGNumber Initialize(SVGNumber newItem) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/SVGNumberListLength/SVGNumberListLength.generated.xml' path='docs/SVGNumberListLength/*'/>
+	public ulong Length { get; }
+	///<include file='Utils/Docs/SVGNumberListNumberOfItems/SVGNumberListNumberOfItems.generated.xml' path='docs/SVGNumberListNumberOfItems/*'/>
+	public ulong NumberOfItems { get; }
+	///<include file='Utils/Docs/SVGNumberListClear/SVGNumberListClear.generated.xml' path='docs/SVGNumberListClear/*'/>
+	public Undefined Clear() { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/SVGNumberListInitialize/SVGNumberListInitialize.generated.xml' path='docs/SVGNumberListInitialize/*'/>
+	public SVGNumber Initialize(SVGNumber newItem) { throw new System.NotImplementedException(); }
 	
-		public SVGNumber InsertItemBefore(SVGNumber newItem, ulong index) { throw new System.NotImplementedException(); }
-		public SVGNumber ReplaceItem(SVGNumber newItem, ulong index) { throw new System.NotImplementedException(); }
-		public SVGNumber RemoveItem(ulong index) { throw new System.NotImplementedException(); }
-		public SVGNumber AppendItem(SVGNumber newItem) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/SVGNumberListInsertItemBefore/SVGNumberListInsertItemBefore.generated.xml' path='docs/SVGNumberListInsertItemBefore/*'/>
+	public SVGNumber InsertItemBefore(SVGNumber newItem, ulong index) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/SVGNumberListReplaceItem/SVGNumberListReplaceItem.generated.xml' path='docs/SVGNumberListReplaceItem/*'/>
+	public SVGNumber ReplaceItem(SVGNumber newItem, ulong index) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/SVGNumberListRemoveItem/SVGNumberListRemoveItem.generated.xml' path='docs/SVGNumberListRemoveItem/*'/>
+	public SVGNumber RemoveItem(ulong index) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/SVGNumberListAppendItem/SVGNumberListAppendItem.generated.xml' path='docs/SVGNumberListAppendItem/*'/>
+	public SVGNumber AppendItem(SVGNumber newItem) { throw new System.NotImplementedException(); }
 	
 }
 
@@ -19557,15 +17724,23 @@ public partial class SVGNumberList
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class SVGLengthList
 {
-		public ulong Length { get; }
-		public ulong NumberOfItems { get; }
-		public Undefined Clear() { throw new System.NotImplementedException(); }
-		public SVGLength Initialize(SVGLength newItem) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/SVGLengthListLength/SVGLengthListLength.generated.xml' path='docs/SVGLengthListLength/*'/>
+	public ulong Length { get; }
+	///<include file='Utils/Docs/SVGLengthListNumberOfItems/SVGLengthListNumberOfItems.generated.xml' path='docs/SVGLengthListNumberOfItems/*'/>
+	public ulong NumberOfItems { get; }
+	///<include file='Utils/Docs/SVGLengthListClear/SVGLengthListClear.generated.xml' path='docs/SVGLengthListClear/*'/>
+	public Undefined Clear() { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/SVGLengthListInitialize/SVGLengthListInitialize.generated.xml' path='docs/SVGLengthListInitialize/*'/>
+	public SVGLength Initialize(SVGLength newItem) { throw new System.NotImplementedException(); }
 	
-		public SVGLength InsertItemBefore(SVGLength newItem, ulong index) { throw new System.NotImplementedException(); }
-		public SVGLength ReplaceItem(SVGLength newItem, ulong index) { throw new System.NotImplementedException(); }
-		public SVGLength RemoveItem(ulong index) { throw new System.NotImplementedException(); }
-		public SVGLength AppendItem(SVGLength newItem) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/SVGLengthListInsertItemBefore/SVGLengthListInsertItemBefore.generated.xml' path='docs/SVGLengthListInsertItemBefore/*'/>
+	public SVGLength InsertItemBefore(SVGLength newItem, ulong index) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/SVGLengthListReplaceItem/SVGLengthListReplaceItem.generated.xml' path='docs/SVGLengthListReplaceItem/*'/>
+	public SVGLength ReplaceItem(SVGLength newItem, ulong index) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/SVGLengthListRemoveItem/SVGLengthListRemoveItem.generated.xml' path='docs/SVGLengthListRemoveItem/*'/>
+	public SVGLength RemoveItem(ulong index) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/SVGLengthListAppendItem/SVGLengthListAppendItem.generated.xml' path='docs/SVGLengthListAppendItem/*'/>
+	public SVGLength AppendItem(SVGLength newItem) { throw new System.NotImplementedException(); }
 	
 }
 
@@ -19589,8 +17764,10 @@ public partial class SVGStringList
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class SVGAnimatedBoolean
 {
-		public bool BaseVal { get; set; }
-		public bool AnimVal { get; }
+	///<include file='Utils/Docs/SVGAnimatedBooleanBaseVal/SVGAnimatedBooleanBaseVal.generated.xml' path='docs/SVGAnimatedBooleanBaseVal/*'/>
+	public bool BaseVal { get; set; }
+	///<include file='Utils/Docs/SVGAnimatedBooleanAnimVal/SVGAnimatedBooleanAnimVal.generated.xml' path='docs/SVGAnimatedBooleanAnimVal/*'/>
+	public bool AnimVal { get; }
 }
 
 ///<include file='Utils/Docs/SVGAnimatedEnumeration/SVGAnimatedEnumeration.generated.xml' path='docs/SVGAnimatedEnumeration/*'/>
@@ -19607,16 +17784,20 @@ public partial class SVGAnimatedEnumeration
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class SVGAnimatedInteger
 {
-		public long BaseVal { get; set; }
-		public long AnimVal { get; }
+	///<include file='Utils/Docs/SVGAnimatedIntegerBaseVal/SVGAnimatedIntegerBaseVal.generated.xml' path='docs/SVGAnimatedIntegerBaseVal/*'/>
+	public long BaseVal { get; set; }
+	///<include file='Utils/Docs/SVGAnimatedIntegerAnimVal/SVGAnimatedIntegerAnimVal.generated.xml' path='docs/SVGAnimatedIntegerAnimVal/*'/>
+	public long AnimVal { get; }
 }
 
 ///<include file='Utils/Docs/SVGAnimatedNumber/SVGAnimatedNumber.generated.xml' path='docs/SVGAnimatedNumber/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class SVGAnimatedNumber
 {
-		public Number BaseVal { get; set; }
-		public Number AnimVal { get; }
+	///<include file='Utils/Docs/SVGAnimatedNumberBaseVal/SVGAnimatedNumberBaseVal.generated.xml' path='docs/SVGAnimatedNumberBaseVal/*'/>
+	public Number BaseVal { get; set; }
+	///<include file='Utils/Docs/SVGAnimatedNumberAnimVal/SVGAnimatedNumberAnimVal.generated.xml' path='docs/SVGAnimatedNumberAnimVal/*'/>
+	public Number AnimVal { get; }
 }
 
 ///<include file='Utils/Docs/SVGAnimatedLength/SVGAnimatedLength.generated.xml' path='docs/SVGAnimatedLength/*'/>
@@ -19633,8 +17814,10 @@ public partial class SVGAnimatedLength
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class SVGAnimatedAngle
 {
-		public SVGAngle BaseVal { get; }
-		public SVGAngle AnimVal { get; }
+	///<include file='Utils/Docs/SVGAnimatedAngleBaseVal/SVGAnimatedAngleBaseVal.generated.xml' path='docs/SVGAnimatedAngleBaseVal/*'/>
+	public SVGAngle BaseVal { get; }
+	///<include file='Utils/Docs/SVGAnimatedAngleAnimVal/SVGAnimatedAngleAnimVal.generated.xml' path='docs/SVGAnimatedAngleAnimVal/*'/>
+	public SVGAngle AnimVal { get; }
 }
 
 ///<include file='Utils/Docs/SVGAnimatedString/SVGAnimatedString.generated.xml' path='docs/SVGAnimatedString/*'/>
@@ -19651,24 +17834,30 @@ public partial class SVGAnimatedString
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class SVGAnimatedRect
 {
-		public DOMRect BaseVal { get; }
-		public DOMRectReadOnly AnimVal { get; }
+	///<include file='Utils/Docs/SVGAnimatedRectBaseVal/SVGAnimatedRectBaseVal.generated.xml' path='docs/SVGAnimatedRectBaseVal/*'/>
+	public DOMRect BaseVal { get; }
+	///<include file='Utils/Docs/SVGAnimatedRectAnimVal/SVGAnimatedRectAnimVal.generated.xml' path='docs/SVGAnimatedRectAnimVal/*'/>
+	public DOMRectReadOnly AnimVal { get; }
 }
 
 ///<include file='Utils/Docs/SVGAnimatedNumberList/SVGAnimatedNumberList.generated.xml' path='docs/SVGAnimatedNumberList/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class SVGAnimatedNumberList
 {
-		public SVGNumberList BaseVal { get; }
-		public SVGNumberList AnimVal { get; }
+	///<include file='Utils/Docs/SVGAnimatedNumberListBaseVal/SVGAnimatedNumberListBaseVal.generated.xml' path='docs/SVGAnimatedNumberListBaseVal/*'/>
+	public SVGNumberList BaseVal { get; }
+	///<include file='Utils/Docs/SVGAnimatedNumberListAnimVal/SVGAnimatedNumberListAnimVal.generated.xml' path='docs/SVGAnimatedNumberListAnimVal/*'/>
+	public SVGNumberList AnimVal { get; }
 }
 
 ///<include file='Utils/Docs/SVGAnimatedLengthList/SVGAnimatedLengthList.generated.xml' path='docs/SVGAnimatedLengthList/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class SVGAnimatedLengthList
 {
-		public SVGLengthList BaseVal { get; }
-		public SVGLengthList AnimVal { get; }
+	///<include file='Utils/Docs/SVGAnimatedLengthListBaseVal/SVGAnimatedLengthListBaseVal.generated.xml' path='docs/SVGAnimatedLengthListBaseVal/*'/>
+	public SVGLengthList BaseVal { get; }
+	///<include file='Utils/Docs/SVGAnimatedLengthListAnimVal/SVGAnimatedLengthListAnimVal.generated.xml' path='docs/SVGAnimatedLengthListAnimVal/*'/>
+	public SVGLengthList AnimVal { get; }
 }
 
 ///<include file='Utils/Docs/SVGUnitTypes/SVGUnitTypes.generated.xml' path='docs/SVGUnitTypes/*'/>
@@ -19678,26 +17867,6 @@ public partial class SVGUnitTypes
 		public const ushort SVG_UNIT_TYPE_UNKNOWN = 0;
 		public const ushort SVG_UNIT_TYPE_USERSPACEONUSE = 1;
 		public const ushort SVG_UNIT_TYPE_OBJECTBOUNDINGBOX = 2;
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface SVGTests
-{
-		public SVGStringList RequiredExtensions { get { throw new System.NotImplementedException(); } }
-		public SVGStringList SystemLanguage { get { throw new System.NotImplementedException(); } }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface SVGFitToViewBox
-{
-		public SVGAnimatedRect ViewBox { get { throw new System.NotImplementedException(); } }
-		public SVGAnimatedPreserveAspectRatio PreserveAspectRatio { get { throw new System.NotImplementedException(); } }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface SVGURIReference
-{
-		public SVGAnimatedString Href { get { throw new System.NotImplementedException(); } }
 }
 
 ///<include file='Utils/Docs/Document/Document.generated.xml' path='docs/Document/*'/>
@@ -19794,16 +17963,9 @@ public partial class SVGUseElementShadowRoot : ShadowRoot
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial interface SVGElementInstance
-{
-		public SVGElement? CorrespondingElement { get { throw new System.NotImplementedException(); } }
-		public SVGUseElement? CorrespondingUseElement { get { throw new System.NotImplementedException(); } }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
 public partial class ShadowAnimation : Animation
 {
-		public ShadowAnimation(Animation source, Union126 newTarget) { }
+		public ShadowAnimation(Animation source, Union145 newTarget) { }
 		public Animation SourceAnimation { get; }
 	public ShadowAnimation() { }
 }
@@ -19812,12 +17974,6 @@ public partial class ShadowAnimation : Animation
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class SVGSwitchElement : SVGGraphicsElement
 {
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface GetSVGDocument
-{
-		public Document GetSVGDocument() { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/SVGStyleElement/SVGStyleElement.generated.xml' path='docs/SVGStyleElement/*'/>
@@ -19844,41 +18000,62 @@ public partial class SVGTransform
 		public const ushort SVG_TRANSFORM_ROTATE = 4;
 		public const ushort SVG_TRANSFORM_SKEWX = 5;
 		public const ushort SVG_TRANSFORM_SKEWY = 6;
-		public ushort Type { get; }
-		public DOMMatrix Matrix { get; }
-		public Number Angle { get; }
-		public Undefined SetMatrix(DOMMatrix2DInit matrix) { throw new System.NotImplementedException(); }
-		public Undefined SetTranslate(Number tx, Number ty) { throw new System.NotImplementedException(); }
-		public Undefined SetScale(Number sx, Number sy) { throw new System.NotImplementedException(); }
-		public Undefined SetRotate(Number angle, Number cx, Number cy) { throw new System.NotImplementedException(); }
-		public Undefined SetSkewX(Number angle) { throw new System.NotImplementedException(); }
-		public Undefined SetSkewY(Number angle) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/SVGTransformType/SVGTransformType.generated.xml' path='docs/SVGTransformType/*'/>
+	public ushort Type { get; }
+	///<include file='Utils/Docs/SVGTransformMatrix/SVGTransformMatrix.generated.xml' path='docs/SVGTransformMatrix/*'/>
+	public DOMMatrix Matrix { get; }
+	///<include file='Utils/Docs/SVGTransformAngle/SVGTransformAngle.generated.xml' path='docs/SVGTransformAngle/*'/>
+	public Number Angle { get; }
+	///<include file='Utils/Docs/SVGTransformSetMatrix/SVGTransformSetMatrix.generated.xml' path='docs/SVGTransformSetMatrix/*'/>
+	public Undefined SetMatrix(DOMMatrix2DInit matrix) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/SVGTransformSetTranslate/SVGTransformSetTranslate.generated.xml' path='docs/SVGTransformSetTranslate/*'/>
+	public Undefined SetTranslate(Number tx, Number ty) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/SVGTransformSetScale/SVGTransformSetScale.generated.xml' path='docs/SVGTransformSetScale/*'/>
+	public Undefined SetScale(Number sx, Number sy) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/SVGTransformSetRotate/SVGTransformSetRotate.generated.xml' path='docs/SVGTransformSetRotate/*'/>
+	public Undefined SetRotate(Number angle, Number cx, Number cy) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/SVGTransformSetSkewX/SVGTransformSetSkewX.generated.xml' path='docs/SVGTransformSetSkewX/*'/>
+	public Undefined SetSkewX(Number angle) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/SVGTransformSetSkewY/SVGTransformSetSkewY.generated.xml' path='docs/SVGTransformSetSkewY/*'/>
+	public Undefined SetSkewY(Number angle) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/SVGTransformList/SVGTransformList.generated.xml' path='docs/SVGTransformList/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class SVGTransformList
 {
-		public ulong Length { get; }
-		public ulong NumberOfItems { get; }
-		public Undefined Clear() { throw new System.NotImplementedException(); }
-		public SVGTransform Initialize(SVGTransform newItem) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/SVGTransformListLength/SVGTransformListLength.generated.xml' path='docs/SVGTransformListLength/*'/>
+	public ulong Length { get; }
+	///<include file='Utils/Docs/SVGTransformListNumberOfItems/SVGTransformListNumberOfItems.generated.xml' path='docs/SVGTransformListNumberOfItems/*'/>
+	public ulong NumberOfItems { get; }
+	///<include file='Utils/Docs/SVGTransformListClear/SVGTransformListClear.generated.xml' path='docs/SVGTransformListClear/*'/>
+	public Undefined Clear() { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/SVGTransformListInitialize/SVGTransformListInitialize.generated.xml' path='docs/SVGTransformListInitialize/*'/>
+	public SVGTransform Initialize(SVGTransform newItem) { throw new System.NotImplementedException(); }
 	
-		public SVGTransform InsertItemBefore(SVGTransform newItem, ulong index) { throw new System.NotImplementedException(); }
-		public SVGTransform ReplaceItem(SVGTransform newItem, ulong index) { throw new System.NotImplementedException(); }
-		public SVGTransform RemoveItem(ulong index) { throw new System.NotImplementedException(); }
-		public SVGTransform AppendItem(SVGTransform newItem) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/SVGTransformListInsertItemBefore/SVGTransformListInsertItemBefore.generated.xml' path='docs/SVGTransformListInsertItemBefore/*'/>
+	public SVGTransform InsertItemBefore(SVGTransform newItem, ulong index) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/SVGTransformListReplaceItem/SVGTransformListReplaceItem.generated.xml' path='docs/SVGTransformListReplaceItem/*'/>
+	public SVGTransform ReplaceItem(SVGTransform newItem, ulong index) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/SVGTransformListRemoveItem/SVGTransformListRemoveItem.generated.xml' path='docs/SVGTransformListRemoveItem/*'/>
+	public SVGTransform RemoveItem(ulong index) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/SVGTransformListAppendItem/SVGTransformListAppendItem.generated.xml' path='docs/SVGTransformListAppendItem/*'/>
+	public SVGTransform AppendItem(SVGTransform newItem) { throw new System.NotImplementedException(); }
 	
-		public SVGTransform CreateSVGTransformFromMatrix(DOMMatrix2DInit matrix) { throw new System.NotImplementedException(); }
-		public SVGTransform? Consolidate() { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/SVGTransformListCreateSVGTransformFromMatrix/SVGTransformListCreateSVGTransformFromMatrix.generated.xml' path='docs/SVGTransformListCreateSVGTransformFromMatrix/*'/>
+	public SVGTransform CreateSVGTransformFromMatrix(DOMMatrix2DInit matrix) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/SVGTransformListConsolidate/SVGTransformListConsolidate.generated.xml' path='docs/SVGTransformListConsolidate/*'/>
+	public SVGTransform? Consolidate() { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/SVGAnimatedTransformList/SVGAnimatedTransformList.generated.xml' path='docs/SVGAnimatedTransformList/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class SVGAnimatedTransformList
 {
-		public SVGTransformList BaseVal { get; }
-		public SVGTransformList AnimVal { get; }
+	///<include file='Utils/Docs/SVGAnimatedTransformListBaseVal/SVGAnimatedTransformListBaseVal.generated.xml' path='docs/SVGAnimatedTransformListBaseVal/*'/>
+	public SVGTransformList BaseVal { get; }
+	///<include file='Utils/Docs/SVGAnimatedTransformListAnimVal/SVGAnimatedTransformListAnimVal.generated.xml' path='docs/SVGAnimatedTransformListAnimVal/*'/>
+	public SVGTransformList AnimVal { get; }
 }
 
 ///<include file='Utils/Docs/SVGPreserveAspectRatio/SVGPreserveAspectRatio.generated.xml' path='docs/SVGPreserveAspectRatio/*'/>
@@ -19907,8 +18084,10 @@ public partial class SVGPreserveAspectRatio
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class SVGAnimatedPreserveAspectRatio
 {
-		public SVGPreserveAspectRatio BaseVal { get; }
-		public SVGPreserveAspectRatio AnimVal { get; }
+	///<include file='Utils/Docs/SVGAnimatedPreserveAspectRatioBaseVal/SVGAnimatedPreserveAspectRatioBaseVal.generated.xml' path='docs/SVGAnimatedPreserveAspectRatioBaseVal/*'/>
+	public SVGPreserveAspectRatio BaseVal { get; }
+	///<include file='Utils/Docs/SVGAnimatedPreserveAspectRatioAnimVal/SVGAnimatedPreserveAspectRatioAnimVal.generated.xml' path='docs/SVGAnimatedPreserveAspectRatioAnimVal/*'/>
+	public SVGPreserveAspectRatio AnimVal { get; }
 }
 
 ///<include file='Utils/Docs/SVGPathElement/SVGPathElement.generated.xml' path='docs/SVGPathElement/*'/>
@@ -19921,12 +18100,18 @@ public partial class SVGPathElement : SVGGeometryElement
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class SVGRectElement : SVGGeometryElement
 {
-		public SVGAnimatedLength X { get; }
-		public SVGAnimatedLength Y { get; }
-		public SVGAnimatedLength Width { get; }
-		public SVGAnimatedLength Height { get; }
-		public SVGAnimatedLength Rx { get; }
-		public SVGAnimatedLength Ry { get; }
+	///<include file='Utils/Docs/SVGRectElementX/SVGRectElementX.generated.xml' path='docs/SVGRectElementX/*'/>
+	public SVGAnimatedLength X { get; }
+	///<include file='Utils/Docs/SVGRectElementY/SVGRectElementY.generated.xml' path='docs/SVGRectElementY/*'/>
+	public SVGAnimatedLength Y { get; }
+	///<include file='Utils/Docs/SVGRectElementWidth/SVGRectElementWidth.generated.xml' path='docs/SVGRectElementWidth/*'/>
+	public SVGAnimatedLength Width { get; }
+	///<include file='Utils/Docs/SVGRectElementHeight/SVGRectElementHeight.generated.xml' path='docs/SVGRectElementHeight/*'/>
+	public SVGAnimatedLength Height { get; }
+	///<include file='Utils/Docs/SVGRectElementRx/SVGRectElementRx.generated.xml' path='docs/SVGRectElementRx/*'/>
+	public SVGAnimatedLength Rx { get; }
+	///<include file='Utils/Docs/SVGRectElementRy/SVGRectElementRy.generated.xml' path='docs/SVGRectElementRy/*'/>
+	public SVGAnimatedLength Ry { get; }
 }
 
 ///<include file='Utils/Docs/SVGCircleElement/SVGCircleElement.generated.xml' path='docs/SVGCircleElement/*'/>
@@ -19955,17 +18140,14 @@ public partial class SVGEllipseElement : SVGGeometryElement
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class SVGLineElement : SVGGeometryElement
 {
-		public SVGAnimatedLength X1 { get; }
-		public SVGAnimatedLength Y1 { get; }
-		public SVGAnimatedLength X2 { get; }
-		public SVGAnimatedLength Y2 { get; }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface SVGAnimatedPoints
-{
-		public SVGPointList Points { get { throw new System.NotImplementedException(); } }
-		public SVGPointList AnimatedPoints { get { throw new System.NotImplementedException(); } }
+	///<include file='Utils/Docs/SVGLineElementX1/SVGLineElementX1.generated.xml' path='docs/SVGLineElementX1/*'/>
+	public SVGAnimatedLength X1 { get; }
+	///<include file='Utils/Docs/SVGLineElementY1/SVGLineElementY1.generated.xml' path='docs/SVGLineElementY1/*'/>
+	public SVGAnimatedLength Y1 { get; }
+	///<include file='Utils/Docs/SVGLineElementX2/SVGLineElementX2.generated.xml' path='docs/SVGLineElementX2/*'/>
+	public SVGAnimatedLength X2 { get; }
+	///<include file='Utils/Docs/SVGLineElementY2/SVGLineElementY2.generated.xml' path='docs/SVGLineElementY2/*'/>
+	public SVGAnimatedLength Y2 { get; }
 }
 
 ///<include file='Utils/Docs/SVGPointList/SVGPointList.generated.xml' path='docs/SVGPointList/*'/>
@@ -20013,16 +18195,26 @@ public partial class SVGTextContentElement : SVGGraphicsElement
 		public const ushort LENGTHADJUST_UNKNOWN = 0;
 		public const ushort LENGTHADJUST_SPACING = 1;
 		public const ushort LENGTHADJUST_SPACINGANDGLYPHS = 2;
-		public SVGAnimatedLength TextLength { get; }
-		public SVGAnimatedEnumeration LengthAdjust { get; }
-		public long GetNumberOfChars() { throw new System.NotImplementedException(); }
-		public Number GetComputedTextLength() { throw new System.NotImplementedException(); }
-		public Number GetSubStringLength(ulong charnum, ulong nchars) { throw new System.NotImplementedException(); }
-		public DOMPoint GetStartPositionOfChar(ulong charnum) { throw new System.NotImplementedException(); }
-		public DOMPoint GetEndPositionOfChar(ulong charnum) { throw new System.NotImplementedException(); }
-		public DOMRect GetExtentOfChar(ulong charnum) { throw new System.NotImplementedException(); }
-		public Number GetRotationOfChar(ulong charnum) { throw new System.NotImplementedException(); }
-		public long GetCharNumAtPosition(DOMPointInit point) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/SVGTextContentElementTextLength/SVGTextContentElementTextLength.generated.xml' path='docs/SVGTextContentElementTextLength/*'/>
+	public SVGAnimatedLength TextLength { get; }
+	///<include file='Utils/Docs/SVGTextContentElementLengthAdjust/SVGTextContentElementLengthAdjust.generated.xml' path='docs/SVGTextContentElementLengthAdjust/*'/>
+	public SVGAnimatedEnumeration LengthAdjust { get; }
+	///<include file='Utils/Docs/SVGTextContentElementGetNumberOfChars/SVGTextContentElementGetNumberOfChars.generated.xml' path='docs/SVGTextContentElementGetNumberOfChars/*'/>
+	public long GetNumberOfChars() { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/SVGTextContentElementGetComputedTextLength/SVGTextContentElementGetComputedTextLength.generated.xml' path='docs/SVGTextContentElementGetComputedTextLength/*'/>
+	public Number GetComputedTextLength() { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/SVGTextContentElementGetSubStringLength/SVGTextContentElementGetSubStringLength.generated.xml' path='docs/SVGTextContentElementGetSubStringLength/*'/>
+	public Number GetSubStringLength(ulong charnum, ulong nchars) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/SVGTextContentElementGetStartPositionOfChar/SVGTextContentElementGetStartPositionOfChar.generated.xml' path='docs/SVGTextContentElementGetStartPositionOfChar/*'/>
+	public DOMPoint GetStartPositionOfChar(ulong charnum) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/SVGTextContentElementGetEndPositionOfChar/SVGTextContentElementGetEndPositionOfChar.generated.xml' path='docs/SVGTextContentElementGetEndPositionOfChar/*'/>
+	public DOMPoint GetEndPositionOfChar(ulong charnum) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/SVGTextContentElementGetExtentOfChar/SVGTextContentElementGetExtentOfChar.generated.xml' path='docs/SVGTextContentElementGetExtentOfChar/*'/>
+	public DOMRect GetExtentOfChar(ulong charnum) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/SVGTextContentElementGetRotationOfChar/SVGTextContentElementGetRotationOfChar.generated.xml' path='docs/SVGTextContentElementGetRotationOfChar/*'/>
+	public Number GetRotationOfChar(ulong charnum) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/SVGTextContentElementGetCharNumAtPosition/SVGTextContentElementGetCharNumAtPosition.generated.xml' path='docs/SVGTextContentElementGetCharNumAtPosition/*'/>
+	public long GetCharNumAtPosition(DOMPointInit point) { throw new System.NotImplementedException(); }
 		public Undefined SelectSubString(ulong charnum, ulong nchars) { throw new System.NotImplementedException(); }
 }
 
@@ -20059,9 +18251,12 @@ public partial class SVGTextPathElement : SVGTextContentElement, SVGURIReference
 		public const ushort TEXTPATH_SPACINGTYPE_UNKNOWN = 0;
 		public const ushort TEXTPATH_SPACINGTYPE_AUTO = 1;
 		public const ushort TEXTPATH_SPACINGTYPE_EXACT = 2;
-		public SVGAnimatedLength StartOffset { get; }
-		public SVGAnimatedEnumeration Method { get; }
-		public SVGAnimatedEnumeration Spacing { get; }
+	///<include file='Utils/Docs/SVGTextPathElementStartOffset/SVGTextPathElementStartOffset.generated.xml' path='docs/SVGTextPathElementStartOffset/*'/>
+	public SVGAnimatedLength StartOffset { get; }
+	///<include file='Utils/Docs/SVGTextPathElementMethod/SVGTextPathElementMethod.generated.xml' path='docs/SVGTextPathElementMethod/*'/>
+	public SVGAnimatedEnumeration Method { get; }
+	///<include file='Utils/Docs/SVGTextPathElementSpacing/SVGTextPathElementSpacing.generated.xml' path='docs/SVGTextPathElementSpacing/*'/>
+	public SVGAnimatedEnumeration Spacing { get; }
 }
 
 
@@ -20133,9 +18328,12 @@ public partial class SVGGradientElement : SVGElement, SVGURIReference
 		public const ushort SVG_SPREADMETHOD_PAD = 1;
 		public const ushort SVG_SPREADMETHOD_REFLECT = 2;
 		public const ushort SVG_SPREADMETHOD_REPEAT = 3;
-		public SVGAnimatedEnumeration GradientUnits { get; }
-		public SVGAnimatedTransformList GradientTransform { get; }
-		public SVGAnimatedEnumeration SpreadMethod { get; }
+	///<include file='Utils/Docs/SVGGradientElementGradientUnits/SVGGradientElementGradientUnits.generated.xml' path='docs/SVGGradientElementGradientUnits/*'/>
+	public SVGAnimatedEnumeration GradientUnits { get; }
+	///<include file='Utils/Docs/SVGGradientElementGradientTransform/SVGGradientElementGradientTransform.generated.xml' path='docs/SVGGradientElementGradientTransform/*'/>
+	public SVGAnimatedTransformList GradientTransform { get; }
+	///<include file='Utils/Docs/SVGGradientElementSpreadMethod/SVGGradientElementSpreadMethod.generated.xml' path='docs/SVGGradientElementSpreadMethod/*'/>
+	public SVGAnimatedEnumeration SpreadMethod { get; }
 }
 
 
@@ -20143,21 +18341,30 @@ public partial class SVGGradientElement : SVGElement, SVGURIReference
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class SVGLinearGradientElement : SVGGradientElement
 {
-		public SVGAnimatedLength X1 { get; }
-		public SVGAnimatedLength Y1 { get; }
-		public SVGAnimatedLength X2 { get; }
-		public SVGAnimatedLength Y2 { get; }
+	///<include file='Utils/Docs/SVGLinearGradientElementX1/SVGLinearGradientElementX1.generated.xml' path='docs/SVGLinearGradientElementX1/*'/>
+	public SVGAnimatedLength X1 { get; }
+	///<include file='Utils/Docs/SVGLinearGradientElementY1/SVGLinearGradientElementY1.generated.xml' path='docs/SVGLinearGradientElementY1/*'/>
+	public SVGAnimatedLength Y1 { get; }
+	///<include file='Utils/Docs/SVGLinearGradientElementX2/SVGLinearGradientElementX2.generated.xml' path='docs/SVGLinearGradientElementX2/*'/>
+	public SVGAnimatedLength X2 { get; }
+	///<include file='Utils/Docs/SVGLinearGradientElementY2/SVGLinearGradientElementY2.generated.xml' path='docs/SVGLinearGradientElementY2/*'/>
+	public SVGAnimatedLength Y2 { get; }
 }
 
 ///<include file='Utils/Docs/SVGRadialGradientElement/SVGRadialGradientElement.generated.xml' path='docs/SVGRadialGradientElement/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class SVGRadialGradientElement : SVGGradientElement
 {
-		public SVGAnimatedLength Cx { get; }
-		public SVGAnimatedLength Cy { get; }
-		public SVGAnimatedLength R { get; }
-		public SVGAnimatedLength Fx { get; }
-		public SVGAnimatedLength Fy { get; }
+	///<include file='Utils/Docs/SVGRadialGradientElementCx/SVGRadialGradientElementCx.generated.xml' path='docs/SVGRadialGradientElementCx/*'/>
+	public SVGAnimatedLength Cx { get; }
+	///<include file='Utils/Docs/SVGRadialGradientElementCy/SVGRadialGradientElementCy.generated.xml' path='docs/SVGRadialGradientElementCy/*'/>
+	public SVGAnimatedLength Cy { get; }
+	///<include file='Utils/Docs/SVGRadialGradientElementR/SVGRadialGradientElementR.generated.xml' path='docs/SVGRadialGradientElementR/*'/>
+	public SVGAnimatedLength R { get; }
+	///<include file='Utils/Docs/SVGRadialGradientElementFx/SVGRadialGradientElementFx.generated.xml' path='docs/SVGRadialGradientElementFx/*'/>
+	public SVGAnimatedLength Fx { get; }
+	///<include file='Utils/Docs/SVGRadialGradientElementFy/SVGRadialGradientElementFy.generated.xml' path='docs/SVGRadialGradientElementFy/*'/>
+	public SVGAnimatedLength Fy { get; }
 		public SVGAnimatedLength Fr { get; }
 }
 
@@ -20165,16 +18372,20 @@ public partial class SVGRadialGradientElement : SVGGradientElement
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class SVGStopElement : SVGElement
 {
-		public SVGAnimatedNumber Offset { get; }
+	///<include file='Utils/Docs/SVGStopElementOffset/SVGStopElementOffset.generated.xml' path='docs/SVGStopElementOffset/*'/>
+	public SVGAnimatedNumber Offset { get; }
 }
 
 ///<include file='Utils/Docs/SVGPatternElement/SVGPatternElement.generated.xml' path='docs/SVGPatternElement/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class SVGPatternElement : SVGElement, SVGFitToViewBox, SVGURIReference
 {
-		public SVGAnimatedEnumeration PatternUnits { get; }
-		public SVGAnimatedEnumeration PatternContentUnits { get; }
-		public SVGAnimatedTransformList PatternTransform { get; }
+	///<include file='Utils/Docs/SVGPatternElementPatternUnits/SVGPatternElementPatternUnits.generated.xml' path='docs/SVGPatternElementPatternUnits/*'/>
+	public SVGAnimatedEnumeration PatternUnits { get; }
+	///<include file='Utils/Docs/SVGPatternElementPatternContentUnits/SVGPatternElementPatternContentUnits.generated.xml' path='docs/SVGPatternElementPatternContentUnits/*'/>
+	public SVGAnimatedEnumeration PatternContentUnits { get; }
+	///<include file='Utils/Docs/SVGPatternElementPatternTransform/SVGPatternElementPatternTransform.generated.xml' path='docs/SVGPatternElementPatternTransform/*'/>
+	public SVGAnimatedTransformList PatternTransform { get; }
 		public SVGAnimatedLength X { get; }
 		public SVGAnimatedLength Y { get; }
 		public SVGAnimatedLength Width { get; }
@@ -20251,15 +18462,6 @@ public partial class DetectedText
 		public required DOMRectReadOnly BoundingBox;
 		public required DOMString RawValue;
 		public required List<Point2D> CornerPoints;
-}
-
-[To(ToAttribute.None)]
-public enum TouchType
-{
-	[Value("direct")]
-	Direct,
-	[Value("stylus")]
-	Stylus,
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -20359,41 +18561,6 @@ public partial class TouchEvent : UIEvent
 	public TouchEvent() { }
 }
 
-public partial interface GlobalEventHandlers
-{
-		public EventHandler Ontouchstart { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Ontouchend { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Ontouchmove { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Ontouchcancel { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-}
-
-[To(ToAttribute.None)]
-public enum RefreshPolicy
-{
-	[Value("none")]
-	None,
-	[Value("refresh")]
-	Refresh,
-}
-
-[To(ToAttribute.None)]
-public enum TokenVersion
-{
-	[Value("1")]
-	_1,
-}
-
-[To(ToAttribute.None)]
-public enum OperationType
-{
-	[Value("token-request")]
-	TokenRequest,
-	[Value("send-redemption-record")]
-	SendRedemptionRecord,
-	[Value("token-redemption")]
-	TokenRedemption,
-}
-
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class PrivateToken
 {
@@ -20403,6 +18570,7 @@ public partial class PrivateToken
 		public List<USVString> Issuers;
 }
 
+///<include file='Utils/Docs/RequestInit/RequestInit.generated.xml' path='docs/RequestInit/*'/>
 public partial class RequestInit
 {
 		public PrivateToken PrivateToken;
@@ -20501,30 +18669,6 @@ public partial class TrustedTypePolicyOptions
 		public CreateScriptURLCallback CreateScriptURL;
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct CreateHTMLCallback
-{
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct CreateScriptCallback
-{
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct CreateScriptURLCallback
-{
-}
-
-
-
-
-
-public partial interface WindowOrWorkerGlobalScope
-{
-		public TrustedTypePolicyFactory TrustedTypes { get { throw new System.NotImplementedException(); } }
-}
-
 ///<include file='Utils/Docs/Navigator/Navigator.generated.xml' path='docs/Navigator/*'/>
 public partial class Navigator
 {
@@ -20535,10 +18679,20 @@ public partial class Navigator
 public partial class AuctionAd
 {
 		public required USVString RenderURL;
+		public USVString SizeGroup;
 		public dynamic Metadata;
 		public USVString BuyerReportingId;
 		public USVString BuyerAndSellerReportingId;
+		public List<USVString> SelectableBuyerAndSellerReportingIds;
 		public List<USVString> AllowedReportingOrigins;
+		public DOMString AdRenderId;
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class AuctionAdInterestGroupSize
+{
+		public required USVString Width;
+		public required USVString Height;
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -20546,7 +18700,6 @@ public partial class GenerateBidInterestGroup
 {
 		public required USVString Owner;
 		public required USVString Name;
-		public required Number LifetimeMs;
 		public bool EnableBiddingSignalsPrioritization;
 		public Dictionary<DOMString, Number> PriorityVector;
 		public Dictionary<USVString, List<DOMString>> SellerCapabilities;
@@ -20558,9 +18711,18 @@ public partial class GenerateBidInterestGroup
 		public List<USVString> TrustedBiddingSignalsKeys;
 		public DOMString TrustedBiddingSignalsSlotSizeMode;
 		public long MaxTrustedBiddingSignalsURLLength;
+		public USVString TrustedBiddingSignalsCoordinator;
 		public dynamic UserBiddingSignals;
 		public List<AuctionAd> Ads;
 		public List<AuctionAd> AdComponents;
+		public Dictionary<DOMString, AuctionAdInterestGroupSize> AdSizes;
+		public Dictionary<DOMString, List<DOMString>> SizeGroups;
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class ProtectedAudiencePrivateAggregationConfig
+{
+		public USVString AggregationCoordinatorOrigin;
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -20568,7 +18730,9 @@ public partial class AuctionAdInterestGroup : GenerateBidInterestGroup
 {
 		public Number Priority;
 		public Dictionary<DOMString, Number> PrioritySignalsOverrides;
+		public required Number LifetimeMs;
 		public DOMString AdditionalBidKey;
+		public ProtectedAudiencePrivateAggregationConfig PrivateAggregationConfig;
 }
 
 ///<include file='Utils/Docs/Navigator/Navigator.generated.xml' path='docs/Navigator/*'/>
@@ -20594,6 +18758,27 @@ public partial class Navigator
 public partial class Navigator
 {
 		public Task<USVString?> RunAdAuction(AuctionAdConfig config) { throw new System.NotImplementedException(); }
+		public bool DeprecatedRunAdAuctionEnforcesKAnonymity { get; }
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class AuctionReportBuyersConfig
+{
+		public required BigInt Bucket;
+		public required Number Scale;
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class AuctionReportBuyerDebugModeConfig
+{
+		public bool Enabled;
+		public BigInt? DebugKey;
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class AuctionRealTimeReportingConfig
+{
+		public required DOMString Type;
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -20603,30 +18788,88 @@ public partial class AuctionAdConfig
 		public required USVString DecisionLogicURL;
 		public USVString TrustedScoringSignalsURL;
 		public long MaxTrustedScoringSignalsURLLength;
+		public USVString TrustedScoringSignalsCoordinator;
 		public List<USVString> InterestGroupBuyers;
 		public Task<dynamic> AuctionSignals;
 		public Task<dynamic> SellerSignals;
-		public Task<DOMString> DirectFromSellerSignalsHeaderAdSlot;
-		public Task<Dictionary<USVString, USVString>> DeprecatedRenderURLReplacements;
+		public Task<DOMString?> DirectFromSellerSignalsHeaderAdSlot;
+		public Task<Dictionary<USVString, USVString>?> DeprecatedRenderURLReplacements;
 		public ulong SellerTimeout;
 		public ushort SellerExperimentGroupId;
-		public Task<Dictionary<USVString, dynamic>> PerBuyerSignals;
-		public Task<Dictionary<USVString, ulong>> PerBuyerTimeouts;
-		public Task<Dictionary<USVString, ulong>> PerBuyerCumulativeTimeouts;
+		public Task<Dictionary<USVString, dynamic>?> PerBuyerSignals;
+		public Task<Dictionary<USVString, ulong>?> PerBuyerTimeouts;
+		public Task<Dictionary<USVString, ulong>?> PerBuyerCumulativeTimeouts;
 		public ulong ReportingTimeout;
 		public USVString SellerCurrency;
-		public Task<Dictionary<USVString, USVString>> PerBuyerCurrencies;
+		public Task<Dictionary<USVString, USVString>?> PerBuyerCurrencies;
+		public Dictionary<USVString, ushort> PerBuyerMultiBidLimits;
 		public Dictionary<USVString, ushort> PerBuyerGroupLimits;
 		public Dictionary<USVString, ushort> PerBuyerExperimentGroupIds;
 		public Dictionary<USVString, Dictionary<USVString, Number>> PerBuyerPrioritySignals;
+		public List<BigInt> AuctionReportBuyerKeys;
+		public Dictionary<DOMString, AuctionReportBuyersConfig> AuctionReportBuyers;
+		public AuctionReportBuyerDebugModeConfig AuctionReportBuyerDebugModeConfig;
 		public List<DOMString> RequiredSellerCapabilities;
+		public ProtectedAudiencePrivateAggregationConfig PrivateAggregationConfig;
 		public Dictionary<DOMString, DOMString> RequestedSize;
 		public List<Dictionary<DOMString, DOMString>> AllSlotsRequestedSizes;
 		public Task<Undefined> AdditionalBids;
 		public DOMString AuctionNonce;
+		public AuctionRealTimeReportingConfig SellerRealTimeReportingConfig;
+		public Dictionary<USVString, AuctionRealTimeReportingConfig> PerBuyerRealTimeReportingConfig;
 		public List<AuctionAdConfig> ComponentAuctions;
 		public AbortSignal? Signal;
 		public Task<bool> ResolveToConfig;
+		public Task<System.Byte> ServerResponse;
+		public USVString RequestId;
+}
+
+///<include file='Utils/Docs/Navigator/Navigator.generated.xml' path='docs/Navigator/*'/>
+public partial class Navigator
+{
+		public bool CanLoadAdAuctionFencedFrame() { throw new System.NotImplementedException(); }
+}
+
+///<include file='Utils/Docs/Navigator/Navigator.generated.xml' path='docs/Navigator/*'/>
+public partial class Navigator
+{
+		public Task<AdAuctionData> GetInterestGroupAdAuctionData(AdAuctionDataConfig config) { throw new System.NotImplementedException(); }
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class AdAuctionData
+{
+		public required System.Byte Request;
+		public required USVString RequestId;
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class AdAuctionDataConfig
+{
+		public required USVString Seller;
+		public required USVString CoordinatorOrigin;
+		public ulong RequestSize;
+		public Dictionary<USVString, AdAuctionDataBuyerConfig> PerBuyerConfig;
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class AdAuctionDataBuyerConfig
+{
+		public ulong TargetSize;
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class StorageInterestGroup : AuctionAdInterestGroup
+{
+		public ulong JoinCount;
+		public ulong BidCount;
+		public List<PreviousWin> PrevWinsMs;
+		public USVString JoiningOrigin;
+		public long TimeSinceGroupJoinedMs;
+		public long LifetimeRemainingMs;
+		public long TimeSinceLastUpdateMs;
+		public long TimeUntilNextUpdateMs;
+		public ulong EstimatedSize;
 }
 
 ///<include file='Utils/Docs/Navigator/Navigator.generated.xml' path='docs/Navigator/*'/>
@@ -20638,6 +18881,28 @@ public partial class Navigator
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class InterestGroupScriptRunnerGlobalScope
 {
+		public PrivateAggregation? PrivateAggregation { get; }
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class PASignalValue
+{
+		public required DOMString BaseValue;
+		public Number Scale;
+		public Union147 Offset;
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class PAExtendedHistogramContribution
+{
+		public required Union148 Bucket;
+		public required Union149 Value;
+		public BigInt FilteringId;
+}
+
+public partial class PrivateAggregation
+{
+		public Undefined ContributeToHistogramOnEvent(DOMString event_, PAExtendedHistogramContribution contribution) { throw new System.NotImplementedException(); }
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -20648,15 +18913,30 @@ public partial class ForDebuggingOnly
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
+public partial class RealTimeReporting
+{
+		public Undefined ContributeToHistogram(RealTimeContribution contribution) { throw new System.NotImplementedException(); }
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class RealTimeContribution
+{
+		public required long Bucket;
+		public required Number PriorityWeight;
+		public long LatencyThreshold;
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class InterestGroupBiddingAndScoringScriptRunnerGlobalScope : InterestGroupScriptRunnerGlobalScope
 {
 		public ForDebuggingOnly ForDebuggingOnly { get; }
+		public RealTimeReporting RealTimeReporting { get; }
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class InterestGroupBiddingScriptRunnerGlobalScope : InterestGroupBiddingAndScoringScriptRunnerGlobalScope
 {
-		public bool SetBid(GenerateBidOutput generateBidOutput) { throw new System.NotImplementedException(); }
+		public bool SetBid(Union150 oneOrManyBids) { throw new System.NotImplementedException(); }
 		public Undefined SetPriority(Number priority) { throw new System.NotImplementedException(); }
 		public Undefined SetPrioritySignalsOverride(DOMString key, Number? priority) { throw new System.NotImplementedException(); }
 }
@@ -20674,12 +18954,15 @@ public partial class GenerateBidOutput
 {
 		public Number Bid;
 		public DOMString BidCurrency;
-		public Union128 Render;
+		public Union151 Render;
 		public dynamic Ad;
+		public USVString SelectedBuyerAndSellerReportingId;
 		public List<DOMString> AdComponents;
 		public Number AdCost;
 		public double ModelingSignals;
 		public bool AllowComponentAuction;
+		public ulong TargetNumAdComponents;
+		public ulong NumMandatoryAdComponents;
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -20713,6 +18996,7 @@ public partial class ProtectedAudience
 		public dynamic QueryFeatureSupport(DOMString feature) { throw new System.NotImplementedException(); }
 }
 
+///<include file='Utils/Docs/RequestInit/RequestInit.generated.xml' path='docs/RequestInit/*'/>
 public partial class RequestInit
 {
 		public bool AdAuctionHeaders;
@@ -20725,12 +19009,7 @@ public partial class HTMLIFrameElement
 	public bool AdAuctionHeaders { get; set; }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class PreviousWin
-{
-		public required long TimeDelta;
-		public required DOMString AdJSON;
-}
+
 
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class BiddingBrowserSignals
@@ -20741,10 +19020,13 @@ public partial class BiddingBrowserSignals
 		public required long BidCount;
 		public required long Recency;
 		public required long AdComponentsLimit;
+		public required ushort MultiBidLimit;
+		public Dictionary<DOMString, DOMString> RequestedSize;
 		public USVString TopLevelSeller;
 		public List<PreviousWin> PrevWinsMs;
-		public object WasmHelper;
+		public Object WasmHelper;
 		public ulong DataVersion;
+		public ulong CrossOriginDataVersion;
 		public bool ForDebuggingOnlyInCooldownOrLockout;
 }
 
@@ -20756,7 +19038,9 @@ public partial class ScoringBrowserSignals
 		public required USVString RenderURL;
 		public required ulong BiddingDurationMsec;
 		public required DOMString BidCurrency;
+		public Dictionary<DOMString, DOMString> RenderSize;
 		public ulong DataVersion;
+		public ulong CrossOriginDataVersion;
 		public List<USVString> AdComponents;
 		public bool ForDebuggingOnlyInCooldownOrLockout;
 }
@@ -20774,6 +19058,7 @@ public partial class ReportingBrowserSignals
 		public USVString TopLevelSeller;
 		public USVString ComponentSeller;
 		public USVString BuyerAndSellerReportingId;
+		public USVString SelectedBuyerAndSellerReportingId;
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -20796,19 +19081,6 @@ public partial class ReportWinBrowserSignals : ReportingBrowserSignals
 		public ushort ModelingSignals;
 		public ulong DataVersion;
 		public KAnonStatus KAnonStatus;
-}
-
-[To(ToAttribute.None)]
-public enum KAnonStatus
-{
-	[Value("passedAndEnforced")]
-	PassedAndEnforced,
-	[Value("passedNotEnforced")]
-	PassedNotEnforced,
-	[Value("belowThreshold")]
-	BelowThreshold,
-	[Value("notCalculated")]
-	NotCalculated,
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -20881,14 +19153,6 @@ public partial class NavigatorUAData
 	///<include file='Utils/Docs/NavigatorUADataToJSON/NavigatorUADataToJSON.generated.xml' path='docs/NavigatorUADataToJSON/*'/>
 	public UALowEntropyJSON ToJSON() { throw new System.NotImplementedException(); }
 }
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface NavigatorUA
-{
-		public NavigatorUAData UserAgentData { get { throw new System.NotImplementedException(); } }
-}
-
-
 
 ///<include file='Utils/Docs/UIEvent/UIEvent.generated.xml' path='docs/UIEvent/*'/>
 public partial class UIEvent : Event
@@ -21156,34 +19420,16 @@ public partial class KeyboardEventInit
 		public ulong KeyCode;
 }
 
+///<include file='Utils/Docs/TextEvent/TextEvent.generated.xml' path='docs/TextEvent/*'/>
 [To(ToAttribute.Default)]
 public partial class TextEvent : UIEvent
 {
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/TextEventData/TextEventData.generated.xml' path='docs/TextEventData/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public DOMString Data { get; }
-		[To(ToAttribute.FirstCharToLowerCase)]
+	///<include file='Utils/Docs/TextEventInitTextEvent/TextEventInitTextEvent.generated.xml' path='docs/TextEventInitTextEvent/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined InitTextEvent(DOMString type, bool bubbles, bool cancelable, Window? view, DOMString data) { throw new System.NotImplementedException(); }
-}
-
-///<include file='Utils/Docs/MutationEvent/MutationEvent.generated.xml' path='docs/MutationEvent/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class MutationEvent : Event
-{
-		public const ushort MODIFICATION = 1;
-		public const ushort ADDITION = 2;
-		public const ushort REMOVAL = 3;
-	///<include file='Utils/Docs/MutationEventRelatedNode/MutationEventRelatedNode.generated.xml' path='docs/MutationEventRelatedNode/*'/>
-	public Node? RelatedNode { get; }
-	///<include file='Utils/Docs/MutationEventPrevValue/MutationEventPrevValue.generated.xml' path='docs/MutationEventPrevValue/*'/>
-	public DOMString PrevValue { get; }
-	///<include file='Utils/Docs/MutationEventNewValue/MutationEventNewValue.generated.xml' path='docs/MutationEventNewValue/*'/>
-	public DOMString NewValue { get; }
-	///<include file='Utils/Docs/MutationEventAttrName/MutationEventAttrName.generated.xml' path='docs/MutationEventAttrName/*'/>
-	public DOMString AttrName { get; }
-	///<include file='Utils/Docs/MutationEventAttrChange/MutationEventAttrChange.generated.xml' path='docs/MutationEventAttrChange/*'/>
-	public ushort AttrChange { get; }
-	///<include file='Utils/Docs/MutationEventInitMutationEvent/MutationEventInitMutationEvent.generated.xml' path='docs/MutationEventInitMutationEvent/*'/>
-	public Undefined InitMutationEvent(DOMString typeArg, bool bubblesArg, bool cancelableArg, Node? relatedNodeArg, DOMString prevValueArg, DOMString newValueArg, DOMString attrNameArg, ushort attrChangeArg) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/URL/URL.generated.xml' path='docs/URL/*'/>
@@ -21191,7 +19437,8 @@ public partial class URL
 {
 	///<include file='Utils/Docs/URLURL/URLURL.generated.xml' path='docs/URLURL/*'/>
 	public URL(USVString url, USVString base_) { }
-		public static URL? Parse(USVString url, USVString base_) { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/URLParse/URLParse.generated.xml' path='docs/URLParse/*'/>
+	public static URL? Parse(USVString url, USVString base_) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/URLCanParse/URLCanParse.generated.xml' path='docs/URLCanParse/*'/>
 	public static bool CanParse(USVString url, USVString base_) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/URLHref/URLHref.generated.xml' path='docs/URLHref/*'/>
@@ -21228,7 +19475,7 @@ public partial class URL
 public partial class URLSearchParams
 {
 	///<include file='Utils/Docs/URLSearchParamsURLSearchParams/URLSearchParamsURLSearchParams.generated.xml' path='docs/URLSearchParamsURLSearchParams/*'/>
-	public URLSearchParams(Union129 init) { }
+	public URLSearchParams(Union153 init) { }
 	///<include file='Utils/Docs/URLSearchParamsSize/URLSearchParamsSize.generated.xml' path='docs/URLSearchParamsSize/*'/>
 	public ulong Size { get; }
 	///<include file='Utils/Docs/URLSearchParamsAppend/URLSearchParamsAppend.generated.xml' path='docs/URLSearchParamsAppend/*'/>
@@ -21336,9 +19583,9 @@ public partial class PerformanceMarkOptions
 public partial class PerformanceMeasureOptions
 {
 		public dynamic Detail;
-		public Union132 Start;
+		public Union156 Start;
 		public DOMHighResTimeStamp Duration;
-		public Union133 End;
+		public Union157 End;
 }
 
 ///<include file='Utils/Docs/Performance/Performance.generated.xml' path='docs/Performance/*'/>
@@ -21349,7 +19596,7 @@ public partial class Performance
 	///<include file='Utils/Docs/PerformanceClearMarks/PerformanceClearMarks.generated.xml' path='docs/PerformanceClearMarks/*'/>
 	public Undefined ClearMarks(DOMString markName) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/PerformanceMeasure/PerformanceMeasure.generated.xml' path='docs/PerformanceMeasure/*'/>
-	public PerformanceMeasure Measure(DOMString measureName, Union134 startOrMeasureOptions, DOMString endMark) { throw new System.NotImplementedException(); }
+	public PerformanceMeasure Measure(DOMString measureName, Union158 startOrMeasureOptions, DOMString endMark) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/PerformanceClearMeasures/PerformanceClearMeasures.generated.xml' path='docs/PerformanceClearMeasures/*'/>
 	public Undefined ClearMeasures(DOMString measureName) { throw new System.NotImplementedException(); }
 }
@@ -21396,11 +19643,6 @@ public partial class VideoFrameCallbackMetadata
 		public ulong RtpTimestamp;
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct VideoFrameRequestCallback
-{
-}
-
 ///<include file='Utils/Docs/HTMLVideoElement/HTMLVideoElement.generated.xml' path='docs/HTMLVideoElement/*'/>
 public partial class HTMLVideoElement
 {
@@ -21434,68 +19676,6 @@ public partial class VirtualKeyboard : EventTarget
 		public EventHandler Ongeometrychange { get; set; }
 }
 
-public partial interface ElementContentEditable
-{
-		public DOMString VirtualKeyboardPolicy { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface ARIAMixin
-{
-		public DOMString? Role { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public Element? AriaActiveDescendantElement { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public DOMString? AriaAtomic { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public DOMString? AriaAutoComplete { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public DOMString? AriaBrailleLabel { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public DOMString? AriaBrailleRoleDescription { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public DOMString? AriaBusy { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public DOMString? AriaChecked { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public DOMString? AriaColCount { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public DOMString? AriaColIndex { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public DOMString? AriaColIndexText { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public DOMString? AriaColSpan { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public Element[]? AriaControlsElements { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public DOMString? AriaCurrent { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public Element[]? AriaDescribedByElements { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public DOMString? AriaDescription { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public Element[]? AriaDetailsElements { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public DOMString? AriaDisabled { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public Element[]? AriaErrorMessageElements { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public DOMString? AriaExpanded { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public Element[]? AriaFlowToElements { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public DOMString? AriaHasPopup { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public DOMString? AriaHidden { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public DOMString? AriaInvalid { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public DOMString? AriaKeyShortcuts { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public DOMString? AriaLabel { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public Element[]? AriaLabelledByElements { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public DOMString? AriaLevel { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public DOMString? AriaLive { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public DOMString? AriaModal { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public DOMString? AriaMultiLine { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public DOMString? AriaMultiSelectable { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public DOMString? AriaOrientation { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public Element[]? AriaOwnsElements { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public DOMString? AriaPlaceholder { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public DOMString? AriaPosInSet { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public DOMString? AriaPressed { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public DOMString? AriaReadOnly { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public DOMString? AriaRequired { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public DOMString? AriaRoleDescription { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public DOMString? AriaRowCount { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public DOMString? AriaRowIndex { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public DOMString? AriaRowIndexText { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public DOMString? AriaRowSpan { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public DOMString? AriaSelected { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public DOMString? AriaSetSize { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public DOMString? AriaSort { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public DOMString? AriaValueMax { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public DOMString? AriaValueMin { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public DOMString? AriaValueNow { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public DOMString? AriaValueText { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-}
-
-
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class WebAssemblyInstantiatedSource
 {
@@ -21508,21 +19688,8 @@ public partial class WebAssembly
 {
 		public bool Validate(BufferSource bytes) { throw new System.NotImplementedException(); }
 		public Task<Module> Compile(BufferSource bytes) { throw new System.NotImplementedException(); }
-		public Task<WebAssemblyInstantiatedSource> Instantiate(BufferSource bytes, object importObject) { throw new System.NotImplementedException(); }
-		public Task<Instance> Instantiate(Module moduleObject, object importObject) { throw new System.NotImplementedException(); }
-}
-
-[To(ToAttribute.None)]
-public enum ImportExportKind
-{
-	[Value("function")]
-	Function,
-	[Value("table")]
-	Table,
-	[Value("memory")]
-	Memory,
-	[Value("global")]
-	Global,
+		public Task<WebAssemblyInstantiatedSource> Instantiate(BufferSource bytes, Object importObject) { throw new System.NotImplementedException(); }
+		public Task<Instance> Instantiate(Module moduleObject, Object importObject) { throw new System.NotImplementedException(); }
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -21553,8 +19720,8 @@ public partial class Module
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class Instance
 {
-		public Instance(Module module, object importObject) { }
-		public object Exports { get; }
+		public Instance(Module module, Object importObject) { }
+		public Object Exports { get; }
 	public Instance() { }
 }
 
@@ -21576,15 +19743,6 @@ public partial class Memory
 	public Memory() { }
 }
 
-[To(ToAttribute.None)]
-public enum TableKind
-{
-	[Value("externref")]
-	Externref,
-	[Value("anyfunc")]
-	Anyfunc,
-}
-
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class TableDescriptor
 {
@@ -21593,6 +19751,7 @@ public partial class TableDescriptor
 		public ulong Maximum;
 }
 
+///<include file='Utils/Docs/Table/Table.generated.xml' path='docs/Table/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class Table
 {
@@ -21602,25 +19761,6 @@ public partial class Table
 		public Undefined Set(ulong index, dynamic value) { throw new System.NotImplementedException(); }
 		public ulong Length { get; }
 	public Table() { }
-}
-
-[To(ToAttribute.None)]
-public enum ValueType
-{
-	[Value("i32")]
-	I32,
-	[Value("i64")]
-	I64,
-	[Value("f32")]
-	F32,
-	[Value("f64")]
-	F64,
-	[Value("v128")]
-	V128,
-	[Value("externref")]
-	Externref,
-	[Value("anyfunc")]
-	Anyfunc,
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -21642,7 +19782,7 @@ public partial class Global
 public partial class WebAssembly
 {
 		public Task<Module> CompileStreaming(Task<Response> source) { throw new System.NotImplementedException(); }
-		public Task<WebAssemblyInstantiatedSource> InstantiateStreaming(Task<Response> source, object importObject) { throw new System.NotImplementedException(); }
+		public Task<WebAssemblyInstantiatedSource> InstantiateStreaming(Task<Response> source, Object importObject) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/AnimationTimeline/AnimationTimeline.generated.xml' path='docs/AnimationTimeline/*'/>
@@ -21663,7 +19803,7 @@ public partial class Animation
 	public CSSNumberish? StartTime { get; set; }
 	///<include file='Utils/Docs/AnimationCurrentTime/AnimationCurrentTime.generated.xml' path='docs/AnimationCurrentTime/*'/>
 	public CSSNumberish? CurrentTime { get; set; }
-		public Number? Progress { get; }
+		public Number? OverallProgress { get; }
 }
 
 ///<include file='Utils/Docs/AnimationEffect/AnimationEffect.generated.xml' path='docs/AnimationEffect/*'/>
@@ -21685,7 +19825,7 @@ public partial class EffectTiming
 		public Number Delay;
 		public Number EndDelay;
 		public Number PlaybackRate;
-		public Union136 Duration;
+		public Union160 Duration;
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -21706,7 +19846,7 @@ public partial class ComputedEffectTiming
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class GroupEffect
 {
-		public GroupEffect(List<AnimationEffect>? children, Union137 timing) { }
+		public GroupEffect(List<AnimationEffect>? children, Union161 timing) { }
 		public AnimationNodeList Children { get; }
 		public AnimationEffect? FirstChild { get; }
 		public AnimationEffect? LastChild { get; }
@@ -21726,7 +19866,7 @@ public partial class AnimationNodeList
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class SequenceEffect : GroupEffect
 {
-		public SequenceEffect(List<AnimationEffect>? children, Union138 timing) { }
+		public SequenceEffect(List<AnimationEffect>? children, Union162 timing) { }
 		public SequenceEffect Clone() { throw new System.NotImplementedException(); }
 	public SequenceEffect() { }
 }
@@ -21745,20 +19885,6 @@ public partial class KeyframeEffectOptions
 		public IterationCompositeOperation IterationComposite;
 }
 
-[To(ToAttribute.None)]
-public enum IterationCompositeOperation
-{
-	[Value("replace")]
-	Replace,
-	[Value("accumulate")]
-	Accumulate,
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct EffectCallback
-{
-}
-
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class TimelineRangeOffset
 {
@@ -21769,8 +19895,8 @@ public partial class TimelineRangeOffset
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class KeyframeAnimationOptions
 {
-		public Union140 RangeStart;
-		public Union141 RangeEnd;
+		public Union164 RangeStart;
+		public Union165 RangeEnd;
 }
 
 ///<include file='Utils/Docs/AnimationPlaybackEvent/AnimationPlaybackEvent.generated.xml' path='docs/AnimationPlaybackEvent/*'/>
@@ -21858,32 +19984,6 @@ public partial class Animation : EventTarget
 	public Animation() { }
 }
 
-///<include file='Utils/Docs/AnimationPlayState/AnimationPlayState.generated.xml' path='docs/AnimationPlayState/*'/>
-[To(ToAttribute.None)]
-public enum AnimationPlayState
-{
-	[Value("idle")]
-	Idle,
-	[Value("running")]
-	Running,
-	[Value("paused")]
-	Paused,
-	[Value("finished")]
-	Finished,
-}
-
-///<include file='Utils/Docs/AnimationReplaceState/AnimationReplaceState.generated.xml' path='docs/AnimationReplaceState/*'/>
-[To(ToAttribute.None)]
-public enum AnimationReplaceState
-{
-	[Value("active")]
-	Active,
-	[Value("removed")]
-	Removed,
-	[Value("persisted")]
-	Persisted,
-}
-
 ///<include file='Utils/Docs/AnimationEffect/AnimationEffect.generated.xml' path='docs/AnimationEffect/*'/>
 public partial class AnimationEffect
 {
@@ -21911,37 +20011,9 @@ public partial class OptionalEffectTiming
 		public FillMode Fill;
 		public Number IterationStart;
 		public double Iterations;
-		public Union142 Duration;
+		public Union166 Duration;
 		public PlaybackDirection Direction;
 		public DOMString Easing;
-}
-
-[To(ToAttribute.None)]
-public enum FillMode
-{
-	[Value("none")]
-	None,
-	[Value("forwards")]
-	Forwards,
-	[Value("backwards")]
-	Backwards,
-	[Value("both")]
-	Both,
-	[Value("auto")]
-	Auto,
-}
-
-[To(ToAttribute.None)]
-public enum PlaybackDirection
-{
-	[Value("normal")]
-	Normal,
-	[Value("reverse")]
-	Reverse,
-	[Value("alternate")]
-	Alternate,
-	[Value("alternate-reverse")]
-	AlternateReverse,
 }
 
 public partial class ComputedEffectTiming : EffectTiming
@@ -21954,7 +20026,7 @@ public partial class ComputedEffectTiming : EffectTiming
 public partial class KeyframeEffect : AnimationEffect
 {
 	///<include file='Utils/Docs/KeyframeEffectKeyframeEffect/KeyframeEffectKeyframeEffect.generated.xml' path='docs/KeyframeEffectKeyframeEffect/*'/>
-	public KeyframeEffect(Element? target, object? keyframes, Union143 options) { }
+	public KeyframeEffect(Element? target, Object? keyframes, Union167 options) { }
 	///<include file='Utils/Docs/KeyframeEffectKeyframeEffect/KeyframeEffectKeyframeEffect.generated.xml' path='docs/KeyframeEffectKeyframeEffect/*'/>
 	public KeyframeEffect(KeyframeEffect source) { }
 	///<include file='Utils/Docs/KeyframeEffectTarget/KeyframeEffectTarget.generated.xml' path='docs/KeyframeEffectTarget/*'/>
@@ -21964,9 +20036,9 @@ public partial class KeyframeEffect : AnimationEffect
 	///<include file='Utils/Docs/KeyframeEffectComposite/KeyframeEffectComposite.generated.xml' path='docs/KeyframeEffectComposite/*'/>
 	public CompositeOperation Composite { get; set; }
 	///<include file='Utils/Docs/KeyframeEffectGetKeyframes/KeyframeEffectGetKeyframes.generated.xml' path='docs/KeyframeEffectGetKeyframes/*'/>
-	public List<object> GetKeyframes() { throw new System.NotImplementedException(); }
+	public List<Object> GetKeyframes() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/KeyframeEffectSetKeyframes/KeyframeEffectSetKeyframes.generated.xml' path='docs/KeyframeEffectSetKeyframes/*'/>
-	public Undefined SetKeyframes(object? keyframes) { throw new System.NotImplementedException(); }
+	public Undefined SetKeyframes(Object? keyframes) { throw new System.NotImplementedException(); }
 	public KeyframeEffect() { }
 }
 
@@ -21982,9 +20054,9 @@ public partial class BaseComputedKeyframe
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class BasePropertyIndexedKeyframe
 {
-		public Union144 Offset;
-		public Union145 Easing;
-		public Union146 Composite;
+		public Union168 Offset;
+		public Union169 Easing;
+		public Union170 Composite;
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -22001,37 +20073,6 @@ public partial class KeyframeEffectOptions : EffectTiming
 		public CSSOMString? PseudoElement;
 }
 
-[To(ToAttribute.None)]
-public enum CompositeOperation
-{
-	[Value("replace")]
-	Replace,
-	[Value("add")]
-	Add,
-	[Value("accumulate")]
-	Accumulate,
-}
-
-[To(ToAttribute.None)]
-public enum CompositeOperationOrAuto
-{
-	[Value("replace")]
-	Replace,
-	[Value("add")]
-	Add,
-	[Value("accumulate")]
-	Accumulate,
-	[Value("auto")]
-	Auto,
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface Animatable
-{
-		public Animation Animate(object? keyframes, Union147 options) { throw new System.NotImplementedException(); }
-		public List<Animation> GetAnimations(GetAnimationsOptions options) { throw new System.NotImplementedException(); }
-}
-
 public partial class KeyframeAnimationOptions : KeyframeEffectOptions
 {
 		public DOMString Id;
@@ -22042,6 +20083,7 @@ public partial class KeyframeAnimationOptions : KeyframeEffectOptions
 public partial class GetAnimationsOptions
 {
 		public bool Subtree;
+		public CSSOMString? PseudoElement;
 }
 
 ///<include file='Utils/Docs/Document/Document.generated.xml' path='docs/Document/*'/>
@@ -22051,12 +20093,6 @@ public partial class Document
 	public DocumentTimeline Timeline { get; }
 }
 
-public partial interface DocumentOrShadowRoot
-{
-		public List<Animation> GetAnimations() { throw new System.NotImplementedException(); }
-}
-
-
 ///<include file='Utils/Docs/LaunchParams/LaunchParams.generated.xml' path='docs/LaunchParams/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class LaunchParams
@@ -22065,11 +20101,6 @@ public partial class LaunchParams
 	public DOMString? TargetURL { get; }
 	///<include file='Utils/Docs/LaunchParamsFiles/LaunchParamsFiles.generated.xml' path='docs/LaunchParamsFiles/*'/>
 	public FileSystemHandle[] Files { get; }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct LaunchConsumer
-{
 }
 
 ///<include file='Utils/Docs/Window/Window.generated.xml' path='docs/Window/*'/>
@@ -22115,7 +20146,7 @@ public partial class BluetoothDataFilter
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class BluetoothManufacturerDataFilter
 {
-		public BluetoothManufacturerDataFilter(object init) { }
+		public BluetoothManufacturerDataFilter(Object init) { }
 	
 	public BluetoothManufacturerDataFilter() { }
 }
@@ -22123,7 +20154,7 @@ public partial class BluetoothManufacturerDataFilter
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class BluetoothServiceDataFilter
 {
-		public BluetoothServiceDataFilter(object init) { }
+		public BluetoothServiceDataFilter(Object init) { }
 	
 	public BluetoothServiceDataFilter() { }
 }
@@ -22234,7 +20265,7 @@ public partial class AllowedBluetoothDevice
 {
 		public required DOMString DeviceId;
 		public required bool MayUseGATT;
-		public required Union148 AllowedServices;
+		public required Union172 AllowedServices;
 		public required List<ushort> AllowedManufacturerData;
 }
 
@@ -22437,38 +20468,16 @@ public partial class BluetoothRemoteGATTDescriptor
 	public Task<Undefined> WriteValue(BufferSource value) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface CharacteristicEventHandlers
-{
-		public EventHandler Oncharacteristicvaluechanged { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface BluetoothDeviceEventHandlers
-{
-		public EventHandler Onadvertisementreceived { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Ongattserverdisconnected { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface ServiceEventHandlers
-{
-		public EventHandler Onserviceadded { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onservicechanged { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public EventHandler Onserviceremoved { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-}
-
-
 ///<include file='Utils/Docs/BluetoothUUID/BluetoothUUID.generated.xml' path='docs/BluetoothUUID/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class BluetoothUUID
 {
 	///<include file='Utils/Docs/BluetoothUUIDGetService/BluetoothUUIDGetService.generated.xml' path='docs/BluetoothUUIDGetService/*'/>
-	public static UUID GetService(Union149 name) { throw new System.NotImplementedException(); }
+	public static UUID GetService(Union173 name) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/BluetoothUUIDGetCharacteristic/BluetoothUUIDGetCharacteristic.generated.xml' path='docs/BluetoothUUIDGetCharacteristic/*'/>
-	public static UUID GetCharacteristic(Union150 name) { throw new System.NotImplementedException(); }
+	public static UUID GetCharacteristic(Union174 name) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/BluetoothUUIDGetDescriptor/BluetoothUUIDGetDescriptor.generated.xml' path='docs/BluetoothUUIDGetDescriptor/*'/>
-	public static UUID GetDescriptor(Union151 name) { throw new System.NotImplementedException(); }
+	public static UUID GetDescriptor(Union175 name) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/BluetoothUUIDCanonicalUUID/BluetoothUUIDCanonicalUUID.generated.xml' path='docs/BluetoothUUIDCanonicalUUID/*'/>
 	public static UUID CanonicalUUID(ulong alias) { throw new System.NotImplementedException(); }
 }
@@ -22483,15 +20492,6 @@ public partial class Navigator
 	public Bluetooth Bluetooth { get; }
 }
 
-///<include file='Utils/Docs/NavigatorLocks/NavigatorLocks.generated.xml' path='docs/NavigatorLocks/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface NavigatorLocks
-{
-		public LockManager Locks { get { throw new System.NotImplementedException(); } }
-}
-
-
-
 ///<include file='Utils/Docs/LockManager/LockManager.generated.xml' path='docs/LockManager/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class LockManager
@@ -22502,21 +20502,6 @@ public partial class LockManager
 	public Task<dynamic> Request(DOMString name, LockOptions options, LockGrantedCallback callback) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/LockManagerQuery/LockManagerQuery.generated.xml' path='docs/LockManagerQuery/*'/>
 	public Task<LockManagerSnapshot> Query() { throw new System.NotImplementedException(); }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct LockGrantedCallback
-{
-}
-
-///<include file='Utils/Docs/LockMode/LockMode.generated.xml' path='docs/LockMode/*'/>
-[To(ToAttribute.None)]
-public enum LockMode
-{
-	[Value("shared")]
-	Shared,
-	[Value("exclusive")]
-	Exclusive,
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -22678,13 +20663,6 @@ public partial class OTPCredentialRequestOptions
 		public List<OTPCredentialTransportType> Transport;
 }
 
-[To(ToAttribute.None)]
-public enum OTPCredentialTransportType
-{
-	[Value("sms")]
-	Sms,
-}
-
 ///<include file='Utils/Docs/Navigator/Navigator.generated.xml' path='docs/Navigator/*'/>
 public partial class Navigator
 {
@@ -22701,36 +20679,6 @@ public partial class ShareData
 		public USVString Title;
 		public USVString Text;
 		public USVString Url;
-}
-
-[To(ToAttribute.None)]
-public enum AudioContextState
-{
-	[Value("suspended")]
-	Suspended,
-	[Value("running")]
-	Running,
-	[Value("closed")]
-	Closed,
-}
-
-[To(ToAttribute.None)]
-public enum AudioContextRenderSizeCategory
-{
-	[Value("default")]
-	Default,
-	[Value("hardware")]
-	Hardware,
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct DecodeErrorCallback
-{
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct DecodeSuccessCallback
-{
 }
 
 ///<include file='Utils/Docs/BaseAudioContext/BaseAudioContext.generated.xml' path='docs/BaseAudioContext/*'/>
@@ -22791,24 +20739,6 @@ public partial class BaseAudioContext : EventTarget
 	public Task<AudioBuffer> DecodeAudioData(byte[] audioData, DecodeSuccessCallback? successCallback, DecodeErrorCallback? errorCallback) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.None)]
-public enum AudioContextLatencyCategory
-{
-	[Value("balanced")]
-	Balanced,
-	[Value("interactive")]
-	Interactive,
-	[Value("playback")]
-	Playback,
-}
-
-[To(ToAttribute.None)]
-public enum AudioSinkType
-{
-	[Value("none")]
-	None,
-}
-
 ///<include file='Utils/Docs/AudioContext/AudioContext.generated.xml' path='docs/AudioContext/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class AudioContext : BaseAudioContext
@@ -22820,9 +20750,10 @@ public partial class AudioContext : BaseAudioContext
 	///<include file='Utils/Docs/AudioContextOutputLatency/AudioContextOutputLatency.generated.xml' path='docs/AudioContextOutputLatency/*'/>
 	public Number OutputLatency { get; }
 	///<include file='Utils/Docs/AudioContextSinkId/AudioContextSinkId.generated.xml' path='docs/AudioContextSinkId/*'/>
-	public Union156 SinkId { get; }
+	public Union180 SinkId { get; }
 		public AudioRenderCapacity RenderCapacity { get; }
 		public EventHandler Onsinkchange { get; set; }
+		public EventHandler Onerror { get; set; }
 	///<include file='Utils/Docs/AudioContextGetOutputTimestamp/AudioContextGetOutputTimestamp.generated.xml' path='docs/AudioContextGetOutputTimestamp/*'/>
 	public AudioTimestamp GetOutputTimestamp() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/AudioContextResume/AudioContextResume.generated.xml' path='docs/AudioContextResume/*'/>
@@ -22832,7 +20763,7 @@ public partial class AudioContext : BaseAudioContext
 	///<include file='Utils/Docs/AudioContextClose/AudioContextClose.generated.xml' path='docs/AudioContextClose/*'/>
 	public Task<Undefined> Close() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/AudioContextSetSinkId/AudioContextSetSinkId.generated.xml' path='docs/AudioContextSetSinkId/*'/>
-	public Task<Undefined> SetSinkId(Union157 sinkId) { throw new System.NotImplementedException(); }
+	public Task<Undefined> SetSinkId(Union181 sinkId) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/AudioContextCreateMediaElementSource/AudioContextCreateMediaElementSource.generated.xml' path='docs/AudioContextCreateMediaElementSource/*'/>
 	public MediaElementAudioSourceNode CreateMediaElementSource(HTMLMediaElement mediaElement) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/AudioContextCreateMediaStreamSource/AudioContextCreateMediaStreamSource.generated.xml' path='docs/AudioContextCreateMediaStreamSource/*'/>
@@ -22847,10 +20778,10 @@ public partial class AudioContext : BaseAudioContext
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class AudioContextOptions
 {
-		public Union158 LatencyHint;
+		public Union182 LatencyHint;
 		public Number SampleRate;
-		public Union159 SinkId;
-		public Union160 RenderSizeHint;
+		public Union183 SinkId;
+		public Union184 RenderSizeHint;
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -22934,7 +20865,7 @@ public partial class OfflineAudioContextOptions
 		public ulong NumberOfChannels;
 		public required ulong Length;
 		public required Number SampleRate;
-		public Union161 RenderSizeHint;
+		public Union185 RenderSizeHint;
 }
 
 ///<include file='Utils/Docs/OfflineAudioCompletionEvent/OfflineAudioCompletionEvent.generated.xml' path='docs/OfflineAudioCompletionEvent/*'/>
@@ -23021,41 +20952,12 @@ public partial class AudioNode : EventTarget
 	public ChannelInterpretation ChannelInterpretation { get; set; }
 }
 
-[To(ToAttribute.None)]
-public enum ChannelCountMode
-{
-	[Value("max")]
-	Max,
-	[Value("clamped-max")]
-	ClampedMax,
-	[Value("explicit")]
-	Explicit,
-}
-
-[To(ToAttribute.None)]
-public enum ChannelInterpretation
-{
-	[Value("speakers")]
-	Speakers,
-	[Value("discrete")]
-	Discrete,
-}
-
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class AudioNodeOptions
 {
 		public ulong ChannelCount;
 		public ChannelCountMode ChannelCountMode;
 		public ChannelInterpretation ChannelInterpretation;
-}
-
-[To(ToAttribute.None)]
-public enum AutomationRate
-{
-	[Value("a-rate")]
-	ARate,
-	[Value("k-rate")]
-	KRate,
 }
 
 ///<include file='Utils/Docs/AudioParam/AudioParam.generated.xml' path='docs/AudioParam/*'/>
@@ -23225,27 +21127,6 @@ public partial class AudioProcessingEventInit : EventInit
 		public required Number PlaybackTime;
 		public required AudioBuffer InputBuffer;
 		public required AudioBuffer OutputBuffer;
-}
-
-[To(ToAttribute.None)]
-public enum BiquadFilterType
-{
-	[Value("lowpass")]
-	Lowpass,
-	[Value("highpass")]
-	Highpass,
-	[Value("bandpass")]
-	Bandpass,
-	[Value("lowshelf")]
-	Lowshelf,
-	[Value("highshelf")]
-	Highshelf,
-	[Value("peaking")]
-	Peaking,
-	[Value("notch")]
-	Notch,
-	[Value("allpass")]
-	Allpass,
 }
 
 ///<include file='Utils/Docs/BiquadFilterNode/BiquadFilterNode.generated.xml' path='docs/BiquadFilterNode/*'/>
@@ -23490,21 +21371,6 @@ public partial class MediaStreamTrackAudioSourceOptions
 		public required MediaStreamTrack MediaStreamTrack;
 }
 
-[To(ToAttribute.None)]
-public enum OscillatorType
-{
-	[Value("sine")]
-	Sine,
-	[Value("square")]
-	Square,
-	[Value("sawtooth")]
-	Sawtooth,
-	[Value("triangle")]
-	Triangle,
-	[Value("custom")]
-	Custom,
-}
-
 ///<include file='Utils/Docs/OscillatorNode/OscillatorNode.generated.xml' path='docs/OscillatorNode/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class OscillatorNode : AudioScheduledSourceNode
@@ -23529,26 +21395,6 @@ public partial class OscillatorOptions : AudioNodeOptions
 		public Number Frequency;
 		public Number Detune;
 		public PeriodicWave PeriodicWave;
-}
-
-[To(ToAttribute.None)]
-public enum PanningModelType
-{
-	[Value("equalpower")]
-	Equalpower,
-	[Value("HRTF")]
-	HRTF,
-}
-
-[To(ToAttribute.None)]
-public enum DistanceModelType
-{
-	[Value("linear")]
-	Linear,
-	[Value("inverse")]
-	Inverse,
-	[Value("exponential")]
-	Exponential,
 }
 
 ///<include file='Utils/Docs/PannerNode/PannerNode.generated.xml' path='docs/PannerNode/*'/>
@@ -23659,17 +21505,6 @@ public partial class StereoPannerOptions : AudioNodeOptions
 		public Number Pan;
 }
 
-[To(ToAttribute.None)]
-public enum OverSampleType
-{
-	[Value("none")]
-	None,
-	[Value("2x")]
-	_2x,
-	[Value("4x")]
-	_4x,
-}
-
 ///<include file='Utils/Docs/WaveShaperNode/WaveShaperNode.generated.xml' path='docs/WaveShaperNode/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class WaveShaperNode : AudioNode
@@ -23695,11 +21530,6 @@ public partial class WaveShaperOptions : AudioNodeOptions
 public partial class AudioWorklet : Worklet
 {
 		public MessagePort Port { get; }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct AudioWorkletProcessorConstructor
-{
 }
 
 ///<include file='Utils/Docs/AudioWorkletGlobalScope/AudioWorkletGlobalScope.generated.xml' path='docs/AudioWorkletGlobalScope/*'/>
@@ -23746,7 +21576,7 @@ public partial class AudioWorkletNodeOptions : AudioNodeOptions
 		public ulong NumberOfOutputs;
 		public List<ulong> OutputChannelCount;
 		public Dictionary<DOMString, Number> ParameterData;
-		public object ProcessorOptions;
+		public Object ProcessorOptions;
 }
 
 ///<include file='Utils/Docs/AudioWorkletProcessor/AudioWorkletProcessor.generated.xml' path='docs/AudioWorkletProcessor/*'/>
@@ -23757,11 +21587,6 @@ public partial class AudioWorkletProcessor
 	public AudioWorkletProcessor() { }
 	///<include file='Utils/Docs/AudioWorkletProcessorPort/AudioWorkletProcessorPort.generated.xml' path='docs/AudioWorkletProcessorPort/*'/>
 	public MessagePort Port { get; }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct AudioWorkletProcessCallback
-{
 }
 
 ///<include file='Utils/Docs/AudioParamDescriptor/AudioParamDescriptor.generated.xml' path='docs/AudioParamDescriptor/*'/>
@@ -23798,7 +21623,7 @@ public partial class PublicKeyCredential : Credential
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class RegistrationResponseJSON
 {
-		public required Base64URLString Id;
+		public required DOMString Id;
 		public required Base64URLString RawId;
 		public required AuthenticatorAttestationResponseJSON Response;
 		public DOMString AuthenticatorAttachment;
@@ -23813,14 +21638,14 @@ public partial class AuthenticatorAttestationResponseJSON
 		public required Base64URLString AuthenticatorData;
 		public required List<DOMString> Transports;
 		public Base64URLString PublicKey;
-		public required long PublicKeyAlgorithm;
+		public required COSEAlgorithmIdentifier PublicKeyAlgorithm;
 		public required Base64URLString AttestationObject;
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class AuthenticationResponseJSON
 {
-		public required Base64URLString Id;
+		public required DOMString Id;
 		public required Base64URLString RawId;
 		public required AuthenticatorAssertionResponseJSON Response;
 		public DOMString AuthenticatorAttachment;
@@ -23900,8 +21725,8 @@ public partial class PublicKeyCredentialUserEntityJSON
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class PublicKeyCredentialDescriptorJSON
 {
-		public required Base64URLString Id;
 		public required DOMString Type;
+		public required Base64URLString Id;
 		public List<DOMString> Transports;
 }
 
@@ -23927,6 +21752,38 @@ public partial class PublicKeyCredentialRequestOptionsJSON
 		public DOMString UserVerification;
 		public List<DOMString> Hints;
 		public AuthenticationExtensionsClientInputsJSON Extensions;
+}
+
+///<include file='Utils/Docs/PublicKeyCredential/PublicKeyCredential.generated.xml' path='docs/PublicKeyCredential/*'/>
+public partial class PublicKeyCredential
+{
+		public static Task<Undefined> SignalUnknownCredential(UnknownCredentialOptions options) { throw new System.NotImplementedException(); }
+		public static Task<Undefined> SignalAllAcceptedCredentials(AllAcceptedCredentialsOptions options) { throw new System.NotImplementedException(); }
+		public static Task<Undefined> SignalCurrentUserDetails(CurrentUserDetailsOptions options) { throw new System.NotImplementedException(); }
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class UnknownCredentialOptions
+{
+		public required DOMString RpId;
+		public required Base64URLString CredentialId;
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class AllAcceptedCredentialsOptions
+{
+		public required DOMString RpId;
+		public required Base64URLString UserId;
+		public required List<Base64URLString> AllAcceptedCredentialIds;
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class CurrentUserDetailsOptions
+{
+		public required DOMString RpId;
+		public required Base64URLString UserId;
+		public required DOMString Name;
+		public required DOMString DisplayName;
 }
 
 ///<include file='Utils/Docs/AuthenticatorResponse/AuthenticatorResponse.generated.xml' path='docs/AuthenticatorResponse/*'/>
@@ -23972,6 +21829,7 @@ public partial class PublicKeyCredentialParameters
 		public required COSEAlgorithmIdentifier Alg;
 }
 
+///<include file='Utils/Docs/PublicKeyCredentialCreationOptions/PublicKeyCredentialCreationOptions.generated.xml' path='docs/PublicKeyCredentialCreationOptions/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class PublicKeyCredentialCreationOptions
 {
@@ -24016,45 +21874,13 @@ public partial class AuthenticatorSelectionCriteria
 		public DOMString UserVerification;
 }
 
-[To(ToAttribute.None)]
-public enum AuthenticatorAttachment
-{
-	[Value("platform")]
-	Platform,
-	[Value("cross-platform")]
-	CrossPlatform,
-}
-
-[To(ToAttribute.None)]
-public enum ResidentKeyRequirement
-{
-	[Value("discouraged")]
-	Discouraged,
-	[Value("preferred")]
-	Preferred,
-	[Value("required")]
-	Required,
-}
-
-[To(ToAttribute.None)]
-public enum AttestationConveyancePreference
-{
-	[Value("none")]
-	None,
-	[Value("indirect")]
-	Indirect,
-	[Value("direct")]
-	Direct,
-	[Value("enterprise")]
-	Enterprise,
-}
-
+///<include file='Utils/Docs/PublicKeyCredentialRequestOptions/PublicKeyCredentialRequestOptions.generated.xml' path='docs/PublicKeyCredentialRequestOptions/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class PublicKeyCredentialRequestOptions
 {
 		public required BufferSource Challenge;
 		public ulong Timeout;
-		public USVString RpId;
+		public DOMString RpId;
 		public List<PublicKeyCredentialDescriptor> AllowCredentials;
 		public DOMString UserVerification;
 		public List<DOMString> Hints;
@@ -24075,8 +21901,8 @@ public partial class CollectedClientData
 		public required DOMString Type;
 		public required DOMString Challenge;
 		public required DOMString Origin;
-		public DOMString TopOrigin;
 		public bool CrossOrigin;
+		public DOMString TopOrigin;
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -24084,22 +21910,6 @@ public partial class TokenBinding
 {
 		public required DOMString Status;
 		public DOMString Id;
-}
-
-[To(ToAttribute.None)]
-public enum TokenBindingStatus
-{
-	[Value("present")]
-	Present,
-	[Value("supported")]
-	Supported,
-}
-
-[To(ToAttribute.None)]
-public enum PublicKeyCredentialType
-{
-	[Value("public-key")]
-	PublicKey,
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -24110,64 +21920,9 @@ public partial class PublicKeyCredentialDescriptor
 		public List<DOMString> Transports;
 }
 
-[To(ToAttribute.None)]
-public enum AuthenticatorTransport
-{
-	[Value("usb")]
-	Usb,
-	[Value("nfc")]
-	Nfc,
-	[Value("ble")]
-	Ble,
-	[Value("smart-card")]
-	SmartCard,
-	[Value("hybrid")]
-	Hybrid,
-	[Value("internal")]
-	Internal,
-}
-
-
-[To(ToAttribute.None)]
-public enum UserVerificationRequirement
-{
-	[Value("required")]
-	Required,
-	[Value("preferred")]
-	Preferred,
-	[Value("discouraged")]
-	Discouraged,
-}
-
-[To(ToAttribute.None)]
-public enum ClientCapability
-{
-	[Value("conditionalCreate")]
-	ConditionalCreate,
-	[Value("conditionalMediation")]
-	ConditionalMediation,
-	[Value("hybridTransport")]
-	HybridTransport,
-	[Value("passkeyPlatformAuthenticator")]
-	PasskeyPlatformAuthenticator,
-	[Value("userVerifyingPlatformAuthenticator")]
-	UserVerifyingPlatformAuthenticator,
-}
-
-[To(ToAttribute.None)]
-public enum PublicKeyCredentialHints
-{
-	[Value("security-key")]
-	SecurityKey,
-	[Value("client-device")]
-	ClientDevice,
-	[Value("hybrid")]
-	Hybrid,
-}
-
 public partial class AuthenticationExtensionsClientInputs
 {
-		public USVString Appid;
+		public DOMString Appid;
 }
 
 public partial class AuthenticationExtensionsClientOutputs
@@ -24177,7 +21932,7 @@ public partial class AuthenticationExtensionsClientOutputs
 
 public partial class AuthenticationExtensionsClientInputs
 {
-		public USVString AppidExclude;
+		public DOMString AppidExclude;
 }
 
 public partial class AuthenticationExtensionsClientOutputs
@@ -24194,7 +21949,6 @@ public partial class AuthenticationExtensionsClientInputs
 public partial class CredentialPropertiesOutput
 {
 		public bool Rk;
-		public USVString AuthenticatorDisplayName;
 }
 
 public partial class AuthenticationExtensionsClientOutputs
@@ -24213,7 +21967,7 @@ public partial class AuthenticationExtensionsPRFValues
 public partial class AuthenticationExtensionsPRFInputs
 {
 		public AuthenticationExtensionsPRFValues Eval;
-		public Dictionary<USVString, AuthenticationExtensionsPRFValues> EvalByCredential;
+		public Dictionary<DOMString, AuthenticationExtensionsPRFValues> EvalByCredential;
 }
 
 public partial class AuthenticationExtensionsClientInputs
@@ -24238,15 +21992,6 @@ public partial class AuthenticationExtensionsClientInputs
 		public AuthenticationExtensionsLargeBlobInputs LargeBlob;
 }
 
-[To(ToAttribute.None)]
-public enum LargeBlobSupport
-{
-	[Value("required")]
-	Required,
-	[Value("preferred")]
-	Preferred,
-}
-
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class AuthenticationExtensionsLargeBlobInputs
 {
@@ -24268,42 +22013,6 @@ public partial class AuthenticationExtensionsLargeBlobOutputs
 		public bool Written;
 }
 
-public partial class AuthenticationExtensionsClientInputs
-{
-		public bool Uvm;
-}
-
-
-
-public partial class AuthenticationExtensionsClientOutputs
-{
-		public UvmEntries Uvm;
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class AuthenticationExtensionsSupplementalPubKeysInputs
-{
-		public required List<DOMString> Scopes;
-		public DOMString Attestation;
-		public List<DOMString> AttestationFormats;
-}
-
-public partial class AuthenticationExtensionsClientInputs
-{
-		public AuthenticationExtensionsSupplementalPubKeysInputs SupplementalPubKeys;
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class AuthenticationExtensionsSupplementalPubKeysOutputs
-{
-		public required List<byte[]> Signatures;
-}
-
-public partial class AuthenticationExtensionsClientOutputs
-{
-		public AuthenticationExtensionsSupplementalPubKeysOutputs SupplementalPubKeys;
-}
-
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class AudioEncoderConfig
 {
@@ -24314,27 +22023,6 @@ public partial class AudioEncoderConfig
 public partial class AacEncoderConfig
 {
 		public AacBitstreamFormat Format;
-}
-
-[To(ToAttribute.None)]
-public enum AacBitstreamFormat
-{
-	[Value("aac")]
-	Aac,
-	[Value("adts")]
-	Adts,
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class VideoEncoderConfig
-{
-		public AV1EncoderConfig Av1;
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class AV1EncoderConfig
-{
-		public bool ForceScreenContentTools;
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -24349,6 +22037,7 @@ public partial class VideoEncoderEncodeOptionsForAv1
 		public ushort? Quantizer;
 }
 
+[To(ToAttribute.FirstCharToLowerCase)]
 public partial class VideoEncoderConfig
 {
 		public AvcEncoderConfig Avc;
@@ -24358,15 +22047,6 @@ public partial class VideoEncoderConfig
 public partial class AvcEncoderConfig
 {
 		public AvcBitstreamFormat Format;
-}
-
-[To(ToAttribute.None)]
-public enum AvcBitstreamFormat
-{
-	[Value("annexb")]
-	Annexb,
-	[Value("avc")]
-	Avc,
 }
 
 public partial class VideoEncoderEncodeOptions
@@ -24403,15 +22083,6 @@ public partial class HevcEncoderConfig
 		public HevcBitstreamFormat Format;
 }
 
-[To(ToAttribute.None)]
-public enum HevcBitstreamFormat
-{
-	[Value("annexb")]
-	Annexb,
-	[Value("hevc")]
-	Hevc,
-}
-
 public partial class VideoEncoderEncodeOptions
 {
 		public VideoEncoderEncodeOptionsForHevc Hevc;
@@ -24439,37 +22110,6 @@ public partial class OpusEncoderConfig
 		public ulong Packetlossperc;
 		public bool Useinbandfec;
 		public bool Usedtx;
-}
-
-[To(ToAttribute.None)]
-public enum OpusBitstreamFormat
-{
-	[Value("opus")]
-	Opus,
-	[Value("ogg")]
-	Ogg,
-}
-
-[To(ToAttribute.None)]
-public enum OpusSignal
-{
-	[Value("auto")]
-	Auto,
-	[Value("music")]
-	Music,
-	[Value("voice")]
-	Voice,
-}
-
-[To(ToAttribute.None)]
-public enum OpusApplication
-{
-	[Value("voip")]
-	Voip,
-	[Value("audio")]
-	Audio,
-	[Value("lowdelay")]
-	Lowdelay,
 }
 
 public partial class VideoEncoderEncodeOptions
@@ -24516,11 +22156,6 @@ public partial class AudioDecoderInit
 		public required WebCodecsErrorCallback Error;
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct AudioDataOutputCallback
-{
-}
-
 ///<include file='Utils/Docs/VideoDecoder/VideoDecoder.generated.xml' path='docs/VideoDecoder/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class VideoDecoder : EventTarget
@@ -24554,11 +22189,6 @@ public partial class VideoDecoderInit
 		public required WebCodecsErrorCallback Error;
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct VideoFrameOutputCallback
-{
-}
-
 ///<include file='Utils/Docs/AudioEncoder/AudioEncoder.generated.xml' path='docs/AudioEncoder/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class AudioEncoder : EventTarget
@@ -24590,11 +22220,6 @@ public partial class AudioEncoderInit
 {
 		public required EncodedAudioChunkOutputCallback Output;
 		public required WebCodecsErrorCallback Error;
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct EncodedAudioChunkOutputCallback
-{
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -24634,11 +22259,6 @@ public partial class VideoEncoderInit
 {
 		public required EncodedVideoChunkOutputCallback Output;
 		public required WebCodecsErrorCallback Error;
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct EncodedVideoChunkOutputCallback
-{
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -24732,65 +22352,9 @@ public partial class VideoEncoderConfig
 		public DOMString ContentHint;
 }
 
-[To(ToAttribute.None)]
-public enum HardwareAcceleration
-{
-	[Value("no-preference")]
-	NoPreference,
-	[Value("prefer-hardware")]
-	PreferHardware,
-	[Value("prefer-software")]
-	PreferSoftware,
-}
-
-[To(ToAttribute.None)]
-public enum AlphaOption
-{
-	[Value("keep")]
-	Keep,
-	[Value("discard")]
-	Discard,
-}
-
-[To(ToAttribute.None)]
-public enum LatencyMode
-{
-	[Value("quality")]
-	Quality,
-	[Value("realtime")]
-	Realtime,
-}
-
 public partial class VideoEncoderEncodeOptions
 {
 		public bool KeyFrame;
-}
-
-[To(ToAttribute.None)]
-public enum VideoEncoderBitrateMode
-{
-	[Value("constant")]
-	Constant,
-	[Value("variable")]
-	Variable,
-	[Value("quantizer")]
-	Quantizer,
-}
-
-[To(ToAttribute.None)]
-public enum CodecState
-{
-	[Value("unconfigured")]
-	Unconfigured,
-	[Value("configured")]
-	Configured,
-	[Value("closed")]
-	Closed,
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct WebCodecsErrorCallback
-{
 }
 
 ///<include file='Utils/Docs/EncodedAudioChunk/EncodedAudioChunk.generated.xml' path='docs/EncodedAudioChunk/*'/>
@@ -24818,18 +22382,8 @@ public partial class EncodedAudioChunkInit
 		public required EncodedAudioChunkType Type;
 		public required long Timestamp;
 		public ulong Duration;
-		public required BufferSource Data;
+		public required AllowSharedBufferSource Data;
 		public List<byte[]> Transfer;
-}
-
-///<include file='Utils/Docs/EncodedAudioChunkType/EncodedAudioChunkType.generated.xml' path='docs/EncodedAudioChunkType/*'/>
-[To(ToAttribute.None)]
-public enum EncodedAudioChunkType
-{
-	[Value("key")]
-	Key,
-	[Value("delta")]
-	Delta,
 }
 
 ///<include file='Utils/Docs/EncodedVideoChunk/EncodedVideoChunk.generated.xml' path='docs/EncodedVideoChunk/*'/>
@@ -24859,16 +22413,6 @@ public partial class EncodedVideoChunkInit
 		public ulong Duration;
 		public required AllowSharedBufferSource Data;
 		public List<byte[]> Transfer;
-}
-
-///<include file='Utils/Docs/EncodedVideoChunkType/EncodedVideoChunkType.generated.xml' path='docs/EncodedVideoChunkType/*'/>
-[To(ToAttribute.None)]
-public enum EncodedVideoChunkType
-{
-	[Value("key")]
-	Key,
-	[Value("delta")]
-	Delta,
 }
 
 ///<include file='Utils/Docs/AudioData/AudioData.generated.xml' path='docs/AudioData/*'/>
@@ -24921,27 +22465,6 @@ public partial class AudioDataCopyToOptions
 		public AudioSampleFormat Format;
 }
 
-[To(ToAttribute.None)]
-public enum AudioSampleFormat
-{
-	[Value("u8")]
-	U8,
-	[Value("s16")]
-	S16,
-	[Value("s32")]
-	S32,
-	[Value("f32")]
-	F32,
-	[Value("u8-planar")]
-	U8Planar,
-	[Value("s16-planar")]
-	S16Planar,
-	[Value("s32-planar")]
-	S32Planar,
-	[Value("f32-planar")]
-	F32Planar,
-}
-
 ///<include file='Utils/Docs/VideoFrame/VideoFrame.generated.xml' path='docs/VideoFrame/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class VideoFrame
@@ -24960,6 +22483,8 @@ public partial class VideoFrame
 	public DOMRectReadOnly? CodedRect { get; }
 	///<include file='Utils/Docs/VideoFrameVisibleRect/VideoFrameVisibleRect.generated.xml' path='docs/VideoFrameVisibleRect/*'/>
 	public DOMRectReadOnly? VisibleRect { get; }
+		public Number Rotation { get; }
+		public bool Flip { get; }
 	///<include file='Utils/Docs/VideoFrameDisplayWidth/VideoFrameDisplayWidth.generated.xml' path='docs/VideoFrameDisplayWidth/*'/>
 	public ulong DisplayWidth { get; }
 	///<include file='Utils/Docs/VideoFrameDisplayHeight/VideoFrameDisplayHeight.generated.xml' path='docs/VideoFrameDisplayHeight/*'/>
@@ -24989,6 +22514,8 @@ public partial class VideoFrameInit
 		public long Timestamp;
 		public AlphaOption Alpha;
 		public DOMRectInit VisibleRect;
+		public Number Rotation;
+		public bool Flip;
 		public ulong DisplayWidth;
 		public ulong DisplayHeight;
 		public VideoFrameMetadata Metadata;
@@ -25004,6 +22531,8 @@ public partial class VideoFrameBufferInit
 		public ulong Duration;
 		public List<PlaneLayout> Layout;
 		public DOMRectInit VisibleRect;
+		public Number Rotation;
+		public bool Flip;
 		public ulong DisplayWidth;
 		public ulong DisplayHeight;
 		public VideoColorSpaceInit ColorSpace;
@@ -25021,6 +22550,8 @@ public partial class VideoFrameCopyToOptions
 {
 		public DOMRectInit Rect;
 		public List<PlaneLayout> Layout;
+		public VideoPixelFormat Format;
+		public PredefinedColorSpace ColorSpace;
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -25028,57 +22559,6 @@ public partial class PlaneLayout
 {
 		public required ulong Offset;
 		public required ulong Stride;
-}
-
-[To(ToAttribute.None)]
-public enum VideoPixelFormat
-{
-	[Value("I420")]
-	I420,
-	[Value("I420P10")]
-	I420P10,
-	[Value("I420P12")]
-	I420P12,
-	[Value("I420A")]
-	I420A,
-	[Value("I420AP10")]
-	I420AP10,
-	[Value("I420AP12")]
-	I420AP12,
-	[Value("I422")]
-	I422,
-	[Value("I422P10")]
-	I422P10,
-	[Value("I422P12")]
-	I422P12,
-	[Value("I422A")]
-	I422A,
-	[Value("I422AP10")]
-	I422AP10,
-	[Value("I422AP12")]
-	I422AP12,
-	[Value("I444")]
-	I444,
-	[Value("I444P10")]
-	I444P10,
-	[Value("I444P12")]
-	I444P12,
-	[Value("I444A")]
-	I444A,
-	[Value("I444AP10")]
-	I444AP10,
-	[Value("I444AP12")]
-	I444AP12,
-	[Value("NV12")]
-	NV12,
-	[Value("RGBA")]
-	RGBA,
-	[Value("RGBX")]
-	RGBX,
-	[Value("BGRA")]
-	BGRA,
-	[Value("BGRX")]
-	BGRX,
 }
 
 ///<include file='Utils/Docs/VideoColorSpace/VideoColorSpace.generated.xml' path='docs/VideoColorSpace/*'/>
@@ -25107,53 +22587,6 @@ public partial class VideoColorSpaceInit
 		public VideoTransferCharacteristics? Transfer;
 		public VideoMatrixCoefficients? Matrix;
 		public bool? FullRange;
-}
-
-[To(ToAttribute.None)]
-public enum VideoColorPrimaries
-{
-	[Value("bt709")]
-	Bt709,
-	[Value("bt470bg")]
-	Bt470bg,
-	[Value("smpte170m")]
-	Smpte170m,
-	[Value("bt2020")]
-	Bt2020,
-	[Value("smpte432")]
-	Smpte432,
-}
-
-[To(ToAttribute.None)]
-public enum VideoTransferCharacteristics
-{
-	[Value("bt709")]
-	Bt709,
-	[Value("smpte170m")]
-	Smpte170m,
-	[Value("iec61966-2-1")]
-	Iec6196621,
-	[Value("linear")]
-	Linear,
-	[Value("pq")]
-	Pq,
-	[Value("hlg")]
-	Hlg,
-}
-
-[To(ToAttribute.None)]
-public enum VideoMatrixCoefficients
-{
-	[Value("rgb")]
-	Rgb,
-	[Value("bt709")]
-	Bt709,
-	[Value("bt470bg")]
-	Bt470bg,
-	[Value("smpte170m")]
-	Smpte170m,
-	[Value("bt2020-ncl")]
-	Bt2020Ncl,
 }
 
 ///<include file='Utils/Docs/ImageDecoder/ImageDecoder.generated.xml' path='docs/ImageDecoder/*'/>
@@ -25243,11 +22676,6 @@ public partial class Ed448Params : Algorithm
 		public BufferSource Context;
 }
 
-public partial interface WindowOrWorkerGlobalScope
-{
-		public Crypto Crypto { get { throw new System.NotImplementedException(); } }
-}
-
 ///<include file='Utils/Docs/Crypto/Crypto.generated.xml' path='docs/Crypto/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class Crypto
@@ -25274,38 +22702,6 @@ public partial class KeyAlgorithm
 		public required DOMString Name;
 }
 
-[To(ToAttribute.None)]
-public enum KeyType
-{
-	[Value("public")]
-	Public,
-	[Value("private")]
-	Private,
-	[Value("secret")]
-	Secret,
-}
-
-[To(ToAttribute.None)]
-public enum KeyUsage
-{
-	[Value("encrypt")]
-	Encrypt,
-	[Value("decrypt")]
-	Decrypt,
-	[Value("sign")]
-	Sign,
-	[Value("verify")]
-	Verify,
-	[Value("deriveKey")]
-	DeriveKey,
-	[Value("deriveBits")]
-	DeriveBits,
-	[Value("wrapKey")]
-	WrapKey,
-	[Value("unwrapKey")]
-	UnwrapKey,
-}
-
 ///<include file='Utils/Docs/CryptoKey/CryptoKey.generated.xml' path='docs/CryptoKey/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class CryptoKey
@@ -25315,22 +22711,9 @@ public partial class CryptoKey
 	///<include file='Utils/Docs/CryptoKeyExtractable/CryptoKeyExtractable.generated.xml' path='docs/CryptoKeyExtractable/*'/>
 	public bool Extractable { get; }
 	///<include file='Utils/Docs/CryptoKeyAlgorithm/CryptoKeyAlgorithm.generated.xml' path='docs/CryptoKeyAlgorithm/*'/>
-	public object Algorithm { get; }
+	public Object Algorithm { get; }
 	///<include file='Utils/Docs/CryptoKeyUsages/CryptoKeyUsages.generated.xml' path='docs/CryptoKeyUsages/*'/>
-	public object Usages { get; }
-}
-
-[To(ToAttribute.None)]
-public enum KeyFormat
-{
-	[Value("raw")]
-	Raw,
-	[Value("spki")]
-	Spki,
-	[Value("pkcs8")]
-	Pkcs8,
-	[Value("jwk")]
-	Jwk,
+	public Object Usages { get; }
 }
 
 ///<include file='Utils/Docs/SubtleCrypto/SubtleCrypto.generated.xml' path='docs/SubtleCrypto/*'/>
@@ -25338,27 +22721,27 @@ public enum KeyFormat
 public partial class SubtleCrypto
 {
 	///<include file='Utils/Docs/SubtleCryptoEncrypt/SubtleCryptoEncrypt.generated.xml' path='docs/SubtleCryptoEncrypt/*'/>
-	public Task<dynamic> Encrypt(AlgorithmIdentifier algorithm, CryptoKey key, BufferSource data) { throw new System.NotImplementedException(); }
+	public Task<byte[]> Encrypt(AlgorithmIdentifier algorithm, CryptoKey key, BufferSource data) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/SubtleCryptoDecrypt/SubtleCryptoDecrypt.generated.xml' path='docs/SubtleCryptoDecrypt/*'/>
-	public Task<dynamic> Decrypt(AlgorithmIdentifier algorithm, CryptoKey key, BufferSource data) { throw new System.NotImplementedException(); }
+	public Task<byte[]> Decrypt(AlgorithmIdentifier algorithm, CryptoKey key, BufferSource data) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/SubtleCryptoSign/SubtleCryptoSign.generated.xml' path='docs/SubtleCryptoSign/*'/>
-	public Task<dynamic> Sign(AlgorithmIdentifier algorithm, CryptoKey key, BufferSource data) { throw new System.NotImplementedException(); }
+	public Task<byte[]> Sign(AlgorithmIdentifier algorithm, CryptoKey key, BufferSource data) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/SubtleCryptoVerify/SubtleCryptoVerify.generated.xml' path='docs/SubtleCryptoVerify/*'/>
-	public Task<dynamic> Verify(AlgorithmIdentifier algorithm, CryptoKey key, BufferSource signature, BufferSource data) { throw new System.NotImplementedException(); }
+	public Task<bool> Verify(AlgorithmIdentifier algorithm, CryptoKey key, BufferSource signature, BufferSource data) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/SubtleCryptoDigest/SubtleCryptoDigest.generated.xml' path='docs/SubtleCryptoDigest/*'/>
-	public Task<dynamic> Digest(AlgorithmIdentifier algorithm, BufferSource data) { throw new System.NotImplementedException(); }
+	public Task<byte[]> Digest(AlgorithmIdentifier algorithm, BufferSource data) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/SubtleCryptoGenerateKey/SubtleCryptoGenerateKey.generated.xml' path='docs/SubtleCryptoGenerateKey/*'/>
-	public Task<dynamic> GenerateKey(AlgorithmIdentifier algorithm, bool extractable, List<KeyUsage> keyUsages) { throw new System.NotImplementedException(); }
+	public Task<CryptoKey> GenerateKey(AlgorithmIdentifier algorithm, bool extractable, List<KeyUsage> keyUsages) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/SubtleCryptoDeriveKey/SubtleCryptoDeriveKey.generated.xml' path='docs/SubtleCryptoDeriveKey/*'/>
-	public Task<dynamic> DeriveKey(AlgorithmIdentifier algorithm, CryptoKey baseKey, AlgorithmIdentifier derivedKeyType, bool extractable, List<KeyUsage> keyUsages) { throw new System.NotImplementedException(); }
+	public Task<CryptoKey> DeriveKey(AlgorithmIdentifier algorithm, CryptoKey baseKey, AlgorithmIdentifier derivedKeyType, bool extractable, List<KeyUsage> keyUsages) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/SubtleCryptoDeriveBits/SubtleCryptoDeriveBits.generated.xml' path='docs/SubtleCryptoDeriveBits/*'/>
-	public Task<byte[]> DeriveBits(AlgorithmIdentifier algorithm, CryptoKey baseKey, ulong length) { throw new System.NotImplementedException(); }
+	public Task<byte[]> DeriveBits(AlgorithmIdentifier algorithm, CryptoKey baseKey, ulong? length) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/SubtleCryptoImportKey/SubtleCryptoImportKey.generated.xml' path='docs/SubtleCryptoImportKey/*'/>
-	public Task<CryptoKey> ImportKey(KeyFormat format, Union164 keyData, AlgorithmIdentifier algorithm, bool extractable, List<KeyUsage> keyUsages) { throw new System.NotImplementedException(); }
+	public Task<CryptoKey> ImportKey(KeyFormat format, Union188 keyData, AlgorithmIdentifier algorithm, bool extractable, List<KeyUsage> keyUsages) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/SubtleCryptoExportKey/SubtleCryptoExportKey.generated.xml' path='docs/SubtleCryptoExportKey/*'/>
-	public Task<dynamic> ExportKey(KeyFormat format, CryptoKey key) { throw new System.NotImplementedException(); }
+	public Task<byte[]> ExportKey(KeyFormat format, CryptoKey key) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/SubtleCryptoWrapKey/SubtleCryptoWrapKey.generated.xml' path='docs/SubtleCryptoWrapKey/*'/>
-	public Task<dynamic> WrapKey(KeyFormat format, CryptoKey key, CryptoKey wrappingKey, AlgorithmIdentifier wrapAlgorithm) { throw new System.NotImplementedException(); }
+	public Task<byte[]> WrapKey(KeyFormat format, CryptoKey key, CryptoKey wrappingKey, AlgorithmIdentifier wrapAlgorithm) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/SubtleCryptoUnwrapKey/SubtleCryptoUnwrapKey.generated.xml' path='docs/SubtleCryptoUnwrapKey/*'/>
 	public Task<CryptoKey> UnwrapKey(KeyFormat format, BufferSource wrappedKey, CryptoKey unwrappingKey, AlgorithmIdentifier unwrapAlgorithm, AlgorithmIdentifier unwrappedKeyAlgorithm, bool extractable, List<KeyUsage> keyUsages) { throw new System.NotImplementedException(); }
 }
@@ -25571,38 +22954,6 @@ public partial class Pbkdf2Params : Algorithm
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial interface NavigatorAutomationInformation
-{
-		public bool Webdriver { get { throw new System.NotImplementedException(); } }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-[To(ToAttribute.None)]
-public enum WebGLPowerPreference
-{
-	[Value("default")]
-	Default,
-	[Value("low-power")]
-	LowPower,
-	[Value("high-performance")]
-	HighPerformance,
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
 public partial class WebGLContextAttributes
 {
 		public bool Alpha;
@@ -25620,6 +22971,7 @@ public partial class WebGLContextAttributes
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class WebGLObject
 {
+		public USVString Label { get; set; }
 }
 
 ///<include file='Utils/Docs/WebGLBuffer/WebGLBuffer.generated.xml' path='docs/WebGLBuffer/*'/>
@@ -25691,459 +23043,6 @@ public partial class WebGLShaderPrecisionFormat
 
 
 
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface WebGLRenderingContextBase
-{
-		public const GLenum DEPTH_BUFFER_BIT = 0x00000100;
-		public const GLenum STENCIL_BUFFER_BIT = 0x00000400;
-		public const GLenum COLOR_BUFFER_BIT = 0x00004000;
-		public const GLenum POINTS = 0x0000;
-		public const GLenum LINES = 0x0001;
-		public const GLenum LINE_LOOP = 0x0002;
-		public const GLenum LINE_STRIP = 0x0003;
-		public const GLenum TRIANGLES = 0x0004;
-		public const GLenum TRIANGLE_STRIP = 0x0005;
-		public const GLenum TRIANGLE_FAN = 0x0006;
-		public const GLenum ZERO = 0;
-		public const GLenum ONE = 1;
-		public const GLenum SRC_COLOR = 0x0300;
-		public const GLenum ONE_MINUS_SRC_COLOR = 0x0301;
-		public const GLenum SRC_ALPHA = 0x0302;
-		public const GLenum ONE_MINUS_SRC_ALPHA = 0x0303;
-		public const GLenum DST_ALPHA = 0x0304;
-		public const GLenum ONE_MINUS_DST_ALPHA = 0x0305;
-		public const GLenum DST_COLOR = 0x0306;
-		public const GLenum ONE_MINUS_DST_COLOR = 0x0307;
-		public const GLenum SRC_ALPHA_SATURATE = 0x0308;
-		public const GLenum FUNC_ADD = 0x8006;
-		public const GLenum BLEND_EQUATION = 0x8009;
-		public const GLenum BLEND_EQUATION_RGB = 0x8009;
-		public const GLenum BLEND_EQUATION_ALPHA = 0x883D;
-		public const GLenum FUNC_SUBTRACT = 0x800A;
-		public const GLenum FUNC_REVERSE_SUBTRACT = 0x800B;
-		public const GLenum BLEND_DST_RGB = 0x80C8;
-		public const GLenum BLEND_SRC_RGB = 0x80C9;
-		public const GLenum BLEND_DST_ALPHA = 0x80CA;
-		public const GLenum BLEND_SRC_ALPHA = 0x80CB;
-		public const GLenum CONSTANT_COLOR = 0x8001;
-		public const GLenum ONE_MINUS_CONSTANT_COLOR = 0x8002;
-		public const GLenum CONSTANT_ALPHA = 0x8003;
-		public const GLenum ONE_MINUS_CONSTANT_ALPHA = 0x8004;
-		public const GLenum BLEND_COLOR = 0x8005;
-		public const GLenum ARRAY_BUFFER = 0x8892;
-		public const GLenum ELEMENT_ARRAY_BUFFER = 0x8893;
-		public const GLenum ARRAY_BUFFER_BINDING = 0x8894;
-		public const GLenum ELEMENT_ARRAY_BUFFER_BINDING = 0x8895;
-		public const GLenum STREAM_DRAW = 0x88E0;
-		public const GLenum STATIC_DRAW = 0x88E4;
-		public const GLenum DYNAMIC_DRAW = 0x88E8;
-		public const GLenum BUFFER_SIZE = 0x8764;
-		public const GLenum BUFFER_USAGE = 0x8765;
-		public const GLenum CURRENT_VERTEX_ATTRIB = 0x8626;
-		public const GLenum FRONT = 0x0404;
-		public const GLenum BACK = 0x0405;
-		public const GLenum FRONT_AND_BACK = 0x0408;
-		public const GLenum CULL_FACE = 0x0B44;
-		public const GLenum BLEND = 0x0BE2;
-		public const GLenum DITHER = 0x0BD0;
-		public const GLenum STENCIL_TEST = 0x0B90;
-		public const GLenum DEPTH_TEST = 0x0B71;
-		public const GLenum SCISSOR_TEST = 0x0C11;
-		public const GLenum POLYGON_OFFSET_FILL = 0x8037;
-		public const GLenum SAMPLE_ALPHA_TO_COVERAGE = 0x809E;
-		public const GLenum SAMPLE_COVERAGE = 0x80A0;
-		public const GLenum NO_ERROR = 0;
-		public const GLenum INVALID_ENUM = 0x0500;
-		public const GLenum INVALID_VALUE = 0x0501;
-		public const GLenum INVALID_OPERATION = 0x0502;
-		public const GLenum OUT_OF_MEMORY = 0x0505;
-		public const GLenum CW = 0x0900;
-		public const GLenum CCW = 0x0901;
-		public const GLenum LINE_WIDTH = 0x0B21;
-		public const GLenum ALIASED_POINT_SIZE_RANGE = 0x846D;
-		public const GLenum ALIASED_LINE_WIDTH_RANGE = 0x846E;
-		public const GLenum CULL_FACE_MODE = 0x0B45;
-		public const GLenum FRONT_FACE = 0x0B46;
-		public const GLenum DEPTH_RANGE = 0x0B70;
-		public const GLenum DEPTH_WRITEMASK = 0x0B72;
-		public const GLenum DEPTH_CLEAR_VALUE = 0x0B73;
-		public const GLenum DEPTH_FUNC = 0x0B74;
-		public const GLenum STENCIL_CLEAR_VALUE = 0x0B91;
-		public const GLenum STENCIL_FUNC = 0x0B92;
-		public const GLenum STENCIL_FAIL = 0x0B94;
-		public const GLenum STENCIL_PASS_DEPTH_FAIL = 0x0B95;
-		public const GLenum STENCIL_PASS_DEPTH_PASS = 0x0B96;
-		public const GLenum STENCIL_REF = 0x0B97;
-		public const GLenum STENCIL_VALUE_MASK = 0x0B93;
-		public const GLenum STENCIL_WRITEMASK = 0x0B98;
-		public const GLenum STENCIL_BACK_FUNC = 0x8800;
-		public const GLenum STENCIL_BACK_FAIL = 0x8801;
-		public const GLenum STENCIL_BACK_PASS_DEPTH_FAIL = 0x8802;
-		public const GLenum STENCIL_BACK_PASS_DEPTH_PASS = 0x8803;
-		public const GLenum STENCIL_BACK_REF = 0x8CA3;
-		public const GLenum STENCIL_BACK_VALUE_MASK = 0x8CA4;
-		public const GLenum STENCIL_BACK_WRITEMASK = 0x8CA5;
-		public const GLenum VIEWPORT = 0x0BA2;
-		public const GLenum SCISSOR_BOX = 0x0C10;
-		public const GLenum COLOR_CLEAR_VALUE = 0x0C22;
-		public const GLenum COLOR_WRITEMASK = 0x0C23;
-		public const GLenum UNPACK_ALIGNMENT = 0x0CF5;
-		public const GLenum PACK_ALIGNMENT = 0x0D05;
-		public const GLenum MAX_TEXTURE_SIZE = 0x0D33;
-		public const GLenum MAX_VIEWPORT_DIMS = 0x0D3A;
-		public const GLenum SUBPIXEL_BITS = 0x0D50;
-		public const GLenum RED_BITS = 0x0D52;
-		public const GLenum GREEN_BITS = 0x0D53;
-		public const GLenum BLUE_BITS = 0x0D54;
-		public const GLenum ALPHA_BITS = 0x0D55;
-		public const GLenum DEPTH_BITS = 0x0D56;
-		public const GLenum STENCIL_BITS = 0x0D57;
-		public const GLenum POLYGON_OFFSET_UNITS = 0x2A00;
-		public const GLenum POLYGON_OFFSET_FACTOR = 0x8038;
-		public const GLenum TEXTURE_BINDING_2D = 0x8069;
-		public const GLenum SAMPLE_BUFFERS = 0x80A8;
-		public const GLenum SAMPLES = 0x80A9;
-		public const GLenum SAMPLE_COVERAGE_VALUE = 0x80AA;
-		public const GLenum SAMPLE_COVERAGE_INVERT = 0x80AB;
-		public const GLenum COMPRESSED_TEXTURE_FORMATS = 0x86A3;
-		public const GLenum DONT_CARE = 0x1100;
-		public const GLenum FASTEST = 0x1101;
-		public const GLenum NICEST = 0x1102;
-		public const GLenum GENERATE_MIPMAP_HINT = 0x8192;
-		public const GLenum BYTE = 0x1400;
-		public const GLenum UNSIGNED_BYTE = 0x1401;
-		public const GLenum SHORT = 0x1402;
-		public const GLenum UNSIGNED_SHORT = 0x1403;
-		public const GLenum INT = 0x1404;
-		public const GLenum UNSIGNED_INT = 0x1405;
-		public const GLenum FLOAT = 0x1406;
-		public const GLenum DEPTH_COMPONENT = 0x1902;
-		public const GLenum ALPHA = 0x1906;
-		public const GLenum RGB = 0x1907;
-		public const GLenum RGBA = 0x1908;
-		public const GLenum LUMINANCE = 0x1909;
-		public const GLenum LUMINANCE_ALPHA = 0x190A;
-		public const GLenum UNSIGNED_SHORT_4_4_4_4 = 0x8033;
-		public const GLenum UNSIGNED_SHORT_5_5_5_1 = 0x8034;
-		public const GLenum UNSIGNED_SHORT_5_6_5 = 0x8363;
-		public const GLenum FRAGMENT_SHADER = 0x8B30;
-		public const GLenum VERTEX_SHADER = 0x8B31;
-		public const GLenum MAX_VERTEX_ATTRIBS = 0x8869;
-		public const GLenum MAX_VERTEX_UNIFORM_VECTORS = 0x8DFB;
-		public const GLenum MAX_VARYING_VECTORS = 0x8DFC;
-		public const GLenum MAX_COMBINED_TEXTURE_IMAGE_UNITS = 0x8B4D;
-		public const GLenum MAX_VERTEX_TEXTURE_IMAGE_UNITS = 0x8B4C;
-		public const GLenum MAX_TEXTURE_IMAGE_UNITS = 0x8872;
-		public const GLenum MAX_FRAGMENT_UNIFORM_VECTORS = 0x8DFD;
-		public const GLenum SHADER_TYPE = 0x8B4F;
-		public const GLenum DELETE_STATUS = 0x8B80;
-		public const GLenum LINK_STATUS = 0x8B82;
-		public const GLenum VALIDATE_STATUS = 0x8B83;
-		public const GLenum ATTACHED_SHADERS = 0x8B85;
-		public const GLenum ACTIVE_UNIFORMS = 0x8B86;
-		public const GLenum ACTIVE_ATTRIBUTES = 0x8B89;
-		public const GLenum SHADING_LANGUAGE_VERSION = 0x8B8C;
-		public const GLenum CURRENT_PROGRAM = 0x8B8D;
-		public const GLenum NEVER = 0x0200;
-		public const GLenum LESS = 0x0201;
-		public const GLenum EQUAL = 0x0202;
-		public const GLenum LEQUAL = 0x0203;
-		public const GLenum GREATER = 0x0204;
-		public const GLenum NOTEQUAL = 0x0205;
-		public const GLenum GEQUAL = 0x0206;
-		public const GLenum ALWAYS = 0x0207;
-		public const GLenum KEEP = 0x1E00;
-		public const GLenum REPLACE = 0x1E01;
-		public const GLenum INCR = 0x1E02;
-		public const GLenum DECR = 0x1E03;
-		public const GLenum INVERT = 0x150A;
-		public const GLenum INCR_WRAP = 0x8507;
-		public const GLenum DECR_WRAP = 0x8508;
-		public const GLenum VENDOR = 0x1F00;
-		public const GLenum RENDERER = 0x1F01;
-		public const GLenum VERSION = 0x1F02;
-		public const GLenum NEAREST = 0x2600;
-		public const GLenum LINEAR = 0x2601;
-		public const GLenum NEAREST_MIPMAP_NEAREST = 0x2700;
-		public const GLenum LINEAR_MIPMAP_NEAREST = 0x2701;
-		public const GLenum NEAREST_MIPMAP_LINEAR = 0x2702;
-		public const GLenum LINEAR_MIPMAP_LINEAR = 0x2703;
-		public const GLenum TEXTURE_MAG_FILTER = 0x2800;
-		public const GLenum TEXTURE_MIN_FILTER = 0x2801;
-		public const GLenum TEXTURE_WRAP_S = 0x2802;
-		public const GLenum TEXTURE_WRAP_T = 0x2803;
-		public const GLenum TEXTURE_2D = 0x0DE1;
-		public const GLenum TEXTURE = 0x1702;
-		public const GLenum TEXTURE_CUBE_MAP = 0x8513;
-		public const GLenum TEXTURE_BINDING_CUBE_MAP = 0x8514;
-		public const GLenum TEXTURE_CUBE_MAP_POSITIVE_X = 0x8515;
-		public const GLenum TEXTURE_CUBE_MAP_NEGATIVE_X = 0x8516;
-		public const GLenum TEXTURE_CUBE_MAP_POSITIVE_Y = 0x8517;
-		public const GLenum TEXTURE_CUBE_MAP_NEGATIVE_Y = 0x8518;
-		public const GLenum TEXTURE_CUBE_MAP_POSITIVE_Z = 0x8519;
-		public const GLenum TEXTURE_CUBE_MAP_NEGATIVE_Z = 0x851A;
-		public const GLenum MAX_CUBE_MAP_TEXTURE_SIZE = 0x851C;
-		public const GLenum TEXTURE0 = 0x84C0;
-		public const GLenum TEXTURE1 = 0x84C1;
-		public const GLenum TEXTURE2 = 0x84C2;
-		public const GLenum TEXTURE3 = 0x84C3;
-		public const GLenum TEXTURE4 = 0x84C4;
-		public const GLenum TEXTURE5 = 0x84C5;
-		public const GLenum TEXTURE6 = 0x84C6;
-		public const GLenum TEXTURE7 = 0x84C7;
-		public const GLenum TEXTURE8 = 0x84C8;
-		public const GLenum TEXTURE9 = 0x84C9;
-		public const GLenum TEXTURE10 = 0x84CA;
-		public const GLenum TEXTURE11 = 0x84CB;
-		public const GLenum TEXTURE12 = 0x84CC;
-		public const GLenum TEXTURE13 = 0x84CD;
-		public const GLenum TEXTURE14 = 0x84CE;
-		public const GLenum TEXTURE15 = 0x84CF;
-		public const GLenum TEXTURE16 = 0x84D0;
-		public const GLenum TEXTURE17 = 0x84D1;
-		public const GLenum TEXTURE18 = 0x84D2;
-		public const GLenum TEXTURE19 = 0x84D3;
-		public const GLenum TEXTURE20 = 0x84D4;
-		public const GLenum TEXTURE21 = 0x84D5;
-		public const GLenum TEXTURE22 = 0x84D6;
-		public const GLenum TEXTURE23 = 0x84D7;
-		public const GLenum TEXTURE24 = 0x84D8;
-		public const GLenum TEXTURE25 = 0x84D9;
-		public const GLenum TEXTURE26 = 0x84DA;
-		public const GLenum TEXTURE27 = 0x84DB;
-		public const GLenum TEXTURE28 = 0x84DC;
-		public const GLenum TEXTURE29 = 0x84DD;
-		public const GLenum TEXTURE30 = 0x84DE;
-		public const GLenum TEXTURE31 = 0x84DF;
-		public const GLenum ACTIVE_TEXTURE = 0x84E0;
-		public const GLenum REPEAT = 0x2901;
-		public const GLenum CLAMP_TO_EDGE = 0x812F;
-		public const GLenum MIRRORED_REPEAT = 0x8370;
-		public const GLenum FLOAT_VEC2 = 0x8B50;
-		public const GLenum FLOAT_VEC3 = 0x8B51;
-		public const GLenum FLOAT_VEC4 = 0x8B52;
-		public const GLenum INT_VEC2 = 0x8B53;
-		public const GLenum INT_VEC3 = 0x8B54;
-		public const GLenum INT_VEC4 = 0x8B55;
-		public const GLenum BOOL = 0x8B56;
-		public const GLenum BOOL_VEC2 = 0x8B57;
-		public const GLenum BOOL_VEC3 = 0x8B58;
-		public const GLenum BOOL_VEC4 = 0x8B59;
-		public const GLenum FLOAT_MAT2 = 0x8B5A;
-		public const GLenum FLOAT_MAT3 = 0x8B5B;
-		public const GLenum FLOAT_MAT4 = 0x8B5C;
-		public const GLenum SAMPLER_2D = 0x8B5E;
-		public const GLenum SAMPLER_CUBE = 0x8B60;
-		public const GLenum VERTEX_ATTRIB_ARRAY_ENABLED = 0x8622;
-		public const GLenum VERTEX_ATTRIB_ARRAY_SIZE = 0x8623;
-		public const GLenum VERTEX_ATTRIB_ARRAY_STRIDE = 0x8624;
-		public const GLenum VERTEX_ATTRIB_ARRAY_TYPE = 0x8625;
-		public const GLenum VERTEX_ATTRIB_ARRAY_NORMALIZED = 0x886A;
-		public const GLenum VERTEX_ATTRIB_ARRAY_POINTER = 0x8645;
-		public const GLenum VERTEX_ATTRIB_ARRAY_BUFFER_BINDING = 0x889F;
-		public const GLenum IMPLEMENTATION_COLOR_READ_TYPE = 0x8B9A;
-		public const GLenum IMPLEMENTATION_COLOR_READ_FORMAT = 0x8B9B;
-		public const GLenum COMPILE_STATUS = 0x8B81;
-		public const GLenum LOW_FLOAT = 0x8DF0;
-		public const GLenum MEDIUM_FLOAT = 0x8DF1;
-		public const GLenum HIGH_FLOAT = 0x8DF2;
-		public const GLenum LOW_INT = 0x8DF3;
-		public const GLenum MEDIUM_INT = 0x8DF4;
-		public const GLenum HIGH_INT = 0x8DF5;
-		public const GLenum FRAMEBUFFER = 0x8D40;
-		public const GLenum RENDERBUFFER = 0x8D41;
-		public const GLenum RGBA4 = 0x8056;
-		public const GLenum RGB5_A1 = 0x8057;
-		public const GLenum RGBA8 = 0x8058;
-		public const GLenum RGB565 = 0x8D62;
-		public const GLenum DEPTH_COMPONENT16 = 0x81A5;
-		public const GLenum STENCIL_INDEX8 = 0x8D48;
-		public const GLenum DEPTH_STENCIL = 0x84F9;
-		public const GLenum RENDERBUFFER_WIDTH = 0x8D42;
-		public const GLenum RENDERBUFFER_HEIGHT = 0x8D43;
-		public const GLenum RENDERBUFFER_INTERNAL_FORMAT = 0x8D44;
-		public const GLenum RENDERBUFFER_RED_SIZE = 0x8D50;
-		public const GLenum RENDERBUFFER_GREEN_SIZE = 0x8D51;
-		public const GLenum RENDERBUFFER_BLUE_SIZE = 0x8D52;
-		public const GLenum RENDERBUFFER_ALPHA_SIZE = 0x8D53;
-		public const GLenum RENDERBUFFER_DEPTH_SIZE = 0x8D54;
-		public const GLenum RENDERBUFFER_STENCIL_SIZE = 0x8D55;
-		public const GLenum FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE = 0x8CD0;
-		public const GLenum FRAMEBUFFER_ATTACHMENT_OBJECT_NAME = 0x8CD1;
-		public const GLenum FRAMEBUFFER_ATTACHMENT_TEXTURE_LEVEL = 0x8CD2;
-		public const GLenum FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE = 0x8CD3;
-		public const GLenum COLOR_ATTACHMENT0 = 0x8CE0;
-		public const GLenum DEPTH_ATTACHMENT = 0x8D00;
-		public const GLenum STENCIL_ATTACHMENT = 0x8D20;
-		public const GLenum DEPTH_STENCIL_ATTACHMENT = 0x821A;
-		public const GLenum NONE = 0;
-		public const GLenum FRAMEBUFFER_COMPLETE = 0x8CD5;
-		public const GLenum FRAMEBUFFER_INCOMPLETE_ATTACHMENT = 0x8CD6;
-		public const GLenum FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT = 0x8CD7;
-		public const GLenum FRAMEBUFFER_INCOMPLETE_DIMENSIONS = 0x8CD9;
-		public const GLenum FRAMEBUFFER_UNSUPPORTED = 0x8CDD;
-		public const GLenum FRAMEBUFFER_BINDING = 0x8CA6;
-		public const GLenum RENDERBUFFER_BINDING = 0x8CA7;
-		public const GLenum MAX_RENDERBUFFER_SIZE = 0x84E8;
-		public const GLenum INVALID_FRAMEBUFFER_OPERATION = 0x0506;
-		public const GLenum UNPACK_FLIP_Y_WEBGL = 0x9240;
-		public const GLenum UNPACK_PREMULTIPLY_ALPHA_WEBGL = 0x9241;
-		public const GLenum CONTEXT_LOST_WEBGL = 0x9242;
-		public const GLenum UNPACK_COLORSPACE_CONVERSION_WEBGL = 0x9243;
-		public const GLenum BROWSER_DEFAULT_WEBGL = 0x9244;
-		public Union168 Canvas { get { throw new System.NotImplementedException(); } }
-		public GLsizei DrawingBufferWidth { get { throw new System.NotImplementedException(); } }
-		public GLsizei DrawingBufferHeight { get { throw new System.NotImplementedException(); } }
-		public GLenum DrawingBufferFormat { get { throw new System.NotImplementedException(); } }
-		public PredefinedColorSpace DrawingBufferColorSpace { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public PredefinedColorSpace UnpackColorSpace { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public WebGLContextAttributes? GetContextAttributes() { throw new System.NotImplementedException(); }
-		public bool IsContextLost() { throw new System.NotImplementedException(); }
-		public List<DOMString>? GetSupportedExtensions() { throw new System.NotImplementedException(); }
-		public object? GetExtension(DOMString name) { throw new System.NotImplementedException(); }
-		public Undefined DrawingBufferStorage(GLenum sizedFormat, ulong width, ulong height) { throw new System.NotImplementedException(); }
-		public Undefined ActiveTexture(GLenum texture) { throw new System.NotImplementedException(); }
-		public Undefined AttachShader(WebGLProgram program, WebGLShader shader) { throw new System.NotImplementedException(); }
-		public Undefined BindAttribLocation(WebGLProgram program, GLuint index, DOMString name) { throw new System.NotImplementedException(); }
-		public Undefined BindBuffer(GLenum target, WebGLBuffer? buffer) { throw new System.NotImplementedException(); }
-		public Undefined BindFramebuffer(GLenum target, WebGLFramebuffer? framebuffer) { throw new System.NotImplementedException(); }
-		public Undefined BindRenderbuffer(GLenum target, WebGLRenderbuffer? renderbuffer) { throw new System.NotImplementedException(); }
-		public Undefined BindTexture(GLenum target, WebGLTexture? texture) { throw new System.NotImplementedException(); }
-		public Undefined BlendColor(GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha) { throw new System.NotImplementedException(); }
-		public Undefined BlendEquation(GLenum mode) { throw new System.NotImplementedException(); }
-		public Undefined BlendEquationSeparate(GLenum modeRGB, GLenum modeAlpha) { throw new System.NotImplementedException(); }
-		public Undefined BlendFunc(GLenum sfactor, GLenum dfactor) { throw new System.NotImplementedException(); }
-		public Undefined BlendFuncSeparate(GLenum srcRGB, GLenum dstRGB, GLenum srcAlpha, GLenum dstAlpha) { throw new System.NotImplementedException(); }
-		public GLenum CheckFramebufferStatus(GLenum target) { throw new System.NotImplementedException(); }
-		public Undefined Clear(GLbitfield mask) { throw new System.NotImplementedException(); }
-		public Undefined ClearColor(GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha) { throw new System.NotImplementedException(); }
-		public Undefined ClearDepth(GLclampf depth) { throw new System.NotImplementedException(); }
-		public Undefined ClearStencil(GLint s) { throw new System.NotImplementedException(); }
-		public Undefined ColorMask(bool red, bool green, bool blue, bool alpha) { throw new System.NotImplementedException(); }
-		public Undefined CompileShader(WebGLShader shader) { throw new System.NotImplementedException(); }
-		public Undefined CopyTexImage2D(GLenum target, GLint level, GLenum internalformat, GLint x, GLint y, GLsizei width, GLsizei height, GLint border) { throw new System.NotImplementedException(); }
-		public Undefined CopyTexSubImage2D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint x, GLint y, GLsizei width, GLsizei height) { throw new System.NotImplementedException(); }
-		public WebGLBuffer? CreateBuffer() { throw new System.NotImplementedException(); }
-		public WebGLFramebuffer? CreateFramebuffer() { throw new System.NotImplementedException(); }
-		public WebGLProgram? CreateProgram() { throw new System.NotImplementedException(); }
-		public WebGLRenderbuffer? CreateRenderbuffer() { throw new System.NotImplementedException(); }
-		public WebGLShader? CreateShader(GLenum type) { throw new System.NotImplementedException(); }
-		public WebGLTexture? CreateTexture() { throw new System.NotImplementedException(); }
-		public Undefined CullFace(GLenum mode) { throw new System.NotImplementedException(); }
-		public Undefined DeleteBuffer(WebGLBuffer? buffer) { throw new System.NotImplementedException(); }
-		public Undefined DeleteFramebuffer(WebGLFramebuffer? framebuffer) { throw new System.NotImplementedException(); }
-		public Undefined DeleteProgram(WebGLProgram? program) { throw new System.NotImplementedException(); }
-		public Undefined DeleteRenderbuffer(WebGLRenderbuffer? renderbuffer) { throw new System.NotImplementedException(); }
-		public Undefined DeleteShader(WebGLShader? shader) { throw new System.NotImplementedException(); }
-		public Undefined DeleteTexture(WebGLTexture? texture) { throw new System.NotImplementedException(); }
-		public Undefined DepthFunc(GLenum func) { throw new System.NotImplementedException(); }
-		public Undefined DepthMask(bool flag) { throw new System.NotImplementedException(); }
-		public Undefined DepthRange(GLclampf zNear, GLclampf zFar) { throw new System.NotImplementedException(); }
-		public Undefined DetachShader(WebGLProgram program, WebGLShader shader) { throw new System.NotImplementedException(); }
-		public Undefined Disable(GLenum cap) { throw new System.NotImplementedException(); }
-		public Undefined DisableVertexAttribArray(GLuint index) { throw new System.NotImplementedException(); }
-		public Undefined DrawArrays(GLenum mode, GLint first, GLsizei count) { throw new System.NotImplementedException(); }
-		public Undefined DrawElements(GLenum mode, GLsizei count, GLenum type, GLintptr offset) { throw new System.NotImplementedException(); }
-		public Undefined Enable(GLenum cap) { throw new System.NotImplementedException(); }
-		public Undefined EnableVertexAttribArray(GLuint index) { throw new System.NotImplementedException(); }
-		public Undefined Finish() { throw new System.NotImplementedException(); }
-		public Undefined Flush() { throw new System.NotImplementedException(); }
-		public Undefined FramebufferRenderbuffer(GLenum target, GLenum attachment, GLenum renderbuffertarget, WebGLRenderbuffer? renderbuffer) { throw new System.NotImplementedException(); }
-		public Undefined FramebufferTexture2D(GLenum target, GLenum attachment, GLenum textarget, WebGLTexture? texture, GLint level) { throw new System.NotImplementedException(); }
-		public Undefined FrontFace(GLenum mode) { throw new System.NotImplementedException(); }
-		public Undefined GenerateMipmap(GLenum target) { throw new System.NotImplementedException(); }
-		public WebGLActiveInfo? GetActiveAttrib(WebGLProgram program, GLuint index) { throw new System.NotImplementedException(); }
-		public WebGLActiveInfo? GetActiveUniform(WebGLProgram program, GLuint index) { throw new System.NotImplementedException(); }
-		public List<WebGLShader>? GetAttachedShaders(WebGLProgram program) { throw new System.NotImplementedException(); }
-		public GLint GetAttribLocation(WebGLProgram program, DOMString name) { throw new System.NotImplementedException(); }
-		public dynamic GetBufferParameter(GLenum target, GLenum pname) { throw new System.NotImplementedException(); }
-		public dynamic GetParameter(GLenum pname) { throw new System.NotImplementedException(); }
-		public GLenum GetError() { throw new System.NotImplementedException(); }
-		public dynamic GetFramebufferAttachmentParameter(GLenum target, GLenum attachment, GLenum pname) { throw new System.NotImplementedException(); }
-		public dynamic GetProgramParameter(WebGLProgram program, GLenum pname) { throw new System.NotImplementedException(); }
-		public DOMString? GetProgramInfoLog(WebGLProgram program) { throw new System.NotImplementedException(); }
-		public dynamic GetRenderbufferParameter(GLenum target, GLenum pname) { throw new System.NotImplementedException(); }
-		public dynamic GetShaderParameter(WebGLShader shader, GLenum pname) { throw new System.NotImplementedException(); }
-		public WebGLShaderPrecisionFormat? GetShaderPrecisionFormat(GLenum shadertype, GLenum precisiontype) { throw new System.NotImplementedException(); }
-		public DOMString? GetShaderInfoLog(WebGLShader shader) { throw new System.NotImplementedException(); }
-		public DOMString? GetShaderSource(WebGLShader shader) { throw new System.NotImplementedException(); }
-		public dynamic GetTexParameter(GLenum target, GLenum pname) { throw new System.NotImplementedException(); }
-		public dynamic GetUniform(WebGLProgram program, WebGLUniformLocation location) { throw new System.NotImplementedException(); }
-		public WebGLUniformLocation? GetUniformLocation(WebGLProgram program, DOMString name) { throw new System.NotImplementedException(); }
-		public dynamic GetVertexAttrib(GLuint index, GLenum pname) { throw new System.NotImplementedException(); }
-		public GLintptr GetVertexAttribOffset(GLuint index, GLenum pname) { throw new System.NotImplementedException(); }
-		public Undefined Hint(GLenum target, GLenum mode) { throw new System.NotImplementedException(); }
-		public bool IsBuffer(WebGLBuffer? buffer) { throw new System.NotImplementedException(); }
-		public bool IsEnabled(GLenum cap) { throw new System.NotImplementedException(); }
-		public bool IsFramebuffer(WebGLFramebuffer? framebuffer) { throw new System.NotImplementedException(); }
-		public bool IsProgram(WebGLProgram? program) { throw new System.NotImplementedException(); }
-		public bool IsRenderbuffer(WebGLRenderbuffer? renderbuffer) { throw new System.NotImplementedException(); }
-		public bool IsShader(WebGLShader? shader) { throw new System.NotImplementedException(); }
-		public bool IsTexture(WebGLTexture? texture) { throw new System.NotImplementedException(); }
-		public Undefined LineWidth(Number width) { throw new System.NotImplementedException(); }
-		public Undefined LinkProgram(WebGLProgram program) { throw new System.NotImplementedException(); }
-		public Undefined PixelStorei(GLenum pname, GLint param) { throw new System.NotImplementedException(); }
-		public Undefined PolygonOffset(Number factor, Number units) { throw new System.NotImplementedException(); }
-		public Undefined RenderbufferStorage(GLenum target, GLenum internalformat, GLsizei width, GLsizei height) { throw new System.NotImplementedException(); }
-		public Undefined SampleCoverage(GLclampf value, bool invert) { throw new System.NotImplementedException(); }
-		public Undefined Scissor(GLint x, GLint y, GLsizei width, GLsizei height) { throw new System.NotImplementedException(); }
-		public Undefined ShaderSource(WebGLShader shader, DOMString source) { throw new System.NotImplementedException(); }
-		public Undefined StencilFunc(GLenum func, GLint ref_, GLuint mask) { throw new System.NotImplementedException(); }
-		public Undefined StencilFuncSeparate(GLenum face, GLenum func, GLint ref_, GLuint mask) { throw new System.NotImplementedException(); }
-		public Undefined StencilMask(GLuint mask) { throw new System.NotImplementedException(); }
-		public Undefined StencilMaskSeparate(GLenum face, GLuint mask) { throw new System.NotImplementedException(); }
-		public Undefined StencilOp(GLenum fail, GLenum zfail, GLenum zpass) { throw new System.NotImplementedException(); }
-		public Undefined StencilOpSeparate(GLenum face, GLenum fail, GLenum zfail, GLenum zpass) { throw new System.NotImplementedException(); }
-		public Undefined TexParameterf(GLenum target, GLenum pname, Number param) { throw new System.NotImplementedException(); }
-		public Undefined TexParameteri(GLenum target, GLenum pname, GLint param) { throw new System.NotImplementedException(); }
-		public Undefined Uniform1f(WebGLUniformLocation? location, Number x) { throw new System.NotImplementedException(); }
-		public Undefined Uniform2f(WebGLUniformLocation? location, Number x, Number y) { throw new System.NotImplementedException(); }
-		public Undefined Uniform3f(WebGLUniformLocation? location, Number x, Number y, Number z) { throw new System.NotImplementedException(); }
-		public Undefined Uniform4f(WebGLUniformLocation? location, Number x, Number y, Number z, Number w) { throw new System.NotImplementedException(); }
-		public Undefined Uniform1i(WebGLUniformLocation? location, GLint x) { throw new System.NotImplementedException(); }
-		public Undefined Uniform2i(WebGLUniformLocation? location, GLint x, GLint y) { throw new System.NotImplementedException(); }
-		public Undefined Uniform3i(WebGLUniformLocation? location, GLint x, GLint y, GLint z) { throw new System.NotImplementedException(); }
-		public Undefined Uniform4i(WebGLUniformLocation? location, GLint x, GLint y, GLint z, GLint w) { throw new System.NotImplementedException(); }
-		public Undefined UseProgram(WebGLProgram? program) { throw new System.NotImplementedException(); }
-		public Undefined ValidateProgram(WebGLProgram program) { throw new System.NotImplementedException(); }
-		public Undefined VertexAttrib1f(GLuint index, Number x) { throw new System.NotImplementedException(); }
-		public Undefined VertexAttrib2f(GLuint index, Number x, Number y) { throw new System.NotImplementedException(); }
-		public Undefined VertexAttrib3f(GLuint index, Number x, Number y, Number z) { throw new System.NotImplementedException(); }
-		public Undefined VertexAttrib4f(GLuint index, Number x, Number y, Number z, Number w) { throw new System.NotImplementedException(); }
-		public Undefined VertexAttrib1fv(GLuint index, Float32List values) { throw new System.NotImplementedException(); }
-		public Undefined VertexAttrib2fv(GLuint index, Float32List values) { throw new System.NotImplementedException(); }
-		public Undefined VertexAttrib3fv(GLuint index, Float32List values) { throw new System.NotImplementedException(); }
-		public Undefined VertexAttrib4fv(GLuint index, Float32List values) { throw new System.NotImplementedException(); }
-		public Undefined VertexAttribPointer(GLuint index, GLint size, GLenum type, bool normalized, GLsizei stride, GLintptr offset) { throw new System.NotImplementedException(); }
-		public Undefined Viewport(GLint x, GLint y, GLsizei width, GLsizei height) { throw new System.NotImplementedException(); }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface WebGLRenderingContextOverloads
-{
-		public Undefined BufferData(GLenum target, GLsizeiptr size, GLenum usage) { throw new System.NotImplementedException(); }
-		public Undefined BufferData(GLenum target, AllowSharedBufferSource? data, GLenum usage) { throw new System.NotImplementedException(); }
-		public Undefined BufferSubData(GLenum target, GLintptr offset, AllowSharedBufferSource data) { throw new System.NotImplementedException(); }
-		public Undefined CompressedTexImage2D(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLint border, ArrayBufferView data) { throw new System.NotImplementedException(); }
-		public Undefined CompressedTexSubImage2D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, ArrayBufferView data) { throw new System.NotImplementedException(); }
-		public Undefined ReadPixels(GLint x, GLint y, GLsizei width, GLsizei height, GLenum format, GLenum type, ArrayBufferView? pixels) { throw new System.NotImplementedException(); }
-		public Undefined TexImage2D(GLenum target, GLint level, GLint internalformat, GLsizei width, GLsizei height, GLint border, GLenum format, GLenum type, ArrayBufferView? pixels) { throw new System.NotImplementedException(); }
-		public Undefined TexImage2D(GLenum target, GLint level, GLint internalformat, GLenum format, GLenum type, TexImageSource source) { throw new System.NotImplementedException(); }
-		public Undefined TexSubImage2D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLenum type, ArrayBufferView? pixels) { throw new System.NotImplementedException(); }
-		public Undefined TexSubImage2D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLenum format, GLenum type, TexImageSource source) { throw new System.NotImplementedException(); }
-		public Undefined Uniform1fv(WebGLUniformLocation? location, Float32List v) { throw new System.NotImplementedException(); }
-		public Undefined Uniform2fv(WebGLUniformLocation? location, Float32List v) { throw new System.NotImplementedException(); }
-		public Undefined Uniform3fv(WebGLUniformLocation? location, Float32List v) { throw new System.NotImplementedException(); }
-		public Undefined Uniform4fv(WebGLUniformLocation? location, Float32List v) { throw new System.NotImplementedException(); }
-		public Undefined Uniform1iv(WebGLUniformLocation? location, Int32List v) { throw new System.NotImplementedException(); }
-		public Undefined Uniform2iv(WebGLUniformLocation? location, Int32List v) { throw new System.NotImplementedException(); }
-		public Undefined Uniform3iv(WebGLUniformLocation? location, Int32List v) { throw new System.NotImplementedException(); }
-		public Undefined Uniform4iv(WebGLUniformLocation? location, Int32List v) { throw new System.NotImplementedException(); }
-		public Undefined UniformMatrix2fv(WebGLUniformLocation? location, bool transpose, Float32List value) { throw new System.NotImplementedException(); }
-		public Undefined UniformMatrix3fv(WebGLUniformLocation? location, bool transpose, Float32List value) { throw new System.NotImplementedException(); }
-		public Undefined UniformMatrix4fv(WebGLUniformLocation? location, bool transpose, Float32List value) { throw new System.NotImplementedException(); }
-}
-
 ///<include file='Utils/Docs/WebGLRenderingContext/WebGLRenderingContext.generated.xml' path='docs/WebGLRenderingContext/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class WebGLRenderingContext
@@ -26201,406 +23100,6 @@ public partial class WebGLVertexArrayObject : WebGLObject
 {
 }
 
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface WebGL2RenderingContextBase
-{
-		public const GLenum READ_BUFFER = 0x0C02;
-		public const GLenum UNPACK_ROW_LENGTH = 0x0CF2;
-		public const GLenum UNPACK_SKIP_ROWS = 0x0CF3;
-		public const GLenum UNPACK_SKIP_PIXELS = 0x0CF4;
-		public const GLenum PACK_ROW_LENGTH = 0x0D02;
-		public const GLenum PACK_SKIP_ROWS = 0x0D03;
-		public const GLenum PACK_SKIP_PIXELS = 0x0D04;
-		public const GLenum COLOR = 0x1800;
-		public const GLenum DEPTH = 0x1801;
-		public const GLenum STENCIL = 0x1802;
-		public const GLenum RED = 0x1903;
-		public const GLenum RGB8 = 0x8051;
-		public const GLenum RGB10_A2 = 0x8059;
-		public const GLenum TEXTURE_BINDING_3D = 0x806A;
-		public const GLenum UNPACK_SKIP_IMAGES = 0x806D;
-		public const GLenum UNPACK_IMAGE_HEIGHT = 0x806E;
-		public const GLenum TEXTURE_3D = 0x806F;
-		public const GLenum TEXTURE_WRAP_R = 0x8072;
-		public const GLenum MAX_3D_TEXTURE_SIZE = 0x8073;
-		public const GLenum UNSIGNED_INT_2_10_10_10_REV = 0x8368;
-		public const GLenum MAX_ELEMENTS_VERTICES = 0x80E8;
-		public const GLenum MAX_ELEMENTS_INDICES = 0x80E9;
-		public const GLenum TEXTURE_MIN_LOD = 0x813A;
-		public const GLenum TEXTURE_MAX_LOD = 0x813B;
-		public const GLenum TEXTURE_BASE_LEVEL = 0x813C;
-		public const GLenum TEXTURE_MAX_LEVEL = 0x813D;
-		public const GLenum MIN = 0x8007;
-		public const GLenum MAX = 0x8008;
-		public const GLenum DEPTH_COMPONENT24 = 0x81A6;
-		public const GLenum MAX_TEXTURE_LOD_BIAS = 0x84FD;
-		public const GLenum TEXTURE_COMPARE_MODE = 0x884C;
-		public const GLenum TEXTURE_COMPARE_FUNC = 0x884D;
-		public const GLenum CURRENT_QUERY = 0x8865;
-		public const GLenum QUERY_RESULT = 0x8866;
-		public const GLenum QUERY_RESULT_AVAILABLE = 0x8867;
-		public const GLenum STREAM_READ = 0x88E1;
-		public const GLenum STREAM_COPY = 0x88E2;
-		public const GLenum STATIC_READ = 0x88E5;
-		public const GLenum STATIC_COPY = 0x88E6;
-		public const GLenum DYNAMIC_READ = 0x88E9;
-		public const GLenum DYNAMIC_COPY = 0x88EA;
-		public const GLenum MAX_DRAW_BUFFERS = 0x8824;
-		public const GLenum DRAW_BUFFER0 = 0x8825;
-		public const GLenum DRAW_BUFFER1 = 0x8826;
-		public const GLenum DRAW_BUFFER2 = 0x8827;
-		public const GLenum DRAW_BUFFER3 = 0x8828;
-		public const GLenum DRAW_BUFFER4 = 0x8829;
-		public const GLenum DRAW_BUFFER5 = 0x882A;
-		public const GLenum DRAW_BUFFER6 = 0x882B;
-		public const GLenum DRAW_BUFFER7 = 0x882C;
-		public const GLenum DRAW_BUFFER8 = 0x882D;
-		public const GLenum DRAW_BUFFER9 = 0x882E;
-		public const GLenum DRAW_BUFFER10 = 0x882F;
-		public const GLenum DRAW_BUFFER11 = 0x8830;
-		public const GLenum DRAW_BUFFER12 = 0x8831;
-		public const GLenum DRAW_BUFFER13 = 0x8832;
-		public const GLenum DRAW_BUFFER14 = 0x8833;
-		public const GLenum DRAW_BUFFER15 = 0x8834;
-		public const GLenum MAX_FRAGMENT_UNIFORM_COMPONENTS = 0x8B49;
-		public const GLenum MAX_VERTEX_UNIFORM_COMPONENTS = 0x8B4A;
-		public const GLenum SAMPLER_3D = 0x8B5F;
-		public const GLenum SAMPLER_2D_SHADOW = 0x8B62;
-		public const GLenum FRAGMENT_SHADER_DERIVATIVE_HINT = 0x8B8B;
-		public const GLenum PIXEL_PACK_BUFFER = 0x88EB;
-		public const GLenum PIXEL_UNPACK_BUFFER = 0x88EC;
-		public const GLenum PIXEL_PACK_BUFFER_BINDING = 0x88ED;
-		public const GLenum PIXEL_UNPACK_BUFFER_BINDING = 0x88EF;
-		public const GLenum FLOAT_MAT2x3 = 0x8B65;
-		public const GLenum FLOAT_MAT2x4 = 0x8B66;
-		public const GLenum FLOAT_MAT3x2 = 0x8B67;
-		public const GLenum FLOAT_MAT3x4 = 0x8B68;
-		public const GLenum FLOAT_MAT4x2 = 0x8B69;
-		public const GLenum FLOAT_MAT4x3 = 0x8B6A;
-		public const GLenum SRGB = 0x8C40;
-		public const GLenum SRGB8 = 0x8C41;
-		public const GLenum SRGB8_ALPHA8 = 0x8C43;
-		public const GLenum COMPARE_REF_TO_TEXTURE = 0x884E;
-		public const GLenum RGBA32F = 0x8814;
-		public const GLenum RGB32F = 0x8815;
-		public const GLenum RGBA16F = 0x881A;
-		public const GLenum RGB16F = 0x881B;
-		public const GLenum VERTEX_ATTRIB_ARRAY_INTEGER = 0x88FD;
-		public const GLenum MAX_ARRAY_TEXTURE_LAYERS = 0x88FF;
-		public const GLenum MIN_PROGRAM_TEXEL_OFFSET = 0x8904;
-		public const GLenum MAX_PROGRAM_TEXEL_OFFSET = 0x8905;
-		public const GLenum MAX_VARYING_COMPONENTS = 0x8B4B;
-		public const GLenum TEXTURE_2D_ARRAY = 0x8C1A;
-		public const GLenum TEXTURE_BINDING_2D_ARRAY = 0x8C1D;
-		public const GLenum R11F_G11F_B10F = 0x8C3A;
-		public const GLenum UNSIGNED_INT_10F_11F_11F_REV = 0x8C3B;
-		public const GLenum RGB9_E5 = 0x8C3D;
-		public const GLenum UNSIGNED_INT_5_9_9_9_REV = 0x8C3E;
-		public const GLenum TRANSFORM_FEEDBACK_BUFFER_MODE = 0x8C7F;
-		public const GLenum MAX_TRANSFORM_FEEDBACK_SEPARATE_COMPONENTS = 0x8C80;
-		public const GLenum TRANSFORM_FEEDBACK_VARYINGS = 0x8C83;
-		public const GLenum TRANSFORM_FEEDBACK_BUFFER_START = 0x8C84;
-		public const GLenum TRANSFORM_FEEDBACK_BUFFER_SIZE = 0x8C85;
-		public const GLenum TRANSFORM_FEEDBACK_PRIMITIVES_WRITTEN = 0x8C88;
-		public const GLenum RASTERIZER_DISCARD = 0x8C89;
-		public const GLenum MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS = 0x8C8A;
-		public const GLenum MAX_TRANSFORM_FEEDBACK_SEPARATE_ATTRIBS = 0x8C8B;
-		public const GLenum INTERLEAVED_ATTRIBS = 0x8C8C;
-		public const GLenum SEPARATE_ATTRIBS = 0x8C8D;
-		public const GLenum TRANSFORM_FEEDBACK_BUFFER = 0x8C8E;
-		public const GLenum TRANSFORM_FEEDBACK_BUFFER_BINDING = 0x8C8F;
-		public const GLenum RGBA32UI = 0x8D70;
-		public const GLenum RGB32UI = 0x8D71;
-		public const GLenum RGBA16UI = 0x8D76;
-		public const GLenum RGB16UI = 0x8D77;
-		public const GLenum RGBA8UI = 0x8D7C;
-		public const GLenum RGB8UI = 0x8D7D;
-		public const GLenum RGBA32I = 0x8D82;
-		public const GLenum RGB32I = 0x8D83;
-		public const GLenum RGBA16I = 0x8D88;
-		public const GLenum RGB16I = 0x8D89;
-		public const GLenum RGBA8I = 0x8D8E;
-		public const GLenum RGB8I = 0x8D8F;
-		public const GLenum RED_INTEGER = 0x8D94;
-		public const GLenum RGB_INTEGER = 0x8D98;
-		public const GLenum RGBA_INTEGER = 0x8D99;
-		public const GLenum SAMPLER_2D_ARRAY = 0x8DC1;
-		public const GLenum SAMPLER_2D_ARRAY_SHADOW = 0x8DC4;
-		public const GLenum SAMPLER_CUBE_SHADOW = 0x8DC5;
-		public const GLenum UNSIGNED_INT_VEC2 = 0x8DC6;
-		public const GLenum UNSIGNED_INT_VEC3 = 0x8DC7;
-		public const GLenum UNSIGNED_INT_VEC4 = 0x8DC8;
-		public const GLenum INT_SAMPLER_2D = 0x8DCA;
-		public const GLenum INT_SAMPLER_3D = 0x8DCB;
-		public const GLenum INT_SAMPLER_CUBE = 0x8DCC;
-		public const GLenum INT_SAMPLER_2D_ARRAY = 0x8DCF;
-		public const GLenum UNSIGNED_INT_SAMPLER_2D = 0x8DD2;
-		public const GLenum UNSIGNED_INT_SAMPLER_3D = 0x8DD3;
-		public const GLenum UNSIGNED_INT_SAMPLER_CUBE = 0x8DD4;
-		public const GLenum UNSIGNED_INT_SAMPLER_2D_ARRAY = 0x8DD7;
-		public const GLenum DEPTH_COMPONENT32F = 0x8CAC;
-		public const GLenum DEPTH32F_STENCIL8 = 0x8CAD;
-		public const GLenum FLOAT_32_UNSIGNED_INT_24_8_REV = 0x8DAD;
-		public const GLenum FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING = 0x8210;
-		public const GLenum FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE = 0x8211;
-		public const GLenum FRAMEBUFFER_ATTACHMENT_RED_SIZE = 0x8212;
-		public const GLenum FRAMEBUFFER_ATTACHMENT_GREEN_SIZE = 0x8213;
-		public const GLenum FRAMEBUFFER_ATTACHMENT_BLUE_SIZE = 0x8214;
-		public const GLenum FRAMEBUFFER_ATTACHMENT_ALPHA_SIZE = 0x8215;
-		public const GLenum FRAMEBUFFER_ATTACHMENT_DEPTH_SIZE = 0x8216;
-		public const GLenum FRAMEBUFFER_ATTACHMENT_STENCIL_SIZE = 0x8217;
-		public const GLenum FRAMEBUFFER_DEFAULT = 0x8218;
-		public const GLenum UNSIGNED_INT_24_8 = 0x84FA;
-		public const GLenum DEPTH24_STENCIL8 = 0x88F0;
-		public const GLenum UNSIGNED_NORMALIZED = 0x8C17;
-		public const GLenum DRAW_FRAMEBUFFER_BINDING = 0x8CA6;
-		public const GLenum READ_FRAMEBUFFER = 0x8CA8;
-		public const GLenum DRAW_FRAMEBUFFER = 0x8CA9;
-		public const GLenum READ_FRAMEBUFFER_BINDING = 0x8CAA;
-		public const GLenum RENDERBUFFER_SAMPLES = 0x8CAB;
-		public const GLenum FRAMEBUFFER_ATTACHMENT_TEXTURE_LAYER = 0x8CD4;
-		public const GLenum MAX_COLOR_ATTACHMENTS = 0x8CDF;
-		public const GLenum COLOR_ATTACHMENT1 = 0x8CE1;
-		public const GLenum COLOR_ATTACHMENT2 = 0x8CE2;
-		public const GLenum COLOR_ATTACHMENT3 = 0x8CE3;
-		public const GLenum COLOR_ATTACHMENT4 = 0x8CE4;
-		public const GLenum COLOR_ATTACHMENT5 = 0x8CE5;
-		public const GLenum COLOR_ATTACHMENT6 = 0x8CE6;
-		public const GLenum COLOR_ATTACHMENT7 = 0x8CE7;
-		public const GLenum COLOR_ATTACHMENT8 = 0x8CE8;
-		public const GLenum COLOR_ATTACHMENT9 = 0x8CE9;
-		public const GLenum COLOR_ATTACHMENT10 = 0x8CEA;
-		public const GLenum COLOR_ATTACHMENT11 = 0x8CEB;
-		public const GLenum COLOR_ATTACHMENT12 = 0x8CEC;
-		public const GLenum COLOR_ATTACHMENT13 = 0x8CED;
-		public const GLenum COLOR_ATTACHMENT14 = 0x8CEE;
-		public const GLenum COLOR_ATTACHMENT15 = 0x8CEF;
-		public const GLenum FRAMEBUFFER_INCOMPLETE_MULTISAMPLE = 0x8D56;
-		public const GLenum MAX_SAMPLES = 0x8D57;
-		public const GLenum HALF_FLOAT = 0x140B;
-		public const GLenum RG = 0x8227;
-		public const GLenum RG_INTEGER = 0x8228;
-		public const GLenum R8 = 0x8229;
-		public const GLenum RG8 = 0x822B;
-		public const GLenum R16F = 0x822D;
-		public const GLenum R32F = 0x822E;
-		public const GLenum RG16F = 0x822F;
-		public const GLenum RG32F = 0x8230;
-		public const GLenum R8I = 0x8231;
-		public const GLenum R8UI = 0x8232;
-		public const GLenum R16I = 0x8233;
-		public const GLenum R16UI = 0x8234;
-		public const GLenum R32I = 0x8235;
-		public const GLenum R32UI = 0x8236;
-		public const GLenum RG8I = 0x8237;
-		public const GLenum RG8UI = 0x8238;
-		public const GLenum RG16I = 0x8239;
-		public const GLenum RG16UI = 0x823A;
-		public const GLenum RG32I = 0x823B;
-		public const GLenum RG32UI = 0x823C;
-		public const GLenum VERTEX_ARRAY_BINDING = 0x85B5;
-		public const GLenum R8_SNORM = 0x8F94;
-		public const GLenum RG8_SNORM = 0x8F95;
-		public const GLenum RGB8_SNORM = 0x8F96;
-		public const GLenum RGBA8_SNORM = 0x8F97;
-		public const GLenum SIGNED_NORMALIZED = 0x8F9C;
-		public const GLenum COPY_READ_BUFFER = 0x8F36;
-		public const GLenum COPY_WRITE_BUFFER = 0x8F37;
-		public const GLenum COPY_READ_BUFFER_BINDING = 0x8F36;
-		public const GLenum COPY_WRITE_BUFFER_BINDING = 0x8F37;
-		public const GLenum UNIFORM_BUFFER = 0x8A11;
-		public const GLenum UNIFORM_BUFFER_BINDING = 0x8A28;
-		public const GLenum UNIFORM_BUFFER_START = 0x8A29;
-		public const GLenum UNIFORM_BUFFER_SIZE = 0x8A2A;
-		public const GLenum MAX_VERTEX_UNIFORM_BLOCKS = 0x8A2B;
-		public const GLenum MAX_FRAGMENT_UNIFORM_BLOCKS = 0x8A2D;
-		public const GLenum MAX_COMBINED_UNIFORM_BLOCKS = 0x8A2E;
-		public const GLenum MAX_UNIFORM_BUFFER_BINDINGS = 0x8A2F;
-		public const GLenum MAX_UNIFORM_BLOCK_SIZE = 0x8A30;
-		public const GLenum MAX_COMBINED_VERTEX_UNIFORM_COMPONENTS = 0x8A31;
-		public const GLenum MAX_COMBINED_FRAGMENT_UNIFORM_COMPONENTS = 0x8A33;
-		public const GLenum UNIFORM_BUFFER_OFFSET_ALIGNMENT = 0x8A34;
-		public const GLenum ACTIVE_UNIFORM_BLOCKS = 0x8A36;
-		public const GLenum UNIFORM_TYPE = 0x8A37;
-		public const GLenum UNIFORM_SIZE = 0x8A38;
-		public const GLenum UNIFORM_BLOCK_INDEX = 0x8A3A;
-		public const GLenum UNIFORM_OFFSET = 0x8A3B;
-		public const GLenum UNIFORM_ARRAY_STRIDE = 0x8A3C;
-		public const GLenum UNIFORM_MATRIX_STRIDE = 0x8A3D;
-		public const GLenum UNIFORM_IS_ROW_MAJOR = 0x8A3E;
-		public const GLenum UNIFORM_BLOCK_BINDING = 0x8A3F;
-		public const GLenum UNIFORM_BLOCK_DATA_SIZE = 0x8A40;
-		public const GLenum UNIFORM_BLOCK_ACTIVE_UNIFORMS = 0x8A42;
-		public const GLenum UNIFORM_BLOCK_ACTIVE_UNIFORM_INDICES = 0x8A43;
-		public const GLenum UNIFORM_BLOCK_REFERENCED_BY_VERTEX_SHADER = 0x8A44;
-		public const GLenum UNIFORM_BLOCK_REFERENCED_BY_FRAGMENT_SHADER = 0x8A46;
-		public const GLenum INVALID_INDEX = 0xFFFFFFFF;
-		public const GLenum MAX_VERTEX_OUTPUT_COMPONENTS = 0x9122;
-		public const GLenum MAX_FRAGMENT_INPUT_COMPONENTS = 0x9125;
-		public const GLenum MAX_SERVER_WAIT_TIMEOUT = 0x9111;
-		public const GLenum OBJECT_TYPE = 0x9112;
-		public const GLenum SYNC_CONDITION = 0x9113;
-		public const GLenum SYNC_STATUS = 0x9114;
-		public const GLenum SYNC_FLAGS = 0x9115;
-		public const GLenum SYNC_FENCE = 0x9116;
-		public const GLenum SYNC_GPU_COMMANDS_COMPLETE = 0x9117;
-		public const GLenum UNSIGNALED = 0x9118;
-		public const GLenum SIGNALED = 0x9119;
-		public const GLenum ALREADY_SIGNALED = 0x911A;
-		public const GLenum TIMEOUT_EXPIRED = 0x911B;
-		public const GLenum CONDITION_SATISFIED = 0x911C;
-		public const GLenum WAIT_FAILED = 0x911D;
-		public const GLenum SYNC_FLUSH_COMMANDS_BIT = 0x00000001;
-		public const GLenum VERTEX_ATTRIB_ARRAY_DIVISOR = 0x88FE;
-		public const GLenum ANY_SAMPLES_PASSED = 0x8C2F;
-		public const GLenum ANY_SAMPLES_PASSED_CONSERVATIVE = 0x8D6A;
-		public const GLenum SAMPLER_BINDING = 0x8919;
-		public const GLenum RGB10_A2UI = 0x906F;
-		public const GLenum INT_2_10_10_10_REV = 0x8D9F;
-		public const GLenum TRANSFORM_FEEDBACK = 0x8E22;
-		public const GLenum TRANSFORM_FEEDBACK_PAUSED = 0x8E23;
-		public const GLenum TRANSFORM_FEEDBACK_ACTIVE = 0x8E24;
-		public const GLenum TRANSFORM_FEEDBACK_BINDING = 0x8E25;
-		public const GLenum TEXTURE_IMMUTABLE_FORMAT = 0x912F;
-		public const GLenum MAX_ELEMENT_INDEX = 0x8D6B;
-		public const GLenum TEXTURE_IMMUTABLE_LEVELS = 0x82DF;
-		public const GLint64 TIMEOUT_IGNORED = -1;
-		public const GLenum MAX_CLIENT_WAIT_TIMEOUT_WEBGL = 0x9247;
-		public Undefined CopyBufferSubData(GLenum readTarget, GLenum writeTarget, GLintptr readOffset, GLintptr writeOffset, GLsizeiptr size) { throw new System.NotImplementedException(); }
-		public Undefined GetBufferSubData(GLenum target, GLintptr srcByteOffset, ArrayBufferView dstBuffer, ulong dstOffset, GLuint length) { throw new System.NotImplementedException(); }
-		public Undefined BlitFramebuffer(GLint srcX0, GLint srcY0, GLint srcX1, GLint srcY1, GLint dstX0, GLint dstY0, GLint dstX1, GLint dstY1, GLbitfield mask, GLenum filter) { throw new System.NotImplementedException(); }
-		public Undefined FramebufferTextureLayer(GLenum target, GLenum attachment, WebGLTexture? texture, GLint level, GLint layer) { throw new System.NotImplementedException(); }
-		public Undefined InvalidateFramebuffer(GLenum target, List<GLenum> attachments) { throw new System.NotImplementedException(); }
-		public Undefined InvalidateSubFramebuffer(GLenum target, List<GLenum> attachments, GLint x, GLint y, GLsizei width, GLsizei height) { throw new System.NotImplementedException(); }
-		public Undefined ReadBuffer(GLenum src) { throw new System.NotImplementedException(); }
-		public dynamic GetInternalformatParameter(GLenum target, GLenum internalformat, GLenum pname) { throw new System.NotImplementedException(); }
-		public Undefined RenderbufferStorageMultisample(GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height) { throw new System.NotImplementedException(); }
-		public Undefined TexStorage2D(GLenum target, GLsizei levels, GLenum internalformat, GLsizei width, GLsizei height) { throw new System.NotImplementedException(); }
-		public Undefined TexStorage3D(GLenum target, GLsizei levels, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth) { throw new System.NotImplementedException(); }
-		public Undefined TexImage3D(GLenum target, GLint level, GLint internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLenum format, GLenum type, GLintptr pboOffset) { throw new System.NotImplementedException(); }
-		public Undefined TexImage3D(GLenum target, GLint level, GLint internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLenum format, GLenum type, TexImageSource source) { throw new System.NotImplementedException(); }
-		public Undefined TexImage3D(GLenum target, GLint level, GLint internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLenum format, GLenum type, ArrayBufferView? srcData) { throw new System.NotImplementedException(); }
-		public Undefined TexImage3D(GLenum target, GLint level, GLint internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLenum format, GLenum type, ArrayBufferView srcData, ulong srcOffset) { throw new System.NotImplementedException(); }
-		public Undefined TexSubImage3D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, GLintptr pboOffset) { throw new System.NotImplementedException(); }
-		public Undefined TexSubImage3D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, TexImageSource source) { throw new System.NotImplementedException(); }
-		public Undefined TexSubImage3D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, ArrayBufferView? srcData, ulong srcOffset) { throw new System.NotImplementedException(); }
-		public Undefined CopyTexSubImage3D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLint x, GLint y, GLsizei width, GLsizei height) { throw new System.NotImplementedException(); }
-		public Undefined CompressedTexImage3D(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLsizei imageSize, GLintptr offset) { throw new System.NotImplementedException(); }
-		public Undefined CompressedTexImage3D(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, ArrayBufferView srcData, ulong srcOffset, GLuint srcLengthOverride) { throw new System.NotImplementedException(); }
-		public Undefined CompressedTexSubImage3D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLsizei imageSize, GLintptr offset) { throw new System.NotImplementedException(); }
-		public Undefined CompressedTexSubImage3D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, ArrayBufferView srcData, ulong srcOffset, GLuint srcLengthOverride) { throw new System.NotImplementedException(); }
-		public GLint GetFragDataLocation(WebGLProgram program, DOMString name) { throw new System.NotImplementedException(); }
-		public Undefined Uniform1ui(WebGLUniformLocation? location, GLuint v0) { throw new System.NotImplementedException(); }
-		public Undefined Uniform2ui(WebGLUniformLocation? location, GLuint v0, GLuint v1) { throw new System.NotImplementedException(); }
-		public Undefined Uniform3ui(WebGLUniformLocation? location, GLuint v0, GLuint v1, GLuint v2) { throw new System.NotImplementedException(); }
-		public Undefined Uniform4ui(WebGLUniformLocation? location, GLuint v0, GLuint v1, GLuint v2, GLuint v3) { throw new System.NotImplementedException(); }
-		public Undefined Uniform1uiv(WebGLUniformLocation? location, Uint32List data, ulong srcOffset, GLuint srcLength) { throw new System.NotImplementedException(); }
-		public Undefined Uniform2uiv(WebGLUniformLocation? location, Uint32List data, ulong srcOffset, GLuint srcLength) { throw new System.NotImplementedException(); }
-		public Undefined Uniform3uiv(WebGLUniformLocation? location, Uint32List data, ulong srcOffset, GLuint srcLength) { throw new System.NotImplementedException(); }
-		public Undefined Uniform4uiv(WebGLUniformLocation? location, Uint32List data, ulong srcOffset, GLuint srcLength) { throw new System.NotImplementedException(); }
-		public Undefined UniformMatrix3x2fv(WebGLUniformLocation? location, bool transpose, Float32List data, ulong srcOffset, GLuint srcLength) { throw new System.NotImplementedException(); }
-		public Undefined UniformMatrix4x2fv(WebGLUniformLocation? location, bool transpose, Float32List data, ulong srcOffset, GLuint srcLength) { throw new System.NotImplementedException(); }
-		public Undefined UniformMatrix2x3fv(WebGLUniformLocation? location, bool transpose, Float32List data, ulong srcOffset, GLuint srcLength) { throw new System.NotImplementedException(); }
-		public Undefined UniformMatrix4x3fv(WebGLUniformLocation? location, bool transpose, Float32List data, ulong srcOffset, GLuint srcLength) { throw new System.NotImplementedException(); }
-		public Undefined UniformMatrix2x4fv(WebGLUniformLocation? location, bool transpose, Float32List data, ulong srcOffset, GLuint srcLength) { throw new System.NotImplementedException(); }
-		public Undefined UniformMatrix3x4fv(WebGLUniformLocation? location, bool transpose, Float32List data, ulong srcOffset, GLuint srcLength) { throw new System.NotImplementedException(); }
-		public Undefined VertexAttribI4i(GLuint index, GLint x, GLint y, GLint z, GLint w) { throw new System.NotImplementedException(); }
-		public Undefined VertexAttribI4iv(GLuint index, Int32List values) { throw new System.NotImplementedException(); }
-		public Undefined VertexAttribI4ui(GLuint index, GLuint x, GLuint y, GLuint z, GLuint w) { throw new System.NotImplementedException(); }
-		public Undefined VertexAttribI4uiv(GLuint index, Uint32List values) { throw new System.NotImplementedException(); }
-		public Undefined VertexAttribIPointer(GLuint index, GLint size, GLenum type, GLsizei stride, GLintptr offset) { throw new System.NotImplementedException(); }
-		public Undefined VertexAttribDivisor(GLuint index, GLuint divisor) { throw new System.NotImplementedException(); }
-		public Undefined DrawArraysInstanced(GLenum mode, GLint first, GLsizei count, GLsizei instanceCount) { throw new System.NotImplementedException(); }
-		public Undefined DrawElementsInstanced(GLenum mode, GLsizei count, GLenum type, GLintptr offset, GLsizei instanceCount) { throw new System.NotImplementedException(); }
-		public Undefined DrawRangeElements(GLenum mode, GLuint start, GLuint end, GLsizei count, GLenum type, GLintptr offset) { throw new System.NotImplementedException(); }
-		public Undefined DrawBuffers(List<GLenum> buffers) { throw new System.NotImplementedException(); }
-		public Undefined ClearBufferfv(GLenum buffer, GLint drawbuffer, Float32List values, ulong srcOffset) { throw new System.NotImplementedException(); }
-		public Undefined ClearBufferiv(GLenum buffer, GLint drawbuffer, Int32List values, ulong srcOffset) { throw new System.NotImplementedException(); }
-		public Undefined ClearBufferuiv(GLenum buffer, GLint drawbuffer, Uint32List values, ulong srcOffset) { throw new System.NotImplementedException(); }
-		public Undefined ClearBufferfi(GLenum buffer, GLint drawbuffer, Number depth, GLint stencil) { throw new System.NotImplementedException(); }
-		public WebGLQuery? CreateQuery() { throw new System.NotImplementedException(); }
-		public Undefined DeleteQuery(WebGLQuery? query) { throw new System.NotImplementedException(); }
-		public bool IsQuery(WebGLQuery? query) { throw new System.NotImplementedException(); }
-		public Undefined BeginQuery(GLenum target, WebGLQuery query) { throw new System.NotImplementedException(); }
-		public Undefined EndQuery(GLenum target) { throw new System.NotImplementedException(); }
-		public WebGLQuery? GetQuery(GLenum target, GLenum pname) { throw new System.NotImplementedException(); }
-		public dynamic GetQueryParameter(WebGLQuery query, GLenum pname) { throw new System.NotImplementedException(); }
-		public WebGLSampler? CreateSampler() { throw new System.NotImplementedException(); }
-		public Undefined DeleteSampler(WebGLSampler? sampler) { throw new System.NotImplementedException(); }
-		public bool IsSampler(WebGLSampler? sampler) { throw new System.NotImplementedException(); }
-		public Undefined BindSampler(GLuint unit, WebGLSampler? sampler) { throw new System.NotImplementedException(); }
-		public Undefined SamplerParameteri(WebGLSampler sampler, GLenum pname, GLint param) { throw new System.NotImplementedException(); }
-		public Undefined SamplerParameterf(WebGLSampler sampler, GLenum pname, Number param) { throw new System.NotImplementedException(); }
-		public dynamic GetSamplerParameter(WebGLSampler sampler, GLenum pname) { throw new System.NotImplementedException(); }
-		public WebGLSync? FenceSync(GLenum condition, GLbitfield flags) { throw new System.NotImplementedException(); }
-		public bool IsSync(WebGLSync? sync) { throw new System.NotImplementedException(); }
-		public Undefined DeleteSync(WebGLSync? sync) { throw new System.NotImplementedException(); }
-		public GLenum ClientWaitSync(WebGLSync sync, GLbitfield flags, GLuint64 timeout) { throw new System.NotImplementedException(); }
-		public Undefined WaitSync(WebGLSync sync, GLbitfield flags, GLint64 timeout) { throw new System.NotImplementedException(); }
-		public dynamic GetSyncParameter(WebGLSync sync, GLenum pname) { throw new System.NotImplementedException(); }
-		public WebGLTransformFeedback? CreateTransformFeedback() { throw new System.NotImplementedException(); }
-		public Undefined DeleteTransformFeedback(WebGLTransformFeedback? tf) { throw new System.NotImplementedException(); }
-		public bool IsTransformFeedback(WebGLTransformFeedback? tf) { throw new System.NotImplementedException(); }
-		public Undefined BindTransformFeedback(GLenum target, WebGLTransformFeedback? tf) { throw new System.NotImplementedException(); }
-		public Undefined BeginTransformFeedback(GLenum primitiveMode) { throw new System.NotImplementedException(); }
-		public Undefined EndTransformFeedback() { throw new System.NotImplementedException(); }
-		public Undefined TransformFeedbackVaryings(WebGLProgram program, List<DOMString> varyings, GLenum bufferMode) { throw new System.NotImplementedException(); }
-		public WebGLActiveInfo? GetTransformFeedbackVarying(WebGLProgram program, GLuint index) { throw new System.NotImplementedException(); }
-		public Undefined PauseTransformFeedback() { throw new System.NotImplementedException(); }
-		public Undefined ResumeTransformFeedback() { throw new System.NotImplementedException(); }
-		public Undefined BindBufferBase(GLenum target, GLuint index, WebGLBuffer? buffer) { throw new System.NotImplementedException(); }
-		public Undefined BindBufferRange(GLenum target, GLuint index, WebGLBuffer? buffer, GLintptr offset, GLsizeiptr size) { throw new System.NotImplementedException(); }
-		public dynamic GetIndexedParameter(GLenum target, GLuint index) { throw new System.NotImplementedException(); }
-		public List<GLuint>? GetUniformIndices(WebGLProgram program, List<DOMString> uniformNames) { throw new System.NotImplementedException(); }
-		public dynamic GetActiveUniforms(WebGLProgram program, List<GLuint> uniformIndices, GLenum pname) { throw new System.NotImplementedException(); }
-		public GLuint GetUniformBlockIndex(WebGLProgram program, DOMString uniformBlockName) { throw new System.NotImplementedException(); }
-		public dynamic GetActiveUniformBlockParameter(WebGLProgram program, GLuint uniformBlockIndex, GLenum pname) { throw new System.NotImplementedException(); }
-		public DOMString? GetActiveUniformBlockName(WebGLProgram program, GLuint uniformBlockIndex) { throw new System.NotImplementedException(); }
-		public Undefined UniformBlockBinding(WebGLProgram program, GLuint uniformBlockIndex, GLuint uniformBlockBinding) { throw new System.NotImplementedException(); }
-		public WebGLVertexArrayObject? CreateVertexArray() { throw new System.NotImplementedException(); }
-		public Undefined DeleteVertexArray(WebGLVertexArrayObject? vertexArray) { throw new System.NotImplementedException(); }
-		public bool IsVertexArray(WebGLVertexArrayObject? vertexArray) { throw new System.NotImplementedException(); }
-		public Undefined BindVertexArray(WebGLVertexArrayObject? array) { throw new System.NotImplementedException(); }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface WebGL2RenderingContextOverloads
-{
-		public Undefined BufferData(GLenum target, GLsizeiptr size, GLenum usage) { throw new System.NotImplementedException(); }
-		public Undefined BufferData(GLenum target, AllowSharedBufferSource? srcData, GLenum usage) { throw new System.NotImplementedException(); }
-		public Undefined BufferSubData(GLenum target, GLintptr dstByteOffset, AllowSharedBufferSource srcData) { throw new System.NotImplementedException(); }
-		public Undefined BufferData(GLenum target, ArrayBufferView srcData, GLenum usage, ulong srcOffset, GLuint length) { throw new System.NotImplementedException(); }
-		public Undefined BufferSubData(GLenum target, GLintptr dstByteOffset, ArrayBufferView srcData, ulong srcOffset, GLuint length) { throw new System.NotImplementedException(); }
-		public Undefined TexImage2D(GLenum target, GLint level, GLint internalformat, GLsizei width, GLsizei height, GLint border, GLenum format, GLenum type, ArrayBufferView? pixels) { throw new System.NotImplementedException(); }
-		public Undefined TexImage2D(GLenum target, GLint level, GLint internalformat, GLenum format, GLenum type, TexImageSource source) { throw new System.NotImplementedException(); }
-		public Undefined TexSubImage2D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLenum type, ArrayBufferView? pixels) { throw new System.NotImplementedException(); }
-		public Undefined TexSubImage2D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLenum format, GLenum type, TexImageSource source) { throw new System.NotImplementedException(); }
-		public Undefined TexImage2D(GLenum target, GLint level, GLint internalformat, GLsizei width, GLsizei height, GLint border, GLenum format, GLenum type, GLintptr pboOffset) { throw new System.NotImplementedException(); }
-		public Undefined TexImage2D(GLenum target, GLint level, GLint internalformat, GLsizei width, GLsizei height, GLint border, GLenum format, GLenum type, TexImageSource source) { throw new System.NotImplementedException(); }
-		public Undefined TexImage2D(GLenum target, GLint level, GLint internalformat, GLsizei width, GLsizei height, GLint border, GLenum format, GLenum type, ArrayBufferView srcData, ulong srcOffset) { throw new System.NotImplementedException(); }
-		public Undefined TexSubImage2D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLenum type, GLintptr pboOffset) { throw new System.NotImplementedException(); }
-		public Undefined TexSubImage2D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLenum type, TexImageSource source) { throw new System.NotImplementedException(); }
-		public Undefined TexSubImage2D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLenum type, ArrayBufferView srcData, ulong srcOffset) { throw new System.NotImplementedException(); }
-		public Undefined CompressedTexImage2D(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLint border, GLsizei imageSize, GLintptr offset) { throw new System.NotImplementedException(); }
-		public Undefined CompressedTexImage2D(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLint border, ArrayBufferView srcData, ulong srcOffset, GLuint srcLengthOverride) { throw new System.NotImplementedException(); }
-		public Undefined CompressedTexSubImage2D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLsizei imageSize, GLintptr offset) { throw new System.NotImplementedException(); }
-		public Undefined CompressedTexSubImage2D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, ArrayBufferView srcData, ulong srcOffset, GLuint srcLengthOverride) { throw new System.NotImplementedException(); }
-		public Undefined Uniform1fv(WebGLUniformLocation? location, Float32List data, ulong srcOffset, GLuint srcLength) { throw new System.NotImplementedException(); }
-		public Undefined Uniform2fv(WebGLUniformLocation? location, Float32List data, ulong srcOffset, GLuint srcLength) { throw new System.NotImplementedException(); }
-		public Undefined Uniform3fv(WebGLUniformLocation? location, Float32List data, ulong srcOffset, GLuint srcLength) { throw new System.NotImplementedException(); }
-		public Undefined Uniform4fv(WebGLUniformLocation? location, Float32List data, ulong srcOffset, GLuint srcLength) { throw new System.NotImplementedException(); }
-		public Undefined Uniform1iv(WebGLUniformLocation? location, Int32List data, ulong srcOffset, GLuint srcLength) { throw new System.NotImplementedException(); }
-		public Undefined Uniform2iv(WebGLUniformLocation? location, Int32List data, ulong srcOffset, GLuint srcLength) { throw new System.NotImplementedException(); }
-		public Undefined Uniform3iv(WebGLUniformLocation? location, Int32List data, ulong srcOffset, GLuint srcLength) { throw new System.NotImplementedException(); }
-		public Undefined Uniform4iv(WebGLUniformLocation? location, Int32List data, ulong srcOffset, GLuint srcLength) { throw new System.NotImplementedException(); }
-		public Undefined UniformMatrix2fv(WebGLUniformLocation? location, bool transpose, Float32List data, ulong srcOffset, GLuint srcLength) { throw new System.NotImplementedException(); }
-		public Undefined UniformMatrix3fv(WebGLUniformLocation? location, bool transpose, Float32List data, ulong srcOffset, GLuint srcLength) { throw new System.NotImplementedException(); }
-		public Undefined UniformMatrix4fv(WebGLUniformLocation? location, bool transpose, Float32List data, ulong srcOffset, GLuint srcLength) { throw new System.NotImplementedException(); }
-		public Undefined ReadPixels(GLint x, GLint y, GLsizei width, GLsizei height, GLenum format, GLenum type, ArrayBufferView? dstData) { throw new System.NotImplementedException(); }
-		public Undefined ReadPixels(GLint x, GLint y, GLsizei width, GLsizei height, GLenum format, GLenum type, GLintptr offset) { throw new System.NotImplementedException(); }
-		public Undefined ReadPixels(GLint x, GLint y, GLsizei width, GLsizei height, GLenum format, GLenum type, ArrayBufferView dstData, ulong dstOffset) { throw new System.NotImplementedException(); }
-}
 
 ///<include file='Utils/Docs/WebGL2RenderingContext/WebGL2RenderingContext.generated.xml' path='docs/WebGL2RenderingContext/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -26813,17 +23312,17 @@ public partial class WEBGL_lose_context
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class WEBGL_multi_draw
 {
-		public Undefined MultiDrawArraysWEBGL(GLenum mode, Union170 firstsList, ulong firstsOffset, Union171 countsList, ulong countsOffset, GLsizei drawcount) { throw new System.NotImplementedException(); }
-		public Undefined MultiDrawElementsWEBGL(GLenum mode, Union172 countsList, ulong countsOffset, GLenum type, Union173 offsetsList, ulong offsetsOffset, GLsizei drawcount) { throw new System.NotImplementedException(); }
-		public Undefined MultiDrawArraysInstancedWEBGL(GLenum mode, Union174 firstsList, ulong firstsOffset, Union175 countsList, ulong countsOffset, Union176 instanceCountsList, ulong instanceCountsOffset, GLsizei drawcount) { throw new System.NotImplementedException(); }
-		public Undefined MultiDrawElementsInstancedWEBGL(GLenum mode, Union177 countsList, ulong countsOffset, GLenum type, Union178 offsetsList, ulong offsetsOffset, Union179 instanceCountsList, ulong instanceCountsOffset, GLsizei drawcount) { throw new System.NotImplementedException(); }
+		public Undefined MultiDrawArraysWEBGL(GLenum mode, Union194 firstsList, ulong firstsOffset, Union195 countsList, ulong countsOffset, GLsizei drawcount) { throw new System.NotImplementedException(); }
+		public Undefined MultiDrawElementsWEBGL(GLenum mode, Union196 countsList, ulong countsOffset, GLenum type, Union197 offsetsList, ulong offsetsOffset, GLsizei drawcount) { throw new System.NotImplementedException(); }
+		public Undefined MultiDrawArraysInstancedWEBGL(GLenum mode, Union198 firstsList, ulong firstsOffset, Union199 countsList, ulong countsOffset, Union200 instanceCountsList, ulong instanceCountsOffset, GLsizei drawcount) { throw new System.NotImplementedException(); }
+		public Undefined MultiDrawElementsInstancedWEBGL(GLenum mode, Union201 countsList, ulong countsOffset, GLenum type, Union202 offsetsList, ulong offsetsOffset, Union203 instanceCountsList, ulong instanceCountsOffset, GLsizei drawcount) { throw new System.NotImplementedException(); }
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class WEBGL_multi_draw_instanced_base_vertex_base_instance
 {
-		public Undefined MultiDrawArraysInstancedBaseInstanceWEBGL(GLenum mode, Union180 firstsList, ulong firstsOffset, Union181 countsList, ulong countsOffset, Union182 instanceCountsList, ulong instanceCountsOffset, Union183 baseInstancesList, ulong baseInstancesOffset, GLsizei drawcount) { throw new System.NotImplementedException(); }
-		public Undefined MultiDrawElementsInstancedBaseVertexBaseInstanceWEBGL(GLenum mode, Union184 countsList, ulong countsOffset, GLenum type, Union185 offsetsList, ulong offsetsOffset, Union186 instanceCountsList, ulong instanceCountsOffset, Union187 baseVerticesList, ulong baseVerticesOffset, Union188 baseInstancesList, ulong baseInstancesOffset, GLsizei drawcount) { throw new System.NotImplementedException(); }
+		public Undefined MultiDrawArraysInstancedBaseInstanceWEBGL(GLenum mode, Union204 firstsList, ulong firstsOffset, Union205 countsList, ulong countsOffset, Union206 instanceCountsList, ulong instanceCountsOffset, Union207 baseInstancesList, ulong baseInstancesOffset, GLsizei drawcount) { throw new System.NotImplementedException(); }
+		public Undefined MultiDrawElementsInstancedBaseVertexBaseInstanceWEBGL(GLenum mode, Union208 countsList, ulong countsOffset, GLenum type, Union209 offsetsList, ulong offsetsOffset, Union210 instanceCountsList, ulong instanceCountsOffset, Union211 baseVerticesList, ulong baseVerticesOffset, Union212 baseInstancesList, ulong baseInstancesOffset, GLsizei drawcount) { throw new System.NotImplementedException(); }
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -26833,12 +23332,6 @@ public partial class WEBGL_provoking_vertex
 		public const GLenum LAST_VERTEX_CONVENTION_WEBGL = 0x8E4E;
 		public const GLenum PROVOKING_VERTEX_WEBGL = 0x8E4F;
 		public Undefined ProvokingVertexWEBGL(GLenum provokeMode) { throw new System.NotImplementedException(); }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface GPUObjectBase
-{
-		public USVString Label { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -26873,7 +23366,6 @@ public partial class GPUSupportedLimits
 		public ulong MaxBufferSize { get; }
 		public ulong MaxVertexAttributes { get; }
 		public ulong MaxVertexBufferArrayStride { get; }
-		public ulong MaxInterStageShaderComponents { get; }
 		public ulong MaxInterStageShaderVariables { get; }
 		public ulong MaxColorAttachments { get; }
 		public ulong MaxColorAttachmentBytesPerSample { get; }
@@ -26913,15 +23405,6 @@ public partial class GPUAdapterInfo
 	public DOMString Description { get; }
 }
 
-///<include file='Utils/Docs/NavigatorGPU/NavigatorGPU.generated.xml' path='docs/NavigatorGPU/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface NavigatorGPU
-{
-		public GPU Gpu { get { throw new System.NotImplementedException(); } }
-}
-
-
-
 ///<include file='Utils/Docs/GPU/GPU.generated.xml' path='docs/GPU/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class GPU
@@ -26937,17 +23420,10 @@ public partial class GPU
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class GPURequestAdapterOptions
 {
+		public DOMString FeatureLevel;
 		public GPUPowerPreference PowerPreference;
 		public bool ForceFallbackAdapter;
-}
-
-[To(ToAttribute.None)]
-public enum GPUPowerPreference
-{
-	[Value("low-power")]
-	LowPower,
-	[Value("high-performance")]
-	HighPerformance,
+		public bool XrCompatible;
 }
 
 ///<include file='Utils/Docs/GPUAdapter/GPUAdapter.generated.xml' path='docs/GPUAdapter/*'/>
@@ -26958,12 +23434,12 @@ public partial class GPUAdapter
 	public GPUSupportedFeatures Features { get; }
 	///<include file='Utils/Docs/GPUAdapterLimits/GPUAdapterLimits.generated.xml' path='docs/GPUAdapterLimits/*'/>
 	public GPUSupportedLimits Limits { get; }
+	///<include file='Utils/Docs/GPUAdapterInfo/GPUAdapterInfo.generated.xml' path='docs/GPUAdapterInfo/*'/>
+	public GPUAdapterInfo Info { get; }
 	///<include file='Utils/Docs/GPUAdapterIsFallbackAdapter/GPUAdapterIsFallbackAdapter.generated.xml' path='docs/GPUAdapterIsFallbackAdapter/*'/>
 	public bool IsFallbackAdapter { get; }
 	///<include file='Utils/Docs/GPUAdapterRequestDevice/GPUAdapterRequestDevice.generated.xml' path='docs/GPUAdapterRequestDevice/*'/>
 	public Task<GPUDevice> RequestDevice(GPUDeviceDescriptor descriptor) { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/GPUAdapterRequestAdapterInfo/GPUAdapterRequestAdapterInfo.generated.xml' path='docs/GPUAdapterRequestAdapterInfo/*'/>
-	public Task<GPUAdapterInfo> RequestAdapterInfo() { throw new System.NotImplementedException(); }
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -26974,33 +23450,6 @@ public partial class GPUDeviceDescriptor : GPUObjectDescriptorBase
 		public GPUQueueDescriptor DefaultQueue;
 }
 
-[To(ToAttribute.None)]
-public enum GPUFeatureName
-{
-	[Value("depth-clip-control")]
-	DepthClipControl,
-	[Value("depth32float-stencil8")]
-	Depth32floatStencil8,
-	[Value("texture-compression-bc")]
-	TextureCompressionBc,
-	[Value("texture-compression-etc2")]
-	TextureCompressionEtc2,
-	[Value("texture-compression-astc")]
-	TextureCompressionAstc,
-	[Value("timestamp-query")]
-	TimestampQuery,
-	[Value("indirect-first-instance")]
-	IndirectFirstInstance,
-	[Value("shader-f16")]
-	ShaderF16,
-	[Value("rg11b10ufloat-renderable")]
-	Rg11b10ufloatRenderable,
-	[Value("bgra8unorm-storage")]
-	Bgra8unormStorage,
-	[Value("float32-filterable")]
-	Float32Filterable,
-}
-
 ///<include file='Utils/Docs/GPUDevice/GPUDevice.generated.xml' path='docs/GPUDevice/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class GPUDevice : EventTarget, GPUObjectBase
@@ -27009,6 +23458,7 @@ public partial class GPUDevice : EventTarget, GPUObjectBase
 	public GPUSupportedFeatures Features { get; }
 	///<include file='Utils/Docs/GPUDeviceLimits/GPUDeviceLimits.generated.xml' path='docs/GPUDeviceLimits/*'/>
 	public GPUSupportedLimits Limits { get; }
+		public GPUAdapterInfo AdapterInfo { get; }
 	///<include file='Utils/Docs/GPUDeviceQueue/GPUDeviceQueue.generated.xml' path='docs/GPUDeviceQueue/*'/>
 	public GPUQueue Queue { get; }
 	///<include file='Utils/Docs/GPUDeviceDestroy/GPUDeviceDestroy.generated.xml' path='docs/GPUDeviceDestroy/*'/>
@@ -27066,18 +23516,6 @@ public partial class GPUBuffer
 	public Undefined Destroy() { throw new System.NotImplementedException(); }
 }
 
-
-///<include file='Utils/Docs/GPUBufferMapState/GPUBufferMapState.generated.xml' path='docs/GPUBufferMapState/*'/>
-[To(ToAttribute.None)]
-public enum GPUBufferMapState
-{
-	[Value("unmapped")]
-	Unmapped,
-	[Value("pending")]
-	Pending,
-	[Value("mapped")]
-	Mapped,
-}
 
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class GPUBufferDescriptor : GPUObjectDescriptorBase
@@ -27151,19 +23589,6 @@ public partial class GPUTextureDescriptor : GPUObjectDescriptorBase
 		public List<GPUTextureFormat> ViewFormats;
 }
 
-///<include file='Utils/Docs/GPUTextureDimension/GPUTextureDimension.generated.xml' path='docs/GPUTextureDimension/*'/>
-[To(ToAttribute.None)]
-public enum GPUTextureDimension
-{
-	[Value("1d")]
-	_1d,
-	[Value("2d")]
-	_2d,
-	[Value("3d")]
-	_3d,
-}
-
-
 ///<include file='Utils/Docs/GPUTextureUsage/GPUTextureUsage.generated.xml' path='docs/GPUTextureUsage/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class GPUTextureUsage
@@ -27187,235 +23612,12 @@ public partial class GPUTextureViewDescriptor : GPUObjectDescriptorBase
 {
 		public GPUTextureFormat Format;
 		public GPUTextureViewDimension Dimension;
+		public GPUTextureUsageFlags Usage;
 		public GPUTextureAspect Aspect;
 		public GPUIntegerCoordinate BaseMipLevel;
 		public GPUIntegerCoordinate MipLevelCount;
 		public GPUIntegerCoordinate BaseArrayLayer;
 		public GPUIntegerCoordinate ArrayLayerCount;
-}
-
-[To(ToAttribute.None)]
-public enum GPUTextureViewDimension
-{
-	[Value("1d")]
-	_1d,
-	[Value("2d")]
-	_2d,
-	[Value("2d-array")]
-	_2dArray,
-	[Value("cube")]
-	Cube,
-	[Value("cube-array")]
-	CubeArray,
-	[Value("3d")]
-	_3d,
-}
-
-[To(ToAttribute.None)]
-public enum GPUTextureAspect
-{
-	[Value("all")]
-	All,
-	[Value("stencil-only")]
-	StencilOnly,
-	[Value("depth-only")]
-	DepthOnly,
-}
-
-///<include file='Utils/Docs/GPUTextureFormat/GPUTextureFormat.generated.xml' path='docs/GPUTextureFormat/*'/>
-[To(ToAttribute.None)]
-public enum GPUTextureFormat
-{
-	[Value("r8unorm")]
-	R8unorm,
-	[Value("r8snorm")]
-	R8snorm,
-	[Value("r8uint")]
-	R8uint,
-	[Value("r8sint")]
-	R8sint,
-	[Value("r16uint")]
-	R16uint,
-	[Value("r16sint")]
-	R16sint,
-	[Value("r16float")]
-	R16float,
-	[Value("rg8unorm")]
-	Rg8unorm,
-	[Value("rg8snorm")]
-	Rg8snorm,
-	[Value("rg8uint")]
-	Rg8uint,
-	[Value("rg8sint")]
-	Rg8sint,
-	[Value("r32uint")]
-	R32uint,
-	[Value("r32sint")]
-	R32sint,
-	[Value("r32float")]
-	R32float,
-	[Value("rg16uint")]
-	Rg16uint,
-	[Value("rg16sint")]
-	Rg16sint,
-	[Value("rg16float")]
-	Rg16float,
-	[Value("rgba8unorm")]
-	Rgba8unorm,
-	[Value("rgba8unorm-srgb")]
-	Rgba8unormSrgb,
-	[Value("rgba8snorm")]
-	Rgba8snorm,
-	[Value("rgba8uint")]
-	Rgba8uint,
-	[Value("rgba8sint")]
-	Rgba8sint,
-	[Value("bgra8unorm")]
-	Bgra8unorm,
-	[Value("bgra8unorm-srgb")]
-	Bgra8unormSrgb,
-	[Value("rgb9e5ufloat")]
-	Rgb9e5ufloat,
-	[Value("rgb10a2uint")]
-	Rgb10a2uint,
-	[Value("rgb10a2unorm")]
-	Rgb10a2unorm,
-	[Value("rg11b10ufloat")]
-	Rg11b10ufloat,
-	[Value("rg32uint")]
-	Rg32uint,
-	[Value("rg32sint")]
-	Rg32sint,
-	[Value("rg32float")]
-	Rg32float,
-	[Value("rgba16uint")]
-	Rgba16uint,
-	[Value("rgba16sint")]
-	Rgba16sint,
-	[Value("rgba16float")]
-	Rgba16float,
-	[Value("rgba32uint")]
-	Rgba32uint,
-	[Value("rgba32sint")]
-	Rgba32sint,
-	[Value("rgba32float")]
-	Rgba32float,
-	[Value("stencil8")]
-	Stencil8,
-	[Value("depth16unorm")]
-	Depth16unorm,
-	[Value("depth24plus")]
-	Depth24plus,
-	[Value("depth24plus-stencil8")]
-	Depth24plusStencil8,
-	[Value("depth32float")]
-	Depth32float,
-	[Value("depth32float-stencil8")]
-	Depth32floatStencil8,
-	[Value("bc1-rgba-unorm")]
-	Bc1RgbaUnorm,
-	[Value("bc1-rgba-unorm-srgb")]
-	Bc1RgbaUnormSrgb,
-	[Value("bc2-rgba-unorm")]
-	Bc2RgbaUnorm,
-	[Value("bc2-rgba-unorm-srgb")]
-	Bc2RgbaUnormSrgb,
-	[Value("bc3-rgba-unorm")]
-	Bc3RgbaUnorm,
-	[Value("bc3-rgba-unorm-srgb")]
-	Bc3RgbaUnormSrgb,
-	[Value("bc4-r-unorm")]
-	Bc4RUnorm,
-	[Value("bc4-r-snorm")]
-	Bc4RSnorm,
-	[Value("bc5-rg-unorm")]
-	Bc5RgUnorm,
-	[Value("bc5-rg-snorm")]
-	Bc5RgSnorm,
-	[Value("bc6h-rgb-ufloat")]
-	Bc6hRgbUfloat,
-	[Value("bc6h-rgb-float")]
-	Bc6hRgbFloat,
-	[Value("bc7-rgba-unorm")]
-	Bc7RgbaUnorm,
-	[Value("bc7-rgba-unorm-srgb")]
-	Bc7RgbaUnormSrgb,
-	[Value("etc2-rgb8unorm")]
-	Etc2Rgb8unorm,
-	[Value("etc2-rgb8unorm-srgb")]
-	Etc2Rgb8unormSrgb,
-	[Value("etc2-rgb8a1unorm")]
-	Etc2Rgb8a1unorm,
-	[Value("etc2-rgb8a1unorm-srgb")]
-	Etc2Rgb8a1unormSrgb,
-	[Value("etc2-rgba8unorm")]
-	Etc2Rgba8unorm,
-	[Value("etc2-rgba8unorm-srgb")]
-	Etc2Rgba8unormSrgb,
-	[Value("eac-r11unorm")]
-	EacR11unorm,
-	[Value("eac-r11snorm")]
-	EacR11snorm,
-	[Value("eac-rg11unorm")]
-	EacRg11unorm,
-	[Value("eac-rg11snorm")]
-	EacRg11snorm,
-	[Value("astc-4x4-unorm")]
-	Astc4x4Unorm,
-	[Value("astc-4x4-unorm-srgb")]
-	Astc4x4UnormSrgb,
-	[Value("astc-5x4-unorm")]
-	Astc5x4Unorm,
-	[Value("astc-5x4-unorm-srgb")]
-	Astc5x4UnormSrgb,
-	[Value("astc-5x5-unorm")]
-	Astc5x5Unorm,
-	[Value("astc-5x5-unorm-srgb")]
-	Astc5x5UnormSrgb,
-	[Value("astc-6x5-unorm")]
-	Astc6x5Unorm,
-	[Value("astc-6x5-unorm-srgb")]
-	Astc6x5UnormSrgb,
-	[Value("astc-6x6-unorm")]
-	Astc6x6Unorm,
-	[Value("astc-6x6-unorm-srgb")]
-	Astc6x6UnormSrgb,
-	[Value("astc-8x5-unorm")]
-	Astc8x5Unorm,
-	[Value("astc-8x5-unorm-srgb")]
-	Astc8x5UnormSrgb,
-	[Value("astc-8x6-unorm")]
-	Astc8x6Unorm,
-	[Value("astc-8x6-unorm-srgb")]
-	Astc8x6UnormSrgb,
-	[Value("astc-8x8-unorm")]
-	Astc8x8Unorm,
-	[Value("astc-8x8-unorm-srgb")]
-	Astc8x8UnormSrgb,
-	[Value("astc-10x5-unorm")]
-	Astc10x5Unorm,
-	[Value("astc-10x5-unorm-srgb")]
-	Astc10x5UnormSrgb,
-	[Value("astc-10x6-unorm")]
-	Astc10x6Unorm,
-	[Value("astc-10x6-unorm-srgb")]
-	Astc10x6UnormSrgb,
-	[Value("astc-10x8-unorm")]
-	Astc10x8Unorm,
-	[Value("astc-10x8-unorm-srgb")]
-	Astc10x8UnormSrgb,
-	[Value("astc-10x10-unorm")]
-	Astc10x10Unorm,
-	[Value("astc-10x10-unorm-srgb")]
-	Astc10x10UnormSrgb,
-	[Value("astc-12x10-unorm")]
-	Astc12x10Unorm,
-	[Value("astc-12x10-unorm-srgb")]
-	Astc12x10UnormSrgb,
-	[Value("astc-12x12-unorm")]
-	Astc12x12Unorm,
-	[Value("astc-12x12-unorm-srgb")]
-	Astc12x12UnormSrgb,
 }
 
 ///<include file='Utils/Docs/GPUExternalTexture/GPUExternalTexture.generated.xml' path='docs/GPUExternalTexture/*'/>
@@ -27428,7 +23630,7 @@ public partial class GPUExternalTexture
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class GPUExternalTextureDescriptor : GPUObjectDescriptorBase
 {
-		public required Union189 Source;
+		public required Union213 Source;
 		public PredefinedColorSpace ColorSpace;
 }
 
@@ -27452,56 +23654,6 @@ public partial class GPUSamplerDescriptor : GPUObjectDescriptorBase
 		public Number LodMaxClamp;
 		public GPUCompareFunction Compare;
 		public ushort MaxAnisotropy;
-}
-
-[To(ToAttribute.None)]
-public enum GPUAddressMode
-{
-	[Value("clamp-to-edge")]
-	ClampToEdge,
-	[Value("repeat")]
-	Repeat,
-	[Value("mirror-repeat")]
-	MirrorRepeat,
-}
-
-[To(ToAttribute.None)]
-public enum GPUFilterMode
-{
-	[Value("nearest")]
-	Nearest,
-	[Value("linear")]
-	Linear,
-}
-
-[To(ToAttribute.None)]
-public enum GPUMipmapFilterMode
-{
-	[Value("nearest")]
-	Nearest,
-	[Value("linear")]
-	Linear,
-}
-
-[To(ToAttribute.None)]
-public enum GPUCompareFunction
-{
-	[Value("never")]
-	Never,
-	[Value("less")]
-	Less,
-	[Value("equal")]
-	Equal,
-	[Value("less-equal")]
-	LessEqual,
-	[Value("greater")]
-	Greater,
-	[Value("not-equal")]
-	NotEqual,
-	[Value("greater-equal")]
-	GreaterEqual,
-	[Value("always")]
-	Always,
 }
 
 ///<include file='Utils/Docs/GPUBindGroupLayout/GPUBindGroupLayout.generated.xml' path='docs/GPUBindGroupLayout/*'/>
@@ -27538,17 +23690,6 @@ public partial class GPUShaderStage
 		public const GPUFlagsConstant COMPUTE = 0x4;
 }
 
-[To(ToAttribute.None)]
-public enum GPUBufferBindingType
-{
-	[Value("uniform")]
-	Uniform,
-	[Value("storage")]
-	Storage,
-	[Value("read-only-storage")]
-	ReadOnlyStorage,
-}
-
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class GPUBufferBindingLayout
 {
@@ -27557,36 +23698,10 @@ public partial class GPUBufferBindingLayout
 		public GPUSize64 MinBindingSize;
 }
 
-[To(ToAttribute.None)]
-public enum GPUSamplerBindingType
-{
-	[Value("filtering")]
-	Filtering,
-	[Value("non-filtering")]
-	NonFiltering,
-	[Value("comparison")]
-	Comparison,
-}
-
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class GPUSamplerBindingLayout
 {
 		public GPUSamplerBindingType Type;
-}
-
-[To(ToAttribute.None)]
-public enum GPUTextureSampleType
-{
-	[Value("float")]
-	Float,
-	[Value("unfilterable-float")]
-	UnfilterableFloat,
-	[Value("depth")]
-	Depth,
-	[Value("sint")]
-	Sint,
-	[Value("uint")]
-	Uint,
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -27595,17 +23710,6 @@ public partial class GPUTextureBindingLayout
 		public GPUTextureSampleType SampleType;
 		public GPUTextureViewDimension ViewDimension;
 		public bool Multisampled;
-}
-
-[To(ToAttribute.None)]
-public enum GPUStorageTextureAccess
-{
-	[Value("write-only")]
-	WriteOnly,
-	[Value("read-only")]
-	ReadOnly,
-	[Value("read-write")]
-	ReadWrite,
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -27661,7 +23765,7 @@ public partial class GPUPipelineLayout
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class GPUPipelineLayoutDescriptor : GPUObjectDescriptorBase
 {
-		public required List<GPUBindGroupLayout> BindGroupLayouts;
+		public required List<GPUBindGroupLayout?> BindGroupLayouts;
 }
 
 ///<include file='Utils/Docs/GPUShaderModule/GPUShaderModule.generated.xml' path='docs/GPUShaderModule/*'/>
@@ -27677,7 +23781,6 @@ public partial class GPUShaderModule
 public partial class GPUShaderModuleDescriptor : GPUObjectDescriptorBase
 {
 		public required USVString Code;
-		public object SourceMap;
 		public List<GPUShaderModuleCompilationHint> CompilationHints;
 }
 
@@ -27685,19 +23788,7 @@ public partial class GPUShaderModuleDescriptor : GPUObjectDescriptorBase
 public partial class GPUShaderModuleCompilationHint
 {
 		public required USVString EntryPoint;
-		public Union191 Layout;
-}
-
-///<include file='Utils/Docs/GPUCompilationMessageType/GPUCompilationMessageType.generated.xml' path='docs/GPUCompilationMessageType/*'/>
-[To(ToAttribute.None)]
-public enum GPUCompilationMessageType
-{
-	[Value("error")]
-	Error,
-	[Value("warning")]
-	Warning,
-	[Value("info")]
-	Info,
+		public Union215 Layout;
 }
 
 ///<include file='Utils/Docs/GPUCompilationMessage/GPUCompilationMessage.generated.xml' path='docs/GPUCompilationMessage/*'/>
@@ -27743,33 +23834,10 @@ public partial class GPUPipelineErrorInit
 		public required GPUPipelineErrorReason Reason;
 }
 
-///<include file='Utils/Docs/GPUPipelineErrorReason/GPUPipelineErrorReason.generated.xml' path='docs/GPUPipelineErrorReason/*'/>
-[To(ToAttribute.None)]
-public enum GPUPipelineErrorReason
-{
-	[Value("validation")]
-	Validation,
-	[Value("internal")]
-	Internal,
-}
-
-[To(ToAttribute.None)]
-public enum GPUAutoLayoutMode
-{
-	[Value("auto")]
-	Auto,
-}
-
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class GPUPipelineDescriptorBase : GPUObjectDescriptorBase
 {
-		public required Union192 Layout;
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface GPUPipelineBase
-{
-		public GPUBindGroupLayout GetBindGroupLayout(ulong index) { throw new System.NotImplementedException(); }
+		public required Union216 Layout;
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -27823,41 +23891,6 @@ public partial class GPUPrimitiveState
 		public bool UnclippedDepth;
 }
 
-[To(ToAttribute.None)]
-public enum GPUPrimitiveTopology
-{
-	[Value("point-list")]
-	PointList,
-	[Value("line-list")]
-	LineList,
-	[Value("line-strip")]
-	LineStrip,
-	[Value("triangle-list")]
-	TriangleList,
-	[Value("triangle-strip")]
-	TriangleStrip,
-}
-
-[To(ToAttribute.None)]
-public enum GPUFrontFace
-{
-	[Value("ccw")]
-	Ccw,
-	[Value("cw")]
-	Cw,
-}
-
-[To(ToAttribute.None)]
-public enum GPUCullMode
-{
-	[Value("none")]
-	None,
-	[Value("front")]
-	Front,
-	[Value("back")]
-	Back,
-}
-
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class GPUMultisampleState
 {
@@ -27906,52 +23939,6 @@ public partial class GPUBlendComponent
 		public GPUBlendFactor DstFactor;
 }
 
-[To(ToAttribute.None)]
-public enum GPUBlendFactor
-{
-	[Value("zero")]
-	Zero,
-	[Value("one")]
-	One,
-	[Value("src")]
-	Src,
-	[Value("one-minus-src")]
-	OneMinusSrc,
-	[Value("src-alpha")]
-	SrcAlpha,
-	[Value("one-minus-src-alpha")]
-	OneMinusSrcAlpha,
-	[Value("dst")]
-	Dst,
-	[Value("one-minus-dst")]
-	OneMinusDst,
-	[Value("dst-alpha")]
-	DstAlpha,
-	[Value("one-minus-dst-alpha")]
-	OneMinusDstAlpha,
-	[Value("src-alpha-saturated")]
-	SrcAlphaSaturated,
-	[Value("constant")]
-	Constant,
-	[Value("one-minus-constant")]
-	OneMinusConstant,
-}
-
-[To(ToAttribute.None)]
-public enum GPUBlendOperation
-{
-	[Value("add")]
-	Add,
-	[Value("subtract")]
-	Subtract,
-	[Value("reverse-subtract")]
-	ReverseSubtract,
-	[Value("min")]
-	Min,
-	[Value("max")]
-	Max,
-}
-
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class GPUDepthStencilState
 {
@@ -27974,112 +23961,6 @@ public partial class GPUStencilFaceState
 		public GPUStencilOperation FailOp;
 		public GPUStencilOperation DepthFailOp;
 		public GPUStencilOperation PassOp;
-}
-
-[To(ToAttribute.None)]
-public enum GPUStencilOperation
-{
-	[Value("keep")]
-	Keep,
-	[Value("zero")]
-	Zero,
-	[Value("replace")]
-	Replace,
-	[Value("invert")]
-	Invert,
-	[Value("increment-clamp")]
-	IncrementClamp,
-	[Value("decrement-clamp")]
-	DecrementClamp,
-	[Value("increment-wrap")]
-	IncrementWrap,
-	[Value("decrement-wrap")]
-	DecrementWrap,
-}
-
-[To(ToAttribute.None)]
-public enum GPUIndexFormat
-{
-	[Value("uint16")]
-	Uint16,
-	[Value("uint32")]
-	Uint32,
-}
-
-[To(ToAttribute.None)]
-public enum GPUVertexFormat
-{
-	[Value("uint8x2")]
-	Uint8x2,
-	[Value("uint8x4")]
-	Uint8x4,
-	[Value("sint8x2")]
-	Sint8x2,
-	[Value("sint8x4")]
-	Sint8x4,
-	[Value("unorm8x2")]
-	Unorm8x2,
-	[Value("unorm8x4")]
-	Unorm8x4,
-	[Value("snorm8x2")]
-	Snorm8x2,
-	[Value("snorm8x4")]
-	Snorm8x4,
-	[Value("uint16x2")]
-	Uint16x2,
-	[Value("uint16x4")]
-	Uint16x4,
-	[Value("sint16x2")]
-	Sint16x2,
-	[Value("sint16x4")]
-	Sint16x4,
-	[Value("unorm16x2")]
-	Unorm16x2,
-	[Value("unorm16x4")]
-	Unorm16x4,
-	[Value("snorm16x2")]
-	Snorm16x2,
-	[Value("snorm16x4")]
-	Snorm16x4,
-	[Value("float16x2")]
-	Float16x2,
-	[Value("float16x4")]
-	Float16x4,
-	[Value("float32")]
-	Float32,
-	[Value("float32x2")]
-	Float32x2,
-	[Value("float32x3")]
-	Float32x3,
-	[Value("float32x4")]
-	Float32x4,
-	[Value("uint32")]
-	Uint32,
-	[Value("uint32x2")]
-	Uint32x2,
-	[Value("uint32x3")]
-	Uint32x3,
-	[Value("uint32x4")]
-	Uint32x4,
-	[Value("sint32")]
-	Sint32,
-	[Value("sint32x2")]
-	Sint32x2,
-	[Value("sint32x3")]
-	Sint32x3,
-	[Value("sint32x4")]
-	Sint32x4,
-	[Value("unorm10-10-10-2")]
-	Unorm1010102,
-}
-
-[To(ToAttribute.None)]
-public enum GPUVertexStepMode
-{
-	[Value("vertex")]
-	Vertex,
-	[Value("instance")]
-	Instance,
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -28105,7 +23986,7 @@ public partial class GPUVertexAttribute
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class GPUImageDataLayout
+public partial class GPUTexelCopyBufferLayout
 {
 		public GPUSize64 Offset;
 		public GPUSize32 BytesPerRow;
@@ -28113,13 +23994,13 @@ public partial class GPUImageDataLayout
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class GPUImageCopyBuffer : GPUImageDataLayout
+public partial class GPUTexelCopyBufferInfo : GPUTexelCopyBufferLayout
 {
 		public required GPUBuffer Buffer;
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class GPUImageCopyTexture
+public partial class GPUTexelCopyTextureInfo
 {
 		public required GPUTexture Texture;
 		public GPUIntegerCoordinate MipLevel;
@@ -28128,7 +24009,7 @@ public partial class GPUImageCopyTexture
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class GPUImageCopyTextureTagged : GPUImageCopyTexture
+public partial class GPUCopyExternalImageDestInfo : GPUTexelCopyTextureInfo
 {
 		public PredefinedColorSpace ColorSpace;
 		public bool PremultipliedAlpha;
@@ -28136,9 +24017,9 @@ public partial class GPUImageCopyTextureTagged : GPUImageCopyTexture
 
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class GPUImageCopyExternalImage
+public partial class GPUCopyExternalImageSourceInfo
 {
-		public required GPUImageCopyExternalImageSource Source;
+		public required GPUCopyExternalImageSource Source;
 		public GPUOrigin2D Origin;
 		public bool FlipY;
 }
@@ -28155,11 +24036,6 @@ public partial class GPUCommandBufferDescriptor : GPUObjectDescriptorBase
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface GPUCommandsMixin
-{
-}
-
 ///<include file='Utils/Docs/GPUCommandEncoder/GPUCommandEncoder.generated.xml' path='docs/GPUCommandEncoder/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class GPUCommandEncoder
@@ -28171,11 +24047,11 @@ public partial class GPUCommandEncoder
 	///<include file='Utils/Docs/GPUCommandEncoderCopyBufferToBuffer/GPUCommandEncoderCopyBufferToBuffer.generated.xml' path='docs/GPUCommandEncoderCopyBufferToBuffer/*'/>
 	public Undefined CopyBufferToBuffer(GPUBuffer source, GPUSize64 sourceOffset, GPUBuffer destination, GPUSize64 destinationOffset, GPUSize64 size) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/GPUCommandEncoderCopyBufferToTexture/GPUCommandEncoderCopyBufferToTexture.generated.xml' path='docs/GPUCommandEncoderCopyBufferToTexture/*'/>
-	public Undefined CopyBufferToTexture(GPUImageCopyBuffer source, GPUImageCopyTexture destination, GPUExtent3D copySize) { throw new System.NotImplementedException(); }
+	public Undefined CopyBufferToTexture(GPUTexelCopyBufferInfo source, GPUTexelCopyTextureInfo destination, GPUExtent3D copySize) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/GPUCommandEncoderCopyTextureToBuffer/GPUCommandEncoderCopyTextureToBuffer.generated.xml' path='docs/GPUCommandEncoderCopyTextureToBuffer/*'/>
-	public Undefined CopyTextureToBuffer(GPUImageCopyTexture source, GPUImageCopyBuffer destination, GPUExtent3D copySize) { throw new System.NotImplementedException(); }
+	public Undefined CopyTextureToBuffer(GPUTexelCopyTextureInfo source, GPUTexelCopyBufferInfo destination, GPUExtent3D copySize) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/GPUCommandEncoderCopyTextureToTexture/GPUCommandEncoderCopyTextureToTexture.generated.xml' path='docs/GPUCommandEncoderCopyTextureToTexture/*'/>
-	public Undefined CopyTextureToTexture(GPUImageCopyTexture source, GPUImageCopyTexture destination, GPUExtent3D copySize) { throw new System.NotImplementedException(); }
+	public Undefined CopyTextureToTexture(GPUTexelCopyTextureInfo source, GPUTexelCopyTextureInfo destination, GPUExtent3D copySize) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/GPUCommandEncoderClearBuffer/GPUCommandEncoderClearBuffer.generated.xml' path='docs/GPUCommandEncoderClearBuffer/*'/>
 	public Undefined ClearBuffer(GPUBuffer buffer, GPUSize64 offset, GPUSize64 size) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/GPUCommandEncoderResolveQuerySet/GPUCommandEncoderResolveQuerySet.generated.xml' path='docs/GPUCommandEncoderResolveQuerySet/*'/>
@@ -28190,21 +24066,6 @@ public partial class GPUCommandEncoder
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class GPUCommandEncoderDescriptor : GPUObjectDescriptorBase
 {
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface GPUBindingCommandsMixin
-{
-		public Undefined SetBindGroup(GPUIndex32 index, GPUBindGroup? bindGroup, List<GPUBufferDynamicOffset> dynamicOffsets) { throw new System.NotImplementedException(); }
-		public Undefined SetBindGroup(GPUIndex32 index, GPUBindGroup? bindGroup, System.UInt32 dynamicOffsetsData, GPUSize64 dynamicOffsetsDataStart, GPUSize32 dynamicOffsetsDataLength) { throw new System.NotImplementedException(); }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface GPUDebugCommandsMixin
-{
-		public Undefined PushDebugGroup(USVString groupLabel) { throw new System.NotImplementedException(); }
-		public Undefined PopDebugGroup() { throw new System.NotImplementedException(); }
-		public Undefined InsertDebugMarker(USVString markerLabel) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/GPUComputePassEncoder/GPUComputePassEncoder.generated.xml' path='docs/GPUComputePassEncoder/*'/>
@@ -28309,42 +24170,12 @@ public partial class GPURenderPassDepthStencilAttachment
 		public bool StencilReadOnly;
 }
 
-[To(ToAttribute.None)]
-public enum GPULoadOp
-{
-	[Value("load")]
-	Load,
-	[Value("clear")]
-	Clear,
-}
-
-[To(ToAttribute.None)]
-public enum GPUStoreOp
-{
-	[Value("store")]
-	Store,
-	[Value("discard")]
-	Discard,
-}
-
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class GPURenderPassLayout : GPUObjectDescriptorBase
 {
 		public required List<GPUTextureFormat?> ColorFormats;
 		public GPUTextureFormat DepthStencilFormat;
 		public GPUSize32 SampleCount;
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial interface GPURenderCommandsMixin
-{
-		public Undefined SetPipeline(GPURenderPipeline pipeline) { throw new System.NotImplementedException(); }
-		public Undefined SetIndexBuffer(GPUBuffer buffer, GPUIndexFormat indexFormat, GPUSize64 offset, GPUSize64 size) { throw new System.NotImplementedException(); }
-		public Undefined SetVertexBuffer(GPUIndex32 slot, GPUBuffer? buffer, GPUSize64 offset, GPUSize64 size) { throw new System.NotImplementedException(); }
-		public Undefined Draw(GPUSize32 vertexCount, GPUSize32 instanceCount, GPUSize32 firstVertex, GPUSize32 firstInstance) { throw new System.NotImplementedException(); }
-		public Undefined DrawIndexed(GPUSize32 indexCount, GPUSize32 instanceCount, GPUSize32 firstIndex, GPUSignedOffset32 baseVertex, GPUSize32 firstInstance) { throw new System.NotImplementedException(); }
-		public Undefined DrawIndirect(GPUBuffer indirectBuffer, GPUSize64 indirectOffset) { throw new System.NotImplementedException(); }
-		public Undefined DrawIndexedIndirect(GPUBuffer indirectBuffer, GPUSize64 indirectOffset) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/GPURenderBundle/GPURenderBundle.generated.xml' path='docs/GPURenderBundle/*'/>
@@ -28395,9 +24226,9 @@ public partial class GPUQueue
 	///<include file='Utils/Docs/GPUQueueWriteBuffer/GPUQueueWriteBuffer.generated.xml' path='docs/GPUQueueWriteBuffer/*'/>
 	public Undefined WriteBuffer(GPUBuffer buffer, GPUSize64 bufferOffset, AllowSharedBufferSource data, GPUSize64 dataOffset, GPUSize64 size) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/GPUQueueWriteTexture/GPUQueueWriteTexture.generated.xml' path='docs/GPUQueueWriteTexture/*'/>
-	public Undefined WriteTexture(GPUImageCopyTexture destination, AllowSharedBufferSource data, GPUImageDataLayout dataLayout, GPUExtent3D size) { throw new System.NotImplementedException(); }
+	public Undefined WriteTexture(GPUTexelCopyTextureInfo destination, AllowSharedBufferSource data, GPUTexelCopyBufferLayout dataLayout, GPUExtent3D size) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/GPUQueueCopyExternalImageToTexture/GPUQueueCopyExternalImageToTexture.generated.xml' path='docs/GPUQueueCopyExternalImageToTexture/*'/>
-	public Undefined CopyExternalImageToTexture(GPUImageCopyExternalImage source, GPUImageCopyTextureTagged destination, GPUExtent3D copySize) { throw new System.NotImplementedException(); }
+	public Undefined CopyExternalImageToTexture(GPUCopyExternalImageSourceInfo source, GPUCopyExternalImageDestInfo destination, GPUExtent3D copySize) { throw new System.NotImplementedException(); }
 }
 
 
@@ -28421,36 +24252,26 @@ public partial class GPUQuerySetDescriptor : GPUObjectDescriptorBase
 		public required GPUSize32 Count;
 }
 
-[To(ToAttribute.None)]
-public enum GPUQueryType
-{
-	[Value("occlusion")]
-	Occlusion,
-	[Value("timestamp")]
-	Timestamp,
-}
-
 ///<include file='Utils/Docs/GPUCanvasContext/GPUCanvasContext.generated.xml' path='docs/GPUCanvasContext/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class GPUCanvasContext
 {
 	///<include file='Utils/Docs/GPUCanvasContextCanvas/GPUCanvasContextCanvas.generated.xml' path='docs/GPUCanvasContextCanvas/*'/>
-	public Union194 Canvas { get; }
+	public Union218 Canvas { get; }
 	///<include file='Utils/Docs/GPUCanvasContextConfigure/GPUCanvasContextConfigure.generated.xml' path='docs/GPUCanvasContextConfigure/*'/>
 	public Undefined Configure(GPUCanvasConfiguration configuration) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/GPUCanvasContextUnconfigure/GPUCanvasContextUnconfigure.generated.xml' path='docs/GPUCanvasContextUnconfigure/*'/>
 	public Undefined Unconfigure() { throw new System.NotImplementedException(); }
+	///<include file='Utils/Docs/GPUCanvasContextGetConfiguration/GPUCanvasContextGetConfiguration.generated.xml' path='docs/GPUCanvasContextGetConfiguration/*'/>
+	public GPUCanvasConfiguration? GetConfiguration() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/GPUCanvasContextGetCurrentTexture/GPUCanvasContextGetCurrentTexture.generated.xml' path='docs/GPUCanvasContextGetCurrentTexture/*'/>
 	public GPUTexture GetCurrentTexture() { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.None)]
-public enum GPUCanvasAlphaMode
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class GPUCanvasToneMapping
 {
-	[Value("opaque")]
-	Opaque,
-	[Value("premultiplied")]
-	Premultiplied,
+		public GPUCanvasToneMappingMode Mode;
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -28461,16 +24282,8 @@ public partial class GPUCanvasConfiguration
 		public GPUTextureUsageFlags Usage;
 		public List<GPUTextureFormat> ViewFormats;
 		public PredefinedColorSpace ColorSpace;
+		public GPUCanvasToneMapping ToneMapping;
 		public GPUCanvasAlphaMode AlphaMode;
-}
-
-[To(ToAttribute.None)]
-public enum GPUDeviceLostReason
-{
-	[Value("unknown")]
-	Unknown,
-	[Value("destroyed")]
-	Destroyed,
 }
 
 ///<include file='Utils/Docs/GPUDeviceLostInfo/GPUDeviceLostInfo.generated.xml' path='docs/GPUDeviceLostInfo/*'/>
@@ -28523,17 +24336,6 @@ public partial class GPUInternalError : GPUError
 	///<include file='Utils/Docs/GPUInternalErrorGPUInternalError/GPUInternalErrorGPUInternalError.generated.xml' path='docs/GPUInternalErrorGPUInternalError/*'/>
 	public GPUInternalError(DOMString message) { }
 	public GPUInternalError() { }
-}
-
-[To(ToAttribute.None)]
-public enum GPUErrorFilter
-{
-	[Value("validation")]
-	Validation,
-	[Value("out-of-memory")]
-	OutOfMemory,
-	[Value("internal")]
-	Internal,
 }
 
 ///<include file='Utils/Docs/GPUDevice/GPUDevice.generated.xml' path='docs/GPUDevice/*'/>
@@ -28627,7 +24429,8 @@ public partial class Navigator
 ///<include file='Utils/Docs/WorkerNavigator/WorkerNavigator.generated.xml' path='docs/WorkerNavigator/*'/>
 public partial class WorkerNavigator
 {
-		public HID Hid { get; }
+	///<include file='Utils/Docs/WorkerNavigatorHid/WorkerNavigatorHid.generated.xml' path='docs/WorkerNavigatorHid/*'/>
+	public HID Hid { get; }
 }
 
 ///<include file='Utils/Docs/HID/HID.generated.xml' path='docs/HID/*'/>
@@ -28778,28 +24581,6 @@ public partial class HIDReportItem
 		public List<DOMString> Strings;
 }
 
-[To(ToAttribute.None)]
-public enum HIDUnitSystem
-{
-	[Value("none")]
-	None,
-	[Value("si-linear")]
-	SiLinear,
-	[Value("si-rotation")]
-	SiRotation,
-	[Value("english-linear")]
-	EnglishLinear,
-	[Value("english-rotation")]
-	EnglishRotation,
-	[Value("vendor-defined")]
-	VendorDefined,
-	[Value("reserved")]
-	Reserved,
-}
-
-
-
-
 ///<include file='Utils/Docs/DOMException/DOMException.generated.xml' path='docs/DOMException/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class DOMException
@@ -28838,16 +24619,6 @@ public partial class DOMException
 		public const ushort INVALID_NODE_TYPE_ERR = 24;
 		public const ushort DATA_CLONE_ERR = 25;
 	public DOMException() { }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct Function
-{
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct VoidFunction
-{
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -28939,36 +24710,6 @@ public partial class MIDIOutput : MIDIPort
 	public Undefined Clear() { throw new System.NotImplementedException(); }
 }
 
-///<include file='Utils/Docs/MIDIPortType/MIDIPortType.generated.xml' path='docs/MIDIPortType/*'/>
-[To(ToAttribute.None)]
-public enum MIDIPortType
-{
-	[Value("input")]
-	Input,
-	[Value("output")]
-	Output,
-}
-
-[To(ToAttribute.None)]
-public enum MIDIPortDeviceState
-{
-	[Value("disconnected")]
-	Disconnected,
-	[Value("connected")]
-	Connected,
-}
-
-[To(ToAttribute.None)]
-public enum MIDIPortConnectionState
-{
-	[Value("open")]
-	Open,
-	[Value("closed")]
-	Closed,
-	[Value("pending")]
-	Pending,
-}
-
 ///<include file='Utils/Docs/MIDIMessageEvent/MIDIMessageEvent.generated.xml' path='docs/MIDIMessageEvent/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class MIDIMessageEvent : Event
@@ -29004,34 +24745,6 @@ public partial class MIDIConnectionEventInit : EventInit
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial interface NavigatorML
-{
-		public ML Ml { get { throw new System.NotImplementedException(); } }
-}
-
-
-
-[To(ToAttribute.None)]
-public enum MLDeviceType
-{
-	[Value("cpu")]
-	Cpu,
-	[Value("gpu")]
-	Gpu,
-}
-
-[To(ToAttribute.None)]
-public enum MLPowerPreference
-{
-	[Value("default")]
-	Default,
-	[Value("high-performance")]
-	HighPerformance,
-	[Value("low-power")]
-	LowPower,
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
 public partial class MLContextOptions
 {
 		public MLDeviceType DeviceType;
@@ -29047,70 +24760,96 @@ public partial class ML
 
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class MLComputeResult
+public partial class MLContextLostInfo
 {
-		public MLNamedArrayBufferViews Inputs;
-		public MLNamedArrayBufferViews Outputs;
+		public DOMString Message;
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class MLContext
 {
-		public Task<MLComputeResult> Compute(MLGraph graph, MLNamedArrayBufferViews inputs, MLNamedArrayBufferViews outputs) { throw new System.NotImplementedException(); }
+		public Undefined Dispatch(MLGraph graph, MLNamedTensors inputs, MLNamedTensors outputs) { throw new System.NotImplementedException(); }
+		public Task<MLTensor> CreateTensor(MLTensorDescriptor descriptor) { throw new System.NotImplementedException(); }
+		public Task<byte[]> ReadTensor(MLTensor tensor) { throw new System.NotImplementedException(); }
+		public Task<Undefined> ReadTensor(MLTensor tensor, AllowSharedBufferSource outputData) { throw new System.NotImplementedException(); }
+		public Undefined WriteTensor(MLTensor tensor, AllowSharedBufferSource inputData) { throw new System.NotImplementedException(); }
+		public MLOpSupportLimits OpSupportLimits() { throw new System.NotImplementedException(); }
+		public Undefined Destroy() { throw new System.NotImplementedException(); }
+		public Task<MLContextLostInfo> Lost { get; }
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class MLOpSupportLimits
+{
+		public MLInputOperandLayout PreferredInputLayout;
+		public MLSupportLimits Input;
+		public MLSupportLimits Constant;
+		public MLSupportLimits Output;
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class MLSupportLimits
+{
+		public List<MLOperandDataType> DataTypes;
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class MLBinarySupportLimits
+{
+		public MLSupportLimits A;
+		public MLSupportLimits B;
+		public MLSupportLimits Output;
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class MLSingleInputSupportLimits
+{
+		public MLSupportLimits Input;
+		public MLSupportLimits Output;
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class MLGraph
 {
-}
-
-[To(ToAttribute.None)]
-public enum MLInputOperandLayout
-{
-	[Value("nchw")]
-	Nchw,
-	[Value("nhwc")]
-	Nhwc,
-}
-
-[To(ToAttribute.None)]
-public enum MLOperandDataType
-{
-	[Value("float32")]
-	Float32,
-	[Value("float16")]
-	Float16,
-	[Value("int32")]
-	Int32,
-	[Value("uint32")]
-	Uint32,
-	[Value("int64")]
-	Int64,
-	[Value("uint64")]
-	Uint64,
-	[Value("int8")]
-	Int8,
-	[Value("uint8")]
-	Uint8,
+		public Undefined Destroy() { throw new System.NotImplementedException(); }
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class MLOperandDescriptor
 {
 		public required MLOperandDataType DataType;
-		public List<ulong> Dimensions;
+		public required List<ulong> Shape;
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class MLOperand
 {
-		public MLOperandDataType DataType() { throw new System.NotImplementedException(); }
-		public List<ulong> Shape() { throw new System.NotImplementedException(); }
+		public MLOperandDataType DataType { get; }
+		public ulong[] Shape { get; }
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class MLActivation
+public partial class MLOperatorOptions
 {
+		public USVString Label;
+}
+
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class MLTensorDescriptor : MLOperandDescriptor
+{
+		public bool Readable;
+		public bool Writable;
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class MLTensor
+{
+		public MLOperandDataType DataType { get; }
+		public ulong[] Shape { get; }
+		public bool Readable { get; }
+		public bool Writable { get; }
+		public Undefined Destroy() { throw new System.NotImplementedException(); }
 }
 
 
@@ -29118,35 +24857,39 @@ public partial class MLActivation
 public partial class MLGraphBuilder
 {
 		public MLGraphBuilder(MLContext context) { }
-		public MLOperand Input(DOMString name, MLOperandDescriptor descriptor) { throw new System.NotImplementedException(); }
-		public MLOperand Constant(MLOperandDescriptor descriptor, ArrayBufferView bufferView) { throw new System.NotImplementedException(); }
-		public MLOperand Constant(Number value, MLOperandDataType type) { throw new System.NotImplementedException(); }
+		public MLOperand Input(USVString name, MLOperandDescriptor descriptor) { throw new System.NotImplementedException(); }
+		public MLOperand Constant(MLOperandDescriptor descriptor, AllowSharedBufferSource buffer) { throw new System.NotImplementedException(); }
+		public MLOperand Constant(MLOperandDataType type, MLNumber value) { throw new System.NotImplementedException(); }
 		public Task<MLGraph> Build(MLNamedOperands outputs) { throw new System.NotImplementedException(); }
 	public MLGraphBuilder() { }
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class MLArgMinMaxOptions
+public partial class MLArgMinMaxOptions : MLOperatorOptions
 {
-		public List<ulong> Axes;
 		public bool KeepDimensions;
-		public bool SelectLastIndex;
+		public MLOperandDataType OutputDataType;
 }
 
 public partial class MLGraphBuilder
 {
-		public MLOperand ArgMin(MLOperand input, MLArgMinMaxOptions options) { throw new System.NotImplementedException(); }
-		public MLOperand ArgMax(MLOperand input, MLArgMinMaxOptions options) { throw new System.NotImplementedException(); }
+		public MLOperand ArgMin(MLOperand input, ulong axis, MLArgMinMaxOptions options) { throw new System.NotImplementedException(); }
+		public MLOperand ArgMax(MLOperand input, ulong axis, MLArgMinMaxOptions options) { throw new System.NotImplementedException(); }
+}
+
+public partial class MLOpSupportLimits
+{
+		public MLSingleInputSupportLimits ArgMin;
+		public MLSingleInputSupportLimits ArgMax;
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class MLBatchNormalizationOptions
+public partial class MLBatchNormalizationOptions : MLOperatorOptions
 {
 		public MLOperand Scale;
 		public MLOperand Bias;
 		public ulong Axis;
 		public Number Epsilon;
-		public MLActivation Activation;
 }
 
 public partial class MLGraphBuilder
@@ -29154,44 +24897,68 @@ public partial class MLGraphBuilder
 		public MLOperand BatchNormalization(MLOperand input, MLOperand mean, MLOperand variance, MLBatchNormalizationOptions options) { throw new System.NotImplementedException(); }
 }
 
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class MLBatchNormalizationSupportLimits
+{
+		public MLSupportLimits Input;
+		public MLSupportLimits Mean;
+		public MLSupportLimits Variance;
+		public MLSupportLimits Scale;
+		public MLSupportLimits Bias;
+		public MLSupportLimits Output;
+}
+
+public partial class MLOpSupportLimits
+{
+		public MLBatchNormalizationSupportLimits BatchNormalization;
+}
+
 public partial class MLGraphBuilder
 {
-		public MLOperand Cast(MLOperand input, MLOperandDataType type) { throw new System.NotImplementedException(); }
+		public MLOperand Cast(MLOperand input, MLOperandDataType type, MLOperatorOptions options) { throw new System.NotImplementedException(); }
+}
+
+public partial class MLOpSupportLimits
+{
+		public MLSingleInputSupportLimits Cast;
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class MLClampOptions
+public partial class MLClampOptions : MLOperatorOptions
 {
-		public Number MinValue;
-		public Number MaxValue;
+		public MLNumber MinValue;
+		public MLNumber MaxValue;
 }
 
 public partial class MLGraphBuilder
 {
 		public MLOperand Clamp(MLOperand input, MLClampOptions options) { throw new System.NotImplementedException(); }
-		public MLActivation Clamp(MLClampOptions options) { throw new System.NotImplementedException(); }
+}
+
+public partial class MLOpSupportLimits
+{
+		public MLSingleInputSupportLimits Clamp;
 }
 
 public partial class MLGraphBuilder
 {
-		public MLOperand Concat(List<MLOperand> inputs, ulong axis) { throw new System.NotImplementedException(); }
-}
-
-[To(ToAttribute.None)]
-public enum MLConv2dFilterOperandLayout
-{
-	[Value("oihw")]
-	Oihw,
-	[Value("hwio")]
-	Hwio,
-	[Value("ohwi")]
-	Ohwi,
-	[Value("ihwo")]
-	Ihwo,
+		public MLOperand Concat(List<MLOperand> inputs, ulong axis, MLOperatorOptions options) { throw new System.NotImplementedException(); }
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class MLConv2dOptions
+public partial class MLConcatSupportLimits
+{
+		public MLSupportLimits Inputs;
+		public MLSupportLimits Output;
+}
+
+public partial class MLOpSupportLimits
+{
+		public MLConcatSupportLimits Concat;
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class MLConv2dOptions : MLOperatorOptions
 {
 		public List<ulong> Padding;
 		public List<ulong> Strides;
@@ -29200,7 +24967,6 @@ public partial class MLConv2dOptions
 		public MLInputOperandLayout InputLayout;
 		public MLConv2dFilterOperandLayout FilterLayout;
 		public MLOperand Bias;
-		public MLActivation Activation;
 }
 
 public partial class MLGraphBuilder
@@ -29208,19 +24974,22 @@ public partial class MLGraphBuilder
 		public MLOperand Conv2d(MLOperand input, MLOperand filter, MLConv2dOptions options) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.None)]
-public enum MLConvTranspose2dFilterOperandLayout
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class MLConv2dSupportLimits
 {
-	[Value("iohw")]
-	Iohw,
-	[Value("hwoi")]
-	Hwoi,
-	[Value("ohwi")]
-	Ohwi,
+		public MLSupportLimits Input;
+		public MLSupportLimits Filter;
+		public MLSupportLimits Bias;
+		public MLSupportLimits Output;
+}
+
+public partial class MLOpSupportLimits
+{
+		public MLConv2dSupportLimits Conv2d;
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class MLConvTranspose2dOptions
+public partial class MLConvTranspose2dOptions : MLOperatorOptions
 {
 		public List<ulong> Padding;
 		public List<ulong> Strides;
@@ -29231,7 +25000,6 @@ public partial class MLConvTranspose2dOptions
 		public MLInputOperandLayout InputLayout;
 		public MLConvTranspose2dFilterOperandLayout FilterLayout;
 		public MLOperand Bias;
-		public MLActivation Activation;
 }
 
 public partial class MLGraphBuilder
@@ -29239,46 +25007,96 @@ public partial class MLGraphBuilder
 		public MLOperand ConvTranspose2d(MLOperand input, MLOperand filter, MLConvTranspose2dOptions options) { throw new System.NotImplementedException(); }
 }
 
-public partial class MLGraphBuilder
+public partial class MLOpSupportLimits
 {
-		public MLOperand Add(MLOperand a, MLOperand b) { throw new System.NotImplementedException(); }
-		public MLOperand Sub(MLOperand a, MLOperand b) { throw new System.NotImplementedException(); }
-		public MLOperand Mul(MLOperand a, MLOperand b) { throw new System.NotImplementedException(); }
-		public MLOperand Div(MLOperand a, MLOperand b) { throw new System.NotImplementedException(); }
-		public MLOperand Max(MLOperand a, MLOperand b) { throw new System.NotImplementedException(); }
-		public MLOperand Min(MLOperand a, MLOperand b) { throw new System.NotImplementedException(); }
-		public MLOperand Pow(MLOperand a, MLOperand b) { throw new System.NotImplementedException(); }
+		public MLConv2dSupportLimits ConvTranspose2d;
 }
 
 public partial class MLGraphBuilder
 {
-		public MLOperand Equal(MLOperand a, MLOperand b) { throw new System.NotImplementedException(); }
-		public MLOperand Greater(MLOperand a, MLOperand b) { throw new System.NotImplementedException(); }
-		public MLOperand GreaterOrEqual(MLOperand a, MLOperand b) { throw new System.NotImplementedException(); }
-		public MLOperand Lesser(MLOperand a, MLOperand b) { throw new System.NotImplementedException(); }
-		public MLOperand LesserOrEqual(MLOperand a, MLOperand b) { throw new System.NotImplementedException(); }
-		public MLOperand Not(MLOperand a) { throw new System.NotImplementedException(); }
+		public MLOperand Add(MLOperand a, MLOperand b, MLOperatorOptions options) { throw new System.NotImplementedException(); }
+		public MLOperand Sub(MLOperand a, MLOperand b, MLOperatorOptions options) { throw new System.NotImplementedException(); }
+		public MLOperand Mul(MLOperand a, MLOperand b, MLOperatorOptions options) { throw new System.NotImplementedException(); }
+		public MLOperand Div(MLOperand a, MLOperand b, MLOperatorOptions options) { throw new System.NotImplementedException(); }
+		public MLOperand Max(MLOperand a, MLOperand b, MLOperatorOptions options) { throw new System.NotImplementedException(); }
+		public MLOperand Min(MLOperand a, MLOperand b, MLOperatorOptions options) { throw new System.NotImplementedException(); }
+		public MLOperand Pow(MLOperand a, MLOperand b, MLOperatorOptions options) { throw new System.NotImplementedException(); }
+}
+
+public partial class MLOpSupportLimits
+{
+		public MLBinarySupportLimits Add;
+		public MLBinarySupportLimits Sub;
+		public MLBinarySupportLimits Mul;
+		public MLBinarySupportLimits Div;
+		public MLBinarySupportLimits Max;
+		public MLBinarySupportLimits Min;
+		public MLBinarySupportLimits Pow;
 }
 
 public partial class MLGraphBuilder
 {
-		public MLOperand Abs(MLOperand input) { throw new System.NotImplementedException(); }
-		public MLOperand Ceil(MLOperand input) { throw new System.NotImplementedException(); }
-		public MLOperand Cos(MLOperand input) { throw new System.NotImplementedException(); }
-		public MLOperand Erf(MLOperand input) { throw new System.NotImplementedException(); }
-		public MLOperand Exp(MLOperand input) { throw new System.NotImplementedException(); }
-		public MLOperand Floor(MLOperand input) { throw new System.NotImplementedException(); }
-		public MLOperand Identity(MLOperand input) { throw new System.NotImplementedException(); }
-		public MLOperand Log(MLOperand input) { throw new System.NotImplementedException(); }
-		public MLOperand Neg(MLOperand input) { throw new System.NotImplementedException(); }
-		public MLOperand Reciprocal(MLOperand input) { throw new System.NotImplementedException(); }
-		public MLOperand Sin(MLOperand input) { throw new System.NotImplementedException(); }
-		public MLOperand Sqrt(MLOperand input) { throw new System.NotImplementedException(); }
-		public MLOperand Tan(MLOperand input) { throw new System.NotImplementedException(); }
+		public MLOperand Equal(MLOperand a, MLOperand b, MLOperatorOptions options) { throw new System.NotImplementedException(); }
+		public MLOperand Greater(MLOperand a, MLOperand b, MLOperatorOptions options) { throw new System.NotImplementedException(); }
+		public MLOperand GreaterOrEqual(MLOperand a, MLOperand b, MLOperatorOptions options) { throw new System.NotImplementedException(); }
+		public MLOperand Lesser(MLOperand a, MLOperand b, MLOperatorOptions options) { throw new System.NotImplementedException(); }
+		public MLOperand LesserOrEqual(MLOperand a, MLOperand b, MLOperatorOptions options) { throw new System.NotImplementedException(); }
+		public MLOperand LogicalNot(MLOperand a, MLOperatorOptions options) { throw new System.NotImplementedException(); }
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class MLEluOptions
+public partial class MLLogicalNotSupportLimits
+{
+		public MLSupportLimits A;
+		public MLSupportLimits Output;
+}
+
+public partial class MLOpSupportLimits
+{
+		public MLBinarySupportLimits Equal;
+		public MLBinarySupportLimits Greater;
+		public MLBinarySupportLimits GreaterOrEqual;
+		public MLBinarySupportLimits Lesser;
+		public MLBinarySupportLimits LesserOrEqual;
+		public MLLogicalNotSupportLimits LogicalNot;
+}
+
+public partial class MLGraphBuilder
+{
+		public MLOperand Abs(MLOperand input, MLOperatorOptions options) { throw new System.NotImplementedException(); }
+		public MLOperand Ceil(MLOperand input, MLOperatorOptions options) { throw new System.NotImplementedException(); }
+		public MLOperand Cos(MLOperand input, MLOperatorOptions options) { throw new System.NotImplementedException(); }
+		public MLOperand Erf(MLOperand input, MLOperatorOptions options) { throw new System.NotImplementedException(); }
+		public MLOperand Exp(MLOperand input, MLOperatorOptions options) { throw new System.NotImplementedException(); }
+		public MLOperand Floor(MLOperand input, MLOperatorOptions options) { throw new System.NotImplementedException(); }
+		public MLOperand Identity(MLOperand input, MLOperatorOptions options) { throw new System.NotImplementedException(); }
+		public MLOperand Log(MLOperand input, MLOperatorOptions options) { throw new System.NotImplementedException(); }
+		public MLOperand Neg(MLOperand input, MLOperatorOptions options) { throw new System.NotImplementedException(); }
+		public MLOperand Reciprocal(MLOperand input, MLOperatorOptions options) { throw new System.NotImplementedException(); }
+		public MLOperand Sin(MLOperand input, MLOperatorOptions options) { throw new System.NotImplementedException(); }
+		public MLOperand Sqrt(MLOperand input, MLOperatorOptions options) { throw new System.NotImplementedException(); }
+		public MLOperand Tan(MLOperand input, MLOperatorOptions options) { throw new System.NotImplementedException(); }
+}
+
+public partial class MLOpSupportLimits
+{
+		public MLSingleInputSupportLimits Abs;
+		public MLSingleInputSupportLimits Ceil;
+		public MLSingleInputSupportLimits Cos;
+		public MLSingleInputSupportLimits Erf;
+		public MLSingleInputSupportLimits Exp;
+		public MLSingleInputSupportLimits Floor;
+		public MLSingleInputSupportLimits Identity;
+		public MLSingleInputSupportLimits Log;
+		public MLSingleInputSupportLimits Neg;
+		public MLSingleInputSupportLimits Reciprocal;
+		public MLSingleInputSupportLimits Sin;
+		public MLSingleInputSupportLimits Sqrt;
+		public MLSingleInputSupportLimits Tan;
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class MLEluOptions : MLOperatorOptions
 {
 		public Number Alpha;
 }
@@ -29286,16 +25104,25 @@ public partial class MLEluOptions
 public partial class MLGraphBuilder
 {
 		public MLOperand Elu(MLOperand input, MLEluOptions options) { throw new System.NotImplementedException(); }
-		public MLActivation Elu(MLEluOptions options) { throw new System.NotImplementedException(); }
+}
+
+public partial class MLOpSupportLimits
+{
+		public MLSingleInputSupportLimits Elu;
 }
 
 public partial class MLGraphBuilder
 {
-		public MLOperand Expand(MLOperand input, List<ulong> newShape) { throw new System.NotImplementedException(); }
+		public MLOperand Expand(MLOperand input, List<ulong> newShape, MLOperatorOptions options) { throw new System.NotImplementedException(); }
+}
+
+public partial class MLOpSupportLimits
+{
+		public MLSingleInputSupportLimits Expand;
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class MLGatherOptions
+public partial class MLGatherOptions : MLOperatorOptions
 {
 		public ulong Axis;
 }
@@ -29305,14 +25132,31 @@ public partial class MLGraphBuilder
 		public MLOperand Gather(MLOperand input, MLOperand indices, MLGatherOptions options) { throw new System.NotImplementedException(); }
 }
 
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class MLGatherSupportLimits
+{
+		public MLSupportLimits Input;
+		public MLSupportLimits Indices;
+		public MLSupportLimits Output;
+}
+
+public partial class MLOpSupportLimits
+{
+		public MLGatherSupportLimits Gather;
+}
+
 public partial class MLGraphBuilder
 {
-		public MLOperand Gelu(MLOperand input) { throw new System.NotImplementedException(); }
-		public MLActivation Gelu() { throw new System.NotImplementedException(); }
+		public MLOperand Gelu(MLOperand input, MLOperatorOptions options) { throw new System.NotImplementedException(); }
+}
+
+public partial class MLOpSupportLimits
+{
+		public MLSingleInputSupportLimits Gelu;
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class MLGemmOptions
+public partial class MLGemmOptions : MLOperatorOptions
 {
 		public MLOperand C;
 		public Number Alpha;
@@ -29326,28 +25170,22 @@ public partial class MLGraphBuilder
 		public MLOperand Gemm(MLOperand a, MLOperand b, MLGemmOptions options) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.None)]
-public enum MLGruWeightLayout
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class MLGemmSupportLimits
 {
-	[Value("zrn")]
-	Zrn,
-	[Value("rzn")]
-	Rzn,
+		public MLSupportLimits A;
+		public MLSupportLimits B;
+		public MLSupportLimits C;
+		public MLSupportLimits Output;
 }
 
-[To(ToAttribute.None)]
-public enum MLRecurrentNetworkDirection
+public partial class MLOpSupportLimits
 {
-	[Value("forward")]
-	Forward,
-	[Value("backward")]
-	Backward,
-	[Value("both")]
-	Both,
+		public MLGemmSupportLimits Gemm;
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class MLGruOptions
+public partial class MLGruOptions : MLOperatorOptions
 {
 		public MLOperand Bias;
 		public MLOperand RecurrentBias;
@@ -29356,7 +25194,7 @@ public partial class MLGruOptions
 		public bool ReturnSequence;
 		public MLRecurrentNetworkDirection Direction;
 		public MLGruWeightLayout Layout;
-		public List<MLActivation> Activations;
+		public List<MLRecurrentNetworkActivation> Activations;
 }
 
 public partial class MLGraphBuilder
@@ -29365,13 +25203,30 @@ public partial class MLGraphBuilder
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class MLGruCellOptions
+public partial class MLGruSupportLimits
+{
+		public MLSupportLimits Input;
+		public MLSupportLimits Weight;
+		public MLSupportLimits RecurrentWeight;
+		public MLSupportLimits Bias;
+		public MLSupportLimits RecurrentBias;
+		public MLSupportLimits InitialHiddenState;
+		public MLSupportLimits Outputs;
+}
+
+public partial class MLOpSupportLimits
+{
+		public MLGruSupportLimits Gru;
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class MLGruCellOptions : MLOperatorOptions
 {
 		public MLOperand Bias;
 		public MLOperand RecurrentBias;
 		public bool ResetAfter;
 		public MLGruWeightLayout Layout;
-		public List<MLActivation> Activations;
+		public List<MLRecurrentNetworkActivation> Activations;
 }
 
 public partial class MLGraphBuilder
@@ -29380,7 +25235,24 @@ public partial class MLGraphBuilder
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class MLHardSigmoidOptions
+public partial class MLGruCellSupportLimits
+{
+		public MLSupportLimits Input;
+		public MLSupportLimits Weight;
+		public MLSupportLimits RecurrentWeight;
+		public MLSupportLimits HiddenState;
+		public MLSupportLimits Bias;
+		public MLSupportLimits RecurrentBias;
+		public MLSupportLimits Output;
+}
+
+public partial class MLOpSupportLimits
+{
+		public MLGruCellSupportLimits GruCell;
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class MLHardSigmoidOptions : MLOperatorOptions
 {
 		public Number Alpha;
 		public Number Beta;
@@ -29389,17 +25261,25 @@ public partial class MLHardSigmoidOptions
 public partial class MLGraphBuilder
 {
 		public MLOperand HardSigmoid(MLOperand input, MLHardSigmoidOptions options) { throw new System.NotImplementedException(); }
-		public MLActivation HardSigmoid(MLHardSigmoidOptions options) { throw new System.NotImplementedException(); }
+}
+
+public partial class MLOpSupportLimits
+{
+		public MLSingleInputSupportLimits HardSigmoid;
 }
 
 public partial class MLGraphBuilder
 {
-		public MLOperand HardSwish(MLOperand input) { throw new System.NotImplementedException(); }
-		public MLActivation HardSwish() { throw new System.NotImplementedException(); }
+		public MLOperand HardSwish(MLOperand input, MLOperatorOptions options) { throw new System.NotImplementedException(); }
+}
+
+public partial class MLOpSupportLimits
+{
+		public MLSingleInputSupportLimits HardSwish;
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class MLInstanceNormalizationOptions
+public partial class MLInstanceNormalizationOptions : MLOperatorOptions
 {
 		public MLOperand Scale;
 		public MLOperand Bias;
@@ -29413,7 +25293,21 @@ public partial class MLGraphBuilder
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class MLLayerNormalizationOptions
+public partial class MLNormalizationSupportLimits
+{
+		public MLSupportLimits Input;
+		public MLSupportLimits Scale;
+		public MLSupportLimits Bias;
+		public MLSupportLimits Output;
+}
+
+public partial class MLOpSupportLimits
+{
+		public MLNormalizationSupportLimits InstanceNormalization;
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class MLLayerNormalizationOptions : MLOperatorOptions
 {
 		public MLOperand Scale;
 		public MLOperand Bias;
@@ -29426,8 +25320,13 @@ public partial class MLGraphBuilder
 		public MLOperand LayerNormalization(MLOperand input, MLLayerNormalizationOptions options) { throw new System.NotImplementedException(); }
 }
 
+public partial class MLOpSupportLimits
+{
+		public MLNormalizationSupportLimits LayerNormalization;
+}
+
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class MLLeakyReluOptions
+public partial class MLLeakyReluOptions : MLOperatorOptions
 {
 		public Number Alpha;
 }
@@ -29435,11 +25334,15 @@ public partial class MLLeakyReluOptions
 public partial class MLGraphBuilder
 {
 		public MLOperand LeakyRelu(MLOperand input, MLLeakyReluOptions options) { throw new System.NotImplementedException(); }
-		public MLActivation LeakyRelu(MLLeakyReluOptions options) { throw new System.NotImplementedException(); }
+}
+
+public partial class MLOpSupportLimits
+{
+		public MLSingleInputSupportLimits LeakyRelu;
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class MLLinearOptions
+public partial class MLLinearOptions : MLOperatorOptions
 {
 		public Number Alpha;
 		public Number Beta;
@@ -29448,20 +25351,15 @@ public partial class MLLinearOptions
 public partial class MLGraphBuilder
 {
 		public MLOperand Linear(MLOperand input, MLLinearOptions options) { throw new System.NotImplementedException(); }
-		public MLActivation Linear(MLLinearOptions options) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.None)]
-public enum MLLstmWeightLayout
+public partial class MLOpSupportLimits
 {
-	[Value("iofg")]
-	Iofg,
-	[Value("ifgo")]
-	Ifgo,
+		public MLSingleInputSupportLimits Linear;
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class MLLstmOptions
+public partial class MLLstmOptions : MLOperatorOptions
 {
 		public MLOperand Bias;
 		public MLOperand RecurrentBias;
@@ -29471,7 +25369,7 @@ public partial class MLLstmOptions
 		public bool ReturnSequence;
 		public MLRecurrentNetworkDirection Direction;
 		public MLLstmWeightLayout Layout;
-		public List<MLActivation> Activations;
+		public List<MLRecurrentNetworkActivation> Activations;
 }
 
 public partial class MLGraphBuilder
@@ -29480,13 +25378,32 @@ public partial class MLGraphBuilder
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class MLLstmCellOptions
+public partial class MLLstmSupportLimits
+{
+		public MLSupportLimits Input;
+		public MLSupportLimits Weight;
+		public MLSupportLimits RecurrentWeight;
+		public MLSupportLimits Bias;
+		public MLSupportLimits RecurrentBias;
+		public MLSupportLimits PeepholeWeight;
+		public MLSupportLimits InitialHiddenState;
+		public MLSupportLimits InitialCellState;
+		public MLSupportLimits Outputs;
+}
+
+public partial class MLOpSupportLimits
+{
+		public MLLstmSupportLimits Lstm;
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class MLLstmCellOptions : MLOperatorOptions
 {
 		public MLOperand Bias;
 		public MLOperand RecurrentBias;
 		public MLOperand PeepholeWeight;
 		public MLLstmWeightLayout Layout;
-		public List<MLActivation> Activations;
+		public List<MLRecurrentNetworkActivation> Activations;
 }
 
 public partial class MLGraphBuilder
@@ -29494,29 +25411,40 @@ public partial class MLGraphBuilder
 		public List<MLOperand> LstmCell(MLOperand input, MLOperand weight, MLOperand recurrentWeight, MLOperand hiddenState, MLOperand cellState, ulong hiddenSize, MLLstmCellOptions options) { throw new System.NotImplementedException(); }
 }
 
-public partial class MLGraphBuilder
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class MLLstmCellSupportLimits
 {
-		public MLOperand Matmul(MLOperand a, MLOperand b) { throw new System.NotImplementedException(); }
+		public MLSupportLimits Input;
+		public MLSupportLimits Weight;
+		public MLSupportLimits RecurrentWeight;
+		public MLSupportLimits HiddenState;
+		public MLSupportLimits CellState;
+		public MLSupportLimits Bias;
+		public MLSupportLimits RecurrentBias;
+		public MLSupportLimits PeepholeWeight;
+		public MLSupportLimits Outputs;
 }
 
-[To(ToAttribute.None)]
-public enum MLPaddingMode
+public partial class MLOpSupportLimits
 {
-	[Value("constant")]
-	Constant,
-	[Value("edge")]
-	Edge,
-	[Value("reflection")]
-	Reflection,
-	[Value("symmetric")]
-	Symmetric,
+		public MLLstmCellSupportLimits LstmCell;
+}
+
+public partial class MLGraphBuilder
+{
+		public MLOperand Matmul(MLOperand a, MLOperand b, MLOperatorOptions options) { throw new System.NotImplementedException(); }
+}
+
+public partial class MLOpSupportLimits
+{
+		public MLBinarySupportLimits Matmul;
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class MLPadOptions
+public partial class MLPadOptions : MLOperatorOptions
 {
 		public MLPaddingMode Mode;
-		public Number Value;
+		public MLNumber Value;
 }
 
 public partial class MLGraphBuilder
@@ -29524,17 +25452,13 @@ public partial class MLGraphBuilder
 		public MLOperand Pad(MLOperand input, List<ulong> beginningPadding, List<ulong> endingPadding, MLPadOptions options) { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.None)]
-public enum MLRoundingType
+public partial class MLOpSupportLimits
 {
-	[Value("floor")]
-	Floor,
-	[Value("ceil")]
-	Ceil,
+		public MLSingleInputSupportLimits Pad;
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class MLPool2dOptions
+public partial class MLPool2dOptions : MLOperatorOptions
 {
 		public List<ulong> WindowDimensions;
 		public List<ulong> Padding;
@@ -29552,13 +25476,33 @@ public partial class MLGraphBuilder
 		public MLOperand MaxPool2d(MLOperand input, MLPool2dOptions options) { throw new System.NotImplementedException(); }
 }
 
+public partial class MLOpSupportLimits
+{
+		public MLSingleInputSupportLimits AveragePool2d;
+		public MLSingleInputSupportLimits L2Pool2d;
+		public MLSingleInputSupportLimits MaxPool2d;
+}
+
 public partial class MLGraphBuilder
 {
-		public MLOperand Prelu(MLOperand input, MLOperand slope) { throw new System.NotImplementedException(); }
+		public MLOperand Prelu(MLOperand input, MLOperand slope, MLOperatorOptions options) { throw new System.NotImplementedException(); }
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class MLReduceOptions
+public partial class MLPreluSupportLimits
+{
+		public MLSupportLimits Input;
+		public MLSupportLimits Slope;
+		public MLSupportLimits Output;
+}
+
+public partial class MLOpSupportLimits
+{
+		public MLPreluSupportLimits Prelu;
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class MLReduceOptions : MLOperatorOptions
 {
 		public List<ulong> Axes;
 		public bool KeepDimensions;
@@ -29578,23 +25522,32 @@ public partial class MLGraphBuilder
 		public MLOperand ReduceSumSquare(MLOperand input, MLReduceOptions options) { throw new System.NotImplementedException(); }
 }
 
-public partial class MLGraphBuilder
+public partial class MLOpSupportLimits
 {
-		public MLOperand Relu(MLOperand input) { throw new System.NotImplementedException(); }
-		public MLActivation Relu() { throw new System.NotImplementedException(); }
+		public MLSingleInputSupportLimits ReduceL1;
+		public MLSingleInputSupportLimits ReduceL2;
+		public MLSingleInputSupportLimits ReduceLogSum;
+		public MLSingleInputSupportLimits ReduceLogSumExp;
+		public MLSingleInputSupportLimits ReduceMax;
+		public MLSingleInputSupportLimits ReduceMean;
+		public MLSingleInputSupportLimits ReduceMin;
+		public MLSingleInputSupportLimits ReduceProduct;
+		public MLSingleInputSupportLimits ReduceSum;
+		public MLSingleInputSupportLimits ReduceSumSquare;
 }
 
-[To(ToAttribute.None)]
-public enum MLInterpolationMode
+public partial class MLGraphBuilder
 {
-	[Value("nearest-neighbor")]
-	NearestNeighbor,
-	[Value("linear")]
-	Linear,
+		public MLOperand Relu(MLOperand input, MLOperatorOptions options) { throw new System.NotImplementedException(); }
+}
+
+public partial class MLOpSupportLimits
+{
+		public MLSingleInputSupportLimits Relu;
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class MLResample2dOptions
+public partial class MLResample2dOptions : MLOperatorOptions
 {
 		public MLInterpolationMode Mode;
 		public List<Number> Scales;
@@ -29607,65 +25560,106 @@ public partial class MLGraphBuilder
 		public MLOperand Resample2d(MLOperand input, MLResample2dOptions options) { throw new System.NotImplementedException(); }
 }
 
-public partial class MLGraphBuilder
+public partial class MLOpSupportLimits
 {
-		public MLOperand Reshape(MLOperand input, List<ulong> newShape) { throw new System.NotImplementedException(); }
+		public MLSingleInputSupportLimits Resample2d;
 }
 
 public partial class MLGraphBuilder
 {
-		public MLOperand Sigmoid(MLOperand input) { throw new System.NotImplementedException(); }
-		public MLActivation Sigmoid() { throw new System.NotImplementedException(); }
+		public MLOperand Reshape(MLOperand input, List<ulong> newShape, MLOperatorOptions options) { throw new System.NotImplementedException(); }
+}
+
+public partial class MLOpSupportLimits
+{
+		public MLSingleInputSupportLimits Reshape;
 }
 
 public partial class MLGraphBuilder
 {
-		public MLOperand Slice(MLOperand input, List<ulong> starts, List<ulong> sizes) { throw new System.NotImplementedException(); }
+		public MLOperand Sigmoid(MLOperand input, MLOperatorOptions options) { throw new System.NotImplementedException(); }
+}
+
+public partial class MLOpSupportLimits
+{
+		public MLSingleInputSupportLimits Sigmoid;
 }
 
 public partial class MLGraphBuilder
 {
-		public MLOperand Softmax(MLOperand input) { throw new System.NotImplementedException(); }
-		public MLActivation Softmax() { throw new System.NotImplementedException(); }
+		public MLOperand Slice(MLOperand input, List<ulong> starts, List<ulong> sizes, MLOperatorOptions options) { throw new System.NotImplementedException(); }
+}
+
+public partial class MLOpSupportLimits
+{
+		public MLSingleInputSupportLimits Slice;
+}
+
+public partial class MLGraphBuilder
+{
+		public MLOperand Softmax(MLOperand input, ulong axis, MLOperatorOptions options) { throw new System.NotImplementedException(); }
+}
+
+public partial class MLOpSupportLimits
+{
+		public MLSingleInputSupportLimits Softmax;
+}
+
+public partial class MLGraphBuilder
+{
+		public MLOperand Softplus(MLOperand input, MLOperatorOptions options) { throw new System.NotImplementedException(); }
+}
+
+public partial class MLOpSupportLimits
+{
+		public MLSingleInputSupportLimits Softplus;
+}
+
+public partial class MLGraphBuilder
+{
+		public MLOperand Softsign(MLOperand input, MLOperatorOptions options) { throw new System.NotImplementedException(); }
+}
+
+public partial class MLOpSupportLimits
+{
+		public MLSingleInputSupportLimits Softsign;
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class MLSoftplusOptions
-{
-		public Number Steepness;
-}
-
-public partial class MLGraphBuilder
-{
-		public MLOperand Softplus(MLOperand input, MLSoftplusOptions options) { throw new System.NotImplementedException(); }
-		public MLActivation Softplus(MLSoftplusOptions options) { throw new System.NotImplementedException(); }
-}
-
-public partial class MLGraphBuilder
-{
-		public MLOperand Softsign(MLOperand input) { throw new System.NotImplementedException(); }
-		public MLActivation Softsign() { throw new System.NotImplementedException(); }
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class MLSplitOptions
+public partial class MLSplitOptions : MLOperatorOptions
 {
 		public ulong Axis;
 }
 
 public partial class MLGraphBuilder
 {
-		public List<MLOperand> Split(MLOperand input, Union202 splits, MLSplitOptions options) { throw new System.NotImplementedException(); }
+		public List<MLOperand> Split(MLOperand input, Union227 splits, MLSplitOptions options) { throw new System.NotImplementedException(); }
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class MLSplitSupportLimits
+{
+		public MLSupportLimits Input;
+		public MLSupportLimits Outputs;
+}
+
+public partial class MLOpSupportLimits
+{
+		public MLSplitSupportLimits Split;
 }
 
 public partial class MLGraphBuilder
 {
-		public MLOperand Tanh(MLOperand input) { throw new System.NotImplementedException(); }
-		public MLActivation Tanh() { throw new System.NotImplementedException(); }
+		public MLOperand Tanh(MLOperand input, MLOperatorOptions options) { throw new System.NotImplementedException(); }
+}
+
+public partial class MLOpSupportLimits
+{
+		public MLSingleInputSupportLimits Tanh;
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class MLTransposeOptions
+public partial class MLTransposeOptions : MLOperatorOptions
 {
 		public List<ulong> Permutation;
 }
@@ -29675,8 +25669,13 @@ public partial class MLGraphBuilder
 		public MLOperand Transpose(MLOperand input, MLTransposeOptions options) { throw new System.NotImplementedException(); }
 }
 
+public partial class MLOpSupportLimits
+{
+		public MLSingleInputSupportLimits Transpose;
+}
+
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class MLTriangularOptions
+public partial class MLTriangularOptions : MLOperatorOptions
 {
 		public bool Upper;
 		public long Diagonal;
@@ -29687,9 +25686,28 @@ public partial class MLGraphBuilder
 		public MLOperand Triangular(MLOperand input, MLTriangularOptions options) { throw new System.NotImplementedException(); }
 }
 
+public partial class MLOpSupportLimits
+{
+		public MLSingleInputSupportLimits Triangular;
+}
+
 public partial class MLGraphBuilder
 {
-		public MLOperand Where(MLOperand condition, MLOperand input, MLOperand other) { throw new System.NotImplementedException(); }
+		public MLOperand Where(MLOperand condition, MLOperand trueValue, MLOperand falseValue, MLOperatorOptions options) { throw new System.NotImplementedException(); }
+}
+
+[To(ToAttribute.FirstCharToLowerCase)]
+public partial class MLWhereSupportLimits
+{
+		public MLSupportLimits Condition;
+		public MLSupportLimits TrueValue;
+		public MLSupportLimits FalseValue;
+		public MLSupportLimits Output;
+}
+
+public partial class MLOpSupportLimits
+{
+		public MLWhereSupportLimits Where;
 }
 
 
@@ -29707,15 +25725,6 @@ public partial class RTCRtpReceiver
 {
 	///<include file='Utils/Docs/RTCRtpReceiverTransform/RTCRtpReceiverTransform.generated.xml' path='docs/RTCRtpReceiverTransform/*'/>
 	public RTCRtpTransform? Transform { get; set; }
-}
-
-[To(ToAttribute.None)]
-public enum SFrameTransformRole
-{
-	[Value("encrypt")]
-	Encrypt,
-	[Value("decrypt")]
-	Decrypt,
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -29736,17 +25745,6 @@ public partial class SFrameTransform : EventTarget, GenericTransformStream
 }
 
 
-[To(ToAttribute.None)]
-public enum SFrameTransformErrorEventType
-{
-	[Value("authentication")]
-	Authentication,
-	[Value("keyID")]
-	KeyID,
-	[Value("syntax")]
-	Syntax,
-}
-
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class SFrameTransformErrorEvent : Event
 {
@@ -29763,18 +25761,6 @@ public partial class SFrameTransformErrorEventInit : EventInit
 		public required SFrameTransformErrorEventType ErrorType;
 		public required dynamic Frame;
 		public CryptoKeyID? KeyID;
-}
-
-///<include file='Utils/Docs/RTCEncodedVideoFrameType/RTCEncodedVideoFrameType.generated.xml' path='docs/RTCEncodedVideoFrameType/*'/>
-[To(ToAttribute.None)]
-public enum RTCEncodedVideoFrameType
-{
-	[Value("empty")]
-	Empty,
-	[Value("key")]
-	Key,
-	[Value("delta")]
-	Delta,
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -29879,7 +25865,7 @@ public partial class RTCRtpScriptTransformer : EventTarget
 public partial class RTCRtpScriptTransform
 {
 	///<include file='Utils/Docs/RTCRtpScriptTransformRTCRtpScriptTransform/RTCRtpScriptTransformRTCRtpScriptTransform.generated.xml' path='docs/RTCRtpScriptTransformRTCRtpScriptTransform/*'/>
-	public RTCRtpScriptTransform(Worker worker, dynamic options, List<object> transfer) { }
+	public RTCRtpScriptTransform(Worker worker, dynamic options, List<Object> transfer) { }
 	public RTCRtpScriptTransform() { }
 }
 
@@ -29941,16 +25927,6 @@ public partial class RTCIdentityProvider
 {
 		public required GenerateAssertionCallback GenerateAssertion;
 		public required ValidateAssertionCallback ValidateAssertion;
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct GenerateAssertionCallback
-{
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct ValidateAssertionCallback
-{
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -30025,27 +26001,6 @@ public partial class RTCErrorInit
 		public long HttpRequestStatusCode;
 }
 
-[To(ToAttribute.None)]
-public enum RTCErrorDetailTypeIdp
-{
-	[Value("idp-bad-script-failure")]
-	IdpBadScriptFailure,
-	[Value("idp-execution-failure")]
-	IdpExecutionFailure,
-	[Value("idp-load-failure")]
-	IdpLoadFailure,
-	[Value("idp-need-login")]
-	IdpNeedLogin,
-	[Value("idp-timeout")]
-	IdpTimeout,
-	[Value("idp-tls-failure")]
-	IdpTlsFailure,
-	[Value("idp-token-expired")]
-	IdpTokenExpired,
-	[Value("idp-token-invalid")]
-	IdpTokenInvalid,
-}
-
 public partial class MediaStreamConstraints
 {
 		public DOMString PeerIdentity;
@@ -30056,19 +26011,6 @@ public partial class MediaStreamTrack
 {
 		public bool Isolated { get; }
 		public EventHandler Onisolationchange { get; set; }
-}
-
-[To(ToAttribute.None)]
-public enum RTCPriorityType
-{
-	[Value("very-low")]
-	VeryLow,
-	[Value("low")]
-	Low,
-	[Value("medium")]
-	Medium,
-	[Value("high")]
-	High,
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -30091,51 +26033,13 @@ public partial class RTCDataChannelInit
 		public RTCPriorityType Priority;
 }
 
-[To(ToAttribute.None)]
-public enum RTCStatsType
-{
-	[Value("codec")]
-	Codec,
-	[Value("inbound-rtp")]
-	InboundRtp,
-	[Value("outbound-rtp")]
-	OutboundRtp,
-	[Value("remote-inbound-rtp")]
-	RemoteInboundRtp,
-	[Value("remote-outbound-rtp")]
-	RemoteOutboundRtp,
-	[Value("media-source")]
-	MediaSource,
-	[Value("media-playout")]
-	MediaPlayout,
-	[Value("peer-connection")]
-	PeerConnection,
-	[Value("data-channel")]
-	DataChannel,
-	[Value("transport")]
-	Transport,
-	[Value("candidate-pair")]
-	CandidatePair,
-	[Value("local-candidate")]
-	LocalCandidate,
-	[Value("remote-candidate")]
-	RemoteCandidate,
-	[Value("certificate")]
-	Certificate,
-}
-
-///<include file='Utils/Docs/RTCRtpStreamStats/RTCRtpStreamStats.generated.xml' path='docs/RTCRtpStreamStats/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class RTCRtpStreamStats : RTCStats
 {
-	///<include file='Utils/Docs/RTCRtpStreamStatsSsrc/RTCRtpStreamStatsSsrc.generated.xml' path='docs/RTCRtpStreamStatsSsrc/*'/>
-	public required ulong Ssrc;
-	///<include file='Utils/Docs/RTCRtpStreamStatsKind/RTCRtpStreamStatsKind.generated.xml' path='docs/RTCRtpStreamStatsKind/*'/>
-	public required DOMString Kind;
-	///<include file='Utils/Docs/RTCRtpStreamStatsTransportId/RTCRtpStreamStatsTransportId.generated.xml' path='docs/RTCRtpStreamStatsTransportId/*'/>
-	public DOMString TransportId;
-	///<include file='Utils/Docs/RTCRtpStreamStatsCodecId/RTCRtpStreamStatsCodecId.generated.xml' path='docs/RTCRtpStreamStatsCodecId/*'/>
-	public DOMString CodecId;
+		public required ulong Ssrc;
+		public required DOMString Kind;
+		public DOMString TransportId;
+		public DOMString CodecId;
 }
 
 ///<include file='Utils/Docs/RTCCodecStats/RTCCodecStats.generated.xml' path='docs/RTCCodecStats/*'/>
@@ -30202,10 +26106,8 @@ public partial class RTCInboundRtpStreamStats : RTCReceivedRtpStreamStats
 	public ulong BytesReceived;
 	///<include file='Utils/Docs/RTCInboundRtpStreamStatsNackCount/RTCInboundRtpStreamStatsNackCount.generated.xml' path='docs/RTCInboundRtpStreamStatsNackCount/*'/>
 	public ulong NackCount;
-	///<include file='Utils/Docs/RTCInboundRtpStreamStatsFirCount/RTCInboundRtpStreamStatsFirCount.generated.xml' path='docs/RTCInboundRtpStreamStatsFirCount/*'/>
-	public ulong FirCount;
-	///<include file='Utils/Docs/RTCInboundRtpStreamStatsPliCount/RTCInboundRtpStreamStatsPliCount.generated.xml' path='docs/RTCInboundRtpStreamStatsPliCount/*'/>
-	public ulong PliCount;
+		public ulong FirCount;
+		public ulong PliCount;
 		public Number TotalProcessingDelay;
 		public DOMHighResTimeStamp EstimatedPlayoutTimestamp;
 		public Number JitterBufferDelay;
@@ -30231,16 +26133,25 @@ public partial class RTCInboundRtpStreamStats : RTCReceivedRtpStreamStats
 		public ulong RetransmittedBytesReceived;
 		public ulong RtxSsrc;
 		public ulong FecSsrc;
+		public Number TotalCorruptionProbability;
+		public Number TotalSquaredCorruptionProbability;
+		public ulong CorruptionMeasurements;
 }
 
+///<include file='Utils/Docs/RTCRemoteInboundRtpStreamStats/RTCRemoteInboundRtpStreamStats.generated.xml' path='docs/RTCRemoteInboundRtpStreamStats/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class RTCRemoteInboundRtpStreamStats : RTCReceivedRtpStreamStats
 {
-		public DOMString LocalId;
-		public Number RoundTripTime;
-		public Number TotalRoundTripTime;
-		public Number FractionLost;
-		public ulong RoundTripTimeMeasurements;
+	///<include file='Utils/Docs/RTCRemoteInboundRtpStreamStatsLocalId/RTCRemoteInboundRtpStreamStatsLocalId.generated.xml' path='docs/RTCRemoteInboundRtpStreamStatsLocalId/*'/>
+	public DOMString LocalId;
+	///<include file='Utils/Docs/RTCRemoteInboundRtpStreamStatsRoundTripTime/RTCRemoteInboundRtpStreamStatsRoundTripTime.generated.xml' path='docs/RTCRemoteInboundRtpStreamStatsRoundTripTime/*'/>
+	public Number RoundTripTime;
+	///<include file='Utils/Docs/RTCRemoteInboundRtpStreamStatsTotalRoundTripTime/RTCRemoteInboundRtpStreamStatsTotalRoundTripTime.generated.xml' path='docs/RTCRemoteInboundRtpStreamStatsTotalRoundTripTime/*'/>
+	public Number TotalRoundTripTime;
+	///<include file='Utils/Docs/RTCRemoteInboundRtpStreamStatsFractionLost/RTCRemoteInboundRtpStreamStatsFractionLost.generated.xml' path='docs/RTCRemoteInboundRtpStreamStatsFractionLost/*'/>
+	public Number FractionLost;
+	///<include file='Utils/Docs/RTCRemoteInboundRtpStreamStatsRoundTripTimeMeasurements/RTCRemoteInboundRtpStreamStatsRoundTripTimeMeasurements.generated.xml' path='docs/RTCRemoteInboundRtpStreamStatsRoundTripTimeMeasurements/*'/>
+	public ulong RoundTripTimeMeasurements;
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -30283,27 +26194,12 @@ public partial class RTCOutboundRtpStreamStats : RTCSentRtpStreamStats
 		public ulong QualityLimitationResolutionChanges;
 	///<include file='Utils/Docs/RTCOutboundRtpStreamStatsNackCount/RTCOutboundRtpStreamStatsNackCount.generated.xml' path='docs/RTCOutboundRtpStreamStatsNackCount/*'/>
 	public ulong NackCount;
-	///<include file='Utils/Docs/RTCOutboundRtpStreamStatsFirCount/RTCOutboundRtpStreamStatsFirCount.generated.xml' path='docs/RTCOutboundRtpStreamStatsFirCount/*'/>
-	public ulong FirCount;
-	///<include file='Utils/Docs/RTCOutboundRtpStreamStatsPliCount/RTCOutboundRtpStreamStatsPliCount.generated.xml' path='docs/RTCOutboundRtpStreamStatsPliCount/*'/>
-	public ulong PliCount;
+		public ulong FirCount;
+		public ulong PliCount;
 		public DOMString EncoderImplementation;
 		public bool PowerEfficientEncoder;
 		public bool Active;
 		public DOMString ScalabilityMode;
-}
-
-[To(ToAttribute.None)]
-public enum RTCQualityLimitationReason
-{
-	[Value("none")]
-	None,
-	[Value("cpu")]
-	Cpu,
-	[Value("bandwidth")]
-	Bandwidth,
-	[Value("other")]
-	Other,
 }
 
 ///<include file='Utils/Docs/RTCRemoteOutboundRtpStreamStats/RTCRemoteOutboundRtpStreamStats.generated.xml' path='docs/RTCRemoteOutboundRtpStreamStats/*'/>
@@ -30316,8 +26212,10 @@ public partial class RTCRemoteOutboundRtpStreamStats : RTCSentRtpStreamStats
 	public DOMHighResTimeStamp RemoteTimestamp;
 		public ulong ReportsSent;
 		public Number RoundTripTime;
-		public Number TotalRoundTripTime;
-		public ulong RoundTripTimeMeasurements;
+	///<include file='Utils/Docs/RTCRemoteOutboundRtpStreamStatsTotalRoundTripTime/RTCRemoteOutboundRtpStreamStatsTotalRoundTripTime.generated.xml' path='docs/RTCRemoteOutboundRtpStreamStatsTotalRoundTripTime/*'/>
+	public Number TotalRoundTripTime;
+	///<include file='Utils/Docs/RTCRemoteOutboundRtpStreamStatsRoundTripTimeMeasurements/RTCRemoteOutboundRtpStreamStatsRoundTripTimeMeasurements.generated.xml' path='docs/RTCRemoteOutboundRtpStreamStatsRoundTripTimeMeasurements/*'/>
+	public ulong RoundTripTimeMeasurements;
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -30376,17 +26274,26 @@ public partial class RTCPeerConnectionStats : RTCStats
 	public ulong DataChannelsClosed;
 }
 
+///<include file='Utils/Docs/RTCDataChannelStats/RTCDataChannelStats.generated.xml' path='docs/RTCDataChannelStats/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class RTCDataChannelStats : RTCStats
 {
-		public DOMString Label;
-		public DOMString Protocol;
-		public ushort DataChannelIdentifier;
-		public required RTCDataChannelState State;
-		public ulong MessagesSent;
-		public ulong BytesSent;
-		public ulong MessagesReceived;
-		public ulong BytesReceived;
+	///<include file='Utils/Docs/RTCDataChannelStatsLabel/RTCDataChannelStatsLabel.generated.xml' path='docs/RTCDataChannelStatsLabel/*'/>
+	public DOMString Label;
+	///<include file='Utils/Docs/RTCDataChannelStatsProtocol/RTCDataChannelStatsProtocol.generated.xml' path='docs/RTCDataChannelStatsProtocol/*'/>
+	public DOMString Protocol;
+	///<include file='Utils/Docs/RTCDataChannelStatsDataChannelIdentifier/RTCDataChannelStatsDataChannelIdentifier.generated.xml' path='docs/RTCDataChannelStatsDataChannelIdentifier/*'/>
+	public ushort DataChannelIdentifier;
+	///<include file='Utils/Docs/RTCDataChannelStatsState/RTCDataChannelStatsState.generated.xml' path='docs/RTCDataChannelStatsState/*'/>
+	public required RTCDataChannelState State;
+	///<include file='Utils/Docs/RTCDataChannelStatsMessagesSent/RTCDataChannelStatsMessagesSent.generated.xml' path='docs/RTCDataChannelStatsMessagesSent/*'/>
+	public ulong MessagesSent;
+	///<include file='Utils/Docs/RTCDataChannelStatsBytesSent/RTCDataChannelStatsBytesSent.generated.xml' path='docs/RTCDataChannelStatsBytesSent/*'/>
+	public ulong BytesSent;
+	///<include file='Utils/Docs/RTCDataChannelStatsMessagesReceived/RTCDataChannelStatsMessagesReceived.generated.xml' path='docs/RTCDataChannelStatsMessagesReceived/*'/>
+	public ulong MessagesReceived;
+	///<include file='Utils/Docs/RTCDataChannelStatsBytesReceived/RTCDataChannelStatsBytesReceived.generated.xml' path='docs/RTCDataChannelStatsBytesReceived/*'/>
+	public ulong BytesReceived;
 }
 
 ///<include file='Utils/Docs/RTCTransportStats/RTCTransportStats.generated.xml' path='docs/RTCTransportStats/*'/>
@@ -30409,17 +26316,6 @@ public partial class RTCTransportStats : RTCStats
 		public RTCDtlsRole DtlsRole;
 		public DOMString SrtpCipher;
 		public ulong SelectedCandidatePairChanges;
-}
-
-[To(ToAttribute.None)]
-public enum RTCDtlsRole
-{
-	[Value("client")]
-	Client,
-	[Value("server")]
-	Server,
-	[Value("unknown")]
-	Unknown,
 }
 
 ///<include file='Utils/Docs/RTCIceCandidateStats/RTCIceCandidateStats.generated.xml' path='docs/RTCIceCandidateStats/*'/>
@@ -30463,8 +26359,10 @@ public partial class RTCIceCandidatePairStats : RTCStats
 	public required RTCStatsIceCandidatePairState State;
 	///<include file='Utils/Docs/RTCIceCandidatePairStatsNominated/RTCIceCandidatePairStatsNominated.generated.xml' path='docs/RTCIceCandidatePairStatsNominated/*'/>
 	public bool Nominated;
-		public ulong PacketsSent;
-		public ulong PacketsReceived;
+	///<include file='Utils/Docs/RTCIceCandidatePairStatsPacketsSent/RTCIceCandidatePairStatsPacketsSent.generated.xml' path='docs/RTCIceCandidatePairStatsPacketsSent/*'/>
+	public ulong PacketsSent;
+	///<include file='Utils/Docs/RTCIceCandidatePairStatsPacketsReceived/RTCIceCandidatePairStatsPacketsReceived.generated.xml' path='docs/RTCIceCandidatePairStatsPacketsReceived/*'/>
+	public ulong PacketsReceived;
 	///<include file='Utils/Docs/RTCIceCandidatePairStatsBytesSent/RTCIceCandidatePairStatsBytesSent.generated.xml' path='docs/RTCIceCandidatePairStatsBytesSent/*'/>
 	public ulong BytesSent;
 	///<include file='Utils/Docs/RTCIceCandidatePairStatsBytesReceived/RTCIceCandidatePairStatsBytesReceived.generated.xml' path='docs/RTCIceCandidatePairStatsBytesReceived/*'/>
@@ -30489,24 +26387,12 @@ public partial class RTCIceCandidatePairStats : RTCStats
 	public ulong ResponsesReceived;
 	///<include file='Utils/Docs/RTCIceCandidatePairStatsResponsesSent/RTCIceCandidatePairStatsResponsesSent.generated.xml' path='docs/RTCIceCandidatePairStatsResponsesSent/*'/>
 	public ulong ResponsesSent;
-		public ulong ConsentRequestsSent;
-		public ulong PacketsDiscardedOnSend;
-		public ulong BytesDiscardedOnSend;
-}
-
-[To(ToAttribute.None)]
-public enum RTCStatsIceCandidatePairState
-{
-	[Value("frozen")]
-	Frozen,
-	[Value("waiting")]
-	Waiting,
-	[Value("in-progress")]
-	InProgress,
-	[Value("failed")]
-	Failed,
-	[Value("succeeded")]
-	Succeeded,
+	///<include file='Utils/Docs/RTCIceCandidatePairStatsConsentRequestsSent/RTCIceCandidatePairStatsConsentRequestsSent.generated.xml' path='docs/RTCIceCandidatePairStatsConsentRequestsSent/*'/>
+	public ulong ConsentRequestsSent;
+	///<include file='Utils/Docs/RTCIceCandidatePairStatsPacketsDiscardedOnSend/RTCIceCandidatePairStatsPacketsDiscardedOnSend.generated.xml' path='docs/RTCIceCandidatePairStatsPacketsDiscardedOnSend/*'/>
+	public ulong PacketsDiscardedOnSend;
+	///<include file='Utils/Docs/RTCIceCandidatePairStatsBytesDiscardedOnSend/RTCIceCandidatePairStatsBytesDiscardedOnSend.generated.xml' path='docs/RTCIceCandidatePairStatsBytesDiscardedOnSend/*'/>
+	public ulong BytesDiscardedOnSend;
 }
 
 ///<include file='Utils/Docs/RTCCertificateStats/RTCCertificateStats.generated.xml' path='docs/RTCCertificateStats/*'/>
@@ -30540,36 +26426,9 @@ public partial class RTCConfiguration
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class RTCIceServer
 {
-		public required Union205 Urls;
+		public required Union230 Urls;
 		public DOMString Username;
 		public DOMString Credential;
-}
-
-[To(ToAttribute.None)]
-public enum RTCIceTransportPolicy
-{
-	[Value("relay")]
-	Relay,
-	[Value("all")]
-	All,
-}
-
-[To(ToAttribute.None)]
-public enum RTCBundlePolicy
-{
-	[Value("balanced")]
-	Balanced,
-	[Value("max-compat")]
-	MaxCompat,
-	[Value("max-bundle")]
-	MaxBundle,
-}
-
-[To(ToAttribute.None)]
-public enum RTCRtcpMuxPolicy
-{
-	[Value("require")]
-	Require,
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -30586,70 +26445,6 @@ public partial class RTCOfferOptions : RTCOfferAnswerOptions
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class RTCAnswerOptions : RTCOfferAnswerOptions
 {
-}
-
-[To(ToAttribute.None)]
-public enum RTCSignalingState
-{
-	[Value("stable")]
-	Stable,
-	[Value("have-local-offer")]
-	HaveLocalOffer,
-	[Value("have-remote-offer")]
-	HaveRemoteOffer,
-	[Value("have-local-pranswer")]
-	HaveLocalPranswer,
-	[Value("have-remote-pranswer")]
-	HaveRemotePranswer,
-	[Value("closed")]
-	Closed,
-}
-
-[To(ToAttribute.None)]
-public enum RTCIceGatheringState
-{
-	[Value("new")]
-	New,
-	[Value("gathering")]
-	Gathering,
-	[Value("complete")]
-	Complete,
-}
-
-[To(ToAttribute.None)]
-public enum RTCPeerConnectionState
-{
-	[Value("closed")]
-	Closed,
-	[Value("failed")]
-	Failed,
-	[Value("disconnected")]
-	Disconnected,
-	[Value("new")]
-	New,
-	[Value("connecting")]
-	Connecting,
-	[Value("connected")]
-	Connected,
-}
-
-[To(ToAttribute.None)]
-public enum RTCIceConnectionState
-{
-	[Value("closed")]
-	Closed,
-	[Value("failed")]
-	Failed,
-	[Value("disconnected")]
-	Disconnected,
-	[Value("new")]
-	New,
-	[Value("checking")]
-	Checking,
-	[Value("completed")]
-	Completed,
-	[Value("connected")]
-	Connected,
 }
 
 ///<include file='Utils/Docs/RTCPeerConnection/RTCPeerConnection.generated.xml' path='docs/RTCPeerConnection/*'/>
@@ -30717,33 +26512,10 @@ public partial class RTCPeerConnection : EventTarget
 	public RTCPeerConnection() { }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct RTCPeerConnectionErrorCallback
-{
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct RTCSessionDescriptionCallback
-{
-}
-
 public partial class RTCOfferOptions
 {
 		public bool OfferToReceiveAudio;
 		public bool OfferToReceiveVideo;
-}
-
-[To(ToAttribute.None)]
-public enum RTCSdpType
-{
-	[Value("offer")]
-	Offer,
-	[Value("pranswer")]
-	Pranswer,
-	[Value("answer")]
-	Answer,
-	[Value("rollback")]
-	Rollback,
 }
 
 ///<include file='Utils/Docs/RTCSessionDescription/RTCSessionDescription.generated.xml' path='docs/RTCSessionDescription/*'/>
@@ -30757,7 +26529,7 @@ public partial class RTCSessionDescription
 	///<include file='Utils/Docs/RTCSessionDescriptionSdp/RTCSessionDescriptionSdp.generated.xml' path='docs/RTCSessionDescriptionSdp/*'/>
 	public DOMString Sdp { get; }
 	///<include file='Utils/Docs/RTCSessionDescriptionToJSON/RTCSessionDescriptionToJSON.generated.xml' path='docs/RTCSessionDescriptionToJSON/*'/>
-	public object ToJSON() { throw new System.NotImplementedException(); }
+	public RTCSessionDescriptionInit ToJSON() { throw new System.NotImplementedException(); }
 	public RTCSessionDescription() { }
 }
 
@@ -30823,51 +26595,6 @@ public partial class RTCIceCandidateInit
 		public DOMString? SdpMid;
 		public ushort? SdpMLineIndex;
 		public DOMString? UsernameFragment;
-}
-
-[To(ToAttribute.None)]
-public enum RTCIceProtocol
-{
-	[Value("udp")]
-	Udp,
-	[Value("tcp")]
-	Tcp,
-}
-
-[To(ToAttribute.None)]
-public enum RTCIceTcpCandidateType
-{
-	[Value("active")]
-	Active,
-	[Value("passive")]
-	Passive,
-	[Value("so")]
-	So,
-}
-
-///<include file='Utils/Docs/RTCIceCandidateType/RTCIceCandidateType.generated.xml' path='docs/RTCIceCandidateType/*'/>
-[To(ToAttribute.None)]
-public enum RTCIceCandidateType
-{
-	[Value("host")]
-	Host,
-	[Value("srflx")]
-	Srflx,
-	[Value("prflx")]
-	Prflx,
-	[Value("relay")]
-	Relay,
-}
-
-[To(ToAttribute.None)]
-public enum RTCIceServerTransportProtocol
-{
-	[Value("udp")]
-	Udp,
-	[Value("tcp")]
-	Tcp,
-	[Value("tls")]
-	Tls,
 }
 
 ///<include file='Utils/Docs/RTCPeerConnectionIceEvent/RTCPeerConnectionIceEvent.generated.xml' path='docs/RTCPeerConnectionIceEvent/*'/>
@@ -30950,7 +26677,7 @@ public partial class RTCPeerConnection
 	///<include file='Utils/Docs/RTCPeerConnectionRemoveTrack/RTCPeerConnectionRemoveTrack.generated.xml' path='docs/RTCPeerConnectionRemoveTrack/*'/>
 	public Undefined RemoveTrack(RTCRtpSender sender) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/RTCPeerConnectionAddTransceiver/RTCPeerConnectionAddTransceiver.generated.xml' path='docs/RTCPeerConnectionAddTransceiver/*'/>
-	public RTCRtpTransceiver AddTransceiver(Union206 trackOrKind, RTCRtpTransceiverInit init) { throw new System.NotImplementedException(); }
+	public RTCRtpTransceiver AddTransceiver(Union231 trackOrKind, RTCRtpTransceiverInit init) { throw new System.NotImplementedException(); }
 		public EventHandler Ontrack { get; set; }
 }
 
@@ -30960,22 +26687,6 @@ public partial class RTCRtpTransceiverInit
 		public RTCRtpTransceiverDirection Direction;
 		public List<MediaStream> Streams;
 		public List<RTCRtpEncodingParameters> SendEncodings;
-}
-
-///<include file='Utils/Docs/RTCRtpTransceiverDirection/RTCRtpTransceiverDirection.generated.xml' path='docs/RTCRtpTransceiverDirection/*'/>
-[To(ToAttribute.None)]
-public enum RTCRtpTransceiverDirection
-{
-	[Value("sendrecv")]
-	Sendrecv,
-	[Value("sendonly")]
-	Sendonly,
-	[Value("recvonly")]
-	Recvonly,
-	[Value("inactive")]
-	Inactive,
-	[Value("stopped")]
-	Stopped,
 }
 
 ///<include file='Utils/Docs/RTCRtpSender/RTCRtpSender.generated.xml' path='docs/RTCRtpSender/*'/>
@@ -31027,6 +26738,7 @@ public partial class RTCRtpCodingParameters
 public partial class RTCRtpEncodingParameters : RTCRtpCodingParameters
 {
 		public bool Active;
+		public RTCRtpCodec Codec;
 		public ulong MaxBitrate;
 		public Number MaxFramerate;
 		public Number ScaleResolutionDownBy;
@@ -31056,7 +26768,6 @@ public partial class RTCRtpCodec
 		public DOMString SdpFmtpLine;
 }
 
-///<include file='Utils/Docs/RTCRtpCodecParameters/RTCRtpCodecParameters.generated.xml' path='docs/RTCRtpCodecParameters/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class RTCRtpCodecParameters : RTCRtpCodec
 {
@@ -31066,13 +26777,8 @@ public partial class RTCRtpCodecParameters : RTCRtpCodec
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class RTCRtpCapabilities
 {
-		public required List<RTCRtpCodecCapability> Codecs;
+		public required List<RTCRtpCodec> Codecs;
 		public required List<RTCRtpHeaderExtensionCapability> HeaderExtensions;
-}
-
-[To(ToAttribute.FirstCharToLowerCase)]
-public partial class RTCRtpCodecCapability : RTCRtpCodec
-{
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -31103,7 +26809,8 @@ public partial class RTCRtpReceiver
 	public List<RTCRtpSynchronizationSource> GetSynchronizationSources() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/RTCRtpReceiverGetStats/RTCRtpReceiverGetStats.generated.xml' path='docs/RTCRtpReceiverGetStats/*'/>
 	public Task<RTCStatsReport> GetStats() { throw new System.NotImplementedException(); }
-		public DOMHighResTimeStamp? JitterBufferTarget { get; set; }
+	///<include file='Utils/Docs/RTCRtpReceiverJitterBufferTarget/RTCRtpReceiverJitterBufferTarget.generated.xml' path='docs/RTCRtpReceiverJitterBufferTarget/*'/>
+	public DOMHighResTimeStamp? JitterBufferTarget { get; set; }
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -31153,22 +26860,6 @@ public partial class RTCDtlsTransport : EventTarget
 		public EventHandler Onerror { get; set; }
 }
 
-///<include file='Utils/Docs/RTCDtlsTransportState/RTCDtlsTransportState.generated.xml' path='docs/RTCDtlsTransportState/*'/>
-[To(ToAttribute.None)]
-public enum RTCDtlsTransportState
-{
-	[Value("new")]
-	New,
-	[Value("connecting")]
-	Connecting,
-	[Value("connected")]
-	Connected,
-	[Value("closed")]
-	Closed,
-	[Value("failed")]
-	Failed,
-}
-
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class RTCDtlsFingerprint
 {
@@ -31216,60 +26907,9 @@ public partial class RTCIceParameters
 public partial class RTCIceCandidatePair
 {
 	///<include file='Utils/Docs/RTCIceCandidatePairLocal/RTCIceCandidatePairLocal.generated.xml' path='docs/RTCIceCandidatePairLocal/*'/>
-	public required RTCIceCandidate Local;
+	public RTCIceCandidate Local { get; }
 	///<include file='Utils/Docs/RTCIceCandidatePairRemote/RTCIceCandidatePairRemote.generated.xml' path='docs/RTCIceCandidatePairRemote/*'/>
-	public required RTCIceCandidate Remote;
-}
-
-[To(ToAttribute.None)]
-public enum RTCIceGathererState
-{
-	[Value("new")]
-	New,
-	[Value("gathering")]
-	Gathering,
-	[Value("complete")]
-	Complete,
-}
-
-///<include file='Utils/Docs/RTCIceTransportState/RTCIceTransportState.generated.xml' path='docs/RTCIceTransportState/*'/>
-[To(ToAttribute.None)]
-public enum RTCIceTransportState
-{
-	[Value("closed")]
-	Closed,
-	[Value("failed")]
-	Failed,
-	[Value("disconnected")]
-	Disconnected,
-	[Value("new")]
-	New,
-	[Value("checking")]
-	Checking,
-	[Value("completed")]
-	Completed,
-	[Value("connected")]
-	Connected,
-}
-
-[To(ToAttribute.None)]
-public enum RTCIceRole
-{
-	[Value("unknown")]
-	Unknown,
-	[Value("controlling")]
-	Controlling,
-	[Value("controlled")]
-	Controlled,
-}
-
-[To(ToAttribute.None)]
-public enum RTCIceComponent
-{
-	[Value("rtp")]
-	Rtp,
-	[Value("rtcp")]
-	Rtcp,
+	public RTCIceCandidate Remote { get; }
 }
 
 ///<include file='Utils/Docs/RTCTrackEvent/RTCTrackEvent.generated.xml' path='docs/RTCTrackEvent/*'/>
@@ -31321,18 +26961,6 @@ public partial class RTCSctpTransport : EventTarget
 	///<include file='Utils/Docs/RTCSctpTransportMaxChannels/RTCSctpTransportMaxChannels.generated.xml' path='docs/RTCSctpTransportMaxChannels/*'/>
 	public ushort? MaxChannels { get; }
 		public EventHandler Onstatechange { get; set; }
-}
-
-///<include file='Utils/Docs/RTCSctpTransportState/RTCSctpTransportState.generated.xml' path='docs/RTCSctpTransportState/*'/>
-[To(ToAttribute.None)]
-public enum RTCSctpTransportState
-{
-	[Value("connecting")]
-	Connecting,
-	[Value("connected")]
-	Connected,
-	[Value("closed")]
-	Closed,
 }
 
 ///<include file='Utils/Docs/RTCDataChannel/RTCDataChannel.generated.xml' path='docs/RTCDataChannel/*'/>
@@ -31388,19 +27016,6 @@ public partial class RTCDataChannelInit
 		public ushort Id;
 }
 
-[To(ToAttribute.None)]
-public enum RTCDataChannelState
-{
-	[Value("connecting")]
-	Connecting,
-	[Value("open")]
-	Open,
-	[Value("closing")]
-	Closing,
-	[Value("closed")]
-	Closed,
-}
-
 ///<include file='Utils/Docs/RTCDataChannelEvent/RTCDataChannelEvent.generated.xml' path='docs/RTCDataChannelEvent/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class RTCDataChannelEvent : Event
@@ -31432,7 +27047,8 @@ public partial class RTCDTMFSender : EventTarget
 	///<include file='Utils/Docs/RTCDTMFSenderInsertDTMF/RTCDTMFSenderInsertDTMF.generated.xml' path='docs/RTCDTMFSenderInsertDTMF/*'/>
 	public Undefined InsertDTMF(DOMString tones, ulong duration, ulong interToneGap) { throw new System.NotImplementedException(); }
 		public EventHandler Ontonechange { get; set; }
-		public bool CanInsertDTMF { get; }
+	///<include file='Utils/Docs/RTCDTMFSenderCanInsertDTMF/RTCDTMFSenderCanInsertDTMF.generated.xml' path='docs/RTCDTMFSenderCanInsertDTMF/*'/>
+	public bool CanInsertDTMF { get; }
 	///<include file='Utils/Docs/RTCDTMFSenderToneBuffer/RTCDTMFSenderToneBuffer.generated.xml' path='docs/RTCDTMFSenderToneBuffer/*'/>
 	public DOMString ToneBuffer { get; }
 }
@@ -31502,25 +27118,6 @@ public partial class RTCErrorInit
 		public ulong SentAlert;
 }
 
-[To(ToAttribute.None)]
-public enum RTCErrorDetailType
-{
-	[Value("data-channel-failure")]
-	DataChannelFailure,
-	[Value("dtls-failure")]
-	DtlsFailure,
-	[Value("fingerprint-failure")]
-	FingerprintFailure,
-	[Value("sctp-failure")]
-	SctpFailure,
-	[Value("sdp-syntax-error")]
-	SdpSyntaxError,
-	[Value("hardware-encoder-not-available")]
-	HardwareEncoderNotAvailable,
-	[Value("hardware-encoder-error")]
-	HardwareEncoderError,
-}
-
 ///<include file='Utils/Docs/RTCErrorEvent/RTCErrorEvent.generated.xml' path='docs/RTCErrorEvent/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class RTCErrorEvent : Event
@@ -31537,21 +27134,12 @@ public partial class RTCErrorEventInit : EventInit
 		public required RTCError Error;
 }
 
-[To(ToAttribute.None)]
-public enum BinaryType
-{
-	[Value("blob")]
-	Blob,
-	[Value("arraybuffer")]
-	Arraybuffer,
-}
-
 ///<include file='Utils/Docs/WebSocket/WebSocket.generated.xml' path='docs/WebSocket/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class WebSocket : EventTarget
 {
 	///<include file='Utils/Docs/WebSocketWebSocket/WebSocketWebSocket.generated.xml' path='docs/WebSocketWebSocket/*'/>
-	public WebSocket(USVString url, Union207 protocols) { }
+	public WebSocket(USVString url, Union232 protocols) { }
 	///<include file='Utils/Docs/WebSocketUrl/WebSocketUrl.generated.xml' path='docs/WebSocketUrl/*'/>
 	public USVString Url { get; }
 		public const ushort CONNECTING = 0;
@@ -31575,7 +27163,7 @@ public partial class WebSocket : EventTarget
 	///<include file='Utils/Docs/WebSocketBinaryType/WebSocketBinaryType.generated.xml' path='docs/WebSocketBinaryType/*'/>
 	public BinaryType BinaryType { get; set; }
 	///<include file='Utils/Docs/WebSocketSend/WebSocketSend.generated.xml' path='docs/WebSocketSend/*'/>
-	public Undefined Send(Union208 data) { throw new System.NotImplementedException(); }
+	public Undefined Send(Union233 data) { throw new System.NotImplementedException(); }
 	public WebSocket() { }
 }
 
@@ -31638,6 +27226,7 @@ public partial class WebTransport
 	public WebTransportCongestionControl CongestionControl { get; }
 		public ushort? AnticipatedConcurrentIncomingUnidirectionalStreams { get; set; }
 		public ushort? AnticipatedConcurrentIncomingBidirectionalStreams { get; set; }
+		public DOMString Protocol { get; }
 	///<include file='Utils/Docs/WebTransportClosed/WebTransportClosed.generated.xml' path='docs/WebTransportClosed/*'/>
 	public Task<WebTransportCloseInfo> Closed { get; }
 		public Task<Undefined> Draining { get; }
@@ -31658,17 +27247,6 @@ public partial class WebTransport
 	public WebTransport() { }
 }
 
-[To(ToAttribute.None)]
-public enum WebTransportReliabilityMode
-{
-	[Value("pending")]
-	Pending,
-	[Value("reliable-only")]
-	ReliableOnly,
-	[Value("supports-unreliable")]
-	SupportsUnreliable,
-}
-
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class WebTransportHash
 {
@@ -31685,18 +27263,7 @@ public partial class WebTransportOptions
 		public WebTransportCongestionControl CongestionControl;
 		public ushort? AnticipatedConcurrentIncomingUnidirectionalStreams;
 		public ushort? AnticipatedConcurrentIncomingBidirectionalStreams;
-}
-
-///<include file='Utils/Docs/WebTransportCongestionControl/WebTransportCongestionControl.generated.xml' path='docs/WebTransportCongestionControl/*'/>
-[To(ToAttribute.None)]
-public enum WebTransportCongestionControl
-{
-	[Value("default")]
-	Default,
-	[Value("throughput")]
-	Throughput,
-	[Value("low-latency")]
-	LowLatency,
+		public List<DOMString> Protocols;
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -31723,11 +27290,12 @@ public partial class WebTransportConnectionStats
 		public ulong PacketsLost;
 		public ulong BytesReceived;
 		public ulong PacketsReceived;
-		public DOMHighResTimeStamp SmoothedRtt;
-		public DOMHighResTimeStamp RttVariation;
-		public DOMHighResTimeStamp MinRtt;
-		public WebTransportDatagramStats Datagrams;
+		public required DOMHighResTimeStamp SmoothedRtt;
+		public required DOMHighResTimeStamp RttVariation;
+		public required DOMHighResTimeStamp MinRtt;
+		public required WebTransportDatagramStats Datagrams;
 		public ulong? EstimatedSendRate;
+		public bool AtSendCapacity;
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -31816,16 +27384,6 @@ public partial class WebTransportErrorOptions
 		public ulong? StreamErrorCode;
 }
 
-///<include file='Utils/Docs/WebTransportErrorSource/WebTransportErrorSource.generated.xml' path='docs/WebTransportErrorSource/*'/>
-[To(ToAttribute.None)]
-public enum WebTransportErrorSource
-{
-	[Value("stream")]
-	Stream,
-	[Value("session")]
-	Session,
-}
-
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class USBDeviceFilter
 {
@@ -31885,17 +27443,6 @@ public partial class USBConnectionEvent : Event
 	///<include file='Utils/Docs/USBConnectionEventDevice/USBConnectionEventDevice.generated.xml' path='docs/USBConnectionEventDevice/*'/>
 	public USBDevice Device { get; }
 	public USBConnectionEvent() { }
-}
-
-[To(ToAttribute.None)]
-public enum USBTransferStatus
-{
-	[Value("ok")]
-	Ok,
-	[Value("stall")]
-	Stall,
-	[Value("babble")]
-	Babble,
 }
 
 ///<include file='Utils/Docs/USBInTransferResult/USBInTransferResult.generated.xml' path='docs/USBInTransferResult/*'/>
@@ -32027,30 +27574,6 @@ public partial class USBDevice
 	public Task<Undefined> Reset() { throw new System.NotImplementedException(); }
 }
 
-[To(ToAttribute.None)]
-public enum USBRequestType
-{
-	[Value("standard")]
-	Standard,
-	[Value("class")]
-	Class,
-	[Value("vendor")]
-	Vendor,
-}
-
-[To(ToAttribute.None)]
-public enum USBRecipient
-{
-	[Value("device")]
-	Device,
-	[Value("interface")]
-	Interface,
-	[Value("endpoint")]
-	Endpoint,
-	[Value("other")]
-	Other,
-}
-
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class USBControlTransferParameters
 {
@@ -32102,26 +27625,6 @@ public partial class USBAlternateInterface
 	public USBAlternateInterface() { }
 }
 
-[To(ToAttribute.None)]
-public enum USBDirection
-{
-	[Value("in")]
-	In,
-	[Value("out")]
-	Out,
-}
-
-[To(ToAttribute.None)]
-public enum USBEndpointType
-{
-	[Value("bulk")]
-	Bulk,
-	[Value("interrupt")]
-	Interrupt,
-	[Value("isochronous")]
-	Isochronous,
-}
-
 ///<include file='Utils/Docs/USBEndpoint/USBEndpoint.generated.xml' path='docs/USBEndpoint/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class USBEndpoint
@@ -32169,64 +27672,6 @@ public partial class USBPermissionResult : PermissionStatus
 		public USBDevice[] Devices { get; set; }
 }
 
-[To(ToAttribute.None)]
-public enum AutoKeyword
-{
-	[Value("auto")]
-	Auto,
-}
-
-
-[To(ToAttribute.None)]
-public enum DirectionSetting
-{
-	[Value("")]
-	Empty,
-	[Value("rl")]
-	Rl,
-	[Value("lr")]
-	Lr,
-}
-
-[To(ToAttribute.None)]
-public enum LineAlignSetting
-{
-	[Value("start")]
-	Start,
-	[Value("center")]
-	Center,
-	[Value("end")]
-	End,
-}
-
-[To(ToAttribute.None)]
-public enum PositionAlignSetting
-{
-	[Value("line-left")]
-	LineLeft,
-	[Value("center")]
-	Center,
-	[Value("line-right")]
-	LineRight,
-	[Value("auto")]
-	Auto,
-}
-
-[To(ToAttribute.None)]
-public enum AlignSetting
-{
-	[Value("start")]
-	Start,
-	[Value("center")]
-	Center,
-	[Value("end")]
-	End,
-	[Value("left")]
-	Left,
-	[Value("right")]
-	Right,
-}
-
 ///<include file='Utils/Docs/VTTCue/VTTCue.generated.xml' path='docs/VTTCue/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class VTTCue : TextTrackCue
@@ -32258,15 +27703,6 @@ public partial class VTTCue : TextTrackCue
 	public VTTCue() { }
 }
 
-[To(ToAttribute.None)]
-public enum ScrollSetting
-{
-	[Value("")]
-	Empty,
-	[Value("up")]
-	Up,
-}
-
 ///<include file='Utils/Docs/VTTRegion/VTTRegion.generated.xml' path='docs/VTTRegion/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class VTTRegion
@@ -32282,31 +27718,11 @@ public partial class VTTRegion
 		public ScrollSetting Scroll { get; set; }
 }
 
-[To(ToAttribute.None)]
-public enum XREnvironmentBlendMode
-{
-	[Value("opaque")]
-	Opaque,
-	[Value("alpha-blend")]
-	AlphaBlend,
-	[Value("additive")]
-	Additive,
-}
-
 ///<include file='Utils/Docs/XRSession/XRSession.generated.xml' path='docs/XRSession/*'/>
 public partial class XRSession
 {
 	///<include file='Utils/Docs/XRSessionEnvironmentBlendMode/XRSessionEnvironmentBlendMode.generated.xml' path='docs/XRSessionEnvironmentBlendMode/*'/>
 	public XREnvironmentBlendMode EnvironmentBlendMode { get; }
-}
-
-[To(ToAttribute.None)]
-public enum XRInteractionMode
-{
-	[Value("screen-space")]
-	ScreenSpace,
-	[Value("world-space")]
-	WorldSpace,
 }
 
 ///<include file='Utils/Docs/XRSession/XRSession.generated.xml' path='docs/XRSession/*'/>
@@ -32321,24 +27737,6 @@ public partial class XRView
 {
 	///<include file='Utils/Docs/XRViewIsFirstPersonObserver/XRViewIsFirstPersonObserver.generated.xml' path='docs/XRViewIsFirstPersonObserver/*'/>
 	public bool IsFirstPersonObserver { get; }
-}
-
-[To(ToAttribute.None)]
-public enum XRDepthUsage
-{
-	[Value("cpu-optimized")]
-	CpuOptimized,
-	[Value("gpu-optimized")]
-	GpuOptimized,
-}
-
-[To(ToAttribute.None)]
-public enum XRDepthDataFormat
-{
-	[Value("luminance-alpha")]
-	LuminanceAlpha,
-	[Value("float32")]
-	Float32,
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -32400,6 +27798,8 @@ public partial class XRWebGLDepthInformation : XRDepthInformation
 {
 	///<include file='Utils/Docs/XRWebGLDepthInformationTexture/XRWebGLDepthInformationTexture.generated.xml' path='docs/XRWebGLDepthInformationTexture/*'/>
 	public WebGLTexture Texture { get; }
+		public XRTextureType TextureType { get; }
+		public ulong? ImageIndex { get; }
 }
 
 ///<include file='Utils/Docs/XRWebGLBinding/XRWebGLBinding.generated.xml' path='docs/XRWebGLBinding/*'/>
@@ -32407,11 +27807,6 @@ public partial class XRWebGLBinding
 {
 	///<include file='Utils/Docs/XRWebGLBindingGetDepthInformation/XRWebGLBindingGetDepthInformation.generated.xml' path='docs/XRWebGLBindingGetDepthInformation/*'/>
 	public XRWebGLDepthInformation? GetDepthInformation(XRView view) { throw new System.NotImplementedException(); }
-}
-
-public partial interface GlobalEventHandlers
-{
-		public EventHandler Onbeforexrselect { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
 }
 
 public partial class XRSessionInit
@@ -32430,17 +27825,6 @@ public partial class XRSession
 public partial class XRDOMOverlayInit
 {
 		public required Element Root;
-}
-
-[To(ToAttribute.None)]
-public enum XRDOMOverlayType
-{
-	[Value("screen")]
-	Screen,
-	[Value("floating")]
-	Floating,
-	[Value("head-locked")]
-	HeadLocked,
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -32462,61 +27846,6 @@ public partial class XRInputSource
 {
 	///<include file='Utils/Docs/XRInputSourceHand/XRInputSourceHand.generated.xml' path='docs/XRInputSourceHand/*'/>
 	public XRHand? Hand { get; }
-}
-
-[To(ToAttribute.None)]
-public enum XRHandJoint
-{
-	[Value("wrist")]
-	Wrist,
-	[Value("thumb-metacarpal")]
-	ThumbMetacarpal,
-	[Value("thumb-phalanx-proximal")]
-	ThumbPhalanxProximal,
-	[Value("thumb-phalanx-distal")]
-	ThumbPhalanxDistal,
-	[Value("thumb-tip")]
-	ThumbTip,
-	[Value("index-finger-metacarpal")]
-	IndexFingerMetacarpal,
-	[Value("index-finger-phalanx-proximal")]
-	IndexFingerPhalanxProximal,
-	[Value("index-finger-phalanx-intermediate")]
-	IndexFingerPhalanxIntermediate,
-	[Value("index-finger-phalanx-distal")]
-	IndexFingerPhalanxDistal,
-	[Value("index-finger-tip")]
-	IndexFingerTip,
-	[Value("middle-finger-metacarpal")]
-	MiddleFingerMetacarpal,
-	[Value("middle-finger-phalanx-proximal")]
-	MiddleFingerPhalanxProximal,
-	[Value("middle-finger-phalanx-intermediate")]
-	MiddleFingerPhalanxIntermediate,
-	[Value("middle-finger-phalanx-distal")]
-	MiddleFingerPhalanxDistal,
-	[Value("middle-finger-tip")]
-	MiddleFingerTip,
-	[Value("ring-finger-metacarpal")]
-	RingFingerMetacarpal,
-	[Value("ring-finger-phalanx-proximal")]
-	RingFingerPhalanxProximal,
-	[Value("ring-finger-phalanx-intermediate")]
-	RingFingerPhalanxIntermediate,
-	[Value("ring-finger-phalanx-distal")]
-	RingFingerPhalanxDistal,
-	[Value("ring-finger-tip")]
-	RingFingerTip,
-	[Value("pinky-finger-metacarpal")]
-	PinkyFingerMetacarpal,
-	[Value("pinky-finger-phalanx-proximal")]
-	PinkyFingerPhalanxProximal,
-	[Value("pinky-finger-phalanx-intermediate")]
-	PinkyFingerPhalanxIntermediate,
-	[Value("pinky-finger-phalanx-distal")]
-	PinkyFingerPhalanxDistal,
-	[Value("pinky-finger-tip")]
-	PinkyFingerTip,
 }
 
 ///<include file='Utils/Docs/XRHand/XRHand.generated.xml' path='docs/XRHand/*'/>
@@ -32555,22 +27884,11 @@ public partial class XRJointPose : XRPose
 	public Number Radius { get; }
 }
 
-[To(ToAttribute.None)]
-public enum XRHitTestTrackableType
-{
-	[Value("point")]
-	Point,
-	[Value("plane")]
-	Plane,
-	[Value("mesh")]
-	Mesh,
-}
-
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class XRHitTestOptionsInit
 {
 		public required XRSpace Space;
-		public XRHitTestTrackableType[] EntityTypes;
+		public List<XRHitTestTrackableType> EntityTypes;
 		public XRRay OffsetRay;
 }
 
@@ -32578,7 +27896,7 @@ public partial class XRHitTestOptionsInit
 public partial class XRTransientInputHitTestOptionsInit
 {
 		public required DOMString Profile;
-		public XRHitTestTrackableType[] EntityTypes;
+		public List<XRHitTestTrackableType> EntityTypes;
 		public XRRay OffsetRay;
 }
 
@@ -32628,9 +27946,9 @@ public partial class XRSession
 public partial class XRFrame
 {
 	///<include file='Utils/Docs/XRFrameGetHitTestResults/XRFrameGetHitTestResults.generated.xml' path='docs/XRFrameGetHitTestResults/*'/>
-	public XRHitTestResult[] GetHitTestResults(XRHitTestSource hitTestSource) { throw new System.NotImplementedException(); }
+	public List<XRHitTestResult> GetHitTestResults(XRHitTestSource hitTestSource) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/XRFrameGetHitTestResultsForTransientInput/XRFrameGetHitTestResultsForTransientInput.generated.xml' path='docs/XRFrameGetHitTestResultsForTransientInput/*'/>
-	public XRTransientInputHitTestResult[] GetHitTestResultsForTransientInput(XRTransientInputHitTestSource hitTestSource) { throw new System.NotImplementedException(); }
+	public List<XRTransientInputHitTestResult> GetHitTestResultsForTransientInput(XRTransientInputHitTestSource hitTestSource) { throw new System.NotImplementedException(); }
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -32666,15 +27984,6 @@ public partial class XRLightProbe : EventTarget
 	///<include file='Utils/Docs/XRLightProbeProbeSpace/XRLightProbeProbeSpace.generated.xml' path='docs/XRLightProbeProbeSpace/*'/>
 	public XRSpace ProbeSpace { get; }
 		public EventHandler Onreflectionchange { get; set; }
-}
-
-[To(ToAttribute.None)]
-public enum XRReflectionFormat
-{
-	[Value("srgba8")]
-	Srgba8,
-	[Value("rgba16f")]
-	Rgba16f,
 }
 
 ///<include file='Utils/Docs/XRLightEstimate/XRLightEstimate.generated.xml' path='docs/XRLightEstimate/*'/>
@@ -32716,15 +28025,6 @@ public partial class XRWebGLBinding
 {
 	///<include file='Utils/Docs/XRWebGLBindingGetReflectionCubeMap/XRWebGLBindingGetReflectionCubeMap.generated.xml' path='docs/XRWebGLBindingGetReflectionCubeMap/*'/>
 	public WebGLTexture? GetReflectionCubeMap(XRLightProbe lightProbe) { throw new System.NotImplementedException(); }
-}
-
-[To(ToAttribute.None)]
-public enum XRPlaneOrientation
-{
-	[Value("horizontal")]
-	Horizontal,
-	[Value("vertical")]
-	Vertical,
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -32773,32 +28073,10 @@ public partial class XRSystem : EventTarget
 		public EventHandler Ondevicechange { get; set; }
 }
 
-[To(ToAttribute.None)]
-public enum XRSessionMode
-{
-	[Value("inline")]
-	Inline,
-	[Value("immersive-vr")]
-	ImmersiveVr,
-	[Value("immersive-ar")]
-	ImmersiveAr,
-}
-
 public partial class XRSessionInit
 {
 		public List<DOMString> RequiredFeatures;
 		public List<DOMString> OptionalFeatures;
-}
-
-[To(ToAttribute.None)]
-public enum XRVisibilityState
-{
-	[Value("visible")]
-	Visible,
-	[Value("visible-blurred")]
-	VisibleBlurred,
-	[Value("hidden")]
-	Hidden,
 }
 
 ///<include file='Utils/Docs/XRSession/XRSession.generated.xml' path='docs/XRSession/*'/>
@@ -32812,6 +28090,7 @@ public partial class XRSession : EventTarget
 	public XRRenderState RenderState { get; }
 	///<include file='Utils/Docs/XRSessionInputSources/XRSessionInputSources.generated.xml' path='docs/XRSessionInputSources/*'/>
 	public XRInputSourceArray InputSources { get; }
+		public XRInputSourceArray TrackedSources { get; }
 		public DOMString[] EnabledFeatures { get; }
 		public bool IsSystemKeyboardSupported { get; }
 	///<include file='Utils/Docs/XRSessionUpdateRenderState/XRSessionUpdateRenderState.generated.xml' path='docs/XRSessionUpdateRenderState/*'/>
@@ -32861,11 +28140,6 @@ public partial class XRRenderState
 	public XRWebGLLayer? BaseLayer { get; }
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct XRFrameRequestCallback
-{
-}
-
 ///<include file='Utils/Docs/XRFrame/XRFrame.generated.xml' path='docs/XRFrame/*'/>
 public partial class XRFrame
 {
@@ -32884,21 +28158,6 @@ public partial class XRSpace : EventTarget
 {
 }
 
-[To(ToAttribute.None)]
-public enum XRReferenceSpaceType
-{
-	[Value("viewer")]
-	Viewer,
-	[Value("local")]
-	Local,
-	[Value("local-floor")]
-	LocalFloor,
-	[Value("bounded-floor")]
-	BoundedFloor,
-	[Value("unbounded")]
-	Unbounded,
-}
-
 ///<include file='Utils/Docs/XRReferenceSpace/XRReferenceSpace.generated.xml' path='docs/XRReferenceSpace/*'/>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class XRReferenceSpace : XRSpace
@@ -32914,17 +28173,6 @@ public partial class XRBoundedReferenceSpace : XRReferenceSpace
 {
 	///<include file='Utils/Docs/XRBoundedReferenceSpaceBoundsGeometry/XRBoundedReferenceSpaceBoundsGeometry.generated.xml' path='docs/XRBoundedReferenceSpaceBoundsGeometry/*'/>
 	public DOMPointReadOnly[] BoundsGeometry { get; }
-}
-
-[To(ToAttribute.None)]
-public enum XREye
-{
-	[Value("none")]
-	None,
-	[Value("left")]
-	Left,
-	[Value("right")]
-	Right,
 }
 
 ///<include file='Utils/Docs/XRView/XRView.generated.xml' path='docs/XRView/*'/>
@@ -32993,30 +28241,6 @@ public partial class XRViewerPose : XRPose
 {
 	///<include file='Utils/Docs/XRViewerPoseViews/XRViewerPoseViews.generated.xml' path='docs/XRViewerPoseViews/*'/>
 	public XRView[] Views { get; }
-}
-
-[To(ToAttribute.None)]
-public enum XRHandedness
-{
-	[Value("none")]
-	None,
-	[Value("left")]
-	Left,
-	[Value("right")]
-	Right,
-}
-
-[To(ToAttribute.None)]
-public enum XRTargetRayMode
-{
-	[Value("gaze")]
-	Gaze,
-	[Value("tracked-pointer")]
-	TrackedPointer,
-	[Value("screen")]
-	Screen,
-	[Value("transient-pointer")]
-	TransientPointer,
 }
 
 ///<include file='Utils/Docs/XRInputSource/XRInputSource.generated.xml' path='docs/XRInputSource/*'/>
@@ -33091,11 +28315,6 @@ public partial class XRWebGLLayer : XRLayer
 public partial class WebGLContextAttributes
 {
 		public bool XrCompatible;
-}
-
-public partial interface WebGLRenderingContextBase
-{
-		public Task<Undefined> MakeXRCompatible() { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/XRSessionEvent/XRSessionEvent.generated.xml' path='docs/XRSessionEvent/*'/>
@@ -33196,32 +28415,6 @@ public partial class XRPermissionDescriptor : PermissionDescriptor
 public partial class XRPermissionStatus : PermissionStatus
 {
 		public DOMString[] Granted { get; set; }
-}
-
-[To(ToAttribute.None)]
-public enum XRLayerLayout
-{
-	[Value("default")]
-	Default,
-	[Value("mono")]
-	Mono,
-	[Value("stereo")]
-	Stereo,
-	[Value("stereo-left-right")]
-	StereoLeftRight,
-	[Value("stereo-top-bottom")]
-	StereoTopBottom,
-}
-
-[To(ToAttribute.None)]
-public enum XRLayerQuality
-{
-	[Value("default")]
-	Default,
-	[Value("text-optimized")]
-	TextOptimized,
-	[Value("graphics-optimized")]
-	GraphicsOptimized,
 }
 
 ///<include file='Utils/Docs/XRCompositionLayer/XRCompositionLayer.generated.xml' path='docs/XRCompositionLayer/*'/>
@@ -33349,15 +28542,6 @@ public partial class XRWebGLSubImage : XRSubImage
 		public ulong? DepthStencilTextureHeight { get; }
 		public ulong? MotionVectorTextureWidth { get; }
 		public ulong? MotionVectorTextureHeight { get; }
-}
-
-[To(ToAttribute.None)]
-public enum XRTextureType
-{
-	[Value("texture")]
-	Texture,
-	[Value("texture-array")]
-	TextureArray,
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -33631,24 +28815,6 @@ public partial class XMLHttpRequestUpload : XMLHttpRequestEventTarget
 {
 }
 
-///<include file='Utils/Docs/XMLHttpRequestResponseType/XMLHttpRequestResponseType.generated.xml' path='docs/XMLHttpRequestResponseType/*'/>
-[To(ToAttribute.None)]
-public enum XMLHttpRequestResponseType
-{
-	[Value("")]
-	Empty,
-	[Value("arraybuffer")]
-	Arraybuffer,
-	[Value("blob")]
-	Blob,
-	[Value("document")]
-	Document,
-	[Value("json")]
-	Json,
-	[Value("text")]
-	Text,
-}
-
 ///<include file='Utils/Docs/XMLHttpRequest/XMLHttpRequest.generated.xml' path='docs/XMLHttpRequest/*'/>
 public partial class XMLHttpRequest : XMLHttpRequestEventTarget
 {
@@ -33675,7 +28841,7 @@ public partial class XMLHttpRequest : XMLHttpRequestEventTarget
 	///<include file='Utils/Docs/XMLHttpRequestUpload/XMLHttpRequestUpload.generated.xml' path='docs/XMLHttpRequestUpload/*'/>
 	public XMLHttpRequestUpload Upload { get; }
 	///<include file='Utils/Docs/XMLHttpRequestSend/XMLHttpRequestSend.generated.xml' path='docs/XMLHttpRequestSend/*'/>
-	public Undefined Send(Union211? body) { throw new System.NotImplementedException(); }
+	public Undefined Send(Union236? body) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/XMLHttpRequestAbort/XMLHttpRequestAbort.generated.xml' path='docs/XMLHttpRequestAbort/*'/>
 	public Undefined Abort() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/XMLHttpRequestResponseURL/XMLHttpRequestResponseURL.generated.xml' path='docs/XMLHttpRequestResponseURL/*'/>
@@ -33748,2208 +28914,5 @@ public partial class ProgressEventInit : EventInit
 		public bool LengthComputable;
 		public ulong Loaded;
 		public ulong Total;
-}
-
-///<summary>
-///<see cref="RequestInfo"/> or <c>List{RequestInfo}</c>
-///</summary>
-public struct Union0
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union0(RequestInfo value){return new Union0 { Value = value };}
-	public static implicit operator Union0(List<RequestInfo> value){return new Union0 { Value = value };}
-}
-
-///<summary>
-///<see cref="PasswordCredentialData"/> or <see cref="HTMLFormElement"/>
-///</summary>
-public struct Union1
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union1(PasswordCredentialData value){return new Union1 { Value = value };}
-	public static implicit operator Union1(HTMLFormElement value){return new Union1 { Value = value };}
-}
-
-///<summary>
-///<see cref="AnimationEffect"/> or <c>List{AnimationEffect}</c>
-///</summary>
-public struct Union2
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union2(AnimationEffect value){return new Union2 { Value = value };}
-	public static implicit operator Union2(List<AnimationEffect> value){return new Union2 { Value = value };}
-}
-
-///<summary>
-///<see cref="byte"/> or <see cref="ArrayBufferView"/>
-///</summary>
-public struct Union3
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union3(byte[] value){return new Union3 { Value = value };}
-	public static implicit operator Union3(ArrayBufferView value){return new Union3 { Value = value };}
-}
-
-///<summary>
-///<see cref="CSSOMString"/> or <see cref="BinaryData"/>
-///</summary>
-public struct Union4
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union4(CSSOMString value){return new Union4 { Value = value };}
-	public static implicit operator Union4(BinaryData value){return new Union4 { Value = value };}
-}
-
-///<summary>
-///<see cref="ulong"/> or <c>List{ulong}</c>
-///</summary>
-public struct Union5
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union5(ulong value){return new Union5 { Value = value };}
-	public static implicit operator Union5(List<ulong> value){return new Union5 { Value = value };}
-}
-
-///<summary>
-///<see cref="DOMString"/> or <see cref="ReadableStream"/>
-///</summary>
-public struct Union6
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union6(DOMString value){return new Union6 { Value = value };}
-	public static implicit operator Union6(ReadableStream value){return new Union6 { Value = value };}
-}
-
-///<summary>
-///<see cref="DOMString"/> or <see cref="CSSStyleValue"/> or <see cref="CSSParserValue"/>
-///</summary>
-public struct Union7
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union7(DOMString value){return new Union7 { Value = value };}
-	public static implicit operator Union7(CSSStyleValue value){return new Union7 { Value = value };}
-	public static implicit operator Union7(CSSParserValue value){return new Union7 { Value = value };}
-}
-
-///<summary>
-///<see cref="Element"/> or <see cref="CSSPseudoElement"/>
-///</summary>
-public struct Union8
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union8(Element value){return new Union8 { Value = value };}
-	public static implicit operator Union8(CSSPseudoElement value){return new Union8 { Value = value };}
-}
-
-///<summary>
-///<see cref="Undefined"/> or <see cref="CSSStyleValue"/>
-///</summary>
-public struct Union9
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union9(Undefined value){return new Union9 { Value = value };}
-	public static implicit operator Union9(CSSStyleValue value){return new Union9 { Value = value };}
-}
-
-///<summary>
-///<see cref="CSSStyleValue"/> or <see cref="USVString"/>
-///</summary>
-public struct Union10
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union10(CSSStyleValue value){return new Union10 { Value = value };}
-	public static implicit operator Union10(USVString value){return new Union10 { Value = value };}
-}
-
-///<summary>
-///<see cref="CSSStyleValue"/> or <see cref="USVString"/>
-///</summary>
-public struct Union11
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union11(CSSStyleValue value){return new Union11 { Value = value };}
-	public static implicit operator Union11(USVString value){return new Union11 { Value = value };}
-}
-
-///<summary>
-///<see cref="USVString"/> or <see cref="CSSVariableReferenceValue"/>
-///</summary>
-public struct Union12
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union12(USVString value){return new Union12 { Value = value };}
-	public static implicit operator Union12(CSSVariableReferenceValue value){return new Union12 { Value = value };}
-}
-
-///<summary>
-///<see cref="DOMString"/> or <see cref="CSSKeywordValue"/>
-///</summary>
-public struct Union13
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union13(DOMString value){return new Union13 { Value = value };}
-	public static implicit operator Union13(CSSKeywordValue value){return new Union13 { Value = value };}
-}
-
-///<summary>
-///<see cref="Number"/> or <see cref="CSSNumericValue"/>
-///</summary>
-public struct Union14
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union14(Number value){return new Union14 { Value = value };}
-	public static implicit operator Union14(CSSNumericValue value){return new Union14 { Value = value };}
-}
-
-///<summary>
-///<see cref="CSSNumericValue"/> or <see cref="CSSKeywordish"/>
-///</summary>
-public struct Union15
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union15(CSSNumericValue value){return new Union15 { Value = value };}
-	public static implicit operator Union15(CSSKeywordish value){return new Union15 { Value = value };}
-}
-
-///<summary>
-///<see cref="CSSColorValue"/> or <see cref="CSSStyleValue"/>
-///</summary>
-public struct Union16
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union16(CSSColorValue value){return new Union16 { Value = value };}
-	public static implicit operator Union16(CSSStyleValue value){return new Union16 { Value = value };}
-}
-
-///<summary>
-///<see cref="CSSNumberish"/> or <see cref="CSSKeywordish"/>
-///</summary>
-public struct Union17
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union17(CSSNumberish value){return new Union17 { Value = value };}
-	public static implicit operator Union17(CSSKeywordish value){return new Union17 { Value = value };}
-}
-
-///<summary>
-///<see cref="CSSNumberish"/> or <see cref="CSSKeywordish"/>
-///</summary>
-public struct Union18
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union18(CSSNumberish value){return new Union18 { Value = value };}
-	public static implicit operator Union18(CSSKeywordish value){return new Union18 { Value = value };}
-}
-
-///<summary>
-///<see cref="CSSNumberish"/> or <see cref="CSSKeywordish"/>
-///</summary>
-public struct Union19
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union19(CSSNumberish value){return new Union19 { Value = value };}
-	public static implicit operator Union19(CSSKeywordish value){return new Union19 { Value = value };}
-}
-
-///<summary>
-///<see cref="CSSNumberish"/> or <see cref="CSSKeywordish"/>
-///</summary>
-public struct Union20
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union20(CSSNumberish value){return new Union20 { Value = value };}
-	public static implicit operator Union20(CSSKeywordish value){return new Union20 { Value = value };}
-}
-
-///<summary>
-///<see cref="UpdateCallback"/> or <see cref="StartViewTransitionOptions"/>
-///</summary>
-public struct Union21
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union21(UpdateCallback value){return new Union21 { Value = value };}
-	public static implicit operator Union21(StartViewTransitionOptions value){return new Union21 { Value = value };}
-}
-
-///<summary>
-///<see cref="bool"/> or <see cref="ScrollIntoViewOptions"/>
-///</summary>
-public struct Union22
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union22(bool value){return new Union22 { Value = value };}
-	public static implicit operator Union22(ScrollIntoViewOptions value){return new Union22 { Value = value };}
-}
-
-///<summary>
-///<see cref="Text"/> or <see cref="Element"/> or <see cref="CSSPseudoElement"/> or <see cref="Document"/>
-///</summary>
-public struct Union23
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union23(Text value){return new Union23 { Value = value };}
-	public static implicit operator Union23(Element value){return new Union23 { Value = value };}
-	public static implicit operator Union23(CSSPseudoElement value){return new Union23 { Value = value };}
-	public static implicit operator Union23(Document value){return new Union23 { Value = value };}
-}
-
-///<summary>
-///<see cref="Element"/> or <see cref="ProcessingInstruction"/>
-///</summary>
-public struct Union24
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union24(Element value){return new Union24 { Value = value };}
-	public static implicit operator Union24(ProcessingInstruction value){return new Union24 { Value = value };}
-}
-
-///<summary>
-///<see cref="MediaList"/> or <see cref="DOMString"/>
-///</summary>
-public struct Union25
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union25(MediaList value){return new Union25 { Value = value };}
-	public static implicit operator Union25(DOMString value){return new Union25 { Value = value };}
-}
-
-///<summary>
-///<see cref="Event"/> or <see cref="Undefined"/>
-///</summary>
-public struct Union26
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union26(Event value){return new Union26 { Value = value };}
-	public static implicit operator Union26(Undefined value){return new Union26 { Value = value };}
-}
-
-///<summary>
-///<see cref="AddEventListenerOptions"/> or <see cref="bool"/>
-///</summary>
-public struct Union27
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union27(AddEventListenerOptions value){return new Union27 { Value = value };}
-	public static implicit operator Union27(bool value){return new Union27 { Value = value };}
-}
-
-///<summary>
-///<see cref="EventListenerOptions"/> or <see cref="bool"/>
-///</summary>
-public struct Union28
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union28(EventListenerOptions value){return new Union28 { Value = value };}
-	public static implicit operator Union28(bool value){return new Union28 { Value = value };}
-}
-
-///<summary>
-///<see cref="Node"/> or <see cref="TrustedScript"/> or <see cref="DOMString"/>
-///</summary>
-public struct Union29
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union29(Node value){return new Union29 { Value = value };}
-	public static implicit operator Union29(TrustedScript value){return new Union29 { Value = value };}
-	public static implicit operator Union29(DOMString value){return new Union29 { Value = value };}
-}
-
-///<summary>
-///<see cref="Node"/> or <see cref="TrustedScript"/> or <see cref="DOMString"/>
-///</summary>
-public struct Union30
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union30(Node value){return new Union30 { Value = value };}
-	public static implicit operator Union30(TrustedScript value){return new Union30 { Value = value };}
-	public static implicit operator Union30(DOMString value){return new Union30 { Value = value };}
-}
-
-///<summary>
-///<see cref="Node"/> or <see cref="TrustedScript"/> or <see cref="DOMString"/>
-///</summary>
-public struct Union31
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union31(Node value){return new Union31 { Value = value };}
-	public static implicit operator Union31(TrustedScript value){return new Union31 { Value = value };}
-	public static implicit operator Union31(DOMString value){return new Union31 { Value = value };}
-}
-
-///<summary>
-///<see cref="Node"/> or <see cref="TrustedScript"/> or <see cref="DOMString"/>
-///</summary>
-public struct Union32
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union32(Node value){return new Union32 { Value = value };}
-	public static implicit operator Union32(TrustedScript value){return new Union32 { Value = value };}
-	public static implicit operator Union32(DOMString value){return new Union32 { Value = value };}
-}
-
-///<summary>
-///<see cref="Node"/> or <see cref="TrustedScript"/> or <see cref="DOMString"/>
-///</summary>
-public struct Union33
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union33(Node value){return new Union33 { Value = value };}
-	public static implicit operator Union33(TrustedScript value){return new Union33 { Value = value };}
-	public static implicit operator Union33(DOMString value){return new Union33 { Value = value };}
-}
-
-///<summary>
-///<see cref="Node"/> or <see cref="TrustedScript"/> or <see cref="DOMString"/>
-///</summary>
-public struct Union34
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union34(Node value){return new Union34 { Value = value };}
-	public static implicit operator Union34(TrustedScript value){return new Union34 { Value = value };}
-	public static implicit operator Union34(DOMString value){return new Union34 { Value = value };}
-}
-
-///<summary>
-///<see cref="DOMString"/> or <see cref="ElementCreationOptions"/>
-///</summary>
-public struct Union35
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union35(DOMString value){return new Union35 { Value = value };}
-	public static implicit operator Union35(ElementCreationOptions value){return new Union35 { Value = value };}
-}
-
-///<summary>
-///<see cref="DOMString"/> or <see cref="ElementCreationOptions"/>
-///</summary>
-public struct Union36
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union36(DOMString value){return new Union36 { Value = value };}
-	public static implicit operator Union36(ElementCreationOptions value){return new Union36 { Value = value };}
-}
-
-///<summary>
-///<see cref="MediaKeyStatus"/> or <see cref="Undefined"/>
-///</summary>
-public struct Union37
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union37(MediaKeyStatus value){return new Union37 { Value = value };}
-	public static implicit operator Union37(Undefined value){return new Union37 { Value = value };}
-}
-
-///<summary>
-///<see cref="ulong"/> or <see cref="OpaqueProperty"/>
-///</summary>
-public struct Union38
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union38(ulong value){return new Union38 { Value = value };}
-	public static implicit operator Union38(OpaqueProperty value){return new Union38 { Value = value };}
-}
-
-///<summary>
-///<see cref="USVString"/> or <see cref="FencedFrameConfig"/>
-///</summary>
-public struct Union39
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union39(USVString value){return new Union39 { Value = value };}
-	public static implicit operator Union39(FencedFrameConfig value){return new Union39 { Value = value };}
-}
-
-///<summary>
-///<see cref="FenceEvent"/> or <see cref="DOMString"/>
-///</summary>
-public struct Union40
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union40(FenceEvent value){return new Union40 { Value = value };}
-	public static implicit operator Union40(DOMString value){return new Union40 { Value = value };}
-}
-
-///<summary>
-///<c>List{List{ByteString}}</c> or <c>Dictionary{ByteString, ByteString}</c>
-///</summary>
-public struct Union41
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union41(List<List<ByteString>> value){return new Union41 { Value = value };}
-	public static implicit operator Union41(Dictionary<ByteString, ByteString> value){return new Union41 { Value = value };}
-}
-
-///<summary>
-///<see cref="Blob"/> or <see cref="BufferSource"/> or <see cref="FormData"/> or <see cref="URLSearchParams"/> or <see cref="USVString"/>
-///</summary>
-public struct Union42
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union42(Blob value){return new Union42 { Value = value };}
-	public static implicit operator Union42(BufferSource value){return new Union42 { Value = value };}
-	public static implicit operator Union42(FormData value){return new Union42 { Value = value };}
-	public static implicit operator Union42(URLSearchParams value){return new Union42 { Value = value };}
-	public static implicit operator Union42(USVString value){return new Union42 { Value = value };}
-}
-
-///<summary>
-///<see cref="ReadableStream"/> or <see cref="XMLHttpRequestBodyInit"/>
-///</summary>
-public struct Union43
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union43(ReadableStream value){return new Union43 { Value = value };}
-	public static implicit operator Union43(XMLHttpRequestBodyInit value){return new Union43 { Value = value };}
-}
-
-///<summary>
-///<see cref="Request"/> or <see cref="USVString"/>
-///</summary>
-public struct Union44
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union44(Request value){return new Union44 { Value = value };}
-	public static implicit operator Union44(USVString value){return new Union44 { Value = value };}
-}
-
-///<summary>
-///<see cref="WellKnownDirectory"/> or <see cref="FileSystemHandle"/>
-///</summary>
-public struct Union45
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union45(WellKnownDirectory value){return new Union45 { Value = value };}
-	public static implicit operator Union45(FileSystemHandle value){return new Union45 { Value = value };}
-}
-
-///<summary>
-///<see cref="BufferSource"/> or <see cref="Blob"/> or <see cref="USVString"/>
-///</summary>
-public struct Union46
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union46(BufferSource value){return new Union46 { Value = value };}
-	public static implicit operator Union46(Blob value){return new Union46 { Value = value };}
-	public static implicit operator Union46(USVString value){return new Union46 { Value = value };}
-}
-
-///<summary>
-///<see cref="DOMString"/> or <see cref="byte"/>
-///</summary>
-public struct Union47
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union47(DOMString value){return new Union47 { Value = value };}
-	public static implicit operator Union47(byte[] value){return new Union47 { Value = value };}
-}
-
-///<summary>
-///<see cref="Blob"/> or <see cref="MediaSource"/>
-///</summary>
-public struct Union48
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union48(Blob value){return new Union48 { Value = value };}
-	public static implicit operator Union48(MediaSource value){return new Union48 { Value = value };}
-}
-
-///<summary>
-///<see cref="BufferSource"/> or <see cref="Blob"/> or <see cref="USVString"/>
-///</summary>
-public struct Union49
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union49(BufferSource value){return new Union49 { Value = value };}
-	public static implicit operator Union49(Blob value){return new Union49 { Value = value };}
-	public static implicit operator Union49(USVString value){return new Union49 { Value = value };}
-}
-
-///<summary>
-///<see cref="BufferSource"/> or <see cref="Blob"/> or <see cref="USVString"/> or <see cref="WriteParams"/>
-///</summary>
-public struct Union50
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union50(BufferSource value){return new Union50 { Value = value };}
-	public static implicit operator Union50(Blob value){return new Union50 { Value = value };}
-	public static implicit operator Union50(USVString value){return new Union50 { Value = value };}
-	public static implicit operator Union50(WriteParams value){return new Union50 { Value = value };}
-}
-
-///<summary>
-///<see cref="DOMString"/> or <c>List{double}</c>
-///</summary>
-public struct Union51
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union51(DOMString value){return new Union51 { Value = value };}
-	public static implicit operator Union51(List<double> value){return new Union51 { Value = value };}
-}
-
-///<summary>
-///<see cref="DOMString"/> or <c>List{double}</c>
-///</summary>
-public struct Union52
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union52(DOMString value){return new Union52 { Value = value };}
-	public static implicit operator Union52(List<double> value){return new Union52 { Value = value };}
-}
-
-///<summary>
-///<see cref="HTMLCollection"/> or <see cref="Element"/>
-///</summary>
-public struct Union53
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union53(HTMLCollection value){return new Union53 { Value = value };}
-	public static implicit operator Union53(Element value){return new Union53 { Value = value };}
-}
-
-///<summary>
-///<see cref="HTMLCollection"/> or <see cref="Element"/>
-///</summary>
-public struct Union54
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union54(HTMLCollection value){return new Union54 { Value = value };}
-	public static implicit operator Union54(Element value){return new Union54 { Value = value };}
-}
-
-///<summary>
-///<see cref="RadioNodeList"/> or <see cref="Element"/>
-///</summary>
-public struct Union55
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union55(RadioNodeList value){return new Union55 { Value = value };}
-	public static implicit operator Union55(Element value){return new Union55 { Value = value };}
-}
-
-///<summary>
-///<see cref="HTMLOptionElement"/> or <see cref="HTMLOptGroupElement"/>
-///</summary>
-public struct Union56
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union56(HTMLOptionElement value){return new Union56 { Value = value };}
-	public static implicit operator Union56(HTMLOptGroupElement value){return new Union56 { Value = value };}
-}
-
-///<summary>
-///<see cref="HTMLElement"/> or <see cref="long"/>
-///</summary>
-public struct Union57
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union57(HTMLElement value){return new Union57 { Value = value };}
-	public static implicit operator Union57(long value){return new Union57 { Value = value };}
-}
-
-///<summary>
-///<see cref="HTMLScriptElement"/> or <see cref="SVGScriptElement"/>
-///</summary>
-public struct Union58
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union58(HTMLScriptElement value){return new Union58 { Value = value };}
-	public static implicit operator Union58(SVGScriptElement value){return new Union58 { Value = value };}
-}
-
-///<summary>
-///<see cref="bool"/> or <see cref="double"/> or <see cref="DOMString"/>
-///</summary>
-public struct Union59
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union59(bool value){return new Union59 { Value = value };}
-	public static implicit operator Union59(double value){return new Union59 { Value = value };}
-	public static implicit operator Union59(DOMString value){return new Union59 { Value = value };}
-}
-
-///<summary>
-///<see cref="MediaStream"/> or <see cref="MediaSource"/> or <see cref="Blob"/>
-///</summary>
-public struct Union60
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union60(MediaStream value){return new Union60 { Value = value };}
-	public static implicit operator Union60(MediaSource value){return new Union60 { Value = value };}
-	public static implicit operator Union60(Blob value){return new Union60 { Value = value };}
-}
-
-///<summary>
-///<see cref="VideoTrack"/> or <see cref="AudioTrack"/> or <see cref="TextTrack"/>
-///</summary>
-public struct Union61
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union61(VideoTrack value){return new Union61 { Value = value };}
-	public static implicit operator Union61(AudioTrack value){return new Union61 { Value = value };}
-	public static implicit operator Union61(TextTrack value){return new Union61 { Value = value };}
-}
-
-///<summary>
-///<see cref="VideoTrack"/> or <see cref="AudioTrack"/> or <see cref="TextTrack"/>
-///</summary>
-public struct Union62
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union62(VideoTrack value){return new Union62 { Value = value };}
-	public static implicit operator Union62(AudioTrack value){return new Union62 { Value = value };}
-	public static implicit operator Union62(TextTrack value){return new Union62 { Value = value };}
-}
-
-///<summary>
-///<see cref="RadioNodeList"/> or <see cref="Element"/>
-///</summary>
-public struct Union63
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union63(RadioNodeList value){return new Union63 { Value = value };}
-	public static implicit operator Union63(Element value){return new Union63 { Value = value };}
-}
-
-///<summary>
-///<see cref="HTMLOptionElement"/> or <see cref="HTMLOptGroupElement"/>
-///</summary>
-public struct Union64
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union64(HTMLOptionElement value){return new Union64 { Value = value };}
-	public static implicit operator Union64(HTMLOptGroupElement value){return new Union64 { Value = value };}
-}
-
-///<summary>
-///<see cref="HTMLElement"/> or <see cref="long"/>
-///</summary>
-public struct Union65
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union65(HTMLElement value){return new Union65 { Value = value };}
-	public static implicit operator Union65(long value){return new Union65 { Value = value };}
-}
-
-///<summary>
-///<see cref="Element"/> or <see cref="Text"/>
-///</summary>
-public struct Union66
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union66(Element value){return new Union66 { Value = value };}
-	public static implicit operator Union66(Text value){return new Union66 { Value = value };}
-}
-
-///<summary>
-///<see cref="CanvasRenderingContext2D"/> or <see cref="ImageBitmapRenderingContext"/> or <see cref="WebGLRenderingContext"/> or <see cref="WebGL2RenderingContext"/> or <see cref="GPUCanvasContext"/>
-///</summary>
-public struct Union67
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union67(CanvasRenderingContext2D value){return new Union67 { Value = value };}
-	public static implicit operator Union67(ImageBitmapRenderingContext value){return new Union67 { Value = value };}
-	public static implicit operator Union67(WebGLRenderingContext value){return new Union67 { Value = value };}
-	public static implicit operator Union67(WebGL2RenderingContext value){return new Union67 { Value = value };}
-	public static implicit operator Union67(GPUCanvasContext value){return new Union67 { Value = value };}
-}
-
-///<summary>
-///<see cref="HTMLImageElement"/> or <see cref="SVGImageElement"/>
-///</summary>
-public struct Union68
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union68(HTMLImageElement value){return new Union68 { Value = value };}
-	public static implicit operator Union68(SVGImageElement value){return new Union68 { Value = value };}
-}
-
-///<summary>
-///<see cref="HTMLOrSVGImageElement"/> or <see cref="HTMLVideoElement"/> or <see cref="HTMLCanvasElement"/> or <see cref="ImageBitmap"/> or <see cref="OffscreenCanvas"/> or <see cref="VideoFrame"/>
-///</summary>
-public struct Union69
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union69(HTMLOrSVGImageElement value){return new Union69 { Value = value };}
-	public static implicit operator Union69(HTMLVideoElement value){return new Union69 { Value = value };}
-	public static implicit operator Union69(HTMLCanvasElement value){return new Union69 { Value = value };}
-	public static implicit operator Union69(ImageBitmap value){return new Union69 { Value = value };}
-	public static implicit operator Union69(OffscreenCanvas value){return new Union69 { Value = value };}
-	public static implicit operator Union69(VideoFrame value){return new Union69 { Value = value };}
-}
-
-///<summary>
-///<see cref="DOMString"/> or <see cref="CanvasGradient"/> or <see cref="CanvasPattern"/>
-///</summary>
-public struct Union70
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union70(DOMString value){return new Union70 { Value = value };}
-	public static implicit operator Union70(CanvasGradient value){return new Union70 { Value = value };}
-	public static implicit operator Union70(CanvasPattern value){return new Union70 { Value = value };}
-}
-
-///<summary>
-///<see cref="DOMString"/> or <see cref="CanvasGradient"/> or <see cref="CanvasPattern"/>
-///</summary>
-public struct Union71
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union71(DOMString value){return new Union71 { Value = value };}
-	public static implicit operator Union71(CanvasGradient value){return new Union71 { Value = value };}
-	public static implicit operator Union71(CanvasPattern value){return new Union71 { Value = value };}
-}
-
-///<summary>
-///<see cref="double"/> or <see cref="DOMPointInit"/>
-///</summary>
-public struct Union73
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union73(double value){return new Union73 { Value = value };}
-	public static implicit operator Union73(DOMPointInit value){return new Union73 { Value = value };}
-}
-
-///<summary>
-///<see cref="double"/> or <see cref="DOMPointInit"/> or <c>List{Union73}</c>
-///</summary>
-public struct Union72
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union72(double value){return new Union72 { Value = value };}
-	public static implicit operator Union72(DOMPointInit value){return new Union72 { Value = value };}
-	public static implicit operator Union72(List<Union73> value){return new Union72 { Value = value };}
-}
-
-///<summary>
-///<see cref="Path2D"/> or <see cref="DOMString"/>
-///</summary>
-public struct Union74
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union74(Path2D value){return new Union74 { Value = value };}
-	public static implicit operator Union74(DOMString value){return new Union74 { Value = value };}
-}
-
-///<summary>
-///<see cref="HTMLCanvasElement"/> or <see cref="OffscreenCanvas"/>
-///</summary>
-public struct Union75
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union75(HTMLCanvasElement value){return new Union75 { Value = value };}
-	public static implicit operator Union75(OffscreenCanvas value){return new Union75 { Value = value };}
-}
-
-///<summary>
-///<see cref="OffscreenCanvasRenderingContext2D"/> or <see cref="ImageBitmapRenderingContext"/> or <see cref="WebGLRenderingContext"/> or <see cref="WebGL2RenderingContext"/> or <see cref="GPUCanvasContext"/>
-///</summary>
-public struct Union76
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union76(OffscreenCanvasRenderingContext2D value){return new Union76 { Value = value };}
-	public static implicit operator Union76(ImageBitmapRenderingContext value){return new Union76 { Value = value };}
-	public static implicit operator Union76(WebGLRenderingContext value){return new Union76 { Value = value };}
-	public static implicit operator Union76(WebGL2RenderingContext value){return new Union76 { Value = value };}
-	public static implicit operator Union76(GPUCanvasContext value){return new Union76 { Value = value };}
-}
-
-///<summary>
-///<see cref="CustomElementConstructor"/> or <see cref="Undefined"/>
-///</summary>
-public struct Union77
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union77(CustomElementConstructor value){return new Union77 { Value = value };}
-	public static implicit operator Union77(Undefined value){return new Union77 { Value = value };}
-}
-
-///<summary>
-///<see cref="File"/> or <see cref="USVString"/> or <see cref="FormData"/>
-///</summary>
-public struct Union78
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union78(File value){return new Union78 { Value = value };}
-	public static implicit operator Union78(USVString value){return new Union78 { Value = value };}
-	public static implicit operator Union78(FormData value){return new Union78 { Value = value };}
-}
-
-///<summary>
-///<see cref="File"/> or <see cref="USVString"/> or <see cref="FormData"/>
-///</summary>
-public struct Union79
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union79(File value){return new Union79 { Value = value };}
-	public static implicit operator Union79(USVString value){return new Union79 { Value = value };}
-	public static implicit operator Union79(FormData value){return new Union79 { Value = value };}
-}
-
-///<summary>
-///<see cref="Event"/> or <see cref="DOMString"/>
-///</summary>
-public struct Union80
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union80(Event value){return new Union80 { Value = value };}
-	public static implicit operator Union80(DOMString value){return new Union80 { Value = value };}
-}
-
-///<summary>
-///<see cref="DOMString"/> or <see cref="Function"/>
-///</summary>
-public struct Union81
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union81(DOMString value){return new Union81 { Value = value };}
-	public static implicit operator Union81(Function value){return new Union81 { Value = value };}
-}
-
-///<summary>
-///<see cref="CanvasImageSource"/> or <see cref="Blob"/> or <see cref="ImageData"/>
-///</summary>
-public struct Union82
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union82(CanvasImageSource value){return new Union82 { Value = value };}
-	public static implicit operator Union82(Blob value){return new Union82 { Value = value };}
-	public static implicit operator Union82(ImageData value){return new Union82 { Value = value };}
-}
-
-///<summary>
-///<see cref="WindowProxy"/> or <see cref="MessagePort"/> or <see cref="ServiceWorker"/>
-///</summary>
-public struct Union83
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union83(WindowProxy value){return new Union83 { Value = value };}
-	public static implicit operator Union83(MessagePort value){return new Union83 { Value = value };}
-	public static implicit operator Union83(ServiceWorker value){return new Union83 { Value = value };}
-}
-
-///<summary>
-///<see cref="DOMString"/> or <see cref="WorkerOptions"/>
-///</summary>
-public struct Union84
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union84(DOMString value){return new Union84 { Value = value };}
-	public static implicit operator Union84(WorkerOptions value){return new Union84 { Value = value };}
-}
-
-///<summary>
-///<see cref="bool"/> or <see cref="ConstrainDouble"/>
-///</summary>
-public struct Union85
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union85(bool value){return new Union85 { Value = value };}
-	public static implicit operator Union85(ConstrainDouble value){return new Union85 { Value = value };}
-}
-
-///<summary>
-///<see cref="bool"/> or <see cref="ConstrainDouble"/>
-///</summary>
-public struct Union86
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union86(bool value){return new Union86 { Value = value };}
-	public static implicit operator Union86(ConstrainDouble value){return new Union86 { Value = value };}
-}
-
-///<summary>
-///<see cref="bool"/> or <see cref="ConstrainDouble"/>
-///</summary>
-public struct Union87
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union87(bool value){return new Union87 { Value = value };}
-	public static implicit operator Union87(ConstrainDouble value){return new Union87 { Value = value };}
-}
-
-///<summary>
-///<c>List{Point2D}</c> or <see cref="ConstrainPoint2DParameters"/>
-///</summary>
-public struct Union88
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union88(List<Point2D> value){return new Union88 { Value = value };}
-	public static implicit operator Union88(ConstrainPoint2DParameters value){return new Union88 { Value = value };}
-}
-
-///<summary>
-///<see cref="IDBObjectStore"/> or <see cref="IDBIndex"/> or <see cref="IDBCursor"/>
-///</summary>
-public struct Union89
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union89(IDBObjectStore value){return new Union89 { Value = value };}
-	public static implicit operator Union89(IDBIndex value){return new Union89 { Value = value };}
-	public static implicit operator Union89(IDBCursor value){return new Union89 { Value = value };}
-}
-
-///<summary>
-///<see cref="DOMString"/> or <c>List{DOMString}</c>
-///</summary>
-public struct Union90
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union90(DOMString value){return new Union90 { Value = value };}
-	public static implicit operator Union90(List<DOMString> value){return new Union90 { Value = value };}
-}
-
-///<summary>
-///<see cref="DOMString"/> or <c>List{DOMString}</c>
-///</summary>
-public struct Union91
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union91(DOMString value){return new Union91 { Value = value };}
-	public static implicit operator Union91(List<DOMString> value){return new Union91 { Value = value };}
-}
-
-///<summary>
-///<see cref="DOMString"/> or <c>List{DOMString}</c>
-///</summary>
-public struct Union92
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union92(DOMString value){return new Union92 { Value = value };}
-	public static implicit operator Union92(List<DOMString> value){return new Union92 { Value = value };}
-}
-
-///<summary>
-///<see cref="IDBObjectStore"/> or <see cref="IDBIndex"/>
-///</summary>
-public struct Union93
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union93(IDBObjectStore value){return new Union93 { Value = value };}
-	public static implicit operator Union93(IDBIndex value){return new Union93 { Value = value };}
-}
-
-///<summary>
-///<see cref="Element"/> or <see cref="Document"/>
-///</summary>
-public struct Union94
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union94(Element value){return new Union94 { Value = value };}
-	public static implicit operator Union94(Document value){return new Union94 { Value = value };}
-}
-
-///<summary>
-///<see cref="Element"/> or <see cref="Document"/>
-///</summary>
-public struct Union95
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union95(Element value){return new Union95 { Value = value };}
-	public static implicit operator Union95(Document value){return new Union95 { Value = value };}
-}
-
-///<summary>
-///<see cref="Number"/> or <c>List{Number}</c>
-///</summary>
-public struct Union96
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union96(Number value){return new Union96 { Value = value };}
-	public static implicit operator Union96(List<Number> value){return new Union96 { Value = value };}
-}
-
-///<summary>
-///<see cref="bool"/> or <see cref="MediaTrackConstraints"/>
-///</summary>
-public struct Union97
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union97(bool value){return new Union97 { Value = value };}
-	public static implicit operator Union97(MediaTrackConstraints value){return new Union97 { Value = value };}
-}
-
-///<summary>
-///<see cref="bool"/> or <see cref="MediaTrackConstraints"/>
-///</summary>
-public struct Union98
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union98(bool value){return new Union98 { Value = value };}
-	public static implicit operator Union98(MediaTrackConstraints value){return new Union98 { Value = value };}
-}
-
-///<summary>
-///<see cref="DOMString"/> or <c>List{DOMString}</c>
-///</summary>
-public struct Union99
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union99(DOMString value){return new Union99 { Value = value };}
-	public static implicit operator Union99(List<DOMString> value){return new Union99 { Value = value };}
-}
-
-///<summary>
-///<see cref="DOMString"/> or <c>List{DOMString}</c>
-///</summary>
-public struct Union100
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union100(DOMString value){return new Union100 { Value = value };}
-	public static implicit operator Union100(List<DOMString> value){return new Union100 { Value = value };}
-}
-
-///<summary>
-///<see cref="ulong"/> or <see cref="ConstrainULongRange"/>
-///</summary>
-public struct Union101
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union101(ulong value){return new Union101 { Value = value };}
-	public static implicit operator Union101(ConstrainULongRange value){return new Union101 { Value = value };}
-}
-
-///<summary>
-///<see cref="Number"/> or <see cref="ConstrainDoubleRange"/>
-///</summary>
-public struct Union102
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union102(Number value){return new Union102 { Value = value };}
-	public static implicit operator Union102(ConstrainDoubleRange value){return new Union102 { Value = value };}
-}
-
-///<summary>
-///<see cref="bool"/> or <see cref="ConstrainBooleanParameters"/>
-///</summary>
-public struct Union103
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union103(bool value){return new Union103 { Value = value };}
-	public static implicit operator Union103(ConstrainBooleanParameters value){return new Union103 { Value = value };}
-}
-
-///<summary>
-///<see cref="DOMString"/> or <c>List{DOMString}</c> or <see cref="ConstrainDOMStringParameters"/>
-///</summary>
-public struct Union104
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union104(DOMString value){return new Union104 { Value = value };}
-	public static implicit operator Union104(List<DOMString> value){return new Union104 { Value = value };}
-	public static implicit operator Union104(ConstrainDOMStringParameters value){return new Union104 { Value = value };}
-}
-
-///<summary>
-///<see cref="bool"/> or <see cref="MediaTrackConstraints"/>
-///</summary>
-public struct Union105
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union105(bool value){return new Union105 { Value = value };}
-	public static implicit operator Union105(MediaTrackConstraints value){return new Union105 { Value = value };}
-}
-
-///<summary>
-///<see cref="bool"/> or <see cref="MediaTrackConstraints"/>
-///</summary>
-public struct Union106
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union106(bool value){return new Union106 { Value = value };}
-	public static implicit operator Union106(MediaTrackConstraints value){return new Union106 { Value = value };}
-}
-
-///<summary>
-///<see cref="System.Single"/> or <see cref="System.Double"/> or <see cref="DOMMatrix"/>
-///</summary>
-public struct Union107
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union107(System.Single value){return new Union107 { Value = value };}
-	public static implicit operator Union107(System.Double value){return new Union107 { Value = value };}
-	public static implicit operator Union107(DOMMatrix value){return new Union107 { Value = value };}
-}
-
-///<summary>
-///<see cref="BufferSource"/> or <see cref="DOMString"/>
-///</summary>
-public struct Union108
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union108(BufferSource value){return new Union108 { Value = value };}
-	public static implicit operator Union108(DOMString value){return new Union108 { Value = value };}
-}
-
-///<summary>
-///<see cref="BufferSource"/> or <see cref="USVString"/>
-///</summary>
-public struct Union109
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union109(BufferSource value){return new Union109 { Value = value };}
-	public static implicit operator Union109(USVString value){return new Union109 { Value = value };}
-}
-
-///<summary>
-///<see cref="Sanitizer"/> or <see cref="SanitizerConfig"/>
-///</summary>
-public struct Union110
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union110(Sanitizer value){return new Union110 { Value = value };}
-	public static implicit operator Union110(SanitizerConfig value){return new Union110 { Value = value };}
-}
-
-///<summary>
-///<see cref="DOMString"/> or <see cref="SanitizerElementNamespace"/>
-///</summary>
-public struct Union111
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union111(DOMString value){return new Union111 { Value = value };}
-	public static implicit operator Union111(SanitizerElementNamespace value){return new Union111 { Value = value };}
-}
-
-///<summary>
-///<see cref="DOMString"/> or <see cref="SanitizerElementNamespaceWithAttributes"/>
-///</summary>
-public struct Union112
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union112(DOMString value){return new Union112 { Value = value };}
-	public static implicit operator Union112(SanitizerElementNamespaceWithAttributes value){return new Union112 { Value = value };}
-}
-
-///<summary>
-///<see cref="DOMString"/> or <see cref="SanitizerAttributeNamespace"/>
-///</summary>
-public struct Union113
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union113(DOMString value){return new Union113 { Value = value };}
-	public static implicit operator Union113(SanitizerAttributeNamespace value){return new Union113 { Value = value };}
-}
-
-///<summary>
-///<see cref="TaskPriority"/> or <see cref="TaskSignal"/>
-///</summary>
-public struct Union114
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union114(TaskPriority value){return new Union114 { Value = value };}
-	public static implicit operator Union114(TaskSignal value){return new Union114 { Value = value };}
-}
-
-///<summary>
-///<see cref="bool"/> or <see cref="MediaTrackConstraints"/>
-///</summary>
-public struct Union115
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union115(bool value){return new Union115 { Value = value };}
-	public static implicit operator Union115(MediaTrackConstraints value){return new Union115 { Value = value };}
-}
-
-///<summary>
-///<see cref="bool"/> or <see cref="MediaTrackConstraints"/>
-///</summary>
-public struct Union116
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union116(bool value){return new Union116 { Value = value };}
-	public static implicit operator Union116(MediaTrackConstraints value){return new Union116 { Value = value };}
-}
-
-///<summary>
-///<see cref="CSSNumericValue"/> or <see cref="CSSKeywordValue"/>
-///</summary>
-public struct Union118
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union118(CSSNumericValue value){return new Union118 { Value = value };}
-	public static implicit operator Union118(CSSKeywordValue value){return new Union118 { Value = value };}
-}
-
-///<summary>
-///<see cref="DOMString"/> or <c>List{Union118}</c>
-///</summary>
-public struct Union117
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union117(DOMString value){return new Union117 { Value = value };}
-	public static implicit operator Union117(List<Union118> value){return new Union117 { Value = value };}
-}
-
-///<summary>
-///<see cref="RouterRule"/> or <c>List{RouterRule}</c>
-///</summary>
-public struct Union119
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union119(RouterRule value){return new Union119 { Value = value };}
-	public static implicit operator Union119(List<RouterRule> value){return new Union119 { Value = value };}
-}
-
-///<summary>
-///<see cref="RouterSourceDict"/> or <see cref="RouterSourceEnum"/>
-///</summary>
-public struct Union120
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union120(RouterSourceDict value){return new Union120 { Value = value };}
-	public static implicit operator Union120(RouterSourceEnum value){return new Union120 { Value = value };}
-}
-
-///<summary>
-///<see cref="Client"/> or <see cref="ServiceWorker"/> or <see cref="MessagePort"/>
-///</summary>
-public struct Union121
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union121(Client value){return new Union121 { Value = value };}
-	public static implicit operator Union121(ServiceWorker value){return new Union121 { Value = value };}
-	public static implicit operator Union121(MessagePort value){return new Union121 { Value = value };}
-}
-
-///<summary>
-///<see cref="Client"/> or <see cref="ServiceWorker"/> or <see cref="MessagePort"/>
-///</summary>
-public struct Union122
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union122(Client value){return new Union122 { Value = value };}
-	public static implicit operator Union122(ServiceWorker value){return new Union122 { Value = value };}
-	public static implicit operator Union122(MessagePort value){return new Union122 { Value = value };}
-}
-
-///<summary>
-///<see cref="USVString"/> or <see cref="FencedFrameConfig"/>
-///</summary>
-public struct Union123
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union123(USVString value){return new Union123 { Value = value };}
-	public static implicit operator Union123(FencedFrameConfig value){return new Union123 { Value = value };}
-}
-
-///<summary>
-///<see cref="ReadableStreamDefaultReader"/> or <see cref="ReadableStreamBYOBReader"/>
-///</summary>
-public struct Union124
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union124(ReadableStreamDefaultReader value){return new Union124 { Value = value };}
-	public static implicit operator Union124(ReadableStreamBYOBReader value){return new Union124 { Value = value };}
-}
-
-///<summary>
-///<see cref="ReadableStreamDefaultController"/> or <see cref="ReadableByteStreamController"/>
-///</summary>
-public struct Union125
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union125(ReadableStreamDefaultController value){return new Union125 { Value = value };}
-	public static implicit operator Union125(ReadableByteStreamController value){return new Union125 { Value = value };}
-}
-
-///<summary>
-///<see cref="Element"/> or <see cref="CSSPseudoElement"/>
-///</summary>
-public struct Union126
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union126(Element value){return new Union126 { Value = value };}
-	public static implicit operator Union126(CSSPseudoElement value){return new Union126 { Value = value };}
-}
-
-///<summary>
-///<see cref="TrustedHTML"/> or <see cref="TrustedScript"/> or <see cref="TrustedScriptURL"/>
-///</summary>
-public struct Union127
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union127(TrustedHTML value){return new Union127 { Value = value };}
-	public static implicit operator Union127(TrustedScript value){return new Union127 { Value = value };}
-	public static implicit operator Union127(TrustedScriptURL value){return new Union127 { Value = value };}
-}
-
-///<summary>
-///<see cref="DOMString"/> or <see cref="AdRender"/>
-///</summary>
-public struct Union128
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union128(DOMString value){return new Union128 { Value = value };}
-	public static implicit operator Union128(AdRender value){return new Union128 { Value = value };}
-}
-
-///<summary>
-///<c>List{List{USVString}}</c> or <c>Dictionary{USVString, USVString}</c> or <see cref="USVString"/>
-///</summary>
-public struct Union129
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union129(List<List<USVString>> value){return new Union129 { Value = value };}
-	public static implicit operator Union129(Dictionary<USVString, USVString> value){return new Union129 { Value = value };}
-	public static implicit operator Union129(USVString value){return new Union129 { Value = value };}
-}
-
-///<summary>
-///<see cref="USVString"/> or <see cref="URLPatternInit"/>
-///</summary>
-public struct Union130
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union130(USVString value){return new Union130 { Value = value };}
-	public static implicit operator Union130(URLPatternInit value){return new Union130 { Value = value };}
-}
-
-///<summary>
-///<see cref="USVString"/> or <see cref="URLPatternInit"/> or <see cref="URLPattern"/>
-///</summary>
-public struct Union131
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union131(USVString value){return new Union131 { Value = value };}
-	public static implicit operator Union131(URLPatternInit value){return new Union131 { Value = value };}
-	public static implicit operator Union131(URLPattern value){return new Union131 { Value = value };}
-}
-
-///<summary>
-///<see cref="DOMString"/> or <see cref="DOMHighResTimeStamp"/>
-///</summary>
-public struct Union132
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union132(DOMString value){return new Union132 { Value = value };}
-	public static implicit operator Union132(DOMHighResTimeStamp value){return new Union132 { Value = value };}
-}
-
-///<summary>
-///<see cref="DOMString"/> or <see cref="DOMHighResTimeStamp"/>
-///</summary>
-public struct Union133
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union133(DOMString value){return new Union133 { Value = value };}
-	public static implicit operator Union133(DOMHighResTimeStamp value){return new Union133 { Value = value };}
-}
-
-///<summary>
-///<see cref="DOMString"/> or <see cref="PerformanceMeasureOptions"/>
-///</summary>
-public struct Union134
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union134(DOMString value){return new Union134 { Value = value };}
-	public static implicit operator Union134(PerformanceMeasureOptions value){return new Union134 { Value = value };}
-}
-
-///<summary>
-///<see cref="ulong"/> or <c>List{ulong}</c>
-///</summary>
-public struct Union135
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union135(ulong value){return new Union135 { Value = value };}
-	public static implicit operator Union135(List<ulong> value){return new Union135 { Value = value };}
-}
-
-///<summary>
-///<see cref="double"/> or <see cref="CSSNumericValue"/> or <see cref="DOMString"/>
-///</summary>
-public struct Union136
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union136(double value){return new Union136 { Value = value };}
-	public static implicit operator Union136(CSSNumericValue value){return new Union136 { Value = value };}
-	public static implicit operator Union136(DOMString value){return new Union136 { Value = value };}
-}
-
-///<summary>
-///<see cref="double"/> or <see cref="EffectTiming"/>
-///</summary>
-public struct Union137
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union137(double value){return new Union137 { Value = value };}
-	public static implicit operator Union137(EffectTiming value){return new Union137 { Value = value };}
-}
-
-///<summary>
-///<see cref="double"/> or <see cref="EffectTiming"/>
-///</summary>
-public struct Union138
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union138(double value){return new Union138 { Value = value };}
-	public static implicit operator Union138(EffectTiming value){return new Union138 { Value = value };}
-}
-
-///<summary>
-///<see cref="Element"/> or <see cref="CSSPseudoElement"/>
-///</summary>
-public struct Union139
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union139(Element value){return new Union139 { Value = value };}
-	public static implicit operator Union139(CSSPseudoElement value){return new Union139 { Value = value };}
-}
-
-///<summary>
-///<see cref="TimelineRangeOffset"/> or <see cref="CSSNumericValue"/> or <see cref="CSSKeywordValue"/> or <see cref="DOMString"/>
-///</summary>
-public struct Union140
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union140(TimelineRangeOffset value){return new Union140 { Value = value };}
-	public static implicit operator Union140(CSSNumericValue value){return new Union140 { Value = value };}
-	public static implicit operator Union140(CSSKeywordValue value){return new Union140 { Value = value };}
-	public static implicit operator Union140(DOMString value){return new Union140 { Value = value };}
-}
-
-///<summary>
-///<see cref="TimelineRangeOffset"/> or <see cref="CSSNumericValue"/> or <see cref="CSSKeywordValue"/> or <see cref="DOMString"/>
-///</summary>
-public struct Union141
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union141(TimelineRangeOffset value){return new Union141 { Value = value };}
-	public static implicit operator Union141(CSSNumericValue value){return new Union141 { Value = value };}
-	public static implicit operator Union141(CSSKeywordValue value){return new Union141 { Value = value };}
-	public static implicit operator Union141(DOMString value){return new Union141 { Value = value };}
-}
-
-///<summary>
-///<see cref="double"/> or <see cref="DOMString"/>
-///</summary>
-public struct Union142
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union142(double value){return new Union142 { Value = value };}
-	public static implicit operator Union142(DOMString value){return new Union142 { Value = value };}
-}
-
-///<summary>
-///<see cref="double"/> or <see cref="KeyframeEffectOptions"/>
-///</summary>
-public struct Union143
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union143(double value){return new Union143 { Value = value };}
-	public static implicit operator Union143(KeyframeEffectOptions value){return new Union143 { Value = value };}
-}
-
-///<summary>
-///<see cref="Number?"/> or <c>List{Number?}</c>
-///</summary>
-public struct Union144
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union144(Number? value){return new Union144 { Value = value };}
-	public static implicit operator Union144(List<Number?> value){return new Union144 { Value = value };}
-}
-
-///<summary>
-///<see cref="DOMString"/> or <c>List{DOMString}</c>
-///</summary>
-public struct Union145
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union145(DOMString value){return new Union145 { Value = value };}
-	public static implicit operator Union145(List<DOMString> value){return new Union145 { Value = value };}
-}
-
-///<summary>
-///<see cref="CompositeOperationOrAuto"/> or <c>List{CompositeOperationOrAuto}</c>
-///</summary>
-public struct Union146
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union146(CompositeOperationOrAuto value){return new Union146 { Value = value };}
-	public static implicit operator Union146(List<CompositeOperationOrAuto> value){return new Union146 { Value = value };}
-}
-
-///<summary>
-///<see cref="double"/> or <see cref="KeyframeAnimationOptions"/>
-///</summary>
-public struct Union147
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union147(double value){return new Union147 { Value = value };}
-	public static implicit operator Union147(KeyframeAnimationOptions value){return new Union147 { Value = value };}
-}
-
-///<summary>
-///<see cref="DOMString"/> or <c>List{UUID}</c>
-///</summary>
-public struct Union148
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union148(DOMString value){return new Union148 { Value = value };}
-	public static implicit operator Union148(List<UUID> value){return new Union148 { Value = value };}
-}
-
-///<summary>
-///<see cref="DOMString"/> or <see cref="ulong"/>
-///</summary>
-public struct Union149
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union149(DOMString value){return new Union149 { Value = value };}
-	public static implicit operator Union149(ulong value){return new Union149 { Value = value };}
-}
-
-///<summary>
-///<see cref="DOMString"/> or <see cref="ulong"/>
-///</summary>
-public struct Union150
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union150(DOMString value){return new Union150 { Value = value };}
-	public static implicit operator Union150(ulong value){return new Union150 { Value = value };}
-}
-
-///<summary>
-///<see cref="DOMString"/> or <see cref="ulong"/>
-///</summary>
-public struct Union151
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union151(DOMString value){return new Union151 { Value = value };}
-	public static implicit operator Union151(ulong value){return new Union151 { Value = value };}
-}
-
-///<summary>
-///<see cref="DOMString"/> or <see cref="ulong"/>
-///</summary>
-public struct Union152
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union152(DOMString value){return new Union152 { Value = value };}
-	public static implicit operator Union152(ulong value){return new Union152 { Value = value };}
-}
-
-///<summary>
-///<see cref="DOMString"/> or <see cref="ulong"/>
-///</summary>
-public struct Union153
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union153(DOMString value){return new Union153 { Value = value };}
-	public static implicit operator Union153(ulong value){return new Union153 { Value = value };}
-}
-
-///<summary>
-///<see cref="DOMString"/> or <see cref="ulong"/>
-///</summary>
-public struct Union154
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union154(DOMString value){return new Union154 { Value = value };}
-	public static implicit operator Union154(ulong value){return new Union154 { Value = value };}
-}
-
-///<summary>
-///<see cref="DOMString"/> or <see cref="BufferSource"/> or <see cref="NDEFMessageInit"/>
-///</summary>
-public struct Union155
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union155(DOMString value){return new Union155 { Value = value };}
-	public static implicit operator Union155(BufferSource value){return new Union155 { Value = value };}
-	public static implicit operator Union155(NDEFMessageInit value){return new Union155 { Value = value };}
-}
-
-///<summary>
-///<see cref="DOMString"/> or <see cref="AudioSinkInfo"/>
-///</summary>
-public struct Union156
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union156(DOMString value){return new Union156 { Value = value };}
-	public static implicit operator Union156(AudioSinkInfo value){return new Union156 { Value = value };}
-}
-
-///<summary>
-///<see cref="DOMString"/> or <see cref="AudioSinkOptions"/>
-///</summary>
-public struct Union157
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union157(DOMString value){return new Union157 { Value = value };}
-	public static implicit operator Union157(AudioSinkOptions value){return new Union157 { Value = value };}
-}
-
-///<summary>
-///<see cref="AudioContextLatencyCategory"/> or <see cref="Number"/>
-///</summary>
-public struct Union158
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union158(AudioContextLatencyCategory value){return new Union158 { Value = value };}
-	public static implicit operator Union158(Number value){return new Union158 { Value = value };}
-}
-
-///<summary>
-///<see cref="DOMString"/> or <see cref="AudioSinkOptions"/>
-///</summary>
-public struct Union159
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union159(DOMString value){return new Union159 { Value = value };}
-	public static implicit operator Union159(AudioSinkOptions value){return new Union159 { Value = value };}
-}
-
-///<summary>
-///<see cref="AudioContextRenderSizeCategory"/> or <see cref="ulong"/>
-///</summary>
-public struct Union160
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union160(AudioContextRenderSizeCategory value){return new Union160 { Value = value };}
-	public static implicit operator Union160(ulong value){return new Union160 { Value = value };}
-}
-
-///<summary>
-///<see cref="AudioContextRenderSizeCategory"/> or <see cref="ulong"/>
-///</summary>
-public struct Union161
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union161(AudioContextRenderSizeCategory value){return new Union161 { Value = value };}
-	public static implicit operator Union161(ulong value){return new Union161 { Value = value };}
-}
-
-///<summary>
-///<see cref="BufferSource"/> or <see cref="ReadableStream"/>
-///</summary>
-public struct Union162
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union162(BufferSource value){return new Union162 { Value = value };}
-	public static implicit operator Union162(ReadableStream value){return new Union162 { Value = value };}
-}
-
-///<summary>
-///<see cref="object"/> or <see cref="DOMString"/>
-///</summary>
-public struct Union163
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union163(DOMString value){return new Union163 { Value = value };}
-}
-
-///<summary>
-///<see cref="BufferSource"/> or <see cref="JsonWebKey"/>
-///</summary>
-public struct Union164
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union164(BufferSource value){return new Union164 { Value = value };}
-	public static implicit operator Union164(JsonWebKey value){return new Union164 { Value = value };}
-}
-
-///<summary>
-///<see cref="ImageBitmap"/> or <see cref="ImageData"/> or <see cref="HTMLImageElement"/> or <see cref="HTMLCanvasElement"/> or <see cref="HTMLVideoElement"/> or <see cref="OffscreenCanvas"/> or <see cref="VideoFrame"/>
-///</summary>
-public struct Union165
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union165(ImageBitmap value){return new Union165 { Value = value };}
-	public static implicit operator Union165(ImageData value){return new Union165 { Value = value };}
-	public static implicit operator Union165(HTMLImageElement value){return new Union165 { Value = value };}
-	public static implicit operator Union165(HTMLCanvasElement value){return new Union165 { Value = value };}
-	public static implicit operator Union165(HTMLVideoElement value){return new Union165 { Value = value };}
-	public static implicit operator Union165(OffscreenCanvas value){return new Union165 { Value = value };}
-	public static implicit operator Union165(VideoFrame value){return new Union165 { Value = value };}
-}
-
-///<summary>
-///<see cref="System.Single"/> or <c>List{Number}</c>
-///</summary>
-public struct Union166
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union166(System.Single value){return new Union166 { Value = value };}
-	public static implicit operator Union166(List<Number> value){return new Union166 { Value = value };}
-}
-
-///<summary>
-///<see cref="System.Int32"/> or <c>List{GLint}</c>
-///</summary>
-public struct Union167
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union167(System.Int32 value){return new Union167 { Value = value };}
-	public static implicit operator Union167(List<GLint> value){return new Union167 { Value = value };}
-}
-
-///<summary>
-///<see cref="HTMLCanvasElement"/> or <see cref="OffscreenCanvas"/>
-///</summary>
-public struct Union168
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union168(HTMLCanvasElement value){return new Union168 { Value = value };}
-	public static implicit operator Union168(OffscreenCanvas value){return new Union168 { Value = value };}
-}
-
-///<summary>
-///<see cref="System.UInt32"/> or <c>List{GLuint}</c>
-///</summary>
-public struct Union169
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union169(System.UInt32 value){return new Union169 { Value = value };}
-	public static implicit operator Union169(List<GLuint> value){return new Union169 { Value = value };}
-}
-
-///<summary>
-///<see cref="System.Int32"/> or <c>List{GLint}</c>
-///</summary>
-public struct Union170
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union170(System.Int32 value){return new Union170 { Value = value };}
-	public static implicit operator Union170(List<GLint> value){return new Union170 { Value = value };}
-}
-
-///<summary>
-///<see cref="System.Int32"/> or <c>List{GLsizei}</c>
-///</summary>
-public struct Union171
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union171(System.Int32 value){return new Union171 { Value = value };}
-	public static implicit operator Union171(List<GLsizei> value){return new Union171 { Value = value };}
-}
-
-///<summary>
-///<see cref="System.Int32"/> or <c>List{GLsizei}</c>
-///</summary>
-public struct Union172
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union172(System.Int32 value){return new Union172 { Value = value };}
-	public static implicit operator Union172(List<GLsizei> value){return new Union172 { Value = value };}
-}
-
-///<summary>
-///<see cref="System.Int32"/> or <c>List{GLsizei}</c>
-///</summary>
-public struct Union173
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union173(System.Int32 value){return new Union173 { Value = value };}
-	public static implicit operator Union173(List<GLsizei> value){return new Union173 { Value = value };}
-}
-
-///<summary>
-///<see cref="System.Int32"/> or <c>List{GLint}</c>
-///</summary>
-public struct Union174
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union174(System.Int32 value){return new Union174 { Value = value };}
-	public static implicit operator Union174(List<GLint> value){return new Union174 { Value = value };}
-}
-
-///<summary>
-///<see cref="System.Int32"/> or <c>List{GLsizei}</c>
-///</summary>
-public struct Union175
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union175(System.Int32 value){return new Union175 { Value = value };}
-	public static implicit operator Union175(List<GLsizei> value){return new Union175 { Value = value };}
-}
-
-///<summary>
-///<see cref="System.Int32"/> or <c>List{GLsizei}</c>
-///</summary>
-public struct Union176
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union176(System.Int32 value){return new Union176 { Value = value };}
-	public static implicit operator Union176(List<GLsizei> value){return new Union176 { Value = value };}
-}
-
-///<summary>
-///<see cref="System.Int32"/> or <c>List{GLsizei}</c>
-///</summary>
-public struct Union177
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union177(System.Int32 value){return new Union177 { Value = value };}
-	public static implicit operator Union177(List<GLsizei> value){return new Union177 { Value = value };}
-}
-
-///<summary>
-///<see cref="System.Int32"/> or <c>List{GLsizei}</c>
-///</summary>
-public struct Union178
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union178(System.Int32 value){return new Union178 { Value = value };}
-	public static implicit operator Union178(List<GLsizei> value){return new Union178 { Value = value };}
-}
-
-///<summary>
-///<see cref="System.Int32"/> or <c>List{GLsizei}</c>
-///</summary>
-public struct Union179
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union179(System.Int32 value){return new Union179 { Value = value };}
-	public static implicit operator Union179(List<GLsizei> value){return new Union179 { Value = value };}
-}
-
-///<summary>
-///<see cref="System.Int32"/> or <c>List{GLint}</c>
-///</summary>
-public struct Union180
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union180(System.Int32 value){return new Union180 { Value = value };}
-	public static implicit operator Union180(List<GLint> value){return new Union180 { Value = value };}
-}
-
-///<summary>
-///<see cref="System.Int32"/> or <c>List{GLsizei}</c>
-///</summary>
-public struct Union181
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union181(System.Int32 value){return new Union181 { Value = value };}
-	public static implicit operator Union181(List<GLsizei> value){return new Union181 { Value = value };}
-}
-
-///<summary>
-///<see cref="System.Int32"/> or <c>List{GLsizei}</c>
-///</summary>
-public struct Union182
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union182(System.Int32 value){return new Union182 { Value = value };}
-	public static implicit operator Union182(List<GLsizei> value){return new Union182 { Value = value };}
-}
-
-///<summary>
-///<see cref="System.UInt32"/> or <c>List{GLuint}</c>
-///</summary>
-public struct Union183
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union183(System.UInt32 value){return new Union183 { Value = value };}
-	public static implicit operator Union183(List<GLuint> value){return new Union183 { Value = value };}
-}
-
-///<summary>
-///<see cref="System.Int32"/> or <c>List{GLsizei}</c>
-///</summary>
-public struct Union184
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union184(System.Int32 value){return new Union184 { Value = value };}
-	public static implicit operator Union184(List<GLsizei> value){return new Union184 { Value = value };}
-}
-
-///<summary>
-///<see cref="System.Int32"/> or <c>List{GLsizei}</c>
-///</summary>
-public struct Union185
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union185(System.Int32 value){return new Union185 { Value = value };}
-	public static implicit operator Union185(List<GLsizei> value){return new Union185 { Value = value };}
-}
-
-///<summary>
-///<see cref="System.Int32"/> or <c>List{GLsizei}</c>
-///</summary>
-public struct Union186
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union186(System.Int32 value){return new Union186 { Value = value };}
-	public static implicit operator Union186(List<GLsizei> value){return new Union186 { Value = value };}
-}
-
-///<summary>
-///<see cref="System.Int32"/> or <c>List{GLint}</c>
-///</summary>
-public struct Union187
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union187(System.Int32 value){return new Union187 { Value = value };}
-	public static implicit operator Union187(List<GLint> value){return new Union187 { Value = value };}
-}
-
-///<summary>
-///<see cref="System.UInt32"/> or <c>List{GLuint}</c>
-///</summary>
-public struct Union188
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union188(System.UInt32 value){return new Union188 { Value = value };}
-	public static implicit operator Union188(List<GLuint> value){return new Union188 { Value = value };}
-}
-
-///<summary>
-///<see cref="HTMLVideoElement"/> or <see cref="VideoFrame"/>
-///</summary>
-public struct Union189
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union189(HTMLVideoElement value){return new Union189 { Value = value };}
-	public static implicit operator Union189(VideoFrame value){return new Union189 { Value = value };}
-}
-
-///<summary>
-///<see cref="GPUSampler"/> or <see cref="GPUTextureView"/> or <see cref="GPUBufferBinding"/> or <see cref="GPUExternalTexture"/>
-///</summary>
-public struct Union190
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union190(GPUSampler value){return new Union190 { Value = value };}
-	public static implicit operator Union190(GPUTextureView value){return new Union190 { Value = value };}
-	public static implicit operator Union190(GPUBufferBinding value){return new Union190 { Value = value };}
-	public static implicit operator Union190(GPUExternalTexture value){return new Union190 { Value = value };}
-}
-
-///<summary>
-///<see cref="GPUPipelineLayout"/> or <see cref="GPUAutoLayoutMode"/>
-///</summary>
-public struct Union191
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union191(GPUPipelineLayout value){return new Union191 { Value = value };}
-	public static implicit operator Union191(GPUAutoLayoutMode value){return new Union191 { Value = value };}
-}
-
-///<summary>
-///<see cref="GPUPipelineLayout"/> or <see cref="GPUAutoLayoutMode"/>
-///</summary>
-public struct Union192
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union192(GPUPipelineLayout value){return new Union192 { Value = value };}
-	public static implicit operator Union192(GPUAutoLayoutMode value){return new Union192 { Value = value };}
-}
-
-///<summary>
-///<see cref="ImageBitmap"/> or <see cref="ImageData"/> or <see cref="HTMLImageElement"/> or <see cref="HTMLVideoElement"/> or <see cref="VideoFrame"/> or <see cref="HTMLCanvasElement"/> or <see cref="OffscreenCanvas"/>
-///</summary>
-public struct Union193
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union193(ImageBitmap value){return new Union193 { Value = value };}
-	public static implicit operator Union193(ImageData value){return new Union193 { Value = value };}
-	public static implicit operator Union193(HTMLImageElement value){return new Union193 { Value = value };}
-	public static implicit operator Union193(HTMLVideoElement value){return new Union193 { Value = value };}
-	public static implicit operator Union193(VideoFrame value){return new Union193 { Value = value };}
-	public static implicit operator Union193(HTMLCanvasElement value){return new Union193 { Value = value };}
-	public static implicit operator Union193(OffscreenCanvas value){return new Union193 { Value = value };}
-}
-
-///<summary>
-///<see cref="HTMLCanvasElement"/> or <see cref="OffscreenCanvas"/>
-///</summary>
-public struct Union194
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union194(HTMLCanvasElement value){return new Union194 { Value = value };}
-	public static implicit operator Union194(OffscreenCanvas value){return new Union194 { Value = value };}
-}
-
-///<summary>
-///<c>List{Number}</c> or <see cref="GPUColorDict"/>
-///</summary>
-public struct Union195
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union195(List<Number> value){return new Union195 { Value = value };}
-	public static implicit operator Union195(GPUColorDict value){return new Union195 { Value = value };}
-}
-
-///<summary>
-///<c>List{GPUIntegerCoordinate}</c> or <see cref="GPUOrigin2DDict"/>
-///</summary>
-public struct Union196
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union196(List<GPUIntegerCoordinate> value){return new Union196 { Value = value };}
-	public static implicit operator Union196(GPUOrigin2DDict value){return new Union196 { Value = value };}
-}
-
-///<summary>
-///<c>List{GPUIntegerCoordinate}</c> or <see cref="GPUOrigin3DDict"/>
-///</summary>
-public struct Union197
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union197(List<GPUIntegerCoordinate> value){return new Union197 { Value = value };}
-	public static implicit operator Union197(GPUOrigin3DDict value){return new Union197 { Value = value };}
-}
-
-///<summary>
-///<c>List{GPUIntegerCoordinate}</c> or <see cref="GPUExtent3DDict"/>
-///</summary>
-public struct Union198
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union198(List<GPUIntegerCoordinate> value){return new Union198 { Value = value };}
-	public static implicit operator Union198(GPUExtent3DDict value){return new Union198 { Value = value };}
-}
-
-///<summary>
-///<see cref="System.SByte"/> or <see cref="System.Int16"/> or <see cref="System.Int32"/> or <see cref="System.Byte"/> or <see cref="System.UInt16"/> or <see cref="System.UInt32"/> or <see cref="Unsupported /*Uint8ClampedArray*/"/> or <see cref="System.Int64"/> or <see cref="System.UInt64"/> or <see cref="Unsupported /*Float16Array*/"/> or <see cref="System.Single"/> or <see cref="System.Double"/> or <see cref="Unsupported /*DataView*/"/>
-///</summary>
-public struct Union199
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union199(System.SByte value){return new Union199 { Value = value };}
-	public static implicit operator Union199(System.Int16 value){return new Union199 { Value = value };}
-	public static implicit operator Union199(System.Int32 value){return new Union199 { Value = value };}
-	public static implicit operator Union199(System.Byte value){return new Union199 { Value = value };}
-	public static implicit operator Union199(System.UInt16 value){return new Union199 { Value = value };}
-	public static implicit operator Union199(System.UInt32 value){return new Union199 { Value = value };}
-	public static implicit operator Union199(Unsupported /*Uint8ClampedArray*/ value){return new Union199 { Value = value };}
-	public static implicit operator Union199(System.Int64 value){return new Union199 { Value = value };}
-	public static implicit operator Union199(System.UInt64 value){return new Union199 { Value = value };}
-	public static implicit operator Union199(System.Single value){return new Union199 { Value = value };}
-	public static implicit operator Union199(System.Double value){return new Union199 { Value = value };}
-}
-
-///<summary>
-///<see cref="ArrayBufferView"/> or <see cref="byte"/>
-///</summary>
-public struct Union200
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union200(ArrayBufferView value){return new Union200 { Value = value };}
-	public static implicit operator Union200(byte[] value){return new Union200 { Value = value };}
-}
-
-///<summary>
-///<see cref="byte"/> or <see cref="Unsupported /*SharedArrayBuffer*/"/> or <see cref="ArrayBufferView"/>
-///</summary>
-public struct Union201
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union201(byte[] value){return new Union201 { Value = value };}
-	public static implicit operator Union201(Unsupported /*SharedArrayBuffer*/ value){return new Union201 { Value = value };}
-	public static implicit operator Union201(ArrayBufferView value){return new Union201 { Value = value };}
-}
-
-///<summary>
-///<see cref="ulong"/> or <c>List{ulong}</c>
-///</summary>
-public struct Union202
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union202(ulong value){return new Union202 { Value = value };}
-	public static implicit operator Union202(List<ulong> value){return new Union202 { Value = value };}
-}
-
-///<summary>
-///<see cref="SFrameTransform"/> or <see cref="RTCRtpScriptTransform"/>
-///</summary>
-public struct Union203
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union203(SFrameTransform value){return new Union203 { Value = value };}
-	public static implicit operator Union203(RTCRtpScriptTransform value){return new Union203 { Value = value };}
-}
-
-///<summary>
-///<see cref="SmallCryptoKeyID"/> or <see cref="double"/>
-///</summary>
-public struct Union204
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union204(SmallCryptoKeyID value){return new Union204 { Value = value };}
-	public static implicit operator Union204(double value){return new Union204 { Value = value };}
-}
-
-///<summary>
-///<see cref="DOMString"/> or <c>List{DOMString}</c>
-///</summary>
-public struct Union205
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union205(DOMString value){return new Union205 { Value = value };}
-	public static implicit operator Union205(List<DOMString> value){return new Union205 { Value = value };}
-}
-
-///<summary>
-///<see cref="MediaStreamTrack"/> or <see cref="DOMString"/>
-///</summary>
-public struct Union206
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union206(MediaStreamTrack value){return new Union206 { Value = value };}
-	public static implicit operator Union206(DOMString value){return new Union206 { Value = value };}
-}
-
-///<summary>
-///<see cref="DOMString"/> or <c>List{DOMString}</c>
-///</summary>
-public struct Union207
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union207(DOMString value){return new Union207 { Value = value };}
-	public static implicit operator Union207(List<DOMString> value){return new Union207 { Value = value };}
-}
-
-///<summary>
-///<see cref="BufferSource"/> or <see cref="Blob"/> or <see cref="USVString"/>
-///</summary>
-public struct Union208
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union208(BufferSource value){return new Union208 { Value = value };}
-	public static implicit operator Union208(Blob value){return new Union208 { Value = value };}
-	public static implicit operator Union208(USVString value){return new Union208 { Value = value };}
-}
-
-///<summary>
-///<see cref="Number"/> or <see cref="AutoKeyword"/>
-///</summary>
-public struct Union209
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union209(Number value){return new Union209 { Value = value };}
-	public static implicit operator Union209(AutoKeyword value){return new Union209 { Value = value };}
-}
-
-///<summary>
-///<see cref="WebGLRenderingContext"/> or <see cref="WebGL2RenderingContext"/>
-///</summary>
-public struct Union210
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union210(WebGLRenderingContext value){return new Union210 { Value = value };}
-	public static implicit operator Union210(WebGL2RenderingContext value){return new Union210 { Value = value };}
-}
-
-///<summary>
-///<see cref="Document"/> or <see cref="XMLHttpRequestBodyInit"/>
-///</summary>
-public struct Union211
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union211(Document value){return new Union211 { Value = value };}
-	public static implicit operator Union211(XMLHttpRequestBodyInit value){return new Union211 { Value = value };}
-}
-
-///<summary>
-///<see cref="File"/> or <see cref="USVString"/>
-///</summary>
-public struct Union212
-{
-	public dynamic Value { get; set; }
-	public static implicit operator Union212(File value){return new Union212 { Value = value };}
-	public static implicit operator Union212(USVString value){return new Union212 { Value = value };}
 }
 

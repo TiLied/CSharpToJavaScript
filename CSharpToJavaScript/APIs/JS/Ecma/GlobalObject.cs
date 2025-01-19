@@ -1,5 +1,4 @@
-﻿using CSharpToJavaScript.APIs.JS.Ecma;
-using CSharpToJavaScript.Utils;
+﻿using CSharpToJavaScript.Utils;
 
 namespace CSharpToJavaScript.APIs.JS
 {

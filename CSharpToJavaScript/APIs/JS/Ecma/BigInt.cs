@@ -1,6 +1,6 @@
 ﻿using CSharpToJavaScript.Utils;
 
-namespace CSharpToJavaScript.APIs.JS.Ecma;
+namespace CSharpToJavaScript.APIs.JS;
 
 //https://262.ecma-international.org/14.0/#sec-bigint-objects
 [To(ToAttribute.Default)]

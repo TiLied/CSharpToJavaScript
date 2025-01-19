@@ -106,7 +106,7 @@ namespace CSharpToJavaScript
 		/// <value>
 		/// Default: <c>new()</c>
 		/// </value>
-		public StringBuilder AddSBInFront { get; set; } = new();
+		public StringBuilder AddSBAtTheTop { get; set; } = new();
 		/// <summary>
 		/// Add a <see cref="StringBuilder" /> to the end of a javascript file.
 		/// </summary>
@@ -114,7 +114,7 @@ namespace CSharpToJavaScript
 		/// <value>
 		/// Default: <c>new()</c>
 		/// </value>
-		public StringBuilder AddSBInEnd { get; set; } = new();
+		public StringBuilder AddSBAtTheBottom { get; set; } = new();
 		/// <summary>
 		/// Creates new default options. See <see cref="CSTOJSOptions" />.
 		/// </summary>

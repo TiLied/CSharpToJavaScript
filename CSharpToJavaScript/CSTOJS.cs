@@ -644,11 +644,11 @@ namespace CSharpToJavaScript
 
 			_Walker = new(_Options, compilation.GetSemanticModel(trueST));
 
-			_Walker.JSSB.Append(_Options.AddSBInFront);
+			_Walker.JSSB.Append(_Options.AddSBAtTheTop);
 
 			_Walker.Visit(trueRoot);
 
-			_Walker.JSSB.Append(_Options.AddSBInEnd);
+			_Walker.JSSB.Append(_Options.AddSBAtTheBottom);
 
 			if (_Options.Debug)
 			{

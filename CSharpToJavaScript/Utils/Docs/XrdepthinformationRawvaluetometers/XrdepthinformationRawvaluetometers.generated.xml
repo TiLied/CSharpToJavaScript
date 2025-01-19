@@ -1,7 +1,7 @@
 <docs>
 <XRDepthInformationRawValueToMeters>
 <summary>
-The <strong>read-only</strong> <strong><c>rawValueToMeters</c></strong> property of the <see cref="XRDepthInformation"/> interface contains the scale factor by which the raw depth values must be multiplied in order to get the depths in meters.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong>read-only</strong> <strong><c>rawValueToMeters</c></strong> property of the <see cref="XRDepthInformation"/> interface contains the scale factor by which the raw depth values must be multiplied in order to get the depths in meters.
 </summary>
 <remarks>
 <para>For CPU depth information, see also the <see cref="XRCPUDepthInformation.GetDepthInMeters"/> method.</para>

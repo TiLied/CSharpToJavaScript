@@ -4,10 +4,10 @@
 The <strong><c>perDscpPacketsReceived</c></strong><br/>property of the <see cref="RTCInboundRtpStreamStats"/> dictionary is a record<br/>comprised of key/value pairs in which each key is a string representation of a<br/>Differentiated Services Code Point and the value is the number of packets received for<br/>that DCSP.
 </summary>
 <remarks>
-<blockquote><para>Not all operating systems make data available on a per-DSCP<br/>basis, so this property shouldn&amp;apos;t be relied upon on those systems.</para></blockquote>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Not all operating systems make data available on a per-DSCP<br/>basis, so this property shouldn&amp;apos;t be relied upon on those systems.</para></blockquote>
 <para>-{{RFC(2474)}}: The Differentiated Service field in IPv4 and IPv6 headers<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/perDscpPacketsReceived"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A record comprised of string/value pairs. Each key is the string representation of a<br/>single Differentiated Services Code Point (DSCP)&amp;apos;s ID number.<blockquote>Due to network bleaching and remapping, the numbers seen on<br/>this record are not necessarily going to match the values as they were when the data<br/>was sent.</blockquote></value>
+<value>A record comprised of string/value pairs. Each key is the string representation of a<br/>single Differentiated Services Code Point (DSCP)&amp;apos;s ID number.<blockquote class="NOTE"><h5>NOTE</h5>Due to network bleaching and remapping, the numbers seen on<br/>this record are not necessarily going to match the values as they were when the data<br/>was sent.</blockquote></value>
 </RTCInboundRtpStreamStatsPerDscpPacketsReceived>
 </docs>

@@ -1,10 +1,10 @@
 <docs>
 <NavigatorUAData>
 <summary>
-The <strong><c>NavigatorUAData</c></strong> interface of the {{domxref(&amp;quot;User-Agent Client Hints API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} returns information about the browser and operating system of a user.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>NavigatorUAData</c></strong> interface of the {{domxref(&amp;quot;User-Agent Client Hints API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} returns information about the browser and operating system of a user.
 </summary>
 <remarks>
-<para>An instance of this object is returned by calling <see cref="Navigator.UserAgentData"/> or <see cref="WorkerNavigator.UserAgentData"/>. Therefore, this interface has no constructor.</para><blockquote><para>The terms <strong>high entropy</strong> and <strong>low entropy</strong> refer to the amount of information these values reveal about the browser. The values returned as properties are deemed low entropy, and unlikely to identify a user. The values returned by <see cref="NavigatorUAData.GetHighEntropyValues"/> could potentially reveal more information. These values are therefore retrieved via a {{jsxref("Promise")}}, allowing time for the browser to request user permission, or make other checks.</para></blockquote>
+<para>An instance of this object is returned by calling <see cref="Navigator.UserAgentData"/> or <see cref="WorkerNavigator.UserAgentData"/>. Therefore, this interface has no constructor.</para><blockquote class="NOTE"><h5>NOTE</h5><para>The terms <strong>high entropy</strong> and <strong>low entropy</strong> refer to the amount of information these values reveal about the browser. The values returned as properties are deemed low entropy, and unlikely to identify a user. The values returned by <see cref="NavigatorUAData.GetHighEntropyValues"/> could potentially reveal more information. These values are therefore retrieved via a {{jsxref("Promise")}}, allowing time for the browser to request user permission, or make other checks.</para></blockquote>
 <para>-<see href="https://developer.chrome.com/docs/privacy-security/user-agent-client-hints">Improving user privacy and developer experience with User-Agent Client Hints</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorUAData"> <em>See also on MDN</em> </seealso></para>
 </remarks>

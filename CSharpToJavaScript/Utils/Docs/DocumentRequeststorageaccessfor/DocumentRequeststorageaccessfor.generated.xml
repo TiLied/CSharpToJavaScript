@@ -1,7 +1,7 @@
 <docs>
 <DocumentRequestStorageAccessFor>
 <summary>
-The <strong><c>requestStorageAccessFor()</c></strong> method of the <see cref="Document"/> interface allows top-level sites to request third-party cookie access on behalf of embedded content originating from another site in the same <see href="https://developer.mozilla.org/en-US/docs/Web/API/Storage_Access_API/Related_website_sets">related website set</see>. It returns a <see cref="Promise"/> that resolves if the access was granted, and rejects if access was denied.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>requestStorageAccessFor()</c></strong> method of the <see cref="Document"/> interface allows top-level sites to request third-party cookie access on behalf of embedded content originating from another site in the same <see href="https://developer.mozilla.org/en-US/docs/Web/API/Storage_Access_API/Related_website_sets">related website set</see>. It returns a <see cref="Promise"/> that resolves if the access was granted, and rejects if access was denied.
 </summary>
 <remarks>
 <para>-<see cref="Document.HasStorageAccess"/>, <see cref="Document.HasUnpartitionedCookieAccess"/>, <see cref="Document.RequestStorageAccess"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Storage_Access_API/Using">Using the Storage Access API</see><br/>-<see href="https://webkit.org/blog/8124/introducing-storage-access-api/">Introducing Storage Access API</see> (WebKit blog)<br/></para>

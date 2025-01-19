@@ -8,6 +8,6 @@ The <strong><c>getAttributeNS()</c></strong> method of the <see cref="Element"/>
 <para>-<see cref="Element.HasAttributeNS"/><br/>-<see cref="Element.SetAttributeNS"/><br/>-<see cref="Element.RemoveAttributeNS"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttributeNS"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>The string value of the specified attribute. If the attribute doesn&amp;apos;t exist, the result<br/>is <c>null</c>.<blockquote>Earlier versions of the DOM specification had<br/>this method described as returning an empty string for non-existent attributes, but it<br/>was not typically implemented this way since null makes more sense. The DOM4<br/>specification now says this method should return null for non-existent attributes.</blockquote></returns>
+<returns>The string value of the specified attribute. If the attribute doesn&amp;apos;t exist, the result<br/>is <c>null</c>.<blockquote class="NOTE"><h5>NOTE</h5>Earlier versions of the DOM specification had<br/>this method described as returning an empty string for non-existent attributes, but it<br/>was not typically implemented this way since null makes more sense. The DOM4<br/>specification now says this method should return null for non-existent attributes.</blockquote></returns>
 </ElementGetAttributeNS>
 </docs>

@@ -1,7 +1,7 @@
 <docs>
 <NavigationHistoryEntryUrl>
 <summary>
-The <strong><c>url</c></strong> read-only property of the <see cref="NavigationHistoryEntry"/> interface returns the absolute URL of this history entry. If the entry corresponds to a different Document than the current one (like <c>sameDocument</c> property is <c>false</c>), and that Document was fetched with a <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy">Referrer-Policy</see> header set to <c>no-referrer</c> or <c>origin</c>, the property returns <c>null</c>. If current document is not fully active, it returns an empty string.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>url</c></strong> read-only property of the <see cref="NavigationHistoryEntry"/> interface returns the absolute URL of this history entry. If the entry corresponds to a different Document than the current one (like <c>sameDocument</c> property is <c>false</c>), and that Document was fetched with a <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy">Referrer-Policy</see> header set to <c>no-referrer</c> or <c>origin</c>, the property returns <c>null</c>. If current document is not fully active, it returns an empty string.
 </summary>
 <remarks>
 <para>-<see href="https://developer.chrome.com/docs/web-platform/navigation-api/">Modern client-side routing: the Navigation API</see><br/>-<see href="https://github.com/WICG/navigation-api/blob/main/README.md">Navigation API explainer</see><br/>-Domenic Denicola&amp;apos;s <see href="https://gigantic-honored-octagon.glitch.me/">Navigation API live demo</see><br/></para>

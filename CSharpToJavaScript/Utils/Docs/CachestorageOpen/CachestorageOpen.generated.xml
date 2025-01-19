@@ -4,7 +4,7 @@
 The <strong><c>open()</c></strong> method of the<br/><see cref="CacheStorage"/> interface returns a {{jsxref("Promise")}} that resolves to<br/>the <see cref="Cache"/> object matching the <c>cacheName</c>.
 </summary>
 <remarks>
-<para>You can access <c>CacheStorage</c> through the <see cref="Window.Caches"/> property in windows or through the <see cref="WorkerGlobalScope.Caches"/> property in workers.</para><blockquote><para>If the specified <see cref="Cache"/> does not exist, a new<br/>cache is created with that <c>cacheName</c> and a <see cref="Promise"/> that<br/>resolves to this new <see cref="Cache"/> object is returned.</para></blockquote>
+<para>You can access <c>CacheStorage</c> through the <see cref="Window.Caches"/> property in windows or through the <see cref="WorkerGlobalScope.Caches"/> property in workers.</para><blockquote class="NOTE"><h5>NOTE</h5><para>If the specified <see cref="Cache"/> does not exist, a new<br/>cache is created with that <c>cacheName</c> and a <see cref="Promise"/> that<br/>resolves to this new <see cref="Cache"/> object is returned.</para></blockquote>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</see><br/>-<see cref="Cache"/><br/>-<see cref="Window.Caches"/> and <see cref="WorkerGlobalScope.Caches"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage/open"> <em>See also on MDN</em> </seealso></para>
 </remarks>

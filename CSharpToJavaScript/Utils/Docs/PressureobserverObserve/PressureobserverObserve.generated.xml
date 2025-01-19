@@ -1,7 +1,7 @@
 <docs>
 <PressureObserverObserve>
 <summary>
-The <strong><c>observe()</c></strong> method of the <see cref="PressureObserver"/> interface tells the pressure observer to start observing pressure changes. After this method is called, the observer will call its callback function when a pressure record for the specified <c>source</c> is observed.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>observe()</c></strong> method of the <see cref="PressureObserver"/> interface tells the pressure observer to start observing pressure changes. After this method is called, the observer will call its callback function when a pressure record for the specified <c>source</c> is observed.
 </summary>
 <remarks>
 <para>When a matching <see cref="PressureRecord"/> is obtained, the pressure observer's callback function is invoked.</para>

@@ -1,7 +1,7 @@
 <docs>
 <USBDeviceControlTransferOut>
 <summary>
-The <strong><c>controlTransferOut()</c></strong> method of the <see cref="USBDevice"/> interface returns a {{jsxref("Promise")}} that resolves with a <see cref="USBOutTransferResult"/> when a command or status operation has been transmitted from the USB device.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>controlTransferOut()</c></strong> method of the <see cref="USBDevice"/> interface returns a {{jsxref("Promise")}} that resolves with a <see cref="USBOutTransferResult"/> when a command or status operation has been transmitted from the USB device.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/USBDevice/controlTransferOut"> <em>See also on MDN</em> </seealso></para>

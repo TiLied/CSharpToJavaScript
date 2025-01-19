@@ -1,7 +1,7 @@
 <docs>
 <PressureRecordTime>
 <summary>
-The read-only <strong><c>time</c></strong> property returns the {{domxref(&amp;quot;DOMHighResTimeStamp&amp;quot;,&amp;quot;timestamp&amp;quot;, &amp;quot;&amp;quot;, "no-code")}} recorded for a <see cref="PressureRecord"/>. It corresponds to the time the data was obtained from the system relative to the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Performance/timeOrigin">time origin of the global object</see> in which the <see cref="PressureObserver"/> generated the notification.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The read-only <strong><c>time</c></strong> property returns the {{domxref(&amp;quot;DOMHighResTimeStamp&amp;quot;,&amp;quot;timestamp&amp;quot;, &amp;quot;&amp;quot;, "no-code")}} recorded for a <see cref="PressureRecord"/>. It corresponds to the time the data was obtained from the system relative to the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Performance/timeOrigin">time origin of the global object</see> in which the <see cref="PressureObserver"/> generated the notification.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PressureRecord/time"> <em>See also on MDN</em> </seealso></para>

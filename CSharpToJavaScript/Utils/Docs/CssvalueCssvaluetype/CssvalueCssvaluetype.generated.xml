@@ -4,7 +4,7 @@
 <div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>cssValueType</c></strong> read-only property of the<br/><see cref="CSSValue"/> interface represents the type of the current computed CSS<br/>property value.
 </summary>
 <remarks>
-<blockquote><para>This property was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do<br/>not implement it.</para><para>To achieve your purpose, you can use:</para></blockquote>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This property was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do<br/>not implement it.</para><para>To achieve your purpose, you can use:</para></blockquote>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSValue/cssValueType"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>An <c>unsigned short</c> representing a code defining the type of the value.<br/>Possible values are:</value>

@@ -1,7 +1,7 @@
 <docs>
 <KeyboardLock>
 <summary>
-The <strong><c>lock()</c></strong> method of the<br/><see cref="Keyboard"/> interface returns a {{jsxref('Promise')}} that resolves after enabling the<br/>capture of keypresses for any or all of the keys on the physical keyboard. This method<br/>can only capture keys that are granted access by the underlying operating<br/>system.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>lock()</c></strong> method of the<br/><see cref="Keyboard"/> interface returns a {{jsxref('Promise')}} that resolves after enabling the<br/>capture of keypresses for any or all of the keys on the physical keyboard. This method<br/>can only capture keys that are granted access by the underlying operating<br/>system.
 </summary>
 <remarks>
 <para>If <c>lock()</c> is called multiple times then only the key codes specified in the most recent call will be locked.<br/>Any keys locked by a previous call to <c>lock()</c> are unlocked.</para>

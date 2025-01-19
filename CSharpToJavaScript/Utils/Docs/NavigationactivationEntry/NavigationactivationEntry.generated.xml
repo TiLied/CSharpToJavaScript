@@ -1,7 +1,7 @@
 <docs>
 <NavigationActivationEntry>
 <summary>
-The <strong><c>entry</c></strong> read-only property of the <see cref="NavigationActivation"/> interface contains a <see cref="NavigationHistoryEntry"/> object representing the history entry for the inbound ("to") document in the navigation. This is equivalent to the <see cref="Navigation.CurrentEntry"/> property at the moment the inbound document was activated.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>entry</c></strong> read-only property of the <see cref="NavigationActivation"/> interface contains a <see cref="NavigationHistoryEntry"/> object representing the history entry for the inbound ("to") document in the navigation. This is equivalent to the <see cref="Navigation.CurrentEntry"/> property at the moment the inbound document was activated.
 </summary>
 <remarks>
 <para>There are some cases in which either the <c>from</c> or <c>entry</c> <see cref="NavigationHistoryEntry"/> objects would not be viable targets for the <c>traverseTo()</c> method, as they might not be retained in history. For example, the document can be activated using <c>location.replace()</c> or its initial entry could be replaced by <c>history.replaceState()</c>. However, those entries&amp;apos; <c>url</c> properties and <c>getState()</c> methods are still accessible.</para>

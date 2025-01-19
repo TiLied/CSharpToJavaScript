@@ -1,7 +1,7 @@
 <docs>
 <VirtualKeyboardOverlaysContent>
 <summary>
-The <strong><c>overlaysContent</c></strong> property of the VirtualKeyboard interface can be used to opt out of the automatic way in which browsers handle on-screen virtual keyboards by reducing the size of the viewport to make space for them.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>overlaysContent</c></strong> property of the VirtualKeyboard interface can be used to opt out of the automatic way in which browsers handle on-screen virtual keyboards by reducing the size of the viewport to make space for them.
 </summary>
 <remarks>
 <para>If the <c>overlaysContent</c> property is set to <c>true</c>, the browser no longer resizes the viewport when the virtual keyboard appears. The virtual keyboard instead overlays the content of the web page, and you can adapt the page layout as appropriate using the {{domxref(&amp;quot;VirtualKeyboard_API&amp;quot;, &amp;quot;Virtual Keyboard API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} and your own custom CSS and JavaScript.</para>

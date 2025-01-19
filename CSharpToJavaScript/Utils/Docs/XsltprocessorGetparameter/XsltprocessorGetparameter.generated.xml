@@ -7,6 +7,6 @@ The <c>getParameter()</c> method of the <see cref="XSLTProcessor"/> interface re
 <para>-<see cref="XSLTProcessor.SetParameter"/><br/>-<see cref="XSLTProcessor.RemoveParameter"/><br/>-<see cref="XSLTProcessor.ClearParameters"/><br/>-<see cref="XSLTProcessor.Reset"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XSLTProcessor/getParameter"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>An object that is the value associated with the parameter. It can be of any type.<blockquote>Firefox supports any kind of parameter. Chrome, Edge and Safari only support string parameters.</blockquote></returns>
+<returns>An object that is the value associated with the parameter. It can be of any type.<blockquote class="NOTE"><h5>NOTE</h5>Firefox supports any kind of parameter. Chrome, Edge and Safari only support string parameters.</blockquote></returns>
 </XSLTProcessorGetParameter>
 </docs>

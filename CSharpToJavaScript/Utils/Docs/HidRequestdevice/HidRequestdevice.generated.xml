@@ -1,7 +1,7 @@
 <docs>
 <HIDRequestDevice>
 <summary>
-The <strong><c>requestDevice()</c></strong> method of the <see cref="HID"/> interface requests access to a HID device.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>requestDevice()</c></strong> method of the <see cref="HID"/> interface requests access to a HID device.
 </summary>
 <remarks>
 <para>The user agent will present a permission dialog including a list of connected devices, and ask the user to select and grant permission to one of these devices.</para>

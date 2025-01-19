@@ -1,7 +1,7 @@
 <docs>
 <NavigationDestinationIndex>
 <summary>
-The <strong><c>index</c></strong> read-only property of the<br/><see cref="NavigationDestination"/> interface returns the <see cref="NavigationHistoryEntry.Index"/> value of the destination <see cref="NavigationHistoryEntry"/> if the <see cref="NavigateEvent.NavigationType"/> is <c>traverse</c>, or <c>-1</c> otherwise.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>index</c></strong> read-only property of the<br/><see cref="NavigationDestination"/> interface returns the <see cref="NavigationHistoryEntry.Index"/> value of the destination <see cref="NavigationHistoryEntry"/> if the <see cref="NavigateEvent.NavigationType"/> is <c>traverse</c>, or <c>-1</c> otherwise.
 </summary>
 <remarks>
 <para>-<see href="https://developer.chrome.com/docs/web-platform/navigation-api/">Modern client-side routing: the Navigation API</see><br/>-<see href="https://github.com/WICG/navigation-api/blob/main/README.md">Navigation API explainer</see><br/>-Domenic Denicola&amp;apos;s <see href="https://gigantic-honored-octagon.glitch.me/">Navigation API live demo</see><br/></para>

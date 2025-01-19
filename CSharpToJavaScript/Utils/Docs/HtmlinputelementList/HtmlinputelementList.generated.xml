@@ -4,7 +4,7 @@
 The <strong><c>list</c></strong> read-only property of the <see cref="HTMLInputElement"/> interface returns the <see cref="HTMLDataListElement"/> pointed to by the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#list"><c>list</c></see> attribute of the element, or <c>null</c> if the <c>list</c> attribute is not defined or the <c>list</c> attribute&amp;apos;s value is not associated with any <c>&amp;lt;datalist&amp;gt;</c> in the same tree.
 </summary>
 <remarks>
-<blockquote><para>This is a read-only property. To associate a <c>&amp;lt;datalist&amp;gt;</c> with an element, set the value of the <c>list</c> attribute with <see cref="Element.SetAttribute"/>.</para></blockquote>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This is a read-only property. To associate a <c>&amp;lt;datalist&amp;gt;</c> with an element, set the value of the <c>list</c> attribute with <see cref="Element.SetAttribute"/>.</para></blockquote>
 <para>-<see cref="HTMLInputElement.Value"/><br/>-<see cref="HTMLInputElement.Type"/><br/>-<see cref="HTMLDataListElement"/><br/>-<see cref="HTMLOptionElement"/><br/>-<see cref="HTMLCollection"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">input</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist">datalist</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option">option</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/list"> <em>See also on MDN</em> </seealso></para>
 </remarks>

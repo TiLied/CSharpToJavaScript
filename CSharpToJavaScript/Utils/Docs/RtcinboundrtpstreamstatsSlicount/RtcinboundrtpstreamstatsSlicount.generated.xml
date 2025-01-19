@@ -8,6 +8,6 @@ The <strong><c>sliCount</c></strong> property of the<br/><see cref="RTCInboundRt
 <para>-{{RFC(4585, &amp;quot;&amp;quot;, &amp;quot;6.3.2&amp;quot;)}}: Definition of &amp;quot;Slice Loss Indication&amp;quot; in the document<br/><strong>Extended RTP Profile for Real-time Transport Control Protocol (RTCP)-Based</strong><strong><br/></strong><strong>Feedback (RTP/AVPF)</strong>.<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/sliCount"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An unsigned integer indicating the number of SLI packets this receiver sent to the<br/>remote sender due to lost runs of macroblocks. A high value of <c>sliCount</c> may<br/>be an indication of an unreliable network.This is a very technical part of how video codecs work. For details, see {{RFC(4585, "6.3.2")}}.<blockquote>This value is only present for video media.</blockquote></value>
+<value>An unsigned integer indicating the number of SLI packets this receiver sent to the<br/>remote sender due to lost runs of macroblocks. A high value of <c>sliCount</c> may<br/>be an indication of an unreliable network.This is a very technical part of how video codecs work. For details, see {{RFC(4585, "6.3.2")}}.<blockquote class="NOTE"><h5>NOTE</h5>This value is only present for video media.</blockquote></value>
 </RTCInboundRtpStreamStatsSliCount>
 </docs>

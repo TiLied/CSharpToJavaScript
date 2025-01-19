@@ -1,7 +1,7 @@
 <docs>
 <RTCOutboundRtpStreamStatsQualityLimitationReason>
 <summary>
-The <strong><c>qualityLimitationReason</c></strong><br/>property of the <see cref="RTCOutboundRtpStreamStats"/> dictionary is a string<br/>indicating the reason why the media quality in the stream is currently being reduced<br/>by the codec during encoding, or <c>none</c> if no quality reduction is being<br/>performed.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>qualityLimitationReason</c></strong><br/>property of the <see cref="RTCOutboundRtpStreamStats"/> dictionary is a string<br/>indicating the reason why the media quality in the stream is currently being reduced<br/>by the codec during encoding, or <c>none</c> if no quality reduction is being<br/>performed.
 </summary>
 <remarks>
 <para>This quality reduction may include changes such as reduced frame<br/>rate or resolution, or an increase in compression factor.</para><para>The amount of time the encoded media has had its quality reduced in each of the<br/>potential ways that can be done can be found in<br/><see cref="RTCOutboundRtpStreamStats.QualityLimitationDurations"/>.</para>

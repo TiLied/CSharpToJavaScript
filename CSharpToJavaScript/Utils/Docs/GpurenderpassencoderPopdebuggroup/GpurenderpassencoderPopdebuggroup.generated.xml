@@ -1,7 +1,7 @@
 <docs>
 <GPURenderPassEncoderPopDebugGroup>
 <summary>
-The <strong><c>popDebugGroup()</c></strong> method of the<br/><see cref="GPURenderPassEncoder"/> interface ends a render pass debug group, which is begun with a <see cref="GPURenderPassEncoder.PushDebugGroup"/> call.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>popDebugGroup()</c></strong> method of the<br/><see cref="GPURenderPassEncoder"/> interface ends a render pass debug group, which is begun with a <see cref="GPURenderPassEncoder.PushDebugGroup"/> call.
 </summary>
 <remarks>
 <para>This could be used for telemetry, or may be utilized in <see cref="GPUError"/> messages, browser dev tools, or other services in the future to help with debugging.</para>

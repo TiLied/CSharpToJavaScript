@@ -4,7 +4,7 @@
 <div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <c>AudioProcessingEvent</c> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see> represents events that occur when a <see cref="ScriptProcessorNode"/> input buffer is ready to be processed.
 </summary>
 <remarks>
-<para>An <c>audioprocess</c> event with this interface is fired on a <see cref="ScriptProcessorNode"/> when audio processing is required. During audio processing, the input buffer is read and processed to produce output audio data, which is then written to the output buffer.</para><blockquote><para>This feature has been deprecated and should be replaced by an <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioWorklet"><c>AudioWorklet</c></see>.</para></blockquote><para></para>
+<para>An <c>audioprocess</c> event with this interface is fired on a <see cref="ScriptProcessorNode"/> when audio processing is required. During audio processing, the input buffer is read and processed to produce output audio data, which is then written to the output buffer.</para><blockquote class="WARNING"><h5>WARNING</h5><para>This feature has been deprecated and should be replaced by an <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioWorklet"><c>AudioWorklet</c></see>.</para></blockquote><para></para>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioProcessingEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>

@@ -1,7 +1,7 @@
 <docs>
 <GPURenderPipeline>
 <summary>
-The <strong><c>GPURenderPipeline</c></strong> interface of the {{domxref(&amp;quot;WebGPU API&amp;quot;, &amp;quot;WebGPU API&amp;quot;, &amp;quot;&amp;quot;, "nocode")}} represents a pipeline that controls the vertex and fragment shader stages and can be used in a <see cref="GPURenderPassEncoder"/> or <see cref="GPURenderBundleEncoder"/>.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>GPURenderPipeline</c></strong> interface of the {{domxref(&amp;quot;WebGPU API&amp;quot;, &amp;quot;WebGPU API&amp;quot;, &amp;quot;&amp;quot;, "nocode")}} represents a pipeline that controls the vertex and fragment shader stages and can be used in a <see cref="GPURenderPassEncoder"/> or <see cref="GPURenderBundleEncoder"/>.
 </summary>
 <remarks>
 <para>A <c>GPURenderPipeline</c> object instance can be created using the <see cref="GPUDevice.CreateRenderPipeline"/> or <see cref="GPUDevice.CreateRenderPipelineAsync"/> methods.</para><para></para>

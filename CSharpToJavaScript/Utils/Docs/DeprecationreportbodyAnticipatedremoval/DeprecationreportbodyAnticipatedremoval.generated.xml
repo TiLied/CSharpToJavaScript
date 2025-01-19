@@ -1,7 +1,7 @@
 <docs>
 <DeprecationReportBodyAnticipatedRemoval>
 <summary>
-The <strong><c>anticipatedRemoval</c></strong> read-only property of the <see cref="DeprecationReportBody"/> interface returns the date that the browser version which removes the feature will ship. This value can be used to prioritize warnings. If this property returns <c>null</c> because the date is unknown, then the deprecation should be considered low priority.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>anticipatedRemoval</c></strong> read-only property of the <see cref="DeprecationReportBody"/> interface returns the date that the browser version which removes the feature will ship. This value can be used to prioritize warnings. If this property returns <c>null</c> because the date is unknown, then the deprecation should be considered low priority.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DeprecationReportBody/anticipatedRemoval"> <em>See also on MDN</em> </seealso></para>

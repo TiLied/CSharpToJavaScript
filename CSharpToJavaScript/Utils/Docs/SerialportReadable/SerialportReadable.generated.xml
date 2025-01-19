@@ -1,7 +1,7 @@
 <docs>
 <SerialPortReadable>
 <summary>
-The <strong><c>readable</c></strong> read-only property of the <see cref="SerialPort"/> interface returns a <see cref="ReadableStream"/> for receiving data from the device connected to the port. Chunks read from this stream are instances of {{jsxref("Uint8Array")}}. This property is non-null as long as the port is open and has not encountered a fatal error.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>readable</c></strong> read-only property of the <see cref="SerialPort"/> interface returns a <see cref="ReadableStream"/> for receiving data from the device connected to the port. Chunks read from this stream are instances of {{jsxref("Uint8Array")}}. This property is non-null as long as the port is open and has not encountered a fatal error.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SerialPort/readable"> <em>See also on MDN</em> </seealso></para>

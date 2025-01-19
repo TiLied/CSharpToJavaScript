@@ -1,7 +1,7 @@
 <docs>
 <IdentityProviderGetUserInfo>
 <summary>
-The <strong><c>getUserInfo()</c></strong> static method of the <see cref="IdentityProvider"/> interface returns information about a user that has signed in, which can be used to provide a personalized welcome message and sign-in button. This method has to be called from within an identity provider (IdP)-origin {{htmlelement("iframe")}} so that RP scripts cannot access the data. This must occur after a user has been signed in to a relying party (RP) site.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>getUserInfo()</c></strong> static method of the <see cref="IdentityProvider"/> interface returns information about a user that has signed in, which can be used to provide a personalized welcome message and sign-in button. This method has to be called from within an identity provider (IdP)-origin {{htmlelement("iframe")}} so that RP scripts cannot access the data. This must occur after a user has been signed in to a relying party (RP) site.
 </summary>
 <remarks>
 <para>This pattern is already common on sites that use identity federation for sign-in, but <c>getUserInfo()</c> provides a way to achieve it without relying on <see href="https://developer.mozilla.org/en-US/docs/Web/Privacy/Third-party_cookies">third-party cookies</see>.</para>

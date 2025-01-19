@@ -1,7 +1,7 @@
 <docs>
 <GPUTextureHeight>
 <summary>
-The <strong><c>height</c></strong> read-only property of the<br/><see cref="GPUTexture"/> interface represents the height of the <c>GPUTexture</c>.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>height</c></strong> read-only property of the<br/><see cref="GPUTexture"/> interface represents the height of the <c>GPUTexture</c>.
 </summary>
 <remarks>
 <para>This is set based on the value of the <c>size</c> property in the descriptor object passed into the originating <see cref="GPUDevice.CreateTexture"/> call.</para>

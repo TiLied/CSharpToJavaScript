@@ -1,7 +1,7 @@
 <docs>
 <GPUDeviceCreateRenderBundleEncoder>
 <summary>
-The <strong><c>createRenderBundleEncoder()</c></strong> method of the<br/><see cref="GPUDevice"/> interface creates a <see cref="GPURenderBundleEncoder"/> that can be used to pre-record bundles of commands. These can be reused in <see cref="GPURenderPassEncoder"/>s via the <see cref="GPURenderPassEncoder.ExecuteBundles"/> method, as many times as required.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>createRenderBundleEncoder()</c></strong> method of the<br/><see cref="GPUDevice"/> interface creates a <see cref="GPURenderBundleEncoder"/> that can be used to pre-record bundles of commands. These can be reused in <see cref="GPURenderPassEncoder"/>s via the <see cref="GPURenderPassEncoder.ExecuteBundles"/> method, as many times as required.
 </summary>
 <remarks>
 <para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>

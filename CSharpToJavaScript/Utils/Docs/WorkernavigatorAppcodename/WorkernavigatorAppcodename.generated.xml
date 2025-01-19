@@ -4,7 +4,7 @@
 <div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The value of the <strong><c>WorkerNavigator.appCodeName</c></strong> property is<br/>always <c>&amp;quot;Mozilla&amp;quot;</c>, in any browser. This property is kept only for<br/>compatibility purposes.
 </summary>
 <remarks>
-<blockquote><para>Do not rely on this property to return a real<br/>product name. All browsers return <c>&amp;quot;Mozilla&amp;quot;</c> as the value of this property.</para></blockquote>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Do not rely on this property to return a real<br/>product name. All browsers return <c>&amp;quot;Mozilla&amp;quot;</c> as the value of this property.</para></blockquote>
 <para>-<see cref="WorkerNavigator.AppName"/><br/>-<see cref="WorkerNavigator.Product"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerNavigator/appCodeName"> <em>See also on MDN</em> </seealso></para>
 </remarks>

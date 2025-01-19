@@ -1,7 +1,7 @@
 <docs>
 <ScreenDetailedIsPrimary>
 <summary>
-The <strong><c>isPrimary</c></strong> read-only property of the<br/><see cref="ScreenDetailed"/> interface is a boolean indicating whether the screen is set as the operating system (OS) primary screen or not.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>isPrimary</c></strong> read-only property of the<br/><see cref="ScreenDetailed"/> interface is a boolean indicating whether the screen is set as the operating system (OS) primary screen or not.
 </summary>
 <remarks>
 <para>The OS hosting the browser will have one primary screen, and one or more secondary screens. The primary screen can usually be specified by the user via OS settings, and generally contains OS UI features such as the taskbar/icon dock. The primary screen may change for a number of reasons, such as a screen being unplugged.</para>

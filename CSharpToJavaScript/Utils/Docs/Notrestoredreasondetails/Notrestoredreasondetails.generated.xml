@@ -1,7 +1,7 @@
 <docs>
 <NotRestoredReasonDetails>
 <summary>
-The <strong><c>NotRestoredReasonDetails</c></strong> interface of the {{domxref(&amp;quot;Performance API&amp;quot;, &amp;quot;Performance API&amp;quot;, &amp;quot;&amp;quot;, "nocode")}} represents a single reason why a navigated page was blocked from using the back/forward cache (<see href="https://developer.mozilla.org/en-US/docs/Glossary/bfcache">bfcache</see>).
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>NotRestoredReasonDetails</c></strong> interface of the {{domxref(&amp;quot;Performance API&amp;quot;, &amp;quot;Performance API&amp;quot;, &amp;quot;&amp;quot;, "nocode")}} represents a single reason why a navigated page was blocked from using the back/forward cache (<see href="https://developer.mozilla.org/en-US/docs/Glossary/bfcache">bfcache</see>).
 </summary>
 <remarks>
 <para>An array of <c>NotRestoredReasonDetails</c> objects can be accessed via the <see cref="NotRestoredReasons.Reasons"/> property.</para>

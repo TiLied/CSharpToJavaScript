@@ -1,7 +1,7 @@
 <docs>
 <NavigationActivation>
 <summary>
-The <strong><c>NavigationActivation</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Navigation_API">Navigation API</see> represents a recent cross-document navigation. It contains the navigation type and outgoing and inbound document history entries.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>NavigationActivation</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Navigation_API">Navigation API</see> represents a recent cross-document navigation. It contains the navigation type and outgoing and inbound document history entries.
 </summary>
 <remarks>
 <para>This object is accessed via the <see cref="PageSwapEvent.Activation"/> and <see cref="Navigation.Activation"/> properties. Note that, in each case, the <c>NavigationActivation</c> represents a different navigation:</para>

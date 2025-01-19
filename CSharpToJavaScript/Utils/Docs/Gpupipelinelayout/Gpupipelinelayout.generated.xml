@@ -1,7 +1,7 @@
 <docs>
 <GPUPipelineLayout>
 <summary>
-The <strong><c>GPUPipelineLayout</c></strong> interface of the {{domxref(&amp;quot;WebGPU API&amp;quot;, &amp;quot;WebGPU API&amp;quot;, &amp;quot;&amp;quot;, "nocode")}} defines the <see cref="GPUBindGroupLayout"/>s used by a pipeline. <see cref="GPUBindGroup"/>s used with the pipeline during command encoding must have compatible <see cref="GPUBindGroupLayout"/>s.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>GPUPipelineLayout</c></strong> interface of the {{domxref(&amp;quot;WebGPU API&amp;quot;, &amp;quot;WebGPU API&amp;quot;, &amp;quot;&amp;quot;, "nocode")}} defines the <see cref="GPUBindGroupLayout"/>s used by a pipeline. <see cref="GPUBindGroup"/>s used with the pipeline during command encoding must have compatible <see cref="GPUBindGroupLayout"/>s.
 </summary>
 <remarks>
 <para>A <c>GPUPipelineLayout</c> object instance is created using the <see cref="GPUDevice.CreatePipelineLayout"/> method.</para><para></para>

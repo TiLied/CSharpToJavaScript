@@ -4,7 +4,7 @@
 The <see cref="IntersectionObserver"/> method<br/><strong><c>takeRecords()</c></strong> returns an array of<br/><see cref="IntersectionObserverEntry"/> objects, one for each targeted element which<br/>has experienced an intersection change since the last time the intersections were<br/>checked, either explicitly through a call to this method or implicitly by an automatic<br/>call to the observer&amp;apos;s callback.
 </summary>
 <remarks>
-<blockquote><para>If you use the callback to monitor these changes, you don&amp;apos;t<br/>need to call this method. Calling this method clears the pending intersection list, so<br/>the callback will not be run.</para></blockquote>
+<blockquote class="NOTE"><h5>NOTE</h5><para>If you use the callback to monitor these changes, you don&amp;apos;t<br/>need to call this method. Calling this method clears the pending intersection list, so<br/>the callback will not be run.</para></blockquote>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API">Intersection Observer API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/takeRecords"> <em>See also on MDN</em> </seealso></para>
 </remarks>

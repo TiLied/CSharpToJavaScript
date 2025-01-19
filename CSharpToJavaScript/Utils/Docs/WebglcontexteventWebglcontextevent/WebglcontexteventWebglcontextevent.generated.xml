@@ -4,7 +4,7 @@
 The <strong><c>WebGLContextEvent()</c></strong> constructor creates a new <see cref="WebGLContextEvent"/> object.
 </summary>
 <remarks>
-<blockquote><para>You typically don&amp;apos;t need to call this constructor; the browser creates these objects automatically when WebGL context events get fired. To manually trigger a <c>webglcontextlost</c> event, use <see cref="WEBGL_lose_context.LoseContext"/>.</para></blockquote>
+<blockquote class="NOTE"><h5>NOTE</h5><para>You typically don&amp;apos;t need to call this constructor; the browser creates these objects automatically when WebGL context events get fired. To manually trigger a <c>webglcontextlost</c> event, use <see cref="WEBGL_lose_context.LoseContext"/>.</para></blockquote>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/webglcontextlost_event"><c>webglcontextlost</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event"><c>webglcontextrestored</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/webglcontextcreationerror_event"><c>webglcontextcreationerror</c></see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLContextEvent/WebGLContextEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>

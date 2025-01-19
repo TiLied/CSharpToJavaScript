@@ -1,7 +1,7 @@
 <docs>
 <NDEFRecordLang>
 <summary>
-The <strong><c>lang</c></strong><br/>property of the <see cref="NDEFRecord"/> interface returns the language of<br/>a textual payload, or <c>null</c> if one was not supplied.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>lang</c></strong><br/>property of the <see cref="NDEFRecord"/> interface returns the language of<br/>a textual payload, or <c>null</c> if one was not supplied.
 </summary>
 <remarks>
 <para>The record might be missing a language tag, for example, if the recorded information is<br/>not locale-specific.</para>

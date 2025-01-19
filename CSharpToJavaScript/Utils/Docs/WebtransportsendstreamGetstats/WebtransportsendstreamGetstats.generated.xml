@@ -1,7 +1,7 @@
 <docs>
 <WebTransportSendStreamGetStats>
 <summary>
-The <strong><c>getStats()</c></strong> method of the <see cref="WebTransportSendStream"/> interface asynchronously returns an object containing statistics for the current stream.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>getStats()</c></strong> method of the <see cref="WebTransportSendStream"/> interface asynchronously returns an object containing statistics for the current stream.
 </summary>
 <remarks>
 <para>The statistics include the total number of bytes written to the stream, the number that have been sent (ignoring packet overhead), and the number of bytes that have been set at least once, and the number that have been acknowledged (up until the first sequentially-ordered non-acknowledged byte).<br/>It therefore provides a measure of how quickly the application is sending bytes to the server on this particular stream.</para>

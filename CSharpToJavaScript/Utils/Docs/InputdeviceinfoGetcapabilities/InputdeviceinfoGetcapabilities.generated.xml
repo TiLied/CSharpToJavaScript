@@ -7,6 +7,6 @@ The <strong><c>getCapabilities()</c></strong> method of the <see cref="InputDevi
 <para>-<see cref="MediaStreamTrack.GetCapabilities"/>, which also return a <c>MediaTrackCapabilities</c> object.<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/InputDeviceInfo/getCapabilities"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A <c>MediaTrackCapabilities</c> object which specifies the value or range of values which are supported for each of the user agent&amp;apos;s supported constrainable properties, containing the following members:<blockquote>If the user has not granted permission to access the input device an empty object will be returned.</blockquote></returns>
+<returns>A <c>MediaTrackCapabilities</c> object which specifies the value or range of values which are supported for each of the user agent&amp;apos;s supported constrainable properties, containing the following members:<blockquote class="NOTE"><h5>NOTE</h5>If the user has not granted permission to access the input device an empty object will be returned.</blockquote></returns>
 </InputDeviceInfoGetCapabilities>
 </docs>

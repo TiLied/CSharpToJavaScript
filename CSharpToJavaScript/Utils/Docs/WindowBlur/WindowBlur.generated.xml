@@ -4,7 +4,7 @@
 <div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>Window.blur()</c></strong> method does nothing.
 </summary>
 <remarks>
-<blockquote><para>Historically, this method was the programmatic equivalent of the user shifting focus away<br/>from the current window. This behavior was removed due to hostile sites abusing this functionality.<br/>In Firefox, you can enable the old behavior with the <c>dom.disable_window_flip</c> preference.</para></blockquote>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Historically, this method was the programmatic equivalent of the user shifting focus away<br/>from the current window. This behavior was removed due to hostile sites abusing this functionality.<br/>In Firefox, you can enable the old behavior with the <c>dom.disable_window_flip</c> preference.</para></blockquote>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Window/blur"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>

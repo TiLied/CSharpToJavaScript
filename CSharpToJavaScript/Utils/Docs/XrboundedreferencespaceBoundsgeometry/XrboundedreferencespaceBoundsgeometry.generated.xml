@@ -1,7 +1,7 @@
 <docs>
 <XRBoundedReferenceSpaceBoundsGeometry>
 <summary>
-The read-only <see cref="XRBoundedReferenceSpace"/><br/>property <strong><c>boundsGeometry</c></strong> is an array of<br/><see cref="DOMPointReadOnly"/> objects which specifies the points making up a polygon<br/>inside which the viewer is allowed to move. Each point is treated as a<br/>two-dimensional point, and must be located at ground level (that is,<br/>its <c>y</c> coordinate must be 0).
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The read-only <see cref="XRBoundedReferenceSpace"/><br/>property <strong><c>boundsGeometry</c></strong> is an array of<br/><see cref="DOMPointReadOnly"/> objects which specifies the points making up a polygon<br/>inside which the viewer is allowed to move. Each point is treated as a<br/>two-dimensional point, and must be located at ground level (that is,<br/>its <c>y</c> coordinate must be 0).
 </summary>
 <remarks>
 <para>This boundary is typically configured by the user, using the software that controls<br/>their XR hardware. This may be done by walking the border of the space they wish to use,<br/>or by drawing the shape of their room using their XR input device. Theoretically, a more<br/>advanced system might use sensors or other detection methods to determine the bounds of<br/>a dedicated XR room (notice how we carefully don&amp;apos;t call it a holodeck?).</para>

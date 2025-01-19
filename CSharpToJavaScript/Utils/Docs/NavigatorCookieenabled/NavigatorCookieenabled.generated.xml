@@ -7,6 +7,6 @@
 <para>The property is read-only.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/cookieEnabled"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A boolean.<blockquote>Web browsers may prevent writing certain cookies in certain scenarios. For example, Chrome-based browsers, as well as some experimental version of Firefox, does not allow creating cookies with <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value"><c>SameSite=None</c></see> attribute, unless they are created over HTTPS and with <c>Secure</c> attribute.</blockquote></value>
+<value>A boolean.<blockquote class="NOTE"><h5>NOTE</h5>Web browsers may prevent writing certain cookies in certain scenarios. For example, Chrome-based browsers, as well as some experimental version of Firefox, does not allow creating cookies with <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value"><c>SameSite=None</c></see> attribute, unless they are created over HTTPS and with <c>Secure</c> attribute.</blockquote></value>
 </NavigatorCookieEnabled>
 </docs>

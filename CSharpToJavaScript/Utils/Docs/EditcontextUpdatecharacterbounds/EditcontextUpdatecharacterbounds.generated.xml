@@ -1,7 +1,7 @@
 <docs>
 <EditContextUpdateCharacterBounds>
 <summary>
-The <strong><c>EditContext.updateCharacterBounds()</c></strong> method of the <see cref="EditContext"/> interface should be called as response to a <see cref="EditContext.Characterboundsupdate_event"/> event to inform the operating system about the position and size of the characters in the <c>EditContext</c> object.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>EditContext.updateCharacterBounds()</c></strong> method of the <see cref="EditContext"/> interface should be called as response to a <see cref="EditContext.Characterboundsupdate_event"/> event to inform the operating system about the position and size of the characters in the <c>EditContext</c> object.
 </summary>
 <remarks>
 <para>The <c>characterboundsupdate</c> event is the only time you need to call the <c>updateCharacterBounds()</c> method.</para><para>The character bounds information is then used by the operating system to correctly position the <see href="https://developer.mozilla.org/en-US/docs/Glossary/Input Method Editor">Input Method Editor</see> (IME) window when needed. This is especially important in situations where the operating system can't automatically detect the position and size of the characters, such as when rendering text in a <c>&amp;lt;canvas&amp;gt;</c> element.</para>

@@ -1,7 +1,7 @@
 <docs>
 <PerformanceScriptTimingWindow>
 <summary>
-The <strong><c>window</c></strong> read-only property of the <see cref="PerformanceScriptTiming"/> interface returns a reference to a <see cref="Window"/> object representing the <c>window</c> of the container (i.e., either the top-level document or an <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</see>) in which the long animation frame (LoAF)-causing script was executed.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>window</c></strong> read-only property of the <see cref="PerformanceScriptTiming"/> interface returns a reference to a <see cref="Window"/> object representing the <c>window</c> of the container (i.e., either the top-level document or an <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</see>) in which the long animation frame (LoAF)-causing script was executed.
 </summary>
 <remarks>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Performance_API/Long_animation_frame_timing">Long animation frame timing</see><br/>-<see cref="PerformanceLongAnimationFrameTiming"/><br/></para>

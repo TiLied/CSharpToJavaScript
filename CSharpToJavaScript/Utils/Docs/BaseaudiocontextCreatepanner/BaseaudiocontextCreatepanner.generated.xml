@@ -4,7 +4,7 @@
 The <c>createPanner()</c> method of the <see cref="BaseAudioContext"/><br/>Interface is used to create a new <see cref="PannerNode"/>, which is used to<br/>spatialize an incoming audio stream in 3D space.
 </summary>
 <remarks>
-<para>The panner node is spatialized in relation to the AudioContext&amp;apos;s<br/><see cref="AudioListener"/> (defined by the <see cref="BaseAudioContext/listener"/><br/>attribute), which represents the position and orientation of the person listening to the<br/>audio.</para><blockquote><para>The <see cref="PannerNode.PannerNode"/><br/>constructor is the recommended way to create a <see cref="PannerNode"/>; see<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioNode#creating_an_audionode">Creating an AudioNode</see>.</para></blockquote>
+<para>The panner node is spatialized in relation to the AudioContext&amp;apos;s<br/><see cref="AudioListener"/> (defined by the <see cref="BaseAudioContext/listener"/><br/>attribute), which represents the position and orientation of the person listening to the<br/>audio.</para><blockquote class="NOTE"><h5>NOTE</h5><para>The <see cref="PannerNode.PannerNode"/><br/>constructor is the recommended way to create a <see cref="PannerNode"/>; see<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioNode#creating_an_audionode">Creating an AudioNode</see>.</para></blockquote>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createPanner"> <em>See also on MDN</em> </seealso></para>
 </remarks>

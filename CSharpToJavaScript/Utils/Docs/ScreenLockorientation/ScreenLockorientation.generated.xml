@@ -4,7 +4,7 @@
 <div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>lockOrientation()</c></strong> method of the <see cref="Screen"/><br/>interface locks the screen into a specified orientation.
 </summary>
 <remarks>
-<blockquote><para>This feature is deprecated and should be avoided. Use the <see cref="ScreenOrientation.Lock"/> method instead.</para></blockquote><blockquote><para>This method only works for installed Web apps or for Web pages<br/>in <see href="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API">fullscreen mode</see>.</para></blockquote>
+<blockquote class="WARNING"><h5>WARNING</h5><para>This feature is deprecated and should be avoided. Use the <see cref="ScreenOrientation.Lock"/> method instead.</para></blockquote><blockquote class="NOTE"><h5>NOTE</h5><para>This method only works for installed Web apps or for Web pages<br/>in <see href="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API">fullscreen mode</see>.</para></blockquote>
 <para>-<see cref="Screen.Orientation"/><br/>-<see cref="Screen.UnlockOrientation"/><br/>-<see cref="Screen.Orientationchange_event"/> event<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation">Managing screen orientation</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Screen/lockOrientation"> <em>See also on MDN</em> </seealso></para>
 </remarks>

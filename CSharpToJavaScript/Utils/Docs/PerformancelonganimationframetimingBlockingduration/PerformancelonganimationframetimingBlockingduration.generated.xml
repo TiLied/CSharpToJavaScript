@@ -1,7 +1,7 @@
 <docs>
 <PerformanceLongAnimationFrameTimingBlockingDuration>
 <summary>
-The <strong><c>blockingDuration</c></strong> read-only property of the <see cref="PerformanceLongAnimationFrameTiming"/> interface returns a <see cref="DOMHighResTimeStamp"/> indicating the total time in milliseconds for which the main thread was blocked from responding to high priority tasks, such as user input.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>blockingDuration</c></strong> read-only property of the <see cref="PerformanceLongAnimationFrameTiming"/> interface returns a <see cref="DOMHighResTimeStamp"/> indicating the total time in milliseconds for which the main thread was blocked from responding to high priority tasks, such as user input.
 </summary>
 <remarks>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Performance_API/Long_animation_frame_timing">Long animation frame timing</see><br/>-<see cref="PerformanceScriptTiming"/><br/>-<see href="https://web.dev/articles/optimize-long-tasks">Optimize long tasks</see> on web.dev (2024)<br/></para>

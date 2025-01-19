@@ -1,7 +1,7 @@
 <docs>
 <BluetoothRequestDevice>
 <summary>
-The <strong><c>Bluetooth.requestDevice()</c></strong> method of the <see cref="Bluetooth"/> interface returns a {{jsxref("Promise")}} that fulfills with a <see cref="BluetoothDevice"/> object matching the specified options.<br/>If there is no chooser UI, this method returns the first device matching the criteria.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>Bluetooth.requestDevice()</c></strong> method of the <see cref="Bluetooth"/> interface returns a {{jsxref("Promise")}} that fulfills with a <see cref="BluetoothDevice"/> object matching the specified options.<br/>If there is no chooser UI, this method returns the first device matching the criteria.
 </summary>
 <remarks>
 <para>-<see href="https://developer.chrome.com/docs/capabilities/bluetooth">Communicating with Bluetooth devices over JavaScript</see> on <strong>developer.chrome.com</strong>.<br/></para>

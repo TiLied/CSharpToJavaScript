@@ -4,7 +4,7 @@
 The <strong><c>Worker()</c></strong> constructor creates a <see cref="Worker"/> object that executes the script at the specified URL. This script must obey the <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy">same-origin policy</see>.
 </summary>
 <remarks>
-<blockquote><para>There is a disagreement among browser manufacturers about whether a data URL is of the same origin or not. Though Firefox 10 and later accept data URLs, that&amp;apos;s not the case in all other browsers.</para></blockquote>
+<blockquote class="NOTE"><h5>NOTE</h5><para>There is a disagreement among browser manufacturers about whether a data URL is of the same origin or not. Though Firefox 10 and later accept data URLs, that&amp;apos;s not the case in all other browsers.</para></blockquote>
 <para>The <see cref="Worker"/> interface it belongs to.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Worker/Worker"> <em>See also on MDN</em> </seealso></para>
 </remarks>

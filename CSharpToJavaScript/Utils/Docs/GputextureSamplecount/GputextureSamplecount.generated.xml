@@ -1,7 +1,7 @@
 <docs>
 <GPUTextureSampleCount>
 <summary>
-The <strong><c>sampleCount</c></strong> read-only property of the<br/><see cref="GPUTexture"/> interface represents the sample count of the <c>GPUTexture</c>.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>sampleCount</c></strong> read-only property of the<br/><see cref="GPUTexture"/> interface represents the sample count of the <c>GPUTexture</c>.
 </summary>
 <remarks>
 <para>This is set via the <c>sampleCount</c> property in the descriptor object passed into the originating <see cref="GPUDevice.CreateTexture"/> call. If omitted, this defaults to 1.</para>

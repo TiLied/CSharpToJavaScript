@@ -1,7 +1,7 @@
 <docs>
 <XRFrameGetViewerPose>
 <summary>
-The <strong><c>getViewerPose()</c></strong> method, a member of the <see cref="XRFrame"/> interface, returns a <see cref="XRViewerPose"/> object which describes the viewer's pose (position and orientation) relative to the specified reference space.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>getViewerPose()</c></strong> method, a member of the <see cref="XRFrame"/> interface, returns a <see cref="XRViewerPose"/> object which describes the viewer's pose (position and orientation) relative to the specified reference space.
 </summary>
 <remarks>
 <para>See the <see cref="XRFrame.GetPose"/> method for a way to calculate a pose that represents the difference between two spaces.</para>

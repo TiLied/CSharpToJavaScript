@@ -7,6 +7,6 @@ The <strong><c>referrerPolicy</c></strong> property of the<br/><see cref="HTMLSc
 <para>-<see cref="HTMLIFrameElement.ReferrerPolicy"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLScriptElement/referrerPolicy"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string; one of the following:<blockquote>An empty string value (<c>&amp;quot;&amp;quot;</c>) is both the default<br/>value, and a fallback value if <c>referrerpolicy</c> is not supported. If<br/><c>referrerpolicy</c> is not explicitly specified on the<br/><c>&amp;lt;script&amp;gt;</c> element, it will adopt a higher-level referrer policy,<br/>i.e. one set on the whole document or domain. If a higher-level policy is not<br/>available, the empty string is treated as being equivalent to<br/><c>no-referrer-when-downgrade</c>.</blockquote></value>
+<value>A string; one of the following:<blockquote class="NOTE"><h5>NOTE</h5>An empty string value (<c>&amp;quot;&amp;quot;</c>) is both the default<br/>value, and a fallback value if <c>referrerpolicy</c> is not supported. If<br/><c>referrerpolicy</c> is not explicitly specified on the<br/><c>&amp;lt;script&amp;gt;</c> element, it will adopt a higher-level referrer policy,<br/>i.e. one set on the whole document or domain. If a higher-level policy is not<br/>available, the empty string is treated as being equivalent to<br/><c>no-referrer-when-downgrade</c>.</blockquote></value>
 </HTMLScriptElementReferrerPolicy>
 </docs>

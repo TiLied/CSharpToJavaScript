@@ -1,7 +1,7 @@
 <docs>
 <NavigatorGlobalPrivacyControl>
 <summary>
-The <strong><c>Navigator.globalPrivacyControl</c></strong> read-only property returns the user&amp;apos;s <see href="https://globalprivacycontrol.org/">Global Privacy Control</see> setting for the current website.<br/>This setting indicates whether the user consents to the website or service selling or sharing their personal information with third parties.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>Navigator.globalPrivacyControl</c></strong> read-only property returns the user&amp;apos;s <see href="https://globalprivacycontrol.org/">Global Privacy Control</see> setting for the current website.<br/>This setting indicates whether the user consents to the website or service selling or sharing their personal information with third parties.
 </summary>
 <remarks>
 <para>The value of the property reflects that of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-GPC">Sec-GPC</see> HTTP header.</para>

@@ -1,7 +1,7 @@
 <docs>
 <MediaStreamTrackGeneratorWritable>
 <summary>
-The <strong><c>writable</c></strong> property of the <see cref="MediaStreamTrackGenerator"/> interface returns a <see cref="WritableStream"/>. This allows the writing of media frames to the <c>MediaStreamTrackGenerator</c>. The frames will be audio or video. The type is dictated by the kind of <c>MediaStreamTrackGenerator</c> that was created.
+<div class="CAUTION"><h5>CAUTION</h5> <strong>Non-standard</strong></div> The <strong><c>writable</c></strong> property of the <see cref="MediaStreamTrackGenerator"/> interface returns a <see cref="WritableStream"/>. This allows the writing of media frames to the <c>MediaStreamTrackGenerator</c>. The frames will be audio or video. The type is dictated by the kind of <c>MediaStreamTrackGenerator</c> that was created.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrackGenerator/writable"> <em>See also on MDN</em> </seealso></para>

@@ -1,7 +1,7 @@
 <docs>
 <NavigateEventCanIntercept>
 <summary>
-The <strong><c>canIntercept</c></strong> read-only property of the<br/><see cref="NavigateEvent"/> interface returns <c>true</c> if the navigation can be intercepted and have its URL rewritten, or <c>false</c> otherwise
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>canIntercept</c></strong> read-only property of the<br/><see cref="NavigateEvent"/> interface returns <c>true</c> if the navigation can be intercepted and have its URL rewritten, or <c>false</c> otherwise
 </summary>
 <remarks>
 <para>There are several rules around when a navigation can be intercepted. For example:</para><para>See the spec for more explanation on <see href="https://html.spec.whatwg.org/multipage/nav-history-apis.html#can-have-its-url-rewritten">when a Document can have its URL rewritten</see>, including a table of examples.</para>

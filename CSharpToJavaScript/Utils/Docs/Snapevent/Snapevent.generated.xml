@@ -1,7 +1,7 @@
 <docs>
 <SnapEvent>
 <summary>
-The <strong><c>SnapEvent</c></strong> interface defines the event object for the <see cref="Element/scrollsnapchanging_event"/> and <see cref="Element/scrollsnapchange_event"/> events. Respectively, these fire on on a <see href="https://developer.mozilla.org/en-US/docs/Glossary/Scroll_container">scroll container</see> when the browser determines that a new scroll snap target is pending (will be selected when the current scroll gesture ends), and when a new snap target is selected.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>SnapEvent</c></strong> interface defines the event object for the <see cref="Element/scrollsnapchanging_event"/> and <see cref="Element/scrollsnapchange_event"/> events. Respectively, these fire on on a <see href="https://developer.mozilla.org/en-US/docs/Glossary/Scroll_container">scroll container</see> when the browser determines that a new scroll snap target is pending (will be selected when the current scroll gesture ends), and when a new snap target is selected.
 </summary>
 <remarks>
 <para>These events can be used to run code in response to new elements being snapped to; <c>SnapEvent</c> exposes references to the element snapped to in the inline and/or block direction. The property values available on <c>SnapEvent</c> correspond directly to the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-snap-type">scroll-snap-type</see> CSS property set on the scroll container:</para><para></para>

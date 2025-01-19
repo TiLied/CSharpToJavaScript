@@ -1,7 +1,7 @@
 <docs>
 <WindowSizeToContent>
 <summary>
-The <strong><c>Window.sizeToContent()</c></strong> method sizes the window<br/>according to its content. In order for it to work, the DOM content should be loaded when<br/>this function is called—for example, once the <see cref="Document/DOMContentLoaded_event"/> event has<br/>been thrown.
+<div class="CAUTION"><h5>CAUTION</h5> <strong>Non-standard</strong></div> The <strong><c>Window.sizeToContent()</c></strong> method sizes the window<br/>according to its content. In order for it to work, the DOM content should be loaded when<br/>this function is called—for example, once the <see cref="Document/DOMContentLoaded_event"/> event has<br/>been thrown.
 </summary>
 <remarks>
 <para>Since Firefox 20, the minimal size of the window is clamped to prevent the window from<br/>being too small for the user to interact with.</para>

@@ -4,7 +4,7 @@
 The <strong><c>ariaLive</c></strong> property of the <see cref="ElementInternals"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions"><c>aria-live</c></see> attribute, which indicates that an element will be updated, and describes the types of updates the user agents, assistive technologies, and user can expect from the live region.
 </summary>
 <remarks>
-<blockquote><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Setting aria attributes on <c>ElementInternals</c> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <see href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</see>.</para></blockquote>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaLive"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A string with one of the following values:</value>

@@ -4,7 +4,7 @@
 The <strong><c>contains()</c></strong> method of the <see cref="Node"/> interface<br/>returns a boolean value indicating<br/>whether a node is a descendant of a given node, that is the node itself,<br/>one of its direct children (<see cref="Node.ChildNodes"/>),<br/>one of the children&amp;apos;s direct children, and so on.
 </summary>
 <remarks>
-<blockquote><para>A node is <strong>contained</strong> inside itself.</para></blockquote>
+<blockquote class="NOTE"><h5>NOTE</h5><para>A node is <strong>contained</strong> inside itself.</para></blockquote>
 <para>-<see cref="Node.CompareDocumentPosition"/><br/>-<see cref="Node.HasChildNodes"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/contains"> <em>See also on MDN</em> </seealso></para>
 </remarks>

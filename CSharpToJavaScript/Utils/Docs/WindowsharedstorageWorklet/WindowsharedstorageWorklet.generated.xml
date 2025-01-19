@@ -1,7 +1,7 @@
 <docs>
 <WindowSharedStorageWorklet>
 <summary>
-The <strong><c>worklet</c></strong> read-only property of the<br/><see cref="WindowSharedStorage"/> interface contains the <see cref="SharedStorageWorklet"/> instance representing the shared storage worklet for the current origin.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>worklet</c></strong> read-only property of the<br/><see cref="WindowSharedStorage"/> interface contains the <see cref="SharedStorageWorklet"/> instance representing the shared storage worklet for the current origin.
 </summary>
 <remarks>
 <para><c>SharedStorageWorklet</c> contains the <see cref="Worklet.AddModule"/> method, which is used to add a module to the shared storage worklet.</para>

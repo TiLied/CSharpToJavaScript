@@ -4,7 +4,7 @@
 The <strong><c>Gamepad.timestamp</c></strong> property of the<br/><see cref="Gamepad"/> interface returns a <see cref="DOMHighResTimeStamp"/><br/>representing the last time the data for this gamepad was updated.
 </summary>
 <remarks>
-<para>The idea behind this is to allow developers to determine if the <c>axes</c> and<br/><c>button</c> data have been updated from the hardware. The value must be<br/>relative to the <c>navigationStart</c> attribute of the<br/><see cref="PerformanceTiming"/> interface. Values are monotonically<br/>increasing, meaning that they can be compared to determine the ordering of updates, as<br/>newer values will always be greater than or equal to older values.</para><blockquote><para>This property is not currently supported anywhere.</para></blockquote>
+<para>The idea behind this is to allow developers to determine if the <c>axes</c> and<br/><c>button</c> data have been updated from the hardware. The value must be<br/>relative to the <c>navigationStart</c> attribute of the<br/><see cref="PerformanceTiming"/> interface. Values are monotonically<br/>increasing, meaning that they can be compared to determine the ordering of updates, as<br/>newer values will always be greater than or equal to older values.</para><blockquote class="NOTE"><h5>NOTE</h5><para>This property is not currently supported anywhere.</para></blockquote>
 <para><see href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API">Using the Gamepad API</see></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad/timestamp"> <em>See also on MDN</em> </seealso></para>
 </remarks>

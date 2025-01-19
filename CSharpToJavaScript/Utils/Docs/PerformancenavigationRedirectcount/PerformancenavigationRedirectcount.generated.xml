@@ -4,7 +4,7 @@
 <div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The legacy<br/><strong><c>PerformanceNavigation.redirectCount</c></strong><br/>read-only property returns an <c>unsigned short</c> representing the number of<br/>REDIRECTs done before reaching the page.
 </summary>
 <remarks>
-<blockquote><para>This interface of this property is deprecated in the <see href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</see>.<br/>Please use the <see cref="PerformanceNavigationTiming"/> interface instead.</para></blockquote>
+<blockquote class="WARNING"><h5>WARNING</h5><para>This interface of this property is deprecated in the <see href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</see>.<br/>Please use the <see cref="PerformanceNavigationTiming"/> interface instead.</para></blockquote>
 <para>-The <see cref="PerformanceNavigation"/> interface it belongs to.<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigation/redirectCount"> <em>See also on MDN</em> </seealso></para>
 </remarks>

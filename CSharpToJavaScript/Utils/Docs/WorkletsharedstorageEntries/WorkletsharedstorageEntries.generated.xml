@@ -1,7 +1,7 @@
 <docs>
 <WorkletSharedStorageEntries>
 <summary>
-The <strong><c>entries()</c></strong> method of the<br/><see cref="WorkletSharedStorage"/> interface returns an <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncIterator">async iterator</see>. The iterator provides an array of <c>[key, value]</c> pairs corresponding to the enumerable properties of a <c>WorkletSharedStorage</c> instance. The order of these pairs is similar to that in a <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in"><c>for...in</c></see> loop, though a <c>for...in</c> loop also enumerates properties from the prototype chain.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>entries()</c></strong> method of the<br/><see cref="WorkletSharedStorage"/> interface returns an <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncIterator">async iterator</see>. The iterator provides an array of <c>[key, value]</c> pairs corresponding to the enumerable properties of a <c>WorkletSharedStorage</c> instance. The order of these pairs is similar to that in a <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in"><c>for...in</c></see> loop, though a <c>for...in</c> loop also enumerates properties from the prototype chain.
 </summary>
 <remarks>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Shared_Storage_API">Shared Storage API</see><br/></para>

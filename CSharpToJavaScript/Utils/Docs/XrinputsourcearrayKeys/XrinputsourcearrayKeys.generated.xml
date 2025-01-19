@@ -1,7 +1,7 @@
 <docs>
 <XRInputSourceArrayKeys>
 <summary>
-The <strong><c>keys()</c></strong> method in the<br/><see cref="XRInputSourceArray"/> interface returns a {{Glossary("JavaScript")}}<br/><see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator"><c>iterator</c></see><br/>which can then be used to iterate over the keys used to reference each item in the array<br/>of input sources.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>keys()</c></strong> method in the<br/><see cref="XRInputSourceArray"/> interface returns a {{Glossary("JavaScript")}}<br/><see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator"><c>iterator</c></see><br/>which can then be used to iterate over the keys used to reference each item in the array<br/>of input sources.
 </summary>
 <remarks>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Inputs">Inputs and input sources</see><br/>-The <see cref="XRInputSourceArray"/> method <see cref="XRInputSourceArray.Values"/><br/>-The <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"><c>Array</c></see> method <c>keys()</c><br/>-<see cref="XRInputSource"/><br/></para>

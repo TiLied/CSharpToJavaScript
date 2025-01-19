@@ -4,7 +4,7 @@
 The <strong><c>port</c></strong> property of the <see cref="Location"/> interface is a string containing the port number of the URL, or the empty string if the port is the default for the protocol.
 </summary>
 <remarks>
-<blockquote><para>If the <see cref="Location"/> object refers to a URL that doesn't contain an explicit port number (e.g., <c>https://localhost</c>) or contains a port number that&amp;apos;s the default port number corresponding to the protocol part of the URL (e.g., <c>https://localhost:443</c>), then the <c>port</c> property will be the empty string: <c>&amp;apos;&amp;apos;</c>.</para></blockquote>
+<blockquote class="NOTE"><h5>NOTE</h5><para>If the <see cref="Location"/> object refers to a URL that doesn't contain an explicit port number (e.g., <c>https://localhost</c>) or contains a port number that&amp;apos;s the default port number corresponding to the protocol part of the URL (e.g., <c>https://localhost:443</c>), then the <c>port</c> property will be the empty string: <c>&amp;apos;&amp;apos;</c>.</para></blockquote>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Location/port"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value>A string.</value>

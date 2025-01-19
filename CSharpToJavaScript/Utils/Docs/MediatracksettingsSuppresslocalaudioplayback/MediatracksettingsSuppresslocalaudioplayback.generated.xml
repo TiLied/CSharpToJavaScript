@@ -1,7 +1,7 @@
 <docs>
 <MediaTrackSettingsSuppressLocalAudioPlayback>
 <summary>
-The <see cref="MediaTrackSettings"/> dictionary's <strong><c>suppressLocalAudioPlayback</c></strong> property controls whether the audio playing in a tab will continue to be played out of a user&amp;apos;s local speakers when the tab is captured.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <see cref="MediaTrackSettings"/> dictionary's <strong><c>suppressLocalAudioPlayback</c></strong> property controls whether the audio playing in a tab will continue to be played out of a user&amp;apos;s local speakers when the tab is captured.
 </summary>
 <remarks>
 <para>For example, in cases where you broadcast a video call to an external AV system in a conference room, you will want the audio to play out of the AV system, and not the local speakers. This way, the audio will be louder and clearer, and also in sync with the conference video.</para>

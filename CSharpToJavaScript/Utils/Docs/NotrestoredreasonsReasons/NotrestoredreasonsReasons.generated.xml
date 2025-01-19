@@ -1,7 +1,7 @@
 <docs>
 <NotRestoredReasonsReasons>
 <summary>
-The <strong><c>reasons</c></strong> read-only property of the<br/><see cref="NotRestoredReasons"/> interface returns an array of <see cref="NotRestoredReasonDetails"/> objects, each representing a reason why the navigated page was blocked from using the back/forward cache ({{Glossary("bfcache")}}).
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>reasons</c></strong> read-only property of the<br/><see cref="NotRestoredReasons"/> interface returns an array of <see cref="NotRestoredReasonDetails"/> objects, each representing a reason why the navigated page was blocked from using the back/forward cache ({{Glossary("bfcache")}}).
 </summary>
 <remarks>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Performance_API/Monitoring_bfcache_blocking_reasons">Monitoring bfcache blocking reasons</see><br/>-<see cref="PerformanceNavigationTiming.NotRestoredReasons"/><br/></para>

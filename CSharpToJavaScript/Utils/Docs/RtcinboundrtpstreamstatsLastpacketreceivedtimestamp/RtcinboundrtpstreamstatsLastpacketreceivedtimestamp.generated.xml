@@ -6,6 +6,6 @@ The <strong><c>lastPacketReceivedTimestamp</c></strong> property of the <see cre
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/lastPacketReceivedTimestamp"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A <see cref="DOMHighResTimeStamp"/> which specifies the time at which the most recently received packet arrived on this RTP stream.<blockquote>This value differs from the <see cref="RTCInboundRtpStreamStats.Timestamp"/>,<br/>which represents the time at which the statistics object was created.</blockquote></value>
+<value>A <see cref="DOMHighResTimeStamp"/> which specifies the time at which the most recently received packet arrived on this RTP stream.<blockquote class="NOTE"><h5>NOTE</h5>This value differs from the <see cref="RTCInboundRtpStreamStats.Timestamp"/>,<br/>which represents the time at which the statistics object was created.</blockquote></value>
 </RTCInboundRtpStreamStatsLastPacketReceivedTimestamp>
 </docs>

@@ -1,7 +1,7 @@
 <docs>
 <PerformanceNavigationToJSON>
 <summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote>This interface of this property is deprecated in the <see href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</see>. Please use the <see cref="PerformanceNavigationTiming"/><br/>interface instead.</blockquote>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="WARNING"><h5>WARNING</h5>This interface of this property is deprecated in the <see href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</see>. Please use the <see cref="PerformanceNavigationTiming"/><br/>interface instead.</blockquote>
 </summary>
 <remarks>
 <para>The <strong><c>toJSON()</c></strong> method of the <see cref="PerformanceNavigation"/> interface is a {{Glossary("Serialization","serializer")}}; it returns a JSON representation of the <see cref="PerformanceNavigation"/> object.</para>

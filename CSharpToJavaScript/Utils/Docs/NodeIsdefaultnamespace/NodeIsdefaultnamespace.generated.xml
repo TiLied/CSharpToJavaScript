@@ -4,7 +4,7 @@
 The <strong><c>isDefaultNamespace()</c></strong> method of the <see cref="Node"/> interface accepts a namespace URI as an argument.<br/>It returns a boolean value that is <c>true</c> if the namespace is the default namespace on the given node and <c>false</c> if not.
 </summary>
 <remarks>
-<blockquote><para>The default namespace of an HTML element is always <c>&amp;quot;&amp;quot;</c>. For a SVG element, it is set by the <c>xmlns</c> attribute.</para></blockquote>
+<blockquote class="NOTE"><h5>NOTE</h5><para>The default namespace of an HTML element is always <c>&amp;quot;&amp;quot;</c>. For a SVG element, it is set by the <c>xmlns</c> attribute.</para></blockquote>
 <para>-<see cref="Node.LookupNamespaceURI"/><br/>-<see cref="Node.LookupPrefix"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Node/isDefaultNamespace"> <em>See also on MDN</em> </seealso></para>
 </remarks>

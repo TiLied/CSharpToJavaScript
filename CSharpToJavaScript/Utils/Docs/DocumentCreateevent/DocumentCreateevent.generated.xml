@@ -1,7 +1,7 @@
 <docs>
 <DocumentCreateEvent>
 <summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote>Many methods used with <c>createEvent</c>, such as <c>initCustomEvent</c>, are deprecated.<br/>Use <see href="https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent">event constructors</see> instead.</blockquote>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="WARNING"><h5>WARNING</h5>Many methods used with <c>createEvent</c>, such as <c>initCustomEvent</c>, are deprecated.<br/>Use <see href="https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent">event constructors</see> instead.</blockquote>
 </summary>
 <remarks>
 <para>Creates an <see href="https://developer.mozilla.org/en-US/docs/Web/API/Event">event</see> of the type specified. The<br/>returned object should be first initialized and can then be passed to<br/><see cref="EventTarget.DispatchEvent"/>.</para>

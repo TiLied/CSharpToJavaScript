@@ -4,7 +4,7 @@
 The read-only <c>offset</c> property of the <see cref="ConstantSourceNode"/><br/>interface returns a <see cref="AudioParam"/> object indicating the numeric <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam#a-rate">a-rate</see> value which is always returned<br/>by the source when asked for the next sample.
 </summary>
 <remarks>
-<blockquote><para>While the <c>AudioParam</c> named <c>offset</c> is read-only, the<br/><c>value</c> property within is not. So you can change the value of<br/><c>offset</c> by setting the value of<br/><c>ConstantSourceNode.offset.value</c>:</para></blockquote>
+<blockquote class="NOTE"><h5>NOTE</h5><para>While the <c>AudioParam</c> named <c>offset</c> is read-only, the<br/><c>value</c> property within is not. So you can change the value of<br/><c>offset</c> by setting the value of<br/><c>ConstantSourceNode.offset.value</c>:</para></blockquote>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/>-<see cref="ConstantSourceNode"/><br/>-<see cref="AudioNode"/><br/>-<see cref="AudioParam"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ConstantSourceNode/offset"> <em>See also on MDN</em> </seealso></para>
 </remarks>

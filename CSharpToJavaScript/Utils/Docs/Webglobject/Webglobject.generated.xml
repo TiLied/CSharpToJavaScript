@@ -1,7 +1,7 @@
 <docs>
 <WebGLObject>
 <summary>
-The <strong><c>WebGLObject</c></strong> is part of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> and is the parent interface for all WebGL objects.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>WebGLObject</c></strong> is part of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> and is the parent interface for all WebGL objects.
 </summary>
 <remarks>
 <para>This object has no public properties or methods on its own.</para><para>If the WebGL context is lost, the internal <strong>invalidated</strong> flag of all <c>WebGLObject</c> instances is set to <c>true</c>.</para>

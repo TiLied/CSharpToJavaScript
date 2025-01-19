@@ -1,7 +1,7 @@
 <docs>
 <LayoutShiftLastInputTime>
 <summary>
-The <strong><c>lastInputTime</c></strong> read-only property of the <see cref="LayoutShift"/> interface returns the time of the most recent excluding input or <c>0</c> if no excluding input has occurred.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>lastInputTime</c></strong> read-only property of the <see cref="LayoutShift"/> interface returns the time of the most recent excluding input or <c>0</c> if no excluding input has occurred.
 </summary>
 <remarks>
 <para>Layout shifts are only bad if the user wasn't expecting them. Layout shift metrics like <see href="https://developer.mozilla.org/en-US/docs/Glossary/CLS">CLS</see> exclude shifts that occurred soon after certain user interactions. These interactions are called <strong>excluding inputs</strong>. Excluding inputs are:</para><para>The <see href="https://developer.mozilla.org/en-US/docs/Web/API/Element/mousemove_event"><c>mousemove</c></see> and <see href="https://developer.mozilla.org/en-US/docs/Web/API/Element/pointermove_event"><c>pointermove</c></see> events are <strong>not</strong> excluding inputs.</para>

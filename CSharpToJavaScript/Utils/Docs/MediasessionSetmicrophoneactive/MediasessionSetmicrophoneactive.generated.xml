@@ -1,7 +1,7 @@
 <docs>
 <MediaSessionSetMicrophoneActive>
 <summary>
-The <strong><c>setMicrophoneActive()</c></strong> method of the <see cref="MediaSession"/> interface is used to indicate to the user agent whether the user's microphone is considered to be currently muted.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>setMicrophoneActive()</c></strong> method of the <see cref="MediaSession"/> interface is used to indicate to the user agent whether the user's microphone is considered to be currently muted.
 </summary>
 <remarks>
 <para>Call this method on the <c>navigator</c> object&amp;apos;s<br/><see cref="Navigator.MediaSession"/> object.</para><para>Note that the status of the microphone is not tracked in the <see cref="MediaSession"/> itself, but must be tracked separately.</para>

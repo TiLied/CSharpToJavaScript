@@ -1,7 +1,7 @@
 <docs>
 <GPUQueueCopyExternalImageToTexture>
 <summary>
-The <strong><c>copyExternalImageToTexture()</c></strong> method of the<br/><see cref="GPUQueue"/> interface copies a snapshot taken from a source image, video, or canvas into a given <see cref="GPUTexture"/>.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>copyExternalImageToTexture()</c></strong> method of the<br/><see cref="GPUQueue"/> interface copies a snapshot taken from a source image, video, or canvas into a given <see cref="GPUTexture"/>.
 </summary>
 <remarks>
 <para>Using this function allows the user agent to determine the most efficient way to copy the data over for each source type.</para>

@@ -1,7 +1,7 @@
 <docs>
 <PaymentManagerEnableDelegations>
 <summary>
-The <strong><c>enableDelegations()</c></strong> method of the <see cref="PaymentManager"/> interface delegates responsibility for providing various parts of the required payment information to the payment app rather than collecting it from the browser (for example, via autofill).
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>enableDelegations()</c></strong> method of the <see cref="PaymentManager"/> interface delegates responsibility for providing various parts of the required payment information to the payment app rather than collecting it from the browser (for example, via autofill).
 </summary>
 <remarks>
 <para>For example, if the <c>requestShipping</c> option is set to <c>true</c> in the options object when invoking the <see cref="PaymentRequest.PaymentRequest"/> constructor, a shipping address will be returned.</para>

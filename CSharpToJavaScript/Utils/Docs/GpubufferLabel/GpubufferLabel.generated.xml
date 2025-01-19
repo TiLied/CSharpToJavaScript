@@ -1,7 +1,7 @@
 <docs>
 <GPUBufferLabel>
 <summary>
-The <strong><c>label</c></strong> property of the<br/><see cref="GPUBuffer"/> interface provides a label that can be used to identify the object, for example in <see cref="GPUError"/> messages or console warnings.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>label</c></strong> property of the<br/><see cref="GPUBuffer"/> interface provides a label that can be used to identify the object, for example in <see cref="GPUError"/> messages or console warnings.
 </summary>
 <remarks>
 <para>This can be set by providing a <c>label</c> property in the descriptor object passed into the originating <see cref="GPUDevice.CreateBuffer"/> call, or you can get and set it directly on the <c>GPUBuffer</c> object.</para>

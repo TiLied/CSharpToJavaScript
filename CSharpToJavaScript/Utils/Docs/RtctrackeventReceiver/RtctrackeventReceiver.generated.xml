@@ -6,6 +6,6 @@ The read-only <strong><c>receiver</c></strong> property<br/>of the <see cref="RT
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEvent/receiver"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>The <see cref="RTCRtpReceiver"/> which pairs the <c>receiver</c> with a<br/>sender and other properties which establish a single bidirectional <see href="https://developer.mozilla.org/en-US/docs/Glossary/RTP">RTP</see><br/>stream for use by the <see cref="RTCTrackEvent.Track"/> associated with the<br/><c>RTCTrackEvent</c>.<blockquote>The <see cref="RTCTrackEvent.Transceiver"/><br/>includes its own <see cref="RTCRtpTransceiver.Receiver"/> property, which<br/>will always be the same <see cref="RTCRtpReceiver"/> as this one.</blockquote></value>
+<value>The <see cref="RTCRtpReceiver"/> which pairs the <c>receiver</c> with a<br/>sender and other properties which establish a single bidirectional <see href="https://developer.mozilla.org/en-US/docs/Glossary/RTP">RTP</see><br/>stream for use by the <see cref="RTCTrackEvent.Track"/> associated with the<br/><c>RTCTrackEvent</c>.<blockquote class="NOTE"><h5>NOTE</h5>The <see cref="RTCTrackEvent.Transceiver"/><br/>includes its own <see cref="RTCRtpTransceiver.Receiver"/> property, which<br/>will always be the same <see cref="RTCRtpReceiver"/> as this one.</blockquote></value>
 </RTCTrackEventReceiver>
 </docs>

@@ -1,7 +1,7 @@
 <docs>
 <CaptureController>
 <summary>
-The <strong><c>CaptureController</c></strong> interface provides methods that can be used to further manipulate a capture session separate from its initiation via <see cref="MediaDevices.GetDisplayMedia"/>.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>CaptureController</c></strong> interface provides methods that can be used to further manipulate a capture session separate from its initiation via <see cref="MediaDevices.GetDisplayMedia"/>.
 </summary>
 <remarks>
 <para>A <c>CaptureController</c> object is associated with a capture session by passing it into a <see cref="MediaDevices.GetDisplayMedia"/> call as the value of the options object's <c>controller</c> property.</para>

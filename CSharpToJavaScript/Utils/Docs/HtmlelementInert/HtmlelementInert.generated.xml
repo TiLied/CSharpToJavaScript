@@ -4,7 +4,7 @@
 The <see cref="HTMLElement"/> property <strong><c>inert</c></strong> reflects the value of the element&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/inert"><c>inert</c></see> attribute. It is a boolean value that, when present, makes the browser &amp;quot;ignore&amp;quot; user input events for the element, including focus events and events from assistive technologies. The browser may also ignore page search and text selection in the element. This can be useful when building UIs such as modals where you would want to &amp;quot;trap&amp;quot; the focus inside the modal when it&amp;apos;s visible.
 </summary>
 <remarks>
-<blockquote><para>Do not nest interactive elements or important content within elements with the <c>inert</c> attribute as inert content and their descendants are neither focusable nor perceivable by all users.</para></blockquote>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Do not nest interactive elements or important content within elements with the <c>inert</c> attribute as inert content and their descendants are neither focusable nor perceivable by all users.</para></blockquote>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/inert">Global attribute: <c>inert</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog">dialog</see><br/>-<see href="https://github.com/WICG/inert">Inert Polyfill</see><br/>-<see cref="HTMLInputElement.Disabled"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/inert"> <em>See also on MDN</em> </seealso></para>
 </remarks>

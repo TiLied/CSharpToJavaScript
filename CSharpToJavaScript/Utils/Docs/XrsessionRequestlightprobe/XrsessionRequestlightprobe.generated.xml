@@ -1,7 +1,7 @@
 <docs>
 <XRSessionRequestLightProbe>
 <summary>
-The <strong><c>requestLightProbe()</c></strong> method of the<br/><see cref="XRSession"/> interface returns a {{jsxref("Promise")}} that resolves with an <see cref="XRLightProbe"/> object that estimates lighting information at a given point in the user's environment.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>requestLightProbe()</c></strong> method of the<br/><see cref="XRSession"/> interface returns a {{jsxref("Promise")}} that resolves with an <see cref="XRLightProbe"/> object that estimates lighting information at a given point in the user's environment.
 </summary>
 <remarks>
 <para>-<see cref="XRSession.PreferredReflectionFormat"/><br/></para>

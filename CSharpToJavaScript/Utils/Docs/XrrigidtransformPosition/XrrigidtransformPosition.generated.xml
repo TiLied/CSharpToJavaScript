@@ -6,6 +6,6 @@ The read-only <see cref="XRRigidTransform"/> property<br/><strong><c>position</c
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRRigidTransform/position"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A read-only <see cref="DOMPointReadOnly"/> indicating the 3D position component of the<br/>transform matrix. The units are meters.<blockquote>The <c>w</c> component of the point is always 1.0.</blockquote></value>
+<value>A read-only <see cref="DOMPointReadOnly"/> indicating the 3D position component of the<br/>transform matrix. The units are meters.<blockquote class="NOTE"><h5>NOTE</h5>The <c>w</c> component of the point is always 1.0.</blockquote></value>
 </XRRigidTransformPosition>
 </docs>

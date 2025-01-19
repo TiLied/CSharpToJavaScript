@@ -7,6 +7,6 @@ The <strong><c>span</c></strong> read-only property of the <see cref="HTMLTableC
 <para>-<see cref="HTMLTableCellElement.ColSpan"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableColElement/span"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A positive number representing the number of columns.<blockquote>When setting a new value, the value is <strong>clamped</strong> to the nearest strictly positive number (up to 1000).</blockquote></value>
+<value>A positive number representing the number of columns.<blockquote class="NOTE"><h5>NOTE</h5>When setting a new value, the value is <strong>clamped</strong> to the nearest strictly positive number (up to 1000).</blockquote></value>
 </HTMLTableColElementSpan>
 </docs>

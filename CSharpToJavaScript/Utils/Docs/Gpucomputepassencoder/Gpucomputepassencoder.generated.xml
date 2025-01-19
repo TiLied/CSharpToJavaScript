@@ -1,7 +1,7 @@
 <docs>
 <GPUComputePassEncoder>
 <summary>
-The <strong><c>GPUComputePassEncoder</c></strong> interface of the {{domxref(&amp;quot;WebGPU API&amp;quot;, &amp;quot;WebGPU API&amp;quot;, &amp;quot;&amp;quot;, "nocode")}} encodes commands related to controlling the compute shader stage, as issued by a <see cref="GPUComputePipeline"/>. It forms part of the overall encoding activity of a <see cref="GPUCommandEncoder"/>.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>GPUComputePassEncoder</c></strong> interface of the {{domxref(&amp;quot;WebGPU API&amp;quot;, &amp;quot;WebGPU API&amp;quot;, &amp;quot;&amp;quot;, "nocode")}} encodes commands related to controlling the compute shader stage, as issued by a <see cref="GPUComputePipeline"/>. It forms part of the overall encoding activity of a <see cref="GPUCommandEncoder"/>.
 </summary>
 <remarks>
 <para>A compute pipeline contains a single compute stage in which a compute shader takes general data, processes it in parallel across a specified number of workgroups, then returns the result in one or more buffers.</para><para>A <c>GPUComputePassEncoder</c> object instance is created via the <see cref="GPUCommandEncoder.BeginComputePass"/> property.</para><para></para>

@@ -1,7 +1,7 @@
 <docs>
 <USBDeviceTransferOut>
 <summary>
-The <strong><c>transferOut()</c></strong> method of the <see cref="USBDevice"/><br/>interface returns a <see cref="Promise"/> that resolves with a<br/><see cref="USBOutTransferResult"/> when bulk or interrupt data is sent to the USB<br/>device.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>transferOut()</c></strong> method of the <see cref="USBDevice"/><br/>interface returns a <see cref="Promise"/> that resolves with a<br/><see cref="USBOutTransferResult"/> when bulk or interrupt data is sent to the USB<br/>device.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/USBDevice/transferOut"> <em>See also on MDN</em> </seealso></para>

@@ -7,6 +7,6 @@ The <strong><c>rowSpan</c></strong> read-only property of the <see cref="HTMLTab
 <para>-<see cref="HTMLTableCellElement.ColSpan"/><br/>-<see cref="HTMLTableColElement.Span"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableCellElement/rowSpan"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A positive number representing the number of rows. If it is <c>0</c>, it means all remaining rows in the column.<blockquote>When setting a new value, a value different from 0 is <strong>clamped</strong> to the nearest strictly positive number.</blockquote></value>
+<value>A positive number representing the number of rows. If it is <c>0</c>, it means all remaining rows in the column.<blockquote class="NOTE"><h5>NOTE</h5>When setting a new value, a value different from 0 is <strong>clamped</strong> to the nearest strictly positive number.</blockquote></value>
 </HTMLTableCellElementRowSpan>
 </docs>

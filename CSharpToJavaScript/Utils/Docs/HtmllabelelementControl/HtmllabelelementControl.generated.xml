@@ -7,6 +7,6 @@ The read-only <strong><c>HTMLLabelElement.control</c></strong> property returns 
 <para>-<see cref="HTMLLabelElement"/><br/>-<see cref="HTMLElement"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label">label</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms">HTML forms guide</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLLabelElement/control"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An <see cref="HTMLElement"/> derived object representing the control with which the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label">label</see> is associated, or <c>null</c> if the label stands alone.<blockquote>If this property has a value and <see cref="HTMLLabelElement.HtmlFor"/> has a value,<br/>the <see cref="HTMLLabelElement.HtmlFor"/> property must refer to the same control.</blockquote></value>
+<value>An <see cref="HTMLElement"/> derived object representing the control with which the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label">label</see> is associated, or <c>null</c> if the label stands alone.<blockquote class="NOTE"><h5>NOTE</h5>If this property has a value and <see cref="HTMLLabelElement.HtmlFor"/> has a value,<br/>the <see cref="HTMLLabelElement.HtmlFor"/> property must refer to the same control.</blockquote></value>
 </HTMLLabelElementControl>
 </docs>

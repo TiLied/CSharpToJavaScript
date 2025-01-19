@@ -1,7 +1,7 @@
 <docs>
 <GPUQueueOnSubmittedWorkDone>
 <summary>
-The <strong><c>onSubmittedWorkDone()</c></strong> method of the<br/><see cref="GPUQueue"/> interface returns a {{jsxref("Promise")}} that resolves when all the work submitted to the GPU via this <c>GPUQueue</c> at the point the method is called has been processed.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>onSubmittedWorkDone()</c></strong> method of the<br/><see cref="GPUQueue"/> interface returns a {{jsxref("Promise")}} that resolves when all the work submitted to the GPU via this <c>GPUQueue</c> at the point the method is called has been processed.
 </summary>
 <remarks>
 <para>This includes the completion of any <see cref="GPUBuffer.MapAsync"/> calls made on <c>GPUBuffer</c>s used in commands submitted to the queue, before <c>onSubmittedWorkDone()</c> is called.</para><para>Note: In most cases, you do <strong>not</strong> need to call <c>onSubmittedWorkDone()</c>. You do <strong><strong>not</strong></strong> need to call it for mapping a buffer. <c>mapAsync</c> guarantees work submitted<br/>to the queue before calling <c>mapAsync</c> happens before the <c>mapAsync</c> returns (see <see href="https://www.w3.org/TR/webgpu/#buffer-mapping">WebGPU spec: section 5.2</see>)</para><para>The two use cases for <c>onSubmittedWorkDone</c></para>

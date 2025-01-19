@@ -4,7 +4,7 @@
 The <c>XMLSerializer</c> interface provides the <see cref="XMLSerializer.SerializeToString"/> method to construct an XML string representing a {{Glossary("DOM")}} tree.
 </summary>
 <remarks>
-<blockquote><para>The resulting XML string is not guaranteed to be well-formed XML.</para></blockquote>
+<blockquote class="NOTE"><h5>NOTE</h5><para>The resulting XML string is not guaranteed to be well-formed XML.</para></blockquote>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/XML/Parsing_and_serializing_XML">Parsing and serializing XML</see><br/>-<see cref="DOMParser"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XMLSerializer"> <em>See also on MDN</em> </seealso></para>
 </remarks>

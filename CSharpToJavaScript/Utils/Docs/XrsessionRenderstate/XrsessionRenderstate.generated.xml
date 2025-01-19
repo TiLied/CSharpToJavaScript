@@ -1,7 +1,7 @@
 <docs>
 <XRSessionRenderState>
 <summary>
-The<br/><strong>read-only</strong> <strong><c>renderState</c></strong> property of an<br/><see cref="XRSession"/> object indicates the returns a <see cref="XRRenderState"/><br/>object describing how the user&amp;apos;s environment which should be rendered. The<br/>information provided covers the minimum and maximum distance at which to render objects,<br/>the vertical field of view to use when rendering the in the <c>inline</c> session<br/>mode, and the <see cref="XRWebGLLayer"/> to render into for inline composition.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The<br/><strong>read-only</strong> <strong><c>renderState</c></strong> property of an<br/><see cref="XRSession"/> object indicates the returns a <see cref="XRRenderState"/><br/>object describing how the user&amp;apos;s environment which should be rendered. The<br/>information provided covers the minimum and maximum distance at which to render objects,<br/>the vertical field of view to use when rendering the in the <c>inline</c> session<br/>mode, and the <see cref="XRWebGLLayer"/> to render into for inline composition.
 </summary>
 <remarks>
 <para>While this property is read only, you can call the <see cref="XRSession"/> method<br/><see cref="XRSession.UpdateRenderState"/> to make changes.</para>

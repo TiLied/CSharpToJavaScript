@@ -1,7 +1,7 @@
 <docs>
 <HTMLElementAnchorElement>
 <summary>
-The <strong><c>anchorElement</c></strong> property of the <see cref="HTMLElement"/> interface returns a reference to the element's anchor element. This works only in the case of elements associated with their anchors via the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/anchor"><c>anchor</c></see> HTML attribute, not elements associated with their anchors via the CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/anchor-name">anchor-name</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/position-anchor">position-anchor</see> properties.
+<div class="CAUTION"><h5>CAUTION</h5> <strong>Non-standard</strong></div> The <strong><c>anchorElement</c></strong> property of the <see cref="HTMLElement"/> interface returns a reference to the element's anchor element. This works only in the case of elements associated with their anchors via the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/anchor"><c>anchor</c></see> HTML attribute, not elements associated with their anchors via the CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/anchor-name">anchor-name</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/position-anchor">position-anchor</see> properties.
 </summary>
 <remarks>
 <para>For detailed information on anchor features and usage, see the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_anchor_positioning">CSS anchor positioning</see> module landing page and the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_anchor_positioning/Using">Using CSS anchor positioning</see> guide.</para>

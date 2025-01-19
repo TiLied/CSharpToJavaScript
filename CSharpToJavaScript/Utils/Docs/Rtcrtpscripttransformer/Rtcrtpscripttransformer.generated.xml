@@ -4,7 +4,7 @@
 The <strong><c>RTCRtpScriptTransformer</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see> provides a worker-side <see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API">Stream API</see> interface that a <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms">WebRTC Encoded Transform</see> can use to modify encoded media frames in the incoming and outgoing WebRTC pipelines.
 </summary>
 <remarks>
-<blockquote><para>This feature is available in <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API#worker_types"><strong>Dedicated</strong> Web Workers</see>.</para></blockquote>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This feature is available in <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API#worker_types"><strong>Dedicated</strong> Web Workers</see>.</para></blockquote>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms">Using WebRTC Encoded Transforms</see><br/>-<see cref="TransformStream"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpScriptTransformer"> <em>See also on MDN</em> </seealso></para>
 </remarks>

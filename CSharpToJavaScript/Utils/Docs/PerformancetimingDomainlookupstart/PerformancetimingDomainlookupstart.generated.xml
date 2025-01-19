@@ -1,7 +1,7 @@
 <docs>
 <PerformanceTimingDomainLookupStart>
 <summary>
-<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote>This interface of this property is deprecated in the <see href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</see>. Please use the <see cref="PerformanceNavigationTiming"/><br/>interface instead.</blockquote>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="WARNING"><h5>WARNING</h5>This interface of this property is deprecated in the <see href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</see>. Please use the <see cref="PerformanceNavigationTiming"/><br/>interface instead.</blockquote>
 </summary>
 <remarks>
 <para>The legacy<br/><strong><c>PerformanceTiming.domainLookupStart</c></strong><br/>read-only property returns an <c>unsigned long long</c> representing the moment,<br/>in milliseconds since the UNIX epoch, where the domain lookup starts. If a persistent<br/>connection is used, or the information is stored in a cache or a local resource, the<br/>value will be the same as <see cref="PerformanceTiming.FetchStart"/>.</para>

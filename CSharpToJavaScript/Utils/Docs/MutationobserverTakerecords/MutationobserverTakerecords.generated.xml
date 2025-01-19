@@ -7,6 +7,6 @@ The <see cref="MutationObserver"/> method<br/><strong><c>takeRecords()</c></stro
 <para>The most common use case for this is to<br/>immediately fetch all pending mutation records immediately prior to disconnecting the<br/>observer, so that any pending mutations can be processed when shutting down the<br/>observer.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver/takeRecords"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>An array of <see cref="MutationRecord"/> objects, each describing one change applied to<br/>the observed portion of the document&amp;apos;s DOM tree.<blockquote>The queue of mutations which have occurred, but not been<br/>delivered to the observer&amp;apos;s callback is left empty after calling<br/><c>takeRecords()</c>.</blockquote></returns>
+<returns>An array of <see cref="MutationRecord"/> objects, each describing one change applied to<br/>the observed portion of the document&amp;apos;s DOM tree.<blockquote class="NOTE"><h5>NOTE</h5>The queue of mutations which have occurred, but not been<br/>delivered to the observer&amp;apos;s callback is left empty after calling<br/><c>takeRecords()</c>.</blockquote></returns>
 </MutationObserverTakeRecords>
 </docs>

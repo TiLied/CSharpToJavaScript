@@ -1,7 +1,7 @@
 <docs>
 <PaymentRequestEventChangePaymentMethod>
 <summary>
-The <strong><c>changePaymentMethod()</c></strong> method of the <see cref="PaymentRequestEvent"/> interface is used by the payment handler to get an updated total, given such payment method details as the billing address.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>changePaymentMethod()</c></strong> method of the <see cref="PaymentRequestEvent"/> interface is used by the payment handler to get an updated total, given such payment method details as the billing address.
 </summary>
 <remarks>
 <para>When this method is invoked, a <see cref="PaymentMethodChangeEvent"/> is fired.</para>

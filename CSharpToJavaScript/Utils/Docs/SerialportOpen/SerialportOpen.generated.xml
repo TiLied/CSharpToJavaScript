@@ -1,7 +1,7 @@
 <docs>
 <SerialPortOpen>
 <summary>
-The <strong><c>open()</c></strong> method of the <see cref="SerialPort"/> interface returns a {{jsxref("Promise")}} that resolves when the port is opened. By default the port is opened with 8 data bits, 1 stop bit and no parity checking. The <c>baudRate</c> parameter is required.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>open()</c></strong> method of the <see cref="SerialPort"/> interface returns a {{jsxref("Promise")}} that resolves when the port is opened. By default the port is opened with 8 data bits, 1 stop bit and no parity checking. The <c>baudRate</c> parameter is required.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SerialPort/open"> <em>See also on MDN</em> </seealso></para>

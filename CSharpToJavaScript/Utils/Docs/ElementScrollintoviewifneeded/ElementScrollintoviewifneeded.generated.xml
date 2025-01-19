@@ -1,7 +1,7 @@
 <docs>
 <ElementScrollIntoViewIfNeeded>
 <summary>
-The <strong><c>Element.scrollIntoViewIfNeeded()</c></strong> method scrolls the current element into the visible area of the browser window if it&amp;apos;s not already within the visible area of the browser window. If the element is already within the visible area of the browser window, then no scrolling takes place. This method is a proprietary variation of the standard <see href="https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView"><c>Element.scrollIntoView()</c></see> method.
+<div class="CAUTION"><h5>CAUTION</h5> <strong>Non-standard</strong></div> The <strong><c>Element.scrollIntoViewIfNeeded()</c></strong> method scrolls the current element into the visible area of the browser window if it&amp;apos;s not already within the visible area of the browser window. If the element is already within the visible area of the browser window, then no scrolling takes place. This method is a proprietary variation of the standard <see href="https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView"><c>Element.scrollIntoView()</c></see> method.
 </summary>
 <remarks>
 <para>-<see href="https://www.w3.org/Bugs/Public/show_bug.cgi?id=17152">W3C CSSOM bug 17152: Support centering an element when scrolling into view.</see> (feature request for a standardized equivalent to <c>scrollIntoViewIfNeeded</c>)<br/></para>

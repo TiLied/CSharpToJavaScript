@@ -1,7 +1,7 @@
 <docs>
 <BackgroundFetchRegistrationUploaded>
 <summary>
-The <strong><c>uploaded</c></strong> read-only property of the <see cref="BackgroundFetchRegistration"/> interface returns the size in bytes successfully sent, initially <c>0</c>.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>uploaded</c></strong> read-only property of the <see cref="BackgroundFetchRegistration"/> interface returns the size in bytes successfully sent, initially <c>0</c>.
 </summary>
 <remarks>
 <para>If the value of this property changes, the <see href="https://developer.mozilla.org/en-US/docs/Web/API/BackgroundFetchRegistration/progress_event">progress</see> event is fired at the associated <see cref="BackgroundFetchRegistration"/> object.</para>

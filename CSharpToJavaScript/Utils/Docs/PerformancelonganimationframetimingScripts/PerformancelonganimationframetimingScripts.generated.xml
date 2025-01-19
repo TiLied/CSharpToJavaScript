@@ -1,7 +1,7 @@
 <docs>
 <PerformanceLongAnimationFrameTimingScripts>
 <summary>
-The <strong><c>scripts</c></strong> read-only property of the <see cref="PerformanceLongAnimationFrameTiming"/> interface returns an array of <see cref="PerformanceScriptTiming"/> objects.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>scripts</c></strong> read-only property of the <see cref="PerformanceLongAnimationFrameTiming"/> interface returns an array of <see cref="PerformanceScriptTiming"/> objects.
 </summary>
 <remarks>
 <para>Script attribution is provided only for scripts running in the main thread of a page, including same-origin <c>&amp;lt;iframe&amp;gt;</c>s. However, cross-origin <c>&amp;lt;iframe&amp;gt;</c>s, <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">web workers</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">service workers</see>, and <see href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">extension</see> code will not have script attribution in long animation frames, even if they impact the duration of one.</para>

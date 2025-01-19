@@ -1,7 +1,7 @@
 <docs>
 <CaptureControllerSetFocusBehavior>
 <summary>
-The <see cref="CaptureController"/> interface's <strong><c>setFocusBehavior()</c></strong> method controls whether the captured tab or window will be focused when an associated <see cref="MediaDevices.GetDisplayMedia"/> {{jsxref("Promise")}} fulfills, or whether the focus will remain with the tab containing the capturing app.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <see cref="CaptureController"/> interface's <strong><c>setFocusBehavior()</c></strong> method controls whether the captured tab or window will be focused when an associated <see cref="MediaDevices.GetDisplayMedia"/> {{jsxref("Promise")}} fulfills, or whether the focus will remain with the tab containing the capturing app.
 </summary>
 <remarks>
 <para>You can set this behavior multiple times before the <see cref="MediaDevices.GetDisplayMedia"/> call, or once immediately after its <c>Promise</c> resolves. After that, the focus behavior is said to be finalized, and can&amp;apos;t be changed.</para>

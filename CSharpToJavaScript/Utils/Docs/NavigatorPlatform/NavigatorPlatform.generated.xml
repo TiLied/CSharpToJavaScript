@@ -4,7 +4,7 @@
 <div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>platform</c></strong> property read-only property of the <see cref="Navigator"/> interface returns a string identifying the platform on which the user's browser is running.
 </summary>
 <remarks>
-<blockquote><para>In general, you should whenever possible avoid writing code that uses methods or properties like this one to try to find out information about the user&amp;apos;s environment, and instead write code that does <see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Testing/Feature_detection">feature detection</see>.</para></blockquote>
+<blockquote class="NOTE"><h5>NOTE</h5><para>In general, you should whenever possible avoid writing code that uses methods or properties like this one to try to find out information about the user&amp;apos;s environment, and instead write code that does <see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Testing/Feature_detection">feature detection</see>.</para></blockquote>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorUAData/platform"><c>navigator.userAgentData.platform</c></see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/platform"> <em>See also on MDN</em> </seealso></para>
 </remarks>

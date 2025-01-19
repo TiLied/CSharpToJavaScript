@@ -1,7 +1,7 @@
 <docs>
 <AudioWorkletProcessorParameterDescriptors>
 <summary>
-The read-only <strong><c>parameterDescriptors</c></strong> property of an <see cref="AudioWorkletProcessor"/>-derived class is a <strong>static getter</strong>,<br/>which returns an iterable of <see cref="AudioParamDescriptor"/>-based objects.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The read-only <strong><c>parameterDescriptors</c></strong> property of an <see cref="AudioWorkletProcessor"/>-derived class is a <strong>static getter</strong>,<br/>which returns an iterable of <see cref="AudioParamDescriptor"/>-based objects.
 </summary>
 <remarks>
 <para>The property is not a part of the <see cref="AudioWorkletProcessor"/><br/>interface, but, if defined, it is called internally by the<br/><see cref="AudioWorkletProcessor"/> constructor to create a list of custom<br/><see cref="AudioParam"/> objects in the <see cref="AudioWorkletNode.Parameters"/> property of the associated <see cref="AudioWorkletNode"/>.</para><para>Defining the getter is optional.</para>

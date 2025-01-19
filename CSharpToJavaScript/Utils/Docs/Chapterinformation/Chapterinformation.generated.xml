@@ -1,7 +1,7 @@
 <docs>
 <ChapterInformation>
 <summary>
-The <strong><c>ChapterInformation</c></strong> interface of the {{domxref(&amp;quot;Media Session API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} represents the metadata for an individual chapter of a media resource (i.e. a video or audio file).
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>ChapterInformation</c></strong> interface of the {{domxref(&amp;quot;Media Session API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} represents the metadata for an individual chapter of a media resource (i.e. a video or audio file).
 </summary>
 <remarks>
 <para>The chapter information for a given media resource is set when it is first created, via the <c>chapterInfo</c> property of the <see cref="MediaMetadata.MediaMetadata"/> constructor's initialization object. The property takes an array of <c>ChapterInformation</c> objects as its value.</para><para>You can access the chapter information for an existing <see cref="MediaMetadata"/> object via its <see cref="MediaMetadata.ChapterInfo"/> property. This returns an array of <c>ChapterInformation</c> objects.</para>

@@ -1,7 +1,7 @@
 <docs>
 <ReadableStreamFrom>
 <summary>
-The <strong><c>ReadableStream.from()</c></strong> static method returns a <see cref="ReadableStream"/> from a provided iterable or async iterable object.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>ReadableStream.from()</c></strong> static method returns a <see cref="ReadableStream"/> from a provided iterable or async iterable object.
 </summary>
 <remarks>
 <para>The method can be used to wrap iterable and async iterable objects as readable streams, including arrays, sets, arrays of promises, async generators, <c>ReadableStreams</c>, Node.js <c>readable</c> streams, and so on.</para>

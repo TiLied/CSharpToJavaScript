@@ -1,7 +1,7 @@
 <docs>
 <NavigatorGetAutoplayPolicy>
 <summary>
-The <strong><c>getAutoplayPolicy()</c></strong> method of the <strong>Autoplay Policy Detection API</strong> provides information about whether <see href="https://developer.mozilla.org/en-US/docs/Web/Media/Autoplay_guide">autoplay</see> of media elements and audio contexts is allowed, disallowed, or only allowed if the audio is muted.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>getAutoplayPolicy()</c></strong> method of the <strong>Autoplay Policy Detection API</strong> provides information about whether <see href="https://developer.mozilla.org/en-US/docs/Web/Media/Autoplay_guide">autoplay</see> of media elements and audio contexts is allowed, disallowed, or only allowed if the audio is muted.
 </summary>
 <remarks>
 <para>Applications can use this information to provide an appropriate user experience.<br/>For example, if the user agent policy only allows autoplay of inaudible content, the application might mute videos so that they can still autoplay.</para><para>The method can be used to get either the broad autoplay policy for all items of a particular type in the document, or for specific media elements or audio contexts.</para>

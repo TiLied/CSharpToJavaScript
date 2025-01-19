@@ -4,7 +4,7 @@
 The <strong><c>CanvasRenderingContext2D.createConicGradient()</c></strong> method of the Canvas 2D API creates a gradient around a point with given coordinates.
 </summary>
 <remarks>
-<para>This method returns a conic <see cref="CanvasGradient"/>. To be applied to a shape, the gradient must first be assigned to the <see cref="CanvasRenderingContext2D.FillStyle"/> or <see cref="CanvasRenderingContext2D.StrokeStyle"/> properties.</para><blockquote><para>Gradient coordinates are global, i.e., relative to the current coordinate space. When applied to a shape, the coordinates are NOT relative to the shape&amp;apos;s coordinates.</para></blockquote>
+<para>This method returns a conic <see cref="CanvasGradient"/>. To be applied to a shape, the gradient must first be assigned to the <see cref="CanvasRenderingContext2D.FillStyle"/> or <see cref="CanvasRenderingContext2D.StrokeStyle"/> properties.</para><blockquote class="NOTE"><h5>NOTE</h5><para>Gradient coordinates are global, i.e., relative to the current coordinate space. When applied to a shape, the coordinates are NOT relative to the shape&amp;apos;s coordinates.</para></blockquote>
 <para>-The interface defining this method: <see cref="CanvasRenderingContext2D"/><br/>-<see cref="CanvasGradient"/><br/>-<see cref="CanvasRenderingContext2D.CreateLinearGradient"/><br/>-<see cref="CanvasRenderingContext2D.CreateRadialGradient"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createConicGradient"> <em>See also on MDN</em> </seealso></para>
 </remarks>

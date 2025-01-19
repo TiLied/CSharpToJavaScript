@@ -1,7 +1,7 @@
 <docs>
 <GPURequestAdapter>
 <summary>
-The <strong><c>requestAdapter()</c></strong> method of the<br/><see cref="GPU"/> interface returns a {{jsxref("Promise")}} that fulfills with a <see cref="GPUAdapter"/> object instance. From this you can request a <see cref="GPUDevice"/>, adapter info, features, and limits.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>requestAdapter()</c></strong> method of the<br/><see cref="GPU"/> interface returns a {{jsxref("Promise")}} that fulfills with a <see cref="GPUAdapter"/> object instance. From this you can request a <see cref="GPUDevice"/>, adapter info, features, and limits.
 </summary>
 <remarks>
 <para>Note that the user agent chooses whether to return an adapter. If so, it chooses according to the provided options. If no options are provided, the device will provide access to the default adapter, which is usually good enough for most purposes.</para>

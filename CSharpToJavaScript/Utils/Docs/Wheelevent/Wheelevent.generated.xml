@@ -4,7 +4,7 @@
 The <strong><c>WheelEvent</c></strong> interface represents events that occur due to the user moving a mouse wheel or similar input device.
 </summary>
 <remarks>
-<blockquote><para>This is the standard wheel event interface to use. Old versions of browsers implemented the non-standard and non-cross-browser-compatible <c>MouseWheelEvent</c> and <see cref="MouseScrollEvent"/> interfaces. Use this interface and avoid the non-standard ones.</para></blockquote><para>Don&amp;apos;t confuse the <c>wheel</c> event with the <see cref="Element/scroll_event"/> event:</para><para></para>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This is the standard wheel event interface to use. Old versions of browsers implemented the non-standard and non-cross-browser-compatible <c>MouseWheelEvent</c> and <see cref="MouseScrollEvent"/> interfaces. Use this interface and avoid the non-standard ones.</para></blockquote><para>Don&amp;apos;t confuse the <c>wheel</c> event with the <see cref="Element/scroll_event"/> event:</para><para></para>
 <para>-<see cref="Element/wheel_event"/> event<br/>-Interfaces replaced by this one:-Gecko's legacy mouse wheel event object: <see cref="MouseScrollEvent"/><br/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WheelEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>

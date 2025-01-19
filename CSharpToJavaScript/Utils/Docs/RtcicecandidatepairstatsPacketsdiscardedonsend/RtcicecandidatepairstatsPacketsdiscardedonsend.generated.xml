@@ -1,7 +1,7 @@
 <docs>
 <RTCIceCandidatePairStatsPacketsDiscardedOnSend>
 <summary>
-The <strong><c>packetsDiscardedOnSend</c></strong> property of the <see cref="RTCIceCandidatePairStats"/> dictionary indicates the total number of packets discarded due to socket errors
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>packetsDiscardedOnSend</c></strong> property of the <see cref="RTCIceCandidatePairStats"/> dictionary indicates the total number of packets discarded due to socket errors
 </summary>
 <remarks>
 <para>The errors might be caused, for example, by attempting to pass packets to the socket when it is full.</para>

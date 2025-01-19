@@ -4,7 +4,7 @@
 The <strong><c>getNamedItem()</c></strong> method of the <see cref="NamedNodeMap"/> interface returns the <see cref="Attr"/> corresponding to the given name, or <c>null</c> if there is no corresponding attribute.
 </summary>
 <remarks>
-<blockquote><para>This method is also called when you use the operator <c>[]</c> syntax.<br/>So, <c>myMap[str]</c> is equivalent to <c>myMap.getNamedItem(str)</c> where <c>str</c> is a string.</para></blockquote>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This method is also called when you use the operator <c>[]</c> syntax.<br/>So, <c>myMap[str]</c> is equivalent to <c>myMap.getNamedItem(str)</c> where <c>str</c> is a string.</para></blockquote>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NamedNodeMap/getNamedItem"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>An <see cref="Attr"/> corresponding to the <c>name</c> given in parameter, or <c>null</c> if none has been found.</returns>

@@ -1,7 +1,7 @@
 <docs>
 <XRProjectionLayer>
 <summary>
-The <strong><c>XRProjectionLayer</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</see> is a layer that fills the entire view of the observer and is refreshed close to the device&amp;apos;s native frame rate.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>XRProjectionLayer</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</see> is a layer that fills the entire view of the observer and is refreshed close to the device&amp;apos;s native frame rate.
 </summary>
 <remarks>
 <para><c>XRProjectionLayer</c> is supported by all <see cref="XRSession"/> objects (no <c>layers</c> feature descriptor is needed).</para><para>To create a new <c>XRProjectionLayer</c>, call <see cref="XRWebGLBinding.CreateProjectionLayer"/>.<br/>To present layers to the XR device, add them to the <c>layers</c> render state using <see cref="XRSession.UpdateRenderState"/>.</para><para><c>XRProjectionLayer</c> objects don't have an associated <see cref="XRSpace"/>, because they render to the full frame.</para><para></para>

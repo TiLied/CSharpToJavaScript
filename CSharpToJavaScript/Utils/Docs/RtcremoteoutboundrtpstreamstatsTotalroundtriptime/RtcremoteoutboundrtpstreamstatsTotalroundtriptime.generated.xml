@@ -1,7 +1,7 @@
 <docs>
 <RTCRemoteOutboundRtpStreamStatsTotalRoundTripTime>
 <summary>
-The <strong><c>totalRoundTripTime</c></strong> property of the <see cref="RTCRemoteOutboundRtpStreamStats"/> dictionary indicates the sum of all round trip time (RTT) measurements since the beginning of the session, in seconds.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>totalRoundTripTime</c></strong> property of the <see cref="RTCRemoteOutboundRtpStreamStats"/> dictionary indicates the sum of all round trip time (RTT) measurements since the beginning of the session, in seconds.
 </summary>
 <remarks>
 <para>The individual round trip time is calculated based on RTCP timestamps in the DLRR report block of RTCP Sender Reports (SR).<br/>The average RTT can be computed by dividing <c>totalRoundTripTime</c> by <see cref="RTCRemoteOutboundRtpStreamStats.RoundTripTimeMeasurements"/>.</para>

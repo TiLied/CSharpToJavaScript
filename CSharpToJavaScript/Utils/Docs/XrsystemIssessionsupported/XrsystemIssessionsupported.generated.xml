@@ -1,7 +1,7 @@
 <docs>
 <XRSystemIsSessionSupported>
 <summary>
-The <see cref="XRSystem"/> method<br/><strong><c>isSessionSupported()</c></strong> returns a promise which resolves to<br/><c>true</c> if the specified WebXR session mode is supported by the user&amp;apos;s WebXR<br/>device. Otherwise, the promise resolves with <c>false</c>.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <see cref="XRSystem"/> method<br/><strong><c>isSessionSupported()</c></strong> returns a promise which resolves to<br/><c>true</c> if the specified WebXR session mode is supported by the user&amp;apos;s WebXR<br/>device. Otherwise, the promise resolves with <c>false</c>.
 </summary>
 <remarks>
 <para>If no devices are available or the browser doesn&amp;apos;t have permission<br/>to use the XR device, the promise is rejected with an appropriate<br/><see cref="DOMException"/>.</para>

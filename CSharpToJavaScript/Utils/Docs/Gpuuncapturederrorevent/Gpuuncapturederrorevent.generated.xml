@@ -1,7 +1,7 @@
 <docs>
 <GPUUncapturedErrorEvent>
 <summary>
-The <strong><c>GPUUncapturedErrorEvent</c></strong> interface of the {{domxref(&amp;quot;WebGPU API&amp;quot;, &amp;quot;WebGPU API&amp;quot;, &amp;quot;&amp;quot;, "nocode")}} is the event object type for the <see cref="GPUDevice"/> <see cref="GPUDevice.Uncapturederror_event"/> event, used for telemetry and to report unexpected errors.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>GPUUncapturedErrorEvent</c></strong> interface of the {{domxref(&amp;quot;WebGPU API&amp;quot;, &amp;quot;WebGPU API&amp;quot;, &amp;quot;&amp;quot;, "nocode")}} is the event object type for the <see cref="GPUDevice"/> <see cref="GPUDevice.Uncapturederror_event"/> event, used for telemetry and to report unexpected errors.
 </summary>
 <remarks>
 <para>Known error cases should be handled using <see cref="GPUDevice.PushErrorScope"/> and <see cref="GPUDevice.PopErrorScope"/>.</para><para></para>

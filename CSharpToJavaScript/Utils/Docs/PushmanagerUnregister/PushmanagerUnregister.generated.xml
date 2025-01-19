@@ -4,7 +4,7 @@
 <div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>unregister()</c></strong> method was used to ask the system to<br/>unregister and delete the specified endpoint.
 </summary>
 <remarks>
-<blockquote><para>In the updated API, a subscription can be unregistered via the <see cref="PushSubscription.Unsubscribe"/> method.</para></blockquote>
+<blockquote class="NOTE"><h5>NOTE</h5><para>In the updated API, a subscription can be unregistered via the <see cref="PushSubscription.Unsubscribe"/> method.</para></blockquote>
 <para>-<see cref="PushManager"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PushManager/unregister"> <em>See also on MDN</em> </seealso></para>
 </remarks>

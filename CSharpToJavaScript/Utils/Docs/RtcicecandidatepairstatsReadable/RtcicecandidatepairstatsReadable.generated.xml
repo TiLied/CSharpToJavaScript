@@ -6,6 +6,6 @@
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/readable"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A Boolean value which is <c>true</c> if the connection described by this candidate pair has received at least one valid ICE request, and is therefore ready to be read from.<blockquote>Instead of using this value you should determine whether or not the connection is readable by checking to see if <see cref="RTCIceCandidatePairStats.RequestsReceived"/> is greater than 0:</blockquote></value>
+<value>A Boolean value which is <c>true</c> if the connection described by this candidate pair has received at least one valid ICE request, and is therefore ready to be read from.<blockquote class="NOTE"><h5>NOTE</h5>Instead of using this value you should determine whether or not the connection is readable by checking to see if <see cref="RTCIceCandidatePairStats.RequestsReceived"/> is greater than 0:</blockquote></value>
 </RTCIceCandidatePairStatsReadable>
 </docs>

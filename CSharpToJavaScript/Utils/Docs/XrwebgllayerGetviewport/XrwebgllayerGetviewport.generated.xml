@@ -1,7 +1,7 @@
 <docs>
 <XRWebGLLayerGetViewport>
 <summary>
-The <see cref="XRWebGLLayer"/> interface's<br/><strong><c>getViewport()</c></strong> method returns the<br/><see cref="XRViewport"/> that should be used to render the specified<br/><see cref="XRView"/> into the WebGL layer. For WebXR devices which use a<br/>single framebuffer for both the left and right eyes, the returned viewport represents<br/>the region of the framebuffer into which the scene should be rendered for the eye<br/>represented by the view.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <see cref="XRWebGLLayer"/> interface's<br/><strong><c>getViewport()</c></strong> method returns the<br/><see cref="XRViewport"/> that should be used to render the specified<br/><see cref="XRView"/> into the WebGL layer. For WebXR devices which use a<br/>single framebuffer for both the left and right eyes, the returned viewport represents<br/>the region of the framebuffer into which the scene should be rendered for the eye<br/>represented by the view.
 </summary>
 <remarks>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</see><br/></para>

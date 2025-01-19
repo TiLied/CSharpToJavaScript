@@ -1,7 +1,7 @@
 <docs>
 <MouseEventLayerX>
 <summary>
-The <strong><c>MouseEvent.layerX</c></strong> read-only property returns the<br/>horizontal coordinate of the event relative to the current layer.
+<div class="CAUTION"><h5>CAUTION</h5> <strong>Non-standard</strong></div> The <strong><c>MouseEvent.layerX</c></strong> read-only property returns the<br/>horizontal coordinate of the event relative to the current layer.
 </summary>
 <remarks>
 <para>This property takes scrolling of the page into account and returns a value relative to<br/>the whole of the document unless the event occurs inside a positioned element, where the<br/>returned value is relative to the top left of the positioned element.</para>

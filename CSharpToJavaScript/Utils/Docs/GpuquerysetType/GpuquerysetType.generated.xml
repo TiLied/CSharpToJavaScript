@@ -1,12 +1,12 @@
 <docs>
 <GPUQuerySetType>
 <summary>
-The <strong><c>type</c></strong> read-only property of the<br/><see cref="GPUQuerySet"/> interface is an enumerated value specifying the type of queries managed by the <c>GPUQuerySet</c>.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>type</c></strong> read-only property of the<br/><see cref="GPUQuerySet"/> interface is an enumerated value specifying the type of queries managed by the <c>GPUQuerySet</c>.
 </summary>
 <remarks>
 <para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUQuerySet/type"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>An enumerated value. Possible values are:<blockquote>The <c>timestamp-query</c> <see href="https://developer.mozilla.org/en-US/docs/Web/API/GPUSupportedFeatures">feature</see> needs to be enabled to use timestamp queries.</blockquote></value>
+<value>An enumerated value. Possible values are:<blockquote class="NOTE"><h5>NOTE</h5>The <c>timestamp-query</c> <see href="https://developer.mozilla.org/en-US/docs/Web/API/GPUSupportedFeatures">feature</see> needs to be enabled to use timestamp queries.</blockquote></value>
 </GPUQuerySetType>
 </docs>

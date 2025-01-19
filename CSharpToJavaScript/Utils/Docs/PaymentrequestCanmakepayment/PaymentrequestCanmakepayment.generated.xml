@@ -8,6 +8,6 @@ The <see cref="PaymentRequest"/> method<br/><strong><c>canMakePayment()</c></str
 <para>-<see cref="'PaymentRequest.Show'"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentRequest/canMakePayment"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A <see cref="Promise"/> to a boolean value that resolves to <c>true</c><br/>if the user agent supports any of the payment methods supplied when instantiating the<br/>request using the <see cref="'PaymentRequest.PaymentRequest'"/><br/>constructor. If the payment can&amp;apos;t be processed, the promise receives a value of<br/><c>false</c>.<blockquote>If you call this too often, the browser may reject the<br/>returned promise with a <c>DOMException</c>.</blockquote></returns>
+<returns>A <see cref="Promise"/> to a boolean value that resolves to <c>true</c><br/>if the user agent supports any of the payment methods supplied when instantiating the<br/>request using the <see cref="'PaymentRequest.PaymentRequest'"/><br/>constructor. If the payment can&amp;apos;t be processed, the promise receives a value of<br/><c>false</c>.<blockquote class="NOTE"><h5>NOTE</h5>If you call this too often, the browser may reject the<br/>returned promise with a <c>DOMException</c>.</blockquote></returns>
 </PaymentRequestCanMakePayment>
 </docs>

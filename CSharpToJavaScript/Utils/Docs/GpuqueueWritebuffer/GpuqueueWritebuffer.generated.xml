@@ -1,7 +1,7 @@
 <docs>
 <GPUQueueWriteBuffer>
 <summary>
-The <strong><c>writeBuffer()</c></strong> method of the<br/><see cref="GPUQueue"/> interface writes a provided data source into a given <see cref="GPUBuffer"/>.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>writeBuffer()</c></strong> method of the<br/><see cref="GPUQueue"/> interface writes a provided data source into a given <see cref="GPUBuffer"/>.
 </summary>
 <remarks>
 <para>This is a convenience function, which provides an alternative to setting buffer data via buffer mapping and buffer-to-buffer copies. It lets the user agent determine the most efficient way to copy the data over.</para>

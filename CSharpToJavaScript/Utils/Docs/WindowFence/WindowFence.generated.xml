@@ -1,10 +1,10 @@
 <docs>
 <WindowFence>
 <summary>
-The <c>fence</c> read-only property of the <see cref="Window"/> interface returns a <see cref="Fence"/> object instance for the current document context.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <c>fence</c> read-only property of the <see cref="Window"/> interface returns a <see cref="Fence"/> object instance for the current document context.
 </summary>
 <remarks>
-<para><c>Fence</c> objects are only available to documents embedded inside {{htmlelement("fencedframe")}}s (loaded via <see cref="FencedFrameConfig"/>s) or {{htmlelement("iframe")}}s (loaded via opaque URNs).</para><blockquote><para>See <see href="https://developer.mozilla.org/en-US/docs/Web/API/Fenced_frame_API#how_do_fencedframes_work">How do <c>&amp;lt;fencedframe&amp;gt;</c>s work?</see> for some description around <c>FencedFrameConfig</c>s and opaque URNs.</para></blockquote>
+<para><c>Fence</c> objects are only available to documents embedded inside {{htmlelement("fencedframe")}}s (loaded via <see cref="FencedFrameConfig"/>s) or {{htmlelement("iframe")}}s (loaded via opaque URNs).</para><blockquote class="NOTE"><h5>NOTE</h5><para>See <see href="https://developer.mozilla.org/en-US/docs/Web/API/Fenced_frame_API#how_do_fencedframes_work">How do <c>&amp;lt;fencedframe&amp;gt;</c>s work?</see> for some description around <c>FencedFrameConfig</c>s and opaque URNs.</para></blockquote>
 <para>-<see href="https://developers.google.com/privacy-sandbox/private-advertising/fenced-frame">Fenced frames</see> on developers.google.com<br/>-<see href="https://developers.google.com/privacy-sandbox">The Privacy Sandbox</see> on developers.google.com<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Window/fence"> <em>See also on MDN</em> </seealso></para>
 </remarks>

@@ -1,7 +1,7 @@
 <docs>
 <PerformanceScriptTimingSourceCharPosition>
 <summary>
-The <strong><c>sourceCharPosition</c></strong> read-only property of the <see cref="PerformanceScriptTiming"/> interface returns a number representing the script character position of the script feature that contributed to the long animation frame (LoAF).
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>sourceCharPosition</c></strong> read-only property of the <see cref="PerformanceScriptTiming"/> interface returns a number representing the script character position of the script feature that contributed to the long animation frame (LoAF).
 </summary>
 <remarks>
 <para>It is important to note that the reported function location will be the "entry point" of the script, that is, the top level of the stack, not any specific slow sub-function. See <see cref="PerformanceScriptTiming.SourceFunctionName"/> for more discussion around this.</para>

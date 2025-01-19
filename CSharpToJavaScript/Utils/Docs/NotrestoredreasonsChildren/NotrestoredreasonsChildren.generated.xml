@@ -1,7 +1,7 @@
 <docs>
 <NotRestoredReasonsChildren>
 <summary>
-The <strong><c>children</c></strong> read-only property of the<br/><see cref="NotRestoredReasons"/> interface returns an array of <see cref="NotRestoredReasons"/> objects, one for each child {{htmlelement("iframe")}} embedded in the current document, which may contain reasons why the top-level frame was blocked relating to the child frames.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>children</c></strong> read-only property of the<br/><see cref="NotRestoredReasons"/> interface returns an array of <see cref="NotRestoredReasons"/> objects, one for each child {{htmlelement("iframe")}} embedded in the current document, which may contain reasons why the top-level frame was blocked relating to the child frames.
 </summary>
 <remarks>
 <para>Each object has the same structure as the parent object — this way, any number of levels of embedded <c>&amp;lt;iframe&amp;gt;</c>s can be represented inside the object recursively.</para>

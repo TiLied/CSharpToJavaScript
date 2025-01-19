@@ -1,7 +1,7 @@
 <docs>
 <PerformanceElementTimingLoadTime>
 <summary>
-The <strong><c>loadTime</c></strong> read-only property of the <see cref="PerformanceElementTiming"/> interface always returns <c>0</c> for text. For images it returns the time which is the latest between the time the image resource is loaded and the time it is attached to the element.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>loadTime</c></strong> read-only property of the <see cref="PerformanceElementTiming"/> interface always returns <c>0</c> for text. For images it returns the time which is the latest between the time the image resource is loaded and the time it is attached to the element.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceElementTiming/loadTime"> <em>See also on MDN</em> </seealso></para>

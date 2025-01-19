@@ -1,7 +1,7 @@
 <docs>
 <VirtualKeyboardHide>
 <summary>
-The <strong><c>hide()</c></strong> method of the <see cref="VirtualKeyboard"/> interface programmatically hides the on-screen virtual keyboard. This is useful when the page needs to implement its own virtual keyboard logic by using the {{domxref("VirtualKeyboard_API", "VirtualKeyboard API", &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>hide()</c></strong> method of the <see cref="VirtualKeyboard"/> interface programmatically hides the on-screen virtual keyboard. This is useful when the page needs to implement its own virtual keyboard logic by using the {{domxref("VirtualKeyboard_API", "VirtualKeyboard API", &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}.
 </summary>
 <remarks>
 <para>This method only works if the currently-focused element&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/virtualkeyboardpolicy"><c>virtualKeyboardPolicy</c></see> attribute is set to <c>manual</c> and <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/inputmode"><c>inputmode</c></see> isn&amp;apos;t set to <c>none</c>.</para><para>The <c>hide()</c> method always returns <c>undefined</c> and triggers a <see cref="VirtualKeyboard.Geometrychange_event"/> event.</para>

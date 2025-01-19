@@ -4,7 +4,7 @@
 The <strong><c>chargingTime</c></strong> read-only property of the <see cref="BatteryManager"/> interface indicates the amount of time, in seconds, that remain until the battery is fully charged, or <c>0</c> if the battery is already fully charged or the user agent is unable to report the battery status information.<br/>If the battery is currently discharging, its value is <see cref="Infinity"/>.<br/>When its value changes, the <see cref="BatteryManager/chargingtimechange_event"/> event is fired.
 </summary>
 <remarks>
-<blockquote><para>Even if the time returned is precise to the second,<br/>browsers round them to a higher interval<br/>(typically to the closest 15 minutes) for privacy reasons.</para></blockquote>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Even if the time returned is precise to the second,<br/>browsers round them to a higher interval<br/>(typically to the closest 15 minutes) for privacy reasons.</para></blockquote>
 <para>-<see cref="BatteryManager"/><br/>-<see cref="Navigator.GetBattery"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BatteryManager/chargingTime"> <em>See also on MDN</em> </seealso></para>
 </remarks>

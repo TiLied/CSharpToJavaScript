@@ -1,7 +1,7 @@
 <docs>
 <XRProjectionLayerFixedFoveation>
 <summary>
-The <strong><c>fixedFoveation</c></strong> property of the <see cref="XRProjectionLayer"/> interface is a number indicating the amount of foveation used by the XR compositor for the layer. Fixed Foveated Rendering (FFR) renders the edges of the eye textures at a lower resolution than the center and reduces the GPU load.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>fixedFoveation</c></strong> property of the <see cref="XRProjectionLayer"/> interface is a number indicating the amount of foveation used by the XR compositor for the layer. Fixed Foveated Rendering (FFR) renders the edges of the eye textures at a lower resolution than the center and reduces the GPU load.
 </summary>
 <remarks>
 <para>It is most useful for low-contrast textures such as background images, but less for high-contrast ones such as text or detailed images. Authors can adjust the level on a per-frame basis to achieve the best tradeoff between performance and visual quality.</para>

@@ -4,7 +4,7 @@
 The <strong><c>setConfiguration()</c></strong> method of the <see cref="RTCPeerConnection"/> interface sets the current configuration of the connection based on the values included in the specified object.<br/>This lets you change the ICE servers used by the connection and which transport policies to use.
 </summary>
 <remarks>
-<para>The most common use case for this method (and even then, probably not a very common use case) is to replace the set of ICE servers to be used. Two potential scenarios in which this might be done:</para><blockquote><para>You cannot change the identity information for a connection once it&amp;apos;s already been set.</para></blockquote>
+<para>The most common use case for this method (and even then, probably not a very common use case) is to replace the set of ICE servers to be used. Two potential scenarios in which this might be done:</para><blockquote class="NOTE"><h5>NOTE</h5><para>You cannot change the identity information for a connection once it&amp;apos;s already been set.</para></blockquote>
 <para>-<see cref="RTCPeerConnection.GetConfiguration"/><br/>-<see cref="RTCPeerConnection.RTCPeerConnection"/><br/>-<see cref="RTCPeerConnection"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/setConfiguration"> <em>See also on MDN</em> </seealso></para>
 </remarks>

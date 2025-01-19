@@ -1,7 +1,7 @@
 <docs>
 <PerformanceScriptTimingSourceURL>
 <summary>
-The <strong><c>sourceURL</c></strong> read-only property of the <see cref="PerformanceScriptTiming"/> interface returns a string representing the URL of the script.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>sourceURL</c></strong> read-only property of the <see cref="PerformanceScriptTiming"/> interface returns a string representing the URL of the script.
 </summary>
 <remarks>
 <para>It is important to note that the reported function location will be the "entry point" of the script, that is, the top level of the stack, not any specific slow sub-function. See <see cref="PerformanceScriptTiming.SourceFunctionName"/> for more discussion around this.</para>

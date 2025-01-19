@@ -4,7 +4,7 @@
 <div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>initTextEventEvent()</c></strong> method of the <see cref="TextEvent"/> interface initializes the value of a <c>TextEvent</c> after it has been created.
 </summary>
 <remarks>
-<para>This method must be called to set the event before it is dispatched, using <see cref="EventTarget.DispatchEvent"/>.</para><blockquote><para>In general, you won&amp;apos;t create these events yourself; they are created by the browser.</para></blockquote>
+<para>This method must be called to set the event before it is dispatched, using <see cref="EventTarget.DispatchEvent"/>.</para><blockquote class="NOTE"><h5>NOTE</h5><para>In general, you won&amp;apos;t create these events yourself; they are created by the browser.</para></blockquote>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextEvent/initTextEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<see cref="Undefined"/>).</returns>

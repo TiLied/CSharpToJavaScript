@@ -1,7 +1,7 @@
 <docs>
 <MediaTrackConstraintsSuppressLocalAudioPlayback>
 <summary>
-The <see cref="MediaTrackConstraints"/> dictionary's <strong><c>suppressLocalAudioPlayback</c></strong> property is a <see href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackConstraints#constrainboolean"><c>ConstrainBoolean</c></see> describing the requested or mandatory constraints placed upon the value of the <see cref="MediaTrackSettings.SuppressLocalAudioPlayback"/> constrainable property. This property controls whether the audio playing in a tab will continue to be played out of a user's local speakers when the tab is captured.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <see cref="MediaTrackConstraints"/> dictionary's <strong><c>suppressLocalAudioPlayback</c></strong> property is a <see href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackConstraints#constrainboolean"><c>ConstrainBoolean</c></see> describing the requested or mandatory constraints placed upon the value of the <see cref="MediaTrackSettings.SuppressLocalAudioPlayback"/> constrainable property. This property controls whether the audio playing in a tab will continue to be played out of a user's local speakers when the tab is captured.
 </summary>
 <remarks>
 <para>If needed, you can determine whether or not this constraint is supported by checking<br/>the value of <see cref="MediaTrackSupportedConstraints.SuppressLocalAudioPlayback"/> as returned<br/>by a call to <see cref="MediaDevices.GetSupportedConstraints"/>. However, typically<br/>this is unnecessary since browsers will ignore any constraints they&amp;apos;re unfamiliar with.</para>

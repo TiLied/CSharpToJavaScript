@@ -8,6 +8,6 @@ The <see cref="HTMLMediaElement"/><br/><strong><c>play()</c></strong> method att
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Media">Web media technologies</see><br/>-Learning: <see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio">HTML video and audio</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Media/Autoplay_guide">Autoplay guide for media and Web Audio APIs</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/play"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns>A <see cref="Promise"/> which is resolved when playback has been started, or is<br/>rejected if for any reason playback cannot be started.<blockquote>Browsers released before 2019 may not return a value from<br/><c>play()</c>.</blockquote></returns>
+<returns>A <see cref="Promise"/> which is resolved when playback has been started, or is<br/>rejected if for any reason playback cannot be started.<blockquote class="NOTE"><h5>NOTE</h5>Browsers released before 2019 may not return a value from<br/><c>play()</c>.</blockquote></returns>
 </HTMLMediaElementPlay>
 </docs>

@@ -1,7 +1,7 @@
 <docs>
 <CloseWatcherClose>
 <summary>
-The <strong><c>close()</c></strong> method of the <see cref="CloseWatcher"/> interface lets you skip any logic in the <c>cancel</c> event handler and immediately fire the <c>close</c> event. It then deactivates the close watcher as if <c>destroy()</c> was called.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>close()</c></strong> method of the <see cref="CloseWatcher"/> interface lets you skip any logic in the <c>cancel</c> event handler and immediately fire the <c>close</c> event. It then deactivates the close watcher as if <c>destroy()</c> was called.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CloseWatcher/close"> <em>See also on MDN</em> </seealso></para>

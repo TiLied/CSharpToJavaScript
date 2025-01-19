@@ -1,7 +1,7 @@
 <docs>
 <HTMLFencedFrameElementHeight>
 <summary>
-The <strong><c>height</c></strong> property of the <see cref="HTMLFencedFrameElement"/> gets and sets the value of the corresponding {{htmlelement("fencedframe")}} <c>height</c> attribute, which specifies the height of the element.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>height</c></strong> property of the <see cref="HTMLFencedFrameElement"/> gets and sets the value of the corresponding {{htmlelement("fencedframe")}} <c>height</c> attribute, which specifies the height of the element.
 </summary>
 <remarks>
 <para>The size of the embedded content may be set by internal <c>contentWidth</c> and <c>contentHeight</c> properties of the <c>&amp;lt;fencedframe&amp;gt;</c>'s <see cref="HTMLFencedFrameElement.Config"/> object. In such cases, changing the <see cref="HTMLFencedFrameElement.Width"/> or <c>height</c> of the <c>&amp;lt;fencedframe&amp;gt;</c> will change the size of the embedded container on the page, but the document inside the container will be visually scaled to fit. The reported width and height of the embedded document (i.e. <see cref="Window.InnerWidth"/> and <see cref="Window.InnerHeight"/>) will be unchanged.</para>

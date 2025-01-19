@@ -6,6 +6,6 @@
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/writable"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value><c>true</c> if the connection described by this candidate pair has received acknowledgement of receipt (ACK) for at least one ICE request <strong>and</strong> that <see href="https://developer.mozilla.org/en-US/docs/Glossary/STUN">STUN</see> consent hasn't expired.<blockquote>This property is deprecated.<br/>You can instead determine whether or not an incoming ICE request is available to read by checking to see if <see cref="RTCIceCandidatePairStats.ResponsesReceived"/> is greater than 0, and that the time specified by <see cref="RTCIceCandidatePairStats.ConsentExpiredTimestamp"/> has not passed:</blockquote></value>
+<value><c>true</c> if the connection described by this candidate pair has received acknowledgement of receipt (ACK) for at least one ICE request <strong>and</strong> that <see href="https://developer.mozilla.org/en-US/docs/Glossary/STUN">STUN</see> consent hasn't expired.<blockquote class="NOTE"><h5>NOTE</h5>This property is deprecated.<br/>You can instead determine whether or not an incoming ICE request is available to read by checking to see if <see cref="RTCIceCandidatePairStats.ResponsesReceived"/> is greater than 0, and that the time specified by <see cref="RTCIceCandidatePairStats.ConsentExpiredTimestamp"/> has not passed:</blockquote></value>
 </RTCIceCandidatePairStatsWritable>
 </docs>

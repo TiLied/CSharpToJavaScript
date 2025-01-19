@@ -4,7 +4,7 @@
 The <strong><c>KeyboardEvent.metaKey</c></strong> read-only property returning a<br/>boolean value that indicates if the &amp;lt;kbd&amp;gt;Meta&amp;lt;/kbd&amp;gt; key was pressed<br/>(<c>true</c>) or not (<c>false</c>) when the event occurred. Some operating<br/>systems may intercept the key so it is never detected.
 </summary>
 <remarks>
-<blockquote><para>On Macintosh keyboards, this is the &amp;lt;kbd&amp;gt;⌘ Command&amp;lt;/kbd&amp;gt; key.</para></blockquote><blockquote><para>Before Firefox 118, the &amp;lt;kbd&amp;gt;⊞ Windows&amp;lt;/kbd&amp;gt; key was handled<br/>as an &amp;quot;OS&amp;quot; key rather than the &amp;quot;Meta&amp;quot; key. <c>KeyboardEvent.metaKey</c> was<br/><c>false</c> when the &amp;lt;kbd&amp;gt;⊞ Windows&amp;lt;/kbd&amp;gt; key was pressed.</para></blockquote>
+<blockquote class="NOTE"><h5>NOTE</h5><para>On Macintosh keyboards, this is the &amp;lt;kbd&amp;gt;⌘ Command&amp;lt;/kbd&amp;gt; key.</para></blockquote><blockquote class="NOTE"><h5>NOTE</h5><para>Before Firefox 118, the &amp;lt;kbd&amp;gt;⊞ Windows&amp;lt;/kbd&amp;gt; key was handled<br/>as an &amp;quot;OS&amp;quot; key rather than the &amp;quot;Meta&amp;quot; key. <c>KeyboardEvent.metaKey</c> was<br/><c>false</c> when the &amp;lt;kbd&amp;gt;⊞ Windows&amp;lt;/kbd&amp;gt; key was pressed.</para></blockquote>
 <para>-<see cref="KeyboardEvent"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/metaKey"> <em>See also on MDN</em> </seealso></para>
 </remarks>

@@ -1,7 +1,7 @@
 <docs>
 <GPUTextureDimension>
 <summary>
-The <strong><c>dimension</c></strong> read-only property of the<br/><see cref="GPUTexture"/> interface represents the dimension of the set of texels for each <c>GPUTexture</c> subresource.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>dimension</c></strong> read-only property of the<br/><see cref="GPUTexture"/> interface represents the dimension of the set of texels for each <c>GPUTexture</c> subresource.
 </summary>
 <remarks>
 <para>This is set via the <c>dimension</c> property in the descriptor object passed into the originating <see cref="GPUDevice.CreateTexture"/> call, which defaults to <c>&amp;quot;2d&amp;quot;</c> if omitted.</para>

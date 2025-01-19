@@ -1,7 +1,7 @@
 <docs>
 <BeforeInstallPromptEventPrompt>
 <summary>
-The <strong><c>prompt()</c></strong> method of the <see cref="BeforeInstallPromptEvent"/> interface allows a developer to show the<br/>install prompt at a time of their own choosing. Typically this will be called in the event handler for the app&amp;apos;s custom install UI.
+<div class="CAUTION"><h5>CAUTION</h5> <strong>Non-standard</strong></div> The <strong><c>prompt()</c></strong> method of the <see cref="BeforeInstallPromptEvent"/> interface allows a developer to show the<br/>install prompt at a time of their own choosing. Typically this will be called in the event handler for the app&amp;apos;s custom install UI.
 </summary>
 <remarks>
 <para>This method must be called in the event handler for a user action (such as a button click) and may only be called once on a given <c>BeforeInstallPromptEvent</c> instance.</para>

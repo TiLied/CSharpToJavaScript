@@ -1,7 +1,7 @@
 <docs>
 <AudioContextSinkId>
 <summary>
-The <strong><c>sinkId</c></strong> read-only property of the<br/><see cref="AudioContext"/> interface returns the sink ID of the current output audio device.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>sinkId</c></strong> read-only property of the<br/><see cref="AudioContext"/> interface returns the sink ID of the current output audio device.
 </summary>
 <remarks>
 <para>-<see href="https://set-sink-id.glitch.me/">SetSinkId test example</see><br/>-<see href="https://developer.chrome.com/blog/audiocontext-setsinkid/">Change the destination output device in Web Audio</see><br/>-<see cref="AudioContext.SetSinkId"/><br/>-<see cref="AudioContext/sinkchange_event"/><br/></para>

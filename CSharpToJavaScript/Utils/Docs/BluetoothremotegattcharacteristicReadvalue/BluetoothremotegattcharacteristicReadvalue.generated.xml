@@ -1,7 +1,7 @@
 <docs>
 <BluetoothRemoteGATTCharacteristicReadValue>
 <summary>
-The <strong><c>BluetoothRemoteGATTCharacteristic.readValue()</c></strong> method<br/>returns a <see cref="Promise"/> that resolves to a <see cref="DataView"/> holding a<br/>duplicate of the <c>value</c> property if it is available and supported. Otherwise<br/>it throws an error.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>BluetoothRemoteGATTCharacteristic.readValue()</c></strong> method<br/>returns a <see cref="Promise"/> that resolves to a <see cref="DataView"/> holding a<br/>duplicate of the <c>value</c> property if it is available and supported. Otherwise<br/>it throws an error.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/readValue"> <em>See also on MDN</em> </seealso></para>

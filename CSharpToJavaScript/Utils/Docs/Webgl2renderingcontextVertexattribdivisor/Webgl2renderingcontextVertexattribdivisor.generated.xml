@@ -4,7 +4,7 @@
 The <strong><c>WebGL2RenderingContext.vertexAttribDivisor()</c></strong> method<br/>of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> modifies the rate at<br/>which generic vertex attributes advance when rendering multiple instances of primitives<br/>with <see cref="WebGL2RenderingContext.DrawArraysInstanced"/> and <see cref="WebGL2RenderingContext.DrawElementsInstanced"/>.
 </summary>
 <remarks>
-<blockquote><para>When using {{domxref(&amp;quot;WebGLRenderingContext&amp;quot;, &amp;quot;WebGL 1&amp;quot;, &amp;quot;&amp;quot;, 1)}}, the <see cref="ANGLE_instanced_arrays"/> extension can provide this method,<br/>too.</para></blockquote>
+<blockquote class="NOTE"><h5>NOTE</h5><para>When using {{domxref(&amp;quot;WebGLRenderingContext&amp;quot;, &amp;quot;WebGL 1&amp;quot;, &amp;quot;&amp;quot;, 1)}}, the <see cref="ANGLE_instanced_arrays"/> extension can provide this method,<br/>too.</para></blockquote>
 <para>-<see cref="ANGLE_instanced_arrays.VertexAttribDivisorANGLE"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/vertexAttribDivisor"> <em>See also on MDN</em> </seealso></para>
 </remarks>

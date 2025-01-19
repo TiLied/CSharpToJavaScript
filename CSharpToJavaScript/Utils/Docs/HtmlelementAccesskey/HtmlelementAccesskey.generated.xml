@@ -4,7 +4,7 @@
 The <strong><c>HTMLElement.accessKey</c></strong> property sets the keystroke which a user can press to jump to a given element.
 </summary>
 <remarks>
-<blockquote><para>The <c>HTMLElement.accessKey</c> property is seldom used because of its multiple conflicts with already present key bindings in browsers. To work around this, browsers implement accesskey behavior if the keys are pressed with other &amp;quot;qualifying&amp;quot; keys (such as &amp;lt;kbd&amp;gt;Alt&amp;lt;/kbd&amp;gt; + accesskey).</para></blockquote>
+<blockquote class="NOTE"><h5>NOTE</h5><para>The <c>HTMLElement.accessKey</c> property is seldom used because of its multiple conflicts with already present key bindings in browsers. To work around this, browsers implement accesskey behavior if the keys are pressed with other &amp;quot;qualifying&amp;quot; keys (such as &amp;lt;kbd&amp;gt;Alt&amp;lt;/kbd&amp;gt; + accesskey).</para></blockquote>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/accesskey">HTML global attribute: accesskey</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/accessKey"> <em>See also on MDN</em> </seealso></para>
 </remarks>

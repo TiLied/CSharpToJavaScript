@@ -1,7 +1,7 @@
 <docs>
 <XRViewIsFirstPersonObserver>
 <summary>
-The <see cref="XRView"/> interface's read-only <strong><c>isFirstPersonObserver</c></strong> property is a boolean indicating if the <c>XRView</c> is a first-person observer view.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <see cref="XRView"/> interface's read-only <strong><c>isFirstPersonObserver</c></strong> property is a boolean indicating if the <c>XRView</c> is a first-person observer view.
 </summary>
 <remarks>
 <para>To create video recordings of AR device cameras, you can&amp;apos;t simply use one of the rendered eyes, as there often will be a physical offset. Some devices expose a secondary view, the first-person observer view, which has an <c>eye</c> of <c>none</c>.</para><para>To receive a first-person observer view, you need to enable the "secondary-views" feature descriptor explicitly (typically as an optional feature). See <see cref="XRSystem.RequestSession"/> for details.</para><para>The <c>isFirstPersonObserver</c> property then allows you to check which secondary view is a first-person observer view.</para>

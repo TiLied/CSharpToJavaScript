@@ -4,7 +4,7 @@
 The <strong><c>Document.contentType</c></strong> read-only property returns the<br/>MIME type that the document is being rendered as. This may come from HTTP headers or<br/>other sources of MIME information, and might be affected by automatic type conversions<br/>performed by either the browser or extensions.
 </summary>
 <remarks>
-<blockquote><para>This property is unaffected by <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta">meta</see><br/>elements.</para></blockquote>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This property is unaffected by <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta">meta</see><br/>elements.</para></blockquote>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Document/contentType"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <value><c>contentType</c> is a read-only property.</value>

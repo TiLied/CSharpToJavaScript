@@ -1,7 +1,7 @@
 <docs>
 <GPUBufferUsage>
 <summary>
-The <strong><c>usage</c></strong> read-only property of the<br/><see cref="GPUBuffer"/> interface contains the {{glossary("bitwise flags")}} representing the allowed usages of the <c>GPUBuffer</c>.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>usage</c></strong> read-only property of the<br/><see cref="GPUBuffer"/> interface contains the {{glossary("bitwise flags")}} representing the allowed usages of the <c>GPUBuffer</c>.
 </summary>
 <remarks>
 <para><c>usage</c> is set via the <c>usage</c> property in the descriptor object passed into the originating <see cref="GPUDevice.CreateBuffer"/> call.</para>

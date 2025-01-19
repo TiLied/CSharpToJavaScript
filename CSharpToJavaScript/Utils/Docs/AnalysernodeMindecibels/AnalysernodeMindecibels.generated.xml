@@ -7,6 +7,6 @@ The <strong><c>minDecibels</c></strong> property of the <see cref="AnalyserNode"
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode/minDecibels"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A double, representing the minimum <see href="https://en.wikipedia.org/wiki/Decibel">decibel</see> value for scaling the FFT analysis data, where <c>0</c> dB is the loudest possible sound, <c>-10</c> dB is a 10th of that, etc. The default value is <c>-100</c> dB.When getting data from <c>getByteFrequencyData()</c>, any frequencies with an amplitude of <c>minDecibels</c> or lower will be returned as <c>0</c>.<blockquote>If a value greater than <c>AnalyserNode.maxDecibels</c> is set, an <c>INDEX_SIZE_ERR</c> exception is thrown.</blockquote></value>
+<value>A double, representing the minimum <see href="https://en.wikipedia.org/wiki/Decibel">decibel</see> value for scaling the FFT analysis data, where <c>0</c> dB is the loudest possible sound, <c>-10</c> dB is a 10th of that, etc. The default value is <c>-100</c> dB.When getting data from <c>getByteFrequencyData()</c>, any frequencies with an amplitude of <c>minDecibels</c> or lower will be returned as <c>0</c>.<blockquote class="NOTE"><h5>NOTE</h5>If a value greater than <c>AnalyserNode.maxDecibels</c> is set, an <c>INDEX_SIZE_ERR</c> exception is thrown.</blockquote></value>
 </AnalyserNodeMinDecibels>
 </docs>

@@ -1,7 +1,7 @@
 <docs>
 <RTCIceCandidatePairStatsConsentRequestsSent>
 <summary>
-The <strong><c>consentRequestsSent</c></strong> property of the <see cref="RTCIceCandidatePairStats"/> dictionary indicates the total number of consent requests sent on this candidate pair.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>consentRequestsSent</c></strong> property of the <see cref="RTCIceCandidatePairStats"/> dictionary indicates the total number of consent requests sent on this candidate pair.
 </summary>
 <remarks>
 <para>If either or both of the peers in the pair access the internet via <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Protocols#nat">Network Address Translation</see> (NAT), the other peer will need to regularly send a <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Protocols#stun">Session Traversal Utilities for NAT (STUN)</see> request to the NAT firewall to ask for consent to allow traffic to flow.<br/>This property counts the number of requests.<br/>{{rfc("7675")}} has more information about NAT and consent.</para>

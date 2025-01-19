@@ -1,7 +1,7 @@
 <docs>
 <NavigationDestinationId>
 <summary>
-The <strong><c>id</c></strong> read-only property of the<br/><see cref="NavigationDestination"/> interface returns the <see cref="NavigationHistoryEntry.Id"/> value of the destination <see cref="NavigationHistoryEntry"/> if the <see cref="NavigateEvent.NavigationType"/> is <c>traverse</c>, or an empty string otherwise.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>id</c></strong> read-only property of the<br/><see cref="NavigationDestination"/> interface returns the <see cref="NavigationHistoryEntry.Id"/> value of the destination <see cref="NavigationHistoryEntry"/> if the <see cref="NavigateEvent.NavigationType"/> is <c>traverse</c>, or an empty string otherwise.
 </summary>
 <remarks>
 <para>The <c>id</c> is a unique, UA-generated value that always represents the history entry, useful to correlate a history entry with an external resource such as a storage cache.</para>

@@ -1,7 +1,7 @@
 <docs>
 <XRRayMatrix>
 <summary>
-The <strong>read-only</strong> <strong><c>matrix</c></strong> property of the <see cref="XRRay"/> interface is a transform that can be used to position objects along the <c>XRRay</c>. This is a 4 by 4 matrix given as a 16 element <see cref="Float32Array"/> in column major order.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong>read-only</strong> <strong><c>matrix</c></strong> property of the <see cref="XRRay"/> interface is a transform that can be used to position objects along the <c>XRRay</c>. This is a 4 by 4 matrix given as a 16 element <see cref="Float32Array"/> in column major order.
 </summary>
 <remarks>
 <para>The transform from a ray originates at [0, 0, 0] and extends down the negative z-axis to the ray described by the <c>XRRay</c>&amp;apos;s <c>origin</c> and <c>direction</c>.</para>

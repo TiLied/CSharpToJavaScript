@@ -1,7 +1,7 @@
 <docs>
 <WindowLaunchQueue>
 <summary>
-The <c>launchQueue</c> read-only property of the <see cref="Window"/> interface provides access to the <see cref="LaunchQueue"/> class, which allows custom launch navigation handling to be implemented in a <see href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps">progressive web app</see> (PWA), with the handling context signified by the <see href="https://developer.mozilla.org/en-US/docs/Web/Manifest/launch_handler"><c>launch_handler</c></see> manifest field <c>client_mode</c> value.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <c>launchQueue</c> read-only property of the <see cref="Window"/> interface provides access to the <see cref="LaunchQueue"/> class, which allows custom launch navigation handling to be implemented in a <see href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps">progressive web app</see> (PWA), with the handling context signified by the <see href="https://developer.mozilla.org/en-US/docs/Web/Manifest/launch_handler"><c>launch_handler</c></see> manifest field <c>client_mode</c> value.
 </summary>
 <remarks>
 <para>The custom launch navigation handling functionality is controlled by the properties of the <see cref="LaunchParams"/> object passed into the <see cref="LaunchQueue.SetConsumer"/> callback function.</para>

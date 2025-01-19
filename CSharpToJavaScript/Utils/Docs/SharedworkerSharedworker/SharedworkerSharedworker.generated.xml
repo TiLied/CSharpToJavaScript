@@ -4,7 +4,7 @@
 The <strong><c>SharedWorker()</c></strong> constructor creates a<br/><see cref="SharedWorker"/> object that executes the script at the specified URL. This<br/>script must obey the <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy">same-origin policy</see>.
 </summary>
 <remarks>
-<blockquote><para>There is disagreement among browser manufacturers about<br/>whether a data URL is of the same origin or not. Although Firefox 10.0<br/>and later accept data URLs, that&amp;apos;s not the case in all other<br/>browsers.</para></blockquote>
+<blockquote class="NOTE"><h5>NOTE</h5><para>There is disagreement among browser manufacturers about<br/>whether a data URL is of the same origin or not. Although Firefox 10.0<br/>and later accept data URLs, that&amp;apos;s not the case in all other<br/>browsers.</para></blockquote>
 <para>-The <see cref="SharedWorker"/> interface it belongs to.<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SharedWorker/SharedWorker"> <em>See also on MDN</em> </seealso></para>
 </remarks>

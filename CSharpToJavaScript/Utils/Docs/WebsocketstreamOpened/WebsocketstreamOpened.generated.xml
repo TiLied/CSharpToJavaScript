@@ -1,7 +1,7 @@
 <docs>
 <WebSocketStreamOpened>
 <summary>
-The <strong><c>opened</c></strong> read-only property of the<br/><see cref="WebSocketStream"/> interface returns a {{jsxref("Promise")}} that fulfills with an object once the socket connection is successfully opened. Among other features, this object contains a <see cref="ReadableStream"/> and a <see cref="WritableStream"/> instance for receiving and sending data on the connection.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>opened</c></strong> read-only property of the<br/><see cref="WebSocketStream"/> interface returns a {{jsxref("Promise")}} that fulfills with an object once the socket connection is successfully opened. Among other features, this object contains a <see cref="ReadableStream"/> and a <see cref="WritableStream"/> instance for receiving and sending data on the connection.
 </summary>
 <remarks>
 <para>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/websocketstream">WebSocketStream: integrating streams with the WebSocket API</see>, developer.chrome.com (2020)<br/></para>

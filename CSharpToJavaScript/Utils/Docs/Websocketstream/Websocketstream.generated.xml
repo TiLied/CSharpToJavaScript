@@ -1,7 +1,7 @@
 <docs>
 <WebSocketStream>
 <summary>
-The <strong><c>WebSocketStream</c></strong> interface of the {{domxref(&amp;quot;WebSockets API&amp;quot;, &amp;quot;WebSockets API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} is a promise-based API for connecting to a WebSocket server. It uses <see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API">streams</see> to send and receive data on the connection, and can therefore take advantage of stream <see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Concepts#backpressure">backpressure</see> automatically, regulating the speed of reading or writing to avoid bottlenecks in the application.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>WebSocketStream</c></strong> interface of the {{domxref(&amp;quot;WebSockets API&amp;quot;, &amp;quot;WebSockets API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} is a promise-based API for connecting to a WebSocket server. It uses <see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API">streams</see> to send and receive data on the connection, and can therefore take advantage of stream <see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Concepts#backpressure">backpressure</see> automatically, regulating the speed of reading or writing to avoid bottlenecks in the application.
 </summary>
 <remarks>
 <para></para>

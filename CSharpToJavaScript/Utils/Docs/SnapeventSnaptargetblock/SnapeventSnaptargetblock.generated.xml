@@ -1,7 +1,7 @@
 <docs>
 <SnapEventSnapTargetBlock>
 <summary>
-The <strong><c>snapTargetBlock</c></strong> read-only property of the<br/><see cref="SnapEvent"/> interface returns a reference to the element snapped to in the block direction when the event fired.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>snapTargetBlock</c></strong> read-only property of the<br/><see cref="SnapEvent"/> interface returns a reference to the element snapped to in the block direction when the event fired.
 </summary>
 <remarks>
 <para>Specifically:</para><para>The property values available on <c>SnapEvent</c> correspond directly to the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-snap-type">scroll-snap-type</see> CSS property set on the scroll container. <c>snapTargetBlock</c> only returns an element reference if the snap axis is specified as <c>block</c> (or a physical axis value that equates to <c>block</c> in the current writing mode) or <c>both</c>.</para>

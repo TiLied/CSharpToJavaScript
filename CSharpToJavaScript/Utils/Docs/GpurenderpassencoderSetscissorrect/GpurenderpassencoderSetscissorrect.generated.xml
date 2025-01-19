@@ -1,7 +1,7 @@
 <docs>
 <GPURenderPassEncoderSetScissorRect>
 <summary>
-The <strong><c>setScissorRect()</c></strong> method of the<br/><see cref="GPURenderPassEncoder"/> interface sets the scissor rectangle used during the rasterization stage. After transformation into viewport coordinates any fragments that fall outside the scissor rectangle will be discarded.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>setScissorRect()</c></strong> method of the<br/><see cref="GPURenderPassEncoder"/> interface sets the scissor rectangle used during the rasterization stage. After transformation into viewport coordinates any fragments that fall outside the scissor rectangle will be discarded.
 </summary>
 <remarks>
 <para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>

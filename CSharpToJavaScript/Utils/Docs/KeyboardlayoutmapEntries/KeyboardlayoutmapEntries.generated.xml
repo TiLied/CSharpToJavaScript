@@ -1,7 +1,7 @@
 <docs>
 <KeyboardLayoutMapEntries>
 <summary>
-The <strong><c>entries()</c></strong> method of the <see cref="KeyboardLayoutMap"/> interface returns a new <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator">Iterator</see> object that contains the key/value pairs, in the same order as that provided by a <see cref="Statements/forIn"/> loop (the difference being that a <c>for-in</c> loop enumerates properties in the prototype chain as well).
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>entries()</c></strong> method of the <see cref="KeyboardLayoutMap"/> interface returns a new <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator">Iterator</see> object that contains the key/value pairs, in the same order as that provided by a <see cref="Statements/forIn"/> loop (the difference being that a <c>for-in</c> loop enumerates properties in the prototype chain as well).
 </summary>
 <remarks>
 <para>The method is otherwise the same as <see cref="MapPrototypeEntries"/>.</para>

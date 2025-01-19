@@ -1,7 +1,7 @@
 <docs>
 <WorkerNavigatorHid>
 <summary>
-The <strong><c>WorkerNavigator.hid</c></strong><br/>read-only property returns an <see cref="HID"/> object providing methods for accessing HID device connections and events that fire when the user agent connects to or disconnects from a device.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>WorkerNavigator.hid</c></strong><br/>read-only property returns an <see cref="HID"/> object providing methods for accessing HID device connections and events that fire when the user agent connects to or disconnects from a device.
 </summary>
 <remarks>
 <para>Where a defined <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Permissions_Policy">Permissions Policy</see> blocks WebHID usage, the <c>WorkerNavigator.hid</c> property will not be available.</para>

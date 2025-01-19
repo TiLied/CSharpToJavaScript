@@ -8,6 +8,6 @@ The <strong><c>fractionLost</c></strong> property of the <see cref="RTCRemoteInb
 <para>-rfc("3550","SR: Sender Report RTCP Packet", "6.4.1")<br/>-rfc("3550","RR: Receiver Report RTCP Packet", "6.4.2")<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRemoteInboundRtpStreamStats/fractionLost"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A number giving the fraction packet loss in the last reporting interval, multiplied by 256.<br/>The value is 0 if the calculated packet loss is negative.<blockquote>The value comes from the 8-bit <c>fraction lost</c> field of the last Sender Report (SR) or Receiver Report (RR) RTCP packet.<br/>The algorithm for calculating the value is defined in <see href="https://datatracker.ietf.org/doc/html/rfc3550#appendix-A.3">RFC 3550, Appendix A.3: Determining Number of Packets Expected and Lost</see>.</blockquote></value>
+<value>A number giving the fraction packet loss in the last reporting interval, multiplied by 256.<br/>The value is 0 if the calculated packet loss is negative.<blockquote class="NOTE"><h5>NOTE</h5>The value comes from the 8-bit <c>fraction lost</c> field of the last Sender Report (SR) or Receiver Report (RR) RTCP packet.<br/>The algorithm for calculating the value is defined in <see href="https://datatracker.ietf.org/doc/html/rfc3550#appendix-A.3">RFC 3550, Appendix A.3: Determining Number of Packets Expected and Lost</see>.</blockquote></value>
 </RTCRemoteInboundRtpStreamStatsFractionLost>
 </docs>

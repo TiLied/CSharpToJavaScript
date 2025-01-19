@@ -1,7 +1,7 @@
 <docs>
 <GPURenderPassEncoderBeginOcclusionQuery>
 <summary>
-The <strong><c>beginOcclusionQuery()</c></strong> method of the<br/><see cref="GPURenderPassEncoder"/> interface begins an occlusion query at the specified index of the relevant <see cref="GPUQuerySet"/> (provided as the value of the <c>occlusionQuerySet</c> descriptor property when invoking <see cref="GPUCommandEncoder.BeginRenderPass"/> to run the render pass).
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>beginOcclusionQuery()</c></strong> method of the<br/><see cref="GPURenderPassEncoder"/> interface begins an occlusion query at the specified index of the relevant <see cref="GPUQuerySet"/> (provided as the value of the <c>occlusionQuerySet</c> descriptor property when invoking <see cref="GPUCommandEncoder.BeginRenderPass"/> to run the render pass).
 </summary>
 <remarks>
 <para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>

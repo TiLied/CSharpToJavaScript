@@ -1,7 +1,7 @@
 <docs>
 <CommandEventSource>
 <summary>
-The <strong><c>source</c></strong> read-only property of the <see cref="CommandEvent"/> interface returns an <see cref="EventTarget"/> representing the control that invoked the given command.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>source</c></strong> read-only property of the <see cref="CommandEvent"/> interface returns an <see cref="EventTarget"/> representing the control that invoked the given command.
 </summary>
 <remarks>
 <para>-{{domxref(&amp;quot;Invoker Commands API&amp;quot;, &amp;quot;Invoker Commands API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see cref="HTMLButtonElement.Command"/><br/>-<see cref="HTMLButtonElement.CommandForElement"/><br/></para>

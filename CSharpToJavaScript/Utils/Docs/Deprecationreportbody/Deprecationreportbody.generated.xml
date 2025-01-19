@@ -1,7 +1,7 @@
 <docs>
 <DeprecationReportBody>
 <summary>
-The <c>DeprecationReportBody</c> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Reporting_API">Reporting API</see> represents the body of a deprecation report.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <c>DeprecationReportBody</c> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Reporting_API">Reporting API</see> represents the body of a deprecation report.
 </summary>
 <remarks>
 <para>A deprecation report is generated when a deprecated feature (for example a deprecated API method) is used on a document being observed by a <see cref="ReportingObserver"/>. In addition to the support of this API, receiving useful deprecation warnings relies on browser vendors adding these warnings for deprecated features.</para><para></para>

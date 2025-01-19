@@ -4,7 +4,7 @@
 The <strong><c>ariaChecked</c></strong> property of the <see cref="Element"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked"><c>aria-checked</c></see> attribute, which indicates the current &amp;quot;checked&amp;quot; state of checkboxes, radio buttons, and other widgets that have a checked state.
 </summary>
 <remarks>
-<blockquote><para>Where possible use an HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">input</see> element with <c>type=&amp;quot;checkbox&amp;quot;</c> as this element has built in semantics and does not require ARIA attributes.</para></blockquote>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Where possible use an HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">input</see> element with <c>type=&amp;quot;checkbox&amp;quot;</c> as this element has built in semantics and does not require ARIA attributes.</para></blockquote>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role">ARIA: checkbox role</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/ariaChecked"> <em>See also on MDN</em> </seealso></para>
 </remarks>

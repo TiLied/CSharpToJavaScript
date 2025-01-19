@@ -6,6 +6,6 @@ The <strong><c>ariaHasPopup</c></strong> property of the <see cref="Element"/> i
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Element/ariaHasPopup"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<value>A string with one of the following values:<blockquote>Be aware that support for the different <c>aria-haspopup</c> values can vary depending on the element to which the attribute is specified. Ensure that when using <c>aria-haspopup</c>, it is done in accordance to the ARIA specification, and that it behaves as expected when testing with necessary browsers and assistive technologies.</blockquote></value>
+<value>A string with one of the following values:<blockquote class="WARNING"><h5>WARNING</h5>Be aware that support for the different <c>aria-haspopup</c> values can vary depending on the element to which the attribute is specified. Ensure that when using <c>aria-haspopup</c>, it is done in accordance to the ARIA specification, and that it behaves as expected when testing with necessary browsers and assistive technologies.</blockquote></value>
 </ElementAriaHasPopup>
 </docs>

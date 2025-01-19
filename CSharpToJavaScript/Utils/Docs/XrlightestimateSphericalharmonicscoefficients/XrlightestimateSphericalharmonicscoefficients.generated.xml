@@ -1,7 +1,7 @@
 <docs>
 <XRLightEstimateSphericalHarmonicsCoefficients>
 <summary>
-The <strong>read-only</strong> <strong><c>sphericalHarmonicsCoefficients</c></strong> property of the <see cref="XRLightEstimate"/> interface returns a {{jsxref("Float32Array")}} containing 9 spherical harmonics coefficients.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong>read-only</strong> <strong><c>sphericalHarmonicsCoefficients</c></strong> property of the <see cref="XRLightEstimate"/> interface returns a {{jsxref("Float32Array")}} containing 9 spherical harmonics coefficients.
 </summary>
 <remarks>
 <para>Spherical harmonic lighting is a technique that uses spherical functions instead of standard lighting equations. See <see href="https://en.wikipedia.org/wiki/Spherical_harmonic_lighting">Wikipedia</see> for more information.</para>

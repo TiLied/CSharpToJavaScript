@@ -1,7 +1,7 @@
 <docs>
 <NavigateEventHasUAVisualTransition>
 <summary>
-The <strong><c>hasUAVisualTransition</c></strong> read-only property of the <see cref="NavigateEvent"/> interface returns <c>true</c> if the user agent performed a visual transition for this navigation before dispatching this event, or <c>false</c> otherwise.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>hasUAVisualTransition</c></strong> read-only property of the <see cref="NavigateEvent"/> interface returns <c>true</c> if the user agent performed a visual transition for this navigation before dispatching this event, or <c>false</c> otherwise.
 </summary>
 <remarks>
 <para>User agents may provide a built-in visual transition when executing site navigations. If the site author also adds a visual transition, user agent and author transitions may conflict and confuse a visitor. The property lets you detect whether a UA transition was provided so that you can skip author transitions for a better user experience.</para>

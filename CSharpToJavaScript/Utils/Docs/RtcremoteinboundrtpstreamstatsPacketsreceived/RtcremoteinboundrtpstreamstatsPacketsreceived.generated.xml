@@ -1,7 +1,7 @@
 <docs>
 <RTCRemoteInboundRtpStreamStatsPacketsReceived>
 <summary>
-The <strong><c>packetsReceived</c></strong> property of the <see cref="RTCRemoteInboundRtpStreamStats"/> dictionary returns the total number of {{Glossary("RTP")}} packets received from the <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRemoteInboundRtpStreamStats/ssrc">synchronization source (SSRC)</see> of this stream by the remote endpoint, including retransmissions.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>packetsReceived</c></strong> property of the <see cref="RTCRemoteInboundRtpStreamStats"/> dictionary returns the total number of {{Glossary("RTP")}} packets received from the <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRemoteInboundRtpStreamStats/ssrc">synchronization source (SSRC)</see> of this stream by the remote endpoint, including retransmissions.
 </summary>
 <remarks>
 <para>-<see cref="RTCRemoteInboundRtpStreamStats.Ssrc"/><br/>-<see cref="RTCInboundRtpStreamStats.PacketsReceived"/><br/></para>

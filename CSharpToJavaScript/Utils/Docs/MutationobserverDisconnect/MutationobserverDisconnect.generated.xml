@@ -7,6 +7,6 @@ The <see cref="MutationObserver"/> method<br/><strong><c>disconnect()</c></stron
 <para>The observer can be reused by calling its<br/><see cref="MutationObserver.Observe"/> method again.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver/disconnect"> <em>See also on MDN</em> </seealso></para>
 </remarks>
-<returns><c>undefined</c>.<blockquote>All notifications of mutations that have already been<br/><strong>detected</strong>, but <strong>not yet reported</strong> to the observer, are discarded.<br/>To hold on to and handle the detected but unreported mutations, use<br/>the <see cref="MutationObserver.TakeRecords"/> method.</blockquote></returns>
+<returns><c>undefined</c>.<blockquote class="NOTE"><h5>NOTE</h5>All notifications of mutations that have already been<br/><strong>detected</strong>, but <strong>not yet reported</strong> to the observer, are discarded.<br/>To hold on to and handle the detected but unreported mutations, use<br/>the <see cref="MutationObserver.TakeRecords"/> method.</blockquote></returns>
 </MutationObserverDisconnect>
 </docs>

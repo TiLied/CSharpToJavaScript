@@ -1,7 +1,7 @@
 <docs>
 <CommandEvent>
 <summary>
-The <strong><c>CommandEvent</c></strong> interface represents an event notifying the user when a <see cref="HTMLButtonElement"/> element with valid <see cref="HTMLButtonElement.CommandForElement"/> and <see cref="HTMLButtonElement.Command"/> attributes is about to invoke an interactive element.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>CommandEvent</c></strong> interface represents an event notifying the user when a <see cref="HTMLButtonElement"/> element with valid <see cref="HTMLButtonElement.CommandForElement"/> and <see cref="HTMLButtonElement.Command"/> attributes is about to invoke an interactive element.
 </summary>
 <remarks>
 <para>It is the event object for the <c>HTMLElement</c> <see cref="HTMLElement.Command_event"/> event, which represents an action from an Invoker Control it is invoked (for example when it is clicked or pressed).</para><para></para>

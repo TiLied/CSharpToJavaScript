@@ -1,7 +1,7 @@
 <docs>
 <NavigationDestinationKey>
 <summary>
-The <strong><c>key</c></strong> read-only property of the<br/><see cref="NavigationDestination"/> interface returns the <see cref="NavigationHistoryEntry.Key"/> value of the destination <see cref="NavigationHistoryEntry"/> if the <see cref="NavigateEvent.NavigationType"/> is <c>traverse</c>, or an empty string otherwise.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>key</c></strong> read-only property of the<br/><see cref="NavigationDestination"/> interface returns the <see cref="NavigationHistoryEntry.Key"/> value of the destination <see cref="NavigationHistoryEntry"/> if the <see cref="NavigateEvent.NavigationType"/> is <c>traverse</c>, or an empty string otherwise.
 </summary>
 <remarks>
 <para>The <c>key</c> is a unique, UA-generated value that represents the history entry's slot in the history entries list, used to navigate to this place in the history via <see cref="Navigation.TraverseTo"/>. It will be reused by other entries that replace the entry in the list (i.e. if the <see cref="NavigateEvent.NavigationType"/> is <c>replace</c>).</para>

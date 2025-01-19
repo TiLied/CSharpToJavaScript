@@ -1,7 +1,7 @@
 <docs>
 <RTCRemoteOutboundRtpStreamStatsRoundTripTimeMeasurements>
 <summary>
-The <strong><c>roundTripTimeMeasurements</c></strong> property of the <see cref="RTCRemoteOutboundRtpStreamStats"/> dictionary is a positive integer value that represents the total number valid round of trip time measurements received for this <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRemoteOutboundRtpStreamStats/ssrc">synchronizing source (SSRC)</see>.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>roundTripTimeMeasurements</c></strong> property of the <see cref="RTCRemoteOutboundRtpStreamStats"/> dictionary is a positive integer value that represents the total number valid round of trip time measurements received for this <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRemoteOutboundRtpStreamStats/ssrc">synchronizing source (SSRC)</see>.
 </summary>
 <remarks>
 <para>The count can be used as a measure of the availability and reliability of round trip time measurement data.</para>

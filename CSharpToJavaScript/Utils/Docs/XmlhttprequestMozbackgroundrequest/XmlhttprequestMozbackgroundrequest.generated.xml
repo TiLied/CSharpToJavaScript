@@ -1,10 +1,10 @@
 <docs>
 <XMLHttpRequestMozBackgroundRequest>
 <summary>
-<blockquote>This method is not available from Web content. It requires elevated privileges to access.</blockquote>
+<blockquote class="NOTE"><h5>NOTE</h5>This method is not available from Web content. It requires elevated privileges to access.</blockquote>
 </summary>
 <remarks>
-<para><strong><c>XMLHttpRequest.mozBackgroundRequest</c></strong> is a Boolean, indicating if the object represents a background service request. If <c>true</c>, no load group is associated with the request, with security dialogs prevented from being shown to the user.</para><para>In cases in where a security dialog (such as authentication or a bad certificate notification) would normally be shown, this request fails instead.</para><blockquote><para>This property must be set before calling <c>open()</c>.</para></blockquote>
+<para><strong><c>XMLHttpRequest.mozBackgroundRequest</c></strong> is a Boolean, indicating if the object represents a background service request. If <c>true</c>, no load group is associated with the request, with security dialogs prevented from being shown to the user.</para><para>In cases in where a security dialog (such as authentication or a bad certificate notification) would normally be shown, this request fails instead.</para><blockquote class="NOTE"><h5>NOTE</h5><para>This property must be set before calling <c>open()</c>.</para></blockquote>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/mozBackgroundRequest"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </XMLHttpRequestMozBackgroundRequest>

@@ -1,7 +1,7 @@
 <docs>
 <NavigationCanGoBack>
 <summary>
-The <strong><c>canGoBack</c></strong> read-only property of the<br/><see cref="Navigation"/> interface returns <c>true</c><br/>if it is possible to navigate backwards in the navigation history<br/>(i.e. the <see cref="Navigation.CurrentEntry"/> is<br/>not the first one in the history entry list),<br/>and <c>false</c> if it is not.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>canGoBack</c></strong> read-only property of the<br/><see cref="Navigation"/> interface returns <c>true</c><br/>if it is possible to navigate backwards in the navigation history<br/>(i.e. the <see cref="Navigation.CurrentEntry"/> is<br/>not the first one in the history entry list),<br/>and <c>false</c> if it is not.
 </summary>
 <remarks>
 <para>-<see href="https://developer.chrome.com/docs/web-platform/navigation-api/">Modern client-side routing: the Navigation API</see><br/>-<see href="https://github.com/WICG/navigation-api/blob/main/README.md">Navigation API explainer</see><br/>-Domenic Denicola&amp;apos;s <see href="https://gigantic-honored-octagon.glitch.me/">Navigation API live demo</see><br/></para>

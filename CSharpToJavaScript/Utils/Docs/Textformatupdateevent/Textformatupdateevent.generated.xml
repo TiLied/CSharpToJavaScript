@@ -1,7 +1,7 @@
 <docs>
 <TextFormatUpdateEvent>
 <summary>
-The <strong><c>TextFormatUpdateEvent</c></strong> interface is a <see href="https://developer.mozilla.org/en-US/docs/Web/API/Event">DOM event</see> that represents a list of text formats that an {{glossary("Input Method Editor")}} (IME) window wants to apply to the text being composed in an editable region that's attached to an <see cref="EditContext"/> instance.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>TextFormatUpdateEvent</c></strong> interface is a <see href="https://developer.mozilla.org/en-US/docs/Web/API/Event">DOM event</see> that represents a list of text formats that an {{glossary("Input Method Editor")}} (IME) window wants to apply to the text being composed in an editable region that's attached to an <see cref="EditContext"/> instance.
 </summary>
 <remarks>
 <para>This interface inherits properties from <see cref="Event"/>.</para><para></para>

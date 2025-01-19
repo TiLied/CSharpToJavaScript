@@ -1,7 +1,7 @@
 <docs>
 <XRSystemRequestSession>
 <summary>
-The <strong><see cref="XRSystem"/></strong> interface&amp;apos;s<br/><strong><c>requestSession()</c></strong> method returns a <see cref="Promise"/><br/>which resolves to an <see cref="XRSession"/> object through which you can manage the<br/>requested type of WebXR session.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><see cref="XRSystem"/></strong> interface&amp;apos;s<br/><strong><c>requestSession()</c></strong> method returns a <see cref="Promise"/><br/>which resolves to an <see cref="XRSession"/> object through which you can manage the<br/>requested type of WebXR session.
 </summary>
 <remarks>
 <para>While only one immersive VR session can be active at a time, multiple<br/>inline sessions can be in progress at once.</para>

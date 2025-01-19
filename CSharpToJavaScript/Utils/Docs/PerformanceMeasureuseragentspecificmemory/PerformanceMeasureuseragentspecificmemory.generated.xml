@@ -1,7 +1,7 @@
 <docs>
 <PerformanceMeasureUserAgentSpecificMemory>
 <summary>
-The <strong><c>measureUserAgentSpecificMemory()</c></strong> method is used to estimate the memory usage of a web application including all its iframes and workers.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>measureUserAgentSpecificMemory()</c></strong> method is used to estimate the memory usage of a web application including all its iframes and workers.
 </summary>
 <remarks>
 <para>-<see cref="Window.SetTimeout"/><br/>-<see href="https://web.dev/articles/monitor-total-page-memory-usage">Monitor your web page&amp;apos;s total memory usage with measureUserAgentSpecificMemory() - web.dev</see><br/></para>

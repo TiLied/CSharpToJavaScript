@@ -1,7 +1,7 @@
 <docs>
 <GPUCommandEncoderPushDebugGroup>
 <summary>
-The <strong><c>pushDebugGroup()</c></strong> method of the<br/><see cref="GPUCommandEncoder"/> interface begins a debug group, which is marked with a specified label, and will contain all subsequent encoded commands up until a <see cref="GPUCommandEncoder.PopDebugGroup"/> method is invoked.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>pushDebugGroup()</c></strong> method of the<br/><see cref="GPUCommandEncoder"/> interface begins a debug group, which is marked with a specified label, and will contain all subsequent encoded commands up until a <see cref="GPUCommandEncoder.PopDebugGroup"/> method is invoked.
 </summary>
 <remarks>
 <para>This could be used for telemetry, or may be utilized in <see cref="GPUError"/> messages, browser dev tools, or other services in the future to help with debugging.</para>

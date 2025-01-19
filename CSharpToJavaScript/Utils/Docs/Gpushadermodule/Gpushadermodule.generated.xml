@@ -1,7 +1,7 @@
 <docs>
 <GPUShaderModule>
 <summary>
-The <strong><c>GPUShaderModule</c></strong> interface of the {{domxref(&amp;quot;WebGPU API&amp;quot;, &amp;quot;WebGPU API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} represents an internal shader module object, a container for <see href="https://gpuweb.github.io/gpuweb/wgsl/">WGSL</see> shader code that can be submitted to the GPU for execution by a pipeline.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>GPUShaderModule</c></strong> interface of the {{domxref(&amp;quot;WebGPU API&amp;quot;, &amp;quot;WebGPU API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} represents an internal shader module object, a container for <see href="https://gpuweb.github.io/gpuweb/wgsl/">WGSL</see> shader code that can be submitted to the GPU for execution by a pipeline.
 </summary>
 <remarks>
 <para>A <c>GPUShaderModule</c> object instance is created using <see cref="GPUDevice.CreateShaderModule"/>.</para><para></para>

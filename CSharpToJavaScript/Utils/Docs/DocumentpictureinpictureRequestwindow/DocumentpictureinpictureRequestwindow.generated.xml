@@ -1,7 +1,7 @@
 <docs>
 <DocumentPictureInPictureRequestWindow>
 <summary>
-The <strong><c>requestWindow()</c></strong> method of the<br/><see cref="DocumentPictureInPicture"/> interface opens the Picture-in-Picture window for the current main browsing context. It returns a {{jsxref("Promise")}} that fulfills with a <see cref="Window"/> instance representing the browsing context inside the Picture-in-Picture window.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>requestWindow()</c></strong> method of the<br/><see cref="DocumentPictureInPicture"/> interface opens the Picture-in-Picture window for the current main browsing context. It returns a {{jsxref("Promise")}} that fulfills with a <see cref="Window"/> instance representing the browsing context inside the Picture-in-Picture window.
 </summary>
 <remarks>
 <para>The <c>requestWindow()</c> method requires <see href="https://developer.mozilla.org/en-US/docs/Glossary/Transient_activation">transient activation</see>, i.e. it must be invoked in response to a user action such as a mouse click or button press.</para>

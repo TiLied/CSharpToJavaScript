@@ -1,7 +1,7 @@
 <docs>
 <NavigationHistoryEntryId>
 <summary>
-The <strong><c>id</c></strong> read-only property of the <see cref="NavigationHistoryEntry"/> interface returns the <c>id</c> of the history entry, or an empty string if current document is not fully active. This is a unique, UA-generated value that always represents a specific history entry, useful to correlate it with an external resource such as a storage cache.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>id</c></strong> read-only property of the <see cref="NavigationHistoryEntry"/> interface returns the <c>id</c> of the history entry, or an empty string if current document is not fully active. This is a unique, UA-generated value that always represents a specific history entry, useful to correlate it with an external resource such as a storage cache.
 </summary>
 <remarks>
 <para>This differs from the <see cref="NavigationHistoryEntry.Key"/> of a history entry. The <c>key</c> is a unique, UA-generated value that represents the history entry's slot in the entries list rather than the entry itself. It is used to navigate that particular slot via <see cref="Navigation.TraverseTo"/>. The <c>key</c> will be reused by other entries that replace the entry in the list (that is, if the <see cref="NavigateEvent.NavigationType"/> is <c>replace</c>).</para>

@@ -4,7 +4,7 @@
 The <strong><c>CookieChangeEvent</c></strong> interface of the {{domxref(&amp;quot;Cookie Store API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, "nocode")}} is the event type of the <see cref="CookieStore/change_event"/> event fired at a <see cref="CookieStore"/> when any cookies are created or deleted.
 </summary>
 <remarks>
-<blockquote><para>A cookie that is replaced due to the insertion of another cookie with the same name, domain, and path, is ignored and does not trigger a change event.</para></blockquote><para></para>
+<blockquote class="NOTE"><h5>NOTE</h5><para>A cookie that is replaced due to the insertion of another cookie with the same name, domain, and path, is ignored and does not trigger a change event.</para></blockquote><para></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CookieChangeEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </CookieChangeEvent>

@@ -1,7 +1,7 @@
 <docs>
 <GPU>
 <summary>
-The <strong><c>GPU</c></strong> interface of the {{domxref(&amp;quot;WebGPU API&amp;quot;, &amp;quot;WebGPU API&amp;quot;, &amp;quot;&amp;quot;, "nocode")}} is the starting point for using WebGPU. It can be used to return a <see cref="GPUAdapter"/> from which you can request devices, configure features and limits, and more.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>GPU</c></strong> interface of the {{domxref(&amp;quot;WebGPU API&amp;quot;, &amp;quot;WebGPU API&amp;quot;, &amp;quot;&amp;quot;, "nocode")}} is the starting point for using WebGPU. It can be used to return a <see cref="GPUAdapter"/> from which you can request devices, configure features and limits, and more.
 </summary>
 <remarks>
 <para>The <c>GPU</c> object for the current context is accessed via the <see cref="Navigator.Gpu"/> or <see cref="WorkerNavigator.Gpu"/> properties.</para><para></para>

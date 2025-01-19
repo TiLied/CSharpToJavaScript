@@ -1,7 +1,7 @@
 <docs>
 <VirtualKeyboardBoundingRect>
 <summary>
-The <strong><c>boundingRect</c></strong> property of the <see cref="VirtualKeyboard"/> interface contains a <see cref="DOMRect"/> indicating the position and size of the on-screen virtual keyboard that overlays the web page.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>boundingRect</c></strong> property of the <see cref="VirtualKeyboard"/> interface contains a <see cref="DOMRect"/> indicating the position and size of the on-screen virtual keyboard that overlays the web page.
 </summary>
 <remarks>
 <para>The on-screen virtual keyboard will overlay the viewport when the {{domxref(&amp;quot;VirtualKeyboard_API&amp;quot;, &amp;quot;Virtual Keyboard API&amp;quot;, &amp;quot;&amp;quot;, "nocode")}} is used to prevent the browser from resizing the viewport automatically. This is done by setting the <see cref="VirtualKeyboard.OverlaysContent"/> property to <c>true</c>.</para>

@@ -1,7 +1,7 @@
 <docs>
 <GPUBindGroupLayout>
 <summary>
-The <strong><c>GPUBindGroupLayout</c></strong> interface of the {{domxref(&amp;quot;WebGPU API&amp;quot;, &amp;quot;WebGPU API&amp;quot;, &amp;quot;&amp;quot;, "nocode")}} defines the structure and purpose of related GPU resources such as buffers that will be used in a pipeline, and is used as a template when creating <see cref="GPUBindGroup"/>s.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>GPUBindGroupLayout</c></strong> interface of the {{domxref(&amp;quot;WebGPU API&amp;quot;, &amp;quot;WebGPU API&amp;quot;, &amp;quot;&amp;quot;, "nocode")}} defines the structure and purpose of related GPU resources such as buffers that will be used in a pipeline, and is used as a template when creating <see cref="GPUBindGroup"/>s.
 </summary>
 <remarks>
 <para>A <c>GPUBindGroupLayout</c> object instance is created using the <see cref="GPUDevice.CreateBindGroupLayout"/> method.</para><para></para>

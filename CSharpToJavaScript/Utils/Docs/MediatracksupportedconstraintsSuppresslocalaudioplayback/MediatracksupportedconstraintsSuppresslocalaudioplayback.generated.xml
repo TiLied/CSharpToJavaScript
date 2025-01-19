@@ -1,7 +1,7 @@
 <docs>
 <MediaTrackSupportedConstraintsSuppressLocalAudioPlayback>
 <summary>
-The <see cref="MediaTrackSupportedConstraints"/> dictionary's <strong><c>suppressLocalAudioPlayback</c></strong> property indicates whether or not the <see cref="MediaTrackConstraints.SuppressLocalAudioPlayback"/> constraint is supported by the user agent and the device on which the content is being used.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <see cref="MediaTrackSupportedConstraints"/> dictionary's <strong><c>suppressLocalAudioPlayback</c></strong> property indicates whether or not the <see cref="MediaTrackConstraints.SuppressLocalAudioPlayback"/> constraint is supported by the user agent and the device on which the content is being used.
 </summary>
 <remarks>
 <para>The supported constraints list is obtained by calling <see cref="MediaDevices.GetSupportedConstraints"/>.</para>

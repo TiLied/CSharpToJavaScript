@@ -1,7 +1,7 @@
 <docs>
 <PeriodicSyncEventPeriodicSyncEvent>
 <summary>
-The <strong><c>PeriodicSyncEvent()</c></strong> constructor<br/>creates a new <see cref="PeriodicSyncEvent"/> object. This constructor is not typically<br/>used. The browser creates these objects itself and provides them to<br/><see cref="'ServiceWorkerGlobalScope.Periodicsync_event'"/> callback.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>PeriodicSyncEvent()</c></strong> constructor<br/>creates a new <see cref="PeriodicSyncEvent"/> object. This constructor is not typically<br/>used. The browser creates these objects itself and provides them to<br/><see cref="'ServiceWorkerGlobalScope.Periodicsync_event'"/> callback.
 </summary>
 <remarks>
 <para>-<see href="https://developer.chrome.com/docs/capabilities/periodic-background-sync">Richer offline experiences with the Periodic Background Sync API</see><br/>-<see href="https://webplatformapis.com/periodic_sync/periodicSync_improved.html">A Periodic Background Sync demo app</see><br/></para>

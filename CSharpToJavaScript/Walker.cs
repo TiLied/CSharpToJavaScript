@@ -9,6 +9,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 
+
 namespace CSharpToJavaScript
 {
 	//Useful links:
@@ -803,6 +804,15 @@ namespace CSharpToJavaScript
 
 					switch (kind)
 					{
+						case SyntaxKind.ObjectCreationExpression:
+							VisitObjectCreationExpression((ObjectCreationExpressionSyntax)asNode);
+							break;
+						case SyntaxKind.BaseExpression:
+							VisitBaseExpression((BaseExpressionSyntax)asNode);
+							break;
+						case SyntaxKind.GenericName:
+							VisitGenericName((GenericNameSyntax)asNode);
+							break;
 						case SyntaxKind.IdentifierName:
 							VisitIdentifierName((IdentifierNameSyntax)asNode);
 							break;
@@ -1985,6 +1995,9 @@ namespace CSharpToJavaScript
 
 					switch (kind)
 					{
+						case SyntaxKind.IdentifierName:
+							VisitIdentifierName((IdentifierNameSyntax)asNode);
+							break;
 						case SyntaxKind.NumericLiteralExpression:
 						case SyntaxKind.DivideExpression:
 							Visit(asNode);
@@ -2853,6 +2866,60 @@ namespace CSharpToJavaScript
 
 					//Attributes of this node(type)
 					ImmutableArray<AttributeData> _attributeDatas = iSymbol.GetAttributes();
+
+					List<object> _attributes = new();
+
+					foreach (AttributeData attributeData in _attributeDatas)
+					{
+						if (attributeData.AttributeClass.Name == nameof(EnumValueAttribute))
+						{
+							_attributes.Add(new EnumValueAttribute(attributeData.ConstructorArguments[0].Value as string));
+						}
+
+						if (attributeData.AttributeClass.Name == nameof(ValueAttribute))
+						{
+							_attributes.Add(new ValueAttribute(attributeData.ConstructorArguments[0].Value as string));
+						}
+
+						if (attributeData.AttributeClass.Name == nameof(ToAttribute))
+						{
+							_attributes.Add(new ToAttribute(attributeData.ConstructorArguments[0].Value as string));
+						}
+					}
+
+					bool _cad = _CheckAttributeData(_attributes.ToArray());
+					if (_cad)
+					{
+						return true;
+					}
+					else
+					{
+						//Attributes of a parent node(type)
+						_attributes.Clear();
+						_attributeDatas = iSymbol.ContainingType.GetAttributes();
+						
+						foreach (AttributeData attributeData in _attributeDatas)
+						{
+							if (attributeData.AttributeClass.Name == nameof(EnumValueAttribute))
+							{
+								_attributes.Add(new EnumValueAttribute(attributeData.ConstructorArguments[0].Value as string));
+							}
+
+							if (attributeData.AttributeClass.Name == nameof(ValueAttribute))
+							{
+								_attributes.Add(new ValueAttribute(attributeData.ConstructorArguments[0].Value as string));
+							}
+
+							if (attributeData.AttributeClass.Name == nameof(ToAttribute))
+							{
+								_attributes.Add(new ToAttribute(attributeData.ConstructorArguments[0].Value as string));
+							}
+						}
+						
+						return _CheckAttributeData(_attributes.ToArray());
+					}
+
+					/*
 					foreach (AttributeData _attr in _attributeDatas)
 					{
 						if (_attr.AttributeClass.Name == nameof(EnumValueAttribute)) 
@@ -2913,7 +2980,7 @@ namespace CSharpToJavaScript
 							VisitTrailingTrivia(identifier);
 							return true;
 						}
-					}
+					}*/
 				}
 
 				if (iSymbol.ContainingNamespace.ToString().Contains(_NameSpaceStr))
@@ -3009,26 +3076,7 @@ namespace CSharpToJavaScript
 			{
 				if (type.Name == text)
 				{
-					object[] _attrs = type.GetCustomAttributes(true);
-					foreach (object _attr in _attrs)
-					{
-
-						if (_attr is ValueAttribute valueAttribute)
-						{
-							VisitLeadingTrivia(identifier);
-							JSSB.Append($"{valueAttribute.Value}");
-							VisitTrailingTrivia(identifier);
-							return true;
-						}
-						if (_attr is ToAttribute toAttribute)
-						{
-							VisitLeadingTrivia(identifier);
-							JSSB.Append($"{toAttribute.Convert(text)}");
-							return true;
-						}
-					}
-
-					return true;
+					return _CheckAttributeData(type.GetCustomAttributes(true));
 				}
 
 				MemberInfo[] _Members = type.GetMembers();
@@ -3038,43 +3086,66 @@ namespace CSharpToJavaScript
 				if (b == true)
 					return true;
 			}
+			
+			
+			
 			bool _CheckMembersInNestedClasses(MemberInfo[] _members)
 			{
 				foreach (MemberInfo _memberInfo in _members)
 				{
 					Type? _type = _memberInfo as Type;
+					
 					if (_type != null && _type.IsClass)
 					{
 						return _CheckMembersInNestedClasses(_type.GetMembers());
 					}
+
 					if (_memberInfo.Name == text)
 					{
 						object[] _attrs = _memberInfo.GetCustomAttributes(true);
 
-						foreach (object _attr in _attrs)
-						{
-							if (_attr is ValueAttribute valueAttribute)
-							{
-								VisitLeadingTrivia(identifier);
-								JSSB.Append($"{valueAttribute.Value}");
-								VisitTrailingTrivia(identifier);
-								return true;
-							}
-							if (_attr is ToAttribute toAttribute)
-							{
-								VisitLeadingTrivia(identifier);
-								JSSB.Append($"{toAttribute.Convert(text)}");
-								return true;
-							}
-						}
-
-						return true;
+						return _CheckAttributeData(_memberInfo.GetCustomAttributes(true));
 					}
 				}
 
 				return false;
 			}
 
+			bool _CheckAttributeData(object[] attrs)
+			{
+				foreach (object _attr in attrs)
+				{
+					if (_attr is EnumValueAttribute enumValueAttribute)
+					{
+						VisitLeadingTrivia(identifier);
+						JSSB.Append($"\"{enumValueAttribute.Value}\"");
+						VisitTrailingTrivia(identifier);
+						return true;
+					}
+					if (_attr is ValueAttribute valueAttribute)
+					{
+						VisitLeadingTrivia(identifier);
+						JSSB.Append($"{valueAttribute.Value}");
+						VisitTrailingTrivia(identifier);
+						return true;
+					}
+					if (_attr is ToAttribute toAttribute)
+					{
+						if (toAttribute.To == ToAttribute.None)
+							_IgnoreTailingDot = true;
+
+						VisitLeadingTrivia(identifier);
+						JSSB.Append($"{toAttribute.Convert(text)}");
+						VisitTrailingTrivia(identifier);
+						return true;
+					}
+				}
+
+				return false;
+			}
+			
+			
+			
 			if (CustomCSNamesToJS(node) == false)
 			{
 				if (BuiltInTypesGenerics(node, iSymbol) == false)

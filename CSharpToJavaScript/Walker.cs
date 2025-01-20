@@ -730,6 +730,7 @@ namespace CSharpToJavaScript
 
 					switch (kind)
 					{
+						case SyntaxKind.CharacterLiteralExpression:
 						case SyntaxKind.ConditionalExpression:
 						case SyntaxKind.UnaryMinusExpression:
 						case SyntaxKind.DivideExpression:
@@ -1998,6 +1999,7 @@ namespace CSharpToJavaScript
 						case SyntaxKind.IdentifierName:
 							VisitIdentifierName((IdentifierNameSyntax)asNode);
 							break;
+						case SyntaxKind.AddExpression:
 						case SyntaxKind.NumericLiteralExpression:
 						case SyntaxKind.DivideExpression:
 							Visit(asNode);
@@ -2062,6 +2064,9 @@ namespace CSharpToJavaScript
 
 					switch (kind)
 					{
+						case SyntaxKind.IdentifierName:
+							VisitIdentifierName((IdentifierNameSyntax)asNode);
+							break;
 						case SyntaxKind.ArrayInitializerExpression:
 						case SyntaxKind.StringLiteralExpression:
 						case SyntaxKind.NumericLiteralExpression:
@@ -2227,6 +2232,9 @@ namespace CSharpToJavaScript
 
 					switch (kind)
 					{
+						case SyntaxKind.SimpleMemberAccessExpression:
+						case SyntaxKind.ConditionalExpression:
+						case SyntaxKind.BitwiseAndExpression:
 						case SyntaxKind.SubtractExpression:
 						case SyntaxKind.MultiplyExpression:
 						case SyntaxKind.CoalesceExpression:
@@ -2242,6 +2250,9 @@ namespace CSharpToJavaScript
 						case SyntaxKind.NotEqualsExpression:
 						case SyntaxKind.SimpleAssignmentExpression:
 							Visit(asNode);
+							break;
+						case SyntaxKind.IdentifierName:
+							VisitIdentifierName((IdentifierNameSyntax)asNode);
 							break;
 						case SyntaxKind.AsExpression:
 							{

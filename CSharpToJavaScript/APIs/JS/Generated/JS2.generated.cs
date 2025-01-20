@@ -1,4 +1,4 @@
-//19.01.2025 21:21:41
+//20.01.2025 16:03:12
 
 using static CSharpToJavaScript.APIs.JS.GlobalObject;
 using CSharpToJavaScript.Utils;
@@ -167,7 +167,7 @@ public partial interface HTMLAttributionSrcElementUtils
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial interface NavigatorBadge
 {
-		public Task<Undefined> SetAppBadge(ulong contents) { throw new System.NotImplementedException(); }
+		public Task<Undefined> SetAppBadge(ulong contents = default) { throw new System.NotImplementedException(); }
 		public Task<Undefined> ClearAppBadge() { throw new System.NotImplementedException(); }
 }
 
@@ -228,10 +228,10 @@ public partial interface ElementCSSInlineStyle
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial interface GeometryUtils
 {
-		public List<DOMQuad> GetBoxQuads(BoxQuadOptions options) { throw new System.NotImplementedException(); }
-		public DOMQuad ConvertQuadFromNode(DOMQuadInit quad, GeometryNode from, ConvertCoordinateOptions options) { throw new System.NotImplementedException(); }
-		public DOMQuad ConvertRectFromNode(DOMRectReadOnly rect, GeometryNode from, ConvertCoordinateOptions options) { throw new System.NotImplementedException(); }
-		public DOMPoint ConvertPointFromNode(DOMPointInit point, GeometryNode from, ConvertCoordinateOptions options) { throw new System.NotImplementedException(); }
+		public List<DOMQuad> GetBoxQuads(BoxQuadOptions options = default) { throw new System.NotImplementedException(); }
+		public DOMQuad ConvertQuadFromNode(DOMQuadInit quad, GeometryNode from, ConvertCoordinateOptions options = default) { throw new System.NotImplementedException(); }
+		public DOMQuad ConvertRectFromNode(DOMRectReadOnly rect, GeometryNode from, ConvertCoordinateOptions options = default) { throw new System.NotImplementedException(); }
+		public DOMPoint ConvertPointFromNode(DOMPointInit point, GeometryNode from, ConvertCoordinateOptions options = default) { throw new System.NotImplementedException(); }
 }
 
 
@@ -384,9 +384,9 @@ public partial interface XPathNSResolver
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial interface XPathEvaluatorBase
 {
-		public XPathExpression CreateExpression(DOMString expression, XPathNSResolver? resolver) { throw new System.NotImplementedException(); }
+		public XPathExpression CreateExpression(DOMString expression, XPathNSResolver? resolver = default) { throw new System.NotImplementedException(); }
 		public Node CreateNSResolver(Node nodeResolver) { throw new System.NotImplementedException(); }
-		public XPathResult Evaluate(DOMString expression, Node contextNode, XPathNSResolver? resolver, ushort type, XPathResult? result) { throw new System.NotImplementedException(); }
+		public XPathResult Evaluate(DOMString expression, Node contextNode, XPathNSResolver? resolver = default, ushort type = default, XPathResult? result = default) { throw new System.NotImplementedException(); }
 }
 
 
@@ -427,7 +427,7 @@ public partial interface Body
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial interface WindowOrWorkerGlobalScope
 {
-		public Task<Response> Fetch(RequestInfo input, RequestInit init) { throw new System.NotImplementedException(); }
+		public Task<Response> Fetch(RequestInfo input, RequestInit init = default) { throw new System.NotImplementedException(); }
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -477,7 +477,7 @@ public partial interface HTMLOrSVGElement
 		public DOMString Nonce { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
 		public bool Autofocus { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
 		public long TabIndex { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
-		public Undefined Focus(FocusOptions options) { throw new System.NotImplementedException(); }
+		public Undefined Focus(FocusOptions options = default) { throw new System.NotImplementedException(); }
 		public Undefined Blur() { throw new System.NotImplementedException(); }
 }
 
@@ -515,7 +515,7 @@ public partial interface CanvasTransform
 		public Undefined Transform(double a, double b, double c, double d, double e, double f) { throw new System.NotImplementedException(); }
 		public DOMMatrix GetTransform() { throw new System.NotImplementedException(); }
 		public Undefined SetTransform(double a, double b, double c, double d, double e, double f) { throw new System.NotImplementedException(); }
-		public Undefined SetTransform(DOMMatrix2DInit transform) { throw new System.NotImplementedException(); }
+		public Undefined SetTransform(DOMMatrix2DInit transform = default) { throw new System.NotImplementedException(); }
 		public Undefined ResetTransform() { throw new System.NotImplementedException(); }
 }
 
@@ -571,14 +571,14 @@ public partial interface CanvasRect
 public partial interface CanvasDrawPath
 {
 		public Undefined BeginPath() { throw new System.NotImplementedException(); }
-		public Undefined Fill(CanvasFillRule fillRule) { throw new System.NotImplementedException(); }
-		public Undefined Fill(Path2D path, CanvasFillRule fillRule) { throw new System.NotImplementedException(); }
+		public Undefined Fill(CanvasFillRule fillRule = default) { throw new System.NotImplementedException(); }
+		public Undefined Fill(Path2D path, CanvasFillRule fillRule = default) { throw new System.NotImplementedException(); }
 		public Undefined Stroke() { throw new System.NotImplementedException(); }
 		public Undefined Stroke(Path2D path) { throw new System.NotImplementedException(); }
-		public Undefined Clip(CanvasFillRule fillRule) { throw new System.NotImplementedException(); }
-		public Undefined Clip(Path2D path, CanvasFillRule fillRule) { throw new System.NotImplementedException(); }
-		public bool IsPointInPath(double x, double y, CanvasFillRule fillRule) { throw new System.NotImplementedException(); }
-		public bool IsPointInPath(Path2D path, double x, double y, CanvasFillRule fillRule) { throw new System.NotImplementedException(); }
+		public Undefined Clip(CanvasFillRule fillRule = default) { throw new System.NotImplementedException(); }
+		public Undefined Clip(Path2D path, CanvasFillRule fillRule = default) { throw new System.NotImplementedException(); }
+		public bool IsPointInPath(double x, double y, CanvasFillRule fillRule = default) { throw new System.NotImplementedException(); }
+		public bool IsPointInPath(Path2D path, double x, double y, CanvasFillRule fillRule = default) { throw new System.NotImplementedException(); }
 		public bool IsPointInStroke(double x, double y) { throw new System.NotImplementedException(); }
 		public bool IsPointInStroke(Path2D path, double x, double y) { throw new System.NotImplementedException(); }
 }
@@ -593,8 +593,8 @@ public partial interface CanvasUserInterface
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial interface CanvasText
 {
-		public Undefined FillText(DOMString text, double x, double y, double maxWidth) { throw new System.NotImplementedException(); }
-		public Undefined StrokeText(DOMString text, double x, double y, double maxWidth) { throw new System.NotImplementedException(); }
+		public Undefined FillText(DOMString text, double x, double y, double maxWidth = default) { throw new System.NotImplementedException(); }
+		public Undefined StrokeText(DOMString text, double x, double y, double maxWidth = default) { throw new System.NotImplementedException(); }
 		public TextMetrics MeasureText(DOMString text) { throw new System.NotImplementedException(); }
 }
 
@@ -609,9 +609,9 @@ public partial interface CanvasDrawImage
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial interface CanvasImageData
 {
-		public ImageData CreateImageData(long sw, long sh, ImageDataSettings settings) { throw new System.NotImplementedException(); }
+		public ImageData CreateImageData(long sw, long sh, ImageDataSettings settings = default) { throw new System.NotImplementedException(); }
 		public ImageData CreateImageData(ImageData imagedata) { throw new System.NotImplementedException(); }
-		public ImageData GetImageData(long sx, long sy, long sw, long sh, ImageDataSettings settings) { throw new System.NotImplementedException(); }
+		public ImageData GetImageData(long sx, long sy, long sw, long sh, ImageDataSettings settings = default) { throw new System.NotImplementedException(); }
 		public Undefined PutImageData(ImageData imagedata, long dx, long dy) { throw new System.NotImplementedException(); }
 		public Undefined PutImageData(ImageData imagedata, long dx, long dy, long dirtyX, long dirtyY, long dirtyWidth, long dirtyHeight) { throw new System.NotImplementedException(); }
 }
@@ -653,9 +653,9 @@ public partial interface CanvasPath
 		public Undefined BezierCurveTo(double cp1x, double cp1y, double cp2x, double cp2y, double x, double y) { throw new System.NotImplementedException(); }
 		public Undefined ArcTo(double x1, double y1, double x2, double y2, double radius) { throw new System.NotImplementedException(); }
 		public Undefined Rect(double x, double y, double w, double h) { throw new System.NotImplementedException(); }
-		public Undefined RoundRect(double x, double y, double w, double h, Union75 radii) { throw new System.NotImplementedException(); }
-		public Undefined Arc(double x, double y, double radius, double startAngle, double endAngle, bool counterclockwise) { throw new System.NotImplementedException(); }
-		public Undefined Ellipse(double x, double y, double radiusX, double radiusY, double rotation, double startAngle, double endAngle, bool counterclockwise) { throw new System.NotImplementedException(); }
+		public Undefined RoundRect(double x, double y, double w, double h, Union75 radii = default) { throw new System.NotImplementedException(); }
+		public Undefined Arc(double x, double y, double radius, double startAngle, double endAngle, bool counterclockwise = default) { throw new System.NotImplementedException(); }
+		public Undefined Ellipse(double x, double y, double radiusX, double radiusY, double rotation, double startAngle, double endAngle, bool counterclockwise = default) { throw new System.NotImplementedException(); }
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -784,14 +784,14 @@ public partial interface WindowOrWorkerGlobalScope
 		public Undefined ReportError(dynamic e) { throw new System.NotImplementedException(); }
 		public DOMString Btoa(DOMString data) { throw new System.NotImplementedException(); }
 		public ByteString Atob(DOMString data) { throw new System.NotImplementedException(); }
-		public long SetTimeout(TimerHandler handler, long timeout, params dynamic[] arguments) { throw new System.NotImplementedException(); }
-		public Undefined ClearTimeout(long id) { throw new System.NotImplementedException(); }
-		public long SetInterval(TimerHandler handler, long timeout, params dynamic[] arguments) { throw new System.NotImplementedException(); }
-		public Undefined ClearInterval(long id) { throw new System.NotImplementedException(); }
+		public long SetTimeout(TimerHandler handler, long timeout = default, params dynamic[] arguments) { throw new System.NotImplementedException(); }
+		public Undefined ClearTimeout(long id = default) { throw new System.NotImplementedException(); }
+		public long SetInterval(TimerHandler handler, long timeout = default, params dynamic[] arguments) { throw new System.NotImplementedException(); }
+		public Undefined ClearInterval(long id = default) { throw new System.NotImplementedException(); }
 		public Undefined QueueMicrotask(VoidFunction callback) { throw new System.NotImplementedException(); }
-		public Task<ImageBitmap> CreateImageBitmap(ImageBitmapSource image, ImageBitmapOptions options) { throw new System.NotImplementedException(); }
-		public Task<ImageBitmap> CreateImageBitmap(ImageBitmapSource image, long sx, long sy, long sw, long sh, ImageBitmapOptions options) { throw new System.NotImplementedException(); }
-		public dynamic StructuredClone(dynamic value, StructuredSerializeOptions options) { throw new System.NotImplementedException(); }
+		public Task<ImageBitmap> CreateImageBitmap(ImageBitmapSource image, ImageBitmapOptions options = default) { throw new System.NotImplementedException(); }
+		public Task<ImageBitmap> CreateImageBitmap(ImageBitmapSource image, long sx, long sy, long sw, long sh, ImageBitmapOptions options = default) { throw new System.NotImplementedException(); }
+		public dynamic StructuredClone(dynamic value, StructuredSerializeOptions options = default) { throw new System.NotImplementedException(); }
 }
 
 
@@ -1001,7 +1001,7 @@ public partial interface NavigatorStorage
 public partial interface ReadableStreamGenericReader
 {
 		public Task<Undefined> Closed { get { throw new System.NotImplementedException(); } }
-		public Task<Undefined> Cancel(dynamic reason) { throw new System.NotImplementedException(); }
+		public Task<Undefined> Cancel(dynamic reason = default) { throw new System.NotImplementedException(); }
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -1138,8 +1138,8 @@ public partial interface ARIAMixin
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial interface Animatable
 {
-		public Animation Animate(Object? keyframes, Union171 options) { throw new System.NotImplementedException(); }
-		public List<Animation> GetAnimations(GetAnimationsOptions options) { throw new System.NotImplementedException(); }
+		public Animation Animate(Object? keyframes, Union171 options = default) { throw new System.NotImplementedException(); }
+		public List<Animation> GetAnimations(GetAnimationsOptions options = default) { throw new System.NotImplementedException(); }
 }
 
 public partial interface DocumentOrShadowRoot
@@ -1924,7 +1924,7 @@ public partial interface WebGL2RenderingContextBase
 		public const GLint64 TIMEOUT_IGNORED = -1;
 		public const GLenum MAX_CLIENT_WAIT_TIMEOUT_WEBGL = 0x9247;
 		public Undefined CopyBufferSubData(GLenum readTarget, GLenum writeTarget, GLintptr readOffset, GLintptr writeOffset, GLsizeiptr size) { throw new System.NotImplementedException(); }
-		public Undefined GetBufferSubData(GLenum target, GLintptr srcByteOffset, ArrayBufferView dstBuffer, ulong dstOffset, GLuint length) { throw new System.NotImplementedException(); }
+		public Undefined GetBufferSubData(GLenum target, GLintptr srcByteOffset, ArrayBufferView dstBuffer, ulong dstOffset = default, GLuint length = default) { throw new System.NotImplementedException(); }
 		public Undefined BlitFramebuffer(GLint srcX0, GLint srcY0, GLint srcX1, GLint srcY1, GLint dstX0, GLint dstY0, GLint dstX1, GLint dstY1, GLbitfield mask, GLenum filter) { throw new System.NotImplementedException(); }
 		public Undefined FramebufferTextureLayer(GLenum target, GLenum attachment, WebGLTexture? texture, GLint level, GLint layer) { throw new System.NotImplementedException(); }
 		public Undefined InvalidateFramebuffer(GLenum target, List<GLenum> attachments) { throw new System.NotImplementedException(); }
@@ -1940,27 +1940,27 @@ public partial interface WebGL2RenderingContextBase
 		public Undefined TexImage3D(GLenum target, GLint level, GLint internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLenum format, GLenum type, ArrayBufferView srcData, ulong srcOffset) { throw new System.NotImplementedException(); }
 		public Undefined TexSubImage3D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, GLintptr pboOffset) { throw new System.NotImplementedException(); }
 		public Undefined TexSubImage3D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, TexImageSource source) { throw new System.NotImplementedException(); }
-		public Undefined TexSubImage3D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, ArrayBufferView? srcData, ulong srcOffset) { throw new System.NotImplementedException(); }
+		public Undefined TexSubImage3D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, ArrayBufferView? srcData, ulong srcOffset = default) { throw new System.NotImplementedException(); }
 		public Undefined CopyTexSubImage3D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLint x, GLint y, GLsizei width, GLsizei height) { throw new System.NotImplementedException(); }
 		public Undefined CompressedTexImage3D(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLsizei imageSize, GLintptr offset) { throw new System.NotImplementedException(); }
-		public Undefined CompressedTexImage3D(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, ArrayBufferView srcData, ulong srcOffset, GLuint srcLengthOverride) { throw new System.NotImplementedException(); }
+		public Undefined CompressedTexImage3D(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, ArrayBufferView srcData, ulong srcOffset = default, GLuint srcLengthOverride = default) { throw new System.NotImplementedException(); }
 		public Undefined CompressedTexSubImage3D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLsizei imageSize, GLintptr offset) { throw new System.NotImplementedException(); }
-		public Undefined CompressedTexSubImage3D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, ArrayBufferView srcData, ulong srcOffset, GLuint srcLengthOverride) { throw new System.NotImplementedException(); }
+		public Undefined CompressedTexSubImage3D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, ArrayBufferView srcData, ulong srcOffset = default, GLuint srcLengthOverride = default) { throw new System.NotImplementedException(); }
 		public GLint GetFragDataLocation(WebGLProgram program, DOMString name) { throw new System.NotImplementedException(); }
 		public Undefined Uniform1ui(WebGLUniformLocation? location, GLuint v0) { throw new System.NotImplementedException(); }
 		public Undefined Uniform2ui(WebGLUniformLocation? location, GLuint v0, GLuint v1) { throw new System.NotImplementedException(); }
 		public Undefined Uniform3ui(WebGLUniformLocation? location, GLuint v0, GLuint v1, GLuint v2) { throw new System.NotImplementedException(); }
 		public Undefined Uniform4ui(WebGLUniformLocation? location, GLuint v0, GLuint v1, GLuint v2, GLuint v3) { throw new System.NotImplementedException(); }
-		public Undefined Uniform1uiv(WebGLUniformLocation? location, Uint32List data, ulong srcOffset, GLuint srcLength) { throw new System.NotImplementedException(); }
-		public Undefined Uniform2uiv(WebGLUniformLocation? location, Uint32List data, ulong srcOffset, GLuint srcLength) { throw new System.NotImplementedException(); }
-		public Undefined Uniform3uiv(WebGLUniformLocation? location, Uint32List data, ulong srcOffset, GLuint srcLength) { throw new System.NotImplementedException(); }
-		public Undefined Uniform4uiv(WebGLUniformLocation? location, Uint32List data, ulong srcOffset, GLuint srcLength) { throw new System.NotImplementedException(); }
-		public Undefined UniformMatrix3x2fv(WebGLUniformLocation? location, bool transpose, Float32List data, ulong srcOffset, GLuint srcLength) { throw new System.NotImplementedException(); }
-		public Undefined UniformMatrix4x2fv(WebGLUniformLocation? location, bool transpose, Float32List data, ulong srcOffset, GLuint srcLength) { throw new System.NotImplementedException(); }
-		public Undefined UniformMatrix2x3fv(WebGLUniformLocation? location, bool transpose, Float32List data, ulong srcOffset, GLuint srcLength) { throw new System.NotImplementedException(); }
-		public Undefined UniformMatrix4x3fv(WebGLUniformLocation? location, bool transpose, Float32List data, ulong srcOffset, GLuint srcLength) { throw new System.NotImplementedException(); }
-		public Undefined UniformMatrix2x4fv(WebGLUniformLocation? location, bool transpose, Float32List data, ulong srcOffset, GLuint srcLength) { throw new System.NotImplementedException(); }
-		public Undefined UniformMatrix3x4fv(WebGLUniformLocation? location, bool transpose, Float32List data, ulong srcOffset, GLuint srcLength) { throw new System.NotImplementedException(); }
+		public Undefined Uniform1uiv(WebGLUniformLocation? location, Uint32List data, ulong srcOffset = default, GLuint srcLength = default) { throw new System.NotImplementedException(); }
+		public Undefined Uniform2uiv(WebGLUniformLocation? location, Uint32List data, ulong srcOffset = default, GLuint srcLength = default) { throw new System.NotImplementedException(); }
+		public Undefined Uniform3uiv(WebGLUniformLocation? location, Uint32List data, ulong srcOffset = default, GLuint srcLength = default) { throw new System.NotImplementedException(); }
+		public Undefined Uniform4uiv(WebGLUniformLocation? location, Uint32List data, ulong srcOffset = default, GLuint srcLength = default) { throw new System.NotImplementedException(); }
+		public Undefined UniformMatrix3x2fv(WebGLUniformLocation? location, bool transpose, Float32List data, ulong srcOffset = default, GLuint srcLength = default) { throw new System.NotImplementedException(); }
+		public Undefined UniformMatrix4x2fv(WebGLUniformLocation? location, bool transpose, Float32List data, ulong srcOffset = default, GLuint srcLength = default) { throw new System.NotImplementedException(); }
+		public Undefined UniformMatrix2x3fv(WebGLUniformLocation? location, bool transpose, Float32List data, ulong srcOffset = default, GLuint srcLength = default) { throw new System.NotImplementedException(); }
+		public Undefined UniformMatrix4x3fv(WebGLUniformLocation? location, bool transpose, Float32List data, ulong srcOffset = default, GLuint srcLength = default) { throw new System.NotImplementedException(); }
+		public Undefined UniformMatrix2x4fv(WebGLUniformLocation? location, bool transpose, Float32List data, ulong srcOffset = default, GLuint srcLength = default) { throw new System.NotImplementedException(); }
+		public Undefined UniformMatrix3x4fv(WebGLUniformLocation? location, bool transpose, Float32List data, ulong srcOffset = default, GLuint srcLength = default) { throw new System.NotImplementedException(); }
 		public Undefined VertexAttribI4i(GLuint index, GLint x, GLint y, GLint z, GLint w) { throw new System.NotImplementedException(); }
 		public Undefined VertexAttribI4iv(GLuint index, Int32List values) { throw new System.NotImplementedException(); }
 		public Undefined VertexAttribI4ui(GLuint index, GLuint x, GLuint y, GLuint z, GLuint w) { throw new System.NotImplementedException(); }
@@ -1971,9 +1971,9 @@ public partial interface WebGL2RenderingContextBase
 		public Undefined DrawElementsInstanced(GLenum mode, GLsizei count, GLenum type, GLintptr offset, GLsizei instanceCount) { throw new System.NotImplementedException(); }
 		public Undefined DrawRangeElements(GLenum mode, GLuint start, GLuint end, GLsizei count, GLenum type, GLintptr offset) { throw new System.NotImplementedException(); }
 		public Undefined DrawBuffers(List<GLenum> buffers) { throw new System.NotImplementedException(); }
-		public Undefined ClearBufferfv(GLenum buffer, GLint drawbuffer, Float32List values, ulong srcOffset) { throw new System.NotImplementedException(); }
-		public Undefined ClearBufferiv(GLenum buffer, GLint drawbuffer, Int32List values, ulong srcOffset) { throw new System.NotImplementedException(); }
-		public Undefined ClearBufferuiv(GLenum buffer, GLint drawbuffer, Uint32List values, ulong srcOffset) { throw new System.NotImplementedException(); }
+		public Undefined ClearBufferfv(GLenum buffer, GLint drawbuffer, Float32List values, ulong srcOffset = default) { throw new System.NotImplementedException(); }
+		public Undefined ClearBufferiv(GLenum buffer, GLint drawbuffer, Int32List values, ulong srcOffset = default) { throw new System.NotImplementedException(); }
+		public Undefined ClearBufferuiv(GLenum buffer, GLint drawbuffer, Uint32List values, ulong srcOffset = default) { throw new System.NotImplementedException(); }
 		public Undefined ClearBufferfi(GLenum buffer, GLint drawbuffer, Number depth, GLint stencil) { throw new System.NotImplementedException(); }
 		public WebGLQuery CreateQuery() { throw new System.NotImplementedException(); }
 		public Undefined DeleteQuery(WebGLQuery? query) { throw new System.NotImplementedException(); }
@@ -2026,8 +2026,8 @@ public partial interface WebGL2RenderingContextOverloads
 		public Undefined BufferData(GLenum target, GLsizeiptr size, GLenum usage) { throw new System.NotImplementedException(); }
 		public Undefined BufferData(GLenum target, AllowSharedBufferSource? srcData, GLenum usage) { throw new System.NotImplementedException(); }
 		public Undefined BufferSubData(GLenum target, GLintptr dstByteOffset, AllowSharedBufferSource srcData) { throw new System.NotImplementedException(); }
-		public Undefined BufferData(GLenum target, ArrayBufferView srcData, GLenum usage, ulong srcOffset, GLuint length) { throw new System.NotImplementedException(); }
-		public Undefined BufferSubData(GLenum target, GLintptr dstByteOffset, ArrayBufferView srcData, ulong srcOffset, GLuint length) { throw new System.NotImplementedException(); }
+		public Undefined BufferData(GLenum target, ArrayBufferView srcData, GLenum usage, ulong srcOffset, GLuint length = default) { throw new System.NotImplementedException(); }
+		public Undefined BufferSubData(GLenum target, GLintptr dstByteOffset, ArrayBufferView srcData, ulong srcOffset, GLuint length = default) { throw new System.NotImplementedException(); }
 		public Undefined TexImage2D(GLenum target, GLint level, GLint internalformat, GLsizei width, GLsizei height, GLint border, GLenum format, GLenum type, ArrayBufferView? pixels) { throw new System.NotImplementedException(); }
 		public Undefined TexImage2D(GLenum target, GLint level, GLint internalformat, GLenum format, GLenum type, TexImageSource source) { throw new System.NotImplementedException(); }
 		public Undefined TexSubImage2D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLenum type, ArrayBufferView? pixels) { throw new System.NotImplementedException(); }
@@ -2039,20 +2039,20 @@ public partial interface WebGL2RenderingContextOverloads
 		public Undefined TexSubImage2D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLenum type, TexImageSource source) { throw new System.NotImplementedException(); }
 		public Undefined TexSubImage2D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLenum type, ArrayBufferView srcData, ulong srcOffset) { throw new System.NotImplementedException(); }
 		public Undefined CompressedTexImage2D(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLint border, GLsizei imageSize, GLintptr offset) { throw new System.NotImplementedException(); }
-		public Undefined CompressedTexImage2D(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLint border, ArrayBufferView srcData, ulong srcOffset, GLuint srcLengthOverride) { throw new System.NotImplementedException(); }
+		public Undefined CompressedTexImage2D(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLint border, ArrayBufferView srcData, ulong srcOffset = default, GLuint srcLengthOverride = default) { throw new System.NotImplementedException(); }
 		public Undefined CompressedTexSubImage2D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLsizei imageSize, GLintptr offset) { throw new System.NotImplementedException(); }
-		public Undefined CompressedTexSubImage2D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, ArrayBufferView srcData, ulong srcOffset, GLuint srcLengthOverride) { throw new System.NotImplementedException(); }
-		public Undefined Uniform1fv(WebGLUniformLocation? location, Float32List data, ulong srcOffset, GLuint srcLength) { throw new System.NotImplementedException(); }
-		public Undefined Uniform2fv(WebGLUniformLocation? location, Float32List data, ulong srcOffset, GLuint srcLength) { throw new System.NotImplementedException(); }
-		public Undefined Uniform3fv(WebGLUniformLocation? location, Float32List data, ulong srcOffset, GLuint srcLength) { throw new System.NotImplementedException(); }
-		public Undefined Uniform4fv(WebGLUniformLocation? location, Float32List data, ulong srcOffset, GLuint srcLength) { throw new System.NotImplementedException(); }
-		public Undefined Uniform1iv(WebGLUniformLocation? location, Int32List data, ulong srcOffset, GLuint srcLength) { throw new System.NotImplementedException(); }
-		public Undefined Uniform2iv(WebGLUniformLocation? location, Int32List data, ulong srcOffset, GLuint srcLength) { throw new System.NotImplementedException(); }
-		public Undefined Uniform3iv(WebGLUniformLocation? location, Int32List data, ulong srcOffset, GLuint srcLength) { throw new System.NotImplementedException(); }
-		public Undefined Uniform4iv(WebGLUniformLocation? location, Int32List data, ulong srcOffset, GLuint srcLength) { throw new System.NotImplementedException(); }
-		public Undefined UniformMatrix2fv(WebGLUniformLocation? location, bool transpose, Float32List data, ulong srcOffset, GLuint srcLength) { throw new System.NotImplementedException(); }
-		public Undefined UniformMatrix3fv(WebGLUniformLocation? location, bool transpose, Float32List data, ulong srcOffset, GLuint srcLength) { throw new System.NotImplementedException(); }
-		public Undefined UniformMatrix4fv(WebGLUniformLocation? location, bool transpose, Float32List data, ulong srcOffset, GLuint srcLength) { throw new System.NotImplementedException(); }
+		public Undefined CompressedTexSubImage2D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, ArrayBufferView srcData, ulong srcOffset = default, GLuint srcLengthOverride = default) { throw new System.NotImplementedException(); }
+		public Undefined Uniform1fv(WebGLUniformLocation? location, Float32List data, ulong srcOffset = default, GLuint srcLength = default) { throw new System.NotImplementedException(); }
+		public Undefined Uniform2fv(WebGLUniformLocation? location, Float32List data, ulong srcOffset = default, GLuint srcLength = default) { throw new System.NotImplementedException(); }
+		public Undefined Uniform3fv(WebGLUniformLocation? location, Float32List data, ulong srcOffset = default, GLuint srcLength = default) { throw new System.NotImplementedException(); }
+		public Undefined Uniform4fv(WebGLUniformLocation? location, Float32List data, ulong srcOffset = default, GLuint srcLength = default) { throw new System.NotImplementedException(); }
+		public Undefined Uniform1iv(WebGLUniformLocation? location, Int32List data, ulong srcOffset = default, GLuint srcLength = default) { throw new System.NotImplementedException(); }
+		public Undefined Uniform2iv(WebGLUniformLocation? location, Int32List data, ulong srcOffset = default, GLuint srcLength = default) { throw new System.NotImplementedException(); }
+		public Undefined Uniform3iv(WebGLUniformLocation? location, Int32List data, ulong srcOffset = default, GLuint srcLength = default) { throw new System.NotImplementedException(); }
+		public Undefined Uniform4iv(WebGLUniformLocation? location, Int32List data, ulong srcOffset = default, GLuint srcLength = default) { throw new System.NotImplementedException(); }
+		public Undefined UniformMatrix2fv(WebGLUniformLocation? location, bool transpose, Float32List data, ulong srcOffset = default, GLuint srcLength = default) { throw new System.NotImplementedException(); }
+		public Undefined UniformMatrix3fv(WebGLUniformLocation? location, bool transpose, Float32List data, ulong srcOffset = default, GLuint srcLength = default) { throw new System.NotImplementedException(); }
+		public Undefined UniformMatrix4fv(WebGLUniformLocation? location, bool transpose, Float32List data, ulong srcOffset = default, GLuint srcLength = default) { throw new System.NotImplementedException(); }
 		public Undefined ReadPixels(GLint x, GLint y, GLsizei width, GLsizei height, GLenum format, GLenum type, ArrayBufferView? dstData) { throw new System.NotImplementedException(); }
 		public Undefined ReadPixels(GLint x, GLint y, GLsizei width, GLsizei height, GLenum format, GLenum type, GLintptr offset) { throw new System.NotImplementedException(); }
 		public Undefined ReadPixels(GLint x, GLint y, GLsizei width, GLsizei height, GLenum format, GLenum type, ArrayBufferView dstData, ulong dstOffset) { throw new System.NotImplementedException(); }
@@ -2087,7 +2087,7 @@ public partial interface GPUCommandsMixin
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial interface GPUBindingCommandsMixin
 {
-		public Undefined SetBindGroup(GPUIndex32 index, GPUBindGroup? bindGroup, List<GPUBufferDynamicOffset> dynamicOffsets) { throw new System.NotImplementedException(); }
+		public Undefined SetBindGroup(GPUIndex32 index, GPUBindGroup? bindGroup, List<GPUBufferDynamicOffset> dynamicOffsets = default) { throw new System.NotImplementedException(); }
 		public Undefined SetBindGroup(GPUIndex32 index, GPUBindGroup? bindGroup, System.UInt32 dynamicOffsetsData, GPUSize64 dynamicOffsetsDataStart, GPUSize32 dynamicOffsetsDataLength) { throw new System.NotImplementedException(); }
 }
 
@@ -2103,10 +2103,10 @@ public partial interface GPUDebugCommandsMixin
 public partial interface GPURenderCommandsMixin
 {
 		public Undefined SetPipeline(GPURenderPipeline pipeline) { throw new System.NotImplementedException(); }
-		public Undefined SetIndexBuffer(GPUBuffer buffer, GPUIndexFormat indexFormat, GPUSize64 offset, GPUSize64 size) { throw new System.NotImplementedException(); }
-		public Undefined SetVertexBuffer(GPUIndex32 slot, GPUBuffer? buffer, GPUSize64 offset, GPUSize64 size) { throw new System.NotImplementedException(); }
-		public Undefined Draw(GPUSize32 vertexCount, GPUSize32 instanceCount, GPUSize32 firstVertex, GPUSize32 firstInstance) { throw new System.NotImplementedException(); }
-		public Undefined DrawIndexed(GPUSize32 indexCount, GPUSize32 instanceCount, GPUSize32 firstIndex, GPUSignedOffset32 baseVertex, GPUSize32 firstInstance) { throw new System.NotImplementedException(); }
+		public Undefined SetIndexBuffer(GPUBuffer buffer, GPUIndexFormat indexFormat, GPUSize64 offset = default, GPUSize64 size = default) { throw new System.NotImplementedException(); }
+		public Undefined SetVertexBuffer(GPUIndex32 slot, GPUBuffer? buffer, GPUSize64 offset = default, GPUSize64 size = default) { throw new System.NotImplementedException(); }
+		public Undefined Draw(GPUSize32 vertexCount, GPUSize32 instanceCount = default, GPUSize32 firstVertex = default, GPUSize32 firstInstance = default) { throw new System.NotImplementedException(); }
+		public Undefined DrawIndexed(GPUSize32 indexCount, GPUSize32 instanceCount = default, GPUSize32 firstIndex = default, GPUSignedOffset32 baseVertex = default, GPUSize32 firstInstance = default) { throw new System.NotImplementedException(); }
 		public Undefined DrawIndirect(GPUBuffer indirectBuffer, GPUSize64 indirectOffset) { throw new System.NotImplementedException(); }
 		public Undefined DrawIndexedIndirect(GPUBuffer indirectBuffer, GPUSize64 indirectOffset) { throw new System.NotImplementedException(); }
 }

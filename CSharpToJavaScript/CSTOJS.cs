@@ -363,155 +363,155 @@ namespace CSharpToJavaScript
 			//
 			//https://stackoverflow.com/a/72938702
 			CompilationUnitSyntax trueRoot = root.WithUsings
-(
-	SyntaxFactory.List<UsingDirectiveSyntax>
-	(
-		new UsingDirectiveSyntax[]
-		{
-			SyntaxFactory.UsingDirective
 			(
-				SyntaxFactory.AliasQualifiedName
+				SyntaxFactory.List<UsingDirectiveSyntax>
 				(
-					SyntaxFactory.IdentifierName
-					(
-						SyntaxFactory.Token(SyntaxKind.GlobalKeyword)
-					),
-					SyntaxFactory.IdentifierName("System")
-				)
-			)
-			.WithGlobalKeyword
-			(
-				SyntaxFactory.Token(SyntaxKind.GlobalKeyword)
-			),
-			SyntaxFactory.UsingDirective
-			(
-				SyntaxFactory.QualifiedName
-				(
-					SyntaxFactory.QualifiedName
-					(
-						SyntaxFactory.AliasQualifiedName
+					new UsingDirectiveSyntax[]
+					{
+						SyntaxFactory.UsingDirective
 						(
-							SyntaxFactory.IdentifierName
+							SyntaxFactory.AliasQualifiedName
 							(
-								SyntaxFactory.Token(SyntaxKind.GlobalKeyword)
-							),
-							SyntaxFactory.IdentifierName("System")
-						),
-						SyntaxFactory.IdentifierName("Collections")
-					),
-					SyntaxFactory.IdentifierName("Generic")
-				)
-			)
-			.WithGlobalKeyword
-			(
-				SyntaxFactory.Token(SyntaxKind.GlobalKeyword)
-			),
-			SyntaxFactory.UsingDirective
-			(
-				SyntaxFactory.QualifiedName
-				(
-					SyntaxFactory.AliasQualifiedName
-					(
-						SyntaxFactory.IdentifierName
+								SyntaxFactory.IdentifierName
+								(
+									SyntaxFactory.Token(SyntaxKind.GlobalKeyword)
+								),
+								SyntaxFactory.IdentifierName("System")
+							)
+						)
+						.WithGlobalKeyword
 						(
 							SyntaxFactory.Token(SyntaxKind.GlobalKeyword)
 						),
-						SyntaxFactory.IdentifierName("System")
-					),
-					SyntaxFactory.IdentifierName("IO")
-				)
-			)
-			.WithGlobalKeyword
-			(
-				SyntaxFactory.Token(SyntaxKind.GlobalKeyword)
-			),
-			SyntaxFactory.UsingDirective
-			(
-				SyntaxFactory.QualifiedName
-				(
-					SyntaxFactory.AliasQualifiedName
-					(
-						SyntaxFactory.IdentifierName
+						SyntaxFactory.UsingDirective
+						(
+							SyntaxFactory.QualifiedName
+							(
+								SyntaxFactory.QualifiedName
+								(
+									SyntaxFactory.AliasQualifiedName
+									(
+										SyntaxFactory.IdentifierName
+										(
+											SyntaxFactory.Token(SyntaxKind.GlobalKeyword)
+										),
+										SyntaxFactory.IdentifierName("System")
+									),
+									SyntaxFactory.IdentifierName("Collections")
+								),
+								SyntaxFactory.IdentifierName("Generic")
+							)
+						)
+						.WithGlobalKeyword
 						(
 							SyntaxFactory.Token(SyntaxKind.GlobalKeyword)
 						),
-						SyntaxFactory.IdentifierName("System")
-					),
-					SyntaxFactory.IdentifierName("Linq")
-				)
-			)
-			.WithGlobalKeyword
-			(
-				SyntaxFactory.Token(SyntaxKind.GlobalKeyword)
-			),
-			SyntaxFactory.UsingDirective
-			(
-				SyntaxFactory.QualifiedName
-				(
-					SyntaxFactory.QualifiedName
-					(
-						SyntaxFactory.AliasQualifiedName
+						SyntaxFactory.UsingDirective
 						(
-							SyntaxFactory.IdentifierName
+							SyntaxFactory.QualifiedName
 							(
-								SyntaxFactory.Token(SyntaxKind.GlobalKeyword)
-							),
-							SyntaxFactory.IdentifierName("System")
-						),
-						SyntaxFactory.IdentifierName("Net")
-					),
-					SyntaxFactory.IdentifierName("Http")
-				)
-			)
-			.WithGlobalKeyword
-			(
-				SyntaxFactory.Token(SyntaxKind.GlobalKeyword)
-			),
-			SyntaxFactory.UsingDirective
-			(
-				SyntaxFactory.QualifiedName
-				(
-					SyntaxFactory.AliasQualifiedName
-					(
-						SyntaxFactory.IdentifierName
+								SyntaxFactory.AliasQualifiedName
+								(
+									SyntaxFactory.IdentifierName
+									(
+										SyntaxFactory.Token(SyntaxKind.GlobalKeyword)
+									),
+									SyntaxFactory.IdentifierName("System")
+								),
+								SyntaxFactory.IdentifierName("IO")
+							)
+						)
+						.WithGlobalKeyword
 						(
 							SyntaxFactory.Token(SyntaxKind.GlobalKeyword)
 						),
-						SyntaxFactory.IdentifierName("System")
-					),
-					SyntaxFactory.IdentifierName("Threading")
-				)
-			)
-			.WithGlobalKeyword
-			(
-				SyntaxFactory.Token(SyntaxKind.GlobalKeyword)
-			),
-			SyntaxFactory.UsingDirective
-			(
-				SyntaxFactory.QualifiedName
-				(
-					SyntaxFactory.QualifiedName
-					(
-						SyntaxFactory.AliasQualifiedName
+						SyntaxFactory.UsingDirective
 						(
-							SyntaxFactory.IdentifierName
+							SyntaxFactory.QualifiedName
 							(
-								SyntaxFactory.Token(SyntaxKind.GlobalKeyword)
-							),
-							SyntaxFactory.IdentifierName("System")
+								SyntaxFactory.AliasQualifiedName
+								(
+									SyntaxFactory.IdentifierName
+									(
+										SyntaxFactory.Token(SyntaxKind.GlobalKeyword)
+									),
+									SyntaxFactory.IdentifierName("System")
+								),
+								SyntaxFactory.IdentifierName("Linq")
+							)
+						)
+						.WithGlobalKeyword
+						(
+							SyntaxFactory.Token(SyntaxKind.GlobalKeyword)
 						),
-						SyntaxFactory.IdentifierName("Threading")
-					),
-					SyntaxFactory.IdentifierName("Tasks")
+						SyntaxFactory.UsingDirective
+						(
+							SyntaxFactory.QualifiedName
+							(
+								SyntaxFactory.QualifiedName
+								(
+									SyntaxFactory.AliasQualifiedName
+									(
+										SyntaxFactory.IdentifierName
+										(
+											SyntaxFactory.Token(SyntaxKind.GlobalKeyword)
+										),
+										SyntaxFactory.IdentifierName("System")
+									),
+									SyntaxFactory.IdentifierName("Net")
+								),
+								SyntaxFactory.IdentifierName("Http")
+							)
+						)
+						.WithGlobalKeyword
+						(
+							SyntaxFactory.Token(SyntaxKind.GlobalKeyword)
+						),
+						SyntaxFactory.UsingDirective
+						(
+							SyntaxFactory.QualifiedName
+							(
+								SyntaxFactory.AliasQualifiedName
+								(
+									SyntaxFactory.IdentifierName
+									(
+										SyntaxFactory.Token(SyntaxKind.GlobalKeyword)
+									),
+									SyntaxFactory.IdentifierName("System")
+								),
+								SyntaxFactory.IdentifierName("Threading")
+							)
+						)
+						.WithGlobalKeyword
+						(
+							SyntaxFactory.Token(SyntaxKind.GlobalKeyword)
+						),
+						SyntaxFactory.UsingDirective
+						(
+							SyntaxFactory.QualifiedName
+							(
+								SyntaxFactory.QualifiedName
+								(
+									SyntaxFactory.AliasQualifiedName
+									(
+										SyntaxFactory.IdentifierName
+										(
+											SyntaxFactory.Token(SyntaxKind.GlobalKeyword)
+										),
+										SyntaxFactory.IdentifierName("System")
+									),
+									SyntaxFactory.IdentifierName("Threading")
+								),
+								SyntaxFactory.IdentifierName("Tasks")
+							)
+						)
+						.WithGlobalKeyword
+						(
+							SyntaxFactory.Token(SyntaxKind.GlobalKeyword)
+						)
+					}
 				)
-			)
-			.WithGlobalKeyword
-			(
-				SyntaxFactory.Token(SyntaxKind.GlobalKeyword)
-			)
-		}
-	)
-).AddUsings(oldUsing);
+			).AddUsings(oldUsing);
 
 			if (_Options.NormalizeWhitespace)
 				trueRoot = trueRoot.NormalizeWhitespace();
@@ -599,22 +599,29 @@ namespace CSharpToJavaScript
 			//https://stackoverflow.com/a/12073675
 			List<MetadataReference> trueReferences = new();
 
-			foreach (MetadataReference item in references)
+			if (refs == null)
 			{
-				bool found = false;
-				foreach (MetadataReference resultItem in trueReferences)
+				foreach (MetadataReference item in references)
 				{
-					if (item.Display == null)
-						continue;
+					bool found = false;
+					foreach (MetadataReference resultItem in trueReferences)
+					{
+						if (item.Display == null)
+							continue;
 
-					if (resultItem.Display == item.Display)
-						found = true;
-				}
+						if (resultItem.Display == item.Display)
+							found = true;
+					}
 
-				if (!found)
-				{
-					trueReferences.Add(item);
+					if (!found)
+					{
+						trueReferences.Add(item);
+					}
 				}
+			}
+			else
+			{
+				trueReferences = references;
 			}
 
 			if (_Options.Debug)

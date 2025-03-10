@@ -2144,13 +2144,48 @@ namespace CSharpToJavaScript
 					{
 						case SyntaxKind.NumericLiteralToken: 
 							{
-								if (asToken.Text.EndsWith('f') || 
-									asToken.Text.EndsWith('d') ||
-									asToken.Text.EndsWith('F') ||
-									asToken.Text.EndsWith('D'))
-									JSSB.Append(asToken.Text.Remove(asToken.Text.Length - 1));
+								string _value = asToken.Text;
+
+								_value = _value.Replace("_","");
+
+								if (_value.EndsWith('f') ||
+									_value.EndsWith('d') ||
+									_value.EndsWith('m') ||
+									_value.EndsWith('F') ||
+									_value.EndsWith('D') ||
+									_value.EndsWith('M'))
+									_value = _value.Remove(_value.Length - 1);
+
+								if (_value.Length > 10)
+								{
+									double _d = 0;
+
+									if (_value.Contains("E"))
+										_d = double.Parse(_value.Replace('.', ','), System.Globalization.NumberStyles.Float);
+									else
+										_d = Convert.ToDouble(_value.Replace('.', ','));
+
+									if (_value.StartsWith('-'))
+									{
+										//TODO? BigInt?
+										if (_d <= -9007199254740991)
+										{
+											_Log.WarningLine($"Number: {_d} is smaller then Number.MIN_SAFE_INTEGER(-9007199254740991) clamping!");
+											_value = "Number.MIN_SAFE_INTEGER";
+										}
+									}
 								else
-									VisitToken(asToken);
+									{
+										if (_d >= 9007199254740991)
+										{
+											_Log.WarningLine($"Number: {_d} is larger then Number.MAX_SAFE_INTEGER(9007199254740991) clamping!");
+											_value = "Number.MAX_SAFE_INTEGER";
+										}
+									}
+								}
+
+								JSSB.Append(_value);
+
 								break;
 							}
 						case SyntaxKind.TrueKeyword:

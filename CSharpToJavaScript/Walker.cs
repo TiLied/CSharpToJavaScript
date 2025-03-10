@@ -1728,6 +1728,9 @@ namespace CSharpToJavaScript
 								break;
 							}*/
 						//case SyntaxKind.BoolKeyword:
+						case SyntaxKind.ObjectKeyword:
+							JSSB.Append("Object");
+							break;
 						case SyntaxKind.SemicolonToken:
 							VisitToken(asToken);
 							break;

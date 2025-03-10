@@ -1296,37 +1296,37 @@ namespace CSharpToJavaScript
 								if (hasDefault)
 								{
 									field = SyntaxFactory.FieldDeclaration(
-								SyntaxFactory.VariableDeclaration(
+									SyntaxFactory.VariableDeclaration(
 									SyntaxFactory.PredefinedType(SyntaxFactory.Token(key.First().Kind())))
-							.WithVariables(
-									SyntaxFactory.SingletonSeparatedList(
-										SyntaxFactory.VariableDeclarator(
+									.WithVariables(
+										SyntaxFactory.SingletonSeparatedList(
+											SyntaxFactory.VariableDeclarator(
 												SyntaxFactory.Identifier(_indentifier))
 										.WithInitializer(defaultValue as EqualsValueClauseSyntax))))
-							.WithModifiers(
-								SyntaxFactory.TokenList(new[]
-								{
-								SyntaxFactory.Token(SyntaxKind.PrivateKeyword)
-								}))
-							.WithLeadingTrivia(node.GetLeadingTrivia())
-							.WithTrailingTrivia(node.GetTrailingTrivia());
+									.WithModifiers(
+										SyntaxFactory.TokenList(new[]
+										{
+											SyntaxFactory.Token(SyntaxKind.PrivateKeyword)
+										}))
+									.WithLeadingTrivia(node.GetLeadingTrivia())
+									.WithTrailingTrivia(node.GetTrailingTrivia());
 								}
 								else
 								{
 									field = SyntaxFactory.FieldDeclaration(
-								SyntaxFactory.VariableDeclaration(
+									SyntaxFactory.VariableDeclaration(
 									SyntaxFactory.PredefinedType(SyntaxFactory.Token(key.First().Kind())))
-							.WithVariables(
-									SyntaxFactory.SingletonSeparatedList(
-										SyntaxFactory.VariableDeclarator(
+									.WithVariables(
+											SyntaxFactory.SingletonSeparatedList(
+												SyntaxFactory.VariableDeclarator(
 													SyntaxFactory.Identifier(_indentifier)))))
-							.WithModifiers(
-								SyntaxFactory.TokenList(new[]
-								{
-								SyntaxFactory.Token(SyntaxKind.PrivateKeyword)
-								}))
-							.WithLeadingTrivia(node.GetLeadingTrivia())
-							.WithTrailingTrivia(node.GetTrailingTrivia());
+									.WithModifiers(
+										SyntaxFactory.TokenList(new[]
+										{
+											SyntaxFactory.Token(SyntaxKind.PrivateKeyword)
+										}))
+									.WithLeadingTrivia(node.GetLeadingTrivia())
+									.WithTrailingTrivia(node.GetTrailingTrivia());
 								}
 							}
 
@@ -2194,7 +2194,7 @@ namespace CSharpToJavaScript
 											_value = "Number.MIN_SAFE_INTEGER";
 										}
 									}
-								else
+									else
 									{
 										if (_d >= 9007199254740991)
 										{
@@ -2453,6 +2453,10 @@ namespace CSharpToJavaScript
 
 									if (_aes == null) 
 									{
+										//Todo!
+										//Triggered with "Method(new());"
+										//See also test "TestPassValueToMethod" with CustomClass
+										JSSB.Append(" Object");
 										_Log.ErrorLine($"_aes is null");
 										break;
 									}
@@ -2572,9 +2576,11 @@ namespace CSharpToJavaScript
 										break;
 									}
 
-									//TODO??? Test??
+									//TODO?
+									//Hitting with "object"!
 									if (syntaxNode.IsKind(SyntaxKind.PredefinedType)) 
 									{
+										JSSB.Append(" Object");
 										break;
 									}
 
@@ -2621,11 +2627,14 @@ namespace CSharpToJavaScript
 						case SyntaxKind.ArgumentList:
 							Visit(asNode);
 							break;
+						case SyntaxKind.PredefinedType:
+							VisitPredefinedType((PredefinedTypeSyntax)asNode);
+							break;
 						case SyntaxKind.IdentifierName:
-							VisitIdentifierName(asNode as IdentifierNameSyntax);
+							VisitIdentifierName((IdentifierNameSyntax)asNode);
 							break;
 						case SyntaxKind.GenericName:
-							VisitGenericName(asNode as GenericNameSyntax);
+							VisitGenericName((GenericNameSyntax)asNode);
 							break;
 						default:
 							_Log.ErrorLine($"asNode : {kind}");

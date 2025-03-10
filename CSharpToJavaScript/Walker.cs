@@ -823,6 +823,20 @@ namespace CSharpToJavaScript
 						case SyntaxKind.ParenthesizedExpression:
 							VisitParenthesizedExpression((ParenthesizedExpressionSyntax)asNode);
 							break;
+						case SyntaxKind.PredefinedType:
+							{
+								//TODO! other types!
+								//
+
+								//this is string.Empty
+								JSSB.Append("\"\"");
+								SyntaxTriviaList _syntaxTrivias = nodesAndTokens[nodesAndTokens.Count - 1].GetTrailingTrivia();
+								for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
+								{
+									VisitTrivia(_syntaxTrivias[_i]);
+								}
+								return;
+							}
 						case SyntaxKind.InvocationExpression:
 						case SyntaxKind.ElementAccessExpression:
 						case SyntaxKind.SimpleMemberAccessExpression:

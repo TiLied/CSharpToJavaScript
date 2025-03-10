@@ -1289,7 +1289,10 @@ namespace CSharpToJavaScript
 							}
 							else
 							{
+								_SNPropertyType = key.First().AsNode();
+
 								key = key.First().ChildNodesAndTokens();
+
 								if (hasDefault)
 								{
 									field = SyntaxFactory.FieldDeclaration(
@@ -1298,7 +1301,8 @@ namespace CSharpToJavaScript
 							.WithVariables(
 									SyntaxFactory.SingletonSeparatedList(
 										SyntaxFactory.VariableDeclarator(
-											SyntaxFactory.Identifier(_indentifier)))))
+												SyntaxFactory.Identifier(_indentifier))
+										.WithInitializer(defaultValue as EqualsValueClauseSyntax))))
 							.WithModifiers(
 								SyntaxFactory.TokenList(new[]
 								{
@@ -1315,8 +1319,7 @@ namespace CSharpToJavaScript
 							.WithVariables(
 									SyntaxFactory.SingletonSeparatedList(
 										SyntaxFactory.VariableDeclarator(
-											SyntaxFactory.Identifier(_indentifier))
-										.WithInitializer(defaultValue as EqualsValueClauseSyntax))))
+													SyntaxFactory.Identifier(_indentifier)))))
 							.WithModifiers(
 								SyntaxFactory.TokenList(new[]
 								{

@@ -69,6 +69,7 @@ namespace CSharpToJavaScript.Utils
 			if (_Options.DisableConsoleOutput == true)
 				return;
 
+
 			Trace.Write($"{DateTime.Now.ToLongTimeString()}: ");
 
 			if (_Options.DisableConsoleColors == false)

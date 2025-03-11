@@ -74,11 +74,15 @@ namespace CSharpToJavaScript.Utils
 			if (_Options.DisableConsoleColors == false)
 				Console.ForegroundColor = ConsoleColor.Cyan;
 
-			Trace.WriteLine($"({line}){Path.GetFileName(file?.Replace("\\", "/"))}.{member}:");
+			string lineInfo = $"({line}){Path.GetFileName(file?.Replace("\\", "/"))}.{member}:";
+			
+			Trace.WriteLine(lineInfo);
 			Trace.Write("\tMessage: ");
 
 			if (_Options.DisableConsoleColors == false)
 				Console.ForegroundColor = ConsoleColor.Red;
+
+			Debug.Assert(false, $"{lineInfo} \tMessage: {message}");
 
 			Trace.WriteLine($"{message}");
 

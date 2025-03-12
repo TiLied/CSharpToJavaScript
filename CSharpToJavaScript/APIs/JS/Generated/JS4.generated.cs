@@ -1,4 +1,8 @@
-//20.01.2025 16:03:12
+//12.03.2025 21:33:46
+
+#nullable enable
+//Disable missing XML comments.
+#pragma warning disable CS1591
 
 using static CSharpToJavaScript.APIs.JS.GlobalObject;
 using CSharpToJavaScript.Utils;
@@ -155,363 +159,363 @@ using FormDataEntryValue = Union237;
 
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct PressureUpdateCallback
+public partial class PressureUpdateCallback
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct AnimatorInstanceConstructor
+public partial class AnimatorInstanceConstructor
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct ViewTransitionUpdateCallback
+public partial class ViewTransitionUpdateCallback
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct MutationCallback
+public partial class MutationCallback
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct ErrorCallback
+public partial class ErrorCallback
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct FileSystemEntryCallback
+public partial class FileSystemEntryCallback
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct FileSystemEntriesCallback
+public partial class FileSystemEntriesCallback
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct FileCallback
+public partial class FileCallback
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct PositionCallback
+public partial class PositionCallback
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct PositionErrorCallback
+public partial class PositionErrorCallback
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct BlobCallback
+public partial class BlobCallback
 {
 }
 
 
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct CustomElementConstructor
+public partial class CustomElementConstructor
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct FunctionStringCallback
+public partial class FunctionStringCallback
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct NavigationInterceptHandler
+public partial class NavigationInterceptHandler
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct EventHandlerNonNull
+public partial class EventHandlerNonNull
 {
 }
 
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct OnErrorEventHandlerNonNull
+public partial class OnErrorEventHandlerNonNull
 {
 }
 
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct OnBeforeUnloadEventHandlerNonNull
+public partial class OnBeforeUnloadEventHandlerNonNull
 {
 }
 
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct FrameRequestCallback
+public partial class FrameRequestCallback
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct IntersectionObserverCallback
+public partial class IntersectionObserverCallback
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct MediaSessionActionHandler
+public partial class MediaSessionActionHandler
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct NotificationPermissionCallback
+public partial class NotificationPermissionCallback
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct SubscribeCallback
+public partial class SubscribeCallback
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct ObservableSubscriptionCallback
+public partial class ObservableSubscriptionCallback
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct ObservableInspectorAbortHandler
+public partial class ObservableInspectorAbortHandler
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct Predicate
+public partial class Predicate
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct Reducer
+public partial class Reducer
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct Mapper
+public partial class Mapper
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct Visitor
+public partial class Visitor
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct CatchCallback
+public partial class CatchCallback
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct PerformanceObserverCallback
+public partial class PerformanceObserverCallback
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct RemotePlaybackAvailabilityCallback
+public partial class RemotePlaybackAvailabilityCallback
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct ReportingObserverCallback
+public partial class ReportingObserverCallback
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct IdleRequestCallback
+public partial class IdleRequestCallback
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct ResizeObserverCallback
+public partial class ResizeObserverCallback
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct SchedulerPostTaskCallback
+public partial class SchedulerPostTaskCallback
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct RunFunctionForSharedStorageSelectURLOperation
+public partial class RunFunctionForSharedStorageSelectURLOperation
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct UnderlyingSourceStartCallback
+public partial class UnderlyingSourceStartCallback
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct UnderlyingSourcePullCallback
+public partial class UnderlyingSourcePullCallback
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct UnderlyingSourceCancelCallback
+public partial class UnderlyingSourceCancelCallback
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct UnderlyingSinkStartCallback
+public partial class UnderlyingSinkStartCallback
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct UnderlyingSinkWriteCallback
+public partial class UnderlyingSinkWriteCallback
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct UnderlyingSinkCloseCallback
+public partial class UnderlyingSinkCloseCallback
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct UnderlyingSinkAbortCallback
+public partial class UnderlyingSinkAbortCallback
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct TransformerStartCallback
+public partial class TransformerStartCallback
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct TransformerFlushCallback
+public partial class TransformerFlushCallback
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct TransformerTransformCallback
+public partial class TransformerTransformCallback
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct TransformerCancelCallback
+public partial class TransformerCancelCallback
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct QueuingStrategySize
+public partial class QueuingStrategySize
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct CreateHTMLCallback
+public partial class CreateHTMLCallback
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct CreateScriptCallback
+public partial class CreateScriptCallback
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct CreateScriptURLCallback
+public partial class CreateScriptURLCallback
 {
 }
 
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct VideoFrameRequestCallback
+public partial class VideoFrameRequestCallback
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct EffectCallback
+public partial class EffectCallback
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct LaunchConsumer
+public partial class LaunchConsumer
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct LockGrantedCallback
+public partial class LockGrantedCallback
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct DecodeErrorCallback
+public partial class DecodeErrorCallback
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct DecodeSuccessCallback
+public partial class DecodeSuccessCallback
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct AudioWorkletProcessorConstructor
+public partial class AudioWorkletProcessorConstructor
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct AudioWorkletProcessCallback
+public partial class AudioWorkletProcessCallback
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct AudioDataOutputCallback
+public partial class AudioDataOutputCallback
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct VideoFrameOutputCallback
+public partial class VideoFrameOutputCallback
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct EncodedAudioChunkOutputCallback
+public partial class EncodedAudioChunkOutputCallback
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct EncodedVideoChunkOutputCallback
+public partial class EncodedVideoChunkOutputCallback
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct WebCodecsErrorCallback
+public partial class WebCodecsErrorCallback
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
-public struct Function
+[To(ToAttribute.Default)]
+public partial class Function
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct VoidFunction
+public partial class VoidFunction
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct GenerateAssertionCallback
+public partial class GenerateAssertionCallback
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct ValidateAssertionCallback
+public partial class ValidateAssertionCallback
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct RTCPeerConnectionErrorCallback
+public partial class RTCPeerConnectionErrorCallback
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct RTCSessionDescriptionCallback
+public partial class RTCSessionDescriptionCallback
 {
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public struct XRFrameRequestCallback
+public partial class XRFrameRequestCallback
 {
 }
 

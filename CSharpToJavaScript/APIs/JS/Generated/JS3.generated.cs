@@ -1,4 +1,8 @@
-//20.01.2025 16:03:12
+//12.03.2025 21:33:46
+
+#nullable enable
+//Disable missing XML comments.
+#pragma warning disable CS1591
 
 using static CSharpToJavaScript.APIs.JS.GlobalObject;
 using CSharpToJavaScript.Utils;
@@ -5946,22 +5950,28 @@ public partial class Window
 }
 
 ///<include file='Utils/Docs/Headers/Headers.generated.xml' path='docs/Headers/*'/>
-[To(ToAttribute.FirstCharToLowerCase)]
+[To(ToAttribute.Default)]
 public partial class Headers
 {
 	///<include file='Utils/Docs/HeadersHeaders/HeadersHeaders.generated.xml' path='docs/HeadersHeaders/*'/>
 	public Headers(HeadersInit init = default) { }
 	///<include file='Utils/Docs/HeadersAppend/HeadersAppend.generated.xml' path='docs/HeadersAppend/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined Append(ByteString name, ByteString value) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HeadersDelete/HeadersDelete.generated.xml' path='docs/HeadersDelete/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined Delete(ByteString name) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HeadersGet/HeadersGet.generated.xml' path='docs/HeadersGet/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public ByteString? Get(ByteString name) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HeadersGetSetCookie/HeadersGetSetCookie.generated.xml' path='docs/HeadersGetSetCookie/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public List<ByteString> GetSetCookie() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HeadersHas/HeadersHas.generated.xml' path='docs/HeadersHas/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public bool Has(ByteString name) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HeadersSet/HeadersSet.generated.xml' path='docs/HeadersSet/*'/>
+	[To(ToAttribute.FirstCharToLowerCase)]
 	public Undefined Set(ByteString name, ByteString value) { throw new System.NotImplementedException(); }
 	public ByteString this[int i]  {  get { throw new System.NotImplementedException(); }  set { throw new System.NotImplementedException(); }  } 
 	public Headers() { }

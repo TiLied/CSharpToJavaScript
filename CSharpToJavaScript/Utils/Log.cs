@@ -5,74 +5,68 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpToJavaScript.Utils
 {
-	internal interface ILog
+	internal static class Log
 	{
-		private static CSTOJSOptions _Options = new();
-		static ILog()
+		static Log()
 		{
 			Trace.Listeners.Add(new ConsoleTraceListener());
 		}
-		public static ILog GetILog(CSTOJS cstojs, CSTOJSOptions options)
+		public static void WriteLine(string message, CSTOJSOptions options)
 		{
-			_Options = options;
-			return cstojs;
-		}
-		public void WriteLine(string message)
-		{
-			if (_Options.DisableConsoleOutput == true)
+			if (options.DisableConsoleOutput == true)
 				return;
 
 			Trace.Write($"{DateTime.Now.ToLongTimeString()}: ");
 			Trace.WriteLine($"{message}");
 		}
 
-		public void SuccessLine(string message)
+		public static void SuccessLine(string message, CSTOJSOptions options)
 		{
-			if (_Options.DisableConsoleOutput == true)
+			if (options.DisableConsoleOutput == true)
 				return;
 
 			Trace.Write($"{DateTime.Now.ToLongTimeString()}: ");
 
-			if (_Options.DisableConsoleColors == false)
+			if (options.DisableConsoleColors == false)
 				Console.ForegroundColor = ConsoleColor.Green;
 
 			Trace.WriteLine($"\t{message}");
 
-			if (_Options.DisableConsoleColors == false)
+			if (options.DisableConsoleColors == false)
 				Console.ResetColor();
 		}
 
-		public void WarningLine(string message, [CallerFilePath] string? file = null, [CallerMemberName] string? member = null, [CallerLineNumber] int line = 0)
+		public static void WarningLine(string message, CSTOJSOptions options, [CallerFilePath] string? file = null, [CallerMemberName] string? member = null, [CallerLineNumber] int line = 0)
 		{
-			if (_Options.DisableConsoleOutput == true)
+			if (options.DisableConsoleOutput == true)
 				return;
 
 			Trace.Write($"{DateTime.Now.ToLongTimeString()}: ");
 
-			if (_Options.DisableConsoleColors == false)
+			if (options.DisableConsoleColors == false)
 				Console.ForegroundColor = ConsoleColor.Cyan;
 
 			Trace.WriteLine($"({line}){Path.GetFileName(file?.Replace("\\", "/"))}.{member}:");
 			Trace.Write("\tMessage: ");
 
-			if (_Options.DisableConsoleColors == false)
+			if (options.DisableConsoleColors == false)
 				Console.ForegroundColor = ConsoleColor.Yellow;
 			
 			Trace.WriteLine($"{message}");
 			
-			if (_Options.DisableConsoleColors == false)
+			if (options.DisableConsoleColors == false)
 				Console.ResetColor();
 		}
 
-		public void ErrorLine(string message, [CallerFilePath] string? file = null, [CallerMemberName] string? member = null, [CallerLineNumber] int line = 0)
+		public static void ErrorLine(string message, CSTOJSOptions options, [CallerFilePath] string? file = null, [CallerMemberName] string? member = null, [CallerLineNumber] int line = 0)
 		{
-			if (_Options.DisableConsoleOutput == true)
+			if (options.DisableConsoleOutput == true)
 				return;
 
 
 			Trace.Write($"{DateTime.Now.ToLongTimeString()}: ");
 
-			if (_Options.DisableConsoleColors == false)
+			if (options.DisableConsoleColors == false)
 				Console.ForegroundColor = ConsoleColor.Cyan;
 
 			string lineInfo = $"({line}){Path.GetFileName(file?.Replace("\\", "/"))}.{member}:";
@@ -80,14 +74,14 @@ namespace CSharpToJavaScript.Utils
 			Trace.WriteLine(lineInfo);
 			Trace.Write("\tMessage: ");
 
-			if (_Options.DisableConsoleColors == false)
+			if (options.DisableConsoleColors == false)
 				Console.ForegroundColor = ConsoleColor.Red;
 
 			Debug.Assert(false, $"{lineInfo} \tMessage: {message}");
 
 			Trace.WriteLine($"{message}");
 
-			if (_Options.DisableConsoleColors == false)
+			if (options.DisableConsoleColors == false)
 				Console.ResetColor();
 		}
 	}

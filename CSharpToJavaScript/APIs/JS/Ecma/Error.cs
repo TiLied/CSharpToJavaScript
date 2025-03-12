@@ -19,7 +19,7 @@ public class Error : ErrorPrototype
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public class ErrorPrototype 
+public class ErrorPrototype : ObjectPrototype
 {
 	public string Message { get; set; } = string.Empty;
 	public string Name { get; set; } = "Error";

@@ -67,7 +67,7 @@ namespace CSharpToJavaScript.APIs.JS
 		}
 	}
 	[To(ToAttribute.FirstCharToLowerCase)]
-	public class NumberPrototype
+	public class NumberPrototype : FunctionPrototype
 	{
 		public string ToExponential(dynamic fractionDigits) 
 		{

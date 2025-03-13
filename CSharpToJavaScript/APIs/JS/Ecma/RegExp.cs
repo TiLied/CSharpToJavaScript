@@ -16,7 +16,7 @@ namespace CSharpToJavaScript.APIs.JS
 
 	//TODO! match etc.!!!! How? Extension methods?
 	[To(ToAttribute.FirstCharToLowerCase)]
-	public class RegExpPrototype 
+	public class RegExpPrototype : FunctionPrototype
 	{
 		public bool DotAll { get; }
 		public string Flags { get; }

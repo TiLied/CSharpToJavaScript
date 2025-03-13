@@ -33,7 +33,7 @@ namespace CSharpToJavaScript.APIs.JS
 	}
 
 	[To(ToAttribute.FirstCharToLowerCase)]
-	public class DatePrototype
+	public class DatePrototype : FunctionPrototype
 	{
 		public float GetDate()
 		{

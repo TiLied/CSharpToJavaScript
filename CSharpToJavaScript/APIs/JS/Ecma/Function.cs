@@ -38,7 +38,7 @@ public partial class FunctionPrototype : ObjectPrototype
 		throw new System.NotImplementedException();
 	}
 
-	public dynamic Bbind(dynamic thisArg, params dynamic[] args)
+	public dynamic Bind(dynamic thisArg, params dynamic[] args)
 	{
 		throw new System.NotImplementedException();
 	}

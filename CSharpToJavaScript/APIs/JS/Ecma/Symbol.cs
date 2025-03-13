@@ -48,7 +48,7 @@ public partial class Symbol : SymbolPrototype
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class SymbolPrototype : ObjectPrototype
+public partial class SymbolPrototype : FunctionPrototype
 {
 	public string Description { get; } = string.Empty;
 	public SymbolPrototype() { }

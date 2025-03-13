@@ -23,7 +23,7 @@ public class BigInt : BigIntPrototype
 		throw new System.NotImplementedException();
 	}
 }
-public class BigIntPrototype 
+public class BigIntPrototype : FunctionPrototype
 {
 	public BigIntPrototype() { }
 

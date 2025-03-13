@@ -5,7 +5,7 @@ namespace CSharpToJavaScript.APIs.JS
 {
 	//https://262.ecma-international.org/14.0/#sec-math-object
 	[To(ToAttribute.Default)]
-	public partial class Math
+	public partial class Math : ObjectPrototype
 	{
 		public const float E = 2.7182818284590452354f;
 		public const float LN10  = 2.302585092994046f;

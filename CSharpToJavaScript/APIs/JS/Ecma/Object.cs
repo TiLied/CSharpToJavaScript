@@ -151,7 +151,7 @@ namespace CSharpToJavaScript.APIs.JS
 	}
 
 	[To(ToAttribute.FirstCharToLowerCase)]
-	public class ObjectPrototype 
+	public class ObjectPrototype
 	{
 		public ObjectPrototype() { }
 

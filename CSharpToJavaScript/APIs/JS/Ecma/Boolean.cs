@@ -21,7 +21,7 @@ public partial class Boolean : BooleanPrototype
 	public Boolean(dynamic value) { }
 }
 [To(ToAttribute.FirstCharToLowerCase)]
-public partial class BooleanPrototype : ObjectPrototype
+public partial class BooleanPrototype : FunctionPrototype
 {
 
 	public BooleanPrototype() { }

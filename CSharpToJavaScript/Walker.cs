@@ -9,7 +9,6 @@ using System.Collections.Immutable;
 using System.Linq;
 using System.Reflection;
 using System.Text;
-using System.Xml.Linq;
 
 
 namespace CSharpToJavaScript;
@@ -40,9 +39,10 @@ internal class Walker : CSharpSyntaxWalker
 	private bool _IgnoreArrayType = false;
 	private bool _IgnoreAsParenthesis = false;
 	private bool _IgnoreTailingDot = false;
+	private bool _GlobalStatement = false;
+
 
 	private int _EnumMembers = 0;
-
 
 	//Debug
 	private int _Line = 0;
@@ -265,36 +265,6 @@ internal class Walker : CSharpSyntaxWalker
 			{
 				case SyntaxKind.UsingDirective:
 					return;
-				case SyntaxKind.FileScopedNamespaceDeclaration:
-					{
-						_NameSpaceStr = (node as FileScopedNamespaceDeclarationSyntax).Name.ToString();
-						foreach (MemberDeclarationSyntax member in (node as FileScopedNamespaceDeclarationSyntax).Members)
-						{
-							Visit(member);
-						}
-						if (_Options.Debug)
-						{
-							JSSB.Append("/*");
-							JSSB.Append(node.ToFullString().Replace("*/", ""));
-							JSSB.Append("*/");
-						}
-						return;
-					}
-				case SyntaxKind.NamespaceDeclaration:
-					{
-						_NameSpaceStr = (node as NamespaceDeclarationSyntax).Name.ToString();
-						foreach (MemberDeclarationSyntax member in (node as NamespaceDeclarationSyntax).Members)
-						{
-							Visit(member);
-						}
-						if (_Options.Debug)
-						{
-							JSSB.Append("/*");
-							JSSB.Append(node.ToFullString().Replace("*/", ""));
-							JSSB.Append("*/");
-						}
-						return;
-					}
 				default:
 					//CSTOJS.Log($"{syntaxKind}");
 					break;
@@ -3098,10 +3068,64 @@ internal class Walker : CSharpSyntaxWalker
 	}
 	public override void VisitCompilationUnit(CompilationUnitSyntax node)
 	{
-		if (_Options.Debug)
-			Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})", _Options);
+		ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
+		
+		for (int i = 0; i < nodesAndTokens.Count; i++)
+		{
+			SyntaxNode? asNode = nodesAndTokens[i].AsNode();
 
-		base.VisitCompilationUnit(node);
+			if (asNode != null)
+			{
+				SyntaxKind kind = asNode.Kind();
+
+				switch (kind)
+				{
+					case SyntaxKind.UsingDirective:
+						break;
+					case SyntaxKind.GlobalStatement:
+						{
+							_GlobalStatement = true;
+							VisitGlobalStatement((GlobalStatementSyntax)asNode);
+							_GlobalStatement = false;
+							break;
+						}
+					case SyntaxKind.NamespaceDeclaration:
+						VisitNamespaceDeclaration((NamespaceDeclarationSyntax)asNode);
+						break;
+					case SyntaxKind.FileScopedNamespaceDeclaration:
+						VisitFileScopedNamespaceDeclaration((FileScopedNamespaceDeclarationSyntax)asNode);
+						break;
+					default:
+						Log.ErrorLine($"asNode : {kind}", _Options);
+						break;
+				}
+			}
+			else
+			{
+				SyntaxToken asToken = nodesAndTokens[i].AsToken();
+				SyntaxKind kind = asToken.Kind();
+
+				switch (kind)
+				{
+					case SyntaxKind.EndOfFileToken:
+						{
+							VisitToken(asToken);
+
+							if (_Options.Debug)
+							{
+								JSSB.Append("/*");
+								JSSB.Append(node.ToFullString().Replace("*/", ""));
+								JSSB.Append("*/");
+							}
+
+							break;
+						}
+					default:
+						Log.ErrorLine($"asToken : {kind}", _Options);
+						break;
+				}
+			}
+		}
 	}
 	public override void VisitConditionalAccessExpression(ConditionalAccessExpressionSyntax node)
 	{
@@ -3388,10 +3412,58 @@ internal class Walker : CSharpSyntaxWalker
 	}
 	public override void VisitFileScopedNamespaceDeclaration(FileScopedNamespaceDeclarationSyntax node)
 	{
-		if (_Options.Debug)
-			Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})", _Options);
+		ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
 
-		base.VisitFileScopedNamespaceDeclaration(node);
+		for (int i = 0; i < nodesAndTokens.Count; i++)
+		{
+			SyntaxNode? asNode = nodesAndTokens[i].AsNode();
+
+			if (asNode != null)
+			{
+				SyntaxKind kind = asNode.Kind();
+
+				switch (kind)
+				{
+					case SyntaxKind.DelegateDeclaration:
+					case SyntaxKind.InterfaceDeclaration:
+					case SyntaxKind.StructDeclaration:
+						break;
+					case SyntaxKind.QualifiedName:
+					case SyntaxKind.IdentifierName:
+						{
+							_NameSpaceStr = node.Name.ToString();
+							break;
+						}
+					case SyntaxKind.ClassDeclaration:
+						VisitClassDeclaration((ClassDeclarationSyntax)asNode);
+						break;
+					case SyntaxKind.EnumDeclaration:
+						VisitEnumDeclaration((EnumDeclarationSyntax)asNode);
+						break;
+					case SyntaxKind.NamespaceDeclaration:
+						VisitNamespaceDeclaration((NamespaceDeclarationSyntax)asNode);
+						break;
+					default:
+						Log.ErrorLine($"asNode : {kind}", _Options);
+						break;
+				}
+			}
+			else
+			{
+				SyntaxToken asToken = nodesAndTokens[i].AsToken();
+				SyntaxKind kind = asToken.Kind();
+
+				switch (kind)
+				{
+					case SyntaxKind.SemicolonToken:
+					case SyntaxKind.NamespaceKeyword:
+						break;
+					default:
+						Log.ErrorLine($"asToken : {kind}", _Options);
+						break;
+				}
+			}
+		}
 	}
 	public override void VisitFinallyClause(FinallyClauseSyntax node)
 	{
@@ -3472,10 +3544,42 @@ internal class Walker : CSharpSyntaxWalker
 	}
 	public override void VisitGlobalStatement(GlobalStatementSyntax node)
 	{
-		if (_Options.Debug)
-			Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})", _Options);
+		ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
+			
+		for (int i = 0; i < nodesAndTokens.Count; i++)
+		{
+			SyntaxNode? asNode = nodesAndTokens[i].AsNode();
 
-		base.VisitGlobalStatement(node);
+			if (asNode != null)
+			{
+				SyntaxKind kind = asNode.Kind();
+
+				switch (kind)
+				{
+					case SyntaxKind.ExpressionStatement:
+						VisitExpressionStatement((ExpressionStatementSyntax)asNode);
+						break;
+					case SyntaxKind.LocalDeclarationStatement:
+						VisitLocalDeclarationStatement((LocalDeclarationStatementSyntax)asNode);
+						break;
+					default:
+						Log.ErrorLine($"asNode : {kind}", _Options);
+						break;
+				}
+			}
+			else
+			{
+				SyntaxToken asToken = nodesAndTokens[i].AsToken();
+				SyntaxKind kind = asToken.Kind();
+
+				switch (kind)
+				{
+					default:
+						Log.ErrorLine($"asToken : {kind}", _Options);
+						break;
+				}
+			}
+		}
 	}
 	public override void VisitGotoStatement(GotoStatementSyntax node)
 	{
@@ -3710,10 +3814,62 @@ internal class Walker : CSharpSyntaxWalker
 	}
 	public override void VisitNamespaceDeclaration(NamespaceDeclarationSyntax node)
 	{
-		if (_Options.Debug)
-			Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})", _Options);
+		ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
 
-		base.VisitNamespaceDeclaration(node);
+		for (int i = 0; i < nodesAndTokens.Count; i++)
+		{
+			SyntaxNode? asNode = nodesAndTokens[i].AsNode();
+
+			if (asNode != null)
+			{
+				SyntaxKind kind = asNode.Kind();
+
+				switch (kind)
+				{
+					case SyntaxKind.DelegateDeclaration:
+					case SyntaxKind.InterfaceDeclaration:
+					case SyntaxKind.StructDeclaration:
+						break;
+					case SyntaxKind.QualifiedName:
+					case SyntaxKind.IdentifierName:
+					{
+						_NameSpaceStr = node.Name.ToString();
+						break;
+					}
+					case SyntaxKind.ClassDeclaration:
+						VisitClassDeclaration((ClassDeclarationSyntax)asNode);
+						break;
+					case SyntaxKind.EnumDeclaration:
+						VisitEnumDeclaration((EnumDeclarationSyntax)asNode);
+						break;
+					case SyntaxKind.NamespaceDeclaration:
+						VisitNamespaceDeclaration((NamespaceDeclarationSyntax)asNode);
+						break;
+					default:
+						Log.ErrorLine($"asNode : {kind}", _Options);
+						break;
+				}
+			}
+			else
+			{
+				SyntaxToken asToken = nodesAndTokens[i].AsToken();
+				SyntaxKind kind = asToken.Kind();
+
+				switch (kind)
+				{
+					//Todo? make a scope??? {...}
+					//OpenBraceToken and CloseBraceToken
+					case SyntaxKind.OpenBraceToken:
+					case SyntaxKind.CloseBraceToken:
+					case SyntaxKind.NamespaceKeyword:
+						break;
+
+					default:
+						Log.ErrorLine($"asToken : {kind}", _Options);
+						break;
+				}
+			}
+		}
 	}
 	public override void VisitNullableDirectiveTrivia(NullableDirectiveTriviaSyntax node)
 	{
@@ -4563,7 +4719,7 @@ internal class Walker : CSharpSyntaxWalker
 				}*/
 			}
 
-			if (iSymbol.ContainingNamespace.ToString().Contains(_NameSpaceStr))
+			if (iSymbol.ContainingNamespace.ToString().Contains(_NameSpaceStr) && !_GlobalStatement)
 			{
 				if (iSymbol.Kind == SymbolKind.Parameter ||
 					iSymbol.Kind == SymbolKind.Local)

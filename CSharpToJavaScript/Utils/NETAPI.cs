@@ -66,9 +66,13 @@ internal class NETAPI
 		_TypeNames[4].SymbolNames.Add(nameof(string.Contains), "includes");
 		_TypeNames[4].SymbolNames.Add(nameof(string.Length), "length");
 		_TypeNames[4].SymbolNames.Add(nameof(string.Trim), "trim");
+		_TypeNames[4].SymbolNames.Add(nameof(string.TrimEnd), "trimEnd");
+		_TypeNames[4].SymbolNames.Add(nameof(string.TrimStart), "trimStart");
 		_TypeNames[4].SymbolNames.Add(nameof(string.Substring), "substring");
 		_TypeNames[4].SymbolNames.Add(nameof(string.StartsWith), "startsWith");
 		_TypeNames[4].SymbolNames.Add(nameof(string.Replace), "replace");
+		_TypeNames[4].SymbolNames.Add(nameof(string.ToUpper), "toUpperCase");
+		_TypeNames[4].SymbolNames.Add(nameof(string.ToLower), "toLowerCase");
 
 		//
 		//

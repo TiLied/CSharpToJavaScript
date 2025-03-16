@@ -1,4 +1,7 @@
-﻿using CSharpToJavaScript.Utils;
+﻿//Disable missing XML comments.
+#pragma warning disable CS1591
+
+using CSharpToJavaScript.Utils;
 
 
 namespace CSharpToJavaScript.APIs.JS

@@ -1,4 +1,7 @@
-﻿using CSharpToJavaScript.Utils;
+﻿//Disable missing XML comments.
+#pragma warning disable CS1591
+
+using CSharpToJavaScript.Utils;
 using System;
 using System.Buffers;
 using System.Collections;
@@ -145,11 +148,11 @@ namespace CSharpToJavaScript.APIs.JS
 		{
 			throw new System.NotImplementedException();
 		}
-		public string ToLocaleLowerCase(dynamic reserved1 = null, dynamic reserved2 = null)
+		public string ToLocaleLowerCase(dynamic? reserved1 = null, dynamic? reserved2 = null)
 		{
 			throw new System.NotImplementedException();
 		}
-		public string ToLocaleUpperCase(dynamic reserved1 = null, dynamic reserved2 = null)
+		public string ToLocaleUpperCase(dynamic? reserved1 = null, dynamic? reserved2 = null)
 		{
 			throw new System.NotImplementedException();
 		}

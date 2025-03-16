@@ -1,4 +1,7 @@
-﻿using CSharpToJavaScript.Utils;
+﻿//Disable missing XML comments.
+#pragma warning disable CS1591
+
+using CSharpToJavaScript.Utils;
 
 namespace CSharpToJavaScript.APIs.JS
 {
@@ -33,13 +36,13 @@ namespace CSharpToJavaScript.APIs.JS
 				throw new System.NotImplementedException();
 			}
 			
-			/*
+			
 			[To(ToAttribute.Default)]
 			public static Array Array(params dynamic[] values)
 			{
 				throw new System.NotImplementedException();
 			}
-			*/
+			
 			
 			[To(ToAttribute.Default)]
 			public static BigInt BigInt(dynamic value)
@@ -125,13 +128,13 @@ namespace CSharpToJavaScript.APIs.JS
 
 			}
 
-			/*
+			
 			[To(ToAttribute.Default)]
 			public static Symbol Symbol(dynamic? description = null)
 			{
 				throw new System.NotImplementedException();
 
-			}*/
+			}
 			
 			[To(ToAttribute.Default)]
 			public static SyntaxError SyntaxError(string message, object? options = null)

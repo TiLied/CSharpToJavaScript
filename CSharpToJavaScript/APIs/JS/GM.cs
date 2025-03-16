@@ -176,17 +176,17 @@ namespace CSharpToJavaScript.APIs.JS
 				/// Possibly empty array of strings.
 				/// </summary>
 				[To(ToAttribute.FirstCharToLowerCase)]
-				public static string[] Excludes { get; set; } = Array.Empty<string>();
+				public static string[] Excludes { get; set; } = [];
 				/// <summary>
 				/// Possibly empty array of strings.
 				/// </summary>
 				[To(ToAttribute.FirstCharToLowerCase)]
-				public static string[] Includes { get; set; } = Array.Empty<string>();
+				public static string[] Includes { get; set; } = [];
 				/// <summary>
 				/// Possibly empty array of strings.
 				/// </summary>
 				[To(ToAttribute.FirstCharToLowerCase)]
-				public static string[] Matches { get; set; } = Array.Empty<string>();
+				public static string[] Matches { get; set; } = [];
 				/// <summary>
 				/// String.
 				/// </summary>

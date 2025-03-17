@@ -1,10 +1,11 @@
-//12.03.2025 21:33:46
+//17.03.2025 17:27:25
 
 #nullable enable
 //Disable missing XML comments.
 #pragma warning disable CS1591
 
-using static CSharpToJavaScript.APIs.JS.GlobalObject;
+using static CSharpToJavaScript.APIs.JS.Ecma.GlobalObject;
+using CSharpToJavaScript.APIs.JS.Ecma;
 using CSharpToJavaScript.Utils;
 using System.Collections.Generic;
 using System.Threading.Tasks;

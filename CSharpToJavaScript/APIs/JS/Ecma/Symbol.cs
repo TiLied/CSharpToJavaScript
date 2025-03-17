@@ -2,13 +2,8 @@
 #pragma warning disable CS1591
 
 using CSharpToJavaScript.Utils;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace CSharpToJavaScript.APIs.JS;
+namespace CSharpToJavaScript.APIs.JS.Ecma;
 
 //https://262.ecma-international.org/14.0/#sec-symbol-objects
 [To(ToAttribute.Default)]

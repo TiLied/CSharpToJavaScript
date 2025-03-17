@@ -4,7 +4,7 @@
 using CSharpToJavaScript.Utils;
 using System;
 
-namespace CSharpToJavaScript.APIs.JS;
+namespace CSharpToJavaScript.APIs.JS.Ecma;
 
 //https://262.ecma-international.org/14.0/#sec-error-objects
 

@@ -20,33 +20,26 @@ namespace CSharpToJavaScript;
 /// </summary>
 public class CSTOJS
 {
-	private readonly CSTOJSOptions _Options = new();
 	private readonly Stopwatch _Stopwatch = new();
 
+	private CSTOJSOptions _DefaultOptions = new();
 	private Walker? _Walker = null;
 	private FileSystemWatcher? _FSWatcher = null;
 
 	private bool _IsRunning = false;
 
 	/// <summary>
-	/// New instance of <see cref="CSTOJS"/> with default options, see <see cref="CSTOJSOptions"/>.
+	/// New instance of <see cref="CSTOJS"/>.
 	/// </summary>
-	public CSTOJS()
-	{
-		PrintVersion();
-	}
+	/// <param name="printVersion">Print version to the console.</param>
 
-	/// <summary>
-	/// New instance of <see cref="CSTOJS"/>
-	/// </summary>
-	/// <param name="options">Options of <see cref="CSTOJS"/>, see <see cref="CSTOJSOptions"/>.</param>
-	public CSTOJS(CSTOJSOptions options)
+	public CSTOJS(bool printVersion = true)
 	{
-		_Options = options;
-
-		if (_Options.DisableConsoleOutput == false)
+		if (printVersion)
 		{
-			PrintVersion();
+			Assembly assembly = Assembly.GetExecutingAssembly();
+			//https://stackoverflow.com/a/73474279
+			Log.WriteLine($"{assembly.GetName().Name} {assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion}", _DefaultOptions);
 		}
 	}
 
@@ -54,11 +47,14 @@ public class CSTOJS
 	/// Method for generating js file/files.
 	/// </summary>
 	/// <param name="path">Full path to cs file or to the folder with cs files.</param>
-	/// <param name="filename">Optional! Filename of a js file if you generating one file!</param>
+	/// <param name="options">Optional! Options of the CSTOJS, see <see cref="CSTOJSOptions"/> for default options.</param>
 	/// <returns>empty Task</returns>
 	/// <exception cref="DirectoryNotFoundException"></exception>
-	public async Task GenerateOneAsync(string path, string? filename = null)
+	public async Task GenerateOneAsync(string path, CSTOJSOptions? options = null)
 	{
+		if(options == null)
+			options = _DefaultOptions;
+
 		Assembly? assembly = Assembly.GetEntryAssembly();
 		List<FileInfo> files = new();
 
@@ -75,7 +71,7 @@ public class CSTOJS
 
 			files = folder.GetFiles("*.cs").ToList();
 
-			filename = null;
+			options.OutputFileName = null;
 		}
 
 		foreach (FileInfo file in files)
@@ -87,25 +83,25 @@ public class CSTOJS
 				_tree = CSharpSyntaxTree.ParseText(SourceText.From(stream), path: file.FullName);
 			}
 
-			Generate(_tree, assembly);
+			Generate(_tree, assembly, options);
 
-			if (!Directory.Exists(_Options.OutPutPath))
+			if (!Directory.Exists(options.OutputPath))
 			{
-				Directory.CreateDirectory(_Options.OutPutPath);
+				Directory.CreateDirectory(options.OutputPath);
 			}
 
 			string pathCombined = string.Empty;
 
-			if (filename != null)
-				pathCombined = Path.Combine(_Options.OutPutPath, filename);
+			if (options.OutputFileName != null)
+				pathCombined = Path.Combine(options.OutputPath, options.OutputFileName);
 			else
-				pathCombined = Path.Combine(_Options.OutPutPath, file.Name.Replace(".cs", ".js"));
+				pathCombined = Path.Combine(options.OutputPath, file.Name.Replace(".cs", ".js"));
 
 			await File.WriteAllTextAsync(pathCombined, _Walker?.JSSB.ToString());
 
-			Log.SuccessLine($"--- Done!", _Options);
-			Log.SuccessLine($"--- Path: {pathCombined}", _Options);
-			Log.SuccessLine($"--- --- ---", _Options);
+			Log.SuccessLine($"--- Done!", options);
+			Log.SuccessLine($"--- Path: {pathCombined}", options);
+			Log.SuccessLine($"--- --- ---", options);
 		}
 	}
 
@@ -113,11 +109,16 @@ public class CSTOJS
 	/// Method for generating js StringBuilder/StringBuilders.
 	/// </summary>
 	/// <param name="path">Full path to cs file or to the folder with cs files.</param>
+	/// <param name="options">Optional! Options of the CSTOJS, see <see cref="CSTOJSOptions"/> for default options.</param>
 	/// <returns>List of StringBuilder</returns>
 	/// <exception cref="DirectoryNotFoundException"></exception>
-	public List<StringBuilder> GenerateOne(string path)
+	public List<StringBuilder> GenerateOne(string path, CSTOJSOptions? options = null)
 	{
+		if (options == null)
+			options = _DefaultOptions;
+
 		Assembly? assembly = Assembly.GetEntryAssembly();
+
 		List<FileInfo> files = new();
 		List<StringBuilder> jsStringBuilders = new();
 
@@ -144,13 +145,13 @@ public class CSTOJS
 				_tree = CSharpSyntaxTree.ParseText(SourceText.From(stream), path: file.FullName);
 			}
 
-			Generate(_tree, assembly);
+			Generate(_tree, assembly, options);
 
 			jsStringBuilders.Add(_Walker.JSSB);
 
-			Log.SuccessLine($"--- Done!", _Options);
-			Log.SuccessLine($"--- File name: {file.Name}", _Options);
-			Log.SuccessLine($"--- --- ---", _Options);
+			Log.SuccessLine($"--- Done!", options);
+			Log.SuccessLine($"--- File name: {file.Name}", options);
+			Log.SuccessLine($"--- --- ---", options);
 		}
 
 		return jsStringBuilders;
@@ -161,11 +162,15 @@ public class CSTOJS
 	/// Method for generating from string.
 	/// </summary>
 	/// <param name="csstring">CSharp string.</param>
+	/// <param name="options">Optional! Options of the CSTOJS, see <see cref="CSTOJSOptions"/> for default options.</param>
 	/// <param name="references">Needed if you don't have access to files. Because Assembly.location is null in Blazor WebAssembly.</param>
 	/// <returns>JS <see cref="StringBuilder"/></returns>
 	/// <exception cref="ArgumentNullException"></exception>
-	public StringBuilder GenerateOneFromString(string csstring, List<MetadataReference>? references = null)
+	public StringBuilder GenerateOneFromString(string csstring, CSTOJSOptions? options = null, List<MetadataReference>? references = null)
 	{
+		if (options == null)
+			options = _DefaultOptions;
+
 		ArgumentNullException.ThrowIfNull(csstring);
 
 		Assembly? assembly = Assembly.GetEntryAssembly();
@@ -173,12 +178,12 @@ public class CSTOJS
 		SyntaxTree _tree = CSharpSyntaxTree.ParseText(csstring);
 
 		if (references != null)
-			Generate(_tree, assembly, references);
+			Generate(_tree, assembly, options, references);
 		else
-			Generate(_tree, assembly);
+			Generate(_tree, assembly, options);
 
-		Log.SuccessLine($"--- Done!", _Options);
-		Log.SuccessLine($"--- --- ---", _Options);
+		Log.SuccessLine($"--- Done!", options);
+		Log.SuccessLine($"--- --- ---", options);
 
 		return _Walker.JSSB;
 	}
@@ -187,12 +192,15 @@ public class CSTOJS
 	/// Method for generating from string. Writes a file.
 	/// </summary>
 	/// <param name="csstring">CSharp string.</param>
-	/// <param name="filename">Filename of a js file.</param>
+	/// <param name="options">Optional! Options of the CSTOJS, see <see cref="CSTOJSOptions"/> for default options.</param>
 	/// <param name="references">Needed if you don't have access to files. Because Assembly.location is null in Blazor WebAssembly.</param>
 	/// <returns>empty Task</returns>
 	/// <exception cref="ArgumentNullException"></exception>
-	public async Task GenerateOneFromStringAsync(string csstring, string? filename = "main.js", List<MetadataReference>? references = null)
+	public async Task GenerateOneFromStringAsync(string csstring, CSTOJSOptions? options = null, List<MetadataReference>? references = null)
 	{
+		if (options == null)
+			options = _DefaultOptions;
+
 		ArgumentNullException.ThrowIfNull(csstring);
 
 		Assembly? assembly = Assembly.GetEntryAssembly();
@@ -200,23 +208,23 @@ public class CSTOJS
 		SyntaxTree _tree = CSharpSyntaxTree.ParseText(csstring);
 
 		if (references != null)
-			Generate(_tree, assembly, references);
+			Generate(_tree, assembly, options, references);
 		else
-			Generate(_tree, assembly);
+			Generate(_tree, assembly, options);
 
 
-		if (!Directory.Exists(_Options.OutPutPath))
+		if (!Directory.Exists(options.OutputPath))
 		{
-			Directory.CreateDirectory(_Options.OutPutPath);
+			Directory.CreateDirectory(options.OutputPath);
 		}
 
-		string pathCombined = Path.Combine(_Options.OutPutPath, filename);
+		string pathCombined = Path.Combine(options.OutputPath, options.OutputFileName ?? "main.js");
 
 		await File.WriteAllTextAsync(pathCombined, _Walker.JSSB.ToString());
 
-		Log.SuccessLine($"--- Done!", _Options);
-		Log.SuccessLine($"--- Path: {pathCombined}", _Options);
-		Log.SuccessLine($"--- --- ---", _Options);
+		Log.SuccessLine($"--- Done!", options);
+		Log.SuccessLine($"--- Path: {pathCombined}", options);
+		Log.SuccessLine($"--- --- ---", options);
 	}
 
 	/// <summary>
@@ -226,11 +234,15 @@ public class CSTOJS
 	/// <blockquote class="NOTE"><h5>NOTE</h5><para>Note: You must call <see cref="CSTOJS.StopWatching" /> before completing a program.</para></blockquote>
 	/// </remarks>
 	/// <param name="path">Full path to cs file.</param>
+	/// <param name="options">Optional! Options of the CSTOJS, see <see cref="CSTOJSOptions"/> for default options.</param>
 	/// <returns>void</returns>
 	/// <exception cref="DirectoryNotFoundException"></exception>
 	/// <exception cref="FileNotFoundException"></exception>
-	public void GenerateOneContinuously(string path) 
+	public void GenerateOneContinuously(string path, CSTOJSOptions? options = null) 
 	{
+		if (options != null)
+			_DefaultOptions = options;
+
 		if (File.Exists(path))
 		{
 			FileInfo file = new(path);
@@ -252,7 +264,7 @@ public class CSTOJS
 			_FSWatcher.IncludeSubdirectories = true;
 			_FSWatcher.EnableRaisingEvents = true;
 
-			Log.WriteLine($"Watching to: {path}", _Options);
+			Log.WriteLine($"Watching to: {path}", options);
 		}
 		else
 		{
@@ -264,7 +276,7 @@ public class CSTOJS
 		if (e.ChangeType != WatcherChangeTypes.Changed)
 			return;
 
-		Log.WriteLine($"Changed: {e.FullPath}", _Options);
+		Log.WriteLine($"Changed: {e.FullPath}", _DefaultOptions);
 
 		if(!_IsRunning)
 			await GenerateOneAsync(e.FullPath);
@@ -273,19 +285,19 @@ public class CSTOJS
 	private void OnCreated(object sender, FileSystemEventArgs e)
 	{
 		string value = $"Created: {e.FullPath}";
-		Log.WriteLine(value, _Options);
+		Log.WriteLine(value, _DefaultOptions);
 	}
 
 	private void OnDeleted(object sender, FileSystemEventArgs e)
 	{
-		Log.WriteLine($"Deleted: {e.FullPath}", _Options);
+		Log.WriteLine($"Deleted: {e.FullPath}", _DefaultOptions);
 	}
 
 	private void OnRenamed(object sender, RenamedEventArgs e)
 	{
-		Log.WriteLine($"Renamed:", _Options);
-		Log.WriteLine($"    Old: {e.OldFullPath}", _Options);
-		Log.WriteLine($"    New: {e.FullPath}", _Options);
+		Log.WriteLine($"Renamed:", _DefaultOptions);
+		Log.WriteLine($"    Old: {e.OldFullPath}", _DefaultOptions);
+		Log.WriteLine($"    New: {e.FullPath}", _DefaultOptions);
 	}
 
 	private void OnError(object sender, ErrorEventArgs e)
@@ -298,6 +310,8 @@ public class CSTOJS
 	/// </summary>
 	public void StopWatching() 
 	{
+		_DefaultOptions = new();
+
 		if (_FSWatcher != null)
 		{
 			_FSWatcher.Dispose();
@@ -305,14 +319,14 @@ public class CSTOJS
 		}
 	}
 
-	private void Generate(SyntaxTree tree, Assembly? assembly, List<MetadataReference>? refs = null)
+	private void Generate(SyntaxTree tree, Assembly? assembly, CSTOJSOptions options, List<MetadataReference>? refs = null)
 	{
 		_IsRunning = true;
 
-		if (_Options.Debug)
+		if (options.Debug)
 		{
 			_Stopwatch.Restart();
-			Log.WriteLine("Start stopwatch", _Options);
+			Log.WriteLine("Start stopwatch", options);
 		}
 
 		CompilationUnitSyntax root = tree.GetCompilationUnitRoot();
@@ -503,10 +517,10 @@ public class CSTOJS
 			)
 		).AddUsings(oldUsing);
 
-		if (_Options.NormalizeWhitespace)
+		if (options.NormalizeWhitespace)
 			trueRoot = trueRoot.NormalizeWhitespace();
 
-		if (_Options.KeepBraceOnTheSameLine)
+		if (options.KeepBraceOnTheSameLine)
 		{
 			//Mostly deleted whitespaces, still TODO?
 			SyntaxToken[] allBraces = trueRoot.DescendantTokens().Where((e) => e.IsKind(SyntaxKind.OpenBraceToken)).ToArray();
@@ -614,22 +628,22 @@ public class CSTOJS
 			trueReferences = references;
 		}
 
-		if (_Options.Debug)
+		if (options.Debug)
 		{
-			Log.SuccessLine($"+++", _Options);
-			Log.WriteLine($"Path assembly: {assemblyPath}", _Options);
-			Log.WriteLine($"Path rt: {rtPath}", _Options);
-			Log.WriteLine($"List of references({references.Count}):", _Options);
+			Log.SuccessLine($"+++", options);
+			Log.WriteLine($"Path assembly: {assemblyPath}", options);
+			Log.WriteLine($"Path rt: {rtPath}", options);
+			Log.WriteLine($"List of references({references.Count}):", options);
 			foreach (MetadataReference reference in references)
 			{
-				Log.WriteLine(reference.Display ?? "null display string", _Options);
+				Log.WriteLine(reference.Display ?? "null display string", options);
 			}
-			Log.WriteLine($"List of trueReferences({trueReferences.Count}):", _Options);
+			Log.WriteLine($"List of trueReferences({trueReferences.Count}):", options);
 			foreach (MetadataReference reference in trueReferences)
 			{
-				Log.WriteLine(reference.Display ?? "null display string", _Options);
+				Log.WriteLine(reference.Display ?? "null display string", options);
 			}
-			Log.SuccessLine($"+++", _Options);
+			Log.SuccessLine($"+++", options);
 		}
 
 		SyntaxTree trueST = trueRoot.SyntaxTree;
@@ -639,26 +653,20 @@ public class CSTOJS
 			.AddSyntaxTrees(trueST);
 
 
-		_Walker = new(_Options, compilation.GetSemanticModel(trueST));
+		_Walker = new(options, compilation.GetSemanticModel(trueST));
 
-		_Walker.JSSB.Append(_Options.AddSBAtTheTop);
+		_Walker.JSSB.Append(options.AddSBAtTheTop);
 
 		_Walker.Visit(trueRoot);
 
-		_Walker.JSSB.Append(_Options.AddSBAtTheBottom);
+		_Walker.JSSB.Append(options.AddSBAtTheBottom);
 
-		if (_Options.Debug)
+		if (options.Debug)
 		{
 			_Stopwatch.Stop();
-			Log.WriteLine($"Stop stopwatch: {_Stopwatch.Elapsed}", _Options);
+			Log.WriteLine($"Stop stopwatch: {_Stopwatch.Elapsed}", options);
 		}
 
 		_IsRunning = false;
-	}
-	private void PrintVersion()
-	{
-		Assembly assembly = Assembly.GetExecutingAssembly();
-		//https://stackoverflow.com/a/73474279
-		Log.SuccessLine($"{assembly.GetName().Name} {assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion}", _Options);
 	}
 }

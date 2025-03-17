@@ -315,7 +315,7 @@ internal class Walker : CSharpSyntaxWalker
 						Visit(asNode);
 						break;
 					default:
-						Log.ErrorLine($"asNode : {kind}", _Options);
+						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|", _Options);
 						break;
 				}
 			}
@@ -326,6 +326,7 @@ internal class Walker : CSharpSyntaxWalker
 
 				switch (kind)
 				{
+					case SyntaxKind.UnsafeKeyword:
  					case SyntaxKind.PartialKeyword:
 					case SyntaxKind.StaticKeyword:
 						break;
@@ -385,7 +386,7 @@ internal class Walker : CSharpSyntaxWalker
 						Visit(asNode);
 						break;
 					default:
-						Log.ErrorLine($"asNode : {kind}", _Options);
+						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|", _Options);
 						break;
 				}
 			}
@@ -465,7 +466,7 @@ internal class Walker : CSharpSyntaxWalker
 							break;
 						}
 					default:
-						Log.ErrorLine($"asNode : {kind}", _Options);
+						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|", _Options);
 						break;
 				}
 			}
@@ -512,7 +513,7 @@ internal class Walker : CSharpSyntaxWalker
 							break;
 						}
 					default:
-						Log.ErrorLine($"asNode : {kind}", _Options);
+						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|", _Options);
 						break;
 				}
 			}
@@ -572,7 +573,7 @@ internal class Walker : CSharpSyntaxWalker
 						Visit(asNode);
 						break;
 					default:
-						Log.ErrorLine($"asNode : {kind}", _Options);
+						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|", _Options);
 						break;
 				}
 			}
@@ -638,7 +639,7 @@ internal class Walker : CSharpSyntaxWalker
 						VisitVariableDeclaration(asNode as VariableDeclarationSyntax);
 						break;
 					default:
-						Log.ErrorLine($"asNode : {kind}", _Options);
+						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|", _Options);
 						break;
 				}
 			}
@@ -701,7 +702,7 @@ internal class Walker : CSharpSyntaxWalker
 						Visit(asNode);
 						break;
 					default:
-						Log.ErrorLine($"asNode : {kind}", _Options);
+						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|", _Options);
 						break;
 				}
 			}
@@ -779,7 +780,7 @@ internal class Walker : CSharpSyntaxWalker
 						VisitIdentifierName(asNode as IdentifierNameSyntax);
 						break;
 					default:
-						Log.ErrorLine($"asNode : {kind}", _Options);
+						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|", _Options);
 						break;
 				}
 			}
@@ -851,7 +852,7 @@ internal class Walker : CSharpSyntaxWalker
 						Visit(asNode);
 						break;
 					default:
-						Log.ErrorLine($"asNode : {kind}", _Options);
+						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|", _Options);
 						break;
 				}
 			}
@@ -896,7 +897,7 @@ internal class Walker : CSharpSyntaxWalker
 						Visit(asNode);
 						break;
 					default:
-						Log.ErrorLine($"asNode : {kind}", _Options);
+						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|", _Options);
 						break;
 				}
 			}
@@ -939,7 +940,7 @@ internal class Walker : CSharpSyntaxWalker
 						VisitEnumMemberDeclaration(asNode as EnumMemberDeclarationSyntax);
 						break;
 					default:
-						Log.ErrorLine($"asNode : {kind}", _Options);
+						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|", _Options);
 						break;
 				}
 			}
@@ -1004,11 +1005,15 @@ internal class Walker : CSharpSyntaxWalker
 					case SyntaxKind.EqualsValueClause:
 						{
 							JSSB.Append(": ");
-							VisitLiteralExpression(((asNode as EqualsValueClauseSyntax).Value as LiteralExpressionSyntax));
+							ExpressionSyntax _value = ((EqualsValueClauseSyntax)asNode).Value;
+							if(_value is LiteralExpressionSyntax)
+								VisitLiteralExpression((LiteralExpressionSyntax)_value);
+							else
+								Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|", _Options);
 							break;
 						}
 					default:
-						Log.ErrorLine($"asNode : {kind}", _Options);
+						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|", _Options);
 						break;
 				}
 			}
@@ -1058,7 +1063,7 @@ internal class Walker : CSharpSyntaxWalker
 						VisitIdentifierName(asNode as IdentifierNameSyntax);
 						break;
 					default:
-						Log.ErrorLine($"asNode : {kind}", _Options);
+						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|", _Options);
 						break;
 				}
 			}
@@ -1118,7 +1123,7 @@ internal class Walker : CSharpSyntaxWalker
 						Visit(asNode);
 						break;
 					default:
-						Log.ErrorLine($"asNode : {kind}", _Options);
+						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|", _Options);
 						break;
 				}
 			}
@@ -1171,7 +1176,7 @@ internal class Walker : CSharpSyntaxWalker
 						Visit(asNode);
 						break;
 					default:
-						Log.ErrorLine($"asNode : {kind}", _Options);
+						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|", _Options);
 						break;
 				}
 			}
@@ -1385,7 +1390,7 @@ internal class Walker : CSharpSyntaxWalker
 						VisitAccessorList(asNode as AccessorListSyntax);
 						break;
 					default:
-						Log.ErrorLine($"asNode : {kind}", _Options);
+						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|", _Options);
 						break;
 				}
 			}
@@ -1568,7 +1573,7 @@ internal class Walker : CSharpSyntaxWalker
 							break;
 						}
 					default:
-						Log.ErrorLine($"asNode : {kind}", _Options);
+						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|", _Options);
 						break;
 				}
 			}
@@ -1608,7 +1613,7 @@ internal class Walker : CSharpSyntaxWalker
 						Visit(asNode);
 						break;
 					default:
-						Log.ErrorLine($"asNode : {kind}", _Options);
+						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|", _Options);
 						break;
 				}
 			}
@@ -1687,7 +1692,7 @@ internal class Walker : CSharpSyntaxWalker
 						VisitVariableDeclarator(asNode as VariableDeclaratorSyntax);
 						break;
 					default:
-						Log.ErrorLine($"asNode : {kind}", _Options);
+						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|", _Options);
 						break;
 				}
 			}
@@ -1729,7 +1734,7 @@ internal class Walker : CSharpSyntaxWalker
 						Visit(asNode);
 						break;
 					default:
-						Log.ErrorLine($"asNode : {kind}", _Options);
+						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|", _Options);
 						break;
 				}
 			}
@@ -1779,7 +1784,7 @@ internal class Walker : CSharpSyntaxWalker
 						Visit(asNode);
 						break;
 					default:
-						Log.ErrorLine($"asNode : {kind}", _Options);
+						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|", _Options);
 						break;
 				}
 			}
@@ -1884,7 +1889,7 @@ internal class Walker : CSharpSyntaxWalker
 							break;
 						}
 					default:
-						Log.ErrorLine($"asNode : {kind}", _Options);
+						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|", _Options);
 						break;
 				}
 			}
@@ -1958,7 +1963,7 @@ internal class Walker : CSharpSyntaxWalker
 						VisitInitializerExpression(asNode as InitializerExpressionSyntax);
 						break;
 					default:
-						Log.ErrorLine($"asNode : {kind}", _Options);
+						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|", _Options);
 						break;
 				}
 			}
@@ -2002,7 +2007,7 @@ internal class Walker : CSharpSyntaxWalker
 						VisitArrayRankSpecifier(asNode as ArrayRankSpecifierSyntax);
 						break;
 					default:
-						Log.ErrorLine($"asNode : {kind}", _Options);
+						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|", _Options);
 						break;
 				}
 			}
@@ -2051,7 +2056,7 @@ internal class Walker : CSharpSyntaxWalker
 							break;
 						}
 					default:
-						Log.ErrorLine($"asNode : {kind}", _Options);
+						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|", _Options);
 						break;
 				}
 			}
@@ -2119,7 +2124,7 @@ internal class Walker : CSharpSyntaxWalker
 						VisitObjectCreationExpression(asNode as ObjectCreationExpressionSyntax);
 						break;
 					default:
-						Log.ErrorLine($"asNode : {kind}", _Options);
+						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|", _Options);
 						break;
 				}
 			}
@@ -2174,7 +2179,7 @@ internal class Walker : CSharpSyntaxWalker
 						Visit(asNode);
 						break;
 					default:
-						Log.ErrorLine($"asNode : {kind}", _Options);
+						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|", _Options);
 						break;
 				}
 			}
@@ -2194,9 +2199,13 @@ internal class Walker : CSharpSyntaxWalker
 							if (_value.EndsWith('f') ||
 								_value.EndsWith('d') ||
 								_value.EndsWith('m') ||
+								_value.EndsWith('u') ||
+								_value.EndsWith('l') ||
 								_value.EndsWith('F') ||
 								_value.EndsWith('D') ||
-								_value.EndsWith('M'))
+								_value.EndsWith('M') ||
+								_value.EndsWith('U') ||
+								_value.EndsWith('L'))
 								_value = _value.Remove(_value.Length - 1);
 
 							if (_value.Length > 10)
@@ -2270,7 +2279,7 @@ internal class Walker : CSharpSyntaxWalker
 							break;
 						}
 					default:
-						Log.ErrorLine($"asNode : {kind}", _Options);
+						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|", _Options);
 						break;
 				}
 			}
@@ -2355,7 +2364,7 @@ internal class Walker : CSharpSyntaxWalker
 							break;
 						}
 					default:
-						Log.ErrorLine($"asNode : {kind}", _Options);
+						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|", _Options);
 						break;
 				}
 			}
@@ -2424,7 +2433,7 @@ internal class Walker : CSharpSyntaxWalker
 						Visit(asNode);
 						break;
 					default:
-						Log.ErrorLine($"asNode : {kind}", _Options);
+						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|", _Options);
 						break;
 				}
 			}
@@ -2464,7 +2473,7 @@ internal class Walker : CSharpSyntaxWalker
 						Visit(asNode); 
 						break;
 					default:
-						Log.ErrorLine($"asNode : {kind}", _Options);
+						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|", _Options);
 						break;
 				}
 			}
@@ -2677,7 +2686,7 @@ internal class Walker : CSharpSyntaxWalker
 						VisitGenericName((GenericNameSyntax)asNode);
 						break;
 					default:
-						Log.ErrorLine($"asNode : {kind}", _Options);
+						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|", _Options);
 						break;
 				}
 			}
@@ -2715,7 +2724,7 @@ internal class Walker : CSharpSyntaxWalker
 				{
 
 					default:
-						Log.ErrorLine($"asNode : {kind}", _Options);
+						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|", _Options);
 						break;
 				}
 			}
@@ -2753,7 +2762,7 @@ internal class Walker : CSharpSyntaxWalker
 				{
 
 					default:
-						Log.ErrorLine($"asNode : {kind}", _Options);
+						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|", _Options);
 						break;
 				}
 			}
@@ -2800,7 +2809,7 @@ internal class Walker : CSharpSyntaxWalker
 							break;
 						}
 					default:
-						Log.ErrorLine($"asNode : {kind}", _Options);
+						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|", _Options);
 						break;
 				}
 			}
@@ -2841,7 +2850,7 @@ internal class Walker : CSharpSyntaxWalker
 						VisitTypeArgumentList(asNode as TypeArgumentListSyntax);
 						break;
 					default:
-						Log.ErrorLine($"asNode : {kind}", _Options);
+						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|", _Options);
 						break;
 				}
 			}
@@ -2883,7 +2892,7 @@ internal class Walker : CSharpSyntaxWalker
 				switch (kind)
 				{
 					default:
-						Log.ErrorLine($"asNode : {kind}", _Options);
+						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|", _Options);
 						break;
 				}
 			}
@@ -3121,8 +3130,14 @@ internal class Walker : CSharpSyntaxWalker
 
 				switch (kind)
 				{
+					case SyntaxKind.AttributeList:
+					case SyntaxKind.ExternAliasDirective:
 					case SyntaxKind.UsingDirective:
-						break;
+						{
+							if (_Options.Debug)
+								Log.WarningLine($"\"{kind}\" not implemented or unlikely to be implemented. Ignoring! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{asNode.ToFullString()}|", _Options);
+							break;
+						}
 					case SyntaxKind.GlobalStatement:
 						{
 							_GlobalStatement = true;
@@ -3137,7 +3152,7 @@ internal class Walker : CSharpSyntaxWalker
 						VisitFileScopedNamespaceDeclaration((FileScopedNamespaceDeclarationSyntax)asNode);
 						break;
 					default:
-						Log.ErrorLine($"asNode : {kind}", _Options);
+						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|", _Options);
 						break;
 				}
 			}
@@ -3468,7 +3483,11 @@ internal class Walker : CSharpSyntaxWalker
 					case SyntaxKind.DelegateDeclaration:
 					case SyntaxKind.InterfaceDeclaration:
 					case SyntaxKind.StructDeclaration:
-						break;
+						{
+							if (_Options.Debug)
+								Log.WarningLine($"\"{kind}\" not implemented or unlikely to be implemented. Ignoring! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{asNode.ToFullString()}|", _Options);
+							break;
+						}
 					case SyntaxKind.QualifiedName:
 					case SyntaxKind.IdentifierName:
 						{
@@ -3485,7 +3504,7 @@ internal class Walker : CSharpSyntaxWalker
 						VisitNamespaceDeclaration((NamespaceDeclarationSyntax)asNode);
 						break;
 					default:
-						Log.ErrorLine($"asNode : {kind}", _Options);
+						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|", _Options);
 						break;
 				}
 			}
@@ -3597,6 +3616,9 @@ internal class Walker : CSharpSyntaxWalker
 
 				switch (kind)
 				{
+					case SyntaxKind.LocalFunctionStatement:
+						VisitLocalFunctionStatement((LocalFunctionStatementSyntax)asNode);
+						break;
 					case SyntaxKind.ExpressionStatement:
 						VisitExpressionStatement((ExpressionStatementSyntax)asNode);
 						break;
@@ -3604,7 +3626,7 @@ internal class Walker : CSharpSyntaxWalker
 						VisitLocalDeclarationStatement((LocalDeclarationStatementSyntax)asNode);
 						break;
 					default:
-						Log.ErrorLine($"asNode : {kind}", _Options);
+						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|", _Options);
 						break;
 				}
 			}
@@ -3814,10 +3836,62 @@ internal class Walker : CSharpSyntaxWalker
 	}
 	public override void VisitLocalFunctionStatement(LocalFunctionStatementSyntax node)
 	{
-		if (_Options.Debug)
-			Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
 
-		base.VisitLocalFunctionStatement(node);
+		for (int i = 0; i < nodesAndTokens.Count; i++)
+		{
+			SyntaxNode? asNode = nodesAndTokens[i].AsNode();
+
+			if (asNode != null)
+			{
+				SyntaxKind kind = asNode.Kind();
+
+				switch (kind)
+				{
+					case SyntaxKind.Block:
+						VisitBlock((BlockSyntax)asNode);
+						break;
+					case SyntaxKind.ParameterList:
+						VisitParameterList((ParameterListSyntax)asNode);
+						break;
+					case SyntaxKind.PredefinedType:
+						{
+							SyntaxTriviaList _syntaxTrivias = asNode.GetLeadingTrivia();
+							for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
+							{
+								VisitTrivia(_syntaxTrivias[_i]);
+							}
+
+							JSSB.Append("function");
+
+							_syntaxTrivias = asNode.GetTrailingTrivia();
+							for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
+							{
+								VisitTrivia(_syntaxTrivias[_i]);
+							}
+							break;
+						}
+					default:
+						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|", _Options);
+						break;
+				}
+			}
+			else
+			{
+				SyntaxToken asToken = nodesAndTokens[i].AsToken();
+				SyntaxKind kind = asToken.Kind();
+
+				switch (kind)
+				{
+					case SyntaxKind.IdentifierToken:
+						VisitToken(asToken);
+						break;
+					default:
+						Log.ErrorLine($"asToken : {kind}", _Options);
+						break;
+				}
+			}
+		}
 	}
 	public override void VisitLockStatement(LockStatementSyntax node)
 	{
@@ -3868,6 +3942,7 @@ internal class Walker : CSharpSyntaxWalker
 
 				switch (kind)
 				{
+					case SyntaxKind.UsingDirective:
 					case SyntaxKind.DelegateDeclaration:
 					case SyntaxKind.InterfaceDeclaration:
 					case SyntaxKind.StructDeclaration:
@@ -3892,7 +3967,7 @@ internal class Walker : CSharpSyntaxWalker
 						VisitNamespaceDeclaration((NamespaceDeclarationSyntax)asNode);
 						break;
 					default:
-						Log.ErrorLine($"asNode : {kind}", _Options);
+						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|", _Options);
 						break;
 				}
 			}
@@ -4638,7 +4713,10 @@ internal class Walker : CSharpSyntaxWalker
 		else
 			iSymbol = symbolInfo?.Symbol;
 
-		if (iSymbol != null && iSymbol.Kind != SymbolKind.ErrorType && iSymbol.Kind != SymbolKind.DynamicType)
+		if (iSymbol != null && 
+			iSymbol.Kind != SymbolKind.ErrorType && 
+			iSymbol.Kind != SymbolKind.DynamicType && 
+			iSymbol.Kind != SymbolKind.Namespace)
 		{
 			if (iSymbol.ContainingNamespace.ToString().Contains(nameof(CSharpToJavaScript)))
 			{
@@ -4994,6 +5072,12 @@ internal class Walker : CSharpSyntaxWalker
 		if (symbol == null) 
 		{
 			Log.WarningLine($"WARNING! node: \"{node}\", symbol is null. USE \"CustomCSNamesToJS\"!", _Options);
+			return false;
+		}
+		if (symbol.Name == "dynamic")
+		{
+			//Hitting with "AllInOneNoPreprocessor-v6.cs"
+			Log.WarningLine($"WARNING! node: \"{node}\", symbol is \"dynamic\".", _Options);
 			return false;
 		}
 

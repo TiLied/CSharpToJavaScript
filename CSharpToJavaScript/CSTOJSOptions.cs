@@ -42,8 +42,14 @@ namespace CSharpToJavaScript
 		/// <value>
 		/// Default: <see cref="Directory.GetCurrentDirectory" />
 		/// </value>
-		public string OutPutPath { get; set; } = Directory.GetCurrentDirectory();
-
+		public string OutputPath { get; set; } = Directory.GetCurrentDirectory();
+		/// <summary>
+		/// Name of an output js file.  
+		/// </summary>
+		/// <value>
+		/// Default: cs filename with ".js" />
+		/// </value>
+		public string? OutputFileName { get; set; } = null;
 		/// <summary>
 		/// Self-explanatory, Use <c>var</c> over <c>let</c>.
 		/// </summary>

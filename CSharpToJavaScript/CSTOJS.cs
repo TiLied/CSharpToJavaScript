@@ -240,6 +240,10 @@ public class CSTOJS
 	/// <exception cref="FileNotFoundException"></exception>
 	public void GenerateOneContinuously(string path, CSTOJSOptions? options = null) 
 	{
+		//TODO?
+		//Currently overriding default options.
+		//Either way, we need to exit from continuous mode.
+		//See StopWatching where default options resets back.
 		if (options != null)
 			_DefaultOptions = options;
 
@@ -264,7 +268,7 @@ public class CSTOJS
 			_FSWatcher.IncludeSubdirectories = true;
 			_FSWatcher.EnableRaisingEvents = true;
 
-			Log.WriteLine($"Watching to: {path}", options);
+			Log.WriteLine($"Watching to: {path}", _DefaultOptions);
 		}
 		else
 		{
@@ -343,7 +347,7 @@ public class CSTOJS
 			{
 				references.Add(MetadataReference.CreateFromFile(Path.Combine(rtPath, "System.Private.CoreLib.dll")));
 
-				AssemblyName[] a = assembly.GetReferencedAssemblies();
+				AssemblyName[] a = assembly?.GetReferencedAssemblies() ?? [];
 				foreach (AssemblyName item in a)
 				{
 					if (File.Exists(Path.Combine(assemblyPath, item.Name + ".dll")))

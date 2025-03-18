@@ -289,6 +289,9 @@ internal class Walker : CSharpSyntaxWalker
 
 				switch (kind)
 				{
+					case SyntaxKind.StructDeclaration:
+					case SyntaxKind.OperatorDeclaration:
+					case SyntaxKind.ConversionOperatorDeclaration:
 					case SyntaxKind.AttributeList:
 						{
 							if (_Options.Debug)
@@ -551,6 +554,12 @@ internal class Walker : CSharpSyntaxWalker
 
 				switch (kind)
 				{
+					case SyntaxKind.UnsafeStatement:
+						{
+							if (_Options.Debug)
+								Log.WarningLine($"\"{kind}\" not implemented or unlikely to be implemented. Ignoring! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{asNode.ToFullString()}|", _Options);
+							break;
+						}
 					case SyntaxKind.ExpressionStatement: 
 						VisitExpressionStatement(asNode as ExpressionStatementSyntax);
 						break;
@@ -1009,7 +1018,7 @@ internal class Walker : CSharpSyntaxWalker
 							if(_value is LiteralExpressionSyntax)
 								VisitLiteralExpression((LiteralExpressionSyntax)_value);
 							else
-								Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|", _Options);
+								Log.ErrorLine($"asNode : _value is {_value.Kind()}\n|{asNode.ToFullString()}|", _Options);
 							break;
 						}
 					default:
@@ -1105,6 +1114,7 @@ internal class Walker : CSharpSyntaxWalker
 								Log.WarningLine($"\"{kind}\" not implemented or unlikely to be implemented. Ignoring! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{asNode.ToFullString()}|", _Options);
 							break;
 						}
+					case SyntaxKind.IdentifierName:
 					case SyntaxKind.GenericName:
 					case SyntaxKind.PredefinedType:
 						{
@@ -1115,9 +1125,9 @@ internal class Walker : CSharpSyntaxWalker
 							}
 							break;
 						}
-					case SyntaxKind.IdentifierName:
-						VisitIdentifierName((IdentifierNameSyntax)asNode);
-						break;
+					//case SyntaxKind.IdentifierName:
+					//	VisitIdentifierName((IdentifierNameSyntax)asNode);
+					//	break;
 					case SyntaxKind.ParameterList:
 					case SyntaxKind.Block:
 						Visit(asNode);

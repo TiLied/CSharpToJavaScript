@@ -89,21 +89,21 @@ namespace CSharpToJavaScript
 		public bool UseStrictEquality { get; set; } = false;
 
 		/// <summary>
-		/// List of custom names to convert.
+		/// Array of custom names to convert.
 		/// </summary>
-		/// <remarks>Example: <c>new List&lt;Tuple&lt;string, string&gt;&gt;(){new Tuple&lt;string, string&gt;("Console", "console")}</c>. Will convert "Console" to "console".</remarks>
+		/// <remarks>Example: <c>[new Tuple&lt;string, string&gt;("Console", "console")]</c>. Will convert "Console" to "console".</remarks>
 		/// <value>
-		/// Default: <c>new()</c>
+		/// Default: <c>[]</c>
 		/// </value>
-		public List<Tuple<string, string>> CustomCSNamesToJS { get; set; } = new();
+		public Tuple<string, string>[] CustomCSNamesToJS { get; set; } = [];
 		/// <summary>
-		/// List of types to convert.
+		/// Array of types to convert.
 		/// </summary>
 		/// <remarks>Example: Similar to <see cref="CSTOJSOptions.CustomCSNamesToJS" />, but convers the type. You need to use <see cref="ToAttribute" />.</remarks>
 		/// <value>
 		/// Default: <c>new()</c>
 		/// </value>
-		public List<Type> CustomCSTypesToJS { get; set; } = new();
+		public Type[] CustomCSTypesToJS { get; set; } = [];
 
 		/// <summary>
 		/// Add a <see cref="StringBuilder" /> to the front of a javascript file.

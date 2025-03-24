@@ -27,7 +27,7 @@ public class ErrorPrototype : FunctionPrototype
 	public string Message { get; set; } = string.Empty;
 	public string Name { get; set; } = "Error";
 	public ErrorPrototype() { }
-	public string ToString()
+	public new string ToString()
 	{
 		throw new NotImplementedException();
 	}

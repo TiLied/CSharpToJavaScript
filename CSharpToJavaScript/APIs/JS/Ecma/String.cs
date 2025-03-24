@@ -10,7 +10,7 @@ namespace CSharpToJavaScript.APIs.JS.Ecma;
 [To(ToAttribute.Default)]
 public partial class String : StringPrototype
 {
-	public dynamic Value { get; set; }
+	public dynamic? Value { get; set; }
 
 	public static implicit operator String(string value) { return new String(value) { Value = value }; }
 	public static implicit operator string(String value) { return new String(value) { Value = value }; }
@@ -84,7 +84,7 @@ public partial class StringPrototype : FunctionPrototype
 	{
 		throw new System.NotImplementedException();
 	}
-	public int LocaleCompare(string that, dynamic reserved1 = null, dynamic reserved2 = null )
+	public int LocaleCompare(string that, dynamic? reserved1 = null, dynamic? reserved2 = null )
 	{
 		throw new System.NotImplementedException();
 	}
@@ -152,7 +152,7 @@ public partial class StringPrototype : FunctionPrototype
 	{
 		throw new System.NotImplementedException();
 	}
-	public string ToString()
+	public new string ToString()
 	{
 		throw new System.NotImplementedException();
 	}
@@ -172,7 +172,7 @@ public partial class StringPrototype : FunctionPrototype
 	{
 		throw new System.NotImplementedException();
 	}
-	public String ValueOf()
+	public new String ValueOf()
 	{
 		throw new System.NotImplementedException();
 	}

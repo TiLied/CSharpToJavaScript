@@ -1,5 +1,4 @@
-﻿using CSharpToJavaScript.APIs.JS;
-using CSharpToJavaScript.Utils;
+﻿using CSharpToJavaScript.Utils;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
@@ -9,7 +8,6 @@ using System.Collections.Immutable;
 using System.Linq;
 using System.Reflection;
 using System.Text;
-using System.Xml.Linq;
 
 
 namespace CSharpToJavaScript;
@@ -308,7 +306,7 @@ internal class Walker : CSharpSyntaxWalker
 							break;
 						}
 					case SyntaxKind.ClassDeclaration:
-						VisitClassDeclaration(asNode as ClassDeclarationSyntax);
+						VisitClassDeclaration((ClassDeclarationSyntax)asNode);
 						break;
 					case SyntaxKind.BaseList:
 					case SyntaxKind.FieldDeclaration:
@@ -561,15 +559,17 @@ internal class Walker : CSharpSyntaxWalker
 							break;
 						}
 					case SyntaxKind.ExpressionStatement: 
-						VisitExpressionStatement(asNode as ExpressionStatementSyntax);
+						VisitExpressionStatement((ExpressionStatementSyntax)asNode);
 						break;
 					case SyntaxKind.ForEachStatement: 
-						VisitForEachStatement(asNode as ForEachStatementSyntax);
+						VisitForEachStatement((ForEachStatementSyntax)asNode);
 						break;
 					case SyntaxKind.LocalDeclarationStatement:
-						VisitLocalDeclarationStatement(asNode as LocalDeclarationStatementSyntax);
+						VisitLocalDeclarationStatement((LocalDeclarationStatementSyntax)asNode);
 						break;
 					case SyntaxKind.IfStatement:
+						VisitIfStatement((IfStatementSyntax)asNode);
+						break;
 					case SyntaxKind.TryStatement:
 					case SyntaxKind.ThrowStatement:
 					case SyntaxKind.DoStatement:
@@ -608,7 +608,7 @@ internal class Walker : CSharpSyntaxWalker
 									VisitTrivia(_syntaxTrivias[_i]);
 								}
 								JSSB.Append("\tsuper");
-								Visit((_SNBaseConstructorInitializerNode as ConstructorInitializerSyntax).ArgumentList);
+								Visit(((ConstructorInitializerSyntax)_SNBaseConstructorInitializerNode).ArgumentList);
 								//Todo!
 								//JSSB.Append(";");
 								_SNBaseConstructorInitializerNode = null;
@@ -645,7 +645,7 @@ internal class Walker : CSharpSyntaxWalker
 				switch (kind)
 				{
 					case SyntaxKind.VariableDeclaration: 
-						VisitVariableDeclaration(asNode as VariableDeclarationSyntax);
+						VisitVariableDeclaration((VariableDeclarationSyntax)asNode);
 						break;
 					default:
 						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|", _Options);
@@ -777,16 +777,16 @@ internal class Walker : CSharpSyntaxWalker
 						Visit(asNode);
 						break;
 					case SyntaxKind.ObjectCreationExpression:
-						VisitObjectCreationExpression(asNode as ObjectCreationExpressionSyntax);
+						VisitObjectCreationExpression((ObjectCreationExpressionSyntax)asNode);
 						break;
 					case SyntaxKind.ImplicitObjectCreationExpression:
-						VisitImplicitObjectCreationExpression(asNode as ImplicitObjectCreationExpressionSyntax);
+						VisitImplicitObjectCreationExpression((ImplicitObjectCreationExpressionSyntax)asNode);
 						break;
 					case SyntaxKind.AnonymousObjectCreationExpression:
-						VisitAnonymousObjectCreationExpression(asNode as AnonymousObjectCreationExpressionSyntax);
+						VisitAnonymousObjectCreationExpression((AnonymousObjectCreationExpressionSyntax)asNode);
 						break;
 					case SyntaxKind.IdentifierName:
-						VisitIdentifierName(asNode as IdentifierNameSyntax);
+						VisitIdentifierName((IdentifierNameSyntax)asNode);
 						break;
 					default:
 						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|", _Options);
@@ -946,7 +946,7 @@ internal class Walker : CSharpSyntaxWalker
 				switch (kind)
 				{
 					case SyntaxKind.EnumMemberDeclaration:
-						VisitEnumMemberDeclaration(asNode as EnumMemberDeclarationSyntax);
+						VisitEnumMemberDeclaration((EnumMemberDeclarationSyntax)asNode);
 						break;
 					default:
 						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|", _Options);
@@ -1069,7 +1069,7 @@ internal class Walker : CSharpSyntaxWalker
 				switch (kind)
 				{
 					case SyntaxKind.IdentifierName:
-						VisitIdentifierName(asNode as IdentifierNameSyntax);
+						VisitIdentifierName((IdentifierNameSyntax)asNode);
 						break;
 					default:
 						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|", _Options);
@@ -1397,7 +1397,7 @@ internal class Walker : CSharpSyntaxWalker
 							break;
 						}
 					case SyntaxKind.AccessorList:
-						VisitAccessorList(asNode as AccessorListSyntax);
+						VisitAccessorList((AccessorListSyntax)asNode);
 						break;
 					default:
 						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|", _Options);
@@ -1457,7 +1457,7 @@ internal class Walker : CSharpSyntaxWalker
 									 where e.IsKind(SyntaxKind.IdentifierToken)
 									 select e;
 							
-							dynamic d3 = null;
+							dynamic? d3 = null;
 							if (d2.Count() >= 2) 
 							{
 								//Delete this? TODO
@@ -1468,10 +1468,11 @@ internal class Walker : CSharpSyntaxWalker
 							}else
 								d3 = d2.First().AsToken();
 
-							if ((asNode as AccessorDeclarationSyntax).Body != null)
-							{
-								SyntaxTriviaList _syntaxTrivias = asNode.Parent.Parent.GetLeadingTrivia();
+							BlockSyntax? _body = ((AccessorDeclarationSyntax)asNode).Body;
 
+							if (_body != null)
+							{
+								//SyntaxTriviaList _syntaxTrivias = asNode.Parent!.Parent!.GetLeadingTrivia();
 								/* Todo! Why there is already "/t/t" in JSSB????
 								for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
 								{
@@ -1481,20 +1482,19 @@ internal class Walker : CSharpSyntaxWalker
 
 								JSSB.Append($"get {d3.Text}()");
 
-								_syntaxTrivias = asNode.GetTrailingTrivia();
+								SyntaxTriviaList _syntaxTrivias = asNode.GetTrailingTrivia();
 								for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
 								{
 									VisitTrivia(_syntaxTrivias[_i]);
 								}
 
-								VisitBlock((asNode as AccessorDeclarationSyntax).Body);
+								VisitBlock(_body);
 							}
 							else 
 							{
 								//JSSB.Append($"\n");
 
-								SyntaxTriviaList _syntaxTrivias = asNode.Parent.Parent.GetLeadingTrivia();
-
+								//SyntaxTriviaList _syntaxTrivias = asNode.Parent.Parent.GetLeadingTrivia();
 								/* Todo! Why there is already "/t/t" in JSSB????
 								for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
 								{
@@ -1508,7 +1508,7 @@ internal class Walker : CSharpSyntaxWalker
 								else
 									JSSB.Append($"get {d3.Text}() {{ return this.#_{d3.Text}_; }}");
 
-								_syntaxTrivias = asNode.GetTrailingTrivia();
+								SyntaxTriviaList _syntaxTrivias = asNode.GetTrailingTrivia();
 								for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
 								{
 									VisitTrivia(_syntaxTrivias[_i]);
@@ -1531,14 +1531,30 @@ internal class Walker : CSharpSyntaxWalker
 
 							SyntaxToken d3 = d2.First().AsToken();
 
-							if ((asNode as AccessorDeclarationSyntax).Body != null)
-							{
-								SyntaxTriviaList _syntaxTrivias = asNode.Parent.Parent.GetLeadingTrivia();
+							BlockSyntax? _body = ((AccessorDeclarationSyntax)asNode).Body;
 
-								for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
+							if (_body != null)
+							{
+								SyntaxTriviaList _syntaxTrivias;
+
+								if (asNode.Parent != null)
 								{
-									VisitTrivia(_syntaxTrivias[_i]);
+									if (asNode.Parent.Parent != null)
+									{
+										_syntaxTrivias = asNode.Parent.Parent.GetLeadingTrivia();
+
+										for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
+										{
+											VisitTrivia(_syntaxTrivias[_i]);
+										}
+									}
+									else
+										Log.ErrorLine("asNode.Parent.Parent is null", _Options);
+
 								}
+								else
+									Log.ErrorLine("asNode.Parent is null", _Options);
+
 
 								if (_PropertyStatic == true) 
 								{
@@ -1553,17 +1569,31 @@ internal class Walker : CSharpSyntaxWalker
 									VisitTrivia(_syntaxTrivias[_i]);
 								}
 
-								Visit((asNode as AccessorDeclarationSyntax).Body);
+								VisitBlock(_body);
 							}
 							else
 							{
 								JSSB.AppendLine();
-								SyntaxTriviaList _syntaxTrivias = asNode.Parent.Parent.GetLeadingTrivia();
 
-								for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
+								SyntaxTriviaList _syntaxTrivias;
+
+								if (asNode.Parent != null)
 								{
-									VisitTrivia(_syntaxTrivias[_i]);
+									if (asNode.Parent.Parent != null)
+									{
+										_syntaxTrivias = asNode.Parent.Parent.GetLeadingTrivia();
+
+										for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
+										{
+											VisitTrivia(_syntaxTrivias[_i]);
+										}
+									}
+									else
+										Log.ErrorLine("asNode.Parent.Parent is null", _Options);
+
 								}
+								else
+									Log.ErrorLine("asNode.Parent is null", _Options);
 
 								if (_PropertyStatic == true)
 								{
@@ -1573,11 +1603,16 @@ internal class Walker : CSharpSyntaxWalker
 								}else
 									JSSB.Append($"set {d3.Text}(value) {{ this.#_{d3.Text}_ = value; }}");
 
-								_syntaxTrivias = asNode.Parent.GetTrailingTrivia();
-								for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
+								if (asNode.Parent != null)
 								{
-									VisitTrivia(_syntaxTrivias[_i]);
+									_syntaxTrivias = asNode.Parent.GetTrailingTrivia();
+									for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
+									{
+										VisitTrivia(_syntaxTrivias[_i]);
+									}
 								}
+								else
+									Log.ErrorLine("asNode.Parent is null", _Options);
 							}
 
 							break;
@@ -1699,7 +1734,7 @@ internal class Walker : CSharpSyntaxWalker
 							break;
 						}
 					case SyntaxKind.VariableDeclarator:
-						VisitVariableDeclarator(asNode as VariableDeclaratorSyntax);
+						VisitVariableDeclarator((VariableDeclaratorSyntax)asNode);
 						break;
 					default:
 						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|", _Options);
@@ -1831,10 +1866,10 @@ internal class Walker : CSharpSyntaxWalker
 				switch (kind)
 				{
 					case SyntaxKind.ExpressionStatement:
-						VisitExpressionStatement(asNode as ExpressionStatementSyntax);
+						VisitExpressionStatement((ExpressionStatementSyntax)asNode);
 						break;
 					case SyntaxKind.Block:
-						VisitBlock(asNode as BlockSyntax);
+						VisitBlock((BlockSyntax)asNode);
 						break;
 					case SyntaxKind.GenericName:
 					case SyntaxKind.PredefinedType: 
@@ -1965,12 +2000,12 @@ internal class Walker : CSharpSyntaxWalker
 							//Check if third element is ArrayInitializerExpression
 							if (nodesAndTokens.Count >= 3)
 								_IgnoreArrayType = true;
-							VisitArrayType(asNode as ArrayTypeSyntax);
+							VisitArrayType((ArrayTypeSyntax)asNode);
 							_IgnoreArrayType = false;
 							break;
 						}
 					case SyntaxKind.ArrayInitializerExpression:
-						VisitInitializerExpression(asNode as InitializerExpressionSyntax);
+						VisitInitializerExpression((InitializerExpressionSyntax)asNode);
 						break;
 					default:
 						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|", _Options);
@@ -2014,7 +2049,7 @@ internal class Walker : CSharpSyntaxWalker
 						JSSB.Append("Array");
 						break;
 					case SyntaxKind.ArrayRankSpecifier:
-						VisitArrayRankSpecifier(asNode as ArrayRankSpecifierSyntax);
+						VisitArrayRankSpecifier((ArrayRankSpecifierSyntax)asNode);
 						break;
 					default:
 						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|", _Options);
@@ -2131,7 +2166,7 @@ internal class Walker : CSharpSyntaxWalker
 						Visit(asNode);
 						break;
 					case SyntaxKind.ObjectCreationExpression:
-						VisitObjectCreationExpression(asNode as ObjectCreationExpressionSyntax);
+						VisitObjectCreationExpression((ObjectCreationExpressionSyntax)asNode);
 						break;
 					default:
 						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|", _Options);
@@ -2246,8 +2281,11 @@ internal class Walker : CSharpSyntaxWalker
 								}
 							}
 
+							VisitLeadingTrivia(asToken);
+
 							JSSB.Append(_value);
 
+							VisitTrailingTrivia(asToken);
 							break;
 						}
 					case SyntaxKind.TrueKeyword:
@@ -2366,7 +2404,7 @@ internal class Walker : CSharpSyntaxWalker
 					case SyntaxKind.AsExpression:
 						{
 							//Todo double/multiply asExpression?? How?
-							_SNOriginalAsExpression = (asNode as BinaryExpressionSyntax).Left;
+							_SNOriginalAsExpression = ((BinaryExpressionSyntax)asNode).Left;
 
 							Visit(_SNOriginalAsExpression.WithoutTrailingTrivia());
 
@@ -2529,14 +2567,27 @@ internal class Walker : CSharpSyntaxWalker
 									break;
 								}
 
-								IEnumerable<ClassDeclarationSyntax> classesD = from n in classD.Parent.DescendantNodes()
-																			   where n.IsKind(SyntaxKind.ClassDeclaration)
-																			   select n as ClassDeclarationSyntax;
+								IEnumerable<ClassDeclarationSyntax>? classesD = null;
+								
+								if (classD.Parent != null)
+								{
+									classesD = from n in classD.Parent.DescendantNodes()
+																				   where n.IsKind(SyntaxKind.ClassDeclaration)
+																				   select n as ClassDeclarationSyntax;
+								}
+								else
+								{
+									Log.ErrorLine($"classD.Parent is null", _Options);
+								}
 
 								List<MemberDeclarationSyntax> mem = new();
-								foreach (ClassDeclarationSyntax item in classesD)
+
+								if (classesD != null)
 								{
-									mem.AddRange(item.Members.ToList());
+									foreach (ClassDeclarationSyntax item in classesD)
+									{
+										mem.AddRange(item.Members.ToList());
+									}
 								}
 
 								foreach (MemberDeclarationSyntax item in mem)
@@ -2566,8 +2617,16 @@ internal class Walker : CSharpSyntaxWalker
 										//Todo?
 										//VariableDeclarationSyntax s = item.DescendantNodes().First(e => e.IsKind(SyntaxKind.VariableDeclaration)) as VariableDeclarationSyntax;
 										//syntaxNode = s.Type;
-										symbolInfo = _Model.GetSymbolInfo(syntaxNode);
-										break;
+										if (syntaxNode != null)
+										{
+											symbolInfo = _Model.GetSymbolInfo(syntaxNode);
+											break;
+										}
+										else
+										{
+											Log.ErrorLine("syntaxNode is null", _Options);
+											break;
+										}
 									}
 								}
 							}
@@ -2589,7 +2648,14 @@ internal class Walker : CSharpSyntaxWalker
 
 							if (iSymbol != null && iSymbol.Kind != SymbolKind.ErrorType)
 							{
-								if (iSymbol.ContainingNamespace.ToString().Contains(nameof(CSharpToJavaScript)))
+								string? _containingNamespace = iSymbol.ContainingNamespace.ToString();
+								if (_containingNamespace == null)
+								{
+									Log.ErrorLine("_containingNamespace is null", _Options);
+									_containingNamespace = string.Empty;
+								}
+									
+								if (_containingNamespace.Contains(nameof(CSharpToJavaScript)))
 								{
 									string _text = string.Empty;
 									SyntaxToken _identifier = new();
@@ -2613,24 +2679,46 @@ internal class Walker : CSharpSyntaxWalker
 
 									foreach (AttributeData _attr in _attributeDatas)
 									{
-										if (_attr.AttributeClass.Name == nameof(ToAttribute))
+										if (_attr.AttributeClass != null)
 										{
-											ToAttribute _attrLocal = new(_attr.ConstructorArguments[0].Value as string);
+											if (_attr.AttributeClass.Name == nameof(ToAttribute))
+											{
+												ToAttribute _attrLocal = new(ToAttribute.Default);
+												if (_attr.ConstructorArguments[0].Value is string _str)
+												{
+													_attrLocal = new(_str);
+												}
+												else
+												{
+													Log.ErrorLine("_attr.ConstructorArguments[0].Value is not a string", _Options);
+												}
 
-											JSSB.Append($" {_attrLocal.Convert(_text)}");
+												JSSB.Append($" {_attrLocal.Convert(_text)}");
+												break;
+											}
+										}
+										else
+										{
+											Log.ErrorLine("_attr.AttributeClass is null", _Options);
 											break;
 										}
 									}
 									break;
 								}
 
-								if (iSymbol.ContainingNamespace.ToString().Contains(_NameSpaceStr))
+								if (_containingNamespace.Contains(_NameSpaceStr))
 								{
-									if (syntaxNode.IsKind(SyntaxKind.GenericName)) 
+									if (syntaxNode.IsKind(SyntaxKind.GenericName))
 									{
-										JSSB.Append($" {(syntaxNode as GenericNameSyntax).Identifier.ToString()}");
-									}else
-										JSSB.Append($" {syntaxNode.ToString()}");
+										JSSB.Append($" {((GenericNameSyntax)syntaxNode).Identifier.ToString()}");
+									}
+									else
+									{
+										if (syntaxNode != null)
+											JSSB.Append($" {syntaxNode.ToString()}");
+										else
+											Log.ErrorLine("syntaxNode is null", _Options);
+									}
 									break;
 								}
 
@@ -2646,10 +2734,15 @@ internal class Walker : CSharpSyntaxWalker
 								if (CustomCSNamesToJS(syntaxNode) == false)
 								{
 									JSSB.Append(' ');
-									if (BuiltInTypesGenerics(syntaxNode.WithoutLeadingTrivia(), iSymbol) == false)
+									if (syntaxNode != null)
 									{
-										Log.WarningLine($"TODO : {syntaxNode} ||| USE 'CustomCSNamesToJS' TO CONVERT.", _Options);
+										if (BuiltInTypesGenerics(syntaxNode.WithoutLeadingTrivia(), iSymbol) == false)
+										{
+											Log.WarningLine($"TODO : {syntaxNode} ||| USE 'CustomCSNamesToJS' TO CONVERT.", _Options);
+										}
 									}
+									else
+										Log.ErrorLine("syntaxNode is null", _Options);
 								}
 
 							}
@@ -2857,7 +2950,7 @@ internal class Walker : CSharpSyntaxWalker
 				switch (kind)
 				{
 					case SyntaxKind.TypeArgumentList: 
-						VisitTypeArgumentList(asNode as TypeArgumentListSyntax);
+						VisitTypeArgumentList((TypeArgumentListSyntax)asNode);
 						break;
 					default:
 						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|", _Options);
@@ -3469,13 +3562,6 @@ internal class Walker : CSharpSyntaxWalker
 
 		base.VisitExternAliasDirective(node);
 	}
-	public override void VisitFieldExpression(FieldExpressionSyntax node)
-	{
-		if (_Options.Debug)
-			Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
-
-		base.VisitFieldExpression(node);
-	}
 	public override void VisitFileScopedNamespaceDeclaration(FileScopedNamespaceDeclarationSyntax node)
 	{
 		ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
@@ -3677,10 +3763,71 @@ internal class Walker : CSharpSyntaxWalker
 	}
 	public override void VisitIfStatement(IfStatementSyntax node)
 	{
-		if (_Options.Debug)
-			Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
 
-		base.VisitIfStatement(node);
+		for (int i = 0; i < nodesAndTokens.Count; i++)
+		{
+			SyntaxNode? asNode = nodesAndTokens[i].AsNode();
+
+			if (asNode != null)
+			{
+				SyntaxKind kind = asNode.Kind();
+
+				switch (kind)
+				{
+					case SyntaxKind.IdentifierName:
+						VisitIdentifierName((IdentifierNameSyntax)asNode);
+						break;
+					case SyntaxKind.InvocationExpression:
+						VisitInvocationExpression((InvocationExpressionSyntax)asNode);
+						break;
+					case SyntaxKind.ContinueStatement:
+						VisitContinueStatement((ContinueStatementSyntax)asNode);
+						break;
+					case SyntaxKind.Block:
+						VisitBlock((BlockSyntax)asNode);
+						break;
+					case SyntaxKind.ElseClause:
+						VisitElseClause((ElseClauseSyntax)asNode);
+						break;
+					case SyntaxKind.ExpressionStatement:
+						VisitExpressionStatement((ExpressionStatementSyntax)asNode);
+						break;
+					case SyntaxKind.LogicalNotExpression:
+						VisitPrefixUnaryExpression((PrefixUnaryExpressionSyntax)asNode);
+						break;
+					case SyntaxKind.LogicalOrExpression:
+					case SyntaxKind.NotEqualsExpression:
+					case SyntaxKind.GreaterThanOrEqualExpression:
+					case SyntaxKind.EqualsExpression:
+						VisitBinaryExpression((BinaryExpressionSyntax)asNode);
+						break;
+					case SyntaxKind.ElementAccessExpression:
+						VisitElementAccessExpression((ElementAccessExpressionSyntax)asNode);
+						break;
+					default:
+						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|", _Options);
+						break;
+				}
+			}
+			else
+			{
+				SyntaxToken asToken = nodesAndTokens[i].AsToken();
+				SyntaxKind kind = asToken.Kind();
+
+				switch (kind)
+				{
+					case SyntaxKind.CloseParenToken:
+					case SyntaxKind.OpenParenToken:
+					case SyntaxKind.IfKeyword:
+						VisitToken(asToken);
+						break;
+					default:
+						Log.ErrorLine($"asToken : {kind}", _Options);
+						break;
+				}
+			}
+		}
 	}
 	public override void VisitImplicitArrayCreationExpression(ImplicitArrayCreationExpressionSyntax node)
 	{
@@ -4687,7 +4834,10 @@ internal class Walker : CSharpSyntaxWalker
 				{
 					if (_syntaxToken.Text == text)
 					{
-						symbolInfo = _Model.GetSymbolInfo(_item.Parent as IdentifierNameSyntax);
+						if (_item.Parent != null)
+							symbolInfo = _Model.GetSymbolInfo(_item.Parent);
+						else
+							Log.ErrorLine("_item.Parent is null", _Options);
 						break;
 					}
 				}
@@ -4728,7 +4878,14 @@ internal class Walker : CSharpSyntaxWalker
 			iSymbol.Kind != SymbolKind.DynamicType && 
 			iSymbol.Kind != SymbolKind.Namespace)
 		{
-			if (iSymbol.ContainingNamespace.ToString().Contains(nameof(CSharpToJavaScript)))
+			string? _containingNamespace = iSymbol.ContainingNamespace.ToString();
+			if (_containingNamespace == null)
+			{
+				Log.ErrorLine("_containingNamespace is null", _Options);
+				_containingNamespace = string.Empty;
+			}
+
+			if (_containingNamespace.Contains(nameof(CSharpToJavaScript)))
 			{
 				//
 				//
@@ -4741,20 +4898,36 @@ internal class Walker : CSharpSyntaxWalker
 
 				foreach (AttributeData attributeData in _attributeDatas)
 				{
-					if (attributeData.AttributeClass.Name == nameof(EnumValueAttribute))
+					if (attributeData.AttributeClass != null)
 					{
-						_attributes.Add(new EnumValueAttribute(attributeData.ConstructorArguments[0].Value as string));
-					}
+						if (attributeData.AttributeClass.Name == nameof(EnumValueAttribute))
+						{
+							if (attributeData.ConstructorArguments[0].Value is string _str)
+								_attributes.Add(new EnumValueAttribute(_str));
+							else
+								Log.ErrorLine("attributeData.ConstructorArguments[0].Value is not a string", _Options);
+						}
 
-					if (attributeData.AttributeClass.Name == nameof(ValueAttribute))
-					{
-						_attributes.Add(new ValueAttribute(attributeData.ConstructorArguments[0].Value as string));
-					}
+						if (attributeData.AttributeClass.Name == nameof(ValueAttribute))
+						{
+							if (attributeData.ConstructorArguments[0].Value is string _str)
+								_attributes.Add(new ValueAttribute(_str));
+							else
+								Log.ErrorLine("attributeData.ConstructorArguments[0].Value is not a string", _Options);
 
-					if (attributeData.AttributeClass.Name == nameof(ToAttribute))
-					{
-						_attributes.Add(new ToAttribute(attributeData.ConstructorArguments[0].Value as string));
+						}
+
+						if (attributeData.AttributeClass.Name == nameof(ToAttribute))
+						{
+							if (attributeData.ConstructorArguments[0].Value is string _str)
+								_attributes.Add(new ToAttribute(_str));
+							else
+								Log.ErrorLine("attributeData.ConstructorArguments[0].Value is not a string", _Options);
+
+						}
 					}
+					else
+						Log.ErrorLine("attributeData.AttributeClass is null", _Options);
 				}
 
 				bool _cad = _CheckAttributeData(_attributes.ToArray());
@@ -4770,90 +4943,44 @@ internal class Walker : CSharpSyntaxWalker
 					
 					foreach (AttributeData attributeData in _attributeDatas)
 					{
-						if (attributeData.AttributeClass.Name == nameof(EnumValueAttribute))
+						if (attributeData.AttributeClass != null)
 						{
-							_attributes.Add(new EnumValueAttribute(attributeData.ConstructorArguments[0].Value as string));
-						}
+							if (attributeData.AttributeClass.Name == nameof(EnumValueAttribute))
+							{
+								if (attributeData.ConstructorArguments[0].Value is string _str)
+									_attributes.Add(new EnumValueAttribute(_str));
+								else
+									Log.ErrorLine("attributeData.ConstructorArguments[0].Value is not a string", _Options);
 
-						if (attributeData.AttributeClass.Name == nameof(ValueAttribute))
-						{
-							_attributes.Add(new ValueAttribute(attributeData.ConstructorArguments[0].Value as string));
-						}
+							}
 
-						if (attributeData.AttributeClass.Name == nameof(ToAttribute))
-						{
-							_attributes.Add(new ToAttribute(attributeData.ConstructorArguments[0].Value as string));
+							if (attributeData.AttributeClass.Name == nameof(ValueAttribute))
+							{
+								if (attributeData.ConstructorArguments[0].Value is string _str)
+									_attributes.Add(new ValueAttribute(_str));
+								else
+									Log.ErrorLine("attributeData.ConstructorArguments[0].Value is not a string", _Options);
+
+							}
+
+							if (attributeData.AttributeClass.Name == nameof(ToAttribute))
+							{
+								if (attributeData.ConstructorArguments[0].Value is string _str)
+									_attributes.Add(new ToAttribute(_str));
+								else
+									Log.ErrorLine("attributeData.ConstructorArguments[0].Value is not a string", _Options);
+
+							}
 						}
+						else
+							Log.ErrorLine("attributeData.AttributeClass is null", _Options);
 					}
 					
 					return _CheckAttributeData(_attributes.ToArray());
 				}
-
-				/*
-				foreach (AttributeData _attr in _attributeDatas)
-				{
-					if (_attr.AttributeClass.Name == nameof(EnumValueAttribute)) 
-					{
-						EnumValueAttribute _attrLocal = new(_attr.ConstructorArguments[0].Value as string);
-
-						VisitLeadingTrivia(identifier);
-						JSSB.Append($"\"{_attrLocal.Value}\"");
-						VisitTrailingTrivia(identifier);
-						return true;
-					}
-
-					if (_attr.AttributeClass.Name == nameof(ValueAttribute))
-					{
-						ValueAttribute _attrLocal = new(_attr.ConstructorArguments[0].Value as string);
-
-						VisitLeadingTrivia(identifier);
-						JSSB.Append($"{_attrLocal.Value}");
-						VisitTrailingTrivia(identifier);
-						return true;
-					}
-
-					if (_attr.AttributeClass.Name == nameof(ToAttribute))
-					{
-						ToAttribute _attrLocal = new(_attr.ConstructorArguments[0].Value as string);
-
-						if (_attrLocal.To == ToAttribute.None)
-							_IgnoreTailingDot = true;
-
-						VisitLeadingTrivia(identifier);
-						JSSB.Append($"{_attrLocal.Convert(text)}");
-						VisitTrailingTrivia(identifier);
-						return true;
-						
-					}
-				}
-
-				//Attributes of a parent node(type)
-				_attributeDatas = iSymbol.ContainingType.GetAttributes();
-				foreach (AttributeData _attr in _attributeDatas)
-				{
-					if (_attr.AttributeClass.Name == nameof(ValueAttribute))
-					{
-						ValueAttribute _attrLocal = new(_attr.ConstructorArguments[0].Value as string);
-
-						VisitLeadingTrivia(identifier);
-						JSSB.Append($"{_attrLocal.Value}");
-						VisitTrailingTrivia(identifier);
-						return true;
-					}
-
-					if (_attr.AttributeClass?.Name == nameof(ToAttribute))
-					{
-						ToAttribute _attrLocal = new(_attr.ConstructorArguments[0].Value as string);
-
-						VisitLeadingTrivia(identifier);
-						JSSB.Append($"{_attrLocal.Convert(text)}");
-						VisitTrailingTrivia(identifier);
-						return true;
-					}
-				}*/
 			}
 
-			if (iSymbol.ContainingNamespace.ToString().Contains(_NameSpaceStr) && !_GlobalStatement)
+			if (_containingNamespace.Contains(_NameSpaceStr) && !_GlobalStatement)
 			{
 				if (iSymbol.Kind == SymbolKind.Parameter ||
 					iSymbol.Kind == SymbolKind.Local)
@@ -4861,13 +4988,21 @@ internal class Walker : CSharpSyntaxWalker
 					return false;
 				}
 
-				ClassDeclarationSyntax _class = (ClassDeclarationSyntax)node.Ancestors().FirstOrDefault(n => n.IsKind(SyntaxKind.ClassDeclaration));
+				ClassDeclarationSyntax? _class = node.Ancestors().FirstOrDefault(n => n.IsKind(SyntaxKind.ClassDeclaration)) as ClassDeclarationSyntax;
 
+				if (_class == null)
+				{
+					//TODO?
+					//Hitting with "TestPropertiesDefaultValue" + "CustomClass()" + "new CustomClass()"
+					Log.WarningLine("_class is null", _Options);
+					return false;
+				}
 				//This is for struct.
 				//maybe later convert struct to class?
 				//
 				if (_class == default(ClassDeclarationSyntax)) 
 				{
+					Log.WarningLine("_class is default", _Options);
 					return false;
 				}
 
@@ -4901,8 +5036,9 @@ internal class Walker : CSharpSyntaxWalker
 
 					if (_sT.ToString() == node.ToString())
 					{
-						if (node.Parent.Parent != null &&
-							!node.Parent.DescendantNodes().Any((e)=>e.IsKind(SyntaxKind.ThisExpression))) 
+						if (node.Parent != null &&
+							node.Parent.Parent != null &&
+							!node.Parent.DescendantNodes().Any((e) => e.IsKind(SyntaxKind.ThisExpression)))
 						{
 							if (node.Parent is MemberAccessExpressionSyntax member)
 							{
@@ -4910,7 +5046,7 @@ internal class Walker : CSharpSyntaxWalker
 								if (_iSymbolParent != null && _iSymbolParent.Kind == SymbolKind.Local)
 									return false;
 							}
-							
+
 							if (_class.Identifier.Text == _CurrentClassStr)
 							{
 								VisitLeadingTrivia(identifier);
@@ -4922,6 +5058,10 @@ internal class Walker : CSharpSyntaxWalker
 
 								return true;
 							}
+						}
+						else
+						{
+							Log.WarningLine("node.Parent is null or kind is not ThisExpression", _Options);
 						}
 					}
 				}

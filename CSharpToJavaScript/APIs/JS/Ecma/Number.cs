@@ -9,7 +9,7 @@ namespace CSharpToJavaScript.APIs.JS.Ecma;
 [To(ToAttribute.Default)]
 public partial class Number : NumberPrototype
 {
-	public dynamic Value { get; set; }
+	public dynamic? Value { get; set; }
 
 	public static implicit operator Number(double value) { return new Number { Value = value }; }
 	public static implicit operator Number(int value) { return new Number { Value = value }; }
@@ -80,7 +80,7 @@ public class NumberPrototype : FunctionPrototype
 	{
 		throw new System.NotImplementedException();
 	}
-	public string ToLocaleString(dynamic? reserved1 = null, dynamic? reserved2 = null)
+	public new string ToLocaleString(dynamic? reserved1 = null, dynamic? reserved2 = null)
 	{
 		throw new System.NotImplementedException();
 	}
@@ -92,7 +92,7 @@ public class NumberPrototype : FunctionPrototype
 	{
 		throw new System.NotImplementedException();
 	}
-	public float ValueOf()
+	public new float ValueOf()
 	{
 		throw new System.NotImplementedException();
 	}

@@ -54,7 +54,7 @@ public partial class SymbolPrototype : FunctionPrototype
 	{
 		throw new System.NotImplementedException();
 	}
-	public Symbol ValueOf()
+	public new Symbol ValueOf()
 	{
 		throw new System.NotImplementedException();
 	}

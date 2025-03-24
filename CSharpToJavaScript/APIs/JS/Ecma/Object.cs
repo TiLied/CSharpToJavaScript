@@ -178,12 +178,12 @@ public class ObjectPrototype
 		throw new System.NotImplementedException();
 	}
 
-	public string ToString()
+	public override string ToString()
 	{
 		throw new System.NotImplementedException();
 	}
 
-	public dynamic ValueOf()
+	public virtual dynamic ValueOf()
 	{
 		throw new System.NotImplementedException();
 	}

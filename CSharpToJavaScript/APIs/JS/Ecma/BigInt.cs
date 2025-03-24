@@ -30,7 +30,7 @@ public class BigIntPrototype : FunctionPrototype
 {
 	public BigIntPrototype() { }
 
-	public string ToLocaleString(dynamic? reserved1 = null, dynamic? reserved2 = null) 
+	public new string ToLocaleString(dynamic? reserved1 = null, dynamic? reserved2 = null) 
 	{
 		throw new System.NotImplementedException();
 	}
@@ -38,7 +38,7 @@ public class BigIntPrototype : FunctionPrototype
 	{
 		throw new System.NotImplementedException();
 	}
-	public BigInt ValueOf()
+	public new BigInt ValueOf()
 	{
 		throw new System.NotImplementedException();
 	}

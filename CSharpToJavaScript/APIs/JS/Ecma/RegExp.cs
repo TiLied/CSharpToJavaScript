@@ -22,12 +22,12 @@ public partial class RegExp : RegExpPrototype
 public class RegExpPrototype : FunctionPrototype
 {
 	public bool DotAll { get; }
-	public string Flags { get; }
+	public string Flags { get; } = string.Empty;
 	public bool Global { get; }
 	public bool HasIndices { get; }
 	public bool IgnoreCase { get; }
 	public bool Multiline { get; }
-	public string Source { get; }
+	public string Source { get; } = string.Empty;
 	public bool Sticky { get; }
 	public bool Unicode { get; }
 
@@ -43,7 +43,7 @@ public class RegExpPrototype : FunctionPrototype
 		throw new System.NotImplementedException();
 	}
 
-	public string ToString()
+	public new string ToString()
 	{
 		throw new System.NotImplementedException();
 	}

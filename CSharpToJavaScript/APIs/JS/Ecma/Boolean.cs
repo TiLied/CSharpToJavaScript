@@ -8,7 +8,7 @@ namespace CSharpToJavaScript.APIs.JS.Ecma;
 [To(ToAttribute.Default)]
 public partial class Boolean : BooleanPrototype
 {
-	public dynamic Value { get; set; }
+	public dynamic? Value { get; set; }
 
 	public static implicit operator Boolean(bool value) { return new Boolean(value) { Value = value }; }
 	public static implicit operator bool(Boolean value) { return new Boolean(value) { Value = value }; }
@@ -24,12 +24,12 @@ public partial class BooleanPrototype : FunctionPrototype
 
 	public BooleanPrototype() { }
 
-	public string ToString()
+	public new string ToString()
 	{
 		throw new System.NotImplementedException();
 	}
 
-	public bool ValueOf()
+	public new bool ValueOf()
 	{
 		throw new System.NotImplementedException();
 	}

@@ -160,7 +160,7 @@ public partial class ArrayPrototype : FunctionPrototype
 	{
 		throw new System.NotImplementedException();
 	}
-	public string ToLocaleString(dynamic? reserved1 = null, dynamic? reserved2 = null)
+	public new string ToLocaleString(dynamic? reserved1 = null, dynamic? reserved2 = null)
 	{
 		throw new System.NotImplementedException();
 	}
@@ -176,7 +176,7 @@ public partial class ArrayPrototype : FunctionPrototype
 	{
 		throw new System.NotImplementedException();
 	}
-	public string ToString()
+	public new string ToString()
 	{
 		throw new System.NotImplementedException();
 	}

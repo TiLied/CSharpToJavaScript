@@ -44,7 +44,7 @@ public partial class FunctionPrototype : ObjectPrototype
 	{
 		throw new System.NotImplementedException();
 	}
-	public string ToString()
+	public new string ToString()
 	{
 		throw new System.NotImplementedException();
 	}

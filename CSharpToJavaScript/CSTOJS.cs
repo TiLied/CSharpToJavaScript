@@ -21,8 +21,9 @@ namespace CSharpToJavaScript;
 public class CSTOJS
 {
 	private readonly Stopwatch _Stopwatch = new();
+	private readonly CSTOJSOptions _DefaultOptions = new();
 
-	private CSTOJSOptions _DefaultOptions = new();
+	private CSTOJSOptions _OptionsForContinuous = new();
 	private Walker? _Walker = null;
 	private FileSystemWatcher? _FSWatcher = null;
 
@@ -147,7 +148,10 @@ public class CSTOJS
 
 			Generate(_tree, assembly, options);
 
-			jsStringBuilders.Add(_Walker.JSSB);
+			if (_Walker != null)
+				jsStringBuilders.Add(_Walker.JSSB);
+			else
+				Log.ErrorLine("_Walker is null!", options);
 
 			Log.SuccessLine($"--- Done!", options);
 			Log.SuccessLine($"--- File name: {file.Name}", options);
@@ -185,7 +189,13 @@ public class CSTOJS
 		Log.SuccessLine($"--- Done!", options);
 		Log.SuccessLine($"--- --- ---", options);
 
-		return _Walker.JSSB;
+		if (_Walker != null)
+			return _Walker.JSSB;
+		else
+		{
+			Log.ErrorLine("_Walker is null!", options);
+			return new();
+		}
 	}
 
 	/// <summary>
@@ -220,7 +230,10 @@ public class CSTOJS
 
 		string pathCombined = Path.Combine(options.OutputPath, options.OutputFileName ?? "main.js");
 
-		await File.WriteAllTextAsync(pathCombined, _Walker.JSSB.ToString());
+		if (_Walker != null)
+			await File.WriteAllTextAsync(pathCombined, _Walker.JSSB.ToString());
+		else
+			Log.ErrorLine("_Walker is null!", options);
 
 		Log.SuccessLine($"--- Done!", options);
 		Log.SuccessLine($"--- Path: {pathCombined}", options);
@@ -240,12 +253,8 @@ public class CSTOJS
 	/// <exception cref="FileNotFoundException"></exception>
 	public void GenerateOneContinuously(string path, CSTOJSOptions? options = null) 
 	{
-		//TODO?
-		//Currently overriding default options.
-		//Either way, we need to exit from continuous mode.
-		//See StopWatching where default options resets back.
 		if (options != null)
-			_DefaultOptions = options;
+			_OptionsForContinuous = options;
 
 		if (File.Exists(path))
 		{
@@ -254,9 +263,10 @@ public class CSTOJS
 			if(file.Directory == null)
 				throw new DirectoryNotFoundException(path);
 
-			_FSWatcher = new(file.Directory.FullName);
-
-			_FSWatcher.NotifyFilter = NotifyFilters.LastWrite;
+			_FSWatcher = new(file.Directory.FullName)
+			{
+				NotifyFilter = NotifyFilters.LastWrite
+			};
 
 			_FSWatcher.Changed += OnChanged;
 			_FSWatcher.Created += OnCreated;
@@ -268,7 +278,7 @@ public class CSTOJS
 			_FSWatcher.IncludeSubdirectories = true;
 			_FSWatcher.EnableRaisingEvents = true;
 
-			Log.WriteLine($"Watching to: {path}", _DefaultOptions);
+			Log.WriteLine($"Watching to: {path}", _OptionsForContinuous);
 		}
 		else
 		{
@@ -314,7 +324,7 @@ public class CSTOJS
 	/// </summary>
 	public void StopWatching() 
 	{
-		_DefaultOptions = new();
+		_OptionsForContinuous = new();
 
 		if (_FSWatcher != null)
 		{

@@ -223,7 +223,7 @@ public class DatePrototype : FunctionPrototype
 		throw new System.NotImplementedException();
 	}
 
-	public string ToLocaleString(dynamic? reserved1 = null, dynamic? reserved2 = null)
+	public new string ToLocaleString(dynamic? reserved1 = null, dynamic? reserved2 = null)
 	{
 		throw new System.NotImplementedException();
 	}
@@ -233,7 +233,7 @@ public class DatePrototype : FunctionPrototype
 		throw new System.NotImplementedException();
 	}
 
-	public string ToString()
+	public new string ToString()
 	{
 		throw new System.NotImplementedException();
 	}
@@ -248,7 +248,7 @@ public class DatePrototype : FunctionPrototype
 		throw new System.NotImplementedException();
 	}
 
-	public float ValueOf()
+	public new float ValueOf()
 	{
 		throw new System.NotImplementedException();
 	}

@@ -30,3 +30,16 @@ jobs:
         name: cstojs-artifact
         path: /home/runner/work/CSharpToJavaScript/CSharpToJavaScript/CSharpToJavaScript/bin/Debug/net8.0/
         if-no-files-found: error
+        compression-level: 0
+  test:
+    needs: build
+    name: Test artifact
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/download-artifact@v4
+      with:
+        name: cstojs-artifact
+        path: /artifact/
+    - name: Display structure of downloaded files
+      run: ls -R /artifact/

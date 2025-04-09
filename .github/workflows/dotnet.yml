@@ -56,7 +56,7 @@ jobs:
       with:
         dotnet-version: 8.0.x
     - name: List refs
-      run: dotnet list reference--project CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj
+      run: dotnet list reference --project CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj
     - name: Delete reference
       run: dotnet remove reference CSharpToJavaScript/CSharpToJavaScript.csproj --project CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj
     - name: Add reference 

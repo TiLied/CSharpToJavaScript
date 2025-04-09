@@ -33,7 +33,7 @@ jobs:
         compression-level: 0
   test:
     needs: build
-    name: Test artifact
+    name: Test build
     runs-on: ubuntu-latest
 
     steps:

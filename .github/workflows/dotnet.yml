@@ -48,6 +48,7 @@ jobs:
       with:
         owner: TiLied
         repository: CSTOJS_Tests
+        branch: 'master'
     - name: Access cloned repository content
       run: |
         cd CSTOJS_Tests

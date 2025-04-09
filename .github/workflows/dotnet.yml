@@ -29,17 +29,4 @@ jobs:
       with:
         name: cstojs-artifact
         path: /bin/Debug/net8.0/
-  test:
-    needs: build
-    name: Run tests.
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Download a Build Artifact
-    - uses: actions/download-artifact@v4.2.1
-      with:
-        name: cstojs-artifact
-        path: artifact
-    - name: Display structure of downloaded files
-      run: ls -R artifact
     

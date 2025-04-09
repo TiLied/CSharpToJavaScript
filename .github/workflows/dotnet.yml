@@ -23,10 +23,10 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build -c Debug --no-restore
     - name: Upload artifact
       uses: actions/upload-artifact@v4.6.2
       with:
         name: cstojs-artifact
-        path: /home/runner/work/CSharpToJavaScript/CSharpToJavaScript/bin/Debug/net8.0/
-    
+        path: /home/runner/work/CSharpToJavaScript/CSharpToJavaScript/CSharpToJavaScript/CSharpToJavaScript/bin/Debug/net8.0/
+        if-no-files-found: error

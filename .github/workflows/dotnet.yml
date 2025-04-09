@@ -40,6 +40,25 @@ jobs:
     - uses: actions/download-artifact@v4
       with:
         name: cstojs-artifact
-        path: /artifact/
+        path: ~/artifact/
     - name: Display structure of downloaded files
-      run: ls -R /artifact/
+      run: ls -R ~/artifact/
+    - name: Clone CSTOJS_Tests
+      uses: whyakari/github-repo-action@v3.1
+      with:
+        owner: TiLied
+        repository: CSTOJS_Tests
+    - name: Access cloned repository content
+      run: |
+        cd CSTOJS_Tests
+        ls -la
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.0.x
+    - name: Delete reference
+      run: dotnet reference remove CSharpToJavaScript/CSharpToJavaScript.csproj --project CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj
+    - name: Add reference 
+      run: dotnet add /home/runner/work/CSharpToJavaScript/CSharpToJavaScript/CSharpToJavaScript/CSharpToJavaScript.csproj --project CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj
+    - name: Run tests
+      run: dotnet test CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj

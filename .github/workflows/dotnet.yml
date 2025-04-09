@@ -50,15 +50,13 @@ jobs:
         repository: CSTOJS_Tests
         branch: 'master'
     - name: Access cloned repository content
-      run: |
-        cd CSTOJS_Tests
-        ls -la
+      run: ls -R CSTOJS_Tests
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 8.0.x
     - name: Delete reference
-      run: dotnet reference remove CSharpToJavaScript/CSharpToJavaScript.csproj --project CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj
+      run: dotnet reference remove /CSharpToJavaScript/CSharpToJavaScript/CSharpToJavaScript.csproj --project CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj
     - name: Add reference 
       run: dotnet add /home/runner/work/CSharpToJavaScript/CSharpToJavaScript/CSharpToJavaScript/CSharpToJavaScript.csproj --project CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj
     - name: Run tests

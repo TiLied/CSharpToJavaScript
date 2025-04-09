@@ -35,8 +35,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/download-artifact@v4.2.1
     - name: Download a Build Artifact
+    - uses: actions/download-artifact@v4.2.1
       with:
         name: cstojs-artifact
         path: artifact

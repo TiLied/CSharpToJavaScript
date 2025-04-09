@@ -94,7 +94,7 @@ jobs:
     - name: Delete reference
       run: dotnet remove CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj reference "..\..\CSharpToJavaScript\CSharpToJavaScript\CSharpToJavaScript.csproj"
     - name: Add reference 
-      run: dotnet add CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj reference /home/runner/work/CSharpToJavaScript/CSharpToJavaScript/CSharpToJavaScript/CSharpToJavaScript.csproj
+      run: dotnet add CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj reference "D:\a\CSharpToJavaScript\CSharpToJavaScript\CSharpToJavaScript\CSharpToJavaScript.csproj"
     - name: Run tests
       run: dotnet test CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj
   test-ubuntu-arm:
@@ -160,7 +160,7 @@ jobs:
     - name: Delete reference
       run: dotnet remove CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj reference "..\..\CSharpToJavaScript\CSharpToJavaScript\CSharpToJavaScript.csproj"
     - name: Add reference 
-      run: dotnet add CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj reference /home/runner/work/CSharpToJavaScript/CSharpToJavaScript/CSharpToJavaScript/CSharpToJavaScript.csproj
+      run: dotnet add CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj reference /Users/runner/work/CSharpToJavaScript/CSharpToJavaScript/CSharpToJavaScript/CSharpToJavaScript.csproj
     - name: Run tests
       run: dotnet test CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj
   test-macos-arm:
@@ -193,6 +193,6 @@ jobs:
     - name: Delete reference
       run: dotnet remove CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj reference "..\..\CSharpToJavaScript\CSharpToJavaScript\CSharpToJavaScript.csproj"
     - name: Add reference 
-      run: dotnet add CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj reference /home/runner/work/CSharpToJavaScript/CSharpToJavaScript/CSharpToJavaScript/CSharpToJavaScript.csproj
+      run: dotnet add CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj reference /Users/runner/work/CSharpToJavaScript/CSharpToJavaScript/CSharpToJavaScript/CSharpToJavaScript.csproj
     - name: Run tests
       run: dotnet test CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj

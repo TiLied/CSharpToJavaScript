@@ -56,8 +56,8 @@ jobs:
       with:
         dotnet-version: 8.0.x
     - name: Delete reference
-      run: dotnet reference remove /CSharpToJavaScript/CSharpToJavaScript/CSharpToJavaScript.csproj --project CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj
+      run: dotnet remove reference /CSharpToJavaScript/CSharpToJavaScript/CSharpToJavaScript.csproj --project CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj
     - name: Add reference 
-      run: dotnet add /home/runner/work/CSharpToJavaScript/CSharpToJavaScript/CSharpToJavaScript/CSharpToJavaScript.csproj --project CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj
+      run: dotnet add reference /home/runner/work/CSharpToJavaScript/CSharpToJavaScript/CSharpToJavaScript/CSharpToJavaScript.csproj --project CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj
     - name: Run tests
       run: dotnet test CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj

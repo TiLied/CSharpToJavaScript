@@ -31,10 +31,142 @@ jobs:
         path: /home/runner/work/CSharpToJavaScript/CSharpToJavaScript/CSharpToJavaScript/bin/Debug/net8.0/
         if-no-files-found: error
         compression-level: 0
-  test:
+  test-ubuntu:
     needs: build
-    name: Test build
+    name: Test build on ubuntu-latest
     runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/download-artifact@v4
+      with:
+        name: cstojs-artifact
+        path: ~/artifact/
+    - name: Display structure of downloaded files
+      run: ls -R ~/artifact/
+    - name: Clone CSTOJS_Tests
+      uses: whyakari/github-repo-action@v3.1
+      with:
+        owner: TiLied
+        repository: CSTOJS_Tests
+        branch: 'master'
+    - name: Access cloned repository content
+      run: ls -R CSTOJS_Tests
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.0.x
+    - name: List refs
+      run: dotnet list CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj reference
+    - name: Delete reference
+      run: dotnet remove CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj reference "..\..\CSharpToJavaScript\CSharpToJavaScript\CSharpToJavaScript.csproj"
+    - name: Add reference 
+      run: dotnet add CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj reference /home/runner/work/CSharpToJavaScript/CSharpToJavaScript/CSharpToJavaScript/CSharpToJavaScript.csproj
+    - name: Run tests
+      run: dotnet test CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj
+  test-windows:
+    needs: build
+    name: Test build on windows-latest
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/download-artifact@v4
+      with:
+        name: cstojs-artifact
+        path: ~/artifact/
+    - name: Display structure of downloaded files
+      run: ls -R ~/artifact/
+    - name: Clone CSTOJS_Tests
+      uses: whyakari/github-repo-action@v3.1
+      with:
+        owner: TiLied
+        repository: CSTOJS_Tests
+        branch: 'master'
+    - name: Access cloned repository content
+      run: ls -R CSTOJS_Tests
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.0.x
+    - name: List refs
+      run: dotnet list CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj reference
+    - name: Delete reference
+      run: dotnet remove CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj reference "..\..\CSharpToJavaScript\CSharpToJavaScript\CSharpToJavaScript.csproj"
+    - name: Add reference 
+      run: dotnet add CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj reference /home/runner/work/CSharpToJavaScript/CSharpToJavaScript/CSharpToJavaScript/CSharpToJavaScript.csproj
+    - name: Run tests
+      run: dotnet test CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj
+  test-ubuntu-arm:
+    needs: build
+    name: Test build on ubuntu-24.04-arm
+    runs-on: ubuntu-24.04-arm
+
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/download-artifact@v4
+      with:
+        name: cstojs-artifact
+        path: ~/artifact/
+    - name: Display structure of downloaded files
+      run: ls -R ~/artifact/
+    - name: Clone CSTOJS_Tests
+      uses: whyakari/github-repo-action@v3.1
+      with:
+        owner: TiLied
+        repository: CSTOJS_Tests
+        branch: 'master'
+    - name: Access cloned repository content
+      run: ls -R CSTOJS_Tests
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.0.x
+    - name: List refs
+      run: dotnet list CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj reference
+    - name: Delete reference
+      run: dotnet remove CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj reference "..\..\CSharpToJavaScript\CSharpToJavaScript\CSharpToJavaScript.csproj"
+    - name: Add reference 
+      run: dotnet add CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj reference /home/runner/work/CSharpToJavaScript/CSharpToJavaScript/CSharpToJavaScript/CSharpToJavaScript.csproj
+    - name: Run tests
+      run: dotnet test CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj
+  test-macos:
+    needs: build
+    name: Test build on macos-13
+    runs-on: macos-13
+
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/download-artifact@v4
+      with:
+        name: cstojs-artifact
+        path: ~/artifact/
+    - name: Display structure of downloaded files
+      run: ls -R ~/artifact/
+    - name: Clone CSTOJS_Tests
+      uses: whyakari/github-repo-action@v3.1
+      with:
+        owner: TiLied
+        repository: CSTOJS_Tests
+        branch: 'master'
+    - name: Access cloned repository content
+      run: ls -R CSTOJS_Tests
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.0.x
+    - name: List refs
+      run: dotnet list CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj reference
+    - name: Delete reference
+      run: dotnet remove CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj reference "..\..\CSharpToJavaScript\CSharpToJavaScript\CSharpToJavaScript.csproj"
+    - name: Add reference 
+      run: dotnet add CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj reference /home/runner/work/CSharpToJavaScript/CSharpToJavaScript/CSharpToJavaScript/CSharpToJavaScript.csproj
+    - name: Run tests
+      run: dotnet test CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj
+  test-macos-arm:
+    needs: build
+    name: Test build on macos-latest
+    runs-on: macos-latest
 
     steps:
     - uses: actions/checkout@v4

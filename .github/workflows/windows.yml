@@ -1,0 +1,82 @@
+# This workflow will build a .NET project
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
+
+name: windows
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [windows-2025, windows-2022, windows-2019]
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.0.x
+    - name: Restore dependencies
+      run: dotnet restore
+    - name: Build
+      run: dotnet build -c Debug --no-restore
+    - name: Upload artifact
+      uses: actions/upload-artifact@v4.6.2
+      with:
+        name: cstojs-${{ matrix.os }}-artifact
+        path: D:/a/CSharpToJavaScript/CSharpToJavaScript/CSharpToJavaScript/bin/Debug/net8.0/
+        if-no-files-found: error
+        compression-level: 0
+  test:
+    needs: build
+    strategy:
+      matrix:
+        os: [ubuntu-24.04, ubuntu-22.04, ubuntu-20.04]
+    
+    runs-on: ${{ matrix.os }}
+
+    steps:
+    - uses: actions/download-artifact@v4
+      with:
+        name: cstojs-${{ matrix.os }}-artifact
+        path: ~/artifact/
+    - name: Display structure of downloaded files
+      run: ls -R ~/artifact/
+    - name: Clone CSTOJS_Tests
+      uses: whyakari/github-repo-action@v3.1
+      with:
+        owner: TiLied
+        repository: CSTOJS_Tests
+        branch: 'master'
+    - name: Access cloned repository content
+      run: ls -R CSTOJS_Tests
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.0.x
+    - name: List refs
+      run: dotnet list CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj reference
+    - name: Delete reference
+      run: dotnet remove CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj reference "..\..\CSharpToJavaScript\CSharpToJavaScript\CSharpToJavaScript.csproj"
+    - name: Replace reference
+      run: (Get-Content CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj) -replace '</Project>', '<ItemGroup><Reference Include="CSharpToJavaScript"><HintPath>D:/artifact/CSharpToJavaScript.dll</HintPath></Reference></ItemGroup></Project>' | Out-File -encoding ASCII CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj
+    - name: Type CSTOJS_Tests.csproj
+      run: type CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj
+    - name: Add Microsoft.CodeAnalysis.CSharp reference
+      run: dotnet add CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj package Microsoft.CodeAnalysis.CSharp
+    - name: Run tests
+      run: dotnet test CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj --logger "html;logfilename=test-result-${{ matrix.os }}.html;verbosity=detailed" --results-directory ~/artifact/
+    - name: Upload test result
+      uses: actions/upload-artifact@v4.6.2
+      with:
+        name: test-result-${{ matrix.os }}
+        path: ~/artifact/test-result-${{ matrix.os }}.html
+        if-no-files-found: error
+      if: ${{ always() }}

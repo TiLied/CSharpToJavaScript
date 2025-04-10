@@ -23,6 +23,7 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 8.0.x
+        cache: true
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
@@ -38,7 +39,7 @@ jobs:
     needs: build
     strategy:
       matrix:
-        os: [ubuntu-latest, ubuntu-24.04, ubuntu-22.04, ubuntu-20.04]
+        os: [ubuntu-24.04, ubuntu-22.04, ubuntu-20.04]
     
     runs-on: ${{ matrix.os }}
 
@@ -61,6 +62,7 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 8.0.x
+        cache: true
     - name: List refs
       run: dotnet list CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj reference
     - name: Delete reference

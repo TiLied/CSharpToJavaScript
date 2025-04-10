@@ -72,7 +72,7 @@ jobs:
     - name: Add Microsoft.CodeAnalysis.CSharp reference
       run: dotnet add CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj package Microsoft.CodeAnalysis.CSharp
     - name: Run tests
-      run: dotnet test CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj --filter "FullyQualifiedName!=CSTOJS_Tests.UnitTestOptions.TestNormalizeWhitespace" --logger "html;logfilename=test-result-${{ matrix.os }}.html;verbosity=detailed" --results-directory ~/artifact/
+      run: dotnet test CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj --logger "html;logfilename=test-result-${{ matrix.os }}.html;verbosity=detailed" --results-directory ~/artifact/
     - name: Upload test result
       uses: actions/upload-artifact@v4.6.2
       with:

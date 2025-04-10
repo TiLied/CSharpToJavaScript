@@ -13,7 +13,7 @@ jobs:
   build:
     strategy:
       matrix:
-        os: [ubuntu-latest, ubuntu-24.04, ubuntu-22.04, ubuntu-20.04]
+        os: [ubuntu-24.04, ubuntu-22.04, ubuntu-20.04]
 
     runs-on: ${{ matrix.os }}
 
@@ -69,6 +69,8 @@ jobs:
       run: sed -i 's+</Project>+<ItemGroup><Reference Include="CSharpToJavaScript"><HintPath>/home/runner/artifact/CSharpToJavaScript.dll</HintPath></Reference></ItemGroup></Project>+g' CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj
     - name: Cat CSTOJS_Tests.csproj
       run: cat CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj
+    - name: Add Microsoft.CodeAnalysis.CSharp reference
+      run: dotnet add CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj package Microsoft.CodeAnalysis.CSharp
     - name: Run tests
       run: dotnet test CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj --logger "html;logfilename=test-result-${{ matrix.os }}.html;verbosity=detailed" --results-directory ~/artifact/
     - name: Upload test result

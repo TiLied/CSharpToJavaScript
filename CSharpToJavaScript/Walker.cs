@@ -5,6 +5,7 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
+using System.Globalization;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -2238,8 +2239,9 @@ internal class Walker : CSharpSyntaxWalker
 					case SyntaxKind.NumericLiteralToken: 
 						{
 							string _value = asToken.Text;
-
+							
 							_value = _value.Replace("_","");
+							_value = _value.Replace(',', '.');
 
 							if (_value.EndsWith('f') ||
 								_value.EndsWith('d') ||
@@ -2252,15 +2254,11 @@ internal class Walker : CSharpSyntaxWalker
 								_value.EndsWith('U') ||
 								_value.EndsWith('L'))
 								_value = _value.Remove(_value.Length - 1);
-
+							
 							if (_value.Length > 10)
 							{
-								double _d = 0;
-
-								if (_value.Contains("E"))
-									_d = double.Parse(_value.Replace('.', ','), System.Globalization.NumberStyles.Float);
-								else
-									_d = Convert.ToDouble(_value.Replace('.', ','));
+								NumberStyles _styles = NumberStyles.AllowTrailingSign | NumberStyles.AllowDecimalPoint | NumberStyles.AllowThousands | NumberStyles.AllowExponent | NumberStyles.AllowCurrencySymbol;
+								double _d = double.Parse(_value.Replace('.', ','), _styles);
 
 								if (_value.StartsWith('-'))
 								{

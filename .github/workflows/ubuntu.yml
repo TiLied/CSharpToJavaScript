@@ -71,4 +71,4 @@ jobs:
         name: test-result-${{ matrix.os }}
         path: ./test-result-${{ matrix.os }}.html
         if-no-files-found: error
-        if: ${{ always() }}
+      if: ${{ always() }}

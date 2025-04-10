@@ -61,8 +61,12 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 8.0.x
+    - name: List refs
+      run: dotnet list CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj reference
+    - name: Delete reference
+      run: dotnet remove CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj reference "..\..\CSharpToJavaScript\CSharpToJavaScript\CSharpToJavaScript.csproj"
     - name: Replace reference
-      run: sed -i 's+<ProjectReference Include="..\..\CSharpToJavaScript\CSharpToJavaScript\CSharpToJavaScript.csproj" />+<Reference Include="MyAssembly"><HintPath>~\artifact\CSharpToJavaScript.dll</HintPath></Reference>+g' CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj
+      run: sed -i 's+</Project>+<Reference Include="CSharpToJavaScript"><HintPath>~\artifact\CSharpToJavaScript.dll</HintPath></Reference></Project>+g' CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj
     - name: Run tests
       run: dotnet test CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj --logger "html;logfilename=test-result-${{ matrix.os }}.html;verbosity=detailed" --results-directory ~\artifact\
     - name: Upload test result

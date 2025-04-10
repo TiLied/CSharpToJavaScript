@@ -31,7 +31,7 @@ jobs:
       uses: actions/upload-artifact@v4.6.2
       with:
         name: cstojs-${{ matrix.os }}-artifact
-        path: ./CSharpToJavaScript/CSharpToJavaScript/CSharpToJavaScript/bin/Debug/net8.0/
+        path: ~/runner/work/CSharpToJavaScript/CSharpToJavaScript/CSharpToJavaScript/bin/Debug/net8.0/
         if-no-files-found: error
         compression-level: 0
   test:
@@ -64,11 +64,11 @@ jobs:
     - name: Replace reference
       run: sed -i 's/<ProjectReference Include="..\..\CSharpToJavaScript\CSharpToJavaScript\CSharpToJavaScript.csproj" />/<Reference Include="MyAssembly"><HintPath>~\artifact\CSharpToJavaScript.dll</HintPath></Reference>/g' CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj
     - name: Run tests
-      run: dotnet test CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj --logger "html;logfilename=test-result-${{ matrix.os }}.html;verbosity=detailed"
+      run: dotnet test CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj --logger "html;logfilename=test-result-${{ matrix.os }}.html;verbosity=detailed" --results-directory ~\artifact\
     - name: Upload test result
       uses: actions/upload-artifact@v4.6.2
       with:
         name: test-result-${{ matrix.os }}
-        path: ./test-result-${{ matrix.os }}.html
+        path: ~/artifact/test-result-${{ matrix.os }}.html
         if-no-files-found: error
       if: ${{ always() }}

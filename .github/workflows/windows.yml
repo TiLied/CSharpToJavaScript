@@ -66,7 +66,7 @@ jobs:
     - name: Delete reference
       run: dotnet remove CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj reference "..\..\CSharpToJavaScript\CSharpToJavaScript\CSharpToJavaScript.csproj"
     - name: Replace reference
-      run: (Get-Content CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj) -replace '</Project>', '<ItemGroup><Reference Include="CSharpToJavaScript"><HintPath>D:/artifact/CSharpToJavaScript.dll</HintPath></Reference></ItemGroup></Project>' | Out-File -encoding ASCII CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj
+      run: (Get-Content CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj) -replace '</Project>', '<ItemGroup><Reference Include="CSharpToJavaScript"><HintPath>C:/Users/runneradmin/artifact/CSharpToJavaScript.dll</HintPath></Reference></ItemGroup></Project>' | Out-File -encoding ASCII CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj
     - name: Type CSTOJS_Tests.csproj
       run: type CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj
     - name: Add Microsoft.CodeAnalysis.CSharp reference

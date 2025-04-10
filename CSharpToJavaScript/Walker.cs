@@ -2241,8 +2241,7 @@ internal class Walker : CSharpSyntaxWalker
 							string _value = asToken.Text;
 							
 							_value = _value.Replace("_","");
-							_value = _value.Replace(',', '.');
-
+							
 							if (_value.EndsWith('f') ||
 								_value.EndsWith('d') ||
 								_value.EndsWith('m') ||
@@ -2278,6 +2277,8 @@ internal class Walker : CSharpSyntaxWalker
 									}
 								}
 							}
+
+							_value = _value.Replace(',', '.');
 
 							VisitLeadingTrivia(asToken);
 

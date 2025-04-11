@@ -751,14 +751,11 @@ internal class Walker : CSharpSyntaxWalker
 					case SyntaxKind.CharacterLiteralExpression:
 					case SyntaxKind.ConditionalExpression:
 					case SyntaxKind.UnaryMinusExpression:
-					case SyntaxKind.DivideExpression:
 					case SyntaxKind.SimpleMemberAccessExpression:
 					case SyntaxKind.ElementAccessExpression:
 					case SyntaxKind.PostIncrementExpression:
 					case SyntaxKind.SimpleLambdaExpression:
 					case SyntaxKind.SubtractExpression:
-					case SyntaxKind.EqualsExpression:
-					case SyntaxKind.AsExpression:
 					case SyntaxKind.MultiplyExpression:
 					case SyntaxKind.InvocationExpression:
 					case SyntaxKind.AddExpression:
@@ -776,6 +773,12 @@ internal class Walker : CSharpSyntaxWalker
 					case SyntaxKind.DivideAssignmentExpression:
 					case SyntaxKind.ModuloAssignmentExpression:
 						Visit(asNode);
+						break;
+					case SyntaxKind.DivideExpression:
+					case SyntaxKind.AsExpression:
+					case SyntaxKind.CoalesceExpression:
+					case SyntaxKind.EqualsExpression:
+						VisitBinaryExpression((BinaryExpressionSyntax)asNode);
 						break;
 					case SyntaxKind.ObjectCreationExpression:
 						VisitObjectCreationExpression((ObjectCreationExpressionSyntax)asNode);

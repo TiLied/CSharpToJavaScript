@@ -7,10 +7,16 @@ namespace CSharpToJavaScript.Utils
 {
 	internal static class Log
 	{
+		private static bool _SupportedOS = true;
 		static Log()
 		{
 			Trace.Listeners.Add(new ConsoleTraceListener());
+
+			//https://learn.microsoft.com/en-us/dotnet/api/system.console.foregroundcolor?view=net-9.0
+			if (OperatingSystem.IsAndroid() || OperatingSystem.IsBrowser() || OperatingSystem.IsIOS() || OperatingSystem.IsTvOS())
+				_SupportedOS = false;
 		}
+
 		public static void WriteLine(string message, CSTOJSOptions options)
 		{
 			if (options.DisableConsoleOutput == true)
@@ -20,19 +26,19 @@ namespace CSharpToJavaScript.Utils
 			Trace.WriteLine($"{message}");
 		}
 
-		public static void SuccessLine(string message, CSTOJSOptions options)
+		public static void InfoLine(string message, CSTOJSOptions options)
 		{
 			if (options.DisableConsoleOutput == true)
 				return;
 
 			Trace.Write($"{DateTime.Now.ToLongTimeString()}: ");
 
-			if (options.DisableConsoleColors == false)
+			if (_SupportedOS && options.DisableConsoleColors == false)
 				Console.ForegroundColor = ConsoleColor.Green;
 
 			Trace.WriteLine($"\t{message}");
 
-			if (options.DisableConsoleColors == false)
+			if (_SupportedOS && options.DisableConsoleColors == false)
 				Console.ResetColor();
 		}
 
@@ -43,18 +49,18 @@ namespace CSharpToJavaScript.Utils
 
 			Trace.Write($"{DateTime.Now.ToLongTimeString()}: ");
 
-			if (options.DisableConsoleColors == false)
+			if (_SupportedOS && options.DisableConsoleColors == false)
 				Console.ForegroundColor = ConsoleColor.Cyan;
 
 			Trace.WriteLine($"({line}){Path.GetFileName(file?.Replace("\\", "/"))}.{member}:");
 			Trace.Write("\tMessage: ");
 
-			if (options.DisableConsoleColors == false)
+			if (_SupportedOS && options.DisableConsoleColors == false)
 				Console.ForegroundColor = ConsoleColor.Yellow;
 			
 			Trace.WriteLine($"{message}");
 			
-			if (options.DisableConsoleColors == false)
+			if (_SupportedOS && options.DisableConsoleColors == false)
 				Console.ResetColor();
 		}
 
@@ -63,10 +69,9 @@ namespace CSharpToJavaScript.Utils
 			if (options.DisableConsoleOutput == true)
 				return;
 
-
 			Trace.Write($"{DateTime.Now.ToLongTimeString()}: ");
 
-			if (options.DisableConsoleColors == false)
+			if (_SupportedOS && options.DisableConsoleColors == false)
 				Console.ForegroundColor = ConsoleColor.Cyan;
 
 			string lineInfo = $"({line}){Path.GetFileName(file?.Replace("\\", "/"))}.{member}:";
@@ -74,14 +79,14 @@ namespace CSharpToJavaScript.Utils
 			Trace.WriteLine(lineInfo);
 			Trace.Write("\tMessage: ");
 
-			if (options.DisableConsoleColors == false)
+			if (_SupportedOS && options.DisableConsoleColors == false)
 				Console.ForegroundColor = ConsoleColor.Red;
 
 			Debug.Assert(false, $"{lineInfo} \tMessage: {message}");
 
 			Trace.WriteLine($"{message}");
 
-			if (options.DisableConsoleColors == false)
+			if (_SupportedOS && options.DisableConsoleColors == false)
 				Console.ResetColor();
 		}
 	}

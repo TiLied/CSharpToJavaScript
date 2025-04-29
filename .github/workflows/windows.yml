@@ -13,7 +13,7 @@ jobs:
   build:
     strategy:
       matrix:
-        os: [windows-2025, windows-2022, windows-2019]
+        os: [windows-2025, windows-2022]
 
     runs-on: ${{ matrix.os }}
 
@@ -38,7 +38,7 @@ jobs:
     needs: build
     strategy:
       matrix:
-        os: [windows-2025, windows-2022, windows-2019]
+        os: [windows-2025, windows-2022]
     
     runs-on: ${{ matrix.os }}
 
@@ -69,8 +69,8 @@ jobs:
       run: (Get-Content CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj) -replace '</Project>', '<ItemGroup><Reference Include="CSharpToJavaScript"><HintPath>C:/Users/runneradmin/artifact/CSharpToJavaScript.dll</HintPath></Reference></ItemGroup></Project>' | Out-File -encoding ASCII CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj
     - name: Type CSTOJS_Tests.csproj
       run: type CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj
-    - name: Add Microsoft.CodeAnalysis.CSharp reference
-      run: dotnet add CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj package Microsoft.CodeAnalysis.CSharp
+    - name: Add Microsoft.CodeAnalysis.CSharp.Workspaces reference
+      run: dotnet add CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj package Microsoft.CodeAnalysis.CSharp.Workspaces
     - name: Run tests
       run: dotnet test CSTOJS_Tests/CSTOJS_Tests/CSTOJS_Tests.csproj --logger "html;logfilename=test-result-${{ matrix.os }}.html;verbosity=detailed" --results-directory C:/Users/runneradmin/artifact
     - name: Upload test result

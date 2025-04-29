@@ -1,4 +1,4 @@
-﻿//Disable missing XML comments.
+﻿//TODO! Disable missing XML comments.
 #pragma warning disable CS1591
 
 using CSharpToJavaScript.Utils;
@@ -6,6 +6,7 @@ using CSharpToJavaScript.Utils;
 namespace CSharpToJavaScript.APIs.JS.Ecma;
 
 //https://262.ecma-international.org/14.0/#sec-function-objects
+[To(ToAttribute.Default)]
 public partial class Function : FunctionPrototype
 {
 	[To(ToAttribute.FirstCharToLowerCase)]
@@ -44,7 +45,7 @@ public partial class FunctionPrototype : ObjectPrototype
 	{
 		throw new System.NotImplementedException();
 	}
-	public new string ToString()
+	public new virtual string ToString()
 	{
 		throw new System.NotImplementedException();
 	}

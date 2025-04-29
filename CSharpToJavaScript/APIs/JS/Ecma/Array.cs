@@ -1,4 +1,4 @@
-﻿//Disable missing XML comments.
+﻿//TODO! Disable missing XML comments.
 #pragma warning disable CS1591
 
 using CSharpToJavaScript.Utils;
@@ -160,10 +160,11 @@ public partial class ArrayPrototype : FunctionPrototype
 	{
 		throw new System.NotImplementedException();
 	}
-	public new string ToLocaleString(dynamic? reserved1 = null, dynamic? reserved2 = null)
+	/*
+	public string ToLocaleString(dynamic? reserved1 = null, dynamic? reserved2 = null)
 	{
 		throw new System.NotImplementedException();
-	}
+	}*/
 	public Array ToReversed()
 	{
 		throw new System.NotImplementedException();
@@ -176,7 +177,7 @@ public partial class ArrayPrototype : FunctionPrototype
 	{
 		throw new System.NotImplementedException();
 	}
-	public new string ToString()
+	public override string ToString()
 	{
 		throw new System.NotImplementedException();
 	}

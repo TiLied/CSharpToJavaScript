@@ -1,4 +1,4 @@
-﻿//Disable missing XML comments.
+﻿//TODO! Disable missing XML comments.
 #pragma warning disable CS1591
 
 using CSharpToJavaScript.Utils;
@@ -80,10 +80,11 @@ public class NumberPrototype : FunctionPrototype
 	{
 		throw new System.NotImplementedException();
 	}
-	public new string ToLocaleString(dynamic? reserved1 = null, dynamic? reserved2 = null)
+	/*
+	public override string ToLocaleString(dynamic? reserved1 = null, dynamic? reserved2 = null)
 	{
 		throw new System.NotImplementedException();
-	}
+	}*/
 	public string ToPrecision(dynamic precision)
 	{
 		throw new System.NotImplementedException();

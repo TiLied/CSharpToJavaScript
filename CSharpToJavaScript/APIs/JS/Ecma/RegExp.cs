@@ -1,4 +1,4 @@
-﻿//Disable missing XML comments.
+﻿//TODO! Disable missing XML comments.
 #pragma warning disable CS1591
 
 using CSharpToJavaScript.Utils;
@@ -43,7 +43,7 @@ public class RegExpPrototype : FunctionPrototype
 		throw new System.NotImplementedException();
 	}
 
-	public new string ToString()
+	public override string ToString()
 	{
 		throw new System.NotImplementedException();
 	}

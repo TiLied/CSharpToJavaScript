@@ -1,4 +1,4 @@
-﻿//Disable missing XML comments.
+﻿//TODO! Disable missing XML comments.
 #pragma warning disable CS1591
 
 using CSharpToJavaScript.Utils;
@@ -173,17 +173,17 @@ public class ObjectPrototype
 		throw new System.NotImplementedException();
 	}
 
-	public string ToLocaleString(dynamic? reserved1 = null, dynamic? reserved2 = null)
+	public static string ToLocaleString(dynamic? reserved1 = null, dynamic? reserved2 = null)
 	{
 		throw new System.NotImplementedException();
 	}
 
-	public override string ToString()
+	public static new string ToString()
 	{
 		throw new System.NotImplementedException();
 	}
 
-	public virtual dynamic ValueOf()
+	public static dynamic ValueOf()
 	{
 		throw new System.NotImplementedException();
 	}

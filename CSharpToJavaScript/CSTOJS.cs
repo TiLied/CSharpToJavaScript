@@ -11,6 +11,14 @@ using Microsoft.CodeAnalysis.Text;
 using System.Text;
 using System;
 using CSharpToJavaScript.Utils;
+using Microsoft.CodeAnalysis.Editing;
+using System.Threading;
+using Microsoft.CodeAnalysis.Simplification;
+using Microsoft.CodeAnalysis.CodeActions;
+using Microsoft.CodeAnalysis.Host;
+using Microsoft.CodeAnalysis.CodeFixes;
+using Microsoft.CodeAnalysis.Diagnostics;
+using System.Collections.Immutable;
 
 
 namespace CSharpToJavaScript;
@@ -40,7 +48,7 @@ public class CSTOJS
 		{
 			Assembly assembly = Assembly.GetExecutingAssembly();
 			//https://stackoverflow.com/a/73474279
-			Log.WriteLine($"{assembly.GetName().Name} {assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion}", _DefaultOptions);
+			Log.InfoLine($"{assembly.GetName().Name} {assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion}", _DefaultOptions);
 		}
 	}
 
@@ -100,9 +108,9 @@ public class CSTOJS
 
 			await File.WriteAllTextAsync(pathCombined, _Walker?.JSSB.ToString());
 
-			Log.SuccessLine($"--- Done!", options);
-			Log.SuccessLine($"--- Path: {pathCombined}", options);
-			Log.SuccessLine($"--- --- ---", options);
+			Log.InfoLine($"--- Done!", options);
+			Log.InfoLine($"--- Path: {pathCombined}", options);
+			Log.InfoLine($"--- --- ---", options);
 		}
 	}
 
@@ -153,9 +161,9 @@ public class CSTOJS
 			else
 				Log.ErrorLine("_Walker is null!", options);
 
-			Log.SuccessLine($"--- Done!", options);
-			Log.SuccessLine($"--- File name: {file.Name}", options);
-			Log.SuccessLine($"--- --- ---", options);
+			Log.InfoLine($"--- Done!", options);
+			Log.InfoLine($"--- File name: {file.Name}", options);
+			Log.InfoLine($"--- --- ---", options);
 		}
 
 		return jsStringBuilders;
@@ -186,8 +194,8 @@ public class CSTOJS
 		else
 			Generate(_tree, assembly, options);
 
-		Log.SuccessLine($"--- Done!", options);
-		Log.SuccessLine($"--- --- ---", options);
+		Log.InfoLine($"--- Done!", options);
+		Log.InfoLine($"--- --- ---", options);
 
 		if (_Walker != null)
 			return _Walker.JSSB;
@@ -235,9 +243,9 @@ public class CSTOJS
 		else
 			Log.ErrorLine("_Walker is null!", options);
 
-		Log.SuccessLine($"--- Done!", options);
-		Log.SuccessLine($"--- Path: {pathCombined}", options);
-		Log.SuccessLine($"--- --- ---", options);
+		Log.InfoLine($"--- Done!", options);
+		Log.InfoLine($"--- Path: {pathCombined}", options);
+		Log.InfoLine($"--- --- ---", options);
 	}
 
 	/// <summary>
@@ -331,6 +339,161 @@ public class CSTOJS
 			_FSWatcher.Dispose();
 			_FSWatcher = null;
 		}
+	}
+
+	public async void TestWorkspace() 
+	{
+		//
+		//See options usage:
+		//https://stackoverflow.com/questions/78861767/how-to-add-new-line-in-object-initializer-with-roslyn
+		
+		SourceText test = SourceText.From(@"dotnet_diagnostic.CS0219.severity = error"); 
+
+		AdhocWorkspace workspace = new();
+		
+
+		ProjectId projectId = ProjectId.CreateNewId();
+		VersionStamp versionStamp = VersionStamp.Create();
+
+		List<MetadataReference> lll = new();
+		lll.Add(MetadataReference.CreateFromFile(typeof(object).Assembly.Location));
+		lll.Add(MetadataReference.CreateFromFile(typeof(Enumerable).Assembly.Location));
+		lll.Add(MetadataReference.CreateFromFile(typeof(string).Assembly.Location));
+		lll.Add(MetadataReference.CreateFromFile(typeof(Console).Assembly.Location));
+
+		ProjectInfo projectInfo = ProjectInfo.Create(projectId, versionStamp, "NewProject", "projName", LanguageNames.CSharp).WithMetadataReferences(lll);
+		Project newProject = workspace.AddProject(projectInfo);
+		var b = newProject.AddAnalyzerConfigDocument(".editorconfig", test);
+		//b.
+		//var c = DocumentInfo.Create(DocumentId.CreateNewId(projectId), ".editorconfig", loader: TextLoader.);
+		newProject = b.Project;
+
+		Document a = workspace.AddDocument(projectId, ".editorconfig", test);
+		
+		SourceText sourceText = SourceText.From(@"
+using System;
+
+class C
+{
+	public string FirstName { get; set; }
+    public string LastName { get; set; }
+    void M()
+    {
+        char key = Console.ReadKey();
+        if ((key == 'A'))
+        {
+            Console.WriteLine(""You pressed A"");
+			var i = 5 + 2 * 1;
+			int j = 3;
+        }
+        else
+        {
+            Console.WriteLine(""You didn't press A"");
+        }
+    }
+}");
+		FixAllProvider j = WellKnownFixAllProviders.BatchFixer;
+		Document document = workspace.AddDocument(newProject.Id, "NewFile.cs", sourceText);
+
+		SyntaxNode? syntaxRoot = await document.GetSyntaxRootAsync();
+		syntaxRoot = syntaxRoot.WithAdditionalAnnotations(Simplifier.Annotation);
+		document = document.WithSyntaxRoot(syntaxRoot);
+
+		IfStatementSyntax ifStatement = syntaxRoot?.DescendantNodes().OfType<IfStatementSyntax>().Single();
+		LocalDeclarationStatementSyntax[] l = syntaxRoot?.DescendantNodes().OfType<LocalDeclarationStatementSyntax>().ToArray();
+		workspace.TryApplyChanges(workspace.CurrentSolution);
+		SemanticModel model = await document.GetSemanticModelAsync();
+		
+		LocalDeclarationStatementSyntax newl = Simplifier.Expand(l[1], model, workspace);
+
+		document = await Simplifier.ReduceAsync(document, Simplifier.Annotation);
+
+		HostWorkspaceServices s = workspace.Services;
+		var compilation = await newProject.GetCompilationAsync();
+		
+		var allDiagnostics = compilation.GetDiagnostics();
+		var aaa = model.GetDiagnostics();
+
+		List<CodeAction> actions = new();
+		var context = new CodeFixContext(document,
+			aaa[aaa.Length - 1],
+			(a3, _) => actions.Add(a3),
+			CancellationToken.None);
+		
+		//
+		//
+		//Assembly assembly = Assembly.GetAssembly(typeof(Microsoft.CodeAnalysis.CSharp.CSharpCompilation));
+		//Type[] types = assembly.GetTypes();
+		//Type type = types.FirstOrDefault((t)=>t.Name.StartsWith("CSharpConvertTryCastToDirectCastCodeRefactoringProvider"));
+
+		//https://stackoverflow.com/questions/77778276/how-to-execute-roslyn-fixers-that-rely-on-internal-interfaces
+		//https://stackoverflow.com/questions/65996472/programmatically-access-code-analysis-results-in-roslyn
+		//
+
+		var assembly2 = Assembly.GetAssembly(typeof(Microsoft.CodeAnalysis.CSharp.AwaitExpressionInfo));
+		
+		var analyzers = assembly2.GetTypes()
+								.Where(t => t.GetCustomAttribute<DiagnosticAnalyzerAttribute>() is object)
+								.Select(t => (DiagnosticAnalyzer)Activator.CreateInstance(t))
+								.ToArray();
+		
+
+		var compilationWithAnalyzers = compilation.WithAnalyzers(ImmutableArray.Create(analyzers));
+
+		var analyzerDiagnostics = (await compilationWithAnalyzers.GetAllDiagnosticsAsync()).ToList();
+
+		//
+		//
+		//
+		//
+		assembly2 = Assembly.GetAssembly(typeof(Microsoft.CodeAnalysis.CodeFixes.CodeFixContext));
+		var testtttt = assembly2.GetTypes()
+						.Where(t => t.GetCustomAttribute<ExportCodeFixProviderAttribute>() is object)
+						.Select(t => (ExportCodeFixProviderAttribute)Activator.CreateInstance(t))
+						.ToArray();
+
+		Rewriter rewriter = new(syntaxRoot);
+		var trueRoot = rewriter.Visit(syntaxRoot);
+		string strrr = trueRoot.ToFullString();
+
+		ExpressionStatementSyntax conditionWasTrueInvocation =
+		SyntaxFactory.ExpressionStatement(
+			SyntaxFactory.InvocationExpression(SyntaxFactory.IdentifierName("LogConditionWasTrue"))
+			.WithArgumentList(
+							SyntaxFactory.ArgumentList()
+							.WithOpenParenToken(
+								SyntaxFactory.Token(
+									SyntaxKind.OpenParenToken))
+							.WithCloseParenToken(
+								SyntaxFactory.Token(
+									SyntaxKind.CloseParenToken))))
+					.WithSemicolonToken(
+						SyntaxFactory.Token(
+							SyntaxKind.SemicolonToken));
+
+		ExpressionStatementSyntax conditionWasFalseInvocation =
+		SyntaxFactory.ExpressionStatement(
+			SyntaxFactory.InvocationExpression(SyntaxFactory.IdentifierName("LogConditionWasFalse"))
+			.WithArgumentList(
+							SyntaxFactory.ArgumentList()
+							.WithOpenParenToken(
+								SyntaxFactory.Token(
+									SyntaxKind.OpenParenToken))
+							.WithCloseParenToken(
+								SyntaxFactory.Token(
+									SyntaxKind.CloseParenToken))))
+					.WithSemicolonToken(
+						SyntaxFactory.Token(
+							SyntaxKind.SemicolonToken));
+
+		//Finally… create the document editor
+		DocumentEditor documentEditor = await DocumentEditor.CreateAsync(document);
+		//Insert LogConditionWasTrue() before the Console.WriteLine()
+		documentEditor.InsertBefore(ifStatement.Statement.ChildNodes().Single(), conditionWasTrueInvocation);
+		//Insert LogConditionWasFalse() after the Console.WriteLine()
+		documentEditor.InsertAfter(ifStatement.Else.Statement.ChildNodes().Single(), conditionWasFalseInvocation);
+
+		Document newDocument = documentEditor.GetChangedDocument();
 	}
 
 	private void Generate(SyntaxTree tree, Assembly? assembly, CSTOJSOptions options, List<MetadataReference>? refs = null)
@@ -644,7 +807,7 @@ public class CSTOJS
 
 		if (options.Debug)
 		{
-			Log.SuccessLine($"+++", options);
+			Log.InfoLine($"+++", options);
 			Log.WriteLine($"Path assembly: {assemblyPath}", options);
 			Log.WriteLine($"Path rt: {rtPath}", options);
 			Log.WriteLine($"List of references({references.Count}):", options);
@@ -657,7 +820,7 @@ public class CSTOJS
 			{
 				Log.WriteLine(reference.Display ?? "null display string", options);
 			}
-			Log.SuccessLine($"+++", options);
+			Log.InfoLine($"+++", options);
 		}
 
 		SyntaxTree trueST = trueRoot.SyntaxTree;
@@ -682,5 +845,91 @@ public class CSTOJS
 		}
 
 		_IsRunning = false;
+	}
+}
+
+public class Rewriter : CSharpSyntaxRewriter
+{
+	SyntaxNode Root;
+	public Rewriter(SyntaxNode root) 
+	{
+		Root = root;
+
+	}
+	public override SyntaxNode? VisitClassDeclaration(ClassDeclarationSyntax node)
+	{
+		SyntaxList<MemberDeclarationSyntax> members = node.Members;
+		PropertyDeclarationSyntax[] properties = members.OfType<PropertyDeclarationSyntax>().ToArray();
+		
+		//node.Members
+		int j = 0;
+		for (int i = 0; i < members.Count; i++)
+		{
+			if (members[i] is not PropertyDeclarationSyntax)
+				continue;
+
+			PropertyDeclarationSyntax _mem = (PropertyDeclarationSyntax)members[i]; 
+
+			FieldDeclarationSyntax field = SyntaxFactory.FieldDeclaration(
+						SyntaxFactory.VariableDeclaration(SyntaxFactory.IdentifierName(_mem.Type.ToString()))
+					.WithVariables(
+							SyntaxFactory.SingletonSeparatedList(
+								SyntaxFactory.VariableDeclarator(
+									SyntaxFactory.Identifier("_" + _mem.Identifier.Text + "_")))))
+					.WithModifiers(
+						SyntaxFactory.TokenList(new[]
+						{
+							SyntaxFactory.Token(SyntaxKind.PrivateKeyword)
+						}))
+					.WithLeadingTrivia(_mem.GetLeadingTrivia())
+					.WithTrailingTrivia(_mem.GetTrailingTrivia());
+
+			//node = node.i(properties[i + j++], [field]);
+			members = members.Insert(i,field);
+			i++;
+		}
+		node = node.WithMembers(members);
+
+		return node;
+	}
+	public override SyntaxNode? VisitPropertyDeclaration(PropertyDeclarationSyntax node)
+	{
+		var field = SyntaxFactory.FieldDeclaration(
+								SyntaxFactory.VariableDeclaration(SyntaxFactory.IdentifierName("int"))
+							.WithVariables(
+									SyntaxFactory.SingletonSeparatedList(
+										SyntaxFactory.VariableDeclarator(
+											SyntaxFactory.Identifier(node.Identifier.ValueText)))))
+							.WithModifiers(
+								SyntaxFactory.TokenList(new[]
+								{
+							SyntaxFactory.Token(SyntaxKind.PrivateKeyword)
+								}))
+							.WithLeadingTrivia(node.GetLeadingTrivia())
+							.WithTrailingTrivia(node.GetTrailingTrivia());
+		
+		//var = SyntaxFactory.b
+		//base.VisitFieldDeclaration(field);
+		//VisitList
+		//node.with
+		return base.VisitPropertyDeclaration(node);
+	}
+	public override SyntaxNode? VisitLocalDeclarationStatement(LocalDeclarationStatementSyntax node)
+	{
+
+		return base.VisitLocalDeclarationStatement(node);
+	}
+	public override SyntaxNode? VisitExpressionStatement(ExpressionStatementSyntax node)
+	{
+
+		return base.VisitExpressionStatement(node);
+	}
+	public override SyntaxNode VisitEmptyStatement(EmptyStatementSyntax node)
+	{
+		//Construct an EmptyStatementSyntax with a missing semicolon
+		return node.WithSemicolonToken(
+			SyntaxFactory.MissingToken(SyntaxKind.SemicolonToken)
+				.WithLeadingTrivia(node.SemicolonToken.LeadingTrivia)
+				.WithTrailingTrivia(node.SemicolonToken.TrailingTrivia));
 	}
 }

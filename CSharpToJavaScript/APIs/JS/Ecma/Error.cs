@@ -1,4 +1,4 @@
-﻿//Disable missing XML comments.
+﻿//TODO! Disable missing XML comments.
 #pragma warning disable CS1591
 
 using CSharpToJavaScript.Utils;
@@ -27,7 +27,7 @@ public class ErrorPrototype : FunctionPrototype
 	public string Message { get; set; } = string.Empty;
 	public string Name { get; set; } = "Error";
 	public ErrorPrototype() { }
-	public new string ToString()
+	public override string ToString()
 	{
 		throw new NotImplementedException();
 	}

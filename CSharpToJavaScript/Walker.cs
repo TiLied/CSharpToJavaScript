@@ -16,7 +16,24 @@ namespace CSharpToJavaScript;
 //Useful links:
 //https://learn.microsoft.com/en-us/dotnet/csharp/roslyn-sdk/get-started/syntax-analysis
 //https://roslynquoter.azurewebsites.net/
+//https://sourceroslyn.io/
 //
+//Annotations are interesting, but because everything is immutable...
+//I don't think it is faster than the current approach.
+//https://joshvarty.com/2015/09/18/learn-roslyn-now-part-13-keeping-track-of-syntax-nodes-with-syntax-annotations/
+//
+//NOTE for me: Read about DocumentEditor!
+//https://joshvarty.wordpress.com/2015/08/18/learn-roslyn-now-part-12-the-documenteditor/
+//Should I do it in two phases??? First one, change c# code. The second one translate as-is to js...
+//Also see roslyn source!
+//https://github.com/dotnet/roslyn
+//"this" is IDE0009
+//https://learn.microsoft.com/ru-ru/dotnet/fundamentals/code-analysis/style-rules/ide0003-ide0009
+//https://github.com/dotnet/roslyn/blob/main/src/VisualStudio/Core/Def/CodeCleanup/CommonCodeCleanUpFixerDiagnosticIds.cs#L20
+//https://github.com/dotnet/roslyn/blob/main/src/Analyzers/Core/Analyzers/QualifyMemberAccess/AbstractQualifyMemberAccessDiagnosticAnalyzer.cs
+//Read and think about it!
+//
+//also f#??? vb??? test)
 
 internal class Walker : CSharpSyntaxWalker
 {
@@ -249,6 +266,7 @@ internal class Walker : CSharpSyntaxWalker
 		base.VisitToken(token);
 	}
 
+	/*
 	public override void Visit(SyntaxNode? node)
 	{
 		if (node == null)
@@ -272,10 +290,17 @@ internal class Walker : CSharpSyntaxWalker
 
 			base.Visit(node);
 		}
-	}
+	}*/
 
 	public override void VisitClassDeclaration(ClassDeclarationSyntax node)
 	{
+		if (_Options.Debug)
+		{
+			JSSB.Append("/*");
+			JSSB.Append(node.WithMembers([]).ToFullString().Replace("*/", ""));
+			JSSB.Append("*/");
+		}
+
 		ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
 
 		for (int i = 0; i < nodesAndTokens.Count; i++)
@@ -355,6 +380,13 @@ internal class Walker : CSharpSyntaxWalker
 
 	public override void VisitConstructorDeclaration(ConstructorDeclarationSyntax node)
 	{
+		if (_Options.Debug)
+		{
+			JSSB.Append("/*");
+			JSSB.Append(node.WithBody(null).ToFullString().Replace("*/", ""));
+			JSSB.Append("*/");
+		}
+
 		ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
 
 		for (int i = 0; i < nodesAndTokens.Count; i++)
@@ -621,18 +653,18 @@ internal class Walker : CSharpSyntaxWalker
 						break;
 				}
 			}
-			
-			if (_Options.Debug)
-			{
-				JSSB.Append("/*");
-				JSSB.Append(nodesAndTokens[i].ToFullString().Replace("*/", ""));
-				JSSB.Append("*/");
-			}
 		}
 	}
 
 	public override void VisitLocalDeclarationStatement(LocalDeclarationStatementSyntax node)
 	{
+		if (_Options.Debug)
+		{
+			JSSB.Append("/*");
+			JSSB.Append(node.ToFullString().Replace("*/", ""));
+			JSSB.Append("*/");
+		}
+
 		ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
 
 		for (int i = 0; i < nodesAndTokens.Count; i++)
@@ -679,6 +711,13 @@ internal class Walker : CSharpSyntaxWalker
 
 	public override void VisitExpressionStatement(ExpressionStatementSyntax node)
 	{
+		if (_Options.Debug)
+		{
+			JSSB.Append("/*");
+			JSSB.Append(node.ToFullString().Replace("*/", ""));
+			JSSB.Append("*/");
+		}
+
 		ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
 
 		for (int i = 0; i < nodesAndTokens.Count; i++)
@@ -1100,6 +1139,13 @@ internal class Walker : CSharpSyntaxWalker
 
 	public override void VisitMethodDeclaration(MethodDeclarationSyntax node)
 	{
+		if (_Options.Debug)
+		{
+			JSSB.Append("/*");
+			JSSB.Append(node.WithBody(null).ToFullString().Replace("*/", ""));
+			JSSB.Append("*/");
+		}
+
 		ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
 
 		for (int i = 0; i < nodesAndTokens.Count; i++)
@@ -1168,6 +1214,13 @@ internal class Walker : CSharpSyntaxWalker
 
 	public override void VisitFieldDeclaration(FieldDeclarationSyntax node)
 	{
+		if (_Options.Debug)
+		{
+			JSSB.Append("/*");
+			JSSB.Append(node.ToFullString().Replace("*/", ""));
+			JSSB.Append("*/");
+		}
+
 		ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
 
 		for (int i = 0; i < nodesAndTokens.Count; i++)
@@ -1222,6 +1275,13 @@ internal class Walker : CSharpSyntaxWalker
 
 	public override void VisitPropertyDeclaration(PropertyDeclarationSyntax node)
 	{
+		if (_Options.Debug)
+		{
+			JSSB.Append("/*");
+			JSSB.Append(node.ToFullString().Replace("*/", ""));
+			JSSB.Append("*/");
+		}
+
 		ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
 
 		FieldDeclarationSyntax? field = null;
@@ -1523,7 +1583,6 @@ internal class Walker : CSharpSyntaxWalker
 						}
 					case SyntaxKind.SetAccessorDeclaration:
 						{
-
 							IEnumerable<SyntaxNode> c = asNode.Ancestors();
 
 							IEnumerable<SyntaxNode> a = from b in c
@@ -1857,6 +1916,13 @@ internal class Walker : CSharpSyntaxWalker
 
 	public override void VisitForEachStatement(ForEachStatementSyntax node)
 	{
+		if (_Options.Debug)
+		{
+			JSSB.Append("/*");
+			JSSB.Append(node.WithStatement(SyntaxFactory.EmptyStatement()).ToFullString().Replace(";", "").Replace("*/", ""));
+			JSSB.Append("*/");
+		}
+
 		ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
 
 		for (int i = 0; i < nodesAndTokens.Count; i++)
@@ -3161,6 +3227,13 @@ internal class Walker : CSharpSyntaxWalker
 	public override void VisitBreakStatement(BreakStatementSyntax node)
 	{
 		if (_Options.Debug)
+		{
+			JSSB.Append("/*");
+			JSSB.Append(node.ToFullString().Replace("*/", ""));
+			JSSB.Append("*/");
+		}
+
+		if (_Options.Debug)
 			Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
 
 		base.VisitBreakStatement(node);
@@ -3174,6 +3247,13 @@ internal class Walker : CSharpSyntaxWalker
 	}
 	public override void VisitCaseSwitchLabel(CaseSwitchLabelSyntax node)
 	{
+		if (_Options.Debug)
+		{
+			JSSB.Append("/*");
+			JSSB.Append(node.ToFullString().Replace("*/", ""));
+			JSSB.Append("*/");
+		}
+
 		if (_Options.Debug)
 			Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
 
@@ -3396,6 +3476,13 @@ internal class Walker : CSharpSyntaxWalker
 	}
 	public override void VisitDefaultSwitchLabel(DefaultSwitchLabelSyntax node)
 	{
+		if (_Options.Debug)
+		{
+			JSSB.Append("/*");
+			JSSB.Append(node.ToFullString().Replace(";", "").Replace("*/", ""));
+			JSSB.Append("*/");
+		}
+
 		if (_Options.Debug)
 			Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
 
@@ -3647,6 +3734,13 @@ internal class Walker : CSharpSyntaxWalker
 	public override void VisitForStatement(ForStatementSyntax node)
 	{
 		if (_Options.Debug)
+		{
+			JSSB.Append("/*");
+			JSSB.Append(node.WithStatement(SyntaxFactory.EmptyStatement()).ToFullString().Replace("*/", ""));
+			JSSB.Append("*/");
+		}
+
+		if (_Options.Debug)
 			Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
 
 		base.VisitForStatement(node);
@@ -3765,6 +3859,13 @@ internal class Walker : CSharpSyntaxWalker
 	}
 	public override void VisitIfStatement(IfStatementSyntax node)
 	{
+		if (_Options.Debug)
+		{
+			JSSB.Append("/*");
+			JSSB.Append(node.WithStatement(SyntaxFactory.EmptyStatement()).WithElse(null).ToFullString().Replace(";","").Replace("*/", ""));
+			JSSB.Append("*/");
+		}
+
 		ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
 
 		for (int i = 0; i < nodesAndTokens.Count; i++)
@@ -4406,6 +4507,13 @@ internal class Walker : CSharpSyntaxWalker
 	public override void VisitReturnStatement(ReturnStatementSyntax node)
 	{
 		if (_Options.Debug)
+		{
+			JSSB.Append("/*");
+			JSSB.Append(node.ToFullString().Replace("*/", ""));
+			JSSB.Append("*/");
+		}
+
+		if (_Options.Debug)
 			Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
 
 		base.VisitReturnStatement(node);
@@ -4524,6 +4632,13 @@ internal class Walker : CSharpSyntaxWalker
 	}
 	public override void VisitSwitchStatement(SwitchStatementSyntax node)
 	{
+		if (_Options.Debug)
+		{
+			JSSB.Append("/*");
+			JSSB.Append(node.WithSections([]).ToFullString().Replace("*/", ""));
+			JSSB.Append("*/");
+		}
+
 		if (_Options.Debug)
 			Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
 
@@ -4693,6 +4808,13 @@ internal class Walker : CSharpSyntaxWalker
 	}
 	public override void VisitWhileStatement(WhileStatementSyntax node)
 	{
+		if (_Options.Debug)
+		{
+			JSSB.Append("/*");
+			JSSB.Append(node.WithStatement(SyntaxFactory.EmptyStatement()).ToFullString().Replace(";", "").Replace("*/", ""));
+			JSSB.Append("*/");
+		}
+
 		if (_Options.Debug)
 			Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
 

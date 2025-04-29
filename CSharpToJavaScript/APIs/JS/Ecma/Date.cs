@@ -1,4 +1,4 @@
-﻿//Disable missing XML comments.
+﻿//TODO! Disable missing XML comments.
 #pragma warning disable CS1591
 
 using CSharpToJavaScript.Utils;
@@ -222,18 +222,18 @@ public class DatePrototype : FunctionPrototype
 	{
 		throw new System.NotImplementedException();
 	}
-
-	public new string ToLocaleString(dynamic? reserved1 = null, dynamic? reserved2 = null)
+	/*
+	public override string ToLocaleString(dynamic? reserved1 = null, dynamic? reserved2 = null)
 	{
 		throw new System.NotImplementedException();
 	}
-
+	*/
 	public string ToLocaleTimeString(dynamic? reserved1 = null, dynamic? reserved2 = null)
 	{
 		throw new System.NotImplementedException();
 	}
 
-	public new string ToString()
+	public override string ToString()
 	{
 		throw new System.NotImplementedException();
 	}

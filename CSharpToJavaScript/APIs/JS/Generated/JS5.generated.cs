@@ -1,4 +1,4 @@
-//17.03.2025 17:27:25
+//01.05.2025 20:45:13
 
 #nullable enable
 //Disable missing XML comments.
@@ -98,7 +98,7 @@ using COSEAlgorithmIdentifier = long;
 using ImageBufferSource = Union186;
 using AlgorithmIdentifier = Union187;
 using HashAlgorithmIdentifier = Unsupported /*AlgorithmIdentifier*/;
-using BigInteger = System.Byte;
+using BigInteger = Uint8Array;
 using NamedCurve = string;
 using GLenum = ulong;
 using GLboolean = bool;
@@ -1404,13 +1404,13 @@ public struct Union120
 }
 
 ///<summary>
-///<see cref="System.Single"/> or <see cref="System.Double"/> or <see cref="DOMMatrix"/>
+///<see cref="Float32Array"/> or <see cref="Float64Array"/> or <see cref="DOMMatrix"/>
 ///</summary>
 public struct Union121
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union121(System.Single value){return new Union121 { Value = value };}
-	public static implicit operator Union121(System.Double value){return new Union121 { Value = value };}
+	public static implicit operator Union121(Float32Array value){return new Union121 { Value = value };}
+	public static implicit operator Union121(Float64Array value){return new Union121 { Value = value };}
 	public static implicit operator Union121(DOMMatrix value){return new Union121 { Value = value };}
 }
 
@@ -2113,22 +2113,22 @@ public struct Union189
 }
 
 ///<summary>
-///<see cref="System.Single"/> or <see cref="List{Number}"/>
+///<see cref="Float32Array"/> or <see cref="List{Number}"/>
 ///</summary>
 public struct Union190
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union190(System.Single value){return new Union190 { Value = value };}
+	public static implicit operator Union190(Float32Array value){return new Union190 { Value = value };}
 	public static implicit operator Union190(List<Number> value){return new Union190 { Value = value };}
 }
 
 ///<summary>
-///<see cref="System.Int32"/> or <see cref="List{GLint}"/>
+///<see cref="Int32Array"/> or <see cref="List{GLint}"/>
 ///</summary>
 public struct Union191
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union191(System.Int32 value){return new Union191 { Value = value };}
+	public static implicit operator Union191(Int32Array value){return new Union191 { Value = value };}
 	public static implicit operator Union191(List<GLint> value){return new Union191 { Value = value };}
 }
 
@@ -2143,202 +2143,202 @@ public struct Union192
 }
 
 ///<summary>
-///<see cref="System.UInt32"/> or <see cref="List{GLuint}"/>
+///<see cref="Uint32Array"/> or <see cref="List{GLuint}"/>
 ///</summary>
 public struct Union193
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union193(System.UInt32 value){return new Union193 { Value = value };}
+	public static implicit operator Union193(Uint32Array value){return new Union193 { Value = value };}
 	public static implicit operator Union193(List<GLuint> value){return new Union193 { Value = value };}
 }
 
 ///<summary>
-///<see cref="System.Int32"/> or <see cref="List{GLint}"/>
+///<see cref="Int32Array"/> or <see cref="List{GLint}"/>
 ///</summary>
 public struct Union194
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union194(System.Int32 value){return new Union194 { Value = value };}
+	public static implicit operator Union194(Int32Array value){return new Union194 { Value = value };}
 	public static implicit operator Union194(List<GLint> value){return new Union194 { Value = value };}
 }
 
 ///<summary>
-///<see cref="System.Int32"/> or <see cref="List{GLsizei}"/>
+///<see cref="Int32Array"/> or <see cref="List{GLsizei}"/>
 ///</summary>
 public struct Union195
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union195(System.Int32 value){return new Union195 { Value = value };}
+	public static implicit operator Union195(Int32Array value){return new Union195 { Value = value };}
 	public static implicit operator Union195(List<GLsizei> value){return new Union195 { Value = value };}
 }
 
 ///<summary>
-///<see cref="System.Int32"/> or <see cref="List{GLsizei}"/>
+///<see cref="Int32Array"/> or <see cref="List{GLsizei}"/>
 ///</summary>
 public struct Union196
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union196(System.Int32 value){return new Union196 { Value = value };}
+	public static implicit operator Union196(Int32Array value){return new Union196 { Value = value };}
 	public static implicit operator Union196(List<GLsizei> value){return new Union196 { Value = value };}
 }
 
 ///<summary>
-///<see cref="System.Int32"/> or <see cref="List{GLsizei}"/>
+///<see cref="Int32Array"/> or <see cref="List{GLsizei}"/>
 ///</summary>
 public struct Union197
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union197(System.Int32 value){return new Union197 { Value = value };}
+	public static implicit operator Union197(Int32Array value){return new Union197 { Value = value };}
 	public static implicit operator Union197(List<GLsizei> value){return new Union197 { Value = value };}
 }
 
 ///<summary>
-///<see cref="System.Int32"/> or <see cref="List{GLint}"/>
+///<see cref="Int32Array"/> or <see cref="List{GLint}"/>
 ///</summary>
 public struct Union198
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union198(System.Int32 value){return new Union198 { Value = value };}
+	public static implicit operator Union198(Int32Array value){return new Union198 { Value = value };}
 	public static implicit operator Union198(List<GLint> value){return new Union198 { Value = value };}
 }
 
 ///<summary>
-///<see cref="System.Int32"/> or <see cref="List{GLsizei}"/>
+///<see cref="Int32Array"/> or <see cref="List{GLsizei}"/>
 ///</summary>
 public struct Union199
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union199(System.Int32 value){return new Union199 { Value = value };}
+	public static implicit operator Union199(Int32Array value){return new Union199 { Value = value };}
 	public static implicit operator Union199(List<GLsizei> value){return new Union199 { Value = value };}
 }
 
 ///<summary>
-///<see cref="System.Int32"/> or <see cref="List{GLsizei}"/>
+///<see cref="Int32Array"/> or <see cref="List{GLsizei}"/>
 ///</summary>
 public struct Union200
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union200(System.Int32 value){return new Union200 { Value = value };}
+	public static implicit operator Union200(Int32Array value){return new Union200 { Value = value };}
 	public static implicit operator Union200(List<GLsizei> value){return new Union200 { Value = value };}
 }
 
 ///<summary>
-///<see cref="System.Int32"/> or <see cref="List{GLsizei}"/>
+///<see cref="Int32Array"/> or <see cref="List{GLsizei}"/>
 ///</summary>
 public struct Union201
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union201(System.Int32 value){return new Union201 { Value = value };}
+	public static implicit operator Union201(Int32Array value){return new Union201 { Value = value };}
 	public static implicit operator Union201(List<GLsizei> value){return new Union201 { Value = value };}
 }
 
 ///<summary>
-///<see cref="System.Int32"/> or <see cref="List{GLsizei}"/>
+///<see cref="Int32Array"/> or <see cref="List{GLsizei}"/>
 ///</summary>
 public struct Union202
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union202(System.Int32 value){return new Union202 { Value = value };}
+	public static implicit operator Union202(Int32Array value){return new Union202 { Value = value };}
 	public static implicit operator Union202(List<GLsizei> value){return new Union202 { Value = value };}
 }
 
 ///<summary>
-///<see cref="System.Int32"/> or <see cref="List{GLsizei}"/>
+///<see cref="Int32Array"/> or <see cref="List{GLsizei}"/>
 ///</summary>
 public struct Union203
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union203(System.Int32 value){return new Union203 { Value = value };}
+	public static implicit operator Union203(Int32Array value){return new Union203 { Value = value };}
 	public static implicit operator Union203(List<GLsizei> value){return new Union203 { Value = value };}
 }
 
 ///<summary>
-///<see cref="System.Int32"/> or <see cref="List{GLint}"/>
+///<see cref="Int32Array"/> or <see cref="List{GLint}"/>
 ///</summary>
 public struct Union204
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union204(System.Int32 value){return new Union204 { Value = value };}
+	public static implicit operator Union204(Int32Array value){return new Union204 { Value = value };}
 	public static implicit operator Union204(List<GLint> value){return new Union204 { Value = value };}
 }
 
 ///<summary>
-///<see cref="System.Int32"/> or <see cref="List{GLsizei}"/>
+///<see cref="Int32Array"/> or <see cref="List{GLsizei}"/>
 ///</summary>
 public struct Union205
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union205(System.Int32 value){return new Union205 { Value = value };}
+	public static implicit operator Union205(Int32Array value){return new Union205 { Value = value };}
 	public static implicit operator Union205(List<GLsizei> value){return new Union205 { Value = value };}
 }
 
 ///<summary>
-///<see cref="System.Int32"/> or <see cref="List{GLsizei}"/>
+///<see cref="Int32Array"/> or <see cref="List{GLsizei}"/>
 ///</summary>
 public struct Union206
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union206(System.Int32 value){return new Union206 { Value = value };}
+	public static implicit operator Union206(Int32Array value){return new Union206 { Value = value };}
 	public static implicit operator Union206(List<GLsizei> value){return new Union206 { Value = value };}
 }
 
 ///<summary>
-///<see cref="System.UInt32"/> or <see cref="List{GLuint}"/>
+///<see cref="Uint32Array"/> or <see cref="List{GLuint}"/>
 ///</summary>
 public struct Union207
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union207(System.UInt32 value){return new Union207 { Value = value };}
+	public static implicit operator Union207(Uint32Array value){return new Union207 { Value = value };}
 	public static implicit operator Union207(List<GLuint> value){return new Union207 { Value = value };}
 }
 
 ///<summary>
-///<see cref="System.Int32"/> or <see cref="List{GLsizei}"/>
+///<see cref="Int32Array"/> or <see cref="List{GLsizei}"/>
 ///</summary>
 public struct Union208
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union208(System.Int32 value){return new Union208 { Value = value };}
+	public static implicit operator Union208(Int32Array value){return new Union208 { Value = value };}
 	public static implicit operator Union208(List<GLsizei> value){return new Union208 { Value = value };}
 }
 
 ///<summary>
-///<see cref="System.Int32"/> or <see cref="List{GLsizei}"/>
+///<see cref="Int32Array"/> or <see cref="List{GLsizei}"/>
 ///</summary>
 public struct Union209
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union209(System.Int32 value){return new Union209 { Value = value };}
+	public static implicit operator Union209(Int32Array value){return new Union209 { Value = value };}
 	public static implicit operator Union209(List<GLsizei> value){return new Union209 { Value = value };}
 }
 
 ///<summary>
-///<see cref="System.Int32"/> or <see cref="List{GLsizei}"/>
+///<see cref="Int32Array"/> or <see cref="List{GLsizei}"/>
 ///</summary>
 public struct Union210
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union210(System.Int32 value){return new Union210 { Value = value };}
+	public static implicit operator Union210(Int32Array value){return new Union210 { Value = value };}
 	public static implicit operator Union210(List<GLsizei> value){return new Union210 { Value = value };}
 }
 
 ///<summary>
-///<see cref="System.Int32"/> or <see cref="List{GLint}"/>
+///<see cref="Int32Array"/> or <see cref="List{GLint}"/>
 ///</summary>
 public struct Union211
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union211(System.Int32 value){return new Union211 { Value = value };}
+	public static implicit operator Union211(Int32Array value){return new Union211 { Value = value };}
 	public static implicit operator Union211(List<GLint> value){return new Union211 { Value = value };}
 }
 
 ///<summary>
-///<see cref="System.UInt32"/> or <see cref="List{GLuint}"/>
+///<see cref="Uint32Array"/> or <see cref="List{GLuint}"/>
 ///</summary>
 public struct Union212
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union212(System.UInt32 value){return new Union212 { Value = value };}
+	public static implicit operator Union212(Uint32Array value){return new Union212 { Value = value };}
 	public static implicit operator Union212(List<GLuint> value){return new Union212 { Value = value };}
 }
 
@@ -2450,22 +2450,22 @@ public struct Union222
 }
 
 ///<summary>
-///<see cref="System.SByte"/> or <see cref="System.Int16"/> or <see cref="System.Int32"/> or <see cref="System.Byte"/> or <see cref="System.UInt16"/> or <see cref="System.UInt32"/> or <see cref="Unsupported /*Uint8ClampedArray*/"/> or <see cref="System.Int64"/> or <see cref="System.UInt64"/> or <see cref="Unsupported /*Float16Array*/"/> or <see cref="System.Single"/> or <see cref="System.Double"/> or <see cref="Unsupported /*DataView*/"/>
+///<see cref="Int8Array"/> or <see cref="Int16Array"/> or <see cref="Int32Array"/> or <see cref="Uint8Array"/> or <see cref="Uint16Array"/> or <see cref="Uint32Array"/> or <see cref="Unsupported /*Uint8ClampedArray*/"/> or <see cref="BigInt64Array"/> or <see cref="BigUint64Array"/> or <see cref="Unsupported /*Float16Array*/"/> or <see cref="Float32Array"/> or <see cref="Float64Array"/> or <see cref="Unsupported /*DataView*/"/>
 ///</summary>
 public struct Union223
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union223(System.SByte value){return new Union223 { Value = value };}
-	public static implicit operator Union223(System.Int16 value){return new Union223 { Value = value };}
-	public static implicit operator Union223(System.Int32 value){return new Union223 { Value = value };}
-	public static implicit operator Union223(System.Byte value){return new Union223 { Value = value };}
-	public static implicit operator Union223(System.UInt16 value){return new Union223 { Value = value };}
-	public static implicit operator Union223(System.UInt32 value){return new Union223 { Value = value };}
+	public static implicit operator Union223(Int8Array value){return new Union223 { Value = value };}
+	public static implicit operator Union223(Int16Array value){return new Union223 { Value = value };}
+	public static implicit operator Union223(Int32Array value){return new Union223 { Value = value };}
+	public static implicit operator Union223(Uint8Array value){return new Union223 { Value = value };}
+	public static implicit operator Union223(Uint16Array value){return new Union223 { Value = value };}
+	public static implicit operator Union223(Uint32Array value){return new Union223 { Value = value };}
 	public static implicit operator Union223(Unsupported /*Uint8ClampedArray*/ value){return new Union223 { Value = value };}
-	public static implicit operator Union223(System.Int64 value){return new Union223 { Value = value };}
-	public static implicit operator Union223(System.UInt64 value){return new Union223 { Value = value };}
-	public static implicit operator Union223(System.Single value){return new Union223 { Value = value };}
-	public static implicit operator Union223(System.Double value){return new Union223 { Value = value };}
+	public static implicit operator Union223(BigInt64Array value){return new Union223 { Value = value };}
+	public static implicit operator Union223(BigUint64Array value){return new Union223 { Value = value };}
+	public static implicit operator Union223(Float32Array value){return new Union223 { Value = value };}
+	public static implicit operator Union223(Float64Array value){return new Union223 { Value = value };}
 }
 
 ///<summary>

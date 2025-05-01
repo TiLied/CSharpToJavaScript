@@ -1,4 +1,4 @@
-//17.03.2025 17:27:25
+//01.05.2025 20:45:13
 
 #nullable enable
 //Disable missing XML comments.
@@ -98,7 +98,7 @@ using COSEAlgorithmIdentifier = long;
 using ImageBufferSource = Union186;
 using AlgorithmIdentifier = Union187;
 using HashAlgorithmIdentifier = Unsupported /*AlgorithmIdentifier*/;
-using BigInteger = System.Byte;
+using BigInteger = Uint8Array;
 using NamedCurve = string;
 using GLenum = ulong;
 using GLboolean = bool;
@@ -422,7 +422,7 @@ public partial interface Body
 		public bool BodyUsed { get { throw new System.NotImplementedException(); } }
 		public Task<byte[]> ArrayBuffer() { throw new System.NotImplementedException(); }
 		public Task<Blob> Blob() { throw new System.NotImplementedException(); }
-		public Task<System.Byte> Bytes() { throw new System.NotImplementedException(); }
+		public Task<Uint8Array> Bytes() { throw new System.NotImplementedException(); }
 		public Task<FormData> FormData() { throw new System.NotImplementedException(); }
 		public Task<dynamic> Json() { throw new System.NotImplementedException(); }
 		public Task<USVString> Text() { throw new System.NotImplementedException(); }
@@ -2093,7 +2093,7 @@ public partial interface GPUCommandsMixin
 public partial interface GPUBindingCommandsMixin
 {
 		public Undefined SetBindGroup(GPUIndex32 index, GPUBindGroup? bindGroup, List<GPUBufferDynamicOffset> dynamicOffsets = default) { throw new System.NotImplementedException(); }
-		public Undefined SetBindGroup(GPUIndex32 index, GPUBindGroup? bindGroup, System.UInt32 dynamicOffsetsData, GPUSize64 dynamicOffsetsDataStart, GPUSize32 dynamicOffsetsDataLength) { throw new System.NotImplementedException(); }
+		public Undefined SetBindGroup(GPUIndex32 index, GPUBindGroup? bindGroup, Uint32Array dynamicOffsetsData, GPUSize64 dynamicOffsetsDataStart, GPUSize32 dynamicOffsetsDataLength) { throw new System.NotImplementedException(); }
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]

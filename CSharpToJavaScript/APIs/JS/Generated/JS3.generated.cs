@@ -1,4 +1,4 @@
-//17.03.2025 17:27:25
+//01.05.2025 20:45:13
 
 #nullable enable
 //Disable missing XML comments.
@@ -98,7 +98,7 @@ using COSEAlgorithmIdentifier = long;
 using ImageBufferSource = Union186;
 using AlgorithmIdentifier = Union187;
 using HashAlgorithmIdentifier = Unsupported /*AlgorithmIdentifier*/;
-using BigInteger = System.Byte;
+using BigInteger = Uint8Array;
 using NamedCurve = string;
 using GLenum = ulong;
 using GLboolean = bool;
@@ -5276,10 +5276,10 @@ public partial class TextEncoder
 	public TextEncoder() { }
 	///<include file='Utils/Docs/TextEncoderEncode/TextEncoderEncode.generated.xml' path='docs/TextEncoderEncode/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
-	public System.Byte Encode(USVString input = default) { throw new System.NotImplementedException(); }
+	public Uint8Array Encode(USVString input = default) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/TextEncoderEncodeInto/TextEncoderEncodeInto.generated.xml' path='docs/TextEncoderEncodeInto/*'/>
 	[To(ToAttribute.FirstCharToLowerCase)]
-	public TextEncoderEncodeIntoResult EncodeInto(USVString source, System.Byte destination) { throw new System.NotImplementedException(); }
+	public TextEncoderEncodeIntoResult EncodeInto(USVString source, Uint8Array destination) { throw new System.NotImplementedException(); }
 }
 
 
@@ -6238,7 +6238,7 @@ public partial class Blob
 	///<include file='Utils/Docs/BlobArrayBuffer/BlobArrayBuffer.generated.xml' path='docs/BlobArrayBuffer/*'/>
 	public Task<byte[]> ArrayBuffer() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/BlobBytes/BlobBytes.generated.xml' path='docs/BlobBytes/*'/>
-	public Task<System.Byte> Bytes() { throw new System.NotImplementedException(); }
+	public Task<Uint8Array> Bytes() { throw new System.NotImplementedException(); }
 	public Blob() { }
 }
 
@@ -6899,17 +6899,17 @@ public partial class GamepadPose
 	///<include file='Utils/Docs/GamepadPoseHasPosition/GamepadPoseHasPosition.generated.xml' path='docs/GamepadPoseHasPosition/*'/>
 	public bool HasPosition { get; }
 	///<include file='Utils/Docs/GamepadPosePosition/GamepadPosePosition.generated.xml' path='docs/GamepadPosePosition/*'/>
-	public System.Single? Position { get; }
+	public Float32Array? Position { get; }
 	///<include file='Utils/Docs/GamepadPoseLinearVelocity/GamepadPoseLinearVelocity.generated.xml' path='docs/GamepadPoseLinearVelocity/*'/>
-	public System.Single? LinearVelocity { get; }
+	public Float32Array? LinearVelocity { get; }
 	///<include file='Utils/Docs/GamepadPoseLinearAcceleration/GamepadPoseLinearAcceleration.generated.xml' path='docs/GamepadPoseLinearAcceleration/*'/>
-	public System.Single? LinearAcceleration { get; }
+	public Float32Array? LinearAcceleration { get; }
 	///<include file='Utils/Docs/GamepadPoseOrientation/GamepadPoseOrientation.generated.xml' path='docs/GamepadPoseOrientation/*'/>
-	public System.Single? Orientation { get; }
+	public Float32Array? Orientation { get; }
 	///<include file='Utils/Docs/GamepadPoseAngularVelocity/GamepadPoseAngularVelocity.generated.xml' path='docs/GamepadPoseAngularVelocity/*'/>
-	public System.Single? AngularVelocity { get; }
+	public Float32Array? AngularVelocity { get; }
 	///<include file='Utils/Docs/GamepadPoseAngularAcceleration/GamepadPoseAngularAcceleration.generated.xml' path='docs/GamepadPoseAngularAcceleration/*'/>
-	public System.Single? AngularAcceleration { get; }
+	public Float32Array? AngularAcceleration { get; }
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -6917,8 +6917,8 @@ public partial class GamepadTouch
 {
 		public ulong TouchId { get; }
 		public byte SurfaceId { get; }
-		public System.Single Position { get; }
-		public System.UInt32? SurfaceDimensions { get; }
+		public Float32Array Position { get; }
+		public Uint32Array? SurfaceDimensions { get; }
 }
 
 ///<include file='Utils/Docs/Gamepad/Gamepad.generated.xml' path='docs/Gamepad/*'/>
@@ -7332,8 +7332,8 @@ public partial class DOMMatrixReadOnly
 	///<include file='Utils/Docs/DOMMatrixReadOnlyDOMMatrixReadOnly/DOMMatrixReadOnlyDOMMatrixReadOnly.generated.xml' path='docs/DOMMatrixReadOnlyDOMMatrixReadOnly/*'/>
 	public DOMMatrixReadOnly(Union49 init = default) { }
 		public static DOMMatrixReadOnly FromMatrix(DOMMatrixInit other = default) { throw new System.NotImplementedException(); }
-		public static DOMMatrixReadOnly FromFloat32Array(System.Single array32) { throw new System.NotImplementedException(); }
-		public static DOMMatrixReadOnly FromFloat64Array(System.Double array64) { throw new System.NotImplementedException(); }
+		public static DOMMatrixReadOnly FromFloat32Array(Float32Array array32) { throw new System.NotImplementedException(); }
+		public static DOMMatrixReadOnly FromFloat64Array(Float64Array array64) { throw new System.NotImplementedException(); }
 		public double A { get; }
 		public double B { get; }
 		public double C { get; }
@@ -7380,9 +7380,9 @@ public partial class DOMMatrixReadOnly
 	///<include file='Utils/Docs/DOMMatrixReadOnlyTransformPoint/DOMMatrixReadOnlyTransformPoint.generated.xml' path='docs/DOMMatrixReadOnlyTransformPoint/*'/>
 	public DOMPoint TransformPoint(DOMPointInit point = default) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/DOMMatrixReadOnlyToFloat32Array/DOMMatrixReadOnlyToFloat32Array.generated.xml' path='docs/DOMMatrixReadOnlyToFloat32Array/*'/>
-	public System.Single ToFloat32Array() { throw new System.NotImplementedException(); }
+	public Float32Array ToFloat32Array() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/DOMMatrixReadOnlyToFloat64Array/DOMMatrixReadOnlyToFloat64Array.generated.xml' path='docs/DOMMatrixReadOnlyToFloat64Array/*'/>
-	public System.Double ToFloat64Array() { throw new System.NotImplementedException(); }
+	public Float64Array ToFloat64Array() { throw new System.NotImplementedException(); }
 	
 	///<include file='Utils/Docs/DOMMatrixReadOnlyToJSON/DOMMatrixReadOnlyToJSON.generated.xml' path='docs/DOMMatrixReadOnlyToJSON/*'/>
 	public Object ToJSON() { throw new System.NotImplementedException(); }
@@ -7396,8 +7396,8 @@ public partial class DOMMatrix : DOMMatrixReadOnly
 	///<include file='Utils/Docs/DOMMatrixDOMMatrix/DOMMatrixDOMMatrix.generated.xml' path='docs/DOMMatrixDOMMatrix/*'/>
 	public DOMMatrix(Union50 init = default) { }
 		public static DOMMatrix FromMatrix(DOMMatrixInit other = default) { throw new System.NotImplementedException(); }
-		public static DOMMatrix FromFloat32Array(System.Single array32) { throw new System.NotImplementedException(); }
-		public static DOMMatrix FromFloat64Array(System.Double array64) { throw new System.NotImplementedException(); }
+		public static DOMMatrix FromFloat32Array(Float32Array array32) { throw new System.NotImplementedException(); }
+		public static DOMMatrix FromFloat64Array(Float64Array array64) { throw new System.NotImplementedException(); }
 		public double A { get; set; }
 		public double B { get; set; }
 		public double C { get; set; }
@@ -15444,7 +15444,7 @@ public partial class PushMessageData
 	///<include file='Utils/Docs/PushMessageDataBlob/PushMessageDataBlob.generated.xml' path='docs/PushMessageDataBlob/*'/>
 	public Blob Blob() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/PushMessageDataBytes/PushMessageDataBytes.generated.xml' path='docs/PushMessageDataBytes/*'/>
-	public System.Byte Bytes() { throw new System.NotImplementedException(); }
+	public Uint8Array Bytes() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/PushMessageDataJson/PushMessageDataJson.generated.xml' path='docs/PushMessageDataJson/*'/>
 	public dynamic Json() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/PushMessageDataText/PushMessageDataText.generated.xml' path='docs/PushMessageDataText/*'/>
@@ -15517,8 +15517,8 @@ public partial class XRWebGLBinding
 public partial class XRMesh
 {
 		public XRSpace MeshSpace { get; }
-		public System.Single[] Vertices { get; }
-		public System.UInt32 Indices { get; }
+		public Float32Array[] Vertices { get; }
+		public Uint32Array Indices { get; }
 		public DOMHighResTimeStamp LastChangedTime { get; }
 		public DOMString? SemanticLabel { get; }
 }
@@ -18831,7 +18831,7 @@ public partial class AuctionAdConfig
 		public List<AuctionAdConfig> ComponentAuctions;
 		public AbortSignal? Signal;
 		public Task<bool> ResolveToConfig;
-		public Task<System.Byte> ServerResponse;
+		public Task<Uint8Array> ServerResponse;
 		public USVString RequestId;
 }
 
@@ -18850,7 +18850,7 @@ public partial class Navigator
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class AdAuctionData
 {
-		public required System.Byte Request;
+		public required Uint8Array Request;
 		public required USVString RequestId;
 }
 
@@ -20911,11 +20911,11 @@ public partial class AudioBuffer
 	///<include file='Utils/Docs/AudioBufferNumberOfChannels/AudioBufferNumberOfChannels.generated.xml' path='docs/AudioBufferNumberOfChannels/*'/>
 	public ulong NumberOfChannels { get; }
 	///<include file='Utils/Docs/AudioBufferGetChannelData/AudioBufferGetChannelData.generated.xml' path='docs/AudioBufferGetChannelData/*'/>
-	public System.Single GetChannelData(ulong channel) { throw new System.NotImplementedException(); }
+	public Float32Array GetChannelData(ulong channel) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/AudioBufferCopyFromChannel/AudioBufferCopyFromChannel.generated.xml' path='docs/AudioBufferCopyFromChannel/*'/>
-	public Undefined CopyFromChannel(System.Single destination, ulong channelNumber, ulong bufferOffset = default) { throw new System.NotImplementedException(); }
+	public Undefined CopyFromChannel(Float32Array destination, ulong channelNumber, ulong bufferOffset = default) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/AudioBufferCopyToChannel/AudioBufferCopyToChannel.generated.xml' path='docs/AudioBufferCopyToChannel/*'/>
-	public Undefined CopyToChannel(System.Single source, ulong channelNumber, ulong bufferOffset = default) { throw new System.NotImplementedException(); }
+	public Undefined CopyToChannel(Float32Array source, ulong channelNumber, ulong bufferOffset = default) { throw new System.NotImplementedException(); }
 	public AudioBuffer() { }
 }
 
@@ -21018,13 +21018,13 @@ public partial class AnalyserNode : AudioNode
 	///<include file='Utils/Docs/AnalyserNodeAnalyserNode/AnalyserNodeAnalyserNode.generated.xml' path='docs/AnalyserNodeAnalyserNode/*'/>
 	public AnalyserNode(BaseAudioContext context, AnalyserOptions options = default) { }
 	///<include file='Utils/Docs/AnalyserNodeGetFloatFrequencyData/AnalyserNodeGetFloatFrequencyData.generated.xml' path='docs/AnalyserNodeGetFloatFrequencyData/*'/>
-	public Undefined GetFloatFrequencyData(System.Single array) { throw new System.NotImplementedException(); }
+	public Undefined GetFloatFrequencyData(Float32Array array) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/AnalyserNodeGetByteFrequencyData/AnalyserNodeGetByteFrequencyData.generated.xml' path='docs/AnalyserNodeGetByteFrequencyData/*'/>
-	public Undefined GetByteFrequencyData(System.Byte array) { throw new System.NotImplementedException(); }
+	public Undefined GetByteFrequencyData(Uint8Array array) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/AnalyserNodeGetFloatTimeDomainData/AnalyserNodeGetFloatTimeDomainData.generated.xml' path='docs/AnalyserNodeGetFloatTimeDomainData/*'/>
-	public Undefined GetFloatTimeDomainData(System.Single array) { throw new System.NotImplementedException(); }
+	public Undefined GetFloatTimeDomainData(Float32Array array) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/AnalyserNodeGetByteTimeDomainData/AnalyserNodeGetByteTimeDomainData.generated.xml' path='docs/AnalyserNodeGetByteTimeDomainData/*'/>
-	public Undefined GetByteTimeDomainData(System.Byte array) { throw new System.NotImplementedException(); }
+	public Undefined GetByteTimeDomainData(Uint8Array array) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/AnalyserNodeFftSize/AnalyserNodeFftSize.generated.xml' path='docs/AnalyserNodeFftSize/*'/>
 	public ulong FftSize { get; set; }
 	///<include file='Utils/Docs/AnalyserNodeFrequencyBinCount/AnalyserNodeFrequencyBinCount.generated.xml' path='docs/AnalyserNodeFrequencyBinCount/*'/>
@@ -21157,7 +21157,7 @@ public partial class BiquadFilterNode : AudioNode
 	///<include file='Utils/Docs/BiquadFilterNodeGain/BiquadFilterNodeGain.generated.xml' path='docs/BiquadFilterNodeGain/*'/>
 	public AudioParam Gain { get; }
 	///<include file='Utils/Docs/BiquadFilterNodeGetFrequencyResponse/BiquadFilterNodeGetFrequencyResponse.generated.xml' path='docs/BiquadFilterNodeGetFrequencyResponse/*'/>
-	public Undefined GetFrequencyResponse(System.Single frequencyHz, System.Single magResponse, System.Single phaseResponse) { throw new System.NotImplementedException(); }
+	public Undefined GetFrequencyResponse(Float32Array frequencyHz, Float32Array magResponse, Float32Array phaseResponse) { throw new System.NotImplementedException(); }
 	public BiquadFilterNode() { }
 }
 
@@ -21311,7 +21311,7 @@ public partial class IIRFilterNode : AudioNode
 	///<include file='Utils/Docs/IIRFilterNodeIIRFilterNode/IIRFilterNodeIIRFilterNode.generated.xml' path='docs/IIRFilterNodeIIRFilterNode/*'/>
 	public IIRFilterNode(BaseAudioContext context, IIRFilterOptions options) { }
 	///<include file='Utils/Docs/IIRFilterNodeGetFrequencyResponse/IIRFilterNodeGetFrequencyResponse.generated.xml' path='docs/IIRFilterNodeGetFrequencyResponse/*'/>
-	public Undefined GetFrequencyResponse(System.Single frequencyHz, System.Single magResponse, System.Single phaseResponse) { throw new System.NotImplementedException(); }
+	public Undefined GetFrequencyResponse(Float32Array frequencyHz, Float32Array magResponse, Float32Array phaseResponse) { throw new System.NotImplementedException(); }
 	public IIRFilterNode() { }
 }
 
@@ -21523,7 +21523,7 @@ public partial class WaveShaperNode : AudioNode
 	///<include file='Utils/Docs/WaveShaperNodeWaveShaperNode/WaveShaperNodeWaveShaperNode.generated.xml' path='docs/WaveShaperNodeWaveShaperNode/*'/>
 	public WaveShaperNode(BaseAudioContext context, WaveShaperOptions options = default) { }
 	///<include file='Utils/Docs/WaveShaperNodeCurve/WaveShaperNodeCurve.generated.xml' path='docs/WaveShaperNodeCurve/*'/>
-	public System.Single? Curve { get; set; }
+	public Float32Array? Curve { get; set; }
 	///<include file='Utils/Docs/WaveShaperNodeOversample/WaveShaperNodeOversample.generated.xml' path='docs/WaveShaperNodeOversample/*'/>
 	public OverSampleType Oversample { get; set; }
 	public WaveShaperNode() { }
@@ -24728,14 +24728,14 @@ public partial class MIDIMessageEvent : Event
 	///<include file='Utils/Docs/MIDIMessageEventMIDIMessageEvent/MIDIMessageEventMIDIMessageEvent.generated.xml' path='docs/MIDIMessageEventMIDIMessageEvent/*'/>
 	public MIDIMessageEvent(DOMString type, MIDIMessageEventInit eventInitDict = default) { }
 	///<include file='Utils/Docs/MIDIMessageEventData/MIDIMessageEventData.generated.xml' path='docs/MIDIMessageEventData/*'/>
-	public System.Byte? Data { get; }
+	public Uint8Array? Data { get; }
 	public MIDIMessageEvent() { }
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class MIDIMessageEventInit : EventInit
 {
-		public System.Byte Data;
+		public Uint8Array Data;
 }
 
 ///<include file='Utils/Docs/MIDIConnectionEvent/MIDIConnectionEvent.generated.xml' path='docs/MIDIConnectionEvent/*'/>
@@ -27882,9 +27882,9 @@ public partial class XRFrame
 	///<include file='Utils/Docs/XRFrameGetJointPose/XRFrameGetJointPose.generated.xml' path='docs/XRFrameGetJointPose/*'/>
 	public XRJointPose? GetJointPose(XRJointSpace joint, XRSpace baseSpace) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/XRFrameFillJointRadii/XRFrameFillJointRadii.generated.xml' path='docs/XRFrameFillJointRadii/*'/>
-	public bool FillJointRadii(List<XRJointSpace> jointSpaces, System.Single radii) { throw new System.NotImplementedException(); }
+	public bool FillJointRadii(List<XRJointSpace> jointSpaces, Float32Array radii) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/XRFrameFillPoses/XRFrameFillPoses.generated.xml' path='docs/XRFrameFillPoses/*'/>
-	public bool FillPoses(List<XRSpace> spaces, XRSpace baseSpace, System.Single transforms) { throw new System.NotImplementedException(); }
+	public bool FillPoses(List<XRSpace> spaces, XRSpace baseSpace, Float32Array transforms) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/XRJointPose/XRJointPose.generated.xml' path='docs/XRJointPose/*'/>
@@ -27984,7 +27984,7 @@ public partial class XRRay
 	///<include file='Utils/Docs/XRRayDirection/XRRayDirection.generated.xml' path='docs/XRRayDirection/*'/>
 	public DOMPointReadOnly Direction { get; }
 	///<include file='Utils/Docs/XRRayMatrix/XRRayMatrix.generated.xml' path='docs/XRRayMatrix/*'/>
-	public System.Single Matrix { get; }
+	public Float32Array Matrix { get; }
 	public XRRay() { }
 }
 
@@ -28002,7 +28002,7 @@ public partial class XRLightProbe : EventTarget
 public partial class XRLightEstimate
 {
 	///<include file='Utils/Docs/XRLightEstimateSphericalHarmonicsCoefficients/XRLightEstimateSphericalHarmonicsCoefficients.generated.xml' path='docs/XRLightEstimateSphericalHarmonicsCoefficients/*'/>
-	public System.Single SphericalHarmonicsCoefficients { get; }
+	public Float32Array SphericalHarmonicsCoefficients { get; }
 	///<include file='Utils/Docs/XRLightEstimatePrimaryLightDirection/XRLightEstimatePrimaryLightDirection.generated.xml' path='docs/XRLightEstimatePrimaryLightDirection/*'/>
 	public DOMPointReadOnly PrimaryLightDirection { get; }
 	///<include file='Utils/Docs/XRLightEstimatePrimaryLightIntensity/XRLightEstimatePrimaryLightIntensity.generated.xml' path='docs/XRLightEstimatePrimaryLightIntensity/*'/>
@@ -28096,7 +28096,7 @@ public partial class XRSession : EventTarget
 	///<include file='Utils/Docs/XRSessionVisibilityState/XRSessionVisibilityState.generated.xml' path='docs/XRSessionVisibilityState/*'/>
 	public XRVisibilityState VisibilityState { get; }
 		public Number? FrameRate { get; }
-		public System.Single? SupportedFrameRates { get; }
+		public Float32Array? SupportedFrameRates { get; }
 	///<include file='Utils/Docs/XRSessionRenderState/XRSessionRenderState.generated.xml' path='docs/XRSessionRenderState/*'/>
 	public XRRenderState RenderState { get; }
 	///<include file='Utils/Docs/XRSessionInputSources/XRSessionInputSources.generated.xml' path='docs/XRSessionInputSources/*'/>
@@ -28192,7 +28192,7 @@ public partial class XRView
 	///<include file='Utils/Docs/XRViewEye/XRViewEye.generated.xml' path='docs/XRViewEye/*'/>
 	public XREye Eye { get; }
 	///<include file='Utils/Docs/XRViewProjectionMatrix/XRViewProjectionMatrix.generated.xml' path='docs/XRViewProjectionMatrix/*'/>
-	public System.Single ProjectionMatrix { get; }
+	public Float32Array ProjectionMatrix { get; }
 	///<include file='Utils/Docs/XRViewTransform/XRViewTransform.generated.xml' path='docs/XRViewTransform/*'/>
 	public XRRigidTransform Transform { get; }
 	///<include file='Utils/Docs/XRViewRecommendedViewportScale/XRViewRecommendedViewportScale.generated.xml' path='docs/XRViewRecommendedViewportScale/*'/>
@@ -28226,7 +28226,7 @@ public partial class XRRigidTransform
 	///<include file='Utils/Docs/XRRigidTransformOrientation/XRRigidTransformOrientation.generated.xml' path='docs/XRRigidTransformOrientation/*'/>
 	public DOMPointReadOnly Orientation { get; }
 	///<include file='Utils/Docs/XRRigidTransformMatrix/XRRigidTransformMatrix.generated.xml' path='docs/XRRigidTransformMatrix/*'/>
-	public System.Single Matrix { get; }
+	public Float32Array Matrix { get; }
 	///<include file='Utils/Docs/XRRigidTransformInverse/XRRigidTransformInverse.generated.xml' path='docs/XRRigidTransformInverse/*'/>
 	public XRRigidTransform Inverse { get; }
 	public XRRigidTransform() { }

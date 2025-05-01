@@ -1,4 +1,4 @@
-//17.03.2025 17:27:25
+//01.05.2025 20:45:13
 
 #nullable enable
 //Disable missing XML comments.
@@ -98,7 +98,7 @@ using COSEAlgorithmIdentifier = long;
 using ImageBufferSource = Union186;
 using AlgorithmIdentifier = Union187;
 using HashAlgorithmIdentifier = Unsupported /*AlgorithmIdentifier*/;
-using BigInteger = System.Byte;
+using BigInteger = Uint8Array;
 using NamedCurve = string;
 using GLenum = ulong;
 using GLboolean = bool;

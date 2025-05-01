@@ -297,8 +297,9 @@ internal class Walker : CSharpSyntaxWalker
 		if (_Options.Debug)
 		{
 			JSSB.Append("/*");
-			JSSB.Append(node.WithMembers([]).ToFullString().Replace("*/", ""));
-			JSSB.Append("*/");
+			string[] strings = node.ToFullString().Split(["\r\n", "\r", "\n"], StringSplitOptions.RemoveEmptyEntries);
+			JSSB.Append(string.IsNullOrWhiteSpace(strings[0]) ? strings[1] : strings[0]);
+			JSSB.AppendLine("*/");
 		}
 
 		ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
@@ -383,8 +384,9 @@ internal class Walker : CSharpSyntaxWalker
 		if (_Options.Debug)
 		{
 			JSSB.Append("/*");
-			JSSB.Append(node.WithBody(null).ToFullString().Replace("*/", ""));
-			JSSB.Append("*/");
+			string[] strings = node.ToFullString().Split(["\r\n", "\r", "\n"], StringSplitOptions.RemoveEmptyEntries);
+			JSSB.Append(string.IsNullOrWhiteSpace(strings[0]) ? strings[1] : strings[0]);
+			JSSB.AppendLine("*/");
 		}
 
 		ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
@@ -661,8 +663,9 @@ internal class Walker : CSharpSyntaxWalker
 		if (_Options.Debug)
 		{
 			JSSB.Append("/*");
-			JSSB.Append(node.ToFullString().Replace("*/", ""));
-			JSSB.Append("*/");
+			string[] strings = node.ToFullString().Split(["\r\n", "\r", "\n"], StringSplitOptions.RemoveEmptyEntries);
+			JSSB.Append(string.IsNullOrWhiteSpace(strings[0]) ? strings[1] : strings[0]);
+			JSSB.AppendLine("*/");
 		}
 
 		ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
@@ -714,8 +717,9 @@ internal class Walker : CSharpSyntaxWalker
 		if (_Options.Debug)
 		{
 			JSSB.Append("/*");
-			JSSB.Append(node.ToFullString().Replace("*/", ""));
-			JSSB.Append("*/");
+			string[] strings = node.ToFullString().Split(["\r\n", "\r", "\n"], StringSplitOptions.RemoveEmptyEntries);
+			JSSB.Append(string.IsNullOrWhiteSpace(strings[0]) ? strings[1] : strings[0]);
+			JSSB.AppendLine("*/");
 		}
 
 		ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
@@ -812,6 +816,9 @@ internal class Walker : CSharpSyntaxWalker
 					case SyntaxKind.DivideAssignmentExpression:
 					case SyntaxKind.ModuloAssignmentExpression:
 						Visit(asNode);
+						break;
+					case SyntaxKind.NullLiteralExpression:
+						VisitLiteralExpression((LiteralExpressionSyntax)asNode);
 						break;
 					case SyntaxKind.DivideExpression:
 					case SyntaxKind.AsExpression:
@@ -1142,8 +1149,9 @@ internal class Walker : CSharpSyntaxWalker
 		if (_Options.Debug)
 		{
 			JSSB.Append("/*");
-			JSSB.Append(node.WithBody(null).ToFullString().Replace("*/", ""));
-			JSSB.Append("*/");
+			string[] strings = node.ToFullString().Split(["\r\n", "\r", "\n"], StringSplitOptions.RemoveEmptyEntries);
+			JSSB.Append(string.IsNullOrWhiteSpace(strings[0]) ? strings[1] : strings[0]);
+			JSSB.AppendLine("*/");
 		}
 
 		ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
@@ -1217,8 +1225,9 @@ internal class Walker : CSharpSyntaxWalker
 		if (_Options.Debug)
 		{
 			JSSB.Append("/*");
-			JSSB.Append(node.ToFullString().Replace("*/", ""));
-			JSSB.Append("*/");
+			string[] strings = node.ToFullString().Split(["\r\n", "\r", "\n"], StringSplitOptions.RemoveEmptyEntries);
+			JSSB.Append(string.IsNullOrWhiteSpace(strings[0]) ? strings[1] : strings[0]);
+			JSSB.AppendLine("*/");
 		}
 
 		ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
@@ -1278,8 +1287,9 @@ internal class Walker : CSharpSyntaxWalker
 		if (_Options.Debug)
 		{
 			JSSB.Append("/*");
-			JSSB.Append(node.ToFullString().Replace("*/", ""));
-			JSSB.Append("*/");
+			string[] strings = node.ToFullString().Split(["\r\n", "\r", "\n"], StringSplitOptions.RemoveEmptyEntries);
+			JSSB.Append(string.IsNullOrWhiteSpace(strings[0]) ? strings[1] : strings[0]);
+			JSSB.AppendLine("*/");
 		}
 
 		ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
@@ -1919,8 +1929,9 @@ internal class Walker : CSharpSyntaxWalker
 		if (_Options.Debug)
 		{
 			JSSB.Append("/*");
-			JSSB.Append(node.WithStatement(SyntaxFactory.EmptyStatement()).ToFullString().Replace(";", "").Replace("*/", ""));
-			JSSB.Append("*/");
+			string[] strings = node.ToFullString().Split(["\r\n", "\r", "\n"], StringSplitOptions.RemoveEmptyEntries);
+			JSSB.Append(string.IsNullOrWhiteSpace(strings[0]) ? strings[1] : strings[0]);
+			JSSB.AppendLine("*/");
 		}
 
 		ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
@@ -3229,8 +3240,9 @@ internal class Walker : CSharpSyntaxWalker
 		if (_Options.Debug)
 		{
 			JSSB.Append("/*");
-			JSSB.Append(node.ToFullString().Replace("*/", ""));
-			JSSB.Append("*/");
+			string[] strings = node.ToFullString().Split(["\r\n", "\r", "\n"], StringSplitOptions.RemoveEmptyEntries);
+			JSSB.Append(string.IsNullOrWhiteSpace(strings[0]) ? strings[1] : strings[0]);
+			JSSB.AppendLine("*/");
 		}
 
 		if (_Options.Debug)
@@ -3250,8 +3262,9 @@ internal class Walker : CSharpSyntaxWalker
 		if (_Options.Debug)
 		{
 			JSSB.Append("/*");
-			JSSB.Append(node.ToFullString().Replace("*/", ""));
-			JSSB.Append("*/");
+			string[] strings = node.ToFullString().Split(["\r\n", "\r", "\n"], StringSplitOptions.RemoveEmptyEntries);
+			JSSB.Append(string.IsNullOrWhiteSpace(strings[0]) ? strings[1] : strings[0]);
+			JSSB.AppendLine("*/");
 		}
 
 		if (_Options.Debug)
@@ -3479,8 +3492,9 @@ internal class Walker : CSharpSyntaxWalker
 		if (_Options.Debug)
 		{
 			JSSB.Append("/*");
-			JSSB.Append(node.ToFullString().Replace(";", "").Replace("*/", ""));
-			JSSB.Append("*/");
+			string[] strings = node.ToFullString().Split(["\r\n", "\r", "\n"], StringSplitOptions.RemoveEmptyEntries);
+			JSSB.Append(string.IsNullOrWhiteSpace(strings[0]) ? strings[1] : strings[0]);
+			JSSB.AppendLine("*/");
 		}
 
 		if (_Options.Debug)
@@ -3736,8 +3750,9 @@ internal class Walker : CSharpSyntaxWalker
 		if (_Options.Debug)
 		{
 			JSSB.Append("/*");
-			JSSB.Append(node.WithStatement(SyntaxFactory.EmptyStatement()).ToFullString().Replace("*/", ""));
-			JSSB.Append("*/");
+			string[] strings = node.ToFullString().Split(["\r\n", "\r", "\n"], StringSplitOptions.RemoveEmptyEntries);
+			JSSB.Append(string.IsNullOrWhiteSpace(strings[0]) ? strings[1] : strings[0]);
+			JSSB.AppendLine("*/");
 		}
 
 		if (_Options.Debug)
@@ -3862,8 +3877,9 @@ internal class Walker : CSharpSyntaxWalker
 		if (_Options.Debug)
 		{
 			JSSB.Append("/*");
-			JSSB.Append(node.WithStatement(SyntaxFactory.EmptyStatement()).WithElse(null).ToFullString().Replace(";","").Replace("*/", ""));
-			JSSB.Append("*/");
+			string[] strings = node.ToFullString().Split(["\r\n", "\r", "\n"], StringSplitOptions.RemoveEmptyEntries);
+			JSSB.Append(string.IsNullOrWhiteSpace(strings[0]) ? strings[1] : strings[0]);
+			JSSB.AppendLine("*/");
 		}
 
 		ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
@@ -4509,8 +4525,9 @@ internal class Walker : CSharpSyntaxWalker
 		if (_Options.Debug)
 		{
 			JSSB.Append("/*");
-			JSSB.Append(node.ToFullString().Replace("*/", ""));
-			JSSB.Append("*/");
+			string[] strings = node.ToFullString().Split(["\r\n", "\r", "\n"], StringSplitOptions.RemoveEmptyEntries);
+			JSSB.Append(string.IsNullOrWhiteSpace(strings[0]) ? strings[1] : strings[0]);
+			JSSB.AppendLine("*/");
 		}
 
 		if (_Options.Debug)
@@ -4635,8 +4652,9 @@ internal class Walker : CSharpSyntaxWalker
 		if (_Options.Debug)
 		{
 			JSSB.Append("/*");
-			JSSB.Append(node.WithSections([]).ToFullString().Replace("*/", ""));
-			JSSB.Append("*/");
+			string[] strings = node.ToFullString().Split(["\r\n", "\r", "\n"], StringSplitOptions.RemoveEmptyEntries);
+			JSSB.Append(string.IsNullOrWhiteSpace(strings[0]) ? strings[1] : strings[0]);
+			JSSB.AppendLine("*/");
 		}
 
 		if (_Options.Debug)
@@ -4811,8 +4829,9 @@ internal class Walker : CSharpSyntaxWalker
 		if (_Options.Debug)
 		{
 			JSSB.Append("/*");
-			JSSB.Append(node.WithStatement(SyntaxFactory.EmptyStatement()).ToFullString().Replace(";", "").Replace("*/", ""));
-			JSSB.Append("*/");
+			string[] strings = node.ToFullString().Split(["\r\n", "\r", "\n"], StringSplitOptions.RemoveEmptyEntries);
+			JSSB.Append(string.IsNullOrWhiteSpace(strings[0]) ? strings[1] : strings[0]);
+			JSSB.AppendLine("*/");
 		}
 
 		if (_Options.Debug)

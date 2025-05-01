@@ -152,7 +152,7 @@ public partial class StringPrototype : FunctionPrototype
 	{
 		throw new System.NotImplementedException();
 	}
-	public override string ToString()
+	public new string ToString()
 	{
 		throw new System.NotImplementedException();
 	}

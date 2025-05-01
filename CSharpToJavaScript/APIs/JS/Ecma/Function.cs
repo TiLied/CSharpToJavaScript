@@ -32,20 +32,22 @@ public partial class FunctionPrototype : ObjectPrototype
 {
 	public FunctionPrototype() { }
 
-	public dynamic Apply(dynamic thisArg, dynamic argArray) 
+	public static dynamic Apply(dynamic thisArg, dynamic argArray) 
 	{
 		throw new System.NotImplementedException();
 	}
 
-	public dynamic Bind(dynamic thisArg, params dynamic[] args)
+	public static dynamic Bind(dynamic thisArg, params dynamic[] args)
 	{
 		throw new System.NotImplementedException();
 	}
-	public dynamic Call(dynamic thisArg, params dynamic[] args)
+	public static dynamic Call(dynamic thisArg, params dynamic[] args)
 	{
 		throw new System.NotImplementedException();
 	}
-	public new virtual string ToString()
+
+	[Value("toString")]
+	public static string ToStringStatic()
 	{
 		throw new System.NotImplementedException();
 	}

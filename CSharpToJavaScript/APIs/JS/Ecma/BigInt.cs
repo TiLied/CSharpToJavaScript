@@ -12,8 +12,6 @@ public class BigInt : BigIntPrototype
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public static BigIntPrototype Prototype { get; } = new();
 
-	public BigInt(double value) { }
-
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public BigInt AsIntN(Number bits, BigInt bigint) 
 	{

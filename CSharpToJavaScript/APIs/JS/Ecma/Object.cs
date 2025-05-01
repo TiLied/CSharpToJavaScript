@@ -173,17 +173,17 @@ public class ObjectPrototype
 		throw new System.NotImplementedException();
 	}
 
-	public static string ToLocaleString(dynamic? reserved1 = null, dynamic? reserved2 = null)
+	public string ToLocaleString(dynamic? reserved1 = null, dynamic? reserved2 = null)
 	{
 		throw new System.NotImplementedException();
 	}
 
-	public static new string ToString()
+	public override string ToString()
 	{
 		throw new System.NotImplementedException();
 	}
 
-	public static dynamic ValueOf()
+	public dynamic ValueOf()
 	{
 		throw new System.NotImplementedException();
 	}

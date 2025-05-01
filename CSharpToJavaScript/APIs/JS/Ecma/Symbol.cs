@@ -26,12 +26,6 @@ public partial class Symbol : SymbolPrototype
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public SymbolPrototype Prototype { get; } = new();
 
-	[To(ToAttribute.Default)]
-	public Symbol(string description = "") 
-	{
-
-	}
-
 	[To(ToAttribute.FirstCharToLowerCase)]
 	public static Symbol For(string key) 
 	{

@@ -34,10 +34,7 @@ public partial class TypedArray<T> : TypedArrayPrototype<T>
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class TypedArrayPrototype<T> : FunctionPrototype
 {
-
-	//returns ArrayBuffer
-	//TODO!
-	public dynamic? Buffer { get; set; } = null;
+	public ArrayBuffer? Buffer { get; set; } = null;
 	public int ByteLength { get; set; } = 0;
 	public int ByteOffset { get; set; } = 0;
 	public int Length { get; set; } = 0;
@@ -180,11 +177,7 @@ public partial class Int8Array : TypedArray<Int8Array>
 	//TODO!
 	//public Int8Array(typedArray) { }
 	public Int8Array(Object object_) { }
-
-	//TODO ArrayBuffer!
-	public Int8Array(dynamic buffer) { }
-	public Int8Array(dynamic buffer, int byteOffset) { }
-	public Int8Array(dynamic buffer, int byteOffset, int length) { }
+	public Int8Array(ArrayBuffer buffer, int byteOffset = 0, int length = 0) { }
 
 }
 [To(ToAttribute.Default)]
@@ -198,10 +191,7 @@ public partial class Uint8Array : TypedArray<Uint8Array>
 	//public Uint8Array(typedArray) { }
 	public Uint8Array(Object object_) { }
 
-	//TODO ArrayBuffer!
-	public Uint8Array(dynamic buffer) { }
-	public Uint8Array(dynamic buffer, int byteOffset) { }
-	public Uint8Array(dynamic buffer, int byteOffset, int length) { }
+	public Uint8Array(ArrayBuffer buffer, int byteOffset = 0, int length = 0) { }
 }
 [To(ToAttribute.Default)]
 public partial class Uint8ClampedArray : TypedArray<Uint8ClampedArray>
@@ -214,10 +204,7 @@ public partial class Uint8ClampedArray : TypedArray<Uint8ClampedArray>
 	//public Uint8ClampedArray(typedArray) { }
 	public Uint8ClampedArray(Object object_) { }
 
-	//TODO ArrayBuffer!
-	public Uint8ClampedArray(dynamic buffer) { }
-	public Uint8ClampedArray(dynamic buffer, int byteOffset) { }
-	public Uint8ClampedArray(dynamic buffer, int byteOffset, int length) { }
+	public Uint8ClampedArray(ArrayBuffer buffer, int byteOffset = 0, int length = 0) { }
 }
 [To(ToAttribute.Default)]
 public partial class Int16Array : TypedArray<Int16Array>
@@ -230,10 +217,7 @@ public partial class Int16Array : TypedArray<Int16Array>
 	//public Int16Array(typedArray) { }
 	public Int16Array(Object object_) { }
 
-	//TODO ArrayBuffer!
-	public Int16Array(dynamic buffer) { }
-	public Int16Array(dynamic buffer, int byteOffset) { }
-	public Int16Array(dynamic buffer, int byteOffset, int length) { }
+	public Int16Array(ArrayBuffer buffer, int byteOffset = 0, int length = 0) { }
 }
 [To(ToAttribute.Default)]
 public partial class Uint16Array : TypedArray<Uint16Array>
@@ -246,10 +230,7 @@ public partial class Uint16Array : TypedArray<Uint16Array>
 	//public Uint16Array(typedArray) { }
 	public Uint16Array(Object object_) { }
 
-	//TODO ArrayBuffer!
-	public Uint16Array(dynamic buffer) { }
-	public Uint16Array(dynamic buffer, int byteOffset) { }
-	public Uint16Array(dynamic buffer, int byteOffset, int length) { }
+	public Uint16Array(ArrayBuffer buffer, int byteOffset = 0, int length = 0) { }
 }
 [To(ToAttribute.Default)]
 public partial class Int32Array : TypedArray<Int32Array>
@@ -262,10 +243,7 @@ public partial class Int32Array : TypedArray<Int32Array>
 	//public Int32Array(typedArray) { }
 	public Int32Array(Object object_) { }
 
-	//TODO ArrayBuffer!
-	public Int32Array(dynamic buffer) { }
-	public Int32Array(dynamic buffer, int byteOffset) { }
-	public Int32Array(dynamic buffer, int byteOffset, int length) { }
+	public Int32Array(ArrayBuffer buffer, int byteOffset = 0, int length = 0) { }
 }
 [To(ToAttribute.Default)]
 public partial class Uint32Array : TypedArray<Uint32Array>
@@ -278,10 +256,7 @@ public partial class Uint32Array : TypedArray<Uint32Array>
 	//public Uint32Array(typedArray) { }
 	public Uint32Array(Object object_) { }
 
-	//TODO ArrayBuffer!
-	public Uint32Array(dynamic buffer) { }
-	public Uint32Array(dynamic buffer, int byteOffset) { }
-	public Uint32Array(dynamic buffer, int byteOffset, int length) { }
+	public Uint32Array(ArrayBuffer buffer, int byteOffset = 0, int length = 0) { }
 }
 [To(ToAttribute.Default)]
 public partial class BigInt64Array : TypedArray<BigInt64Array>
@@ -294,10 +269,7 @@ public partial class BigInt64Array : TypedArray<BigInt64Array>
 	//public BigInt64Array(typedArray) { }
 	public BigInt64Array(Object object_) { }
 
-	//TODO ArrayBuffer!
-	public BigInt64Array(dynamic buffer) { }
-	public BigInt64Array(dynamic buffer, int byteOffset) { }
-	public BigInt64Array(dynamic buffer, int byteOffset, int length) { }
+	public BigInt64Array(ArrayBuffer buffer, int byteOffset = 0, int length = 0) { }
 }
 [To(ToAttribute.Default)]
 public partial class BigUint64Array : TypedArray<BigUint64Array>
@@ -310,10 +282,7 @@ public partial class BigUint64Array : TypedArray<BigUint64Array>
 	//public BigUint64Array(typedArray) { }
 	public BigUint64Array(Object object_) { }
 
-	//TODO ArrayBuffer!
-	public BigUint64Array(dynamic buffer) { }
-	public BigUint64Array(dynamic buffer, int byteOffset) { }
-	public BigUint64Array(dynamic buffer, int byteOffset, int length) { }
+	public BigUint64Array(ArrayBuffer buffer, int byteOffset = 0, int length = 0) { }
 }
 [To(ToAttribute.Default)]
 public partial class Float32Array : TypedArray<Float32Array>
@@ -326,10 +295,7 @@ public partial class Float32Array : TypedArray<Float32Array>
 	//public Float32Array(typedArray) { }
 	public Float32Array(Object object_) { }
 
-	//TODO ArrayBuffer!
-	public Float32Array(dynamic buffer) { }
-	public Float32Array(dynamic buffer, int byteOffset) { }
-	public Float32Array(dynamic buffer, int byteOffset, int length) { }
+	public Float32Array(ArrayBuffer buffer, int byteOffset = 0, int length = 0) { }
 }
 [To(ToAttribute.Default)]
 public partial class Float64Array : TypedArray<Float64Array>
@@ -342,8 +308,5 @@ public partial class Float64Array : TypedArray<Float64Array>
 	//public Float64Array(typedArray) { }
 	public Float64Array(Object object_) { }
 
-	//TODO ArrayBuffer!
-	public Float64Array(dynamic buffer) { }
-	public Float64Array(dynamic buffer, int byteOffset) { }
-	public Float64Array(dynamic buffer, int byteOffset, int length) { }
+	public Float64Array(ArrayBuffer buffer, int byteOffset = 0, int length = 0) { }
 }

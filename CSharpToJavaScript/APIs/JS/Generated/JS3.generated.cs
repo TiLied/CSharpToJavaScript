@@ -1,4 +1,4 @@
-//01.05.2025 20:45:13
+//02.05.2025 19:37:02
 
 #nullable enable
 //Disable missing XML comments.
@@ -5409,7 +5409,7 @@ public partial class MediaKeyMessageEvent : Event
 	///<include file='Utils/Docs/MediaKeyMessageEventMessageType/MediaKeyMessageEventMessageType.generated.xml' path='docs/MediaKeyMessageEventMessageType/*'/>
 	public MediaKeyMessageType MessageType { get; }
 	///<include file='Utils/Docs/MediaKeyMessageEventMessage/MediaKeyMessageEventMessage.generated.xml' path='docs/MediaKeyMessageEventMessage/*'/>
-	public byte[] Message { get; }
+	public ArrayBuffer Message { get; }
 	public MediaKeyMessageEvent() { }
 }
 
@@ -5417,7 +5417,7 @@ public partial class MediaKeyMessageEvent : Event
 public partial class MediaKeyMessageEventInit : EventInit
 {
 		public required MediaKeyMessageType MessageType;
-		public required byte[] Message;
+		public required ArrayBuffer Message;
 }
 
 ///<include file='Utils/Docs/HTMLMediaElement/HTMLMediaElement.generated.xml' path='docs/HTMLMediaElement/*'/>
@@ -5444,7 +5444,7 @@ public partial class MediaEncryptedEvent : Event
 	///<include file='Utils/Docs/MediaEncryptedEventInitDataType/MediaEncryptedEventInitDataType.generated.xml' path='docs/MediaEncryptedEventInitDataType/*'/>
 	public DOMString InitDataType { get; }
 	///<include file='Utils/Docs/MediaEncryptedEventInitData/MediaEncryptedEventInitData.generated.xml' path='docs/MediaEncryptedEventInitData/*'/>
-	public byte[]? InitData { get; }
+	public ArrayBuffer? InitData { get; }
 	public MediaEncryptedEvent() { }
 }
 
@@ -5452,7 +5452,7 @@ public partial class MediaEncryptedEvent : Event
 public partial class MediaEncryptedEventInit : EventInit
 {
 		public DOMString InitDataType;
-		public byte[]? InitData;
+		public ArrayBuffer? InitData;
 }
 
 ///<include file='Utils/Docs/File/File.generated.xml' path='docs/File/*'/>
@@ -6091,7 +6091,7 @@ public partial class AuthenticationExtensionsClientInputs
 
 public partial class AuthenticationExtensionsClientInputs
 {
-		public byte[] CredBlob;
+		public ArrayBuffer CredBlob;
 }
 
 public partial class AuthenticationExtensionsClientInputs
@@ -6112,8 +6112,8 @@ public partial class AuthenticationExtensionsClientInputs
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class HMACGetSecretInput
 {
-		public required byte[] Salt1;
-		public byte[] Salt2;
+		public required ArrayBuffer Salt1;
+		public ArrayBuffer Salt2;
 }
 
 public partial class AuthenticationExtensionsClientInputs
@@ -6130,8 +6130,8 @@ public partial class AuthenticationExtensionsClientOutputs
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class HMACGetSecretOutput
 {
-		public required byte[] Output1;
-		public byte[] Output2;
+		public required ArrayBuffer Output1;
+		public ArrayBuffer Output2;
 }
 
 public partial class AuthenticationExtensionsClientOutputs
@@ -6236,7 +6236,7 @@ public partial class Blob
 	///<include file='Utils/Docs/BlobText/BlobText.generated.xml' path='docs/BlobText/*'/>
 	public Task<USVString> Text() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/BlobArrayBuffer/BlobArrayBuffer.generated.xml' path='docs/BlobArrayBuffer/*'/>
-	public Task<byte[]> ArrayBuffer() { throw new System.NotImplementedException(); }
+	public Task<ArrayBuffer> ArrayBuffer() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/BlobBytes/BlobBytes.generated.xml' path='docs/BlobBytes/*'/>
 	public Task<Uint8Array> Bytes() { throw new System.NotImplementedException(); }
 	public Blob() { }
@@ -6317,7 +6317,7 @@ public partial class FileReaderSync
 	///<include file='Utils/Docs/FileReaderSyncFileReaderSync/FileReaderSyncFileReaderSync.generated.xml' path='docs/FileReaderSyncFileReaderSync/*'/>
 	public FileReaderSync() { }
 	///<include file='Utils/Docs/FileReaderSyncReadAsArrayBuffer/FileReaderSyncReadAsArrayBuffer.generated.xml' path='docs/FileReaderSyncReadAsArrayBuffer/*'/>
-	public byte[] ReadAsArrayBuffer(Blob blob) { throw new System.NotImplementedException(); }
+	public ArrayBuffer ReadAsArrayBuffer(Blob blob) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/FileReaderSyncReadAsBinaryString/FileReaderSyncReadAsBinaryString.generated.xml' path='docs/FileReaderSyncReadAsBinaryString/*'/>
 	public DOMString ReadAsBinaryString(Blob blob) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/FileReaderSyncReadAsText/FileReaderSyncReadAsText.generated.xml' path='docs/FileReaderSyncReadAsText/*'/>
@@ -9971,13 +9971,13 @@ public partial class ImageData
 	///<include file='Utils/Docs/ImageDataImageData/ImageDataImageData.generated.xml' path='docs/ImageDataImageData/*'/>
 	public ImageData(ulong sw, ulong sh, ImageDataSettings settings = default) { }
 	///<include file='Utils/Docs/ImageDataImageData/ImageDataImageData.generated.xml' path='docs/ImageDataImageData/*'/>
-	public ImageData(Unsupported /*Uint8ClampedArray*/ data, ulong sw, ulong sh = default, ImageDataSettings settings = default) { }
+	public ImageData(Uint8ClampedArray data, ulong sw, ulong sh = default, ImageDataSettings settings = default) { }
 	///<include file='Utils/Docs/ImageDataWidth/ImageDataWidth.generated.xml' path='docs/ImageDataWidth/*'/>
 	public ulong Width { get; }
 	///<include file='Utils/Docs/ImageDataHeight/ImageDataHeight.generated.xml' path='docs/ImageDataHeight/*'/>
 	public ulong Height { get; }
 	///<include file='Utils/Docs/ImageDataData/ImageDataData.generated.xml' path='docs/ImageDataData/*'/>
-	public Unsupported /*Uint8ClampedArray*/ Data { get; }
+	public Uint8ClampedArray Data { get; }
 	///<include file='Utils/Docs/ImageDataColorSpace/ImageDataColorSpace.generated.xml' path='docs/ImageDataColorSpace/*'/>
 	public PredefinedColorSpace ColorSpace { get; }
 	public ImageData() { }
@@ -15272,7 +15272,7 @@ public partial class PresentationConnection : EventTarget
 	///<include file='Utils/Docs/PresentationConnectionSend/PresentationConnectionSend.generated.xml' path='docs/PresentationConnectionSend/*'/>
 	public Undefined Send(Blob data) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/PresentationConnectionSend/PresentationConnectionSend.generated.xml' path='docs/PresentationConnectionSend/*'/>
-	public Undefined Send(byte[] data) { throw new System.NotImplementedException(); }
+	public Undefined Send(ArrayBuffer data) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/PresentationConnectionSend/PresentationConnectionSend.generated.xml' path='docs/PresentationConnectionSend/*'/>
 	public Undefined Send(ArrayBufferView data) { throw new System.NotImplementedException(); }
 }
@@ -15399,7 +15399,7 @@ public partial class PushSubscriptionOptions
 	///<include file='Utils/Docs/PushSubscriptionOptionsUserVisibleOnly/PushSubscriptionOptionsUserVisibleOnly.generated.xml' path='docs/PushSubscriptionOptionsUserVisibleOnly/*'/>
 	public bool UserVisibleOnly { get; }
 	///<include file='Utils/Docs/PushSubscriptionOptionsApplicationServerKey/PushSubscriptionOptionsApplicationServerKey.generated.xml' path='docs/PushSubscriptionOptionsApplicationServerKey/*'/>
-	public byte[]? ApplicationServerKey { get; }
+	public ArrayBuffer? ApplicationServerKey { get; }
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -15420,7 +15420,7 @@ public partial class PushSubscription
 	///<include file='Utils/Docs/PushSubscriptionOptions/PushSubscriptionOptions.generated.xml' path='docs/PushSubscriptionOptions/*'/>
 	public PushSubscriptionOptions Options { get; }
 	///<include file='Utils/Docs/PushSubscriptionGetKey/PushSubscriptionGetKey.generated.xml' path='docs/PushSubscriptionGetKey/*'/>
-	public byte[]? GetKey(PushEncryptionKeyName name) { throw new System.NotImplementedException(); }
+	public ArrayBuffer? GetKey(PushEncryptionKeyName name) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/PushSubscriptionUnsubscribe/PushSubscriptionUnsubscribe.generated.xml' path='docs/PushSubscriptionUnsubscribe/*'/>
 	public Task<bool> Unsubscribe() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/PushSubscriptionToJSON/PushSubscriptionToJSON.generated.xml' path='docs/PushSubscriptionToJSON/*'/>
@@ -15440,7 +15440,7 @@ public partial class PushSubscriptionJSON
 public partial class PushMessageData
 {
 	///<include file='Utils/Docs/PushMessageDataArrayBuffer/PushMessageDataArrayBuffer.generated.xml' path='docs/PushMessageDataArrayBuffer/*'/>
-	public byte[] ArrayBuffer() { throw new System.NotImplementedException(); }
+	public ArrayBuffer ArrayBuffer() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/PushMessageDataBlob/PushMessageDataBlob.generated.xml' path='docs/PushMessageDataBlob/*'/>
 	public Blob Blob() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/PushMessageDataBytes/PushMessageDataBytes.generated.xml' path='docs/PushMessageDataBytes/*'/>
@@ -19724,7 +19724,7 @@ public partial class Module
 		public Module(BufferSource bytes) { }
 		public static List<ModuleExportDescriptor> Exports(Module moduleObject) { throw new System.NotImplementedException(); }
 		public static List<ModuleImportDescriptor> Imports(Module moduleObject) { throw new System.NotImplementedException(); }
-		public static List<byte[]> CustomSections(Module moduleObject, DOMString sectionName) { throw new System.NotImplementedException(); }
+		public static List<ArrayBuffer> CustomSections(Module moduleObject, DOMString sectionName) { throw new System.NotImplementedException(); }
 	public Module() { }
 }
 
@@ -19748,9 +19748,9 @@ public partial class Memory
 {
 		public Memory(MemoryDescriptor descriptor) { }
 		public ulong Grow(ulong delta) { throw new System.NotImplementedException(); }
-		public byte[] ToFixedLengthBuffer() { throw new System.NotImplementedException(); }
-		public byte[] ToResizableBuffer() { throw new System.NotImplementedException(); }
-		public byte[] Buffer { get; }
+		public ArrayBuffer ToFixedLengthBuffer() { throw new System.NotImplementedException(); }
+		public ArrayBuffer ToResizableBuffer() { throw new System.NotImplementedException(); }
+		public ArrayBuffer Buffer { get; }
 	public Memory() { }
 }
 
@@ -20149,8 +20149,8 @@ public partial class Bluetooth
 public partial class BluetoothDataFilter
 {
 		public BluetoothDataFilter(BluetoothDataFilterInit init = default) { }
-		public byte[] DataPrefix { get; }
-		public byte[] Mask { get; }
+		public ArrayBuffer DataPrefix { get; }
+		public ArrayBuffer Mask { get; }
 	public BluetoothDataFilter() { }
 }
 
@@ -20419,13 +20419,13 @@ public partial class BluetoothRemoteGATTCharacteristic : EventTarget, Characteri
 	///<include file='Utils/Docs/BluetoothRemoteGATTCharacteristicProperties/BluetoothRemoteGATTCharacteristicProperties.generated.xml' path='docs/BluetoothRemoteGATTCharacteristicProperties/*'/>
 	public BluetoothCharacteristicProperties Properties { get; }
 	///<include file='Utils/Docs/BluetoothRemoteGATTCharacteristicValue/BluetoothRemoteGATTCharacteristicValue.generated.xml' path='docs/BluetoothRemoteGATTCharacteristicValue/*'/>
-	public Unsupported /*DataView*/? Value { get; }
+	public DataView? Value { get; }
 	///<include file='Utils/Docs/BluetoothRemoteGATTCharacteristicGetDescriptor/BluetoothRemoteGATTCharacteristicGetDescriptor.generated.xml' path='docs/BluetoothRemoteGATTCharacteristicGetDescriptor/*'/>
 	public Task<BluetoothRemoteGATTDescriptor> GetDescriptor(BluetoothDescriptorUUID descriptor) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/BluetoothRemoteGATTCharacteristicGetDescriptors/BluetoothRemoteGATTCharacteristicGetDescriptors.generated.xml' path='docs/BluetoothRemoteGATTCharacteristicGetDescriptors/*'/>
 	public Task<List<BluetoothRemoteGATTDescriptor>> GetDescriptors(BluetoothDescriptorUUID descriptor = default) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/BluetoothRemoteGATTCharacteristicReadValue/BluetoothRemoteGATTCharacteristicReadValue.generated.xml' path='docs/BluetoothRemoteGATTCharacteristicReadValue/*'/>
-	public Task<Unsupported /*DataView*/> ReadValue() { throw new System.NotImplementedException(); }
+	public Task<DataView> ReadValue() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/BluetoothRemoteGATTCharacteristicWriteValue/BluetoothRemoteGATTCharacteristicWriteValue.generated.xml' path='docs/BluetoothRemoteGATTCharacteristicWriteValue/*'/>
 	public Task<Undefined> WriteValue(BufferSource value) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/BluetoothRemoteGATTCharacteristicWriteValueWithResponse/BluetoothRemoteGATTCharacteristicWriteValueWithResponse.generated.xml' path='docs/BluetoothRemoteGATTCharacteristicWriteValueWithResponse/*'/>
@@ -20472,9 +20472,9 @@ public partial class BluetoothRemoteGATTDescriptor
 	///<include file='Utils/Docs/BluetoothRemoteGATTDescriptorUuid/BluetoothRemoteGATTDescriptorUuid.generated.xml' path='docs/BluetoothRemoteGATTDescriptorUuid/*'/>
 	public UUID Uuid { get; }
 	///<include file='Utils/Docs/BluetoothRemoteGATTDescriptorValue/BluetoothRemoteGATTDescriptorValue.generated.xml' path='docs/BluetoothRemoteGATTDescriptorValue/*'/>
-	public Unsupported /*DataView*/? Value { get; }
+	public DataView? Value { get; }
 	///<include file='Utils/Docs/BluetoothRemoteGATTDescriptorReadValue/BluetoothRemoteGATTDescriptorReadValue.generated.xml' path='docs/BluetoothRemoteGATTDescriptorReadValue/*'/>
-	public Task<Unsupported /*DataView*/> ReadValue() { throw new System.NotImplementedException(); }
+	public Task<DataView> ReadValue() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/BluetoothRemoteGATTDescriptorWriteValue/BluetoothRemoteGATTDescriptorWriteValue.generated.xml' path='docs/BluetoothRemoteGATTDescriptorWriteValue/*'/>
 	public Task<Undefined> WriteValue(BufferSource value) { throw new System.NotImplementedException(); }
 }
@@ -20579,7 +20579,7 @@ public partial class NDEFRecord
 	///<include file='Utils/Docs/NDEFRecordId/NDEFRecordId.generated.xml' path='docs/NDEFRecordId/*'/>
 	public USVString? Id { get; }
 	///<include file='Utils/Docs/NDEFRecordData/NDEFRecordData.generated.xml' path='docs/NDEFRecordData/*'/>
-	public Unsupported /*DataView*/? Data { get; }
+	public DataView? Data { get; }
 	///<include file='Utils/Docs/NDEFRecordEncoding/NDEFRecordEncoding.generated.xml' path='docs/NDEFRecordEncoding/*'/>
 	public USVString? Encoding { get; }
 	///<include file='Utils/Docs/NDEFRecordLang/NDEFRecordLang.generated.xml' path='docs/NDEFRecordLang/*'/>
@@ -20747,7 +20747,7 @@ public partial class BaseAudioContext : EventTarget
 	///<include file='Utils/Docs/BaseAudioContextCreateWaveShaper/BaseAudioContextCreateWaveShaper.generated.xml' path='docs/BaseAudioContextCreateWaveShaper/*'/>
 	public WaveShaperNode CreateWaveShaper() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/BaseAudioContextDecodeAudioData/BaseAudioContextDecodeAudioData.generated.xml' path='docs/BaseAudioContextDecodeAudioData/*'/>
-	public Task<AudioBuffer> DecodeAudioData(byte[] audioData, DecodeSuccessCallback? successCallback = default, DecodeErrorCallback? errorCallback = default) { throw new System.NotImplementedException(); }
+	public Task<AudioBuffer> DecodeAudioData(ArrayBuffer audioData, DecodeSuccessCallback? successCallback = default, DecodeErrorCallback? errorCallback = default) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/AudioContext/AudioContext.generated.xml' path='docs/AudioContext/*'/>
@@ -21616,7 +21616,7 @@ public partial class AudioParamDescriptor
 public partial class PublicKeyCredential : Credential
 {
 	///<include file='Utils/Docs/PublicKeyCredentialRawId/PublicKeyCredentialRawId.generated.xml' path='docs/PublicKeyCredentialRawId/*'/>
-	public byte[] RawId { get; }
+	public ArrayBuffer RawId { get; }
 	///<include file='Utils/Docs/PublicKeyCredentialResponse/PublicKeyCredentialResponse.generated.xml' path='docs/PublicKeyCredentialResponse/*'/>
 	public AuthenticatorResponse Response { get; }
 	///<include file='Utils/Docs/PublicKeyCredentialAuthenticatorAttachment/PublicKeyCredentialAuthenticatorAttachment.generated.xml' path='docs/PublicKeyCredentialAuthenticatorAttachment/*'/>
@@ -21802,7 +21802,7 @@ public partial class CurrentUserDetailsOptions
 public partial class AuthenticatorResponse
 {
 	///<include file='Utils/Docs/AuthenticatorResponseClientDataJSON/AuthenticatorResponseClientDataJSON.generated.xml' path='docs/AuthenticatorResponseClientDataJSON/*'/>
-	public byte[] ClientDataJSON { get; }
+	public ArrayBuffer ClientDataJSON { get; }
 }
 
 ///<include file='Utils/Docs/AuthenticatorAttestationResponse/AuthenticatorAttestationResponse.generated.xml' path='docs/AuthenticatorAttestationResponse/*'/>
@@ -21810,13 +21810,13 @@ public partial class AuthenticatorResponse
 public partial class AuthenticatorAttestationResponse : AuthenticatorResponse
 {
 	///<include file='Utils/Docs/AuthenticatorAttestationResponseAttestationObject/AuthenticatorAttestationResponseAttestationObject.generated.xml' path='docs/AuthenticatorAttestationResponseAttestationObject/*'/>
-	public byte[] AttestationObject { get; }
+	public ArrayBuffer AttestationObject { get; }
 	///<include file='Utils/Docs/AuthenticatorAttestationResponseGetTransports/AuthenticatorAttestationResponseGetTransports.generated.xml' path='docs/AuthenticatorAttestationResponseGetTransports/*'/>
 	public List<DOMString> GetTransports() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/AuthenticatorAttestationResponseGetAuthenticatorData/AuthenticatorAttestationResponseGetAuthenticatorData.generated.xml' path='docs/AuthenticatorAttestationResponseGetAuthenticatorData/*'/>
-	public byte[] GetAuthenticatorData() { throw new System.NotImplementedException(); }
+	public ArrayBuffer GetAuthenticatorData() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/AuthenticatorAttestationResponseGetPublicKey/AuthenticatorAttestationResponseGetPublicKey.generated.xml' path='docs/AuthenticatorAttestationResponseGetPublicKey/*'/>
-	public byte[]? GetPublicKey() { throw new System.NotImplementedException(); }
+	public ArrayBuffer? GetPublicKey() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/AuthenticatorAttestationResponseGetPublicKeyAlgorithm/AuthenticatorAttestationResponseGetPublicKeyAlgorithm.generated.xml' path='docs/AuthenticatorAttestationResponseGetPublicKeyAlgorithm/*'/>
 	public COSEAlgorithmIdentifier GetPublicKeyAlgorithm() { throw new System.NotImplementedException(); }
 }
@@ -21826,11 +21826,11 @@ public partial class AuthenticatorAttestationResponse : AuthenticatorResponse
 public partial class AuthenticatorAssertionResponse : AuthenticatorResponse
 {
 	///<include file='Utils/Docs/AuthenticatorAssertionResponseAuthenticatorData/AuthenticatorAssertionResponseAuthenticatorData.generated.xml' path='docs/AuthenticatorAssertionResponseAuthenticatorData/*'/>
-	public byte[] AuthenticatorData { get; }
+	public ArrayBuffer AuthenticatorData { get; }
 	///<include file='Utils/Docs/AuthenticatorAssertionResponseSignature/AuthenticatorAssertionResponseSignature.generated.xml' path='docs/AuthenticatorAssertionResponseSignature/*'/>
-	public byte[] Signature { get; }
+	public ArrayBuffer Signature { get; }
 	///<include file='Utils/Docs/AuthenticatorAssertionResponseUserHandle/AuthenticatorAssertionResponseUserHandle.generated.xml' path='docs/AuthenticatorAssertionResponseUserHandle/*'/>
-	public byte[]? UserHandle { get; }
+	public ArrayBuffer? UserHandle { get; }
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -22020,7 +22020,7 @@ public partial class AuthenticationExtensionsClientOutputs
 public partial class AuthenticationExtensionsLargeBlobOutputs
 {
 		public bool Supported;
-		public byte[] Blob;
+		public ArrayBuffer Blob;
 		public bool Written;
 }
 
@@ -22394,7 +22394,7 @@ public partial class EncodedAudioChunkInit
 		public required long Timestamp;
 		public ulong Duration;
 		public required AllowSharedBufferSource Data;
-		public List<byte[]> Transfer;
+		public List<ArrayBuffer> Transfer;
 }
 
 ///<include file='Utils/Docs/EncodedVideoChunk/EncodedVideoChunk.generated.xml' path='docs/EncodedVideoChunk/*'/>
@@ -22423,7 +22423,7 @@ public partial class EncodedVideoChunkInit
 		public required long Timestamp;
 		public ulong Duration;
 		public required AllowSharedBufferSource Data;
-		public List<byte[]> Transfer;
+		public List<ArrayBuffer> Transfer;
 }
 
 ///<include file='Utils/Docs/AudioData/AudioData.generated.xml' path='docs/AudioData/*'/>
@@ -22464,7 +22464,7 @@ public partial class AudioDataInit
 		public required ulong NumberOfChannels;
 		public required long Timestamp;
 		public required BufferSource Data;
-		public List<byte[]> Transfer;
+		public List<ArrayBuffer> Transfer;
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -22547,7 +22547,7 @@ public partial class VideoFrameBufferInit
 		public ulong DisplayWidth;
 		public ulong DisplayHeight;
 		public VideoColorSpaceInit ColorSpace;
-		public List<byte[]> Transfer;
+		public List<ArrayBuffer> Transfer;
 		public VideoFrameMetadata Metadata;
 }
 
@@ -22635,7 +22635,7 @@ public partial class ImageDecoderInit
 		public ulong DesiredWidth;
 		public ulong DesiredHeight;
 		public bool PreferAnimation;
-		public List<byte[]> Transfer;
+		public List<ArrayBuffer> Transfer;
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -22732,27 +22732,27 @@ public partial class CryptoKey
 public partial class SubtleCrypto
 {
 	///<include file='Utils/Docs/SubtleCryptoEncrypt/SubtleCryptoEncrypt.generated.xml' path='docs/SubtleCryptoEncrypt/*'/>
-	public Task<byte[]> Encrypt(AlgorithmIdentifier algorithm, CryptoKey key, BufferSource data) { throw new System.NotImplementedException(); }
+	public Task<ArrayBuffer> Encrypt(AlgorithmIdentifier algorithm, CryptoKey key, BufferSource data) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/SubtleCryptoDecrypt/SubtleCryptoDecrypt.generated.xml' path='docs/SubtleCryptoDecrypt/*'/>
-	public Task<byte[]> Decrypt(AlgorithmIdentifier algorithm, CryptoKey key, BufferSource data) { throw new System.NotImplementedException(); }
+	public Task<ArrayBuffer> Decrypt(AlgorithmIdentifier algorithm, CryptoKey key, BufferSource data) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/SubtleCryptoSign/SubtleCryptoSign.generated.xml' path='docs/SubtleCryptoSign/*'/>
-	public Task<byte[]> Sign(AlgorithmIdentifier algorithm, CryptoKey key, BufferSource data) { throw new System.NotImplementedException(); }
+	public Task<ArrayBuffer> Sign(AlgorithmIdentifier algorithm, CryptoKey key, BufferSource data) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/SubtleCryptoVerify/SubtleCryptoVerify.generated.xml' path='docs/SubtleCryptoVerify/*'/>
 	public Task<bool> Verify(AlgorithmIdentifier algorithm, CryptoKey key, BufferSource signature, BufferSource data) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/SubtleCryptoDigest/SubtleCryptoDigest.generated.xml' path='docs/SubtleCryptoDigest/*'/>
-	public Task<byte[]> Digest(AlgorithmIdentifier algorithm, BufferSource data) { throw new System.NotImplementedException(); }
+	public Task<ArrayBuffer> Digest(AlgorithmIdentifier algorithm, BufferSource data) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/SubtleCryptoGenerateKey/SubtleCryptoGenerateKey.generated.xml' path='docs/SubtleCryptoGenerateKey/*'/>
 	public Task<CryptoKey> GenerateKey(AlgorithmIdentifier algorithm, bool extractable, List<KeyUsage> keyUsages) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/SubtleCryptoDeriveKey/SubtleCryptoDeriveKey.generated.xml' path='docs/SubtleCryptoDeriveKey/*'/>
 	public Task<CryptoKey> DeriveKey(AlgorithmIdentifier algorithm, CryptoKey baseKey, AlgorithmIdentifier derivedKeyType, bool extractable, List<KeyUsage> keyUsages) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/SubtleCryptoDeriveBits/SubtleCryptoDeriveBits.generated.xml' path='docs/SubtleCryptoDeriveBits/*'/>
-	public Task<byte[]> DeriveBits(AlgorithmIdentifier algorithm, CryptoKey baseKey, ulong? length = default) { throw new System.NotImplementedException(); }
+	public Task<ArrayBuffer> DeriveBits(AlgorithmIdentifier algorithm, CryptoKey baseKey, ulong? length = default) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/SubtleCryptoImportKey/SubtleCryptoImportKey.generated.xml' path='docs/SubtleCryptoImportKey/*'/>
 	public Task<CryptoKey> ImportKey(KeyFormat format, Union188 keyData, AlgorithmIdentifier algorithm, bool extractable, List<KeyUsage> keyUsages) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/SubtleCryptoExportKey/SubtleCryptoExportKey.generated.xml' path='docs/SubtleCryptoExportKey/*'/>
-	public Task<byte[]> ExportKey(KeyFormat format, CryptoKey key) { throw new System.NotImplementedException(); }
+	public Task<ArrayBuffer> ExportKey(KeyFormat format, CryptoKey key) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/SubtleCryptoWrapKey/SubtleCryptoWrapKey.generated.xml' path='docs/SubtleCryptoWrapKey/*'/>
-	public Task<byte[]> WrapKey(KeyFormat format, CryptoKey key, CryptoKey wrappingKey, AlgorithmIdentifier wrapAlgorithm) { throw new System.NotImplementedException(); }
+	public Task<ArrayBuffer> WrapKey(KeyFormat format, CryptoKey key, CryptoKey wrappingKey, AlgorithmIdentifier wrapAlgorithm) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/SubtleCryptoUnwrapKey/SubtleCryptoUnwrapKey.generated.xml' path='docs/SubtleCryptoUnwrapKey/*'/>
 	public Task<CryptoKey> UnwrapKey(KeyFormat format, BufferSource wrappedKey, CryptoKey unwrappingKey, AlgorithmIdentifier unwrapAlgorithm, AlgorithmIdentifier unwrappedKeyAlgorithm, bool extractable, List<KeyUsage> keyUsages) { throw new System.NotImplementedException(); }
 }
@@ -23520,7 +23520,7 @@ public partial class GPUBuffer
 	///<include file='Utils/Docs/GPUBufferMapAsync/GPUBufferMapAsync.generated.xml' path='docs/GPUBufferMapAsync/*'/>
 	public Task<Undefined> MapAsync(GPUMapModeFlags mode, GPUSize64 offset = default, GPUSize64 size = default) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/GPUBufferGetMappedRange/GPUBufferGetMappedRange.generated.xml' path='docs/GPUBufferGetMappedRange/*'/>
-	public byte[] GetMappedRange(GPUSize64 offset = default, GPUSize64 size = default) { throw new System.NotImplementedException(); }
+	public ArrayBuffer GetMappedRange(GPUSize64 offset = default, GPUSize64 size = default) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/GPUBufferUnmap/GPUBufferUnmap.generated.xml' path='docs/GPUBufferUnmap/*'/>
 	public Undefined Unmap() { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/GPUBufferDestroy/GPUBufferDestroy.generated.xml' path='docs/GPUBufferDestroy/*'/>
@@ -24498,7 +24498,7 @@ public partial class HIDDevice : EventTarget
 	///<include file='Utils/Docs/HIDDeviceSendFeatureReport/HIDDeviceSendFeatureReport.generated.xml' path='docs/HIDDeviceSendFeatureReport/*'/>
 	public Task<Undefined> SendFeatureReport(byte reportId, BufferSource data) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/HIDDeviceReceiveFeatureReport/HIDDeviceReceiveFeatureReport.generated.xml' path='docs/HIDDeviceReceiveFeatureReport/*'/>
-	public Task<Unsupported /*DataView*/> ReceiveFeatureReport(byte reportId) { throw new System.NotImplementedException(); }
+	public Task<DataView> ReceiveFeatureReport(byte reportId) { throw new System.NotImplementedException(); }
 }
 
 ///<include file='Utils/Docs/HIDConnectionEvent/HIDConnectionEvent.generated.xml' path='docs/HIDConnectionEvent/*'/>
@@ -24528,7 +24528,7 @@ public partial class HIDInputReportEvent : Event
 	///<include file='Utils/Docs/HIDInputReportEventReportId/HIDInputReportEventReportId.generated.xml' path='docs/HIDInputReportEventReportId/*'/>
 	public byte ReportId { get; }
 	///<include file='Utils/Docs/HIDInputReportEventData/HIDInputReportEventData.generated.xml' path='docs/HIDInputReportEventData/*'/>
-	public Unsupported /*DataView*/ Data { get; }
+	public DataView Data { get; }
 	public HIDInputReportEvent() { }
 }
 
@@ -24537,7 +24537,7 @@ public partial class HIDInputReportEventInit : EventInit
 {
 		public required HIDDevice Device;
 		public required byte ReportId;
-		public required Unsupported /*DataView*/ Data;
+		public required DataView Data;
 }
 
 [To(ToAttribute.FirstCharToLowerCase)]
@@ -24781,7 +24781,7 @@ public partial class MLContext
 {
 		public Undefined Dispatch(MLGraph graph, MLNamedTensors inputs, MLNamedTensors outputs) { throw new System.NotImplementedException(); }
 		public Task<MLTensor> CreateTensor(MLTensorDescriptor descriptor) { throw new System.NotImplementedException(); }
-		public Task<byte[]> ReadTensor(MLTensor tensor) { throw new System.NotImplementedException(); }
+		public Task<ArrayBuffer> ReadTensor(MLTensor tensor) { throw new System.NotImplementedException(); }
 		public Task<Undefined> ReadTensor(MLTensor tensor, AllowSharedBufferSource outputData) { throw new System.NotImplementedException(); }
 		public Undefined WriteTensor(MLTensor tensor, AllowSharedBufferSource inputData) { throw new System.NotImplementedException(); }
 		public MLOpSupportLimits OpSupportLimits() { throw new System.NotImplementedException(); }
@@ -25805,7 +25805,7 @@ public partial class RTCEncodedVideoFrame
 	///<include file='Utils/Docs/RTCEncodedVideoFrameType/RTCEncodedVideoFrameType.generated.xml' path='docs/RTCEncodedVideoFrameType/*'/>
 	public RTCEncodedVideoFrameType Type { get; }
 	///<include file='Utils/Docs/RTCEncodedVideoFrameData/RTCEncodedVideoFrameData.generated.xml' path='docs/RTCEncodedVideoFrameData/*'/>
-	public byte[] Data { get; set; }
+	public ArrayBuffer Data { get; set; }
 	///<include file='Utils/Docs/RTCEncodedVideoFrameGetMetadata/RTCEncodedVideoFrameGetMetadata.generated.xml' path='docs/RTCEncodedVideoFrameGetMetadata/*'/>
 	public RTCEncodedVideoFrameMetadata GetMetadata() { throw new System.NotImplementedException(); }
 	public RTCEncodedVideoFrame() { }
@@ -25834,7 +25834,7 @@ public partial class RTCEncodedAudioFrame
 {
 		public RTCEncodedAudioFrame(RTCEncodedAudioFrame originalFrame, RTCEncodedAudioFrameOptions options = default) { }
 	///<include file='Utils/Docs/RTCEncodedAudioFrameData/RTCEncodedAudioFrameData.generated.xml' path='docs/RTCEncodedAudioFrameData/*'/>
-	public byte[] Data { get; set; }
+	public ArrayBuffer Data { get; set; }
 	///<include file='Utils/Docs/RTCEncodedAudioFrameGetMetadata/RTCEncodedAudioFrameGetMetadata.generated.xml' path='docs/RTCEncodedAudioFrameGetMetadata/*'/>
 	public RTCEncodedAudioFrameMetadata GetMetadata() { throw new System.NotImplementedException(); }
 	public RTCEncodedAudioFrame() { }
@@ -26866,7 +26866,7 @@ public partial class RTCDtlsTransport : EventTarget
 	public RTCIceTransport IceTransport { get; }
 	///<include file='Utils/Docs/RTCDtlsTransportState/RTCDtlsTransportState.generated.xml' path='docs/RTCDtlsTransportState/*'/>
 	public RTCDtlsTransportState State { get; }
-		public List<byte[]> GetRemoteCertificates() { throw new System.NotImplementedException(); }
+		public List<ArrayBuffer> GetRemoteCertificates() { throw new System.NotImplementedException(); }
 		public EventHandler Onstatechange { get; set; }
 		public EventHandler Onerror { get; set; }
 }
@@ -27012,7 +27012,7 @@ public partial class RTCDataChannel : EventTarget
 	///<include file='Utils/Docs/RTCDataChannelSend/RTCDataChannelSend.generated.xml' path='docs/RTCDataChannelSend/*'/>
 	public Undefined Send(Blob data) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/RTCDataChannelSend/RTCDataChannelSend.generated.xml' path='docs/RTCDataChannelSend/*'/>
-	public Undefined Send(byte[] data) { throw new System.NotImplementedException(); }
+	public Undefined Send(ArrayBuffer data) { throw new System.NotImplementedException(); }
 	///<include file='Utils/Docs/RTCDataChannelSend/RTCDataChannelSend.generated.xml' path='docs/RTCDataChannelSend/*'/>
 	public Undefined Send(ArrayBufferView data) { throw new System.NotImplementedException(); }
 }
@@ -27460,8 +27460,8 @@ public partial class USBConnectionEvent : Event
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class USBInTransferResult
 {
-		public USBInTransferResult(USBTransferStatus status, Unsupported /*DataView*/? data = default) { }
-		public Unsupported /*DataView*/? Data { get; }
+		public USBInTransferResult(USBTransferStatus status, DataView? data = default) { }
+		public DataView? Data { get; }
 		public USBTransferStatus Status { get; }
 	public USBInTransferResult() { }
 }
@@ -27480,8 +27480,8 @@ public partial class USBOutTransferResult
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class USBIsochronousInTransferPacket
 {
-		public USBIsochronousInTransferPacket(USBTransferStatus status, Unsupported /*DataView*/? data = default) { }
-		public Unsupported /*DataView*/? Data { get; }
+		public USBIsochronousInTransferPacket(USBTransferStatus status, DataView? data = default) { }
+		public DataView? Data { get; }
 		public USBTransferStatus Status { get; }
 	public USBIsochronousInTransferPacket() { }
 }
@@ -27490,8 +27490,8 @@ public partial class USBIsochronousInTransferPacket
 [To(ToAttribute.FirstCharToLowerCase)]
 public partial class USBIsochronousInTransferResult
 {
-		public USBIsochronousInTransferResult(List<USBIsochronousInTransferPacket> packets, Unsupported /*DataView*/? data = default) { }
-		public Unsupported /*DataView*/? Data { get; }
+		public USBIsochronousInTransferResult(List<USBIsochronousInTransferPacket> packets, DataView? data = default) { }
+		public DataView? Data { get; }
 		public USBIsochronousInTransferPacket[] Packets { get; }
 	public USBIsochronousInTransferResult() { }
 }
@@ -27791,7 +27791,7 @@ public partial class XRDepthInformation
 public partial class XRCPUDepthInformation : XRDepthInformation
 {
 	///<include file='Utils/Docs/XRCPUDepthInformationData/XRCPUDepthInformationData.generated.xml' path='docs/XRCPUDepthInformationData/*'/>
-	public byte[] Data { get; }
+	public ArrayBuffer Data { get; }
 	///<include file='Utils/Docs/XRCPUDepthInformationGetDepthInMeters/XRCPUDepthInformationGetDepthInMeters.generated.xml' path='docs/XRCPUDepthInformationGetDepthInMeters/*'/>
 	public Number GetDepthInMeters(Number x, Number y) { throw new System.NotImplementedException(); }
 }

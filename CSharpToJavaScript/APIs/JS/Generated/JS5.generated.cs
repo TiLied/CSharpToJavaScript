@@ -1,4 +1,4 @@
-//01.05.2025 20:45:13
+//02.05.2025 19:37:02
 
 #nullable enable
 //Disable missing XML comments.
@@ -200,7 +200,7 @@ public struct Union3
 }
 
 ///<summary>
-///<see cref="ulong"/> or <see cref="List{ulong}"/>
+///<see cref="ulong"/> or <see cref="List{T}"/>
 ///</summary>
 public struct Union4
 {
@@ -553,7 +553,7 @@ public struct Union38
 }
 
 ///<summary>
-///<see cref="List{List{ByteString}}"/> or <see cref="Dictionary{ByteString, ByteString}"/>
+///<see cref="List{T}"/> or <see cref="Dictionary{ByteString, ByteString}"/>
 ///</summary>
 public struct Union39
 {
@@ -617,13 +617,13 @@ public struct Union44
 }
 
 ///<summary>
-///<see cref="DOMString"/> or <see cref="byte"/>
+///<see cref="DOMString"/> or <see cref="ArrayBuffer"/>
 ///</summary>
 public struct Union45
 {
 	public dynamic Value { get; set; }
 	public static implicit operator Union45(DOMString value){return new Union45 { Value = value };}
-	public static implicit operator Union45(byte[] value){return new Union45 { Value = value };}
+	public static implicit operator Union45(ArrayBuffer value){return new Union45 { Value = value };}
 }
 
 ///<summary>
@@ -660,7 +660,7 @@ public struct Union48
 }
 
 ///<summary>
-///<see cref="DOMString"/> or <see cref="List{double}"/>
+///<see cref="DOMString"/> or <see cref="List{T}"/>
 ///</summary>
 public struct Union49
 {
@@ -670,7 +670,7 @@ public struct Union49
 }
 
 ///<summary>
-///<see cref="DOMString"/> or <see cref="List{double}"/>
+///<see cref="DOMString"/> or <see cref="List{T}"/>
 ///</summary>
 public struct Union50
 {
@@ -1730,7 +1730,7 @@ public struct Union152
 }
 
 ///<summary>
-///<see cref="List{List{USVString}}"/> or <see cref="Dictionary{USVString, USVString}"/> or <see cref="USVString"/>
+///<see cref="List{T}"/> or <see cref="Dictionary{USVString, USVString}"/> or <see cref="USVString"/>
 ///</summary>
 public struct Union153
 {
@@ -1792,7 +1792,7 @@ public struct Union158
 }
 
 ///<summary>
-///<see cref="ulong"/> or <see cref="List{ulong}"/>
+///<see cref="ulong"/> or <see cref="List{T}"/>
 ///</summary>
 public struct Union159
 {
@@ -2450,7 +2450,7 @@ public struct Union222
 }
 
 ///<summary>
-///<see cref="Int8Array"/> or <see cref="Int16Array"/> or <see cref="Int32Array"/> or <see cref="Uint8Array"/> or <see cref="Uint16Array"/> or <see cref="Uint32Array"/> or <see cref="Unsupported /*Uint8ClampedArray*/"/> or <see cref="BigInt64Array"/> or <see cref="BigUint64Array"/> or <see cref="Unsupported /*Float16Array*/"/> or <see cref="Float32Array"/> or <see cref="Float64Array"/> or <see cref="Unsupported /*DataView*/"/>
+///<see cref="Int8Array"/> or <see cref="Int16Array"/> or <see cref="Int32Array"/> or <see cref="Uint8Array"/> or <see cref="Uint16Array"/> or <see cref="Uint32Array"/> or <see cref="Uint8ClampedArray"/> or <see cref="BigInt64Array"/> or <see cref="BigUint64Array"/> or <see cref="Unsupported /*Float16Array*/"/> or <see cref="Float32Array"/> or <see cref="Float64Array"/> or <see cref="DataView"/>
 ///</summary>
 public struct Union223
 {
@@ -2461,31 +2461,33 @@ public struct Union223
 	public static implicit operator Union223(Uint8Array value){return new Union223 { Value = value };}
 	public static implicit operator Union223(Uint16Array value){return new Union223 { Value = value };}
 	public static implicit operator Union223(Uint32Array value){return new Union223 { Value = value };}
-	public static implicit operator Union223(Unsupported /*Uint8ClampedArray*/ value){return new Union223 { Value = value };}
+	public static implicit operator Union223(Uint8ClampedArray value){return new Union223 { Value = value };}
 	public static implicit operator Union223(BigInt64Array value){return new Union223 { Value = value };}
 	public static implicit operator Union223(BigUint64Array value){return new Union223 { Value = value };}
+	public static implicit operator Union223(Unsupported /*Float16Array*/ value){return new Union223 { Value = value };}
 	public static implicit operator Union223(Float32Array value){return new Union223 { Value = value };}
 	public static implicit operator Union223(Float64Array value){return new Union223 { Value = value };}
+	public static implicit operator Union223(DataView value){return new Union223 { Value = value };}
 }
 
 ///<summary>
-///<see cref="ArrayBufferView"/> or <see cref="byte"/>
+///<see cref="ArrayBufferView"/> or <see cref="ArrayBuffer"/>
 ///</summary>
 public struct Union224
 {
 	public dynamic Value { get; set; }
 	public static implicit operator Union224(ArrayBufferView value){return new Union224 { Value = value };}
-	public static implicit operator Union224(byte[] value){return new Union224 { Value = value };}
+	public static implicit operator Union224(ArrayBuffer value){return new Union224 { Value = value };}
 }
 
 ///<summary>
-///<see cref="byte"/> or <see cref="Unsupported /*SharedArrayBuffer*/"/> or <see cref="ArrayBufferView"/>
+///<see cref="ArrayBuffer"/> or <see cref="SharedArrayBuffer"/> or <see cref="ArrayBufferView"/>
 ///</summary>
 public struct Union225
 {
 	public dynamic Value { get; set; }
-	public static implicit operator Union225(byte[] value){return new Union225 { Value = value };}
-	public static implicit operator Union225(Unsupported /*SharedArrayBuffer*/ value){return new Union225 { Value = value };}
+	public static implicit operator Union225(ArrayBuffer value){return new Union225 { Value = value };}
+	public static implicit operator Union225(SharedArrayBuffer value){return new Union225 { Value = value };}
 	public static implicit operator Union225(ArrayBufferView value){return new Union225 { Value = value };}
 }
 
@@ -2500,7 +2502,7 @@ public struct Union226
 }
 
 ///<summary>
-///<see cref="ulong"/> or <see cref="List{ulong}"/>
+///<see cref="ulong"/> or <see cref="List{T}"/>
 ///</summary>
 public struct Union227
 {

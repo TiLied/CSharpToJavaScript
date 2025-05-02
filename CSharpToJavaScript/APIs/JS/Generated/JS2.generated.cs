@@ -1,4 +1,4 @@
-//01.05.2025 20:45:13
+//02.05.2025 19:37:02
 
 #nullable enable
 //Disable missing XML comments.
@@ -420,7 +420,7 @@ public partial interface Body
 {
 		public ReadableStream? Body { get { throw new System.NotImplementedException(); } }
 		public bool BodyUsed { get { throw new System.NotImplementedException(); } }
-		public Task<byte[]> ArrayBuffer() { throw new System.NotImplementedException(); }
+		public Task<ArrayBuffer> ArrayBuffer() { throw new System.NotImplementedException(); }
 		public Task<Blob> Blob() { throw new System.NotImplementedException(); }
 		public Task<Uint8Array> Bytes() { throw new System.NotImplementedException(); }
 		public Task<FormData> FormData() { throw new System.NotImplementedException(); }

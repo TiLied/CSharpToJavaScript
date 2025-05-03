@@ -1,4 +1,4 @@
-//02.05.2025 19:37:02
+//03.05.2025 17:58:03
 
 #nullable enable
 //Disable missing XML comments.
@@ -159,363 +159,363 @@ using XRWebGLRenderingContext = Union235;
 using FormDataEntryValue = Union237;
 
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("PressureUpdateCallback")]
 public partial class PressureUpdateCallback
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("AnimatorInstanceConstructor")]
 public partial class AnimatorInstanceConstructor
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("ViewTransitionUpdateCallback")]
 public partial class ViewTransitionUpdateCallback
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("MutationCallback")]
 public partial class MutationCallback
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("ErrorCallback")]
 public partial class ErrorCallback
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("FileSystemEntryCallback")]
 public partial class FileSystemEntryCallback
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("FileSystemEntriesCallback")]
 public partial class FileSystemEntriesCallback
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("FileCallback")]
 public partial class FileCallback
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("PositionCallback")]
 public partial class PositionCallback
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("PositionErrorCallback")]
 public partial class PositionErrorCallback
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("BlobCallback")]
 public partial class BlobCallback
 {
 }
 
 
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("CustomElementConstructor")]
 public partial class CustomElementConstructor
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("FunctionStringCallback")]
 public partial class FunctionStringCallback
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("NavigationInterceptHandler")]
 public partial class NavigationInterceptHandler
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("EventHandlerNonNull")]
 public partial class EventHandlerNonNull
 {
 }
 
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("OnErrorEventHandlerNonNull")]
 public partial class OnErrorEventHandlerNonNull
 {
 }
 
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("OnBeforeUnloadEventHandlerNonNull")]
 public partial class OnBeforeUnloadEventHandlerNonNull
 {
 }
 
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("FrameRequestCallback")]
 public partial class FrameRequestCallback
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("IntersectionObserverCallback")]
 public partial class IntersectionObserverCallback
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("MediaSessionActionHandler")]
 public partial class MediaSessionActionHandler
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("NotificationPermissionCallback")]
 public partial class NotificationPermissionCallback
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("SubscribeCallback")]
 public partial class SubscribeCallback
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("ObservableSubscriptionCallback")]
 public partial class ObservableSubscriptionCallback
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("ObservableInspectorAbortHandler")]
 public partial class ObservableInspectorAbortHandler
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("Predicate")]
 public partial class Predicate
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("Reducer")]
 public partial class Reducer
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("Mapper")]
 public partial class Mapper
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("Visitor")]
 public partial class Visitor
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("CatchCallback")]
 public partial class CatchCallback
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("PerformanceObserverCallback")]
 public partial class PerformanceObserverCallback
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("RemotePlaybackAvailabilityCallback")]
 public partial class RemotePlaybackAvailabilityCallback
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("ReportingObserverCallback")]
 public partial class ReportingObserverCallback
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("IdleRequestCallback")]
 public partial class IdleRequestCallback
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("ResizeObserverCallback")]
 public partial class ResizeObserverCallback
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("SchedulerPostTaskCallback")]
 public partial class SchedulerPostTaskCallback
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("RunFunctionForSharedStorageSelectURLOperation")]
 public partial class RunFunctionForSharedStorageSelectURLOperation
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("UnderlyingSourceStartCallback")]
 public partial class UnderlyingSourceStartCallback
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("UnderlyingSourcePullCallback")]
 public partial class UnderlyingSourcePullCallback
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("UnderlyingSourceCancelCallback")]
 public partial class UnderlyingSourceCancelCallback
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("UnderlyingSinkStartCallback")]
 public partial class UnderlyingSinkStartCallback
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("UnderlyingSinkWriteCallback")]
 public partial class UnderlyingSinkWriteCallback
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("UnderlyingSinkCloseCallback")]
 public partial class UnderlyingSinkCloseCallback
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("UnderlyingSinkAbortCallback")]
 public partial class UnderlyingSinkAbortCallback
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("TransformerStartCallback")]
 public partial class TransformerStartCallback
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("TransformerFlushCallback")]
 public partial class TransformerFlushCallback
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("TransformerTransformCallback")]
 public partial class TransformerTransformCallback
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("TransformerCancelCallback")]
 public partial class TransformerCancelCallback
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("QueuingStrategySize")]
 public partial class QueuingStrategySize
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("CreateHTMLCallback")]
 public partial class CreateHTMLCallback
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("CreateScriptCallback")]
 public partial class CreateScriptCallback
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("CreateScriptURLCallback")]
 public partial class CreateScriptURLCallback
 {
 }
 
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("VideoFrameRequestCallback")]
 public partial class VideoFrameRequestCallback
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("EffectCallback")]
 public partial class EffectCallback
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("LaunchConsumer")]
 public partial class LaunchConsumer
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("LockGrantedCallback")]
 public partial class LockGrantedCallback
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("DecodeErrorCallback")]
 public partial class DecodeErrorCallback
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("DecodeSuccessCallback")]
 public partial class DecodeSuccessCallback
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("AudioWorkletProcessorConstructor")]
 public partial class AudioWorkletProcessorConstructor
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("AudioWorkletProcessCallback")]
 public partial class AudioWorkletProcessCallback
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("AudioDataOutputCallback")]
 public partial class AudioDataOutputCallback
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("VideoFrameOutputCallback")]
 public partial class VideoFrameOutputCallback
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("EncodedAudioChunkOutputCallback")]
 public partial class EncodedAudioChunkOutputCallback
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("EncodedVideoChunkOutputCallback")]
 public partial class EncodedVideoChunkOutputCallback
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("WebCodecsErrorCallback")]
 public partial class WebCodecsErrorCallback
 {
 }
 
-[To(ToAttribute.Default)]
+[Value("Function")]
 public partial class Function
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("VoidFunction")]
 public partial class VoidFunction
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("GenerateAssertionCallback")]
 public partial class GenerateAssertionCallback
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("ValidateAssertionCallback")]
 public partial class ValidateAssertionCallback
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("RTCPeerConnectionErrorCallback")]
 public partial class RTCPeerConnectionErrorCallback
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("RTCSessionDescriptionCallback")]
 public partial class RTCSessionDescriptionCallback
 {
 }
 
-[To(ToAttribute.FirstCharToLowerCase)]
+[Value("XRFrameRequestCallback")]
 public partial class XRFrameRequestCallback
 {
 }

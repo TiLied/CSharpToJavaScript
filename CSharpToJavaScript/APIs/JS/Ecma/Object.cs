@@ -187,5 +187,19 @@ public class ObjectPrototype
 	{
 		throw new System.NotImplementedException();
 	}
+
+	//For emulation "Bracket notation"
+	//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors#bracket_notation
+	public Object this[string property]
+	{
+		get
+		{
+			throw new System.NotImplementedException();
+		}
+		set 
+		{
+			throw new System.NotImplementedException();
+		}
+	}
 }
 

@@ -109,7 +109,7 @@ public class CSTOJS
 			await File.WriteAllTextAsync(pathCombined, _Walker?.JSSB.ToString());
 
 			Log.InfoLine($"--- Done!", options);
-			Log.InfoLine($"--- Path: {pathCombined}", options);
+			Log.InfoLine($"--- Path: {Path.GetFullPath(pathCombined)}", options);
 			Log.InfoLine($"--- --- ---", options);
 		}
 	}
@@ -244,7 +244,7 @@ public class CSTOJS
 			Log.ErrorLine("_Walker is null!", options);
 
 		Log.InfoLine($"--- Done!", options);
-		Log.InfoLine($"--- Path: {pathCombined}", options);
+		Log.InfoLine($"--- Path: {Path.GetFullPath(pathCombined)}", options);
 		Log.InfoLine($"--- --- ---", options);
 	}
 

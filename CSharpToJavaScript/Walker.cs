@@ -238,12 +238,16 @@ internal class Walker : CSharpSyntaxWalker
 
 					VisitTrailingTrivia(token);
 
-					if (_Options.Debug)
+					ImmutableArray<Diagnostic> diagnostics = _Model.GetDiagnostics();
+					for (int i = 0; i < diagnostics.Length; i++)
 					{
-						ImmutableArray<Diagnostic> diagnostics = _Model.GetDiagnostics();
-						foreach (Diagnostic item in diagnostics)
+						if (_Options.Debug)
+							Log.WarningLine(diagnostics[i].ToString(), _Options);
+						
+						//print an error if compilation fails
+						if (diagnostics[i].Severity == DiagnosticSeverity.Error)
 						{
-							Log.WarningLine(item.ToString(), _Options);
+							Log.ErrorLine(diagnostics[i].ToString(), _Options);
 						}
 					}
 					return;
@@ -815,6 +819,27 @@ internal class Walker : CSharpSyntaxWalker
 					case SyntaxKind.MultiplyAssignmentExpression:
 					case SyntaxKind.DivideAssignmentExpression:
 					case SyntaxKind.ModuloAssignmentExpression:
+					case SyntaxKind.CastExpression:
+					case SyntaxKind.LogicalNotExpression:
+					case SyntaxKind.BitwiseNotExpression:
+					case SyntaxKind.PreIncrementExpression:
+					case SyntaxKind.UnaryPlusExpression:
+					case SyntaxKind.ModuloExpression:
+					case SyntaxKind.NotEqualsExpression:
+					case SyntaxKind.BitwiseAndExpression:
+					case SyntaxKind.ExclusiveOrExpression:
+					case SyntaxKind.BitwiseOrExpression:
+					case SyntaxKind.LessThanExpression:
+					case SyntaxKind.LeftShiftExpression:
+					case SyntaxKind.LessThanOrEqualExpression:
+					case SyntaxKind.LogicalAndExpression:
+					case SyntaxKind.LogicalOrExpression:
+					case SyntaxKind.GreaterThanExpression:
+					case SyntaxKind.GreaterThanOrEqualExpression:
+					case SyntaxKind.RightShiftExpression:
+					case SyntaxKind.UnsignedRightShiftExpression:
+					case SyntaxKind.PreDecrementExpression:
+					case SyntaxKind.PostDecrementExpression:
 						Visit(asNode);
 						break;
 					case SyntaxKind.NullLiteralExpression:
@@ -2547,6 +2572,7 @@ internal class Walker : CSharpSyntaxWalker
 
 				switch (kind)
 				{
+					case SyntaxKind.IdentifierName:
 					case SyntaxKind.NullableType:
 					case SyntaxKind.PredefinedType:
 						{
@@ -2554,9 +2580,18 @@ internal class Walker : CSharpSyntaxWalker
 								Log.WarningLine($"\"{kind}\" not implemented or unlikely to be implemented. Ignoring! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{asNode.ToFullString()}|", _Options);
 							break;
 						}
-					case SyntaxKind.IdentifierName:
+					case SyntaxKind.NumericLiteralExpression:
+					case SyntaxKind.ImplicitObjectCreationExpression:
+					case SyntaxKind.ObjectCreationExpression:
 					case SyntaxKind.InvocationExpression:
 					case SyntaxKind.SimpleMemberAccessExpression:
+					case SyntaxKind.UnaryMinusExpression:
+					case SyntaxKind.FalseLiteralExpression:
+					case SyntaxKind.CharacterLiteralExpression:
+					case SyntaxKind.NullLiteralExpression:
+					case SyntaxKind.StringLiteralExpression:
+					case SyntaxKind.TrueLiteralExpression:
+
 						Visit(asNode);
 						break;
 					default:

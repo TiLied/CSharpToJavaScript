@@ -500,11 +500,8 @@ class C
 	{
 		_IsRunning = true;
 
-		if (options.Debug)
-		{
-			_Stopwatch.Restart();
-			Log.WriteLine("Start stopwatch", options);
-		}
+		_Stopwatch.Restart();
+		Log.WriteLine("Start stopwatch", options);
 
 		CompilationUnitSyntax root = tree.GetCompilationUnitRoot();
 
@@ -838,11 +835,8 @@ class C
 
 		_Walker.JSSB.Append(options.AddSBAtTheBottom);
 
-		if (options.Debug)
-		{
-			_Stopwatch.Stop();
-			Log.WriteLine($"Stop stopwatch: {_Stopwatch.Elapsed}", options);
-		}
+		_Stopwatch.Stop();
+		Log.WriteLine($"Stop stopwatch: {_Stopwatch.Elapsed}", options);
 
 		_IsRunning = false;
 	}

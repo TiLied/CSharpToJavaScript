@@ -13,7 +13,7 @@ jobs:
   build:
     strategy:
       matrix:
-        os: [windows-2025, windows-2022]
+        os: [windows-2025]
 
     runs-on: ${{ matrix.os }}
 
@@ -31,14 +31,14 @@ jobs:
       uses: actions/upload-artifact@v4.6.2
       with:
         name: cstojs-${{ matrix.os }}-artifact
-        path: D:/a/CSharpToJavaScript/CSharpToJavaScript/CSharpToJavaScript/bin/Debug/net8.0/
+        path: C:/a/CSharpToJavaScript/CSharpToJavaScript/CSharpToJavaScript/bin/Debug/net8.0/
         if-no-files-found: error
         compression-level: 0
   test:
     needs: build
     strategy:
       matrix:
-        os: [windows-2025, windows-2022]
+        os: [windows-2025]
     
     runs-on: ${{ matrix.os }}
 

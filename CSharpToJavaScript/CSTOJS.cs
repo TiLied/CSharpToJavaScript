@@ -11,12 +11,12 @@ using Microsoft.CodeAnalysis.Text;
 using System.Text;
 using System;
 using CSharpToJavaScript.Utils;
-using Microsoft.CodeAnalysis.Editing;
+//using Microsoft.CodeAnalysis.Editing;
 using System.Threading;
-using Microsoft.CodeAnalysis.Simplification;
-using Microsoft.CodeAnalysis.CodeActions;
-using Microsoft.CodeAnalysis.Host;
-using Microsoft.CodeAnalysis.CodeFixes;
+//using Microsoft.CodeAnalysis.Simplification;
+//using Microsoft.CodeAnalysis.CodeActions;
+//using Microsoft.CodeAnalysis.Host;
+//using Microsoft.CodeAnalysis.CodeFixes;
 using Microsoft.CodeAnalysis.Diagnostics;
 using System.Collections.Immutable;
 
@@ -340,7 +340,7 @@ public class CSTOJS
 			_FSWatcher = null;
 		}
 	}
-
+	/*
 	public async void TestWorkspace() 
 	{
 		//
@@ -495,7 +495,7 @@ class C
 
 		Document newDocument = documentEditor.GetChangedDocument();
 	}
-
+	*/
 	private void Generate(SyntaxTree tree, Assembly? assembly, CSTOJSOptions options, List<MetadataReference>? refs = null)
 	{
 		_IsRunning = true;

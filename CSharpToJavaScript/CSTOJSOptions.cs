@@ -91,11 +91,11 @@ namespace CSharpToJavaScript
 		/// <summary>
 		/// Array of custom names to convert.
 		/// </summary>
-		/// <remarks>Example: <c>[new Tuple&lt;string, string&gt;("Console", "console")]</c>. Will convert "Console" to "console".</remarks>
+		/// <remarks>Example: <c>new(){["Console"] = "console"}</c>. Will convert "Console" to "console".</remarks>
 		/// <value>
-		/// Default: <c>[]</c>
+		/// Default: <c>new()</c>
 		/// </value>
-		public Tuple<string, string>[] CustomCSNamesToJS { get; set; } = [];
+		public Dictionary<string, string> CustomCSNamesToJS { get; set; } = new();
 		/// <summary>
 		/// Array of types to convert.
 		/// </summary>

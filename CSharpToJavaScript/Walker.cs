@@ -2685,21 +2685,21 @@ internal class Walker : CSharpSyntaxWalker
 									}
 								}
 
-								foreach (MemberDeclarationSyntax item in mem)
+								for (int j = 0; j < mem.Count; j++)
 								{
 									SyntaxToken? _sT = null;
-									if (item is MethodDeclarationSyntax m)
+									if (mem[j] is MethodDeclarationSyntax m)
 									{
 										_sT = m.Identifier;
 									}
 
-									if (item is PropertyDeclarationSyntax p)
+									if (mem[j] is PropertyDeclarationSyntax p)
 									{
 										_sT = p.Identifier;
 										syntaxNode = p.Type;
 									}
 
-									if (item is FieldDeclarationSyntax f)
+									if (mem[j] is FieldDeclarationSyntax f)
 									{
 										IEnumerable<SyntaxToken> d3 = from e in f.DescendantTokens()
 												 where e.IsKind(SyntaxKind.IdentifierToken)
@@ -5017,11 +5017,13 @@ internal class Walker : CSharpSyntaxWalker
 			catch (Exception e)
 			{
 				symbolInfo = null;
+				/*
 				ImmutableArray<Diagnostic> diags = _Model.GetDeclarationDiagnostics();
 				foreach (Diagnostic item in diags)
 				{
 					Log.WarningLine(item.ToString(), _Options);
 				}
+				*/
 				Log.WarningLine(e.ToString(), _Options);
 				//throw;
 			}
@@ -5169,20 +5171,20 @@ internal class Walker : CSharpSyntaxWalker
 
 				SyntaxList<MemberDeclarationSyntax> _members = _class.Members;
 
-				foreach (MemberDeclarationSyntax item in _members)
+				for (int i = 0; i < _members.Count; i++)
 				{
 					SyntaxToken _sT = default;
-					if (item is MethodDeclarationSyntax m)
+					if (_members[i] is MethodDeclarationSyntax m)
 					{
 						_sT = m.Identifier;
 					}
 
-					if (item is PropertyDeclarationSyntax p)
+					if (_members[i] is PropertyDeclarationSyntax p)
 					{
 						_sT = p.Identifier;
 					}
 
-					if (item is FieldDeclarationSyntax f)
+					if (_members[i] is FieldDeclarationSyntax f)
 					{
 						IEnumerable<SyntaxNode> vds = (from el in f.DescendantNodes()
 													   where el.IsKind(SyntaxKind.VariableDeclarator)
@@ -5243,14 +5245,14 @@ internal class Walker : CSharpSyntaxWalker
 			return true;
 		}
 
-		foreach (Type type in _Options.CustomCSTypesToJS)
+		for (int i = 0; i < _Options.CustomCSTypesToJS.Length; i++)
 		{
-			if (type.Name == text)
+			if (_Options.CustomCSTypesToJS[i].Name == text)
 			{
-				return _CheckAttributeData(type.GetCustomAttributes(true));
+				return _CheckAttributeData(_Options.CustomCSTypesToJS[i].GetCustomAttributes(true));
 			}
 
-			MemberInfo[] _Members = type.GetMembers();
+			MemberInfo[] _Members = _Options.CustomCSTypesToJS[i].GetMembers();
 
 			bool b = _CheckMembersInNestedClasses(_Members);
 
@@ -5262,20 +5264,20 @@ internal class Walker : CSharpSyntaxWalker
 		
 		bool _CheckMembersInNestedClasses(MemberInfo[] _members)
 		{
-			foreach (MemberInfo _memberInfo in _members)
+			for (int i = 0; i < _members.Length; i++)
 			{
-				Type? _type = _memberInfo as Type;
+				Type? _type = _members[i] as Type;
 				
 				if (_type != null && _type.IsClass)
 				{
 					return _CheckMembersInNestedClasses(_type.GetMembers());
 				}
 
-				if (_memberInfo.Name == text)
+				if (_members[i].Name == text)
 				{
-					object[] _attrs = _memberInfo.GetCustomAttributes(true);
+					object[] _attrs = _members[i].GetCustomAttributes(true);
 
-					return _CheckAttributeData(_memberInfo.GetCustomAttributes(true));
+					return _CheckAttributeData(_members[i].GetCustomAttributes(true));
 				}
 			}
 
@@ -5284,23 +5286,23 @@ internal class Walker : CSharpSyntaxWalker
 
 		bool _CheckAttributeData(object[] attrs)
 		{
-			foreach (object _attr in attrs)
+			for (int i = 0; i < attrs.Length; i++)
 			{
-				if (_attr is EnumValueAttribute enumValueAttribute)
+				if (attrs[i] is EnumValueAttribute enumValueAttribute)
 				{
 					VisitLeadingTrivia(identifier);
 					JSSB.Append($"\"{enumValueAttribute.Value}\"");
 					VisitTrailingTrivia(identifier);
 					return true;
 				}
-				if (_attr is ValueAttribute valueAttribute)
+				if (attrs[i] is ValueAttribute valueAttribute)
 				{
 					VisitLeadingTrivia(identifier);
 					JSSB.Append($"{valueAttribute.Value}");
 					VisitTrailingTrivia(identifier);
 					return true;
 				}
-				if (_attr is ToAttribute toAttribute)
+				if (attrs[i] is ToAttribute toAttribute)
 				{
 					if (toAttribute.To == ToAttribute.None)
 						_IgnoreTailingDot = true;
@@ -5321,16 +5323,6 @@ internal class Walker : CSharpSyntaxWalker
 		{
 			if (BuiltInTypesGenerics(node, iSymbol) == false)
 			{
-				if (_Options.Debug)
-				{
-					Log.WarningLine("WARNING! Diagnostics starts ---", _Options);
-					ImmutableArray<Diagnostic> diag = _Model.GetDiagnostics();
-					foreach (Diagnostic item in diag)
-					{
-						Log.WarningLine(item.ToString(), _Options);
-					}
-					Log.WarningLine("WARNING! Diagnostics ends ---", _Options);
-				}
 				return false;
 			}
 		}
@@ -5352,27 +5344,25 @@ internal class Walker : CSharpSyntaxWalker
 
 	private bool CustomCSNamesToJS(SyntaxNode? node) 
 	{
-		foreach (Tuple<string, string> _item in _Options.CustomCSNamesToJS)
+		if (node is IdentifierNameSyntax _identifierName)
 		{
-			if (node is IdentifierNameSyntax _identifierName)
+			if (_Options.CustomCSNamesToJS.TryGetValue(_identifierName.Identifier.Text, out string? _value))
 			{
-				if (_identifierName.Identifier.Text == _item.Item1)
-				{
-					VisitLeadingTrivia(_identifierName.Identifier);
-					JSSB.Append(_item.Item2);
-					return true;
-				}
-			}
-			else if (node is GenericNameSyntax _genericName)
-			{
-				if (_genericName.Identifier.Text == _item.Item1)
-				{
-					VisitLeadingTrivia(_genericName.Identifier);
-					JSSB.Append(_item.Item2);
-					return true;
-				}
+				VisitLeadingTrivia(_identifierName.Identifier);
+				JSSB.Append(_value);
+				return true;
 			}
 		}
+		else if (node is GenericNameSyntax _genericName)
+		{
+			if (_Options.CustomCSNamesToJS.TryGetValue(_genericName.Identifier.Text, out string? _value))
+			{
+				VisitLeadingTrivia(_genericName.Identifier);
+				JSSB.Append(_value);
+				return true;
+			}
+		}
+
 		return false;
 	}
 

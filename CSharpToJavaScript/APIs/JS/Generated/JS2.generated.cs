@@ -1,4 +1,4 @@
-//03.05.2025 17:58:03
+//28.07.2025 20:10:12
 
 #nullable enable
 //Disable missing XML comments.
@@ -293,7 +293,6 @@ public partial interface ElementCSSInlineStyle
 
 
 
-///<include file='Utils/Docs/NavigatorDeviceMemory/NavigatorDeviceMemory.generated.xml' path='docs/NavigatorDeviceMemory/*'/>
 [Value("NavigatorDeviceMemory")]
 public partial interface NavigatorDeviceMemory
 {
@@ -310,11 +309,11 @@ public partial interface EventListener
 	public Undefined HandleEvent(Event event_) { throw new System.NotImplementedException(); }
 }
 
-///<include file='Utils/Docs/Document/Document.generated.xml' path='docs/Document/*'/>
+///<include file='Utils/Docs/document/document.generated.xml' path='docs/Document/*'/>
 [Value("NonElementParentNode")]
 public partial interface NonElementParentNode
 {
-	///<include file='Utils/Docs/DocumentGetElementById/DocumentGetElementById.generated.xml' path='docs/DocumentGetElementById/*'/>
+	///<include file='Utils/Docs/document/document.generated.xml' path='docs/DocumentGetElementById/*'/>
 [Value("getElementById")]
 	public Element? GetElementById(DOMString elementId) { throw new System.NotImplementedException(); }
 }
@@ -327,35 +326,35 @@ public partial interface DocumentOrShadowRoot
 
 
 
-///<include file='Utils/Docs/Element/Element.generated.xml' path='docs/Element/*'/>
+///<include file='Utils/Docs/element/element.generated.xml' path='docs/Element/*'/>
 [Value("ParentNode")]
 public partial interface ParentNode
 {
-	///<include file='Utils/Docs/ElementChildren/ElementChildren.generated.xml' path='docs/ElementChildren/*'/>
+	///<include file='Utils/Docs/element/element.generated.xml' path='docs/ElementChildren/*'/>
 [Value("children")]
 	public HTMLCollection Children { get { throw new System.NotImplementedException(); } }
-	///<include file='Utils/Docs/ElementFirstElementChild/ElementFirstElementChild.generated.xml' path='docs/ElementFirstElementChild/*'/>
+	///<include file='Utils/Docs/element/element.generated.xml' path='docs/ElementFirstElementChild/*'/>
 [Value("firstElementChild")]
 	public Element? FirstElementChild { get { throw new System.NotImplementedException(); } }
-	///<include file='Utils/Docs/ElementLastElementChild/ElementLastElementChild.generated.xml' path='docs/ElementLastElementChild/*'/>
+	///<include file='Utils/Docs/element/element.generated.xml' path='docs/ElementLastElementChild/*'/>
 [Value("lastElementChild")]
 	public Element? LastElementChild { get { throw new System.NotImplementedException(); } }
-	///<include file='Utils/Docs/ElementChildElementCount/ElementChildElementCount.generated.xml' path='docs/ElementChildElementCount/*'/>
+	///<include file='Utils/Docs/element/element.generated.xml' path='docs/ElementChildElementCount/*'/>
 [Value("childElementCount")]
 	public ulong ChildElementCount { get { throw new System.NotImplementedException(); } }
-	///<include file='Utils/Docs/ElementPrepend/ElementPrepend.generated.xml' path='docs/ElementPrepend/*'/>
+	///<include file='Utils/Docs/element/element.generated.xml' path='docs/ElementPrepend/*'/>
 [Value("prepend")]
 	public Undefined Prepend(params Union28[] nodes) { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/ElementAppend/ElementAppend.generated.xml' path='docs/ElementAppend/*'/>
+	///<include file='Utils/Docs/element/element.generated.xml' path='docs/ElementAppend/*'/>
 [Value("append")]
 	public Undefined Append(params Union29[] nodes) { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/ElementReplaceChildren/ElementReplaceChildren.generated.xml' path='docs/ElementReplaceChildren/*'/>
+	///<include file='Utils/Docs/element/element.generated.xml' path='docs/ElementReplaceChildren/*'/>
 [Value("replaceChildren")]
 	public Undefined ReplaceChildren(params Union30[] nodes) { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/ElementQuerySelector/ElementQuerySelector.generated.xml' path='docs/ElementQuerySelector/*'/>
+	///<include file='Utils/Docs/element/element.generated.xml' path='docs/ElementQuerySelector/*'/>
 [Value("querySelector")]
 	public Element? QuerySelector(DOMString selectors) { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/ElementQuerySelectorAll/ElementQuerySelectorAll.generated.xml' path='docs/ElementQuerySelectorAll/*'/>
+	///<include file='Utils/Docs/element/element.generated.xml' path='docs/ElementQuerySelectorAll/*'/>
 [Value("querySelectorAll")]
 	public NodeList QuerySelectorAll(DOMString selectors) { throw new System.NotImplementedException(); }
 }
@@ -374,20 +373,20 @@ public partial interface NonDocumentTypeChildNode
 
 
 
-///<include file='Utils/Docs/Element/Element.generated.xml' path='docs/Element/*'/>
+///<include file='Utils/Docs/element/element.generated.xml' path='docs/Element/*'/>
 [Value("ChildNode")]
 public partial interface ChildNode
 {
-	///<include file='Utils/Docs/ElementBefore/ElementBefore.generated.xml' path='docs/ElementBefore/*'/>
+	///<include file='Utils/Docs/element/element.generated.xml' path='docs/ElementBefore/*'/>
 [Value("before")]
 	public Undefined Before(params Union31[] nodes) { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/ElementAfter/ElementAfter.generated.xml' path='docs/ElementAfter/*'/>
+	///<include file='Utils/Docs/element/element.generated.xml' path='docs/ElementAfter/*'/>
 [Value("after")]
 	public Undefined After(params Union32[] nodes) { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/ElementReplaceWith/ElementReplaceWith.generated.xml' path='docs/ElementReplaceWith/*'/>
+	///<include file='Utils/Docs/element/element.generated.xml' path='docs/ElementReplaceWith/*'/>
 [Value("replaceWith")]
 	public Undefined ReplaceWith(params Union33[] nodes) { throw new System.NotImplementedException(); }
-	///<include file='Utils/Docs/ElementRemove/ElementRemove.generated.xml' path='docs/ElementRemove/*'/>
+	///<include file='Utils/Docs/element/element.generated.xml' path='docs/ElementRemove/*'/>
 [Value("remove")]
 	public Undefined Remove() { throw new System.NotImplementedException(); }
 }
@@ -1135,7 +1134,6 @@ public partial interface NavigatorID
 	public DOMString Oscpu { get { throw new System.NotImplementedException(); } }
 }
 
-///<include file='Utils/Docs/NavigatorLanguage/NavigatorLanguage.generated.xml' path='docs/NavigatorLanguage/*'/>
 [Value("NavigatorLanguage")]
 public partial interface NavigatorLanguage
 {
@@ -1145,7 +1143,6 @@ public partial interface NavigatorLanguage
 	public DOMString[] Languages { get { throw new System.NotImplementedException(); } }
 }
 
-///<include file='Utils/Docs/NavigatorOnLine/NavigatorOnLine.generated.xml' path='docs/NavigatorOnLine/*'/>
 [Value("NavigatorOnLine")]
 public partial interface NavigatorOnLine
 {
@@ -1169,7 +1166,6 @@ public partial interface NavigatorCookies
 	public bool CookieEnabled { get { throw new System.NotImplementedException(); } }
 }
 
-///<include file='Utils/Docs/NavigatorPlugins/NavigatorPlugins.generated.xml' path='docs/NavigatorPlugins/*'/>
 [Value("NavigatorPlugins")]
 public partial interface NavigatorPlugins
 {
@@ -1217,7 +1213,6 @@ public partial interface NavigatorConcurrentHardware
 	public ulong HardwareConcurrency { get { throw new System.NotImplementedException(); } }
 }
 
-///<include file='Utils/Docs/WindowSessionStorage/WindowSessionStorage.generated.xml' path='docs/WindowSessionStorage/*'/>
 [Value("WindowSessionStorage")]
 public partial interface WindowSessionStorage
 {
@@ -1226,7 +1221,6 @@ public partial interface WindowSessionStorage
 }
 
 
-///<include file='Utils/Docs/WindowLocalStorage/WindowLocalStorage.generated.xml' path='docs/WindowLocalStorage/*'/>
 [Value("WindowLocalStorage")]
 public partial interface WindowLocalStorage
 {
@@ -1303,7 +1297,6 @@ public partial interface WindowEventHandlers
 	public EventHandler Onportalactivate { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
 }
 
-///<include file='Utils/Docs/NetworkInformationSaveData/NetworkInformationSaveData.generated.xml' path='docs/NetworkInformationSaveData/*'/>
 [Value("NetworkInformationSaveData")]
 public partial interface NetworkInformationSaveData
 {
@@ -1350,7 +1343,6 @@ public partial interface NavigatorStorageBuckets
 
 
 
-///<include file='Utils/Docs/NavigatorStorage/NavigatorStorage.generated.xml' path='docs/NavigatorStorage/*'/>
 [Value("NavigatorStorage")]
 public partial interface NavigatorStorage
 {
@@ -1615,7 +1607,6 @@ public partial interface ServiceEventHandlers
 }
 
 
-///<include file='Utils/Docs/NavigatorLocks/NavigatorLocks.generated.xml' path='docs/NavigatorLocks/*'/>
 [Value("NavigatorLocks")]
 public partial interface NavigatorLocks
 {
@@ -3346,7 +3337,6 @@ public partial interface GPUObjectBase
 	public USVString Label { get { throw new System.NotImplementedException(); } set { throw new System.NotImplementedException(); } }
 }
 
-///<include file='Utils/Docs/NavigatorGPU/NavigatorGPU.generated.xml' path='docs/NavigatorGPU/*'/>
 [Value("NavigatorGPU")]
 public partial interface NavigatorGPU
 {

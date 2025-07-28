@@ -1,4 +1,4 @@
-//03.05.2025 17:58:03
+//28.07.2025 20:10:12
 
 #nullable enable
 //Disable missing XML comments.
@@ -353,7 +353,6 @@ public enum ScriptingPolicyViolationType
 	Eval,
 }
 
-///<include file='Utils/Docs/SecurityPolicyViolationEventDisposition/SecurityPolicyViolationEventDisposition.generated.xml' path='docs/SecurityPolicyViolationEventDisposition/*'/>
 [To(ToAttribute.None)]
 public enum SecurityPolicyViolationEventDisposition
 {
@@ -385,7 +384,6 @@ public enum FontFaceSetLoadStatus
 	Loaded,
 }
 
-///<include file='Utils/Docs/HighlightType/HighlightType.generated.xml' path='docs/HighlightType/*'/>
 [To(ToAttribute.None)]
 public enum HighlightType
 {
@@ -558,7 +556,6 @@ public enum ItemType
 	Subscription,
 }
 
-///<include file='Utils/Docs/ShadowRootMode/ShadowRootMode.generated.xml' path='docs/ShadowRootMode/*'/>
 [To(ToAttribute.None)]
 public enum ShadowRootMode
 {
@@ -716,7 +713,7 @@ public enum FenceReportingDestination
 	SharedStorageSelectUrl,
 }
 
-///<include file='Utils/Docs/RequestDestination/RequestDestination.generated.xml' path='docs/RequestDestination/*'/>
+///<include file='Utils/Docs/request/request.generated.xml' path='docs/RequestDestination/*'/>
 [To(ToAttribute.None)]
 public enum RequestDestination
 {
@@ -764,7 +761,7 @@ public enum RequestDestination
 	Xslt,
 }
 
-///<include file='Utils/Docs/RequestMode/RequestMode.generated.xml' path='docs/RequestMode/*'/>
+///<include file='Utils/Docs/request/request.generated.xml' path='docs/RequestMode/*'/>
 [To(ToAttribute.None)]
 public enum RequestMode
 {
@@ -778,7 +775,7 @@ public enum RequestMode
 	Cors,
 }
 
-///<include file='Utils/Docs/RequestCredentials/RequestCredentials.generated.xml' path='docs/RequestCredentials/*'/>
+///<include file='Utils/Docs/request/request.generated.xml' path='docs/RequestCredentials/*'/>
 [To(ToAttribute.None)]
 public enum RequestCredentials
 {
@@ -790,7 +787,7 @@ public enum RequestCredentials
 	Include,
 }
 
-///<include file='Utils/Docs/RequestCache/RequestCache.generated.xml' path='docs/RequestCache/*'/>
+///<include file='Utils/Docs/request/request.generated.xml' path='docs/RequestCache/*'/>
 [To(ToAttribute.None)]
 public enum RequestCache
 {
@@ -808,7 +805,7 @@ public enum RequestCache
 	OnlyIfCached,
 }
 
-///<include file='Utils/Docs/RequestRedirect/RequestRedirect.generated.xml' path='docs/RequestRedirect/*'/>
+///<include file='Utils/Docs/request/request.generated.xml' path='docs/RequestRedirect/*'/>
 [To(ToAttribute.None)]
 public enum RequestRedirect
 {
@@ -820,6 +817,7 @@ public enum RequestRedirect
 	Manual,
 }
 
+///<include file='Utils/Docs/request/request.generated.xml' path='docs/RequestDuplex/*'/>
 [To(ToAttribute.None)]
 public enum RequestDuplex
 {
@@ -827,6 +825,7 @@ public enum RequestDuplex
 	Half,
 }
 
+///<include file='Utils/Docs/request/request.generated.xml' path='docs/RequestPriority/*'/>
 [To(ToAttribute.None)]
 public enum RequestPriority
 {
@@ -838,7 +837,6 @@ public enum RequestPriority
 	Auto,
 }
 
-///<include file='Utils/Docs/ResponseType/ResponseType.generated.xml' path='docs/ResponseType/*'/>
 [To(ToAttribute.None)]
 public enum ResponseType
 {
@@ -892,7 +890,6 @@ public enum EndingType
 	Native,
 }
 
-///<include file='Utils/Docs/FileSystemHandleKind/FileSystemHandleKind.generated.xml' path='docs/FileSystemHandleKind/*'/>
 [To(ToAttribute.None)]
 public enum FileSystemHandleKind
 {
@@ -924,7 +921,6 @@ public enum FullscreenNavigationUI
 	Hide,
 }
 
-///<include file='Utils/Docs/GamepadHand/GamepadHand.generated.xml' path='docs/GamepadHand/*'/>
 [To(ToAttribute.None)]
 public enum GamepadHand
 {
@@ -994,7 +990,6 @@ public enum HandwritingInputType
 	Touch,
 }
 
-///<include file='Utils/Docs/DocumentReadyState/DocumentReadyState.generated.xml' path='docs/DocumentReadyState/*'/>
 [To(ToAttribute.None)]
 public enum DocumentReadyState
 {
@@ -1006,7 +1001,6 @@ public enum DocumentReadyState
 	Complete,
 }
 
-///<include file='Utils/Docs/DocumentVisibilityState/DocumentVisibilityState.generated.xml' path='docs/DocumentVisibilityState/*'/>
 [To(ToAttribute.None)]
 public enum DocumentVisibilityState
 {
@@ -1029,7 +1023,6 @@ public enum CanPlayTypeResult
 }
 
 
-///<include file='Utils/Docs/TextTrackMode/TextTrackMode.generated.xml' path='docs/TextTrackMode/*'/>
 [To(ToAttribute.None)]
 public enum TextTrackMode
 {
@@ -1041,7 +1034,6 @@ public enum TextTrackMode
 	Showing,
 }
 
-///<include file='Utils/Docs/TextTrackKind/TextTrackKind.generated.xml' path='docs/TextTrackKind/*'/>
 [To(ToAttribute.None)]
 public enum TextTrackKind
 {
@@ -1417,7 +1409,6 @@ public enum MeteringMode
 	Continuous,
 }
 
-///<include file='Utils/Docs/IDBRequestReadyState/IDBRequestReadyState.generated.xml' path='docs/IDBRequestReadyState/*'/>
 [To(ToAttribute.None)]
 public enum IDBRequestReadyState
 {
@@ -1427,7 +1418,6 @@ public enum IDBRequestReadyState
 	Done,
 }
 
-///<include file='Utils/Docs/IDBTransactionDurability/IDBTransactionDurability.generated.xml' path='docs/IDBTransactionDurability/*'/>
 [To(ToAttribute.None)]
 public enum IDBTransactionDurability
 {
@@ -1439,7 +1429,6 @@ public enum IDBTransactionDurability
 	Relaxed,
 }
 
-///<include file='Utils/Docs/IDBCursorDirection/IDBCursorDirection.generated.xml' path='docs/IDBCursorDirection/*'/>
 [To(ToAttribute.None)]
 public enum IDBCursorDirection
 {
@@ -1453,7 +1442,6 @@ public enum IDBCursorDirection
 	Prevunique,
 }
 
-///<include file='Utils/Docs/IDBTransactionMode/IDBTransactionMode.generated.xml' path='docs/IDBTransactionMode/*'/>
 [To(ToAttribute.None)]
 public enum IDBTransactionMode
 {
@@ -1670,7 +1658,6 @@ public enum MediaDeviceKind
 	Videoinput,
 }
 
-///<include file='Utils/Docs/MediaSessionPlaybackState/MediaSessionPlaybackState.generated.xml' path='docs/MediaSessionPlaybackState/*'/>
 [To(ToAttribute.None)]
 public enum MediaSessionPlaybackState
 {
@@ -1801,7 +1788,6 @@ public enum EffectiveConnectionType
 	Slow2g,
 }
 
-///<include file='Utils/Docs/NotificationPermission/NotificationPermission.generated.xml' path='docs/NotificationPermission/*'/>
 [To(ToAttribute.None)]
 public enum NotificationPermission
 {
@@ -1888,7 +1874,6 @@ public enum PermissionState
 	Prompt,
 }
 
-///<include file='Utils/Docs/PresentationConnectionState/PresentationConnectionState.generated.xml' path='docs/PresentationConnectionState/*'/>
 [To(ToAttribute.None)]
 public enum PresentationConnectionState
 {
@@ -1956,7 +1941,6 @@ public enum ReferrerPolicy
 	UnsafeUrl,
 }
 
-///<include file='Utils/Docs/RemotePlaybackState/RemotePlaybackState.generated.xml' path='docs/RemotePlaybackState/*'/>
 [To(ToAttribute.None)]
 public enum RemotePlaybackState
 {
@@ -2158,7 +2142,6 @@ public enum FlowControlType
 	Hardware,
 }
 
-///<include file='Utils/Docs/ServiceWorkerState/ServiceWorkerState.generated.xml' path='docs/ServiceWorkerState/*'/>
 [To(ToAttribute.None)]
 public enum ServiceWorkerState
 {
@@ -2200,7 +2183,6 @@ public enum FrameType
 	None,
 }
 
-///<include file='Utils/Docs/ClientType/ClientType.generated.xml' path='docs/ClientType/*'/>
 [To(ToAttribute.None)]
 public enum ClientType
 {
@@ -2444,7 +2426,6 @@ public enum IterationCompositeOperation
 	Accumulate,
 }
 
-///<include file='Utils/Docs/AnimationPlayState/AnimationPlayState.generated.xml' path='docs/AnimationPlayState/*'/>
 [To(ToAttribute.None)]
 public enum AnimationPlayState
 {
@@ -2458,7 +2439,6 @@ public enum AnimationPlayState
 	Finished,
 }
 
-///<include file='Utils/Docs/AnimationReplaceState/AnimationReplaceState.generated.xml' path='docs/AnimationReplaceState/*'/>
 [To(ToAttribute.None)]
 public enum AnimationReplaceState
 {
@@ -2522,7 +2502,6 @@ public enum CompositeOperationOrAuto
 	Auto,
 }
 
-///<include file='Utils/Docs/LockMode/LockMode.generated.xml' path='docs/LockMode/*'/>
 [To(ToAttribute.None)]
 public enum LockMode
 {
@@ -2903,7 +2882,6 @@ public enum CodecState
 	Closed,
 }
 
-///<include file='Utils/Docs/EncodedAudioChunkType/EncodedAudioChunkType.generated.xml' path='docs/EncodedAudioChunkType/*'/>
 [To(ToAttribute.None)]
 public enum EncodedAudioChunkType
 {
@@ -2913,7 +2891,6 @@ public enum EncodedAudioChunkType
 	Delta,
 }
 
-///<include file='Utils/Docs/EncodedVideoChunkType/EncodedVideoChunkType.generated.xml' path='docs/EncodedVideoChunkType/*'/>
 [To(ToAttribute.None)]
 public enum EncodedVideoChunkType
 {
@@ -3144,7 +3121,6 @@ public enum GPUFeatureName
 	DualSourceBlending,
 }
 
-///<include file='Utils/Docs/GPUBufferMapState/GPUBufferMapState.generated.xml' path='docs/GPUBufferMapState/*'/>
 [To(ToAttribute.None)]
 public enum GPUBufferMapState
 {
@@ -3156,7 +3132,6 @@ public enum GPUBufferMapState
 	Mapped,
 }
 
-///<include file='Utils/Docs/GPUTextureDimension/GPUTextureDimension.generated.xml' path='docs/GPUTextureDimension/*'/>
 [To(ToAttribute.None)]
 public enum GPUTextureDimension
 {
@@ -3197,7 +3172,6 @@ public enum GPUTextureAspect
 	DepthOnly,
 }
 
-///<include file='Utils/Docs/GPUTextureFormat/GPUTextureFormat.generated.xml' path='docs/GPUTextureFormat/*'/>
 [To(ToAttribute.None)]
 public enum GPUTextureFormat
 {
@@ -3491,7 +3465,6 @@ public enum GPUStorageTextureAccess
 	ReadWrite,
 }
 
-///<include file='Utils/Docs/GPUCompilationMessageType/GPUCompilationMessageType.generated.xml' path='docs/GPUCompilationMessageType/*'/>
 [To(ToAttribute.None)]
 public enum GPUCompilationMessageType
 {
@@ -3503,7 +3476,6 @@ public enum GPUCompilationMessageType
 	Info,
 }
 
-///<include file='Utils/Docs/GPUPipelineErrorReason/GPUPipelineErrorReason.generated.xml' path='docs/GPUPipelineErrorReason/*'/>
 [To(ToAttribute.None)]
 public enum GPUPipelineErrorReason
 {
@@ -3822,7 +3794,6 @@ public enum HIDUnitSystem
 
 
 
-///<include file='Utils/Docs/MIDIPortType/MIDIPortType.generated.xml' path='docs/MIDIPortType/*'/>
 [To(ToAttribute.None)]
 public enum MIDIPortType
 {
@@ -4019,7 +3990,6 @@ public enum SFrameTransformErrorEventType
 	Syntax,
 }
 
-///<include file='Utils/Docs/RTCEncodedVideoFrameType/RTCEncodedVideoFrameType.generated.xml' path='docs/RTCEncodedVideoFrameType/*'/>
 [To(ToAttribute.None)]
 public enum RTCEncodedVideoFrameType
 {
@@ -4261,7 +4231,6 @@ public enum RTCIceTcpCandidateType
 	So,
 }
 
-///<include file='Utils/Docs/RTCIceCandidateType/RTCIceCandidateType.generated.xml' path='docs/RTCIceCandidateType/*'/>
 [To(ToAttribute.None)]
 public enum RTCIceCandidateType
 {
@@ -4286,7 +4255,6 @@ public enum RTCIceServerTransportProtocol
 	Tls,
 }
 
-///<include file='Utils/Docs/RTCRtpTransceiverDirection/RTCRtpTransceiverDirection.generated.xml' path='docs/RTCRtpTransceiverDirection/*'/>
 [To(ToAttribute.None)]
 public enum RTCRtpTransceiverDirection
 {
@@ -4302,7 +4270,6 @@ public enum RTCRtpTransceiverDirection
 	Stopped,
 }
 
-///<include file='Utils/Docs/RTCDtlsTransportState/RTCDtlsTransportState.generated.xml' path='docs/RTCDtlsTransportState/*'/>
 [To(ToAttribute.None)]
 public enum RTCDtlsTransportState
 {
@@ -4329,7 +4296,6 @@ public enum RTCIceGathererState
 	Complete,
 }
 
-///<include file='Utils/Docs/RTCIceTransportState/RTCIceTransportState.generated.xml' path='docs/RTCIceTransportState/*'/>
 [To(ToAttribute.None)]
 public enum RTCIceTransportState
 {
@@ -4369,7 +4335,6 @@ public enum RTCIceComponent
 	Rtcp,
 }
 
-///<include file='Utils/Docs/RTCSctpTransportState/RTCSctpTransportState.generated.xml' path='docs/RTCSctpTransportState/*'/>
 [To(ToAttribute.None)]
 public enum RTCSctpTransportState
 {
@@ -4433,7 +4398,6 @@ public enum WebTransportReliabilityMode
 	SupportsUnreliable,
 }
 
-///<include file='Utils/Docs/WebTransportCongestionControl/WebTransportCongestionControl.generated.xml' path='docs/WebTransportCongestionControl/*'/>
 [To(ToAttribute.None)]
 public enum WebTransportCongestionControl
 {
@@ -4445,7 +4409,6 @@ public enum WebTransportCongestionControl
 	LowLatency,
 }
 
-///<include file='Utils/Docs/WebTransportErrorSource/WebTransportErrorSource.generated.xml' path='docs/WebTransportErrorSource/*'/>
 [To(ToAttribute.None)]
 public enum WebTransportErrorSource
 {
@@ -4819,7 +4782,6 @@ public enum XRTextureType
 	TextureArray,
 }
 
-///<include file='Utils/Docs/XMLHttpRequestResponseType/XMLHttpRequestResponseType.generated.xml' path='docs/XMLHttpRequestResponseType/*'/>
 [To(ToAttribute.None)]
 public enum XMLHttpRequestResponseType
 {

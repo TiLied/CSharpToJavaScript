@@ -4,9 +4,136 @@
 The <c>CSPViolationReportBody</c> interface is an extension of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Reporting_API">Reporting API</see> that represents the body of a Content Security Policy (CSP) violation report.
 </summary>
 <remarks>
-<para>CSP violations are thrown when the webpage attempts to load a resource that violates the policy set by the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy">Content-Security-Policy</see> HTTP header.</para><para>CSP violation reports are returned in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/ReportingObserver/ReportingObserver#reports">reports</see> parameter of <see cref="ReportingObserver"/> callbacks that have a <c>type</c> of <c>&amp;quot;csp-violation&amp;quot;</c>.<br/>The <c>body</c> property of those reports is an instance of <c>CSPViolationReportBody</c>.</para><para>CSP violation reports may also be sent as JSON objects to the endpoint specified in the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-to"><c>report-to</c></see> policy directive of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy">Content-Security-Policy</see> header.<br/>These reports similarly have a <c>type</c> of <c>&amp;quot;csp-violation&amp;quot;</c>, and a <c>body</c> property containing a serialization of an instance of this interface.</para><blockquote class="NOTE"><h5>NOTE</h5><para>CSP violation reports sent by the Reporting API, when an endpoint is specified using the CSP <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-to"><c>report-to</c></see> directive, are similar (but not identical) to the &amp;quot;CSP report&amp;quot; <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-uri#violation_report_syntax">JSON objects</see> sent when endpoints are specified using the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-uri"><c>report-uri</c></see> directive.<br/>The Reporting API and <c>report-to</c> directive are intended to replace the older report format and the <c>report-uri</c> directive.</para></blockquote><para></para>
+<para>CSP violations are thrown when the webpage attempts to load a resource that violates the policy set by the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy">Content-Security-Policy</see> HTTP header.</para><para>CSP violation reports are returned in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/ReportingObserver/ReportingObserver#reports">reports</see> parameter of <see cref="ReportingObserver"/> callbacks that have a <c>type</c> of <c>&amp;quot;csp-violation&amp;quot;</c>.<br/>The <c>body</c> property of those reports is an instance of <c>CSPViolationReportBody</c>.</para><para>CSP violation reports may also be sent as JSON objects to the endpoint specified in the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/report-to"><c>report-to</c></see> policy directive of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy">Content-Security-Policy</see> header.<br/>These reports similarly have a <c>type</c> of <c>&amp;quot;csp-violation&amp;quot;</c>, and a <c>body</c> property containing a serialization of an instance of this interface.</para><blockquote class="NOTE"><h5>NOTE</h5><para>CSP violation reports sent by the Reporting API, when an endpoint is specified using the CSP <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/report-to"><c>report-to</c></see> directive, are similar (but not identical) to the &amp;quot;CSP report&amp;quot; <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/report-uri#violation_report_syntax">JSON objects</see> sent when endpoints are specified using the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/report-uri"><c>report-uri</c></see> directive.<br/>The Reporting API and <c>report-to</c> directive are intended to replace the older report format and the <c>report-uri</c> directive.</para></blockquote><para></para>
 <para>-<see cref="ReportBody"/><br/>-<see cref="ReportingObserver"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy">Content-Security-Policy</see><br/>-<see cref="SecurityPolicyViolationEvent"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSPViolationReportBody"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </CSPViolationReportBody>
+<CSPViolationReportBodyBlockedURL>
+<summary>
+The <strong><c>blockedURL</c></strong> read-only property of the <see cref="CSPViolationReportBody"/> interface is a string value that represents the resource that was blocked because it violates a <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP">Content Security Policy (CSP)</see>.
+</summary>
+<remarks>
+<para>-<see cref="SecurityPolicyViolationEvent.BlockedURI"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSPViolationReportBody/blockedURL"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An string containing a value or URL that represents the resource that violated the policy.If the value is not the URL of a resource, it must be one of the following strings:</value>
+</CSPViolationReportBodyBlockedURL>
+<CSPViolationReportBodyColumnNumber>
+<summary>
+The <strong><c>columnNumber</c></strong> read-only property of the <see cref="CSPViolationReportBody"/> interface indicates the column number in the source file that triggered the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP">Content Security Policy (CSP)</see> violation.
+</summary>
+<remarks>
+<para>Note that the browser extracts the value from <strong>the global object</strong> of the file that triggered the violation.<br/>If the resource that triggers the CSP violation is not loaded, the value will be <c>null</c>.<br/>See <see cref="CSPViolationReportBody.SourceFile"/> for more information.</para><para>This property is most useful alongside <see cref="CSPViolationReportBody.SourceFile"/> and <see cref="CSPViolationReportBody.LineNumber"/>, as it provides the location of the column in that file and line that resulted in a violation.</para>
+<para>-<see cref="SecurityPolicyViolationEvent.ColumnNumber"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSPViolationReportBody/columnNumber"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer containing the column number that triggered the violation, or <c>null</c>.</value>
+</CSPViolationReportBodyColumnNumber>
+<CSPViolationReportBodyDisposition>
+<summary>
+The <strong><c>disposition</c></strong> read-only property of the <see cref="CSPViolationReportBody"/> interface indicates whether the user agent is configured to enforce <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP">Content Security Policy (CSP)</see> violations or only report them.
+</summary>
+<remarks>
+<para>-<see cref="SecurityPolicyViolationEvent.Disposition"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSPViolationReportBody/disposition"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>Possible values are:</value>
+</CSPViolationReportBodyDisposition>
+<CSPViolationReportBodyDocumentURL>
+<summary>
+The <strong><c>documentURL</c></strong> read-only property of the <see cref="CSPViolationReportBody"/> interface is a string that represents the URL of the document or worker that violated the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP">Content Security Policy (CSP)</see>.
+</summary>
+<remarks>
+<para>-<see cref="SecurityPolicyViolationEvent.DocumentURI"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSPViolationReportBody/documentURL"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing the URL of the document or worker that violated the CSP.</value>
+</CSPViolationReportBodyDocumentURL>
+<CSPViolationReportBodyEffectiveDirective>
+<summary>
+The <strong><c>effectiveDirective</c></strong> read-only property of the <see cref="CSPViolationReportBody"/> interface is a string that represents the effective <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP">Content Security Policy (CSP)</see> directive that was violated.
+</summary>
+<remarks>
+<para>Note that this contains the specific directive that was effectively violated, such as <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src-elem"><c>script-src-elem</c></see> for violations related to script elements, and not the policy that was specified, which may have been the (more general) <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/default-src"><c>default-src</c></see>.</para>
+<para>-<see cref="SecurityPolicyViolationEvent.EffectiveDirective"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSPViolationReportBody/effectiveDirective"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing the effective <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#directives"><c>Content-Security-Policy</c> directive</see> that was violated.</value>
+</CSPViolationReportBodyEffectiveDirective>
+<CSPViolationReportBodyLineNumber>
+<summary>
+The <strong><c>lineNumber</c></strong> read-only property of the <see cref="CSPViolationReportBody"/> interface indicates the line number in the source file that triggered the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP">Content Security Policy (CSP)</see> violation.
+</summary>
+<remarks>
+<para>Note that the browser extracts the value from <strong>the global object</strong> of the file that triggered the violation.<br/>If the resource that triggers the CSP violation is not loaded, the value will be <c>null</c>.<br/>See <see cref="CSPViolationReportBody.SourceFile"/> for more information.</para><para>This property is most useful alongside <see cref="CSPViolationReportBody.SourceFile"/> and <see cref="CSPViolationReportBody.ColumnNumber"/>, as it provides the location of the line in that file and the column that resulted in a violation.</para>
+<para>-<see cref="SecurityPolicyViolationEvent.LineNumber"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSPViolationReportBody/lineNumber"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer containing the line number that triggered the violation, or <c>null</c>.</value>
+</CSPViolationReportBodyLineNumber>
+<CSPViolationReportBodyOriginalPolicy>
+<summary>
+The <strong><c>originalPolicy</c></strong> read-only property of the <see cref="CSPViolationReportBody"/> interface is a string that represents the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP">Content Security Policy (CSP)</see> whose enforcement uncovered the violation.
+</summary>
+<remarks>
+<para>This is the string in the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy">Content-Security-Policy</see> HTTP response header that contains the list of <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#directives">directives</see> and their values that make the CSP policy.<br/>Note that differs from the <see cref="CSPViolationReportBody.EffectiveDirective"/>, which is the specific directive that is effectively being violated (and which might not be explicitly listed in the policy if <c>default-src</c> is used).</para>
+<para>-<see cref="SecurityPolicyViolationEvent.OriginalPolicy"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSPViolationReportBody/originalPolicy"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing the policy whose enforcement uncovered the violation.</value>
+</CSPViolationReportBodyOriginalPolicy>
+<CSPViolationReportBodyReferrer>
+<summary>
+The <strong><c>referrer</c></strong> read-only property of the <see cref="CSPViolationReportBody"/> interface is a string that represents the URL of the referring page of the resource who's <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP">Content Security Policy (CSP)</see> was violated.
+</summary>
+<remarks>
+<para>The referrer is the page that caused the page with the CSP violation to be loaded. For example, if we followed a link to a page with a CSP violation, the <c>referrer</c> is the page that we navigated from.</para>
+<para>-<see cref="SecurityPolicyViolationEvent.Referrer"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referer">Referer</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSPViolationReportBody/referrer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing the URL for the referrer of the page with the CSP violation, or null.Note that if the referrer is an HTTP(S) URL then any username, password or fragment is removed.<br/>If the URL scheme is not <c>http:</c> or <c>https:</c> then just the scheme is returned.</value>
+</CSPViolationReportBodyReferrer>
+<CSPViolationReportBodySample>
+<summary>
+The <strong><c>sample</c></strong> read-only property of the <see cref="CSPViolationReportBody"/> interface is a string that contains a part of the resource that violated the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP">Content Security Policy (CSP)</see>.
+</summary>
+<remarks>
+<para>This sample is usually the first 40 characters of the inline script, event handler, or style that violated a CSP restriction.<br/>If not populated it is the empty string <c>&amp;quot;&amp;quot;</c>.</para><para>Note that this is only populated when attempting to load <strong>inline</strong> scripts, event handlers, or styles that violate CSP <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src"><c>script-src*</c></see> and <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/style-src"><c>style-src*</c></see> rules — external resources that violate the CSP will not generate a sample.<br/>In addition, a sample is only included if the <c>Content-Security-Policy</c> directive that was violated also contains the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#report-sample"><c>&amp;apos;report-sample&amp;apos;</c></see> keyword.</para><blockquote class="NOTE"><h5>NOTE</h5><para>Violation reports should be considered attacker-controlled data.<br/>The content of this field <strong>in particular</strong> should be sanitized before storing or rendering.</para></blockquote>
+<para>-<see cref="SecurityPolicyViolationEvent.Sample"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSPViolationReportBody/sample"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing a sample of the inline resource that violated the CSP, usually the first 40 characters, or the empty string.</value>
+</CSPViolationReportBodySample>
+<CSPViolationReportBodySourceFile>
+<summary>
+The <strong><c>sourceFile</c></strong> read-only property of the <see cref="CSPViolationReportBody"/> interface indicates the URL of the source file that violated the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP">Content Security Policy (CSP)</see>.
+</summary>
+<remarks>
+<para>For a violation triggered by the use of an inline script, <c>sourceFile</c> is the URL of the current document.<br/>Similarly, if a document successfully loads a script that then violates the document CSP, the <c>sourceFile</c> is the URL of the script.</para><para>Note however that if a document with a CSP that blocks external resources attempts to load an external resource, <c>sourceFile</c> will be <c>null</c>.<br/>This is because the browser extracts the value from <strong>the global object</strong> of the file that triggered the violation.<br/>Because of the CSP restriction the external resource is never loaded, and therefore has no corresponding global object.</para><para>This property is most useful alongside <see cref="CSPViolationReportBody.LineNumber"/> and <see cref="CSPViolationReportBody.ColumnNumber"/>, which provide the location within the file that resulted in a violation.</para>
+<para>-<see cref="SecurityPolicyViolationEvent.SourceFile"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSPViolationReportBody/sourceFile"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing the URL of the file that triggered the violation, or <c>null</c>.</value>
+</CSPViolationReportBodySourceFile>
+<CSPViolationReportBodyStatusCode>
+<summary>
+The <strong><c>statusCode</c></strong> read-only property of the <see cref="CSPViolationReportBody"/> interface is a number representing the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status">HTTP status code</see> of the response to the request that triggered a <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP">Content Security Policy (CSP)</see> violation (when loading a window or worker).
+</summary>
+<remarks>
+<para>-<see cref="SecurityPolicyViolationEvent.StatusCode"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSPViolationReportBody/statusCode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number representing the HTTP status code of the response to the request that triggered the CSP violation.</value>
+</CSPViolationReportBodyStatusCode>
+<CSPViolationReportBodyToJSON>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>toJSON()</c></strong> method of the <see cref="CSPViolationReportBody"/> interface is a <strong>serializer</strong>, which returns a JSON representation of the <c>CSPViolationReportBody</c> object.
+</summary>
+<remarks>
+<para>The existence of a <c>toJSON()</c> method allows <c>CSPViolationReportBody</c> objects to be converted to a string using the <see cref="JSONStringify"/> method.</para><para>This is used by the reporting API when creating a serialized version of a violation report to send to a reporting endpoint.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSPViolationReportBody/toJSON"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A JSON object that is the serialization of the <see cref="CSPViolationReportBody"/> object.</returns>
+</CSPViolationReportBodyToJSON>
 </docs>

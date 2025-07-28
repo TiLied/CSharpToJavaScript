@@ -4,9 +4,273 @@
 A <strong><c>Selection</c></strong> object represents the range of text selected by the user or the current position of the caret. Each <see cref="Document"/> is associated with a unique selection object, which can be retrieved by <see cref="Document.GetSelection"/> or <see cref="Window.GetSelection"/> and then be examined and modified.
 </summary>
 <remarks>
-<para>A user may make a selection from left to right (in document order) or right to left (reverse of document order). The <strong><strong>anchor</strong></strong> is where the user began the selection and the <strong><strong>focus</strong></strong> is where the user ends the selection. If you make a selection with a desktop mouse, the anchor is placed where you pressed the mouse button, and the focus is placed where you released the mouse button.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> <strong>Anchor</strong> and <strong>focus</strong> should not be confused with the <strong>start</strong> and <strong>end</strong> positions of a selection. The anchor can be placed before the focus or vice versa, depending on the direction you made your selection.</para></blockquote>
-<para>-<see cref="Window.GetSelection"/>, <see cref="Document.GetSelection"/>, <see cref="Range"/><br/>-Selection-related events: <see cref="Document/selectionchange_event"/> and <see cref="Node/selectstart_event"/><br/>-HTML inputs provide simpler helper APIs for working with selection (see <see cref="HTMLInputElement.SetSelectionRange"/>)<br/>-<see cref="Document.ActiveElement"/>, <see cref="HTMLElement.Focus"/>, and <see cref="HTMLElement.Blur"/><br/></para>
+<para>A user may make a selection from left to right (in document order) or right to left (reverse of document order). The <strong><strong>anchor</strong></strong> is where the user began the selection and the <strong><strong>focus</strong></strong> is where the user ends the selection. If you make a selection with a desktop mouse, the anchor is placed where you pressed the mouse button, and the focus is placed where you released the mouse button.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Anchor</strong> and <strong>focus</strong> should not be confused with the <strong>start</strong> and <strong>end</strong> positions of a selection. The anchor can be placed before the focus or vice versa, depending on the direction you made your selection.</para></blockquote>
+<para>-<see cref="Window.GetSelection"/>, <see cref="Document.GetSelection"/>, <see cref="Range"/><br/>-Selection-related events: <see cref="Documentselectionchange"/> and <see cref="Nodeselectstart"/><br/>-HTML inputs provide simpler helper APIs for working with selection (see <see cref="HTMLInputElement.SetSelectionRange"/>)<br/>-<see cref="Document.ActiveElement"/>, <see cref="HTMLElement.Focus"/>, and <see cref="HTMLElement.Blur"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Selection"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </Selection>
+<SelectionAddRange>
+<summary>
+The <strong><c>Selection.addRange()</c></strong> method adds a<br/><see cref="Range"/> to a <see cref="Selection"/>.
+</summary>
+<remarks>
+<para>-<see cref="Selection"/>, the interface this method belongs to<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Selection/addRange"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</SelectionAddRange>
+<SelectionAnchorNode>
+<summary>
+The <strong><c>Selection.anchorNode</c></strong> read-only property returns the <see cref="Node"/> in which the selection begins. It can return <c>null</c> if selection never existed in the document (e.g., an iframe that was never clicked on, or the node belongs to another document tree).
+</summary>
+<remarks>
+<para>A user may make a selection from left to right (in document order) or right to left (reverse of document order). The anchor is where the user began the selection. This can be visualized by holding the &amp;lt;kbd&amp;gt;Shift&amp;lt;/kbd&amp;gt; key and pressing the arrow keys on your keyboard. The selection&amp;apos;s anchor does not move, but the selection&amp;apos;s focus, the other end of the selection, does move.</para>
+<para>-<see cref="Selection"/><br/>-<see cref="Selection.FocusNode"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Selection/anchorNode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Node"/> object or <c>null</c>.</value>
+</SelectionAnchorNode>
+<SelectionAnchorOffset>
+<summary>
+The <strong><c>Selection.anchorOffset</c></strong> read-only property returns the<br/>number of characters that the selection&amp;apos;s anchor is offset within the<br/><see cref="Selection.AnchorNode"/> if said node is of type <see cref="Text"/>, <see cref="CDATASection"/> or <see cref="Comment"/>.
+</summary>
+<remarks>
+<para>In the case of <see cref="Selection.AnchorNode"/> being another type of node, <strong><c>Selection.anchorOffset</c></strong> returns the number of <see cref="Node.ChildNodes"/> the selection's anchor is offset within the <see cref="Selection.AnchorNode"/>.</para><para>This number is zero-based. If the selection begins with the first character in the<br/><see cref="Selection.AnchorNode"/>, <c>0</c> is returned.</para>
+<para>-<see cref="Selection"/>, the interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Selection/anchorOffset"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</SelectionAnchorOffset>
+<SelectionCollapse>
+<summary>
+The <strong><c>Selection.collapse()</c></strong> method collapses the current selection to a single point. The document is not modified. If the content is focused and editable, the caret will blink there.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This method is an alias for the <see cref="Selection.SetPosition"/> method.</para></blockquote>
+<para>-<see cref="Selection.SetPosition"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Selection/collapse"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</SelectionCollapse>
+<SelectionCollapseToEnd>
+<summary>
+The <strong><c>Selection.collapseToEnd()</c></strong> method collapses the<br/>selection to the end of the last range in the selection. If the content of the selection<br/>is focused and editable, the caret will blink there.
+</summary>
+<remarks>
+<para>-<see cref="Selection"/>, the interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Selection/collapseToEnd"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</SelectionCollapseToEnd>
+<SelectionCollapseToStart>
+<summary>
+The <strong><c>Selection.collapseToStart()</c></strong> method collapses the<br/>selection to the start of the first range in the selection. If the content of the<br/>selection is focused and editable, the caret will blink there.
+</summary>
+<remarks>
+<para>-<see cref="Selection"/>, the interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Selection/collapseToStart"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</SelectionCollapseToStart>
+<SelectionContainsNode>
+<summary>
+The <strong><c>Selection.containsNode()</c></strong> method indicates whether a<br/>specified node is part of the selection.
+</summary>
+<remarks>
+<para>-<see cref="Selection"/>, the interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Selection/containsNode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Returns <c>true</c> if the given node is part of the selection, and <c>false</c> otherwise.</returns>
+</SelectionContainsNode>
+<SelectionDeleteFromDocument>
+<summary>
+The <strong><c>deleteFromDocument()</c></strong> method of the<br/><see cref="Selection"/> interface invokes the <see cref="Range.DeleteContents"/> method on the selected <see cref="Range"/>.
+</summary>
+<remarks>
+<para>-<see cref="Selection"/>, the interface defining this method<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Selection/deleteFromDocument"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</SelectionDeleteFromDocument>
+<SelectionDirection>
+<summary>
+The <strong><c>direction</c></strong> read-only property of the <see cref="Selection"/> interface is a string that provides the direction of the current selection.
+</summary>
+<remarks>
+<para>The value is determined by the order in which the user chooses the boundary points of the selection.<br/>For example, a user might make a selection by clicking a starting boundary point, dragging the cursor, and releasing at an end boundary point.<br/>If the end boundary point is later in the document than the start point, then the direction is &amp;quot;forwards&amp;quot;, while the direction is &amp;quot;backwards&amp;quot; if the end point is before the start point within the document.<br/>The value is &amp;quot;directionless&amp;quot; if no direction is implied by the user. For example, if the user made the selection by double-clicking on a word or element, or the selection was made programmatically.</para><para>The direction does not change if a selection's range is mutated, for example, using methods like <see cref="Range.SelectNode"/>.</para>
+<para>-<see cref="Selection"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Selection/direction"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string describing the type of the current selection.<br/>Possible values are:</value>
+</SelectionDirection>
+<SelectionEmpty>
+<summary>
+The <strong><c>Selection.empty()</c></strong> method removes all ranges from the selection, leaving the <see cref="Selection.AnchorNode"/> and <see cref="Selection.FocusNode"/> properties equal to <c>null</c> and nothing selected. When this method is called, a <see cref="Documentselectionchange"/> event is fired at the document.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This method is an alias for the <see cref="Selection.RemoveAllRanges"/> method.</para></blockquote>
+<para>-<see cref="Selection.RemoveAllRanges"/><br/>-<see cref="Documentselectionchange"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Selection/empty"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</SelectionEmpty>
+<SelectionExtend>
+<summary>
+The <strong><c>Selection.extend()</c></strong> method moves the focus of the<br/>selection to a specified point. The anchor of the selection does not move. The selection<br/>will be from the anchor to the new focus, regardless of direction.
+</summary>
+<remarks>
+<para>-<see cref="Selection"/>, the interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Selection/extend"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</SelectionExtend>
+<SelectionFocusNode>
+<summary>
+The <strong><c>Selection.focusNode</c></strong> read-only property returns the <see cref="Node"/> in which the selection ends. It can return <c>null</c> if selection never existed in the document (e.g., an iframe that was never clicked on, or the node belongs to another document tree).
+</summary>
+<remarks>
+<para>A user may make a selection from left to right (in document order) or right to left (reverse of document order). The focus is where the user ended the selection. This can be visualized by holding the &amp;lt;kbd&amp;gt;Shift&amp;lt;/kbd&amp;gt; key and pressing the arrow keys on your keyboard. The selection&amp;apos;s focus moves, but the selection&amp;apos;s anchor, the other end of the selection, does not move.</para>
+<para>-<see cref="Selection"/><br/>-<see cref="Selection.AnchorNode"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Selection/focusNode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Node"/> object or <c>null</c>.</value>
+</SelectionFocusNode>
+<SelectionFocusOffset>
+<summary>
+The <strong><c>Selection.focusOffset</c></strong> read-only property returns the<br/>number of characters that the selection&amp;apos;s focus is offset within the<br/><see cref="Selection.FocusNode"/> if said node is of type <see cref="Text"/>, <see cref="CDATASection"/> or <see cref="Comment"/>.
+</summary>
+<remarks>
+<para>In the case of <see cref="Selection.FocusNode"/> being another type of node, <strong><c>Selection.focusOffset</c></strong> returns the number of <see cref="Node.ChildNodes"/> the selection's focus is offset within the <see cref="Selection.FocusNode"/>.</para><para>This number is zero-based. If the selection ends with the first character in the<br/><see cref="Selection.FocusNode"/>, <c>0</c> is returned.</para>
+<para>-<see cref="Selection"/>, the interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Selection/focusOffset"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</SelectionFocusOffset>
+<SelectionGetComposedRanges>
+<summary>
+The <strong><c>Selection.getComposedRanges()</c></strong> method returns an array of <see cref="StaticRange"/> objects representing the current selection ranges, and can return ranges that potentially cross shadow boundaries.
+</summary>
+<remarks>
+<para>As the selection range endpoints may be within a shadow tree, or even different shadow trees, and because these may be closed, the method cannot by default return nodes from within a shadow tree.<br/>If the method needs to return a selection that includes nodes inside shadow trees, then the <see cref="ShadowRoot"/> objects for these trees must be passed as arguments to the method.<br/>If a corresponding roots are not provided and the start or endpoint of the selection are within a shadow tree, the returned range is re-scoped to include the host of the shadow root rather than some node with in the root.</para><para>The returned ranges represent the range at the time that <c>getComposedRanges()</c> was called.<br/>If the DOM or a shadow DOM is mutated, the selected range is likely to be incorrect.<br/>Application code might use a <see cref="MutationObserver"/> to monitor for DOM mutations and then call <see cref="Selection.SetBaseAndExtent"/> to update the selection.</para><blockquote class="NOTE"><h5>NOTE</h5><para>This method should be used instead of <see cref="Selection.GetRangeAt"/> when selecting ranges that can potentially cross shadow root boundaries.<br/><see cref="Selection.GetRangeAt"/> is not aware of shadow roots.<br/>The returned range is not specified, and varies between browsers.</para></blockquote>
+<para>-<see cref="Selection"/>, the interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Selection/getComposedRanges"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An array of <see cref="StaticRange"/> objects that represent the selected ranges within the composed (flattened) tree of the document.<br/>At time of writing the specification expects this array to only contain one object.</returns>
+</SelectionGetComposedRanges>
+<SelectionGetRangeAt>
+<summary>
+The <strong><c>getRangeAt()</c></strong> method of the <see cref="Selection"/> interface returns a range object representing a currently selected range.
+</summary>
+<remarks>
+<para>If the endpoints of the selected range are within a <see href="https://developer.mozilla.org/en-US/docs/Glossary/shadow tree">shadow tree</see> then JavaScript does not have visibility of the shadow nodes, and the method should re-scope the range to include the host element that contains the end point.<br/>In practice most browsers do not yet implement this behavior, and the returned range is unpredictable.</para><blockquote class="NOTE"><h5>NOTE</h5><para>When selecting within nodes that might contain a shadow root, you can use <see cref="Selection.GetComposedRanges"/> (if supported) to get a selection range inside a shadow tree, or to reliably re-scope the selection to the host node.</para></blockquote>
+<para>-<see cref="Selection"/>, the interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Selection/getRangeAt"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>The specified <see cref="Range"/> object.</returns>
+</SelectionGetRangeAt>
+<SelectionIsCollapsed>
+<summary>
+The <strong><c>Selection.isCollapsed</c></strong> read-only property returns a<br/>boolean value which indicates whether or not there is currently any text<br/>selected. No text is selected when the selection&amp;apos;s start and end points are at the same<br/>position in the content.
+</summary>
+<remarks>
+<para>Keep in mind that a collapsed selection may still have one (or more, in Gecko)<br/><see cref="Range"/>s, so <see cref="Selection.RangeCount"/> may not be zero. In that<br/>scenario, calling a <see cref="Selection"/> object's <see cref="Selection.GetRangeAt"/><br/>method may return a <c>Range</c> object which is collapsed.</para>
+<para>-<see cref="Selection"/><br/>-<see cref="Range"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Selection/isCollapsed"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean.</value>
+</SelectionIsCollapsed>
+<SelectionModify>
+<summary>
+The <strong><c>Selection.modify()</c></strong> method applies a change to the<br/>current selection or cursor position, using simple textual commands.
+</summary>
+<remarks>
+<para>-<see cref="Selection"/>, the interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Selection/modify"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</SelectionModify>
+<SelectionRangeCount>
+<summary>
+The <strong><c>Selection.rangeCount</c></strong> read-only property returns the<br/>number of ranges in the selection.
+</summary>
+<remarks>
+<para>Before the user has clicked a freshly loaded page, the <c>rangeCount</c> is<br/><c>0</c>. After the user clicks on the page, <c>rangeCount</c> is<br/><c>1</c>, even if no selection is visible.</para><para>A user can normally only select one range at a time, so the <c>rangeCount</c><br/>will usually be <c>1</c>. Scripting can be used to make the selection contain more<br/>than one range.</para><para>Gecko browsers allow multiple selections across table cells. Firefox allows to select<br/>multiple ranges in the document by using Ctrl+click (unless the click occurs within an<br/>element that has the <c>display: table-cell</c> CSS property assigned).</para>
+<para>-<see cref="Selection"/>, the interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Selection/rangeCount"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</SelectionRangeCount>
+<SelectionRemoveAllRanges>
+<summary>
+The <strong><c>Selection.removeAllRanges()</c></strong> method removes all ranges from the selection, leaving the <see cref="Selection.AnchorNode"/> and <see cref="Selection.FocusNode"/> properties equal to <c>null</c> and nothing selected. When this method is called, a <see cref="Documentselectionchange"/> event is fired at the document.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This method is an alias for the <see cref="Selection.Empty"/> method.</para></blockquote>
+<para>-<see cref="Selection.Empty"/><br/>-<see cref="Documentselectionchange"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Selection/removeAllRanges"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</SelectionRemoveAllRanges>
+<SelectionRemoveRange>
+<summary>
+The <strong><c>Selection.removeRange()</c></strong> method removes a range from a<br/>selection.
+</summary>
+<remarks>
+<para>-<see cref="Selection"/>, the interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Selection/removeRange"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</SelectionRemoveRange>
+<SelectionSelectAllChildren>
+<summary>
+The <strong><c>Selection.selectAllChildren()</c></strong> method adds all the<br/>children of the specified node to the selection. Previous selection is lost.
+</summary>
+<remarks>
+<para>-<see cref="Selection"/>, the interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Selection/selectAllChildren"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</SelectionSelectAllChildren>
+<SelectionSetBaseAndExtent>
+<summary>
+The <strong><c>setBaseAndExtent()</c></strong> method of the <see cref="Selection"/> interface sets the selection to be a range including all or parts of two specified DOM nodes, and any content located between them.
+</summary>
+<remarks>
+<para>The anchor and focus nodes can be located in a <see href="https://developer.mozilla.org/en-US/docs/Glossary/shadow tree">shadow tree</see>, if supported by the browser.</para>
+<para>-<see cref="Selection"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Selection/setBaseAndExtent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</SelectionSetBaseAndExtent>
+<SelectionSetPosition>
+<summary>
+The <strong><c>Selection.setPosition()</c></strong> method collapses the current selection to a single point. The document is not modified. If the content is focused and editable, the caret will blink there.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This method is an alias for the <see cref="Selection.Collapse"/> method.</para></blockquote>
+<para>-<see cref="Selection.Collapse"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Selection/setPosition"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</SelectionSetPosition>
+<SelectionToString>
+<summary>
+The <strong><c>Selection.toString()</c></strong> method returns a string<br/>currently being represented by the selection object, i.e., the currently selected text.
+</summary>
+<remarks>
+<para>-<see cref="Selection"/>, the interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Selection/toString"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A string representing the selection.</returns>
+</SelectionToString>
+<SelectionType>
+<summary>
+The <strong><c>type</c></strong> read-only property of the<br/><see cref="Selection"/> interface returns a string describing the<br/>type of the current selection.
+</summary>
+<remarks>
+<para>-<see cref="Selection"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Selection/type"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string describing the type of the current selection. Possible<br/>values are:</value>
+</SelectionType>
 </docs>

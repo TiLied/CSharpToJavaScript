@@ -7,4 +7,32 @@ The <strong><c>MediaKeys</c></strong> interface of <see href="https://developer.
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeys"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </MediaKeys>
+<MediaKeysCreateSession>
+<summary>
+The <c>createSession()</c> method of the <see cref="MediaKeys"/> interface returns a new <see cref="MediaKeySession"/> object, which represents a context for message exchange with a content decryption module (CDM).
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeys/createSession"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="MediaKeySession"/> object.</returns>
+</MediaKeysCreateSession>
+<MediaKeysGetStatusForPolicy>
+<summary>
+The <c>getStatusForPolicy()</c> method of the <see cref="MediaKeys"/> interface is used to check whether the Content Decryption Module (CDM) would allow the presentation of encrypted media data using the keys, based on the specified policy requirements.
+</summary>
+<remarks>
+<para>The method returns a <see cref="Promise"/> that resolves with a string that indicates the status of the key with respect to all the specified policy requirements.<br/>If the value resolves to <c>&amp;quot;usable&amp;quot;</c> then the content can be decrypted and presented at the ideal quality.<br/>Other values indicate reasons why the keys cannot be used for presenting the content; in some cases they hint at fallback options, such as playing the content at a lower quality.</para><para>The policy restrictions currently only include a restriction on the minimum supported HDCP version.</para><para>Note that the method checks a &amp;quot;hypothetical key&amp;quot; against the restrictions.<br/>The application does not need to first create a real key and fetch a real license using <see cref="MediaKeySession"/>, and the <see cref="MediaKeys"/> doesn't even have to be attached to audio or video elements.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeys/getStatusForPolicy"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves with a string indicating whether the key can be used for decryption given the specified policy.The string can have one of the following values:</returns>
+</MediaKeysGetStatusForPolicy>
+<MediaKeysSetServerCertificate>
+<summary>
+The <strong><c>setServerCertificate()</c></strong> method of the <see cref="MediaKeys"/> interface provides a server certificate to be used to encrypt messages to the license server.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeys/setServerCertificate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="'Promise'"/> that resolves to a boolean. If the Key System implementation represented by this object's content decryption module's implementation value does not support server certificates, return a promise resolved with false.</returns>
+</MediaKeysSetServerCertificate>
 </docs>

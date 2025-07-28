@@ -9,4 +9,140 @@ The <strong><c>HTMLCanvasElement</c></strong> interface provides properties and 
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </HTMLCanvasElement>
+<HTMLCanvasElementCaptureStream>
+<summary>
+The <strong><c>captureStream()</c></strong> method of the <see cref="HTMLCanvasElement"/> interface returns a <see cref="MediaStream"/><br/>which includes a <see cref="CanvasCaptureMediaStreamTrack"/> containing a real-time video capture of the canvas's contents.
+</summary>
+<remarks>
+<para>-<see cref="HTMLMediaElement.CaptureStream"/>, which allows capturing a stream<br/>from a media element.<br/>-<see cref="MediaStream"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API">Media Capture and Streams API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/captureStream"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A reference to a <see cref="MediaStream"/> object, which has a single<br/><see cref="CanvasCaptureMediaStreamTrack"/> in it.</returns>
+</HTMLCanvasElementCaptureStream>
+<HTMLCanvasElementContextlost>
+<summary>
+The <strong><c>contextlost</c></strong> event of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas API</see> is fired if the user agent detects that the backing storage associated with a <see href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D"><c>CanvasRenderingContext2D</c></see> context is lost.<br/>Contexts can be lost for several reasons like driver crashes or the application runs out of memory, etc.
+</summary>
+<remarks>
+<para>By default the user agent will attempt to restore the context and then fire the <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/contextrestored_event"><c>contextrestored</c> event</see>.<br/>User code can prevent the context from being restored by calling <see href="https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault"><c>Event.preventDefault()</c></see> during event handling.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/contextrestored_event"><c>HTMLCanvasElement: contextrestored</c> event</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/isContextLost"><c>CanvasRenderingContext2D.isContextLost()</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas/contextlost_event"><c>OffscreenCanvas: contextlost</c> event</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/contextlost"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLCanvasElementContextlost>
+<HTMLCanvasElementContextrestored>
+<summary>
+The <strong><c>contextrestored</c></strong> event of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas API</see> is fired if the user agent restores the backing storage for a <see href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D"><c>CanvasRenderingContext2D</c></see>.
+</summary>
+<remarks>
+<para>You can redraw, re-retrieve resources, and reinitialize the state of your context after receiving this event.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/contextlost_event"><c>HTMLCanvasElement</c>: <c>contextlost</c> event</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/isContextLost"><c>CanvasRenderingContext2D.isContextLost()</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas/contextlost_event"><c>OffscreenCanvas</c>: <c>contextlost</c> event</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/contextrestored"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLCanvasElementContextrestored>
+<HTMLCanvasElementGetContext>
+<summary>
+The <strong><c>HTMLCanvasElement.getContext()</c></strong> method returns a drawing context on the canvas, or <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><c>null</c></see> if the context identifier is not supported, or the canvas has already been set to a different context mode.
+</summary>
+<remarks>
+<para>Later calls to this method on the same canvas element, with the same <c>contextType</c> argument, will always return the same drawing context instance as was returned the first time the method was invoked. It is not possible to get a different drawing context object on a given canvas element.</para>
+<para>-<see cref="HTMLCanvasElement"/>: Interface used to define the <c>HTMLCanvasElement.getContext()</c> method<br/>-<see cref="OffscreenCanvas.GetContext"/><br/>-<see cref="CanvasRenderingContext2D.GetContextAttributes"/>, <see cref="WebGLRenderingContext.GetContextAttributes"/><br/>-<see cref="CanvasRenderingContext2D"/>, <see cref="ImageBitmapRenderingContext"/>,<br/><see cref="WebGLRenderingContext"/>, <see cref="WebGL2RenderingContext"/>, <see cref="GPUCanvasContext"/>: Available rendering contexts<br/>-<see href="https://en.wikipedia.org/wiki/DCI-P3">DCI-P3 color space</see> on Wikipedia<br/>-<see href="https://en.wikipedia.org/wiki/SRGB">sRGB color space</see> on Wikipedia<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A rendering context which is either aIf the context identifier is not supported, or the canvas has already been set to a different context mode, <c>null</c> is returned.</returns>
+</HTMLCanvasElementGetContext>
+<HTMLCanvasElementHeight>
+<summary>
+The <strong><c>HTMLCanvasElement.height</c></strong> property is a<br/>positive <c>integer</c> reflecting the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/canvas#height"><c>height</c></see> HTML<br/>attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas">canvas</see> element interpreted in CSS pixels. When the<br/>attribute is not specified, or if it is set to an invalid value, like a negative, the<br/>default value of <c>150</c> is used.
+</summary>
+<remarks>
+<para>Setting the <c>height</c> property resets the entire rendering context to its default state. This includes clearing the canvas (backing buffer), resetting the current path, and resetting <strong>all</strong> properties like <c>fillStyle</c> and <c>globalCompositeOperation</c>. This reset occurs for all context types, and occurs even when setting <c>height</c> to its current value. To restore the previous content after changing the height, use <see cref="CanvasRenderingContext2D.GetImageData"/> and <see cref="CanvasRenderingContext2D.PutImageData"/>. Context properties must be separately tracked and restored.</para><para>This is one of the two properties, the other being<br/><see cref="HTMLCanvasElement.Width"/>, that controls the size of the canvas.</para>
+<para>-<see cref="HTMLCanvasElement"/>: Interface used to define the <c>HTMLCanvasElement.height</c> property<br/>-<see cref="HTMLCanvasElement.Width"/>: Other property used to control the size of the canvas<br/>-<see cref="HTMLEmbedElement.Height"/><br/>-<see cref="HTMLIFrameElement.Height"/><br/>-<see cref="HTMLImageElement.Height"/><br/>-<see cref="HTMLObjectElement.Height"/><br/>-<see cref="HTMLSourceElement.Height"/><br/>-<see cref="HTMLVideoElement.Height"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/height"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</HTMLCanvasElementHeight>
+<HTMLCanvasElementMozOpaque>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The non-standard <strong><c>HTMLCanvasElement.mozOpaque</c></strong> property is<br/>a boolean value reflecting the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/canvas#moz-opaque"><c>moz-opaque</c></see> HTML<br/>attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas">canvas</see> element. It lets the canvas know whether or<br/>not translucency will be a factor. If the canvas knows there&amp;apos;s no translucency, painting<br/>performance can be optimized.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This has been standardized as setting the <c>alpha</c> option to<br/><c>false</c> when creating a drawing context with<br/><see cref="HTMLCanvasElement.GetContext"/>. Use of <c>mozOpaque</c> should be<br/>avoided. Firefox will stop supporting it in the future.</para></blockquote>
+<para>-<see cref="HTMLCanvasElement"/>: Interface used to define the <c>HTMLCanvasElement.mozOpaque</c> property<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/canvas#moz-opaque"><c>moz-opaque</c></see>: HTML attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas">canvas</see> element<br/>-<see href="https://hacks.mozilla.org/2013/05/optimizing-your-javascript-game-for-firefox-os/">Optimizing your JavaScript game for Firefox OS</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/mozOpaque"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value.</value>
+</HTMLCanvasElementMozOpaque>
+<HTMLCanvasElementToBlob>
+<summary>
+The <strong><c>HTMLCanvasElement.toBlob()</c></strong> method creates a <see cref="Blob"/> object representing the image contained in the canvas.<br/>This file may be cached on the disk or stored in memory at the discretion of the user agent.
+</summary>
+<remarks>
+<para>The desired file format and image quality may be specified.<br/>If the file format is not specified, or if the given format is not supported, then the data will be exported as <c>image/png</c>.<br/>Browsers are required to support <c>image/png</c>; many will support additional formats including <c>image/jpeg</c> and <c>image/webp</c>.</para><para>The created image will have a resolution of 96dpi for file formats that support encoding resolution metadata.</para>
+<para>-<see cref="Blob"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toBlob"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</HTMLCanvasElementToBlob>
+<HTMLCanvasElementToDataURL>
+<summary>
+The <strong><c>HTMLCanvasElement.toDataURL()</c></strong> method returns a <see href="https://developer.mozilla.org/en-US/docs/Web/URI/Reference/Schemes/data">data URL</see> containing a representation of the image in the format specified by the <c>type</c> parameter.
+</summary>
+<remarks>
+<para>The desired file format and image quality may be specified.<br/>If the file format is not specified, or if the given format is not supported, then the data will be exported as <c>image/png</c>.<br/>In other words, if the returned value starts with <c>data:image/png</c> for any other requested <c>type</c>, then that format is not supported.</para><para>Browsers are required to support <c>image/png</c>; many will support additional formats including <c>image/jpeg</c> and <c>image/webp</c>.</para><para>The created image data will have a resolution of 96dpi for file formats that support encoding resolution metadata.</para><blockquote class="WARNING"><h5>WARNING</h5><para><c>toDataURL()</c> encodes the whole image in an in-memory string. For larger images, this can have performance implications, and may even overflow browsers' URL length limit when assigned to <see cref="HTMLImageElement.Src"/>. You should generally prefer <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toBlob"><c>toBlob()</c></see> instead, in combination with <see cref="URLcreateObjectURL"/>.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/URI/Reference/Schemes/data">Data URLs</see> in the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see> reference.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toDataURL"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A string containing the requested <see href="https://developer.mozilla.org/en-US/docs/Web/URI/Reference/Schemes/data">data URL</see>.If the height or width of the canvas is <c>0</c> or larger than the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/canvas#maximum_canvas_size">maximum canvas size</see>, the string <c>&amp;quot;data:,&amp;quot;</c> is returned.</returns>
+</HTMLCanvasElementToDataURL>
+<HTMLCanvasElementTransferControlToOffscreen>
+<summary>
+The <strong><c>HTMLCanvasElement.transferControlToOffscreen()</c></strong> method transfers control to an <see cref="OffscreenCanvas"/> object, either on the main thread or on a worker.
+</summary>
+<remarks>
+<para>-The interface defining this method, <see cref="HTMLCanvasElement"/><br/>-<see cref="OffscreenCanvas"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/transferControlToOffscreen"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="OffscreenCanvas"/> object.</returns>
+</HTMLCanvasElementTransferControlToOffscreen>
+<HTMLCanvasElementWebglcontextcreationerror>
+<summary>
+The <strong><c>webglcontextcreationerror</c></strong> event of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> is fired if the user agent is unable to create a <see cref="WebGLRenderingContext"/> context.
+</summary>
+<remarks>
+<para>This event has a <see cref="WebGLContextEvent.StatusMessage"/> property, which can contain a platform dependent string with more information about the failure.</para><para>This event does not bubble.</para>
+<para>-<see cref="WebGLContextEvent"/><br/>-<see cref="WebGLRenderingContext.IsContextLost"/><br/>-<see cref="WEBGL_lose_context"/>, <see cref="WEBGL_lose_context.LoseContext"/>, <see cref="WEBGL_lose_context.RestoreContext"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/webglcontextcreationerror"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLCanvasElementWebglcontextcreationerror>
+<HTMLCanvasElementWebglcontextlost>
+<summary>
+The <strong><c>webglcontextlost</c></strong> event of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> is fired if the user agent detects that the drawing buffer associated with a <see cref="WebGLRenderingContext"/> object has been lost.
+</summary>
+<remarks>
+<para>This event does not bubble.</para>
+<para>-<see cref="WebGLContextEvent"/><br/>-<see cref="WebGLRenderingContext.IsContextLost"/><br/>-<see cref="WEBGL_lose_context"/>, <see cref="WEBGL_lose_context.LoseContext"/>, <see cref="WEBGL_lose_context.RestoreContext"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/webglcontextlost"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLCanvasElementWebglcontextlost>
+<HTMLCanvasElementWebglcontextrestored>
+<summary>
+The <strong><c>webglcontextrestored</c></strong> event of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> is fired if the user agent restores the drawing buffer for a <see cref="WebGLRenderingContext"/> object.
+</summary>
+<remarks>
+<para>Once the context is restored, WebGL resources such as textures and buffers that were created before the context was lost are no longer valid. You need to reinitialize the state of your WebGL application and recreate resources.</para><para>This event does not bubble.</para>
+<para>-<see cref="WebGLContextEvent"/><br/>-<see cref="WebGLRenderingContext.IsContextLost"/><br/>-<see cref="WEBGL_lose_context"/>, <see cref="WEBGL_lose_context.LoseContext"/>, <see cref="WEBGL_lose_context.RestoreContext"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/webglcontextrestored"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLCanvasElementWebglcontextrestored>
+<HTMLCanvasElementWidth>
+<summary>
+The <strong><c>HTMLCanvasElement.width</c></strong> property is a<br/>positive <c>integer</c> reflecting the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/canvas#width"><c>width</c></see> HTML<br/>attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas">canvas</see> element interpreted in CSS pixels. When the<br/>attribute is not specified, or if it is set to an invalid value, like a negative, the<br/>default value of <c>300</c> is used.
+</summary>
+<remarks>
+<para>Setting the <c>width</c> property resets the entire rendering context to its default state. This includes clearing the canvas (backing buffer), resetting the current path, and resetting <strong>all</strong> properties like <c>fillStyle</c> and <c>globalCompositeOperation</c>. This reset occurs for all context types, and occurs even when setting <c>width</c> to its current value. To restore the previous content after changing the width, use <see cref="CanvasRenderingContext2D.GetImageData"/> and <see cref="CanvasRenderingContext2D.PutImageData"/>. Context properties must be separately tracked and restored.</para><para>This is one of the two properties, the other being<br/><see cref="HTMLCanvasElement.Height"/>, that controls the size of the canvas.</para>
+<para>-<see cref="HTMLCanvasElement"/>: Interface used to define the <c>HTMLCanvasElement.width</c> property<br/>-<see cref="HTMLCanvasElement.Height"/>: Other property used to control the size of the canvas<br/>-<see cref="HTMLEmbedElement.Width"/><br/>-<see cref="HTMLIFrameElement.Width"/><br/>-<see cref="HTMLImageElement.Width"/><br/>-<see cref="HTMLObjectElement.Width"/><br/>-<see cref="HTMLSourceElement.Width"/><br/>-<see cref="HTMLVideoElement.Width"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/width"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</HTMLCanvasElementWidth>
 </docs>

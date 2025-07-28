@@ -9,4 +9,153 @@ The <c>AudioContext</c> interface represents an audio-processing graph built fro
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContext"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </AudioContext>
+<AudioContextAudioContext>
+<summary>
+The <strong><c>AudioContext()</c></strong> constructor<br/>creates a new <see cref="AudioContext"/> object which represents an audio-processing<br/>graph, built from audio modules linked together, each represented by an<br/><see cref="AudioNode"/>.
+</summary>
+<remarks>
+<para>-<see cref="OfflineAudioContext.OfflineAudioContext"/> constructor<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/AudioContext"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="AudioContext"/> instance.</returns>
+</AudioContextAudioContext>
+<AudioContextBaseLatency>
+<summary>
+The <strong><c>baseLatency</c></strong> read-only property of the<br/><see cref="AudioContext"/> interface returns a double that represents the number of<br/>seconds of processing latency incurred by the <c>AudioContext</c> passing an audio<br/>buffer from the <see cref="AudioDestinationNode"/> — i.e., the end of the audio graph —<br/>into the host system&amp;apos;s audio subsystem ready for playing.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>You can request a certain latency during<br/>{{domxref(&amp;quot;AudioContext.AudioContext()&amp;quot;, &amp;quot;construction time&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;true&amp;quot;)}} with the<br/><c>latencyHint</c> option, but the browser may ignore the option.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/baseLatency"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A double representing the base latency in seconds.</value>
+</AudioContextBaseLatency>
+<AudioContextClose>
+<summary>
+The <c>close()</c> method of the <see cref="AudioContext"/> Interface closes the audio context, releasing any system audio resources that it uses.
+</summary>
+<remarks>
+<para>This function does not automatically release all <c>AudioContext</c>-created objects, unless other references have been released as well; however, it will forcibly release any system audio resources that might prevent additional <c>AudioContexts</c> from being created and used, suspend the progression of audio time in the audio context, and stop processing audio data. The returned <see cref="Promise"/> resolves when all <c>AudioContext</c>-creation-blocking resources have been released. This method throws an <c>INVALID_STATE_ERR</c> exception if called on an <see cref="OfflineAudioContext"/>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/close"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves with <see cref="'undefined'"/>.</returns>
+</AudioContextClose>
+<AudioContextCreateMediaElementSource>
+<summary>
+The <c>createMediaElementSource()</c> method of the <see cref="AudioContext"/> Interface is used to create a new <see cref="MediaElementAudioSourceNode"/> object, given an existing HTML {{htmlelement("audio")}} or {{htmlelement("video")}} element, the audio from which can then be played and manipulated.
+</summary>
+<remarks>
+<para>For more details about media element audio source nodes, check out the <see cref="MediaElementAudioSourceNode"/> reference page.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/createMediaElementSource"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="MediaElementAudioSourceNode"/>.</returns>
+</AudioContextCreateMediaElementSource>
+<AudioContextCreateMediaStreamDestination>
+<summary>
+The <c>createMediaStreamDestination()</c> method of the <see cref="AudioContext"/> Interface is used to create a new <see cref="MediaStreamAudioDestinationNode"/> object associated with a <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see> <see cref="MediaStream"/> representing an audio stream, which may be stored in a local file or sent to another computer.
+</summary>
+<remarks>
+<para>The <see cref="MediaStream"/> is created when the node is created and is accessible via the <see cref="MediaStreamAudioDestinationNode"/>'s <c>stream</c> attribute. This stream can be used in a similar way as a <c>MediaStream</c> obtained via <see cref="Navigator.GetUserMedia"/> — it can, for example, be sent to a remote peer using the <c>addStream()</c> method of <c>RTCPeerConnection</c>.</para><para>For more details about media stream destination nodes, check out the <see cref="MediaStreamAudioDestinationNode"/> reference page.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/createMediaStreamDestination"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="MediaStreamAudioDestinationNode"/>.</returns>
+</AudioContextCreateMediaStreamDestination>
+<AudioContextCreateMediaStreamSource>
+<summary>
+The <c>createMediaStreamSource()</c> method of the <see cref="AudioContext"/><br/>Interface is used to create a new <see cref="MediaStreamAudioSourceNode"/><br/>object, given a media stream (say, from a <see cref="MediaDevices.GetUserMedia"/><br/>instance), the audio from which can then be played and manipulated.
+</summary>
+<remarks>
+<para>For more details about media stream audio source nodes, check out the <see cref="MediaStreamAudioSourceNode"/> reference page.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/createMediaStreamSource"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="MediaStreamAudioSourceNode"/> object representing the audio node<br/>whose media is obtained from the specified source stream.</returns>
+</AudioContextCreateMediaStreamSource>
+<AudioContextCreateMediaStreamTrackSource>
+<summary>
+The <strong><c>createMediaStreamTrackSource()</c></strong> method of the <see cref="AudioContext"/> interface creates and returns a <see cref="MediaStreamTrackAudioSourceNode"/> which represents an audio source whose data comes from the specified <see cref="MediaStreamTrack"/>.
+</summary>
+<remarks>
+<para>This differs from <see cref="AudioContext.CreateMediaStreamSource"/>, which creates a <see cref="MediaStreamAudioSourceNode"/> whose audio comes from the audio track in a specified <see cref="MediaStream"/> whose <see cref="MediaStreamTrack.Id"/> is first, lexicographically (alphabetically).</para>
+<para>-Web Audio API<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/>-<see cref="MediaStreamTrackAudioSourceNode"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/createMediaStreamTrackSource"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="MediaStreamTrackAudioSourceNode"/> object which acts as a source for<br/>audio data found in the specified audio track.</returns>
+</AudioContextCreateMediaStreamTrackSource>
+<AudioContextGetOutputTimestamp>
+<summary>
+The<br/><strong><c>getOutputTimestamp()</c></strong> method of the<br/><see cref="AudioContext"/> interface returns a new <c>AudioTimestamp</c> object<br/>containing two audio timestamp values relating to the current audio context.
+</summary>
+<remarks>
+<para>The two values are as follows:</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/getOutputTimestamp"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <c>AudioTimestamp</c> object, which has the following properties.</returns>
+</AudioContextGetOutputTimestamp>
+<AudioContextOutputLatency>
+<summary>
+The <strong><c>outputLatency</c></strong> read-only property of<br/>the <see cref="AudioContext"/> Interface provides an estimation of the output latency<br/>of the current audio context.
+</summary>
+<remarks>
+<para>This is the time, in seconds, between the browser passing an audio buffer out of an<br/>audio graph over to the host system&amp;apos;s audio subsystem to play, and the time at which the<br/>first sample in the buffer is actually processed by the audio output device.</para><para>It varies depending on the platform and the available hardware.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/outputLatency"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A double representing the output latency in seconds.</value>
+</AudioContextOutputLatency>
+<AudioContextResume>
+<summary>
+The <strong><c>resume()</c></strong> method of the <see cref="AudioContext"/><br/>interface resumes the progression of time in an audio context that has previously been<br/>suspended.
+</summary>
+<remarks>
+<para>This method will cause an <c>INVALID_STATE_ERR</c> exception to be thrown if<br/>called on an <see cref="OfflineAudioContext"/>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/resume"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves when the context has resumed. The promise is<br/>rejected if the context has already been closed.</returns>
+</AudioContextResume>
+<AudioContextSetSinkId>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>setSinkId()</c></strong> method of the <see cref="AudioContext"/> interface sets the output audio device for the <c>AudioContext</c>. If a sink ID is not explicitly set, the default system audio output device will be used.
+</summary>
+<remarks>
+<para>To set the audio device to a device different than the default one, the developer needs permission to access to audio devices. If required, the user can be prompted to grant the required permission via a <see cref="MediaDevices.GetUserMedia"/> call.</para><para>In addition, this feature may be blocked by a <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/speaker-selection"><c>speaker-selection</c></see> <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Permissions_Policy">Permissions Policy</see>.</para>
+<para>-<see href="https://developer.chrome.com/blog/audiocontext-setsinkid/">Change the destination output device in Web Audio</see><br/>-<see cref="AudioContext.SinkId"/><br/>-<see cref="AudioContextsinkchange"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/setSinkId"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that fulfills with a value of <c>undefined</c>.Attempting to set the sink ID to its existing value (i.e., returned by <see cref="AudioContext.SinkId"/>), throws no errors, but it aborts the process immediately.</returns>
+</AudioContextSetSinkId>
+<AudioContextSinkchange>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>sinkchange</c></strong> event of the <see cref="AudioContext"/> interface is fired when the output audio device (and therefore, the <see cref="AudioContext.SinkId"/>) has changed.
+</summary>
+<remarks>
+<para>-<see href="https://developer.chrome.com/blog/audiocontext-setsinkid/">Change the destination output device in Web Audio</see><br/>-<see cref="AudioContext.SetSinkId"/><br/>-<see cref="AudioContext.SinkId"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/sinkchange"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</AudioContextSinkchange>
+<AudioContextSinkId>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>sinkId</c></strong> read-only property of the<br/><see cref="AudioContext"/> interface returns the sink ID of the current output audio device.
+</summary>
+<remarks>
+<para>-<see href="https://developer.chrome.com/blog/audiocontext-setsinkid/">Change the destination output device in Web Audio</see><br/>-<see cref="AudioContext.SetSinkId"/><br/>-<see cref="AudioContextsinkchange"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/sinkId"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>This property returns one of the following values, depending on how the sink ID was set:</value>
+</AudioContextSinkId>
+<AudioContextSuspend>
+<summary>
+The <c>suspend()</c> method of the <see cref="AudioContext"/> Interface suspends the progression of time in the audio context, temporarily halting audio hardware access and reducing CPU/battery usage in the process — this is useful if you want an application to power down the audio hardware when it will not be using an audio context for a while.
+</summary>
+<remarks>
+<para>This method will cause an <c>INVALID_STATE_ERR</c> exception to be thrown if called on an <see cref="OfflineAudioContext"/>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/suspend"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves with <see cref="'undefined'"/>. The promise is rejected if the context has already been closed.</returns>
+</AudioContextSuspend>
 </docs>

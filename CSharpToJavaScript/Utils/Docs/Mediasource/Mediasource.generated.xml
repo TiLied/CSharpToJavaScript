@@ -9,4 +9,159 @@ The <strong><c>MediaSource</c></strong> interface of the {{domxref(&amp;quot;Med
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaSource"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </MediaSource>
+<MediaSourceActiveSourceBuffers>
+<summary>
+The <strong><c>activeSourceBuffers</c></strong> read-only property of the<br/><see cref="MediaSource"/> interface returns a <see cref="SourceBufferList"/> object<br/>containing a subset of the <see cref="SourceBuffer"/> objects contained within<br/><see cref="MediaSource.SourceBuffers"/> — the list of objects<br/>providing the selected video track, enabled audio tracks, and shown/hidden text tracks.
+</summary>
+<remarks>
+<para>-<see cref="SourceBuffer"/><br/>-<see cref="SourceBufferList"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaSource/activeSourceBuffers"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="SourceBufferList"/> containing the <see cref="SourceBuffer"/> objects<br/>for each of the active tracks.</value>
+</MediaSourceActiveSourceBuffers>
+<MediaSourceAddSourceBuffer>
+<summary>
+The <strong><c>addSourceBuffer()</c></strong> method of the<br/><see cref="MediaSource"/> interface creates a new <see cref="SourceBuffer"/> of the<br/>given <see href="https://developer.mozilla.org/en-US/docs/Glossary/MIME type">MIME type</see> and adds it to the <c>MediaSource</c>&amp;apos;s<br/><see cref="MediaSource.SourceBuffers"/> list. The new<br/><c>SourceBuffer</c> is also returned.
+</summary>
+<remarks>
+<para>-<see cref="SourceBuffer"/><br/>-<see cref="SourceBufferList"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaSource/addSourceBuffer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="SourceBuffer"/> object representing the new source buffer that has been<br/>created and added to the media source.</returns>
+</MediaSourceAddSourceBuffer>
+<MediaSourceCanConstructInDedicatedWorker>
+<summary>
+The <strong><c>canConstructInDedicatedWorker</c></strong> static property of the <see cref="MediaSource"/> interface returns <c>true</c> if <c>MediaSource</c> worker support is implemented, providing a low-latency feature detection mechanism.
+</summary>
+<remarks>
+<para>If this were not available, the alternative would be a much higher latency approach such as attempting the creation of a <c>MediaSource</c> object from a dedicated worker and transferring the result back to the main thread.</para>
+<para>-<see href="https://wolenetz.github.io/mse-in-workers-demo/mse-in-workers-demo.html">MSE-in-Workers Demo by Matt Wolenetz</see><br/>-{{domxref(&amp;quot;Media Source Extensions API&amp;quot;, &amp;quot;Media Source Extensions API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see cref="MediaSource"/><br/>-<see cref="SourceBuffer"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaSource/canConstructInDedicatedWorker"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean. Returns <c>true</c> if <c>MediaSource</c> worker support is implemented, or <c>false</c> otherwise.</value>
+</MediaSourceCanConstructInDedicatedWorker>
+<MediaSourceClearLiveSeekableRange>
+<summary>
+The <strong><c>clearLiveSeekableRange()</c></strong> method of the<br/><see cref="MediaSource"/> interface clears a seekable range previously set with a call<br/>to <see cref="MediaSource.SetLiveSeekableRange"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaSource/clearLiveSeekableRange"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</MediaSourceClearLiveSeekableRange>
+<MediaSourceDuration>
+<summary>
+The <strong><c>duration</c></strong> property of the <see cref="MediaSource"/><br/>interface gets and sets the duration of the current media being presented.
+</summary>
+<remarks>
+<para>-<see cref="SourceBuffer"/><br/>-<see cref="SourceBufferList"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaSource/duration"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A double. A value in seconds is expected.</value>
+</MediaSourceDuration>
+<MediaSourceEndOfStream>
+<summary>
+The <strong><c>endOfStream()</c></strong> method of the<br/><see cref="MediaSource"/> interface signals the end of the stream.
+</summary>
+<remarks>
+<para>-<see cref="SourceBuffer"/><br/>-<see cref="SourceBufferList"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaSource/endOfStream"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</MediaSourceEndOfStream>
+<MediaSourceHandle>
+<summary>
+The <strong><c>handle</c></strong> read-only property of the <see cref="MediaSource"/> interface returns a <see cref="MediaSourceHandle"/> object, a proxy for the <c>MediaSource</c> that can be transferred from a dedicated worker back to the main thread and attached to a media element via its <see cref="HTMLMediaElement.SrcObject"/> property.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><c>handle</c> is only visible on <see cref="MediaSource"/> instances inside dedicated workers.</para></blockquote><para>Each <c>MediaSource</c> object created inside a dedicated worker has its own distinct <c>MediaSourceHandle</c>. The <c>handle</c> getter will always return the <c>MediaSourceHandle</c> instance specific to the associated dedicated worker <c>MediaSource</c> instance. If the handle has already been transferred to the main thread using <see cref="DedicatedWorkerGlobalScope.PostMessage"/>, the handle instance in the worker is technically detached and can't be transferred again.</para>
+<para>-<see href="https://wolenetz.github.io/mse-in-workers-demo/mse-in-workers-demo.html">MSE-in-Workers Demo by Matt Wolenetz</see><br/>-{{domxref(&amp;quot;Media Source Extensions API&amp;quot;, &amp;quot;Media Source Extensions API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see cref="MediaSource"/><br/>-<see cref="SourceBuffer"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaSource/handle"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="MediaSourceHandle"/> object instance.</value>
+</MediaSourceHandle>
+<MediaSourceIsTypeSupported>
+<summary>
+The <strong><c>MediaSource.isTypeSupported()</c></strong> static method returns a boolean value which is <c>true</c> if the given MIME type and (optional) codec are <strong>likely</strong> to be supported by the current <see href="https://developer.mozilla.org/en-US/docs/Glossary/user agent">user agent</see>.
+</summary>
+<remarks>
+<para>That is, if it can successfully create <see cref="SourceBuffer"/> objects for that media type.<br/>If the returned value is <c>false</c>, then the user agent is certain that it <strong>cannot</strong> access media of the specified format.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Source_Extensions_API">Media Source Extensions API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Formats">Guide to media types and formats on the web</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Formats/codecs_parameter">Codecs in common media types</see><br/>-<see cref="SourceBuffer"/><br/>-<see cref="SourceBufferList"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaSource/isTypeSupported"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A value of <c>false</c> if the media of the given type will <strong>not</strong> play.A value of <c>true</c> is returned if the browser can <strong>probably</strong> play media of the specified type.<br/>This is <strong>not</strong> a guarantee, and your code must be prepared for the possibility that the media will not play correctly if at all.All web APIs that work with media files use a &amp;quot;no/maybe/probably&amp;quot; approach (or, in this case, &amp;quot;no or probably&amp;quot;) when determining if a media type can be used.<br/>This is because media files are complex, intricate constructs with far too many subtle variations to be absolutely certain of anything until you actually use the contents of the media.</returns>
+</MediaSourceIsTypeSupported>
+<MediaSourceMediaSource>
+<summary>
+The <strong><c>MediaSource()</c></strong> constructor of the<br/><see cref="MediaSource"/> interface constructs and returns a new<br/><c>MediaSource</c> object with no associated source buffers.
+</summary>
+<remarks>
+<para>-<see cref="SourceBuffer"/><br/>-<see cref="SourceBufferList"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaSource/MediaSource"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</MediaSourceMediaSource>
+<MediaSourceReadyState>
+<summary>
+The <strong><c>readyState</c></strong> read-only property of the<br/><see cref="MediaSource"/> interface returns an enum representing the state of the<br/>current <c>MediaSource</c>. The three possible values are:
+</summary>
+<remarks>
+<para>-<see cref="SourceBuffer"/><br/>-<see cref="SourceBufferList"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaSource/readyState"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</MediaSourceReadyState>
+<MediaSourceRemoveSourceBuffer>
+<summary>
+The <strong><c>removeSourceBuffer()</c></strong> method of the <see cref="MediaSource"/> interface removes the given <see cref="SourceBuffer"/> from the <see cref="SourceBufferList"/> associated with this <c>MediaSource</c> object.
+</summary>
+<remarks>
+<para>-<see cref="SourceBuffer"/><br/>-<see cref="SourceBufferList"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaSource/removeSourceBuffer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</MediaSourceRemoveSourceBuffer>
+<MediaSourceSetLiveSeekableRange>
+<summary>
+The <strong><c>setLiveSeekableRange()</c></strong> method of the<br/><see cref="MediaSource"/> interface sets the range that the user can seek to in the<br/>media element.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaSource/setLiveSeekableRange"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</MediaSourceSetLiveSeekableRange>
+<MediaSourceSourceBuffers>
+<summary>
+The <strong><c>sourceBuffers</c></strong> read-only property of the<br/><see cref="MediaSource"/> interface returns a <see cref="SourceBufferList"/> object<br/>containing the list of <see cref="SourceBuffer"/> objects associated with this<br/><c>MediaSource</c>.
+</summary>
+<remarks>
+<para>-<see cref="SourceBuffer"/><br/>-<see cref="SourceBufferList"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaSource/sourceBuffers"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="SourceBufferList"/>.</value>
+</MediaSourceSourceBuffers>
+<MediaSourceSourceclose>
+<summary>
+The <strong><c>sourceclose</c></strong> event is fired when a <see cref="MediaSource"/> object's <see cref="MediaSource.ReadyState"/> changes to <c>&amp;quot;closed&amp;quot;</c>. This indicates that the <c>MediaSource</c> has been detached from the media element.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaSource/sourceclose"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</MediaSourceSourceclose>
+<MediaSourceSourceended>
+<summary>
+The <strong><c>sourceended</c></strong> event is fired when a <see cref="MediaSource"/> object's <see cref="MediaSource.ReadyState"/> changes to <c>&amp;quot;ended&amp;quot;</c>. This indicates that the application has finished sending data to the <c>MediaSource</c>. When an application has finished appending all media data to the <see cref="SourceBuffer"/> objects associated with a <c>MediaSource</c>, it calls the <see cref="MediaSource.EndOfStream"/> method on the <c>MediaSource</c>. This causes the <see cref="MediaSource.ReadyState"/> to transition to <c>&amp;quot;ended&amp;quot;</c> and triggers the <c>sourceended</c> event.
+</summary>
+<remarks>
+<para><see cref="MediaSource.EndOfStream"/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaSource/sourceended"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</MediaSourceSourceended>
+<MediaSourceSourceopen>
+<summary>
+The <strong><c>sourceopen</c></strong> event is fired when a <see cref="MediaSource"/> object's <see cref="MediaSource.ReadyState"/> changes to <c>&amp;quot;open&amp;quot;</c>.<br/>This indicates that the <c>MediaSource</c> is ready to receive data from <see cref="SourceBuffer"/> objects. This can occur either when the <c>MediaSource</c> object is first attached to a media element or when the <see cref="MediaSource.ReadyState"/> changes from <c>&amp;quot;ended&amp;quot;</c> back to <c>&amp;quot;open&amp;quot;</c>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaSource/sourceopen"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</MediaSourceSourceopen>
 </docs>

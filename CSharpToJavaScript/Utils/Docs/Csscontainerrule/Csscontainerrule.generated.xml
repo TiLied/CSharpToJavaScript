@@ -9,4 +9,26 @@ The <strong><c>CSSContainerRule</c></strong> interface represents a single CSS <
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSContainerRule"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </CSSContainerRule>
+<CSSContainerRuleContainerName>
+<summary>
+The read-only <strong><c>containerName</c></strong> property of the <see cref="CSSContainerRule"/> interface represents the container name of the associated CSS {{cssxref("@container")}} at-rule.
+</summary>
+<remarks>
+<para>For example, the value of <c>containerName</c> for the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@container">@container</see> below is <c>sidebar</c>:</para>
+<para>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/container">container</see> shorthand property<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment">CSS containment module</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Container_queries">Container queries</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries">Using container size and style queries</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSContainerRule/containerName"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string that contains the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/container-name"><c>container-name</c></see> of the {{cssxref("@container")}} associated with this <see cref="CSSContainerRule"/>.<br/>If the <c>_container</c> is not <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSSContainerRule#unnamed_container_rule">named</see>, the function returns the empty string (<c>&amp;quot;&amp;quot;</c>).</value>
+</CSSContainerRuleContainerName>
+<CSSContainerRuleContainerQuery>
+<summary>
+The read-only <strong><c>containerQuery</c></strong> property of the <see cref="CSSContainerRule"/> interface returns a string representing the container conditions that are evaluated when the container changes size in order to determine if the styles in the associated {{cssxref("@container")}} are applied.
+</summary>
+<remarks>
+<para>For example, the value of <c>containerQuery</c> for the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@container">@container</see> below is <c>(width &amp;gt;= 700px)</c>:</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment">CSS containment module</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Container_queries">Container queries</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries">Using container size and style queries</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSContainerRule/containerQuery"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing the container query.Note that the value may not be identical to the original string, as normalizations such as removing whitespace may happen.</value>
+</CSSContainerRuleContainerQuery>
 </docs>

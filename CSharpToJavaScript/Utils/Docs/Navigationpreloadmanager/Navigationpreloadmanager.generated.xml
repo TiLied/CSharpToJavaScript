@@ -9,4 +9,45 @@ The <strong><c>NavigationPreloadManager</c></strong> interface of the <see href=
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NavigationPreloadManager"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </NavigationPreloadManager>
+<NavigationPreloadManagerDisable>
+<summary>
+The <strong><c>disable()</c></strong> method of the <see cref="NavigationPreloadManager"/> interface halts the automatic preloading of service-worker-managed resources previously started using <see cref="NavigationPreloadManager.Enable"/><br/>It returns a promise that resolves with <c>undefined</c>.
+</summary>
+<remarks>
+<para>The method may be called in the service worker&amp;apos;s <c>activate</c> event handler (before the <c>fetch</c> event handler can be called).</para>
+<para><see cref="NavigationPreloadManager.Enable"/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NavigationPreloadManager/disable"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves with <see cref="'undefined'"/>.</returns>
+</NavigationPreloadManagerDisable>
+<NavigationPreloadManagerEnable>
+<summary>
+The <strong><c>enable()</c></strong> method of the <see cref="NavigationPreloadManager"/> interface is used to enable preloading of resources managed by the service worker.<br/>It returns a promise that resolves with <c>undefined</c>.
+</summary>
+<remarks>
+<para>The method should be called in the service worker&amp;apos;s <c>activate</c> event handler, which ensures it is called before any <c>fetch</c> event handler can fire.</para>
+<para><see cref="NavigationPreloadManager.Disable"/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NavigationPreloadManager/enable"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves with <see cref="'undefined'"/>.</returns>
+</NavigationPreloadManagerEnable>
+<NavigationPreloadManagerGetState>
+<summary>
+The <strong><c>getState()</c></strong> method of the <see cref="NavigationPreloadManager"/> interface returns a {{jsxref("Promise")}} that resolves to an object with properties that indicate whether preload is enabled and what value will be sent in the {{HTTPHeader("Service-Worker-Navigation-Preload")}} HTTP header.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NavigationPreloadManager/getState"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves with an object that has the following properties:</returns>
+</NavigationPreloadManagerGetState>
+<NavigationPreloadManagerSetHeaderValue>
+<summary>
+The <strong><c>setHeaderValue()</c></strong> method of the <see cref="NavigationPreloadManager"/> interface sets the value of the {{HTTPHeader("Service-Worker-Navigation-Preload")}} header that will be sent with requests resulting from a <see cref="Windowfetch"/> operation made during service worker navigation preloading.<br/>It returns an empty <see cref="Promise"/> that resolves with <c>undefined</c>.
+</summary>
+<remarks>
+<para>The presence of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Service-Worker-Navigation-Preload">Service-Worker-Navigation-Preload</see> header in preloading requests allows servers to configure the returned resource differently for preloading fetch requests than from normal fetch requests.<br/>The default directive is set to <c>true</c>: this method allows the possibility of configuring multiple different responses to preload requests.</para><blockquote class="NOTE"><h5>NOTE</h5><para>If a different response may result from setting this header, the server must set <c>Vary: Service-Worker-Navigation-Preload</c> to ensure that the different responses are cached.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NavigationPreloadManager/setHeaderValue"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves with <see cref="'undefined'"/>.</returns>
+</NavigationPreloadManagerSetHeaderValue>
 </docs>

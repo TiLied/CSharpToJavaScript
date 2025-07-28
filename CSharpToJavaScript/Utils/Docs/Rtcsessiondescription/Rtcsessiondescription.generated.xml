@@ -9,4 +9,44 @@ The <strong><c>RTCSessionDescription</c></strong> interface describes one end of
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCSessionDescription"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </RTCSessionDescription>
+<RTCSessionDescriptionRTCSessionDescription>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>RTCSessionDescription()</c></strong> constructor creates a new<br/><see cref="RTCSessionDescription"/> with its properties initialized as described in the<br/>specified object.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This constructor has been deprecated because<br/><see cref="RTCPeerConnection.SetLocalDescription"/> and other methods which take<br/>SDP as input now directly accept an object containing the <see cref="RTCSessionDescription.Type"/> and <see cref="RTCSessionDescription.Sdp"/> properties, so you don't have to instantiate an<br/><c>RTCSessionDescription</c> yourself.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see cref="RTCSessionDescription"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCSessionDescription/RTCSessionDescription"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RTCSessionDescriptionRTCSessionDescription>
+<RTCSessionDescriptionSdp>
+<summary>
+The property <strong><c>RTCSessionDescription.sdp</c></strong> is a read-only<br/>string containing the <see href="https://developer.mozilla.org/en-US/docs/Glossary/SDP">SDP</see> which describes the session.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/>-The standard for using SDP in an offer/answer protocol {{rfc("3264")}}.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCSessionDescription/sdp"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The value is a string containing an SDP message like this one:</value>
+</RTCSessionDescriptionSdp>
+<RTCSessionDescriptionToJSON>
+<summary>
+The <strong><c>RTCSessionDescription.toJSON()</c></strong> method generates a<br/><see href="https://developer.mozilla.org/en-US/docs/Glossary/JSON">JSON</see> description of the object. Both properties,<br/><see cref="RTCSessionDescription.Type"/> and<br/><see cref="RTCSessionDescription.Sdp"/>, are contained in the generated JSON.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCSessionDescription/toJSON"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="JSON"/> object containing the following properties:</returns>
+</RTCSessionDescriptionToJSON>
+<RTCSessionDescriptionType>
+<summary>
+The property <strong><c>RTCSessionDescription.type</c></strong> is a read-only<br/>string value which describes the description&amp;apos;s type.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCSessionDescription/type"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The possible values are:</value>
+</RTCSessionDescriptionType>
 </docs>

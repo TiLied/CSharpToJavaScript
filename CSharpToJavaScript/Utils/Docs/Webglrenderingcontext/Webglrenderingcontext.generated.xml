@@ -9,4 +9,1194 @@ The <strong><c>WebGLRenderingContext</c></strong> interface provides an interfac
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </WebGLRenderingContext>
+<WebGLRenderingContextActiveTexture>
+<summary>
+The <strong><c>WebGLRenderingContext.activeTexture()</c></strong> method of the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> specifies which texture unit to<br/>make active.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.GetParameter"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/activeTexture"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextActiveTexture>
+<WebGLRenderingContextAttachShader>
+<summary>
+The <strong>WebGLRenderingContext.attachShader()</strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> attaches either a fragment or<br/>vertex <see cref="WebGLShader"/> to a <see cref="WebGLProgram"/>.
+</summary>
+<remarks>
+<para>-<see cref="WebGLProgram"/><br/>-<see cref="WebGLShader"/><br/>-<see cref="WebGLRenderingContext.CompileShader"/><br/>-<see cref="WebGLRenderingContext.CreateProgram"/><br/>-<see cref="WebGLRenderingContext.CreateShader"/><br/>-<see cref="WebGLRenderingContext.DeleteProgram"/><br/>-<see cref="WebGLRenderingContext.DeleteShader"/><br/>-<see cref="WebGLRenderingContext.DetachShader"/><br/>-<see cref="WebGLRenderingContext.GetAttachedShaders"/><br/>-<see cref="WebGLRenderingContext.GetProgramParameter"/><br/>-<see cref="WebGLRenderingContext.GetProgramInfoLog"/><br/>-<see cref="WebGLRenderingContext.GetShaderParameter"/><br/>-<see cref="WebGLRenderingContext.GetShaderPrecisionFormat"/><br/>-<see cref="WebGLRenderingContext.GetShaderInfoLog"/><br/>-<see cref="WebGLRenderingContext.GetShaderSource"/><br/>-<see cref="WebGLRenderingContext.IsProgram"/><br/>-<see cref="WebGLRenderingContext.IsShader"/><br/>-<see cref="WebGLRenderingContext.LinkProgram"/><br/>-<see cref="WebGLRenderingContext.ShaderSource"/><br/>-<see cref="WebGLRenderingContext.UseProgram"/><br/>-<see cref="WebGLRenderingContext.ValidateProgram"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/attachShader"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextAttachShader>
+<WebGLRenderingContextBindAttribLocation>
+<summary>
+The <strong><c>WebGLRenderingContext.bindAttribLocation()</c></strong> method of<br/>the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> binds a generic vertex index<br/>to an attribute variable.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.GetActiveAttrib"/><br/>-<see cref="WebGLRenderingContext.GetAttribLocation"/><br/>-<see cref="WebGLRenderingContext.GetVertexAttrib"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bindAttribLocation"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextBindAttribLocation>
+<WebGLRenderingContextBindBuffer>
+<summary>
+The <strong><c>WebGLRenderingContext.bindBuffer()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> binds a given<br/><see cref="WebGLBuffer"/> to a target.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.CreateBuffer"/><br/>-<see cref="WebGLRenderingContext.DeleteBuffer"/><br/>-<see cref="WebGLRenderingContext.IsBuffer"/><br/>-Other buffers: <see cref="WebGLFramebuffer"/>, <see cref="WebGLRenderbuffer"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bindBuffer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextBindBuffer>
+<WebGLRenderingContextBindFramebuffer>
+<summary>
+The <strong><c>WebGLRenderingContext.bindFramebuffer()</c></strong> method of the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> binds to the specified target the provided <see cref="WebGLFramebuffer"/>, or, if the <c>framebuffer</c> argument is null, the default <see cref="WebGLFramebuffer"/>, which is associated with the canvas rendering context.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.CreateFramebuffer"/><br/>-<see cref="WebGLRenderingContext.DeleteFramebuffer"/><br/>-<see cref="WebGLRenderingContext.IsFramebuffer"/><br/>-Other buffers: <see cref="WebGLBuffer"/>, <see cref="WebGLRenderbuffer"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bindFramebuffer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextBindFramebuffer>
+<WebGLRenderingContextBindRenderbuffer>
+<summary>
+The <strong><c>WebGLRenderingContext.bindRenderbuffer()</c></strong> method of<br/>the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> binds a given<br/><see cref="WebGLRenderbuffer"/> to a target, which must be<br/><c>gl.RENDERBUFFER</c>.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.CreateRenderbuffer"/><br/>-<see cref="WebGLRenderingContext.DeleteRenderbuffer"/><br/>-<see cref="WebGLRenderingContext.IsRenderbuffer"/><br/>-Other buffers: <see cref="WebGLBuffer"/>, <see cref="WebGLFramebuffer"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bindRenderbuffer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextBindRenderbuffer>
+<WebGLRenderingContextBindTexture>
+<summary>
+The <strong><c>WebGLRenderingContext.bindTexture()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> binds a given<br/><see cref="WebGLTexture"/> to a target (binding point).
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.CreateTexture"/><br/>-<see cref="WebGLRenderingContext.DeleteTexture"/><br/>-<see cref="WebGLRenderingContext.IsTexture"/><br/>-<see cref="WebGLRenderingContext.TexImage2D"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bindTexture"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextBindTexture>
+<WebGLRenderingContextBlendColor>
+<summary>
+The <strong><c>WebGLRenderingContext.blendColor()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> is used to set the source and<br/>destination blending factors.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.BlendEquation"/><br/>-<see cref="WebGLRenderingContext.BlendFunc"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/blendColor"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextBlendColor>
+<WebGLRenderingContextBlendEquation>
+<summary>
+The <strong><c>WebGLRenderingContext.blendEquation()</c></strong> method of the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> is used to set both the RGB blend<br/>equation and alpha blend equation to a single equation.
+</summary>
+<remarks>
+<para>The blend equation determines how a new pixel is combined with a pixel already in the<br/><see cref="WebGLFramebuffer"/>.</para>
+<para>-<see cref="WebGLRenderingContext.BlendColor"/><br/>-<see cref="WebGLRenderingContext.BlendFunc"/><br/>-<see cref="EXT_blend_minmax"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/blendEquation"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextBlendEquation>
+<WebGLRenderingContextBlendEquationSeparate>
+<summary>
+The <strong><c>WebGLRenderingContext.blendEquationSeparate()</c></strong> method<br/>of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> is used to set the RGB<br/>blend equation and alpha blend equation separately.
+</summary>
+<remarks>
+<para>The blend equation determines how a new pixel is combined with a pixel already in the<br/><see cref="WebGLFramebuffer"/>.</para>
+<para>-<see cref="WebGLRenderingContext.BlendEquation"/><br/>-<see cref="WebGLRenderingContext.BlendColor"/><br/>-<see cref="WebGLRenderingContext.BlendFunc"/><br/>-<see cref="EXT_blend_minmax"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/blendEquationSeparate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextBlendEquationSeparate>
+<WebGLRenderingContextBlendFunc>
+<summary>
+The <strong><c>WebGLRenderingContext.blendFunc()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> defines which function is used for<br/>blending pixel arithmetic.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.BlendColor"/><br/>-<see cref="WebGLRenderingContext.BlendEquation"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/blendFunc"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextBlendFunc>
+<WebGLRenderingContextBlendFuncSeparate>
+<summary>
+The <strong><c>WebGLRenderingContext.blendFuncSeparate()</c></strong> method of<br/>the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> defines which function is used<br/>for blending pixel arithmetic for RGB and alpha components separately.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.BlendColor"/><br/>-<see cref="WebGLRenderingContext.BlendEquation"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/blendFuncSeparate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextBlendFuncSeparate>
+<WebGLRenderingContextBufferData>
+<summary>
+The <strong><c>WebGLRenderingContext.bufferData()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> initializes and creates the<br/>buffer object&amp;apos;s data store.
+</summary>
+<remarks>
+<para>-<see cref="WebGL2RenderingContext.BufferData"/><br/>-<see cref="WebGLRenderingContext.CreateBuffer"/><br/>-<see cref="WebGLRenderingContext.BufferSubData"/><br/>-Other buffers: <see cref="WebGLFramebuffer"/>, <see cref="WebGLRenderbuffer"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextBufferData>
+<WebGLRenderingContextBufferSubData>
+<summary>
+The <strong><c>WebGLRenderingContext.bufferSubData()</c></strong> method of the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> updates a subset of a buffer<br/>object&amp;apos;s data store.
+</summary>
+<remarks>
+<para>-<see cref="WebGL2RenderingContext.BufferSubData"/><br/>-<see cref="WebGLRenderingContext.CreateBuffer"/><br/>-<see cref="WebGLRenderingContext.BufferData"/><br/>-Other buffers: <see cref="WebGLFramebuffer"/>, <see cref="WebGLRenderbuffer"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextBufferSubData>
+<WebGLRenderingContextCanvas>
+<summary>
+The <strong><c>WebGLRenderingContext.canvas</c></strong> property is a read-only<br/>reference to the <see cref="HTMLCanvasElement"/> or <see cref="OffscreenCanvas"/><br/>object that is associated with the context. It might be <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><c>null</c></see> if it is not<br/>associated with a {{HTMLElement("canvas")}} element or an <see cref="OffscreenCanvas"/><br/>object.
+</summary>
+<remarks>
+<para>-<see cref="CanvasRenderingContext2D.Canvas"/><br/>-The <see cref="OffscreenCanvas"/> interface<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/canvas"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>Either a <see cref="HTMLCanvasElement"/> or <see cref="OffscreenCanvas"/> object or<br/><see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><c>null</c></see>.</value>
+</WebGLRenderingContextCanvas>
+<WebGLRenderingContextCheckFramebufferStatus>
+<summary>
+The <strong><c>WebGLRenderingContext.checkFramebufferStatus()</c></strong> method<br/>of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> returns the completeness<br/>status of the <see cref="WebGLFramebuffer"/> object.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.CreateFramebuffer"/><br/>-<see cref="WebGLRenderingContext.DeleteFramebuffer"/><br/>-<see cref="WebGLRenderingContext.IsFramebuffer"/><br/>-Other buffers: <see cref="WebGLBuffer"/>, <see cref="WebGLRenderbuffer"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/checkFramebufferStatus"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="WebGL_APITypes"/> indicating the completeness status of the framebuffer or<br/><c>0</c> if an error occurs. Possible enum return values:</returns>
+</WebGLRenderingContextCheckFramebufferStatus>
+<WebGLRenderingContextClear>
+<summary>
+The <strong><c>WebGLRenderingContext.clear()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> clears buffers to preset values.
+</summary>
+<remarks>
+<para>The preset values can be set by <see cref="WebGLRenderingContext.ClearColor"/>, <see cref="WebGLRenderingContext.ClearDepth"/> or <see cref="WebGLRenderingContext.ClearStencil"/>.</para><para>The scissor box, dithering, and buffer writemasks can affect the <c>clear()</c><br/>method.</para>
+<para>-<see cref="WebGLRenderingContext.ClearColor"/><br/>-<see cref="WebGLRenderingContext.ClearDepth"/><br/>-<see cref="WebGLRenderingContext.ClearStencil"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/clear"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextClear>
+<WebGLRenderingContextClearColor>
+<summary>
+The <strong><c>WebGLRenderingContext.clearColor()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> specifies the color values used<br/>when clearing color buffers.
+</summary>
+<remarks>
+<para>This specifies what color values to use when calling the<br/><see cref="WebGLRenderingContext.Clear"/> method. The values are clamped<br/>between 0 and 1.</para>
+<para>-<see cref="WebGLRenderingContext.Clear"/><br/>-<see cref="WebGLRenderingContext.ClearDepth"/><br/>-<see cref="WebGLRenderingContext.ClearStencil"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/clearColor"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextClearColor>
+<WebGLRenderingContextClearDepth>
+<summary>
+The <strong><c>WebGLRenderingContext.clearDepth()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> specifies the clear value for the<br/>depth buffer.
+</summary>
+<remarks>
+<para>This specifies what depth value to use when calling the<br/><see cref="WebGLRenderingContext.Clear"/> method. The value is clamped<br/>between 0 and 1.</para>
+<para>-<see cref="WebGLRenderingContext.Clear"/><br/>-<see cref="WebGLRenderingContext.ClearColor"/><br/>-<see cref="WebGLRenderingContext.ClearStencil"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/clearDepth"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextClearDepth>
+<WebGLRenderingContextClearStencil>
+<summary>
+The <strong><c>WebGLRenderingContext.clearStencil()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> specifies the clear value for the<br/>stencil buffer.
+</summary>
+<remarks>
+<para>This specifies what stencil value to use when calling the<br/><see cref="WebGLRenderingContext.Clear"/> method.</para>
+<para>-<see cref="WebGLRenderingContext.Clear"/><br/>-<see cref="WebGLRenderingContext.ClearColor"/><br/>-<see cref="WebGLRenderingContext.ClearDepth"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/clearStencil"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextClearStencil>
+<WebGLRenderingContextColorMask>
+<summary>
+The <strong><c>WebGLRenderingContext.colorMask()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> sets which color components to<br/>enable or to disable when drawing or rendering to a <see cref="WebGLFramebuffer"/>.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.DepthMask"/><br/>-<see cref="WebGLRenderingContext.StencilMask"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/colorMask"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextColorMask>
+<WebGLRenderingContextCompileShader>
+<summary>
+The <strong>WebGLRenderingContext.compileShader()</strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> compiles a GLSL shader into binary<br/>data so that it can be used by a <see cref="WebGLProgram"/>.
+</summary>
+<remarks>
+<para>-<see cref="WebGLProgram"/><br/>-<see cref="WebGLShader"/><br/>-<see cref="WebGLRenderingContext.AttachShader"/><br/>-<see cref="WebGLRenderingContext.CreateProgram"/><br/>-<see cref="WebGLRenderingContext.CreateShader"/><br/>-<see cref="WebGLRenderingContext.DeleteProgram"/><br/>-<see cref="WebGLRenderingContext.DeleteShader"/><br/>-<see cref="WebGLRenderingContext.DetachShader"/><br/>-<see cref="WebGLRenderingContext.GetAttachedShaders"/><br/>-<see cref="WebGLRenderingContext.GetProgramParameter"/><br/>-<see cref="WebGLRenderingContext.GetProgramInfoLog"/><br/>-<see cref="WebGLRenderingContext.GetShaderParameter"/><br/>-<see cref="WebGLRenderingContext.GetShaderPrecisionFormat"/><br/>-<see cref="WebGLRenderingContext.GetShaderInfoLog"/><br/>-<see cref="WebGLRenderingContext.GetShaderSource"/><br/>-<see cref="WebGLRenderingContext.IsProgram"/><br/>-<see cref="WebGLRenderingContext.IsShader"/><br/>-<see cref="WebGLRenderingContext.LinkProgram"/><br/>-<see cref="WebGLRenderingContext.ShaderSource"/><br/>-<see cref="WebGLRenderingContext.UseProgram"/><br/>-<see cref="WebGLRenderingContext.ValidateProgram"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compileShader"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextCompileShader>
+<WebGLRenderingContextCompressedTexImage2D>
+<summary>
+The <strong><c>compressedTexImage2D()</c></strong> method of the <see cref="WebGLRenderingContext"/> interface<br/>of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> specifies a two-dimensional texture image in a compressed format.
+</summary>
+<remarks>
+<para>Compressed image formats must be enabled by <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Using_Extensions">WebGL extensions</see> before<br/>using these methods.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Using_Extensions">Using WebGL extensions</see><br/>-<see cref="WebGLRenderingContext.CompressedTexSubImage2D"/><br/>-<see cref="WebGL2RenderingContext.CompressedTexSubImage3D"/><br/>-<see cref="WebGL2RenderingContext.CompressedTexImage3D"/><br/>-<see cref="WEBGL_compressed_texture_s3tc"/><br/>-<see cref="WEBGL_compressed_texture_s3tc_srgb"/><br/>-<see cref="WEBGL_compressed_texture_etc"/><br/>-<see cref="WEBGL_compressed_texture_pvrtc"/><br/>-<see cref="WEBGL_compressed_texture_etc1"/><br/>-<see cref="WEBGL_compressed_texture_astc"/><br/>-<see cref="EXT_texture_compression_bptc"/><br/>-<see cref="EXT_texture_compression_rgtc"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compressedTexImage2D"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextCompressedTexImage2D>
+<WebGLRenderingContextCompressedTexSubImage2D>
+<summary>
+The <strong><c>WebGLRenderingContext.compressedTexSubImage2D()</c></strong><br/>method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> specifies a<br/>two-dimensional sub-rectangle for a texture image in a compressed format.
+</summary>
+<remarks>
+<para>Compressed image formats must be enabled by <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Using_Extensions">WebGL extensions</see> before<br/>using this method or a <see cref="WebGL2RenderingContext"/> must be used.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Using_Extensions">Using WebGL extensions</see><br/>-<see cref="WebGLRenderingContext.GetExtension"/><br/>-<see cref="WebGLRenderingContext.CompressedTexImage2D"/><br/>-<see cref="WEBGL_compressed_texture_s3tc"/><br/>-<see cref="WEBGL_compressed_texture_s3tc_srgb"/><br/>-<see cref="WEBGL_compressed_texture_etc"/><br/>-<see cref="WEBGL_compressed_texture_pvrtc"/><br/>-<see cref="WEBGL_compressed_texture_astc"/><br/>-<see cref="EXT_texture_compression_bptc"/><br/>-<see cref="EXT_texture_compression_rgtc"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compressedTexSubImage2D"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextCompressedTexSubImage2D>
+<WebGLRenderingContextCopyTexImage2D>
+<summary>
+The <strong><c>WebGLRenderingContext.copyTexImage2D()</c></strong> method of the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> copies pixels from the current<br/><see cref="WebGLFramebuffer"/> into a 2D texture image.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.CreateTexture"/><br/>-<see cref="WebGLRenderingContext.BindTexture"/><br/>-<see cref="WebGLRenderingContext.TexImage2D"/><br/>-<see cref="WebGLRenderingContext.TexSubImage2D"/><br/>-<see cref="WebGLRenderingContext.CompressedTexImage2D"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/copyTexImage2D"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextCopyTexImage2D>
+<WebGLRenderingContextCopyTexSubImage2D>
+<summary>
+The <strong><c>WebGLRenderingContext.copyTexSubImage2D()</c></strong> method of<br/>the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> copies pixels from the current<br/><see cref="WebGLFramebuffer"/> into an existing 2D texture sub-image.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.CopyTexImage2D"/><br/>-<see cref="WebGLRenderingContext.TexImage2D"/><br/>-<see cref="WebGLRenderingContext.TexSubImage2D"/><br/>-<see cref="WebGLRenderingContext.CompressedTexImage2D"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/copyTexSubImage2D"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextCopyTexSubImage2D>
+<WebGLRenderingContextCreateBuffer>
+<summary>
+The <strong><c>WebGLRenderingContext.createBuffer()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> creates and initializes a<br/><see cref="WebGLBuffer"/> storing data such as vertices or colors.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.BindBuffer"/><br/>-<see cref="WebGLRenderingContext.DeleteBuffer"/><br/>-<see cref="WebGLRenderingContext.IsBuffer"/><br/>-Other buffers: <see cref="WebGLFramebuffer"/>, <see cref="WebGLRenderbuffer"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/createBuffer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="WebGLBuffer"/> storing data such as vertices or colors.</returns>
+</WebGLRenderingContextCreateBuffer>
+<WebGLRenderingContextCreateFramebuffer>
+<summary>
+The <strong><c>WebGLRenderingContext.createFramebuffer()</c></strong> method of<br/>the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> creates and initializes a<br/><see cref="WebGLFramebuffer"/> object.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.BindFramebuffer"/><br/>-<see cref="WebGLRenderingContext.DeleteFramebuffer"/><br/>-<see cref="WebGLRenderingContext.IsFramebuffer"/><br/>-Other buffers: <see cref="WebGLBuffer"/>, <see cref="WebGLRenderbuffer"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/createFramebuffer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="WebGLFramebuffer"/> object.</returns>
+</WebGLRenderingContextCreateFramebuffer>
+<WebGLRenderingContextCreateProgram>
+<summary>
+The <strong><c>WebGLRenderingContext.createProgram()</c></strong> method of the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> creates and initializes a<br/><see cref="WebGLProgram"/> object.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.DeleteProgram"/><br/>-<see cref="WebGLRenderingContext.IsProgram"/><br/>-<see cref="WebGLRenderingContext.LinkProgram"/><br/>-<see cref="WebGLRenderingContext.UseProgram"/><br/>-<see cref="WebGLRenderingContext.ValidateProgram"/><br/>-<see cref="WebGLRenderingContext.GetProgramParameter"/><br/>-<see cref="WebGLRenderingContext.GetProgramInfoLog"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/createProgram"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="WebGLProgram"/> object that is a combination of two compiled<br/><see cref="WebGLShader"/>s consisting of a vertex shader and a fragment shader (both<br/>written in GLSL). These are then linked into a usable program.</returns>
+</WebGLRenderingContextCreateProgram>
+<WebGLRenderingContextCreateRenderbuffer>
+<summary>
+The <strong><c>WebGLRenderingContext.createRenderbuffer()</c></strong> method of<br/>the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> creates and initializes a<br/><see cref="WebGLRenderbuffer"/> object.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.BindRenderbuffer"/><br/>-<see cref="WebGLRenderingContext.DeleteRenderbuffer"/><br/>-<see cref="WebGLRenderingContext.IsRenderbuffer"/><br/>-Other buffers: <see cref="WebGLBuffer"/>, <see cref="WebGLFramebuffer"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/createRenderbuffer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="WebGLRenderbuffer"/> object that stores data such an image, or can be<br/>source or target of an rendering operation.</returns>
+</WebGLRenderingContextCreateRenderbuffer>
+<WebGLRenderingContextCreateShader>
+<summary>
+The <see cref="WebGLRenderingContext"/><br/>method <strong><c>createShader()</c></strong> of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> creates a<br/><see cref="WebGLShader"/> that can then be configured further using<br/><see cref="WebGLRenderingContext.ShaderSource"/> and<br/><see cref="WebGLRenderingContext.CompileShader"/>.
+</summary>
+<remarks>
+<para>-<see cref="WebGLProgram"/><br/>-<see cref="WebGLShader"/><br/>-<see cref="WebGLRenderingContext.AttachShader"/><br/>-<see cref="WebGLRenderingContext.BindAttribLocation"/><br/>-<see cref="WebGLRenderingContext.CompileShader"/><br/>-<see cref="WebGLRenderingContext.CreateProgram"/><br/>-<see cref="WebGLRenderingContext.DeleteProgram"/><br/>-<see cref="WebGLRenderingContext.DeleteShader"/><br/>-<see cref="WebGLRenderingContext.DetachShader"/><br/>-<see cref="WebGLRenderingContext.GetAttachedShaders"/><br/>-<see cref="WebGLRenderingContext.GetProgramParameter"/><br/>-<see cref="WebGLRenderingContext.GetProgramInfoLog"/><br/>-<see cref="WebGLRenderingContext.GetShaderParameter"/><br/>-<see cref="WebGLRenderingContext.GetShaderPrecisionFormat"/><br/>-<see cref="WebGLRenderingContext.GetShaderInfoLog"/><br/>-<see cref="WebGLRenderingContext.GetShaderSource"/><br/>-<see cref="WebGLRenderingContext.IsProgram"/><br/>-<see cref="WebGLRenderingContext.IsShader"/><br/>-<see cref="WebGLRenderingContext.LinkProgram"/><br/>-<see cref="WebGLRenderingContext.ShaderSource"/><br/>-<see cref="WebGLRenderingContext.UseProgram"/><br/>-<see cref="WebGLRenderingContext.ValidateProgram"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/createShader"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="WebGLShader"/> instance, or <c>null</c> if an error occurs creating the shader (for example, because <c>type</c> was an invalid value).</returns>
+</WebGLRenderingContextCreateShader>
+<WebGLRenderingContextCreateTexture>
+<summary>
+The <strong><c>WebGLRenderingContext.createTexture()</c></strong> method of the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> creates and initializes a<br/><see cref="WebGLTexture"/> object.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.BindTexture"/><br/>-<see cref="WebGLRenderingContext.DeleteTexture"/><br/>-<see cref="WebGLRenderingContext.IsTexture"/><br/>-<see cref="WebGLRenderingContext.TexImage2D"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/createTexture"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="WebGLTexture"/> object to which images can be bound to.</returns>
+</WebGLRenderingContextCreateTexture>
+<WebGLRenderingContextCullFace>
+<summary>
+The <strong><c>WebGLRenderingContext.cullFace()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> specifies whether or not front-<br/>and/or back-facing polygons can be culled.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.Enable"/><br/>-<see cref="WebGLRenderingContext.FrontFace"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/cullFace"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextCullFace>
+<WebGLRenderingContextDeleteBuffer>
+<summary>
+The <strong><c>WebGLRenderingContext.deleteBuffer()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> deletes a given<br/><see cref="WebGLBuffer"/>. This method has no effect if the buffer has already been<br/>deleted. Normally you don&amp;apos;t need to call this method yourself, when the buffer object is dereferenced it will be marked as free.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.BindBuffer"/><br/>-<see cref="WebGLRenderingContext.CreateBuffer"/><br/>-<see cref="WebGLRenderingContext.IsBuffer"/><br/>-Other buffers: <see cref="WebGLFramebuffer"/>, <see cref="WebGLRenderbuffer"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/deleteBuffer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextDeleteBuffer>
+<WebGLRenderingContextDeleteFramebuffer>
+<summary>
+The <strong><c>WebGLRenderingContext.deleteFramebuffer()</c></strong> method of<br/>the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> deletes a given<br/><see cref="WebGLFramebuffer"/> object. This method has no effect if the frame buffer<br/>has already been deleted.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.BindFramebuffer"/><br/>-<see cref="WebGLRenderingContext.CreateFramebuffer"/><br/>-<see cref="WebGLRenderingContext.IsFramebuffer"/><br/>-Other buffers: <see cref="WebGLBuffer"/>, <see cref="WebGLRenderbuffer"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/deleteFramebuffer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextDeleteFramebuffer>
+<WebGLRenderingContextDeleteProgram>
+<summary>
+The <strong><c>WebGLRenderingContext.deleteProgram()</c></strong> method of the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> deletes a given<br/><see cref="WebGLProgram"/> object. This method has no effect if the program has already<br/>been deleted.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.CreateProgram"/><br/>-<see cref="WebGLRenderingContext.IsProgram"/><br/>-<see cref="WebGLRenderingContext.LinkProgram"/><br/>-<see cref="WebGLRenderingContext.UseProgram"/><br/>-<see cref="WebGLRenderingContext.ValidateProgram"/><br/>-<see cref="WebGLRenderingContext.GetProgramParameter"/><br/>-<see cref="WebGLRenderingContext.GetProgramInfoLog"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/deleteProgram"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextDeleteProgram>
+<WebGLRenderingContextDeleteRenderbuffer>
+<summary>
+The <strong><c>WebGLRenderingContext.deleteRenderbuffer()</c></strong> method of<br/>the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> deletes a given<br/><see cref="WebGLRenderbuffer"/> object. This method has no effect if the render buffer<br/>has already been deleted.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.BindRenderbuffer"/><br/>-<see cref="WebGLRenderingContext.CreateRenderbuffer"/><br/>-<see cref="WebGLRenderingContext.IsRenderbuffer"/><br/>-Other buffers: <see cref="WebGLBuffer"/>, <see cref="WebGLFramebuffer"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/deleteRenderbuffer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextDeleteRenderbuffer>
+<WebGLRenderingContextDeleteShader>
+<summary>
+The <strong><c>WebGLRenderingContext.deleteShader()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> marks a given<br/><see cref="WebGLShader"/> object for deletion. It will then be deleted whenever the<br/>shader is no longer in use. This method has no effect if the shader has already been<br/>deleted, and the <see cref="WebGLShader"/> is automatically marked for deletion when it<br/>is destroyed by the garbage collector.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.CreateShader"/><br/>-<see cref="WebGLRenderingContext.IsShader"/><br/>-<see cref="WebGLRenderingContext.GetAttachedShaders"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/deleteShader"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextDeleteShader>
+<WebGLRenderingContextDeleteTexture>
+<summary>
+The <strong><c>WebGLRenderingContext.deleteTexture()</c></strong> method of the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> deletes a given<br/><see cref="WebGLTexture"/> object. This method has no effect if the texture has already<br/>been deleted.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.BindTexture"/><br/>-<see cref="WebGLRenderingContext.CreateTexture"/><br/>-<see cref="WebGLRenderingContext.IsTexture"/><br/>-<see cref="WebGLRenderingContext.TexImage2D"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/deleteTexture"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextDeleteTexture>
+<WebGLRenderingContextDepthFunc>
+<summary>
+The <strong><c>WebGLRenderingContext.depthFunc()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> specifies a function that compares<br/>incoming pixel depth to the current depth buffer value.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.Enable"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/depthFunc"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextDepthFunc>
+<WebGLRenderingContextDepthMask>
+<summary>
+The <strong><c>WebGLRenderingContext.depthMask()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> sets whether writing into the depth<br/>buffer is enabled or disabled.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.ColorMask"/><br/>-<see cref="WebGLRenderingContext.StencilMask"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/depthMask"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextDepthMask>
+<WebGLRenderingContextDepthRange>
+<summary>
+The <strong><c>WebGLRenderingContext.depthRange()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> specifies the depth range mapping<br/>from normalized device coordinates to window or viewport coordinates.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.Viewport"/><br/>-<see cref="WebGLRenderingContext.DepthFunc"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/depthRange"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextDepthRange>
+<WebGLRenderingContextDetachShader>
+<summary>
+The <strong><c>WebGLRenderingContext.detachShader()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> detaches a previously<br/>attached <see cref="WebGLShader"/> from a <see cref="WebGLProgram"/>.
+</summary>
+<remarks>
+<para>-<see cref="WebGLProgram"/><br/>-<see cref="WebGLShader"/><br/>-<see cref="WebGLRenderingContext.AttachShader"/><br/>-<see cref="WebGLRenderingContext.CompileShader"/><br/>-<see cref="WebGLRenderingContext.CreateProgram"/><br/>-<see cref="WebGLRenderingContext.CreateShader"/><br/>-<see cref="WebGLRenderingContext.DeleteProgram"/><br/>-<see cref="WebGLRenderingContext.DeleteShader"/><br/>-<see cref="WebGLRenderingContext.GetAttachedShaders"/><br/>-<see cref="WebGLRenderingContext.GetProgramParameter"/><br/>-<see cref="WebGLRenderingContext.GetProgramInfoLog"/><br/>-<see cref="WebGLRenderingContext.GetShaderParameter"/><br/>-<see cref="WebGLRenderingContext.GetShaderPrecisionFormat"/><br/>-<see cref="WebGLRenderingContext.GetShaderInfoLog"/><br/>-<see cref="WebGLRenderingContext.GetShaderSource"/><br/>-<see cref="WebGLRenderingContext.IsProgram"/><br/>-<see cref="WebGLRenderingContext.IsShader"/><br/>-<see cref="WebGLRenderingContext.LinkProgram"/><br/>-<see cref="WebGLRenderingContext.ShaderSource"/><br/>-<see cref="WebGLRenderingContext.UseProgram"/><br/>-<see cref="WebGLRenderingContext.ValidateProgram"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/detachShader"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextDetachShader>
+<WebGLRenderingContextDisable>
+<summary>
+The <strong><c>WebGLRenderingContext.disable()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> disables specific WebGL<br/>capabilities for this context.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.Enable"/><br/>-<see cref="WebGLRenderingContext.IsEnabled"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/disable"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextDisable>
+<WebGLRenderingContextDisableVertexAttribArray>
+<summary>
+The <strong><c>WebGLRenderingContext.disableVertexAttribArray()</c></strong><br/>method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> turns the generic<br/>vertex attribute array off at a given index position.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.EnableVertexAttribArray"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/disableVertexAttribArray"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextDisableVertexAttribArray>
+<WebGLRenderingContextDrawArrays>
+<summary>
+The <strong><c>WebGLRenderingContext.drawArrays()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> renders primitives from array data.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.DrawElements"/><br/>-<see cref="ANGLE_instanced_arrays.DrawArraysInstancedANGLE"/><br/>-<see cref="ANGLE_instanced_arrays.DrawElementsInstancedANGLE"/><br/>-<see cref="ANGLE_instanced_arrays.VertexAttribDivisorANGLE"/><br/>-<see cref="WebGL2RenderingContext.DrawArraysInstanced"/><br/>-<see cref="WebGL2RenderingContext.DrawElementsInstanced"/><br/>-<see cref="WebGL2RenderingContext.VertexAttribDivisor"/><br/>-<see cref="WEBGL_multi_draw.MultiDrawArraysWEBGL"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/drawArrays"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextDrawArrays>
+<WebGLRenderingContextDrawElements>
+<summary>
+The <strong><c>WebGLRenderingContext.drawElements()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> renders primitives from array data.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.DrawArrays"/><br/>-<see cref="OES_element_index_uint"/><br/>-<see cref="WEBGL_multi_draw.MultiDrawElementsWEBGL"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/drawElements"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextDrawElements>
+<WebGLRenderingContextDrawingBufferColorSpace>
+<summary>
+The <strong><c>WebGLRenderingContext.drawingBufferColorSpace</c></strong> property specifies the color space of the WebGL drawing buffer. Along with the default (<c>srgb</c>), the <c>display-p3</c> color space can be used.
+</summary>
+<remarks>
+<para>See <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/unpackColorSpace"><c>WebGLRenderingContext.unpackColorSpace</c></see> for specifying the color space for textures.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/unpackColorSpace"><c>WebGLRenderingContext.unpackColorSpace</c></see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/drawingBufferColorSpace"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>This property can have the following values:If an invalid value is specified, then the value of <c>drawingBufferColorSpace</c> will remain unchanged.</value>
+</WebGLRenderingContextDrawingBufferColorSpace>
+<WebGLRenderingContextDrawingBufferHeight>
+<summary>
+The read-only <strong><c>WebGLRenderingContext.drawingBufferHeight</c></strong><br/>property represents the actual height of the current drawing buffer. It should match the<br/><c>height</c> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas">canvas</see> element associated with<br/>this context, but might differ if the implementation is not able to provide the<br/>requested height.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.DrawingBufferWidth"/><br/>-<see cref="WebGLRenderingContext.Viewport"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/drawingBufferHeight"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</WebGLRenderingContextDrawingBufferHeight>
+<WebGLRenderingContextDrawingBufferWidth>
+<summary>
+The read-only <strong><c>WebGLRenderingContext.drawingBufferWidth</c></strong><br/>property represents the actual width of the current drawing buffer. It should match the<br/><c>width</c> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas">canvas</see> element associated with<br/>this context, but might differ if the implementation is not able to provide the<br/>requested width.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.DrawingBufferHeight"/><br/>-<see cref="WebGLRenderingContext.Viewport"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/drawingBufferWidth"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</WebGLRenderingContextDrawingBufferWidth>
+<WebGLRenderingContextEnable>
+<summary>
+The <strong><c>WebGLRenderingContext.enable()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> enables specific WebGL capabilities<br/>for this context.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.Disable"/><br/>-<see cref="WebGLRenderingContext.IsEnabled"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/enable"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextEnable>
+<WebGLRenderingContextEnableVertexAttribArray>
+<summary>
+The <see cref="WebGLRenderingContext"/> method<br/><strong><c>enableVertexAttribArray()</c></strong>, part of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see>, turns on the generic vertex<br/>attribute array at the specified index into the list of attribute arrays.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>You can disable the attribute array by calling<br/><see cref="WebGLRenderingContext.DisableVertexAttribArray"/>.</para></blockquote><para>In WebGL, values that apply to a specific vertex are stored in <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Data#attributes">attributes</see>. These are only<br/>available to the JavaScript code and the vertex shader. Attributes are referenced by an<br/>index number into the list of attributes maintained by the GPU. Some vertex attribute<br/>indices may have predefined purposes, depending on the platform and/or the GPU. Others<br/>are assigned by the WebGL layer when you create the attributes.</para><para>Either way, since attributes cannot be used unless enabled, and are disabled by<br/>default, you need to call <c>enableVertexAttribArray()</c> to enable individual<br/>attributes so that they can be used. Once that&amp;apos;s been done, other methods can be used to<br/>access the attribute, including <see cref="WebGLRenderingContext.VertexAttribPointer"/>, {{domxref("WebGLRenderingContext.vertexAttrib", "vertexAttrib*()")}}, and <see cref="WebGLRenderingContext.GetVertexAttrib"/>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Data">Data in WebGL</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context">Adding 2D content to a WebGL context</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example">A basic 2D WebGL animation sample</see><br/>-<see cref="WebGLRenderingContext.DisableVertexAttribArray"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/enableVertexAttribArray"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextEnableVertexAttribArray>
+<WebGLRenderingContextFinish>
+<summary>
+The <strong><c>WebGLRenderingContext.finish()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> blocks execution until all<br/>previously called commands are finished.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.Flush"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/WebGL_best_practices">WebGL best practices</see> (which recommends avoiding <c>finish()</c> as it may slow down<br/>your main rendering loop)<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/finish"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextFinish>
+<WebGLRenderingContextFlush>
+<summary>
+The <strong><c>WebGLRenderingContext.flush()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> empties different buffer commands,<br/>causing all commands to be executed as quickly as possible.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.Finish"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/flush"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextFlush>
+<WebGLRenderingContextFramebufferRenderbuffer>
+<summary>
+The <strong><c>WebGLRenderingContext.framebufferRenderbuffer()</c></strong><br/>method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> attaches a<br/><see cref="WebGLRenderbuffer"/> object to a <see cref="WebGLFramebuffer"/> object.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.CreateFramebuffer"/><br/>-<see cref="WebGLRenderingContext.DeleteFramebuffer"/><br/>-<see cref="WebGLRenderingContext.IsFramebuffer"/><br/>-Other buffers: <see cref="WebGLBuffer"/>, <see cref="WebGLRenderbuffer"/><br/>-<see cref="WEBGL_draw_buffers"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/framebufferRenderbuffer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextFramebufferRenderbuffer>
+<WebGLRenderingContextFramebufferTexture2D>
+<summary>
+The <strong><c>WebGLRenderingContext.framebufferTexture2D()</c></strong> method<br/>of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> attaches a texture to a<br/><see cref="WebGLFramebuffer"/>.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.CreateFramebuffer"/><br/>-<see cref="WebGLRenderingContext.DeleteFramebuffer"/><br/>-<see cref="WebGLRenderingContext.IsFramebuffer"/><br/>-Other buffers: <see cref="WebGLBuffer"/>, <see cref="WebGLRenderbuffer"/><br/>-<see cref="WEBGL_depth_texture"/><br/>-<see cref="WEBGL_draw_buffers"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/framebufferTexture2D"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextFramebufferTexture2D>
+<WebGLRenderingContextFrontFace>
+<summary>
+The <strong><c>WebGLRenderingContext.frontFace()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> specifies whether polygons are<br/>front- or back-facing by setting a winding orientation.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.CullFace"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/frontFace"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextFrontFace>
+<WebGLRenderingContextGenerateMipmap>
+<summary>
+The <strong><c>WebGLRenderingContext.generateMipmap()</c></strong> method of the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> generates a set of mipmaps for a<br/><see cref="WebGLTexture"/> object.
+</summary>
+<remarks>
+<para>Mipmaps are used to create distance with objects. A higher-resolution mipmap is used<br/>for objects that are closer, and a lower-resolution mipmap is used for objects that are<br/>farther away. It starts with the resolution of the texture image and halves the<br/>resolution until a 1x1 dimension texture image is created.</para>
+<para>-<see cref="WebGLRenderingContext.CreateTexture"/><br/>-<see cref="WebGLRenderingContext.BindTexture"/><br/>-<see cref="WebGLRenderingContext.GetTexParameter"/><br/>-<see cref="WebGLRenderingContext.TexParameter"/><br/>-<see cref="WebGLRenderingContext.TexParameter"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/generateMipmap"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextGenerateMipmap>
+<WebGLRenderingContextGetActiveAttrib>
+<summary>
+The <strong><c>WebGLRenderingContext.getActiveAttrib()</c></strong> method of the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> returns a<br/><see cref="WebGLActiveInfo"/> object containing size, type, and name of a vertex<br/>attribute. It is generally used when querying unknown attributes either for debugging or<br/>generic library creation.
+</summary>
+<remarks>
+<para>-<see cref="WebGLActiveInfo"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getActiveAttrib"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="WebGLActiveInfo"/> object.</returns>
+</WebGLRenderingContextGetActiveAttrib>
+<WebGLRenderingContextGetActiveUniform>
+<summary>
+The <strong><c>WebGLRenderingContext.getActiveUniform()</c></strong> method of<br/>the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> returns a<br/><see cref="WebGLActiveInfo"/> object containing size, type, and name of a uniform<br/>attribute. It is generally used when querying unknown uniforms either for debugging or<br/>generic library creation.
+</summary>
+<remarks>
+<para>-<see cref="WebGLActiveInfo"/><br/>-<see cref="WebGLRenderingContext.GetUniformLocation"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getActiveUniform"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="WebGLActiveInfo"/> object describing the uniform.The <c>type</c> attribute of the return value will be one of the following:When <c>gl.linkProgram</c> is called, WebGL creates a list of active uniforms.<br/>These are possible values of the <c>name</c> attribute of return values of<br/><c>getActiveUniform</c>. WebGL<br/>generates one or more entries in the list depending on the declared type of the uniform<br/>in the shader:The <c>size</c> attribute of the return value corresponds to the length of the<br/>array for uniforms declared as arrays. Otherwise, it is 1 (this includes interface<br/>blocks instanced with arrays).</returns>
+</WebGLRenderingContextGetActiveUniform>
+<WebGLRenderingContextGetAttachedShaders>
+<summary>
+The <strong><c>WebGLRenderingContext.getAttachedShaders()</c></strong> method of<br/>the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> returns a list of<br/><see cref="WebGLShader"/> objects attached to a <see cref="WebGLProgram"/>.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.CreateShader"/><br/>-<see cref="WebGLRenderingContext.IsShader"/><br/>-<see cref="WebGLRenderingContext.DeleteShader"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getAttachedShaders"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An {{jsxref("Array")}} of <see cref="WebGLShader"/> objects that are attached to the<br/>given <c>WebGLProgram</c>.</returns>
+</WebGLRenderingContextGetAttachedShaders>
+<WebGLRenderingContextGetAttribLocation>
+<summary>
+The <strong><c>WebGLRenderingContext.getAttribLocation()</c></strong> method of<br/>the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> returns the location of an<br/>attribute variable in a given <see cref="WebGLProgram"/>.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.GetUniformLocation"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getAttribLocation"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="WebGL_APITypes"/> number indicating the location of the variable name if found.<br/>Returns -1 otherwise.</returns>
+</WebGLRenderingContextGetAttribLocation>
+<WebGLRenderingContextGetBufferParameter>
+<summary>
+The <strong><c>WebGLRenderingContext.getBufferParameter()</c></strong> method of<br/>the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> returns information about the<br/>buffer.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.BindBuffer"/><br/>-<see cref="WebGLRenderingContext.CreateBuffer"/><br/>-<see cref="WebGLRenderingContext.DeleteBuffer"/><br/>-<see cref="WebGLRenderingContext.BufferData"/><br/>-Other buffers: <see cref="WebGLFramebuffer"/>, <see cref="WebGLRenderbuffer"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getBufferParameter"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Depends on the requested information (as specified with <c>pname</c>). Either a<br/><see cref="WebGL_APITypes"/> or a <see cref="WebGL_APITypes"/>.</returns>
+</WebGLRenderingContextGetBufferParameter>
+<WebGLRenderingContextGetContextAttributes>
+<summary>
+The <strong><c>WebGLRenderingContext.getContextAttributes()</c></strong> method<br/>returns a <c>WebGLContextAttributes</c> object that contains the actual context<br/>parameters. Might return <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><c>null</c></see>, if the context is lost.
+</summary>
+<remarks>
+<para>-<see cref="HTMLCanvasElement.GetContext"/><br/>-<see cref="CanvasRenderingContext2D.GetContextAttributes"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getContextAttributes"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <c>WebGLContextAttributes</c> object that contains the actual context<br/>parameters, or <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><c>null</c></see> if the context is lost.</returns>
+</WebGLRenderingContextGetContextAttributes>
+<WebGLRenderingContextGetError>
+<summary>
+The <strong><c>WebGLRenderingContext.getError()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> returns error information.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext"/><br/>-<see cref="WebGLContextEvent"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getError"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebGLRenderingContextGetError>
+<WebGLRenderingContextGetExtension>
+<summary>
+The <strong><c>WebGLRenderingContext.getExtension()</c></strong> method enables a<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL</see> extension.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.GetSupportedExtensions"/><br/>-<see href="https://webglreport.com/">webglreport.com</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getExtension"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A WebGL extension object, or <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><c>null</c></see> if name does not match<br/>(case-insensitive) to one of the strings in<br/><see cref="WebGLRenderingContext.GetSupportedExtensions"/>.</returns>
+</WebGLRenderingContextGetExtension>
+<WebGLRenderingContextGetFramebufferAttachmentParameter>
+<summary>
+The<br/><strong><c>WebGLRenderingContext.getFramebufferAttachmentParameter()</c></strong><br/>method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> returns information<br/>about a framebuffer&amp;apos;s attachment.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.CreateFramebuffer"/><br/>-<see cref="WebGLRenderingContext.DeleteFramebuffer"/><br/>-<see cref="WebGLRenderingContext.IsFramebuffer"/><br/>-Other buffers: <see cref="WebGLBuffer"/>, <see cref="WebGLRenderbuffer"/><br/>-<see cref="EXT_sRGB"/><br/>-<see cref="WEBGL_draw_buffers"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getFramebufferAttachmentParameter"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Depends on the requested information (as specified with <c>pname</c>). Either a<br/><see cref="WebGL_APITypes"/>, a <see cref="WebGL_APITypes"/>, a <see cref="WebGLRenderbuffer"/>, or a<br/><see cref="WebGLTexture"/>.</returns>
+</WebGLRenderingContextGetFramebufferAttachmentParameter>
+<WebGLRenderingContextGetParameter>
+<summary>
+The <strong><c>WebGLRenderingContext.getParameter()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> returns a value for the passed<br/>parameter name.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.Enable"/><br/>-<see cref="WebGLRenderingContext.Disable"/><br/>-<see cref="EXT_texture_filter_anisotropic"/><br/>-<see cref="OES_standard_derivatives"/><br/>-<see cref="WEBGL_draw_buffers"/><br/>-<see cref="EXT_disjoint_timer_query"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getParameter"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Depends on the parameter.</returns>
+</WebGLRenderingContextGetParameter>
+<WebGLRenderingContextGetProgramInfoLog>
+<summary>
+The <strong>WebGLRenderingContext.getProgramInfoLog</strong> returns the information<br/>log for the specified <see cref="WebGLProgram"/> object. It contains errors that<br/>occurred during failed linking or validation of <c>WebGLProgram</c> objects.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.GetShaderInfoLog"/><br/>-<see cref="WebGLRenderingContext.GetError"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getProgramInfoLog"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A string that contains diagnostic messages, warning messages, and<br/>other information about the last linking or validation operation. When a<br/><see cref="WebGLProgram"/> object is initially created, its information log will be a<br/>string of length 0.</returns>
+</WebGLRenderingContextGetProgramInfoLog>
+<WebGLRenderingContextGetProgramParameter>
+<summary>
+The <strong><c>WebGLRenderingContext.getProgramParameter()</c></strong> method of<br/>the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> returns information about the<br/>given program.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.GetShaderParameter"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getProgramParameter"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Returns the requested program information (as specified with <c>pname</c>).</returns>
+</WebGLRenderingContextGetProgramParameter>
+<WebGLRenderingContextGetRenderbufferParameter>
+<summary>
+The <strong><c>WebGLRenderingContext.getRenderbufferParameter()</c></strong><br/>method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> returns information<br/>about the renderbuffer.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.BindRenderbuffer"/><br/>-<see cref="WebGLRenderingContext.CreateRenderbuffer"/><br/>-<see cref="WebGLRenderingContext.DeleteRenderbuffer"/><br/>-<see cref="WebGLRenderingContext.RenderbufferStorage"/><br/>-Other buffers: <see cref="WebGLBuffer"/>, <see cref="WebGLFramebuffer"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getRenderbufferParameter"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Depends on the requested information (as specified with <c>pname</c>). Either a<br/><see cref="WebGL_APITypes"/> or a <see cref="WebGL_APITypes"/>.</returns>
+</WebGLRenderingContextGetRenderbufferParameter>
+<WebGLRenderingContextGetShaderInfoLog>
+<summary>
+The <strong>WebGLRenderingContext.getShaderInfoLog</strong> returns the information log<br/>for the specified <see cref="WebGLShader"/> object. It contains warnings, debugging and<br/>compile information.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.GetShaderParameter"/> – used with<br/><c>gl.COMPILE_STATUS</c> to check for a failed compile.<br/>-<see cref="WebGLRenderingContext.GetError"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getShaderInfoLog"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A string that contains diagnostic messages, warning messages, and<br/>other information about the last compile operation. When a <see cref="WebGLShader"/><br/>object is initially created, its information log will be a string of length 0.</returns>
+</WebGLRenderingContextGetShaderInfoLog>
+<WebGLRenderingContextGetShaderParameter>
+<summary>
+The <strong><c>WebGLRenderingContext.getShaderParameter()</c></strong> method of<br/>the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> returns information about the<br/>given shader.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.GetProgramParameter"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getShaderParameter"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Returns the requested shader information (as specified with <c>pname</c>).</returns>
+</WebGLRenderingContextGetShaderParameter>
+<WebGLRenderingContextGetShaderPrecisionFormat>
+<summary>
+The<br/><strong><c>WebGLRenderingContext.getShaderPrecisionFormat()</c></strong> method of<br/>the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> returns a new<br/><see cref="WebGLShaderPrecisionFormat"/> object describing the range and precision for<br/>the specified shader numeric format.
+</summary>
+<remarks>
+<para>-<see cref="WebGLShaderPrecisionFormat"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getShaderPrecisionFormat"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="WebGLShaderPrecisionFormat"/> object or <c>null</c>, if an error<br/>occurs.</returns>
+</WebGLRenderingContextGetShaderPrecisionFormat>
+<WebGLRenderingContextGetShaderSource>
+<summary>
+The <strong><c>WebGLRenderingContext.getShaderSource()</c></strong> method of the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> returns the source code of a<br/><see cref="WebGLShader"/> as a string.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.CreateShader"/><br/>-<see cref="WebGLRenderingContext.IsShader"/><br/>-<see cref="WebGLRenderingContext.DeleteShader"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getShaderSource"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A string containing the source code of the shader.</returns>
+</WebGLRenderingContextGetShaderSource>
+<WebGLRenderingContextGetSupportedExtensions>
+<summary>
+The <strong><c>WebGLRenderingContext.getSupportedExtensions()</c></strong> method<br/>returns a list of all the supported <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL</see><br/>extensions.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.GetExtension"/><br/>-<see href="https://webglreport.com/">webglreport.com</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getSupportedExtensions"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="Array"/> of strings with all the supported WebGL extensions.</returns>
+</WebGLRenderingContextGetSupportedExtensions>
+<WebGLRenderingContextGetTexParameter>
+<summary>
+The <strong><c>WebGLRenderingContext.getTexParameter()</c></strong> method of the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> returns information about the<br/>given texture.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.TexParameter"/><br/>-<see cref="WebGLRenderingContext.TexParameter"/><br/>-<see cref="EXT_texture_filter_anisotropic"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getTexParameter"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Returns the requested texture information (as specified with <c>pname</c>). If an<br/>error occurs, <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><c>null</c></see> is returned.</returns>
+</WebGLRenderingContextGetTexParameter>
+<WebGLRenderingContextGetUniform>
+<summary>
+The <strong><c>WebGLRenderingContext.getUniform()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> returns the value of a uniform<br/>variable at a given location.
+</summary>
+<remarks>
+<para>-<see cref="WebGLUniformLocation"/><br/>-<see cref="WebGLRenderingContext.GetActiveUniform"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getUniform"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>The returned type depends on the uniform type:</returns>
+</WebGLRenderingContextGetUniform>
+<WebGLRenderingContextGetUniformLocation>
+<summary>
+Part of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see>, the <see cref="WebGLRenderingContext"/> method<br/><strong><c>getUniformLocation()</c></strong> returns the location of a<br/>specific <strong>uniform</strong> variable which is part of a given<br/><see cref="WebGLProgram"/>.
+</summary>
+<remarks>
+<para>The uniform variable is returned as a<br/><see cref="WebGLUniformLocation"/> object, which is an opaque identifier used to<br/>specify where in the GPU&amp;apos;s memory that uniform variable is located.</para><para>Once you have the uniform&amp;apos;s location, you can access the uniform itself using one of<br/>the other uniform access methods, passing in the uniform location as one of the<br/>inputs:</para><para>The uniform itself is declared in the shader program using GLSL.</para>
+<para>-<see cref="WebGLRenderingContext.GetAttribLocation"/><br/>-<see cref="WebGLRenderingContext.GetActiveUniform"/><br/>-<see cref="WebGLUniformLocation"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getUniformLocation"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="WebGLUniformLocation"/> value indicating the location of the named<br/>variable, if it exists. If the specified variable doesn&amp;apos;t exist, <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><c>null</c></see> is<br/>returned instead.The <c>WebGLUniformLocation</c> is an opaque value used to uniquely identify the<br/>location in the GPU&amp;apos;s memory at which the uniform variable is located. With this value<br/>in hand, you can call other WebGL methods to access the value of the uniform variable.<blockquote class="NOTE"><h5>NOTE</h5>The <c>WebGLUniformLocation</c> type is compatible with the<br/><c>GLint</c> type when specifying the index or location of a uniform<br/>attribute.</blockquote></returns>
+</WebGLRenderingContextGetUniformLocation>
+<WebGLRenderingContextGetVertexAttrib>
+<summary>
+The <strong><c>WebGLRenderingContext.getVertexAttrib()</c></strong> method of the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> returns information about a vertex<br/>attribute at a given position.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.GetVertexAttribOffset"/><br/>-<see cref="ANGLE_instanced_arrays"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getVertexAttrib"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Returns the requested vertex attribute information (as specified with<br/><c>pname</c>).</returns>
+</WebGLRenderingContextGetVertexAttrib>
+<WebGLRenderingContextGetVertexAttribOffset>
+<summary>
+The <strong><c>WebGLRenderingContext.getVertexAttribOffset()</c></strong> method<br/>of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> returns the address of a<br/>specified vertex attribute.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.VertexAttribPointer"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getVertexAttribOffset"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="WebGL_APITypes"/> indicating the address of the vertex attribute.</returns>
+</WebGLRenderingContextGetVertexAttribOffset>
+<WebGLRenderingContextHint>
+<summary>
+The <strong><c>WebGLRenderingContext.hint()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> specifies hints for certain<br/>behaviors. The interpretation of these hints depend on the implementation.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.GenerateMipmap"/><br/>-<see cref="OES_standard_derivatives"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/hint"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextHint>
+<WebGLRenderingContextIsBuffer>
+<summary>
+The <strong><c>WebGLRenderingContext.isBuffer()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> returns <c>true</c> if the<br/>passed <see cref="WebGLBuffer"/> is valid and <c>false</c> otherwise.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.BindBuffer"/><br/>-<see cref="WebGLRenderingContext.CreateBuffer"/><br/>-<see cref="WebGLRenderingContext.DeleteBuffer"/><br/>-Other buffers: <see cref="WebGLFramebuffer"/>, <see cref="WebGLRenderbuffer"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/isBuffer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="WebGL_APITypes"/> indicating whether or not the buffer is valid.</returns>
+</WebGLRenderingContextIsBuffer>
+<WebGLRenderingContextIsContextLost>
+<summary>
+The<br/><strong><c>WebGLRenderingContext.isContextLost()</c></strong> method returns a<br/>boolean value indicating whether or not the WebGL context has been lost and<br/>must be re-established before rendering can resume.
+</summary>
+<remarks>
+<para>-The <see cref="WebGLContextEvent"/> signals changes in the context state.<br/>-<see href="https://www.khronos.org/webgl/wiki/HandlingContextLost">Handling lost context in WebGL</see>: Khronos WebGL wiki<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/isContextLost"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A boolean value which is <c>true</c> if the context is lost, or<br/><c>false</c> if not.</returns>
+</WebGLRenderingContextIsContextLost>
+<WebGLRenderingContextIsEnabled>
+<summary>
+The <strong><c>WebGLRenderingContext.isEnabled()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> tests whether a specific WebGL<br/>capability is enabled or not for this context.
+</summary>
+<remarks>
+<para>By default, all capabilities except <c>gl.DITHER</c> are<br/><strong>disabled</strong>.</para>
+<para>-<see cref="WebGLRenderingContext.Enable"/><br/>-<see cref="WebGLRenderingContext.Disable"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/isEnabled"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="WebGL_APITypes"/> indicating if the capability <strong>cap</strong> is enabled<br/>(<c>true</c>), or not (<c>false</c>).</returns>
+</WebGLRenderingContextIsEnabled>
+<WebGLRenderingContextIsFramebuffer>
+<summary>
+The <strong><c>WebGLRenderingContext.isFramebuffer()</c></strong> method of the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> returns <c>true</c> if the<br/>passed <see cref="WebGLFramebuffer"/> is valid and <c>false</c> otherwise.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.BindFramebuffer"/><br/>-<see cref="WebGLRenderingContext.CreateFramebuffer"/><br/>-<see cref="WebGLRenderingContext.DeleteFramebuffer"/><br/>-Other buffers: <see cref="WebGLBuffer"/>, <see cref="WebGLRenderbuffer"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/isFramebuffer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="WebGL_APITypes"/> indicating whether or not the frame buffer is valid.</returns>
+</WebGLRenderingContextIsFramebuffer>
+<WebGLRenderingContextIsProgram>
+<summary>
+The <strong><c>WebGLRenderingContext.isProgram()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> returns <c>true</c> if the<br/>passed <see cref="WebGLProgram"/> is valid, <c>false</c> otherwise.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.CreateProgram"/><br/>-<see cref="WebGLRenderingContext.DeleteProgram"/><br/>-<see cref="WebGLRenderingContext.LinkProgram"/><br/>-<see cref="WebGLRenderingContext.UseProgram"/><br/>-<see cref="WebGLRenderingContext.ValidateProgram"/><br/>-<see cref="WebGLRenderingContext.GetProgramParameter"/><br/>-<see cref="WebGLRenderingContext.GetProgramInfoLog"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/isProgram"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="WebGL_APITypes"/> indicating whether or not the program is valid.</returns>
+</WebGLRenderingContextIsProgram>
+<WebGLRenderingContextIsRenderbuffer>
+<summary>
+The <strong><c>WebGLRenderingContext.isRenderbuffer()</c></strong> method of the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> returns <c>true</c> if the<br/>passed <see cref="WebGLRenderbuffer"/> is valid and <c>false</c> otherwise.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.BindRenderbuffer"/><br/>-<see cref="WebGLRenderingContext.CreateRenderbuffer"/><br/>-<see cref="WebGLRenderingContext.DeleteRenderbuffer"/><br/>-Other buffers: <see cref="WebGLBuffer"/>, <see cref="WebGLFramebuffer"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/isRenderbuffer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="WebGL_APITypes"/> indicating whether or not the renderbuffer is valid.</returns>
+</WebGLRenderingContextIsRenderbuffer>
+<WebGLRenderingContextIsShader>
+<summary>
+The <strong><c>WebGLRenderingContext.isShader()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> returns <c>true</c> if the<br/>passed <see cref="WebGLShader"/> is valid, <c>false</c> otherwise.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.CreateShader"/><br/>-<see cref="WebGLRenderingContext.DeleteShader"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/isShader"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="WebGL_APITypes"/> indicating whether or not the shader is valid.</returns>
+</WebGLRenderingContextIsShader>
+<WebGLRenderingContextIsTexture>
+<summary>
+The <strong><c>WebGLRenderingContext.isTexture()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> returns <c>true</c> if the<br/>passed <see cref="WebGLTexture"/> is valid and <c>false</c> otherwise.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.BindTexture"/><br/>-<see cref="WebGLRenderingContext.CreateTexture"/><br/>-<see cref="WebGLRenderingContext.DeleteTexture"/><br/>-<see cref="WebGLRenderingContext.TexImage2D"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/isTexture"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="WebGL_APITypes"/> indicating whether or not the texture is valid.</returns>
+</WebGLRenderingContextIsTexture>
+<WebGLRenderingContextLineWidth>
+<summary>
+The <strong><c>WebGLRenderingContext.lineWidth()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> sets the line width of rasterized<br/>lines.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/lineWidth"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextLineWidth>
+<WebGLRenderingContextLinkProgram>
+<summary>
+The <see cref="WebGLRenderingContext"/> interface's<br/><strong><c>linkProgram()</c></strong> method links a given<br/><see cref="WebGLProgram"/>, completing the process of preparing the GPU code for the<br/>program&amp;apos;s fragment and vertex shaders.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.CreateProgram"/><br/>-<see cref="WebGLRenderingContext.DeleteProgram"/><br/>-<see cref="WebGLRenderingContext.IsProgram"/><br/>-<see cref="WebGLRenderingContext.UseProgram"/><br/>-<see cref="WebGLRenderingContext.ValidateProgram"/><br/>-<see cref="WebGLRenderingContext.GetProgramParameter"/><br/>-<see cref="WebGLRenderingContext.GetProgramInfoLog"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/linkProgram"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextLinkProgram>
+<WebGLRenderingContextMakeXRCompatible>
+<summary>
+The <see cref="WebGLRenderingContext"/> method<br/><strong><c>makeXRCompatible()</c></strong> ensures that the rendering context<br/>described by the <c>WebGLRenderingContext</c> is ready to render the scene for the<br/>immersive <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR</see> device on which it<br/>will be displayed. If necessary, the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL</see><br/>layer may reconfigure the context to be ready to render to a different device than it<br/>originally was.
+</summary>
+<remarks>
+<para>This is useful if you have an application which can start out being presented on a<br/>standard 2D display but can then be transitioned to a 3D immersion system.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/makeXRCompatible"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A<br/><see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><c>Promise</c></see><br/>which successfully resolves once the WebGL context is ready to be used for rendering <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR</see> content.</returns>
+</WebGLRenderingContextMakeXRCompatible>
+<WebGLRenderingContextPixelStorei>
+<summary>
+The <strong><c>WebGLRenderingContext.pixelStorei()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> specifies the pixel storage modes.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.ReadPixels"/><br/>-<see cref="WebGLRenderingContext.TexImage2D"/><br/>-<see cref="WebGLRenderingContext.TexSubImage2D"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/pixelStorei"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextPixelStorei>
+<WebGLRenderingContextPolygonOffset>
+<summary>
+The <strong><c>WebGLRenderingContext.polygonOffset()</c></strong> method of the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> specifies the scale factors and<br/>units to calculate depth values.
+</summary>
+<remarks>
+<para>The offset is added before the depth test is performed and before the value is written<br/>into the depth buffer.</para>
+<para>-<see cref="WebGLRenderingContext.DepthFunc"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/polygonOffset"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextPolygonOffset>
+<WebGLRenderingContextReadPixels>
+<summary>
+The <strong><c>WebGLRenderingContext.readPixels()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> reads a block of pixels from a<br/>specified rectangle of the current color framebuffer into a <see cref="TypedArray"/> or a <see cref="DataView"/> object.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Typed_arrays">Typed Arrays</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/readPixels"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextReadPixels>
+<WebGLRenderingContextRenderbufferStorage>
+<summary>
+The <strong><c>WebGLRenderingContext.renderbufferStorage()</c></strong> method of<br/>the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> creates and initializes a<br/>renderbuffer object&amp;apos;s data store.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.BindRenderbuffer"/><br/>-<see cref="WebGLRenderingContext.CreateRenderbuffer"/><br/>-<see cref="WebGLRenderingContext.DeleteRenderbuffer"/><br/>-<see cref="WebGLRenderingContext.GetRenderbufferParameter"/><br/>-<see cref="WEBGL_color_buffer_float"/><br/>-<see cref="EXT_sRGB"/><br/>-<see cref="EXT_color_buffer_float"/><br/>-<see cref="EXT_texture_norm16"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/renderbufferStorage"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextRenderbufferStorage>
+<WebGLRenderingContextSampleCoverage>
+<summary>
+The <strong><c>WebGLRenderingContext.sampleCoverage()</c></strong> method of the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> specifies multi-sample coverage<br/>parameters for anti-aliasing effects.
+</summary>
+<remarks>
+<para>-<see cref="HTMLCanvasElement.GetContext"/> – <c>antialias</c> parameter for<br/>the context.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/sampleCoverage"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextSampleCoverage>
+<WebGLRenderingContextScissor>
+<summary>
+The <strong><c>WebGLRenderingContext.scissor()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> sets a scissor box, which limits<br/>the drawing to a specified rectangle.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.Viewport"/><br/>-<see cref="WebGLRenderingContext.Enable"/><br/>-<see cref="WebGLRenderingContext.Disable"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/scissor"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextScissor>
+<WebGLRenderingContextShaderSource>
+<summary>
+The <strong><c>WebGLRenderingContext.shaderSource()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> sets the source code of a<br/><see cref="WebGLShader"/>.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.CreateShader"/><br/>-<see cref="WebGLRenderingContext.IsShader"/><br/>-<see cref="WebGLRenderingContext.DeleteShader"/><br/>-<see cref="WebGLRenderingContext.GetShaderSource"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/shaderSource"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextShaderSource>
+<WebGLRenderingContextStencilFunc>
+<summary>
+The <strong><c>WebGLRenderingContext.stencilFunc()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> sets the front and back function<br/>and reference value for stencil testing.
+</summary>
+<remarks>
+<para>Stenciling enables and disables drawing on a per-pixel basis. It is typically used in<br/>multipass rendering to achieve special effects.</para>
+<para>-<see cref="WebGLRenderingContext.StencilFuncSeparate"/><br/>-<see cref="WebGLRenderingContext.StencilMask"/><br/>-<see cref="WebGLRenderingContext.StencilMaskSeparate"/><br/>-<see cref="WebGLRenderingContext.StencilOp"/><br/>-<see cref="WebGLRenderingContext.StencilOpSeparate"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/stencilFunc"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextStencilFunc>
+<WebGLRenderingContextStencilFuncSeparate>
+<summary>
+The <strong><c>WebGLRenderingContext.stencilFuncSeparate()</c></strong> method of<br/>the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> sets the front and/or back<br/>function and reference value for stencil testing.
+</summary>
+<remarks>
+<para>Stencilling enables and disables drawing on a per-pixel basis. It is typically used in<br/>multipass rendering to achieve special effects.</para>
+<para>-<see cref="WebGLRenderingContext.StencilFunc"/><br/>-<see cref="WebGLRenderingContext.StencilMask"/><br/>-<see cref="WebGLRenderingContext.StencilMaskSeparate"/><br/>-<see cref="WebGLRenderingContext.StencilOp"/><br/>-<see cref="WebGLRenderingContext.StencilOpSeparate"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/stencilFuncSeparate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextStencilFuncSeparate>
+<WebGLRenderingContextStencilMask>
+<summary>
+The <strong><c>WebGLRenderingContext.stencilMask()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> controls enabling and disabling of<br/>both the front and back writing of individual bits in the stencil planes.
+</summary>
+<remarks>
+<para>The <see cref="WebGLRenderingContext.StencilMaskSeparate"/> method can set front and<br/>back stencil writemasks to different values.</para>
+<para>-<see cref="WebGLRenderingContext.ColorMask"/><br/>-<see cref="WebGLRenderingContext.DepthMask"/><br/>-<see cref="WebGLRenderingContext.StencilMaskSeparate"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/stencilMask"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextStencilMask>
+<WebGLRenderingContextStencilMaskSeparate>
+<summary>
+The <strong><c>WebGLRenderingContext.stencilMaskSeparate()</c></strong> method of<br/>the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> controls enabling and<br/>disabling of front and/or back writing of individual bits in the stencil planes.
+</summary>
+<remarks>
+<para>The <see cref="WebGLRenderingContext.StencilMask"/> method can set both, the front<br/>and back stencil writemasks to one value at the same time.</para>
+<para>-<see cref="WebGLRenderingContext.ColorMask"/><br/>-<see cref="WebGLRenderingContext.DepthMask"/><br/>-<see cref="WebGLRenderingContext.StencilMask"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/stencilMaskSeparate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextStencilMaskSeparate>
+<WebGLRenderingContextStencilOp>
+<summary>
+The <strong><c>WebGLRenderingContext.stencilOp()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> sets both the front and back-facing<br/>stencil test actions.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.StencilOpSeparate"/><br/>-<see cref="WebGLRenderingContext.StencilFunc"/><br/>-<see cref="WebGLRenderingContext.StencilFuncSeparate"/><br/>-<see cref="WebGLRenderingContext.StencilMask"/><br/>-<see cref="WebGLRenderingContext.StencilMaskSeparate"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/stencilOp"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextStencilOp>
+<WebGLRenderingContextStencilOpSeparate>
+<summary>
+The <strong><c>WebGLRenderingContext.stencilOpSeparate()</c></strong> method of<br/>the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> sets the front and/or<br/>back-facing stencil test actions.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.StencilOp"/><br/>-<see cref="WebGLRenderingContext.StencilFunc"/><br/>-<see cref="WebGLRenderingContext.StencilFuncSeparate"/><br/>-<see cref="WebGLRenderingContext.StencilMask"/><br/>-<see cref="WebGLRenderingContext.StencilMaskSeparate"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/stencilOpSeparate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextStencilOpSeparate>
+<WebGLRenderingContextTexImage2D>
+<summary>
+The <strong><c>WebGLRenderingContext.texImage2D()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> specifies a two-dimensional texture<br/>image.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.CreateTexture"/><br/>-<see cref="WebGLRenderingContext.BindTexture"/><br/>-<see cref="WebGLRenderingContext.TexSubImage2D"/><br/>-<see cref="WebGLRenderingContext.CompressedTexImage2D"/><br/>-<see cref="WebGLRenderingContext.CopyTexImage2D"/><br/>-<see cref="WebGLRenderingContext.GetTexParameter"/><br/>-<see cref="WEBGL_depth_texture"/><br/>-<see cref="OES_texture_float"/><br/>-<see cref="OES_texture_half_float"/><br/>-<see cref="EXT_texture_norm16"/><br/>-<see cref="EXT_sRGB"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextTexImage2D>
+<WebGLRenderingContextTexParameter>
+<summary>
+The <strong><c>WebGLRenderingContext.texParameter[fi]()</c></strong> methods of<br/>the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> set texture parameters.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.GetTexParameter"/><br/>-<see cref="EXT_texture_filter_anisotropic"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texParameter"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextTexParameter>
+<WebGLRenderingContextTexSubImage2D>
+<summary>
+The <strong><c>WebGLRenderingContext.texSubImage2D()</c></strong> method of the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> specifies a sub-rectangle of the<br/>current texture.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.CreateTexture"/><br/>-<see cref="WebGLRenderingContext.BindTexture"/><br/>-<see cref="WebGLRenderingContext.TexImage2D"/><br/>-<see cref="WebGLRenderingContext.CompressedTexImage2D"/><br/>-<see cref="WebGLRenderingContext.CopyTexImage2D"/><br/>-<see cref="WebGLRenderingContext.GetTexParameter"/><br/>-<see cref="OES_texture_float"/><br/>-<see cref="OES_texture_half_float"/><br/>-<see cref="EXT_sRGB"/><br/>-<see cref="EXT_texture_norm16"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextTexSubImage2D>
+<WebGLRenderingContextUniform>
+<summary>
+The <strong><c>WebGLRenderingContext.uniform[1234][fi][v]()</c></strong> methods<br/>of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> specify values of uniform<br/>variables. All active uniform variables defined in a program object are initialized to 0<br/>when the program object is linked successfully. They retain the values assigned to them<br/>by a call to this method until the next successful link operation occurs on the program<br/>object, when they are once again initialized to 0.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Many of the functions described here have expanded WebGL 2 interfaces, which can be<br/>found under<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/uniform"><c>WebGL2RenderingContext.uniform[1234][uif][v]()</c></see>.</para></blockquote>
+<para>-<see cref="WebGLRenderingContext.UniformMatrix"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextUniform>
+<WebGLRenderingContextUniformMatrix>
+<summary>
+The <strong><c>WebGLRenderingContext.uniformMatrix[234]fv()</c></strong> methods<br/>of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> specify matrix values for<br/>uniform variables.
+</summary>
+<remarks>
+<para>The three versions of this method (<c>uniformMatrix2fv()</c>,<br/><c>uniformMatrix3fv()</c>, and <c>uniformMatrix4fv()</c>) take as the input<br/>value 2-component, 3-component, and 4-component square matrices, respectively. They are<br/>expected to have 4, 9 or 16 floats.</para>
+<para>-<see cref="WebGLRenderingContext.Uniform"/><br/>-<see cref="WebGL2RenderingContext.UniformMatrix"/> – WebGL 2 versions of these<br/>methods.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextUniformMatrix>
+<WebGLRenderingContextUnpackColorSpace>
+<summary>
+The <strong><c>WebGLRenderingContext.unpackColorSpace</c></strong> property specifies the color space to convert to when importing textures. Along with the default (<c>srgb</c>), the <c>display-p3</c> color space can be used.
+</summary>
+<remarks>
+<para>Texture image sources can be the following:</para><para>Textures are imported using the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D"><c>WebGL2RenderingContext.texImage2D()</c></see> and <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D"><c>WebGL2RenderingContext.texSubImage2D()</c></see> methods and conversion to the specified <c>unpackColorSpace</c> color space happens during import.</para><para>Note that this doesn&amp;apos;t apply to <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement"><c>HTMLImageElement</c></see> when the <c>UNPACK_COLORSPACE_CONVERSION_WEBGL</c> pixel storage parameter is set to <c>NONE</c>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/drawingBufferColorSpace"><c>WebGLRenderingContext.drawingBufferColorSpace</c></see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/unpackColorSpace"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>This property can have the following values:If an invalid value is specified, then the value of <c>unpackColorSpace</c> will remain unchanged.</value>
+</WebGLRenderingContextUnpackColorSpace>
+<WebGLRenderingContextUseProgram>
+<summary>
+The <strong><c>WebGLRenderingContext.useProgram()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> sets the specified<br/><see cref="WebGLProgram"/> as part of the current rendering state.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.CreateProgram"/><br/>-<see cref="WebGLRenderingContext.DeleteProgram"/><br/>-<see cref="WebGLRenderingContext.IsProgram"/><br/>-<see cref="WebGLRenderingContext.LinkProgram"/><br/>-<see cref="WebGLRenderingContext.ValidateProgram"/><br/>-<see cref="WebGLRenderingContext.GetProgramParameter"/><br/>-<see cref="WebGLRenderingContext.GetProgramInfoLog"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/useProgram"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextUseProgram>
+<WebGLRenderingContextValidateProgram>
+<summary>
+The <strong><c>WebGLRenderingContext.validateProgram()</c></strong> method of the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> validates a<br/><see cref="WebGLProgram"/>. It checks if it is successfully linked and if it can be<br/>used in the current WebGL state.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.CreateProgram"/><br/>-<see cref="WebGLRenderingContext.DeleteProgram"/><br/>-<see cref="WebGLRenderingContext.IsProgram"/><br/>-<see cref="WebGLRenderingContext.LinkProgram"/><br/>-<see cref="WebGLRenderingContext.UseProgram"/><br/>-<see cref="WebGLRenderingContext.GetProgramParameter"/><br/>-<see cref="WebGLRenderingContext.GetProgramInfoLog"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/validateProgram"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextValidateProgram>
+<WebGLRenderingContextVertexAttrib>
+<summary>
+The <strong><c>WebGLRenderingContext.vertexAttrib[1234]f[v]()</c></strong><br/>methods of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> specify constant<br/>values for generic vertex attributes.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.GetVertexAttrib"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextVertexAttrib>
+<WebGLRenderingContextVertexAttribPointer>
+<summary>
+The<br/><strong><c>WebGLRenderingContext.vertexAttribPointer()</c></strong> method of the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> binds the buffer currently bound<br/>to <c>gl.ARRAY_BUFFER</c> to a generic vertex attribute of the current vertex<br/>buffer object and specifies its layout.
+</summary>
+<remarks>
+<para>-<see href="https://www.khronos.org/opengl/wiki/Vertex_Specification">Vertex Specification</see> on the OpenGL wiki<br/>-<see cref="WebGL2RenderingContext.VertexAttribIPointer"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttribPointer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextVertexAttribPointer>
+<WebGLRenderingContextViewport>
+<summary>
+The <strong><c>WebGLRenderingContext.viewport()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> sets the viewport, which specifies<br/>the affine transformation of x and y from normalized device coordinates to window<br/>coordinates.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.Scissor"/><br/>-<see cref="WebGLRenderingContext.GetParameter"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/viewport"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGLRenderingContextViewport>
 </docs>

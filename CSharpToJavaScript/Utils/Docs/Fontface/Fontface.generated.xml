@@ -9,4 +9,158 @@ The <strong><c>FontFace</c></strong> interface of the <see href="https://develop
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FontFace"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </FontFace>
+<FontFaceAscentOverride>
+<summary>
+The <strong><c>ascentOverride</c></strong> property of the <see cref="FontFace"/> interface returns and sets the ascent metric for the font, the height above the baseline that CSS uses to lay out line boxes in an inline formatting context.
+</summary>
+<remarks>
+<para>This property is equivalent to the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/ascent-override">@font-face/ascent-override</see> descriptor of <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face">@font-face</see>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FontFace/ascentOverride"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string. The possible values are <c>normal</c>, indicating that the metric used should be obtained from the font file, or a percentage.This property accepts the same values as the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/ascent-override">@font-face/ascent-override</see> descriptor.</value>
+</FontFaceAscentOverride>
+<FontFaceDescentOverride>
+<summary>
+The <strong><c>descentOverride</c></strong> property of the <see cref="FontFace"/> interface returns and sets the value of the {{cssxref("@font-face/descent-override")}} descriptor.<br/>The possible values are <c>normal</c>, indicating that the metric used should be obtained from the font file, or a percentage.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FontFace/descentOverride"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</FontFaceDescentOverride>
+<FontFaceDisplay>
+<summary>
+The <strong><c>display</c></strong> property of the <see cref="FontFace"/> interface determines how a font face is displayed based on whether and when it is downloaded and ready to use.<br/>This property is equivalent to the CSS <c>font-display</c> descriptor.
+</summary>
+<remarks>
+<para>When this property is used, font loading has a timeline with three periods.<br/>The lengths of the first two periods depend on the value of the property and the user agent.<br/>(See below.)</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FontFace/display"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string with one of the following values.</value>
+</FontFaceDisplay>
+<FontFaceFamily>
+<summary>
+The <strong><c>FontFace.family</c></strong> property allows the author to get or set the font family of a <see cref="FontFace"/> object.
+</summary>
+<remarks>
+<para>The value is used for name matching against a particular font face when styling elements using the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-family"><c>font-family</c></see> property.<br/>Any name may be used, and this overrides any name specified in the underlying font data.</para><para>This property is equivalent to the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-family">@font-face/font-family</see> descriptor of <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face">@font-face</see>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FontFace/family"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</FontFaceFamily>
+<FontFaceFeatureSettings>
+<summary>
+The <strong><c>featureSettings</c></strong> property of the <see cref="FontFace"/> interface retrieves or sets infrequently used font features that are not available from a font's variant properties.
+</summary>
+<remarks>
+<para>This property is equivalent to the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-feature-settings">font-feature-settings</see> descriptor.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FontFace/featureSettings"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing a descriptor.</value>
+</FontFaceFeatureSettings>
+<FontFaceFontFace>
+<summary>
+The <strong><c>FontFace()</c></strong> constructor creates a new <see cref="FontFace"/> object.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face">@font-face</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FontFace/FontFace"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</FontFaceFontFace>
+<FontFaceLineGapOverride>
+<summary>
+The <strong><c>lineGapOverride</c></strong> property of the <see cref="FontFace"/> interface returns and sets the value of the {{cssxref("@font-face/line-gap-override")}} descriptor.<br/>The possible values are <c>normal</c>, indicating that the metric used should be obtained from the font file, or a percentage.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FontFace/lineGapOverride"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</FontFaceLineGapOverride>
+<FontFaceLoad>
+<summary>
+The <strong><c>load()</c></strong> method of the <see cref="FontFace"/> interface requests and loads a font whose <c>source</c> was specified as a URL. It returns a <see cref="'Promise'"/> that resolves with the current <c>FontFace</c> object.
+</summary>
+<remarks>
+<para>If the <c>source</c> for the font face was specified as binary data, or the font <see cref="FontFacestatus"/> property of the font face is anything other than <c>unloaded</c>, then this method does nothing.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FontFace/load"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="'Promise'"/> that resolves with a reference to the current <c>FontFace</c> object when the font loads or rejects with a <c>NetworkError</c> <see cref="DOMException"/> if the loading process fails.</returns>
+</FontFaceLoad>
+<FontFaceLoaded>
+<summary>
+The <strong><c>loaded</c></strong> read-only property of the <see cref="FontFace"/> interface returns a {{jsxref('Promise')}} that resolves with the current <c>FontFace</c> object when the font specified in the object&amp;apos;s constructor is done loading or rejects with a <c>SyntaxError</c>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FontFace/loaded"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="'Promise'"/> that resolves with the current <c>FontFace</c> object.</value>
+</FontFaceLoaded>
+<FontFaceStatus>
+<summary>
+The <strong><c>status</c></strong> read-only property of the <see cref="FontFace"/> interface returns an enumerated value indicating the status of the font, one of <c>&amp;quot;unloaded&amp;quot;</c>, <c>&amp;quot;loading&amp;quot;</c>, <c>&amp;quot;loaded&amp;quot;</c>, or <c>&amp;quot;error&amp;quot;</c>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FontFace/status"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>One of <c>&amp;quot;unloaded&amp;quot;</c>, <c>&amp;quot;loading&amp;quot;</c>, <c>&amp;quot;loaded&amp;quot;</c>, or <c>&amp;quot;error&amp;quot;</c>.</value>
+</FontFaceStatus>
+<FontFaceStretch>
+<summary>
+The <strong><c>stretch</c></strong> property of the <see cref="FontFace"/> interface retrieves or sets how the font stretches.
+</summary>
+<remarks>
+<para>This property is equivalent to the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-stretch">@font-face/font-stretch</see> descriptor.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FontFace/stretch"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing a descriptor as it would be defined in a style sheet&amp;apos;s <c>_font-face</c> rule.</value>
+</FontFaceStretch>
+<FontFaceStyle>
+<summary>
+The <strong><c>style</c></strong> property of the <see cref="FontFace"/> interface retrieves or sets the font's style.
+</summary>
+<remarks>
+<para>This property is equivalent to the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-style">@font-face/font-style</see> descriptor.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FontFace/style"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing the descriptors defined in the style sheet&amp;apos;s <c>_font-face</c> rule.</value>
+</FontFaceStyle>
+<FontFaceUnicodeRange>
+<summary>
+The <strong><c>unicodeRange</c></strong> property of the <see cref="FontFace"/> interface retrieves or sets the range of unicode code points encompassing the font.
+</summary>
+<remarks>
+<para>This property is equivalent to the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/unicode-range">@font-face/unicode-range</see> descriptor.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FontFace/unicodeRange"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing a descriptor as it would appear in a style sheet&amp;apos;s <c>_font-face</c> rule.</value>
+</FontFaceUnicodeRange>
+<FontFaceVariant>
+<summary>
+<div class="CAUTION"><h5>CAUTION</h5> <strong>Non-standard</strong></div> The <strong><c>variant</c></strong> property of the<br/><see cref="FontFace"/> interface programmatically retrieves or sets font variant<br/>values.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FontFace/variant"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing a descriptor as it would be defined in a style<br/>sheet&amp;apos;s <c>_font-face</c> rule.</value>
+</FontFaceVariant>
+<FontFaceVariationSettings>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>variationSettings</c></strong> property of the <see cref="FontFace"/> interface retrieves or sets low-level OpenType or TrueType font variations.
+</summary>
+<remarks>
+<para>This property is equivalent to the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-variation-settings">@font-face/font-variation-settings</see> descriptor.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FontFace/variationSettings"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing a descriptor.</value>
+</FontFaceVariationSettings>
+<FontFaceWeight>
+<summary>
+The <strong><c>weight</c></strong> property of the <see cref="FontFace"/> interface retrieves or sets the weight of the font.
+</summary>
+<remarks>
+<para>This property is equivalent to the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-weight">@font-face/font-weight</see> descriptor.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FontFace/weight"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing a descriptor as it would be defined in a style sheet&amp;apos;s <c>_font-face</c> rule.</value>
+</FontFaceWeight>
 </docs>

@@ -1,12 +1,71 @@
 <docs>
 <UIEvent>
 <summary>
-The <strong><c>UIEvent</c></strong> interface represents simple user interface events.
+The <strong><c>UIEvent</c></strong> interface represents simple user interface events. It is part of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/UI_Events">UI Events</see> API, which includes various event types and interfaces related to user interactions.
 </summary>
 <remarks>
 <para><c>UIEvent</c> derives from <see cref="Event"/>. Although the <see cref="UIEvent.InitUIEvent"/> method is kept for backward compatibility, you should create a <c>UIEvent</c> object using the <see cref="UIEvent.UIEvent"/> constructor.</para><para>Several interfaces are direct or indirect descendants of this one: <see cref="MouseEvent"/>, <see cref="TouchEvent"/>, <see cref="FocusEvent"/>, <see cref="KeyboardEvent"/>, <see cref="WheelEvent"/>, <see cref="InputEvent"/>, and <see cref="CompositionEvent"/>.</para><para></para>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Events">Introduction to events</see><br/>-<see cref="Event"/><br/></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/UI_Events">UI Events API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Events">Introduction to events</see><br/>-<see cref="Event"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/UIEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </UIEvent>
+<UIEventDetail>
+<summary>
+The <strong><c>UIEvent.detail</c></strong> read-only property, when non-zero, provides the current (or next, depending on the event) click count.
+</summary>
+<remarks>
+<para>For <see cref="Elementclick"/> or <see cref="Elementdblclick"/> events, <c>UIEvent.detail</c> is the current click count.</para><para>For <see cref="Elementmousedown"/> or <see cref="Elementmouseup"/> events, <c>UIEvent.detail</c> is <strong>1 plus</strong> the current click count.</para><para>For all other <see cref="UIEvent"/> objects, <c>UIEvent.detail</c> is always zero.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/UIEvent/detail"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</UIEventDetail>
+<UIEventInitUIEvent>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>UIEvent.initUIEvent()</c></strong> method initializes a UI event<br/>once it&amp;apos;s been created.
+</summary>
+<remarks>
+<para>Events initialized in this way must have been created with the <see cref="Document.CreateEvent"/> method. This method must be called to set the event<br/>before it is dispatched, using <see cref="EventTarget.DispatchEvent"/>. Once<br/>dispatched, it doesn&amp;apos;t do anything anymore.</para><blockquote class="WARNING"><h5>WARNING</h5><para>Do not use this method anymore as it is deprecated.</para><para>Instead use specific event constructors, like <see cref="UIEvent.UIEvent"/>. The page on <see href="https://developer.mozilla.org/en-US/docs/Web/Events/Creating_and_triggering_events">Creating and triggering events</see> gives more information about the way to use these.</para></blockquote>
+<para>-<see cref="UIEvent"/><br/>-The constructor to use instead of this deprecated method:<br/><see cref="UIEvent.UIEvent"/>. More specific constructors can be used<br/>too.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/UIEvent/initUIEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</UIEventInitUIEvent>
+<UIEventSourceCapabilities>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>sourceCapabilities</c></strong> read-only property of the <see cref="UIEvent"/> interface returns<br/>an instance of the <see cref="'InputDeviceCapabilities'"/> interface which provides<br/>information about the physical device responsible for generating a touch event. If no<br/>input device was responsible for the event, it returns <c>null</c>.
+</summary>
+<remarks>
+<para>When a single user interaction with an input device generates a series of different<br/>input events, the <c>sourceCapabilities</c> property for all of them will point to<br/>the same instance of <c>InputDeviceCapabilities</c>. For example, when a user<br/>lifts their finger off of a touchscreen, several UIEvents may be generated including<br/><c>touchend</c>, <c>mousedown</c>, <c>click</c>, and<br/><c>focus</c>. All of these events must have the same<br/><c>sourceCapabilities</c> representing the touchscreen.</para><para>A device is considered &amp;quot;responsible&amp;quot; for an event only when that interaction is part of<br/>the abstraction provided by the web platform. For example, many user agents allow a<br/>window to be resized with a mouse or a keyboard, but this detail is not exposed to the<br/>web platform in any way, and so the sourceCapabilities of a resize event will typically<br/>be null.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/UIEvent/sourceCapabilities"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An instance of <see cref="'InputDeviceCapabilities'"/>.</value>
+</UIEventSourceCapabilities>
+<UIEventUIEvent>
+<summary>
+The <strong><c>UIEvent()</c></strong> constructor creates a new <see cref="UIEvent"/> object.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>If you construct a synthetic event using this constructor, that event will not be <strong>trusted</strong>, for security reasons.<br/>Only browser-generated <c>UIEvent</c> objects are trusted and only trusted events trigger default actions.</para></blockquote>
+<para>-<see cref="UIEvent"/>, the interface of the objects it constructs.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/UIEvent/UIEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</UIEventUIEvent>
+<UIEventView>
+<summary>
+The <strong><c>UIEvent.view</c></strong> read-only property returns the<br/><see href="https://developer.mozilla.org/en-US/docs/Glossary/WindowProxy">WindowProxy</see> object from which the event was generated. In browsers, this<br/>is the <see cref="Window"/> object the event happened in.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/UIEvent/view"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A reference to an <c>AbstractView</c> object.</value>
+</UIEventView>
+<UIEventWhich>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>UIEvent.which</c></strong> read-only property of the <see cref="UIEvent"/> interface returns a number that indicates which button was pressed on the mouse, or the numeric <c>keyCode</c> or the character code (<c>charCode</c>) of the key pressed on the keyboard.
+</summary>
+<remarks>
+<para>-<see cref="KeyboardEvent"/><br/>-<see cref="MouseEvent"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/UIEvent/which"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>For <see cref="KeyboardEvent"/>, <c>event.which</c> contains the numeric code for a particular key pressed, depending on whether an alphanumeric or non-alphanumeric key was pressed.<br/>Please see deprecated <see cref="KeyboardEvent.CharCode"/> and <see cref="KeyboardEvent.KeyCode"/> for more details.<blockquote class="NOTE"><h5>NOTE</h5>Consider <see cref="KeyboardEvent.Key"/> or <see cref="KeyboardEvent.Code"/> for new code.</blockquote>For <see cref="MouseEvent"/>, <c>event.which</c> is a number representing a given button:For a mouse configured for left-handed use, the button actions are reversed.<br/>In this case, the values are read from right to left.<blockquote class="NOTE"><h5>NOTE</h5>Consider <see cref="MouseEvent.Button"/> for new code.</blockquote></value>
+</UIEventWhich>
 </docs>

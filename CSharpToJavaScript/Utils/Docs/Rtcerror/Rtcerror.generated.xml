@@ -8,4 +8,49 @@ The <strong><c>RTCError</c></strong> interface describes an error which has occu
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCError"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </RTCError>
+<RTCErrorErrorDetail>
+<summary>
+The <see cref="RTCError"/> interface's read-only<br/><strong><c>errorDetail</c></strong> property is a string indicating the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see>-specific error code that occurred.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCError/errorDetail"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A read-only string whose value indicates the type of WebRTC-specific error that<br/>occurred on an <see cref="RTCPeerConnection"/>. The possible values are:</value>
+</RTCErrorErrorDetail>
+<RTCErrorReceivedAlert>
+<summary>
+The <see cref="RTCError"/> read-only property<br/><strong><c>receivedAlert</c></strong> specifies the fatal <see href="https://developer.mozilla.org/en-US/docs/Glossary/DTLS">DTLS</see><br/>error which resulted in an alert being received from the remote peer.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCError/receivedAlert"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An unsigned long integer value specifying the fatal <see href="https://developer.mozilla.org/en-US/docs/Glossary/DTLS">DTLS</see> error which<br/>resulted in an alert being received from the remote peer.<blockquote class="NOTE"><h5>NOTE</h5>This property is <c>null</c> if the <c>RTCError</c> doesn&amp;apos;t represent a<br/>DTLS error (with <see cref="RTCError.ErrorDetail"/> set to<br/><c>dtls-failure</c>).</blockquote></value>
+</RTCErrorReceivedAlert>
+<RTCErrorSctpCauseCode>
+<summary>
+The read-only <strong><c>sctpCauseCode</c></strong> property in an<br/><see cref="RTCError"/> object provides the {{Glossary("SCTP")}} cause code explaining<br/>why the SCTP negotiation failed, if the <c>RTCError</c> represents an SCTP error.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCError/sctpCauseCode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An unsigned long integer value specifying SCTP cause code explaining why the error<br/>occurred. This property is <c>null</c> if the error isn&amp;apos;t an SCTP error, with its<br/><see cref="RTCError.ErrorDetail"/> property set to<br/><c>sctp-failure</c>.The standard SCTP error cause codes, numbered 1-13, are defined in the SCTP<br/>specification: {{RFC(4960, &amp;quot;&amp;quot;, &amp;quot;3.3.10&amp;quot;)}}.</value>
+</RTCErrorSctpCauseCode>
+<RTCErrorSdpLineNumber>
+<summary>
+The <see cref="RTCError"/> interface's read-only property<br/><strong><c>sdpLineNumber</c></strong> specifies the line number within the<br/><see href="https://developer.mozilla.org/en-US/docs/Glossary/SDP">SDP</see> at which a syntax error occurred while parsing it.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCError/sdpLineNumber"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An unsigned integer value indicating the line within the SDP at which the syntax error<br/>described by the <c>RTCError</c> object occurred. The lines are numbered starting<br/>with line 1.This property is <c>null</c> unless the value of<br/><see cref="RTCError.ErrorDetail"/> is <c>sdp-syntax-error</c>.</value>
+</RTCErrorSdpLineNumber>
+<RTCErrorSentAlert>
+<summary>
+The read-only <strong><c>sentAlert</c></strong> property in an<br/><see cref="RTCError"/> object specifies the {{Glossary("DTLS")}} alert number occurred<br/>while sending data to the remote peer, if the error represents an outbound DTLS error.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCError/sentAlert"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An unsigned integer value providing the DTLS alert number corresponding to the DTLS<br/>error which was sent to the remote peer, as represented by this <c>RTCError</c><br/>object. This property is <c>null</c> if <see cref="RTCError.ErrorDetail"/><br/>isn&amp;apos;t <c>dtls-failure</c>.</value>
+</RTCErrorSentAlert>
 </docs>

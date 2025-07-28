@@ -8,4 +8,62 @@ The <c>PerformanceEventTiming</c> interface of the Event Timing API provides ins
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceEventTiming"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </PerformanceEventTiming>
+<PerformanceEventTimingCancelable>
+<summary>
+The read-only <strong><c>cancelable</c></strong> property returns the associated event&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/API/Event/cancelable"><c>cancelable</c></see> property, indicating whether the event can be canceled.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceEventTiming/cancelable"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean. <c>true</c> if the associated event is cancelable, <c>false</c> otherwise.</value>
+</PerformanceEventTimingCancelable>
+<PerformanceEventTimingInteractionId>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The read-only <strong><c>interactionId</c></strong> property returns an ID that uniquely identifies a user interaction which triggered a series of associated events.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceEventTiming/interactionId"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</PerformanceEventTimingInteractionId>
+<PerformanceEventTimingProcessingEnd>
+<summary>
+The read-only <strong><c>processingEnd</c></strong> property returns the time the last event handler finished executing.
+</summary>
+<remarks>
+<para>It's equal to <see cref="PerformanceEventTiming.ProcessingStart"/> when there are no such event handlers.</para>
+<para>-<see cref="PerformanceEventTiming.ProcessingStart"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceEventTiming/processingEnd"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DOMHighResTimeStamp"/> timestamp.</value>
+</PerformanceEventTimingProcessingEnd>
+<PerformanceEventTimingProcessingStart>
+<summary>
+The read-only <strong><c>processingStart</c></strong> property returns the time at which event dispatch started. This is when event handlers are about to be executed.
+</summary>
+<remarks>
+<para>-<see cref="PerformanceEventTiming.ProcessingEnd"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceEventTiming/processingStart"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DOMHighResTimeStamp"/> timestamp.</value>
+</PerformanceEventTimingProcessingStart>
+<PerformanceEventTimingTarget>
+<summary>
+The read-only <strong><c>target</c></strong> property returns the associated event&amp;apos;s last <see href="https://developer.mozilla.org/en-US/docs/Web/API/Event/target"><c>target</c></see> which is the node onto which the event was last dispatched.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceEventTiming/target"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Node"/> onto which the event was last dispatched.Or <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><c>null</c></see> if the <c>Node</c> is disconnected from the document&amp;apos;s DOM or is in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM">shadow DOM</see>.</value>
+</PerformanceEventTimingTarget>
+<PerformanceEventTimingToJSON>
+<summary>
+The <strong><c>toJSON()</c></strong> method of the <see cref="PerformanceEventTiming"/> interface is a {{Glossary("Serialization","serializer")}}; it returns a JSON representation of the <see cref="PerformanceEventTiming"/> object.
+</summary>
+<remarks>
+<para>-<see cref="JSON"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceEventTiming/toJSON"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("JSON")}} object that is the serialization of the <see cref="PerformanceEventTiming"/> object.The JSON doesn't contain the <see cref="PerformanceEventTiming.Target"/> property because it is of type <see cref="Node"/>, which doesn't provide a <c>toJSON()</c> operation.</returns>
+</PerformanceEventTimingToJSON>
 </docs>

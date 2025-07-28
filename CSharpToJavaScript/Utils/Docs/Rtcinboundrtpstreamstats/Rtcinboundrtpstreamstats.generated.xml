@@ -4,9 +4,225 @@
 The <strong><c>RTCInboundRtpStreamStats</c></strong> dictionary of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see> is used to report statistics related to the receiving end of an RTP stream on the local end of the <see cref="RTCPeerConnection"/>.
 </summary>
 <remarks>
-<para>The statistics can be obtained by iterating the <see cref="RTCStatsReport"/> returned by <see cref="RTCPeerConnection.GetStats"/> or <see cref="RTCRtpReceiver.GetStats"/> until you find a report with the <see href="https://developer.mozilla.org#type"><c>type</c></see> of <c>inbound-rtp</c>.</para>
+<para>The statistics can be obtained by iterating the <see cref="RTCStatsReport"/> returned by <see cref="RTCPeerConnection.GetStats"/> or <see cref="RTCRtpReceiver.GetStats"/> until you find a report with the <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/type"><c>type</c></see> of <c>inbound-rtp</c>.</para>
 <para>-<see cref="RTCStatsReport"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </RTCInboundRtpStreamStats>
+<RTCInboundRtpStreamStatsAverageRtcpInterval>
+<summary>
+The <strong><c>averageRtcpInterval</c></strong> property<br/>of the <see cref="RTCInboundRtpStreamStats"/> dictionary is a floating-point value<br/>indicating the average <see href="https://developer.mozilla.org/en-US/docs/Glossary/RTCP">RTCP</see> transmission interval, in seconds.
+</summary>
+<remarks>
+<para>The RTCP interval is the amount of time that should elapse between transmissions of RTCP<br/>packets.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/averageRtcpInterval"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A floating-point value indicating the average interval, in seconds, between<br/>transmissions of RTCP packets. This interval is computed following the formula outlined<br/>in {{RFC(1889, "A.7")}}.Because the interval&amp;apos;s value is determined in part by the number of active senders, it<br/>will be different for each user of a service. Since this value is also used to determine<br/>the number of seconds after a stream starts to flow before the first RTCP packet should<br/>be sent, the result is that if many users try to start using the service at the same<br/>time, the server won&amp;apos;t be flooded with RTCP packets coming in all at once.The sending endpoint computes this value when sending compound RTCP packets, which must<br/>contain at least an RTCP RR or SR packet and an SDES packet with the CNAME item.</value>
+</RTCInboundRtpStreamStatsAverageRtcpInterval>
+<RTCInboundRtpStreamStatsBytesReceived>
+<summary>
+The <see cref="RTCInboundRtpStreamStats"/> dictionary's<br/><strong><c>bytesReceived</c></strong> property is an integer value which<br/>indicates the total number of bytes received so far from this synchronization source<br/>(SSRC).
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/bytesReceived"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An unsigned integer value indicating the total number of bytes received so far on this<br/>RTP stream, not including header and padding bytes. This value can be used to calculate<br/>an approximation of the average media data rate:This value gets reset to zero if the sender&amp;apos;s SSRC identifier changes for any reason.</value>
+</RTCInboundRtpStreamStatsBytesReceived>
+<RTCInboundRtpStreamStatsCodecId>
+<summary>
+The <strong><c>codecId</c></strong> property of the <see cref="RTCInboundRtpStreamStats"/> dictionary is a string that uniquely identifies the object that was inspected to produce the data in the <see cref="RTCCodecStats"/> for the {{Glossary("RTP")}} stream.
+</summary>
+<remarks>
+<para><c>RTCInboundRtpStreamStats</c> and <c>RTCCodecStats</c> objects are correlated by iterating the <see cref="RTCStatsReport"/> to find the statistics objects where <c>RTCInboundRtpStreamStats.codecId</c> is equal to <see cref="RTCCodecStats.Id"/>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/codecId"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string that contains the <see cref="RTCCodecStats.Id"/> of the object that was inspected to produce the <see cref="RTCCodecStats"/> object associated with this RTP stream.</value>
+</RTCInboundRtpStreamStatsCodecId>
+<RTCInboundRtpStreamStatsFecPacketsDiscarded>
+<summary>
+The <strong><c>fecPacketsDiscarded</c></strong> property<br/>of the <see cref="RTCInboundRtpStreamStats"/> dictionary is a numeric value<br/>indicating the number of <see href="https://developer.mozilla.org/en-US/docs/Glossary/RTP">RTP</see> Forward Error Correction (FEC) packets<br/>that have been discarded.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/fecPacketsDiscarded"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An unsigned integer value indicating how many FEC packets have been received whose<br/>error correction payload has been discarded.This can happen if all the packets covered by the FEC packet have already been received<br/>or recovered using another FEC packet, or if the FEC packet arrived outside the recovery<br/>window and the lost RTP packets have already been skipped during playback as a result.<br/>The value of <c>fecPacketsReceived</c> includes these discarded packets.</value>
+</RTCInboundRtpStreamStatsFecPacketsDiscarded>
+<RTCInboundRtpStreamStatsFecPacketsReceived>
+<summary>
+The <strong><c>fecPacketsReceived</c></strong> property<br/>of the <see cref="RTCInboundRtpStreamStats"/> dictionary indicates how many<br/>Forward Error Correction (FEC) packets have been received by this RTP receiver<br/>from the remote peer.
+</summary>
+<remarks>
+<para>An FEC packet provides parity information which can<br/>be used to attempt to reconstruct RTP data packets which have been corrupted in<br/>transit.</para>
+<para>-{{RFC(5109)}} (RTP Payload Format for Generic Forward Error Correction)<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/fecPacketsReceived"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An unsigned integer value which indicates the total number of FEC packets which have<br/>been received from the remote peer during this RTP session. Forward Error Correction<br/>uses an exclusive-or method to perform parity checks on the received data.By using the FEC parity information to attempt to reconstruct damaged packets, it is<br/>possible to avoid the need to retransmit damaged packets, which in turn helps to<br/>reduce lag, or the need to skip damaged frames entirely.<blockquote class="NOTE"><h5>NOTE</h5>This counter may also be incremented when FEC packets arrive<br/>in-band along with media content; this can happen with Opus, for example.</blockquote></value>
+</RTCInboundRtpStreamStatsFecPacketsReceived>
+<RTCInboundRtpStreamStatsFramesDecoded>
+<summary>
+The <strong><c>framesDecoded</c></strong> property of<br/>the <see cref="RTCInboundRtpStreamStats"/> dictionary indicates the total number of<br/>frames which have been decoded successfully for this media source.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/framesDecoded"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer value indicating the total number of video frames which have been decoded<br/>for this stream so far. This represents the number of frames that would have been<br/>displayed assuming no frames were skipped.</value>
+</RTCInboundRtpStreamStatsFramesDecoded>
+<RTCInboundRtpStreamStatsId>
+<summary>
+The <strong><c>id</c></strong> property of the <see cref="RTCInboundRtpStreamStats"/> dictionary is a string that uniquely identifies the object for which this object provides statistics.
+</summary>
+<remarks>
+<para>Using the <c>id</c>, you can correlate this statistics object with others, in order to monitor statistics over time for a given WebRTC object, such as an <see cref="RTCPeerConnection"/>, or an <see cref="RTCDataChannel"/>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/id"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string that uniquely identifies the object for which this <c>RTCInboundRtpStreamStats</c> object provides statistics.The format of the ID string is not defined by the specification, so you cannot reliably make any assumptions about the contents of the string, or assume that the format of the string will remain unchanged for a given object type.</value>
+</RTCInboundRtpStreamStatsId>
+<RTCInboundRtpStreamStatsKind>
+<summary>
+The <strong><c>kind</c></strong> property of the <see cref="RTCInboundRtpStreamStats"/> dictionary is a string indicating whether the described {{Glossary("RTP")}} stream contains audio or video media.
+</summary>
+<remarks>
+<para>This string will always be the same as the <see cref="MediaStreamTrack.Kind"/> of the <see cref="MediaStreamTrack"/> object carried by the stream.<br/>It will also match the media type of the codec associated with this statistics objects (i.e., the MIME type of the associated codec's <see cref="RTCCodecStats.MimeType"/> property).</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/kind"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The kind is always one of:</value>
+</RTCInboundRtpStreamStatsKind>
+<RTCInboundRtpStreamStatsLastPacketReceivedTimestamp>
+<summary>
+The <strong><c>lastPacketReceivedTimestamp</c></strong> property of the <see cref="RTCInboundRtpStreamStats"/> dictionary indicates the time at which the most recently received packet arrived from this source.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/lastPacketReceivedTimestamp"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DOMHighResTimeStamp"/> which specifies the time at which the most recently received packet arrived on this RTP stream.<blockquote class="NOTE"><h5>NOTE</h5>This value differs from the <see cref="RTCInboundRtpStreamStats.Timestamp"/>,<br/>which represents the time at which the statistics object was created.</blockquote></value>
+</RTCInboundRtpStreamStatsLastPacketReceivedTimestamp>
+<RTCInboundRtpStreamStatsMid>
+<summary>
+The <strong><c>mid</c></strong> property of the <see cref="RTCInboundRtpStreamStats"/> dictionary is a string that contains the media id negotiated between the local and remote peers.<br/>This uniquely identifies the pairing of source and destination for the transceiver&amp;apos;s stream.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/mid"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The value of the corresponding <see cref="RTCRtpTransceiver.Mid"/>, unless that value is null, in which case this statistic property is not present.</value>
+</RTCInboundRtpStreamStatsMid>
+<RTCInboundRtpStreamStatsNackCount>
+<summary>
+The <strong><c>nackCount</c></strong> property of the<br/><see cref="RTCInboundRtpStreamStats"/> dictionary is a numeric value indicating the<br/>number of times the receiver sent a <strong>NACK</strong> packet to the sender.
+</summary>
+<remarks>
+<para>A NACK (Negative ACKnowledgement, also called &amp;quot;Generic NACK&amp;quot;) packet tells the sender<br/>that one or more of the <see href="https://developer.mozilla.org/en-US/docs/Glossary/RTP">RTP</see> packets it sent were lost in transport.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/nackCount"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer value indicating how many times the receiver sent a NACK packet to the<br/>sender after detecting that one or more packets were lost during transport.</value>
+</RTCInboundRtpStreamStatsNackCount>
+<RTCInboundRtpStreamStatsPacketsDuplicated>
+<summary>
+The <strong><c>packetsDuplicated</c></strong> property<br/>of the <see cref="RTCInboundRtpStreamStats"/> dictionary indicates the total number<br/>of packets discarded because they were duplicates of previously-received<br/>packets.
+</summary>
+<remarks>
+<para>These packets are not counted by the<br/><see cref="RTCInboundRtpStreamStats.PacketsDiscarded"/> property.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/packetsDuplicated"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer value which specifies how many duplicate packets have been received by the<br/>local end of this RTP stream so far. These duplicate packets are not included in the<br/><see cref="RTCInboundRtpStreamStats.PacketsDiscarded"/> property.</value>
+</RTCInboundRtpStreamStatsPacketsDuplicated>
+<RTCInboundRtpStreamStatsPacketsFailedDecryption>
+<summary>
+The <strong><c>packetsFailedDecryption</c></strong><br/>property of the <see cref="RTCInboundRtpStreamStats"/> dictionary indicates the total<br/>number of <see href="https://developer.mozilla.org/en-US/docs/Glossary/RTP">RTP</see> packets which failed to be decrypted successfully after<br/>being received by the local end of the connection during this session.
+</summary>
+<remarks>
+<para>-{{RFC(3711, &amp;quot;&amp;quot;, &amp;quot;3.3&amp;quot;)}}: Description of the decryption process for secure RTP packets<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/packetsFailedDecryption"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer value which indicates how many packets the local end of the RTP connection<br/>could not be successfully decrypted.</value>
+</RTCInboundRtpStreamStatsPacketsFailedDecryption>
+<RTCInboundRtpStreamStatsPerDscpPacketsReceived>
+<summary>
+The <strong><c>perDscpPacketsReceived</c></strong><br/>property of the <see cref="RTCInboundRtpStreamStats"/> dictionary is a record<br/>comprised of key/value pairs in which each key is a string representation of a<br/>Differentiated Services Code Point and the value is the number of packets received for<br/>that DCSP.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Not all operating systems make data available on a per-DSCP<br/>basis, so this property shouldn&amp;apos;t be relied upon on those systems.</para></blockquote>
+<para>-{{RFC(2474)}}: The Differentiated Service field in IPv4 and IPv6 headers<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/perDscpPacketsReceived"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A record comprised of string/value pairs. Each key is the string representation of a<br/>single Differentiated Services Code Point (DSCP)&amp;apos;s ID number.<blockquote class="NOTE"><h5>NOTE</h5>Due to network bleaching and remapping, the numbers seen on<br/>this record are not necessarily going to match the values as they were when the data<br/>was sent.</blockquote></value>
+</RTCInboundRtpStreamStatsPerDscpPacketsReceived>
+<RTCInboundRtpStreamStatsQpSum>
+<summary>
+The <strong><c>qpSum</c></strong> property of the<br/><see cref="RTCInboundRtpStreamStats"/> dictionary is a value generated by adding the<br/><strong>Quantization Parameter</strong> (<strong>QP</strong>) values for every frame<br/>sent or received to date on the video track corresponding to this<br/><c>RTCInboundRtpStreamStats</c> object.
+</summary>
+<remarks>
+<para>In general, the higher this<br/>number is, the more heavily compressed the video data is.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/qpSum"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An unsigned 64-bit integer value which indicates the sum of the quantization parameter<br/>(QP) value for every frame sent or received so far on the track described by the<br/><see cref="RTCInboundRtpStreamStats"/> object. Since the value of QP is typically<br/>larger to indicate higher compression factors, the larger this sum is, the more heavily<br/>compressed the stream generally has been.<blockquote class="NOTE"><h5>NOTE</h5>This value is only available for video media.</blockquote></value>
+</RTCInboundRtpStreamStatsQpSum>
+<RTCInboundRtpStreamStatsReceiverId>
+<summary>
+The <strong><c>receiverId</c></strong> property of the <see cref="RTCInboundRtpStreamStats"/> dictionary specifies the <see cref="RTCInboundRtpStreamStats.Id"/> of the <see cref="RTCAudioReceiverStats"/> or <see cref="RTCVideoReceiverStats"/> object representing the <see cref="RTCRtpReceiver"/> receiving the stream.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/receiverId"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string which contains the ID of the <c>RTCAudioReceiverStats</c> or <c>RTCVideoReceiverStats</c> object which provides information about the <c>RTCRtpReceiver</c> which is receiving the streamed media.</value>
+</RTCInboundRtpStreamStatsReceiverId>
+<RTCInboundRtpStreamStatsRemoteId>
+<summary>
+The <strong><c>remoteId</c></strong> property of the<br/><see cref="RTCInboundRtpStreamStats"/> dictionary specifies the <see cref="RTCInboundRtpStreamStats.Id"/> of the <see cref="RTCRemoteOutboundRtpStreamStats"/> object representing the remote peer's <see cref="RTCRtpSender"/> which is sending the media to the local peer.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/remoteId"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing the ID of the<br/><see cref="RTCRemoteOutboundRtpStreamStats"/> object that represents the remote peer's<br/><see cref="RTCRtpSender"/> for the synchronization source represented by this stats<br/>object.</value>
+</RTCInboundRtpStreamStatsRemoteId>
+<RTCInboundRtpStreamStatsSliCount>
+<summary>
+The <strong><c>sliCount</c></strong> property of the<br/><see cref="RTCInboundRtpStreamStats"/> dictionary indicates how many <strong>Slice</strong><strong><br/></strong><strong>Loss Indication</strong> (<strong>SLI</strong>) packets the<br/><see cref="RTCRtpReceiver"/> for which this object provides statistics sent to the<br/>remote <see cref="RTCRtpSender"/>.
+</summary>
+<remarks>
+<para>An SLI packet is used by a decoder to let<br/>the encoder know that it&amp;apos;s detected corruption of one or more consecutive macroblocks<br/>(in scan order) in the received media.</para><para>In general, what&amp;apos;s usually of interest is that the higher this number is, the more the<br/>stream data is becoming corrupted between the sender and the receiver, requiring resends<br/>or dropping frames.</para>
+<para>-{{RFC(4585, &amp;quot;&amp;quot;, &amp;quot;6.3.2&amp;quot;)}}: Definition of &amp;quot;Slice Loss Indication&amp;quot; in the document<br/><strong>Extended RTP Profile for Real-time Transport Control Protocol (RTCP)-Based</strong><strong><br/></strong><strong>Feedback (RTP/AVPF)</strong>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/sliCount"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An unsigned integer indicating the number of SLI packets this receiver sent to the<br/>remote sender due to lost runs of macroblocks. A high value of <c>sliCount</c> may<br/>be an indication of an unreliable network.This is a very technical part of how video codecs work. For details, see {{RFC(4585, "6.3.2")}}.<blockquote class="NOTE"><h5>NOTE</h5>This value is only present for video media.</blockquote></value>
+</RTCInboundRtpStreamStatsSliCount>
+<RTCInboundRtpStreamStatsSsrc>
+<summary>
+The <strong><c>ssrc</c></strong> property of the <see cref="RTCInboundRtpStreamStats"/> dictionary contains a positive integer value that identifies the synchronization source (SSRC) of this stream of {{Glossary("RTP")}} packets.
+</summary>
+<remarks>
+<para>A source might be something like a microphone, or a mixer application that combines multiple sources.<br/>All packets from the same source share the same time source and sequence space, and so can be ordered relative to each other.<br/>Note that two streams with the same <c>ssrc</c> value refer to the same source.</para>
+<para>-<see cref="RTCRtpReceiver.GetSynchronizationSources"/><br/>-<see cref="RTCEncodedAudioFrame.GetMetadata"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/ssrc"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A positive 32-bit integer uniquely identifying the SSRC of the RTP packets whose statistics are covered by this <see cref="RTCInboundRtpStreamStats"/> object.The manner in which SSRC values are generated is not mandated by the specification, although it does make recommendations.<br/>You should not make any assumptions based on the value of <c>ssrc</c> other than that any two objects with the same <c>ssrc</c> value refer to the same source.<br/>See {{RFC(&amp;quot;3550&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;8&amp;quot;)}} for additional information about <c>ssrc</c>.<blockquote class="NOTE"><h5>NOTE</h5>The specification includes an example that generates values for <c>ssrc</c> using MD5.<br/>While not part of the standard, exactly, it is a good mechanism that may be used by some browsers; others may use other methods, such as random number generators.<br/><strong>Do not</strong> rely upon these values meaning anything other than &amp;quot;these objects are associated with the same source.&amp;quot;</blockquote></value>
+</RTCInboundRtpStreamStatsSsrc>
+<RTCInboundRtpStreamStatsTimestamp>
+<summary>
+The <strong><c>timestamp</c></strong> property of the <see cref="RTCInboundRtpStreamStats"/> dictionary is a <see cref="DOMHighResTimeStamp"/> object specifying the time at which the data in the object was sampled.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/timestamp"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DOMHighResTimeStamp"/> value indicating the time at which the activity described by the statistics in this object was recorded, in milliseconds elapsed since the beginning of January 1, 1970, UTC.The value should be accurate to within a few milliseconds but may not be entirely precise, either because of hardware or operating system limitations or because of <see href="https://developer.mozilla.org/en-US/docs/Glossary/Fingerprinting">fingerprinting</see> protection in the form of reduced clock precision or accuracy.</value>
+</RTCInboundRtpStreamStatsTimestamp>
+<RTCInboundRtpStreamStatsTransportId>
+<summary>
+The <strong><c>transportId</c></strong> property of the <see cref="RTCInboundRtpStreamStats"/> dictionary is a string that uniquely identifies the associated <see cref="RTCTransportStats"/> statistics object for this RTP stream's underlying transport.
+</summary>
+<remarks>
+<para><c>RTCInboundRtpStreamStats</c> and <c>RTCTransportStats</c> objects are correlated by iterating the <see cref="RTCStatsReport"/> to find the statistics objects where <c>RTCInboundRtpStreamStats.transportId</c> is equal to <see cref="RTCTransportStats.Id"/>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/transportId"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string that contains the <see cref="RTCTransportStats.Id"/> of the object that was inspected to produce the <see cref="RTCTransportStats"/> object associated with this RTP stream.</value>
+</RTCInboundRtpStreamStatsTransportId>
+<RTCInboundRtpStreamStatsType>
+<summary>
+The <strong><c>type</c></strong> property of the <see cref="RTCInboundRtpStreamStats"/> dictionary is a string with the value <c>&amp;quot;inbound-rtp&amp;quot;</c>.
+</summary>
+<remarks>
+<para>Different statistics are obtained by iterating the <see cref="RTCStatsReport"/> object returned by a call to <see cref="RTCPeerConnection.GetStats"/>.<br/>The type indicates the set of statistics available through the object in a particular iteration step.<br/>A value of <c>&amp;quot;inbound-rtp&amp;quot;</c> indicates that the statistics available in the current step are those defined in <see cref="RTCInboundRtpStreamStats"/>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/type"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string with the value <c>&amp;quot;inbound-rtp&amp;quot;</c>.</value>
+</RTCInboundRtpStreamStatsType>
 </docs>

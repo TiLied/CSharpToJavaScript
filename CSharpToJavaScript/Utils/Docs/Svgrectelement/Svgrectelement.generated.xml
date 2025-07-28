@@ -9,4 +9,70 @@ The <c>SVGRectElement</c> interface provides access to the properties of <see hr
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGRectElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </SVGRectElement>
+<SVGRectElementHeight>
+<summary>
+The <strong><c>height</c></strong> read-only property of the <see cref="SVGRectElement"/> interface describes the vertical size of an SVG rectangle as a <see cref="SVGAnimatedLength"/>. The length is in user coordinate system units along the y-axis. Its syntax is the same as that for <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see>.
+</summary>
+<remarks>
+<para>It reflects the {{SVGElement("rect")}} element's {{SVGAttr("height")}} presentational attribute. The CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/height">height</see> property takes precedence over the SVG <c>height</c> presentational attribute, so the value may not reflect the elements actual size. The default value is <c>0</c>.</para>
+<para>-<see cref="DOMRect.Height"/><br/>-<see cref="SVGRectElement.Width"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGRectElement/height"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedLength"/>.</value>
+</SVGRectElementHeight>
+<SVGRectElementRx>
+<summary>
+The <strong><c>rx</c></strong> read-only property of the <see cref="SVGRectElement"/> interface describes the horizontal curve of the corners of an SVG rectangle as a <see cref="SVGAnimatedLength"/>. The length is in user coordinate system units along the x-axis. Its syntax is the same as that for <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see>.
+</summary>
+<remarks>
+<para>It reflects the {{SVGElement("rect")}} element's {{SVGAttr("rx")}} presentational attribute. The CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/rx">rx</see> property takes precedence over the SVG <c>rx</c> presentational attribute, so the value may not reflect the actual size of the rounded corners. The default value is <c>0</c>, which draws a rectangle with square corners.</para>
+<para>-<see cref="SVGRectElement.Ry"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGRectElement/rx"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedLength"/>.</value>
+</SVGRectElementRx>
+<SVGRectElementRy>
+<summary>
+The <strong><c>ry</c></strong> read-only property of the <see cref="SVGRectElement"/> interface describes the vertical curve of the corners of an SVG rectangle as a <see cref="SVGAnimatedLength"/>. The length is in user coordinate system units along the y-axis. Its syntax is the same as that for <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see>.
+</summary>
+<remarks>
+<para>It reflects the {{SVGElement("rect")}} element's {{SVGAttr("ry")}} presentational attribute. The CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/ry">ry</see> property takes precedence over the SVG <c>ry</c> presentational attribute, so the value may not reflect the actual size of the rounded corners. The default value is <c>0</c>, which draws a rectangle with square corners.</para>
+<para>-<see cref="SVGRectElement.Rx"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGRectElement/ry"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedLength"/>.</value>
+</SVGRectElementRy>
+<SVGRectElementWidth>
+<summary>
+The <strong><c>width</c></strong> read-only property of the <see cref="SVGRectElement"/> interface describes the horizontal size of an SVG rectangle as a <see cref="SVGAnimatedLength"/>. The length is in user coordinate system units along the x-axis. Its syntax is the same as that for <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see>.
+</summary>
+<remarks>
+<para>It reflects the {{SVGElement("rect")}} element's {{SVGAttr("width")}} presentational attribute. The CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/width">width</see> property takes precedence over the SVG <c>width</c> presentational attribute, so the value may not reflect the elements actual size. The default value is <c>0</c>.</para>
+<para>-<see cref="DOMRect.Width"/><br/>-<see cref="SVGRectElement.Height"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGRectElement/width"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedLength"/>.</value>
+</SVGRectElementWidth>
+<SVGRectElementX>
+<summary>
+The <strong><c>x</c></strong> read-only property of the <see cref="SVGRectElement"/> interface describes the horizontal coordinate of the position of an SVG rectangle as a <see cref="SVGAnimatedLength"/>. The <c>&amp;lt;coordinate&amp;gt;</c> is a length in the user coordinate system that is the given distance from the origin of the user coordinate system along the x-axis. Its syntax is the same as that for <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see>.
+</summary>
+<remarks>
+<para>It reflects the {{SVGElement("rect")}} element's {{SVGAttr("x")}} geometric attribute value. The CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/x">x</see> property takes precedence over the SVG <c>x</c> geometric attribute, so the value may not reflect the element&amp;apos;s appearance. The default value is <c>0</c>.</para>
+<para>-<see cref="DOMRect.X"/><br/>-<see cref="SVGRectElement.Y"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGRectElement/x"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedLength"/>.</value>
+</SVGRectElementX>
+<SVGRectElementY>
+<summary>
+The <strong><c>y</c></strong> read-only property of the <see cref="SVGRectElement"/> interface describes the vertical coordinate of the position of an SVG rectangle as a <see cref="SVGAnimatedLength"/>. The <c>&amp;lt;coordinate&amp;gt;</c> is a length in the user coordinate system that is the given distance from the origin of the user coordinate system along the y-axis. Its syntax is the same as that for <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see>.
+</summary>
+<remarks>
+<para>It reflects the {{SVGElement("rect")}} element's {{SVGAttr("y")}} geometric attribute value. The CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/y">y</see> property takes precedence over the SVG <c>y</c> attribute, so the value may not reflect the element&amp;apos;s appearance. The default value is <c>0</c>.</para>
+<para>-<see cref="DOMRect.Y"/><br/>-<see cref="SVGRectElement.X"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGRectElement/y"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedLength"/>.</value>
+</SVGRectElementY>
 </docs>

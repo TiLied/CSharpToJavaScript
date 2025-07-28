@@ -1,11 +1,338 @@
 <docs>
 <HTMLTextAreaElement>
 <summary>
-The <strong><c>HTMLTextAreaElement</c></strong> interface provides special properties and methods for manipulating the layout and presentation of <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textarea</see> elements.
+The <strong><c>HTMLTextAreaElement</c></strong> interface provides properties and methods for manipulating the layout and presentation of <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textarea</see> elements.
 </summary>
 <remarks>
 <para></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </HTMLTextAreaElement>
+<HTMLTextAreaElementAutocomplete>
+<summary>
+The <strong><c>autocomplete</c></strong> property of the <see cref="HTMLTextAreaElement"/> interface indicates whether the value of the control can be automatically completed by the browser. It reflects the <c>&amp;lt;textarea&amp;gt;</c> element&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/textarea#autocomplete"><c>autocomplete</c></see> attribute.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textarea</see><br/>-HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/autocomplete"><c>autocomplete</c></see> attribute<br/>-ARIA <see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-autocomplete"><c>aria-autocomplete</c></see> attribute<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion">Turning off autocompletion</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement/autocomplete"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing the value of the <c>autocomplete</c> attribute (<c>&amp;quot;on&amp;quot;</c>, <c>&amp;quot;off&amp;quot;</c>, or a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/autocomplete#token_list_tokens"><c>&amp;lt;token-list&amp;gt;</c></see>) or the empty string (<c>&amp;quot;&amp;quot;</c>) if unspecified.</value>
+</HTMLTextAreaElementAutocomplete>
+<HTMLTextAreaElementCheckValidity>
+<summary>
+The <strong><c>checkValidity()</c></strong> method of the <see cref="HTMLTextAreaElement"/> interface returns a boolean value which indicates if the element meets any <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">constraint validation</see> rules applied to it. If false, the method also fires an <see cref="HTMLElementinvalid"/> event on the element. Because there's no default browser behavior for <c>checkValidity()</c>, canceling this <c>invalid</c> event has no effect.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>An HTML {{htmlelement("textarea")}} element with a non-null <see cref="HTMLTextAreaElement.ValidationMessage"/> is considered invalid, will match the CSS {{cssxref(":invalid")}} pseudo-class, and will cause <c>checkValidity()</c> to return false. Use the <see cref="HTMLTextAreaElement.SetCustomValidity"/> method to set the <see cref="HTMLTextAreaElement.ValidationMessage"/> to the empty string to set the <see cref="HTMLTextAreaElement.Validity"/> state to be valid.</para></blockquote>
+<para>-<see cref="HTMLTextAreaElement.ReportValidity"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textarea</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation">Learn: Client-side form validation</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">Guide: Constraint validation</see><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:valid">:valid</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:invalid">:invalid</see> pseudo-classes<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement/checkValidity"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Returns <c>true</c> if the element&amp;apos;s value has no validity problems; otherwise, returns <c>false</c>.</returns>
+</HTMLTextAreaElementCheckValidity>
+<HTMLTextAreaElementCols>
+<summary>
+The <strong><c>cols</c></strong> property of the <see cref="HTMLTextAreaElement"/> interface is a positive integer representing the visible width of the multi-line text control, in average character widths. It reflects the <c>&amp;lt;textarea&amp;gt;</c> element&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/textarea#cols"><c>cols</c></see> attribute.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textarea</see><br/>-<see cref="HTMLTextAreaElement.Rows"/><br/>-<see cref="HTMLTextAreaElement.Wrap"/><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/resize">resize</see> property<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement/cols"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A positive integer. Defaults to <c>20</c>.</value>
+</HTMLTextAreaElementCols>
+<HTMLTextAreaElementDefaultValue>
+<summary>
+The <strong><c>defaultValue</c></strong> property of the <see cref="HTMLTextAreaElement"/> interface represents the default text content of this text area. Getting and setting this value is equivalent to getting and setting <see cref="Node.TextContent"/> on the {{htmlelement("textarea")}}.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textarea</see><br/>-<see cref="HTMLTextAreaElement.Value"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement/defaultValue"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</HTMLTextAreaElementDefaultValue>
+<HTMLTextAreaElementDirName>
+<summary>
+The <strong><c>dirName</c></strong> property of the <see cref="HTMLTextAreaElement"/> interface is the directionality of the element. It reflects the value of the {{htmlelement("textarea")}} element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/dirname"><c>dirName</c></see> attribute. This property can be retrieved or set.
+</summary>
+<remarks>
+<para>The <c>dirname</c> attribute controls how the element&amp;apos;s directionality is submitted. When included, the form control will submit with two name/value pairs: the first being the <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement/name"><c>name</c></see> and <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement/value"><c>value</c></see> of the <c>&amp;lt;textarea&amp;gt;</c>, and the second being the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/textarea#dirname"><c>dirname</c></see> attribute as the name, with a value of <c>ltr</c> or <c>rtl</c> as set by the browser.</para>
+<para>-<see cref="HTMLInputElement.DirName"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/dir"><c>dir</c> attribute</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data">Sending form data</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement/dirName"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string. The direction of the element.</value>
+</HTMLTextAreaElementDirName>
+<HTMLTextAreaElementDisabled>
+<summary>
+The <strong><c>disabled</c></strong> property of the <see cref="HTMLTextAreaElement"/> interface indicates whether this multi-line text control is disabled and cannot be interacted with. It reflects the {{htmlelement("textarea")}} element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/textarea#autocomplete"><c>disabled</c></see> attribute. When <c>false</c>, this <c>textarea</c> may still be disabled if its containing element, such as a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset">fieldset</see>, is disabled.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textarea</see><br/>-<see cref="HTMLTextAreaElement.ReadOnly"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement/disabled"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean.</value>
+</HTMLTextAreaElementDisabled>
+<HTMLTextAreaElementForm>
+<summary>
+The <strong><c>form</c></strong> read-only property of the <see cref="HTMLTextAreaElement"/> interface returns an <see cref="HTMLFormElement"/> object that owns this {{htmlelement("textarea")}}, or <c>null</c> if this textarea is not owned by any form.
+</summary>
+<remarks>
+<para>-<see cref="HTMLTextAreaElement"/><br/>-<see cref="HTMLFormElement"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textarea</see><br/>-HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/textarea#form"><c>form</c></see> attribute<br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms">HTML forms guide</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement/form"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="HTMLFormElement"/> or <c>null</c>.</value>
+</HTMLTextAreaElementForm>
+<HTMLTextAreaElementLabels>
+<summary>
+The <strong><c>HTMLTextAreaElement.labels</c></strong> read-only property returns<br/>a <see cref="NodeList"/> of the {{HTMLElement("label")}} elements associated with the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textArea">textArea</see> element.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement/labels"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="NodeList"/> containing the <c>&amp;lt;label&amp;gt;</c> elements associated<br/>with the <c>&amp;lt;textArea&amp;gt;</c> element.</value>
+</HTMLTextAreaElementLabels>
+<HTMLTextAreaElementMaxLength>
+<summary>
+The <strong><c>maxLength</c></strong> property of the <see cref="HTMLTextAreaElement"/> interface indicates the maximum number of characters (in {{glossary("UTF-16", "UTF-16 code units")}}) allowed to be entered for the value of the {{HTMLElement("textarea")}} element, and the maximum number of characters allowed for the value to be valid. It reflects the element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/textarea#maxlength"><c>maxlength</c></see> attribute. <c>-1</c> means there is no limit on the length of the value.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Browsers generally prevent users from entering more characters than the <c>maxlength</c> attribute allows. Should the length be longer, the element is considered invalid and the <see cref="ValidityState"/> object's <see cref="ValidityState.TooLong"/> property will be <c>true</c>.</para></blockquote>
+<para>-<see cref="HTMLTextAreaElement.Value"/><br/>-<see cref="HTMLTextAreaElement.MinLength"/><br/>-<see cref="ValidityState.TooLong"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement/maxLength"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number representing the element&amp;apos;s <c>maxlength</c> if present, or <c>-1</c>.</value>
+</HTMLTextAreaElementMaxLength>
+<HTMLTextAreaElementMinLength>
+<summary>
+The <strong><c>minLength</c></strong> property of the <see cref="HTMLTextAreaElement"/> interface indicates the minimum number of characters (in {{glossary("UTF-16", "UTF-16 code units")}}) required for the value of the {{HTMLElement("textarea")}} element to be valid. It reflects the element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/textarea#minlength"><c>minlength</c></see> attribute. <c>-1</c> means there is no minimum length requirement.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>If the textarea has a value, and that value has fewer characters than the <c>minlength</c> attribute requires, the element is considered invalid and the <see cref="ValidityState"/> object's <see cref="ValidityState.TooShort"/> property will be <c>true</c>.</para></blockquote>
+<para>-<see cref="HTMLTextAreaElement.Value"/><br/>-<see cref="HTMLTextAreaElement.MaxLength"/><br/>-<see cref="ValidityState.TooShort"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement/minLength"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number representing the element&amp;apos;s <c>minlength</c> if present or <c>-1</c>.</value>
+</HTMLTextAreaElementMinLength>
+<HTMLTextAreaElementName>
+<summary>
+The <strong><c>name</c></strong> property of the <see cref="HTMLTextAreaElement"/> interface indicates the name of the {{HTMLElement("textarea")}} element. It reflects the element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/textarea#name"><c>name</c></see> attribute.
+</summary>
+<remarks>
+<para>-<see cref="HTMLTextAreaElement.Value"/><br/>-<see cref="HTMLTextAreaElement.TextLength"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement/name"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing the element&amp;apos;s name.</value>
+</HTMLTextAreaElementName>
+<HTMLTextAreaElementPlaceholder>
+<summary>
+The <strong><c>placeholder</c></strong> property of the <see cref="HTMLTextAreaElement"/> interface represents a hint to the user of what can be entered in the control. It reflects the {{htmlelement("textarea")}} element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/textarea#placeholder"><c>placeholder</c></see> attribute.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textarea</see><br/>-<see cref="HTMLTextAreaElement.Value"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement/placeholder"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</HTMLTextAreaElementPlaceholder>
+<HTMLTextAreaElementReadOnly>
+<summary>
+The <strong><c>readOnly</c></strong> property of the <see cref="HTMLTextAreaElement"/> interface indicates that the user cannot modify the value of the control. Unlike the <see cref="HTMLTextAreaElement.Disabled"/> attribute, the <c>readonly</c> attribute does not prevent the user from clicking or selecting in the control. It reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textarea</see> element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/textarea#readonly"><c>readonly</c></see> attribute.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textarea</see><br/>-<see cref="HTMLTextAreaElement.Disabled"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:read-only">:read-only</see> pseudo-class<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement/readOnly"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean.</value>
+</HTMLTextAreaElementReadOnly>
+<HTMLTextAreaElementReportValidity>
+<summary>
+The <strong><c>reportValidity()</c></strong> method of the <see cref="HTMLTextAreaElement"/> interface performs the same validity checking steps as the <see cref="HTMLTextAreaElement.CheckValidity"/> method. In addition, if the <see cref="HTMLElementinvalid"/> event is not canceled, the browser displays the problem to the user.
+</summary>
+<remarks>
+<para>-<see cref="HTMLTextAreaElement.CheckValidity"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textarea</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation">Learn: Client-side form validation</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">Guide: Constraint validation</see><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:valid">:valid</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:invalid">:invalid</see> pseudo-classes<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement/reportValidity"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Returns <c>true</c> if the element&amp;apos;s value has no validity problems; otherwise, returns <c>false</c>.</returns>
+</HTMLTextAreaElementReportValidity>
+<HTMLTextAreaElementRequired>
+<summary>
+The <strong><c>required</c></strong> property of the <see cref="HTMLTextAreaElement"/> interface specifies that the user must fill in a value before submitting a form. It reflects the {{htmlelement("textarea")}} element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/textarea#required"><c>required</c></see> attribute.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textarea</see><br/>-<see cref="HTMLTextAreaElement.Validity"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:required">:required</see> pseudo-class<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement/required"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean.</value>
+</HTMLTextAreaElementRequired>
+<HTMLTextAreaElementRows>
+<summary>
+The <strong><c>rows</c></strong> property of the <see cref="HTMLTextAreaElement"/> interface is a positive integer representing the visible text lines of the text control. It reflects the <c>&amp;lt;textarea&amp;gt;</c> element&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/textarea#rows"><c>rows</c></see> attribute.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textarea</see><br/>-<see cref="HTMLTextAreaElement.Cols"/><br/>-<see cref="HTMLTextAreaElement.Wrap"/><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/resize">resize</see> property<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement/rows"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A positive integer. Defaults to <c>2</c>.</value>
+</HTMLTextAreaElementRows>
+<HTMLTextAreaElementSelect>
+<summary>
+The <strong><c>select()</c></strong> method of the <see cref="HTMLTextAreaElement"/> interface selects the entire contents of the {{htmlelement("textarea")}} element. In addition, the <see cref="HTMLTextAreaElement.Select"/> event is fired. The <c>select()</c> method does not take any parameters and does not return a value.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textarea</see><br/>-<see cref="HTMLTextAreaElementselect"/> event<br/>-<see cref="EventTarget.AddEventListener"/><br/>-CSS {{cssxref(&amp;quot;::selection&amp;quot;)}} pseudo-element<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement/select"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</HTMLTextAreaElementSelect>
+<HTMLTextAreaElementSelectionchange>
+<summary>
+The <strong><c>selectionchange</c></strong> event of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Selection">Selection API</see> is fired when the text selection within a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textarea</see> element is changed.<br/>This includes both changes in the selected range of characters, or if the caret moves.
+</summary>
+<remarks>
+<para>This event is not cancelable.</para><para>The event is usually processed by adding an event listener on the {{HTMLElement("textarea")}}, and in the handler function read by the <see cref="HTMLTextAreaElement"/> <c>selectionStart</c>, <c>selectionEnd</c> and <c>selectionDirection</c> properties.</para><para>It is also possible to add a listener on the global <c>onselectionchange</c> event handler, and within the handler function use <see cref="Document.GetSelection"/> to get the <see cref="Selection"/>. However this is not very useful for getting changes to <strong>text</strong> selections.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement/selectionchange"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLTextAreaElementSelectionchange>
+<HTMLTextAreaElementSelectionDirection>
+<summary>
+The <strong><c>selectionDirection</c></strong> property of the <see cref="HTMLTextAreaElement"/> interface specifies the current direction of the selection. The possible values are <c>&amp;quot;forward&amp;quot;</c>, <c>&amp;quot;backward&amp;quot;</c>, and <c>&amp;quot;none&amp;quot;</c>. The <c>forward</c> value indicates the selection was performed in the start-to-end direction of the current locale, with <c>backward</c> indicating the opposite direction. The <c>none</c> value occurs if the direction is unknown. It can be used to both retrieve and change the direction of the <c>&amp;lt;textarea&amp;gt;</c>s selected text.
+</summary>
+<remarks>
+<para>Setting the <c>selectionDirection</c> to a new value fires the <see cref="HTMLTextAreaElement.Selectionchange"/> and <see cref="HTMLTextAreaElement.Select"/> events.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textarea</see><br/>-<see cref="HTMLTextAreaElement"/><br/>-<see cref="HTMLTextAreaElement.SelectionStart"/><br/>-<see cref="HTMLTextAreaElement.SelectionEnd"/><br/>-<see cref="HTMLTextAreaElement.TextLength"/><br/>-<see cref="HTMLTextAreaElement.Select"/><br/>-<see cref="HTMLTextAreaElement.SetSelectionRange"/><br/>-<see cref="HTMLTextAreaElement.SetRangeText"/><br/>-<see cref="HTMLInputElement.SelectionDirection"/><br/>-<see cref="Selection"/><br/>-{{cssxref(&amp;quot;::selection&amp;quot;)}} pseudo-element<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement/selectionDirection"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string; <c>&amp;quot;forward&amp;quot;</c>, <c>&amp;quot;backward&amp;quot;</c>, or <c>&amp;quot;none&amp;quot;</c>.</value>
+</HTMLTextAreaElementSelectionDirection>
+<HTMLTextAreaElementSelectionEnd>
+<summary>
+The <strong><c>selectionEnd</c></strong> property of the <see cref="HTMLTextAreaElement"/> interface specifies the end position of the current text selection in a {{HTMLElement("textarea")}} element. It is a number representing the last index of the selected text. It can be used to both retrieve and set the index of the end of a <c>&amp;lt;textarea&amp;gt;</c>s selected text.
+</summary>
+<remarks>
+<para>When nothing is selected, the value of both the <see cref="HTMLTextAreaElement.SelectionStart"/> and <c>selectionEnd</c> is the position of the cursor (caret) inside the <c>&amp;lt;textarea&amp;gt;</c> element.</para><para>Setting <c>selectionEnd</c> to a value less than the current value of <see cref="HTMLTextAreaElement.SelectionStart"/> updates both the <c>selectionEnd</c> and <c>selectionStart</c> properties to that value. If both value are less than 0, both properties are set to the <see cref="HTMLTextAreaElement.TextLength"/> property value.</para><para>The property value can be retrieved and set without the <c>&amp;lt;textarea&amp;gt;</c> having focus, but the element does need to have focus for the {{cssxref(&amp;quot;::selection&amp;quot;)}} pseudo-element to match the selected text.</para><para>Setting the <c>selectionEnd</c> to a new value fires the <see cref="HTMLTextAreaElement.Selectionchange"/> and <see cref="HTMLTextAreaElement.Select"/> events.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textarea</see><br/>-<see cref="HTMLTextAreaElement"/><br/>-<see cref="HTMLTextAreaElement.SelectionStart"/><br/>-<see cref="HTMLTextAreaElement.SelectionDirection"/><br/>-<see cref="HTMLTextAreaElement.TextLength"/><br/>-<see cref="HTMLTextAreaElement.SelectionChange"/> event<br/>-<see cref="HTMLTextAreaElement.Select"/><br/>-<see cref="HTMLTextAreaElement.SetSelectionRange"/><br/>-<see cref="HTMLTextAreaElement.SetRangeText"/><br/>-<see cref="HTMLInputElement.SelectionEnd"/><br/>-<see cref="Selection"/><br/>-{{cssxref(&amp;quot;::selection&amp;quot;)}} pseudo-element<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement/selectionEnd"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A non-negative number.</value>
+</HTMLTextAreaElementSelectionEnd>
+<HTMLTextAreaElementSelectionStart>
+<summary>
+The <strong><c>selectionStart</c></strong> property of the <see cref="HTMLTextAreaElement"/> interface specifies the start position of the current text selection in a {{HTMLElement("textarea")}} element. It is a number representing the beginning index of the selected text. It can be used to both retrieve and set the start of the index of the beginning of a <c>&amp;lt;textarea&amp;gt;</c>s selected text.
+</summary>
+<remarks>
+<para>When nothing is selected, the value of both the <c>selectionStart</c> and <see cref="HTMLTextAreaElement.SelectionEnd"/> is the position of the cursor (caret) inside the <c>&amp;lt;textarea&amp;gt;</c> element.</para><para>Setting <c>selectionStart</c> to a value greater then the current value of <see cref="HTMLTextAreaElement.SelectionEnd"/> updates both the <c>selectionStart</c> and <c>selectionEnd</c> properties to that value. If that value is equal to or greater than the <see cref="HTMLTextAreaElement.TextLength"/>, both properties are both set to the <c>textLength</c> property value.</para><para>The property value can be retrieved and set without the <c>&amp;lt;textarea&amp;gt;</c> having focus, but the element does need to have focus for the {{cssxref(&amp;quot;::selection&amp;quot;)}} pseudo-element to match the selected text.</para><para>Setting the <c>selectionStart</c> to a new value fires the <see cref="HTMLTextAreaElement.Selectionchange"/> and <see cref="HTMLTextAreaElement.Select"/> events.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textarea</see><br/>-<see cref="HTMLTextAreaElement"/><br/>-<see cref="HTMLTextAreaElement.SelectionEnd"/><br/>-<see cref="HTMLTextAreaElement.SelectionDirection"/><br/>-<see cref="HTMLTextAreaElement.TextLength"/><br/>-<see cref="HTMLTextAreaElement.Select"/><br/>-<see cref="HTMLTextAreaElement.SetSelectionRange"/><br/>-<see cref="HTMLTextAreaElement.SetRangeText"/><br/>-<see cref="HTMLInputElement.SelectionStart"/><br/>-<see cref="Selection"/><br/>-{{cssxref(&amp;quot;::selection&amp;quot;)}} pseudo-element<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement/selectionStart"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A non-negative number.</value>
+</HTMLTextAreaElementSelectionStart>
+<HTMLTextAreaElementSelect>
+<summary>
+The <strong><c>select</c></strong> event fires when some text has been selected.
+</summary>
+<remarks>
+<para>-<see cref="HTMLTextAreaElement.Select"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement/select"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLTextAreaElementSelect>
+<HTMLTextAreaElementSetCustomValidity>
+<summary>
+The <strong><c>setCustomValidity()</c></strong> method of the <see cref="HTMLTextAreaElement"/> interface sets the custom validity message for the {{htmlelement("textarea")}} element. Use the empty string to indicate that the element does <strong>not</strong> have a custom validity error.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textarea</see><br/>-<see cref="HTMLTextAreaElement"/><br/>-<see cref="HTMLTextAreaElement.Validity"/><br/>-<see cref="HTMLTextAreaElement.CheckValidity"/><br/>-<see cref="HTMLTextAreaElement.ReportValidity"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">Form validation</see>.<br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation">Learn: Client-side form validation</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">Guide: Constraint validation</see><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:valid">:valid</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:invalid">:invalid</see> pseudo-classes<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement/setCustomValidity"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</HTMLTextAreaElementSetCustomValidity>
+<HTMLTextAreaElementSetRangeText>
+<summary>
+The <strong><c>setRangeText()</c></strong> method of the <see cref="HTMLTextAreaElement"/> interface replaces a<br/>range of text in a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textarea</see> element with new text passed as the argument.
+</summary>
+<remarks>
+<para>Additional optional parameters include the start of the section of text to change, the end of the section, and a keyword defining what part of the <c>&amp;lt;textarea&amp;gt;</c> should be selected after the text is updated. If the <c>startSelection</c> and <c>endSelection</c> arguments are not provided, the range is assumed to be the selection.</para><para>The final argument determines how the selection will be set after the text has been replaced. The possible values are <c>&amp;quot;select&amp;quot;</c>, which selects the newly inserted text, <c>&amp;quot;start&amp;quot;</c>, which moves the selection to just before the inserted text, <c>&amp;quot;end&amp;quot;</c>, which moves the selection to just after the inserted text, or the default, <c>&amp;quot;preserve&amp;quot;</c>, which tries to preserve the selection.</para><para>In addition, the <see cref="HTMLTextAreaElement.Select"/> and <see cref="HTMLTextAreaElement.Selectionchange"/> events are fired.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textarea</see><br/>-<see cref="HTMLTextAreaElement"/><br/>-<see cref="HTMLTextAreaElement.Select"/><br/>-<see cref="HTMLTextAreaElement.SetSelectionRange"/><br/>-<see cref="HTMLTextAreaElement.TextLength"/><br/>-<see cref="Selection"/><br/>-{{cssxref(&amp;quot;::selection&amp;quot;)}} pseudo-element<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement/setRangeText"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</HTMLTextAreaElementSetRangeText>
+<HTMLTextAreaElementSetSelectionRange>
+<summary>
+The <strong><c>setSelectionRange()</c></strong> method of the <see cref="HTMLTextAreaElement"/> interface sets the start and end positions of the current text selection, and optionally the direction, in a {{HTMLElement("textarea")}} element. The direction indicates the in which selection should be considered to have occurred; for example, that the selection was set by the user clicking and dragging from the end of the selected text toward the beginning. In addition, the <see cref="HTMLTextAreaElement.Select"/> and <see cref="HTMLTextAreaElement.Selectionchange"/> events are fired.
+</summary>
+<remarks>
+<para>This method also updates the <see cref="HTMLTextAreaElement.SelectionStart"/>, <see cref="HTMLTextAreaElement.SelectionEnd"/>, and <see cref="HTMLTextAreaElement.SelectionDirection"/> properties.</para><blockquote class="NOTE"><h5>NOTE</h5><para>The <c>&amp;lt;textarea&amp;gt;</c> must be focused to enable selecting a subsection of the text to be selected using the <c>setSelectionRange()</c> method. Setting focus also fires a <c>selectchange</c> event.</para></blockquote><para>To select <strong>all</strong> of the text of an <c>&amp;lt;textarea&amp;gt;</c> element, use the <see cref="HTMLTextAreaElement.Select"/> method.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textarea</see><br/>-<see cref="HTMLTextAreaElement"/><br/>-<see cref="HTMLTextAreaElement.Select"/><br/>-<see cref="HTMLTextAreaElement.TextLength"/><br/>-<see cref="Selection"/><br/>-{{cssxref(&amp;quot;::selection&amp;quot;)}} pseudo-element<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement/setSelectionRange"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</HTMLTextAreaElementSetSelectionRange>
+<HTMLTextAreaElementTextLength>
+<summary>
+The <strong><c>textLength</c></strong> read-only property of the <see cref="HTMLTextAreaElement"/> interface is a non-negative integer representing the number of characters, in {{glossary("UTF-16", "UTF-16 code units")}}, of the {{htmlelement("textarea")}} element's value. It is a shortcut of accessing {{jsxref("String/length", "length")}} on its <see cref="HTMLTextAreaElementvalue"/> property.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textarea</see><br/>-<see cref="HTMLTextAreaElement.Rows"/><br/>-<see cref="HTMLTextAreaElement.Cols"/><br/>-<see cref="HTMLTextAreaElement.MinLength"/><br/>-<see cref="HTMLTextAreaElement.MaxLength"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement/textLength"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A non-negative integer.</value>
+</HTMLTextAreaElementTextLength>
+<HTMLTextAreaElementType>
+<summary>
+The <strong><c>type</c></strong> read-only property of the <see cref="HTMLTextAreaElement"/> interface returns the string <c>&amp;quot;textarea&amp;quot;</c>.
+</summary>
+<remarks>
+<para>-<see cref="HTMLTextAreaElement"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textarea</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement/type"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The string <c>&amp;quot;textarea&amp;quot;</c>.</value>
+</HTMLTextAreaElementType>
+<HTMLTextAreaElementValidationMessage>
+<summary>
+The <strong><c>validationMessage</c></strong> read-only property of the <see cref="HTMLTextAreaElement"/> interface returns a string representing a localized message that describes the validation constraints that the {{htmlelement("textarea")}} control does not satisfy (if any). This is the empty string if the control is not a candidate for constraint validation (<see cref="HTMLTextAreaElement.WillValidate"/> is <c>false</c>), or it satisfies its constraints.
+</summary>
+<remarks>
+<para>If the <c>&amp;lt;textarea&amp;gt;</c> element is a candidate for constraint validation (<c>willValidate</c> is <c>true</c>) and the constraints are not met (the <see cref="HTMLTextAreaElement.Validity"/> object's <c>valid</c> property is <c>false</c>), the value is the error message that would be shown to the user during validation.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textarea</see><br/>-<see cref="HTMLTextAreaElement"/><br/>-<see cref="HTMLTextAreaElement.WillValidate"/><br/>-<see cref="HTMLTextAreaElement.Validity"/><br/>-<see cref="HTMLTextAreaElement.CheckValidity"/><br/>-<see cref="HTMLTextAreaElement.ReportValidity"/><br/>-<see cref="HTMLTextAreaElement.SetCustomValidity"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation">Learn: Client-side form validation</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">Guide: Constraint validation</see><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:valid">:valid</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:invalid">:invalid</see> pseudo-classes<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement/validationMessage"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</HTMLTextAreaElementValidationMessage>
+<HTMLTextAreaElementValidity>
+<summary>
+The <strong><c>validity</c></strong> read-only property of the <see cref="HTMLTextAreaElement"/> interface returns a <see cref="ValidityState"/> object that represents the validity states this element is in.
+</summary>
+<remarks>
+<para>-<see cref="HTMLTextAreaElement.CheckValidity"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textarea</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation">Learn: Client-side form validation</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">Guide: Constraint validation</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement/validity"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="ValidityState"/> object.</value>
+</HTMLTextAreaElementValidity>
+<HTMLTextAreaElementValue>
+<summary>
+The <strong><c>value</c></strong> property of the <see cref="HTMLTextAreaElement"/> interface represents the value of the {{htmlelement("textarea")}} element as a string, which is an empty string if the widget contains no content. It returns or sets the raw value contained in the control.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textarea</see><br/>-<see cref="HTMLTextAreaElement.TextLength"/><br/>-<see cref="HTMLTextAreaElement.Labels"/><br/>-<see cref="HTMLTextAreaElement.SelectionStart"/><br/>-<see cref="HTMLTextAreaElement.SelectionEnd"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement/value"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing the contents of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textarea</see> element.</value>
+</HTMLTextAreaElementValue>
+<HTMLTextAreaElementWillValidate>
+<summary>
+The <strong><c>willValidate</c></strong> read-only property of the <see cref="HTMLTextAreaElement"/> interface indicates whether the {{htmlelement("textarea")}} element is a candidate for <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">constraint validation</see>. It is <c>false</c> if any conditions bar it from constraint validation, such as when its <see cref="HTMLTextAreaElement.Disabled"/> or <see cref="HTMLTextAreaElement.ReadOnly"/> property is <c>true</c>.
+</summary>
+<remarks>
+<para>-<see cref="HTMLTextAreaElement.CheckValidity"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textarea</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation">Learn: Client-side form validation</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">Guide: Constraint validation</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement/willValidate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value.</value>
+</HTMLTextAreaElementWillValidate>
+<HTMLTextAreaElementWrap>
+<summary>
+The <strong><c>wrap</c></strong> property of the <see cref="HTMLTextAreaElement"/> interface indicates how the control should wrap the value for form submission. It reflects the <c>&amp;lt;textarea&amp;gt;</c> element&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/textarea#wrap"><c>wrap</c></see> attribute. Note that the <c>&amp;quot;hard&amp;quot;</c> value only has an effect when the <see cref="HTMLTextAreaElement.Cols"/> attribute is also set.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textarea</see><br/>-<see cref="HTMLTextAreaElement.Cols"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement/wrap"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>See <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/textarea#wrap"><c>wrap</c></see> for the possible values. Defaults to <c>&amp;quot;soft&amp;quot;</c>.</value>
+</HTMLTextAreaElementWrap>
 </docs>

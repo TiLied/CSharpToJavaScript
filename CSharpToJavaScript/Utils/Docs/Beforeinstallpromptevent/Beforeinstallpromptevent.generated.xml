@@ -1,7 +1,7 @@
 <docs>
 <BeforeInstallPromptEvent>
 <summary>
-<div class="CAUTION"><h5>CAUTION</h5> <strong>Non-standard</strong></div> The <strong><c>BeforeInstallPromptEvent</c></strong> is the interface of the <see cref="Window.Beforeinstallprompt_event"/> event fired at the <see cref="Window"/> object before a user is prompted to "install" a website to a home screen on mobile.
+<div class="CAUTION"><h5>CAUTION</h5> <strong>Non-standard</strong></div> The <strong><c>BeforeInstallPromptEvent</c></strong> is the interface of the <see cref="Window.Beforeinstallprompt"/> event fired at the <see cref="Window"/> object before a user is prompted to "install" a website to a home screen on mobile.
 </summary>
 <remarks>
 <para>This interface inherits from the <see cref="Event"/> interface.</para><para></para>
@@ -9,4 +9,44 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </BeforeInstallPromptEvent>
+<BeforeInstallPromptEventBeforeInstallPromptEvent>
+<summary>
+<div class="CAUTION"><h5>CAUTION</h5> <strong>Non-standard</strong></div> The <strong><c>BeforeInstallPromptEvent()</c></strong> constructor creates a new <see cref="BeforeInstallPromptEvent"/> object.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable">Making PWAs installable</see><br/>-<see href="https://web.dev/articles/customize-install">How to provide your own in-app install experience</see> on web.dev (2021)<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent/BeforeInstallPromptEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</BeforeInstallPromptEventBeforeInstallPromptEvent>
+<BeforeInstallPromptEventPlatforms>
+<summary>
+<div class="CAUTION"><h5>CAUTION</h5> <strong>Non-standard</strong></div> The <strong><c>platforms</c></strong> property of the <see cref="BeforeInstallPromptEvent"/> interface lists the platforms on which the event was dispatched. This is provided for user agents that want to present a choice of versions to the user such as, for example, "web" or "play" which would allow the user to choose between a web version or an Android version.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable">Making PWAs installable</see><br/>-<see href="https://web.dev/articles/customize-install">How to provide your own in-app install experience</see> on web.dev (2021)<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent/platforms"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An array of strings, in which each string identifies a target platform for the installation.</value>
+</BeforeInstallPromptEventPlatforms>
+<BeforeInstallPromptEventPrompt>
+<summary>
+<div class="CAUTION"><h5>CAUTION</h5> <strong>Non-standard</strong></div> The <strong><c>prompt()</c></strong> method of the <see cref="BeforeInstallPromptEvent"/> interface allows a developer to show the<br/>install prompt at a time of their own choosing. Typically this will be called in the event handler for the app&amp;apos;s custom install UI.
+</summary>
+<remarks>
+<para>This method must be called in the event handler for a user action (such as a button click) and may only be called once on a given <c>BeforeInstallPromptEvent</c> instance.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable">Making PWAs installable</see><br/>-<see href="https://web.dev/articles/customize-install">How to provide your own in-app install experience</see> on web.dev (2021)<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent/prompt"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> resolving to an object containing the following properties:</returns>
+</BeforeInstallPromptEventPrompt>
+<BeforeInstallPromptEventUserChoice>
+<summary>
+<div class="CAUTION"><h5>CAUTION</h5> <strong>Non-standard</strong></div> The <strong><c>userChoice</c></strong> property of the <see cref="BeforeInstallPromptEvent"/> interface represents the installation choice that the user made, when they were prompted to install the app.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable">Making PWAs installable</see><br/>-<see href="https://web.dev/articles/customize-install">How to provide your own in-app install experience</see> on web.dev (2021)<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent/userChoice"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Promise"/> which resolves to an object containing two properties:</value>
+</BeforeInstallPromptEventUserChoice>
 </docs>

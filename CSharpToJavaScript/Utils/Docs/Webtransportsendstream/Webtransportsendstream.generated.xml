@@ -9,4 +9,25 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebTransportSendStream"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </WebTransportSendStream>
+<WebTransportSendStreamGetStats>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>getStats()</c></strong> method of the <see cref="WebTransportSendStream"/> interface asynchronously returns an object containing statistics for the current stream.
+</summary>
+<remarks>
+<para>The statistics include the total number of bytes written to the stream, the number that have been sent (ignoring packet overhead), and the number of bytes that have been set at least once, and the number that have been acknowledged (up until the first sequentially-ordered non-acknowledged byte).<br/>It therefore provides a measure of how quickly the application is sending bytes to the server on this particular stream.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebTransportSendStream/getStats"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves to a object containing statistics about the current stream.<br/>The returned object has the following properties:</returns>
+</WebTransportSendStreamGetStats>
+<WebTransportSendStreamSendOrder>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>sendOrder</c></strong> property of the <see cref="WebTransportSendStream"/> interface indicates the send priority of this stream relative to other streams for which the value has been set.
+</summary>
+<remarks>
+<para>Queued bytes are sent first for streams that have a higher value.<br/>If not set, the send order depends on the implementation.</para>
+<para>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/webtransport">Using WebTransport</see><br/>-{{domxref(&amp;quot;WebSockets API&amp;quot;, &amp;quot;WebSockets API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-{{domxref(&amp;quot;Streams API&amp;quot;, &amp;quot;Streams API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://datatracker.ietf.org/doc/html/draft-ietf-webtrans-http3/">WebTransport over HTTP/3</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebTransportSendStream/sendOrder"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number indicating the relative priority of this stream when sending bytes.</value>
+</WebTransportSendStreamSendOrder>
 </docs>

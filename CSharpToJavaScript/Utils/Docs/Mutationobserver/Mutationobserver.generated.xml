@@ -8,4 +8,44 @@ The <strong><c>MutationObserver</c></strong> interface provides the ability to w
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </MutationObserver>
+<MutationObserverDisconnect>
+<summary>
+The <see cref="MutationObserver"/> method<br/><strong><c>disconnect()</c></strong> tells the observer to stop watching for<br/>mutations.
+</summary>
+<remarks>
+<para>The observer can be reused by calling its<br/><see cref="MutationObserver.Observe"/> method again.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver/disconnect"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns><c>undefined</c>.<blockquote class="NOTE"><h5>NOTE</h5>All notifications of mutations that have already been<br/><strong>detected</strong>, but <strong>not yet reported</strong> to the observer, are discarded.<br/>To hold on to and handle the detected but unreported mutations, use<br/>the <see cref="MutationObserver.TakeRecords"/> method.</blockquote></returns>
+</MutationObserverDisconnect>
+<MutationObserverMutationObserver>
+<summary>
+The DOM <strong><c>MutationObserver()</c></strong><br/>constructor — part of the <see cref="MutationObserver"/> interface — creates and<br/>returns a new observer which invokes a specified callback when DOM events<br/>occur.
+</summary>
+<remarks>
+<para>DOM observation does not begin immediately; the<br/><see cref="MutationObserver.Observe"/> method must be called first to<br/>establish which portion of the DOM to watch and what kinds of changes to watch for.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver/MutationObserver"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="MutationObserver"/> object, configured to call the specified<br/><c>callback</c> when DOM mutations occur.</returns>
+</MutationObserverMutationObserver>
+<MutationObserverObserve>
+<summary>
+The <see cref="MutationObserver"/> method <strong><c>observe()</c></strong> configures the <c>MutationObserver</c><br/>callback to begin receiving notifications of changes to the DOM that match the given options.
+</summary>
+<remarks>
+<para>Depending on the configuration, the observer may watch a single <see cref="Node"/> in the DOM tree, or that node and some or all of its descendant nodes. The same node can be observed by multiple observers, and the same <c>MutationObserver</c> can watch for changes to different parts of the DOM tree and/or different types of changes by calling <c>observe()</c> multiple times on the same<br/><c>MutationObserver</c>.</para><para>To stop the <c>MutationObserver</c> (so that none of its callbacks will be triggered any longer), call <see cref="MutationObserver.Disconnect"/>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver/observe"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</MutationObserverObserve>
+<MutationObserverTakeRecords>
+<summary>
+The <see cref="MutationObserver"/> method<br/><strong><c>takeRecords()</c></strong> returns a list of all matching DOM changes<br/>that have been detected but not yet processed by the observer&amp;apos;s callback function,<br/>leaving the mutation queue empty.
+</summary>
+<remarks>
+<para>The most common use case for this is to<br/>immediately fetch all pending mutation records immediately prior to disconnecting the<br/>observer, so that any pending mutations can be processed when shutting down the<br/>observer.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver/takeRecords"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An array of <see cref="MutationRecord"/> objects, each describing one change applied to<br/>the observed portion of the document&amp;apos;s DOM tree.<blockquote class="NOTE"><h5>NOTE</h5>The queue of mutations which have occurred, but not been<br/>delivered to the observer&amp;apos;s callback is left empty after calling<br/><c>takeRecords()</c>.</blockquote></returns>
+</MutationObserverTakeRecords>
 </docs>

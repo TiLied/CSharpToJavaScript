@@ -1,11 +1,205 @@
 <docs>
 <ShadowRoot>
 <summary>
-The <strong><c>ShadowRoot</c></strong> interface of the Shadow DOM API is the root node of a DOM subtree that is rendered separately from a document&amp;apos;s main DOM tree.
+The <strong><c>ShadowRoot</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM">Shadow DOM API</see> is the root node of a DOM subtree that is rendered separately from a document&amp;apos;s main DOM tree.
 </summary>
 <remarks>
 <para>You can retrieve a reference to an element's shadow root using its <see cref="Element.ShadowRoot"/> property, provided it was created using <see cref="Element.AttachShadow"/> with the <c>mode</c> option set to <c>open</c>.</para><para></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM">Using the shadow DOM</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components">Web components</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </ShadowRoot>
+<ShadowRootActiveElement>
+<summary>
+The <strong><c>activeElement</c></strong> read-only property of the<br/><see cref="ShadowRoot"/> interface returns the element within the shadow tree that has focus.
+</summary>
+<remarks>
+<para>-<see cref="Document.ActiveElement"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/activeElement"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <see cref="'Element'"/> which currently has focus, or <c>null</c> if there is no focused element.</value>
+</ShadowRootActiveElement>
+<ShadowRootAdoptedStyleSheets>
+<summary>
+The <strong><c>adoptedStyleSheets</c></strong> property of the <see cref="ShadowRoot"/> interface sets an array of constructed stylesheets to be used by the shadow DOM subtree.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>A constructed stylesheet is a stylesheet created programmatically using the <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleSheet/CSSStyleSheet"><c>CSSStyleSheet()</c> constructor</see> (as compared to one created by a user-agent when importing a stylesheet from a script, imported using <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/'style'">'style'</see> and {{CSSXref('@import')}}, or linked to via <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/'link'">'link'</see>).</para></blockquote><para>The same constructed stylesheet can be adopted by multiple <see cref="ShadowRoot"/> instances, and by the parent document (using the <see cref="Document.AdoptedStyleSheets"/> property).<br/>Changing an adopted stylesheet will affect all the adopting objects.</para><para>Stylesheets in the <c>adoptedStyleSheets</c> property are considered along with the shadow DOM&amp;apos;s other stylesheets.<br/>For the purpose of determining the final computed CSS of any element, they are considered to have been added <strong>after</strong> the other stylesheets in the shadow DOM (<see href="https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/styleSheets"><c>ShadowRoot.styleSheets</c></see>).</para><para>Only stylesheets created using the <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleSheet/CSSStyleSheet"><c>CSSStyleSheet()</c> constructor</see>, and from within the same parent <see cref="Document"/> as the shadow root, may be adopted.</para>
+<para>-<see href="https://web.dev/articles/constructable-stylesheets">Constructable Stylesheets</see> (web.dev)<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM">Using the Shadow DOM</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleSheet/CSSStyleSheet"><c>CSSStyleSheet()</c> constructor</see><br/>-<see cref="CSSStyleSheet.ReplaceSync"/><br/>-<see cref="CSSStyleSheet.Replace"/><br/>-<see cref="CSSStyleSheet.InsertRule"/><br/>-<see cref="CSSStyleSheet.DeleteRule"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/adoptedStyleSheets"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The value is an array of <see cref="CSSStyleSheet"/> instances that must have been created using the <see cref="CSSStyleSheet.CSSStyleSheet"/> constructor within the context of the shadow root's parent <see cref="Document"/>.If the array needs to be modified, use in-place mutations like <c>push()</c>. The <see cref="CSSStyleSheet"/> instances themselves can also be modified, and these changes will apply wherever the stylesheet is adopted.In an earlier version of the specification, the array was not modifiable, so the only way to add new stylesheets was to assign a new array to <c>adoptedStyleSheets</c>.</value>
+</ShadowRootAdoptedStyleSheets>
+<ShadowRootClonable>
+<summary>
+The <strong><c>clonable</c></strong> read-only property of the <see cref="ShadowRoot"/> interface returns <c>true</c> if the shadow root is clonable, and <c>false</c> otherwise.
+</summary>
+<remarks>
+<para>When the value is <c>true</c>, a shadow host cloned with <see cref="Node.CloneNode"/> or <see cref="Document.ImportNode"/> will include a copy of the shadow root.</para><para>By default the value is <c>false</c>.<br/>It can be set to <c>true</c> using the <c>clonable</c> option of the <see cref="Element.AttachShadow"/> method or by setting the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootclonable"><c>shadowrootclonable</c></see> attribute of the <c>&amp;lt;template&amp;gt;</c> element that is being used to declaratively attach a shadow root.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/clonable"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value><c>true</c> if the shadow root is clonable, and <c>false</c> otherwise.</value>
+</ShadowRootClonable>
+<ShadowRootDelegatesFocus>
+<summary>
+The <strong><c>delegatesFocus</c></strong> read-only property of the <see cref="ShadowRoot"/> interface returns <c>true</c> if the shadow root delegates focus, and <c>false</c> otherwise.
+</summary>
+<remarks>
+<para>If <c>true</c>, when a non-focusable part of the shadow DOM is clicked, or <c>.focus()</c> is called on the host element, the first focusable part inside the host&amp;apos;s shadow DOM is given focus, and the shadow host is given any available <c>:focus</c> styling.</para><para>Focus is of particular importance for keyboard users (including those using screen readers). <c>delegatesFocus</c> default behavior is to focus the first focusable element — which may be undesirable if that element is not meant to be part of the tabbing order (for example, an element with <c>tabindex=&amp;quot;-1&amp;quot;</c>), or if a more &amp;apos;important&amp;apos; focusable element should receive initial focus (for instance, the first text field rather than the &amp;apos;close&amp;apos; button which precedes it). In such cases, the <c>autofocus</c> attribute can be specified on the element which should receive initial focus. Use the <c>autofocus</c> attribute with caution as it can introduce accessibility issues, such as bypassing important content which may go unnoticed due to focus being set to an element later in the DOM order.</para><para>The property value is originally set using the <c>delegatesFocus</c> property of the object passed to <see cref="Element.AttachShadow"/>, or using the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootclonable"><c>shadowrootdelegatesfocus</c></see> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/template"><c>&amp;lt;template&amp;gt;</c></see> element when a shadow root is created declaratively.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/delegatesFocus"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value><c>true</c> if the shadow root delegates focus, and <c>false</c> otherwise.</value>
+</ShadowRootDelegatesFocus>
+<ShadowRootElementFromPoint>
+<summary>
+<div class="CAUTION"><h5>CAUTION</h5> <strong>Non-standard</strong></div> The <strong><c>elementFromPoint()</c></strong> method, available on the <see cref="ShadowRoot"/> object, returns the element at the topmost shadow root layer at the specified coordinates relative to the viewport (the shadow root highest in the display z-order, that is able to receive pointer events). Shadow root elements that have {{cssxref("pointer-events")}} set to <c>none</c> are ignored.
+</summary>
+<remarks>
+<para>If the specified point is outside the bounds of the shadow root, the result is <c>undefined</c>.</para>
+<para>-<see cref="ShadowRoot.ElementsFromPoint"/><br/>-<see cref="Document.ElementFromPoint"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/elementFromPoint"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="Element"/>; the topmost shadow root element located at the specified coordinates, if any.</returns>
+</ShadowRootElementFromPoint>
+<ShadowRootElementsFromPoint>
+<summary>
+<div class="CAUTION"><h5>CAUTION</h5> <strong>Non-standard</strong></div> The <strong><c>elementsFromPoint()</c></strong> method of the <see cref="ShadowRoot"/> interface returns an array of all the shadow root elements at the specified coordinates (relative to the viewport). The elements are ordered from the topmost element (highest in the display z-order), to the bottommost element.
+</summary>
+<remarks>
+<para>It operates in a similar way to the <see cref="ShadowRoot.ElementFromPoint"/> method. Some browsers return only the shadow root elements present at that location. Other browsers include elements outside of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM">shadow DOM</see>, from the shadow DOM element in the topmost layer to the document root node, such as the {{htmlelement("html")}} or {{SVGElement("svg")}} root element. In these browsers, it operates similar to the <see cref="Document.ElementsFromPoint"/> method, but with the ability to cross the <see href="https://developer.mozilla.org/en-US/docs/Glossary/Shadow_tree">shadow boundary</see>.</para>
+<para>-<see cref="ShadowRoot.ElementFromPoint"/><br/>-<see cref="Document.ElementsFromPoint"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/elementsFromPoint"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An array of <see cref="'Element'"/> objects.</returns>
+</ShadowRootElementsFromPoint>
+<ShadowRootFullscreenElement>
+<summary>
+The <strong><c>fullscreenElement</c></strong> read-only property of the<br/><see cref="ShadowRoot"/> interface returns the element within the shadow tree that is currently displayed in full screen.
+</summary>
+<remarks>
+<para>-<see cref="Document.FullscreenElement"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/fullscreenElement"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <see cref="'Element'"/> which is currently is displayed in full screen mode,<br/>or <c>null</c> if there is no full screen element.</value>
+</ShadowRootFullscreenElement>
+<ShadowRootGetAnimations>
+<summary>
+The <strong><c>getAnimations()</c></strong> method of the <see cref="ShadowRoot"/> interface<br/>returns an array of all <see cref="Animation"/> objects currently in effect whose<br/>target elements are descendants of the shadow tree. This array includes <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations">CSS Animations</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transitions">CSS Transitions</see>, and <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations</see>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations">CSS Animations</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transitions">CSS Transitions</see><br/>-<see cref="Element.GetAnimations"/> - Fetch only the animations on a single<br/><see cref="Element"/> and its descendants.<br/>-<see cref="Animation"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/getAnimations"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An {{jsxref("Array")}} of <see cref="Animation"/> objects, each representing one<br/>animation currently associated with elements which are descendants of the<br/><see cref="ShadowRoot"/> on which it's called.</returns>
+</ShadowRootGetAnimations>
+<ShadowRootGetHTML>
+<summary>
+The <strong><c>getHTML()</c></strong> method of the <see cref="ShadowRoot"/> interface is used to serialize a shadow root's DOM to an HTML string.
+</summary>
+<remarks>
+<para>The method provides an options argument that enables the serialization of child nodes that are shadow roots.<br/>The options can be used to include nested shadow roots that have been set as <see cref="ShadowRootserializable"/>, and/or a specified array of <see cref="ShadowRoot"/> objects, which may be either open or closed.</para><para>Without arguments, child nodes that are shadow roots are not serialized, and this method behaves in the same way as reading the value of <see cref="Element.InnerHTML"/>.</para><para>Note that some browsers serialize the <c>&amp;lt;</c> and <c>&amp;gt;</c> characters as <c>&amp;lt;</c> and <c>&amp;gt;</c> when they appear in attribute values (see <see href="https://developer.mozilla.org#browser_compatibility">Browser compatibility</see>).<br/>This is to prevent a potential security vulnerability (<see href="https://research.securitum.com/dompurify-bypass-using-mxss/">mutation XSS</see>) in which an attacker can craft input that bypasses a <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Attacks/XSS#sanitization">sanitization function</see>, enabling a cross-site scripting (XSS) attack.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/getHTML"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A string that represents the HTML serialization of the shadow root.</returns>
+</ShadowRootGetHTML>
+<ShadowRootHost>
+<summary>
+The <strong><c>host</c></strong> read-only property of<br/>the <see cref="ShadowRoot"/> returns a reference to the DOM element the<br/><c>ShadowRoot</c> is attached to.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/part"><c>part</c></see> and <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/exportparts"><c>exportparts</c></see> HTML attributes<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template">template</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/slot">slot</see> HTML elements<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:host">:host</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:host_function">:host_function</see>, and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:host-context">:host-context</see> CSS pseudo-classes<br/>-{{CSSXref(&amp;quot;::part&amp;quot;)}} and {{CSSXref(&amp;quot;::slotted&amp;quot;)}} CSS pseudo-elements<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/host"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A DOM <see cref="'Element'"/>.</value>
+</ShadowRootHost>
+<ShadowRootInnerHTML>
+<summary>
+The <strong><c>innerHTML</c></strong> property of the <see cref="ShadowRoot"/> interface gets or sets the HTML markup to the DOM tree inside the <c>ShadowRoot</c>.
+</summary>
+<remarks>
+<para>Note that some browsers serialize the <c>&amp;lt;</c> and <c>&amp;gt;</c> characters as <c>&amp;lt;</c> and <c>&amp;gt;</c> when they appear in attribute values (see <see href="https://developer.mozilla.org#browser_compatibility">Browser compatibility</see>).<br/>This is to prevent a potential security vulnerability (<see href="https://research.securitum.com/dompurify-bypass-using-mxss/">mutation XSS</see>) in which an attacker can craft input that bypasses a <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Attacks/XSS#sanitization">sanitization function</see>, enabling a cross-site scripting (XSS) attack.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/innerHTML"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.When set to the <c>null</c> value, that <c>null</c> value is converted to the empty string (<c>&amp;quot;&amp;quot;</c>), so <c>sr.innerHTML = null</c> is equivalent to <c>sr.innerHTML = &amp;quot;&amp;quot;</c>.</value>
+</ShadowRootInnerHTML>
+<ShadowRootMode>
+<summary>
+The <strong><c>mode</c></strong> read-only property of the <see cref="ShadowRoot"/> specifies its mode — either <c>open</c> or <c>closed</c>.<br/>This defines whether or not the shadow root&amp;apos;s internal features are accessible from JavaScript.
+</summary>
+<remarks>
+<para>When the <c>mode</c> of a shadow root is <c>&amp;quot;closed&amp;quot;</c>, the shadow root's implementation internals are inaccessible and unchangeable from JavaScript—in the same way the implementation internals of, for example, the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">video</see> element are inaccessible and unchangeable from JavaScript.</para><para>The property value is set using the <c>mode</c> property of the object passed to <see cref="Element.AttachShadow"/>, or using the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootmode"><c>shadowrootmode</c></see> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/template"><c>&amp;lt;template&amp;gt;</c></see> element when a shadow root is created declaratively.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/mode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string value that can have either of the values:</value>
+</ShadowRootMode>
+<ShadowRootPictureInPictureElement>
+<summary>
+The <strong><c>pictureInPictureElement</c></strong> read-only property of the<br/><see cref="ShadowRoot"/> interface returns the <see cref="Element"/> that is currently being<br/>presented in picture-in-picture mode in this shadow tree, or <c>null</c> if<br/>picture-in-picture mode is not currently in use.
+</summary>
+<remarks>
+<para>-<see cref="Document.PictureInPictureElement"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/pictureInPictureElement"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A reference to the <see cref="Element"/> object that's currently in picture-in-picture mode.Returns <c>null</c> if the shadow tree has no associated element in picture-in-picture mode. For example, there&amp;apos;s no picture-in-picture element, or the element is not in the shadow tree.</value>
+</ShadowRootPictureInPictureElement>
+<ShadowRootPointerLockElement>
+<summary>
+The <strong><c>pointerLockElement</c></strong> read-only property of the <see cref="ShadowRoot"/> interface provides the element set as the target for mouse events while the pointer is locked.<br/>It is <c>null</c> if lock is pending, pointer is unlocked, or the target is in another tree.
+</summary>
+<remarks>
+<para>-<see cref="Document.ExitPointerLock"/><br/>-<see cref="Element.RequestPointerLock"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Pointer_Lock_API">Pointer Lock</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/pointerLockElement"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="Element"/> or <c>null</c>.</value>
+</ShadowRootPointerLockElement>
+<ShadowRootSerializable>
+<summary>
+The <strong><c>serializable</c></strong> read-only property of the <see cref="ShadowRoot"/> interface returns <c>true</c> if the shadow root is serializable.
+</summary>
+<remarks>
+<para>If set, the shadow root may be serialized by calling the <see cref="'Element.GetHTML'"/> or <see cref="'ShadowRoot.GetHTML'"/> methods with the <c>options.serializableShadowRoots</c> parameter set <c>true</c>.</para><para>The serializable property of a shadow root is specified when the shadow root is created, either declaratively by adding the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootserializable"><c>shadowrootserializable</c></see> attribute on a <c>&amp;lt;template&amp;gt;</c> element (along with an allowed <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootmode"><c>shadowrootmode</c></see> value), or by setting the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Element/attachShadow#serializable"><c>options.serializable</c></see> parameter to <c>true</c> when using <see href="https://developer.mozilla.org/en-US/docs/Web/API/Element/attachShadow"><c>Element.attachShadow()</c></see>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/serializable"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value><c>true</c> if the shadow root is serializable; <c>false</c> otherwise.</value>
+</ShadowRootSerializable>
+<ShadowRootSetHTML>
+<summary>
+The <strong><c>setHTML()</c></strong> method of the <see cref="ShadowRoot"/> interface provides an XSS-safe method to parse and sanitize a string of HTML into a <see cref="DocumentFragment"/>, which then replaces the existing tree in the Shadow DOM.
+</summary>
+<remarks>
+<para>-<see cref="ShadowRoot.SetHTMLUnsafe"/><br/>-<see cref="Element.SetHTML"/> and <see cref="Element.SetHTMLUnsafe"/><br/>-<see cref="Document.ParseHTML"/> and <see cref="Document.ParseHTMLUnsafe"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Sanitizer_API">HTML Sanitizer API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/setHTML"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<c>undefined</c>).</returns>
+</ShadowRootSetHTML>
+<ShadowRootSetHTMLUnsafe>
+<summary>
+The <strong><c>setHTMLUnsafe()</c></strong> method of the <see cref="ShadowRoot"/> interface can be used to parse a string of HTML into a <see cref="DocumentFragment"/>, optionally filtering out unwanted elements and attributes, and then use it to replace the existing tree in the Shadow DOM.
+</summary>
+<remarks>
+<para>Unlike with <see cref="ShadowRoot.SetHTML"/>, XSS-unsafe HTML entities are not guaranteed to be removed.</para>
+<para>-<see cref="ShadowRoot.SetHTML"/><br/>-<see cref="ShadowRoot.InnerHTML"/><br/>-<see cref="Element.SetHTML"/> and <see cref="Element.SetHTMLUnsafe"/><br/>-<see cref="Document.ParseHTML"/> and <see cref="Document.ParseHTMLUnsafe"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Sanitizer_API">HTML Sanitizer API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/setHTMLUnsafe"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<c>undefined</c>).</returns>
+</ShadowRootSetHTMLUnsafe>
+<ShadowRootSlotAssignment>
+<summary>
+The read-only <strong><c>slotAssignment</c></strong> property of the <see cref="ShadowRoot"/> interface returns the <strong>slot assignment mode</strong> for the shadow DOM tree. Nodes are either automatically assigned (<c>named</c>) or manually assigned (<c>manual</c>). The value of this property defined using the <c>slotAssignment</c> option when calling <see cref="Element.AttachShadow"/>.
+</summary>
+<remarks>
+<para>-<see cref="Element.AttachShadow"/><br/>-<see cref="HTMLSlotElement.Assign"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/slotAssignment"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string that can be one of:</value>
+</ShadowRootSlotAssignment>
+<ShadowRootStyleSheets>
+<summary>
+The <strong><c>styleSheets</c></strong> read-only property of the <see cref="ShadowRoot"/> interface<br/>returns a <see cref="'StyleSheetList'"/> of <see cref="'CSSStyleSheet'"/> objects, for stylesheets explicitly linked into or embedded in a shadow tree.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/styleSheets"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="'StyleSheetList'"/> of <see cref="'CSSStyleSheet'"/> objects.</value>
+</ShadowRootStyleSheets>
 </docs>

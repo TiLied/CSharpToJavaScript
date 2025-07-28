@@ -8,4 +8,37 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PresentationRequest"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </PresentationRequest>
+<PresentationRequestGetAvailability>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> When the <c>getAvailability()</c> method is called, the user agent <strong>MUST</strong> run the following steps:
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PresentationRequest/getAvailability"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</PresentationRequestGetAvailability>
+<PresentationRequestPresentationRequest>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>PresentationRequest()</c></strong><br/>constructor creates a new <see cref="PresentationRequest"/> object which creates a<br/>new PresentationRequest.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PresentationRequest/PresentationRequest"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</PresentationRequestPresentationRequest>
+<PresentationRequestReconnect>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> When the <c>reconnect(presentationId)</c> method is called on a <c>PresentationRequest</c> <strong>presentationRequest</strong>, the <see href="https://www.w3.org/TR/presentation-api/#dfn-user-agents">user agent</see> <strong>MUST</strong> run the following steps to <strong>reconnect to a presentation</strong>:
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PresentationRequest/reconnect"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</PresentationRequestReconnect>
+<PresentationRequestStart>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>start()</c></strong> property of the <see cref="PresentationRequest"/> interface returns a {{jsxref("Promise")}} that resolves with a <see cref="PresentationConnection"/> after the user agent prompts the user to select a display and grant permission to use that display.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PresentationRequest/start"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that resolves with a <see cref="PresentationConnection"/>.</returns>
+</PresentationRequestStart>
 </docs>

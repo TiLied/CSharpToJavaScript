@@ -9,4 +9,34 @@ The <strong><c>AuthenticatorAssertionResponse</c></strong> interface of the <see
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AuthenticatorAssertionResponse"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </AuthenticatorAssertionResponse>
+<AuthenticatorAssertionResponseAuthenticatorData>
+<summary>
+The <strong><c>authenticatorData</c></strong> property of the <see cref="AuthenticatorAssertionResponse"/> interface returns an {{jsxref("ArrayBuffer")}} containing information from the authenticator such as the Relying Party ID Hash (rpIdHash), a signature counter, test of user presence, user verification flags, and any extensions processed by the authenticator.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AuthenticatorAssertionResponse/authenticatorData"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="ArrayBuffer"/> with a <see cref="ArrayBufferByteLength"/> of at least 37 bytes, which contains the data structure explained in <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API/Authenticator_data">Authenticator data</see>.</value>
+</AuthenticatorAssertionResponseAuthenticatorData>
+<AuthenticatorAssertionResponseSignature>
+<summary>
+The <strong><c>signature</c></strong> read-only property of the<br/><see cref="AuthenticatorAssertionResponse"/> interface is an {{jsxref("ArrayBuffer")}}<br/>object which is the signature of the authenticator for both<br/><see cref="AuthenticatorAssertionResponse.AuthenticatorData"/> and a SHA-256 hash of<br/>the client data<br/>(<see cref="AuthenticatorResponse.ClientDataJSON"/>).
+</summary>
+<remarks>
+<para>This signature will be sent to the server for control, as part of the response. It<br/>provides the proof that an authenticator does possess the private key which was used for<br/>the credential&amp;apos;s generation.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AuthenticatorAssertionResponse/signature"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="ArrayBuffer"/> object which the signature of the authenticator (using its<br/>private key) for both <see cref="AuthenticatorAssertionResponse.AuthenticatorData"/><br/>and a SHA-256 hash given by the client for its data (the challenge, the origin, etc. and<br/>available from<br/><see cref="AuthenticatorResponse.ClientDataJSON"/>).</value>
+</AuthenticatorAssertionResponseSignature>
+<AuthenticatorAssertionResponseUserHandle>
+<summary>
+The <strong><c>userHandle</c></strong> read-only property of the <see cref="AuthenticatorAssertionResponse"/> interface is an {{jsxref("ArrayBuffer")}} object providing an opaque identifier for the given user. Such an identifier can be used by the relying party's server to link the user account with its corresponding credentials and other data.
+</summary>
+<remarks>
+<para>This value is specified as <c>user.id</c> in the options passed to the originating <see cref="CredentialsContainer.Create"/> call.</para>
+<para>-<see cref="CredentialsContainer.Create"/> that sets the value of this property<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AuthenticatorAssertionResponse/userHandle"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="ArrayBuffer"/> object representing an identifier for the current user. This is not intended to be human-readable. The relying party should make sure that the <c>user.id</c> passed into the originating <c>create()</c> call does <strong>not</strong> contain any personally identifying information (for example user name, email, or phone number).For <see cref="CredentialsContainer.Create"/> calls made with a non-empty <c>allowCredentials</c> properties, the returned <c>userHandle</c> may be null.</value>
+</AuthenticatorAssertionResponseUserHandle>
 </docs>

@@ -9,4 +9,342 @@ The <strong><c>WorkerGlobalScope</c></strong> interface of the <see href="https:
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </WorkerGlobalScope>
+<WorkerGlobalScopeAtob>
+<summary>
+The <strong><c>atob()</c></strong> method of the <see cref="WorkerGlobalScope"/> interface decodes a<br/>string of data which has been encoded using <see href="https://developer.mozilla.org/en-US/docs/Glossary/Base64">Base64</see> encoding. You can use<br/>the <see cref="WorkerGlobalScope.Btoa"/> method to encode and transmit<br/>data which may otherwise cause communication problems, then transmit it and use the<br/><c>atob()</c> method to decode the data again. For example, you can encode,<br/>transmit, and decode control characters such as <see href="https://developer.mozilla.org/en-US/docs/Glossary/ASCII">ASCII</see> values 0 through 31.
+</summary>
+<remarks>
+<para>-<see href="https://github.com/zloirock/core-js#base64-utility-methods">A polyfill of <c>atob</c></see> is available in <see href="https://github.com/zloirock/core-js"><c>core-js</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/URI/Reference/Schemes/data"><c>data</c> URLs</see><br/>-<see cref="Window.Atob"/>: the same method, but in window scopes.<br/>-<see cref="WorkerGlobalScope.Btoa"/><br/>-<see cref="Uint8ArrayFromBase64"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/atob"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An ASCII string containing decoded data from <c>encodedData</c>.</returns>
+</WorkerGlobalScopeAtob>
+<WorkerGlobalScopeBtoa>
+<summary>
+The <strong><c>btoa()</c></strong> method of the <see cref="WorkerGlobalScope"/> interface creates a {{glossary("Base64")}}-encoded {{Glossary("ASCII")}} string from a <strong>binary string</strong> (i.e., a string in which each character in the string is treated as a byte of binary data).
+</summary>
+<remarks>
+<para>You can use this method to encode data which may otherwise cause communication problems, transmit it, then use the <see cref="WorkerGlobalScope.Atob"/> method to decode the data again.<br/>For example, you can encode control characters such as ASCII values 0 through 31.</para>
+<para>-<see href="https://github.com/zloirock/core-js#base64-utility-methods">A polyfill of <c>btoa</c></see> is available in <see href="https://github.com/zloirock/core-js"><c>core-js</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/URI/Reference/Schemes/data"><c>data</c> URLs</see><br/>-<see cref="WorkerGlobalScope.Atob"/><br/>-<see cref="Window.Btoa"/>: the same method, but in window scopes.<br/>-<see cref="Uint8ArrayPrototypeToBase64"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Glossary/Base64">Base64</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/btoa"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An ASCII string containing the Base64 representation of <c>stringToEncode</c>.</returns>
+</WorkerGlobalScopeBtoa>
+<WorkerGlobalScopeCaches>
+<summary>
+The <strong><c>caches</c></strong> read-only property of the <see cref="WorkerGlobalScope"/> interface returns the <see cref="CacheStorage"/> object associated with the current context.<br/>This object enables functionality such as storing assets for offline use, and generating custom responses to requests.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">Service Workers</see><br/>-<see cref="CacheStorage"/><br/>-<see cref="Cache"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/caches"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="CacheStorage"/> object.</value>
+</WorkerGlobalScopeCaches>
+<WorkerGlobalScopeClearInterval>
+<summary>
+The <strong><c>clearInterval()</c></strong> method of the <see cref="WorkerGlobalScope"/> interface cancels a timed, repeating action which was previously established by a call to <see cref="WorkerGlobalScope.SetInterval"/>. If the parameter provided does not identify a previously established action, this method does nothing.
+</summary>
+<remarks>
+<para>-<see cref="Window.ClearInterval"/><br/>-<see cref="WorkerGlobalScope.SetInterval"/><br/>-<see cref="WorkerGlobalScope.ClearTimeout"/><br/>-<see cref="DedicatedWorkerGlobalScope.CancelAnimationFrame"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/clearInterval"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WorkerGlobalScopeClearInterval>
+<WorkerGlobalScopeClearTimeout>
+<summary>
+The <strong><c>clearTimeout()</c></strong> method of the <see cref="WorkerGlobalScope"/> interface cancels a timeout previously established by calling <see cref="WorkerGlobalScope.SetTimeout"/>.
+</summary>
+<remarks>
+<para>If the parameter provided does not identify a previously established action,<br/>this method does nothing.</para>
+<para>-<see cref="Window.ClearTimeout"/><br/>-<see cref="WorkerGlobalScope.SetTimeout"/><br/>-<see cref="WorkerGlobalScope.ClearInterval"/><br/>-<see cref="DedicatedWorkerGlobalScope.RequestAnimationFrame"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/clearTimeout"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WorkerGlobalScopeClearTimeout>
+<WorkerGlobalScopeCreateImageBitmap>
+<summary>
+The <strong><c>createImageBitmap()</c></strong> method of the <see cref="WorkerGlobalScope"/> interface creates a bitmap from a given source, optionally cropped to contain only a portion of that source.<br/>It accepts a variety of different image sources, and returns a {{jsxref("Promise")}} which resolves to an <see cref="ImageBitmap"/>.
+</summary>
+<remarks>
+<para>-<see cref="Window.CreateImageBitmap"/><br/>-<see cref="CanvasRenderingContext2D.DrawImage"/><br/>-<see cref="ImageData"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/createImageBitmap"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} which resolves to an <see cref="ImageBitmap"/> object containing bitmap data from the given rectangle.</returns>
+</WorkerGlobalScopeCreateImageBitmap>
+<WorkerGlobalScopeCrossOriginIsolated>
+<summary>
+The <strong><c>crossOriginIsolated</c></strong> read-only property of the <see cref="WorkerGlobalScope"/> interface returns a boolean value that indicates whether the document is cross-origin isolated.
+</summary>
+<remarks>
+<para>A cross-origin isolated document only shares its <see href="https://developer.mozilla.org/en-US/docs/Glossary/Browsing context">Browsing context</see> with same-origin documents in popups and navigations, and resources (both same-origin and cross-origin) that the document has opted into using via <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">CORS</see> (and <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cross-Origin-Embedder-Policy">COEP</see> for <c>&amp;lt;iframe&amp;gt;</c>).<br/>The relationship between a cross-origin opener of the document or any cross-origin popups that it opens are severed.<br/>The document may also be hosted in a separate OS process alongside other documents with which it can communicate by operating on shared memory.<br/>This mitigates the risk of side-channel attacks and cross-origin attacks referred to as <see href="https://xsleaks.dev/">XS-Leaks</see>.</para><para>Cross-origin isolated documents operate with fewer restrictions when using the following APIs:</para><para>A document will be cross-origin isolated if it is returned with an HTTP response that includes the headers:</para><para>Access to the APIs must also be allowed by the <c>Permissions-Policy</c> <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy/cross-origin-isolated">Permissions-Policy/cross-origin-isolated</see>.<br/>Otherwise <c>crossOriginIsolated</c> property will return <c>false</c>, and the document will not be able to use the APIs listed above with reduced restrictions.</para>
+<para>-<see cref="Window.CrossOriginIsolated"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/crossOriginIsolated"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value.</value>
+</WorkerGlobalScopeCrossOriginIsolated>
+<WorkerGlobalScopeCrypto>
+<summary>
+The <strong><c>crypto</c></strong> read-only property of the <see cref="WorkerGlobalScope"/> interface returns the <see cref="Crypto"/> object for this worker. This object gives workers access to certain cryptographic related services.
+</summary>
+<remarks>
+<para>Although the property itself is read-only, all of its methods (and the methods of its<br/>child object, <see cref="SubtleCrypto"/>) are not read-only, and therefore vulnerable<br/>to attack by <see href="https://developer.mozilla.org/en-US/docs/Glossary/polyfill">polyfill</see>.</para><para>Although <c>crypto</c> is available on all workers, the returned <c>Crypto</c> object only has one usable feature in insecure contexts: the <see cref="Crypto.GetRandomValues"/> method. In general, you should use this API only in secure contexts.</para>
+<para>-The <see cref="Crypto"/> interface<br/>-<see cref="Window.Crypto"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/crypto"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An instance of the <see cref="Crypto"/> interface, providing access to general-purpose cryptography and a strong random-number generator.</value>
+</WorkerGlobalScopeCrypto>
+<WorkerGlobalScopeDump>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>WorkerGlobalScope.dump()</c></strong> method logs messages to the browser&amp;apos;s standard output (<c>stdout</c>). If the browser was started from a terminal, output sent to <c>dump()</c> will appear in the terminal. This is the same as <see cref="Window.Dump"/>, but for workers.
+</summary>
+<remarks>
+<para>Output from <c>dump()</c> is <strong>not</strong> sent to the browser&amp;apos;s developer tools console. To log to the developer tools console, use <see href="https://developer.mozilla.org/en-US/docs/Web/API/console/log_static"><c>console.log()</c></see>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/dump"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WorkerGlobalScopeDump>
+<WorkerGlobalScopeError>
+<summary>
+The <strong><c>error</c></strong> event of the <see cref="WorkerGlobalScope"/> interface fires when an error occurs in the worker.
+</summary>
+<remarks>
+<para>The <see cref="WorkerGlobalScope"/> interface it belongs to.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/error"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WorkerGlobalScopeError>
+<WorkerGlobalScopeFetch>
+<summary>
+The <strong><c>fetch()</c></strong> method of the <see cref="WorkerGlobalScope"/> interface starts the process of fetching a resource from the network, returning a promise that is fulfilled once the response is available.
+</summary>
+<remarks>
+<para>The promise resolves to the <see cref="Response"/> object representing the response to your request.</para><para>A <c>fetch()</c> promise only rejects when the request fails, for example, because of a badly-formed request URL or a network error.<br/>A <c>fetch()</c> promise <strong>does not</strong> reject if the server responds with HTTP status codes that indicate errors (<c>404</c>, <c>504</c>, etc.).<br/>Instead, a <c>then()</c> handler must check the <see cref="Response.Ok"/> and/or <see cref="Response.Status"/> properties.</para><para>The <c>fetch()</c> method is controlled by the <c>connect-src</c> directive of <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy">Content Security Policy</see> rather than the directive of the resources it&amp;apos;s retrieving.</para><blockquote class="NOTE"><h5>NOTE</h5><para>The <c>fetch()</c> method's parameters are identical to those of the <see cref="Request.Request"/> constructor.</para></blockquote>
+<para>-<see cref="Window.Fetch"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">HTTP access control (CORS)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/fetch"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that resolves to a <see cref="Response"/> object.</returns>
+</WorkerGlobalScopeFetch>
+<WorkerGlobalScopeFonts>
+<summary>
+The <strong><c>fonts</c></strong> property of the <see cref="WorkerGlobalScope"/> interface returns the <see cref="FontFaceSet"/> interface of the worker.
+</summary>
+<remarks>
+<para>This property is part of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Font_Loading_API">CSS Font Loading API</see>.</para>
+<para>-<see cref="FontFaceSet"/> interface<br/>-<see cref="FontFace"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/fonts"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The returned value is the <see cref="FontFaceSet"/> interface of the worker.<br/>The <c>FontFaceSet</c> interface is useful for loading new fonts, checking the status of previously loaded fonts etc.</value>
+</WorkerGlobalScopeFonts>
+<WorkerGlobalScopeImportScripts>
+<summary>
+The <strong><c>importScripts()</c></strong> method of the <see cref="WorkerGlobalScope"/> interface synchronously imports one or more scripts into the worker's scope.
+</summary>
+<remarks>
+<para>-<see cref="WorkerGlobalScope"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/importScripts"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WorkerGlobalScopeImportScripts>
+<WorkerGlobalScopeIndexedDB>
+<summary>
+The <strong><c>indexedDB</c></strong> read-only property of the <see cref="WorkerGlobalScope"/> interface provides a mechanism for workers to<br/>asynchronously access the capabilities of indexed databases.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase"/><br/>-Using transactions: <see cref="IDBTransaction"/><br/>-Setting a range of keys: <see cref="IDBKeyRange"/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore"/><br/>-Using cursors: <see cref="IDBCursor"/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/indexedDB"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="IDBFactory"/> object.</value>
+</WorkerGlobalScopeIndexedDB>
+<WorkerGlobalScopeIsSecureContext>
+<summary>
+The <strong><c>isSecureContext</c></strong> read-only property of the <see cref="WorkerGlobalScope"/> interface returns a boolean indicating whether the current <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts">context is secure</see> (<c>true</c>) or not (<c>false</c>).
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts">Secure contexts</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/isSecureContext"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean.</value>
+</WorkerGlobalScopeIsSecureContext>
+<WorkerGlobalScopeLanguagechange>
+<summary>
+The <strong><c>languagechange</c></strong> event is fired at the global scope object when the user&amp;apos;s preferred language changes.
+</summary>
+<remarks>
+<para>This event is not cancelable and does not bubble.</para>
+<para>-<see cref="WorkerNavigator.Language"/><br/>-<see cref="WorkerNavigator.Languages"/><br/>-<see cref="Navigator"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/languagechange"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WorkerGlobalScopeLanguagechange>
+<WorkerGlobalScopeLocation>
+<summary>
+The <strong><c>location</c></strong> read-only property of the <see cref="WorkerGlobalScope"/> interface returns the <see cref="WorkerLocation"/> associated with the worker. It is a specific location object, mostly a subset of the <see cref="Location"/> for browsing scopes, but adapted to workers.
+</summary>
+<remarks>
+<para><see cref="WorkerGlobalScope"/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/location"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="WorkerLocation"/> object.</value>
+</WorkerGlobalScopeLocation>
+<WorkerGlobalScopeNavigator>
+<summary>
+The <strong><c>navigator</c></strong> read-only property of the <see cref="WorkerGlobalScope"/> interface returns the <see cref="WorkerNavigator"/> associated with the worker. It is a specific navigator object, mostly a subset of the <see cref="Navigator"/> for browsing scopes, but adapted to workers.
+</summary>
+<remarks>
+<para><see cref="WorkerNavigator"/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/navigator"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="WorkerNavigator"/> object.</value>
+</WorkerGlobalScopeNavigator>
+<WorkerGlobalScopeOffline>
+<summary>
+The <strong><c>offline</c></strong> event of the <see cref="WorkerGlobalScope"/> fires when the device loses connection to the internet.
+</summary>
+<remarks>
+<para>The <see cref="WorkerGlobalScope"/> interface it belongs to.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/offline"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WorkerGlobalScopeOffline>
+<WorkerGlobalScopeOnline>
+<summary>
+The <strong><c>online</c></strong> event of the <see cref="WorkerGlobalScope"/> fires when the device reconnects to the internet.
+</summary>
+<remarks>
+<para>The <see cref="WorkerGlobalScope"/> interface it belongs to.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/online"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WorkerGlobalScopeOnline>
+<WorkerGlobalScopeOrigin>
+<summary>
+The <strong><c>origin</c></strong> read-only property of the <see cref="WorkerGlobalScope"/> interface returns the origin of the global scope, serialized as a string.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Window/origin"><c>Window.origin</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Glossary/origin">origin</see> glossary term<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/origin"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</WorkerGlobalScopeOrigin>
+<WorkerGlobalScopePerformance>
+<summary>
+The <strong><c>performance</c></strong> property of the <see cref="WorkerGlobalScope"/> interface returns a <see cref="Performance"/> object, which can be used to gather performance information about code running in the worker's scope.
+</summary>
+<remarks>
+<para>Performance entries are per context. If you create a mark on a worker thread, you will not see it in the main thread or any other workers.</para><para>Note that only the following performance interfaces are available in worker contexts:</para>
+<para>-<see cref="Window.Performance"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/performance"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Performance"/> object offering access to performance and timing-related information for the context it is called on.</value>
+</WorkerGlobalScopePerformance>
+<WorkerGlobalScopeQueueMicrotask>
+<summary>
+The <strong><c>queueMicrotask()</c></strong> method of the <see cref="WorkerGlobalScope"/> interface<br/>queues a microtask to be executed at a safe time prior to control returning to the<br/>browser&amp;apos;s event loop.
+</summary>
+<remarks>
+<para>The microtask is a short function which will run after<br/>the current task has completed its work and when there is no other code waiting to be<br/>run before control of the execution context is returned to the browser&amp;apos;s event loop.</para><para>This lets your code run without interfering with any other, potentially higher<br/>priority, code that is pending, but before the browser regains control over the<br/>execution context, potentially depending on work you need to complete. You can learn<br/>more about how to use microtasks and why you might choose to do so in our <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide">microtask guide</see>.</para><para>The importance of microtasks comes in its ability to perform tasks asynchronously but<br/>in a specific order. See <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide">Using microtasks in JavaScript with <c>queueMicrotask()</c></see> for more details.</para><para>Microtasks are especially useful for libraries and frameworks that need to perform<br/>final cleanup or other just-before-rendering tasks.</para>
+<para>-<see cref="Window.QueueMicrotask"/><br/>-<see href="https://github.com/zloirock/core-js#queuemicrotask">Polyfill of <c>queueMicrotask()</c> in <c>core-js</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide">Using microtasks in JavaScript with queueMicrotask()</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Async_JS">Asynchronous JavaScript</see><br/>-<see href="https://github.com/fergald/docs/blob/master/explainers/queueMicrotask.md">queueMicrotask explainer</see><br/>-<see href="https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/">Tasks, microtasks, queues and schedules</see> by Jake Archibald<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/queueMicrotask"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WorkerGlobalScopeQueueMicrotask>
+<WorkerGlobalScopeRejectionhandled>
+<summary>
+The <strong><c>rejectionhandled</c></strong> event is sent to the script's global scope (typically <see cref="WorkerGlobalScope"/>) whenever a rejected {{jsxref("Promise")}} is handled late, i.e., when a handler is attached to the promise after its rejection had caused an <see cref="WorkerGlobalScope.Unhandledrejection"/> event.
+</summary>
+<remarks>
+<para>This can be used in debugging and for general application resiliency, in tandem with the <c>unhandledrejection</c> event, which is sent when a promise is rejected but there is no handler for the rejection at the time.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises#promise_rejection_events">Promise rejection events</see><br/>-<see cref="PromiseRejectionEvent"/><br/>-<see cref="Promise"/><br/>-<see cref="WorkerGlobalScopeunhandledrejection"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/rejectionhandled"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WorkerGlobalScopeRejectionhandled>
+<WorkerGlobalScopeReportError>
+<summary>
+The <strong><c>reportError()</c></strong> method of the <see cref="WorkerGlobalScope"/> interface may be used to report errors to the console or event handlers of global scopes, emulating an uncaught JavaScript exception.
+</summary>
+<remarks>
+<para>This feature is primarily intended for custom event-dispatching or callback-manipulating libraries.<br/>Libraries can use this feature to catch errors in callback code and re-throw them to the top level handler.<br/>This ensures that an exception in one callback will not prevent others from being handled, while at the same time ensuring that stack trace information is still readily available for debugging at the top level.</para>
+<para>-<see cref="WorkerGlobalScope"/><br/>-<see cref="Window.ReportError"/><br/>-<see cref="Windowerror"/> event<br/>-<see cref="WorkerGlobalScopeerror"/> event<br/>-<see cref="HTMLElementerror"/> event<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/reportError"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WorkerGlobalScopeReportError>
+<WorkerGlobalScopeScheduler>
+<summary>
+The <strong><c>scheduler</c></strong> read-only property of the <see cref="WorkerGlobalScope"/> interface is the entry point for using the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Prioritized_Task_Scheduling_API">Prioritized Task Scheduling API</see>.
+</summary>
+<remarks>
+<para>It returns a <see cref="Scheduler"/> object instance containing <see cref="'Scheduler.PostTask'"/> and <see cref="'Scheduler.Yield'"/> methods that can be used to schedule prioritized tasks.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Prioritized_Task_Scheduling_API">Prioritized Task Scheduling API</see><br/>-<see cref="'Scheduler.PostTask'"/><br/>-<see cref="'Scheduler.Yield'"/><br/>-<see cref="'TaskController'"/><br/>-<see cref="Window.Scheduler"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/scheduler"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Scheduler"/>.</value>
+</WorkerGlobalScopeScheduler>
+<WorkerGlobalScopeSecuritypolicyviolation>
+<summary>
+The <strong><c>securitypolicyviolation</c></strong> event is fired when a <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP">Content Security Policy</see> is violated in a worker.
+</summary>
+<remarks>
+<para>The handler can be assigned using the <c>onsecuritypolicyviolation</c> event handler property or using <see cref="EventTarget.AddEventListener"/>.</para>
+<para>-The <see cref="Documentsecuritypolicyviolation"/> event of the <see cref="Document"/> interface<br/>-The <see cref="Elementsecuritypolicyviolation"/> event of the <see cref="Element"/> interface<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP">HTTP &amp;gt; Content Security Policy</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/securitypolicyviolation"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WorkerGlobalScopeSecuritypolicyviolation>
+<WorkerGlobalScopeSelf>
+<summary>
+The <strong><c>self</c></strong> read-only property of the <see cref="WorkerGlobalScope"/> interface returns a reference to the <c>WorkerGlobalScope</c> itself. Most of the time it is a specific scope like <see cref="DedicatedWorkerGlobalScope"/>, <see cref="SharedWorkerGlobalScope"/>, or <see cref="ServiceWorkerGlobalScope"/>.
+</summary>
+<remarks>
+<para><see cref="WorkerGlobalScope"/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/self"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A global scope object (differs depending on the type of worker you are dealing with, as indicated above).</value>
+</WorkerGlobalScopeSelf>
+<WorkerGlobalScopeSetInterval>
+<summary>
+The <strong><c>setInterval()</c></strong> method of the <see cref="WorkerGlobalScope"/> interface repeatedly calls a function or executes a code snippet, with a fixed time delay between each call.
+</summary>
+<remarks>
+<para>This method is also available in window contexts: for a detailed description of <c>setInterval()</c>, see the <see cref="Window.SetInterval"/> page.</para>
+<para>-<see href="https://github.com/zloirock/core-js#settimeout-and-setinterval">Polyfill of <c>setInterval</c> which allows passing arguments to the callback in <c>core-js</c></see><br/>-<see cref="Window.SetInterval"/><br/>-<see cref="WorkerGlobalScope.ClearInterval"/><br/>-<see cref="WorkerGlobalScope.SetTimeout"/><br/>-<see cref="DedicatedWorkerGlobalScope.RequestAnimationFrame"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/setInterval"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>The <c>setInterval()</c> method returns a positive integer (typically within the range of 1 to 2,147,483,647) that uniquely identifies the interval timer created by the call. This identifier, often referred to as an "interval ID", can be passed to <see cref="Window.ClearInterval"/> to stop the repeated execution of the specified function.Within the same global environment (e.g., a particular window or worker), the interval ID is ensured to remain unique and is not reused for any new interval timer as long as the original timer is still active. However, different global environments maintain their own independent pools of interval IDs.Be aware that <c>setInterval()</c> and <see cref="Window.SetTimeout"/> share the same pool of IDs, and that <c>clearInterval()</c> and <see cref="Window.ClearTimeout"/> can technically be used interchangeably.<br/>For clarity, however, you should try to always match them to avoid confusion when maintaining your code.<blockquote class="NOTE"><h5>NOTE</h5>The <c>delay</c> argument is converted to a signed 32-bit integer.<br/>This effectively limits <c>delay</c> to 2147483647 ms, roughly 24.8 days, since it&amp;apos;s specified as a signed integer in the IDL.</blockquote></returns>
+</WorkerGlobalScopeSetInterval>
+<WorkerGlobalScopeSetTimeout>
+<summary>
+The <strong><c>setTimeout()</c></strong> method of the <see cref="WorkerGlobalScope"/> interface sets a timer which executes a function or specified piece of code once the timer expires.
+</summary>
+<remarks>
+<para>-<see href="https://github.com/zloirock/core-js#settimeout-and-setinterval">Polyfill of <c>setTimeout</c> which allows passing arguments to the callback in <c>core-js</c></see><br/>-<see cref="Window.SetTimeout"/><br/>-<see cref="WorkerGlobalScope.ClearTimeout"/><br/>-<see cref="WorkerGlobalScope.SetInterval"/><br/>-<see cref="DedicatedWorkerGlobalScope.RequestAnimationFrame"/><br/>-<see cref="WorkerGlobalScope.QueueMicrotask"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/setTimeout"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>The <c>setTimeout()</c> method returns a positive integer (typically within the range of 1 to 2,147,483,647) that uniquely identifies the timer created by the call. This identifier, often referred to as a "timeout ID", can be passed to <see cref="Window.ClearTimeout"/> to cancel the timer.Within the same global environment (e.g., a specific window or worker) the timeout ID is guaranteed not to be reused for any new timer as long as the original timer remains active. However, separate global environments maintain their own independent pools of timer IDs.</returns>
+</WorkerGlobalScopeSetTimeout>
+<WorkerGlobalScopeStructuredClone>
+<summary>
+The <strong><c>structuredClone()</c></strong> method of the <see cref="WorkerGlobalScope"/> interface creates a {{Glossary("deep copy")}} of a given value using the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">structured clone algorithm</see>.
+</summary>
+<remarks>
+<para>The method also allows <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Transferable_objects">transferable objects</see> in the original value to be <strong>transferred</strong> rather than cloned to the new object.<br/>Transferred objects are detached from the original object and attached to the new object; they are no longer accessible in the original object.</para>
+<para>-<see href="https://github.com/zloirock/core-js#structuredclone">A polyfill of <c>structuredClone</c></see> is available in <see href="https://github.com/zloirock/core-js"><c>core-js</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">Structured clone algorithm</see><br/>-<see href="https://github.com/ungap/structured-clone">Structured clone polyfill</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/structuredClone"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see href="https://developer.mozilla.org/en-US/docs/Glossary/deep copy">deep copy</see> of the original <c>value</c>.</returns>
+</WorkerGlobalScopeStructuredClone>
+<WorkerGlobalScopeTrustedTypes>
+<summary>
+The <strong><c>trustedTypes</c></strong> read-only property of the <see cref="WorkerGlobalScope"/> interface returns the <see cref="TrustedTypePolicyFactory"/> object associated with the global object, providing the entry point for using the {{domxref("Trusted Types API", &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/trustedTypes"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="TrustedTypePolicyFactory"/> object.</value>
+</WorkerGlobalScopeTrustedTypes>
+<WorkerGlobalScopeUnhandledrejection>
+<summary>
+The <strong><c>unhandledrejection</c></strong> event is sent to the global scope (typically <see cref="WorkerGlobalScope"/>) of a script when a {{jsxref("Promise")}} that has no rejection handler is rejected.
+</summary>
+<remarks>
+<para>This is useful for debugging and for providing fallback error handling for unexpected situations.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises#promise_rejection_events">Promise rejection events</see><br/>-<see cref="PromiseRejectionEvent"/><br/>-<see cref="Promise"/><br/>-<see cref="WorkerGlobalScoperejectionhandled"/> event<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/unhandledrejection"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WorkerGlobalScopeUnhandledrejection>
 </docs>

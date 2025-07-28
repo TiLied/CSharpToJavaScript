@@ -4,9 +4,27 @@
 The <strong><c>DOMRectList</c></strong> interface represents a collection of <see cref="DOMRect"/> objects, typically used to hold the rectangles associated with a particular element, like bounding boxes returned by methods such as <see cref="Element.GetClientRects"/>. It provides access to each rectangle in the list via its index, along with a <c>length</c> property that indicates the total number of rectangles in the list.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note</strong>: <c>DOMRectList</c> exists for compatibility with legacy Web content and is not recommended to be used when creating new APIs.</para></blockquote>
+<blockquote class="NOTE"><h5>NOTE</h5><para><c>DOMRectList</c> exists for compatibility with legacy Web content and is not recommended to be used when creating new APIs.</para></blockquote>
 <para>-<see cref="DOMRect"/><br/>-<see cref="DOMRectReadOnly"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMRectList"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </DOMRectList>
+<DOMRectListItem>
+<summary>
+The <see cref="DOMRectList"/> method<br/><c>item()</c> returns the <see cref="DOMRect"/> at the specified index within the list, or <c>null</c> if the index is out of range.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMRectList/item"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="DOMRect"/> object at the specified index in the <c>DOMRectList</c>, or null if index is greater than or equal to the number of rectangles in the list.</returns>
+</DOMRectListItem>
+<DOMRectListLength>
+<summary>
+The read-only <strong><c>length</c></strong> property of the <see cref="DOMRectList"/> interface returns the number of <see cref="DOMRect"/> objects in the list.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMRectList/length"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A positive integer representing the count of <c>DOMRect</c> objects in the <c>DOMRectList</c>. If there are no rectangles in the list, <c>length</c> is <c>0</c>.</value>
+</DOMRectListLength>
 </docs>

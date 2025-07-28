@@ -9,4 +9,44 @@ The <strong><c>SVGTextPathElement</c></strong> interface corresponds to the <see
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGTextPathElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </SVGTextPathElement>
+<SVGTextPathElementHref>
+<summary>
+The <strong><c>href</c></strong> read-only property of the <see cref="SVGTextPathElement"/> interface reflects the {{SVGAttr("href")}} attribute (or the deprecated {{SVGAttr("xlink:href")}} attribute) of the given {{SVGElement("textPath")}} element.
+</summary>
+<remarks>
+<para>-SVG href attribute<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGTextPathElement/href"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedString"/> object.</value>
+</SVGTextPathElementHref>
+<SVGTextPathElementMethod>
+<summary>
+The <strong><c>method</c></strong> read-only property of the <see cref="SVGTextPathElement"/> interface reflects the {{SVGAttr("method")}} attribute of the given {{SVGElement("textPath")}} element. It takes one of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGTextPathElement#static_properties"><c>TEXTPATH_METHODTYPE_*</c> constants</see> defined on this interface.
+</summary>
+<remarks>
+<para>-<see cref="SVGTextPathElement.Spacing"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGTextPathElement#static_properties"><c>SVGTextPathElement</c> method types</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGTextPathElement/method"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedEnumeration"/> object.</value>
+</SVGTextPathElementMethod>
+<SVGTextPathElementSpacing>
+<summary>
+The <strong><c>spacing</c></strong> read-only property of the <see cref="SVGTextPathElement"/> interface reflects the {{SVGAttr("spacing")}} attribute of the given {{SVGElement("textPath")}} element. It takes one of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGTextPathElement#static_properties"><c>TEXTPATH_SPACINGTYPE_*</c> constants</see> defined on this interface.
+</summary>
+<remarks>
+<para>-<see cref="SVGTextPathElement.Method"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGTextPathElement#static_properties"><c>SVGTextPathElement</c> spacing types</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGTextPathElement/spacing"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedEnumeration"/> object.</value>
+</SVGTextPathElementSpacing>
+<SVGTextPathElementStartOffset>
+<summary>
+The <strong><c>startOffset</c></strong> read-only property of the <see cref="SVGTextPathElement"/> interface reflects the X component of the {{SVGAttr("startOffset")}} attribute of the given {{SVGElement("textPath")}}, which defines an offset from the start of the path for the initial current text position along the path after converting the path to the <c>&amp;lt;textPath&amp;gt;</c> element&amp;apos;s coordinate system.
+</summary>
+<remarks>
+<para>-SVG startOffset attribute<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGTextPathElement/startOffset"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedLength"/> object.</value>
+</SVGTextPathElementStartOffset>
 </docs>

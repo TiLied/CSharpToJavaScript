@@ -1,10 +1,32 @@
 <docs>
 <SVGAnimatedLengthList>
 <summary>
-
+The <strong><c>SVGAnimatedLengthList</c></strong> interface is used for attributes of type <see cref="SVGLengthList"/> which can be animated.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAnimatedLengthList"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </SVGAnimatedLengthList>
+<SVGAnimatedLengthListAnimVal>
+<summary>
+The <strong><c>animVal</c></strong> read-only property of the <see cref="SVGAnimatedLengthList"/> interface represents the animated value of an attribute that accepts a list of <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see>, <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#percentage"><c>&amp;lt;percentage&amp;gt;</c></see>, or <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#number"><c>&amp;lt;number&amp;gt;</c></see> values.
+</summary>
+<remarks>
+<para>Some SVG attributes, like the <c>x</c>, <c>y</c>, <c>dx</c>, and <c>dy</c> attributes of the <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Element/tspan"><c>&amp;lt;tspan&amp;gt;</c></see> and <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Element/text"><c>&amp;lt;text&amp;gt;</c></see> elements, accept a list of length, percentages, or numbers as a value. This property provides access to the current animated state of the attribute as a live <see cref="SVGLengthList"/> object.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#percentage"><c>&amp;lt;percentage&amp;gt;</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#number"><c>&amp;lt;number&amp;gt;</c></see><br/>-<see cref="SVGLengthList"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAnimatedLengthList/animVal"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGLengthList"/> object representing the animated value of the attribute.</value>
+</SVGAnimatedLengthListAnimVal>
+<SVGAnimatedLengthListBaseVal>
+<summary>
+The <strong><c>baseVal</c></strong> read-only property of the <see cref="SVGAnimatedLengthList"/> interface represents the base (non-animated) value of an animatable attribute that accepts a list of <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see>, <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#percentage"><c>&amp;lt;percentage&amp;gt;</c></see>, or <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#number"><c>&amp;lt;number&amp;gt;</c></see> values.
+</summary>
+<remarks>
+<para>Some SVG attributes, like the <c>x</c>, <c>y</c>, <c>dx</c>, and <c>dy</c> attributes of the <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Element/tspan"><c>&amp;lt;tspan&amp;gt;</c></see> and <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Element/text"><c>&amp;lt;text&amp;gt;</c></see> elements, accept a list of length, percentages, or numbers as a value. This property reflects the attribute value, in its non-animated state, as a live <see cref="SVGLengthList"/> object.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#percentage"><c>&amp;lt;percentage&amp;gt;</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#number"><c>&amp;lt;number&amp;gt;</c></see><br/>-<see cref="SVGLengthList"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAnimatedLengthList/baseVal"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGLengthList"/> object representing the base value of the attribute.</value>
+</SVGAnimatedLengthListBaseVal>
 </docs>

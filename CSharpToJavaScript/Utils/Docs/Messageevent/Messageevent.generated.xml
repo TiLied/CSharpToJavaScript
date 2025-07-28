@@ -9,4 +9,64 @@ The <strong><c>MessageEvent</c></strong> interface represents a message received
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </MessageEvent>
+<MessageEventData>
+<summary>
+The <strong><c>data</c></strong> read-only property of the<br/><see cref="MessageEvent"/> interface represents the data sent by the message emitter.
+</summary>
+<remarks>
+<para>-<see cref="ExtendableMessageEvent"/> — similar to this interface but used in<br/>interfaces that needs to give more flexibility to authors.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent/data"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The data sent by the message emitter; this can be any data type, depending on what originated this event.</value>
+</MessageEventData>
+<MessageEventLastEventId>
+<summary>
+The <strong><c>lastEventId</c></strong> read-only property of the<br/><see cref="MessageEvent"/> interface is a string representing a<br/>unique ID for the event.
+</summary>
+<remarks>
+<para>-<see cref="ExtendableMessageEvent"/> — similar to this interface but used in<br/>interfaces that needs to give more flexibility to authors.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent/lastEventId"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing the ID.</value>
+</MessageEventLastEventId>
+<MessageEventMessageEvent>
+<summary>
+The <strong><c>MessageEvent()</c></strong> constructor creates a new <see cref="MessageEvent"/> object.
+</summary>
+<remarks>
+<para>-<see cref="ExtendableMessageEvent"/> — similar to this interface but used in interfaces that needs to give more flexibility to authors.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent/MessageEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="MessageEvent"/> object.</returns>
+</MessageEventMessageEvent>
+<MessageEventOrigin>
+<summary>
+The <strong><c>origin</c></strong> read-only property of the<br/><see cref="MessageEvent"/> interface is a string representing the<br/>origin of the message emitter.
+</summary>
+<remarks>
+<para>-<see cref="ExtendableMessageEvent"/> — similar to this interface but used in<br/>interfaces that needs to give more flexibility to authors.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent/origin"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing the origin.</value>
+</MessageEventOrigin>
+<MessageEventPorts>
+<summary>
+The <strong><c>ports</c></strong> read-only property of the<br/><see cref="MessageEvent"/> interface is an array of <see cref="MessagePort"/> objects<br/>containing all <see cref="MessagePort"/> objects sent with the message, in order.
+</summary>
+<remarks>
+<para>-<see cref="ExtendableMessageEvent"/> — similar to this interface but used in<br/>interfaces that needs to give more flexibility to authors.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent/ports"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An array of <see cref="MessagePort"/> objects.</value>
+</MessageEventPorts>
+<MessageEventSource>
+<summary>
+The <strong><c>source</c></strong> read-only property of the<br/><see cref="MessageEvent"/> interface is a <c>MessageEventSource</c> (which can be<br/>a {{glossary("WindowProxy")}}, <see cref="MessagePort"/>, or<br/><see cref="ServiceWorker"/> object) representing the message emitter.
+</summary>
+<remarks>
+<para>-<see cref="ExtendableMessageEvent"/> — similar to this interface but used in<br/>interfaces that needs to give more flexibility to authors.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent/source"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>a <c>MessageEventSource</c> (which can be a <see href="https://developer.mozilla.org/en-US/docs/Glossary/WindowProxy">WindowProxy</see>,<br/><see cref="MessagePort"/>, or <see cref="ServiceWorker"/> object) representing the<br/>message emitter.</value>
+</MessageEventSource>
 </docs>

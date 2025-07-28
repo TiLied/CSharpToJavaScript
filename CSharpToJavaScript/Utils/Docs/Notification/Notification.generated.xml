@@ -9,4 +9,249 @@ The <strong><c>Notification</c></strong> interface of the {{domxref(&amp;quot;No
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Notification"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </Notification>
+<NotificationActions>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>actions</c></strong> read-only property of the <see cref="Notification"/> interface provides the actions available for users to choose from for interacting with the notification.
+</summary>
+<remarks>
+<para>The actions are set using the <c>actions</c> option of the second argument for the <see cref="ServiceWorkerRegistration.ShowNotification"/> method and <see cref="NotificationNotification"/> constructor.</para><blockquote class="NOTE"><h5>NOTE</h5><para>Browsers typically limit the maximum number of actions they will display for a particular notification. Check the static <see cref="Notification.MaxActions"/> property to determine the limit.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</see><br/>-<see cref="Notification.MaxActions"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/actions"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A read-only array of actions. Each element in the array is an object with the following members:</value>
+</NotificationActions>
+<NotificationBadge>
+<summary>
+The <strong><c>badge</c></strong> read-only property of the <see cref="Notification"/> interface returns a string containing the URL of an image to represent the notification when there is not enough space to display the notification itself such as for example, the Android Notification Bar. On Android devices, the badge should accommodate devices up to 4x resolution, about 96 by 96 px, and the image will be automatically masked.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/badge"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing a URL.</value>
+</NotificationBadge>
+<NotificationBody>
+<summary>
+The <strong><c>body</c></strong> read-only property of the<br/><see cref="Notification"/> interface indicates the body string of the notification, as<br/>specified in the <c>body</c> option of the<br/><see cref="Notification.Notification"/> constructor.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/body"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</NotificationBody>
+<NotificationClick>
+<summary>
+The <strong><c>click</c></strong> event of the <see cref="Notification"/><br/>interface fires when the user clicks on displayed <see cref="Notification"/>.
+</summary>
+<remarks>
+<para>The default behavior is to move the focus to the viewport of the notification&amp;apos;s related<br/><see href="https://html.spec.whatwg.org/multipage/browsers.html#browsing-context">browsing context</see>.<br/>If you don't want that behavior, call <see cref="EventpreventDefault"/> on the event object.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/click"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</NotificationClick>
+<NotificationClose>
+<summary>
+The <strong><c>close()</c></strong> method of the <see cref="Notification"/> interface is used to<br/>close/remove a previously displayed notification.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This API shouldn&amp;apos;t be used just to have the notification<br/>removed from the screen after a fixed delay since this method will also remove the<br/>notification from any notification tray, preventing users from interacting with it<br/>after it was initially shown. A valid use for this API would be to remove a<br/>notification that is no longer relevant (e.g., the user already read the notification<br/>on the webpage in the case of a messaging app or the following song is already playing<br/>in a music app).</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/close"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</NotificationClose>
+<NotificationClose>
+<summary>
+The <strong><c>close</c></strong> event of the <see cref="Notification"/> interface fires when a <see cref="Notification"/> is closed.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/close"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</NotificationClose>
+<NotificationData>
+<summary>
+The <strong><c>data</c></strong> read-only property of the<br/><see cref="Notification"/> interface returns a structured clone of the notification's<br/>data, as specified in the <c>data</c> option of the<br/><see cref="Notification.Notification"/> constructor.
+</summary>
+<remarks>
+<para>The notification&amp;apos;s data can be any arbitrary data that you want associated with the<br/>notification.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/data"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A structured clone.</value>
+</NotificationData>
+<NotificationDir>
+<summary>
+The <strong><c>dir</c></strong> read-only property of the <see cref="Notification"/> interface indicates the text direction of the notification, as specified in the <c>dir</c> option of the <see cref="Notification.Notification"/> constructor.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/dir"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string specifying the text direction. Possible values are:<blockquote class="NOTE"><h5>NOTE</h5>Most browsers seem to ignore explicit ltr and rtl settings, and just go with the browser-wide setting.</blockquote></value>
+</NotificationDir>
+<NotificationError>
+<summary>
+The <strong><c>error</c></strong> event of the <see cref="Notification"/> interface fires when something goes wrong with a <see cref="Notification"/> (in many cases an error preventing the notification from being displayed.)
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/error"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</NotificationError>
+<NotificationIcon>
+<summary>
+The <strong><c>icon</c></strong> read-only property of the<br/><see cref="Notification"/> interface contains the URL of an icon to be displayed as<br/>part of the notification, as specified in the <c>icon</c> option of the<br/><see cref="Notification.Notification"/> constructor.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/icon"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</NotificationIcon>
+<NotificationImage>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>image</c></strong> read-only property of the<br/><see cref="Notification"/> interface contains the URL of an image to be displayed as<br/>part of the notification, as specified in the <c>image</c> option of the<br/><see cref="Notification.Notification"/> constructor.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/image"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</NotificationImage>
+<NotificationLang>
+<summary>
+The <strong><c>lang</c></strong> read-only property of the<br/><see cref="Notification"/> interface indicates the language used in the notification,<br/>as specified in the <c>lang</c> option of the<br/><see cref="Notification.Notification"/> constructor.
+</summary>
+<remarks>
+<para>The language itself is specified using a string representing a language tag according to {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.<br/>See the Sitepoint <see href="https://www.sitepoint.com/iso-2-letter-language-codes/">ISO 2 letter language codes</see> page for a simple reference.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/lang"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string specifying the language tag.</value>
+</NotificationLang>
+<NotificationMaxActions>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>maxActions</c></strong> read-only static property of the<br/><see cref="Notification"/> interface returns the maximum number of actions supported by<br/>the device and the User Agent. Effectively, this is the maximum number of elements in<br/><see cref="Notification.Actions"/> array which will be respected by the User Agent.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</see><br/>-<see cref="Notification.Actions"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/maxActions"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer number which indicates the largest number of notification<br/>actions that can be presented to the user by the User Agent and the device.</value>
+</NotificationMaxActions>
+<NotificationNotification>
+<summary>
+The <strong><c>Notification()</c></strong> constructor creates a new<br/><see cref="Notification"/> object instance, which represents a user notification.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Trying to create a notification inside the <see cref="ServiceWorkerGlobalScope"/> using the <c>Notification()</c> constructor will throw a <c>TypeError</c>. Use <see cref="ServiceWorkerRegistration.ShowNotification"/> instead.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/Notification"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An instance of the <see cref="Notification"/> object.</returns>
+</NotificationNotification>
+<NotificationPermission>
+<summary>
+The <strong><c>permission</c></strong> read-only static property of the <see cref="Notification"/><br/>interface indicates the current permission granted by the user for the current origin to<br/>display web notifications.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API">Notifications API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Permissions_API">Permissions API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Permissions_API/Using_the_Permissions_API">Using the Permissions API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/permission"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing the current permission. The value can be:</value>
+</NotificationPermission>
+<NotificationRenotify>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>renotify</c></strong> read-only property of the<br/><see cref="Notification"/> interface specifies whether the user should be notified<br/>after a new notification replaces an old one, as specified in the <c>renotify</c><br/>option of the <see cref="Notification.Notification"/> constructor.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/renotify"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value. <c>false</c> is the default; <c>true</c> makes<br/>the notification renotify the user.</value>
+</NotificationRenotify>
+<NotificationRequestPermission>
+<summary>
+The <strong><c>requestPermission()</c></strong> static method of the <see cref="Notification"/> interface requests permission from the user for the current origin to display notifications.
+</summary>
+<remarks>
+<para>The method returns a <see cref="Promise"/> that fulfills with a string indicating whether permission was granted or denied.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/requestPermission"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves to a string with the permission picked by the user.<br/>Possible values for this string are:The deprecated version of the method returns <c>undefined</c>.</returns>
+</NotificationRequestPermission>
+<NotificationRequireInteraction>
+<summary>
+The <strong><c>requireInteraction</c></strong> read-only property of the <see cref="Notification"/> interface returns a boolean value indicating that a notification should remain active until the user clicks or dismisses it, rather than closing automatically.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This can be set when the notification is first created by setting the <c>requireInteraction</c> option to <c>true</c> in the options object of the <see cref="Notification.Notification"/> constructor.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/requireInteraction"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value.</value>
+</NotificationRequireInteraction>
+<NotificationShow>
+<summary>
+The <strong><c>show</c></strong> event of the <see cref="Notification"/> interface fires when a <see cref="Notification"/> is displayed.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/show"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</NotificationShow>
+<NotificationSilent>
+<summary>
+The <strong><c>silent</c></strong> read-only property of the<br/><see cref="Notification"/> interface specifies whether the notification should be<br/>silent, i.e., no sounds or vibrations should be issued regardless of the device<br/>settings. This is controlled via the <c>silent</c> option of the<br/><see cref="Notification.Notification"/> constructor.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/silent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value or <c>null</c>. If set to <c>true</c>, the notification is silent; if set to <c>null</c> (the default value), the device&amp;apos;s default settings are respected.</value>
+</NotificationSilent>
+<NotificationTag>
+<summary>
+The <strong><c>tag</c></strong> read-only property of the<br/><see cref="Notification"/> interface signifies an identifying tag for the notification,<br/>as specified in the <c>tag</c> option of the<br/><see cref="Notification.Notification"/> constructor.
+</summary>
+<remarks>
+<para>The idea of notification tags is that more than one notification can share the same<br/>tag, linking them together. One notification can then be programmatically replaced with<br/>another to avoid the users&amp;apos; screen being filled up with a huge number of similar<br/>notifications.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/tag"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</NotificationTag>
+<NotificationTimestamp>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>timestamp</c></strong> read-only property of the<br/><see cref="Notification"/> interface returns a number, as<br/>specified in the <c>timestamp</c> option of the<br/><see cref="Notification.Notification"/> constructor.
+</summary>
+<remarks>
+<para>The notification&amp;apos;s timestamp can represent the time, in milliseconds since 00:00:00 UTC<br/>on 1 January 1970, of the event for which the notification was created, or it can be an<br/>arbitrary timestamp that you want associated with the notification. For example, a<br/>timestamp for an upcoming meeting could be set in the future, whereas a timestamp for a<br/>missed message could be set in the past.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/timestamp"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number representing a timestamp, given as <see href="https://developer.mozilla.org/en-US/docs/Glossary/Unix time">Unix time</see> in milliseconds.</value>
+</NotificationTimestamp>
+<NotificationTitle>
+<summary>
+The <strong><c>title</c></strong> read-only property of the<br/><see cref="Notification"/> interface indicates the title of the notification, as<br/>specified in the <c>title</c> parameter of the<br/><see cref="Notification.Notification"/> constructor.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/title"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</NotificationTitle>
+<NotificationVibrate>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>vibrate</c></strong> read-only property of the <see cref="Notification"/><br/>interface specifies a <see href="https://developer.mozilla.org/en-US/docs/Web/API/Vibration_API#vibration_patterns">vibration pattern</see><br/>for the device&amp;apos;s vibration hardware to emit when the notification fires. This is<br/>specified in the <c>vibrate</c> option of the<br/><see cref="Notification.Notification"/> constructor.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/vibrate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see href="https://developer.mozilla.org/en-US/docs/Web/API/Vibration_API#vibration_patterns">vibration pattern</see>, as specified in the <see href="https://w3c.github.io/vibration/">Vibration API spec</see>.</value>
+</NotificationVibrate>
 </docs>

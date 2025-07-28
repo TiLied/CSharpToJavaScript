@@ -7,4 +7,57 @@ The <strong><c>EncodedVideoChunk</c></strong> interface of the <see cref="'WebCo
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/EncodedVideoChunk"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </EncodedVideoChunk>
+<EncodedVideoChunkByteLength>
+<summary>
+The <strong><c>byteLength</c></strong> read-only property of the <see cref="EncodedVideoChunk"/> interface returns the length in bytes of the encoded video data.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/EncodedVideoChunk/byteLength"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer.</value>
+</EncodedVideoChunkByteLength>
+<EncodedVideoChunkCopyTo>
+<summary>
+The <strong><c>copyTo()</c></strong> method of the <see cref="EncodedVideoChunk"/> interface copies the encoded chunk of video data.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/EncodedVideoChunk/copyTo"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</EncodedVideoChunkCopyTo>
+<EncodedVideoChunkDuration>
+<summary>
+The <strong><c>duration</c></strong> read-only property of the <see cref="EncodedVideoChunk"/> interface returns an integer indicating the duration of the video in microseconds.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/EncodedVideoChunk/duration"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer.</value>
+</EncodedVideoChunkDuration>
+<EncodedVideoChunkEncodedVideoChunk>
+<summary>
+The <strong><c>EncodedVideoChunk()</c></strong> constructor creates a new <see cref="EncodedVideoChunk"/> object representing a chunk of encoded video.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/EncodedVideoChunk/EncodedVideoChunk"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</EncodedVideoChunkEncodedVideoChunk>
+<EncodedVideoChunkTimestamp>
+<summary>
+The <strong><c>timestamp</c></strong> read-only property of the <see cref="EncodedVideoChunk"/> interface returns an integer indicating the timestamp of the video in microseconds.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/EncodedVideoChunk/timestamp"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer.</value>
+</EncodedVideoChunkTimestamp>
+<EncodedVideoChunkType>
+<summary>
+The <strong><c>type</c></strong> read-only property of the <see cref="EncodedVideoChunk"/> interface returns a value indicating whether the video chunk is a key chunk, which does not rely on other frames for decoding.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/EncodedVideoChunk/type"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string, one of:</value>
+</EncodedVideoChunkType>
 </docs>

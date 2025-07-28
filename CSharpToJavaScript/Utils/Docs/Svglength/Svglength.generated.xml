@@ -1,10 +1,75 @@
 <docs>
 <SVGLength>
 <summary>
-
+The <strong><c>SVGLength</c></strong> interface correspond to the <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length">&amp;lt;length&amp;gt;</see> basic data type.
 </summary>
 <remarks>
+<para>An <c>SVGLength</c> object can be designated as read only, which means that attempts to modify the object will result in an exception being thrown.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGLength"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </SVGLength>
+<SVGLengthConvertToSpecifiedUnits>
+<summary>
+The <c>convertToSpecifiedUnits()</c> method of the <see cref="SVGLength"/> interface allows you to convert the length's value to the specified unit type.
+</summary>
+<remarks>
+<para>This function will:</para>
+<para>-<see cref="SVGAnimatedLength"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGLength/convertToSpecifiedUnits"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="'undefined'"/>).</returns>
+</SVGLengthConvertToSpecifiedUnits>
+<SVGLengthNewValueSpecifiedUnits>
+<summary>
+The <c>newValueSpecifiedUnits()</c> method of the <see cref="SVGLength"/> interface resets the value as a number with an associated <see cref="SVGLength.UnitType"/>, thereby replacing the values for all of the attributes on the object.
+</summary>
+<remarks>
+<para>-<see cref="SVGAnimatedLength"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGLength/newValueSpecifiedUnits"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="'undefined'"/>).</returns>
+</SVGLengthNewValueSpecifiedUnits>
+<SVGLengthUnitType>
+<summary>
+The <strong><c>unitType</c></strong> property of the <see cref="SVGLength"/> interface that represents type of the value as specified by one of the <c>SVG_LENGTHTYPE_*</c> constants defined on this interface.
+</summary>
+<remarks>
+<para>-<see cref="SVGAnimatedLength"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGLength/unitType"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>One of the following:</value>
+</SVGLengthUnitType>
+<SVGLengthValue>
+<summary>
+The <c>value</c> property of the <see cref="SVGLength"/> interface represents the floating point value of the <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length">&amp;lt;length&amp;gt;</see> in user units.
+</summary>
+<remarks>
+<para>Setting this attribute will cause <see cref="SVGLength.ValueInSpecifiedUnits"/> and <see cref="SVGLength.ValueAsString"/> to be updated automatically to reflect this setting.</para>
+<para>-<see cref="SVGAnimatedLength"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGLength/value"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The length value in user units as a float.</value>
+</SVGLengthValue>
+<SVGLengthValueAsString>
+<summary>
+The <c>valueAsString</c> property of the <see cref="SVGLength"/> interface represents the <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length">&amp;lt;length&amp;gt;</see>'s value as a string, in the units expressed by <see cref="SVGLength.UnitType"/>.
+</summary>
+<remarks>
+<para>Setting this attribute will cause <see cref="SVGLength.Value"/>, <see cref="SVGLength.ValueInSpecifiedUnits"/>, and <see cref="SVGLength.UnitType"/> to be updated automatically to reflect this setting.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#number"><c>&amp;lt;number&amp;gt;</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see><br/>-<see cref="SVGAnimatedLength"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGLength/valueAsString"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</SVGLengthValueAsString>
+<SVGLengthValueInSpecifiedUnits>
+<summary>
+The <c>valueInSpecifiedUnits</c> property of the <see cref="SVGLength"/> interface represents floating point value, in the units expressed by <see cref="SVGLength.UnitType"/>.
+</summary>
+<remarks>
+<para>Setting this attribute will cause <see cref="SVGLength.Value"/> and <see cref="SVGLength.ValueAsString"/> to be updated automatically to reflect this setting.</para>
+<para>-<see cref="SVGAnimatedLength"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGLength/valueInSpecifiedUnits"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The numeric factor of the length as a float.</value>
+</SVGLengthValueInSpecifiedUnits>
 </docs>

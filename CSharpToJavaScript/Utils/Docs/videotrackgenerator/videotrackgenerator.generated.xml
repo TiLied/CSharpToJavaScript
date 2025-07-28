@@ -1,0 +1,47 @@
+<docs>
+<VideoTrackGenerator>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>VideoTrackGenerator</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Insertable_Streams_for_MediaStreamTrack_API">Insertable Streams for MediaStreamTrack API</see> has a <see cref="WritableStream"/> property that acts as a <see cref="MediaStreamTrack"/> source, by consuming a stream of <see cref="VideoFrame"/>s as input.
+</summary>
+<remarks>
+<para>-<see cref="MediaStreamTrackProcessor"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackGenerator"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</VideoTrackGenerator>
+<VideoTrackGeneratorMuted>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>muted</c></strong> Boolean property of the <see cref="VideoTrackGenerator"/> interface can be used to temporarily halt or resume the generation of video frames in the output track.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackGenerator/muted"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean.</value>
+</VideoTrackGeneratorMuted>
+<VideoTrackGeneratorTrack>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>track</c></strong> property of the <see cref="VideoTrackGenerator"/> interface returns a <see cref="MediaStreamTrack"/>. <see cref="VideoFrame"/>s written to <see cref="VideoTrackGenerator.Writable"/> will be generated in this track.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackGenerator/track"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A video <see cref="MediaStreamTrack"/>.</value>
+</VideoTrackGeneratorTrack>
+<VideoTrackGeneratorVideoTrackGenerator>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>VideoTrackGenerator()</c></strong> constructor creates a new <see cref="VideoTrackGenerator"/> object which consumes a stream of media frames and exposes a <see cref="MediaStreamTrack"/>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/mediastreamtrack-insertable-media-processing">Insertable streams for MediaStreamTrack</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackGenerator/VideoTrackGenerator"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</VideoTrackGeneratorVideoTrackGenerator>
+<VideoTrackGeneratorWritable>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>writable</c></strong> property of the <see cref="VideoTrackGenerator"/> interface returns a <see cref="WritableStream"/>. This allows the writing of <see cref="VideoFrame"/>s to the <see cref="VideoTrackGenerator.Track"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackGenerator/writable"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="WritableStream"/> of <see cref="VideoFrame"/>s.</value>
+</VideoTrackGeneratorWritable>
+</docs>

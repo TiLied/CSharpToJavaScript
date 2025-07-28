@@ -9,4 +9,55 @@ The <strong><c>GamepadHapticActuator</c></strong> interface of the <see href="ht
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GamepadHapticActuator"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </GamepadHapticActuator>
+<GamepadHapticActuatorEffects>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>effects</c></strong> read-only property of the <see cref="GamepadHapticActuator"/> interface returns an array of enumerated values representing the different haptic effects that the actuator supports.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API">Gamepad API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GamepadHapticActuator/effects"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An array representing the supported haptic effects. Possible included values are:<blockquote class="NOTE"><h5>NOTE</h5>If an effect is not listed that is known to be supported by the hardware, it may be that the browser does not support playing effects of that type.</blockquote></value>
+</GamepadHapticActuatorEffects>
+<GamepadHapticActuatorPlayEffect>
+<summary>
+The <strong><c>playEffect()</c></strong> method of the <see cref="GamepadHapticActuator"/> interface causes the hardware to play a specific vibration effect.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API">Gamepad API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GamepadHapticActuator/playEffect"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A promise that resolves with <c>&amp;quot;complete&amp;quot;</c> when the effect successfully completes, or <c>&amp;quot;preempted&amp;quot;</c> if the current effect is stopped or replaced by another effect.The promise may reject with the following exception types:</returns>
+</GamepadHapticActuatorPlayEffect>
+<GamepadHapticActuatorPulse>
+<summary>
+The <strong><c>pulse()</c></strong> method of the <see cref="GamepadHapticActuator"/> interface makes the hardware pulse at a certain intensity for a specified duration.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API">Gamepad API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GamepadHapticActuator/pulse"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A promise that resolves with a value of <c>true</c> when the pulse has successfully completed.</returns>
+</GamepadHapticActuatorPulse>
+<GamepadHapticActuatorReset>
+<summary>
+The <strong><c>reset()</c></strong> method of the <see cref="GamepadHapticActuator"/> interface stops the hardware from playing an active vibration effect.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API">Gamepad API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GamepadHapticActuator/reset"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A promise that resolves with <c>&amp;quot;complete&amp;quot;</c> if the effect is successfully reset, or <c>&amp;quot;preempted&amp;quot;</c> if the effect was stopped or replaced by another effect.The promise may reject with the following exception types:</returns>
+</GamepadHapticActuatorReset>
+<GamepadHapticActuatorType>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>type</c></strong> read-only property of the <see cref="GamepadHapticActuator"/> interface returns an enumerated value representing the type of the haptic hardware.
+</summary>
+<remarks>
+<para>This property is deprecated: use <see cref="GamepadHapticActuator.Effects"/> to detect effect support.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API">Gamepad API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GamepadHapticActuator/type"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An enumerated value representing the haptic hardware type. Currently available types are:</value>
+</GamepadHapticActuatorType>
 </docs>

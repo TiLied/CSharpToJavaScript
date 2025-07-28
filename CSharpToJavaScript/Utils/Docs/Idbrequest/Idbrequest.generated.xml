@@ -4,9 +4,81 @@
 The <strong><c>IDBRequest</c></strong> interface of the IndexedDB API provides access to results of asynchronous requests to databases and database objects using event handler attributes. Each reading and writing operation on a database is done using a request.
 </summary>
 <remarks>
-<para>The request object does not initially contain any information about the result of the operation, but once information becomes available, an event is fired on the request, and the information becomes available through the properties of the <c>IDBRequest</c> instance.</para><para>All asynchronous operations immediately return an <c>IDBRequest</c> instance. Each request has a <c>readyState</c> that is set to the <c>&amp;apos;pending&amp;apos;</c> state; this changes to <c>&amp;apos;done&amp;apos;</c> when the request is completed or fails. When the state is set to <c>done</c>, every request returns a <c>result</c> and an <c>error</c>, and an event is fired on the request. When the state is still <c>pending</c>, any attempt to access the <c>result</c> or <c>error</c> raises an <c>InvalidStateError</c> exception.</para><para>In plain words, all asynchronous methods return a request object. If the request has been completed successfully, the result is made available through the <c>result</c> property and an event indicating success is fired at the request (<see cref="IDBRequest.Success_event"/>). If an error occurs while performing the operation, the exception is made available through the <c>error</c> property and an error event is fired (<see cref="IDBRequest.Error_event"/>).</para><para>The interface <see cref="IDBOpenDBRequest"/> is derived from <c>IDBRequest</c>.</para><para></para>
+<para>The request object does not initially contain any information about the result of the operation, but once information becomes available, an event is fired on the request, and the information becomes available through the properties of the <c>IDBRequest</c> instance.</para><para>All asynchronous operations immediately return an <c>IDBRequest</c> instance. Each request has a <c>readyState</c> that is set to the <c>&amp;apos;pending&amp;apos;</c> state; this changes to <c>&amp;apos;done&amp;apos;</c> when the request is completed or fails. When the state is set to <c>done</c>, every request returns a <c>result</c> and an <c>error</c>, and an event is fired on the request. When the state is still <c>pending</c>, any attempt to access the <c>result</c> or <c>error</c> raises an <c>InvalidStateError</c> exception.</para><para>In plain words, all asynchronous methods return a request object. If the request has been completed successfully, the result is made available through the <c>result</c> property and an event indicating success is fired at the request (<see cref="IDBRequest.Success"/>). If an error occurs while performing the operation, the exception is made available through the <c>error</c> property and an error event is fired (<see cref="IDBRequest.Error"/>).</para><para>The interface <see cref="IDBOpenDBRequest"/> is derived from <c>IDBRequest</c>.</para><para></para>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase"/><br/>-Using transactions: <see cref="IDBTransaction"/><br/>-Setting a range of keys: <see cref="IDBKeyRange"/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore"/><br/>-Using cursors: <see cref="IDBCursor"/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBRequest"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </IDBRequest>
+<IDBRequestError>
+<summary>
+The <strong><c>error</c></strong> read-only property of the<br/><see cref="IDBRequest"/> interface returns the error in the event of an unsuccessful<br/>request.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase"/><br/>-Using transactions: <see cref="IDBTransaction"/><br/>-Setting a range of keys: <see cref="IDBKeyRange"/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore"/><br/>-Using cursors: <see cref="IDBCursor"/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBRequest/error"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DOMException"/> or <c>null</c> if there is no error. The exception object will have one of the following names, depending on what caused the error.These errors are asynchronous, meaning that they can&amp;apos;t be handled via <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch"><c>try...catch</c></see>. However, if an <c>IDBRequest</c> has an <see cref="IDBRequest.Error"/> event handler assigned, you can still inspect such errors by querying the request's <c>error</c> property via the event object, for example <see href="https://developer.mozilla.org/en-US/docs/Web/API/DOMException/name"><c>event.target.error.name</c></see> or <see href="https://developer.mozilla.org/en-US/docs/Web/API/DOMException/message"><c>event.target.error.message</c></see>.</value>
+</IDBRequestError>
+<IDBRequestError>
+<summary>
+The <c>error</c> handler is executed when an error caused a request to fail. In the <c>error</c> event handler, you can access the error of the request, as well as place more requests to the same transaction.
+</summary>
+<remarks>
+<para>This event is not cancelable and does not bubble.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBRequest/error"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</IDBRequestError>
+<IDBRequestReadyState>
+<summary>
+The <strong><c>readyState</c></strong> read-only property of the<br/><see cref="IDBRequest"/> interface returns the state of the request.
+</summary>
+<remarks>
+<para>Every request starts in the <c>pending</c> state. The state changes to<br/><c>done</c> when the request completes successfully or when an error<br/>occurs.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase"/><br/>-Using transactions: <see cref="IDBTransaction"/><br/>-Setting a range of keys: <see cref="IDBKeyRange"/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore"/><br/>-Using cursors: <see cref="IDBCursor"/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBRequest/readyState"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>One of the following strings:</value>
+</IDBRequestReadyState>
+<IDBRequestResult>
+<summary>
+The <strong><c>result</c></strong> read-only property of the<br/><see cref="IDBRequest"/> interface returns the result of the request.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase"/><br/>-Using transactions: <see cref="IDBTransaction"/><br/>-Setting a range of keys: <see cref="IDBKeyRange"/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore"/><br/>-Using cursors: <see cref="IDBCursor"/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBRequest/result"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>any</value>
+</IDBRequestResult>
+<IDBRequestSource>
+<summary>
+The <strong><c>source</c></strong> read-only property of the<br/><see cref="IDBRequest"/> interface returns the source of the request, such as an<br/>Index or an object store. If no source exists (such as when calling<br/><see cref="IDBFactory.Open"/>), it returns null.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase"/><br/>-Using transactions: <see cref="IDBTransaction"/><br/>-Setting a range of keys: <see cref="IDBKeyRange"/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore"/><br/>-Using cursors: <see cref="IDBCursor"/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBRequest/source"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An object representing the source of the request, such as an <see cref="IDBIndex"/>,<br/><see cref="IDBObjectStore"/> or <see cref="IDBCursor"/>.</value>
+</IDBRequestSource>
+<IDBRequestSuccess>
+<summary>
+The <c>success</c> event is fired when an <c>IDBRequest</c> succeeds. In the <c>success</c> event handler, you can access the result of the request, as well as place more requests to the same transaction.
+</summary>
+<remarks>
+<para>This event is not cancelable and does not bubble.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBRequest/success"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</IDBRequestSuccess>
+<IDBRequestTransaction>
+<summary>
+The <strong><c>transaction</c></strong> read-only property of the IDBRequest<br/>interface returns the transaction for the request, that is, the transaction the<br/>request is being made inside.
+</summary>
+<remarks>
+<para>This property can be <c>null</c> for requests not made within transactions,<br/>such as for requests returned from <see cref="IDBFactory.Open"/> — in this case<br/>you&amp;apos;re just connecting to a database, so there is no transaction to return. If a<br/>version upgrade is needed when opening a database then during the<br/><see cref="IDBOpenDBRequest.Upgradeneeded"/> event handler the<br/><strong><c>transaction</c></strong> property will be an<br/><see cref="IDBTransaction"/> with <see cref="IDBTransaction.Mode"/> equal<br/>to <c>&amp;quot;versionchange&amp;quot;</c>, and can be used to access existing object stores and<br/>indexes, or abort the upgrade. Following the upgrade, the<br/><strong><c>transaction</c></strong> property will again be <c>null</c>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase"/><br/>-Using transactions: <see cref="IDBTransaction"/><br/>-Setting a range of keys: <see cref="IDBKeyRange"/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore"/><br/>-Using cursors: <see cref="IDBCursor"/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBRequest/transaction"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="IDBTransaction"/>.</value>
+</IDBRequestTransaction>
 </docs>

@@ -1,7 +1,7 @@
 <docs>
 <HTMLScriptElement>
 <summary>
-JavaScript files should be served with the <c>text/javascript</c> <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/MIME_types">MIME type</see>, but browsers are lenient and block them only if the script is served with an image type (<c>image/*</c>), video type (<c>video/*</c>), audio type (<c>audio/*</c>), or <c>text/csv</c>. If the script is blocked, its element receives an <see cref="HTMLElement/error_event"/> event; otherwise, it receives a <see cref="Window/load_event"/> event.
+JavaScript files should be served with the <c>text/javascript</c> <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/MIME_types">MIME type</see>, but browsers are lenient and block them only if the script is served with an image type (<c>image/*</c>), video type (<c>video/*</c>), audio type (<c>audio/*</c>), or <c>text/csv</c>. If the script is blocked, its element receives an <see cref="HTMLElementerror"/> event; otherwise, it receives a <see cref="Windowload"/> event.
 </summary>
 <remarks>
 <para></para>
@@ -9,4 +9,141 @@ JavaScript files should be served with the <c>text/javascript</c> <see href="htt
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLScriptElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </HTMLScriptElement>
+<HTMLScriptElementAsync>
+<summary>
+The <strong><c>async</c></strong> property of the <see cref="HTMLScriptElement"/> interface is a boolean value that controls how the script should be executed. For classic scripts, if the <c>async</c> property is set to <c>true</c>, the external script will be fetched in parallel to parsing and evaluated as soon as it is available. For <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules">module scripts</see>, if the <c>async</c> property is set to <c>true</c>, the script and all their dependencies will be fetched in parallel to parsing and evaluated as soon as they are available.
+</summary>
+<remarks>
+<para>It reflects the <c>async</c> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">script</see> element.</para>
+<para>-<see cref="HTMLScriptElement.Defer"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLScriptElement/async"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean.</value>
+</HTMLScriptElementAsync>
+<HTMLScriptElementAttributionSrc>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>attributionSrc</c></strong> property of the <see cref="HTMLScriptElement"/> interface gets and sets the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/script#attributionsrc"><c>attributionsrc</c></see> attribute on a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">script</see> element programmatically, reflecting the value of that attribute. <c>attributionsrc</c> specifies that you want the browser to send an <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Eligible">Attribution-Reporting-Eligible</see> header along with the script resource request.
+</summary>
+<remarks>
+<para>On the server-side this is used to trigger sending an <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source">Attribution-Reporting-Register-Source</see> or <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Trigger">Attribution-Reporting-Register-Trigger</see> header in the response, to register a JavaScript-based <see href="https://developer.mozilla.org/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#javascript-based_event_sources">attribution source</see> or <see href="https://developer.mozilla.org/en-US/docs/Web/API/Attribution_Reporting_API/Registering_triggers#javascript-based_attribution_triggers">attribution trigger</see>, respectively. Which response header should be sent back depends on the value of the <c>Attribution-Reporting-Eligible</c> header that triggered the registration.</para><blockquote class="NOTE"><h5>NOTE</h5><para>Alternatively, JavaScript-based attribution sources or triggers can be registered by sending a <see cref="Windowfetch"/> request containing the <c>attributionReporting</c> option (either set directly on the <c>fetch()</c> call or on a <see cref="Request"/> object passed into the <c>fetch()</c> call), or by sending an <see cref="XMLHttpRequest"/> with <see cref="XMLHttpRequest.SetAttributionReporting"/> invoked on the request object.</para></blockquote><para>See the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Attribution_Reporting_API">Attribution Reporting API</see> for more details.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Attribution_Reporting_API">Attribution Reporting API</see>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLScriptElement/attributionSrc"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string. There are two versions of this property that you can get and set:</value>
+</HTMLScriptElementAttributionSrc>
+<HTMLScriptElementBlocking>
+<summary>
+The <strong><c>blocking</c></strong> property of the <see cref="HTMLScriptElement"/> interface is a string indicating that certain operations should be blocked on the fetching of the script.
+</summary>
+<remarks>
+<para>It reflects the <c>blocking</c> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">script</see> element.</para>
+<para>-<see cref="HTMLLinkElement.Blocking"/><br/>-<see cref="HTMLStyleElement.Blocking"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLScriptElement/blocking"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string. Must be a space-separated list of blocking tokens listed below indicating the operations that are to be blocked:</value>
+</HTMLScriptElementBlocking>
+<HTMLScriptElementCrossOrigin>
+<summary>
+The <strong><c>crossOrigin</c></strong> property of the <see cref="HTMLScriptElement"/> interface reflects the {{Glossary("CORS", "Cross-Origin Resource Sharing")}} settings for the script element. For classic scripts from other <see href="https://developer.mozilla.org/en-US/docs/Glossary/Origin">origins</see>, this controls if full error information will be exposed. For module scripts, it controls the script itself and any script it imports. See <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/crossorigin">CORS settings attributes</see> for details.
+</summary>
+<remarks>
+<para>-<see cref="HTMLImageElement.CrossOrigin"/><br/>-<see cref="HTMLLinkElement.CrossOrigin"/><br/>-<see cref="HTMLMediaElement.CrossOrigin"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLScriptElement/crossOrigin"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string of a keyword specifying the CORS mode to use when fetching the resource. Possible values are:If the <c>crossOrigin</c> property is specified with any other value, it is the same as specifying it as the <c>anonymous</c>.If the <c>crossOrigin</c> property is not specified, the resource is fetched without CORS (the <c>no-cors</c> {{domxref(&amp;quot;Request.mode&amp;quot;, &amp;quot;mode&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} and the <c>same-origin</c> {{domxref(&amp;quot;Request.credentials&amp;quot;, &amp;quot;credentials&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} mode).</value>
+</HTMLScriptElementCrossOrigin>
+<HTMLScriptElementDefer>
+<summary>
+The <strong><c>defer</c></strong> property of the <see cref="HTMLScriptElement"/> interface is a boolean value that controls how the script should be executed. For classic scripts, if the <c>defer</c> property is set to <c>true</c>, the external script will be executed after the document has been parsed, but before firing <see cref="DocumentDOMContentLoaded"/> event. For <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules">module scripts</see>, the <c>defer</c> property has no effect.
+</summary>
+<remarks>
+<para>It reflects the <c>defer</c> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">script</see> element.</para>
+<para>-<see cref="HTMLScriptElement.Async"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLScriptElement/defer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean.</value>
+</HTMLScriptElementDefer>
+<HTMLScriptElementFetchPriority>
+<summary>
+The <strong><c>fetchPriority</c></strong> property of the <see cref="HTMLScriptElement"/> interface represents a hint to the browser indicating how it should prioritize fetching an external script relative to other external scripts.<br/>It reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/script#fetchpriority"><c>fetchpriority</c></see> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">script</see> element.
+</summary>
+<remarks>
+<para>The property allows a developer to signal that fetching a particular script early or late in the loading process has more or less impact on user experience than a browser can reasonably infer when assigning an internal priority.<br/>This in turn allows the browser to increase or decrease the priority, and potentially load the script earlier or later than it would otherwise.<br/>The property should be used sparingly, as excessive or incorrect prioritization can degrade performance.</para><para>The fetch priority allows you to decrease the priority of late-body scripts, or to increase the priority of <c>async</c> scripts without having to use <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/rel/preload">preloading</see>.<br/>When early loading of a script is important, the priority can be used to complement preloading, boosting the priority ahead of less-impactful resources that have a higher default priority.</para><para>Note that both the internal priority of any fetch operation, and the impact of <c>fetchPriority</c> on the priority, are entirely browser dependent.</para>
+<para>-<see cref="HTMLImageElement.FetchPriority"/><br/>-<see cref="HTMLLinkElement.FetchPriority"/><br/>-HTTP <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Link">Link</see> header<br/>-<see href="https://web.dev/articles/fetch-priority?hl=en#browser_priority_and_fetchpriority">Optimize resource loading with the Fetch Priority API</see> for information about how this API affects priorities on Chrome.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLScriptElement/fetchPriority"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing the priority hint. Possible values are:</value>
+</HTMLScriptElementFetchPriority>
+<HTMLScriptElementIntegrity>
+<summary>
+The <strong><c>integrity</c></strong> property of the <see cref="HTMLScriptElement"/> interface is a string that contains inline metadata that a browser can use to verify that a fetched resource has been delivered without unexpected manipulation.
+</summary>
+<remarks>
+<para>It reflects the <c>integrity</c> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">script</see> element.</para>
+<para>-<see cref="HTMLLinkElement.Integrity"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity">Subresource Integrity</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLScriptElement/integrity"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</HTMLScriptElementIntegrity>
+<HTMLScriptElementNoModule>
+<summary>
+The <strong><c>noModule</c></strong> property of the <see cref="HTMLScriptElement"/> interface is a boolean value that indicates whether the script should be executed in browsers that support <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules">ES modules</see>. Practically, this can be used to serve fallback scripts to older browsers that do not support JavaScript modules.
+</summary>
+<remarks>
+<para>It reflects the <c>nomodule</c> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">script</see> element.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLScriptElement/noModule"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean, <c>true</c> means that the script should not be executed in browsers that support ES modules, <c>false</c> otherwise.</value>
+</HTMLScriptElementNoModule>
+<HTMLScriptElementReferrerPolicy>
+<summary>
+The <strong><c>referrerPolicy</c></strong> property of the<br/><see cref="HTMLScriptElement"/> interface reflects the HTML<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/script#referrerpolicy"><c>referrerpolicy</c></see> of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">script</see> element, which defines how the referrer is set when fetching the script and any scripts it imports.
+</summary>
+<remarks>
+<para>-<see cref="HTMLIFrameElement.ReferrerPolicy"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLScriptElement/referrerPolicy"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string; one of the following:<blockquote class="NOTE"><h5>NOTE</h5>An empty string value (<c>&amp;quot;&amp;quot;</c>) is both the default<br/>value, and a fallback value if <c>referrerpolicy</c> is not supported. If<br/><c>referrerpolicy</c> is not explicitly specified on the<br/><c>&amp;lt;script&amp;gt;</c> element, it will adopt a higher-level referrer policy,<br/>i.e., one set on the whole document or domain. If a higher-level policy is not<br/>available, the empty string is treated as being equivalent to<br/><c>no-referrer-when-downgrade</c>.</blockquote></value>
+</HTMLScriptElementReferrerPolicy>
+<HTMLScriptElementSrc>
+<summary>
+The <strong><c>src</c></strong> property of the <see cref="HTMLScriptElement"/> interface is a string representing the URL of an external script; this can be used as an alternative to embedding a script directly within a document.
+</summary>
+<remarks>
+<para>It reflects the <c>src</c> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">script</see> element.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLScriptElement/src"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</HTMLScriptElementSrc>
+<HTMLScriptElementSupports>
+<summary>
+The <strong><c>supports()</c></strong> static method of the <see cref="HTMLScriptElement"/> interface provides a simple and consistent method to feature-detect what types of scripts are supported by the user agent.
+</summary>
+<remarks>
+<para>The method is expected to return <c>true</c> for classic and module scripts, which are supported by most modern browsers.</para>
+<para>-<see cref="HTMLScriptElement"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">script</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules">JavaScript modules</see><br/>-<see cref="WorkerWorker"/> constructor<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLScriptElement/supports"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Returns <c>true</c> if the indicated script type is supported and <c>false</c> otherwise.</returns>
+</HTMLScriptElementSupports>
+<HTMLScriptElementText>
+<summary>
+The <strong><c>text</c></strong> property of the <see cref="HTMLScriptElement"/> interface is a string that reflects the text content inside the {{HTMLElement("script")}} element. It acts the same way as the <see cref="Node.TextContent"/> property.
+</summary>
+<remarks>
+<para>It reflects the <c>text</c> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">script</see> element.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLScriptElement/text"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</HTMLScriptElementText>
+<HTMLScriptElementType>
+<summary>
+The <strong><c>type</c></strong> property of the <see cref="HTMLScriptElement"/> interface is a string that reflects the type of the script.
+</summary>
+<remarks>
+<para>It reflects the <c>type</c> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">script</see> element.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLScriptElement/type"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string. The value of this property can be one of the following:For more information, please refer to the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/script/type"><c>type</c></see> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">script</see> element.</value>
+</HTMLScriptElementType>
 </docs>

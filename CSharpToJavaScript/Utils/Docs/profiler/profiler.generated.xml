@@ -1,0 +1,37 @@
+<docs>
+<Profiler>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>Profiler</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/JS_Self-Profiling_API">JS Self-Profiling API</see> enables you to create a <see href="https://developer.mozilla.org/en-US/docs/Web/API/JS_Self-Profiling_API/Profile_content_and_format">profile</see> of some part of your web application&amp;apos;s execution.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Profiler"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Profiler>
+<ProfilerProfiler>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>Profiler()</c></strong> constructor creates a new <see cref="Profiler"/> object.
+</summary>
+<remarks>
+<para>Once created, the new profiler will start collecting samples.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Profiler/Profiler"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</ProfilerProfiler>
+<ProfilerSamplebufferfull>
+<summary>
+The <strong><c>samplebufferfull</c></strong> event of the <see cref="Profiler"/> interface is fired when the number of samples the profiler has recorded matches the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Profiler/Profiler#maxbuffersize"><c>maxBufferSize</c></see> value passed to the profiler&amp;apos;s constructor.
+</summary>
+<remarks>
+<para>After this event fires, the profiler will not record any more samples.</para><para>This event is not cancelable and does not bubble.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Profiler/samplebufferfull"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</ProfilerSamplebufferfull>
+<ProfilerStop>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>stop()</c></strong> method of the <see cref="Profiler"/> interface stops the profiler and returns a {{jsxref("Promise")}} which resolves to the profile itself.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Profiler/stop"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves to an object containing the profile data. The format and interpretation of this object is described in <see href="https://developer.mozilla.org/en-US/docs/Web/API/JS_Self-Profiling_API/Profile_content_and_format">Profile anatomy and format</see>.</returns>
+</ProfilerStop>
+</docs>

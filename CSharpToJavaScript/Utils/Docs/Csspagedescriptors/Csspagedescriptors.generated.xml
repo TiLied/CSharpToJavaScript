@@ -1,7 +1,7 @@
 <docs>
 <CSSPageDescriptors>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>CSSPageDescriptors</c></strong> interface represents a CSS declaration block for an <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@page">@page</see> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/At-rule">at-rule</see>.
+The <strong><c>CSSPageDescriptors</c></strong> interface represents a CSS declaration block for an <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@page">@page</see> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_syntax/At-rule">at-rule</see>.
 </summary>
 <remarks>
 <para>The interface exposes style information and various style-related methods and properties for the page.<br/>Each multi-word property has versions in camel- and snake-case.<br/>This means, for example, that you can access the <c>margin-top</c> CSS property using the syntax <c>style[&amp;quot;margin-top&amp;quot;]</c> or <c>style.marginTop</c> (where <c>style</c> is a <c>CSSPageDescriptor</c>).</para><para>A <c>CSSPageDescriptors</c> object is accessed through the <see cref="CSSPageRule.Style"/> property of the <c>CSSPageRule</c> interface, which can in turn be found using the <see cref="CSSStyleSheet"/> API.</para><para></para>

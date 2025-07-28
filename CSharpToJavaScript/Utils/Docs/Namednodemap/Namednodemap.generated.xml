@@ -9,4 +9,79 @@ The <strong><c>NamedNodeMap</c></strong> interface represents a collection of <s
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NamedNodeMap"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </NamedNodeMap>
+<NamedNodeMapGetNamedItem>
+<summary>
+The <strong><c>getNamedItem()</c></strong> method of the <see cref="NamedNodeMap"/> interface returns the <see cref="Attr"/> corresponding to the given name, or <c>null</c> if there is no corresponding attribute.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This method is also called when you use the operator <c>[]</c> syntax.<br/>So, <c>myMap[str]</c> is equivalent to <c>myMap.getNamedItem(str)</c> where <c>str</c> is a string.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NamedNodeMap/getNamedItem"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="Attr"/> corresponding to the <c>name</c> given in parameter, or <c>null</c> if none has been found.</returns>
+</NamedNodeMapGetNamedItem>
+<NamedNodeMapGetNamedItemNS>
+<summary>
+The <strong><c>getNamedItemNS()</c></strong> method of the <see cref="NamedNodeMap"/> interface returns the <see cref="Attr"/> corresponding to the given local name in the given namespace, or <c>null</c> if there is no corresponding attribute.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NamedNodeMap/getNamedItemNS"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="Attr"/> corresponding to the namespace and local name given in parameters, or <c>null</c> if none has been found.</returns>
+</NamedNodeMapGetNamedItemNS>
+<NamedNodeMapItem>
+<summary>
+The <strong><c>item()</c></strong> method of the <see cref="NamedNodeMap"/> interface<br/>returns the item in the map matching the index.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This method is also called when you use the operator <c>[]</c> syntax.<br/>So, <c>myMap[i]</c> is equivalent to <c>myMap.item(i)</c> where <c>i</c> is a number.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NamedNodeMap/item"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="Attr"/> or <c>null</c> if the number is greater than or equal to the <c>length</c> of<br/>the map.</returns>
+</NamedNodeMapItem>
+<NamedNodeMapLength>
+<summary>
+The read-only <strong><c>length</c></strong> property of the <see cref="NamedNodeMap"/> interface<br/>is the number of objects stored in the map.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NamedNodeMap/length"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number containing the number of objects in the map</value>
+</NamedNodeMapLength>
+<NamedNodeMapRemoveNamedItem>
+<summary>
+The <strong><c>removeNamedItem()</c></strong> method of the <see cref="NamedNodeMap"/> interface<br/>removes the <see cref="Attr"/> corresponding to the given name from the map.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NamedNodeMap/removeNamedItem"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>The removed <see cref="Attr"/>.</returns>
+</NamedNodeMapRemoveNamedItem>
+<NamedNodeMapRemoveNamedItemNS>
+<summary>
+The <strong><c>removeNamedItemNS()</c></strong> method of the <see cref="NamedNodeMap"/> interface<br/>removes the <see cref="Attr"/> corresponding to the given namespace and local name from the map.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NamedNodeMap/removeNamedItemNS"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>The removed <see cref="Attr"/>.</returns>
+</NamedNodeMapRemoveNamedItemNS>
+<NamedNodeMapSetNamedItem>
+<summary>
+The <strong><c>setNamedItem()</c></strong> method of the <see cref="NamedNodeMap"/> interface<br/>puts the <see cref="Attr"/> identified by its name in the map.<br/>If there is already an <see cref="Attr"/> with the same name in the map,<br/>it is <strong>replaced</strong>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NamedNodeMap/setNamedItem"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Returns the old attribute if replaced, or <c>null</c> if the attribute is new.</returns>
+</NamedNodeMapSetNamedItem>
+<NamedNodeMapSetNamedItemNS>
+<summary>
+The <strong><c>setNamedItemNS()</c></strong> method of the <see cref="NamedNodeMap"/> interface<br/>puts the <see cref="Attr"/> identified by its name in the map.<br/>If there was already an <see cref="Attr"/> with the same name in the map,<br/>it is <strong>replaced</strong>.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This method is an alias of <c>setNamedItem()</c> you can use them<br/>interchangeably.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NamedNodeMap/setNamedItemNS"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Returns the old attribute if replaced, or <c>null</c> if the attribute is new.</returns>
+</NamedNodeMapSetNamedItemNS>
 </docs>

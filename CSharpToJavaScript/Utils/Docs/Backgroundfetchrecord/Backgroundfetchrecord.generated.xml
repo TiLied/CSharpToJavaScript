@@ -8,4 +8,22 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BackgroundFetchRecord"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </BackgroundFetchRecord>
+<BackgroundFetchRecordRequest>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>request</c></strong> read-only property of the <see cref="BackgroundFetchRecord"/> interface returns the details of the resource to be fetched.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BackgroundFetchRecord/request"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Request"/>.</value>
+</BackgroundFetchRecordRequest>
+<BackgroundFetchRecordResponseReady>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>responseReady</c></strong> read-only property of the <see cref="BackgroundFetchRecord"/> interface returns a {{jsxref("Promise")}} that resolves with a <see cref="Response"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BackgroundFetchRecord/responseReady"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A {{jsxref("Promise")}} that resolves with a <see cref="Response"/>.</value>
+</BackgroundFetchRecordResponseReady>
 </docs>

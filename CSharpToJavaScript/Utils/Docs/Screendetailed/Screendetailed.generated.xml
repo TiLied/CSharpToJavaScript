@@ -9,4 +9,91 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ScreenDetailed"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </ScreenDetailed>
+<ScreenDetailedAvailLeft>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>availLeft</c></strong> read-only property of the<br/><see cref="ScreenDetailed"/> interface is a number representing the x-coordinate (left-hand edge) of the available screen area inside the OS virtual screen arrangement, relative to the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Window_Management_API/Multi-screen_origin">multi-screen origin</see>.
+</summary>
+<remarks>
+<para>This is equal to the <see cref="ScreenDetailed.Left"/> property, plus the width of any OS UI element drawn on the left of the screen. Windows cannot be placed in those areas, so <c>availLeft</c> is useful for giving you the left boundary of the actual area available to open or place windows.</para><blockquote class="NOTE"><h5>NOTE</h5><para>A non-standard implementation of the <c>availLeft</c> property is available on the <c>Screen</c> interface in all browsers. See the <see href="https://developer.mozilla.org#non-standard_example">Non-standard example</see> below for usage details, and see the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Screen#browser_compatibility"><c>Screen</c></see> reference page for browser support information relating to the non-standard implementation.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Window_Management_API">Window Management API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ScreenDetailed/availLeft"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</ScreenDetailedAvailLeft>
+<ScreenDetailedAvailTop>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>availTop</c></strong> read-only property of the<br/><see cref="ScreenDetailed"/> interface is a number representing the y-coordinate (top edge) of the available screen area inside the OS virtual screen arrangement, relative to the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Window_Management_API/Multi-screen_origin">multi-screen origin</see>.
+</summary>
+<remarks>
+<para>This is equal to the <see cref="ScreenDetailed.Top"/> property, plus the height of any OS UI element drawn at the top of the screen. Windows cannot be placed in those areas, so <c>availTop</c> is useful for giving you the top boundary of the actual area available to open or place windows.</para><blockquote class="NOTE"><h5>NOTE</h5><para>A non-standard implementation of the <c>availTop</c> property is available on the <c>Screen</c> interface in all browsers. See the <see href="https://developer.mozilla.org#non-standard_example">Non-standard example</see> below for usage details, and see the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Screen#browser_compatibility"><c>Screen</c></see> reference page for browser support information relating to the non-standard implementation.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Window_Management_API">Window Management API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ScreenDetailed/availTop"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</ScreenDetailedAvailTop>
+<ScreenDetailedDevicePixelRatio>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>devicePixelRatio</c></strong> read-only property of the<br/><see cref="ScreenDetailed"/> interface is a number representing the screen's {{glossary("device pixel")}} ratio.
+</summary>
+<remarks>
+<para>This is the same as the value returned by <see cref="Window.DevicePixelRatio"/>, except that <c>Window.devicePixelRatio</c>:</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Window_Management_API">Window Management API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ScreenDetailed/devicePixelRatio"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</ScreenDetailedDevicePixelRatio>
+<ScreenDetailedIsInternal>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>isInternal</c></strong> read-only property of the<br/><see cref="ScreenDetailed"/> interface is a boolean indicating whether the screen is internal to the device or external. External devices are generally manufactured separately from the device they are attached to and can be connected and disconnected as needed, whereas internal screens are part of the device and not intended to be disconnected.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Window_Management_API">Window Management API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ScreenDetailed/isInternal"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value — <c>true</c> if the screen is internal, and <c>false</c> if it is external.</value>
+</ScreenDetailedIsInternal>
+<ScreenDetailedIsPrimary>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>isPrimary</c></strong> read-only property of the<br/><see cref="ScreenDetailed"/> interface is a boolean indicating whether the screen is set as the operating system (OS) primary screen or not.
+</summary>
+<remarks>
+<para>The OS hosting the browser will have one primary screen, and one or more secondary screens. The primary screen can usually be specified by the user via OS settings, and generally contains OS UI features such as the taskbar/icon dock. The primary screen may change for a number of reasons, such as a screen being unplugged.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Window_Management_API">Window Management API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ScreenDetailed/isPrimary"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value — <c>true</c> if the screen is primary, and <c>false</c> if it is secondary.</value>
+</ScreenDetailedIsPrimary>
+<ScreenDetailedLabel>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>label</c></strong> read-only property of the<br/><see cref="ScreenDetailed"/> interface is a string providing a descriptive label for the screen, for example "Built-in Retina Display".
+</summary>
+<remarks>
+<para>This is useful for constructing a list of options to display to the user if you want them to choose a screen to display content on.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Window_Management_API">Window Management API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ScreenDetailed/label"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</ScreenDetailedLabel>
+<ScreenDetailedLeft>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>left</c></strong> read-only property of the<br/><see cref="ScreenDetailed"/> interface is a number representing the x-coordinate (left-hand edge) of the total screen area inside the OS virtual screen arrangement, relative to the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Window_Management_API/Multi-screen_origin">multi-screen origin</see>.
+</summary>
+<remarks>
+<para>This is equal to the true left-hand edge, ignoring any OS UI element drawn at the left of the screen. Windows cannot be placed in those areas; to get the left-hand coordinate of the screen area that windows can be placed in, use <see cref="ScreenDetailed.AvailLeft"/>.</para><blockquote class="NOTE"><h5>NOTE</h5><para>In Firefox, a non-standard implementation of the <c>left</c> property is available on the <c>Screen</c> interface. See the <see href="https://developer.mozilla.org#non-standard_example">Non-standard example</see> below for usage details, and see the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Screen#browser_compatibility"><c>Screen</c></see> reference page for browser support information relating to the non-standard implementation.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Window_Management_API">Window Management API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ScreenDetailed/left"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</ScreenDetailedLeft>
+<ScreenDetailedTop>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>top</c></strong> read-only property of the<br/><see cref="ScreenDetailed"/> interface is a number representing the y-coordinate (top edge) of the total screen area inside the OS virtual screen arrangement, relative to the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Window_Management_API/Multi-screen_origin">multi-screen origin</see>.
+</summary>
+<remarks>
+<para>This is equal to the true top edge, ignoring any OS UI element drawn at the top of the screen. Windows cannot be placed in those areas; to get the top coordinate of the screen area that windows can be placed in, use <see cref="ScreenDetailed.AvailTop"/>.</para><blockquote class="NOTE"><h5>NOTE</h5><para>In Firefox, a non-standard implementation of the <c>top</c> property is available on the <c>Screen</c> interface. See the <see href="https://developer.mozilla.org#non-standard_example">Non-standard example</see> below for usage details, and see the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Screen#browser_compatibility"><c>Screen</c></see> reference page for browser support information relating to the non-standard implementation.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Window_Management_API">Window Management API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ScreenDetailed/top"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</ScreenDetailedTop>
 </docs>

@@ -9,4 +9,228 @@ The <strong><c>HTMLAreaElement</c></strong> interface provides special propertie
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </HTMLAreaElement>
+<HTMLAreaElementAlt>
+<summary>
+The <strong><c>alt</c></strong> property of the <see cref="HTMLAreaElement"/> interface specifies the text of the hyperlink, defining the textual label for an image map's link. It reflects the {{htmlelement("area")}} element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/area#alt"><c>alt</c></see> attribute.
+</summary>
+<remarks>
+<para>The <c>alt</c> value must be text that, when presented with the <c>alt</c> text of the other <c>&amp;lt;area&amp;gt;</c> hyperlinks within the same <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/map">map</see>, along with the <c>alt</c> text of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">img</see> itself, provides the user with the same kind of choice as the hyperlink would when used without its text but with its shape applied to the image.</para><para>If the {{htmlelement("area")}} is a link (contains an <see cref="HTMLAreaElement.Href"/> property), the <c>alt</c> property value should be a non-empty string giving the label for the link that would be appropriate if the image were unavailable. The <c>alt</c> attribute for a link <c>&amp;lt;area&amp;gt;</c> can only be empty if there is another <c>&amp;lt;area&amp;gt;</c> element in the same <c>&amp;lt;map&amp;gt;</c> that points to the same resource and has a non-blank <c>alt</c> attribute.</para>
+<para>-<see cref="HTMLImageElement.Alt"/><br/>-<see cref="HTMLInputElement.Alt"/><br/>-<see cref="HTMLMapElement"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area">area</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/map">map</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a">a</see><br/>-<see href="https://www.wcag.com/blog/good-alt-text-bad-alt-text-making-your-content-perceivable/">Good alt text, bad alt text — Making your content perceivable</see> on WCAG.com (2021)<br/>-<see href="https://www.w3.org/WAI/tutorials/images/decision-tree/">An alt decision tree</see> on W3C Web Accessibility Initiative (WAI)<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement/alt"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</HTMLAreaElementAlt>
+<HTMLAreaElementCoords>
+<summary>
+The <strong><c>coords</c></strong> property of the <see cref="HTMLAreaElement"/> interface specifies the coordinates of the element's shape as a list of floating-point numbers. It reflects the {{htmlelement("area")}} element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/area#coords"><c>coords</c></see> attribute.
+</summary>
+<remarks>
+<para>If the <c>shape</c> is <c>rect</c>, the shape is a rectangle and the string value&amp;apos;s four comma separated numbers specify the coordinates of the top-left and bottom-right corners of the rectangle. For example, <c>0,0,200,20</c> defines the coordinates as <c>0,0</c>, which is the top-left of the image map, and <c>200,20</c>, which is 200px from the left and 20px from the top of the top-left corner of the image map.</para><para>If the <c>shape</c> is <c>circle</c>, the three comma-separated numbers represent the x and y coordinates of the circle&amp;apos;s center and the radius.</para><para>If the shape is <c>poly</c>, the string consists of at least 6 comma-separated numbers representing at least 3 pairs of coordinates that define the vertices of the polygon.</para><para>For all coordinates, the origin is the top-left corner of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/map">map</see> element's image.</para>
+<para>-<see cref="HTMLAreaElement.Shape"/><br/>-<see cref="HTMLAreaElement.Alt"/><br/>-<see cref="HTMLMapElement"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area">area</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/map">map</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a">a</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement/coords"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string; composed of a comma separated series of numbers.</value>
+</HTMLAreaElementCoords>
+<HTMLAreaElementDownload>
+<summary>
+The <strong><c>download</c></strong> property of the <see cref="HTMLAreaElement"/> interface is a string indicating that the linked resource is intended to be downloaded rather than displayed in the browser. The value represent the proposed name of the file. If the name is not a valid filename of the underlying OS, browser will adjust it accordingly.
+</summary>
+<remarks>
+<para>It reflects the <c>download</c> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area">area</see> element.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement/download"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</HTMLAreaElementDownload>
+<HTMLAreaElementHash>
+<summary>
+The <strong><c>hash</c></strong> property of the <see cref="HTMLAreaElement"/> interface is a string containing a <c>&amp;quot;#&amp;quot;</c> followed by the fragment identifier of the <c>&amp;lt;area&amp;gt;</c> element&amp;apos;s <c>href</c>. If the URL does not have a fragment identifier, this property contains an empty string, <c>&amp;quot;&amp;quot;</c>.
+</summary>
+<remarks>
+<para>See <see cref="URL.Hash"/> for more information.</para>
+<para>-The <see cref="HTMLAreaElement"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement/hash"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</HTMLAreaElementHash>
+<HTMLAreaElementHost>
+<summary>
+The <strong><c>host</c></strong> property of the <see cref="HTMLAreaElement"/> interface is a string containing the host, which is the <see cref="HTMLAreaElement.Hostname"/>, and then, if the {{glossary("port")}} of the URL is nonempty, a <c>&amp;quot;:&amp;quot;</c>, followed by the <see cref="HTMLAreaElement.Port"/> of the URL. If the URL does not have a <c>hostname</c>, this property contains an empty string, <c>&amp;quot;&amp;quot;</c>.
+</summary>
+<remarks>
+<para>See <see cref="URL.Host"/> for more information.</para>
+<para>-The <see cref="HTMLAreaElement"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement/host"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</HTMLAreaElementHost>
+<HTMLAreaElementHostname>
+<summary>
+The <strong><c>hostname</c></strong> property of the <see cref="HTMLAreaElement"/> interface is a string containing either the {{glossary("domain name")}} or {{glossary("IP address")}} of the <c>&amp;lt;area&amp;gt;</c> element&amp;apos;s URL. If the URL does not have a hostname, this property contains an empty string, <c>&amp;quot;&amp;quot;</c>. IPv4 and IPv6 addresses are normalized, such as stripping leading zeros, and domain names are converted to <see href="https://en.wikipedia.org/wiki/Internationalized_domain_name">IDN</see>.
+</summary>
+<remarks>
+<para>See <see cref="URL.Hostname"/> for more information.</para>
+<para>-The <see cref="HTMLAreaElement"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement/hostname"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing the domain of the URL associated with the <c>area</c> element.<br/>It can be used as both a setter and getter.</value>
+</HTMLAreaElementHostname>
+<HTMLAreaElementHref>
+<summary>
+The <strong><c>HTMLAreaElement.href</c></strong> property is a<br/><see href="https://developer.mozilla.org/en-US/docs/Glossary/stringifier">stringifier</see> that returns a string containing the whole URL, and allows<br/>the href to be updated.
+</summary>
+<remarks>
+<para>-The <see cref="HTMLAreaElement"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement/href"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</HTMLAreaElementHref>
+<HTMLAreaElementOrigin>
+<summary>
+The <strong><c>origin</c></strong> read-only property of the <see cref="HTMLAreaElement"/> interface returns a string containing the Unicode serialization of the origin of the <c>&amp;lt;area&amp;gt;</c> element&amp;apos;s <c>href</c>.
+</summary>
+<remarks>
+<para>The exact structure varies depending on the type of URL:</para><para>For all other cases, the string <c>&amp;quot;null&amp;quot;</c> is returned.</para><para>See <see cref="URL.Origin"/> for more information.</para>
+<para>-The <see cref="HTMLAreaElement"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement/origin"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</HTMLAreaElementOrigin>
+<HTMLAreaElementPassword>
+<summary>
+The <strong><c>password</c></strong> property of the <see cref="HTMLAreaElement"/> interface is a string containing the password component of the <c>&amp;lt;area&amp;gt;</c> element&amp;apos;s <c>href</c>. If the URL does not have a password, this property contains an empty string, <c>&amp;quot;&amp;quot;</c>.
+</summary>
+<remarks>
+<para>This property can be set to change the password of the URL. If the URL has no <see cref="HTMLAreaElement.Host"/> or its scheme is <c>file:</c>, then setting this property has no effect.</para><para>The password is <see href="https://developer.mozilla.org/en-US/docs/Glossary/Percent-encoding">Percent-encoding</see> when setting but not percent-decoded when reading.</para><para>See <see cref="URL.Password"/> for more information.</para>
+<para>-The <see cref="HTMLAreaElement"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement/password"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</HTMLAreaElementPassword>
+<HTMLAreaElementPathname>
+<summary>
+The <strong><c>HTMLAreaElement.pathname</c></strong> property is a<br/>string containing an initial <c>&amp;apos;/&amp;apos;</c> followed by the path of<br/>the URL not including the query string or fragment (or the empty string if there is no<br/>path).
+</summary>
+<remarks>
+<para>The pathname is <see href="https://developer.mozilla.org/en-US/docs/Glossary/Percent-encoding">Percent-encoding</see> when setting but not percent-decoded when read.</para>
+<para>-The <see cref="HTMLAreaElement"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement/pathname"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</HTMLAreaElementPathname>
+<HTMLAreaElementPing>
+<summary>
+The <strong><c>ping</c></strong> property of the <see cref="HTMLAreaElement"/> interface is a space-separated list of URLs. When the link is followed, the browser will send {{HTTPMethod("POST")}} requests with the body PING to the URLs.
+</summary>
+<remarks>
+<para>It reflects the <c>ping</c> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area">area</see> element.</para><blockquote class="NOTE"><h5>NOTE</h5><para>This property is not effective in Firefox and its usage may be limited due to privacy and security concerns.</para></blockquote>
+<para>-<see cref="HTMLAnchorElement.Ping"/> property<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement/ping"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLAreaElementPing>
+<HTMLAreaElementPort>
+<summary>
+The <strong><c>port</c></strong> property of the <see cref="HTMLAreaElement"/> interface is a string containing the port number of the <c>&amp;lt;area&amp;gt;</c> element&amp;apos;s <c>href</c>. If the port is the default for the protocol (<c>80</c> for <c>ws:</c> and <c>http:</c>, <c>443</c> for <c>wss:</c> and <c>https:</c>, and <c>21</c> for <c>ftp:</c>), this property contains an empty string, <c>&amp;quot;&amp;quot;</c>.
+</summary>
+<remarks>
+<para>This property can be set to change the port of the URL. If the URL has no <see cref="HTMLAnchorElement.Host"/> or its scheme is <c>file:</c>, then setting this property has no effect. It also silently ignores invalid port numbers.</para><para>See <see cref="URL.Port"/> for more information.</para>
+<para>-The <see cref="HTMLAreaElement"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement/port"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</HTMLAreaElementPort>
+<HTMLAreaElementProtocol>
+<summary>
+The <strong><c>protocol</c></strong> property of the <see cref="HTMLAreaElement"/> interface is a string containing the protocol or scheme of the <c>&amp;lt;area&amp;gt;</c> element&amp;apos;s <c>href</c>, including the final <c>&amp;quot;:&amp;quot;</c>.
+</summary>
+<remarks>
+<para>This property can be set to change the protocol of the URL. A <c>&amp;quot;:&amp;quot;</c> is appended to the provided string if not provided. The provided scheme has to be compatible with the rest of the URL to be considered valid.</para><para>See <see cref="URL.Protocol"/> for more information.</para>
+<para>-The <see cref="HTMLAreaElement"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement/protocol"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</HTMLAreaElementProtocol>
+<HTMLAreaElementReferrerPolicy>
+<summary>
+The<br/><strong><c>HTMLAreaElement.referrerPolicy</c></strong><br/>property reflect the HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/area#referrerpolicy"><c>referrerpolicy</c></see> attribute of the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area">area</see> element defining which referrer is sent when fetching the<br/>resource.
+</summary>
+<remarks>
+<para>-<see cref="HTMLImageElement.ReferrerPolicy"/>,<br/><see cref="HTMLAnchorElement.ReferrerPolicy"/>, and<br/><see cref="HTMLIFrameElement.ReferrerPolicy"/>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement/referrerPolicy"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string; one of the following:</value>
+</HTMLAreaElementReferrerPolicy>
+<HTMLAreaElementRel>
+<summary>
+The <strong><c>HTMLAreaElement.rel</c></strong> property reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/rel"><c>rel</c></see> attribute. It is a string containing a space-separated list of link types indicating the relationship between the resource represented by the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area">area</see> element and the current document.
+</summary>
+<remarks>
+<para>-The equivalent property on <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a">a</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link">link</see>,<br/><see cref="HTMLAnchorElement.Rel"/> and <see cref="HTMLLinkElement.Rel"/>.<br/>-The very same list but as tokens: <see cref="HTMLAreaElement.RelList"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement/rel"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</HTMLAreaElementRel>
+<HTMLAreaElementRelList>
+<summary>
+The <strong><c>HTMLAreaElement.relList</c></strong> read-only property reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/rel"><c>rel</c></see> attribute. It is a live <see cref="DOMTokenList"/> containing the set of link types indicating the relationship between the resource represented by the {{HTMLElement("area")}} element and the current document.
+</summary>
+<remarks>
+<para>The property itself is read-only, meaning you can&amp;apos;t substitute the<br/><see cref="DOMTokenList"/> by another one, but the content of the returned list can be<br/>changed.</para>
+<para>-The equivalent property on <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a">a</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link">link</see>,<br/><see cref="HTMLAnchorElement.RelList"/> and <see cref="HTMLLinkElement.RelList"/>.<br/>-The very same list but as a space-separated tokens in a string:<br/><see cref="HTMLAreaElement.Rel"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement/relList"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A live <see cref="DOMTokenList"/> of strings.</value>
+</HTMLAreaElementRelList>
+<HTMLAreaElementSearch>
+<summary>
+The <strong><c>search</c></strong> property of the <see cref="HTMLAreaElement"/> interface is a search string, also called a <strong>query string</strong>, that is a string containing a <c>&amp;quot;?&amp;quot;</c> followed by the parameters of the <c>&amp;lt;area&amp;gt;</c> element&amp;apos;s <c>href</c>. If the URL does not have a search query, this property contains an empty string, <c>&amp;quot;&amp;quot;</c>.
+</summary>
+<remarks>
+<para>This property can be set to change the query string of the URL. When setting, a single <c>&amp;quot;?&amp;quot;</c> prefix is added to the provided value, if not already present. Setting it to <c>&amp;quot;&amp;quot;</c> removes the query string.</para><para>The query is <see href="https://developer.mozilla.org/en-US/docs/Glossary/Percent-encoding">Percent-encoding</see> when setting but not percent-decoded when reading.</para><para>Modern browsers provide<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/get#examples"><c>URLSearchParams</c></see><br/>and<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/URL/searchParams#examples"><c>URL.searchParams</c></see><br/>to make it easy to parse out the parameters from the query string.</para><para>See <see cref="URL.Search"/> for more information.</para>
+<para>-The <see cref="HTMLAreaElement"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement/search"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</HTMLAreaElementSearch>
+<HTMLAreaElementShape>
+<summary>
+The <strong><c>shape</c></strong> property of the <see cref="HTMLAreaElement"/> interface specifies the shape of an image map area. It reflects the {{htmlelement("area")}} element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/area#shape"><c>shape</c></see> attribute.
+</summary>
+<remarks>
+<para>-<see cref="HTMLAreaElement.Coords"/><br/>-<see cref="HTMLAreaElement.Alt"/><br/>-<see cref="HTMLMapElement"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area">area</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/map">map</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a">a</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement/shape"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string; <c>rect</c>, <c>circle</c>, or <c>poly</c>.</value>
+</HTMLAreaElementShape>
+<HTMLAreaElementTarget>
+<summary>
+The <strong><c>target</c></strong> property of the <see cref="HTMLAreaElement"/> interface is a string that indicates where to display the linked resource.
+</summary>
+<remarks>
+<para>It reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/area#target"><c>target</c></see> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area">area</see> element.</para>
+<para>-<see cref="HTMLBaseElement.Target"/> property<br/>-<see cref="HTMLFormElement.Target"/> property<br/>-<see cref="HTMLAnchorElement.Target"/> property<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement/target"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing the target. Its value can be:</value>
+</HTMLAreaElementTarget>
+<HTMLAreaElementToString>
+<summary>
+The <strong><c>HTMLAreaElement.toString()</c></strong> <see href="https://developer.mozilla.org/en-US/docs/Glossary/stringifier">stringifier</see><br/>method returns a string containing the whole URL. It is a read-only<br/>version of <see cref="HTMLAreaElement.Href"/>.
+</summary>
+<remarks>
+<para>-The <see cref="HTMLAreaElement"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement/toString"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A string containing the element&amp;apos;s complete URL.</returns>
+</HTMLAreaElementToString>
+<HTMLAreaElementUsername>
+<summary>
+The <strong><c>username</c></strong> property of the <see cref="HTMLAreaElement"/> interface is a string containing the username component of the <c>&amp;lt;area&amp;gt;</c> element&amp;apos;s <c>href</c>. If the URL does not have a username, this property contains an empty string, <c>&amp;quot;&amp;quot;</c>.
+</summary>
+<remarks>
+<para>This property can be set to change the username of the URL. If the URL has no <see cref="HTMLAreaElement.Host"/> or its scheme is <c>file:</c>, then setting this property has no effect.</para><para>The username is <see href="https://developer.mozilla.org/en-US/docs/Glossary/Percent-encoding">Percent-encoding</see> when setting but not percent-decoded when reading.</para><para>See <see cref="URL.Username"/> for more information.</para>
+<para>-The <see cref="HTMLAreaElement"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement/username"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</HTMLAreaElementUsername>
 </docs>

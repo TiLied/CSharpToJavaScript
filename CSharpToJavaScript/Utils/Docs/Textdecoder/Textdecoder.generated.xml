@@ -1,11 +1,61 @@
 <docs>
 <TextDecoder>
 <summary>
-The <strong><c>TextDecoder</c></strong> interface represents a decoder for a specific text encoding, such as <c>UTF-8</c>, <c>ISO-8859-2</c>, <c>KOI8-R</c>, <c>GBK</c>, etc. A decoder takes a stream of bytes as input and emits a stream of code points.
+The <strong><c>TextDecoder</c></strong> interface represents a decoder for a specific text encoding, such as <c>UTF-8</c>, <c>ISO-8859-2</c>, or <c>GBK</c>. A decoder takes an array of bytes as input and returns a JavaScript string.
 </summary>
 <remarks>
-<para>-The <see cref="TextEncoder"/> interface describing the inverse operation.<br/>-A <see href="https://github.com/inexorabletash/text-encoding">shim</see> allowing to use this interface in browsers that do not support it.<br/>-<see href="https://nodejs.org/api/util.html#util_class_util_textdecoder">Node.js supports global export from v11.0.0</see><br/></para>
+<para>-The <see cref="TextEncoder"/> interface describing the inverse operation.<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </TextDecoder>
+<TextDecoderDecode>
+<summary>
+The <strong><c>TextDecoder.decode()</c></strong> method returns a string containing text decoded from the buffer passed as a parameter.
+</summary>
+<remarks>
+<para>The decoding method is defined in the current <see cref="TextDecoder"/> object.<br/>This includes the expected encoding of the data, and how decoding errors are handled.</para>
+<para>-The <see cref="TextDecoder"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/decode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A string.</returns>
+</TextDecoderDecode>
+<TextDecoderEncoding>
+<summary>
+The <strong><c>TextDecoder.encoding</c></strong> read-only property returns a string containing the name of the character encoding that this decoder will use.
+</summary>
+<remarks>
+<para>The encoding is set by the <see href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/TextDecoder#label"><c>label</c></see> parameter passed to the constructor, and defaults to <c>utf-8</c>.</para>
+<para>-The <see cref="TextDecoder"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/encoding"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A lower-cased ASCII string, which can be one of the following values:</value>
+</TextDecoderEncoding>
+<TextDecoderFatal>
+<summary>
+The <strong><c>fatal</c></strong> read-only property of the <see cref="TextDecoder"/> interface is a {{jsxref('Boolean')}} indicating whether the error mode is fatal.
+</summary>
+<remarks>
+<para>If the property is <c>true</c>, then a decoder will throw a <see cref="TypeError"/> if it encounters malformed data while decoding.<br/>If <c>false</c>, the decoder will substitute the invalid data with the replacement character <c>U+FFFD</c> (�).<br/>The value of the property is set in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/TextDecoder#fatal"><c>fatal</c></see> argument to the decoder&amp;apos;s constructor.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/fatal"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean which will be <c>true</c> if the error mode is set to <c>fatal</c>.<br/>Otherwise, it will be <c>false</c>, indicating that the error mode is <c>replacement</c>.</value>
+</TextDecoderFatal>
+<TextDecoderIgnoreBOM>
+<summary>
+The <strong><c>ignoreBOM</c></strong> read-only property of the <see cref="TextDecoder"/> interface is a {{jsxref('Boolean')}} indicating whether the <see href="https://www.w3.org/International/questions/qa-byte-order-mark">byte order mark</see> will be included in the output or skipped over. The value of the property is set in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/TextDecoder#ignorebom"><c>ignoreBOM</c></see> argument to the decoder&amp;apos;s constructor.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/ignoreBOM"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value><c>true</c> if the <see href="https://www.w3.org/International/questions/qa-byte-order-mark">byte order mark</see> will be included in the decoded text; <c>false</c> if it will be skipped over when decoding and omitted.</value>
+</TextDecoderIgnoreBOM>
+<TextDecoderTextDecoder>
+<summary>
+The <strong><c>TextDecoder()</c></strong> constructor returns a new <see cref="TextDecoder"/> object.
+</summary>
+<remarks>
+<para>-The <see cref="TextDecoder"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/TextDecoder"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</TextDecoderTextDecoder>
 </docs>

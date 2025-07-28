@@ -9,4 +9,24 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRTransientInputHitTestResult"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </XRTransientInputHitTestResult>
+<XRTransientInputHitTestResultInputSource>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong>read-only</strong> <strong><c>inputSource</c></strong> property of the <see cref="XRTransientInputHitTestResult"/> interface represents an <see cref="XRInputSource"/> object that was used to compute the <see cref="XRTransientInputHitTestResult.Results"/> array.
+</summary>
+<remarks>
+<para>-<see cref="XRInputSource"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRTransientInputHitTestResult/inputSource"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="XRInputSource"/> object.</value>
+</XRTransientInputHitTestResultInputSource>
+<XRTransientInputHitTestResultResults>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong>read-only</strong> <strong><c>results</c></strong> property of the <see cref="XRTransientInputHitTestResult"/> interface represents an array of <see cref="XRHitTestResult"/> objects containing the hit test results for the input source, ordered by the distance along the ray used to perform the hit test, with the closest result at position 0.
+</summary>
+<remarks>
+<para>-<see cref="XRHitTestResult"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRTransientInputHitTestResult/results"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An array of <see cref="XRHitTestResult"/> objects.</value>
+</XRTransientInputHitTestResultResults>
 </docs>

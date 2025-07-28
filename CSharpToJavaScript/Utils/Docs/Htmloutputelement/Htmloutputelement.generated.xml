@@ -10,4 +10,135 @@ The <strong><c>HTMLOutputElement</c></strong> interface provides properties and 
 </remarks>
 <value>The element goes into value mode when the contents of the <c>value</c> property are set. The <c>value</c> property otherwise behaves like the <see cref="Node.TextContent"/> property. When the element is in value mode, the default value is accessible only through the <c>defaultValue</c> property.</value>
 </HTMLOutputElement>
+<HTMLOutputElementCheckValidity>
+<summary>
+The <strong><c>checkValidity()</c></strong> method of the <see cref="HTMLOutputElement"/> interface checks if the element is valid, but always returns true because {{HTMLElement("output")}} elements are never candidates for <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">constraint validation</see>.
+</summary>
+<remarks>
+<para>-<see cref="HTMLOutputElement.ReportValidity"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/output">output</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation">Learn: Client-side form validation</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">Guide: Constraint validation</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLOutputElement/checkValidity"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A boolean value, <c>true</c>.</returns>
+</HTMLOutputElementCheckValidity>
+<HTMLOutputElementDefaultValue>
+<summary>
+The <strong><c>defaultValue</c></strong> property of the <see cref="HTMLOutputElement"/> interface represents the default text content of this {{htmlelement("output")}} element. Getting and setting this value is equivalent to getting and setting <see cref="Node.TextContent"/> on the {{htmlelement("output")}}.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/output">output</see><br/>-<see cref="HTMLOutputElement.Value"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLOutputElement/defaultValue"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</HTMLOutputElementDefaultValue>
+<HTMLOutputElementForm>
+<summary>
+The <strong><c>form</c></strong> read-only property of the <see cref="HTMLOutputElement"/> interface returns an <see cref="HTMLFormElement"/> object that owns this {{htmlelement("output")}}, or <c>null</c> if this output is not owned by any form.
+</summary>
+<remarks>
+<para>-<see cref="HTMLOutputElement"/><br/>-<see cref="HTMLFormElement"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/output">output</see><br/>-HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/output#form"><c>form</c></see> attribute<br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms">HTML forms guide</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLOutputElement/form"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="HTMLFormElement"/> or <c>null</c>.</value>
+</HTMLOutputElementForm>
+<HTMLOutputElementHtmlFor>
+<summary>
+The <strong><c>htmlFor</c></strong> property of the <see cref="HTMLOutputElement"/> interface is a string containing a space-separated list of other elements' <c>id</c>s, indicating that those elements contributed input values to (or otherwise affected) the calculation. It reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/output#for"><c>for</c></see> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/output">output</see> element.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/output">output</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLOutputElement/htmlFor"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</HTMLOutputElementHtmlFor>
+<HTMLOutputElementLabels>
+<summary>
+The <strong><c>HTMLOutputElement.labels</c></strong> read-only property returns a<br/><see cref="NodeList"/> of the {{HTMLElement("label")}} elements associated with the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/output">output</see> element.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLOutputElement/labels"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="NodeList"/> containing the <c>&amp;lt;label&amp;gt;</c> elements associated<br/>with the <c>&amp;lt;output&amp;gt;</c> element.</value>
+</HTMLOutputElementLabels>
+<HTMLOutputElementName>
+<summary>
+The <strong><c>name</c></strong> property of the <see cref="HTMLOutputElement"/> interface indicates the name of the {{HTMLElement("output")}} element. It reflects the element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/output#name"><c>name</c></see> attribute.
+</summary>
+<remarks>
+<para>-<see cref="HTMLOutputElement.DefaultValue"/><br/>-<see cref="HTMLOutputElement.HtmlFor"/><br/>-<see cref="HTMLOutputElement.Labels"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLOutputElement/name"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing the element&amp;apos;s name.</value>
+</HTMLOutputElementName>
+<HTMLOutputElementReportValidity>
+<summary>
+The <strong><c>reportValidity()</c></strong> method of the <see cref="HTMLOutputElement"/> interface performs the same validity checking steps as the <see cref="HTMLOutputElement.CheckValidity"/> method. It always returns true because {{HTMLElement("output")}} elements are never candidates for <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">constraint validation</see>.
+</summary>
+<remarks>
+<para>-<see cref="HTMLOutputElement.CheckValidity"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/output">output</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation">Learn: Client-side form validation</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">Guide: Constraint validation</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLOutputElement/reportValidity"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A boolean value, <c>true</c>.</returns>
+</HTMLOutputElementReportValidity>
+<HTMLOutputElementSetCustomValidity>
+<summary>
+The <strong><c>setCustomValidity()</c></strong> method of the <see cref="HTMLOutputElement"/> interface sets the custom validity message for the {{htmlelement("output")}} element. Use the empty string to indicate that the element does <strong>not</strong> have a custom validity error.
+</summary>
+<remarks>
+<para>The <c>&amp;lt;output&amp;gt;</c> element is not a candidate for constraint validation. The <see cref="HTMLOutputElement.ReportValidity"/> method will not cause the custom error message to be displayed to the user, but does set the <see cref="ValidityState.CustomError"/> property of the element's <see cref="ValidityState"/> object to <c>true</c> and the <see cref="ValidityState.Valid"/> property to <c>false</c>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/output">output</see><br/>-<see cref="HTMLOutputElement"/><br/>-<see cref="HTMLOutputElement.Validity"/><br/>-<see cref="HTMLOutputElement.CheckValidity"/><br/>-<see cref="HTMLOutputElement.ReportValidity"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">Form validation</see>.<br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation">Learn: Client-side form validation</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">Guide: Constraint validation</see><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:valid">:valid</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:invalid">:invalid</see> pseudo-classes<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLOutputElement/setCustomValidity"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</HTMLOutputElementSetCustomValidity>
+<HTMLOutputElementType>
+<summary>
+The <strong><c>type</c></strong> read-only property of the <see cref="HTMLOutputElement"/> interface returns the string <c>&amp;quot;output&amp;quot;</c>.
+</summary>
+<remarks>
+<para>-<see cref="HTMLOutputElement"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/output">output</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLOutputElement/type"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The string <c>&amp;quot;output&amp;quot;</c>.</value>
+</HTMLOutputElementType>
+<HTMLOutputElementValidationMessage>
+<summary>
+The <strong><c>validationMessage</c></strong> read-only property of the <see cref="HTMLOutputElement"/> interface returns a string representing a localized message that describes the validation constraints that the {{htmlelement("output")}} control does not satisfy (if any). This is the empty string as <c>&amp;lt;output&amp;gt;</c> elements are not candidates for constraint validation (<see cref="HTMLOutputElement.WillValidate"/> is <c>false</c>).
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/output">output</see><br/>-<see cref="HTMLOutputElement"/><br/>-<see cref="HTMLOutputElement.WillValidate"/><br/>-<see cref="HTMLOutputElement.Validity"/><br/>-<see cref="HTMLOutputElement.CheckValidity"/><br/>-<see cref="HTMLOutputElement.ReportValidity"/><br/>-<see cref="HTMLOutputElement.SetCustomValidity"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation">Learn: Client-side form validation</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">Guide: Constraint validation</see><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:valid">:valid</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:invalid">:invalid</see> pseudo-classes<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLOutputElement/validationMessage"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The empty string, <c>&amp;quot;&amp;quot;</c>;</value>
+</HTMLOutputElementValidationMessage>
+<HTMLOutputElementValidity>
+<summary>
+The <strong><c>validity</c></strong> read-only property of the <see cref="HTMLOutputElement"/> interface returns a <see cref="ValidityState"/> object that represents the validity states this element is in. Although {{HTMLElement("output")}} elements are never candidates for <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">constraint validation</see>, the validity state may still be invalid if a custom validity message has been set.
+</summary>
+<remarks>
+<para>-<see cref="HTMLOutputElement.CheckValidity"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/output">output</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation">Learn: Client-side form validation</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">Guide: Constraint validation</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLOutputElement/validity"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="ValidityState"/> object.</value>
+</HTMLOutputElementValidity>
+<HTMLOutputElementValue>
+<summary>
+The <strong><c>value</c></strong> property of the <see cref="HTMLOutputElement"/> interface represents the value of the {{htmlelement("output")}} element as a string, or the empty string if no value is set. It returns or sets the contents of the element, similar to the <see cref="Node.TextContent"/> property.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>When the <c>value</c> property of an <c>&amp;lt;output&amp;gt;</c> element is set, the element goes into value mode and the default value is accessible only through the <see cref="HTMLOutputElement.DefaultValue"/> property.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/output">output</see><br/>-<see cref="HTMLOutputElement.DefaultValue"/><br/>-<see cref="HTMLOutputElement.Labels"/><br/>-<see cref="HTMLOutputElement.HtmlFor"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLOutputElement/value"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing the contents of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/output">output</see> element.</value>
+</HTMLOutputElementValue>
+<HTMLOutputElementWillValidate>
+<summary>
+The <strong><c>willValidate</c></strong> read-only property of the <see cref="HTMLOutputElement"/> interface returns <c>false</c>, because <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/output">output</see> elements are not candidates for <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">constraint validation</see>.
+</summary>
+<remarks>
+<para>-<see cref="HTMLOutputElement.CheckValidity"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/output">output</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation">Learn: Client-side form validation</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">Guide: Constraint validation</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLOutputElement/willValidate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The boolean value <c>false</c>.</value>
+</HTMLOutputElementWillValidate>
 </docs>

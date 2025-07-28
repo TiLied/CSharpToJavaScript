@@ -7,4 +7,58 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTServer"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </BluetoothRemoteGATTServer>
+<BluetoothRemoteGATTServerConnect>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The<br/><strong><c>BluetoothRemoteGATTServer.connect()</c></strong> method causes the<br/>script execution environment to connect to <c>this.device</c>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTServer/connect"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that resolves to a <see cref="BluetoothRemoteGATTServer"/>.</returns>
+</BluetoothRemoteGATTServerConnect>
+<BluetoothRemoteGATTServerConnected>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>BluetoothRemoteGATTServer.connected</c></strong> read-only<br/>property returns a boolean value that returns true while this script execution<br/>environment is connected to <c>this.device</c>. It can be false while the user<br/>agent is physically connected.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTServer/connected"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <c>boolean</c>.</value>
+</BluetoothRemoteGATTServerConnected>
+<BluetoothRemoteGATTServerDevice>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>BluetoothRemoteGATTServer.device</c></strong> read-only property<br/>returns a reference to the <see cref="BluetoothDevice"/> running the server.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTServer/device"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A reference to the <see cref="BluetoothDevice"/>.</value>
+</BluetoothRemoteGATTServerDevice>
+<BluetoothRemoteGATTServerDisconnect>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>BluetoothRemoteGATTServer.disconnect()</c></strong> method causes<br/>the script execution environment to disconnect from <c>this.device</c>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTServer/disconnect"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</BluetoothRemoteGATTServerDisconnect>
+<BluetoothRemoteGATTServerGetPrimaryService>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>BluetoothRemoteGATTServer.getPrimaryService()</c></strong> method<br/>returns a promise to the primary <see cref="BluetoothRemoteGATTService"/> offered by the<br/>Bluetooth device for a specified bluetooth service UUID.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTServer/getPrimaryService"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that resolves to a <see cref="BluetoothRemoteGATTService"/> object.</returns>
+</BluetoothRemoteGATTServerGetPrimaryService>
+<BluetoothRemoteGATTServerGetPrimaryServices>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong>BluetoothRemoteGATTServer.getPrimaryServices()</strong> method returns a<br/>promise to a list of primary <see cref="BluetoothRemoteGATTService"/> objects offered by the<br/>Bluetooth device for a specified <c>BluetoothServiceUUID</c>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTServer/getPrimaryServices"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that resolves to a list of <see cref="BluetoothRemoteGATTService"/><br/>objects.</returns>
+</BluetoothRemoteGATTServerGetPrimaryServices>
 </docs>

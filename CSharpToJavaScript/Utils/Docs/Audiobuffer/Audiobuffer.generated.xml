@@ -1,7 +1,7 @@
 <docs>
 <AudioBuffer>
 <summary>
-The <strong><c>AudioBuffer</c></strong> interface represents a short audio asset residing in memory, created from an audio file using the <see cref="BaseAudioContext/decodeAudioData"/> method, or from raw data using <see cref="BaseAudioContext/createBuffer"/>. Once put into an AudioBuffer, the audio can then be played by being passed into an <see cref="AudioBufferSourceNode"/>.
+The <strong><c>AudioBuffer</c></strong> interface represents a short audio asset residing in memory, created from an audio file using the <see cref="BaseAudioContextdecodeAudioData"/> method, or from raw data using <see cref="BaseAudioContextcreateBuffer"/>. Once put into an AudioBuffer, the audio can then be played by being passed into an <see cref="AudioBufferSourceNode"/>.
 </summary>
 <remarks>
 <para>Objects of these types are designed to hold small audio snippets, typically less than 45 s. For longer sounds, objects implementing the <see cref="MediaElementAudioSourceNode"/> are more suitable. The buffer contains the audio signal waveform encoded as a series of amplitudes in the following format: non-interleaved IEEE754 32-bit linear PCM with a nominal range between <c>-1</c> and <c>+1</c>, that is, a 32-bit floating point buffer, with each sample between -1.0 and 1.0. If the <c>AudioBuffer</c> has multiple channels, they are stored in separate buffers.</para>
@@ -9,4 +9,82 @@ The <strong><c>AudioBuffer</c></strong> interface represents a short audio asset
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioBuffer"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </AudioBuffer>
+<AudioBufferAudioBuffer>
+<summary>
+The <strong><c>AudioBuffer</c></strong> constructor of<br/>the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see> creates a new<br/><see cref="AudioBuffer"/> object.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioBuffer/AudioBuffer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</AudioBufferAudioBuffer>
+<AudioBufferCopyFromChannel>
+<summary>
+The<br/><strong><c>copyFromChannel()</c></strong> method of the<br/><see cref="AudioBuffer"/> interface copies the audio sample data from the specified<br/>channel of the <c>AudioBuffer</c> to a specified<br/><see cref="Float32Array"/>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioBuffer/copyFromChannel"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</AudioBufferCopyFromChannel>
+<AudioBufferCopyToChannel>
+<summary>
+The <c>copyToChannel()</c> method of the <see cref="AudioBuffer"/> interface copies<br/>the samples to the specified channel of the <c>AudioBuffer</c>, from the source array.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioBuffer/copyToChannel"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</AudioBufferCopyToChannel>
+<AudioBufferDuration>
+<summary>
+The <strong><c>duration</c></strong> property of the <see cref="AudioBuffer"/> interface returns a double representing the duration, in seconds, of the PCM data stored in the buffer.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioBuffer/duration"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A double.</value>
+</AudioBufferDuration>
+<AudioBufferGetChannelData>
+<summary>
+The <strong><c>getChannelData()</c></strong> method of the <see cref="AudioBuffer"/> Interface returns a {{jsxref("Float32Array")}} containing the PCM data associated with the channel, defined by the channel parameter (with 0 representing the first channel).
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioBuffer/getChannelData"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Float32Array"/>.</returns>
+</AudioBufferGetChannelData>
+<AudioBufferLength>
+<summary>
+The <strong><c>length</c></strong> property of the <see cref="AudioBuffer"/><br/>interface returns an integer representing the length, in sample-frames, of the PCM data<br/>stored in the buffer.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioBuffer/length"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer.</value>
+</AudioBufferLength>
+<AudioBufferNumberOfChannels>
+<summary>
+The <c>numberOfChannels</c> property of the <see cref="AudioBuffer"/><br/>interface returns an integer representing the number of discrete audio channels<br/>described by the PCM data stored in the buffer.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioBuffer/numberOfChannels"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer.</value>
+</AudioBufferNumberOfChannels>
+<AudioBufferSampleRate>
+<summary>
+The <strong><c>sampleRate</c></strong> property of the <see cref="AudioBuffer"/> interface returns a float representing the sample rate, in samples per second, of the PCM data stored in the buffer.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioBuffer/sampleRate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A floating-point value indicating the current sample rate of the buffers data, in<br/>samples per second.</value>
+</AudioBufferSampleRate>
 </docs>

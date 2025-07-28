@@ -9,4 +9,117 @@ The <strong><c>IntersectionObserver</c></strong> interface of the <see href="htt
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </IntersectionObserver>
+<IntersectionObserverDelay>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>delay</c></strong> read-only property of the <see cref="IntersectionObserver"/> interface indicates the minimum delay between notifications from this observer.
+</summary>
+<remarks>
+<para>The delay is used to limit the rate at which notifications should be provided when <see href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/trackVisibility">tracking visibility</see>, as this is a computationally intensive operation.<br/>The recommendation when tracking visibility is that you set the delay to the largest tolerable value.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API/Timing_element_visibility">Timing element visibility with the Intersection Observer API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/delay"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A positive number in milliseconds.The value is set using the <see href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver#delay"><c>option.delay</c></see> argument to the <c>IntersectionObserver()</c> constructor.<br/>The value is clamped to 100 or greater if <see cref="IntersectionObservertrackVisibility"/> is <c>true</c>, but otherwise defaults to 0.</value>
+</IntersectionObserverDelay>
+<IntersectionObserverDisconnect>
+<summary>
+The <strong><c>disconnect()</c></strong> method of the <see cref="IntersectionObserver"/> interface stops the observer watching all of its target elements for visibility changes.
+</summary>
+<remarks>
+<para>-<see cref="IntersectionObserver.Observe"/><br/>-<see cref="IntersectionObserver.Unobserve"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/disconnect"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</IntersectionObserverDisconnect>
+<IntersectionObserverIntersectionObserver>
+<summary>
+The <strong><c>IntersectionObserver()</c></strong> constructor creates and returns a new <see cref="IntersectionObserver"/> object.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="IntersectionObserver"/> which can be used to watch for the visibility of a target element within the specified <c>root</c> crossing through any of the specified visibility <c>threshold</c>s.Call its <see cref="IntersectionObserver.Observe"/> method to begin watching for the visibility changes on a given target.</returns>
+</IntersectionObserverIntersectionObserver>
+<IntersectionObserverObserve>
+<summary>
+The <strong><c>observe()</c></strong> method of the <see cref="IntersectionObserver"/> interface adds an element to the set of target elements being watched by the <c>IntersectionObserver</c>.<br/>One observer has one set of thresholds and one root, but can watch multiple target elements for visibility changes in keeping with those.
+</summary>
+<remarks>
+<para>To stop observing the element, call <see cref="IntersectionObserver.Unobserve"/>.</para><para>When the visibility of the specified element crosses over one of the observer's visibility thresholds (as listed in <see cref="IntersectionObserver.Thresholds"/>), the observer's callback is executed with an array of <see cref="IntersectionObserverEntry"/> objects representing the intersection changes<br/>which occurred.<br/>Note that this design allows multiple elements&amp;apos; intersection changes to be processed by a single call to the callback.</para><blockquote class="NOTE"><h5>NOTE</h5><para>The observer <see href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver#callback">callback</see> will always fire the first render cycle after <c>observe()</c> is called, even if the observed element has not yet moved with respect to the viewport.<br/>This means that, for example, an element that is outside the viewport when <c>observe()</c> is called on it will result in the callback being immediately called with at least one <see href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserverEntry">entry</see> with <see href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserverEntry/isIntersecting"><c>intersecting</c></see> set to <c>false</c>.<br/>An element inside the viewport will result in the callback being immediately called with at least one entry with <c>intersecting</c> set to <c>true</c>.</para></blockquote>
+<para>-<see cref="IntersectionObserver.Unobserve"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/observe"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</IntersectionObserverObserve>
+<IntersectionObserverRoot>
+<summary>
+The <strong><c>root</c></strong> read-only property of the <see cref="IntersectionObserver"/> interface identifies the <see cref="Element"/> or <see cref="Document"/> whose bounds are treated as the {{Glossary("bounding box")}} of the {{Glossary("viewport")}} for the element which is the observer's target.
+</summary>
+<remarks>
+<para>If the <c>root</c> is <c>null</c>, then the bounds of the actual document viewport are used.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API/Timing_element_visibility">Timing element visibility with the Intersection Observer API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/root"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Element"/> or <see cref="Document"/> object whose bounding box is used as the bounds of the viewport for the purposes of determining how much of the target element is visible.<br/>The intersection of this bounding rectangle, offset by any margins specified in the options passed to the <see cref="IntersectionObserver.IntersectionObserver"/> constructor, the target element's bounds, minus the bounds of every element or other object which overlaps the target element, is considered to be the visible area of the target element.If <c>root</c> is <c>null</c>, then the owning document is used as the root, and the bounds its viewport (that is, the visible area of the document) are used as the root bounds.</value>
+</IntersectionObserverRoot>
+<IntersectionObserverRootMargin>
+<summary>
+The <strong><c>rootMargin</c></strong> read-only property of the <see cref="IntersectionObserver"/> interface is a string with syntax similar to that of the CSS {{cssxref("margin")}} property.
+</summary>
+<remarks>
+<para>Each side of the rectangle represented by <c>rootMargin</c> is added to the corresponding side in the <see cref="IntersectionObserver.Root"/> element's {{Glossary("bounding box")}} before the intersection test is performed.<br/>This lets you, for example, adjust the bounds outward so that the target element is considered 100% visible even if a certain number of pixels worth of width or height is clipped away, or treat the target as partially hidden if an edge is too close to the edge of the root&amp;apos;s bounding box.</para><para>See <see href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#how_intersection_is_calculated">how intersections are calculated</see> for a more in-depth look at the root margin and how it works with the root&amp;apos;s bounding box.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/rootMargin"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string, formatted similarly to the CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin">margin</see> property's value, which contains offsets for one or more sides of the root's bounding box.<br/>These offsets are added to the corresponding values in the root&amp;apos;s bounding box before the intersection between the resulting rectangle and the target element&amp;apos;s bounds.The string returned by this property may not match the one specified when the <see cref="IntersectionObserver"/> was instantiated.<br/>The browser is permitted to alter the valuesIf <c>rootMargin</c> isn&amp;apos;t specified when the object was instantiated, it defaults to the string <c>&amp;quot;0px 0px 0px 0px&amp;quot;</c>, meaning that the intersection will be computed between the root element&amp;apos;s unmodified bounds rectangle and the target&amp;apos;s bounds.<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#how_intersection_is_calculated">How intersections are calculated</see> describes how the <c>rootMargin</c> is used in more detail.</value>
+</IntersectionObserverRootMargin>
+<IntersectionObserverScrollMargin>
+<summary>
+The <strong><c>scrollMargin</c></strong> read-only property of the <see cref="IntersectionObserver"/> interface adds a margin to all nested {{glossary("scroll container","scroll containers")}} within the root element, including the root element if it is a scroll container.
+</summary>
+<remarks>
+<para>This grows or shrinks the clipping rectangle of the scrollable containers before calculating intersections.<br/>This lets you, for example, adjust the bounds of the scroll container so that the target element is considered visible even if its pixels are not yet displayed in the container&amp;apos;s viewport, or to treat the target as partially hidden if an edge is too close to the edge of the container&amp;apos;s bounding box.</para><para>Note that if the root element is also a scrollable container, then the <c>scrollMargin</c> and <see cref="IntersectionObserverrootMargin"/> are combined to determine the effective bounding rectangle used for calculating intersections with the target.</para><para>For more information see <see href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#the_intersection_root_and_scroll_margin">The intersection root and root margin</see> in the API overview.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/scrollMargin"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string, formatted similarly to the CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin">margin</see> property's value.The specified margin defines offsets for one or more sides of a scroll container clipping rectangle.<br/>If <c>scrollMargin</c> isn&amp;apos;t specified when the object was instantiated, it defaults to the string <c>&amp;quot;0px 0px 0px 0px&amp;quot;</c>.</value>
+</IntersectionObserverScrollMargin>
+<IntersectionObserverTakeRecords>
+<summary>
+The <strong><c>takeRecords()</c></strong> method of the <see cref="IntersectionObserver"/> interface returns an array of <see cref="IntersectionObserverEntry"/> objects, one for each targeted element which has experienced an intersection change since the last time the intersections were checked, either explicitly through a call to this method or implicitly by an automatic call to the observer's callback.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>If you use the callback to monitor these changes, you don&amp;apos;t need to call this method.<br/>Calling this method clears the pending intersection list, so the callback will not be run.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API">Intersection Observer API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/takeRecords"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An array of <see cref="IntersectionObserverEntry"/> objects, one for each target element whose intersection with the root has changed since the last time the intersections were checked.</returns>
+</IntersectionObserverTakeRecords>
+<IntersectionObserverThresholds>
+<summary>
+The <strong><c>thresholds</c></strong> read-only property of the <see cref="IntersectionObserver"/> interface returns the list of intersection thresholds that was specified when the observer was instantiated with <see cref="IntersectionObserver.IntersectionObserver"/>.
+</summary>
+<remarks>
+<para>If only one threshold ratio was provided when instantiating the object, this will be an array containing that single value.</para><para>See the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#thresholds">Intersection Observer</see> page to learn how thresholds work.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/thresholds"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An array of intersection thresholds, originally specified using the <c>threshold</c> property when instantiating the observer.<br/>If only one observer was specified, without being in an array, this value is a one-entry array containing that threshold.<br/>Regardless of the order your original <c>threshold</c> array was in, this one is always sorted in numerically increasing order.If no <c>threshold</c> option was included when <c>IntersectionObserver()</c> was used to instantiate the observer, the value of <c>thresholds</c> is <c>[0]</c>.<blockquote class="NOTE"><h5>NOTE</h5>Although the <c>options</c> object you can specify in the <see cref="IntersectionObserverIntersectionObserver"/> constructor has a field named <c>threshold</c>, this property is called <c>thresholds</c>.<br/>If you accidentally use <c>thresholds</c> as the name of the field in your <c>options</c>, the <c>thresholds</c> array will wind up being <c>[0.0]</c>, which is likely not what you expect.</blockquote></value>
+</IntersectionObserverThresholds>
+<IntersectionObserverTrackVisibility>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>trackVisibility</c></strong> read-only property of the <see cref="IntersectionObserver"/> interface indicates whether the observer is tracking target visibility in addition to element intersections.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API/Timing_element_visibility">Timing element visibility with the Intersection Observer API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/trackVisibility"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value><c>true</c> if visibility is being tracked for intersection calculations, and <c>false</c> otherwise.The value is set using the <see href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver#trackvisibility"><c>option.trackVisibility</c></see> argument to the <c>IntersectionObserver()</c> constructor.</value>
+</IntersectionObserverTrackVisibility>
+<IntersectionObserverUnobserve>
+<summary>
+The <strong><c>unobserve()</c></strong> method of the <see cref="IntersectionObserver"/> interface instructs the <c>IntersectionObserver</c> to stop observing the specified target element.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API">Intersection Observer API</see><br/>-<see cref="IntersectionObserver.Observe"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/unobserve"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</IntersectionObserverUnobserve>
 </docs>

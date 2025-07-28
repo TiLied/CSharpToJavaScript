@@ -1,7 +1,7 @@
 <docs>
 <GPUTexture>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>GPUTexture</c></strong> interface of the {{domxref(&amp;quot;WebGPU API&amp;quot;, &amp;quot;WebGPU API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} represents a container used to store 1D, 2D, or 3D arrays of data, such as images, to use in GPU rendering operations.
+The <strong><c>GPUTexture</c></strong> interface of the {{domxref(&amp;quot;WebGPU API&amp;quot;, &amp;quot;WebGPU API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} represents a container used to store 1D, 2D, or 3D arrays of data, such as images, to use in GPU rendering operations.
 </summary>
 <remarks>
 <para>A <c>GPUTexture</c> object instance is created using the <see cref="GPUDevice.CreateTexture"/> method.</para><para></para>
@@ -9,4 +9,123 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUTexture"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </GPUTexture>
+<GPUTextureCreateView>
+<summary>
+The <strong><c>createView()</c></strong> method of the<br/><see cref="GPUTexture"/> interface creates a <see cref="GPUTextureView"/> representing a specific view of the <c>GPUTexture</c>.
+</summary>
+<remarks>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUTexture/createView"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="GPUTextureView"/> object instance.</returns>
+</GPUTextureCreateView>
+<GPUTextureDepthOrArrayLayers>
+<summary>
+The <strong><c>depthOrArrayLayers</c></strong> read-only property of the<br/><see cref="GPUTexture"/> interface represents the depth or layer count of the <c>GPUTexture</c>.
+</summary>
+<remarks>
+<para>This is set based on the <c>size</c> property in the descriptor object passed into the originating <see cref="GPUDevice.CreateTexture"/> call.</para>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUTexture/depthOrArrayLayers"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number. This represents:In cases where the <c>GPUTexture</c> does not have a depth or layers, the value is 1.</value>
+</GPUTextureDepthOrArrayLayers>
+<GPUTextureDestroy>
+<summary>
+The <strong><c>destroy()</c></strong> method of the<br/><see cref="GPUTexture"/> interface destroys the <c>GPUTexture</c>.
+</summary>
+<remarks>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUTexture/destroy"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</GPUTextureDestroy>
+<GPUTextureDimension>
+<summary>
+The <strong><c>dimension</c></strong> read-only property of the<br/><see cref="GPUTexture"/> interface represents the dimension of the set of texels for each <c>GPUTexture</c> subresource.
+</summary>
+<remarks>
+<para>This is set via the <c>dimension</c> property in the descriptor object passed into the originating <see cref="GPUDevice.CreateTexture"/> call, which defaults to <c>&amp;quot;2d&amp;quot;</c> if omitted.</para>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUTexture/dimension"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An enumerated value. Possible values are:</value>
+</GPUTextureDimension>
+<GPUTextureFormat>
+<summary>
+The <strong><c>format</c></strong> read-only property of the<br/><see cref="GPUTexture"/> interface represents the format of the <c>GPUTexture</c>.
+</summary>
+<remarks>
+<para>This is set via the <c>format</c> property in the descriptor object passed into the originating <see cref="GPUDevice.CreateTexture"/> call.</para>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUTexture/format"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An enumerated value. See the <see href="https://gpuweb.github.io/gpuweb/#enumdef-gputextureformat">Texture formats</see> section of the specification for all the possible values.</value>
+</GPUTextureFormat>
+<GPUTextureHeight>
+<summary>
+The <strong><c>height</c></strong> read-only property of the<br/><see cref="GPUTexture"/> interface represents the height of the <c>GPUTexture</c>.
+</summary>
+<remarks>
+<para>This is set based on the value of the <c>size</c> property in the descriptor object passed into the originating <see cref="GPUDevice.CreateTexture"/> call.</para>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUTexture/height"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</GPUTextureHeight>
+<GPUTextureLabel>
+<summary>
+The <strong><c>label</c></strong> property of the<br/><see cref="GPUTexture"/> interface provides a label that can be used to identify the object, for example in <see cref="GPUError"/> messages or console warnings.
+</summary>
+<remarks>
+<para>This can be set by providing a <c>label</c> property in the descriptor object passed into the originating <see cref="GPUDevice.CreateTexture"/> call, or you can get and set it directly on the <c>GPUTexture</c> object.</para>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUTexture/label"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string. If this has not been previously set as described above, it will be an empty string.</value>
+</GPUTextureLabel>
+<GPUTextureMipLevelCount>
+<summary>
+The <strong><c>mipLevelCount</c></strong> read-only property of the<br/><see cref="GPUTexture"/> interface represents the number of mip levels of the <c>GPUTexture</c>.
+</summary>
+<remarks>
+<para>This is set via the <c>mipLevelCount</c> property in the descriptor object passed into the originating <see cref="GPUDevice.CreateTexture"/> call. If omitted, this defaults to 1.</para>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUTexture/mipLevelCount"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</GPUTextureMipLevelCount>
+<GPUTextureSampleCount>
+<summary>
+The <strong><c>sampleCount</c></strong> read-only property of the<br/><see cref="GPUTexture"/> interface represents the sample count of the <c>GPUTexture</c>.
+</summary>
+<remarks>
+<para>This is set via the <c>sampleCount</c> property in the descriptor object passed into the originating <see cref="GPUDevice.CreateTexture"/> call. If omitted, this defaults to 1.</para>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUTexture/sampleCount"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number. Possible values are:</value>
+</GPUTextureSampleCount>
+<GPUTextureUsage>
+<summary>
+The <strong><c>usage</c></strong> read-only property of the<br/><see cref="GPUTexture"/> interface is the {{glossary("bitwise flags")}} representing the allowed usages of the <c>GPUTexture</c>.
+</summary>
+<remarks>
+<para>This is set via the <c>usage</c> property in the descriptor object passed into the originating <see cref="GPUDevice.CreateTexture"/> call.</para>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUTexture/usage"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The bitwise flags representing the original usages set when the <c>GPUTexture</c> was first created. The returned number is the sum of decimal values representing the different flags, as seen in the table below.<table><tr><td>Usage flag</td><td>Usage description</td><td>Hex equiv.</td><td>Decimal equiv.</td></tr><tr><td><c>GPUTextureUsage.COPY_SRC</c></td><td>The texture can be used as the source of a copy operation, for example the source argument of a <see cref="GPUCommandEncoder.CopyTextureToBuffer"/> call.</td><td>0x01</td><td>1</td></tr><tr><td><c>GPUTextureUsage.COPY_DST</c></td><td>The texture can be used as the destination of a copy/write operation, for example the destination argument of a <see cref="GPUCommandEncoder.CopyBufferToTexture"/> call.</td><td>0x02</td><td>2</td></tr><tr><td><c>GPUTextureUsage.RENDER_ATTACHMENT</c></td><td>The texture can be used as a color or depth/stencil attachment in a render pass, for example as the <c>view</c> property of the descriptor object in a <see cref="GPUCommandEncoder.BeginRenderPass"/> call.</td><td>0x10</td><td>16</td></tr><tr><td><c>GPUTextureUsage.STORAGE_BINDING</c></td><td>The texture can be bound for use as a storage texture in a shader, for example as a resource in a bind group entry when creating a <see cref="GPUBindGroup"/> (via <see cref="GPUDevice.CreateBindGroup"/>), which adheres to a <see cref="GPUBindGroupLayout"/> entry with a specified storage texture binding layout.</td><td>0x08</td><td>8</td></tr><tr><td><c>GPUTextureUsage.TEXTURE_BINDING</c></td><td>The texture can be bound for use as a sampled texture in a shader, for example as a resource in a bind group entry when creating a <see cref="GPUBindGroup"/> (via <see cref="GPUDevice.CreateBindGroup"/>), which adheres to a <see cref="GPUBindGroupLayout"/> entry with a specified texture binding layout.</td><td>0x04</td><td>4</td></tr></table></value>
+</GPUTextureUsage>
+<GPUTextureWidth>
+<summary>
+The <strong><c>width</c></strong> read-only property of the<br/><see cref="GPUTexture"/> interface represents the width of the <c>GPUTexture</c>.
+</summary>
+<remarks>
+<para>This is set based on the value of the <c>size</c> property in the descriptor object passed into the originating <see cref="GPUDevice.CreateTexture"/> call.</para>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUTexture/width"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</GPUTextureWidth>
 </docs>

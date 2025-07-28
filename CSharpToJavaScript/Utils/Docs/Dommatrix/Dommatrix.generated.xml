@@ -5,8 +5,146 @@ The <strong><c>DOMMatrix</c></strong> interface represents 4×4 matrices, suitab
 </summary>
 <remarks>
 <para><strong><c>WebKitCSSMatrix</c></strong> and <strong><c>SVGMatrix</c></strong> are aliases to <strong><c>DOMMatrix</c></strong>.</para><para></para>
-<para>-Its non-modifiable counterpart, <see cref="DOMMatrixReadOnly"/><br/></para>
+<para>-<see cref="DOMMatrixReadOnly.Is2D"/><br/>-<see cref="DOMMatrixReadOnly.IsIdentity"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </DOMMatrix>
+<DOMMatrixDOMMatrix>
+<summary>
+The <strong><c>DOMMatrix</c></strong> constructor creates a new<br/><see cref="DOMMatrix"/> object which represents 4x4 matrices, suitable for 2D and 3D<br/>operations.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix/DOMMatrix"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</DOMMatrixDOMMatrix>
+<DOMMatrixInvertSelf>
+<summary>
+The <strong><c>invertSelf()</c></strong> method of the <see cref="DOMMatrix"/> interface inverts the original matrix. If the matrix cannot be inverted, the new matrix's components are all set to <c>NaN</c> and its <see cref="DOMMatrixReadonly.Is2D"/> property is set to <c>false</c>.
+</summary>
+<remarks>
+<para>To invert a matrix without mutating it, see <see cref="DOMMatrixReadOnly.Inverse"/></para>
+<para>-<see cref="DOMMatrixReadOnly.Inverse"/><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix">transform-function/matrix</see> function<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix3d">transform-function/matrix3d</see> function<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix/invertSelf"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="DOMMatrix"/>.</returns>
+</DOMMatrixInvertSelf>
+<DOMMatrixMultiplySelf>
+<summary>
+The <strong><c>multiplySelf()</c></strong> method of the <see cref="DOMMatrix"/> interface multiplies a matrix by the <c>otherMatrix</c> parameter, computing the dot product of the original matrix and the specified matrix: <c>A⋅B</c>. If no matrix is specified as the multiplier, the matrix is multiplied by a matrix in which every element is <c>0</c> <strong>except</strong> the bottom-right corner and the element immediately above and to its left: <c>m33</c> and <c>m34</c>. These have the default value of <c>1</c>.
+</summary>
+<remarks>
+<para>To multiply a matrix without mutating it, see <see cref="DOMMatrixReadOnly.Multiply"/>.</para>
+<para>-<see cref="DOMMatrixReadOnly.Multiply"/><br/>-<see cref="DOMMatrix.PreMultiplySelf"/><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix">transform-function/matrix</see> function<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix3d">transform-function/matrix3d</see> function<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix/multiplySelf"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Returns itself; the <see href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix"><c>DOMMatrix</c></see> updated to the results of the applied multiplications.</returns>
+</DOMMatrixMultiplySelf>
+<DOMMatrixPreMultiplySelf>
+<summary>
+The <strong><c>preMultiplySelf()</c></strong> method of the <see cref="DOMMatrix"/> interface modifies the matrix by pre-multiplying it with the specified <c>DOMMatrix</c>. This is equivalent to the dot product <c>B⋅A</c>, where matrix <c>A</c> is the source matrix and <c>B</c> is the matrix given as an input to the method. If no matrix is specified as the multiplier, the matrix is multiplied by a matrix in which every element is <c>0</c> <strong>except</strong> the bottom-right corner and the element immediately above and to its left: <c>m33</c> and <c>m34</c>. These have the default value of <c>1</c>.
+</summary>
+<remarks>
+<para>-<see cref="DOMMatrix.MultiplySelf"/><br/>-<see cref="DOMMatrixReadOnly.Multiply"/><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix">transform-function/matrix</see> function<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix3d">transform-function/matrix3d</see> function<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix/preMultiplySelf"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Returns itself; a <see href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix"><c>DOMMatrix</c></see> updated to results of the applied multiplications.</returns>
+</DOMMatrixPreMultiplySelf>
+<DOMMatrixRotateAxisAngleSelf>
+<summary>
+The <c>rotateAxisAngleSelf()</c> method of the <see cref="DOMMatrix"/> interface is a transformation method that rotates the source matrix by the given vector and angle, returning the altered matrix.
+</summary>
+<remarks>
+<para>To rotate a matrix without mutating it, see <see cref="DOMMatrixReadOnly.RotateAxisAngle"/>, which creates a new rotated matrix while leaving the original unchanged.</para>
+<para>-<see cref="DOMMatrixReadOnly.RotateAxisAngle"/><br/>-<see cref="DOMMatrix.RotateSelf"/><br/>-<see cref="DOMMatrix.RotateFromVectorSelf"/><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform">transform</see> property and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate3d">transform-function/rotate3d</see> function<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/rotate">rotate</see> property<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transforms">CSS transforms</see> module<br/>-SVG <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute/transform"><c>transform</c></see> attribute<br/>-<see cref="CanvasRenderingContext2D"/> interface and <see cref="CanvasRenderingContext2D.Rotate"/> method<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix/rotateAxisAngleSelf"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix"><c>DOMMatrix</c></see>.</returns>
+</DOMMatrixRotateAxisAngleSelf>
+<DOMMatrixRotateFromVectorSelf>
+<summary>
+The <c>rotateFromVectorSelf()</c> method of the <see cref="DOMMatrix"/> interface is a mutable transformation method that modifies a matrix by rotating the matrix by the angle between the specified vector and <c>(1, 0)</c>. The rotation angle is determined by the angle between the vector <c>(1,0)T</c> and <c>(x,y)T</c> in the clockwise direction, or <c>(+/-)arctan(y/x)</c>. If <c>x</c> and <c>y</c> are both <c>0</c>, the angle is specified as <c>0</c>, and the matrix is not altered.
+</summary>
+<remarks>
+<para>To rotate a matrix from a vector without mutating it, see <see cref="DOMMatrixReadOnly.RotateFromVector"/>, which creates a new rotated matrix while leaving the original unchanged.</para>
+<para>-<see cref="DOMMatrixReadOnly.RotateFromVector"/><br/>-<see cref="DOMMatrix.RotateSelf"/><br/>-<see cref="DOMMatrix.RotateAxisAngleSelf"/><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform">transform</see> property and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate3d">transform-function/rotate3d</see> function<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/rotate">rotate</see> property<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transforms">CSS transforms</see> module<br/>-SVG <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute/transform"><c>transform</c></see> attribute<br/>-<see cref="CanvasRenderingContext2D"/> interface and <see cref="CanvasRenderingContext2D.Rotate"/> method<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix/rotateFromVectorSelf"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Returns itself; the updated <see href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix"><c>DOMMatrix</c></see>.</returns>
+</DOMMatrixRotateFromVectorSelf>
+<DOMMatrixRotateSelf>
+<summary>
+The <c>rotateSelf()</c> method of the <see cref="DOMMatrix"/> interface is a mutable transformation method that modifies a matrix. It rotates the source matrix around each of its axes by the specified number of degrees and returns the rotated matrix.
+</summary>
+<remarks>
+<para>To rotate a matrix without mutating it, see <see cref="DOMMatrixReadOnly.Rotate"/></para>
+<para>-<see cref="DOMMatrixReadOnly.Rotate"/><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform">transform</see> property<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/rotate">rotate</see> property<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function">transform-function</see> functions-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate">transform-function/rotate</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate3d">transform-function/rotate3d</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotateX">transform-function/rotateX</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotateY">transform-function/rotateY</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotateZ">transform-function/rotateZ</see><br/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transforms">CSS transforms</see> module<br/>-SVG <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute/transform"><c>transform</c></see> attribute<br/>-<see cref="CanvasRenderingContext2D"/> interface methods-<see cref="CanvasRenderingContext2D.Rotate"/><br/>-<see cref="CanvasRenderingContext2D.Transform"/><br/>-<see cref="CanvasRenderingContext2D.SetTransform"/><br/>-<see cref="CanvasRenderingContext2D.ResetTransform"/><br/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix/rotateSelf"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Returns itself; the <see href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix"><c>DOMMatrix</c></see> rotated by the given<br/>vectors.</returns>
+</DOMMatrixRotateSelf>
+<DOMMatrixScale3dSelf>
+<summary>
+The <strong><c>scale3dSelf()</c></strong> method of the <see cref="DOMMatrix"/> interface is a mutable transformation method that modifies a matrix by applying a specified scaling factor to all three axes, centered on the given origin, with a default origin of <c>(0, 0, 0)</c>, returning the 3D-scaled matrix.
+</summary>
+<remarks>
+<para>To 3D-scale a matrix without mutating it, see <see cref="DOMMatrixReadOnly.Scale3d"/>, which creates a new scaled matrix while leaving the original unchanged.</para>
+<para>-<see cref="DOMMatrixReadOnly.Scale3d"/><br/>-<see cref="DOMMatrix.ScaleSelf"/><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform">transform</see> property and the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scale">transform-function/scale</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix3d">transform-function/matrix3d</see> functions<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transforms">CSS transforms</see> module<br/>-SVG <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute/transform"><c>transform</c></see> attribute<br/>-<see cref="CanvasRenderingContext2D"/> interface <see cref="CanvasRenderingContext2D.Transform"/> method<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix/scale3dSelf"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Returns itself; a <see cref="DOMMatrix"/>.</returns>
+</DOMMatrixScale3dSelf>
+<DOMMatrixScaleSelf>
+<summary>
+The <strong><c>scaleSelf()</c></strong> method of the <see cref="DOMMatrix"/> interface is a mutable transformation method that modifies a matrix by applying a specified scaling factor, centered on the given origin, with a default origin of <c>(0, 0)</c>, returning the scaled matrix.
+</summary>
+<remarks>
+<para>To scale a matrix without mutating it, see <see cref="DOMMatrixReadOnly.Scale"/>, which creates a new scaled matrix while leaving the original unchanged.</para>
+<para>-<see cref="DOMMatrixReadOnly.Scale"/><br/>-<see cref="DOMMatrix.Scale3dSelf"/><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform">transform</see> property and the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scale">transform-function/scale</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix">transform-function/matrix</see> functions<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transforms">CSS transforms</see> module<br/>-SVG <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute/transform"><c>transform</c></see> attribute<br/>-<see cref="CanvasRenderingContext2D"/> interface <see cref="CanvasRenderingContext2D.Transform"/> method<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix/scaleSelf"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Returns itself; a <see cref="DOMMatrix"/>.If a scale is applied about the z-axis, the matrix will be a 4✕4 3D matrix.</returns>
+</DOMMatrixScaleSelf>
+<DOMMatrixSetMatrixValue>
+<summary>
+The <strong><c>setMatrixValue()</c></strong> method of the <see cref="DOMMatrix"/> interface replaces the contents of the matrix with the matrix described by the specified transform or transforms, returning itself.
+</summary>
+<remarks>
+<para>-<see cref="DOMMatrix.TranslateSelf"/><br/>-<see cref="DOMMatrixReadOnly.Is2D"/><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix">transform-function/matrix</see> function<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix3d">transform-function/matrix3d</see> function<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix/setMatrixValue"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Returns itself; the <see href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix"><c>DOMMatrix</c></see> with updated values.</returns>
+</DOMMatrixSetMatrixValue>
+<DOMMatrixSkewXSelf>
+<summary>
+The <c>skewXSelf()</c> method of the <see cref="DOMMatrix"/> interface is a mutable transformation method that modifies a matrix. It skews the source matrix by applying the specified skew transformation along the X-axis and returns the skewed matrix.
+</summary>
+<remarks>
+<para>To skew a matrix along the X-axis without mutating it, see <see cref="DOMMatrixReadOnly.SkewX"/></para>
+<para>-<see cref="DOMMatrixReadOnly.SkewX"/><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform">transform</see> property<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function">transform-function</see> functions-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/skew">transform-function/skew</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/skewX">transform-function/skewX</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/skewY">transform-function/skewY</see><br/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transforms">CSS transforms</see> module<br/>-SVG <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute/transform"><c>transform</c></see> attribute<br/>-<see cref="CanvasRenderingContext2D"/> interface methods-<see cref="CanvasRenderingContext2D.Transform"/><br/>-<see cref="CanvasRenderingContext2D.SetTransform"/><br/>-<see cref="CanvasRenderingContext2D.ResetTransform"/><br/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix/skewXSelf"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Returns itself; the <see href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix"><c>DOMMatrix</c></see> skewed along the X-axis by the given<br/>angle.</returns>
+</DOMMatrixSkewXSelf>
+<DOMMatrixSkewYSelf>
+<summary>
+The <c>skewYSelf()</c> method of the <see cref="DOMMatrix"/> interface is a mutable transformation method that modifies a matrix. It skews the source matrix by applying the specified skew transformation along the Y-axis and returns the skewed matrix.
+</summary>
+<remarks>
+<para>To skew a matrix along the Y-axis without mutating it, see <see cref="DOMMatrixReadOnly.SkewY"/></para>
+<para>-<see cref="DOMMatrixReadOnly.SkewY"/><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform">transform</see> property<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function">transform-function</see> functions-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/skew">transform-function/skew</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/skewX">transform-function/skewX</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/skewY">transform-function/skewY</see><br/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transforms">CSS transforms</see> module<br/>-SVG <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute/transform"><c>transform</c></see> attribute<br/>-<see cref="CanvasRenderingContext2D"/> interface methods-<see cref="CanvasRenderingContext2D.Transform"/><br/>-<see cref="CanvasRenderingContext2D.SetTransform"/><br/>-<see cref="CanvasRenderingContext2D.ResetTransform"/><br/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix/skewYSelf"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Returns itself; the <see href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix"><c>DOMMatrix</c></see> skewed along the Y-axis by the given<br/>angle.</returns>
+</DOMMatrixSkewYSelf>
+<DOMMatrixTranslateSelf>
+<summary>
+The <c>translateSelf()</c> method of the <see cref="DOMMatrix"/> interface is a mutable transformation method that modifies a matrix. It applies the specified vectors and returns the updated matrix. The default vector is <c>[0, 0, 0]</c>.
+</summary>
+<remarks>
+<para>To translate a matrix without mutating it, see <see cref="DOMMatrixReadOnly.Translate"/></para>
+<para>-<see cref="DOMMatrixReadOnly.Translate"/><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform">transform</see> property<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/translate">translate</see> property<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function">transform-function</see> functions-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translate">transform-function/translate</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translate3d">transform-function/translate3d</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translateX">transform-function/translateX</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translateY">transform-function/translateY</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translateZ">transform-function/translateZ</see><br/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transforms">CSS transforms</see> module<br/>-SVG <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute/transform"><c>transform</c></see> attribute<br/>-<see cref="CanvasRenderingContext2D"/> interface methods-<see cref="CanvasRenderingContext2D.Translate"/><br/>-<see cref="CanvasRenderingContext2D.Transform"/><br/>-<see cref="CanvasRenderingContext2D.SetTransform"/><br/>-<see cref="CanvasRenderingContext2D.ResetTransform"/><br/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix/translateSelf"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Returns itself; the <see href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix"><c>DOMMatrix</c></see> translated by the given<br/>vector.</returns>
+</DOMMatrixTranslateSelf>
 </docs>

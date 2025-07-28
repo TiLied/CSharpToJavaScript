@@ -4,8 +4,285 @@
 The <strong><c>RTCIceCandidatePairStats</c></strong> dictionary of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see> is used to report statistics that provide insight into the quality and performance of an <see cref="RTCPeerConnection"/> while connected and configured as described by the specified pair of {{Glossary("ICE")}} candidates.
 </summary>
 <remarks>
-<para>The statistics can be obtained by iterating the <see cref="RTCStatsReport"/> returned by <see cref="RTCPeerConnection.GetStats"/> until you find an entry with the <see href="https://developer.mozilla.org#type"><c>type</c></see> of <c>&amp;quot;candidate-pair&amp;quot;</c>.</para>
+<para>The statistics can be obtained by iterating the <see cref="RTCStatsReport"/> returned by <see cref="RTCPeerConnection.GetStats"/> until you find an entry with the <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/type"><c>type</c></see> of <c>&amp;quot;candidate-pair&amp;quot;</c>.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </RTCIceCandidatePairStats>
+<RTCIceCandidatePairStatsAvailableIncomingBitrate>
+<summary>
+The <strong><c>availableIncomingBitrate</c></strong> property of the <see cref="RTCIceCandidatePairStats"/> dictionary indicates the available inbound capacity of the network connection represented by the candidate pair.<br/>The higher the value, the more bandwidth you can assume is available for incoming data.
+</summary>
+<remarks>
+<para>You can get the outgoing available bitrate from <see cref="RTCIceCandidatePairStats.AvailableOutgoingBitrate"/>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/availableIncomingBitrate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number which approximates the amount of available bandwidth for incoming data on the network connection described by the <c>RTCIceCandidatePair</c>.<br/>The value is reported in bits per second and is computed over a 1-second interval.The value returned is calculated by adding up the available bit rate for every <see href="https://developer.mozilla.org/en-US/docs/Glossary/RTP">RTP</see> stream using the connection described by this candidate pair.<br/>The returned value doesn&amp;apos;t take into account overhead introduced by underlying protocols, including IP, UDP, or TCP.<blockquote class="NOTE"><h5>NOTE</h5>The returned value is computed using a method similar—but not identical—to the Transport Independent Application Specific Maximum (TIAS) described in {{RFC(3890, &amp;quot;&amp;quot;, &amp;quot;6.2&amp;quot;)}}.</blockquote></value>
+</RTCIceCandidatePairStatsAvailableIncomingBitrate>
+<RTCIceCandidatePairStatsAvailableOutgoingBitrate>
+<summary>
+The <strong><c>availableOutgoingBitrate</c></strong> property of the <see cref="RTCIceCandidatePairStats"/> dictionary indicates the available outbound capacity of the network connection represented by the candidate pair.<br/>The higher the value, the more bandwidth you can assume is available for outgoing data.
+</summary>
+<remarks>
+<para>You can get the incoming available bitrate from <see cref="RTCIceCandidatePairStats.AvailableIncomingBitrate"/>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/availableOutgoingBitrate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number which approximates the amount of available bandwidth for outgoing data on the network connection described by the<br/><c>RTCIceCandidatePair</c>.<br/>The value is reported in bits per second and is computed over a 1-second interval.The returned value is <c>undefined</c> in each of the following situations:The value returned is calculated by adding up the available bit rate for every <see href="https://developer.mozilla.org/en-US/docs/Glossary/RTP">RTP</see> stream using the connection described by this candidate pair.<br/>The returned value doesn&amp;apos;t take into account overhead introduced by underlying protocols, including IP, UDP, or TCP.<blockquote class="NOTE"><h5>NOTE</h5>The returned value is computed using a method similar—but not identical—to the Transport Independent Application Specific Maximum (TIAS) described in {{RFC(3890, &amp;quot;&amp;quot;, &amp;quot;6.2&amp;quot;)}}.</blockquote></value>
+</RTCIceCandidatePairStatsAvailableOutgoingBitrate>
+<RTCIceCandidatePairStatsBytesDiscardedOnSend>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>bytesDiscardedOnSend</c></strong> property of the <see cref="RTCIceCandidatePairStats"/> dictionary indicates the total number of bytes discarded due to socket errors.
+</summary>
+<remarks>
+<para>The errors might be caused, for example, by attempting to pass packets to the socket when it is full.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/bytesDiscardedOnSend"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer value indicating the total number of bytes discarded due to socket errors.<br/>This is calculated as defined in {{rfc(&amp;quot;3550&amp;quot;,&amp;quot;&amp;quot;, &amp;quot;6.4.1&amp;quot;)}}.</value>
+</RTCIceCandidatePairStatsBytesDiscardedOnSend>
+<RTCIceCandidatePairStatsBytesReceived>
+<summary>
+The <strong><c>bytesReceived</c></strong> property of the <see cref="RTCIceCandidatePairStats"/> dictionary indicates the total number of received payload bytes that have been received so far on the connection described by the candidate pair.
+</summary>
+<remarks>
+<para>-<see cref="RTCIceCandidatePairStats.BytesSent"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/bytesReceived"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer indicating the total number of bytes received so far on the connection described by this candidate pair.Only data bytes are counted; overhead such as padding, headers, and the like are not included in this count.</value>
+</RTCIceCandidatePairStatsBytesReceived>
+<RTCIceCandidatePairStatsBytesSent>
+<summary>
+The <strong><c>bytesSent</c></strong> property of the <see cref="RTCIceCandidatePairStats"/> dictionary indicates the total number of payload bytes that have been sent so far on the connection described by the candidate pair.
+</summary>
+<remarks>
+<para>-<see cref="RTCIceCandidatePairStats.BytesReceived"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/bytesSent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer value indicating the total number of bytes sent so far on the connection described by this candidate pair.Only data bytes are counted; overhead such as padding, headers, and the like are not included in this count.</value>
+</RTCIceCandidatePairStatsBytesSent>
+<RTCIceCandidatePairStatsConsentRequestsSent>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>consentRequestsSent</c></strong> property of the <see cref="RTCIceCandidatePairStats"/> dictionary indicates the total number of consent requests sent on this candidate pair.
+</summary>
+<remarks>
+<para>If either or both of the peers in the pair access the internet via <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Protocols#nat">Network Address Translation</see> (NAT), the other peer will need to regularly send a <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Protocols#stun">Session Traversal Utilities for NAT (STUN)</see> request to the NAT firewall to ask for consent to allow traffic to flow.<br/>This property counts the number of requests.<br/>{{rfc("7675")}} has more information about NAT and consent.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/consentRequestsSent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer value indicating the total number consent requests sent to the peers in the candidate pair.</value>
+</RTCIceCandidatePairStatsConsentRequestsSent>
+<RTCIceCandidatePairStatsCurrentRoundTripTime>
+<summary>
+The <strong><c>currentRoundTripTime</c></strong> property of the <see cref="RTCIceCandidatePairStats"/> dictionary indicates the number of seconds it takes for data to be sent by this peer to the remote peer and back over the connection described by this pair of {{Glossary("ICE")}} candidates.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/currentRoundTripTime"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number indicating the round-trip time, in seconds, for the connection described by the pair of candidates for which this <c>RTCIceCandidatePairStats</c> object offers statistics.This value is computed by observing the time that elapsed between the most recent <see href="https://developer.mozilla.org/en-US/docs/Glossary/STUN">STUN</see> request being sent to the remote peer and the response to that request arriving.<br/>This information may come from ongoing STUN connectivity checks as well as from consent requests made when the connection was initially being opened.</value>
+</RTCIceCandidatePairStatsCurrentRoundTripTime>
+<RTCIceCandidatePairStatsId>
+<summary>
+The <strong><c>id</c></strong> property of the <see cref="RTCIceCandidatePairStats"/> dictionary is a string that uniquely identifies the object for which this object provides statistics.
+</summary>
+<remarks>
+<para>Using the <c>id</c>, you can correlate this statistics object with others, in order to monitor statistics over time for a given WebRTC object, such as an <see cref="RTCPeerConnection"/>, or an <see cref="RTCDataChannel"/>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/id"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string that uniquely identifies the object for which this <c>RTCIceCandidatePairStats</c> object provides statistics.The format of the ID string is not defined by the specification, so you cannot reliably make any assumptions about the contents of the string, or assume that the format of the string will remain unchanged for a given object type.</value>
+</RTCIceCandidatePairStatsId>
+<RTCIceCandidatePairStatsLastPacketReceivedTimestamp>
+<summary>
+The <strong><c>lastPacketReceivedTimestamp</c></strong> property of the <see cref="RTCIceCandidatePairStats"/> dictionary indicates the time at which the connection described by the candidate pair last received a packet.
+</summary>
+<remarks>
+<para><see href="https://developer.mozilla.org/en-US/docs/Glossary/STUN">STUN</see> packets are not included.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/lastPacketReceivedTimestamp"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DOMHighResTimeStamp"/> object indicating the timestamp at which the connection described by pair of candidates last received a packet, STUN packets excluded.</value>
+</RTCIceCandidatePairStatsLastPacketReceivedTimestamp>
+<RTCIceCandidatePairStatsLastPacketSentTimestamp>
+<summary>
+The <strong><c>lastPacketSentTimestamp</c></strong> property of the <see cref="RTCIceCandidatePairStats"/> dictionary indicates the time at which the connection described by the candidate pair last sent a packet, not including {{Glossary("STUN")}} packets.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/lastPacketSentTimestamp"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DOMHighResTimeStamp"/> object indicating the timestamp at which the connection described by pair of candidates last sent a packet, STUN packets excluded.</value>
+</RTCIceCandidatePairStatsLastPacketSentTimestamp>
+<RTCIceCandidatePairStatsLocalCandidateId>
+<summary>
+The <strong><c>localCandidateId</c></strong> property of the <see cref="RTCIceCandidatePairStats"/> dictionary is a string that uniquely identifies the local {{Glossary("ICE")}} candidate which was analyzed to generate the <see cref="RTCIceCandidateStats"/> used to compute the statistics for this pair of candidates.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/localCandidateId"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string giving a unique identifier for the local <see cref="RTCIceCandidate"/> for the connection described by this <c>RTCIceCandidatePairStats</c> object.This candidate is the source of one of the two <see cref="RTCIceCandidateStats"/> objects that were used to compute the contents of this <see cref="RTCIceCandidatePairStats"/> object.</value>
+</RTCIceCandidatePairStatsLocalCandidateId>
+<RTCIceCandidatePairStatsNominated>
+<summary>
+The <strong><c>nominated</c></strong> property of the <see cref="RTCIceCandidatePairStats"/> dictionary specifies whether or not the candidate pair described by the underlying <c>RTCIceCandidatePair</c> has been nominated to be used as the configuration for the WebRTC connection.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/nominated"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A Boolean value which is set to <c>true</c> by the ICE layer if the controlling user agent has indicated that the candidate pair should be used to configure the WebRTC connection between the two peers.<blockquote class="NOTE"><h5>NOTE</h5>If more than one candidate pair are nominated at the same time, the one whose priority is higher will be selected for use.</blockquote>Once a candidate pair has been nominated and the two peers have each reconfigured themselves to use the specified configuration, the ICE negotiation process can potentially end (or it can continue, to allow the connection to adapt to changing conditions).</value>
+</RTCIceCandidatePairStatsNominated>
+<RTCIceCandidatePairStatsPacketsDiscardedOnSend>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>packetsDiscardedOnSend</c></strong> property of the <see cref="RTCIceCandidatePairStats"/> dictionary indicates the total number of packets discarded due to socket errors
+</summary>
+<remarks>
+<para>The errors might be caused, for example, by attempting to pass packets to the socket when it is full.</para>
+<para>-<see cref="RTCIceCandidatePairStats.BytesDiscardedOnSend"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/packetsDiscardedOnSend"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer value indicating the total number of packets discarded due to socket errors.</value>
+</RTCIceCandidatePairStatsPacketsDiscardedOnSend>
+<RTCIceCandidatePairStatsPacketsReceived>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>packetsReceived</c></strong> property of the <see cref="RTCIceCandidatePairStats"/> dictionary indicates the total number of packets received on the candidate pair.
+</summary>
+<remarks>
+<para>-<see cref="RTCIceCandidatePairStats.BytesReceived"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/packetsReceived"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer value indicating the total number of packets received on the pair.</value>
+</RTCIceCandidatePairStatsPacketsReceived>
+<RTCIceCandidatePairStatsPacketsSent>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>packetsSent</c></strong> property of the <see cref="RTCIceCandidatePairStats"/> dictionary indicates the total number of packets sent on the candidate pair.
+</summary>
+<remarks>
+<para>-<see cref="RTCIceCandidatePairStats.BytesSent"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/packetsSent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer value indicating the total number of packets sent on the pair.</value>
+</RTCIceCandidatePairStatsPacketsSent>
+<RTCIceCandidatePairStatsPriority>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>priority</c></strong> property of the <see cref="RTCIceCandidatePairStats"/> dictionary reports the priority of the candidate pair as an integer value.
+</summary>
+<remarks>
+<para>The higher the value, the more likely the WebRTC layer is to select the candidate pair when the time comes to establish (or re-establish) a connection between the two peers.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/priority"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer value indicating the priority of this pair of candidates as compared to other pairs on the same peer connection.<br/>The higher this value, the better the WebRTC layer thinks this pair of candidates is compared to the others, and the more likely a pair is to be selected for use.<blockquote class="NOTE"><h5>NOTE</h5>This property was removed from the specification as its value cannot be guaranteed to be accurately represented in a JavaScript number.<br/>You can calculate its value using the algorithm described in {{RFC(5245, &amp;quot;&amp;quot;, &amp;quot;5.7.2&amp;quot;)}} if you need this information and can accept the risk that the result may not be entirely accurate.</blockquote></value>
+</RTCIceCandidatePairStatsPriority>
+<RTCIceCandidatePairStatsReadable>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>readable</c></strong> property of the <see cref="RTCIceCandidatePairStats"/> dictionary reports whether or not the connection described by the candidate pair has received at least one valid incoming ICE request.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/readable"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A Boolean value which is <c>true</c> if the connection described by this candidate pair has received at least one valid ICE request, and is therefore ready to be read from.<blockquote class="NOTE"><h5>NOTE</h5>Instead of using this value you should determine whether or not the connection is readable by checking to see if <see cref="RTCIceCandidatePairStats.RequestsReceived"/> is greater than 0:</blockquote></value>
+</RTCIceCandidatePairStatsReadable>
+<RTCIceCandidatePairStatsRemoteCandidateId>
+<summary>
+The <strong><c>remoteCandidateId</c></strong> property of the <see cref="RTCIceCandidatePairStats"/> dictionary uniquely identifies the remote {{Glossary("ICE")}} candidate which was analyzed to generate the <see cref="RTCIceCandidateStats"/> used to compute the statistics for this pair of candidates.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/remoteCandidateId"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string uniquely identifying the remote <see href="https://developer.mozilla.org/en-US/docs/Glossary/ICE">ICE</see> candidate—that is, the candidate describing a configuration for the remote peer—which is represented by the remote end of these statistics.</value>
+</RTCIceCandidatePairStatsRemoteCandidateId>
+<RTCIceCandidatePairStatsRequestsReceived>
+<summary>
+The <strong><c>requestsReceived</c></strong> property of the <see cref="RTCIceCandidatePairStats"/> dictionary indicates the total number of {{Glossary("STUN")}} connectivity check requests that have been received so far on the connection described by this pairing of candidates.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/requestsReceived"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer value which specifies the number of STUN connectivity and/or consent requests that have been received to date on the connection described by this pair of <see href="https://developer.mozilla.org/en-US/docs/Glossary/ICE">ICE</see> candidates.Because there&amp;apos;s no way to tell the difference between requests made to check connectivity and requests made to check consent, the returned figure includes both.<blockquote class="NOTE"><h5>NOTE</h5>The reported number of requests includes retransmissions.<br/>If a request had to be repeated due to network issues, it will be counted multiple times here.<br/>This differs from <see cref="RTCIceCandidatePairStats.RequestsSent"/>, which <strong>does not</strong> include retransmissions.</blockquote></value>
+</RTCIceCandidatePairStatsRequestsReceived>
+<RTCIceCandidatePairStatsRequestsSent>
+<summary>
+The <strong><c>requestsSent</c></strong> property of the <see cref="RTCIceCandidatePairStats"/> dictionary indicates the total number of {{Glossary("STUN")}} connectivity check requests that have been sent so far on the connection described by this pair of candidates.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/requestsSent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer value which specifies the number of STUN connectivity requests that have been sent to date on the connection described by this pair of <see href="https://developer.mozilla.org/en-US/docs/Glossary/ICE">ICE</see> candidates.<blockquote class="NOTE"><h5>NOTE</h5>The reported number of requests <strong>does not</strong> include retransmissions.<br/>If a request had to be repeated due to network issues, it will be counted multiple times here.<br/>This differs from <see cref="RTCIceCandidatePairStats.RequestsReceived"/>, which <strong>does</strong> include retransmissions.</blockquote></value>
+</RTCIceCandidatePairStatsRequestsSent>
+<RTCIceCandidatePairStatsResponsesReceived>
+<summary>
+The <strong><c>responsesReceived</c></strong> property in the <see cref="RTCIceCandidatePairStats"/> dictionary indicates the total number of {{Glossary("STUN")}} connectivity check responses that have been received on the connection described by this pair of candidates.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/responsesReceived"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer value which specifies the number of STUN connectivity request responses that have been received on the connection described by this pair of candidates so far.</value>
+</RTCIceCandidatePairStatsResponsesReceived>
+<RTCIceCandidatePairStatsResponsesSent>
+<summary>
+The <strong><c>responsesSent</c></strong> property of the <see cref="RTCIceCandidatePairStats"/> dictionary indicates the total number of {{Glossary("STUN")}} connectivity check responses that have been sent so far on the connection described by this pair of candidates.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/responsesSent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer value indicating the number of times a response has been sent to a <see href="https://developer.mozilla.org/en-US/docs/Glossary/STUN">STUN</see> connectivity check request.<blockquote class="NOTE"><h5>NOTE</h5>Since it isn&amp;apos;t possible to tell the difference between connectivity check requests and consent requests, this value includes both.</blockquote></value>
+</RTCIceCandidatePairStatsResponsesSent>
+<RTCIceCandidatePairStatsSelected>
+<summary>
+The <strong><c>selected</c></strong> property of the <see cref="RTCIceCandidatePairStats"/> dictionary indicates whether or not the candidate pair described by the object is the one currently being used to communicate with the remote peer.
+</summary>
+<remarks>
+<para>This property is non-standard and is only supported by Firefox.<br/>The standard way to determine the selected candidate pair is to look at the <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTransportStats/selectedCandidatePairId"><c>selectedCandidatePairId</c></see> property of the stats object of type <c>transport</c>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/selected"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value><c>true</c> if the candidate pair described by this object is the one currently in use, and <c>false</c> otherwise.</value>
+</RTCIceCandidatePairStatsSelected>
+<RTCIceCandidatePairStatsState>
+<summary>
+The <strong><c>state</c></strong> property of the <see cref="RTCIceCandidatePairStats"/> dictionary indicates the state of the <see href="https://developer.mozilla.org#ice_check_lists">checklist</see> of which the candidate pair is a member.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/state"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string whose value is one of the following:</value>
+</RTCIceCandidatePairStatsState>
+<RTCIceCandidatePairStatsTimestamp>
+<summary>
+The <strong><c>timestamp</c></strong> property of the <see cref="RTCIceCandidatePairStats"/> dictionary is a <see cref="DOMHighResTimeStamp"/> object specifying the time at which the data in the object was sampled.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/timestamp"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DOMHighResTimeStamp"/> value indicating the time at which the activity described by the statistics in this object was recorded, in milliseconds elapsed since the beginning of January 1, 1970, UTC.The value should be accurate to within a few milliseconds but may not be entirely precise, either because of hardware or operating system limitations or because of <see href="https://developer.mozilla.org/en-US/docs/Glossary/Fingerprinting">fingerprinting</see> protection in the form of reduced clock precision or accuracy.</value>
+</RTCIceCandidatePairStatsTimestamp>
+<RTCIceCandidatePairStatsTotalRoundTripTime>
+<summary>
+The <strong><c>totalRoundTripTime</c></strong> property of the <see cref="RTCIceCandidatePairStats"/> dictionary indicates the total time that has elapsed between sending {{Glossary("STUN")}} requests and receiving the responses, for all such requests that have been made so far on the pair of candidates described by this <c>RTCIceCandidatePairStats</c> object.
+</summary>
+<remarks>
+<para>This value includes both connectivity check and consent check requests.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/totalRoundTripTime"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>This real number indicates the total number of seconds which have elapsed between sending out STUN connectivity and consent check requests and receiving their responses, for all such requests made so far on the connection described by this candidate pair.You can calculate the average round-trip time (RTT) by dividing this value by the value of the <see cref="RTCIceCandidatePairStats.ResponsesReceived"/> property:</value>
+</RTCIceCandidatePairStatsTotalRoundTripTime>
+<RTCIceCandidatePairStatsTransportId>
+<summary>
+The <strong><c>transportId</c></strong> property of the <see cref="RTCIceCandidatePairStats"/> dictionary uniquely identifies the <see cref="RTCIceTransport"/> object that was inspected to obtain the transport-related statistics contained in the stats object.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/transportId"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string which uniquely identifies the <c>RTCIceTransport</c> object from which the transport-related data was obtained for the statistics contained in this <see cref="RTCIceCandidatePairStats"/> object.The transport-related statistics come from the <see cref="RTCTransportStats"/> dictionary.</value>
+</RTCIceCandidatePairStatsTransportId>
+<RTCIceCandidatePairStatsType>
+<summary>
+The <strong><c>type</c></strong> property of the <see cref="RTCIceCandidatePairStats"/> dictionary is a string with the value <c>&amp;quot;candidate-pair&amp;quot;</c>.
+</summary>
+<remarks>
+<para>Different statistics are obtained by iterating the <see cref="RTCStatsReport"/> object returned by a call to <see cref="RTCPeerConnection.GetStats"/>.<br/>The type indicates the set of statistics available through the object in a particular iteration step.<br/>A value of <c>&amp;quot;candidate-pair&amp;quot;</c> indicates that the statistics available in the current step are those defined in <see cref="RTCIceCandidatePairStats"/>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/type"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string with the value <c>&amp;quot;candidate-pair&amp;quot;</c>.</value>
+</RTCIceCandidatePairStatsType>
+<RTCIceCandidatePairStatsWritable>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>writable</c></strong> property of the <see cref="RTCIceCandidatePairStats"/> dictionary indicates whether or not the connection described by the candidate pair is writable.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/writable"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value><c>true</c> if the connection described by this candidate pair has received acknowledgement of receipt (ACK) for at least one ICE request <strong>and</strong> that <see href="https://developer.mozilla.org/en-US/docs/Glossary/STUN">STUN</see> consent hasn't expired.<blockquote class="NOTE"><h5>NOTE</h5>This property is deprecated.<br/>You can instead determine whether or not an incoming ICE request is available to read by checking to see if <see cref="RTCIceCandidatePairStats.ResponsesReceived"/> is greater than 0, and that the time specified by <see cref="RTCIceCandidatePairStats.ConsentExpiredTimestamp"/> has not passed:</blockquote></value>
+</RTCIceCandidatePairStatsWritable>
 </docs>

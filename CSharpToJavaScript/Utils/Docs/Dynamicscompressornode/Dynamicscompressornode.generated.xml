@@ -9,4 +9,78 @@ The <c>DynamicsCompressorNode</c> interface provides a compression effect, which
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DynamicsCompressorNode"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </DynamicsCompressorNode>
+<DynamicsCompressorNodeAttack>
+<summary>
+The <c>attack</c> property of the <see cref="DynamicsCompressorNode"/> interface is a <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam#k-rate">k-rate</see> <see cref="AudioParam"/> representing the amount of time, in seconds, required to reduce the gain by 10 dB. It defines how quickly the signal is adapted when its volume is increased.
+</summary>
+<remarks>
+<para>The <c>attack</c> property&amp;apos;s default value is <c>0.003</c> and it can be set between <c>0</c> and <c>1</c>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DynamicsCompressorNode/attack"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="AudioParam"/>.<blockquote class="NOTE"><h5>NOTE</h5>Though the <see cref="AudioParam"/> returned is read-only, the value it represents is not.</blockquote></value>
+</DynamicsCompressorNodeAttack>
+<DynamicsCompressorNodeDynamicsCompressorNode>
+<summary>
+The <strong><c>DynamicsCompressorNode()</c></strong><br/>constructor creates a new <see cref="DynamicsCompressorNode"/> object which provides<br/>a compression effect, which lowers the volume of the loudest parts of the<br/>signal, in order to help prevent clipping and distortion. That can occur when<br/>multiple sounds are played and multiplexed together at once.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DynamicsCompressorNode/DynamicsCompressorNode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</DynamicsCompressorNodeDynamicsCompressorNode>
+<DynamicsCompressorNodeKnee>
+<summary>
+The <c>knee</c> property of the <see cref="DynamicsCompressorNode"/> interface is a <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam#k-rate">k-rate</see> <see cref="AudioParam"/> containing a decibel value representing the range above the threshold where the curve smoothly transitions to the compressed portion.
+</summary>
+<remarks>
+<para>The <c>knee</c> property&amp;apos;s default value is <c>30</c> and it can be set between <c>0</c> and <c>40</c>.</para><para><see href="https://developer.mozilla.orgwebaudioknee.png">Describes the effect of a knee, showing two curves one for a hard knee, the other for a soft knee.</see></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DynamicsCompressorNode/knee"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="AudioParam"/>.<blockquote class="NOTE"><h5>NOTE</h5>Though the <see cref="AudioParam"/> returned is read-only, the value it represents is not.</blockquote></value>
+</DynamicsCompressorNodeKnee>
+<DynamicsCompressorNodeRatio>
+<summary>
+The <c>ratio</c> property of the <see cref="DynamicsCompressorNode"/> interface Is a <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam#k-rate">k-rate</see> <see cref="AudioParam"/> representing the amount of change, in dB, needed in the input for a 1 dB change in the output.
+</summary>
+<remarks>
+<para>The <c>ratio</c> property&amp;apos;s default value is <c>12</c> and it can be set between <c>1</c> and <c>20</c>.</para><para><see href="https://developer.mozilla.orgwebaudioratio.png">Describes the effect of different ratio on the output signal</see></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DynamicsCompressorNode/ratio"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="AudioParam"/>.<blockquote class="NOTE"><h5>NOTE</h5>Though the <see cref="AudioParam"/> returned is read-only, the value it represents is not.</blockquote></value>
+</DynamicsCompressorNodeRatio>
+<DynamicsCompressorNodeReduction>
+<summary>
+The <strong><c>reduction</c></strong> read-only property of the <see cref="DynamicsCompressorNode"/> interface is a float representing the amount of gain reduction currently applied by the compressor to the signal.
+</summary>
+<remarks>
+<para>Intended for metering purposes, it returns a value in dB, or <c>0</c> (no gain reduction) if no signal is fed into the <c>DynamicsCompressorNode</c>. The range of this value is between <c>-20</c> and <c>0</c> (in dB).</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DynamicsCompressorNode/reduction"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A float.</value>
+</DynamicsCompressorNodeReduction>
+<DynamicsCompressorNodeRelease>
+<summary>
+The <c>release</c> property of the <see cref="DynamicsCompressorNode"/> interface Is a <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam#k-rate">k-rate</see> <see cref="AudioParam"/> representing the amount of time, in seconds, required to increase the gain by 10 dB. It defines how quick the signal is adapted when its volume is reduced.
+</summary>
+<remarks>
+<para>The <c>release</c> property&amp;apos;s default value is <c>0.25</c> and it can be set between <c>0</c> and <c>1</c>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DynamicsCompressorNode/release"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="AudioParam"/>.<blockquote class="NOTE"><h5>NOTE</h5>Though the <see cref="AudioParam"/> returned is read-only, the value it represents is not.</blockquote></value>
+</DynamicsCompressorNodeRelease>
+<DynamicsCompressorNodeThreshold>
+<summary>
+The <c>threshold</c> property of the <see cref="DynamicsCompressorNode"/> interface is a <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam#k-rate">k-rate</see> <see cref="AudioParam"/> representing the decibel value above which the compression will start taking effect.
+</summary>
+<remarks>
+<para>The <c>threshold</c> property&amp;apos;s default value is <c>-24</c> and it can be set between <c>-100</c> and <c>0</c>.</para><para><see href="https://developer.mozilla.orgwebaudiothreshold.png">The threshold attribute has no effect on signals lowers than its value, but induce volume reduction on signal stronger than its value.</see></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DynamicsCompressorNode/threshold"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="AudioParam"/>.<blockquote class="NOTE"><h5>NOTE</h5>Though the <see cref="AudioParam"/> returned is read-only, the value it represents is not.</blockquote></value>
+</DynamicsCompressorNodeThreshold>
 </docs>

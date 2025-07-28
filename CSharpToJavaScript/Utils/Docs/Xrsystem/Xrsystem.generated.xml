@@ -8,4 +8,33 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRSystem"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </XRSystem>
+<XRSystemDevicechange>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> A <strong><c>devicechange</c></strong> event is fired on an <see cref="XRSystem"/> object whenever the availability of immersive XR devices has changed; for example, a VR headset or AR goggles have been connected or disconnected. It's a generic <see cref="Event"/> with no added properties.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Not to be confused with the <see cref="MediaDevices"/> <see cref="MediaDevices.Devicechange"/> event.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRSystem/devicechange"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</XRSystemDevicechange>
+<XRSystemIsSessionSupported>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <see cref="XRSystem"/> method<br/><strong><c>isSessionSupported()</c></strong> returns a promise which resolves to<br/><c>true</c> if the specified WebXR session mode is supported by the user&amp;apos;s WebXR<br/>device. Otherwise, the promise resolves with <c>false</c>.
+</summary>
+<remarks>
+<para>If no devices are available or the browser doesn&amp;apos;t have permission<br/>to use the XR device, the promise is rejected with an appropriate<br/><see cref="DOMException"/>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRSystem/isSessionSupported"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves to <c>true</c> if the specified session<br/>mode is supported; otherwise the promise resolves to <c>false</c>.</returns>
+</XRSystemIsSessionSupported>
+<XRSystemRequestSession>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><see cref="XRSystem"/></strong> interface&amp;apos;s<br/><strong><c>requestSession()</c></strong> method returns a <see cref="Promise"/><br/>which resolves to an <see cref="XRSession"/> object through which you can manage the<br/>requested type of WebXR session.
+</summary>
+<remarks>
+<para>While only one immersive VR session can be active at a time, multiple<br/>inline sessions can be in progress at once.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRSystem/requestSession"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that resolves with an <see cref="XRSession"/> object if the<br/>device and user agent support the requested mode and features.</returns>
+</XRSystemRequestSession>
 </docs>

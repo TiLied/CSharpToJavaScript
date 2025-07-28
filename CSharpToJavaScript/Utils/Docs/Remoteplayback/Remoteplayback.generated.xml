@@ -8,4 +8,65 @@ The <strong><c>RemotePlayback</c></strong> interface of the <see cref="'Remote P
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RemotePlayback"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </RemotePlayback>
+<RemotePlaybackCancelWatchAvailability>
+<summary>
+The <strong><c>cancelWatchAvailability()</c></strong> method of the <see cref="RemotePlayback"/> interface cancels the request to watch for one or all available devices.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RemotePlayback/cancelWatchAvailability"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves with <c>undefined</c>.</returns>
+</RemotePlaybackCancelWatchAvailability>
+<RemotePlaybackConnecting>
+<summary>
+The <strong><c>connecting</c></strong> event of the <see cref="RemotePlayback"/> interface fires when the user agent initiates remote playback.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RemotePlayback/connecting"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RemotePlaybackConnecting>
+<RemotePlaybackConnect>
+<summary>
+The <strong><c>connect</c></strong> event of the <see cref="RemotePlayback"/> interface fires when the user agent connects to the remote device.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RemotePlayback/connect"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RemotePlaybackConnect>
+<RemotePlaybackDisconnect>
+<summary>
+The <strong><c>disconnect</c></strong> event of the <see cref="RemotePlayback"/> interface fires when the user agent disconnects from the remote device.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RemotePlayback/disconnect"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RemotePlaybackDisconnect>
+<RemotePlaybackPrompt>
+<summary>
+The <strong><c>prompt()</c></strong> method of the <see cref="RemotePlayback"/> interface prompts the user to select an available remote playback device and give permission for the current media to be played using that device.
+</summary>
+<remarks>
+<para>If the user gives permission, the <see cref="RemotePlayback.State"/> will be set to <c>connecting</c> and the user agent will connect to the device to initiate playback.</para><para>If the user chooses to instead disconnect from the device, the <see cref="RemotePlayback.State"/> will be set to <c>disconnected</c> and user agent will disconnect from this device.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RemotePlayback/prompt"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves with <c>undefined</c> after the user accepts or rejects the prompt.</returns>
+</RemotePlaybackPrompt>
+<RemotePlaybackState>
+<summary>
+The <strong><c>state</c></strong> read-only property of the <see cref="RemotePlayback"/> interface returns the current state of the <c>RemotePlayback</c> connection.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RemotePlayback/state"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>One of:</value>
+</RemotePlaybackState>
+<RemotePlaybackWatchAvailability>
+<summary>
+The <strong><c>watchAvailability()</c></strong> method of the <see cref="RemotePlayback"/> interface watches the list of available remote playback devices and returns a {{jsxref("Promise")}} that resolves with the <c>callbackId</c> of a remote playback device.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RemotePlayback/watchAvailability"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves with an integer. This is the <c>callbackId</c> for the identified remote playback device.</returns>
+</RemotePlaybackWatchAvailability>
 </docs>

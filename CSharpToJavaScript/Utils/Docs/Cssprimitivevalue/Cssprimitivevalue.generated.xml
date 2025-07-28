@@ -9,4 +9,85 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSPrimitiveValue"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </CSSPrimitiveValue>
+<CSSPrimitiveValueGetCounterValue>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>getCounterValue()</c></strong> method of the<br/><see cref="CSSPrimitiveValue"/> interface is used to get the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters">counter</see><br/>value. If this CSS value doesn't contain a counter value, a <see cref="DOMException"/><br/>is raised. Modification to the corresponding style property can be achieved using the<br/><see cref="Counter"/> interface.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This method was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do<br/>not implement it.</para><para>To achieve your purpose, you can use:</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSPrimitiveValue/getCounterValue"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Counter"/> object representing the counter value.</returns>
+</CSSPrimitiveValueGetCounterValue>
+<CSSPrimitiveValueGetFloatValue>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>getFloatValue()</c></strong> method of the<br/><see cref="CSSPrimitiveValue"/> interface is used to get a float value in a specified<br/>unit. If this CSS value doesn&amp;apos;t contain a float value or can&amp;apos;t be converted into the<br/>specified unit, a <see cref="DOMException"/> is raised.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This method was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do<br/>not implement it.</para><para>To achieve your purpose, you can use:</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSPrimitiveValue/getFloatValue"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <c>float</c> value in the specified unit.</returns>
+</CSSPrimitiveValueGetFloatValue>
+<CSSPrimitiveValueGetRectValue>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>getRectValue()</c></strong> method of the<br/><see cref="CSSPrimitiveValue"/> interface is used to get a rect value. If this CSS<br/>value doesn't contain a rect value, a <see cref="DOMException"/> is raised.<br/>Modification to the corresponding style property can be achieved using the<br/><see cref="Rect"/> interface.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This method was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do<br/>not implement it.</para><para>To achieve your purpose, you can use:</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSPrimitiveValue/getRectValue"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Rect"/> object representing the rect value.</returns>
+</CSSPrimitiveValueGetRectValue>
+<CSSPrimitiveValueGetRGBColorValue>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>getRGBColorValue()</c></strong> method of the<br/><see cref="CSSPrimitiveValue"/> interface is used to get an RGB color value. If this<br/>CSS value doesn't contain a RGB color value, a <see cref="DOMException"/> is raised.<br/>Modification to the corresponding style property can be achieved using the<br/><see cref="RGBColor"/> interface.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This method was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do<br/>not implement it.</para><para>To achieve your purpose, you can use:</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSPrimitiveValue/getRGBColorValue"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="RGBColor"/> object representing the color value.</returns>
+</CSSPrimitiveValueGetRGBColorValue>
+<CSSPrimitiveValueGetStringValue>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>getStringValue()</c></strong> method of the<br/><see cref="CSSPrimitiveValue"/> interface is used to get a string value. If this CSS<br/>value doesn't contain a string value, a <see cref="DOMException"/> is raised.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This method was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do<br/>not implement it.</para><para>To achieve your purpose, you can use:</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSPrimitiveValue/getStringValue"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <c>string</c> value.</returns>
+</CSSPrimitiveValueGetStringValue>
+<CSSPrimitiveValuePrimitiveType>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>primitiveType</c></strong> read-only property of the<br/><see cref="CSSPrimitiveValue"/> interface represents the type of a CSS value.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This property was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do<br/>not implement it.</para><para>To achieve your purpose, you can use:</para></blockquote>
+<para>-<see cref="CSSStyleDeclaration.GetPropertyCSSValue"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSPrimitiveValue/primitiveType"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <c>unsigned short</c> representing the type of the value. Possible values are:</value>
+</CSSPrimitiveValuePrimitiveType>
+<CSSPrimitiveValueSetFloatValue>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>setFloatValue()</c></strong> method of the<br/><see cref="CSSPrimitiveValue"/> interface is used to set a float value. If the property<br/>attached to this value can&amp;apos;t accept the specified unit or the float value, the value<br/>will be unchanged and a <see cref="DOMException"/> will be raised.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This method was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do<br/>not implement it.</para><para>To achieve your purpose, you can use:</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSPrimitiveValue/setFloatValue"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</CSSPrimitiveValueSetFloatValue>
+<CSSPrimitiveValueSetStringValue>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>setStringValue()</c></strong> method of the<br/><see cref="CSSPrimitiveValue"/> interface is used to set a string value. If the<br/>property attached to this value can&amp;apos;t accept the specified unit or the string value, the<br/>value will be unchanged and a <see cref="DOMException"/> will be raised.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This method was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do<br/>not implement it.</para><para>To achieve your purpose, you can use:</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSPrimitiveValue/setStringValue"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</CSSPrimitiveValueSetStringValue>
 </docs>

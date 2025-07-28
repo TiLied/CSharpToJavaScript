@@ -9,4 +9,42 @@ The <strong><c>DOMException</c></strong> interface represents an abnormal event 
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMException"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </DOMException>
+<DOMExceptionCode>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>code</c></strong> read-only property of the <see cref="DOMException"/> interface returns one of the legacy <see href="https://developer.mozilla.org/en-US/docs/Web/API/DOMException#error_names">error code constants</see>, or <c>0</c> if none match.
+</summary>
+<remarks>
+<para>This field is used for historical reasons. New DOM exceptions don't use this anymore: they put this info in the <see cref="DOMException.Name"/> attribute.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMException/code"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>One of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/DOMException#error_names">error code constants</see>, or <c>0</c> if none match.</value>
+</DOMExceptionCode>
+<DOMExceptionDOMException>
+<summary>
+The <strong><c>DOMException()</c></strong> constructor returns a<br/><see cref="DOMException"/> object with a specified message and name.
+</summary>
+<remarks>
+<para>-<see href="https://github.com/zloirock/core-js#domexception">A polyfill of <c>DOMException</c> constructor</see> is available in <see href="https://github.com/zloirock/core-js"><c>core-js</c></see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMException/DOMException"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A newly created <see cref="DOMException"/> object.</returns>
+</DOMExceptionDOMException>
+<DOMExceptionMessage>
+<summary>
+The <strong><c>message</c></strong> read-only property of the<br/><see cref="DOMException"/> interface returns a string representing<br/>a message or description associated with the given <see href="https://developer.mozilla.org/en-US/docs/Web/API/DOMException#error_names">error name</see>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMException/message"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</DOMExceptionMessage>
+<DOMExceptionName>
+<summary>
+The <strong><c>name</c></strong> read-only property of the<br/><see cref="DOMException"/> interface returns a string that contains<br/>one of the strings associated with an <see href="https://developer.mozilla.org/en-US/docs/Web/API/DOMException#error_names">error name</see>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMException/name"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</DOMExceptionName>
 </docs>

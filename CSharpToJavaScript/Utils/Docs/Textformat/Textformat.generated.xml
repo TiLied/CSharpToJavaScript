@@ -4,8 +4,57 @@
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>TextFormat</c></strong> interface represents specific formatting that should be applied to a range of text in an editable text region that's attached to an <see cref="EditContext"/> instance. The text formatting is requested by the {{glossary("Input Method Editor")}} (IME) window that the user is composing text with.
 </summary>
 <remarks>
-<para>When using one of the default editable regions of the web, such as a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea"><c>&amp;lt;textarea&amp;gt;</c></see> element, IME composition is handled by the browser and operating system for you. For example, when using Japanese IME in a textarea, on Windows, the following text formats can be applied:</para><para>When creating your own custom editable region by using the {{domxref(&amp;quot;EditContext API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, "nocode")}}, you need to handle IME composition yourself. You should listen for the <see cref="EditContext/textformatupdate_event"/> event, which gives you the list of text formats that the IME window wants to apply to the text being composed. You should then update the formatting of the text displayed in your editable region accordingly.</para>
+<para>When using one of the default editable regions of the web, such as a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/textarea"><c>&amp;lt;textarea&amp;gt;</c></see> element, IME composition is handled by the browser and operating system for you. For example, when using Japanese IME in a textarea, on Windows, the following text formats can be applied:</para><para>When creating your own custom editable region by using the {{domxref(&amp;quot;EditContext API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, "nocode")}}, you need to handle IME composition yourself. You should listen for the <see cref="EditContexttextformatupdate"/> event, which gives you the list of text formats that the IME window wants to apply to the text being composed. You should then update the formatting of the text displayed in your editable region accordingly.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextFormat"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </TextFormat>
+<TextFormatRangeEnd>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>rangeEnd</c></strong> property of the <see cref="TextFormat"/> interface indicates the end position of the text range that needs to be formatted with the given text format.
+</summary>
+<remarks>
+<para>-The <see cref="TextFormat"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextFormat/rangeEnd"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Number"/>.</value>
+</TextFormatRangeEnd>
+<TextFormatRangeStart>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>rangeStart</c></strong> property of the <see cref="TextFormat"/> interface indicates the start position of the text range that needs to be formatted with the given text format.
+</summary>
+<remarks>
+<para>-The <see cref="TextFormat"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextFormat/rangeStart"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Number"/>.</value>
+</TextFormatRangeStart>
+<TextFormatTextFormat>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>TextFormat()</c></strong> constructor returns a new <see cref="TextFormat"/> object.
+</summary>
+<remarks>
+<para>-The <see cref="TextFormat"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextFormat/TextFormat"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</TextFormatTextFormat>
+<TextFormatUnderlineStyle>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>underlineStyle</c></strong> property of the <see cref="TextFormat"/> interface indicates the style of the underline that needs to be applied to the text range that is being formatted.
+</summary>
+<remarks>
+<para>-The <see cref="TextFormat"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextFormat/underlineStyle"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="String"/> that is one of the following values:</value>
+</TextFormatUnderlineStyle>
+<TextFormatUnderlineThickness>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>underlineThickness</c></strong> property of the <see cref="TextFormat"/> interface indicates the thickness of the underline that needs to be applied to the text range that is being formatted.
+</summary>
+<remarks>
+<para>-The <see cref="TextFormat"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextFormat/underlineThickness"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="String"/> that is one of the following values:</value>
+</TextFormatUnderlineThickness>
 </docs>

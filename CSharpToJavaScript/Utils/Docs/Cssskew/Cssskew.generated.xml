@@ -8,4 +8,30 @@ The <strong><c>CSSSkew</c></strong> interface of the <see href="https://develope
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSSkew"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </CSSSkew>
+<CSSSkewAx>
+<summary>
+The <strong><c>ax</c></strong> property of the<br/><see cref="CSSSkew"/> interface gets and sets the angle used to distort the element<br/>along the x-axis (or abscissa).
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSSkew/ax"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="CSSNumericValue"/>.</value>
+</CSSSkewAx>
+<CSSSkewAy>
+<summary>
+The <strong><c>ay</c></strong> property of the<br/><see cref="CSSSkew"/> interface gets and sets the angle used to distort the element<br/>along the y-axis (or ordinate).
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSSkew/ay"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="CSSNumericValue"/>.</value>
+</CSSSkewAy>
+<CSSSkewCSSSkew>
+<summary>
+The <strong><c>CSSSkew()</c></strong> constructor creates a new<br/><see cref="CSSSkew"/> object which represents the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/skew"><c>skew()</c></see> value<br/>of the individual <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/'transform'">'transform'</see> property in CSS.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSSkew/CSSSkew"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CSSSkewCSSSkew>
 </docs>

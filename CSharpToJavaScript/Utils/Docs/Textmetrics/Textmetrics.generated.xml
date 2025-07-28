@@ -8,4 +8,116 @@ The <strong><c>TextMetrics</c></strong> interface represents the dimensions of a
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextMetrics"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </TextMetrics>
+<TextMetricsActualBoundingBoxAscent>
+<summary>
+The read-only <strong><c>actualBoundingBoxAscent</c></strong> property of the <see cref="TextMetrics"/> interface is a <c>double</c> giving the distance from the horizontal line indicated by the <see cref="CanvasRenderingContext2D.TextBaseline"/> attribute to the top of the bounding rectangle used to render the text, in CSS pixels.
+</summary>
+<remarks>
+<para>-<see cref="TextMetrics"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextMetrics/actualBoundingBoxAscent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</TextMetricsActualBoundingBoxAscent>
+<TextMetricsActualBoundingBoxDescent>
+<summary>
+The read-only <c>actualBoundingBoxDescent</c> property of the <see cref="TextMetrics"/> interface is a <c>double</c> giving the distance from the horizontal line indicated by the <see cref="CanvasRenderingContext2D.TextBaseline"/> attribute to the bottom of the bounding rectangle used to render the text, in CSS pixels.
+</summary>
+<remarks>
+<para>-<see cref="TextMetrics"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextMetrics/actualBoundingBoxDescent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</TextMetricsActualBoundingBoxDescent>
+<TextMetricsActualBoundingBoxLeft>
+<summary>
+The read-only <c>actualBoundingBoxLeft</c> property of the <see cref="TextMetrics"/> interface is a <c>double</c> giving the distance parallel to the baseline from the alignment point given by the <see cref="CanvasRenderingContext2D.TextAlign"/> property to the left side of the bounding rectangle of the given text, in CSS pixels; positive numbers indicating a distance going left from the given alignment point.
+</summary>
+<remarks>
+<para>-<see cref="TextMetrics"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextMetrics/actualBoundingBoxLeft"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</TextMetricsActualBoundingBoxLeft>
+<TextMetricsActualBoundingBoxRight>
+<summary>
+The read-only <c>actualBoundingBoxRight</c> property of the <see cref="TextMetrics"/> interface is a <c>double</c> giving the distance parallel to the baseline from the alignment point given by the <see cref="CanvasRenderingContext2D.TextAlign"/> property to the right side of the bounding rectangle of the given text, in CSS pixels.
+</summary>
+<remarks>
+<para>-<see cref="TextMetrics"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextMetrics/actualBoundingBoxRight"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</TextMetricsActualBoundingBoxRight>
+<TextMetricsAlphabeticBaseline>
+<summary>
+The read-only <c>alphabeticBaseline</c> property of the <see cref="TextMetrics"/> interface is a <c>double</c> giving the distance from the horizontal line indicated by the <see cref="CanvasRenderingContext2D.TextBaseline"/> property to the alphabetic baseline of the line box, in CSS pixels.
+</summary>
+<remarks>
+<para>-<see cref="TextMetrics"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextMetrics/alphabeticBaseline"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</TextMetricsAlphabeticBaseline>
+<TextMetricsEmHeightAscent>
+<summary>
+The read-only <c>emHeightAscent</c> property of the <see cref="TextMetrics"/> interface returns the distance from the horizontal line indicated by the <see cref="CanvasRenderingContext2D.TextBaseline"/> property to the top of the <strong>em</strong> square in the line box, in CSS pixels.
+</summary>
+<remarks>
+<para>-<see cref="TextMetrics"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextMetrics/emHeightAscent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number, in CSS pixels.</value>
+</TextMetricsEmHeightAscent>
+<TextMetricsEmHeightDescent>
+<summary>
+The read-only <c>emHeightDescent</c> property of the <see cref="TextMetrics"/> interface returns the distance from the horizontal line indicated by the <see cref="CanvasRenderingContext2D.TextBaseline"/> property to the bottom of the <strong>em</strong> square in the line box, in CSS pixels.
+</summary>
+<remarks>
+<para>-<see cref="TextMetrics"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextMetrics/emHeightDescent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number, in CSS pixels.</value>
+</TextMetricsEmHeightDescent>
+<TextMetricsFontBoundingBoxAscent>
+<summary>
+The read-only <c>fontBoundingBoxAscent</c> property of the <see cref="TextMetrics"/> interface returns the distance from the horizontal line indicated by the <see cref="CanvasRenderingContext2D.TextBaseline"/> attribute, to the top of the highest bounding rectangle of all the fonts used to render the text, in CSS pixels.
+</summary>
+<remarks>
+<para>-<see cref="TextMetrics.FontBoundingBoxDescent"/><br/>-<see cref="TextMetrics"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextMetrics/fontBoundingBoxAscent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number, in CSS pixels.</value>
+</TextMetricsFontBoundingBoxAscent>
+<TextMetricsFontBoundingBoxDescent>
+<summary>
+The read-only <c>fontBoundingBoxDescent</c> property of the <see cref="TextMetrics"/> interface returns the distance from the horizontal line indicated by the <see cref="CanvasRenderingContext2D.TextBaseline"/> attribute to the bottom of the bounding rectangle of all the fonts used to render the text, in CSS pixels.
+</summary>
+<remarks>
+<para>-<see cref="TextMetrics.FontBoundingBoxAscent"/><br/>-<see cref="TextMetrics"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextMetrics/fontBoundingBoxDescent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number, in CSS pixels.</value>
+</TextMetricsFontBoundingBoxDescent>
+<TextMetricsHangingBaseline>
+<summary>
+The read-only <c>hangingBaseline</c> property of the <see cref="TextMetrics"/> interface is a <c>double</c> giving the distance from the horizontal line indicated by the <see cref="CanvasRenderingContext2D.TextBaseline"/> property to the hanging baseline of the line box, in CSS pixels.
+</summary>
+<remarks>
+<para>-<see cref="TextMetrics"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextMetrics/hangingBaseline"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</TextMetricsHangingBaseline>
+<TextMetricsIdeographicBaseline>
+<summary>
+The read-only <c>ideographicBaseline</c> property of the <see cref="TextMetrics"/> interface is a <c>double</c> giving the distance from the horizontal line indicated by the <see cref="CanvasRenderingContext2D.TextBaseline"/> property to the ideographic baseline of the line box, in CSS pixels.
+</summary>
+<remarks>
+<para>-<see cref="TextMetrics"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextMetrics/ideographicBaseline"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</TextMetricsIdeographicBaseline>
+<TextMetricsWidth>
+<summary>
+The read-only <strong><c>width</c></strong> property of the <see cref="TextMetrics"/> interface contains the text's advance width (the width of that inline box) in CSS pixels.
+</summary>
+<remarks>
+<para>-<see cref="TextMetrics"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextMetrics/width"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</TextMetricsWidth>
 </docs>

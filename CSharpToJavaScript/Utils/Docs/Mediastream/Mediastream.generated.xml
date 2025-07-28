@@ -9,4 +9,120 @@ The <strong><c>MediaStream</c></strong> interface of the {{domxref(&amp;quot;Med
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </MediaStream>
+<MediaStreamActive>
+<summary>
+The <strong><c>active</c></strong> read-only property of the<br/><see cref="MediaStream"/> interface returns a Boolean value which is<br/><c>true</c> if the stream is currently active; otherwise, it returns<br/><c>false</c>. A stream is considered <strong>active</strong> if at least one of<br/>its <see cref="MediaStreamTrack"/>s does not have its property <see cref="MediaStreamTrack.ReadyState"/><br/>set to <c>ended</c>. Once every track has ended, the stream&amp;apos;s <c>active</c> property becomes<br/><c>false</c>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/active"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A Boolean value which is <c>true</c> if the stream is currently active;<br/>otherwise, the value is <c>false</c>.</value>
+</MediaStreamActive>
+<MediaStreamAddTrack>
+<summary>
+The <strong><c>addTrack()</c></strong> method of the <see cref="MediaStream"/> interface adds a new track to the<br/>stream. The track is specified as a parameter of type <see cref="MediaStreamTrack"/>.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>If the specified track is already in the stream&amp;apos;s track set, this method has no<br/>effect.</para></blockquote>
+<para>-<see cref="MediaStream"/>, the interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/addTrack"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</MediaStreamAddTrack>
+<MediaStreamAddtrack>
+<summary>
+The <strong><c>addtrack</c></strong> event is fired when a new <see href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack"><c>MediaStreamTrack</c></see> object has been added to a <see href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream"><c>MediaStream</c></see>.
+</summary>
+<remarks>
+<para>This event is not cancelable and does not bubble.</para>
+<para>-Related events: <see href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/removetrack_event"><c>removetrack</c></see><br/>-This event on <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioTrackList"><c>AudioTrackList</c></see> targets: <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioTrackList/addtrack_event"><c>addtrack</c></see><br/>-This event on <see href="https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackList"><c>VideoTrackList</c></see> targets: <see href="https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackList/addtrack_event"><c>addtrack</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API">Media Capture and Streams API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/addtrack"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</MediaStreamAddtrack>
+<MediaStreamClone>
+<summary>
+The <strong><c>clone()</c></strong> method of the <see cref="MediaStream"/><br/>interface creates a duplicate of the <c>MediaStream</c>. This new<br/><c>MediaStream</c> object has a new unique <see cref="MediaStream.Id"/> and<br/>contains clones of every <see cref="MediaStreamTrack"/> contained by the<br/><c>MediaStream</c> on which <c>clone()</c> was called.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/clone"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="MediaStream"/> instance which has a new unique ID and contains clones<br/>of every <see cref="MediaStreamTrack"/> contained by the <c>MediaStream</c> on<br/>which <c>clone()</c> was called.</returns>
+</MediaStreamClone>
+<MediaStreamGetAudioTracks>
+<summary>
+The <strong><c>getAudioTracks()</c></strong> method of the<br/><see cref="MediaStream"/> interface returns a sequence that represents all the<br/><see cref="MediaStreamTrack"/> objects in this<br/>stream&amp;apos;s <see href="https://w3c.github.io/mediacapture-main/#dfn-track-set">track set</see> where <see cref="MediaStreamTrack.Kind"/><br/>is <c>audio</c>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/getAudioTracks"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An array of <see cref="MediaStreamTrack"/> objects, one for each audio track contained<br/>in the stream. Audio tracks are those tracks whose <see cref="MediaStreamTrack.Kind"/><br/>property is <c>audio</c>. The array is empty if the stream contains no<br/>audio tracks.<blockquote class="NOTE"><h5>NOTE</h5>The order of the returned tracks is not defined by the<br/>specification and may, in fact, change from one call to <c>getAudioTracks()</c><br/>to the next.</blockquote>Early versions of this API included a special <c>AudioStreamTrack</c> interface<br/>which was used as the type for each entry in the list of audio streams; however, this<br/>has since been merged into the main <see cref="MediaStreamTrack"/> interface.</returns>
+</MediaStreamGetAudioTracks>
+<MediaStreamGetTrackById>
+<summary>
+The <strong><c>getTrackById()</c></strong> method of the <see cref="MediaStream"/> interface<br/>returns a <see cref="MediaStreamTrack"/> object representing the track with the specified ID<br/>string. If there is no track with the specified ID, this method returns <c>null</c>.
+</summary>
+<remarks>
+<para>-<see cref="MediaStream"/><br/>-<see cref="MediaStreamTrack.Id"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/getTrackById"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>If a track is found for which <see cref="MediaStreamTrack.Id"/> matches the specified<br/><c>id</c> string, that <see cref="MediaStreamTrack"/> object is returned.<br/>Otherwise, the returned value is <c>null</c>.</returns>
+</MediaStreamGetTrackById>
+<MediaStreamGetTracks>
+<summary>
+The <strong><c>getTracks()</c></strong> method of the<br/><see cref="MediaStream"/> interface returns a sequence that represents all the<br/><see cref="MediaStreamTrack"/> objects in this<br/>stream&amp;apos;s <see href="https://w3c.github.io/mediacapture-main/#dfn-track-set">track set</see>,<br/>regardless of <see cref="MediaStreamTrack.Kind"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/getTracks"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An array of <see cref="MediaStreamTrack"/> objects.</returns>
+</MediaStreamGetTracks>
+<MediaStreamGetVideoTracks>
+<summary>
+The <strong><c>getVideoTracks()</c></strong> method of the<br/><see cref="MediaStream"/> interface returns a sequence of<br/><see cref="MediaStreamTrack"/> objects representing the video tracks in this stream.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/getVideoTracks"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An array of <see cref="MediaStreamTrack"/> objects, one for each video track contained<br/>in the media stream. Video tracks are those tracks whose<br/><see cref="MediaStreamTrack.Kind"/> property is <c>video</c>. The array<br/>is empty if the stream contains no video tracks.<blockquote class="NOTE"><h5>NOTE</h5>The order of the tracks is not defined by the specification,<br/>and may not be the same from one call to <c>getVideoTracks()</c> to another.</blockquote></returns>
+</MediaStreamGetVideoTracks>
+<MediaStreamId>
+<summary>
+The <strong><c>id</c></strong> read-only property of the <see cref="MediaStream"/> interface is a<br/>string containing 36 characters denoting a unique identifier (GUID)<br/>for the object.
+</summary>
+<remarks>
+<para>-<see cref="MediaStream"/>, the interface this property belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/id"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</MediaStreamId>
+<MediaStreamMediaStream>
+<summary>
+The <strong><c>MediaStream()</c></strong> constructor returns a newly-created <see cref="MediaStream"/>, which serves as a collection of media tracks, each represented by a <see cref="MediaStreamTrack"/> object.
+</summary>
+<remarks>
+<para>If any parameters are given, the specified tracks are added to the new stream.<br/>Otherwise, the stream has no tracks.</para>
+<para>-<see cref="MediaStream"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/MediaStream"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A newly-created <see cref="MediaStream"/> object, either empty, or containing the<br/>tracks provided, if any.</returns>
+</MediaStreamMediaStream>
+<MediaStreamRemoveTrack>
+<summary>
+The <strong><c>removeTrack()</c></strong> method of the <see cref="MediaStream"/> interface removes a<br/><see cref="MediaStreamTrack"/> from a stream.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/removeTrack"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</MediaStreamRemoveTrack>
+<MediaStreamRemovetrack>
+<summary>
+The <strong><c>removetrack</c></strong> event is fired when a new <see cref="MediaStreamTrack"/> object has been removed from a <see cref="MediaStream"/>.
+</summary>
+<remarks>
+<para>This event is not cancelable and does not bubble.</para>
+<para>-Related events: <see href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/addtrack_event"><c>addtrack</c></see><br/>-This event on <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioTrackList"><c>AudioTrackList</c></see> targets: <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioTrackList/removetrack_event"><c>removetrack</c></see><br/>-This event on <see href="https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackList"><c>VideoTrackList</c></see> targets: <see href="https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackList/removetrack_event"><c>removetrack</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API">Media Capture and Streams API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/removetrack"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</MediaStreamRemovetrack>
 </docs>

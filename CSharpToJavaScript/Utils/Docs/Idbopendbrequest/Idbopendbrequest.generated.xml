@@ -9,4 +9,24 @@ The <strong><c>IDBOpenDBRequest</c></strong> interface of the IndexedDB API prov
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBOpenDBRequest"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </IDBOpenDBRequest>
+<IDBOpenDBRequestBlocked>
+<summary>
+The <c>blocked</c> handler is executed when an open connection to a database is blocking a <c>versionchange</c> transaction on the same database.
+</summary>
+<remarks>
+<para>This event is not cancelable and does not bubble.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBOpenDBRequest/blocked"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</IDBOpenDBRequestBlocked>
+<IDBOpenDBRequestUpgradeneeded>
+<summary>
+The <c>upgradeneeded</c> event is fired when an attempt was made to open a database with a version number higher than its current version.
+</summary>
+<remarks>
+<para>This event is not cancelable and does not bubble.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBOpenDBRequest/upgradeneeded"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</IDBOpenDBRequestUpgradeneeded>
 </docs>

@@ -9,4 +9,23 @@ The <c>StereoPannerNode</c> interface of the <see href="https://developer.mozill
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StereoPannerNode"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </StereoPannerNode>
+<StereoPannerNodePan>
+<summary>
+The <c>pan</c> property of the <see cref="StereoPannerNode"/> interface is an <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam#a-rate">a-rate</see> <see cref="AudioParam"/> representing the amount of panning to apply. The value can range between <c>-1</c> (full left pan) and <c>1</c> (full right pan).
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StereoPannerNode/pan"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam#a-rate">a-rate</see> <see cref="AudioParam"/> containing the panning to apply.<blockquote class="NOTE"><h5>NOTE</h5>Though the <c>AudioParam</c> returned is read-only, the value it represents is not.</blockquote></value>
+</StereoPannerNodePan>
+<StereoPannerNodeStereoPannerNode>
+<summary>
+The <strong><c>StereoPannerNode()</c></strong> constructor of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see> creates a new <see cref="StereoPannerNode"/> object which is an <see cref="AudioNode"/> that represents a simple stereo panner node that can be used to pan an audio stream left or right.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StereoPannerNode/StereoPannerNode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="StereoPannerNode"/> object instance.</returns>
+</StereoPannerNodeStereoPannerNode>
 </docs>

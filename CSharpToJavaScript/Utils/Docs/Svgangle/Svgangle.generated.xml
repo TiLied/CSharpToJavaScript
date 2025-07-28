@@ -8,4 +8,68 @@ The <c>SVGAngle</c> interface is used to represent a value that can be an {{cssx
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAngle"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </SVGAngle>
+<SVGAngleConvertToSpecifiedUnits>
+<summary>
+The <c>convertToSpecifiedUnits()</c> method of the <see cref="SVGAngle"/> interface allows you to convert the angle's value to the specified unit type.
+</summary>
+<remarks>
+<para>This function will:</para>
+<para>-<see cref="SVGAnimatedAngle"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAngle/convertToSpecifiedUnits"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="'undefined'"/>).</returns>
+</SVGAngleConvertToSpecifiedUnits>
+<SVGAngleNewValueSpecifiedUnits>
+<summary>
+The <c>newValueSpecifiedUnits()</c> method of the <see cref="SVGAngle"/> interface sets the value to a number with an associated <see cref="SVGAngle.UnitType"/>, thereby replacing the values for all of the attributes on the object.
+</summary>
+<remarks>
+<para>-<see cref="SVGAnimatedAngle"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAngle/newValueSpecifiedUnits"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="'undefined'"/>).</returns>
+</SVGAngleNewValueSpecifiedUnits>
+<SVGAngleUnitType>
+<summary>
+The <strong><c>unitType</c></strong> property of the <see cref="SVGAngle"/> interface is one of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAngle#static_properties">unit type constants</see> and represents the units in which this angle&amp;apos;s value is expressed.
+</summary>
+<remarks>
+<para>-<see cref="SVGAnimatedAngle"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAngle/unitType"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number representing the numeric value of the constant.</value>
+</SVGAngleUnitType>
+<SVGAngleValue>
+<summary>
+The <c>value</c> property of the <see cref="SVGAngle"/> interface represents the floating point value of the <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#angle"><c>&amp;lt;angle&amp;gt;</c></see> in degrees.
+</summary>
+<remarks>
+<para>Setting this attribute will cause <see cref="SVGAngle.ValueInSpecifiedUnits"/> and <see cref="SVGAngle.ValueAsString"/> to be updated automatically to reflect this setting.</para>
+<para>-<see cref="SVGAnimatedAngle"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAngle/value"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number; the angle value in degrees.</value>
+</SVGAngleValue>
+<SVGAngleValueAsString>
+<summary>
+The <c>valueAsString</c> property of the <see cref="SVGAngle"/> interface represents the angle's value as a string, in the units expressed by <see cref="SVGAngle.UnitType"/>.
+</summary>
+<remarks>
+<para>Setting this attribute will cause <see cref="SVGAngle.Value"/>, <see cref="SVGAngle.ValueInSpecifiedUnits"/>, and <see cref="SVGAngle.UnitType"/> to be updated automatically to reflect this setting.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#angle"><c>&amp;lt;angle&amp;gt;</c></see><br/>-<see cref="SVGAnimatedAngle"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAngle/valueAsString"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string; the value of the angle.</value>
+</SVGAngleValueAsString>
+<SVGAngleValueInSpecifiedUnits>
+<summary>
+The <c>valueInSpecifiedUnits</c> property of the <see cref="SVGAngle"/> interface represents the value of this angle as a number, in the units expressed by the angle's <see cref="SVGAngle.UnitType"/>.
+</summary>
+<remarks>
+<para>Setting this attribute will cause <see cref="SVGAngle.Value"/> and <see cref="SVGAngle.ValueAsString"/> to be updated automatically to reflect this setting.</para>
+<para>-<see cref="SVGAnimatedAngle"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAngle/valueInSpecifiedUnits"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number; the numeric factor of the angle.</value>
+</SVGAngleValueInSpecifiedUnits>
 </docs>

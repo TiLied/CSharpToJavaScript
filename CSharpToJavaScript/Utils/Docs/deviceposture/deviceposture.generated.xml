@@ -1,0 +1,31 @@
+<docs>
+<DevicePosture>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>DevicePosture</c></strong> interface of the {{domxref(&amp;quot;Device Posture API&amp;quot;, &amp;quot;Device Posture API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} represents the device&amp;apos;s posture, that is, whether the viewport is in a flat or folded state.
+</summary>
+<remarks>
+<para></para>
+<para>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/device-posture">@media/device-posture</see> <c>_media</c> feature<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Device_Posture_API">Device Posture API</see><br/>-<see href="https://developer.chrome.com/blog/foldable-apis-ot">Origin trial for Foldable APIs</see> on developer.chrome.com (2024)<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DevicePosture"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</DevicePosture>
+<DevicePostureChange>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>change</c></strong> event of the <see cref="DevicePosture"/> interface fires when the device's posture changes, for example when a foldable device goes from <c>folded</c> to <c>continuous</c> posture.
+</summary>
+<remarks>
+<para>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/device-posture">@media/device-posture</see> <c>_media</c> feature<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Device_Posture_API">Device Posture API</see><br/>-<see href="https://developer.chrome.com/blog/foldable-apis-ot">Origin trial for Foldable APIs</see> on developer.chrome.com (2024)<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DevicePosture/change"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</DevicePostureChange>
+<DevicePostureType>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>type</c></strong> read-only property of the <see cref="DevicePosture"/> interface returns the device's current posture.
+</summary>
+<remarks>
+<para>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/device-posture">@media/device-posture</see> <c>_media</c> feature<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Device_Posture_API">Device Posture API</see><br/>-<see href="https://developer.chrome.com/blog/foldable-apis-ot">Origin trial for Foldable APIs</see> on developer.chrome.com (2024)<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DevicePosture/type"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing the device&amp;apos;s current posture. The value can be one of:</value>
+</DevicePostureType>
+</docs>

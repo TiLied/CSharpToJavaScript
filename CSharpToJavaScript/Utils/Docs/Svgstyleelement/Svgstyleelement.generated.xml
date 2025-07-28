@@ -9,4 +9,56 @@ The <strong><c>SVGStyleElement</c></strong> interface corresponds to the SVG <se
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGStyleElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </SVGStyleElement>
+<SVGStyleElementDisabled>
+<summary>
+The <strong><c>SVGStyleElement.disabled</c></strong> property can be used to get and set whether the stylesheet is disabled (<c>true</c>) or not (<c>false</c>).
+</summary>
+<remarks>
+<para>Note that there is no corresponding <c>disabled</c> attribute on the <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Element/style">SVG <c>&amp;lt;style&amp;gt;</c> element</see>.</para>
+<para>-<see cref="HTMLStyleElement.Disabled"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGStyleElement/disabled"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>Returns <c>true</c> if the stylesheet is disabled, or there is no associated stylesheet; otherwise <c>false</c>.<br/>The value is <c>false</c> by default (if there is an associated stylesheet).The property can be used to enable or disable an associated stylesheet.<br/>Setting the property to <c>true</c> when there is no associated stylesheet has no effect.</value>
+</SVGStyleElementDisabled>
+<SVGStyleElementMedia>
+<summary>
+The <strong><c>SVGStyleElement.media</c></strong> property is a media query string corresponding to the <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Element/style#media"><c>media</c></see> attribute of the given SVG style element.
+</summary>
+<remarks>
+<para>The query must be matched for the style to apply.</para>
+<para>-<see cref="HTMLStyleElement.Media"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGStyleElement/media"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string defining a valid media query list with one or more comma separated values.<br/>For example <c>&amp;quot;screen, print&amp;quot;</c>, or <c>&amp;quot;all&amp;quot;</c> (the default).The value is initialized with the string specified in the corresponding style&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Element/style#media"><c>media</c></see> attribute.</value>
+</SVGStyleElementMedia>
+<SVGStyleElementSheet>
+<summary>
+The <strong><c>SVGStyleElement.sheet</c></strong> read-only property returns the <see cref="CSSStyleSheet"/> corresponding to the given SVG style element, or <c>null</c> if there is none.
+</summary>
+<remarks>
+<para>-<see cref="HTMLStyleElement.Sheet"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGStyleElement/sheet"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="CSSStyleSheet"/>, or <c>null</c> if the element has no associated style sheet.</value>
+</SVGStyleElementSheet>
+<SVGStyleElementTitle>
+<summary>
+The <strong><c>SVGStyleElement.title</c></strong> property is a string corresponding to the <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Element/style#title"><c>title</c></see> attribute of the given SVG style element.<br/>It may be used to select between <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/rel/alternate_stylesheet">alternate style sheets</see>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGStyleElement/title"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string with any value.The value is initialized with the string specified in the corresponding style&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Element/style#title"><c>title</c></see> attribute.</value>
+</SVGStyleElementTitle>
+<SVGStyleElementType>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>SVGStyleElement.type</c></strong> property returns the type of the current style.<br/>The value reflects the associated SVG <c>&amp;lt;style&amp;gt;</c> element&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Element/style#type"><c>type</c></see> attribute.
+</summary>
+<remarks>
+<para>Authors should not use this property or rely on the value.</para>
+<para>-<see cref="HTMLStyleElement.Type"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGStyleElement/type"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The permitted values are an empty string or a case-insensitive match for &amp;quot;text/css&amp;quot;.</value>
+</SVGStyleElementType>
 </docs>

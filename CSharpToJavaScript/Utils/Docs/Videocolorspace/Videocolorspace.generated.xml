@@ -7,4 +7,57 @@ The <strong><c>VideoColorSpace</c></strong> interface of the <see cref="'WebCode
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoColorSpace"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </VideoColorSpace>
+<VideoColorSpaceFullRange>
+<summary>
+The <strong><c>fullRange</c></strong> read-only property of the <see cref="VideoColorSpace"/> interface returns <c>true</c> if full-range color values are used.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoColorSpace/fullRange"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Boolean"/>, <c>true</c> if full-range color values are used.</value>
+</VideoColorSpaceFullRange>
+<VideoColorSpaceMatrix>
+<summary>
+The <strong><c>matrix</c></strong> read-only property of the <see cref="VideoColorSpace"/> interface returns the matrix coefficient of the video. Matrix coefficients describe the relationship between sample component values and color coordinates.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoColorSpace/matrix"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing one of the following values:</value>
+</VideoColorSpaceMatrix>
+<VideoColorSpacePrimaries>
+<summary>
+The <strong><c>primaries</c></strong> read-only property of the <see cref="VideoColorSpace"/> interface returns the color {{glossary("gamut")}} of the video.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoColorSpace/primaries"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing one of the following values:</value>
+</VideoColorSpacePrimaries>
+<VideoColorSpaceToJSON>
+<summary>
+The <strong><c>toJSON()</c></strong> method of the <see cref="VideoColorSpace"/> interface is a <strong>serializer</strong> that returns a JSON representation of the <c>VideoColorSpace</c> object.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoColorSpace/toJSON"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A JSON object.</returns>
+</VideoColorSpaceToJSON>
+<VideoColorSpaceTransfer>
+<summary>
+The <strong><c>transfer</c></strong> read-only property of the <see cref="VideoColorSpace"/> interface returns the opto-electronic transfer characteristics of the video.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoColorSpace/transfer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing one of the following values:</value>
+</VideoColorSpaceTransfer>
+<VideoColorSpaceVideoColorSpace>
+<summary>
+The <strong><c>VideoColorSpace()</c></strong> constructor creates a new <see cref="VideoColorSpace"/> object which represents a video color space.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoColorSpace/VideoColorSpace"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</VideoColorSpaceVideoColorSpace>
 </docs>

@@ -1,10 +1,32 @@
 <docs>
 <SVGAnimatedAngle>
 <summary>
-
+The <strong><c>SVGAnimatedAngle</c></strong> interface is used for attributes of basic type <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#angle">&amp;lt;angle&amp;gt;</see> which can be animated.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAnimatedAngle"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </SVGAnimatedAngle>
+<SVGAnimatedAngleAnimVal>
+<summary>
+The <strong><c>animVal</c></strong> read-only property of the <see cref="SVGAnimatedAngle"/> interface represents the current animated value of the associated <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#angle"><c>&amp;lt;angle&amp;gt;</c></see> on an SVG element. If the attribute is not currently being animated, <c>animVal</c> will be the same as the <c>baseVal</c>.
+</summary>
+<remarks>
+<para>This property reflects the animated state of the angle of the animating {{SVGattr("orient")}} attribute of the SVG <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementmarker">marker</see> element, providing access to the value of the angle during animations.</para>
+<para>-<see cref="SVGAnimatedAngle.BaseVal"/><br/>-<see cref="SVGAngle"/> and <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAngle#static_properties">angle <c>value</c> constants</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAnimatedAngle/animVal"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAngle"/> object representing the animated value of the <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#angle"><c>&amp;lt;angle&amp;gt;</c></see> content type.</value>
+</SVGAnimatedAngleAnimVal>
+<SVGAnimatedAngleBaseVal>
+<summary>
+The <strong><c>baseVal</c></strong> read-only property of the <see cref="SVGAnimatedAngle"/> interface represents the base (non-animated) value of the associated <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#angle"><c>&amp;lt;angle&amp;gt;</c></see> on an SVG element. This property is used to retrieve the static value of the <c>&amp;lt;angle&amp;gt;</c>, unaffected by any ongoing animations.
+</summary>
+<remarks>
+<para>This property reflects the <c>&amp;lt;angle&amp;gt;</c> value of the {{SVGattr("orient")}} attribute of the SVG {{SVGElement("marker")}} element, which is the same as the <see cref="SVGMarkerElement.OrientAngle"/> property.</para>
+<para>-<see cref="SVGAnimatedAngle.AnimVal"/><br/>-<see cref="SVGAngle"/> and <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAngle#static_properties">angle <c>value</c> constants</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAnimatedAngle/baseVal"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAngle"/> object representing the base value of the <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#angle"><c>&amp;lt;angle&amp;gt;</c></see> content type.</value>
+</SVGAnimatedAngleBaseVal>
 </docs>

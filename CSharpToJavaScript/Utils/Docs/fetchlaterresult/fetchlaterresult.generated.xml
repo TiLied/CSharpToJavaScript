@@ -1,0 +1,21 @@
+<docs>
+<FetchLaterResult>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>FetchLaterResult</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/fetchLater_API"><c>fetchLater()</c> API</see> is returned by the <see cref="Window.FetchLater"/> method after a deferred fetch has been created.
+</summary>
+<remarks>
+<para>It contains a single <c>activated</c> property that indicates whether the deferred request has been sent out or not.</para><para>After a successful sending, the whole response is ignored — including body and headers — so the response of the deferred fetch is never returned to the <c>FetchLaterResult</c> interface.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/fetchLater_API"><c>fetchLater()</c> API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FetchLaterResult"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</FetchLaterResult>
+<FetchLaterResultActivated>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>activated</c></strong> read-only property of the <see cref="FetchLaterResult"/> interface returns a boolean specifying whether the deferred fetch has been sent.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FetchLaterResult/activated"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="'Boolean'"/>.</value>
+</FetchLaterResultActivated>
+</docs>

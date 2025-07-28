@@ -8,4 +8,118 @@ The <strong><c>PaymentResponse</c></strong> interface of the <see href="https://
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentResponse"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </PaymentResponse>
+<PaymentResponseComplete>
+<summary>
+The <see cref="PaymentRequest"/> method<br/><strong><c>complete()</c></strong> of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API">Payment Request API</see> notifies the<br/><see href="https://developer.mozilla.org/en-US/docs/Glossary/user agent">user agent</see> that the user interaction is over, and causes any remaining<br/>user interface to be closed.
+</summary>
+<remarks>
+<para>This method must be called after the user accepts<br/>the payment request and the <see cref="Promise"/> returned by the<br/><see cref="'PaymentRequest.Show'"/> method is resolved.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentResponse/complete"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> which resolves with no input value once the payment interface<br/>has been fully closed. If an error occurs, the promise instead rejects, returning one of<br/>the exceptions listed below.</returns>
+</PaymentResponseComplete>
+<PaymentResponseDetails>
+<summary>
+The <strong><c>details</c></strong> read-only property of the<br/><see cref="PaymentResponse"/> interface returns a JSON-serializable object that<br/>provides a payment method specific message used by the merchant to process the<br/>transaction and determine a successful funds transfer.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentResponse/details"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An object. This data is returned by the payment app that satisfies the payment request. Developers need to consult whomever controls the URL for the expected shape of the details object.</value>
+</PaymentResponseDetails>
+<PaymentResponseMethodName>
+<summary>
+The <strong><c>methodName</c></strong> read-only<br/>property of the <see cref="PaymentResponse"/> interface returns a string uniquely<br/>identifying the payment handler selected by the user.
+</summary>
+<remarks>
+<para>This string may be either<br/>one of the standardized payment method identifiers or a URL used by the payment handler<br/>to process payments.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentResponse/methodName"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string uniquely identifying the payment handler being used to<br/>process the payment. This may be either a standardized identifier, or a URL used by the<br/>payment processor to handle payments. See<br/>how <see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API/Concepts#merchant_validation">merchant validation</see> works.</value>
+</PaymentResponseMethodName>
+<PaymentResponsePayerdetailchange>
+<summary>
+A <strong><c>payerdetailchange</c></strong> event is fired by the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API">Payment Request API</see> to a <see cref="PaymentResponse"/> object when the user makes changes to their personal information while filling out a payment request form. This can happen when the payer is retrying to submit its details after an error has been detected.
+</summary>
+<remarks>
+<para>The event handler for <c>payerdetailchange</c> should check each value in the form that has changed and ensure that the values are valid. If any are invalid, appropriate error messages should be configured and the <see cref="PaymentResponse.Retry"/> method should be called on the <see cref="PaymentResponse"/> to ask the user to update the invalid entries.</para><para>This event is not cancelable and does not bubble.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API">Payment Request API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API">Using the Payment Request API</see><br/>-<see cref="PaymentResponse"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentRequest/paymentmethodchange_event"><c>paymentmethodchange</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentRequest/shippingaddresschange_event"><c>shippingaddresschange</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentRequest/shippingoptionchange_event"><c>shippingoptionchange</c></see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentResponse/payerdetailchange"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</PaymentResponsePayerdetailchange>
+<PaymentResponsePayerEmail>
+<summary>
+The <c>payerEmail</c> read-only property of the <see cref="PaymentResponse"/><br/>interface returns the email address supplied by the user. This option is only present<br/>when the <c>requestPayerEmail</c> option is set to <c>true</c> in the<br/><c>options</c> object passed to the<br/><see cref="'PaymentRequest.PaymentRequest'"/> constructor.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentResponse/payerEmail"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</PaymentResponsePayerEmail>
+<PaymentResponsePayerName>
+<summary>
+The <strong><c>payerName</c></strong> read-only property of the<br/><see cref="PaymentResponse"/> interface returns the name supplied by the user. This<br/>option is only present when the <c>requestPayerName</c> option is set to<br/><c>true</c> in the options parameter of the<br/><see cref="'PaymentRequest.PaymentRequest'"/> constructor.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentResponse/payerName"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing the payer name.</value>
+</PaymentResponsePayerName>
+<PaymentResponsePayerPhone>
+<summary>
+The <c>payerPhone</c> read-only property of the <see cref="PaymentResponse"/><br/>interface returns the phone number supplied by the user. This option is only present<br/>when the <c>requestPayerPhone</c> option is set to <c>true</c> in the<br/><c>options</c> object passed to the<br/><see cref="'PaymentRequest.PaymentRequest'"/> constructor.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentResponse/payerPhone"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</PaymentResponsePayerPhone>
+<PaymentResponseRequestId>
+<summary>
+The <strong><c>requestId</c></strong> read-only property of the<br/><see cref="PaymentResponse"/> interface returns the free-form identifier supplied by<br/>the <c>PaymentResponse()</c> constructor by details.id.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentResponse/requestId"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</PaymentResponseRequestId>
+<PaymentResponseRetry>
+<summary>
+The <see cref="PaymentResponse"/> interface's<br/><strong><c>retry()</c></strong> method makes it possible to ask the user to<br/>retry a payment after an error occurs during processing.
+</summary>
+<remarks>
+<para>This lets your app<br/>gracefully deal with situations such as invalid shipping addresses or declined credit<br/>cards.</para>
+<para>-<see cref="PaymentResponse"/> interface.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentResponse/retry"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> which is resolved when the payment is successfully completed.<br/>The promise is rejected with an appropriate exception value if the payment fails again.Typically you will use this by calling <see cref="PaymentRequest.Show"/>,<br/>then entering a loop or recursive function that checks the<br/><see cref="PaymentResponse"/> for errors or other reasons to retry the payment request.<br/>If a retry is needed, the loop calls <c>retry()</c>, then loops back to check the<br/>response when it comes in. The loop exits only when the user either cancels the payment<br/>request or the request is successful.See the <see href="https://developer.mozilla.org#examples">example</see> below for a thorough example, but the basic<br/>concept, in outline form, is:</returns>
+</PaymentResponseRetry>
+<PaymentResponseShippingAddress>
+<summary>
+The <strong><c>shippingAddress</c></strong> read-only property of<br/>the <c>PaymentRequest</c> interface returns a <see cref="'PaymentAddress'"/> object<br/>containing the shipping address provided by the user.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentResponse/shippingAddress"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="PaymentAddress"/> object providing details comprising the shipping<br/>address provided by the user.</value>
+</PaymentResponseShippingAddress>
+<PaymentResponseShippingOption>
+<summary>
+The <strong><c>shippingOption</c></strong> read-only property of<br/>the <c>PaymentRequest</c> interface returns the ID attribute of the shipping<br/>option selected by the user. This option is only present when the<br/><c>requestShipping</c> option is set to <c>true</c> in the<br/><c>options</c> object passed to the<br/><see cref="'PaymentRequest.PaymentRequest'"/> constructor.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentResponse/shippingOption"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</PaymentResponseShippingOption>
+<PaymentResponseToJSON>
+<summary>
+The <strong><c>toJSON()</c></strong> method of the <see cref="PaymentResponse"/> interface is a {{Glossary("Serialization","serializer")}}; it returns a JSON representation of the <see cref="PaymentResponse"/> object.
+</summary>
+<remarks>
+<para>-<see cref="JSON"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentResponse/toJSON"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("JSON")}} object that is the serialization of the <see cref="PaymentResponse"/> object.</returns>
+</PaymentResponseToJSON>
 </docs>

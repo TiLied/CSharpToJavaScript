@@ -8,4 +8,54 @@ The <strong><c>HTMLSlotElement</c></strong> interface of the <see href="https://
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSlotElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </HTMLSlotElement>
+<HTMLSlotElementAssign>
+<summary>
+The <strong><c>assign()</c></strong> method of the <see cref="HTMLSlotElement"/> interface sets the slot's <strong>manually assigned nodes</strong> to an ordered set of slottables. The manually assigned nodes set is initially empty until nodes are assigned using <c>assign()</c>.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>You cannot mix manually (imperative) and named (declarative, automatic) slot assignments. Therefore, for this method to work, the shadow tree needs to have been <see href="https://developer.mozilla.org/en-US/docs/Web/API/Element/attachShadow">created</see> with the <c>slotAssignment: &amp;quot;manual&amp;quot;</c> option.</para></blockquote>
+<para>-<see cref="Element.AttachShadow"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSlotElement/assign"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</HTMLSlotElementAssign>
+<HTMLSlotElementAssignedElements>
+<summary>
+The <strong><c>assignedElements()</c></strong> method of the <see cref="HTMLSlotElement"/><br/>interface returns a sequence of the elements assigned to this slot (and no<br/>other nodes).
+</summary>
+<remarks>
+<para>If the <c>flatten</c> option is set to <c>true</c>, it returns a sequence of both the elements assigned to this slot, as well as the elements assigned to any other slots that are descendants of this slot. If no assigned elements are found, it returns the slot&amp;apos;s fallback content.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSlotElement/assignedElements"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An array of elements.</returns>
+</HTMLSlotElementAssignedElements>
+<HTMLSlotElementAssignedNodes>
+<summary>
+The <strong><c>assignedNodes()</c></strong> method of the <see cref="HTMLSlotElement"/> interface returns a sequence of the nodes assigned to this slot.
+</summary>
+<remarks>
+<para>If the <c>flatten</c> option is set to <c>true</c>, it returns a sequence of both the nodes assigned to this slot, as well as the nodes assigned to any other slots that are descendants of this slot. If no assigned nodes are found, it returns the slot&amp;apos;s fallback content.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSlotElement/assignedNodes"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An array of nodes.</returns>
+</HTMLSlotElementAssignedNodes>
+<HTMLSlotElementName>
+<summary>
+The <strong><c>name</c></strong> property of the <see cref="HTMLSlotElement"/><br/>interface returns or sets the slot name. A slot is a placeholder inside a web component<br/>that users can fill with their own markup.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSlotElement/name"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</HTMLSlotElementName>
+<HTMLSlotElementSlotchange>
+<summary>
+The <strong><c>slotchange</c></strong> event is fired on an <see cref="HTMLSlotElement"/> instance ({{HTMLElement("slot")}} element) when the node(s) contained in that slot change.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>The <c>slotchange</c> event doesn&amp;apos;t fire if the children of a slotted node change — only if you change (e.g., add or delete) the actual nodes themselves.</para></blockquote><para>In order to trigger a <strong>slotchange</strong> event, one has to set or remove the <c>slot</c> attribute.</para><para>This event is not cancelable.</para>
+<para><see cref="HTMLSlotElement"/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSlotElement/slotchange"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLSlotElementSlotchange>
 </docs>

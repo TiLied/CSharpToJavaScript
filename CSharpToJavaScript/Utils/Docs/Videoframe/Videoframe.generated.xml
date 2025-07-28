@@ -9,4 +9,156 @@ The <strong><c>VideoFrame</c></strong> interface of the <see href="https://devel
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoFrame"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </VideoFrame>
+<VideoFrameAllocationSize>
+<summary>
+The <strong><c>allocationSize()</c></strong> method of the <see cref="VideoFrame"/> interface returns the number of bytes required to hold the video as filtered by options passed into the method.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoFrame/allocationSize"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An integer containing the number of bytes needed to hold the frame as specified by <c>options</c>.</returns>
+</VideoFrameAllocationSize>
+<VideoFrameClone>
+<summary>
+The <strong><c>clone()</c></strong> method of the <see cref="VideoFrame"/> interface creates a new <c>VideoFrame</c> object referencing the same media resource as the original.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoFrame/clone"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new cloned <see cref="VideoFrame"/> object.</returns>
+</VideoFrameClone>
+<VideoFrameClose>
+<summary>
+The <strong><c>close()</c></strong> method of the <see cref="VideoFrame"/> interface clears all states and releases the reference to the media resource.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoFrame/close"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Undefined.</returns>
+</VideoFrameClose>
+<VideoFrameCodedHeight>
+<summary>
+The <strong><c>codedHeight</c></strong> property of the <see cref="VideoFrame"/> interface returns the height of the VideoFrame in pixels, potentially including non-visible padding, and prior to considering potential ratio adjustments.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoFrame/codedHeight"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer.</value>
+</VideoFrameCodedHeight>
+<VideoFrameCodedRect>
+<summary>
+The <strong><c>codedRect</c></strong> property of the <see cref="VideoFrame"/> interface returns a <see cref="DOMRectReadOnly"/> with the width and height matching <see cref="VideoFrame.CodedWidth"/> and <see cref="VideoFrame.CodedHeight"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoFrame/codedRect"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DOMRectReadOnly"/>.</value>
+</VideoFrameCodedRect>
+<VideoFrameCodedWidth>
+<summary>
+The <strong><c>codedWidth</c></strong> property of the <see cref="VideoFrame"/> interface returns the width of the <c>VideoFrame</c> in pixels, potentially including non-visible padding, and prior to considering potential ratio adjustments.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoFrame/codedWidth"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer.</value>
+</VideoFrameCodedWidth>
+<VideoFrameColorSpace>
+<summary>
+The <strong><c>colorSpace</c></strong> property of the <see cref="VideoFrame"/> interface returns a <see cref="VideoColorSpace"/> object representing the color space of the video.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoFrame/colorSpace"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="VideoColorSpace"/> object.</value>
+</VideoFrameColorSpace>
+<VideoFrameCopyTo>
+<summary>
+The <strong><c>copyTo()</c></strong> method of the <see cref="VideoFrame"/> interface copies the contents of the <c>VideoFrame</c> to an <c>ArrayBuffer</c>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoFrame/copyTo"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <c>Promise</c> that resolves to the layout of the copy when the copy has completed.</returns>
+</VideoFrameCopyTo>
+<VideoFrameDisplayHeight>
+<summary>
+The <strong><c>displayHeight</c></strong> property of the <see cref="VideoFrame"/> interface returns the height of the <c>VideoFrame</c> after applying aspect ratio adjustments.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoFrame/displayHeight"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer.</value>
+</VideoFrameDisplayHeight>
+<VideoFrameDisplayWidth>
+<summary>
+The <strong><c>displayWidth</c></strong> property of the <see cref="VideoFrame"/> interface returns the width of the <c>VideoFrame</c> after applying aspect ratio adjustments.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoFrame/displayWidth"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer.</value>
+</VideoFrameDisplayWidth>
+<VideoFrameDuration>
+<summary>
+The <strong><c>duration</c></strong> property of the <see cref="VideoFrame"/> interface returns an integer indicating the duration of the video in microseconds.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoFrame/duration"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer.</value>
+</VideoFrameDuration>
+<VideoFrameFlip>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>flip</c></strong> property of the <see cref="VideoFrame"/> interface returns a boolean that indicates whether the <c>VideoFrame</c> is horizontally mirrored.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoFrame/flip"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean. If <c>true</c>, horizontal mirroring is applied. Defaults to <c>false</c>.</value>
+</VideoFrameFlip>
+<VideoFrameFormat>
+<summary>
+The <strong><c>format</c></strong> property of the <see cref="VideoFrame"/> interface returns the pixel format of the <c>VideoFrame</c>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoFrame/format"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing a video pixel format, one of:</value>
+</VideoFrameFormat>
+<VideoFrameRotation>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>rotation</c></strong> property of the <see cref="VideoFrame"/> interface returns the rotation of the video frame.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoFrame/rotation"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer representing the rotation (0, 90, 180, or 270) in degrees clockwise. Defaults to <c>0</c>. Arbitrary numbers (including negatives) are rounded to the next quarter turn.</value>
+</VideoFrameRotation>
+<VideoFrameTimestamp>
+<summary>
+The <strong><c>timestamp</c></strong> property of the <see cref="VideoFrame"/> interface returns an integer indicating the timestamp of the video in microseconds.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoFrame/timestamp"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer.</value>
+</VideoFrameTimestamp>
+<VideoFrameVideoFrame>
+<summary>
+The <strong><c>VideoFrame()</c></strong> constructor creates a new <see cref="VideoFrame"/> object representing a frame of a video.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoFrame/VideoFrame"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</VideoFrameVideoFrame>
+<VideoFrameVisibleRect>
+<summary>
+The <strong><c>visibleRect</c></strong> property of the <see cref="VideoFrame"/> interface returns a <see cref="DOMRectReadOnly"/> describing the visible rectangle of pixels for this <c>VideoFrame</c>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoFrame/visibleRect"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DOMRectReadOnly"/>.</value>
+</VideoFrameVisibleRect>
 </docs>

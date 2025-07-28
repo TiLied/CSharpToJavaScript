@@ -9,4 +9,23 @@ The <c>MediaElementAudioSourceNode</c> interface represents an audio source cons
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaElementAudioSourceNode"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </MediaElementAudioSourceNode>
+<MediaElementAudioSourceNodeMediaElement>
+<summary>
+The <see cref="MediaElementAudioSourceNode"/> interface's<br/>read-only <strong><c>mediaElement</c></strong> property indicates the<br/><see cref="HTMLMediaElement"/> that contains the audio track from which the node is<br/>receiving audio.
+</summary>
+<remarks>
+<para>This stream was specified when the node was first created,<br/>either using the <see cref="MediaElementAudioSourceNode.MediaElementAudioSourceNode"/><br/>constructor or the <see cref="AudioContext.CreateMediaElementSource"/> method.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaElementAudioSourceNode/mediaElement"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="HTMLMediaElement"/> representing the element which contains the source<br/>of audio for the node.</value>
+</MediaElementAudioSourceNodeMediaElement>
+<MediaElementAudioSourceNodeMediaElementAudioSourceNode>
+<summary>
+The <strong><c>MediaElementAudioSourceNode()</c></strong> constructor creates a new <see cref="MediaElementAudioSourceNode"/> object instance.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaElementAudioSourceNode/MediaElementAudioSourceNode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="MediaElementAudioSourceNode"/> object instance.</returns>
+</MediaElementAudioSourceNodeMediaElementAudioSourceNode>
 </docs>

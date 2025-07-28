@@ -9,4 +9,95 @@ The <strong><c>HTMLDialogElement</c></strong> interface provides methods to mani
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </HTMLDialogElement>
+<HTMLDialogElementCancel>
+<summary>
+The <strong><c>cancel</c></strong> event fires on a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog">dialog</see> element when the user instructs the browser that they wish to dismiss the current open dialog. The browser fires this event when the user presses the &amp;lt;kbd&amp;gt;Esc&amp;lt;/kbd&amp;gt; key.
+</summary>
+<remarks>
+<para>This event is cancelable but can not bubble.</para><para>When a <c>&amp;lt;dialog&amp;gt;</c> is dismissed with the &amp;lt;kbd&amp;gt;Esc&amp;lt;/kbd&amp;gt; key, both the <c>cancel</c> and <see cref="HTMLDialogElementclose"/> events are fired.</para>
+<para>-HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog">dialog</see> element<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement/cancel"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLDialogElementCancel>
+<HTMLDialogElementClose>
+<summary>
+The <strong><c>close()</c></strong> method of the <see cref="HTMLDialogElement"/> interface closes the {{htmlelement("dialog")}}.<br/>An optional string may be passed as an argument, updating the <c>returnValue</c> of the dialog.
+</summary>
+<remarks>
+<para>-The HTML element implementing this interface: <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog">dialog</see>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement/close"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</HTMLDialogElementClose>
+<HTMLDialogElementClosedBy>
+<summary>
+The <strong><c>closedBy</c></strong> property of the<br/><see cref="HTMLDialogElement"/> interface indicates the types of user actions that can be used to close the associated {{htmlelement("dialog")}} element. It sets or returns the dialog's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog#closedby"><c>closedby</c></see> attribute value.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog">dialog</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement/closedBy"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string; possible values are:</value>
+</HTMLDialogElementClosedBy>
+<HTMLDialogElementClose>
+<summary>
+The <c>close</c> event is fired on an <c>HTMLDialogElement</c> object when the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog">dialog</see> it represents has been closed.
+</summary>
+<remarks>
+<para>This event is not cancelable and does not bubble.</para>
+<para>-HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog"><c>&amp;lt;dialog&amp;gt;</c></see> element<br/>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/Event"><c>Event</c></see> interface<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement/close"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLDialogElementClose>
+<HTMLDialogElementOpen>
+<summary>
+The <strong><c>open</c></strong> property of the<br/><see cref="HTMLDialogElement"/> interface is a boolean value reflecting the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog#open"><c>open</c></see> HTML attribute, indicating whether the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog">dialog</see> is<br/>available for interaction.
+</summary>
+<remarks>
+<para>-The HTML element implementing this interface: <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog">dialog</see>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement/open"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value representing the state of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog#open"><c>open</c></see> HTML attribute. A value of <c>true</c> means that the dialog is showing, while <c>false</c> means it&amp;apos;s not showing.<blockquote class="WARNING"><h5>WARNING</h5>While the <c>open</c> property is technically not read-only and can be set directly, doing so is strongly discouraged by <see href="https://html.spec.whatwg.org/multipage/interactive-elements.html#attr-dialog-closedby">the HTML specification</see>, as it can break normal dialog interactions in unexpected ways. For example, the <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement/close_event"><c>close</c></see> event won&amp;apos;t fire when programmatically setting <c>open</c> to <c>false</c>, and subsequent calls to the <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement/close"><c>close()</c></see> and <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement/requestClose"><c>requestClose()</c></see> methods will have no effect. Instead, it&amp;apos;s better to use methods such as <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement/show"><c>show()</c></see>, <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement/showModal"><c>showModal()</c></see>, <c>close()</c>, and <c>requestClose()</c> to change the value of the <c>open</c> attribute.</blockquote></value>
+</HTMLDialogElementOpen>
+<HTMLDialogElementRequestClose>
+<summary>
+The <strong><c>requestClose()</c></strong> method of the <see cref="HTMLDialogElement"/> interface requests to close the {{htmlelement("dialog")}}.<br/>An optional string may be passed as an argument, updating the <c>returnValue</c> of the dialog.
+</summary>
+<remarks>
+<para>This method differs from the <see cref="HTMLDialogElement.Close"/> method in that it fires a <c>cancel</c> event before firing the <c>close</c> event.<br/>Authors can call <see cref="Event.PreventDefault"/> in the handler for the <c>cancel</c> event to prevent the dialog from closing.</para><para>This method exposes the same behavior as the dialog&amp;apos;s internal close watcher.</para>
+<para>-The HTML element implementing this interface: <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog">dialog</see>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement/requestClose"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</HTMLDialogElementRequestClose>
+<HTMLDialogElementReturnValue>
+<summary>
+The <strong><c>returnValue</c></strong> property of the <see cref="HTMLDialogElement"/> interface is a string representing the return value for a {{htmlelement("dialog")}} element when it's closed.<br/>You can set the value directly (<c>dialog.returnValue = &amp;quot;result&amp;quot;</c>) or by providing the value as a string argument to <see cref="HTMLDialogElement.Close"/> or <see cref="HTMLDialogElement.RequestClose"/>.
+</summary>
+<remarks>
+<para>-The HTML element implementing this interface: <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog">dialog</see>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement/returnValue"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing the <c>returnValue</c> of the dialog.<br/>Defaults to an empty string (<c>&amp;quot;&amp;quot;</c>).</value>
+</HTMLDialogElementReturnValue>
+<HTMLDialogElementShow>
+<summary>
+The <strong><c>show()</c></strong> method of the <see cref="HTMLDialogElement"/><br/>interface displays the dialog modelessly, i.e., still allowing interaction with content<br/>outside of the dialog.
+</summary>
+<remarks>
+<para>-The HTML element implementing this interface: <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog">dialog</see>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement/show"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</HTMLDialogElementShow>
+<HTMLDialogElementShowModal>
+<summary>
+The <strong><c>showModal()</c></strong> method of the<br/><see cref="HTMLDialogElement"/> interface displays the dialog as a modal, over the top<br/>of any other dialogs that might be present. It displays in the <see href="https://developer.mozilla.org/en-US/docs/Glossary/top layer">top layer</see>, along with a<br/>{{cssxref(&amp;apos;::backdrop&amp;apos;)}} pseudo-element. Elements inside the same document as the dialog, except the dialog and its descendants, become <strong>inert</strong> (as if the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/inert"><c>inert</c></see> attribute is specified). Only the containing document becomes blocked; if the dialog is rendered inside an iframe, the rest of the page remains interactive.
+</summary>
+<remarks>
+<para>-The HTML element implementing this interface: <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog">dialog</see>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement/showModal"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</HTMLDialogElementShowModal>
 </docs>

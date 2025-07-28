@@ -7,4 +7,292 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/USBDevice"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </USBDevice>
+<USBDeviceClaimInterface>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>claimInterface()</c></strong> method of the<br/><see cref="USBDevice"/> interface returns a {{jsxref("promise")}} that resolves when<br/>the requested interface is claimed for exclusive access.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/USBDevice/claimInterface"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/>.</returns>
+</USBDeviceClaimInterface>
+<USBDeviceClearHalt>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>clearHalt()</c></strong> method of the <see cref="USBDevice"/><br/>interface returns a <see cref="Promise"/> that resolves when a halt condition is<br/>cleared. A halt condition is when a data transfer to or from the device has a status<br/>of <c>&amp;apos;stall&amp;apos;</c>, which requires the web page (the <strong>host</strong> system, in USB<br/>terminology) to clear that condition. See the for details.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/USBDevice/clearHalt"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/>.</returns>
+</USBDeviceClearHalt>
+<USBDeviceClose>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>close()</c></strong> method of the <see cref="USBDevice"/><br/>interface returns a <see cref="Promise"/> that resolves when all open interfaces are<br/>released and the device session has ended.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/USBDevice/close"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/>.</returns>
+</USBDeviceClose>
+<USBDeviceConfiguration>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>configuration</c></strong> read only property of the<br/><see cref="USBDevice"/> interface returns a <see cref="USBConfiguration"/> object for<br/>the currently selected interface for a paired USB device.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/USBDevice/configuration"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="USBConfiguration"/> object.</value>
+</USBDeviceConfiguration>
+<USBDeviceConfigurations>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>configurations</c></strong> read only property of the<br/><see cref="USBDevice"/> interface an {{jsxref("array")}} of device-specific interfaces<br/>for controlling a paired USB device.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/USBDevice/configurations"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An {{jsxref("array")}} of <see cref="USBConfiguration"/> objects.</value>
+</USBDeviceConfigurations>
+<USBDeviceControlTransferIn>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>controlTransferIn()</c></strong> method of the <see cref="USBDevice"/> interface returns a {{jsxref("Promise")}} that resolves with a <see cref="USBInTransferResult"/> when a command or status request has been transmitted to (received by) the USB device.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/USBDevice/controlTransferIn"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>{{jsxref("promise")}} that resolves with a <see cref="USBInTransferResult"/>.</returns>
+</USBDeviceControlTransferIn>
+<USBDeviceControlTransferOut>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>controlTransferOut()</c></strong> method of the <see cref="USBDevice"/> interface returns a {{jsxref("Promise")}} that resolves with a <see cref="USBOutTransferResult"/> when a command or status operation has been transmitted from the USB device.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/USBDevice/controlTransferOut"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("promise")}} that resolves with a <see cref="USBOutTransferResult"/>.</returns>
+</USBDeviceControlTransferOut>
+<USBDeviceDeviceClass>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>deviceClass</c></strong> read only property of the<br/><see cref="USBDevice"/> interface one of three properties that identify USB devices for<br/>the purpose of loading a USB driver that will work with that device. The other two<br/>properties are <c>USBDevice.deviceSubclass</c> and <c>USBDevice.deviceProtocol</c>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/USBDevice/deviceClass"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</USBDeviceDeviceClass>
+<USBDeviceDeviceProtocol>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>deviceProtocol</c></strong> read only property of the<br/><see cref="USBDevice"/> interface one of three properties that identify USB devices for<br/>the purpose of loading a USB driver that will work with that device. The other two<br/>properties are <c>USBDevice.deviceClass</c><br/>and <c>USBDevice.deviceSubclass</c>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/USBDevice/deviceProtocol"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</USBDeviceDeviceProtocol>
+<USBDeviceDeviceSubclass>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>deviceSubclass</c></strong> read only property of the<br/><see cref="USBDevice"/> interface one of three properties that identify USB devices for<br/>the purpose of loading a USB driver that will work with that device. The other two<br/>properties are USBDevice.deviceClass and USBDevice.deviceProtocol.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/USBDevice/deviceSubclass"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</USBDeviceDeviceSubclass>
+<USBDeviceDeviceVersionMajor>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>deviceVersionMajor</c></strong> read only property of the<br/><see cref="USBDevice"/> interface he major version number of the device in a semantic<br/>versioning scheme.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/USBDevice/deviceVersionMajor"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</USBDeviceDeviceVersionMajor>
+<USBDeviceDeviceVersionMinor>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>deviceVersionMinor</c></strong> read only property of the<br/><see cref="USBDevice"/> interface the minor version number of the device in a semantic<br/>versioning scheme.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/USBDevice/deviceVersionMinor"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</USBDeviceDeviceVersionMinor>
+<USBDeviceDeviceVersionSubminor>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>deviceVersionSubminor</c></strong> read only property of the<br/><see cref="USBDevice"/> interface the patch version number of the device in a semantic<br/>versioning scheme.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/USBDevice/deviceVersionSubminor"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</USBDeviceDeviceVersionSubminor>
+<USBDeviceForget>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>forget()</c></strong> method of the <see cref="USBDevice"/> interface returns a {{jsxref("Promise")}} that resolves when all pending operations are aborted, all open interfaces are released, the device session has ended, and the permission is reset.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/USBDevice/forget"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> which resolves with <c>undefined</c> once the device access permission is revoked.</returns>
+</USBDeviceForget>
+<USBDeviceIsochronousTransferIn>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>isochronousTransferIn()</c></strong> method of the <see cref="USBDevice"/> interface returns a {{jsxref("Promise")}} that resolves with a <see cref="USBIsochronousInTransferResult"/> when time sensitive information has been transmitted to (received by) the USB device.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/USBDevice/isochronousTransferIn"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that resolves with a <see cref="USBIsochronousInTransferResult"/>.</returns>
+</USBDeviceIsochronousTransferIn>
+<USBDeviceIsochronousTransferOut>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>isochronousTransferOut()</c></strong> method of the<br/><see cref="USBDevice"/> interface returns a {{jsxref("Promise")}} that resolves with a <see cref="USBIsochronousOutTransferResult"/> when time sensitive information has been transmitted from the USB device.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/USBDevice/isochronousTransferOut"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that resolves with a <see cref="USBIsochronousOutTransferResult"/>.</returns>
+</USBDeviceIsochronousTransferOut>
+<USBDeviceManufacturerName>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>manufacturerName</c></strong> read only property of the<br/><see cref="USBDevice"/> interface the of the organization that manufactured the USB<br/>device.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/USBDevice/manufacturerName"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</USBDeviceManufacturerName>
+<USBDeviceOpen>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>open()</c></strong> method of the <see cref="USBDevice"/><br/>interface returns a <see cref="Promise"/> that resolves when a device session has<br/>started.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/USBDevice/open"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/>.</returns>
+</USBDeviceOpen>
+<USBDeviceOpened>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>opened</c></strong> read only property of the<br/><see cref="USBDevice"/> interface indicates whether a session has been started with a<br/>paired USB device. A device must be opened before it can be controlled by a web page.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/USBDevice/opened"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Boolean"/>.</value>
+</USBDeviceOpened>
+<USBDeviceProductId>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>productId</c></strong> read only property of the<br/><see cref="USBDevice"/> interface the manufacturer-defined code that identifies a USB<br/>device.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/USBDevice/productId"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The manufacturer-defined code that identifies a USB device.</value>
+</USBDeviceProductId>
+<USBDeviceProductName>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>productName</c></strong> read only property of the<br/><see cref="USBDevice"/> interface the manufacturer-defined name that identifies a USB<br/>device.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/USBDevice/productName"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The manufacturer-defined name that identifies a USB device.</value>
+</USBDeviceProductName>
+<USBDeviceReleaseInterface>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>releaseInterface()</c></strong> method of the<br/><see cref="USBDevice"/> interface returns a {{jsxref("promise")}} that resolves when a<br/>claimed interface is released from exclusive access.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/USBDevice/releaseInterface"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/>.</returns>
+</USBDeviceReleaseInterface>
+<USBDeviceReset>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>reset()</c></strong> method of the <see cref="USBDevice"/><br/>interface returns a <see cref="Promise"/> that resolves when the device is reset and all<br/>app operations canceled and their promises rejected.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/USBDevice/reset"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/>.</returns>
+</USBDeviceReset>
+<USBDeviceSelectAlternateInterface>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>selectAlternateInterface()</c></strong> method of the<br/><see cref="USBDevice"/> interface returns a {{jsxref("promise")}} that resolves when<br/>the specified alternative endpoint is selected.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/USBDevice/selectAlternateInterface"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/>.</returns>
+</USBDeviceSelectAlternateInterface>
+<USBDeviceSelectConfiguration>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>selectConfiguration()</c></strong> method of the<br/><see cref="USBDevice"/> interface returns a {{jsxref("promise")}} that resolves when<br/>the specified configuration is selected.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/USBDevice/selectConfiguration"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/>.</returns>
+</USBDeviceSelectConfiguration>
+<USBDeviceSerialNumber>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>serialNumber</c></strong> read only property of the<br/><see cref="USBDevice"/> interface is the manufacturer-defined serial number for the<br/>specific USB device.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/USBDevice/serialNumber"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The serial number for the specified USB device</value>
+</USBDeviceSerialNumber>
+<USBDeviceTransferIn>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>transferIn()</c></strong> method of the <see cref="USBDevice"/><br/>interface returns a <see cref="Promise"/> that resolves with a<br/><see cref="USBInTransferResult"/> when bulk or interrupt data is received from the USB<br/>device.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/USBDevice/transferIn"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("promise")}} that resolves with a <see cref="USBInTransferResult"/>.</returns>
+</USBDeviceTransferIn>
+<USBDeviceTransferOut>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>transferOut()</c></strong> method of the <see cref="USBDevice"/><br/>interface returns a <see cref="Promise"/> that resolves with a<br/><see cref="USBOutTransferResult"/> when bulk or interrupt data is sent to the USB<br/>device.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/USBDevice/transferOut"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("promise")}} that resolves with a <see cref="USBOutTransferResult"/>.</returns>
+</USBDeviceTransferOut>
+<USBDeviceUsbVersionMajor>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>usbVersionMajor</c></strong> read only property of the<br/><see cref="USBDevice"/> interface is one of three properties that declare the USB<br/>protocol version supported by the device. The other two properties<br/>are USBDevice.usbVersionMinor and USBDevice.usbVersionSubminor.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/USBDevice/usbVersionMajor"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The last of three properties that declare the USB protocol version supported by the<br/>device.</value>
+</USBDeviceUsbVersionMajor>
+<USBDeviceUsbVersionMinor>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>usbVersionMinor</c></strong> read only property of the<br/><see cref="USBDevice"/> interface is one of three properties that declare the USB<br/>protocol version supported by the device. The other two properties<br/>are USBDevice.usbVersionMajor and USBDevice.usbVersionSubminor.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/USBDevice/usbVersionMinor"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The second of three properties that declare the USB protocol version supported by the<br/>device.</value>
+</USBDeviceUsbVersionMinor>
+<USBDeviceUsbVersionSubminor>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>usbVersionSubminor</c></strong> read only property of the<br/><see cref="USBDevice"/> interface is one of three properties that declare the USB<br/>protocol version supported by the device. The other two properties<br/>are USBDevice.usbVersionMajor and USBDevice.usbVersionMinor.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/USBDevice/usbVersionSubminor"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The first of three properties that declare the USB protocol version supported by the<br/>device.</value>
+</USBDeviceUsbVersionSubminor>
+<USBDeviceVendorId>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>vendorId</c></strong> read only property of the<br/><see cref="USBDevice"/> interface is the official usb.org-assigned vendor ID.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/USBDevice/vendorId"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The official usb.org-assigned vendor ID.</value>
+</USBDeviceVendorId>
 </docs>

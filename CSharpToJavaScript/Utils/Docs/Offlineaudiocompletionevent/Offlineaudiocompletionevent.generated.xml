@@ -1,7 +1,7 @@
 <docs>
 <OfflineAudioCompletionEvent>
 <summary>
-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see> <c>OfflineAudioCompletionEvent</c> interface represents events that occur when the processing of an <see cref="OfflineAudioContext"/> is terminated. The <see cref="OfflineAudioContext/complete_event"/> event uses this interface.
+The <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see> <c>OfflineAudioCompletionEvent</c> interface represents events that occur when the processing of an <see cref="OfflineAudioContext"/> is terminated. The <see cref="OfflineAudioContextcomplete"/> event uses this interface.
 </summary>
 <remarks>
 <blockquote class="NOTE"><h5>NOTE</h5><para>This interface is marked as deprecated; it is still supported for legacy reasons, but it will soon be superseded when the promise version of <see cref="OfflineAudioContext.StartRendering"/> is supported in browsers, which will no longer need it.</para></blockquote><para></para>
@@ -9,4 +9,23 @@ The <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">W
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/OfflineAudioCompletionEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </OfflineAudioCompletionEvent>
+<OfflineAudioCompletionEventOfflineAudioCompletionEvent>
+<summary>
+The <strong><c>OfflineAudioCompletionEvent()</c></strong> constructor of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see> creates a new<br/><see cref="OfflineAudioCompletionEvent"/> object.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>You wouldn&amp;apos;t generally use the constructor manually.<br/><c>OfflineAudioCompletionEvent</c> events are dispatched to<br/><see cref="OfflineAudioContext"/> instances for legacy reasons.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/OfflineAudioCompletionEvent/OfflineAudioCompletionEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="OfflineAudioCompletionEvent"/> object.</returns>
+</OfflineAudioCompletionEventOfflineAudioCompletionEvent>
+<OfflineAudioCompletionEventRenderedBuffer>
+<summary>
+The <strong><c>renderedBuffer</c></strong> read-only property of the<br/><see cref="OfflineAudioCompletionEvent"/> interface is an <see cref="AudioBuffer"/><br/>containing the result of processing an <see cref="OfflineAudioContext"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/OfflineAudioCompletionEvent/renderedBuffer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="AudioBuffer"/>.</value>
+</OfflineAudioCompletionEventRenderedBuffer>
 </docs>

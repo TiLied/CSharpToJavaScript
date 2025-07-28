@@ -9,4 +9,34 @@ The AnimationPlaybackEvent interface of the <see href="https://developer.mozilla
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AnimationPlaybackEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </AnimationPlaybackEvent>
+<AnimationPlaybackEventAnimationPlaybackEvent>
+<summary>
+The <strong><c>AnimationPlaybackEvent()</c></strong> constructor of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see> returns a new <see cref="AnimationPlaybackEvent"/> object instance.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/>-<see cref="AnimationPlayBackEvent"/><br/>-<see cref="Animation.PlayState"/><br/>-<see cref="CustomEvent.CustomEvent"/><br/>-<see cref="Event.Event"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AnimationPlaybackEvent/AnimationPlaybackEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="AnimationPlaybackEvent"/> object.</returns>
+</AnimationPlaybackEventAnimationPlaybackEvent>
+<AnimationPlaybackEventCurrentTime>
+<summary>
+The <strong><c>currentTime</c></strong> read-only property of the <see cref="AnimationPlaybackEvent"/> interface represents the current time of the animation that generated the event at the moment the event is queued. This will be unresolved if the animation was <c>idle</c> at the time the event was generated.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/>-<see cref="AnimationPlayBackEvent"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AnimationPlaybackEvent/currentTime"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number representing the current time in milliseconds, or <c>null</c>.</value>
+</AnimationPlaybackEventCurrentTime>
+<AnimationPlaybackEventTimelineTime>
+<summary>
+The <strong><c>timelineTime</c></strong> read-only property of the <see cref="AnimationPlaybackEvent"/> interface represents the time value of the animation's <see cref="AnimationTimeline"/> at the moment the event is queued. This will be unresolved if the animation was not associated with a timeline at the time the event was generated or if the associated timeline was inactive.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/>-<see cref="AnimationPlayBackEvent"/><br/>-<see cref="AnimationTimeline"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AnimationPlaybackEvent/timelineTime"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number representing the current time in milliseconds, or <c>null</c>.</value>
+</AnimationPlaybackEventTimelineTime>
 </docs>

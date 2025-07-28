@@ -1,0 +1,41 @@
+<docs>
+<FileSystemObserver>
+<summary>
+<div class="CAUTION"><h5>CAUTION</h5> <strong>Non-standard</strong></div> The <strong><c>FileSystemObserver</c></strong> interface of the {{domxref(&amp;quot;File System API&amp;quot;, &amp;quot;File System API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} provides a mechanism to observe changes to the user-observable file system and the <see href="https://developer.mozilla.org/en-US/docs/Web/API/File_System_API/Origin_private_file_system">Origin Private File System</see> (OPFS). This means web applications don&amp;apos;t have to poll the file system to find changes in the files or folder structure, which can be time-consuming and wasteful.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_System_API">File System API</see><br/>-<see href="https://developer.chrome.com/blog/file-system-observer#stop-observing-the-file-system">The File System Observer API origin trial</see> on developer.chrome.com (2024)<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemObserver"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</FileSystemObserver>
+<FileSystemObserverDisconnect>
+<summary>
+<div class="CAUTION"><h5>CAUTION</h5> <strong>Non-standard</strong></div> The <strong><c>disconnect()</c></strong> method of the<br/><see cref="FileSystemObserver"/> interface stops the observer observing the file system.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_System_API">File System API</see><br/>-<see href="https://developer.chrome.com/blog/file-system-observer#stop-observing-the-file-system">The File System Observer API origin trial</see> on developer.chrome.com (2024)<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemObserver/disconnect"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="'undefined'"/>).</returns>
+</FileSystemObserverDisconnect>
+<FileSystemObserverFileSystemObserver>
+<summary>
+<div class="CAUTION"><h5>CAUTION</h5> <strong>Non-standard</strong></div> The <strong><c>FileSystemObserver()</c></strong> constructor creates a new <see cref="FileSystemObserver"/> object instance.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_System_API">File System API</see><br/>-<see href="https://developer.chrome.com/blog/file-system-observer#stop-observing-the-file-system">The File System Observer API origin trial</see> on developer.chrome.com (2024)<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemObserver/FileSystemObserver"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="FileSystemObserver"/> object.</returns>
+</FileSystemObserverFileSystemObserver>
+<FileSystemObserverObserve>
+<summary>
+<div class="CAUTION"><h5>CAUTION</h5> <strong>Non-standard</strong></div> The <strong><c>observe()</c></strong> method of the<br/><see cref="FileSystemObserver"/> interface asks the observer to start observing changes to a given file or directory.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_System_API">File System API</see><br/>-<see href="https://developer.chrome.com/blog/file-system-observer#stop-observing-the-file-system">The File System Observer API origin trial</see> on developer.chrome.com (2024)<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemObserver/observe"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves to <see cref="'undefined'"/>.</returns>
+</FileSystemObserverObserve>
+</docs>

@@ -1,11 +1,29 @@
 <docs>
 <MIDIMessageEvent>
 <summary>
-The <strong><c>MIDIMessageEvent</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_MIDI_API">Web MIDI API</see> represents the event passed to the <see cref="MIDIInput.Midimessage_event"/> event of the <see cref="MIDIInput"/> interface. A <c>midimessage</c> event is fired every time a MIDI message is sent from a device represented by a <see cref="MIDIInput"/>, for example when a MIDI keyboard key is pressed, a knob is tweaked, or a slider is moved.
+The <strong><c>MIDIMessageEvent</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_MIDI_API">Web MIDI API</see> represents the event passed to the <see cref="MIDIInput.Midimessage"/> event of the <see cref="MIDIInput"/> interface. A <c>midimessage</c> event is fired every time a MIDI message is sent from a device represented by a <see cref="MIDIInput"/>, for example when a MIDI keyboard key is pressed, a knob is tweaked, or a slider is moved.
 </summary>
 <remarks>
 <para></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MIDIMessageEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </MIDIMessageEvent>
+<MIDIMessageEventData>
+<summary>
+The <strong><c>data</c></strong> read-only property of the <see cref="MIDIMessageEvent"/> interface returns the MIDI data bytes of a single MIDI message.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MIDIMessageEvent/data"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Uint8Array"/>.</value>
+</MIDIMessageEventData>
+<MIDIMessageEventMIDIMessageEvent>
+<summary>
+The <strong><c>MIDIMessageEvent()</c></strong> constructor creates a new <see cref="MIDIMessageEvent"/> object. Typically this constructor is not used as events are created when a <see cref="MIDIInput"/> finishes receiving one or more MIDI messages.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MIDIMessageEvent/MIDIMessageEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="MIDIMessageEvent"/> object.</returns>
+</MIDIMessageEventMIDIMessageEvent>
 </docs>

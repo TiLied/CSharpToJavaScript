@@ -1,0 +1,84 @@
+<docs>
+<LanguageDetector>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>LanguageDetector</c></strong> interface of the {{domxref(&amp;quot;Translator and Language Detector APIs&amp;quot;, &amp;quot;Translator and Language Detector APIs&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} contains all the language detection functionality, including checking AI model availability, creating a new <c>LanguageDetector</c> instance, using it to detect a language, and more.
+</summary>
+<remarks>
+<para></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Translator_and_Language_Detector_APIs/Using">Using the Translator and Language Detector APIs</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/LanguageDetector"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</LanguageDetector>
+<LanguageDetectorAvailability>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>availability()</c></strong> static method of the <see cref="LanguageDetector"/> interface returns an enumerated value that indicates whether the browser AI model supports a given <c>LanguageDetector</c> configuration.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Translator_and_Language_Detector_APIs/Using">Using the Translator and Language Detector APIs</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/LanguageDetector/availability"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that fulfills with an enumerated value indicating whether support is available (or will be available) for a given <c>LanguageDetector</c> configuration, or <c>null</c> if support could not be determined.Possible values include:</returns>
+</LanguageDetectorAvailability>
+<LanguageDetectorCreate>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>create()</c></strong> static method of the <see cref="LanguageDetector"/> interface creates a new <c>LanguageDetector</c> instance to detect languages.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>The <c>create()</c> method requires <see href="https://developer.mozilla.org/en-US/docs/Glossary/Transient_activation">transient activation</see>, that is, it must be invoked in response to a user action such as a mouse click or button press.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Translator_and_Language_Detector_APIs/Using">Using the Translator and Language Detector APIs</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/LanguageDetector/create"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that fulfills with a <c>LanguageDetector</c> object instance.</returns>
+</LanguageDetectorCreate>
+<LanguageDetectorDestroy>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>destroy()</c></strong> method of the <see cref="LanguageDetector"/> interface destroys the <c>LanguageDetector</c> instance it is called on. It makes sense to destroy these objects if they are no longer going to be used, as they tie up significant resources in their handling.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Translator_and_Language_Detector_APIs/Using">Using the Translator and Language Detector APIs</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/LanguageDetector/destroy"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</LanguageDetectorDestroy>
+<LanguageDetectorDetect>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>detect()</c></strong> method of the <see cref="LanguageDetector"/> interface detects the closest matching language or languages that a given text string is most likely to be written in.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Translator_and_Language_Detector_APIs/Using">Using the Translator and Language Detector APIs</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/LanguageDetector/detect"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that fulfills with an array of objects representing the detected languages. Each object contains the following properties:The sum of all the returned <c>confidence</c> values should theoretically be 1, however, it may be lower because very low confidence values are excluded from the results.The last array element returned will always have a <c>detectedLanguage</c> value of <c>und</c> — this is an abbreviation of &amp;quot;undetermined&amp;quot;, and represents the probability that the text is not written in a language the model knows.</returns>
+</LanguageDetectorDetect>
+<LanguageDetectorExpectedInputLanguages>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>expectedInputLanguages</c></strong> read-only property of the <see cref="LanguageDetector"/> interface returns the expected languages to be detected in the input text. Specifying expected input languages helps improve the accuracy of the language detection.
+</summary>
+<remarks>
+<para>A <c>LanguageDetector</c> instance&amp;apos;s <c>expectedInputLanguages</c> are set when creating it via a <see cref="LanguageDetector.Create"/> call.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Translator_and_Language_Detector_APIs/Using">Using the Translator and Language Detector APIs</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/LanguageDetector/expectedInputLanguages"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An array of strings specifying the expected input languages. These will be valid <see href="https://en.wikipedia.org/wiki/IETF_language_tag#List_of_common_primary_language_subtags">BCP 47 language tags</see> (as specified in <see href="https://datatracker.ietf.org/doc/html/rfc5646">RFC 5646</see>).</value>
+</LanguageDetectorExpectedInputLanguages>
+<LanguageDetectorInputQuota>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>inputQuota</c></strong> read-only property of the <see cref="LanguageDetector"/> interface returns the input quota available to the browser for detecting languages.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Translator_and_Language_Detector_APIs/Using">Using the Translator and Language Detector APIs</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/LanguageDetector/inputQuota"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number specifying the available input quota.This number is implementation-dependant. For example, it might be <see cref="Infinity"/> if there are no limits beyond the user's memory and the maximum length of JavaScript strings, or it might be a number of tokens in the case of AI models that use a token/credits scheme.The only guarantee is that <c>inputQuota</c> - <see cref="LanguageDetector.MeasureInputUsage"/> will be non-negative if there is sufficient quota to detect the text's language.</value>
+</LanguageDetectorInputQuota>
+<LanguageDetectorMeasureInputUsage>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>measureInputUsage()</c></strong> method of the <see cref="LanguageDetector"/> interface reports how much input quota would be used by a language detection operation for a given text input.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Translator_and_Language_Detector_APIs/Using">Using the Translator and Language Detector APIs</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/LanguageDetector/measureInputUsage"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that fulfills with a number specifying the <see cref="LanguageDetector.InputQuota"/> usage of the given input text.This number is implementation-dependant; if it is less than the <see cref="LanguageDetector.InputQuota"/>, the string's language can be detected.</returns>
+</LanguageDetectorMeasureInputUsage>
+</docs>

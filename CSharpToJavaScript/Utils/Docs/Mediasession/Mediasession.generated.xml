@@ -8,4 +8,71 @@ The <strong><c>MediaSession</c></strong> interface of the {{domxref(&amp;quot;Me
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaSession"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </MediaSession>
+<MediaSessionMetadata>
+<summary>
+The <strong><c>metadata</c></strong> property of the <see cref="MediaSession"/><br/>interface contains a <see cref="MediaMetadata"/> object providing descriptive<br/>information about the currently playing media, or <c>null</c> if the metadata has<br/>not been set. This metadata is provided by the browser to the device for presentation in<br/>any standard media control user interface the device might offer.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaSession/metadata"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An instance of <see cref="MediaMetadata"/> containing information about the media<br/>currently being played.</value>
+</MediaSessionMetadata>
+<MediaSessionPlaybackState>
+<summary>
+The <strong><c>playbackState</c></strong> property of the<br/><see cref="MediaSession"/> interface indicates whether the current media session is<br/>playing or paused.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaSession/playbackState"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string indicating the current playback state of the media session.<br/>The value may be one of the following:</value>
+</MediaSessionPlaybackState>
+<MediaSessionSetActionHandler>
+<summary>
+The <strong><c>setActionHandler()</c></strong> method of the <see cref="MediaSession"/> interface sets a handler for a media session action.<br/>These actions let a web app receive notifications when the user engages a device&amp;apos;s built-in physical or onscreen media controls, such as play, stop, or seek buttons.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaSession/setActionHandler"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</MediaSessionSetActionHandler>
+<MediaSessionSetCameraActive>
+<summary>
+The <strong><c>setCameraActive()</c></strong> method of the <see cref="MediaSession"/> interface is used to indicate to the user agent whether the user's camera is considered to be active.
+</summary>
+<remarks>
+<para>Call this method on the <c>navigator</c> object&amp;apos;s<br/><see cref="Navigator.MediaSession"/> object.</para><para>Note that the status of the camera is not tracked in the <see cref="MediaSession"/> itself, but must be tracked separately.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaSession/setCameraActive"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</MediaSessionSetCameraActive>
+<MediaSessionSetMicrophoneActive>
+<summary>
+The <strong><c>setMicrophoneActive()</c></strong> method of the <see cref="MediaSession"/> interface is used to indicate to the user agent whether the user's microphone is considered to be currently muted.
+</summary>
+<remarks>
+<para>Call this method on the <c>navigator</c> object&amp;apos;s<br/><see cref="Navigator.MediaSession"/> object.</para><para>Note that the status of the microphone is not tracked in the <see cref="MediaSession"/> itself, but must be tracked separately.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaSession/setMicrophoneActive"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</MediaSessionSetMicrophoneActive>
+<MediaSessionSetPositionState>
+<summary>
+The <strong><c>setPositionState()</c></strong> method of the<br/><see cref="MediaSession"/> interface is used to update the current<br/>document&amp;apos;s media playback position and speed for presentation by user&amp;apos;s device in any<br/>kind of interface that provides details about ongoing media. This can be<br/>particularly useful if your code implements a player for type of media not directly<br/>supported by the browser.
+</summary>
+<remarks>
+<para>Call this method on the <c>navigator</c> object&amp;apos;s<br/><see cref="Navigator.MediaSession"/> object.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaSession/setPositionState"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</MediaSessionSetPositionState>
+<MediaSessionSetScreenshareActive>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>setScreenshareActive()</c></strong> method of the <see cref="MediaSession"/> interface is used to indicate to the user agent whether the user's screenshare is considered to be active.
+</summary>
+<remarks>
+<para>Call this method on the <c>navigator</c> object's <see cref="Navigator.MediaSession"/> object.</para><para>Note that the status of the screenshare is not tracked in the <see cref="MediaSession"/> itself, but must be tracked separately.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaSession/setScreenshareActive"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</MediaSessionSetScreenshareActive>
 </docs>

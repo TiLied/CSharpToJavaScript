@@ -7,4 +7,30 @@ The <strong><c>CompressionStream</c></strong> interface of the <see cref="'Compr
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CompressionStream"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </CompressionStream>
+<CompressionStreamCompressionStream>
+<summary>
+The <strong><c>CompressionStream()</c></strong> constructor creates a new <see cref="CompressionStream"/> object which compresses a stream of data.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CompressionStream/CompressionStream"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CompressionStreamCompressionStream>
+<CompressionStreamReadable>
+<summary>
+The <strong><c>readable</c></strong> read-only property of the <see cref="CompressionStream"/> interface returns a <see cref="ReadableStream"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CompressionStream/readable"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="ReadableStream"/>.</value>
+</CompressionStreamReadable>
+<CompressionStreamWritable>
+<summary>
+The <strong><c>writable</c></strong> read-only property of the <see cref="CompressionStream"/> interface returns a <see cref="WritableStream"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CompressionStream/writable"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="WritableStream"/>.</value>
+</CompressionStreamWritable>
 </docs>

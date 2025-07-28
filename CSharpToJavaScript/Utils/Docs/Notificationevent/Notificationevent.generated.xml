@@ -8,4 +8,31 @@ The <strong><c>NotificationEvent</c></strong> interface of the {{domxref(&amp;qu
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NotificationEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </NotificationEvent>
+<NotificationEventAction>
+<summary>
+The <strong><c>action</c></strong> read-only property of the <see cref="NotificationEvent"/> interface returns the string ID of the notification button the user clicked. This value returns an empty string if the user clicked the notification somewhere other than an action button, or the notification does not have a button. The notification id is set during the creation of the Notification via the actions array attribute and can't be modified unless the notification is replaced.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NotificationEvent/action"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</NotificationEventAction>
+<NotificationEventNotification>
+<summary>
+The <strong><c>notification</c></strong> read-only property of the <see cref="NotificationEvent"/> interface returns the instance of the <see cref="Notification"/> that was clicked to fire the event. The <see cref="Notification"/> provides read-only access to many properties that were set at the instantiation time of the Notification such as <c>tag</c> and <c>data</c> attributes that allow you to store information for deferred use in the <c>notificationclick</c> event.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NotificationEvent/notification"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Notification"/> object.</value>
+</NotificationEventNotification>
+<NotificationEventNotificationEvent>
+<summary>
+The <strong><c>NotificationEvent()</c></strong> constructor creates a new <see cref="NotificationEvent"/> object.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NotificationEvent/NotificationEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="NotificationEvent"/> object.</returns>
+</NotificationEventNotificationEvent>
 </docs>

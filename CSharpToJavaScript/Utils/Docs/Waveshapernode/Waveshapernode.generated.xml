@@ -9,4 +9,35 @@ The <strong><c>WaveShaperNode</c></strong> interface represents a non-linear dis
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WaveShaperNode"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </WaveShaperNode>
+<WaveShaperNodeCurve>
+<summary>
+The <c>curve</c> property of the <see cref="WaveShaperNode"/> interface is a {{jsxref("Float32Array")}} of numbers describing the distortion to apply.
+</summary>
+<remarks>
+<para>The mid-element of the array is applied to any signal value of <c>0</c>, the first one to signal values of <c>-1</c>, and the last to signal values of <c>1</c>; values lower than <c>-1</c> or greater than <c>1</c> are treated like <c>-1</c> or <c>1</c> respectively.</para><para>If necessary, intermediate values of the distortion curve are linearly interpolated.</para><blockquote class="NOTE"><h5>NOTE</h5><para>The array can be a <c>null</c> value: in that case, no distortion is applied to the input signal.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WaveShaperNode/curve"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Float32Array"/>.</value>
+</WaveShaperNodeCurve>
+<WaveShaperNodeOversample>
+<summary>
+The <c>oversample</c> property of the <see cref="WaveShaperNode"/> interface is an enumerated value indicating if oversampling must be used. Oversampling is a technique for creating more samples (up-sampling) before applying a distortion effect to the audio signal.
+</summary>
+<remarks>
+<para>Once applied, the number of samples is reduced to its initial numbers. This leads to better results by avoiding some aliasing, but comes at the expense of a lower precision shaping curve.</para><para>The possible <c>oversample</c> values are:</para><table><tr><td><para>Value</para></td><td><para>Effect</para></td></tr><tr><td><para><c>&amp;apos;none&amp;apos;</c></para></td><td><para>Do not perform any oversampling.</para></td></tr><tr><td><para><c>&amp;apos;2x&amp;apos;</c></para></td><td><para>Double the amount of samples before applying the shaping curve.</para></td></tr><tr><td><para><c>&amp;apos;4x&amp;apos;</c></para></td><td><para>Multiply by 4 the amount of samples before applying the shaping curve.</para></td></tr></table>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WaveShaperNode/oversample"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>One of <c>&amp;apos;none&amp;apos;</c>, <c>&amp;apos;2x&amp;apos;</c>, or <c>&amp;apos;4x&amp;apos;</c>.</value>
+</WaveShaperNodeOversample>
+<WaveShaperNodeWaveShaperNode>
+<summary>
+The <strong><c>WaveShaperNode()</c></strong> constructor<br/>of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see> creates a new<br/><see cref="WaveShaperNode"/> object which is an <see cref="AudioNode"/> that<br/>represents a non-linear distorter.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WaveShaperNode/WaveShaperNode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="WaveShaperNode"/> object instance.</returns>
+</WaveShaperNodeWaveShaperNode>
 </docs>

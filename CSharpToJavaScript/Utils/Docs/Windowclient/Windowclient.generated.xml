@@ -9,4 +9,50 @@ The <c>WindowClient</c> interface of the <see href="https://developer.mozilla.or
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WindowClient"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </WindowClient>
+<WindowClientAncestorOrigins>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>ancestorOrigins</c></strong> read-only property of the <see cref="WindowClient"/> interface is an array of strings listing the origins of all ancestors of the browsing context represented by this <c>WindowClient</c> in reverse order.
+</summary>
+<remarks>
+<para>The first element in the array is the origin of this window&amp;apos;s parent, and the last element is the origin of the top-level browsing context. If this window is itself a top-level browsing context, then <c>ancestorOrigins</c> is an empty array.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WindowClient/ancestorOrigins"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An array of strings.</value>
+</WindowClientAncestorOrigins>
+<WindowClientFocus>
+<summary>
+The <strong><c>focus()</c></strong> method of the <see cref="WindowClient"/><br/>interface gives user input focus to the current client and returns a<br/><see cref="Promise"/> that resolves to the existing<br/><see cref="WindowClient"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WindowClient/focus"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that resolves to the existing <see cref="WindowClient"/>.</returns>
+</WindowClientFocus>
+<WindowClientFocused>
+<summary>
+The <strong><c>focused</c></strong> read-only property of the<br/><see cref="WindowClient"/> interface is a boolean value that indicates whether<br/>the current client has focus.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WindowClient/focused"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value.</value>
+</WindowClientFocused>
+<WindowClientNavigate>
+<summary>
+The <strong><c>navigate()</c></strong> method of the <see cref="WindowClient"/><br/>interface loads a specified URL into a controlled client page then returns a<br/>{{jsxref("Promise")}} that resolves to the existing <see cref="WindowClient"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WindowClient/navigate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that resolves to the existing <see cref="WindowClient"/> if the URL is from the same origin as the service worker, or {{jsxref("Operators/null", "null")}} otherwise.</returns>
+</WindowClientNavigate>
+<WindowClientVisibilityState>
+<summary>
+The <strong><c>visibilityState</c></strong> read-only property of the<br/><see cref="WindowClient"/> interface indicates the visibility of the current client.<br/>This value can be one of <c>&amp;quot;hidden&amp;quot;</c>, <c>&amp;quot;visible&amp;quot;</c>, or<br/><c>&amp;quot;prerender&amp;quot;</c>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WindowClient/visibilityState"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string (See <see cref="Document.VisibilityState"/> for values).</value>
+</WindowClientVisibilityState>
 </docs>

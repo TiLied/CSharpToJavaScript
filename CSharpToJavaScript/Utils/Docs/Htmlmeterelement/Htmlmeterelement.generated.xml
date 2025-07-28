@@ -8,4 +8,79 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMeterElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </HTMLMeterElement>
+<HTMLMeterElementHigh>
+<summary>
+The <strong><c>high</c></strong> property of the <see cref="HTMLMeterElement"/> interface represents the high boundary of the {{htmlelement("meter")}} element as a floating-point number. It reflects the element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/meter#high"><c>high</c></see> attribute, or the value of <c>max</c> if not defined. The value of <c>high</c> is clamped by the <c>low</c> and <c>max</c> values.
+</summary>
+<remarks>
+<para>This property can also be set directly, for example to set a default value based on some condition.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meter">meter</see><br/>-<see cref="HTMLMeterElement.Value"/><br/>-<see cref="HTMLMeterElement.Max"/><br/>-<see cref="HTMLMeterElement.Low"/><br/>-<see cref="HTMLProgressElement"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMeterElement/high"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number that is not less than <see cref="HTMLMeterElement.Low"/> nor greater than <see cref="HTMLMeterElement.Max"/>.</value>
+</HTMLMeterElementHigh>
+<HTMLMeterElementLabels>
+<summary>
+The <strong><c>HTMLMeterElement.labels</c></strong> read-only property returns a<br/><see cref="NodeList"/> of the {{HTMLElement("label")}} elements associated with the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meter">meter</see> element.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMeterElement/labels"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="NodeList"/> containing the <c>&amp;lt;label&amp;gt;</c> elements associated<br/>with the <c>&amp;lt;meter&amp;gt;</c> element.</value>
+</HTMLMeterElementLabels>
+<HTMLMeterElementLow>
+<summary>
+The <strong><c>low</c></strong> property of the <see cref="HTMLMeterElement"/> interface represents the low boundary of the {{htmlelement("meter")}} element as a floating-point number. It reflects the element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/meter#low"><c>low</c></see> attribute, or the value of <c>min</c> if not defined. The value of <c>low</c> is clamped by the <c>min</c> and <c>max</c> values.
+</summary>
+<remarks>
+<para>This property can also be set directly, for example to set a default value based on some condition.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meter">meter</see><br/>-<see cref="HTMLMeterElement.Value"/><br/>-<see cref="HTMLMeterElement.Min"/><br/>-<see cref="HTMLMeterElement.High"/><br/>-<see cref="HTMLProgressElement"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMeterElement/low"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number that is not less than <see cref="HTMLMeterElement.Min"/> nor greater than <see cref="HTMLMeterElement.Max"/>.</value>
+</HTMLMeterElementLow>
+<HTMLMeterElementMax>
+<summary>
+The <strong><c>max</c></strong> property of the <see cref="HTMLMeterElement"/> interface represents the maximum value of the {{htmlelement("meter")}} element as a floating-point number. It reflects the element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/meter#max"><c>max</c></see> attribute, or the <c>min</c> value if no <c>max</c> is set, or <c>1</c> if neither the <c>min</c> or the <c>max</c> is defined.
+</summary>
+<remarks>
+<para>This property can also be set directly, for example to set a default value based on some condition.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meter">meter</see><br/>-<see cref="HTMLMeterElement.Value"/><br/>-<see cref="HTMLMeterElement.Min"/><br/>-<see cref="HTMLProgressElement"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMeterElement/max"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</HTMLMeterElementMax>
+<HTMLMeterElementMin>
+<summary>
+The <strong><c>min</c></strong> property of the <see cref="HTMLMeterElement"/> interface represents the minimum value of the {{htmlelement("meter")}} element as a floating-point number. It reflects the element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/meter#min"><c>min</c></see> attribute, or <c>0</c> if no <c>min</c> is defined.
+</summary>
+<remarks>
+<para>This property can also be set directly, for example to set a default value based on some condition.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meter">meter</see><br/>-<see cref="HTMLMeterElement.Value"/><br/>-<see cref="HTMLMeterElement.Max"/><br/>-<see cref="HTMLProgressElement"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMeterElement/min"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</HTMLMeterElementMin>
+<HTMLMeterElementOptimum>
+<summary>
+The <strong><c>optimum</c></strong> property of the <see cref="HTMLMeterElement"/> interface represents the optimum boundary of the {{htmlelement("meter")}} element as a floating-point number. It reflects the element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/meter#optimum"><c>optimum</c></see> attribute, or the midpoint between <c>min</c> and <c>max</c> values if not defined. The value of <c>optimum</c> is clamped by the <c>min</c> and <c>max</c> values.
+</summary>
+<remarks>
+<para>This property can also be set directly, for example to set a default value based on some condition.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meter">meter</see><br/>-<see cref="HTMLMeterElement.Value"/><br/>-<see cref="HTMLMeterElement.High"/><br/>-<see cref="HTMLMeterElement.Low"/><br/>-<see cref="HTMLProgressElement"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMeterElement/optimum"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number. Defaults to the midpoint between <see cref="HTMLMeterElement.Min"/> and <see cref="HTMLMeterElement.Max"/> if not defined.</value>
+</HTMLMeterElementOptimum>
+<HTMLMeterElementValue>
+<summary>
+The <strong><c>value</c></strong> property of the <see cref="HTMLMeterElement"/> interface represents the current value of the {{htmlelement("meter")}} element as a floating-point number. It reflects the element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/meter#value"><c>value</c></see> attribute. If no <c>value</c> is set, it is the <see cref="HTMLMeterElement.Min"/> value or <c>0</c>, whichever is greater.
+</summary>
+<remarks>
+<para>This property can also be set directly, for example to set a default value based on some condition.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meter">meter</see><br/>-<see cref="HTMLMeterElement.Min"/><br/>-<see cref="HTMLProgressElement"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMeterElement/value"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number. Defaults to either <see cref="HTMLMeterElement.Min"/> or <c>0</c>, whichever if greater, if not defined.</value>
+</HTMLMeterElementValue>
 </docs>

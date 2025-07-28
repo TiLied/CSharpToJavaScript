@@ -1,10 +1,128 @@
 <docs>
 <SVGTransformList>
 <summary>
-
+The <strong><c>SVGTransformList</c></strong> interface defines a list of <see cref="SVGTransform"/> objects.
 </summary>
 <remarks>
+<para>An <c>SVGTransformList</c> object can be designated as read only, which means that attempts to modify the object will result in an exception being thrown.</para><para>An <c>SVGTransformList</c> is indexable and can be accessed like an array.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGTransformList"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </SVGTransformList>
+<SVGTransformListAppendItem>
+<summary>
+The <c>appendItem()</c> method of the <see cref="SVGTransformList"/> interface inserts a new item at the end of the list.
+</summary>
+<remarks>
+<para>The inserted item is the item itself and not a copy.</para>
+<para>-<see cref="SVGTransform"/><br/>-<see cref="SVGTransformList.NumberOfItems"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGTransformList/appendItem"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="SVGTransform"/> object; the appended item from the list.</returns>
+</SVGTransformListAppendItem>
+<SVGTransformListClear>
+<summary>
+The <c>clear()</c> method of the <see cref="SVGTransformList"/> interface clears all existing current items from the list, with the result being an empty list.
+</summary>
+<remarks>
+<para>-<see cref="SVGTransform"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGTransformList/clear"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="'undefined'"/>).</returns>
+</SVGTransformListClear>
+<SVGTransformListConsolidate>
+<summary>
+The <c>consolidate()</c> method of the <see cref="SVGTransformList"/> interface consolidates the list of separate <see cref="SVGTransform"/> objects by multiplying the equivalent transformation matrices together to result in a list consisting of a single <c>SVGTransform</c> object of type <c>SVG_TRANSFORM_MATRIX</c>.
+</summary>
+<remarks>
+<para>The consolidation operation creates a new <c>SVGTransform</c> object as the first and only item in the list.</para><para>The returned item is the item itself and not a copy. Any changes made to the item are immediately reflected in the list.</para>
+<para>-<see cref="SVGTransform"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGTransformList/consolidate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A live <see cref="SVGTransform"/> object; the consolidated transformation.</returns>
+</SVGTransformListConsolidate>
+<SVGTransformListCreateSVGTransformFromMatrix>
+<summary>
+The <c>createSVGTransformFromMatrix()</c> method of the <see cref="SVGTransformList"/> interface creates an <see cref="SVGTransform"/> object which is initialized to a transform of type <c>SVG_TRANSFORM_MATRIX</c> and whose values are the given matrix.
+</summary>
+<remarks>
+<para>The values from the parameter matrix are copied; the matrix parameter is not adopted as <c>SVGTransform::matrix</c>.</para>
+<para>-<see cref="SVGTransform"/><br/>-<see cref="DOMMatrix"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGTransformList/createSVGTransformFromMatrix"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="SVGTransform"/> object.</returns>
+</SVGTransformListCreateSVGTransformFromMatrix>
+<SVGTransformListGetItem>
+<summary>
+The <c>getItem()</c> method of the <see cref="SVGTransformList"/> interface returns the specified item from the list.
+</summary>
+<remarks>
+<para>The returned item is the item itself and not a copy. Any changes made to the item are immediately reflected in the list.</para><para>The first item is indexed at <c>0</c>.</para>
+<para>-<see cref="SVGTransform"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGTransformList/getItem"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="SVGTransform"/> object; the specified item from the list.</returns>
+</SVGTransformListGetItem>
+<SVGTransformListInitialize>
+<summary>
+The <c>initialize()</c> method of the <see cref="SVGTransformList"/> interface clears all existing current items from the list and re-initializes the list to hold the single item specified by the parameter.
+</summary>
+<remarks>
+<para>If the inserted item is already in a list, it is removed from its previous list before it is inserted into this list. The inserted item is the item itself and not a copy.</para>
+<para>-<see cref="SVGTransform"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGTransformList/initialize"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="SVGTransform"/> object; the item inserted into the list.</returns>
+</SVGTransformListInitialize>
+<SVGTransformListInsertItemBefore>
+<summary>
+The <c>insertItemBefore()</c> method of the <see cref="SVGTransformList"/> interface inserts a new item into the list at the specified position.
+</summary>
+<remarks>
+<para>The first item is indexed at <c>0</c>. The inserted item is the item itself and not a copy.</para>
+<para>-<see cref="SVGTransform"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGTransformList/insertItemBefore"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="SVGTransform"/> object; the inserted item from the list.</returns>
+</SVGTransformListInsertItemBefore>
+<SVGTransformListLength>
+<summary>
+The <strong><c>length</c></strong> read-only property of the <see cref="SVGTransformList"/> interface represents the number of items in the list.
+</summary>
+<remarks>
+<para>-<see cref="SVGTransform"/><br/>-<see cref="SVGTransformList.NumberOfItems"/> (alias property)<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGTransformList/length"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <c>integer</c>; the number of <see cref="SVGTransform"/> objects in the list as an unsigned long.</value>
+</SVGTransformListLength>
+<SVGTransformListNumberOfItems>
+<summary>
+The <strong><c>numberOfItems</c></strong> read-only property of the <see cref="SVGTransformList"/> interface represents the number of items in the list.
+</summary>
+<remarks>
+<para>-<see cref="SVGTransform"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGTransformList/numberOfItems"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <c>integer</c>; the number of <see cref="SVGTransform"/> objects in the list as an unsigned long.</value>
+</SVGTransformListNumberOfItems>
+<SVGTransformListRemoveItem>
+<summary>
+The <c>removeItem()</c> method of the <see cref="SVGTransformList"/> interface removes an existing item from the list.
+</summary>
+<remarks>
+<para>-<see cref="SVGTransform"/><br/>-<see cref="SVGTransformList.NumberOfItems"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGTransformList/removeItem"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="SVGTransform"/> object; the removed item from the list.</returns>
+</SVGTransformListRemoveItem>
+<SVGTransformListReplaceItem>
+<summary>
+The <c>replaceItem()</c> method of the <see cref="SVGTransformList"/> interface replaces an existing item in the list with a new item.
+</summary>
+<remarks>
+<para>The inserted item is the item itself and not a copy.</para>
+<para>-<see cref="SVGTransform"/><br/>-<see cref="SVGTransformList.NumberOfItems"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGTransformList/replaceItem"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="SVGTransform"/> object; the inserted item from the list.</returns>
+</SVGTransformListReplaceItem>
 </docs>

@@ -9,4 +9,22 @@ The <strong><c>FileList</c></strong> interface represents an object of this type
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileList"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </FileList>
+<FileListItem>
+<summary>
+The <strong><c>item()</c></strong> method of the <see cref="FileList"/> interface returns a <see cref="File"/> object representing the file at the specified index in the file list.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileList/item"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="File"/> object representing the requested file.</returns>
+</FileListItem>
+<FileListLength>
+<summary>
+The <strong><c>length</c></strong> read-only property of the <see cref="FileList"/> interface returns the number of files in the <c>FileList</c>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileList/length"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number indicating the number of files in the list.</value>
+</FileListLength>
 </docs>

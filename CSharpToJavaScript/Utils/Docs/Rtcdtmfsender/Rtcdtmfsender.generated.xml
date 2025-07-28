@@ -9,4 +9,45 @@ The <strong><c>RTCDTMFSender</c></strong> interface provides a mechanism for tra
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDTMFSender"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </RTCDTMFSender>
+<RTCDTMFSenderCanInsertDTMF>
+<summary>
+The <strong><c>canInsertDTMF</c></strong> read-only property of the <see cref="RTCDTMFSender"/> interface returns a boolean value which indicates whether the <c>RTCDTMFSender</c> is capable of sending DTMF tones over the <see cref="RTCPeerConnection"/>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_DTMF">Using DTMF with WebRTC</see><br/>-<see cref="RTCDTMFSender.InsertDTMF"/><br/>-<see cref="RTCPeerConnection"/><br/>-<see cref="RTCDTMFSender"/><br/>-<see cref="RTCRtpSender"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDTMFSender/canInsertDTMF"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value which is <c>true</c> if the <c>RTCDTMFSender</c> is capable of sending DTMF tones, or <c>false</c> if it is not.</value>
+</RTCDTMFSenderCanInsertDTMF>
+<RTCDTMFSenderInsertDTMF>
+<summary>
+The <strong><c>insertDTMF()</c></strong> method of the <see cref="RTCDTMFSender"/> interface sends {{Glossary("DTMF")}} tones to the remote peer over the <see cref="RTCPeerConnection"/>.
+</summary>
+<remarks>
+<para>Tones are sent asynchronously. Every time a tone starts or ends, a <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDTMFSender/tonechange_event"><c>tonechange</c></see> event is sent to the <c>RTCDTMFSender</c>.</para><para>You can call <c>insertDTMF()</c> at any time while the connection is active. Each call to <c>insertDTMF()</c> replaces any pending tones in the <c>toneBuffer</c>.<br/>You can abort sending queued tones by specifying an empty string (<c>&amp;quot;&amp;quot;</c>) as the set of tones to play.<br/>Since <c>insertDTMF()</c> replaces the tone buffer, in order to add to the DTMF tones being played, it is necessary to call <c>insertDTMF()</c> with a string containing both the remaining tones (stored in the <c>toneBuffer</c>) and the new tones appended together.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_DTMF">Using DTMF with WebRTC</see><br/>-<see cref="RTCPeerConnection"/><br/>-<see cref="RTCDTMFSender"/><br/>-<see cref="RTCRtpSender"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDTMFSender/insertDTMF"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</RTCDTMFSenderInsertDTMF>
+<RTCDTMFSenderToneBuffer>
+<summary>
+The <see cref="RTCDTMFSender"/> interface's toneBuffer property returns a string<br/>containing a list of the <see href="https://developer.mozilla.org/en-US/docs/Glossary/DTMF">DTMF</see> tones currently queued for sending to the<br/>remote peer over the <see cref="RTCPeerConnection"/>. To place tones into the buffer,<br/>call <see cref="RTCDTMFSender.InsertDTMF"/>.
+</summary>
+<remarks>
+<para>Tones are removed from the string as they&amp;apos;re played, so only upcoming tones are listed.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_DTMF">Using DTMF with WebRTC</see><br/>-<see cref="RTCDTMFSender.InsertDTMF"/><br/>-<see cref="RTCPeerConnection"/><br/>-<see cref="RTCDTMFSender"/><br/>-<see cref="RTCRtpSender"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDTMFSender/toneBuffer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string listing the tones to be played. If the string is empty,<br/>there are no tones pending.</value>
+</RTCDTMFSenderToneBuffer>
+<RTCDTMFSenderTonechange>
+<summary>
+The <strong><c>tonechange</c></strong> event is sent to an <see cref="RTCDTMFSender"/> by the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see> to indicate when {{Glossary("DTMF")}} tones previously queued for sending (by calling <see cref="RTCDTMFSender.InsertDTMF"/>) begin and end.
+</summary>
+<remarks>
+<para>To determine what tone started playing, or if a tone stopped playing, check the value of the event's <see cref="RTCDTMFToneChangeEvent.Tone"/> property.</para><para>This event is not cancelable and does not bubble.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDTMFSender/tonechange"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RTCDTMFSenderTonechange>
 </docs>

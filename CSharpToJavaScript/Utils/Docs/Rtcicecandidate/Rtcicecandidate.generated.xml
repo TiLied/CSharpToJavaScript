@@ -8,4 +8,168 @@ The <strong><c>RTCIceCandidate</c></strong> interface—part of the <see href="h
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </RTCIceCandidate>
+<RTCIceCandidateAddress>
+<summary>
+The <strong><see cref="RTCIceCandidate"/></strong> interface&amp;apos;s read-only <strong><c>address</c></strong> property is a string providing the IP address of the device which is the source of the candidate.<br/>The <c>address</c> is <c>null</c> by default if not otherwise specified.
+</summary>
+<remarks>
+<para>The <c>address</c> field&amp;apos;s value is set from the <c>candidateInfo</c> options object passed to the <see cref="RTCIceCandidate.RTCIceCandidate"/> constructor.<br/>You can&amp;apos;t specify the value of <c>address</c> directly in the options object, but its value is automatically extracted from the object&amp;apos;s <c>candidate</c> a-line, if it&amp;apos;s formatted properly.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/address"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string providing the IP address from which the candidate comes.<blockquote class="NOTE"><h5>NOTE</h5>If <c>port</c> is <c>null</c> — and<br/><c>port</c> is supported by the <see href="https://developer.mozilla.org/en-US/docs/Glossary/user agent">user agent</see> — passing the<br/>candidate to <see cref="RTCPeerConnection.AddIceCandidate"/><br/>will fail, throwing an <c>OperationError</c> exception.</blockquote></value>
+</RTCIceCandidateAddress>
+<RTCIceCandidateCandidate>
+<summary>
+The read-only property <strong><c>candidate</c></strong> on the <see cref="RTCIceCandidate"/> interface returns a string describing the candidate in detail.<br/>Most of the other properties of <c>RTCIceCandidate</c> are actually extracted from this string.
+</summary>
+<remarks>
+<para>This property can be configured using the <c>candidate</c> property of the object passed into the <see cref="RTCIceCandidate.RTCIceCandidate"/> constructor or <see cref="RTCPeerConnection.AddIceCandidate"/>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/candidate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string describing the properties of the candidate, taken directly from the <see href="https://developer.mozilla.org/en-US/docs/Glossary/SDP">SDP</see> attribute <c>&amp;quot;candidate&amp;quot;</c>.<br/>The candidate string specifies the network connectivity information for the candidate.<br/>If the <c>candidate</c> is an empty string (<c>&amp;quot;&amp;quot;</c>), the end of the candidate list has been reached; this candidate is known as the &amp;quot;end-of-candidates&amp;quot; marker.The syntax of the candidate string is described in {{RFC(5245, &amp;quot;&amp;quot;, 15.1)}}. For an a-line (attribute line) that looks like this:the corresponding <c>candidate</c> string&amp;apos;s value will be: <c>&amp;quot;candidate:4234997325 1 udp 2043278322 192.0.2.172 44323 typ host&amp;quot;</c>.The <see href="https://developer.mozilla.org/en-US/docs/Glossary/user agent">user agent</see> always prefers candidates with the highest<br/><see cref="RTCIceCandidate.Priority"/>, all else being equal. In the<br/>example above, the priority is <c>2043278322</c>. The attributes are all separated<br/>by a single space character, and are in a specific order. The complete list of<br/>attributes for this example candidate is:</value>
+</RTCIceCandidateCandidate>
+<RTCIceCandidateComponent>
+<summary>
+The read-only <strong><c>component</c></strong> property<br/>on the <see cref="RTCIceCandidate"/> interface is a string which indicates whether<br/>the candidate is an <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP">RTP</see> or<br/>an RTCP candidate.
+</summary>
+<remarks>
+<para>If a candidate represents both RTP and RTCP multiplexed together, it is reported as an<br/>RTP candidate.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/component"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string which is one of the following:</value>
+</RTCIceCandidateComponent>
+<RTCIceCandidateFoundation>
+<summary>
+The <strong><c>foundation</c></strong> read-only property of the <see cref="RTCIceCandidate"/> interface is a string that allows correlation of candidates from a common network path on multiple <see cref="RTCIceTransport"/> objects.
+</summary>
+<remarks>
+<para>Candidates share the same <c>foundation</c> if they:</para><para>This is used to help optimize ICE performance while prioritizing and correlating candidates that appear on multiple <see cref="RTCIceTransport"/> objects.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/foundation"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string which uniquely identifies the candidate across all <c>RTCIceTransport</c>s on which it is available.<blockquote class="NOTE"><h5>NOTE</h5>If <c>port</c> is <c>null</c> — and <c>port</c> is supported by the {{Glossary("user agent")}} — passing the candidate to <see cref="RTCPeerConnection.AddIceCandidate"/> will fail, throwing an <c>OperationError</c> exception.</blockquote></value>
+</RTCIceCandidateFoundation>
+<RTCIceCandidatePort>
+<summary>
+The <strong><see cref="RTCIceCandidate"/></strong> interface&amp;apos;s read-only <strong><c>port</c></strong> property contains the port<br/>number on the device at the address given by <see cref="RTCIceCandidate.Address"/> at which the candidate's peer can be reached.
+</summary>
+<remarks>
+<para>The <c>port</c> field&amp;apos;s value is set from the <c>candidateInfo</c> options object passed to the <see cref="RTCIceCandidate.RTCIceCandidate"/> constructor.<br/>You can&amp;apos;t specify the value of <c>port</c> directly in the options object, but its value is automatically extracted from the object&amp;apos;s <c>candidate</c> a-line, if it&amp;apos;s formatted properly.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/port"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A 16-bit number indicating the port number on the device at the address indicated by <see cref="RTCIceCandidateaddress"/> at which the candidate's peer can be reached.<c>port</c> is initialized to <c>null</c> if it is not specified in the<br/><c>candidate</c>, or if the <c>candidate</c> string can&amp;apos;t be parsed properly.<blockquote class="NOTE"><h5>NOTE</h5>If <c>port</c> is <c>null</c>, passing the candidate to <see cref="RTCPeerConnection.AddIceCandidate"/><br/>will fail, throwing an <c>OperationError</c> exception.<br/>This applies only if the candidate implements <c>port</c>.</blockquote></value>
+</RTCIceCandidatePort>
+<RTCIceCandidatePriority>
+<summary>
+The <strong><see cref="RTCIceCandidate"/></strong> interface&amp;apos;s read-only <strong><c>priority</c></strong> property specifies the candidate&amp;apos;s priority according to the remote peer; the higher this value is, the better the remote peer considers the candidate to be.
+</summary>
+<remarks>
+<para>The <c>priority</c> field&amp;apos;s value is set from the <c>candidateInfo</c> options object passed to the <see cref="RTCIceCandidate.RTCIceCandidate"/> constructor.<br/>You can&amp;apos;t specify the value of <c>priority</c> directly in the options object, but its value is automatically extracted from the object&amp;apos;s <c>candidate</c> a-line, if it&amp;apos;s formatted properly.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/priority"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A long, unsigned integer value indicating the priority of the candidate according to the remote peer.<br/>The larger this value is, the more preferable the remote peer considers this candidate to be.<c>priority</c> is initialized to <c>null</c> if it is not specified in the <c>candidate</c>, or if the <c>candidate</c> string can&amp;apos;t be parsed properly.<blockquote class="NOTE"><h5>NOTE</h5>If <c>priority</c> is <c>null</c>, passing the<br/>candidate to <see cref="RTCPeerConnection.AddIceCandidate"/><br/>will fail, throwing an <c>OperationError</c> exception. This applies only if the<br/>candidate implements the <c>priority</c> property.</blockquote></value>
+</RTCIceCandidatePriority>
+<RTCIceCandidateProtocol>
+<summary>
+The <strong><see cref="RTCIceCandidate"/></strong> interface&amp;apos;s read-only <strong><c>protocol</c></strong> property is a string<br/>which indicates whether the candidate uses <see href="https://developer.mozilla.org/en-US/docs/Glossary/UDP">UDP</see> or <see href="https://developer.mozilla.org/en-US/docs/Glossary/TCP">TCP</see> as its transport protocol.
+</summary>
+<remarks>
+<para>The <c>protocol</c> field&amp;apos;s value is set from the <c>candidateInfo</c> options object passed to the <see cref="RTCIceCandidate.RTCIceCandidate"/> constructor.<br/>You can&amp;apos;t specify the value of <c>protocol</c> directly in the options object, but its value is automatically extracted from the object&amp;apos;s <c>candidate</c> a-line, if it&amp;apos;s formatted properly.</para><para><c>protocol</c> is <c>null</c> by default if not specified properly in the SDP, but this is an error condition and will result in a thrown exception when you call <see cref="RTCPeerConnection.AddIceCandidate"/>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/protocol"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string that indicates what network protocol the candidate uses:<blockquote class="NOTE"><h5>NOTE</h5>If <c>protocol</c> is <c>null</c> — and <c>protocol</c> is supported by the <see href="https://developer.mozilla.org/en-US/docs/Glossary/user agent">user agent</see> — passing the<br/>candidate to <see cref="RTCPeerConnection.AddIceCandidate"/> will fail, throwing an <c>OperationError</c> exception.</blockquote></value>
+</RTCIceCandidateProtocol>
+<RTCIceCandidateRelatedAddress>
+<summary>
+The <strong><see cref="RTCIceCandidate"/></strong> interface&amp;apos;s read-only <strong><c>relatedAddress</c></strong> property is a string indicating the <strong>related address</strong> of a relay or reflexive candidate.
+</summary>
+<remarks>
+<para>If the candidate is a host candidate (that is, its <see cref="RTCIceCandidateaddress"/> is in fact the real IP address of the remote peer), <c>relatedAddress</c> is <c>null</c>.</para><para>The <c>relatedAddress</c> field&amp;apos;s value is set from the <c>candidateInfo</c> options object passed to the <see cref="RTCIceCandidate.RTCIceCandidate"/> constructor.<br/>You can&amp;apos;t specify the value of <c>relatedAddress</c> directly in the options object, but its value is automatically extracted from the object&amp;apos;s <c>candidate</c> a-line if it&amp;apos;s formatted properly(the <c>rel-address</c> field).</para><para>The related address and port (<see cref="RTCIceCandidate.RelatedPort"/>) are not used at all by {{Glossary("ICE")}} itself; they are provided for analysis and diagnostic purposes only, and their inclusion may be blocked by security systems, so do not rely on them having non-<c>null</c> values.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Protocols">Introduction to WebRTC protocols</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Connectivity">WebRTC connectivity</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Session_lifetime">Lifetime of a WebRTC session</see><br/>-<see cref="RTCIceCandidate.RelatedPort"/><br/>-<see cref="RTCIceCandidate.Address"/> and <see cref="RTCIceCandidate.Port"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/relatedAddress"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string which contains the candidate&amp;apos;s related address.<br/>For both peer and server reflexive candidates, the related address (and related port) are the base for that server or peer reflexive candidate.<br/>For relay candidates, the related address and port are set to the mapped address selected by the TURN server.For host candidates, <c>relatedAddress</c> is <c>null</c>, meaning the field is not included in the candidate&amp;apos;s a-line.</value>
+</RTCIceCandidateRelatedAddress>
+<RTCIceCandidateRelatedPort>
+<summary>
+The <strong><see cref="RTCIceCandidate"/></strong> interface&amp;apos;s read-only <strong><c>relatedPort</c></strong> property indicates the port number of reflexive or relay candidates.
+</summary>
+<remarks>
+<para>If the candidate is a host candidate (that is, its <see cref="RTCIceCandidateaddress"/> is in fact the real IP address of the remote peer), <c>relatedPort</c> is <c>null</c>.</para><para>The <c>relatedPort</c> field&amp;apos;s value is set from the <c>candidateInfo</c> options object passed to the <see cref="RTCIceCandidate.RTCIceCandidate"/> constructor.<br/>You can&amp;apos;t specify the value of <c>relatedPort</c> directly in the options object, but its value is automatically extracted from the object&amp;apos;s <c>candidate</c> a-line, if it&amp;apos;s formatted properly (the <c>rel-port</c> field).</para><para>The related address (<see cref="RTCIceCandidate.RelatedAddress"/>) and port are not used at all by {{Glossary("ICE")}} itself; they are provided for<br/>analysis and diagnostic purposes only, and their inclusion may be blocked by security systems, so do not rely on them having non-<c>null</c> values.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Protocols">Introduction to WebRTC protocols</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Connectivity">WebRTC connectivity</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Session_lifetime">Lifetime of a WebRTC session</see><br/>-<see cref="RTCIceCandidate.RelatedAddress"/><br/>-<see cref="RTCIceCandidate.Address"/> and <see cref="RTCIceCandidate.Port"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/relatedPort"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An unsigned 16-bit value containing the candidate&amp;apos;s related port number, if any. For<br/>both peer and server reflexive candidates, the related address and port describe the<br/>base for that candidate. For relay candidates, the related address and port provide the<br/>mapped address selected by the TURN server.For host candidates, <c>relatedPort</c> is <c>null</c>, meaning the field is not included in the candidate&amp;apos;s a-line.</value>
+</RTCIceCandidateRelatedPort>
+<RTCIceCandidateRTCIceCandidate>
+<summary>
+The<br/><strong><c>RTCIceCandidate()</c></strong><br/>constructor creates and returns a new <see cref="RTCIceCandidate"/> object, which can<br/>be configured to represent a single <see href="https://developer.mozilla.org/en-US/docs/Glossary/ICE">ICE</see> candidate.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Protocols#ice">Introduction to WebRTC protocols</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Connectivity">WebRTC connectivity</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Session_lifetime">Lifetime of a WebRTC session</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling">Signaling and video calling</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/RTCIceCandidate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A newly-created <see cref="RTCIceCandidate"/> object.If <c>candidateInfo</c> is provided, the new <c>RTCIceCandidate</c> is initialized as follows:<blockquote class="NOTE"><h5>NOTE</h5>Parsing of the <c>candidate</c> string is performed using the <see href="https://w3c.github.io/webrtc-pc/#candidate-attribute-grammar">candidate-attribute grammar</see> from the WebRTC Specification.</blockquote></returns>
+</RTCIceCandidateRTCIceCandidate>
+<RTCIceCandidateSdpMid>
+<summary>
+The read-only property <strong><c>sdpMid</c></strong> on the <see cref="RTCIceCandidate"/> interface returns a string<br/>specifying the media stream identification tag of the media component with which the candidate is associated.<br/>This ID uniquely identifies a given stream for the component with which the candidate is associated.
+</summary>
+<remarks>
+<para>This property can be configured by specifying the value of the <c>sdpMid</c> property in the <c>candidateInfo</c> options object that is passed to the <see cref="RTCIceCandidate.RTCIceCandidate"/> constructor.<br/>If you call the constructor with an m-line string instead of the options object, the value of <c>sdpMid</c> is extracted from the specified candidate m-line string.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/sdpMid"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string which uniquely identifies the source media component from<br/>which the candidate draws data, or <c>null</c> if no such association exists for the candidate.<blockquote class="NOTE"><h5>NOTE</h5>Attempting to add a candidate (using <see cref="RTCPeerConnection.AddIceCandidate"/>) that has a<br/>value of <c>null</c> for both <c>sdpMid</c> and <c>sdpMLineIndex</c> will throw a <see cref="TypeError"/> exception.</blockquote></value>
+</RTCIceCandidateSdpMid>
+<RTCIceCandidateSdpMLineIndex>
+<summary>
+The read-only <strong><c>sdpMLineIndex</c></strong> property on the <see cref="RTCIceCandidate"/> interface<br/>is a zero-based index of the m-line describing the media associated with the candidate.
+</summary>
+<remarks>
+<para>This property can be configured by specifying the value of the <c>sdpMLineIndex</c> property in the <c>candidateInfo</c> options object that is passed to the <see cref="RTCIceCandidate.RTCIceCandidate"/> constructor.<br/>If you call the constructor with an m-line string instead of the options object, the value of <c>sdpMLineIndex</c> is extracted from the specified candidate m-line string.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/sdpMLineIndex"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number containing a 0-based index into the set of m-lines providing media descriptions,<br/>indicating which media source is associated with the candidate, or <c>null</c> if no such association is available.<blockquote class="NOTE"><h5>NOTE</h5>Attempting to add a candidate (using<br/><see cref="RTCPeerConnection.AddIceCandidate"/>) that has a<br/>value of <c>null</c> for either <c>sdpMid</c> or<br/><c>sdpMLineIndex</c> will throw a <see cref="TypeError"/> exception.</blockquote></value>
+</RTCIceCandidateSdpMLineIndex>
+<RTCIceCandidateTcpType>
+<summary>
+The <strong><see cref="RTCIceCandidate"/></strong> interface&amp;apos;s read-only <strong><c>tcpType</c></strong> property is included on TCP candidates to provide additional details about the candidate type.
+</summary>
+<remarks>
+<para>The <c>tcpType</c> field&amp;apos;s value is set from the <c>candidateInfo</c> options object passed to the <see cref="RTCIceCandidate.RTCIceCandidate"/> constructor.<br/>You can&amp;apos;t specify the value of <c>tcpType</c> directly in the options object, but its value is automatically extracted from the object&amp;apos;s <c>candidate</c> a-line, if it&amp;apos;s formatted properly.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Protocols">Introduction to WebRTC protocols</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Connectivity">WebRTC connectivity</see><br/>-<see cref="RTCIceCandidate.Protocol"/><br/>-<see cref="RTCIceCandidate.Type"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/tcpType"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>If the <see cref="RTCIceCandidate.Protocol"/> is "tcp", <c>tcpType</c> has one of the following values:<c>tcpType</c> is <c>null</c> for <see href="https://developer.mozilla.org/en-US/docs/Glossary/UDP">UDP</see> candidates.</value>
+</RTCIceCandidateTcpType>
+<RTCIceCandidateToJSON>
+<summary>
+The <see cref="RTCIceCandidate"/> method <strong><c>toJSON()</c></strong> converts the <c>RTCIceCandidate</c> on which it&amp;apos;s called into JSON.
+</summary>
+<remarks>
+<para>A stringified version of the object can then be obtained by calling <see cref="JSONStringify"/> on the returned object.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/toJSON"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A JSON object with the following properties, which have been set to the corresponding values in the <c>RTCIceCandidate</c> object:<blockquote class="NOTE"><h5>NOTE</h5>The returned JSON object has the same form/properties as the <c>candidateInfo</c> object that can optionally be passed to the <see cref="RTCIceCandidate.RTCIceCandidate"/> constructor to configure the candidate.</blockquote></returns>
+</RTCIceCandidateToJSON>
+<RTCIceCandidateType>
+<summary>
+The <strong><see cref="RTCIceCandidate"/></strong> interface&amp;apos;s read-only <strong><c>type</c></strong> specifies the type of candidate the object represents.
+</summary>
+<remarks>
+<para>The <c>type</c> field&amp;apos;s value is set from the <c>candidateInfo</c> options object passed to the <see cref="RTCIceCandidate.RTCIceCandidate"/> constructor.<br/>You can&amp;apos;t specify the value of <c>type</c> directly in the options object, but its value is automatically extracted from the object&amp;apos;s <c>candidate</c> a-line (the <c>cand-type</c> field), if it&amp;apos;s formatted properly.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Protocols">Introduction to WebRTC protocols</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Connectivity">WebRTC connectivity</see><br/>-<see cref="RTCIceCandidate.TcpType"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/type"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string whose value is one of those defined below. These candidate types are listed in order of priority; the higher in the list they are, the more efficient they are.If <c>type</c> is <c>null</c>, that information was missing from the<br/><see cref="RTCIceCandidate.Candidate"/>'s a-line, which will cause<br/><see cref="RTCPeerConnection.AddIceCandidate"/> to throw an<br/><c>OperationError</c> exception.</value>
+</RTCIceCandidateType>
+<RTCIceCandidateUsernameFragment>
+<summary>
+The read-only <strong><c>usernameFragment</c></strong> property on the <see cref="RTCIceCandidate"/> interface is a string indicating the<br/>username fragment (&amp;quot;ufrag&amp;quot;) that uniquely identifies a single ICE interaction session.
+</summary>
+<remarks>
+<para>This value is specified using the <c>usernameFragment</c> property in the <c>candidateInfo</c> options object that is passed to the <see cref="RTCIceCandidate.RTCIceCandidate"/> constructor.<br/>If you call the constructor with an m-line string instead of the options object, the value of <c>usernameFragment</c> is extracted from the specified candidate m-line string.</para><para>Note that 24 bits of the username fragment are required to be randomized by the browser. See <see href="https://developer.mozilla.org#randomization">Randomization</see> below for details.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/usernameFragment"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing the username fragment (usually referred to in<br/>shorthand as &amp;quot;ufrag&amp;quot; or &amp;quot;ice-ufrag&amp;quot;) that, along with the ICE password (&amp;quot;ice-pwd&amp;quot;),<br/>uniquely identifies a single ongoing ICE interaction, including for any communication<br/>with the <see href="https://developer.mozilla.org/en-US/docs/Glossary/STUN">STUN</see> server. The string may be up to 256 characters long, and<br/>has no default value.</value>
+</RTCIceCandidateUsernameFragment>
 </docs>

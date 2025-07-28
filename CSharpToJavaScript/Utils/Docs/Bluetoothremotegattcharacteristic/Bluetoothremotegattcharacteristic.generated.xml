@@ -8,4 +8,113 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </BluetoothRemoteGATTCharacteristic>
+<BluetoothRemoteGATTCharacteristicGetDescriptor>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>BluetoothRemoteGATTCharacteristic.getDescriptor()</c></strong> method<br/>returns a <see cref="Promise"/> that resolves to the<br/>first <see cref="BluetoothRemoteGATTDescriptor"/> for a given descriptor UUID.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/getDescriptor"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves to the<br/>first <see cref="BluetoothRemoteGATTDescriptor"/>.</returns>
+</BluetoothRemoteGATTCharacteristicGetDescriptor>
+<BluetoothRemoteGATTCharacteristicGetDescriptors>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>BluetoothRemoteGATTCharacteristic.getDescriptors()</c></strong> method<br/>returns a <see cref="Promise"/> that resolves to an <see cref="Array"/> of all<br/><see cref="BluetoothRemoteGATTDescriptor"/> objects for a given descriptor UUID.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/getDescriptors"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves to an <see cref="Array"/><br/>of <see cref="BluetoothRemoteGATTDescriptor"/> objects.</returns>
+</BluetoothRemoteGATTCharacteristicGetDescriptors>
+<BluetoothRemoteGATTCharacteristicProperties>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>BluetoothRemoteGATTCharacteristic.properties</c></strong><br/>read-only property returns a <see cref="'BluetoothCharacteristicProperties'"/> instance<br/>containing the properties of this characteristic.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/properties"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The properties of this characteristic.</value>
+</BluetoothRemoteGATTCharacteristicProperties>
+<BluetoothRemoteGATTCharacteristicReadValue>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>BluetoothRemoteGATTCharacteristic.readValue()</c></strong> method<br/>returns a <see cref="Promise"/> that resolves to a <see cref="DataView"/> holding a<br/>duplicate of the <c>value</c> property if it is available and supported. Otherwise<br/>it throws an error.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/readValue"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves to a <see cref="DataView"/>.</returns>
+</BluetoothRemoteGATTCharacteristicReadValue>
+<BluetoothRemoteGATTCharacteristicService>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>BluetoothRemoteGATTCharacteristic.service</c></strong> read-only<br/>property returns the <see cref="BluetoothRemoteGATTService"/> this characteristic belongs to.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/service"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An instance <see cref="BluetoothRemoteGATTService"/>.</value>
+</BluetoothRemoteGATTCharacteristicService>
+<BluetoothRemoteGATTCharacteristicStartNotifications>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>BluetoothRemoteGATTCharacteristic.startNotifications()</c></strong> method<br/>returns a <see cref="Promise"/> to the BluetoothRemoteGATTCharacteristic instance when<br/>there is an active notification on it.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/startNotifications"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> to the BluetoothRemoteGATTCharacteristic instance.</returns>
+</BluetoothRemoteGATTCharacteristicStartNotifications>
+<BluetoothRemoteGATTCharacteristicStopNotifications>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>BluetoothRemoteGATTCharacteristic.stopNotifications()</c></strong> method<br/>returns a <see cref="Promise"/> to the BluetoothRemoteGATTCharacteristic instance when<br/>there is no longer an active notification on it.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/stopNotifications"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/>.</returns>
+</BluetoothRemoteGATTCharacteristicStopNotifications>
+<BluetoothRemoteGATTCharacteristicUuid>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>BluetoothRemoteGATTCharacteristic.uuid</c></strong> read-only<br/>property returns a string containing the UUID of the characteristic, for<br/>example <c>&amp;apos;00002a37-0000-1000-8000-00805f9b34fb&amp;apos;</c> for the Heart Rate<br/>Measurement characteristic.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/uuid"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</BluetoothRemoteGATTCharacteristicUuid>
+<BluetoothRemoteGATTCharacteristicValue>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>BluetoothRemoteGATTCharacteristic.value</c></strong> read-only<br/>property returns currently cached characteristic value. This value gets updated when the<br/>value of the characteristic is read or updated via a notification or indication.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/value"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The currently cached characteristic value.</value>
+</BluetoothRemoteGATTCharacteristicValue>
+<BluetoothRemoteGATTCharacteristicWriteValue>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> Use <see cref="BluetoothRemoteGATTCharacteristic.WriteValueWithResponse"/> and <see cref="BluetoothRemoteGATTCharacteristic.WriteValueWithoutResponse"/> instead.
+</summary>
+<remarks>
+<para>The <strong><c>BluetoothRemoteGATTCharacteristic.writeValue()</c></strong> method sets a <see cref="BluetoothRemoteGATTCharacteristic"/> object's <c>value</c> property to the bytes contained in a given <see cref="ArrayBuffer"/>, <see cref="TypedArray"/>, or <see cref="DataView"/>, <see href="https://webbluetoothcg.github.io/web-bluetooth/#writecharacteristicvalue">writes the characteristic value with optional response</see>, and returns the resulting <see cref="Promise"/>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/writeValue"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/>.</returns>
+</BluetoothRemoteGATTCharacteristicWriteValue>
+<BluetoothRemoteGATTCharacteristicWriteValueWithoutResponse>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>BluetoothRemoteGATTCharacteristic.writeValueWithoutResponse()</c></strong> method sets a <see cref="BluetoothRemoteGATTCharacteristic"/> object's <c>value</c> property to the bytes contained in a given <see cref="ArrayBuffer"/>, <see cref="TypedArray"/>, or <see cref="DataView"/>, <see href="https://webbluetoothcg.github.io/web-bluetooth/#writecharacteristicvalue">writes the characteristic value without response</see>, and returns the resulting <see cref="Promise"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/writeValueWithoutResponse"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/>.</returns>
+</BluetoothRemoteGATTCharacteristicWriteValueWithoutResponse>
+<BluetoothRemoteGATTCharacteristicWriteValueWithResponse>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>BluetoothRemoteGATTCharacteristic.writeValueWithResponse()</c></strong> method sets a <see cref="BluetoothRemoteGATTCharacteristic"/> object's <c>value</c> property to the bytes contained in a given <see cref="ArrayBuffer"/>, <see cref="TypedArray"/>, or <see cref="DataView"/>, <see href="https://webbluetoothcg.github.io/web-bluetooth/#writecharacteristicvalue">writes the characteristic value with required response</see>, and returns the resulting <see cref="Promise"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/writeValueWithResponse"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/>.</returns>
+</BluetoothRemoteGATTCharacteristicWriteValueWithResponse>
 </docs>

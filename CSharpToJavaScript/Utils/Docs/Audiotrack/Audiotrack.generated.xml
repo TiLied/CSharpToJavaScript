@@ -8,4 +8,61 @@ The <strong><c>AudioTrack</c></strong> interface represents a single audio track
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioTrack"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </AudioTrack>
+<AudioTrackEnabled>
+<summary>
+The <strong><see cref="AudioTrack"/></strong> property<br/><strong><c>enabled</c></strong> specifies whether or not the described audio<br/>track is currently enabled for use. If the track is disabled by setting<br/><c>enabled</c> to <c>false</c>, the track is muted and does not produce<br/>audio.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioTrack/enabled"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <c>enabled</c> property is a Boolean whose value is <c>true</c> if the<br/>track is enabled; enabled tracks produce audio while the media is playing. Setting<br/><c>enabled</c> to <c>false</c> effectively mutes the audio track, preventing<br/>it from contributing to the media&amp;apos;s audio performance.</value>
+</AudioTrackEnabled>
+<AudioTrackId>
+<summary>
+The <strong><c>id</c></strong> property contains a<br/>string which uniquely identifies the track represented by the<br/><strong><see cref="AudioTrack"/></strong>.
+</summary>
+<remarks>
+<para>This ID can be used with the<br/><see cref="AudioTrackList.GetTrackById"/> method to locate a specific track within<br/>the media associated with a media element. The track ID can also be used as the fragment of a URL that loads the specific track<br/>(if the media supports media fragments).</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioTrack/id"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string which identifies the track, suitable for use when calling<br/><see cref="AudioTrackList.GetTrackById"/> on an<br/><see cref="AudioTrackList"/> such as the one specified by a media element's<br/><see cref="HTMLMediaElement.AudioTracks"/> property.</value>
+</AudioTrackId>
+<AudioTrackKind>
+<summary>
+The <strong><c>kind</c></strong> property contains a<br/>string indicating the category of audio contained in the<br/><strong><see cref="AudioTrack"/></strong>.
+</summary>
+<remarks>
+<para>The <c>kind</c> can be used<br/>to determine the scenarios in which specific tracks should be enabled or disabled. See<br/><see href="https://developer.mozilla.org#audio_track_kind_strings">Audio track kind strings</see> for a list of the kinds available for audio tracks.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioTrack/kind"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string specifying the type of content the media represents. The<br/>string is one of those found in <see href="https://developer.mozilla.org#audio_track_kind_strings">Audio track kind strings</see> below.</value>
+</AudioTrackKind>
+<AudioTrackLabel>
+<summary>
+The read-only <strong><see cref="AudioTrack"/></strong><br/>property <strong><c>label</c></strong> returns a string specifying the audio<br/>track&amp;apos;s human-readable label, if one is available; otherwise, it returns an empty<br/>string.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioTrack/label"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string specifying the track&amp;apos;s human-readable label, if one is<br/>available in the track metadata. Otherwise, an empty string (<c>&amp;quot;&amp;quot;</c>) is<br/>returned.For example, a track whose <see cref="AudioTrack.Kind"/> is<br/><c>&amp;quot;commentary&amp;quot;</c> might have a <c>label</c> such as<br/><c>&amp;quot;Commentary with director Mark Markmarkimark and star Donna Donnalidon&amp;quot;</c>.</value>
+</AudioTrackLabel>
+<AudioTrackLanguage>
+<summary>
+The read-only <strong><see cref="AudioTrack"/></strong><br/>property <strong><c>language</c></strong> returns a string identifying the<br/>language used in the audio track.
+</summary>
+<remarks>
+<para>For tracks that include multiple languages<br/>(such as a movie in English in which a few lines are spoken in other languages), this<br/>should be the video&amp;apos;s primary language.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioTrack/language"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string specifying the BCP 47 ({{RFC(5646)}}) format language tag of<br/>the primary language used in the audio track, or an empty string (<c>&amp;quot;&amp;quot;</c>) if<br/>the language is not specified or known, or if the track doesn&amp;apos;t contain speech.For example, if the primary language used in the track is United States English, this<br/>value would be <c>&amp;quot;en-US&amp;quot;</c>. For Brazilian Portuguese, the value would be<br/><c>&amp;quot;pt-BR&amp;quot;</c>.</value>
+</AudioTrackLanguage>
+<AudioTrackSourceBuffer>
+<summary>
+The read-only <strong><see cref="AudioTrack"/></strong><br/>property <strong><c>sourceBuffer</c></strong> returns the<br/><see cref="SourceBuffer"/> that created the track, or null if the track was not<br/>created by a <see cref="SourceBuffer"/> or the <see cref="SourceBuffer"/> has been<br/>removed from the <see cref="MediaSource.SourceBuffers"/> attribute of its parent<br/>media source.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioTrack/sourceBuffer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="SourceBuffer"/> or null.</value>
+</AudioTrackSourceBuffer>
 </docs>

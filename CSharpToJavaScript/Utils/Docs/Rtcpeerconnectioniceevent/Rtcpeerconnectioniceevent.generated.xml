@@ -4,9 +4,29 @@
 The <strong><c>RTCPeerConnectionIceEvent</c></strong> interface represents events that occur in relation to {{Glossary("ICE")}} candidates with the target, usually an <see cref="RTCPeerConnection"/>.
 </summary>
 <remarks>
-<para>Only one event is of this type: <see cref="RTCPeerConnection.Icecandidate_event"/>.</para><para></para>
+<para>Only one event is of this type: <see cref="RTCPeerConnection.Icecandidate"/>.</para><para></para>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/>-Its usual target: <see cref="RTCPeerConnection"/>.<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnectionIceEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </RTCPeerConnectionIceEvent>
+<RTCPeerConnectionIceEventCandidate>
+<summary>
+The read-only <strong><c>candidate</c></strong> property<br/>of the <see cref="RTCPeerConnectionIceEvent"/> interface returns the<br/><see cref="RTCIceCandidate"/> associated with the event.
+</summary>
+<remarks>
+<para>-<see cref="RTCPeerConnection.Icecandidate"/><br/>-<see cref="RTCPeerConnection"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnectionIceEvent/candidate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="RTCIceCandidate"/> object representing the ICE candidate that has been<br/>received, or <c>null</c> to indicate that there are no further candidates for this<br/>negotiation session.</value>
+</RTCPeerConnectionIceEventCandidate>
+<RTCPeerConnectionIceEventRTCPeerConnectionIceEvent>
+<summary>
+The <strong><c>RTCPeerConnectionIceEvent()</c></strong> constructor creates a new<br/><see cref="RTCPeerConnectionIceEvent"/> object.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/>-Its usual target: <see cref="RTCPeerConnection"/>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnectionIceEvent/RTCPeerConnectionIceEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="RTCPeerConnectionIceEvent"/> object, configured as specified in the provided options.</returns>
+</RTCPeerConnectionIceEventRTCPeerConnectionIceEvent>
 </docs>

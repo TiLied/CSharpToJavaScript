@@ -9,4 +9,47 @@ The <strong><c>Clipboard</c></strong> interface of the <see href="https://develo
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </Clipboard>
+<ClipboardRead>
+<summary>
+The <strong><c>read()</c></strong> method of the <see cref="Clipboard"/> interface requests a copy of the clipboard's contents, fulfilling the returned {{jsxref("Promise")}} with the data.
+</summary>
+<remarks>
+<para>The method can in theory return arbitrary data (unlike <see cref="Clipboard.ReadText"/>, which can only return text).<br/>Browsers commonly support reading text, HTML, and PNG image data.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API">Clipboard API</see><br/>-<see href="https://web.dev/articles/async-clipboard">Unblocking clipboard access</see> on web.dev<br/>-<see href="https://developer.chrome.com/docs/web-platform/unsanitized-html-async-clipboard">Unsanitized HTML in the Async Clipboard API</see> on developer.chrome.com<br/>-<see cref="Clipboard.ReadText"/><br/>-<see cref="Clipboard.WriteText"/><br/>-<see cref="Clipboard.Write"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/read"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that resolves with an array of <see cref="ClipboardItem"/> objects containing the clipboard's contents.</returns>
+</ClipboardRead>
+<ClipboardReadText>
+<summary>
+The <strong><c>readText()</c></strong> method of the <see cref="Clipboard"/> interface returns a {{jsxref("Promise")}} which fulfills with a copy of the textual contents of the system clipboard.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>To read non-text contents from the clipboard, use the <see cref="Clipboard.Read"/> method instead.<br/>You can write text to the clipboard using <see cref="Clipboard.WriteText"/>.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API">Clipboard API</see><br/>-<see href="https://web.dev/articles/async-clipboard">Image support for Async Clipboard article</see><br/>-<see cref="Clipboard.Read"/><br/>-<see cref="Clipboard.WriteText"/><br/>-<see cref="Clipboard.Write"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/readText"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves with a string containing the textual contents of the clipboard.Returns an empty string if the clipboard is empty, does not contain text, or does not include a textual representation among the objects representing the clipboard&amp;apos;s contents.</returns>
+</ClipboardReadText>
+<ClipboardWrite>
+<summary>
+The <strong><c>write()</c></strong> method of the <see cref="Clipboard"/> interface writes arbitrary <see cref="ClipboardItem"/> data such as images and text to the clipboard, fulfilling the returned {{jsxref("Promise")}} on completion.<br/>This can be used to implement cut and copy functionality.
+</summary>
+<remarks>
+<para>The method can in theory write arbitrary data (unlike <see cref="Clipboard.WriteText"/>, which can only write text).<br/>Browsers commonly support writing text, HTML, and PNG image data.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API">Clipboard API</see><br/>-<see href="https://web.dev/articles/async-clipboard">Image support for Async Clipboard article</see><br/>-<see cref="Clipboard.WriteText"/><br/>-<see cref="Clipboard.Read"/><br/>-<see cref="Clipboard.ReadText"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/write"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> which is resolved when the data has been written to the clipboard.<br/>Note that if the underlying OS does not support multiple native clipboard items on the system clipboard, then only the first <see cref="ClipboardItem"/> in the array is written.The promise is rejected if the clipboard is unable to write to the clipboard.</returns>
+</ClipboardWrite>
+<ClipboardWriteText>
+<summary>
+The <strong><c>writeText()</c></strong> method of the <see cref="Clipboard"/> interface writes the specified text to the system clipboard, returning a {{jsxref("Promise")}} that is resolved once the system clipboard has been updated.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API">Clipboard API</see><br/>-<see href="https://web.dev/articles/async-clipboard">Image support for Async Clipboard article</see><br/>-<see cref="Clipboard.Write"/><br/>-<see cref="Clipboard.Read"/><br/>-<see cref="Clipboard.ReadText"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/writeText"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that is resolved once the clipboard's contents have been updated.</returns>
+</ClipboardWriteText>
 </docs>

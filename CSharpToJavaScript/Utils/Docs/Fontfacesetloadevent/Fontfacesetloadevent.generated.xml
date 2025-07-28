@@ -9,4 +9,22 @@ The <strong><c>FontFaceSetLoadEvent</c></strong> interface of the <see href="htt
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FontFaceSetLoadEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </FontFaceSetLoadEvent>
+<FontFaceSetLoadEventFontfaces>
+<summary>
+The <strong><c>fontfaces</c></strong> read-only property of the<br/><see cref="FontFaceSetLoadEvent"/> interface returns an array of<br/><see cref="FontFace"/> instances, each of which represents a single usable font.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FontFaceSetLoadEvent/fontfaces"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An array of <see cref="FontFace"/> instance.</value>
+</FontFaceSetLoadEventFontfaces>
+<FontFaceSetLoadEventFontFaceSetLoadEvent>
+<summary>
+The <strong><c>FontFaceSetLoadEvent()</c></strong> constructor creates a new<br/><see cref="FontFaceSetLoadEvent"/> object which is fired whenever a<br/><see cref="FontFaceSet"/> loads.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FontFaceSetLoadEvent/FontFaceSetLoadEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="FontFaceSetLoadEvent"/> object.</returns>
+</FontFaceSetLoadEventFontFaceSetLoadEvent>
 </docs>

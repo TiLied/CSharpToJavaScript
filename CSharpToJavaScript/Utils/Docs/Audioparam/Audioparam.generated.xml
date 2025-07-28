@@ -4,9 +4,121 @@
 The Web Audio API&amp;apos;s <c>AudioParam</c> interface represents an audio-related parameter, usually a parameter of an <see cref="AudioNode"/> (such as <see cref="GainNode.Gain"/>).
 </summary>
 <remarks>
-<para>An <c>AudioParam</c> can be set to a specific value or a change in value, and can be scheduled to happen at a specific time and following a specific pattern.</para><para>Each <c>AudioParam</c> has a list of events, initially empty, that define when and how values change. When this list is not empty, changes using the <c>AudioParam.value</c> attributes are ignored. This list of events allows us to schedule changes that have to happen at very precise times, using arbitrary timeline-based automation curves. The time used is the one defined in <see cref="BaseAudioContext/currentTime"/>.</para>
+<para>An <c>AudioParam</c> can be set to a specific value or a change in value, and can be scheduled to happen at a specific time and following a specific pattern.</para><para>Each <c>AudioParam</c> has a list of events, initially empty, that define when and how values change. When this list is not empty, changes using the <c>AudioParam.value</c> attributes are ignored. This list of events allows us to schedule changes that have to happen at very precise times, using arbitrary timeline-based automation curves. The time used is the one defined in <see cref="BaseAudioContextcurrentTime"/>.</para>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </AudioParam>
+<AudioParamCancelAndHoldAtTime>
+<summary>
+The <strong><c>cancelAndHoldAtTime()</c></strong> method of the<br/><see cref="AudioParam"/> interface cancels all scheduled future changes to the<br/><c>AudioParam</c> but holds its value at a given time until further changes are<br/>made using other methods.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/cancelAndHoldAtTime"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A reference to the <see cref="AudioParam"/> it was called on.</returns>
+</AudioParamCancelAndHoldAtTime>
+<AudioParamCancelScheduledValues>
+<summary>
+The <c>cancelScheduledValues()</c> method of the <see cref="AudioParam"/><br/>Interface cancels all scheduled future changes to the <c>AudioParam</c>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/cancelScheduledValues"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A reference to this <c>AudioParam</c> object. In some older implementations this<br/>method returns <see cref="'undefined'"/>.</returns>
+</AudioParamCancelScheduledValues>
+<AudioParamDefaultValue>
+<summary>
+The <strong><c>defaultValue</c></strong><br/>read-only property of the <see cref="AudioParam"/> interface represents the initial<br/>value of the attributes as defined by the specific <see cref="AudioNode"/> creating<br/>the <c>AudioParam</c>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/defaultValue"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A floating-point <see cref="Number"/>.</value>
+</AudioParamDefaultValue>
+<AudioParamExponentialRampToValueAtTime>
+<summary>
+The <strong><c>exponentialRampToValueAtTime()</c></strong> method of the <see cref="AudioParam"/> Interface schedules a gradual exponential change in the value of the <see cref="AudioParam"/>.<br/>The change starts at the time specified for the <strong>previous</strong> event, follows an exponential ramp to the new value given in the <c>value</c> parameter, and reaches the new value at the time given in the<br/><c>endTime</c> parameter.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Exponential ramps are considered more useful when changing<br/>frequencies or playback rates than linear ramps because of the way the human ear<br/>works.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/exponentialRampToValueAtTime"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A reference to this <c>AudioParam</c> object. In some browsers older<br/>implementations of this interface return <see cref="'undefined'"/>.</returns>
+</AudioParamExponentialRampToValueAtTime>
+<AudioParamLinearRampToValueAtTime>
+<summary>
+The <c>linearRampToValueAtTime()</c> method of the <see cref="AudioParam"/><br/>Interface schedules a gradual linear change in the value of the<br/><c>AudioParam</c>. The change starts at the time specified for the<br/><strong>previous</strong> event, follows a linear ramp to the new value given in the<br/><c>value</c> parameter, and reaches the new value at the time given in the<br/><c>endTime</c> parameter.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/linearRampToValueAtTime"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A reference to this <c>AudioParam</c> object. In some browsers older<br/>implementations of this interface return <see cref="'undefined'"/>.</returns>
+</AudioParamLinearRampToValueAtTime>
+<AudioParamMaxValue>
+<summary>
+The <strong><c>maxValue</c></strong><br/>read-only property of the <see cref="AudioParam"/> interface represents the maximum<br/>possible value for the parameter&amp;apos;s nominal (effective) range.
+</summary>
+<remarks>
+<para>-<see cref="AudioParam.MinValue"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/maxValue"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A floating-point <see cref="Number"/> indicating the maximum value permitted for the<br/>parameter&amp;apos;s nominal range.The default value of <c>maxValue</c> is the maximum positive single-precision<br/>floating-point value (+340,282,346,638,528,859,811,704,183,484,516,925,440).</value>
+</AudioParamMaxValue>
+<AudioParamMinValue>
+<summary>
+The <strong><c>minValue</c></strong><br/>read-only property of the <see cref="AudioParam"/> interface represents the minimum<br/>possible value for the parameter&amp;apos;s nominal (effective) range.
+</summary>
+<remarks>
+<para>-<see cref="AudioParam.MaxValue"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/minValue"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A floating-point <see cref="Number"/> indicating the minimum value permitted for the<br/>parameter&amp;apos;s nominal range.The default value of <c>minValue</c> is the minimum negative single-precision<br/>floating-point value (-340,282,346,638,528,859,811,704,183,484,516,925,440).</value>
+</AudioParamMinValue>
+<AudioParamSetTargetAtTime>
+<summary>
+The <c>setTargetAtTime()</c> method of the<br/><see cref="AudioParam"/> interface schedules the start of a gradual change to the<br/><c>AudioParam</c> value. This is useful for decay or release portions of ADSR<br/>envelopes.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/setTargetAtTime"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A reference to this <c>AudioParam</c> object. Some older browser implementations<br/>of this interface return <see cref="'undefined'"/>.</returns>
+</AudioParamSetTargetAtTime>
+<AudioParamSetValueAtTime>
+<summary>
+The <c>setValueAtTime()</c> method of the<br/><see cref="AudioParam"/> interface schedules an instant change to the<br/><c>AudioParam</c> value at a precise time, as measured against<br/><see cref="BaseAudioContextcurrentTime"/>. The new value is given in the value parameter.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/setValueAtTime"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A reference to this <c>AudioParam</c> object. In some browsers older<br/>implementations of this interface return <see cref="'undefined'"/>.</returns>
+</AudioParamSetValueAtTime>
+<AudioParamSetValueCurveAtTime>
+<summary>
+The<br/><strong><c>setValueCurveAtTime()</c></strong> method of the<br/><see cref="AudioParam"/> interface schedules the parameter's value to change<br/>following a curve defined by a list of values.
+</summary>
+<remarks>
+<para>The curve is a linear<br/>interpolation between the sequence of values defined in an array of floating-point<br/>values, which are scaled to fit into the given interval starting at<br/><c>startTime</c> and a specific duration.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/setValueCurveAtTime"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A reference to this <c>AudioParam</c> object. Some older browser implementations<br/>of this interface return <c>undefined</c>.</returns>
+</AudioParamSetValueCurveAtTime>
+<AudioParamValue>
+<summary>
+The <strong><c>value</c></strong> property of the <see cref="AudioParam"/> interface gets or sets the value of this <c>AudioParam</c> at the current time.<br/>Initially, the value is set to <see cref="AudioParam.DefaultValue"/>.
+</summary>
+<remarks>
+<para>Setting <c>value</c> has the same effect as calling <see cref="AudioParam.SetValueAtTime"/> with the time returned by the <c>AudioContext</c>'s <see cref="BaseAudioContextcurrentTime"/> property.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/value"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A floating-point <see cref="Number"/> indicating the parameter's value as of the current time.<br/>This value will be between the values specified by the <see cref="AudioParam.MinValue"/> and <see cref="AudioParam.MaxValue"/> properties.The data type used internally to store <c>value</c> is a single-precision (32-bit) floating point number, while JavaScript uses 64-bit double-precision floating point numbers.<br/>As a result, the value you read from the <c>value</c> property may not always exactly equal what you set it to.Consider this example:The log output will be <c>false</c>, because the playback rate parameter, <c>rate</c>, was converted to the 32-bit floating-point number closest to 5.3, which yields 5.300000190734863.<br/>One solution is to use the <see cref="MathFround"/> method, which returns the single-precision value equivalent to the 64-bit JavaScript value specified—when setting <c>value</c>, like this:In this case, the log output will be <c>true</c>.The <c>value</c> of an <c>AudioParam</c> can either be fixed or can vary over time.<br/>This is reflected by the <c>value</c> getter, which returns the value of the parameter as of the audio rendering engine&amp;apos;s most recent <strong>render quantum</strong>, or moment at which audio buffers are processed and updated.<br/>In addition to processing audio buffers, each render quantum updates the <c>value</c> of each <c>AudioParam</c> as needed given the current time and any established time-based parameter value changes.Upon first creating the parameter, its value is set to its default value, given by <see cref="AudioParam.DefaultValue"/>.<br/>This is the parameter&amp;apos;s value at a time of 0.0 seconds, and will remain the parameter&amp;apos;s value until the first render quantum in which the value is altered.During each render quantum, the browser does the following things related to managing the value of a parameter:Thus, the <c>value</c> of a parameter is maintained to accurately reflect the state of the parameter over time.</value>
+</AudioParamValue>
 </docs>

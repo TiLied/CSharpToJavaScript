@@ -7,4 +7,23 @@ The <strong><c>Lock</c></strong> interface of the <see href="https://developer.m
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Lock"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </Lock>
+<LockMode>
+<summary>
+The <strong><c>mode</c></strong> read-only property of the <see cref="Lock"/> interface returns the access mode passed to <see cref="'LockManager.Request'"/> when the lock was requested.<br/>The mode is either <c>&amp;quot;exclusive&amp;quot;</c> (the default) or <c>&amp;quot;shared&amp;quot;</c>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Lock/mode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>One of <c>&amp;quot;exclusive&amp;quot;</c> or <c>&amp;quot;shared&amp;quot;</c>.</value>
+</LockMode>
+<LockName>
+<summary>
+The <strong><c>name</c></strong> read-only property of<br/>the <see cref="Lock"/> interface returns the <strong>name</strong> passed to<br/><see cref="'LockManager.Request'"/> selected when the lock was requested.
+</summary>
+<remarks>
+<para>The name of a lock is passed by script when the lock is requested. The name is selected<br/>by the developer to represent an abstract resource for which use is being coordinated<br/>across multiple tabs, workers, or other code within the origin. For example, if only one<br/>tab of a web application should be synchronizing network resources with an offline<br/>database, it could use a lock name such as <c>&amp;quot;net_db_sync&amp;quot;</c>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Lock/name"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</LockName>
 </docs>

@@ -9,4 +9,34 @@ The <c>Report</c> interface of the <see href="https://developer.mozilla.org/en-U
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Report"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </Report>
+<ReportBody>
+<summary>
+The <strong><c>body</c></strong> read-only property of the <see cref="Report"/><br/>interface returns the body of the report, which is a <c>ReportBody</c> object<br/>containing the detailed report information.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Reporting_API">Reporting API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Report/body"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <c>ReportBody</c> object containing the detailed report information. Depending<br/>on what <c>type</c> the <see cref="Report"/> is, the object returned will<br/>actually be a<br/><see cref="DeprecationReportBody"/>, <see cref="InterventionReportBody"/>, or<br/><see cref="CSPViolationReportBody"/>.<br/>These all inherit from the base <c>ReportBody</c> class — study their reference<br/>pages for more information on what the particular report body types contain.</value>
+</ReportBody>
+<ReportType>
+<summary>
+The <strong><c>type</c></strong> read-only property of the <see cref="Report"/><br/>interface returns the type of report generated, e.g., <c>deprecation</c> or<br/><c>intervention</c>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Reporting_API">Reporting API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Report/type"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing the type of the report. Currently the available types are<br/><c>deprecation</c>, <c>intervention</c>, and <c>crash</c>.</value>
+</ReportType>
+<ReportUrl>
+<summary>
+The <strong><c>url</c></strong> read-only property of the <see cref="Report"/><br/>interface returns the URL of the document that generated the report.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Reporting_API">Reporting API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Report/url"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing the URL of the document that generated the report.</value>
+</ReportUrl>
 </docs>

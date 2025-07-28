@@ -8,4 +8,112 @@ The <c>VTTCue</c> interface of the <see href="https://developer.mozilla.org/en-U
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VTTCue"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </VTTCue>
+<VTTCueAlign>
+<summary>
+The <strong><c>align</c></strong> property of the <see cref="VTTCue"/> interface represents the alignment of all of the lines of text in the text box.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VTTCue/align"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing one of the following values:</value>
+</VTTCueAlign>
+<VTTCueGetCueAsHTML>
+<summary>
+The <strong><c>getCueAsHTML()</c></strong> method of the <see cref="VTTCue"/> interface returns a <see cref="DocumentFragment"/> containing the cue content.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VTTCue/getCueAsHTML"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="DocumentFragment"/>.</returns>
+</VTTCueGetCueAsHTML>
+<VTTCueLine>
+<summary>
+The <strong><c>line</c></strong> property of the <see cref="VTTCue"/> interface represents the cue line of this WebVTT cue.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VTTCue/line"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number, or <c>&amp;quot;auto&amp;quot;</c> representing the cue line of this WebVTT cue.</value>
+</VTTCueLine>
+<VTTCueLineAlign>
+<summary>
+The <strong><c>lineAlign</c></strong> property of the <see cref="VTTCue"/> interface represents the alignment of this VTT cue.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VTTCue/lineAlign"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing one of the following values:</value>
+</VTTCueLineAlign>
+<VTTCuePosition>
+<summary>
+The <strong><c>position</c></strong> property of the <see cref="VTTCue"/> interface represents the indentation of the cue within the line.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VTTCue/position"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number, or <c>&amp;quot;auto&amp;quot;</c> representing the indentation of the cue within the line.</value>
+</VTTCuePosition>
+<VTTCuePositionAlign>
+<summary>
+The <strong><c>positionAlign</c></strong> property of the <see cref="VTTCue"/> interface is used to determine what <see cref="VTTCue.Position"/> is anchored to.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VTTCue/positionAlign"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing one of the following values:</value>
+</VTTCuePositionAlign>
+<VTTCueRegion>
+<summary>
+The <strong><c>region</c></strong> property of the <see cref="VTTCue"/> interface returns and sets the <see cref="VTTRegion"/> that this cue belongs to.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VTTCue/region"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="VTTRegion"/> object.</value>
+</VTTCueRegion>
+<VTTCueSize>
+<summary>
+The <strong><c>size</c></strong> property of the <see cref="VTTCue"/> interface represents the size of the cue as a percentage of the video size.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VTTCue/size"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number representing the size of the cue as a percentage of the video size.</value>
+</VTTCueSize>
+<VTTCueSnapToLines>
+<summary>
+The <strong><c>snapToLines</c></strong> property of the <see cref="VTTCue"/> interface is a {{jsxref("Boolean")}} indicating if the <see cref="VTTCue.Line"/> property is an integer number of lines, or a percentage of the video size.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VTTCue/snapToLines"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Boolean"/>.</value>
+</VTTCueSnapToLines>
+<VTTCueText>
+<summary>
+The <strong><c>text</c></strong> property of the <see cref="VTTCue"/> interface represents the text contents of the cue.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VTTCue/text"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing the raw text of the cue.</value>
+</VTTCueText>
+<VTTCueVertical>
+<summary>
+The <strong><c>vertical</c></strong> property of the <see cref="VTTCue"/> interface is a string representing the cue's writing direction.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VTTCue/vertical"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing one of the following values:</value>
+</VTTCueVertical>
+<VTTCueVTTCue>
+<summary>
+The <strong><c>VTTCue()</c></strong> constructor creates and returns a new<br/><see cref="VTTCue"/> object.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VTTCue/VTTCue"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="VTTCue"/> object representing a cue which will be presented during<br/>the time span given.</returns>
+</VTTCueVTTCue>
 </docs>

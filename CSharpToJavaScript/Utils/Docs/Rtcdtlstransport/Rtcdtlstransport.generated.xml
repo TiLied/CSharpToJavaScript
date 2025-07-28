@@ -9,4 +9,33 @@ The <strong><c>RTCDtlsTransport</c></strong> interface provides access to inform
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDtlsTransport"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </RTCDtlsTransport>
+<RTCDtlsTransportError>
+<summary>
+An <see cref="RTCDtlsTransport"/> receives an <c>error</c> event when a transport-level error occurs on the <see cref="RTCPeerConnection"/>.
+</summary>
+<remarks>
+<para>This event is not cancelable and does not bubble.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDtlsTransport/error"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RTCDtlsTransportError>
+<RTCDtlsTransportIceTransport>
+<summary>
+The <strong><c>iceTransport</c></strong> read-only property of the <strong><see cref="RTCDtlsTransport"/></strong> interface contains a reference to the underlying <see cref="RTCIceTransport"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDtlsTransport/iceTransport"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The underlying <see cref="RTCIceTransport"/> instance.</value>
+</RTCDtlsTransportIceTransport>
+<RTCDtlsTransportState>
+<summary>
+The <strong><c>state</c></strong> read-only property of the<br/><see cref="RTCDtlsTransport"/> interface provides information which describes a<br/>Datagram Transport Layer Security (<strong><see href="https://developer.mozilla.org/en-US/docs/Glossary/DTLS">DTLS</see></strong>) transport state.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see cref="RTCDtlsTransport"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDtlsTransport/state"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string. Its value is one of the following:</value>
+</RTCDtlsTransportState>
 </docs>

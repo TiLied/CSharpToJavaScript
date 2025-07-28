@@ -8,4 +8,35 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ContentIndex"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </ContentIndex>
+<ContentIndexAdd>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>add()</c></strong> method of the<br/><see cref="ContentIndex"/> interface registers an item with the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Content_Index_API">content index</see>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/content-indexing-api">An introductory article on the Content Index API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">Service Worker API, along with information about Cache and CacheStorage</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ContentIndex/add"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Returns a <see cref="Promise"/> that resolves with <c>undefined</c>.</returns>
+</ContentIndexAdd>
+<ContentIndexDelete>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>delete()</c></strong> method of the<br/><see cref="ContentIndex"/> interface unregisters an item from the currently indexed<br/>content.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Calling <c>delete()</c> only affects the index. It does not delete anything<br/>from the <see cref="'Cache'"/>.</para></blockquote>
+<para>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/content-indexing-api">An introductory article on the Content Index API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">Service Worker API, along with information about Cache and CacheStorage</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ContentIndex/delete"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Returns a <see cref="Promise"/> that resolves with <c>undefined</c>.</returns>
+</ContentIndexDelete>
+<ContentIndexGetAll>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>getAll()</c></strong> method of the<br/><see cref="ContentIndex"/> interface returns a {{jsxref('Promise')}} that resolves with<br/>an iterable list of content index entries.
+</summary>
+<remarks>
+<para>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/content-indexing-api">An introductory article on the Content Index API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">Service Worker API, along with information about Cache and CacheStorage</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ContentIndex/getAll"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Returns a <see cref="Promise"/> that resolves with an <see cref="'Array'"/> of<br/><c>contentDescription</c> items.</returns>
+</ContentIndexGetAll>
 </docs>

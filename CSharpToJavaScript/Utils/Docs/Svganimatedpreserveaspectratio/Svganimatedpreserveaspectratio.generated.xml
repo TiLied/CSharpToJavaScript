@@ -1,10 +1,30 @@
 <docs>
 <SVGAnimatedPreserveAspectRatio>
 <summary>
-
+The <strong><c>SVGAnimatedPreserveAspectRatio</c></strong> interface represents attributes of type <see cref="SVGPreserveAspectRatio"/> which can be animated.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAnimatedPreserveAspectRatio"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </SVGAnimatedPreserveAspectRatio>
+<SVGAnimatedPreserveAspectRatioAnimVal>
+<summary>
+The <strong><c>animVal</c></strong> read-only property of the <see cref="SVGAnimatedPreserveAspectRatio"/> interface represents the value of the {{SVGAttr("preserveAspectRatio")}} attribute of an SVG element after any animations or transformations are applied.
+</summary>
+<remarks>
+<para>-<see cref="SVGPreserveAspectRatio"/><br/>-<see cref="SVGElement"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAnimatedPreserveAspectRatio/animVal"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGPreserveAspectRatio"/> object.</value>
+</SVGAnimatedPreserveAspectRatioAnimVal>
+<SVGAnimatedPreserveAspectRatioBaseVal>
+<summary>
+The <strong><c>baseVal</c></strong> read-only property of the <see cref="SVGAnimatedPreserveAspectRatio"/> interface represents the base (non-animated) value of the {{SVGAttr("preserveAspectRatio")}} attribute of an SVG element.
+</summary>
+<remarks>
+<para>-<see cref="SVGPreserveAspectRatio"/><br/>-<see cref="SVGElement"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAnimatedPreserveAspectRatio/baseVal"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGPreserveAspectRatio"/> object.</value>
+</SVGAnimatedPreserveAspectRatioBaseVal>
 </docs>

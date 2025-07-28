@@ -1,0 +1,22 @@
+<docs>
+<RestrictionTarget>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>RestrictionTarget</c></strong> interface of the {{domxref(&amp;quot;Screen Capture API&amp;quot;, &amp;quot;Screen Capture API&amp;quot;, &amp;quot;&amp;quot;, "nocode")}} provides a static method, <see cref="RestrictionTarget.FromElement"/>, which returns a <c>RestrictionTarget</c> instance that can be used to restrict a captured video track to a specified DOM element.
+</summary>
+<remarks>
+<para></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Screen_Capture_API">Screen Capture API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Screen_Capture_API/Element_Region_Capture">Using the Element Capture and Region Capture APIs</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RestrictionTarget"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RestrictionTarget>
+<RestrictionTargetFromElement>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>fromElement()</c></strong> static method of the <see cref="RestrictionTarget"/> interface returns a <see cref="RestrictionTarget"/> instance that can be used to restrict a captured video track to a specified DOM element (plus its descendants).
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Screen_Capture_API">Screen Capture API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Screen_Capture_API/Element_Region_Capture">Using the Element Capture and Region Capture APIs</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RestrictionTarget/fromElement"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that resolves to a <see cref="RestrictionTarget"/> object instance, which can then be passed to <see cref="BrowserCaptureMediaStreamTrack.RestrictTo"/> to restrict the video captured in the track to just the particular DOM element the <c>RestrictionTarget</c> was created with.<c>RestrictionTarget</c> objects are serializable. They can be passed to another document using mechanisms such as <see cref="Window.PostMessage"/>.The promise will reject if the restriction target element is not eligible for restriction.</returns>
+</RestrictionTargetFromElement>
+</docs>

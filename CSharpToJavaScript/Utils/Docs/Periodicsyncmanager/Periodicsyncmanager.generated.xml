@@ -8,4 +8,34 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PeriodicSyncManager"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </PeriodicSyncManager>
+<PeriodicSyncManagerGetTags>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>getTags()</c></strong> method of the<br/><see cref="PeriodicSyncManager"/> interface returns a {{jsxref('Promise')}} that<br/>resolves with a list of <see cref="'String'"/> objects representing the tags that are<br/>currently registered for periodic syncing.
+</summary>
+<remarks>
+<para>-<see href="https://developer.chrome.com/docs/capabilities/periodic-background-sync">Richer offline experiences with the Periodic Background Sync API</see><br/>-<see href="https://webplatformapis.com/periodic_sync/periodicSync_improved.html">A Periodic Background Sync demo app</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PeriodicSyncManager/getTags"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="'Promise'"/> which resolves with a list of <see cref="'String'"/> objects<br/>representing tags that are currently registered for periodic syncing.</returns>
+</PeriodicSyncManagerGetTags>
+<PeriodicSyncManagerRegister>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>register()</c></strong> method of the<br/><see cref="PeriodicSyncManager"/> interface registers a periodic sync request with the<br/>browser with the specified tag and options. It returns a <see cref="'Promise'"/> that<br/>resolves when the registration completes.
+</summary>
+<remarks>
+<para>-<see href="https://developer.chrome.com/docs/capabilities/periodic-background-sync">Richer offline experiences with the Periodic Background Sync API</see><br/>-<see href="https://webplatformapis.com/periodic_sync/periodicSync_improved.html">A Periodic Background Sync demo app</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PeriodicSyncManager/register"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Returns a <see cref="Promise"/> that resolves with <see cref="'undefined'"/>.</returns>
+</PeriodicSyncManagerRegister>
+<PeriodicSyncManagerUnregister>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>unregister()</c></strong> method of the<br/><see cref="PeriodicSyncManager"/> interface unregisters the periodic sync request<br/>corresponding to the specified tag and returns a <see cref="'Promise'"/> that resolves<br/>when unregistration completes.
+</summary>
+<remarks>
+<para>-<see href="https://developer.chrome.com/docs/capabilities/periodic-background-sync">Richer offline experiences with the Periodic Background Sync API</see><br/>-<see href="https://webplatformapis.com/periodic_sync/periodicSync_improved.html">A Periodic Background Sync demo app</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PeriodicSyncManager/unregister"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Returns a <see cref="Promise"/> that resolves with <see cref="'undefined'"/>.</returns>
+</PeriodicSyncManagerUnregister>
 </docs>

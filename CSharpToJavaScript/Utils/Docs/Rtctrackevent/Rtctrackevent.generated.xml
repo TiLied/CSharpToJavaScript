@@ -1,11 +1,58 @@
 <docs>
 <RTCTrackEvent>
 <summary>
-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see> interface <strong><c>RTCTrackEvent</c></strong> represents the <see cref="RTCPeerConnection.Track_event"/> event, which is sent when a new <see cref="MediaStreamTrack"/> is added to an <see cref="RTCRtpReceiver"/> which is part of the <see cref="RTCPeerConnection"/>.
+The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see> interface <strong><c>RTCTrackEvent</c></strong> represents the <see cref="RTCPeerConnection.Track"/> event, which is sent when a new <see cref="MediaStreamTrack"/> is added to an <see cref="RTCRtpReceiver"/> which is part of the <see cref="RTCPeerConnection"/>.
 </summary>
 <remarks>
 <para>The target is the <c>RTCPeerConnection</c> object to which the track is being added.</para><para>This event is sent by the WebRTC layer to the website or application, so you will not typically need to instantiate an <c>RTCTrackEvent</c> yourself.</para><para></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </RTCTrackEvent>
+<RTCTrackEventReceiver>
+<summary>
+The read-only <strong><c>receiver</c></strong> property<br/>of the <see cref="RTCTrackEvent"/> interface indicates the<br/><see cref="RTCRtpReceiver"/> which is used to receive data containing media for the<br/><see cref="RTCTrackEvent.Track"/> to which the event refers.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEvent/receiver"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <see cref="RTCRtpReceiver"/> which pairs the <c>receiver</c> with a<br/>sender and other properties which establish a single bidirectional <see href="https://developer.mozilla.org/en-US/docs/Glossary/RTP">RTP</see><br/>stream for use by the <see cref="RTCTrackEvent.Track"/> associated with the<br/><c>RTCTrackEvent</c>.<blockquote class="NOTE"><h5>NOTE</h5>The <see cref="RTCTrackEvent.Transceiver"/><br/>includes its own <see cref="RTCRtpTransceiver.Receiver"/> property, which<br/>will always be the same <see cref="RTCRtpReceiver"/> as this one.</blockquote></value>
+</RTCTrackEventReceiver>
+<RTCTrackEventRTCTrackEvent>
+<summary>
+The <strong><c>RTCTrackEvent()</c></strong> constructor creates and returns a new <see cref="RTCTrackEvent"/> object,<br/>configured to describe the track which has been added to the <see cref="RTCPeerConnection"/>.
+</summary>
+<remarks>
+<para>In general, you won&amp;apos;t need to use this constructor, as <c>RTCTrackEvent</c><br/>objects are created by WebRTC and delivered to your <c>RTCPeerConnection</c>&amp;apos;s<br/><see cref="RTCPeerConnection.Track"/> event handler as appropriate.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEvent/RTCTrackEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="RTCTrackEvent"/> describing a track which has been added to the<br/><c>RTCPeerConnection</c>.</returns>
+</RTCTrackEventRTCTrackEvent>
+<RTCTrackEventStreams>
+<summary>
+The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>interface <see cref="RTCTrackEvent"/>'s read-only<br/><strong><c>streams</c></strong> property specifies an array of<br/><see cref="MediaStream"/> objects, one for each of the streams that comprise the<br/>track being added to the <see cref="RTCPeerConnection"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEvent/streams"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An {{jsxref("Array")}} of <see cref="MediaStream"/> objects, one for each stream that<br/>make up the new track.</value>
+</RTCTrackEventStreams>
+<RTCTrackEventTrack>
+<summary>
+The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>interface <see cref="RTCTrackEvent"/>'s read-only <strong><c>track</c></strong><br/>property specifies the <see cref="MediaStreamTrack"/> that has been added to the<br/><see cref="RTCPeerConnection"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEvent/track"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="MediaStreamTrack"/> indicating the track which has been added to the<br/><see cref="RTCPeerConnection"/>.</value>
+</RTCTrackEventTrack>
+<RTCTrackEventTransceiver>
+<summary>
+The WebRTC API interface <see cref="RTCTrackEvent"/>'s<br/>read-only <strong><c>transceiver</c></strong> property indicates the<br/><see cref="RTCRtpTransceiver"/> affiliated with the event's<br/><see cref="RTCTrackEvent.Track"/>.
+</summary>
+<remarks>
+<para>The transceiver pairs the track&amp;apos;s<br/><see cref="RTCTrackEvent.Receiver"/> with an <see cref="RTCRtpSender"/>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEvent/transceiver"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <see cref="RTCRtpTransceiver"/> which pairs the <c>receiver</c> with a<br/>sender and other properties which establish a single bidirectional <see href="https://developer.mozilla.org/en-US/docs/Glossary/RTP">RTP</see><br/>stream for use by the <see cref="RTCTrackEvent.Track"/> associated with the<br/><c>RTCTrackEvent</c>.<blockquote class="NOTE"><h5>NOTE</h5>The <see cref="RTCRtpReceiver"/> referred to by this<br/><c>RTCRtpReceiver</c>'s <see cref="RTCRtpTransceiver.Receiver"/><br/>property will always be the same as the <see cref="RTCTrackEvent"/>'s<br/><see cref="RTCTrackEvent.Receiver"/> property.</blockquote></value>
+</RTCTrackEventTransceiver>
 </docs>

@@ -4,9 +4,341 @@
 The <strong><c>Range</c></strong> interface represents a fragment of a document that can contain nodes and parts of text nodes.
 </summary>
 <remarks>
-<para>A range can be created by using the <see cref="Document.CreateRange"/> method. Range objects can also be retrieved by using the <see cref="Selection/getRangeAt"/> method of the <see cref="Selection"/> object or the <see cref="Document/caretRangeFromPoint"/> method of the <see cref="Document"/> object.</para><para>There also is the <see cref="Range.Range"/> constructor available.</para><para></para>
+<para>A range can be created by using the <see cref="Document.CreateRange"/> method. Range objects can also be retrieved by using the <see cref="SelectiongetRangeAt"/> method of the <see cref="Selection"/> object or the <see cref="DocumentcaretRangeFromPoint"/> method of the <see cref="Document"/> object.</para><para>There also is the <see cref="Range.Range"/> constructor available.</para><para></para>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Range"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </Range>
+<RangeCloneContents>
+<summary>
+The <strong><c>cloneContents()</c></strong> method of the <see cref="Range"/> interface copies the selected <see cref="Node"/> children of the range's <see cref="RangecommonAncestorContainer"/> and puts them in a new <see cref="DocumentFragment"/> object.
+</summary>
+<remarks>
+<para>Nodes are cloned using the same algorithm as <see cref="Node.CloneNode"/>, which means event listeners attached with scripts are not cloned. HTML <c>id</c> attributes are cloned, which can lead to an invalid document through cloning.</para><para>The first and last selected children of <c>commonAncestorContainer</c> may be partially selected. In this case, the child node itself is cloned, but its content is only the part that is selected, by recursively cloning the range between the original range&amp;apos;s start/end boundary and that child node&amp;apos;s end/start boundary.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Range/cloneContents"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="DocumentFragment"/> object.</returns>
+</RangeCloneContents>
+<RangeCloneRange>
+<summary>
+The <strong><c>Range.cloneRange()</c></strong> method returns a<br/><see cref="Range"/> object with boundary points identical to the cloned<br/><see cref="Range"/>.
+</summary>
+<remarks>
+<para>The returned clone is copied by value, not reference, so a change in either<br/><see cref="Range"/> does not affect the other.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Range/cloneRange"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Range"/> object.</returns>
+</RangeCloneRange>
+<RangeCollapse>
+<summary>
+The <strong><c>collapse()</c></strong> method of the <see cref="Range"/> interface collapses the<br/><see cref="Range"/> to one of its boundary points.
+</summary>
+<remarks>
+<para>A collapsed <see cref="Range"/> is empty, containing no content, specifying a<br/>single-point in a DOM tree. To determine if a <see cref="Range"/> is already collapsed,<br/>see the <see cref="Range.Collapsed"/> property.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Range/collapse"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</RangeCollapse>
+<RangeCollapsed>
+<summary>
+The <strong><c>Range.collapsed</c></strong> read-only property returns a<br/>boolean flag indicating whether the start and end points of the<br/><see cref="Range"/> are at the same position. It returns <c>true</c> if the start<br/>and end boundary points of the <see cref="Range"/> are the same point in the DOM,<br/><c>false</c> if not.
+</summary>
+<remarks>
+<para>A collapsed <see cref="Range"/> is empty (containing no content), and specifies a<br/>single point in a DOM tree. To collapse a range, see the <see cref="Range.Collapse"/><br/>method.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Range/collapsed"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean.</value>
+</RangeCollapsed>
+<RangeCommonAncestorContainer>
+<summary>
+The <strong><c>Range.commonAncestorContainer</c></strong> read-only property<br/>returns the deepest — or furthest down the document tree — <see cref="Node"/> that<br/>contains both <see href="https://dom.spec.whatwg.org/#introduction-to-dom-ranges">boundary points</see> of the <see cref="Range"/>. This means that if<br/><see cref="Range.StartContainer"/> and <see cref="Range.EndContainer"/> both refer to<br/>the same node, this node is the <strong>common ancestor container</strong>.
+</summary>
+<remarks>
+<para>Since a <c>Range</c> need not be continuous, and may also partially select nodes,<br/>this is a convenient way to find a <c>Node</c> which encloses a<br/><c>Range</c>.</para><para>This property is read-only. To change the ancestor container of a <c>Node</c>,<br/>consider using the various methods available to set the start and end positions of the<br/><c>Range</c>, such as <see cref="Range.SetStart"/> and<br/><see cref="Range.SetEnd"/>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Range/commonAncestorContainer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Node"/> object.</value>
+</RangeCommonAncestorContainer>
+<RangeCompareBoundaryPoints>
+<summary>
+The <strong><c>compareBoundaryPoints()</c></strong> method of the <see cref="Range"/> interface compares the boundary points of the <see cref="Range"/> with those of another range.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Range/compareBoundaryPoints"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A number.This API is consistent with the general convention that, when comparing A to B, a negative number means A comes before B and vice versa (see for example <see cref="ArrayPrototypeSort"/>). The ranges are compared in the direction of <c>this</c> to <c>other</c>, the same as <see cref="StringPrototypeLocaleCompare"/>. However, the boundary points are specified in the reverse order for the <c>how</c> parameter: <c>END_TO_START</c> compares the <strong>start</strong> of <c>this</c> to the <strong>end</strong> of <c>other</c>.</returns>
+</RangeCompareBoundaryPoints>
+<RangeCompareNode>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>compareNode()</c></strong> method of the <see cref="Range"/> interface returns a constant indicating the<br/>position of the <see cref="Node"/>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Range/compareNode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A constant indicating the position of the <see cref="Node"/>. The possible values are:</returns>
+</RangeCompareNode>
+<RangeComparePoint>
+<summary>
+The <strong><c>comparePoint()</c></strong> method of the <see cref="Range"/> interface determines whether a specified point is before, within, or after the <see cref="Range"/>. The point is specified by a reference node and an offset within that node.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Range/comparePoint"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A number.</returns>
+</RangeComparePoint>
+<RangeCreateContextualFragment>
+<summary>
+The <strong><c>Range.createContextualFragment()</c></strong> method returns a<br/><see cref="DocumentFragment"/> by invoking the HTML fragment parsing algorithm or the<br/>XML fragment parsing algorithm with the start of the range (the <strong>parent</strong> of the<br/>selected node) as the context node. The HTML fragment parsing algorithm is used if the<br/>range belongs to a <c>Document</c> whose HTMLness bit is set. In the HTML case, if<br/>the context node would be <c>html</c>, for historical reasons the fragment parsing<br/>algorithm is invoked with <c>body</c> as the context instead.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Range/createContextualFragment"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="DocumentFragment"/> object.</returns>
+</RangeCreateContextualFragment>
+<RangeDeleteContents>
+<summary>
+The <strong><c>Range.deleteContents()</c></strong> method removes all completely-selected {{ domxref(&amp;quot;Node&amp;quot;, &amp;quot;nodes&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;) }} within this range from the document. For the partially selected nodes at the start or end of the range, only the selected portion of the text is deleted, while the node itself remains intact. Afterwards, the range is collapsed to the end of the last selected node.
+</summary>
+<remarks>
+<para>Unlike <see cref="Range.ExtractContents"/>, this method does not return a <see cref="DocumentFragment"/> containing the deleted content.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Range/deleteContents"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</RangeDeleteContents>
+<RangeDetach>
+<summary>
+The <strong><c>Range.detach()</c></strong> method does nothing. It used to<br/>disable the <see cref="Range"/> object and enable the browser to release associated<br/>resources. The method has been kept for compatibility.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Range/detach"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</RangeDetach>
+<RangeEndContainer>
+<summary>
+The <strong><c>Range.endContainer</c></strong> read-only property returns the<br/><see cref="Node"/> within which the <see cref="Range"/> ends. To change the end<br/>position of a node, use the <see cref="Range.SetEnd"/> method or a similar one.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Range/endContainer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Node"/> object.</value>
+</RangeEndContainer>
+<RangeEndOffset>
+<summary>
+The <strong><c>Range.endOffset</c></strong> read-only property returns a number<br/>representing where in the <see cref="Range.EndContainer"/> the <see cref="Range"/><br/>ends.
+</summary>
+<remarks>
+<para>If the <c>endContainer</c> is a <see cref="Node"/> of type <see cref="Text"/>,<br/><see cref="Comment"/>, or <see cref="CDATASection"/>, then the offset is the number of<br/>characters from the start of the <c>endContainer</c> to the boundary point of the<br/><see cref="Range"/>. For other <see cref="Node"/> types, the <c>endOffset</c> is<br/>the number of child nodes between the start of the <c>endContainer</c> and the<br/>boundary point of the <see cref="Range"/>. This property is read-only. To change the<br/><c>endOffset</c> of a <see cref="Range"/>, use one of the<br/><see cref="Range.SetEnd"/> methods.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Range/endOffset"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</RangeEndOffset>
+<RangeExtractContents>
+<summary>
+The <strong><c>extractContents()</c></strong> method of the <see cref="Range"/> interface is similar to a combination of <see cref="Range.CloneContents"/> and <see cref="Range.DeleteContents"/>. It removes the child <see cref="Node"/>s of the range from the document, clones them, and returns them as a new <see cref="DocumentFragment"/> object. For partially selected nodes, only the selected text is deleted, but all containing parent nodes up to the common ancestor are cloned as well, resulting in two copies of these nodes, one in the original document and one in the extracted fragment.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Range/extractContents"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="DocumentFragment"/> object.</returns>
+</RangeExtractContents>
+<RangeGetBoundingClientRect>
+<summary>
+The <strong><c>Range.getBoundingClientRect()</c></strong> method returns a <see cref="DOMRect"/> object that bounds the contents of the range; this is a rectangle<br/>enclosing the union of the bounding rectangles for all the elements in the range.
+</summary>
+<remarks>
+<para>This method is useful for determining the viewport coordinates of the cursor or<br/>selection inside a text box. See <see cref="Element.GetBoundingClientRect"/> for<br/>details on the returned value.</para>
+<para>-<see cref="Range.GetClientRects"/> - finer-grained result for non-rectangular<br/>ranges (e.g., when the selection wraps onto the next line);<br/>-<see cref="Element.GetBoundingClientRect"/><br/>-<see cref="Document.CaretPositionFromPoint"/> - to get the (node, offset) from<br/>viewport coordinates.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Range/getBoundingClientRect"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="DOMRect"/> object that encloses the union of the bounding rectangles for all elements in the range.</returns>
+</RangeGetBoundingClientRect>
+<RangeGetClientRects>
+<summary>
+The <strong><c>Range.getClientRects()</c></strong> method returns a list of <see cref="DOMRect"/> objects representing the area of the screen occupied by the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Range">range</see>. This is created by aggregating the results of calls to<br/><see cref="Element.GetClientRects"/> for all the elements in the range.
+</summary>
+<remarks>
+<para>-<see cref="Range"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Range/getClientRects"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol">iterable</see> sequence of <see cref="DOMRect"/> objects.</returns>
+</RangeGetClientRects>
+<RangeInsertNode>
+<summary>
+The <strong><c>Range.insertNode()</c></strong> method inserts a node at the start<br/>of the <see cref="Range"/>.
+</summary>
+<remarks>
+<para>The new node is inserted at the start boundary point of the <c>Range</c>. If the<br/>new node is to be added to a text <see cref="Node"/>, that <c>Node</c> is split<br/>at the insertion point, and the insertion occurs between the two text nodes.</para><para>If the new node is a document fragment, the children of the document fragment are<br/>inserted instead.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Range/insertNode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</RangeInsertNode>
+<RangeIntersectsNode>
+<summary>
+The <strong><c>Range.intersectsNode()</c></strong> method returns a boolean<br/>indicating whether the given <see cref="Node"/> intersects the <see cref="Range"/>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Range/intersectsNode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A boolean.</returns>
+</RangeIntersectsNode>
+<RangeIsPointInRange>
+<summary>
+The <strong><c>isPointInRange()</c></strong> method of the <see cref="Range"/> interface determines whether a specified point is within the <see cref="Range"/>. The point is specified by a reference node and an offset within that node. It is equivalent to calling <see cref="Range.ComparePoint"/> and checking if the result is <c>0</c>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Range/isPointInRange"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A boolean.</returns>
+</RangeIsPointInRange>
+<RangeRange>
+<summary>
+The <strong><c>Range()</c></strong> constructor returns a newly created<br/><see cref="Range"/> object whose start and end is the global <see cref="Document"/><br/>object.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</see><br/>-<see cref="Document.CreateRange"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_custom_highlight_API">CSS custom highlight API</see> module<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Range/Range"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RangeRange>
+<RangeSelectNode>
+<summary>
+The <strong><c>Range.selectNode()</c></strong> method sets the<br/><see cref="Range"/> to contain the <see cref="Node"/> and its contents. The parent<br/><see cref="Node"/> of the start and end of the <see cref="Range"/> will be the same as<br/>the parent of the <strong>referenceNode</strong>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Range/selectNode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</RangeSelectNode>
+<RangeSelectNodeContents>
+<summary>
+The <strong><c>Range.selectNodeContents()</c></strong> method sets the <see cref="Range"/> to contain the contents of a <see cref="Node"/>.
+</summary>
+<remarks>
+<para>The parent <c>Node</c> of the start and end of the <c>Range</c> will be the<br/>reference node. The <c>startOffset</c> is 0, and the <c>endOffset</c> is the<br/>number of child <c>Node</c>s or number of characters contained in the reference<br/>node.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Range/selectNodeContents"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</RangeSelectNodeContents>
+<RangeSetEnd>
+<summary>
+The <strong><c>Range.setEnd()</c></strong> method sets the end position of a <see cref="Range"/> to be located at the given offset into the specified node. Setting<br/>the end point above (higher in the document) than the start point will result in a<br/>collapsed range with the start and end points both set to the specified end position.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Range/setEnd"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</RangeSetEnd>
+<RangeSetEndAfter>
+<summary>
+The <strong><c>Range.setEndAfter()</c></strong> method sets the end position of a<br/><see cref="Range"/> relative to another <see cref="Node"/>. The parent<br/><c>Node</c> of end of the <c>Range</c> will be the same as that for the<br/><c>referenceNode</c>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Range/setEndAfter"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</RangeSetEndAfter>
+<RangeSetEndBefore>
+<summary>
+The <strong><c>Range.setEndBefore()</c></strong> method sets the end position of<br/>a <c>Range</c> relative to another <see cref="Node"/>. The parent<br/><c>Node</c> of end of the <c>Range</c> will be the same as that for the<br/><c>referenceNode</c>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Range/setEndBefore"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</RangeSetEndBefore>
+<RangeSetStart>
+<summary>
+The <strong><c>Range.setStart()</c></strong> method sets the start position of a<br/><see cref="Range"/>.
+</summary>
+<remarks>
+<para>If the <c>startNode</c> is a <see cref="Node"/> of type <see cref="Text"/>,<br/><see cref="Comment"/>, or <see cref="CDataSection"/>, then <c>startOffset</c> is<br/>the number of characters from the start of <c>startNode</c>. For other<br/><c>Node</c> types, <c>startOffset</c> is the number of child nodes between<br/>the start of the <c>startNode</c>.</para><para>Setting the start point below (lower in the document) the end point will result in a<br/>collapsed range with the start and end points both set to the specified start position.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Range/setStart"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</RangeSetStart>
+<RangeSetStartAfter>
+<summary>
+The <strong><c>Range.setStartAfter()</c></strong> method sets the start position<br/>of a <see cref="Range"/> relative to a <see cref="Node"/>. The parent<br/><see cref="Node"/> of the start of the <see cref="Range"/> will be the same as that<br/>for the <c>referenceNode</c>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Range/setStartAfter"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</RangeSetStartAfter>
+<RangeSetStartBefore>
+<summary>
+The <strong><c>Range.setStartBefore()</c></strong> method sets the start position<br/>of a <see cref="Range"/> relative to another <see cref="Node"/>. The parent<br/><see cref="Node"/> of the start of the <see cref="Range"/> will be the same as that<br/>for the <c>referenceNode</c>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Range/setStartBefore"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</RangeSetStartBefore>
+<RangeStartContainer>
+<summary>
+The <strong><c>Range.startContainer</c></strong> read-only property returns the<br/><see cref="Node"/> within which the <c>Range</c> starts. To change the start<br/>position of a node, use one of the <see cref="Range.SetStart"/> methods.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Range/startContainer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Node"/> object.</value>
+</RangeStartContainer>
+<RangeStartOffset>
+<summary>
+The <strong><c>Range.startOffset</c></strong> read-only property returns a number<br/>representing where in the <c>startContainer</c> the <c>Range</c> starts.
+</summary>
+<remarks>
+<para>If the <c>startContainer</c> is a <see cref="Node"/> of type<br/><see cref="Text"/>, <see cref="Comment"/>, or <see cref="CDATASection"/>, then the<br/>offset is the number of characters from the start of the <c>startContainer</c> to<br/>the boundary point of the <see cref="Range"/>. For other <see cref="Node"/> types, the<br/><c>startOffset</c> is the number of child nodes between the start of the<br/><c>startContainer</c> and the boundary point of the <see cref="Range"/>.</para><para>To change the <c>startOffset</c> of a <see cref="Range"/>, use the<br/><see cref="Range.SetStart"/> method.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Range/startOffset"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</RangeStartOffset>
+<RangeSurroundContents>
+<summary>
+The <strong><c>surroundContents()</c></strong> method of the <see cref="Range"/> interface surrounds the selected content by a provided node. It <see href="https://developer.mozilla.org/en-US/docs/Web/API/Range/extractContents">extracts</see> the contents of the range, replaces the children of <c>newParent</c> with the extracted contents, <see href="https://developer.mozilla.org/en-US/docs/Web/API/Range/insertNode">inserts</see> <c>newParent</c> at the location of the extracted contents, and makes the range select <c>newParent</c>.
+</summary>
+<remarks>
+<para>An exception is thrown if the range partially contains any non-<see cref="Text"/> node. The range must only contain text nodes and completely selected nodes.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Range/surroundContents"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</RangeSurroundContents>
+<RangeToString>
+<summary>
+The <strong><c>Range.toString()</c></strong> method is a <see href="https://developer.mozilla.org/en-US/docs/Glossary/stringifier">stringifier</see> returning<br/>the text of the <see cref="Range"/>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Range/toString"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A string.</returns>
+</RangeToString>
 </docs>

@@ -9,4 +9,43 @@ A <c>CloseEvent</c> is sent to clients using <see href="https://developer.mozill
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CloseEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </CloseEvent>
+<CloseEventCloseEvent>
+<summary>
+The <strong><c>CloseEvent()</c></strong> constructor creates a new <see cref="CloseEvent"/> object.
+</summary>
+<remarks>
+<para>-<see cref="CloseEvent"/>, the interface of the objects it constructs.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CloseEvent/CloseEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="CloseEvent"/> object.</returns>
+</CloseEventCloseEvent>
+<CloseEventCode>
+<summary>
+The <strong><c>code</c></strong> read-only property of the <see cref="CloseEvent"/> interface returns a <see href="https://www.rfc-editor.org/rfc/rfc6455.html#section-7.1.5">WebSocket connection close code</see> indicating the reason the connection was closed.
+</summary>
+<remarks>
+<para>-<see href="https://www.rfc-editor.org/rfc/rfc6455.html">RFC 6455</see> (the WebSocket Protocol specification)<br/>-<see href="https://www.iana.org/assignments/websocket/websocket.xml#close-code-number">WebSocket Close Code Number Registry</see> (IANA)<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CloseEvent/code"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer <see href="https://www.rfc-editor.org/rfc/rfc6455.html#section-7.1.5">WebSocket connection close code</see> in the range <c>1000</c> - <c>4999</c>, indicating the reason the connection was closed.</value>
+</CloseEventCode>
+<CloseEventReason>
+<summary>
+The <strong><c>reason</c></strong> read-only property of the <see cref="CloseEvent"/> interface returns the <see href="https://www.rfc-editor.org/rfc/rfc6455.html#section-7.1.6">WebSocket connection close reason</see> the server gave for closing the connection; that is, a concise human-readable prose explanation for the closure.
+</summary>
+<remarks>
+<para>-<see href="https://www.rfc-editor.org/rfc/rfc6455.html">RFC 6455</see> (the WebSocket Protocol specification)<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CloseEvent/reason"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</CloseEventReason>
+<CloseEventWasClean>
+<summary>
+The <strong><c>wasClean</c></strong> read-only property of the <see cref="CloseEvent"/> interface returns <c>true</c> if the connection closed cleanly.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CloseEvent/wasClean"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value. True if the connection closed cleanly, false otherwise.</value>
+</CloseEventWasClean>
 </docs>

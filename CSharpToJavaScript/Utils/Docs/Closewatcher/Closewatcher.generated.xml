@@ -5,8 +5,63 @@
 </summary>
 <remarks>
 <para></para><para>The <c>CloseWatcher</c> interface inherits from <see cref="EventTarget"/>.</para>
-<para>-<see cref="HTMLDialogElement.Close_event"/> event on <see cref="HTMLDialogElement"/><br/></para>
+<para>-<see cref="HTMLDialogElement.Close"/> event on <see cref="HTMLDialogElement"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CloseWatcher"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </CloseWatcher>
+<CloseWatcherCancel>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> A <c>cancel</c> event is fired at a <see cref="CloseWatcher"/> object before the <c>close</c> event, so that <c>close</c> can be prevented from firing, if necessary. It is triggered by all close signals (e.g., the &amp;lt;kbd&amp;gt;Esc&amp;lt;/kbd&amp;gt; key) as well as <see cref="CloseWatcher.RequestClose"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CloseWatcher/cancel"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CloseWatcherCancel>
+<CloseWatcherClose>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>close()</c></strong> method of the <see cref="CloseWatcher"/> interface lets you skip any logic in the <c>cancel</c> event handler and immediately fire the <c>close</c> event. It then deactivates the close watcher as if <c>destroy()</c> was called.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CloseWatcher/close"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</CloseWatcherClose>
+<CloseWatcherCloseWatcher>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>CloseWatcher()</c></strong> constructor creates a new <see cref="CloseWatcher"/> object.
+</summary>
+<remarks>
+<para>You can create <c>CloseWatcher</c> instances without <see href="https://developer.mozilla.org/en-US/docs/Web/Security/User_activation">user activation</see>, and this can be useful to implement cases like session inactivity timeout dialogs. However, if you create more than one <c>CloseWatcher</c> without user activation, then the newly-created one will be grouped together with the last one, so a single close request will close them both. This means that it is important to call <see cref="CloseWatcher.Destroy"/>, <see cref="CloseWatcher.Close"/>, and <see cref="CloseWatcher.RequestClose"/> properly.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CloseWatcher/CloseWatcher"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="CloseWatcher"/> object.</returns>
+</CloseWatcherCloseWatcher>
+<CloseWatcherClose>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> A <c>close</c> event is fired at a <see cref="CloseWatcher"/> object when a close request was received and only fired if the <see cref="CloseWatcher.Cancel"/> event that preceded the <c>close</c> one was not canceled.
+</summary>
+<remarks>
+<para>The <c>close</c> event handler is where the code to close the UI component should be called: this ensures that the component will be closed properly either from the platform-specific close signal or from a call to <see cref="CloseWatcher.RequestClose"/>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CloseWatcher/close"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CloseWatcherClose>
+<CloseWatcherDestroy>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>destroy()</c></strong> method of the <see cref="CloseWatcher"/> interface deactivates the close watcher. This is intended to be called if the relevant UI element is torn down in some other way than being closed.
+</summary>
+<remarks>
+<para>After being deactivated, this <c>CloseWatcher</c> will no longer receive <c>cancel</c> or <c>close</c> events, and it will be possible to create new independent <c>CloseWatcher</c> instances.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CloseWatcher/destroy"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</CloseWatcherDestroy>
+<CloseWatcherRequestClose>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>requestClose()</c></strong> method of the <see cref="CloseWatcher"/> interface fires a <c>cancel</c> event and if that event is not canceled with <see cref="Event.PreventDefault"/>, proceeds to fire a <c>close</c> event, and then finally deactivates the close watcher as if <c>destroy()</c> was called.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CloseWatcher/requestClose"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</CloseWatcherRequestClose>
 </docs>

@@ -9,4 +9,15 @@ The WebXR Device API interface <strong><c>XRViewerPose</c></strong> represents t
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRViewerPose"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </XRViewerPose>
+<XRViewerPoseViews>
+<summary>
+The read-only <see cref="XRViewerPose"/> property <strong><c>views</c></strong><br/>returns an array which contains every <see cref="XRView"/> which must be rendered in<br/>order to fully represent the scene from the viewpoint defined by the viewer pose. For<br/>monoscopic devices, this array contains a single view.
+</summary>
+<remarks>
+<blockquote class="WARNING"><h5>WARNING</h5><para>There is no guarantee that the number of views will<br/>remain constant over the lifetime of an <see cref="XRSession"/>. For each frame, you<br/>should always use the current length of this array rather than caching the value.</para></blockquote><para>Stereo views require two views to render properly, with the left eye&amp;apos;s view having its<br/><see cref="XRView.Eye"/> set to the string <c>left</c> and the right eye&amp;apos;s<br/>view a value of <c>right</c>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion">Movement, orientation, and motion</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRViewerPose/views"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An array of <see cref="XRView"/> objects, one for each view available as part of the<br/>scene for the current viewer pose. This array&amp;apos;s length may potentially vary over the<br/>lifetime of the <see cref="XRSession"/> (for example, if the viewer enables or disables<br/>stereo mode on their XR output device).</value>
+</XRViewerPoseViews>
 </docs>

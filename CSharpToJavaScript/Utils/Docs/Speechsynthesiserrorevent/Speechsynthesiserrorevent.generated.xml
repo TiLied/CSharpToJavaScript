@@ -9,4 +9,25 @@ The <strong><c>SpeechSynthesisErrorEvent</c></strong> interface of the <see href
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisErrorEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </SpeechSynthesisErrorEvent>
+<SpeechSynthesisErrorEventError>
+<summary>
+The <strong><c>error</c></strong> property of the<br/><see cref="SpeechSynthesisErrorEvent"/> interface returns an error code indicating what has gone wrong with a speech synthesis attempt.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisErrorEvent/error"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing the error reason. Possible values are:</value>
+</SpeechSynthesisErrorEventError>
+<SpeechSynthesisErrorEventSpeechSynthesisErrorEvent>
+<summary>
+The <strong><c>SpeechSynthesisErrorEvent()</c></strong> constructor creates a new <see cref="SpeechSynthesisErrorEvent"/> object.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>A web developer doesn&amp;apos;t typically need to call this constructor, as the browser creates these objects itself when firing events.</para></blockquote>
+<para>-<see cref="SpeechSynthesisEvent"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisErrorEvent/SpeechSynthesisErrorEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="SpeechSynthesisErrorEvent"/> object.</returns>
+</SpeechSynthesisErrorEventSpeechSynthesisErrorEvent>
 </docs>

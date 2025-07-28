@@ -9,4 +9,91 @@ The <strong><c>VisualViewport</c></strong> interface of the {{domxref(&amp;quot;
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VisualViewport"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </VisualViewport>
+<VisualViewportHeight>
+<summary>
+The <strong><c>height</c></strong> read-only property of the <see cref="VisualViewport"/> interface returns the height of the visual viewport, in CSS pixels, or <c>0</c> if current document is not fully active.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VisualViewport/height"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A double.</value>
+</VisualViewportHeight>
+<VisualViewportOffsetLeft>
+<summary>
+The <strong><c>offsetLeft</c></strong> read-only property of the <see cref="VisualViewport"/> interface returns the offset of the left edge of the visual viewport from the left edge of the layout viewport in CSS pixels, or <c>0</c> if current document is not fully active.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VisualViewport/offsetLeft"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A double.</value>
+</VisualViewportOffsetLeft>
+<VisualViewportOffsetTop>
+<summary>
+The <strong><c>offsetTop</c></strong> read-only property of the <see cref="VisualViewport"/> interface returns the offset of the top edge of the visual viewport from the top edge of the layout viewport in CSS pixels, or <c>0</c> if current document is not fully active.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VisualViewport/offsetTop"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A double.</value>
+</VisualViewportOffsetTop>
+<VisualViewportPageLeft>
+<summary>
+The <strong><c>pageLeft</c></strong> read-only property of the <see cref="VisualViewport"/> interface returns the x coordinate of the left edge of the visual viewport relative to the initial containing block origin, in CSS pixels, or <c>0</c> if current document is not fully active.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VisualViewport/pageLeft"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A double.</value>
+</VisualViewportPageLeft>
+<VisualViewportPageTop>
+<summary>
+The <strong><c>pageTop</c></strong> read-only property of the <see cref="VisualViewport"/> interface returns the y coordinate of the top edge of the visual viewport relative to the initial containing block origin, in CSS pixels, or <c>0</c> if current document is not fully active.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VisualViewport/pageTop"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A double.</value>
+</VisualViewportPageTop>
+<VisualViewportResize>
+<summary>
+The <strong><c>resize</c></strong> event of the <see cref="VisualViewport"/> interface is fired when the visual viewport is resized. This allows you to position elements relative to the visual viewport as it is zoomed, which would normally be anchored to the layout viewport.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VisualViewport/resize"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</VisualViewportResize>
+<VisualViewportScale>
+<summary>
+The <strong><c>scale</c></strong> read-only property of the <see cref="VisualViewport"/> interface returns the pinch-zoom scaling factor applied to the visual viewport, or <c>0</c> if current document is not fully active, or <c>1</c> if there is no output device.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VisualViewport/scale"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A double.</value>
+</VisualViewportScale>
+<VisualViewportScrollend>
+<summary>
+The <strong><c>scrollend</c></strong> event of the <see cref="VisualViewport"/> interface is fired when a scrolling operation on the visual viewport ends. This allows you to update an element when a scrolling action is completed. For example, you could use the <see cref="VisualViewportresize"/> and <see cref="VisualViewportscroll"/> events to keep an element fixed to the visual viewport as it is pinch-zoomed and scrolled, and update it with new content when scrolling ends using <c>scrollend</c>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VisualViewport/scrollend"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</VisualViewportScrollend>
+<VisualViewportScroll>
+<summary>
+The <strong><c>scroll</c></strong> event of the <see cref="VisualViewport"/> interface is fired when the visual viewport is scrolled. This allows you to position elements relative to the visual viewport as it is scrolled, which would normally be anchored to the layout viewport.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VisualViewport/scroll"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</VisualViewportScroll>
+<VisualViewportWidth>
+<summary>
+The <strong><c>width</c></strong> read-only property of the <see cref="VisualViewport"/> interface returns the width of the visual viewport, in CSS pixels, or <c>0</c> if current document is not fully active.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VisualViewport/width"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A double.</value>
+</VisualViewportWidth>
 </docs>

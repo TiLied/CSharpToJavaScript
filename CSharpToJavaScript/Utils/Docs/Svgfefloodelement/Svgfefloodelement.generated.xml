@@ -9,4 +9,59 @@ The <strong><c>SVGFEFloodElement</c></strong> interface corresponds to the <see 
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEFloodElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </SVGFEFloodElement>
+<SVGFEFloodElementHeight>
+<summary>
+The <strong><c>height</c></strong> read-only property of the <see cref="SVGFEFloodElement"/> interface describes the vertical size of an SVG filter primitive as a <see cref="SVGAnimatedLength"/>.
+</summary>
+<remarks>
+<para>It reflects the {{SVGAttr("height")}} attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementfeFlood">feFlood</see> element, which fills an SVG filter subregion with the color and opacity defined by {{SVGAttr("flood-color")}} and {{SVGAttr("flood-opacity")}}. The attribute is a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see> or a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#percentage"><c>&amp;lt;percentage&amp;gt;</c></see> relative to the height of the filter region. The default value is <c>100%</c>. The property value is a length in user coordinate system units.</para>
+<para>-<see cref="SVGFEFloodElement.Width"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/SVG_filters">SVG filter tutorial</see><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/blend-mode">blend-mode</see> data type<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode">mix-blend-mode</see> property<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEFloodElement/height"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedLength"/>.</value>
+</SVGFEFloodElementHeight>
+<SVGFEFloodElementResult>
+<summary>
+The <strong><c>result</c></strong> read-only property of the <see cref="SVGFEFloodElement"/> interface describes the assigned name of an SVG filter primitive as a <see cref="SVGAnimatedString"/>.
+</summary>
+<remarks>
+<para>It reflects the {{SVGAttr("result")}} attribute of the {{SVGElement("feFlood")}} element, which fills an SVG filter subregion with the color and opacity defined by {{SVGAttr("flood-color")}} and {{SVGAttr("flood-opacity")}}. The attribute value is a <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/custom-ident">custom-ident</see>. If supplied, then graphics that result from processing this filter primitive can be referenced by an {{SVGAttr("in")}} attribute on a subsequent filter primitive within the same {{SVGElement("filter")}} element.</para><para>If no <c>result</c> attribute is defined, the filter&amp;apos;s <c>result.baseVal</c> and <c>result.animVal</c> are empty strings, and the output of the <c>&amp;lt;feFlood&amp;gt;</c> filter will only be available for re-use as the implicit input into the next filter primitive if that filter primitive provides no value for its <c>in</c> attribute.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/custom-ident">custom-ident</see> data type<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/SVG_filters">SVG filter tutorial</see><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/blend-mode">blend-mode</see> data type<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode">mix-blend-mode</see> property<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEFloodElement/result"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedString"/>.</value>
+</SVGFEFloodElementResult>
+<SVGFEFloodElementWidth>
+<summary>
+The <strong><c>width</c></strong> read-only property of the <see cref="SVGFEFloodElement"/> interface describes the horizontal size of an SVG filter primitive as a <see cref="SVGAnimatedLength"/>.
+</summary>
+<remarks>
+<para>It reflects the {{SVGAttr("width")}} attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementfeFlood">feFlood</see> element, which fills an SVG filter subregion with the color and opacity defined by {{SVGAttr("flood-color")}} and {{SVGAttr("flood-opacity")}}. The attribute is a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see> or a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#percentage"><c>&amp;lt;percentage&amp;gt;</c></see> relative to the width of the filter region. The default value is <c>100%</c>. The property value is a length in user coordinate system units.</para>
+<para>-<see cref="SVGFEFloodElement.Height"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/SVG_filters">SVG filter tutorial</see><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/blend-mode">blend-mode</see> data type<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode">mix-blend-mode</see> property<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEFloodElement/width"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedLength"/>.</value>
+</SVGFEFloodElementWidth>
+<SVGFEFloodElementX>
+<summary>
+The <strong><c>x</c></strong> read-only property of the <see cref="SVGFEFloodElement"/> interface describes the horizontal coordinate of the position of an SVG filter primitive as a <see cref="SVGAnimatedLength"/>.
+</summary>
+<remarks>
+<para>It reflects the {{SVGAttr("x")}} attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementfeFlood">feFlood</see> element, which fills an SVG filter subregion with the color and opacity defined by {{SVGAttr("flood-color")}} and {{SVGAttr("flood-opacity")}}. The attribute is a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see> or <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#percentage"><c>&amp;lt;percentage&amp;gt;</c></see>. The <c>&amp;lt;coordinate&amp;gt;</c> is a length in the user coordinate system that is the given distance from the origin of the user coordinate system along the x-axis. If the <c>x</c> attribute is a percent value, the property value is relative to the width of the filter region in user coordinate system units. The default value is <c>0</c>.</para>
+<para>-<see cref="SVGFEFloodElement.Y"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/SVG_filters">SVG filter tutorial</see><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/blend-mode">blend-mode</see> data type<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode">mix-blend-mode</see> property<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEFloodElement/x"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedLength"/>.</value>
+</SVGFEFloodElementX>
+<SVGFEFloodElementY>
+<summary>
+The <strong><c>y</c></strong> read-only property of the <see cref="SVGFEFloodElement"/> interface describes the vertical coordinate of the position of an SVG filter primitive as a <see cref="SVGAnimatedLength"/>.
+</summary>
+<remarks>
+<para>It reflects the {{SVGAttr("y")}} attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementfeFlood">feFlood</see> element, which fills an SVG filter subregion with the color and opacity defined by {{SVGAttr("flood-color")}} and {{SVGAttr("flood-opacity")}}. The attribute is a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see> or <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#percentage"><c>&amp;lt;percentage&amp;gt;</c></see>. The <c>&amp;lt;coordinate&amp;gt;</c> is a length in the user coordinate system that is the given distance from the origin of the filter along the y-axis. If the <c>y</c> attribute is a percent value, the property value is relative to the height of the filter region in user coordinate system units. The default value is <c>0</c>.</para>
+<para>-<see cref="SVGFEFloodElement.X"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/SVG_filters">SVG filter tutorial</see><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/blend-mode">blend-mode</see> data type<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode">mix-blend-mode</see> property<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEFloodElement/y"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedLength"/>.</value>
+</SVGFEFloodElementY>
 </docs>

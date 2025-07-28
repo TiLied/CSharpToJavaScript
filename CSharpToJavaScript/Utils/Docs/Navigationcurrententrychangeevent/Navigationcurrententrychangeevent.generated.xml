@@ -1,12 +1,42 @@
 <docs>
 <NavigationCurrentEntryChangeEvent>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>NavigationCurrentEntryChangeEvent</c></strong> interface of the {{domxref(&amp;quot;Navigation API&amp;quot;, &amp;quot;Navigation API&amp;quot;, &amp;quot;&amp;quot;, "nocode")}} is the event object for the <see cref="Navigation/currententrychange_event"/> event, which fires when the <see cref="Navigation.CurrentEntry"/> has changed.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>NavigationCurrentEntryChangeEvent</c></strong> interface of the {{domxref(&amp;quot;Navigation API&amp;quot;, &amp;quot;Navigation API&amp;quot;, &amp;quot;&amp;quot;, "nocode")}} is the event object for the <see cref="Navigationcurrententrychange"/> event, which fires when the <see cref="Navigation.CurrentEntry"/> has changed.
 </summary>
 <remarks>
-<para>This event will fire for same-document navigations (e.g. <see cref="Navigation.Back"/> or <see cref="Navigation.TraverseTo"/>), replacements (i.e. a <see cref="Navigation.Navigate"/> call with <c>history</c> set to <c>replace</c>), or other calls that change the entry's state (e.g. <see cref="Navigation.UpdateCurrentEntry"/>, or the {{domxref("History API", "History API", &amp;quot;&amp;quot;, "nocode")}}'s <see cref="History.ReplaceState"/>).</para><para>This event fires after the navigation is committed, meaning that the visible URL has changed and the <see cref="NavigationHistoryEntry"/> update has occurred. It is useful for migrating from usage of older API features like the <see cref="Window/hashchange_event"/> or <see cref="Window/popstate_event"/> events.</para><para></para>
-<para>-<see href="https://developer.chrome.com/docs/web-platform/navigation-api/">Modern client-side routing: the Navigation API</see><br/>-<see href="https://github.com/WICG/navigation-api/blob/main/README.md">Navigation API explainer</see><br/>-Domenic Denicola&amp;apos;s <see href="https://gigantic-honored-octagon.glitch.me/">Navigation API live demo</see><br/></para>
+<para>This event will fire for same-document navigations (e.g., <see cref="Navigation.Back"/> or <see cref="Navigation.TraverseTo"/>), replacements (i.e., a <see cref="Navigation.Navigate"/> call with <c>history</c> set to <c>replace</c>), or other calls that change the entry's state (e.g., <see cref="Navigation.UpdateCurrentEntry"/>, or the {{domxref("History API", "History API", &amp;quot;&amp;quot;, "nocode")}}'s <see cref="History.ReplaceState"/>).</para><para>This event fires after the navigation is committed, meaning that the visible URL has changed and the <see cref="NavigationHistoryEntry"/> update has occurred. It is useful for migrating from usage of older API features like the <see cref="Windowhashchange"/> or <see cref="Windowpopstate"/> events.</para><para></para>
+<para>-<see href="https://developer.chrome.com/docs/web-platform/navigation-api/">Modern client-side routing: the Navigation API</see><br/>-<see href="https://github.com/WICG/navigation-api/blob/main/README.md">Navigation API explainer</see><br/>-<see href="https://mdn.github.io/dom-examples/navigation-api/">Navigation API live demo</see> (<see href="https://github.com/mdn/dom-examples/tree/main/navigation-api">view demo source</see>)<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NavigationCurrentEntryChangeEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </NavigationCurrentEntryChangeEvent>
+<NavigationCurrentEntryChangeEventFrom>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>from</c></strong> read-only property of the <see cref="NavigationCurrentEntryChangeEvent"/> interface returns the <see cref="NavigationHistoryEntry"/> that was navigated from.
+</summary>
+<remarks>
+<para>-<see href="https://developer.chrome.com/docs/web-platform/navigation-api/">Modern client-side routing: the Navigation API</see><br/>-<see href="https://github.com/WICG/navigation-api/blob/main/README.md">Navigation API explainer</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NavigationCurrentEntryChangeEvent/from"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="NavigationHistoryEntry"/> object.</value>
+</NavigationCurrentEntryChangeEventFrom>
+<NavigationCurrentEntryChangeEventNavigationCurrentEntryChangeEvent>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>NavigationCurrentEntryChangeEvent()</c></strong> constructor creates a new <see cref="NavigationCurrentEntryChangeEvent"/> object.
+</summary>
+<remarks>
+<para>-<see href="https://developer.chrome.com/docs/web-platform/navigation-api/">Modern client-side routing: the Navigation API</see><br/>-<see href="https://github.com/WICG/navigation-api/blob/main/README.md">Navigation API explainer</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NavigationCurrentEntryChangeEvent/NavigationCurrentEntryChangeEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="NavigationCurrentEntryChangeEvent"/> object.</returns>
+</NavigationCurrentEntryChangeEventNavigationCurrentEntryChangeEvent>
+<NavigationCurrentEntryChangeEventNavigationType>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>navigationType</c></strong> read-only property of the <see cref="NavigationCurrentEntryChangeEvent"/> interface returns the type of the navigation that resulted in the change. The property may be <c>null</c> if the change occurs due to <see cref="Navigation.UpdateCurrentEntry"/>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.chrome.com/docs/web-platform/navigation-api/">Modern client-side routing: the Navigation API</see><br/>-<see href="https://github.com/WICG/navigation-api/blob/main/README.md">Navigation API explainer</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NavigationCurrentEntryChangeEvent/navigationType"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An enumerated value representing the type of navigation.The possible values are:</value>
+</NavigationCurrentEntryChangeEventNavigationType>
 </docs>

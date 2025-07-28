@@ -9,4 +9,207 @@ The <strong><c>URL</c></strong> interface is used to parse, construct, normalize
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URL"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </URL>
+<URLCanParse>
+<summary>
+The <strong><c>URL.canParse()</c></strong> static method of the <see cref="URL"/> interface returns a boolean indicating whether or not an absolute URL, or a relative URL combined with a base URL, are parsable and valid.
+</summary>
+<remarks>
+<para>This is a fast and easy alternative to constructing a <c>URL</c> within a <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch">try...catch</see> block.<br/>It returns <c>true</c> for the same values for which the <see href="https://developer.mozilla.org/en-US/docs/Web/API/URL/URL"><c>URL()</c> constructor</see> would succeed, and <c>false</c> for the values that would cause the constructor to throw.</para>
+<para>-<see cref="URL.URL"/><br/>-<see href="https://github.com/zloirock/core-js#url-and-urlsearchparams">A polyfill of <c>URL.canParse()</c></see> is available in <see href="https://github.com/zloirock/core-js"><c>core-js</c></see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URL/canParse"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns><c>true</c> if the URL can be parsed and is valid; <c>false</c> otherwise.</returns>
+</URLCanParse>
+<URLCreateObjectURL>
+<summary>
+The <strong><c>createObjectURL()</c></strong> static method of the <see cref="URL"/> interface<br/>creates a string containing a <see href="https://developer.mozilla.org/en-US/docs/Web/URI/Reference/Schemes/blob">blob URL</see> pointing to the object given in the parameter.
+</summary>
+<remarks>
+<para>For more information, see <see href="https://developer.mozilla.org/en-US/docs/Web/URI/Reference/Schemes/blob">blob URLs</see>.</para><para>To release an object URL, call <see cref="URL.RevokeObjectURL"/>.</para><blockquote class="NOTE"><h5>NOTE</h5><para>This feature is <strong>not</strong> available in <see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">Service Workers</see> due to its<br/>potential to create memory leaks.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/URI/Reference/Schemes/blob">Blob URLs</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_API/Using_files_from_web_applications">Using files from web applications</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_API/Using_files_from_web_applications#example_using_object_urls_to_display_images">Using object URLs to display images</see><br/>-<see cref="URL.RevokeObjectURL"/><br/>-<see cref="HTMLMediaElement.SrcObject"/><br/>-<see cref="FileReader.ReadAsDataURL"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URL/createObjectURL"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A string containing an object URL that can be used to reference the<br/>contents of the specified source <c>object</c>.</returns>
+</URLCreateObjectURL>
+<URLHash>
+<summary>
+The <strong><c>hash</c></strong> property of the <see cref="URL"/> interface is a string containing a <c>&amp;quot;#&amp;quot;</c> followed by the fragment identifier of the URL. If the URL does not have a fragment identifier, this property contains an empty string, <c>&amp;quot;&amp;quot;</c>.
+</summary>
+<remarks>
+<para>This property can be set to change the fragment identifier of the URL. When setting, a single <c>&amp;quot;#&amp;quot;</c> prefix is added to the provided value, if not already present. Setting it to <c>&amp;quot;&amp;quot;</c> removes the fragment identifier.</para><para>The fragment is <see href="https://developer.mozilla.org/en-US/docs/Glossary/Percent-encoding">Percent-encoding</see> when setting but not percent-decoded when reading.</para>
+<para>-The <see cref="URL"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URL/hash"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</URLHash>
+<URLHost>
+<summary>
+The <strong><c>host</c></strong> property of the <see cref="URL"/> interface is a string containing the host, which is the <see cref="URL.Hostname"/>, and then, if the {{glossary("port")}} of the URL is nonempty, a <c>&amp;quot;:&amp;quot;</c>, followed by the <see cref="URL.Port"/> of the URL. If the URL does not have a <c>hostname</c>, this property contains an empty string, <c>&amp;quot;&amp;quot;</c>.
+</summary>
+<remarks>
+<para>This property can be set to change both the hostname and the port of the URL. If the URL&amp;apos;s scheme is not <see href="https://www.rfc-editor.org/rfc/rfc3986#section-1.2.3">hierarchical</see> (which the URL standard calls &amp;quot;<see href="https://url.spec.whatwg.org/#special-scheme">special schemes</see>&amp;quot;), then it has no concept of a host and setting this property has no effect.</para><blockquote class="NOTE"><h5>NOTE</h5><para>If the given value for the <c>host</c> setter lacks a <c>port</c>, the URL&amp;apos;s <c>port</c> will not change. This can be unexpected as the <c>host</c> getter does return a URL-port string, so one might have assumed the setter to always &amp;quot;reset&amp;quot; both.</para></blockquote>
+<para>-The <see cref="URL"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URL/host"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</URLHost>
+<URLHostname>
+<summary>
+The <strong><c>hostname</c></strong> property of the <see cref="URL"/> interface is a string containing either the {{glossary("domain name")}} or {{glossary("IP address")}} of the URL. If the URL does not have a hostname, this property contains an empty string, <c>&amp;quot;&amp;quot;</c>. IPv4 and IPv6 addresses are normalized, such as stripping leading zeros, and domain names are converted to <see href="https://en.wikipedia.org/wiki/Internationalized_domain_name">IDN</see>.
+</summary>
+<remarks>
+<para>This property can be set to change the hostname of the URL. If the URL&amp;apos;s scheme is not <see href="https://www.rfc-editor.org/rfc/rfc3986#section-1.2.3">hierarchical</see> (which the URL standard calls &amp;quot;<see href="https://url.spec.whatwg.org/#special-scheme">special schemes</see>&amp;quot;), then it has no concept of a host and setting this property has no effect.</para>
+<para>-The <see cref="URL"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URL/hostname"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</URLHostname>
+<URLHref>
+<summary>
+The <strong><c>href</c></strong> property of the <see cref="URL"/> interface is<br/>a string containing the whole URL.
+</summary>
+<remarks>
+<para>-The <see cref="URL"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URL/href"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</URLHref>
+<URLOrigin>
+<summary>
+The <strong><c>origin</c></strong> read-only property of the <see cref="URL"/> interface returns a string containing the Unicode serialization of the origin of the represented URL.
+</summary>
+<remarks>
+<para>The exact structure varies depending on the type of URL:</para><para>For all other cases, the string <c>&amp;quot;null&amp;quot;</c> is returned.</para>
+<para>-The <see cref="URL"/> interface<br/>-<see href="https://developer.mozilla.org/en-US/docs/Glossary/origin">origin</see> glossary term<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URL/origin"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</URLOrigin>
+<URLParse>
+<summary>
+The <strong><c>URL.parse()</c></strong> static method of the <see cref="URL"/> interface returns a newly created <see cref="URL"/> object representing the URL defined by the parameters.
+</summary>
+<remarks>
+<para>If the given base URL or the resulting URL are not parsable and valid URLs, <c>null</c> is returned.<br/>This is an alternative to using the <see cref="URL.URL"/> constructor to construct a <c>URL</c> within a <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch">try...catch</see> block, or using <see cref="URL.CanParse"/> to check the parameters and returning <c>null</c> if the method returns <c>false</c>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/URL/URL"><c>URL()</c> constructor</see>, which throws if the passed parameters define an invalid URL<br/>-<see href="https://github.com/zloirock/core-js#url-and-urlsearchparams">A polyfill of <c>URL.parse()</c></see> is available in <see href="https://github.com/zloirock/core-js"><c>core-js</c></see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URL/parse"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <c>URL</c> if the parameters can be resolved to a valid URL; <c>null</c> otherwise.</returns>
+</URLParse>
+<URLPassword>
+<summary>
+The <strong><c>password</c></strong> property of the <see cref="URL"/> interface is a string containing the password component of the URL. If the URL does not have a password, this property contains an empty string, <c>&amp;quot;&amp;quot;</c>.
+</summary>
+<remarks>
+<para>This property can be set to change the password of the URL. If the URL has no <see cref="URL.Host"/> or its scheme is <c>file:</c>, then setting this property has no effect.</para><para>The password is <see href="https://developer.mozilla.org/en-US/docs/Glossary/Percent-encoding">Percent-encoding</see> when setting but not percent-decoded when reading.</para>
+<para>-The <see cref="URL"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URL/password"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</URLPassword>
+<URLPathname>
+<summary>
+The <strong><c>pathname</c></strong> property of the <see cref="URL"/> interface represents a location in a hierarchical structure. It is a string constructed from a list of path segments, each of which is prefixed by a <c>/</c> character.
+</summary>
+<remarks>
+<para>HTTPS, HTTP, or other URLs with <see href="https://www.rfc-editor.org/rfc/rfc3986#section-1.2.3">hierarchical schemes</see> (which the URL standard calls &amp;quot;<see href="https://url.spec.whatwg.org/#special-scheme">special schemes</see>&amp;quot;) always have at least one (invisible) path segment: the empty string.<br/>The <c>pathname</c> value for such URLs will therefore always have at least one <c>/</c> character.</para><para>For non-hierarchical schemes, if the URL has no path segments, the value of its <c>pathname</c> property will be the empty string.</para>
+<para>-The <see cref="URL"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URL/pathname"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</URLPathname>
+<URLPort>
+<summary>
+The <strong><c>port</c></strong> property of the <see cref="URL"/> interface is a string containing the port number of the URL. If the port is the default for the protocol (<c>80</c> for <c>ws:</c> and <c>http:</c>, <c>443</c> for <c>wss:</c> and <c>https:</c>, and <c>21</c> for <c>ftp:</c>), this property contains an empty string, <c>&amp;quot;&amp;quot;</c>.
+</summary>
+<remarks>
+<para>This property can be set to change the port of the URL. If the URL has no <see cref="URL.Host"/> or its scheme is <c>file:</c>, then setting this property has no effect. It also silently ignores invalid port numbers.</para>
+<para>-The <see cref="URL"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URL/port"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</URLPort>
+<URLProtocol>
+<summary>
+The <strong><c>protocol</c></strong> property of the <see cref="URL"/> interface is a string containing the protocol or scheme of the URL, including the final <c>&amp;quot;:&amp;quot;</c>.
+</summary>
+<remarks>
+<para>This property can be set to change the protocol of the URL. A <c>&amp;quot;:&amp;quot;</c> is appended to the provided string if not provided. The provided scheme has to be compatible with the rest of the URL to be considered valid.</para>
+<para>-The <see cref="URL"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URL/protocol"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</URLProtocol>
+<URLRevokeObjectURL>
+<summary>
+The <strong><c>revokeObjectURL()</c></strong> static method of the <see cref="URL"/> interface<br/>releases an existing object URL which was previously created by calling<br/><see cref="URL.CreateObjectURL"/>.
+</summary>
+<remarks>
+<para>For more information, see <see href="https://developer.mozilla.org/en-US/docs/Web/URI/Reference/Schemes/blob">blob URLs</see>.</para><para>Call this method when you&amp;apos;ve finished<br/>using an object URL to let the browser know not to keep the reference to the file any<br/>longer.</para><blockquote class="NOTE"><h5>NOTE</h5><para>This method is <strong>not</strong> available in <see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">Service Workers</see>, due to<br/>issues with the <see cref="Blob"/> interface's life cycle and the potential for leaks.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/URI/Reference/Schemes/blob">Blob URLs</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_API/Using_files_from_web_applications">Using files from web applications</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_API/Using_files_from_web_applications#example_using_object_urls_to_display_images">Using object URLs to display images</see><br/>-<see cref="URL.CreateObjectURL"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URL/revokeObjectURL"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</URLRevokeObjectURL>
+<URLSearch>
+<summary>
+The <strong><c>search</c></strong> property of the <see cref="URL"/> interface is a search string, also called a <strong>query string</strong>, that is a string containing a <c>&amp;quot;?&amp;quot;</c> followed by the parameters of the URL. If the URL does not have a search query, this property contains an empty string, <c>&amp;quot;&amp;quot;</c>.
+</summary>
+<remarks>
+<para>This property can be set to change the query string of the URL. When setting, a single <c>&amp;quot;?&amp;quot;</c> prefix is added to the provided value, if not already present. Setting it to <c>&amp;quot;&amp;quot;</c> removes the query string.</para><para>The query is <see href="https://developer.mozilla.org/en-US/docs/Glossary/Percent-encoding">Percent-encoding</see> when setting but not percent-decoded when reading.</para><para>Modern browsers provide the <see cref="URL.SearchParams"/> property to make it easy to<br/>parse out the parameters from the query string.</para>
+<para>-The <see cref="URL"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URL/search"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</URLSearch>
+<URLSearchParams>
+<summary>
+The <strong><c>searchParams</c></strong> read-only property of the<br/><see cref="URL"/> interface returns a <see cref="URLSearchParams"/> object allowing<br/>access to the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/GET">GET</see> decoded query arguments contained in the URL.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URL/searchParams"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="URLSearchParams"/> object.</value>
+</URLSearchParams>
+<URLToJSON>
+<summary>
+The <strong><c>toJSON()</c></strong> method of the <see cref="URL"/> interface<br/>returns a string containing a serialized version of the URL,<br/>although in practice it seems to have the same effect as<br/><see cref="URL.ToString"/>.
+</summary>
+<remarks>
+<para>-<see href="https://github.com/zloirock/core-js#url-and-urlsearchparams">Polyfill of <c>URL.prototype.toJSON</c> in <c>core-js</c></see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URL/toJSON"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A string.</returns>
+</URLToJSON>
+<URLToString>
+<summary>
+The <strong><c>toString()</c></strong> method of the <see cref="URL"/> interface returns a<br/>string containing the whole URL. It is effectively a read-only version<br/>of <see cref="URL.Href"/>.
+</summary>
+<remarks>
+<para>-The <see cref="URL"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URL/toString"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A string.</returns>
+</URLToString>
+<URLURL>
+<summary>
+The <strong><c>URL()</c></strong> constructor returns a newly created <see cref="URL"/> object representing the URL defined by the parameters.
+</summary>
+<remarks>
+<para>If the given base URL or the resulting URL are not valid URLs, the JavaScript <see cref="TypeError"/> exception is thrown.</para>
+<para>-<see cref="URL.Parse"/>, a non-throwing alternative to this constructor<br/>-<see href="https://github.com/zloirock/core-js#url-and-urlsearchparams">Polyfill of <c>URL</c> in <c>core-js</c></see><br/>-The interface it belongs to: <see cref="URL"/>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URL/URL"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</URLURL>
+<URLUsername>
+<summary>
+The <strong><c>username</c></strong> property of the <see cref="URL"/> interface is a string containing the username component of the URL. If the URL does not have a username, this property contains an empty string, <c>&amp;quot;&amp;quot;</c>.
+</summary>
+<remarks>
+<para>This property can be set to change the username of the URL. If the URL has no <see cref="URL.Host"/> or its scheme is <c>file:</c>, then setting this property has no effect.</para><para>The username is <see href="https://developer.mozilla.org/en-US/docs/Glossary/Percent-encoding">Percent-encoding</see> when setting but not percent-decoded when reading.</para>
+<para>-The <see cref="URL"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URL/username"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</URLUsername>
 </docs>

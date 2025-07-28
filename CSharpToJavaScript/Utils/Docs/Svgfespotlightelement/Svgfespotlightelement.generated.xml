@@ -9,4 +9,87 @@ The <strong><c>SVGFESpotLightElement</c></strong> interface corresponds to the <
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFESpotLightElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </SVGFESpotLightElement>
+<SVGFESpotLightElementLimitingConeAngle>
+<summary>
+The <strong><c>limitingConeAngle</c></strong> read-only property of the <see cref="SVGFESpotLightElement"/> interface reflects the {{SVGAttr("limitingConeAngle")}} attribute of the given {{SVGElement("feSpotLight")}} element.
+</summary>
+<remarks>
+<para>-<see cref="SVGAnimatedNumber"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFESpotLightElement/limitingConeAngle"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedNumber"/> object.</value>
+</SVGFESpotLightElementLimitingConeAngle>
+<SVGFESpotLightElementPointsAtX>
+<summary>
+The <strong><c>pointsAtX</c></strong> read-only property of the <see cref="SVGFESpotLightElement"/> interface reflects the {{SVGAttr("pointsAtX")}} attribute of the given {{SVGElement("feSpotLight")}} element.
+</summary>
+<remarks>
+<para>-<see cref="SVGAnimatedNumber"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFESpotLightElement/pointsAtX"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedNumber"/> object.</value>
+</SVGFESpotLightElementPointsAtX>
+<SVGFESpotLightElementPointsAtY>
+<summary>
+The <strong><c>pointsAtY</c></strong> read-only property of the <see cref="SVGFESpotLightElement"/> interface reflects the {{SVGAttr("pointsAtY")}} attribute of the given {{SVGElement("feSpotLight")}} element.
+</summary>
+<remarks>
+<para>-<see cref="SVGAnimatedNumber"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFESpotLightElement/pointsAtY"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedNumber"/> object.</value>
+</SVGFESpotLightElementPointsAtY>
+<SVGFESpotLightElementPointsAtZ>
+<summary>
+The <strong><c>pointsAtZ</c></strong> read-only property of the <see cref="SVGFESpotLightElement"/> interface reflects the {{SVGAttr("pointsAtZ")}} attribute of the given {{SVGElement("feSpotLight")}} element.
+</summary>
+<remarks>
+<para>-<see cref="SVGAnimatedNumber"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFESpotLightElement/pointsAtZ"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedNumber"/> object.</value>
+</SVGFESpotLightElementPointsAtZ>
+<SVGFESpotLightElementSpecularExponent>
+<summary>
+The <strong><c>specularExponent</c></strong> read-only property of the <see cref="SVGFESpotLightElement"/> interface reflects the {{SVGAttr("specularExponent")}} attribute of the given {{SVGElement("feSpotLight")}} element.
+</summary>
+<remarks>
+<para>-<see cref="SVGAnimatedNumber"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFESpotLightElement/specularExponent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedNumber"/> object.</value>
+</SVGFESpotLightElementSpecularExponent>
+<SVGFESpotLightElementX>
+<summary>
+The <strong><c>x</c></strong> read-only property of the <see cref="SVGFESpotLightElement"/> interface describes the horizontal coordinate of the position of an SVG filter primitive as a <see cref="SVGAnimatedNumber"/>.
+</summary>
+<remarks>
+<para>It reflects the {{SVGAttr("x")}} attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementfeSpotLight">feSpotLight</see> element., which can be used to define the light source in a spotlight effect. The attribute is a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#number"><c>&amp;lt;number&amp;gt;</c></see>. The default value is <c>0</c>.</para>
+<para>-<see cref="SVGFESpotLightElement.Y"/><br/>-<see cref="SVGFESpotLightElement.Z"/><br/>-<see cref="SVGFEDistantLightElement"/><br/>-<see cref="SVGFEPointLightElement"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFESpotLightElement/x"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedNumber"/>.</value>
+</SVGFESpotLightElementX>
+<SVGFESpotLightElementY>
+<summary>
+The <strong><c>y</c></strong> read-only property of the <see cref="SVGFESpotLightElement"/> interface describes the vertical coordinate of the position of an SVG filter primitive as a <see cref="SVGAnimatedNumber"/>.
+</summary>
+<remarks>
+<para>It reflects the {{SVGAttr("y")}} attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementfeSpotLight">feSpotLight</see> element., which can be used to define the light source in a spotlight effect. The attribute is a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#number"><c>&amp;lt;number&amp;gt;</c></see>. The default value is <c>0</c>.</para>
+<para>-<see cref="SVGFESpotLightElement.X"/><br/>-<see cref="SVGFESpotLightElement.Z"/><br/>-<see cref="SVGFEDistantLightElement"/><br/>-<see cref="SVGFEPointLightElement"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFESpotLightElement/y"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedNumber"/>.</value>
+</SVGFESpotLightElementY>
+<SVGFESpotLightElementZ>
+<summary>
+The <strong><c>z</c></strong> read-only property of the <see cref="SVGFESpotLightElement"/> interface describes the z-axis value of the position of an SVG filter primitive as a <see cref="SVGAnimatedNumber"/>. A positive Z-axis comes out towards the person viewing the content.
+</summary>
+<remarks>
+<para>It reflects the {{SVGAttr("z")}} attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementfeSpotLight">feSpotLight</see> element, which can be used to define the light source in a spotlight effect. The attribute is a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#number"><c>&amp;lt;number&amp;gt;</c></see>. The default value is <c>0</c>.</para>
+<para>-<see cref="SVGFESpotLightElement.X"/><br/>-<see cref="SVGFESpotLightElement.Y"/><br/>-<see cref="SVGFEDistantLightElement"/><br/>-<see cref="SVGFEPointLightElement"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFESpotLightElement/z"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedNumber"/>.</value>
+</SVGFESpotLightElementZ>
 </docs>

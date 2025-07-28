@@ -9,4 +9,25 @@ The <strong><c>ImageBitmapRenderingContext</c></strong> interface is a canvas re
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ImageBitmapRenderingContext"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </ImageBitmapRenderingContext>
+<ImageBitmapRenderingContextCanvas>
+<summary>
+The <strong><c>ImageBitmapRenderingContext.canvas</c></strong> property, part of the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas API</see>, is a read-only reference to the<br/><see cref="HTMLCanvasElement"/> or <see cref="OffscreenCanvas"/> object that is associated with the given context.
+</summary>
+<remarks>
+<para>-<see cref="ImageBitmapRenderingContext"/> interface<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ImageBitmapRenderingContext/canvas"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="HTMLCanvasElement"/> or <see cref="OffscreenCanvas"/> object.</value>
+</ImageBitmapRenderingContextCanvas>
+<ImageBitmapRenderingContextTransferFromImageBitmap>
+<summary>
+The <strong><c>ImageBitmapRenderingContext.transferFromImageBitmap()</c></strong><br/>method displays the given <see cref="ImageBitmap"/> in the canvas associated with this<br/>rendering context. The ownership of the <c>ImageBitmap</c> is transferred to the<br/>canvas as well.
+</summary>
+<remarks>
+<para>This method was previously named <c>transferImageBitmap()</c>, but was renamed in<br/>a spec change. The old name is being kept as an alias to avoid code breakage.</para>
+<para>-The interface defining this method, <see cref="ImageBitmapRenderingContext"/><br/>-<see cref="OffscreenCanvas"/><br/>-<see cref="OffscreenCanvas.TransferToImageBitmap"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ImageBitmapRenderingContext/transferFromImageBitmap"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</ImageBitmapRenderingContextTransferFromImageBitmap>
 </docs>

@@ -7,4 +7,31 @@ A <strong><c>DeviceMotionEventRotationRate</c></strong> interface of the {{domxr
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEventRotationRate"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </DeviceMotionEventRotationRate>
+<DeviceMotionEventRotationRateAlpha>
+<summary>
+The <strong><c>alpha</c></strong> read-only property of the <see cref="DeviceMotionEventRotationRate"/> interface indicates the rate of rotation around the Z axis, in degrees per second.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEventRotationRate/alpha"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <c>double</c> indicating the rate of rotation around the Z axis, in degrees per second.<br/>See <see href="https://developer.mozilla.org/en-US/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained">Orientation and motion data explained</see> for details.</value>
+</DeviceMotionEventRotationRateAlpha>
+<DeviceMotionEventRotationRateBeta>
+<summary>
+The <strong><c>beta</c></strong> read-only property of the <see cref="DeviceMotionEventRotationRate"/> interface indicates the rate of rotation around the X axis, in degrees per second.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEventRotationRate/beta"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <c>double</c> indicating the rate of rotation around the X axis, in degrees per second.<br/>See <see href="https://developer.mozilla.org/en-US/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained">Orientation and motion data explained</see> for details.</value>
+</DeviceMotionEventRotationRateBeta>
+<DeviceMotionEventRotationRateGamma>
+<summary>
+The <strong><c>gamma</c></strong> read-only property of the <see cref="DeviceMotionEventRotationRate"/> interface indicates the rate of rotation around the Y axis, in degrees per second.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEventRotationRate/gamma"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <c>double</c> indicating the rate of rotation around the Y axis, in degrees per second.<br/>See <see href="https://developer.mozilla.org/en-US/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained">Orientation and motion data explained</see> for details.</value>
+</DeviceMotionEventRotationRateGamma>
 </docs>

@@ -9,4 +9,45 @@ The <strong><c>WakeLockSentinel</c></strong> interface of the <see href="https:/
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WakeLockSentinel"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </WakeLockSentinel>
+<WakeLockSentinelRelease>
+<summary>
+The <strong><c>release()</c></strong> method of the <see cref="WakeLockSentinel"/> interface releases the <see cref="WakeLockSentinel"/>, returning a {{jsxref("Promise")}} that is resolved once the sentinel has been successfully released.
+</summary>
+<remarks>
+<para>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/wake-lock/">Stay awake with the Screen Wake Lock API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WakeLockSentinel/release"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Returns a <see cref="Promise"/> that resolves with <c>undefined</c>.</returns>
+</WakeLockSentinelRelease>
+<WakeLockSentinelReleased>
+<summary>
+The <strong><c>released</c></strong> read-only property of the <see cref="WakeLockSentinel"/> interface returns a boolean that indicates whether a <see cref="WakeLockSentinel"/> has been released.
+</summary>
+<remarks>
+<para>The <c>WakeLockSentinel</c> is released when the associated platform screen wake lock is revoked; afterwards <c>released</c> will always return <c>true</c>.<br/>If a subsequent screen wake lock is required, the application will need to request a new screen wake lock (the current <c>WakeLockSentinel</c> cannot be reused).</para>
+<para>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/wake-lock/">Stay awake with the Screen Wake Lock API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WakeLockSentinel/released"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value that is <c>false</c> until the <see cref="WakeLockSentinel"/> has been released (either through a call to <see cref="WakeLockSentinel.Release"/> or because the lock has been released automatically) and the <see cref="WakeLockSentinelrelease"/> event has been emitted, after which it becomes <c>true</c> and no longer changes.</value>
+</WakeLockSentinelReleased>
+<WakeLockSentinelRelease>
+<summary>
+The <strong><c>release</c></strong> event of the <see cref="WakeLockSentinel"/> interface is fired when the sentinel object's handle has been released.
+</summary>
+<remarks>
+<para>A <see cref="WakeLockSentinel"/> can be released manually via the <c>release()</c> method, or automatically via the platform wake lock.<br/>This can happen if the document becomes inactive or looses visibility, if the device is low on power or the user turns on a power save mode.</para>
+<para>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/wake-lock/">Stay awake with the Screen Wake Lock API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WakeLockSentinel/release"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WakeLockSentinelRelease>
+<WakeLockSentinelType>
+<summary>
+The <strong><c>type</c></strong> read-only property of the <see cref="WakeLockSentinel"/> interface returns a string representation of the currently acquired <see cref="WakeLockSentinel"/> type.
+</summary>
+<remarks>
+<para>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/wake-lock/">Stay awake with the Screen Wake Lock API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WakeLockSentinel/type"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representation of the currently acquired wake lock type.<br/>Currently, the value is always <c>screen</c>, which represents a screen wake lock.<br/>It prevents devices from dimming or locking the screen.</value>
+</WakeLockSentinelType>
 </docs>

@@ -8,4 +8,14 @@ The <c>AnimationTimeline</c> interface of the <see href="https://developer.mozil
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AnimationTimeline"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </AnimationTimeline>
+<AnimationTimelineCurrentTime>
+<summary>
+The <strong><c>currentTime</c></strong> read-only property of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see>'s <see cref="AnimationTimeline"/> interface returns the timeline's current time in milliseconds, or <c>null</c> if the timeline is inactive.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/>-<see cref="AnimationTimeline"/><br/>-<see cref="DocumentTimeline"/> inherits this property<br/>-<see cref="Document.Timeline"/> returns a timeline object which inherits this property<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AnimationTimeline/currentTime"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number representing the timeline&amp;apos;s current time in milliseconds, or <c>null</c> if the timeline is inactive.</value>
+</AnimationTimelineCurrentTime>
 </docs>

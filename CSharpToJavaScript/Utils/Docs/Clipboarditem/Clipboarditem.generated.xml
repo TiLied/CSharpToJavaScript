@@ -4,9 +4,61 @@
 The <strong><c>ClipboardItem</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API">Clipboard API</see> represents a single item format, used when reading or writing clipboard data using <see cref="Clipboard.Read"/> and <see cref="Clipboard.Write"/> respectively.
 </summary>
 <remarks>
-<para>The benefit of having the <strong><c>ClipboardItem</c></strong> interface to represent data, is that it enables developers to cope with the varying scope of file types and data.</para><blockquote class="NOTE"><h5>NOTE</h5><para>To work with text see the <see cref="Clipboard.ReadText"/> and <see cref="Clipboard.WriteText"/> methods of the <see cref="Clipboard"/> interface.</para></blockquote>
+<para>The <strong><c>ClipboardItem</c></strong> interface enables developers to use a single type to represent a range of different data formats.</para><blockquote class="NOTE"><h5>NOTE</h5><para>The <c>read()</c> and <c>write()</c> methods can be used to work with text strings and arbitrary data items represented by <see cref="Blob"/> instances. However, if you are solely working with text, it is more convenient to use the <see cref="Clipboard.ReadText"/> and <see cref="Clipboard.WriteText"/> methods.</para></blockquote>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API">Clipboard API</see><br/>-<see href="https://web.dev/articles/async-clipboard">Image support for Async Clipboard article</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ClipboardItem"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </ClipboardItem>
+<ClipboardItemClipboardItem>
+<summary>
+The <strong><c>ClipboardItem()</c></strong> constructor creates a new <see cref="ClipboardItem"/> object, which represents data to be stored or retrieved via the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API">Clipboard API</see> <see cref="Clipboard.Write"/> and <see cref="Clipboard.Read"/> methods, respectively.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>The <c>read()</c> and <c>write()</c> methods can be used to work with text strings and arbitrary data items represented by <see cref="Blob"/> instances. However, if you are solely working with text, it is more convenient to use the <see cref="Clipboard.ReadText"/> and <see cref="Clipboard.WriteText"/> methods.</para></blockquote><blockquote class="NOTE"><h5>NOTE</h5><para>Image format support varies by browser. See the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard#browser_compatibility">browser compatibility table</see> for the <c>Clipboard</c> interface.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API">Clipboard API</see><br/>-<see href="https://web.dev/articles/async-clipboard">Image support for Async Clipboard article</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ClipboardItem/ClipboardItem"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</ClipboardItemClipboardItem>
+<ClipboardItemGetType>
+<summary>
+The <strong><c>getType()</c></strong> method of the <see cref="ClipboardItem"/> interface returns a {{jsxref("Promise")}} that resolves with a <see cref="Blob"/> of the requested {{Glossary("MIME type")}} or an error if the MIME type is not found.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API">Clipboard API</see><br/>-<see href="https://web.dev/articles/async-clipboard">Image support for Async Clipboard article</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ClipboardItem/getType"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that resolves with a <see cref="Blob"/> object.</returns>
+</ClipboardItemGetType>
+<ClipboardItemPresentationStyle>
+<summary>
+The read-only <strong><c>presentationStyle</c></strong> property of the <see cref="ClipboardItem"/> interface returns a string indicating how an item should be presented.
+</summary>
+<remarks>
+<para>For example, in some contexts an image might be displayed inline, while in others it might be represented as an attachment.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API">Clipboard API</see><br/>-<see href="https://web.dev/articles/async-clipboard">Image support for Async Clipboard article</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ClipboardItem/presentationStyle"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>One of either <c>&amp;quot;unspecified&amp;quot;</c>, <c>&amp;quot;inline&amp;quot;</c> or <c>&amp;quot;attachment&amp;quot;</c>.</value>
+</ClipboardItemPresentationStyle>
+<ClipboardItemSupports>
+<summary>
+The <strong><c>supports()</c></strong> static method of the <see cref="ClipboardItem"/> interface returns <c>true</c> if the given <see href="https://developer.mozilla.org/en-US/docs/Glossary/MIME type">MIME type</see> is supported by the clipboard, and <c>false</c> otherwise.
+</summary>
+<remarks>
+<para>Note that the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API">Clipboard API</see> mandates support for plain text, HTML and PNG files.<br/>The <c>supports()</c> method will always return <c>true</c> for these MIME types, so testing them is unnecessary.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API">Clipboard API</see><br/>-<see href="https://web.dev/articles/async-clipboard">Image support for Async Clipboard article</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ClipboardItem/supports"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns><c>true</c> if the given <see href="https://developer.mozilla.org/en-US/docs/Glossary/MIME type">MIME type</see> is supported by the clipboard, <c>false</c> otherwise.</returns>
+</ClipboardItemSupports>
+<ClipboardItemTypes>
+<summary>
+The read-only <strong><c>types</c></strong> property of the <see cref="ClipboardItem"/> interface returns an {{jsxref("Array")}} of {{Glossary("MIME type", 'MIME types')}} available within the <see cref="ClipboardItem"/>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API">Clipboard API</see><br/>-<see href="https://web.dev/articles/async-clipboard">Image support for Async Clipboard article</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ClipboardItem/types"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="Array"/> of available {{Glossary("MIME type", 'MIME types')}}.</value>
+</ClipboardItemTypes>
 </docs>

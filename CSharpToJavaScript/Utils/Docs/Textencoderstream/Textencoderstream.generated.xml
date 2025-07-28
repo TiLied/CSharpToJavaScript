@@ -4,8 +4,43 @@
 The <strong><c>TextEncoderStream</c></strong> interface of the <see cref="'Encoding API'"/> converts a stream of strings into bytes in the UTF-8 encoding. It is the streaming equivalent of <see cref="TextEncoder"/>.
 </summary>
 <remarks>
-<para>-<see cref="TextDecoderStream"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Concepts">Streams API Concepts</see><br/>-<see href="https://deanhume.com/experimenting-with-the-streams-api/">Experimenting with the Streams API</see><br/></para>
+<para>-<see cref="TextDecoderStream"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Concepts">Streams API Concepts</see><br/>-<see href="https://deanhume.com/experimenting-with-the-streams-api/">Experimenting with the Streams API</see><br/>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/fetch-streaming-requests">Streaming requests with the fetch API</see>, developer.chrome.com (2020)<br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextEncoderStream"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </TextEncoderStream>
+<TextEncoderStreamEncoding>
+<summary>
+The <strong><c>encoding</c></strong> read-only property of the <see cref="TextEncoderStream"/> interface returns a<br/>string containing the name of the encoding algorithm used by the current <c>TextEncoderStream</c> object.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextEncoderStream/encoding"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing <c>utf-8</c> encoded data.</value>
+</TextEncoderStreamEncoding>
+<TextEncoderStreamReadable>
+<summary>
+The <strong><c>readable</c></strong> read-only property of the <see cref="TextEncoderStream"/> interface returns a <see cref="ReadableStream"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextEncoderStream/readable"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="ReadableStream"/>.</value>
+</TextEncoderStreamReadable>
+<TextEncoderStreamTextEncoderStream>
+<summary>
+The <strong><c>TextEncoderStream()</c></strong> constructor creates a new <see cref="TextEncoderStream"/> object which is used to convert a stream of strings into bytes using UTF-8 encoding.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextEncoderStream/TextEncoderStream"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</TextEncoderStreamTextEncoderStream>
+<TextEncoderStreamWritable>
+<summary>
+The <strong><c>writable</c></strong> read-only property of the <see cref="TextEncoderStream"/> interface returns a <see cref="WritableStream"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextEncoderStream/writable"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="WritableStream"/>.</value>
+</TextEncoderStreamWritable>
 </docs>

@@ -1,7 +1,7 @@
 <docs>
 <WindowControlsOverlayGeometryChangeEvent>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>WindowControlsOverlayGeometryChangeEvent</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Window_Controls_Overlay_API">Window Controls Overlay API</see> is passed to <see cref="WindowControlsOverlay/geometrychange_event"/> when the size or visibility of a desktop Progress Web App's title bar region changes.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>WindowControlsOverlayGeometryChangeEvent</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Window_Controls_Overlay_API">Window Controls Overlay API</see> is passed to <see cref="WindowControlsOverlaygeometrychange"/> when the size or visibility of a desktop Progress Web App's title bar region changes.
 </summary>
 <remarks>
 <para></para>
@@ -9,4 +9,30 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WindowControlsOverlayGeometryChangeEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </WindowControlsOverlayGeometryChangeEvent>
+<WindowControlsOverlayGeometryChangeEventTitlebarAreaRect>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>titlebarAreaRect</c></strong> read-only property of the <see cref="WindowControlsOverlayGeometryChangeEvent"/> interface is a <see cref="DOMRect"/> representing the position and size of the area occupied by the title bar in a desktop-installed Progressive Web App.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WindowControlsOverlayGeometryChangeEvent/titlebarAreaRect"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WindowControlsOverlayGeometryChangeEventTitlebarAreaRect>
+<WindowControlsOverlayGeometryChangeEventVisible>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>visible</c></strong> read-only property of the <see cref="WindowControlsOverlayGeometryChangeEvent"/> interface is a boolean flag that indicates whether the window controls overlay is visible or not in a desktop-installed Progressive Web App.
+</summary>
+<remarks>
+<para>If the user opts-out of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Window_Controls_Overlay_API">Window Controls Overlay</see> feature, the default title bar appears and the window controls buttons do not appear as an overlay, in which case the <c>visible</c> flag is false.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WindowControlsOverlayGeometryChangeEvent/visible"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WindowControlsOverlayGeometryChangeEventVisible>
+<WindowControlsOverlayGeometryChangeEventWindowControlsOverlayGeometryChangeEvent>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>WindowControlsOverlayGeometryChangeEvent()</c></strong> constructor returns a new <see cref="WindowControlsOverlayGeometryChangeEvent"/> object, representing the current geometry of a desktop Progressive Web App's title bar area.
+</summary>
+<remarks>
+<para>-The <see cref="WindowControlsOverlayGeometryChangeEvent"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WindowControlsOverlayGeometryChangeEvent/WindowControlsOverlayGeometryChangeEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WindowControlsOverlayGeometryChangeEventWindowControlsOverlayGeometryChangeEvent>
 </docs>

@@ -9,4 +9,65 @@ The <strong><c>SpeechSynthesisEvent</c></strong> interface of the <see href="htt
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </SpeechSynthesisEvent>
+<SpeechSynthesisEventCharIndex>
+<summary>
+The <strong><c>charIndex</c></strong> read-only property of the <see cref="SpeechSynthesisUtterance"/> interface returns the index position of the character in <see cref="SpeechSynthesisUtterance.Text"/> that was being spoken when the event was triggered.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisEvent/charIndex"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</SpeechSynthesisEventCharIndex>
+<SpeechSynthesisEventCharLength>
+<summary>
+The read-only <strong><c>charLength</c></strong> property of the <see cref="SpeechSynthesisEvent"/> interface returns the number of characters left to be spoken after the character at the <see cref="SpeechSynthesisEvent.CharIndex"/> position.
+</summary>
+<remarks>
+<para>If the speech engine can&amp;apos;t determine it, it returns 0.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisEvent/charLength"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer.</value>
+</SpeechSynthesisEventCharLength>
+<SpeechSynthesisEventElapsedTime>
+<summary>
+The <strong><c>elapsedTime</c></strong> read-only property of the <see cref="SpeechSynthesisEvent"/> returns the elapsed time in seconds, after the <see cref="SpeechSynthesisUtterance.Text"/> started being spoken, at which the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance#events">event</see> was triggered.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisEvent/elapsedTime"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A float containing the elapsed time, in seconds.<blockquote class="NOTE"><h5>NOTE</h5>Early versions of the specification required the elapsed time in milliseconds.<br/>Check the <see href="https://developer.mozilla.org#browser_compatibility">compatibility table</see> below for your browser.</blockquote></value>
+</SpeechSynthesisEventElapsedTime>
+<SpeechSynthesisEventName>
+<summary>
+The <strong><c>name</c></strong> read-only property of the <see cref="SpeechSynthesisUtterance"/> interface returns the name associated with certain types of events occurring as the <see cref="SpeechSynthesisUtterance.Text"/> is being spoken:<br/>the name of the <see href="https://www.w3.org/TR/speech-synthesis/#S3.3.2">SSML</see> marker reached in the case of a <see cref="SpeechSynthesisUtterance.Mark"/> event, or the type of boundary reached in the case of a <see cref="SpeechSynthesisUtterance.Boundary"/> event.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisEvent/name"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</SpeechSynthesisEventName>
+<SpeechSynthesisEventSpeechSynthesisEvent>
+<summary>
+The <strong><c>SpeechSynthesisEvent()</c></strong> constructor creates a new <see cref="SpeechSynthesisEvent"/> object.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>A web developer doesn&amp;apos;t typically need to call this constructor, as the browser creates these objects itself when firing events.</para></blockquote>
+<para>-<see cref="SpeechSynthesisErrorEvent"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisEvent/SpeechSynthesisEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="SpeechSynthesisEvent"/> object.</returns>
+</SpeechSynthesisEventSpeechSynthesisEvent>
+<SpeechSynthesisEventUtterance>
+<summary>
+The <strong><c>utterance</c></strong> read-only property of the <see cref="SpeechSynthesisUtterance"/> interface returns the <see cref="SpeechSynthesisUtterance"/> instance that the event was triggered on.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisEvent/utterance"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="SpeechSynthesisUtterance"/> object.</value>
+</SpeechSynthesisEventUtterance>
 </docs>

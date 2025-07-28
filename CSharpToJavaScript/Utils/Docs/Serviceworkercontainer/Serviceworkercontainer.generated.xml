@@ -9,4 +9,90 @@ The <strong><c>ServiceWorkerContainer</c></strong> interface of the <see href="h
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </ServiceWorkerContainer>
+<ServiceWorkerContainerController>
+<summary>
+The <strong><c>controller</c></strong> read-only property of the <see cref="ServiceWorkerContainer"/> interface represents the active {{domxref("ServiceWorker","service worker",&amp;quot;&amp;quot;,&amp;quot;nocode&amp;quot;)}} controlling the current page (associated with this <c>ServiceWorkerContainer</c>), or <c>null</c> if the page has no active or activating service worker.
+</summary>
+<remarks>
+<para>This is the same object returned by <see cref="ServiceWorkerRegistration.Active"/>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/controller"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="ServiceWorker"/> object if its state is <c>activating</c> or <c>activated</c>, or <c>null</c> if there is no active worker.The property also returns <c>null</c> if the request is a force refresh (&amp;lt;kbd&amp;gt;Shift&amp;lt;/kbd&amp;gt; + refresh)</value>
+</ServiceWorkerContainerController>
+<ServiceWorkerContainerControllerchange>
+<summary>
+The <strong><c>controllerchange</c></strong> event of the <see cref="ServiceWorkerContainer"/> interface fires when the document's associated <see cref="ServiceWorkerRegistration"/> acquires a new <see cref="ServiceWorkerRegistration.Active"/> worker.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/controllerchange"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</ServiceWorkerContainerControllerchange>
+<ServiceWorkerContainerGetRegistration>
+<summary>
+The <strong><c>getRegistration()</c></strong> method of the<br/><see cref="ServiceWorkerContainer"/> interface gets a<br/><see cref="ServiceWorkerRegistration"/> object whose scope URL matches the provided<br/>client URL. The method returns a <see cref="Promise"/> that resolves to<br/>a <see cref="ServiceWorkerRegistration"/> or <c>undefined</c>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/getRegistration"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that resolves to a <see cref="ServiceWorkerRegistration"/><br/>object or <c>undefined</c>.</returns>
+</ServiceWorkerContainerGetRegistration>
+<ServiceWorkerContainerGetRegistrations>
+<summary>
+The <strong><c>getRegistrations()</c></strong> method of the<br/><see cref="ServiceWorkerContainer"/> interface gets all<br/><see cref="ServiceWorkerRegistration"/>s associated with a<br/><c>ServiceWorkerContainer</c>, in an array. The method returns a<br/><see cref="Promise"/> that resolves to an array of<br/><see cref="ServiceWorkerRegistration"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/getRegistrations"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves to an array of<br/><see cref="ServiceWorkerRegistration"/> objects.</returns>
+</ServiceWorkerContainerGetRegistrations>
+<ServiceWorkerContainerMessageerror>
+<summary>
+The <strong><c>messageerror</c></strong> event is fired to the <see cref="ServiceWorkerContainer"/> when an incoming message sent to the associated worker can't be deserialized.
+</summary>
+<remarks>
+<para>This event is not cancelable and does not bubble.</para>
+<para>-<see cref="ServiceWorkerContainermessage"/><br/>-<see cref="Client.PostMessage"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</see><br/>-<see href="https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker">Service workers basic code example</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using Web Workers</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/messageerror"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</ServiceWorkerContainerMessageerror>
+<ServiceWorkerContainerMessage>
+<summary>
+The <strong><c>message</c></strong> event is used in a page controlled by a service worker to receive messages from the service worker.
+</summary>
+<remarks>
+<para>This event is not cancelable and does not bubble.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</see><br/>-<see href="https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker">Service workers basic code example</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web workers</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/message"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</ServiceWorkerContainerMessage>
+<ServiceWorkerContainerReady>
+<summary>
+The <strong><c>ready</c></strong> read-only property of the <see cref="ServiceWorkerContainer"/> interface provides a way of delaying code execution until a service worker is active.
+</summary>
+<remarks>
+<para>The property returns a {{jsxref("Promise")}} that will never reject, and which waits indefinitely until the <see cref="ServiceWorkerRegistration"/> associated with the current page has an <see cref="ServiceWorkerRegistration.Active"/> worker.<br/>Once that condition is met, it resolves with the <see cref="ServiceWorkerRegistration"/>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/ready"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A {{jsxref("Promise")}} that will never reject, and which may eventually resolve with a <see cref="ServiceWorkerRegistration"/> when there is an active service worker.</value>
+</ServiceWorkerContainerReady>
+<ServiceWorkerContainerRegister>
+<summary>
+The <strong><c>register()</c></strong> method of the <see cref="ServiceWorkerContainer"/> interface creates or updates a <see cref="ServiceWorkerRegistration"/> for the given scope.<br/>If successful, the registration associates the provided script URL to a <strong>scope</strong>, which is subsequently used for matching documents to a specific service worker.
+</summary>
+<remarks>
+<para>A single registration is created for each unique scope.<br/>If <c>register()</c> is called for a scope that has an existing registration, the registration is updated with any changes to the scriptURL or options.<br/>If there are no changes, then the existing registration is returned.<br/>Note that calling <c>register()</c> with the same scope and <c>scriptURL</c> does not restart the installation process.<br/>You can therefore call this method unconditionally from a controlled page: you don&amp;apos;t need to first check whether there&amp;apos;s an active registration or service worker.</para><para>A document can potentially be within the scope of several registrations with different service workers and options.<br/>The browser will associate the document with the matching registration that has the most specific scope.<br/>This ensures that only one service worker runs for each document.</para><blockquote class="NOTE"><h5>NOTE</h5><para>It is generally safer not to define registrations that have overlapping scopes.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/unregister">ServiceWorkerRegistration: <c>unregister()</c> method</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">Service worker API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using service workers</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Service-Worker-Allowed">Service-Worker-Allowed</see> HTTP header<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/register"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that resolves with a <see cref="ServiceWorkerRegistration"/> object.</returns>
+</ServiceWorkerContainerRegister>
+<ServiceWorkerContainerStartMessages>
+<summary>
+The <strong><c>startMessages()</c></strong> method of<br/>the <see cref="ServiceWorkerContainer"/> interface explicitly starts the flow of<br/>messages being dispatched from a service worker to pages under its control (e.g., sent<br/>via <see cref="Client.PostMessage"/>). This can be used to react to sent messages<br/>earlier, even before that page&amp;apos;s content has finished loading.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/startMessages"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns><c>undefined</c>.</returns>
+</ServiceWorkerContainerStartMessages>
 </docs>

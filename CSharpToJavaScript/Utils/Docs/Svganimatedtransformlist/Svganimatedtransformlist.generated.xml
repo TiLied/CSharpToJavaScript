@@ -1,10 +1,32 @@
 <docs>
 <SVGAnimatedTransformList>
 <summary>
-
+The <strong><c>SVGAnimatedTransformList</c></strong> interface represents attributes which take a list of numbers and which can be animated.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAnimatedTransformList"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </SVGAnimatedTransformList>
+<SVGAnimatedTransformListAnimVal>
+<summary>
+The <strong><c>animVal</c></strong> read-only property of the <see cref="SVGAnimatedTransformList"/> interface represents the animated value of the <c>transform</c> attribute of an SVG element.
+</summary>
+<remarks>
+<para>This property reflects the SVG element's {{SVGAttr("transform")}}, the {{SVGElement("linearGradient")}} or {{SVGElement("radialGradient")}} element's {{SVGAttr("gradientTransform")}} attribute, or the {{SVGElement("pattern")}} element's {{SVGAttr("patternTransform")}} attribute as a readonly <see cref="SVGTransformList"/>, providing access to the dynamically updated <see cref="SVGTransform"/> for each transform function during an animation. If no animation is active, this property will return the same value as <c>baseVal</c>.</para>
+<para>-<see cref="SVGTransformList"/><br/>-<see cref="SVGTransform"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAnimatedTransformList/animVal"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGTransformList"/> object that reflects the current animated value of the <c>transform</c> attribute.</value>
+</SVGAnimatedTransformListAnimVal>
+<SVGAnimatedTransformListBaseVal>
+<summary>
+The <strong><c>baseVal</c></strong> read-only property of the <see cref="SVGAnimatedTransformList"/> interface represents the non-animated value of the <c>transform</c> attribute of an SVG element.
+</summary>
+<remarks>
+<para>This property reflects the SVG element's {{SVGAttr("transform")}}, the {{SVGElement("linearGradient")}} or {{SVGElement("radialGradient")}} element's {{SVGAttr("gradientTransform")}} attribute, or the {{SVGElement("pattern")}} element's {{SVGAttr("patternTransform")}} attribute value as a readonly <see cref="SVGTransformList"/>, providing access to a static <see cref="SVGTransform"/> for each transform function set on the SVG element.</para>
+<para>-<see cref="SVGTransformList"/><br/>-<see cref="SVGTransform"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAnimatedTransformList/baseVal"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGTransformList"/> object that represents the current, non-animated value of the <c>transform</c> attribute.</value>
+</SVGAnimatedTransformListBaseVal>
 </docs>

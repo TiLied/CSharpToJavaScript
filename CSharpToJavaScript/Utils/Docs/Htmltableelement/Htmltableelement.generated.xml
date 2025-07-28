@@ -9,4 +9,226 @@ The <strong><c>HTMLTableElement</c></strong> interface provides special properti
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </HTMLTableElement>
+<HTMLTableElementAlign>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>HTMLTableElement.align</c></strong> property represents the<br/>alignment of the table.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/align"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>One of the following string values:</value>
+</HTMLTableElementAlign>
+<HTMLTableElementBgColor>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>bgcolor</c></strong> property of the <see cref="HTMLTableElement"/> represents the<br/>background color of the table.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Do not use this attribute anymore. Instead, use the CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-color">background-color</see> property by modifying the element's <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style"><c>style</c></see> attribute or using a style rule.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-color">background-color</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/bgColor"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing a color value.When set to the <c>null</c> value, that <c>null</c> value is converted to the empty string (<c>&amp;quot;&amp;quot;</c>), so <c>elt.bgColor = null</c> is equivalent to <c>elt.bgColor = &amp;quot;&amp;quot;</c>.</value>
+</HTMLTableElementBgColor>
+<HTMLTableElementBorder>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>HTMLTableElement.border</c></strong> property represents the<br/>border width of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table">table</see> element.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/border"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing the width of the border in pixels.</value>
+</HTMLTableElementBorder>
+<HTMLTableElementCaption>
+<summary>
+The <strong><c>HTMLTableElement.caption</c></strong> property represents the<br/>table caption. If no caption element is associated with the table, this property is<br/><c>null</c>.
+</summary>
+<remarks>
+<para>-The interface implementing this property: <see cref="HTMLTableElement"/>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/caption"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</HTMLTableElementCaption>
+<HTMLTableElementCellPadding>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>HTMLTableElement.cellPadding</c></strong> property represents the<br/>padding around the individual cells of the table.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/cellPadding"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing pixels (e.g., <c>&amp;quot;10&amp;quot;</c>) or a percentage value (e.g., <c>&amp;quot;10%&amp;quot;</c>).When set to the <c>null</c> value, that <c>null</c> value is converted to the empty string (<c>&amp;quot;&amp;quot;</c>), so <c>elt.cellPadding = null</c> is equivalent to <c>elt.cellPadding = &amp;quot;&amp;quot;</c>.</value>
+</HTMLTableElementCellPadding>
+<HTMLTableElementCellSpacing>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> While you should instead use the CSS<br/>{{cssxref("border-spacing")}} property, the obsolete <see cref="HTMLTableElement"/><br/>interface&amp;apos;s <strong><c>cellSpacing</c></strong> property represents the spacing<br/>around the individual <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/th">th</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/td">td</see> elements<br/>representing a table&amp;apos;s cells. Any two cells are separated by the sum of the<br/><c>cellSpacing</c> of each of the two cells.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/cellSpacing"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string which is either a number of pixels (such as <c>&amp;quot;10&amp;quot;</c>) or a percentage value (like <c>&amp;quot;10%&amp;quot;</c>).When set to the <c>null</c> value, that <c>null</c> value is converted to the empty string (<c>&amp;quot;&amp;quot;</c>), so <c>elt.cellSpacing = null</c> is equivalent to <c>elt.cellSpacing = &amp;quot;&amp;quot;</c>.</value>
+</HTMLTableElementCellSpacing>
+<HTMLTableElementCreateCaption>
+<summary>
+The <strong><c>HTMLTableElement.createCaption()</c></strong> method returns the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/caption">caption</see> element associated with a given <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table">table</see>.<br/>If no <c>&amp;lt;caption&amp;gt;</c> element exists on the table, this method creates<br/>it, and then returns it.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>If no caption exists, <c>createCaption()</c> inserts a<br/>new caption directly into the table. The caption does not need to be added<br/>separately as would be the case if <see cref="Document.CreateElement"/> had<br/>been used to create the new <c>&amp;lt;caption&amp;gt;</c> element.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/createCaption"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns><see cref="HTMLTableCaptionElement"/></returns>
+</HTMLTableElementCreateCaption>
+<HTMLTableElementCreateTBody>
+<summary>
+The <strong><c>createTBody()</c></strong> method of<br/><see cref="HTMLTableElement"/> objects creates and returns a new<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tbody">tbody</see> element associated with a given <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table">table</see>.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Unlike <see cref="HTMLTableElement.CreateTHead"/> and<br/><see cref="HTMLTableElement.CreateTFoot"/>, <c>createTBody()</c><br/>systematically creates a new <c>&amp;lt;tbody&amp;gt;</c> element, even if the table<br/>already contains one or more bodies. If so, the new one is inserted after the existing<br/>ones.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/createTBody"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns><see cref="HTMLTableSectionElement"/></returns>
+</HTMLTableElementCreateTBody>
+<HTMLTableElementCreateTFoot>
+<summary>
+The <strong><c>createTFoot()</c></strong> method of<br/><see cref="HTMLTableElement"/> objects returns the {{HTMLElement("tfoot")}} element<br/>associated with a given <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table">table</see>. If no footer exists in the table, this<br/>method creates it, and then returns it.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>If no footer exists, <c>createTFoot()</c> inserts a new<br/>footer directly into the table. The footer does not need to be added separately as<br/>would be the case if <see cref="Document.CreateElement"/> had been used to create<br/>the new <c>&amp;lt;tfoot&amp;gt;</c> element.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/createTFoot"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns><see cref="HTMLTableSectionElement"/></returns>
+</HTMLTableElementCreateTFoot>
+<HTMLTableElementCreateTHead>
+<summary>
+The <strong><c>createTHead()</c></strong> method of<br/><see cref="HTMLTableElement"/> objects returns the {{HTMLElement("thead")}} element<br/>associated with a given <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table">table</see>. If no header exists in the table, this<br/>method creates it, and then returns it.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>If no header exists, <c>createTHead()</c> inserts a new<br/>header directly into the table. The header does not need to be added separately as<br/>would be the case if <see cref="Document.CreateElement"/> had been used to create<br/>the new <c>&amp;lt;thead&amp;gt;</c> element.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/createTHead"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns><see cref="HTMLTableSectionElement"/></returns>
+</HTMLTableElementCreateTHead>
+<HTMLTableElementDeleteCaption>
+<summary>
+The <strong><c>HTMLTableElement.deleteCaption()</c></strong> method removes the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/caption">caption</see> element from a given <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table">table</see>. If there is no<br/><c>&amp;lt;caption&amp;gt;</c> element associated with the table, this method does<br/>nothing.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/deleteCaption"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</HTMLTableElementDeleteCaption>
+<HTMLTableElementDeleteRow>
+<summary>
+The <strong><c>HTMLTableElement.deleteRow()</c></strong> method removes a<br/>specific row (<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tr">tr</see>) from a given <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table">table</see>.
+</summary>
+<remarks>
+<para>-<see cref="HTMLTableSectionElement.DeleteRow"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/deleteRow"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</HTMLTableElementDeleteRow>
+<HTMLTableElementDeleteTFoot>
+<summary>
+The <strong><c>HTMLTableElement.deleteTFoot()</c></strong> method removes the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tfoot">tfoot</see> element from a given <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table">table</see>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/deleteTFoot"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</HTMLTableElementDeleteTFoot>
+<HTMLTableElementDeleteTHead>
+<summary>
+The <strong><c>HTMLTableElement.deleteTHead()</c></strong> removes the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/thead">thead</see> element from a given <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table">table</see>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/deleteTHead"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</HTMLTableElementDeleteTHead>
+<HTMLTableElementFrame>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <see cref="HTMLTableElement"/> interface's <strong><c>frame</c></strong><br/>property is a string that indicates which of the table&amp;apos;s exterior borders should be<br/>drawn.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/frame"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>One of the following:</value>
+</HTMLTableElementFrame>
+<HTMLTableElementInsertRow>
+<summary>
+The <strong><c>insertRow()</c></strong> method of the <see cref="HTMLTableElement"/> interface inserts a new row<br/>(<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tr">tr</see>) in a given <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table">table</see>, and returns a reference to<br/>the new row.
+</summary>
+<remarks>
+<para>If a table has multiple <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tbody">tbody</see> elements, by default, the new row is<br/>inserted into the last <c>&amp;lt;tbody&amp;gt;</c>.<br/>To insert the row into a specific section, use <see cref="HTMLTableSectionElement.InsertRow"/></para><blockquote class="NOTE"><h5>NOTE</h5><para><c>insertRow()</c> inserts the row directly into the<br/>table. The row does not need to be appended separately as would be the case if<br/><see cref="Document.CreateElement"/> had been used to create the new<br/><c>&amp;lt;tr&amp;gt;</c> element.</para></blockquote>
+<para>-<see cref="HTMLTableRowElement.InsertCell"/><br/>-<see cref="HTMLTableSectionElement.InsertRow"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/insertRow"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="HTMLTableRowElement"/> that references the new<br/>row.</returns>
+</HTMLTableElementInsertRow>
+<HTMLTableElementRows>
+<summary>
+The read-only <see cref="HTMLTableElement"/><br/>property <strong><c>rows</c></strong> returns a live<br/><see cref="HTMLCollection"/> of all the rows in the table, including the rows<br/>contained within any <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/thead">thead</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tfoot">tfoot</see>, and<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tbody">tbody</see> elements.
+</summary>
+<remarks>
+<para>Although the property itself is read-only, the returned object is live and allows the<br/>modification of its content.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/rows"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="HTMLCollection"/> providing a live-updating list of the<br/><see cref="HTMLTableRowElement"/> objects representing all of the {{HTMLElement("tr")}}<br/>elements contained in the table. This provides quick access to all of the table rows,<br/>without having to manually search for them.</value>
+</HTMLTableElementRows>
+<HTMLTableElementRules>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>HTMLTableElement.rules</c></strong> property indicates which cell<br/>borders to render in the table.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/rules"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>One of the following:</value>
+</HTMLTableElementRules>
+<HTMLTableElementSummary>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>HTMLTableElement.summary</c></strong> property represents the<br/>table description.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/summary"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</HTMLTableElementSummary>
+<HTMLTableElementTBodies>
+<summary>
+The <strong><c>HTMLTableElement.tBodies</c></strong> read-only property returns a<br/>live <see cref="HTMLCollection"/> of the bodies in a {{htmlElement("table")}}.
+</summary>
+<remarks>
+<para>Although the property is read-only, the returned object is live and allows the<br/>modification of its content.</para><para>The collection returned includes implicit <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tbody">tbody</see> elements. For<br/>example:</para><para>The HTML DOM generated from the above HTML will have a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tbody">tbody</see> element<br/>even though the tags are not included in the source HTML.</para>
+<para>-<see cref="HTMLCollection"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tbody">tbody</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/tBodies"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A live <see cref="HTMLCollection"/>.</value>
+</HTMLTableElementTBodies>
+<HTMLTableElementTFoot>
+<summary>
+The <strong><c>HTMLTableElement.tFoot</c></strong> property represents the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tfoot">tfoot</see> element of a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table">table</see>. Its value will be<br/><c>null</c> if there is no such element.
+</summary>
+<remarks>
+<para>-The interface implementing this property: <see cref="HTMLTableElement"/>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/tFoot"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tfoot">tfoot</see> element or <c>null</c>.</value>
+</HTMLTableElementTFoot>
+<HTMLTableElementTHead>
+<summary>
+The <strong><c>HTMLTableElement.tHead</c></strong> represents the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/thead">thead</see> element of a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table">table</see>. Its value will be<br/><c>null</c> if there is no such element.
+</summary>
+<remarks>
+<para>-The interface implementing this property: <see cref="HTMLTableElement"/>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/tHead"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="HTMLTableSectionElement"/>.</value>
+</HTMLTableElementTHead>
+<HTMLTableElementWidth>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>HTMLTableElement.width</c></strong> property represents the<br/>desired width of the table.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/width"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing the width in number of pixels or as a percentage value.</value>
+</HTMLTableElementWidth>
 </docs>

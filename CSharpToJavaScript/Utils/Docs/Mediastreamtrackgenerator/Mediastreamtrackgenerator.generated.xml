@@ -1,10 +1,30 @@
 <docs>
 <MediaStreamTrackGenerator>
 <summary>
-<div class="CAUTION"><h5>CAUTION</h5> <strong>Non-standard</strong></div> The <strong><c>MediaStreamTrackGenerator</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Insertable_Streams_for_MediaStreamTrack_API">Insertable Streams for MediaStreamTrack API</see> creates a <see cref="WritableStream"/> that acts as a <see cref="MediaStreamTrack"/> source.<br/>The object consumes a stream of media frames as input, which can be audio or video frames.
+<div class="CAUTION"><h5>CAUTION</h5> <strong>Non-standard</strong></div> <blockquote class="NOTE"><h5>NOTE</h5>Consider using <see cref="VideoTrackGenerator"/> instead.</blockquote>
 </summary>
 <remarks>
+<para>The <strong><c>MediaStreamTrackGenerator</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Insertable_Streams_for_MediaStreamTrack_API">Insertable Streams for MediaStreamTrack API</see> creates a <see cref="WritableStream"/> that acts as a <see cref="MediaStreamTrack"/> source.<br/>The object consumes a stream of media frames as input, which can be audio or video frames.</para>
+<para>-<see cref="VideoTrackGenerator"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrackGenerator"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </MediaStreamTrackGenerator>
+<MediaStreamTrackGeneratorMediaStreamTrackGenerator>
+<summary>
+<div class="CAUTION"><h5>CAUTION</h5> <strong>Non-standard</strong></div> The <strong><c>MediaStreamTrackGenerator()</c></strong> constructor creates a new <see cref="MediaStreamTrackGenerator"/> object which consumes a stream of media frames and exposes a <see cref="MediaStreamTrack"/>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/mediastreamtrack-insertable-media-processing">Insertable streams for MediaStreamTrack</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrackGenerator/MediaStreamTrackGenerator"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</MediaStreamTrackGeneratorMediaStreamTrackGenerator>
+<MediaStreamTrackGeneratorWritable>
+<summary>
+<div class="CAUTION"><h5>CAUTION</h5> <strong>Non-standard</strong></div> The <strong><c>writable</c></strong> property of the <see cref="MediaStreamTrackGenerator"/> interface returns a <see cref="WritableStream"/>. This allows the writing of media frames to the <c>MediaStreamTrackGenerator</c>. The frames will be audio or video. The type is dictated by the kind of <c>MediaStreamTrackGenerator</c> that was created.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrackGenerator/writable"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="WritableStream"/>.</value>
+</MediaStreamTrackGeneratorWritable>
 </docs>

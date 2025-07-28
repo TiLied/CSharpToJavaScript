@@ -9,4 +9,24 @@ The <strong>WebGLContextEvent</strong> interface is part of the <see href="https
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLContextEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </WebGLContextEvent>
+<WebGLContextEventStatusMessage>
+<summary>
+The read-only <strong><c>WebGLContextEvent.statusMessage</c></strong> property contains additional event status information, or is an empty string if no additional information is available.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/webglcontextcreationerror_event">webglcontextcreationerror</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLContextEvent/statusMessage"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebGLContextEventStatusMessage>
+<WebGLContextEventWebGLContextEvent>
+<summary>
+The <strong><c>WebGLContextEvent()</c></strong> constructor creates a new <see cref="WebGLContextEvent"/> object.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>You typically don&amp;apos;t need to call this constructor; the browser creates these objects automatically when WebGL context events get fired. To manually trigger a <c>webglcontextlost</c> event, use <see cref="WEBGL_lose_context.LoseContext"/>.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/webglcontextlost_event"><c>webglcontextlost</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event"><c>webglcontextrestored</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/webglcontextcreationerror_event"><c>webglcontextcreationerror</c></see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLContextEvent/WebGLContextEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="WebGLContextEvent"/> object.</returns>
+</WebGLContextEventWebGLContextEvent>
 </docs>

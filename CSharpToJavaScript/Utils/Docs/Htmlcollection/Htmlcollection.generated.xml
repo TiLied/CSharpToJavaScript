@@ -9,4 +9,34 @@ The <strong><c>HTMLCollection</c></strong> interface represents a generic collec
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCollection"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </HTMLCollection>
+<HTMLCollectionItem>
+<summary>
+The <see cref="HTMLCollection"/> method <c>item()</c><br/>returns the element located at the specified offset into the collection.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Because the contents of an <c>HTMLCollection</c> are<br/>live, changes to the underlying DOM can and will cause the position of individual<br/>elements in the collection to change, so the index value will not necessarily remain<br/>constant for a given element.</para></blockquote>
+<para>-<see cref="NodeList.Item"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCollection/item"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>The <see cref="Element"/> at the specified index, or <c>null</c> if<br/><c>index</c> is less than zero or greater than or equal to the length property.</returns>
+</HTMLCollectionItem>
+<HTMLCollectionLength>
+<summary>
+The <strong><c>HTMLCollection.length</c></strong> property returns the number of<br/>items in a <see cref="HTMLCollection"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCollection/length"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer value representing the number of items in a <c>HTMLCollection</c>.</value>
+</HTMLCollectionLength>
+<HTMLCollectionNamedItem>
+<summary>
+The <strong><c>namedItem()</c></strong> method of the <see cref="HTMLCollection"/> interface returns<br/>the first <see cref="Element"/> in the collection whose <c>id</c> or <c>name</c> attribute match the specified name, or <c>null</c> if no element matches.
+</summary>
+<remarks>
+<para>In JavaScript, instead of calling <c>collection.namedItem(&amp;quot;value&amp;quot;)</c>, you can also directly access the name on the collection, like <c>collection[&amp;quot;value&amp;quot;]</c>, unless the name collides with one of the existing <c>HTMLCollection</c> properties.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCollection/namedItem"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>The first <see cref="Element"/> in the <see cref="HTMLCollection"/> matching the <c>key</c>, or <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><c>null</c></see> if there is none. Always returns <c>null</c> if <c>key</c> is the empty string.</returns>
+</HTMLCollectionNamedItem>
 </docs>

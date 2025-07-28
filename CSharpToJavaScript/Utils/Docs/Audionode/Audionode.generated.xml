@@ -9,4 +9,86 @@ The <strong><c>AudioNode</c></strong> interface is a generic interface for repre
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioNode"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </AudioNode>
+<AudioNodeChannelCount>
+<summary>
+The <strong><c>channelCount</c></strong> property of the <see cref="AudioNode"/> interface represents an integer used to determine how many channels are used when <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing">up-mixing and down-mixing</see> connections to any inputs to the node.
+</summary>
+<remarks>
+<para><c>channelCount</c>'s usage and precise definition depend on the value of <see cref="AudioNode.ChannelCountMode"/>:</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioNode/channelCount"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer.</value>
+</AudioNodeChannelCount>
+<AudioNodeChannelCountMode>
+<summary>
+The <c>channelCountMode</c> property of the <see cref="AudioNode"/> interface represents an enumerated value describing the way channels must be matched between the node's inputs and outputs.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioNode/channelCountMode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The possible values of the <c>channelCountMode</c> enumerated value, and their meanings are:<blockquote class="NOTE"><h5>NOTE</h5>In older versions of the spec, the default for a <see cref="ChannelSplitterNode"/> was <c>max</c>.</blockquote></value>
+</AudioNodeChannelCountMode>
+<AudioNodeChannelInterpretation>
+<summary>
+The <strong><c>channelInterpretation</c></strong> property of the <see cref="AudioNode"/> interface represents an enumerated value describing how input channels are mapped to output channels when the number of inputs/outputs is different. For example, this setting defines how a mono input will be up-mixed to a stereo or 5.1 channel output, or how a quad channel input will be down-mixed to a stereo or mono output.
+</summary>
+<remarks>
+<para>The property has two options: <c>speakers</c> and <c>discrete</c>. These are documented in <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing">Basic concepts behind Web Audio API &amp;gt; up-mixing and down-mixing</see>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioNode/channelInterpretation"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The values are documented in <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing">Basic concepts behind Web Audio API &amp;gt; up-mixing and down-mixing</see>.In summary:</value>
+</AudioNodeChannelInterpretation>
+<AudioNodeConnect>
+<summary>
+The <c>connect()</c> method of the <see cref="AudioNode"/> interface lets<br/>you connect one of the node&amp;apos;s outputs to a target, which may be either another<br/><c>AudioNode</c> (thereby directing the sound data to the specified node) or an<br/><see cref="AudioParam"/>, so that the node's output data is automatically used to<br/>change the value of that parameter over time.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioNode/connect"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>If the destination is a node, <c>connect()</c> returns a reference to the<br/>destination <see cref="AudioNode"/> object, allowing you to chain multiple<br/><c>connect()</c> calls. In some browsers, older implementations of this interface<br/>return <see cref="Undefined"/>.If the destination is an <c>AudioParam</c>, <c>connect()</c> returns<br/><c>undefined</c>.</returns>
+</AudioNodeConnect>
+<AudioNodeContext>
+<summary>
+The read-only <c>context</c> property of the<br/><see cref="AudioNode"/> interface returns the associated<br/><see cref="BaseAudioContext"/>, that is the object representing the processing graph<br/>the node is participating in.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioNode/context"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <see cref="AudioContext"/> or <see cref="OfflineAudioContext"/> object that was<br/>used to construct this <c>AudioNode</c>.</value>
+</AudioNodeContext>
+<AudioNodeDisconnect>
+<summary>
+The <strong><c>disconnect()</c></strong> method of the <see cref="AudioNode"/> interface lets you disconnect one or more nodes from the node on which the method is called.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioNode/disconnect"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</AudioNodeDisconnect>
+<AudioNodeNumberOfInputs>
+<summary>
+The <c>numberOfInputs</c> property of<br/>the <see cref="AudioNode"/> interface returns the number of inputs feeding the<br/>node. Source nodes are defined as nodes having a <c>numberOfInputs</c><br/>property with a value of 0.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioNode/numberOfInputs"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer ≥ 0.</value>
+</AudioNodeNumberOfInputs>
+<AudioNodeNumberOfOutputs>
+<summary>
+The <c>numberOfOutputs</c> property of<br/>the <see cref="AudioNode"/> interface returns the number of outputs coming out of<br/>the node. Destination nodes — like <see cref="AudioDestinationNode"/> — have<br/>a value of 0 for this attribute.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioNode/numberOfOutputs"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer ≥ 0.</value>
+</AudioNodeNumberOfOutputs>
 </docs>

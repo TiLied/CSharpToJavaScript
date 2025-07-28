@@ -8,4 +8,13 @@ The <strong><c>CSSMathValue</c></strong> interface of the <see href="https://dev
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSMathValue"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </CSSMathValue>
+<CSSMathValueOperator>
+<summary>
+The <strong><c>CSSMathValue.operator</c></strong> read-only<br/>property of the <see cref="CSSMathValue"/> interface indicates the operator that the<br/>current subtype represents. For example, if the current <c>CSSMathValue</c><br/>subtype is <c>CSSMathSum</c>, this property will return the string<br/><c>&amp;quot;sum&amp;quot;</c>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSMathValue/operator"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="'String'"/>.<table><tr><td>Interface</td><td>Value</td></tr><tr><td><see cref="'CSSMathSum'"/></td><td><c>&amp;quot;sum&amp;quot;</c></td></tr><tr><td><see cref="'CSSMathProduct'"/></td><td><c>&amp;quot;product&amp;quot;</c></td></tr><tr><td><see cref="'CSSMathMin'"/></td><td><c>&amp;quot;min&amp;quot;</c></td></tr><tr><td><see cref="'CSSMathMax'"/></td><td><c>&amp;quot;max&amp;quot;</c></td></tr><tr><td><see cref="'CSSMathClamp'"/></td><td><c>&amp;quot;clamp&amp;quot;</c></td></tr><tr><td><see cref="'CSSMathNegate'"/></td><td><c>&amp;quot;negate&amp;quot;</c></td></tr><tr><td><see cref="'CSSMathInvert'"/></td><td><c>&amp;quot;invert&amp;quot;</c></td></tr></table></value>
+</CSSMathValueOperator>
 </docs>

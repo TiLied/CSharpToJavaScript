@@ -9,4 +9,143 @@ The <strong><c>URLSearchParams</c></strong> interface defines utility methods to
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </URLSearchParams>
+<URLSearchParamsAppend>
+<summary>
+The <strong><c>append()</c></strong> method of the <see cref="URLSearchParams"/><br/>interface appends a specified key/value pair as a new search parameter.
+</summary>
+<remarks>
+<para>As shown in the example below, if the same key is appended multiple times it will<br/>appear in the parameter string multiple times for each value.</para>
+<para>-<see cref="URL"/><br/>-<see href="https://developer.chrome.com/blog/urlsearchparams/">Google Developers: Easy URL manipulation with URLSearchParams</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/append"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</URLSearchParamsAppend>
+<URLSearchParamsDelete>
+<summary>
+The <strong><c>delete()</c></strong> method of the <see cref="URLSearchParams"/> interface deletes specified parameters and their associated value(s) from the list of all search parameters.
+</summary>
+<remarks>
+<para>A parameter name and optional value are used to match parameters.<br/>If only a parameter name is specified, then all search parameters that match the name are deleted, along with their associated values.<br/>If both a parameter name and value are specified, then all search parameters that match both the parameter name and value are deleted.</para>
+<para>-<see href="https://github.com/zloirock/core-js#url-and-urlsearchparams">Polyfill of <c>URLSearchParams</c> in <c>core-js</c></see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/delete"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</URLSearchParamsDelete>
+<URLSearchParamsEntries>
+<summary>
+The <strong><c>entries()</c></strong> method of the<br/><see cref="URLSearchParams"/> interface returns an<br/><see cref="Iteration_protocols"/> allowing iteration through all key/value<br/>pairs contained in this object. The iterator returns key/value pairs in the same order as they appear in the query string. The key and value of each pair are strings.
+</summary>
+<remarks>
+<para>-The <see cref="URL"/> interface.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/entries"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Returns an <see cref="Iteration_protocols"/>.</returns>
+</URLSearchParamsEntries>
+<URLSearchParamsForEach>
+<summary>
+The <strong><c>forEach()</c></strong> method of the<br/><see cref="URLSearchParams"/> interface allows iteration through all values contained<br/>in this object via a callback function.
+</summary>
+<remarks>
+<para>-The <see cref="URL"/> interface.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/forEach"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</URLSearchParamsForEach>
+<URLSearchParamsGet>
+<summary>
+The <strong><c>get()</c></strong> method of the <see cref="URLSearchParams"/><br/>interface returns the first value associated to the given search parameter.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/get"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A string if the given search parameter is found; otherwise,<br/><strong><c>null</c></strong>.</returns>
+</URLSearchParamsGet>
+<URLSearchParamsGetAll>
+<summary>
+The <strong><c>getAll()</c></strong> method of the <see cref="URLSearchParams"/><br/>interface returns all the values associated with a given search parameter as an array.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/getAll"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An array of strings, which may be empty if no values for the given parameter are found.</returns>
+</URLSearchParamsGetAll>
+<URLSearchParamsHas>
+<summary>
+The <strong><c>has()</c></strong> method of the <see cref="URLSearchParams"/> interface returns a boolean value that indicates whether the specified parameter is in the search parameters.
+</summary>
+<remarks>
+<para>A parameter name and optional value are used to match parameters.<br/>If only a parameter name is specified, then the method will return <c>true</c> if any parameters in the query string match the name, and <c>false</c> otherwise.<br/>If both a parameter name and value are specified, then the method will return <c>true</c> if a parameter matches both the name and value.</para>
+<para>-<see href="https://github.com/zloirock/core-js#url-and-urlsearchparams">Polyfill of <c>URLSearchParams</c> in <c>core-js</c></see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/has"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A boolean value.</returns>
+</URLSearchParamsHas>
+<URLSearchParamsKeys>
+<summary>
+The <strong><c>keys()</c></strong> method of the <see cref="URLSearchParams"/><br/>interface returns an <see cref="Iteration_protocols"/> allowing iteration<br/>through all keys contained in this object. The keys are strings.
+</summary>
+<remarks>
+<para>-The <see cref="URL"/> interface.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/keys"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Returns an <see cref="Iteration_protocols"/>.</returns>
+</URLSearchParamsKeys>
+<URLSearchParamsSet>
+<summary>
+The <strong><c>set()</c></strong> method of the <see cref="URLSearchParams"/><br/>interface sets the value associated with a given search parameter to the given value.<br/>If there were several matching values, this method deletes the others. If the search<br/>parameter doesn&amp;apos;t exist, this method creates it.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/set"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</URLSearchParamsSet>
+<URLSearchParamsSize>
+<summary>
+The <strong><c>size</c></strong> read-only property of the <see cref="URLSearchParams"/> interface indicates the total number of search parameter entries.
+</summary>
+<remarks>
+<para>-<see cref="URL.SearchParams"/><br/>-<see href="https://github.com/zloirock/core-js#url-and-urlsearchparams">Polyfill of <c>URLSearchParams</c> in <c>core-js</c></see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/size"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number indicating the total number of search parameter entries in the <see cref="URLSearchParams"/> object.</value>
+</URLSearchParamsSize>
+<URLSearchParamsSort>
+<summary>
+The <strong><c>URLSearchParams.sort()</c></strong> method sorts all key/value<br/>pairs contained in this object in place and returns <c>undefined</c>. Key/value pairs are sorted by the values of the <see href="https://developer.mozilla.org/en-US/docs/Glossary/UTF-16">UTF-16</see> of the keys. This method uses a stable sorting<br/>algorithm (i.e., the relative order between key/value pairs with equal keys will be<br/>preserved).
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/sort"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</URLSearchParamsSort>
+<URLSearchParamsToString>
+<summary>
+The <strong><c>toString()</c></strong> method of the<br/><see cref="URLSearchParams"/> interface returns a query string suitable for use in a<br/>URL.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This method returns the query string without the question mark. This is different from <see href="https://developer.mozilla.org/en-US/docs/Web/API/Location/search"><c>Location.search</c></see>, <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAnchorElement/search"><c>HTMLAnchorElement.search</c></see>, and <see href="https://developer.mozilla.org/en-US/docs/Web/API/URL/search"><c>URL.search</c></see>, which all include the question mark.</para></blockquote>
+<para>-The <see cref="URL"/> interface.<br/>-<see href="https://developer.chrome.com/blog/urlsearchparams/">Google Developers: Easy URL manipulation with URLSearchParams</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/toString"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A string, without the question mark. Returns an empty string if no search parameters have been set. Characters in the <see href="https://url.spec.whatwg.org/#application-x-www-form-urlencoded-percent-encode-set"><c>application/x-www-form-urlencoded</c> percent-encode set</see> (which contains all code points except ASCII alphanumeric, <c>*</c>, <c>-</c>, <c>.</c>, and <c>_</c>) are <see href="https://developer.mozilla.org/en-US/docs/Glossary/Percent-encoding">percent-encoded</see>, and U+0020 SPACE is encoded as <c>+</c>.</returns>
+</URLSearchParamsToString>
+<URLSearchParamsURLSearchParams>
+<summary>
+The <strong><c>URLSearchParams()</c></strong> constructor creates and returns a<br/>new <see cref="URLSearchParams"/> object.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/URLSearchParams"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="URLSearchParams"/> object instance.</returns>
+</URLSearchParamsURLSearchParams>
+<URLSearchParamsValues>
+<summary>
+The <strong><c>values()</c></strong> method of the <see cref="URLsearchParams"/><br/>interface returns an <see cref="Iteration_protocols"/> allowing iteration<br/>through all values contained in this object. The values are strings.
+</summary>
+<remarks>
+<para>-The <see cref="URL"/> interface.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/values"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Returns an <see cref="Iteration_protocols"/>.</returns>
+</URLSearchParamsValues>
 </docs>

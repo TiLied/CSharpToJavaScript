@@ -9,4 +9,25 @@ The <strong><c>ExtendableEvent</c></strong> interface extends the lifetime of th
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ExtendableEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </ExtendableEvent>
+<ExtendableEventExtendableEvent>
+<summary>
+The <strong><c>ExtendableEvent()</c></strong> constructor creates a new <see cref="ExtendableEvent"/> object.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</see><br/>-<see href="https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker">Service workers basic code example</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web workers</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ExtendableEvent/ExtendableEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="ExtendableEvent"/> object.</returns>
+</ExtendableEventExtendableEvent>
+<ExtendableEventWaitUntil>
+<summary>
+The <strong><c>ExtendableEvent.waitUntil()</c></strong><br/>method tells the event dispatcher that work is ongoing. It can also be used to detect<br/>whether that work was successful. In service workers, <c>waitUntil()</c> tells<br/>the browser that work is ongoing until the promise settles, and it shouldn&amp;apos;t terminate<br/>the service worker if it wants that work to complete.
+</summary>
+<remarks>
+<para>The <see cref="ServiceWorkerGlobalScopeinstall"/> events in <see href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerGlobalScope">service workers</see> use<br/><c>waitUntil()</c> to hold the service worker in<br/>the <see cref="ServiceWorkerRegistration.Installing"/> phase until tasks<br/>complete. If the promise passed to <c>waitUntil()</c> rejects, the install is<br/>considered a failure, and the installing service worker is discarded. This is primarily<br/>used to ensure that a service worker is not considered installed until all of the core<br/>caches it depends on are successfully populated.</para><para>The <see cref="ServiceWorkerGlobalScopeactivate"/> events in <see href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerGlobalScope">service workers</see> use<br/><c>waitUntil()</c> to buffer functional events such as <c>fetch</c> and<br/><c>push</c> until the promise passed to <c>waitUntil()</c> settles. This<br/>gives the service worker time to update database schemas and delete outdated<br/><see cref="Cache"/>, so other events can rely on a completely upgraded state.</para><para>The <c>waitUntil()</c> method must be initially called within the event callback,<br/>but after that it can be called multiple times, until all the promises passed to it<br/>settle.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ExtendableEvent/waitUntil"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</ExtendableEventWaitUntil>
 </docs>

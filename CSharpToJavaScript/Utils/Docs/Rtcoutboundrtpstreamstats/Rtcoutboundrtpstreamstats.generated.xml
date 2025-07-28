@@ -4,9 +4,326 @@
 The <strong><c>RTCOutboundRtpStreamStats</c></strong> dictionary of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see> is used to report metrics and statistics related to an outbound {{Glossary("RTP")}} stream being sent by an <see cref="RTCRtpSender"/>.
 </summary>
 <remarks>
-<para>The statistics can be obtained by iterating the <see cref="RTCStatsReport"/> returned by <see cref="RTCPeerConnection.GetStats"/> or <see cref="RTCRtpSender.GetStats"/> until you find a report with the <see href="https://developer.mozilla.org#type"><c>type</c></see> of <c>outbound-rtp</c>.</para>
+<para>The statistics can be obtained by iterating the <see cref="RTCStatsReport"/> returned by <see cref="RTCPeerConnection.GetStats"/> or <see cref="RTCRtpSender.GetStats"/> until you find a report with the <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/type"><c>type</c></see> of <c>outbound-rtp</c>.</para>
 <para>-<see cref="RTCStatsReport"/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </RTCOutboundRtpStreamStats>
+<RTCOutboundRtpStreamStatsActive>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>active</c></strong> property of the <see cref="RTCOutboundRtpStreamStats"/> dictionary is a boolean that indicates whether this RTP stream is configured to be sent, or is disabled.
+</summary>
+<remarks>
+<para>For example, this would be <c>false</c> if the track corresponding to the stream had its <see cref="MediaStreamTrack.Enabled"/> property set to <c>false</c>.<br/>Note that an active stream may still not be sending if, for example, the stream is limited by network conditions.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/active"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value><c>true</c> if the stream is enabled for sending, <c>false</c> otherwise.</value>
+</RTCOutboundRtpStreamStatsActive>
+<RTCOutboundRtpStreamStatsBytesSent>
+<summary>
+The <strong><c>bytesSent</c></strong> property of the <see cref="RTCOutboundRtpStreamStats"/> dictionary indicates the total number of payload bytes sent on this stream (<see cref="RTCDataChannel"/>).
+</summary>
+<remarks>
+<para>The value includes bytes in retransmitted payload bytes.<br/>It does not include headers or padding.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/bytesSent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A positive integer.</value>
+</RTCOutboundRtpStreamStatsBytesSent>
+<RTCOutboundRtpStreamStatsCodecId>
+<summary>
+The <strong><c>codecId</c></strong> property of the <see cref="RTCOutboundRtpStreamStats"/> dictionary is a string that uniquely identifies the object that was inspected to produce the data in the <see cref="RTCCodecStats"/> for the {{Glossary("RTP")}} stream.
+</summary>
+<remarks>
+<para><c>RTCOutboundRtpStreamStats</c> and <c>RTCCodecStats</c> objects are correlated by iterating the <see cref="RTCStatsReport"/> to find the statistics objects where <c>RTCOutboundRtpStreamStats.codecId</c> is equal to <see cref="RTCCodecStats.Id"/>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/codecId"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string that contains the <see cref="RTCCodecStats.Id"/> of the object that was inspected to produce the <see cref="RTCCodecStats"/> object associated with this RTP stream.</value>
+</RTCOutboundRtpStreamStatsCodecId>
+<RTCOutboundRtpStreamStatsFrameHeight>
+<summary>
+The <strong><c>frameHeight</c></strong> property of the <see cref="RTCOutboundRtpStreamStats"/> dictionary is a positive integer that indicates the height of the last encoded frame, in pixels.
+</summary>
+<remarks>
+<para>Note that the resolution of the encoded frame may be lower than that of the media source, which is provided in <see cref="RTCVideoSourceStats.Height"/>.</para><blockquote class="NOTE"><h5>NOTE</h5><para>The property is undefined for audio streams, and before the first frame is encoded.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/frameHeight"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A positive integer.</value>
+</RTCOutboundRtpStreamStatsFrameHeight>
+<RTCOutboundRtpStreamStatsFramesEncoded>
+<summary>
+The <strong><c>framesEncoded</c></strong> property of<br/>the <see cref="RTCOutboundRtpStreamStats"/> dictionary indicates the total number of<br/>frames that have been encoded by this <see cref="RTCRtpSender"/> for this media<br/>source.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/framesEncoded"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer value indicating the total number of video frames that this sender has<br/>encoded so far for this stream.<blockquote class="NOTE"><h5>NOTE</h5>This property is only valid for video streams.</blockquote></value>
+</RTCOutboundRtpStreamStatsFramesEncoded>
+<RTCOutboundRtpStreamStatsFramesPerSecond>
+<summary>
+The <strong><c>framesPerSecond</c></strong> property of the <see cref="RTCOutboundRtpStreamStats"/> dictionary indicates the number of encoded frames sent in the last second.
+</summary>
+<remarks>
+<para>Note that this may be lower than the media source frame rate, which is provided in <see cref="RTCVideoSourceStats.FramesPerSecond"/>.</para><blockquote class="NOTE"><h5>NOTE</h5><para>The value does not exist for audio, or before the first second of encoding.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/framesPerSecond"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A positive number.</value>
+</RTCOutboundRtpStreamStatsFramesPerSecond>
+<RTCOutboundRtpStreamStatsFramesSent>
+<summary>
+The <strong><c>framesSent</c></strong> property of the <see cref="RTCOutboundRtpStreamStats"/> dictionary indicates the total number of encoded frames sent on this RTP stream over its lifetime.
+</summary>
+<remarks>
+<para>Note that this may be lower than the total number of media source frames, which is provided in <see cref="RTCVideoSourceStats.Frames"/>.</para><blockquote class="NOTE"><h5>NOTE</h5><para>The value does not exist for audio.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/framesSent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A positive number.</value>
+</RTCOutboundRtpStreamStatsFramesSent>
+<RTCOutboundRtpStreamStatsFrameWidth>
+<summary>
+The <strong><c>frameWidth</c></strong> property of the <see cref="RTCOutboundRtpStreamStats"/> dictionary is a positive integer that indicates the width of the last encoded frame, in pixels.
+</summary>
+<remarks>
+<para>Note that the resolution of the encoded frame may be lower than that of the media source, which is provided in <see cref="RTCVideoSourceStats.Width"/>.</para><blockquote class="NOTE"><h5>NOTE</h5><para>The value does not exist for audio, or before the first frame is encoded.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/frameWidth"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A positive integer.</value>
+</RTCOutboundRtpStreamStatsFrameWidth>
+<RTCOutboundRtpStreamStatsHeaderBytesSent>
+<summary>
+The <strong><c>headerBytesSent</c></strong> property of the <see cref="RTCOutboundRtpStreamStats"/> dictionary indicates the total number of RTP header and padding bytes sent for this <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/ssrc">synchronization source (SSRC)</see>.
+</summary>
+<remarks>
+<para>Note that the total number of bytes sent as payload over the transport is equal to: <c>headerBytesSent</c> + <see cref="RTCOutboundRtpStreamStats.BytesSent"/>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/headerBytesSent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A positive integer.</value>
+</RTCOutboundRtpStreamStatsHeaderBytesSent>
+<RTCOutboundRtpStreamStatsId>
+<summary>
+The <strong><c>id</c></strong> property of the <see cref="RTCOutboundRtpStreamStats"/> dictionary is a string that uniquely identifies the object for which this object provides statistics.
+</summary>
+<remarks>
+<para>Using the <c>id</c>, you can correlate this statistics object with others, in order to monitor statistics over time for a given WebRTC object, such as an <see cref="RTCPeerConnection"/>, or an <see cref="RTCDataChannel"/>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/id"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string that uniquely identifies the object for which this <c>RTCOutboundRtpStreamStats</c> object provides statistics.The format of the ID string is not defined by the specification, so you cannot reliably make any assumptions about the contents of the string, or assume that the format of the string will remain unchanged for a given object type.</value>
+</RTCOutboundRtpStreamStatsId>
+<RTCOutboundRtpStreamStatsKeyFramesEncoded>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>keyFramesEncoded</c></strong> property of the <see cref="RTCOutboundRtpStreamStats"/> dictionary represents the total number of key frames successfully encoded in this RTP media stream.<br/>This includes, for example, key frames in VP8 ({{rfc("6386")}}) or IDR-frames in H.264 ({{rfc("6184")}}).
+</summary>
+<remarks>
+<para>Note that the number of delta frames is calculated by subtracting this value from the total number of frames (<see cref="RTCOutboundRtpStreamStats.FramesEncoded"/> - <c>keyFramesEncoded</c>).</para><blockquote class="NOTE"><h5>NOTE</h5><para>The value does not exist for audio.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/keyFramesEncoded"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A positive integer.</value>
+</RTCOutboundRtpStreamStatsKeyFramesEncoded>
+<RTCOutboundRtpStreamStatsKind>
+<summary>
+The <strong><c>kind</c></strong> property of the <see cref="RTCOutboundRtpStreamStats"/> dictionary is a string indicating whether the described {{Glossary("RTP")}} stream contains audio or video media.
+</summary>
+<remarks>
+<para>This string will always be the same as the <see cref="MediaStreamTrack.Kind"/> of the <see cref="MediaStreamTrack"/> object carried by the stream.<br/>It will also match the media type of the codec associated with this statistics objects (i.e., the MIME type of the associated codec's <see cref="RTCCodecStats.MimeType"/> property).</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/kind"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The kind is always one of:</value>
+</RTCOutboundRtpStreamStatsKind>
+<RTCOutboundRtpStreamStatsMediaSourceId>
+<summary>
+The <strong><c>mediaSourceId</c></strong> property of the <see cref="RTCOutboundRtpStreamStats"/> dictionary represents the ID of the statistics object of the track currently attached to the sender of this stream.
+</summary>
+<remarks>
+<para>This can then be used to obtain the corresponding <see cref="RTCVideoSourceStats"/> or <see cref="RTCAudioSourceStats"/>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/mediaSourceId"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing the ID of a media source statistics object.</value>
+</RTCOutboundRtpStreamStatsMediaSourceId>
+<RTCOutboundRtpStreamStatsMid>
+<summary>
+The <strong><c>mid</c></strong> property of the <see cref="RTCOutboundRtpStreamStats"/> dictionary is a string that contains the media ID negotiated between the local and remote peers.<br/>This uniquely identifies the pairing of source and destination for the transceiver&amp;apos;s stream.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/mid"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The value of the corresponding <see cref="RTCRtpTransceiver.Mid"/>, unless that value is null, in which case this statistic property is not present.</value>
+</RTCOutboundRtpStreamStatsMid>
+<RTCOutboundRtpStreamStatsNackCount>
+<summary>
+The <strong><c>nackCount</c></strong> property of the<br/><see cref="RTCOutboundRtpStreamStats"/> dictionary is a numeric value indicating the<br/>number of times the <see cref="RTCRtpSender"/> described by this object received a<br/><strong>NACK</strong> packet from the remote receiver.
+</summary>
+<remarks>
+<para>A NACK (Negative<br/>ACKnowledgement, also called &amp;quot;Generic NACK&amp;quot;) packet is used by the<br/><see cref="RTCRtpReceiver"/> to inform the sender that one or more {{Glossary("RTP")}}<br/>packets it sent were lost in transport.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/nackCount"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer value indicating how many times the sender received a NACK packet from the<br/>receiver, indicating the loss of one or more packets.</value>
+</RTCOutboundRtpStreamStatsNackCount>
+<RTCOutboundRtpStreamStatsPacketsSent>
+<summary>
+The <strong><c>packetsSent</c></strong> property of the <see cref="RTCOutboundRtpStreamStats"/> dictionary represents the total number of RTP packets sent on this stream, including retransmissions.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/packetsSent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A positive integer.</value>
+</RTCOutboundRtpStreamStatsPacketsSent>
+<RTCOutboundRtpStreamStatsQpSum>
+<summary>
+The <strong><c>qpSum</c></strong> property of the <see cref="RTCOutboundRtpStreamStats"/> dictionary is a value generated by adding the <strong>Quantization Parameter</strong> (<strong>QP</strong>) values for every frame this sender has produced to date on the video track corresponding to this <c>RTCOutboundRtpStreamStats</c> object.
+</summary>
+<remarks>
+<para>In general, the higher this number is, the more heavily compressed the video data is.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/qpSum"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An unsigned 64-bit integer value which indicates the sum of the quantization parameter (QP) value for every frame sent so far on the track described by the <see cref="RTCOutboundRtpStreamStats"/> object.<br/>Since the value of QP is typically larger to indicate higher compression factors, the larger this sum is, the more heavily compressed the stream generally has been.<blockquote class="NOTE"><h5>NOTE</h5>This value is only available for video media.</blockquote></value>
+</RTCOutboundRtpStreamStatsQpSum>
+<RTCOutboundRtpStreamStatsQualityLimitationDurations>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>qualityLimitationDurations</c></strong> property of the <see cref="RTCOutboundRtpStreamStats"/> dictionary is a map of the reasons that a media stream's quality has been reduced by a codec during encoding, and the time during which the quality was reduced for each reason.
+</summary>
+<remarks>
+<para>This quality reduction may include changes such as reduced frame rate or resolution, or an increase in compression factor.<br/>The information can be used to diagnose throughput issues and optimize performance.</para><blockquote class="NOTE"><h5>NOTE</h5><para>This property only exists for video media.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/qualityLimitationDurations"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Map"/> of quality limitation reasons to a number which represents the time in seconds that the stream has been quality limited for that reason.The allowed quality limitation reason values are the strings:</value>
+</RTCOutboundRtpStreamStatsQualityLimitationDurations>
+<RTCOutboundRtpStreamStatsQualityLimitationReason>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>qualityLimitationReason</c></strong> property of the <see cref="RTCOutboundRtpStreamStats"/> dictionary is a string indicating the reason why the media quality in the stream is currently being reduced by the codec during encoding, or <c>none</c> if no quality reduction is being performed.
+</summary>
+<remarks>
+<para>This quality reduction may include changes such as reduced frame rate or resolution, or an increase in compression factor.<br/>Note that the user agent report the most limiting factor.<br/>If the most limiting factor cannot be determined the result will be reported using the priority order: &amp;quot;bandwidth&amp;quot;, &amp;quot;cpu&amp;quot;, &amp;quot;other&amp;quot;.</para><para>The amount of time the encoded media has had its quality reduced in each of the potential ways that can be done can be found in <see cref="RTCOutboundRtpStreamStats.QualityLimitationDurations"/>.</para><blockquote class="NOTE"><h5>NOTE</h5><para>The property is undefined for audio streams.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/qualityLimitationReason"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string with one of the following values:</value>
+</RTCOutboundRtpStreamStatsQualityLimitationReason>
+<RTCOutboundRtpStreamStatsRemoteId>
+<summary>
+The <strong><c>remoteId</c></strong> property of the <see cref="RTCOutboundRtpStreamStats"/> dictionary specifies the <see cref="RTCOutboundRtpStreamStats.Id"/> of the <see cref="RTCRemoteInboundRtpStreamStats"/> object representing the remote peer's <see cref="RTCRtpReceiver"/> which is sending the media to the local peer for this SSRC.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/remoteId"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing the ID of the <see cref="RTCRemoteInboundRtpStreamStats"/> object that represents the remote peer's <see cref="RTCRtpReceiver"/> for the synchronization source represented by this stats object.</value>
+</RTCOutboundRtpStreamStatsRemoteId>
+<RTCOutboundRtpStreamStatsRetransmittedBytesSent>
+<summary>
+The <strong><c>retransmittedBytesSent</c></strong> property of the <see cref="RTCOutboundRtpStreamStats"/> dictionary represents the total number of payload bytes retransmitted for the source associated with this stream.
+</summary>
+<remarks>
+<para>RTX (Retransmission) is one of several mechanisms that WebRTC uses for retransmitting lost payload bytes, and broadly refers to support for the special packets defined in {{rfc("4588")}}.<br/>RTX has to be negotiated between the sender and receiver during initial handshake.<br/>If RTX has not been negotiated the retransmitted bytes will be sent over the same SSRC; otherwise the bytes are sent on a separate SSRC but are still accounted for in this property.</para><para>The retransmitted bytes sent are included in the count reported by <see cref="RTCOutboundRtpStreamStats.BytesSent"/>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/retransmittedBytesSent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A positive integer indicating the number of retransmitted payload bytes for the source.</value>
+</RTCOutboundRtpStreamStatsRetransmittedBytesSent>
+<RTCOutboundRtpStreamStatsRetransmittedPacketsSent>
+<summary>
+The <strong><c>retransmittedPacketsSent</c></strong> property of the <see cref="RTCOutboundRtpStreamStats"/> dictionary represents the total number of packets retransmitted for the source associated with this stream.
+</summary>
+<remarks>
+<para>RTX (Retransmission) is one of several mechanisms that WebRTC uses for retransmitting lost payload bytes, and broadly refers to support for the special packets defined in {{rfc("4588")}}.<br/>RTX has to be negotiated between the sender and receiver during initial handshake.<br/>If RTX has not been negotiated the retransmitted packets will be sent over the same SSRC; otherwise the bytes are sent on a separate SSRC but are still accounted for in this property.</para><para>The retransmitted packets are included in the count reported by <see cref="RTCOutboundRtpStreamStats.PacketsSent"/>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/retransmittedPacketsSent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A positive integer indicating the number of retransmitted packets for the source.</value>
+</RTCOutboundRtpStreamStatsRetransmittedPacketsSent>
+<RTCOutboundRtpStreamStatsRid>
+<summary>
+The <strong><c>rid</c></strong> property of the <see cref="RTCOutboundRtpStreamStats"/> dictionary is a string that specifies the RTP stream ID, if defined.
+</summary>
+<remarks>
+<para>The property is only defined where the <c>rid</c> has been set for the corresponding <see cref="RTCRtpSender"/>.<br/>If set, this value will be present regardless of whether the RID RTP header extension has been negotiated.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/rid"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The value of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSender/setParameters#rid"><c>encodings.rid</c></see> argument passed to <see cref="RTCRtpSender.SetParameters"/>, if any, when the corresponding transceiver is created.<br/>The property is undefined if the stream ID was not set.<blockquote class="NOTE"><h5>NOTE</h5>The property is undefined for audio streams.</blockquote></value>
+</RTCOutboundRtpStreamStatsRid>
+<RTCOutboundRtpStreamStatsScalabilityMode>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>scalabilityMode</c></strong> property of the <see cref="RTCOutboundRtpStreamStats"/> dictionary represents the scalability mode for the RTP stream, if one has been configured.<br/>If not configured, the property is undefined.
+</summary>
+<remarks>
+<para>The mode is used in <see href="https://w3c.github.io/webrtc-svc/">Scalable Video Coding (SVC)</see> to define how define how a video stream may be encoded to allow for adaptation to different network conditions and receiver capabilities.<br/>Different codecs allow for various kinds of scalability, such as providing different resolution, different frame rates, or different quality levels for a particular video.</para><para>The mode may be configured, for example, by specifying the scalability mode as a parameter option in <see cref="VideoEncoder.Configure"/>, <see cref="RTCRtpSender.SetParameters"/>, or <see cref="RTCPeerConnection.AddTransceiver"/>.</para><blockquote class="NOTE"><h5>NOTE</h5><para>The property is undefined for audio streams.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/scalabilityMode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string indicating the configured scalability mode, such as &amp;quot;L1T1&amp;quot;.<br/>If no mode has been configured, the property is undefined.The set of allowed modes are defined in <see href="https://w3c.github.io/webrtc-svc/#scalabilitymodes*">Scalable Video Coding (SVC) Extension for WebRTC</see> (w3c.github.io/webrtc-svc).</value>
+</RTCOutboundRtpStreamStatsScalabilityMode>
+<RTCOutboundRtpStreamStatsSsrc>
+<summary>
+The <strong><c>ssrc</c></strong> property of the <see cref="RTCOutboundRtpStreamStats"/> dictionary contains a positive integer value that identifies the synchronization source (SSRC) of this stream of {{Glossary("RTP")}} packets.
+</summary>
+<remarks>
+<para>A source might be something like a microphone, or a mixer application that combines multiple sources.<br/>All packets from the same source share the same time source and sequence space, and so can be ordered relative to each other.<br/>Note that two streams with the same <c>ssrc</c> value refer to the same source.</para>
+<para>-<see cref="RTCRtpReceiver.GetSynchronizationSources"/><br/>-<see cref="RTCEncodedAudioFrame.GetMetadata"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/ssrc"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A positive 32-bit integer uniquely identifying the SSRC of the RTP packets whose statistics are covered by this <see cref="RTCOutboundRtpStreamStats"/> object.The manner in which SSRC values are generated is not mandated by the specification, although it does make recommendations.<br/>You should not make any assumptions based on the value of <c>ssrc</c> other than that any two objects with the same <c>ssrc</c> value refer to the same source.<br/>See {{RFC(&amp;quot;3550&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;8&amp;quot;)}} for additional information about <c>ssrc</c>.<blockquote class="NOTE"><h5>NOTE</h5>The specification includes an example that generates values for <c>ssrc</c> using MD5.<br/>While not part of the standard, exactly, it is a good mechanism that may be used by some browsers; others may use other methods, such as random number generators.<br/><strong>Do not</strong> rely upon these values meaning anything other than &amp;quot;these objects are associated with the same source.&amp;quot;</blockquote></value>
+</RTCOutboundRtpStreamStatsSsrc>
+<RTCOutboundRtpStreamStatsTargetBitrate>
+<summary>
+The <strong><c>targetBitrate</c></strong> property of the <see cref="RTCOutboundRtpStreamStats"/> dictionary represents the current target bitrate of the codec in use by the stream.
+</summary>
+<remarks>
+<para>The value is dynamic, reflecting the encoder settings and other factors such as network conditions and available bandwidth.<br/>It should correlate closely to the payload bytes sent per second (excluding retransmissions).</para>
+<para>-<see cref="RTCOutboundRtpStreamStats.BytesSent"/><br/>-<see cref="RTCOutboundRtpStreamStats.RetransmittedBytesSent"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/targetBitrate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number representing the target rate in bits per second.<br/>This is defined in the same way as the {{rfc("3890","Transport Independent Application Specific (TIAS)")}} bitrate.</value>
+</RTCOutboundRtpStreamStatsTargetBitrate>
+<RTCOutboundRtpStreamStatsTimestamp>
+<summary>
+The <strong><c>timestamp</c></strong> property of the <see cref="RTCOutboundRtpStreamStats"/> dictionary is a <see cref="DOMHighResTimeStamp"/> object specifying the time at which the data in the object was sampled.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/timestamp"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DOMHighResTimeStamp"/> value indicating the time at which the activity described by the statistics in this object was recorded, in milliseconds elapsed since the beginning of January 1, 1970, UTC.The value should be accurate to within a few milliseconds but may not be entirely precise, either because of hardware or operating system limitations or because of <see href="https://developer.mozilla.org/en-US/docs/Glossary/Fingerprinting">fingerprinting</see> protection in the form of reduced clock precision or accuracy.</value>
+</RTCOutboundRtpStreamStatsTimestamp>
+<RTCOutboundRtpStreamStatsTotalEncodedBytesTarget>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>totalEncodedBytesTarget</c></strong> property of the <see cref="RTCOutboundRtpStreamStats"/> dictionary represents the sum of the target frame sizes for all of the frames encoded so far.
+</summary>
+<remarks>
+<para>The codec has a target maximum size for each frame that it is asked to compress, in bytes.<br/>This property indicates the cumulative total of the target sizes for each frame at the current time.<br/>This will probably differ from the total of the actual frame sizes.<br/>You can compare to <see cref="RTCOutboundRtpStreamStatsbytesSent"/> in order to estimate how closely the codec is matching its target.</para><para>The value increases every time <see cref="RTCOutboundRtpStreamStatsframesEncoded"/> goes up.</para><blockquote class="NOTE"><h5>NOTE</h5><para>The property is undefined for audio streams.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/totalEncodedBytesTarget"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The sum of the target frame sizes in bytes, represented as a positive integer.</value>
+</RTCOutboundRtpStreamStatsTotalEncodedBytesTarget>
+<RTCOutboundRtpStreamStatsTotalEncodeTime>
+<summary>
+The <strong><c>totalEncodeTime</c></strong> property of the <see cref="RTCOutboundRtpStreamStats"/> dictionary represents the total number of seconds spent encoding the <see cref="RTCOutboundRtpStreamStatsframesEncoded"/> frames for this stream (<see cref="RTCRtpSender"/>).
+</summary>
+<remarks>
+<para>The average encode time can be calculated by dividing this value by <c>framesEncoded</c>.<br/>The time it takes to encode one frame is the time between sending the encoder a frame and the encoder returning encoded data for that frame.<br/>It does not include any time spent packetizing the resulting data.</para><blockquote class="NOTE"><h5>NOTE</h5><para>The property is undefined for audio streams.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/totalEncodeTime"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number representing the total time spent encoding frames, in seconds.</value>
+</RTCOutboundRtpStreamStatsTotalEncodeTime>
+<RTCOutboundRtpStreamStatsTotalPacketSendDelay>
+<summary>
+The <strong><c>totalPacketSendDelay</c></strong> property of the <see cref="RTCOutboundRtpStreamStats"/> dictionary represents the total time in seconds that packets have spent buffered locally before being transmitted.
+</summary>
+<remarks>
+<para>The individual packet delay is the time between a packet being emitted from the RTP packetizer and it being handed over to the OS network socket.<br/>The individual delay is added to <c>totalPacketSendDelay</c> when <see cref="RTCOutboundRtpStreamStatsframesEncoded"/> is incremented.</para><blockquote class="NOTE"><h5>NOTE</h5><para>The property is undefined for audio streams.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/totalPacketSendDelay"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The delay in seconds, represented as a number.</value>
+</RTCOutboundRtpStreamStatsTotalPacketSendDelay>
+<RTCOutboundRtpStreamStatsTransportId>
+<summary>
+The <strong><c>transportId</c></strong> property of the <see cref="RTCOutboundRtpStreamStats"/> dictionary is a string that uniquely identifies the associated <see cref="RTCTransportStats"/> statistics object for this RTP stream's underlying transport.
+</summary>
+<remarks>
+<para><c>RTCOutboundRtpStreamStats</c> and <c>RTCTransportStats</c> objects are correlated by iterating the <see cref="RTCStatsReport"/> to find the statistics objects where <c>RTCOutboundRtpStreamStats.transportId</c> is equal to <see cref="RTCTransportStats.Id"/>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/transportId"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string that contains the <see cref="RTCTransportStats.Id"/> of the object that was inspected to produce the <see cref="RTCTransportStats"/> object associated with this RTP stream.</value>
+</RTCOutboundRtpStreamStatsTransportId>
+<RTCOutboundRtpStreamStatsType>
+<summary>
+The <strong><c>type</c></strong> property of the <see cref="RTCOutboundRtpStreamStats"/> dictionary is a string with the value <c>&amp;quot;outbound-rtp&amp;quot;</c>.
+</summary>
+<remarks>
+<para>Different statistics are obtained by iterating the <see cref="RTCStatsReport"/> object returned by a call to <see cref="RTCPeerConnection.GetStats"/>.<br/>The type indicates the set of statistics available through the object in a particular iteration step.<br/>A value of <c>&amp;quot;outbound-rtp&amp;quot;</c> indicates that the statistics available in the current step are those defined in <see cref="RTCOutboundRtpStreamStats"/>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/type"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string with the value <c>&amp;quot;outbound-rtpp&amp;quot;</c>.</value>
+</RTCOutboundRtpStreamStatsType>
 </docs>

@@ -9,4 +9,54 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLSubImage"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </XRWebGLSubImage>
+<XRWebGLSubImageColorTexture>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The read-only <strong><c>colorTexture</c></strong> property of the <see cref="XRWebGLSubImage"/> interface represents the color <see cref="WebGLTexture"/> object for the <see cref="XRCompositionLayer"/> to render.
+</summary>
+<remarks>
+<para>-<see cref="WebGL2RenderingContext.FramebufferTextureLayer"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLSubImage/colorTexture"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An opaque <see cref="WebGLTexture"/>. See <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLTexture#webxr_opaque_textures">WebXR opaque textures</see> for details.</value>
+</XRWebGLSubImageColorTexture>
+<XRWebGLSubImageColorTextureHeight>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The read-only <strong><c>colorTextureHeight</c></strong> property of the <see cref="XRWebGLSubImage"/> interface is a number representing the height in pixels of the GL attachment.
+</summary>
+<remarks>
+<para>-<see cref="WebGLTexture"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLSubImage/colorTextureHeight"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number indicating the height in pixels.</value>
+</XRWebGLSubImageColorTextureHeight>
+<XRWebGLSubImageColorTextureWidth>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The read-only <strong><c>colorTextureWidth</c></strong> property of the <see cref="XRWebGLSubImage"/> interface is a number representing the width in pixels of the GL attachment.
+</summary>
+<remarks>
+<para>-<see cref="WebGLTexture"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLSubImage/colorTextureWidth"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number indicating the width in pixels.</value>
+</XRWebGLSubImageColorTextureWidth>
+<XRWebGLSubImageDepthStencilTexture>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The read-only <strong><c>depthStencilTexture</c></strong> property of the <see cref="XRWebGLSubImage"/> interface represents the depth/stencil <see cref="WebGLTexture"/> object for the <see cref="XRCompositionLayer"/> to render.
+</summary>
+<remarks>
+<para>-<see cref="WebGL2RenderingContext.FramebufferTextureLayer"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLSubImage/depthStencilTexture"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An opaque <see cref="WebGLTexture"/>. See <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLTexture#webxr_opaque_textures">WebXR opaque textures</see> for details.</value>
+</XRWebGLSubImageDepthStencilTexture>
+<XRWebGLSubImageImageIndex>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The read-only <strong><c>imageIndex</c></strong> property of the <see cref="XRWebGLSubImage"/> interface is a number representing the offset into the texture array if the layer was requested with <c>texture-array</c>; <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><c>null</c></see> otherwise.
+</summary>
+<remarks>
+<para>-<see cref="WebGL2RenderingContext.FramebufferTextureLayer"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLSubImage/imageIndex"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number or <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><c>null</c></see> if the layer wasn&amp;apos;t requested with <c>texture-array</c>.</value>
+</XRWebGLSubImageImageIndex>
 </docs>

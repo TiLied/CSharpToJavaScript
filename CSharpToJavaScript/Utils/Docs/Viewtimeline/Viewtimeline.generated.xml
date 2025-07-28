@@ -1,7 +1,7 @@
 <docs>
 <ViewTimeline>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>ViewTimeline</c></strong> interface of the {{domxref(&amp;quot;Web Animations API&amp;quot;, &amp;quot;Web Animations API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} represents a view progress timeline (see <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_scroll-driven_animations">CSS scroll-driven animations</see> for more details).
+The <strong><c>ViewTimeline</c></strong> interface of the {{domxref(&amp;quot;Web Animations API&amp;quot;, &amp;quot;Web Animations API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} represents a view progress timeline (see <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_scroll-driven_animations">CSS scroll-driven animations</see> for more details).
 </summary>
 <remarks>
 <para>Pass a <c>ViewTimeline</c> instance to the <see cref="Animation.Animation"/> constructor or the <see cref="Element.Animate"/> method to specify it as the timeline that will control the progress of the animation.</para><para></para>
@@ -9,4 +9,44 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ViewTimeline"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </ViewTimeline>
+<ViewTimelineEndOffset>
+<summary>
+The <strong><c>endOffset</c></strong> read-only property of the <see cref="ViewTimeline"/> interface returns a <see cref="CSSNumericValue"/> representing the ending (100% progress) scroll position of the timeline as an offset from the start of the overflowing section of content in the scroller.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_scroll-driven_animations">CSS scroll-driven animations</see><br/>-<see cref="ViewTimeline"/><br/>-<see cref="AnimationTimeline"/>, <see cref="ScrollTimeline"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ViewTimeline/endOffset"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="CSSNumericValue"/>.</value>
+</ViewTimelineEndOffset>
+<ViewTimelineStartOffset>
+<summary>
+The <strong><c>startOffset</c></strong> read-only property of the <see cref="ViewTimeline"/> interface returns a <see cref="CSSNumericValue"/> representing the starting (0% progress) scroll position of the timeline as an offset from the start of the overflowing section of content in the scroller.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_scroll-driven_animations">CSS scroll-driven animations</see><br/>-<see cref="ViewTimeline"/><br/>-<see cref="AnimationTimeline"/>, <see cref="ScrollTimeline"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ViewTimeline/startOffset"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="CSSNumericValue"/>.</value>
+</ViewTimelineStartOffset>
+<ViewTimelineSubject>
+<summary>
+The <strong><c>subject</c></strong> read-only property of the <see cref="ViewTimeline"/> interface returns a reference to the subject element whose visibility within its nearest ancestor scrollable element (scroller) is driving the progress of the timeline.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_scroll-driven_animations">CSS scroll-driven animations</see><br/>-<see cref="ViewTimeline"/><br/>-<see cref="AnimationTimeline"/>, <see cref="ScrollTimeline"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ViewTimeline/subject"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="Element"/>.</value>
+</ViewTimelineSubject>
+<ViewTimelineViewTimeline>
+<summary>
+The <strong><c>ViewTimeline()</c></strong> constructor creates a new <see cref="ViewTimeline"/> object instance.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_scroll-driven_animations">CSS scroll-driven animations</see><br/>-<see cref="ViewTimeline"/><br/>-<see cref="AnimationTimeline"/>, <see cref="ScrollTimeline"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ViewTimeline/ViewTimeline"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="ViewTimeline"/> object instance.</returns>
+</ViewTimelineViewTimeline>
 </docs>

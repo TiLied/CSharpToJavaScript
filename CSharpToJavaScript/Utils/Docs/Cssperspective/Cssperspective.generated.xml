@@ -8,4 +8,22 @@ The <strong><c>CSSPerspective</c></strong> interface of the <see href="https://d
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSPerspective"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </CSSPerspective>
+<CSSPerspectiveCSSPerspective>
+<summary>
+The <strong><c>CSSPerspective()</c></strong> constructor creates<br/>a new <see cref="CSSPerspective"/> object representing the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/perspective">perspective()</see> value of<br/>the individual <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/'transform'">'transform'</see> property in CSS.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSPerspective/CSSPerspective"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CSSPerspectiveCSSPerspective>
+<CSSPerspectiveLength>
+<summary>
+The <strong><c>length</c></strong> property of the<br/><see cref="CSSPerspective"/> interface sets the distance from z=0.
+</summary>
+<remarks>
+<para>It is used to apply a perspective transform to the element and its content. If the<br/>value is 0 or a negative number, no perspective transform is applied.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSPerspective/length"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="CSSNumericValue"/></value>
+</CSSPerspectiveLength>
 </docs>

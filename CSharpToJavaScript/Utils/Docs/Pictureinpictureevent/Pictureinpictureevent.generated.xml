@@ -1,7 +1,7 @@
 <docs>
 <PictureInPictureEvent>
 <summary>
-The <strong><c>PictureInPictureEvent</c></strong> interface represents picture-in-picture-related events, including <see cref="HTMLVideoElement/enterpictureinpicture_event"/>, <see cref="HTMLVideoElement/leavepictureinpicture_event"/> and <see cref="PictureInPictureWindow/resize_event"/>.
+The <strong><c>PictureInPictureEvent</c></strong> interface represents picture-in-picture-related events, including <see cref="HTMLVideoElemententerpictureinpicture"/>, <see cref="HTMLVideoElementleavepictureinpicture"/> and <see cref="PictureInPictureWindowresize"/>.
 </summary>
 <remarks>
 <para></para>
@@ -9,4 +9,24 @@ The <strong><c>PictureInPictureEvent</c></strong> interface represents picture-i
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PictureInPictureEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </PictureInPictureEvent>
+<PictureInPictureEventPictureInPictureEvent>
+<summary>
+The <strong><c>PictureInPictureEvent()</c></strong> constructor returns a new <see cref="PictureInPictureEvent"/> object.
+</summary>
+<remarks>
+<para>-The <see cref="PictureInPictureEvent"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PictureInPictureEvent/PictureInPictureEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="PictureInPictureEvent"/> object.</returns>
+</PictureInPictureEventPictureInPictureEvent>
+<PictureInPictureEventPictureInPictureWindow>
+<summary>
+The read-only <strong><c>pictureInPictureWindow</c></strong> property of the <see cref="PictureInPictureEvent"/> interface returns the <see cref="PictureInPictureWindow"/> the event relates to.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Picture-in-Picture_API">Picture-in-Picture API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PictureInPictureEvent/pictureInPictureWindow"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="PictureInPictureWindow"/>.</value>
+</PictureInPictureEventPictureInPictureWindow>
 </docs>

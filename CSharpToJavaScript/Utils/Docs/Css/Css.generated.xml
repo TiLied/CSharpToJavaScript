@@ -7,4 +7,65 @@ The <strong><c>CSS</c></strong> interface holds useful CSS-related methods. No o
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSS"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </CSS>
+<CSSEscape>
+<summary>
+The <strong><c>CSS.escape()</c></strong> static method returns a<br/>string containing the escaped string passed as parameter, mostly for<br/>use as part of a CSS selector.
+</summary>
+<remarks>
+<para>-The <see cref="CSS"/> interface where this static method resides.<br/>-<see href="https://github.com/mathiasbynens/CSS.escape/blob/master/css.escape.js">A polyfill for the CSS.escape</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSS/escape"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>The escaped string.</returns>
+</CSSEscape>
+<CSSFactory_functions>
+<summary>
+The <strong>CSS numeric factory</strong><strong><br/></strong><strong>functions</strong>, such as <c>CSS.em()</c> and<br/><c>CSS.turn()</c> are methods that return <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSSUnitValue">CSSUnitValues</see> with the value being<br/>the numeric argument and the unit being the name of the method used. These<br/>functions create new numeric values less verbosely than using the<br/><see cref="CSSUnitValue.CSSUnitValue"/> constructor.
+</summary>
+<remarks>
+<para>-<see cref="CSSUnitValue.CSSUnitValue"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSS/factory_functions"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="CSSUnitValue"/> object with the specified numeric value and unit.</returns>
+</CSSFactory_functions>
+<CSSHighlights>
+<summary>
+The static, read-only <strong><c>highlights</c></strong> property of the <see cref="CSS"/> interface provides access to the <c>HighlightRegistry</c> used to style arbitrary text ranges using the {{domxref(&amp;quot;css_custom_highlight_api&amp;quot;, &amp;quot;CSS Custom Highlight API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}.
+</summary>
+<remarks>
+<para>-{{domxref(&amp;quot;css_custom_highlight_api&amp;quot;, &amp;quot;The CSS Custom Highlight API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_custom_highlight_API">CSS custom highlight API</see> module<br/>-<see href="https://css-tricks.com/css-custom-highlight-api-early-look/">CSS Custom Highlight API: The Future of Highlighting Text Ranges on the Web</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSS/highlights"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <see cref="HighlightRegistry"/> object.</value>
+</CSSHighlights>
+<CSSPaintWorklet>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The static, read-only <strong><c>paintWorklet</c></strong> property of the <see cref="CSS"/> interface provides access to the<br/>paint <see href="https://developer.mozilla.org/en-US/docs/Web/API/Worklet">worklet</see>, which programmatically generates an image where a CSS<br/>property expects a file.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Painting_API">CSS Painting API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Houdini_APIs">Houdini APIs</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSS/paintWorklet"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The associated <see cref="'Worklet'"/> object.</value>
+</CSSPaintWorklet>
+<CSSRegisterProperty>
+<summary>
+The <strong><c>CSS.registerProperty()</c></strong> static method registers<br/><see href="https://developer.mozilla.org/en-US/docs/Web/CSS/--*">custom properties</see>, allowing for property type checking, default<br/>values, and properties that do or do not inherit their value.
+</summary>
+<remarks>
+<para>Registering a custom property allows you to tell the browser how the custom property<br/>should behave; what types are allowed, whether the custom property inherits its value,<br/>and what the default value of the custom property is.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Properties_and_Values_API/guide">Using the CSS properties and values API</see><br/>-<see cref="CSS"/><br/>-<see cref="CSSsupports"/><br/>-<see cref="CSSescape"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS/factory_functions_static">CSS factory functions</see><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@property">@property</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSS/registerProperty"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns><c>undefined</c>.</returns>
+</CSSRegisterProperty>
+<CSSSupports>
+<summary>
+The <strong><c>CSS.supports()</c></strong> static method returns a boolean value<br/>indicating if the browser supports a given CSS feature, or not.
+</summary>
+<remarks>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@supports">@supports</see> at-rule that allows for the same functionality but in a<br/>declarative way.<br/>-The <see cref="CSSSupportsRule"/> CSSOM class allowing to manipulate<br/><see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@supports">@supports</see> at-rules.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSS/supports"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns><c>true</c> if the browser supports the rule, otherwise <c>false</c>.</returns>
+</CSSSupports>
 </docs>

@@ -1,7 +1,7 @@
 <docs>
 <PageSwapEvent>
 <summary>
-The <strong><c>PageSwapEvent</c></strong> event object is made available inside handler functions for the <see cref="Window.Pageswap_event"/> event.
+The <strong><c>PageSwapEvent</c></strong> event object is made available inside handler functions for the <see cref="Window.Pageswap"/> event.
 </summary>
 <remarks>
 <para>The <c>pageswap</c> event is fired when you navigate across documents, when the previous document is about to unload. During a cross-document navigation, the <c>PageSwapEvent</c> event object allows you to manipulate the related <see href="https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API">view transition</see> (providing access to the relevant <see cref="ViewTransition"/> object) from the document being navigated <strong>from</strong>, if a view transition was triggered by the navigation. It also provides access to information on the navigation type and current and destination documents.</para>
@@ -9,4 +9,33 @@ The <strong><c>PageSwapEvent</c></strong> event object is made available inside 
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PageSwapEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </PageSwapEvent>
+<PageSwapEventActivation>
+<summary>
+The <strong><c>activation</c></strong> read-only property of the <see cref="PageSwapEvent"/> interface contains a <see cref="NavigationActivation"/> object containing the navigation type and current and destination document history entries for a same-origin navigation.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API">View Transition API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PageSwapEvent/activation"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="NavigationActivation"/> object, or <c>null</c> if the associated navigation has a cross-origin URL anywhere in the redirect chain.</value>
+</PageSwapEventActivation>
+<PageSwapEventPageSwapEvent>
+<summary>
+The <strong><c>PageSwapEvent()</c></strong> constructor creates a new<br/><see cref="PageSwapEvent"/> object instance.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API">View Transition API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PageSwapEvent/PageSwapEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</PageSwapEventPageSwapEvent>
+<PageSwapEventViewTransition>
+<summary>
+The <strong><c>viewTransition</c></strong> read-only property of the <see cref="PageRevealEvent"/> interface contains a <see cref="ViewTransition"/> object representing the active view transition for the cross-document navigation.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API">View Transition API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PageSwapEvent/viewTransition"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="ViewTransition"/> object, or <c>null</c> if no view transition is active when the event is fired.</value>
+</PageSwapEventViewTransition>
 </docs>

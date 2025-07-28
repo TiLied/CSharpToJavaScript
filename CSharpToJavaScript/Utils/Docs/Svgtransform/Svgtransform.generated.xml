@@ -1,10 +1,99 @@
 <docs>
 <SVGTransform>
 <summary>
-
+The <strong><c>SVGTransform</c></strong> interface reflects one of the component transformations within an <see cref="SVGTransformList"/>; thus, an <c>SVGTransform</c> object corresponds to a single component (e.g., <c>scale(…)</c> or <c>matrix(…)</c>) within a transform attribute.
 </summary>
 <remarks>
+<para>An <c>SVGTransform</c> object can be designated as read only, which means that attempts to modify the object will result in an exception being thrown.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGTransform"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </SVGTransform>
+<SVGTransformAngle>
+<summary>
+The <strong><c>angle</c></strong> read-only property of the <see cref="SVGTransform"/> interface represents the angle of the transformation in degrees.
+</summary>
+<remarks>
+<para>For <c>SVG_TRANSFORM_ROTATE</c>, <c>SVG_TRANSFORM_SKEWX</c>, and <c>SVG_TRANSFORM_SKEWY</c>, <c>angle</c> reflects the transformation&amp;apos;s rotation or skewing angle.</para><para>For <c>SVG_TRANSFORM_MATRIX</c>, <c>SVG_TRANSFORM_TRANSLATE</c> and <c>SVG_TRANSFORM_SCALE</c>, <c>angle</c> will be zero.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGTransform/angle"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <c>integer</c>; the angle value in degrees as a float.</value>
+</SVGTransformAngle>
+<SVGTransformMatrix>
+<summary>
+The <strong><c>matrix</c></strong> read-only property of the <see cref="SVGTransform"/> interface represents the transformation matrix that corresponds to the transformation <c>type</c>.
+</summary>
+<remarks>
+<para>In case the <c>matrix</c> object is changed directly (i.e., without using the methods on the <c>SVGTransform</c> interface itself) then the <c>type</c> of the <c>SVGTransform</c> changes to <c>SVG_TRANSFORM_MATRIX</c>.</para>
+<para>-<see cref="SVGTransform.Type"/><br/>-<see cref="DOMMatrix"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGTransform/matrix"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A live <see cref="DOMMatrix"/> object.</value>
+</SVGTransformMatrix>
+<SVGTransformSetMatrix>
+<summary>
+The <c>setMatrix()</c> method of the <see cref="SVGTransform"/> interface sets the transform type to <c>SVG_TRANSFORM_MATRIX</c>, with parameter <c>matrix</c> defining the new transformation.
+</summary>
+<remarks>
+<para>Note that the values from the parameter <c>matrix</c> are copied, meaning changes to the <c>matrix</c> object after calling this method will not affect the transformation.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGTransform/setMatrix"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="'undefined'"/>).</returns>
+</SVGTransformSetMatrix>
+<SVGTransformSetRotate>
+<summary>
+The <c>setRotate()</c> method of the <see cref="SVGTransform"/> interface sets the transform type to <c>SVG_TRANSFORM_ROTATE</c>, with parameter <c>angle</c> defining the rotation angle and parameters <c>cx</c> and <c>cy</c> defining the optional center of rotation.
+</summary>
+<remarks>
+<para>-<see cref="SVGTransform.Angle"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGTransform/setRotate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="'undefined'"/>).</returns>
+</SVGTransformSetRotate>
+<SVGTransformSetScale>
+<summary>
+The <c>setScale()</c> method of the <see cref="SVGTransform"/> interface sets the transform type to <c>SVG_TRANSFORM_SCALE</c>, with parameters <c>sx</c> and <c>sy</c> defining the scale amounts.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGTransform/setScale"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="'undefined'"/>).</returns>
+</SVGTransformSetScale>
+<SVGTransformSetSkewX>
+<summary>
+The <c>setSkewX()</c> method of the <see cref="SVGTransform"/> interface sets the transform type to <c>SVG_TRANSFORM_SKEWX</c>, with parameter <c>angle</c> defining the amount of skew along the X-axis.
+</summary>
+<remarks>
+<para>-<see cref="SVGTransform.Angle"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGTransform/setSkewX"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="'undefined'"/>).</returns>
+</SVGTransformSetSkewX>
+<SVGTransformSetSkewY>
+<summary>
+The <c>setSkewY()</c> method of the <see cref="SVGTransform"/> interface sets the transform type to <c>SVG_TRANSFORM_SKEWY</c>, with parameter <c>angle</c> defining the amount of skew along the Y-axis.
+</summary>
+<remarks>
+<para>-<see cref="SVGTransform.Angle"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGTransform/setSkewY"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="'undefined'"/>).</returns>
+</SVGTransformSetSkewY>
+<SVGTransformSetTranslate>
+<summary>
+The <c>setTranslate()</c> method of the <see cref="SVGTransform"/> interface sets the transform type to <c>SVG_TRANSFORM_TRANSLATE</c>, with parameters <c>tx</c> and <c>ty</c> defining the translation amounts.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGTransform/setTranslate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="'undefined'"/>).</returns>
+</SVGTransformSetTranslate>
+<SVGTransformType>
+<summary>
+The <strong><c>type</c></strong> read-only property of the <see cref="SVGTransform"/> interface represents the <c>type</c> of transformation applied, specified by one of the <c>SVG_TRANSFORM_*</c> constants defined on this interface.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGTransform/type"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <c>integer</c>; the type of value as an unsigned short.</value>
+</SVGTransformType>
 </docs>

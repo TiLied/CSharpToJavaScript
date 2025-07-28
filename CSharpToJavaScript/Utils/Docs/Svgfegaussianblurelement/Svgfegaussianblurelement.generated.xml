@@ -9,4 +9,99 @@ The <strong><c>SVGFEGaussianBlurElement</c></strong> interface corresponds to th
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEGaussianBlurElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </SVGFEGaussianBlurElement>
+<SVGFEGaussianBlurElementHeight>
+<summary>
+The <strong><c>height</c></strong> read-only property of the <see cref="SVGFEGaussianBlurElement"/> interface describes the vertical size of an SVG filter primitive as a <see cref="SVGAnimatedLength"/>.
+</summary>
+<remarks>
+<para>It reflects the {{SVGAttr("height")}} attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementfeGaussianBlur">feGaussianBlur</see> element, which blurs an input image. The attribute is a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see> or a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#percentage"><c>&amp;lt;percentage&amp;gt;</c></see> relative to the height of the filter region. The default value is <c>100%</c>. The property value is a length in user coordinate system units.</para>
+<para>-<see cref="SVGFEGaussianBlurElement.Width"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/SVG_filters">SVG filter tutorial</see><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/blend-mode">blend-mode</see> data type<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/blur">filter-function/blur</see> function<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_filter_effects">CSS filter effects</see> module- CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode">mix-blend-mode</see> property<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEGaussianBlurElement/height"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedLength"/>.</value>
+</SVGFEGaussianBlurElementHeight>
+<SVGFEGaussianBlurElementIn1>
+<summary>
+The <strong><c>in1</c></strong> read-only property of the <see cref="SVGFEGaussianBlurElement"/> interface reflects the {{SVGAttr("in")}} attribute of the given {{SVGElement("feGaussianBlur")}} element.
+</summary>
+<remarks>
+<para>-<see cref="SVGAnimatedString"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEGaussianBlurElement/in1"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedString"/> object.</value>
+</SVGFEGaussianBlurElementIn1>
+<SVGFEGaussianBlurElementResult>
+<summary>
+The <strong><c>result</c></strong> read-only property of the <see cref="SVGFEGaussianBlurElement"/> interface describes the assigned name of an SVG filter primitive as a <see cref="SVGAnimatedString"/>.
+</summary>
+<remarks>
+<para>It reflects the {{SVGAttr("result")}} attribute of the {{SVGElement("feGaussianBlur")}} element, which blurs an input image. The attribute value is a <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/custom-ident">custom-ident</see>. If supplied, then graphics that result from processing this filter primitive can be referenced by an {{SVGAttr("in")}} attribute on a subsequent filter primitive within the same {{SVGElement("filter")}} element.</para><para>If no <c>result</c> attribute is defined, the filter&amp;apos;s <c>result.baseVal</c> and <c>result.animVal</c> are empty strings, and the output of the <c>&amp;lt;feGaussianBlur&amp;gt;</c> filter will only be available for re-use as the implicit input into the next filter primitive if that filter primitive provides no value for its <c>in</c> attribute.</para>
+<para>-<see cref="SVGFEGaussianBlurElement.In1"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/custom-ident">custom-ident</see> data type<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/SVG_filters">SVG filter tutorial</see><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/blend-mode">blend-mode</see> data type<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/blur">filter-function/blur</see> function<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_filter_effects">CSS filter effects</see> module- CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode">mix-blend-mode</see> property<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEGaussianBlurElement/result"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedString"/>.</value>
+</SVGFEGaussianBlurElementResult>
+<SVGFEGaussianBlurElementSetStdDeviation>
+<summary>
+The <c>setStdDeviation()</c> method of the <see cref="SVGFEGaussianBlurElement"/> interface sets the values for the {{SVGAttr("stdDeviation")}} attribute.
+</summary>
+<remarks>
+<para>-<see cref="SVGAnimatedLength"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEGaussianBlurElement/setStdDeviation"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="'undefined'"/>).</returns>
+</SVGFEGaussianBlurElementSetStdDeviation>
+<SVGFEGaussianBlurElementStdDeviationX>
+<summary>
+The <strong><c>stdDeviationX</c></strong> read-only property of the <see cref="SVGFEGaussianBlurElement"/> interface reflects the (possibly automatically computed) X component of the {{SVGAttr("stdDeviation")}} attribute of the given {{SVGElement("feGaussianBlur")}} element.
+</summary>
+<remarks>
+<para>-<see cref="SVGAnimatedNumber"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEGaussianBlurElement/stdDeviationX"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedNumber"/> object.</value>
+</SVGFEGaussianBlurElementStdDeviationX>
+<SVGFEGaussianBlurElementStdDeviationY>
+<summary>
+The <strong><c>stdDeviationY</c></strong> read-only property of the <see cref="SVGFEGaussianBlurElement"/> interface reflects the (possibly automatically computed) Y component of the {{SVGAttr("stdDeviation")}} attribute of the given {{SVGElement("feGaussianBlur")}} element.
+</summary>
+<remarks>
+<para>-<see cref="SVGAnimatedNumber"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEGaussianBlurElement/stdDeviationY"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedNumber"/> object.</value>
+</SVGFEGaussianBlurElementStdDeviationY>
+<SVGFEGaussianBlurElementWidth>
+<summary>
+The <strong><c>width</c></strong> read-only property of the <see cref="SVGFEGaussianBlurElement"/> interface describes the horizontal size of an SVG filter primitive as a <see cref="SVGAnimatedLength"/>.
+</summary>
+<remarks>
+<para>It reflects the {{SVGAttr("width")}} attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementfeGaussianBlur">feGaussianBlur</see> element, which blurs an input image. The attribute is a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see> or a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#percentage"><c>&amp;lt;percentage&amp;gt;</c></see> relative to the width of the filter region. The default value is <c>100%</c>. The property value is a length in user coordinate system units.</para>
+<para>-<see cref="SVGFEGaussianBlurElement.Height"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/SVG_filters">SVG filter tutorial</see><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/blend-mode">blend-mode</see> data type<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/blur">filter-function/blur</see> function<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_filter_effects">CSS filter effects</see> module- CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode">mix-blend-mode</see> property<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEGaussianBlurElement/width"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedLength"/>.</value>
+</SVGFEGaussianBlurElementWidth>
+<SVGFEGaussianBlurElementX>
+<summary>
+The <strong><c>x</c></strong> read-only property of the <see cref="SVGFEGaussianBlurElement"/> interface describes the horizontal coordinate of the position of an SVG filter primitive as a <see cref="SVGAnimatedLength"/>.
+</summary>
+<remarks>
+<para>It reflects the {{SVGAttr("x")}} attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementfeGaussianBlur">feGaussianBlur</see> element, which blurs an input image. The attribute is a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see> or <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#percentage"><c>&amp;lt;percentage&amp;gt;</c></see>. The <c>&amp;lt;coordinate&amp;gt;</c> is a length in the user coordinate system that is the given distance from the origin of the user coordinate system along the x-axis. If the <c>x</c> attribute is a percent value, the property value is relative to the width of the filter region in user coordinate system units. The default value is <c>0</c>.</para>
+<para>-<see cref="SVGFEGaussianBlurElement.Y"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/SVG_filters">SVG filter tutorial</see><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/blend-mode">blend-mode</see> data type<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/blur">filter-function/blur</see> function<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_filter_effects">CSS filter effects</see> module- CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode">mix-blend-mode</see> property<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEGaussianBlurElement/x"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedLength"/>.</value>
+</SVGFEGaussianBlurElementX>
+<SVGFEGaussianBlurElementY>
+<summary>
+The <strong><c>y</c></strong> read-only property of the <see cref="SVGFEGaussianBlurElement"/> interface describes the vertical coordinate of the position of an SVG filter primitive as a <see cref="SVGAnimatedLength"/>.
+</summary>
+<remarks>
+<para>It reflects the {{SVGAttr("y")}} attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementfeGaussianBlur">feGaussianBlur</see> element, which blurs an input image. The attribute is a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see> or <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#percentage"><c>&amp;lt;percentage&amp;gt;</c></see>. The <c>&amp;lt;coordinate&amp;gt;</c> is a length in the user coordinate system that is the given distance from the origin of the filter along the y-axis. If the <c>y</c> attribute is a percent value, the property value is relative to the height of the filter region in user coordinate system units. The default value is <c>0</c>.</para>
+<para>-<see cref="SVGFEGaussianBlurElement.X"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/SVG_filters">SVG filter tutorial</see><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/blend-mode">blend-mode</see> data type<br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/blur">filter-function/blur</see> function<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_filter_effects">CSS filter effects</see> module- CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode">mix-blend-mode</see> property<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEGaussianBlurElement/y"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedLength"/>.</value>
+</SVGFEGaussianBlurElementY>
 </docs>

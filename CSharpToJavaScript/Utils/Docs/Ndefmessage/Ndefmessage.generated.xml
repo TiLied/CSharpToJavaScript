@@ -1,10 +1,27 @@
 <docs>
 <NDEFMessage>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>NDEFMessage</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_NFC_API">Web NFC API</see> represents the content of an NDEF message that has been read from or could be written to an NFC tag. An instance is acquired by calling the <c>NDEFMessage()</c> constructor or from the <see cref="NDEFReadingEvent.Message"/> property, which is passed to the <see cref="NDEFReader.Reading_event"/> event.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>NDEFMessage</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_NFC_API">Web NFC API</see> represents the content of an NDEF message that has been read from or could be written to an NFC tag. An instance is acquired by calling the <c>NDEFMessage()</c> constructor or from the <see cref="NDEFReadingEvent.Message"/> property, which is passed to the <see cref="NDEFReader.Reading"/> event.
 </summary>
 <remarks>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NDEFMessage"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </NDEFMessage>
+<NDEFMessageNDEFMessage>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>NDEFMessage()</c></strong> constructor creates a new <see cref="NDEFMessage"/> object, initialized with the given NDEF records.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NDEFMessage/NDEFMessage"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</NDEFMessageNDEFMessage>
+<NDEFMessageRecords>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <c>records</c> property of<br/><see cref="NDEFMessage"/> interface represents a list of <see cref="NDEFRecord"/>s<br/>present in the NDEF message.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NDEFMessage/records"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A list of <see cref="NDEFRecord"/> object that represent data recorded in the message.</value>
+</NDEFMessageRecords>
 </docs>

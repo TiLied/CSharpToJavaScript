@@ -8,4 +8,63 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NodeList"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </NodeList>
+<NodeListEntries>
+<summary>
+The <strong><c>NodeList.entries()</c></strong> method returns an<br/><see cref="Iteration_protocols"/> allowing to go through all key/value pairs<br/>contained in this object. The values are <see cref="Node"/> objects.
+</summary>
+<remarks>
+<para>-<see href="https://github.com/zloirock/core-js#iterable-dom-collections">Polyfill of <c>NodeList.prototype.entries</c> in <c>core-js</c></see><br/>-<see cref="Node"/><br/>-<see cref="NodeList"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NodeList/entries"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Returns an <see cref="Iteration_protocols"/>.</returns>
+</NodeListEntries>
+<NodeListForEach>
+<summary>
+The <strong><c>forEach()</c></strong> method of the <see cref="NodeList"/><br/>interface calls the callback given in parameter once for each value pair in the list, in<br/>insertion order.
+</summary>
+<remarks>
+<para>-<see href="https://github.com/zloirock/core-js#iterable-dom-collections">Polyfill of <c>NodeList.prototype.forEach</c> in <c>core-js</c></see><br/>-<see cref="Node"/><br/>-<see cref="NodeList"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NodeList/forEach"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns><see cref="'undefined'"/>.</returns>
+</NodeListForEach>
+<NodeListItem>
+<summary>
+Returns a node from a <see href="https://developer.mozilla.org/en-US/docs/Web/API/NodeList"><c>NodeList</c></see> by index. This method<br/>doesn&amp;apos;t throw exceptions as long as you provide arguments. A value of <c>null</c><br/>is returned if the index is out of range, and a <see cref="TypeError"/> is thrown if no<br/>argument is provided.
+</summary>
+<remarks>
+<para>In JavaScript, instead of calling <c>nodeList.item(index)</c>, you can also access the <c>index</c> directly, like <c>nodeList[index]</c>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NodeList/item"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>The <c>index</c>th node in the <c>nodeList</c> returned by the <c>item</c> method.</returns>
+</NodeListItem>
+<NodeListKeys>
+<summary>
+The <strong><c>NodeList.keys()</c></strong> method returns an<br/><see cref="Iteration_protocols"/> allowing to go through all keys contained<br/>in this object. The keys are <c>unsigned integer</c>.
+</summary>
+<remarks>
+<para>-<see href="https://github.com/zloirock/core-js#iterable-dom-collections">Polyfill of <c>NodeList.prototype.keys</c> in <c>core-js</c></see><br/>-<see cref="Node"/><br/>-<see cref="NodeList"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NodeList/keys"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Returns an <see cref="Iteration_protocols"/>.</returns>
+</NodeListKeys>
+<NodeListLength>
+<summary>
+The <strong><c>NodeList.length</c></strong> property returns the number of items<br/>in a <see cref="NodeList"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NodeList/length"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer value representing the number of items in a <c>NodeList</c>.</value>
+</NodeListLength>
+<NodeListValues>
+<summary>
+The <strong><c>NodeList.values()</c></strong> method returns an<br/><see cref="Iteration_protocols"/> allowing to go through all values contained<br/>in this object. The values are <see cref="Node"/> objects.
+</summary>
+<remarks>
+<para>-<see href="https://github.com/zloirock/core-js#iterable-dom-collections">Polyfill of <c>NodeList.prototype.values</c> in <c>core-js</c></see><br/>-<see cref="Node"/><br/>-<see cref="NodeList"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NodeList/values"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Returns an <see cref="Iteration_protocols"/>.</returns>
+</NodeListValues>
 </docs>

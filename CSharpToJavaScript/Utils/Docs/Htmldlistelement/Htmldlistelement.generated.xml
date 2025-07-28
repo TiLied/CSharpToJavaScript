@@ -9,4 +9,14 @@ The <strong><c>HTMLDListElement</c></strong> interface provides special properti
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLDListElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </HTMLDListElement>
+<HTMLDListElementCompact>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>compact</c></strong> property of the <see cref="HTMLDListElement"/> interface indicates that spacing between list items should be reduced. The exact handling of the <c>compact</c> attribute is browser-specific. Instead of using this property, consider using CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/line-height">line-height</see> instead.
+</summary>
+<remarks>
+<para>It reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dl#compact"><c>compact</c></see> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl">dl</see> element.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLDListElement/compact"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean.</value>
+</HTMLDListElementCompact>
 </docs>

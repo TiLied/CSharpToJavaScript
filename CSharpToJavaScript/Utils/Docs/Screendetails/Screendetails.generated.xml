@@ -4,9 +4,47 @@
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>ScreenDetails</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Window_Management_API">Window Management API</see> represents the details of all the screens available to the user&amp;apos;s device.
 </summary>
 <remarks>
-<para>This information is accessed via the <see cref="Window.GetScreenDetails"/> method.</para><blockquote class="NOTE"><h5>NOTE</h5><para><strong>Note:</strong> <c>ScreenDetails</c> is a live object, meaning that it updates as the available screens change. You can therefore keep querying the same object to get updated values, rather than repeatedly calling <c>getScreenDetails()</c>.</para></blockquote><para></para>
+<para>This information is accessed via the <see cref="Window.GetScreenDetails"/> method.</para><blockquote class="NOTE"><h5>NOTE</h5><para><c>ScreenDetails</c> is a live object, meaning that it updates as the available screens change. You can therefore keep querying the same object to get updated values, rather than repeatedly calling <c>getScreenDetails()</c>.</para></blockquote><para></para>
 <para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Window_Management_API">Window Management API</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ScreenDetails"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </ScreenDetails>
+<ScreenDetailsCurrentScreen>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>currentScreen</c></strong> read-only property of the<br/><see cref="ScreenDetails"/> interface contains a single <see cref="ScreenDetailed"/> object representing detailed information about the screen that the current browser window is displayed in.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Window_Management_API">Window Management API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ScreenDetails/currentScreen"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="ScreenDetailed"/> object.</value>
+</ScreenDetailsCurrentScreen>
+<ScreenDetailsCurrentscreenchange>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>currentscreenchange</c></strong> event of the <see cref="ScreenDetails"/> interface is fired when the <see cref="ScreenDetails.CurrentScreen"/> changes in one of the following ways:
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Window_Management_API">Window Management API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ScreenDetails/currentscreenchange"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</ScreenDetailsCurrentscreenchange>
+<ScreenDetailsScreens>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>screens</c></strong> read-only property of the<br/><see cref="ScreenDetails"/> interface contains an array of <see cref="ScreenDetailed"/> objects, each one representing detailed information about one specific screen available to the user's device.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Window_Management_API">Window Management API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ScreenDetails/screens"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An array of <see cref="ScreenDetailed"/> objects.<blockquote class="NOTE"><h5>NOTE</h5><c>screens</c> only includes &amp;quot;extended&amp;quot; displays, not those that mirror another display.</blockquote></value>
+</ScreenDetailsScreens>
+<ScreenDetailsScreenschange>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>screenschange</c></strong> event of the <see cref="ScreenDetails"/> interface is fired when the set of screens available to the system has changed: that is, a new screen has become available or an existing screen has become unavailable. This will be reflected in a change in the <see cref="ScreenDetails.Screens"/> array.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Window_Management_API">Window Management API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ScreenDetails/screenschange"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</ScreenDetailsScreenschange>
 </docs>

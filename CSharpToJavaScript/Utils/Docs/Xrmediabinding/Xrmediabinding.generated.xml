@@ -9,4 +9,44 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRMediaBinding"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </XRMediaBinding>
+<XRMediaBindingCreateCylinderLayer>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>createCylinderLayer()</c></strong> method of the <see cref="XRMediaBinding"/> interface returns an <see cref="XRCylinderLayer"/> object which is a layer that takes up a curved rectangular space in the virtual environment.
+</summary>
+<remarks>
+<para>-<see cref="XRCylinderLayer"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRMediaBinding/createCylinderLayer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="XRCylinderLayer"/> object.</returns>
+</XRMediaBindingCreateCylinderLayer>
+<XRMediaBindingCreateEquirectLayer>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>createEquirectLayer()</c></strong> method of the <see cref="XRMediaBinding"/> interface returns an <see cref="XREquirectLayer"/> object which is a layer that maps an equirectangular coded data onto the inside of a sphere.
+</summary>
+<remarks>
+<para>-<see cref="XREquirectLayer"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRMediaBinding/createEquirectLayer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="XREquirectLayer"/> object.</returns>
+</XRMediaBindingCreateEquirectLayer>
+<XRMediaBindingCreateQuadLayer>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>createQuadLayer()</c></strong> method of the <see cref="XRMediaBinding"/> interface returns an <see cref="XRQuadLayer"/> object which is a layer that takes up a flat rectangular space in the virtual environment.
+</summary>
+<remarks>
+<para>-<see cref="XRQuadLayer"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRMediaBinding/createQuadLayer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="XRQuadLayer"/> object.</returns>
+</XRMediaBindingCreateQuadLayer>
+<XRMediaBindingXRMediaBinding>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>XRMediaBinding()</c></strong> constructor creates and returns a new <see cref="XRMediaBinding"/> object.
+</summary>
+<remarks>
+<para>-<see cref="XRWebGLBinding"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRMediaBinding/XRMediaBinding"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A newly-created <see cref="XRMediaBinding"/>.</returns>
+</XRMediaBindingXRMediaBinding>
 </docs>

@@ -1,11 +1,39 @@
 <docs>
 <ExtendableCookieChangeEvent>
 <summary>
-The <strong><c>ExtendableCookieChangeEvent</c></strong> interface of the {{domxref(&amp;quot;Cookie Store API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, "nocode")}} is the event type passed to <see cref="ServiceWorkerGlobalScope/cookiechange_event"/> event fired at the <see cref="ServiceWorkerGlobalScope"/> when any cookie changes occur which match the service worker's cookie change subscription list. A cookie change event consists of a cookie and a type. (either "changed" or "deleted")
+The <strong><c>ExtendableCookieChangeEvent</c></strong> interface of the {{domxref(&amp;quot;Cookie Store API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, "nocode")}} is the event type passed to <see cref="ServiceWorkerGlobalScopecookiechange"/> event fired at the <see cref="ServiceWorkerGlobalScope"/> when any cookie changes occur which match the service worker's cookie change subscription list. A cookie change event consists of a cookie and a type (either "changed" or "deleted").
 </summary>
 <remarks>
-<para>Cookie changes that cause the <c>ExtendableCookieChangeEvent</c> to be dispatched are:</para><blockquote class="NOTE"><h5>NOTE</h5><para>A cookie that is replaced due to the insertion of another cookie with the same name, domain, and path, is ignored and does not trigger a change event.</para></blockquote><para></para>
+<para>Cookie changes that cause the <c>ExtendableCookieChangeEvent</c> to be dispatched are:</para><para></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ExtendableCookieChangeEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </ExtendableCookieChangeEvent>
+<ExtendableCookieChangeEventChanged>
+<summary>
+The <strong><c>changed</c></strong> read-only property of the <see cref="ExtendableCookieChangeEvent"/> interface returns any cookies that have been changed by the given <c>ExtendableCookieChangeEvent</c> instance.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ExtendableCookieChangeEvent/changed"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An array of objects containing the changed cookie(s). Each object contains the following properties:</value>
+</ExtendableCookieChangeEventChanged>
+<ExtendableCookieChangeEventDeleted>
+<summary>
+The <strong><c>deleted</c></strong> read-only property of the <see cref="ExtendableCookieChangeEvent"/> interface returns any cookies that have been deleted by the given <c>ExtendableCookieChangeEvent</c> instance.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ExtendableCookieChangeEvent/deleted"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An array of objects containing the deleted cookie(s). Each object contains the following properties:</value>
+</ExtendableCookieChangeEventDeleted>
+<ExtendableCookieChangeEventExtendableCookieChangeEvent>
+<summary>
+The <strong><c>ExtendableCookieChangeEvent()</c></strong> constructor creates a new <see cref="ExtendableCookieChangeEvent"/> object<br/>which is the event type passed to <see cref="ServiceWorkerGlobalScopecookiechange"/> event fired at the <see cref="ServiceWorkerGlobalScope"/> when any cookie changes occur which match the service worker's cookie change subscription list.<br/>This constructor is called by the browser when a change event occurs.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This event constructor is generally not needed for production websites. It&amp;apos;s primary use is for tests that require an instance of this event.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ExtendableCookieChangeEvent/ExtendableCookieChangeEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="ExtendableCookieChangeEvent"/> object.</returns>
+</ExtendableCookieChangeEventExtendableCookieChangeEvent>
 </docs>

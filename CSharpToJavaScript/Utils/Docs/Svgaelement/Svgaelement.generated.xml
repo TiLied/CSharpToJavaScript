@@ -9,4 +9,48 @@ The <strong><c>SVGAElement</c></strong> interface provides access to the propert
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </SVGAElement>
+<SVGAElementHref>
+<summary>
+The <strong><c>href</c></strong> read-only property of the <see cref="SVGAElement"/> returns an <see cref="SVGAnimatedString"/> object reflecting the value of the href attribute, and, in certain cases, the {{SVGAttr("xlink:href")}} {{deprecated_inline}} attribute. It specifies the target URI associated with the link.
+</summary>
+<remarks>
+<para>This property enables access to the URI set for a link within an SVG document.</para>
+<para>-href<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAElement/href"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedString"/> indicating the value of the href attribute. Additionally, for elements defined to support it, it reflects the value of the {{SVGAttr("xlink:href")}} {{deprecated_inline}} attribute when the href attribute is not set.</value>
+</SVGAElementHref>
+<SVGAElementRel>
+<summary>
+The <strong><c>rel</c></strong> property of the <see cref="SVGAElement"/> returns a string reflecting the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a#rel"><c>rel</c></see> attribute of the SVG <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementa">a</see> element.
+</summary>
+<remarks>
+<para>The <c>rel</c> attribute specifies the space-separated list of link types, the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/rel"><c>&amp;lt;list-of-Link-Types&amp;gt;</c></see>, indicating the relationship between the target or resource represented by the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementa">a</see> element and the current document. The property can get or set the <c>rel</c> attribute value.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a#rel"><c>rel</c></see><br/>-<see cref="SVGAElement.RelList"/><br/>-<see cref="HTMLAnchorElement.Rel"/><br/>-<see cref="HTMLLinkElement.Rel"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAElement/rel"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string; the value of the <c>rel</c> attribute.</value>
+</SVGAElementRel>
+<SVGAElementRelList>
+<summary>
+The <strong><c>relList</c></strong> read-only property of the <see cref="SVGAElement"/> returns a live <see cref="DOMTokenList"/> reflecting the space-separated string <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/rel"><c>&amp;lt;list-of-Link-Types&amp;gt;</c></see> values of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a#rel"><c>rel</c></see> attribute of the SVG <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementa">a</see> element.
+</summary>
+<remarks>
+<para>The property itself is read-only, meaning you can&amp;apos;t substitute the<br/><see cref="DOMTokenList"/> by another one, but the content of the returned list can be<br/>changed.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a#rel"><c>rel</c></see><br/>-<see cref="SVGAElement.Rel"/><br/>-<see cref="HTMLAnchorElement.RelList"/><br/>-<see cref="HTMLLinkElement.RelList"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAElement/relList"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A live <see cref="DOMTokenList"/>.</value>
+</SVGAElementRelList>
+<SVGAElementTarget>
+<summary>
+The <strong><c>SVGAElement.target</c></strong> read-only property of <see cref="SVGAElement"/> returns an <see cref="SVGAnimatedString"/> object that specifies the portion of a target window, frame, pane into which a document is to be opened when a link is activated.
+</summary>
+<remarks>
+<para>This property is used when there are multiple possible targets for the ending resource, like when the parent document is a multi-frame HTML or XHTML document.</para>
+<para>-target<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAElement/target"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedString"/> indicating the ending resource target that opens the document when the link is activated. See {{SVGAttr("target")}} for valid values.</value>
+</SVGAElementTarget>
 </docs>

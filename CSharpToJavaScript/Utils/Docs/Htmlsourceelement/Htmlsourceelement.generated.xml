@@ -9,4 +9,81 @@ The <strong><c>HTMLSourceElement</c></strong> interface provides special propert
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSourceElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </HTMLSourceElement>
+<HTMLSourceElementHeight>
+<summary>
+The <strong><c>height</c></strong> property of the <see cref="HTMLSourceElement"/> interface is a non-negative number indicating the height of the image resource in CSS pixels.
+</summary>
+<remarks>
+<para>The property has an effect only if the parent of the current <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source">source</see> element is a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture">picture</see> element.</para><para>It reflects the <c>height</c> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source">source</see> element.</para>
+<para>-<see cref="HTMLCanvasElement.Height"/><br/>-<see cref="HTMLEmbedElement.Height"/><br/>-<see cref="HTMLIFrameElement.Height"/><br/>-<see cref="HTMLImageElement.Height"/><br/>-<see cref="HTMLObjectElement.Height"/><br/>-<see cref="HTMLVideoElement.Height"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSourceElement/height"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A non-negative number indicating the height of the image resource in CSS pixels.</value>
+</HTMLSourceElementHeight>
+<HTMLSourceElementMedia>
+<summary>
+The <strong><c>media</c></strong> property of the <see cref="HTMLSourceElement"/> interface is a string representing the intended destination medium for the resource. The value is a <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries">media query</see>, which is a comma separated list of media-types, media-features, and logical operators.
+</summary>
+<remarks>
+<para>It reflects the <c>media</c> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source">source</see> element.</para>
+<para>-<see cref="HTMLSourceElement.Type"/><br/>-<see cref="HTMLSourceElement.Sizes"/><br/>-<see cref="HTMLSourceElement.Src"/><br/>-<see cref="HTMLSourceElement.Srcset"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source">source</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture">picture</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio">audio</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">video</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries">Using media queries</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSourceElement/media"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</HTMLSourceElementMedia>
+<HTMLSourceElementSizes>
+<summary>
+The <strong><c>sizes</c></strong> property of the <see cref="HTMLSourceElement"/> interface is a string representing a list of one or more sizes, representing sizes between breakpoints, to which the resource applies.
+</summary>
+<remarks>
+<para>It reflects the <c>sizes</c> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source">source</see> element.</para>
+<para>-<see cref="HTMLImageElement.Sizes"/><br/>-<see cref="HTMLSourceElement.Media"/><br/>-<see cref="HTMLSourceElement.Type"/><br/>-<see cref="HTMLSourceElement.Src"/><br/>-<see cref="HTMLSourceElement.Srcset"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source">source</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture">picture</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio">audio</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">video</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSourceElement/sizes"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</HTMLSourceElementSizes>
+<HTMLSourceElementSrc>
+<summary>
+The <strong><c>src</c></strong> property of the <see cref="HTMLSourceElement"/> interface is a string indicating the URL of a media resource to use as the source for the element.
+</summary>
+<remarks>
+<para>It reflects the <c>src</c> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source">source</see> element nested in an <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio">audio</see> or <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">video</see> element. It has no meaning and is ignored when it is nested in a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture">picture</see> element.</para>
+<para>-<see cref="HTMLSourceElement.Type"/><br/>-<see cref="HTMLSourceElement.Srcset"/><br/>-<see cref="HTMLSourceElement.Media"/><br/>-<see cref="HTMLSourceElement.Sizes"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source">source</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio">audio</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">video</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSourceElement/src"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string; the URL of a source resource to use in the element.</value>
+</HTMLSourceElementSrc>
+<HTMLSourceElementSrcset>
+<summary>
+The <strong><c>srcset</c></strong> property of the <see cref="HTMLSourceElement"/> interface is a string containing a comma-separated list of candidate images.
+</summary>
+<remarks>
+<para>Each candidate image includes the URL of an image resource to use as the source for the element and optionally a descriptor indicating the circumstances in which the image should be used. The descriptor is either a number followed by <c>&amp;apos;w&amp;apos;</c>, indicating the element width, or a number followed by <c>&amp;apos;x&amp;apos;</c>, indicating the device pixel density.</para><para>It reflects the <c>srcset</c> attribute of the {{HTMLElement("source")}} element nested in a {{htmlelement("picture")}} element. It has no meaning and is ignored when it is nested in an {{htmlelement("audio")}} or {{htmlelement("video")}} element, which use the <see cref="HTMLSourceElement.Src"/> attribute instead.</para>
+<para>-<see cref="HTMLSourceElement.Type"/><br/>-<see cref="HTMLSourceElement.Src"/><br/>-<see cref="HTMLSourceElement.Media"/><br/>-<see cref="HTMLSourceElement.Sizes"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source">source</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture">picture</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSourceElement/srcset"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</HTMLSourceElementSrcset>
+<HTMLSourceElementType>
+<summary>
+The <strong><c>type</c></strong> property of the <see cref="HTMLSourceElement"/> interface is a string representing the {{glossary("MIME type")}} of the media resource.
+</summary>
+<remarks>
+<para>It reflects the <c>type</c> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source">source</see> element.</para>
+<para>-<see cref="HTMLSourceElement.Src"/><br/>-<see cref="HTMLSourceElement.Srcset"/><br/>-<see cref="HTMLSourceElement.Media"/><br/>-<see cref="HTMLSourceElement.Sizes"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source">source</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture">picture</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio">audio</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">video</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Formats">Media types found on the web</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/MIME_types#important_mime_types_for_web_developers">Important MIME types for web developers</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capabilities_API">Media Capabilities API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSourceElement/type"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</HTMLSourceElementType>
+<HTMLSourceElementWidth>
+<summary>
+The <strong><c>width</c></strong> property of the <see cref="HTMLSourceElement"/> interface is a non-negative number indicating the width of the image resource in CSS pixels.
+</summary>
+<remarks>
+<para>The property has an effect only if the parent of the current <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source">source</see> element is a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture">picture</see> element.</para><para>It reflects the <c>width</c> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source">source</see> element.</para>
+<para>-<see cref="HTMLCanvasElement.Width"/><br/>-<see cref="HTMLEmbedElement.Width"/><br/>-<see cref="HTMLIFrameElement.Width"/><br/>-<see cref="HTMLImageElement.Width"/><br/>-<see cref="HTMLObjectElement.Width"/><br/>-<see cref="HTMLVideoElement.Width"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSourceElement/width"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A non-negative number indicating the width of the image resource in CSS pixels.</value>
+</HTMLSourceElementWidth>
 </docs>

@@ -1,7 +1,7 @@
 <docs>
 <ProgressEvent>
 <summary>
-The <strong><c>ProgressEvent</c></strong> interface represents events measuring progress of an underlying process, like an HTTP request (for an <c>XMLHttpRequest</c>, or the loading of the underlying resource of an <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">img</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio">audio</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">video</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style">style</see> or <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link">link</see>).
+The <strong><c>ProgressEvent</c></strong> interface represents events that measure the progress of an underlying process, like an HTTP request (e.g., an <c>XMLHttpRequest</c>, or the loading of the underlying resource of an <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">img</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio">audio</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">video</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style">style</see> or <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link">link</see>).
 </summary>
 <remarks>
 <para></para>
@@ -9,4 +9,46 @@ The <strong><c>ProgressEvent</c></strong> interface represents events measuring 
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ProgressEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </ProgressEvent>
+<ProgressEventLengthComputable>
+<summary>
+The<br/><strong><c>ProgressEvent.lengthComputable</c></strong> read-only property is a<br/>boolean flag indicating if the resource concerned by the<br/><see cref="ProgressEvent"/> has a length that can be calculated. If not, the<br/><see cref="ProgressEvent.Total"/> property has no significant value.
+</summary>
+<remarks>
+<para>-The <see cref="ProgressEvent"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ProgressEvent/lengthComputable"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean.</value>
+</ProgressEventLengthComputable>
+<ProgressEventLoaded>
+<summary>
+The <strong><c>ProgressEvent.loaded</c></strong> read-only property is a number indicating the size of the data already transmitted or processed.<br/>The progress ratio can be calculated by dividing the value of this property by <see cref="ProgressEvent.Total"/>.
+</summary>
+<remarks>
+<para>For <c>ProgressEvent</c>s dispatched by the browser in HTTP messages, the value refers to the amount of bytes of a resource that are completed, and is derived from the <c>Content-Length</c> header.<br/>For compressed requests of unknown total size, <c>loaded</c> might contain the size of the compressed or decompressed data, depending on the browser.<br/>As of 2024, it contains the size of the compressed data in Firefox, and the size of the uncompressed data in Chrome.</para><para>In a <c>ProgressEvent</c> you create yourself, you can assign any numeric value to <c>loaded</c> that represents the amount of work completed relative to the <c>total</c> value.</para>
+<para>-The <see cref="ProgressEvent"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ProgressEvent/loaded"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</ProgressEventLoaded>
+<ProgressEventProgressEvent>
+<summary>
+The <strong><c>ProgressEvent()</c></strong> constructor returns a new <see cref="ProgressEvent"/> object, representing the current completion of a long process.
+</summary>
+<remarks>
+<para>-The <see cref="ProgressEvent"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ProgressEvent/ProgressEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="ProgressEvent"/> object.</returns>
+</ProgressEventProgressEvent>
+<ProgressEventTotal>
+<summary>
+The <strong><c>ProgressEvent.total</c></strong> read-only property is a number indicating the total size of the data being transmitted or processed.
+</summary>
+<remarks>
+<para>For <c>ProgressEvent</c>s dispatched by the browser, the value refers to the size, in bytes, of a resource and is derived from the <c>Content-Length</c> response header.</para><para>In a <c>ProgressEvent</c> you create yourself, this may also be the total bytes of a resource, although this can be any number.<br/>For example, you may wish to normalize <c>total</c> to a value such as <c>100</c> or <c>1</c> if revealing the precise amount of bytes of a resource is a concern.<br/>If using <c>1</c> as a total, then <see cref="ProgressEvent.Loaded"/> would be a decimal value between <c>0</c> and <c>1</c>.</para><para>If the event's <see cref="ProgressEvent.LengthComputable"/> property is <c>false</c>, this value is meaningless and should be ignored.</para>
+<para>-The <see cref="ProgressEvent"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ProgressEvent/total"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</ProgressEventTotal>
 </docs>

@@ -9,4 +9,59 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MutationEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </MutationEvent>
+<MutationEventAttrChange>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>attrChange</c></strong> read-only property of the <see cref="MutationEvent"/> interface returns a number indicating what kind of change triggered the <c>DOMAttrModified</c> event. The three possible values are <c>MODIFICATION</c> (<c>1</c>), <c>ADDITION</c> (<c>2</c>) or <c>REMOVAL</c> (<c>3</c>). It has no meaning for other events and is then set to <c>0</c>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MutationEvent/attrChange"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer: <c>0</c>, <c>1</c> (<c>MODIFICATION</c>), <c>2</c> (<c>ADDITION</c>), or <c>3</c> (<c>REMOVAL</c>).</value>
+</MutationEventAttrChange>
+<MutationEventAttrName>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>attrName</c></strong> read-only property of the <see cref="MutationEvent"/> interface returns a string with the name of the node affected by the <c>DOMAttrModified</c> event. It has no meaning for other events and is then set to the empty string (<c>&amp;quot;&amp;quot;</c>).
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MutationEvent/attrName"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</MutationEventAttrName>
+<MutationEventInitMutationEvent>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>initMutationEvent()</c></strong> method of the <see cref="MutationEvent"/> interface initializes the<br/>value of a mutation event once it's been created (normally using the <see cref="Document.CreateEvent"/> method).
+</summary>
+<remarks>
+<para>This method must be called to set the event before it is dispatched, using <see cref="EventTarget.DispatchEvent"/>.</para><blockquote class="NOTE"><h5>NOTE</h5><para>In general, you won&amp;apos;t create these events yourself; they are created by the browser.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MutationEvent/initMutationEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</MutationEventInitMutationEvent>
+<MutationEventNewValue>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>newValue</c></strong> read-only property of the <see cref="MutationEvent"/> interface returns a string. In <c>DOMAttrModified</c> events, it represents the new value of the <see cref="Attr"/> node. In <c>DOMCharacterDataModified</c> events, it contains the new value of the <see cref="CharacterData"/> node. In all other cases, returns the empty string (<c>&amp;quot;&amp;quot;</c>).
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MutationEvent/newValue"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</MutationEventNewValue>
+<MutationEventPrevValue>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>prevValue</c></strong> read-only property of the <see cref="MutationEvent"/> interface returns a string. In <c>DOMAttrModified</c> events, it represents the previous value of the <see cref="Attr"/> node. In <c>DOMCharacterDataModified</c> events, it contains the previous value of the <see cref="CharacterData"/> node. In all other cases, returns the empty string (<c>&amp;quot;&amp;quot;</c>).
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MutationEvent/prevValue"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</MutationEventPrevValue>
+<MutationEventRelatedNode>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>relatedNode</c></strong> read-only property of the <see cref="MutationEvent"/> interface returns a string indicating the node related to the event, like the changed node inside the subtree for <c>DOMSubtreeModified</c>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MutationEvent/relatedNode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</MutationEventRelatedNode>
 </docs>

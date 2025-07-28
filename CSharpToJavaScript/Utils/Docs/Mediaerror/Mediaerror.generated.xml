@@ -9,4 +9,24 @@ The <strong><c>MediaError</c></strong> interface represents an error which occur
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaError"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </MediaError>
+<MediaErrorCode>
+<summary>
+The read-only property <strong><c>MediaError.code</c></strong> returns a numeric<br/>value which represents the kind of error that occurred on a media element. To get a text<br/>string with specific diagnostic information, see <see cref="MediaError.Message"/>.
+</summary>
+<remarks>
+<para>-<see cref="MediaError"/>: Interface used to define the <c>MediaError.code</c> property<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaError/code"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A numeric value indicating the general type of error which occurred. The possible<br/>values are described below, in <see href="https://developer.mozilla.org#media_error_code_constants">Media error code constants</see>.</value>
+</MediaErrorCode>
+<MediaErrorMessage>
+<summary>
+The read-only property <strong><c>MediaError.message</c></strong> returns a human-readable string offering specific diagnostic details related to the error described by the <c>MediaError</c> object, or an empty string (<c>&amp;quot;&amp;quot;</c>) if no diagnostic information can be determined or provided.
+</summary>
+<remarks>
+<para>-<see cref="MediaError"/>: Interface used to define the <c>MediaError.message</c> property<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio">audio</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">video</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaError/message"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string providing a detailed, specific explanation of what went wrong and possibly how it might be fixed. This is <strong>not</strong> a generic description of the <see cref="MediaError.Code"/> property's value, but instead goes deeper into the specifics of this particular error and its circumstances.<br/>If no specific details are available, this string is empty.</value>
+</MediaErrorMessage>
 </docs>

@@ -7,4 +7,13 @@ The <strong><c>ReportBody</c></strong> interface of the <see cref="'Reporting AP
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ReportBody"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </ReportBody>
+<ReportBodyToJSON>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>toJSON()</c></strong> method of the <see cref="ReportBody"/> interface is a <strong>serializer</strong>, and returns a JSON representation of the <c>ReportBody</c> object.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ReportBody/toJSON"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A JSON object that is the serialization of the <see cref="ReportBody"/> object.</returns>
+</ReportBodyToJSON>
 </docs>

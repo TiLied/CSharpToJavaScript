@@ -7,4 +7,30 @@ The <strong><c>DecompressionStream</c></strong> interface of the <see cref="'Com
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DecompressionStream"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </DecompressionStream>
+<DecompressionStreamDecompressionStream>
+<summary>
+The <strong><c>DecompressionStream()</c></strong> constructor creates a new <see cref="DecompressionStream"/> object which decompresses a stream of data.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DecompressionStream/DecompressionStream"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</DecompressionStreamDecompressionStream>
+<DecompressionStreamReadable>
+<summary>
+The <strong><c>readable</c></strong> read-only property of the <see cref="DecompressionStream"/> interface returns a <see cref="ReadableStream"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DecompressionStream/readable"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="ReadableStream"/>.</value>
+</DecompressionStreamReadable>
+<DecompressionStreamWritable>
+<summary>
+The <strong><c>writable</c></strong> read-only property of the <see cref="DecompressionStream"/> interface returns a <see cref="WritableStream"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DecompressionStream/writable"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="WritableStream"/>.</value>
+</DecompressionStreamWritable>
 </docs>

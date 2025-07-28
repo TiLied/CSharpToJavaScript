@@ -8,4 +8,40 @@ The <strong><c>SVGGradient</c></strong> interface is a base interface used by <s
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGGradientElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </SVGGradientElement>
+<SVGGradientElementGradientTransform>
+<summary>
+The <strong><c>gradientTransform</c></strong> read-only property of the <see cref="SVGGradientElement"/> interface reflects the {{SVGAttr("gradientTransform")}} attribute of the given element.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGGradientElement/gradientTransform"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedTransformList"/>.</value>
+</SVGGradientElementGradientTransform>
+<SVGGradientElementGradientUnits>
+<summary>
+The <strong><c>gradientUnits</c></strong> read-only property of the <see cref="SVGGradientElement"/> interface reflects the {{SVGAttr("gradientUnits")}} attribute of the given element. It takes one of the <c>SVG_UNIT_TYPE_*</c> constants defined in <see cref="SVGUnitTypes"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGGradientElement/gradientUnits"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedEnumeration"/>.</value>
+</SVGGradientElementGradientUnits>
+<SVGGradientElementHref>
+<summary>
+The <strong><c>href</c></strong> read-only property of the <see cref="SVGGradientElement"/> interface reflects the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} {{deprecated_inline}} attribute of the given element.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGGradientElement/href"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedString"/>.</value>
+</SVGGradientElementHref>
+<SVGGradientElementSpreadMethod>
+<summary>
+The <strong><c>spreadMethod</c></strong> read-only property of the <see cref="SVGGradientElement"/> interface reflects the {{SVGAttr("spreadMethod")}} attribute of the given element. It takes one of the <c>SVG_SPREADMETHOD_*</c> constants defined on this interface.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGGradientElement/spreadMethod"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedEnumeration"/>.</value>
+</SVGGradientElementSpreadMethod>
 </docs>

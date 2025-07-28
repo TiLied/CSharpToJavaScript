@@ -9,4 +9,252 @@ The <strong><c>Animation</c></strong> interface of the <see href="https://develo
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Animation"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </Animation>
+<AnimationAnimation>
+<summary>
+The <strong><c>Animation()</c></strong> constructor of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see> returns a new <c>Animation</c> object instance.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/>-<see cref="Animation"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Animation/Animation"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</AnimationAnimation>
+<AnimationCancel>
+<summary>
+The Web Animations API&amp;apos;s <strong><c>cancel()</c></strong> method of the <see cref="Animation"/> interface clears all <see cref="KeyframeEffect"/>s caused by this animation and aborts its playback.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>When an animation is cancelled, its <see cref="Animation.StartTime"/> and <see cref="Animation.CurrentTime"/> are set to <c>null</c>.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/>-<see cref="KeyframeEffect"/><br/>-<see cref="Animation"/><br/>-<see cref="Animation.PlayState"/><br/>-<see cref="Animation.Finished"/> returns the promise this action will reject if the animation's <c>playState</c> is not <c>&amp;quot;idle&amp;quot;</c>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Animation/cancel"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</AnimationCancel>
+<AnimationCancel>
+<summary>
+The <strong><c>cancel</c></strong> event of the <see cref="Animation"/> interface is fired when the <see cref="Animation.Cancel"/> method is called or when the animation enters the <c>&amp;quot;idle&amp;quot;</c> play state from another state, such as when the animation is removed from an element before it finishes playing.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Creating a new animation that is initially idle does not trigger a <c>cancel</c> event on the new animation.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/>-<see cref="Animation"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Animation/cancel"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</AnimationCancel>
+<AnimationCommitStyles>
+<summary>
+The <c>commitStyles()</c> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see>'s <see cref="Animation"/> interface writes the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value">computed values</see> of the animation&amp;apos;s current styles into its target element&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/style"><c>style</c></see> attribute. <c>commitStyles()</c> works even if the animation has been <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API#automatically_removing_filling_animations">automatically removed</see>.
+</summary>
+<remarks>
+<para><c>commitStyles()</c> can be used in combination with <c>fill</c> to cause the final state of an animation to persist after the animation ends. The same effect could be achieved with <c>fill</c> alone, but <see href="https://drafts.csswg.org/web-animations-1/#fill-behavior">using indefinitely filling animations is discouraged</see>. Animations <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascade/Cascade#cascading_order">take precedence over all static styles</see>, so an indefinite filling animation can prevent the target element from ever being styled normally.</para><para>Using <c>commitStyles()</c> writes the styling state into the element&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/style"><c>style</c></see> attribute, where they can be modified and replaced as normal.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/>-<see cref="Animation"/> for other methods and properties you can use to control web page animation.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Animation/commitStyles"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</AnimationCommitStyles>
+<AnimationCurrentTime>
+<summary>
+The <strong><c>Animation.currentTime</c></strong> property of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see> returns and sets the current time value of the animation in milliseconds, whether running or paused.
+</summary>
+<remarks>
+<para>If the animation lacks a <see cref="AnimationTimeline"/>, is inactive, or hasn't been played yet, <c>currentTime</c>&amp;apos;s return value is <c>null</c>.</para>
+<para>-<see cref="Animation"/> for other methods and properties you can use to control web page animation.<br/>-<see cref="Animation.StartTime"/> for the time an animation is scheduled to start.<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Animation/currentTime"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number representing the current time in milliseconds, or <c>null</c> to deactivate the animation.</value>
+</AnimationCurrentTime>
+<AnimationEffect>
+<summary>
+The <strong><c>Animation.effect</c></strong> property of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see> gets and sets the target effect of an animation. The target effect may be either an effect object of a type based on <see cref="AnimationEffect"/>, such as <see cref="KeyframeEffect"/>, or <c>null</c>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/>-<see cref="AnimationEffect"/><br/>-<see cref="Animation"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Animation/effect"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="AnimationEffect"/> object describing the target animation effect for the animation, or <c>null</c> to indicate no active effect.</value>
+</AnimationEffect>
+<AnimationFinish>
+<summary>
+The <strong><c>finish()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see>'s <see cref="Animation"/> Interface sets the current playback time to the end of the animation corresponding to the current playback direction.
+</summary>
+<remarks>
+<para>That is, if the animation is playing forward, it sets the playback time to the length of the animation sequence, and if the animation is playing in reverse (having had its <see cref="Animation.Reverse"/> method called), it sets the playback time to 0.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/>-<see cref="Animation"/> for other methods and properties you can use to control web page animation.<br/>-<see cref="Animation.Play"/> to play an animation forward.<br/>-<see cref="Animation.Reverse"/> to play an animation backward.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Animation/finish"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</AnimationFinish>
+<AnimationFinished>
+<summary>
+The <strong><c>Animation.finished</c></strong> read-only property of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see> returns a <see cref="Promise"/> which resolves once the animation has finished playing.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Every time the animation leaves the <c>finished</c> play state (that is, when it starts playing again), a new <c>Promise</c> is created for this property. The new <c>Promise</c> will resolve once the new animation sequence has completed.</para></blockquote>
+<para>-<see cref="KeyframeEffect"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/>-<see cref="Animation"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Animation/finished"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Promise"/> object which will resolve once the animation has finished running.</value>
+</AnimationFinished>
+<AnimationFinish>
+<summary>
+The <strong><c>finish</c></strong> event of the <see cref="Animation"/> interface is fired when the animation finishes playing, either when the animation completes naturally, or<br/>when the <see cref="Animation.Finish"/> method is called to immediately cause the<br/>animation to finish up.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>The <c>&amp;quot;paused&amp;quot;</c> play state supersedes the <c>&amp;quot;finished&amp;quot;</c> play<br/>state; if the animation is both paused and finished, the <c>&amp;quot;paused&amp;quot;</c> state<br/>is the one that will be reported. You can force the animation into the<br/><c>&amp;quot;finished&amp;quot;</c> state by setting its <see cref="Animation.StartTime"/> to<br/><c>document.timeline.currentTime - (Animation.currentTime * Animation.playbackRate)</c>.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/>-<see cref="Animation"/><br/>-<see cref="Animation.Finish"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Animation/finish"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</AnimationFinish>
+<AnimationId>
+<summary>
+The <strong><c>Animation.id</c></strong> property of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see> returns or sets a string used to identify the animation.
+</summary>
+<remarks>
+<para>-<see cref="KeyframeEffect"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/>-<see cref="Animation"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Animation/id"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string which can be used to identify the animation, or <c>null</c> if the animation has no <c>id</c>.</value>
+</AnimationId>
+<AnimationOverallProgress>
+<summary>
+The <strong><c>overallProgress</c></strong> read-only property of the <see cref="Animation"/> interface returns a number between <c>0</c> and <c>1</c> indicating the animation&amp;apos;s overall progress towards its finished state. This is the overall progress across all of the animation&amp;apos;s iterations, not each individual iteration.
+</summary>
+<remarks>
+<para><c>overallProgress</c> works consistently across all animations, regardless of the type of <see cref="AnimationTimeline"/>.</para>
+<para>-<see cref="Animation"/> for other methods and properties you can use to control web page animation.<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Animation/overallProgress"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number between <c>0</c> and <c>1</c>, or <c>null</c> if the animation lacks a timeline, is inactive or hasn't been played yet, or if its <see cref="AnimationcurrentTime"/> is set to a non-time value.If the animation&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect#iterations"><c>iterations</c></see> property is set to <c>Infinity</c>, or if its <see cref="AnimationcurrentTime"/> is set to a negative value, <c>overallProgress</c> will return <c>0</c>.If the animation&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect#duration"><c>duration</c></see> is set to <c>0</c>, <c>overallProgress</c> will return <c>1</c>.</value>
+</AnimationOverallProgress>
+<AnimationPause>
+<summary>
+The <strong><c>pause()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see>'s <see cref="Animation"/> interface suspends playback of the animation.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/>-<see cref="Animation"/> for other methods and properties you can use to control web page animation.<br/>-<see cref="Animation.Reverse"/> to play an animation backwards.<br/>-<see cref="Animation.Finish"/> to finish an animation.<br/>-<see cref="Animation.Cancel"/> to cancel an animation.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Animation/pause"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None.</returns>
+</AnimationPause>
+<AnimationPending>
+<summary>
+The read-only <strong><c>Animation.pending</c></strong> property of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see> indicates whether the animation is currently waiting for an asynchronous operation such as initiating playback or pausing a running animation.
+</summary>
+<remarks>
+<para>-<see cref="Animation"/> for other methods and properties you can use to control web page animation.<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Animation/pending"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value><strong><c>true</c></strong> if the animation is pending, <strong><c>false</c></strong> otherwise.</value>
+</AnimationPending>
+<AnimationPersist>
+<summary>
+The <c>persist()</c> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see>'s <see cref="Animation"/> interface explicitly persists an animation, preventing it from being <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API#automatically_removing_filling_animations">automatically removed</see> when it is replaced by another animation.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/>-<see cref="Animation"/> for other methods and properties you can use to control web page animation.<br/>-<see cref="Animation.ReplaceState"/><br/>-<see cref="Animation.Remove"/> event<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Animation/persist"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</AnimationPersist>
+<AnimationPlay>
+<summary>
+The <strong><c>play()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see>'s <see cref="Animation"/> Interface starts or resumes playing of an animation. If the animation is finished, calling <c>play()</c> restarts the animation, playing it from the beginning.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/>-<see cref="Animation"/> for other methods and properties you can use to control web page animation.<br/>-<see cref="Animation.Pause"/> to pause an animation.<br/>-<see cref="Animation.Reverse"/> to play an animation backwards.<br/>-<see cref="Animation.Finish"/> to finish an animation.<br/>-<see cref="Animation.Cancel"/> to cancel an animation.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Animation/play"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</AnimationPlay>
+<AnimationPlaybackRate>
+<summary>
+The <strong><c>Animation.playbackRate</c></strong> property of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see> returns or sets the playback rate of the animation.
+</summary>
+<remarks>
+<para>Animations have a <strong>playback rate</strong> that provides a scaling factor from the rate of change of the animation's <see cref="DocumentTimeline"/> time values to the animation's current time. The playback rate is initially <c>1</c>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/>-<see cref="Animation"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Animation/playbackRate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>Takes a number that can be 0, negative, or positive. Negative values reverse the animation. The value is a scaling factor, so for example a value of 2 would double the playback rate.<blockquote class="NOTE"><h5>NOTE</h5>Setting an animation&amp;apos;s <c>playbackRate</c> to <c>0</c> effectively pauses the animation (however, its <see cref="Animation.PlayState"/> does not necessarily become <c>paused</c>).</blockquote></value>
+</AnimationPlaybackRate>
+<AnimationPlayState>
+<summary>
+The read-only <strong><c>Animation.playState</c></strong> property of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see> returns an enumerated value describing the playback state of an animation.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/>-<see cref="Animation"/> for other methods and properties you can use to control web page animation.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Animation/playState"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>Previously, Web Animations defined a <strong><c>pending</c></strong> value to indicate that some asynchronous operation such as initiating playback was yet to complete. This is now indicated by the separate <see cref="Animation.Pending"/> property.</value>
+</AnimationPlayState>
+<AnimationReady>
+<summary>
+The read-only <strong><c>Animation.ready</c></strong> property of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see> returns a <see cref="Promise"/> which resolves when the animation is ready to play. A new promise is created every time the animation enters the <c>&amp;quot;pending&amp;quot;</c> <see href="https://developer.mozilla.org/en-US/docs/Web/API/Animation/playState">play state</see> as well as when the animation is canceled, since in both of those scenarios, the animation is ready to be started again.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Since the same <see cref="Promise"/> is used for both pending <c>play</c> and pending <c>pause</c> requests, authors are advised to check the state of the animation when the promise is resolved.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/>-<see cref="Animation"/><br/>-<see cref="Animation.PlayState"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Animation/ready"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Promise"/> which resolves when the animation is ready to be played. You'll typically use a construct similar to this when using the ready promise:</value>
+</AnimationReady>
+<AnimationRemove>
+<summary>
+The <strong><c>remove</c></strong> event of the <see cref="Animation"/> interface fires when the animation is <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API#automatically_removing_filling_animations">automatically removed</see> by the browser.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/>-<see cref="Animation"/>, <see cref="AnimationPlaybackEvent"/><br/>-<see cref="Animation.ReplaceState"/>, to check whether an animation has been removed<br/>-<see cref="Animation.Persist"/>, to prevent removal of an animation<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Animation/remove"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</AnimationRemove>
+<AnimationReplaceState>
+<summary>
+The read-only <strong><c>Animation.replaceState</c></strong> property of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see> indicates whether the animation has been <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API#automatically_removing_filling_animations">removed by the browser automatically</see> after being replaced by another animation.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/>-<see cref="Animation"/><br/>-<see cref="Animation.Remove"/> event<br/>-<see cref="Animation.Persist"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Animation/replaceState"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string that represents the replace state of the animation. The value can be one of:</value>
+</AnimationReplaceState>
+<AnimationReverse>
+<summary>
+The <strong><c>Animation.reverse()</c></strong> method of the <see cref="Animation"/> Interface reverses the playback direction, meaning the animation ends at its beginning. If called on an unplayed animation, the whole animation is played backwards. If called on a paused animation, the animation will continue in reverse.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/>-<see cref="Animation"/> for other methods and properties you can use to control web page animation.<br/>-<see cref="Animation.Pause"/> to pause an animation.<br/>-<see cref="Animation.Play"/> to move an animation forward.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Animation/reverse"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</AnimationReverse>
+<AnimationStartTime>
+<summary>
+The <strong><c>Animation.startTime</c></strong> property of the <see cref="Animation"/> interface is a double-precision floating-point value which indicates the scheduled time when an animation's playback should begin.
+</summary>
+<remarks>
+<para>An animation&amp;apos;s <strong>start time</strong> is the time value of its <see cref="DocumentTimeline"/> when its target <see cref="KeyframeEffect"/> is scheduled to begin playback. An animation's <strong>start time</strong> is initially unresolved (meaning that it&amp;apos;s <c>null</c> because it has no value).</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/>-<see cref="Animation"/><br/>-<see cref="Animation.CurrentTime"/> for the current time of the animation.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Animation/startTime"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A floating-point number representing the current time in milliseconds, or <c>null</c> if no time is set. You can read this value to determine what the start time is currently set at, and you can change this value to make the animation start at a different time.</value>
+</AnimationStartTime>
+<AnimationTimeline>
+<summary>
+The <strong><c>Animation.timeline</c></strong> property of the <see cref="Animation"/> interface returns or sets the <see cref="AnimationTimeline"/> associated with this animation. A timeline is a source of time values for synchronization purposes, and is an <see cref="AnimationTimeline"/>-based object. By default, the animation's timeline and the <see cref="Document"/>'s timeline are the same.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/>-<see cref="Animation"/><br/>-<see cref="AnimationTimeline"/> the parent object all timelines inherit from.<br/>-<see cref="DocumentTimeline"/> the only kind of timeline object available at this time.<br/>-<see cref="Document.Timeline"/> is the default timeline all animations are assigned.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Animation/timeline"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A {{domxref(&amp;quot;AnimationTimeline&amp;quot;, &amp;quot;timeline object&amp;quot;, &amp;quot;&amp;quot;, 1)}} to use as the timing source for the animation, or <c>null</c> to use the default, which is the <see cref="Document"/>'s timeline.</value>
+</AnimationTimeline>
+<AnimationUpdatePlaybackRate>
+<summary>
+The <strong><c>updatePlaybackRate()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see>&amp;apos;s<br/><see cref="Animation"/> Interface sets the speed of an animation after first<br/>synchronizing its playback position.
+</summary>
+<remarks>
+<para>In some cases, an animation may run on a separate thread or process and will continue<br/>updating even while long-running JavaScript delays the main thread. In such a case,<br/>setting the <see cref="Animation.PlaybackRate"/> on the animation<br/>directly may cause the animation&amp;apos;s playback position to jump since its playback<br/>position on the main thread may have drifted from the playback position where it is<br/>currently running.</para><para><c>updatePlaybackRate()</c> is an asynchronous method that sets the speed of an<br/>animation after synchronizing with its current playback position, ensuring that the<br/>resulting change in speed does not produce a sharp jump. After calling<br/><c>updatePlaybackRate()</c> the animation's <see cref="Animation.PlaybackRate"/> is <strong>not</strong> immediately updated.<br/>It will be updated once the animation's <see cref="Animation.Ready"/> promise is resolved.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</see><br/>-<see cref="Animation.PlaybackRate"/> — read back the current playback rate or set<br/>it in a synchronous manner.<br/>-<see cref="Animation.Reverse"/> — invert the playback rate and restart playback<br/>if necessary.<br/>-<see cref="Animation"/> — contains other methods and properties you can use to<br/>control web page animation.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Animation/updatePlaybackRate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</AnimationUpdatePlaybackRate>
 </docs>

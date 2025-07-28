@@ -1,7 +1,7 @@
 <docs>
 <StorageEvent>
 <summary>
-The <strong><c>StorageEvent</c></strong> interface is implemented by the <see cref="Window/storage_event"/> event, which is<br/>sent to a window<br/>when a storage area the window has access to is changed within the context of another document.
+The <strong><c>StorageEvent</c></strong> interface is implemented by the <see cref="Windowstorage"/> event, which is<br/>sent to a window<br/>when a storage area the window has access to is changed within the context of another document.
 </summary>
 <remarks>
 <para></para>
@@ -9,4 +9,74 @@ The <strong><c>StorageEvent</c></strong> interface is implemented by the <see cr
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StorageEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </StorageEvent>
+<StorageEventInitStorageEvent>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>StorageEvent.initStorageEvent()</c></strong> method is used to initialize the value of a <see cref="StorageEvent"/>.
+</summary>
+<remarks>
+<para>-{{domxref(&amp;quot;Web Storage API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-The constructor to use instead of this deprecated method: <see cref="StorageEvent.StorageEvent"/>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StorageEvent/initStorageEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</StorageEventInitStorageEvent>
+<StorageEventKey>
+<summary>
+The <strong><c>key</c></strong> property of the <see cref="StorageEvent"/> interface returns the key for the storage item that was changed.
+</summary>
+<remarks>
+<para>-{{domxref(&amp;quot;Web Storage API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StorageEvent/key"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing the key for the storage item that was changed.</value>
+</StorageEventKey>
+<StorageEventNewValue>
+<summary>
+The <strong><c>newValue</c></strong> property of the <see cref="StorageEvent"/> interface returns the new value of the storage item whose value was changed.
+</summary>
+<remarks>
+<para>-{{domxref(&amp;quot;Web Storage API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StorageEvent/newValue"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing the new value of the storage item.</value>
+</StorageEventNewValue>
+<StorageEventOldValue>
+<summary>
+The <strong><c>oldValue</c></strong> property of the <see cref="StorageEvent"/> interface returns the original value of the storage item whose value changed.
+</summary>
+<remarks>
+<para>-{{domxref(&amp;quot;Web Storage API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StorageEvent/oldValue"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing the original value of the storage item.</value>
+</StorageEventOldValue>
+<StorageEventStorageArea>
+<summary>
+The <strong><c>storageArea</c></strong> property of the <see cref="StorageEvent"/> interface returns the storage object that was affected.
+</summary>
+<remarks>
+<para>-{{domxref(&amp;quot;Web Storage API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StorageEvent/storageArea"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Storage"/> object that represents the storage object that was affected.</value>
+</StorageEventStorageArea>
+<StorageEventStorageEvent>
+<summary>
+The <strong><c>StorageEvent()</c></strong> constructor creates a new <see cref="StorageEvent"/> object.
+</summary>
+<remarks>
+<para>-{{domxref(&amp;quot;Web Storage API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StorageEvent/StorageEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="StorageEvent"/> object.</returns>
+</StorageEventStorageEvent>
+<StorageEventUrl>
+<summary>
+The <strong><c>url</c></strong> property of the <see cref="StorageEvent"/> interface returns the URL of the document whose storage changed.
+</summary>
+<remarks>
+<para>-{{domxref(&amp;quot;Web Storage API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StorageEvent/url"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing the URL of the document whose storage changed.</value>
+</StorageEventUrl>
 </docs>

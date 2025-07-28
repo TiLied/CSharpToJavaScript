@@ -8,4 +8,23 @@ The <strong><c>TaskController</c></strong> interface of the <see href="https://d
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TaskController"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </TaskController>
+<TaskControllerSetPriority>
+<summary>
+The <strong><c>setPriority()</c></strong> method of the <see cref="TaskController"/> interface can be called to set a new <see href="https://developer.mozilla.org/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#task_priorities">priority</see> for this controller&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/API/TaskController#taskcontroller.signal"><c>signal</c></see>.<br/>If a prioritized task is <see href="https://developer.mozilla.org/en-US/docs/Web/API/Scheduler/postTask#signal">configured</see> to use the signal, this will also change the task priority.
+</summary>
+<remarks>
+<para>Observers are notified of priority changes by dispatching a <see href="https://developer.mozilla.org/en-US/docs/Web/API/TaskSignal/prioritychange_event"><c>prioritychange</c></see> event.<br/>The method will only notify if the priority actually changes (the event is not fired if the priority would not be changed by the call).</para><para>Note that task priority can only be changed for <see href="https://developer.mozilla.org/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#mutable_and_immutable_task_priority">tasks with mutable priorities</see>.<br/>If the task is immutable, the function call is ignored.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TaskController/setPriority"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</TaskControllerSetPriority>
+<TaskControllerTaskController>
+<summary>
+The <strong><c>TaskController()</c></strong> constructor creates a new <see cref="TaskController"/> object, optionally setting the initial <see href="https://developer.mozilla.org/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#task_priorities">priority</see> of its associated <see href="https://developer.mozilla.org/en-US/docs/Web/API/TaskController#taskcontroller.signal"><c>signal</c></see>.
+</summary>
+<remarks>
+<para>If no priority is set, the signal priority defaults to <see href="https://developer.mozilla.org/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#user-visible"><c>user-visible</c></see></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TaskController/TaskController"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</TaskControllerTaskController>
 </docs>

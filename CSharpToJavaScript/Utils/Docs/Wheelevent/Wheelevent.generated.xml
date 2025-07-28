@@ -4,9 +4,64 @@
 The <strong><c>WheelEvent</c></strong> interface represents events that occur due to the user moving a mouse wheel or similar input device.
 </summary>
 <remarks>
-<blockquote class="NOTE"><h5>NOTE</h5><para>This is the standard wheel event interface to use. Old versions of browsers implemented the non-standard and non-cross-browser-compatible <c>MouseWheelEvent</c> and <see cref="MouseScrollEvent"/> interfaces. Use this interface and avoid the non-standard ones.</para></blockquote><para>Don&amp;apos;t confuse the <c>wheel</c> event with the <see cref="Element/scroll_event"/> event:</para><para></para>
-<para>-<see cref="Element/wheel_event"/> event<br/>-Interfaces replaced by this one:-Gecko's legacy mouse wheel event object: <see cref="MouseScrollEvent"/><br/><br/></para>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This is the standard wheel event interface to use. Old versions of browsers implemented the non-standard and non-cross-browser-compatible <c>MouseWheelEvent</c> and <see cref="MouseScrollEvent"/> interfaces. Use this interface and avoid the non-standard ones.</para></blockquote><para>Don&amp;apos;t confuse the <c>wheel</c> event with the <see cref="Elementscroll"/> event:</para><para></para>
+<para>-<see cref="Elementwheel"/> event<br/>-Interfaces replaced by this one:-Gecko's legacy mouse wheel event object: <see cref="MouseScrollEvent"/><br/><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WheelEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </WheelEvent>
+<WheelEventDeltaMode>
+<summary>
+The <strong><c>WheelEvent.deltaMode</c></strong> read-only property returns an<br/><c>unsigned long</c> representing the unit of the delta values scroll amount.<br/>Permitted values are:
+</summary>
+<remarks>
+<table><tr><td><para>Constant</para></td><td><para>Value</para></td><td><para>Description</para></td></tr><tr><td><para><c>DOM_DELTA_PIXEL</c></para></td><td><para><c>0x00</c></para></td><td><para>The delta values are specified in pixels.</para></td></tr><tr><td><para><c>DOM_DELTA_LINE</c></para></td><td><para><c>0x01</c></para></td><td><para>The delta values are specified in lines.</para></td></tr><tr><td><para><c>DOM_DELTA_PAGE</c></para></td><td><para><c>0x02</c></para></td><td><para>The delta values are specified in pages.</para></td></tr></table><para>You must check the <c>deltaMode</c> property to determine the unit of the <c>deltaX</c>, <c>deltaY</c>, and <c>deltaZ</c> values. Do not assume that those values are specified in pixels. Some browsers, for compatibility reasons, may return different units for the <c>delta*</c> values depending on whether <c>deltaMode</c> has been accessed, to accommodate for websites not explicitly checking the <c>deltaMode</c> property.</para>
+<para>-<see cref="Elementwheel"/><br/>-<see cref="WheelEvent"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WheelEvent/deltaMode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <c>unsigned long</c>.</value>
+</WheelEventDeltaMode>
+<WheelEventDeltaX>
+<summary>
+The <strong><c>WheelEvent.deltaX</c></strong> read-only property is a<br/><c>double</c> representing the horizontal scroll amount in the<br/><see cref="WheelEvent.DeltaMode"/> unit.
+</summary>
+<remarks>
+<para>You must check the <c>deltaMode</c> property to determine the unit of the <c>deltaX</c> value. Do not assume that the <c>deltaX</c> value is specified in pixels. Some browsers, for compatibility reasons, may return different units for the <c>deltaX</c> value depending on whether <c>deltaMode</c> has been accessed, to accommodate for websites not explicitly checking the <c>deltaMode</c> property.</para>
+<para>-<see cref="Elementwheel"/><br/>-<see cref="WheelEvent"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WheelEvent/deltaX"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</WheelEventDeltaX>
+<WheelEventDeltaY>
+<summary>
+The <strong><c>WheelEvent.deltaY</c></strong> read-only property is a<br/><c>double</c> representing the vertical scroll amount in the<br/><see cref="WheelEvent.DeltaMode"/> unit.
+</summary>
+<remarks>
+<para>You must check the <c>deltaMode</c> property to determine the unit of the <c>deltaY</c> value. Do not assume that the <c>deltaY</c> value is specified in pixels. Some browsers, for compatibility reasons, may return different units for the <c>deltaY</c> value depending on whether <c>deltaMode</c> has been accessed, to accommodate for websites not explicitly checking the <c>deltaMode</c> property.</para>
+<para>-<see cref="Elementwheel"/><br/>-<see cref="WheelEvent"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WheelEvent/deltaY"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</WheelEventDeltaY>
+<WheelEventDeltaZ>
+<summary>
+The <strong><c>WheelEvent.deltaZ</c></strong> read-only property is a<br/><c>double</c> representing the scroll amount along the z-axis, in the<br/><see cref="WheelEvent.DeltaMode"/> unit.
+</summary>
+<remarks>
+<para>You must check the <c>deltaMode</c> property to determine the unit of the <c>deltaZ</c> value. Do not assume that the <c>deltaZ</c> value is specified in pixels. Some browsers, for compatibility reasons, may return different units for the <c>deltaZ</c> value depending on whether <c>deltaMode</c> has been accessed, to accommodate for websites not explicitly checking the <c>deltaMode</c> property.</para>
+<para>-<see cref="Elementwheel"/><br/>-<see cref="WheelEvent"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WheelEvent/deltaZ"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</WheelEventDeltaZ>
+<WheelEventWheelEvent>
+<summary>
+The <strong><c>WheelEvent()</c></strong> constructor returns a new <see cref="WheelEvent"/> object.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>If you construct a synthetic event using this constructor, that event will not be <strong>trusted</strong>, for security reasons.<br/>Only browser-generated <c>WheelEvent</c> objects are trusted and only trusted events trigger default actions.</para></blockquote>
+<para>-The <see cref="WheelEvent"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WheelEvent/WheelEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="WheelEvent"/> object.</returns>
+</WheelEventWheelEvent>
 </docs>

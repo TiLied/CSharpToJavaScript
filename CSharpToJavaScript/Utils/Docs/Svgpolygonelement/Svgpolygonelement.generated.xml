@@ -9,4 +9,22 @@ The <strong><c>SVGPolygonElement</c></strong> interface provides access to the p
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGPolygonElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </SVGPolygonElement>
+<SVGPolygonElementAnimatedPoints>
+<summary>
+The <strong><c>animatedPoints</c></strong> read-only property of the <see cref="SVGPolygonElement"/> interface reflects the animated value of the element's {{SVGAttr("points")}} attribute. If the {{SVGAttr("points")}} attribute is not being animated, it contains the same value as the <c>points</c> property.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGPolygonElement/animatedPoints"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="SVGPointList"/> object.</value>
+</SVGPolygonElementAnimatedPoints>
+<SVGPolygonElementPoints>
+<summary>
+The <strong><c>points</c></strong> read-only property of the <see cref="SVGPolygonElement"/> interface reflects the base (i.e., static) value of the element's {{SVGAttr("points")}} attribute. Modifications via the <see cref="SVGPointList"/> object are reflected in the {{SVGAttr("points")}} attribute, and vice versa.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGPolygonElement/points"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="SVGPointList"/> object.</value>
+</SVGPolygonElementPoints>
 </docs>

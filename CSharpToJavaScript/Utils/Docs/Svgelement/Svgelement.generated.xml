@@ -5,8 +5,130 @@ All of the SVG DOM interfaces that correspond directly to elements in the SVG la
 </summary>
 <remarks>
 <para></para>
-<para>-HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/data-*"><c>data-*</c></see> attribute<br/>-SVG {{SVGAttr(&amp;quot;data-*&amp;quot;)}} attribute<br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes">Using custom data attributes in HTML</see><br/></para>
+<para>-HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/data-*"><c>data-*</c></see> attribute<br/>-SVG {{SVGAttr(&amp;quot;data-*&amp;quot;)}} attribute<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/How_to/Use_data_attributes">Using custom data attributes in HTML</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </SVGElement>
+<SVGElementAttributeStyleMap>
+<summary>
+The <strong><c>attributeStyleMap</c></strong> read-only property of the <see cref="SVGElement"/> interface returns a live <see cref="StylePropertyMap"/> object that contains a list of style properties of the element that are defined in the element's inline <c>style</c> attribute, or assigned using the <see cref="SVGElement.Style"/> property of the <see cref="SVGElement"/> interface via script.
+</summary>
+<remarks>
+<para>Shorthand properties are expanded. If you set <c>border-top: 1px solid black</c>, the longhand properties (<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-top-color">border-top-color</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-top-style">border-top-style</see>, and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-top-width">border-top-width</see>) are set instead.</para><para>The main difference between <see cref="SVGElement.Style"/> property and <c>attributeStyleMap</c> property is that, the <c>style</c> property will return a <see cref="CSSStyleDeclaration"/> object, while the <c>attributeStyleMap</c> property will return a <see cref="StylePropertyMap"/> object.</para><para>Though the property itself is not writable, you could read and write inline styles through the <see cref="StylePropertyMap"/> object that it returns, just like through the <see cref="CSSStyleDeclaration"/> object that returns via the <c>style</c> property.</para>
+<para>-<see cref="SVGElement.Style"/><br/>-<see cref="HTMLElement.AttributeStyleMap"/><br/>-<see cref="MathMLElement.AttributeStyleMap"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/attributeStyleMap"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A live <see cref="StylePropertyMap"/> object.</value>
+</SVGElementAttributeStyleMap>
+<SVGElementAutofocus>
+<summary>
+The <strong><c>autofocus</c></strong> property of the <see cref="SVGElement"/> interface contains a boolean value reflecting the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/autofocus"><c>autofocus</c></see> HTML global attribute. It indicates whether the SVG element should be focused when the page loads or when the element becomes shown if the SVG element is inside a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog">dialog</see> or a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/popover">popover</see>.
+</summary>
+<remarks>
+<para>-<see cref="SVGElement.Focus"/><br/>-<see cref="HTMLElement.Autofocus"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API">Popover API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/autofocus"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value.</value>
+</SVGElementAutofocus>
+<SVGElementBlur>
+<summary>
+The <strong><c>SVGElement.blur()</c></strong> method removes keyboard focus from the current SVG element.
+</summary>
+<remarks>
+<para>-<see cref="SVGElement.Focus"/> makes the element the current keyboard focus.<br/>-<see cref="HTMLElement.Blur"/> a similar method for HTML elements.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/blur"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</SVGElementBlur>
+<SVGElementDataset>
+<summary>
+The <strong><c>dataset</c></strong> read-only property of the <see cref="SVGElement"/> interface provides read/write access to <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute/data-*">custom data attributes</see> (<c>data-*</c>) on elements. It exposes a map of strings (<see cref="DOMStringMap"/>) with an entry for each <c>data-*</c> attribute.
+</summary>
+<remarks>
+<para>For more information on the behavior of <c>dataset</c>, see <see cref="HTMLElement.Dataset"/>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute/data-*"><c>data-*</c></see> SVG attributes<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/How_to/Use_data_attributes">Using data attributes</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/dataset"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DOMStringMap"/>.</value>
+</SVGElementDataset>
+<SVGElementError>
+<summary>
+The <c>error</c> event is fired when an SVG element does not load properly or when an error occurs during script execution.
+</summary>
+<remarks>
+<para>This basically implements the standard <c>error</c> DOM event.</para><para>This event is not cancelable.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/error"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</SVGElementError>
+<SVGElementFocus>
+<summary>
+The <strong><c>SVGElement.focus()</c></strong> method sets focus on the specified SVG element, if it can be focused.<br/>The focused element is the element that will receive keyboard and similar events by default.
+</summary>
+<remarks>
+<para>By default the browser will scroll the element into view after focusing it, and it may also provide visible indication of the focused element (typically by displaying a &amp;quot;focus ring&amp;quot; around the element).<br/>Parameter options are provided to disable the default scrolling and force visible indication on elements.</para>
+<para>-<see cref="SVGElement.Blur"/> to remove the focus from an element.<br/>-<see cref="HTMLElement.Focus"/> a similar method for HTML elements.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/focus"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</SVGElementFocus>
+<SVGElementLoad>
+<summary>
+The <c>load</c> event fires on an <c>SVGElement</c> when it is loaded in the browser, e.g., in the DOM in the case of an embedded <c>&amp;lt;svg&amp;gt;</c>. It is basically the same as the standard <c>load</c> DOM event.
+</summary>
+<remarks>
+<para>This event is not cancelable and does not bubble.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/load"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</SVGElementLoad>
+<SVGElementNonce>
+<summary>
+The <strong><c>nonce</c></strong> property of the <see cref="SVGElement"/> interface returns the nonce that is used by <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP">Content Security Policy</see> to determine whether a given fetch will be allowed to proceed.
+</summary>
+<remarks>
+<para>-<see cref="HTMLElement.Nonce"/> a similar method for HTML elements.<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/nonce"><c>nonce</c> global attribute</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP">Content Security Policy</see><br/>-CSP: {{CSP("script-src")}}<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/nonce"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A String; the cryptographic nonce, or an empty string if no nonce is set.</value>
+</SVGElementNonce>
+<SVGElementOwnerSVGElement>
+<summary>
+The <strong><c>ownerSVGElement</c></strong> property of the <see cref="SVGElement"/> interface reflects the nearest ancestor {{SVGElement("svg")}} element. <c>null</c> if the given element is the outermost <c>&amp;lt;svg&amp;gt;</c> element.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/ownerSVGElement"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGSVGElement"/>.</value>
+</SVGElementOwnerSVGElement>
+<SVGElementStyle>
+<summary>
+The read-only <strong><c>style</c></strong> property of the <see cref="SVGElement"/> returns the <strong>inline</strong> style of an element in the form of a live <see cref="CSSStyleDeclaration"/> object that contains a list of all styles properties for that element with values assigned only for the attributes that are defined in the element's inline <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/style"><c>style</c></see> attribute.
+</summary>
+<remarks>
+<para>Shorthand properties are expanded. If you set <c>style=&amp;quot;border-top: 1px solid black&amp;quot;</c>, the longhand properties (<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-top-color">border-top-color</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-top-style">border-top-style</see>, and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-top-width">border-top-width</see>) are set instead.</para><para>This property is read-only, meaning it is not possible to assign a <see cref="CSSStyleDeclaration"/> object to it. Nevertheless, it is possible to set an inline style by assigning a <strong>string</strong> directly to the <c>style</c> property. In this case the string is forwarded to <see cref="CSSStyleDeclaration.CssText"/>. Using <c>style</c> in this manner will completely overwrite all inline styles on the element.</para><para>Therefore, to add specific styles to an element without altering other style values, it is generally preferable to set individual properties on the <see cref="CSSStyleDeclaration"/> object. For example, you can write <c>element.style.backgroundColor = &amp;quot;red&amp;quot;</c>.</para><para>A style declaration is reset by setting it to <c>null</c> or an empty string, e.g., <c>elt.style.color = null</c>.</para><blockquote class="NOTE"><h5>NOTE</h5><para>CSS property names are converted to JavaScript identifier with these rules:</para><para>The <c>style</c> property has the same priority in the CSS cascade as an inline style declaration set via the <c>style</c> attribute.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information">Using dynamic styling information</see><br/>-<see cref="HTMLElement.Style"/><br/>-<see cref="MathMLElement.Style"/><br/>-<see cref="SVGElement.AttributeStyleMap"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/style"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A live <see cref="CSSStyleDeclaration"/> object.</value>
+</SVGElementStyle>
+<SVGElementTabIndex>
+<summary>
+The <strong><c>tabIndex</c></strong> property of the <see cref="SVGElement"/> interface represents the tab order of the current SVG element.
+</summary>
+<remarks>
+<para>Tab order is as follows:</para><para>Elements that are disabled do not participate in the tabbing order.</para><para>Values don&amp;apos;t need to be sequential, nor must they begin with any particular value. They<br/>may even be negative, though each browser trims very large values.</para>
+<para>-<see cref="HTMLElement.TabIndex"/> a similar method for HTML elements.<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Guides/Keyboard-navigable_JavaScript_widgets">Accessibility of keyboard-navigable JavaScript widgets</see><br/>-The HTML<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex"><c>tabindex</c></see><br/>global attribute.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/tabIndex"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer.</value>
+</SVGElementTabIndex>
+<SVGElementViewportElement>
+<summary>
+The <strong><c>viewportElement</c></strong> property of the <see cref="SVGElement"/> interface represents the <c>SVGElement</c> which established the current viewport. Often the nearest ancestor <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementsvg">svg</see> element. <c>null</c> if the given element is the outermost <c>&amp;lt;svg&amp;gt;</c> element.
+</summary>
+<remarks>
+<para>-<see cref="SVGElement.OwnerSVGElement"/>: Retrieves the nearest ancestor <c>&amp;lt;svg&amp;gt;</c> element for the current SVG element.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/viewportElement"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGElement"/>.</value>
+</SVGElementViewportElement>
 </docs>

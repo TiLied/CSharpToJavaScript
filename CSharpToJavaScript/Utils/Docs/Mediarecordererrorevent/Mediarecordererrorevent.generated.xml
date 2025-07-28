@@ -8,4 +8,25 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorderErrorEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </MediaRecorderErrorEvent>
+<MediaRecorderErrorEventError>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>error</c></strong> read-only property of the<br/><see cref="MediaRecorderErrorEvent"/> interface is a<br/><see cref="DOMException"/> object providing details about the exception that was thrown<br/>by a <see cref="MediaRecorder"/> instance.
+</summary>
+<remarks>
+<para>When a <c>MediaRecorderErrorEvent</c> occurs, you can determine to some extent<br/>what went wrong by examining the <c>error</c> property within the<br/><c>MediaRecorderErrorEvent</c> received by the <c>MediaRecorder</c>&amp;apos;s<br/><see cref="MediaRecordererror"/> event handler, <see cref="MediaRecordererror"/>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream_Recording_API">MediaStream Recording API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API">Using the MediaStream Recording API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorderErrorEvent/error"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DOMException"/> describing the error represented by the event. The<br/>error's <see cref="DOMException.Name"/> property's value may be any exception<br/>that makes sense during the handling of media recording, including these specifically<br/>identified by the specification. The descriptions here are generic ones; you&amp;apos;ll find<br/>more specific ones to various scenarios in which they may occur in the corresponding<br/>method references.</value>
+</MediaRecorderErrorEventError>
+<MediaRecorderErrorEventMediaRecorderErrorEvent>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The<br/><strong><c>MediaRecorderErrorEvent()</c></strong> constructor creates a new <see cref="MediaRecorderErrorEvent"/> object<br/>that represents an error that occurred during the recording of media<br/>by the <see href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream_Recording_API">MediaStream Recording API</see>.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>In general, you won&amp;apos;t create these yourself; they are delivered to your<br/>implementation of <see cref="MediaRecorder.Error"/> when errors occur while<br/>recording media.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorderErrorEvent/MediaRecorderErrorEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="MediaRecorderErrorEvent"/> object.</returns>
+</MediaRecorderErrorEventMediaRecorderErrorEvent>
 </docs>

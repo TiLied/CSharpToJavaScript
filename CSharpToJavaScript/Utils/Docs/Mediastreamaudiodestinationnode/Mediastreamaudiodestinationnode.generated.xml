@@ -9,4 +9,23 @@ The <c>MediaStreamAudioDestinationNode</c> interface represents an audio destina
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamAudioDestinationNode"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </MediaStreamAudioDestinationNode>
+<MediaStreamAudioDestinationNodeMediaStreamAudioDestinationNode>
+<summary>
+The <strong><c>MediaStreamAudioDestinationNode()</c></strong> constructor of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see> creates a new <see cref="MediaStreamAudioDestinationNode"/> object instance.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamAudioDestinationNode/MediaStreamAudioDestinationNode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</MediaStreamAudioDestinationNodeMediaStreamAudioDestinationNode>
+<MediaStreamAudioDestinationNodeStream>
+<summary>
+The <c>stream</c> property of the <see cref="AudioContext"/> interface represents a <see cref="MediaStream"/> containing a single audio <see cref="MediaStreamTrack"/> with the same number of channels as the node itself.
+</summary>
+<remarks>
+<para>You can use this property to get a stream out of the audio graph and feed it into another construct, such as a <see href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream_Recording_API">Media Recorder</see>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamAudioDestinationNode/stream"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="MediaStream"/> containing a single audio track. The audio track is a <see cref="MediaStreamTrack"/> whose <see cref="MediaStreamTrack.Kind"/> is <c>audio</c>.</value>
+</MediaStreamAudioDestinationNodeStream>
 </docs>

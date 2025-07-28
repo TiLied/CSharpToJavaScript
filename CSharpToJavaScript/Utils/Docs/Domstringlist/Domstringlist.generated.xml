@@ -8,4 +8,31 @@ The <strong><c>DOMStringList</c></strong> interface is a legacy type returned by
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMStringList"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </DOMStringList>
+<DOMStringListContains>
+<summary>
+The <strong><c>contains()</c></strong> method returns a boolean indicating whether the given string is in the list.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMStringList/contains"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A boolean indicating whether the given string is in the list.</returns>
+</DOMStringListContains>
+<DOMStringListItem>
+<summary>
+The <strong><c>item()</c></strong> method returns a string from a <see href="https://developer.mozilla.org/en-US/docs/Web/API/DOMStringList"><c>DOMStringList</c></see> by index.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMStringList/item"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>The string at the index position in the <c>DOMStringList</c>; otherwise <c>null</c> if the provided index is out of range.</returns>
+</DOMStringListItem>
+<DOMStringListLength>
+<summary>
+The read-only <strong><c>length</c></strong> property indicates the number of strings in the <see cref="DOMStringList"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMStringList/length"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Number"/>.</value>
+</DOMStringListLength>
 </docs>

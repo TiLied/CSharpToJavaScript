@@ -9,4 +9,52 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRRenderState"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </XRRenderState>
+<XRRenderStateBaseLayer>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The read-only <strong><c>baseLayer</c></strong> property of the<br/><see cref="XRRenderState"/> interface returns the <see cref="XRWebGLLayer"/> instance<br/>that is the source of bitmap images and a description of how the image is to be rendered<br/>in the device.
+</summary>
+<remarks>
+<para>This property is read-only; however, you can indirectly change its<br/>value using <see cref="XRSession.UpdateRenderState"/>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRRenderState/baseLayer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="XRWebGLLayer"/> object which is used as the source of the world's<br/>contents when rendering each frame of the scene.See the examples below to see how to use <see cref="XRSession.UpdateRenderState"/> to set the current <c>XRWebGLLayer</c> used for rendering<br/>the scene.</value>
+</XRRenderStateBaseLayer>
+<XRRenderStateDepthFar>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>depthFar</c></strong> read-only property of the<br/><see cref="XRRenderState"/> interface returns the distance in meters of the far clip<br/>plane from the viewer.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRRenderState/depthFar"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Number"/>.</value>
+</XRRenderStateDepthFar>
+<XRRenderStateDepthNear>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>depthNear</c></strong> read-only property of the<br/><see cref="XRRenderState"/> interface returns the distance in meters of the near clip<br/>plane from the viewer.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRRenderState/depthNear"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Number"/>.</value>
+</XRRenderStateDepthNear>
+<XRRenderStateInlineVerticalFieldOfView>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The read-only <strong><c>inlineVerticalFieldOfView</c></strong><br/>property of the <see cref="XRRenderState"/> interface returns the default vertical<br/>field of view for <c>&amp;quot;inline&amp;quot;</c> sessions and <c>null</c> for all immersive<br/>sessions.
+</summary>
+<remarks>
+<para>-<see cref="XRSystem.RequestSession"/><br/>-<see cref="XRSystem.IsSessionSupported"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRRenderState/inlineVerticalFieldOfView"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Number"/> for <c>&amp;quot;inline&amp;quot;</c> sessions, which represents the default<br/>field of view, and <c>null</c> for immersive sessions.</value>
+</XRRenderStateInlineVerticalFieldOfView>
+<XRRenderStateLayers>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The read-only <strong><c>layers</c></strong> property of the <see cref="XRRenderState"/> interface is an ordered array containing <see cref="XRLayer"/> objects that are displayed by the XR compositor.
+</summary>
+<remarks>
+<para>-<see cref="XRSession.UpdateRenderState"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRRenderState/layers"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An ordered array containing <see cref="XRLayer"/> objects. The order of the layers is "back-to-front".</value>
+</XRRenderStateLayers>
 </docs>

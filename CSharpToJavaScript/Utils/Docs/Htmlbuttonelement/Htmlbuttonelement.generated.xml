@@ -9,4 +9,224 @@ The <strong><c>HTMLButtonElement</c></strong> interface provides properties and 
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLButtonElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </HTMLButtonElement>
+<HTMLButtonElementCheckValidity>
+<summary>
+The <strong><c>checkValidity()</c></strong> method of the <see cref="HTMLButtonElement"/> interface returns a boolean value which indicates if the element meets any <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">constraint validation</see> rules applied to it. If false, the method also fires an <see cref="HTMLElementinvalid"/> event on the element. Because there's no default browser behavior for <c>checkValidity()</c>, canceling this <c>invalid</c> event has no effect. It always returns true if the {{HTMLElement("button")}} element's <see cref="HTMLButtonElementtype"/> is <c>&amp;quot;button&amp;quot;</c> or <c>&amp;quot;reset&amp;quot;</c>, because such buttons are never candidates for <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">constraint validation</see>.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>An HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button">button</see> element of the <c>&amp;quot;submit&amp;quot;</c> type with a non-null <see cref="HTMLButtonElement.ValidationMessage"/> is considered invalid, will match the CSS {{cssxref(":invalid")}} pseudo-class, and will cause <c>checkValidity()</c> to return false. Use the <see cref="HTMLButtonElement.SetCustomValidity"/> method to set the <see cref="HTMLButtonElement.ValidationMessage"/> to the empty string to set the <see cref="HTMLButtonElement.Validity"/> state to be valid.</para></blockquote>
+<para>-<see cref="HTMLButtonElement.ReportValidity"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button">button</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation">Learn: Client-side form validation</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">Guide: Constraint validation</see><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:valid">:valid</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:invalid">:invalid</see> pseudo-classes<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLButtonElement/checkValidity"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Returns <c>true</c> if the element&amp;apos;s value has no validity problems; otherwise, returns <c>false</c>.</returns>
+</HTMLButtonElementCheckValidity>
+<HTMLButtonElementCommand>
+<summary>
+The <strong><c>command</c></strong> property of the <see cref="HTMLButtonElement"/> interface gets and sets the action to be performed on an element being controlled by this button. For this to have an effect, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/button#commandfor"><c>commandfor</c></see> must be set.
+</summary>
+<remarks>
+<para>It reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/button#command"><c>command</c></see> HTML attribute.</para>
+<para>-{{domxref(&amp;quot;Invoker Commands API&amp;quot;, &amp;quot;Invoker Commands API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see cref="HTMLButtonElement.CommandForElement"/><br/>-<see cref="CommandEvent"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLButtonElement/command"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string. See the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/button#command"><c>command</c></see> attribute for valid values.</value>
+</HTMLButtonElementCommand>
+<HTMLButtonElementCommandForElement>
+<summary>
+The <strong><c>commandForElement</c></strong> property of the <see cref="HTMLButtonElement"/> interface gets and sets the element to control via a button.
+</summary>
+<remarks>
+<para>It is the JavaScript equivalent of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/button#commandfor"><c>commandfor</c></see> HTML attribute.</para>
+<para>-{{domxref(&amp;quot;Invoker Commands API&amp;quot;, &amp;quot;Invoker Commands API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see cref="HTMLButtonElement.Command"/><br/>-<see cref="CommandEvent"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLButtonElement/commandForElement"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A reference to an existing <see cref="Element"/> that the button controls.</value>
+</HTMLButtonElementCommandForElement>
+<HTMLButtonElementDisabled>
+<summary>
+The <strong><c>HTMLButtonElement.disabled</c></strong> property indicates whether the control is disabled, meaning that it does not accept any clicks.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLButtonElement/disabled"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value.</value>
+</HTMLButtonElementDisabled>
+<HTMLButtonElementForm>
+<summary>
+The <strong><c>form</c></strong> read-only property of the <see cref="HTMLButtonElement"/> interface returns an <see cref="HTMLFormElement"/> object that owns this {{htmlelement("button")}}, or <c>null</c> if this button is not owned by any form.
+</summary>
+<remarks>
+<para>-<see cref="HTMLButtonElement"/><br/>-<see cref="HTMLFormElement"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button">button</see><br/>-HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/button#form"><c>form</c></see> attribute<br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms">HTML forms guide</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLButtonElement/form"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="HTMLFormElement"/> or <c>null</c>.</value>
+</HTMLButtonElementForm>
+<HTMLButtonElementFormAction>
+<summary>
+The <strong><c>formAction</c></strong> property of the <see cref="HTMLButtonElement"/> interface is the URL of the program that is executed on the server when the form that owns this control is submitted. It reflects the value of the <c>&amp;lt;button&amp;gt;</c>&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/button#formaction"><c>formaction</c></see> attribute.
+</summary>
+<remarks>
+<para>The value overrides the <see cref="HTMLFormElement.Action"/> property of the <see cref="HTMLFormElement"/> interface if the form is submitted via the button. This property can be retrieved or set.</para>
+<para>-<see cref="HTMLButtonElement.FormEnctype"/><br/>-<see cref="HTMLButtonElement.FormMethod"/><br/>-<see cref="HTMLButtonElement.FormNoValidate"/><br/>-<see cref="HTMLButtonElement.FormTarget"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data">Sending form data</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLButtonElement/formAction"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string. The URL for form submission.</value>
+</HTMLButtonElementFormAction>
+<HTMLButtonElementFormEnctype>
+<summary>
+The <strong><c>formEnctype</c></strong> property of the <see cref="HTMLButtonElement"/> interface is the {{Glossary("MIME_type", "MIME type")}} of the content sent to the server when the form is submitted. It reflects the value of the <c>&amp;lt;button&amp;gt;</c>&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/button#formenctype"><c>formenctype</c></see> attribute.
+</summary>
+<remarks>
+<para>The value overrides the <see cref="HTMLFormElement.Enctype"/> property of the <see cref="HTMLFormElement"/> interface if the form is submitted via the submit button. This property can be retrieved or set. If not set, the value is the empty string (<c>&amp;quot;&amp;quot;</c>).</para>
+<para>-<see cref="HTMLButtonElement.FormAction"/><br/>-<see cref="HTMLButtonElement.FormMethod"/><br/>-<see cref="HTMLButtonElement.FormNoValidate"/><br/>-<see cref="HTMLButtonElement.FormTarget"/><br/>-<see cref="HTMLFormElement.Enctype"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data">Sending form data</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLButtonElement/formEnctype"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</HTMLButtonElementFormEnctype>
+<HTMLButtonElementFormMethod>
+<summary>
+The <strong><c>formMethod</c></strong> property of the <see cref="HTMLButtonElement"/> interface is the {{Glossary("HTTP")}} method used to submit the {{HtmlElement("form")}} if the {{HTMLElement("button")}} element is the control that submits the form. It reflects the value of the <c>&amp;lt;button&amp;gt;</c>&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/button#formmethod"><c>formmethod</c></see> attribute.
+</summary>
+<remarks>
+<para>The value overrides the <see cref="HTMLFormElement.Method"/> property of the <see cref="HTMLFormElement"/> interface if the form is submitted via the button. This property can be retrieved or set. If set with an empty or invalid value, the invalid default value is <c>&amp;quot;get&amp;quot;</c>. If not set at all, the value is the empty string (<c>&amp;quot;&amp;quot;</c>).</para>
+<para>-<see cref="HTMLButtonElement.FormAction"/><br/>-<see cref="HTMLButtonElement.FormEnctype"/><br/>-<see cref="HTMLButtonElement.FormNoValidate"/><br/>-<see cref="HTMLButtonElement.FormTarget"/><br/>-<see cref="HTMLFormElement.Method"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data">Sending form data</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLButtonElement/formMethod"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string; <c>&amp;quot;post&amp;quot;</c>, <c>&amp;quot;get&amp;quot;</c>, <c>&amp;quot;dialog&amp;quot;</c>, or <c>&amp;quot;&amp;quot;</c>.</value>
+</HTMLButtonElementFormMethod>
+<HTMLButtonElementFormNoValidate>
+<summary>
+The <strong><c>formNoValidate</c></strong> property of the <see cref="HTMLButtonElement"/> interface is a boolean value indicating if the {{htmlelement("form")}} will bypass <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">constraint validation</see> when submitted via the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button">button</see>. It reflects the <c>&amp;lt;button&amp;gt;</c> element&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/button#formnovalidate"><c>formnovalidate</c></see> attribute.
+</summary>
+<remarks>
+<para>Its value overrides the <see cref="HTMLFormElement.NoValidate"/> property of the <see cref="HTMLFormElement"/> interface if the form is submitted via the button. This property can be retrieved or set.</para>
+<para>-<see cref="HTMLButtonElement.ReportValidity"/><br/>-<see cref="HTMLButtonElement.CheckValidity"/><br/>-<see cref="HTMLButtonElement.FormAction"/><br/>-<see cref="HTMLButtonElement.FormEnctype"/><br/>-<see cref="HTMLButtonElement.FormMethod"/><br/>-<see cref="HTMLButtonElement.FormTarget"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see><br/>-<see cref="HTMLFormElement.NoValidate"/><br/>-<see cref="HTMLInputElement.FormNoValidate"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation">Learn: Client-side form validation</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">Guide: Constraint validation</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLButtonElement/formNoValidate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean.</value>
+</HTMLButtonElementFormNoValidate>
+<HTMLButtonElementFormTarget>
+<summary>
+The <strong><c>formTarget</c></strong> property of the <see cref="HTMLButtonElement"/> interface is the tab, window, or iframe where the response of the submitted {{HtmlElement("form")}} is to be displayed. It reflects the value of the {{HTMLElement("button")}} element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/button#formtarget"><c>formtarget</c></see> attribute.
+</summary>
+<remarks>
+<para>The value overrides the <see cref="HTMLFormElement.Target"/> property of the <see cref="HTMLFormElement"/> interface if the form is submitted via the button. This property can be retrieved or set. If not set, the value is the empty string (<c>&amp;quot;&amp;quot;</c>).</para>
+<para>-<see cref="HTMLButtonElement.FormAction"/><br/>-<see cref="HTMLButtonElement.FormEnctype"/><br/>-<see cref="HTMLButtonElement.FormNoValidate"/><br/>-<see cref="HTMLButtonElement.FormMethod"/><br/>-<see cref="HTMLFormElement.Target"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data">Sending form data</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLButtonElement/formTarget"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</HTMLButtonElementFormTarget>
+<HTMLButtonElementLabels>
+<summary>
+The <strong><c>HTMLButtonElement.labels</c></strong> read-only property returns a<br/><see cref="NodeList"/> of the {{HTMLElement("label")}} elements associated with the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button">button</see> element.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLButtonElement/labels"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="NodeList"/> containing the <c>&amp;lt;label&amp;gt;</c> elements associated<br/>with the <c>&amp;lt;button&amp;gt;</c> element.</value>
+</HTMLButtonElementLabels>
+<HTMLButtonElementName>
+<summary>
+The <strong><c>name</c></strong> property of the <see cref="HTMLButtonElement"/> interface indicates the name of the {{HTMLElement("button")}} element or the empty string if the element has no name. It reflects the element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/button#name"><c>name</c></see> attribute.
+</summary>
+<remarks>
+<para>-<see cref="HTMLButtonElement.Value"/><br/>-<see cref="HTMLButtonElement.Type"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLButtonElement/name"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing the element&amp;apos;s name.</value>
+</HTMLButtonElementName>
+<HTMLButtonElementPopoverTargetAction>
+<summary>
+The <strong><c>popoverTargetAction</c></strong> property of the <see cref="HTMLButtonElement"/> interface gets and sets the action to be performed (<c>&amp;quot;hide&amp;quot;</c>, <c>&amp;quot;show&amp;quot;</c>, or <c>&amp;quot;toggle&amp;quot;</c>) on a popover element being controlled by a button.
+</summary>
+<remarks>
+<para>It reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/button#popovertargetaction"><c>popovertargetaction</c></see> HTML attribute.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API">Popover API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLButtonElement/popoverTargetAction"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An enumerated value. Possible values are:</value>
+</HTMLButtonElementPopoverTargetAction>
+<HTMLButtonElementPopoverTargetElement>
+<summary>
+The <strong><c>popoverTargetElement</c></strong> property of the <see cref="HTMLButtonElement"/> interface gets and sets the popover element to control via a button.
+</summary>
+<remarks>
+<para>It is the JavaScript equivalent of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/button#popovertarget"><c>popovertarget</c></see> HTML attribute.</para><para>Establishing a relationship between a popover and its invoker button using the <c>popoverTargetElement</c> property has two additional useful effects:</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API">Popover API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLButtonElement/popoverTargetElement"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A reference to a popover element in the DOM.</value>
+</HTMLButtonElementPopoverTargetElement>
+<HTMLButtonElementReportValidity>
+<summary>
+The <strong><c>reportValidity()</c></strong> method of the <see cref="HTMLButtonElement"/> interface performs the same validity checking steps as the <see cref="HTMLButtonElement.CheckValidity"/> method. In addition, if the <see cref="HTMLElementinvalid"/> event is not canceled, the browser displays the problem to the user.
+</summary>
+<remarks>
+<para>-<see cref="HTMLButtonElement.CheckValidity"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button">button</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation">Learn: Client-side form validation</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">Guide: Constraint validation</see><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:valid">:valid</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:invalid">:invalid</see> pseudo-classes<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLButtonElement/reportValidity"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Returns <c>true</c> if the element&amp;apos;s value has no validity problems; otherwise, returns <c>false</c>.</returns>
+</HTMLButtonElementReportValidity>
+<HTMLButtonElementSetCustomValidity>
+<summary>
+The <strong><c>setCustomValidity()</c></strong> method of the <see cref="HTMLButtonElement"/> interface sets the custom validity message for the {{htmlelement("button")}} element. Use the empty string to indicate that the element does <strong>not</strong> have a custom validity error.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button">button</see><br/>-<see cref="HTMLButtonElement"/><br/>-<see cref="HTMLButtonElement.Validity"/><br/>-<see cref="HTMLButtonElement.CheckValidity"/><br/>-<see cref="HTMLButtonElement.ReportValidity"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">Form validation</see>.<br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation">Learn: Client-side form validation</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">Guide: Constraint validation</see><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:valid">:valid</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:invalid">:invalid</see> pseudo-classes<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLButtonElement/setCustomValidity"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</HTMLButtonElementSetCustomValidity>
+<HTMLButtonElementType>
+<summary>
+The <strong><c>type</c></strong> property of the <see cref="HTMLButtonElement"/> interface is a string that indicates the behavior type of the {{HTMLElement("button")}} element.
+</summary>
+<remarks>
+<para>It reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/button#type"><c>type</c></see> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button">button</see> element.</para>
+<para>-<see cref="HTMLTextAreaElement.Type"/> property<br/>-<see cref="HTMLInputElement.Type"/> property<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLButtonElement/type"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing the type.Its possible values are listed in the attribute&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/button#type">button types</see> section.</value>
+</HTMLButtonElementType>
+<HTMLButtonElementValidationMessage>
+<summary>
+The <strong><c>validationMessage</c></strong> read-only property of the <see cref="HTMLButtonElement"/> interface returns a string representing a localized message that describes the validation constraints that the {{htmlelement("button")}} control does not satisfy (if any). This is the empty string if the control is not a candidate for constraint validation (the <c>&amp;lt;button&amp;gt;</c>&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/button#type"><c>type</c></see> is <c>button</c> or <c>reset</c>), or it satisfies its constraints.
+</summary>
+<remarks>
+<para>If the <c>&amp;lt;button&amp;gt;</c> is a candidate for constraint validation (the <c>type</c> is set or defaults to <c>submit</c> and <see cref="HTMLButtonElement.WillValidate"/> is <c>true</c>) and the constraints are not met (there is a non-null <see cref="ValidityState.CustomError"/>), the value is the error message that would be shown to the user during element validation.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button">button</see><br/>-<see cref="HTMLButtonElement"/><br/>-<see cref="HTMLButtonElement.WillValidate"/><br/>-<see cref="HTMLButtonElement.Validity"/><br/>-<see cref="HTMLButtonElement.CheckValidity"/><br/>-<see cref="HTMLButtonElement.ReportValidity"/><br/>-<see cref="HTMLButtonElement.SetCustomValidity"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation">Learn: Client-side form validation</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">Guide: Constraint validation</see><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:valid">:valid</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:invalid">:invalid</see> pseudo-classes<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLButtonElement/validationMessage"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</HTMLButtonElementValidationMessage>
+<HTMLButtonElementValidity>
+<summary>
+The <strong><c>validity</c></strong> read-only property of the <see cref="HTMLButtonElement"/> interface returns a <see cref="ValidityState"/> object that represents the validity states this element is in.
+</summary>
+<remarks>
+<para>-<see cref="HTMLButtonElement.CheckValidity"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button">button</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation">Learn: Client-side form validation</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">Guide: Constraint validation</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLButtonElement/validity"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="ValidityState"/> object.</value>
+</HTMLButtonElementValidity>
+<HTMLButtonElementValue>
+<summary>
+The <strong><c>value</c></strong> property of the <see cref="HTMLButtonElement"/> interface represents the value of the {{htmlelement("button")}} element as a string, or the empty string if no value is set. It reflects the element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/button#value"><c>value</c></see> attribute.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button">button</see><br/>-<see cref="HTMLButtonElement.Type"/><br/>-<see cref="HTMLButtonElement.Labels"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLButtonElement/value"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button">button</see> element.</value>
+</HTMLButtonElementValue>
+<HTMLButtonElementWillValidate>
+<summary>
+The <strong><c>willValidate</c></strong> read-only property of the <see cref="HTMLButtonElement"/> interface indicates whether the {{htmlelement("button")}} element is a candidate for <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">constraint validation</see>. It is <c>false</c> if any conditions bar it from constraint validation, including:
+</summary>
+<remarks>
+<para>-<see cref="HTMLButtonElement.CheckValidity"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button">button</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation">Learn: Client-side form validation</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation">Guide: Constraint validation</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLButtonElement/willValidate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value.</value>
+</HTMLButtonElementWillValidate>
 </docs>

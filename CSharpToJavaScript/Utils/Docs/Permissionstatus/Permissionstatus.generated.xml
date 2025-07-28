@@ -8,4 +8,30 @@ The <strong><c>PermissionStatus</c></strong> interface of the <see href="https:/
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PermissionStatus"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </PermissionStatus>
+<PermissionStatusChange>
+<summary>
+The <strong><c>change</c></strong> event of the <see cref="PermissionStatus"/> interface fires whenever the <see cref="PermissionStatus.State"/> property changes.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PermissionStatus/change"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</PermissionStatusChange>
+<PermissionStatusName>
+<summary>
+The <strong><c>name</c></strong> read-only property of the <see cref="PermissionStatus"/> interface returns the name of a requested permission.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PermissionStatus/name"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A read-only value that is identical to the <c>name</c> argument passed to <see cref="Permissions.Query"/>.</value>
+</PermissionStatusName>
+<PermissionStatusState>
+<summary>
+The <strong><c>state</c></strong> read-only property of the<br/><see cref="PermissionStatus"/> interface returns the state of a requested permission.<br/>This property returns one of <c>&amp;apos;granted&amp;apos;</c>, <c>&amp;apos;denied&amp;apos;</c>, or<br/><c>&amp;apos;prompt&amp;apos;</c>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PermissionStatus/state"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>One of the following:</value>
+</PermissionStatusState>
 </docs>

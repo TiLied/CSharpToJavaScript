@@ -9,4 +9,24 @@ The <strong><c>UserActivation</c></strong> interface provides information about 
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/UserActivation"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </UserActivation>
+<UserActivationHasBeenActive>
+<summary>
+The read-only <strong><c>hasBeenActive</c></strong> property of the <see cref="UserActivation"/> interface indicates whether the current window has {{Glossary("sticky activation","sticky user activation")}}.
+</summary>
+<remarks>
+<para>-<see cref="UserActivation"/><br/>-<see cref="UserActivation.IsActive"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Security/User_activation">Features gated by user activation</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/UserActivation/hasBeenActive"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean.</value>
+</UserActivationHasBeenActive>
+<UserActivationIsActive>
+<summary>
+The read-only <strong><c>isActive</c></strong> property of the <see cref="UserActivation"/> interface indicates whether the current window has {{Glossary("transient activation", "transient user activation")}}.
+</summary>
+<remarks>
+<para>-<see cref="UserActivation"/><br/>-<see cref="UserActivation.HasBeenActive"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Security/User_activation">Features gated by user activation</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/UserActivation/isActive"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean.</value>
+</UserActivationIsActive>
 </docs>

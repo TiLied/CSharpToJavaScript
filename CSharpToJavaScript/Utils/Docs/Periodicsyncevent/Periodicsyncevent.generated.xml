@@ -4,9 +4,29 @@
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>PeriodicSyncEvent</c></strong> interface of the <see cref="'Web Periodic Background Synchronization API'"/> provides a way to run tasks in the service worker with network connectivity.
 </summary>
 <remarks>
-<para>An instance of this event is passed to the <see cref="'ServiceWorkerGlobalScope.Periodicsync_event'"/> handler. This happens periodically, at an interval greater than or equal to that set in the <see cref="'PeriodicSyncManager.Register'"/> method. Other implementation-specific factors such as the user's engagement with the site decide the actual interval.</para><para></para>
+<para>An instance of this event is passed to the <see cref="'ServiceWorkerGlobalScope.Periodicsync'"/> handler. This happens periodically, at an interval greater than or equal to that set in the <see cref="'PeriodicSyncManager.Register'"/> method. Other implementation-specific factors such as the user's engagement with the site decide the actual interval.</para><para></para>
 <para>-<see href="https://developer.chrome.com/docs/capabilities/periodic-background-sync">Richer offline experiences with the Periodic Background Sync API</see><br/>-<see href="https://webplatformapis.com/periodic_sync/periodicSync_improved.html">A Periodic Background Sync demo app</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PeriodicSyncEvent"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </PeriodicSyncEvent>
+<PeriodicSyncEventPeriodicSyncEvent>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>PeriodicSyncEvent()</c></strong> constructor<br/>creates a new <see cref="PeriodicSyncEvent"/> object. This constructor is not typically<br/>used. The browser creates these objects itself and provides them to<br/><see cref="'ServiceWorkerGlobalScope.Periodicsync'"/> callback.
+</summary>
+<remarks>
+<para>-<see href="https://developer.chrome.com/docs/capabilities/periodic-background-sync">Richer offline experiences with the Periodic Background Sync API</see><br/>-<see href="https://webplatformapis.com/periodic_sync/periodicSync_improved.html">A Periodic Background Sync demo app</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PeriodicSyncEvent/PeriodicSyncEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="PeriodicSyncEvent"/> object configured using the given inputs.</returns>
+</PeriodicSyncEventPeriodicSyncEvent>
+<PeriodicSyncEventTag>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>tag</c></strong> read-only property of the<br/><see cref="PeriodicSyncEvent"/> interface returns the developer-defined identifier for<br/>the <see cref="'PeriodicSyncEvent'"/>. This is specified when calling the<br/><see cref="'PeriodicSyncManager.Register'"/> method of the<br/><see cref="'PeriodicSyncManager'"/> interface. Multiple tags can be used by the web app<br/>to run different periodic tasks at different frequencies.
+</summary>
+<remarks>
+<para>-<see href="https://developer.chrome.com/docs/capabilities/periodic-background-sync">Richer offline experiences with the Periodic Background Sync API</see><br/>-<see href="https://webplatformapis.com/periodic_sync/periodicSync_improved.html">A Periodic Background Sync demo app</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PeriodicSyncEvent/tag"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>Returns a <see cref="'String'"/> of the defined identifier.</value>
+</PeriodicSyncEventTag>
 </docs>

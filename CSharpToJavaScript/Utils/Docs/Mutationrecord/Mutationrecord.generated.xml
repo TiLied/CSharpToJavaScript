@@ -7,4 +7,85 @@ The <strong><c>MutationRecord</c></strong> is a read-only interface that represe
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MutationRecord"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </MutationRecord>
+<MutationRecordAddedNodes>
+<summary>
+The <see cref="MutationRecord"/> read-only property <strong><c>addedNodes</c></strong> is a <see cref="NodeList"/> of nodes added to a target node by a mutation observed with a <see cref="MutationObserver"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MutationRecord/addedNodes"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="NodeList"/> containing the nodes added to the target of the mutation observed by the <see cref="MutationObserver"/>.</value>
+</MutationRecordAddedNodes>
+<MutationRecordAttributeName>
+<summary>
+The <see cref="MutationRecord"/> read-only property <strong><c>attributeName</c></strong> contains the name of a changed attribute belonging to a node that is observed by a <see cref="MutationObserver"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MutationRecord/attributeName"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>If the record&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/API/MutationRecord/type"><c>type</c></see> is <c>attributes</c>, this is a string representing the name of the mutated attribute of the mutation target.If the record&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/API/MutationRecord/type"><c>type</c></see> is not <c>attributes</c>, this is <c>null</c>.</value>
+</MutationRecordAttributeName>
+<MutationRecordAttributeNamespace>
+<summary>
+The <see cref="MutationRecord"/> read-only property <strong><c>attributeNamespace</c></strong> is the namespace of the mutated attribute in the <see cref="MutationRecord"/> observed by a <see cref="MutationObserver"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MutationRecord/attributeNamespace"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>If the record&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/API/MutationRecord/type"><c>type</c></see> is <c>attributes</c>, the property is a string representing the namespace of the mutated attribute of the mutation target. The value is <c>null</c> otherwise.</value>
+</MutationRecordAttributeNamespace>
+<MutationRecordNextSibling>
+<summary>
+The <see cref="MutationRecord"/> read-only property <strong><c>nextSibling</c></strong> is the next sibling of an added or removed child node of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/MutationRecord/target"><c>target</c></see> of a <see cref="MutationObserver"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MutationRecord/nextSibling"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>If a node is added to or removed from the <see href="https://developer.mozilla.org/en-US/docs/Web/API/MutationRecord/target"><c>target</c></see> of a <see cref="MutationObserver"/>, the value is the <see cref="Node"/> that is the next sibling of the added or removed node: that is, the node immediately following this one in the parent's <see cref="Node.ChildNodes"/> list.The value is <c>null</c> if there are no added or removed nodes, or if the node is the last child of its parent.</value>
+</MutationRecordNextSibling>
+<MutationRecordOldValue>
+<summary>
+The <see cref="MutationRecord"/> read-only property <strong><c>oldValue</c></strong> contains the character data or attribute value of an observed node before it was changed.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MutationRecord/oldValue"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing the old value of an attribute which has been changed, if:A string representing the old value of a <see cref="CharacterData"/> node that has been changed, if:Otherwise this property is <c>null</c>.</value>
+</MutationRecordOldValue>
+<MutationRecordPreviousSibling>
+<summary>
+The <see cref="MutationRecord"/> read-only property <strong><c>previousSibling</c></strong> is the previous sibling of an added or removed child node of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/MutationRecord/target"><c>target</c></see> of a <see cref="MutationObserver"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MutationRecord/previousSibling"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>If a node is added to or removed from the <see href="https://developer.mozilla.org/en-US/docs/Web/API/MutationRecord/target"><c>target</c></see> of a <see cref="MutationObserver"/>, the value is the <see cref="Node"/> that is the previous sibling of the added or removed node: that is, the node immediately before this one in the parent's <see cref="Node.ChildNodes"/> list.The value is <c>null</c> if there are no added or removed nodes, or if the node is the first child of its parent.</value>
+</MutationRecordPreviousSibling>
+<MutationRecordRemovedNodes>
+<summary>
+The <see cref="MutationRecord"/> read-only property <strong><c>removedNodes</c></strong> is a <see cref="NodeList"/> of nodes removed from a target node by a mutation observed with a <see cref="MutationObserver"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MutationRecord/removedNodes"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="NodeList"/> containing the nodes removed from the target of the mutation observed by the <see cref="MutationObserver"/>.</value>
+</MutationRecordRemovedNodes>
+<MutationRecordTarget>
+<summary>
+The <see cref="MutationRecord"/> read-only property <strong><c>target</c></strong> is the target (i.e., the mutated/changed node) of a mutation observed with a <see cref="MutationObserver"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MutationRecord/target"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <see cref="Node"/> that the mutation affected.</value>
+</MutationRecordTarget>
+<MutationRecordType>
+<summary>
+The <see cref="MutationRecord"/> read-only property <strong><c>type</c></strong> is the type of the <see cref="MutationRecord"/> observed by a <see cref="MutationObserver"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MutationRecord/type"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The property is set to the type of the mutation as a string. The value can be one of the following:</value>
+</MutationRecordType>
 </docs>

@@ -5,8 +5,127 @@ The <strong><c>HighlightRegistry</c></strong> interface of the <see href="https:
 </summary>
 <remarks>
 <para>A <c>HighlightRegistry</c> instance is a <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map#map-like_browser_apis"><c>Map</c>-like object</see>, in which each key is the name string for a custom highlight, and the corresponding value is the associated <see cref="Highlight"/> object.</para><para></para>
-<para>-{{domxref(&amp;quot;css_custom_highlight_api&amp;quot;, &amp;quot;The CSS Custom Highlight API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://css-tricks.com/css-custom-highlight-api-early-look/">CSS Custom Highlight API: The Future of Highlighting Text Ranges on the Web</see><br/></para>
+<para>-{{domxref(&amp;quot;css_custom_highlight_api&amp;quot;, &amp;quot;The CSS Custom Highlight API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_custom_highlight_API">CSS custom highlight API</see> module<br/>-<see href="https://css-tricks.com/css-custom-highlight-api-early-look/">CSS Custom Highlight API: The Future of Highlighting Text Ranges on the Web</see><br/></para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HighlightRegistry"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </HighlightRegistry>
+<HighlightRegistryClear>
+<summary>
+The <strong><c>clear()</c></strong> method of the <see cref="HighlightRegistry"/> interface removes all the <see cref="Highlight"/> objects registered in the <c>HighlightRegistry</c>.
+</summary>
+<remarks>
+<para><c>HighlightRegistry</c> is a <see cref="Map"/>-like object, so this is similar to using <see cref="MapClear"/>.</para>
+<para>-{{domxref(&amp;quot;css_custom_highlight_api&amp;quot;, &amp;quot;The CSS Custom Highlight API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://css-tricks.com/css-custom-highlight-api-early-look/">CSS Custom Highlight API: The Future of Highlighting Text Ranges on the Web</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HighlightRegistry/clear"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</HighlightRegistryClear>
+<HighlightRegistryDelete>
+<summary>
+The <strong><c>delete()</c></strong> method of the <see cref="HighlightRegistry"/> interface removes a the named <see cref="Highlight"/> object from the <c>HighlightRegistry</c>.
+</summary>
+<remarks>
+<para><c>HighlightRegistry</c> is a <see cref="Map"/>-like object, so this is similar to using <see cref="MapDelete"/>.</para>
+<para>-{{domxref(&amp;quot;css_custom_highlight_api&amp;quot;, &amp;quot;The CSS Custom Highlight API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://css-tricks.com/css-custom-highlight-api-early-look/">CSS Custom Highlight API: The Future of Highlighting Text Ranges on the Web</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HighlightRegistry/delete"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Returns <c>true</c> if a <c>Highlight</c> object under the provided name was in the <c>HighlightRegistry</c>; otherwise <c>false</c>.</returns>
+</HighlightRegistryDelete>
+<HighlightRegistryEntries>
+<summary>
+The <strong><c>entries()</c></strong> method of the <see cref="HighlightRegistry"/> interface returns a new <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators">Iterator</see> object that contains the <c>[name, highlight]</c> pairs for each element in the <c>HighlightRegistry</c> object, in insertion order.
+</summary>
+<remarks>
+<para><c>HighlightRegistry</c> is a <see cref="Map"/>-like object, so this is similar to using <see cref="MapEntries"/>.</para>
+<para>-{{domxref(&amp;quot;css_custom_highlight_api&amp;quot;, &amp;quot;The CSS Custom Highlight API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://css-tricks.com/css-custom-highlight-api-early-look/">CSS Custom Highlight API: The Future of Highlighting Text Ranges on the Web</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HighlightRegistry/entries"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new iterator object that contains an array of <c>[name, highlight]</c> for each <c>Highlight</c> object in the <c>HighlightRegistry</c>, in insertion order.</returns>
+</HighlightRegistryEntries>
+<HighlightRegistryForEach>
+<summary>
+The <strong><c>forEach()</c></strong> method of the <see cref="HighlightRegistry"/> interface executes a provided function once for each <see cref="Highlight"/> object in the registry, in insertion order.
+</summary>
+<remarks>
+<para><c>HighlightRegistry</c> is a <see cref="Map"/>-like object, so this is similar to using <see cref="MapForEach"/>.</para>
+<para>-{{domxref(&amp;quot;css_custom_highlight_api&amp;quot;, &amp;quot;The CSS Custom Highlight API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://css-tricks.com/css-custom-highlight-api-early-look/">CSS Custom Highlight API: The Future of Highlighting Text Ranges on the Web</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HighlightRegistry/forEach"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</HighlightRegistryForEach>
+<HighlightRegistryGet>
+<summary>
+The <strong><c>get()</c></strong> method of the <see cref="HighlightRegistry"/> interface returns the named <see cref="Highlight"/> object from the registry.
+</summary>
+<remarks>
+<para><c>HighlightRegistry</c> is a <see cref="Map"/>-like object, so this is similar to using <see cref="MapGet"/>.</para>
+<para>-{{domxref(&amp;quot;css_custom_highlight_api&amp;quot;, &amp;quot;The CSS Custom Highlight API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://css-tricks.com/css-custom-highlight-api-early-look/">CSS Custom Highlight API: The Future of Highlighting Text Ranges on the Web</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HighlightRegistry/get"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>The <c>Highlight</c> object associated with the specified name, or <see cref="Undefined"/> if the name can't be found in the <c>HighlightRegistry</c>.</returns>
+</HighlightRegistryGet>
+<HighlightRegistryHas>
+<summary>
+The <strong><c>has()</c></strong> method of the <see cref="HighlightRegistry"/> interface returns a boolean indicating whether or not a <see cref="Highlight"/> object with the specified name exists in the registry.
+</summary>
+<remarks>
+<para><c>HighlightRegistry</c> is a <see cref="Map"/>-like object, so this is similar to using <see cref="MapHas"/>.</para>
+<para>-{{domxref(&amp;quot;css_custom_highlight_api&amp;quot;, &amp;quot;The CSS Custom Highlight API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://css-tricks.com/css-custom-highlight-api-early-look/">CSS Custom Highlight API: The Future of Highlighting Text Ranges on the Web</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HighlightRegistry/has"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Returns <c>true</c> if a highlight with the specified name exists in the registry; otherwise <c>false</c>.</returns>
+</HighlightRegistryHas>
+<HighlightRegistryHighlightsFromPoint>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>highlightsFromPoint()</c></strong> method of the <see cref="HighlightRegistry"/> interface returns an array of objects representing the custom highlights applied at a specific point within the viewport.
+</summary>
+<remarks>
+<para>-{{domxref(&amp;quot;css_custom_highlight_api&amp;quot;, &amp;quot;The CSS Custom Highlight API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_custom_highlight_API">CSS custom highlight API</see> module<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HighlightRegistry/highlightsFromPoint"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An array of <c>HighlightHitResult</c> objects representing the custom highlights applied at the point in the viewport specified by the <c>x</c> and <c>y</c> parameters.Each <c>HighlightHitResult</c> object contains the following properties:If no custom highlights are applied at the specified point, or the specified point is outside the viewport, the method returns an empty array.Now that we have the ability to create and apply custom highlights, we can use the <c>highlightsFromPoint()</c> method to return the custom highlights applied at a specific point.We grab a reference to our <c>&amp;lt;section&amp;gt;</c> element, then define a <see href="https://developer.mozilla.org/en-US/docs/Web/API/Element/dblclick_event"><c>dblclick</c></see> event handler function to handle outputting the highlighted text at the mouse cursor position when the event fires. Inside the handler we pass the current mouse coordinates into a <c>highlightsFromPoint()</c> call, clear the contents of the <c>&amp;lt;section&amp;gt;</c> element, then loop through each highlight in the <c>highlights</c> array.For each <c>highlight</c>, we grab the first range in the <see href="https://developer.mozilla.org#ranges"><c>ranges</c></see> array (there is only ever one range in each highlight, in this case), then get the exact highlighted string using <see cref="Range.ToString"/> and add it to the <c>&amp;lt;section&amp;gt;</c> element&amp;apos;s <c>innerHTML</c>, inside an <c>&amp;lt;article&amp;gt;</c> element.</returns>
+</HighlightRegistryHighlightsFromPoint>
+<HighlightRegistryKeys>
+<summary>
+The <strong><c>keys()</c></strong> method of the <see cref="HighlightRegistry"/> interface returns a new <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators">Iterator</see> object that contains the keys for each <c>Highlight</c> object in the <c>HighlightRegistry</c> object in insertion order.
+</summary>
+<remarks>
+<para><c>HighlightRegistry</c> is a <see cref="Map"/>-like object, so this is similar to using <see cref="MapKeys"/>.</para>
+<para>-{{domxref(&amp;quot;css_custom_highlight_api&amp;quot;, &amp;quot;The CSS Custom Highlight API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://css-tricks.com/css-custom-highlight-api-early-look/">CSS Custom Highlight API: The Future of Highlighting Text Ranges on the Web</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HighlightRegistry/keys"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new iterator object containing the names of each <c>Highlight</c> object in the registry, in insertion order.</returns>
+</HighlightRegistryKeys>
+<HighlightRegistrySet>
+<summary>
+The <strong><c>set()</c></strong> method of the <see cref="HighlightRegistry"/> interface adds or updates a <see cref="Highlight"/> object in the registry with the specified name.
+</summary>
+<remarks>
+<para><c>HighlightRegistry</c> is a <see cref="Map"/>-like object, so this is similar to using <see cref="MapSet"/>.</para>
+<para>-{{domxref(&amp;quot;css_custom_highlight_api&amp;quot;, &amp;quot;The CSS Custom Highlight API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_custom_highlight_API">CSS custom highlight API</see> module<br/>-<see href="https://css-tricks.com/css-custom-highlight-api-early-look/">CSS Custom Highlight API: The Future of Highlighting Text Ranges on the Web</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HighlightRegistry/set"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>The <c>HighlightRegistry</c> object.</returns>
+</HighlightRegistrySet>
+<HighlightRegistrySize>
+<summary>
+The <strong><c>size</c></strong> property returns the number of <see cref="Highlight"/> objects in the <see cref="HighlightRegistry"/>.
+</summary>
+<remarks>
+<para>-{{domxref(&amp;quot;css_custom_highlight_api&amp;quot;, &amp;quot;The CSS Custom Highlight API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://css-tricks.com/css-custom-highlight-api-early-look/">CSS Custom Highlight API: The Future of Highlighting Text Ranges on the Web</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HighlightRegistry/size"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A read-only integer indicating how many <c>Highlight</c> objects the registry contains.</value>
+</HighlightRegistrySize>
+<HighlightRegistryValues>
+<summary>
+The <strong><c>values()</c></strong> method of the <see cref="HighlightRegistry"/> interface returns a new <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators">Iterator</see> object that contains the values for each <c>Highlight</c> object in the <c>HighlightRegistry</c> object in insertion order.
+</summary>
+<remarks>
+<para><c>HighlightRegistry</c> is a <see cref="Map"/>-like object, so this is similar to using <see cref="MapValues"/>.</para>
+<para>-{{domxref(&amp;quot;css_custom_highlight_api&amp;quot;, &amp;quot;The CSS Custom Highlight API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://css-tricks.com/css-custom-highlight-api-early-look/">CSS Custom Highlight API: The Future of Highlighting Text Ranges on the Web</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HighlightRegistry/values"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new iterator object containing each <c>Highlight</c> object in the registry, in insertion order.</returns>
+</HighlightRegistryValues>
 </docs>

@@ -31,7 +31,7 @@ jobs:
       uses: actions/upload-artifact@v4.6.2
       with:
         name: cstojs-${{ matrix.os }}-artifact
-        path: C:/a/CSharpToJavaScript/CSharpToJavaScript/CSharpToJavaScript/bin/Debug/net8.0/
+        path: D:/a/CSharpToJavaScript/CSharpToJavaScript/CSharpToJavaScript/bin/Debug/net8.0/
         if-no-files-found: error
         compression-level: 0
   test:

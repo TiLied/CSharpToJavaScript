@@ -18,6 +18,7 @@ jobs:
       - run: echo "CURRENT_TAG=$CURRENT_TAG"
       - name: Get commits count
         run: echo "COMMIT_COUNT=${git rev-list --count $CURRENT_TAG..master}" >> $GITHUB_ENV
+      - name: Check count
         if: ${{env.COMMIT_COUNT >= 5}}
       - name: Make a new tag
         run: echo "$CURRENT_TAG" | awk 'BEGIN{FS=OFS="."} {$3+=1} 1'

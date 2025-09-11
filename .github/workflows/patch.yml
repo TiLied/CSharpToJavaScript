@@ -3,7 +3,7 @@ name: patch
 on:
   push:
     paths:
-      - 'REMOVE_THIS'
+      - './TEST'
 #on:  
   #schedule:
   # - cron: "0 13 * * 1"
@@ -16,8 +16,9 @@ jobs:
       - name: Set current tag
         run: echo "CURRENT_TAG=${git describe --tags --abbrev=0}" >> $GITHUB_ENV
       - run: echo "CURRENT_TAG=$CURRENT_TAG"
-      - run: echo "commits count ${git rev-list --count $CURRENT_TAG..master}"
-      - if: ${{ git rev-list --count $CURRENT_TAG..master >= 5 }}
+      - name: Get commits count
+        run: echo "COMMIT_COUNT=${git rev-list --count $CURRENT_TAG..master}" >> $GITHUB_ENV
+      - if: ${{ $COMMIT_COUNT >= 5 }}
       - name: Make a new tag
         run: echo "$CURRENT_TAG" | awk 'BEGIN{FS=OFS="."} {$3+=1} 1'
 

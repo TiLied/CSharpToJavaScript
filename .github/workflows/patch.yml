@@ -20,11 +20,11 @@ jobs:
         run: echo "COMMIT_COUNT=${git rev-list --count $CURRENT_TAG..master}" >> $GITHUB_ENV
   makepatch:
     needs: getcount
-    if: ${{env.COMMIT_COUNT >= 5}}
+    if: ${{jobs.getcount.env.COMMIT_COUNT >= 5}}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
       - name: Make a new tag
-        run: echo "$CURRENT_TAG" | awk 'BEGIN{FS=OFS="."} {$3+=1} 1'
+        run: echo jobs.getcount.env.CURRENT_TAG | awk 'BEGIN{FS=OFS="."} {$3+=1} 1'
 
   

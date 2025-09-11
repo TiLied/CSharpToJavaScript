@@ -11,6 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+          
       - name: Set current tag
         run: echo "CURRENT_TAG=`echo $(git describe --tags --abbrev=0)`" >> $GITHUB_ENV
       - run: echo $CURRENT_TAG

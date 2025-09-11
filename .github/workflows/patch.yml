@@ -1,9 +1,7 @@
 name: patch
 
-on:
-  push:
-    paths:
-      - './TEST'
+on: workflow_dispatch
+
 #on:  
   #schedule:
   # - cron: "0 13 * * 1"

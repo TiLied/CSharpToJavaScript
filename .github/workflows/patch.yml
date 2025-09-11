@@ -1,0 +1,24 @@
+name: patch
+
+on:
+  push:
+    paths:
+      - 'REMOVE_THIS'
+#on:  
+  #schedule:
+  # - cron: "0 13 * * 1"
+
+jobs:
+  makepatch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Set current tag
+        run: echo "CURRENT_TAG=${git describe --tags --abbrev=0}" >> $GITHUB_ENV
+      - run: echo "CURRENT_TAG=$CURRENT_TAG"
+      - run: echo "commits count ${git rev-list --count $CURRENT_TAG..master}"
+      - if: ${{ git rev-list --count $CURRENT_TAG..master >= 5 }}
+      - name: Make a new tag
+        run: echo "$CURRENT_TAG" | awk 'BEGIN{FS=OFS="."} {$3+=1} 1'
+
+  

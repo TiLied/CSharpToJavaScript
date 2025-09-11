@@ -13,12 +13,12 @@ jobs:
       - uses: actions/checkout@v5
       - name: Set current tag
         run: |
-          l=${{/usr/bin/git describe --tags --abbrev=0}}
+          l=$(git describe --tags --abbrev=0)
           echo "CURRENT_TAG=$l" >> $GITHUB_ENV
       - run: echo "CURRENT_TAG=$CURRENT_TAG"
       - name: Get commits count
         run: |
-           l=${{/usr/bin/git rev-list --count $CURRENT_TAG..master}}
+           l=$(git rev-list --count $CURRENT_TAG..master)
            echo "COMMIT_COUNT=$l" >> $GITHUB_ENV
       - if: ${{env.COMMIT_COUNT >= 5}}
         run: echo $CURRENT_TAG | awk 'BEGIN{FS=OFS="."} {$3+=1} 1'

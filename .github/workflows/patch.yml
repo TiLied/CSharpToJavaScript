@@ -9,7 +9,7 @@ on:
   # - cron: "0 13 * * 1"
 
 jobs:
-  getcount:
+  makepatch:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
@@ -18,13 +18,7 @@ jobs:
       - run: echo "CURRENT_TAG=$CURRENT_TAG"
       - name: Get commits count
         run: echo "COMMIT_COUNT=${git rev-list --count $CURRENT_TAG..master}" >> $GITHUB_ENV
-  makepatch:
-    needs: getcount
-    if: ${{jobs.getcount.env.COMMIT_COUNT >= 5}}
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v5
-      - name: Make a new tag
-        run: echo jobs.getcount.env.CURRENT_TAG | awk 'BEGIN{FS=OFS="."} {$3+=1} 1'
+      - if: ${{.env.COMMIT_COUNT >= 5}}
+        run: echo $CURRENT_TAG | awk 'BEGIN{FS=OFS="."} {$3+=1} 1'
 
   

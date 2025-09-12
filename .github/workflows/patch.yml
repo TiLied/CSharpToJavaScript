@@ -28,6 +28,9 @@ jobs:
           echo "currentTag: ${{steps.step1.outputs.currentTag}}"
           echo "commitCount: ${{steps.step2.outputs.commitCount}}"
   make-patch:
+    permissions:
+      contents: write
+      
     needs: setup-outputs
     
     runs-on: ubuntu-latest
@@ -42,8 +45,6 @@ jobs:
       - name: Edit csproj
         run: sed -i 's+<VersionPrefix>${{needs.setup-outputs.outputs.currentTag}}</VersionPrefix>+<VersionPrefix>${{env.newTag}}</VersionPrefix>+g' ./README.md
       - run: |
-          git config --global user.name 'TiLied'
-          git config --global user.email 'TiLied@users.noreply.github.com'
           git commit -am "Nuget ${{env.newTag}}"
           git push
       - id: step2

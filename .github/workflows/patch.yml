@@ -7,29 +7,34 @@ on: workflow_dispatch
   # - cron: "0 13 * * 1"
 
 jobs:
-  setup-env:
+  setup-outputs:
     runs-on: ubuntu-latest
-    
+    outputs:
+      currentTag: ${{ steps.step1.outputs.currentTag }}
+      commitCount: ${{ steps.step2.outputs.commitCount }}
+      newTag: ${{ steps.step3.outputs.newTag }}
     steps:
       - uses: actions/checkout@v5
         with:
           fetch-depth: 0
-          
-      - run: echo "CURRENT_TAG=`echo $(git describe --tags --abbrev=0)`" >> $GITHUB_OUTPUT
-      - run: echo "COMMIT_COUNT=`echo $(git rev-list --count $CURRENT_TAG..master)`" >> $GITHUB_OUTPUT
-      - if: ${{env.COMMIT_COUNT >= 5}}
-        run: echo "NEW_TAG=echo $CURRENT_TAG | awk 'BEGIN{FS=OFS="."} {$3+=1} 1'" >> $GITHUB_OUTPUT
+      - id: step1
+        run: echo "currentTag=`echo $(git describe --tags --abbrev=0)`" >> $GITHUB_OUTPUT
+      - id: step2
+        run: echo "commitCount=`echo $(git rev-list --count $CURRENT_TAG..master)`" >> $GITHUB_OUTPUT
+      - if: ${{outputs.commitCount >= 5}}
+        id: step3
+        run: echo "newTag=echo $outputs.current-tag | awk 'BEGIN{FS=OFS="."} {$3+=1} 1'" >> $GITHUB_OUTPUT
       - name: Environments
         run: |
-          echo "CURRENT_TAG: $CURRENT_TAG"
-          echo "NEW_TAG: $NEW_TAG"
-          echo "COMMIT_COUNT: $COMMIT_COUNT"
+          echo "currentTag: $outputs.currentTag"
+          echo "commitCount: $outputs.commitCount"
+          echo "newTag: $outputs.newTag"
   make-patch:
-    needs: setup-env
+    needs: setup-outputs
     
     runs-on: ubuntu-latest
 
-    if: ${{needs.setup-env.outputs.COMMIT_COUNT >= 5}}
+    if: ${{needs.setup-outputs.outputs.commitCount >= 5}}
     steps:
       - uses: actions/checkout@v5
         with:

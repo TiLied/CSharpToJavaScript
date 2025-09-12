@@ -18,9 +18,7 @@ jobs:
       - run: echo "CURRENT_TAG=`echo $(git describe --tags --abbrev=0)`" >> $GITHUB_ENV
       - run: echo "COMMIT_COUNT=`echo $(git rev-list --count $CURRENT_TAG..master)`" >> $GITHUB_ENV
       - if: ${{env.COMMIT_COUNT >= 5}}
-        run: |
-          new=$((echo $CURRENT_TAG | awk 'BEGIN{FS=OFS="."} {$3+=1} 1'))
-          echo "NEW_TAG=$new" >> $GITHUB_ENV
+        run: echo "NEW_TAG='echo $CURRENT_TAG | awk 'BEGIN{FS=OFS="."} {$3+=1} 1''" >> $GITHUB_ENV
       - name: Environments
         run: |
           echo "CURRENT_TAG: $CURRENT_TAG"
@@ -31,7 +29,7 @@ jobs:
     
     runs-on: ubuntu-latest
 
-    if: ${{needs.setup-env.env.COMMIT_COUNT >= 5}}
+    if: ${{needs.setup-env.COMMIT_COUNT >= 5}}
     steps:
       - uses: actions/checkout@v5
         with:

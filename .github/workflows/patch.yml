@@ -48,10 +48,6 @@ jobs:
       - run: |
           git commit -am "Test ${{env.newTag}}"
           git push
-      - id: step2
-        run: |
-          local="$(git log ${{needs.setup-outputs.outputs.currentTag}}..master --format=format:'[%s](https://github.com/TiLied/CSharpToJavaScript/commit/%H)%n')"
-          echo "realeseNote=$local" >> $GITHUB_ENV
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
@@ -60,7 +56,7 @@ jobs:
         with:
           tag_name: ${{ env.newTag }}
           release_name: ${{ env.newTag }}
-          body: ${{ env.realeseNote }}
+          body: "$(git log ${{needs.setup-outputs.outputs.currentTag}}..master --format=format:'[%s](https://github.com/TiLied/CSharpToJavaScript/commit/%H)%n')"
           draft: true
           prerelease: true
       #update release notes in csproj
@@ -69,4 +65,3 @@ jobs:
       - name: Environments
         run: |
           echo $newTag
-          echo $realeseNote

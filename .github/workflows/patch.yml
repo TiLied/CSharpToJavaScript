@@ -48,7 +48,7 @@ jobs:
       - run: |
           git commit -am "Test ${{env.newTag}}"
           git push
-      - run: git log ${{needs.setup-outputs.outputs.currentTag}}..master --format=format:'[%s](https://github.com/TiLied/CSharpToJavaScript/commit/%H)%n' --output=./realease.txt   
+      - run: git log ${{needs.setup-outputs.outputs.currentTag}}..master --format=format:'- [%s](https://github.com/TiLied/CSharpToJavaScript/commit/%H)%n' --output=./realease.txt   
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1

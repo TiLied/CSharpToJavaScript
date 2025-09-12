@@ -48,6 +48,7 @@ jobs:
       - run: |
           git commit -am "Test ${{env.newTag}}"
           git push
+      - run: git log ${{needs.setup-outputs.outputs.currentTag}}..master --format=format:'[%s](https://github.com/TiLied/CSharpToJavaScript/commit/%H)%n' --output=./realease.txt   
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
@@ -56,8 +57,7 @@ jobs:
         with:
           tag_name: ${{ env.newTag }}
           release_name: ${{ env.newTag }}
-          body: |
-            echo "$(git log ${{needs.setup-outputs.outputs.currentTag}}..master --format=format:'[%s](https://github.com/TiLied/CSharpToJavaScript/commit/%H)%n')"
+          body_path: ./realease.txt
           draft: true
           prerelease: true
       #update release notes in csproj

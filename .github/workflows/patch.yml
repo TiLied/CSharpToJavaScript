@@ -21,7 +21,7 @@ jobs:
         run: echo "currentTag=`echo $(git describe --tags --abbrev=0)`" >> $GITHUB_OUTPUT
       - id: step2
         run: echo "commitCount=`echo $(git rev-list --count $CURRENT_TAG..master)`" >> $GITHUB_OUTPUT
-      - if: setup-outputs.outputs.commitCount >= 5
+      - if: steps.step2.outputs.commitCount >= 5
         id: step3
         run: echo "newTag=echo $outputs.current-tag | awk 'BEGIN{FS=OFS="."} {$3+=1} 1'" >> $GITHUB_OUTPUT
       - name: Environments

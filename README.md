@@ -151,3 +151,4 @@ Website/documentation: https://github.com/TiLied/CSTOJS_Pages
 [MDN-content](https://github.com/mdn/content) for JS api.
 
 
+<VersionPrefix>0.0.09</VersionPrefix>

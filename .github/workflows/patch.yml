@@ -56,7 +56,7 @@ jobs:
         with:
           tag_name: ${{ env.newTag }}
           release_name: ${{ env.newTag }}
-          body: echo "$(git log ${{needs.setup-outputs.outputs.currentTag}}..master --format=format:'[%s](https://github.com/TiLied/CSharpToJavaScript/commit/%H)%n')"
+          body: ${{git log ${{needs.setup-outputs.outputs.currentTag}}..master --format=format:'[%s](https://github.com/TiLied/CSharpToJavaScript/commit/%H)%n'}}
           draft: true
           prerelease: true
       #update release notes in csproj

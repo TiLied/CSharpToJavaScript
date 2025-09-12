@@ -31,7 +31,7 @@ jobs:
     
     runs-on: ubuntu-latest
 
-    if: ${{COMMIT_COUNT >= 500}}
+    if: $COMMIT_COUNT >= 500
     steps:
       - uses: actions/checkout@v5
         with:

@@ -50,7 +50,7 @@ jobs:
           git push
       - id: step2
         run: |
-          local=echo "$(git log ${{needs.setup-outputs.outputs.currentTag}}..master --format=format:'[%s](https://github.com/TiLied/CSharpToJavaScript/commit/%H)%n')"
+          local="$(git log ${{needs.setup-outputs.outputs.currentTag}}..master --format=format:'[%s](https://github.com/TiLied/CSharpToJavaScript/commit/%H)%n')"
           echo "realeseNote=$local" >> $GITHUB_ENV
       - name: Create Release
         id: create_release

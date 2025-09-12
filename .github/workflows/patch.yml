@@ -44,6 +44,7 @@ jobs:
         run: echo "newTag=`echo $(echo ${{needs.setup-outputs.outputs.currentTag}} | awk 'BEGIN{FS=OFS="."} {$3+=1} 1')`" >> $GITHUB_ENV
       - name: Edit csproj
         run: sed -i 's+<VersionPrefix>${{needs.setup-outputs.outputs.currentTag}}</VersionPrefix>+<VersionPrefix>${{env.newTag}}</VersionPrefix>+g' ./README.md
+      - uses: actions4git/setup-git@v1
       - run: |
           git commit -am "Nuget ${{env.newTag}}"
           git push

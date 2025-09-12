@@ -40,7 +40,7 @@ jobs:
       - id: step1
         run: echo "newTag=`echo $(echo ${{needs.setup-outputs.outputs.currentTag}} | awk 'BEGIN{FS=OFS="."} {$3+=1} 1')`" >> $GITHUB_ENV
       - name: Edit csproj
-        run: sed -i 's+<VersionPrefix>${{needs.setup-outputs.outputs.currentTag}}</VersionPrefix>+<VersionPrefix>${{newTag}}</VersionPrefix>+g' ./README.md
+        run: sed -i 's+<VersionPrefix>${{needs.setup-outputs.outputs.currentTag}}</VersionPrefix>+<VersionPrefix>${{env.newTag}}</VersionPrefix>+g' ./README.md
       - run: cat ./README.md
       - id: step2
         run: echo "realeseNote=`echo $(git log 0.0.09..master --format=format:'- [%s](https://github.com/TiLied/CSharpToJavaScript/commit/%H)')`" >> $GITHUB_ENV

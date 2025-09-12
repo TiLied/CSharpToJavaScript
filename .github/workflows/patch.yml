@@ -23,8 +23,8 @@ jobs:
         run: echo "commitCount=`echo $(git rev-list --count ${{steps.step1.outputs.currentTag}}..master)`" >> $GITHUB_OUTPUT
       - if: ${{steps.step2.outputs.commitCount >= 5}}
         id: step3
-        run: echo "newTag=echo ${{steps.step1.outputs.currentTag}} | awk 'BEGIN{FS=OFS="."} {$3+=1} 1'" >> $GITHUB_OUTPUT
-      - name: Environments
+        run: echo "newTag=`echo $(echo ${{steps.step1.outputs.currentTag}} | awk 'BEGIN{FS=OFS="."} {$3+=1} 1')`" >> $GITHUB_OUTPUT
+      - name: Outputs
         run: |
           echo "currentTag: ${{steps.step1.outputs.currentTag}}"
           echo "commitCount: ${{steps.step2.outputs.commitCount}}"

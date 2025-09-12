@@ -21,20 +21,20 @@ jobs:
         run: echo "currentTag=`echo $(git describe --tags --abbrev=0)`" >> $GITHUB_OUTPUT
       - id: step2
         run: echo "commitCount=`echo $(git rev-list --count $CURRENT_TAG..master)`" >> $GITHUB_OUTPUT
-      - if: steps.step2.outputs.commitCount >= 5
+      - if: ${{steps.step2.outputs.commitCount >= 5}}
         id: step3
         run: echo "newTag=echo $outputs.current-tag | awk 'BEGIN{FS=OFS="."} {$3+=1} 1'" >> $GITHUB_OUTPUT
       - name: Environments
         run: |
-          echo "currentTag: $outputs.currentTag"
-          echo "commitCount: $outputs.commitCount"
-          echo "newTag: $outputs.newTag"
+          echo "currentTag: ${{steps.step1.outputs.currentTag}}"
+          echo "commitCount: ${{steps.step2.outputs.commitCount}}"
+          echo "newTag: ${{steps.step3.outputs.newTag}}"
   make-patch:
     needs: setup-outputs
     
     runs-on: ubuntu-latest
 
-    if: needs.setup-outputs.outputs.commitCount >= 5
+    if: ${{needs.setup-outputs.outputs.commitCount >= 5}}
     steps:
       - uses: actions/checkout@v5
         with:

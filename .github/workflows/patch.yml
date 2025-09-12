@@ -9,10 +9,11 @@ on: workflow_dispatch
 jobs:
   setup-outputs:
     runs-on: ubuntu-latest
+    
     outputs:
       currentTag: ${{ steps.step1.outputs.currentTag }}
       commitCount: ${{ steps.step2.outputs.commitCount }}
-      newTag: ${{ steps.step3.outputs.newTag }}
+    
     steps:
       - uses: actions/checkout@v5
         with:
@@ -21,14 +22,11 @@ jobs:
         run: echo "currentTag=`echo $(git describe --tags --abbrev=0)`" >> $GITHUB_OUTPUT
       - id: step2
         run: echo "commitCount=`echo $(git rev-list --count ${{steps.step1.outputs.currentTag}}..master)`" >> $GITHUB_OUTPUT
-      - if: ${{steps.step2.outputs.commitCount >= 5}}
-        id: step3
-        run: echo "newTag=`echo $(echo ${{steps.step1.outputs.currentTag}} | awk 'BEGIN{FS=OFS="."} {$3+=1} 1')`" >> $GITHUB_OUTPUT
+        
       - name: Outputs
         run: |
           echo "currentTag: ${{steps.step1.outputs.currentTag}}"
           echo "commitCount: ${{steps.step2.outputs.commitCount}}"
-          echo "newTag: ${{steps.step3.outputs.newTag}}"
   make-patch:
     needs: setup-outputs
     
@@ -39,4 +37,7 @@ jobs:
       - uses: actions/checkout@v5
         with:
           fetch-depth: 0
-      - run: echo "patch"
+      - id: step1
+        run: echo "newTag=`echo $(echo ${{needs.setup-outputs.outputs.currentTag}} | awk 'BEGIN{FS=OFS="."} {$3+=1} 1')`" >> $GITHUB_ENV
+      - id: step2
+        run: echo "realeseNote=`echo $(git log 0.0.09..master --format=format:"- [%s](https://github.com/TiLied/CSharpToJavaScript/commit/%H)")`" >> $GITHUB_ENV

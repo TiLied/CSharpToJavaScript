@@ -1,0 +1,43 @@
+<docs>
+<PromiseRejectionEvent>
+<summary>
+The <strong><c>PromiseRejectionEvent</c></strong> interface represents events which are sent to the global script context when JavaScript <see cref="Promise"/>s are rejected. These events are particularly useful for telemetry and debugging purposes.
+</summary>
+<remarks>
+<para>For details, see <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises#promise_rejection_events">Promise rejection events</see>.</para><para></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises">Using promises</see><br/>-<see cref="Promise"/><br/>-<see cref="Windowrejectionhandled"/><br/>-<see cref="Windowunhandledrejection"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PromiseRejectionEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</PromiseRejectionEvent>
+<PromiseRejectionEventReason>
+<summary>
+The <see cref="PromiseRejectionEvent"/> <strong><c>reason</c></strong> read-only<br/>property is any JavaScript value or <see cref="Object"/> which provides the reason<br/>passed into <see cref="PromiseReject"/>. This in theory provides information about<br/>why the promise was rejected.
+</summary>
+<remarks>
+<para>-<see cref="Promise"/><br/>-<see cref="PromiseRejectionEvent"/><br/>-<see cref="Window.Rejectionhandled"/><br/>-<see cref="Window.Unhandledrejection"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PromiseRejectionEvent/reason"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A value or object which provides information you can use to understand why the promise<br/>was rejected. This could be anything from an error code to an object with text, links,<br/>and whatever else you might wish to include.</value>
+</PromiseRejectionEventReason>
+<PromiseRejectionEventPromise>
+<summary>
+The <see cref="PromiseRejectionEvent"/> interface's<br/><strong><c>promise</c></strong> read-only property indicates the JavaScript<br/><see cref="Promise"/> which was rejected. You can examine the event's<br/><see cref="PromiseRejectionEvent.Reason"/> property to learn why the promise was<br/>rejected.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises#promise_rejection_events">Promise rejection events</see><br/>-<see cref="Promise"/><br/>-<see cref="PromiseRejectionEvent"/><br/>-<see cref="Window.Rejectionhandled"/><br/>-<see cref="Window.Unhandledrejection"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PromiseRejectionEvent/promise"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The JavaScript <see cref="Promise"/> which was rejected, and whose rejection went<br/>unhandled.</value>
+</PromiseRejectionEventPromise>
+<PromiseRejectionEventPromiseRejectionEvent>
+<summary>
+The <strong><c>PromiseRejectionEvent()</c></strong><br/>constructor returns a new <see cref="PromiseRejectionEvent"/> object, which<br/>represents events fired when a JavaScript <see cref="Promise"/> is rejected.
+</summary>
+<remarks>
+<para>With promise rejection events, it becomes possible to detect and report promises which<br/>fail and whose failures go unnoticed. It also becomes easier to write a global handler<br/>for errors.</para><para>There are two types of <c>PromiseRejectionEvent</c>:<br/><see cref="Window.Unhandledrejection"/> is sent by the JavaScript runtime when a promise is<br/>rejected but the rejection goes unhandled. A <see cref="Window.Rejectionhandled"/> event is<br/>emitted if a promise is rejected but the rejection is caught by a rejection handler.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises">Using promises</see><br/>-<see cref="Promise"/><br/>-<see cref="PromiseRejectionEvent"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PromiseRejectionEvent/PromiseRejectionEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <c>PromiseRejectionEvent</c> object configured as specified by the parameters.</returns>
+</PromiseRejectionEventPromiseRejectionEvent>
+</docs>

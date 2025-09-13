@@ -1,0 +1,30 @@
+<docs>
+<TextEvent>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>TextEvent</c></strong> interface is a legacy UI event interface for reporting changes to text UI elements.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><c>TextEvent</c> events have been superseded by events such as <c>input</c>, <c>beforeinput</c>, <c>keypress</c>, <c>keyup</c>, and <c>keydown</c>.</para></blockquote><para></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</TextEvent>
+<TextEventData>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>data</c></strong> read-only property of the <see cref="TextEvent"/> interface returns the last character added to the input element.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextEvent/data"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing the event data.<br/>For <c>textInput</c> events, this is the character that was last entered.</value>
+</TextEventData>
+<TextEventInitTextEvent>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>initTextEventEvent()</c></strong> method of the <see cref="TextEvent"/> interface initializes the value of a <c>TextEvent</c> after it has been created.
+</summary>
+<remarks>
+<para>This method must be called to set the event before it is dispatched, using <see cref="EventTarget.DispatchEvent"/>.</para><blockquote class="NOTE"><h5>NOTE</h5><para>In general, you won&amp;apos;t create these events yourself; they are created by the browser.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TextEvent/initTextEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</TextEventInitTextEvent>
+</docs>

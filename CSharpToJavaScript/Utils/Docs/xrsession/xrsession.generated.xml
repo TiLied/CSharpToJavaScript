@@ -1,0 +1,271 @@
+<docs>
+<XRSession>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>XRSession</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</see> represents an ongoing XR session, providing methods and properties used to interact with and control the session. To open a WebXR session, use the <see cref="XRSystem"/> interface's <see cref="XRSystem.RequestSession"/> method.
+</summary>
+<remarks>
+<para>With <c>XRSession</c> methods, you can poll the viewer's position and orientation (the <see cref="XRViewerPose"/>), gather information about the user's environment, and present imagery to the user. <c>XRSession</c> supports both inline and immersive virtual and augmented reality modes.</para><para></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRSession"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</XRSession>
+<XRSessionInputsourceschange>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>inputsourceschange</c></strong> event is sent to an <see cref="XRSession"/> when the set of available WebXR input devices changes.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRSession/inputsourceschange"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</XRSessionInputsourceschange>
+<XRSessionEnabledFeatures>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <see cref="XRSession"/> interface's <strong>read-only</strong> <strong><c>enabledFeatures</c></strong> property returns an array of features enabled (granted) for an <c>XRSession</c>. This contains all <c>requiredFeatures</c> and a subset of <c>optionalFeatures</c> that have been requested with <see cref="XRSystem.RequestSession"/>.
+</summary>
+<remarks>
+<para>-<see cref="XRSystem.RequestSession"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/XRSystem/requestSession#session_features">Session features</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRSession/enabledFeatures"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="Array"/> of strings.</value>
+</XRSessionEnabledFeatures>
+<XRSessionSelect>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The WebXR <strong><c>select</c></strong> event is sent to an <see cref="XRSession"/> when one of the session's input sources has completed a <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Inputs#primary_action">primary action</see>.
+</summary>
+<remarks>
+<para>The <see cref="Element.Beforexrselect"/> is fired before this event and can prevent this event from being raised.</para>
+<para>-<see cref="XRSession.Selectstart"/> and <see cref="XRSession.Selectend"/><br/>-<see cref="Element.Beforexrselect"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRSession/select"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</XRSessionSelect>
+<XRSessionRequestReferenceSpace>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>requestReferenceSpace()</c></strong> method of the<br/><see cref="XRSession"/> interface returns a {{JSxRef("promise")}} that resolves with<br/>an instance of either <see cref="XRReferenceSpace"/><br/>or <see cref="XRBoundedReferenceSpace"/> as appropriate given the type of reference<br/>space requested.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRSession/requestReferenceSpace"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{JSxRef("Promise")}} that resolves with an <see cref="XRReferenceSpace"/> object.The types of reference space are listed below, with brief information about their use cases and which interface is used to implement them.</returns>
+</XRSessionRequestReferenceSpace>
+<XRSessionDepthDataFormat>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong>read-only</strong> <strong><c>depthDataFormat</c></strong> property of an <c>immersive-ar</c><br/><see cref="XRSession"/> describes which depth sensing data format is used.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRSession/depthDataFormat"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>This property can return the following values:</value>
+</XRSessionDepthDataFormat>
+<XRSessionSelectstart>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR</see> <strong><c>selectstart</c></strong> event is sent to an <see cref="XRSession"/> when the user begins a <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Inputs#primary_action">primary action</see> on one of its input sources.
+</summary>
+<remarks>
+<para>The <see cref="Element.Beforexrselect"/> is fired before this event and can prevent this event from being raised.</para>
+<para>-<see cref="XRSession.Select"/> and <see cref="XRSession.Selectend"/><br/>-<see cref="Element.Beforexrselect"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRSession/selectstart"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</XRSessionSelectstart>
+<XRSessionInteractionMode>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <see cref="XRSession"/> interface's <strong>read-only</strong> <strong><c>interactionMode</c></strong> property<br/>describes the best space (according to the user agent) for the application to draw an interactive UI for the current session.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRSession/interactionMode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string describing the best space (according to the user agent) for the application to draw an interactive UI<br/>for the current session.Possible values are:</value>
+</XRSessionInteractionMode>
+<XRSessionVisibilitychange>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>visibilitychange</c></strong> event is sent to an <see cref="XRSession"/> to inform it when it becomes visible or hidden, or when it becomes visible but not currently focused. Upon receiving the event, you can check the value of the session's <see cref="XRSession.VisibilityState"/> property to determine the new visibility state.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRSession/visibilitychange"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</XRSessionVisibilitychange>
+<XRSessionRequestHitTestSourceForTransientInput>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>requestHitTestSourceForTransientInput()</c></strong> method of the<br/><see cref="XRSession"/> interface returns a {{jsxref("Promise")}} that resolves with an <see cref="XRTransientInputHitTestSource"/> object that can be passed to <see cref="XRFrame.GetHitTestResultsForTransientInput"/>.
+</summary>
+<remarks>
+<para>-<see cref="XRSession.RequestHitTestSource"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRSession/requestHitTestSourceForTransientInput"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that resolves with an <see cref="XRTransientInputHitTestSource"/> object.</returns>
+</XRSessionRequestHitTestSourceForTransientInput>
+<XRSessionRenderState>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The<br/><strong>read-only</strong> <strong><c>renderState</c></strong> property of an<br/><see cref="XRSession"/> object indicates the returns a <see cref="XRRenderState"/><br/>object describing how the user&amp;apos;s environment which should be rendered. The<br/>information provided covers the minimum and maximum distance at which to render objects,<br/>the vertical field of view to use when rendering the in the <c>inline</c> session<br/>mode, and the <see cref="XRWebGLLayer"/> to render into for inline composition.
+</summary>
+<remarks>
+<para>While this property is read only, you can call the <see cref="XRSession"/> method<br/><see cref="XRSession.UpdateRenderState"/> to make changes.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRSession/renderState"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="XRRenderState"/> object describing how to render the scene.</value>
+</XRSessionRenderState>
+<XRSessionInputSources>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The read-only <strong><c>inputSources</c></strong> property of the<br/><see cref="XRSession"/> interface returns an <see cref="XRInputSourceArray"/> object<br/>which lists all controllers and input devices which are expressly associated with the<br/>XR device and are currently available. These controllers may include handheld<br/>controllers, XR-equipped gloves, optically tracked hands, and gaze-based input methods.<br/>Keyboards, gamepads, and mice are <strong>not</strong> considered WebXR input sources.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Traditional gamepad controllers are supported using the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API">Gamepad API</see>.</para></blockquote>
+<para>-<see cref="XRInputSource"/><br/>-The <see cref="XRSession.Inputsourceschange"/> event<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API">Gamepad API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRSession/inputSources"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="XRInputSourceArray"/> object listing all of the currently-connected<br/>input controllers which are linked specifically to the XR device currently in use. The<br/>returned object is <strong>live</strong>; as devices are connected to and removed from<br/>the user&amp;apos;s system, the list&amp;apos;s contents update to reflect the changes.</value>
+</XRSessionInputSources>
+<XRSessionUpdateRenderState>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <c>updateRenderState()</c> method of the <see cref="XRSession"/> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR API</see> schedules changes to be applied to the active render state (<see cref="XRRenderState"/>) prior to rendering of the next frame.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</see><br/>-<see cref="XRRenderState"/><br/>-<see cref="XRSession.RenderState"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRSession/updateRenderState"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</XRSessionUpdateRenderState>
+<XRSessionSqueezestart>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR</see> event <strong><c>squeezestart</c></strong> is sent to an <see cref="XRSession"/> when the user begins a <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Inputs#primary_squeeze_action">primary squeeze action</see> on one of its input sources.
+</summary>
+<remarks>
+<para>Primary squeeze actions are actions which are meant to represent gripping or squeezing using your hands, and may be simulated using triggers on hand controllers.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRSession/squeezestart"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</XRSessionSqueezestart>
+<XRSessionVisibilityState>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong>read-only</strong> <strong><c>visibilityState</c></strong> property of the<br/><see cref="XRSession"/> interface is a string indicating whether the WebXR content is<br/>currently visible to the user, and if it is, whether it&amp;apos;s the primary focus.
+</summary>
+<remarks>
+<para>Every time the visibility state changes, a<br/><see cref="XRSession.Visibilitychange"/> event is fired on the<br/><see cref="XRSession"/> object.</para>
+<para>-<see cref="XRSession.Visibilitychange"/> event<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRSession/visibilityState"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string indicating whether or not the XR content is<br/>visible to the user and if it is, whether or not it&amp;apos;s currently the primary focus.The possible values of <c>visibilityState</c> are:</value>
+</XRSessionVisibilityState>
+<XRSessionSelectend>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The WebXR event <strong><c>selectend</c></strong> is sent to an <see cref="XRSession"/> when one of its input sources ends its <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Inputs#primary_action">primary action</see> or when an input source that&amp;apos;s in the process of handling an ongoing primary action is disconnected without successfully completing the action.
+</summary>
+<remarks>
+<para>The <see cref="Element.Beforexrselect"/> is fired before this event and can prevent this event from being raised.</para>
+<para>-<see cref="XRSession.Select"/> and <see cref="XRSession.Selectstart"/><br/>-<see cref="Element.Beforexrselect"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRSession/selectend"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</XRSessionSelectend>
+<XRSessionRequestAnimationFrame>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <see cref="XRSession"/><br/>method <strong><c>requestAnimationFrame()</c></strong>, much like the<br/><see cref="Window"/> method of the same name, schedules a callback to be executed the<br/>next time the browser is ready to paint the session&amp;apos;s virtual environment to the XR<br/>display. The specified callback is executed once before the next repaint; if<br/>you wish for it to be executed for the following repaint, you must<br/>call <c>requestAnimationFrame()</c> again. This can be done from within the<br/>callback itself.
+</summary>
+<remarks>
+<para>The callback takes two parameters as inputs: an <see cref="XRFrame"/> describing the<br/>state of all tracked objects for the session, and a timestamp you can use to compute<br/>any animation updates needed.</para><para>You can cancel a previously scheduled animation by calling<br/><see cref="XRSession.CancelAnimationFrame"/>.</para><blockquote class="NOTE"><h5>NOTE</h5><para>Despite the obvious similarities between these methods and the<br/>global <see cref="Window.RequestAnimationFrame"/> function<br/>provided by the <c>Window</c> interface, you <strong>must not</strong> treat these as<br/>interchangeable. There is <strong>no</strong> guarantee that the latter will work at all while<br/>an immersive XR session is underway.</para></blockquote>
+<para>-<see cref="Window.RequestAnimationFrame"/><br/>-<see cref="XRSession.CancelAnimationFrame"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRSession/requestAnimationFrame"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An integer value which serves as a unique, non-zero ID or handle you may pass to<br/><see cref="XRSession.CancelAnimationFrame"/> if you need to<br/>remove the pending animation frame request.</returns>
+</XRSessionRequestAnimationFrame>
+<XRSessionSqueezeend>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The WebXR event <strong><c>squeezeend</c></strong> is sent to an <see cref="XRSession"/> when one of its input sources ends its <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Inputs#primary_squeeze_action">primary action</see> or when an input source that&amp;apos;s in the process of handling an ongoing primary action is disconnected without successfully completing the action.
+</summary>
+<remarks>
+<para>Primary squeeze actions include things like users pressing triggers or buttons, tapping a touchpad, speaking a command, or performing a recognizable gesture when using a video tracking system or handheld controller with an accelerometer.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRSession/squeezeend"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</XRSessionSqueezeend>
+<XRSessionEnd>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>end()</c></strong> method shuts down the<br/><see cref="XRSession"/> on which it's called, returning a promise which resolves once<br/>the session has fully shut down.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRSession/end"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves without a value after any platform-specific steps<br/>related to shutting down the session have completed. You can use the promise to do<br/>things like update UI elements to reflect the shut down connection, trigger application<br/>shut down, or whatever else you might need to do.</returns>
+</XRSessionEnd>
+<XRSessionDomOverlayState>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong>read-only</strong> <strong><c>domOverlayState</c></strong> property of an <c>immersive-ar</c><br/><see cref="XRSession"/> provides information about the DOM overlay, if the feature is enabled.
+</summary>
+<remarks>
+<para>-<see cref="Element.Beforexrselect"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRSession/domOverlayState"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>Returns <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><c>null</c></see> if the DOM overlay feature is not supported or not enabled or an object containing information about the DOM overlay state with the following properties:</value>
+</XRSessionDomOverlayState>
+<XRSessionRequestHitTestSource>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>requestHitTestSource()</c></strong> method of the<br/><see cref="XRSession"/> interface returns a {{jsxref("Promise")}} that resolves with an <see cref="XRHitTestSource"/> object that can be passed to <see cref="XRFrame.GetHitTestResults"/>.
+</summary>
+<remarks>
+<para>-<see cref="XRSession.RequestHitTestSourceForTransientInput"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRSession/requestHitTestSource"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that resolves with an <see cref="XRHitTestSource"/> object.</returns>
+</XRSessionRequestHitTestSource>
+<XRSessionEnvironmentBlendMode>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <see cref="XRSession"/> interface's <strong>read-only</strong> <strong><c>environmentBlendMode</c></strong><br/>property identifies if, and to what degree, the computer-generated imagery is overlaid atop the real world.
+</summary>
+<remarks>
+<para>This is used to differentiate between fully-immersive VR sessions and AR sessions which render<br/>over a pass-through image of the real world, possibly partially transparently.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRSession/environmentBlendMode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string defining if and how virtual, rendered content is overlaid atop the image of the real world.Possible values are:</value>
+</XRSessionEnvironmentBlendMode>
+<XRSessionPreferredReflectionFormat>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong>read-only</strong> <strong><c>preferredReflectionFormat</c></strong> property of the <see cref="XRSession"/> interface returns this session's preferred reflection format used for lighting estimation texture data.
+</summary>
+<remarks>
+<para>-<see cref="XRSession.RequestLightProbe"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRSession/preferredReflectionFormat"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing the reflection format. Possible values:<table><tr><td>XRReflectionFormat</td><td>WebGL Format</td><td>WebGL Internal Format</td><td>WebGPU Format</td><td>HDR</td></tr><tr><td>&amp;quot;srgba8&amp;quot;</td><td>RGBA</td><td>SRGB8_ALPHA8</td><td>&amp;quot;rgba8unorm-srgb&amp;quot;</td><td></td></tr><tr><td>&amp;quot;rgba16f&amp;quot;</td><td>RGBA</td><td>RGBA16F</td><td>&amp;quot;rgba16float&amp;quot;</td><td>✓</td></tr></table></value>
+</XRSessionPreferredReflectionFormat>
+<XRSessionCancelAnimationFrame>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>cancelAnimationFrame()</c></strong> method of<br/>the <see cref="XRSession"/> interface cancels an animation frame which was previously<br/>requested by calling <see cref="XRSession.RequestAnimationFrame"/>.
+</summary>
+<remarks>
+<para>-<see cref="Window.CancelAnimationFrame"/><br/>-<see cref="XRSession.RequestAnimationFrame"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRSession/cancelAnimationFrame"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</XRSessionCancelAnimationFrame>
+<XRSessionSqueeze>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The WebXR <strong><c>squeeze</c></strong> event is sent to an <see cref="XRSession"/> when one of the session's input sources has completed a <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Inputs#primary_squeeze_action">primary squeeze action</see>. Examples of common kinds of primary action are users pressing triggers or buttons, tapping a touchpad, speaking a command, or performing a recognizable gesture when using a video tracking system or handheld controller with an accelerometer.
+</summary>
+<remarks>
+<para>For details on how the <see cref="XRSession.Squeezestart"/>, <c>squeeze</c>, and <see cref="XRSession.Squeezeend"/> events work, and how you should react to them, see <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Inputs#input_sources">Inputs and input sources</see>.</para>
+<para>-<see cref="XRSession.Squeezestart"/> and <see cref="XRSession.Squeezeend"/> event<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRSession/squeeze"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</XRSessionSqueeze>
+<XRSessionRequestLightProbe>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>requestLightProbe()</c></strong> method of the<br/><see cref="XRSession"/> interface returns a {{jsxref("Promise")}} that resolves with an <see cref="XRLightProbe"/> object that estimates lighting information at a given point in the user's environment.
+</summary>
+<remarks>
+<para>-<see cref="XRSession.PreferredReflectionFormat"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRSession/requestLightProbe"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that resolves with an <see cref="XRLightProbe"/> object.</returns>
+</XRSessionRequestLightProbe>
+<XRSessionEnd>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> An <c>end</c> event is fired at an <see cref="XRSession"/> object when the WebXR session has ended, either because the web application has chosen to stop the session, or because the {{Glossary("user agent")}} terminated the session.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRSession/end"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</XRSessionEnd>
+<XRSessionDepthUsage>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong>read-only</strong> <strong><c>depthUsage</c></strong> property of an <c>immersive-ar</c><br/><see cref="XRSession"/> describes which depth-sensing usage is used.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRSession/depthUsage"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>This property can return the following values:</value>
+</XRSessionDepthUsage>
+</docs>

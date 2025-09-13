@@ -1,0 +1,31 @@
+<docs>
+<XMLSerializer>
+<summary>
+The <c>XMLSerializer</c> interface provides the <see cref="XMLSerializer.SerializeToString"/> method to construct an XML string representing a {{Glossary("DOM")}} tree.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>The resulting XML string is not guaranteed to be well-formed XML.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/XML/Guides/Parsing_and_serializing_XML">Parsing and serializing XML</see><br/>-<see cref="DOMParser"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XMLSerializer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</XMLSerializer>
+<XMLSerializerSerializeToString>
+<summary>
+The <see cref="XMLSerializer"/> method<br/><strong><c>serializeToString()</c></strong> constructs a string representing the<br/>specified <see href="https://developer.mozilla.org/en-US/docs/Glossary/DOM">DOM</see> tree in <see href="https://developer.mozilla.org/en-US/docs/Glossary/XML">XML</see> form.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/XML/Guides/Parsing_and_serializing_XML">Parsing and serializing XML</see><br/>-Serializing to HTML: <see cref="Element.InnerHTML"/> and<br/><see cref="Element.OuterHTML"/><br/>-Parsing HTML or XML to create a DOM tree: <see cref="DOMParser"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XMLSerializer/serializeToString"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A string containing the XML representation of the specified DOM tree.</returns>
+</XMLSerializerSerializeToString>
+<XMLSerializerXMLSerializer>
+<summary>
+The <strong><c>XMLSerializer()</c></strong> constructor creates a new <see cref="XMLSerializer"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XMLSerializer/XMLSerializer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="XMLSerializer"/> object.</returns>
+</XMLSerializerXMLSerializer>
+</docs>

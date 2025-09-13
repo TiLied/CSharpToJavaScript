@@ -1,0 +1,87 @@
+<docs>
+<MathMLElement>
+<summary>
+The <strong><c>MathMLElement</c></strong> interface represents any <see href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</see> element.
+</summary>
+<remarks>
+<para></para>
+<para>-<see cref="Element"/><br/>-<see cref="HTMLElement"/><br/>-<see cref="SVGElement"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MathMLElement"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</MathMLElement>
+<MathMLElementAttributeStyleMap>
+<summary>
+The <strong><c>attributeStyleMap</c></strong> read-only property of the <see cref="MathMLElement"/> interface returns a live <see cref="StylePropertyMap"/> object that contains a list of style properties of the element that are defined in the element's inline <c>style</c> attribute, or assigned using the <see cref="MathMLElement.Style"/> property of the <see cref="MathMLElement"/> interface via script.
+</summary>
+<remarks>
+<para>Shorthand properties are expanded. If you set <c>border-top: 1px solid black</c>, the longhand properties (<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-top-color">border-top-color</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-top-style">border-top-style</see>, and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-top-width">border-top-width</see>) are set instead.</para><para>The main difference between <see cref="MathMLElement.Style"/> property and <c>attributeStyleMap</c> property is that, the <c>style</c> property will return a <see cref="CSSStyleDeclaration"/> object, while the <c>attributeStyleMap</c> property will return a <see cref="StylePropertyMap"/> object.</para><para>Though the property itself is not writable, you could read and write inline styles through the <see cref="StylePropertyMap"/> object that it returns, just like through the <see cref="CSSStyleDeclaration"/> object that returns via the <c>style</c> property.</para>
+<para>-<see cref="MathMLElement.Style"/><br/>-<see cref="HTMLElement.AttributeStyleMap"/><br/>-<see cref="SVGElement.AttributeStyleMap"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MathMLElement/attributeStyleMap"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A live <see cref="StylePropertyMap"/> object.</value>
+</MathMLElementAttributeStyleMap>
+<MathMLElementDataset>
+<summary>
+The <strong><c>dataset</c></strong> read-only property of the <see cref="MathMLElement"/> interface provides read/write access to <see href="https://developer.mozilla.org/en-US/docs/Web/MathML/Reference/Global_attributes/data-*">custom data attributes</see> (<c>data-*</c>) on elements. It exposes a map of strings (<see cref="DOMStringMap"/>) with an entry for each <c>data-*</c> attribute.
+</summary>
+<remarks>
+<para>The <c>dataset</c> property itself can be read, but not directly written. Instead, all writes must be to the individual properties within the <c>dataset</c>, which in turn represent the data attributes.</para>
+<para>-<see cref="HTMLElement.Dataset"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/MathML/Reference/Global_attributes/data-*"><c>data-*</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/How_to/Use_data_attributes">Using data attributes</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MathMLElement/dataset"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DOMStringMap"/>.</value>
+</MathMLElementDataset>
+<MathMLElementStyle>
+<summary>
+The read-only <strong><c>style</c></strong> property of the <see cref="MathMLElement"/> returns the <strong>inline</strong> style of an element in the form of a live <see cref="CSSStyleDeclaration"/> object that contains a list of all styles properties for that element with values assigned only for the attributes that are defined in the element's inline <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/style"><c>style</c></see> attribute.
+</summary>
+<remarks>
+<para>Shorthand properties are expanded. If you set <c>style=&amp;quot;border-top: 1px solid black&amp;quot;</c>, the longhand properties (<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-top-color">border-top-color</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-top-style">border-top-style</see>, and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-top-width">border-top-width</see>) are set instead.</para><para>This property is read-only, meaning it is not possible to assign a <see cref="CSSStyleDeclaration"/> object to it. Nevertheless, it is possible to set an inline style by assigning a <strong>string</strong> directly to the <c>style</c> property. In this case the string is forwarded to <see cref="CSSStyleDeclaration.CssText"/>. Using <c>style</c> in this manner will completely overwrite all inline styles on the element.</para><para>Therefore, to add specific styles to an element without altering other style values, it is generally preferable to set individual properties on the <see cref="CSSStyleDeclaration"/> object. For example, you can write <c>element.style.backgroundColor = &amp;quot;red&amp;quot;</c>.</para><para>A style declaration is reset by setting it to <c>null</c> or an empty string, e.g., <c>elt.style.color = null</c>.</para><blockquote class="NOTE"><h5>NOTE</h5><para>CSS property names are converted to JavaScript identifier with these rules:</para><para>The <c>style</c> property has the same priority in the CSS cascade as an inline style declaration set via the <c>style</c> attribute.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information">Using dynamic styling information</see><br/>-<see cref="HTMLElement.Style"/><br/>-<see cref="SVGElement.Style"/><br/>-<see cref="MathMLElement.AttributeStyleMap"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MathMLElement/style"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A live <see cref="CSSStyleDeclaration"/> object.</value>
+</MathMLElementStyle>
+<MathMLElementTabIndex>
+<summary>
+The <strong><c>tabIndex</c></strong> property of the <see cref="MathMLElement"/> interface represents the tab order of the current MathML element.
+</summary>
+<remarks>
+<para>Tab order is as follows:</para><para>Elements that are disabled do not participate in the tabbing order. Values don&amp;apos;t need to be sequential, nor must they begin with any particular value. They may even be negative, though each browser trims very large values.</para>
+<para>-<see cref="HTMLElement.TabIndex"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Guides/Keyboard-navigable_JavaScript_widgets">Accessibility of keyboard-navigable JavaScript widgets</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/MathML/Reference/Global_attributes/tabindex"><c>tabindex</c></see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MathMLElement/tabIndex"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer.</value>
+</MathMLElementTabIndex>
+<MathMLElementBlur>
+<summary>
+The <strong><c>blur()</c></strong> method of the <see cref="MathMLElement"/> interface removes keyboard focus from the current MathML element.
+</summary>
+<remarks>
+<para>-<see cref="MathMLElement.Focus"/><br/>-<see cref="HTMLElement.Blur"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MathMLElement/blur"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</MathMLElementBlur>
+<MathMLElementAutofocus>
+<summary>
+The <strong><c>autofocus</c></strong> property of the <see cref="MathMLElement"/> interface contains a boolean value reflecting the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/autofocus"><c>autofocus</c></see> HTML global attribute. It indicates whether the MathML element should be focused when the page loads or when the element becomes shown if the MathML element is inside a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog">dialog</see> or a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/popover">popover</see>.
+</summary>
+<remarks>
+<para>-<see cref="MathMLElement.Focus"/><br/>-<see cref="HTMLElement.Autofocus"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API">Popover API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MathMLElement/autofocus"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value.</value>
+</MathMLElementAutofocus>
+<MathMLElementFocus>
+<summary>
+The <strong><c>focus()</c></strong> method of the <see cref="MathMLElement"/> interface sets focus on the specified MathML element, if it can be focused. The focused element is the element that will receive keyboard and similar events by default.
+</summary>
+<remarks>
+<para>By default the browser will scroll the element into view after focusing it, and it may also provide visible indication of the focused element (typically by displaying a &amp;quot;focus ring&amp;quot; around the element). Parameter options are provided to disable the default scrolling and force visible indication on elements. If you call <c>focus()</c> from a <c>mousedown</c> event handler, you must call <c>event.preventDefault()</c> to keep the focus from leaving the <c>MathMLElement</c>.</para>
+<para>-<see cref="MathMLElement.Blur"/><br/>-<see cref="HTMLElement.Focus"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MathMLElement/focus"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</MathMLElementFocus>
+</docs>

@@ -1,0 +1,21 @@
+<docs>
+<XRSubImage>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>XRSubImage</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</see> represents what viewport of the GPU texture to use for rendering.
+</summary>
+<remarks>
+<para>-<see cref="XRWebGLSubImage"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRSubImage"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</XRSubImage>
+<XRSubImageViewport>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The read-only <strong><c>viewport</c></strong> property of the <see cref="XRSubImage"/> interface represents the <see cref="XRViewport"/> that is used when rendering the sub image.
+</summary>
+<remarks>
+<para>-<see cref="XRViewport"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRSubImage/viewport"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="XRViewport"/>.</value>
+</XRSubImageViewport>
+</docs>

@@ -1,0 +1,89 @@
+<docs>
+<KeyboardLayoutMap>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>KeyboardLayoutMap</c></strong> interface of the {{domxref(&amp;quot;Keyboard API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} is a read-only object with functions for retrieving the string associated with specific physical keys.
+</summary>
+<remarks>
+<para>A <c>KeyboardLayoutMap</c> instance is a read-only <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map#map-like_browser_apis"><c>Map</c>-like object</see>, in which each key is a string identifying the unique physical key on the keyboard (a &amp;quot;key code&amp;quot;), and the corresponding value is the associated key attribute value (which may be affected by the keyboard layout, and so on).</para><para>A list of valid keys is found in the <see href="https://w3c.github.io/uievents-code/">UI Events KeyboardEvent code Values</see> specification.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardLayoutMap"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</KeyboardLayoutMap>
+<KeyboardLayoutMapEntries>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>entries()</c></strong> method of the <see cref="KeyboardLayoutMap"/> interface returns a new <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator">Iterator</see> object that contains the key/value pairs, in the same order as that provided by a <see cref="Statements/forIn"/> loop (the difference being that a <c>for-in</c> loop enumerates properties in the prototype chain as well).
+</summary>
+<remarks>
+<para>The method is otherwise the same as <see cref="MapPrototypeEntries"/>.</para>
+<para>-<see cref="MapPrototypeEntries"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardLayoutMap/entries"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator">Iterator</see> object.</returns>
+</KeyboardLayoutMapEntries>
+<KeyboardLayoutMapHas>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>has()</c></strong> method of the<br/><see cref="'KeyboardLayoutMap'"/> interface returns a boolean indicating whether the<br/>object has an element with the specified key.
+</summary>
+<remarks>
+<para><blockquote class="TIP"><h5>TIP</h5> Partialy supported as <see cref="System.Collections.Generic.Dictionary<object, object>.ContainsKey" /></blockquote></para>
+<para>A list of valid keys is found in<br/>the <see href="https://w3c.github.io/uievents-code/">UI Events KeyboardEvent code Values</see> specification.</para><para>The method is otherwise the same as <see cref="MapPrototypeHas"/>.</para>
+<para>-<see cref="MapPrototypeHas"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardLayoutMap/has"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="'Boolean'"/> indicating whether the specified key was found.</returns>
+</KeyboardLayoutMapHas>
+<KeyboardLayoutMapForEach>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>forEach()</c></strong> method of the<br/><see cref="'KeyboardLayoutMap'"/> interface executes a provided function once for<br/>each element of the map.
+</summary>
+<remarks>
+<para>The method is otherwise the same as <see cref="MapPrototypeForEach"/>.</para>
+<para>-<see cref="MapPrototypeForEach"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardLayoutMap/forEach"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</KeyboardLayoutMapForEach>
+<KeyboardLayoutMapSize>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>size</c></strong> read-only property of<br/>the <see cref="KeyboardLayoutMap"/> interface returns the number of elements in the<br/>map.
+</summary>
+<remarks>
+<para>The property is otherwise the same as <see cref="MapPrototypeSize"/>.</para>
+<para>-<see cref="MapPrototypeSize"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardLayoutMap/size"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</KeyboardLayoutMapSize>
+<KeyboardLayoutMapGet>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>get()</c></strong> method of the<br/><see cref="'KeyboardLayoutMap'"/> interface returns the element with the given<br/>key.
+</summary>
+<remarks>
+<para>A list of valid keys is found in the <see href="https://w3c.github.io/uievents-code/">UI Events KeyboardEvent code Values</see> specification.</para><para>The method is otherwise the same as <see cref="MapPrototypeGet"/>.</para>
+<para>-<see cref="MapPrototypeGet"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardLayoutMap/get"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>The value of the specified key.</returns>
+</KeyboardLayoutMapGet>
+<KeyboardLayoutMapKeys>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>keys()</c></strong> method of the <see cref="KeyboardLayoutMap"/> interface returns a new <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator">Iterator</see> object that contains the keys for each index in the <c>KeyboardLayoutMap</c> object.
+</summary>
+<remarks>
+<para>The method is otherwise the same as <see cref="MapPrototypeKeys"/>.</para>
+<para>-<see cref="MapPrototypeKeys"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardLayoutMap/keys"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator">Iterator</see> object.</returns>
+</KeyboardLayoutMapKeys>
+<KeyboardLayoutMapValues>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>values()</c></strong> method of the <see cref="KeyboardLayoutMap"/> interface returns a new <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator">Iterator</see> object that contains the values for each index in the <c>KeyboardLayoutMap</c> object.
+</summary>
+<remarks>
+<para>The method is otherwise the same as <see cref="MapPrototypeValues"/>.</para>
+<para>-<see cref="MapPrototypeValues"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardLayoutMap/values"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator">Iterator</see> object.</returns>
+</KeyboardLayoutMapValues>
+</docs>

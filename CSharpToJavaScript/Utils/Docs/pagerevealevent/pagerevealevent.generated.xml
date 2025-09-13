@@ -1,0 +1,31 @@
+<docs>
+<PageRevealEvent>
+<summary>
+The <strong><c>PageRevealEvent</c></strong> event object is made available inside handler functions for the <see cref="Window.Pagereveal"/> event.
+</summary>
+<remarks>
+<para>During a cross-document navigation, it allows you to manipulate a related <see href="https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API">view transition</see> (providing access to the relevant <see cref="ViewTransition"/> object) from the document being navigated <strong>to</strong>, if a view transition was triggered by the navigation.</para><para>Outside view transitions, this event is also useful for cases such as triggering a startup animation, or reporting a page view. It's equivalent to the first <see cref="Window.RequestAnimationFrame"/> run after a cross-document navigation, if you were to trigger <c>requestAnimationFrame()</c> in the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head">head</see> of the document. For example, if you ran the following <c>reveal()</c> function in the <c>&amp;lt;head&amp;gt;</c>:</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API">View Transition API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PageRevealEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</PageRevealEvent>
+<PageRevealEventViewTransition>
+<summary>
+The <strong><c>viewTransition</c></strong> read-only property of the <see cref="PageRevealEvent"/> interface contains a <see cref="ViewTransition"/> object representing the active view transition for the cross-document navigation.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Navigation_API">Navigation API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API">View Transition API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PageRevealEvent/viewTransition"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="ViewTransition"/> object, or <c>null</c> if no view transition is active when the event is fired.</value>
+</PageRevealEventViewTransition>
+<PageRevealEventPageRevealEvent>
+<summary>
+The <strong><c>PageRevealEvent()</c></strong> constructor creates a new<br/><see cref="PageRevealEvent"/> object instance.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API">View Transition API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PageRevealEvent/PageRevealEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</PageRevealEventPageRevealEvent>
+</docs>

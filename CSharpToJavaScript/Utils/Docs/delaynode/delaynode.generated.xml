@@ -1,0 +1,32 @@
+<docs>
+<DelayNode>
+<summary>
+The <strong><c>DelayNode</c></strong> interface represents a <see href="https://en.wikipedia.org/wiki/Digital_delay_line">delay-line</see>; an <see cref="AudioNode"/> audio-processing module that causes a delay between the arrival of an input data and its propagation to the output.
+</summary>
+<remarks>
+<para>A <c>DelayNode</c> always has exactly one input and one output, both with the same amount of channels.</para><para><see href="https://developer.mozilla.orgwebaudiodelaynode.png">The DelayNode acts as a delay-line, here with a value of 1s.</see></para><para>When creating a graph that has a cycle, it is mandatory to have at least one <c>DelayNode</c> in the cycle, or the nodes taking part in the cycle will be muted.</para><para></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DelayNode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</DelayNode>
+<DelayNodeDelayNode>
+<summary>
+The <strong><c>DelayNode()</c></strong><br/>constructor of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see><br/>creates a new <see cref="DelayNode"/> object with a delay-line; an AudioNode<br/>audio-processing module that causes a delay between the arrival of an input data, and<br/>its propagation to the output.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DelayNode/DelayNode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="DelayNode"/> object instance.</returns>
+</DelayNodeDelayNode>
+<DelayNodeDelayTime>
+<summary>
+The <c>delayTime</c> property of the <see cref="DelayNode"/> interface is an <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam#a-rate">a-rate</see> <see cref="AudioParam"/> representing the amount of delay to apply.
+</summary>
+<remarks>
+<para><c>delayTime</c> is expressed in seconds, its minimal value is <c>0</c>, and its maximum value is defined by the <c>maxDelayTime</c> argument of the <see cref="BaseAudioContext.CreateDelay"/> method that created it.</para><blockquote class="NOTE"><h5>NOTE</h5><para>Though the <see cref="AudioParam"/> returned is read-only, the value it represents is not.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DelayNode/delayTime"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="AudioParam"/>.</value>
+</DelayNodeDelayTime>
+</docs>

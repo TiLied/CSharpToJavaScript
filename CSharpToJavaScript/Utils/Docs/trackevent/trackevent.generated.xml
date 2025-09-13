@@ -1,0 +1,30 @@
+<docs>
+<TrackEvent>
+<summary>
+The <strong><c>TrackEvent</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API">HTML DOM API</see> is used for events which represent changes to a set of available tracks on an HTML media element; these events are <c>addtrack</c> and <c>removetrack</c>.
+</summary>
+<remarks>
+<para>It&amp;apos;s important not to confuse <c>TrackEvent</c> with the <see cref="RTCTrackEvent"/> interface, which is used for tracks which are part of an <see cref="RTCPeerConnection"/>.</para><para>Events based on <c>TrackEvent</c> are always sent to one of the media track list types:</para><para></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TrackEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</TrackEvent>
+<TrackEventTrack>
+<summary>
+The read-only <strong><c>track</c></strong> property of<br/>the <see cref="TrackEvent"/> interface specifies the media track object to which the<br/>event applies.
+</summary>
+<remarks>
+<para>The media track will be an <see cref="AudioTrack"/>,<br/><see cref="VideoTrack"/>, or <see cref="TextTrack"/> object.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TrackEvent/track"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An object which is one of the types <see cref="AudioTrack"/>,<br/><see cref="VideoTrack"/>, or <see cref="TextTrack"/>, depending on the type of media<br/>represented by the track. This identifies the track to which the event applies.</value>
+</TrackEventTrack>
+<TrackEventTrackEvent>
+<summary>
+The <strong><c>TrackEvent()</c></strong> constructor<br/>creates and returns a new <see cref="TrackEvent"/> object describing an event which<br/>occurred on a list of tracks (<see cref="AudioTrackList"/>,<br/><see cref="VideoTrackList"/>, or <see cref="TextTrackList"/>).
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TrackEvent/TrackEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="TrackEvent"/> object, initialized as described by the<br/>inputs to the constructor.</returns>
+</TrackEventTrackEvent>
+</docs>

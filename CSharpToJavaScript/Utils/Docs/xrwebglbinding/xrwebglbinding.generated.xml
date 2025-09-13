@@ -1,0 +1,123 @@
+<docs>
+<XRWebGLBinding>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>XRWebGLBinding</c></strong> interface is used to create layers that have a GPU backend.
+</summary>
+<remarks>
+<para>-<see cref="XRWebGLLayer"/><br/>-<see cref="'WebGLRenderingContext'"/> and <see cref="WebGL2RenderingContext"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLBinding"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</XRWebGLBinding>
+<XRWebGLBindingGetSubImage>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>getSubImage()</c></strong> method of the <see cref="XRWebGLBinding"/> interface returns a <see cref="XRWebGLSubImage"/> object representing the WebGL texture to render.
+</summary>
+<remarks>
+<para>-<see cref="XRWebGLSubImage"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLBinding/getSubImage"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="XRWebGLSubImage"/> object.</returns>
+</XRWebGLBindingGetSubImage>
+<XRWebGLBindingGetViewSubImage>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>getViewSubImage()</c></strong> method of the <see cref="XRWebGLBinding"/> interface returns a <see cref="XRWebGLSubImage"/> object representing the WebGL texture to render for a view.
+</summary>
+<remarks>
+<para>-<see cref="XRWebGLSubImage"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLBinding/getViewSubImage"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="XRWebGLSubImage"/> object.</returns>
+</XRWebGLBindingGetViewSubImage>
+<XRWebGLBindingGetDepthInformation>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>getDepthInformation()</c></strong> method of the <see cref="XRWebGLBinding"/> interface returns an <see cref="XRWebGLDepthInformation"/> object containing WebGL depth information.
+</summary>
+<remarks>
+<para>-<see cref="XRWebGLDepthInformation.Texture"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLBinding/getDepthInformation"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="XRWebGLDepthInformation"/> object.</returns>
+</XRWebGLBindingGetDepthInformation>
+<XRWebGLBindingCreateProjectionLayer>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>createProjectionLayer()</c></strong> method of the <see cref="XRWebGLBinding"/> interface returns an <see cref="XRProjectionLayer"/> object which is a layer that fills the entire view of the observer and is refreshed close to the device's native frame rate.
+</summary>
+<remarks>
+<para>-<see cref="XRProjectionLayer"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Constants">WebGL constants</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLBinding/createProjectionLayer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="XRProjectionLayer"/> object.</returns>
+</XRWebGLBindingCreateProjectionLayer>
+<XRWebGLBindingGetReflectionCubeMap>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>getReflectionCubeMap()</c></strong> method of the <see cref="XRWebGLBinding"/> interface returns a <see cref="WebGLTexture"/> object containing a reflection cube map texture.
+</summary>
+<remarks>
+<para>The texture format is specified by the session&amp;apos;s <c>reflectionFormat</c>. See the <c>options</c> parameter on <see cref="XRSession.RequestLightProbe"/> and <see cref="XRSession.PreferredReflectionFormat"/> for more details. By default, the <c>srgba8</c> format is used. When using a <c>rgba16f</c> format, you need to be within a WebGL 2.0 context or enable the <see cref="OES_texture_half_float"/> extension within WebGL 1.0 contexts.</para>
+<para>-<see cref="XRLightProbe"/><br/>-<see cref="OES_texture_half_float"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLBinding/getReflectionCubeMap"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="WebGLTexture"/> object.</returns>
+</XRWebGLBindingGetReflectionCubeMap>
+<XRWebGLBindingXRWebGLBinding>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>XRWebGLBinding()</c></strong> constructor creates and<br/>returns a new <see cref="XRWebGLBinding"/> object.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.MakeXRCompatible"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLBinding/XRWebGLBinding"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="XRWebGLBinding"/>.</returns>
+</XRWebGLBindingXRWebGLBinding>
+<XRWebGLBindingCreateCylinderLayer>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>createCylinderLayer()</c></strong> method of the <see cref="XRWebGLBinding"/> interface returns an <see cref="XRCylinderLayer"/> object, which is a layer that takes up a curved rectangular space in the virtual environment.
+</summary>
+<remarks>
+<para>-<see cref="XRCylinderLayer"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Constants">WebGL constants</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLBinding/createCylinderLayer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="XRCylinderLayer"/> object.</returns>
+</XRWebGLBindingCreateCylinderLayer>
+<XRWebGLBindingCreateCubeLayer>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>createCubeLayer()</c></strong> method of the <see cref="XRWebGLBinding"/> interface returns an <see cref="XRCubeLayer"/> object, which is a layer that renders directly from a <see href="https://en.wikipedia.org/wiki/Cube_mapping">cubemap</see>, and projects it onto the inside faces of a cube.
+</summary>
+<remarks>
+<para>-<see cref="XRCubeLayer"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Constants">WebGL constants</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLBinding/createCubeLayer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="XRCubeLayer"/> object.</returns>
+</XRWebGLBindingCreateCubeLayer>
+<XRWebGLBindingCreateEquirectLayer>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>createEquirectLayer()</c></strong> method of the <see cref="XRWebGLBinding"/> interface returns an <see cref="XREquirectLayer"/> object, which is a layer that maps <see href="https://en.wikipedia.org/wiki/Equirectangular_projection">equirectangular</see> coded data onto the inside of a sphere.
+</summary>
+<remarks>
+<para>-<see cref="XREquirectLayer"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Constants">WebGL constants</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLBinding/createEquirectLayer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="XREquirectLayer"/> object.</returns>
+</XRWebGLBindingCreateEquirectLayer>
+<XRWebGLBindingNativeProjectionScaleFactor>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The read-only <strong><c>nativeProjectionScaleFactor</c></strong> property of the <see cref="XRWebGLBinding"/> interface represents the scaling factor by which the projection layer's resolution is multiplied by to get the native resolution of the WebXR device's frame buffer.
+</summary>
+<remarks>
+<para>For more details, see <see cref="XRWebGLLayer.GetNativeFramebufferScaleFactor"/>.</para>
+<para>-<see cref="XRWebGLLayer.GetNativeFramebufferScaleFactor"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLBinding/nativeProjectionScaleFactor"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A floating-point number representing by how much the device&amp;apos;s native frame buffer size is scaled by.</value>
+</XRWebGLBindingNativeProjectionScaleFactor>
+<XRWebGLBindingCreateQuadLayer>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>createQuadLayer()</c></strong> method of the <see cref="XRWebGLBinding"/> interface returns an <see cref="XRQuadLayer"/> object which is a layer that takes up a flat rectangular space in the virtual environment.
+</summary>
+<remarks>
+<para>-<see cref="XRQuadLayer"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Constants">WebGL constants</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLBinding/createQuadLayer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="XRQuadLayer"/> object.</returns>
+</XRWebGLBindingCreateQuadLayer>
+</docs>

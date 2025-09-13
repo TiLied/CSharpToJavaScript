@@ -1,0 +1,30 @@
+<docs>
+<CSSRuleList>
+<summary>
+A <c>CSSRuleList</c> represents an ordered collection of read-only <see cref="CSSRule"/> objects.
+</summary>
+<remarks>
+<para>While the <c>CSSRuleList</c> object is read-only, and cannot be directly modified, it is considered a <c>live</c> object, as the content can change over time.</para><para>To edit the underlying rules returned by <c>CSSRule</c> objects, use <see cref="CSSStyleSheet.InsertRule"/> and <see cref="CSSStyleSheet.DeleteRule"/>, which are methods of <see cref="CSSStyleSheet"/>.</para><para>This interface was an <see href="https://stackoverflow.com/questions/74630989/why-use-domstringlist-rather-than-an-array/74641156#74641156">attempt to create an unmodifiable list</see> and only continues to be supported to not break code that&amp;apos;s already using it. Modern APIs represent list structures using types based on JavaScript <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">arrays</see>, thus making many array methods available, and at the same time imposing additional semantics on their usage (such as making their items read-only).</para><para>These historical reasons do not mean that you as a developer should avoid <c>CSSRuleList</c>. You don&amp;apos;t create <c>CSSRuleList</c> objects yourself, but you get them from APIs such as <see cref="CSSStyleSheet.CssRules"/> and <see cref="CSSKeyframesRule.CssRules"/>, and these APIs are not deprecated. However, be careful of the semantic differences from a real array.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSSRule"><c>CSSRule</c></see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSRuleList"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CSSRuleList>
+<CSSRuleListLength>
+<summary>
+The <strong><c>length</c></strong> property of the <see cref="CSSRuleList"/> interface returns the number of <see cref="CSSRule"/> objects in the list.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSRuleList/length"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer.</value>
+</CSSRuleListLength>
+<CSSRuleListItem>
+<summary>
+The <strong><c>item()</c></strong> method of the <see cref="CSSRuleList"/> interface returns the <see cref="CSSRule"/> object at the specified <c>index</c> or <c>null</c> if the specified <c>index</c> doesn&amp;apos;t exist.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSRuleList/item"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="CSSRule"/>.</returns>
+</CSSRuleListItem>
+</docs>

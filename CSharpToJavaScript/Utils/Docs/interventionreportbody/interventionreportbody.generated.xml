@@ -1,0 +1,69 @@
+<docs>
+<InterventionReportBody>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <c>InterventionReportBody</c> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Reporting_API">Reporting API</see> represents the body of an intervention report.
+</summary>
+<remarks>
+<para>An intervention report is generated when usage of a feature in a web document has been blocked by the browser for reasons such as security, performance, or user annoyance. So for example, a script was been stopped because it was significantly slowing down the browser, or the browser&amp;apos;s autoplay policy blocked audio from playing without a user gesture to trigger it.</para><para>A deprecation report is generated when a deprecated feature (for example a deprecated API method) is used on a document being observed by a <see cref="ReportingObserver"/>. In addition to the support of this API, receiving useful intervention warnings relies on browser vendors adding these warnings for the relevant features.</para><para></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Reporting_API">Reporting API</see><br/>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/reporting-api">The Reporting API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/InterventionReportBody"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</InterventionReportBody>
+<InterventionReportBodyLineNumber>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>lineNumber</c></strong> read-only property of the <see cref="InterventionReportBody"/> interface returns the line in the source file in which the intervention occurred.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This property is most useful alongside <see cref="InterventionReportBody.SourceFile"/> as it enables the location of the line in that file where the feature is used.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/InterventionReportBody/lineNumber"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer, or <c>null</c> if the line is not known.</value>
+</InterventionReportBodyLineNumber>
+<InterventionReportBodySourceFile>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>sourceFile</c></strong> read-only property of the <see cref="InterventionReportBody"/> interface returns the path to the source file where the intervention occurred.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This property can be used with <see cref="InterventionReportBody.LineNumber"/> and <see cref="InterventionReportBody.ColumnNumber"/> to locate the column and line in the file where the feature is used.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/InterventionReportBody/sourceFile"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string, or <c>null</c> if the path is not known.</value>
+</InterventionReportBodySourceFile>
+<InterventionReportBodyMessage>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>message</c></strong> read-only property of the <see cref="InterventionReportBody"/> interface returns a human-readable description of the intervention, including information such as how the intervention could be avoided. This typically matches the message a browser will display in its DevTools console when an intervention is imposed, if one is available.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/InterventionReportBody/message"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</InterventionReportBodyMessage>
+<InterventionReportBodyColumnNumber>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>columnNumber</c></strong> read-only property of the <see cref="InterventionReportBody"/> interface returns the line in the source file in which the intervention occurred.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This property is most useful alongside <see cref="InterventionReportBody.SourceFile"/> and <see cref="InterventionReportBody.LineNumber"/> as it enables the location of the column in that file and line where the feature is used.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/InterventionReportBody/columnNumber"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer, or <c>null</c> if the column is not known.</value>
+</InterventionReportBodyColumnNumber>
+<InterventionReportBodyId>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>id</c></strong> read-only property of the <see cref="InterventionReportBody"/> interface returns a string identifying the intervention that generated the report. This can be used to group reports.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/InterventionReportBody/id"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</InterventionReportBodyId>
+<InterventionReportBodyToJSON>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>toJSON()</c></strong> method of the <see cref="InterventionReportBody"/> interface is a <strong>serializer</strong>, and returns a JSON representation of the <c>InterventionReportBody</c> object.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/InterventionReportBody/toJSON"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A JSON object that is the serialization of the <see cref="InterventionReportBody"/> object.</returns>
+</InterventionReportBodyToJSON>
+</docs>

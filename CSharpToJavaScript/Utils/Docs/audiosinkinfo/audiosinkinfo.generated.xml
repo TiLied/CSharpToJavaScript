@@ -1,0 +1,22 @@
+<docs>
+<AudioSinkInfo>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>AudioSinkInfo</c></strong> interface of the {{domxref(&amp;quot;Web Audio API&amp;quot;, &amp;quot;Web Audio API&amp;quot;, &amp;quot;&amp;quot;, "nocode")}} represents information describing an <see cref="AudioContext"/>'s sink ID, retrieved via <see cref="AudioContext.SinkId"/>.
+</summary>
+<remarks>
+<para></para>
+<para>-<see href="https://mdn.github.io/dom-examples/audiocontext-setsinkid/">SetSinkId test example</see> (check out the <see href="https://github.com/mdn/dom-examples/tree/main/audiocontext-setsinkid">source code</see>)<br/>-<see cref="AudioContext.SetSinkId"/><br/>-<see cref="AudioContext.SinkId"/><br/>-<see cref="AudioContextsinkchange"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioSinkInfo"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</AudioSinkInfo>
+<AudioSinkInfoType>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>type</c></strong> read-only property of the <see cref="AudioSinkInfo"/> interface returns the type of the audio output device.
+</summary>
+<remarks>
+<para>-<see href="https://mdn.github.io/dom-examples/audiocontext-setsinkid/">SetSinkId test example</see> (check out the <see href="https://github.com/mdn/dom-examples/tree/main/audiocontext-setsinkid">source code</see>)<br/>-<see cref="AudioContext.SetSinkId"/><br/>-<see cref="AudioContext.SinkId"/><br/>-<see cref="AudioContextsinkchange"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioSinkInfo/type"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string. Currently the only value is <c>none</c>.</value>
+</AudioSinkInfoType>
+</docs>

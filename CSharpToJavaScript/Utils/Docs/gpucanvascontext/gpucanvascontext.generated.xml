@@ -1,0 +1,62 @@
+<docs>
+<GPUCanvasContext>
+<summary>
+The <strong><c>GPUCanvasContext</c></strong> interface of the {{domxref(&amp;quot;WebGPU API&amp;quot;, &amp;quot;WebGPU API&amp;quot;, &amp;quot;&amp;quot;, "nocode")}} represents the WebGPU rendering context of a {{htmlelement("canvas")}} element, returned via an <see cref="HTMLCanvasElement.GetContext"/> call with a <c>contextType</c> of <c>&amp;quot;webgpu&amp;quot;</c>.
+</summary>
+<remarks>
+<para></para>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUCanvasContext"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</GPUCanvasContext>
+<GPUCanvasContextCanvas>
+<summary>
+The <strong><c>canvas</c></strong> read-only property of the<br/><see cref="GPUCanvasContext"/> interface returns a reference to the canvas that the context was created from.
+</summary>
+<remarks>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUCanvasContext/canvas"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="HTMLCanvasElement"/> or <see cref="OffscreenCanvas"/> object instance.</value>
+</GPUCanvasContextCanvas>
+<GPUCanvasContextGetConfiguration>
+<summary>
+The <strong><c>getConfiguration()</c></strong> method of the<br/><see cref="GPUCanvasContext"/> interface returns the current configuration set for the context.
+</summary>
+<remarks>
+<para>-<see cref="GPUCanvasContext.Configure"/><br/>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUCanvasContext/getConfiguration"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An object containing the configuration options set on the context (i.e., via the <see cref="GPUCanvasContext.Configure"/> method), or <c>null</c> if no configuration is set (either no configuration was previously set, or a configuration was set and then <see cref="GPUCanvasContext.Unconfigure"/> was called on the context).</returns>
+</GPUCanvasContextGetConfiguration>
+<GPUCanvasContextConfigure>
+<summary>
+The <strong><c>configure()</c></strong> method of the<br/><see cref="GPUCanvasContext"/> interface configures the context to use for rendering with a given <see cref="GPUDevice"/>. When called the canvas will initially be cleared to transparent black.
+</summary>
+<remarks>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUCanvasContext/configure"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<c>undefined</c>).</returns>
+</GPUCanvasContextConfigure>
+<GPUCanvasContextUnconfigure>
+<summary>
+The <strong><c>unconfigure()</c></strong> method of the<br/><see cref="GPUCanvasContext"/> interface removes any previously-set context configuration, and destroys any textures returned via <see cref="GPUCanvasContext.GetCurrentTexture"/> while the canvas context was configured.
+</summary>
+<remarks>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUCanvasContext/unconfigure"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<c>undefined</c>).</returns>
+</GPUCanvasContextUnconfigure>
+<GPUCanvasContextGetCurrentTexture>
+<summary>
+The <strong><c>getCurrentTexture()</c></strong> method of the<br/><see cref="GPUCanvasContext"/> interface returns the next <see cref="GPUTexture"/> to be composited to the document by the canvas context.
+</summary>
+<remarks>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUCanvasContext/getCurrentTexture"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="GPUTexture"/> object instance.</returns>
+</GPUCanvasContextGetCurrentTexture>
+</docs>

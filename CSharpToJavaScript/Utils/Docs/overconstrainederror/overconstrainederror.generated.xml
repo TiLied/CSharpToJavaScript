@@ -1,0 +1,28 @@
+<docs>
+<OverconstrainedError>
+<summary>
+The <strong><c>OverconstrainedError</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API">Media Capture and Streams API</see> indicates that the set of desired capabilities for the current <see cref="'MediaStreamTrack'"/> cannot currently be met. When this event is thrown on a MediaStreamTrack, it is muted until either the current constraints can be established or until satisfiable constraints are applied.
+</summary>
+<remarks>
+<para></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/OverconstrainedError"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</OverconstrainedError>
+<OverconstrainedErrorConstraint>
+<summary>
+The <strong><c>constraint</c></strong> read-only property of the<br/><see cref="OverconstrainedError"/> interface returns the constraint that was supplied<br/>in the constructor, meaning the constraint that was not satisfied.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/OverconstrainedError/constraint"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</OverconstrainedErrorConstraint>
+<OverconstrainedErrorOverconstrainedError>
+<summary>
+The <strong><c>OverconstrainedError()</c></strong> constructor<br/>creates a new <see cref="OverconstrainedError"/> object which indicates that the set of<br/>desired capabilities for the current <see cref="MediaStreamTrack"/> cannot currently be<br/>met. When this event is thrown on a <c>MediaStreamTrack</c>, it is muted until<br/>either the current constraints can be established or until satisfiable constraints are<br/>applied.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/OverconstrainedError/OverconstrainedError"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</OverconstrainedErrorOverconstrainedError>
+</docs>

@@ -1,0 +1,47 @@
+<docs>
+<HID>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>HID</c></strong> interface provides methods for connecting to <strong>HID devices</strong>, listing attached HID devices and event handlers for connected HID devices.
+</summary>
+<remarks>
+<para></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebHID_API">WebHID API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HID"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HID>
+<HIDDisconnect>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>disconnect</c></strong> event of the <see cref="HID"/> interface fires when the user agent disconnects a HID device.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HID/disconnect"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HIDDisconnect>
+<HIDGetDevices>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>getDevices()</c></strong> method of the <see cref="HID"/> interface gets a list of connected HID devices that the user has previously been granted access to in response to a <see cref="HID.RequestDevice"/> call.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HID/getDevices"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that resolves with a list of <see cref="HIDDevice"/> objects.</returns>
+</HIDGetDevices>
+<HIDConnect>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>connect</c></strong> event of the <see cref="HID"/> interface fires when the user agent connects to a HID device.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HID/connect"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HIDConnect>
+<HIDRequestDevice>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>requestDevice()</c></strong> method of the <see cref="HID"/> interface requests access to a HID device.
+</summary>
+<remarks>
+<para>The user agent will present a permission dialog including a list of connected devices, and ask the user to select and grant permission to one of these devices.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HID/requestDevice"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that resolves with an array of connected <see cref="HIDDevice"/> objects that match the filters passed in.</returns>
+</HIDRequestDevice>
+</docs>

@@ -1,0 +1,52 @@
+<docs>
+<SharedStorage>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>SharedStorage</c></strong> interface of the {{domxref(&amp;quot;Shared Storage API&amp;quot;, &amp;quot;Shared Storage API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} represents the shared storage for a particular origin, defining methods to write data to the shared storage.
+</summary>
+<remarks>
+<para><c>SharedStorage</c> is the base class for:</para><para></para>
+<para>-<see cref="WindowSharedStorage"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Shared_Storage_API">Shared Storage API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SharedStorage"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</SharedStorage>
+<SharedStorageClear>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>clear()</c></strong> method of the <see cref="SharedStorage"/> interface clears the current origin's shared storage, removing all data from it.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Shared_Storage_API">Shared Storage API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SharedStorage/clear"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that fulfills with <c>undefined</c>.</returns>
+</SharedStorageClear>
+<SharedStorageDelete>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>delete()</c></strong> method of the <see cref="SharedStorage"/> interface deletes an existing key-value pair from the current origin's shared storage.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Shared_Storage_API">Shared Storage API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SharedStorage/delete"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that fulfills with <c>undefined</c>.</returns>
+</SharedStorageDelete>
+<SharedStorageSet>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>set()</c></strong> method of the <see cref="SharedStorage"/> interface either stores a new key-value pair in the current origin's shared storage or updates an existing one.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Shared_Storage_API">Shared Storage API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SharedStorage/set"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that fulfills with <c>undefined</c>.</returns>
+</SharedStorageSet>
+<SharedStorageAppend>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>append()</c></strong> method of the <see cref="SharedStorage"/> interface appends a string to the value of an existing key-value pair in the current origin's shared storage.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Shared_Storage_API">Shared Storage API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SharedStorage/append"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that fulfills with <c>undefined</c>.</returns>
+</SharedStorageAppend>
+</docs>

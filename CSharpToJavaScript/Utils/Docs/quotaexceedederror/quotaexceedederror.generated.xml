@@ -1,0 +1,41 @@
+<docs>
+<QuotaExceededError>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>QuotaExceededError</c></strong> interface represents an error when a requested operation would exceed a system-imposed storage quota.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>In browser versions before this interface was implemented, it was a regular <c>DOMException</c>. The subclassing allows for extra information like <c>quota</c> and <c>requested</c> to be included.</para></blockquote><para></para>
+<para>-<see cref="DOMException"/><br/>-<see cref="StorageManager.Estimate"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria">Storage quotas and eviction criteria</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/QuotaExceededError"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</QuotaExceededError>
+<QuotaExceededErrorQuota>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>quota</c></strong> read-only property of the <see cref="QuotaExceededError"/> interface returns the system-defined storage quota (in bytes) that the operation attempted to exceed, or undefined if the information is not available.
+</summary>
+<remarks>
+<para>-<see cref="QuotaExceededError"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/QuotaExceededError/quota"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number representing the quota limit in bytes, or undefined.</value>
+</QuotaExceededErrorQuota>
+<QuotaExceededErrorQuotaExceededError>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>QuotaExceededError()</c></strong> constructor creates a new <c>QuotaExceededError</c> object.
+</summary>
+<remarks>
+<para>-<see cref="DOMExceptionDOMException"/><br/>-<see cref="QuotaExceededError"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/QuotaExceededError/QuotaExceededError"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</QuotaExceededErrorQuotaExceededError>
+<QuotaExceededErrorRequested>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>requested</c></strong> read-only property of the <see cref="QuotaExceededError"/> interface returns the number of bytes that were requested when the error occurred, or undefined if the information is not available.
+</summary>
+<remarks>
+<para>-<see cref="QuotaExceededError"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/QuotaExceededError/requested"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number representing the requested amount of storage in bytes, or undefined.</value>
+</QuotaExceededErrorRequested>
+</docs>

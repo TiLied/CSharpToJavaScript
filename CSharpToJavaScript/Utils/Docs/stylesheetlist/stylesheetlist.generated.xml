@@ -1,0 +1,29 @@
+<docs>
+<StyleSheetList>
+<summary>
+The <c>StyleSheetList</c> interface represents a list of <see cref="CSSStyleSheet"/> objects. An instance of this object can be returned by <see cref="Document.StyleSheets"/>.
+</summary>
+<remarks>
+<para>It is an array-like object but can't be iterated over using <see cref="Array"/> methods. However it can be iterated over in a standard <see cref="Statements/for"/> loop over its indices, or converted to an <see cref="Array"/>.</para><blockquote class="NOTE"><h5>NOTE</h5><para>Typically list interfaces like <c>StyleSheetList</c> wrap around <see cref="Array"/> types, so you can use <c>Array</c> methods on them.<br/>This is not the case here for <see href="https://stackoverflow.com/questions/74630989/why-use-domstringlist-rather-than-an-array/74641156#74641156">historical reasons</see>.<br/>However, you can convert <c>StyleSheetList</c> to an <c>Array</c> in order to use those methods (see the example below).</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StyleSheetList"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</StyleSheetList>
+<StyleSheetListLength>
+<summary>
+The <strong><c>length</c></strong> read-only property of the <see cref="StyleSheetList"/> interface returns the number of <see cref="CSSStyleSheet"/> objects in the collection.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StyleSheetList/length"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer indicating the number of items in the collection.</value>
+</StyleSheetListLength>
+<StyleSheetListItem>
+<summary>
+The <strong><c>item()</c></strong> method of the <see cref="StyleSheetList"/> interface returns a single <see cref="CSSStyleSheet"/> object.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StyleSheetList/item"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="CSSStyleSheet"/> object, or <c>null</c> if one does not exist for this index.</returns>
+</StyleSheetListItem>
+</docs>

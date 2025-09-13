@@ -1,0 +1,21 @@
+<docs>
+<PeriodicWave>
+<summary>
+The <strong><c>PeriodicWave</c></strong> interface defines a periodic waveform that can be used to shape the output of an <see cref="OscillatorNode"/>.
+</summary>
+<remarks>
+<para><c>PeriodicWave</c> has no inputs or outputs; it is used to define custom oscillators when calling <see cref="OscillatorNode.SetPeriodicWave"/>. The <c>PeriodicWave</c> itself is created/returned by <see cref="BaseAudioContext.CreatePeriodicWave"/>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PeriodicWave"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</PeriodicWave>
+<PeriodicWavePeriodicWave>
+<summary>
+The <strong><c>PeriodicWave()</c></strong> constructor of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see> creates a new<br/><see cref="PeriodicWave"/> object instance.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PeriodicWave/PeriodicWave"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="PeriodicWave"/> object instance.</returns>
+</PeriodicWavePeriodicWave>
+</docs>

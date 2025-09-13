@@ -1,0 +1,28 @@
+<docs>
+<CSSMathSum>
+<summary>
+The <strong><c>CSSMathSum</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model">CSS Typed Object Model API</see> represents the result obtained by calling <see cref="'CSSNumericValue.Add'"/>, <see cref="'CSSNumericValue.Sub'"/>, or <see cref="'CSSNumericValue.ToSum'"/> on <see cref="'CSSNumericValue'"/>.
+</summary>
+<remarks>
+<para>A CSSMathSum is the object type returned when the <see href="https://developer.mozilla.org/en-US/docs/Web/API/StylePropertyMapReadOnly/get"><c>StylePropertyMapReadOnly.get()</c></see> method is used on a CSS property whose value is created with a <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/calc"><c>calc()</c></see> function.</para><para></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSMathSum"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CSSMathSum>
+<CSSMathSumCSSMathSum>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>CSSMathSum()</c></strong> constructor creates a<br/>new <see cref="CSSMathSum"/> object which creates a new <see cref="'CSSKeywordValue'"/><br/>object which represents the result obtained by calling<br/><see cref="'CSSNumericValue.Add'"/>, <see cref="'CSSNumericValue.Sub'"/>,<br/>or <see cref="'CSSNumericValue.ToSum'"/> on <see cref="'CSSNumericValue'"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSMathSum/CSSMathSum"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CSSMathSumCSSMathSum>
+<CSSMathSumValues>
+<summary>
+The <strong><c>CSSMathSum.values</c></strong> read-only property<br/>of the <see cref="CSSMathSum"/> interface returns a <see cref="'CSSNumericArray'"/><br/>object which contains one or more <see cref="'CSSNumericValue'"/> objects.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSMathSum/values"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="'CSSNumericArray'"/>.</value>
+</CSSMathSumValues>
+</docs>

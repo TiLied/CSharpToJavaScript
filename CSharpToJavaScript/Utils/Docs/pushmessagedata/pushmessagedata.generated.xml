@@ -1,0 +1,56 @@
+<docs>
+<PushMessageData>
+<summary>
+The <strong><c>PushMessageData</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Push_API">Push API</see> provides methods which let you retrieve the push data sent by a server in various formats.
+</summary>
+<remarks>
+<para>Unlike the similar methods in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch API</see>, which only allow the method to be invoked once, these methods can be called multiple times.</para><para>Messages received through the Push API are sent encrypted by push services and then automatically decrypted by browsers before they are made accessible through the methods of the <c>PushMessageData</c> interface.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PushMessageData"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</PushMessageData>
+<PushMessageDataArrayBuffer>
+<summary>
+The <strong><c>arrayBuffer()</c></strong> method of the <see cref="PushMessageData"/> interface extracts push message data as an {{jsxref("ArrayBuffer")}} object.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PushMessageData/arrayBuffer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="ArrayBuffer"/>.</returns>
+</PushMessageDataArrayBuffer>
+<PushMessageDataText>
+<summary>
+The <strong><c>text()</c></strong> method of the <see cref="PushMessageData"/> interface extracts push message data as a plain text string.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PushMessageData/text"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A string.</returns>
+</PushMessageDataText>
+<PushMessageDataJson>
+<summary>
+The <strong><c>json()</c></strong> method of the <see cref="PushMessageData"/> interface extracts push message data by parsing it as a <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON">JSON</see> string and returning the result.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PushMessageData/json"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>The result of parsing push event data as JSON. This could be anything that can be represented by JSON — an object, an array, a string, a number…</returns>
+</PushMessageDataJson>
+<PushMessageDataBlob>
+<summary>
+The <strong><c>blob()</c></strong> method of the <see cref="PushMessageData"/> interface extracts push message data as a <see cref="Blob"/> object.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PushMessageData/blob"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Blob"/>.</returns>
+</PushMessageDataBlob>
+<PushMessageDataBytes>
+<summary>
+The <strong><c>bytes()</c></strong> method of the <see cref="PushMessageData"/> interface extracts push message data as an {{jsxref("Uint8Array")}} object.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PushMessageData/bytes"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="Uint8Array"/>.</returns>
+</PushMessageDataBytes>
+</docs>

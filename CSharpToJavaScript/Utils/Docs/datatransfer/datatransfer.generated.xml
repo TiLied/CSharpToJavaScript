@@ -1,0 +1,127 @@
+<docs>
+<DataTransfer>
+<summary>
+The <strong><c>DataTransfer</c></strong> object is used to hold any data transferred between contexts, such as a drag and drop operation, or clipboard read/write. It may hold one or more data items, each of one or more data types.
+</summary>
+<remarks>
+<para><c>DataTransfer</c> was primarily designed for the <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API">HTML Drag and Drop API</see>, as the <see cref="DragEvent.DataTransfer"/> property, and is still specified in the HTML drag-and-drop section, but it is now also used by other APIs, such as <see cref="ClipboardEvent.ClipboardData"/> and <see cref="InputEvent.DataTransfer"/>. However, other APIs only use certain parts of its interface, ignoring properties such as <c>dropEffect</c>. Documentation of <c>DataTransfer</c> will primarily discuss its usage in drag-and-drop operations, and you should refer to the other APIs&amp;apos; documentation for usage of <c>DataTransfer</c> in those contexts.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API">Drag and drop</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations">Drag Operations</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types">Recommended Drag Types</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</DataTransfer>
+<DataTransferClearData>
+<summary>
+The <strong><c>DataTransfer.clearData()</c></strong> method removes the drag<br/>operation&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer">drag data</see> for the given type. If data for the<br/>given type does not exist, this method does nothing.
+</summary>
+<remarks>
+<para>If this method is called with no arguments or the format is an empty<br/>string, the data of all types will be removed.</para><para>This method does <strong>not</strong> remove files from the drag operation, so it&amp;apos;s possible<br/>for there still to be an entry with the type <c>&amp;quot;Files&amp;quot;</c> left in the object&amp;apos;s<br/><see cref="DataTransfer.Types"/> list if there are any files included in the drag.</para><blockquote class="NOTE"><h5>NOTE</h5><para>This method can only be used in the handler for the <see cref="HTMLElementdragstart"/> event,<br/>because that&amp;apos;s the only time the drag operation&amp;apos;s data store is writable.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API">Drag and drop</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations">Drag Operations</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types">Recommended Drag Types</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/clearData"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</DataTransferClearData>
+<DataTransferDataTransfer>
+<summary>
+The <strong><c>DataTransfer</c></strong> constructor creates a new<br/><see cref="DataTransfer"/> object instance.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/DataTransfer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</DataTransferDataTransfer>
+<DataTransferEffectAllowed>
+<summary>
+The <strong><c>DataTransfer.effectAllowed</c></strong> property specifies the<br/>effect that is allowed for a drag operation. The <strong>copy</strong> operation is used to<br/>indicate that the data being dragged will be copied from its present location to the<br/>drop location. The <strong>move</strong> operation is used to indicate that the data being<br/>dragged will be moved, and the <strong>link</strong> operation is used to indicate that some<br/>form of relationship or connection will be created between the source and drop<br/>locations.
+</summary>
+<remarks>
+<para>This property should be set in the <see cref="HTMLElementdragstart"/> event to set the desired drag<br/>effect for the drag source. Within the <see cref="HTMLElementdragenter"/> and <see cref="HTMLElementdragover"/><br/>event handlers, this property will be set to whatever value was assigned during the<br/><see cref="HTMLElementdragstart"/> event, thus <c>effectAllowed</c> may be used to determine<br/>which effect is permitted.</para><para>Assigning a value to <c>effectAllowed</c> in events other than<br/><see cref="HTMLElementdragstart"/> has no effect.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API">Drag and drop</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations">Drag Operations</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types">Recommended Drag Types</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/effectAllowed"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing the drag operation that is allowed. The<br/>possible values are:Assigning any other value to <c>effectAllowed</c> has no effect and the old value<br/>is retained.</value>
+</DataTransferEffectAllowed>
+<DataTransferDropEffect>
+<summary>
+The <strong><c>DataTransfer.dropEffect</c></strong> property controls the<br/>feedback (typically visual) the user is given during a drag and drop operation. It will<br/>affect which cursor is displayed while dragging. For example, when the user hovers over<br/>a target drop element, the browser&amp;apos;s cursor may indicate which type of operation will<br/>occur.
+</summary>
+<remarks>
+<para>When the <see cref="DataTransfer"/> object is created, <c>dropEffect</c> is set<br/>to a string value. On getting, it returns its current value. On setting, if the new<br/>value is one of the values listed below, then the property&amp;apos;s current value will be set<br/>to the new value and other values will be ignored.</para><para>For the <see cref="HTMLElementdragenter"/> and <see cref="HTMLElementdragover"/> events,<br/><c>dropEffect</c> will be initialized based on what action the user is requesting.<br/>How this is determined is platform specific, but typically the user can press modifier<br/>keys such as the alt key to adjust the desired action. Within event handlers for<br/><see cref="HTMLElementdragenter"/> and <see cref="HTMLElementdragover"/> events, <c>dropEffect</c> should<br/>be modified if a different action is desired than the action that the user is<br/>requesting.</para><para>For the <see cref="HTMLElementdrop"/> and <see cref="HTMLElementdragend"/> events, <c>dropEffect</c> will<br/>be set to the action that was desired, which will be the value <c>dropEffect</c><br/>had after the last <see cref="HTMLElementdragenter"/> or <see cref="HTMLElementdragover"/> event. In a<br/><see cref="HTMLElementdragend"/> event, for instance, if the desired dropEffect is "move", then the<br/>data being dragged should be removed from the source.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API">Drag and drop</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations">Drag Operations</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types">Recommended Drag Types</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/dropEffect"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing the drag operation effect. The possible values<br/>are:Assigning any other value to <c>dropEffect</c> has no effect and the old value is<br/>retained.</value>
+</DataTransferDropEffect>
+<DataTransferTypes>
+<summary>
+The <strong><c>DataTransfer.types</c></strong> read-only property returns the available types that exist in the <see cref="DataTransfer.Items"/>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API">Drag and drop</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations">Drag Operations</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types">Recommended Drag Types</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/types"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An array of the data formats. Each format is a string<br/>which is generally a MIME type such as <c>text/plain</c> or <c>text/html</c>. If the drag<br/>operation included no data, this list will be empty. If any files are included in<br/>the drag operation, then one of the types will be the string <c>Files</c>.</value>
+</DataTransferTypes>
+<DataTransferAddElement>
+<summary>
+<div class="CAUTION"><h5>CAUTION</h5> <strong>Non-standard</strong></div> The <strong><c>DataTransfer.addElement()</c></strong> method sets the drag source<br/>to the given element. This element will be the element to which <see cref="HTMLElementdrag"/> and<br/><see cref="HTMLElementdragend"/> events are fired, and not the default target (the node that was<br/>dragged).
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This method is Firefox-specific.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API">Drag and drop</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations">Drag Operations</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types">Recommended Drag Types</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/addElement"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</DataTransferAddElement>
+<DataTransferSetData>
+<summary>
+The <strong><c>DataTransfer.setData()</c></strong> method sets the drag<br/>operation&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer">drag data</see> to the specified data and type. If<br/>data for the given type does not exist, it is added at the end of the drag data store,<br/>such that the last item in the <see cref="DataTransfer.Types"/> list will be<br/>the new type. If data for the given type already exists, the existing data is replaced<br/>in the same position. That is, the order of the<br/><see cref="DataTransfer.Types"/> list is not changed when replacing data of the<br/>same type.
+</summary>
+<remarks>
+<para>Example data types are <c>text/plain</c> and <c>text/uri-list</c>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API">Drag and drop</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations">Drag Operations</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types">Recommended Drag Types</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/setData"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</DataTransferSetData>
+<DataTransferItems>
+<summary>
+The read-only <c>items</c> property of the <see cref="DataTransfer"/> interface is a<br/><see cref="DataTransferItemList"/> of the {{domxref("DataTransferItem","data transfer items", &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} in a drag operation. The list includes one item for each item in the operation and if the operation had no items, the list is empty.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API">Drag and drop</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations">Drag Operations</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types">Recommended Drag Types</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/items"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DataTransferItemList"/> object containing <see cref="DataTransferItem"/><br/>objects representing the items being dragged in a drag operation, one list item for each<br/>object being dragged. If the drag operation had no data, the list is empty.</value>
+</DataTransferItems>
+<DataTransferFiles>
+<summary>
+The <strong><c>files</c></strong> read-only property of <see href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer"><c>DataTransfer</c></see> objects is a <see href="https://developer.mozilla.org/en-US/docs/Web/API/FileList">list of the files</see> in the drag operation. If the operation includes no files, the list is empty.
+</summary>
+<remarks>
+<para>This feature can be used to drag files from a user&amp;apos;s desktop to the browser.</para><blockquote class="NOTE"><h5>NOTE</h5><para>The <c>files</c> property of <see href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer"><c>DataTransfer</c></see> objects can only be accessed from within the <see cref="HTMLElementdrop"/> and <see cref="Elementpaste"/> events. For all other events, the <c>files</c> property will be empty — because its underlying data store will be in a <see href="https://html.spec.whatwg.org/multipage/dnd.html#the-drag-data-store">protected mode</see>.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/files"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="FileList"/> of the files in a drag operation, one list item for<br/>each file in the operation. If the drag operation had no files, the list is empty.</value>
+</DataTransferFiles>
+<DataTransferSetDragImage>
+<summary>
+When a drag occurs, a translucent image is generated from the drag target (the element<br/>the <see cref="HTMLElementdragstart"/> event is fired at), and follows the mouse pointer during the<br/>drag. This image is created automatically, so you do not need to create it yourself.<br/>However, if a custom image is desired, the<br/><strong><c>DataTransfer.setDragImage()</c></strong> method can be used to set the<br/>custom image to be used. The image will typically be an <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">img</see> element<br/>but it can also be a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas">canvas</see> or any other visible element.
+</summary>
+<remarks>
+<para>The method&amp;apos;s <c>x</c> and <c>y</c> coordinates define how the image should<br/>appear relative to the mouse pointer. These coordinates define the offset into the image<br/>where the mouse cursor should be. For instance, to display the image so that the pointer<br/>is at its center, use values that are half the width and height of the image.</para><para>This method must be called in the <see cref="HTMLElementdragstart"/> event handler.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API">Drag and drop</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations">Drag Operations</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types">Recommended Drag Types</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/setDragImage"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</DataTransferSetDragImage>
+<DataTransferGetData>
+<summary>
+The <strong><c>DataTransfer.getData()</c></strong><br/>method retrieves drag data (as a string) for the specified type.<br/>If the drag operation does not include data, this method returns an empty<br/>string.
+</summary>
+<remarks>
+<para>Example data types are <c>text/plain</c> and <c>text/uri-list</c>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API">Drag and drop</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations">Drag Operations</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types">Recommended Drag Types</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/getData"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A string representing the drag data for the specified <c>format</c>. If the drag operation has no data or the operation has no data for the specified <c>format</c>, this method returns an empty string.Note that <c>DataTransfer.getData()</c> may not return an expected value, because it only allows reading and writing data for specified events. During the <c>dragstart</c> and <c>drop</c> events, it is safe to access the data. For all other events, the data should be considered unavailable. Despite this, the items and their formats can still be enumerated.</returns>
+</DataTransferGetData>
+</docs>

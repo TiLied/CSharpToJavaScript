@@ -1,0 +1,55 @@
+<docs>
+<BluetoothRemoteGATTDescriptor>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <c>BluetoothRemoteGATTDescriptor</c> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Bluetooth_API">Web Bluetooth API</see> provides a GATT Descriptor,<br/>which provides further information about a characteristic&amp;apos;s value.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTDescriptor"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</BluetoothRemoteGATTDescriptor>
+<BluetoothRemoteGATTDescriptorCharacteristic>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>BluetoothRemoteGATTDescriptor.characteristic</c></strong><br/>read-only property returns the <see cref="BluetoothRemoteGATTCharacteristic"/> this<br/>descriptor belongs to.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTDescriptor/characteristic"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An instance of <see cref="BluetoothRemoteGATTCharacteristic"/>.</value>
+</BluetoothRemoteGATTDescriptorCharacteristic>
+<BluetoothRemoteGATTDescriptorValue>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>BluetoothRemoteGATTDescriptor.value</c></strong><br/>read-only property returns an <see cref="DataView"/> containing the currently cached<br/>descriptor value. This value gets updated when the value of the descriptor is read.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTDescriptor/value"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DataView"/>.</value>
+</BluetoothRemoteGATTDescriptorValue>
+<BluetoothRemoteGATTDescriptorReadValue>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The<br/><strong><c>BluetoothRemoteGATTDescriptor.readValue()</c></strong><br/>method returns a <see cref="Promise"/> that resolves to<br/>a <see cref="DataView"/> holding a duplicate of the <c>value</c> property if<br/>it is available and supported. Otherwise it throws an error.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTDescriptor/readValue"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves to a <see cref="DataView"/>.</returns>
+</BluetoothRemoteGATTDescriptorReadValue>
+<BluetoothRemoteGATTDescriptorWriteValue>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>BluetoothRemoteGATTDescriptor.writeValue()</c></strong><br/>method sets the value property to the bytes contained in<br/>an <see cref="ArrayBuffer"/>, <see cref="TypedArray"/>, or <see cref="DataView"/> and returns a <see cref="Promise"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTDescriptor/writeValue"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/>.</returns>
+</BluetoothRemoteGATTDescriptorWriteValue>
+<BluetoothRemoteGATTDescriptorUuid>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>BluetoothRemoteGATTDescriptor.uuid</c></strong> read-only property returns the <see href="https://developer.mozilla.org/en-US/docs/Glossary/UUID">UUID</see> of the characteristic descriptor.<br/>For example <c>&amp;quot;00002902-0000-1000-8000-00805f9b34fb&amp;quot;</c> for the Client Characteristic Configuration descriptor.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTDescriptor/uuid"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A UUID.</value>
+</BluetoothRemoteGATTDescriptorUuid>
+</docs>

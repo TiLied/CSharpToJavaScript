@@ -1,0 +1,31 @@
+<docs>
+<ConstantSourceNode>
+<summary>
+The <c>ConstantSourceNode</c> interface—part of the Web Audio API—represents an audio source (based upon <see cref="AudioScheduledSourceNode"/>) whose output is single unchanging value. This makes it useful for cases in which you need a constant value coming in from an audio source. In addition, it can be used like a constructible <see cref="AudioParam"/> by automating the value of its <see cref="ConstantSourceNode.Offset"/> or by connecting another node to it; see <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode">Controlling multiple parameters with ConstantSourceNode</see>.
+</summary>
+<remarks>
+<para>A <c>ConstantSourceNode</c> has no inputs and exactly one monaural (one-channel) output. The output's value is always the same as the value of the <see cref="ConstantSourceNode.Offset"/> parameter.</para><para></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/>-<see cref="AudioScheduledSourceNode"/><br/>-<see cref="AudioNode"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ConstantSourceNode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</ConstantSourceNode>
+<ConstantSourceNodeOffset>
+<summary>
+The read-only <c>offset</c> property of the <see cref="ConstantSourceNode"/><br/>interface returns a <see cref="AudioParam"/> object indicating the numeric <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam#a-rate">a-rate</see> value which is always returned<br/>by the source when asked for the next sample.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>While the <c>AudioParam</c> named <c>offset</c> is read-only, the<br/><c>value</c> property within is not. So you can change the value of<br/><c>offset</c> by setting the value of<br/><c>ConstantSourceNode.offset.value</c>:</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/>-<see cref="ConstantSourceNode"/><br/>-<see cref="AudioNode"/><br/>-<see cref="AudioParam"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ConstantSourceNode/offset"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="AudioParam"/> object indicating the <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam#a-rate">a-rate</see> value returned for every<br/>sample by this node. The default value is 1.0.To access the <c>offset</c> parameter&amp;apos;s current value, access the parameter&amp;apos;s<br/><c>value</c> property, as shown in the syntax box above.</value>
+</ConstantSourceNodeOffset>
+<ConstantSourceNodeConstantSourceNode>
+<summary>
+The <strong><c>ConstantSourceNode()</c></strong> constructor creates a new<br/><see cref="ConstantSourceNode"/> object instance, representing an audio source which<br/>constantly outputs samples whose values are always the same.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ConstantSourceNode/ConstantSourceNode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</ConstantSourceNodeConstantSourceNode>
+</docs>

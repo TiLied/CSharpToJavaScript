@@ -1,0 +1,32 @@
+<docs>
+<ContentIndexEvent>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>ContentIndexEvent</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Content_Index_API">content index</see> defines the object used to represent the <see cref="ServiceWorkerGlobalScope.Contentdelete"/> event.
+</summary>
+<remarks>
+<para>This event is sent to the <see href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerGlobalScope">global scope</see> of a <see cref="'ServiceWorker'"/>. It contains the id of the indexed content to be removed.</para><para>The <see cref="ServiceWorkerGlobalScope.Contentdelete"/> event is only fired when the deletion happens due to interaction with the browser's built-in user interface. It is not fired when the <see cref="'ContentIndex.Delete'"/> method is called.</para><para></para>
+<para>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/content-indexing-api">An introductory article on the Content Index API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">Service Worker API, along with information about Cache and CacheStorage</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ContentIndexEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</ContentIndexEvent>
+<ContentIndexEventContentIndexEvent>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>ContentIndexEvent()</c></strong> constructor creates a new <see cref="ContentIndexEvent"/> object<br/>whose type and other options are configured as specified.
+</summary>
+<remarks>
+<para>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/content-indexing-api">An introductory article on the Content Index API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">Service Worker API, along with information about Cache and CacheStorage</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ContentIndexEvent/ContentIndexEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="ContentIndexEvent"/> object configured using the given options.</returns>
+</ContentIndexEventContentIndexEvent>
+<ContentIndexEventId>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>id</c></strong> read-only property of the<br/><see cref="ContentIndexEvent"/> interface is a {{jsxref('String')}} which identifies<br/>the deleted content index via its <c>id</c>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/content-indexing-api">An introductory article on the Content Index API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">Service Worker API, along with information about Cache and CacheStorage</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ContentIndexEvent/id"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="String"/> representation of the deleted content index id.</value>
+</ContentIndexEventId>
+</docs>

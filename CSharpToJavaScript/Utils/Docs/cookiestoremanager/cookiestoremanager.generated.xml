@@ -1,0 +1,38 @@
+<docs>
+<CookieStoreManager>
+<summary>
+The <strong><c>CookieStoreManager</c></strong> interface of the {{domxref(&amp;quot;Cookie Store API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, "nocode")}} allows service workers to subscribe to cookie change events. Call <see cref="CookieStoreManager.Subscribe"/> on a particular service worker registration to receive change events.
+</summary>
+<remarks>
+<para>A <c>CookieStoreManager</c> has an associated <see cref="ServiceWorkerRegistration"/>. Each service worker registration has a cookie change subscription list, which is a list of cookie change subscriptions each containing a name and URL. The methods in this interface allow the service worker to add and remove subscriptions from this list, and to get a list of all subscriptions.</para><para>To get a <c>CookieStoreManager</c>, call <see cref="ServiceWorkerRegistration.Cookies"/>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CookieStoreManager"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CookieStoreManager>
+<CookieStoreManagerSubscribe>
+<summary>
+The <strong><c>subscribe()</c></strong> method of the <see cref="CookieStoreManager"/> interface subscribes a <see cref="ServiceWorkerRegistration"/> to cookie change events.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CookieStoreManager/subscribe"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves with <see cref="Undefined"/> when the subscription completes.</returns>
+</CookieStoreManagerSubscribe>
+<CookieStoreManagerGetSubscriptions>
+<summary>
+The <strong><c>getSubscriptions()</c></strong> method of the <see cref="CookieStoreManager"/> interface returns a list of all the cookie change subscriptions for this <see cref="ServiceWorkerRegistration"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CookieStoreManager/getSubscriptions"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves with a list of objects, each containing:</returns>
+</CookieStoreManagerGetSubscriptions>
+<CookieStoreManagerUnsubscribe>
+<summary>
+The <strong><c>unsubscribe()</c></strong> method of the <see cref="CookieStoreManager"/> interface stops the <see cref="ServiceWorkerRegistration"/> from receiving previously subscribed events.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CookieStoreManager/unsubscribe"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves with <see cref="Undefined"/> when the service worker has been unsubscribed.</returns>
+</CookieStoreManagerUnsubscribe>
+</docs>

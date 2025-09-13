@@ -1,0 +1,21 @@
+<docs>
+<XRHitTestSource>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>XRHitTestSource</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</see> handles hit test subscriptions. You can get an <c>XRHitTestSource</c> object by using the <see cref="XRSession.RequestHitTestSource"/> method.
+</summary>
+<remarks>
+<para>This object doesn't itself contain hit test results, but it is used to compute hit tests for each <see cref="XRFrame"/> by calling <see cref="XRFrame.GetHitTestResults"/>, which returns <see cref="XRHitTestResult"/> objects.</para>
+<para>-<see cref="XRTransientInputHitTestSource"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRHitTestSource"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</XRHitTestSource>
+<XRHitTestSourceCancel>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>cancel()</c></strong> method of the <see cref="XRHitTestSource"/> interface unsubscribes a hit test.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRHitTestSource/cancel"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</XRHitTestSourceCancel>
+</docs>

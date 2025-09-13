@@ -1,0 +1,90 @@
+<docs>
+<RTCAudioSourceStats>
+<summary>
+The <strong><c>RTCAudioSourceStats</c></strong> dictionary of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see> provides statistics information about an audio track (<see cref="MediaStreamTrack"/>) that is attached to one or more senders (<see cref="RTCRtpSender"/>).
+</summary>
+<remarks>
+<para>These statistics can be obtained by iterating the <see cref="RTCStatsReport"/> returned by <see cref="RTCRtpSender.GetStats"/> or <see cref="RTCPeerConnection.GetStats"/> until you find a report with the <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCAudioSourceStats/type"><c>type</c></see> of <c>media-source</c> and a <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCAudioSourceStats/kind"><c>kind</c></see> of <c>audio</c>.</para><blockquote class="NOTE"><h5>NOTE</h5><para>For audio information about remotely sourced tracks (that are being received), see <see cref="RTCInboundRtpStreamStats"/>.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCAudioSourceStats"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RTCAudioSourceStats>
+<RTCAudioSourceStatsTotalSamplesDuration>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>totalSamplesDuration</c></strong> property of the <see cref="RTCAudioSourceStats"/> dictionary represents the combined duration of all samples produced by the media source over the lifetime of this stats object, in seconds.<br/>It does not include samples dropped before reaching this media source. &amp;lt;!-- Dropped samples in `droppedSamplesDuration`; not implemented --&amp;gt;
+</summary>
+<remarks>
+<para>This can be used with <see cref="RTCAudioSourceStats.TotalAudioEnergy"/> to compute an <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCAudioSourceStats#description">average audio level over different intervals</see>.</para><blockquote class="NOTE"><h5>NOTE</h5><para>For audio duration of remotely sourced tracks, see <see cref="RTCInboundRtpStreamStats.TotalSamplesDuration"/>.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCAudioSourceStats/totalSamplesDuration"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number indicating the total duration of all samples produced by this source over the lifetime this stats object, in seconds.</value>
+</RTCAudioSourceStatsTotalSamplesDuration>
+<RTCAudioSourceStatsKind>
+<summary>
+The <strong><c>kind</c></strong> property of the <see cref="RTCAudioSourceStats"/> dictionary is a string with the value <c>audio</c>.
+</summary>
+<remarks>
+<para>The <c>kind</c> is used to differentiate between audio and video media sources when iterating an <see cref="RTCStatsReport"/>, which both have a <see cref="RTCAudioSourceStats.Type"/> of <c>media-source</c> (a <c>kind</c> of <c>video</c> indicates an <see cref="RTCVideoSourceStats"/> object).</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCAudioSourceStats/kind"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string with the value <c>audio</c>.</value>
+</RTCAudioSourceStatsKind>
+<RTCAudioSourceStatsAudioLevel>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>audioLevel</c></strong> property of the <see cref="RTCAudioSourceStats"/> dictionary represents the audio level of the media source.
+</summary>
+<remarks>
+<para>The level is averaged over some small implementation-dependent interval.<br/>Users can alternatively calculate the average audio level over some arbitrary duration using the algorithm described in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCAudioSourceStats#description"><c>RTCAudioSourceStats</c> description</see>.</para><blockquote class="NOTE"><h5>NOTE</h5><para>For audio levels of remotely sourced tracks, see <see cref="RTCInboundRtpStreamStats.AudioLevel"/>.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCAudioSourceStats/audioLevel"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number between 0 and 1 (linear), where 1.0 represents 0 dBov (<see href="https://en.wikipedia.org/wiki/DBFS">decibels relative to full scale (DBFS)</see>), 0 represents silence, and 0.5 represents approximately 6 dB SPL change in the <see href="https://en.wikipedia.org/wiki/Sound_pressure#Sound_pressure_level">sound pressure level</see> from 0 dBov.</value>
+</RTCAudioSourceStatsAudioLevel>
+<RTCAudioSourceStatsTrackIdentifier>
+<summary>
+The <strong><c>trackIdentifier</c></strong> property of the <see cref="RTCAudioSourceStats"/> dictionary contains the <c>id</c> attribute of the associated <see href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack"><c>MediaStreamTrack</c></see>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCAudioSourceStats/trackIdentifier"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing the value of the associated <see href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack/id"><c>MediaStreamTrack.id</c></see>.</value>
+</RTCAudioSourceStatsTrackIdentifier>
+<RTCAudioSourceStatsType>
+<summary>
+The <strong><c>type</c></strong> property of the <see cref="RTCAudioSourceStats"/> dictionary is a string with value <c>media-source</c>.
+</summary>
+<remarks>
+<para>The type of <c>media-source</c> identifies the type of statistics as either <see cref="RTCAudioSourceStats"/> or <see cref="RTCVideoSourceStats"/> when iterating the <see cref="RTCStatsReport"/> returned by <see cref="RTCRtpSender.GetStats"/> or <see cref="RTCPeerConnection.GetStats"/>.<br/>The type of stats can further be differentiated using the <see cref="RTCAudioSourceStats.Kind"/>, which will be <c>audio</c> for <c>RTCAudioSourceStats</c>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCAudioSourceStats/type"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string with the value <c>media-source</c>.</value>
+</RTCAudioSourceStatsType>
+<RTCAudioSourceStatsTotalAudioEnergy>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>totalAudioEnergy</c></strong> property of the <see cref="RTCAudioSourceStats"/> dictionary represents the total audio energy of the media source over the lifetime of this stats object.
+</summary>
+<remarks>
+<para>The total energy across a particular duration can be determined by subtracting the value of this property returned by two different <c>getStats()</c> calls.</para><blockquote class="NOTE"><h5>NOTE</h5><para>For audio energy of remotely sourced tracks, see <see cref="RTCInboundRtpStreamStats.TotalAudioEnergy"/>.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCAudioSourceStats/totalAudioEnergy"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number produced by summing the energy of every sample over the lifetime of this stats object.The energy of each sample is calculated by dividing the sample&amp;apos;s value by the highest-intensity encodable value, squaring the result, and then multiplying by the duration of the sample in seconds.<br/>This is shown as an equation below:Note that if multiple audio channels are used, the audio energy of a sample refers to the highest energy of any channel.</value>
+</RTCAudioSourceStatsTotalAudioEnergy>
+<RTCAudioSourceStatsId>
+<summary>
+The <strong><c>id</c></strong> property of the <see cref="RTCAudioSourceStats"/> dictionary is a string which uniquely identifies the object for which this object provides statistics.
+</summary>
+<remarks>
+<para>Using the <c>id</c>, you can correlate this statistics object with others, in order to monitor statistics over time for a given WebRTC object, such as an <see cref="RTCPeerConnection"/>, or an <see cref="RTCDataChannel"/>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCAudioSourceStats/id"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string that uniquely identifies the object for which this <c>RTCAudioSourceStats</c> object provides statistics.The format of the ID string is not defined by the specification, so you cannot reliably make any assumptions about the contents of the string, or assume that the format of the string will remain unchanged for a given object type.</value>
+</RTCAudioSourceStatsId>
+<RTCAudioSourceStatsTimestamp>
+<summary>
+The <strong><c>timestamp</c></strong> property of the <see cref="RTCAudioSourceStats"/> dictionary is a <see cref="DOMHighResTimeStamp"/> object specifying the time at which the data in the object was sampled.
+</summary>
+<remarks>
+<para>The time is given in milliseconds elapsed since the first moment of January 1, 1970, UTC (also known as <see href="https://developer.mozilla.org/en-US/docs/Glossary/Unix_time">Unix time</see>).</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCAudioSourceStats/timestamp"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DOMHighResTimeStamp"/> value indicating the time at which the activity described by the statistics in this object was recorded, in milliseconds elapsed since the beginning of January 1, 1970, UTC.The value should be accurate to within a few milliseconds but may not be entirely precise, either because of hardware or operating system limitations or because of <see href="https://developer.mozilla.org/en-US/docs/Glossary/Fingerprinting">fingerprinting</see> protection in the form of reduced clock precision or accuracy.</value>
+</RTCAudioSourceStatsTimestamp>
+</docs>

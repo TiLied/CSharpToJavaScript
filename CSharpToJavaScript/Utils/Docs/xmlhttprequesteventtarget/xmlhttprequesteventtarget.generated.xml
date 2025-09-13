@@ -1,0 +1,75 @@
+<docs>
+<XMLHttpRequestEventTarget>
+<summary>
+<c>XMLHttpRequestEventTarget</c> is the interface that describes the event handlers shared on <see cref="XMLHttpRequest"/> and <see cref="XMLHttpRequestUpload"/>.
+</summary>
+<remarks>
+<para>You don&amp;apos;t use <c>XMLHttpRequestEventTarget</c> directly; instead you interact with the sub classes.</para>
+<para>-<see cref="XMLHttpRequest"/><br/>-<see cref="XMLHttpRequestUpload"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequestEventTarget"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</XMLHttpRequestEventTarget>
+<XMLHttpRequestEventTargetAbort>
+<summary>
+The <c>abort</c> event is fired when a request has been aborted, for example because the program called <see cref="XMLHttpRequest.Abort"/>.
+</summary>
+<remarks>
+<para>-Related events: <see cref="XMLHttpRequestEventTargetloadstart"/>, <see cref="XMLHttpRequestEventTargetload"/>, <see cref="XMLHttpRequestEventTargetprogress"/>, <see cref="XMLHttpRequestEventTargeterror"/>, <see cref="XMLHttpRequestEventTargetloadend"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#monitoring_progress">Monitoring progress</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequestEventTarget/abort"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</XMLHttpRequestEventTargetAbort>
+<XMLHttpRequestEventTargetProgress>
+<summary>
+The <strong><c>progress</c></strong> event is fired periodically when a request receives more data.
+</summary>
+<remarks>
+<para>-Related events: <see cref="XMLHttpRequestEventTargetloadstart"/>, <see cref="XMLHttpRequestEventTargetload"/>, <see cref="XMLHttpRequestEventTargetloadend"/>, <see cref="XMLHttpRequestEventTargeterror"/>, <see cref="XMLHttpRequestEventTargetabort"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#monitoring_progress">Monitoring progress</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequestEventTarget/progress"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</XMLHttpRequestEventTargetProgress>
+<XMLHttpRequestEventTargetError>
+<summary>
+The <c>error</c> event is fired when the request encountered an error.
+</summary>
+<remarks>
+<para>-Related events: <see cref="XMLHttpRequestEventTargetloadstart"/>, <see cref="XMLHttpRequestEventTargetload"/>, <see cref="XMLHttpRequestEventTargetprogress"/>, <see cref="XMLHttpRequestEventTargetloadend"/>, <see cref="XMLHttpRequestEventTargetabort"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#monitoring_progress">Monitoring progress</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequestEventTarget/error"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</XMLHttpRequestEventTargetError>
+<XMLHttpRequestEventTargetLoadend>
+<summary>
+The <strong><c>loadend</c></strong> event is fired when a request has completed, whether successfully (after <see cref="XMLHttpRequestEventTargetload"/>) or unsuccessfully (after <see cref="XMLHttpRequestEventTargetabort"/> or <see cref="XMLHttpRequestEventTargeterror"/>).
+</summary>
+<remarks>
+<para>-Related events: <see cref="XMLHttpRequestEventTargetloadstart"/>, <see cref="XMLHttpRequestEventTargetload"/>, <see cref="XMLHttpRequestEventTargetprogress"/>, <see cref="XMLHttpRequestEventTargeterror"/>, <see cref="XMLHttpRequestEventTargetabort"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#monitoring_progress">Monitoring progress</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequestEventTarget/loadend"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</XMLHttpRequestEventTargetLoadend>
+<XMLHttpRequestEventTargetTimeout>
+<summary>
+The <strong><c>timeout</c></strong> event is fired when progression is terminated due to preset time expiring.
+</summary>
+<remarks>
+<para>-Related events: <see cref="XMLHttpRequestEventTargetloadstart"/>, <see cref="XMLHttpRequestEventTargetload"/>, <see cref="XMLHttpRequestEventTargetloadend"/>, <see cref="XMLHttpRequestEventTargetprogress"/>, <see cref="XMLHttpRequestEventTargeterror"/>, <see cref="XMLHttpRequestEventTargetabort"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#monitoring_progress">Monitoring progress</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequestEventTarget/timeout"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</XMLHttpRequestEventTargetTimeout>
+<XMLHttpRequestEventTargetLoad>
+<summary>
+The <c>load</c> event is fired when an <see cref="XMLHttpRequest"/> transaction completes successfully.
+</summary>
+<remarks>
+<para>-Related events: <see cref="XMLHttpRequestEventTargetloadstart"/>, <see cref="XMLHttpRequestEventTargetloadend"/>, <see cref="XMLHttpRequestEventTargetprogress"/>, <see cref="XMLHttpRequestEventTargeterror"/>, <see cref="XMLHttpRequestEventTargetabort"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#monitoring_progress">Monitoring progress</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequestEventTarget/load"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</XMLHttpRequestEventTargetLoad>
+<XMLHttpRequestEventTargetLoadstart>
+<summary>
+The <strong><c>loadstart</c></strong> event is fired when a request has started to load data.
+</summary>
+<remarks>
+<para>-Related events: <see cref="XMLHttpRequestEventTargetloadend"/>, <see cref="XMLHttpRequestEventTargetload"/>, <see cref="XMLHttpRequestEventTargetprogress"/>, <see cref="XMLHttpRequestEventTargeterror"/>, <see cref="XMLHttpRequestEventTargetabort"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#monitoring_progress">Monitoring progress</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequestEventTarget/loadstart"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</XMLHttpRequestEventTargetLoadstart>
+</docs>

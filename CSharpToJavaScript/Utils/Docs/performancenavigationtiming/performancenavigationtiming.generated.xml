@@ -1,0 +1,158 @@
+<docs>
+<PerformanceNavigationTiming>
+<summary>
+The <strong><c>PerformanceNavigationTiming</c></strong> interface provides methods and properties to store and retrieve metrics regarding the browser&amp;apos;s document navigation events. For example, this interface can be used to determine how much time it takes to load or unload a document.
+</summary>
+<remarks>
+<para>Only the current document is included in the performance timeline, so there is only one <c>PerformanceNavigationTiming</c> object in the performance timeline. It inherits all of the properties and methods of <see cref="PerformanceResourceTiming"/> and <see cref="PerformanceEntry"/>.</para><para></para><para>The following diagram shows all of the timestamp properties defined in <c>PerformanceNavigationTiming</c>.</para><para><see href="https://mdn.github.io/shared-assets/images/diagrams/api/performance/timestamp-diagram.svg">Timestamp diagram listing timestamps in the order in which they are recorded for the fetching of a document</see></para>
+<para>-<see cref="Performance.Navigation"/><br/>-<see cref="PerformanceNavigation"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</PerformanceNavigationTiming>
+<PerformanceNavigationTimingDomContentLoadedEventEnd>
+<summary>
+The <strong><c>domContentLoadedEventEnd</c></strong> read-only property returns a <see cref="DOMHighResTimeStamp"/> representing the time immediately after the current document's <see href="https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event"><c>DOMContentLoaded</c></see> event handler completes.
+</summary>
+<remarks>
+<para>Typically frameworks and libraries wait for the <c>DOMContentLoaded</c> event before starting to run their code. We can use the <c>domContentLoadedEventEnd</c> and the <see href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/domContentLoadedEventStart"><c>domContentLoadedEventStart</c></see> properties to calculate how long this takes to run.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event">DOMContentLoaded</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/domContentLoadedEventEnd"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DOMHighResTimeStamp"/> representing the time immediately after the current document's <see href="https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event"><c>DOMContentLoaded</c></see> event handler completes.</value>
+</PerformanceNavigationTimingDomContentLoadedEventEnd>
+<PerformanceNavigationTimingLoadEventEnd>
+<summary>
+The <strong><c>loadEventEnd</c></strong> read-only property returns a <see cref="DOMHighResTimeStamp"/> representing the time immediately after the current document's <see href="https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event"><c>load</c></see> event handler completes.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event"><c>load</c></see> event<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/loadEventEnd"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DOMHighResTimeStamp"/> representing the time immediately after the current document's <see href="https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event"><c>load</c></see> event handler completes.</value>
+</PerformanceNavigationTimingLoadEventEnd>
+<PerformanceNavigationTimingNotRestoredReasons>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>notRestoredReasons</c></strong> read-only property of the <see cref="PerformanceNavigationTiming"/> interface returns a <see cref="NotRestoredReasons"/> object providing report data on reasons why the current document was blocked from using the back/forward cache ({{Glossary("bfcache")}}) on navigation.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Performance_API/Monitoring_bfcache_blocking_reasons">Monitoring bfcache blocking reasons</see><br/>-<see cref="PerformanceResourceTiming"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/notRestoredReasons"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>When the associated <c>PerformanceNavigationTiming</c> object represents a history navigation, <c>notRestoredReasons</c> returns a <see cref="NotRestoredReasons"/> object.When the <c>PerformanceNavigationTiming</c> object does not represent a history navigation, <c>notRestoredReasons</c> will return <c>null</c>. This is useful for determining whether bfcache is not relevant to a particular navigation (as opposed to <c>notRestoredReasons</c> not being supported, in which case it would return <c>undefined</c>).<blockquote class="NOTE"><h5>NOTE</h5><c>notRestoredReasons</c> may return <c>null</c> despite the navigation type being reported as a back/forward navigation. These circumstances include duplicating a back/forward navigation in a new tab and restoring a back/forward navigation tab after a browser restart. In such cases, some browsers copy the navigation type from the original tab, but as these are not actually back/forward navigations, <c>notRestoredReasons</c> returns <c>null</c>.</blockquote></value>
+</PerformanceNavigationTimingNotRestoredReasons>
+<PerformanceNavigationTimingUnloadEventEnd>
+<summary>
+The <strong><c>unloadEventEnd</c></strong> read-only property returns a <see cref="DOMHighResTimeStamp"/> representing the time immediately after the previous document's <see href="https://developer.mozilla.org/en-US/docs/Web/API/Window/unload_event"><c>unload</c></see> event handler completes.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Window/unload_event"><c>unload</c></see> event<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/unloadEventEnd"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <c>unloadEventEnd</c> property can have the following values:</value>
+</PerformanceNavigationTimingUnloadEventEnd>
+<PerformanceNavigationTimingDomComplete>
+<summary>
+The <strong><c>domComplete</c></strong> read-only property returns a <see cref="DOMHighResTimeStamp"/> representing the time immediately before the user agent sets the document's <see href="https://developer.mozilla.org/en-US/docs/Web/API/Document/readyState"><c>readyState</c></see> to <c>&amp;quot;complete&amp;quot;</c>.
+</summary>
+<remarks>
+<para>See also the <c>complete</c> state of <see cref="Document.ReadyState"/> which corresponds to this property and refers to the state in which the document and all sub-resources have finished loading. The state also indicates that the <see cref="Windowload"/> event is about to fire.</para>
+<para>-<see cref="Document.ReadyState"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/domComplete"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DOMHighResTimeStamp"/> representing the time immediately before the user agent sets the document's <see href="https://developer.mozilla.org/en-US/docs/Web/API/Document/readyState"><c>readyState</c></see> to <c>&amp;quot;complete&amp;quot;</c>.</value>
+</PerformanceNavigationTimingDomComplete>
+<PerformanceNavigationTimingDomContentLoadedEventStart>
+<summary>
+The <strong><c>domContentLoadedEventStart</c></strong> read-only property returns a <see cref="DOMHighResTimeStamp"/> representing the time immediately before the current document's <see href="https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event"><c>DOMContentLoaded</c></see> event handler starts.
+</summary>
+<remarks>
+<para>Typically frameworks and libraries wait for the <c>DOMContentLoaded</c> event before starting to run their code. We can use the <c>domContentLoadedEventStart</c> and the <see href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/domContentLoadedEventEnd"><c>domContentLoadedEventEnd</c></see> properties to calculate how long this takes to run.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event">DOMContentLoaded</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/domContentLoadedEventStart"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DOMHighResTimeStamp"/> representing the time immediately before the current document's <see href="https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event"><c>DOMContentLoaded</c></see> event handler starts.</value>
+</PerformanceNavigationTimingDomContentLoadedEventStart>
+<PerformanceNavigationTimingLoadEventStart>
+<summary>
+The <strong><c>loadEventStart</c></strong> read-only property returns a <see cref="DOMHighResTimeStamp"/> representing the time immediately before the current document's <see href="https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event"><c>load</c></see> event handler starts.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event"><c>load</c></see> event<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/loadEventStart"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DOMHighResTimeStamp"/> representing the time immediately before the current document's <see href="https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event"><c>load</c></see> event handler starts.</value>
+</PerformanceNavigationTimingLoadEventStart>
+<PerformanceNavigationTimingCriticalCHRestart>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> A website can indicate that a particular <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Client_hints">Client Hint</see> is critical to the page by including it in a <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Critical-CH">Critical-CH</see> HTTP response header (as well as the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-CH">Accept-CH</see> HTTP request header which is needed for all client hints whether critical or not). Doing so will trigger a connection restart if the hint listed in the <c>Critical-CH</c> HTTP response header could have been, but wasn&amp;apos;t, included in the HTTP request initially sent. If the browser does not support that client hint, it is ignored and no connection restart occurs.
+</summary>
+<remarks>
+<para>The <strong><c>criticalCHRestart</c></strong> read-only property represents the time at which the connection restart occurred.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Client_hints">Client hints</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/User-Agent_Client_Hints_API">User-Agent Client Hints API</see><br/>-<see href="https://developer.chrome.com/docs/privacy-security/user-agent-client-hints">Improving user privacy and developer experience with User-Agent Client Hints</see> (developer.chrome.com)<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-CH">Accept-CH</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Critical-CH">Critical-CH</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/criticalCHRestart"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DOMHighResTimeStamp"/> representing the number of milliseconds elapsed since <see cref="PerformanceEntry.StartTime"/> when the connection restart occurred in milliseconds.If the value is <c>0</c> the connection was not restarted.</value>
+</PerformanceNavigationTimingCriticalCHRestart>
+<PerformanceNavigationTimingRedirectCount>
+<summary>
+The <strong><c>redirectCount</c></strong> read-only property returns a number representing the number of redirects since the last non-redirect navigation in the current browsing context.
+</summary>
+<remarks>
+<para>The higher the number of redirects on a page, the longer the page load time. To improve the performance of your web page, avoid multiple redirects.</para><para>The <see cref="PerformanceResourceTiming.RedirectStart"/> and <see cref="PerformanceResourceTiming.RedirectEnd"/> properties can be used to measure redirection time. Note that they will return <c>0</c> for cross-origin redirects.</para><para>Note that client side redirects, such as <c>&amp;lt;meta http-equiv=&amp;quot;refresh&amp;quot; content=&amp;quot;0; url=https://example.com/&amp;quot;&amp;gt;</c> are not considered here.</para>
+<para>-<see cref="PerformanceResourceTiming.RedirectStart"/><br/>-<see cref="PerformanceResourceTiming.RedirectEnd"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/redirectCount"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <c>redirectCount</c> property can have the following values:</value>
+</PerformanceNavigationTimingRedirectCount>
+<PerformanceNavigationTimingUnloadEventStart>
+<summary>
+The <strong><c>unloadEventStart</c></strong> read-only property returns a <see cref="DOMHighResTimeStamp"/> representing the time immediately before the previous document's <see href="https://developer.mozilla.org/en-US/docs/Web/API/Window/unload_event"><c>unload</c></see> event handler starts.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Window/unload_event"><c>unload</c></see> event<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/unloadEventStart"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <c>unloadEventStart</c> property can have the following values:</value>
+</PerformanceNavigationTimingUnloadEventStart>
+<PerformanceNavigationTimingDomInteractive>
+<summary>
+The <strong><c>domInteractive</c></strong> read-only property returns a <see cref="DOMHighResTimeStamp"/> representing the time immediately before the user agent sets the document's <see href="https://developer.mozilla.org/en-US/docs/Web/API/Document/readyState"><c>readyState</c></see> to <c>&amp;quot;interactive&amp;quot;</c>.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This property is <strong>not</strong> <see href="https://developer.mozilla.org/en-US/docs/Glossary/Time to interactive">Time to interactive</see> (TTI). This property refers to the time when DOM construction is finished and interaction to it from JavaScript is possible. See also the <c>interactive</c> state of <see cref="Document.ReadyState"/> which corresponds to this property.</para></blockquote><para>Measuring DOM processing time may not be consequential unless your site has a very large HTML source to a construct a Document Object Model from.</para><para>If there is no parser-blocking JavaScript then the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event"><c>DOMContentLoaded</c></see> event (see <see href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/domContentLoadedEventStart"><c>domContentLoadedEventStart</c></see> for the timestamp) will fire immediately after <c>domInteractive</c>.</para>
+<para>-<see cref="Document.ReadyState"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/domInteractive"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DOMHighResTimeStamp"/> representing the time immediately before the user agent sets the document's <see href="https://developer.mozilla.org/en-US/docs/Web/API/Document/readyState"><c>readyState</c></see> to <c>&amp;quot;interactive&amp;quot;</c>.</value>
+</PerformanceNavigationTimingDomInteractive>
+<PerformanceNavigationTimingType>
+<summary>
+The <strong><c>type</c></strong> read-only property returns the type of navigation.
+</summary>
+<remarks>
+<para>You can use this property to categorize your navigation timing data as each of these types will have different performance characteristics. Users going back and forth might experience a faster site than users performing navigation for the first time or submitting forms, etc.</para><para>For example, if your site provides new content frequently, you might want to refresh that content using <see href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch</see> or similar and avoid users having to hit reload for the entire page all the time. The <c>&amp;quot;reload&amp;quot;</c> type can help you find pages that are reloaded frequently.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/type"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <c>type</c> property can have the following values:</value>
+</PerformanceNavigationTimingType>
+<PerformanceNavigationTimingActivationStart>
+<summary>
+<div class="CAUTION"><h5>CAUTION</h5> <strong>Non-standard</strong></div> The <strong><c>activationStart</c></strong> read-only property represents the time between when a document starts prerendering and when it is activated.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Speculation_Rules_API">Speculation Rules API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Performance/Guides/Speculative_loading">Speculative loading</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/activationStart"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DOMHighResTimeStamp"/> representing the duration between document prerendering start and activation in milliseconds.The value is <c>0</c> if the page has not prerendered or is still prerendering.</value>
+</PerformanceNavigationTimingActivationStart>
+<PerformanceNavigationTimingToJSON>
+<summary>
+The <strong><c>toJSON()</c></strong> method of the <see cref="PerformanceNavigationTiming"/> interface is a {{Glossary("Serialization","serializer")}}; it returns a JSON representation of the <see cref="PerformanceNavigationTiming"/> object.
+</summary>
+<remarks>
+<para>-<see cref="JSON"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/toJSON"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("JSON")}} object that is the serialization of the <see cref="PerformanceNavigationTiming"/> object.</returns>
+</PerformanceNavigationTimingToJSON>
+</docs>

@@ -1,0 +1,33 @@
+<docs>
+<RTCCertificate>
+<summary>
+The <strong><c>RTCCertificate</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see> provides an object representing a certificate that an <see cref="RTCPeerConnection"/> uses to authenticate.
+</summary>
+<remarks>
+<para><c>RTCCertificate</c> is a {{Glossary("serializable object")}}, so it can be cloned with <see cref="Window.StructuredClone"/> or copied between <see href="https://developer.mozilla.org/en-US/docs/Web/API/Worker">Workers</see> using <see cref="WorkerpostMessage"/>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/RTCPeerConnection#certificates"><c>RTCPeerConnection.RTCPeerConnection()</c> argument <c>configuration.certificates</c></see><br/>-<see cref="RTCPeerConnection.GenerateCertificate"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCCertificate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RTCCertificate>
+<RTCCertificateExpires>
+<summary>
+The read-only <strong><c>expires</c></strong> property of the <see cref="RTCCertificate"/> interface returns the expiration date of the certificate.
+</summary>
+<remarks>
+<para>By default a new certificate is configured with <c>expires</c> set to a value of 2592000000 milliseconds, or 30 days.<br/>The expiration time cannot exceed 31536000000 milliseconds, or 365 days.<br/>It&amp;apos;s also useful to note that browsers may further restrict the expiration time of certificates if they choose.</para>
+<para>-<see cref="RTCPeerConnection.GenerateCertificate"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCCertificate/expires"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A timestamp, given as <see href="https://developer.mozilla.org/en-US/docs/Glossary/Unix_time">Unix time</see> in milliseconds, containing the expiration date of the certificate.</value>
+</RTCCertificateExpires>
+<RTCCertificateGetFingerprints>
+<summary>
+The <strong><c>getFingerprints()</c></strong> method of the <strong><see cref="RTCCertificate"/></strong> interface is used to get an array of certificate fingerprints.
+</summary>
+<remarks>
+<para>This can be used in application-level code to get certificate fingerprints, which are <see href="https://developer.mozilla.org/en-US/docs/Glossary/hash function">hash function</see> of the certificate created using the various algorithms supported by the browser.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCCertificate/getFingerprints"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</see> of fingerprint values.<br/>Each fingerprint is represented by an object with the following properties:</returns>
+</RTCCertificateGetFingerprints>
+</docs>

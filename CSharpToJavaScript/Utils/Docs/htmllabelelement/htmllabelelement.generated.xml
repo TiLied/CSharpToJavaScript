@@ -1,0 +1,43 @@
+<docs>
+<HTMLLabelElement>
+<summary>
+The <strong><c>HTMLLabelElement</c></strong> interface gives access to properties specific to {{HTMLElement("label")}} elements. It inherits methods and properties from the base <see cref="HTMLElement"/> interface.
+</summary>
+<remarks>
+<para></para>
+<para>-The HTML element implementing this interface: <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label">label</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see><br/>-<see cref="HTMLFormElement"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLLabelElement"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLLabelElement>
+<HTMLLabelElementHtmlFor>
+<summary>
+The <strong><c>HTMLLabelElement.htmlFor</c></strong> property reflects the value<br/>of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/label#for"><c>for</c></see> content property. That means that this<br/>script-accessible property is used to set and read the value of the content property<br/><c>for</c>, which is the ID of the label&amp;apos;s associated control element.
+</summary>
+<remarks>
+<para>-<see cref="HTMLLabelElement"/><br/>-<see cref="HTMLLabelElement.Control"/><br/>-<see cref="HTMLElement"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label">label</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms">HTML forms guide</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLLabelElement/htmlFor"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string which contains the ID string of the element which is<br/>associated with the control.<blockquote class="NOTE"><h5>NOTE</h5>If this property has a value, the <see cref="HTMLLabelElement.Control"/> property<br/>must refer to the same control.</blockquote></value>
+</HTMLLabelElementHtmlFor>
+<HTMLLabelElementForm>
+<summary>
+The <strong><c>form</c></strong> read-only property of the <see cref="HTMLLabelElement"/> interface returns an <see cref="HTMLFormElement"/> object that owns the <see cref="HTMLLabelElement.Control"/> associated with this {{HTMLElement("label")}}, or <c>null</c> if this label is not associated with a control owned by a form.
+</summary>
+<remarks>
+<para>This property is just a shortcut for <c>label.control.form</c>.</para>
+<para>-<see cref="HTMLLabelElement"/><br/>-<see cref="HTMLInputElement.Form"/><br/>-<see cref="HTMLFormElement"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label">label</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms">HTML forms guide</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLLabelElement/form"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="HTMLFormElement"/> or <c>null</c>.</value>
+</HTMLLabelElementForm>
+<HTMLLabelElementControl>
+<summary>
+The read-only <strong><c>HTMLLabelElement.control</c></strong> property returns a<br/>reference to the control (in the form of an object of type <see cref="HTMLElement"/> or<br/>one of its derivatives) with which the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label">label</see> element is associated,<br/>or <c>null</c> if the label isn&amp;apos;t associated with a control.
+</summary>
+<remarks>
+<para>-<see cref="HTMLLabelElement"/><br/>-<see cref="HTMLElement"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label">label</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms">HTML forms guide</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLLabelElement/control"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="HTMLElement"/> derived object representing the control with which the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label">label</see> is associated, or <c>null</c> if the label stands alone.<blockquote class="NOTE"><h5>NOTE</h5>If this property has a value and <see cref="HTMLLabelElement.HtmlFor"/> has a value,<br/>the <see cref="HTMLLabelElement.HtmlFor"/> property must refer to the same control.</blockquote></value>
+</HTMLLabelElementControl>
+</docs>

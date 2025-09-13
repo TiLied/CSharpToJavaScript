@@ -1,0 +1,61 @@
+<docs>
+<MediaDeviceInfo>
+<summary>
+The <strong><c>MediaDeviceInfo</c></strong> interface of the {{domxref(&amp;quot;Media Capture and Streams API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} contains information that describes a single media input or output device.
+</summary>
+<remarks>
+<para>The list of devices obtained by calling <see cref="MediaDevices.EnumerateDevices"/> is an array of <c>MediaDeviceInfo</c> objects, one per media device.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see cref="MediaDevices.EnumerateDevices"/><br/>-<see cref="MediaDevices.GetUserMedia"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDeviceInfo"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</MediaDeviceInfo>
+<MediaDeviceInfoLabel>
+<summary>
+The <strong><c>label</c></strong> read-only<br/>property of the <see cref="MediaDeviceInfo"/> interface returns a<br/>string describing this device (for example<br/>&amp;quot;External USB Webcam&amp;quot;).
+</summary>
+<remarks>
+<para>Only available during active <c>MediaStream</c><br/>use, or when persistent permissions have been granted.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDeviceInfo/label"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string which describes the media device. For security reasons, the<br/><c>label</c> is always an empty string (<c>&amp;quot;&amp;quot;</c>) if the user has not<br/>obtained permission to use at least one media device, either by starting a stream from<br/>the microphone or camera, or by persistent permissions being granted.</value>
+</MediaDeviceInfoLabel>
+<MediaDeviceInfoKind>
+<summary>
+The <strong><c>kind</c></strong> read-only property of<br/>the <see cref="MediaDeviceInfo"/> interface returns an enumerated value, that is<br/>either <c>&amp;quot;videoinput&amp;quot;</c>, <c>&amp;quot;audioinput&amp;quot;</c> or <c>&amp;quot;audiooutput&amp;quot;</c>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDeviceInfo/kind"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>One of <c>&amp;quot;videoinput&amp;quot;</c>, <c>&amp;quot;audioinput&amp;quot;</c> or <c>&amp;quot;audiooutput&amp;quot;</c>.</value>
+</MediaDeviceInfoKind>
+<MediaDeviceInfoDeviceId>
+<summary>
+The <strong><c>deviceId</c></strong> read-only property<br/>of the <see cref="MediaDeviceInfo"/> interface returns a string<br/>that is an identifier for the represented device and is persisted across<br/>sessions.
+</summary>
+<remarks>
+<para>It is un-guessable by other applications, and unique to the origin of<br/>the calling application. It is reset when the user clears cookies. For private browsing,<br/>a different identifier is used that is not persisted across sessions.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDeviceInfo/deviceId"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</MediaDeviceInfoDeviceId>
+<MediaDeviceInfoGroupId>
+<summary>
+The <strong><c>groupId</c></strong> read-only property of<br/>the <see cref="MediaDeviceInfo"/> interface returns a string that<br/>is a group identifier.
+</summary>
+<remarks>
+<para>Two devices have the same group identifier if they<br/>belong to the same physical device; for example, a monitor with both a built-in camera<br/>and microphone.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDeviceInfo/groupId"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string which uniquely identifies the group of related devices to<br/>which this device belongs.</value>
+</MediaDeviceInfoGroupId>
+<MediaDeviceInfoToJSON>
+<summary>
+The <strong><c>toJSON()</c></strong> method of the <see cref="MediaDeviceInfo"/> interface is a {{Glossary("Serialization","serializer")}}; it returns a JSON representation of the <see cref="MediaDeviceInfo"/> object.
+</summary>
+<remarks>
+<para>-<see cref="JSON"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDeviceInfo/toJSON"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("JSON")}} object that is the serialization of the <see cref="MediaDeviceInfo"/> object.</returns>
+</MediaDeviceInfoToJSON>
+</docs>

@@ -1,0 +1,45 @@
+<docs>
+<USBConfiguration>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <c>USBConfiguration</c> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebUSB_API">WebUSB API</see> provides information about a particular configuration of a USB device and the interfaces that it supports.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/USBConfiguration"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</USBConfiguration>
+<USBConfigurationConfigurationValue>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>configurationValue</c></strong> read-only property<br/>of the <see cref="USBConfiguration"/> interface returns the configuration value of this configuration. This is equal to the<br/><see href="https://www.beyondlogic.org/usbnutshell/usb5.shtml#ConfigurationDescriptors"><c>bConfigurationValue</c></see> field of the configuration descriptor provided by the device defining this configuration.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/USBConfiguration/configurationValue"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <see href="https://www.beyondlogic.org/usbnutshell/usb5.shtml#ConfigurationDescriptors">configuration descriptor</see> of the <see cref="USBDevice"/> specified in the constructor of the<br/>current <see cref="USBConfiguration"/> instance.</value>
+</USBConfigurationConfigurationValue>
+<USBConfigurationInterfaces>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>interfaces</c></strong> read-only property of the<br/><see cref="USBConfiguration"/> interface returns an array containing instances of the<br/><see cref="'USBInterface'"/> describing each interface supported by this configuration.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/USBConfiguration/interfaces"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An array containing instances of <see cref="'USBInterface'"/>.</value>
+</USBConfigurationInterfaces>
+<USBConfigurationConfigurationName>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>configurationName</c></strong> read-only property<br/>of the <see cref="USBConfiguration"/> interface returns the name provided by the device<br/>to describe this configuration. This is equal to the value of the string descriptor with<br/>the index provided in the <see href="https://www.beyondlogic.org/usbnutshell/usb5.shtml#ConfigurationDescriptors"><c>iConfiguration</c></see><br/>field of the configuration descriptor defining this configuration.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/USBConfiguration/configurationName"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The name provided by the device to describe this configuration.</value>
+</USBConfigurationConfigurationName>
+<USBConfigurationUSBConfiguration>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>USBConfiguration()</c></strong> constructor<br/>creates a new <see cref="USBConfiguration"/> object which contains information about<br/>the configuration on the provided USBDevice with the given configuration value.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/USBConfiguration/USBConfiguration"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</USBConfigurationUSBConfiguration>
+</docs>

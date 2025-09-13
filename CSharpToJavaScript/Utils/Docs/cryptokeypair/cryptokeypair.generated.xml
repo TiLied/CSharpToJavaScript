@@ -1,0 +1,12 @@
+<docs>
+<CryptoKeyPair>
+<summary>
+The <strong><c>CryptoKeyPair</c></strong> dictionary of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API">Web Crypto API</see> represents a key pair for an asymmetric cryptography algorithm, also known as a public-key algorithm.
+</summary>
+<remarks>
+<para>A <c>CryptoKeyPair</c> object can be obtained using <see cref="SubtleCrypto.GenerateKey"/>, when the selected algorithm is one of the asymmetric algorithms: RSASSA-PKCS1-v1_5, RSA-PSS, RSA-OAEP, ECDSA, or ECDH.</para><para>It contains two properties, which are both <see href="https://developer.mozilla.org/en-US/docs/Web/API/CryptoKey"><c>CryptoKey</c></see> objects: a <c>privateKey</c> property containing the private key and a <c>publicKey</c> property containing the public key.</para>
+<para>-<see cref="SubtleCrypto.GenerateKey"/>.<br/>-<see cref="SubtleCrypto.Sign"/> and <see cref="SubtleCrypto.Verify"/>.<br/>-<see cref="SubtleCrypto.Encrypt"/> and <see cref="SubtleCrypto.Decrypt"/>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CryptoKeyPair"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CryptoKeyPair>
+</docs>

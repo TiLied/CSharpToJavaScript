@@ -1,0 +1,39 @@
+<docs>
+<DelegatedInkTrailPresenter>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>DelegatedInkTrailPresenter</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Ink_API">Ink API</see> provides the ability to instruct the OS-level compositor to render ink strokes between pointer event dispatches.
+</summary>
+<remarks>
+<para></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DelegatedInkTrailPresenter"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</DelegatedInkTrailPresenter>
+<DelegatedInkTrailPresenterPresentationArea>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>presentationArea</c></strong> read-only property of the <see cref="DelegatedInkTrailPresenter"/> interface returns the <see cref="Element"/> inside which rendering of ink strokes is confined.
+</summary>
+<remarks>
+<para>If the preceding <see cref="Ink.RequestPresenter"/> method call included a specific <c>presentationArea</c> element definition, then that will be the element returned. Otherwise, the default is returned, which is the containing viewport.</para><para>This area is always the client coordinates for the element&amp;apos;s border box, so moving the element or scrolling the element requires no recalculation on the developer&amp;apos;s part.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DelegatedInkTrailPresenter/presentationArea"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="Element"/>.</value>
+</DelegatedInkTrailPresenterPresentationArea>
+<DelegatedInkTrailPresenterUpdateInkTrailStartPoint>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>updateInkTrailStartPoint()</c></strong> method of the <see cref="DelegatedInkTrailPresenter"/> interface indicates which <see cref="PointerEvent"/> was used as the last rendering point for the current frame, allowing the OS-level compositor to render a delegated ink trail ahead of the next pointer event being dispatched.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DelegatedInkTrailPresenter/updateInkTrailStartPoint"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns><c>undefined</c>.</returns>
+</DelegatedInkTrailPresenterUpdateInkTrailStartPoint>
+<DelegatedInkTrailPresenterExpectedImprovement>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>expectedImprovement</c></strong> read-only property of the <see cref="DelegatedInkTrailPresenter"/> interface returns a value, in milliseconds, indicating the latency improvement that can be expected using this presenter.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DelegatedInkTrailPresenter/expectedImprovement"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</DelegatedInkTrailPresenterExpectedImprovement>
+</docs>

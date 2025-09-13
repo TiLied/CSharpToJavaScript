@@ -1,0 +1,31 @@
+<docs>
+<XRLightProbe>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>XRLightProbe</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</see> contains lighting information at a given point in the user&amp;apos;s environment. You can get an <c>XRLighting</c> object using the <see cref="XRSession.RequestLightProbe"/> method.
+</summary>
+<remarks>
+<para>This object doesn't itself contain lighting values, but it is used to collect lighting states for each <see cref="XRFrame"/>. See <see cref="XRLightEstimate"/> for the estimated lighting values for an <c>XRLightProbe</c>.</para><para></para>
+<para>-<see cref="XRSession.RequestLightProbe"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRLightProbe"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</XRLightProbe>
+<XRLightProbeProbeSpace>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong>read-only</strong> <strong><c>probeSpace</c></strong> property of the <see cref="XRLightProbe"/> interface returns an <see cref="XRSpace"/> tracking the position and orientation that the lighting estimations are relative to.
+</summary>
+<remarks>
+<para>-<see cref="XRSpace"/><br/>-<see cref="XRFrame.GetPose"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRLightProbe/probeSpace"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="XRSpace"/> object.</value>
+</XRLightProbeProbeSpace>
+<XRLightProbeReflectionchange>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The WebXR <strong><c>reflectionchange</c></strong> event fires each time the estimated reflection cube map changes. This happens in response to use movements through different lighting conditions or to direct changes to lighting itself. This event is not cancelable.
+</summary>
+<remarks>
+<para>-<see cref="EventTarget.AddEventListener"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRLightProbe/reflectionchange"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</XRLightProbeReflectionchange>
+</docs>

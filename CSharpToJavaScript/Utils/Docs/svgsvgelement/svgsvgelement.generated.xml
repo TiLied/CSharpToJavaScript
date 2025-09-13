@@ -1,0 +1,269 @@
+<docs>
+<SVGSVGElement>
+<summary>
+The <strong><c>SVGSVGElement</c></strong> interface provides access to the properties of <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementsvg">svg</see> elements, as well as methods to manipulate them. This interface contains also various miscellaneous commonly-used utility methods, such as matrix operations and the ability to control the time of redraw on visual rendering devices.
+</summary>
+<remarks>
+<para></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementcircle">circle</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGSVGElement"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</SVGSVGElement>
+<SVGSVGElementWidth>
+<summary>
+The <strong><c>width</c></strong> read-only property of the <see cref="SVGSVGElement"/> interface describes the horizontal size of element as an <see cref="SVGAnimatedLength"/>. It reflects the {{SVGElement("svg")}} element's {{SVGAttr("width")}} attribute, which may not be the SVG's rendered width.
+</summary>
+<remarks>
+<para>The CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/width">width</see> property takes precedence over the <c>&amp;lt;svg&amp;gt;</c> element&amp;apos;s <c>width</c> attribute, so the value may not reflect the element's appearance. If both the viewBox and <c>width</c> attributes are omitted, the <c>width</c> property reflects that actual width.</para>
+<para>-<see cref="SVGSVGElement.ViewBox"/><br/>-<see cref="SVGAnimatedLength.BaseVal"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGSVGElement/width"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedLength"/>.</value>
+</SVGSVGElementWidth>
+<SVGSVGElementCreateSVGRect>
+<summary>
+The <c>createSVGRect()</c> method of the <see cref="SVGSVGElement"/> interface creates an <see cref="DOMRect"/> object outside of any document trees.
+</summary>
+<remarks>
+<para>-<see cref="DOMRect"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGSVGElement/createSVGRect"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="DOMRect"/> object, initialized with <c>x</c>, <c>y</c>, <c>width</c>, and <c>height</c> all set to <c>0</c>.</returns>
+</SVGSVGElementCreateSVGRect>
+<SVGSVGElementX>
+<summary>
+The <strong><c>x</c></strong> read-only property of the <see cref="SVGSVGElement"/> interface describes the horizontal coordinate of the position of that SVG as an <see cref="SVGAnimatedLength"/>. When an {{SVGElement("svg")}} is nested within another <c>&amp;lt;svg&amp;gt;</c>, the horizontal coordinate is a length in the user coordinate system that is the given distance from the origin of the user coordinate system along the x-axis. Its syntax is the same as that for <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see>.
+</summary>
+<remarks>
+<para>It reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementsvg">svg</see> element's {{SVGAttr("x")}} geometric attribute. The default value is <c>0</c>. The <c>x</c> attribute has no effect on outermost <c>&amp;lt;svg&amp;gt;</c> elements; only one nested ones. The CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/x">x</see> property takes precedence over the <c>&amp;lt;svg&amp;gt;</c> element&amp;apos;s <c>x</c> attribute, so the value may not reflect the element&amp;apos;s appearance.</para>
+<para>-<see cref="SVGSVGElement.Y"/><br/>-<see cref="SVGAnimatedLength.BaseVal"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGSVGElement/x"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedLength"/>.</value>
+</SVGSVGElementX>
+<SVGSVGElementCurrentTranslate>
+<summary>
+The <strong><c>currentTranslate</c></strong> read-only property of the <see cref="SVGSVGElement"/> interface reflects the translation factor that takes into account user "magnification" corresponding to an outermost {{SVGElement("svg")}} element.
+</summary>
+<remarks>
+<para>If the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementsvg">svg</see> element is not at the outermost level, then <c>currentTranslate</c> is always <c>{ x: 0, y: 0 }</c> and is read-only. Otherwise, it is writable.</para>
+<para>-<see cref="SVGSVGElement.CurrentScale"/><br/>-<see cref="DOMPointReadOnly"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGSVGElement/currentTranslate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DOMPointReadOnly"/>.</value>
+</SVGSVGElementCurrentTranslate>
+<SVGSVGElementCreateSVGMatrix>
+<summary>
+The <c>createSVGMatrix()</c> method of the <see cref="SVGSVGElement"/> interface creates a <see cref="DOMMatrix"/> object outside of any document trees.
+</summary>
+<remarks>
+<para>-<see cref="DOMMatrix"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGSVGElement/createSVGMatrix"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="DOMMatrix"/> object, initialized to the identity matrix.</returns>
+</SVGSVGElementCreateSVGMatrix>
+<SVGSVGElementGetCurrentTime>
+<summary>
+The <c>getCurrentTime()</c> method of the <see cref="SVGSVGElement"/> interface returns the current time in seconds relative to the start time for the current SVG document fragment.
+</summary>
+<remarks>
+<para>If <c>getCurrentTime()</c> is called before the document timeline has begun (for example, by script running in a <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementscript">script</see> element before the document's <c>SVGLoad</c> event is dispatched), then <c>0</c> is returned.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGSVGElement/getCurrentTime"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A float.</returns>
+</SVGSVGElementGetCurrentTime>
+<SVGSVGElementCreateSVGLength>
+<summary>
+The <c>createSVGLength()</c> method of the <see cref="SVGSVGElement"/> interface creates an <see cref="SVGLength"/> object outside of any document trees.
+</summary>
+<remarks>
+<para>-<see cref="SVGLength"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGSVGElement/createSVGLength"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="SVGLength"/> object, initialized to a value of <c>0</c> (unitless).</returns>
+</SVGSVGElementCreateSVGLength>
+<SVGSVGElementCreateSVGAngle>
+<summary>
+The <c>createSVGAngle()</c> method of the <see cref="SVGSVGElement"/> interface creates an <see cref="SVGAngle"/> object outside of any document trees.
+</summary>
+<remarks>
+<para>-<see cref="SVGAngle"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGSVGElement/createSVGAngle"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="SVGAngle"/> object, initialized to a value of <c>0</c> (unitless).</returns>
+</SVGSVGElementCreateSVGAngle>
+<SVGSVGElementDeselectAll>
+<summary>
+The <c>deselectAll()</c> method of the <see cref="SVGSVGElement"/> interface unselects any selected objects, including any selections of text strings and type-in bars.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGSVGElement/deselectAll"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None.</returns>
+</SVGSVGElementDeselectAll>
+<SVGSVGElementCreateSVGPoint>
+<summary>
+The <c>createSVGPoint()</c> method of the <see cref="SVGSVGElement"/> interface creates a <see cref="DOMPoint"/> object outside of any document trees.
+</summary>
+<remarks>
+<para>-<see cref="DOMPoint"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGSVGElement/createSVGPoint"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="DOMPoint"/> object, initialized to the point <c>(0,0)</c> in the user coordinate system.</returns>
+</SVGSVGElementCreateSVGPoint>
+<SVGSVGElementCheckIntersection>
+<summary>
+The <c>checkIntersection()</c> method of the <see cref="SVGSVGElement"/> interface checks if the rendered content of the given element intersects the supplied rectangle.
+</summary>
+<remarks>
+<para>Each candidate graphics element is to be considered a match only if the same graphics element can be a target of pointer events as defined in pointer-events processing.</para>
+<para>-<see cref="SVGSVGElement.CheckEnclosure"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGSVGElement/checkIntersection"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A boolean.</returns>
+</SVGSVGElementCheckIntersection>
+<SVGSVGElementCreateSVGTransformFromMatrix>
+<summary>
+The <c>createSVGTransformFromMatrix()</c> method of the <see cref="SVGSVGElement"/> interface creates an <see cref="SVGTransform"/> object outside of any document trees, based on the given <see cref="DOMMatrix"/> object.
+</summary>
+<remarks>
+<para>-<see cref="SVGTransform"/><br/>-<see cref="DOMMatrix"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGSVGElement/createSVGTransformFromMatrix"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="SVGTransform"/> object, initialized to the given matrix transform. It is a <c>matrix()</c> transform if the <c>matrix</c> is <see href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/is2D">2D</see>, and a <c>matrix3d()</c> transform otherwise.</returns>
+</SVGSVGElementCreateSVGTransformFromMatrix>
+<SVGSVGElementHeight>
+<summary>
+The <strong><c>height</c></strong> read-only property of the <see cref="SVGSVGElement"/> interface describes the vertical size of element as an <see cref="SVGAnimatedLength"/>. It reflects the {{SVGElement("svg")}} element's {{SVGAttr("height")}} attribute, which may not be the SVG's rendered height.
+</summary>
+<remarks>
+<para>The CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/height">height</see> property takes precedence over the <c>&amp;lt;svg&amp;gt;</c> element&amp;apos;s <c>height</c> attribute, so the value may not reflect the element's appearance. If both the viewBox and <c>height</c> attributes are omitted, the <c>height</c> property reflects that actual height.</para>
+<para>-<see cref="SVGSVGElement.ViewBox"/><br/>-<see cref="SVGSVGElement.Width"/><br/>-<see cref="SVGAnimatedLength.BaseVal"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGSVGElement/height"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedLength"/>.</value>
+</SVGSVGElementHeight>
+<SVGSVGElementGetElementById>
+<summary>
+The <c>getElementById()</c> method of the <see cref="SVGSVGElement"/> interface searches the SVG document fragment (i.e., the search is restricted to a subset of the document tree) for an <see cref="Element"/> whose <c>id</c> property matches the specified string.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGSVGElement/getElementById"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="Element"/> object describing the DOM element object matching the specified ID, or <c>null</c> if no matching element was found in the SVG document fragment.</returns>
+</SVGSVGElementGetElementById>
+<SVGSVGElementViewBox>
+<summary>
+The <strong><c>viewBox</c></strong> read-only property of the <see cref="SVGSVGElement"/> interface reflects the {{SVGElement("svg")}} element's {{SVGAttr("viewBox")}} attribute as an <see cref="SVGAnimatedRect"/>.
+</summary>
+<remarks>
+<para>The property describes the <c>&amp;lt;svg&amp;gt;</c> element&amp;apos;s <c>viewBox</c> attribute, which is used to defined the x-coordinate, y-coordinate, width, and height of an <c>&amp;lt;svg&amp;gt;</c> element. The <see cref="SVGAnimatedRect.BaseVal"/> and <see cref="SVGAnimatedRect.AnimVal"/> properties are both <see cref="SVGRect"/> objects, or <c>null</c> if the <c>viewBox</c> is not defined. These objects' components may differ from the <see cref="SVGSVGElement.X"/>, <see cref="SVGSVGElement.Y"/>, <see cref="SVGSVGElement.Width"/> and <see cref="SVGSVGElement.Height"/> properties, as the {{SVGAttr("x")}}, {{SVGAttr("y")}}, {{SVGAttr("width")}}, and {{SVGAttr("height")}} attributes take precedence over the <c>viewBox</c> attribute.</para><para>For non-nested SVG elements, the values of the CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/x">x</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/y">y</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/width">width</see>, and <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/height">height</see> properties take precedence over any element attributes, so the values defined by the <c>viewBox</c> may not be reflected in the element&amp;apos;s appearance.</para>
+<para>-<see cref="SVGAnimatedRect.BaseVal"/><br/>-<see cref="SVGAnimatedRect.AnimVal"/><br/>-preserveAspectRatio<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGSVGElement/viewBox"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedRect"/>.</value>
+</SVGSVGElementViewBox>
+<SVGSVGElementUnpauseAnimations>
+<summary>
+The <c>unpauseAnimations()</c> method of the <see cref="SVGSVGElement"/> interface resumes (i.e., unpauses) currently running animations that are defined within the SVG document fragment, causing the animation clock to continue from the time at which it was suspended.
+</summary>
+<remarks>
+<para>-<see cref="SVGSVGElement.PauseAnimations"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGSVGElement/unpauseAnimations"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</SVGSVGElementUnpauseAnimations>
+<SVGSVGElementSetCurrentTime>
+<summary>
+The <c>setCurrentTime()</c> method of the <see cref="SVGSVGElement"/> interface adjusts the clock for this SVG document fragment, establishing a new current time.
+</summary>
+<remarks>
+<para>If <c>setCurrentTime()</c> is called before the document timeline has begun (for example, by script running in a <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementscript">script</see> element before the document's <c>SVGLoad</c> event is dispatched), then the value of seconds in the last invocation of the method gives the time that the document will seek to once the document timeline has begun.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGSVGElement/setCurrentTime"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None.</returns>
+</SVGSVGElementSetCurrentTime>
+<SVGSVGElementCreateSVGTransform>
+<summary>
+The <c>createSVGTransform()</c> method of the <see cref="SVGSVGElement"/> interface creates an <see cref="SVGTransform"/> object outside of any document trees.
+</summary>
+<remarks>
+<para>-<see cref="SVGTransform"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGSVGElement/createSVGTransform"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="SVGTransform"/> object, initialized to the identity matrix transform (<c>matrix(1, 0, 0, 1, 0, 0)</c>).</returns>
+</SVGSVGElementCreateSVGTransform>
+<SVGSVGElementCreateSVGNumber>
+<summary>
+The <c>createSVGNumber()</c> method of the <see cref="SVGSVGElement"/> interface creates an <see cref="SVGNumber"/> object outside of any document trees.
+</summary>
+<remarks>
+<para>-<see cref="SVGNumber"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGSVGElement/createSVGNumber"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="SVGNumber"/> object, initialized to <c>0</c>.</returns>
+</SVGSVGElementCreateSVGNumber>
+<SVGSVGElementPauseAnimations>
+<summary>
+The <c>pauseAnimations()</c> method of the <see cref="SVGSVGElement"/> interface suspends (i.e., pauses) all currently running animations that are defined within the SVG document fragment corresponding to this {{SVGElement("svg")}} element, causing the animation clock corresponding to this document fragment to stand still until it is unpaused.
+</summary>
+<remarks>
+<para>-<see cref="SVGSVGElement.UnpauseAnimations"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGSVGElement/pauseAnimations"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</SVGSVGElementPauseAnimations>
+<SVGSVGElementCurrentScale>
+<summary>
+The <strong><c>currentScale</c></strong> property of the <see cref="SVGSVGElement"/> interface reflects the current scale factor relative to the initial view to take into account user magnification and panning operations on the outermost {{SVGElement("svg")}} element.
+</summary>
+<remarks>
+<para>DOM attributes <c>currentScale</c> and <c>currentTranslate</c> are equivalent to the 2×3 matrix <c>[a b c d e f] = [currentScale 0 0 currentScale currentTranslate.x currentTranslate.y]</c>. If &amp;quot;magnification&amp;quot; is enabled (i.e., <c>zoomAndPan=&amp;quot;magnify&amp;quot;</c>), then the effect is as if an extra transformation were placed at the outermost level on the SVG document fragment (i.e., outside the outermost <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementsvg">svg</see> element).</para><para>If the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementsvg">svg</see> element is not at the outermost level, then <c>currentScale</c> is always <c>1</c> and setting it has no effect.</para>
+<para>-<see cref="SVGSVGElement.CurrentTranslate"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGSVGElement/currentScale"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A float.</value>
+</SVGSVGElementCurrentScale>
+<SVGSVGElementPreserveAspectRatio>
+<summary>
+The <strong><c>preserveAspectRatio</c></strong> read-only property of the <see cref="SVGSVGElement"/> interface reflects the {{SVGAttr("preserveAspectRatio")}} attribute of the given element. It defines how the SVG element's content should be scaled to fit the given space, preserving its aspect ratio.
+</summary>
+<remarks>
+<para>-preserveAspectRatio<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGSVGElement/preserveAspectRatio"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedPreserveAspectRatio"/> object.</value>
+</SVGSVGElementPreserveAspectRatio>
+<SVGSVGElementAnimationsPaused>
+<summary>
+The <c>animationsPaused()</c> method of the <see cref="SVGSVGElement"/> interface checks whether the animations in the SVG document fragment are currently paused.
+</summary>
+<remarks>
+<para>-<see cref="SVGSVGElement.PauseAnimations"/><br/>-<see cref="SVGSVGElement.UnpauseAnimations"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGSVGElement/animationsPaused"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A boolean. <c>true</c> if this SVG document fragment is in a paused state.</returns>
+</SVGSVGElementAnimationsPaused>
+<SVGSVGElementY>
+<summary>
+The <strong><c>y</c></strong> read-only property of the <see cref="SVGSVGElement"/> interface describes the vertical coordinate of the position of that SVG as an <see cref="SVGAnimatedLength"/>. When an {{SVGElement("svg")}} is nested within another <c>&amp;lt;svg&amp;gt;</c>, the vertical coordinate is a length in the user coordinate system that is the given distance from the origin of the user coordinate system along the y-axis. Its syntax is the same as that for <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see>.
+</summary>
+<remarks>
+<para>It reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementsvg">svg</see> element's {{SVGAttr("y")}} geometric attribute. The default value is <c>0</c>. The <c>y</c> attribute has no effect on outermost <c>&amp;lt;svg&amp;gt;</c> elements; only on nested ones. The CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/y">y</see> property takes precedence over the <c>&amp;lt;svg&amp;gt;</c> element&amp;apos;s <c>y</c> attribute, so the value may not reflect the element&amp;apos;s appearance.</para>
+<para>-<see cref="SVGSVGElement.X"/><br/>-<see cref="SVGAnimatedLength.BaseVal"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGSVGElement/y"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedLength"/>.</value>
+</SVGSVGElementY>
+<SVGSVGElementCheckEnclosure>
+<summary>
+The <c>checkEnclosure()</c> method of the <see cref="SVGSVGElement"/> interface checks if the rendered content of the given element is entirely contained within the supplied rectangle.
+</summary>
+<remarks>
+<para>Each candidate graphics element is to be considered a match only if the same graphics element can be a target of pointer events as defined in pointer-events processing.</para>
+<para>-<see cref="SVGSVGElement.CheckIntersection"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGSVGElement/checkEnclosure"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A boolean.</returns>
+</SVGSVGElementCheckEnclosure>
+</docs>

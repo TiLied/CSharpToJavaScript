@@ -1,0 +1,76 @@
+<docs>
+<LargestContentfulPaint>
+<summary>
+The <c>LargestContentfulPaint</c> interface provides timing information about the largest image or text paint before user input on a web page.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Glossary/Largest Contentful Paint">Largest Contentful Paint</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Glossary/First Contentful Paint">First Contentful Paint</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Glossary/First Paint">First Paint</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/LargestContentfulPaint"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</LargestContentfulPaint>
+<LargestContentfulPaintElement>
+<summary>
+The <strong><c>element</c></strong> read-only property of the <see cref="LargestContentfulPaint"/> interface returns an object representing the <see cref="Element"/> that is the largest contentful paint.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/LargestContentfulPaint/element"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="Element"/>.</value>
+</LargestContentfulPaintElement>
+<LargestContentfulPaintUrl>
+<summary>
+The <strong><c>url</c></strong> read-only property of the <see cref="LargestContentfulPaint"/> interface returns the request URL of the element, if the element is an image.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/LargestContentfulPaint/url"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing a URL.</value>
+</LargestContentfulPaintUrl>
+<LargestContentfulPaintSize>
+<summary>
+The <strong><c>size</c></strong> read-only property of the <see cref="LargestContentfulPaint"/> interface returns the intrinsic size of the element that is the largest contentful paint.
+</summary>
+<remarks>
+<para>The <c>size</c> of the element is the <c>width</c> times <c>height</c> of the <see cref="DOMRectReadOnly"/> that this element creates on the screen.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/LargestContentfulPaint/size"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer representing the width times height of the element.</value>
+</LargestContentfulPaintSize>
+<LargestContentfulPaintLoadTime>
+<summary>
+The <strong><c>loadTime</c></strong> read-only property of the <see cref="LargestContentfulPaint"/> interface returns the time that the element was loaded.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/LargestContentfulPaint/loadTime"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DOMHighResTimeStamp"/> representing the time in milliseconds that the element was loaded.</value>
+</LargestContentfulPaintLoadTime>
+<LargestContentfulPaintRenderTime>
+<summary>
+The <strong><c>renderTime</c></strong> read-only property of the <see cref="LargestContentfulPaint"/> interface represents the time that the element was rendered to the screen.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/LargestContentfulPaint/renderTime"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <c>renderTime</c> property can have the following values:</value>
+</LargestContentfulPaintRenderTime>
+<LargestContentfulPaintId>
+<summary>
+The <strong><c>id</c></strong> read-only property of the <see cref="LargestContentfulPaint"/> interface returns the ID of the element that is the largest contentful paint.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/LargestContentfulPaint/id"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing the ID of the element, or the empty string if there is no such ID.</value>
+</LargestContentfulPaintId>
+<LargestContentfulPaintToJSON>
+<summary>
+The <strong><c>toJSON()</c></strong> method of the <see cref="LargestContentfulPaint"/> interface is a {{Glossary("Serialization","serializer")}}; it returns a JSON representation of the <see cref="LargestContentfulPaint"/> object.
+</summary>
+<remarks>
+<para>-<see cref="JSON"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/LargestContentfulPaint/toJSON"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("JSON")}} object that is the serialization of the <see cref="LargestContentfulPaint"/> object.The JSON doesn't contain the <see cref="LargestContentfulPaint.Element"/> property because it is of type <see cref="Element"/>, which doesn't provide a <c>toJSON()</c> operation.</returns>
+</LargestContentfulPaintToJSON>
+</docs>

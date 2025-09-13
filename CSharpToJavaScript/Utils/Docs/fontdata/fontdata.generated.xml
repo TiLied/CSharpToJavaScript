@@ -1,0 +1,65 @@
+<docs>
+<FontData>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>FontData</c></strong> interface of the {{domxref(&amp;quot;Local Font Access API&amp;quot;, &amp;quot;Local Font Access API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} represents a single local font face.
+</summary>
+<remarks>
+<para>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/local-fonts">Use advanced typography with local fonts</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face">@font-face</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FontData"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</FontData>
+<FontDataFullName>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>fullName</c></strong> read-only property of the <see cref="FontData"/> interface returns the full name of the font face. This is usually a human-readable name used to identify the font, e.g., "Optima Bold".
+</summary>
+<remarks>
+<para>Examples include:</para>
+<para>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/local-fonts">Use advanced typography with local fonts</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face">@font-face</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FontData/fullName"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</FontDataFullName>
+<FontDataFamily>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>family</c></strong> read-only property of the <see cref="FontData"/> interface returns the family of the font face.
+</summary>
+<remarks>
+<para>This is the name used when referring to the font family from code, for example, in the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-family">font-family</see> property or in places within the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face">@font-face</see> at-rule such as the <c>local()</c> function.</para><para>Examples include:</para>
+<para>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/local-fonts">Use advanced typography with local fonts</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face">@font-face</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FontData/family"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</FontDataFamily>
+<FontDataStyle>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>style</c></strong> read-only property of the <see cref="FontData"/> interface returns the style of the font face.
+</summary>
+<remarks>
+<para>This is the value used to select the style of the font you want to use, for example inside the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-style">font-style</see> property.</para><para>Examples include:</para>
+<para>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/local-fonts">Use advanced typography with local fonts</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face">@font-face</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FontData/style"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</FontDataStyle>
+<FontDataBlob>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>blob()</c></strong> method of the <see cref="FontData"/> interface returns a {{jsxref("Promise")}} that fulfills with a <see cref="Blob"/> containing the raw bytes of the underlying font file.
+</summary>
+<remarks>
+<para>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/local-fonts">Use advanced typography with local fonts</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face">@font-face</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FontData/blob"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that fulfills with a <see cref="Blob"/> containing the raw bytes of the underlying font file.</returns>
+</FontDataBlob>
+<FontDataPostscriptName>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>postscriptName</c></strong> read-only property of the <see cref="FontData"/> interface returns the PostScript name of the font face.
+</summary>
+<remarks>
+<para>This is the name used to uniquely identify the PostScript font, and is generally an unbroken sequence of characters that includes the font&amp;apos;s name and style.</para><para>Examples include:</para>
+<para>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/local-fonts">Use advanced typography with local fonts</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face">@font-face</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FontData/postscriptName"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</FontDataPostscriptName>
+</docs>

@@ -1,0 +1,22 @@
+<docs>
+<HTMLTitleElement>
+<summary>
+The <strong><c>HTMLTitleElement</c></strong> interface is implemented by a document's {{ HTMLElement( "title" )}}. This element inherits all of the properties and methods of the <see cref="HTMLElement"/> interface.
+</summary>
+<remarks>
+<para></para>
+<para>-The HTML element implementing this interface: <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title">title</see>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTitleElement"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLTitleElement>
+<HTMLTitleElementText>
+<summary>
+The <strong><c>text</c></strong> property of the <see cref="HTMLTitleElement"/> interface represents the child text content of the document's title as a string. It contains the {{HTMLelement("title")}} element's content as text; if HTML tags are included within the <c>&amp;lt;title&amp;gt;</c> element, they are included as part of the string value rather than being parsed as HTML.
+</summary>
+<remarks>
+<para>Setting a value for the <c>text</c> property replaces the entire text contents of the <c>&amp;lt;title&amp;gt;</c>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTitleElement/text"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</HTMLTitleElementText>
+</docs>

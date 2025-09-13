@@ -1,0 +1,81 @@
+<docs>
+<AbortSignal>
+<summary>
+The <strong><c>AbortSignal</c></strong> interface represents a signal object that allows you to communicate with an asynchronous operation (such as a fetch request) and abort it if required via an <see cref="AbortController"/> object.
+</summary>
+<remarks>
+<para></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch API</see><br/>-<see href="https://developer.chrome.com/blog/abortable-fetch/">Abortable Fetch</see> by Jake Archibald<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</AbortSignal>
+<AbortSignalAborted>
+<summary>
+The <strong><c>aborted</c></strong> read-only property returns a value that indicates whether the asynchronous operations the signal is communicating with are aborted (<c>true</c>) or not (<c>false</c>).
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal/aborted"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value><c>true</c> (aborted) or <c>false</c></value>
+</AbortSignalAborted>
+<AbortSignalAbort>
+<summary>
+The <strong><c>AbortSignal.abort()</c></strong> static method returns an <see cref="AbortSignal"/> that is already set as aborted (and which does not trigger an <see cref="AbortSignalabort"/> event).
+</summary>
+<remarks>
+<para>This is shorthand for the following code:</para><para>This could, for example, be passed to a fetch method in order to run its abort logic (i.e., it may be that code is organized such that the abort logic should be run even if the intended fetch operation has not been started).</para><blockquote class="NOTE"><h5>NOTE</h5><para>The method is similar in purpose to <see cref="PromiseReject"/>.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal/abort"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <c>AbortSignal</c> instance with the <see cref="AbortSignal.Aborted"/> property set to <c>true</c>, and <see cref="AbortSignal.Reason"/> set to the specified or default reason value.</returns>
+</AbortSignalAbort>
+<AbortSignalAbort>
+<summary>
+The <strong><c>abort</c></strong> event of the <see cref="AbortSignal"/> is fired when the associated request is aborted, i.e., using <see cref="AbortController.Abort"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal/abort"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</AbortSignalAbort>
+<AbortSignalReason>
+<summary>
+The <strong><c>reason</c></strong> read-only property returns a JavaScript value that indicates the abort reason.
+</summary>
+<remarks>
+<para>The property is <c>undefined</c> when the signal has not been aborted.<br/>It can be set to a specific value when the signal is aborted, using <see cref="AbortController.Abort"/> or <see cref="AbortSignalabort"/>.<br/>If not explicitly set in those methods, it defaults to "AbortError" <see cref="DOMException"/>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal/reason"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A JavaScript value that indicates the abort reason, or <c>undefined</c>, if not aborted.</value>
+</AbortSignalReason>
+<AbortSignalThrowIfAborted>
+<summary>
+The <strong><c>throwIfAborted()</c></strong> method throws the signal's abort <see cref="AbortSignal.Reason"/> if the signal has been aborted; otherwise it does nothing.
+</summary>
+<remarks>
+<para>An API that needs to support aborting can accept an <see cref="AbortSignal"/> object and use <c>throwIfAborted()</c> to test and throw when the <see href="https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal/abort_event"><c>abort</c></see> event is signalled.</para><para>This method can also be used to abort operations at particular points in code, rather than passing to functions that take a signal.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal/throwIfAborted"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</AbortSignalThrowIfAborted>
+<AbortSignalAny>
+<summary>
+The <strong><c>AbortSignal.any()</c></strong> static method takes an iterable of abort signals and returns an <see cref="AbortSignal"/>. The returned abort signal is aborted when any of the input iterable abort signals are aborted. The {{domxref("AbortSignal.reason", "abort reason",&amp;quot;&amp;quot;,"true")}} will be set to the reason of the first signal that is aborted. If any of the given abort signals are already aborted then so will be the returned <see cref="AbortSignal"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal/any"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="AbortSignal"/> that is:</returns>
+</AbortSignalAny>
+<AbortSignalTimeout>
+<summary>
+The <strong><c>AbortSignal.timeout()</c></strong> static method returns an <see cref="AbortSignal"/> that will automatically abort after a specified time.
+</summary>
+<remarks>
+<para>The signal aborts with a <c>TimeoutError</c> <see cref="DOMException"/> on timeout.</para><para>The timeout is based on active rather than elapsed time, and will effectively be paused if the code is running in a suspended worker, or while the document is in a back-forward cache (&amp;quot;<see href="https://web.dev/articles/bfcache">bfcache</see>&amp;quot;).</para><para>To combine multiple signals, you can use <see cref="AbortSignalany"/>, for example, to directly abort a download using either a timeout signal or by calling <see cref="AbortController.Abort"/>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal/timeout"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="AbortSignal"/>.The signal will abort with its <see cref="AbortSignal.Reason"/> property set to a <c>TimeoutError</c> <see cref="DOMException"/> on timeout, or an <c>AbortError</c> <see cref="DOMException"/> if the operation was user-triggered.</returns>
+</AbortSignalTimeout>
+</docs>

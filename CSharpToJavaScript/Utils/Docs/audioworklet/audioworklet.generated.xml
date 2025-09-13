@@ -1,0 +1,23 @@
+<docs>
+<AudioWorklet>
+<summary>
+The <strong><c>AudioWorklet</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see> is used to supply custom audio processing scripts that execute in a separate thread to provide very low latency audio processing.
+</summary>
+<remarks>
+<para>The worklet's code is run in the <see cref="AudioWorkletGlobalScope"/> global execution context, using a separate Web Audio thread which is shared by the worklet and other audio nodes.</para><para>Access the audio context&amp;apos;s instance of <c>AudioWorklet</c> through the <see cref="BaseAudioContext.AudioWorklet"/> property.</para><para></para>
+<para>-<see cref="AudioWorkletGlobalScope"/> — the global execution context of an <c>AudioWorklet</c><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_AudioWorklet">Using AudioWorklet</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioWorklet"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</AudioWorklet>
+<AudioWorkletPort>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>port</c></strong> read-only property of the <see cref="AudioWorklet"/> interface returns a <see cref="MessagePort"/> object that can be used to send and receive messages between the main thread and the associated <see cref="AudioWorkletGlobalScope"/>.
+</summary>
+<remarks>
+<para>This allows for custom, asynchronous communication between code in the main thread and the global scope of an audio worklet, such as receiving control data or global settings.</para>
+<para>-<see cref="AudioWorkletGlobalScope"/> — the global execution context of an <c>AudioWorklet</c><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_AudioWorklet">Using AudioWorklet</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioWorklet/port"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <see cref="MessagePort"/> object connecting the <c>AudioWorklet</c> and its associated <c>AudioWorkletGlobalScope</c>.</value>
+</AudioWorkletPort>
+</docs>

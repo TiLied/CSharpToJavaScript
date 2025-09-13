@@ -1,0 +1,52 @@
+<docs>
+<RTCEncodedVideoFrame>
+<summary>
+The <strong><c>RTCEncodedVideoFrame</c></strong> of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see> represents an encoded video frame in the WebRTC receiver or sender pipeline, which may be modified using a <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms">WebRTC Encoded Transform</see>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms">Using WebRTC Encoded Transforms</see><br/>-<see cref="TransformStream"/><br/>-<see cref="RTCRtpScriptTransformer"/><br/>-<see cref="RTCEncodedAudioFrame"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCEncodedVideoFrame"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RTCEncodedVideoFrame>
+<RTCEncodedVideoFrameData>
+<summary>
+The <strong><c>data</c></strong> property of the <see cref="RTCEncodedVideoFrame"/> interface returns a buffer containing the frame data.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms">Using WebRTC Encoded Transforms</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCEncodedVideoFrame/data"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="ArrayBuffer"/>.</value>
+</RTCEncodedVideoFrameData>
+<RTCEncodedVideoFrameGetMetadata>
+<summary>
+The <strong><c>getMetadata()</c></strong> method of the <see cref="RTCEncodedVideoFrame"/> interface returns an object containing the metadata associated with the frame.
+</summary>
+<remarks>
+<para>This includes information about the frame, including its size, video encoding, other frames needed to construct a full image, timestamp, and other information.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms">Using WebRTC Encoded Transforms</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCEncodedVideoFrame/getMetadata"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An object with the following properties:</returns>
+</RTCEncodedVideoFrameGetMetadata>
+<RTCEncodedVideoFrameType>
+<summary>
+The <strong><c>type</c></strong> read-only property of the <see cref="RTCEncodedVideoFrame"/> interface indicates whether this frame is a key frame, delta frame, or empty frame.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms">Using WebRTC Encoded Transforms</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCEncodedVideoFrame/type"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The type can have one of the following values:</value>
+</RTCEncodedVideoFrameType>
+<RTCEncodedVideoFrameTimestamp>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>timestamp</c></strong> read-only property of the <see cref="RTCEncodedVideoFrame"/> interface indicates the time at which frame sampling started.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms">Using WebRTC Encoded Transforms</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCEncodedVideoFrame/timestamp"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A positive integer containing the sampling instant of the first byte in this frame, in microseconds.</value>
+</RTCEncodedVideoFrameTimestamp>
+</docs>

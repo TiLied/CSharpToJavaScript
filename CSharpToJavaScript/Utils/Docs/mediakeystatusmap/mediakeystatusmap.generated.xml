@@ -1,0 +1,75 @@
+<docs>
+<MediaKeyStatusMap>
+<summary>
+The <strong><c>MediaKeyStatusMap</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Encrypted_Media_Extensions_API">Encrypted Media Extensions API</see> is a read-only map of media key statuses by key IDs.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</MediaKeyStatusMap>
+<MediaKeyStatusMapEntries>
+<summary>
+The <strong><c>entries()</c></strong> method<br/>of the <see cref="MediaKeyStatusMap"/> interface returns a new Iterator object,<br/>containing an array of [key, value] pairs for each element in the status map, in<br/>insertion order.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap/entries"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new Iterator object. Each element in the Iterator is an array containing a key and a value.</returns>
+</MediaKeyStatusMapEntries>
+<MediaKeyStatusMapHas>
+<summary>
+The <strong><c>has()</c></strong> method of the<br/><see cref="MediaKeyStatusMap"/> interface returns a {{jsxref('Boolean')}}, asserting<br/>whether a value has been associated with the given key.
+</summary>
+<remarks>
+<para><blockquote class="TIP"><h5>TIP</h5> Partialy supported as <see cref="System.Collections.Generic.Dictionary<object, object>.ContainsKey" /></blockquote></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap/has"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="'Boolean'"/>.</returns>
+</MediaKeyStatusMapHas>
+<MediaKeyStatusMapForEach>
+<summary>
+The <strong><c>forEach()</c></strong> method of the<br/><see cref="MediaKeyStatusMap"/> interface calls callback once for each key-value pair<br/>in the status map, in insertion order. If an argument is present it will be passed to<br/>the callback.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap/forEach"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</MediaKeyStatusMapForEach>
+<MediaKeyStatusMapSize>
+<summary>
+The <strong><c>size</c></strong> read-only property of<br/>the <see cref="MediaKeyStatusMap"/> interface returns the number of key/value paIrs<br/>in the status map.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap/size"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A long integer.</value>
+</MediaKeyStatusMapSize>
+<MediaKeyStatusMapGet>
+<summary>
+The <strong><c>get()</c></strong> method of the <see cref="MediaKeyStatusMap"/> interface returns the status value associated with the given key, or <c>undefined</c> if there is none.
+</summary>
+<remarks>
+<para>The status value indicates whether or not the specific key can be used for decryption.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap/get"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A string specifying the status value associated with the given key, or <c>undefined</c>.The following status values are allowed:</returns>
+</MediaKeyStatusMapGet>
+<MediaKeyStatusMapKeys>
+<summary>
+The <strong><c>keys()</c></strong> method of the<br/><see cref="MediaKeyStatusMap"/> interface returns a new Iterator object, containing<br/>keys for each element in the status map, in insertion order.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap/keys"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new iterator.</returns>
+</MediaKeyStatusMapKeys>
+<MediaKeyStatusMapValues>
+<summary>
+The <strong><c>values()</c></strong> method of the<br/><see cref="MediaKeyStatusMap"/> interface returns a new Iterator object, containing<br/>values for each element in the status map, in insertion order.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap/values"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new iterator.</returns>
+</MediaKeyStatusMapValues>
+</docs>

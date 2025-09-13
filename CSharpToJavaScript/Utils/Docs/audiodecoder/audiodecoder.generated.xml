@@ -1,0 +1,100 @@
+<docs>
+<AudioDecoder>
+<summary>
+The <strong><c>AudioDecoder</c></strong> interface of the <see cref="'WebCodecs API'"/> decodes chunks of audio.
+</summary>
+<remarks>
+<para></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioDecoder"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</AudioDecoder>
+<AudioDecoderIsConfigSupported>
+<summary>
+The <strong><c>isConfigSupported()</c></strong> static method of the <see cref="AudioDecoder"/> interface checks if the given config is supported (that is, if <see cref="AudioDecoder"/> objects can be successfully configured with the given config).
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioDecoder/isConfigSupported"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves with an object containing the following members:</returns>
+</AudioDecoderIsConfigSupported>
+<AudioDecoderDecodeQueueSize>
+<summary>
+The <strong><c>decodeQueueSize</c></strong> read-only property of the <see cref="AudioDecoder"/> interface returns the number of pending decode requests in the queue.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioDecoder/decodeQueueSize"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer containing the number of requests.</value>
+</AudioDecoderDecodeQueueSize>
+<AudioDecoderFlush>
+<summary>
+The <strong><c>flush()</c></strong> method of the <see cref="AudioDecoder"/> interface returns a Promise that resolves once all pending messages in the queue have been completed.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioDecoder/flush"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves with undefined.</returns>
+</AudioDecoderFlush>
+<AudioDecoderConfigure>
+<summary>
+The <strong><c>configure()</c></strong> method of the <see cref="AudioDecoder"/> interface enqueues a control message to configure the audio decoder for decoding chunks.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioDecoder/configure"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</AudioDecoderConfigure>
+<AudioDecoderState>
+<summary>
+The <strong><c>state</c></strong> read-only property of the <see cref="AudioDecoder"/> interface returns the current state of the underlying codec.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioDecoder/state"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing one of the following values:</value>
+</AudioDecoderState>
+<AudioDecoderDequeue>
+<summary>
+The <strong><c>dequeue</c></strong> event of the <see cref="AudioDecoder"/> interface fires to signal a decrease in <see cref="AudioDecoder.DecodeQueueSize"/>.
+</summary>
+<remarks>
+<para>This eliminates the need for developers to use a <see cref="Window.SetTimeout"/> poll to determine when the queue has decreased, and more work should be queued up.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioDecoder/dequeue"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</AudioDecoderDequeue>
+<AudioDecoderDecode>
+<summary>
+The <strong><c>decode()</c></strong> method of the <see cref="AudioDecoder"/> interface enqueues a control message to decode a given chunk of audio.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioDecoder/decode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</AudioDecoderDecode>
+<AudioDecoderClose>
+<summary>
+The <strong><c>close()</c></strong> method of the <see cref="AudioDecoder"/> interface ends all pending work and releases system resources.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioDecoder/close"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</AudioDecoderClose>
+<AudioDecoderReset>
+<summary>
+The <strong><c>reset()</c></strong> method of the <see cref="AudioDecoder"/> interface resets all states including configuration, control messages in the control message queue, and all pending callbacks.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioDecoder/reset"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</AudioDecoderReset>
+<AudioDecoderAudioDecoder>
+<summary>
+The <strong><c>AudioDecoder()</c></strong> constructor creates a new <see cref="AudioDecoder"/> object with the provided <c>init.output</c> callback assigned as the output callback, the provided <c>init.error</c> callback as the error callback, and the <see cref="AudioDecoder.State"/> set to <c>&amp;quot;unconfigured&amp;quot;</c>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioDecoder/AudioDecoder"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</AudioDecoderAudioDecoder>
+</docs>

@@ -1,0 +1,45 @@
+<docs>
+<VRLayerInit>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>VRLayerInit</c></strong> dictionary of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API">WebVR API</see> represents a content layer (an <see cref="HTMLCanvasElement"/> or <see cref="OffscreenCanvas"/>) that you want to present in a VR display.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This dictionary was part of the old <see href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</see>. It has been superseded by the <see href="https://immersive-web.github.io/webxr/">WebXR Device API</see>.</para></blockquote><para>You can retrieve <c>VRLayerInit</c> objects using <see cref="VRDisplay.GetLayers"/>, and present them using the <see cref="VRDisplay.RequestPresent"/> method.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API">WebVR API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VRLayerInit"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</VRLayerInit>
+<VRLayerInitRightBounds>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>rightBounds</c></strong> property of the <see cref="VRLayerInit"/> interface (dictionary) defines the right texture bounds of the canvas whose contents will be presented by the <see cref="VRDisplay"/>.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This property was part of the old <see href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</see>. It has been superseded by the <see href="https://immersive-web.github.io/webxr/">WebXR Device API</see>.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API">WebVR API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VRLayerInit/rightBounds"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An array of four floating point values, which can take values from 0.0–1.0:If <c>leftBounds</c> is not specified in the dictionary, the default value used is <c>[0.5, 0.0, 0.5, 1.0]</c>.</value>
+</VRLayerInitRightBounds>
+<VRLayerInitSource>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>source</c></strong> property of the <see cref="VRLayerInit"/> interface (dictionary) defines the canvas whose contents will be presented by the <see cref="VRDisplay"/>.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This property was part of the old <see href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</see>. It has been superseded by the <see href="https://immersive-web.github.io/webxr/">WebXR Device API</see>.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API">WebVR API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VRLayerInit/source"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="HTMLCanvasElement"/> or <see cref="OffscreenCanvas"/> object.</value>
+</VRLayerInitSource>
+<VRLayerInitLeftBounds>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>leftBounds</c></strong> property of the <see cref="VRLayerInit"/> interface (dictionary) defines the left texture bounds of the canvas whose contents will be presented by the <see cref="VRDisplay"/>.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This property was part of the old <see href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</see>. It has been superseded by the <see href="https://immersive-web.github.io/webxr/">WebXR Device API</see>.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API">WebVR API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VRLayerInit/leftBounds"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An array of four floating point values, which can take values from 0.0–1.0.If <c>leftBounds</c> is not specified in the dictionary, the default value used is <c>[0.0, 0.0, 0.5, 1.0]</c>.</value>
+</VRLayerInitLeftBounds>
+</docs>

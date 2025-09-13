@@ -1,0 +1,56 @@
+<docs>
+<EventTarget>
+<summary>
+The <strong><c>EventTarget</c></strong> interface is implemented by objects that can receive events and may have listeners for them.<br/>In other words, any target of events implements the three methods associated with this interface.
+</summary>
+<remarks>
+<para><see cref="Element"/>, and its children, as well as <see cref="Document"/> and <see cref="Window"/>, are the most common event targets,<br/>but other objects can be event targets, too.<br/>For example <see cref="IDBRequest"/>, <see cref="AudioNode"/>, and <see cref="AudioContext"/> are also event targets.</para><para>Many event targets (including elements, documents, and windows) also support <see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Events#registering_event_handlers">registering event handlers</see> via <c>onevent</c> properties and attributes.</para><para></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Events#event_index">Event index</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Events">Introduction to events</see><br/>-<see cref="Event"/> interface<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</EventTarget>
+<EventTargetDispatchEvent>
+<summary>
+The <strong><c>dispatchEvent()</c></strong> method of the <see cref="EventTarget"/> sends an <see cref="Event"/> to the object, (synchronously) invoking the affected<br/>event listeners in the appropriate order. The normal event processing<br/>rules (including the capturing and optional bubbling phase) also apply to events<br/>dispatched manually with <c>dispatchEvent()</c>.
+</summary>
+<remarks>
+<para>Calling <c>dispatchEvent()</c> is the last step to <strong>firing an event</strong>. The event<br/>should have already been created and initialized using an <see cref="EventEvent"/> constructor.</para><blockquote class="NOTE"><h5>NOTE</h5><para>When calling this method, the <see cref="Event.Target"/> property is initialized to the current <c>EventTarget</c>.</para></blockquote><para>Unlike &amp;quot;native&amp;quot; events, which are fired by the browser and invoke event handlers<br/>asynchronously via the <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Execution_model">event loop</see>,<br/><c>dispatchEvent()</c> invokes event handlers <strong>synchronously</strong>. All applicable event<br/>handlers are called and return before <c>dispatchEvent()</c> returns.</para>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/Event">Event object reference</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/dispatchEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns><c>false</c> if <c>event</c> is cancelable, and at least one of the event handlers which received <c>event</c> called <see cref="Event.PreventDefault"/>. Otherwise <c>true</c>.</returns>
+</EventTargetDispatchEvent>
+<EventTargetRemoveEventListener>
+<summary>
+The <strong><c>removeEventListener()</c></strong> method of the <see cref="EventTarget"/> interface<br/>removes an event listener previously registered with <see cref="EventTarget.AddEventListener"/> from the target.<br/>The event listener to be removed is identified using a combination of the event type,<br/>the event listener function itself, and various optional options that may affect the matching process;<br/>see <see href="https://developer.mozilla.org#matching_event_listeners_for_removal">Matching event listeners for removal</see>.
+</summary>
+<remarks>
+<para>Calling <c>removeEventListener()</c> with arguments that do not identify any<br/>currently registered <see href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#the_event_listener_callback">event listener</see> on the <c>EventTarget</c> has no<br/>effect.</para><para>If an <see href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#the_event_listener_callback">event listener</see> is removed from an <see cref="EventTarget"/> while another listener of the target is processing an event, it will not be triggered by the event. However, it can be reattached.</para><blockquote class="WARNING"><h5>WARNING</h5><para>If a listener is registered twice, one with the <strong>capture</strong> flag set and one without, you must remove each one separately. Removal of a capturing listener does not affect a non-capturing version of the same listener, and vice versa.</para></blockquote><para>Event listeners can also be removed by passing an <see cref="AbortSignal"/> to an <see cref="EventTargetaddEventListener"/> and then later calling <see cref="AbortControllerabort"/> on the controller owning the signal.</para>
+<para>-<see cref="EventTarget.AddEventListener"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/removeEventListener"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None.</returns>
+</EventTargetRemoveEventListener>
+<EventTargetAddEventListener>
+<summary>
+The <strong><c>addEventListener()</c></strong> method of the <see cref="EventTarget"/> interface<br/>sets up a function that will be called whenever the specified event is delivered to the target.
+</summary>
+<remarks>
+<para>Common targets are <see cref="Element"/>, or its children, <see cref="Document"/>, and <see cref="Window"/>,<br/>but the target may be any object that supports events (such as <see cref="IDBRequest"/>).</para><blockquote class="NOTE"><h5>NOTE</h5><para>The <c>addEventListener()</c> method is the <strong>recommended</strong> way to register an event listener. The benefits are as follows:</para></blockquote><para>The method <c>addEventListener()</c> works by adding a function, or an object that implements a <c>handleEvent()</c> function, to the list of event listeners for the specified event type<br/>on the <see cref="EventTarget"/> on which it's called. If the function or object is already in the list of event listeners for this target, the function or object is not added a second time.</para><blockquote class="NOTE"><h5>NOTE</h5><para>If a particular anonymous function is in the list of event listeners registered for a certain target, and then later in the code, an identical anonymous function is given in an <c>addEventListener</c> call, the second function will <strong>also</strong> be added to the list of event listeners for that target.</para><para>Indeed, anonymous functions are not identical even if defined using<br/>the <strong>same</strong> unchanging source-code called repeatedly, <strong>even if in a loop</strong>.</para><para>Repeatedly defining the same unnamed function in such cases can be<br/>problematic. (See <see href="https://developer.mozilla.org#memory_issues">Memory issues</see>, below.)</para></blockquote><para>If an event listener is added to an <see cref="EventTarget"/> from inside another listener —<br/>that is, during the processing of the event —<br/>that event will not trigger the new listener.<br/>However, the new listener may be triggered during a later stage of event flow,<br/>such as during the bubbling phase.</para>
+<para>-<see cref="EventTarget.RemoveEventListener"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Events#creating_and_dispatching_events">Creating and dispatching custom events</see><br/>-<see href="https://www.quirksmode.org/js/this.html">More details on the use of <c>this</c> in event handlers</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</EventTargetAddEventListener>
+<EventTargetEventTarget>
+<summary>
+The <strong><c>EventTarget()</c></strong> constructor creates a new <see cref="EventTarget"/> object instance.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>It is fairly rare to explicitly call this constructor. Most of the time, this constructor is used inside the constructor of an object extending the <see cref="EventTarget"/> interface, using the <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/super"><c>super</c></see> keyword.</para></blockquote>
+<para>-<see cref="EventTarget"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/EventTarget"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new instance of the <see cref="EventTarget"/> object.</returns>
+</EventTargetEventTarget>
+</docs>

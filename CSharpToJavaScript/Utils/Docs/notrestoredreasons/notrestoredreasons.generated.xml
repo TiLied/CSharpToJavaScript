@@ -1,0 +1,83 @@
+<docs>
+<NotRestoredReasons>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>NotRestoredReasons</c></strong> interface of the {{domxref(&amp;quot;Performance API&amp;quot;, &amp;quot;Performance API&amp;quot;, &amp;quot;&amp;quot;, "nocode")}} provides report data containing reasons why the current document was blocked from using the back/forward cache (<see href="https://developer.mozilla.org/en-US/docs/Glossary/bfcache">bfcache</see>) on navigation.
+</summary>
+<remarks>
+<para>These objects are accessed via the <see cref="PerformanceNavigationTiming.NotRestoredReasons"/> property.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Performance_API/Monitoring_bfcache_blocking_reasons">Monitoring bfcache blocking reasons</see><br/>-<see cref="PerformanceNavigationTiming.NotRestoredReasons"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NotRestoredReasons"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</NotRestoredReasons>
+<NotRestoredReasonsUrl>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>url</c></strong> read-only property of the<br/><see cref="NotRestoredReasons"/> interface returns a string representing the URL of the navigated page or {{htmlelement("iframe")}}.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Performance_API/Monitoring_bfcache_blocking_reasons">Monitoring bfcache blocking reasons</see><br/>-<see cref="PerformanceNavigationTiming.NotRestoredReasons"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NotRestoredReasons/url"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.If the document is in a cross-origin <c>&amp;lt;iframe&amp;gt;</c>, <c>url</c> will return <c>null</c>.</value>
+</NotRestoredReasonsUrl>
+<NotRestoredReasonsReasons>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>reasons</c></strong> read-only property of the<br/><see cref="NotRestoredReasons"/> interface returns an array of <see cref="NotRestoredReasonDetails"/> objects, each representing a reason why the navigated page was blocked from using the back/forward cache ({{Glossary("bfcache")}}).
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Performance_API/Monitoring_bfcache_blocking_reasons">Monitoring bfcache blocking reasons</see><br/>-<see cref="PerformanceNavigationTiming.NotRestoredReasons"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NotRestoredReasons/reasons"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An array of <see cref="NotRestoredReasonDetails"/> objects. See <see href="https://developer.mozilla.org/en-US/docs/Web/API/Performance_API/Monitoring_bfcache_blocking_reasons#blocking_reasons">Blocking reasons</see> for a list of the possible blocking reasons.If the document is in a cross-origin <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</see>, <c>reasons</c> will return <c>null</c>, but the parent document may show a <c>reason</c> of <c>&amp;quot;masked&amp;quot;</c> if any <c>&amp;lt;iframe&amp;gt;</c>s blocked bfcache usage for the top-level frame.</value>
+</NotRestoredReasonsReasons>
+<NotRestoredReasonsSrc>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>src</c></strong> read-only property of the<br/><see cref="NotRestoredReasons"/> interface returns a string representing the path to the source of the {{htmlelement("iframe")}} the document is contained in (for example <c>&amp;lt;iframe src=&amp;quot;b.html&amp;quot;&amp;gt;</c>).
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Performance_API/Monitoring_bfcache_blocking_reasons">Monitoring bfcache blocking reasons</see><br/>-<see cref="PerformanceNavigationTiming.NotRestoredReasons"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NotRestoredReasons/src"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.If the document is not in an <c>&amp;lt;iframe&amp;gt;</c>, <c>src</c> will return <c>null</c>.</value>
+</NotRestoredReasonsSrc>
+<NotRestoredReasonsName>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>name</c></strong> read-only property of the<br/><see cref="NotRestoredReasons"/> interface returns a string representing the <c>name</c> attribute value of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</see> the document is contained in (for example <c>&amp;lt;iframe name=&amp;quot;bar&amp;quot; src=&amp;quot;...&amp;quot;&amp;gt;</c>).
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Performance_API/Monitoring_bfcache_blocking_reasons">Monitoring bfcache blocking reasons</see><br/>-<see cref="PerformanceNavigationTiming.NotRestoredReasons"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NotRestoredReasons/name"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.If the document is not in an <c>&amp;lt;iframe&amp;gt;</c> or the <c>&amp;lt;iframe&amp;gt;</c> has no <c>name</c> set, <c>name</c> will return <c>null</c>.</value>
+</NotRestoredReasonsName>
+<NotRestoredReasonsChildren>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>children</c></strong> read-only property of the<br/><see cref="NotRestoredReasons"/> interface returns an array of <see cref="NotRestoredReasons"/> objects, one for each child {{htmlelement("iframe")}} embedded in the current document, which may contain reasons why the top-level frame was blocked relating to the child frames.
+</summary>
+<remarks>
+<para>Each object has the same structure as the parent object — this way, any number of levels of embedded <c>&amp;lt;iframe&amp;gt;</c>s can be represented inside the object recursively.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Performance_API/Monitoring_bfcache_blocking_reasons">Monitoring bfcache blocking reasons</see><br/>-<see cref="PerformanceNavigationTiming.NotRestoredReasons"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NotRestoredReasons/children"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An array of <see cref="NotRestoredReasons"/> objects.If the frame has no children, the array will be empty; if the document is in a cross-origin <c>&amp;lt;iframe&amp;gt;</c>, <c>children</c> will return <c>null</c>.</value>
+</NotRestoredReasonsChildren>
+<NotRestoredReasonsId>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>id</c></strong> read-only property of the<br/><see cref="NotRestoredReasons"/> interface returns a string representing the <c>id</c> attribute value of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</see> the document is contained in (for example <c>&amp;lt;iframe id=&amp;quot;foo&amp;quot; src=&amp;quot;...&amp;quot;&amp;gt;</c>).
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Performance_API/Monitoring_bfcache_blocking_reasons">Monitoring bfcache blocking reasons</see><br/>-<see cref="PerformanceNavigationTiming.NotRestoredReasons"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NotRestoredReasons/id"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.If the document is not in an <c>&amp;lt;iframe&amp;gt;</c> or the <c>&amp;lt;iframe&amp;gt;</c> has no <c>id</c> set, <c>id</c> will return <c>null</c>.</value>
+</NotRestoredReasonsId>
+<NotRestoredReasonsToJSON>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>toJSON()</c></strong> method of the <see cref="NotRestoredReasons"/> interface is a {{Glossary("Serialization","serializer")}}; it returns a JSON representation of the <see cref="NotRestoredReasons"/> object.
+</summary>
+<remarks>
+<para>-<see cref="JSON"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Performance_API/Monitoring_bfcache_blocking_reasons">Monitoring bfcache blocking reasons</see><br/>-<see cref="PerformanceNavigationTiming.NotRestoredReasons"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NotRestoredReasons/toJSON"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("JSON")}} object that is the serialization of the <see cref="NotRestoredReasons"/> object.</returns>
+</NotRestoredReasonsToJSON>
+</docs>

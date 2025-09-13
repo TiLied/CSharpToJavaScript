@@ -1,0 +1,55 @@
+<docs>
+<ViewTransition>
+<summary>
+The <strong><c>ViewTransition</c></strong> interface of the {{domxref(&amp;quot;View Transition API&amp;quot;, &amp;quot;View Transition API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} represents an active view transition, and provides functionality to react to the transition reaching different states (e.g., ready to run the animation, or animation finished) or skip the transition altogether.
+</summary>
+<remarks>
+<para>This object type is made available in the following ways:</para><para>When a view transition is triggered by a <c>startViewTransition()</c> call (or a page navigation in the case of MPA transitions), a sequence of steps is followed as explained in <see href="https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API/Using#the_view_transition_process">The view transition process</see>. This also explains when the different promises fulfill.</para>
+<para>-<see href="https://developer.chrome.com/docs/web-platform/view-transitions/">Smooth transitions with the View Transition API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ViewTransition"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</ViewTransition>
+<ViewTransitionUpdateCallbackDone>
+<summary>
+The <strong><c>updateCallbackDone</c></strong> read-only property of the<br/><see cref="ViewTransition"/> interface is a {{jsxref("Promise")}} that fulfills when the promise returned by the <see cref="Document.StartViewTransition"/> method's callback fulfills, or rejects when it rejects.
+</summary>
+<remarks>
+<para><c>updateCallbackDone</c> is useful when you don&amp;apos;t care about the success/failure of a same-document (SPA) view transition animation, and just want to know if and when the DOM is updated.</para><blockquote class="NOTE"><h5>NOTE</h5><para>In the case of a cross-document (MPA) view transition, the <c>updateCallbackDone</c> promise of the associated <c>ViewTransition</c> is automatically fulfilled.</para></blockquote>
+<para>-<see href="https://developer.chrome.com/docs/web-platform/view-transitions/">Smooth transitions with the View Transition API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ViewTransition/updateCallbackDone"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A Promise.</value>
+</ViewTransitionUpdateCallbackDone>
+<ViewTransitionFinished>
+<summary>
+The <strong><c>finished</c></strong> read-only property of the<br/><see cref="ViewTransition"/> interface is a {{jsxref("Promise")}} that fulfills once the transition animation is finished, and the new page view is visible and interactive to the user.
+</summary>
+<remarks>
+<para><c>finished</c> will only reject in the case of a same-document (SPA) transition, if the callback passed to <see cref="Document.StartViewTransition"/> throws or returns a promise that rejects. This would indicate that the new state of the page wasn't created.</para><para>If a transition animation fails to start or is skipped during the transition using <see cref="ViewTransition.SkipTransition"/>, the end state is still reached therefore <c>finished</c> will still fulfill.</para>
+<para>-<see href="https://developer.chrome.com/docs/web-platform/view-transitions/">Smooth transitions with the View Transition API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ViewTransition/finished"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A Promise.</value>
+</ViewTransitionFinished>
+<ViewTransitionReady>
+<summary>
+The <strong><c>ready</c></strong> read-only property of the<br/><see cref="ViewTransition"/> interface is a {{jsxref("Promise")}} that fulfills once the pseudo-element tree is created and the transition animation is about to start.
+</summary>
+<remarks>
+<para><c>ready</c> will reject if the transition cannot begin. This can be due to misconfiguration, for example, duplicate {{cssxref("view-transition-name")}}s, or if the callback passed to <see cref="Document.StartViewTransition"/> throws or returns a promise that rejects.</para>
+<para>-<see href="https://developer.chrome.com/docs/web-platform/view-transitions/">Smooth transitions with the View Transition API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ViewTransition/ready"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A Promise.</value>
+</ViewTransitionReady>
+<ViewTransitionSkipTransition>
+<summary>
+The <strong><c>skipTransition()</c></strong> method of the<br/><see cref="ViewTransition"/> interface skips the animation part of the view transition, but doesn't skip running the associated view update.
+</summary>
+<remarks>
+<para>-<see href="https://developer.chrome.com/docs/web-platform/view-transitions/">Smooth transitions with the View Transition API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ViewTransition/skipTransition"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns><c>undefined</c>.</returns>
+</ViewTransitionSkipTransition>
+</docs>

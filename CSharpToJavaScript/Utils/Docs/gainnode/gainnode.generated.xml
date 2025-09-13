@@ -1,0 +1,31 @@
+<docs>
+<GainNode>
+<summary>
+The <c>GainNode</c> interface represents a change in volume. It is an <see cref="AudioNode"/> audio-processing module that causes a given gain to be applied to the input data before its propagation to the output. A <c>GainNode</c> always has exactly one input and one output, both with the same number of channels.
+</summary>
+<remarks>
+<para>The gain is a unitless value, changing with time, that is multiplied to each corresponding sample of all input channels. If modified, the new gain is instantly applied, causing unaesthetic 'clicks' in the resulting audio. To prevent this from happening, never change the value directly but use the exponential interpolation methods on the <see cref="AudioParam"/> interface.</para><para><see href="https://developer.mozilla.orgwebaudiogainnode.png">The GainNode is increasing the gain of the output.</see></para><para></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GainNode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</GainNode>
+<GainNodeGainNode>
+<summary>
+The <strong><c>GainNode()</c></strong> constructor of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see> creates a new<br/><see cref="GainNode"/> object which is an <see cref="AudioNode"/> that represents a<br/>change in volume.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GainNode/GainNode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="GainNode"/> object instance.</returns>
+</GainNodeGainNode>
+<GainNodeGain>
+<summary>
+The <c>gain</c> property of the <see cref="GainNode"/> interface is an <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam#a-rate">a-rate</see> <see cref="AudioParam"/> representing the amount of gain to apply.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GainNode/gain"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="AudioParam"/>.<blockquote class="NOTE"><h5>NOTE</h5>Though the <c>AudioParam</c> returned is read-only, the value it represents is not.</blockquote></value>
+</GainNodeGain>
+</docs>

@@ -1,0 +1,87 @@
+<docs>
+<HTMLTableSectionElement>
+<summary>
+The <strong><c>HTMLTableSectionElement</c></strong> interface provides special properties and methods (beyond the <see cref="HTMLElement"/> interface it also has available to it by inheritance) for manipulating the layout and presentation of sections, that is headers, footers and bodies ({{HTMLElement("thead")}}, {{HTMLElement("tfoot")}}, and {{HTMLElement("tbody")}}, respectively) in an HTML table.
+</summary>
+<remarks>
+<para></para>
+<para>-The HTML elements implementing this interface: <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tfoot">tfoot</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/thead">thead</see>, and <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tbody">tbody</see>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableSectionElement"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLTableSectionElement>
+<HTMLTableSectionElementInsertRow>
+<summary>
+The <strong><c>insertRow()</c></strong> method of the <see cref="HTMLTableSectionElement"/> interface inserts a new row<br/>(<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tr">tr</see>) in the given table sectioning element (<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/thead">thead</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tfoot">tfoot</see>, or<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tbody">tbody</see>), then returns a reference to this new row.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para><c>insertRow()</c> inserts the row directly into the<br/>section. The row does not need to be appended separately as would be the case if<br/><see cref="Document.CreateElement"/> had been used to create the new<br/><c>&amp;lt;tr&amp;gt;</c> element.</para></blockquote>
+<para>-<see cref="HTMLTableRowElement.InsertCell"/><br/>-<see cref="HTMLTableElement.InsertRow"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableSectionElement/insertRow"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="HTMLTableRowElement"/> that references the new row.</returns>
+</HTMLTableSectionElementInsertRow>
+<HTMLTableSectionElementCh>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>ch</c></strong> property of the <see cref="HTMLTableSectionElement"/> interface does nothing. It reflects the <c>char</c> attribute of the section element.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This property was designed to participate to the ability to align table cell content on a specific character (typically the decimal point), but was never implemented by browsers.</para><para>To achieve such alignment, watch for the support of a string value with the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-align">text-align</see> CSS property.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-align">text-align</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableSectionElement/ch"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A single character.</value>
+</HTMLTableSectionElementCh>
+<HTMLTableSectionElementChOff>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>chOff</c></strong> property of the <see cref="HTMLTableSectionElement"/> interface does nothing. It reflects the <c>charoff</c> attribute of the section element.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This property was designed to participate in an ability to align table cell content on a specific character (typically the decimal point), but was never implemented by browsers.</para><para>To achieve such alignment, watch for the support of a string value with the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-align">text-align</see> CSS property.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-align">text-align</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableSectionElement/chOff"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer.</value>
+</HTMLTableSectionElementChOff>
+<HTMLTableSectionElementVAlign>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>vAlign</c></strong> property of the <see cref="HTMLTableSectionElement"/> interface is a string indicating how to vertically align text in a {{htmlelement("thead")}}, {{htmlelement("tbody")}} or {{htmlelement("tfoot")}} table section. Individual rows and cells can override it.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This property is deprecated. Use the CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align">vertical-align</see> property to horizontally align text in section cells instead.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align">vertical-align</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Tables">Learn: Styling tables</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableSectionElement/vAlign"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The possible values are: <c>&amp;quot;top&amp;quot;</c>, <c>&amp;quot;middle&amp;quot;</c>, <c>&amp;quot;bottom&amp;quot;</c>, or <c>&amp;quot;baseline&amp;quot;</c></value>
+</HTMLTableSectionElementVAlign>
+<HTMLTableSectionElementRows>
+<summary>
+The <strong><c>rows</c></strong> read-only property of the <see cref="HTMLTableSectionElement"/> interface returns a live <see cref="HTMLCollection"/> containing the rows in the section. The <c>HTMLCollection</c> is live and is automatically updated when rows are added or removed.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-align">text-align</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableSectionElement/rows"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A live <see cref="HTMLCollection"/> of <see cref="HTMLTableRowElement"/> objects.</value>
+</HTMLTableSectionElementRows>
+<HTMLTableSectionElementAlign>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>align</c></strong> property of the <see cref="HTMLTableSectionElement"/> interface is a string indicating how to horizontally align text in a {{htmlelement("thead")}}, {{htmlelement("tbody")}} or {{htmlelement("tfoot")}} table section. Individual rows and cells can override it.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This property is deprecated, and CSS should be used to align text horizontally in a cell. Use the CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-align">text-align</see> property, which takes precedence, to horizontally align text in section cells instead.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-align">text-align</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Tables">Learn: Styling tables</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableSectionElement/align"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The possible values are:</value>
+</HTMLTableSectionElementAlign>
+<HTMLTableSectionElementDeleteRow>
+<summary>
+The <strong><c>deleteRow()</c></strong> method of the <see cref="HTMLTableSectionElement"/> interface removes a<br/>specific row (<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tr">tr</see>) from a given <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section">section</see>.
+</summary>
+<remarks>
+<para>-<see cref="HTMLTableElement.DeleteRow"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableSectionElement/deleteRow"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</HTMLTableSectionElementDeleteRow>
+</docs>

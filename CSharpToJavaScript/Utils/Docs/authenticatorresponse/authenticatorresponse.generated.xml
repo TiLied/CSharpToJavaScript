@@ -1,0 +1,20 @@
+<docs>
+<AuthenticatorResponse>
+<summary>
+The <strong><c>AuthenticatorResponse</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API">Web Authentication API</see> is the base interface for interfaces that provide a cryptographic root of trust for a key pair. The child interfaces include information from the browser such as the challenge origin and either may be returned from <see cref="PublicKeyCredential.Response"/>.
+</summary>
+<remarks>
+<para>-<see cref="AuthenticatorAttestationResponse"/><br/>-<see cref="AuthenticatorAssertionResponse"/><br/>-<see cref="PublicKeyCredential.Response"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AuthenticatorResponse"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</AuthenticatorResponse>
+<AuthenticatorResponseClientDataJSON>
+<summary>
+The <strong><c>clientDataJSON</c></strong> property of the <see cref="AuthenticatorResponse"/> interface stores a <see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/JSON">JSON</see> string in an<br/>{{jsxref("ArrayBuffer")}}, representing the client data that was passed to <see cref="CredentialsContainer.Create"/> or <see cref="CredentialsContainer.Get"/>. This property is only accessed on one of the child objects of <c>AuthenticatorResponse</c>, specifically <see cref="AuthenticatorAttestationResponse"/> or <see cref="AuthenticatorAssertionResponse"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AuthenticatorResponse/clientDataJSON"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="ArrayBuffer"/>.</value>
+</AuthenticatorResponseClientDataJSON>
+</docs>

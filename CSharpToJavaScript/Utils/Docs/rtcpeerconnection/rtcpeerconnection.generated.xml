@@ -1,0 +1,515 @@
+<docs>
+<RTCPeerConnection>
+<summary>
+The <strong><c>RTCPeerConnection</c></strong> interface represents a WebRTC connection between the local computer and a remote peer.<br/>It provides methods to connect to a remote peer, maintain and monitor the connection, and close the connection once it&amp;apos;s no longer needed.
+</summary>
+<remarks>
+<para></para>
+<para>-<see href="https://github.com/jesup/nightly-gupshup/blob/master/static/js/chat.js"/><br/>-<see href="https://web.dev/articles/webrtc-basics">Get started with WebRTC</see><br/>-<see href="https://github.com/chrisjohndigital/TutorRoom">TutorRoom</see>: Node.js HTML video capture, peer-to-peer video and file sharing application (<see href="https://github.com/chrisjohndigital/TutorRoom">source on GitHub</see>)<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RTCPeerConnection>
+<RTCPeerConnectionRTCPeerConnection>
+<summary>
+The <strong><c>RTCPeerConnection()</c></strong> constructor returns a newly-created <see cref="RTCPeerConnection"/>, which represents a connection between the local device and a remote peer.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling">Signaling and video calling</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Protocols">WebRTC architecture overview</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Session_lifetime">Lifetime of a WebRTC session</see><br/>-<see cref="RTCPeerConnection"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/RTCPeerConnection"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A newly-created <see cref="RTCPeerConnection"/> object, configured as described by <c>configuration</c>, if specified; otherwise, configured to appropriate basic defaults.</returns>
+</RTCPeerConnectionRTCPeerConnection>
+<RTCPeerConnectionGetTransceivers>
+<summary>
+The <strong><c>getTransceivers()</c></strong> method of the <see cref="RTCPeerConnection"/> interface returns a list of the <see cref="RTCRtpTransceiver"/> objects being used to send and receive data on the connection.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling">Signaling and video calling</see><br/>-<see cref="RTCPeerConnection.AddTransceiver"/><br/>-<see cref="ArrayForEach"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/getTransceivers"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An array of the <see cref="RTCRtpTransceiver"/> objects representing the transceivers handling sending and receiving all media on the <c>RTCPeerConnection</c>.<br/>The array is in the order in which the transceivers were added to the connection.<br/>The array does not include transceivers that have already been <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiver/currentDirection">stopped</see> (following offer/answer).</returns>
+</RTCPeerConnectionGetTransceivers>
+<RTCPeerConnectionConnectionState>
+<summary>
+The <strong><c>connectionState</c></strong> read-only property of the <see cref="RTCPeerConnection"/> interface indicates the current state of the peer connection by returning one of the following string values: <c>new</c>, <c>connecting</c>, <c>connected</c>, <c>disconnected</c>, <c>failed</c>, or <c>closed</c>.
+</summary>
+<remarks>
+<para>This state essentially represents the aggregate state of all ICE transports (which are of type <see cref="RTCIceTransport"/> or <see cref="RTCDtlsTransport"/>) being used by the connection.</para><para>When this property's value changes, a <see cref="RTCPeerConnection.Connectionstatechange"/> event is sent to the <see cref="RTCPeerConnection"/> instance.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Session_lifetime">Lifetime of a WebRTC session</see><br/>-<see cref="RTCPeerConnection"/><br/>-<see cref="RTCPeerConnection.Connectionstatechange"/><br/>-<see cref="RTCIceTransport.State"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/connectionState"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing the current state of the connection.<br/>This can take on of the following values:</value>
+</RTCPeerConnectionConnectionState>
+<RTCPeerConnectionSignalingState>
+<summary>
+The <strong><c>signalingState</c></strong> read-only property of the <see cref="RTCPeerConnection"/> interface returns a string value describing the state of the signaling process on the local end of the connection while connecting or reconnecting to another peer.<br/>See <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Session_lifetime#signaling">Signaling</see> in our WebRTC session lifetime page.
+</summary>
+<remarks>
+<para>Because the signaling process is a state machine, being able to verify that your code is in the expected state when messages arrive can help avoid unexpected and avoidable failures.<br/>For example, if you receive an answer while the <c>signalingState</c> isn&amp;apos;t <c>&amp;quot;have-local-offer&amp;quot;</c>, you know that something is wrong, since you should only receive answers after creating an offer but before an answer has been received and passed into <see cref="RTCPeerConnection.SetLocalDescription"/>. Your code will be more reliable if you watch for mismatched states like this and handle them gracefully.</para><para>This value may also be useful during debugging, for example.</para><para>In addition, when the value of this property changes, a <see cref="RTCPeerConnectionsignalingstatechange"/> event is sent to the <see cref="RTCPeerConnection"/> instance.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Session_lifetime">Lifetime of a WebRTC session</see><br/>-<see cref="RTCPeerConnection"/><br/>-<see cref="RTCPeerConnectionsignalingstatechange"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/signalingState"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The allowed string values are:</value>
+</RTCPeerConnectionSignalingState>
+<RTCPeerConnectionConnectionstatechange>
+<summary>
+The <strong><c>connectionstatechange</c></strong> event is sent to the <c>onconnectionstatechange</c> event handler on an <see cref="RTCPeerConnection"/> object after a new track has been added to an <see cref="RTCRtpReceiver"/> which is part of the connection.<br/>The new connection state can be found in <see cref="RTCPeerConnection.ConnectionState"/>, and is one of the string values: <c>new</c>, <c>connecting</c>, <c>connected</c>, <c>disconnected</c>, <c>failed</c>, or <c>closed</c>.
+</summary>
+<remarks>
+<para>This event is not cancelable and does not bubble.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Connectivity">WebRTC connectivity</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Session_lifetime">Lifetime of a WebRTC session</see><br/>-<see cref="RTCPeerConnection.ConnectionState"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/connectionstatechange"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RTCPeerConnectionConnectionstatechange>
+<RTCPeerConnectionIcegatheringstatechange>
+<summary>
+The <strong><c>icegatheringstatechange</c></strong> event is sent to the <c>onicegatheringstatechange</c> event handler on an <see cref="RTCPeerConnection"/> when the state of the {{Glossary("ICE")}} candidate gathering process changes.<br/>This signifies that the value of the connection's <see cref="RTCPeerConnection.IceGatheringState"/> property has changed.
+</summary>
+<remarks>
+<para>When ICE first starts to gather connection candidates, the value changes from <c>new</c> to <c>gathering</c> to indicate that the process of collecting candidate configurations for the connection has begun. When the value changes to <c>complete</c>, all of the transports that make up the <c>RTCPeerConnection</c> have finished gathering ICE candidates.</para><blockquote class="NOTE"><h5>NOTE</h5><para>While you can determine that ICE candidate gathering is complete by watching for <c>icegatheringstatechange</c> events and checking for the value of <see cref="RTCPeerConnection.IceGatheringState"/> to become <c>complete</c>, you can also have your handler for the <see cref="RTCPeerConnection.Icecandidate"/> event look to see if its <see cref="RTCPeerConnectionIceEvent.Candidate"/> property is <c>null</c>. This also indicates that collection of candidates is finished.</para></blockquote><para>This event is not cancelable and does not bubble.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling">Signaling and video calling</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Connectivity">WebRTC connectivity</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Session_lifetime">Lifetime of a WebRTC session</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/icegatheringstatechange"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RTCPeerConnectionIcegatheringstatechange>
+<RTCPeerConnectionRemoteDescription>
+<summary>
+The <strong><c>remoteDescription</c></strong> read-only property of the <see cref="RTCPeerConnection"/> interface returns a <see cref="RTCSessionDescription"/> describing the session (which includes configuration and media information) for the remote end of the connection.<br/>If this hasn&amp;apos;t been set yet, this is <c>null</c>.
+</summary>
+<remarks>
+<para>The returned value typically reflects a remote description which has been received over the signaling server (as either an offer or an answer) and then put into effect by your code calling <see cref="RTCPeerConnection.SetRemoteDescription"/> in response.</para>
+<para>-<see cref="RTCPeerConnection.SetRemoteDescription"/>, <see cref="RTCPeerConnection.PendingRemoteDescription"/>, <see cref="RTCPeerConnection.CurrentRemoteDescription"/><br/>-<see cref="RTCPeerConnection.SetLocalDescription"/>, <see cref="RTCPeerConnection.PendingLocalDescription"/>, <see cref="RTCPeerConnection.CurrentLocalDescription"/>, <see cref="RTCPeerConnection.LocalDescription"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/remoteDescription"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>On a more fundamental level, the returned value is the value of <see cref="RTCPeerConnection.PendingRemoteDescription"/> if that property isn't<br/><c>null</c>;<br/>otherwise, the value of <see cref="RTCPeerConnection.CurrentRemoteDescription"/> is returned.<br/>See <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Connectivity#pending_and_current_descriptions">Pending and current descriptions</see> in the WebRTC Connectivity page for details on this algorithm and why it&amp;apos;s used.</value>
+</RTCPeerConnectionRemoteDescription>
+<RTCPeerConnectionGetSenders>
+<summary>
+The <strong><c>getSenders()</c></strong> method of the <see cref="RTCPeerConnection"/> interface returns an array of <see cref="RTCRtpSender"/> objects, each of which represents the RTP sender responsible for transmitting one track's data.<br/>A sender object provides methods and properties for examining and controlling the encoding and transmission of the track&amp;apos;s data.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/>-<see cref="RTCRtpSender"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/getSenders"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An array of <see cref="RTCRtpSender"/> objects, one for each track on the connection.<br/>The array is empty if there are no RTP senders on the connection.The order of the returned <c>RTCRtpSender</c> instances is not defined by the specification, and may change from one call to <c>getSenders()</c> to the next.The array does not include senders associated with transceivers that have been <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiver/currentDirection">stopped</see> (following offer/answer).</returns>
+</RTCPeerConnectionGetSenders>
+<RTCPeerConnectionIceConnectionState>
+<summary>
+The <strong><c>iceConnectionState</c></strong> read-only property of the <see cref="RTCPeerConnection"/> interface returns a string which state of the {{Glossary("ICE")}} agent associated with the <see cref="RTCPeerConnection"/>: <c>new</c>, <c>checking</c>, <c>connected</c>, <c>completed</c>, <c>failed</c>, <c>disconnected</c>, and <c>closed</c>.
+</summary>
+<remarks>
+<para>It describes the current state of the ICE agent and its connection to the ICE server;<br/>that is, the <see href="https://developer.mozilla.org/en-US/docs/Glossary/STUN">STUN</see> or <see href="https://developer.mozilla.org/en-US/docs/Glossary/TURN">TURN</see> server.</para><para>You can detect when this value has changed by watching for the <see cref="RTCPeerConnection.Iceconnectionstatechange"/> event.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see cref="RTCPeerConnection.Iceconnectionstatechange"/><br/>-<see cref="RTCPeerConnection"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/iceConnectionState"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The current state of the ICE agent and its connection. The value is one of the following strings:</value>
+</RTCPeerConnectionIceConnectionState>
+<RTCPeerConnectionAddstream>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The obsolete <strong><c>addstream</c></strong> event is sent to an <see cref="RTCPeerConnection"/> when new media, in the form of a <see cref="MediaStream"/> object, has been added to it.
+</summary>
+<remarks>
+<blockquote class="WARNING"><h5>WARNING</h5><para>This event has been removed from the WebRTC specification. You should instead watch for the <see cref="RTCPeerConnection.Track"/> event, which is sent for each media track added to the <c>RTCPeerConnection</c>.</para></blockquote><para>You can, similarly, watch for streams to be removed from the connection by monitoring the <see cref="RTCPeerConnection.Removestream"/> event.</para><para>This event is not cancelable and does not bubble.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see cref="RTCPeerConnection.AddStream"/><br/>-<see cref="MediaStreamEvent"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/addstream"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RTCPeerConnectionAddstream>
+<RTCPeerConnectionPendingRemoteDescription>
+<summary>
+The <strong><c>pendingRemoteDescription</c></strong> read-only property of the <see cref="RTCPeerConnection"/> interface returns an <see cref="RTCSessionDescription"/> object describing a pending configuration change for the remote end of the connection.
+</summary>
+<remarks>
+<para>This does not describe the connection as it currently stands, but as it may exist in the near future.<br/>Use <see cref="RTCPeerConnection.CurrentRemoteDescription"/> or <see cref="RTCPeerConnection.RemoteDescription"/> to get the current session<br/>description for the remote endpoint.<br/>For details on the difference, see <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Connectivity#pending_and_current_descriptions">Pending and current descriptions</see> in the WebRTC Connectivity page.</para>
+<para>-<see cref="RTCPeerConnection.SetRemoteDescription"/>,<br/><see cref="RTCPeerConnection.CurrentRemoteDescription"/>,<br/><see cref="RTCPeerConnection.RemoteDescription"/><br/>-<see cref="RTCPeerConnection.SetLocalDescription"/>,<br/><see cref="RTCPeerConnection.LocalDescription"/>,<br/><see cref="RTCPeerConnection.PendingLocalDescription"/>,<br/><see cref="RTCPeerConnection.CurrentLocalDescription"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/pendingRemoteDescription"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>If a remote description change is in progress, this is an <see cref="RTCSessionDescription"/> describing the proposed configuration.<br/>Otherwise, this returns <c>null</c>.</value>
+</RTCPeerConnectionPendingRemoteDescription>
+<RTCPeerConnectionCurrentLocalDescription>
+<summary>
+The <strong><c>currentLocalDescription</c></strong> read-only property of the <see cref="RTCPeerConnection"/> interface returns an <see cref="RTCSessionDescription"/> object describing the local end of the connection as it was most recently successfully negotiated since the last time the <see cref="RTCPeerConnection"/> finished negotiating and connecting to a remote peer.<br/>Also included is a list of any ICE candidates that may already have been generated by the ICE agent since the offer or answer represented by the description was first instantiated.
+</summary>
+<remarks>
+<para>To change the <c>currentLocalDescription</c>, call <see cref="RTCPeerConnection.SetLocalDescription"/>, which triggers a series of events which leads to this value being set.<br/>For details on what exactly happens and why the change isn&amp;apos;t necessarily instantaneous, see <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Connectivity#pending_and_current_descriptions">Pending and current descriptions</see> in the WebRTC Connectivity page.</para><blockquote class="NOTE"><h5>NOTE</h5><para>Unlike <see cref="RTCPeerConnection.LocalDescription"/>, this value represents the actual current state of the local end of the connection;<br/><c>localDescription</c> may specify a description which the connection is currently in the process of switching over to.</para></blockquote>
+<para>-<see cref="RTCPeerConnection.SetLocalDescription"/>, <see cref="RTCPeerConnection.PendingLocalDescription"/>, <see cref="RTCPeerConnection.LocalDescription"/><br/>-<see cref="RTCPeerConnection.SetRemoteDescription"/>, <see cref="RTCPeerConnection.RemoteDescription"/>, <see cref="RTCPeerConnection.PendingRemoteDescription"/>, <see cref="RTCPeerConnection.CurrentRemoteDescription"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/currentLocalDescription"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The current description of the local end of the connection, if one has been set.<br/>If none has been successfully set, this value is <c>null</c>.</value>
+</RTCPeerConnectionCurrentLocalDescription>
+<RTCPeerConnectionPendingLocalDescription>
+<summary>
+The <strong><c>pendingLocalDescription</c></strong> read-only property of the <see cref="RTCPeerConnection"/> interface returns an <see cref="RTCSessionDescription"/> object describing a pending configuration change for the local end of the connection.
+</summary>
+<remarks>
+<para>This does not describe the connection as it currently stands, but as it may exist in the near future.<br/>Use <see cref="RTCPeerConnection.CurrentLocalDescription"/> or <see cref="RTCPeerConnection.LocalDescription"/> to get the current state of the endpoint.<br/>For details on the difference, see <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Connectivity#pending_and_current_descriptions">Pending and current descriptions</see> in the WebRTC Connectivity page.</para>
+<para>-<see cref="RTCPeerConnection.SetLocalDescription"/>, <see cref="RTCPeerConnection.CurrentLocalDescription"/>, <see cref="RTCPeerConnection.LocalDescription"/><br/>-<see cref="RTCPeerConnection.SetRemoteDescription"/>, <see cref="RTCPeerConnection.RemoteDescription"/>, <see cref="RTCPeerConnection.PendingRemoteDescription"/>, <see cref="RTCPeerConnection.CurrentRemoteDescription"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/pendingLocalDescription"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>If a local description change is in progress, this is an <see cref="RTCSessionDescription"/> describing the proposed configuration.<br/>Otherwise, this returns <c>null</c>.</value>
+</RTCPeerConnectionPendingLocalDescription>
+<RTCPeerConnectionCreateDataChannel>
+<summary>
+The <strong><c>createDataChannel()</c></strong> method of the <see cref="RTCPeerConnection"/> interface creates a new channel linked with the remote peer, over which any kind of data may be transmitted.<br/>This can be useful for back-channel content, such as images, file transfer, text chat, game update packets, and so forth.
+</summary>
+<remarks>
+<para>If the new data channel is the first one added to the connection, renegotiation is started by delivering a <see cref="RTCPeerConnectionnegotiationneeded"/> event.</para>
+<para>-<see cref="RTCDataChannel"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample">A simple RTCDataChannel sample</see><br/>-<see cref="RTCPeerConnection"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/createDataChannel"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="RTCDataChannel"/> object with the specified <c>label</c>, configured using the options specified by <c>options</c> if that parameter is included; otherwise, the defaults listed above are established.</returns>
+</RTCPeerConnectionCreateDataChannel>
+<RTCPeerConnectionCanTrickleIceCandidates>
+<summary>
+The <strong><c>canTrickleIceCandidates</c></strong> read-only property of the <see cref="RTCPeerConnection"/> interface returns a boolean value which indicates whether or not the remote peer can accept <see href="https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-trickle-ice">trickled ICE candidates</see>.
+</summary>
+<remarks>
+<para><strong>ICE trickling</strong> is the process of continuing to send candidates after the initial offer or answer has already been sent to the other peer.</para><para>This property is only set after having called <see cref="RTCPeerConnection.SetRemoteDescription"/>. Ideally, your signaling protocol provides a way to detect trickling support, so that you don't need to rely on this property.<br/>A WebRTC browser will always support trickle ICE. If trickling isn't supported, or you aren't able to tell, you can check for a falsy value for this property and then wait until the value of <see cref="RTCPeerConnection.IceGatheringState"/> changes to <c>&amp;quot;completed&amp;quot;</c> before creating and sending the initial offer.<br/>That way, the offer contains all of the candidates.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/>-<see cref="RTCPeerConnection.AddIceCandidate"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Session_lifetime">Lifetime of a WebRTC session</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/canTrickleIceCandidates"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value that is <c>true</c> if the remote peer can accept trickled ICE candidates and <c>false</c> if it cannot.<br/>If no remote peer has been established, this value is <c>null</c>.<blockquote class="NOTE"><h5>NOTE</h5>This property's value is determined once the local peer has called <see cref="RTCPeerConnection.SetRemoteDescription"/>;<br/>the provided description is used by the ICE agent to determine whether or not the remote peer supports trickled ICE candidates.</blockquote></value>
+</RTCPeerConnectionCanTrickleIceCandidates>
+<RTCPeerConnectionAddIceCandidate>
+<summary>
+The <strong><c>addIceCandidate()</c></strong> method of the <see cref="RTCPeerConnection"/> interface adds a new remote candidate to the connection's remote description, which describes the state of the remote end of the connection.
+</summary>
+<remarks>
+<para>When a website or app using <see cref="RTCPeerConnection"/> receives a new ICE candidate from the remote peer over its signaling channel, it delivers the newly-received candidate to the browser's {{Glossary("ICE")}} agent by calling <strong><c>RTCPeerConnection.addIceCandidate()</c></strong>.<br/>This adds this new remote candidate to the <c>RTCPeerConnection</c>&amp;apos;s remote description, which describes the state of the remote end of the connection.</para><para>If the <c>candidate</c> parameter is missing or a value of <c>null</c> is given when calling <c>addIceCandidate()</c>, the added ICE candidate is an &amp;quot;end-of-candidates&amp;quot; indicator.<br/>The same is the case if the value of the specified object's <see cref="RTCIceCandidate.Candidate"/> is either missing or an empty string (<c>&amp;quot;&amp;quot;</c>), it signals that all remote candidates have been delivered.</para><para>The end-of-candidates notification is transmitted to the remote peer using a candidate with an a-line value of <c>end-of-candidates</c>.</para><para>During negotiation, your app will likely receive many candidates which you&amp;apos;ll deliver to the ICE agent in this way, allowing it to build up a list of potential connection methods.<br/>This is covered in more detail in the articles <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Connectivity">WebRTC connectivity</see> and<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling">Signaling and video calling</see>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling">Signaling and video calling</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Protocols">Introduction to WebRTC protocols</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Connectivity">WebRTC connectivity</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Session_lifetime">Lifetime of a WebRTC session</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/addIceCandidate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that is fulfilled when the candidate has been successfully added to the remote peer's description by the ICE agent.<br/>The promise does not receive any input parameters.</returns>
+</RTCPeerConnectionAddIceCandidate>
+<RTCPeerConnectionGetConfiguration>
+<summary>
+The <strong><c>getConfiguration()</c></strong> method of the <see cref="RTCPeerConnection"/> interface returns an object which indicates the current configuration of the <see cref="RTCPeerConnection"/> on which the method is called.
+</summary>
+<remarks>
+<para>The returned configuration is the last configuration applied via <see cref="RTCPeerConnection.SetConfiguration"/>, or if<br/><c>setConfiguration()</c> hasn&amp;apos;t been called, the configuration the <c>RTCPeerConnection</c> was constructed with.<br/>The configuration includes a list of the ICE servers used by the connection, information about transport policies, and identity information.</para>
+<para>-<see cref="RTCPeerConnection.SetConfiguration"/><br/>-<see cref="RTCPeerConnection.RTCPeerConnection"/><br/>-<see cref="RTCPeerConnection"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/getConfiguration"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An object describing the <see cref="RTCPeerConnection"/>'s current configuration.<br/>See <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/RTCPeerConnection#parameters"><c>RTCPeerConnection()</c></see> for more information on what options are allowed.</returns>
+</RTCPeerConnectionGetConfiguration>
+<RTCPeerConnectionSetLocalDescription>
+<summary>
+The <strong><c>setLocalDescription()</c></strong> method of the <see cref="RTCPeerConnection"/> interface changes the local description associated with the connection.<br/>This description specifies the properties of the local end of the connection, including the media format.<br/>The method takes a single parameter—the session description—and it returns a <see cref="Promise"/> which is fulfilled once the description has been changed, asynchronously.
+</summary>
+<remarks>
+<para>If <c>setLocalDescription()</c> is called while a connection is already in place, it means renegotiation is underway (possibly to adapt to changing network conditions).<br/>Because descriptions will be exchanged until the two peers agree on a configuration, the description submitted by calling <c>setLocalDescription()</c> does not immediately take effect.<br/>Instead, the current connection configuration remains in place until negotiation is complete. Only then does the agreed-upon configuration take effect.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see cref="RTCSessionDescription"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/setLocalDescription"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} which is fulfilled once the value of <see cref="RTCPeerConnection.LocalDescription"/> is successfully changed or rejected if the change cannot be applied (for example, if the specified description is incompatible with one or both of the peers on the connection).<br/>The promise&amp;apos;s fulfillment handler receives no input parameters.<blockquote class="NOTE"><h5>NOTE</h5>The process of changing descriptions actually involves intermediary steps handled by the WebRTC layer to ensure that an active connection can be changed without losing the connection if the change does not succeed.<br/>See <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Connectivity#pending_and_current_descriptions">Pending and current descriptions</see> in the WebRTC Connectivity page for more details on this process.</blockquote></returns>
+</RTCPeerConnectionSetLocalDescription>
+<RTCPeerConnectionAddTrack>
+<summary>
+The <strong><c>addTrack()</c></strong> method of the <see cref="RTCPeerConnection"/> interface adds a new media track to the set of tracks which will be transmitted to the other peer.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Adding a track to a connection triggers renegotiation by firing a <see cref="RTCPeerConnectionnegotiationneeded"/> event.<br/>See <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling#starting_negotiation">Starting negotiation</see> for details.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP">Introduction to the Real-time Transport Protocol (RTP)</see><br/>-<see cref="RTCPeerConnectiontrack"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/addTrack"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>The <see cref="RTCRtpSender"/> object which will be used to transmit the media data.<blockquote class="NOTE"><h5>NOTE</h5>Every <c>RTCRtpSender</c> is paired with an <see cref="RTCRtpReceiver"/> to make up an <see cref="RTCRtpTransceiver"/>.<br/>The associated receiver is muted (indicating that it is not able to deliver packets) until and unless one or more streams are added to the receiver by the remote peer.</blockquote></returns>
+</RTCPeerConnectionAddTrack>
+<RTCPeerConnectionIceconnectionstatechange>
+<summary>
+An <strong><c>iceconnectionstatechange</c></strong> event is sent to an <see cref="RTCPeerConnection"/> object each time the {{Glossary("ICE")}} connection state changes during the negotiation process.<br/>The new ICE connection state is available in the object's <see cref="RTCPeerConnection.IceConnectionState"/> property.
+</summary>
+<remarks>
+<para>One common task performed by the <c>iceconnectionstatechange</c> event listener is to trigger <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ice_restart">ICE restart</see> when the state changes to <c>failed</c>.</para><para>This event is not cancelable and does not bubble.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see cref="RTCPeerConnection"/><br/>-<see cref="RTCPeerConnection.IceConnectionState"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/iceconnectionstatechange"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RTCPeerConnectionIceconnectionstatechange>
+<RTCPeerConnectionSignalingstatechange>
+<summary>
+A <strong><c>signalingstatechange</c></strong> event is sent to an <see cref="RTCPeerConnection"/> to notify it that its signaling state, as indicated by the <see cref="RTCPeerConnection.SignalingState"/> property, has changed.
+</summary>
+<remarks>
+<para>This event is not cancelable and does not bubble.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see cref="RTCPeerConnection.SignalingState"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/signalingstatechange"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RTCPeerConnectionSignalingstatechange>
+<RTCPeerConnectionGenerateCertificate>
+<summary>
+The <strong><c>generateCertificate()</c></strong> static function of the <see cref="RTCPeerConnection"/> interface creates an X.509 certificate and corresponding private key, returning a promise that resolves with the new <see cref="RTCCertificate"/> once it's generated.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API">Web Crypto API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security">Website security</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Security">Web security</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Glossary/Symmetric-key cryptography">Symmetric-key cryptography</see><br/>-<see cref="Crypto"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/generateCertificate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A promise which resolves to a new <see cref="RTCCertificate"/> object containing a new key based on the specified options.</returns>
+</RTCPeerConnectionGenerateCertificate>
+<RTCPeerConnectionGetReceivers>
+<summary>
+The <strong><c>getReceivers()</c></strong> method of the <see cref="RTCPeerConnection"/> interface returns an array of <see cref="RTCRtpReceiver"/> objects, each of which represents one RTP receiver.<br/>Each RTP receiver manages the reception and decoding of data for a <see cref="MediaStreamTrack"/> on an <see cref="RTCPeerConnection"/>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/>-<see cref="RTCRtpSender"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/getReceivers"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An array of <see cref="RTCRtpReceiver"/> objects, one for each track on the connection.<br/>The array is empty if there are no RTP receivers on the connection.The order of the returned <c>RTCRtpReceiver</c> instances is not defined by the specification, and may change from one call to <c>getReceivers()</c> to the next.The array does not include receivers associated with transceivers that have been <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiver/currentDirection">stopped</see> (following offer/answer).</returns>
+</RTCPeerConnectionGetReceivers>
+<RTCPeerConnectionAddTransceiver>
+<summary>
+The <strong><c>addTransceiver()</c></strong> method of the <see cref="RTCPeerConnection"/> interface creates a new <see cref="RTCRtpTransceiver"/> and adds it to the set of transceivers associated with the <c>RTCPeerConnection</c>.<br/>Each transceiver represents a bidirectional stream, with both an <see cref="RTCRtpSender"/> and an <see cref="RTCRtpReceiver"/> associated with it.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP">Introduction to the Real-time Transport Protocol (RTP)</see><br/>-<see cref="RTCPeerConnection.AddTrack"/> also creates transceivers<br/>-<see cref="RTCRtpReceiver"/> and <see cref="RTCRtpSender"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/addTransceiver"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>The <see cref="RTCRtpTransceiver"/> object which will be used to exchange the media data.</returns>
+</RTCPeerConnectionAddTransceiver>
+<RTCPeerConnectionSetIdentityProvider>
+<summary>
+The <strong><c>setIdentityProvider()</c></strong> method of the <see cref="RTCPeerConnection"/> interface sets the Identity Provider (IdP) to the triplet given in parameter: its name, the protocol used to communicate with it (optional) and an optional username.<br/>The IdP will be used only when an assertion is needed.
+</summary>
+<remarks>
+<para>If the <see cref="RTCPeerConnection.SignalingState"/> is set to <c>&amp;quot;closed&amp;quot;</c>, an <c>InvalidStateError</c> is raised.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/setIdentityProvider"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</RTCPeerConnectionSetIdentityProvider>
+<RTCPeerConnectionGetIdentityAssertion>
+<summary>
+The <strong><c>getIdentityAssertion()</c></strong> method of the <see cref="RTCPeerConnection"/> interface initiates the gathering of an identity assertion.<br/>This has an effect only if the <see cref="RTCPeerConnection.SignalingState"/> is not <c>&amp;quot;closed&amp;quot;</c>.
+</summary>
+<remarks>
+<para>It is not expected for the application dealing with the <c>RTCPeerConnection</c>: this is automatically done; an explicit call only allows to anticipate the need.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/getIdentityAssertion"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> which resolves to an identity assertion encoded as a string.</returns>
+</RTCPeerConnectionGetIdentityAssertion>
+<RTCPeerConnectionIceGatheringState>
+<summary>
+The <strong><c>iceGatheringState</c></strong> read-only property of the <see cref="RTCPeerConnection"/> interface returns a string that describes the overall ICE gathering state for this connection.<br/>This lets you detect, for example, when collection of ICE candidates has finished.
+</summary>
+<remarks>
+<para>You can detect when the value of this property changes by watching for an event of type <see cref="RTCPeerConnectionicegatheringstatechange"/>.</para><para>Note that <strong><c>iceGatheringState</c></strong> represents the overall gathering state of the connection, including every <see cref="RTCIceTransport"/> used by every <see cref="RTCRtpSender"/> and every <see cref="RTCRtpReceiver"/> on the entire connection.<br/>This contrasts with <see cref="RTCIceTransport.GatheringState"/>, which represents the gathering state for a single transport.</para>
+<para>-<see cref="RTCPeerConnectionicegatheringstatechange"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/iceGatheringState"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The possible values are:</value>
+</RTCPeerConnectionIceGatheringState>
+<RTCPeerConnectionCreateAnswer>
+<summary>
+The <strong><c>createAnswer()</c></strong> method of the <see cref="RTCPeerConnection"/> interface creates an {{Glossary("SDP")}} answer to an offer received from a remote peer during the offer/answer negotiation of a WebRTC connection.
+</summary>
+<remarks>
+<para>The answer contains information about any media already attached to the session, codecs and options supported by the browser, and any <see href="https://developer.mozilla.org/en-US/docs/Glossary/ICE">ICE</see> candidates already gathered.<br/>The answer is delivered to the returned <see cref="Promise"/>, and should then be sent to the source of the offer to continue the negotiation process.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/createAnswer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that fulfills with an object containing the same properties as an <see cref="RTCSessionDescription"/> objects:</returns>
+</RTCPeerConnectionCreateAnswer>
+<RTCPeerConnectionRestartIce>
+<summary>
+The <strong><c>restartIce()</c></strong> method of the <see cref="RTCPeerConnection"/> interface allows a web application to request that {{Glossary("ICE")}} candidate gathering be redone on both ends of the connection.<br/>This simplifies the process by allowing the same method to be used by either the caller or the receiver to trigger an ICE restart.
+</summary>
+<remarks>
+<para>After <c>restartIce()</c> returns, the offer returned by the next call to <see cref="RTCPeerConnection.CreateOffer"/> is automatically configured to trigger ICE restart on both the local peer (once the local peer has been set) and on the remote peer, once the offer is sent across your signaling mechanism and the remote peer has set its description as well.</para><para><c>restartIce()</c> causes the<br/><see cref="RTCPeerConnection.Negotiationneeded"/> event to be fired on the <c>RTCPeerConnection</c> to inform the application that it should perform negotiation using its signaling channel.</para><para>If negotiation fails to complete—either due to rollback or because incoming offers are in the process of being negotiated—the <see cref="RTCPeerConnection"/> will remember that you requested ICE restart.<br/>The next time the connection's <see cref="RTCPeerConnection.SignalingState"/> changes to <c>stable</c>, the connection will fire the <see cref="RTCPeerConnection.Negotiationneeded"/> event.<br/>This process continues until an ICE restart has been successfully completed.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Session_lifetime">Lifetime of a WebRTC session</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling">Signaling and video calling</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/restartIce"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</RTCPeerConnectionRestartIce>
+<RTCPeerConnectionGetStats>
+<summary>
+The <strong><c>getStats()</c></strong> method of the <see cref="RTCPeerConnection"/> interface returns a promise which resolves with data providing statistics about either the overall connection or about the specified <see cref="MediaStreamTrack"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/getStats"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} which resolves with an <see cref="RTCStatsReport"/> object providing connection statistics.<br/>The report&amp;apos;s contents depend on the <c>selector</c> and other details of the connection.</returns>
+</RTCPeerConnectionGetStats>
+<RTCPeerConnectionCreateOffer>
+<summary>
+The <strong><c>createOffer()</c></strong> method of the <see cref="RTCPeerConnection"/> interface initiates the creation of an {{Glossary("SDP")}} offer for the purpose of starting a new WebRTC connection to a remote peer.
+</summary>
+<remarks>
+<para>The SDP offer includes information about any <see cref="MediaStreamTrack"/> objects already attached to the WebRTC session, codec, and options supported by the browser, and any candidates already gathered by the {{Glossary("ICE")}} agent, for the purpose of being sent over the signaling channel to a potential peer to request a connection or to update the configuration of an existing connection.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/createOffer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that fulfills with an object containing the same properties as an <see cref="RTCSessionDescription"/> objects:</returns>
+</RTCPeerConnectionCreateOffer>
+<RTCPeerConnectionCreateDTMFSender>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>createDTMFSender()</c></strong> method of the <see cref="RTCPeerConnection"/> interface creates a new <see cref="RTCDTMFSender"/> object associated with the specified <see cref="MediaStreamTrack"/>, which can be used to send DTMF tones over the connection.
+</summary>
+<remarks>
+<para>This method is deprecated and should not be used. Instead, use the <see cref="RTCRtpSender.Dtmf"/> property to access the DTMF sender associated with a specific sender.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/>-<see cref="RTCDTMFSender"/><br/>-<see cref="RTCRtpSender"/><br/>-<see cref="RTCPeerConnection"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/createDTMFSender"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="RTCDTMFSender"/> object.</returns>
+</RTCPeerConnectionCreateDTMFSender>
+<RTCPeerConnectionSetConfiguration>
+<summary>
+The <strong><c>setConfiguration()</c></strong> method of the <see cref="RTCPeerConnection"/> interface sets the current configuration of the connection based on the values included in the specified object.<br/>This lets you change the ICE servers used by the connection and which transport policies to use.
+</summary>
+<remarks>
+<para>The most common use case for this method (and even then, probably not a very common use case) is to replace the set of ICE servers to be used. Two potential scenarios in which this might be done:</para><blockquote class="NOTE"><h5>NOTE</h5><para>You cannot change the identity information for a connection once it&amp;apos;s already been set.</para></blockquote>
+<para>-<see cref="RTCPeerConnection.GetConfiguration"/><br/>-<see cref="RTCPeerConnection.RTCPeerConnection"/><br/>-<see cref="RTCPeerConnection"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/setConfiguration"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</RTCPeerConnectionSetConfiguration>
+<RTCPeerConnectionTrack>
+<summary>
+The <strong><c>track</c></strong> event is sent to the <c>ontrack</c> event handler on <see cref="RTCPeerConnection"/>s after a new track has been added to an <see cref="RTCRtpReceiver"/> which is part of the connection.
+</summary>
+<remarks>
+<para>By the time this event is delivered, the new track has been fully added to the peer connection. See <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEvent#track_event_types">Track event types</see> for details.</para><para>This event is not cancellable and does not bubble.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/track"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RTCPeerConnectionTrack>
+<RTCPeerConnectionSetRemoteDescription>
+<summary>
+The <strong><c>setRemoteDescription()</c></strong> method of the <see cref="RTCPeerConnection"/> interface sets the specified session description as the remote peer's current offer or answer.<br/>The description specifies the properties of the remote end of the connection, including the media format.<br/>The method takes a single parameter—the session description—and it returns a <see cref="Promise"/> which is fulfilled once the description has been changed, asynchronously.
+</summary>
+<remarks>
+<para>This is typically called after receiving an offer or answer from another peer over the signaling server.<br/>Keep in mind that if <c>setRemoteDescription()</c> is called while a connection is already in place, it means renegotiation is underway (possibly to adapt to changing network conditions).</para><para>Because descriptions will be exchanged until the two peers agree on a configuration, the description submitted by calling <c>setRemoteDescription()</c> does not immediately take effect.<br/>Instead, the current connection configuration remains in place until negotiation is complete.<br/>Only then does the agreed-upon configuration take effect.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/>-<see cref="RTCPeerConnection.RemoteDescription"/>,<br/><see cref="RTCPeerConnection.PendingRemoteDescription"/>,<br/><see cref="RTCPeerConnection.CurrentRemoteDescription"/><br/>-<see cref="RTCSessionDescription"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/setRemoteDescription"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} which is fulfilled once the value of the connection's <see cref="RTCPeerConnection.RemoteDescription"/> is successfully changed or rejected if the change cannot be applied (for example, if the specified description is incompatible with one or both of the peers on the connection).<br/>The promise fulfillment handler receives no input parameters.<blockquote class="NOTE"><h5>NOTE</h5>The process of changing descriptions actually involves intermediary steps handled by the WebRTC layer to ensure that an active connection can be changed without losing the connection if the change does not succeed.<br/>See <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Connectivity#pending_and_current_descriptions">Pending and current descriptions</see> in the WebRTC Connectivity page for more details on this process.</blockquote></returns>
+</RTCPeerConnectionSetRemoteDescription>
+<RTCPeerConnectionRemoveStream>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>removeStream()</c></strong> method of the <see cref="RTCPeerConnection"/> interface removes a <see cref="MediaStream"/> as a local source of audio or video.<br/>If the negotiation already happened, a new one will be needed for the remote peer to be able to use it.<br/>Because this method has been deprecated, you should instead use <see cref="RTCPeerConnection.RemoveTrack"/> if your target browser versions have implemented it.
+</summary>
+<remarks>
+<para>If the <see cref="RTCPeerConnection.SignalingState"/> is set to <c>&amp;quot;closed&amp;quot;</c>, an <c>InvalidStateError</c> is raised.<br/>If the <see cref="RTCPeerConnection.SignalingState"/> is set to <c>&amp;quot;stable&amp;quot;</c>, the event <see cref="RTCPeerConnectionnegotiationneeded"/> is sent on the <see cref="RTCPeerConnection"/>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/>-<see cref="RTCPeerConnection.RemoveTrack"/><br/>-<see cref="RTCPeerConnection.AddTrack"/><br/>-<see cref="RTCPeerConnection.AddStream"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/removeStream"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns><see cref="Undefined"/>.</returns>
+</RTCPeerConnectionRemoveStream>
+<RTCPeerConnectionAddStream>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>addStream()</c></strong> method of the <see cref="RTCPeerConnection"/> interface adds a <see cref="MediaStream"/> as a local source of audio or video.<br/>Instead of using this obsolete method, you should instead use <see cref="RTCPeerConnection.AddTrack"/> once for each track you wish to send to the remote peer.
+</summary>
+<remarks>
+<para>If the <see cref="RTCPeerConnection.SignalingState"/> is set to <c>closed</c>, an <c>InvalidStateError</c> is raised.<br/>If the <see cref="RTCPeerConnection.SignalingState"/> is set to <c>stable</c>, the event <see cref="RTCPeerConnectionnegotiationneeded"/> is sent on the <see cref="RTCPeerConnection"/> to indicate that {{Glossary("ICE")}} negotiation must be repeated to consider the new stream.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/addStream"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None.</returns>
+</RTCPeerConnectionAddStream>
+<RTCPeerConnectionPeerIdentity>
+<summary>
+The <strong><c>peerIdentity</c></strong> read-only property of the <see cref="RTCPeerConnection"/> interface returns a JavaScript {{jsxref("Promise")}} that resolves to an <see cref="RTCIdentityAssertion"/> which contains a string identifying the remote peer.<br/>Once this promise resolves successfully, the resulting identity is the <strong>target peer identity</strong> and cannot change for the duration of the connection.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/peerIdentity"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A JavaScript {{jsxref("Promise")}} which resolves to an <see cref="RTCIdentityAssertion"/> that describes the remote peer's identity.If an error occurs while attempting to validate an incoming identity assertion (that is, the information describing a peer&amp;apos;s identity), the promise is rejected.<br/>If there isn&amp;apos;t already a target peer identity, <c>peerIdentity</c> is set to a newly created promise and the process begins again, until the process succeeds or no further attempts to authenticate occur.<blockquote class="NOTE"><h5>NOTE</h5>The promise returned by <see cref="RTCPeerConnection.SetRemoteDescription"/> cannot resolve until any target peer identity that's been set is validated.<br/>If the identity hasn&amp;apos;t been validated yet, the promise returned by <c>setRemoteDescription()</c> will be rejected.<br/>If there&amp;apos;s no target peer identity, <c>setRemoteDescription()</c> doesn&amp;apos;t need to wait for validation to occur before it resolves.</blockquote></value>
+</RTCPeerConnectionPeerIdentity>
+<RTCPeerConnectionRemovestream>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The obsolete <strong><c>removestream</c></strong> event was sent to an <see cref="RTCPeerConnection"/> to inform it that a <see cref="MediaStream"/> had been removed from the connection.<br/>You can use the <c>RTCPeerConnection</c> interface&amp;apos;s <c>onremovestream</c> property to set a handler for this event.
+</summary>
+<remarks>
+<para>This is the counterpart to the <see cref="RTCPeerConnection.Addstream"/> event, which is also obsolete.</para><blockquote class="WARNING"><h5>WARNING</h5><para>This event has been removed from the WebRTC specification in favor of the existing <see cref="MediaStreamremovetrack"/> event on the remote <see cref="MediaStream"/> and the corresponding event handler property of the remote <see cref="MediaStream"/>. The <see cref="RTCPeerConnection"/> API is now track-based, so having zero tracks in the remote stream is equivalent to the remote stream being removed, which caused a <c>removestream</c> event.</para></blockquote><para>This event is not cancelable and does not bubble.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see cref="RTCPeerConnection.RemoveStream"/><br/>-<see cref="MediaStream.Removetrack"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/removestream"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RTCPeerConnectionRemovestream>
+<RTCPeerConnectionNegotiationneeded>
+<summary>
+A <strong><c>negotiationneeded</c></strong> event is sent to the <see cref="RTCPeerConnection"/> when negotiation of the connection through the signaling channel is required.<br/>This occurs both during the initial setup of the connection as well as any time a change to the communication environment requires reconfiguring the connection.
+</summary>
+<remarks>
+<para>The <c>negotiationneeded</c> event is first dispatched to the <see cref="RTCPeerConnection"/> when media is first added to the connection. This starts the process of {{Glossary("ICE")}} negotiation by instructing your code to begin exchanging ICE candidates through the signaling server. See <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling#signaling_transaction_flow">Signaling transaction flow</see> for a description of the signaling process that begins with a <c>negotiationneeded</c> event.</para><para>This event is not cancelable and does not bubble.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling">Signaling and video calling</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Session_lifetime">Lifetime of a WebRTC session</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Connectivity">WebRTC connectivity</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Protocols">Introduction to WebRTC protocols</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/negotiationneeded"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RTCPeerConnectionNegotiationneeded>
+<RTCPeerConnectionIcecandidate>
+<summary>
+An <strong><c>icecandidate</c></strong> event is sent to an <see cref="RTCPeerConnection"/> when:
+</summary>
+<remarks>
+<para>In the first two cases, the event handler should transmit the candidate to the remote peer over the signaling channel so the remote peer can add it to its set of remote candidates.</para><para>This event is not cancelable and does not bubble.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling">Signaling and video calling</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/icecandidate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RTCPeerConnectionIcecandidate>
+<RTCPeerConnectionClose>
+<summary>
+The <strong><c>close()</c></strong> method of the <see cref="RTCPeerConnection"/> interface closes the current peer connection.
+</summary>
+<remarks>
+<para>Calling this method terminates the <c>RTCPeerConnection</c>&amp;apos;s ICE agent, ending any ongoing ICE processing and any active streams.<br/>This also releases any resources in use by the ICE agent, including TURN permissions.<br/>All <see cref="RTCRtpSender"/> objects are considered to be stopped once this returns (they may still be in the process of stopping, but for all intents and purposes, they're stopped).</para><para>Once this method returns, the signaling state as returned by <see cref="RTCPeerConnection.SignalingState"/> is <c>closed</c>.</para><para>Make sure that you <c>delete</c> all references to the previous <see cref="RTCPeerConnection"/> before attempting to create a new one that connects to the same remote peer, as not doing so might result in some errors depending on the browser.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/>-<see cref="RTCPeerConnection"/><br/>-<see cref="RTCPeerConnection.SignalingState"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/close"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<c>undefined</c>).</returns>
+</RTCPeerConnectionClose>
+<RTCPeerConnectionRemoveTrack>
+<summary>
+The <strong><c>removeTrack()</c></strong> method of the <see cref="RTCPeerConnection"/> interface tells the local end of the connection to stop sending media from the specified track, without actually removing the corresponding <see cref="RTCRtpSender"/> from the list of senders as reported by <see cref="RTCPeerConnection.GetSenders"/>.<br/>If the track is already stopped, or is not in the connection&amp;apos;s senders list, this method has no effect.
+</summary>
+<remarks>
+<para>If the connection has already been negotiated (<see cref="RTCPeerConnection.SignalingState"/> is set to <c>&amp;quot;stable&amp;quot;</c>), it is marked as needing to be negotiated again; the remote peer won&amp;apos;t experience the change until this negotiation occurs.<br/>A <see cref="RTCPeerConnectionnegotiationneeded"/> event is sent to the <see cref="RTCPeerConnection"/> to let the local end know this negotiation must occur.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/removeTrack"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns><c>undefined</c>.</returns>
+</RTCPeerConnectionRemoveTrack>
+<RTCPeerConnectionIcecandidateerror>
+<summary>
+The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see> event <strong><c>icecandidateerror</c></strong> is sent to an <see cref="RTCPeerConnection"/> if an error occurs while performing ICE negotiations through a {{Glossary("STUN")}} or {{Glossary("TURN")}} server. The event object is of type <see cref="RTCPeerConnectionIceErrorEvent"/>, and contains information describing the error in some amount of detail.
+</summary>
+<remarks>
+<para>This event is not cancelable and does not bubble.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/icecandidateerror"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RTCPeerConnectionIcecandidateerror>
+<RTCPeerConnectionDatachannel>
+<summary>
+A <strong><c>datachannel</c></strong> event is sent to an <see cref="RTCPeerConnection"/> instance when an <see cref="RTCDataChannel"/> has been added to the connection, as a result of the remote peer calling <see cref="RTCPeerConnection.CreateDataChannel"/>.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This event is <strong>not</strong> dispatched when the local end of the connection creates the channel.</para></blockquote><para>This event is not cancelable and does not bubble.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_data_channels">Using WebRTC data channels</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample">A simple RTCDataChannel sample</see><br/>-<see cref="RTCDataChannelEvent"/><br/>-<see cref="RTCPeerConnection.CreateDataChannel"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/datachannel"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RTCPeerConnectionDatachannel>
+<RTCPeerConnectionCurrentRemoteDescription>
+<summary>
+The <strong><c>currentRemoteDescription</c></strong> read-only property of the <see cref="RTCPeerConnection"/> interface returns an<br/><see cref="RTCSessionDescription"/> object describing the remote end of the connection as it was most recently successfully negotiated since the last time the <see cref="RTCPeerConnection"/> finished negotiating and connecting to a remote peer.<br/>Also included is a list of any ICE candidates that may already have been generated by the ICE agent since the offer or answer represented by the description was first instantiated.
+</summary>
+<remarks>
+<para>To change the <c>currentRemoteDescription</c>, call <see cref="RTCPeerConnection.SetRemoteDescription"/>, which triggers a series of events which leads to this value being set.<br/>For details on what exactly happens and why the change isn&amp;apos;t necessarily instantaneous, see <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Connectivity#pending_and_current_descriptions">Pending and current descriptions</see> in the WebRTC Connectivity page.</para><blockquote class="NOTE"><h5>NOTE</h5><para>Unlike <see cref="RTCPeerConnection.RemoteDescription"/>, this value represents the actual current state of the local end of the connection;<br/><c>remoteDescription</c> may specify a description which the connection is currently in the process of switching over to.</para></blockquote>
+<para>-<see cref="RTCPeerConnection.SetRemoteDescription"/>, <see cref="RTCPeerConnection.PendingRemoteDescription"/>, <see cref="RTCPeerConnection.RemoteDescription"/><br/>-<see cref="RTCPeerConnection.SetRemoteDescription"/>, <see cref="RTCPeerConnection.RemoteDescription"/>, <see cref="RTCPeerConnection.PendingRemoteDescription"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/currentRemoteDescription"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The current description of the remote end of the connection, if one has been set.<br/>If none has been successfully set, this value is <c>null</c>.</value>
+</RTCPeerConnectionCurrentRemoteDescription>
+<RTCPeerConnectionLocalDescription>
+<summary>
+The <strong><c>localDescription</c></strong> read-only property of the <see cref="RTCPeerConnection"/> interface returns an <see cref="RTCSessionDescription"/> describing the session for the local end of the connection.<br/>If it has not yet been set, this is <c>null</c>.
+</summary>
+<remarks>
+<para>-<see cref="RTCPeerConnection.SetLocalDescription"/>, <see cref="RTCPeerConnection.PendingLocalDescription"/>, <see cref="RTCPeerConnection.CurrentLocalDescription"/><br/>-<see cref="RTCPeerConnection.SetRemoteDescription"/>, <see cref="RTCPeerConnection.RemoteDescription"/>, <see cref="RTCPeerConnection.PendingRemoteDescription"/>, <see cref="RTCPeerConnection.CurrentRemoteDescription"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/localDescription"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>On a more fundamental level, the returned value is the value of <see cref="RTCPeerConnection.PendingLocalDescription"/> if that property isn't <c>null</c>;<br/>otherwise, the value of <see cref="RTCPeerConnection.CurrentLocalDescription"/> is returned.<br/>See <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Connectivity#pending_and_current_descriptions">Pending and current descriptions</see> in the WebRTC Connectivity page for details on this algorithm and why it&amp;apos;s used.</value>
+</RTCPeerConnectionLocalDescription>
+<RTCPeerConnectionSctp>
+<summary>
+The <strong><c>sctp</c></strong> read-only property of the <see cref="RTCPeerConnection"/> interface returns an <see cref="RTCSctpTransport"/> describing the {{Glossary("SCTP")}} transport over which SCTP data is being sent and received.<br/>If SCTP hasn&amp;apos;t been negotiated, this value is <c>null</c>.
+</summary>
+<remarks>
+<para>The SCTP transport is used for transmitting and receiving data for any and all <see cref="RTCDataChannel"/>s on the peer connection.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/>-<see cref="RTCPeerConnection"/><br/>-<see cref="RTCDataChannel"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Glossary/SCTP">SCTP</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/sctp"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="RTCSctpTransport"/> object describing the SCTP transport being used by the <see cref="RTCPeerConnection"/> for transmitting and receiving on its data channels, or <c>null</c> if SCTP negotiation hasn&amp;apos;t happened.</value>
+</RTCPeerConnectionSctp>
+</docs>

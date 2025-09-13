@@ -1,0 +1,31 @@
+<docs>
+<PerformanceLongTaskTiming>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>PerformanceLongTaskTiming</c></strong> interface provides information about tasks that occupy the UI thread for 50 milliseconds or more.
+</summary>
+<remarks>
+<para>-<see cref="TaskAttributionTiming"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceLongTaskTiming"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</PerformanceLongTaskTiming>
+<PerformanceLongTaskTimingAttribution>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>attribution</c></strong> read-only property of the <see cref="PerformanceLongTaskTiming"/> interface returns an array of <see cref="'TaskAttributionTiming'"/> objects.
+</summary>
+<remarks>
+<para>-<see cref="'TaskAttributionTiming'"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceLongTaskTiming/attribution"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An {{jsxref("Array")}} of <see cref="'TaskAttributionTiming'"/> objects.</value>
+</PerformanceLongTaskTimingAttribution>
+<PerformanceLongTaskTimingToJSON>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>toJSON()</c></strong> method of the <see cref="PerformanceLongTaskTiming"/> interface is a {{Glossary("Serialization","serializer")}}; it returns a JSON representation of the <see cref="PerformanceLongTaskTiming"/> object.
+</summary>
+<remarks>
+<para>-<see cref="JSON"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceLongTaskTiming/toJSON"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("JSON")}} object that is the serialization of the <see cref="PerformanceLongTaskTiming"/> object.</returns>
+</PerformanceLongTaskTimingToJSON>
+</docs>

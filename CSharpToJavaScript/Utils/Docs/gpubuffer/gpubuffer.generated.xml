@@ -1,0 +1,98 @@
+<docs>
+<GPUBuffer>
+<summary>
+The <strong><c>GPUBuffer</c></strong> interface of the {{domxref(&amp;quot;WebGPU API&amp;quot;, &amp;quot;WebGPU API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} represents a block of memory that can be used to store raw data to use in GPU operations.
+</summary>
+<remarks>
+<para>A <c>GPUBuffer</c> object instance is created using the <see cref="GPUDevice.CreateBuffer"/> method.</para><para></para>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUBuffer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</GPUBuffer>
+<GPUBufferUsage>
+<summary>
+The <strong><c>usage</c></strong> read-only property of the<br/><see cref="GPUBuffer"/> interface contains the {{glossary("bitwise flags")}} representing the allowed usages of the <c>GPUBuffer</c>.
+</summary>
+<remarks>
+<para><c>usage</c> is set via the <c>usage</c> property in the descriptor object passed into the originating <see cref="GPUDevice.CreateBuffer"/> call.</para>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUBuffer/usage"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The bitwise flags representing the original usages set when the <c>GPUBuffer</c> was first created. The returned number is the sum of decimal values representing the different flags, as seen in the table below.<table><tr><td>Bitwise flag</td><td>Usage description</td><td>Hex equiv.</td><td>Decimal equiv.</td></tr><tr><td><c>GPUBufferUsage.COPY_SRC</c></td><td>The buffer can be used as the source of a copy operation, for example the source argument of a <see cref="GPUCommandEncoder.CopyBufferToBuffer"/> call.</td><td>0x0004</td><td>4</td></tr><tr><td><c>GPUBufferUsage.COPY_DST</c></td><td>The buffer can be used as the destination of a copy/write operation, for example the destination argument of a <see cref="GPUCommandEncoder.CopyTextureToBuffer"/> call.</td><td>0x0008</td><td>8</td></tr><tr><td><c>GPUBufferUsage.INDEX</c></td><td>The buffer can be used as an index buffer, for example as the <c>buffer</c> argument passed to <see cref="GPURenderPassEncoder.SetIndexBuffer"/>.</td><td>0x0010</td><td>16</td></tr><tr><td><c>GPUBufferUsage.INDIRECT</c></td><td>The buffer can be used to store indirect command arguments, for example as the <c>indirectBuffer</c> argument of a <see cref="GPURenderPassEncoder.DrawIndirect"/> or <see cref="GPUComputePassEncoder.DispatchWorkgroupsIndirect"/> call.</td><td>0x0100</td><td>256</td></tr><tr><td><c>GPUBufferUsage.MAP_READ</c></td><td>The buffer can be mapped for reading, for example when calling <see cref="GPUBuffer.MapAsync"/> with a <c>mode</c> of <c>GPUMapMode.READ</c>. This flag may only be combined with <c>GPUBufferUsage.COPY_DST</c>.</td><td>0x0001</td><td>1</td></tr><tr><td><c>GPUBufferUsage.MAP_WRITE</c></td><td>The buffer can be mapped for writing, for example when calling <see cref="GPUBuffer.MapAsync"/> with a <c>mode</c> of <c>GPUMapMode.WRITE</c>. This flag may only be combined with <c>GPUBufferUsage.COPY_SRC</c>.</td><td>0x0002</td><td>2</td></tr><tr><td><c>GPUBufferUsage.QUERY_RESOLVE</c></td><td>The buffer can be used to capture query results, for example as the destination argument of a <see cref="GPUCommandEncoder.ResolveQuerySet"/> call.</td><td>0x0200</td><td>512</td></tr><tr><td><c>GPUBufferUsage.STORAGE</c></td><td>The buffer can be used as a storage buffer, for example as a resource in a bind group entry when creating a <see cref="GPUBindGroup"/> (via <see cref="GPUDevice.CreateBindGroup"/>), which adheres to a <see cref="GPUBindGroupLayout"/> entry with a buffer binding layout <c>type</c> of <c>&amp;quot;storage&amp;quot;</c> or <c>&amp;quot;read-only-storage&amp;quot;</c>.</td><td>0x0080</td><td>128</td></tr><tr><td><c>GPUBufferUsage.UNIFORM</c></td><td>The buffer can be used as a uniform buffer, for example as a resource in a bind group entry when creating a <see cref="GPUBindGroup"/> (via <see cref="GPUDevice.CreateBindGroup"/>), which adheres to a <see cref="GPUBindGroupLayout"/> entry with a buffer binding layout <c>type</c> of <c>&amp;quot;uniform&amp;quot;</c>.</td><td>0x0040</td><td>64</td></tr><tr><td><c>GPUBufferUsage.VERTEX</c></td><td>The buffer can be used as a vertex buffer, for example as the <c>buffer</c> argument passed to <see cref="GPURenderPassEncoder.SetVertexBuffer"/>.</td><td>0x0020</td><td>32</td></tr></table></value>
+</GPUBufferUsage>
+<GPUBufferLabel>
+<summary>
+The <strong><c>label</c></strong> property of the<br/><see cref="GPUBuffer"/> interface provides a label that can be used to identify the object, for example in <see cref="GPUError"/> messages or console warnings.
+</summary>
+<remarks>
+<para>This can be set by providing a <c>label</c> property in the descriptor object passed into the originating <see cref="GPUDevice.CreateBuffer"/> call, or you can get and set it directly on the <c>GPUBuffer</c> object.</para>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUBuffer/label"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string. If this has not been previously set as described above, it will be an empty string.</value>
+</GPUBufferLabel>
+<GPUBufferMapState>
+<summary>
+The <strong><c>mapState</c></strong> read-only property of the<br/><see cref="GPUBuffer"/> interface represents the mapped state of the <c>GPUBuffer</c>.
+</summary>
+<remarks>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUBuffer/mapState"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An enumerated value. Possible values are:</value>
+</GPUBufferMapState>
+<GPUBufferSize>
+<summary>
+The <strong><c>size</c></strong> read-only property of the<br/><see cref="GPUBuffer"/> interface represents the length of the <c>GPUBuffer</c>&amp;apos;s memory allocation, in bytes.
+</summary>
+<remarks>
+<para><c>size</c> is set via the <c>size</c> property in the descriptor object passed into the originating <see cref="GPUDevice.CreateBuffer"/> call.</para>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUBuffer/size"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</GPUBufferSize>
+<GPUBufferMapAsync>
+<summary>
+The <strong><c>mapAsync()</c></strong> method of the<br/><see cref="GPUBuffer"/> interface maps the specified range of the <c>GPUBuffer</c>. It returns a <see cref="Promise"/> that resolves when the <c>GPUBuffer</c>&amp;apos;s content is ready to be accessed. While the <c>GPUBuffer</c> is mapped it cannot be used in any GPU commands.
+</summary>
+<remarks>
+<para>Once the buffer is successfully mapped (which can be checked via <see cref="GPUBuffer.MapState"/>), calls to <see cref="GPUBuffer.GetMappedRange"/> will return an {{jsxref("ArrayBuffer")}} containing the <c>GPUBuffer</c>&amp;apos;s current values, to be read and updated by JavaScript as required.</para><para>When you have finished working with the <c>GPUBuffer</c> values, call <see cref="GPUBuffer.Unmap"/> to unmap it, making it accessible to the GPU again.</para>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUBuffer/mapAsync"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves to <see cref="Undefined"/> when the <c>GPUBuffer</c>&amp;apos;s content is ready to be accessed.</returns>
+</GPUBufferMapAsync>
+<GPUBufferDestroy>
+<summary>
+The <strong><c>destroy()</c></strong> method of the<br/><see cref="GPUBuffer"/> interface destroys the <c>GPUBuffer</c>.
+</summary>
+<remarks>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUBuffer/destroy"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</GPUBufferDestroy>
+<GPUBufferGetMappedRange>
+<summary>
+The <strong><c>getMappedRange()</c></strong> method of the<br/><see cref="GPUBuffer"/> interface returns an {{jsxref("ArrayBuffer")}} containing the mapped contents of the <c>GPUBuffer</c> in the specified range.
+</summary>
+<remarks>
+<para>This can only happen once the <c>GPUBuffer</c> has been successfully mapped with <see cref="GPUBuffer.MapAsync"/> (this can be checked via <see cref="GPUBuffer.MapState"/>). While the <c>GPUBuffer</c> is mapped it cannot be used in any GPU commands.</para><para>When you have finished working with the <c>GPUBuffer</c> values, call <see cref="GPUBuffer.Unmap"/> to unmap it, making it accessible to the GPU again. A <c>TypeError</c> is thrown if an attempt is made to detach the {{jsxref("ArrayBuffer")}} in any way other than via <see cref="GPUBuffer.Unmap"/>, such as by calling {{jsxref("ArrayBuffer/transfer", "transfer()")}}.</para>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUBuffer/getMappedRange"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="ArrayBuffer"/>.</returns>
+</GPUBufferGetMappedRange>
+<GPUBufferUnmap>
+<summary>
+The <strong><c>unmap()</c></strong> method of the<br/><see cref="GPUBuffer"/> interface unmaps the mapped range of the <c>GPUBuffer</c>, making its contents available for use by the GPU again after it has previously been mapped with <see cref="GPUBuffer.MapAsync"/> (the GPU cannot access a mapped <c>GPUBuffer</c>).
+</summary>
+<remarks>
+<para>When <c>unmap()</c> is called, any {{jsxref("ArrayBuffer")}}s created via <see cref="GPUBuffer.GetMappedRange"/> are detached.</para>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUBuffer/unmap"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</GPUBufferUnmap>
+</docs>

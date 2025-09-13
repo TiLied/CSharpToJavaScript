@@ -1,0 +1,68 @@
+<docs>
+<VideoTrack>
+<summary>
+The <strong><c>VideoTrack</c></strong> interface represents a single video track from a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">video</see> element.
+</summary>
+<remarks>
+<para>The most common use for accessing a <c>VideoTrack</c> object is to toggle its <see cref="VideoTrack.Selected"/> property in order to make it the active video track for its {{HTMLElement("video")}} element.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoTrack"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</VideoTrack>
+<VideoTrackLabel>
+<summary>
+The read-only <strong><see cref="VideoTrack"/></strong><br/>property <strong><c>label</c></strong> returns a string specifying the video<br/>track&amp;apos;s human-readable label, if one is available; otherwise, it returns an empty<br/>string.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoTrack/label"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string specifying the track&amp;apos;s human-readable label, if one is<br/>available in the track metadata. Otherwise, an empty string (<c>&amp;quot;&amp;quot;</c>) is<br/>returned.For example, a track whose <see cref="VideoTrack.Kind"/> is<br/><c>&amp;quot;sign&amp;quot;</c> might have a <c>label</c> such as<br/><c>&amp;quot;A sign-language interpretation.&amp;quot;</c>.</value>
+</VideoTrackLabel>
+<VideoTrackSelected>
+<summary>
+The <strong><see cref="VideoTrack"/></strong> property<br/><strong><c>selected</c></strong> controls whether or not a particular video<br/>track is active.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoTrack/selected"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <c>selected</c> property is a Boolean whose value is <c>true</c> if the<br/>track is active. Only a single video track can be active at any given time, so setting<br/>this property to <c>true</c> for one track while another track is active will make<br/>that other track inactive.</value>
+</VideoTrackSelected>
+<VideoTrackSourceBuffer>
+<summary>
+The read-only <strong><see cref="VideoTrack"/></strong><br/>property <strong><c>sourceBuffer</c></strong> returns the<br/><see cref="SourceBuffer"/> that created the track, or null if the track was not<br/>created by a <see cref="SourceBuffer"/> or the <see cref="SourceBuffer"/> has been<br/>removed from the <see cref="MediaSource.SourceBuffers"/> attribute of its parent<br/>media source.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoTrack/sourceBuffer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="SourceBuffer"/> or null.</value>
+</VideoTrackSourceBuffer>
+<VideoTrackKind>
+<summary>
+The <strong><c>kind</c></strong> property contains a<br/>string indicating the category of video contained in the<br/><strong><see cref="VideoTrack"/></strong>.
+</summary>
+<remarks>
+<para>The <c>kind</c> can be used<br/>to determine the scenarios in which specific tracks should be enabled or disabled. See<br/><see href="https://developer.mozilla.org#video_track_kind_strings">Video track kind strings</see> for a list of the kinds available for video tracks.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoTrack/kind"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string specifying the type of content the media represents. The<br/>string is one of those found in <see href="https://developer.mozilla.org#video_track_kind_strings">Video track kind strings</see> below.</value>
+</VideoTrackKind>
+<VideoTrackLanguage>
+<summary>
+The read-only <strong><see cref="VideoTrack"/></strong><br/>property <strong><c>language</c></strong> returns a string identifying the<br/>language used in the video track.
+</summary>
+<remarks>
+<para>For tracks that include multiple languages<br/>(such as a movie in English in which a few lines are spoken in other languages), this<br/>should be the video&amp;apos;s primary language.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoTrack/language"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string specifying the BCP 47 ({{RFC(5646)}}) format language tag of<br/>the primary language used in the video track, or an empty string (<c>&amp;quot;&amp;quot;</c>) if<br/>the language is not specified or known, or if the track doesn&amp;apos;t contain speech.For example, if the primary language used in the track is United States English, this<br/>value would be <c>&amp;quot;en-US&amp;quot;</c>. For Brazilian Portuguese, the value would be<br/><c>&amp;quot;pt-BR&amp;quot;</c>.</value>
+</VideoTrackLanguage>
+<VideoTrackId>
+<summary>
+The <strong><c>id</c></strong> property contains a<br/>string which uniquely identifies the track represented by the<br/><strong><see cref="VideoTrack"/></strong>.
+</summary>
+<remarks>
+<para>This ID can be used with the<br/><see cref="VideoTrackList.GetTrackById"/> method to locate a specific track within<br/>the media associated with a media element.</para><para>The track ID can also be used as the fragment of a URL that loads the specific track<br/>(if the media supports media fragments).</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoTrack/id"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string which identifies the track, suitable for use when calling<br/><see cref="VideoTrackList.GetTrackById"/> on an<br/><see cref="VideoTrackList"/> such as the one specified by a media element's<br/><see cref="HTMLMediaElement.VideoTracks"/> property.</value>
+</VideoTrackId>
+</docs>

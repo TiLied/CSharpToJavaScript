@@ -1,0 +1,52 @@
+<docs>
+<CSSFontPaletteValuesRule>
+<summary>
+The <strong><c>CSSFontPaletteValuesRule</c></strong> interface represents an <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-palette-values">@font-palette-values</see> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_syntax/At-rule">at-rule</see>.
+</summary>
+<remarks>
+<para></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-palette-values">@font-palette-values</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSFontPaletteValuesRule"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CSSFontPaletteValuesRule>
+<CSSFontPaletteValuesRuleBasePalette>
+<summary>
+The read-only <strong><c>basePalette</c></strong> property of the <see cref="CSSFontPaletteValuesRule"/> interface indicates the base palette associated with the rule.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-palette-values">@font-palette-values</see> at-rule<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-palette-values/base-palette">@font-palette-values/base-palette</see> descriptor<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSFontPaletteValuesRule/basePalette"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string that can be one of the following color values:</value>
+</CSSFontPaletteValuesRuleBasePalette>
+<CSSFontPaletteValuesRuleOverrideColors>
+<summary>
+The read-only <strong><c>overrideColors</c></strong> property of the <see cref="CSSFontPaletteValuesRule"/> interface is a string containing a list of color index and color pair that are to be used instead. It is specified in the same format as the corresponding {{cssxref("@font-palette-values/override-colors", "override-colors")}} descriptor.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-palette-values">@font-palette-values</see> at-rule<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-palette-values/override-colors">@font-palette-values/override-colors</see> descriptor<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSFontPaletteValuesRule/overrideColors"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing a comma-separated list of color index and color pair</value>
+</CSSFontPaletteValuesRuleOverrideColors>
+<CSSFontPaletteValuesRuleFontFamily>
+<summary>
+The read-only <strong><c>fontFamily</c></strong> property of the <see cref="CSSFontPaletteValuesRule"/> interface lists the font families the rule can be applied to. The font families must be <strong>named</strong> families; <strong>generic</strong> families like <c>courier</c> are not valid.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-palette-values">@font-palette-values</see> at-rule<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-palette-values/font-family">@font-palette-values/font-family</see> descriptor<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSFontPaletteValuesRule/fontFamily"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing a space-separated list of the font families on which the rule can be applied</value>
+</CSSFontPaletteValuesRuleFontFamily>
+<CSSFontPaletteValuesRuleName>
+<summary>
+The read-only <strong><c>name</c></strong> property of the <see cref="CSSFontPaletteValuesRule"/> interface represents the name identifying the associated {{CSSxRef("@font-palette-values")}} at-rule. A valid name always starts with two dashes, such as <c>--Alternate</c>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-palette-values">@font-palette-values</see> at-rule<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSFontPaletteValuesRule/name"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string beginning with two dashes.</value>
+</CSSFontPaletteValuesRuleName>
+</docs>

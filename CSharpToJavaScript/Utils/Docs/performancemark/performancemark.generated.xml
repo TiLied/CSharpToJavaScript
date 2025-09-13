@@ -1,0 +1,32 @@
+<docs>
+<PerformanceMark>
+<summary>
+<strong><c>PerformanceMark</c></strong> is an interface for <see cref="PerformanceEntry"/> objects with an <see cref="PerformanceEntry.EntryType"/> of <c>&amp;quot;mark&amp;quot;</c>.
+</summary>
+<remarks>
+<para>Entries of this type are typically created by calling <see cref="Performance.Mark"/> to add a <strong>named</strong> <see cref="DOMHighResTimeStamp"/> (the <strong>mark</strong>) to the browser&amp;apos;s performance timeline. To create a performance mark that isn&amp;apos;t added to the browser&amp;apos;s performance timeline, use the constructor.</para><para></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Performance_API/User_timing">User Timing (Overview)</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Performance_API/User_timing">Using the User Timing API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceMark"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</PerformanceMark>
+<PerformanceMarkPerformanceMark>
+<summary>
+The <strong><c>PerformanceMark()</c></strong> constructor creates a <see cref="DOMHighResTimeStamp"/> with the given name.
+</summary>
+<remarks>
+<para>Unlike <see cref="Performance.Mark"/>, performance marks created by the constructor aren't added to the browser's performance timeline. This means that calls to the <see cref="Performance"/> interface's <c>getEntries*()</c> methods (<see cref="Performance.GetEntries"/>, <see cref="Performance.GetEntriesByName"/> or <see cref="Performance.GetEntriesByType"/>) won't show entries for these marks.</para>
+<para>-<see cref="Performance.Mark"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceMark/PerformanceMark"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="PerformanceMark"/> object.</returns>
+</PerformanceMarkPerformanceMark>
+<PerformanceMarkDetail>
+<summary>
+The read-only <strong><c>detail</c></strong> property returns arbitrary metadata that was included in the mark upon construction (either when using <see cref="Performance.Mark"/> or the <see cref="PerformanceMark.PerformanceMark"/> constructor).
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceMark/detail"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>Returns the value it is set to (from <c>markOptions</c> of <see cref="Performance.Mark"/> or the <see cref="PerformanceMark.PerformanceMark"/> constructor).</value>
+</PerformanceMarkDetail>
+</docs>

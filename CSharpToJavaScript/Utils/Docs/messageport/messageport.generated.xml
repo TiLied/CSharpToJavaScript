@@ -1,0 +1,62 @@
+<docs>
+<MessagePort>
+<summary>
+The <strong><c>MessagePort</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Channel_Messaging_API">Channel Messaging API</see> represents one of the two ports of a <see cref="MessageChannel"/>, allowing messages to be sent from one port and listening out for them arriving at the other.
+</summary>
+<remarks>
+<para><c>MessagePort</c> is a <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Transferable_objects">transferable object</see>.</para><para></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging">Using channel messaging</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MessagePort"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</MessagePort>
+<MessagePortStart>
+<summary>
+The <strong><c>start()</c></strong> method of the <see cref="MessagePort"/><br/>interface starts the sending of messages queued on the port. This method is only needed<br/>when using <see cref="EventTarget.AddEventListener"/>; it is implied when using<br/><see cref="MessagePort.Message"/>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging">Using channel messaging</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/start"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</MessagePortStart>
+<MessagePortMessageerror>
+<summary>
+The <strong><c>messageerror</c></strong> event is fired on a <see cref="'MessagePort'"/> object when it receives a message that can't be deserialized.
+</summary>
+<remarks>
+<para>This event is not cancellable and does not bubble.</para>
+<para>-Related events: <see href="https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/message_event"><c>message</c></see>.<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging">Using channel messaging</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/messageerror"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</MessagePortMessageerror>
+<MessagePortClose>
+<summary>
+The <strong><c>close()</c></strong> method of the <see cref="MessagePort"/><br/>interface disconnects the port, so it is no longer active. This stops the flow of<br/>messages to that port.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging">Using channel messaging</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/close"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</MessagePortClose>
+<MessagePortPostMessage>
+<summary>
+The <strong><c>postMessage()</c></strong> method of the<br/><see cref="MessagePort"/> interface sends a message from the port, and optionally,<br/>transfers ownership of objects to other browsing contexts.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging">Using channel messaging</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/postMessage"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</MessagePortPostMessage>
+<MessagePortMessage>
+<summary>
+The <strong><c>message</c></strong> event is fired on a <see cref="'MessagePort'"/> object when a message arrives on that channel.
+</summary>
+<remarks>
+<para>This event is not cancellable and does not bubble.</para>
+<para>-Related events: <see href="https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/messageerror_event"><c>messageerror</c></see>.<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging">Using channel messaging</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/message"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</MessagePortMessage>
+</docs>

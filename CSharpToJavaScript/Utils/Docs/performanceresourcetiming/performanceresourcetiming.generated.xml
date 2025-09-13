@@ -1,0 +1,271 @@
+<docs>
+<PerformanceResourceTiming>
+<summary>
+The <strong><c>PerformanceResourceTiming</c></strong> interface enables retrieval and analysis of detailed network timing data regarding the loading of an application's resources. An application can use the timing metrics to determine, for example, the length of time it takes to fetch a specific resource, such as an <see cref="XMLHttpRequest"/>, {{SVGElement("SVG","SVG element")}}, image, or script.
+</summary>
+<remarks>
+<para></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Performance_API/Resource_timing">Resource timing (Overview)</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</PerformanceResourceTiming>
+<PerformanceResourceTimingRenderBlockingStatus>
+<summary>
+The <strong><c>renderBlockingStatus</c></strong> read-only property returns the render-blocking status of the resource.
+</summary>
+<remarks>
+<para>It is useful to determine resources that:</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming/renderBlockingStatus"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <c>renderBlockingStatus</c> property can have the following values:</value>
+</PerformanceResourceTimingRenderBlockingStatus>
+<PerformanceResourceTimingContentType>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>contentType</c></strong> read-only property of the <see cref="PerformanceResourceTiming"/> interface is a string indicating the content type of the fetched resource, formatted as a {{glossary("MIME type")}} and subtype separated by a forward slash.
+</summary>
+<remarks>
+<para>The content type is a minimized and "standardized" version of the MIME type that is extracted from the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type">Content-Type</see> HTTP header sent in the resource's fetch response.<br/>For JavaScript, JSON, SVG, and XML, the MIME type is replaced by a representative MIME type/subtype string.<br/>Other types supported by the browser are represented by the MIME type/subtype string in the header (other information in the header is discarded).</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming/contentType"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string indicating the MIME type &amp;quot;essence&amp;quot; of the content.<br/>This may be one of the following values:</value>
+</PerformanceResourceTimingContentType>
+<PerformanceResourceTimingDeliveryType>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>deliveryType</c></strong> read-only property is a string indicating how the resource was delivered — for example from the cache or from a navigational prefetch.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming/deliveryType"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string, which can be one of the following values:</value>
+</PerformanceResourceTimingDeliveryType>
+<PerformanceResourceTimingRequestStart>
+<summary>
+The <strong><c>requestStart</c></strong> read-only property returns a <see cref="DOMHighResTimeStamp"/> of the time immediately before the browser starts requesting the resource from the server, cache, or local resource. If the transport connection fails and the browser retires the request, the value returned will be the start of the retry request.
+</summary>
+<remarks>
+<para>There is no <strong>end</strong> property for <c>requestStart</c>. To measure the request time, calculate <see cref="PerformanceResourceTiming.ResponseStart"/> - <c>requestStart</c> (see the example below).</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Timing-Allow-Origin">Timing-Allow-Origin</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming/requestStart"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <c>requestStart</c> property can have the following values:When the <see cref="PerformanceResourceTiming.FirstInterimResponseStart"/> is non-zero, that indicates it should be the same value as <c>requestStart</c> for <see href="https://developer.mozilla.org#browser_compatibility">supporting browsers</see>.When there are no interim responses, <c>requestStart</c> is the same as <c>finalResponseHeadersStart</c> and <c>firstInterimResponseStart</c> is 0.</value>
+</PerformanceResourceTimingRequestStart>
+<PerformanceResourceTimingResponseEnd>
+<summary>
+The <strong><c>responseEnd</c></strong> read-only property returns a <see cref="DOMHighResTimeStamp"/> immediately after the browser receives the last byte of the resource or immediately before the transport connection is closed, whichever comes first.
+</summary>
+<remarks>
+<para>Unlike many other <c>PerformanceResourceTiming</c> properties, the <c>responseEnd</c> property is available for cross-origin requests without the need of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Timing-Allow-Origin">Timing-Allow-Origin</see> HTTP response header.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming/responseEnd"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DOMHighResTimeStamp"/> immediately after the browser receives the last<br/>byte of the resource or immediately before the transport connection is closed, whichever<br/>comes first.</value>
+</PerformanceResourceTimingResponseEnd>
+<PerformanceResourceTimingFirstInterimResponseStart>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>firstInterimResponseStart</c></strong> read-only property returns a <see cref="DOMHighResTimeStamp"/> immediately after the browser receives the first byte of the interim 1xx response (for example, 100 Continue or 103 Early Hints) from the server.
+</summary>
+<remarks>
+<para>There is no <strong>end</strong> property for <c>firstInterimResponseStart</c>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Timing-Allow-Origin">Timing-Allow-Origin</see><br/>-<see cref="PerformanceResourceTiming.FinalResponseHeadersStart"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming/firstInterimResponseStart"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <c>firstInterimResponseStart</c> property can have the following values:<blockquote class="NOTE"><h5>NOTE</h5>As Early Hints are typically only supported on the main navigation request, which is by definition same-origin, a <c>0</c> typically indicates Early Hints were <strong>not</strong> used.</blockquote>When the <c>firstInterimResponseStart</c> is non-zero, that indicates it should be the same value as <see cref="PerformanceResourceTiming.RequestStart"/> for <see href="https://developer.mozilla.org#browser_compatibility">supporting browsers</see>.</value>
+</PerformanceResourceTimingFirstInterimResponseStart>
+<PerformanceResourceTimingResponseStatus>
+<summary>
+The <strong><c>responseStatus</c></strong> read-only property represents the HTTP response status code returned when fetching the resource.
+</summary>
+<remarks>
+<para>This property maps to <see cref="Response.Status"/> from the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch API</see>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status">HTTP response status code</see><br/>-<see cref="Response.Status"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">CORS</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming/responseStatus"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <c>responseStatus</c> property can have the following values:</value>
+</PerformanceResourceTimingResponseStatus>
+<PerformanceResourceTimingDomainLookupStart>
+<summary>
+The <strong><c>domainLookupStart</c></strong> read-only property returns the <see cref="DOMHighResTimeStamp"/> immediately before the browser starts the domain name lookup for the resource.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Timing-Allow-Origin">Timing-Allow-Origin</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming/domainLookupStart"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <c>domainLookupStart</c> property can have the following values:</value>
+</PerformanceResourceTimingDomainLookupStart>
+<PerformanceResourceTimingSecureConnectionStart>
+<summary>
+The <strong><c>secureConnectionStart</c></strong> read-only property returns a <see cref="DOMHighResTimeStamp"/> immediately before the browser starts the handshake process to secure the current connection. If a secure connection is not used, the property returns zero.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Timing-Allow-Origin">Timing-Allow-Origin</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming/secureConnectionStart"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <c>secureConnectionStart</c> property can have the following values:</value>
+</PerformanceResourceTimingSecureConnectionStart>
+<PerformanceResourceTimingConnectEnd>
+<summary>
+The <strong><c>connectEnd</c></strong> read-only property returns the <see cref="DOMHighResTimeStamp"/> immediately after the browser finishes establishing the connection to the server to retrieve the resource. The timestamp value includes the time interval to establish the transport connection, as well as other time intervals such as TLS handshake and <see href="https://en.wikipedia.org/wiki/SOCKS">SOCKS</see> authentication.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Timing-Allow-Origin">Timing-Allow-Origin</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming/connectEnd"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <c>connectEnd</c> property can have the following values:</value>
+</PerformanceResourceTimingConnectEnd>
+<PerformanceResourceTimingDomainLookupEnd>
+<summary>
+The <strong><c>domainLookupEnd</c></strong> read-only property returns the <see cref="DOMHighResTimeStamp"/> immediately after the browser finishes the domain-name lookup for the resource.
+</summary>
+<remarks>
+<para>If the user agent has the domain information in cache, <see cref="PerformanceResourceTiming.DomainLookupStart"/> and <c>domainLookupEnd</c> represent the times when the user agent starts and ends the domain data retrieval from the cache.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Timing-Allow-Origin">Timing-Allow-Origin</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming/domainLookupEnd"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <c>domainLookupEnd</c> property can have the following values:</value>
+</PerformanceResourceTimingDomainLookupEnd>
+<PerformanceResourceTimingInitiatorType>
+<summary>
+The <strong><c>initiatorType</c></strong> read-only property is a string representing web platform feature that initiated the resource load.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This property does not represent the type of content fetched. A <c>.css</c> file can be fetched using a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link">link</see> element leading to an <c>initiatorType</c> of <c>link</c>. When loading images using <c>background: url()</c> in a CSS file, the <c>initiatorType</c> will be <c>css</c> and not <c>img</c>.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming/initiatorType"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <c>initiatorType</c> property can have the following values, or <c>other</c> if none of the conditions match.</value>
+</PerformanceResourceTimingInitiatorType>
+<PerformanceResourceTimingServerTiming>
+<summary>
+The <strong><c>serverTiming</c></strong> read-only property returns an array of <see cref="PerformanceServerTiming"/> entries containing server timing metrics.
+</summary>
+<remarks>
+<para>Server timing metrics require the server to send the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Server-Timing">Server-Timing</see> header. For example:</para><para>The <c>serverTiming</c> entries can live on <c>navigation</c> and <c>resource</c> entries.</para>
+<para>-<see cref="PerformanceServerTiming"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Server-Timing">Server-Timing</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming/serverTiming"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An array of <see cref="PerformanceServerTiming"/> entries.</value>
+</PerformanceResourceTimingServerTiming>
+<PerformanceResourceTimingResponseStart>
+<summary>
+The <strong><c>responseStart</c></strong> read-only property returns a <see cref="DOMHighResTimeStamp"/> immediately after the browser receives the first byte of the response from the server, cache, or local resource.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Timing-Allow-Origin">Timing-Allow-Origin</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming/responseStart"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <c>responseStart</c> property can have the following values:</value>
+</PerformanceResourceTimingResponseStart>
+<PerformanceResourceTimingFetchStart>
+<summary>
+The <strong><c>fetchStart</c></strong> read-only property represents a <see cref="DOMHighResTimeStamp"/> immediately before the browser starts to fetch the resource.
+</summary>
+<remarks>
+<para>If there are HTTP redirects, the property returns the time immediately before the user agent starts to fetch the final resource in the redirection.</para><para>Unlike many other <c>PerformanceResourceTiming</c> properties, the <c>fetchStart</c> property is available for cross-origin requests without the need of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Timing-Allow-Origin">Timing-Allow-Origin</see> HTTP response header.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming/fetchStart"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DOMHighResTimeStamp"/> immediately before the browser starts to fetch the<br/>resource.</value>
+</PerformanceResourceTimingFetchStart>
+<PerformanceResourceTimingEncodedBodySize>
+<summary>
+The <strong><c>encodedBodySize</c></strong> read-only property represents the size (in octets) received from the fetch (HTTP or cache) of the payload body before removing any applied content encodings (like gzip or Brotli). If the resource is retrieved from an application cache or a local resource, it must<br/>return the size of the payload body before removing any applied content encoding.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Timing-Allow-Origin">Timing-Allow-Origin</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming/encodedBodySize"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <c>encodedBodySize</c> property can have the following values:</value>
+</PerformanceResourceTimingEncodedBodySize>
+<PerformanceResourceTimingDecodedBodySize>
+<summary>
+The <strong><c>decodedBodySize</c></strong> read-only property returns the size (in octets) received from the fetch (HTTP or cache) of the message body after removing any applied content encoding (like gzip or Brotli). If the resource is retrieved from an application cache or local resources, it returns the size of the payload after removing any applied content encoding.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Timing-Allow-Origin">Timing-Allow-Origin</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming/decodedBodySize"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <c>decodedBodySize</c> property can have the following values:</value>
+</PerformanceResourceTimingDecodedBodySize>
+<PerformanceResourceTimingNextHopProtocol>
+<summary>
+The <strong><c>nextHopProtocol</c></strong> read-only property is a string representing the network protocol used to fetch the resource, as identified by the <see href="https://www.iana.org/assignments/tls-extensiontype-values/tls-extensiontype-values.xhtml#alpn-protocol-ids">ALPN Protocol ID (RFC7301)</see>.
+</summary>
+<remarks>
+<para>When a proxy is used, if a tunnel connection is established, this property returns the ALPN Protocol ID of the tunneled protocol. Otherwise, this property returns the ALPN Protocol ID of the first hop to the proxy.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Timing-Allow-Origin">Timing-Allow-Origin</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Glossary/HTTP 2">HTTP 2</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Glossary/HTTP 3">HTTP 3</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming/nextHopProtocol"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <c>nextHopProtocol</c> property can have the following values:</value>
+</PerformanceResourceTimingNextHopProtocol>
+<PerformanceResourceTimingTransferSize>
+<summary>
+The <strong><c>transferSize</c></strong> read-only property represents the size (in octets) of the fetched resource. The size includes the response header fields plus the response payload body (as defined by <see href="https://httpwg.org/specs/rfc7230.html#message.body">RFC7230</see>).
+</summary>
+<remarks>
+<para>If the resource is fetched from a local cache, or if it is a cross-origin resource, this property returns zero.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Timing-Allow-Origin">Timing-Allow-Origin</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming/transferSize"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <c>transferSize</c> property can have the following values:</value>
+</PerformanceResourceTimingTransferSize>
+<PerformanceResourceTimingRedirectEnd>
+<summary>
+The <strong><c>redirectEnd</c></strong> read-only property returns a <see cref="DOMHighResTimeStamp"/> immediately after receiving the last byte of the response of the last redirect.
+</summary>
+<remarks>
+<para>When fetching a resource, if there are multiple HTTP redirects, and any of the redirects have an origin that is different from the current document, and the timing allow check algorithm passes for each redirected resource, this property returns the time immediately after receiving the last byte of the response of the last redirect; otherwise, zero is returned.</para><para>To get the amount of redirects, see also <see cref="PerformanceNavigationTiming.RedirectCount"/>.</para>
+<para>-<see cref="PerformanceNavigationTiming.RedirectCount"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Timing-Allow-Origin">Timing-Allow-Origin</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming/redirectEnd"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <c>redirectEnd</c> property can have the following values:</value>
+</PerformanceResourceTimingRedirectEnd>
+<PerformanceResourceTimingWorkerStart>
+<summary>
+The <strong><c>workerStart</c></strong> read-only property of the <see cref="PerformanceResourceTiming"/> interface returns a<br/><see cref="DOMHighResTimeStamp"/> immediately before dispatching the <see cref="FetchEvent"/> if a Service Worker thread is already running, or immediately before starting the Service Worker thread if it is not already running. If the resource is not intercepted by a Service Worker the property will always return 0.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Timing-Allow-Origin">Timing-Allow-Origin</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming/workerStart"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <c>workerStart</c> property can have the following values:</value>
+</PerformanceResourceTimingWorkerStart>
+<PerformanceResourceTimingFinalResponseHeadersStart>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>finalResponseHeadersStart</c></strong> read-only property returns a <see cref="DOMHighResTimeStamp"/> immediately after the browser receives the first byte of the final document response (for example, 200 OK) from the server.
+</summary>
+<remarks>
+<para>This differs from <strong><see cref="PerformanceResourceTiming.RequestStart"/></strong> (which may also be represented as <strong><see cref="PerformanceResourceTiming.FirstInterimResponseStart"/></strong>), as this starts from the first bytes of any response including interim responses (for example, 103 Early Hints) with the final response coming potentially much later.</para><para>When there are no interim responses, <c>requestStart</c> is the same as <c>finalResponseHeadersStart</c> and <c>firstInterimResponseStart</c> is 0.</para><para>There is no <strong>end</strong> property for <c>finalResponseHeadersStart</c>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Timing-Allow-Origin">Timing-Allow-Origin</see><br/>-<see cref="PerformanceResourceTiming.FirstInterimResponseStart"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming/finalResponseHeadersStart"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <c>finalResponseHeadersStart</c> property can have the following values:</value>
+</PerformanceResourceTimingFinalResponseHeadersStart>
+<PerformanceResourceTimingConnectStart>
+<summary>
+The <strong><c>connectStart</c></strong> read-only property returns the <see cref="DOMHighResTimeStamp"/> immediately before the user agent starts establishing the connection to the server to retrieve the resource.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Timing-Allow-Origin">Timing-Allow-Origin</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming/connectStart"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <c>connectStart</c> property can have the following values:</value>
+</PerformanceResourceTimingConnectStart>
+<PerformanceResourceTimingRedirectStart>
+<summary>
+The <strong><c>redirectStart</c></strong> read-only property returns a <see cref="DOMHighResTimeStamp"/> representing the start time of the fetch which that initiates the redirect.
+</summary>
+<remarks>
+<para>If there are HTTP redirects when fetching the resource and if any of the redirects are not from the same origin as the current document, but the timing allow check algorithm passes for each redirected resource, this property returns the starting time of the fetch that initiates the redirect; otherwise, zero is returned.</para><para>To get the amount of redirects, see also <see cref="PerformanceNavigationTiming.RedirectCount"/>.</para>
+<para>-<see cref="PerformanceNavigationTiming.RedirectCount"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Timing-Allow-Origin">Timing-Allow-Origin</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming/redirectStart"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <c>redirectStart</c> property can have the following values:</value>
+</PerformanceResourceTimingRedirectStart>
+<PerformanceResourceTimingToJSON>
+<summary>
+The <strong><c>toJSON()</c></strong> method of the <see cref="PerformanceResourceTiming"/> interface is a {{Glossary("Serialization","serializer")}}; it returns a JSON representation of the <see cref="PerformanceResourceTiming"/> object.
+</summary>
+<remarks>
+<para>-<see cref="JSON"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming/toJSON"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("JSON")}} object that is the serialization of the <see cref="PerformanceResourceTiming"/> object.</returns>
+</PerformanceResourceTimingToJSON>
+</docs>

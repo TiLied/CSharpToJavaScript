@@ -1,0 +1,37 @@
+<docs>
+<BackgroundFetchManager>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>BackgroundFetchManager</c></strong> interface of the <see cref="'Background Fetch API'"/> is a map where the keys are background fetch IDs and the values are <see cref="BackgroundFetchRegistration"/> objects.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BackgroundFetchManager"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</BackgroundFetchManager>
+<BackgroundFetchManagerFetch>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>fetch()</c></strong> method of the <see cref="BackgroundFetchManager"/> interface initiates a background fetch operation, given one or more URLs or <see cref="Request"/> objects.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BackgroundFetchManager/fetch"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that resolves with a <see cref="BackgroundFetchRegistration"/> object.</returns>
+</BackgroundFetchManagerFetch>
+<BackgroundFetchManagerGet>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>get()</c></strong> method of the <see cref="BackgroundFetchManager"/> interface returns a {{jsxref("Promise")}} that resolves with the <see cref="BackgroundFetchRegistration"/> associated with the provided <c>id</c> or <see cref="Undefined"/> if the <c>id</c> is not found.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BackgroundFetchManager/get"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that resolves with a <see cref="BackgroundFetchRegistration"/> or {{jsxref("undefined")}}.</returns>
+</BackgroundFetchManagerGet>
+<BackgroundFetchManagerGetIds>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>getIds()</c></strong> method of the <see cref="BackgroundFetchManager"/> interface returns the IDs of all registered background fetches.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BackgroundFetchManager/getIds"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves with an <see cref="'Array'"/> of <see cref="'String'"/>.</returns>
+</BackgroundFetchManagerGetIds>
+</docs>

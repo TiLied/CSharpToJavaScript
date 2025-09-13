@@ -1,0 +1,38 @@
+<docs>
+<DOMStringList>
+<summary>
+The <strong><c>DOMStringList</c></strong> interface is a legacy type returned by some APIs and represents a non-modifiable list of strings (<c>DOMString</c>).
+</summary>
+<remarks>
+<para>This interface was an <see href="https://stackoverflow.com/questions/74630989/why-use-domstringlist-rather-than-an-array/74641156#74641156">attempt to create an unmodifiable list</see> and only continues to be supported to not break code that&amp;apos;s already using it. Modern APIs represent list structures using types based on JavaScript <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">arrays</see>, thus making many array methods available, and at the same time imposing additional semantics on their usage (such as making their items read-only).</para><para>These historical reasons do not mean that you as a developer should avoid <c>DOMStringList</c>. You don&amp;apos;t create <c>DOMStringList</c> objects yourself, but you get them from APIs such as <c>Location.ancestorOrigins</c>, and these APIs are not deprecated. However, be careful of the semantic differences from a real array.</para><para>This interface is used in <see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API">IndexedDB</see> and in the <see cref="Location"/> API:</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMStringList"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</DOMStringList>
+<DOMStringListLength>
+<summary>
+The read-only <strong><c>length</c></strong> property indicates the number of strings in the <see cref="DOMStringList"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMStringList/length"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Number"/>.</value>
+</DOMStringListLength>
+<DOMStringListItem>
+<summary>
+The <strong><c>item()</c></strong> method returns a string from a <see href="https://developer.mozilla.org/en-US/docs/Web/API/DOMStringList"><c>DOMStringList</c></see> by index.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMStringList/item"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>The string at the index position in the <c>DOMStringList</c>; otherwise <c>null</c> if the provided index is out of range.</returns>
+</DOMStringListItem>
+<DOMStringListContains>
+<summary>
+The <strong><c>contains()</c></strong> method returns a boolean indicating whether the given string is in the list.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMStringList/contains"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A boolean indicating whether the given string is in the list.</returns>
+</DOMStringListContains>
+</docs>

@@ -1,0 +1,11 @@
+<docs>
+<SecurePaymentConfirmationRequest>
+<summary>
+The <strong><c>SecurePaymentConfirmationRequest</c></strong> dictionary describes input to the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API">Payment Request API</see> when used to authenticate a user during an e-commerce transaction <see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API/Using_secure_payment_confirmation">using SPC with Payment Request API</see>.
+</summary>
+<remarks>
+<para>An instance of this dictionary must be passed into the <see cref="PaymentRequest.PaymentRequest"/> constructor as the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentRequest/PaymentRequest#data"><c>data</c></see> field corresponding to a <see href="https://developer.mozilla.org/en-US/docs/Web/API/PaymentRequest/PaymentRequest#supportedmethods"><c>supportedMethods</c></see> value of <c>&amp;quot;secure-payment-confirmation&amp;quot;</c>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SecurePaymentConfirmationRequest"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</SecurePaymentConfirmationRequest>
+</docs>

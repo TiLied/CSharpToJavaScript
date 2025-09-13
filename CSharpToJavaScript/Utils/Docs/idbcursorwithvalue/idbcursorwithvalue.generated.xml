@@ -1,0 +1,22 @@
+<docs>
+<IDBCursorWithValue>
+<summary>
+The <strong><c>IDBCursorWithValue</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</see> represents a <see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#cursor">cursor</see> for traversing or iterating over multiple records in a database. It is the same as the <see cref="IDBCursor"/>, except that it includes the <c>value</c> property.
+</summary>
+<remarks>
+<para>The cursor has a source that indicates which index or object store it is iterating over. It has a position within the range, and moves in a direction that is increasing or decreasing in the order of record keys. The cursor enables an application to asynchronously process all the records in the cursor&amp;apos;s range.</para><para>You can have an unlimited number of cursors at the same time. You always get the same <c>IDBCursorWithValue</c> object representing a given cursor. Operations are performed on the underlying index or object store.</para><para></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase"/><br/>-Using transactions: <see cref="IDBTransaction"/><br/>-Setting a range of keys: <see cref="IDBKeyRange"/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore"/><br/>-Using cursors: <see cref="IDBCursor"/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBCursorWithValue"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</IDBCursorWithValue>
+<IDBCursorWithValueValue>
+<summary>
+The <strong><c>value</c></strong> read-only property of the<br/><see cref="IDBCursorWithValue"/> interface returns the value of the current cursor,<br/>whatever that is.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase"/><br/>-Using transactions: <see cref="IDBTransaction"/><br/>-Setting a range of keys: <see cref="IDBKeyRange"/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore"/><br/>-Using cursors: <see cref="IDBCursor"/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBCursorWithValue/value"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The value of the current cursor.</value>
+</IDBCursorWithValueValue>
+</docs>

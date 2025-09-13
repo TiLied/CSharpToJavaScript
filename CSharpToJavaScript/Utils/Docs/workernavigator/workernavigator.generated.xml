@@ -1,0 +1,269 @@
+<docs>
+<WorkerNavigator>
+<summary>
+The <strong><c>WorkerNavigator</c></strong> interface represents a subset of the <see cref="Navigator"/> interface allowed to be accessed from a <see cref="Worker"/>. Such an object is initialized for each worker and is available via the <see cref="WorkerGlobalScope.Navigator"/> property.
+</summary>
+<remarks>
+<para>-Other Worker-related interfaces: <see cref="Worker"/>, <see cref="WorkerLocation"/>, and <see cref="WorkerGlobalScope"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web workers</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerNavigator"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WorkerNavigator>
+<WorkerNavigatorConnection>
+<summary>
+The <strong><c>connection</c></strong> read-only property of the <see cref="WorkerNavigator"/> interface returns a <see cref="NetworkInformation"/> object containing information about the system's connection, such as the current bandwidth of the user's device or whether the connection is metered.<br/>This could be used to select high definition content or low definition content based on the user&amp;apos;s connection.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/onLine">Online and offline events</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Network_Information_API">Network Information API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerNavigator/connection"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="NetworkInformation"/> object.</value>
+</WorkerNavigatorConnection>
+<WorkerNavigatorUserAgent>
+<summary>
+The <strong><c>WorkerNavigator.userAgent</c></strong> read-only property returns the<br/>user agent string for the current browser.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>The specification asks browsers to provide as little information via this field as<br/>possible. Never assume that the value of this property will stay the same in future<br/>versions of the same browser. Try not to use it at all, or only for current and past<br/>versions of a browser. New browsers may start using the same UA, or part of it, as an<br/>older browser: you really have no guarantee that the browser agent is indeed the one<br/>advertised by this property.</para><para>Also keep in mind that users of a browser can change the value of this field if they<br/>want (UA spoofing).</para></blockquote><para>Browser identification based on detecting the user agent string is<br/><strong>unreliable</strong> and <strong>is not recommended</strong>, as the user agent<br/>string is user configurable. For example:</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent">User-Agent</see> HTTP header<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerNavigator/userAgent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string specifying the complete user agent string the browser<br/>provides both in <see href="https://developer.mozilla.org/en-US/docs/Glossary/HTTP">HTTP</see> headers and in response to this and other related<br/>methods on the <see cref="WorkerNavigator"/> object.The user agent string is built on a formal structure which can be decomposed into<br/>several pieces of info. Each of these pieces of info comes from other navigator<br/>properties which are also settable by the user. Gecko-based browsers comply with the<br/>following general structure:</value>
+</WorkerNavigatorUserAgent>
+<WorkerNavigatorHardwareConcurrency>
+<summary>
+The <strong><c>navigator.hardwareConcurrency</c></strong> read-only property<br/>returns the number of logical processors available to run threads on the user&amp;apos;s<br/>computer.
+</summary>
+<remarks>
+<para>-<see cref="WorkerNavigator"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerNavigator/hardwareConcurrency"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Number"/> indicating the number of logical processor cores.Modern computers have multiple physical processor cores in their CPU (two or four cores<br/>is typical), but each physical core is also usually able to run more than one thread at<br/>a time using advanced scheduling techniques. So a four-core CPU may offer eight<br/><strong>logical processor cores</strong>, for example. The number of logical processor<br/>cores can be used to measure the number of threads which can effectively be run at once<br/>without them having to context switch.The browser may, however, choose to report a lower number of logical cores in order to<br/>represent more accurately the number of <see cref="Worker"/>s that can run at once, so<br/>don&amp;apos;t treat this as an absolute measurement of the number of cores in the user&amp;apos;s system.</value>
+</WorkerNavigatorHardwareConcurrency>
+<WorkerNavigatorGpu>
+<summary>
+The <strong><c>gpu</c></strong> read-only property of the <see cref="WorkerNavigator"/> interface returns the <see cref="GPU"/> object for the current worker context, which is the entry point for the {{domxref("WebGPU_API", "WebGPU API", &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}.
+</summary>
+<remarks>
+<para>-{{domxref(&amp;quot;WebGPU_API&amp;quot;, &amp;quot;WebGPU API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerNavigator/gpu"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="GPU"/> object.</value>
+</WorkerNavigatorGpu>
+<WorkerNavigatorSerial>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>serial</c></strong> read-only property of the <see cref="WorkerNavigator"/> interface returns a <see cref="Serial"/> object which represents the entry point into the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Serial_API">Web Serial API</see>.
+</summary>
+<remarks>
+<para>When getting, the same instance of the <see cref="Serial"/> object will always be returned.</para>
+<para>-<see href="https://developer.chrome.com/docs/capabilities/serial">Read from and write to a serial port</see><br/>-<see href="https://codelabs.developers.google.com/codelabs/web-serial#0">Getting started with the web serial API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerNavigator/serial"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Serial"/> object.</value>
+</WorkerNavigatorSerial>
+<WorkerNavigatorPermissions>
+<summary>
+The <strong><c>permissions</c></strong> read-only property of the <see cref="WorkerNavigator"/> interface<br/>returns a <see cref="Permissions"/> object that can be used to query and update<br/>permission status of APIs covered by the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Permissions_API">Permissions API</see>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Permissions_API">Permissions API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">Web Worker API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerNavigator/permissions"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Permissions"/> object.</value>
+</WorkerNavigatorPermissions>
+<WorkerNavigatorGlobalPrivacyControl>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>WorkerNavigator.globalPrivacyControl</c></strong> read-only property returns the user&amp;apos;s <see href="https://globalprivacycontrol.org/">Global Privacy Control</see> setting for the current website.<br/>This setting indicates whether the user consents to the website or service selling or sharing their personal information with third parties.
+</summary>
+<remarks>
+<para>The value of the property reflects that of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-GPC">Sec-GPC</see> HTTP header.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-GPC">Sec-GPC</see> header<br/>-<see href="https://globalprivacycontrol.org/">globalprivacycontrol.org</see><br/>-<see href="https://en.wikipedia.org/wiki/Do_Not_Track">Do Not Track on Wikipedia</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerNavigator/globalPrivacyControl"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value><c>true</c> if the user explicitly <strong>does not</strong> grant consent to sell or share their data.<br/><c>false</c> if the user either grants consent, or has not indicated a preference.</value>
+</WorkerNavigatorGlobalPrivacyControl>
+<WorkerNavigatorAppVersion>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> Returns either <c>&amp;quot;4.0&amp;quot;</c> or a string representing version information about<br/>the browser.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Do not rely on this property to return the correct browser version.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerNavigator/appVersion"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>Either <c>&amp;quot;4.0&amp;quot;</c> or a string representing version information about the<br/>browser.</value>
+</WorkerNavigatorAppVersion>
+<WorkerNavigatorLanguages>
+<summary>
+The <strong><c>WorkerNavigator.languages</c></strong> read-only property<br/>returns an array of strings representing the user&amp;apos;s preferred<br/>languages. The language is described using language tags according to<br/>{{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}. In the returned<br/>array they are ordered by preference with the most preferred language first.
+</summary>
+<remarks>
+<para>The value of <see cref="WorkerNavigator.Language"/> is the<br/>first element of the returned array.</para><para>When its value changes, as the user&amp;apos;s preferred languages are changed a<br/><see cref="Window.Languagechange"/> event is fired on the <see cref="WorkerGlobalScope"/> object.</para><para>The <c>Accept-Language</c> HTTP header in every HTTP request from the user&amp;apos;s<br/>browser uses the same value for the <c>navigator.languages</c> property except for<br/>the extra <c>qvalues</c> (quality values) field (e.g., <c>en-US;q=0.8</c>).</para>
+<para>-<see cref="WorkerNavigator.Language"/><br/>-<see cref="WorkerNavigator"/><br/>-<see cref="WorkerGlobalScope.Languagechange"/> event<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerNavigator/languages"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An array or strings.</value>
+</WorkerNavigatorLanguages>
+<WorkerNavigatorOnLine>
+<summary>
+Returns the online status of the browser. The property returns a boolean value, with <c>true</c> meaning online and <c>false</c> meaning offline. The property sends updates whenever the browser&amp;apos;s ability to connect to the network changes. The update occurs when the user follows links or when a script requests a remote page.
+</summary>
+<remarks>
+<para>For example, the property should return <c>false</c> when users click links soon after they lose internet connection.</para><para>Browsers implement this property differently.</para><para>In Chrome and Safari, if the browser is not able to connect to a local area network (LAN) or a router, it is offline; all other conditions return <c>true</c>. So while you can assume that the browser is offline when it returns a <c>false</c> value, you cannot assume that a true value necessarily means that the browser can access the internet. You could be getting false positives, such as in cases where the computer is running a virtualization software that has virtual ethernet adapters that are always<br/>&amp;quot;connected.&amp;quot; Therefore, if you really want to determine the online status of the browser, you should develop additional means for checking. To learn more, see the 2011 article, <see href="https://developer.chrome.com/docs/workbox/service-worker-overview/">Working Off the Grid</see>.</para><para>In Firefox, switching the browser to offline mode sends a <c>false</c> value.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerNavigator/onLine"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value><c>online</c> is a boolean <c>true</c> or <c>false</c>.</value>
+</WorkerNavigatorOnLine>
+<WorkerNavigatorAppCodeName>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The value of the <strong><c>WorkerNavigator.appCodeName</c></strong> property is<br/>always <c>&amp;quot;Mozilla&amp;quot;</c>, in any browser. This property is kept only for<br/>compatibility purposes.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Do not rely on this property to return a real<br/>product name. All browsers return <c>&amp;quot;Mozilla&amp;quot;</c> as the value of this property.</para></blockquote>
+<para>-<see cref="WorkerNavigator.AppName"/><br/>-<see cref="WorkerNavigator.Product"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerNavigator/appCodeName"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The string <c>&amp;quot;Mozilla&amp;quot;</c>.</value>
+</WorkerNavigatorAppCodeName>
+<WorkerNavigatorLocks>
+<summary>
+The <strong><c>locks</c></strong> read-only property of<br/>the <see cref="WorkerNavigator"/> interface returns a <see cref="LockManager"/><br/>object which provides methods for requesting a new <see cref="'Lock'"/> object and<br/>querying for an existing <c>Lock</c> object.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerNavigator/locks"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="LockManager"/> object.</value>
+</WorkerNavigatorLocks>
+<WorkerNavigatorDeviceMemory>
+<summary>
+The <strong><c>deviceMemory</c></strong> read-only<br/>property of the <see cref="WorkerNavigator"/> interface returns the approximate amount of<br/>device memory in gigabytes.
+</summary>
+<remarks>
+<para>The reported value is imprecise to curtail <see href="https://developer.mozilla.org/en-US/docs/Glossary/fingerprinting">fingerprinting</see>. It's approximated by<br/>rounding down to the nearest power of 2, then dividing that number by 1024. It is then<br/>clamped within lower and upper bounds to protect the privacy of owners of very low-memory or<br/>high-memory devices.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Device-Memory">Device-Memory</see> HTTP header<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerNavigator/deviceMemory"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A floating point number; one of <c>0.25</c>, <c>0.5</c>, <c>1</c>, <c>2</c>, <c>4</c>, <c>8</c>.</value>
+</WorkerNavigatorDeviceMemory>
+<WorkerNavigatorHid>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>WorkerNavigator.hid</c></strong><br/>read-only property returns an <see cref="HID"/> object providing methods for accessing HID device connections and events that fire when the user agent connects to or disconnects from a device.
+</summary>
+<remarks>
+<para>Where a defined <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Permissions_Policy">Permissions Policy</see> blocks WebHID usage, the <c>WorkerNavigator.hid</c> property will not be available.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebHID_API">WebHID API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerNavigator/hid"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="HID"/> object.</value>
+</WorkerNavigatorHid>
+<WorkerNavigatorMediaCapabilities>
+<summary>
+The read-only <strong><c>mediaCapabilities</c></strong> property of the <see cref="WorkerNavigator"/> interface references a <see cref="MediaCapabilities"/> object that can expose information about the decoding and encoding capabilities for a given format and output capabilities (as defined by the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capabilities_API">Media Capabilities API</see>).
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capabilities_API">Media Capabilities API</see><br/>-<see cref="WorkerNavigator"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerNavigator/mediaCapabilities"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="MediaCapabilities"/> object.</value>
+</WorkerNavigatorMediaCapabilities>
+<WorkerNavigatorSetAppBadge>
+<summary>
+The <strong><c>setAppBadge()</c></strong> method of the <see cref="WorkerNavigator"/> interface sets a badge on the icon associated with this app. If a value is passed to the method, this will be set as the value of the badge. Otherwise the badge will display as a dot, or other indicator as defined by the platform.
+</summary>
+<remarks>
+<para>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/badging-api/">Badging for app icons</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerNavigator/setAppBadge"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves with <see cref="Undefined"/>.</returns>
+</WorkerNavigatorSetAppBadge>
+<WorkerNavigatorServiceWorker>
+<summary>
+The <strong><c>serviceWorker</c></strong> read-only property of the <see cref="WorkerNavigator"/> interface returns the <see cref="ServiceWorkerContainer"/> object for the <see href="https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window">associated document</see>, which provides access to registration, removal, upgrade, and communication with the <see cref="ServiceWorker"/>.
+</summary>
+<remarks>
+<para>The feature may not be available in private mode.</para>
+<para>-{{domxref(&amp;quot;Service Worker API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerNavigator/serviceWorker"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value><see cref="ServiceWorkerContainer"/>.</value>
+</WorkerNavigatorServiceWorker>
+<WorkerNavigatorUsb>
+<summary>
+The <strong><c>usb</c></strong> read-only property of the <see cref="WorkerNavigator"/> interface returns a <see cref="USB"/> object for the current document, providing access to <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebUSB_API">WebUSB API</see> functionality.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebUSB_API">WebUSB API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerNavigator/usb"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="'USB'"/> object.</value>
+</WorkerNavigatorUsb>
+<WorkerNavigatorAppName>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The value of the <strong><c>WorkerNavigator.appName</c></strong> property is always<br/><c>&amp;quot;Netscape&amp;quot;</c>, in any browser. This property is kept only for compatibility<br/>purposes.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Do not rely on this property to return a real browser name. All browsers return <c>&amp;quot;Netscape&amp;quot;</c> as the value of this property.</para></blockquote>
+<para>-<see cref="WorkerNavigator.AppCodeName"/><br/>-<see cref="WorkerNavigator.Product"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerNavigator/appName"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The string <c>&amp;quot;Netscape&amp;quot;</c>.</value>
+</WorkerNavigatorAppName>
+<WorkerNavigatorStorage>
+<summary>
+The <strong><c>storage</c></strong> read-only property of the <see cref="WorkerNavigator"/> interface<br/>returns the singleton <see cref="StorageManager"/> object used to<br/>access the overall storage capabilities of the browser for the current site or app.<br/>The returned object lets you examine and configure persistence of data stores and<br/>learn approximately how much more space your browser has available for local storage<br/>use.
+</summary>
+<remarks>
+<para>-<see cref="StorageManager"/><br/>-<see cref="WorkerNavigator"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerNavigator/storage"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="StorageManager"/> object you can use to maintain persistence for stored<br/>data, as well as to determine roughly how much room there is for data to be stored.</value>
+</WorkerNavigatorStorage>
+<WorkerNavigatorClearAppBadge>
+<summary>
+The <strong><c>clearAppBadge()</c></strong> method of the <see cref="WorkerNavigator"/> interface clears a badge on the current app's icon by setting it to <c>nothing</c>. The value <c>nothing</c> indicates that no badge is currently set, and the status of the badge is <strong>cleared</strong>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/badging-api/">Badging for app icons</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerNavigator/clearAppBadge"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves with <see cref="Undefined"/>.</returns>
+</WorkerNavigatorClearAppBadge>
+<WorkerNavigatorProduct>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The value of the <strong><c>WorkerNavigator.product</c></strong> property is always<br/><c>&amp;quot;Gecko&amp;quot;</c>, in any browser. This property is kept only for compatibility<br/>purposes.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Do not rely on this property to return a real product name. All browsers return <c>&amp;quot;Gecko&amp;quot;</c> as the value of this property.</para></blockquote>
+<para>-<see cref="WorkerNavigator.AppCodeName"/><br/>-<see cref="WorkerNavigator.AppName"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerNavigator/product"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The string <c>&amp;quot;Gecko&amp;quot;</c>.</value>
+</WorkerNavigatorProduct>
+<WorkerNavigatorLanguage>
+<summary>
+The <strong><c>WorkerNavigator.language</c></strong> read-only property returns<br/>a string representing the preferred language of the user, usually the language of the<br/>browser UI.
+</summary>
+<remarks>
+<para>-<see cref="WorkerNavigator.Languages"/><br/>-<see cref="WorkerNavigator"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerNavigator/language"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing the<br/>language version as defined in {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}. Examples of valid language<br/>codes include &amp;quot;en&amp;quot;, &amp;quot;en-US&amp;quot;, &amp;quot;fr&amp;quot;, &amp;quot;fr-FR&amp;quot;, &amp;quot;es-ES&amp;quot;, etc.Note that in Safari on iOS prior to 10.2, the country code returned is lowercase:<br/>&amp;quot;en-us&amp;quot;, &amp;quot;fr-fr&amp;quot; etc.</value>
+</WorkerNavigatorLanguage>
+<WorkerNavigatorUserAgentData>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>userAgentData</c></strong> read-only property of the <see cref="WorkerNavigator"/> interface returns an <see cref="NavigatorUAData"/> object which can be used to access the {{domxref("User-Agent Client Hints API", &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}.
+</summary>
+<remarks>
+<para>-<see href="https://developer.chrome.com/docs/privacy-security/user-agent-client-hints">Improving user privacy and developer experience with User-Agent Client Hints</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerNavigator/userAgentData"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="NavigatorUAData"/> object.</value>
+</WorkerNavigatorUserAgentData>
+<WorkerNavigatorPlatform>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> Returns a string representing the platform of the browser. The specification allows<br/>browsers to always return the empty string, so don&amp;apos;t rely on this property to get a<br/>reliable answer.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerNavigator/platform"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string identifying the platform on which the browser is running, or<br/>an empty string if the browser declines to (or is unable to) identify the platform.<br/><c>platform</c> is a string that must be an empty string or a string representing<br/>the platform on which the browser is executing.For example: <c>&amp;quot;MacIntel&amp;quot;</c>, <c>&amp;quot;Win32&amp;quot;</c>, <c>&amp;quot;FreeBSD i386&amp;quot;</c>, <c>&amp;quot;WebTV OS&amp;quot;</c>.</value>
+</WorkerNavigatorPlatform>
+</docs>

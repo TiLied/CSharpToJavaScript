@@ -1,0 +1,33 @@
+<docs>
+<HTMLBaseElement>
+<summary>
+The <strong><c>HTMLBaseElement</c></strong> interface contains the base URI for a document. This object inherits all of the properties and methods as described in the <see cref="HTMLElement"/> interface.
+</summary>
+<remarks>
+<para></para>
+<para>-HTML element implementing this interface: <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base">base</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLBaseElement"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLBaseElement>
+<HTMLBaseElementTarget>
+<summary>
+The <c>target</c> property of the <see cref="HTMLBaseElement"/> interface is a string that represents the default target tab to show the resulting output for hyperlinks and form elements.
+</summary>
+<remarks>
+<para>It reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/base#target"><c>target</c></see> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base">base</see> element.</para>
+<para>-<see cref="HTMLAnchorElement.Target"/> property<br/>-<see cref="HTMLAreaElement.Target"/> property<br/>-<see cref="HTMLFormElement.Target"/> property<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLBaseElement/target"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing the target. Its value can be:</value>
+</HTMLBaseElementTarget>
+<HTMLBaseElementHref>
+<summary>
+The <strong><c>href</c></strong> property of the <see cref="HTMLBaseElement"/> interface contains a string that is the URL to use as the base for <see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL#absolute_urls_vs._relative_urls">relative URLs</see>.
+</summary>
+<remarks>
+<para>It reflects the <c>href</c> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base">base</see> element.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLBaseElement/href"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string that contains a URL, or the empty string (<c>&amp;quot;&amp;quot;</c>) if the corresponding <c>&amp;lt;base&amp;gt;</c> element does not include the <c>href</c> attribute.</value>
+</HTMLBaseElementHref>
+</docs>

@@ -1,0 +1,72 @@
+<docs>
+<ExtendableMessageEvent>
+<summary>
+The <strong><c>ExtendableMessageEvent</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">Service Worker API</see> represents the event object of a <see cref="ServiceWorkerGlobalScopemessage"/> event fired on a service worker (when a message is received on the <see cref="ServiceWorkerGlobalScope"/> from another context) — extends the lifetime of such events.
+</summary>
+<remarks>
+<para>This interface inherits from the <see cref="ExtendableEvent"/> interface.</para><para></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</see><br/>-<see href="https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker">Service workers basic code example</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Channel_Messaging_API">Channel Messaging</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ExtendableMessageEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</ExtendableMessageEvent>
+<ExtendableMessageEventPorts>
+<summary>
+The <strong><c>ports</c></strong> read-only property of the<br/><see cref="ExtendableMessageEvent"/> interface returns the array containing the<br/><see cref="MessagePort"/> objects representing the ports of the associated message<br/>channel (the channel the message is being sent through.)
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</see><br/>-<see href="https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker">Service workers basic code example</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Channel_Messaging_API">Channel Messaging</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ExtendableMessageEvent/ports"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An array of <see cref="MessagePort"/> objects.</value>
+</ExtendableMessageEventPorts>
+<ExtendableMessageEventLastEventId>
+<summary>
+The <strong><c>lastEventID</c></strong> read-only property of the<br/><see cref="ExtendableMessageEvent"/> interface represents, in <see href="https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events">server-sent events</see>, the last event ID of the event source. This is an empty string.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</see><br/>-<see href="https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker">Service workers basic code example</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Channel_Messaging_API">Channel Messaging</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ExtendableMessageEvent/lastEventId"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</ExtendableMessageEventLastEventId>
+<ExtendableMessageEventSource>
+<summary>
+The <strong><c>source</c></strong> read-only property of the<br/><see cref="ExtendableMessageEvent"/> interface returns a reference to the<br/><see cref="Client"/> object from which the message was sent.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</see><br/>-<see href="https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker">Service workers basic code example</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Channel_Messaging_API">Channel Messaging</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ExtendableMessageEvent/source"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Client"/>, <see cref="ServiceWorker"/> or <see cref="MessagePort"/><br/>object.</value>
+</ExtendableMessageEventSource>
+<ExtendableMessageEventOrigin>
+<summary>
+The <strong><c>origin</c></strong> read-only property of the<br/><see cref="ExtendableMessageEvent"/> interface returns the origin of the<br/><see cref="Client"/> that sent the message.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</see><br/>-<see href="https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker">Service workers basic code example</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Channel_Messaging_API">Channel Messaging</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ExtendableMessageEvent/origin"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</ExtendableMessageEventOrigin>
+<ExtendableMessageEventData>
+<summary>
+The <strong><c>data</c></strong> read-only property of the<br/><see cref="ExtendableMessageEvent"/> interface returns the event's data. It can be any<br/>data type.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</see><br/>-<see href="https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker">Service workers basic code example</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Channel_Messaging_API">Channel Messaging</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ExtendableMessageEvent/data"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>Any data type.</value>
+</ExtendableMessageEventData>
+<ExtendableMessageEventExtendableMessageEvent>
+<summary>
+The <strong><c>ExtendableMessageEvent()</c></strong> constructor creates a new <see cref="ExtendableMessageEvent"/> object.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</see><br/>-<see href="https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker">Service workers basic code example</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Channel_Messaging_API">Channel Messaging</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ExtendableMessageEvent/ExtendableMessageEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="ExtendableMessageEvent"/> object.</returns>
+</ExtendableMessageEventExtendableMessageEvent>
+</docs>

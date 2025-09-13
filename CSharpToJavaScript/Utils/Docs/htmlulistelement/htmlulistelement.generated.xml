@@ -1,0 +1,22 @@
+<docs>
+<HTMLUListElement>
+<summary>
+The <strong><c>HTMLUListElement</c></strong> interface provides special properties (beyond those defined on the regular <see cref="HTMLElement"/> interface it also has available to it by inheritance) for manipulating unordered list ({{HTMLElement("ul")}}) elements.
+</summary>
+<remarks>
+<para></para>
+<para>-The HTML element implementing this interface: <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul">ul</see>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLUListElement"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLUListElement>
+<HTMLUListElementCompact>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>compact</c></strong> property of the <see cref="HTMLUListElement"/> interface indicates that spacing between list items should be reduced. The exact handling of the <c>compact</c> attribute is browser-specific. Instead of using this property, consider using CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/line-height">line-height</see> instead.
+</summary>
+<remarks>
+<para>It reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/ul#compact"><c>compact</c></see> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul">ul</see> element.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLUListElement/compact"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean.</value>
+</HTMLUListElementCompact>
+</docs>

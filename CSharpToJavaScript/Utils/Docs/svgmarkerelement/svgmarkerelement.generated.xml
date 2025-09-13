@@ -1,0 +1,111 @@
+<docs>
+<SVGMarkerElement>
+<summary>
+The <strong><c>SVGMarkerElement</c></strong> interface provides access to the properties of <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementmarker">marker</see> elements, as well as methods to manipulate them. The <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementmarker">marker</see> element defines the graphics used for drawing marks on a shape.
+</summary>
+<remarks>
+<para></para><para>The following properties and methods all return, or act on the attributes of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementmarker">marker</see> element represented by <c>SVGMarkerElement</c>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGMarkerElement"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</SVGMarkerElement>
+<SVGMarkerElementRefY>
+<summary>
+The <strong><c>refY</c></strong> read-only property of the <see cref="SVGMarkerElement"/> interface returns an <see cref="SVGAnimatedLength"/> object containing the value of the {{SVGattr("refY")}} attribute of the {{SVGElement("marker")}}.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGMarkerElement/refY"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedLength"/> object. The <c>baseVal</c> property of this object returns an <see cref="SVGLength"/>, the value of which returns the <c>refY</c>.</value>
+</SVGMarkerElementRefY>
+<SVGMarkerElementMarkerWidth>
+<summary>
+The <strong><c>markerWidth</c></strong> read-only property of the <see cref="SVGMarkerElement"/> interface returns an <see cref="SVGAnimatedLength"/> object containing the width of the {{SVGElement("marker")}} viewport as defined by the {{SVGattr("markerWidth")}} attribute.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGMarkerElement/markerWidth"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedLength"/> object. The <c>baseVal</c> property of this object returns an <see cref="SVGLength"/>, the value of which returns the <c>width</c>.</value>
+</SVGMarkerElementMarkerWidth>
+<SVGMarkerElementMarkerHeight>
+<summary>
+The <strong><c>markerHeight</c></strong> read-only property of the <see cref="SVGMarkerElement"/> interface returns an <see cref="SVGAnimatedLength"/> object containing the height of the {{SVGElement("marker")}} viewport as defined by the {{SVGattr("markerHeight")}} attribute.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGMarkerElement/markerHeight"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedLength"/> object. The <c>baseVal</c> property of this object returns an <see cref="SVGLength"/>, the value of which returns the <c>height</c>.</value>
+</SVGMarkerElementMarkerHeight>
+<SVGMarkerElementMarkerUnits>
+<summary>
+The <strong><c>markerUnits</c></strong> read-only property of the <see cref="SVGMarkerElement"/> interface returns an <see cref="SVGAnimatedEnumeration"/> object. This object returns an integer which represents the keyword values that the {{SVGattr("markerUnits")}} attribute accepts.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGMarkerElement/markerUnits"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedEnumeration"/> object. The <c>baseVal</c> property of this object contains one of the following values:</value>
+</SVGMarkerElementMarkerUnits>
+<SVGMarkerElementOrientAngle>
+<summary>
+The <strong><c>orientAngle</c></strong> read-only property of the <see cref="SVGMarkerElement"/> interface returns an <see cref="SVGAnimatedAngle"/> object containing the angle of the {{SVGattr("orient")}} attribute.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGMarkerElement/orientAngle"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedAngle"/> object. The <c>baseVal</c> property of this object returns an <see cref="SVGAngle"/>, the value of which returns the <c>angle</c>.</value>
+</SVGMarkerElementOrientAngle>
+<SVGMarkerElementRefX>
+<summary>
+The <strong><c>refX</c></strong> read-only property of the <see cref="SVGMarkerElement"/> interface returns an <see cref="SVGAnimatedLength"/> object containing the value of the {{SVGattr("refX")}} attribute of the {{SVGElement("marker")}}.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGMarkerElement/refX"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedLength"/> object. The <c>baseVal</c> property of this object returns an <see cref="SVGLength"/>, the value of which returns the <c>refX</c>.</value>
+</SVGMarkerElementRefX>
+<SVGMarkerElementOrientType>
+<summary>
+The <strong><c>orientType</c></strong> read-only property of the <see cref="SVGMarkerElement"/> interface returns an <see cref="SVGAnimatedEnumeration"/> object indicating whether the {{SVGattr("orient")}} attribute is <c>auto</c>, an angle value, or something else.
+</summary>
+<remarks>
+<para>This <strong>something else</strong> is most likely to be the keyword <c>auto-start-reverse</c> however the spec leaves it open for this to be other values. Unsupported values will generally be thrown away by the parser, leaving the value the default of <c>auto</c>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGMarkerElement/orientType"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedEnumeration"/> object. This contains one of the following values:</value>
+</SVGMarkerElementOrientType>
+<SVGMarkerElementViewBox>
+<summary>
+The <strong><c>viewBox</c></strong> read-only property of the <see cref="SVGMarkerElement"/> interface returns an <see cref="SVGAnimatedRect"/> object which contains the values set by the {{SVGattr("viewBox")}} attribute on the {{SVGElement("marker")}}.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGMarkerElement/viewBox"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedRect"/> object. The <c>baseVal</c> property of this object returns an <see cref="SVGRect"/> object, from which can be returned the <c>x</c> and <c>y</c> co-ordinates, plus the <c>width</c> and <c>height</c> of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementmarker">marker</see> {{SVGattr("viewBox")}} attribute.</value>
+</SVGMarkerElementViewBox>
+<SVGMarkerElementPreserveAspectRatio>
+<summary>
+The <strong><c>preserveAspectRatio</c></strong> read-only property of the <see cref="SVGMarkerElement"/> interface returns an <see cref="SVGAnimatedPreserveAspectRatio"/> object containing the value of the {{SVGattr("preserveAspectRatio")}} attribute of the {{SVGElement("marker")}}.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGMarkerElement/preserveAspectRatio"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedPreserveAspectRatio"/> object. The <c>baseVal</c> property of this object returns an <see cref="SVGPreserveAspectRatio"/> object, with the following properties:</value>
+</SVGMarkerElementPreserveAspectRatio>
+<SVGMarkerElementSetOrientToAngle>
+<summary>
+The <strong><c>setOrientToAngle()</c></strong> method of the <see cref="SVGMarkerElement"/> interface sets the value of the <c>orient</c> attribute to the value in the <see cref="SVGAngle"/> passed in.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGMarkerElement/setOrientToAngle"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</SVGMarkerElementSetOrientToAngle>
+<SVGMarkerElementSetOrientToAuto>
+<summary>
+The <strong><c>setOrientToAuto()</c></strong> method of the <see cref="SVGMarkerElement"/> interface sets the value of the <c>orient</c> attribute to <c>auto</c>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGMarkerElement/setOrientToAuto"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</SVGMarkerElementSetOrientToAuto>
+</docs>

@@ -1,0 +1,32 @@
+<docs>
+<Metadata>
+<summary>
+<div class="CAUTION"><h5>CAUTION</h5> <strong>Non-standard</strong></div> The <strong><c>Metadata</c></strong> interface contains information about a file system entry. This metadata includes the file&amp;apos;s size and modification date and time.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This interface isn&amp;apos;t available through the global scope; instead, you obtain a <c>Metadata</c> object describing a <see cref="FileSystemEntry"/> using the method <see cref="FileSystemEntry.GetMetadata"/>.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</see><br/>-<see cref="FileSystemEntry"/><br/>-<see cref="FileSystemFileEntry"/> and <see cref="FileSystemDirectoryEntry"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Metadata"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Metadata>
+<MetadataModificationTime>
+<summary>
+<div class="CAUTION"><h5>CAUTION</h5> <strong>Non-standard</strong></div> The read-only <strong><c>modificationTime</c></strong><br/>property of the <see cref="Metadata"/> interface is a {{jsxref("Date")}} object which<br/>specifies the date and time the file system entry (or the data referenced by the<br/>entry) was last modified. A file system entry is considered to have been<br/>modified if the metadata or the contents of the referenced file (or directory, or<br/>whatever other kind of file system entry might exist on the platform in use) has<br/>changed.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</see><br/>-<see cref="Metadata"/><br/>-<see cref="FileSystemEntry.GetMetadata"/><br/>-<see cref="FileSystemFileEntry"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Metadata/modificationTime"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Date"/> timestamp indicating when the file system entry was last changed.</value>
+</MetadataModificationTime>
+<MetadataSize>
+<summary>
+<div class="CAUTION"><h5>CAUTION</h5> <strong>Non-standard</strong></div> The read-only <strong><c>size</c></strong> property of<br/>the <see cref="Metadata"/> interface specifies the size, in bytes, of the referenced<br/>file or other file system object on disk.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</see><br/>-<see cref="Metadata"/><br/>-<see cref="FileSystemEntry.GetMetadata"/><br/>-<see cref="FileSystemFileEntry"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Metadata/size"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number indicating the size of the file in bytes.</value>
+</MetadataSize>
+</docs>

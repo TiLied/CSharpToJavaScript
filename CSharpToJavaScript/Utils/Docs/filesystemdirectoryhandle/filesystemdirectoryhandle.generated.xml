@@ -1,0 +1,83 @@
+<docs>
+<FileSystemDirectoryHandle>
+<summary>
+The <strong><c>FileSystemDirectoryHandle</c></strong> interface of the {{domxref(&amp;quot;File System API&amp;quot;, &amp;quot;File System API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} provides a handle to a file system directory.
+</summary>
+<remarks>
+<para>The interface can be accessed via the <see cref="'window.ShowDirectoryPicker'"/>, <see cref="'StorageManager.GetDirectory'"/>, <see cref="'DataTransferItem.GetAsFileSystemHandle'"/>, and <see cref="'FileSystemDirectoryHandle.GetDirectoryHandle'"/> methods.</para><para></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_System_API">File System API</see><br/>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/file-system-access">The File System Access API: simplifying access to local files</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemDirectoryHandle"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>The following example returns a directory handle with the specified name; if the directory does not already exist it is created.The following asynchronous function uses <c>resolve()</c> to find the path to a chosen file, relative to a specified directory handle.The following example scans recursively through a directory to return <see cref="'FileSystemFileHandle'"/> objects for each file in that directory:</returns>
+</FileSystemDirectoryHandle>
+<FileSystemDirectoryHandleEntries>
+<summary>
+The <strong><c>entries()</c></strong> method of the<br/><see cref="FileSystemDirectoryHandle"/> interface returns a new asynchronous iterator<br/>for the iteration of the key-value pairs of the entries within the <c>FileSystemDirectoryHandle</c><br/>on which this method is called. The key-value pairs are<br/>in the form of an array like <c>[key, value]</c>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_System_API">File System API</see><br/>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/file-system-access">The File System Access API: simplifying access to local files</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemDirectoryHandle/entries"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new asynchronous iterator containing the key-value pairs of each entry within the <c>FileSystemDirectoryHandle</c>.</returns>
+</FileSystemDirectoryHandleEntries>
+<FileSystemDirectoryHandleGetDirectoryHandle>
+<summary>
+The <strong><c>getDirectoryHandle()</c></strong> method of the<br/><see cref="FileSystemDirectoryHandle"/> interface returns a<br/><see cref="'FileSystemDirectoryHandle'"/> for a subdirectory with the specified name<br/>within the directory handle on which the method is called.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_System_API">File System API</see><br/>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/file-system-access">The File System Access API: simplifying access to local files</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemDirectoryHandle/getDirectoryHandle"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref('Promise')}} which resolves with a <see cref="'FileSystemDirectoryHandle'"/>.</returns>
+</FileSystemDirectoryHandleGetDirectoryHandle>
+<FileSystemDirectoryHandleGetFileHandle>
+<summary>
+The <strong><c>getFileHandle()</c></strong> method of the<br/><see cref="FileSystemDirectoryHandle"/> interface returns a<br/><see cref="'FileSystemFileHandle'"/> for a file with the specified name, within the<br/>directory the method is called.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_System_API">File System API</see><br/>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/file-system-access">The File System Access API: simplifying access to local files</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemDirectoryHandle/getFileHandle"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref('Promise')}} which resolves with a <see cref="'FileSystemFileHandle'"/>.</returns>
+</FileSystemDirectoryHandleGetFileHandle>
+<FileSystemDirectoryHandleResolve>
+<summary>
+The <strong><c>resolve()</c></strong> method of the<br/><see cref="FileSystemDirectoryHandle"/> interface returns an {{jsxref('Array')}} of<br/>directory names from the parent handle to the specified child entry, with the name of<br/>the child entry as the last array item.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_System_API">File System API</see><br/>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/file-system-access">The File System Access API: simplifying access to local files</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemDirectoryHandle/resolve"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="'Promise'"/> which resolves with an <see cref="'Array'"/> of<br/>strings, or <c>null</c> if <c>possibleDescendant</c> is not a descendant of this <see cref="'FileSystemDirectoryHandle'"/>.</returns>
+</FileSystemDirectoryHandleResolve>
+<FileSystemDirectoryHandleKeys>
+<summary>
+The <strong><c>keys()</c></strong> method of the<br/><see cref="FileSystemDirectoryHandle"/> interface returns a new asynchronous iterator<br/>for the iteration of the key of the entries within the <c>FileSystemDirectoryHandle</c><br/>on which this method is called.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_System_API">File System API</see><br/>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/file-system-access">The File System Access API: simplifying access to local files</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemDirectoryHandle/keys"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new asynchronous iterator containing the keys of each entry within the <c>FileSystemDirectoryHandle</c>.</returns>
+</FileSystemDirectoryHandleKeys>
+<FileSystemDirectoryHandleValues>
+<summary>
+The <strong><c>values()</c></strong> method of the<br/><see cref="FileSystemDirectoryHandle"/> interface returns a new asynchronous iterator<br/>for the iteration of the value of the entries within the <c>FileSystemDirectoryHandle</c><br/>on which this method is called.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_System_API">File System API</see><br/>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/file-system-access">The File System Access API: simplifying access to local files</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemDirectoryHandle/values"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new asynchronous iterator containing the handles of each entry within the <c>FileSystemDirectoryHandle</c>.</returns>
+</FileSystemDirectoryHandleValues>
+<FileSystemDirectoryHandleRemoveEntry>
+<summary>
+The <strong><c>removeEntry()</c></strong> method of the<br/><see cref="FileSystemDirectoryHandle"/> interface attempts to remove an entry if the<br/>directory handle contains a file or directory called the name specified.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_System_API">File System API</see><br/>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/file-system-access">The File System Access API: simplifying access to local files</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemDirectoryHandle/removeEntry"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="'Promise'"/> which resolves with <c>undefined</c>.</returns>
+</FileSystemDirectoryHandleRemoveEntry>
+</docs>

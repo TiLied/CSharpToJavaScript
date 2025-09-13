@@ -1,0 +1,42 @@
+<docs>
+<ByteLengthQueuingStrategy>
+<summary>
+The <strong><c>ByteLengthQueuingStrategy</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API">Streams API</see> provides a built-in byte length queuing strategy that can be used when constructing streams.
+</summary>
+<remarks>
+<para>-{{domxref(&amp;quot;Streams API&amp;quot;, &amp;quot;Streams API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Concepts#internal_queues_and_queuing_strategies">Internal queues and queuing strategies</see><br/>-<see cref="ByteLengthQueuingStrategy.ByteLengthQueuingStrategy"/> constructor<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ByteLengthQueuingStrategy"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</ByteLengthQueuingStrategy>
+<ByteLengthQueuingStrategySize>
+<summary>
+The <strong><c>size()</c></strong> method of the<br/><see cref="ByteLengthQueuingStrategy"/> interface returns the given chunk's<br/><c>byteLength</c> property.
+</summary>
+<remarks>
+<para>-<see cref="ByteLengthQueuingStrategy.ByteLengthQueuingStrategy"/> constructor<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ByteLengthQueuingStrategy/size"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An integer representing the byte length of the given chunk.</returns>
+</ByteLengthQueuingStrategySize>
+<ByteLengthQueuingStrategyByteLengthQueuingStrategy>
+<summary>
+The <strong><c>ByteLengthQueuingStrategy()</c></strong><br/>constructor creates and returns a <c>ByteLengthQueuingStrategy</c> object<br/>instance.
+</summary>
+<remarks>
+<para>-<see cref="ByteLengthQueuingStrategy"/> interface<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ByteLengthQueuingStrategy/ByteLengthQueuingStrategy"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An instance of the <see cref="ByteLengthQueuingStrategy"/> object.</returns>
+</ByteLengthQueuingStrategyByteLengthQueuingStrategy>
+<ByteLengthQueuingStrategyHighWaterMark>
+<summary>
+The read-only <strong><c>ByteLengthQueuingStrategy.highWaterMark</c></strong> property returns the total number of bytes that can be contained in the internal queue before <see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Concepts#backpressure">backpressure</see> is applied.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Unlike <see href="https://developer.mozilla.org/en-US/docs/Web/API/CountQueuingStrategy/CountQueuingStrategy"><c>CountQueuingStrategy()</c></see> where the <c>highWaterMark</c> property specifies a simple count of the number of chunks, with <c>ByteLengthQueuingStrategy()</c>, the <c>highWaterMark</c> parameter specifies a number of <strong>bytes</strong> — specifically, given a stream of chunks, how many bytes worth of those chunks (rather than a count of how many of those chunks) can be contained in the internal queue before backpressure is applied.</para></blockquote>
+<para>-<see cref="ByteLengthQueuingStrategy.ByteLengthQueuingStrategy"/> constructor<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ByteLengthQueuingStrategy/highWaterMark"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer.</value>
+</ByteLengthQueuingStrategyHighWaterMark>
+</docs>

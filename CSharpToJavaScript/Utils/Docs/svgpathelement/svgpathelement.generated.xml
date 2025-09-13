@@ -1,0 +1,68 @@
+<docs>
+<SVGPathElement>
+<summary>
+The <strong><c>SVGPathElement</c></strong> interface corresponds to the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementpath">path</see> element.
+</summary>
+<remarks>
+<para></para><blockquote class="NOTE"><h5>NOTE</h5><para>In SVG 2 the <c>getPathSegAtLength()</c> and <c>createSVGPathSeg*</c> methods were removed and the <c>pathLength</c> property and the <c>getTotalLength()</c> and <c>getPointAtLength()</c> methods were moved to <see cref="SVGGeometryElement"/>.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementpath">path</see> SVG Element<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGPathElement"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</SVGPathElement>
+<SVGPathElementGetPathData>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>SVGPathElement.getPathData()</c></strong> method returns the sequence of path segments that corresponds to the path data, optionally normalizing the values and segment types.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGPathElement/getPathData"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An array of path segments corresponding to the path data. If no valid path data exists, returns an empty sequence.Each path segment is an object with the following properties:</returns>
+</SVGPathElementGetPathData>
+<SVGPathElementGetPathSegmentAtLength>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>getPathSegmentAtLength()</c></strong> method of the <see cref="SVGPathElement"/> interface returns the path segment at a given distance along the path.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGPathElement/getPathSegmentAtLength"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A path segment object. If no valid segment exists, returns null.Segment object has the following properties:</returns>
+</SVGPathElementGetPathSegmentAtLength>
+<SVGPathElementSetPathData>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>SVGPathElement.setPathData()</c></strong> method sets the sequence of path segments as the new path data.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGPathElement/setPathData"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="'undefined'"/>).</returns>
+</SVGPathElementSetPathData>
+<SVGPathElementPathLength>
+<summary>
+The <strong><c>pathLength</c></strong> read-only property of the <see cref="SVGPathElement"/> interface reflects the {{SVGAttr("pathLength")}} attribute of the given {{SVGelement("path")}} element.
+</summary>
+<remarks>
+<para>-<see cref="SVGGeometryElement.PathLength"/><br/>-pathLength<br/>-<see cref="SVGAnimatedLength"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGPathElement/pathLength"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedNumber"/>.</value>
+</SVGPathElementPathLength>
+<SVGPathElementGetPointAtLength>
+<summary>
+The <strong><c>getPointAtLength()</c></strong> method of the <see cref="SVGPathElement"/> interface returns the point at a given distance along the path.
+</summary>
+<remarks>
+<para>-<see cref="SVGPathElement.GetTotalLength"/><br/>-<see cref="DOMPoint.X"/><br/>-<see cref="DOMPoint.Y"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGPathElement/getPointAtLength"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="DOMPoint"/> indicating the point at a given distance along the path.</returns>
+</SVGPathElementGetPointAtLength>
+<SVGPathElementGetTotalLength>
+<summary>
+The <strong><c>getTotalLength()</c></strong> method of the <see cref="SVGPathElement"/> interface returns the user agent's computed value for the total length of the path in user units.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGPathElement/getTotalLength"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A number indicating the total length of the path in user units.</returns>
+</SVGPathElementGetTotalLength>
+</docs>

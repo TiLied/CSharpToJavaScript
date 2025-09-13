@@ -1,0 +1,31 @@
+<docs>
+<PaintWorkletGlobalScope>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>PaintWorkletGlobalScope</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Painting_API">CSS Painting API</see> represents the global object available inside a paint <see cref="Worklet"/>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Painting_API/Guide">Using the CSS Painting API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Painting_API">CSS Painting API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Houdini_APIs">Houdini APIs</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaintWorkletGlobalScope"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</PaintWorkletGlobalScope>
+<PaintWorkletGlobalScopeDevicePixelRatio>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>devicePixelRatio</c></strong> read-only property of the <see cref="PaintWorkletGlobalScope"/> interface returns the current device's ratio of physical pixels to logical pixels.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS/paintWorklet_static">CSS.paintWorklet</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Worklet">Worklet</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Painting_API">CSS Painting API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Houdini_APIs">Houdini APIs</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Window/devicePixelRatio">window.devicePixelRatio</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaintWorkletGlobalScope/devicePixelRatio"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A double-precision integer.</value>
+</PaintWorkletGlobalScopeDevicePixelRatio>
+<PaintWorkletGlobalScopeRegisterPaint>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>registerPaint()</c></strong> method of the<br/><see cref="PaintWorkletGlobalScope"/> interface registers a class to programmatically generate an<br/>image where a CSS property expects a file.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Painting_API">CSS Painting API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Houdini_APIs">Houdini APIs</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PaintWorkletGlobalScope/registerPaint"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</PaintWorkletGlobalScopeRegisterPaint>
+</docs>

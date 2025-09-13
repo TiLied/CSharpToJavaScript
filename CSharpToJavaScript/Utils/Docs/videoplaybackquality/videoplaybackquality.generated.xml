@@ -1,0 +1,61 @@
+<docs>
+<VideoPlaybackQuality>
+<summary>
+A <strong><c>VideoPlaybackQuality</c></strong> object is returned by the <see cref="HTMLVideoElement.GetVideoPlaybackQuality"/> method and contains metrics that can be used to determine the playback quality of a video.
+</summary>
+<remarks>
+<para>-The <see cref="HTMLVideoElement.GetVideoPlaybackQuality"/> method to get a <c>VideoPlaybackQuality</c> object<br/>-<see cref="MediaSource"/><br/>-<see cref="SourceBuffer"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoPlaybackQuality"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</VideoPlaybackQuality>
+<VideoPlaybackQualityTotalVideoFrames>
+<summary>
+The <see cref="VideoPlaybackQuality"/> interface's<br/><strong><c>totalVideoFrames</c></strong> read-only property returns the total<br/>number of video frames that have been displayed or dropped since the media was<br/>loaded.
+</summary>
+<remarks>
+<para>-The <see cref="HTMLVideoElement.GetVideoPlaybackQuality"/> method for<br/>constructing and returning this interface.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoPlaybackQuality/totalVideoFrames"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The total number of frames that the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">video</see> element has displayed or<br/>dropped since the media was loaded into it. Essentially, this is the number of frames<br/>the element <strong>would have presented</strong> had no problems occurred.This value is reset when the media is reloaded or replaced.</value>
+</VideoPlaybackQualityTotalVideoFrames>
+<VideoPlaybackQualityTotalFrameDelay>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>VideoPlaybackQuality.totalFrameDelay</c></strong> read-only<br/>property returns a <c>double</c> containing the sum of the frame delay since the<br/>creation of the associated <see cref="HTMLVideoElement"/>. The frame delay is the<br/>difference between a frame&amp;apos;s theoretical presentation time and its effective display<br/>time.
+</summary>
+<remarks>
+<para>-The <see cref="HTMLVideoElement.GetVideoPlaybackQuality"/> method for<br/>constructing and returning this interface.<br/>-<see cref="MediaSource"/><br/>-<see cref="SourceBuffer"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoPlaybackQuality/totalFrameDelay"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</VideoPlaybackQualityTotalFrameDelay>
+<VideoPlaybackQualityDroppedVideoFrames>
+<summary>
+The read-only <strong><c>droppedVideoFrames</c></strong><br/>property of the <see cref="VideoPlaybackQuality"/> interface returns the number of<br/>video frames which have been dropped rather than being displayed since the last time<br/>the media was loaded into the <see cref="HTMLVideoElement"/>.
+</summary>
+<remarks>
+<para>-The <see cref="HTMLVideoElement.GetVideoPlaybackQuality"/> method, which creates<br/>and returns <c>VideoPlaybackQuality</c> objects<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoPlaybackQuality/droppedVideoFrames"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An unsigned 64-bit value indicating the number of frames that have been dropped since<br/>the last time the media in the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">video</see> element was loaded or reloaded.<br/>This information can be used to determine whether or not to downgrade the video stream<br/>to avoid dropping frames.Frames are typically dropped either before or after decoding them, when it&amp;apos;s determined<br/>that it will not be possible to draw them to the screen at the correct time.</value>
+</VideoPlaybackQualityDroppedVideoFrames>
+<VideoPlaybackQualityCorruptedVideoFrames>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <see cref="VideoPlaybackQuality"/> interface's read-only<br/><strong><c>corruptedVideoFrames</c></strong> property the number of corrupted<br/>video frames that have been received since the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">video</see> element was<br/>last loaded or reloaded.
+</summary>
+<remarks>
+<para>-The <see cref="HTMLVideoElement.GetVideoPlaybackQuality"/> method for<br/>constructing and returning this interface<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoPlaybackQuality/corruptedVideoFrames"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The number of corrupted video frames that have been received since the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">video</see> element was last loaded or reloaded.It is up to the <see href="https://developer.mozilla.org/en-US/docs/Glossary/user agent">user agent</see> to determine whether or not to display a<br/>corrupted video frame. If a corrupted frame is dropped, then both<br/><c>corruptedVideoFrames</c> and<br/><see cref="VideoPlaybackQuality.DroppedVideoFrames"/> are<br/>incremented.</value>
+</VideoPlaybackQualityCorruptedVideoFrames>
+<VideoPlaybackQualityCreationTime>
+<summary>
+The read-only <strong><c>creationTime</c></strong> property on the<br/><see cref="VideoPlaybackQuality"/> interface reports the number of milliseconds since<br/>the browsing context was created this quality sample was recorded.
+</summary>
+<remarks>
+<para>-The <see cref="HTMLVideoElement.GetVideoPlaybackQuality"/> method, which<br/>returns <c>VideoPlaybackQuality</c> objects<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoPlaybackQuality/creationTime"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DOMHighResTimeStamp"/> object which indicates the number of milliseconds<br/>that elapsed between the time the browsing context was created and the time at which<br/>this sample of the video quality was obtained.For details on how the time is determined, see <see cref="Performance.Now"/>.</value>
+</VideoPlaybackQualityCreationTime>
+</docs>

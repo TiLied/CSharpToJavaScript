@@ -1,0 +1,42 @@
+<docs>
+<CommandEvent>
+<summary>
+The <strong><c>CommandEvent</c></strong> interface represents an event notifying the user when a <see cref="HTMLButtonElement"/> element with valid <see cref="HTMLButtonElement.CommandForElement"/> and <see cref="HTMLButtonElement.Command"/> attributes is about to invoke an interactive element.
+</summary>
+<remarks>
+<para>This is the event object for the <c>HTMLElement</c> <see cref="HTMLElement.Command"/> event, which represents an action from an Invoker Control when it is invoked (for example when it is clicked or pressed).</para><para></para>
+<para>-{{domxref(&amp;quot;Invoker Commands API&amp;quot;, &amp;quot;Invoker Commands API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see cref="HTMLButtonElement.Command"/><br/>-<see cref="HTMLButtonElement.CommandForElement"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CommandEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CommandEvent>
+<CommandEventSource>
+<summary>
+The <strong><c>source</c></strong> read-only property of the <see cref="CommandEvent"/> interface returns an <see cref="EventTarget"/> representing the control that invoked the given command.
+</summary>
+<remarks>
+<para>-{{domxref(&amp;quot;Invoker Commands API&amp;quot;, &amp;quot;Invoker Commands API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see cref="HTMLButtonElement.Command"/><br/>-<see cref="HTMLButtonElement.CommandForElement"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CommandEvent/source"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="EventTarget"/> object. Usually an <see cref="HTMLButtonElement"/>.</value>
+</CommandEventSource>
+<CommandEventCommandEvent>
+<summary>
+The <strong><c>CommandEvent()</c></strong> constructor creates a new <see cref="CommandEvent"/> object.
+</summary>
+<remarks>
+<para>-{{domxref(&amp;quot;Invoker Commands API&amp;quot;, &amp;quot;Invoker Commands API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see cref="HTMLButtonElement.Command"/><br/>-<see cref="HTMLButtonElement.CommandForElement"/><br/>-<see cref="CommandEvent"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CommandEvent/CommandEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="CommandEvent"/> object.</returns>
+</CommandEventCommandEvent>
+<CommandEventCommand>
+<summary>
+The <strong><c>command</c></strong> read-only property of the <see cref="CommandEvent"/> interface returns a string containing the value of the <see cref="HTMLButtonElement.Command"/> property at the time the event was dispatched.
+</summary>
+<remarks>
+<para>-{{domxref(&amp;quot;Invoker Commands API&amp;quot;, &amp;quot;Invoker Commands API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see cref="HTMLButtonElement.Command"/><br/>-<see cref="HTMLButtonElement.CommandForElement"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CommandEvent/command"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</CommandEventCommand>
+</docs>

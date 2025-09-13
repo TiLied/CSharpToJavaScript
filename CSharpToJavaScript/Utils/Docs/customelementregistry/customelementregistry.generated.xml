@@ -1,0 +1,56 @@
+<docs>
+<CustomElementRegistry>
+<summary>
+The <strong><c>CustomElementRegistry</c></strong> interface provides methods for registering custom elements and querying registered elements. To get an instance of it, use the <see cref="Window.CustomElements"/> property.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CustomElementRegistry"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CustomElementRegistry>
+<CustomElementRegistryGetName>
+<summary>
+The <strong><c>getName()</c></strong> method of the<br/><see cref="CustomElementRegistry"/> interface returns the name for a<br/>previously-defined custom element.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CustomElementRegistry/getName"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>The name for the previously defined custom element, or <c>null</c> if there is no custom element defined with the constructor.</returns>
+</CustomElementRegistryGetName>
+<CustomElementRegistryGet>
+<summary>
+The <strong><c>get()</c></strong> method of the<br/><see cref="CustomElementRegistry"/> interface returns the constructor for a<br/>previously-defined custom element.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CustomElementRegistry/get"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>The constructor for the named custom element, or <see cref="Undefined"/> if there is no custom element defined with the name.</returns>
+</CustomElementRegistryGet>
+<CustomElementRegistryUpgrade>
+<summary>
+The <strong><c>upgrade()</c></strong> method of the<br/><see cref="CustomElementRegistry"/> interface upgrades all shadow-containing custom<br/>elements in a <see cref="Node"/> subtree, even before they are connected to the main<br/>document.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CustomElementRegistry/upgrade"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</CustomElementRegistryUpgrade>
+<CustomElementRegistryDefine>
+<summary>
+The <strong><c>define()</c></strong> method of the <see cref="CustomElementRegistry"/> interface adds a definition for a custom element to the custom element registry, mapping its name to the constructor which will be used to create it.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements">Using custom elements</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CustomElementRegistry/define"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</CustomElementRegistryDefine>
+<CustomElementRegistryWhenDefined>
+<summary>
+The <strong><c>whenDefined()</c></strong> method of the<br/><see cref="CustomElementRegistry"/> interface returns a {{jsxref("Promise")}} that<br/>resolves when the named element is defined.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CustomElementRegistry/whenDefined"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that fulfills with the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements">custom element</see>&amp;apos;s constructor when a custom element becomes defined with the given name. If a custom element has already been defined with the name, the promise will immediately fulfill.The promise is rejected with a <c>SyntaxError</c> <see cref="DOMException"/> if the name is not a <see href="https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name">valid custom element name</see>.</returns>
+</CustomElementRegistryWhenDefined>
+</docs>

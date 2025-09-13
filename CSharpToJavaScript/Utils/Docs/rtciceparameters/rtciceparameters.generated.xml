@@ -1,0 +1,29 @@
+<docs>
+<RTCIceParameters>
+<summary>
+The <strong><c>RTCIceParameters</c></strong> dictionary specifies the username fragment and password assigned to an <see href="https://developer.mozilla.org/en-US/docs/Glossary/ICE">ICE</see> session.
+</summary>
+<remarks>
+<para>During ICE negotiation, each peer&amp;apos;s username fragment and password are recorded in an <c>RTCIceParameters</c> object, which can be obtained from the <see cref="RTCIceTransport"/> by calling its <see cref="RTCIceTransport.GetLocalParameters"/> or <see cref="RTCIceTransport.GetRemoteParameters"/> method, depending on which end interests you.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceParameters"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RTCIceParameters>
+<RTCIceParametersPassword>
+<summary>
+The <strong><see cref="RTCIceParameters"/></strong><br/>dictionary&amp;apos;s <strong><c>password</c></strong> property specifies the ICE<br/>password that, in tandem with the <see cref="RTCIceParameters.UsernameFragment"/>, uniquely identifies an ICE session for its entire<br/>duration.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceParameters/password"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing the password that corresponds to the transport&amp;apos;s<br/><c>usernameFragment</c> string</value>
+</RTCIceParametersPassword>
+<RTCIceParametersUsernameFragment>
+<summary>
+The <strong><see cref="RTCIceParameters"/></strong> dictionary&amp;apos;s<br/><strong><c>usernameFragment</c></strong> property specifies the username fragment<br/>(&amp;quot;ufrag&amp;quot;) that uniquely identifies the corresponding ICE session for the duration of the<br/>current ICE session.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceParameters/usernameFragment"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing the username fragment that, in tandem with the<br/><see cref="RTCIceParameters.Password"/>, uniquely identify the ICE session<br/>being used by the transport. The string may be up to 256 characters long.See <see cref="RTCIceCandidate.UsernameFragment"/> to learn more about username<br/>fragments and their role in a connection.</value>
+</RTCIceParametersUsernameFragment>
+</docs>

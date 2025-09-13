@@ -1,0 +1,36 @@
+<docs>
+<CSSVariableReferenceValue>
+<summary>
+The <strong><c>CSSVariableReferenceValue</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model">CSS Typed Object Model API</see> allows you to create a custom name for a built-in CSS value. This object functionality is sometimes called a "CSS variable" and serves the same purpose as the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/var">var</see> function. The custom name must begin with two dashes.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSVariableReferenceValue"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CSSVariableReferenceValue>
+<CSSVariableReferenceValueVariable>
+<summary>
+The <strong><c>variable</c></strong> property of the<br/><see cref="CSSVariableReferenceValue"/> interface returns the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/--*">custom property name</see> of the<br/><see cref="CSSVariableReferenceValue"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSVariableReferenceValue/variable"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string beginning with <c>--</c> (that is, a <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/--*">custom property name</see>).</value>
+</CSSVariableReferenceValueVariable>
+<CSSVariableReferenceValueFallback>
+<summary>
+The <strong><c>fallback</c></strong> read-only property of the<br/><see cref="CSSVariableReferenceValue"/> interface returns the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties#custom_property_fallback_values">custom property fallback value</see> of the <see cref="CSSVariableReferenceValue"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSVariableReferenceValue/fallback"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="'CSSUnparsedValue'"/>.</value>
+</CSSVariableReferenceValueFallback>
+<CSSVariableReferenceValueCSSVariableReferenceValue>
+<summary>
+Creates a new <see cref="'CSSVariableReferenceValue'"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSVariableReferenceValue/CSSVariableReferenceValue"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CSSVariableReferenceValueCSSVariableReferenceValue>
+</docs>

@@ -1,0 +1,195 @@
+<docs>
+<RTCTransportStats>
+<summary>
+The <strong><c>RTCTransportStats</c></strong> dictionary of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see> provides information about the transport (<see cref="RTCDtlsTransport"/> and its underlying <see cref="RTCIceTransport"/>) used by a particular candidate pair.
+</summary>
+<remarks>
+<para>The <strong>BUNDLE</strong> feature is an SDP extension that allows negotiation to use a single transport for sending and receiving media described by multiple SDP media descriptions.<br/>If the remote endpoint is aware of this feature, all <see cref="MediaStreamTrack"/> and data channels are bundled onto a single transport at the completion of negotiation.<br/>This is true for current browsers, but if connecting to an older endpoint that is not BUNDLE-aware, then separate transports might be used for different media.<br/>The policy to use in the negotiation is configured in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/RTCPeerConnection"><c>RTCPeerConnection</c> constructor</see>.</para><para>These statistics can be obtained by iterating the <see cref="RTCStatsReport"/> returned by <see cref="RTCPeerConnection.GetStats"/> until you find a report with the <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTransportStats/type"><c>type</c></see> of <c>transport</c>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTransportStats"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RTCTransportStats>
+<RTCTransportStatsIceState>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>iceState</c></strong> property of the <see cref="RTCTransportStats"/> dictionary is a string that indicates the current ICE state of the underlying <see cref="RTCIceTransport"/>.
+</summary>
+<remarks>
+<para>This has the same value as the corresponding <see cref="RTCIceTransport.State"/> property.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTransportStats/iceState"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string that will be one of the following values: <c>new</c>, <c>checking</c>, <c>connected</c>, <c>completed</c>, <c>disconnected</c>, <c>failed</c>, or <c>closed</c>.</value>
+</RTCTransportStatsIceState>
+<RTCTransportStatsBytesSent>
+<summary>
+The <strong><c>bytesSent</c></strong> property of the <see cref="RTCTransportStats"/> dictionary indicates the total number of payload bytes sent on this transport.
+</summary>
+<remarks>
+<para>Only data bytes are counted; overhead such as padding, headers, and so on are not included in this count.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTransportStats/bytesSent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A positive integer indicating the number of sent payload bytes.</value>
+</RTCTransportStatsBytesSent>
+<RTCTransportStatsBytesReceived>
+<summary>
+The <strong><c>bytesReceived</c></strong> property of the <see cref="RTCTransportStats"/> dictionary indicates the total number of payload bytes received on this transport.
+</summary>
+<remarks>
+<para>Only data bytes are counted; overhead such as padding, headers, and so on are not included in this count.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTransportStats/bytesReceived"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A positive integer indicating the number of received payload bytes.</value>
+</RTCTransportStatsBytesReceived>
+<RTCTransportStatsSelectedCandidatePairId>
+<summary>
+The <strong><c>selectedCandidatePairId</c></strong> property of the <see cref="RTCTransportStats"/> dictionary represents the unique identifier for the candidate pair stats associated with this transport.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTransportStats/selectedCandidatePairId"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string that contains the unique identifier for the object that was inspected to produce the <see cref="RTCIceCandidatePairStats"/> associated with this transport.</value>
+</RTCTransportStatsSelectedCandidatePairId>
+<RTCTransportStatsIceLocalUsernameFragment>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>iceLocalUsernameFragment</c></strong> property of the <see cref="RTCTransportStats"/> dictionary is a string that indicates the local username fragment ("ufrag" or "ice-ufrag") that uniquely identifies the ICE interaction session managed by this transport.
+</summary>
+<remarks>
+<para>The same username fragment is used to identify the session for any communication with the STUN server.</para><para>This has the same values as the corresponding local <see cref="RTCIceCandidate.UsernameFragment"/> property.<br/>It will change if the connection is renegotiated, for example on ICE restart, or if <see cref="RTCPeerConnection.SetLocalDescription"/> is called.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTransportStats/iceLocalUsernameFragment"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing the username fragment that uniquely identifies the ongoing ICE session on the transport.The string may be up to 256 characters long, and has no default value.</value>
+</RTCTransportStatsIceLocalUsernameFragment>
+<RTCTransportStatsDtlsRole>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>dtlsRole</c></strong> property of the <see cref="RTCTransportStats"/> dictionary is a string that indicates the role of the associated <see cref="RTCPeerConnection"/> in the DTLS negotiation.
+</summary>
+<remarks>
+<para>Specifically, whether it acted like a server and listened for connections, or like a client and initiated the connection, or that negotiation has not yet started.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTransportStats/dtlsRole"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string indicating the DTLS role.<br/>This will be one of:</value>
+</RTCTransportStatsDtlsRole>
+<RTCTransportStatsRemoteCertificateId>
+<summary>
+The <strong><c>remoteCertificateId</c></strong> property of the <see cref="RTCTransportStats"/> dictionary is a string that indicates the id of the remote certificate used by this <see cref="RTCIceTransport"/>.
+</summary>
+<remarks>
+<para>It is only present for DTLS transports, and after DTLS has been negotiated.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTransportStats/remoteCertificateId"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string that containing the id of the remote certificate used by this transport.</value>
+</RTCTransportStatsRemoteCertificateId>
+<RTCTransportStatsSelectedCandidatePairChanges>
+<summary>
+The <strong><c>selectedCandidatePairChanges</c></strong> property of the <see cref="RTCTransportStats"/> dictionary indicates the total number of times that the selected candidate pair of this transport has changed.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTransportStats/selectedCandidatePairChanges"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A positive integer that is initially zero and increases whenever a candidate pair is selected or lost.</value>
+</RTCTransportStatsSelectedCandidatePairChanges>
+<RTCTransportStatsLocalCertificateId>
+<summary>
+The <strong><c>localCertificateId</c></strong> property of the <see cref="RTCTransportStats"/> dictionary is a string that indicates the id of the local certificate used by this <see cref="RTCIceTransport"/>.
+</summary>
+<remarks>
+<para>It is only present for DTLS transports, and after DTLS has been negotiated.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTransportStats/localCertificateId"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string that containing the id of the local certificate used by this transport.</value>
+</RTCTransportStatsLocalCertificateId>
+<RTCTransportStatsPacketsReceived>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>packetsReceived</c></strong> property of the <see cref="RTCTransportStats"/> dictionary indicates the total number of packets received on this transport.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTransportStats/packetsReceived"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A positive integer indicating the number of packets received on the transport.</value>
+</RTCTransportStatsPacketsReceived>
+<RTCTransportStatsIceRole>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>iceRole</c></strong> property of the <see cref="RTCTransportStats"/> dictionary is a string that indicates the ICE role that the transport is fulfilling: that of the controlling agent, or the agent that is being controlled.
+</summary>
+<remarks>
+<para>This has the same value as the <see cref="RTCIceTransport.Role"/> property of the underlying <see cref="RTCDtlsTransport.IceTransport"/>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTransportStats/iceRole"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string that will be one of the following values: <c>controlled</c>, <c>controlling</c>, or <c>unknown</c>.</value>
+</RTCTransportStatsIceRole>
+<RTCTransportStatsPacketsSent>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>packetsSent</c></strong> property of the <see cref="RTCTransportStats"/> dictionary indicates the total number of packets sent over this transport.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTransportStats/packetsSent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A positive integer indicating the number of packets sent on the transport.</value>
+</RTCTransportStatsPacketsSent>
+<RTCTransportStatsType>
+<summary>
+The <strong><c>type</c></strong> property of the <see cref="RTCTransportStats"/> dictionary is a string with the value <c>&amp;quot;transport&amp;quot;</c>.
+</summary>
+<remarks>
+<para>Different statistics are obtained by iterating the <see cref="RTCStatsReport"/> object returned by a call to <see cref="RTCPeerConnection.GetStats"/>.<br/>The type indicates the set of statistics available through the object in a particular iteration step.<br/>A value of <c>&amp;quot;transport&amp;quot;</c> indicates that the statistics available in the current step are those defined in <see cref="RTCTransportStats"/>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTransportStats/type"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string with the value <c>&amp;quot;transport&amp;quot;</c>.</value>
+</RTCTransportStatsType>
+<RTCTransportStatsTlsVersion>
+<summary>
+The <strong><c>tlsVersion</c></strong> property of the <see cref="RTCTransportStats"/> dictionary indicates the negotiated TLS version of an underlying DTLS transport.
+</summary>
+<remarks>
+<para>It is only present for DTLS transports, and only exists after DTLS has been negotiated.</para><para>The value comes from the DTLS handshake <c>ServerHello.version</c>, and is represented as four upper case hexadecimal digits, where the digits represent the two bytes of the version.<br/>Note however that the bytes might not map directly to version numbers.<br/>For example, DTLS represents version 1.2 as <c>&amp;apos;FEFD&amp;apos;</c> which numerically is <c>{254, 253}</c>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTransportStats/tlsVersion"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string that indicates the negotiated DTS transport.</value>
+</RTCTransportStatsTlsVersion>
+<RTCTransportStatsDtlsCipher>
+<summary>
+The <strong><c>dtlsCipher</c></strong> property of the <see cref="RTCTransportStats"/> dictionary is a string that indicates the descriptive name of the cipher suite used for the DTLS transport.
+</summary>
+<remarks>
+<para>Allowed names are defined in the &amp;quot;Description&amp;quot; column of the <see href="https://www.iana.org/assignments/tls-parameters/tls-parameters.xhtml#table-tls-parameters-4">TLS Cipher Suites</see> section in the <strong>IANA cipher suite registry</strong>.<br/>For example <c>&amp;quot;TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256&amp;quot;</c>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTransportStats/dtlsCipher"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string indicating the name of the DTLS cipher.</value>
+</RTCTransportStatsDtlsCipher>
+<RTCTransportStatsId>
+<summary>
+The <strong><c>id</c></strong> property of the <see cref="RTCTransportStats"/> dictionary is a string which uniquely identifies the object for which this object provides statistics.
+</summary>
+<remarks>
+<para>Using the <c>id</c>, you can correlate this statistics object with others, in order to monitor statistics over time for a given WebRTC object, such as an <see cref="RTCDtlsTransport"/>, or an <see cref="RTCPeerConnection"/>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTransportStats/id"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string that uniquely identifies the object for which this <c>RTCTransportStats</c> object provides statistics.The format of the ID string is not defined by the specification, so you cannot reliably make any assumptions about the contents of the string, or assume that the format of the string will remain unchanged for a given object type.</value>
+</RTCTransportStatsId>
+<RTCTransportStatsTimestamp>
+<summary>
+The <strong><c>timestamp</c></strong> property of the <see cref="RTCTransportStats"/> dictionary is a <see cref="DOMHighResTimeStamp"/> object specifying the time at which the data in the object was sampled.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTransportStats/timestamp"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DOMHighResTimeStamp"/> value indicating the time at which the activity described by the statistics in this object was recorded, in milliseconds elapsed since the beginning of January 1, 1970, UTC.The value should be accurate to within a few milliseconds but may not be entirely precise, either because of hardware or operating system limitations or because of <see href="https://developer.mozilla.org/en-US/docs/Glossary/Fingerprinting">fingerprinting</see> protection in the form of reduced clock precision or accuracy.</value>
+</RTCTransportStatsTimestamp>
+<RTCTransportStatsSrtpCipher>
+<summary>
+The <strong><c>srtpCipher</c></strong> property of the <see cref="RTCTransportStats"/> dictionary indicates the descriptive name of the protection profile used for the <see href="https://developer.mozilla.org/en-US/docs/Glossary/RTP">Secure Real-time Transport Protocol (SRTP)</see> transport.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTransportStats/srtpCipher"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string that indicates the descriptive name of the SRTP protection profile.Values are defined in the &amp;quot;Profile&amp;quot; column of the <see href="https://www.iana.org/assignments/srtp-protection/srtp-protection.xhtml#srtp-protection-1">IANA DTLS-SRTP protection profile registry</see> and {{rfc(&amp;quot;5764&amp;quot;,&amp;quot;&amp;quot;, &amp;quot;4.1.2&amp;quot;)}}.</value>
+</RTCTransportStatsSrtpCipher>
+<RTCTransportStatsDtlsState>
+<summary>
+The <strong><c>dtlsState</c></strong> property of the <see cref="RTCTransportStats"/> dictionary is a string that indicates the current state of the underlying <see cref="RTCDtlsTransport"/>.
+</summary>
+<remarks>
+<para>This has the same value as the corresponding <see cref="RTCDtlsTransport.State"/> property.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTransportStats/dtlsState"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string that will be one of the following values: <c>new</c>, <c>connecting</c>, <c>connected</c>, <c>closed</c>, <c>failed</c>.</value>
+</RTCTransportStatsDtlsState>
+</docs>

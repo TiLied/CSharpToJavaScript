@@ -1,0 +1,31 @@
+<docs>
+<SVGAnimatedLength>
+<summary>
+The <strong><c>SVGAnimatedLength</c></strong> interface represents attributes of type <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length">&amp;lt;length&amp;gt;</see> which can be animated.
+</summary>
+<remarks>
+<para>-<see cref="SVGLength"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAnimatedLength"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</SVGAnimatedLength>
+<SVGAnimatedLengthBaseVal>
+<summary>
+The <strong><c>baseVal</c></strong> property of the <see cref="SVGAnimatedLength"/> interface contains the initial value of an SVG enumeration.
+</summary>
+<remarks>
+<para>-<see cref="SVGAnimatedLength.AnimVal"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAnimatedLength/baseVal"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGLength"/> containing the initial value of the length.</value>
+</SVGAnimatedLengthBaseVal>
+<SVGAnimatedLengthAnimVal>
+<summary>
+The <strong><c>animVal</c></strong> property of the <see cref="SVGAnimatedLength"/> interface contains the current value of an SVG enumeration. If there is no animation, it is the same value as the <see cref="SVGAnimatedLength.BaseVal"/>.
+</summary>
+<remarks>
+<para>-<see cref="SVGAnimatedLength.BaseVal"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAnimatedLength/animVal"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGLength"/> containing the current value of the enumeration.</value>
+</SVGAnimatedLengthAnimVal>
+</docs>

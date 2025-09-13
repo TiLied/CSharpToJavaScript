@@ -1,0 +1,752 @@
+<docs>
+<WebGL2RenderingContext>
+<summary>
+The <strong>WebGL2RenderingContext</strong> interface provides the OpenGL ES 3.0 rendering context for the drawing surface of an HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas">canvas</see> element.
+</summary>
+<remarks>
+<para>To get an object of this interface, call <see cref="HTMLCanvasElement.GetContext"/> on a <c>&amp;lt;canvas&amp;gt;</c> element, supplying &amp;quot;webgl2&amp;quot; as the argument:</para><blockquote class="NOTE"><h5>NOTE</h5><para>WebGL 2 is an extension to WebGL 1. The <c>WebGL2RenderingContext</c> interface implements all members of the <see cref="WebGLRenderingContext"/> interface. Some methods of the WebGL 1 context can accept additional values when used in a WebGL 2 context. You will find this info noted on the WebGL 1 reference pages.</para></blockquote><para>The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</see> has more information, examples, and resources on how to get started with WebGL.</para>
+<para>-<see cref="HTMLCanvasElement"/><br/>-<see cref="WebGLRenderingContext"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebGL2RenderingContext>
+<WebGL2RenderingContextVertexAttribI>
+<summary>
+The <strong><c>WebGL2RenderingContext.vertexAttribI4[u]i[v]()</c></strong><br/>methods of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> specify integer<br/>values for generic vertex attributes.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.GetVertexAttrib"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/vertexAttribI"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGL2RenderingContextVertexAttribI>
+<WebGL2RenderingContextDeleteQuery>
+<summary>
+The <strong><c>WebGL2RenderingContext.deleteQuery()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> deletes a given<br/><see cref="WebGLQuery"/> object.
+</summary>
+<remarks>
+<para>-<see cref="WebGLQuery"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/deleteQuery"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGL2RenderingContextDeleteQuery>
+<WebGL2RenderingContextTexImage3D>
+<summary>
+The <strong><c>texImage3D()</c></strong> method of the <see cref="WebGL2RenderingContext"/> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> specifies a three-dimensional texture image.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.CreateTexture"/><br/>-<see cref="WebGLRenderingContext.BindTexture"/><br/>-<see cref="WebGL2RenderingContext.TexSubImage3D"/><br/>-<see cref="WebGL2RenderingContext.CompressedTexImage3D"/><br/>-<see cref="WebGL2RenderingContext.CopyTexSubImage3D"/><br/>-<see cref="WebGLRenderingContext.GetTexParameter"/><br/>-<see cref="WEBGL_depth_texture"/><br/>-<see cref="OES_texture_float"/><br/>-<see cref="OES_texture_half_float"/><br/>-<see cref="EXT_texture_norm16"/><br/>-<see cref="EXT_sRGB"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texImage3D"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGL2RenderingContextTexImage3D>
+<WebGL2RenderingContextCompressedTexImage3D>
+<summary>
+The <strong><c>compressedTexImage3D()</c></strong> method of the <see cref="WebGL2RenderingContext"/> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> specifies a three-dimensional texture image in a compressed format.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Using_Extensions">Using WebGL extensions</see><br/>-<see cref="WebGLRenderingContext.GetExtension"/><br/>-<see cref="WebGL2RenderingContext.CompressedTexSubImage3D"/><br/>-<see cref="WebGLRenderingContext.CompressedTexSubImage2D"/><br/>-<see cref="WebGLRenderingContext.CompressedTexImage2D"/><br/>-<see cref="WEBGL_compressed_texture_s3tc"/><br/>-<see cref="WEBGL_compressed_texture_s3tc_srgb"/><br/>-<see cref="WEBGL_compressed_texture_etc"/><br/>-<see cref="WEBGL_compressed_texture_pvrtc"/><br/>-<see cref="WEBGL_compressed_texture_etc1"/><br/>-<see cref="WEBGL_compressed_texture_astc"/><br/>-<see cref="EXT_texture_compression_bptc"/><br/>-<see cref="EXT_texture_compression_rgtc"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/compressedTexImage3D"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGL2RenderingContextCompressedTexImage3D>
+<WebGL2RenderingContextGetQueryParameter>
+<summary>
+The <strong><c>WebGL2RenderingContext.getQueryParameter()</c></strong> method of<br/>the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> returns parameter<br/>information of a <see cref="WebGLQuery"/> object.
+</summary>
+<remarks>
+<para>-<see cref="WebGLQuery"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getQueryParameter"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Depends on the <c>pname</c> parameter, either a <see cref="WebGL_APITypes"/> or a<br/><see cref="WebGL_APITypes"/>.</returns>
+</WebGL2RenderingContextGetQueryParameter>
+<WebGL2RenderingContextUniformMatrix>
+<summary>
+The <strong><c>WebGL2RenderingContext.uniformMatrix[234]x[234]fv()</c></strong><br/>methods of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> specify matrix<br/>values for uniform variables.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>There are no <c>2x2</c>, <c>3x3</c>, and <c>4x4</c> versions of<br/>this method. They are abbreviated in <c>2</c>, <c>3</c>, and<br/><c>4</c>, respectively. See the syntax below.</para></blockquote>
+<para>-<see cref="WebGLRenderingContext.UniformMatrix"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/uniformMatrix"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGL2RenderingContextUniformMatrix>
+<WebGL2RenderingContextTransformFeedbackVaryings>
+<summary>
+The <strong><c>WebGL2RenderingContext.transformFeedbackVaryings()</c></strong><br/>method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> specifies values<br/>to record in <see cref="WebGLTransformFeedback"/> buffers.
+</summary>
+<remarks>
+<para>-<see cref="WebGLTransformFeedback"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/transformFeedbackVaryings"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGL2RenderingContextTransformFeedbackVaryings>
+<WebGL2RenderingContextBlitFramebuffer>
+<summary>
+The <strong><c>WebGL2RenderingContext.blitFramebuffer()</c></strong> method of<br/>the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> transfers a block of pixels<br/>from the read framebuffer to the draw framebuffer. Read and draw framebuffers are bound<br/>using <see cref="WebGLRenderingContext.BindFramebuffer"/>.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.BindFramebuffer"/><br/>-<see cref="WebGLRenderingContext.GetRenderbufferParameter"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/blitFramebuffer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGL2RenderingContextBlitFramebuffer>
+<WebGL2RenderingContextGetBufferSubData>
+<summary>
+The <strong><c>WebGL2RenderingContext.getBufferSubData()</c></strong> method of<br/>the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> reads data from a buffer<br/>binding point and writes them to an <see cref="ArrayBuffer"/> or<br/><see cref="SharedArrayBuffer"/>.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.BufferData"/><br/>-<see cref="WebGLRenderingContext.BufferSubData"/><br/>-<see cref="WebGLRenderingContext.GetBufferParameter"/><br/>-<see cref="WebGL2RenderingContext.CopyBufferSubData"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getBufferSubData"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGL2RenderingContextGetBufferSubData>
+<WebGL2RenderingContextRenderbufferStorageMultisample>
+<summary>
+The<br/><strong><c>WebGL2RenderingContext.renderbufferStorageMultisample()</c></strong><br/>method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> returns creates<br/>and initializes a renderbuffer object&amp;apos;s data store and allows specifying a number of<br/>samples to be used.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.RenderbufferStorage"/><br/>-<see cref="WebGLRenderingContext.BindRenderbuffer"/><br/>-<see cref="WebGLRenderingContext.CreateRenderbuffer"/><br/>-<see cref="WebGLRenderingContext.DeleteRenderbuffer"/><br/>-<see cref="WebGLRenderingContext.GetRenderbufferParameter"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/renderbufferStorageMultisample"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGL2RenderingContextRenderbufferStorageMultisample>
+<WebGL2RenderingContextPauseTransformFeedback>
+<summary>
+The <strong><c>WebGL2RenderingContext.pauseTransformFeedback()</c></strong><br/>method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> pauses a transform<br/>feedback operation.
+</summary>
+<remarks>
+<para>-<see cref="WebGLTransformFeedback"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/pauseTransformFeedback"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGL2RenderingContextPauseTransformFeedback>
+<WebGL2RenderingContextBindBufferRange>
+<summary>
+The <strong><c>WebGL2RenderingContext.bindBufferRange()</c></strong> method of<br/>the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> binds a range of a given<br/><see cref="WebGLBuffer"/> to a given binding point (<c>target</c>) at a given<br/><c>index</c>.
+</summary>
+<remarks>
+<para>-<see cref="WebGL2RenderingContext.BindBufferBase"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/bindBufferRange"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGL2RenderingContextBindBufferRange>
+<WebGL2RenderingContextResumeTransformFeedback>
+<summary>
+The <strong><c>WebGL2RenderingContext.resumeTransformFeedback()</c></strong><br/>method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> resumes a<br/>transform feedback operation.
+</summary>
+<remarks>
+<para>-<see cref="WebGLTransformFeedback"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/resumeTransformFeedback"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGL2RenderingContextResumeTransformFeedback>
+<WebGL2RenderingContextDrawBuffers>
+<summary>
+The <strong><c>WebGL2RenderingContext.drawBuffers()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> defines draw buffers to which<br/>fragment colors are written into. The draw buffer settings are part of the state of the<br/>currently bound framebuffer or the drawing buffer if no framebuffer is bound.
+</summary>
+<remarks>
+<para>-{{domxref(&amp;quot;WebGL2RenderingContext.clearBuffer&amp;quot;, &amp;quot;WebGL2RenderingContext.clearBuffer<see href="https://developer.mozilla.org">fiuv</see>&amp;quot;)}}<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/drawBuffers"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGL2RenderingContextDrawBuffers>
+<WebGL2RenderingContextIsVertexArray>
+<summary>
+The <strong><c>WebGL2RenderingContext.isVertexArray()</c></strong> method of the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> returns <c>true</c> if the<br/>passed object is a valid <see cref="WebGLVertexArrayObject"/> object.
+</summary>
+<remarks>
+<para>-<see cref="WebGLVertexArrayObject"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/isVertexArray"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="WebGL_APITypes"/> indicating whether the given object is a valid<br/><see cref="WebGLVertexArrayObject"/> object (<c>true</c>) or not<br/>(<c>false</c>).</returns>
+</WebGL2RenderingContextIsVertexArray>
+<WebGL2RenderingContextClientWaitSync>
+<summary>
+The <strong><c>WebGL2RenderingContext.clientWaitSync()</c></strong> method of the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> blocks and waits for a<br/><see cref="WebGLSync"/> object to become signaled or a given timeout to be passed.
+</summary>
+<remarks>
+<para>-<see cref="WebGLSync"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/clientWaitSync"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="WebGL_APITypes"/> indicating the sync object's status.</returns>
+</WebGL2RenderingContextClientWaitSync>
+<WebGL2RenderingContextInvalidateFramebuffer>
+<summary>
+The <strong><c>WebGL2RenderingContext.invalidateFramebuffer()</c></strong> method<br/>of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> invalidates the contents<br/>of attachments in a framebuffer.
+</summary>
+<remarks>
+<para>-<see cref="WebGL2RenderingContext.InvalidateSubFramebuffer"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/invalidateFramebuffer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGL2RenderingContextInvalidateFramebuffer>
+<WebGL2RenderingContextTexSubImage3D>
+<summary>
+The <strong><c>texSubImage3D()</c></strong> method of the <see cref="WebGL2RenderingContext"/> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> specifies a three-dimensional sub-rectangle for a texture image.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.CreateTexture"/><br/>-<see cref="WebGLRenderingContext.BindTexture"/><br/>-<see cref="WebGL2RenderingContext.TexImage3D"/><br/>-<see cref="WebGL2RenderingContext.CompressedTexImage3D"/><br/>-<see cref="WebGL2RenderingContext.CopyTexSubImage3D"/><br/>-<see cref="WebGLRenderingContext.GetTexParameter"/><br/>-<see cref="OES_texture_float"/><br/>-<see cref="OES_texture_half_float"/><br/>-<see cref="EXT_sRGB"/><br/>-<see cref="EXT_texture_norm16"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texSubImage3D"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGL2RenderingContextTexSubImage3D>
+<WebGL2RenderingContextDeleteSync>
+<summary>
+The <strong><c>WebGL2RenderingContext.deleteSync()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> deletes a given<br/><see cref="WebGLSync"/> object.
+</summary>
+<remarks>
+<para>-<see cref="WebGLSync"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/deleteSync"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGL2RenderingContextDeleteSync>
+<WebGL2RenderingContextCompressedTexSubImage3D>
+<summary>
+The <strong><c>compressedTexSubImage3D()</c></strong> method of the <see cref="WebGL2RenderingContext"/> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> specifies a three-dimensional sub-rectangle for a texture image in a compressed format.
+</summary>
+<remarks>
+<para>Compressed image formats are only available via some <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Using_Extensions">WebGL extension</see>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Using_Extensions">Using WebGL extensions</see><br/>-<see cref="WebGLRenderingContext.GetExtension"/><br/>-<see cref="WebGLRenderingContext.CompressedTexSubImage2D"/><br/>-<see cref="WebGL2RenderingContext.CompressedTexImage3D"/><br/>-<see cref="WEBGL_compressed_texture_s3tc"/><br/>-<see cref="WEBGL_compressed_texture_s3tc_srgb"/><br/>-<see cref="WEBGL_compressed_texture_etc"/><br/>-<see cref="WEBGL_compressed_texture_pvrtc"/><br/>-<see cref="WEBGL_compressed_texture_astc"/><br/>-<see cref="EXT_texture_compression_bptc"/><br/>-<see cref="EXT_texture_compression_rgtc"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/compressedTexSubImage3D"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGL2RenderingContextCompressedTexSubImage3D>
+<WebGL2RenderingContextIsSync>
+<summary>
+The <strong><c>WebGL2RenderingContext.isSync()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> returns <c>true</c> if the<br/>passed object is a valid <see cref="WebGLSync"/> object.
+</summary>
+<remarks>
+<para>-<see cref="WebGLSync"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/isSync"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="WebGL_APITypes"/> indicating whether the given object is a valid<br/><see cref="WebGLSync"/> object (<c>true</c>) or not (<c>false</c>).</returns>
+</WebGL2RenderingContextIsSync>
+<WebGL2RenderingContextGetTransformFeedbackVarying>
+<summary>
+The <strong><c>WebGL2RenderingContext.getTransformFeedbackVarying()</c></strong><br/>method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> returns<br/>information about varying variables from <see cref="WebGLTransformFeedback"/> buffers.
+</summary>
+<remarks>
+<para>-<see cref="WebGLTransformFeedback"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getTransformFeedbackVarying"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="WebGLActiveInfo"/> object.</returns>
+</WebGL2RenderingContextGetTransformFeedbackVarying>
+<WebGL2RenderingContextIsSampler>
+<summary>
+The <strong><c>WebGL2RenderingContext.isSampler()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> returns <c>true</c> if the<br/>passed object is a valid <see cref="WebGLSampler"/> object.
+</summary>
+<remarks>
+<para>-<see cref="WebGLSampler"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/isSampler"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="WebGL_APITypes"/> indicating whether the given object is a valid<br/><see cref="WebGLSampler"/> object (<c>true</c>) or not (<c>false</c>).</returns>
+</WebGL2RenderingContextIsSampler>
+<WebGL2RenderingContextVertexAttribIPointer>
+<summary>
+The <strong><c>WebGL2RenderingContext.vertexAttribIPointer()</c></strong> method<br/>of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> specifies integer data<br/>formats and locations of vertex attributes in a vertex attributes array.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.VertexAttribPointer"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/vertexAttribIPointer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGL2RenderingContextVertexAttribIPointer>
+<WebGL2RenderingContextGetActiveUniforms>
+<summary>
+The <strong><c>WebGL2RenderingContext.getActiveUniforms()</c></strong> method of<br/>the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> retrieves information about<br/>active uniforms within a <see cref="WebGLProgram"/>.
+</summary>
+<remarks>
+<para>-<see cref="WebGL2RenderingContext.GetActiveUniformBlockParameter"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getActiveUniforms"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Depends on which information is requested using the <c>pname</c> parameter.</returns>
+</WebGL2RenderingContextGetActiveUniforms>
+<WebGL2RenderingContextDrawElementsInstanced>
+<summary>
+The <strong><c>WebGL2RenderingContext.drawElementsInstanced()</c></strong> method<br/>of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> renders primitives from<br/>array data like the <see cref="WebGLRenderingContext.DrawElements"/> method. In addition, it can execute multiple instances of a set<br/>of elements.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>When using {{domxref(&amp;quot;WebGLRenderingContext&amp;quot;, &amp;quot;WebGL 1&amp;quot;, &amp;quot;&amp;quot;, 1)}}, the <see cref="ANGLE_instanced_arrays"/> extension can provide this method,<br/>too.</para></blockquote>
+<para>-<see cref="ANGLE_instanced_arrays.DrawArraysInstancedANGLE"/><br/>-<see cref="ANGLE_instanced_arrays.VertexAttribDivisorANGLE"/><br/>-<see cref="WebGLRenderingContext.DrawArrays"/><br/>-<see cref="WebGLRenderingContext.DrawElements"/><br/>-<see cref="WebGL2RenderingContext.DrawArraysInstanced"/><br/>-<see cref="WebGL2RenderingContext.VertexAttribDivisor"/><br/>-<see cref="WEBGL_multi_draw.MultiDrawElementsInstancedWEBGL"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/drawElementsInstanced"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGL2RenderingContextDrawElementsInstanced>
+<WebGL2RenderingContextCreateVertexArray>
+<summary>
+The <strong><c>WebGL2RenderingContext.createVertexArray()</c></strong> method of<br/>the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> creates and initializes a<br/><see cref="WebGLVertexArrayObject"/> object that represents a vertex array object (VAO)<br/>pointing to vertex array data and which provides names for different sets of vertex<br/>data.
+</summary>
+<remarks>
+<para>-<see cref="WebGLVertexArrayObject"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/createVertexArray"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="WebGLVertexArrayObject"/> representing a vertex array object (VAO) which<br/>points to vertex array data.</returns>
+</WebGL2RenderingContextCreateVertexArray>
+<WebGL2RenderingContextGetSyncParameter>
+<summary>
+The <strong><c>WebGL2RenderingContext.getSyncParameter()</c></strong> method of<br/>the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> returns parameter<br/>information of a <see cref="WebGLSync"/> object.
+</summary>
+<remarks>
+<para>-<see cref="WebGLSync"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getSyncParameter"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Depends on the <c>pname</c> parameter, either a <see cref="WebGL_APITypes"/> or a<br/><see cref="WebGL_APITypes"/>.</returns>
+</WebGL2RenderingContextGetSyncParameter>
+<WebGL2RenderingContextBindBufferBase>
+<summary>
+The <strong><c>WebGL2RenderingContext.bindBufferBase()</c></strong> method of the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> binds a given<br/><see cref="WebGLBuffer"/> to a given binding point (<c>target</c>) at a given<br/><c>index</c>.
+</summary>
+<remarks>
+<para>-<see cref="WebGL2RenderingContext.GetIndexedParameter"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/bindBufferBase"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGL2RenderingContextBindBufferBase>
+<WebGL2RenderingContextBufferData>
+<summary>
+The <strong><c>WebGL2RenderingContext.bufferData()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> creates and initializes the buffer object&amp;apos;s data store.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.BufferData"/><br/>-<see cref="WebGLRenderingContext.CreateBuffer"/><br/>-<see cref="WebGLRenderingContext.BufferSubData"/><br/>-Other buffers: <see cref="WebGLFramebuffer"/>, <see cref="WebGLRenderbuffer"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/bufferData"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGL2RenderingContextBufferData>
+<WebGL2RenderingContextDeleteTransformFeedback>
+<summary>
+The <strong><c>WebGL2RenderingContext.deleteTransformFeedback()</c></strong><br/>method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> deletes a given<br/><see cref="WebGLTransformFeedback"/> object.
+</summary>
+<remarks>
+<para>-<see cref="WebGLTransformFeedback"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/deleteTransformFeedback"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGL2RenderingContextDeleteTransformFeedback>
+<WebGL2RenderingContextGetUniformIndices>
+<summary>
+The <strong><c>WebGL2RenderingContext.getUniformIndices()</c></strong> method of<br/>the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> retrieves the indices of a<br/>number of uniforms within a <see cref="WebGLProgram"/>.
+</summary>
+<remarks>
+<para>-<see cref="WebGL2RenderingContext.GetUniformBlockIndex"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getUniformIndices"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An {{jsxref("Array")}} of <see cref="WebGL_APITypes"/> containing the uniform indices.</returns>
+</WebGL2RenderingContextGetUniformIndices>
+<WebGL2RenderingContextGetIndexedParameter>
+<summary>
+The <strong><c>WebGL2RenderingContext.getIndexedParameter()</c></strong> method<br/>of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> returns indexed<br/>information about a given <c>target</c>.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.GetParameter"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getIndexedParameter"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Depends on the requested information (as specified with <c>target</c>).</returns>
+</WebGL2RenderingContextGetIndexedParameter>
+<WebGL2RenderingContextCreateTransformFeedback>
+<summary>
+The <strong><c>WebGL2RenderingContext.createTransformFeedback()</c></strong><br/>method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> creates and<br/>initializes <see cref="WebGLTransformFeedback"/> objects.
+</summary>
+<remarks>
+<para>-<see cref="WebGLTransformFeedback"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/createTransformFeedback"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="WebGLTransformFeedback"/> object.</returns>
+</WebGL2RenderingContextCreateTransformFeedback>
+<WebGL2RenderingContextBindSampler>
+<summary>
+The <strong><c>WebGL2RenderingContext.bindSampler()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> binds a<br/>passed <see cref="WebGLSampler"/> object to the texture unit at the passed index.
+</summary>
+<remarks>
+<para>-<see cref="WebGLSampler"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/bindSampler"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGL2RenderingContextBindSampler>
+<WebGL2RenderingContextGetUniformBlockIndex>
+<summary>
+The <strong><c>WebGL2RenderingContext.getUniformBlockIndex()</c></strong> method<br/>of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> retrieves the index of<br/>a uniform block within a <see cref="WebGLProgram"/>.
+</summary>
+<remarks>
+<para>-<see cref="WebGL2RenderingContext.GetUniformIndices"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getUniformBlockIndex"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="WebGL_APITypes"/> indicating the uniform block index.</returns>
+</WebGL2RenderingContextGetUniformBlockIndex>
+<WebGL2RenderingContextInvalidateSubFramebuffer>
+<summary>
+The <strong><c>WebGL2RenderingContext.invalidateSubFramebuffer()</c></strong><br/>method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> invalidates<br/>portions of the contents of attachments in a framebuffer.
+</summary>
+<remarks>
+<para>-<see cref="WebGL2RenderingContext.InvalidateFramebuffer"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/invalidateSubFramebuffer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGL2RenderingContextInvalidateSubFramebuffer>
+<WebGL2RenderingContextGetInternalformatParameter>
+<summary>
+The <strong><c>WebGL2RenderingContext.getInternalformatParameter()</c></strong><br/>method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> returns<br/>information about implementation-dependent support for internal formats.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.GetRenderbufferParameter"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getInternalformatParameter"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Depends on the requested information (as specified with <c>pname</c>). It is an<br/><see cref="Int32Array"/> if <c>pname</c> is <c>gl.SAMPLES</c>.</returns>
+</WebGL2RenderingContextGetInternalformatParameter>
+<WebGL2RenderingContextWaitSync>
+<summary>
+The <strong><c>WebGL2RenderingContext.waitSync()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> returns immediately, but waits on<br/>the GL server until the given <see cref="WebGLSync"/> object is signaled.
+</summary>
+<remarks>
+<para>The method is a no-op in the absence of the possibility of synchronizing between<br/>multiple GL contexts.</para>
+<para>-<see cref="WebGLSync"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/waitSync"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGL2RenderingContextWaitSync>
+<WebGL2RenderingContextIsQuery>
+<summary>
+The <strong><c>WebGL2RenderingContext.isQuery()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> returns <c>true</c> if the<br/>passed object is a valid <see cref="WebGLQuery"/> object.
+</summary>
+<remarks>
+<para>-<see cref="WebGLQuery"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/isQuery"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="WebGL_APITypes"/> indicating whether the given object is a valid<br/><see cref="WebGLQuery"/> object (<c>true</c>) or not (<c>false</c>).</returns>
+</WebGL2RenderingContextIsQuery>
+<WebGL2RenderingContextTexStorage3D>
+<summary>
+The <strong><c>texStorage3D()</c></strong> method of the <see cref="WebGL2RenderingContext"/> of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> specifies all levels of three-dimensional texture storage.
+</summary>
+<remarks>
+<para>-<see cref="WebGL2RenderingContext.TexStorage2D"/><br/>-<see cref="WEBGL_compressed_texture_etc"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texStorage3D"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGL2RenderingContextTexStorage3D>
+<WebGL2RenderingContextDrawArraysInstanced>
+<summary>
+The <strong><c>WebGL2RenderingContext.drawArraysInstanced()</c></strong> method<br/>of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> renders primitives from<br/>array data like the <see cref="WebGLRenderingContext.DrawArrays"/><br/>method. In addition, it can execute multiple instances of the range of elements.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>When using {{domxref(&amp;quot;WebGLRenderingContext&amp;quot;, &amp;quot;WebGL 1&amp;quot;, &amp;quot;&amp;quot;, 1)}},<br/>the <see cref="ANGLE_instanced_arrays"/> extension can provide this method,<br/>too.</para></blockquote>
+<para>-<see cref="ANGLE_instanced_arrays.DrawArraysInstancedANGLE"/><br/>-<see cref="WEBGL_multi_draw.MultiDrawArraysInstancedWEBGL"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/drawArraysInstanced"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGL2RenderingContextDrawArraysInstanced>
+<WebGL2RenderingContextUniformBlockBinding>
+<summary>
+The <strong><c>WebGL2RenderingContext.uniformBlockBinding()</c></strong> method<br/>of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> assigns binding points<br/>for active uniform blocks.
+</summary>
+<remarks>
+<para>-<see cref="WebGL2RenderingContext.GetUniformIndices"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/uniformBlockBinding"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGL2RenderingContextUniformBlockBinding>
+<WebGL2RenderingContextUnpackColorSpace>
+<summary>
+The <strong><c>WebGL2RenderingContext.unpackColorSpace</c></strong> property specifies the color space to convert to when importing textures. Along with the default (<c>srgb</c>), the <c>display-p3</c> color space can be used.
+</summary>
+<remarks>
+<para>Texture image sources can be the following:</para><para>Textures are imported using the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D"><c>WebGLRenderingContext.texImage2D()</c></see> and <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D"><c>WebGLRenderingContext.texSubImage2D()</c></see> methods and conversion to the specified <c>unpackColorSpace</c> color space happens during import.</para><para>Note that this doesn&amp;apos;t apply to <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement"><c>HTMLImageElement</c></see> when the <c>UNPACK_COLORSPACE_CONVERSION_WEBGL</c> pixel storage parameter is set to <c>NONE</c>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/drawingBufferColorSpace"><c>WebGL2RenderingContext.drawingBufferColorSpace</c></see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/unpackColorSpace"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>This property can have the following values:If an invalid value is specified, then the value of <c>unpackColorSpace</c> will remain unchanged.</value>
+</WebGL2RenderingContextUnpackColorSpace>
+<WebGL2RenderingContextBindTransformFeedback>
+<summary>
+The <strong><c>WebGL2RenderingContext.bindTransformFeedback()</c></strong> method<br/>of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> binds a<br/>passed <see cref="WebGLTransformFeedback"/> object to the current GL state.
+</summary>
+<remarks>
+<para>-<see cref="WebGLTransformFeedback"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/bindTransformFeedback"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGL2RenderingContextBindTransformFeedback>
+<WebGL2RenderingContextGetSamplerParameter>
+<summary>
+The <strong><c>WebGL2RenderingContext.getSamplerParameter()</c></strong> method<br/>of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> returns parameter<br/>information of a <see cref="WebGLSampler"/> object.
+</summary>
+<remarks>
+<para>-<see cref="WebGLSampler"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getSamplerParameter"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Depends on the <c>pname</c> parameter, either a <see cref="WebGL_APITypes"/> or a<br/><see cref="WebGL_APITypes"/>.</returns>
+</WebGL2RenderingContextGetSamplerParameter>
+<WebGL2RenderingContextEndTransformFeedback>
+<summary>
+The <strong><c>WebGL2RenderingContext.endTransformFeedback()</c></strong> method<br/>of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> ends a transform feedback<br/>operation.
+</summary>
+<remarks>
+<para>-<see cref="WebGLTransformFeedback"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/endTransformFeedback"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGL2RenderingContextEndTransformFeedback>
+<WebGL2RenderingContextBeginQuery>
+<summary>
+The <strong><c>WebGL2RenderingContext.beginQuery()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> starts an asynchronous query. The<br/><c>target</c> parameter indicates which kind of query to begin.
+</summary>
+<remarks>
+<para>-<see cref="WebGLQuery"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/beginQuery"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGL2RenderingContextBeginQuery>
+<WebGL2RenderingContextFramebufferTextureLayer>
+<summary>
+The <strong><c>WebGL2RenderingContext.framebufferTextureLayer()</c></strong><br/>method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> attaches a single<br/>layer of a texture to a framebuffer.
+</summary>
+<remarks>
+<para>This method is similar to <see cref="WebGLRenderingContext.FramebufferTexture2D"/>,<br/>but only a given single layer of the texture level is attached to the attachment point.</para>
+<para>-<see cref="WebGLRenderingContext.FramebufferTexture2D"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/framebufferTextureLayer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGL2RenderingContextFramebufferTextureLayer>
+<WebGL2RenderingContextIsTransformFeedback>
+<summary>
+The <strong><c>WebGL2RenderingContext.isTransformFeedback()</c></strong> method<br/>of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> returns <c>true</c><br/>if the passed object is a valid <see cref="WebGLTransformFeedback"/> object.
+</summary>
+<remarks>
+<para>-<see cref="WebGLTransformFeedback"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/isTransformFeedback"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="WebGL_APITypes"/> indicating whether the given object is a valid<br/><see cref="WebGLTransformFeedback"/> object (<c>true</c>) or not<br/>(<c>false</c>).</returns>
+</WebGL2RenderingContextIsTransformFeedback>
+<WebGL2RenderingContextCreateSampler>
+<summary>
+The <strong><c>WebGL2RenderingContext.createSampler()</c></strong> method of the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> creates and initializes<br/><see cref="WebGLSampler"/> objects.
+</summary>
+<remarks>
+<para>-<see cref="WebGLSampler"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/createSampler"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="WebGLSampler"/> object.</returns>
+</WebGL2RenderingContextCreateSampler>
+<WebGL2RenderingContextBeginTransformFeedback>
+<summary>
+The <strong><c>WebGL2RenderingContext.beginTransformFeedback()</c></strong><br/>method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> starts a transform<br/>feedback operation.
+</summary>
+<remarks>
+<para>-<see cref="WebGLTransformFeedback"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/beginTransformFeedback"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGL2RenderingContextBeginTransformFeedback>
+<WebGL2RenderingContextFenceSync>
+<summary>
+The <strong><c>WebGL2RenderingContext.fenceSync()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> creates a new<br/><see cref="WebGLSync"/> object and inserts it into the GL command stream.
+</summary>
+<remarks>
+<para>-<see cref="WebGLSync"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/fenceSync"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="WebGLSync"/> object.</returns>
+</WebGL2RenderingContextFenceSync>
+<WebGL2RenderingContextCopyTexSubImage3D>
+<summary>
+The <strong><c>copyTexSubImage3D()</c></strong> method of the <see cref="WebGL2RenderingContext"/> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> copies pixels from the current <see cref="WebGLFramebuffer"/> into a 3D texture sub-image.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.CopyTexImage2D"/><br/>-<see cref="WebGLRenderingContext.TexImage2D"/><br/>-<see cref="WebGLRenderingContext.TexSubImage2D"/><br/>-<see cref="WebGLRenderingContext.CompressedTexImage2D"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/copyTexSubImage3D"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGL2RenderingContextCopyTexSubImage3D>
+<WebGL2RenderingContextVertexAttribDivisor>
+<summary>
+The <strong><c>WebGL2RenderingContext.vertexAttribDivisor()</c></strong> method<br/>of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> modifies the rate at<br/>which generic vertex attributes advance when rendering multiple instances of primitives<br/>with <see cref="WebGL2RenderingContext.DrawArraysInstanced"/> and <see cref="WebGL2RenderingContext.DrawElementsInstanced"/>.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>When using {{domxref(&amp;quot;WebGLRenderingContext&amp;quot;, &amp;quot;WebGL 1&amp;quot;, &amp;quot;&amp;quot;, 1)}}, the <see cref="ANGLE_instanced_arrays"/> extension can provide this method,<br/>too.</para></blockquote>
+<para>-<see cref="ANGLE_instanced_arrays.VertexAttribDivisorANGLE"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/vertexAttribDivisor"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGL2RenderingContextVertexAttribDivisor>
+<WebGL2RenderingContextBindVertexArray>
+<summary>
+The <strong><c>WebGL2RenderingContext.bindVertexArray()</c></strong> method of<br/>the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> binds a<br/>passed <see cref="WebGLVertexArrayObject"/> object to the buffer.
+</summary>
+<remarks>
+<para>-<see cref="WebGLVertexArrayObject"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/bindVertexArray"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGL2RenderingContextBindVertexArray>
+<WebGL2RenderingContextTexStorage2D>
+<summary>
+The <strong><c>texStorage2D()</c></strong> method of the <see cref="WebGL2RenderingContext"/> of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> specifies all levels of two-dimensional texture storage.
+</summary>
+<remarks>
+<para>-<see cref="WebGL2RenderingContext.TexStorage3D"/><br/>-<see cref="WEBGL_compressed_texture_etc"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texStorage2D"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGL2RenderingContextTexStorage2D>
+<WebGL2RenderingContextGetQuery>
+<summary>
+The <strong><c>WebGL2RenderingContext.getQuery()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> returns the currently active<br/><see cref="WebGLQuery"/> for the <c>target</c>, or <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><c>null</c></see>.
+</summary>
+<remarks>
+<para>-<see cref="WebGLQuery"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getQuery"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="WebGLQuery"/> object.</returns>
+</WebGL2RenderingContextGetQuery>
+<WebGL2RenderingContextUniform>
+<summary>
+The <strong><c>WebGL2RenderingContext.uniform[1234][uif][v]()</c></strong><br/>methods of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> specify values of<br/>uniform variables.
+</summary>
+<remarks>
+<para>The names of these methods are formed by:</para><para>They can be matched by the regex <c>uniform[1234](u?i|f)v?</c>.</para><para>Most of these signatures are inherited from the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGL 1 API</see>. WebGL 2 adds the unsigned integer versions, and the additional <c>srcOffset</c> and <c>srcLength</c> parameters to the vector methods.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform"><c>WebGLRenderingContext.uniform[1234][fi][v]()</c></see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/uniform"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGL2RenderingContextUniform>
+<WebGL2RenderingContextSamplerParameter>
+<summary>
+The <strong><c>WebGL2RenderingContext.samplerParameter[if]()</c></strong> methods<br/>of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> set<br/><see cref="WebGLSampler"/> parameters.
+</summary>
+<remarks>
+<para>-<see cref="WebGLSampler"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/samplerParameter"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGL2RenderingContextSamplerParameter>
+<WebGL2RenderingContextClearBuffer>
+<summary>
+The <strong><c>WebGL2RenderingContext.clearBuffer[fiuv]()</c></strong> methods of<br/>the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> clear buffers from the<br/>currently bound framebuffer.
+</summary>
+<remarks>
+<para>-<see cref="WebGL2RenderingContext.DrawBuffers"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/clearBuffer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGL2RenderingContextClearBuffer>
+<WebGL2RenderingContextGetFragDataLocation>
+<summary>
+The <strong><c>WebGL2RenderingContext.getFragDataLocation()</c></strong> method<br/>of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> returns the binding of<br/>color numbers to user-defined varying out variables.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.CreateProgram"/><br/>-<see cref="WebGLRenderingContext.DeleteProgram"/><br/>-<see cref="WebGLRenderingContext.IsProgram"/><br/>-<see cref="WebGLRenderingContext.LinkProgram"/><br/>-<see cref="WebGLRenderingContext.UseProgram"/><br/>-<see cref="WebGLRenderingContext.ValidateProgram"/><br/>-<see cref="WebGLRenderingContext.GetProgramParameter"/><br/>-<see cref="WebGLRenderingContext.GetProgramInfoLog"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getFragDataLocation"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="WebGL_APITypes"/> indicating the assigned color number binding, or <c>-1</c><br/>otherwise.</returns>
+</WebGL2RenderingContextGetFragDataLocation>
+<WebGL2RenderingContextCreateQuery>
+<summary>
+The <strong><c>WebGL2RenderingContext.createQuery()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> creates and initializes<br/><see cref="WebGLQuery"/> objects, which provide ways to asynchronously query for<br/>information.
+</summary>
+<remarks>
+<para>-<see cref="WebGLQuery"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/createQuery"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="WebGLQuery"/> object.</returns>
+</WebGL2RenderingContextCreateQuery>
+<WebGL2RenderingContextGetActiveUniformBlockParameter>
+<summary>
+The<br/><strong><c>WebGL2RenderingContext.getActiveUniformBlockParameter()</c></strong><br/>method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> retrieves<br/>information about an active uniform block within a <see cref="WebGLProgram"/>.
+</summary>
+<remarks>
+<para>-<see cref="WebGL2RenderingContext.GetActiveUniforms"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getActiveUniformBlockParameter"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Depends on which information is requested using the <c>pname</c> parameter. If an<br/>error occurs, <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><c>null</c></see> is returned.</returns>
+</WebGL2RenderingContextGetActiveUniformBlockParameter>
+<WebGL2RenderingContextBufferSubData>
+<summary>
+The <strong><c>WebGL2RenderingContext.bufferSubData()</c></strong> method of the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> updates a subset of a buffer<br/>object&amp;apos;s data store.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.BufferSubData"/><br/>-<see cref="WebGLRenderingContext.CreateBuffer"/><br/>-<see cref="WebGLRenderingContext.BufferData"/><br/>-Other buffers: <see cref="WebGLFramebuffer"/>, <see cref="WebGLRenderbuffer"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/bufferSubData"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGL2RenderingContextBufferSubData>
+<WebGL2RenderingContextDrawRangeElements>
+<summary>
+The <strong><c>WebGL2RenderingContext.drawRangeElements()</c></strong> method of<br/>the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> renders primitives from array<br/>data in a given range.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.DrawElements"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/drawRangeElements"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGL2RenderingContextDrawRangeElements>
+<WebGL2RenderingContextGetActiveUniformBlockName>
+<summary>
+The <strong><c>WebGL2RenderingContext.getActiveUniformBlockName()</c></strong><br/>method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> retrieves the name<br/>of the active uniform block at a given index within a <see cref="WebGLProgram"/>.
+</summary>
+<remarks>
+<para>-<see cref="WebGL2RenderingContext.GetUniformBlockIndex"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getActiveUniformBlockName"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A string indicating the active uniform block name.</returns>
+</WebGL2RenderingContextGetActiveUniformBlockName>
+<WebGL2RenderingContextDeleteVertexArray>
+<summary>
+The <strong><c>WebGL2RenderingContext.deleteVertexArray()</c></strong> method of<br/>the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> deletes a given<br/><see cref="WebGLVertexArrayObject"/> object.
+</summary>
+<remarks>
+<para>-<see cref="WebGLVertexArrayObject"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/deleteVertexArray"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGL2RenderingContextDeleteVertexArray>
+<WebGL2RenderingContextReadBuffer>
+<summary>
+The <strong><c>WebGL2RenderingContext.readBuffer()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> selects a color buffer as the<br/>source for pixels for subsequent calls to<br/><see cref="WebGLRenderingContext.CopyTexImage2D"/>,<br/><see cref="WebGLRenderingContext.CopyTexSubImage2D"/>,<br/><see cref="WebGL2RenderingContext.CopyTexSubImage3D"/> or<br/><see cref="WebGLRenderingContext.ReadPixels"/>.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.CopyTexImage2D"/><br/>-<see cref="WebGLRenderingContext.CopyTexSubImage2D"/><br/>-<see cref="WebGL2RenderingContext.CopyTexSubImage3D"/><br/>-<see cref="WebGLRenderingContext.ReadPixels"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/readBuffer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGL2RenderingContextReadBuffer>
+<WebGL2RenderingContextDrawingBufferColorSpace>
+<summary>
+The <strong><c>WebGL2RenderingContext.drawingBufferColorSpace</c></strong> property specifies the color space of the WebGL drawing buffer. Along with the default (<c>srgb</c>), the <c>display-p3</c> color space can be used.
+</summary>
+<remarks>
+<para>See <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/unpackColorSpace"><c>WebGL2RenderingContext.unpackColorSpace</c></see> for specifying the color space for textures.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/unpackColorSpace"><c>WebGL2RenderingContext.unpackColorSpace</c></see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/drawingBufferColorSpace"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>This property can have the following values:If an invalid value is specified, then the value of <c>drawingBufferColorSpace</c> will remain unchanged.</value>
+</WebGL2RenderingContextDrawingBufferColorSpace>
+<WebGL2RenderingContextEndQuery>
+<summary>
+The <strong><c>WebGL2RenderingContext.endQuery()</c></strong> method of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> marks the end of a given query<br/>target.
+</summary>
+<remarks>
+<para>-<see cref="WebGLQuery"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/endQuery"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGL2RenderingContextEndQuery>
+<WebGL2RenderingContextDeleteSampler>
+<summary>
+The <strong><c>WebGL2RenderingContext.deleteSampler()</c></strong> method of the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> deletes a given<br/><see cref="WebGLSampler"/> object.
+</summary>
+<remarks>
+<para>-<see cref="WebGLSampler"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/deleteSampler"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGL2RenderingContextDeleteSampler>
+<WebGL2RenderingContextCopyBufferSubData>
+<summary>
+The <strong><c>WebGL2RenderingContext.copyBufferSubData()</c></strong> method of<br/>the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL 2 API</see> copies part of the data of a<br/>buffer to another buffer.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.BufferData"/><br/>-<see cref="WebGLRenderingContext.BufferSubData"/><br/>-<see cref="WebGLRenderingContext.GetBufferParameter"/><br/>-<see cref="WebGL2RenderingContext.GetBufferSubData"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/copyBufferSubData"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WebGL2RenderingContextCopyBufferSubData>
+</docs>

@@ -1,0 +1,72 @@
+<docs>
+<DataTransferItem>
+<summary>
+The <strong><c>DataTransferItem</c></strong> object represents one drag data item. During a <strong>drag operation</strong>, each <see cref="DragEvent"/> has a <see cref="DragEvent.DataTransfer"/> property which contains a <see cref="DataTransferItemList"/> of drag data items. Each item in the list is a <c>DataTransferItem</c> object.
+</summary>
+<remarks>
+<para><c>DataTransferItem</c> was primarily designed for the <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API">HTML Drag and Drop API</see>, and is still specified in the HTML drag-and-drop section, but it is now also used by other APIs, such as <see cref="ClipboardEvent.ClipboardData"/> and <see cref="InputEvent.DataTransfer"/>. Documentation of <c>DataTransferItem</c> will primarily discuss its usage in drag-and-drop operations, and you should refer to the other APIs&amp;apos; documentation for usage of <c>DataTransferItem</c> in those contexts.</para><para>This interface has no constructor.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItem"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</DataTransferItem>
+<DataTransferItemGetAsFileSystemHandle>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>getAsFileSystemHandle()</c></strong> method of the <see cref="DataTransferItem"/> interface returns a {{jsxref('Promise')}} that fulfills with a <see cref="'FileSystemFileHandle'"/> if the dragged item is a file, or fulfills with a <see cref="'FileSystemDirectoryHandle'"/> if the dragged item is a directory.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_System_API">File System API</see><br/>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/file-system-access">The File System Access API: simplifying access to local files</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItem/getAsFileSystemHandle"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="'Promise'"/>.If the item's <see cref="DataTransferItem.Kind"/> property is <c>&amp;quot;file&amp;quot;</c>, and this item is accessed in the <see cref="HTMLElementdragstart"/> or <see cref="HTMLElementdrop"/> event handlers, then the returned promise is fulfilled with a <see cref="'FileSystemFileHandle'"/> if the dragged item is a file or a <see cref="'FileSystemDirectoryHandle'"/> if the dragged item is a directory.Otherwise, the promise fulfills with <c>null</c>.</returns>
+</DataTransferItemGetAsFileSystemHandle>
+<DataTransferItemKind>
+<summary>
+The read-only <strong><c>DataTransferItem.kind</c></strong> property returns the kind–a string or a file–of the <see cref="DataTransferItem"/> object representing the <strong>drag data item</strong>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API">Drag and drop</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations">Drag Operations</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types">Recommended Drag Types</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItem/kind"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing the drag data item&amp;apos;s kind.<br/>It must be one of the following values:</value>
+</DataTransferItemKind>
+<DataTransferItemWebkitGetAsEntry>
+<summary>
+If the item described by the <see cref="DataTransferItem"/> is a file, <c>webkitGetAsEntry()</c> returns a <see cref="FileSystemFileEntry"/> or <see cref="FileSystemDirectoryEntry"/> representing it. If the item isn't a file, <c>null</c> is returned.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This function is implemented as <c>webkitGetAsEntry()</c> in non-WebKit browsers including Firefox at this time; it may be renamed to<br/><c>getAsEntry()</c> in the future, so you should code defensively, looking for both.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</see><br/>-<see cref="DataTransferItem"/><br/>-<see cref="FileSystemEntry"/>, <see cref="FileSystemFileEntry"/>, and <see cref="FileSystemDirectoryEntry"/><br/>-Events: <see cref="HTMLElementdragover"/> and <see cref="HTMLElementdrop"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItem/webkitGetAsEntry"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="FileSystemEntry"/>-based object describing the dropped item.<br/>This will be either <see cref="FileSystemFileEntry"/> or <see cref="FileSystemDirectoryEntry"/>.<br/>The method aborts and returns <c>null</c> if the dropped item isn't a file, or if the <see cref="DataTransferItem"/> object is not in read or read/write mode.</returns>
+</DataTransferItemWebkitGetAsEntry>
+<DataTransferItemType>
+<summary>
+The read-only <strong><c>DataTransferItem.type</c></strong> property returns the type (format) of the <see cref="DataTransferItem"/> object representing the drag data item.<br/>The <c>type</c> is a Unicode string generally given by a MIME type, although a MIME type is not required.
+</summary>
+<remarks>
+<para>Some example types are: <c>text/plain</c> and <c>text/html</c>.</para>
+<para>-<see cref="DataTransfer.Types"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/MIME_types/Common_types">List of common MIME types</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItem/type"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing the drag data item&amp;apos;s type.</value>
+</DataTransferItemType>
+<DataTransferItemGetAsString>
+<summary>
+The <strong><c>DataTransferItem.getAsString()</c></strong> method invokes the given callback with the drag data item's string data as the argument if the item's <see cref="DataTransferItem.Kind"/> is a <strong>Plain unicode string</strong> (i.e., <c>kind</c> is <c>string</c>).
+</summary>
+<remarks>
+<para>-<see cref="DataTransfer.GetData"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItem/getAsString"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</DataTransferItemGetAsString>
+<DataTransferItemGetAsFile>
+<summary>
+If the item is a file, the <strong><c>DataTransferItem.getAsFile()</c></strong> method returns the drag data item's <see cref="File"/> object.<br/>If the item is not a file, this method returns <c>null</c>.
+</summary>
+<remarks>
+<para>-<see cref="DataTransfer.Files"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItem/getAsFile"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</DataTransferItemGetAsFile>
+</docs>

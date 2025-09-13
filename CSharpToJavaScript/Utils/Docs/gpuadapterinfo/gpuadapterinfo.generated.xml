@@ -1,0 +1,72 @@
+<docs>
+<GPUAdapterInfo>
+<summary>
+The <strong><c>GPUAdapterInfo</c></strong> interface of the {{domxref(&amp;quot;WebGPU API&amp;quot;, &amp;quot;WebGPU API&amp;quot;, &amp;quot;&amp;quot;, "nocode")}} contains identifying information about a <see cref="GPUAdapter"/>.
+</summary>
+<remarks>
+<para>An adapter&amp;apos;s <c>GPUAdapterInfo</c> can be retrieved using the <see cref="GPUAdapter.Info"/> property of the adapter itself, or the <see cref="GPUDevice.AdapterInfo"/> property of a device that originated from the adapter.</para><para>This object allows developers to access specific details about the user&amp;apos;s GPU so that they can preemptively apply workarounds for GPU-specific bugs, or provide different codepaths to better suit different GPU architectures. Providing such information does present a security risk — it could be used for fingerprinting — therefore the information shared is kept at a minimum, and different browser vendors are likely to share different information types and granularities.</para><para></para>
+<para>-<see cref="GPUAdapter.Info"/><br/>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUAdapterInfo"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</GPUAdapterInfo>
+<GPUAdapterInfoSubgroupMinSize>
+<summary>
+The <strong><c>subgroupMinSize</c></strong> read-only property of the <see cref="GPUAdapterInfo"/> interface returns the minimum supported <see href="https://gpuweb.github.io/gpuweb/wgsl/#subgroup-size">subgroup size</see> for the <see cref="GPUAdapter"/>. This can be used along with the <c>subgroups</c> <see href="https://developer.mozilla.org/en-US/docs/Web/API/GPUSupportedFeatures">feature</see>.
+</summary>
+<remarks>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUAdapterInfo/subgroupMinSize"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</GPUAdapterInfoSubgroupMinSize>
+<GPUAdapterInfoArchitecture>
+<summary>
+The <strong><c>architecture</c></strong> read-only property of the<br/><see cref="GPUAdapterInfo"/> interface returns the name of the family or class of GPUs the adapter belongs to, or an empty string if it is not available.
+</summary>
+<remarks>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUAdapterInfo/architecture"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</GPUAdapterInfoArchitecture>
+<GPUAdapterInfoSubgroupMaxSize>
+<summary>
+The <strong><c>subgroupMaxSize</c></strong> read-only property of the <see cref="GPUAdapterInfo"/> interface returns the maximum supported <see href="https://gpuweb.github.io/gpuweb/wgsl/#subgroup-size">subgroup size</see> for the <see cref="GPUAdapter"/>. This can be used along with the <c>subgroups</c> <see href="https://developer.mozilla.org/en-US/docs/Web/API/GPUSupportedFeatures">feature</see>.
+</summary>
+<remarks>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUAdapterInfo/subgroupMaxSize"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</GPUAdapterInfoSubgroupMaxSize>
+<GPUAdapterInfoDescription>
+<summary>
+The <strong><c>description</c></strong> read-only property of the<br/><see cref="GPUAdapterInfo"/> interface returns a human-readable string describing the adapter, or an empty string if it is not available.
+</summary>
+<remarks>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUAdapterInfo/description"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</GPUAdapterInfoDescription>
+<GPUAdapterInfoVendor>
+<summary>
+The <strong><c>vendor</c></strong> read-only property of the<br/><see cref="GPUAdapterInfo"/> interface returns the name of the adapter vendor, or an empty string if it is not available.
+</summary>
+<remarks>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUAdapterInfo/vendor"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</GPUAdapterInfoVendor>
+<GPUAdapterInfoDevice>
+<summary>
+The <strong><c>device</c></strong> read-only property of the<br/><see cref="GPUAdapterInfo"/> interface returns a vendor-specific identifier for the adapter, or an empty string if it is not available.
+</summary>
+<remarks>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API">WebGPU API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/GPUAdapterInfo/device"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</GPUAdapterInfoDevice>
+</docs>

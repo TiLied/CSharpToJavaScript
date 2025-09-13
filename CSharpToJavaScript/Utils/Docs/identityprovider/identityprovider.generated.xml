@@ -1,0 +1,34 @@
+<docs>
+<IdentityProvider>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>IdentityProvider</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/FedCM_API">Federated Credential Management (FedCM) API</see> represents an <see href="https://developer.mozilla.org/en-US/docs/Glossary/Identity provider">Identity provider</see> and provides access to related information and functionality.
+</summary>
+<remarks>
+<para></para>
+<para>-<see href="https://privacysandbox.google.com/cookies/fedcm">Federated Credential Management API</see> on privacysandbox.google.com (2023)<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IdentityProvider"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</IdentityProvider>
+<IdentityProviderClose>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>close()</c></strong> static method of the <see cref="IdentityProvider"/> interface provides a manual signal to the browser that an {{glossary("Identity provider", "IdP")}} sign-in flow is finished.
+</summary>
+<remarks>
+<para><c>close()</c> needs to be called from the same origin as the specified IdP&amp;apos;s sign-in dialog, as defined in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/FedCM_API/IDP_integration#provide_a_config_file_and_endpoints">IdP config</see>.</para><para><c>close()</c> is used to close the IdP sign-in dialog when sign-in is completely finished and the IdP has finished collecting data from the user. A primary use case for <c>close()</c> is closing the IdP sign-in dialog in cases where <see href="https://developer.mozilla.org/en-US/docs/Web/API/FedCM_API/IDP_integration#what_if_the_browser_and_the_idp_login_status_become_out_of_sync">the browser and the IdP login status become out of sync</see>, and the browser initiates a dynamic sign-in flow to correct the issue.</para>
+<para>-<see href="https://privacysandbox.google.com/cookies/fedcm">Federated Credential Management API</see> on privacysandbox.google.com (2023)<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IdentityProvider/close"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns><c>undefined</c>.</returns>
+</IdentityProviderClose>
+<IdentityProviderGetUserInfo>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>getUserInfo()</c></strong> static method of the <see cref="IdentityProvider"/> interface returns information about a user that has signed in, which can be used to provide a personalized welcome message and sign-in button. This method has to be called from within an {{glossary("Identity provider", "IdP")}} origin {{htmlelement("iframe")}} so that {{glossary("Relying party", "relying party")}} (RP) scripts cannot access the data. This must occur after a user has been signed in to a RP site.
+</summary>
+<remarks>
+<para>This pattern is already common on sites that use identity federation for sign-in, but <c>getUserInfo()</c> provides a way to achieve it without relying on <see href="https://developer.mozilla.org/en-US/docs/Web/Privacy/Guides/Third-party_cookies">third-party cookies</see>.</para>
+<para>-<see href="https://privacysandbox.google.com/cookies/fedcm">Federated Credential Management API</see> on privacysandbox.google.com (2023)<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IdentityProvider/getUserInfo"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that fulfills with an array of objects, each containing information representing a separate user account. Each object contains the following properties:</returns>
+</IdentityProviderGetUserInfo>
+</docs>

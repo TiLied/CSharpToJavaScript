@@ -1,0 +1,32 @@
+<docs>
+<RTCDTMFToneChangeEvent>
+<summary>
+The <strong><c>RTCDTMFToneChangeEvent</c></strong> interface represents events sent to indicate that <see href="https://developer.mozilla.org/en-US/docs/Glossary/DTMF">DTMF</see> tones have started or finished playing. This interface is used by the <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDTMFSender/tonechange_event"><c>tonechange</c></see> event.
+</summary>
+<remarks>
+<para></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/>-Its usual target: <see cref="RTCDTMFSender"/>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDTMFToneChangeEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RTCDTMFToneChangeEvent>
+<RTCDTMFToneChangeEventRTCDTMFToneChangeEvent>
+<summary>
+The <strong><c>RTCDTMFToneChangeEvent()</c></strong> constructor creates a new<br/><see cref="RTCDTMFToneChangeEvent"/> object.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_DTMF">Using DTMF with WebRTC</see><br/>-Its usual target: <see cref="RTCDTMFSender"/>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDTMFToneChangeEvent/RTCDTMFToneChangeEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="RTCDTMFToneChangeEvent"/> object, configured as specified in the<br/>provided options.</returns>
+</RTCDTMFToneChangeEventRTCDTMFToneChangeEvent>
+<RTCDTMFToneChangeEventTone>
+<summary>
+The read-only property <strong><c>RTCDTMFToneChangeEvent.tone</c></strong><br/>returns the DTMF character which has just begun to play, or an empty string<br/>(<c>&amp;quot;&amp;quot;</c>). if all queued tones have finished playing (that is,<br/><see cref="RTCDTMFSender.ToneBuffer"/> is empty).
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_DTMF">Using DTMF with WebRTC</see><br/>-<see cref="RTCDTMFSendertonechange"/><br/>-<see cref="RTCDTMFToneChangeEvent"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDTMFToneChangeEvent/tone"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string with the DTML character playing, or the empty string.</value>
+</RTCDTMFToneChangeEventTone>
+</docs>

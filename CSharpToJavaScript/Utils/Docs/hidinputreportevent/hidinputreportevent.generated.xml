@@ -1,0 +1,38 @@
+<docs>
+<HIDInputReportEvent>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>HIDInputReportEvent</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebHID_API">WebHID API</see> is passed to <see cref="HIDDevice.Inputreport"/> event of <c>HIDDevice</c> when an input report is received from any associated HID device.
+</summary>
+<remarks>
+<para></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HIDInputReportEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HIDInputReportEvent>
+<HIDInputReportEventReportId>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>reportId</c></strong> property of the <see cref="HIDInputReportEvent"/> interface returns the one-byte identification prefix for this report, or 0 if the HID interface does not use report IDs.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HIDInputReportEvent/reportId"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A one-byte identification prefix.</value>
+</HIDInputReportEventReportId>
+<HIDInputReportEventData>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>data</c></strong> property of the <see cref="HIDInputReportEvent"/> interface returns a {{jsxref("DataView")}} containing the data from the input report, excluding the <c>reportId</c> if the HID interface uses report IDs.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HIDInputReportEvent/data"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DataView"/>.</value>
+</HIDInputReportEventData>
+<HIDInputReportEventDevice>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>device</c></strong> property of the <see cref="HIDInputReportEvent"/> interface returns the <see cref="HIDDevice"/> instance that represents the HID interface that sent the input report.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HIDInputReportEvent/device"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="HIDDevice"/>.</value>
+</HIDInputReportEventDevice>
+</docs>

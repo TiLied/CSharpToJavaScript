@@ -1,0 +1,39 @@
+<docs>
+<WebGLShaderPrecisionFormat>
+<summary>
+The <strong>WebGLShaderPrecisionFormat</strong> interface is part of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see> and represents the information returned by calling the <see cref="WebGLRenderingContext.GetShaderPrecisionFormat"/> method.
+</summary>
+<remarks>
+<para>-<see cref="WebGLRenderingContext.GetShaderPrecisionFormat"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLShaderPrecisionFormat"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebGLShaderPrecisionFormat>
+<WebGLShaderPrecisionFormatRangeMin>
+<summary>
+The read-only <strong><c>WebGLShaderPrecisionFormat.rangeMin</c></strong> property returns the base 2 log of the absolute value of the minimum value that can be represented.
+</summary>
+<remarks>
+<para>-<see cref="WebGLShaderPrecisionFormat"/><br/>-<see cref="WebGLRenderingContext.GetShaderPrecisionFormat"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLShaderPrecisionFormat/rangeMin"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebGLShaderPrecisionFormatRangeMin>
+<WebGLShaderPrecisionFormatPrecision>
+<summary>
+The read-only <strong><c>WebGLShaderPrecisionFormat.precision</c></strong> property returns the number of bits of precision that can be represented.
+</summary>
+<remarks>
+<para>For integer formats this value is always 0.</para>
+<para>-<see cref="WebGLShaderPrecisionFormat"/><br/>-<see cref="WebGLRenderingContext.GetShaderPrecisionFormat"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLShaderPrecisionFormat/precision"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebGLShaderPrecisionFormatPrecision>
+<WebGLShaderPrecisionFormatRangeMax>
+<summary>
+The read-only <strong><c>WebGLShaderPrecisionFormat.rangeMax</c></strong> property returns the base 2 log of the absolute value of the maximum value that can be represented.
+</summary>
+<remarks>
+<para>-<see cref="WebGLShaderPrecisionFormat"/><br/>-<see cref="WebGLRenderingContext.GetShaderPrecisionFormat"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLShaderPrecisionFormat/rangeMax"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebGLShaderPrecisionFormatRangeMax>
+</docs>

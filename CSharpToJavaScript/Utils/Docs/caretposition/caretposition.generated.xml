@@ -1,0 +1,42 @@
+<docs>
+<CaretPosition>
+<summary>
+The <c>CaretPosition</c> interface represents the caret position, an indicator for the text insertion point.<br/>You can get a <c>CaretPosition</c> using the <see cref="Document.CaretPositionFromPoint"/> method.
+</summary>
+<remarks>
+<para>-<see cref="Document.CaretPositionFromPoint"/><br/>-<see cref="Range"/><br/>-<see cref="Node"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CaretPosition"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CaretPosition>
+<CaretPositionOffset>
+<summary>
+The <strong><c>offset</c></strong> property of the <see cref="CaretPosition"/> interface returns an integer representing the offset of the selection in the caret position node.
+</summary>
+<remarks>
+<para>This will be the character offset in a text node or the selected child node&amp;apos;s index in an element node.</para>
+<para>-<see cref="Node"/><br/>-<see cref="Document.CaretPositionFromPoint"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CaretPosition/offset"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer.</value>
+</CaretPositionOffset>
+<CaretPositionOffsetNode>
+<summary>
+The <strong><c>offsetNode</c></strong> property of the <see cref="CaretPosition"/> interface returns a <see cref="Node"/> containing the found node at the caret's position.
+</summary>
+<remarks>
+<para>-<see cref="Node"/><br/>-<see cref="Document.CaretPositionFromPoint"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CaretPosition/offsetNode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Node"/>.</value>
+</CaretPositionOffsetNode>
+<CaretPositionGetClientRect>
+<summary>
+The <c>getClientRect()</c> method of the <see cref="CaretPosition"/> interface returns the client rectangle for the caret range.
+</summary>
+<remarks>
+<para>-<see cref="DOMRect"/><br/>-<see cref="Document.CaretPositionFromPoint"/><br/>-<see cref="Element.GetBoundingClientRect"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CaretPosition/getClientRect"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="DOMRect"/> object.</returns>
+</CaretPositionGetClientRect>
+</docs>

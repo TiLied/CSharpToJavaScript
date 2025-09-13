@@ -1,0 +1,20 @@
+<docs>
+<CSSNestedDeclarations>
+<summary>
+The <strong><c>CSSNestedDeclarations</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSSRule">CSS Rule API</see> is used to group nested <see cref="CSSRule"/>s.
+</summary>
+<remarks>
+<para>The interface allows the <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model">CSS Object Model (CSSOM</see> to mirror the structure of CSS documents with nested CSS rules, and ensure that rules are parsed and evaluated in the order that they are declared.</para><blockquote class="NOTE"><h5>NOTE</h5><para>Implementations that do not support this interface may parse nested rules in the wrong order.<br/>See <see href="https://developer.mozilla.org#browser_compatibility">Browser compatibility</see> for more information.</para></blockquote><para></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSNestedDeclarations"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CSSNestedDeclarations>
+<CSSNestedDeclarationsStyle>
+<summary>
+The read-only <strong><c>style</c></strong> property of the <see cref="CSSNestedDeclarations"/> interface represents the styles associated with the nested rules.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSNestedDeclarations/style"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An object.</value>
+</CSSNestedDeclarationsStyle>
+</docs>

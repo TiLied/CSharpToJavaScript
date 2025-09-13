@@ -1,0 +1,11 @@
+<docs>
+<MimeTypeArray>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>MimeTypeArray</c></strong> interface returns an array of <see cref="'MimeType'"/> instances, each of which contains information about a supported browser plugins. This object is returned by the deprecated <see cref="Navigator.MimeTypes"/> property.
+</summary>
+<remarks>
+<para>This interface was an <see href="https://stackoverflow.com/questions/74630989/why-use-domstringlist-rather-than-an-array/74641156#74641156">attempt to create an unmodifiable list</see> and only continues to be supported to not break code that&amp;apos;s already using it. Modern APIs represent list structures using types based on JavaScript <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">arrays</see>, thus making many array methods available, and at the same time imposing additional semantics on their usage (such as making their items read-only).</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MimeTypeArray"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</MimeTypeArray>
+</docs>

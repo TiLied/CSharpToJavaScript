@@ -1,0 +1,32 @@
+<docs>
+<WebTransportBidirectionalStream>
+<summary>
+The <strong><c>WebTransportBidirectionalStream</c></strong> interface of the {{domxref(&amp;quot;WebTransport API&amp;quot;, &amp;quot;WebTransport API&amp;quot;, &amp;quot;&amp;quot;, "nocode")}} represents a bidirectional stream created by a server or a client that can be used for reliable transport. Provides access to a <see cref="WebTransportReceiveStream"/> for reading incoming data, and a <see cref="WebTransportSendStream"/> for writing outgoing data.
+</summary>
+<remarks>
+<para></para>
+<para>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/webtransport">Using WebTransport</see><br/>-{{domxref(&amp;quot;WebSockets API&amp;quot;, &amp;quot;WebSockets API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-{{domxref(&amp;quot;Streams API&amp;quot;, &amp;quot;Streams API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://datatracker.ietf.org/doc/html/draft-ietf-webtrans-http3/">WebTransport over HTTP/3</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebTransportBidirectionalStream"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WebTransportBidirectionalStream>
+<WebTransportBidirectionalStreamReadable>
+<summary>
+The <strong><c>readable</c></strong> read-only property of the <see cref="WebTransportBidirectionalStream"/> interface returns a <see cref="WebTransportReceiveStream"/> instance that can be used to reliably read incoming data.
+</summary>
+<remarks>
+<para>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/webtransport">Using WebTransport</see><br/>-{{domxref(&amp;quot;WebSockets API&amp;quot;, &amp;quot;WebSockets API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-{{domxref(&amp;quot;Streams API&amp;quot;, &amp;quot;Streams API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://datatracker.ietf.org/doc/html/draft-ietf-webtrans-http3/">WebTransport over HTTP/3</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebTransportBidirectionalStream/readable"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="WebTransportReceiveStream"/>.</value>
+</WebTransportBidirectionalStreamReadable>
+<WebTransportBidirectionalStreamWritable>
+<summary>
+The <strong><c>writable</c></strong> read-only property of the <see cref="WebTransportBidirectionalStream"/> interface returns a <see cref="WebTransportSendStream"/> instance that can be used to write outgoing data.
+</summary>
+<remarks>
+<para>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/webtransport">Using WebTransport</see><br/>-{{domxref(&amp;quot;WebSockets API&amp;quot;, &amp;quot;WebSockets API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-{{domxref(&amp;quot;Streams API&amp;quot;, &amp;quot;Streams API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://datatracker.ietf.org/doc/html/draft-ietf-webtrans-http3/">WebTransport over HTTP/3</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WebTransportBidirectionalStream/writable"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="WebTransportSendStream"/>.</value>
+</WebTransportBidirectionalStreamWritable>
+</docs>

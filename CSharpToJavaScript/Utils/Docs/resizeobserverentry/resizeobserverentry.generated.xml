@@ -1,0 +1,55 @@
+<docs>
+<ResizeObserverEntry>
+<summary>
+The <strong><c>ResizeObserverEntry</c></strong> interface represents the object passed to the <see cref="'ResizeObserver.ResizeObserver'"/> constructor's callback function, which allows you to access the new dimensions of the <see cref="Element"/> or <see cref="SVGElement"/> being observed.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserverEntry"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</ResizeObserverEntry>
+<ResizeObserverEntryDevicePixelContentBoxSize>
+<summary>
+The <strong><c>devicePixelContentBoxSize</c></strong> read-only property of<br/>the <see cref="ResizeObserverEntry"/> interface returns an array containing the size in device pixels of the observed element when the callback is run.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserverEntry/devicePixelContentBoxSize"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An array containing objects with the new size of the observed element in device pixels. The<br/>array is necessary to support elements that have multiple fragments, which occur in<br/>multi-column scenarios. Each object in the array contains two properties:<blockquote class="NOTE"><h5>NOTE</h5>For more information about writing modes and block and inline<br/>dimensions, read <see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions">Handling different text directions</see>.</blockquote></value>
+</ResizeObserverEntryDevicePixelContentBoxSize>
+<ResizeObserverEntryTarget>
+<summary>
+The <strong><c>target</c></strong> read-only property of the<br/><see cref="ResizeObserverEntry"/> interface returns a reference to the<br/><see cref="'Element'"/> or <see cref="'SVGElement'"/> that is being observed.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserverEntry/target"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="'Element'"/> or <see cref="'SVGElement'"/> representing the element being<br/>observed.</value>
+</ResizeObserverEntryTarget>
+<ResizeObserverEntryContentBoxSize>
+<summary>
+The <strong><c>contentBoxSize</c></strong> read-only property of<br/>the <see cref="ResizeObserverEntry"/> interface returns an array containing the new<br/>content box size of the observed element when the callback is run.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserverEntry/contentBoxSize"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An array containing objects with the new content box size of the observed element.<br/>The array is necessary to support elements that have multiple fragments, which occur in multi-column scenarios. Each object in the array contains two properties:<blockquote class="NOTE"><h5>NOTE</h5>For more explanation of writing modes and block and inline<br/>dimensions, read <see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions">Handling different text directions</see>.</blockquote></value>
+</ResizeObserverEntryContentBoxSize>
+<ResizeObserverEntryBorderBoxSize>
+<summary>
+The <strong><c>borderBoxSize</c></strong> read-only property of<br/>the <see cref="ResizeObserverEntry"/> interface returns an array containing the new<br/>border box size of the observed element when the callback is run.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserverEntry/borderBoxSize"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An array containing objects with the new border box size of the observed element. The<br/>array is necessary to support elements that have multiple fragments, which occur in<br/>multi-column scenarios. Each object in the array contains two properties:<blockquote class="NOTE"><h5>NOTE</h5>For more explanation of writing modes and block and inline<br/>dimensions, read <see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions">Handling different text directions</see>.</blockquote></value>
+</ResizeObserverEntryBorderBoxSize>
+<ResizeObserverEntryContentRect>
+<summary>
+The <c>contentRect</c> read-only property of the<br/><see cref="ResizeObserverEntry"/> interface returns a <see cref="'DOMRectReadOnly'"/><br/>object containing the new size of the observed element when the callback is run. Note<br/>that this is better supported than <see cref="ResizeObserverEntry.BorderBoxSize"/> or<br/><see cref="ResizeObserverEntry.ContentBoxSize"/>, but it is left over from an earlier<br/>implementation of the Resize Observer API, is still included in the spec for web compat<br/>reasons, and may be deprecated in future versions.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserverEntry/contentRect"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="'DOMRectReadOnly'"/> object containing the new size of the element<br/>indicated by the <see cref="ResizeObserverEntry.Target"/> property.If the <c>target</c> is an HTML <see cref="Element"/>, the returned<br/><c>contentRect</c> is the element&amp;apos;s content box. If the <c>target</c> is an<br/><see cref="SVGElement"/>, the returned <c>contentRect</c> is the SVG&amp;apos;s bounding<br/>box.</value>
+</ResizeObserverEntryContentRect>
+</docs>

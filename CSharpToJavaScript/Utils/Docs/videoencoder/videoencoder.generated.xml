@@ -1,0 +1,103 @@
+<docs>
+<VideoEncoder>
+<summary>
+The <strong><c>VideoEncoder</c></strong> interface of the <see cref="'WebCodecs API'"/> encodes <see cref="VideoFrame"/> objects into <see cref="EncodedVideoChunk"/>s.
+</summary>
+<remarks>
+<para></para>
+<para><see href="https://developer.chrome.com/docs/web-platform/best-practices/webcodecs">Video processing with WebCodecs</see></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoEncoder"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</VideoEncoder>
+<VideoEncoderEncodeQueueSize>
+<summary>
+The <strong><c>encodeQueueSize</c></strong> read-only property of the <see cref="VideoEncoder"/> interface returns the number of pending encode requests in the queue.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoEncoder/encodeQueueSize"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer containing the number of requests.</value>
+</VideoEncoderEncodeQueueSize>
+<VideoEncoderIsConfigSupported>
+<summary>
+The <strong><c>isConfigSupported()</c></strong> static method of the <see cref="VideoEncoder"/> interface checks if <see cref="VideoEncoder"/> can be successfully configured with the given config.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoEncoder/isConfigSupported"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves with an object containing the following members:</returns>
+</VideoEncoderIsConfigSupported>
+<VideoEncoderFlush>
+<summary>
+The <strong><c>flush()</c></strong> method of the <see cref="VideoEncoder"/> interface forces all pending encodes to complete.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoEncoder/flush"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that resolves once the encoder's initialization is completed and all pending <see cref="EncodedVideoChunk"/>s are returned.</returns>
+</VideoEncoderFlush>
+<VideoEncoderEncode>
+<summary>
+The <strong><c>encode()</c></strong> method of the <see cref="VideoEncoder"/> interface asynchronously encodes a <see cref="VideoFrame"/>.<br/>Encoded data (<see cref="EncodedVideoChunk"/>) or an error will eventually be returned via the callbacks provided to the <see cref="VideoEncoder"/> constructor.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoEncoder/encode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</VideoEncoderEncode>
+<VideoEncoderVideoEncoder>
+<summary>
+The <strong><c>VideoEncoder()</c></strong> constructor creates a new <see cref="VideoEncoder"/> object with the provided <c>options.output</c> callback assigned as the output callback, the provided <c>options.error</c> callback as the error callback, and sets the <see cref="VideoEncoder.State"/> to <c>&amp;quot;unconfigured&amp;quot;</c>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoEncoder/VideoEncoder"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</VideoEncoderVideoEncoder>
+<VideoEncoderConfigure>
+<summary>
+The <strong><c>configure()</c></strong> method of the <see cref="VideoEncoder"/> interface changes the <see cref="VideoEncoder.State"/> of the encoder to "configured" and asynchronously prepares the encoder to accept <see cref="VideoEncoder"/>s for encoding with the specified parameters. If the encoder doesn't support the specified parameters or can't be initialized for other reasons an error will be reported via the error callback provided to the <see cref="VideoEncoder"/> constructor.
+</summary>
+<remarks>
+<para>If the <see cref="VideoEncoder"/> has been previously configured, the new configuration will not be applied until all previous tasks have completed.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoEncoder/configure"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</VideoEncoderConfigure>
+<VideoEncoderState>
+<summary>
+The <strong><c>state</c></strong> read-only property of the <see cref="VideoEncoder"/> interface returns the current state of the underlying codec.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoEncoder/state"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing one of the following values:</value>
+</VideoEncoderState>
+<VideoEncoderDequeue>
+<summary>
+The <strong><c>dequeue</c></strong> event of the <see cref="VideoEncoder"/> interface fires to signal a decrease in <see cref="VideoEncoder.EncodeQueueSize"/>.
+</summary>
+<remarks>
+<para>This eliminates the need for developers to use a <see cref="Window.SetTimeout"/> poll to determine when the queue has decreased, and more work should be queued up.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoEncoder/dequeue"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</VideoEncoderDequeue>
+<VideoEncoderClose>
+<summary>
+The <strong><c>close()</c></strong> method of the <see cref="VideoEncoder"/> interface ends all pending work and releases system resources.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoEncoder/close"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</VideoEncoderClose>
+<VideoEncoderReset>
+<summary>
+The <strong><c>reset()</c></strong> method of the <see cref="VideoEncoder"/> interface synchronously cancels all pending encodes and callbacks, frees all underlying resources and sets the <see cref="VideoEncoder.State"/> to "unconfigured".<br/>After calling <c>reset()</c>, <see cref="VideoEncoder.Configure"/> must be called before resuming <see cref="VideoEncoder.Encode"/> calls.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>To avoid discarding frames queued via <see cref="VideoEncoder.Encode"/>, <see cref="VideoEncoder.Flush"/> should be called and completed before calling <c>reset()</c>.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoEncoder/reset"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</VideoEncoderReset>
+</docs>

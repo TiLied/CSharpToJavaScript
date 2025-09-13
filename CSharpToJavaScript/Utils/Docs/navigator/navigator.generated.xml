@@ -1,0 +1,758 @@
+<docs>
+<Navigator>
+<summary>
+The <strong><c>Navigator</c></strong> interface represents the state and the identity of the user agent. It allows scripts to query it and to register themselves to carry on some activities.
+</summary>
+<remarks>
+<para>A <c>Navigator</c> object can be retrieved using the read-only <see cref="Window.Navigator"/> property.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Navigator>
+<NavigatorBuildID>
+<summary>
+<div class="CAUTION"><h5>CAUTION</h5> <strong>Non-standard</strong></div> Returns the build identifier of the browser. In modern browsers this property now returns a fixed timestamp as a privacy measure, e.g., <c>20181001000000</c> in Firefox 64 onwards.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/buildID"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing the build identifier of the application. The build ID is in the form <c>YYYYMMDDHHMMSS</c>.</value>
+</NavigatorBuildID>
+<NavigatorConnection>
+<summary>
+The <strong><c>connection</c></strong> read-only property of the <see cref="Navigator"/> interface returns a <see cref="NetworkInformation"/> object containing information about the system's connection, such as the current bandwidth of the user's device or whether the connection is metered.
+</summary>
+<remarks>
+<para>This could be used to select high definition content or low definition content based on the user&amp;apos;s connection.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/onLine">Online and offline events</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/connection"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="NetworkInformation"/> object.</value>
+</NavigatorConnection>
+<NavigatorMediaSession>
+<summary>
+The <strong><c>mediaSession</c></strong> read-only property of the <see cref="Navigator"/><br/>interface returns a <see cref="MediaSession"/><br/>object that can be used to share with the browser metadata and other information about<br/>the current playback state of media being handled by a document.
+</summary>
+<remarks>
+<para>This<br/>information may, in turn, be shared with the device and/or operating system in order to<br/>a device&amp;apos;s standard media control user experience to describe and control the playback<br/>of the media.</para><para>In addition, the <c>MediaSession</c> interface provides the<br/><see cref="MediaSession.SetActionHandler"/> method, which lets<br/>you receive events when the user engages device controls such as either onscreen or<br/>physical play, pause, seek, and other similar controls. An internet radio app, for<br/>example, can use <c>setActionHandler()</c> to let the media controls on a keyboard<br/>or elsewhere on the user&amp;apos;s device be used to control the app&amp;apos;s media playback.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/mediaSession"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="MediaSession"/> object the current document can use to share information<br/>about media it&amp;apos;s playing and its current playback status. This information can include<br/>typical metadata such as the title, artist, and album name of the song being played as<br/>well as potentially one or more images containing things like album art, artist photos,<br/>and so forth.</value>
+</NavigatorMediaSession>
+<NavigatorUserAgent>
+<summary>
+The <strong><c>Navigator.userAgent</c></strong> read-only property returns the<br/>user agent string for the current browser.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>The specification asks browsers to provide as little information via this field as<br/>possible. Never assume that the value of this property will stay the same in future<br/>versions of the same browser. Try not to use it at all, or only for current and past<br/>versions of a browser. New browsers may start using the same UA, or part of it, as an<br/>older browser: you really have no guarantee that the browser agent is indeed the one<br/>advertised by this property.</para><para>Also keep in mind that users of a browser can change the value of this field if they<br/>want (UA spoofing).</para></blockquote><para>Browser identification based on detecting the user agent string is<br/><strong>unreliable</strong> and <strong>is not recommended</strong>, as the user agent<br/>string is user configurable. For example:</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent">User-Agent</see> HTTP header<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/userAgent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string specifying the complete user agent string the browser<br/>provides both in <see href="https://developer.mozilla.org/en-US/docs/Glossary/HTTP">HTTP</see> headers and in response to this and other related<br/>methods on the <see cref="Navigator"/> object.The user agent string is built on a formal structure which can be decomposed into<br/>several pieces of info. Each of these pieces of info comes from other navigator<br/>properties which are also settable by the user. For more information about the<br/>form of the user agent string, see the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-agent">User-agent</see> HTTP header.</value>
+</NavigatorUserAgent>
+<NavigatorGetInstalledRelatedApps>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>getInstalledRelatedApps()</c></strong> method returns a promise that resolves with an array of objects representing any related platform-specific apps or <see href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps">Progressive Web Apps</see> that the user has installed. This could be used for content personalization such as removing &amp;quot;install our app&amp;quot; banners from the web app if the platform-specific app and/or PWA is already installed.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This method must be invoked in a top-level <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts">secure context</see>, that is, not embedded in an <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</see>.</para></blockquote>
+<para>-<see href="https://developer.chrome.com/docs/capabilities/get-installed-related-apps">Is your app installed? getInstalledRelatedApps() will tell you!</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/getInstalledRelatedApps"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that fulfills with an array of objects representing any installed related apps. Each object can contain the following properties:The related app information must have been previously specified in the <see href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/related_applications"><c>related_applications</c></see> member of the invoking web app&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Manifest">manifest file</see>.</returns>
+</NavigatorGetInstalledRelatedApps>
+<NavigatorDoNotTrack>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>Navigator.doNotTrack</c></strong> property returns the user&amp;apos;s Do Not Track setting, which indicates whether the user is requesting websites and advertisers to not track them.
+</summary>
+<remarks>
+<para>The value of the property reflects that of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/DNT">DNT</see> HTTP header, i.e., values of <c>&amp;quot;1&amp;quot;</c>, <c>&amp;quot;0&amp;quot;</c>, or <c>null</c>.</para><para>The whole DNT (Do Not Track) specification has been discontinued. The mechanism design was flawed, because it was a cooperative feature between users, websites, and browsers. The idea is that the user tells the <strong>website</strong> to not track them, and the <strong>website</strong> would comply. However, there is no strict enforcement of this policy, so advertisement websites ignored the DNT header and tracked users anyway. The feature is therefore useless. Moreover, it is harmful as it leaves more user <see href="https://developer.mozilla.org/en-US/docs/Glossary/Fingerprinting">fingerprint</see> in the header, which can be used to track users even more.</para><para>Browsers are exploring other more enforceable privacy features, such as <see href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/globalPrivacyControl">global privacy control</see>, restriction to third-party cookies, and more.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/DNT">DNT</see> HTTP header<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/doNotTrack"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string or <c>null</c>.</value>
+</NavigatorDoNotTrack>
+<NavigatorGetVRDisplays>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>getVRDisplays()</c></strong> method of the <see cref="Navigator"/> interface returns a promise that resolves to an array of <see cref="VRDisplay"/> objects representing any available VR displays connected to the computer.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API">WebVR API homepage</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/getVRDisplays"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A promise that resolves to an array of <see cref="VRDisplay"/> objects.</returns>
+</NavigatorGetVRDisplays>
+<NavigatorHardwareConcurrency>
+<summary>
+The <strong><c>navigator.hardwareConcurrency</c></strong> read-only property<br/>returns the number of logical processors available to run threads on the user&amp;apos;s<br/>computer.
+</summary>
+<remarks>
+<para>-<see cref="Navigator"/><br/>-<see cref="WorkerNavigator"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/hardwareConcurrency"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number between 1 and the number of logical processors potentially available to the user agent.Modern computers have multiple physical processor cores in their CPU (two or four cores<br/>is typical), but each physical core is also usually able to run more than one thread at<br/>a time using advanced scheduling techniques. So a four-core CPU may offer eight<br/><strong>logical processor cores</strong>, for example. The number of logical processor<br/>cores can be used to measure the number of threads which can effectively be run at once<br/>without them having to context switch.The browser may, however, choose to report a lower number of logical cores in order to<br/>represent more accurately the number of <see cref="Worker"/>s that can run at once, so<br/>don&amp;apos;t treat this as an absolute measurement of the number of cores in the user&amp;apos;s system.</value>
+</NavigatorHardwareConcurrency>
+<NavigatorInk>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>ink</c></strong> read-only property of the <see cref="Navigator"/> interface returns an <see cref="Ink"/> object for the current document, providing access to <see href="https://developer.mozilla.org/en-US/docs/Web/API/Ink_API">Ink API</see> functionality.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/ink"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="'Ink'"/> object.</value>
+</NavigatorInk>
+<NavigatorWakeLock>
+<summary>
+The <strong><c>wakeLock</c></strong> read-only property of the <see cref="Navigator"/> interface returns a <see cref="WakeLock"/> interface that allows a document to acquire a screen wake lock.<br/>While a screen wake lock is active, the user agent will try to prevent the device from dimming the screen, turning it off completely, or showing a screensaver.
+</summary>
+<remarks>
+<para>-<see cref="WakeLock.Request"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Screen_Wake_Lock_API">Screen Wake Lock API</see><br/>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/wake-lock/">Stay awake with the Screen Wake Lock API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/wakeLock"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</NavigatorWakeLock>
+<NavigatorLogin>
+<summary>
+The <strong><c>login</c></strong> read-only property of the <see cref="Navigator"/> interface provides access to the browser's <see cref="NavigatorLogin"/> object, which a federated identity provider (IdP) can use to set its login status when a user signs into or out of the IdP.
+</summary>
+<remarks>
+<para>See <see href="https://developer.mozilla.org/en-US/docs/Web/API/FedCM_API/IDP_integration#update_login_status_using_the_login_status_api">Update login status using the Login Status API</see> for more details of how this is used.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/FedCM_API">Federated Credential Management (FedCM) API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/login"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="NavigatorLogin"/> object.</value>
+</NavigatorLogin>
+<NavigatorVendorSub>
+<summary>
+The value of the <strong><c>Navigator.vendorSub</c></strong> property is always<br/>the empty string, in any browser.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/vendorSub"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</NavigatorVendorSub>
+<NavigatorGetUserMedia>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The deprecated <strong><c>Navigator.getUserMedia()</c></strong> method prompts the user for permission to use up to one video input device (such as a camera or shared screen) and up to one audio input device (such as a microphone) as the source for a <see cref="MediaStream"/>.
+</summary>
+<remarks>
+<para>If permission is granted, a <c>MediaStream</c> whose video and/or audio tracks come from those devices is delivered to the specified success callback.<br/>If permission is denied, no compatible input devices exist, or any other error condition occurs, the error callback is executed with an object describing what went wrong.<br/>If the user instead doesn&amp;apos;t make a choice at all, neither callback is executed.</para><blockquote class="NOTE"><h5>NOTE</h5><para>This is a legacy method.<br/>Please use the newer <see cref="MediaDevices.GetUserMedia"/> instead.<br/>While technically not deprecated, this old callback version is marked as such, since the specification strongly encourages using the newer promise returning version.</para></blockquote>
+<para>-<see cref="MediaDevices.GetUserMedia"/> that replaces this deprecated method.<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see> - the introductory page to the API<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API">Media Capture and Streams API</see> - the API for the<br/>media stream objects<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos">Taking webcam photos</see> - a<br/>tutorial on using <c>getUserMedia()</c> for taking photos rather than video.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/getUserMedia"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</NavigatorGetUserMedia>
+<NavigatorCanShare>
+<summary>
+The <strong><c>canShare()</c></strong> method of the <see cref="Navigator"/> interface returns <c>true</c> if the equivalent call to <see cref="Navigator.Share"/> would succeed.
+</summary>
+<remarks>
+<para>The method returns <c>false</c> if the data cannot be <strong>validated</strong>. Reasons the data might be invalid include:</para><para>The <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Share_API">Web Share API</see> is gated by the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/web-share">web-share</see> permission policy.<br/>The <c>canShare()</c> method will return <c>false</c> if the permission is supported but has not been granted.</para>
+<para>-<see cref="Navigator.Share"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/canShare"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Returns <c>true</c> if the specified <c>data</c> can be shared with <see cref="Navigator.Share"/>, otherwise <c>false</c>.</returns>
+</NavigatorCanShare>
+<NavigatorGpu>
+<summary>
+The <strong><c>Navigator.gpu</c></strong> read-only property returns the <see cref="GPU"/> object for the current browsing context, which is the entry point for the {{domxref("WebGPU_API", "WebGPU API", &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}.
+</summary>
+<remarks>
+<para>-{{domxref(&amp;quot;WebGPU_API&amp;quot;, &amp;quot;WebGPU API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/gpu"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="GPU"/> object.</value>
+</NavigatorGpu>
+<NavigatorGetAutoplayPolicy>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>getAutoplayPolicy()</c></strong> method of the <strong>Autoplay Policy Detection API</strong> provides information about whether <see href="https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Autoplay">autoplay</see> of media elements and audio contexts is allowed, disallowed, or only allowed if the audio is muted.
+</summary>
+<remarks>
+<para>Applications can use this information to provide an appropriate user experience.<br/>For example, if the user agent policy only allows autoplay of inaudible content, the application might mute videos so that they can still autoplay.</para><para>The method can be used to get either the broad autoplay policy for all items of a particular type in the document, or for specific media elements or audio contexts.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Autoplay">Autoplay guide for media and Web Audio APIs</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/getAutoplayPolicy"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A string indicating the autoplay policy for the specified media feature type, element, or context.<br/>This will be a string containing one of the following values:Note that the autoplay policy returned for a <c>type</c> parameter is the <strong>broad</strong> policy for items of the indicated type.<br/>On page load, all items of a type will have the same policy as the type.<br/>Once the user has interacted with the page/site, on some browsers individual items <strong>may</strong> have a different policy to the corresponding type.</returns>
+</NavigatorGetAutoplayPolicy>
+<NavigatorActiveVRDisplays>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>activeVRDisplays</c></strong> read-only property of the<br/><see cref="Navigator"/> interface returns an array containing every<br/><see cref="VRDisplay"/> object that is currently presenting<br/>(<see cref="VRDisplay.IsPresenting"/> is <c>true</c>).
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This property was part of the old <see href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</see>. It has been superseded by the <see href="https://immersive-web.github.io/webxr/">WebXR Device API</see>.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API">WebVR API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/activeVRDisplays"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An array of <see cref="VRDisplay"/> objects.</value>
+</NavigatorActiveVRDisplays>
+<NavigatorClipboard>
+<summary>
+The <strong><c>clipboard</c></strong> read-only property of the <see cref="Navigator"/> interface returns a <see cref="Clipboard"/> object used to read and write the clipboard's contents.
+</summary>
+<remarks>
+<para>This is the entry point to the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API">Clipboard API</see>, which can be used to implement cut, copy, and paste features within a web application.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/clipboard"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <see cref="Clipboard"/> object used to access the system clipboard.</value>
+</NavigatorClipboard>
+<NavigatorWindowControlsOverlay>
+<summary>
+The <strong><c>windowControlsOverlay</c></strong> read-only property of the <see cref="Navigator"/><br/>interface returns the <see cref="WindowControlsOverlay"/> interface, which exposes<br/>information about the title bar geometry in desktop Progressive Web Apps that use the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Window_Controls_Overlay_API">Window Controls Overlay API</see>.
+</summary>
+<remarks>
+<para>Progressive Web Apps installed on desktop Operating Systems can opt-in to the<br/>Window Controls Overlay feature by using the <c>window-controls-overlay</c> value in the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/display_override"><c>display_override</c></see> web app manifest member.</para><para>Doing so hides the default window title bar and gives the app access to the full area<br/>of the app window.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/windowControlsOverlay"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <see cref="WindowControlsOverlay"/> interface.</value>
+</NavigatorWindowControlsOverlay>
+<NavigatorSerial>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>serial</c></strong> read-only property of the <see cref="Navigator"/> interface returns a <see cref="Serial"/> object which represents the entry point into the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Serial_API">Web Serial API</see>.
+</summary>
+<remarks>
+<para>When getting, the same instance of the <see cref="Serial"/> object will always be returned.</para>
+<para>-<see href="https://developer.chrome.com/docs/capabilities/serial">Read from and write to a serial port</see><br/>-<see href="https://codelabs.developers.google.com/codelabs/web-serial#0">Getting started with the web serial API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/serial"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Serial"/> object.</value>
+</NavigatorSerial>
+<NavigatorGeolocation>
+<summary>
+The <strong><c>Navigator.geolocation</c></strong> read-only property returns a<br/><see cref="Geolocation"/> object that gives Web content access to the location of the<br/>device. This allows a website or app to offer customized results based on the user&amp;apos;s<br/>location.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>For security reasons, when a web page tries to access location<br/>information, the user is notified and asked to grant permission. Be aware that each<br/>browser has its own policies and methods for requesting this permission.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API">Using the Geolocation API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/geolocation"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Geolocation"/> object.</value>
+</NavigatorGeolocation>
+<NavigatorKeyboard>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>keyboard</c></strong> read-only property<br/>of the <see cref="Navigator"/> interface returns a <see cref="'Keyboard'"/> object<br/>which provides access to functions that retrieve keyboard layout maps and toggle<br/>capturing of key presses from the physical keyboard.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/keyboard"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="'Keyboard'"/> object.</value>
+</NavigatorKeyboard>
+<NavigatorTaintEnabled>
+<summary>
+The <strong><c>Navigator.taintEnabled()</c></strong> method always returns<br/><c>false</c>.
+</summary>
+<remarks>
+<para>Tainting was a security method used by JavaScript 1.2. It has long been removed; this<br/>method only stays for maintaining compatibility with very old scripts.</para>
+<para>-<see cref="Navigator"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/taintEnabled"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Always returns <c>false</c>.</returns>
+</NavigatorTaintEnabled>
+<NavigatorWebdriver>
+<summary>
+The <strong><c>webdriver</c></strong> read-only property<br/>of the <see cref="Navigator"/> interface indicates whether the user agent is<br/>controlled by automation.
+</summary>
+<remarks>
+<para>It defines a standard way for co-operating user agents to inform the document that it<br/>is controlled by <see href="https://developer.mozilla.org/en-US/docs/Web/WebDriver">WebDriver</see>, for example, so that<br/>alternate code paths can be triggered during automation.</para><para>The <c>navigator.webdriver</c> property is true when in:</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/webdriver"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Boolean"/></value>
+</NavigatorWebdriver>
+<NavigatorPlugins>
+<summary>
+Returns a <see cref="PluginArray"/> object, listing the <see cref="Plugin"/> objects describing the plugins installed in the application.<br/>Named properties of the returned object are not enumerable (except in very old browser versions).
+</summary>
+<remarks>
+<para>Recent versions of the specification hard-code the returned list.<br/>If inline viewing of PDF files is supported the property lists five standard plugins.<br/>If inline PDF viewing is not supported then an empty list is returned.</para><blockquote class="NOTE"><h5>NOTE</h5><para>Use <see cref="Navigator.PdfViewerEnabled"/> to determine if inline viewing of PDF files is supported. Do not infer it from this property.</para><para>The &amp;quot;five standard plugins&amp;quot; are those that developers have most commonly used to feature detect inline PDF viewing.<br/>Returning these ensures that legacy code can more reliably determine whether inline viewing is supported.<br/>However this approach is not recommended for new code because this property may eventually be removed.</para></blockquote><para>Legacy browser versions also list plugins for Adobe Flash and PDF viewer extensions.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/plugins"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value><c>plugins</c> is a <see cref="PluginArray"/> object used to access <see cref="Plugin"/> objects either by name or as a list of items.The returned value is not a JavaScript array, but has the <c>length</c> property and supports accessing individual items using bracket notation (<c>plugins[2]</c>), as well as via <c>item(index)</c> and <c>namedItem(&amp;quot;name&amp;quot;)</c> methods.If PDF inline viewing is supported this will contain entries for the following plugins:If inline viewing of PDFs is not supported then an empty object is returned.</value>
+</NavigatorPlugins>
+<NavigatorPermissions>
+<summary>
+The <strong><c>permissions</c></strong> read-only property of the <see cref="Navigator"/> interface returns a<br/><see cref="Permissions"/> object that can be used to query and update permission<br/>status of APIs covered by the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Permissions_API">Permissions API</see>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Permissions_API">Permissions API</see><br/>-<see cref="Navigator"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/permissions"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Permissions"/> object.</value>
+</NavigatorPermissions>
+<NavigatorGlobalPrivacyControl>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>Navigator.globalPrivacyControl</c></strong> read-only property returns the user&amp;apos;s <see href="https://globalprivacycontrol.org/">Global Privacy Control</see> setting for the current website.<br/>This setting indicates whether the user consents to the website or service selling or sharing their personal information with third parties.
+</summary>
+<remarks>
+<para>The value of the property reflects that of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-GPC">Sec-GPC</see> HTTP header.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-GPC">Sec-GPC</see> header<br/>-<see href="https://globalprivacycontrol.org/">globalprivacycontrol.org</see><br/>-<see href="https://en.wikipedia.org/wiki/Do_Not_Track">Do Not Track on Wikipedia</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/globalPrivacyControl"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value><c>true</c> if the user explicitly <strong>does not</strong> provide consent to sell or share their data.<br/><c>false</c> if the user either grants consent, or has not indicated a preference.</value>
+</NavigatorGlobalPrivacyControl>
+<NavigatorShare>
+<summary>
+The <strong><c>share()</c></strong> method of the <see cref="Navigator"/> interface invokes the native sharing mechanism of the device to share data such as text, URLs, or files. The available <strong>share targets</strong> depend on the device, but might include the clipboard, contacts and email applications, websites, Bluetooth, etc.
+</summary>
+<remarks>
+<para>The method resolves a <see cref="Promise"/> with <c>undefined</c>.<br/>On Windows this happens when the share popup is launched, while on Android the promise resolves once the data has successfully been passed to the <strong>share target</strong>.</para><para>The <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Share_API">Web Share API</see> is gated by the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/web-share">web-share</see> permission policy.<br/>The <c>share()</c> method will throw exceptions if the permission is supported but has not been granted.</para>
+<para>-<see cref="Navigator.CanShare"/><br/>-<see href="https://wpt.live/web-share/"/> (web platform tests)<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves with <c>undefined</c>, or rejected with one of the <see href="https://developer.mozilla.org#exceptions">Exceptions</see> given below.</returns>
+</NavigatorShare>
+<NavigatorAppVersion>
+<summary>
+Returns either <c>&amp;quot;4.0&amp;quot;</c> or a string representing version information about<br/>the browser.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Do not rely on this property to return the correct browser version.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/appVersion"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>Either <c>&amp;quot;4.0&amp;quot;</c> or a string representing version information about the<br/>browser.</value>
+</NavigatorAppVersion>
+<NavigatorLanguages>
+<summary>
+The <strong><c>languages</c></strong> read-only property of the <see cref="Navigator"/> interface<br/>returns an array of strings representing the user&amp;apos;s preferred<br/>languages. The language is described using language tags according to<br/>{{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}. In the returned<br/>array they are ordered by preference with the most preferred language first.
+</summary>
+<remarks>
+<para>The value of <see cref="Navigator.Language"/> is the<br/>first element of the returned array.</para><para>When its value changes, as the user&amp;apos;s preferred languages are changed a<br/><see cref="Window.Languagechange"/> event is fired on the <see cref="Window"/> object.</para><para>The <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language">Accept-Language</see> HTTP header in every HTTP request from the user's browser generally lists the same locales as the <c>navigator.languages</c> property, with decreasing <c>q</c> values (quality values). Some browsers (Chrome and Safari) add language-only fallback tags in <c>Accept-Language</c>—for example, <c>en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7</c> when <c>navigator.languages</c> is <c>[&amp;quot;en-US&amp;quot;, &amp;quot;zh-CN&amp;quot;]</c>. For privacy purposes (reducing <see href="https://developer.mozilla.org/en-US/docs/Glossary/fingerprinting">fingerprinting</see>), both <c>Accept-Language</c> and <c>navigator.languages</c> may not include the full list of user preferences, such as in Safari (always) and Chrome&amp;apos;s incognito mode, where only one language is listed.</para>
+<para>-<see cref="Navigator.Language"/><br/>-<see cref="Navigator"/><br/>-<see cref="Window.Languagechange"/> event<br/>-<see cref="Intl"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/languages"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An array of strings.</value>
+</NavigatorLanguages>
+<NavigatorOnLine>
+<summary>
+The <strong><c>onLine</c></strong> property of the <see cref="Navigator"/> interface returns whether the device is connected to the network, with <c>true</c> meaning online and <c>false</c> meaning offline. The property&amp;apos;s value changes after the browser checks its network connection, usually when the user follows links or when a script requests a remote page. For example, the property should return <c>false</c> when users click links soon after they lose internet connection. When its value changes, an <see href="https://developer.mozilla.org/en-US/docs/Web/API/Window/online_event"><c>online</c></see> or <see href="https://developer.mozilla.org/en-US/docs/Web/API/Window/offline_event"><c>offline</c></see> event is fired on the <c>window</c>.
+</summary>
+<remarks>
+<para>Browsers and operating systems leverage different heuristics to determine whether the device is online. In general, connection to LAN is considered online, even though the LAN may not have Internet access. For example, the computer may be running a virtualization software that has virtual ethernet adapters that are always &amp;quot;connected&amp;quot;. On Windows, the online status is determined by whether it can reach a Microsoft home server, which may be blocked by firewalls or VPNs, even if the computer has Internet access. Therefore, this property is inherently unreliable, and you should not disable features based on the online status, only provide hints when the user may seem offline.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/onLine"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean.</value>
+</NavigatorOnLine>
+<NavigatorGetBattery>
+<summary>
+The <strong><c>getBattery()</c></strong> method provides information about the system&amp;apos;s battery.<br/>It returns a battery promise, which resolves with a <see cref="BatteryManager"/> object providing some properties to get the battery status also some events you can handle to monitor the battery status.<br/>This implements the {{domxref(&amp;quot;Battery Status API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}; see that documentation for additional details, a guide to using the API, and sample code.
+</summary>
+<remarks>
+<para>Since Chrome 103, the <c>Navigator.getBattery()</c> method of {{domxref(&amp;quot;Battery Status API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} only expose to secure context.</para><blockquote class="NOTE"><h5>NOTE</h5><para>Access to this feature may be controlled by the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy">Permissions-Policy</see> directive <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy/battery">Permissions-Policy/battery</see>.</para></blockquote>
+<para>-{{domxref(&amp;quot;Battery Status API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy">Permissions-Policy</see> <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy/battery">Permissions-Policy/battery</see> directive<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/getBattery"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{JSxRef("Promise")}} that fulfills with a <see cref="BatteryManager"/> object which you can use to get information about the battery's state.</returns>
+</NavigatorGetBattery>
+<NavigatorCredentials>
+<summary>
+The <strong><c>credentials</c></strong> read-only property of the <see cref="Navigator"/> interface returns the <see cref="CredentialsContainer"/> object associated with the current document, which exposes methods to request credentials. The <see cref="CredentialsContainer"/> interface also notifies the user agent when an interesting event occurs, such as a successful sign-in or sign-out. This interface can be used for feature detection.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/credentials"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="CredentialsContainer"/> object.</value>
+</NavigatorCredentials>
+<NavigatorPdfViewerEnabled>
+<summary>
+The <strong><c>pdfViewerEnabled</c></strong> read-only property of the <see cref="Navigator"/> interface indicates whether the browser supports inline display of PDF files when navigating to them.
+</summary>
+<remarks>
+<para>If inline viewing is not supported the PDF is downloaded and may then be handled by some external application.</para><blockquote class="NOTE"><h5>NOTE</h5><para>This method replaces a number of legacy methods of inferring support for inline viewing of PDF files.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/pdfViewerEnabled"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value><c>true</c> if the browser can display PDF files inline when navigating to the file (using either an internal viewer or a PDF viewer extension); otherwise <c>false</c>.</value>
+</NavigatorPdfViewerEnabled>
+<NavigatorAppCodeName>
+<summary>
+The value of the <strong><c>Navigator.appCodeName</c></strong> property is<br/>always <c>&amp;quot;Mozilla&amp;quot;</c>, in any browser. This property is kept only for<br/>compatibility purposes.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Do not rely on this property to return a real<br/>product name. All browsers return <c>&amp;quot;Mozilla&amp;quot;</c> as the value of this property.</para></blockquote>
+<para>-<see cref="Navigator.AppName"/><br/>-<see cref="Navigator.Product"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/appCodeName"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The string <c>&amp;quot;Mozilla&amp;quot;</c>.</value>
+</NavigatorAppCodeName>
+<NavigatorDevicePosture>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>Navigator.devicePosture</c></strong> read-only property returns the browser's <see cref="DevicePosture"/> object, which allows developers to query the device's current posture (that is, whether the viewport is in a flat or folded state) and run code in response to posture changes.
+</summary>
+<remarks>
+<para>-<see cref="DevicePosture"/><br/>-<see cref="DevicePosture.Type"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Device_Posture_API">Device Posture API</see><br/>-CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/device-posture">@media/device-posture</see> <c>_media</c> feature<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/devicePosture"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DevicePosture"/> object.</value>
+</NavigatorDevicePosture>
+<NavigatorVibrate>
+<summary>
+The <strong><c>vibrate()</c></strong> method of the <see cref="Navigator"/> interface pulses the vibration<br/>hardware on the device, if such hardware exists. If the device doesn&amp;apos;t support<br/>vibration, this method has no effect. If a vibration pattern is already in progress when<br/>this method is called, the previous pattern is halted and the new one begins instead.
+</summary>
+<remarks>
+<para>If the method was unable to vibrate because of invalid parameters, it will return<br/><c>false</c>, else it returns <c>true</c>. If the pattern leads to a too<br/>long vibration, it is truncated: the max length depends on the implementation.</para><para>Some devices may not vibrate if they are in Silent mode or Do Not Disturb (DND) mode. To ensure vibration works, make sure these modes are turned off and that vibration is enabled in the system settings.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Vibration_API">Vibration API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/vibrate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A boolean.</returns>
+</NavigatorVibrate>
+<NavigatorBluetooth>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>bluetooth</c></strong> read-only property of the <see cref="Navigator"/> interface returns a <see cref="Bluetooth"/> object for the current document, providing access to <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Bluetooth_API">Web Bluetooth API</see> functionality.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Bluetooth_API">Web Bluetooth API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/bluetooth"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Bluetooth"/> object.</value>
+</NavigatorBluetooth>
+<NavigatorLocks>
+<summary>
+The <strong><c>locks</c></strong> read-only property of<br/>the <see cref="Navigator"/> interface returns a <see cref="LockManager"/> object<br/>which provides methods for requesting a new <see cref="'Lock'"/> object and querying<br/>for an existing <c>Lock</c> object.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/locks"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="LockManager"/> object.</value>
+</NavigatorLocks>
+<NavigatorUserActivation>
+<summary>
+The read-only <strong><c>userActivation</c></strong> property of the <see cref="Navigator"/> interface returns a <see cref="UserActivation"/> object which contains information about the current window's user activation state.
+</summary>
+<remarks>
+<para>-<see cref="UserActivation"/><br/>-<see cref="UserActivation.HasBeenActive"/><br/>-<see cref="UserActivation.IsActive"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Security/User_activation">Features gated by user activation</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/userActivation"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="UserActivation"/> object.</value>
+</NavigatorUserActivation>
+<NavigatorRegisterProtocolHandler>
+<summary>
+The <strong><see cref="Navigator"/></strong> method <strong><c>registerProtocolHandler()</c></strong> lets websites register their ability to open or handle particular URL schemes (also known as protocols).
+</summary>
+<remarks>
+<para>For example, this API lets webmail sites open <c>mailto:</c> URLs, or VoIP sites open <c>tel:</c> URLs.</para><para>To register a protocol handler, a website calls <c>registerProtocolHandler()</c>, passing in the protocol to register and a template URL.</para><para>When the user activates a link that uses the registered protocol, the browser will insert the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a#href"><c>href</c></see> from the activated link into the URL template supplied during handler registration, and navigate the current page to the resulting URL.</para><para>The browser may ask the user to confirm that they want the page to be allowed to handle the protocol, either when the protocol is registered or when the user activates the link.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/registerProtocolHandler"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</NavigatorRegisterProtocolHandler>
+<NavigatorDeviceMemory>
+<summary>
+The <strong><c>deviceMemory</c></strong> read-only<br/>property of the <see cref="Navigator"/> interface returns the approximate amount of<br/>device memory in gigabytes.
+</summary>
+<remarks>
+<para>The reported value is imprecise to curtail <see href="https://developer.mozilla.org/en-US/docs/Glossary/fingerprinting">fingerprinting</see>. It's approximated by<br/>rounding down to the nearest power of 2, then dividing that number by 1024. It is then<br/>clamped within lower and upper bounds to protect the privacy of owners of very low-memory or<br/>high-memory devices.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Device-Memory">Device-Memory</see> HTTP header<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/deviceMemory"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A floating point number; one of <c>0.25</c>, <c>0.5</c>, <c>1</c>, <c>2</c>, <c>4</c>, <c>8</c>.</value>
+</NavigatorDeviceMemory>
+<NavigatorCookieEnabled>
+<summary>
+<c>navigator.cookieEnabled</c> returns a Boolean value that indicates whether cookies are enabled or not.
+</summary>
+<remarks>
+<para>The property is read-only.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/cookieEnabled"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean.<blockquote class="NOTE"><h5>NOTE</h5>Web browsers may prevent writing certain cookies in certain scenarios. For example, Chrome-based browsers, as well as some experimental version of Firefox, does not allow creating cookies with <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value"><c>SameSite=None</c></see> attribute, unless they are created over HTTPS and with <c>Secure</c> attribute.</blockquote></value>
+</NavigatorCookieEnabled>
+<NavigatorRequestMIDIAccess>
+<summary>
+The <strong><c>requestMIDIAccess()</c></strong> method of the <see cref="'Navigator'"/> interface returns a {{jsxref('Promise')}} representing a request for access to MIDI devices on a user's system.<br/>This method is part of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_MIDI_API">Web MIDI API</see>, which provides a means for accessing, enumerating, and manipulating MIDI devices.
+</summary>
+<remarks>
+<para>This method may prompt the user for access to MIDI devices available to their system, or it may use a previously established preference to grant or deny access.<br/>If permission is granted then the <see cref="'Promise'"/> resolves and a <see href="https://developer.mozilla.org/en-US/docs/Web/API/MIDIAccess"><c>MIDIAccess</c></see> object is returned.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_MIDI_API">Web MIDI API</see><br/>-<see href="https://code.tutsplus.com/introduction-to-web-midi--cms-25220t">Introduction to Web MIDI</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/requestMIDIAccess"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="'Promise'"/> that resolves with a <see href="https://developer.mozilla.org/en-US/docs/Web/API/MIDIAccess"><c>MIDIAccess</c></see> object.</returns>
+</NavigatorRequestMIDIAccess>
+<NavigatorHid>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>Navigator.hid</c></strong><br/>read-only property returns an <see cref="HID"/> object providing methods for accessing HID device connections and events that fire when the user agent connects to or disconnects from a device.
+</summary>
+<remarks>
+<para>Where a defined <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Permissions_Policy">Permissions Policy</see> blocks WebHID usage, the <c>Navigator.hid</c> property will not be available.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebHID_API">WebHID API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/hid"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="HID"/> object.</value>
+</NavigatorHid>
+<NavigatorMediaCapabilities>
+<summary>
+The <strong><c>mediaCapabilities</c></strong> read-only property of the <see cref="Navigator"/> interface references a <see cref="MediaCapabilities"/> object that can expose information about the decoding and encoding capabilities for a given media format and output capabilities.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capabilities_API">Media Capabilities API</see><br/>-<see cref="Navigator"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/mediaCapabilities"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="MediaCapabilities"/> object.</value>
+</NavigatorMediaCapabilities>
+<NavigatorSendBeacon>
+<summary>
+The <strong><c>navigator.sendBeacon()</c></strong><br/>method <see href="https://developer.mozilla.org/en-US/docs/Glossary/Asynchronous">Asynchronous</see> sends an <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods/POST">HTTP POST</see> request containing a small amount of data to a web server.
+</summary>
+<remarks>
+<para>It&amp;apos;s intended to be used for<br/>sending analytics data to a web server, and avoids some of the problems with<br/>legacy techniques for sending analytics, such as the use of<br/><see cref="XMLHttpRequest"/>.</para><blockquote class="NOTE"><h5>NOTE</h5><para>For use cases that need the ability to send requests with methods other than <c>POST</c>, or to change any request properties, or that need access to the server response, instead use the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Window/fetch"><c>fetch()</c></see> method with <see href="https://developer.mozilla.org/en-US/docs/Web/API/RequestInit#keepalive"><c>keepalive</c></see> set to true.</para></blockquote>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/API/Document/visibilitychange_event"><c>visibilitychange</c></see> event.<br/>-{{domxref(&amp;quot;Beacon_API&amp;quot;,&amp;quot;Beacon API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;true&amp;quot;)}} overview page.<br/>-<see href="https://www.igvita.com/2015/11/20/dont-lose-user-and-app-state-use-page-visibility/">Don&amp;apos;t lose user and app state, use Page Visibility</see> explains in<br/>detail why you should use <c>visibilitychange</c>, not<br/><c>beforeunload</c>/<c>unload</c>.<br/>-<see href="https://developer.chrome.com/docs/web-platform/page-lifecycle-api#developer-recommendations-for-each-state">Page Lifecycle API</see> gives best-practices guidance on handling<br/>page lifecycle behavior in your web applications.<br/>-<see href="https://github.com/GoogleChromeLabs/page-lifecycle">PageLifecycle.js</see>: a JavaScript library that deals with cross-browser inconsistencies in page lifecycle behavior.<br/>-<see href="https://web.dev/articles/bfcache">Back/forward cache</see> explains what the back/forward cache is, and its implications for various page lifecycle events.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>The <strong><c>sendBeacon()</c></strong> method returns <c>true</c> if the<br/><see href="https://developer.mozilla.org/en-US/docs/Glossary/user agent">user agent</see> successfully queued the <c>data</c> for transfer.<br/>Otherwise, it returns <c>false</c>.</returns>
+</NavigatorSendBeacon>
+<NavigatorSetAppBadge>
+<summary>
+The <strong><c>setAppBadge()</c></strong> method of the <see cref="Navigator"/> interface sets a badge on the icon associated with this app. If a value is passed to the method, this will be set as the value of the badge. Otherwise the badge will display as a dot, or other indicator as defined by the platform.
+</summary>
+<remarks>
+<para>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/badging-api/">Badging for app icons</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/setAppBadge"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves with <see cref="Undefined"/>.</returns>
+</NavigatorSetAppBadge>
+<NavigatorProductSub>
+<summary>
+The <strong><c>Navigator.productSub</c></strong> read-only property that returns either the string &amp;quot;20030107&amp;quot;, or the string &amp;quot;20100101&amp;quot;.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/productSub"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>Either &amp;quot;20030107&amp;quot;, or &amp;quot;20100101&amp;quot;.</value>
+</NavigatorProductSub>
+<NavigatorMaxTouchPoints>
+<summary>
+The <strong><c>maxTouchPoints</c></strong> read-only property of the<br/><see cref="Navigator"/> interface returns the maximum number of simultaneous touch<br/>contact points that are supported by the current device.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/maxTouchPoints"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</NavigatorMaxTouchPoints>
+<NavigatorServiceWorker>
+<summary>
+The <strong><c>serviceWorker</c></strong> read-only property of the <see cref="Navigator"/> interface returns the <see cref="ServiceWorkerContainer"/> object for the <see href="https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window">associated document</see>, which provides access to registration, removal, upgrade, and communication with the <see cref="ServiceWorker"/>.
+</summary>
+<remarks>
+<para>The feature may not be available in private mode.</para><para>Note that a worker can similarly access the <see cref="ServiceWorkerContainer"/> for a document using <see cref="WorkerNavigator.ServiceWorker"/>.</para>
+<para>-{{domxref(&amp;quot;Service Worker API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/serviceWorker"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value><see cref="ServiceWorkerContainer"/>.</value>
+</NavigatorServiceWorker>
+<NavigatorRequestMediaKeySystemAccess>
+<summary>
+The <strong><c>requestMediaKeySystemAccess()</c></strong> method of the <see cref="Navigator"/> interface returns a {{jsxref('Promise')}} which delivers a <see cref="'MediaKeySystemAccess'"/> object that can be used to access a particular media key system, which can in turn be used to create keys for decrypting a media stream.
+</summary>
+<remarks>
+<para>This method is part of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Encrypted_Media_Extensions_API">Encrypted Media Extensions API</see>, which brings support for encrypted media and DRM-protected video to the web.</para><para>This method may have user-visible effects such as asking for permission to access one or more system resources.<br/>Consider that when deciding when to call <c>requestMediaKeySystemAccess()</c>; you don&amp;apos;t want those requests to happen at inconvenient times.<br/>As a general rule, this function should be called only when it's about time to create and use a <see cref="MediaKeys"/> object by calling the returned <see cref="MediaKeySystemAccess"/> object's <see cref="MediaKeySystemAccess.CreateMediaKeys"/> method.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Encrypted_Media_Extensions_API">Encrypted Media Extensions API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API">Media Capture and Streams API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see cref="MediaCapabilities.DecodingInfo"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/requestMediaKeySystemAccess"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref('Promise')}} that fulfils with a <see cref="'MediaKeySystemAccess'"/> object representing the media key system configuration described by <c>keySystem</c> and <c>supportedConfigurations</c>.</returns>
+</NavigatorRequestMediaKeySystemAccess>
+<NavigatorVendor>
+<summary>
+The value of the <see cref="Navigator"/> <strong><c>vendor</c></strong> property is always either <c>&amp;quot;Google Inc.&amp;quot;</c>, <c>&amp;quot;Apple Computer, Inc.&amp;quot;</c>, or (in Firefox) the empty string.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/vendor"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>Either <c>&amp;quot;Google Inc.&amp;quot;</c>, <c>&amp;quot;Apple Computer, Inc.&amp;quot;</c>, or (in Firefox) the empty string.</value>
+</NavigatorVendor>
+<NavigatorUnregisterProtocolHandler>
+<summary>
+The <strong><see cref="Navigator"/></strong> method <strong><c>unregisterProtocolHandler()</c></strong> removes a protocol handler for a given URL <see href="https://developer.mozilla.org#permitted_schemes">scheme</see>.
+</summary>
+<remarks>
+<para>This method is the inverse of <strong><c>registerProtocolHandler()</c></strong>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/unregisterProtocolHandler"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</NavigatorUnregisterProtocolHandler>
+<NavigatorUsb>
+<summary>
+The <strong><c>usb</c></strong> read-only property of the <see cref="Navigator"/> interface returns a <see cref="USB"/> object for the current document, providing access to <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebUSB_API">WebUSB API</see> functionality.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebUSB_API">WebUSB API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/usb"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="'USB'"/> object.</value>
+</NavigatorUsb>
+<NavigatorAppName>
+<summary>
+The value of the <strong><c>Navigator.appName</c></strong> property is always<br/><c>&amp;quot;Netscape&amp;quot;</c>, in any browser. This property is kept only for compatibility<br/>purposes.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Do not rely on this property to return a real browser name. All browsers return <c>&amp;quot;Netscape&amp;quot;</c> as the value of this property.</para></blockquote>
+<para>-<see cref="Navigator.AppCodeName"/><br/>-<see cref="Navigator.Product"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/appName"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The string <c>&amp;quot;Netscape&amp;quot;</c>.</value>
+</NavigatorAppName>
+<NavigatorGetGamepads>
+<summary>
+The <strong><c>Navigator.getGamepads()</c></strong> method returns an array of<br/><see cref="Gamepad"/> objects, one for each gamepad connected to the device.
+</summary>
+<remarks>
+<para>Elements in the array may be <c>null</c> if a gamepad disconnects during a<br/>session, so that the remaining gamepads retain the same index.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API">Using the Gamepad API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API">Gamepad API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/getGamepads"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An {{jsxref("Array")}} of <see cref="Gamepad"/> objects, eventually empty.</returns>
+</NavigatorGetGamepads>
+<NavigatorVirtualKeyboard>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>virtualKeyboard</c></strong> read-only property<br/>of the <see cref="Navigator"/> interface returns a reference to the <see cref="VirtualKeyboard"/> instance object.
+</summary>
+<remarks>
+<para>The {{domxref(&amp;quot;VirtualKeyboard_API&amp;quot;, &amp;quot;VirtualKeyboard API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} gives developers control over the layout of their applications when the on-screen virtual keyboard appears and disappears on devices such as tablets, mobile phones, or other devices where a hardware keyboard may not be available.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/virtualKeyboard"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="VirtualKeyboard"/> object you can use to opt-out of the automatic virtual keyboard behavior, show or hide the virtual keyboard programmatically, and get the current position and size of the virtual keyboard.</value>
+</NavigatorVirtualKeyboard>
+<NavigatorJavaEnabled>
+<summary>
+This method always returns false.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/javaEnabled"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>The boolean value <c>false</c>.</returns>
+</NavigatorJavaEnabled>
+<NavigatorOscpu>
+<summary>
+The <strong><c>Navigator.oscpu</c></strong> property returns a string that identifies the current operating system.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/oscpu"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string providing a string which identifies the operating system on which the browser is running.<table><tr><td>Operating system</td><td><c>oscpuInfo</c> string format</td></tr><tr><td>OS/2</td><td><c>OS/2 Warp x (either 3, 4 or 4.5)</c></td></tr><tr><td>Windows CE</td><td><c>WindowsCE x.y</c></td></tr><tr><td>Windows 64-bit (64-bit build)</td><td><c>Windows NT x.y; Win64; x64</c></td></tr><tr><td>Windows 64-bit (32-bit build)</td><td><c>Windows NT x.y; WOW64</c></td></tr><tr><td>Windows 32-bit</td><td><c>Windows NT x.y</c></td></tr><tr><td>Mac OS X (PPC build)</td><td><c>PowerPC Mac OS X version x.y</c></td></tr><tr><td>Mac OS X (i386/x64 build)</td><td><c>Intel Mac OS X</c> or <c>macOS version x.y</c></td></tr><tr><td>Linux 64-bit (32-bit build)</td><td>Output of <c>uname -s</c> followed by <c>i686 on x86_64</c></td></tr><tr><td>Linux</td><td>Output of <c>uname -sm</c></td></tr></table>In this table <c>x.y</c> refers to the version of the operating system</value>
+</NavigatorOscpu>
+<NavigatorMimeTypes>
+<summary>
+Returns a <see cref="MimeTypeArray"/> object, which contains a list of <see cref="MimeType"/> objects representing the MIME types recognized and supported by the browser.<br/>The array can be queried for information about the enabled plugin that is used to handle a file of the specified type.<br/>Named properties of the returned object are not enumerable (except in very old browser versions).
+</summary>
+<remarks>
+<para>Recent versions of the specification hard-code the returned set of MIME types.<br/>If PDF files can be displayed inline then <c>application/pdf</c> and <c>text/pdf</c> are listed.<br/>Otherwise an empty list is returned.</para><blockquote class="NOTE"><h5>NOTE</h5><para>Use <see cref="Navigator.PdfViewerEnabled"/> to determine if inline viewing of PDF files is supported. Do not infer it from this property.</para></blockquote><para>Legacy browser versions do not hard-code the list returned by the property, and might return other MIME types.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/mimeTypes"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <c>MimeTypeArray</c> object which has a <c>length</c> property as well as <c>item(index)</c> and <c>namedItem(name)</c> methods.If PDF inline viewing is supported this has entries for MIME types <c>application/pdf</c> and <c>text/pdf</c>.<br/>Otherwise an empty <c>MimeTypeArray</c> is returned.<br/>The description and file suffixes supported by enabled plugins are hard coded to <c>&amp;apos;pdf&amp;apos;</c> and <c>&amp;apos;Portable Document Format&amp;apos;</c>, respectively.</value>
+</NavigatorMimeTypes>
+<NavigatorPresentation>
+<summary>
+The <c>presentation</c> read-only property of <see cref="Navigator"/> serves as the entry<br/>point for the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Presentation_API">Presentation API</see> and<br/>returns a reference to <see cref="Presentation"/> object.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Presentation_API">Presentation API</see><br/>-<see cref="Presentation"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/presentation"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A reference to <see cref="Presentation"/> object.</value>
+</NavigatorPresentation>
+<NavigatorContacts>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>contacts</c></strong> read-only property of the<br/><see cref="Navigator"/> interface returns a <see cref="'ContactsManager'"/> interface<br/>which allows users to select entries from their contact list and share limited details<br/>of the selected entries with a website or application.
+</summary>
+<remarks>
+<para>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/contact-picker">A Contact Picker for the Web</see><br/>-<see href="https://mdn.github.io/dom-examples/contact-picker/">Contact Picker API live demo</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/contacts"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="'ContactsManager'"/> object. Two successive calls return the same object.</value>
+</NavigatorContacts>
+<NavigatorStorage>
+<summary>
+The <strong><c>Navigator.storage</c></strong><br/>read-only property returns the singleton <see cref="StorageManager"/> object used to<br/>access the overall storage capabilities of the browser for the current site or app.<br/>The returned object lets you examine and configure persistence of data stores and<br/>learn approximately how much more space your browser has available for local storage<br/>use.
+</summary>
+<remarks>
+<para>-<see cref="StorageManager"/><br/>-<see cref="Navigator"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/storage"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="StorageManager"/> object you can use to maintain persistence for stored<br/>data, as well as to determine roughly how much room there is for data to be stored.</value>
+</NavigatorStorage>
+<NavigatorClearAppBadge>
+<summary>
+The <strong><c>clearAppBadge()</c></strong> method of the <see cref="Navigator"/> interface clears a badge on the current app's icon by setting it to <c>nothing</c>. The value <c>nothing</c> indicates that no badge is currently set, and the status of the badge is <strong>cleared</strong>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/badging-api/">Badging for app icons</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/clearAppBadge"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves with <see cref="Undefined"/>.</returns>
+</NavigatorClearAppBadge>
+<NavigatorProduct>
+<summary>
+The value of the <strong><c>Navigator.product</c></strong> property is always<br/><c>&amp;quot;Gecko&amp;quot;</c>, in any browser. This property is kept only for compatibility<br/>purposes.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Do not rely on this property to return a real product name. All browsers return <c>&amp;quot;Gecko&amp;quot;</c> as the value of this property.</para></blockquote>
+<para>-<see cref="Navigator.AppCodeName"/><br/>-<see cref="Navigator.AppName"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/product"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The string <c>&amp;quot;Gecko&amp;quot;</c>.</value>
+</NavigatorProduct>
+<NavigatorLanguage>
+<summary>
+The <strong><c>language</c></strong> read-only property of the <see cref="Navigator"/> interface returns a string representing the preferred language of the user, usually the language of the browser UI.
+</summary>
+<remarks>
+<para>-<see cref="Navigator.Languages"/><br/>-<see cref="Navigator"/><br/>-<see cref="Intl"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/language"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string representing the language version as defined in {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}. Examples of valid language codes include "en", "en-US", "fr", "fr-FR", "es-ES", etc.Note that in Safari on iOS prior to 10.2, the country code returned is lowercase: &amp;quot;en-us&amp;quot;, &amp;quot;fr-fr&amp;quot; etc.</value>
+</NavigatorLanguage>
+<NavigatorDeprecatedReplaceInURN>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>deprecatedReplaceInURN()</c></strong> method of the <see cref="Navigator"/> interface substitutes specified strings inside the mapped URL corresponding to a given opaque URN or <c>FencedFrameConfig</c>&amp;apos;s internal <c>url</c> property.
+</summary>
+<remarks>
+<para>A <c>FencedFrameConfig</c> or opaque URN is returned from a source such as the <see href="https://privacysandbox.google.com/private-advertising/protected-audience">Protected Audience API</see> <c>runAdAuction()</c> method, and then set as the value of <see cref="HTMLFencedFrameElement.Config"/>. The content URL associated with the <c>FencedFrameConfig</c> or opaque URN is mapped to it internally by the browser, and can&amp;apos;t be accessed via JavaScript.</para><para>However, you may wish to substitute parts of that internal URL. This is a common approach for passing runtime data into ad creatives to use in rendering. <c>deprecatedReplaceInURN()</c> has been made available as a temporary measure to enable that substitution for fenced frame URLs, helping ad tech providers to migrate existing implementations across to <see href="https://privacysandbox.google.com/">privacy sandbox</see> APIs.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Fenced_frame_API">Fenced Frame API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/deprecatedReplaceInURN"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that fulfills with <see cref="Undefined"/>.</returns>
+</NavigatorDeprecatedReplaceInURN>
+<NavigatorXr>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The read-only <strong><c>xr</c></strong> property<br/>provided by the <see cref="Navigator"/> interface returns an <see cref="XRSystem"/> object<br/>which can be used to access the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</see>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</see>: 2D and 3D accelerated<br/>graphics for the web<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas API</see>: 2D graphics API<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/xr"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <see cref="XRSystem"/> object used to interface with the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</see> in the current<br/>context. This can be used to present augmented and/or virtual reality imagery to the<br/>user.</value>
+</NavigatorXr>
+<NavigatorUserAgentData>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>userAgentData</c></strong> read-only property of the <see cref="Navigator"/> interface returns a <see cref="NavigatorUAData"/> object<br/>which can be used to access the {{domxref(&amp;quot;User-Agent Client Hints API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Client_hints">HTTP Client hints</see><br/>-<see href="https://developer.chrome.com/docs/privacy-security/user-agent-client-hints">Improving user privacy and developer experience with User-Agent Client Hints</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/userAgentData"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="NavigatorUAData"/> object.</value>
+</NavigatorUserAgentData>
+<NavigatorPlatform>
+<summary>
+The <strong><c>platform</c></strong> property read-only property of the <see cref="Navigator"/> interface returns a string identifying the platform on which the user's browser is running.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>In general, you should whenever possible avoid writing code that uses methods or properties like this one to try to find out information about the user&amp;apos;s environment, and instead write code that does <see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Testing/Feature_detection">feature detection</see>.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorUAData/platform"><c>navigator.userAgentData.platform</c></see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/platform"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string identifying the platform on which the user&amp;apos;s browser is running; for example: <c>&amp;quot;MacIntel&amp;quot;</c>, <c>&amp;quot;Win32&amp;quot;</c>, <c>&amp;quot;Linux x86_64&amp;quot;</c>, <c>&amp;quot;Linux armv81&amp;quot;</c>.</value>
+</NavigatorPlatform>
+<NavigatorScheduling>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>scheduling</c></strong> read-only property of the <see cref="Navigator"/> interface returns a <see cref="Scheduling"/> object for the current document, which provides methods and properties to control scheduling tasks.
+</summary>
+<remarks>
+<blockquote class="WARNING"><h5>WARNING</h5><para>The <see cref="Scheduling"/> interface (which includes the <see cref="Scheduling.IsInputPending"/> method) has been superseded by the <see cref="Scheduler"/> interface, the features of which are better designed for addressing scheduling tasks. See <see href="https://web.dev/articles/optimize-long-tasks#isinputpending">Don&amp;apos;t use <c>isInputPending()</c></see> for more details.</para></blockquote>
+<para>-<see cref="Scheduler"/> interface<br/>-{{domxref(&amp;quot;Prioritized_task_scheduling_api&amp;quot;, &amp;quot;Prioritized Task Scheduling API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see href="https://engineering.fb.com/2019/04/22/developer-tools/isinputpending-api/">Faster input events with Facebook&amp;apos;s first browser API contribution</see> on engineering.fb.com (2019)<br/>-<see href="https://developer.chrome.com/docs/capabilities/web-apis/isinputpending">Better JS scheduling with isInputPending()</see> on developer.chrome.com (2020)<br/>-<see href="https://web.dev/articles/optimize-long-tasks">Optimizing long tasks</see> on web.dev (2022)<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/scheduling"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Scheduling"/> object.</value>
+</NavigatorScheduling>
+<NavigatorMediaDevices>
+<summary>
+The <strong><c>mediaDevices</c></strong> read-only property of the <see cref="Navigator"/> interface returns a <see cref="MediaDevices"/> object, which provides access to connected media input devices like cameras and microphones, as well as screen sharing.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API">Media Capture and Streams API</see>: The entry point to the documentation about the entire Media Capture and Streams API.<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see>: Documentation about the WebRTC API, which is closely related.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/mediaDevices"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <see cref="MediaDevices"/> singleton object. Usually, you just use this object's members directly, such as by calling <see cref="MediaDevices.GetUserMedia"/>.</value>
+</NavigatorMediaDevices>
+</docs>

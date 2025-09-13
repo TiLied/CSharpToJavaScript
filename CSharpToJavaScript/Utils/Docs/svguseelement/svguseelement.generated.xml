@@ -1,0 +1,64 @@
+<docs>
+<SVGUseElement>
+<summary>
+
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementuse">use</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGUseElement"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</SVGUseElement>
+<SVGUseElementWidth>
+<summary>
+The <strong><c>width</c></strong> read-only property of the <see cref="SVGUseElement"/> interface describes the width of the referenced element as an <see cref="SVGAnimatedLength"/>. It reflects the computed value of the {{SVGAttr("width")}} attribute on the {{SVGElement("use")}} element.
+</summary>
+<remarks>
+<para>The attribute value is a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see>, <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#percentage"><c>&amp;lt;percentage&amp;gt;</c></see>, or <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#number"><c>&amp;lt;number&amp;gt;</c></see>. The numeric value of the <see cref="SVGAnimatedLength.BaseVal"/> is the width of the referenced element in the user coordinate system.</para>
+<para>-<see cref="SVGUseElement.Height"/><br/>-<see cref="SVGAnimatedLength.BaseVal"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGUseElement/width"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedLength"/>.</value>
+</SVGUseElementWidth>
+<SVGUseElementX>
+<summary>
+The <strong><c>x</c></strong> read-only property of the <see cref="SVGUseElement"/> interface describes the x-axis coordinate of the start point of the referenced element as an <see cref="SVGAnimatedLength"/>. It reflects the computed value of the {{SVGAttr("x")}} attribute on the {{SVGElement("use")}} element.
+</summary>
+<remarks>
+<para>The attribute value is a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see>, <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#percentage"><c>&amp;lt;percentage&amp;gt;</c></see>, or <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#number"><c>&amp;lt;number&amp;gt;</c></see>. The numeric value of the <see cref="SVGAnimatedLength.BaseVal"/> is the x-coordinate of the top-left corner of the referenced element in the user coordinate system.</para>
+<para>-<see cref="SVGUseElement.Y"/><br/>-<see cref="SVGAnimatedLength.BaseVal"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGUseElement/x"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedLength"/>.</value>
+</SVGUseElementX>
+<SVGUseElementHref>
+<summary>
+The <strong><c>href</c></strong> read-only property of the <see cref="SVGUseElement"/> interface reflects the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} {{deprecated_inline}} attribute of the given element.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGUseElement/href"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedString"/> object.</value>
+</SVGUseElementHref>
+<SVGUseElementHeight>
+<summary>
+The <strong><c>height</c></strong> read-only property of the <see cref="SVGUseElement"/> interface describes the height of the referenced element as an <see cref="SVGAnimatedLength"/>. It reflects the computed value of the {{SVGAttr("height")}} attribute on the {{SVGElement("use")}} element.
+</summary>
+<remarks>
+<para>The attribute value is a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see>, <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#percentage"><c>&amp;lt;percentage&amp;gt;</c></see>, or <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#number"><c>&amp;lt;number&amp;gt;</c></see>. The numeric value of the <see cref="SVGAnimatedLength.BaseVal"/> is the height of the referenced element in the user coordinate system.</para>
+<para>-<see cref="SVGUseElement.Width"/><br/>-<see cref="SVGAnimatedLength.BaseVal"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGUseElement/height"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedLength"/>.</value>
+</SVGUseElementHeight>
+<SVGUseElementY>
+<summary>
+The <strong><c>y</c></strong> read-only property of the <see cref="SVGUseElement"/> interface describes the y-axis coordinate of the start point of the referenced element as an <see cref="SVGAnimatedLength"/>. It reflects the computed value of the {{SVGAttr("y")}} attribute on the {{SVGElement("use")}} element.
+</summary>
+<remarks>
+<para>The attribute value is a <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#length"><c>&amp;lt;length&amp;gt;</c></see>, <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#percentage"><c>&amp;lt;percentage&amp;gt;</c></see>, or <see href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Content_type#number"><c>&amp;lt;number&amp;gt;</c></see>. The numeric value of the <see cref="SVGAnimatedLength.BaseVal"/> is the y-coordinate of the top-left corner of the referenced element in the user coordinate system.</para>
+<para>-<see cref="SVGUseElement.X"/><br/>-<see cref="SVGAnimatedLength.BaseVal"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGUseElement/y"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedLength"/>.</value>
+</SVGUseElementY>
+</docs>

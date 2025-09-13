@@ -1,0 +1,104 @@
+<docs>
+<HTMLOptionElement>
+<summary>
+The <strong><c>HTMLOptionElement</c></strong> interface represents {{HTMLElement("option")}} elements and inherits all properties and methods of the <see cref="HTMLElement"/> interface.
+</summary>
+<remarks>
+<para></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option">option</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">select</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist">datalist</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/optgroup">optgroup</see><br/>-<see cref="HTMLOptionsCollection"/><br/>-<see cref="HTMLSelectElement"/><br/>-<see cref="HTMLOptGroupElement"/><br/>-<see cref="HTMLElement"/><br/>-<see cref="HTMLCollection"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLOptionElement"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLOptionElement>
+<HTMLOptionElementLabel>
+<summary>
+The <strong><c>label</c></strong> property of the <see cref="HTMLOptionElement"/> represents the text displayed for an option in a {{htmlelement("select")}} element or as part of a list of suggestions in a {{htmlelement("datalist")}} element. It reflects the {{htmlelement("option")}} element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/option#label"><c>label</c></see> attribute.
+</summary>
+<remarks>
+<para>If the attribute is omitted or the empty string, the <c>label</c> property returns the element's <see cref="HTMLOptionElement.Text"/> content.</para>
+<para>-<see cref="HTMLOptionElement.Value"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">select</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist">datalist</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/optgroup">optgroup</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLOptionElement/label"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</HTMLOptionElementLabel>
+<HTMLOptionElementIndex>
+<summary>
+The read-only <strong><c>index</c></strong> property of the <see cref="HTMLOptionElement"/> interface specifies the 0-based index of the element; that is, the position of the {{HTMLElement("option")}} within the list of options it belongs to, in tree-order, as an integer. If the <c>&amp;lt;option&amp;gt;</c> is not part of an option-list, the value is <c>0</c>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option">option</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">select</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist">datalist</see><br/>-<see cref="HTMLOptionElement.DefaultSelected"/><br/>-<see cref="HTMLOptionElement.Selected"/><br/>-<see cref="HTMLSelectElement.SelectedIndex"/><br/>-<see cref="HTMLOptionsCollection"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLOptionElement/index"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</HTMLOptionElementIndex>
+<HTMLOptionElementSelected>
+<summary>
+The <strong><c>selected</c></strong> property of the <see cref="HTMLOptionElement"/> interface specifies the current selectedness of the element; that is, whether the {{HTMLElement("option")}} is selected or not.
+</summary>
+<remarks>
+<para>The presence of the HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/option#selected"><c>selected</c></see> attribute indicates the option is selected by default. It does not indicate whether this option is currently selected: if the option&amp;apos;s state changes, the <c>selected</c> content attribute does not reflect the change; only the <c>HTMLOptionElement</c>&amp;apos;s <c>selected</c> IDL property is updated. The <c>selected</c> attribute is reflected by the <see cref="HTMLOptionElement.DefaultSelected"/> property.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option">option</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">select</see><br/>-<see cref="HTMLOptionElement.DefaultSelected"/><br/>-<see cref="HTMLOptionElement.Index"/><br/>-<see cref="HTMLOptionsCollection"/><br/>-<see cref="HTMLSelectElement.SelectedIndex"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLOptionElement/selected"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean.</value>
+</HTMLOptionElementSelected>
+<HTMLOptionElementValue>
+<summary>
+The <strong><c>value</c></strong> property of the <see cref="HTMLOptionElement"/> interface represents the value of the {{htmlelement("option")}} element as a string, or the empty string if no value is set. It reflects the element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/option#value"><c>value</c></see> attribute, if present. Otherwise, it returns or sets the contents of the element, similar to the <see cref="Node.TextContent"/> property.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option">option</see><br/>-<see cref="HTMLOptionElement.Selected"/><br/>-<see cref="HTMLOptionElement.DefaultSelected"/><br/>-<see cref="HTMLOptionElement.Label"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLOptionElement/value"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing the <c>value</c> attribute value, if present, or the contents of the element.</value>
+</HTMLOptionElementValue>
+<HTMLOptionElementForm>
+<summary>
+The <strong><c>form</c></strong> read-only property of the <see cref="HTMLOptionElement"/> interface returns an <see cref="HTMLFormElement"/> object that owns the <see cref="HTMLSelectElement"/> associated with this {{htmlelement("option")}}, or <c>null</c> if this option is not associated with a <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">select</see> owned by a form.
+</summary>
+<remarks>
+<para>-<see cref="HTMLOptionElement"/><br/>-<see cref="HTMLSelectElement.Form"/><br/>-<see cref="HTMLFormElement"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option">option</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms">HTML forms guide</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLOptionElement/form"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="HTMLFormElement"/> or <c>null</c>.</value>
+</HTMLOptionElementForm>
+<HTMLOptionElementOption>
+<summary>
+The <strong><c>Option()</c></strong> constructor creates a new<br/><see cref="HTMLOptionElement"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLOptionElement/Option"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLOptionElementOption>
+<HTMLOptionElementText>
+<summary>
+The <strong><c>text</c></strong> property of the <see cref="HTMLOptionElement"/> represents the text inside the {{htmlelement("option")}} element.<br/>This property represents the same information as <see cref="Node.TextContent"/>.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>If the element has a <c>label</c>, the text inside the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option">option</see> is not visually rendered. In this case, the <c>text</c> property can still be used to set the content, but it will have no visible effect.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">select</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist">datalist</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/optgroup">optgroup</see><br/>-<see cref="HTMLOptionElement.Value"/><br/>-<see cref="HTMLOptionElement.Label"/><br/>-<see cref="HTMLScriptElement.Text"/><br/>-<see cref="HTMLAnchorElement.Text"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLOptionElement/text"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</HTMLOptionElementText>
+<HTMLOptionElementDisabled>
+<summary>
+The <strong><c>disabled</c></strong> property of the <see cref="HTMLOptionElement"/> is a boolean value that indicates whether the {{htmlelement("option")}} element is unavailable to be selected. The property reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/option#disabled"><c>disabled</c></see> HTML attribute.
+</summary>
+<remarks>
+<para>The property reflects the value of the <c>disabled</c> attribute on the <c>&amp;lt;option&amp;gt;</c> element itself. If an option is disabled because it is a child of an <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/optgroup">optgroup</see> element that is disabled, the <c>true</c> of the <see cref="HTMLOptGroupElement.Disabled"/> property is not inherited by the option itself.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option">option</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">select</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/optgroup">optgroup</see><br/>-<see cref="HTMLSelectElement.Disabled"/><br/>-<see cref="HTMLOptGroupElement.Disabled"/><br/>-<see cref="HTMLOptionElement.Selected"/><br/>-<see cref="HTMLOptionElement.Index"/><br/>-<see cref="HTMLOptionsCollection"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:disabled">:disabled</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLOptionElement/disabled"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value.</value>
+</HTMLOptionElementDisabled>
+<HTMLOptionElementDefaultSelected>
+<summary>
+The <strong><c>defaultSelected</c></strong> property of the <see cref="HTMLOptionElement"/> interface specifies the default selected state of the element. This property reflects the {{htmlelement("option")}} element's <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/option#selected"><c>selected</c></see> attribute. The presence of the <c>selected</c> attribute sets the <c>defaultSelected</c> property to <c>true</c>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option">option</see><br/>-<see cref="HTMLOptionElement.Selected"/><br/>-<see cref="HTMLOptionElement.Index"/><br/>-<see cref="HTMLOptionsCollection"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:default">:default</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLOptionElement/defaultSelected"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean.</value>
+</HTMLOptionElementDefaultSelected>
+</docs>

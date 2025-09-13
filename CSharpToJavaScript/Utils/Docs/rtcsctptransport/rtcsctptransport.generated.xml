@@ -1,0 +1,60 @@
+<docs>
+<RTCSctpTransport>
+<summary>
+The <strong><c>RTCSctpTransport</c></strong> interface provides information which describes a Stream Control Transmission Protocol (<strong><see href="https://developer.mozilla.org/en-US/docs/Glossary/SCTP">SCTP</see></strong>) transport. This provides information about limitations of the transport, but also provides a way to access the underlying Datagram Transport Layer Security (<strong><see href="https://developer.mozilla.org/en-US/docs/Glossary/DTLS">DTLS</see></strong>) transport over which SCTP packets for all of an <see cref="RTCPeerConnection"/>'s data channels are sent and received.
+</summary>
+<remarks>
+<para>You don&amp;apos;t create <c>RTCSctpTransport</c> objects yourself; instead, you get access to the <c>RTCSctpTransport</c> for a given <c>RTCPeerConnection</c> through its <strong><see cref="RTCPeerConnection.Sctp"/></strong> property.</para><para>Possibly the most useful property on this interface is its <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCSctpTransport/maxMessageSize"><c>maxMessageSize</c></see> property, which you can use to determine the upper limit on the size of messages you can send over a data channel on the peer connection.</para><para></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/>-<see cref="RTCPeerConnection"/><br/>-<see cref="RTCPeerConnection.Sctp"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCSctpTransport"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RTCSctpTransport>
+<RTCSctpTransportState>
+<summary>
+The <strong><c>state</c></strong> read-only property of the <see cref="RTCSctpTransport"/> interface provides information which describes a Stream Control Transmission Protocol ({{Glossary("SCTP")}}) transport state.
+</summary>
+<remarks>
+<para>-<see cref="RTCSctpTransport"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCSctpTransport/state"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string whose value is one of the following:</value>
+</RTCSctpTransportState>
+<RTCSctpTransportTransport>
+<summary>
+The <strong><c>transport</c></strong> read-only property of the <see cref="RTCSctpTransport"/> interface returns a <see cref="RTCDtlsTransport"/> object representing the {{Glossary("DTLS")}} transport used for the transmission and receipt of data packets.
+</summary>
+<remarks>
+<para>-<see cref="RTCSctpTransport"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCSctpTransport/transport"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="RTCDtlsTransport"/> object representing the {{Glossary("DTLS")}} transport used for the transmission and receipt of data packets.</value>
+</RTCSctpTransportTransport>
+<RTCSctpTransportMaxMessageSize>
+<summary>
+The <strong><c>maxMessageSize</c></strong> read-only property of the <see cref="RTCSctpTransport"/> interface indicates the maximum size of a message that can be sent using the <see cref="RTCDataChannel.Send"/> method.
+</summary>
+<remarks>
+<para>-<see cref="RTCSctpTransport"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_data_channels#understanding_message_size_limits">Understanding message size limits</see> section of <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_data_channels">Using WebRTC data channels</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCSctpTransport/maxMessageSize"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer value giving the maximum size, in bytes, of a message which can be sent using the <see cref="RTCDataChannel.Send"/> method.</value>
+</RTCSctpTransportMaxMessageSize>
+<RTCSctpTransportStatechange>
+<summary>
+A <strong><c>statechange</c></strong> event is sent to an <see cref="RTCSctpTransport"/> to provide notification when the <see cref="RTCSctpTransport.State"/> property has changed.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see cref="RTCSctpTransport.State"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCSctpTransport/statechange"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RTCSctpTransportStatechange>
+<RTCSctpTransportMaxChannels>
+<summary>
+The <strong><c>maxChannels</c></strong> read-only property of the <see cref="RTCSctpTransport"/> interface indicates the maximum number of <see cref="RTCDataChannel"/> objects that can be opened simultaneously.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCSctpTransport/maxChannels"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer value indicating the maximum number of <see cref="RTCDataChannel"/> objects that can be opened simultaneously, or <c>null</c> before the SCTP transport goes into the &amp;quot;connected&amp;quot; <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCSctpTransport/state">state</see>.</value>
+</RTCSctpTransportMaxChannels>
+</docs>

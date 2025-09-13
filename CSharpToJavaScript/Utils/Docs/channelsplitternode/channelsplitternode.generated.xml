@@ -1,0 +1,21 @@
+<docs>
+<ChannelSplitterNode>
+<summary>
+The <c>ChannelSplitterNode</c> interface, often used in conjunction with its opposite, <see cref="ChannelMergerNode"/>, separates the different channels of an audio source into a set of mono outputs. This is useful for accessing each channel separately, e.g., for performing channel mixing where gain must be separately controlled on each channel.
+</summary>
+<remarks>
+<para><see href="https://developer.mozilla.orgwebaudiosplitter.png">Default channel splitter node with a single input splitting to form 6 mono outputs.</see></para><para>If your <c>ChannelSplitterNode</c> always has one single input, the amount of outputs is defined by a parameter on its constructor and the call to <see cref="BaseAudioContextcreateChannelSplitter"/>. In the case that no value is given, it will default to <c>6</c>. If there are fewer channels in the input than there are outputs, supernumerary outputs are silent.</para><para></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ChannelSplitterNode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</ChannelSplitterNode>
+<ChannelSplitterNodeChannelSplitterNode>
+<summary>
+The <strong><c>ChannelSplitterNode()</c></strong> constructor of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see> creates a new <see cref="ChannelSplitterNode"/> object instance, representing a node that splits the input into a separate output for each of the source node's audio channels.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ChannelSplitterNode/ChannelSplitterNode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="ChannelSplitterNode"/> object instance.</returns>
+</ChannelSplitterNodeChannelSplitterNode>
+</docs>

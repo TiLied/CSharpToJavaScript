@@ -1,0 +1,64 @@
+<docs>
+<OscillatorNode>
+<summary>
+The <strong><c>OscillatorNode</c></strong> interface represents a periodic waveform, such as a sine wave. It is an <see cref="AudioScheduledSourceNode"/> audio-processing module that causes a specified frequency of a given wave to be created—in effect, a constant tone.
+</summary>
+<remarks>
+<para></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/OscillatorNode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</OscillatorNode>
+<OscillatorNodeOscillatorNode>
+<summary>
+The <strong><c>OscillatorNode()</c></strong> constructor of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see> creates a new<br/><see cref="OscillatorNode"/> object which is an <see cref="AudioNode"/> that<br/>represents a periodic waveform, like a sine wave, optionally setting the node&amp;apos;s<br/>properties&amp;apos; values to match values in a specified object.
+</summary>
+<remarks>
+<para>If the default values of the properties are acceptable, you can optionally use the<br/><see cref="BaseAudioContext.CreateOscillator"/> factory method instead; see<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioNode#creating_an_audionode">Creating an AudioNode</see>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/OscillatorNode/OscillatorNode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="OscillatorNode"/> object instance.</returns>
+</OscillatorNodeOscillatorNode>
+<OscillatorNodeSetPeriodicWave>
+<summary>
+The <strong><c>setPeriodicWave()</c></strong> method of the <see cref="OscillatorNode"/> interface is used to point to a <see cref="PeriodicWave"/><br/>defining a periodic waveform that can be used to shape the oscillator&amp;apos;s output, when<br/><see cref="OscillatorNode.Type"/> is <c>custom</c>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createPeriodicWave">AudioContext.createPeriodicWave</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/OscillatorNode/setPeriodicWave"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</OscillatorNodeSetPeriodicWave>
+<OscillatorNodeFrequency>
+<summary>
+The <strong><c>frequency</c></strong> property of the <see cref="OscillatorNode"/> interface is an <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam#a-rate">a-rate</see> <see cref="AudioParam"/> representing the frequency of oscillation in hertz.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Though the <c>AudioParam</c> returned is read-only, the value it represents is not.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/OscillatorNode/frequency"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam#a-rate">a-rate</see> <see cref="AudioParam"/>.</value>
+</OscillatorNodeFrequency>
+<OscillatorNodeDetune>
+<summary>
+The <c>detune</c> property of the <see cref="OscillatorNode"/> interface is an <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam#a-rate">a-rate</see> <see cref="AudioParam"/> representing detuning of oscillation in <see href="https://en.wikipedia.org/wiki/Cent_%28music%29">cents</see>.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Though the <c>AudioParam</c> returned is read-only, the value it represents is not.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/OscillatorNode/detune"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam#a-rate">a-rate</see> <see cref="AudioParam"/>.</value>
+</OscillatorNodeDetune>
+<OscillatorNodeType>
+<summary>
+The <strong><c>type</c></strong> property of the <see cref="OscillatorNode"/> interface specifies what shape of <see href="https://en.wikipedia.org/wiki/Waveform">waveform</see> the<br/>oscillator will output. There are several common waveforms available, as well as an<br/>option to specify a custom waveform shape. The shape of the waveform will affect the<br/>tone that is produced.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/OscillatorNode/type"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string specifying the shape of oscillator wave. The different<br/>available values are:Also see <see href="https://developer.mozilla.org/en-US/docs/Web/API/OscillatorNode#different_oscillator_node_types">different oscillator node types</see> for a visualization of the different waveform shapes.</value>
+</OscillatorNodeType>
+</docs>

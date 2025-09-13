@@ -1,0 +1,77 @@
+<docs>
+<StyleSheet>
+<summary>
+An object implementing the <c>StyleSheet</c> interface represents a single style sheet. CSS style sheets will further implement the more specialized <see cref="CSSStyleSheet"/> interface.
+</summary>
+<remarks>
+<para>-<see cref="CSSStyleSheet"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StyleSheet"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</StyleSheet>
+<StyleSheetHref>
+<summary>
+The <strong><c>href</c></strong> property of the <see cref="StyleSheet"/><br/>interface returns the location of the style sheet.
+</summary>
+<remarks>
+<para>This property is read-only.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StyleSheet/href"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing the stylesheet&amp;apos;s URI.</value>
+</StyleSheetHref>
+<StyleSheetMedia>
+<summary>
+The <strong><c>media</c></strong> property of the <see cref="StyleSheet"/> interface specifies the intended destination media for style information. It is a read-only, array-like <c>MediaList</c> object and can be removed with <c>deleteMedium()</c> and added with <c>appendMedium()</c>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StyleSheet/media"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A read-only array-like <c>MediaList</c> object.</value>
+</StyleSheetMedia>
+<StyleSheetOwnerNode>
+<summary>
+The <strong><c>ownerNode</c></strong> property of the<br/><see cref="StyleSheet"/> interface returns the node that associates this style sheet<br/>with the document.
+</summary>
+<remarks>
+<para>This is usually an HTML<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/link"><c>&amp;lt;link&amp;gt;</c></see> or<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/style"><c>&amp;lt;style&amp;gt;</c></see> element, but<br/>can also return a <see href="https://developer.mozilla.org/en-US/docs/Web/API/ProcessingInstruction">processing instruction node</see> in the case of <c>&amp;lt;?xml-stylesheet ?&amp;gt;</c>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StyleSheet/ownerNode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Node"/> object.</value>
+</StyleSheetOwnerNode>
+<StyleSheetDisabled>
+<summary>
+The <strong><c>disabled</c></strong> property of the<br/><see cref="StyleSheet"/> interface determines whether the style sheet is prevented from<br/>applying to the document.
+</summary>
+<remarks>
+<para>A style sheet may be disabled by manually setting this property to <c>true</c> or<br/>if it&amp;apos;s an inactive <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/rel/alternate_stylesheet">alternative style sheet</see>. Note that <c>disabled === false</c> does not guarantee the style<br/>sheet is applied (it could be removed from the document, for instance).</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StyleSheet/disabled"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean.</value>
+</StyleSheetDisabled>
+<StyleSheetTitle>
+<summary>
+The <strong><c>title</c></strong> property of the <see cref="StyleSheet"/> interface returns the advisory title of the current style sheet.
+</summary>
+<remarks>
+<para>The title is often specified in the <see cref="StyleSheetOwnerNode"/>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StyleSheet/title"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</StyleSheetTitle>
+<StyleSheetType>
+<summary>
+The <strong><c>type</c></strong> property of the <see cref="StyleSheet"/><br/>interface specifies the style sheet language for the given style sheet.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StyleSheet/type"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</StyleSheetType>
+<StyleSheetParentStyleSheet>
+<summary>
+The <strong><c>parentStyleSheet</c></strong> property of the<br/><see cref="StyleSheet"/> interface returns the style sheet, if any, that is including<br/>the given style sheet.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StyleSheet/parentStyleSheet"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="StyleSheet"/> object.</value>
+</StyleSheetParentStyleSheet>
+</docs>

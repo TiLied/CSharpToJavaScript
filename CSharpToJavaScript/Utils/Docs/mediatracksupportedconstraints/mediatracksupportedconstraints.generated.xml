@@ -1,0 +1,210 @@
+<docs>
+<MediaTrackSupportedConstraints>
+<summary>
+The <strong><c>MediaTrackSupportedConstraints</c></strong> dictionary establishes the list of constrainable properties recognized by the {{Glossary("user agent")}} or browser in its implementation of the <see cref="MediaStreamTrack"/> object. An object conforming to <c>MediaTrackSupportedConstraints</c> is returned by <see cref="MediaDevices.GetSupportedConstraints"/>.
+</summary>
+<remarks>
+<para>Because of the way interface definitions in WebIDL work, if a constraint is requested but not supported, no error will occur. Instead, the specified constraints will be applied, with any unrecognized constraints stripped from the request. That can lead to confusing and hard to debug errors, so be sure to use <c>getSupportedConstraints()</c> to retrieve this information before attempting to establish constraints if you need to know the difference between silently ignoring a constraint and a constraint being accepted.</para><para>An actual constraint set is described using an object based on the <see cref="MediaTrackConstraints"/> dictionary.</para><para>To learn more about how constraints work, see <see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints">Capabilities, constraints, and settings</see>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API">Media Capture and Streams API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints">Capabilities, constraints, and settings</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Screen_Capture_API">Screen Capture API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture">Using the Screen Capture API</see><br/>-<see cref="MediaTrackConstraints"/><br/>-<see cref="MediaDevices.GetUserMedia"/><br/>-<see cref="MediaStreamTrack.GetConstraints"/><br/>-<see cref="MediaStreamTrack.ApplyConstraints"/><br/>-<see cref="MediaStreamTrack.GetSettings"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</MediaTrackSupportedConstraints>
+<MediaTrackSupportedConstraintsAutoGainControl>
+<summary>
+The <see cref="MediaTrackSupportedConstraints"/> dictionary's <strong><c>autoGainControl</c></strong> property is a read-only Boolean value which is present (and set to <c>true</c>) in the object returned by <see cref="MediaDevices.GetSupportedConstraints"/> if and only if the {{Glossary("user agent")}} supports the <strong><c>autoGainControl</c></strong> constraint.<br/>If the constraint isn&amp;apos;t supported, it&amp;apos;s not included in the list, so this value will never be <c>false</c>.
+</summary>
+<remarks>
+<para>You can access the supported constraints dictionary by calling <c>navigator.mediaDevices.getSupportedConstraints()</c>.</para><para>The <c>autoGainControl</c> constraint indicates whether or not the browser offers the ability to automatically control the gain (volume) on media tracks; this obviously is contingent on whether or not the individual device supports automatic gain control as well; it&amp;apos;s typically a feature provided by microphones.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API">Media Capture and Streams API</see><br/>-<see cref="MediaDevices.GetSupportedConstraints"/><br/>-<see cref="MediaTrackSupportedConstraints"/><br/>-<see cref="MediaStreamTrack"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/autoGainControl"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>This property is present in the dictionary (and its value is always <c>true</c>) if the user agent supports the <c>autoGainControl</c> constraint.<br/>If the property isn't present, this property is missing from the supported constraints dictionary, and you'll get <see cref="Undefined"/> if you try to look at its value.</value>
+</MediaTrackSupportedConstraintsAutoGainControl>
+<MediaTrackSupportedConstraintsWidth>
+<summary>
+The <see cref="MediaTrackSupportedConstraints"/> dictionary's<br/><strong><c>width</c></strong> property is a read-only Boolean value which is<br/>present (and set to <c>true</c>) in the object returned by<br/><see cref="MediaDevices.GetSupportedConstraints"/> if and only if the<br/><see href="https://developer.mozilla.org/en-US/docs/Glossary/user agent">user agent</see> supports the <c>width</c> constraint. If the constraint<br/>isn&amp;apos;t supported, it&amp;apos;s not included in the list, so this value will never be<br/><c>false</c>.
+</summary>
+<remarks>
+<para>You can access the supported constraints dictionary by calling<br/><c>navigator.mediaDevices.getSupportedConstraints()</c>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API">Media Capture and Streams API</see><br/>-<see cref="MediaDevices.GetSupportedConstraints"/><br/>-<see cref="MediaTrackSupportedConstraints"/><br/>-<see cref="MediaStreamTrack"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/width"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>This property is present in the dictionary (and its value is always <c>true</c>)<br/>if the user agent supports the <c>width</c> constraint. If the property isn&amp;apos;t<br/>present, this property is missing from the supported constraints dictionary, and you&amp;apos;ll<br/>get <see cref="Undefined"/> if you try to look at its value.</value>
+</MediaTrackSupportedConstraintsWidth>
+<MediaTrackSupportedConstraintsLatency>
+<summary>
+The <see cref="MediaTrackSupportedConstraints"/> dictionary's <strong><c>latency</c></strong> property is a read-only Boolean value which is present (and set to <c>true</c>) in the object returned by <see cref="MediaDevices.GetSupportedConstraints"/> if and only if the {{Glossary("user agent")}} supports the <c>latency</c> constraint.<br/>If the constraint isn&amp;apos;t supported, it&amp;apos;s not included in the list, so this value will never be <c>false</c>.
+</summary>
+<remarks>
+<para>You can access the supported constraints dictionary by calling <c>navigator.mediaDevices.getSupportedConstraints()</c>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API">Media Capture and Streams API</see><br/>-<see cref="MediaDevices.GetSupportedConstraints"/><br/>-<see cref="MediaTrackSupportedConstraints"/><br/>-<see cref="MediaStreamTrack"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/latency"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>This property is present in the dictionary (and its value is always <c>true</c>) if the user agent supports the <c>latency</c> constraint.<br/>If the property isn't present, this property is missing from the supported constraints dictionary, and you'll get <see cref="Undefined"/> if you try to look at its value.</value>
+</MediaTrackSupportedConstraintsLatency>
+<MediaTrackSupportedConstraintsSuppressLocalAudioPlayback>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <see cref="MediaTrackSupportedConstraints"/> dictionary's <strong><c>suppressLocalAudioPlayback</c></strong> property indicates whether or not the <see cref="MediaTrackConstraints.SuppressLocalAudioPlayback"/> constraint is supported by the user agent and the device on which the content is being used.
+</summary>
+<remarks>
+<para>The supported constraints list is obtained by calling <see cref="MediaDevices.GetSupportedConstraints"/>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Screen_Capture_API">Screen Capture API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture">Using the screen capture API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints">Capabilities, constraints, and settings</see><br/>-<see cref="MediaDevices.GetDisplayMedia"/><br/>-<see cref="MediaStreamTrack.GetConstraints"/><br/>-<see cref="MediaStreamTrack.ApplyConstraints"/><br/>-<see cref="MediaStreamTrack.GetSettings"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/suppressLocalAudioPlayback"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value which is <c>true</c> if the <see cref="MediaTrackConstraints.SuppressLocalAudioPlayback"/> constraint is supported by the device and user agent.</value>
+</MediaTrackSupportedConstraintsSuppressLocalAudioPlayback>
+<MediaTrackSupportedConstraintsNoiseSuppression>
+<summary>
+The <see cref="MediaTrackSupportedConstraints"/> dictionary's<br/><strong><c>noiseSuppression</c></strong> property is a read-only Boolean value<br/>which is present (and set to <c>true</c>) in the object returned by<br/><see cref="MediaDevices.GetSupportedConstraints"/> if and only if the<br/><see href="https://developer.mozilla.org/en-US/docs/Glossary/user agent">user agent</see> supports the <strong><c>noiseSuppression</c></strong><br/>constraint. If the constraint isn&amp;apos;t supported, it&amp;apos;s not included in the list, so this<br/>value will never be <c>false</c>.
+</summary>
+<remarks>
+<para>You can access the supported constraints dictionary by calling<br/><c>navigator.mediaDevices.getSupportedConstraints()</c>.</para><para>The <c>noiseSuppression</c> constraint indicates whether or not the browser<br/>offers the ability to automatically control the gain (volume) on media tracks; this<br/>obviously is contingent on whether or not the individual device supports automatic gain<br/>control as well.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API">Media Capture and Streams API</see><br/>-<see cref="MediaDevices.GetSupportedConstraints"/><br/>-<see cref="MediaTrackSupportedConstraints"/><br/>-<see cref="MediaStreamTrack"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/noiseSuppression"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>This property is present in the dictionary (and its value is always <c>true</c>)<br/>if the user agent supports the <c>noiseSuppression</c> constraint (and therefore<br/>supports noise suppression on audio tracks). If the property isn&amp;apos;t present, this<br/>property is missing from the supported constraints dictionary, and you&amp;apos;ll get<br/><see cref="Undefined"/> if you try to look at its value.</value>
+</MediaTrackSupportedConstraintsNoiseSuppression>
+<MediaTrackSupportedConstraintsFacingMode>
+<summary>
+The <see cref="MediaTrackSupportedConstraints"/> dictionary's<br/><strong><c>facingMode</c></strong> property is a read-only Boolean value which is<br/>present (and set to <c>true</c>) in the object returned by<br/><see cref="MediaDevices.GetSupportedConstraints"/> if and only if the<br/><see href="https://developer.mozilla.org/en-US/docs/Glossary/user agent">user agent</see> supports the <c>facingMode</c> constraint. If the<br/>constraint isn&amp;apos;t supported, it&amp;apos;s not included in the list, so this value will never be<br/><c>false</c>.
+</summary>
+<remarks>
+<para>You can access the supported constraints dictionary by calling<br/><c>navigator.mediaDevices.getSupportedConstraints()</c>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API">Media Capture and Streams API</see><br/>-<see cref="MediaDevices.GetSupportedConstraints"/><br/>-<see cref="MediaTrackSupportedConstraints"/><br/>-<see cref="MediaStreamTrack"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/facingMode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>This property is present in the dictionary (and its value is always <c>true</c>)<br/>if the user agent supports the <c>facingMode</c> constraint. If the property isn&amp;apos;t<br/>present, this property is missing from the supported constraints dictionary, and you&amp;apos;ll<br/>get <see cref="Undefined"/> if you try to look at its value.</value>
+</MediaTrackSupportedConstraintsFacingMode>
+<MediaTrackSupportedConstraintsLogicalSurface>
+<summary>
+The <see cref="MediaTrackSupportedConstraints"/> dictionary's <strong><c>logicalSurface</c></strong> property indicates whether or not the <see cref="MediaTrackConstraints.LogicalSurface"/> constraint is supported by the user agent and the device on which the content is being used.
+</summary>
+<remarks>
+<para>The supported constraints list is obtained by calling <see cref="MediaDevices.GetSupportedConstraints"/>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Screen_Capture_API">Screen Capture API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture">Using the screen capture API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints">Capabilities, constraints, and settings</see><br/>-<see cref="MediaDevices.GetDisplayMedia"/><br/>-<see cref="MediaStreamTrack.GetConstraints"/><br/>-<see cref="MediaStreamTrack.ApplyConstraints"/><br/>-<see cref="MediaStreamTrack.GetSettings"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/logicalSurface"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value which is <c>true</c> if the <see cref="MediaTrackConstraints.LogicalSurface"/> constraint is supported by the device and user agent.</value>
+</MediaTrackSupportedConstraintsLogicalSurface>
+<MediaTrackSupportedConstraintsChannelCount>
+<summary>
+The <see cref="MediaTrackSupportedConstraints"/> dictionary's<br/><strong><c>channelCount</c></strong> property is a read-only Boolean value which<br/>is present (and set to <c>true</c>) in the object returned by<br/><see cref="MediaDevices.GetSupportedConstraints"/> if and only if the<br/><see href="https://developer.mozilla.org/en-US/docs/Glossary/user agent">user agent</see> supports the <c>channelCount</c> constraint. If the<br/>constraint isn&amp;apos;t supported, it&amp;apos;s not included in the list, so this value will never be<br/><c>false</c>.
+</summary>
+<remarks>
+<para>You can access the supported constraints dictionary by calling<br/><c>navigator.mediaDevices.getSupportedConstraints()</c>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API">Media Capture and Streams API</see><br/>-<see cref="MediaDevices.GetSupportedConstraints"/><br/>-<see cref="MediaTrackSupportedConstraints"/><br/>-<see cref="MediaStreamTrack"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/channelCount"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>This property is present in the dictionary (and its value is always <c>true</c>)<br/>if the user agent supports the <c>channelCount</c> constraint. If the property<br/>isn&amp;apos;t present, this property is missing from the supported constraints dictionary, and<br/>you'll get <see cref="Undefined"/> if you try to look at its value.</value>
+</MediaTrackSupportedConstraintsChannelCount>
+<MediaTrackSupportedConstraintsHeight>
+<summary>
+The <see cref="MediaTrackSupportedConstraints"/> dictionary's<br/><strong><c>height</c></strong> property is a read-only Boolean value which is<br/>present (and set to <c>true</c>) in the object returned by<br/><see cref="MediaDevices.GetSupportedConstraints"/> if and only if the<br/><see href="https://developer.mozilla.org/en-US/docs/Glossary/user agent">user agent</see> supports the <c>height</c> constraint. If the<br/>constraint isn&amp;apos;t supported, it&amp;apos;s not included in the list, so this value will never be<br/><c>false</c>.
+</summary>
+<remarks>
+<para>You can access the supported constraints dictionary by calling<br/><c>navigator.mediaDevices.getSupportedConstraints()</c>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API">Media Capture and Streams API</see><br/>-<see cref="MediaDevices.GetSupportedConstraints"/><br/>-<see cref="MediaTrackSupportedConstraints"/><br/>-<see cref="MediaStreamTrack"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/height"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>This property is present in the dictionary (and its value is always <c>true</c>)<br/>if the user agent supports the <c>height</c> constraint. If the property isn&amp;apos;t<br/>present, this property is missing from the supported constraints dictionary, and you&amp;apos;ll<br/>get <see cref="Undefined"/> if you try to look at its value.</value>
+</MediaTrackSupportedConstraintsHeight>
+<MediaTrackSupportedConstraintsDisplaySurface>
+<summary>
+The <see cref="MediaTrackSupportedConstraints"/> dictionary's <strong><c>displaySurface</c></strong> property indicates whether or not the <see cref="MediaTrackConstraints.DisplaySurface"/> constraint is supported by the user agent and the device on which the content is being used.
+</summary>
+<remarks>
+<para>The supported constraints list is obtained by calling <see cref="MediaDevices.GetSupportedConstraints"/>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Screen_Capture_API">Screen Capture API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture">Using the screen capture API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints">Capabilities, constraints, and settings</see><br/>-<see cref="MediaDevices.GetDisplayMedia"/><br/>-<see cref="MediaStreamTrack.GetConstraints"/><br/>-<see cref="MediaStreamTrack.ApplyConstraints"/><br/>-<see cref="MediaStreamTrack.GetSettings"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/displaySurface"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A Boolean value which is <c>true</c> if the <see cref="MediaTrackConstraints.DisplaySurface"/> constraint is supported by the device and user agent.</value>
+</MediaTrackSupportedConstraintsDisplaySurface>
+<MediaTrackSupportedConstraintsDeviceId>
+<summary>
+The <see cref="MediaTrackSupportedConstraints"/> dictionary's<br/><strong><c>deviceId</c></strong> property is a read-only Boolean value which is<br/>present (and set to <c>true</c>) in the object returned by<br/><see cref="MediaDevices.GetSupportedConstraints"/> if and only if the<br/><see href="https://developer.mozilla.org/en-US/docs/Glossary/user agent">user agent</see> supports the <c>deviceId</c> constraint. If the<br/>constraint isn&amp;apos;t supported, it&amp;apos;s not included in the list, so this value will never be<br/><c>false</c>.
+</summary>
+<remarks>
+<para>You can access the supported constraints dictionary by calling<br/><c>navigator.mediaDevices.getSupportedConstraints()</c>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API">Media Capture and Streams API</see><br/>-<see cref="MediaDevices.GetSupportedConstraints"/><br/>-<see cref="MediaTrackSupportedConstraints"/><br/>-<see cref="MediaStreamTrack"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/deviceId"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>This property is present in the dictionary (and its value is always <c>true</c>)<br/>if the user agent supports the <c>deviceId</c> constraint. If the property isn&amp;apos;t<br/>present, this property is missing from the supported constraints dictionary, and you&amp;apos;ll<br/>get <see cref="Undefined"/> if you try to look at its value.</value>
+</MediaTrackSupportedConstraintsDeviceId>
+<MediaTrackSupportedConstraintsGroupId>
+<summary>
+The <see cref="MediaTrackSupportedConstraints"/> dictionary's<br/><strong><c>groupId</c></strong> property is a read-only Boolean value which is<br/>present (and set to <c>true</c>) in the object returned by<br/><see cref="MediaDevices.GetSupportedConstraints"/> if and only if the<br/><see href="https://developer.mozilla.org/en-US/docs/Glossary/user agent">user agent</see> supports the <c>groupId</c> constraint. If the<br/>constraint isn&amp;apos;t supported, it&amp;apos;s not included in the list, so this value will never be<br/><c>false</c>.
+</summary>
+<remarks>
+<para>You can access the supported constraints dictionary by calling<br/><c>navigator.mediaDevices.getSupportedConstraints()</c>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API">Media Capture and Streams API</see><br/>-<see cref="MediaDevices.GetSupportedConstraints"/><br/>-<see cref="MediaTrackSupportedConstraints"/><br/>-<see cref="MediaStreamTrack"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/groupId"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>This property is present in the dictionary (and its value is always <c>true</c>)<br/>if the user agent supports the <c>groupId</c> constraint. If the property isn&amp;apos;t<br/>present, this property is missing from the supported constraints dictionary, and you&amp;apos;ll<br/>get <see cref="Undefined"/> if you try to look at its value.</value>
+</MediaTrackSupportedConstraintsGroupId>
+<MediaTrackSupportedConstraintsFrameRate>
+<summary>
+The <see cref="MediaTrackSupportedConstraints"/> dictionary's <strong><c>frameRate</c></strong> property is a read-only Boolean value which is<br/>present (and set to <c>true</c>) in the object returned by <see cref="MediaDevices.GetSupportedConstraints"/> if and only if the {{Glossary("user agent")}} supports the <see cref="MediaTrackConstraints.FrameRate"/> constraint.
+</summary>
+<remarks>
+<para>If the constraint isn&amp;apos;t supported, it&amp;apos;s not included in the list, so this value will never be <c>false</c>.</para><para>The <c>frameRate</c> constraint can be used to establish acceptable upper and lower bounds on the video frame rate for a new video track, or to specify an exact frame rate that must be provided for the request to succeed.<br/>Checking the value of this property lets you determine if the user agent allows constraining the video track configuration by frame rate. See the <see href="https://developer.mozilla.org#examples">example</see> to see how this can be used.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API">Media Capture and Streams API</see><br/>-<see cref="MediaDevices.GetSupportedConstraints"/><br/>-<see cref="MediaTrackSupportedConstraints"/><br/>-<see cref="MediaStreamTrack"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/frameRate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>This property is present in the dictionary if the user agent supports the <c>frameRate</c> constraint.<br/>If the property isn&amp;apos;t present, the user agent doesn&amp;apos;t allow specifying limits on the frame rate for video tracks.<blockquote class="NOTE"><h5>NOTE</h5>If this property is present, its value is always <c>true</c>.</blockquote></value>
+</MediaTrackSupportedConstraintsFrameRate>
+<MediaTrackSupportedConstraintsAspectRatio>
+<summary>
+The <see cref="MediaTrackSupportedConstraints"/> dictionary's <strong><c>aspectRatio</c></strong> property is a read-only Boolean value which is present (and set to <c>true</c>) in the object returned by <see cref="MediaDevices.GetSupportedConstraints"/> if and only if the<br/><see href="https://developer.mozilla.org/en-US/docs/Glossary/user agent">user agent</see> supports the <c>aspectRatio</c> constraint.<br/>If the constraint isn&amp;apos;t supported, it&amp;apos;s not included in the list, so this value will never be <c>false</c>.
+</summary>
+<remarks>
+<para>You can access the supported constraints dictionary by calling <c>navigator.mediaDevices.getSupportedConstraints()</c>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API">Media Capture and Streams API</see><br/>-<see cref="MediaDevices.GetSupportedConstraints"/><br/>-<see cref="MediaTrackSupportedConstraints"/><br/>-<see cref="MediaStreamTrack"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/aspectRatio"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>This property is present in the dictionary (and its value is always <c>true</c>)<br/>if the user agent supports the <c>aspectRatio</c> constraint. If the property<br/>isn&amp;apos;t present, this property is missing from the supported constraints dictionary, and<br/>you'll get <see cref="Undefined"/> if you try to look at its value.</value>
+</MediaTrackSupportedConstraintsAspectRatio>
+<MediaTrackSupportedConstraintsSampleSize>
+<summary>
+The <see cref="MediaTrackSupportedConstraints"/> dictionary's<br/><strong><c>sampleSize</c></strong> property is a read-only Boolean value which is<br/>present (and set to <c>true</c>) in the object returned by<br/><see cref="MediaDevices.GetSupportedConstraints"/> if and only if the<br/><see href="https://developer.mozilla.org/en-US/docs/Glossary/user agent">user agent</see> supports the <c>sampleSize</c> constraint. If the<br/>constraint isn&amp;apos;t supported, it&amp;apos;s not included in the list, so this value will never be<br/><c>false</c>.
+</summary>
+<remarks>
+<para>You can access the supported constraints dictionary by calling<br/><c>navigator.mediaDevices.getSupportedConstraints()</c>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API">Media Capture and Streams API</see><br/>-<see cref="MediaDevices.GetSupportedConstraints"/><br/>-<see cref="MediaTrackSupportedConstraints"/><br/>-<see cref="MediaStreamTrack"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/sampleSize"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>This property is present in the dictionary (and its value is always <c>true</c>)<br/>if the user agent supports the <c>sampleSize</c> constraint. If the property isn&amp;apos;t<br/>present, this property is missing from the supported constraints dictionary, and you&amp;apos;ll<br/>get <see cref="Undefined"/> if you try to look at its value.</value>
+</MediaTrackSupportedConstraintsSampleSize>
+<MediaTrackSupportedConstraintsEchoCancellation>
+<summary>
+The <see cref="MediaTrackSupportedConstraints"/> dictionary's<br/><strong><c>echoCancellation</c></strong> property is a read-only Boolean value<br/>which is present (and set to <c>true</c>) in the object returned by<br/><see cref="MediaDevices.GetSupportedConstraints"/> if and only if the<br/><see href="https://developer.mozilla.org/en-US/docs/Glossary/user agent">user agent</see> supports the <c>echoCancellation</c> constraint. If the<br/>constraint isn&amp;apos;t supported, it&amp;apos;s not included in the list, so this value will never be<br/><c>false</c>.
+</summary>
+<remarks>
+<para>You can access the supported constraints dictionary by calling<br/><c>navigator.mediaDevices.getSupportedConstraints()</c>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API">Media Capture and Streams API</see><br/>-<see cref="MediaDevices.GetSupportedConstraints"/><br/>-<see cref="MediaTrackSupportedConstraints"/><br/>-<see cref="MediaStreamTrack"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/echoCancellation"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>This property is present in the dictionary (and its value is always <c>true</c>)<br/>if the user agent supports the <c>echoCancellation</c> constraint. If the property<br/>isn&amp;apos;t present, this property is missing from the supported constraints dictionary, and<br/>you'll get <see cref="Undefined"/> if you try to look at its value.</value>
+</MediaTrackSupportedConstraintsEchoCancellation>
+<MediaTrackSupportedConstraintsSampleRate>
+<summary>
+The <see cref="MediaTrackSupportedConstraints"/> dictionary's<br/><strong><c>sampleRate</c></strong> property is a read-only Boolean value which is<br/>present (and set to <c>true</c>) in the object returned by<br/><see cref="MediaDevices.GetSupportedConstraints"/> if and only if the<br/><see href="https://developer.mozilla.org/en-US/docs/Glossary/user agent">user agent</see> supports the <c>sampleRate</c> constraint. If the<br/>constraint isn&amp;apos;t supported, it&amp;apos;s not included in the list, so this value will never be<br/><c>false</c>.
+</summary>
+<remarks>
+<para>You can access the supported constraints dictionary by calling<br/><c>navigator.mediaDevices.getSupportedConstraints()</c>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API">Media Capture and Streams API</see><br/>-<see cref="MediaDevices.GetSupportedConstraints"/><br/>-<see cref="MediaTrackSupportedConstraints"/><br/>-<see cref="MediaStreamTrack"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/sampleRate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>This property is present in the dictionary (and its value is always <c>true</c>)<br/>if the user agent supports the <c>sampleRate</c> constraint. If the property isn&amp;apos;t<br/>present, this property is missing from the supported constraints dictionary, and you&amp;apos;ll<br/>get <see cref="Undefined"/> if you try to look at its value.</value>
+</MediaTrackSupportedConstraintsSampleRate>
+<MediaTrackSupportedConstraintsVolume>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <see cref="MediaTrackSupportedConstraints"/> dictionary's<br/><strong><c>volume</c></strong> property is a read-only Boolean value which is<br/>present (and set to <c>true</c>) in the object returned by<br/><see cref="MediaDevices.GetSupportedConstraints"/> if and only if the<br/><see href="https://developer.mozilla.org/en-US/docs/Glossary/user agent">user agent</see> supports the <c>volume</c> constraint. If the<br/>constraint isn&amp;apos;t supported, it&amp;apos;s not included in the list, so this value will never be<br/><c>false</c>.
+</summary>
+<remarks>
+<para>You can access the supported constraints dictionary by calling<br/><c>navigator.mediaDevices.getSupportedConstraints()</c>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API">Media Capture and Streams API</see><br/>-<see cref="MediaDevices.GetSupportedConstraints"/><br/>-<see cref="MediaTrackSupportedConstraints"/><br/>-<see cref="MediaStreamTrack"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/volume"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>This property is present in the dictionary (and its value is always <c>true</c>)<br/>if the user agent supports the <c>volume</c> constraint. If the property isn&amp;apos;t<br/>present, this property is missing from the supported constraints dictionary, and you&amp;apos;ll<br/>get <see cref="Undefined"/> if you try to look at its value.</value>
+</MediaTrackSupportedConstraintsVolume>
+</docs>

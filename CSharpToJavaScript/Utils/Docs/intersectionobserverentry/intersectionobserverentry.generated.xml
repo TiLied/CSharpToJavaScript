@@ -1,0 +1,75 @@
+<docs>
+<IntersectionObserverEntry>
+<summary>
+The <strong><c>IntersectionObserverEntry</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API">Intersection Observer API</see> describes the intersection between the target element and its root container at a specific moment of transition.
+</summary>
+<remarks>
+<para>Instances of <c>IntersectionObserverEntry</c> are delivered to an <see cref="IntersectionObserver"/> callback in its <c>entries</c> parameter; otherwise, these objects can only be obtained by calling <see cref="IntersectionObserver.TakeRecords"/>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserverEntry"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</IntersectionObserverEntry>
+<IntersectionObserverEntryTarget>
+<summary>
+The <strong><c>target</c></strong> read-only property of the <see cref="IntersectionObserverEntry"/> interface indicates which targeted <see cref="Element"/> has changed its amount of intersection with the intersection root.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserverEntry/target"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <c>IntersectionObserverEntry</c>&amp;apos;s <c>target</c> property specifies which <see cref="Element"/> previously targeted by calling <see cref="IntersectionObserver.Observe"/> experienced a change in intersection with the root.</value>
+</IntersectionObserverEntryTarget>
+<IntersectionObserverEntryIntersectionRatio>
+<summary>
+The <strong><c>intersectionRatio</c></strong> read-only property of the <see cref="IntersectionObserverEntry"/> interface tells you how much of the target element is currently visible within the root's intersection ratio, as a value between 0.0 and 1.0.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserverEntry/intersectionRatio"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number between 0.0 and 1.0 which indicates how much of the target element is actually visible within the root&amp;apos;s intersection rectangle.<br/>More precisely, this value is the ratio of the area of the intersection rectangle (<see cref="IntersectionObserverEntry.IntersectionRect"/>) to the area of the target's bounds rectangle (<see cref="IntersectionObserverEntry.BoundingClientRect"/>).If the area of the target's bounds rectangle is zero, the returned value is 1 if <see cref="IntersectionObserverEntry.IsIntersecting"/> is <c>true</c> or 0 if not.</value>
+</IntersectionObserverEntryIntersectionRatio>
+<IntersectionObserverEntryRootBounds>
+<summary>
+The <strong><c>rootBounds</c></strong> read-only property of the <see cref="IntersectionObserverEntry"/> interface is a <see cref="DOMRectReadOnly"/> corresponding to the <see cref="IntersectionObserverEntry.Target"/>'s root intersection rectangle, offset by the <see cref="IntersectionObserver.RootMargin"/> if one is specified.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserverEntry/rootBounds"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DOMRectReadOnly"/> which describes the root intersection rectangle.<br/>For roots which are the <see cref="Document"/>'s viewport, this rectangle is the bounds rectangle of the entire document.<br/>Otherwise, it&amp;apos;s the bounds of the root element.This rectangle is offset by the values in <see cref="IntersectionObserver.RootMargin"/>.</value>
+</IntersectionObserverEntryRootBounds>
+<IntersectionObserverEntryTime>
+<summary>
+The <strong><c>time</c></strong> read-only property of the <see cref="IntersectionObserverEntry"/> interface is a <see cref="DOMHighResTimeStamp"/> that indicates the time at which the intersection change occurred relative to the time at which the document was created.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserverEntry/time"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DOMHighResTimeStamp"/> which indicates the time at which the <see cref="IntersectionObserverEntry.Target"/> element experienced the<br/>intersection change described by the <c>IntersectionObserverEntry</c>.<br/>The time is specified in milliseconds since the creation of the containing document.</value>
+</IntersectionObserverEntryTime>
+<IntersectionObserverEntryBoundingClientRect>
+<summary>
+The <strong><c>boundingClientRect</c></strong> read-only property of the <see cref="IntersectionObserverEntry"/> interface returns a <see cref="DOMRectReadOnly"/> which in essence describes a rectangle describing the smallest rectangle that contains the entire target element.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserverEntry/boundingClientRect"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DOMRectReadOnly"/> which describes the smallest rectangle that contains every part of the target element whose intersection change is being described.<br/>This value is obtained using the same algorithm as <see cref="Element.GetBoundingClientRect"/>, so refer to that article for details on precisely what is done to obtain this rectangle and what is and is not included within its bounds.In the general case, however, it&amp;apos;s safe to think of this as the bounds rectangle of the target element.</value>
+</IntersectionObserverEntryBoundingClientRect>
+<IntersectionObserverEntryIntersectionRect>
+<summary>
+The <strong><c>intersectionRect</c></strong> read-only property of the <see cref="IntersectionObserverEntry"/> interface is a <see cref="DOMRectReadOnly"/> object which describes the smallest rectangle that contains the entire portion of the target element which is currently visible within the intersection root.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserverEntry/intersectionRect"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DOMRectReadOnly"/> which describes the part of the target element that's currently visible within the root's intersection rectangle.This rectangle is computed by taking the intersection of <see cref="IntersectionObserverEntry"/> with each of the <see cref="IntersectionObserverEntry.Target"/>'s ancestors' clip rectangles, with the exception of the intersection <see cref="IntersectionObserver.Root"/> itself.</value>
+</IntersectionObserverEntryIntersectionRect>
+<IntersectionObserverEntryIsIntersecting>
+<summary>
+The <strong><c>isIntersecting</c></strong> read-only property of the <see cref="IntersectionObserverEntry"/> interface is a Boolean value which is <c>true</c> if the target element intersects with the intersection observer&amp;apos;s root.
+</summary>
+<remarks>
+<para>If this is <c>true</c>, then, the <c>IntersectionObserverEntry</c> describes a transition into a state of intersection; if it&amp;apos;s <c>false</c>, then you know the transition is from intersecting to not-intersecting.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserverEntry/isIntersecting"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A Boolean value which indicates whether the <see cref="IntersectionObserverEntry.Target"/> element has transitioned into a state of intersection (<c>true</c>) or out of a state of intersection (<c>false</c>).</value>
+</IntersectionObserverEntryIsIntersecting>
+</docs>

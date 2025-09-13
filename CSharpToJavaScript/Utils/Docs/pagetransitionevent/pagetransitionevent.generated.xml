@@ -1,0 +1,32 @@
+<docs>
+<PageTransitionEvent>
+<summary>
+The <strong><c>PageTransitionEvent</c></strong> event object is available inside handler functions for the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Window/pageshow_event"><c>pageshow</c></see> and <see href="https://developer.mozilla.org/en-US/docs/Web/API/Window/pagehide_event"><c>pagehide</c></see> events, fired when a document is being loaded or unloaded.
+</summary>
+<remarks>
+<para></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Window/pageshow_event"><c>pageshow</c></see> event<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Window/pagehide_event"><c>pagehide</c></see> event<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PageTransitionEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</PageTransitionEvent>
+<PageTransitionEventPageTransitionEvent>
+<summary>
+The <strong><c>PageTransitionEvent()</c></strong> constructor creates a new <see cref="PageTransitionEvent"/> object, that is used by the <see cref="Windowpageshow"/> or <see cref="Windowpagehide"/> events, fired at the <see cref="Window"/> object when a page is loaded or unloaded.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>A web developer doesn't typically need to call this constructor, as the browser creates these objects itself when firing <see cref="Windowpageshow"/> or <see cref="Windowpagehide"/> events.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Window/pageshow_event"><c>pageshow</c></see> event<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Window/pagehide_event"><c>pagehide</c></see> event<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PageTransitionEvent/PageTransitionEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="PageTransitionEvent"/> object.</returns>
+</PageTransitionEventPageTransitionEvent>
+<PageTransitionEventPersisted>
+<summary>
+The <strong><c>persisted</c></strong> read-only property indicates if a webpage is loading from a cache.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PageTransitionEvent/persisted"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value.</value>
+</PageTransitionEventPersisted>
+</docs>

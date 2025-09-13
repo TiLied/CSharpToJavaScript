@@ -1,0 +1,60 @@
+<docs>
+<FileReaderSync>
+<summary>
+The <strong><c>FileReaderSync</c></strong> interface allows to read <see cref="File"/> or <see cref="Blob"/> objects synchronously. This interface is <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers">only available</see> in <see href="https://developer.mozilla.org/en-US/docs/Web/API/Worker">workers</see> as it enables synchronous I/O that could potentially block.
+</summary>
+<remarks>
+<para>-<see cref="FileReader"/><br/>-<see cref="Blob"/><br/>-<see cref="File"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileReaderSync"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</FileReaderSync>
+<FileReaderSyncReadAsArrayBuffer>
+<summary>
+The <strong><c>readAsArrayBuffer()</c></strong> method of the <see cref="FileReaderSync"/> interface allows to read <see cref="File"/> or <see cref="Blob"/> objects in a synchronous way into an {{jsxref("ArrayBuffer")}}. This interface is <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers">only available</see> in <see href="https://developer.mozilla.org/en-US/docs/Web/API/Worker">workers</see> as it enables synchronous I/O that could potentially block.
+</summary>
+<remarks>
+<para>-{{DOMxRef(&amp;quot;File API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/>-<see cref="File"/><br/>-<see cref="FileReaderSync"/><br/>-<see cref="FileReader"/><br/>-<see cref="Blob"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileReaderSync/readAsArrayBuffer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="ArrayBuffer"/> representing the file's data.</returns>
+</FileReaderSyncReadAsArrayBuffer>
+<FileReaderSyncReadAsDataURL>
+<summary>
+The <strong><c>readAsDataURL()</c></strong> method of the <see cref="FileReaderSync"/> interface allows to read <see cref="File"/> or <see cref="Blob"/> objects in a synchronous way into a string representing a data URL. This interface is <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers">only available</see> in <see href="https://developer.mozilla.org/en-US/docs/Web/API/Worker">workers</see> as it enables synchronous I/O that could potentially block.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</see><br/>-<see cref="File"/><br/>-<see cref="FileReaderSync"/><br/>-<see cref="FileReader"/><br/>-<see cref="Blob"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileReaderSync/readAsDataURL"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A string representing the input data as a data URL.</returns>
+</FileReaderSyncReadAsDataURL>
+<FileReaderSyncReadAsText>
+<summary>
+The <strong><c>readAsText()</c></strong> method of the <see cref="FileReaderSync"/> interface allows to read <see cref="File"/> or <see cref="Blob"/> objects in a synchronous way into a string. This interface is <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers">only available</see> in <see href="https://developer.mozilla.org/en-US/docs/Web/API/Worker">workers</see> as it enables synchronous I/O that could potentially block.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_API">File API</see><br/>-<see cref="File"/><br/>-<see cref="FileReaderSync"/><br/>-<see cref="FileReader"/><br/>-<see cref="Blob"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileReaderSync/readAsText"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A string representing the input data.</returns>
+</FileReaderSyncReadAsText>
+<FileReaderSyncFileReaderSync>
+<summary>
+The <strong><c>FileReaderSync()</c></strong> constructor creates a new <see cref="FileReaderSync"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileReaderSync/FileReaderSync"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</FileReaderSyncFileReaderSync>
+<FileReaderSyncReadAsBinaryString>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> <blockquote class="NOTE"><h5>NOTE</h5>This method is deprecated in favor of <see cref="FileReaderSync.ReadAsArrayBuffer"/>.</blockquote>
+</summary>
+<remarks>
+<para>The <strong><c>readAsBinaryString()</c></strong> method of the <see cref="FileReaderSync"/> interface allows to read <see cref="File"/> or <see cref="Blob"/> objects in a synchronous way into a string. This interface is <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers">only available</see> in <see href="https://developer.mozilla.org/en-US/docs/Web/API/Worker">workers</see> as it enables synchronous I/O that could potentially block.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/File_API">File API</see><br/>-<see cref="File"/><br/>-<see cref="FileReaderSync"/><br/>-<see cref="FileReader"/><br/>-<see cref="Blob"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/FileReaderSync/readAsBinaryString"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A string representing the input data.</returns>
+</FileReaderSyncReadAsBinaryString>
+</docs>

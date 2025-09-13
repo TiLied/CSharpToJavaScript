@@ -1,0 +1,95 @@
+<docs>
+<DedicatedWorkerGlobalScope>
+<summary>
+The <strong><c>DedicatedWorkerGlobalScope</c></strong> object (the <see cref="Worker"/> global scope) is accessible through the <see cref="WorkerGlobalScope.Self"/> keyword. Some additional global functions, namespaces objects, and constructors, not typically associated with the worker global scope, but available on it, are listed in the <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference">JavaScript Reference</see>. See also: <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers">Functions available to workers</see>.
+</summary>
+<remarks>
+<para></para>
+<para>-<see cref="Worker"/><br/>-<see cref="WorkerGlobalScope"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web workers</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers">Functions available to workers</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DedicatedWorkerGlobalScope"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</DedicatedWorkerGlobalScope>
+<DedicatedWorkerGlobalScopeRtctransform>
+<summary>
+The <strong><c>rtctransform</c></strong> event is fired at a worker's <see cref="'DedicatedWorkerGlobalScope'"/> object when an encoded video or audio frame has been queued for processing by a {{domxref("WebRTC API/Using Encoded Transforms", "WebRTC Encoded Transform", &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}.
+</summary>
+<remarks>
+<para>The event's <see cref="RTCTransformEvent.Transformer"/> property returns a <see cref="RTCRtpScriptTransformer"/> that exposes the <see cref="ReadableStream"/> on which the frame is queued, and a <see cref="WritableStream"/> where the frame can be written to inject it back into the WebRTC pipeline.</para><para>This event is not cancellable and does not bubble.</para>
+<para>-{{domxref(&amp;quot;WebRTC API/Using Encoded Transforms&amp;quot;, &amp;quot;Using WebRTC Encoded Transforms&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DedicatedWorkerGlobalScope/rtctransform"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</DedicatedWorkerGlobalScopeRtctransform>
+<DedicatedWorkerGlobalScopeRequestAnimationFrame>
+<summary>
+The <strong><c>requestAnimationFrame()</c></strong> method of the <see cref="DedicatedWorkerGlobalScope"/> interface tells the browser you wish to perform an animation frame request and call a user-supplied callback function before the next repaint.
+</summary>
+<remarks>
+<para>The frequency of calls to the callback function will generally match the display refresh rate. The most common refresh rate is 60 Hz, (60 cycles/frames per second), though 75 Hz, 120 Hz, and 144 Hz are also widely used. <c>requestAnimationFrame()</c> calls are paused in most browsers when running in background tabs or hidden <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</see>s, to improve performance and battery life.</para><para>A call to the <c>requestAnimationFrame()</c> method schedules only one single call to the callback function. If you want to animate another frame, your callback function must call <c>requestAnimationFrame()</c> again.</para><blockquote class="WARNING"><h5>WARNING</h5><para>Be sure always to use the first argument (or some other method for getting the current time) to calculate how much the animation will progress in a frame — <strong>otherwise, the animation will run faster on high refresh-rate screens</strong>. For ways to do that, see the examples below.</para></blockquote><para>Calling the <c>requestAnimationFrame()</c> method requires the current worker to have an associated owner <see cref="Window"/>. That means that the current worker must be created by <see cref="Window"/> or by a dedicated worker that also has an associated owner <see cref="Window"/>.</para>
+<para>-<see cref="DedicatedWorkerGlobalScope.CancelAnimationFrame"/><br/>-<see cref="Window.RequestAnimationFrame"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DedicatedWorkerGlobalScope/requestAnimationFrame"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <c>long</c> integer value that is the request ID uniquely identifying the entry<br/>in the callback list. This is a non-zero value, but you may not make any other<br/>assumptions about it. You can pass this value to<br/><see cref="DedicatedWorkerGlobalScope.CancelAnimationFrame"/> to cancel the refresh callback request, the cancel action must have been made in the same worker.</returns>
+</DedicatedWorkerGlobalScopeRequestAnimationFrame>
+<DedicatedWorkerGlobalScopeCancelAnimationFrame>
+<summary>
+The <strong><c>cancelAnimationFrame()</c></strong> method of the <see cref="DedicatedWorkerGlobalScope"/> interface cancels an animation frame request previously scheduled through a call to <see cref="DedicatedWorkerGlobalScope.RequestAnimationFrame"/>.
+</summary>
+<remarks>
+<para>Calling the <c>cancelAnimationFrame()</c> method requires the current worker to have an associated owner <see cref="Window"/>. That means that the current worker must be created by <see cref="Window"/> or by a dedicated worker that also has an associated owner <see cref="Window"/>.</para>
+<para>-<see cref="DedicatedWorkerGlobalScope.RequestAnimationFrame"/><br/>-<see cref="Window.CancelAnimationFrame"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DedicatedWorkerGlobalScope/cancelAnimationFrame"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</DedicatedWorkerGlobalScopeCancelAnimationFrame>
+<DedicatedWorkerGlobalScopeMessageerror>
+<summary>
+The <c>messageerror</c> event is fired on a <see cref="'DedicatedWorkerGlobalScope'"/> object when it receives a message that can't be deserialized.
+</summary>
+<remarks>
+<para>This event is not cancellable and does not bubble.</para>
+<para>-<see cref="DedicatedWorkerGlobalScope"/><br/>-<see cref="WorkerGlobalScope"/><br/>-Related events: <see href="https://developer.mozilla.org/en-US/docs/Web/API/DedicatedWorkerGlobalScope/message_event"><c>message</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Worker/postMessage"><c>Worker.postMessage()</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging">Using channel messaging</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DedicatedWorkerGlobalScope/messageerror"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</DedicatedWorkerGlobalScopeMessageerror>
+<DedicatedWorkerGlobalScopeName>
+<summary>
+The <strong><c>name</c></strong> read-only property of the<br/><see cref="DedicatedWorkerGlobalScope"/> interface returns the name that the<br/><see cref="Worker"/> was (optionally) given when it was created. This is the name that<br/>the <see cref="Worker.Worker"/> constructor can pass to get a reference to<br/>the <see cref="DedicatedWorkerGlobalScope"/>.
+</summary>
+<remarks>
+<para>-<see cref="DedicatedWorkerGlobalScope"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DedicatedWorkerGlobalScope/name"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</DedicatedWorkerGlobalScopeName>
+<DedicatedWorkerGlobalScopeClose>
+<summary>
+The <strong><c>close()</c></strong> method of the <see cref="DedicatedWorkerGlobalScope"/> interface discards any tasks queued in the <c>DedicatedWorkerGlobalScope</c>&amp;apos;s event loop, effectively closing this particular scope.
+</summary>
+<remarks>
+<para><see cref="DedicatedWorkerGlobalScope"/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DedicatedWorkerGlobalScope/close"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</DedicatedWorkerGlobalScopeClose>
+<DedicatedWorkerGlobalScopePostMessage>
+<summary>
+The <strong><c>postMessage()</c></strong> method of the <see cref="DedicatedWorkerGlobalScope"/> interface sends a message to the main thread that spawned it.
+</summary>
+<remarks>
+<para>This accepts a data parameter, which contains data to copy from the worker to the main thread.<br/>The data may be any value or JavaScript object handled by the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">structured clone</see> algorithm, which includes cyclical references.</para><para>The method also accepts an optional array of <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Transferable_objects">transferable objects</see> to <strong>transfer</strong> to the main thread;<br/>Unlike the data parameter transferred objects are no longer usable in the worker thread.<br/>(Where possible, objects are transferred using a high performance zero-copy operation).</para><para>The main scope that spawned the worker can send back information to the thread that spawned it using the <see cref="Worker.PostMessage"/> method.</para>
+<para>The <see cref="DedicatedWorkerGlobalScope"/> interface it belongs to.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DedicatedWorkerGlobalScope/postMessage"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</DedicatedWorkerGlobalScopePostMessage>
+<DedicatedWorkerGlobalScopeMessage>
+<summary>
+The <c>message</c> event is fired on a <see cref="'DedicatedWorkerGlobalScope'"/> object when the worker receives a message from its parent (i.e., when the parent sends a message using <see href="https://developer.mozilla.org/en-US/docs/Web/API/Worker/postMessage"><c>Worker.postMessage()</c></see>).
+</summary>
+<remarks>
+<para>This event is not cancellable and does not bubble.</para>
+<para>-<see cref="DedicatedWorkerGlobalScope"/><br/>-<see cref="WorkerGlobalScope"/><br/>-Related events: <see href="https://developer.mozilla.org/en-US/docs/Web/API/DedicatedWorkerGlobalScope/messageerror_event"><c>messageerror</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Worker/postMessage"><c>Worker.postMessage()</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging">Using channel messaging</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DedicatedWorkerGlobalScope/message"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</DedicatedWorkerGlobalScopeMessage>
+</docs>

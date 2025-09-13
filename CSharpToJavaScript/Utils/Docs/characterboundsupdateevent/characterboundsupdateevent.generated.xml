@@ -1,0 +1,38 @@
+<docs>
+<CharacterBoundsUpdateEvent>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>CharacterBoundsUpdateEvent</c></strong> interface is a <see href="https://developer.mozilla.org/en-US/docs/Web/API/Event">DOM event</see> that represents a request from the operating system to know the bounds of certain characters within an editable region that's attached to an <see cref="EditContext"/> instance.
+</summary>
+<remarks>
+<para>This interface inherits properties from <see cref="Event"/>.</para><para></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CharacterBoundsUpdateEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CharacterBoundsUpdateEvent>
+<CharacterBoundsUpdateEventCharacterBoundsUpdateEvent>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>CharacterBoundsUpdateEvent()</c></strong> constructor returns a new <see cref="CharacterBoundsUpdateEvent"/> object.
+</summary>
+<remarks>
+<para>-The <see cref="CharacterBoundsUpdateEvent"/> interface it belongs to.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CharacterBoundsUpdateEvent/CharacterBoundsUpdateEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CharacterBoundsUpdateEventCharacterBoundsUpdateEvent>
+<CharacterBoundsUpdateEventRangeEnd>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>CharacterBoundsUpdateEvent.rangeEnd</c></strong> read-only property represents the offset of the last character within the editable text region for which the operating system needs the bounds.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CharacterBoundsUpdateEvent/rangeEnd"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Number"/>.</value>
+</CharacterBoundsUpdateEventRangeEnd>
+<CharacterBoundsUpdateEventRangeStart>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>CharacterBoundsUpdateEvent.rangeStart</c></strong> read-only property represents the offset of the first character within the editable text region for which the operating system needs the bounds.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CharacterBoundsUpdateEvent/rangeStart"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Number"/>.</value>
+</CharacterBoundsUpdateEventRangeStart>
+</docs>

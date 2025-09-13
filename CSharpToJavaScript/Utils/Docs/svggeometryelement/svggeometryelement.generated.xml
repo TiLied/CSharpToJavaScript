@@ -1,0 +1,56 @@
+<docs>
+<SVGGeometryElement>
+<summary>
+The <c>SVGGeometryElement</c> interface represents SVG elements whose rendering is defined by geometry with an equivalent path, and which can be filled and stroked. This includes paths and the basic shapes.
+</summary>
+<remarks>
+<para></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGGeometryElement"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</SVGGeometryElement>
+<SVGGeometryElementPathLength>
+<summary>
+The <strong><c>SVGGeometryElement.pathLength</c></strong> property reflects the<br/>pathLength attribute and returns the total length of the path, in user units.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGGeometryElement/pathLength"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</SVGGeometryElementPathLength>
+<SVGGeometryElementGetPointAtLength>
+<summary>
+The<br/><strong><c>SVGGeometryElement.getPointAtLength()</c></strong> method returns the<br/>point at a given distance along the path.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGGeometryElement/getPointAtLength"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="DOMPoint"/> indicating the point at a given distance along the path.</returns>
+</SVGGeometryElementGetPointAtLength>
+<SVGGeometryElementIsPointInFill>
+<summary>
+The <strong><c>isPointInFill()</c></strong> method of the <see cref="SVGGeometryElement"/> interface determines whether a given point is within the fill shape of an element. The <c>point</c> argument is interpreted as a point in the local coordinate system of the element.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGGeometryElement/isPointInFill"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A boolean indicating whether the given point is within the fill or not.</returns>
+</SVGGeometryElementIsPointInFill>
+<SVGGeometryElementIsPointInStroke>
+<summary>
+The <strong><c>isPointInStroke()</c></strong> method of the <see cref="SVGGeometryElement"/> interface determines whether a given point is within the stroke shape of an element. The <c>point</c> argument is interpreted as a point in the local coordinate system of the element.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGGeometryElement/isPointInStroke"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A boolean indicating whether the given point is within the stroke or not.</returns>
+</SVGGeometryElementIsPointInStroke>
+<SVGGeometryElementGetTotalLength>
+<summary>
+The <strong><c>SVGGeometryElement.getTotalLength()</c></strong> method returns<br/>the user agent&amp;apos;s computed value for the total length of the path in user units.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGGeometryElement/getTotalLength"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A float indicating the total length of the path in user units.</returns>
+</SVGGeometryElementGetTotalLength>
+</docs>

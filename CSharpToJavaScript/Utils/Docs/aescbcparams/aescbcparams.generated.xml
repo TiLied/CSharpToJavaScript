@@ -1,0 +1,11 @@
+<docs>
+<AesCbcParams>
+<summary>
+The <strong><c>AesCbcParams</c></strong> dictionary of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API">Web Crypto API</see> represents the object that should be passed as the <c>algorithm</c> parameter into <see cref="SubtleCrypto.Encrypt"/>, <see cref="SubtleCrypto.Decrypt"/>, <see cref="SubtleCrypto.WrapKey"/>, or <see cref="SubtleCrypto.UnwrapKey"/>, when using the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-cbc">AES-CBC</see> algorithm.
+</summary>
+<remarks>
+<para>-CBC mode is defined in section 6.2 of the <see href="https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38a.pdf#%5B%7B%22num%22%3A70%2C%22gen%22%3A0%7D%2C%7B%22name%22%3A%22Fit%22%7D%5D">NIST SP800-38A standard</see>.<br/>-<see cref="SubtleCrypto.Encrypt"/>.<br/>-<see cref="SubtleCrypto.Decrypt"/>.<br/>-<see cref="SubtleCrypto.WrapKey"/>.<br/>-<see cref="SubtleCrypto.UnwrapKey"/>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AesCbcParams"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</AesCbcParams>
+</docs>

@@ -1,0 +1,90 @@
+<docs>
+<TouchEvent>
+<summary>
+The <strong><c>TouchEvent</c></strong> interface represents an <see cref="UIEvent"/> which is sent when the state of contacts with a touch-sensitive surface changes. This surface can be a touch screen or trackpad, for example. The event can describe one or more points of contact with the screen and includes support for detecting movement, addition and removal of contact points, and so forth.
+</summary>
+<remarks>
+<para>Touches are represented by the <see cref="Touch"/> object; each touch is described by a position, size and shape, amount of pressure, and target element. Lists of touches are represented by <see cref="TouchList"/> objects.</para><para></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Touch_events">Touch events</see><br/>-<see cref="GestureEvent"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TouchEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</TouchEvent>
+<TouchEventTargetTouches>
+<summary>
+The <strong><c>targetTouches</c></strong> read-only property is a <see cref="TouchList"/> listing all the <see cref="Touch"/> objects for touch points that are still in contact with the touch surface <strong>and</strong> whose <see cref="Elementtouchstart"/> event occurred inside the same target <see cref="Element"/> as the current target element.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TouchEvent/targetTouches"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="TouchList"/> listing all the <see cref="Touch"/> objects for touch points that are still in contact with the touch surface <strong>and</strong> whose <c>touchstart</c> event occurred inside the same target <see cref="Element"/> as the current target element.</value>
+</TouchEventTargetTouches>
+<TouchEventChangedTouches>
+<summary>
+The <strong><c>changedTouches</c></strong> read-only property is a <see cref="TouchList"/> whose touch points (<see cref="Touch"/> objects) varies depending on the event type, as follows:
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TouchEvent/changedTouches"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="TouchList"/> whose <see cref="Touch"/> objects include all the touch points that contributed to this touch event.</value>
+</TouchEventChangedTouches>
+<TouchEventMetaKey>
+<summary>
+The read-only <strong><c>metaKey</c></strong> property of the <see cref="TouchEvent"/> interface returns a boolean value indicating whether or not the &amp;lt;kbd&amp;gt;Meta&amp;lt;/kbd&amp;gt; key is enabled when the touch event is created. If this key is enabled, the attribute&amp;apos;s value is <c>true</c>. Otherwise, it is <c>false</c>.
+</summary>
+<remarks>
+<para>This property is {{ReadOnlyInline}}.</para><blockquote class="NOTE"><h5>NOTE</h5><para>On Macintosh keyboards, this is the &amp;lt;kbd&amp;gt;⌘ Command&amp;lt;/kbd&amp;gt; key. On Windows keyboards, this is the Windows key (&amp;lt;kbd&amp;gt;⊞&amp;lt;/kbd&amp;gt;).</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TouchEvent/metaKey"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value that is <c>true</c> if the &amp;lt;kbd&amp;gt;Meta&amp;lt;/kbd&amp;gt; key is enabled for this event; and <c>false</c> if the &amp;lt;kbd&amp;gt;Meta&amp;lt;/kbd&amp;gt; is not enabled.</value>
+</TouchEventMetaKey>
+<TouchEventShiftKey>
+<summary>
+The read-only <strong><c>shiftKey</c></strong> property of the <c>TouchEvent</c> interface returns a boolean value indicating whether or not the &amp;lt;kbd&amp;gt;shift&amp;lt;/kbd&amp;gt; key is enabled when the touch event is created. If this key is enabled, the attribute&amp;apos;s value is <c>true</c>. Otherwise, it is <c>false</c>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TouchEvent/shiftKey"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The boolean value <c>true</c> if the &amp;lt;kbd&amp;gt;shift&amp;lt;/kbd&amp;gt; key is enabled for this event; and <c>false</c> if the &amp;lt;kbd&amp;gt;shift&amp;lt;/kbd&amp;gt; key is not enabled.</value>
+</TouchEventShiftKey>
+<TouchEventCtrlKey>
+<summary>
+The read-only <strong><c>ctrlKey</c></strong> property of the <see cref="TouchEvent"/> interface returns a boolean value indicating whether the &amp;lt;kbd&amp;gt;control&amp;lt;/kbd&amp;gt; (Control) key is enabled when the touch event is created. If this key is enabled, the attribute&amp;apos;s value is <c>true</c>. Otherwise, it is <c>false</c>.
+</summary>
+<remarks>
+<para>This property is {{ReadOnlyInline}}.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TouchEvent/ctrlKey"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value that is <c>true</c> if the &amp;lt;kbd&amp;gt;control&amp;lt;/kbd&amp;gt; key is enabled for this event; and <c>false</c> if the &amp;lt;kbd&amp;gt;control&amp;lt;/kbd&amp;gt; is not enabled.</value>
+</TouchEventCtrlKey>
+<TouchEventTouchEvent>
+<summary>
+The <strong><c>TouchEvent()</c></strong> constructor creates a new <see cref="TouchEvent"/> object.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>If you construct a synthetic event using this constructor, that event will not be <strong>trusted</strong>, for security reasons.<br/>Only browser-generated <c>TouchEvent</c> objects are trusted and only trusted events trigger default actions.</para></blockquote>
+<para>-<see cref="TouchEvent"/>, the interface of the objects it constructs.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TouchEvent/TouchEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="TouchEvent"/> object.</returns>
+</TouchEventTouchEvent>
+<TouchEventTouches>
+<summary>
+<strong><c>touches</c></strong> is a read-only <see cref="TouchList"/> listing<br/>all the <see cref="Touch"/> objects for touch points that are currently in contact<br/>with the touch surface, regardless of whether or not they&amp;apos;ve changed or what their<br/>target element was at <see cref="Elementtouchstart"/> time.
+</summary>
+<remarks>
+<para>You can think of it as how many separate fingers are able to be identified as touching<br/>the screen.</para><blockquote class="NOTE"><h5>NOTE</h5><para>Touches inside the array are not necessarily ordered by order of occurrences (the<br/>i-th element in the array being the i-th touch that happened). You cannot assume a specific order. To determine the order of occurrences of the touches, use the <c>touch</c> object IDs.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TouchEvent/touches"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="TouchList"/> listing all the <see cref="Touch"/> objects for touch points that are still in contact with the touch surface, regardless of whether or not they've changed or what their target element was at <c>touchstart</c><br/>time.</value>
+</TouchEventTouches>
+<TouchEventAltKey>
+<summary>
+The read-only <strong><c>altKey</c></strong> property of the <see cref="TouchEvent"/> interface returns a boolean value indicating whether or not the &amp;lt;kbd&amp;gt;alt&amp;lt;/kbd&amp;gt; (Alternate) key is enabled when the touch event is created. If the &amp;lt;kbd&amp;gt;alt&amp;lt;/kbd&amp;gt; key is enabled, the attribute&amp;apos;s value is <c>true</c>. Otherwise, it is <c>false</c>.
+</summary>
+<remarks>
+<para>This property is {{ReadOnlyInline}}.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TouchEvent/altKey"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value that is <c>true</c> if the &amp;lt;kbd&amp;gt;alt&amp;lt;/kbd&amp;gt; key is enabled for this event; and <c>false</c> if the &amp;lt;kbd&amp;gt;alt&amp;lt;/kbd&amp;gt; is not enabled.</value>
+</TouchEventAltKey>
+</docs>

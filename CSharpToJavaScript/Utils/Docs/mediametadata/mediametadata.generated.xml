@@ -1,0 +1,65 @@
+<docs>
+<MediaMetadata>
+<summary>
+The <strong><c>MediaMetadata</c></strong> interface of the {{domxref(&amp;quot;Media Session API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} allows a web page to provide rich media metadata for display in a platform UI.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaMetadata"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</MediaMetadata>
+<MediaMetadataAlbum>
+<summary>
+The <strong><c>album</c></strong> property of the<br/><see cref="MediaMetadata"/> interface returns or sets the name of the album or<br/>collection containing the media to be played.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaMetadata/album"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="String"/> containing the name of the album.</value>
+</MediaMetadataAlbum>
+<MediaMetadataArtwork>
+<summary>
+The <strong><c>artwork</c></strong> property of the<br/><see cref="MediaMetadata"/> interface returns or sets an array of<br/>objects representing images associated with playing<br/>media.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaMetadata/artwork"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="Array"/> of objects, each containing the following fields:</value>
+</MediaMetadataArtwork>
+<MediaMetadataArtist>
+<summary>
+The <strong><c>artist</c></strong> property of the<br/><see cref="MediaMetadata"/> interface returns or sets the name of the artist, group,<br/>creator, etc., of the media to be played.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaMetadata/artist"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="String"/> containing the name of the artist.</value>
+</MediaMetadataArtist>
+<MediaMetadataMediaMetadata>
+<summary>
+The <strong><c>MediaMetadata()</c></strong> constructor creates a new<br/><see cref="MediaMetadata"/> object.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaMetadata/MediaMetadata"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</MediaMetadataMediaMetadata>
+<MediaMetadataChapterInfo>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>chapterInfo</c></strong> read-only property of the <see cref="MediaMetadata"/> interface returns an array of chapter information metadata associated with playing media, represented by <see cref="ChapterInformation"/> object instances.
+</summary>
+<remarks>
+<para>The <c>chapterInfo</c> for a given media resource is set when it is first created, via the <c>chapterInfo</c> property of the <see cref="MediaMetadata.MediaMetadata"/> constructor's initialization object.</para>
+<para>-<see cref="ChapterInformation"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaMetadata/chapterInfo"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An array of <see cref="ChapterInformation"/> object instances.</value>
+</MediaMetadataChapterInfo>
+<MediaMetadataTitle>
+<summary>
+The <strong><c>title</c></strong> property of the<br/><see cref="MediaMetadata"/> interface returns or sets the title of the media to be<br/>played.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MediaMetadata/title"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="String"/> containing the title of the media.</value>
+</MediaMetadataTitle>
+</docs>

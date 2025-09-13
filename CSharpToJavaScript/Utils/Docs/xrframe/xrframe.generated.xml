@@ -1,0 +1,130 @@
+<docs>
+<XRFrame>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> A <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</see> <strong><c>XRFrame</c></strong> object is passed into the <see cref="XRSession.RequestAnimationFrame"/> callback function and provides access to the information needed in order to render a single frame of animation for an <see cref="XRSession"/> describing a VR or AR scene. Events which communicate the tracking state of objects also provide an <c>XRFrame</c> reference as part of their structure.
+</summary>
+<remarks>
+<para>In addition to providing a reference to the <see cref="XRSession"/> for which this frame is to be rendered, the <see cref="XRFrame.GetViewerPose"/> method is provided to obtain the <see cref="XRViewerPose"/> describing the viewer's position and orientation in space, and <see cref="XRFrame.GetPose"/> can be used to create an <see cref="XRPose"/> describing the relative position of one <see cref="XRSpace"/> relative to another.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Spatial_tracking">Spatial tracking in WebXR</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRFrame"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</XRFrame>
+<XRFrameFillPoses>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>fillPoses()</c></strong> method of the <see cref="XRFrame"/> interface populates a {{jsxref("Float32Array")}} with the matrices of the poses relative to a given base space and returns <c>true</c> if successful for all spaces.
+</summary>
+<remarks>
+<para>-<see cref="XRHand"/><br/>-<see cref="XRJointSpace"/><br/>-<see cref="Float32Array"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRFrame/fillPoses"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A boolean indicating if all of the spaces have a valid pose.</returns>
+</XRFrameFillPoses>
+<XRFrameFillJointRadii>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>fillJointRadii()</c></strong> method of the <see cref="XRFrame"/> interface populates a {{jsxref("Float32Array")}} with radii for a list of hand joint spaces and returns <c>true</c> if successful for all spaces.
+</summary>
+<remarks>
+<para>-<see cref="XRHand"/><br/>-<see cref="XRJointSpace"/><br/>-<see cref="Float32Array"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRFrame/fillJointRadii"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A boolean indicating if all of the spaces have a valid pose.</returns>
+</XRFrameFillJointRadii>
+<XRFrameCreateAnchor>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>createAnchor()</c></strong> method of the <see cref="XRFrame"/> interface creates a free-floating <see cref="XRAnchor"/> which will be fixed relative to the real world.
+</summary>
+<remarks>
+<para>See <see cref="XRHitTestResult.CreateAnchor"/> for creating an anchor from a hit test result that is attached to a real-world object.</para>
+<para>-<see cref="XRHitTestResult.CreateAnchor"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRFrame/createAnchor"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} resolving to an <see cref="XRAnchor"/> object.</returns>
+</XRFrameCreateAnchor>
+<XRFrameGetViewerPose>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>getViewerPose()</c></strong> method, a member of the <see cref="XRFrame"/> interface, returns a <see cref="XRViewerPose"/> object which describes the viewer's pose (position and orientation) relative to the specified reference space.
+</summary>
+<remarks>
+<para>See the <see cref="XRFrame.GetPose"/> method for a way to calculate a pose that represents the difference between two spaces.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRFrame/getViewerPose"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="XRViewerPose"/> describing the viewer's position and orientation relative<br/>to the specified reference space.</returns>
+</XRFrameGetViewerPose>
+<XRFrameGetDepthInformation>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>getDepthInformation()</c></strong> method of the <see cref="XRFrame"/> interface returns an <see cref="XRCPUDepthInformation"/> object containing CPU depth information for the active and animated frame.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRFrame/getDepthInformation"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="XRCPUDepthInformation"/> object.</returns>
+</XRFrameGetDepthInformation>
+<XRFrameSession>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> An <c>XRFrame</c> object&amp;apos;s <strong>read-only</strong> <strong><c>session</c></strong> property returns the <see cref="XRSession"/> object that generated the frame.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRFrame/session"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="XRSession"/> object representing the WebXR session for which<br/>this <c>XRFrame</c> describes the object positions and orientations.</value>
+</XRFrameSession>
+<XRFrameGetLightEstimate>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>getLightEstimate()</c></strong> method of the <see cref="XRFrame"/> interface returns an <see cref="XRLightEstimate"/> object containing estimated lighting values for a given <see cref="XRLightProbe"/>.
+</summary>
+<remarks>
+<para>-<see cref="XRLightEstimate"/><br/>-<see cref="XRLightProbe"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRFrame/getLightEstimate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="XRLightEstimate"/> object or <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><c>null</c></see> if the device cannot estimate lighting for this frame.</returns>
+</XRFrameGetLightEstimate>
+<XRFrameGetHitTestResultsForTransientInput>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>getHitTestResultsForTransientInput()</c></strong> method of the <see cref="XRFrame"/> interface returns an array of <see cref="XRTransientInputHitTestResult"/> objects containing transient input hit test results for a given <see cref="XRTransientInputHitTestSource"/>.
+</summary>
+<remarks>
+<para>-<see cref="XRTransientInputHitTestResult"/><br/>-<see cref="XRTransientInputHitTestSource"/><br/>-<see cref="XRRay"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRFrame/getHitTestResultsForTransientInput"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An array of <see cref="XRTransientInputHitTestResult"/> objects.</returns>
+</XRFrameGetHitTestResultsForTransientInput>
+<XRFrameGetJointPose>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>getJointPose()</c></strong> method of the <see cref="XRFrame"/> interface returns an <see cref="XRJointPose"/> object providing the pose of a hand joint (see <see cref="XRHand"/>) relative to a given base space.
+</summary>
+<remarks>
+<para>-<see cref="XRHand"/><br/>-<see cref="XRJointSpace"/><br/>-<see cref="XRSpace"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRFrame/getJointPose"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="XRJointPose"/> object specifying the position and orientation of the hand joint, relative to<br/>the <see cref="XRSpace"/> indicated by <c>baseSpace</c>.</returns>
+</XRFrameGetJointPose>
+<XRFrameGetPose>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <see cref="XRFrame"/> method <strong><c>getPose()</c></strong> returns the relative position and<br/>orientation—the pose—of one <see cref="XRSpace"/> to that of another space. With this, you can observe the motion of objects relative to each other and to fixed locations throughout the scene.
+</summary>
+<remarks>
+<para>For example, to get the position of a controller relative to the viewer's head, you would compare the controller's <see cref="XRInputSource.GripSpace"/> to the <see cref="XRReferenceSpace"/> of type <c>viewer</c>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRFrame/getPose"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="XRPose"/> object specifying the position and orientation, relative to<br/>the <see cref="XRSpace"/> indicated by <c>baseSpace</c>.</returns>
+</XRFrameGetPose>
+<XRFrameTrackedAnchors>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The read-only <strong><c>trackedAnchor</c></strong> property of the <see cref="XRFrame"/> interface returns an <see cref="XRAnchorSet"/> object containing all anchors still tracked in the frame.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRFrame/trackedAnchors"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="XRAnchorSet"/> object.</value>
+</XRFrameTrackedAnchors>
+<XRFrameGetHitTestResults>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>getHitTestResults()</c></strong> method of the <see cref="XRFrame"/> interface returns an array of <see cref="XRHitTestResult"/> objects containing hit test results for a given <see cref="XRHitTestSource"/>.
+</summary>
+<remarks>
+<para>-<see cref="XRHitTestResult"/><br/>-<see cref="XRHitTestSource"/><br/>-<see cref="XRRay"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRFrame/getHitTestResults"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An array of <see cref="XRHitTestResult"/> objects.</returns>
+</XRFrameGetHitTestResults>
+</docs>

@@ -1,0 +1,33 @@
+<docs>
+<RTCDataChannelEvent>
+<summary>
+The <strong><c>RTCDataChannelEvent</c></strong> interface<br/>represents an event related to a specific <see cref="RTCDataChannel"/>.
+</summary>
+<remarks>
+<para></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/>-<see cref="RTCDataChannel"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample">A simple RTCDataChannel sample</see><br/>-<see cref="RTCPeerConnection"/> (the target interface for <see cref="RTCPeerConnection.Datachannel"/> events)<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannelEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RTCDataChannelEvent>
+<RTCDataChannelEventChannel>
+<summary>
+The read-only property <strong><c>RTCDataChannelEvent.channel</c></strong><br/>returns the <see cref="RTCDataChannel"/> associated with the event.
+</summary>
+<remarks>
+<para>-<see cref="RTCPeerConnection.Datachannel"/><br/>-<see cref="RTCDataChannel"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample">A simple RTCDataChannel sample</see><br/>-<see cref="RTCPeerConnection"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannelEvent/channel"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="RTCDataChannel"/> object representing the data channel linking the<br/>receiving <see cref="RTCPeerConnection"/> to its remote peer.</value>
+</RTCDataChannelEventChannel>
+<RTCDataChannelEventRTCDataChannelEvent>
+<summary>
+The <strong><c>RTCDataChannelEvent()</c></strong> constructor<br/>creates a new <see cref="RTCDataChannelEvent"/> object.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>You will rarely if ever construct an <c>RTCDataChannelEvent</c> by hand; these<br/>events are normally created and sent by the WebRTC layer itself.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/>-<see cref="RTCDataChannel"/><br/>-<see cref="RTCPeerConnection"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample">A simple RTCDataChannel sample</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannelEvent/RTCDataChannelEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="RTCDataChannelEvent"/> object configured as specified.</returns>
+</RTCDataChannelEventRTCDataChannelEvent>
+</docs>

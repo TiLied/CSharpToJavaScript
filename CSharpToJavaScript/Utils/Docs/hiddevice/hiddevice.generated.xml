@@ -1,0 +1,122 @@
+<docs>
+<HIDDevice>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>HIDDevice</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebHID_API">WebHID API</see> represents a HID Device. It provides properties for accessing information about the device, methods for opening and closing the connection, and the sending and receiving of reports.
+</summary>
+<remarks>
+<para></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HIDDevice"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HIDDevice>
+<HIDDeviceInputreport>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>inputreport</c></strong> event of the <see cref="HIDDevice"/> interface fires when a new report is received from the HID device.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HIDDevice/inputreport"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HIDDeviceInputreport>
+<HIDDeviceProductId>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>productId</c></strong> read-only property of the <see cref="HIDDevice"/> interface returns the product ID of the connected HID device.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HIDDevice/productId"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer. If the device has no product ID, or the product ID cannot be accessed this will return <c>0</c>.</value>
+</HIDDeviceProductId>
+<HIDDeviceForget>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>forget()</c></strong> method of the <see cref="HIDDevice"/> interface closes the connection to the HID device and forgets the device.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HIDDevice/forget"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves with <c>undefined</c> once the connection is closed, the device is forgotten, and the permission is reset.</returns>
+</HIDDeviceForget>
+<HIDDeviceVendorId>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>vendorId</c></strong> read-only property of the <see cref="HIDDevice"/> interface returns the vendor ID of the connected HID device. This identifies the vendor of the device.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HIDDevice/vendorId"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer. If the device has no vendor ID, or the vendor ID cannot be accessed this will return <c>0</c>.</value>
+</HIDDeviceVendorId>
+<HIDDeviceSendReport>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>sendReport()</c></strong> method of the <see cref="HIDDevice"/> interface sends an output report to the HID device.
+</summary>
+<remarks>
+<para>The <c>reportId</c> for each of the report formats that this device supports can be retrieved from <see cref="HIDDevice.Collections"/>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HIDDevice/sendReport"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves with <c>undefined</c> once the report has been sent.</returns>
+</HIDDeviceSendReport>
+<HIDDeviceOpened>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>opened</c></strong> read-only property of the <see cref="HIDDevice"/> interface returns true if the connection to the <see cref="HIDDevice"/> is open and ready to transfer data.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HIDDevice/opened"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value, true if the connection is open.</value>
+</HIDDeviceOpened>
+<HIDDeviceProductName>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>productName</c></strong> read-only property of the <see cref="HIDDevice"/> interface returns the product name of the connected HID device.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HIDDevice/productName"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</HIDDeviceProductName>
+<HIDDeviceOpen>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>open()</c></strong> method of the <see cref="HIDDevice"/> interface requests that the operating system opens the HID device.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>HID devices are not opened automatically. Therefore, a <see cref="HIDDevice"/> returned by <see cref="HID.RequestDevice"/> must be opened with this method before it is available to transfer data.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HIDDevice/open"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves with <c>undefined</c> once the connection is opened.</returns>
+</HIDDeviceOpen>
+<HIDDeviceCollections>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>collections</c></strong> read-only property of the <see cref="HIDDevice"/> interface returns an array of report formats
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HIDDevice/collections"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An array of report formats. Each entry contains the following:</value>
+</HIDDeviceCollections>
+<HIDDeviceClose>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>close()</c></strong> method of the <see cref="HIDDevice"/> interface closes the connection to the HID device.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HIDDevice/close"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves with <c>undefined</c> once the connection is closed.</returns>
+</HIDDeviceClose>
+<HIDDeviceReceiveFeatureReport>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>receiveFeatureReport()</c></strong> method of the <see cref="HIDDevice"/> interface receives a feature report from the HID device. Feature reports are a way for HID devices and applications to exchange non-standardized HID data.
+</summary>
+<remarks>
+<para>The <c>reportId</c> for each of the report formats that this device supports can be retrieved from <see cref="HIDDevice.Collections"/>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HIDDevice/receiveFeatureReport"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> which resolves with a <see cref="DataView"/> object containing the feature report.</returns>
+</HIDDeviceReceiveFeatureReport>
+<HIDDeviceSendFeatureReport>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>sendFeatureReport()</c></strong> method of the <see cref="HIDDevice"/> interface sends a feature report to the HID device. Feature reports are a way for HID devices and applications to exchange non-standardized HID data.
+</summary>
+<remarks>
+<para>The <c>reportId</c> for each of the report formats that this device supports can be retrieved from <see cref="HIDDevice.Collections"/>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HIDDevice/sendFeatureReport"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves with <c>undefined</c> once the report has been sent.</returns>
+</HIDDeviceSendFeatureReport>
+</docs>

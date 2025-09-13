@@ -1,0 +1,50 @@
+<docs>
+<Clients>
+<summary>
+The <c>Clients</c> interface provides access to <see cref="Client"/> objects. Access it via <c>{{domxref(&amp;quot;ServiceWorkerGlobalScope&amp;quot;, &amp;quot;self&amp;quot;)}}.clients</c> within a <see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">service worker</see>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Clients"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Clients>
+<ClientsGet>
+<summary>
+The <strong><c>get()</c></strong> method of the<br/><see cref="Clients"/> interface gets a service worker client matching a given<br/><c>id</c> and returns it in a <see cref="Promise"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Clients/get"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that resolves to a <see cref="Client"/> object or<br/><c>undefined</c>.</returns>
+</ClientsGet>
+<ClientsOpenWindow>
+<summary>
+The <strong><c>openWindow()</c></strong> method of the <see cref="Clients"/><br/>interface creates a new top level browsing context and loads a given URL. If the calling<br/>script doesn&amp;apos;t have permission to show popups, <c>openWindow()</c> will throw an<br/><c>InvalidAccessError</c>.
+</summary>
+<remarks>
+<para>In Firefox, the method is allowed to show popups only when called as the result of a<br/>notification click event.</para><para>In Chrome for Android, the method may instead open the URL in an existing browsing<br/>context provided by a <see href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps">standalone web app</see> previously added to the user&amp;apos;s home screen. As of recently, this also works on<br/>Chrome for Windows.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Clients/openWindow"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that resolves to a <see cref="WindowClient"/> object if the<br/>URL is from the same origin as the service worker or a <see href="https://developer.mozilla.org/en-US/docs/Glossary/null">null</see> otherwise.</returns>
+</ClientsOpenWindow>
+<ClientsClaim>
+<summary>
+The <strong><c>claim()</c></strong> method of the <see cref="Clients"/> interface allows an active service worker to set itself as the <see cref="ServiceWorkerContainer.Controller"/> for all clients within its <see cref="ServiceWorkerRegistration.Scope"/>.<br/>This triggers a <c>controllerchange</c> event on <see cref="ServiceWorkerContainer"/> in any clients that become controlled by this service worker.
+</summary>
+<remarks>
+<para>When a service worker is initially registered, pages won&amp;apos;t use it until they next<br/>load. The <c>claim()</c> method causes those pages to be controlled immediately.<br/>Be aware that this results in your service worker controlling pages that loaded<br/>regularly over the network, or possibly via a different service worker.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</see><br/>-<see href="https://web.dev/articles/service-worker-lifecycle">The service worker lifecycle</see><br/>-<see cref="ServiceWorkerGlobalScope.SkipWaiting"/> - skip the service worker's waiting phase<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Clients/claim"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves to <c>undefined</c>.</returns>
+</ClientsClaim>
+<ClientsMatchAll>
+<summary>
+The <strong><c>matchAll()</c></strong> method of the <see cref="Clients"/><br/>interface returns a <see cref="Promise"/> for a list of service worker<br/><see cref="Client"/> objects. Include the <c>options</c> parameter to return all service worker<br/>clients whose origin is the same as the associated service worker&amp;apos;s origin. If options<br/>are not included, the method returns only the service worker clients controlled by the<br/>service worker.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Clients/matchAll"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that resolves to an array of <see cref="Client"/> objects. In<br/>Chrome 46/Firefox 54 and later, this method returns clients in most recently focused<br/>order, correct as per spec.</returns>
+</ClientsMatchAll>
+</docs>

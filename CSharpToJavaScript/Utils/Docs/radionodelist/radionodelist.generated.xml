@@ -1,0 +1,21 @@
+<docs>
+<RadioNodeList>
+<summary>
+The <strong><c>RadioNodeList</c></strong> interface represents a collection of elements in a {{HTMLElement("form")}} returned by a call to <see cref="HTMLFormControlsCollection.NamedItem"/>.
+</summary>
+<remarks>
+<para></para>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">input</see> elements.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RadioNodeList"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RadioNodeList>
+<RadioNodeListValue>
+<summary>
+If the underlying element collection contains radio buttons, the<br/><strong><c>RadioNodeList.value</c></strong> property represents the checked radio<br/>button. On retrieving the <c>value</c> property, the <c>value</c> of the<br/>currently <c>checked</c> radio button is returned as a string. If the collection<br/>does not contain any radio buttons or none of the radio buttons in the collection is in<br/><c>checked</c> state, the empty string is returned. On setting the<br/><c>value</c> property, the first radio button input element whose<br/><c>value</c> property is equal to the new value will be set to<br/><c>checked</c>.
+</summary>
+<remarks>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">form</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset">fieldset</see>, <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">input</see><br/>elements.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RadioNodeList/value"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RadioNodeListValue>
+</docs>

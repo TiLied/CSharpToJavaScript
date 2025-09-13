@@ -1,0 +1,64 @@
+<docs>
+<ImageCapture>
+<summary>
+The <strong><c>ImageCapture</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream_Image_Capture_API">MediaStream Image Capture API</see> provides methods to enable the capture of images or photos from a camera or other photographic device. It provides an interface for capturing images from a photographic device referenced through a valid <see cref="MediaStreamTrack"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ImageCapture"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</ImageCapture>
+<ImageCaptureGetPhotoCapabilities>
+<summary>
+The <strong><c>getPhotoCapabilities()</c></strong><br/>method of the <see cref="ImageCapture"/> interface returns a {{jsxref("Promise")}}<br/>that resolves with an object containing the ranges of<br/>available configuration options.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ImageCapture/getPhotoCapabilities"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves with an object containing the following properties:</returns>
+</ImageCaptureGetPhotoCapabilities>
+<ImageCaptureTrack>
+<summary>
+The <strong><c>track</c></strong> read-only property of the<br/><see cref="ImageCapture"/> interface returns a reference to the<br/><see cref="MediaStreamTrack"/> passed to the<br/><see cref="ImageCapture.ImageCapture"/> constructor.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ImageCapture/track"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="MediaStreamTrack"/> object.</value>
+</ImageCaptureTrack>
+<ImageCaptureGrabFrame>
+<summary>
+The <strong><c>grabFrame()</c></strong> method of the<br/><see cref="ImageCapture"/> interface takes a snapshot of the live video in a<br/><see cref="MediaStreamTrack"/> and returns a {{jsxref("Promise")}} that resolves with<br/>a <see cref="ImageBitmap"/> containing the snapshot.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ImageCapture/grabFrame"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that resolves to an <see cref="ImageBitmap"/> object.</returns>
+</ImageCaptureGrabFrame>
+<ImageCaptureImageCapture>
+<summary>
+The <strong><c>ImageCapture()</c></strong> constructor<br/>creates a new <see cref="ImageCapture"/> object.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ImageCapture/ImageCapture"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <c>ImageCapture</c> object which can be used to capture still frames from<br/>the specified video track.</returns>
+</ImageCaptureImageCapture>
+<ImageCaptureTakePhoto>
+<summary>
+The <strong><c>takePhoto()</c></strong> method of the<br/><see cref="ImageCapture"/> interface takes a single exposure using the video capture<br/>device sourcing a <see cref="MediaStreamTrack"/> and returns a {{jsxref("Promise")}}<br/>that resolves with a <see cref="Blob"/> containing the data.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ImageCapture/takePhoto"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that resolves with a <see cref="Blob"/>.</returns>
+</ImageCaptureTakePhoto>
+<ImageCaptureGetPhotoSettings>
+<summary>
+The <strong><c>getPhotoSettings()</c></strong> method of<br/>the <see cref="ImageCapture"/> interface returns a {{jsxref("Promise")}} that<br/>resolves with an object containing the current photo<br/>configuration settings.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ImageCapture/getPhotoSettings"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves with an object containing the following properties:</returns>
+</ImageCaptureGetPhotoSettings>
+</docs>

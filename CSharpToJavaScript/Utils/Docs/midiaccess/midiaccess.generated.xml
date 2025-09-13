@@ -1,0 +1,46 @@
+<docs>
+<MIDIAccess>
+<summary>
+The <strong><c>MIDIAccess</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_MIDI_API">Web MIDI API</see> provides methods for listing MIDI input and output devices, and obtaining access to those devices.
+</summary>
+<remarks>
+<para><c>MIDIAccess</c> is a <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Transferable_objects">transferable object</see>.</para><para></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MIDIAccess"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</MIDIAccess>
+<MIDIAccessSysexEnabled>
+<summary>
+The <strong><c>sysexEnabled</c></strong> read-only property of the <see cref="MIDIAccess"/> interface indicates whether system exclusive support is enabled on the current MIDIAccess instance.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MIDIAccess/sysexEnabled"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value.</value>
+</MIDIAccessSysexEnabled>
+<MIDIAccessOutputs>
+<summary>
+The <strong><c>outputs</c></strong> read-only property of the <see cref="MIDIAccess"/> interface provides access to any available MIDI output ports.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MIDIAccess/outputs"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="MIDIOutputMap"/> instance.</value>
+</MIDIAccessOutputs>
+<MIDIAccessInputs>
+<summary>
+The <strong><c>inputs</c></strong> read-only property of the <see cref="MIDIAccess"/> interface provides access to any available MIDI input ports.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MIDIAccess/inputs"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="MIDIInputMap"/> instance.</value>
+</MIDIAccessInputs>
+<MIDIAccessStatechange>
+<summary>
+The <strong><c>statechange</c></strong> event of the <see cref="MIDIAccess"/> interface is fired when a new MIDI port is added or when an existing port changes state.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MIDIAccess/statechange"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</MIDIAccessStatechange>
+</docs>

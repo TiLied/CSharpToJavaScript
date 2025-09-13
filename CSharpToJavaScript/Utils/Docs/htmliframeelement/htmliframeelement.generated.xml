@@ -1,0 +1,189 @@
+<docs>
+<HTMLIFrameElement>
+<summary>
+The <strong><c>HTMLIFrameElement</c></strong> interface provides special properties and methods (beyond those of the <see cref="HTMLElement"/> interface it also has available to it by inheritance) for manipulating the layout and presentation of inline frame elements.
+</summary>
+<remarks>
+<para></para>
+<para>-The HTML element implementing this interface: <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLIFrameElement>
+<HTMLIFrameElementSandbox>
+<summary>
+The <strong><c>sandbox</c></strong> read-only property of the <see cref="HTMLIFrameElement"/> interface returns a <see cref="DOMTokenList"/> indicating extra restrictions on the behavior of the nested content.
+</summary>
+<remarks>
+<para>It reflects the <c>sandbox</c> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</see> element.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/sandbox"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DOMTokenList"/>. Each item must be one of the tokens listed in the <c>sandbox</c> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</see> element.</value>
+</HTMLIFrameElementSandbox>
+<HTMLIFrameElementFeaturePolicy>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>featurePolicy</c></strong> read-only<br/>property of the <see cref="HTMLIFrameElement"/> interface returns the<br/><see cref="FeaturePolicy"/> interface which provides a simple API for introspecting<br/>the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Permissions_Policy">Permissions Policies</see> applied to a specific frame.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/featurePolicy"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see href="https://developer.mozilla.org/en-US/docs/Web/API/FeaturePolicy"><c>FeaturePolicy</c></see> object<br/>that can be used to inspect the Permissions Policy settings applied to the frame.</value>
+</HTMLIFrameElementFeaturePolicy>
+<HTMLIFrameElementAllowPaymentRequest>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>allowPaymentRequest</c></strong> property of the<br/><see cref="HTMLIFrameElement"/> interface returns a boolean value indicating<br/>whether the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API">Payment Request API</see> may be invoked on a cross-origin iframe.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API">Payment Request API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/allowPaymentRequest"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value.</value>
+</HTMLIFrameElementAllowPaymentRequest>
+<HTMLIFrameElementWidth>
+<summary>
+The <strong><c>width</c></strong> property of the <see cref="HTMLIFrameElement"/> interface returns a string that reflects the <c>width</c> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</see> element, indicating the width of the frame in CSS pixels.
+</summary>
+<remarks>
+<para>-<see cref="HTMLCanvasElement.Width"/><br/>-<see cref="HTMLEmbedElement.Width"/><br/>-<see cref="HTMLImageElement.Width"/><br/>-<see cref="HTMLObjectElement.Width"/><br/>-<see cref="HTMLSourceElement.Width"/><br/>-<see cref="HTMLVideoElement.Width"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/width"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string indicating the width of the frame in CSS pixels.</value>
+</HTMLIFrameElementWidth>
+<HTMLIFrameElementCredentialless>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>credentialless</c></strong> property of the <see cref="HTMLIFrameElement"/> interface indicates whether the {{htmlelement("iframe")}} is credentialless, meaning that documents inside will be loaded using new, ephemeral contexts.
+</summary>
+<remarks>
+<para>Those contexts do not have access to their network, cookies and storage data associated with their origin. Instead, they use new ones, local to the top-level document lifetime. It means any data stored won&amp;apos;t be accessible anymore after the user navigates away from the page or reloads it.</para><para>In return, the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy">Cross-Origin-Embedder-Policy</see> (COEP) embedding rules can be lifted, so documents with COEP set can embed third-party documents that do not. See <see href="https://developer.mozilla.org/en-US/docs/Web/Security/IFrame_credentialless">IFrame credentialless</see> for a deeper explanation.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/Security/IFrame_credentialless">IFrame credentialless</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/credentialless"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean. The default value is <c>false</c>; set it to <c>true</c> to make the <c>&amp;lt;iframe&amp;gt;</c> credentialless.</value>
+</HTMLIFrameElementCredentialless>
+<HTMLIFrameElementReferrerPolicy>
+<summary>
+The<br/><strong><c>HTMLIFrameElement.referrerPolicy</c></strong><br/>property reflects the HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe#referrerpolicy"><c>referrerpolicy</c></see> attribute of the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</see> element defining which referrer is sent when fetching the<br/>resource.
+</summary>
+<remarks>
+<para>-<see cref="HTMLAnchorElement.ReferrerPolicy"/>,<br/><see cref="HTMLAreaElement.ReferrerPolicy"/>, and<br/><see cref="HTMLAreaElement.ReferrerPolicy"/>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/referrerPolicy"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLIFrameElementReferrerPolicy>
+<HTMLIFrameElementGetSVGDocument>
+<summary>
+The <strong><c>getSVGDocument()</c></strong> method of the <see cref="HTMLIFrameElement"/> interface returns the <see cref="Document"/> object of the embedded SVG.
+</summary>
+<remarks>
+<para>-<see cref="HTMLEmbedElement.GetSVGDocument"/><br/>-<see cref="HTMLObjectElement.GetSVGDocument"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/getSVGDocument"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Document"/>.</returns>
+</HTMLIFrameElementGetSVGDocument>
+<HTMLIFrameElementBrowsingTopics>
+<summary>
+<div class="CAUTION"><h5>CAUTION</h5> <strong>Non-standard</strong></div> <blockquote class="WARNING"><h5>WARNING</h5>This feature is currently opposed by two browser vendors. See the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Topics_API#standards_positions">Standards positions</see> section for details of opposition.</blockquote>
+</summary>
+<remarks>
+<para>The <strong><c>browsingTopics</c></strong> property of the <see cref="HTMLIFrameElement"/> interface is a boolean specifying that the selected topics for the current user should be sent with the request for the associated {{htmlelement("iframe")}}'s source in a {{httpheader("Sec-Browsing-Topics")}} header. This reflects the <c>browsingtopics</c> HTML attribute.</para><para>See <see href="https://developer.mozilla.org/en-US/docs/Web/API/Topics_API/Using">Using the Topics API</see> for more details.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Topics_API">Topics API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/browsingTopics"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean. The default value is <c>false</c>; set it to <c>true</c> to send the associated <c>&amp;lt;iframe&amp;gt;</c> source request with a <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Browsing-Topics">Sec-Browsing-Topics</see> header containing the selected topics for the current user.</value>
+</HTMLIFrameElementBrowsingTopics>
+<HTMLIFrameElementSrcdoc>
+<summary>
+The <strong><c>srcdoc</c></strong> property of the <see cref="HTMLIFrameElement"/> specifies the content of the page.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/srcdoc"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLIFrameElementSrcdoc>
+<HTMLIFrameElementAllow>
+<summary>
+The <strong><c>allow</c></strong> property of the <see cref="HTMLIFrameElement"/> interface indicates the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Permissions_Policy">Permissions Policy</see> specified for this <c>&amp;lt;iframe&amp;gt;</c> element. The policy defines what features are available to the <c>&amp;lt;iframe&amp;gt;</c> element (for example, access to the <c>microphone</c>, <c>camera</c>, <c>battery</c>, <c>web-share</c>, etc.) based on the origin of the request.
+</summary>
+<remarks>
+<para>The Permissions Policy specified by the <c>allow</c> attribute implements a further restriction on top of the policy specified in the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy">Permissions-Policy</see> header. It doesn't replace it.</para><para>See <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy#iframes"><c>&amp;lt;iframe&amp;gt;</c>&amp;apos;s Permissions Policy syntax</see> for more details.</para><para>It reflects the <c>allow</c> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</see> element.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Permissions_Policy">Permissions Policy</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/allow"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string indicates the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Permissions_Policy">Permissions Policy</see> specified for this <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</see> element, each policy must be separated by space.</value>
+</HTMLIFrameElementAllow>
+<HTMLIFrameElementSrc>
+<summary>
+The <strong><c>HTMLIFrameElement.src</c></strong><br/>A string that reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe#src"><c>src</c></see> HTML attribute, containing the address of the content to be embedded.
+</summary>
+<remarks>
+<para>Note that programmatically removing an <c>&amp;lt;iframe&amp;gt;</c>'s src attribute (e.g., via <see cref="Element.RemoveAttribute"/>) causes <c>about:blank</c> to be loaded in the frame.</para>
+<para>-<see cref="HTMLEmbedElement.Src"/><br/>-<see cref="HTMLImageElement.Src"/><br/>-<see cref="HTMLMediaElement.Src"/><br/>-<see cref="HTMLScriptElement.Src"/><br/>-<see cref="HTMLTrackElement.Src"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/src"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLIFrameElementSrc>
+<HTMLIFrameElementHeight>
+<summary>
+The <strong><c>height</c></strong> property of the <see cref="HTMLIFrameElement"/> interface returns a string that reflects the <c>height</c> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</see> element, indicating the height of the frame in CSS pixels.
+</summary>
+<remarks>
+<para>-<see cref="HTMLCanvasElement.Height"/><br/>-<see cref="HTMLEmbedElement.Height"/><br/>-<see cref="HTMLImageElement.Height"/><br/>-<see cref="HTMLObjectElement.Height"/><br/>-<see cref="HTMLSourceElement.Height"/><br/>-<see cref="HTMLVideoElement.Height"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/height"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string indicating the height of the frame in CSS pixels.</value>
+</HTMLIFrameElementHeight>
+<HTMLIFrameElementContentDocument>
+<summary>
+If the iframe and the iframe&amp;apos;s parent document are <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy">Same Origin</see>, returns a <see href="https://developer.mozilla.org/en-US/docs/Web/API/Document"><c>Document</c></see> (that is, the active document in the inline frame&amp;apos;s nested browsing context), else returns <c>null</c>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/contentDocument"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLIFrameElementContentDocument>
+<HTMLIFrameElementCsp>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>csp</c></strong> property of the <see cref="HTMLIFrameElement"/><br/>interface specifies the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP">Content Security Policy</see> that an<br/>embedded document must agree to enforce upon itself.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/csp"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A content security policy.</value>
+</HTMLIFrameElementCsp>
+<HTMLIFrameElementName>
+<summary>
+The <strong><c>name</c></strong> property of the <see cref="HTMLIFrameElement"/> interface is a string value that reflects the <c>name</c> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</see> element, indicating the specific name of the <c>&amp;lt;iframe&amp;gt;</c> element.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/name"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</HTMLIFrameElementName>
+<HTMLIFrameElementAllowFullscreen>
+<summary>
+The <strong><c>allowFullscreen</c></strong> property of the <see cref="HTMLIFrameElement"/> interface is a boolean value that reflects the <c>allowfullscreen</c> attribute of the {{HTMLElement("iframe")}} element, indicating whether to allow the iframe's contents to use <see cref="Element.RequestFullscreen"/>.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This property is considered a legacy property. Use <c>allow=&amp;quot;fullscreen&amp;quot;</c> and <see cref="HTMLIFrameElement.Allow"/> instead.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API">Fullscreen API</see><br/>-<see cref="Element.RequestFullscreen"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Permissions_Policy">Permissions Policy</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy/fullscreen">Permissions-Policy/fullscreen</see> Permissions Policy directive<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/allowFullscreen"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value.</value>
+</HTMLIFrameElementAllowFullscreen>
+<HTMLIFrameElementContentWindow>
+<summary>
+The <strong><c>contentWindow</c></strong> property returns the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Window">Window</see> object of an <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement">HTMLIFrameElement</see>.
+</summary>
+<remarks>
+<para>This attribute is read-only.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/contentWindow"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see href="https://developer.mozilla.org/en-US/docs/Web/API/Window">Window</see> object.</value>
+</HTMLIFrameElementContentWindow>
+<HTMLIFrameElementLoading>
+<summary>
+The <strong><c>loading</c></strong> property of the <see cref="HTMLIFrameElement"/> interface is a string that provides a hint to the {{Glossary("user agent")}} indicating whether the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe">iframe</see> should be loaded immediately on page load, or only when it is needed.
+</summary>
+<remarks>
+<para>This can be used to optimize the loading of the document&amp;apos;s contents.<br/>Iframes that are visible when the page loads can be downloaded immediately (eagerly), while iframes that are likely to be offscreen on initial page load can be downloaded lazily — just before they will appear in the window's <see href="https://developer.mozilla.org/en-US/docs/Glossary/visual viewport">visual viewport</see>.</para>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</see> element<br/>-<see href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Performance">Learn: Web performance</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Performance/Guides/Lazy_loading">Lazy loading</see> in the MDN web performance guide<br/>-<see href="https://web.dev/articles/iframe-lazy-loading">It&amp;apos;s time to lazy-load offscreen iframes!</see> on web.dev<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/loading"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string providing a hint to the user agent as to how to best schedule the loading of the iframe.<br/>The possible values are:</value>
+</HTMLIFrameElementLoading>
+</docs>

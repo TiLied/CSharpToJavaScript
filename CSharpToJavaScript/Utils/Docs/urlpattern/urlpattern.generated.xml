@@ -1,0 +1,131 @@
+<docs>
+<URLPattern>
+<summary>
+The <strong><c>URLPattern</c></strong> interface of the {{domxref(&amp;quot;URL Pattern API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} matches URLs or parts of URLs against a pattern. The pattern can contain capturing groups that extract parts of the matched URL.
+</summary>
+<remarks>
+<para>More information about the syntax of patterns can be found on the API overview<br/>page: {{domxref(&amp;quot;URL Pattern API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}}.</para>
+<para>-A polyfill of <c>URLPattern</c> is available<br/><see href="https://github.com/kenchris/urlpattern-polyfill">on GitHub</see><br/>-The pattern syntax used by URLPattern is similar to the syntax used by<br/><see href="https://github.com/pillarjs/path-to-regexp">path-to-regexp</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URLPattern"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</URLPattern>
+<URLPatternSearch>
+<summary>
+The <strong><c>search</c></strong> read-only property of the <see cref="URLPattern"/> interface is a string containing the <see href="https://developer.mozilla.org/en-US/docs/Web/API/URL_Pattern_API#pattern_syntax">pattern</see> used to match the search part of a URL.
+</summary>
+<remarks>
+<para>This is the <see href="https://developer.mozilla.org/en-US/docs/Web/API/URL_Pattern_API#pattern_normalization">normalized value</see> of the search pattern passed to the <see href="https://developer.mozilla.org/en-US/docs/Web/API/URLPattern/URLPattern">constructor</see>, an <see href="https://developer.mozilla.org/en-US/docs/Web/API/URLPattern/URLPattern#inheritance_from_a_baseurl">inherited value from a <c>baseURL</c></see> passed to the constructor, or the default value (<c>&amp;quot;*&amp;quot;</c>), which matches any search part.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URLPattern/search"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</URLPatternSearch>
+<URLPatternPathname>
+<summary>
+The <strong><c>pathname</c></strong> read-only property of the <see cref="URLPattern"/> interface is a string containing the <see href="https://developer.mozilla.org/en-US/docs/Web/API/URL_Pattern_API#pattern_syntax">pattern</see> used to match the pathname part of a URL.
+</summary>
+<remarks>
+<para>This is the <see href="https://developer.mozilla.org/en-US/docs/Web/API/URL_Pattern_API#pattern_normalization">normalized value</see> of the pathname pattern passed to the <see href="https://developer.mozilla.org/en-US/docs/Web/API/URLPattern/URLPattern">constructor</see>, an <see href="https://developer.mozilla.org/en-US/docs/Web/API/URLPattern/URLPattern#inheritance_from_a_baseurl">inherited value from a <c>baseURL</c></see> passed to the constructor, or the default value (<c>&amp;quot;*&amp;quot;</c>), which matches any path.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URLPattern/pathname"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</URLPatternPathname>
+<URLPatternProtocol>
+<summary>
+The <strong><c>protocol</c></strong> read-only property of the <see cref="URLPattern"/> interface is a string containing the <see href="https://developer.mozilla.org/en-US/docs/Web/API/URL_Pattern_API#pattern_syntax">pattern</see> used to match the protocol part of a URL.
+</summary>
+<remarks>
+<para>This is the <see href="https://developer.mozilla.org/en-US/docs/Web/API/URL_Pattern_API#pattern_normalization">normalized value</see> of the protocol pattern passed to the <see href="https://developer.mozilla.org/en-US/docs/Web/API/URLPattern/URLPattern">constructor</see>, an <see href="https://developer.mozilla.org/en-US/docs/Web/API/URLPattern/URLPattern#inheritance_from_a_baseurl">inherited value from a <c>baseURL</c></see> passed to the constructor, or the default value (<c>&amp;quot;*&amp;quot;</c>), which matches any protocol.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URLPattern/protocol"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</URLPatternProtocol>
+<URLPatternHasRegExpGroups>
+<summary>
+The <strong><c>hasRegExpGroups</c></strong> read-only property of the <see cref="URLPattern"/> interface is a boolean indicating whether or not any of the <c>URLPattern</c> components contain <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences">regular expression capturing groups</see>.
+</summary>
+<remarks>
+<para>You can use the <c>hasRegExpGroups</c> property to check if a <c>URLPattern</c> object is usable with certain web platform APIs which do not allow regular expression capturing groups. For example:</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URLPattern/hasRegExpGroups"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean.</value>
+</URLPatternHasRegExpGroups>
+<URLPatternUsername>
+<summary>
+The <strong><c>username</c></strong> read-only property of the <see cref="URLPattern"/> interface is a string containing the <see href="https://developer.mozilla.org/en-US/docs/Web/API/URL_Pattern_API#pattern_syntax">pattern</see> used to match the username part of a URL.
+</summary>
+<remarks>
+<para>This is the <see href="https://developer.mozilla.org/en-US/docs/Web/API/URL_Pattern_API#pattern_normalization">normalized value</see> of the username pattern passed to the <see href="https://developer.mozilla.org/en-US/docs/Web/API/URLPattern/URLPattern">constructor</see>, or the default value (<c>&amp;quot;*&amp;quot;</c>), which matches any username.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URLPattern/username"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</URLPatternUsername>
+<URLPatternExec>
+<summary>
+The <strong><c>exec()</c></strong> method of the <see cref="URLPattern"/> interface takes a URL or object of URL parts, and returns either an object containing the results of matching the URL to the pattern, or <c>null</c> if the URL does not match the pattern.
+</summary>
+<remarks>
+<para>-A polyfill of <c>URLPattern</c> is available <see href="https://github.com/kenchris/urlpattern-polyfill">on GitHub</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URLPattern/exec"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="Object"/> that defines the matching elements and groups, or <c>null</c> if the passed inputs do not match the pattern.The object has the following properties:</returns>
+</URLPatternExec>
+<URLPatternTest>
+<summary>
+The <strong><c>test()</c></strong> method of the <see cref="URLPattern"/> interface takes a URL string or object of URL parts, and returns a boolean indicating if the given input matches the current pattern.
+</summary>
+<remarks>
+<para>-A polyfill of <c>URLPattern</c> is available<br/><see href="https://github.com/kenchris/urlpattern-polyfill">on GitHub</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URLPattern/test"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Boolean"/>.</returns>
+</URLPatternTest>
+<URLPatternPort>
+<summary>
+The <strong><c>port</c></strong> read-only property of the <see cref="URLPattern"/> interface is a string containing the <see href="https://developer.mozilla.org/en-US/docs/Web/API/URL_Pattern_API#pattern_syntax">pattern</see> used to match the port part of a URL.
+</summary>
+<remarks>
+<para>This is the <see href="https://developer.mozilla.org/en-US/docs/Web/API/URL_Pattern_API#pattern_normalization">normalized value</see> of the port pattern passed to the <see href="https://developer.mozilla.org/en-US/docs/Web/API/URLPattern/URLPattern">constructor</see>, or an <see href="https://developer.mozilla.org/en-US/docs/Web/API/URLPattern/URLPattern#inheritance_from_a_baseurl">inherited value from a <c>baseURL</c></see> passed to the constructor, or the default value (<c>&amp;quot;*&amp;quot;</c>), which matches any port.</para><para>Note that it may also be set implicitly to the empty string (<c>&amp;quot;&amp;quot;</c>) if the pattern is specified using an <see href="https://developer.mozilla.org/en-US/docs/Web/API/URLPattern/URLPattern#hostname_in_url_or_baseurl_affects_default_port"><c>url</c> or <c>baseURL</c> string and the port is not explicitly set</see>.<br/>This empty string matches against URLs that use the default port (<c>443</c>).</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URLPattern/port"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</URLPatternPort>
+<URLPatternPassword>
+<summary>
+The <strong><c>password</c></strong> read-only property of the <see cref="URLPattern"/> interface is a string containing the <see href="https://developer.mozilla.org/en-US/docs/Web/API/URL_Pattern_API#pattern_syntax">pattern</see> used to match the password part of a URL.
+</summary>
+<remarks>
+<para>This is the <see href="https://developer.mozilla.org/en-US/docs/Web/API/URL_Pattern_API#pattern_normalization">normalized value</see> of the password pattern passed to the <see href="https://developer.mozilla.org/en-US/docs/Web/API/URLPattern/URLPattern">constructor</see> or the default value (<c>&amp;quot;*&amp;quot;</c>), which matches any password.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URLPattern/password"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</URLPatternPassword>
+<URLPatternHash>
+<summary>
+The <strong><c>hash</c></strong> read-only property of the <see cref="URLPattern"/> interface is a string containing the <see href="https://developer.mozilla.org/en-US/docs/Web/API/URL_Pattern_API#pattern_syntax">pattern</see> used to match the fragment part of a URL.
+</summary>
+<remarks>
+<para>This is the <see href="https://developer.mozilla.org/en-US/docs/Web/API/URL_Pattern_API#pattern_normalization">normalized value</see> of the hash pattern passed to the <see href="https://developer.mozilla.org/en-US/docs/Web/API/URLPattern/URLPattern">constructor</see>, an <see href="https://developer.mozilla.org/en-US/docs/Web/API/URLPattern/URLPattern#inheritance_from_a_baseurl">inherited value from a <c>baseURL</c></see> passed to the constructor, or the default value (<c>&amp;quot;*&amp;quot;</c>), which matches any hash.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URLPattern/hash"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</URLPatternHash>
+<URLPatternHostname>
+<summary>
+The <strong><c>hostname</c></strong> read-only property of the <see cref="URLPattern"/> interface is a string containing the <see href="https://developer.mozilla.org/en-US/docs/Web/API/URL_Pattern_API#pattern_syntax">pattern</see> used to match the hostname part of a URL.
+</summary>
+<remarks>
+<para>This is the <see href="https://developer.mozilla.org/en-US/docs/Web/API/URL_Pattern_API#pattern_normalization">normalized value</see> of the hostname pattern passed to the <see href="https://developer.mozilla.org/en-US/docs/Web/API/URLPattern/URLPattern">constructor</see>, an <see href="https://developer.mozilla.org/en-US/docs/Web/API/URLPattern/URLPattern#inheritance_from_a_baseurl">inherited value from a <c>baseURL</c></see> passed to the constructor, or the default value (<c>&amp;quot;*&amp;quot;</c>), which matches any hostname.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URLPattern/hostname"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</URLPatternHostname>
+<URLPatternURLPattern>
+<summary>
+The <strong><c>URLPattern()</c></strong> constructor returns a new <see cref="URLPattern"/> object representing the URLs that will be matched by this pattern.
+</summary>
+<remarks>
+<para>-A polyfill of <c>URLPattern</c> is available<br/><see href="https://github.com/kenchris/urlpattern-polyfill">on GitHub</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/URLPattern/URLPattern"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</URLPatternURLPattern>
+</docs>

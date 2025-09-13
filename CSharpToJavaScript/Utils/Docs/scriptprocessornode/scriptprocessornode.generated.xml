@@ -1,0 +1,33 @@
+<docs>
+<ScriptProcessorNode>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <c>ScriptProcessorNode</c> interface allows the generation, processing, or analyzing of audio using JavaScript.
+</summary>
+<remarks>
+<para></para><blockquote class="NOTE"><h5>NOTE</h5><para>This feature was replaced by <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioWorklet">AudioWorklets</see> and the <see cref="AudioWorkletNode"/> interface.</para></blockquote><para>The <c>ScriptProcessorNode</c> interface is an <see cref="AudioNode"/> audio-processing module that is linked to two buffers, one containing the input audio data, one containing the processed output audio data. An event, implementing the <see cref="AudioProcessingEvent"/> interface, is sent to the object each time the input buffer contains new data, and the event handler terminates when it has filled the output buffer with data.</para><para><see href="https://developer.mozilla.orgwebaudioscriptprocessingnode.png">The ScriptProcessorNode stores the input in a buffer, send the audioprocess event. The EventHandler takes the input buffer and fill the output buffer which is sent to the output by the ScriptProcessorNode.</see></para><para>The size of the input and output buffer are defined at the creation time, when the <see cref="BaseAudioContext.CreateScriptProcessor"/> method is called (both are defined by <see cref="BaseAudioContext.CreateScriptProcessor"/>'s <c>bufferSize</c> parameter). The buffer size must be a power of 2 between <c>256</c> and <c>16384</c>, that is <c>256</c>, <c>512</c>, <c>1024</c>, <c>2048</c>, <c>4096</c>, <c>8192</c> or <c>16384</c>. Small numbers lower the <strong>latency</strong>, but large number may be necessary to avoid audio breakup and glitches.</para><para>If the buffer size is not defined, which is recommended, the browser will pick one that its heuristic deems appropriate.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ScriptProcessorNode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</ScriptProcessorNode>
+<ScriptProcessorNodeBufferSize>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <c>bufferSize</c> property of the <see cref="ScriptProcessorNode"/> interface returns an integer representing both the input and output buffer size, in sample-frames. Its value can be a power of 2 value in the range <c>256</c> – <c>16384</c>.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This feature was replaced by <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioWorklet">AudioWorklets</see> and the <see cref="AudioWorkletNode"/> interface.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ScriptProcessorNode/bufferSize"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer.</value>
+</ScriptProcessorNodeBufferSize>
+<ScriptProcessorNodeAudioprocess>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>audioprocess</c></strong> event of the <see cref="ScriptProcessorNode"/> interface is fired when an input buffer of a script processor is ready to be processed.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This feature was replaced by <see href="https://developer.mozilla.org/en-US/docs/Web/API/AudioWorklet">AudioWorklets</see> and the <see cref="AudioWorkletNode"/> interface.</para></blockquote><para>This event is not cancelable and does not bubble.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ScriptProcessorNode/audioprocess"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</ScriptProcessorNodeAudioprocess>
+</docs>

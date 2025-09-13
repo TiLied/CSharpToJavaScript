@@ -1,0 +1,63 @@
+<docs>
+<EncodedAudioChunk>
+<summary>
+The <strong><c>EncodedAudioChunk</c></strong> interface of the <see cref="'WebCodecs API'"/> represents a chunk of encoded audio data.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/EncodedAudioChunk"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</EncodedAudioChunk>
+<EncodedAudioChunkEncodedAudioChunk>
+<summary>
+The <strong><c>EncodedAudioChunk()</c></strong> constructor creates a new <see cref="EncodedAudioChunk"/> object representing a chunk of encoded audio.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/EncodedAudioChunk/EncodedAudioChunk"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</EncodedAudioChunkEncodedAudioChunk>
+<EncodedAudioChunkByteLength>
+<summary>
+The <strong><c>byteLength</c></strong> read-only property of the <see cref="EncodedAudioChunk"/> interface returns the length in bytes of the encoded audio data.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/EncodedAudioChunk/byteLength"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer.</value>
+</EncodedAudioChunkByteLength>
+<EncodedAudioChunkCopyTo>
+<summary>
+The <strong><c>copyTo()</c></strong> method of the <see cref="EncodedAudioChunk"/> interface copies the encoded chunk of audio data.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/EncodedAudioChunk/copyTo"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</EncodedAudioChunkCopyTo>
+<EncodedAudioChunkDuration>
+<summary>
+The <strong><c>duration</c></strong> read-only property of the <see cref="EncodedAudioChunk"/> interface returns an integer indicating the duration of the audio in microseconds.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/EncodedAudioChunk/duration"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer.</value>
+</EncodedAudioChunkDuration>
+<EncodedAudioChunkType>
+<summary>
+The <strong><c>type</c></strong> read-only property of the <see cref="EncodedAudioChunk"/> interface returns a value indicating whether the audio chunk is a key chunk, which does not relying on other frames for decoding.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/EncodedAudioChunk/type"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string, one of:</value>
+</EncodedAudioChunkType>
+<EncodedAudioChunkTimestamp>
+<summary>
+The <strong><c>timestamp</c></strong> read-only property of the <see cref="EncodedAudioChunk"/> interface returns an integer indicating the timestamp of the audio in microseconds.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/EncodedAudioChunk/timestamp"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer.</value>
+</EncodedAudioChunkTimestamp>
+</docs>

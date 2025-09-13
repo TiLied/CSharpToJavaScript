@@ -1,0 +1,97 @@
+<docs>
+<TrustedTypePolicyFactory>
+<summary>
+The <strong><c>TrustedTypePolicyFactory</c></strong> interface of the {{domxref(&amp;quot;Trusted Types API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} creates policies and allows the verification of Trusted Type objects against created policies.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TrustedTypePolicyFactory"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</TrustedTypePolicyFactory>
+<TrustedTypePolicyFactoryCreatePolicy>
+<summary>
+The <strong><c>createPolicy()</c></strong> method of the <see cref="TrustedTypePolicyFactory"/> interface creates a <see cref="TrustedTypePolicy"/> object that implements the rules passed as <c>policyOptions</c>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TrustedTypePolicyFactory/createPolicy"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="TrustedTypePolicy"/> object.</returns>
+</TrustedTypePolicyFactoryCreatePolicy>
+<TrustedTypePolicyFactoryIsScript>
+<summary>
+The <strong><c>isScript()</c></strong> method of the <see cref="TrustedTypePolicyFactory"/> interface returns true if it is passed a valid <see cref="TrustedScript"/> object.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>The purpose of the functions <c>isScript()</c>, <see cref="TrustedTypePolicyFactory.IsHTML"/>, and <see cref="TrustedTypePolicyFactory.IsScriptURL"/> is to check if the object is a valid TrustedType object, created by a configured policy.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TrustedTypePolicyFactory/isScript"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("boolean")}} that is true if the object is a valid <see cref="TrustedScript"/> object.</returns>
+</TrustedTypePolicyFactoryIsScript>
+<TrustedTypePolicyFactoryGetAttributeType>
+<summary>
+The <strong><c>getAttributeType()</c></strong> method of the <see cref="TrustedTypePolicyFactory"/> interface allows web developers to check if a Trusted Type is required for an element, and if so which Trusted Type is used.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TrustedTypePolicyFactory/getAttributeType"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A string with one of:Or, null.</returns>
+</TrustedTypePolicyFactoryGetAttributeType>
+<TrustedTypePolicyFactoryIsHTML>
+<summary>
+The <strong><c>isHTML()</c></strong> method of the <see cref="TrustedTypePolicyFactory"/> interface returns true if it is passed a valid <see cref="TrustedHTML"/> object.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>The purpose of the functions <c>isHTML()</c>, <see cref="TrustedTypePolicyFactory.IsScript"/>, and <see cref="TrustedTypePolicyFactory.IsScriptURL"/> is to check if the object is a valid TrustedType object, created by a configured policy.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TrustedTypePolicyFactory/isHTML"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("boolean")}} that is true if the object is a valid <see cref="TrustedHTML"/> object.</returns>
+</TrustedTypePolicyFactoryIsHTML>
+<TrustedTypePolicyFactoryGetPropertyType>
+<summary>
+The <strong><c>getPropertyType()</c></strong> method of the <see cref="TrustedTypePolicyFactory"/> interface allows web developers to check if a Trusted Type is required for an element's property.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TrustedTypePolicyFactory/getPropertyType"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A string with one of:Or, <c>null</c>.</returns>
+</TrustedTypePolicyFactoryGetPropertyType>
+<TrustedTypePolicyFactoryIsScriptURL>
+<summary>
+The <strong><c>isScriptURL()</c></strong> method of the <see cref="TrustedTypePolicyFactory"/> interface returns true if it is passed a valid <see cref="TrustedScriptURL"/> object.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>The purpose of the functions <c>isScriptURL()</c>, <see cref="TrustedTypePolicyFactory.IsHTML"/>, and <see cref="TrustedTypePolicyFactory.IsScript"/> is to check if the object is a valid TrustedType object, created by a configured policy.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TrustedTypePolicyFactory/isScriptURL"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("boolean")}} that is true if the object is a valid <see cref="TrustedScriptURL"/> object.</returns>
+</TrustedTypePolicyFactoryIsScriptURL>
+<TrustedTypePolicyFactoryEmptyScript>
+<summary>
+The <strong><c>emptyScript</c></strong> read-only property of the <see cref="TrustedTypePolicyFactory"/> interface returns a <see cref="TrustedScript"/> object containing an empty string.
+</summary>
+<remarks>
+<para>This object can be used when the application requires an empty string to be inserted into an injection sink which is expecting a <c>TrustedScript</c> object.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TrustedTypePolicyFactory/emptyScript"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="TrustedScript"/> object.</value>
+</TrustedTypePolicyFactoryEmptyScript>
+<TrustedTypePolicyFactoryEmptyHTML>
+<summary>
+The <strong><c>emptyHTML</c></strong> read-only property of the <see cref="TrustedTypePolicyFactory"/> interface returns a <see cref="TrustedHTML"/> object containing an empty string.
+</summary>
+<remarks>
+<para>This object can be used when the application requires an empty string to be inserted into an injection sink.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TrustedTypePolicyFactory/emptyHTML"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="TrustedHTML"/> object.</value>
+</TrustedTypePolicyFactoryEmptyHTML>
+<TrustedTypePolicyFactoryDefaultPolicy>
+<summary>
+The <strong><c>defaultPolicy</c></strong> read-only property of the <see cref="TrustedTypePolicyFactory"/> interface returns the default <see cref="TrustedTypePolicy"/> or null if this is empty.
+</summary>
+<remarks>
+<para>See <see href="https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API#the_default_policy">The default policy</see> for more details.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/TrustedTypePolicyFactory/defaultPolicy"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="TrustedTypePolicy"/> or <c>null</c>.</value>
+</TrustedTypePolicyFactoryDefaultPolicy>
+</docs>

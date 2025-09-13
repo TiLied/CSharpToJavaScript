@@ -1,0 +1,12 @@
+<docs>
+<AudioParamDescriptor>
+<summary>
+The <strong><c>AudioParamDescriptor</c></strong> dictionary of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see> specifies properties for <see cref="AudioParam"/> objects.
+</summary>
+<remarks>
+<para>It is used to create custom <c>AudioParam</c>s on an <see cref="AudioWorkletNode"/>. If the underlying <see cref="AudioWorkletProcessor"/> has a <see cref="AudioWorkletProcessor.ParameterDescriptors"/> static getter, then the returned array of objects based on this dictionary is used internally by <c>AudioWorkletNode</c> constructor to populate its <see cref="AudioWorkletNode.Parameters"/> property accordingly.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParamDescriptor"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</AudioParamDescriptor>
+</docs>

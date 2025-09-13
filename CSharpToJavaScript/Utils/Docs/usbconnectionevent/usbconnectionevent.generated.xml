@@ -1,0 +1,29 @@
+<docs>
+<USBConnectionEvent>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>USBConnectionEvent</c></strong> interface of the <see cref="'WebUSB API'"/> is the event type passed to <c>USB</c> <see cref="USB.Connect"/> and <see cref="USB.Disconnect"/> events when the user agent detects that a new USB device has been connected or disconnected.
+</summary>
+<remarks>
+<para></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/USBConnectionEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</USBConnectionEvent>
+<USBConnectionEventUSBConnectionEvent>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>USBConnectionEvent()</c></strong> constructor creates a new <see cref="USBConnectionEvent"/> object.<br/>This constructor is not typically used,<br/>it is created by the browser in response to the connection and disconnection of a USB device.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/USBConnectionEvent/USBConnectionEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="USBConnectionEvent"/> object.</returns>
+</USBConnectionEventUSBConnectionEvent>
+<USBConnectionEventDevice>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>device</c></strong> read-only property of the <see cref="USBConnectionEvent"/> interface returns a <see cref="USBDevice"/> object representing the device being connected or disconnected.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/USBConnectionEvent/device"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="USBDevice"/> object.</value>
+</USBConnectionEventDevice>
+</docs>

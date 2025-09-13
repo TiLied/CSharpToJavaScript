@@ -1,0 +1,29 @@
+<docs>
+<Serial>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <c>Serial</c> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Serial_API">Web Serial API</see> provides attributes and methods for finding and connecting to serial ports from a web page.
+</summary>
+<remarks>
+<para></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Serial"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Serial>
+<SerialRequestPort>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>Serial.requestPort()</c></strong> method of the <see cref="Serial"/> interface presents the user with a dialog asking them to select a serial device to connect to. It returns a {{jsxref("Promise")}} that resolves with an instance of <see cref="SerialPort"/> representing the device chosen by the user.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Serial/requestPort"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that resolves with an instance of <see cref="SerialPort"/>.</returns>
+</SerialRequestPort>
+<SerialGetPorts>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>getPorts()</c></strong> method of the <see cref="Serial"/> interface returns a {{jsxref("Promise")}} that resolves with an array of <see cref="SerialPort"/> objects representing serial ports connected to the host which the origin has permission to access.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Serial/getPorts"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that resolves with an array of <see cref="SerialPort"/> objects.</returns>
+</SerialGetPorts>
+</docs>

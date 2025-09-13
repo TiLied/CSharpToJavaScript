@@ -1,0 +1,20 @@
+<docs>
+<Ink>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>Ink</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Ink_API">Ink API</see> provides access to <see cref="DelegatedInkTrailPresenter"/> objects for the application to use to render ink strokes.
+</summary>
+<remarks>
+<para></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Ink"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Ink>
+<InkRequestPresenter>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>requestPresenter()</c></strong> method of the <see cref="Ink"/> interface returns a {{jsxref("Promise")}} that fulfills with a <see cref="DelegatedInkTrailPresenter"/> object to handle rendering strokes.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Ink/requestPresenter"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that resolves to a <see cref="DelegatedInkTrailPresenter"/> object instance.</returns>
+</InkRequestPresenter>
+</docs>

@@ -1,0 +1,29 @@
+<docs>
+<SVGScriptElement>
+<summary>
+The <strong><c>SVGScriptElement</c></strong> interface corresponds to the SVG <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElementscript">script</see> element.
+</summary>
+<remarks>
+<para></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGScriptElement"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</SVGScriptElement>
+<SVGScriptElementHref>
+<summary>
+The <strong><c>href</c></strong> read-only property of the <see cref="SVGScriptElement"/> interface reflects the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} {{deprecated_inline}} attribute of the given {{SVGElement("script")}} element.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGScriptElement/href"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedString"/> object.</value>
+</SVGScriptElementHref>
+<SVGScriptElementType>
+<summary>
+The <strong><c>type</c></strong> read-only property of the <see cref="SVGScriptElement"/> interface reflects the {{SVGAttr("type")}} attribute of the given {{SVGElement("script")}} element.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGScriptElement/type"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An string.</value>
+</SVGScriptElementType>
+</docs>

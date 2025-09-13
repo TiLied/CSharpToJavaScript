@@ -1,0 +1,66 @@
+<docs>
+<ErrorEvent>
+<summary>
+The <strong><c>ErrorEvent</c></strong> interface represents events providing information related to errors in scripts or in files.
+</summary>
+<remarks>
+<para></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web workers</see>, most likely objects to raise such an event.<br/>-<see cref="Window"/>: <see cref="Windowerror"/> event<br/>-<see cref="Navigation"/>: <see cref="Navigationnavigateerror"/> event<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ErrorEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</ErrorEvent>
+<ErrorEventError>
+<summary>
+The <strong><c>error</c></strong> read-only property of the <see cref="ErrorEvent"/> interface returns a JavaScript value, such as an {{jsxref("Error")}} or <see cref="DOMException"/>, representing the error associated with this event.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ErrorEvent/error"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>Any valid JavaScript value.</value>
+</ErrorEventError>
+<ErrorEventErrorEvent>
+<summary>
+The <strong><c>ErrorEvent()</c></strong> constructor creates a new <see cref="ErrorEvent"/> object.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ErrorEvent/ErrorEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="ErrorEvent"/> object.</returns>
+</ErrorEventErrorEvent>
+<ErrorEventFilename>
+<summary>
+The <strong><c>filename</c></strong> read-only property of the <see cref="ErrorEvent"/> interface returns a string containing the name of the script file in which the error occurred.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ErrorEvent/filename"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</ErrorEventFilename>
+<ErrorEventLineno>
+<summary>
+The <strong><c>lineno</c></strong> read-only property of the <see cref="ErrorEvent"/> interface returns an integer containing the line number of the script file on which the error occurred.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ErrorEvent/lineno"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer.</value>
+</ErrorEventLineno>
+<ErrorEventMessage>
+<summary>
+The <strong><c>message</c></strong> read-only property of the <see cref="ErrorEvent"/> interface returns a string containing a human-readable error message describing the problem.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ErrorEvent/message"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</ErrorEventMessage>
+<ErrorEventColno>
+<summary>
+The <strong><c>colno</c></strong> read-only property of the <see cref="ErrorEvent"/> interface returns an integer containing the column number of the script file on which the error occurred.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ErrorEvent/colno"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer.</value>
+</ErrorEventColno>
+</docs>

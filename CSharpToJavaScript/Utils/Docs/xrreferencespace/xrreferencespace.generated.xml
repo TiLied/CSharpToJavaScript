@@ -1,0 +1,31 @@
+<docs>
+<XRReferenceSpace>
+<summary>
+The WebXR Device API&amp;apos;s <strong><c>XRReferenceSpace</c></strong> interface describes the coordinate system for a specific tracked entity or object within the virtual world using a specified tracking behavior. The tracking behavior is defined by the selected <see href="https://developer.mozilla.org#reference_space_types">reference space type</see>. It expands upon the base class, <see cref="XRSpace"/>, by adding support for several different tracking behaviors as well as to request a new reference space which describes the offset transform between the tracked object and another location in the world.
+</summary>
+<remarks>
+<para>All reference spaces—with the sole exception being bounded reference spaces—are described using the <c>XRReferenceSpace</c> type. Bounded spaces are implemented as <see cref="XRBoundedReferenceSpace"/> objects. These are special spaces which let you establish a perimeter within which it's "safe" for the viewer to move. For XR systems that allow the user to physically move around, such as those that track movement with a real-world camera, this boundary establishes the edges of the area the user is able to move around in, whether due to physical obstacles or due to limitations of the XR hardware. See the article <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Bounded_reference_spaces">Using bounded reference spaces to protect the viewer</see> for more on using boundaries to keep the user from colliding with obstacles both physical and virtual.</para><para></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Fundamentals">Fundamentals of WebXR</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Geometry">Geometry and reference spaces in WebXR</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Cameras">Viewpoints and viewers: Simulating cameras in WebXR</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Matrix_math_for_the_web">Matrix math for the web</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion">Movement, orientation, and motion</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Bounded_reference_spaces">Using bounded reference spaces to protect the user</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpace"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</XRReferenceSpace>
+<XRReferenceSpaceReset>
+<summary>
+The <strong><c>reset</c></strong> event is sent to an <see cref="XRReferenceSpace"/> object when a discontinuity is detected in either the native origin or the effective origin, causing a jump in the position or orientation of objects oriented using the reference space. This is common when the user calibrates or recalibrates an XR device, or if the device automatically changes its origin after losing tracking of the user, then re-gaining it.
+</summary>
+<remarks>
+<para>In the case of <see cref="XRBoundedReferenceSpace"/> objects, the <c>reset</c> event can also be fired when the <see cref="XRBoundedReferenceSpace.BoundsGeometry"/> changes.</para><para>In either case, the event is sent before any WebXR animation frames which make use of the new origin are executed.</para><para>This event is not cancelable.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpace/reset"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</XRReferenceSpaceReset>
+<XRReferenceSpaceGetOffsetReferenceSpace>
+<summary>
+The <see cref="XRReferenceSpace"/><br/>interface&amp;apos;s <strong><c>getOffsetReferenceSpace()</c></strong> method returns a<br/>new reference space object which describes the relative difference in position between<br/>the object on which the method is called and a given point in 3D space. The<br/>object returned by <c>getOffsetReferenceSpace()</c> is an<br/><see cref="XRReferenceSpace"/> if called on an <c>XRReferenceSpace</c>, or an<br/><see cref="XRBoundedReferenceSpace"/> if called on an object of that type.
+</summary>
+<remarks>
+<para>In other words, when you have an object in 3D space and need to position another object<br/>relative to that one, you can call <c>getOffsetReferenceSpace()</c>, passing into<br/>it the position and orientation you want the second object to have<br/><strong>relative to the position and orientation of the object on which you call </strong><strong><c>getOffsetReferenceSpace()</c></strong>.</para><para>Then, when drawing the scene, you can use the offset reference space to not only<br/>position objects relative to one another, but to apply the needed transforms to render<br/>objects properly based upon the viewer&amp;apos;s position. This is demonstrated in the example<br/><see href="https://developer.mozilla.org#implementing_rotation_based_on_non-xr_inputs">Implementing rotation based on non-XR inputs</see>, which demonstrates a way to<br/>use this method to let the user use their mouse to pitch and yaw their viewing angle.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpace/getOffsetReferenceSpace"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="XRReferenceSpace"/> object describing a reference space with the same<br/>native origin as the reference space on which the method was called, but with an origin<br/>offset indicating the distance from the object to the point given<br/>by <c>originOffset</c>.If the object on which you call this method is an<br/><see cref="XRBoundedReferenceSpace"/>, the returned object is one as well. The<br/><see cref="XRBoundedReferenceSpace.BoundsGeometry"/> of the new<br/>reference space is set to the original object&amp;apos;s <c>boundsGeometry</c> with each of<br/>its points multiplied by the inverse of <c>originOffset</c>.</returns>
+</XRReferenceSpaceGetOffsetReferenceSpace>
+</docs>

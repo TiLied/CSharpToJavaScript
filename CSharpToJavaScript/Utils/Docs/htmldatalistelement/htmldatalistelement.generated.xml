@@ -1,0 +1,22 @@
+<docs>
+<HTMLDataListElement>
+<summary>
+The <strong><c>HTMLDataListElement</c></strong> interface provides special properties (beyond the <see cref="HTMLElement"/> object interface it also has available to it by inheritance) to manipulate {{ HTMLElement("datalist") }} elements and their content.
+</summary>
+<remarks>
+<para></para>
+<para>-The HTML element implementing this interface: <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist">datalist</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLDataListElement"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLDataListElement>
+<HTMLDataListElementOptions>
+<summary>
+The <strong><c>options</c></strong> read-only property of the <see cref="HTMLDataListElement"/> interface returns an <see cref="HTMLCollection"/> of <see cref="HTMLOptionElement"/> elements contained in a {{htmlelement("datalist")}}. The descendant {{htmlelement("option")}} elements provide predefined options for the {{htmlelement("input")}} control associated with the <c>&amp;lt;datalist&amp;gt;</c>.
+</summary>
+<remarks>
+<para>-<see cref="HTMLDataListElement"/><br/>-<see cref="HTMLOptionElement"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist">datalist</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option">option</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLDataListElement/options"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="HTMLCollection"/> of <see cref="HTMLOptionElement"/> elements.</value>
+</HTMLDataListElementOptions>
+</docs>

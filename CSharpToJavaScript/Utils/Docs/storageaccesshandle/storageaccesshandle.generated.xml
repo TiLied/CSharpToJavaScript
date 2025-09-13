@@ -1,0 +1,121 @@
+<docs>
+<StorageAccessHandle>
+<summary>
+The <strong><c>StorageAccessHandle</c></strong> interface represents access to <see href="https://developer.mozilla.org/en-US/docs/Web/Privacy/Guides/State_Partitioning#state_partitioning">unpartitioned state</see> granted by a call to <see cref="Document.RequestStorageAccess"/>.
+</summary>
+<remarks>
+<para>-<see cref="Document.RequestStorageAccess"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Storage_Access_API/Using">Using the Storage Access API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StorageAccessHandle"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</StorageAccessHandle>
+<StorageAccessHandleCaches>
+<summary>
+The <strong><c>caches</c></strong> property of the <see cref="StorageAccessHandle"/> interface returns an unpartitioned <see cref="CacheStorage"/> object if access was granted, and throws a <c>SecurityError</c> <see cref="DOMException"/> otherwise.
+</summary>
+<remarks>
+<para>-<see cref="Document.RequestStorageAccess"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Storage_Access_API/Using">Using the Storage Access API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StorageAccessHandle/caches"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="CacheStorage"/> object.</value>
+</StorageAccessHandleCaches>
+<StorageAccessHandleIndexedDB>
+<summary>
+The <strong><c>indexedDB</c></strong> property of the <see cref="StorageAccessHandle"/> interface returns an unpartitioned <see cref="IDBFactory"/> object if access was granted, and throws a <c>SecurityError</c> <see cref="DOMException"/> otherwise.
+</summary>
+<remarks>
+<para>-<see cref="Document.RequestStorageAccess"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Storage_Access_API/Using">Using the Storage Access API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StorageAccessHandle/indexedDB"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="IDBFactory"/> object.</value>
+</StorageAccessHandleIndexedDB>
+<StorageAccessHandleSessionStorage>
+<summary>
+The <strong><c>sessionStorage</c></strong> property of the <see cref="StorageAccessHandle"/> interface returns an unpartitioned session <see cref="Storage"/> object if access was granted, and throws a <c>SecurityError</c> <see cref="DOMException"/> otherwise.
+</summary>
+<remarks>
+<para>-<see cref="Document.RequestStorageAccess"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Storage_Access_API/Using">Using the Storage Access API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StorageAccessHandle/sessionStorage"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Storage"/> object.</value>
+</StorageAccessHandleSessionStorage>
+<StorageAccessHandleEstimate>
+<summary>
+<blockquote class="NOTE"><h5>NOTE</h5>See <see cref="StorageManager.Estimate"/> to understand usage.</blockquote>
+</summary>
+<remarks>
+<para>-<see cref="Document.RequestStorageAccess"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Storage_Access_API/Using">Using the Storage Access API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StorageAccessHandle/estimate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that fulfills with an unpartitioned <see cref="StorageManager.Estimate"/> object.</returns>
+</StorageAccessHandleEstimate>
+<StorageAccessHandleSharedWorker>
+<summary>
+<blockquote class="NOTE"><h5>NOTE</h5>See <see cref="SharedWorker.SharedWorker"/> to understand usage.</blockquote>
+</summary>
+<remarks>
+<para>-<see cref="Document.RequestStorageAccess"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Storage_Access_API/Using">Using the Storage Access API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StorageAccessHandle/SharedWorker"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An unpartitioned <see cref="SharedWorker"/> object.</returns>
+</StorageAccessHandleSharedWorker>
+<StorageAccessHandleBroadcastChannel>
+<summary>
+<blockquote class="NOTE"><h5>NOTE</h5>See <see cref="BroadcastChannel.BroadcastChannel"/> to understand usage.</blockquote>
+</summary>
+<remarks>
+<para>-<see cref="Document.RequestStorageAccess"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Storage_Access_API/Using">Using the Storage Access API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StorageAccessHandle/BroadcastChannel"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An unpartitioned <see cref="BroadcastChannel"/> object.</returns>
+</StorageAccessHandleBroadcastChannel>
+<StorageAccessHandleRevokeObjectURL>
+<summary>
+<blockquote class="NOTE"><h5>NOTE</h5>See <see cref="URL.RevokeObjectURL"/> to understand usage.</blockquote>
+</summary>
+<remarks>
+<para>-<see cref="Document.RequestStorageAccess"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Storage_Access_API/Using">Using the Storage Access API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StorageAccessHandle/revokeObjectURL"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</StorageAccessHandleRevokeObjectURL>
+<StorageAccessHandleLocks>
+<summary>
+The <strong><c>locks</c></strong> property of the <see cref="StorageAccessHandle"/> interface returns an unpartitioned session <see cref="LockManager"/> object if access was granted, and throws a <c>SecurityError</c> <see cref="DOMException"/> otherwise.
+</summary>
+<remarks>
+<para>-<see cref="Document.RequestStorageAccess"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Storage_Access_API/Using">Using the Storage Access API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StorageAccessHandle/locks"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="LockManager"/> object.</value>
+</StorageAccessHandleLocks>
+<StorageAccessHandleCreateObjectURL>
+<summary>
+<blockquote class="NOTE"><h5>NOTE</h5>See <see cref="URL.CreateObjectURL"/> to understand usage.</blockquote>
+</summary>
+<remarks>
+<para>-<see cref="Document.RequestStorageAccess"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Storage_Access_API/Using">Using the Storage Access API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StorageAccessHandle/createObjectURL"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A string containing an unpartitioned object URL that can be used to reference the contents of the specified source <c>object</c>.</returns>
+</StorageAccessHandleCreateObjectURL>
+<StorageAccessHandleGetDirectory>
+<summary>
+<blockquote class="NOTE"><h5>NOTE</h5>See <see cref="StorageManager.GetDirectory"/> to understand usage.</blockquote>
+</summary>
+<remarks>
+<para>-<see cref="Document.RequestStorageAccess"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Storage_Access_API/Using">Using the Storage Access API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StorageAccessHandle/getDirectory"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that fulfills with an unpartitioned <see cref="FileSystemDirectoryHandle"/> object.</returns>
+</StorageAccessHandleGetDirectory>
+<StorageAccessHandleLocalStorage>
+<summary>
+The <strong><c>localStorage</c></strong> property of the <see cref="StorageAccessHandle"/> interface returns an unpartitioned local <see cref="Storage"/> object if access was granted, and throws a <c>SecurityError</c> <see cref="DOMException"/> otherwise.
+</summary>
+<remarks>
+<para>-<see cref="Document.RequestStorageAccess"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Storage_Access_API/Using">Using the Storage Access API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/StorageAccessHandle/localStorage"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Storage"/> object.</value>
+</StorageAccessHandleLocalStorage>
+</docs>

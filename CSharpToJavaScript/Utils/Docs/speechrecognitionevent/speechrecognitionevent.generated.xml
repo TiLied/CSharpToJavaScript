@@ -1,0 +1,56 @@
+<docs>
+<SpeechRecognitionEvent>
+<summary>
+The <strong><c>SpeechRecognitionEvent</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see> represents the event object for the <see cref="SpeechRecognition.Result"/> and <see cref="SpeechRecognition.Nomatch"/> events, and contains all the data associated with an interim or final speech recognition result.
+</summary>
+<remarks>
+<para></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</SpeechRecognitionEvent>
+<SpeechRecognitionEventResults>
+<summary>
+The <strong><c>results</c></strong> read-only property of the<br/><see cref="SpeechRecognitionEvent"/> interface returns a<br/><see cref="SpeechRecognitionResultList"/> object representing all the speech<br/>recognition results for the current session.
+</summary>
+<remarks>
+<para>Specifically this object will contain all final results that have been returned,<br/>followed by the current best hypothesis for all interim results. When subsequent<br/><see cref="SpeechRecognition.Result"/> events are fired, interim results may be overwritten by a newer<br/>interim result or by a final result — they may even be removed, if they are at the end<br/>of the &amp;quot;results&amp;quot; array and the array length decreases. Final results on the other hand<br/>will not be overwritten or removed.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionEvent/results"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="SpeechRecognitionResultList"/> object.</value>
+</SpeechRecognitionEventResults>
+<SpeechRecognitionEventResultIndex>
+<summary>
+The <strong><c>resultIndex</c></strong> read-only property of the<br/><see cref="SpeechRecognitionEvent"/> interface returns the lowest index value result in<br/>the <see cref="SpeechRecognitionResultList"/> "array" that has actually changed.
+</summary>
+<remarks>
+<para>The <see cref="SpeechRecognitionResultList"/> object is not an array, but it has a<br/>getter that allows it to be accessed by array syntax.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionEvent/resultIndex"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number.</value>
+</SpeechRecognitionEventResultIndex>
+<SpeechRecognitionEventEmma>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>emma</c></strong> read-only property of the<br/><see cref="SpeechRecognitionEvent"/> interface returns an Extensible<br/>MultiModal Annotation markup language (EMMA) — XML — representation of the<br/>result.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>EMMA is defined in the specification <see href="https://www.w3.org/TR/emma/">EMMA: Extensible MultiModal Annotation markup language</see>. You can see multiple EMMA examples in the spec.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionEvent/emma"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A valid XML document. The exact contents can vary across user agents and recognition<br/>engines, but all supporting implementations will expose a valid XML document complete<br/>with an EMMA namespace. If the speech recognition system does not supply EMMA data then<br/>the user agent will return <c>null</c>.</value>
+</SpeechRecognitionEventEmma>
+<SpeechRecognitionEventInterpretation>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>interpretation</c></strong> read-only property of the<br/><see cref="SpeechRecognitionEvent"/> interface returns the semantic meaning of what the<br/>user said.
+</summary>
+<remarks>
+<para>This might be determined, for instance, through the SISR specification of semantics in<br/>a grammar (see<br/><see href="https://www.w3.org/TR/semantic-interpretation/">Semantic Interpretation for Speech Recognition (SISR) Version 1.0</see><br/>for specification and examples.)</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionEvent/interpretation"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The returned value can be of any type. If no semantic interpretation has been returned<br/>by the speech recognition system, <c>null</c> will be returned.</value>
+</SpeechRecognitionEventInterpretation>
+</docs>

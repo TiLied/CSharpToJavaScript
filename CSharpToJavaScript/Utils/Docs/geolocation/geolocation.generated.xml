@@ -1,0 +1,44 @@
+<docs>
+<Geolocation>
+<summary>
+The <strong><c>Geolocation</c></strong> interface represents an object able to obtain the position of the device programmatically. It gives Web content access to the location of the device. This allows a website or app to offer customized results based on the user&amp;apos;s location.
+</summary>
+<remarks>
+<para>An object with this interface is obtained using the <see cref="Navigator.Geolocation"/> property implemented by the <see cref="Navigator"/> object.</para><blockquote class="NOTE"><h5>NOTE</h5><para>For security reasons, when a web page tries to access location information, the user is notified and asked to grant permission. Be aware that each browser has its own policies and methods for requesting this permission.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API">Using geolocation</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Geolocation>
+<GeolocationWatchPosition>
+<summary>
+The <strong><c>watchPosition()</c></strong> method of the <see cref="Geolocation"/> interface is used to register a handler function that will be called automatically each time the position of the device changes.<br/>You can also, optionally, specify an error handling callback function.
+</summary>
+<remarks>
+<para>Note that in addition to requiring a secure context this feature may be blocked by the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/geolocation"><c>geolocation</c></see> <c>Permissions-Policy</c>, and also requires that explicit permission be granted by the user.<br/>If required, the user will be prompted when this method is called.<br/>The permission state can be queried using the <c>geolocation</c> user permission in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Permissions_API">Permissions API</see>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API">Using the Geolocation API</see><br/>-The interface it belongs to, <see cref="Geolocation"/>, and the way to access it —<br/><see cref="Navigator.Geolocation"/>.<br/>-The opposite operation: <see cref="Geolocation.ClearWatch"/><br/>-A similar method: <see cref="Geolocation.GetCurrentPosition"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/watchPosition"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An integer ID that identifies the registered handler.<br/>The ID can be passed to the <see cref="Geolocation.ClearWatch"/> to unregister the handler.</returns>
+</GeolocationWatchPosition>
+<GeolocationGetCurrentPosition>
+<summary>
+The <strong><c>getCurrentPosition()</c></strong> method of the <see cref="Geolocation"/> interface is used to get the current position of the device.
+</summary>
+<remarks>
+<para>Note that in addition to requiring a secure context this feature may be blocked by the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/geolocation"><c>geolocation</c></see> <c>Permissions-Policy</c>, and also requires that explicit permission be granted by the user.<br/>If required, the user will be prompted when this method is called.<br/>The permission state can be queried using the <c>geolocation</c> user permission in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Permissions_API">Permissions API</see>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API">Using the Geolocation API</see><br/>-<see cref="Navigator.Geolocation"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</GeolocationGetCurrentPosition>
+<GeolocationClearWatch>
+<summary>
+The <strong><c>clearWatch()</c></strong> method of the <see cref="Geolocation"/> interface is used to unregister location/error monitoring handlers previously installed using <see cref="Geolocation.WatchPosition"/>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API">Using geolocation</see><br/>-<see cref="Geolocation"/><br/>-<see cref="Geolocation.WatchPosition"/><br/>-<see cref="Geolocation.GetCurrentPosition"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/clearWatch"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</GeolocationClearWatch>
+</docs>

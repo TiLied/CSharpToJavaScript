@@ -1,0 +1,104 @@
+<docs>
+<IDBDatabase>
+<summary>
+The <strong><c>IDBDatabase</c></strong> interface of the IndexedDB API provides a <see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#database_connection">connection to a database</see>; you can use an <c>IDBDatabase</c> object to open a <see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#transaction">transaction</see> on your database then create, manipulate, and delete objects (data) in that database. The interface provides the only way to get and manage versions of the database.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Everything you do in IndexedDB always happens in the context of a <see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#transaction">transaction</see>, representing interactions with data in the database. All objects in IndexedDB — including object stores, indexes, and cursors — are tied to a particular transaction. Thus, you cannot execute commands, access data, or open anything outside of a transaction.</para></blockquote><para></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Using transactions: <see cref="IDBTransaction"/><br/>-Setting a range of keys: <see cref="IDBKeyRange"/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore"/><br/>-Using cursors: <see cref="IDBCursor"/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</IDBDatabase>
+<IDBDatabaseObjectStoreNames>
+<summary>
+The <strong><c>objectStoreNames</c></strong> read-only property of the<br/><see cref="IDBDatabase"/> interface is a <see cref="DOMStringList"/> containing a<br/>list of the names of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#object_store">object stores</see> currently in the connected database.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase"/><br/>-Using transactions: <see cref="IDBTransaction"/><br/>-Setting a range of keys: <see cref="IDBKeyRange"/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore"/><br/>-Using cursors: <see cref="IDBCursor"/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/objectStoreNames"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DOMStringList"/> containing a list of<br/>the names of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#object_store">object stores</see> currently<br/>in the connected database.</value>
+</IDBDatabaseObjectStoreNames>
+<IDBDatabaseCreateObjectStore>
+<summary>
+The <strong><c>createObjectStore()</c></strong> method of the<br/><see cref="IDBDatabase"/> interface creates and returns a new <see cref="IDBObjectStore"/>.
+</summary>
+<remarks>
+<para>The method takes the name of the store as well as a parameter object that lets you<br/>define important optional properties. You can use the property to uniquely identify<br/>individual objects in the store. As the property is an identifier, it should be unique<br/>to every object, and every object should have that property.</para><para>This method can be called <strong>only</strong> within a <see href="https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/versionchange_event"><c>versionchange</c></see><br/>transaction.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase"/><br/>-Using transactions: <see cref="IDBTransaction"/><br/>-Setting a range of keys: <see cref="IDBKeyRange"/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore"/><br/>-Using cursors: <see cref="IDBCursor"/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/createObjectStore"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="IDBObjectStore"/>.</returns>
+</IDBDatabaseCreateObjectStore>
+<IDBDatabaseClose>
+<summary>
+The <c>close</c> event is fired on <c>IDBDatabase</c> when the database connection is unexpectedly closed. This could happen, for example, if the underlying storage is removed or if the user clears the database in the browser&amp;apos;s history preferences.
+</summary>
+<remarks>
+<para>Note that it is not fired if the database connection is closed normally using <see href="https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/close"><c>IDBDatabase.close()</c></see>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/close"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</IDBDatabaseClose>
+<IDBDatabaseVersion>
+<summary>
+The <strong><c>version</c></strong> property of the <see cref="IDBDatabase"/><br/>interface is a 64-bit integer<br/>that contains the version of the connected database.<br/>When a database is first created, this attribute is an empty string.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase"/><br/>-Using transactions: <see cref="IDBTransaction"/><br/>-Setting a range of keys: <see cref="IDBKeyRange"/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore"/><br/>-Using cursors: <see cref="IDBCursor"/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/version"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer containing the version of the connected database.</value>
+</IDBDatabaseVersion>
+<IDBDatabaseDeleteObjectStore>
+<summary>
+The <strong><c>deleteObjectStore()</c></strong> method of the<br/><see cref="IDBDatabase"/> interface destroys the object store with the given name in<br/>the connected database, along with any indexes that reference it.
+</summary>
+<remarks>
+<para>As with <see cref="IDBDatabase.CreateObjectStore"/>, this method can be called<br/><strong>only</strong> within a <see href="https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/versionchange_event"><c>versionchange</c></see><br/>transaction.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase"/><br/>-Using transactions: <see cref="IDBTransaction"/><br/>-Setting a range of keys: <see cref="IDBKeyRange"/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore"/><br/>-Using cursors: <see cref="IDBCursor"/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/deleteObjectStore"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</IDBDatabaseDeleteObjectStore>
+<IDBDatabaseTransaction>
+<summary>
+The <strong><c>transaction</c></strong> method of the <see cref="IDBDatabase"/> interface immediately returns a transaction object (<see cref="IDBTransaction"/>) containing the <see cref="IDBTransaction.ObjectStore"/> method, which you can use to access your object store.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase"/><br/>-Using transactions: <see cref="IDBTransaction"/><br/>-Setting a range of keys: <see cref="IDBKeyRange"/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore"/><br/>-Using cursors: <see cref="IDBCursor"/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/transaction"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see cref="IDBTransaction"/> object.</returns>
+</IDBDatabaseTransaction>
+<IDBDatabaseVersionchange>
+<summary>
+The <c>versionchange</c> event is fired when a database structure change (<see href="https://developer.mozilla.org/en-US/docs/Web/API/IDBOpenDBRequest/upgradeneeded_event"><c>upgradeneeded</c></see> event send on an <see href="https://developer.mozilla.org/en-US/docs/Web/API/IDBOpenDBRequest"><c>IDBOpenDBRequest</c></see> or <see href="https://developer.mozilla.org/en-US/docs/Web/API/IDBFactory/deleteDatabase"><c>IDBFactory.deleteDatabase</c></see>) was requested elsewhere (most probably in<br/>another window/tab on the same computer).
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/versionchange"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</IDBDatabaseVersionchange>
+<IDBDatabaseName>
+<summary>
+The <strong><c>name</c></strong> read-only property of the<br/><c>IDBDatabase</c> interface is a string that contains the<br/>name of the connected database.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase"/><br/>-Using transactions: <see cref="IDBTransaction"/><br/>-Setting a range of keys: <see cref="IDBKeyRange"/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore"/><br/>-Using cursors: <see cref="IDBCursor"/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/name"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing the name of the connected database.</value>
+</IDBDatabaseName>
+<IDBDatabaseClose>
+<summary>
+The <strong><c>close()</c></strong> method of the <see cref="IDBDatabase"/><br/>interface returns immediately and closes the connection in a separate thread.
+</summary>
+<remarks>
+<para>The connection is not actually closed until all transactions created using this<br/>connection are complete. No new transactions can be created for this connection once<br/>this method is called. Methods that create transactions throw an exception if a closing<br/>operation is pending.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</see><br/>-Starting transactions: <see cref="IDBDatabase"/><br/>-Using transactions: <see cref="IDBTransaction"/><br/>-Setting a range of keys: <see cref="IDBKeyRange"/><br/>-Retrieving and making changes to your data: <see cref="IDBObjectStore"/><br/>-Using cursors: <see cref="IDBCursor"/><br/>-Reference example: <see href="https://github.com/mdn/dom-examples/tree/main/to-do-notifications">To-do Notifications</see> (<see href="https://mdn.github.io/dom-examples/to-do-notifications/">View the example live</see>).<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/close"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</IDBDatabaseClose>
+</docs>

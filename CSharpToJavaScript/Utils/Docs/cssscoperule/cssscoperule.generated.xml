@@ -1,0 +1,32 @@
+<docs>
+<CSSScopeRule>
+<summary>
+The <strong><c>CSSScopeRule</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model">CSS Object Model</see> represents a CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@scope">@scope</see> at-rule.
+</summary>
+<remarks>
+<para></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@scope">@scope</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/:scope">:scope</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSScopeRule"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CSSScopeRule>
+<CSSScopeRuleEnd>
+<summary>
+The <strong><c>end</c></strong> property of the <see cref="CSSScopeRule"/> interface returns a string containing the value of the <c>_scope</c> at-rule&amp;apos;s scope limit.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@scope">@scope</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSScopeRule/end"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string, or <c>null</c> if the <c>_scope</c> at-rule has no scope limit defined.</value>
+</CSSScopeRuleEnd>
+<CSSScopeRuleStart>
+<summary>
+The <strong><c>start</c></strong> property of the <see cref="CSSScopeRule"/> interface returns a string containing the value of the <c>_scope</c> at-rule&amp;apos;s scope root.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@scope">@scope</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSScopeRule/start"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string, or <c>null</c> if the <c>_scope</c> at-rule has no scope root defined.</value>
+</CSSScopeRuleStart>
+</docs>

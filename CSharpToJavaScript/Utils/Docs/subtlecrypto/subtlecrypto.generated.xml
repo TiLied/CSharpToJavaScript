@@ -1,0 +1,142 @@
+<docs>
+<SubtleCrypto>
+<summary>
+The <strong><c>SubtleCrypto</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API">Web Crypto API</see> provides a number of low-level cryptographic functions.
+</summary>
+<remarks>
+<para>The interface name includes the term &amp;quot;subtle&amp;quot; to indicate that many of its algorithms have subtle usage requirements, and hence that it must be used carefully in order to provide suitable security guarantees.</para><para>An instance of <c>SubtleCrypto</c> is available as the <see cref="Crypto.Subtle"/> property of the <see cref="Crypto"/> interface, which in turn is available in windows through the <see cref="Window.Crypto"/> property and in workers through the <see cref="WorkerGlobalScope.Crypto"/> property.</para><blockquote class="WARNING"><h5>WARNING</h5><para>This API provides a number of low-level cryptographic primitives. It&amp;apos;s very easy to misuse them, and the pitfalls involved can be very subtle.</para><para>Even assuming you use the basic cryptographic functions correctly, secure key management and overall security system design are extremely hard to get right, and are generally the domain of specialist security experts.</para><para>Errors in security system design and implementation can make the security of the system completely ineffective.</para><para>Please learn and experiment, but don&amp;apos;t guarantee or imply the security of your work before an individual knowledgeable in this subject matter thoroughly reviews it. The <see href="https://www.crypto101.io/">Crypto 101 Course</see> can be a great place to start learning about the design and implementation of secure systems.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API">Web Crypto API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API/Non-cryptographic_uses_of_subtle_crypto">Non-cryptographic uses of SubtleCrypto</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Security">Web security</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Privacy">Privacy, permissions, and information security</see><br/>-<see cref="Crypto"/> and <see cref="Crypto.Subtle"/>.<br/>-<see href="https://www.crypto101.io/">Crypto 101</see>: an introductory course on cryptography.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</SubtleCrypto>
+<SubtleCryptoVerify>
+<summary>
+The <strong><c>verify()</c></strong> method of the <see cref="SubtleCrypto"/><br/>interface verifies a digital <see href="https://developer.mozilla.org/en-US/docs/Glossary/signature">signature</see>.
+</summary>
+<remarks>
+<para>It takes as its arguments a <see href="https://developer.mozilla.org/en-US/docs/Glossary/key">key</see> to verify the signature with, some algorithm-specific parameters, the signature, and the original signed data.<br/>It returns a <see cref="Promise"/> which will be fulfilled with a boolean value indicating whether the signature is valid.</para>
+<para>-<see cref="SubtleCrypto.Sign"/>.<br/>-<see href="https://datatracker.ietf.org/doc/html/rfc3447">RFC 3447</see> specifies RSASSA-PKCS1-v1_5.<br/>-<see href="https://datatracker.ietf.org/doc/html/rfc3447">RFC 3447</see> specifies RSA-PSS.<br/>-<see href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf">FIPS-186</see> specifies ECDSA.<br/>-<see href="https://csrc.nist.gov/files/pubs/fips/198-1/final/docs/fips-198-1_final.pdf">FIPS 198-1</see> specifies HMAC.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/verify"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that fulfills with a<br/>boolean value: <c>true</c> if the signature is valid, <c>false</c><br/>otherwise.</returns>
+</SubtleCryptoVerify>
+<SubtleCryptoSign>
+<summary>
+The <strong><c>sign()</c></strong> method of the <see cref="SubtleCrypto"/> interface generates a digital {{glossary("signature")}}.
+</summary>
+<remarks>
+<para>It takes as its arguments a {{glossary("key")}} to sign with, some algorithm-specific parameters, and the data to sign. It returns a <see cref="Promise"/> which will be fulfilled with the signature.</para><para>You can use the corresponding <see cref="SubtleCrypto.Verify"/> method to verify the signature.</para>
+<para>-<see cref="SubtleCrypto.Verify"/>.<br/>-<see href="https://datatracker.ietf.org/doc/html/rfc3447">RFC 3447</see> specifies RSASSA-PKCS1-v1_5.<br/>-<see href="https://datatracker.ietf.org/doc/html/rfc3447">RFC 3447</see> specifies RSA-PSS.<br/>-<see href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf">FIPS-186</see> specifies ECDSA.<br/>-<see href="https://csrc.nist.gov/files/pubs/fips/198-1/final/docs/fips-198-1_final.pdf">FIPS 198-1</see> specifies HMAC.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/sign"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that fulfills with an <see cref="ArrayBuffer"/> containing the signature.</returns>
+</SubtleCryptoSign>
+<SubtleCryptoDeriveKey>
+<summary>
+The <strong><c>deriveKey()</c></strong> method of the <see cref="SubtleCrypto"/> interface can be used to derive a secret key from a master key.
+</summary>
+<remarks>
+<para>It takes as arguments some initial key material, the derivation algorithm to use, and the desired properties for the key to derive.<br/>It returns a <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><c>Promise</c></see> which will be fulfilled with a <see cref="CryptoKey"/> object representing the new key.</para><para>It&amp;apos;s worth noting that the supported key derivation algorithms have quite different characteristics and are appropriate in quite different situations.<br/>See <see href="https://developer.mozilla.org#supported_algorithms">Supported algorithms</see> for some more detail on this.</para>
+<para>-<see href="https://datatracker.ietf.org/doc/html/rfc5869">HKDF specification</see>.<br/>-<see href="https://csrc.nist.gov/pubs/sp/800/132/final">NIST guidelines for password-based key derivation</see>.<br/>-<see href="https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html">Password storage cheat sheet</see>.<br/>-<see href="https://security.stackexchange.com/questions/3959/recommended-of-iterations-when-using-pbkdf2-sha256/3993#3993">Advice on choosing an iteration count for PBKDF2</see>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/deriveKey"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that fulfills with a <see cref="CryptoKey"/>.</returns>
+</SubtleCryptoDeriveKey>
+<SubtleCryptoUnwrapKey>
+<summary>
+The <strong><c>unwrapKey()</c></strong> method of the <see cref="SubtleCrypto"/> interface "unwraps" a key.<br/>This means that it takes as its input a key that has been exported and then encrypted (also called &amp;quot;wrapped&amp;quot;).<br/>It decrypts the key and then imports it, returning a <see cref="CryptoKey"/> object that can be used in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API">Web Crypto API</see>.
+</summary>
+<remarks>
+<para>As with <see href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey"><c>SubtleCrypto.importKey()</c></see>, you specify the key&amp;apos;s <see href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey#supported_formats">import format</see> and other attributes of the key to import details such as whether it is extractable, and which operations it can be used for.</para><para>But because <c>unwrapKey()</c> also decrypts the key to be imported, you also need to pass in the key that must be used to decrypt it.<br/>This is sometimes called the &amp;quot;unwrapping key&amp;quot;.</para><para>The inverse of <c>unwrapKey()</c> is <see cref="SubtleCrypto.WrapKey"/>: while <c>unwrapKey</c> is composed of decrypt + import, <c>wrapKey</c> is composed of encrypt + export.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey"><c>SubtleCrypto.importKey()</c></see><br/>-<see href="https://datatracker.ietf.org/doc/html/rfc5208">PKCS #8 format</see>.<br/>-<see href="https://datatracker.ietf.org/doc/html/rfc5280#section-4.1">SubjectPublicKeyInfo format</see>.<br/>-<see href="https://datatracker.ietf.org/doc/html/rfc7517">JSON Web Key format</see>.<br/>-<see href="https://datatracker.ietf.org/doc/html/rfc3394">AES-KW specification</see>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><c>Promise</c></see> that fulfills with the unwrapped key as a <see href="https://developer.mozilla.org/en-US/docs/Web/API/CryptoKey"><c>CryptoKey</c></see> object.</returns>
+</SubtleCryptoUnwrapKey>
+<SubtleCryptoDecrypt>
+<summary>
+The <strong><c>decrypt()</c></strong> method of the <see cref="SubtleCrypto"/> interface decrypts some encrypted data.<br/>It takes as arguments a <see href="https://developer.mozilla.org/en-US/docs/Glossary/key">key</see> to decrypt with, some optional extra parameters, and the data to decrypt (also known as "ciphertext").<br/>It returns a <see cref="Promise"/> which will be fulfilled with the decrypted data (also known as "plaintext").
+</summary>
+<remarks>
+<para>-<see cref="SubtleCrypto.Encrypt"/>.<br/>-<see href="https://datatracker.ietf.org/doc/html/rfc3447">RFC 3447</see> specifies RSAOAEP.<br/>-<see href="https://csrc.nist.gov/pubs/sp/800/38/a/final">NIST SP800-38A</see> specifies CTR mode.<br/>-<see href="https://csrc.nist.gov/pubs/sp/800/38/a/final">NIST SP800-38A</see> specifies CBC mode.<br/>-<see href="https://csrc.nist.gov/pubs/sp/800/38/d/final">NIST SP800-38D</see> specifies GCM mode.<br/>-<see href="https://csrc.nist.gov/files/pubs/fips/198-1/final/docs/fips-198-1_final.pdf">FIPS 198-1</see> specifies HMAC.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/decrypt"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that fulfills with an <see cref="ArrayBuffer"/> containing the plaintext.</returns>
+</SubtleCryptoDecrypt>
+<SubtleCryptoDigest>
+<summary>
+The <strong><c>digest()</c></strong> method of the <see cref="SubtleCrypto"/> interface generates a <strong>digest</strong> of the given data, using the specified <see href="https://developer.mozilla.org/en-US/docs/Glossary/hash function">hash function</see>.<br/>A digest is a short fixed-length value derived from some variable-length input.<br/>Cryptographic digests should exhibit collision-resistance, meaning that it&amp;apos;s hard to come up with two different inputs that have the same digest value.
+</summary>
+<remarks>
+<para>It takes as its arguments an identifier for the digest algorithm to use and the data to digest.<br/>It returns a <see cref="Promise"/> which will be fulfilled with the digest.</para><para>Note that this API does not support streaming input: you must read the entire input into memory before passing it into the digest function.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API/Non-cryptographic_uses_of_subtle_crypto">Non-cryptographic uses of SubtleCrypto</see><br/>-<see href="https://www.chromium.org/Home/chromium-security/prefer-secure-origins-for-powerful-new-features/">Chromium secure origins specification</see><br/>-<see href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf">FIPS 180-4</see> specifies the SHA family of digest algorithms.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/digest"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that fulfills with an <see cref="ArrayBuffer"/> containing the digest.</returns>
+</SubtleCryptoDigest>
+<SubtleCryptoGenerateKey>
+<summary>
+The <strong><c>generateKey()</c></strong> method of the <see cref="SubtleCrypto"/> interface is used to generate a new key (for symmetric algorithms) or key pair (for public-key algorithms).
+</summary>
+<remarks>
+<para>-<see href="https://www.keylength.com/">Cryptographic key length recommendations</see>.<br/>-<see href="https://csrc.nist.gov/pubs/sp/800/131/a/r2/final">NIST Transitioning the Use of Cryptographic Algorithms and Key Lengths</see>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/generateKey"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that fulfills with a <see cref="CryptoKey"/> (for symmetric algorithms) or a <see cref="CryptoKeyPair"/> (for public-key algorithms).</returns>
+</SubtleCryptoGenerateKey>
+<SubtleCryptoEncrypt>
+<summary>
+The <strong><c>encrypt()</c></strong> method of the <see cref="SubtleCrypto"/> interface encrypts data.
+</summary>
+<remarks>
+<para>It takes as its arguments a <see href="https://developer.mozilla.org/en-US/docs/Glossary/key">key</see> to encrypt with, some algorithm-specific parameters, and the data to encrypt (also known as "plaintext").<br/>It returns a <see cref="Promise"/> which will be fulfilled with the encrypted data (also known as "ciphertext").</para>
+<para>-<see cref="SubtleCrypto.Decrypt"/>.<br/>-<see href="https://datatracker.ietf.org/doc/html/rfc3447">RFC 3447</see> specifies RSAOAEP.<br/>-<see href="https://csrc.nist.gov/pubs/sp/800/38/a/final">NIST SP800-38A</see> specifies CTR mode.<br/>-<see href="https://csrc.nist.gov/pubs/sp/800/38/a/final">NIST SP800-38A</see> specifies CBC mode.<br/>-<see href="https://csrc.nist.gov/pubs/sp/800/38/d/final">NIST SP800-38D</see> specifies GCM mode.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/encrypt"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that fulfills with an <see cref="ArrayBuffer"/> containing the "ciphertext".</returns>
+</SubtleCryptoEncrypt>
+<SubtleCryptoWrapKey>
+<summary>
+The <strong><c>wrapKey()</c></strong> method of the <see cref="SubtleCrypto"/> interface "wraps" a key.<br/>This means that it exports the key in an external, portable format, then encrypts the exported key.<br/>Wrapping a key helps protect it in untrusted environments, such as inside an otherwise unprotected data store or in transmission over an unprotected network.
+</summary>
+<remarks>
+<para>As with <see cref="SubtleCrypto.ExportKey"/>, you specify an <see href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey#supported_formats">export format</see> for the key.<br/>To export a key, it must have <see cref="CryptoKey.Extractable"/> set to <c>true</c>.</para><para>But because <c>wrapKey()</c> also encrypts the key to be exported, you also need to pass in the key that must be used to encrypt it.<br/>This is sometimes called the &amp;quot;wrapping key&amp;quot;.</para><para>The inverse of <c>wrapKey()</c> is <see cref="SubtleCrypto.UnwrapKey"/>: while <c>wrapKey</c> is composed of export + encrypt, <c>unwrapKey</c> is composed of import + decrypt.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/exportKey"><c>SubtleCrypto.exportKey()</c></see><br/>-<see href="https://datatracker.ietf.org/doc/html/rfc5208">PKCS #8 format</see>.<br/>-<see href="https://datatracker.ietf.org/doc/html/rfc5280#section-4.1">SubjectPublicKeyInfo format</see>.<br/>-<see href="https://datatracker.ietf.org/doc/html/rfc7517">JSON Web Key format</see>.<br/>-<see href="https://datatracker.ietf.org/doc/html/rfc3394">AES-KW specification</see>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/wrapKey"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><c>Promise</c></see> that fulfills with<br/>an <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer"><c>ArrayBuffer</c></see><br/>containing the encrypted exported key.</returns>
+</SubtleCryptoWrapKey>
+<SubtleCryptoExportKey>
+<summary>
+The <strong><c>exportKey()</c></strong> method of the <see cref="SubtleCrypto"/><br/>interface exports a key: that is, it takes as input a <see cref="CryptoKey"/> object<br/>and gives you the key in an external, portable format.
+</summary>
+<remarks>
+<para>To export a key, the key must have <see cref="CryptoKey.Extractable"/> set to<br/><c>true</c>.</para><para>Keys can be exported in several formats: see <see href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey#supported_formats">Supported formats</see> in the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey"><c>SubtleCrypto.importKey()</c></see><br/>page for details.</para><para>Keys are not exported in an encrypted format: to encrypt keys when exporting them use<br/>the<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/wrapKey"><c>SubtleCrypto.wrapKey()</c></see><br/>API instead.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey"><c>SubtleCrypto.importKey()</c></see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey"><c>SubtleCrypto.wrapKey()</c></see><br/>-<see href="https://datatracker.ietf.org/doc/html/rfc5208">PKCS #8 format</see>.<br/>-<see href="https://datatracker.ietf.org/doc/html/rfc5280#section-4.1">SubjectPublicKeyInfo format</see>.<br/>-<see href="https://datatracker.ietf.org/doc/html/rfc7517">JSON Web Key format</see>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/exportKey"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><c>Promise</c></see>.</returns>
+</SubtleCryptoExportKey>
+<SubtleCryptoImportKey>
+<summary>
+The <strong><c>importKey()</c></strong> method of the <see cref="SubtleCrypto"/><br/>interface imports a key: that is, it takes as input a key in an external, portable<br/>format and gives you a <see cref="CryptoKey"/> object that you can use in the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API">Web Crypto API</see>.
+</summary>
+<remarks>
+<para>The function accepts several import formats: see <see href="https://developer.mozilla.org#supported_formats">Supported formats</see> for details.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/exportKey"><c>SubtleCrypto.exportKey()</c></see><br/>-<see href="https://datatracker.ietf.org/doc/html/rfc5208">PKCS #8 format</see>.<br/>-<see href="https://datatracker.ietf.org/doc/html/rfc5280#section-4.1">SubjectPublicKeyInfo format</see>.<br/>-<see href="https://datatracker.ietf.org/doc/html/rfc7517">JSON Web Key format</see>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><c>Promise</c></see><br/>that fulfills with the imported key as a <see cref="CryptoKey"/> object.</returns>
+</SubtleCryptoImportKey>
+<SubtleCryptoDeriveBits>
+<summary>
+The <strong><c>deriveBits()</c></strong> method of the<br/><see cref="SubtleCrypto"/> interface can be used to derive an array of bits from a base<br/>key.
+</summary>
+<remarks>
+<para>It takes as its arguments the base key, the derivation algorithm to use, and the length<br/>of the bits to derive. It returns a <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><c>Promise</c></see><br/>which will be fulfilled with an<br/><see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer"><c>ArrayBuffer</c></see><br/>containing the derived bits.</para><para>This method is very similar to<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/deriveKey"><c>SubtleCrypto.deriveKey()</c></see>,<br/>except that <c>deriveKey()</c> returns a<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/CryptoKey"><c>CryptoKey</c></see> object rather than an<br/><c>ArrayBuffer</c>. Essentially <c>deriveKey()</c> is composed of<br/><c>deriveBits()</c> followed by<br/><see href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey"><c>importKey()</c></see>.</para><para>This function supports the same derivation algorithms as <c>deriveKey()</c>: ECDH, HKDF, PBKDF2, and X25519.<br/>See <see href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/deriveKey#supported_algorithms">Supported algorithms</see> for some more detail on these algorithms.</para>
+<para>-<see href="https://datatracker.ietf.org/doc/html/rfc5869">HKDF specification</see>.<br/>-<see href="https://csrc.nist.gov/pubs/sp/800/132/final">NIST guidelines for password-based key derivation</see>.<br/>-<see href="https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html">Password storage cheat sheet</see>.<br/>-<see href="https://security.stackexchange.com/questions/3959/recommended-of-iterations-when-using-pbkdf2-sha256/3993#3993">Advice on choosing an iteration count for PBKDF2</see>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/deriveBits"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><c>Promise</c></see><br/>that fulfills with an <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer"><c>ArrayBuffer</c></see><br/>containing the derived bits.</returns>
+</SubtleCryptoDeriveBits>
+</docs>

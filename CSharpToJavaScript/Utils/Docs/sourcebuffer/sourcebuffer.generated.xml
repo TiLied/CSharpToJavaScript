@@ -1,0 +1,168 @@
+<docs>
+<SourceBuffer>
+<summary>
+The <strong><c>SourceBuffer</c></strong> interface represents a chunk of media to be passed into an <see cref="HTMLMediaElement"/> and played, via a <see cref="MediaSource"/> object. This can be made up of one or several media segments.
+</summary>
+<remarks>
+<para></para>
+<para>-<see cref="MediaSource"/><br/>-<see cref="SourceBufferList"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</SourceBuffer>
+<SourceBufferAppendBuffer>
+<summary>
+The <strong><c>appendBuffer()</c></strong> method of the<br/><see cref="SourceBuffer"/> interface appends media segment data from an<br/><see cref="ArrayBuffer"/>, a <see cref="TypedArray"/> or a <see cref="DataView"/> object<br/>to the <c>SourceBuffer</c>.
+</summary>
+<remarks>
+<para>-<see cref="MediaSource"/><br/>-<see cref="SourceBufferList"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/appendBuffer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</SourceBufferAppendBuffer>
+<SourceBufferVideoTracks>
+<summary>
+The <strong><c>videoTracks</c></strong> read-only property of the<br/><see cref="SourceBuffer"/> interface returns a list of the video tracks currently<br/>contained inside the <c>SourceBuffer</c>.
+</summary>
+<remarks>
+<para>-<see cref="MediaSource"/><br/>-<see cref="SourceBufferList"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/videoTracks"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="VideoTrackList"/> object.</value>
+</SourceBufferVideoTracks>
+<SourceBufferTimestampOffset>
+<summary>
+The <strong><c>timestampOffset</c></strong> property of the<br/><see cref="SourceBuffer"/> interface controls the offset applied to timestamps inside<br/>media segments that are appended to the <c>SourceBuffer</c>.
+</summary>
+<remarks>
+<para>The initial value of <c>timestampOffset</c> is 0.</para>
+<para>-<see cref="MediaSource"/><br/>-<see cref="SourceBufferList"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/timestampOffset"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A double, with the offset amount expressed in seconds.</value>
+</SourceBufferTimestampOffset>
+<SourceBufferMode>
+<summary>
+The <strong><c>mode</c></strong> property of the <see cref="SourceBuffer"/><br/>interface controls whether media segments can be appended to the<br/><c>SourceBuffer</c> in any order, or in a strict sequence.
+</summary>
+<remarks>
+<para>The two available values are:</para><para>The mode value is initially set when the <c>SourceBuffer</c> is created using<br/><c>MediaSource.addSourceBuffer()</c>. If timestamps already exist for the media<br/>segments, then the value will be set to <c>segments</c>; if they don&amp;apos;t, then the<br/>value will be set to <c>sequence</c>.</para><para>If you try to set the <c>mode</c> property value to <c>segments</c> when<br/>the initial value is <c>sequence</c>, an exception will be thrown. The existing<br/>segment order must be maintained in <c>sequence</c> mode. You can, however, change<br/>the value from <c>segments</c> to <c>sequence</c>. It just means the play<br/>order will be fixed, and new timestamps generated to reflect this.</para><para>This property cannot be changed during while the <c>SourceBuffer</c> is<br/>processing either an <see cref="SourceBuffer.AppendBuffer"/> or<br/><see cref="SourceBuffer.Remove"/> call.</para>
+<para>-<see cref="MediaSource"/><br/>-<see cref="SourceBufferList"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/mode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</SourceBufferMode>
+<SourceBufferRemove>
+<summary>
+The <strong><c>remove()</c></strong> method of the <see cref="SourceBuffer"/><br/>interface removes media segments within a specific time range from the<br/><c>SourceBuffer</c>. This method can only be called when<br/><see cref="SourceBuffer.Updating"/> equals <c>false</c>. If<br/><c>SourceBuffer.updating</c> is not equal to <c>false</c>, call<br/><see cref="SourceBuffer.Abort"/>.
+</summary>
+<remarks>
+<para>-<see cref="MediaSource"/><br/>-<see cref="SourceBufferList"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/remove"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</SourceBufferRemove>
+<SourceBufferChangeType>
+<summary>
+The <strong><c>changeType()</c></strong> method of the<br/><see cref="SourceBuffer"/> interface sets the MIME type that future calls to<br/><see cref="SourceBuffer.AppendBuffer"/> should expect the new media<br/>data to conform to. This makes it possible to change codecs or container type<br/>mid-stream.
+</summary>
+<remarks>
+<para>One scenario in which this is helpful is to support adapting the media source to<br/>changing bandwidth availability, by transitioning from one codec to another as resource<br/>constraints change.</para>
+<para>-<see cref="MediaSource"/><br/>-<see cref="SourceBufferList"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/changeType"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</SourceBufferChangeType>
+<SourceBufferAbort>
+<summary>
+The <strong><c>abort()</c></strong> method of the <see cref="SourceBuffer"/><br/>interface aborts the current segment and resets the segment parser.
+</summary>
+<remarks>
+<para>-<see cref="MediaSource"/><br/>-<see cref="SourceBufferList"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/abort"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</SourceBufferAbort>
+<SourceBufferAppendWindowEnd>
+<summary>
+The <strong><c>appendWindowEnd</c></strong> property of the<br/><see cref="SourceBuffer"/> interface controls the timestamp for the end of the <see href="https://w3c.github.io/media-source/#append-window">append window</see>, a<br/>timestamp range that can be used to filter what media data is appended to the<br/><c>SourceBuffer</c>. Coded media frames with timestamps within this range will be<br/>appended, whereas those outside the range will be filtered out.
+</summary>
+<remarks>
+<para>The default value of <c>appendWindowEnd</c> is positive infinity.</para>
+<para>-<see cref="MediaSource"/><br/>-<see cref="SourceBufferList"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/appendWindowEnd"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A double, indicating the end time of the append window, in seconds.</value>
+</SourceBufferAppendWindowEnd>
+<SourceBufferBuffered>
+<summary>
+The <strong><c>buffered</c></strong> read-only property of the<br/><see cref="SourceBuffer"/> interface returns the time ranges that are currently<br/>buffered in the <c>SourceBuffer</c> as a normalized <see cref="TimeRanges"/><br/>object.
+</summary>
+<remarks>
+<para>-<see cref="MediaSource"/><br/>-<see cref="SourceBufferList"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/buffered"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="TimeRanges"/> object.</value>
+</SourceBufferBuffered>
+<SourceBufferAppendBufferAsync>
+<summary>
+<div class="CAUTION"><h5>CAUTION</h5> <strong>Non-standard</strong></div> The <strong><c>appendBufferAsync()</c></strong> method<br/>of the <see cref="SourceBuffer"/> interface begins the process of asynchronously<br/>appending media segment data from an <see cref="ArrayBuffer"/>,<br/>a <see cref="TypedArray"/> or a <see cref="DataView"/> object to the <c>SourceBuffer</c> object.<br/>It returns a <see cref="Promise"/> which is fulfilled once the buffer has been appended.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Source_Extensions_API">Media Source Extensions API</see><br/>-<see cref="SourceBuffer.AppendBuffer"/><br/>-<see cref="MediaSource"/><br/>-<see cref="SourceBufferList"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/appendBufferAsync"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> which is fulfilled when the buffer has been added successfully to the <c>SourceBuffer</c> object,<br/>or <c>null</c>, if the request could not be initiated.</returns>
+</SourceBufferAppendBufferAsync>
+<SourceBufferTextTracks>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>textTracks</c></strong> read-only property of the<br/><see cref="SourceBuffer"/> interface returns a list of the text tracks currently<br/>contained inside the <c>SourceBuffer</c>.
+</summary>
+<remarks>
+<para>-<see cref="MediaSource"/><br/>-<see cref="SourceBufferList"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/textTracks"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="TextTrackList"/> object.</value>
+</SourceBufferTextTracks>
+<SourceBufferRemoveAsync>
+<summary>
+<div class="CAUTION"><h5>CAUTION</h5> <strong>Non-standard</strong></div> The <strong><c>removeAsync()</c></strong> method of the<br/><see cref="SourceBuffer"/> interface starts the process of asynchronously removing<br/>from the <c>SourceBuffer</c> media segments found within a specific time<br/>range. A <see cref="Promise"/> is returned, which is fulfilled when the buffers<br/>in the specified time range have been removed.
+</summary>
+<remarks>
+<para>This method can only be called when <see cref="SourceBuffer.Updating"/> is<br/><c>false</c>. If that's not the case, call <see cref="SourceBuffer.Abort"/> instead.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Source_Extensions_API">Media Source Extensions API</see><br/>-<see cref="SourceBuffer.Remove"/><br/>-<see cref="MediaSource"/><br/>-<see cref="SourceBufferList"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/removeAsync"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> whose fulfillment handler is executed once the buffers in the<br/>specified time range have been removed from the <c>SourceBuffer</c>.</returns>
+</SourceBufferRemoveAsync>
+<SourceBufferAudioTracks>
+<summary>
+The <strong><c>audioTracks</c></strong> read-only property of the<br/><see cref="SourceBuffer"/> interface returns a list of the audio tracks currently<br/>contained inside the <c>SourceBuffer</c>.
+</summary>
+<remarks>
+<para>-<see cref="MediaSource"/><br/>-<see cref="SourceBufferList"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/audioTracks"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="AudioTrackList"/> object.</value>
+</SourceBufferAudioTracks>
+<SourceBufferAppendWindowStart>
+<summary>
+The <strong><c>appendWindowStart</c></strong> property of the<br/><see cref="SourceBuffer"/> interface controls the timestamp for the start of the <see href="https://w3c.github.io/media-source/#append-window">append window</see>, a<br/>timestamp range that can be used to filter what media data is appended to the<br/><c>SourceBuffer</c>. Coded media frames with timestamps within this range will be<br/>appended, whereas those outside the range will be filtered out.
+</summary>
+<remarks>
+<para>The default value of <c>appendWindowStart</c> is the presentation start time,<br/>which is the beginning time of the playable media.</para>
+<para>-<see cref="MediaSource"/><br/>-<see cref="SourceBufferList"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/appendWindowStart"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A double, indicating the start time of the append window, in seconds.</value>
+</SourceBufferAppendWindowStart>
+<SourceBufferUpdating>
+<summary>
+The <strong><c>updating</c></strong> read-only property of the<br/><see cref="SourceBuffer"/> interface indicates whether the <c>SourceBuffer</c> is<br/>currently being updated — i.e., whether an <see cref="SourceBuffer.AppendBuffer"/> or <see cref="SourceBuffer.Remove"/><br/>operation is currently in progress.
+</summary>
+<remarks>
+<para>-<see cref="MediaSource"/><br/>-<see cref="SourceBufferList"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/updating"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value.</value>
+</SourceBufferUpdating>
+</docs>

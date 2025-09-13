@@ -1,0 +1,21 @@
+<docs>
+<HTMLMenuElement>
+<summary>
+The <strong><c>HTMLMenuElement</c></strong> interface provides additional properties (beyond those inherited from the <see cref="HTMLElement"/> interface) for manipulating a {{HTMLElement("menu")}} element.<br/><c>&amp;lt;menu&amp;gt;</c> is a semantic alternative to the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul">ul</see> element.
+</summary>
+<remarks>
+<para></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMenuElement"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLMenuElement>
+<HTMLMenuElementCompact>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The <strong><c>compact</c></strong> property of the <see cref="HTMLMenuElement"/> interface indicates that spacing between list items should be reduced. The exact handling of the <c>compact</c> attribute is browser-specific. Instead of using this property, consider using CSS <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/line-height">line-height</see> instead.
+</summary>
+<remarks>
+<para>It reflects the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/menu#compact"><c>compact</c></see> attribute of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menu">menu</see> element.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMenuElement/compact"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean.</value>
+</HTMLMenuElementCompact>
+</docs>

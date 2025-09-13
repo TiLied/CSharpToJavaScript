@@ -1,0 +1,118 @@
+<docs>
+<DOMRectReadOnly>
+<summary>
+The <strong><c>DOMRectReadOnly</c></strong> interface specifies the standard properties (also used by <see cref="DOMRect"/>) to define a rectangle whose properties are immutable.
+</summary>
+<remarks>
+<para>-<see cref="DOMPoint"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMRectReadOnly"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</DOMRectReadOnly>
+<DOMRectReadOnlyFromRect>
+<summary>
+The <strong><c>fromRect()</c></strong> static method of the<br/><see cref="DOMRectReadOnly"/> object creates a new <c>DOMRectReadOnly</c><br/>object with a given location and dimensions.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMRectReadOnly/fromRect"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An instance of <see cref="DOMRectReadOnly"/>.</returns>
+</DOMRectReadOnlyFromRect>
+<DOMRectReadOnlyWidth>
+<summary>
+The <strong><c>width</c></strong> read-only property of the <strong><c>DOMRectReadOnly</c></strong> interface represents the width of the <c>DOMRect</c>.
+</summary>
+<remarks>
+<para>-<see cref="DOMRect"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMRectReadOnly/width"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A double.</value>
+</DOMRectReadOnlyWidth>
+<DOMRectReadOnlyTop>
+<summary>
+The <strong><c>top</c></strong> read-only property of the <strong><c>DOMRectReadOnly</c></strong> interface returns the top coordinate value of the <c>DOMRect</c>. (Has the same value as <c>y</c>, or <c>y + height</c> if <c>height</c> is negative.)
+</summary>
+<remarks>
+<para>-<see cref="DOMRect"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMRectReadOnly/top"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A double.</value>
+</DOMRectReadOnlyTop>
+<DOMRectReadOnlyX>
+<summary>
+The <strong><c>x</c></strong> read-only property of the <strong><c>DOMRectReadOnly</c></strong> interface represents the x coordinate of the <c>DOMRect</c>&amp;apos;s origin.
+</summary>
+<remarks>
+<para>-<see cref="DOMRect"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMRectReadOnly/x"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A double.</value>
+</DOMRectReadOnlyX>
+<DOMRectReadOnlyDOMRectReadOnly>
+<summary>
+The <strong><c>DOMRectReadOnly()</c></strong> constructor creates a new <see cref="DOMRectReadOnly"/> object.
+</summary>
+<remarks>
+<para>-<see cref="DOMPoint"/><br/>-<see cref="DOMRect"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMRectReadOnly/DOMRectReadOnly"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</DOMRectReadOnlyDOMRectReadOnly>
+<DOMRectReadOnlyHeight>
+<summary>
+The <strong><c>height</c></strong> read-only property of the <strong><c>DOMRectReadOnly</c></strong> interface represents the height of the <c>DOMRect</c>.
+</summary>
+<remarks>
+<para>-<see cref="DOMRect"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMRectReadOnly/height"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A double.</value>
+</DOMRectReadOnlyHeight>
+<DOMRectReadOnlyRight>
+<summary>
+The <strong><c>right</c></strong> read-only property of the <strong><c>DOMRectReadOnly</c></strong> interface returns the right coordinate value of the <c>DOMRect</c>. (Has the same value as <c>x + width</c>, or <c>x</c> if <c>width</c> is negative.)
+</summary>
+<remarks>
+<para>-<see cref="DOMRect"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMRectReadOnly/right"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A double.</value>
+</DOMRectReadOnlyRight>
+<DOMRectReadOnlyLeft>
+<summary>
+The <strong><c>left</c></strong> read-only property of the <strong><c>DOMRectReadOnly</c></strong> interface returns the left coordinate value of the <c>DOMRect</c>. (Has the same value as <c>x</c>, or <c>x + width</c> if <c>width</c> is negative.)
+</summary>
+<remarks>
+<para>-<see cref="DOMRect"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMRectReadOnly/left"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A double.</value>
+</DOMRectReadOnlyLeft>
+<DOMRectReadOnlyBottom>
+<summary>
+The <strong><c>bottom</c></strong> read-only property of the <strong><c>DOMRectReadOnly</c></strong> interface returns the bottom coordinate value of the <c>DOMRect</c>. (Has the same value as <c>y + height</c>, or <c>y</c> if <c>height</c> is negative.)
+</summary>
+<remarks>
+<para>-<see cref="DOMRect"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMRectReadOnly/bottom"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A double.</value>
+</DOMRectReadOnlyBottom>
+<DOMRectReadOnlyY>
+<summary>
+The <strong><c>y</c></strong> read-only property of the <strong><c>DOMRectReadOnly</c></strong> interface represents the y coordinate of the <c>DOMRect</c>&amp;apos;s origin.
+</summary>
+<remarks>
+<para>-<see cref="DOMRect"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMRectReadOnly/y"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A double.</value>
+</DOMRectReadOnlyY>
+<DOMRectReadOnlyToJSON>
+<summary>
+The <see cref="DOMRectReadOnly"/> method <c>toJSON()</c> returns a <see href="https://developer.mozilla.org/en-US/docs/Glossary/JSON">JSON</see> representation of the <c>DOMRectReadOnly</c> object.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/DOMRectReadOnly/toJSON"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new object whose properties are set to the values in the <c>DOMRectReadOnly</c> on which the method was called.</returns>
+</DOMRectReadOnlyToJSON>
+</docs>

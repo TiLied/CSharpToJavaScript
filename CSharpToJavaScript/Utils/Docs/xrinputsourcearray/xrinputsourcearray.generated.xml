@@ -1,0 +1,61 @@
+<docs>
+<XRInputSourceArray>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The interface <strong><c>XRInputSourceArray</c></strong> represents a <strong>live</strong> list of WebXR input sources, and is used as the return value of the <see cref="XRSession"/> property <see cref="XRSession.InputSources"/>. Each entry is an <see cref="XRInputSource"/> representing one input device connected to the WebXR system.
+</summary>
+<remarks>
+<para>In addition to being able to access the input sources in the list using standard array notation (that is, with index numbers inside square brackets), methods are available to allow the use of iterators and the <see cref="XRInputSourceArray.ForEach"/> method is also available.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceArray"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</XRInputSourceArray>
+<XRInputSourceArrayEntries>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <see cref="XRInputSourceArray"/> interface's<br/><strong><c>entries()</c></strong> method returns a JavaScript<br/><see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols"><c>iterator</c></see><br/>which can then be used to iterate over the key/value pairs in the input source<br/>array. Each item in the array is an <see cref="XRInputSource"/> object.
+</summary>
+<remarks>
+<para>Most frequently, you will use this in tandem with statements such as<br/><see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of"><c>for...of</c></see>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceArray/entries"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols"><c>iterator</c></see><br/>which can be used to walk through the list of <c>XRInputSource</c> objects<br/>included in the input source array.</returns>
+</XRInputSourceArrayEntries>
+<XRInputSourceArrayForEach>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <see cref="XRInputSourceArray"/><br/>method <strong><c>forEach()</c></strong> executes the specified callback once for<br/>each input source in the array, starting at index 0 and progressing until the end of the<br/>list.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Inputs">Inputs and input sources</see><br/>-The<br/><see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"><c>Array</c></see> method <c>forEach()</c><br/>-<see cref="XRInputSource"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceArray/forEach"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>Undefined.</returns>
+</XRInputSourceArrayForEach>
+<XRInputSourceArrayLength>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The read-only <strong><c>length</c></strong> property returns an integer value<br/>indicating the number of items in the input source list represented by<br/>the <see cref="XRInputSourceArray"/> object.
+</summary>
+<remarks>
+<para><blockquote class="TIP"><h5>TIP</h5> Partialy supported as <see cref="System.Collections.Generic.List<object>.Count" /> and <see cref="System.Array.Length" /></blockquote></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceArray/length"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer value indicating the number of <see cref="XRInputSource"/> objects<br/>representing WebXR input sources are included in the array.</value>
+</XRInputSourceArrayLength>
+<XRInputSourceArrayKeys>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>keys()</c></strong> method in the<br/><see cref="XRInputSourceArray"/> interface returns a {{Glossary("JavaScript")}}<br/><see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator"><c>iterator</c></see><br/>which can then be used to iterate over the keys used to reference each item in the array<br/>of input sources.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Inputs">Inputs and input sources</see><br/>-The <see cref="XRInputSourceArray"/> method <see cref="XRInputSourceArray.Values"/><br/>-The <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"><c>Array</c></see> method <c>keys()</c><br/>-<see cref="XRInputSource"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceArray/keys"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A<br/>JavaScript <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator"><c>iterator</c></see> that<br/>can be used to walk through the keys for each entry in the list of input sources. The<br/>values returned by the iterator are the indexes of each entry in the list; that is, the<br/>numbers 0, 1, 2, and so forth through the index of the last item in the list.</returns>
+</XRInputSourceArrayKeys>
+<XRInputSourceArrayValues>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <see cref="XRInputSourceArray"/><br/>method <strong><c>values()</c></strong> returns a <see href="https://developer.mozilla.org/en-US/docs/Glossary/JavaScript">JavaScript</see><br/><see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator"><c>iterator</c></see><br/>that can walk over the list of <see cref="XRInputSource"/> objects contained in the<br/>array, from first to last.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Inputs">Inputs and input sources</see><br/>-The <see cref="XRInputSourceArray"/> method <see cref="XRInputSourceArray.Keys"/><br/>-The<br/><see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"><c>Array</c></see> method <c>values()</c><br/>-<see cref="XRInputSource"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceArray/values"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A<br/>JavaScript <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator"><c>iterator</c></see> that<br/>can be used to walk through the list of <see cref="XRInputSource"/> objects in the<br/>array, starting with the first entry (at index 0) and proceeding straight through the<br/>list.</returns>
+</XRInputSourceArrayValues>
+</docs>

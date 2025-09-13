@@ -1,0 +1,60 @@
+<docs>
+<PerformanceEntry>
+<summary>
+The <strong><c>PerformanceEntry</c></strong> object encapsulates a single performance metric that is part of the browser&amp;apos;s performance timeline.
+</summary>
+<remarks>
+<para>The Performance API offers built-in metrics which are specialized subclasses of <c>PerformanceEntry</c>. This includes entries for resource loading, event timing, and more.</para><para>A performance entry can also be created by calling the <see cref="Performance.Mark"/> or <see cref="Performance.Measure"/> methods at an explicit point in an application. This allows you to add your own metrics to the performance timeline.</para><para>The <c>PerformanceEntry</c> instances will always be one of the following subclasses:</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceEntry"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</PerformanceEntry>
+<PerformanceEntryStartTime>
+<summary>
+The read-only <strong><c>startTime</c></strong> property returns the first {{domxref(&amp;quot;DOMHighResTimeStamp&amp;quot;,&amp;quot;timestamp&amp;quot;, &amp;quot;&amp;quot;, "no-code")}} recorded for this <see cref="PerformanceEntry"/>. The meaning of this property depends on the value of this entry's <see cref="PerformanceEntry.EntryType"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceEntry/startTime"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DOMHighResTimeStamp"/> representing the first timestamp when the<br/><see cref="PerformanceEntry"/> was created.The meaning of this property depends on the value of this performance entry's <see cref="PerformanceEntry.EntryType"/>:</value>
+</PerformanceEntryStartTime>
+<PerformanceEntryDuration>
+<summary>
+The read-only <strong><c>duration</c></strong> property returns a {{domxref(&amp;quot;DOMHighResTimeStamp&amp;quot;,&amp;quot;timestamp&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;no-code&amp;quot;)}} that is the duration of the {{domxref(&amp;quot;PerformanceEntry&amp;quot;,&amp;quot;performance entry&amp;quot;, &amp;quot;&amp;quot;, "no-code")}}. The meaning of this property depends on the value of this entry's <see cref="PerformanceEntry.EntryType"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceEntry/duration"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DOMHighResTimeStamp"/> representing the duration of the {{domxref("PerformanceEntry","performance entry", &amp;quot;&amp;quot;, &amp;quot;no-code&amp;quot;)}}. If the duration concept doesn&amp;apos;t apply for a particular performance metric, a duration of <c>0</c> is returned.The meaning of this property depends on the value of this performance entry's <see cref="PerformanceEntry.EntryType"/>:For the following entry types, <c>duration</c> is not applicable, and in this case the value is always <c>0</c>:</value>
+</PerformanceEntryDuration>
+<PerformanceEntryEntryType>
+<summary>
+The read-only <strong><c>entryType</c></strong> property returns a string representing the type of performance metric that this entry represents.
+</summary>
+<remarks>
+<para>All supported <c>entryTypes</c> are available using the static property <see cref="PerformanceObserver.SupportedEntryTypes"/>.</para>
+<para>-<see cref="PerformanceObserver.SupportedEntryTypes"/><br/>-<see cref="Performance.GetEntriesByType"/><br/>-<see cref="PerformanceObserverEntryList.GetEntriesByType"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceEntry/entryType"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string. The return value depends on the subtype of the <c>PerformanceEntry</c> object. Some subtypes have more than one <c>entryType</c>.</value>
+</PerformanceEntryEntryType>
+<PerformanceEntryName>
+<summary>
+The read-only <strong><c>name</c></strong> property of the <see cref="PerformanceEntry"/> interface is a string representing the name for a performance entry. It acts as an identifier, but it does not have to be unique. The value depends on the subclass.
+</summary>
+<remarks>
+<para>-<see cref="Performance.GetEntriesByName"/><br/>-<see cref="PerformanceObserverEntryList.GetEntriesByName"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceEntry/name"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string. The value depends on the subclass of the <c>PerformanceEntry</c> object as shown by the table below.</value>
+</PerformanceEntryName>
+<PerformanceEntryToJSON>
+<summary>
+The <strong><c>toJSON()</c></strong> method is a {{Glossary("Serialization","serializer")}}; it returns a JSON representation of the <see cref="PerformanceEntry"/> object.
+</summary>
+<remarks>
+<para>-<see cref="JSON"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceEntry/toJSON"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("JSON")}} object that is the serialization of the <see cref="PerformanceEntry"/> object.</returns>
+</PerformanceEntryToJSON>
+</docs>

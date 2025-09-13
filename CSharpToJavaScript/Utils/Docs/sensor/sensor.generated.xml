@@ -1,0 +1,89 @@
+<docs>
+<Sensor>
+<summary>
+The <strong><c>Sensor</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Sensor_APIs">Sensor APIs</see> is the base class for all the other sensor interfaces. This interface cannot be used directly. Instead it provides properties, event handlers, and methods accessed by interfaces that inherit from it.
+</summary>
+<remarks>
+<para>This feature may be blocked by a <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Permissions_Policy">Permissions Policy</see> set on your server.</para><para></para><para>When initially created, the <c>Sensor</c> object is <strong>idle</strong>, meaning it does not take measures. Once the <see cref="Sensor.Start"/> method is called, it prepares itself to read data and, once ready, the <see cref="Sensoractivate"/> event is sent and the sensor becomes <strong>activated</strong>. It then sends a <see cref="Sensorreading"/> event each time new data is available.</para><para>In case of an error, the <see cref="Sensorerror"/> event is sent, reading stops, and the <c>Sensor</c> object becomes <strong>idle</strong> again. The <see cref="Sensor.Start"/> method needs to be called again before it can read further data.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Sensor"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</Sensor>
+<SensorReading>
+<summary>
+The <strong><c>reading</c></strong> event is fired when a new reading is available on a sensor.
+</summary>
+<remarks>
+<para>The <see cref="'Sensor'"/> interface is a base class, <c>onreading</c> and the <c>reading</c> event may only be used<br/>on one of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Sensor#interfaces_based_on_sensor">derived classes</see>.</para>
+<para>-Sensor <see cref="'Sensor.Activate'"/> event<br/>-Sensor <see cref="'Sensor.Error'"/> event<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Sensor/reading"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</SensorReading>
+<SensorStop>
+<summary>
+The <strong><c>stop()</c></strong> method of the <see cref="Sensor"/> interface deactivates the current sensor.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Sensor/stop"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</SensorStop>
+<SensorError>
+<summary>
+The <strong><c>error</c></strong> event is fired when an exception occurs on a sensor.
+</summary>
+<remarks>
+<para>The <see cref="'Sensor'"/> interface is a base class, <c>onerror</c> and the <c>error</c> event may only be used<br/>on one of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Sensor#interfaces_based_on_sensor">derived classes</see>.</para><para>After this event has occurred, the <see cref="'Sensor'"/> object becomes idle. If the sensor was reading values, it will stop until it restarts.</para>
+<para>-Sensor <see cref="'Sensor.Activate'"/> event<br/>-Sensor <see cref="'Sensor.Reading'"/> event<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Sensor/error"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</SensorError>
+<SensorActivated>
+<summary>
+The <strong><c>activated</c></strong> read-only property<br/>of the <see cref="Sensor"/> interface returns a boolean value indicating<br/>whether the sensor is active.
+</summary>
+<remarks>
+<para>Because <see cref="'Sensor'"/> is a base class, <c>activated</c> may only be read<br/>from one of its derived classes.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Sensor/activated"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value.</value>
+</SensorActivated>
+<SensorStart>
+<summary>
+The <strong><c>start()</c></strong> method of the <see cref="Sensor"/> interface activates one of the sensors based on <c>Sensor</c>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Sensor/start"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</SensorStart>
+<SensorHasReading>
+<summary>
+The <strong><c>hasReading</c></strong> read-only<br/>property of the <see cref="Sensor"/> interface returns a boolean value<br/>indicating whether the sensor has a reading.
+</summary>
+<remarks>
+<para>Because <see cref="'Sensor'"/> is a base class, <c>hasReading</c> may only be read<br/>from one of its derived classes.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Sensor/hasReading"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value.</value>
+</SensorHasReading>
+<SensorActivate>
+<summary>
+The <strong><c>activate</c></strong> event is fired when a sensor becomes activated. It means that it will start obtaining readings.
+</summary>
+<remarks>
+<para>The <see cref="'Sensor'"/> interface is a base class, <c>onactivate</c> and the <c>activate</c> event may only be used<br/>on one of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Sensor#interfaces_based_on_sensor">derived classes</see>.</para>
+<para>-Sensor <see cref="'Sensor.Error'"/> event<br/>-Sensor <see cref="'Sensor.Reading'"/> event<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Sensor/activate"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</SensorActivate>
+<SensorTimestamp>
+<summary>
+The <strong><c>timestamp</c></strong> read-only property<br/>of the <see cref="Sensor"/> interface returns the timestamp of the latest sensor<br/>reading.
+</summary>
+<remarks>
+<para>Because <see cref="'Sensor'"/> is a base class, <c>timestamp</c> may only be read<br/>from one of its derived classes.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Sensor/timestamp"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DOMHighResTimeStamp"/>.</value>
+</SensorTimestamp>
+</docs>

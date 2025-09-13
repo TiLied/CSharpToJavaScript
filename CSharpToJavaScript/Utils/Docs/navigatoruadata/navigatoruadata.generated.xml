@@ -1,0 +1,64 @@
+<docs>
+<NavigatorUAData>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>NavigatorUAData</c></strong> interface of the {{domxref(&amp;quot;User-Agent Client Hints API&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} returns information about the browser and operating system of a user.
+</summary>
+<remarks>
+<para>An instance of this object is returned by calling <see cref="Navigator.UserAgentData"/> or <see cref="WorkerNavigator.UserAgentData"/>. Therefore, this interface has no constructor.</para><blockquote class="NOTE"><h5>NOTE</h5><para>The terms <strong>high entropy</strong> and <strong>low entropy</strong> refer to the amount of information these values reveal about the browser. The values returned as properties are deemed low entropy, and unlikely to identify a user. The values returned by <see cref="NavigatorUAData.GetHighEntropyValues"/> could potentially reveal more information. These values are therefore retrieved via a {{jsxref("Promise")}}, allowing time for the browser to request user permission, or make other checks.</para></blockquote>
+<para>-<see href="https://developer.chrome.com/docs/privacy-security/user-agent-client-hints">Improving user privacy and developer experience with User-Agent Client Hints</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorUAData"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>In the following value a number of hints are requested using the <see cref="NavigatorUAData.GetHighEntropyValues"/> method. When the promise resolves, this information is printed to the console.</returns>
+</NavigatorUAData>
+<NavigatorUADataMobile>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>mobile</c></strong> read-only property of the <see cref="NavigatorUAData"/> interface returns a value indicating whether the device is a mobile device.
+</summary>
+<remarks>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Mobile">Sec-CH-UA-Mobile</see> header (a <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Client_hints#low_entropy_hints">low-entropy client hint</see>) contains the same information.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorUAData/mobile"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Boolean"/>, <c>true</c> if this is a mobile device.</value>
+</NavigatorUADataMobile>
+<NavigatorUADataGetHighEntropyValues>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>getHighEntropyValues()</c></strong> method of the <see cref="NavigatorUAData"/> interface is a {{jsxref("Promise")}} that resolves with a dictionary object containing the <strong>high entropy</strong> values the user-agent returns.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>The terms <strong>high entropy</strong> and <strong>low entropy</strong> refer to the amount of information these values reveal about the browser.<br/>The values returned as properties are deemed low entropy, and unlikely to identify a user.<br/>The values returned by <c>getHighEntropyValues()</c> could potentially reveal more information.<br/>These values are therefore retrieved via a <see cref="Promise"/>, allowing time for the browser to request user permission, or make other checks.</para></blockquote>
+<para>-These values are also available as via HTTP request headers:-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Client_hints#low_entropy_hints">Low-entropy client hints</see> are sent automatically:-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA">Sec-CH-UA</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Mobile">Sec-CH-UA-Mobile</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Platform">Sec-CH-UA-Platform</see><br/><br/>-Servers can request to receive high-entropy client hints on subsequent requests, using the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-CH">Accept-CH</see> header:-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Arch">Sec-CH-UA-Arch</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Bitness">Sec-CH-UA-Bitness</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Full-Version">Sec-CH-UA-Full-Version</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Model">Sec-CH-UA-Model</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Platform-Version">Sec-CH-UA-Platform-Version</see><br/><br/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorUAData/getHighEntropyValues"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves to an object containing some or all of the following values (based on the hints requested):</returns>
+</NavigatorUADataGetHighEntropyValues>
+<NavigatorUADataBrands>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>brands</c></strong> read-only property of the <see cref="NavigatorUAData"/> interface returns an array of brand information.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA">Sec-CH-UA</see> (a <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Client_hints#low_entropy_hints">low-entropy client hint</see>) contains the same information.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorUAData/brands"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An array containing the following information for each brand:</value>
+</NavigatorUADataBrands>
+<NavigatorUADataPlatform>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>platform</c></strong> read-only property of the <see cref="NavigatorUAData"/> interface returns the platform brand information.
+</summary>
+<remarks>
+<para>-The <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Platform">Sec-CH-UA-Platform</see> header (a <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Client_hints#low_entropy_hints">low-entropy client hint</see>) contains the same information.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorUAData/platform"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing the platform brand.<br/>For example, <c>&amp;quot;Windows&amp;quot;</c>.</value>
+</NavigatorUADataPlatform>
+<NavigatorUADataToJSON>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>toJSON()</c></strong> method of the <see cref="NavigatorUAData"/> interface is a <strong>serializer</strong> that returns a JSON representation of the <strong>low entropy</strong> properties of the <c>NavigatorUAData</c> object.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>The terms <strong>high entropy</strong> and <strong>low entropy</strong> refer to the amount of information these values reveal about the browser. The low entropy values returned by this method are those which do not reveal information able to identify a user. High entropy values can only be returned by the <see cref="NavigatorUAData.GetHighEntropyValues"/> method.</para></blockquote>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorUAData/toJSON"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A JSON object.</returns>
+</NavigatorUADataToJSON>
+</docs>

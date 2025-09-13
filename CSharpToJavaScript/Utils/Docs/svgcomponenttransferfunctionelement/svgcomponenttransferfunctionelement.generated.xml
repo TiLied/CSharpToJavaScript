@@ -1,0 +1,75 @@
+<docs>
+<SVGComponentTransferFunctionElement>
+<summary>
+The <strong><c>SVGComponentTransferFunctionElement</c></strong> interface represents a base interface used by the component transfer function interfaces.
+</summary>
+<remarks>
+<para></para>
+<para>-<see cref="SVGFEFuncAElement"/><br/>-<see cref="SVGFEFuncBElement"/><br/>-<see cref="SVGFEFuncGElement"/><br/>-<see cref="SVGFEFuncRElement"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGComponentTransferFunctionElement"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</SVGComponentTransferFunctionElement>
+<SVGComponentTransferFunctionElementOffset>
+<summary>
+The <strong><c>offset</c></strong> read-only property of the <see cref="SVGComponentTransferFunctionElement"/> interface reflects the {{SVGAttr("offset")}} attribute of the given element.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGComponentTransferFunctionElement/offset"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedNumber"/> object.</value>
+</SVGComponentTransferFunctionElementOffset>
+<SVGComponentTransferFunctionElementTableValues>
+<summary>
+The <strong><c>tableValues</c></strong> read-only property of the <see cref="SVGComponentTransferFunctionElement"/> interface reflects the {{SVGAttr("tableValues")}} attribute of the given element.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGComponentTransferFunctionElement/tableValues"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedNumberList"/> object.</value>
+</SVGComponentTransferFunctionElementTableValues>
+<SVGComponentTransferFunctionElementSlope>
+<summary>
+The <strong><c>slope</c></strong> read-only property of the <see cref="SVGComponentTransferFunctionElement"/> interface reflects the {{SVGAttr("slope")}} attribute of the given element.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGComponentTransferFunctionElement/slope"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedNumber"/> object.</value>
+</SVGComponentTransferFunctionElementSlope>
+<SVGComponentTransferFunctionElementIntercept>
+<summary>
+The <strong><c>intercept</c></strong> read-only property of the <see cref="SVGComponentTransferFunctionElement"/> interface reflects the {{SVGAttr("intercept")}} attribute of the given element.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGComponentTransferFunctionElement/intercept"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedNumber"/> object.</value>
+</SVGComponentTransferFunctionElementIntercept>
+<SVGComponentTransferFunctionElementExponent>
+<summary>
+The <strong><c>exponent</c></strong> read-only property of the <see cref="SVGComponentTransferFunctionElement"/> interface reflects the {{SVGAttr("exponent")}} attribute of the given element.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGComponentTransferFunctionElement/exponent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedNumber"/> object.</value>
+</SVGComponentTransferFunctionElementExponent>
+<SVGComponentTransferFunctionElementAmplitude>
+<summary>
+The <strong><c>amplitude</c></strong> read-only property of the <see cref="SVGComponentTransferFunctionElement"/> interface reflects the {{SVGAttr("amplitude")}} attribute of the given element.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGComponentTransferFunctionElement/amplitude"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedNumber"/> object.</value>
+</SVGComponentTransferFunctionElementAmplitude>
+<SVGComponentTransferFunctionElementType>
+<summary>
+The <strong><c>type</c></strong> read-only property of the <see cref="SVGComponentTransferFunctionElement"/> interface reflects the {{SVGAttr("type")}} attribute of the given element. It takes one of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SVGComponentTransferFunctionElement#static_properties"><c>SVG_FECOMPONENTTRANSFER_TYPE_*</c></see> constants defined on this interface.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SVGComponentTransferFunctionElement/type"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="SVGAnimatedEnumeration"/> object.</value>
+</SVGComponentTransferFunctionElementType>
+</docs>

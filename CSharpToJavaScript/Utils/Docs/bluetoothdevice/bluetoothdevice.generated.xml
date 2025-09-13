@@ -1,0 +1,38 @@
+<docs>
+<BluetoothDevice>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The BluetoothDevice interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Bluetooth_API">Web Bluetooth API</see> represents a Bluetooth device inside a particular script execution<br/>environment.
+</summary>
+<remarks>
+<para></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothDevice"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</BluetoothDevice>
+<BluetoothDeviceGatt>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The<br/><strong><c>BluetoothDevice.gatt</c></strong> read-only property returns<br/>a reference to the device's <see cref="BluetoothRemoteGATTServer"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothDevice/gatt"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A reference to the device's <see cref="BluetoothRemoteGATTServer"/>.</value>
+</BluetoothDeviceGatt>
+<BluetoothDeviceName>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>BluetoothDevice.name</c></strong> read-only property returns a<br/>string that provides a human-readable name for the device.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothDevice/name"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</BluetoothDeviceName>
+<BluetoothDeviceId>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>BluetoothDevice.id</c></strong> read-only property returns a<br/>string that uniquely identifies a device.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothDevice/id"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</BluetoothDeviceId>
+</docs>

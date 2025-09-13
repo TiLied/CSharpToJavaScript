@@ -1,0 +1,30 @@
+<docs>
+<CSSKeyframeRule>
+<summary>
+The <strong><c>CSSKeyframeRule</c></strong> interface describes an object representing a set of styles for a given keyframe. It corresponds to the contents of a single keyframe of a <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes">@keyframes</see> <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_syntax/At-rule">at-rule</see>.
+</summary>
+<remarks>
+<para></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes">@keyframes</see><br/>-<see cref="CSSKeyFramesRule"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSKeyframeRule"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CSSKeyframeRule>
+<CSSKeyframeRuleKeyText>
+<summary>
+The <strong><c>keyText</c></strong> property of the <see cref="CSSKeyframeRule"/> interface represents the keyframe selector as a comma-separated list of percentage values. The from and to keywords map to 0% and 100%, respectively.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSKeyframeRule/keyText"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</CSSKeyframeRuleKeyText>
+<CSSKeyframeRuleStyle>
+<summary>
+The read-only <strong><c>CSSKeyframeRule.style</c></strong> property is the <see cref="CSSStyleDeclaration"/> interface for the declaration block of the <see cref="CSSKeyframeRule"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSKeyframeRule/style"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="CSSStyleDeclaration"/> object, with the following properties:</value>
+</CSSKeyframeRuleStyle>
+</docs>

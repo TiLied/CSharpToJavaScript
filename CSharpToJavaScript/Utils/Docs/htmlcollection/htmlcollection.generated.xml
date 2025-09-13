@@ -1,0 +1,42 @@
+<docs>
+<HTMLCollection>
+<summary>
+The <strong><c>HTMLCollection</c></strong> interface represents a generic collection (array-like object similar to <see cref="Functions/arguments"/>) of elements (in document order) and offers methods and properties for selecting from the list.
+</summary>
+<remarks>
+<para>An <c>HTMLCollection</c> in the HTML DOM is live; it is automatically updated when the underlying document is changed. For this reason it is a good idea to make a copy (e.g., using <see cref="Array/from"/>) to iterate over if adding, moving, or removing nodes.</para><para>This interface is called <c>HTMLCollection</c> for historical reasons, because before the modern DOM, collections implementing this interface could only have HTML elements as their items.</para><para>This interface was an <see href="https://stackoverflow.com/questions/74630989/why-use-domstringlist-rather-than-an-array/74641156#74641156">attempt to create an unmodifiable list</see> and only continues to be supported to not break code that&amp;apos;s already using it. Modern APIs represent list structures using types based on JavaScript <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">arrays</see>, thus making many array methods available, and at the same time imposing additional semantics on their usage (such as making their items read-only).</para><para>These historical reasons do not mean that you as a developer should avoid <c>HTMLCollection</c>. You don&amp;apos;t create <c>HTMLCollection</c> objects yourself, but you get them from APIs such as <see cref="Document.GetElementsByClassName"/>, and these APIs are not deprecated. However, be careful of the semantic differences from a real array.</para>
+<para>-<see cref="NodeList"/><br/>-<see cref="HTMLFormControlsCollection"/>, <see cref="HTMLOptionsCollection"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCollection"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLCollection>
+<HTMLCollectionLength>
+<summary>
+The <strong><c>HTMLCollection.length</c></strong> property returns the number of<br/>items in a <see cref="HTMLCollection"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCollection/length"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An integer value representing the number of items in a <c>HTMLCollection</c>.</value>
+</HTMLCollectionLength>
+<HTMLCollectionNamedItem>
+<summary>
+The <strong><c>namedItem()</c></strong> method of the <see cref="HTMLCollection"/> interface returns<br/>the first <see cref="Element"/> in the collection whose <c>id</c> or <c>name</c> attribute match the specified name, or <c>null</c> if no element matches.
+</summary>
+<remarks>
+<para>In JavaScript, instead of calling <c>collection.namedItem(&amp;quot;value&amp;quot;)</c>, you can also directly access the name on the collection, like <c>collection[&amp;quot;value&amp;quot;]</c>, unless the name collides with one of the existing <c>HTMLCollection</c> properties.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCollection/namedItem"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>The first <see cref="Element"/> in the <see cref="HTMLCollection"/> matching the <c>key</c>, or <see href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null"><c>null</c></see> if there is none. Always returns <c>null</c> if <c>key</c> is the empty string.</returns>
+</HTMLCollectionNamedItem>
+<HTMLCollectionItem>
+<summary>
+The <see cref="HTMLCollection"/> method <c>item()</c><br/>returns the element located at the specified offset into the collection.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Because the contents of an <c>HTMLCollection</c> are<br/>live, changes to the underlying DOM can and will cause the position of individual<br/>elements in the collection to change, so the index value will not necessarily remain<br/>constant for a given element.</para></blockquote>
+<para>-<see cref="NodeList.Item"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCollection/item"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>The <see cref="Element"/> at the specified index, or <c>null</c> if<br/><c>index</c> is less than zero or greater than or equal to the length property.</returns>
+</HTMLCollectionItem>
+</docs>

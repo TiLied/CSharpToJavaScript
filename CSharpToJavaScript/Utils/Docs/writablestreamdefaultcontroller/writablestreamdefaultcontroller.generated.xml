@@ -1,0 +1,29 @@
+<docs>
+<WritableStreamDefaultController>
+<summary>
+The <strong><c>WritableStreamDefaultController</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API">Streams API</see> represents a controller allowing control of a <see cref="WritableStream"/>'s state. When constructing a <c>WritableStream</c>, the underlying sink is given a corresponding <c>WritableStreamDefaultController</c> instance to manipulate.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WritableStreamDefaultController"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</WritableStreamDefaultController>
+<WritableStreamDefaultControllerSignal>
+<summary>
+The read-only <strong><c>signal</c></strong> property of the <see cref="WritableStreamDefaultController"/> interface returns the <see cref="AbortSignal"/> associated with the controller.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WritableStreamDefaultController/signal"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="AbortSignal"/> object.</value>
+</WritableStreamDefaultControllerSignal>
+<WritableStreamDefaultControllerError>
+<summary>
+The <strong><c>error()</c></strong> method of the<br/><see cref="WritableStreamDefaultController"/> interface causes any future interactions<br/>with the associated stream to error.
+</summary>
+<remarks>
+<para>This method is rarely used, since usually it suffices to return a rejected promise from<br/>one of the underlying sink&amp;apos;s methods. However, it can be useful for suddenly shutting<br/>down a stream in response to an event outside the normal lifecycle of interactions with<br/>the underlying sink.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/WritableStreamDefaultController/error"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</WritableStreamDefaultControllerError>
+</docs>

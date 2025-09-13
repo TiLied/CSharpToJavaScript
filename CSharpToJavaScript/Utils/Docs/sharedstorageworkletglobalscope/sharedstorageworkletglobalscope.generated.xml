@@ -1,0 +1,32 @@
+<docs>
+<SharedStorageWorkletGlobalScope>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>SharedStorageWorkletGlobalScope</c></strong> interface of the {{domxref(&amp;quot;Shared Storage API&amp;quot;, &amp;quot;Shared Storage API&amp;quot;, &amp;quot;&amp;quot;, "nocode")}} represents the global scope of a <see cref="SharedStorageWorklet"/> module.
+</summary>
+<remarks>
+<para></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Shared_Storage_API">Shared Storage API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SharedStorageWorkletGlobalScope"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</SharedStorageWorkletGlobalScope>
+<SharedStorageWorkletGlobalScopeRegister>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>register()</c></strong> method of the<br/><see cref="SharedStorageWorkletGlobalScope"/> interface registers an {{domxref("SharedStorageOperation", "operation", &amp;quot;&amp;quot;, &amp;quot;nocode&amp;quot;)}} defined inside the current worklet module.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Shared_Storage_API">Shared Storage API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SharedStorageWorkletGlobalScope/register"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<c>undefined</c>).</returns>
+</SharedStorageWorkletGlobalScopeRegister>
+<SharedStorageWorkletGlobalScopeSharedStorage>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>context</c></strong> read-only property of the<br/><see cref="SharedStorageWorkletGlobalScope"/> interface contains a <see cref="WorkletSharedStorage"/> object instance, which represents the shared storage for a particular origin as exposed to a worklet context.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Shared_Storage_API">Shared Storage API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SharedStorageWorkletGlobalScope/sharedStorage"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="WorkletSharedStorage"/> object instance.</value>
+</SharedStorageWorkletGlobalScopeSharedStorage>
+</docs>

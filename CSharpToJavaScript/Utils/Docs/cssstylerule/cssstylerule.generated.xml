@@ -1,0 +1,38 @@
+<docs>
+<CSSStyleRule>
+<summary>
+The <strong><c>CSSStyleRule</c></strong> interface represents a single CSS style rule.
+</summary>
+<remarks>
+<para></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleRule"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CSSStyleRule>
+<CSSStyleRuleStyleMap>
+<summary>
+The <strong><c>styleMap</c></strong> read-only property of the<br/><see cref="CSSStyleRule"/> interface returns a <see cref="'StylePropertyMap'"/> object<br/>which provides access to the rule&amp;apos;s property-value pairs.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleRule/styleMap"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="'StylePropertyMap'"/> object.</value>
+</CSSStyleRuleStyleMap>
+<CSSStyleRuleStyle>
+<summary>
+The read-only <strong><c>style</c></strong> property is the <see cref="CSSStyleDeclaration"/> interface for the declaration block of the <see cref="CSSStyleRule"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleRule/style"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="CSSStyleDeclaration"/> object, with the following properties:</value>
+</CSSStyleRuleStyle>
+<CSSStyleRuleSelectorText>
+<summary>
+The <strong><c>selectorText</c></strong> property of the <see cref="CSSStyleRule"/> interface gets and sets the selectors associated with the <c>CSSStyleRule</c>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleRule/selectorText"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</CSSStyleRuleSelectorText>
+</docs>

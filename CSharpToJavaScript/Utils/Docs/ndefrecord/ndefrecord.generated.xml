@@ -1,0 +1,85 @@
+<docs>
+<NDEFRecord>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>NDEFRecord</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_NFC_API">Web NFC API</see> provides data that can be read from, or written to, compatible NFC devices, e.g., NFC tags supporting NDEF.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NDEFRecord"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</NDEFRecord>
+<NDEFRecordEncoding>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>encoding</c></strong><br/>property of the <see cref="NDEFRecord"/> interface returns the encoding of<br/>a textual payload, or <c>null</c> otherwise.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NDEFRecord/encoding"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string which can be one of the following: <c>&amp;quot;utf-8&amp;quot;</c>,<br/><c>&amp;quot;utf-16&amp;quot;</c>, <c>&amp;quot;utf-16le&amp;quot;</c>, or <c>&amp;quot;utf-16be&amp;quot;</c>.</value>
+</NDEFRecordEncoding>
+<NDEFRecordRecordType>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>recordType</c></strong><br/>property of the <see cref="NDEFRecord"/> interface returns the record type of the record.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NDEFRecord/recordType"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string which can be one of the following:</value>
+</NDEFRecordRecordType>
+<NDEFRecordToRecords>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>toRecords()</c></strong><br/>method of the <see cref="NDEFRecord"/> interface converts<br/><see cref="NDEFRecord.Data"/> to a sequence of records based on<br/><see cref="NDEFRecord.RecordType"/>, and returns the result. This allows<br/>parsing the payloads of record types which may contain nested records, such<br/>as smart poster and external type records.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NDEFRecord/toRecords"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A list of <see cref="NDEFRecord"/>s.</returns>
+</NDEFRecordToRecords>
+<NDEFRecordNDEFRecord>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>NDEFRecord()</c></strong><br/>constructor of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_NFC_API">Web NFC API</see> returns a<br/>newly constructed <see cref="NDEFRecord"/> object that represents data that can be<br/>read from, or written to, compatible NFC devices; e.g., NFC tags supporting NDEF.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NDEFRecord/NDEFRecord"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="NDEFRecord"/>.</returns>
+</NDEFRecordNDEFRecord>
+<NDEFRecordData>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>data</c></strong><br/>property of the <see cref="NDEFRecord"/> interface returns a<br/><see cref="DataView"/> containing the raw bytes of the record's payload.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NDEFRecord/data"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DataView"/> that contains encoded payload data of the record.</value>
+</NDEFRecordData>
+<NDEFRecordLang>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>lang</c></strong><br/>property of the <see cref="NDEFRecord"/> interface returns the language of<br/>a textual payload, or <c>null</c> if one was not supplied.
+</summary>
+<remarks>
+<para>The record might be missing a language tag, for example, if the recorded information is<br/>not locale-specific.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/lang">HTML <c>lang</c> attribute</see>, that declares content language of the document or its elements<br/>-HTTP headers that declare content language: <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Language">Content-Language</see> and <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language">Accept-Language</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NDEFRecord/lang"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</NDEFRecordLang>
+<NDEFRecordMediaType>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>mediaType</c></strong><br/>property of the <see cref="NDEFRecord"/> interface returns the {{Glossary("MIME type")}} of the record. This value will be <c>null</c> if <c>recordType</c> is not equal to <c>&amp;quot;mime&amp;quot;</c>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NDEFRecord/mediaType"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string, containing the <see href="https://developer.mozilla.org/en-US/docs/Glossary/MIME type">MIME type</see> of the record<br/>payload.</value>
+</NDEFRecordMediaType>
+<NDEFRecordId>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>id</c></strong> property of the<br/><see cref="NDEFRecord"/> interface returns the record identifier, which is an<br/>absolute or relative URL used to identify the record.
+</summary>
+<remarks>
+<para>This identifier is created by the generator of the record which is solely responsible<br/>for enforcing record identifier uniqueness. Web NFC does not sign the NFC content, thus<br/>record consumer should not make any assumptions about integrity or authenticity of the<br/>identifier or any other part of the records.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NDEFRecord/id"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</NDEFRecordId>
+</docs>

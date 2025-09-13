@@ -1,0 +1,43 @@
+<docs>
+<AudioScheduledSourceNode>
+<summary>
+The <c>AudioScheduledSourceNode</c> interface—part of the Web Audio API—is a parent interface for several types of audio source node interfaces which share the ability to be started and stopped, optionally at specified times. Specifically, this interface defines the <see cref="AudioScheduledSourceNode.Start"/> and <see cref="AudioScheduledSourceNode.Stop"/> methods, as well as the <see cref="AudioScheduledSourceNode.Ended"/> event.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>You can&amp;apos;t create an <c>AudioScheduledSourceNode</c> object directly. Instead, use an interface which extends it, such as <see cref="AudioBufferSourceNode"/>, <see cref="OscillatorNode"/> or <see cref="ConstantSourceNode"/>.</para></blockquote><para>Unless stated otherwise, nodes based upon <c>AudioScheduledSourceNode</c> output silence when not playing (that is, before <c>start()</c> is called and after <c>stop()</c> is called). Silence is represented, as always, by a stream of samples with the value zero (0).</para><para></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/>-<see cref="AudioNode"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioScheduledSourceNode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</AudioScheduledSourceNode>
+<AudioScheduledSourceNodeStop>
+<summary>
+The <c>stop()</c> method on <see cref="AudioScheduledSourceNode"/> schedules a<br/>sound to cease playback at the specified time. If no time is specified, then the sound<br/>stops playing immediately.
+</summary>
+<remarks>
+<para>Each time you call <c>stop()</c> on the same node, the specified time replaces<br/>any previously-scheduled stop time that hasn&amp;apos;t occurred yet. If the node has already<br/>stopped, this method has no effect.</para><blockquote class="NOTE"><h5>NOTE</h5><para>If a scheduled stop time occurs before the node&amp;apos;s scheduled<br/>start time, the node never starts to play.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/>-<see cref="AudioScheduledSourceNode.Start"/><br/>-<see cref="AudioScheduledSourceNode"/><br/>-<see cref="AudioBufferSourceNode"/><br/>-<see cref="ConstantSourceNode"/><br/>-<see cref="OscillatorNode"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioScheduledSourceNode/stop"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</AudioScheduledSourceNodeStop>
+<AudioScheduledSourceNodeEnded>
+<summary>
+The <c>ended</c> event of the <see cref="AudioScheduledSourceNode"/> interface is fired when the source node has stopped playing.
+</summary>
+<remarks>
+<para>This event occurs when a <see cref="AudioScheduledSourceNode"/> has stopped playing, either because it's reached a predetermined stop time, the full duration of the audio has been performed, or because the entire buffer has been played.</para><para>This event is not cancelable and does not bubble.</para>
+<para>-<see cref="HTMLAudioElement"/><br/>-<see cref="HTMLVideoElement"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio">audio</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">video</see><br/>-The HTMLMediaElement <see cref="HTMLMediaElement.Ended"/> event<br/>-The MediaStreamTrack <see cref="MediaStreamTrack.Ended"/> event<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioScheduledSourceNode/ended"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</AudioScheduledSourceNodeEnded>
+<AudioScheduledSourceNodeStart>
+<summary>
+The <c>start()</c> method on <see cref="AudioScheduledSourceNode"/> schedules a sound to begin playback at the specified time.<br/>If no time is specified, then the sound begins playing immediately.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/>-<see cref="AudioScheduledSourceNode.Stop"/><br/>-<see cref="AudioScheduledSourceNode"/><br/>-<see cref="AudioBufferSourceNode"/><br/>-<see cref="ConstantSourceNode"/><br/>-<see cref="OscillatorNode"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioScheduledSourceNode/start"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</AudioScheduledSourceNodeStart>
+</docs>

@@ -1,0 +1,222 @@
+<docs>
+<RTCDataChannel>
+<summary>
+The <strong><c>RTCDataChannel</c></strong> interface represents a network channel which can be used for bidirectional peer-to-peer transfers of arbitrary data. Every data channel is associated with an <see cref="RTCPeerConnection"/>, and each peer connection can have up to a theoretical maximum of 65,534 data channels (the actual limit may vary from browser to browser).
+</summary>
+<remarks>
+<para>To create a data channel and ask a remote peer to join you, call the <see cref="RTCPeerConnection"/>'s <see cref="RTCPeerConnection.CreateDataChannel"/> method. The peer being invited to exchange data receives a <see cref="RTCPeerConnection.Datachannel"/> event (which has type <see cref="RTCDataChannelEvent"/>) to let it know the data channel has been added to the connection.</para><para><c>RTCDataChannel</c> is a <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Transferable_objects">transferable object</see>.</para><para></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RTCDataChannel>
+<RTCDataChannelBinaryType>
+<summary>
+The property <strong><c>binaryType</c></strong> on the<br/><see cref="RTCDataChannel"/> interface is a string which specifies<br/>the type of object which should be used to represent binary data received<br/>on the <see cref="RTCDataChannel"/>. Values allowed by the<br/><see cref="WebSocket.BinaryType"/> property are also permitted here:<br/><c>blob</c> if <see cref="Blob"/> objects are being used or<br/><c>arraybuffer</c> if <see cref="ArrayBuffer"/> objects are being used. The<br/>default is <c>arraybuffer</c>.
+</summary>
+<remarks>
+<para>When a binary message is received on the data channel, the resulting<br/><see cref="RTCDataChannel.Message"/> event's <see cref="MessageEvent.Data"/> property is an object of<br/>the type specified by the <c>binaryType</c>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_data_channels">Using WebRTC data channels</see><br/>-<see cref="RTCDataChannel"/><br/>-<see cref="RTCDataChannel.Send"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/binaryType"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string that can have one of these values:</value>
+</RTCDataChannelBinaryType>
+<RTCDataChannelLabel>
+<summary>
+The read-only <c>RTCDataChannel</c> property <strong><c>label</c></strong><br/>returns a string containing a name describing the data channel. These<br/>labels are not required to be unique.
+</summary>
+<remarks>
+<para>You may use the label as you wish; you could use it to identify all the channels that<br/>are being used for the same purpose, by giving them all the same name. Or you could give<br/>each channel a unique label for tracking purposes. It&amp;apos;s entirely up to the design<br/>decisions made when building your site or app.</para><para>A unique ID can be found in the <see cref="RTCDataChannel.Id"/> property.</para><blockquote class="NOTE"><h5>NOTE</h5><para>A data channel&amp;apos;s label is set when the channel is created by calling<br/><see cref="RTCPeerConnection.CreateDataChannel"/>. It cannot be changed after that.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/>-<see cref="RTCDataChannel"/><br/>-<see cref="RTCDataChannel.Id"/><br/>-<see cref="RTCPeerConnection.CreateDataChannel"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/label"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string identifier assigned by the website or app when the data channel was created,<br/>as specified when <see cref="RTCPeerConnection.CreateDataChannel"/> was called to<br/>create the channel.</value>
+</RTCDataChannelLabel>
+<RTCDataChannelOrdered>
+<summary>
+The read-only <c>RTCDataChannel</c> property <strong><c>ordered</c></strong> indicates<br/>whether or not the data channel guarantees in-order delivery of messages;<br/>the default is <c>true</c>,<br/>which indicates that the data channel is indeed ordered.<br/>This is set when the <see cref="RTCDataChannel"/> is created,<br/>by setting the <c>ordered</c> property<br/>on the object passed as <see cref="RTCPeerConnection.CreateDataChannel"/>'s <c>options</c> parameter.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/>-<see cref="RTCDataChannel"/><br/>-<see cref="RTCPeerConnection.CreateDataChannel"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/ordered"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value which is <c>true</c> if in-order delivery is<br/>guaranteed and is otherwise <c>false</c>.</value>
+</RTCDataChannelOrdered>
+<RTCDataChannelError>
+<summary>
+A WebRTC <c>error</c> event is sent to an <see cref="RTCDataChannel"/> object's <c>onerror</c> event handler when an error occurs on the data channel.
+</summary>
+<remarks>
+<para>The <see cref="RTCErrorEvent"/> object provides details about the error that occurred; see that article for details.</para><para>This event is not cancelable and does not bubble.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample">A simple RTCDataChannel example</see><br/>-Related events: <see cref="RTCDataChannel.Open"/>, <see cref="RTCDataChannel.Message"/>, and <see cref="RTCDataChannel.Close"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/error"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RTCDataChannelError>
+<RTCDataChannelReliable>
+<summary>
+<div class="IMPORTANT"><h5>IMPORTANT</h5> <strong>Deprecated</strong></div> The read-only <c>RTCDataChannel</c> property<br/><strong><c>reliable</c></strong> indicates whether or not the data channel is<br/>reliable.
+</summary>
+<remarks>
+<blockquote class="WARNING"><h5>WARNING</h5><para>This property is obsolete. Use <see cref="RTCDataChannel.Ordered"/> instead in any<br/>new code, and update existing code as soon as possible.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/>-<see cref="RTCDataChannel"/><br/>-<see cref="RTCDataChannel.Ordered"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/reliable"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value><c>true</c> if the <see cref="RTCDataChannel"/>'s connection is reliable;<br/><c>false</c> if it isn&amp;apos;t.</value>
+</RTCDataChannelReliable>
+<RTCDataChannelClose>
+<summary>
+The <strong><c>close</c></strong> event is sent to the <c>onclose</c> event handler on an <see cref="RTCDataChannel"/> instance when the data transport for the data channel has closed. Before any further data can be transferred using <c>RTCDataChannel</c>, a new &amp;apos;RTCDataChannel&amp;apos; instance must be created.
+</summary>
+<remarks>
+<para>This event is not cancelable and does not bubble.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample">A simple RTCDataChannel example</see><br/>-Related events: <see cref="RTCDataChannel.Open"/>, <see cref="RTCDataChannel.Message"/>, and <see cref="RTCDataChannel.Error"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/close"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RTCDataChannelClose>
+<RTCDataChannelProtocol>
+<summary>
+The read-only <c>RTCDataChannel</c> property<br/><strong><c>protocol</c></strong> returns a string containing the<br/>name of the subprotocol in use. If no protocol was specified when the data channel was<br/>created, then this property&amp;apos;s value is the empty string (<c>&amp;quot;&amp;quot;</c>).
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>The permitted values of this property are defined by the website or app using the<br/>data channel.</para></blockquote><para>The ability for each channel to have a defined subprotocol lets your app, for example,<br/>use JSON objects as messages on one channel while another channel is plaintext and<br/>another is raw binary or even some other format.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/>-<see cref="RTCDataChannel"/><br/>-<see cref="RTCPeerConnection.CreateDataChannel"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/protocol"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string identifying the app-defined subprotocol being used for exchanging data on the<br/>channel. If none has been established, this is an empty string (&amp;quot;&amp;quot;).</value>
+</RTCDataChannelProtocol>
+<RTCDataChannelMaxPacketLifeTime>
+<summary>
+The read-only <c>RTCDataChannel</c> property<br/><strong><c>maxPacketLifeTime</c></strong> returns the amount of time, in<br/>milliseconds, the browser is allowed to take to attempt to transmit a message, as set<br/>when the data channel was created, or <c>null</c>. This limits how long<br/>the browser can continue to attempt to transmit and retransmit the message before giving<br/>up.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/>-<see cref="RTCDataChannel"/><br/>-<see cref="RTCDataChannel.MaxRetransmits"/><br/>-<see cref="RTCPeerConnection.CreateDataChannel"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/maxPacketLifeTime"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The number of milliseconds over which the browser may continue to attempt to transmit<br/>the message until it either succeeds or gives up. If not set when<br/><see cref="RTCPeerConnection.CreateDataChannel"/> was called to create the data<br/>channel, this value is <c>null</c>.</value>
+</RTCDataChannelMaxPacketLifeTime>
+<RTCDataChannelBufferedAmount>
+<summary>
+The read-only <c>RTCDataChannel</c> property<br/><strong><c>bufferedAmount</c></strong> returns the number of bytes of data<br/>currently queued to be sent over the data channel. The queue may build up as a<br/>result of calls to the <see cref="RTCDataChannel.Send"/> method. This only<br/>includes data buffered by the user agent itself; it doesn&amp;apos;t include any framing overhead<br/>or buffering done by the operating system or network hardware.
+</summary>
+<remarks>
+<para>The user agent may implement the process of actually sending data in any way it<br/>chooses; this may be done periodically during the event loop or truly asynchronously. As<br/>messages are actually sent, this value is reduced accordingly.</para><blockquote class="NOTE"><h5>NOTE</h5><para>Closing the data channel doesn&amp;apos;t reset this count, even though the user agent purges<br/>the queued messages. However, even after closing the channel, attempts to send<br/>messages continue to add to the <c>bufferedAmount</c> value, even though the<br/>messages are neither sent nor buffered.</para></blockquote><para>Whenever this value decreases to fall to or below the value specified in the<br/><see cref="RTCDataChannel.BufferedAmountLowThreshold"/><br/>property, the user agent fires the <see cref="RTCDataChannel.Bufferedamountlow"/> event. This event may<br/>be used, for example, to implement code which queues more messages to be sent whenever<br/>there&amp;apos;s room to buffer them.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_data_channels">Using WebRTC data channels</see><br/>-<see cref="RTCDataChannel"/><br/>-<see cref="RTCDataChannel.BufferedAmountLowThreshold"/><br/>-<see cref="RTCDataChannel.Bufferedamountlow"/> event<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/bufferedAmount"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The number of bytes of data currently queued to be sent over the data channel but have<br/>not yet been sent.</value>
+</RTCDataChannelBufferedAmount>
+<RTCDataChannelReadyState>
+<summary>
+The read-only <c>RTCDataChannel</c> property <strong><c>readyState</c></strong> returns a string which indicates the state of the data channel&amp;apos;s underlying data connection.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_data_channels">Using WebRTC data channels</see><br/>-<see cref="RTCDataChannel"/><br/>-<see cref="RTCPeerConnection.CreateDataChannel"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/readyState"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string indicating the current state of the underlying data transport, which is one of the following values:</value>
+</RTCDataChannelReadyState>
+<RTCDataChannelBufferedamountlow>
+<summary>
+A <strong><c>bufferedamountlow</c></strong> event is sent to an <see cref="RTCDataChannel"/> when the number of bytes currently in the outbound data transfer buffer (<see cref="RTCDataChannel.BufferedAmount"/>) falls from above to below or equal the threshold specified in <see cref="RTCDataChannel.BufferedAmountLowThreshold"/>.
+</summary>
+<remarks>
+<para>This event is not cancelable and does not bubble.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see cref="RTCDataChannel"/><br/>-<see cref="RTCDataChannel.BufferedAmountLowThreshold"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/bufferedamountlow"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RTCDataChannelBufferedamountlow>
+<RTCDataChannelOpen>
+<summary>
+The WebRTC <strong><c>open</c></strong> event is sent to an <see cref="RTCDataChannel"/> object's <c>onopen</c> event handler when the underlying transport used to send and receive the data channel&amp;apos;s messages is opened or reopened.
+</summary>
+<remarks>
+<para>This event is not cancelable and does not bubble.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample">A simple RTCDataChannel example</see><br/>-Related events: <see cref="RTCDataChannel.Message"/>, <see cref="RTCDataChannel.Close"/>, and <see cref="RTCDataChannel.Error"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/open"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RTCDataChannelOpen>
+<RTCDataChannelBufferedAmountLowThreshold>
+<summary>
+The <c>RTCDataChannel</c> property<br/><strong><c>bufferedAmountLowThreshold</c></strong> is used to specify the number<br/>of bytes of buffered outgoing data that is considered &amp;quot;low.&amp;quot; The default value is<br/>0. When the number of buffered outgoing bytes, as indicated by the<br/><see cref="RTCDataChannel.BufferedAmount"/> property, falls to or<br/>below this value, a <see cref="RTCDataChannel.Bufferedamountlow"/> event is fired. This event may be<br/>used, for example, to implement code which queues more messages to be sent whenever<br/>there&amp;apos;s room to buffer them. Listeners may be added with<br/><see cref="RTCDataChannel.Bufferedamountlow"/> or<br/><see cref="EventTarget.AddEventListener"/>.
+</summary>
+<remarks>
+<para>The user agent may implement the process of actually sending data in any way it<br/>chooses; this may be done periodically during the event loop or truly asynchronously. As<br/>messages are actually sent, this value is reduced accordingly.</para><blockquote class="NOTE"><h5>NOTE</h5><para><c>bufferedamountlow</c> events are not fired after the data channel is closed.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_data_channels">Using WebRTC data channels</see><br/>-<see cref="RTCDataChannel"/><br/>-<see cref="RTCDataChannel.BufferedAmount"/><br/>-<see cref="RTCDataChannel.Bufferedamountlow"/> event<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/bufferedAmountLowThreshold"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The number of queued outgoing data bytes below which the buffer is considered to be<br/>&amp;quot;low.&amp;quot;</value>
+</RTCDataChannelBufferedAmountLowThreshold>
+<RTCDataChannelClose>
+<summary>
+The <strong><c>RTCDataChannel.close()</c></strong> method closes the<br/><see cref="RTCDataChannel"/>. Either peer is permitted to call this method to initiate<br/>closure of the channel.
+</summary>
+<remarks>
+<para>Closure of the data channel is not instantaneous. Most of the process of closing the<br/>connection is handled asynchronously; you can detect when the channel has finished<br/>closing by watching for a <see cref="RTCDataChannel.Close"/> event on the data channel.</para><para>The sequence of events which occurs in response to this method being called:</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/>-<see cref="RTCDataChannel"/><br/>-<see cref="RTCDataChannel.ReadyState"/><br/>-<see cref="RTCDataChannel.Close"/> event<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/close"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</RTCDataChannelClose>
+<RTCDataChannelClosing>
+<summary>
+The <strong><c>closing</c></strong> event is sent to an <see cref="RTCDataChannel"/> just before the channel begins the process of shutting down its underlying data transport.
+</summary>
+<remarks>
+<para>This event is not cancelable and does not bubble.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling">Signaling and video calling</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/closing"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RTCDataChannelClosing>
+<RTCDataChannelMaxRetransmits>
+<summary>
+The read-only <c>RTCDataChannel</c> property<br/><strong><c>maxRetransmits</c></strong> returns the maximum number of times the<br/>browser should try to retransmit a message before giving up, as set when the data<br/>channel was created, or <c>null</c>, which indicates that there is no<br/>maximum. This can only be set when the <see cref="RTCDataChannel"/> is created<br/>by calling <see cref="RTCPeerConnection.CreateDataChannel"/>, using the<br/><c>maxRetransmits</c> field in the specified <c>options</c>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/>-<see cref="RTCDataChannel"/><br/>-<see cref="RTCDataChannel.MaxPacketLifetime"/><br/>-<see cref="RTCPeerConnection.CreateDataChannel"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/maxRetransmits"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The maximum number of times the browser will try to retransmit a message before giving<br/>up, or <c>null</c> if not set when<br/><see cref="RTCPeerConnection.CreateDataChannel"/> was called. The default is<br/><c>null</c>.</value>
+</RTCDataChannelMaxRetransmits>
+<RTCDataChannelId>
+<summary>
+The read-only <c>RTCDataChannel</c> property<br/><strong><c>id</c></strong> returns an ID number (between 0 and 65,534) which<br/>uniquely identifies the <see cref="RTCDataChannel"/>. This ID is set at the<br/>time the data channel is created, either by the user agent (if<br/><see cref="RTCDataChannel.Negotiated"/> is <c>false</c>) or by the site or app<br/>script (if <c>negotiated</c> is <c>true</c>).
+</summary>
+<remarks>
+<para>Each <see cref="RTCPeerConnection"/> can therefore have up to a theoretical maximum of<br/>65,534 data channels on it, although the actual maximum may vary from browser to<br/>browser.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/>-<see cref="RTCDataChannel"/><br/>-<see cref="RTCPeerConnection.CreateDataChannel"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/id"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <c>unsigned short</c> value (that is, an integer between 0 and 65,535) which<br/>uniquely identifies the data channel.While the <see cref="RTCDataChannel.Label"/> property doesn't have to be<br/>unique, this ID number is guaranteed to be unique among all data channels. Additionally,<br/>known implementations of WebRTC use the same ID on both peers. A unique ID makes it<br/>easier for your code to do its own out-of-band data channel-related signaling.This can be also useful for logging and debugging purposes.</value>
+</RTCDataChannelId>
+<RTCDataChannelMessage>
+<summary>
+The WebRTC <strong><c>message</c></strong> event is sent to the <c>onmessage</c> event handler on an <see cref="RTCDataChannel"/> object when a message has been received from the remote peer.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>The <c>message</c> event uses as its event object type the <see cref="MessageEvent"/> interface defined by the HTML specification.</para></blockquote><para>This event is not cancelable and does not bubble.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample">A simple RTCDataChannel example</see><br/>-Related events: <see cref="RTCDataChannel.Open"/>, <see cref="RTCDataChannel.Close"/>, and <see cref="RTCDataChannel.Error"/><br/>-<see cref="RTCDataChannel.Send"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/message"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RTCDataChannelMessage>
+<RTCDataChannelNegotiated>
+<summary>
+The read-only <c>RTCDataChannel</c> property<br/><strong><c>negotiated</c></strong> indicates whether the<br/><see cref="RTCDataChannel"/>'s connection was negotiated by the Web app<br/>(<c>true</c>) or by the WebRTC layer (<c>false</c>). <strong>The</strong><strong><br/></strong><strong>default is </strong><strong><c>false</c></strong><strong>.</strong>
+</summary>
+<remarks>
+<para>See <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_data_channels#creating_a_data_channel">Creating a data channel</see> for further information about this property.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_data_channels">Using WebRTC data channels</see><br/>-<see cref="RTCDataChannel"/><br/>-<see cref="RTCPeerConnection.CreateDataChannel"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/negotiated"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value><c>true</c> if the <see cref="RTCDataChannel"/>'s connection was negotiated by<br/>the Web app itself; <c>false</c> if the negotiation was handled by the WebRTC<br/>layer. The default is <c>false</c>.</value>
+</RTCDataChannelNegotiated>
+<RTCDataChannelSend>
+<summary>
+The <strong><c>send()</c></strong> method of the<br/><see cref="RTCDataChannel"/> interface sends data across the data channel to the<br/>remote peer.<br/>This can be done any time except during the initial process of<br/>creating the underlying transport channel. Data sent before connecting is buffered if<br/>possible (or an error occurs if it&amp;apos;s not possible), and is also buffered if sent while<br/>the connection is closing or closed.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>Different browsers have different limitations on the size of the message you can<br/>send. Specifications exist to define how to automatically fragment large messages, but<br/>not all browsers implement them, and those that do have various additional<br/>restrictions. This will get less complicated over time, but for now, if you have<br/>questions, see <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_data_channels#understanding_message_size_limits">Understanding message size limits</see>.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</see><br/>-<see cref="RTCDataChannel"/><br/>-<see cref="RTCDataChannel.ReadyState"/><br/>-<see cref="RTCDataChannel.Close"/> event<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/send"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<see cref="Undefined"/>).</returns>
+</RTCDataChannelSend>
+</docs>

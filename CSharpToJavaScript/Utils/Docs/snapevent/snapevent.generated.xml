@@ -1,0 +1,43 @@
+<docs>
+<SnapEvent>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>SnapEvent</c></strong> interface defines the event object for the <see cref="Elementscrollsnapchanging"/> and <see cref="Elementscrollsnapchange"/> events. Respectively, these fire on a <see href="https://developer.mozilla.org/en-US/docs/Glossary/Scroll_container">scroll container</see> when the browser determines that a new scroll snap target is pending (will be selected when the current scroll gesture ends), and when a new snap target is selected.
+</summary>
+<remarks>
+<para>These events can be used to run code in response to new elements being snapped to; <c>SnapEvent</c> exposes references to the element snapped to in the inline and/or block direction. The property values available on <c>SnapEvent</c> correspond directly to the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-snap-type">scroll-snap-type</see> CSS property set on the scroll container:</para><para></para>
+<para>-<see cref="Elementscrollsnapchanging"/> event<br/>-<see cref="Elementscrollsnapchange"/> event<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_scroll_snap">CSS scroll snap module</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_scroll_snap/Using_scroll_snap_events">Using scroll snap events</see><br/>-<see href="https://developer.chrome.com/blog/scroll-snap-events">Scroll Snap Events</see> on developer.chrome.com (2024)<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SnapEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</SnapEvent>
+<SnapEventSnapTargetBlock>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>snapTargetBlock</c></strong> read-only property of the<br/><see cref="SnapEvent"/> interface returns a reference to the element snapped to in the block direction when the event fired.
+</summary>
+<remarks>
+<para>Specifically:</para><para>The property values available on <c>SnapEvent</c> correspond directly to the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-snap-type">scroll-snap-type</see> CSS property set on the scroll container. <c>snapTargetBlock</c> only returns an element reference if the snap axis is specified as <c>block</c> (or a physical axis value that equates to <c>block</c> in the current writing mode) or <c>both</c>.</para>
+<para>-<see cref="Elementscrollsnapchanging"/> event<br/>-<see cref="Elementscrollsnapchange"/> event<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_scroll_snap">CSS scroll snap module</see><br/>-<see href="https://developer.chrome.com/blog/scroll-snap-events">Scroll Snap Events</see> on developer.chrome.com (2024)<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SnapEvent/snapTargetBlock"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Node"/> representing the snapped element, or <c>null</c> if scroll snapping only occurs in the inline direction so no element is snapped to in the block direction.If the snapped element was a pseudo-element, the returned <c>Node</c> will be the owning element of that pseudo-element.</value>
+</SnapEventSnapTargetBlock>
+<SnapEventSnapTargetInline>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>snapTargetInline</c></strong> read-only property of the<br/><see cref="SnapEvent"/> interface returns a reference to the element snapped to in the inline direction when the event fired.
+</summary>
+<remarks>
+<para>Specifically:</para><para>The property values available on <c>SnapEvent</c> correspond directly to the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-snap-type">scroll-snap-type</see> CSS property set on the scroll container. <c>snapTargetInline</c> only returns an element reference if the snap axis is specified as <c>inline</c> (or a physical axis value that equates to <c>inline</c> in the current writing mode) or <c>both</c>.</para>
+<para>-<see cref="Elementscrollsnapchanging"/> event<br/>-<see cref="Elementscrollsnapchange"/> event<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_scroll_snap">CSS scroll snap module</see><br/>-<see href="https://developer.chrome.com/blog/scroll-snap-events">Scroll Snap Events</see> on developer.chrome.com (2024)<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SnapEvent/snapTargetInline"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="Node"/> representing the snapped element, or <c>null</c> if scroll snapping only occurs in the block direction so no element is snapped to in the inline direction.If the snapped element was a pseudo-element, the returned <c>Node</c> will be the owning element of that pseudo-element.</value>
+</SnapEventSnapTargetInline>
+<SnapEventSnapEvent>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>SnapEvent()</c></strong> constructor creates a new<br/><see cref="SnapEvent"/> object instance.
+</summary>
+<remarks>
+<para>-<see cref="Elementscrollsnapchanging"/> event<br/>-<see cref="Elementscrollsnapchange"/> event<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_scroll_snap">CSS scroll snap module</see><br/>-<see href="https://developer.chrome.com/blog/scroll-snap-events">Scroll Snap Events</see> on developer.chrome.com (2024)<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/SnapEvent/SnapEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</SnapEventSnapEvent>
+</docs>

@@ -1,0 +1,67 @@
+<docs>
+<CacheStorage>
+<summary>
+The <strong><c>CacheStorage</c></strong> interface represents the storage for <see cref="Cache"/> objects.
+</summary>
+<remarks>
+<para>The interface:</para><para>Use <see cref="CacheStorage.Open"/> to obtain a <see cref="Cache"/> instance.</para><para>Use <see cref="CacheStorage.Match"/> to check if a given <see cref="Request"/> is a key in any of the <see cref="Cache"/> objects that the <c>CacheStorage</c> object tracks.</para><para>You can access <c>CacheStorage</c> through the <see cref="Window.Caches"/> property in windows or through the <see cref="WorkerGlobalScope.Caches"/> property in workers.</para><blockquote class="NOTE"><h5>NOTE</h5><para><c>CacheStorage</c> always rejects with a <c>SecurityError</c> on untrusted origins (i.e., those that aren&amp;apos;t using HTTPS, although this definition will likely become more complex in the future.) When testing on Firefox, you can get around this by checking the <strong>Enable Service Workers over HTTP (when toolbox is open)</strong> option in the Firefox DevTools options/gear menu. Furthermore, because <c>CacheStorage</c> requires file-system access, it may be unavailable in private mode in Firefox.</para></blockquote><blockquote class="NOTE"><h5>NOTE</h5><para><see cref="CacheStorage.Match"/> is a convenience method. Equivalent functionality to match a cache entry can be implemented by returning an array of cache names from <see cref="CacheStorage.Keys"/>, opening each cache with <see cref="CacheStorage.Open"/>, and matching the one you want with <see cref="Cache.Match"/>.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</see><br/>-<see cref="Cache"/><br/>-<see cref="Window.Caches"/> and <see cref="WorkerGlobalScope.Caches"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API#private_browsing_incognito_modes">Private Browsing / Incognito modes</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CacheStorage>
+<CacheStorageHas>
+<summary>
+The <strong><c>has()</c></strong> method of the <see cref="CacheStorage"/><br/>interface returns a <see cref="Promise"/> that resolves to <c>true</c> if a<br/><see cref="Cache"/> object matches the <c>cacheName</c>.
+</summary>
+<remarks>
+<para>You can access <c>CacheStorage</c> through the <see cref="Window.Caches"/> property in windows or through the <see cref="WorkerGlobalScope.Caches"/> property in workers.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</see><br/>-<see cref="Cache"/><br/>-<see cref="Window.Caches"/> and <see cref="WorkerGlobalScope.Caches"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage/has"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>a <see cref="Promise"/> that resolves to <c>true</c> if the cache exists or<br/><c>false</c> if not.</returns>
+</CacheStorageHas>
+<CacheStorageMatch>
+<summary>
+The <strong><c>match()</c></strong> method of the <see cref="CacheStorage"/> interface checks if a given <see cref="Request"/> or URL string is a key for a stored <see cref="Response"/>.<br/>This method returns a {{jsxref("Promise")}} for a <see cref="Response"/>, or a {{jsxref("Promise")}} which resolves to <c>undefined</c> if no match is found.
+</summary>
+<remarks>
+<para>You can access <c>CacheStorage</c> through the <see cref="Window.Caches"/> property in windows or through the <see cref="WorkerGlobalScope.Caches"/> property in workers.</para><para><c>Cache</c> objects are searched in creation order.</para><blockquote class="NOTE"><h5>NOTE</h5><para><c>caches.match()</c> is a convenience method.<br/>Equivalent functionality is to call <see cref="Cache.Match"/> on each cache (in the order returned by <see cref="CacheStorage.Keys"/>) until a <see cref="Response"/> is returned.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</see><br/>-<see cref="Cache"/><br/>-<see cref="Window.Caches"/> and <see cref="WorkerGlobalScope.Caches"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage/match"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>a {{jsxref("Promise")}} that resolves to the matching <see cref="Response"/>. If<br/>no matching response to the specified request is found, the promise resolves<br/>with <c>undefined</c>.</returns>
+</CacheStorageMatch>
+<CacheStorageDelete>
+<summary>
+The <strong><c>delete()</c></strong> method of the <see cref="CacheStorage"/> interface finds the <see cref="Cache"/> object matching the <c>cacheName</c>, and if found, deletes the <see cref="Cache"/> object and returns a {{jsxref("Promise")}} that resolves to <c>true</c>.<br/>If no <see cref="Cache"/> object is found, it resolves to <c>false</c>.
+</summary>
+<remarks>
+<para>You can access <c>CacheStorage</c> through the <see cref="Window.Caches"/> property in windows or through the <see cref="WorkerGlobalScope.Caches"/> property in workers.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</see><br/>-<see cref="Cache"/><br/>-<see cref="Window.Caches"/> and <see cref="WorkerGlobalScope.Caches"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage/delete"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>a <see cref="Promise"/> that resolves to <c>true</c> if the <see cref="Cache"/><br/>object is found and deleted, and <c>false</c> otherwise.</returns>
+</CacheStorageDelete>
+<CacheStorageKeys>
+<summary>
+The <strong><c>keys()</c></strong> method of the <see cref="CacheStorage"/> interface returns a {{jsxref("Promise")}} that will resolve with an array containing strings corresponding to all of the named <see cref="Cache"/> objects tracked by the <see cref="CacheStorage"/> object in the order they were created.<br/>Use this method to iterate over a list of all <see cref="Cache"/> objects.
+</summary>
+<remarks>
+<para>You can access <c>CacheStorage</c> through the <see cref="Window.Caches"/> property in windows or through the <see cref="WorkerGlobalScope.Caches"/> property in workers.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</see><br/>-<see cref="Cache"/><br/>-<see cref="Window.Caches"/> and <see cref="WorkerGlobalScope.Caches"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage/keys"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>a {{jsxref("Promise")}} that resolves with an array of the <see cref="Cache"/> names inside the <see cref="CacheStorage"/> object.</returns>
+</CacheStorageKeys>
+<CacheStorageOpen>
+<summary>
+The <strong><c>open()</c></strong> method of the<br/><see cref="CacheStorage"/> interface returns a {{jsxref("Promise")}} that resolves to<br/>the <see cref="Cache"/> object matching the <c>cacheName</c>.
+</summary>
+<remarks>
+<para>You can access <c>CacheStorage</c> through the <see cref="Window.Caches"/> property in windows or through the <see cref="WorkerGlobalScope.Caches"/> property in workers.</para><blockquote class="NOTE"><h5>NOTE</h5><para>If the specified <see cref="Cache"/> does not exist, a new<br/>cache is created with that <c>cacheName</c> and a <see cref="Promise"/> that<br/>resolves to this new <see cref="Cache"/> object is returned.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</see><br/>-<see cref="Cache"/><br/>-<see cref="Window.Caches"/> and <see cref="WorkerGlobalScope.Caches"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage/open"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("Promise")}} that resolves to the requested <see cref="Cache"/> object.</returns>
+</CacheStorageOpen>
+</docs>

@@ -1,0 +1,65 @@
+<docs>
+<HTMLTemplateElement>
+<summary>
+The <strong><c>HTMLTemplateElement</c></strong> interface enables access to the contents of an HTML <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template">template</see> element.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>An HTML parser can create either an <c>HTMLTemplateElement</c> or a <see cref="ShadowRoot"/> when it parses a {{HTMLElement("template")}} element, depending on the <c>&amp;lt;template&amp;gt;</c> attributes.<br/>If an <c>HTMLTemplateElement</c> is created the &amp;quot;shadow&amp;quot; attributes are reflected from the template.<br/>However these are not useful, because an <c>HTMLTemplateElement</c> is not a shadow root and cannot subsequently be changed to a shadow root.</para></blockquote><para></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTemplateElement"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</HTMLTemplateElement>
+<HTMLTemplateElementShadowRootMode>
+<summary>
+The <strong><c>shadowRootMode</c></strong> property of the <see cref="HTMLTemplateElement"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootmode"><c>shadowrootmode</c></see> attribute of the associated <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/template"><c>&amp;lt;template&amp;gt;</c></see> element.
+</summary>
+<remarks>
+<para>Note that this property is not useful for developers.<br/>If a <c>&amp;lt;template&amp;gt;</c> element is used to declaratively create a <see href="https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot"><c>ShadowRoot</c></see>, then this object and property do not exist.<br/>Otherwise, if an <c>HTMLTemplateElement</c> is created, the value of this property is irrelevant because the object is not a shadow root and cannot subsequently be changed to a shadow root.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootmode"><c>shadowrootmode</c></see> attribute of the <c>&amp;lt;template&amp;gt;</c> element<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/mode"><c>ShadowRoot.mode</c></see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTemplateElement/shadowRootMode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>Reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootmode"><c>shadowrootmode</c></see> attribute of the associated <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/template"><c>&amp;lt;template&amp;gt;</c></see> element.</value>
+</HTMLTemplateElementShadowRootMode>
+<HTMLTemplateElementShadowRootDelegatesFocus>
+<summary>
+The <strong><c>shadowRootDelegatesFocus</c></strong> property of the <see cref="HTMLTemplateElement"/> interface reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootdelegatesfocus"><c>shadowrootdelegatesfocus</c></see> attribute of the associated <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/template"><c>&amp;lt;template&amp;gt;</c></see> element.
+</summary>
+<remarks>
+<para>Note that this property is not useful for developers.<br/>If a <c>&amp;lt;template&amp;gt;</c> element is used to declaratively create a <see href="https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot"><c>ShadowRoot</c></see>, then this object and property do not exist.<br/>Otherwise, if an <c>HTMLTemplateElement</c> is created, the value of this property is irrelevant because the object is not a shadow root and cannot subsequently be changed to a shadow root.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootdelegatesfocus"><c>shadowrootdelegatesfocus</c></see> attribute of the <c>&amp;lt;template&amp;gt;</c> element<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/delegatesFocus"><c>ShadowRoot.delegatesFocus</c></see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTemplateElement/shadowRootDelegatesFocus"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>Reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootdelegatesfocus"><c>shadowrootdelegatesfocus</c></see> attribute of the associated <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/template"><c>&amp;lt;template&amp;gt;</c></see> element.</value>
+</HTMLTemplateElementShadowRootDelegatesFocus>
+<HTMLTemplateElementShadowRootClonable>
+<summary>
+The <strong><c>shadowRootClonable</c></strong> property reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootclonable"><c>shadowrootclonable</c></see> attribute of the associated <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/template"><c>&amp;lt;template&amp;gt;</c></see> element.
+</summary>
+<remarks>
+<para>Note that this property is not useful for developers.<br/>If a <c>&amp;lt;template&amp;gt;</c> element is used to declaratively create a <see href="https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot"><c>ShadowRoot</c></see>, then this object and property do not exist.<br/>Otherwise, if an <c>HTMLTemplateElement</c> is created, the value of this property is irrelevant because the object is not a shadow root and cannot subsequently be changed to a shadow root.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootclonable"><c>shadowrootclonable</c></see> attribute of the <c>&amp;lt;template&amp;gt;</c> element<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/clonable"><c>ShadowRoot.clonable</c></see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTemplateElement/shadowRootClonable"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>Reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootclonable"><c>shadowrootclonable</c></see> attribute of the associated <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/template"><c>&amp;lt;template&amp;gt;</c></see> element.</value>
+</HTMLTemplateElementShadowRootClonable>
+<HTMLTemplateElementContent>
+<summary>
+The <strong><c>HTMLTemplateElement.content</c></strong> property returns a<br/><c>&amp;lt;template&amp;gt;</c> element&amp;apos;s template contents (a<br/><see cref="DocumentFragment"/>).
+</summary>
+<remarks>
+<para>-<see cref="HTMLTemplateElement"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTemplateElement/content"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DocumentFragment"/>.</value>
+</HTMLTemplateElementContent>
+<HTMLTemplateElementShadowRootSerializable>
+<summary>
+The <strong><c>shadowRootSerializable</c></strong> property reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootserializable"><c>shadowrootserializable</c></see> attribute of the associated <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/template"><c>&amp;lt;template&amp;gt;</c></see> element.
+</summary>
+<remarks>
+<para>Note that this property is not useful for developers.<br/>If a <c>&amp;lt;template&amp;gt;</c> element is used to declaratively create a <see href="https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot"><c>ShadowRoot</c></see>, then this object and property do not exist.<br/>Otherwise, if an <c>HTMLTemplateElement</c> is created, the value of this property is irrelevant because the object is not a shadow root and cannot subsequently be changed to a shadow root.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootserializable"><c>shadowrootserializable</c></see> attribute of the <c>&amp;lt;template&amp;gt;</c> element<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/serializable"><c>ShadowRoot.serializable</c></see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTemplateElement/shadowRootSerializable"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>Reflects the value of the <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootserializable"><c>shadowrootserializable</c></see> attribute of the associated <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/template"><c>&amp;lt;template&amp;gt;</c></see> element.</value>
+</HTMLTemplateElementShadowRootSerializable>
+</docs>

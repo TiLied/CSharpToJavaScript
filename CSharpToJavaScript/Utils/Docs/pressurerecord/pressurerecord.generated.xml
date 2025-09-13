@@ -1,0 +1,47 @@
+<docs>
+<PressureRecord>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>PressureRecord</c></strong> interface is part of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Compute_Pressure_API">Compute Pressure API</see> and describes the pressure trend of a source at a specific moment of transition.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PressureRecord"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</PressureRecord>
+<PressureRecordSource>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The read-only <strong><c>source</c></strong> property is a string indicating the origin source from which the record is coming.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PressureRecord/source"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string indicating the origin source from which the record is coming. The current version of the Compute Pressure API specification supports two main source types:Use the static <see cref="PressureObserver.KnownSources"/> hint to see which source types are supported by your browser. Note that availability can also vary by your operating system and your hardware. Call <see cref="PressureObserver.Observe"/> and check for a <c>NotSupportedError</c> to see if pressure observation is possible.</value>
+</PressureRecordSource>
+<PressureRecordTime>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The read-only <strong><c>time</c></strong> property returns the {{domxref(&amp;quot;DOMHighResTimeStamp&amp;quot;,&amp;quot;timestamp&amp;quot;, &amp;quot;&amp;quot;, "no-code")}} recorded for a <see cref="PressureRecord"/>. It corresponds to the time the data was obtained from the system relative to the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Performance/timeOrigin">time origin of the global object</see> in which the <see cref="PressureObserver"/> generated the notification.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PressureRecord/time"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DOMHighResTimeStamp"/> representing the timestamp when the <see cref="PressureRecord"/> was created.</value>
+</PressureRecordTime>
+<PressureRecordState>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The read-only <strong><c>state</c></strong> property is a string indicating the pressure state recorded.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PressureRecord/state"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string indicating the pressure state recorded. The Compute Pressure API uses human-readable pressure states with the following semantics (see also the <see href="https://w3c.github.io/compute-pressure/#pressure-states">specification</see>):</value>
+</PressureRecordState>
+<PressureRecordToJSON>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>toJSON()</c></strong> method is a {{Glossary("Serialization","serializer")}}; it returns a JSON representation of the <see cref="PressureRecord"/> object.
+</summary>
+<remarks>
+<para>-<see cref="JSON"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/PressureRecord/toJSON"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A {{jsxref("JSON")}} object that is the serialization of the <see cref="PressureRecord"/> object.</returns>
+</PressureRecordToJSON>
+</docs>

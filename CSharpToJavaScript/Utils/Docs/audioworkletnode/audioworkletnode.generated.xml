@@ -1,0 +1,52 @@
+<docs>
+<AudioWorkletNode>
+<summary>
+<blockquote class="NOTE"><h5>NOTE</h5>Although the interface is available outside <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts">secure contexts</see>, the <see cref="BaseAudioContext.AudioWorklet"/> property is not, thus custom <see cref="AudioWorkletProcessor"/>s cannot be defined outside them.</blockquote>
+</summary>
+<remarks>
+<para>The <strong><c>AudioWorkletNode</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see> represents a base class for a user-defined <see cref="AudioNode"/>, which can be connected to an audio routing graph along with other nodes. It has an associated <see cref="AudioWorkletProcessor"/>, which does the actual audio processing in a Web Audio rendering thread.</para><para></para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_AudioWorklet">Using AudioWorklet</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioWorkletNode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</AudioWorkletNode>
+<AudioWorkletNodeAudioWorkletNode>
+<summary>
+The <strong><c>AudioWorkletNode()</c></strong><br/>constructor creates a new <see cref="AudioWorkletNode"/> object, which represents an<br/><see cref="AudioNode"/> that uses a JavaScript function to perform custom audio<br/>processing.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_AudioWorklet">Background audio processing using AudioWorklet</see><br/>-<see cref="AudioWorkletNode"/> interface<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioWorkletNode/AudioWorkletNode"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</AudioWorkletNodeAudioWorkletNode>
+<AudioWorkletNodeProcessorerror>
+<summary>
+The <c>processorerror</c> event fires when the underlying <see cref="AudioWorkletProcessor"/> behind the node throws an exception in its constructor, the <see cref="AudioWorkletProcessor.Process"/> method, or any user-defined class method.
+</summary>
+<remarks>
+<para>Once an exception is thrown, the processor (and thus the node) will output silence throughout its lifetime.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioWorkletNode/processorerror"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</AudioWorkletNodeProcessorerror>
+<AudioWorkletNodeParameters>
+<summary>
+The read-only <strong><c>parameters</c></strong> property of the<br/><see cref="AudioWorkletNode"/> interface returns the associated<br/><see cref="AudioParamMap"/> — that is, a <c>Map</c>-like collection of<br/><see cref="AudioParam"/> objects. They are instantiated during creation of the<br/>underlying <see cref="AudioWorkletProcessor"/> according to its<br/><see cref="AudioWorkletProcessor.ParameterDescriptors"/> static<br/>getter.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioWorkletNode/parameters"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <see cref="AudioParamMap"/> object containing <see cref="AudioParam"/> instances.<br/>They can be automated in the same way as with default <c>AudioNode</c>s, and their<br/>calculated values can be used in the <see cref="AudioWorkletProcessor.Process"/> method of your <see cref="AudioWorkletProcessor"/>.</value>
+</AudioWorkletNodeParameters>
+<AudioWorkletNodePort>
+<summary>
+The read-only <strong><c>port</c></strong> property of the<br/><see cref="AudioWorkletNode"/> interface returns the associated<br/><see cref="MessagePort"/>. It can be used to communicate between the node and its<br/>associated <see cref="AudioWorkletProcessor"/>.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>The port at the other end of the channel is<br/>available under the <see cref="AudioWorkletProcessor.Port"/> property of the<br/>processor.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/AudioWorkletNode/port"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>The <see cref="MessagePort"/> object that is connecting the<br/><c>AudioWorkletNode</c> and its associated <c>AudioWorkletProcessor</c>.</value>
+</AudioWorkletNodePort>
+</docs>

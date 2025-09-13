@@ -1,0 +1,50 @@
+<docs>
+<CryptoKey>
+<summary>
+The <strong><c>CryptoKey</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API">Web Crypto API</see> represents a cryptographic {{glossary("key")}} obtained from one of the <see cref="SubtleCrypto"/> methods <see cref="SubtleCrypto.GenerateKey"/>, <see cref="SubtleCrypto.DeriveKey"/>, <see cref="SubtleCrypto.ImportKey"/>, or <see cref="SubtleCrypto.UnwrapKey"/>.
+</summary>
+<remarks>
+<para>For security reasons, the <c>CryptoKey</c> interface can only be used in a <see href="https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts">secure context</see>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API">Web Crypto API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Security">Web security</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/Privacy">Privacy, permissions, and information security</see><br/>-<see cref="Crypto"/> and <see cref="Crypto.Subtle"/>.<br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CryptoKey"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CryptoKey>
+<CryptoKeyAlgorithm>
+<summary>
+The read-only <strong><c>algorithm</c></strong> property of the <see cref="CryptoKey"/> interface returns an object describing the algorithm for which this key can be used, and any associated extra parameters.
+</summary>
+<remarks>
+<para>The object returned depends of the algorithm used to generate the key.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CryptoKey/algorithm"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An object matching:For <c>RsaHashedKeyGenParams</c> and <c>HmacKeyGenParams</c>, the <c>hash</c> property is always in the object form (with a property called <c>name</c>), not the string form.</value>
+</CryptoKeyAlgorithm>
+<CryptoKeyExtractable>
+<summary>
+The read-only <strong><c>extractable</c></strong> property of the <see cref="CryptoKey"/> interface indicates whether or not the key may be extracted using <see href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/exportKey"><c>SubtleCrypto.exportKey()</c></see> or <see href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/wrapKey"><c>SubtleCrypto.wrapKey()</c></see>.
+</summary>
+<remarks>
+<para>If the key cannot be exported, <see href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/exportKey"><c>exportKey()</c></see> or <see href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/wrapKey"><c>wrapKey()</c></see> will throw an exception if used to extract it.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CryptoKey/extractable"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean value that is <c>true</c> if the key can be exported and <c>false</c> if not.</value>
+</CryptoKeyExtractable>
+<CryptoKeyUsages>
+<summary>
+The read-only <strong><c>usages</c></strong> property of the <see cref="CryptoKey"/> interface indicates what can be done with the key.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CryptoKey/usages"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="Array"/> of strings from the following list:</value>
+</CryptoKeyUsages>
+<CryptoKeyType>
+<summary>
+The read-only <strong><c>type</c></strong> property of the <see cref="CryptoKey"/> interface indicates which kind of key is represented by the object. It can have the following values:
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CryptoKey/type"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>One of the following strings: <c>&amp;quot;secret&amp;quot;</c>, <c>&amp;quot;private&amp;quot;</c>, or <c>&amp;quot;public&amp;quot;</c>.</value>
+</CryptoKeyType>
+</docs>

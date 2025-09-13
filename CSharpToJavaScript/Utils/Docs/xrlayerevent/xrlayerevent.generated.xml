@@ -1,0 +1,32 @@
+<docs>
+<XRLayerEvent>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>XRLayerEvent</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</see> is the event type for events related to a change of state of an <see cref="XRLayer"/> object. These events occur, for example, when the layer needs to be redrawn.
+</summary>
+<remarks>
+<para></para>
+<para>-<see cref="XRCompositionLayer.NeedsRedraw"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRLayerEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</XRLayerEvent>
+<XRLayerEventXRLayerEvent>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>XRLayerEvent</c></strong> constructor creates and returns a new <see cref="XRLayerEvent"/> object. These events relate to a change of state of an <see cref="XRLayer"/> object.
+</summary>
+<remarks>
+<para>-<see cref="XRLayer"/><br/>-<see cref="EventTarget.DispatchEvent"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRLayerEvent/XRLayerEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="XRLayer"/> object representing an object of the<br/>specified type and configured as described by the <c>eventInitDict</c> parameter.</returns>
+</XRLayerEventXRLayerEvent>
+<XRLayerEventLayer>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>layer</c></strong> property of the <see cref="XRLayerEvent"/> interface is a reference to the <see cref="XRLayer"/> which generated the event.
+</summary>
+<remarks>
+<para>-<see cref="XRLayer"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRLayerEvent/layer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="XRLayer"/>.</value>
+</XRLayerEventLayer>
+</docs>

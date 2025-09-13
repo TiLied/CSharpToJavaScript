@@ -1,0 +1,33 @@
+<docs>
+<ClipboardEvent>
+<summary>
+The <strong><c>ClipboardEvent</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API">Clipboard API</see> represents events providing information related to modification of the clipboard, that is <see cref="Elementcut"/>, <see cref="Elementcopy"/>, and <see cref="Elementpaste"/> events.
+</summary>
+<remarks>
+<para></para>
+<para>-Copy-related events: <see cref="Elementcopy"/>, <see cref="Elementcut"/>, <see cref="Elementpaste"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API">Clipboard API</see><br/>-<see href="https://web.dev/articles/async-clipboard">Image support for Async Clipboard article</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ClipboardEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</ClipboardEvent>
+<ClipboardEventClipboardEvent>
+<summary>
+The <strong><c>ClipboardEvent()</c></strong> constructor returns a new <see cref="ClipboardEvent"/>, representing an event providing information related to modification of the clipboard, that is <see cref="Elementcut"/>, <see cref="Elementcopy"/>, and <see cref="Elementpaste"/> events.
+</summary>
+<remarks>
+<para>-Copy-related events: <see cref="Elementcopy"/>, <see cref="Elementcut"/>, <see cref="Elementpaste"/><br/>-The <see cref="ClipboardEvent"/> interface it belongs to.<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API">Clipboard API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ClipboardEvent/ClipboardEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="ClipboardEvent"/> object.</returns>
+</ClipboardEventClipboardEvent>
+<ClipboardEventClipboardData>
+<summary>
+The <strong><c>clipboardData</c></strong> property of the <see cref="ClipboardEvent"/> interface holds a <see cref="DataTransfer"/> object, which can be used to:
+</summary>
+<remarks>
+<para>See the <see cref="Elementcut"/>, <see cref="Elementcopy"/>, and <see cref="Elementpaste"/> events documentation for more information.</para>
+<para>-Copy-related events: <see cref="Elementcopy"/>, <see cref="Elementcut"/>, <see cref="Elementpaste"/><br/>-The <see cref="ClipboardEvent"/> interface it belongs to.<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API">Clipboard API</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ClipboardEvent/clipboardData"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="DataTransfer"/> object.The property can be <c>null</c> when the event is created using the constructor. It is never <c>null</c> when dispatched by the browser.</value>
+</ClipboardEventClipboardData>
+</docs>

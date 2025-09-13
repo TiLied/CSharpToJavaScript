@@ -1,0 +1,41 @@
+<docs>
+<MessageChannel>
+<summary>
+The <strong><c>MessageChannel</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Channel_Messaging_API">Channel Messaging API</see> allows us to create a new message channel and send data through it via its two <see cref="MessagePort"/> properties.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging">Using channel messaging</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MessageChannel"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</MessageChannel>
+<MessageChannelMessageChannel>
+<summary>
+The <strong><c>MessageChannel()</c></strong> constructor of the <see cref="MessageChannel"/><br/>interface returns a new <see cref="MessageChannel"/> object with two new<br/><see cref="MessagePort"/> objects.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging">Using channel messaging</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MessageChannel/MessageChannel"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="MessageChannel"/> object.</returns>
+</MessageChannelMessageChannel>
+<MessageChannelPort1>
+<summary>
+The <strong><c>port1</c></strong> read-only property of the<br/><see cref="MessageChannel"/> interface returns the first port of the message channel —<br/>the port attached to the context that originated the channel.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging">Using channel messaging</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MessageChannel/port1"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="MessagePort"/> object, the first port of the channel, that is the port<br/>attached to the context that originated the channel.</value>
+</MessageChannelPort1>
+<MessageChannelPort2>
+<summary>
+The <strong><c>port2</c></strong> read-only property of the<br/><see cref="MessageChannel"/> interface returns the second port of the message channel —<br/>the port attached to the context at the other end of the channel, which the message is<br/>initially sent to.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging">Using channel messaging</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/MessageChannel/port2"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="MessagePort"/> object representing the second port of the channel, the<br/>port attached to the context at the other end of the channel.</value>
+</MessageChannelPort2>
+</docs>

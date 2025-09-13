@@ -1,0 +1,64 @@
+<docs>
+<RTCRtpScriptTransformer>
+<summary>
+The <strong><c>RTCRtpScriptTransformer</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</see> provides a worker-side <see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API">Stream API</see> interface that a <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms">WebRTC Encoded Transform</see> can use to modify encoded media frames in the incoming and outgoing WebRTC pipelines.
+</summary>
+<remarks>
+<blockquote class="NOTE"><h5>NOTE</h5><para>This feature is available in <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API#worker_types"><strong>Dedicated</strong> Web Workers</see>.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms">Using WebRTC Encoded Transforms</see><br/>-<see cref="TransformStream"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpScriptTransformer"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</RTCRtpScriptTransformer>
+<RTCRtpScriptTransformerReadable>
+<summary>
+The <strong><c>readable</c></strong> read-only property of the <see cref="RTCRtpScriptTransformer"/> interface returns a <see cref="ReadableStream"/> instance is a source for encoded media frames.
+</summary>
+<remarks>
+<para>When the corresponding <see cref="RTCRtpScriptTransform"/> is inserted into the WebRTC sender and receiver pipelines, this stream may be enqueued with outgoing or incoming encoded media frames (<see cref="RTCEncodedVideoFrame"/> or <see cref="RTCEncodedAudioFrame"/>).<br/>A WebRTC encoded transform can read the frames, modify them as needed, and then send them back into the WebRTC pipeline by writing them to <see cref="RTCRtpScriptTransformer.Writable"/>.<br/>A common way to perform this operation is to pipe the frames through a <see cref="TransformStream"/>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms">Using WebRTC Encoded Transforms</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpScriptTransformer/readable"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="ReadableStream"/>.</value>
+</RTCRtpScriptTransformerReadable>
+<RTCRtpScriptTransformerSendKeyFrameRequest>
+<summary>
+The <strong><c>sendKeyFrameRequest()</c></strong> method of the <see cref="RTCRtpScriptTransformer"/> interface may be called by a <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms">WebRTC Encoded Transform</see> that is processing incoming encoded video frames, in order to request a key frame from the sender.
+</summary>
+<remarks>
+<para>The method may only be called when receiving <strong>video</strong> (not audio) frames and if, for whatever reason, a recipient will not be able to decode the video without a new key frame.<br/>Note that the user agent can decide that the request for a key frame is not necessary, in which case the returned promise will fulfill even though the request was not actually sent.</para><blockquote class="NOTE"><h5>NOTE</h5><para>It might be called, for example, if a new user joins a WebRTC conference, in order to reduce the time before they receive a key frame and can hence start displaying video.<br/>For more information see <see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms#triggering_a_key_frame">Triggering a key frame</see> in Using WebRTC Encoded Transforms.</para></blockquote>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms">Using WebRTC Encoded Transforms</see><br/>-<see cref="RTCRtpScriptTransformer"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpScriptTransformer/sendKeyFrameRequest"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that fulfills with <c>undefined</c> once the request is sent, or the user agent decides that it does not need to.</returns>
+</RTCRtpScriptTransformerSendKeyFrameRequest>
+<RTCRtpScriptTransformerOptions>
+<summary>
+The <strong><c>options</c></strong> read-only property of the <see cref="RTCRtpScriptTransformer"/> interface returns the object that was (optionally) passed as the second argument <see href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpScriptTransform/RTCRtpScriptTransform">during construction</see> of the corresponding <see cref="RTCRtpScriptTransform"/>.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms">Using WebRTC Encoded Transforms</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpScriptTransformer/options"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An object.</value>
+</RTCRtpScriptTransformerOptions>
+<RTCRtpScriptTransformerWritable>
+<summary>
+The <strong><c>writable</c></strong> read-only property of the <see cref="RTCRtpScriptTransformer"/> interface returns a <see cref="WritableStream"/> instance that can be used as a sink for encoded media frames enqueued on the corresponding <see cref="RTCRtpScriptTransformer.Readable"/>.
+</summary>
+<remarks>
+<para>When the corresponding <see cref="RTCRtpScriptTransform"/> is inserted into the WebRTC sender and receiver pipelines, encoded media frames (<see cref="RTCEncodedVideoFrame"/> or <see cref="RTCEncodedAudioFrame"/>) may be enqueued on the <see cref="RTCRtpScriptTransformer.Readable"/>.<br/>A WebRTC encoded transform can read the frames from <c>readable</c>, modify them as needed, and then send them back into the WebRTC pipeline by sending them to this <c>writable</c>.<br/>A common way to perform this operation is to pipe the frames through a <see cref="TransformStream"/>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpScriptTransformer/writable"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see cref="WritableStream"/>.</value>
+</RTCRtpScriptTransformerWritable>
+<RTCRtpScriptTransformerGenerateKeyFrame>
+<summary>
+The <strong><c>generateKeyFrame()</c></strong> method of the <see cref="RTCRtpScriptTransformer"/> interface causes a video encoder to generate a key frame.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms">Using WebRTC Encoded Transforms</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpScriptTransformer/generateKeyFrame"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that fulfills with the timestamp of the frame, or rejects with an exception value.</returns>
+</RTCRtpScriptTransformerGenerateKeyFrame>
+</docs>

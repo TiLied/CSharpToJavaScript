@@ -1,0 +1,38 @@
+<docs>
+<NDEFReadingEvent>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>NDEFReadingEvent</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_NFC_API">Web NFC API</see> represents events dispatched on new NFC readings obtained by <see cref="NDEFReader"/>.
+</summary>
+<remarks>
+<para></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NDEFReadingEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</NDEFReadingEvent>
+<NDEFReadingEventSerialNumber>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>serialNumber</c></strong> property of the <see cref="NDEFReadingEvent"/> interface returns the serial number of the device, which is used for anti-collision and identification, or an empty string if no serial number is available.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NDEFReadingEvent/serialNumber"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string containing the device&amp;apos;s serial number.</value>
+</NDEFReadingEventSerialNumber>
+<NDEFReadingEventMessage>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>message</c></strong> property of the <see cref="NDEFReadingEvent"/> interface returns an <see cref="NDEFMessage"/> object containing the received message.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NDEFReadingEvent/message"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>An <see cref="NDEFMessage"/> object.</value>
+</NDEFReadingEventMessage>
+<NDEFReadingEventNDEFReadingEvent>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>NDEFReadingEvent()</c></strong> constructor creates a new <see cref="NDEFReadingEvent"/> object which represents events dispatched on new NFC readings obtained by <see cref="NDEFReader"/>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/NDEFReadingEvent/NDEFReadingEvent"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A new <see cref="NDEFReadingEvent"/> object.</returns>
+</NDEFReadingEventNDEFReadingEvent>
+</docs>

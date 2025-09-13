@@ -1,0 +1,29 @@
+<docs>
+<CSSKeywordValue>
+<summary>
+The <strong><c>CSSKeywordValue</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model#css_typed_object_model">CSS Typed Object Model API</see> creates an object to represent CSS keywords and other identifiers.
+</summary>
+<remarks>
+<para>The interface instance name is a <see href="https://developer.mozilla.org/en-US/docs/Glossary/stringifier">stringifier</see> meaning that when used anywhere a string is expected it will return the value of <c>CSSKeyword.value</c>.</para><para></para>
+<para>-<see cref="'CSSImageValue'"/><br/>-<see cref="'CSSNumericValue'"/><br/>-<see cref="'CSSPositionValue'"/><br/>-<see cref="'CSSTransformValue'"/><br/>-<see cref="'CSSUnparsedValue'"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSKeywordValue"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CSSKeywordValue>
+<CSSKeywordValueCSSKeywordValue>
+<summary>
+The <strong><c>CSSKeywordValue()</c></strong> constructor<br/>creates a new <see cref="CSSKeywordValue"/> object which represents CSS keywords and<br/>other identifiers.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSKeywordValue/CSSKeywordValue"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</CSSKeywordValueCSSKeywordValue>
+<CSSKeywordValueValue>
+<summary>
+The <strong><c>value</c></strong> property of the<br/><see cref="CSSKeywordValue"/> interface returns or sets the value of the<br/><c>CSSKeywordValue</c>.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/CSSKeywordValue/value"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A string.</value>
+</CSSKeywordValueValue>
+</docs>

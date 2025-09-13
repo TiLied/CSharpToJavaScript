@@ -1,0 +1,99 @@
+<docs>
+<ReadableStream>
+<summary>
+The <c>ReadableStream</c> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API">Streams API</see> represents a readable stream of byte data. The <see href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch API</see> offers a concrete instance of a <c>ReadableStream</c> through the <see cref="Response.Body"/> property of a <see cref="Response"/> object.
+</summary>
+<remarks>
+<para><c>ReadableStream</c> is a <see href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Transferable_objects">transferable object</see>.</para>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API">Streams API concepts</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_streams">Using readable streams</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams">Using readable byte stream</see><br/>-<see href="https://github.com/MattiasBuelens/web-streams-polyfill">Web-streams-polyfill</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</ReadableStream>
+<ReadableStreamCancel>
+<summary>
+The <strong><c>cancel()</c></strong> method of the <see cref="ReadableStream"/> interface returns a {{jsxref("Promise")}} that resolves when the stream is canceled.
+</summary>
+<remarks>
+<para>Cancel is used when you&amp;apos;ve completely finished with the stream and don&amp;apos;t need any more data from it, even if there are chunks enqueued waiting to be read.<br/>That data is lost after cancel is called, and the stream is not readable any more.<br/>To read those chunks still and not completely get rid of the stream, you'd use <see cref="ReadableStreamDefaultController.Close"/>.</para>
+<para>-<see cref="ReadableStream.ReadableStream"/> constructor<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_streams">Using readable streams</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream/cancel"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/>, which fulfills with <c>undefined</c> value.</returns>
+</ReadableStreamCancel>
+<ReadableStreamGetReader>
+<summary>
+The <strong><c>getReader()</c></strong> method of the <see cref="ReadableStream"/> interface creates a reader and locks the stream to it.<br/>While the stream is locked, no other reader can be acquired until this one is released.
+</summary>
+<remarks>
+<para>-<see cref="ReadableStream.ReadableStream"/> constructor<br/>-<see cref="ReadableStreamDefaultReader"/><br/>-<see cref="ReadableStreamBYOBReader"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_streams">Using readable streams</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams">Using readable byte stream</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream/getReader"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="ReadableStreamDefaultReader"/> or <see cref="ReadableStreamBYOBReader"/> object instance, depending on the <c>mode</c> value.</returns>
+</ReadableStreamGetReader>
+<ReadableStreamTee>
+<summary>
+The <strong><c>tee()</c></strong> method of the<br/><see cref="ReadableStream"/> interface <see href="https://streams.spec.whatwg.org/#tee-a-readable-stream">tees</see> the current readable stream, returning a<br/>two-element array containing the two resulting branches as<br/>new <see cref="ReadableStream"/> instances.
+</summary>
+<remarks>
+<para>This is useful for allowing two readers to read a stream sequentially or simultaneously,<br/>perhaps at different speeds.<br/>For example, you might do this in a ServiceWorker if you want to fetch<br/>a response from the server and stream it to the browser, but also stream it to the<br/>ServiceWorker cache. Since a response body cannot be consumed more than once, you&amp;apos;d need<br/>two copies to do this.</para><para>A teed stream will partially signal backpressure at the rate of the <strong>faster</strong> consumer<br/>of the two <c>ReadableStream</c> branches,<br/>and unread data is enqueued internally on the slower consumed <c>ReadableStream</c><br/>without any limit or backpressure.<br/>That is, when <strong>both</strong> branches have an unread element in their internal queue,<br/>then the original <c>ReadableStream</c>&amp;apos;s controller&amp;apos;s internal queue will start to fill up,<br/>and once its <see cref="ReadableStreamDefaultController.DesiredSize"/> ≤ 0<br/>or byte stream controller <see cref="ReadableByteStreamController.DesiredSize"/> ≤ 0,<br/>then the controller will stop calling <c>pull(controller)</c> on the<br/>underlying source passed to <see cref="ReadableStream.ReadableStream"/>.<br/>If only one branch is consumed, then the entire body will be enqueued in memory.<br/>Therefore, you should not use the built-in <c>tee()</c> to read very large streams<br/>in parallel at different speeds.<br/>Instead, search for an implementation that fully backpressures<br/>to the speed of the <strong>slower</strong> consumed branch.</para><para>To cancel the stream you then need to cancel both resulting branches. Teeing a stream<br/>will generally lock it for the duration, preventing other readers from locking it.</para>
+<para>-<see cref="ReadableStream.ReadableStream"/> constructor<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_streams#teeing_a_stream">Teeing a stream</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream/tee"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An {{jsxref("Array")}} containing two <see cref="ReadableStream"/> instances.</returns>
+</ReadableStreamTee>
+<ReadableStreamReadableStream>
+<summary>
+The <strong><c>ReadableStream()</c></strong> constructor creates and returns a readable stream object from the given handlers.
+</summary>
+<remarks>
+<para>Note that while all parameters are technically optional, omitting the <c>underlyingSource</c> will result in a stream that has no source, and that can&amp;apos;t be read from (readers return a promise that will never be resolved).</para>
+<para>-<see cref="ReadableStream"/><br/>-<see cref="ReadableByteStreamController"/><br/>-<see cref="ReadableStreamDefaultController"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_streams">Using readable streams</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream/ReadableStream"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>An instance of the <see cref="ReadableStream"/> object.</returns>
+</ReadableStreamReadableStream>
+<ReadableStreamLocked>
+<summary>
+The <strong><c>locked</c></strong> read-only property of the <see cref="ReadableStream"/> interface returns whether or not the readable stream is locked to a reader.
+</summary>
+<remarks>
+<para>A readable stream can have at most one active reader at a time, and is locked to that reader until it is released.<br/>A reader might be obtained using <see href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream/getReader"><c>ReadableStream.getReader()</c></see> and released using the reader&amp;apos;s <c>releaseLock()</c> method.</para>
+<para>-<see cref="ReadableStream.ReadableStream"/> constructor<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_streams">Using readable streams</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream/locked"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A <see href="https://developer.mozilla.org/en-US/docs/Glossary/boolean">boolean</see> value indicating whether or not the readable stream is locked.</value>
+</ReadableStreamLocked>
+<ReadableStreamPipeTo>
+<summary>
+The <strong><c>pipeTo()</c></strong> method of the <see cref="ReadableStream"/> interface pipes the current <c>ReadableStream</c> to a given <see cref="WritableStream"/> and returns a {{jsxref("Promise")}} that fulfills when the piping process completes successfully, or rejects if any errors were encountered.
+</summary>
+<remarks>
+<para>Piping a stream will generally <see href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream/locked">lock</see> it for the duration of the pipe, preventing other readers from locking it.</para>
+<para>-<see cref="ReadableStream.ReadableStream"/> constructor<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_streams#pipe_chains">Pipe chains</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream/pipeTo"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves when the piping process has completed.</returns>
+</ReadableStreamPipeTo>
+<ReadableStreamFrom>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>ReadableStream.from()</c></strong> static method returns a <see cref="ReadableStream"/> from a provided iterable or async iterable object.
+</summary>
+<remarks>
+<para>The method can be used to wrap iterable and async iterable objects as readable streams, including arrays, sets, arrays of promises, async generators, <c>ReadableStreams</c>, Node.js <c>readable</c> streams, and so on.</para>
+<para>-<see cref="ReadableStream"/><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_streams">Using readable streams</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream/from"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="ReadableStream"/>.</returns>
+</ReadableStreamFrom>
+<ReadableStreamPipeThrough>
+<summary>
+The <strong><c>pipeThrough()</c></strong> method of the <see cref="ReadableStream"/> interface provides a chainable way of piping the current stream through a transform stream or any other writable/readable pair.
+</summary>
+<remarks>
+<para>Piping a stream will generally lock it for the duration of the pipe, preventing other readers from locking it.</para>
+<para>-<see cref="ReadableStream.ReadableStream"/> constructor<br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_streams#pipe_chains">Pipe chains</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream/pipeThrough"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>The <c>readable</c> side of the <c>transformStream</c>.</returns>
+</ReadableStreamPipeThrough>
+</docs>

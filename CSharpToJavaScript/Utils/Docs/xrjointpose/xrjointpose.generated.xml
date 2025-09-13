@@ -1,0 +1,22 @@
+<docs>
+<XRJointPose>
+<summary>
+The <strong><c>XRJointPose</c></strong> interface is an <see cref="XRPose"/> with additional information about the size of the skeleton joint it represents.
+</summary>
+<remarks>
+<para></para>
+<para>-<see cref="XRHand"/><br/>-<see cref="XRReferenceSpace"/><br/>-<see cref="XRJointSpace"/><br/>-<see cref="XRFrame.GetJointPose"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRJointPose"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+</XRJointPose>
+<XRJointPoseRadius>
+<summary>
+The read-only <strong><c>radius</c></strong> property of the <see cref="XRJointPose"/> interface indicates the radius (distance from skin) for a joint.
+</summary>
+<remarks>
+<para>-<see cref="XRHand"/><br/>-<see cref="XRReferenceSpace"/><br/>-<see cref="XRJointSpace"/><br/>-<see cref="XRFrame.GetJointPose"/><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/XRJointPose/radius"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A number indicating the radius in meters.</value>
+</XRJointPoseRadius>
+</docs>

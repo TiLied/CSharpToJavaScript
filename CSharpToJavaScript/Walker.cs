@@ -74,9 +74,7 @@ internal class Walker : CSharpSyntaxWalker
 
 	public override void VisitTrivia(SyntaxTrivia trivia)
 	{
-		SyntaxKind syntaxKind = trivia.Kind();
-
-		switch (syntaxKind)
+		switch (trivia.Kind())
 		{
 			case SyntaxKind.MultiLineCommentTrivia:
 			case SyntaxKind.WhitespaceTrivia:
@@ -108,7 +106,7 @@ internal class Walker : CSharpSyntaxWalker
 				return;
 			}*/
 			default:
-				Log.ErrorLine($"ERROR Trivia : {syntaxKind}", _Options);
+				Log.ErrorLine($"ERROR Trivia : {trivia.Kind()}", _Options);
 				break;
 		}
 
@@ -117,9 +115,7 @@ internal class Walker : CSharpSyntaxWalker
 
 	public override void VisitToken(SyntaxToken token)
 	{
-		SyntaxKind syntaxKind = token.Kind();
-		
-		switch (syntaxKind)
+		switch (token.Kind())
 		{
 			case SyntaxKind.StaticKeyword:
 			case SyntaxKind.TrueKeyword:
@@ -263,7 +259,7 @@ internal class Walker : CSharpSyntaxWalker
 					return;
 				}
 			default:
-				Log.ErrorLine($"ERROR Token : {syntaxKind}", _Options);
+				Log.ErrorLine($"ERROR Token : {token.Kind()}", _Options);
 				break;
 		}
 

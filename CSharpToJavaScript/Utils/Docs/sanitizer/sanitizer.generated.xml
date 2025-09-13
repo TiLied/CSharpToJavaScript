@@ -4,70 +4,20 @@
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>Sanitizer</c></strong> interface of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Sanitizer_API">HTML Sanitizer API</see> defines a configuration object that specifies what elements, attributes and comments are allowed or should be removed when inserting strings of HTML into an <see cref="Element"/> or <see cref="ShadowRoot"/>, or when parsing an HTML string into a <see cref="Document"/>.
 </summary>
 <remarks>
-<para>A <c>Sanitizer</c> instance is effectively a wrapper around a <see cref="SanitizerConfig"/>, and can be passed as a configuration alterative in the same <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Sanitizer_API#sanitization_methods">sanitization methods</see>:</para><para>Note that <c>Sanitizer</c> is expected to be more efficient to reuse and modify when needed.</para>
+<para>A <c>Sanitizer</c> instance is effectively a wrapper around a <see cref="SanitizerConfig"/>, and can be passed as a configuration alternative in the same <see href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Sanitizer_API#sanitization_methods">sanitization methods</see>:</para><para>Note that <c>Sanitizer</c> is expected to be more efficient to reuse and modify when needed.</para>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Sanitizer"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </Sanitizer>
-<SanitizerAllowAttribute>
+<SanitizerSetComments>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>allowAttribute()</c></strong> method of the <see cref="Sanitizer"/> interface sets an attribute to be allowed on all elements.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>setComments()</c></strong> method of the <see cref="Sanitizer"/> interface sets whether comments will be allowed or removed by the sanitizer.
 </summary>
 <remarks>
-<para>The specified attribute is added to the list of <see href="https://developer.mozilla.org/en-US/docs/Web/API/SanitizerConfig#attributes_2"><c>attributes</c></see> in this sanitizer&amp;apos;s configuration.<br/>The attribute is removed from the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SanitizerConfig#removeattributes_2"><c>removeAttributes</c></see> list if present.</para><para>Note that to allow/disallow attributes only on specific elements use <see cref="'Sanitizer.AllowElement'"/>.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Sanitizer/allowAttribute"> <em>See also on MDN</em> </seealso></para>
+<para>The method sets the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SanitizerConfig#comments"><c>comments</c></see> property in this sanitizer&amp;apos;s configuration.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Sanitizer/setComments"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<c>undefined</c>).</returns>
-</SanitizerAllowAttribute>
-<SanitizerAllowElement>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>allowElement()</c></strong> method of the <see cref="Sanitizer"/> interface sets that the specified element is allowed in the output when the sanitizer is used.<br/>The element can be specified with lists of attributes that are allowed or disallowed on elements of that type.
-</summary>
-<remarks>
-<para>The specified element is added to the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SanitizerConfig#elements"><c>elements</c></see> list in this sanitizer&amp;apos;s configuration.<br/>If the element is already present in the list, then the existing entry is first removed and the new definition is appended to the end of the list.<br/>Note that if you need both per-element add-attribute and remove-attribute lists, they must be added in a single call to this method (since if done in two calls, the second call will replace the element definition added in the first call).</para><para>The specified element is removed from the sanitizer configuration <see href="https://developer.mozilla.org/en-US/docs/Web/API/SanitizerConfig#removeelements"><c>removeElements</c></see> or <see href="https://developer.mozilla.org/en-US/docs/Web/API/SanitizerConfig#replacewithchildrenelements"><c>replaceWithChildrenElements</c></see> lists if present.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Sanitizer/allowElement"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<c>undefined</c>).</returns>
-</SanitizerAllowElement>
-<SanitizerGet>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>get()</c></strong> method of the <see cref="Sanitizer"/> interface returns a <see cref="'SanitizerConfig'"/> dictionary instance that represents the current <c>Sanitizer</c> configuration.
-</summary>
-<remarks>
-<para>This may be used to create a sanitizer that is slightly modified from the default; by first getting and then modifying the default sanitizer configuration, and then using it to construct a new sanitizer.</para><para>The returned configuration can also be used to inspect the configuration, and can be passed directly the HTML parsing functions.<br/>Note however that it will be more efficient to pass a <see cref="Sanitizer"/> rather than a configuration dictionary, particularly where the <c>Sanitizer</c> is to be used multiple times.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Sanitizer/get"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <see cref="SanitizerConfig"/>.</returns>
-</SanitizerGet>
-<SanitizerRemoveAttribute>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>removeAttribute()</c></strong> method of the <see cref="Sanitizer"/> interface sets an attribute to be disallowed on all elements.
-</summary>
-<remarks>
-<para>The specified attribute is added to the list of <see href="https://developer.mozilla.org/en-US/docs/Web/API/SanitizerConfig#removeattributes_2"><c>removeAttributes</c></see> in this sanitizer&amp;apos;s configuration.<br/>The attribute is removed from the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SanitizerConfig#attributes_2"><c>attributes</c></see> list if present.</para><para>Note that to allow/disallow attributes only on specific elements use <see cref="'Sanitizer.AllowElement'"/>.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Sanitizer/removeAttribute"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<c>undefined</c>).</returns>
-</SanitizerRemoveAttribute>
-<SanitizerRemoveElement>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>removeElement()</c></strong> method of the <see cref="Sanitizer"/> interface sets an element to be disallowed — removed from input when the sanitizer is used.
-</summary>
-<remarks>
-<para>The specified element is added to the list of <see href="https://developer.mozilla.org/en-US/docs/Web/API/SanitizerConfig#removeelements"><c>removeElements</c></see> in this sanitizer&amp;apos;s configuration.<br/>The element is removed from the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SanitizerConfig#elements"><c>elements</c></see> or <see href="https://developer.mozilla.org/en-US/docs/Web/API/SanitizerConfig#replacewithchildrenelements"><c>replaceWithChildrenElements</c></see> lists if present.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Sanitizer/removeElement"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<c>undefined</c>).</returns>
-</SanitizerRemoveElement>
-<SanitizerRemoveUnsafe>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>removeUnsafe()</c></strong> method of the <see cref="Sanitizer"/> interface configures the sanitizer configuration so that it will remove all elements, attributes, and event handler content attributes that are considered XSS-unsafe by the browser.
-</summary>
-<remarks>
-<para>The unsafe elements and attributes are added to the configuration by calling <see cref="'Sanitizer.RemoveElement'"/> and <see cref="'Sanitizer.RemoveAttribute'"/> for each, respectively.<br/>This adds them to the sanitizer configuration disallow lists: <see href="https://developer.mozilla.org/en-US/docs/Web/API/SanitizerConfig#removeelements"><c>removeElements</c></see> and <see href="https://developer.mozilla.org/en-US/docs/Web/API/SanitizerConfig#removeattributes_2"><c>removeAttributes</c></see>, and removes them (if present) from the configuration allow lists: <see href="https://developer.mozilla.org/en-US/docs/Web/API/SanitizerConfig#removeelements"><c>elements</c></see>, <see href="https://developer.mozilla.org/en-US/docs/Web/API/SanitizerConfig#replacewithchildrenelements"><c>replaceWithChildrenElements</c></see> and <see href="https://developer.mozilla.org/en-US/docs/Web/API/SanitizerConfig#attributes"><c>attributes</c></see>.</para><para>The method can be called to make any custom configuration XSS-safe.<br/>If used with a configuration that uses the allow lists, it will remove the XSS-unsafe entities from those lists.<br/>If used with a configuration that uses only the disallow (&amp;quot;remove&amp;quot;) lists, then it ensures the configuration includes the unsafe elements in those lists.</para><para>Note that if you're using the sanitizer with one of the "safe" HTML setters, such as <see cref="Element.SetHTML"/> and <see cref="ShadowRoot.SetHTML"/>, you do not need to call this method to make the sanitizer safe.<br/>When used in these setters the method is called implicitly, without modifying the <c>Sanitizer</c> instance that is passed.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Sanitizer/removeUnsafe"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>None (<c>undefined</c>).</returns>
-</SanitizerRemoveUnsafe>
+</SanitizerSetComments>
 <SanitizerReplaceElementWithChildren>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>replaceElementWithChildren()</c></strong> method of the <see cref="Sanitizer"/> interface sets an element to be replaced by its child HTML elements when the sanitizer is used.<br/>The is primarily used for stripping styles from text.
@@ -88,16 +38,36 @@
 </remarks>
 <returns>An instance of the <see cref="Sanitizer"/> object.</returns>
 </SanitizerSanitizer>
-<SanitizerSetComments>
+<SanitizerGet>
 <summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>setComments()</c></strong> method of the <see cref="Sanitizer"/> interface sets whether comments will be allowed or removed by the sanitizer.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>get()</c></strong> method of the <see cref="Sanitizer"/> interface returns a <see cref="'SanitizerConfig'"/> dictionary instance that represents the current <c>Sanitizer</c> configuration.
 </summary>
 <remarks>
-<para>The method sets the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SanitizerConfig#comments"><c>comments</c></see> property in this sanitizer&amp;apos;s configuration.</para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Sanitizer/setComments"> <em>See also on MDN</em> </seealso></para>
+<para>This may be used to create a sanitizer that is slightly modified from the default; by first getting and then modifying the default sanitizer configuration, and then using it to construct a new sanitizer.</para><para>The returned configuration can also be used to inspect the configuration, and can be passed directly the HTML parsing functions.<br/>Note however that it will be more efficient to pass a <see cref="Sanitizer"/> rather than a configuration dictionary, particularly where the <c>Sanitizer</c> is to be used multiple times.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Sanitizer/get"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="SanitizerConfig"/>.</returns>
+</SanitizerGet>
+<SanitizerRemoveElement>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>removeElement()</c></strong> method of the <see cref="Sanitizer"/> interface sets an element to be disallowed — removed from input when the sanitizer is used.
+</summary>
+<remarks>
+<para>The specified element is added to the list of <see href="https://developer.mozilla.org/en-US/docs/Web/API/SanitizerConfig#removeelements"><c>removeElements</c></see> in this sanitizer&amp;apos;s configuration.<br/>The element is removed from the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SanitizerConfig#elements"><c>elements</c></see> or <see href="https://developer.mozilla.org/en-US/docs/Web/API/SanitizerConfig#replacewithchildrenelements"><c>replaceWithChildrenElements</c></see> lists if present.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Sanitizer/removeElement"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 <returns>None (<c>undefined</c>).</returns>
-</SanitizerSetComments>
+</SanitizerRemoveElement>
+<SanitizerRemoveUnsafe>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>removeUnsafe()</c></strong> method of the <see cref="Sanitizer"/> interface configures the sanitizer configuration so that it will remove all elements, attributes, and event handler content attributes that are considered XSS-unsafe by the browser.
+</summary>
+<remarks>
+<para>The unsafe elements and attributes are added to the configuration by calling <see cref="'Sanitizer.RemoveElement'"/> and <see cref="'Sanitizer.RemoveAttribute'"/> for each, respectively.<br/>This adds them to the sanitizer configuration disallow lists: <see href="https://developer.mozilla.org/en-US/docs/Web/API/SanitizerConfig#removeelements"><c>removeElements</c></see> and <see href="https://developer.mozilla.org/en-US/docs/Web/API/SanitizerConfig#removeattributes_2"><c>removeAttributes</c></see>, and removes them (if present) from the configuration allow lists: <see href="https://developer.mozilla.org/en-US/docs/Web/API/SanitizerConfig#removeelements"><c>elements</c></see>, <see href="https://developer.mozilla.org/en-US/docs/Web/API/SanitizerConfig#replacewithchildrenelements"><c>replaceWithChildrenElements</c></see> and <see href="https://developer.mozilla.org/en-US/docs/Web/API/SanitizerConfig#attributes"><c>attributes</c></see>.</para><para>The method can be called to make any custom configuration XSS-safe.<br/>If used with a configuration that uses the allow lists, it will remove the XSS-unsafe entities from those lists.<br/>If used with a configuration that uses only the disallow (&amp;quot;remove&amp;quot;) lists, then it ensures the configuration includes the unsafe elements in those lists.</para><para>Note that if you're using the sanitizer with one of the "safe" HTML setters, such as <see cref="Element.SetHTML"/> and <see cref="ShadowRoot.SetHTML"/>, you do not need to call this method to make the sanitizer safe.<br/>When used in these setters the method is called implicitly, without modifying the <c>Sanitizer</c> instance that is passed.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Sanitizer/removeUnsafe"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<c>undefined</c>).</returns>
+</SanitizerRemoveUnsafe>
 <SanitizerSetDataAttributes>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>setDataAttributes()</c></strong> method of the <see cref="Sanitizer"/> interface sets whether <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/data-*">data attributes</see> will be allowed or removed by the sanitizer.
@@ -108,4 +78,34 @@
 </remarks>
 <returns>None (<c>undefined</c>).</returns>
 </SanitizerSetDataAttributes>
+<SanitizerRemoveAttribute>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>removeAttribute()</c></strong> method of the <see cref="Sanitizer"/> interface sets an attribute to be disallowed on all elements.
+</summary>
+<remarks>
+<para>The specified attribute is added to the list of <see href="https://developer.mozilla.org/en-US/docs/Web/API/SanitizerConfig#removeattributes_2"><c>removeAttributes</c></see> in this sanitizer&amp;apos;s configuration.<br/>The attribute is removed from the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SanitizerConfig#attributes_2"><c>attributes</c></see> list if present.</para><para>Note that to allow/disallow attributes only on specific elements use <see cref="'Sanitizer.AllowElement'"/>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Sanitizer/removeAttribute"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<c>undefined</c>).</returns>
+</SanitizerRemoveAttribute>
+<SanitizerAllowAttribute>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>allowAttribute()</c></strong> method of the <see cref="Sanitizer"/> interface sets an attribute to be allowed on all elements.
+</summary>
+<remarks>
+<para>The specified attribute is added to the list of <see href="https://developer.mozilla.org/en-US/docs/Web/API/SanitizerConfig#attributes_2"><c>attributes</c></see> in this sanitizer&amp;apos;s configuration.<br/>The attribute is removed from the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SanitizerConfig#removeattributes_2"><c>removeAttributes</c></see> list if present.</para><para>Note that to allow/disallow attributes only on specific elements use <see cref="'Sanitizer.AllowElement'"/>.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Sanitizer/allowAttribute"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<c>undefined</c>).</returns>
+</SanitizerAllowAttribute>
+<SanitizerAllowElement>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>allowElement()</c></strong> method of the <see cref="Sanitizer"/> interface sets that the specified element is allowed in the output when the sanitizer is used.<br/>The element can be specified with lists of attributes that are allowed or disallowed on elements of that type.
+</summary>
+<remarks>
+<para>The specified element is added to the <see href="https://developer.mozilla.org/en-US/docs/Web/API/SanitizerConfig#elements"><c>elements</c></see> list in this sanitizer&amp;apos;s configuration.<br/>If the element is already present in the list, then the existing entry is first removed and the new definition is appended to the end of the list.<br/>Note that if you need both per-element add-attribute and remove-attribute lists, they must be added in a single call to this method (since if done in two calls, the second call will replace the element definition added in the first call).</para><para>The specified element is removed from the sanitizer configuration <see href="https://developer.mozilla.org/en-US/docs/Web/API/SanitizerConfig#removeelements"><c>removeElements</c></see> or <see href="https://developer.mozilla.org/en-US/docs/Web/API/SanitizerConfig#replacewithchildrenelements"><c>replaceWithChildrenElements</c></see> lists if present.</para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Sanitizer/allowElement"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>None (<c>undefined</c>).</returns>
+</SanitizerAllowElement>
 </docs>

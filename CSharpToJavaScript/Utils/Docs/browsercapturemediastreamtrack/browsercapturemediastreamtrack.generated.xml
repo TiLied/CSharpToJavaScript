@@ -9,6 +9,16 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BrowserCaptureMediaStreamTrack"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </BrowserCaptureMediaStreamTrack>
+<BrowserCaptureMediaStreamTrackCropTo>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>cropTo()</c></strong> method of the <see cref="BrowserCaptureMediaStreamTrack"/> interface crops a self-capture stream to the area in which a specified DOM element is rendered.
+</summary>
+<remarks>
+<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Screen_Capture_API">Screen Capture API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Screen_Capture_API/Element_Region_Capture">Using the Element Capture and Region Capture APIs</see><br/></para>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BrowserCaptureMediaStreamTrack/cropTo"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves to <see cref="Undefined"/>.The promise will reject if:<blockquote class="NOTE"><h5>NOTE</h5>In Chromium, if a track has clones, <c>cropTo()</c> will reject (see <see href="https://crbug.com/41482026">Chrome issue 41482026</see>).</blockquote></returns>
+</BrowserCaptureMediaStreamTrackCropTo>
 <BrowserCaptureMediaStreamTrackClone>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>clone()</c></strong> method of the <see cref="BrowserCaptureMediaStreamTrack"/> interface returns a clone of the original <c>BrowserCaptureMediaStreamTrack</c>.
@@ -20,16 +30,6 @@
 </remarks>
 <returns>A <see cref="BrowserCaptureMediaStreamTrack"/> instance.</returns>
 </BrowserCaptureMediaStreamTrackClone>
-<BrowserCaptureMediaStreamTrackCropTo>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>cropTo()</c></strong> method of the <see cref="BrowserCaptureMediaStreamTrack"/> interface crops a self-capture stream to the area in which a specified DOM element is rendered.
-</summary>
-<remarks>
-<para>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Screen_Capture_API">Screen Capture API</see><br/>-<see href="https://developer.mozilla.org/en-US/docs/Web/API/Screen_Capture_API/Element_Region_Capture">Using the Element Capture and Region Capture APIs</see><br/></para>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/BrowserCaptureMediaStreamTrack/cropTo"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <see cref="Promise"/> that resolves to <see cref="Undefined"/>.The promise will reject if:<blockquote class="NOTE"><h5>NOTE</h5>In Chromium, if a track has clones, <c>cropTo()</c> will reject (see <see href="https://crbug.com/41482026">Chrome issue 41482026</see>).</blockquote></returns>
-</BrowserCaptureMediaStreamTrackCropTo>
 <BrowserCaptureMediaStreamTrackRestrictTo>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>restrictTo()</c></strong> method of the <see cref="BrowserCaptureMediaStreamTrack"/> interface restricts a self-capture stream to a specific DOM element (and its descendants).

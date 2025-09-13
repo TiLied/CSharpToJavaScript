@@ -1,7 +1,7 @@
 <docs>
 <IntegrityViolationReportBody>
 <summary>
-The <c>IntegrityViolationReportBody</c> dictionary is an extension of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Reporting_API">Reporting API</see> that represents the body of an <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Integrity-Policy">Integrity Policy</see> violation report.
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <c>IntegrityViolationReportBody</c> dictionary is an extension of the <see href="https://developer.mozilla.org/en-US/docs/Web/API/Reporting_API">Reporting API</see> that represents the body of an <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Integrity-Policy">Integrity Policy</see> violation report.
 </summary>
 <remarks>
 <para>Integrity violation reports can be reported to <see href="https://developer.mozilla.org/en-US/docs/Web/API/Reporting_API#reporting_server_endpoints">reporting server endpoints</see> or via a <see cref="ReportingObserver"/>.<br/>They have a <see cref="Report.Type"/> of <c>&amp;quot;integrity-violation&amp;quot;</c>, a <see cref="Report.Url"/> indicating the document that contains the violation, and a <see cref="Report.Body"/> property that is an object matching this dictionary.</para><para></para>

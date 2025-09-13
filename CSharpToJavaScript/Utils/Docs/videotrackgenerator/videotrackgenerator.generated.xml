@@ -8,15 +8,6 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackGenerator"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </VideoTrackGenerator>
-<VideoTrackGeneratorMuted>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>muted</c></strong> Boolean property of the <see cref="VideoTrackGenerator"/> interface can be used to temporarily halt or resume the generation of video frames in the output track.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackGenerator/muted"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<value>A boolean.</value>
-</VideoTrackGeneratorMuted>
 <VideoTrackGeneratorTrack>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>track</c></strong> property of the <see cref="VideoTrackGenerator"/> interface returns a <see cref="MediaStreamTrack"/>. <see cref="VideoFrame"/>s written to <see cref="VideoTrackGenerator.Writable"/> will be generated in this track.
@@ -44,4 +35,13 @@
 </remarks>
 <value>A <see cref="WritableStream"/> of <see cref="VideoFrame"/>s.</value>
 </VideoTrackGeneratorWritable>
+<VideoTrackGeneratorMuted>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>muted</c></strong> Boolean property of the <see cref="VideoTrackGenerator"/> interface can be used to temporarily halt or resume the generation of video frames in the output track.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackGenerator/muted"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<value>A boolean.</value>
+</VideoTrackGeneratorMuted>
 </docs>

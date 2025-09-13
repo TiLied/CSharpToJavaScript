@@ -7,6 +7,15 @@
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Profiler"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </Profiler>
+<ProfilerStop>
+<summary>
+<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>stop()</c></strong> method of the <see cref="Profiler"/> interface stops the profiler and returns a {{jsxref("Promise")}} which resolves to the profile itself.
+</summary>
+<remarks>
+<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Profiler/stop"> <em>See also on MDN</em> </seealso></para>
+</remarks>
+<returns>A <see cref="Promise"/> that resolves to an object containing the profile data. The format and interpretation of this object is described in <see href="https://developer.mozilla.org/en-US/docs/Web/API/JS_Self-Profiling_API/Profile_content_and_format">Profile anatomy and format</see>.</returns>
+</ProfilerStop>
 <ProfilerProfiler>
 <summary>
 <div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>Profiler()</c></strong> constructor creates a new <see cref="Profiler"/> object.
@@ -25,13 +34,4 @@ The <strong><c>samplebufferfull</c></strong> event of the <see cref="Profiler"/>
 <para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Profiler/samplebufferfull"> <em>See also on MDN</em> </seealso></para>
 </remarks>
 </ProfilerSamplebufferfull>
-<ProfilerStop>
-<summary>
-<div class="NOTE"><h5>NOTE</h5> <strong>Experimental</strong></div> The <strong><c>stop()</c></strong> method of the <see cref="Profiler"/> interface stops the profiler and returns a {{jsxref("Promise")}} which resolves to the profile itself.
-</summary>
-<remarks>
-<para><seealso href="https://developer.mozilla.org/en-US/docs/Web/API/Profiler/stop"> <em>See also on MDN</em> </seealso></para>
-</remarks>
-<returns>A <see cref="Promise"/> that resolves to an object containing the profile data. The format and interpretation of this object is described in <see href="https://developer.mozilla.org/en-US/docs/Web/API/JS_Self-Profiling_API/Profile_content_and_format">Profile anatomy and format</see>.</returns>
-</ProfilerStop>
 </docs>

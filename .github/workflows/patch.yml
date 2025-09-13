@@ -1,9 +1,8 @@
 name: patch
 
-on: workflow_dispatch
-
-#on:  
-  #schedule:
+on: 
+  workflow_dispatch
+ #schedule:
   # - cron: "0 13 * * 1"
 
 jobs:
@@ -48,7 +47,7 @@ jobs:
       - run: |
           git commit -am "Test ${{env.newTag}}"
           git push
-      - run: git log ${{needs.setup-outputs.outputs.currentTag}}..master --format=format:'- [%s](https://github.com/TiLied/CSharpToJavaScript/commit/%H)%n' --output=./realease.txt   
+      - run: git log ${{needs.setup-outputs.outputs.currentTag}}..master --format=format:'- [%s](https://github.com/TiLied/CSharpToJavaScript/commit/%H)%n' --output=./release.txt   
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
@@ -57,12 +56,19 @@ jobs:
         with:
           tag_name: ${{ env.newTag }}
           release_name: ${{ env.newTag }}
-          body_path: ./realease.txt
-          draft: true
-          prerelease: true
+          body_path: ./release.txt
+          draft: false
+          prerelease: false
       #update release notes in csproj
-      #build nuget package
-      #upload
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 10.0.x
+      - name: Generate NuGet package
+        run: dotnet pack --configuration Release --output packages
+      - name: Publish NuGet package
+      #ADD API KEY!!!!
+        run: dotnet nuget push packages/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
       - name: Environments
         run: |
           echo $newTag

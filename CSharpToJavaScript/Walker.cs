@@ -17,6 +17,7 @@ namespace CSharpToJavaScript;
 //https://learn.microsoft.com/en-us/dotnet/csharp/roslyn-sdk/get-started/syntax-analysis
 //https://roslynquoter.azurewebsites.net/
 //https://sourceroslyn.io/
+//https://sharplab.io/
 //
 //Annotations are interesting, but because everything is immutable...
 //I don't think it is faster than the current approach.
@@ -61,11 +62,6 @@ internal class Walker : CSharpSyntaxWalker
 
 	private int _EnumMembers = 0;
 
-	//Debug
-	private int _Line = 0;
-	private int _Characters = 0;
-
-
 	public Walker(CSTOJSOptions options, SemanticModel model) : base(SyntaxWalkerDepth.Trivia)
 	{
 		_Options = options;
@@ -86,11 +82,6 @@ internal class Walker : CSharpSyntaxWalker
 				}
 			case SyntaxKind.EndOfLineTrivia:
 				{
-					if (_Options.Debug)
-					{
-						_Line++;
-						_Characters = trivia.FullSpan.Start;
-					}
 					string _full = trivia.ToFullString();
 					JSSB.Append(_full);
 					return;
@@ -106,7 +97,7 @@ internal class Walker : CSharpSyntaxWalker
 				return;
 			}*/
 			default:
-				Log.ErrorLine($"ERROR Trivia : {trivia.Kind()}", _Options);
+				Log.ErrorLine($"Trivia : {trivia.Kind()}", _Options);
 				break;
 		}
 
@@ -259,7 +250,7 @@ internal class Walker : CSharpSyntaxWalker
 					return;
 				}
 			default:
-				Log.ErrorLine($"ERROR Token : {token.Kind()}", _Options);
+				Log.ErrorLine($"Token : {token.Kind()}", _Options);
 				break;
 		}
 
@@ -287,13 +278,19 @@ internal class Walker : CSharpSyntaxWalker
 
 				switch (kind)
 				{
+					case SyntaxKind.DestructorDeclaration:
+					case SyntaxKind.IndexerDeclaration:
+					case SyntaxKind.DelegateDeclaration:
+					case SyntaxKind.EventFieldDeclaration:
+					case SyntaxKind.TypeParameterConstraintClause:
+					case SyntaxKind.EventDeclaration:
 					case SyntaxKind.StructDeclaration:
 					case SyntaxKind.OperatorDeclaration:
 					case SyntaxKind.ConversionOperatorDeclaration:
 					case SyntaxKind.AttributeList:
 						{
 #if DEBUG
-								Log.WarningLine($"\"{kind}\" not implemented or unlikely to be implemented. Ignoring! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{asNode.ToFullString()}|", _Options);
+								Log.WarningLine($"\"{kind}\" not implemented or unlikely to be implemented. Ignoring! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{asNode.ToFullString()}|", _Options);
 #endif
 							break;
 						}
@@ -328,6 +325,7 @@ internal class Walker : CSharpSyntaxWalker
 
 				switch (kind)
 				{
+					case SyntaxKind.SealedKeyword:
 					case SyntaxKind.UnsafeKeyword:
  					case SyntaxKind.PartialKeyword:
 					case SyntaxKind.StaticKeyword:
@@ -378,7 +376,7 @@ internal class Walker : CSharpSyntaxWalker
 					case SyntaxKind.AttributeList:
 						{
 #if DEBUG
-							Log.WarningLine($"\"{kind}\" not implemented or unlikely to be implemented. Ignoring! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{asNode.ToFullString()}|", _Options);
+							Log.WarningLine($"\"{kind}\" not implemented or unlikely to be implemented. Ignoring! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{asNode.ToFullString()}|", _Options);
 #endif
 							break;
 						}
@@ -461,11 +459,7 @@ internal class Walker : CSharpSyntaxWalker
 
 				switch (kind)
 				{
-					case SyntaxKind.EqualsValueClause:
-						{
-							Visit(asNode);
-							break;
-						}
+					case SyntaxKind.AttributeList:
 					case SyntaxKind.ArrayType:
 					case SyntaxKind.NullableType:
 					case SyntaxKind.GenericName:
@@ -473,8 +467,13 @@ internal class Walker : CSharpSyntaxWalker
 					case SyntaxKind.PredefinedType:
 						{
 #if DEBUG
-							Log.WarningLine($"\"{kind}\" not implemented or unlikely to be implemented. Ignoring! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{asNode.ToFullString()}|", _Options);
+							Log.WarningLine($"\"{kind}\" not implemented or unlikely to be implemented. Ignoring! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{asNode.ToFullString()}|", _Options);
 #endif
+							break;
+						}
+					case SyntaxKind.EqualsValueClause:
+						{
+							Visit(asNode);
 							break;
 						}
 					default:
@@ -489,6 +488,7 @@ internal class Walker : CSharpSyntaxWalker
 
 				switch (kind)
 				{
+					case SyntaxKind.OutKeyword:
 					case SyntaxKind.RefKeyword:
 						VisitLeadingTrivia(asToken);
 						break;
@@ -521,7 +521,7 @@ internal class Walker : CSharpSyntaxWalker
 					case SyntaxKind.IdentifierName:
 						{
 #if DEBUG
-							Log.WarningLine($"\"{kind}\" not implemented or unlikely to be implemented. Ignoring! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{asNode.ToFullString()}|", _Options);
+							Log.WarningLine($"\"{kind}\" not implemented or unlikely to be implemented. Ignoring! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{asNode.ToFullString()}|", _Options);
 #endif
 							break;
 						}
@@ -564,10 +564,13 @@ internal class Walker : CSharpSyntaxWalker
 
 				switch (kind)
 				{
+					case SyntaxKind.UsingStatement:
+					case SyntaxKind.LockStatement:
+					case SyntaxKind.FixedStatement:
 					case SyntaxKind.UnsafeStatement:
 						{
 #if DEBUG
-							Log.WarningLine($"\"{kind}\" not implemented or unlikely to be implemented. Ignoring! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{asNode.ToFullString()}|", _Options);
+							Log.WarningLine($"\"{kind}\" not implemented or unlikely to be implemented. Ignoring! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{asNode.ToFullString()}|", _Options);
 #endif
 							break;
 						}
@@ -768,6 +771,13 @@ internal class Walker : CSharpSyntaxWalker
 
 				switch (kind)
 				{
+					case SyntaxKind.NameColon:
+						{
+#if DEBUG
+							Log.WarningLine($"\"{kind}\" not implemented or unlikely to be implemented. Ignoring! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{asNode.ToFullString()}|", _Options);
+#endif
+							break;
+						}
 					case SyntaxKind.CharacterLiteralExpression:
 					case SyntaxKind.ConditionalExpression:
 					case SyntaxKind.UnaryMinusExpression:
@@ -993,6 +1003,13 @@ internal class Walker : CSharpSyntaxWalker
 
 				switch (kind)
 				{
+					case SyntaxKind.AttributeList:
+						{
+#if DEBUG
+							Log.WarningLine($"\"{kind}\" not implemented or unlikely to be implemented. Ignoring! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{asNode.ToFullString()}|", _Options);
+#endif
+							break;
+						}
 					case SyntaxKind.EnumMemberDeclaration:
 						VisitEnumMemberDeclaration((EnumMemberDeclarationSyntax)asNode);
 						break;
@@ -1164,10 +1181,12 @@ internal class Walker : CSharpSyntaxWalker
 
 				switch (kind)
 				{
+					case SyntaxKind.TypeParameterList:
+					case SyntaxKind.TypeParameterConstraintClause:
 					case SyntaxKind.AttributeList:
 						{
 #if DEBUG
-							Log.WarningLine($"\"{kind}\" not implemented or unlikely to be implemented. Ignoring! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{asNode.ToFullString()}|", _Options);
+							Log.WarningLine($"\"{kind}\" not implemented or unlikely to be implemented. Ignoring! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{asNode.ToFullString()}|", _Options);
 #endif
 							break;
 						}
@@ -1201,6 +1220,12 @@ internal class Walker : CSharpSyntaxWalker
 
 				switch (kind)
 				{
+					case SyntaxKind.AbstractKeyword:
+					case SyntaxKind.SealedKeyword:
+					case SyntaxKind.NewKeyword:
+					case SyntaxKind.OverrideKeyword:
+					case SyntaxKind.ProtectedKeyword:
+					case SyntaxKind.VirtualKeyword:
 					case SyntaxKind.PartialKeyword:
 					case SyntaxKind.PrivateKeyword:
 					case SyntaxKind.PublicKeyword:
@@ -1244,7 +1269,7 @@ internal class Walker : CSharpSyntaxWalker
 					case SyntaxKind.AttributeList:
 						{
 #if DEBUG
-							Log.WarningLine($"\"{kind}\" not implemented or unlikely to be implemented. Ignoring! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{asNode.ToFullString()}|", _Options);
+							Log.WarningLine($"\"{kind}\" not implemented or unlikely to be implemented. Ignoring! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{asNode.ToFullString()}|", _Options);
 #endif
 							break;
 						}
@@ -1467,7 +1492,7 @@ internal class Walker : CSharpSyntaxWalker
 					case SyntaxKind.GenericName:
 						{
 #if DEBUG
-							Log.WarningLine($"\"{kind}\" not implemented or unlikely to be implemented. Ignoring! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{asNode.ToFullString()}|", _Options);
+							Log.WarningLine($"\"{kind}\" not implemented or unlikely to be implemented. Ignoring! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{asNode.ToFullString()}|", _Options);
 #endif
 							break;
 						}
@@ -1486,6 +1511,7 @@ internal class Walker : CSharpSyntaxWalker
 
 				switch (kind)
 				{
+					case SyntaxKind.AbstractKeyword:
 					case SyntaxKind.RequiredKeyword:
 					case SyntaxKind.IdentifierToken:
 						break;
@@ -2126,6 +2152,7 @@ internal class Walker : CSharpSyntaxWalker
 
 				switch (kind)
 				{
+					case SyntaxKind.NullableType:
 					case SyntaxKind.PredefinedType:
 					case SyntaxKind.IdentifierName: 
 						JSSB.Append("Array");
@@ -2179,7 +2206,7 @@ internal class Walker : CSharpSyntaxWalker
 					case SyntaxKind.OmittedArraySizeExpression:
 						{
 #if DEBUG
-							Log.WarningLine($"\"{kind}\" not implemented or unlikely to be implemented. Ignoring! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{asNode.ToFullString()}|", _Options);
+							Log.WarningLine($"\"{kind}\" not implemented or unlikely to be implemented. Ignoring! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{asNode.ToFullString()}|", _Options);
 #endif
 							break;
 						}
@@ -2554,7 +2581,7 @@ internal class Walker : CSharpSyntaxWalker
 					case SyntaxKind.PredefinedType:
 						{
 #if DEBUG
-							Log.WarningLine($"\"{kind}\" not implemented or unlikely to be implemented. Ignoring! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{asNode.ToFullString()}|", _Options);
+							Log.WarningLine($"\"{kind}\" not implemented or unlikely to be implemented. Ignoring! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{asNode.ToFullString()}|", _Options);
 #endif
 							break;
 						}
@@ -2993,11 +3020,12 @@ internal class Walker : CSharpSyntaxWalker
 
 				switch (kind)
 				{
+					case SyntaxKind.GenericName:
 					case SyntaxKind.PredefinedType:
 					case SyntaxKind.IdentifierName:
 						{
 #if DEBUG
-							Log.WarningLine($"\"{kind}\" not implemented or unlikely to be implemented. Ignoring! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{asNode.ToFullString()}|", _Options);
+							Log.WarningLine($"\"{kind}\" not implemented or unlikely to be implemented. Ignoring! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{asNode.ToFullString()}|", _Options);
 #endif
 							break;
 						}
@@ -3115,7 +3143,7 @@ internal class Walker : CSharpSyntaxWalker
 	public override void VisitAssignmentExpression(AssignmentExpressionSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitAssignmentExpression(node);
 	}
@@ -3123,126 +3151,126 @@ internal class Walker : CSharpSyntaxWalker
 	public override void VisitAttribute(AttributeSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitAttribute(node);
 	}
 	public override void VisitArrowExpressionClause(ArrowExpressionClauseSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitArrowExpressionClause(node);
 	}
 	public override void VisitArgumentList(ArgumentListSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitArgumentList(node);
 	}
 	public override void VisitAccessorDeclaration(AccessorDeclarationSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitAccessorDeclaration(node);
 	}
 	public override void VisitAliasQualifiedName(AliasQualifiedNameSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitAliasQualifiedName(node);
 	}
 	public override void VisitAllowsConstraintClause(AllowsConstraintClauseSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitAllowsConstraintClause(node);
 	}
 	public override void VisitAnonymousMethodExpression(AnonymousMethodExpressionSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitAnonymousMethodExpression(node);
 	}
 	public override void VisitAnonymousObjectMemberDeclarator(AnonymousObjectMemberDeclaratorSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitAnonymousObjectMemberDeclarator(node);
 	}
 	public override void VisitAttributeArgument(AttributeArgumentSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitAttributeArgument(node);
 	}
 	public override void VisitAttributeArgumentList(AttributeArgumentListSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitAttributeArgumentList(node);
 	}
 	public override void VisitAttributeList(AttributeListSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitAttributeList(node);
 	}
 	public override void VisitAttributeTargetSpecifier(AttributeTargetSpecifierSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitAttributeTargetSpecifier(node);
 	}
 	public override void VisitAwaitExpression(AwaitExpressionSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitAwaitExpression(node);
 	}
 	public override void VisitBadDirectiveTrivia(BadDirectiveTriviaSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitBadDirectiveTrivia(node);
 	}
 	public override void VisitBinaryExpression(BinaryExpressionSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitBinaryExpression(node);
 	}
 	public override void VisitBinaryPattern(BinaryPatternSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitBinaryPattern(node);
 	}
 	public override void VisitBracketedArgumentList(BracketedArgumentListSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitBracketedArgumentList(node);
 	}
 	public override void VisitBracketedParameterList(BracketedParameterListSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitBracketedParameterList(node);
 	}
@@ -3257,14 +3285,14 @@ internal class Walker : CSharpSyntaxWalker
 		}
 
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitBreakStatement(node);
 	}
 	public override void VisitCasePatternSwitchLabel(CasePatternSwitchLabelSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitCasePatternSwitchLabel(node);
 	}
@@ -3279,49 +3307,49 @@ internal class Walker : CSharpSyntaxWalker
 		}
 
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitCaseSwitchLabel(node);
 	}
 	public override void VisitCatchClause(CatchClauseSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitCatchClause(node);
 	}
 	public override void VisitCatchFilterClause(CatchFilterClauseSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitCatchFilterClause(node);
 	}
 	public override void VisitCheckedExpression(CheckedExpressionSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitCheckedExpression(node);
 	}
 	public override void VisitCheckedStatement(CheckedStatementSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitCheckedStatement(node);
 	}
 	public override void VisitClassOrStructConstraint(ClassOrStructConstraintSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitClassOrStructConstraint(node);
 	}
 	public override void VisitCollectionExpression(CollectionExpressionSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitCollectionExpression(node);
 	}
@@ -3344,10 +3372,13 @@ internal class Walker : CSharpSyntaxWalker
 					case SyntaxKind.UsingDirective:
 						{
 #if DEBUG
-							Log.WarningLine($"\"{kind}\" not implemented or unlikely to be implemented. Ignoring! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{asNode.ToFullString()}|", _Options);
+							Log.WarningLine($"\"{kind}\" not implemented or unlikely to be implemented. Ignoring! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{asNode.ToFullString()}|", _Options);
 #endif
 							break;
 						}
+					case SyntaxKind.ClassDeclaration:
+						VisitClassDeclaration((ClassDeclarationSyntax)asNode);
+						break;
 					case SyntaxKind.GlobalStatement:
 						{
 							_GlobalStatement = true;
@@ -3396,77 +3427,77 @@ internal class Walker : CSharpSyntaxWalker
 	public override void VisitConditionalAccessExpression(ConditionalAccessExpressionSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitConditionalAccessExpression(node);
 	}
 	public override void VisitConditionalExpression(ConditionalExpressionSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitConditionalExpression(node);
 	}
 	public override void VisitConstantPattern(ConstantPatternSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitConstantPattern(node);
 	}
 	public override void VisitConstructorConstraint(ConstructorConstraintSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitConstructorConstraint(node);
 	}
 	public override void VisitConstructorInitializer(ConstructorInitializerSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitConstructorInitializer(node);
 	}
 	public override void VisitContinueStatement(ContinueStatementSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitContinueStatement(node);
 	}
 	public override void VisitConversionOperatorDeclaration(ConversionOperatorDeclarationSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitConversionOperatorDeclaration(node);
 	}
 	public override void VisitConversionOperatorMemberCref(ConversionOperatorMemberCrefSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitConversionOperatorMemberCref(node);
 	}
 	public override void VisitCrefBracketedParameterList(CrefBracketedParameterListSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitCrefBracketedParameterList(node);
 	}
 	public override void VisitCrefParameter(CrefParameterSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitCrefParameter(node);
 	}
 	public override void VisitCrefParameterList(CrefParameterListSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitCrefParameterList(node);
 	}
@@ -3474,28 +3505,28 @@ internal class Walker : CSharpSyntaxWalker
 	public override void VisitDeclarationExpression(DeclarationExpressionSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitDeclarationExpression(node);
 	}
 	public override void VisitDeclarationPattern(DeclarationPatternSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitDeclarationPattern(node);
 	}
 	public override void VisitDefaultConstraint(DefaultConstraintSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitDefaultConstraint(node);
 	}
 	public override void VisitDefaultExpression(DefaultExpressionSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitDefaultExpression(node);
 	}
@@ -3510,14 +3541,14 @@ internal class Walker : CSharpSyntaxWalker
 		}
 
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitDefaultSwitchLabel(node);
 	}
 	public override void VisitDefineDirectiveTrivia(DefineDirectiveTriviaSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitDefineDirectiveTrivia(node);
 	}
@@ -3525,126 +3556,126 @@ internal class Walker : CSharpSyntaxWalker
 	public override void VisitDelegateDeclaration(DelegateDeclarationSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitDelegateDeclaration(node);
 	}
 	public override void VisitDestructorDeclaration(DestructorDeclarationSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitDestructorDeclaration(node);
 	}
 	public override void VisitDiscardDesignation(DiscardDesignationSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitDiscardDesignation(node);
 	}
 	public override void VisitDiscardPattern(DiscardPatternSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitDiscardPattern(node);
 	}
 	public override void VisitDocumentationCommentTrivia(DocumentationCommentTriviaSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitDocumentationCommentTrivia(node);
 	}
 	public override void VisitDoStatement(DoStatementSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitDoStatement(node);
 	}
 	public override void VisitElementAccessExpression(ElementAccessExpressionSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitElementAccessExpression(node);
 	}
 	public override void VisitElementBindingExpression(ElementBindingExpressionSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitElementBindingExpression(node);
 	}
 	public override void VisitElifDirectiveTrivia(ElifDirectiveTriviaSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitElifDirectiveTrivia(node);
 	}
 	public override void VisitElseClause(ElseClauseSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitElseClause(node);
 	}
 	public override void VisitElseDirectiveTrivia(ElseDirectiveTriviaSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitElseDirectiveTrivia(node);
 	}
 	public override void VisitEmptyStatement(EmptyStatementSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitEmptyStatement(node);
 	}
 	public override void VisitEndIfDirectiveTrivia(EndIfDirectiveTriviaSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitEndIfDirectiveTrivia(node);
 	}
 	public override void VisitEndRegionDirectiveTrivia(EndRegionDirectiveTriviaSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitEndRegionDirectiveTrivia(node);
 	}
 	public override void VisitEqualsValueClause(EqualsValueClauseSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitEqualsValueClause(node);
 	}
 	public override void VisitErrorDirectiveTrivia(ErrorDirectiveTriviaSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitErrorDirectiveTrivia(node);
 	}
 	public override void VisitEventDeclaration(EventDeclarationSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitEventDeclaration(node);
 	}
 	public override void VisitEventFieldDeclaration(EventFieldDeclarationSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitEventFieldDeclaration(node);
 	}
@@ -3652,28 +3683,28 @@ internal class Walker : CSharpSyntaxWalker
 	public override void VisitExplicitInterfaceSpecifier(ExplicitInterfaceSpecifierSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitExplicitInterfaceSpecifier(node);
 	}
 	public override void VisitExpressionColon(ExpressionColonSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitExpressionColon(node);
 	}
 	public override void VisitExpressionElement(ExpressionElementSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitExpressionElement(node);
 	}
 	public override void VisitExternAliasDirective(ExternAliasDirectiveSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitExternAliasDirective(node);
 	}
@@ -3696,7 +3727,7 @@ internal class Walker : CSharpSyntaxWalker
 					case SyntaxKind.StructDeclaration:
 						{
 #if DEBUG
-							Log.WarningLine($"\"{kind}\" not implemented or unlikely to be implemented. Ignoring! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{asNode.ToFullString()}|", _Options);
+							Log.WarningLine($"\"{kind}\" not implemented or unlikely to be implemented. Ignoring! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{asNode.ToFullString()}|", _Options);
 #endif
 							break;
 						}
@@ -3740,21 +3771,21 @@ internal class Walker : CSharpSyntaxWalker
 	public override void VisitFinallyClause(FinallyClauseSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitFinallyClause(node);
 	}
 	public override void VisitFixedStatement(FixedStatementSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitFixedStatement(node);
 	}
 	public override void VisitForEachVariableStatement(ForEachVariableStatementSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitForEachVariableStatement(node);
 	}
@@ -3769,56 +3800,56 @@ internal class Walker : CSharpSyntaxWalker
 		}
 
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitForStatement(node);
 	}
 	public override void VisitFromClause(FromClauseSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitFromClause(node);
 	}
 	public override void VisitFunctionPointerCallingConvention(FunctionPointerCallingConventionSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitFunctionPointerCallingConvention(node);
 	}
 	public override void VisitFunctionPointerParameter(FunctionPointerParameterSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitFunctionPointerParameter(node);
 	}
 	public override void VisitFunctionPointerParameterList(FunctionPointerParameterListSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitFunctionPointerParameterList(node);
 	}
 	public override void VisitFunctionPointerType(FunctionPointerTypeSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitFunctionPointerType(node);
 	}
 	public override void VisitFunctionPointerUnmanagedCallingConvention(FunctionPointerUnmanagedCallingConventionSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitFunctionPointerUnmanagedCallingConvention(node);
 	}
 	public override void VisitFunctionPointerUnmanagedCallingConventionList(FunctionPointerUnmanagedCallingConventionListSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitFunctionPointerUnmanagedCallingConventionList(node);
 	}
@@ -3867,21 +3898,21 @@ internal class Walker : CSharpSyntaxWalker
 	public override void VisitGotoStatement(GotoStatementSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitGotoStatement(node);
 	}
 	public override void VisitGroupClause(GroupClauseSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitGroupClause(node);
 	}
 	public override void VisitIfDirectiveTrivia(IfDirectiveTriviaSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitIfDirectiveTrivia(node);
 	}
@@ -3928,6 +3959,7 @@ internal class Walker : CSharpSyntaxWalker
 					case SyntaxKind.LogicalNotExpression:
 						VisitPrefixUnaryExpression((PrefixUnaryExpressionSyntax)asNode);
 						break;
+					case SyntaxKind.GreaterThanExpression:
 					case SyntaxKind.LogicalOrExpression:
 					case SyntaxKind.NotEqualsExpression:
 					case SyntaxKind.GreaterThanOrEqualExpression:
@@ -3964,112 +3996,112 @@ internal class Walker : CSharpSyntaxWalker
 	public override void VisitImplicitArrayCreationExpression(ImplicitArrayCreationExpressionSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitImplicitArrayCreationExpression(node);
 	}
 	public override void VisitImplicitElementAccess(ImplicitElementAccessSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitImplicitElementAccess(node);
 	}
 	public override void VisitImplicitStackAllocArrayCreationExpression(ImplicitStackAllocArrayCreationExpressionSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitImplicitStackAllocArrayCreationExpression(node);
 	}
 	public override void VisitIncompleteMember(IncompleteMemberSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitIncompleteMember(node);
 	}
 	public override void VisitIndexerDeclaration(IndexerDeclarationSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitIndexerDeclaration(node);
 	}
 	public override void VisitIndexerMemberCref(IndexerMemberCrefSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitIndexerMemberCref(node);
 	}
 	public override void VisitInterfaceDeclaration(InterfaceDeclarationSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitInterfaceDeclaration(node);
 	}
 	public override void VisitInterpolatedStringText(InterpolatedStringTextSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitInterpolatedStringText(node);
 	}
 	public override void VisitInterpolation(InterpolationSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitInterpolation(node);
 	}
 	public override void VisitInterpolationAlignmentClause(InterpolationAlignmentClauseSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitInterpolationAlignmentClause(node);
 	}
 	public override void VisitInterpolationFormatClause(InterpolationFormatClauseSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitInterpolationFormatClause(node);
 	}
 	public override void VisitInvocationExpression(InvocationExpressionSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitInvocationExpression(node);
 	}
 	public override void VisitIsPatternExpression(IsPatternExpressionSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitIsPatternExpression(node);
 	}
 	public override void VisitJoinClause(JoinClauseSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitJoinClause(node);
 	}
 	public override void VisitJoinIntoClause(JoinIntoClauseSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitJoinIntoClause(node);
 	}
 	public override void VisitLabeledStatement(LabeledStatementSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitLabeledStatement(node);
 	}
@@ -4084,42 +4116,42 @@ internal class Walker : CSharpSyntaxWalker
 	public override void VisitLetClause(LetClauseSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitLetClause(node);
 	}
 	public override void VisitLineDirectivePosition(LineDirectivePositionSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitLineDirectivePosition(node);
 	}
 	public override void VisitLineDirectiveTrivia(LineDirectiveTriviaSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitLineDirectiveTrivia(node);
 	}
 	public override void VisitLineSpanDirectiveTrivia(LineSpanDirectiveTriviaSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitLineSpanDirectiveTrivia(node);
 	}
 	public override void VisitListPattern(ListPatternSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitListPattern(node);
 	}
 	public override void VisitLoadDirectiveTrivia(LoadDirectiveTriviaSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitLoadDirectiveTrivia(node);
 	}
@@ -4185,35 +4217,35 @@ internal class Walker : CSharpSyntaxWalker
 	public override void VisitLockStatement(LockStatementSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitLockStatement(node);
 	}
 	public override void VisitMakeRefExpression(MakeRefExpressionSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitMakeRefExpression(node);
 	}
 	public override void VisitMemberBindingExpression(MemberBindingExpressionSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitMemberBindingExpression(node);
 	}
 	public override void VisitNameColon(NameColonSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitNameColon(node);
 	}
 	public override void VisitNameMemberCref(NameMemberCrefSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitNameMemberCref(node);
 	}
@@ -4237,7 +4269,7 @@ internal class Walker : CSharpSyntaxWalker
 					case SyntaxKind.StructDeclaration:
 						{
 #if DEBUG
-							Log.WarningLine($"\"{kind}\" not implemented or unlikely to be implemented. Ignoring! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{asNode.ToFullString()}|", _Options);
+							Log.WarningLine($"\"{kind}\" not implemented or unlikely to be implemented. Ignoring! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{asNode.ToFullString()}|", _Options);
 #endif
 							break;
 						}
@@ -4284,35 +4316,35 @@ internal class Walker : CSharpSyntaxWalker
 	public override void VisitNullableDirectiveTrivia(NullableDirectiveTriviaSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitNullableDirectiveTrivia(node);
 	}
 	public override void VisitNullableType(NullableTypeSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitNullableType(node);
 	}
 	public override void VisitOmittedArraySizeExpression(OmittedArraySizeExpressionSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitOmittedArraySizeExpression(node);
 	}
 	public override void VisitOmittedTypeArgument(OmittedTypeArgumentSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitOmittedTypeArgument(node);
 	}
 	public override void VisitOperatorDeclaration(OperatorDeclarationSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitOperatorDeclaration(node);
 	}
@@ -4320,217 +4352,217 @@ internal class Walker : CSharpSyntaxWalker
 	public override void VisitOperatorMemberCref(OperatorMemberCrefSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitOperatorMemberCref(node);
 	}
 	public override void VisitOrderByClause(OrderByClauseSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitOrderByClause(node);
 	}
 	public override void VisitOrdering(OrderingSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitOrdering(node);
 	}
 	public override void VisitParameterList(ParameterListSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitParameterList(node);
 	}
 	public override void VisitParenthesizedLambdaExpression(ParenthesizedLambdaExpressionSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitParenthesizedLambdaExpression(node);
 	}
 	public override void VisitParenthesizedPattern(ParenthesizedPatternSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitParenthesizedPattern(node);
 	}
 	public override void VisitParenthesizedVariableDesignation(ParenthesizedVariableDesignationSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitParenthesizedVariableDesignation(node);
 	}
 	public override void VisitPointerType(PointerTypeSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitPointerType(node);
 	}
 	public override void VisitPositionalPatternClause(PositionalPatternClauseSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitPositionalPatternClause(node);
 	}
 	public override void VisitPostfixUnaryExpression(PostfixUnaryExpressionSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitPostfixUnaryExpression(node);
 	}
 	public override void VisitPragmaChecksumDirectiveTrivia(PragmaChecksumDirectiveTriviaSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitPragmaChecksumDirectiveTrivia(node);
 	}
 	public override void VisitPragmaWarningDirectiveTrivia(PragmaWarningDirectiveTriviaSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitPragmaWarningDirectiveTrivia(node);
 	}
 	public override void VisitPrefixUnaryExpression(PrefixUnaryExpressionSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitPrefixUnaryExpression(node);
 	}
 	public override void VisitPrimaryConstructorBaseType(PrimaryConstructorBaseTypeSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitPrimaryConstructorBaseType(node);
 	}
 	public override void VisitPropertyPatternClause(PropertyPatternClauseSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitPropertyPatternClause(node);
 	}
 	public override void VisitQualifiedCref(QualifiedCrefSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitQualifiedCref(node);
 	}
 	public override void VisitQualifiedName(QualifiedNameSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitQualifiedName(node);
 	}
 	public override void VisitQueryBody(QueryBodySyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitQueryBody(node);
 	}
 	public override void VisitQueryContinuation(QueryContinuationSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitQueryContinuation(node);
 	}
 	public override void VisitQueryExpression(QueryExpressionSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitQueryExpression(node);
 	}
 	public override void VisitRangeExpression(RangeExpressionSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitRangeExpression(node);
 	}
 	public override void VisitRecordDeclaration(RecordDeclarationSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitRecordDeclaration(node);
 	}
 	public override void VisitRecursivePattern(RecursivePatternSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitRecursivePattern(node);
 	}
 	public override void VisitReferenceDirectiveTrivia(ReferenceDirectiveTriviaSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitReferenceDirectiveTrivia(node);
 	}
 	public override void VisitRefExpression(RefExpressionSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitRefExpression(node);
 	}
 	public override void VisitRefStructConstraint(RefStructConstraintSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitRefStructConstraint(node);
 	}
 	public override void VisitRefType(RefTypeSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitRefType(node);
 	}
 	public override void VisitRefTypeExpression(RefTypeExpressionSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitRefTypeExpression(node);
 	}
 	public override void VisitRefValueExpression(RefValueExpressionSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitRefValueExpression(node);
 	}
 	public override void VisitRegionDirectiveTrivia(RegionDirectiveTriviaSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitRegionDirectiveTrivia(node);
 	}
 	public override void VisitRelationalPattern(RelationalPatternSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitRelationalPattern(node);
 	}
@@ -4545,119 +4577,119 @@ internal class Walker : CSharpSyntaxWalker
 		}
 
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitReturnStatement(node);
 	}
 	public override void VisitScopedType(ScopedTypeSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitScopedType(node);
 	}
 	public override void VisitSelectClause(SelectClauseSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitSelectClause(node);
 	}
 	public override void VisitShebangDirectiveTrivia(ShebangDirectiveTriviaSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitShebangDirectiveTrivia(node);
 	}
 	public override void VisitSimpleBaseType(SimpleBaseTypeSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitSimpleBaseType(node);
 	}
 	public override void VisitSimpleLambdaExpression(SimpleLambdaExpressionSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitSimpleLambdaExpression(node);
 	}
 	public override void VisitSingleVariableDesignation(SingleVariableDesignationSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitSingleVariableDesignation(node);
 	}
 	public override void VisitSizeOfExpression(SizeOfExpressionSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitSizeOfExpression(node);
 	}
 	public override void VisitSkippedTokensTrivia(SkippedTokensTriviaSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitSkippedTokensTrivia(node);
 	}
 	public override void VisitSlicePattern(SlicePatternSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitSlicePattern(node);
 	}
 	public override void VisitSpreadElement(SpreadElementSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitSpreadElement(node);
 	}
 	public override void VisitStackAllocArrayCreationExpression(StackAllocArrayCreationExpressionSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitStackAllocArrayCreationExpression(node);
 	}
 	public override void VisitStructDeclaration(StructDeclarationSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitStructDeclaration(node);
 	}
 	public override void VisitSubpattern(SubpatternSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitSubpattern(node);
 	}
 	public override void VisitSwitchExpression(SwitchExpressionSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitSwitchExpression(node);
 	}
 	public override void VisitSwitchExpressionArm(SwitchExpressionArmSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitSwitchExpressionArm(node);
 	}
 	public override void VisitSwitchSection(SwitchSectionSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitSwitchSection(node);
 	}
@@ -4672,21 +4704,21 @@ internal class Walker : CSharpSyntaxWalker
 		}
 
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitSwitchStatement(node);
 	}
 	public override void VisitThrowExpression(ThrowExpressionSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitThrowExpression(node);
 	}
 	public override void VisitThrowStatement(ThrowStatementSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitThrowStatement(node);
 	}
@@ -4701,140 +4733,140 @@ internal class Walker : CSharpSyntaxWalker
 	public override void VisitTryStatement(TryStatementSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitTryStatement(node);
 	}
 	public override void VisitTupleElement(TupleElementSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitTupleElement(node);
 	}
 	public override void VisitTupleExpression(TupleExpressionSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitTupleExpression(node);
 	}
 	public override void VisitTupleType(TupleTypeSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitTupleType(node);
 	}
 	public override void VisitTypeConstraint(TypeConstraintSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitTypeConstraint(node);
 	}
 	public override void VisitTypeCref(TypeCrefSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitTypeCref(node);
 	}
 	public override void VisitTypeOfExpression(TypeOfExpressionSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitTypeOfExpression(node);
 	}
 	public override void VisitTypeParameter(TypeParameterSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitTypeParameter(node);
 	}
 	public override void VisitTypeParameterConstraintClause(TypeParameterConstraintClauseSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitTypeParameterConstraintClause(node);
 	}
 	public override void VisitTypeParameterList(TypeParameterListSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitTypeParameterList(node);
 	}
 	public override void VisitTypePattern(TypePatternSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitTypePattern(node);
 	}
 	public override void VisitUnaryPattern(UnaryPatternSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitUnaryPattern(node);
 	}
 	public override void VisitUndefDirectiveTrivia(UndefDirectiveTriviaSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitUndefDirectiveTrivia(node);
 	}
 	public override void VisitUnsafeStatement(UnsafeStatementSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitUnsafeStatement(node);
 	}
 	public override void VisitUsingDirective(UsingDirectiveSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitUsingDirective(node);
 	}
 	public override void VisitUsingStatement(UsingStatementSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitUsingStatement(node);
 	}
 	public override void VisitVarPattern(VarPatternSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitVarPattern(node);
 	}
 	public override void VisitWarningDirectiveTrivia(WarningDirectiveTriviaSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitWarningDirectiveTrivia(node);
 	}
 	public override void VisitWhenClause(WhenClauseSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitWhenClause(node);
 	}
 	public override void VisitWhereClause(WhereClauseSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitWhereClause(node);
 	}
@@ -4849,63 +4881,63 @@ internal class Walker : CSharpSyntaxWalker
 		}
 
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitWhileStatement(node);
 	}
 	public override void VisitWithExpression(WithExpressionSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitWithExpression(node);
 	}
 	public override void VisitXmlCDataSection(XmlCDataSectionSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitXmlCDataSection(node);
 	}
 	public override void VisitXmlComment(XmlCommentSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitXmlComment(node);
 	}
 	public override void VisitXmlCrefAttribute(XmlCrefAttributeSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitXmlCrefAttribute(node);
 	}
 	public override void VisitXmlElement(XmlElementSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitXmlElement(node);
 	}
 	public override void VisitXmlElementEndTag(XmlElementEndTagSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitXmlElementEndTag(node);
 	}
 	public override void VisitXmlElementStartTag(XmlElementStartTagSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitXmlElementStartTag(node);
 	}
 	public override void VisitXmlEmptyElement(XmlEmptyElementSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitXmlEmptyElement(node);
 	}
@@ -4913,49 +4945,49 @@ internal class Walker : CSharpSyntaxWalker
 	public override void VisitXmlName(XmlNameSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitXmlName(node);
 	}
 	public override void VisitXmlNameAttribute(XmlNameAttributeSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitXmlNameAttribute(node);
 	}
 	public override void VisitXmlPrefix(XmlPrefixSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitXmlPrefix(node);
 	}
 	public override void VisitXmlProcessingInstruction(XmlProcessingInstructionSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitXmlProcessingInstruction(node);
 	}
 	public override void VisitXmlText(XmlTextSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitXmlText(node);
 	}
 	public override void VisitXmlTextAttribute(XmlTextAttributeSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitXmlTextAttribute(node);
 	}
 	public override void VisitYieldStatement(YieldStatementSyntax node)
 	{
 #if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({node.FullSpan}|l:{_Line}|{node.FullSpan.Start - _Characters}-{node.FullSpan.End - _Characters})\n|{node.ToFullString()}|", _Options);
+		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|", _Options);
 #endif
 		base.VisitYieldStatement(node);
 	}
@@ -5368,13 +5400,13 @@ internal class Walker : CSharpSyntaxWalker
 
 		if (symbol == null) 
 		{
-			Log.WarningLine($"WARNING! node: \"{node}\", symbol is null. USE \"CustomCSNamesToJS\"!", _Options);
+			Log.WarningLine($"node: \"{node}\", symbol is null. USE \"CustomCSNamesToJS\"!", _Options);
 			return false;
 		}
 		if (symbol.Name == "dynamic")
 		{
 			//Hitting with "AllInOneNoPreprocessor-v6.cs"
-			Log.WarningLine($"WARNING! node: \"{node}\", symbol is \"dynamic\".", _Options);
+			Log.WarningLine($"node: \"{node}\", symbol is \"dynamic\".", _Options);
 			return false;
 		}
 
@@ -5395,18 +5427,17 @@ internal class Walker : CSharpSyntaxWalker
 
 			if(typeSymbol.Kind != SymbolKind.NamedType) 
 			{
-				Log.WarningLine($"WARNING! node: \"{node}\", typeSymbol is \"{typeSymbol.Kind}\". USE \"CustomCSNamesToJS\"!", _Options);
+				Log.WarningLine($"node: \"{node}\", typeSymbol is \"{typeSymbol.Kind}\". USE \"CustomCSNamesToJS\"!", _Options);
 				return false;
 			}
 		}
 
 		string typeName = typeSymbol.Name;
-		ToAttribute toAttribute = new(ToAttribute.Default);
 
 		string? jsStr = _NETAPI.ReturnJSString(typeName);
 		if (jsStr == null)
 		{
-			Log.WarningLine($"WARNING! typeSymbol: \"{typeSymbol}\" Is not supported! USE \"CustomCSNamesToJS\"", _Options);
+			Log.WarningLine($"typeSymbol: \"{typeSymbol}\" Is not supported! USE \"CustomCSNamesToJS\"", _Options);
 			return false;
 		}
 		else
@@ -5419,7 +5450,7 @@ internal class Walker : CSharpSyntaxWalker
 			jsStr = _NETAPI.ReturnJSString(typeName, symbol.Name);
 			if (jsStr == null)
 			{
-				Log.WarningLine($"WARNING! node: \"{node}\", typeSymbol: \"{typeSymbol}\", symbol: \"{symbol}\", Is not supported! USE \"CustomCSNamesToJS\"", _Options);
+				Log.WarningLine($"node: \"{node}\", typeSymbol: \"{typeSymbol}\", symbol: \"{symbol}\", Is not supported! USE \"CustomCSNamesToJS\"", _Options);
 				return false;
 			}
 			else

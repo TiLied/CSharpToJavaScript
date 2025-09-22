@@ -1,7 +1,6 @@
 ﻿using CSharpToJavaScript.Utils;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Text;
 
 namespace CSharpToJavaScript
@@ -36,20 +35,6 @@ namespace CSharpToJavaScript
 		/// </value>
 		public bool DisableConsoleOutput { get; set; } = false;
 
-		/// <summary>
-		/// Output path for javascript file/files.
-		/// </summary>
-		/// <value>
-		/// Default: <see cref="Directory.GetCurrentDirectory" />
-		/// </value>
-		public string OutputPath { get; set; } = Directory.GetCurrentDirectory();
-		/// <summary>
-		/// Name of an output js file.  
-		/// </summary>
-		/// <value>
-		/// Default: cs filename with ".js" />
-		/// </value>
-		public string? OutputFileName { get; set; } = null;
 		/// <summary>
 		/// Self-explanatory, Use <c>var</c> over <c>let</c>.
 		/// </summary>
@@ -108,7 +93,6 @@ namespace CSharpToJavaScript
 		/// <summary>
 		/// Add a <see cref="StringBuilder" /> to the front of a javascript file.
 		/// </summary>
-		/// <remarks>Note! When passing a folder path to <see cref="CSTOJS.GenerateOneAsync(string, string?)" /> applies to every file!</remarks>
 		/// <value>
 		/// Default: <c>new()</c>
 		/// </value>
@@ -116,7 +100,6 @@ namespace CSharpToJavaScript
 		/// <summary>
 		/// Add a <see cref="StringBuilder" /> to the end of a javascript file.
 		/// </summary>
-		/// <remarks>Note! When passing a folder path to <see cref="CSTOJS.GenerateOneAsync(string, string?)" /> applies to every file!</remarks>
 		/// <value>
 		/// Default: <c>new()</c>
 		/// </value>

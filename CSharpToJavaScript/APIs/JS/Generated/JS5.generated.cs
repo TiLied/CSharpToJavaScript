@@ -1,8 +1,14 @@
-//28.07.2025 20:10:12
+//25.09.2025 17:09:11
 
 #nullable enable
 //Disable missing XML comments.
 #pragma warning disable CS1591
+//Ignore files not found.
+#pragma warning disable CS1589
+//Ignore 'Cannot convert null literal to non-nullable reference type.'
+#pragma warning disable CS8625
+//Ignore non-nullable property must contain a non-null value
+#pragma warning disable CS8618
 
 using static CSharpToJavaScript.APIs.JS.Ecma.GlobalObject;
 using CSharpToJavaScript.APIs.JS.Ecma;

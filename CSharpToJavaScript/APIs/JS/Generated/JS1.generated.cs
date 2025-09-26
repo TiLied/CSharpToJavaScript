@@ -1,8 +1,14 @@
-//28.07.2025 20:10:12
+//25.09.2025 17:09:11
 
 #nullable enable
 //Disable missing XML comments.
 #pragma warning disable CS1591
+//Ignore files not found.
+#pragma warning disable CS1589
+//Ignore 'Cannot convert null literal to non-nullable reference type.'
+#pragma warning disable CS8625
+//Ignore non-nullable property must contain a non-null value
+#pragma warning disable CS8618
 
 using static CSharpToJavaScript.APIs.JS.Ecma.GlobalObject;
 using CSharpToJavaScript.APIs.JS.Ecma;
@@ -713,7 +719,6 @@ public enum FenceReportingDestination
 	SharedStorageSelectUrl,
 }
 
-///<include file='Utils/Docs/request/request.generated.xml' path='docs/RequestDestination/*'/>
 [To(ToAttribute.None)]
 public enum RequestDestination
 {
@@ -761,7 +766,6 @@ public enum RequestDestination
 	Xslt,
 }
 
-///<include file='Utils/Docs/request/request.generated.xml' path='docs/RequestMode/*'/>
 [To(ToAttribute.None)]
 public enum RequestMode
 {
@@ -775,7 +779,6 @@ public enum RequestMode
 	Cors,
 }
 
-///<include file='Utils/Docs/request/request.generated.xml' path='docs/RequestCredentials/*'/>
 [To(ToAttribute.None)]
 public enum RequestCredentials
 {
@@ -787,7 +790,6 @@ public enum RequestCredentials
 	Include,
 }
 
-///<include file='Utils/Docs/request/request.generated.xml' path='docs/RequestCache/*'/>
 [To(ToAttribute.None)]
 public enum RequestCache
 {
@@ -805,7 +807,6 @@ public enum RequestCache
 	OnlyIfCached,
 }
 
-///<include file='Utils/Docs/request/request.generated.xml' path='docs/RequestRedirect/*'/>
 [To(ToAttribute.None)]
 public enum RequestRedirect
 {
@@ -817,7 +818,6 @@ public enum RequestRedirect
 	Manual,
 }
 
-///<include file='Utils/Docs/request/request.generated.xml' path='docs/RequestDuplex/*'/>
 [To(ToAttribute.None)]
 public enum RequestDuplex
 {
@@ -825,7 +825,6 @@ public enum RequestDuplex
 	Half,
 }
 
-///<include file='Utils/Docs/request/request.generated.xml' path='docs/RequestPriority/*'/>
 [To(ToAttribute.None)]
 public enum RequestPriority
 {

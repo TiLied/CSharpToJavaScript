@@ -8,7 +8,7 @@ namespace CSharpToJavaScript
 	/// <summary>
 	/// Options for <see cref="CSTOJS" />.
 	/// </summary>
-	public record class CSTOJSOptions
+	public class CSTOJSOptions
 	{
 		/// <summary>
 		/// Debug. When set to true prints additional info to console, cs lines to js file.
@@ -17,23 +17,6 @@ namespace CSharpToJavaScript
 		/// Default: <c>false</c>
 		/// </value>
 		public bool Debug { get; set; } = false;
-
-
-        /// <summary>
-        /// Self-explanatory, Disable Console Colors.
-        /// </summary>
-        /// <value>
-        /// Default: <c>false</c>
-        /// </value>
-        public bool DisableConsoleColors { get; set; } = false;
-
-		/// <summary>
-		/// Self-explanatory, Disable Console Output.
-		/// </summary>
-		/// <value>
-		/// Default: <c>false</c>
-		/// </value>
-		public bool DisableConsoleOutput { get; set; } = false;
 
 		/// <summary>
 		/// Self-explanatory, Use <c>var</c> over <c>let</c>.
@@ -74,6 +57,14 @@ namespace CSharpToJavaScript
 		public bool UseStrictEquality { get; set; } = false;
 
 		/// <summary>
+		/// Translate current <see cref="FileData" />. If false, walker will not be called.
+		/// </summary>
+		/// <value>
+		/// Default: <c>true</c>
+		/// </value>
+		public bool TranslateFile { get; set; } = true;
+
+		/// <summary>
 		/// Array of custom names to convert.
 		/// </summary>
 		/// <remarks>Example: <c>new(){["Console"] = "console"}</c>. Will convert "Console" to "console".</remarks>
@@ -81,6 +72,7 @@ namespace CSharpToJavaScript
 		/// Default: <c>new()</c>
 		/// </value>
 		public Dictionary<string, string> CustomCSNamesToJS { get; set; } = new();
+
 		/// <summary>
 		/// Array of types to convert.
 		/// </summary>
@@ -97,6 +89,7 @@ namespace CSharpToJavaScript
 		/// Default: <c>new()</c>
 		/// </value>
 		public StringBuilder AddSBAtTheTop { get; set; } = new();
+
 		/// <summary>
 		/// Add a <see cref="StringBuilder" /> to the end of a javascript file.
 		/// </summary>
@@ -104,10 +97,11 @@ namespace CSharpToJavaScript
 		/// Default: <c>new()</c>
 		/// </value>
 		public StringBuilder AddSBAtTheBottom { get; set; } = new();
+
 		/// <summary>
 		/// Creates new default options. See <see cref="CSTOJSOptions" />.
 		/// </summary>
-		public CSTOJSOptions() 
+		public CSTOJSOptions()
 		{
 
 		}

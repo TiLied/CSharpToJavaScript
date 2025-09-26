@@ -5,9 +5,29 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpToJavaScript.Utils;
 
-internal static class Log
+/// <summary>
+/// Logging.
+/// </summary>
+public static class Log
 {
 	private static bool _SupportedOS = true;
+
+	/// <summary>
+	/// Self-explanatory, Disable Console Colors.
+	/// </summary>
+	/// <value>
+	/// Default: <c>false</c>
+	/// </value>
+	public static bool DisableConsoleColors { get; set; } = false;
+
+	/// <summary>
+	/// Self-explanatory, Disable Console Output.
+	/// </summary>
+	/// <value>
+	/// Default: <c>false</c>
+	/// </value>
+	public static bool DisableConsoleOutput { get; set; } = false;
+
 	static Log()
 	{
 		Trace.Listeners.Add(new ConsoleTraceListener());
@@ -16,73 +36,95 @@ internal static class Log
 		if (OperatingSystem.IsAndroid() || OperatingSystem.IsBrowser() || OperatingSystem.IsIOS() || OperatingSystem.IsTvOS())
 			_SupportedOS = false;
 	}
-
-	public static void WriteLine(string message, CSTOJSOptions options)
+	
+	/// <summary>
+	/// Log a simple message.
+	/// </summary>
+	/// <param name="message">Required. Custom message.</param>
+	public static void WriteLine(string message)
 	{
-		if (options.DisableConsoleOutput == true)
+		if (DisableConsoleOutput == true)
 			return;
 
-		Trace.Write($"{DateTime.Now.ToLongTimeString()}: ");
+		Trace.Write($"{DateTime.UtcNow.ToString("hh:mm:ss.fffffff")}: ");
 		Trace.WriteLine($"{message}");
 	}
-
-	public static void InfoLine(string message, CSTOJSOptions options)
+	
+	/// <summary>
+	/// Log an info message.
+	/// </summary>
+	/// <param name="message">Required. Custom message.</param>
+	public static void InfoLine(string message)
 	{
-		if (options.DisableConsoleOutput == true)
+		if (DisableConsoleOutput == true)
 			return;
 
-		Trace.Write($"{DateTime.Now.ToLongTimeString()}: ");
+		Trace.Write($"{DateTime.UtcNow.ToString("hh:mm:ss.fffffff")}: ");
 
-		if (_SupportedOS && options.DisableConsoleColors == false)
+		if (_SupportedOS && DisableConsoleColors == false)
 			Console.ForegroundColor = ConsoleColor.Green;
-		Trace.Write("\tInfo: ");
-		if (_SupportedOS && options.DisableConsoleColors == false)
+		Trace.Write("Info: ");
+		if (_SupportedOS && DisableConsoleColors == false)
 			Console.ResetColor();
 
 		Trace.WriteLine($"\t{message}");
 	}
-
-	public static void WarningLine(string message, CSTOJSOptions options, [CallerFilePath] string? file = null, [CallerMemberName] string? member = null, [CallerLineNumber] int line = 0)
+	
+	/// <summary>
+	/// Log a warning message.
+	/// </summary>
+	/// <param name="message">Required. Custom message.</param>
+	/// <param name="file">Optional. Ignore</param>
+	/// <param name="member">Optional. Ignore</param>
+	/// <param name="line">Optional. Ignore</param>
+	public static void WarningLine(string message, [CallerFilePath] string? file = null, [CallerMemberName] string? member = null, [CallerLineNumber] int line = 0)
 	{
-		if (options.DisableConsoleOutput == true)
+		if (DisableConsoleOutput == true)
 			return;
 
-		Trace.Write($"{DateTime.Now.ToLongTimeString()}: ");
+		Trace.Write($"{DateTime.UtcNow.ToString("hh:mm:ss.fffffff")}: ");
 
-		if (_SupportedOS && options.DisableConsoleColors == false)
+		if (_SupportedOS && DisableConsoleColors == false)
 			Console.ForegroundColor = ConsoleColor.Cyan;
 
 		Trace.WriteLine($"({line}){Path.GetFileName(file?.Replace("\\", "/"))}.{member}:");
 
-		if (_SupportedOS && options.DisableConsoleColors == false)
+		if (_SupportedOS && DisableConsoleColors == false)
 			Console.ForegroundColor = ConsoleColor.Yellow;
 		Trace.Write("\tWarning: ");
-		if (_SupportedOS && options.DisableConsoleColors == false)
+		if (_SupportedOS && DisableConsoleColors == false)
 			Console.ResetColor();
 
 		Trace.WriteLine($"{message}");
 	}
 
-	public static void ErrorLine(string message, CSTOJSOptions options, [CallerFilePath] string? file = null, [CallerMemberName] string? member = null, [CallerLineNumber] int line = 0)
+	/// <summary>
+	/// Log an error message.
+	/// </summary>
+	/// <param name="message">Required. Custom message.</param>
+	/// <param name="file">Optional. Ignore</param>
+	/// <param name="member">Optional. Ignore</param>
+	/// <param name="line">Optional. Ignore</param>
+	public static void ErrorLine(string message, [CallerFilePath] string? file = null, [CallerMemberName] string? member = null, [CallerLineNumber] int line = 0)
 	{
-		if (options.DisableConsoleOutput == true)
+		if (DisableConsoleOutput == true)
 			return;
 
-		Trace.Write($"{DateTime.Now.ToLongTimeString()}: ");
+		Trace.Write($"{DateTime.UtcNow.ToString("hh:mm:ss.fffffff")}: ");
 
-		if (_SupportedOS && options.DisableConsoleColors == false)
+		if (_SupportedOS && DisableConsoleColors == false)
 			Console.ForegroundColor = ConsoleColor.Cyan;
 
 		string lineInfo = $"({line}){Path.GetFileName(file?.Replace("\\", "/"))}.{member}:";
-		
+
 		Trace.WriteLine(lineInfo);
-		
-		if (_SupportedOS && options.DisableConsoleColors == false)
+
+		if (_SupportedOS && DisableConsoleColors == false)
 			Console.ForegroundColor = ConsoleColor.Red;
 		Trace.Write("\tERROR: ");
-		if (_SupportedOS && options.DisableConsoleColors == false)
+		if (_SupportedOS && DisableConsoleColors == false)
 			Console.ResetColor();
-			
+
 		Debug.Assert(false, $"{lineInfo} \tMessage: {message}");
 
 		Trace.WriteLine($"{message}");

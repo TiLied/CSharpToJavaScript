@@ -1,18 +1,18 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-		<VersionPrefix>0.0.10</VersionPrefix>
+		<VersionPrefix>0.1.0</VersionPrefix>
 		
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>disable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <Authors>TiLied</Authors>
-    <Description>Brute forcing conversion(generating) from C# to Javascript.</Description>
+    <Description>A library for translating/converting cs into js, using Roslyn.</Description>
     <PackageProjectUrl>https://tilied.github.io/CSTOJS_Pages/</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/TiLied/CSharpToJavaScript/</RepositoryUrl>
-    <PackageTags>csharp, c#, conversion, javascript, js, generating, translation</PackageTags>
+    <PackageTags>csharp, c#, translating, javascript, js, converting, translation</PackageTags>
     <PackageReleaseNotes></PackageReleaseNotes>
     <Title>CSharp to JavaScript</Title>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>

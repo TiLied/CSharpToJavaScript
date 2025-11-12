@@ -17,6 +17,17 @@ public static class CSTOJS
 	/// <summary>
 	/// This method translates CSharp string into JavaScript with specified options.
 	/// </summary>
+	/// <param name="file"><see cref="FileData" />. CS string with options.</param>
+	/// <param name="references">Optional. Array of references.</param>
+	/// <returns></returns>
+	public static FileData Translate(FileData file, MetadataReference[]? references = null)
+	{
+		FileData[] files = Translate([file], references);
+		return files[0];
+	}
+	/// <summary>
+	/// This method translates CSharp string into JavaScript with specified options.
+	/// </summary>
 	/// <param name="files">Array of <see cref="FileData" />. CS strings with options.</param>
 	/// <param name="references">Optional. Array of references.</param>
 	/// <returns>Array of <see cref="FileData" />. JS strings</returns>

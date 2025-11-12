@@ -17,7 +17,14 @@ namespace CSharpToJavaScript
 		/// Default: <c>false</c>
 		/// </value>
 		public bool Debug { get; set; } = false;
-
+		/// <summary>
+		/// Useful for the tests.
+		/// </summary>
+		/// <value>
+		/// Default: <c>false</c>
+		/// </value>
+		public bool DisableCompilationErrors { get; set; } = false;
+		
 		/// <summary>
 		/// Self-explanatory, Use <c>var</c> over <c>let</c>.
 		/// </summary>

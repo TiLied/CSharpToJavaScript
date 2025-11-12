@@ -4241,7 +4241,7 @@ internal class Walker : CSharpSyntaxWalker
 		}
 
 		bool _isEqualsStrict = false;
-		bool _isInEqualsStrict = false;
+		bool _isInequalsStrict = false;
 		
 		ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
 
@@ -4259,8 +4259,8 @@ internal class Walker : CSharpSyntaxWalker
 						{
 							if (((IdentifierNameSyntax)asNode).Identifier.Text == "EqualsStrict")
 								_isEqualsStrict = true;
-							else if(((IdentifierNameSyntax)asNode).Identifier.Text == "InEqualsStrict")
-								_isInEqualsStrict = true;
+							else if(((IdentifierNameSyntax)asNode).Identifier.Text == "InequalsStrict")
+								_isInequalsStrict = true;
 							else
 								Visit(asNode);
 							break;
@@ -4274,7 +4274,7 @@ internal class Walker : CSharpSyntaxWalker
 								JSSB.Append("===");
 								VisitArgument(_arguments.Arguments[1]);
 							}
-							else if (_isInEqualsStrict)
+							else if (_isInequalsStrict)
 							{
 								VisitArgument(_arguments.Arguments[0]);
 								JSSB.Append("!==");

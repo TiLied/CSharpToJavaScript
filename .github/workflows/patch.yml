@@ -61,7 +61,7 @@ jobs:
       #    prerelease: false
       - name: Update .csproj
         run: |
-          echo "releaseNotes=$(cat ./relese.txt)" >> $GITHUB_ENV
+          echo "releaseNotes=`echo $(cat ./relese.txt)`" >> $GITHUB_ENV
           sed -i 's+<PackageReleaseNotes></PackageReleaseNotes>+<PackageReleaseNotes>${{env.releaseNotes}}</PackageReleaseNotes>+g' ./CSharpToJavaScript.csproj
       #- name: Setup .NET
       #  uses: actions/setup-dotnet@v1
@@ -71,6 +71,7 @@ jobs:
       #  run: dotnet pack --configuration Release --output packages
       #- name: Publish NuGet package
       #  run: dotnet nuget push packages/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
+      - run: cat ./CSharpToJavaScript.csproj
       - name: Environments
         run: |
           echo $newTag

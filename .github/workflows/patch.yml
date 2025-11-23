@@ -34,41 +34,44 @@ jobs:
     
     runs-on: ubuntu-latest
 
-    if: ${{needs.setup-outputs.outputs.commitCount >= 5}}
+    #if: ${{needs.setup-outputs.outputs.commitCount >= 5}}
     steps:
       - uses: actions/checkout@v5
         with:
           fetch-depth: 0
       - id: step1
         run: echo "newTag=`echo $(echo ${{needs.setup-outputs.outputs.currentTag}} | awk 'BEGIN{FS=OFS="."} {$3+=1} 1')`" >> $GITHUB_ENV
-      - name: Edit csproj
-        run: sed -i 's+<VersionPrefix>${{needs.setup-outputs.outputs.currentTag}}</VersionPrefix>+<VersionPrefix>${{env.newTag}}</VersionPrefix>+g' ./README.md
-      - uses: actions4git/setup-git@v1
-      - run: |
-          git commit -am "Test ${{env.newTag}}"
-          git push
+      #- name: Edit csproj
+      #  run: sed -i 's+<VersionPrefix>${{needs.setup-outputs.outputs.currentTag}}</VersionPrefix>+<VersionPrefix>${{env.newTag}}</VersionPrefix>+g' ./CSharpToJavaScript.csproj
+      #- uses: actions4git/setup-git@v1
+      #- run: |
+      #    git commit -am "Nuget ${{env.newTag}}"
+      #    git push
       - run: git log ${{needs.setup-outputs.outputs.currentTag}}..master --format=format:'- [%s](https://github.com/TiLied/CSharpToJavaScript/commit/%H)%n' --output=./release.txt   
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
-        with:
-          tag_name: ${{ env.newTag }}
-          release_name: ${{ env.newTag }}
-          body_path: ./release.txt
-          draft: false
-          prerelease: false
-      #update release notes in csproj
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v1
-        with:
-          dotnet-version: 10.0.x
-      - name: Generate NuGet package
-        run: dotnet pack --configuration Release --output packages
-      - name: Publish NuGet package
-      #ADD API KEY!!!!
-        run: dotnet nuget push packages/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
+      #- name: Create Release
+      #  id: create_release
+      #  uses: actions/create-release@v1
+      #  env:
+      #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+      #  with:
+      #    tag_name: ${{ env.newTag }}
+      #    release_name: ${{ env.newTag }}
+      #    body_path: ./release.txt
+      #    draft: false
+      #    prerelease: false
+      - name: Update .csproj
+        run: |
+          echo "releaseNotes='cat ./relese.txt'" >> $GITHUB_ENV
+          sed -i 's+<PackageReleaseNotes></PackageReleaseNotes>+<PackageReleaseNotes>${{env.releaseNotes}}</PackageReleaseNotes>+g' ./CSharpToJavaScript.csproj
+      #- name: Setup .NET
+      #  uses: actions/setup-dotnet@v1
+      #  with:
+      #    dotnet-version: 10.0.x
+      #- name: Generate NuGet package
+      #  run: dotnet pack --configuration Release --output packages
+      #- name: Publish NuGet package
+      #  run: dotnet nuget push packages/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
       - name: Environments
         run: |
           echo $newTag
+          echo $releaseNotes

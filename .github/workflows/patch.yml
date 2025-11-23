@@ -61,8 +61,9 @@ jobs:
       #    prerelease: false
       - name: Update .csproj
         run: |
-          echo "releaseNotes=`echo $(cat ./relese.txt)`" >> $GITHUB_ENV
-          sed -i 's+<PackageReleaseNotes></PackageReleaseNotes>+<PackageReleaseNotes>${{env.releaseNotes}}</PackageReleaseNotes>+g' ./CSharpToJavaScript.csproj
+          file=$(cat ./relese.txt)
+          echo "releaseNotes=$file" >> $GITHUB_ENV
+      - run: sed -i 's+<PackageReleaseNotes></PackageReleaseNotes>+<PackageReleaseNotes>${{env.releaseNotes}}</PackageReleaseNotes>+g' ./CSharpToJavaScript.csproj
       #- name: Setup .NET
       #  uses: actions/setup-dotnet@v1
       #  with:

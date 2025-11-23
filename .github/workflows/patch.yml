@@ -60,10 +60,11 @@ jobs:
       #    draft: false
       #    prerelease: false
       - name: Update .csproj
-        run: |
-          file=$(cat ./release.txt)
-          echo "releaseNotes=$file" >> $GITHUB_ENV
-      - run: sed -i 's+<PackageReleaseNotes></PackageReleaseNotes>+<PackageReleaseNotes>${{env.releaseNotes}}</PackageReleaseNotes>+g' ./CSharpToJavaScript.csproj
+      #TODO? I don't know how to cat a file and paste...
+      #- run: |
+      #    file=$(cat ./release.txt)
+      #    echo "releaseNotes=$file" >> $GITHUB_ENV
+      - run: sed -i 's+<PackageReleaseNotes></PackageReleaseNotes>+<PackageReleaseNotes>https://github.com/TiLied/CSharpToJavaScript/releases/tag/${{env.newTag}}</PackageReleaseNotes>+g' ./CSharpToJavaScript.csproj
       #- name: Setup .NET
       #  uses: actions/setup-dotnet@v1
       #  with:

@@ -202,34 +202,12 @@ internal class Walker : CSharpSyntaxWalker
 			case SyntaxKind.QuestionQuestionEqualsToken:
 			case SyntaxKind.GreaterThanGreaterThanGreaterThanEqualsToken:
 			case SyntaxKind.TypeOfKeyword:
-			{
-					VisitLeadingTrivia(token);
-
-					JSSB.Append(token.Text);
-
-					VisitTrailingTrivia(token);
-					return;
-				}
 			case SyntaxKind.ExclamationEqualsToken:
-				{
-					VisitLeadingTrivia(token);
-
-					if (_Options.UseStrictEquality)
-						JSSB.Append("!==");
-					else
-						JSSB.Append(token.Text);
-
-					VisitTrailingTrivia(token);
-					return;
-				}
 			case SyntaxKind.EqualsEqualsToken:
 				{
 					VisitLeadingTrivia(token);
 
-					if(_Options.UseStrictEquality)
-						JSSB.Append("===");
-					else
-						JSSB.Append(token.Text);
+					JSSB.Append(token.Text);
 
 					VisitTrailingTrivia(token);
 					return;
@@ -607,6 +585,9 @@ internal class Walker : CSharpSyntaxWalker
 					case SyntaxKind.Block:
 						VisitBlock((BlockSyntax)asNode);
 						break;
+					case SyntaxKind.EmptyStatement:
+						VisitEmptyStatement((EmptyStatementSyntax)asNode);
+						break;
 					case SyntaxKind.TryStatement:
 					case SyntaxKind.ThrowStatement:
 					case SyntaxKind.DoStatement:
@@ -618,6 +599,7 @@ internal class Walker : CSharpSyntaxWalker
 					case SyntaxKind.WhileStatement:
 					case SyntaxKind.LocalFunctionStatement:
 					case SyntaxKind.LabeledStatement:
+					case SyntaxKind.ForEachVariableStatement:
 						Visit(asNode);
 						break;
 					default:
@@ -772,6 +754,17 @@ internal class Walker : CSharpSyntaxWalker
 					case SyntaxKind.CoalesceExpression:
 						VisitBinaryExpression((BinaryExpressionSyntax)asNode);
 						break;
+					case SyntaxKind.ArgListExpression:
+					case SyntaxKind.NumericLiteralExpression:
+					case SyntaxKind.StringLiteralExpression:
+					case SyntaxKind.Utf8StringLiteralExpression:
+					case SyntaxKind.CharacterLiteralExpression:
+					case SyntaxKind.TrueLiteralExpression:
+					case SyntaxKind.FalseLiteralExpression:
+					case SyntaxKind.NullLiteralExpression:
+					case SyntaxKind.DefaultLiteralExpression:
+						VisitLiteralExpression((LiteralExpressionSyntax)asNode);
+						break;
 					case SyntaxKind.AnonymousObjectCreationExpression:
 					case SyntaxKind.ParenthesizedLambdaExpression:
 					case SyntaxKind.ObjectCreationExpression:
@@ -792,12 +785,12 @@ internal class Walker : CSharpSyntaxWalker
 					case SyntaxKind.DivideAssignmentExpression:
 					case SyntaxKind.AwaitExpression:
 					case SyntaxKind.ModuloAssignmentExpression:
-					case SyntaxKind.NumericLiteralExpression:
-					case SyntaxKind.TrueLiteralExpression:
-					case SyntaxKind.FalseLiteralExpression:
-					case SyntaxKind.StringLiteralExpression:
 					case SyntaxKind.ElementAccessExpression:
 					case SyntaxKind.ParenthesizedExpression:
+					case SyntaxKind.IdentifierName:
+					case SyntaxKind.ConditionalExpression:
+					case SyntaxKind.ThisExpression:
+					case SyntaxKind.UnsignedRightShiftAssignmentExpression:
 						Visit(asNode);
 						break;
 					default:
@@ -855,9 +848,6 @@ internal class Walker : CSharpSyntaxWalker
 					case SyntaxKind.IndexExpression:
 						VisitPrefixUnaryExpression((PrefixUnaryExpressionSyntax)asNode);
 						break;
-					case SyntaxKind.NullLiteralExpression:
-						VisitLiteralExpression((LiteralExpressionSyntax)asNode);
-						break;
 					case SyntaxKind.AddExpression:
 					case SyntaxKind.SubtractExpression:
 					case SyntaxKind.MultiplyExpression:
@@ -894,8 +884,18 @@ internal class Walker : CSharpSyntaxWalker
 					case SyntaxKind.IdentifierName:
 						VisitIdentifierName((IdentifierNameSyntax)asNode);
 						break;
-					case SyntaxKind.TypeOfExpression:
+					case SyntaxKind.ArgListExpression:
+					case SyntaxKind.NumericLiteralExpression:
+					case SyntaxKind.StringLiteralExpression:
+					case SyntaxKind.Utf8StringLiteralExpression:
 					case SyntaxKind.CharacterLiteralExpression:
+					case SyntaxKind.TrueLiteralExpression:
+					case SyntaxKind.FalseLiteralExpression:
+					case SyntaxKind.NullLiteralExpression:
+					case SyntaxKind.DefaultLiteralExpression:
+						VisitLiteralExpression((LiteralExpressionSyntax)asNode);
+						break;
+					case SyntaxKind.TypeOfExpression:
 					case SyntaxKind.ConditionalExpression:
 					case SyntaxKind.SimpleMemberAccessExpression:
 					case SyntaxKind.ElementAccessExpression:
@@ -905,10 +905,6 @@ internal class Walker : CSharpSyntaxWalker
 					case SyntaxKind.ParenthesizedExpression:
 					case SyntaxKind.ThisExpression:
 					case SyntaxKind.ParenthesizedLambdaExpression:
-					case SyntaxKind.NumericLiteralExpression:
-					case SyntaxKind.FalseLiteralExpression:
-					case SyntaxKind.TrueLiteralExpression:
-					case SyntaxKind.StringLiteralExpression:
 					case SyntaxKind.InterpolatedStringExpression:
 					case SyntaxKind.AddAssignmentExpression:
 					case SyntaxKind.SubtractAssignmentExpression:
@@ -1227,8 +1223,12 @@ internal class Walker : CSharpSyntaxWalker
 				switch (kind)
 				{
 					case SyntaxKind.EqualsToken:
-						JSSB.Append(':');
-						break;
+						{
+							VisitLeadingTrivia(asToken);
+							JSSB.Append(':');
+							VisitTrailingTrivia(asToken);
+							break;
+						}
 					default:
 						Log.ErrorLine($"asToken : {kind}");
 						break;
@@ -2079,7 +2079,7 @@ internal class Walker : CSharpSyntaxWalker
 							}
 							break;
 						}
-					case SyntaxKind.IdentifierName: 
+					case SyntaxKind.IdentifierName:
 						{
 							IdentifierNameSyntax? _ins = asNode as IdentifierNameSyntax;
 							if (_ins != null)
@@ -2112,13 +2112,16 @@ internal class Walker : CSharpSyntaxWalker
 									}
 								}
 							}
-							else 
+							else
 							{
 								Log.ErrorLine($"_ins is null");
 							}
 
 							break;
 						}
+					case SyntaxKind.SimpleMemberAccessExpression:
+						Visit(asNode);
+						break;
 					default:
 						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|");
 						break;
@@ -2600,6 +2603,17 @@ internal class Walker : CSharpSyntaxWalker
 					case SyntaxKind.IndexExpression:
 						VisitPrefixUnaryExpression((PrefixUnaryExpressionSyntax)asNode);
 						break;
+					case SyntaxKind.ArgListExpression:
+					case SyntaxKind.NumericLiteralExpression:
+					case SyntaxKind.StringLiteralExpression:
+					case SyntaxKind.Utf8StringLiteralExpression:
+					case SyntaxKind.CharacterLiteralExpression:
+					case SyntaxKind.TrueLiteralExpression:
+					case SyntaxKind.FalseLiteralExpression:
+					case SyntaxKind.NullLiteralExpression:
+					case SyntaxKind.DefaultLiteralExpression:
+						VisitLiteralExpression((LiteralExpressionSyntax)asNode);
+						break;
 					case SyntaxKind.PostIncrementExpression:
 					case SyntaxKind.InvocationExpression:
 					case SyntaxKind.UnsignedRightShiftAssignmentExpression:
@@ -2619,11 +2633,11 @@ internal class Walker : CSharpSyntaxWalker
 					case SyntaxKind.SimpleAssignmentExpression:
 					case SyntaxKind.ParenthesizedExpression:
 					case SyntaxKind.ObjectCreationExpression:
-					case SyntaxKind.StringLiteralExpression:
 					case SyntaxKind.ElementAccessExpression:
 					case SyntaxKind.TypeOfExpression:
 					case SyntaxKind.PostDecrementExpression:
-					case SyntaxKind.NumericLiteralExpression:
+					case SyntaxKind.ParenthesizedLambdaExpression:
+					case SyntaxKind.AnonymousObjectCreationExpression:
 						Visit(asNode);
 						break;
 					default:
@@ -2692,17 +2706,22 @@ internal class Walker : CSharpSyntaxWalker
 #endif
 							break;
 						}
+					case SyntaxKind.ArgListExpression:
 					case SyntaxKind.NumericLiteralExpression:
+					case SyntaxKind.StringLiteralExpression:
+					case SyntaxKind.Utf8StringLiteralExpression:
+					case SyntaxKind.CharacterLiteralExpression:
+					case SyntaxKind.TrueLiteralExpression:
+					case SyntaxKind.FalseLiteralExpression:
+					case SyntaxKind.NullLiteralExpression:
+					case SyntaxKind.DefaultLiteralExpression:
+						VisitLiteralExpression((LiteralExpressionSyntax)asNode);
+						break;
 					case SyntaxKind.ImplicitObjectCreationExpression:
 					case SyntaxKind.ObjectCreationExpression:
 					case SyntaxKind.InvocationExpression:
 					case SyntaxKind.SimpleMemberAccessExpression:
 					case SyntaxKind.UnaryMinusExpression:
-					case SyntaxKind.FalseLiteralExpression:
-					case SyntaxKind.CharacterLiteralExpression:
-					case SyntaxKind.NullLiteralExpression:
-					case SyntaxKind.StringLiteralExpression:
-					case SyntaxKind.TrueLiteralExpression:
 						Visit(asNode);
 						break;
 					default:
@@ -3306,10 +3325,109 @@ internal class Walker : CSharpSyntaxWalker
 	}
 	public override void VisitAnonymousObjectMemberDeclarator(AnonymousObjectMemberDeclaratorSyntax node)
 	{
-#if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|");
-#endif
-		base.VisitAnonymousObjectMemberDeclarator(node);
+		ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
+
+		for (int i = 0; i < nodesAndTokens.Count; i++)
+		{
+			SyntaxNode? asNode = nodesAndTokens[i].AsNode();
+
+			if (asNode != null)
+			{
+				SyntaxKind kind = asNode.Kind();
+
+				switch (kind)
+				{
+					case SyntaxKind.SimpleAssignmentExpression:
+						{
+							AssignmentExpressionSyntax _expr = (AssignmentExpressionSyntax)asNode;
+							Visit(_expr.Left);
+
+							VisitLeadingTrivia(_expr.OperatorToken);
+							JSSB.Append(':');
+							VisitTrailingTrivia(_expr.OperatorToken);
+
+							Visit(_expr.Right);
+							break;
+						}
+					case SyntaxKind.NameEquals:
+						VisitNameEquals((NameEqualsSyntax)asNode);
+						break;
+					case SyntaxKind.UnaryPlusExpression:
+					case SyntaxKind.UnaryMinusExpression:
+					case SyntaxKind.BitwiseNotExpression:
+					case SyntaxKind.LogicalNotExpression:
+					case SyntaxKind.PreIncrementExpression:
+					case SyntaxKind.PreDecrementExpression:
+					case SyntaxKind.AddressOfExpression:
+					case SyntaxKind.PointerIndirectionExpression:
+					case SyntaxKind.IndexExpression:
+						VisitPrefixUnaryExpression((PrefixUnaryExpressionSyntax)asNode);
+						break;
+					case SyntaxKind.ArgListExpression:
+					case SyntaxKind.NumericLiteralExpression:
+					case SyntaxKind.StringLiteralExpression:
+					case SyntaxKind.Utf8StringLiteralExpression:
+					case SyntaxKind.CharacterLiteralExpression:
+					case SyntaxKind.TrueLiteralExpression:
+					case SyntaxKind.FalseLiteralExpression:
+					case SyntaxKind.NullLiteralExpression:
+					case SyntaxKind.DefaultLiteralExpression:
+						VisitLiteralExpression((LiteralExpressionSyntax)asNode);
+						break;
+					case SyntaxKind.IdentifierName:
+						VisitIdentifierName((IdentifierNameSyntax)asNode);
+						break;
+					case SyntaxKind.AnonymousObjectCreationExpression:
+						VisitAnonymousObjectCreationExpression((AnonymousObjectCreationExpressionSyntax)asNode);
+						break;
+					case SyntaxKind.AddExpression:
+					case SyntaxKind.SubtractExpression:
+					case SyntaxKind.MultiplyExpression:
+					case SyntaxKind.DivideExpression:
+					case SyntaxKind.ModuloExpression:
+					case SyntaxKind.LeftShiftExpression:
+					case SyntaxKind.RightShiftExpression:
+					case SyntaxKind.UnsignedRightShiftExpression:
+					case SyntaxKind.LogicalOrExpression:
+					case SyntaxKind.LogicalAndExpression:
+					case SyntaxKind.BitwiseOrExpression:
+					case SyntaxKind.BitwiseAndExpression:
+					case SyntaxKind.ExclusiveOrExpression:
+					case SyntaxKind.EqualsExpression:
+					case SyntaxKind.NotEqualsExpression:
+					case SyntaxKind.LessThanExpression:
+					case SyntaxKind.LessThanOrEqualExpression:
+					case SyntaxKind.GreaterThanExpression:
+					case SyntaxKind.GreaterThanOrEqualExpression:
+					case SyntaxKind.IsExpression:
+					case SyntaxKind.AsExpression:
+					case SyntaxKind.CoalesceExpression:
+						VisitBinaryExpression((BinaryExpressionSyntax)asNode);
+						break;
+					case SyntaxKind.ObjectCreationExpression:
+						VisitObjectCreationExpression((ObjectCreationExpressionSyntax)asNode);
+						break;
+					case SyntaxKind.InvocationExpression:
+						VisitInvocationExpression((InvocationExpressionSyntax)asNode);
+						break;
+					default:
+						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|");
+						break;
+				}
+			}
+			else
+			{
+				SyntaxToken asToken = nodesAndTokens[i].AsToken();
+				SyntaxKind kind = asToken.Kind();
+
+				switch (kind)
+				{
+					default:
+						Log.ErrorLine($"asToken : {kind}");
+						break;
+				}
+			}
+		}
 	}
 	public override void VisitAttributeArgument(AttributeArgumentSyntax node)
 	{
@@ -4013,6 +4131,18 @@ internal class Walker : CSharpSyntaxWalker
 					case SyntaxKind.ThrowStatement:
 						VisitThrowStatement((ThrowStatementSyntax)asNode);
 						break;
+					case SyntaxKind.ContinueStatement:
+						VisitContinueStatement((ContinueStatementSyntax)asNode);
+						break;
+					case SyntaxKind.ForEachStatement:
+						VisitForEachStatement((ForEachStatementSyntax)asNode);
+						break;
+					case SyntaxKind.BreakStatement:
+						VisitBreakStatement((BreakStatementSyntax)asNode);
+						break;
+					case SyntaxKind.ForEachVariableStatement:
+						VisitForEachVariableStatement((ForEachVariableStatementSyntax)asNode);
+						break;
 					default:
 						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|");
 						break;
@@ -4075,6 +4205,9 @@ internal class Walker : CSharpSyntaxWalker
 
 				switch (kind)
 				{
+					case SyntaxKind.BreakStatement:
+						VisitBreakStatement((BreakStatementSyntax)asNode);
+						break;
 					case SyntaxKind.ReturnStatement:
 						VisitReturnStatement((ReturnStatementSyntax)asNode);
 						break;
@@ -4128,6 +4261,10 @@ internal class Walker : CSharpSyntaxWalker
 						break;
 					case SyntaxKind.ParenthesizedExpression:
 						VisitParenthesizedExpression((ParenthesizedExpressionSyntax)asNode);
+						break;
+					case SyntaxKind.TrueLiteralExpression:
+					case SyntaxKind.FalseLiteralExpression:
+						Visit(asNode);
 						break;
 					default:
 						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|");
@@ -4288,6 +4425,7 @@ internal class Walker : CSharpSyntaxWalker
 					case SyntaxKind.ParenthesizedLambdaExpression:
 					case SyntaxKind.ObjectCreationExpression:
 					case SyntaxKind.ParenthesizedExpression:
+					case SyntaxKind.TypeOfExpression:
 						Visit(asNode);					
 						break;
 					default:

@@ -56,14 +56,6 @@ namespace CSharpToJavaScript
 		public bool NormalizeWhitespace { get; set; } = false;
 
 		/// <summary>
-		/// Replace '<c>==</c>' with '<c>===</c>' and '<c>!=</c>' with '<c>!==</c>'.
-		/// </summary>
-		/// <value>
-		/// Default: <c>false</c>
-		/// </value>
-		public bool UseStrictEquality { get; set; } = false;
-
-		/// <summary>
 		/// Translate current <see cref="FileData" />. If false, walker will not be called.
 		/// </summary>
 		/// <value>

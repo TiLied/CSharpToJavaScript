@@ -14,4 +14,5 @@ public partial class GlobalObject
 	{
 		return left != right;
 	}
+		
 }

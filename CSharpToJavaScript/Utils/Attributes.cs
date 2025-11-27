@@ -1,60 +1,60 @@
 ﻿using System;
 
 
-namespace CSharpToJavaScript.Utils
+namespace CSharpToJavaScript.Utils;
+
+[AttributeUsage(AttributeTargets.Class)]
+internal class IgnoreAttribute : Attribute
 {
-	[AttributeUsage(AttributeTargets.Class)]
-	internal class IgnoreAttribute : Attribute
+	public IgnoreAttribute() { }
+}
+[AttributeUsage(AttributeTargets.All)]
+public class ValueAttribute : Attribute
+{
+	public string Value { get; init; }
+	public ValueAttribute(string value)
 	{
-		public IgnoreAttribute() { }
+		Value = value;
 	}
-	[AttributeUsage(AttributeTargets.All)]
-	public class ValueAttribute : Attribute
+}
+[AttributeUsage(AttributeTargets.All)]
+public class EnumValueAttribute : Attribute
+{
+	public string Value { get; init; }
+	public EnumValueAttribute(string value)
 	{
-		public string Value { get; init; }
-		public ValueAttribute(string value)
-		{
-			Value = value;
-		}
+		Value = value;
 	}
-	[AttributeUsage(AttributeTargets.All)]
-	public class EnumValueAttribute : Attribute
+}
+
+[AttributeUsage(AttributeTargets.All)]
+public class ToAttribute : Attribute
+{
+	public const string None = "None";
+	public const string Default = "Default";
+	public const string ToLower = "ToLower";
+	public const string FirstCharToLowerCase = "FirstCharToLowerCase";
+
+	public string To { get; set; } = string.Empty;
+	public ToAttribute(string to)
 	{
-		public string Value { get; init; }
-		public EnumValueAttribute(string value) 
-		{
-			Value = value;
-		}
+		To = to;
 	}
 
-	[AttributeUsage(AttributeTargets.All)]
-	public class ToAttribute : Attribute
+	public string Convert(string str)
 	{
-		public const string None = "None";
-		public const string Default = "Default";
-		public const string ToLower = "ToLower";
-		public const string FirstCharToLowerCase = "FirstCharToLowerCase";
-
-		public string To { get; set; } = string.Empty;
-		public ToAttribute(string to) 
+		switch (To)
 		{
-			To = to;
-		}
-
-		public string Convert(string str) 
-		{
-			switch (To) 
-			{
-				case ToLower:
-					return str.ToLower();
-				case FirstCharToLowerCase: 
-					return str.FirstCharToLowerCase();
-				case None:
-					return "";
-				case Default:
-				default: 
-					return str;
-			}
+			case ToLower:
+				return str.ToLower();
+			case FirstCharToLowerCase:
+				return str.FirstCharToLowerCase();
+			case None:
+				return "";
+			case Default:
+			default:
+				return str;
 		}
 	}
 }
+

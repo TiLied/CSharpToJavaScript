@@ -46,7 +46,7 @@ public static class Log
 		if (DisableConsoleOutput == true)
 			return;
 
-		Trace.Write($"{DateTime.UtcNow.ToString("hh:mm:ss.fffffff")}: ");
+		Trace.Write($"{DateTime.UtcNow.ToString("hh:mm:ss.fff")}: ");
 		Trace.WriteLine($"{message}");
 	}
 	
@@ -59,7 +59,7 @@ public static class Log
 		if (DisableConsoleOutput == true)
 			return;
 
-		Trace.Write($"{DateTime.UtcNow.ToString("hh:mm:ss.fffffff")}: ");
+		Trace.Write($"{DateTime.UtcNow.ToString("hh:mm:ss.fff")}: ");
 
 		if (_SupportedOS && DisableConsoleColors == false)
 			Console.ForegroundColor = ConsoleColor.Green;
@@ -82,7 +82,7 @@ public static class Log
 		if (DisableConsoleOutput == true)
 			return;
 
-		Trace.Write($"{DateTime.UtcNow.ToString("hh:mm:ss.fffffff")}: ");
+		Trace.Write($"{DateTime.UtcNow.ToString("hh:mm:ss.fff")}: ");
 
 		if (_SupportedOS && DisableConsoleColors == false)
 			Console.ForegroundColor = ConsoleColor.Cyan;
@@ -110,7 +110,7 @@ public static class Log
 		if (DisableConsoleOutput == true)
 			return;
 
-		Trace.Write($"{DateTime.UtcNow.ToString("hh:mm:ss.fffffff")}: ");
+		Trace.Write($"{DateTime.UtcNow.ToString("hh:mm:ss.fff")}: ");
 
 		if (_SupportedOS && DisableConsoleColors == false)
 			Console.ForegroundColor = ConsoleColor.Cyan;

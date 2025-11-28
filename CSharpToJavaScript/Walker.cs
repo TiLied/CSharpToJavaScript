@@ -125,6 +125,7 @@ internal class Walker : CSharpSyntaxWalker
 					VisitTrailingTrivia(token);
 					return;
 				}
+			case SyntaxKind.InKeyword:
 			case SyntaxKind.StaticKeyword:
 			case SyntaxKind.TrueKeyword:
 			case SyntaxKind.FalseKeyword:
@@ -632,7 +633,7 @@ internal class Walker : CSharpSyntaxWalker
 						VisitLabeledStatement((LabeledStatementSyntax)asNode);
 						break;
 					case SyntaxKind.ForEachVariableStatement:
-						VisitForEachStatement((ForEachStatementSyntax)asNode);
+						VisitForEachVariableStatement((ForEachVariableStatementSyntax)asNode);
 						break;
 					default:
 						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|");
@@ -4213,10 +4214,136 @@ internal class Walker : CSharpSyntaxWalker
 	}
 	public override void VisitForEachVariableStatement(ForEachVariableStatementSyntax node)
 	{
-#if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|");
-#endif
-		base.VisitForEachVariableStatement(node);
+		if (_Options.Debug)
+		{
+			JSSB.Append("/*");
+			string[] strings = node.ToFullString().Split(["\r\n", "\r", "\n"], StringSplitOptions.RemoveEmptyEntries);
+			JSSB.Append(string.IsNullOrWhiteSpace(strings[0]) ? strings[1] : strings[0]);
+			JSSB.AppendLine("*/");
+		}
+
+		ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
+
+		for (int i = 0; i < nodesAndTokens.Count; i++)
+		{
+			SyntaxNode? asNode = nodesAndTokens[i].AsNode();
+
+			if (asNode != null)
+			{
+				SyntaxKind kind = asNode.Kind();
+
+				switch (kind)
+				{
+					case SyntaxKind.ExpressionStatement:
+						VisitExpressionStatement((ExpressionStatementSyntax)asNode);
+						break;
+					case SyntaxKind.Block:
+						VisitBlock((BlockSyntax)asNode);
+						break;
+					case SyntaxKind.GenericName:
+					case SyntaxKind.PredefinedType:
+						{
+							SyntaxTriviaList _syntaxTrivias = asNode.GetLeadingTrivia();
+
+							for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
+							{
+								VisitTrivia(_syntaxTrivias[_i]);
+							}
+
+							if (_Options.UseVarOverLet)
+								JSSB.Append("var");
+							else
+								JSSB.Append("let");
+
+							_syntaxTrivias = asNode.GetTrailingTrivia();
+							for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
+							{
+								VisitTrivia(_syntaxTrivias[_i]);
+							}
+							break;
+						}
+					case SyntaxKind.IdentifierName:
+						{
+							IdentifierNameSyntax? _ins = asNode as IdentifierNameSyntax;
+							if (_ins != null)
+							{
+								if (_ins.IsVar)
+								{
+									SyntaxTriviaList _syntaxTrivias = asNode.GetLeadingTrivia();
+
+									for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
+									{
+										VisitTrivia(_syntaxTrivias[_i]);
+									}
+
+									if (_Options.UseVarOverLet)
+										JSSB.Append("var");
+									else
+										JSSB.Append("let");
+
+									_syntaxTrivias = asNode.GetTrailingTrivia();
+									for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
+									{
+										VisitTrivia(_syntaxTrivias[_i]);
+									}
+								}
+								else
+								{
+									if (IdentifierToken(asNode) == false)
+									{
+										VisitIdentifierName(_ins);
+									}
+								}
+							}
+							else
+							{
+								Log.ErrorLine($"_ins is null");
+							}
+
+							break;
+						}
+					case SyntaxKind.SimpleMemberAccessExpression:
+					case SyntaxKind.PointerMemberAccessExpression:
+						VisitMemberAccessExpression((MemberAccessExpressionSyntax)asNode);
+						break;
+					default:
+						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|");
+						break;
+				}
+			}
+			else
+			{
+				SyntaxToken asToken = nodesAndTokens[i].AsToken();
+				SyntaxKind kind = asToken.Kind();
+
+				switch (kind)
+				{
+
+					case SyntaxKind.IdentifierToken:
+						{
+							VisitLeadingTrivia(asToken);
+							JSSB.Append($"{asToken.Text}");
+							VisitTrailingTrivia(asToken);
+							break;
+						}
+					case SyntaxKind.ForEachKeyword:
+						{
+							VisitLeadingTrivia(asToken);
+							JSSB.Append("for");
+							VisitTrailingTrivia(asToken);
+							break;
+						}
+					case SyntaxKind.InKeyword:
+					case SyntaxKind.CloseParenToken:
+					case SyntaxKind.OpenParenToken:
+						VisitToken(asToken);
+						break;
+					default:
+						Log.ErrorLine($"asToken : {kind}");
+						break;
+				}
+			}
+		}
 	}
 	public override void VisitForStatement(ForStatementSyntax node)
 	{
@@ -4588,8 +4715,10 @@ internal class Walker : CSharpSyntaxWalker
 			JSSB.AppendLine("*/");
 		}
 
-		bool _isEqualsStrict = false;
-		bool _isInequalsStrict = false;
+		bool isEqualsStrict = false;
+		bool isInequalsStrict = false;
+		bool isDelete = false;
+		bool isVoid = false;
 		
 		ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
 
@@ -4607,9 +4736,13 @@ internal class Walker : CSharpSyntaxWalker
 						{
 							IdentifierNameSyntax _identifier = (IdentifierNameSyntax)asNode;
 							if (_identifier.Identifier.Text == "EqualsStrict")
-								_isEqualsStrict = true;
-							else if(_identifier.Identifier.Text == "InequalsStrict")
-								_isInequalsStrict = true;
+								isEqualsStrict = true;
+							else if (_identifier.Identifier.Text == "InequalsStrict")
+								isInequalsStrict = true;
+							else if (_identifier.Identifier.Text == "Delete")
+								isDelete = true;
+							else if (_identifier.Identifier.Text == "Void")
+								isVoid = true;
 							else
 								VisitIdentifierName(_identifier);
 							break;
@@ -4617,17 +4750,27 @@ internal class Walker : CSharpSyntaxWalker
 					case SyntaxKind.ArgumentList:
 						{
 							ArgumentListSyntax _arguments = (ArgumentListSyntax)asNode;
-							if (_isEqualsStrict)
+							if (isEqualsStrict)
 							{
 								VisitArgument(_arguments.Arguments[0]);
 								JSSB.Append("===");
 								VisitArgument(_arguments.Arguments[1]);
 							}
-							else if (_isInequalsStrict)
+							else if (isInequalsStrict)
 							{
 								VisitArgument(_arguments.Arguments[0]);
 								JSSB.Append("!==");
 								VisitArgument(_arguments.Arguments[1]);
+							}
+							else if (isDelete)
+							{
+								JSSB.Append("delete ");
+								VisitArgument(_arguments.Arguments[0]);
+							}
+							else if (isVoid)
+							{
+								JSSB.Append("void ");
+								VisitArgument(_arguments.Arguments[0]);
 							}
 							else
 								VisitArgumentList(_arguments);

@@ -1,4 +1,5 @@
-﻿using CSharpToJavaScript.Utils;
+﻿using CSharpToJavaScript.APIs.JS.Ecma;
+using CSharpToJavaScript.Utils;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
@@ -3678,10 +3679,145 @@ internal class Walker : CSharpSyntaxWalker
 	}
 	public override void VisitBinaryExpression(BinaryExpressionSyntax node)
 	{
-#if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|");
-#endif
-		base.VisitBinaryExpression(node);
+		ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
+
+		for (int i = 0; i < nodesAndTokens.Count; i++)
+		{
+			SyntaxNode? asNode = nodesAndTokens[i].AsNode();
+
+			if (asNode != null)
+			{
+				SyntaxKind kind = asNode.Kind();
+
+				switch (kind)
+				{
+					case SyntaxKind.ThisExpression:
+						VisitThisExpression((ThisExpressionSyntax)asNode);
+						break;
+					case SyntaxKind.AnonymousObjectCreationExpression:
+						VisitAnonymousObjectCreationExpression((AnonymousObjectCreationExpressionSyntax)asNode);
+						break;
+					case SyntaxKind.TypeOfExpression:
+						VisitTypeOfExpression((TypeOfExpressionSyntax)asNode);
+						break;
+					case SyntaxKind.ObjectCreationExpression:
+						VisitObjectCreationExpression((ObjectCreationExpressionSyntax)asNode);
+						break;
+					case SyntaxKind.CastExpression:
+						VisitCastExpression((CastExpressionSyntax)asNode);
+						break;
+					case SyntaxKind.AwaitExpression:
+						VisitAwaitExpression((AwaitExpressionSyntax)asNode);
+						break;
+					case SyntaxKind.InvocationExpression:
+						VisitInvocationExpression((InvocationExpressionSyntax)asNode);
+						break;
+					case SyntaxKind.ElementAccessExpression:
+						VisitElementAccessExpression((ElementAccessExpressionSyntax)asNode);
+						break;
+					case SyntaxKind.UnaryPlusExpression:
+					case SyntaxKind.UnaryMinusExpression:
+					case SyntaxKind.BitwiseNotExpression:
+					case SyntaxKind.LogicalNotExpression:
+					case SyntaxKind.PreIncrementExpression:
+					case SyntaxKind.PreDecrementExpression:
+					case SyntaxKind.AddressOfExpression:
+					case SyntaxKind.PointerIndirectionExpression:
+					case SyntaxKind.IndexExpression:
+						VisitPrefixUnaryExpression((PrefixUnaryExpressionSyntax)asNode);
+						break;
+					case SyntaxKind.SimpleMemberAccessExpression:
+					case SyntaxKind.PointerMemberAccessExpression:
+						VisitMemberAccessExpression((MemberAccessExpressionSyntax)asNode);
+						break;
+					case SyntaxKind.ParenthesizedExpression:
+						VisitParenthesizedExpression((ParenthesizedExpressionSyntax)asNode);
+						break;
+					case SyntaxKind.ArgListExpression:
+					case SyntaxKind.NumericLiteralExpression:
+					case SyntaxKind.StringLiteralExpression:
+					case SyntaxKind.Utf8StringLiteralExpression:
+					case SyntaxKind.CharacterLiteralExpression:
+					case SyntaxKind.TrueLiteralExpression:
+					case SyntaxKind.FalseLiteralExpression:
+					case SyntaxKind.NullLiteralExpression:
+					case SyntaxKind.DefaultLiteralExpression:
+						VisitLiteralExpression((LiteralExpressionSyntax)asNode);
+						break;
+					case SyntaxKind.AddExpression:
+					case SyntaxKind.SubtractExpression:
+					case SyntaxKind.MultiplyExpression:
+					case SyntaxKind.DivideExpression:
+					case SyntaxKind.ModuloExpression:
+					case SyntaxKind.LeftShiftExpression:
+					case SyntaxKind.RightShiftExpression:
+					case SyntaxKind.UnsignedRightShiftExpression:
+					case SyntaxKind.LogicalOrExpression:
+					case SyntaxKind.LogicalAndExpression:
+					case SyntaxKind.BitwiseOrExpression:
+					case SyntaxKind.BitwiseAndExpression:
+					case SyntaxKind.ExclusiveOrExpression:
+					case SyntaxKind.EqualsExpression:
+					case SyntaxKind.NotEqualsExpression:
+					case SyntaxKind.LessThanExpression:
+					case SyntaxKind.LessThanOrEqualExpression:
+					case SyntaxKind.GreaterThanExpression:
+					case SyntaxKind.GreaterThanOrEqualExpression:
+					case SyntaxKind.IsExpression:
+					case SyntaxKind.AsExpression:
+					case SyntaxKind.CoalesceExpression:
+						VisitBinaryExpression((BinaryExpressionSyntax)asNode);
+						break;
+					case SyntaxKind.IdentifierName:
+						VisitIdentifierName((IdentifierNameSyntax)asNode);
+						break;
+					default:
+						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|");
+						break;
+				}
+			}
+			else
+			{
+				SyntaxToken asToken = nodesAndTokens[i].AsToken();
+				SyntaxKind kind = asToken.Kind();
+
+				switch (kind)
+				{
+					case SyntaxKind.IsKeyword:
+						{
+							VisitLeadingTrivia(asToken);
+							JSSB.Append("instanceof");
+							VisitTrailingTrivia(asToken);
+							break;
+						}
+					case SyntaxKind.MinusToken:
+					case SyntaxKind.SlashToken:
+					case SyntaxKind.PercentToken:
+					case SyntaxKind.AmpersandAmpersandToken:
+					case SyntaxKind.GreaterThanGreaterThanToken:
+					case SyntaxKind.BarToken:
+					case SyntaxKind.BarBarToken:
+					case SyntaxKind.LessThanEqualsToken:
+					case SyntaxKind.QuestionQuestionToken:
+					case SyntaxKind.GreaterThanGreaterThanGreaterThanToken:
+					case SyntaxKind.AsteriskToken:
+					case SyntaxKind.PlusToken:
+					case SyntaxKind.LessThanLessThanToken:
+					case SyntaxKind.GreaterThanToken:
+					case SyntaxKind.GreaterThanEqualsToken:
+					case SyntaxKind.AmpersandToken:
+					case SyntaxKind.CaretToken:
+					case SyntaxKind.EqualsEqualsToken:
+					case SyntaxKind.ExclamationEqualsToken:
+					case SyntaxKind.LessThanToken:
+						VisitToken(asToken);
+						break;
+					default:
+						Log.ErrorLine($"asToken : {kind}");
+						break;
+				}
+			}
+		}
 	}
 	public override void VisitBinaryPattern(BinaryPatternSyntax node)
 	{
@@ -4234,6 +4370,9 @@ internal class Walker : CSharpSyntaxWalker
 
 				switch (kind)
 				{
+					case SyntaxKind.ThisExpression:
+						VisitThisExpression((ThisExpressionSyntax)asNode);
+						break;
 					case SyntaxKind.ExpressionStatement:
 						VisitExpressionStatement((ExpressionStatementSyntax)asNode);
 						break;
@@ -4715,10 +4854,7 @@ internal class Walker : CSharpSyntaxWalker
 			JSSB.AppendLine("*/");
 		}
 
-		bool isEqualsStrict = false;
-		bool isInequalsStrict = false;
-		bool isDelete = false;
-		bool isVoid = false;
+		AttributeData[]? attributeDatas = null;
 		
 		ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
 
@@ -4735,47 +4871,69 @@ internal class Walker : CSharpSyntaxWalker
 					case SyntaxKind.IdentifierName:
 						{
 							IdentifierNameSyntax _identifier = (IdentifierNameSyntax)asNode;
-							if (_identifier.Identifier.Text == "EqualsStrict")
-								isEqualsStrict = true;
-							else if (_identifier.Identifier.Text == "InequalsStrict")
-								isInequalsStrict = true;
-							else if (_identifier.Identifier.Text == "Delete")
-								isDelete = true;
-							else if (_identifier.Identifier.Text == "Void")
-								isVoid = true;
+							SymbolInfo _symbolInfo = _Model.GetSymbolInfo(_identifier);
+							ISymbol? _symbol = null;
+
+							if (_symbolInfo.CandidateSymbols.Length >= 1)
+								_symbol = _symbolInfo.CandidateSymbols[0];
 							else
-								VisitIdentifierName(_identifier);
+								_symbol = _symbolInfo.Symbol;
+
+							if (_symbol != null &&
+								_symbol.ContainingNamespace.ToString().Contains(nameof(APIs.JS.Ecma)) &&
+								_symbol.ContainingType.ToString().Contains(nameof(GlobalObject)))
+							{
+								attributeDatas = _symbol.GetAttributes().ToArray();
+							
+								if (attributeDatas[0].AttributeClass != null)
+								{
+									if (attributeDatas[0].AttributeClass.Name == nameof(BinaryAttribute) ||
+										attributeDatas[0].AttributeClass.Name == nameof(UnaryAttribute))
+									{
+										break;
+									}
+								}
+							}
+							
+							VisitIdentifierName(_identifier);
 							break;
 						}
 					case SyntaxKind.ArgumentList:
 						{
 							ArgumentListSyntax _arguments = (ArgumentListSyntax)asNode;
-							if (isEqualsStrict)
+							if (attributeDatas != null)
 							{
-								VisitArgument(_arguments.Arguments[0]);
-								JSSB.Append("===");
-								VisitArgument(_arguments.Arguments[1]);
+								for (int j = 0; j < attributeDatas.Length; j++)
+								{
+									if (attributeDatas[j].AttributeClass != null)
+									{
+										if (attributeDatas[j].AttributeClass.Name == nameof(BinaryAttribute))
+										{
+											VisitArgument(_arguments.Arguments[0]);
+											JSSB.Append(attributeDatas[j].ConstructorArguments[0].Value);
+											VisitTrailingTrivia(_arguments.Arguments.GetSeparator(0));
+											VisitArgument(_arguments.Arguments[1]);
+											goto Break;
+										}
+
+										if (attributeDatas[j].AttributeClass.Name == nameof(UnaryAttribute))
+										{
+											JSSB.Append(attributeDatas[j].ConstructorArguments[0].Value);
+											VisitArgument(_arguments.Arguments[0]);
+											goto Break;
+										}
+									}
+								}
 							}
-							else if (isInequalsStrict)
-							{
-								VisitArgument(_arguments.Arguments[0]);
-								JSSB.Append("!==");
-								VisitArgument(_arguments.Arguments[1]);
-							}
-							else if (isDelete)
-							{
-								JSSB.Append("delete ");
-								VisitArgument(_arguments.Arguments[0]);
-							}
-							else if (isVoid)
-							{
-								JSSB.Append("void ");
-								VisitArgument(_arguments.Arguments[0]);
-							}
-							else
-								VisitArgumentList(_arguments);
+
+							VisitArgumentList(_arguments);
+						//TODO?	
+						Break:
 							break;
 						}
+					case SyntaxKind.ElementAccessExpression:
+						VisitElementAccessExpression((ElementAccessExpressionSyntax)asNode);
+						break;
 					case SyntaxKind.SimpleMemberAccessExpression:
 					case SyntaxKind.PointerMemberAccessExpression:
 						VisitMemberAccessExpression((MemberAccessExpressionSyntax)asNode);

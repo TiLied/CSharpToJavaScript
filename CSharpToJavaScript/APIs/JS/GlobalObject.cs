@@ -4,24 +4,29 @@ namespace CSharpToJavaScript.APIs.JS.Ecma;
 
 public partial class GlobalObject
 {
-	[To(ToAttribute.Default)]
+	[Binary("===")]
 	public static bool EqualsStrict(dynamic left, dynamic right)
 	{
 		return left == right;
 	}
-	[To(ToAttribute.Default)]
+	[Binary("!==")]
 	public static bool InequalsStrict(dynamic left, dynamic right)
 	{
 		return left != right;
 	}
-	[To(ToAttribute.Default)]
+	[Unary("delete ")]
 	public static bool Delete(dynamic arg)
 	{
 		return true;
 	}
-	[To(ToAttribute.Default)]
+	[Unary("void ")]
 	public static Undefined Void(dynamic arg)
 	{
 		return new Undefined();
+	}
+	[Binary("instanceof")]
+	public static bool InstanceOf(dynamic left, dynamic right)
+	{
+		return true;
 	}
 }

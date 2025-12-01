@@ -58,3 +58,21 @@ public class ToAttribute : Attribute
 	}
 }
 
+[AttributeUsage(AttributeTargets.All)]
+public class BinaryAttribute : Attribute
+{
+	public string Value { get; init; }
+	public BinaryAttribute(string value)
+	{
+		Value = value;
+	}
+}
+[AttributeUsage(AttributeTargets.All)]
+public class UnaryAttribute : Attribute
+{
+	public string Value { get; init; }
+	public UnaryAttribute(string value)
+	{
+		Value = value;
+	}
+}

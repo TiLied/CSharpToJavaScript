@@ -1,5 +1,4 @@
-﻿using CSharpToJavaScript.APIs.JS.Ecma;
-using CSharpToJavaScript.Utils;
+﻿using CSharpToJavaScript.Utils;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
@@ -8,7 +7,6 @@ using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Globalization;
 using System.Linq;
-using System.Reflection;
 using System.Text;
 
 
@@ -60,9 +58,9 @@ internal class Walker : CSharpSyntaxWalker
 	private bool _IgnoreTailingDot = false;
 	private bool _GlobalStatement = false;
 
-
 	private int _EnumMembers = 0;
 
+	private AttributeData[]? _AttributeDatasForInvocation = null;
 	public Walker(CSTOJSOptions options, SemanticModel model) : base(SyntaxWalkerDepth.Trivia)
 	{
 		_Options = options;
@@ -3456,12 +3454,136 @@ internal class Walker : CSharpSyntaxWalker
 
 				switch (kind)
 				{
-					case SyntaxKind.IdentifierToken: 
+					case SyntaxKind.IdentifierToken:
 						{
+							IdentifierNameSyntax _identifier = (IdentifierNameSyntax)node;
+							SymbolInfo? _symbolInfo = null;
+
+							if (_SNOriginalAsExpression != null)
+							{
+								IEnumerable<SyntaxNodeOrToken> _identifierNameSyntax = _SNOriginalAsExpression.DescendantNodesAndTokens().Where(e => e.IsToken == true);
+								foreach (SyntaxNodeOrToken _item in _identifierNameSyntax)
+								{
+									SyntaxToken _syntaxToken = _item.AsToken();
+
+									if (_syntaxToken.IsKind(SyntaxKind.IdentifierToken))
+									{
+										if (_syntaxToken.Text == asToken.Text)
+										{
+											if (_item.Parent != null)
+												_symbolInfo = _Model.GetSymbolInfo(_item.Parent);
+											else
+												Log.ErrorLine("_item.Parent is null");
+											break;
+										}
+									}
+								}
+								//node = _SNOriginalAsExpression;
+							}
+							else
+							{
+								if (_SNPropertyType != null)
+									_symbolInfo = _Model.GetSymbolInfo(_SNPropertyType);
+								else
+									_symbolInfo = _Model.GetSymbolInfo(_identifier);
+							}
+							
+							ISymbol? _symbol = null;
+
+							if (_symbolInfo?.CandidateSymbols.Length >= 1)
+								_symbol = _symbolInfo?.CandidateSymbols[0];
+							else
+								_symbol = _symbolInfo?.Symbol;
+
+							if (_symbol != null)
+							{
+							CheckParentAttributes:
+								_AttributeDatasForInvocation = _symbol.GetAttributes().ToArray();
+								for (int j = 0; j < _AttributeDatasForInvocation.Length; j++)
+								{
+									if (_AttributeDatasForInvocation[j].AttributeClass != null)
+									{
+										if (_AttributeDatasForInvocation[j].AttributeClass!.Name == nameof(BinaryAttribute) ||
+											_AttributeDatasForInvocation[j].AttributeClass!.Name == nameof(UnaryAttribute))
+										{
+											goto BreakIndetifierName;
+										}
+
+										if (_AttributeDatasForInvocation[j].AttributeClass.Name == nameof(EnumValueAttribute))
+										{
+											SyntaxTriviaList _syntaxTrivias = _identifier.GetLeadingTrivia();
+											for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
+											{
+												VisitTrivia(_syntaxTrivias[_i]);
+											}
+
+											JSSB.Append($"\"{_AttributeDatasForInvocation[j].ConstructorArguments[0].Value}\"");
+
+											_syntaxTrivias = _identifier.GetTrailingTrivia();
+											for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
+											{
+												VisitTrivia(_syntaxTrivias[_i]);
+											}
+											goto BreakIndetifierName;
+										}
+
+										if (_AttributeDatasForInvocation[j].AttributeClass.Name == nameof(ValueAttribute))
+										{
+											SyntaxTriviaList _syntaxTrivias = _identifier.GetLeadingTrivia();
+											for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
+											{
+												VisitTrivia(_syntaxTrivias[_i]);
+											}
+
+											JSSB.Append($"{_AttributeDatasForInvocation[j].ConstructorArguments[0].Value}");
+
+											_syntaxTrivias = _identifier.GetTrailingTrivia();
+											for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
+											{
+												VisitTrivia(_syntaxTrivias[_i]);
+											}
+											goto BreakIndetifierName;
+										}
+
+										if (_AttributeDatasForInvocation[j].AttributeClass.Name == nameof(ToAttribute))
+										{
+											ToAttribute _toAttr = new ToAttribute(_AttributeDatasForInvocation[j].ConstructorArguments[0].Value.ToString());
+
+											if (_toAttr.To == ToAttribute.None)
+												_IgnoreTailingDot = true;
+
+											SyntaxTriviaList _syntaxTrivias = _identifier.GetLeadingTrivia();
+											for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
+											{
+												VisitTrivia(_syntaxTrivias[_i]);
+											}
+
+											JSSB.Append($"{_toAttr.Convert(_identifier.Identifier.Text)}");
+
+											_syntaxTrivias = _identifier.GetTrailingTrivia();
+											for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
+											{
+												VisitTrivia(_syntaxTrivias[_i]);
+											}
+
+											goto BreakIndetifierName;
+										}
+									}
+								}
+								if (_symbol.ContainingType != null)
+								{
+									_symbol = _symbol.ContainingType;
+									goto CheckParentAttributes;
+								}
+							}
+
+							_AttributeDatasForInvocation = null;
+
 							if (IdentifierToken(node) == false)
 							{
 								base.VisitIdentifierName(node);
 							}
+						BreakIndetifierName:
 							break;
 						}
 					default:
@@ -4853,8 +4975,6 @@ internal class Walker : CSharpSyntaxWalker
 			JSSB.Append(string.IsNullOrWhiteSpace(strings[0]) ? strings[1] : strings[0]);
 			JSSB.AppendLine("*/");
 		}
-
-		AttributeData[]? attributeDatas = null;
 		
 		ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
 
@@ -4870,65 +4990,40 @@ internal class Walker : CSharpSyntaxWalker
 				{
 					case SyntaxKind.IdentifierName:
 						{
-							IdentifierNameSyntax _identifier = (IdentifierNameSyntax)asNode;
-							SymbolInfo _symbolInfo = _Model.GetSymbolInfo(_identifier);
-							ISymbol? _symbol = null;
-
-							if (_symbolInfo.CandidateSymbols.Length >= 1)
-								_symbol = _symbolInfo.CandidateSymbols[0];
-							else
-								_symbol = _symbolInfo.Symbol;
-
-							if (_symbol != null &&
-								_symbol.ContainingNamespace.ToString().Contains(nameof(APIs.JS.Ecma)) &&
-								_symbol.ContainingType.ToString().Contains(nameof(GlobalObject)))
-							{
-								attributeDatas = _symbol.GetAttributes().ToArray();
-							
-								if (attributeDatas[0].AttributeClass != null)
-								{
-									if (attributeDatas[0].AttributeClass.Name == nameof(BinaryAttribute) ||
-										attributeDatas[0].AttributeClass.Name == nameof(UnaryAttribute))
-									{
-										break;
-									}
-								}
-							}
-							
-							VisitIdentifierName(_identifier);
+							VisitIdentifierName((IdentifierNameSyntax)asNode);
 							break;
 						}
 					case SyntaxKind.ArgumentList:
 						{
 							ArgumentListSyntax _arguments = (ArgumentListSyntax)asNode;
-							if (attributeDatas != null)
+							if (_AttributeDatasForInvocation != null)
 							{
-								for (int j = 0; j < attributeDatas.Length; j++)
+								for (int j = 0; j < _AttributeDatasForInvocation.Length; j++)
 								{
-									if (attributeDatas[j].AttributeClass != null)
+									if (_AttributeDatasForInvocation[j].AttributeClass != null)
 									{
-										if (attributeDatas[j].AttributeClass.Name == nameof(BinaryAttribute))
+										if (_AttributeDatasForInvocation[j].AttributeClass!.Name == nameof(BinaryAttribute))
 										{
 											VisitArgument(_arguments.Arguments[0]);
-											JSSB.Append(attributeDatas[j].ConstructorArguments[0].Value);
+											JSSB.Append(_AttributeDatasForInvocation[j].ConstructorArguments[0].Value);
 											VisitTrailingTrivia(_arguments.Arguments.GetSeparator(0));
 											VisitArgument(_arguments.Arguments[1]);
-											goto Break;
+											goto BreakArgumentList;
 										}
 
-										if (attributeDatas[j].AttributeClass.Name == nameof(UnaryAttribute))
+										if (_AttributeDatasForInvocation[j].AttributeClass!.Name == nameof(UnaryAttribute))
 										{
-											JSSB.Append(attributeDatas[j].ConstructorArguments[0].Value);
+											JSSB.Append(_AttributeDatasForInvocation[j].ConstructorArguments[0].Value);
 											VisitArgument(_arguments.Arguments[0]);
-											goto Break;
+											goto BreakArgumentList;
 										}
 									}
 								}
 							}
 
 							VisitArgumentList(_arguments);
-						//TODO?	
-						Break:
+							
+						BreakArgumentList:
 							break;
 						}
 					case SyntaxKind.ElementAccessExpression:
@@ -5969,101 +6064,6 @@ internal class Walker : CSharpSyntaxWalker
 				_containingNamespace = string.Empty;
 			}
 
-			if (_containingNamespace.Contains(nameof(CSharpToJavaScript)))
-			{
-				//
-				//
-				//Checking attribute data of a types, see Utils/Attributes.
-
-				//Attributes of this node(type)
-				ImmutableArray<AttributeData> _attributeDatas = iSymbol.GetAttributes();
-
-				List<object> _attributes = new();
-
-				foreach (AttributeData attributeData in _attributeDatas)
-				{
-					if (attributeData.AttributeClass != null)
-					{
-						if (attributeData.AttributeClass.Name == nameof(EnumValueAttribute))
-						{
-							if (attributeData.ConstructorArguments[0].Value is string _str)
-								_attributes.Add(new EnumValueAttribute(_str));
-							else
-								Log.ErrorLine("attributeData.ConstructorArguments[0].Value is not a string");
-						}
-
-						if (attributeData.AttributeClass.Name == nameof(ValueAttribute))
-						{
-							if (attributeData.ConstructorArguments[0].Value is string _str)
-								_attributes.Add(new ValueAttribute(_str));
-							else
-								Log.ErrorLine("attributeData.ConstructorArguments[0].Value is not a string");
-
-						}
-
-						if (attributeData.AttributeClass.Name == nameof(ToAttribute))
-						{
-							if (attributeData.ConstructorArguments[0].Value is string _str)
-								_attributes.Add(new ToAttribute(_str));
-							else
-								Log.ErrorLine("attributeData.ConstructorArguments[0].Value is not a string");
-
-						}
-					}
-					else
-						Log.ErrorLine("attributeData.AttributeClass is null");
-				}
-
-				bool _cad = _CheckAttributeData(_attributes.ToArray());
-				if (_cad)
-				{
-					return true;
-				}
-				else
-				{
-					//Attributes of a parent node(type)
-					_attributes.Clear();
-					_attributeDatas = iSymbol.ContainingType.GetAttributes();
-					
-					foreach (AttributeData attributeData in _attributeDatas)
-					{
-						if (attributeData.AttributeClass != null)
-						{
-							if (attributeData.AttributeClass.Name == nameof(EnumValueAttribute))
-							{
-								if (attributeData.ConstructorArguments[0].Value is string _str)
-									_attributes.Add(new EnumValueAttribute(_str));
-								else
-									Log.ErrorLine("attributeData.ConstructorArguments[0].Value is not a string");
-
-							}
-
-							if (attributeData.AttributeClass.Name == nameof(ValueAttribute))
-							{
-								if (attributeData.ConstructorArguments[0].Value is string _str)
-									_attributes.Add(new ValueAttribute(_str));
-								else
-									Log.ErrorLine("attributeData.ConstructorArguments[0].Value is not a string");
-
-							}
-
-							if (attributeData.AttributeClass.Name == nameof(ToAttribute))
-							{
-								if (attributeData.ConstructorArguments[0].Value is string _str)
-									_attributes.Add(new ToAttribute(_str));
-								else
-									Log.ErrorLine("attributeData.ConstructorArguments[0].Value is not a string");
-
-							}
-						}
-						else
-							Log.ErrorLine("attributeData.AttributeClass is null");
-					}
-					
-					return _CheckAttributeData(_attributes.ToArray());
-				}
-			}
-
 			if (_containingNamespace.Contains(_NameSpaceStr) && !_GlobalStatement)
 			{
 				if (iSymbol.Kind == SymbolKind.Parameter ||
@@ -6152,7 +6152,6 @@ internal class Walker : CSharpSyntaxWalker
 
 				return false;
 			}
-
 		}
 
 		if (iSymbol != null && iSymbol.ContainingType != null && iSymbol.ContainingType.IsAnonymousType == true)
@@ -6166,80 +6165,6 @@ internal class Walker : CSharpSyntaxWalker
 			return true;
 		}
 
-		for (int i = 0; i < _Options.CustomCSTypesToJS.Length; i++)
-		{
-			if (_Options.CustomCSTypesToJS[i].Name == text)
-			{
-				return _CheckAttributeData(_Options.CustomCSTypesToJS[i].GetCustomAttributes(true));
-			}
-
-			MemberInfo[] _Members = _Options.CustomCSTypesToJS[i].GetMembers();
-
-			bool b = _CheckMembersInNestedClasses(_Members);
-
-			if (b == true)
-				return true;
-		}
-		
-		
-		
-		bool _CheckMembersInNestedClasses(MemberInfo[] _members)
-		{
-			for (int i = 0; i < _members.Length; i++)
-			{
-				Type? _type = _members[i] as Type;
-				
-				if (_type != null && _type.IsClass)
-				{
-					return _CheckMembersInNestedClasses(_type.GetMembers());
-				}
-
-				if (_members[i].Name == text)
-				{
-					object[] _attrs = _members[i].GetCustomAttributes(true);
-
-					return _CheckAttributeData(_members[i].GetCustomAttributes(true));
-				}
-			}
-
-			return false;
-		}
-
-		bool _CheckAttributeData(object[] attrs)
-		{
-			for (int i = 0; i < attrs.Length; i++)
-			{
-				if (attrs[i] is EnumValueAttribute enumValueAttribute)
-				{
-					VisitLeadingTrivia(identifier);
-					JSSB.Append($"\"{enumValueAttribute.Value}\"");
-					VisitTrailingTrivia(identifier);
-					return true;
-				}
-				if (attrs[i] is ValueAttribute valueAttribute)
-				{
-					VisitLeadingTrivia(identifier);
-					JSSB.Append($"{valueAttribute.Value}");
-					VisitTrailingTrivia(identifier);
-					return true;
-				}
-				if (attrs[i] is ToAttribute toAttribute)
-				{
-					if (toAttribute.To == ToAttribute.None)
-						_IgnoreTailingDot = true;
-
-					VisitLeadingTrivia(identifier);
-					JSSB.Append($"{toAttribute.Convert(text)}");
-					VisitTrailingTrivia(identifier);
-					return true;
-				}
-			}
-
-			return false;
-		}
-		
-		
-		
 		if (CustomCSNamesToJS(node) == false)
 		{
 			if (BuiltInTypesGenerics(node, iSymbol) == false)

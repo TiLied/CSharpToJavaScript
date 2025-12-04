@@ -73,15 +73,6 @@ namespace CSharpToJavaScript
 		public Dictionary<string, string> CustomCSNamesToJS { get; set; } = new();
 
 		/// <summary>
-		/// Array of types to convert.
-		/// </summary>
-		/// <remarks>Example: Similar to <see cref="CSTOJSOptions.CustomCSNamesToJS" />, but convers the type. You need to use <see cref="ToAttribute" />.</remarks>
-		/// <value>
-		/// Default: <c>new()</c>
-		/// </value>
-		public Type[] CustomCSTypesToJS { get; set; } = [];
-
-		/// <summary>
 		/// Add a <see cref="StringBuilder" /> to the front of a javascript file.
 		/// </summary>
 		/// <value>

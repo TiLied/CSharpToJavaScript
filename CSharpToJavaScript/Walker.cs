@@ -60,7 +60,7 @@ internal class Walker : CSharpSyntaxWalker
 
 	private int _EnumMembers = 0;
 
-	private AttributeData[]? _AttributeDatasForInvocation = null;
+	private string[] _AttributeDatasForInvocation = new string[2];
 	public Walker(CSTOJSOptions options, SemanticModel model) : base(SyntaxWalkerDepth.Trivia)
 	{
 		_Options = options;
@@ -3412,8 +3412,10 @@ internal class Walker : CSharpSyntaxWalker
 
 				switch (kind)
 				{
-					case SyntaxKind.IdentifierToken: 
+					case SyntaxKind.IdentifierToken:
 						{
+							//TODO! See "VisitIdentifierName"
+							
 							if (IdentifierToken(node) == false) 
 							{
 								base.VisitGenericName(node);
@@ -3498,18 +3500,20 @@ internal class Walker : CSharpSyntaxWalker
 							if (_symbol != null)
 							{
 							CheckParentAttributes:
-								_AttributeDatasForInvocation = _symbol.GetAttributes().ToArray();
-								for (int j = 0; j < _AttributeDatasForInvocation.Length; j++)
+								AttributeData[] _attributeData = _symbol.GetAttributes().ToArray();
+								for (int j = 0; j < _attributeData.Length; j++)
 								{
-									if (_AttributeDatasForInvocation[j].AttributeClass != null)
+									if (_attributeData[j].AttributeClass != null)
 									{
-										if (_AttributeDatasForInvocation[j].AttributeClass!.Name == nameof(BinaryAttribute) ||
-											_AttributeDatasForInvocation[j].AttributeClass!.Name == nameof(UnaryAttribute))
+										if (_attributeData[j].AttributeClass!.Name == nameof(BinaryAttribute) ||
+											_attributeData[j].AttributeClass!.Name == nameof(UnaryAttribute))
 										{
-											goto BreakIndetifierName;
+											_AttributeDatasForInvocation[0] = _attributeData[j].AttributeClass!.Name;
+											_AttributeDatasForInvocation[1] = _attributeData[j].ConstructorArguments[0].Value.ToString();
+											goto BreakIndetifierToken;
 										}
 
-										if (_AttributeDatasForInvocation[j].AttributeClass.Name == nameof(EnumValueAttribute))
+										if (_attributeData[j].AttributeClass.Name == nameof(EnumValueAttribute))
 										{
 											SyntaxTriviaList _syntaxTrivias = _identifier.GetLeadingTrivia();
 											for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
@@ -3517,17 +3521,18 @@ internal class Walker : CSharpSyntaxWalker
 												VisitTrivia(_syntaxTrivias[_i]);
 											}
 
-											JSSB.Append($"\"{_AttributeDatasForInvocation[j].ConstructorArguments[0].Value}\"");
+											JSSB.Append($"\"{_attributeData[j].ConstructorArguments[0].Value}\"");
 
 											_syntaxTrivias = _identifier.GetTrailingTrivia();
 											for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
 											{
 												VisitTrivia(_syntaxTrivias[_i]);
 											}
-											goto BreakIndetifierName;
+
+											goto BreakIndetifierToken;
 										}
 
-										if (_AttributeDatasForInvocation[j].AttributeClass.Name == nameof(ValueAttribute))
+										if (_attributeData[j].AttributeClass.Name == nameof(ValueAttribute))
 										{
 											SyntaxTriviaList _syntaxTrivias = _identifier.GetLeadingTrivia();
 											for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
@@ -3535,19 +3540,20 @@ internal class Walker : CSharpSyntaxWalker
 												VisitTrivia(_syntaxTrivias[_i]);
 											}
 
-											JSSB.Append($"{_AttributeDatasForInvocation[j].ConstructorArguments[0].Value}");
+											JSSB.Append($"{_attributeData[j].ConstructorArguments[0].Value}");
 
 											_syntaxTrivias = _identifier.GetTrailingTrivia();
 											for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
 											{
 												VisitTrivia(_syntaxTrivias[_i]);
 											}
-											goto BreakIndetifierName;
+
+											goto BreakIndetifierToken;
 										}
 
-										if (_AttributeDatasForInvocation[j].AttributeClass.Name == nameof(ToAttribute))
+										if (_attributeData[j].AttributeClass.Name == nameof(ToAttribute))
 										{
-											ToAttribute _toAttr = new ToAttribute(_AttributeDatasForInvocation[j].ConstructorArguments[0].Value.ToString());
+											ToAttribute _toAttr = new ToAttribute(_attributeData[j].ConstructorArguments[0].Value.ToString());
 
 											if (_toAttr.To == ToAttribute.None)
 												_IgnoreTailingDot = true;
@@ -3565,8 +3571,8 @@ internal class Walker : CSharpSyntaxWalker
 											{
 												VisitTrivia(_syntaxTrivias[_i]);
 											}
-
-											goto BreakIndetifierName;
+											
+											goto BreakIndetifierToken;
 										}
 									}
 								}
@@ -3577,13 +3583,11 @@ internal class Walker : CSharpSyntaxWalker
 								}
 							}
 
-							_AttributeDatasForInvocation = null;
-
 							if (IdentifierToken(node) == false)
 							{
 								base.VisitIdentifierName(node);
 							}
-						BreakIndetifierName:
+						BreakIndetifierToken:
 							break;
 						}
 					default:
@@ -4988,36 +4992,45 @@ internal class Walker : CSharpSyntaxWalker
 
 				switch (kind)
 				{
+					case SyntaxKind.GenericName:
+							VisitGenericName((GenericNameSyntax)asNode);
+							break;
 					case SyntaxKind.IdentifierName:
-						{
 							VisitIdentifierName((IdentifierNameSyntax)asNode);
 							break;
-						}
 					case SyntaxKind.ArgumentList:
 						{
 							ArgumentListSyntax _arguments = (ArgumentListSyntax)asNode;
-							if (_AttributeDatasForInvocation != null)
+							if (_AttributeDatasForInvocation[0] != string.Empty)
 							{
-								for (int j = 0; j < _AttributeDatasForInvocation.Length; j++)
+								if (_AttributeDatasForInvocation[0] == nameof(BinaryAttribute))
 								{
-									if (_AttributeDatasForInvocation[j].AttributeClass != null)
+									_AttributeDatasForInvocation[0] = string.Empty;
+									string _arg = _AttributeDatasForInvocation[1];
+									
+									VisitArgument(_arguments.Arguments[0]);
+									JSSB.Append(_arg);
+									VisitTrailingTrivia(_arguments.Arguments.GetSeparator(0));
+									VisitArgument(_arguments.Arguments[1]);
+									
+									SyntaxTriviaList _syntaxTrivias = _arguments.GetTrailingTrivia();
+									for (int _i = 0; _i < _syntaxTrivias.Count; _i++)
 									{
-										if (_AttributeDatasForInvocation[j].AttributeClass!.Name == nameof(BinaryAttribute))
-										{
-											VisitArgument(_arguments.Arguments[0]);
-											JSSB.Append(_AttributeDatasForInvocation[j].ConstructorArguments[0].Value);
-											VisitTrailingTrivia(_arguments.Arguments.GetSeparator(0));
-											VisitArgument(_arguments.Arguments[1]);
-											goto BreakArgumentList;
-										}
-
-										if (_AttributeDatasForInvocation[j].AttributeClass!.Name == nameof(UnaryAttribute))
-										{
-											JSSB.Append(_AttributeDatasForInvocation[j].ConstructorArguments[0].Value);
-											VisitArgument(_arguments.Arguments[0]);
-											goto BreakArgumentList;
-										}
+										VisitTrivia(_syntaxTrivias[_i]);
 									}
+									
+									goto BreakArgumentList;
+								}
+
+								if (_AttributeDatasForInvocation[0] == nameof(UnaryAttribute))
+								{
+									_AttributeDatasForInvocation[0] = string.Empty;
+									string _arg = _AttributeDatasForInvocation[1];
+									
+									JSSB.Append(_arg);
+									VisitArgument(_arguments.Arguments[0]);
+									
+									goto BreakArgumentList;
 								}
 							}
 
@@ -5092,14 +5105,6 @@ internal class Walker : CSharpSyntaxWalker
 #endif
 		base.VisitLabeledStatement(node);
 	}
-	/*
-	public override void VisitLeadingTrivia(SyntaxToken token)
-	{
-		if (_Options.Debug)
-			Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({token.FullSpan}|l:{_Line}|{token.FullSpan.Start - _Characters}-{token.FullSpan.End - _Characters})\n|{token.ToFullString()}|");
-
-		base.VisitLeadingTrivia(token);
-	}*/
 	public override void VisitLetClause(LetClauseSyntax node)
 	{
 #if DEBUG
@@ -5710,14 +5715,6 @@ internal class Walker : CSharpSyntaxWalker
 #endif
 		base.VisitThrowStatement(node);
 	}
-	/*
-	public override void VisitTrailingTrivia(SyntaxToken token)
-	{
-		if (_Options.Debug)
-			Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! ({token.FullSpan}|l:{_Line}|{token.FullSpan.Start - _Characters}-{token.FullSpan.End - _Characters})\n|{token.ToFullString()}|");
-
-		base.VisitTrailingTrivia(token);
-	}*/
 	public override void VisitTryStatement(TryStatementSyntax node)
 	{
 #if DEBUG
@@ -5762,10 +5759,52 @@ internal class Walker : CSharpSyntaxWalker
 	}
 	public override void VisitTypeOfExpression(TypeOfExpressionSyntax node)
 	{
-#if DEBUG
-		Log.WarningLine($"Not implemented or unlikely to be implemented. Calling base! (FullSpan: {node.FullSpan}|Location{node.GetLocation().GetLineSpan()})\n|{node.ToFullString()}|");
-#endif
-		base.VisitTypeOfExpression(node);
+		if (_Options.Debug)
+		{
+			JSSB.Append("/*");
+			string[] strings = node.ToFullString().Split(["\r\n", "\r", "\n"], StringSplitOptions.RemoveEmptyEntries);
+			JSSB.Append(string.IsNullOrWhiteSpace(strings[0]) ? strings[1] : strings[0]);
+			JSSB.AppendLine("*/");
+		}
+
+		ChildSyntaxList nodesAndTokens = node.ChildNodesAndTokens();
+
+		for (int i = 0; i < nodesAndTokens.Count; i++)
+		{
+			SyntaxNode? asNode = nodesAndTokens[i].AsNode();
+
+			if (asNode != null)
+			{
+				SyntaxKind kind = asNode.Kind();
+
+				switch (kind)
+				{
+					case SyntaxKind.IdentifierName:
+						VisitIdentifierName((IdentifierNameSyntax)asNode);
+						break;
+					default:
+						Log.ErrorLine($"asNode : {kind}\n|{asNode.ToFullString()}|");
+						break;
+				}
+			}
+			else
+			{
+				SyntaxToken asToken = nodesAndTokens[i].AsToken();
+				SyntaxKind kind = asToken.Kind();
+
+				switch (kind)
+				{
+					case SyntaxKind.OpenParenToken:
+					case SyntaxKind.CloseParenToken:
+					case SyntaxKind.TypeOfKeyword:
+						VisitToken(asToken);
+						break;
+					default:
+						Log.ErrorLine($"asToken : {kind}");
+						break;
+				}
+			}
+		}
 	}
 	public override void VisitTypeParameter(TypeParameterSyntax node)
 	{

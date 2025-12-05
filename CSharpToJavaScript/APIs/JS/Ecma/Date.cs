@@ -47,7 +47,12 @@ public class DatePrototype : FunctionPrototype
 	{
 		throw new System.NotImplementedException();
 	}
-
+	
+	//does not exists in es14
+	public float GetYear()
+	{
+		throw new System.NotImplementedException();
+	}
 	public float GetFullYear()
 	{
 		throw new System.NotImplementedException();

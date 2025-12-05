@@ -24,6 +24,11 @@ public partial class GlobalObject
 	{
 		return new Undefined();
 	}
+	[Unary("typeof ")]
+	public static string TypeOf(dynamic arg)
+	{
+		return string.Empty;
+	}
 	[Binary("instanceof")]
 	public static bool InstanceOf(dynamic left, dynamic right)
 	{

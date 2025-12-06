@@ -47,7 +47,7 @@ jobs:
       - run: |
           git commit -am "Nuget ${{env.newTag}}"
           git push
-      - run: git log ${{needs.setup-outputs.outputs.currentTag}}..master --format=format:'- [%s](https://github.com/TiLied/CSharpToJavaScript/commit/%H)%n' --output=./release.txt   
+      - run: git log ${{needs.setup-outputs.outputs.currentTag}}..master --format=format:'- [%s](https://github.com/TiLied/CSharpToJavaScript/commit/%H)' --output=./release.txt   
       - name: Create Release
         id: create_release
         uses: softprops/action-gh-release@v2
@@ -72,11 +72,16 @@ jobs:
       - name: Publish NuGet package
         run: dotnet nuget push ./packages/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
       - run: cat ./CSharpToJavaScript.csproj
-      - name: Upload artifact
+      - name: Upload nuget artifact
         uses: actions/upload-artifact@v4
         with:
-          name: CSharpToJavaScript-${{ env.newTag }}
-          path: ./packages
+          name: CSharpToJavaScript-nuget-${{ env.newTag }}
+          path: ./packages/
+      - name: Upload bin artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: CSharpToJavaScript-bin-${{ env.newTag }}
+          path: ./bin/Release/net10.0/
       - name: Environments
         run: |
           echo $newTag

@@ -38,7 +38,7 @@ public static class CSTOJS
 		Log.InfoLine($"{assembly.GetName().Name} {assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion}");
 
 		if (references == null)
-			references = GetReferences();
+			references = GetReferences(files[0].OptionsForFile);
 
 		SyntaxTree[] trees = new SyntaxTree[files.Length];
 
@@ -122,7 +122,7 @@ public static class CSTOJS
 		return files;
 	}
 
-	private static MetadataReference[] GetReferences()
+	private static MetadataReference[] GetReferences(CSTOJSOptions options)
 	{
 		HashSet<MetadataReference> assemblyMetadata = new();
 
@@ -187,19 +187,21 @@ public static class CSTOJS
 				assemblyMetadata.Add(MetadataReference.CreateFromFile(files[j]));
 			}
 		}
-
-		Log.InfoLine($"+++");
-
-		Log.InfoLine($"assemblyPath: {assemblyPath}");
-		Log.InfoLine($"objectAssemblyPath: {objectAssemblyPath}");
-		Log.InfoLine($"binPath: {binPath}");
-
-		foreach (MetadataReference metadata in assemblyMetadata)
+		if (options.Debug)
 		{
-			Log.WriteLine(metadata.Display ?? "null display string");
-		}
-		Log.InfoLine($"---");
+			Log.InfoLine($"+++");
 
+			Log.InfoLine($"assemblyPath: {assemblyPath}");
+			Log.InfoLine($"objectAssemblyPath: {objectAssemblyPath}");
+			Log.InfoLine($"binPath: {binPath}");
+
+			foreach (MetadataReference metadata in assemblyMetadata)
+			{
+				Log.WriteLine(metadata.Display ?? "null display string");
+			}
+			Log.InfoLine($"---");
+		}
+		
 		MetadataReference[] references = new MetadataReference[assemblyMetadata.Count];
 		int i = 0;
 		foreach (MetadataReference metadata in assemblyMetadata)
@@ -207,12 +209,17 @@ public static class CSTOJS
 			references[i] = metadata;
 			i++;
 		}
-		for (int j = 0; j < references.Length; j++)
-		{
-			Log.WriteLine(references[j].Display ?? "null display string");
 
+		if (options.Debug)
+		{
+			for (int j = 0; j < references.Length; j++)
+			{
+				Log.WriteLine(references[j].Display ?? "null display string");
+
+			}
+			Log.InfoLine($"+++");
 		}
-		Log.InfoLine($"+++");
+		
 		return references;
 	}
 
